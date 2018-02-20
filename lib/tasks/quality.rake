@@ -1,14 +1,16 @@
 namespace :quality do
-  desc 'Runs rubocop for code quality testing'
-  task :basic do
-    sh 'rubocop -f fu -R -D'
-  end
-
-  desc 'Runs reek for code quality testing'
-  task :detailed do
+  desc 'Runs Ruby specific code quality testing'
+  task :ruby do
+    sh 'rubocop -f fu -D'
     sh 'reek'
   end
 
+  desc 'Runs Rails specific code quality testing'
+  task :rails do
+    sh 'rubocop -f fu -R -D'
+    sh 'rubycritic --format console'
+  end
+
   desc 'Runs both rubocop and reek'
-  task all: %w[basic detailed]
+  task all: %w[ruby rails]
 end

@@ -24,6 +24,7 @@ jobs:
             - gem-cache-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
             - gem-cache-{{ .Branch }}
             - gem-cache
+      - run: gem install bundler-audit
       - run: bundle install --path vendor/bundle
       - save_cache:
           key: gem-cache-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
