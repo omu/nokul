@@ -48,6 +48,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.1)
     bcrypt (3.1.11)
     bindex (0.5.0)
+    brakeman (4.1.1)
     builder (3.2.3)
     byebug (10.0.0)
     capybara (2.18.0)
@@ -214,6 +215,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
+  brakeman
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
