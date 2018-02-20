@@ -1,24 +1,4 @@
-# README
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0a5883e47b8d4ef88d5678a0214081ea)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=omu/nokul-bati&amp;utm_campaign=Badge_Grade)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Nokul
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

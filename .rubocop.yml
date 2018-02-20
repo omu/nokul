@@ -1,0 +1,18 @@
+AllCops:
+  Exclude:
+    - Rakefile
+    - bin/**/*
+    - vendor/bundle/**/*
+    - config/application.rb
+    - config/spring.rb
+    - test/test_helper.rb
+    - db/schema.rb
+    - db/migrate/*.rb
+Style/AsciiComments:
+  Description: 'Use only ascii symbols in comments.'
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#english-comments'
+  Enabled: false
+Metrics/LineLength:
+  Max: 120
+Documentation:
+  Enabled: false

@@ -5,9 +5,11 @@
 //= require_self
 //= require_tree ./channels
 
+/* Codacy için comment-out.
 (function() {
   this.App || (this.App = {});
 
-  App.cable = ActionCable.createConsumer();
+  // App.cable = ActionCable.createConsumer();
 
 }).call(this);
+*/

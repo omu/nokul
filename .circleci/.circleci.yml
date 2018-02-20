@@ -1,0 +1,42 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/nokul
+    docker: 
+      - image: circleci/ruby:2.5.0
+        environment:
+          TZ: '/usr/share/zoneinfo/Asia/Baghdad'
+          RAILS_ENV: test
+          RACK_ENV: test
+          RDS_USERNAME: nokul
+          RDS_PASSWORD: nokul
+          RDS_HOSTNAME: localhost
+          RDS_PORT: 5432
+      - image: circleci/postgres:9.6.7
+        environment:
+          POSTGRES_DB: nokul_test
+          POSTGRES_USER: nokul
+          POSTGRES_PASSWORD: nokul
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - gem-cache-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+            - gem-cache-{{ .Branch }}
+            - gem-cache
+      - run: bundle install --path vendor/bundle
+      - save_cache:
+          key: gem-cache-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+      - save_cache:
+          key: gem-cache-{{ .Branch }}
+          paths:
+            - vendor/bundle
+      - save_cache:
+          key: gem-cache
+          paths:
+            - vendor/bundle
+      - run: rake quality:all
+      - run: bundle exec rake db:migrate
+      - run: bundle exec rake deploy:check
