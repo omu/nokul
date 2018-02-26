@@ -13,6 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 
 # api
 gem 'jbuilder', '~> 2.5'
+gem 'savon', '~> 2.12.0'
 
 # security
 gem 'bcrypt', '~> 3.1.7'
