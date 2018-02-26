@@ -1,0 +1,949 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="7d8282c6-cdff-42f0-910d-e672f627999d" activeEnvironment="Default" name="yoksis-referanslar" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="41ed5dd4-e273-4275-b825-7b17477019c2" wsaVersion="NONE" name="WSDLs_Referans_Referanslar_Binder" type="wsdl" bindingName="{http://servisler.yok.gov.tr/Referanslar/v1}WSDLs_Referans_Referanslar_Binder" soapVersion="1_1" anonymous="optional" definition="https://servisler.yok.gov.tr/ws/Referanslarv1?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://servisler.yok.gov.tr/ws/Referanslarv1?WSDL"><con:part><con:url>https://servisler.yok.gov.tr/ws/Referanslarv1?WSDL</con:url><con:content><![CDATA[<wsdl:definitions name="Referanslar" targetNamespace="http://servisler.yok.gov.tr/Referanslar/v1" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soapjms="http://www.w3.org/2010/soapjms/" xmlns:tns="http://localhost/WSDLs.Referans:Referanslar" xmlns:tns1="http://servisler.yok.gov.tr/Referanslar/v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://servisler.yok.gov.tr/Referanslar/v1" xmlns:tns="http://servisler.yok.gov.tr/Referanslar/v1">
+      <xsd:element name="getGirisTuru" type="tns:getGirisTuru"/>
+      <xsd:element name="getGirisTuruResponse" type="tns:getGirisTuruResponse"/>
+      <xsd:element name="getIdariBirimler" type="tns:getIdariBirimler"/>
+      <xsd:element name="getIdariBirimlerResponse" type="tns:getIdariBirimlerResponse"/>
+      <xsd:element name="getMernisCinsiyet" type="tns:getMernisCinsiyet"/>
+      <xsd:element name="getMernisCinsiyetResponse" type="tns:getMernisCinsiyetResponse"/>
+      <xsd:element name="getMernisUlke" type="tns:getMernisUlke"/>
+      <xsd:element name="getMernisUlkeResponse" type="tns:getMernisUlkeResponse"/>
+      <xsd:element name="getMernisUyruk" type="tns:getMernisUyruk"/>
+      <xsd:element name="getMernisUyrukResponse" type="tns:getMernisUyrukResponse"/>
+      <xsd:element name="getOgrenciAyrilmaNedeni" type="tns:getOgrenciAyrilmaNedeni"/>
+      <xsd:element name="getOgrenciAyrilmaNedeniResponse" type="tns:getOgrenciAyrilmaNedeniResponse"/>
+      <xsd:element name="getOgrenciEngelTuru" type="tns:getOgrenciEngelTuru"/>
+      <xsd:element name="getOgrenciEngelTuruResponse" type="tns:getOgrenciEngelTuruResponse"/>
+      <xsd:element name="getOgrencilikStatusu" type="tns:getOgrencilikStatusu"/>
+      <xsd:element name="getOgrencilikStatusuResponse" type="tns:getOgrencilikStatusuResponse"/>
+      <xsd:element name="getOgrenciSinif" type="tns:getOgrenciSinif"/>
+      <xsd:element name="getOgrenciSinifResponse" type="tns:getOgrenciSinifResponse"/>
+      <xsd:element name="getOgrenciDOYKM" type="tns:getOgrenciDOYKM"/>
+      <xsd:element name="getOgrenciDOYKMResponse" type="tns:getOgrenciDOYKMResponse"/>
+      <xsd:element name="getOgrenciGirisPuanTuru" type="tns:getOgrenciGirisPuanTuru"/>
+      <xsd:element name="getOgrenciGirisPuanTuruResponse" type="tns:getOgrenciGirisPuanTuruResponse"/>
+      <xsd:element name="getOgrenciOgrencilikHakki" type="tns:getOgrenciOgrencilikHakki"/>
+      <xsd:element name="getOgrenciOgrencilikHakkiResponse" type="tns:getOgrenciOgrencilikHakkiResponse"/>
+      <xsd:element name="getOgrenciGirisTuru" type="tns:getOgrenciGirisTuru"/>
+      <xsd:element name="getOgrenciGirisTuruResponse" type="tns:getOgrenciGirisTuruResponse"/>
+      <xsd:element name="getPersonelGorev" type="tns:getPersonelGorev"/>
+      <xsd:element name="getPersonelGorevResponse" type="tns:getPersonelGorevResponse"/>
+      <xsd:element name="getOgrenciGaziSehitYakini" type="tns:getOgrenciGaziSehitYakini"/>
+      <xsd:element name="getOgrenciGaziSehitYakiniResponse" type="tns:getOgrenciGaziSehitYakiniResponse"/>
+      <xsd:element name="getOgrenciDiplomaNotSistemi" type="tns:getOgrenciDiplomaNotSistemi"/>
+      <xsd:element name="getOgrenciDiplomaNotSistemiResponse" type="tns:getOgrenciDiplomaNotSistemiResponse"/>
+      <xsd:element name="getKodBid" type="tns:getKodBid"/>
+      <xsd:element name="getKodBidResponse" type="tns:getKodBidResponse"/>
+      <xsd:element name="getBirimTuru" type="tns:getBirimTuru"/>
+      <xsd:element name="getBirimTuruResponse" type="tns:getBirimTuruResponse"/>
+      <xsd:element name="getCezaTuru" type="tns:getCezaTuru"/>
+      <xsd:element name="getCezaTuruResponse" type="tns:getCezaTuruResponse"/>
+      <xsd:element name="getIlceGetir" type="tns:getIlceGetir"/>
+      <xsd:element name="getIlceGetirResponse" type="tns:getIlceGetirResponse"/>
+      <xsd:element name="getIlGetir" type="tns:getIlGetir"/>
+      <xsd:element name="getIlGetirResponse" type="tns:getIlGetirResponse"/>
+      <xsd:element name="getOgrenimDili" type="tns:getOgrenimDili"/>
+      <xsd:element name="getOgrenimDiliResponse" type="tns:getOgrenimDiliResponse"/>
+      <xsd:element name="getOgrenimTuru" type="tns:getOgrenimTuru"/>
+      <xsd:element name="getOgrenimTuruResponse" type="tns:getOgrenimTuruResponse"/>
+      <xsd:element name="getUniversiteTuru" type="tns:getUniversiteTuru"/>
+      <xsd:element name="getUniversiteTuruResponse" type="tns:getUniversiteTuruResponse"/>
+      <xsd:element name="getAktiflikDurumu" type="tns:getAktiflikDurumu"/>
+      <xsd:element name="getAktiflikDurumuResponse" type="tns:getAktiflikDurumuResponse"/>
+      <xsd:element name="getKadroGorevUnvan" type="tns:getKadroGorevUnvan"/>
+      <xsd:element name="getKadroGorevUnvanResponse" type="tns:getKadroGorevUnvanResponse"/>
+      <xsd:complexType name="getGirisTuru">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getGirisTuruResponse">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="REFERANSLAR" nillable="true" type="tns:Referans"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Referans">
+        <xsd:sequence>
+          <xsd:element name="KOD" nillable="true" type="xsd:long"/>
+          <xsd:element name="AD" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Sonuc">
+        <xsd:sequence>
+          <xsd:element name="DurumAciklama" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getIdariBirimler">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getIdariBirimlerResponse">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="IdariBirimler" nillable="true" type="tns:IdariBirimler"/>
+          <xsd:element name="Sonuc" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="IdariBirimler">
+        <xsd:sequence>
+          <xsd:element name="BIRIM_ID" nillable="true" type="xsd:long"/>
+          <xsd:element name="BIRIM_ADI" nillable="true" type="xsd:string"/>
+          <xsd:element name="BAGLI_OLDUGU_BIRIM_ID" nillable="true" type="xsd:long"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getMernisCinsiyet">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getMernisCinsiyetResponse">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="REFERANSLAR" nillable="true" type="tns:Referans"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getMernisUlke">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getMernisUlkeResponse">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="REFERANSLAR" nillable="true" type="tns:Referans"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getMernisUyruk">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getMernisUyrukResponse">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="REFERANSLAR" nillable="true" type="tns:Referans"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getOgrenciAyrilmaNedeni">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getOgrenciAyrilmaNedeniResponse">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="REFERANSLAR" nillable="true" type="tns:Referans"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getOgrenciEngelTuru">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getOgrenciEngelTuruResponse">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="REFERANSLAR" nillable="true" type="tns:Referans"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getOgrencilikStatusu">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getOgrencilikStatusuResponse">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="REFERANSLAR" nillable="true" type="tns:Referans"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getOgrenciSinif">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getOgrenciSinifResponse">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="REFERANSLAR" nillable="true" type="tns:Referans"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getOgrenciDOYKM">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getOgrenciDOYKMResponse">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="REFERANSLAR" nillable="true" type="tns:Referans"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getOgrenciGirisPuanTuru">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getOgrenciGirisPuanTuruResponse">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="REFERANSLAR" nillable="true" type="tns:Referans"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getOgrenciOgrencilikHakki">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getOgrenciOgrencilikHakkiResponse">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="REFERANSLAR" nillable="true" type="tns:Referans"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getOgrenciGirisTuru">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getOgrenciGirisTuruResponse">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="REFERANSLAR" nillable="true" type="tns:Referans"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getPersonelGorev">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getPersonelGorevResponse">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="REFERANSLAR" nillable="true" type="tns:Referans"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getOgrenciGaziSehitYakini">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getOgrenciGaziSehitYakiniResponse">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="REFERANSLAR" nillable="true" type="tns:Referans"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getOgrenciDiplomaNotSistemi">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getOgrenciDiplomaNotSistemiResponse">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="REFERANSLAR" nillable="true" type="tns:Referans"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getKodBid">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getKodBidResponse">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="REFERANSLAR" nillable="true" type="tns:Referans"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getBirimTuru">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getBirimTuruResponse">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="REFERANSLAR" nillable="true" type="tns:Referans"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getCezaTuru">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getCezaTuruResponse">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="REFERANSLAR" nillable="true" type="tns:Referans"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getIlceGetir">
+        <xsd:sequence>
+          <xsd:element name="ILKODU" nillable="true" type="xsd:long"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getIlceGetirResponse">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="ILCE_KODLARI" nillable="true" type="tns:Referans"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getIlGetir">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getIlGetirResponse">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="IL_KODU" nillable="true" type="tns:Referans"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getOgrenimDili">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getOgrenimDiliResponse">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="REFERANSLAR" nillable="true" type="tns:Referans"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getOgrenimTuru">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getOgrenimTuruResponse">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="REFERANSLAR" nillable="true" type="tns:Referans"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getUniversiteTuru">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getUniversiteTuruResponse">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="REFERANSLAR" nillable="true" type="tns:Referans"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getAktiflikDurumu">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getAktiflikDurumuResponse">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="REFERANSLAR" nillable="true" type="tns:Referans"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getKadroGorevUnvan">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getKadroGorevUnvanResponse">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="REFERANSLAR" nillable="true" type="tns:Referans"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Referanslar_PortType_getOgrenciAyrilmaNedeniResponse">
+    <wsdl:part element="tns1:getOgrenciAyrilmaNedeniResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getOgrenciGirisPuanTuru">
+    <wsdl:part element="tns1:getOgrenciGirisPuanTuru" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getIlGetirResponse">
+    <wsdl:part element="tns1:getIlGetirResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getIlceGetirResponse">
+    <wsdl:part element="tns1:getIlceGetirResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getOgrenciSinif">
+    <wsdl:part element="tns1:getOgrenciSinif" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getMernisUyrukResponse">
+    <wsdl:part element="tns1:getMernisUyrukResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getAktiflikDurumu">
+    <wsdl:part element="tns1:getAktiflikDurumu" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getGirisTuru">
+    <wsdl:part element="tns1:getGirisTuru" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getOgrenciDOYKMResponse">
+    <wsdl:part element="tns1:getOgrenciDOYKMResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getOgrenciSinifResponse">
+    <wsdl:part element="tns1:getOgrenciSinifResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getOgrenimTuru">
+    <wsdl:part element="tns1:getOgrenimTuru" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getPersonelGorevResponse">
+    <wsdl:part element="tns1:getPersonelGorevResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getOgrenciGaziSehitYakini">
+    <wsdl:part element="tns1:getOgrenciGaziSehitYakini" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getGirisTuruResponse">
+    <wsdl:part element="tns1:getGirisTuruResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getIlGetir">
+    <wsdl:part element="tns1:getIlGetir" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getKadroGorevUnvanResponse">
+    <wsdl:part element="tns1:getKadroGorevUnvanResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getMernisUlkeResponse">
+    <wsdl:part element="tns1:getMernisUlkeResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getMernisUyruk">
+    <wsdl:part element="tns1:getMernisUyruk" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getOgrenciEngelTuru">
+    <wsdl:part element="tns1:getOgrenciEngelTuru" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getOgrenciDiplomaNotSistemiResponse">
+    <wsdl:part element="tns1:getOgrenciDiplomaNotSistemiResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getUniversiteTuru">
+    <wsdl:part element="tns1:getUniversiteTuru" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getOgrenciDiplomaNotSistemi">
+    <wsdl:part element="tns1:getOgrenciDiplomaNotSistemi" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getIlceGetir">
+    <wsdl:part element="tns1:getIlceGetir" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getOgrenciGirisPuanTuruResponse">
+    <wsdl:part element="tns1:getOgrenciGirisPuanTuruResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getKodBidResponse">
+    <wsdl:part element="tns1:getKodBidResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getOgrenimDili">
+    <wsdl:part element="tns1:getOgrenimDili" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getBirimTuru">
+    <wsdl:part element="tns1:getBirimTuru" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getKodBid">
+    <wsdl:part element="tns1:getKodBid" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getPersonelGorev">
+    <wsdl:part element="tns1:getPersonelGorev" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getCezaTuruResponse">
+    <wsdl:part element="tns1:getCezaTuruResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getMernisCinsiyetResponse">
+    <wsdl:part element="tns1:getMernisCinsiyetResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getOgrenciGirisTuruResponse">
+    <wsdl:part element="tns1:getOgrenciGirisTuruResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getOgrencilikStatusu">
+    <wsdl:part element="tns1:getOgrencilikStatusu" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getIdariBirimlerResponse">
+    <wsdl:part element="tns1:getIdariBirimlerResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getOgrenciEngelTuruResponse">
+    <wsdl:part element="tns1:getOgrenciEngelTuruResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getOgrenciGaziSehitYakiniResponse">
+    <wsdl:part element="tns1:getOgrenciGaziSehitYakiniResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getKadroGorevUnvan">
+    <wsdl:part element="tns1:getKadroGorevUnvan" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getOgrenciOgrencilikHakkiResponse">
+    <wsdl:part element="tns1:getOgrenciOgrencilikHakkiResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getOgrenimTuruResponse">
+    <wsdl:part element="tns1:getOgrenimTuruResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getAktiflikDurumuResponse">
+    <wsdl:part element="tns1:getAktiflikDurumuResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getOgrenimDiliResponse">
+    <wsdl:part element="tns1:getOgrenimDiliResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getMernisUlke">
+    <wsdl:part element="tns1:getMernisUlke" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getOgrenciAyrilmaNedeni">
+    <wsdl:part element="tns1:getOgrenciAyrilmaNedeni" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getUniversiteTuruResponse">
+    <wsdl:part element="tns1:getUniversiteTuruResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getBirimTuruResponse">
+    <wsdl:part element="tns1:getBirimTuruResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getOgrencilikStatusuResponse">
+    <wsdl:part element="tns1:getOgrencilikStatusuResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getOgrenciDOYKM">
+    <wsdl:part element="tns1:getOgrenciDOYKM" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getIdariBirimler">
+    <wsdl:part element="tns1:getIdariBirimler" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getCezaTuru">
+    <wsdl:part element="tns1:getCezaTuru" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getMernisCinsiyet">
+    <wsdl:part element="tns1:getMernisCinsiyet" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getOgrenciGirisTuru">
+    <wsdl:part element="tns1:getOgrenciGirisTuru" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Referanslar_PortType_getOgrenciOgrencilikHakki">
+    <wsdl:part element="tns1:getOgrenciOgrencilikHakki" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Referanslar_PortType">
+    <wsdl:operation name="getIdariBirimler">
+      <wsdl:input message="tns1:Referanslar_PortType_getIdariBirimler"></wsdl:input>
+      <wsdl:output message="tns1:Referanslar_PortType_getIdariBirimlerResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPersonelGorev">
+      <wsdl:input message="tns1:Referanslar_PortType_getPersonelGorev"></wsdl:input>
+      <wsdl:output message="tns1:Referanslar_PortType_getPersonelGorevResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMernisCinsiyet">
+      <wsdl:input message="tns1:Referanslar_PortType_getMernisCinsiyet"></wsdl:input>
+      <wsdl:output message="tns1:Referanslar_PortType_getMernisCinsiyetResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCezaTuru">
+      <wsdl:input message="tns1:Referanslar_PortType_getCezaTuru"></wsdl:input>
+      <wsdl:output message="tns1:Referanslar_PortType_getCezaTuruResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOgrenciDOYKM">
+      <wsdl:input message="tns1:Referanslar_PortType_getOgrenciDOYKM"></wsdl:input>
+      <wsdl:output message="tns1:Referanslar_PortType_getOgrenciDOYKMResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOgrenciDiplomaNotSistemi">
+      <wsdl:input message="tns1:Referanslar_PortType_getOgrenciDiplomaNotSistemi"></wsdl:input>
+      <wsdl:output message="tns1:Referanslar_PortType_getOgrenciDiplomaNotSistemiResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOgrenimDili">
+      <wsdl:input message="tns1:Referanslar_PortType_getOgrenimDili"></wsdl:input>
+      <wsdl:output message="tns1:Referanslar_PortType_getOgrenimDiliResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOgrenciGaziSehitYakini">
+      <wsdl:input message="tns1:Referanslar_PortType_getOgrenciGaziSehitYakini"></wsdl:input>
+      <wsdl:output message="tns1:Referanslar_PortType_getOgrenciGaziSehitYakiniResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMernisUyruk">
+      <wsdl:input message="tns1:Referanslar_PortType_getMernisUyruk"></wsdl:input>
+      <wsdl:output message="tns1:Referanslar_PortType_getMernisUyrukResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMernisUlke">
+      <wsdl:input message="tns1:Referanslar_PortType_getMernisUlke"></wsdl:input>
+      <wsdl:output message="tns1:Referanslar_PortType_getMernisUlkeResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getKadroGorevUnvan">
+      <wsdl:input message="tns1:Referanslar_PortType_getKadroGorevUnvan"></wsdl:input>
+      <wsdl:output message="tns1:Referanslar_PortType_getKadroGorevUnvanResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOgrenciAyrilmaNedeni">
+      <wsdl:input message="tns1:Referanslar_PortType_getOgrenciAyrilmaNedeni"></wsdl:input>
+      <wsdl:output message="tns1:Referanslar_PortType_getOgrenciAyrilmaNedeniResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUniversiteTuru">
+      <wsdl:input message="tns1:Referanslar_PortType_getUniversiteTuru"></wsdl:input>
+      <wsdl:output message="tns1:Referanslar_PortType_getUniversiteTuruResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGirisTuru">
+      <wsdl:input message="tns1:Referanslar_PortType_getGirisTuru"></wsdl:input>
+      <wsdl:output message="tns1:Referanslar_PortType_getGirisTuruResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOgrenciGirisTuru">
+      <wsdl:input message="tns1:Referanslar_PortType_getOgrenciGirisTuru"></wsdl:input>
+      <wsdl:output message="tns1:Referanslar_PortType_getOgrenciGirisTuruResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBirimTuru">
+      <wsdl:input message="tns1:Referanslar_PortType_getBirimTuru"></wsdl:input>
+      <wsdl:output message="tns1:Referanslar_PortType_getBirimTuruResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOgrenciOgrencilikHakki">
+      <wsdl:input message="tns1:Referanslar_PortType_getOgrenciOgrencilikHakki"></wsdl:input>
+      <wsdl:output message="tns1:Referanslar_PortType_getOgrenciOgrencilikHakkiResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIlceGetir">
+      <wsdl:input message="tns1:Referanslar_PortType_getIlceGetir"></wsdl:input>
+      <wsdl:output message="tns1:Referanslar_PortType_getIlceGetirResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOgrenciSinif">
+      <wsdl:input message="tns1:Referanslar_PortType_getOgrenciSinif"></wsdl:input>
+      <wsdl:output message="tns1:Referanslar_PortType_getOgrenciSinifResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOgrenciGirisPuanTuru">
+      <wsdl:input message="tns1:Referanslar_PortType_getOgrenciGirisPuanTuru"></wsdl:input>
+      <wsdl:output message="tns1:Referanslar_PortType_getOgrenciGirisPuanTuruResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIlGetir">
+      <wsdl:input message="tns1:Referanslar_PortType_getIlGetir"></wsdl:input>
+      <wsdl:output message="tns1:Referanslar_PortType_getIlGetirResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOgrenimTuru">
+      <wsdl:input message="tns1:Referanslar_PortType_getOgrenimTuru"></wsdl:input>
+      <wsdl:output message="tns1:Referanslar_PortType_getOgrenimTuruResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOgrencilikStatusu">
+      <wsdl:input message="tns1:Referanslar_PortType_getOgrencilikStatusu"></wsdl:input>
+      <wsdl:output message="tns1:Referanslar_PortType_getOgrencilikStatusuResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOgrenciEngelTuru">
+      <wsdl:input message="tns1:Referanslar_PortType_getOgrenciEngelTuru"></wsdl:input>
+      <wsdl:output message="tns1:Referanslar_PortType_getOgrenciEngelTuruResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAktiflikDurumu">
+      <wsdl:input message="tns1:Referanslar_PortType_getAktiflikDurumu"></wsdl:input>
+      <wsdl:output message="tns1:Referanslar_PortType_getAktiflikDurumuResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getKodBid">
+      <wsdl:input message="tns1:Referanslar_PortType_getKodBid"></wsdl:input>
+      <wsdl:output message="tns1:Referanslar_PortType_getKodBidResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSDLs_Referans_Referanslar_Binder" type="tns1:Referanslar_PortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getIdariBirimler">
+      <soap:operation soapAction="WSDLs_Referans_Referanslar_Binder_getIdariBirimler" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPersonelGorev">
+      <soap:operation soapAction="WSDLs_Referans_Referanslar_Binder_getPersonelGorev" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMernisCinsiyet">
+      <soap:operation soapAction="WSDLs_Referans_Referanslar_Binder_getMernisCinsiyet" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCezaTuru">
+      <soap:operation soapAction="WSDLs_Referans_Referanslar_Binder_getCezaTuru" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOgrenciDOYKM">
+      <soap:operation soapAction="WSDLs_Referans_Referanslar_Binder_getOgrenciDOYKM" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOgrenciDiplomaNotSistemi">
+      <soap:operation soapAction="WSDLs_Referans_Referanslar_Binder_getOgrenciDiplomaNotSistemi" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOgrenimDili">
+      <soap:operation soapAction="WSDLs_Referans_Referanslar_Binder_getOgrenimDili" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOgrenciGaziSehitYakini">
+      <soap:operation soapAction="WSDLs_Referans_Referanslar_Binder_getOgrenciGaziSehitYakini" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMernisUyruk">
+      <soap:operation soapAction="WSDLs_Referans_Referanslar_Binder_getMernisUyruk" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMernisUlke">
+      <soap:operation soapAction="WSDLs_Referans_Referanslar_Binder_getMernisUlke" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getKadroGorevUnvan">
+      <soap:operation soapAction="WSDLs_Referans_Referanslar_Binder_getKadroGorevUnvan" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOgrenciAyrilmaNedeni">
+      <soap:operation soapAction="WSDLs_Referans_Referanslar_Binder_getOgrenciAyrilmaNedeni" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUniversiteTuru">
+      <soap:operation soapAction="WSDLs_Referans_Referanslar_Binder_getUniversiteTuru" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGirisTuru">
+      <soap:operation soapAction="WSDLs_Referans_Referanslar_Binder_getGirisTuru" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOgrenciGirisTuru">
+      <soap:operation soapAction="WSDLs_Referans_Referanslar_Binder_getOgrenciGirisTuru" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBirimTuru">
+      <soap:operation soapAction="WSDLs_Referans_Referanslar_Binder_getBirimTuru" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOgrenciOgrencilikHakki">
+      <soap:operation soapAction="WSDLs_Referans_Referanslar_Binder_getOgrenciOgrencilikHakki" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIlceGetir">
+      <soap:operation soapAction="WSDLs_Referans_Referanslar_Binder_getIlceGetir" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOgrenciSinif">
+      <soap:operation soapAction="WSDLs_Referans_Referanslar_Binder_getOgrenciSinif" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOgrenciGirisPuanTuru">
+      <soap:operation soapAction="WSDLs_Referans_Referanslar_Binder_getOgrenciGirisPuanTuru" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIlGetir">
+      <soap:operation soapAction="WSDLs_Referans_Referanslar_Binder_getIlGetir" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOgrenimTuru">
+      <soap:operation soapAction="WSDLs_Referans_Referanslar_Binder_getOgrenimTuru" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOgrencilikStatusu">
+      <soap:operation soapAction="WSDLs_Referans_Referanslar_Binder_getOgrencilikStatusu" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOgrenciEngelTuru">
+      <soap:operation soapAction="WSDLs_Referans_Referanslar_Binder_getOgrenciEngelTuru" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAktiflikDurumu">
+      <soap:operation soapAction="WSDLs_Referans_Referanslar_Binder_getAktiflikDurumu" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getKodBid">
+      <soap:operation soapAction="WSDLs_Referans_Referanslar_Binder_getKodBid" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSDLs.Referans.Referanslar">
+    <wsdl:port binding="tns1:WSDLs_Referans_Referanslar_Binder" name="WSDLs_Referans_Referanslar_Port">
+      <soap:address location="http://servisler.yok.gov.tr/ws/Referanslarv1"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint></con:endpoints><con:operation id="5976bcb3-7089-4d60-adba-ddc8e7e2497d" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getAktiflikDurumu" name="getAktiflikDurumu" bindingOperationName="getAktiflikDurumu" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="93aa813f-dfd2-4017-875f-230829ab2396" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@skip_soap_action">false</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:getAktiflikDurumu/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getAktiflikDurumu"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="1ba67081-0955-433a-b078-62f343816ec3" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getBirimTuru" name="getBirimTuru" bindingOperationName="getBirimTuru" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="241123a4-64f6-4d02-84e1-6881521bc7b7" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:getBirimTuru/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getBirimTuru"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="c6013440-704a-495c-98f9-20785ee99eee" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getCezaTuru" name="getCezaTuru" bindingOperationName="getCezaTuru" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a201f237-cb34-4bf2-979c-09065a3cfea3" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:getCezaTuru/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getCezaTuru"/></con:call></con:operation><con:operation id="d0fa0511-1167-4031-9175-8097aaa05a39" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getGirisTuru" name="getGirisTuru" bindingOperationName="getGirisTuru" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="25a1e6ee-3db3-4d79-8d51-6e983c89e54b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:getGirisTuru/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getGirisTuru"/></con:call></con:operation><con:operation id="7d4a7d43-21b6-4fd8-ae2f-d46a5f30173d" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getIdariBirimler" name="getIdariBirimler" bindingOperationName="getIdariBirimler" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="acffef0a-5a71-4f66-9d3d-bd51147b1a15" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:getIdariBirimler/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getIdariBirimler"/></con:call></con:operation><con:operation id="57f4528e-e363-4b13-b57e-daa4c9a09535" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getIlceGetir" name="getIlceGetir" bindingOperationName="getIlceGetir" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c3ed6b7b-25fc-4df2-a925-20dbe7abae1d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:getIlceGetir>
+         <ILKODU>?</ILKODU>
+      </v1:getIlceGetir>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getIlceGetir"/></con:call></con:operation><con:operation id="684a576a-b3b4-49d6-979e-a7a46488b42a" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getIlGetir" name="getIlGetir" bindingOperationName="getIlGetir" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="025ab18b-7554-4f02-b207-de27feeaf7c5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:getIlGetir/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getIlGetir"/></con:call></con:operation><con:operation id="932c8b9a-369a-41a4-883f-e1070dbb24c4" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getKadroGorevUnvan" name="getKadroGorevUnvan" bindingOperationName="getKadroGorevUnvan" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e0dbc36f-e8e3-4c56-b898-2e7f2f620efe" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:getKadroGorevUnvan/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getKadroGorevUnvan"/></con:call></con:operation><con:operation id="228746fc-ff81-4371-ac28-10c64bac9a17" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getKodBid" name="getKodBid" bindingOperationName="getKodBid" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a75d86a4-b219-474a-82ea-62d79be0932d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:getKodBid/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getKodBid"/></con:call></con:operation><con:operation id="349842ed-227d-45b8-84c0-f634a9258016" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getMernisCinsiyet" name="getMernisCinsiyet" bindingOperationName="getMernisCinsiyet" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dee74f0f-f17e-4f00-b1e1-487d7f708a07" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:getMernisCinsiyet/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getMernisCinsiyet"/></con:call></con:operation><con:operation id="f9fb9f84-d16e-4d4f-b48a-11bb475a44b9" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getMernisUlke" name="getMernisUlke" bindingOperationName="getMernisUlke" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3b4edf8a-15f6-4e00-a664-8ce1bb4150b6" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:getMernisUlke/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getMernisUlke"/></con:call></con:operation><con:operation id="ccbb213f-04b9-425b-ab79-6aba9f9e44d3" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getMernisUyruk" name="getMernisUyruk" bindingOperationName="getMernisUyruk" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dbb15043-4108-4204-a8fa-ff9fa2f7ad20" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:getMernisUyruk/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getMernisUyruk"/></con:call></con:operation><con:operation id="d7b938a1-cc75-431c-aff0-13fd049c551f" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenciAyrilmaNedeni" name="getOgrenciAyrilmaNedeni" bindingOperationName="getOgrenciAyrilmaNedeni" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c998e937-0a03-42ab-adfa-9835c0db0760" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:getOgrenciAyrilmaNedeni/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenciAyrilmaNedeni"/></con:call></con:operation><con:operation id="50b93ae7-b58c-4830-a884-76c5a1fde33d" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenciDiplomaNotSistemi" name="getOgrenciDiplomaNotSistemi" bindingOperationName="getOgrenciDiplomaNotSistemi" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="83e7b787-fd43-4ede-9295-50b64db171d9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:getOgrenciDiplomaNotSistemi/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenciDiplomaNotSistemi"/></con:call></con:operation><con:operation id="c0b6b301-93bd-4ff5-ae9e-54f8e86bd233" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenciDOYKM" name="getOgrenciDOYKM" bindingOperationName="getOgrenciDOYKM" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e5591127-9533-494d-bc0d-da43f8eac9dc" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:getOgrenciDOYKM/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenciDOYKM"/></con:call></con:operation><con:operation id="10d34ae8-a5c5-4a83-8f0f-0d2e1cb79937" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenciEngelTuru" name="getOgrenciEngelTuru" bindingOperationName="getOgrenciEngelTuru" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2ad146e7-d68d-475d-91be-237258215ebf" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:getOgrenciEngelTuru/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenciEngelTuru"/></con:call></con:operation><con:operation id="ae0cc20a-39f5-468f-bd5c-a8165a5c037b" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenciGaziSehitYakini" name="getOgrenciGaziSehitYakini" bindingOperationName="getOgrenciGaziSehitYakini" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9a846fff-d74d-4994-9ca7-2a453e0e42bd" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:getOgrenciGaziSehitYakini/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenciGaziSehitYakini"/></con:call></con:operation><con:operation id="60f859e2-e18c-450e-acf4-1f1d3ada3b3a" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenciGirisPuanTuru" name="getOgrenciGirisPuanTuru" bindingOperationName="getOgrenciGirisPuanTuru" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="75624351-e5d3-45fc-bca0-c8ff845ee800" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:getOgrenciGirisPuanTuru/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenciGirisPuanTuru"/></con:call></con:operation><con:operation id="8cecbc4b-d686-4aa9-81d2-eb375448201e" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenciGirisTuru" name="getOgrenciGirisTuru" bindingOperationName="getOgrenciGirisTuru" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="673bd102-fc31-4600-b31b-64bec1aeb511" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:getOgrenciGirisTuru/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenciGirisTuru"/></con:call></con:operation><con:operation id="21a11af3-6f22-4bdb-a667-f55cbf0d0d9a" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrencilikStatusu" name="getOgrencilikStatusu" bindingOperationName="getOgrencilikStatusu" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="defa9f79-d4b0-4cea-b159-e5d9a8a2f547" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:getOgrencilikStatusu/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrencilikStatusu"/></con:call></con:operation><con:operation id="b7e80ad9-e1e5-4113-a269-8bcde3aa3407" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenciOgrencilikHakki" name="getOgrenciOgrencilikHakki" bindingOperationName="getOgrenciOgrencilikHakki" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="cd5815ee-87f2-4e6f-bd47-800687497b37" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:getOgrenciOgrencilikHakki/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenciOgrencilikHakki"/></con:call></con:operation><con:operation id="4d10a42e-b3bc-47fe-b145-c06eb051ea04" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenciSinif" name="getOgrenciSinif" bindingOperationName="getOgrenciSinif" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3e7cfb40-1698-4e35-8aa0-f879a2ba185f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:getOgrenciSinif/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenciSinif"/></con:call></con:operation><con:operation id="5635a0b6-2bda-41a9-a591-71e18f7e60e2" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenimDili" name="getOgrenimDili" bindingOperationName="getOgrenimDili" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8619844d-5497-435a-9d66-04419d3e56b8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:getOgrenimDili/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenimDili"/></con:call></con:operation><con:operation id="79616f78-03b4-40ce-84e6-4ce5beef0094" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenimTuru" name="getOgrenimTuru" bindingOperationName="getOgrenimTuru" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e3de8f26-5eac-4c88-96c6-b61783a3e1cd" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:getOgrenimTuru/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenimTuru"/></con:call></con:operation><con:operation id="865d7de5-0182-48f6-bda2-e3a7db98de3f" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getPersonelGorev" name="getPersonelGorev" bindingOperationName="getPersonelGorev" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="47397f06-3415-4021-b31f-c7a66b9156cb" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:getPersonelGorev/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getPersonelGorev"/></con:call></con:operation><con:operation id="f24008d6-e1b7-464c-a349-0f183cd5c327" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getUniversiteTuru" name="getUniversiteTuru" bindingOperationName="getUniversiteTuru" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="72820e0a-95ac-49c6-bf0b-b86c8d3acf64" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:getUniversiteTuru/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getUniversiteTuru"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
