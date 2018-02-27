@@ -4,17 +4,6 @@ module Services
       # client = Services::Yoksis::V1::Referanslar.new
       # client.get_universite_turu
       class Referanslar
-        attr_reader :request
-
-        def initialize
-          @client = Savon.client(
-            wsdl: 'http://servisler.yok.gov.tr/ws/Referanslarv1?WSDL',
-            convert_request_keys_to: :camelcase,
-            log: false,
-            log_level: :debug
-          )
-        end
-
         %i[
           aktiflik_durumu
           birim_turu
@@ -22,6 +11,7 @@ module Services
           giris_turu
           idari_birimler
           il_getir
+          ilce_getir
           kadro_gorev_unvan
           kod_bid
           mernis_cinsiyet
@@ -41,15 +31,25 @@ module Services
           ogrenim_turu
           personel_gorev
           universite_turu
-        ].each { |method| define_method("get_#{method}") { send_request(__method__) } }
-
-        def get_ilce_getir(no)
-          @client.call(:get_ilce_getir, :message => { "ILKODU" => no }).body
+        ].each do |method|
+          define_method("get_#{method}") { |args = {}| send_request(__method__, args) }
         end
 
-        def send_request(action_name)
-          @response = @client.call(action_name)
-          @response.body
+        WSDL_ENDPOINT = 'http://servisler.yok.gov.tr/ws/Referanslarv1?WSDL'.freeze
+
+        attr_reader :client, :response
+
+        def initialize
+          @client = Savon.client(
+            wsdl: WSDL_ENDPOINT,
+            convert_request_keys_to: :camelcase,
+            logger: Rails.logger
+          )
+        end
+
+        private def send_request(action_name, args)
+          @response = client.call(action_name, message: args)
+          response.body
         end
       end
     end
