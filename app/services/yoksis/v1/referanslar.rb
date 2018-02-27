@@ -20,8 +20,7 @@ module Services
           birim_turu
           ceza_turu
           giris_turu
-          idari_birimler 
-          ilce_getir
+          idari_birimler
           il_getir
           kadro_gorev_unvan
           kod_bid
@@ -43,6 +42,10 @@ module Services
           personel_gorev
           universite_turu
         ].each { |method| define_method("get_#{method}") { send_request(__method__) } }
+
+        def get_ilce_getir(no)
+          @client.call(:get_ilce_getir, :message => { "ILKODU" => no }).body
+        end
 
         def send_request(action_name)
           @response = @client.call(action_name)
