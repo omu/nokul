@@ -38,7 +38,7 @@ jobs:
           key: gem-cache
           paths:
             - vendor/bundle
-      - run: bundle exec rake quality:all
+      - run: bundle exec rake quality:rubocop
       - run: bundle exec rake security:all
       - run: bundle exec rake db:migrate
       - run: bundle exec rake deploy:check
