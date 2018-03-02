@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/nokul
     docker: 
-      - image: circleci/ruby:2.5.0
+      - image: circleci/ruby:latest-node-browsers
         environment:
           TZ: '/usr/share/zoneinfo/Asia/Baghdad'
           RAILS_ENV: test
