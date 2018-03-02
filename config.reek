@@ -1,5 +1,7 @@
+---
 exclude_paths:
   - db
   - config/initializers
+  - vendor/bundle
 IrresponsibleModule:
   enabled: false

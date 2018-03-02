@@ -1,5 +1,6 @@
 module Services
   module Yoksis
+    # :reek:UncommunicativeModuleName:
     module V1
       # client = Services::Yoksis::V1::Referanslar.new
       # client.get_universite_turu
