@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="7d8282c6-cdff-42f0-910d-e672f627999d" activeEnvironment="Default" name="yoksis-referanslar" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="41ed5dd4-e273-4275-b825-7b17477019c2" wsaVersion="NONE" name="WSDLs_Referans_Referanslar_Binder" type="wsdl" bindingName="{http://servisler.yok.gov.tr/Referanslar/v1}WSDLs_Referans_Referanslar_Binder" soapVersion="1_1" anonymous="optional" definition="https://servisler.yok.gov.tr/ws/Referanslarv1?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://servisler.yok.gov.tr/ws/Referanslarv1?WSDL"><con:part><con:url>https://servisler.yok.gov.tr/ws/Referanslarv1?WSDL</con:url><con:content><![CDATA[<wsdl:definitions name="Referanslar" targetNamespace="http://servisler.yok.gov.tr/Referanslar/v1" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soapjms="http://www.w3.org/2010/soapjms/" xmlns:tns="http://localhost/WSDLs.Referans:Referanslar" xmlns:tns1="http://servisler.yok.gov.tr/Referanslar/v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<con:soapui-project id="704124f1-b381-4afa-82cc-5731cca76647" activeEnvironment="Default" name="YOKSISv1" resourceRoot="" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="f7cdeb6f-db56-4d6f-a88a-0eb4741582bb" wsaVersion="NONE" name="WSDLs_Referans_Referanslar_Binder" type="wsdl" bindingName="{http://servisler.yok.gov.tr/Referanslar/v1}WSDLs_Referans_Referanslar_Binder" soapVersion="1_1" anonymous="optional" definition="http://servisler.yok.gov.tr/ws/Referanslarv1?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://servisler.yok.gov.tr/ws/Referanslarv1?WSDL"><con:part><con:url>http://servisler.yok.gov.tr/ws/Referanslarv1?WSDL</con:url><con:content><![CDATA[<wsdl:definitions name="Referanslar" targetNamespace="http://servisler.yok.gov.tr/Referanslar/v1" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soapjms="http://www.w3.org/2010/soapjms/" xmlns:tns="http://localhost/WSDLs.Referans:Referanslar" xmlns:tns1="http://servisler.yok.gov.tr/Referanslar/v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <wsdl:types>
     <xsd:schema targetNamespace="http://servisler.yok.gov.tr/Referanslar/v1" xmlns:tns="http://servisler.yok.gov.tr/Referanslar/v1">
       <xsd:element name="getGirisTuru" type="tns:getGirisTuru"/>
@@ -814,136 +814,332 @@
       <soap:address location="http://servisler.yok.gov.tr/ws/Referanslarv1"/>
     </wsdl:port>
   </wsdl:service>
-</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint></con:endpoints><con:operation id="5976bcb3-7089-4d60-adba-ddc8e7e2497d" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getAktiflikDurumu" name="getAktiflikDurumu" bindingOperationName="getAktiflikDurumu" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="93aa813f-dfd2-4017-875f-230829ab2396" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@skip_soap_action">false</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint></con:endpoints><con:operation id="d285e249-f307-46be-9d05-10bad2db7a70" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getAktiflikDurumu" name="getAktiflikDurumu" bindingOperationName="getAktiflikDurumu" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="967746da-7646-4b02-ae2a-b6daf2726a1a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
    <soapenv:Header/>
    <soapenv:Body>
       <v1:getAktiflikDurumu/>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getAktiflikDurumu"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="1ba67081-0955-433a-b078-62f343816ec3" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getBirimTuru" name="getBirimTuru" bindingOperationName="getBirimTuru" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="241123a4-64f6-4d02-84e1-6881521bc7b7" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getAktiflikDurumu"/></con:call></con:operation><con:operation id="06d6ca8f-c3c9-42a7-91a4-bd528d3c2c61" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getBirimTuru" name="getBirimTuru" bindingOperationName="getBirimTuru" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="724250e9-0f5d-4edd-a160-79e3498430aa" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
    <soapenv:Header/>
    <soapenv:Body>
       <v1:getBirimTuru/>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getBirimTuru"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="c6013440-704a-495c-98f9-20785ee99eee" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getCezaTuru" name="getCezaTuru" bindingOperationName="getCezaTuru" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a201f237-cb34-4bf2-979c-09065a3cfea3" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getBirimTuru"/></con:call></con:operation><con:operation id="3f2d4ce5-4526-41cd-bbd8-445c85fddca3" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getCezaTuru" name="getCezaTuru" bindingOperationName="getCezaTuru" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5eb8f2f2-ad15-4b37-8407-5ac1a9f4d092" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
    <soapenv:Header/>
    <soapenv:Body>
       <v1:getCezaTuru/>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getCezaTuru"/></con:call></con:operation><con:operation id="d0fa0511-1167-4031-9175-8097aaa05a39" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getGirisTuru" name="getGirisTuru" bindingOperationName="getGirisTuru" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="25a1e6ee-3db3-4d79-8d51-6e983c89e54b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getCezaTuru"/></con:call></con:operation><con:operation id="ab0cb437-1458-4991-a843-a52b8f37bfe3" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getGirisTuru" name="getGirisTuru" bindingOperationName="getGirisTuru" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="00bd35d9-2f44-4114-b73f-d8dc76a2e411" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
    <soapenv:Header/>
    <soapenv:Body>
       <v1:getGirisTuru/>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getGirisTuru"/></con:call></con:operation><con:operation id="7d4a7d43-21b6-4fd8-ae2f-d46a5f30173d" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getIdariBirimler" name="getIdariBirimler" bindingOperationName="getIdariBirimler" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="acffef0a-5a71-4f66-9d3d-bd51147b1a15" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getGirisTuru"/></con:call></con:operation><con:operation id="f8741c91-8f60-4232-ae0a-ea056bd8fd5a" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getIdariBirimler" name="getIdariBirimler" bindingOperationName="getIdariBirimler" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="63f49f30-5859-4539-9661-ac6781e64ca3" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
    <soapenv:Header/>
    <soapenv:Body>
       <v1:getIdariBirimler/>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getIdariBirimler"/></con:call></con:operation><con:operation id="57f4528e-e363-4b13-b57e-daa4c9a09535" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getIlceGetir" name="getIlceGetir" bindingOperationName="getIlceGetir" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c3ed6b7b-25fc-4df2-a925-20dbe7abae1d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getIdariBirimler"/></con:call></con:operation><con:operation id="58f783e2-aca4-48bd-b562-bae12261ac0e" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getIlceGetir" name="getIlceGetir" bindingOperationName="getIlceGetir" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="258eaa0e-fed4-43a0-9816-566605fe9099" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
    <soapenv:Header/>
    <soapenv:Body>
       <v1:getIlceGetir>
          <ILKODU>?</ILKODU>
       </v1:getIlceGetir>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getIlceGetir"/></con:call></con:operation><con:operation id="684a576a-b3b4-49d6-979e-a7a46488b42a" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getIlGetir" name="getIlGetir" bindingOperationName="getIlGetir" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="025ab18b-7554-4f02-b207-de27feeaf7c5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getIlceGetir"/></con:call></con:operation><con:operation id="87d53363-7f59-4d8a-a266-7e316fc4636a" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getIlGetir" name="getIlGetir" bindingOperationName="getIlGetir" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="237be2b8-ab72-493c-8668-2b6c9258c5af" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
    <soapenv:Header/>
    <soapenv:Body>
       <v1:getIlGetir/>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getIlGetir"/></con:call></con:operation><con:operation id="932c8b9a-369a-41a4-883f-e1070dbb24c4" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getKadroGorevUnvan" name="getKadroGorevUnvan" bindingOperationName="getKadroGorevUnvan" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e0dbc36f-e8e3-4c56-b898-2e7f2f620efe" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getIlGetir"/></con:call></con:operation><con:operation id="a6e2a5ef-5ec1-4db0-a447-53434ef660d6" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getKadroGorevUnvan" name="getKadroGorevUnvan" bindingOperationName="getKadroGorevUnvan" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="39adde02-4d1b-484f-a23b-354b5246a961" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
    <soapenv:Header/>
    <soapenv:Body>
       <v1:getKadroGorevUnvan/>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getKadroGorevUnvan"/></con:call></con:operation><con:operation id="228746fc-ff81-4371-ac28-10c64bac9a17" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getKodBid" name="getKodBid" bindingOperationName="getKodBid" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a75d86a4-b219-474a-82ea-62d79be0932d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getKadroGorevUnvan"/></con:call></con:operation><con:operation id="541d9041-f609-4255-bf31-75a0c3c6b000" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getKodBid" name="getKodBid" bindingOperationName="getKodBid" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f1dd4925-32a3-41b5-8070-70a2447d683b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
    <soapenv:Header/>
    <soapenv:Body>
       <v1:getKodBid/>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getKodBid"/></con:call></con:operation><con:operation id="349842ed-227d-45b8-84c0-f634a9258016" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getMernisCinsiyet" name="getMernisCinsiyet" bindingOperationName="getMernisCinsiyet" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dee74f0f-f17e-4f00-b1e1-487d7f708a07" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getKodBid"/></con:call></con:operation><con:operation id="5407de1e-b6c6-46f5-87bf-c7c7186fd584" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getMernisCinsiyet" name="getMernisCinsiyet" bindingOperationName="getMernisCinsiyet" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4a83c2e5-81cd-484a-9bee-b336ceed250d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
    <soapenv:Header/>
    <soapenv:Body>
       <v1:getMernisCinsiyet/>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getMernisCinsiyet"/></con:call></con:operation><con:operation id="f9fb9f84-d16e-4d4f-b48a-11bb475a44b9" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getMernisUlke" name="getMernisUlke" bindingOperationName="getMernisUlke" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3b4edf8a-15f6-4e00-a664-8ce1bb4150b6" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getMernisCinsiyet"/></con:call></con:operation><con:operation id="96a86b6a-985d-4d66-8b4a-093776585972" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getMernisUlke" name="getMernisUlke" bindingOperationName="getMernisUlke" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d5a6c16d-7b25-4f9b-8912-d560eceb506f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
    <soapenv:Header/>
    <soapenv:Body>
       <v1:getMernisUlke/>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getMernisUlke"/></con:call></con:operation><con:operation id="ccbb213f-04b9-425b-ab79-6aba9f9e44d3" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getMernisUyruk" name="getMernisUyruk" bindingOperationName="getMernisUyruk" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dbb15043-4108-4204-a8fa-ff9fa2f7ad20" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getMernisUlke"/></con:call></con:operation><con:operation id="d3b87baa-9426-4d9a-88bb-67d0f6dd72d6" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getMernisUyruk" name="getMernisUyruk" bindingOperationName="getMernisUyruk" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8963b4e8-2b0b-4589-85ce-509dbaa3ffcb" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
    <soapenv:Header/>
    <soapenv:Body>
       <v1:getMernisUyruk/>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getMernisUyruk"/></con:call></con:operation><con:operation id="d7b938a1-cc75-431c-aff0-13fd049c551f" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenciAyrilmaNedeni" name="getOgrenciAyrilmaNedeni" bindingOperationName="getOgrenciAyrilmaNedeni" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c998e937-0a03-42ab-adfa-9835c0db0760" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getMernisUyruk"/></con:call></con:operation><con:operation id="961a728c-389f-4cdb-bc38-2c3a8b23b938" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenciAyrilmaNedeni" name="getOgrenciAyrilmaNedeni" bindingOperationName="getOgrenciAyrilmaNedeni" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="491e38c8-ae42-488e-9787-2a7beab86b4c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
    <soapenv:Header/>
    <soapenv:Body>
       <v1:getOgrenciAyrilmaNedeni/>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenciAyrilmaNedeni"/></con:call></con:operation><con:operation id="50b93ae7-b58c-4830-a884-76c5a1fde33d" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenciDiplomaNotSistemi" name="getOgrenciDiplomaNotSistemi" bindingOperationName="getOgrenciDiplomaNotSistemi" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="83e7b787-fd43-4ede-9295-50b64db171d9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenciAyrilmaNedeni"/></con:call></con:operation><con:operation id="22c3654c-4376-4a97-af61-c9106846d6f7" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenciDiplomaNotSistemi" name="getOgrenciDiplomaNotSistemi" bindingOperationName="getOgrenciDiplomaNotSistemi" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="da10676f-83bb-4c3c-b72f-fe08d6a9b1e5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
    <soapenv:Header/>
    <soapenv:Body>
       <v1:getOgrenciDiplomaNotSistemi/>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenciDiplomaNotSistemi"/></con:call></con:operation><con:operation id="c0b6b301-93bd-4ff5-ae9e-54f8e86bd233" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenciDOYKM" name="getOgrenciDOYKM" bindingOperationName="getOgrenciDOYKM" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e5591127-9533-494d-bc0d-da43f8eac9dc" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenciDiplomaNotSistemi"/></con:call></con:operation><con:operation id="63195e71-c118-4282-943b-d1a4e06356cd" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenciDOYKM" name="getOgrenciDOYKM" bindingOperationName="getOgrenciDOYKM" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1e57e0d9-5ef2-4de8-bc70-7a612c2da52d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
    <soapenv:Header/>
    <soapenv:Body>
       <v1:getOgrenciDOYKM/>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenciDOYKM"/></con:call></con:operation><con:operation id="10d34ae8-a5c5-4a83-8f0f-0d2e1cb79937" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenciEngelTuru" name="getOgrenciEngelTuru" bindingOperationName="getOgrenciEngelTuru" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2ad146e7-d68d-475d-91be-237258215ebf" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenciDOYKM"/></con:call></con:operation><con:operation id="1616dd19-00ff-4e36-9530-09a253d9f5ba" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenciEngelTuru" name="getOgrenciEngelTuru" bindingOperationName="getOgrenciEngelTuru" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d333f88e-788c-445b-8910-37ff6d92a2de" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
    <soapenv:Header/>
    <soapenv:Body>
       <v1:getOgrenciEngelTuru/>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenciEngelTuru"/></con:call></con:operation><con:operation id="ae0cc20a-39f5-468f-bd5c-a8165a5c037b" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenciGaziSehitYakini" name="getOgrenciGaziSehitYakini" bindingOperationName="getOgrenciGaziSehitYakini" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9a846fff-d74d-4994-9ca7-2a453e0e42bd" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenciEngelTuru"/></con:call></con:operation><con:operation id="6424ddbf-fa56-4fe7-a90f-2cc67b86c79a" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenciGaziSehitYakini" name="getOgrenciGaziSehitYakini" bindingOperationName="getOgrenciGaziSehitYakini" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e910029a-41dd-4492-a51f-e1b3476ded9f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
    <soapenv:Header/>
    <soapenv:Body>
       <v1:getOgrenciGaziSehitYakini/>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenciGaziSehitYakini"/></con:call></con:operation><con:operation id="60f859e2-e18c-450e-acf4-1f1d3ada3b3a" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenciGirisPuanTuru" name="getOgrenciGirisPuanTuru" bindingOperationName="getOgrenciGirisPuanTuru" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="75624351-e5d3-45fc-bca0-c8ff845ee800" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenciGaziSehitYakini"/></con:call></con:operation><con:operation id="f4cdf6b5-2ee2-4acb-b77b-a48ffe261d3c" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenciGirisPuanTuru" name="getOgrenciGirisPuanTuru" bindingOperationName="getOgrenciGirisPuanTuru" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ab9a0620-7255-4862-98e8-a338b8cd7c0a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
    <soapenv:Header/>
    <soapenv:Body>
       <v1:getOgrenciGirisPuanTuru/>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenciGirisPuanTuru"/></con:call></con:operation><con:operation id="8cecbc4b-d686-4aa9-81d2-eb375448201e" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenciGirisTuru" name="getOgrenciGirisTuru" bindingOperationName="getOgrenciGirisTuru" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="673bd102-fc31-4600-b31b-64bec1aeb511" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenciGirisPuanTuru"/></con:call></con:operation><con:operation id="d56cbeb3-4eb8-4523-9eb3-dc4678967de7" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenciGirisTuru" name="getOgrenciGirisTuru" bindingOperationName="getOgrenciGirisTuru" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a69e1170-b326-40fd-b8ff-a5a8f69b5098" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
    <soapenv:Header/>
    <soapenv:Body>
       <v1:getOgrenciGirisTuru/>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenciGirisTuru"/></con:call></con:operation><con:operation id="21a11af3-6f22-4bdb-a667-f55cbf0d0d9a" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrencilikStatusu" name="getOgrencilikStatusu" bindingOperationName="getOgrencilikStatusu" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="defa9f79-d4b0-4cea-b159-e5d9a8a2f547" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenciGirisTuru"/></con:call></con:operation><con:operation id="89680a39-f621-4647-ad66-3ac4989ce91f" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrencilikStatusu" name="getOgrencilikStatusu" bindingOperationName="getOgrencilikStatusu" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="641b4195-02f3-4029-9fe8-46bb50c0c54c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
    <soapenv:Header/>
    <soapenv:Body>
       <v1:getOgrencilikStatusu/>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrencilikStatusu"/></con:call></con:operation><con:operation id="b7e80ad9-e1e5-4113-a269-8bcde3aa3407" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenciOgrencilikHakki" name="getOgrenciOgrencilikHakki" bindingOperationName="getOgrenciOgrencilikHakki" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="cd5815ee-87f2-4e6f-bd47-800687497b37" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrencilikStatusu"/></con:call></con:operation><con:operation id="79749b4b-2420-41a3-adac-47e6f83e8bc4" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenciOgrencilikHakki" name="getOgrenciOgrencilikHakki" bindingOperationName="getOgrenciOgrencilikHakki" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="fd2aa4fc-a6bd-4866-a468-3c5bd7a4a73a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
    <soapenv:Header/>
    <soapenv:Body>
       <v1:getOgrenciOgrencilikHakki/>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenciOgrencilikHakki"/></con:call></con:operation><con:operation id="4d10a42e-b3bc-47fe-b145-c06eb051ea04" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenciSinif" name="getOgrenciSinif" bindingOperationName="getOgrenciSinif" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3e7cfb40-1698-4e35-8aa0-f879a2ba185f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenciOgrencilikHakki"/></con:call></con:operation><con:operation id="3c4ac731-d36b-4943-878a-83412401014c" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenciSinif" name="getOgrenciSinif" bindingOperationName="getOgrenciSinif" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b4bcd8fc-a647-4a1b-a3b6-a60a63e9a80d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
    <soapenv:Header/>
    <soapenv:Body>
       <v1:getOgrenciSinif/>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenciSinif"/></con:call></con:operation><con:operation id="5635a0b6-2bda-41a9-a591-71e18f7e60e2" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenimDili" name="getOgrenimDili" bindingOperationName="getOgrenimDili" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8619844d-5497-435a-9d66-04419d3e56b8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenciSinif"/></con:call></con:operation><con:operation id="0e30f9a0-77df-4dfd-9b63-ea8ed7fce2e8" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenimDili" name="getOgrenimDili" bindingOperationName="getOgrenimDili" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="719160a7-aa86-46a7-bdd6-77aa2ae0ba5d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
    <soapenv:Header/>
    <soapenv:Body>
       <v1:getOgrenimDili/>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenimDili"/></con:call></con:operation><con:operation id="79616f78-03b4-40ce-84e6-4ce5beef0094" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenimTuru" name="getOgrenimTuru" bindingOperationName="getOgrenimTuru" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e3de8f26-5eac-4c88-96c6-b61783a3e1cd" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenimDili"/></con:call></con:operation><con:operation id="146a0b15-dbf1-4121-aeb3-77bc12c802f7" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getOgrenimTuru" name="getOgrenimTuru" bindingOperationName="getOgrenimTuru" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6869a49a-0e24-427b-ae40-f120c9c4cf20" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
    <soapenv:Header/>
    <soapenv:Body>
       <v1:getOgrenimTuru/>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenimTuru"/></con:call></con:operation><con:operation id="865d7de5-0182-48f6-bda2-e3a7db98de3f" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getPersonelGorev" name="getPersonelGorev" bindingOperationName="getPersonelGorev" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="47397f06-3415-4021-b31f-c7a66b9156cb" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getOgrenimTuru"/></con:call></con:operation><con:operation id="0455275d-3a78-41b0-8cbd-9a5fbb142256" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getPersonelGorev" name="getPersonelGorev" bindingOperationName="getPersonelGorev" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="04092c8a-6485-4721-8b13-05fc002423d4" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
    <soapenv:Header/>
    <soapenv:Body>
       <v1:getPersonelGorev/>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getPersonelGorev"/></con:call></con:operation><con:operation id="f24008d6-e1b7-464c-a349-0f183cd5c327" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getUniversiteTuru" name="getUniversiteTuru" bindingOperationName="getUniversiteTuru" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="72820e0a-95ac-49c6-bf0b-b86c8d3acf64" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getPersonelGorev"/></con:call></con:operation><con:operation id="8e2824a1-5f93-4ac8-afda-b4010e867ec5" isOneWay="false" action="WSDLs_Referans_Referanslar_Binder_getUniversiteTuru" name="getUniversiteTuru" bindingOperationName="getUniversiteTuru" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7e4f0ebc-3eba-4a97-a22e-4d0e566fe7c1" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/Referanslarv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://servisler.yok.gov.tr/Referanslar/v1">
    <soapenv:Header/>
    <soapenv:Body>
       <v1:getUniversiteTuru/>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getUniversiteTuru"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Referans_Referanslar_Binder_getUniversiteTuru"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="91a5b070-70f1-4da9-ad12-da6b960074bf" wsaVersion="NONE" name="WSDLs_AkademikPersonel_UniversitelereAkademikPersonelv1_Binder" type="wsdl" bindingName="{http://172.16.2.33/WSDLs.AkademikPersonel:UniversitelereAkademikPersonelv1}WSDLs_AkademikPersonel_UniversitelereAkademikPersonelv1_Binder" soapVersion="1_1" anonymous="optional" definition="http://servisler.yok.gov.tr/ws/UniversiteAkademikPersonelv1?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://servisler.yok.gov.tr/ws/UniversiteAkademikPersonelv1?WSDL"><con:part><con:url>http://servisler.yok.gov.tr/ws/UniversiteAkademikPersonelv1?WSDL</con:url><con:content><![CDATA[<wsdl:definitions name="UniversitelereAkademikPersonelv1" targetNamespace="http://172.16.2.33/WSDLs.AkademikPersonel:UniversitelereAkademikPersonelv1" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soapjms="http://www.w3.org/2010/soapjms/" xmlns:tns="http://172.16.2.33/WSDLs.AkademikPersonel:UniversitelereAkademikPersonelv1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://172.16.2.33/WSDLs.AkademikPersonel:UniversitelereAkademikPersonelv1">
+      <xsd:element name="kullaniciyaGoreTcKimlikNodan_Akademik_Personel_Bilgisiv1" type="tns:kullaniciyaGoreTcKimlikNodan_Akademik_Personel_Bilgisiv1"/>
+      <xsd:element name="kullaniciyaGoreTcKimlikNodan_Akademik_Personel_Bilgisiv1Response" type="tns:kullaniciyaGoreTcKimlikNodan_Akademik_Personel_Bilgisiv1Response"/>
+      <xsd:element name="kullaniciyaGoreUniversitedeki_Akademik_Personel_Bilgisiv1" type="tns:kullaniciyaGoreUniversitedeki_Akademik_Personel_Bilgisiv1"/>
+      <xsd:element name="kullaniciyaGoreUniversitedeki_Akademik_Personel_Bilgisiv1Response" type="tns:kullaniciyaGoreUniversitedeki_Akademik_Personel_Bilgisiv1Response"/>
+      <xsd:element name="kullaniciyaGoreUniversiteki_Akademik_Personel_SayfaSayisiv1" type="tns:kullaniciyaGoreUniversiteki_Akademik_Personel_SayfaSayisiv1"/>
+      <xsd:element name="kullaniciyaGoreUniversiteki_Akademik_Personel_SayfaSayisiv1Response" type="tns:kullaniciyaGoreUniversiteki_Akademik_Personel_SayfaSayisiv1Response"/>
+      <xsd:element name="getMernisUyruk" type="tns:getMernisUyruk"/>
+      <xsd:element name="getMernisUyrukResponse" type="tns:getMernisUyrukResponse"/>
+      <xsd:complexType name="kullaniciyaGoreTcKimlikNodan_Akademik_Personel_Bilgisiv1">
+        <xsd:sequence>
+          <xsd:element name="AKPER_TC_KIMLIK_NO" nillable="true" type="xsd:long"/>
+          <xsd:element name="SORGULAYAN_TC_KIMLIK_NO" nillable="true" type="xsd:long"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="kullaniciyaGoreTcKimlikNodan_Akademik_Personel_Bilgisiv1Response">
+        <xsd:sequence>
+          <xsd:element name="AkademikPersonel" nillable="true" type="tns:AkademikPersonel"/>
+          <xsd:element name="Sonuc" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AkademikPersonel">
+        <xsd:sequence>
+          <xsd:element name="TC_KIMLIK_NO" nillable="true" type="xsd:long"/>
+          <xsd:element name="ADI" nillable="true" type="xsd:string"/>
+          <xsd:element name="SOYADI" nillable="true" type="xsd:string"/>
+          <xsd:element name="KADRO_UNVAN" nillable="true" type="xsd:string"/>
+          <xsd:element name="BIRIM_ID" nillable="true" type="xsd:long"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Sonuc">
+        <xsd:sequence>
+          <xsd:element name="DurumAciklama" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="kullaniciyaGoreUniversitedeki_Akademik_Personel_Bilgisiv1">
+        <xsd:sequence>
+          <xsd:element name="SORGULAYAN_TC_KIMLIK_NO" nillable="true" type="xsd:long"/>
+          <xsd:element name="SAYFA" nillable="true" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="kullaniciyaGoreUniversitedeki_Akademik_Personel_Bilgisiv1Response">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="Akademik_Personeller" nillable="true" type="tns:AkademikPersonel"/>
+          <xsd:element name="Sonuc" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="kullaniciyaGoreUniversiteki_Akademik_Personel_SayfaSayisiv1">
+        <xsd:sequence>
+          <xsd:element name="SORGULAYAN_TC_KIMLIK_NO" nillable="true" type="xsd:long"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="kullaniciyaGoreUniversiteki_Akademik_Personel_SayfaSayisiv1Response">
+        <xsd:sequence>
+          <xsd:element name="TOPLAM_SAYFA_SAYISI" nillable="true" type="xsd:int"/>
+          <xsd:element name="Sonuc" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getMernisUyruk">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getMernisUyrukResponse">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="REFERANSLAR" nillable="true" type="tns:Referans"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc2"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Referans">
+        <xsd:sequence>
+          <xsd:element name="KOD" nillable="true" type="xsd:long"/>
+          <xsd:element name="AD" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Sonuc2">
+        <xsd:sequence>
+          <xsd:element name="DurumAciklama" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="UniversitelereAkademikPersonelv1_PortType_getMernisUyrukResponse">
+    <wsdl:part element="tns:getMernisUyrukResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UniversitelereAkademikPersonelv1_PortType_getMernisUyruk">
+    <wsdl:part element="tns:getMernisUyruk" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UniversitelereAkademikPersonelv1_PortType_kullaniciyaGoreUniversiteki_Akademik_Personel_SayfaSayisiv1Response">
+    <wsdl:part element="tns:kullaniciyaGoreUniversiteki_Akademik_Personel_SayfaSayisiv1Response" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UniversitelereAkademikPersonelv1_PortType_kullaniciyaGoreUniversitedeki_Akademik_Personel_Bilgisiv1">
+    <wsdl:part element="tns:kullaniciyaGoreUniversitedeki_Akademik_Personel_Bilgisiv1" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UniversitelereAkademikPersonelv1_PortType_kullaniciyaGoreTcKimlikNodan_Akademik_Personel_Bilgisiv1Response">
+    <wsdl:part element="tns:kullaniciyaGoreTcKimlikNodan_Akademik_Personel_Bilgisiv1Response" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UniversitelereAkademikPersonelv1_PortType_kullaniciyaGoreUniversiteki_Akademik_Personel_SayfaSayisiv1">
+    <wsdl:part element="tns:kullaniciyaGoreUniversiteki_Akademik_Personel_SayfaSayisiv1" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UniversitelereAkademikPersonelv1_PortType_kullaniciyaGoreUniversitedeki_Akademik_Personel_Bilgisiv1Response">
+    <wsdl:part element="tns:kullaniciyaGoreUniversitedeki_Akademik_Personel_Bilgisiv1Response" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UniversitelereAkademikPersonelv1_PortType_kullaniciyaGoreTcKimlikNodan_Akademik_Personel_Bilgisiv1">
+    <wsdl:part element="tns:kullaniciyaGoreTcKimlikNodan_Akademik_Personel_Bilgisiv1" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="UniversitelereAkademikPersonelv1_PortType">
+    <wsdl:operation name="getMernisUyruk">
+      <wsdl:input message="tns:UniversitelereAkademikPersonelv1_PortType_getMernisUyruk"></wsdl:input>
+      <wsdl:output message="tns:UniversitelereAkademikPersonelv1_PortType_getMernisUyrukResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="kullaniciyaGoreUniversiteki_Akademik_Personel_SayfaSayisiv1">
+      <wsdl:input message="tns:UniversitelereAkademikPersonelv1_PortType_kullaniciyaGoreUniversiteki_Akademik_Personel_SayfaSayisiv1"></wsdl:input>
+      <wsdl:output message="tns:UniversitelereAkademikPersonelv1_PortType_kullaniciyaGoreUniversiteki_Akademik_Personel_SayfaSayisiv1Response"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="kullaniciyaGoreTcKimlikNodan_Akademik_Personel_Bilgisiv1">
+      <wsdl:input message="tns:UniversitelereAkademikPersonelv1_PortType_kullaniciyaGoreTcKimlikNodan_Akademik_Personel_Bilgisiv1"></wsdl:input>
+      <wsdl:output message="tns:UniversitelereAkademikPersonelv1_PortType_kullaniciyaGoreTcKimlikNodan_Akademik_Personel_Bilgisiv1Response"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="kullaniciyaGoreUniversitedeki_Akademik_Personel_Bilgisiv1">
+      <wsdl:input message="tns:UniversitelereAkademikPersonelv1_PortType_kullaniciyaGoreUniversitedeki_Akademik_Personel_Bilgisiv1"></wsdl:input>
+      <wsdl:output message="tns:UniversitelereAkademikPersonelv1_PortType_kullaniciyaGoreUniversitedeki_Akademik_Personel_Bilgisiv1Response"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSDLs_AkademikPersonel_UniversitelereAkademikPersonelv1_Binder" type="tns:UniversitelereAkademikPersonelv1_PortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getMernisUyruk">
+      <soap:operation soapAction="WSDLs_AkademikPersonel_UniversitelereAkademikPersonelv1_Binder_getMernisUyruk" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="kullaniciyaGoreUniversiteki_Akademik_Personel_SayfaSayisiv1">
+      <soap:operation soapAction="WSDLs_AkademikPersonel_UniversitelereAkademikPersonelv1_Binder_kullaniciyaGoreUniversiteki_Akademik_Personel_SayfaSayisiv1" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="kullaniciyaGoreTcKimlikNodan_Akademik_Personel_Bilgisiv1">
+      <soap:operation soapAction="WSDLs_AkademikPersonel_UniversitelereAkademikPersonelv1_Binder_kullaniciyaGoreTcKimlikNodan_Akademik_Personel_Bilgisiv1" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="kullaniciyaGoreUniversitedeki_Akademik_Personel_Bilgisiv1">
+      <soap:operation soapAction="WSDLs_AkademikPersonel_UniversitelereAkademikPersonelv1_Binder_kullaniciyaGoreUniversitedeki_Akademik_Personel_Bilgisiv1" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSDLs.AkademikPersonel.UniversitelereAkademikPersonelv1">
+    <wsdl:port binding="tns:WSDLs_AkademikPersonel_UniversitelereAkademikPersonelv1_Binder" name="WSDLs_AkademikPersonel_UniversitelereAkademikPersonelv1_Port">
+      <soap:address location="http://servisler.yok.gov.tr/ws/UniversiteAkademikPersonelv1"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://servisler.yok.gov.tr/ws/UniversiteAkademikPersonelv1</con:endpoint></con:endpoints><con:operation id="da91fc3a-9984-414f-aa22-ecebbd710b76" isOneWay="false" action="WSDLs_AkademikPersonel_UniversitelereAkademikPersonelv1_Binder_getMernisUyruk" name="getMernisUyruk" bindingOperationName="getMernisUyruk" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="35eadf03-cdc6-4188-8352-2c7a5633ab10" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/UniversiteAkademikPersonelv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsd="http://172.16.2.33/WSDLs.AkademikPersonel:UniversitelereAkademikPersonelv1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wsd:getMernisUyruk/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_AkademikPersonel_UniversitelereAkademikPersonelv1_Binder_getMernisUyruk"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="1852aec4-8380-43dc-aa7c-3879509a22c1" isOneWay="false" action="WSDLs_AkademikPersonel_UniversitelereAkademikPersonelv1_Binder_kullaniciyaGoreTcKimlikNodan_Akademik_Personel_Bilgisiv1" name="kullaniciyaGoreTcKimlikNodan_Akademik_Personel_Bilgisiv1" bindingOperationName="kullaniciyaGoreTcKimlikNodan_Akademik_Personel_Bilgisiv1" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="87326b4d-8d1e-465e-a2cb-7dd83a214fc8" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/UniversiteAkademikPersonelv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsd="http://172.16.2.33/WSDLs.AkademikPersonel:UniversitelereAkademikPersonelv1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wsd:kullaniciyaGoreTcKimlikNodan_Akademik_Personel_Bilgisiv1>
+         <AKPER_TC_KIMLIK_NO>14674478966</AKPER_TC_KIMLIK_NO>
+         <SORGULAYAN_TC_KIMLIK_NO>41242414552</SORGULAYAN_TC_KIMLIK_NO>
+      </wsd:kullaniciyaGoreTcKimlikNodan_Akademik_Personel_Bilgisiv1>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_AkademikPersonel_UniversitelereAkademikPersonelv1_Binder_kullaniciyaGoreTcKimlikNodan_Akademik_Personel_Bilgisiv1"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="bc7d6082-452b-4963-9d7d-86875717ce37" isOneWay="false" action="WSDLs_AkademikPersonel_UniversitelereAkademikPersonelv1_Binder_kullaniciyaGoreUniversitedeki_Akademik_Personel_Bilgisiv1" name="kullaniciyaGoreUniversitedeki_Akademik_Personel_Bilgisiv1" bindingOperationName="kullaniciyaGoreUniversitedeki_Akademik_Personel_Bilgisiv1" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="49c25e90-ca5a-4491-9a6d-dce2f8cdc4f8" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/UniversiteAkademikPersonelv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsd="http://172.16.2.33/WSDLs.AkademikPersonel:UniversitelereAkademikPersonelv1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wsd:kullaniciyaGoreUniversitedeki_Akademik_Personel_Bilgisiv1>
+         <SORGULAYAN_TC_KIMLIK_NO>41242414552</SORGULAYAN_TC_KIMLIK_NO>
+         <SAYFA>9</SAYFA>
+      </wsd:kullaniciyaGoreUniversitedeki_Akademik_Personel_Bilgisiv1>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_AkademikPersonel_UniversitelereAkademikPersonelv1_Binder_kullaniciyaGoreUniversitedeki_Akademik_Personel_Bilgisiv1"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="40278887-edaf-412e-86bc-afa930c9195c" isOneWay="false" action="WSDLs_AkademikPersonel_UniversitelereAkademikPersonelv1_Binder_kullaniciyaGoreUniversiteki_Akademik_Personel_SayfaSayisiv1" name="kullaniciyaGoreUniversiteki_Akademik_Personel_SayfaSayisiv1" bindingOperationName="kullaniciyaGoreUniversiteki_Akademik_Personel_SayfaSayisiv1" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="906f6b86-364b-4e0a-9df3-faef5a4036d0" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/UniversiteAkademikPersonelv1</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsd="http://172.16.2.33/WSDLs.AkademikPersonel:UniversitelereAkademikPersonelv1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wsd:kullaniciyaGoreUniversiteki_Akademik_Personel_SayfaSayisiv1>
+         <SORGULAYAN_TC_KIMLIK_NO>41242414552</SORGULAYAN_TC_KIMLIK_NO>
+      </wsd:kullaniciyaGoreUniversiteki_Akademik_Personel_SayfaSayisiv1>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_AkademikPersonel_UniversitelereAkademikPersonelv1_Binder_kullaniciyaGoreUniversiteki_Akademik_Personel_SayfaSayisiv1"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:endpointStrategy xsi:type="con:DefaultEndpointStrategy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:endpoint mode="COMPLEMENT" username="41242414552" password="876ytr">http://servisler.yok.gov.tr/ws/UniversiteAkademikPersonelv1</con:endpoint></con:endpointStrategy><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

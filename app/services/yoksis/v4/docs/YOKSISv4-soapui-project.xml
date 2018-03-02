@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="37b892da-91d9-47a5-8eaf-e30f920bc56d" activeEnvironment="Default" name="YOKSISv4" resourceRoot="" soapui-version="5.4.0" 
+  xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:sensitiveInformation/>
+</con:soapui-project>
