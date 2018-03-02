@@ -12,6 +12,8 @@ Make sure to define these environment variables before setting up the project:
 RDS_USERNAME: PostgreSQL username
 RDS_PASSWORD: PostgreSQL password
 RDS_HOSTNAME: PostgreSQL hostname (probably localhost)
+YOKSIS_USER: YOKSIS username.
+YOKSIS_PASSWORD: YOKSIS password.
 ```
 
 - Install dependencies:

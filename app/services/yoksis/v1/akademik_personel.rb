@@ -3,14 +3,16 @@ module Services
     module V1
       # client = Services::Yoksis::V1::AkademikPersonel.new
       # client.get_mernis_uyruk({})
-      # client.kullaniciya_gore_tc_kimlik_nodan_akademik_personel_bilgisiv1({"AKPER_TC_KIMLIK_NO" => 14674478966, "SORGULAYAN_TC_KIMLIK_NO" => 41242414552})
+      # client.kullaniciya_gore_tc_kimlik_nodan_akademik_personel_bilgisiv1(
+      #   {"AKPER_TC_KIMLIK_NO" => 14674478966, "SORGULAYAN_TC_KIMLIK_NO" => 41242414552}
+      # )
       class AkademikPersonel
         def initialize
           @client = Savon.client(
             wsdl: 'http://servisler.yok.gov.tr/ws/UniversiteAkademikPersonelv1?WSDL',
             log: false,
             log_level: :debug,
-            basic_auth: ['41242414552', '876ytr']
+            basic_auth: [ENV['YOKSIS_USER'], ENV['YOKSIS_PASSWORD']]
           )
         end
 
