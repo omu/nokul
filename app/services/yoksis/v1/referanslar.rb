@@ -1,6 +1,5 @@
 module Services
   module Yoksis
-    # :reek:UncommunicativeModuleName:
     module V1
       # client = Services::Yoksis::V1::Referanslar.new
       # client.get_universite_turu
@@ -48,7 +47,9 @@ module Services
           )
         end
 
-        private def send_request(action_name, args)
+        private
+
+        def send_request(action_name, args)
           @response = client.call(action_name, message: args)
           response.body
         end

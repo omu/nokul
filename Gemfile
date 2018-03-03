@@ -22,6 +22,7 @@ group :development, :test do
   gem 'brakeman', require: false
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'capybara', '~> 2.13'
+  gem 'pry-rails'
   gem 'reek'
   gem 'rubocop'
   gem 'selenium-webdriver'
