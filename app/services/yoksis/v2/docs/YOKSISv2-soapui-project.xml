@@ -1,7 +1,169 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:soapui-project id="b46e89ff-d4b4-452e-b6dc-ab92e352900e" activeEnvironment="Default" name="YOKSISv2" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
-  <con:interface xsi:type="con:WsdlInterface" id="97e0520d-8986-45c8-ab2f-c825966b0bab" wsaVersion="NONE" name="MEBMezunSorgulama 1.2" type="wsdl" bindingName="{YOK_WEB_SERVICE}Service1Soap12" soapVersion="1_2" anonymous="optional" definition="https://servisler.yok.gov.tr/ws/mebmezunsorgulav2?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://servisler.yok.gov.tr/ws/mebmezunsorgulav2</con:endpoint></con:endpoints><con:operation id="90af2548-e961-4577-807c-55e0ce7a6973" isOneWay="false" action="YOK_WEB_SERVICE/mezuniyetVerileriniGetir" name="mezuniyetVerileriniGetir" bindingOperationName="mezuniyetVerileriniGetir" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3b73ec5a-5987-40b3-abff-c59f0ce15143" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/mebmezunsorgulav2</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:yok="YOK_WEB_SERVICE">
+  <con:interface xsi:type="con:WsdlInterface" id="97e0520d-8986-45c8-ab2f-c825966b0bab" wsaVersion="NONE" name="MEBMezunSorgulama 1.2" type="wsdl" bindingName="{YOK_WEB_SERVICE}Service1Soap12" soapVersion="1_2" anonymous="optional" definition="https://servisler.yok.gov.tr/ws/mebmezunsorgulav2?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://servisler.yok.gov.tr/ws/mebmezunsorgulav2?WSDL"><con:part><con:url>https://servisler.yok.gov.tr/ws/mebmezunsorgulav2?WSDL</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="YOK_WEB_SERVICE" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:tns="YOK_WEB_SERVICE" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="YOK_WEB_SERVICE">
+      <s:element name="mezuniyetVerileriniGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element maxOccurs="1" minOccurs="0" name="TCKIMLIKNO" type="s:string"/>
+            <s:element maxOccurs="1" minOccurs="0" name="ServicePassWord" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mezuniyetVerileriniGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element maxOccurs="1" minOccurs="1" name="mezuniyetVerileriniGetirResult" type="tns:mezuniyetVerileri"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="mezuniyetVerileri">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="0" name="mezuniyetVeriListesi" type="tns:ArrayOfMezuniyetVeriListesi"/>
+          <s:element maxOccurs="1" minOccurs="1" name="SONUCKODU" type="s:int"/>
+          <s:element maxOccurs="1" minOccurs="0" name="ACIKLAMA" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfMezuniyetVeriListesi">
+        <s:sequence>
+          <s:element maxOccurs="unbounded" minOccurs="0" name="mezuniyetVeriListesi" type="tns:mezuniyetVeriListesi"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="mezuniyetVeriListesi">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="0" name="TCKIMLIKNO" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="mezuniyetVerileriniGetirDetay">
+        <s:complexType>
+          <s:sequence>
+            <s:element maxOccurs="1" minOccurs="0" name="TCKIMLIKNO" type="s:string"/>
+            <s:element maxOccurs="1" minOccurs="0" name="ServicePassWord" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mezuniyetVerileriniGetirDetayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element maxOccurs="1" minOccurs="1" name="mezuniyetVerileriniGetirDetayResult" type="tns:mezuniyetVerileriDetay"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="mezuniyetVerileriDetay">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="0" name="mezuniyetVeriListesiDetay" type="tns:ArrayOfMezuniyetVeriListesiDetay"/>
+          <s:element maxOccurs="1" minOccurs="1" name="SONUCKODU" type="s:int"/>
+          <s:element maxOccurs="1" minOccurs="0" name="ACIKLAMA" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfMezuniyetVeriListesiDetay">
+        <s:sequence>
+          <s:element maxOccurs="unbounded" minOccurs="0" name="mezuniyetVeriListesiDetay" type="tns:mezuniyetVeriListesiDetay"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="mezuniyetVeriListesiDetay">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="0" name="TCKIMLIKNO" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="ADI" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="SOYADI" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="OKULKODU" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="OKULADI" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="OKULTURKODU" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="OKULTURADI" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="OKULALANKODU" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="OKULALANADI" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="OKULDALKODU" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="OKULDALADI" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="OKULBIRINCISI" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="OKULILADI" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="OKULILKODU" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="OKULILCEADI" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="OKULILCEKODU" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="OGRENIMTURU" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="MEZUNDURUMUKODU" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="MEZUNDURUMU" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="MEZUNIYETTARIH" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="NOTSISTEMI" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="DIPLOMANOTUPUANI" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="mezuniyetVerileriniGetirSoapIn">
+    <wsdl:part element="tns:mezuniyetVerileriniGetir" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="mezuniyetVerileriniGetirSoapOut">
+    <wsdl:part element="tns:mezuniyetVerileriniGetirResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="mezuniyetVerileriniGetirDetaySoapIn">
+    <wsdl:part element="tns:mezuniyetVerileriniGetirDetay" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="mezuniyetVerileriniGetirDetaySoapOut">
+    <wsdl:part element="tns:mezuniyetVerileriniGetirDetayResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="mezuniyetVerileriniGetir">
+      <wsdl:input message="tns:mezuniyetVerileriniGetirSoapIn"/>
+      <wsdl:output message="tns:mezuniyetVerileriniGetirSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="mezuniyetVerileriniGetirDetay">
+      <wsdl:input message="tns:mezuniyetVerileriniGetirDetaySoapIn"/>
+      <wsdl:output message="tns:mezuniyetVerileriniGetirDetaySoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="mezuniyetVerileriniGetir">
+      <soap:operation soapAction="YOK_WEB_SERVICE/mezuniyetVerileriniGetir" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mezuniyetVerileriniGetirDetay">
+      <soap:operation soapAction="YOK_WEB_SERVICE/mezuniyetVerileriniGetirDetay" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="mezuniyetVerileriniGetir">
+      <soap12:operation soapAction="YOK_WEB_SERVICE/mezuniyetVerileriniGetir" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mezuniyetVerileriniGetirDetay">
+      <soap12:operation soapAction="YOK_WEB_SERVICE/mezuniyetVerileriniGetirDetay" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port binding="tns:Service1Soap" name="Service1Soap">
+      <soap:address location="http://servisler.yok.gov.tr/ws/mebmezunsorgulav2"/>
+    </wsdl:port>
+    <wsdl:port binding="tns:Service1Soap12" name="Service1Soap12">
+      <soap12:address location="http://servisler.yok.gov.tr/ws/mebmezunsorgulav2"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://servisler.yok.gov.tr/ws/mebmezunsorgulav2</con:endpoint></con:endpoints><con:operation id="90af2548-e961-4577-807c-55e0ce7a6973" isOneWay="false" action="YOK_WEB_SERVICE/mezuniyetVerileriniGetir" name="mezuniyetVerileriniGetir" bindingOperationName="mezuniyetVerileriniGetir" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3b73ec5a-5987-40b3-abff-c59f0ce15143" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/mebmezunsorgulav2</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:yok="YOK_WEB_SERVICE">
    <soap:Header/>
    <soap:Body>
       <yok:mezuniyetVerileriniGetir>
@@ -203,7 +365,94 @@
          <yok:ServicePassWord></yok:ServicePassWord>
       </yok:mezuniyetVerileriniGetirDetay>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="YOK_WEB_SERVICE/mezuniyetVerileriniGetirDetay"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:endpointStrategy xsi:type="con:DefaultEndpointStrategy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:endpoint mode="COMPLEMENT" username="41242414552" password="876ytr">http://servisler.yok.gov.tr/ws/mebmezunsorgulav2</con:endpoint></con:endpointStrategy><con:properties/>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="YOK_WEB_SERVICE/mezuniyetVerileriniGetirDetay"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="cc2d3a51-00dd-4cb2-a381-625cabf23bbc" wsaVersion="NONE" name="MezunSorgulama" type="wsdl" bindingName="{http://servisler.yok.gov.tr/MezunOgrenciv2}WSDLs_Ogrenci_MezunOgrenciv2_Binder" soapVersion="1_1" anonymous="optional" definition="https://servisler.yok.gov.tr/ws/TcKimlikNoileMezunOgrenciSorgulav2?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://servisler.yok.gov.tr/ws/TcKimlikNoileMezunOgrenciSorgulav2?WSDL"><con:part><con:url>https://servisler.yok.gov.tr/ws/TcKimlikNoileMezunOgrenciSorgulav2?WSDL</con:url><con:content><![CDATA[<wsdl:definitions name="MezunOgrenciv2" targetNamespace="http://servisler.yok.gov.tr/MezunOgrenciv2" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soapjms="http://www.w3.org/2010/soapjms/" xmlns:tns="http://servisler.yok.gov.tr/MezunOgrenciv2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://servisler.yok.gov.tr/MezunOgrenciv2">
+      <xsd:element name="TcKimlikNoilMezunOgrenciSorgulav2" type="tns:TcKimlikNoilMezunOgrenciSorgulav2"/>
+      <xsd:element name="TcKimlikNoilMezunOgrenciSorgulav2Response" type="tns:TcKimlikNoilMezunOgrenciSorgulav2Response"/>
+      <xsd:complexType name="TcKimlikNoilMezunOgrenciSorgulav2">
+        <xsd:sequence>
+          <xsd:element name="TCKNO" nillable="true" type="xsd:long"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TcKimlikNoilMezunOgrenciSorgulav2Response">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="MEZUN_OGRENCI_KAYITLARI" nillable="true" type="tns:MezunOgrenciv2"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="MezunOgrenciv2">
+        <xsd:sequence>
+          <xsd:element name="TCKNO" nillable="true" type="xsd:long"/>
+          <xsd:element name="ADI" nillable="true" type="xsd:string"/>
+          <xsd:element name="SOYADI" nillable="true" type="xsd:string"/>
+          <xsd:element name="ANNE_ADI" nillable="true" type="xsd:string"/>
+          <xsd:element name="BABA_ADI" nillable="true" type="xsd:string"/>
+          <xsd:element name="DOGUM_TARIHI" nillable="true" type="tns:Tarih"/>
+          <xsd:element name="MEZUNIYET_TARIHI" nillable="true" type="tns:Tarih"/>
+          <xsd:element name="DIPLOMA_NOTU" nillable="true" type="xsd:double"/>
+          <xsd:element name="DIPLOMA_NOT_SISTEMI" nillable="true" type="xsd:int"/>
+          <xsd:element name="DIPLOMA_NO" nillable="true" type="xsd:string"/>
+          <xsd:element name="UNIVERSITE_ADI" nillable="true" type="xsd:string"/>
+          <xsd:element name="FAK_MYO_YO_ENS" nillable="true" type="xsd:string"/>
+          <xsd:element name="PROGRAM_ADI" nillable="true" type="xsd:string"/>
+          <xsd:element name="UNIV_ID" nillable="true" type="xsd:long"/>
+          <xsd:element name="BIRIM_ID" nillable="true" type="xsd:long"/>
+          <xsd:element name="ALT_PROGRAM" nillable="true" type="xsd:long"/>
+          <xsd:element name="DURUM" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Tarih">
+        <xsd:sequence>
+          <xsd:element name="GUN" nillable="true" type="xsd:int"/>
+          <xsd:element name="AY" nillable="true" type="xsd:int"/>
+          <xsd:element name="YIL" nillable="true" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Sonuc">
+        <xsd:sequence>
+          <xsd:element name="DurumAciklama" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="MezunOgrenciv2_PortType_TcKimlikNoilMezunOgrenciSorgulav2Response">
+    <wsdl:part element="tns:TcKimlikNoilMezunOgrenciSorgulav2Response" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="MezunOgrenciv2_PortType_TcKimlikNoilMezunOgrenciSorgulav2">
+    <wsdl:part element="tns:TcKimlikNoilMezunOgrenciSorgulav2" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="MezunOgrenciv2_PortType">
+    <wsdl:operation name="TcKimlikNoilMezunOgrenciSorgulav2">
+      <wsdl:input message="tns:MezunOgrenciv2_PortType_TcKimlikNoilMezunOgrenciSorgulav2"></wsdl:input>
+      <wsdl:output message="tns:MezunOgrenciv2_PortType_TcKimlikNoilMezunOgrenciSorgulav2Response"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSDLs_Ogrenci_MezunOgrenciv2_Binder" type="tns:MezunOgrenciv2_PortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="TcKimlikNoilMezunOgrenciSorgulav2">
+      <soap:operation soapAction="WSDLs_Ogrenci_MezunOgrenciv2_Binder_TcKimlikNoilMezunOgrenciSorgulav2" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSDLs.Ogrenci.MezunOgrenciv2">
+    <wsdl:port binding="tns:WSDLs_Ogrenci_MezunOgrenciv2_Binder" name="WSDLs_Ogrenci_MezunOgrenciv2_Port">
+      <soap:address location="http://servisler.yok.gov.tr/ws/TcKimlikNoileMezunOgrenciSorgulav2"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://servisler.yok.gov.tr/ws/TcKimlikNoileMezunOgrenciSorgulav2</con:endpoint></con:endpoints><con:operation id="551153c7-a289-4d68-99ef-a3ea477e76b5" isOneWay="false" action="WSDLs_Ogrenci_MezunOgrenciv2_Binder_TcKimlikNoilMezunOgrenciSorgulav2" name="TcKimlikNoilMezunOgrenciSorgulav2" bindingOperationName="TcKimlikNoilMezunOgrenciSorgulav2" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1f1484df-5c1e-475a-9566-711e694e4129" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://servisler.yok.gov.tr/ws/TcKimlikNoileMezunOgrenciSorgulav2</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mez="http://servisler.yok.gov.tr/MezunOgrenciv2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mez:TcKimlikNoilMezunOgrenciSorgulav2>
+         <TCKNO>14674478966</TCKNO>
+      </mez:TcKimlikNoilMezunOgrenciSorgulav2>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Ogrenci_MezunOgrenciv2_Binder_TcKimlikNoilMezunOgrenciSorgulav2"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:endpointStrategy xsi:type="con:DefaultEndpointStrategy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:endpoint mode="COMPLEMENT" username="41242414552" password="876ytr">http://servisler.yok.gov.tr/ws/mebmezunsorgulav2</con:endpoint><con:endpoint mode="COMPLEMENT" username="41242414552" password="876ytr">http://servisler.yok.gov.tr/ws/TcKimlikNoileMezunOgrenciSorgulav2</con:endpoint></con:endpointStrategy><con:properties/>
   <con:wssContainer/>
   <con:oAuth2ProfileContainer/>
   <con:oAuth1ProfileContainer/>

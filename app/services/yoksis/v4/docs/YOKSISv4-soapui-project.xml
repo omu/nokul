@@ -1371,7 +1371,405 @@
          </ns:YuNoTCKimlikNo>
       </ns:YuNoTCKimlikNoGuncelleRequest>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.yok.gov.tr/ogrenci/2017/05/OgrenciPort/YuNoTCKimlikNoGuncelleRequest"/></con:call></con:operation></con:interface><con:endpointStrategy xsi:type="con:DefaultEndpointStrategy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:endpoint mode="COMPLEMENT" password="876ytr" username="41242414552">http://servisler.yok.gov.tr/ws/ogrencibilgitoplamav4</con:endpoint></con:endpointStrategy><con:properties/>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.yok.gov.tr/ogrenci/2017/05/OgrenciPort/YuNoTCKimlikNoGuncelleRequest"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="0551e8c2-137f-4960-93cf-edbe6cd100e6" wsaVersion="NONE" name="UniversiteBirimler" type="wsdl" bindingName="{https://servisler.yok.gov.tr/ws/UniversiteBirimv4}WSDLs_UniversiteBirim_UniversiteBirimv4_Binder" soapVersion="1_1" anonymous="optional" definition="https://servisler.yok.gov.tr/ws/UniversiteBirimlerv4?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://servisler.yok.gov.tr/ws/UniversiteBirimlerv4?WSDL"><con:part><con:url>https://servisler.yok.gov.tr/ws/UniversiteBirimlerv4?WSDL</con:url><con:content><![CDATA[<wsdl:definitions name="UniversiteBirimv4" targetNamespace="https://servisler.yok.gov.tr/ws/UniversiteBirimv4" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soapjms="http://www.w3.org/2010/soapjms/" xmlns:tns="http://WebMethods1_9_12/WSDLs.UniversiteBirim:UniversiteBirimv4" xmlns:tns1="https://servisler.yok.gov.tr/ws/UniversiteBirimv4" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="https://servisler.yok.gov.tr/ws/UniversiteBirimv4" xmlns:tns="https://servisler.yok.gov.tr/ws/UniversiteBirimv4">
+      <xsd:element name="IDdenBirimAdiGetirv4" type="tns:IDdenBirimAdiGetirv4"/>
+      <xsd:element name="IDdenBirimAdiGetirv4Response" type="tns:IDdenBirimAdiGetirv4Response"/>
+      <xsd:element name="UniversiteleriGetirv4" type="tns:UniversiteleriGetirv4"/>
+      <xsd:element name="UniversiteleriGetirv4Response" type="tns:UniversiteleriGetirv4Response"/>
+      <xsd:element name="TarihtenBirimDegisiklikGetirv4" type="tns:TarihtenBirimDegisiklikGetirv4"/>
+      <xsd:element name="TarihtenBirimDegisiklikGetirv4Response" type="tns:TarihtenBirimDegisiklikGetirv4Response"/>
+      <xsd:element name="AltBirimdekiProgramlariGetirv4" type="tns:AltBirimdekiProgramlariGetirv4"/>
+      <xsd:element name="AltBirimdekiProgramlariGetirv4Response" type="tns:AltBirimdekiProgramlariGetirv4Response"/>
+      <xsd:element name="AltBirimleriGetirv4" type="tns:AltBirimleriGetirv4"/>
+      <xsd:element name="AltBirimleriGetirv4Response" type="tns:AltBirimleriGetirv4Response"/>
+      <xsd:complexType name="IDdenBirimAdiGetirv4">
+        <xsd:sequence>
+          <xsd:element name="BIRIM_ID" nillable="true" type="xsd:long"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="IDdenBirimAdiGetirv4Response">
+        <xsd:sequence>
+          <xsd:element name="BIRIM" nillable="true" type="tns:Birimv4"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Birimv4">
+        <xsd:sequence>
+          <xsd:element name="BIRIM_UZUN_ADI" nillable="true" type="xsd:string"/>
+          <xsd:element name="BIRIM_ADI_INGILIZCE" nillable="true" type="xsd:string"/>
+          <xsd:element name="BAGLI_OLDUGU_BIRIM_ID" nillable="true" type="xsd:long"/>
+          <xsd:element name="OGRENIM_SURESI" nillable="true" type="xsd:int"/>
+          <xsd:element name="KILAVUZ_KODU" nillable="true" type="xsd:long"/>
+          <xsd:element name="UNIVERSITE" nillable="true" type="tns:Referansv1"/>
+          <xsd:element name="FAKULTE_YO_MYO_ENSTITU" nillable="true" type="tns:Referansv1"/>
+          <xsd:element name="BIRIM" nillable="true" type="tns:Referansv1"/>
+          <xsd:element name="BIRIM_TURU" nillable="true" type="tns:Referansv12"/>
+          <xsd:element name="UNIVERSITE_TURU" nillable="true" type="tns:Referansv12"/>
+          <xsd:element name="AKTIFLIK" nillable="true" type="tns:Referansv12"/>
+          <xsd:element name="OGRENIM_DILI" nillable="true" type="tns:Referansv12"/>
+          <xsd:element name="OGRENIM_TURU" nillable="true" type="tns:Referansv12"/>
+          <xsd:element name="IL" nillable="true" type="tns:Referansv12"/>
+          <xsd:element name="ILCE" nillable="true" type="tns:Referansv12"/>
+          <xsd:element name="KOD_BID" nillable="true" type="tns:Referansv12"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Referansv1">
+        <xsd:sequence>
+          <xsd:element name="KOD" nillable="true" type="xsd:int"/>
+          <xsd:element name="AD" nillable="true" type="xsd:string"/>
+          <xsd:element name="ACIKLAMA" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Referansv12">
+        <xsd:sequence>
+          <xsd:element name="KOD" nillable="true" type="xsd:int"/>
+          <xsd:element name="AD" nillable="true" type="xsd:string"/>
+          <xsd:element name="ACIKLAMA" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Sonuc">
+        <xsd:sequence>
+          <xsd:element name="DurumAciklama" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="UniversiteleriGetirv4">
+        <xsd:sequence></xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="UniversiteleriGetirv4Response">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="UNIVERSITELER" nillable="true" type="tns:Universitev4"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Universitev4">
+        <xsd:sequence>
+          <xsd:element name="BIRIM_ID" nillable="true" type="xsd:long"/>
+          <xsd:element name="BIRIM_ADI" nillable="true" type="xsd:string"/>
+          <xsd:element name="BIRIM_ADI_INGILIZCE" nillable="true" type="xsd:string"/>
+          <xsd:element name="TELEFON" nillable="true" type="xsd:string"/>
+          <xsd:element name="FAKS" nillable="true" type="xsd:string"/>
+          <xsd:element name="ADRES" nillable="true" type="xsd:string"/>
+          <xsd:element name="WEB" nillable="true" type="xsd:string"/>
+          <xsd:element name="EPOSTA" nillable="true" type="xsd:string"/>
+          <xsd:element name="UNIVERSITE_TURU" nillable="true" type="tns:Referansv12"/>
+          <xsd:element name="AKTIFLIK" nillable="true" type="tns:Referansv12"/>
+          <xsd:element name="IL" nillable="true" type="tns:Referansv12"/>
+          <xsd:element name="ILCE" nillable="true" type="tns:Referansv12"/>
+          <xsd:element name="BUYUKSEHIR" nillable="true" type="tns:Referansv12"/>
+          <xsd:element name="DENIZ_KIYISI" nillable="true" type="tns:Referansv12"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TarihtenBirimDegisiklikGetirv4">
+        <xsd:sequence>
+          <xsd:element name="GUN" nillable="true" type="xsd:int"/>
+          <xsd:element name="AY" nillable="true" type="xsd:int"/>
+          <xsd:element name="YIL" nillable="true" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TarihtenBirimDegisiklikGetirv4Response">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="BIRIMLER" nillable="true" type="tns:BirimlerDegisiklikv4"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="BirimlerDegisiklikv4">
+        <xsd:sequence>
+          <xsd:element name="BIRIM_ID" nillable="true" type="xsd:long"/>
+          <xsd:element name="BIRIM_ADI" nillable="true" type="xsd:string"/>
+          <xsd:element name="BAGLI_OLDUGU_BIRIM_ID" nillable="true" type="xsd:long"/>
+          <xsd:element name="BIRIM_TURU" nillable="true" type="tns:Referansv12"/>
+          <xsd:element name="AKTIFLIK" nillable="true" type="tns:Referansv12"/>
+          <xsd:element name="DEGISIKLIK_TURU" nillable="true" type="tns:Referansv12"/>
+          <xsd:element name="DEGISIKLIK_TARIHI" nillable="true" type="xsd:dateTime"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AltBirimdekiProgramlariGetirv4">
+        <xsd:sequence>
+          <xsd:element name="BIRIM_ID" nillable="true" type="xsd:long"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AltBirimdekiProgramlariGetirv4Response">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="BIRIMLER" nillable="true" type="tns:Birimv4"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AltBirimleriGetirv4">
+        <xsd:sequence>
+          <xsd:element name="BIRIM_ID" nillable="true" type="xsd:long"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="AltBirimleriGetirv4Response">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="BIRIMLER" nillable="true" type="tns:Birimv4"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="UniversiteBirimv4_PortType_AltBirimleriGetirv4">
+    <wsdl:part element="tns1:AltBirimleriGetirv4" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UniversiteBirimv4_PortType_AltBirimleriGetirv4Response">
+    <wsdl:part element="tns1:AltBirimleriGetirv4Response" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UniversiteBirimv4_PortType_TarihtenBirimDegisiklikGetirv4">
+    <wsdl:part element="tns1:TarihtenBirimDegisiklikGetirv4" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UniversiteBirimv4_PortType_AltBirimdekiProgramlariGetirv4">
+    <wsdl:part element="tns1:AltBirimdekiProgramlariGetirv4" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UniversiteBirimv4_PortType_IDdenBirimAdiGetirv4Response">
+    <wsdl:part element="tns1:IDdenBirimAdiGetirv4Response" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UniversiteBirimv4_PortType_IDdenBirimAdiGetirv4">
+    <wsdl:part element="tns1:IDdenBirimAdiGetirv4" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UniversiteBirimv4_PortType_AltBirimdekiProgramlariGetirv4Response">
+    <wsdl:part element="tns1:AltBirimdekiProgramlariGetirv4Response" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UniversiteBirimv4_PortType_UniversiteleriGetirv4">
+    <wsdl:part element="tns1:UniversiteleriGetirv4" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UniversiteBirimv4_PortType_TarihtenBirimDegisiklikGetirv4Response">
+    <wsdl:part element="tns1:TarihtenBirimDegisiklikGetirv4Response" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UniversiteBirimv4_PortType_UniversiteleriGetirv4Response">
+    <wsdl:part element="tns1:UniversiteleriGetirv4Response" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="UniversiteBirimv4_PortType">
+    <wsdl:operation name="AltBirimleriGetirv4">
+      <wsdl:input message="tns1:UniversiteBirimv4_PortType_AltBirimleriGetirv4"></wsdl:input>
+      <wsdl:output message="tns1:UniversiteBirimv4_PortType_AltBirimleriGetirv4Response"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IDdenBirimAdiGetirv4">
+      <wsdl:input message="tns1:UniversiteBirimv4_PortType_IDdenBirimAdiGetirv4"></wsdl:input>
+      <wsdl:output message="tns1:UniversiteBirimv4_PortType_IDdenBirimAdiGetirv4Response"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TarihtenBirimDegisiklikGetirv4">
+      <wsdl:input message="tns1:UniversiteBirimv4_PortType_TarihtenBirimDegisiklikGetirv4"></wsdl:input>
+      <wsdl:output message="tns1:UniversiteBirimv4_PortType_TarihtenBirimDegisiklikGetirv4Response"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AltBirimdekiProgramlariGetirv4">
+      <wsdl:input message="tns1:UniversiteBirimv4_PortType_AltBirimdekiProgramlariGetirv4"></wsdl:input>
+      <wsdl:output message="tns1:UniversiteBirimv4_PortType_AltBirimdekiProgramlariGetirv4Response"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UniversiteleriGetirv4">
+      <wsdl:input message="tns1:UniversiteBirimv4_PortType_UniversiteleriGetirv4"></wsdl:input>
+      <wsdl:output message="tns1:UniversiteBirimv4_PortType_UniversiteleriGetirv4Response"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSDLs_UniversiteBirim_UniversiteBirimv4_Binder" type="tns1:UniversiteBirimv4_PortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="AltBirimleriGetirv4">
+      <soap:operation soapAction="WSDLs_UniversiteBirim_UniversiteBirimv4_Binder_AltBirimleriGetirv4" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IDdenBirimAdiGetirv4">
+      <soap:operation soapAction="WSDLs_UniversiteBirim_UniversiteBirimv4_Binder_IDdenBirimAdiGetirv4" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TarihtenBirimDegisiklikGetirv4">
+      <soap:operation soapAction="WSDLs_UniversiteBirim_UniversiteBirimv4_Binder_TarihtenBirimDegisiklikGetirv4" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AltBirimdekiProgramlariGetirv4">
+      <soap:operation soapAction="WSDLs_UniversiteBirim_UniversiteBirimv4_Binder_AltBirimdekiProgramlariGetirv4" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UniversiteleriGetirv4">
+      <soap:operation soapAction="WSDLs_UniversiteBirim_UniversiteBirimv4_Binder_UniversiteleriGetirv4" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSDLs.UniversiteBirim.UniversiteBirimv4">
+    <wsdl:port binding="tns1:WSDLs_UniversiteBirim_UniversiteBirimv4_Binder" name="WSDLs_UniversiteBirim_UniversiteBirimv4_Port">
+      <soap:address location="http://servisler.yok.gov.tr/ws/UniversiteBirimlerv4"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://servisler.yok.gov.tr/ws/UniversiteBirimlerv4</con:endpoint></con:endpoints><con:operation id="e61896fb-a8f9-4a55-bda7-6f7af924a7b5" isOneWay="false" action="WSDLs_UniversiteBirim_UniversiteBirimv4_Binder_AltBirimdekiProgramlariGetirv4" name="AltBirimdekiProgramlariGetirv4" bindingOperationName="AltBirimdekiProgramlariGetirv4" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false"><con:settings/></con:operation><con:operation id="f35546a9-5cee-4c62-8a60-aa29ccac0c74" isOneWay="false" action="WSDLs_UniversiteBirim_UniversiteBirimv4_Binder_AltBirimleriGetirv4" name="AltBirimleriGetirv4" bindingOperationName="AltBirimleriGetirv4" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false"><con:settings/></con:operation><con:operation id="557a4c3e-1030-4be3-b038-db0365371f65" isOneWay="false" action="WSDLs_UniversiteBirim_UniversiteBirimv4_Binder_IDdenBirimAdiGetirv4" name="IDdenBirimAdiGetirv4" bindingOperationName="IDdenBirimAdiGetirv4" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false"><con:settings/></con:operation><con:operation id="0e2c9def-d3de-4cd9-955b-521c2eafb383" isOneWay="false" action="WSDLs_UniversiteBirim_UniversiteBirimv4_Binder_TarihtenBirimDegisiklikGetirv4" name="TarihtenBirimDegisiklikGetirv4" bindingOperationName="TarihtenBirimDegisiklikGetirv4" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false"><con:settings/></con:operation><con:operation id="26e0a4c8-cceb-4411-b9ce-363c8956885e" isOneWay="false" action="WSDLs_UniversiteBirim_UniversiteBirimv4_Binder_UniversiteleriGetirv4" name="UniversiteleriGetirv4" bindingOperationName="UniversiteleriGetirv4" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false"><con:settings/></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="f4d2a315-ec69-4603-afa8-f72ce19fc759" wsaVersion="NONE" name="OgrenciSorgulama" type="wsdl" bindingName="{http://servisler.yok.gov.tr/TcKimlikNoileOgrenciSorgulaDetayv4}WSDLs_TcKimlikNoileOgrenciSorgulaDetayv4_Binder" soapVersion="1_1" anonymous="optional" definition="https://servisler.yok.gov.tr/ws/TcKimlikNoileOgrenciSorgulaDetayv4?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://servisler.yok.gov.tr/ws/TcKimlikNoileOgrenciSorgulaDetayv4?WSDL"><con:part><con:url>https://servisler.yok.gov.tr/ws/TcKimlikNoileOgrenciSorgulaDetayv4?WSDL</con:url><con:content><![CDATA[<wsdl:definitions name="TcKimlikNoileOgrenciSorgulaDetayv4" targetNamespace="http://servisler.yok.gov.tr/TcKimlikNoileOgrenciSorgulaDetayv4" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soapjms="http://www.w3.org/2010/soapjms/" xmlns:tns="http://172.16.2.85:555/WSDLs:TcKimlikNoileOgrenciSorgulaDetayv4" xmlns:tns1="http://servisler.yok.gov.tr/TcKimlikNoileOgrenciSorgulaDetayv4" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://servisler.yok.gov.tr/TcKimlikNoileOgrenciSorgulaDetayv4" xmlns:tns="http://servisler.yok.gov.tr/TcKimlikNoileOgrenciSorgulaDetayv4">
+      <xsd:element name="TcKimlikNoileOgrenciSorgulaDetayv4" type="tns:TcKimlikNoileOgrenciSorgulaDetayv4"/>
+      <xsd:element name="TcKimlikNoileOgrenciSorgulaDetayv4Response" type="tns:TcKimlikNoileOgrenciSorgulaDetayv4Response"/>
+      <xsd:complexType name="TcKimlikNoileOgrenciSorgulaDetayv4">
+        <xsd:sequence>
+          <xsd:element name="TC_KIMLIK_NO" nillable="true" type="xsd:long"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TcKimlikNoileOgrenciSorgulaDetayv4Response">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="OGRENCI_KAYITLARI" nillable="true" type="tns:OgrenciDetayv4"/>
+          <xsd:element name="SONUC" nillable="true" type="tns:Sonuc"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OgrenciDetayv4">
+        <xsd:sequence>
+          <xsd:element name="KISISEL_BILGILER" nillable="true" type="tns:KisiselBilgilerv4"/>
+          <xsd:element name="BIRIM" nillable="true" type="tns:Birimv4"/>
+          <xsd:element name="OGRENCILIK_BILGILERI" nillable="true" type="tns:OgrencilikBilgileriv4"/>
+          <xsd:element name="INSERT_DATE" nillable="true" type="tns:Tarih"/>
+          <xsd:element name="YGECIS_BIRIM_ID" nillable="true" type="tns:Birimv4"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="KisiselBilgilerv4">
+        <xsd:sequence>
+          <xsd:element name="TC_KIMLIK_NO" nillable="true" type="xsd:long"/>
+          <xsd:element name="ADI" nillable="true" type="xsd:string"/>
+          <xsd:element name="SOYADI" nillable="true" type="xsd:string"/>
+          <xsd:element name="BABA_ADI" nillable="true" type="xsd:string"/>
+          <xsd:element name="ANNE_ADI" nillable="true" type="xsd:string"/>
+          <xsd:element name="DOGUM_TARIHI" nillable="true" type="tns:Tarih"/>
+          <xsd:element name="UYRUGU" nillable="true" type="tns:Referansv1"/>
+          <xsd:element name="CINSIYETI" nillable="true" type="tns:Referansv1"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Tarih">
+        <xsd:sequence>
+          <xsd:element name="GUN" nillable="true" type="xsd:int"/>
+          <xsd:element name="AY" nillable="true" type="xsd:int"/>
+          <xsd:element name="YIL" nillable="true" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Referansv1">
+        <xsd:sequence>
+          <xsd:element name="KOD" nillable="true" type="xsd:int"/>
+          <xsd:element name="AD" nillable="true" type="xsd:string"/>
+          <xsd:element name="ACIKLAMA" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Birimv4">
+        <xsd:sequence>
+          <xsd:element name="BIRIM_UZUN_ADI" nillable="true" type="xsd:string"/>
+          <xsd:element name="BIRIM_ADI_INGILIZCE" nillable="true" type="xsd:string"/>
+          <xsd:element name="BAGLI_OLDUGU_BIRIM_ID" nillable="true" type="xsd:long"/>
+          <xsd:element name="OGRENIM_SURESI" nillable="true" type="xsd:int"/>
+          <xsd:element name="KILAVUZ_KODU" nillable="true" type="xsd:long"/>
+          <xsd:element name="UNIVERSITE" nillable="true" type="tns:Referansv1"/>
+          <xsd:element name="FAKULTE_YO_MYO_ENSTITU" nillable="true" type="tns:Referansv1"/>
+          <xsd:element name="BIRIM" nillable="true" type="tns:Referansv1"/>
+          <xsd:element name="BIRIM_TURU" nillable="true" type="tns:Referansv12"/>
+          <xsd:element name="UNIVERSITE_TURU" nillable="true" type="tns:Referansv12"/>
+          <xsd:element name="AKTIFLIK" nillable="true" type="tns:Referansv12"/>
+          <xsd:element name="OGRENIM_DILI" nillable="true" type="tns:Referansv12"/>
+          <xsd:element name="OGRENIM_TURU" nillable="true" type="tns:Referansv12"/>
+          <xsd:element name="IL" nillable="true" type="tns:Referansv12"/>
+          <xsd:element name="ILCE" nillable="true" type="tns:Referansv12"/>
+          <xsd:element name="KOD_BID" nillable="true" type="tns:Referansv12"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Referansv12">
+        <xsd:sequence>
+          <xsd:element name="KOD" nillable="true" type="xsd:int"/>
+          <xsd:element name="AD" nillable="true" type="xsd:string"/>
+          <xsd:element name="ACIKLAMA" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OgrencilikBilgileriv4">
+        <xsd:sequence>
+          <xsd:element name="GIRIS_TURU" nillable="true" type="tns:Referansv1"/>
+          <xsd:element name="GIRIS_PUAN_TURU" nillable="true" type="tns:Referansv1"/>
+          <xsd:element name="GIRIS_PUANI" nillable="true" type="xsd:string"/>
+          <xsd:element name="KAYIT_TARIHI" nillable="true" type="tns:TarihSaat"/>
+          <xsd:element name="SINIFI" nillable="true" type="tns:Referansv1"/>
+          <xsd:element name="OGRENCILIK_HAKKI_VARMI" nillable="true" type="tns:Referansv1"/>
+          <xsd:element name="OGRENCILIK_HAKKI_BITTI_TARIH" nillable="true" type="tns:Tarih"/>
+          <xsd:element name="OGRENCILIK_STATUSU" nillable="true" type="tns:Referansv1"/>
+          <xsd:element name="ENGEL_TURU" nillable="true" type="tns:Referansv1"/>
+          <xsd:element name="ENGEL_ORANI" nillable="true" type="xsd:int"/>
+          <xsd:element name="DIPLOMA" nillable="true" type="tns:ReferansDiplomav1"/>
+          <xsd:element name="AYRILMA_NEDENI" nillable="true" type="tns:Referansv1"/>
+          <xsd:element name="AYRILMA_TARIHI" nillable="true" type="tns:Tarih"/>
+          <xsd:element name="GAZI_SEHIT_YAKINI" nillable="true" type="tns:Referansv1"/>
+          <xsd:element name="AKTS" nillable="true" type="xsd:double"/>
+          <xsd:element name="HAZIRLIK_SINIFI" nillable="true" type="tns:Referansv1"/>
+          <xsd:element name="KAC_DONEM_HAZIRLIK" nillable="true" type="xsd:int"/>
+          <xsd:element name="AKTIF_DONEM_NO" nillable="true" type="xsd:int"/>
+          <xsd:element name="OGRENCI_NO" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TarihSaat">
+        <xsd:sequence>
+          <xsd:element name="GUN" nillable="true" type="xsd:int"/>
+          <xsd:element name="AY" nillable="true" type="xsd:int"/>
+          <xsd:element name="YIL" nillable="true" type="xsd:int"/>
+          <xsd:element name="SAAT" nillable="true" type="xsd:int"/>
+          <xsd:element name="DAKIKA" nillable="true" type="xsd:int"/>
+          <xsd:element name="SANIYE" nillable="true" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ReferansDiplomav1">
+        <xsd:sequence>
+          <xsd:element name="NOTU" nillable="true" type="xsd:double"/>
+          <xsd:element name="NOT_SISTEMI" nillable="true" type="xsd:double"/>
+          <xsd:element name="NO" nillable="true" type="xsd:string"/>
+          <xsd:element name="ACIKLAMA" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Sonuc">
+        <xsd:sequence>
+          <xsd:element name="DurumAciklama" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="TcKimlikNoileOgrenciSorgulaDetayv4_PortType_TcKimlikNoileOgrenciSorgulaDetayv4Response">
+    <wsdl:part element="tns1:TcKimlikNoileOgrenciSorgulaDetayv4Response" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="TcKimlikNoileOgrenciSorgulaDetayv4_PortType_TcKimlikNoileOgrenciSorgulaDetayv4">
+    <wsdl:part element="tns1:TcKimlikNoileOgrenciSorgulaDetayv4" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="TcKimlikNoileOgrenciSorgulaDetayv4_PortType">
+    <wsdl:operation name="TcKimlikNoileOgrenciSorgulaDetayv4">
+      <wsdl:input message="tns1:TcKimlikNoileOgrenciSorgulaDetayv4_PortType_TcKimlikNoileOgrenciSorgulaDetayv4"></wsdl:input>
+      <wsdl:output message="tns1:TcKimlikNoileOgrenciSorgulaDetayv4_PortType_TcKimlikNoileOgrenciSorgulaDetayv4Response"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSDLs_TcKimlikNoileOgrenciSorgulaDetayv4_Binder" type="tns1:TcKimlikNoileOgrenciSorgulaDetayv4_PortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="TcKimlikNoileOgrenciSorgulaDetayv4">
+      <soap:operation soapAction="WSDLs_TcKimlikNoileOgrenciSorgulaDetayv4_Binder_TcKimlikNoileOgrenciSorgulaDetayv4" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSDLs.Ogrenci.TcKimlikNoileOgrenciSorgulaDetayv4">
+    <wsdl:port binding="tns1:WSDLs_TcKimlikNoileOgrenciSorgulaDetayv4_Binder" name="WSDLs_TcKimlikNoileOgrenciSorgulaDetayv4_Port">
+      <soap:address location="http://servisler.yok.gov.tr/ws/TcKimlikNoileOgrenciSorgulaDetayv4"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://servisler.yok.gov.tr/ws/TcKimlikNoileOgrenciSorgulaDetayv4</con:endpoint></con:endpoints><con:operation id="b5ddef6c-9ec0-4763-bf74-132e0f0c552a" isOneWay="false" action="WSDLs_TcKimlikNoileOgrenciSorgulaDetayv4_Binder_TcKimlikNoileOgrenciSorgulaDetayv4" name="TcKimlikNoileOgrenciSorgulaDetayv4" bindingOperationName="TcKimlikNoileOgrenciSorgulaDetayv4" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false"><con:settings/></con:operation></con:interface><con:endpointStrategy xsi:type="con:DefaultEndpointStrategy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:endpoint mode="COMPLEMENT" password="876ytr" username="41242414552">http://servisler.yok.gov.tr/ws/ogrencibilgitoplamav4</con:endpoint></con:endpointStrategy><con:properties/>
   <con:wssContainer/>
   <con:oAuth2ProfileContainer/>
   <con:oAuth1ProfileContainer/>
