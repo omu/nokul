@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  yoksis_id: 1
+  active: false
+  language_code: MyString
+  founded_at: 2018-03-06
+  program_type: 1
+  duration: 1
+  institute: one
+
+two:
+  name: MyString
+  yoksis_id: 1
+  active: false
+  language_code: MyString
+  founded_at: 2018-03-06
+  program_type: 1
+  duration: 1
+  institute: two

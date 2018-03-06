@@ -28,6 +28,10 @@ bundle
 rake db:setup
 ```
 
+## Design
+
+![model-diagrams](https://yuml.me/serhat/Nokul.png)
+
 ## Code Quality
 
 - Rake task named as 'quality' checks for code smells.

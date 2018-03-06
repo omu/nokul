@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  yoksis_id: 1
+  active: false
+  founded_at: 2018-03-06
+  university: one
+
+two:
+  name: MyString
+  yoksis_id: 1
+  active: false
+  founded_at: 2018-03-06
+  university: two
