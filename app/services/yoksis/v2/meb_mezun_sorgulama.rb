@@ -7,7 +7,6 @@ module Services
           @client = Savon.client(
             wsdl: 'https://servisler.yok.gov.tr/ws/mebmezunsorgulav2?WSDL',
             convert_request_keys_to: :camelcase,
-            logger: Rails.logger,
             basic_auth: [ENV['YOKSIS_USER'], ENV['YOKSIS_PASSWORD']],
             soap_version: 2
           )

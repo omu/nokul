@@ -42,8 +42,7 @@ module Services
         def initialize
           @client = Savon.client(
             wsdl: WSDL_ENDPOINT,
-            convert_request_keys_to: :camelcase,
-            logger: Rails.logger
+            convert_request_keys_to: :camelcase
           )
         end
 

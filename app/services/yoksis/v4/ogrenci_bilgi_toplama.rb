@@ -4,16 +4,15 @@ module Services
       # client = Services::Yoksis::V4::OgrenciBilgiToplama.new
       class OgrenciBilgiToplama
         def initialize
-          wsdl = if Rails.env = "production"
-                  "https://servisler.yok.gov.tr/ws/ogrencibilgitoplamav4?WSDL"
+          wsdl = if Rails.env.production?
+                   'https://servisler.yok.gov.tr/ws/ogrencibilgitoplamav4?WSDL'
                  else
-                  "https://servisler.yok.gov.tr/ws/ogrencibilgitoplamav4Test?WSDL"
+                   'https://servisler.yok.gov.tr/ws/ogrencibilgitoplamav4Test?WSDL'
                  end
 
           @client = Savon.client(
             wsdl: wsdl,
             convert_request_keys_to: :camelcase,
-            logger: Rails.logger,
             basic_auth: [ENV['YOKSIS_USER'], ENV['YOKSIS_PASSWORD']]
           )
         end
