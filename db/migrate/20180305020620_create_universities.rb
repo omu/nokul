@@ -3,11 +3,11 @@ class CreateUniversities < ActiveRecord::Migration[5.1]
     create_table :universities do |t|
       t.string :name
       t.string :short_name
-      t.integer :type
+      t.integer :university_type, default: 0
       t.integer :yoksis_id
-      t.boolean :active, default: true
+      t.integer :status, default: 0
+      t.date :founded_at
       t.belongs_to :city, foreign_key: true
-      t.timestamps
     end
   end
 end

@@ -7,7 +7,8 @@ class City < ApplicationRecord
   has_many :universities, dependent: :nullify
 
   # validations
-  validates :name, :iso, :nuts_code, presence: true, uniqueness: true, strict: true
+  validates :name, :iso, :nuts_code,
+            presence: true, uniqueness: true, strict: true
 
   # callbacks
   before_create do

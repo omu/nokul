@@ -8,8 +8,7 @@ class CreateUndergraduatePrograms < ActiveRecord::Migration[5.1]
       t.date :founded_at
       t.integer :program_type
       t.integer :duration
-      t.integer :program_id, foreign_key: true
-      t.string :program_type
+      t.references :program, polymorphic: true, index: true
       t.timestamps
     end
   end

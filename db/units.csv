@@ -1,0 +1,2003 @@
+BİRİM ID|BİRİM ADI|BİRİM TÜRÜ ADI|BAĞLI OLDUĞU BİRİM ID|DURUMU|ÖĞRENİM DİLİ|AÇILIŞ TARİHİ|ÖĞRENİM SÜRESİ
+163896|CANİK BAŞARI ÜNİVERSİTESİ|Üniversite|0|Kapalı|Türkçe|24.04.2010|
+247913|BAL UYGULAMA VE ARAŞTIRMA MERKEZİ|Araştırma ve Uygulama Merkezi|163896|Kapalı|Türkçe|11.12.2013|
+208450|EĞİTİM FAKÜLTESİ|Fakülte|163896|Kapalı|Türkçe|24.04.2010|
+212951|EĞİTİM BİLİMLERİ BÖLÜMÜ|Bölüm|208450|Kapalı|Türkçe|25.01.2012|
+212952|REHBERLİK VE PSİKOLOJİK DANIŞMANLIK ANABİLİM DALI|Anabilim Dalı|212951|Kapalı|Türkçe|25.01.2012|
+228483|REHBERLİK VE PSİKOLOJİK DANIŞMANLIK PR. (%25 BURSLU)|Önlisans/Lisans Programı|212951|Kapalı|Türkçe||4
+228482|REHBERLİK VE PSİKOLOJİK DANIŞMANLIK PR. (%50 BURSLU)|Önlisans/Lisans Programı|212951|Kapalı|Türkçe||4
+228460|REHBERLİK VE PSİKOLOJİK DANIŞMANLIK PR. (TAM BURSLU)|Önlisans/Lisans Programı|212951|Kapalı|Türkçe||4
+228477|REHBERLİK VE PSİKOLOJİK DANIŞMANLIK PR. (ÜCRETLİ)|Önlisans/Lisans Programı|212951|Kapalı|Türkçe||4
+228515|TÜRKÇE EĞİTİMİ BÖLÜMÜ|Bölüm|208450|Kapalı|Türkçe||
+213918|TÜRKÇE EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|228515|Kapalı|Türkçe|22.02.2012|
+228498|TÜRKÇE ÖĞRETMENLİĞİ PR. (%25 BURSLU)|Önlisans/Lisans Programı|228515|Kapalı|Türkçe||4
+228497|TÜRKÇE ÖĞRETMENLİĞİ PR. (%50 BURSLU)|Önlisans/Lisans Programı|228515|Kapalı|Türkçe||4
+228495|TÜRKÇE ÖĞRETMENLİĞİ PR. (TAM BURSLU)|Önlisans/Lisans Programı|228515|Kapalı|Türkçe||4
+228494|TÜRKÇE ÖĞRETMENLİĞİ PR. (ÜCRETLİ)|Önlisans/Lisans Programı|228515|Kapalı|Türkçe||4
+233048|YABANCI DİLLER EĞİTİMİ BÖLÜMÜ|Bölüm|208450|Kapalı|Türkçe|31.01.2013|
+233049|İNGİLİZ DİLİ EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|233048|Kapalı|Türkçe|31.01.2013|
+238841|İNGİLİZCE ÖĞRETMENLİĞİ PR. (%25 BURSLU)|Önlisans/Lisans Programı|233048|Kapalı|Türkçe|18.04.2013|4
+238840|İNGİLİZCE ÖĞRETMENLİĞİ PR. (%50 BURSLU)|Önlisans/Lisans Programı|233048|Kapalı|Türkçe|18.04.2013|4
+238839|İNGİLİZCE ÖĞRETMENLİĞİ PR. (TAM BURSLU)|Önlisans/Lisans Programı|233048|Kapalı|Türkçe|18.04.2013|4
+238842|İNGİLİZCE ÖĞRETMENLİĞİ PR. (ÜCRETLİ)|Önlisans/Lisans Programı|233048|Kapalı|Türkçe|18.04.2013|4
+213917|İLKÖĞRETİM BÖLÜMÜ|Bölüm|208450|Kapalı|Türkçe|22.02.2012|
+233038|OKUL ÖNCESİ EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|213917|Kapalı|Türkçe|31.01.2013|
+274912|EĞİTİM STRATEJİLERİ UYGULAMA VE ARAŞTIRMA MERKEZİ|Araştırma ve Uygulama Merkezi|163896|Kapalı|Türkçe|22.04.2015|
+208454|FEN BİLİMLERİ ENSTİTÜSÜ|Enstitü|163896|Kapalı|Türkçe|24.04.2010|
+245382|MOLEKÜLER BİYOLOJİ VE GENETİK (DR)|Doktora Programı|208454|Kapalı|Türkçe|15.08.2013|4
+245381|MOLEKÜLER BİYOLOJİ VE GENETİK (YL) (TEZLİ)|Yüksek Lisans Programı|208454|Kapalı|Türkçe|15.08.2013|2
+234900|İNŞAAT MÜHENDİSLİĞİ (YL)|Yüksek Lisans Programı|208454|Kapalı|Türkçe|01.03.2013|2
+208452|FEN-EDEBİYAT FAKÜLTESİ|Fakülte|163896|Kapalı|Türkçe|24.04.2010|
+212950|MOLEKÜLER BİYOLOJİ VE GENETİK BÖLÜMÜ|Bölüm|208452|Kapalı|Türkçe|25.01.2012|
+228509|MOLEKÜLER BİYOLOJİ VE GENETİK PR. (%25 BURSLU)|Önlisans/Lisans Programı|212950|Kapalı|Türkçe||4
+228491|MOLEKÜLER BİYOLOJİ VE GENETİK PR. (%50 BURSLU)|Önlisans/Lisans Programı|212950|Kapalı|Türkçe||4
+280161|MOLEKÜLER BİYOLOJİ VE GENETİK PR. (%75 BURSLU)|Önlisans/Lisans Programı|212950|Kapalı|Türkçe|01.01.1900|4
+228508|MOLEKÜLER BİYOLOJİ VE GENETİK PR. (TAM BURSLU)|Önlisans/Lisans Programı|212950|Kapalı|Türkçe||4
+233047|PSİKOLOJİ BÖLÜMÜ|Bölüm|208452|Kapalı|Türkçe|31.01.2013|
+238845|PSİKOLOJİ PR. (%25 BURSLU)|Önlisans/Lisans Programı|233047|Kapalı|Türkçe|18.04.2013|4
+238844|PSİKOLOJİ PR. (%50 BURSLU)|Önlisans/Lisans Programı|233047|Kapalı|Türkçe|18.04.2013|4
+238843|PSİKOLOJİ PR. (TAM BURSLU)|Önlisans/Lisans Programı|233047|Kapalı|Türkçe|18.04.2013|4
+238846|PSİKOLOJİ PR. (ÜCRETLİ)|Önlisans/Lisans Programı|233047|Kapalı|Türkçe|18.04.2013|4
+250098|TÜRK DİLİ VE EDEBİYATI BÖLÜMÜ|Bölüm|208452|Kapalı|Türkçe|29.01.2014|
+256261|TÜRK DİLİ VE EDEBİYATI PR. (%25 BURSLU)|Önlisans/Lisans Programı|250098|Kapalı|Türkçe|05.05.2014|4
+256260|TÜRK DİLİ VE EDEBİYATI PR. (%50 BURSLU)|Önlisans/Lisans Programı|250098|Kapalı|Türkçe|05.05.2014|4
+256259|TÜRK DİLİ VE EDEBİYATI PR. (TAM BURSLU)|Önlisans/Lisans Programı|250098|Kapalı|Türkçe|05.05.2014|4
+241205|MEDENİYETLER İTTİFAKI UYGULAMA VE ARAŞTIRMA MERKEZİ|Araştırma ve Uygulama Merkezi|163896|Kapalı|Türkçe|12.06.2013|
+269525|MÜHENDİSLİK FAKÜLTESİ|Fakülte|163896|Kapalı|Türkçe||
+270835|MİMARLIK PR.|Önlisans/Lisans Programı|269525|Kapalı|Türkçe||4
+270832|MİMARLIK PR. (%25 BURSLU)|Önlisans/Lisans Programı|269525|Kapalı|Türkçe||4
+270833|MİMARLIK PR. (%50 BURSLU)|Önlisans/Lisans Programı|269525|Kapalı|Türkçe||4
+270834|MİMARLIK PR. (TAM BURSLU)|Önlisans/Lisans Programı|269525|Kapalı|Türkçe||4
+270831|İNŞAAT MÜHENDİSLİĞİ PR.|Önlisans/Lisans Programı|269525|Kapalı|Türkçe||4
+270828|İNŞAAT MÜHENDİSLİĞİ PR. (%25 BURSLU)|Önlisans/Lisans Programı|269525|Kapalı|Türkçe||4
+270829|İNŞAAT MÜHENDİSLİĞİ PR. (%50 BURSLU)|Önlisans/Lisans Programı|269525|Kapalı|Türkçe||4
+270830|İNŞAAT MÜHENDİSLİĞİ PR. (TAM BURSLU)|Önlisans/Lisans Programı|269525|Kapalı|Türkçe||4
+208453|MİMARLIK VE MÜHENDİSLİK FAKÜLTESİ|Fakülte|163896|Kapalı|Türkçe|24.04.2010|
+250097|ELEKTRİK-ELEKTRONİK MÜHENDİSLİĞİ BÖLÜMÜ|Bölüm|208453|Kapalı|Türkçe|29.01.2014|
+256447|ELEKTRİK-ELEKTRONİK MÜHENDİSLİĞİ PR. (İNGİLİZCE) (%25 BURSLU)|Önlisans/Lisans Programı|250097|Kapalı|İngilizce|17.04.2014|4
+256446|ELEKTRİK-ELEKTRONİK MÜHENDİSLİĞİ PR. (İNGİLİZCE) (%50 BURSLU)|Önlisans/Lisans Programı|250097|Kapalı|İngilizce|17.04.2014|4
+298382|ELEKTRİK-ELEKTRONİK MÜHENDİSLİĞİ PR. (İNGİLİZCE) (%75 BURSLU)|Önlisans/Lisans Programı|250097|Kapalı|İngilizce|21.07.2016|4
+256445|ELEKTRİK-ELEKTRONİK MÜHENDİSLİĞİ PR. (İNGİLİZCE) (TAM BURSLU)|Önlisans/Lisans Programı|250097|Kapalı|İngilizce|17.04.2014|4
+212949|MİMARLIK BÖLÜMÜ|Bölüm|208453|Kapalı|Türkçe|25.01.2012|
+228294|MİMARLIK PR. (%25 BURSLU)|Önlisans/Lisans Programı|212949|Kapalı|Türkçe||4
+228293|MİMARLIK PR. (%50 BURSLU)|Önlisans/Lisans Programı|212949|Kapalı|Türkçe||4
+228292|MİMARLIK PR. (TAM BURSLU)|Önlisans/Lisans Programı|212949|Kapalı|Türkçe||4
+228291|MİMARLIK PR. (ÜCRETLİ)|Önlisans/Lisans Programı|212949|Kapalı|Türkçe||4
+213916|İNŞAAT MÜHENDİSLİĞİ BÖLÜMÜ|Bölüm|208453|Kapalı|Türkçe|22.02.2012|
+228398|İNŞAAT MÜHENDİSLİĞİ PR. (%25 BURSLU)|Önlisans/Lisans Programı|213916|Kapalı|Türkçe||4
+228397|İNŞAAT MÜHENDİSLİĞİ PR. (%50 BURSLU)|Önlisans/Lisans Programı|213916|Kapalı|Türkçe||4
+228396|İNŞAAT MÜHENDİSLİĞİ PR. (TAM BURSLU)|Önlisans/Lisans Programı|213916|Kapalı|Türkçe||4
+228395|İNŞAAT MÜHENDİSLİĞİ PR. (ÜCRETLİ)|Önlisans/Lisans Programı|213916|Kapalı|Türkçe||4
+233037|İÇ MİMARLIK BÖLÜMÜ|Bölüm|208453|Kapalı|Türkçe|31.01.2013|
+238853|İÇ MİMARLIK PR. (%25 BURSLU)|Önlisans/Lisans Programı|233037|Kapalı|Türkçe|18.04.2013|4
+238852|İÇ MİMARLIK PR. (%50 BURSLU)|Önlisans/Lisans Programı|233037|Kapalı|Türkçe|18.04.2013|4
+238851|İÇ MİMARLIK PR. (TAM BURSLU)|Önlisans/Lisans Programı|233037|Kapalı|Türkçe|18.04.2013|4
+238854|İÇ MİMARLIK PR. (ÜCRETLİ)|Önlisans/Lisans Programı|233037|Kapalı|Türkçe|18.04.2013|4
+214587|REKTÖRLÜK|Rektörlük|163896|Kapalı|Türkçe||
+214590|ATATÜRK İLKELERİ VE İNKILAP TARİHİ BÖLÜMÜ|Bölüm|214587|Kapalı|Türkçe|29.03.2012|
+214591|ENFORMATİK BÖLÜMÜ|Bölüm|214587|Kapalı|Türkçe|29.03.2012|
+214589|TÜRK DİLİ BÖLÜMÜ|Bölüm|214587|Kapalı|Türkçe|29.03.2012|
+214588|YABANCI DİLLER BÖLÜMÜ|Bölüm|214587|Kapalı|Türkçe|29.03.2012|
+208430|SOSYAL BİLİMLER ENSTİTÜSÜ|Enstitü|163896|Kapalı|Türkçe|24.04.2010|
+235459|SAĞLIK KURUMLARI YÖNETİMİ (YL) (TEZSİZ) (İÖ) (OMÜ ORTAK) (ÜCRETLİ)|Yüksek Lisans Programı|208430|Kapalı|Türkçe|01.03.2013|2
+262822|TÜRK DİLİ VE EDEBİYATI (YL) (TEZSİZ)|Yüksek Lisans Programı|208430|Kapalı|Türkçe|02.12.2014|2
+257799|ULUSLARARASI TİCARET VE İŞLETMECİLİK (YL) (TEZLİ)|Yüksek Lisans Programı|208430|Kapalı|Türkçe|21.05.2014|2
+261346|ULUSLARARASI TİCARET VE İŞLETMECİLİK (YL) (TEZSİZ)|Yüksek Lisans Programı|208430|Kapalı|Türkçe|25.09.2014|2
+260498|YENİ TÜRK EDEBİYATI (YL) (TEZLİ)|Yüksek Lisans Programı|208430|Kapalı|Türkçe|25.09.2014|2
+235304|İŞLETME (YL) (TEZSİZ) (İÖ) (ONDOKUZ MAYIS ORTAK) (ÜCRETLİ)|Yüksek Lisans Programı|208430|Kapalı|Türkçe|01.03.2013|2
+227307|SÜREKLİ EĞİTİM UYGULAMA VE ARAŞTIRMA MERKEZİ|Araştırma ve Uygulama Merkezi|163896|Kapalı|Türkçe|17.10.2012|
+247288|TÜRKÇE ÖĞRETİMİ UYGULAMA VE ARAŞTIRMA MERKEZİ|Araştırma ve Uygulama Merkezi|163896|Kapalı|Türkçe|26.11.2013|
+279468|UZAKTAN EĞİTİM UYGULAMA VE ARAŞTIRMA MERKEZİ|Araştırma ve Uygulama Merkezi|163896|Kapalı|Türkçe|08.07.2015|
+237870|YABANCI DİLLER YÜKSEKOKULU|Yüksekokul|163896|Kapalı|Türkçe|25.04.2013|
+330789|YABANCI DİLLER BÖLÜMÜ|Bölüm|237870|Aktif|İngilizce|14.09.2017|
+259241|YABANCI DİLLER HAZIRLIK BÖLÜMÜ|Bölüm|237870|Kapalı|İngilizce|01.01.1900|
+254630|YARATICI ENDÜSTRİLER UYGULAMA VE ARAŞTIRMA MERKEZİ|Araştırma ve Uygulama Merkezi|163896|Kapalı|Türkçe|02.04.2014|
+247914|ÇOCUK EDEBİYATI UYGULAMA VE ARAŞTIRMA MERKEZİ|Araştırma ve Uygulama Merkezi|163896|Kapalı|Türkçe|11.12.2013|
+208451|İKTİSADİ VE İDARİ BİLİMLER FAKÜLTESİ|Fakülte|163896|Kapalı|Türkçe|24.04.2010|
+250096|SOSYAL HİZMET BÖLÜMÜ|Bölüm|208451|Kapalı|Türkçe|29.01.2014|
+233046|SİYASET BİLİMİ VE ULUSLARARASI İLİŞKİLER BÖLÜMÜ|Bölüm|208451|Kapalı|Türkçe|31.01.2013|
+238849|SİYASET BİLİMİ VE ULUSLARARASI İLİŞKİLER PR. (%25 BURSLU)|Önlisans/Lisans Programı|233046|Kapalı|Türkçe|18.04.2013|4
+238848|SİYASET BİLİMİ VE ULUSLARARASI İLİŞKİLER PR. (%50 BURSLU)|Önlisans/Lisans Programı|233046|Kapalı|Türkçe|18.04.2013|4
+238847|SİYASET BİLİMİ VE ULUSLARARASI İLİŞKİLER PR. (TAM BURSLU)|Önlisans/Lisans Programı|233046|Kapalı|Türkçe|18.04.2013|4
+238850|SİYASET BİLİMİ VE ULUSLARARASI İLİŞKİLER PR. (ÜCRETLİ)|Önlisans/Lisans Programı|233046|Kapalı|Türkçe|18.04.2013|4
+212948|ULUSLARARASI TİCARET VE İŞLETMECİLİK BÖLÜMÜ|Bölüm|208451|Kapalı|Türkçe|25.01.2012|
+228393|ULUSLARARASI TİCARET VE İŞLETMECİLİK PR. (%25 BURSLU)|Önlisans/Lisans Programı|212948|Kapalı|Türkçe||4
+228392|ULUSLARARASI TİCARET VE İŞLETMECİLİK PR. (%50 BURSLU)|Önlisans/Lisans Programı|212948|Kapalı|Türkçe||4
+228391|ULUSLARARASI TİCARET VE İŞLETMECİLİK PR. (TAM BURSLU)|Önlisans/Lisans Programı|212948|Kapalı|Türkçe||4
+228389|ULUSLARARASI TİCARET VE İŞLETMECİLİK PR. (ÜCRETLİ)|Önlisans/Lisans Programı|212948|Kapalı|Türkçe||4
+212947|İŞLETME BÖLÜMÜ|Bölüm|208451|Kapalı|Türkçe|25.01.2012|
+228522|İŞLETME PR. (%25 BURSLU)|Önlisans/Lisans Programı|212947|Kapalı|Türkçe||4
+228521|İŞLETME PR. (%50 BURSLU)|Önlisans/Lisans Programı|212947|Kapalı|Türkçe||4
+298364|İŞLETME PR. (%75 BURSLU)|Önlisans/Lisans Programı|212947|Kapalı|Türkçe|21.07.2016|4
+228500|İŞLETME PR. (TAM BURSLU)|Önlisans/Lisans Programı|212947|Kapalı|Türkçe||4
+228499|İŞLETME PR. (ÜCRETLİ)|Önlisans/Lisans Programı|212947|Kapalı|Türkçe||4
+121946|ONDOKUZ MAYIS ÜNİVERSİTESİ|Üniversite|0|Aktif|Türkçe|11.04.1975|
+122316|19 MAYIS SAMSUN DEVLET KONSERVATUVARI|Yüksekokul|121946|Aktif|Türkçe|11.07.1992|
+122317|MÜZİK BÖLÜMÜ|Bölüm|122316|Aktif|Türkçe|26.02.2009|
+254783|GELENEKSEL TÜRK MÜZİKLERİ ANABİLİM DALI|Anabilim Dalı|122317|Aktif|Türkçe|16.04.2014|
+122321|KOMPOZİSYON VE ORKESTRA ŞEFLİĞİ ANASANAT DALI|Anasanat Dalı|122317|Aktif|Türkçe|26.02.2009|
+122320|PİYANO ANASANAT DALI|Anasanat Dalı|122317|Aktif|Türkçe|26.02.2009|
+122319|YAYLI ÇALGILAR ANASANAT DALI|Anasanat Dalı|122317|Aktif|Türkçe|26.02.2009|
+122318|ÜFLEMELİ VE VURMALI ÇALGILAR ANASANAT DALI|Anasanat Dalı|122317|Aktif|Türkçe|26.02.2009|
+122322|MÜZİKOLOJİ BÖLÜMÜ|Bölüm|122316|Aktif|Türkçe|26.02.2009|
+122324|ETNOMÜZİKOLOJİ VE FOLKLOR ANASANAT DALI|Anasanat Dalı|122322|Aktif|Türkçe|26.02.2009|
+122325|GELENEKSEL VE MODAL MÜZİK ANASANAT DALI|Anasanat Dalı|122322|Aktif|Türkçe|26.02.2009|
+122323|GENEL MÜZİKOLOJİ ANASANAT DALI|Anasanat Dalı|122322|Aktif|Türkçe|26.02.2009|
+122326|SAHNE SANATLARI BÖLÜMÜ|Bölüm|122316|Aktif|Türkçe|26.02.2009|
+122329|BALE ANASANAT DALI|Anasanat Dalı|122326|Aktif|Türkçe|26.02.2009|
+122328|OPERA ANASANAT DALI|Anasanat Dalı|122326|Aktif|Türkçe|26.02.2009|
+122327|TİYATRO ANASANAT DALI|Anasanat Dalı|122326|Aktif|Türkçe|26.02.2009|
+174829|ADALET MESLEK YÜKSEKOKULU|Meslek Yüksekokulu|121946|Aktif|Türkçe|05.08.2010|
+174830|HUKUK BÖLÜMÜ|Bölüm|174829|Aktif|Türkçe|23.09.2010|
+174831|ADALET PR.|Önlisans/Lisans Programı|174830|Aktif|Türkçe|23.09.2010|2
+304523|ADALET PR. (%25 BURSLU)|Önlisans/Lisans Programı|174830|Kapalı|Türkçe|29.09.2016|2
+304522|ADALET PR. (ÜCRETLİ)|Önlisans/Lisans Programı|174830|Yarı Pasif|Türkçe|29.09.2016|2
+147730|ALAÇAM MESLEK YÜKSEKOKULU|Meslek Yüksekokulu|121946|Aktif|Türkçe|25.03.2009|
+242252|BÜRO HİZMETLERİ VE SEKRETERLİK BÖLÜMÜ|Bölüm|147730|Aktif|Türkçe||
+242253|ÇAĞRI MERKEZİ HİZMETLERİ PR.|Önlisans/Lisans Programı|242252|Aktif|Türkçe|14.07.2013|2
+278570|ÇAĞRI MERKEZİ HİZMETLERİ PR. (UZAKTAN ÖĞRETİM)|Önlisans/Lisans Programı|242252|Aktif|Türkçe|01.01.1900|2
+317311|TOPTAN VE PERAKENDE SATIŞ BÖLÜMÜ|Bölüm|147730|Aktif|Türkçe|02.03.2017|
+317312|EMLAK VE EMLAK YÖNETİMİ PR.|Önlisans/Lisans Programı|317311|Pasif|Türkçe|02.03.2017|2
+205956|ULAŞTIRMA HİZMETLERİ BÖLÜMÜ|Bölüm|147730|Aktif|Türkçe||
+205957|DENİZ VE LİMAN İŞLETMECİLİĞİ PR.|Önlisans/Lisans Programı|205956|Aktif|Türkçe|05.08.2010|2
+276136|DENİZ VE LİMAN İŞLETMECİLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|205956|Aktif|Türkçe|30.04.2015|2
+205958|OTOBÜS KAPTANLIĞI PR.|Önlisans/Lisans Programı|205956|Pasif|Türkçe|05.08.2010|2
+153810|POSTA HİZMETLERİ PR.|Önlisans/Lisans Programı|205956|Aktif|Türkçe|10.06.2010|2
+327588|POSTA HİZMETLERİ PR. (KKTC UYRUKLU)|Önlisans/Lisans Programı|205956|Aktif|Türkçe|04.08.2017|2
+243774|POSTA HİZMETLERİ PR. (UZAKTAN ÖĞRETİM)|Önlisans/Lisans Programı|205956|Aktif|Türkçe|01.01.1900|2
+240435|POSTA HİZMETLERİ PR. (İÖ)|Önlisans/Lisans Programı|205956|Aktif|Türkçe|01.01.1900|2
+240436|TIBBİ GÖRÜNTÜLEME TEKNİKLERİ PR. (İÖ)|Önlisans/Lisans Programı|205956|Kapalı|Türkçe|01.01.1900|2
+205959|YAT İŞLETME VE YÖNETİMİ PR.|Önlisans/Lisans Programı|205956|Pasif|Türkçe|05.08.2010|2
+153820|YÖNETİM VE ORGANİZASYON BÖLÜMÜ|Bölüm|147730|Aktif|Türkçe|10.06.2010|
+153811|LOJİSTİK PR.|Önlisans/Lisans Programı|153820|Aktif|Türkçe|10.06.2010|2
+240433|LOJİSTİK PR. (İÖ)|Önlisans/Lisans Programı|153820|Aktif|Türkçe|01.01.1900|2
+128074|ALİ FUAD BAŞGİL HUKUK FAKÜLTESİ|Fakülte|121946|Aktif|Türkçe|13.01.2009|
+228131|ALİ FUAD BAŞGİL HUKUK PR.|Önlisans/Lisans Programı|128074|Aktif|Türkçe||4
+159908|ANAYASA HUKUKU ANABİLİM DALI|Anabilim Dalı|128074|Kapalı|Türkçe||
+159909|CEZA VE CEZA MUHAKEMESİ HUKUKU ANABİLİM DALI|Anabilim Dalı|128074|Kapalı|Türkçe|01.01.1900|
+159911|GENEL KAMU HUKUKU ANABİLİM DALI|Anabilim Dalı|128074|Kapalı|Türkçe||
+176334|HUKUK BÖLÜMÜ|Bölüm|128074|Aktif|Türkçe||
+309086|HUKUK PR. (%25 BURSLU)|Önlisans/Lisans Programı|176334|Kapalı|Türkçe|10.11.2016|4
+304513|HUKUK PR. (%50 BURSLU)|Önlisans/Lisans Programı|176334|Yarı Pasif|Türkçe|29.09.2016|4
+304510|HUKUK PR. (TAM BURSLU)|Önlisans/Lisans Programı|176334|Kapalı|Türkçe|29.09.2016|4
+309085|HUKUK PR. (ÜCRETLİ)|Önlisans/Lisans Programı|176334|Yarı Pasif|Türkçe|10.11.2016|4
+201356|MİLLETLERARASI HUKUK ANABİLİM DALI|Anabilim Dalı|176334|Aktif|Türkçe||
+159912|HUKUK FELSEFESİ VE SOSYOLOJİSİ ANABİLİM DALI|Anabilim Dalı|128074|Kapalı|Türkçe||
+159913|HUKUK TARİHİ ANABİLİM DALI|Anabilim Dalı|128074|Kapalı|Türkçe||
+140231|KAMU HUKUKU BÖLÜMÜ|Bölüm|128074|Aktif|Türkçe|10.09.2009|
+140251|ANAYASA HUKUKU ANABİLİM DALI|Anabilim Dalı|140231|Aktif|Türkçe|10.09.2009|
+140275|CEZA VE CEZA USUL HUKUKU ANABİLİM DALI|Anabilim Dalı|140231|Aktif|Türkçe|10.09.2009|
+140232|GENEL KAMU HUKUKU ANABİLİM DALI|Anabilim Dalı|140231|Aktif|Türkçe|10.09.2009|
+140272|HUKUK FELSEFESİ VE SOSYOLOJİSİ ANABİLİM DALI|Anabilim Dalı|140231|Aktif|Türkçe|10.09.2009|
+140273|HUKUK TARİHİ VE ROMA HUKUKU ANABİLİM DALI|Anabilim Dalı|140231|Aktif|Türkçe|10.09.2009|
+159917|MALİ HUKUK ANABİLİM DALI|Anabilim Dalı|140231|Aktif|Türkçe|26.02.2009|
+140274|MİLLETLERARASI KAMU HUKUKU ANABİLİM DALI|Anabilim Dalı|140231|Aktif|Türkçe|10.09.2009|
+140276|VERGİ HUKUKU ANABİLİM DALI|Anabilim Dalı|140231|Aktif|Türkçe|10.09.2009|
+140234|İDARE HUKUKU ANABİLİM DALI|Anabilim Dalı|140231|Aktif|Türkçe|10.09.2009|
+159918|MEDENİ HUKUK ANABİLİM DALI|Anabilim Dalı|128074|Kapalı|Türkçe||
+159919|MEDENİ USUL VE İCRA İFLAS HUKUKU ANABİLİM DALI|Anabilim Dalı|128074|Kapalı|Türkçe||
+241376|MİLLETLERARASI HUKUK ANABİLİM DALI|Anabilim Dalı|128074|Kapalı|Türkçe|01.01.1900|
+159921|MİLLETLERARASI ÖZEL HUKUK ANABİLİM DALI|Anabilim Dalı|128074|Kapalı|Türkçe||
+159922|TİCARET HUKUKU ANABİLİM DALI|Anabilim Dalı|128074|Kapalı|Türkçe||
+140235|ÖZEL HUKUK BÖLÜMÜ|Bölüm|128074|Aktif|Türkçe|10.09.2009|
+140236|MEDENİ HUKUK ANABİLİM DALI|Anabilim Dalı|140235|Aktif|Türkçe|10.09.2009|
+140269|MEDENİ USUL VE İCRA İFLAS HUKUKU ANABİLİM DALI|Anabilim Dalı|140235|Aktif|Türkçe|10.09.2009|
+159920|MİLLETLERARASI HUKUK ANABİLİM DALI|Anabilim Dalı|140235|Aktif|Türkçe|10.09.2009|
+140237|TİCARET HUKUKU ANABİLİM DALI|Anabilim Dalı|140235|Aktif|Türkçe|10.09.2009|
+140270|İŞ VE SOSYAL GÜVENLİK HUKUKU ANABİLİM DALI|Anabilim Dalı|140235|Aktif|Türkçe|10.09.2009|
+159914|İDARE HUKUKU ANABİLİM DALI|Anabilim Dalı|128074|Kapalı|Türkçe||
+159916|İŞ VE SOSYAL GÜVENLİK HUKUKU ANABİLİM DALI|Anabilim Dalı|128074|Kapalı|Türkçe||
+269757|AMASYA EĞİTİM FAKÜLTESİ|Fakülte|121946|Arşiv|Türkçe||
+277320|BEDEN EĞİTİMİ VE SPOR ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|269757|Arşiv|Türkçe|27.05.2015|4
+273560|BİYOLOJİ ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|269757|Arşiv|Türkçe||4
+273561|BİYOLOJİ ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|269757|Arşiv|Türkçe||4
+273562|FEN BİLGİSİ ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|269757|Arşiv|Türkçe||4
+273563|FEN BİLGİSİ ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|269757|Arşiv|Türkçe||4
+273564|FİZİK ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|269757|Arşiv|Türkçe||4
+273567|KİMYA ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|269757|Arşiv|Türkçe||4
+273568|MATEMATİK ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|269757|Arşiv|Türkçe||4
+273569|OKUL ÖNCESİ ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|269757|Arşiv|Türkçe||4
+273570|SINIF ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|269757|Arşiv|Türkçe||4
+273571|SINIF ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|269757|Arşiv|Türkçe||4
+273572|SOSYAL BİLGİLER ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|269757|Arşiv|Türkçe||4
+273573|SOSYAL BİLGİLER ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|269757|Arşiv|Türkçe||4
+273574|TARİH ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|269757|Arşiv|Türkçe||4
+273575|TÜRK DİLİ VE EDEBİYATI ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|269757|Arşiv|Türkçe||4
+273576|TÜRKÇE ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|269757|Arşiv|Türkçe||4
+273577|TÜRKÇE ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|269757|Arşiv|Türkçe||4
+273566|İLKÖĞRETİM MATEMATİK ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|269757|Arşiv|Türkçe||4
+273565|İLKÖĞRETİM MATEMATİK ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|269757|Arşiv|Türkçe||4
+297493|AMASYA EĞİTİM YÜKSEKOKULU|Yüksekokul|121946|Arşiv|Türkçe|23.06.2016|
+297494|SINIF ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|297493|Arşiv|Türkçe|23.06.2016|4
+269758|AMASYA MESLEK YÜKSEKOKULU|Meslek Yüksekokulu|121946|Arşiv|Türkçe||
+273580|BÜRO YÖNETİMİ VE SEKRETERLİK PR.|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273581|BÜRO YÖNETİMİ VE SEKRETERLİK PR. (İÖ)|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273578|BİLGİSAYAR PROGRAMCILIĞI PR. (İÖ) (BK.320)|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273579|BİLGİSAYAR TEKNOLOJİSİ VE PROGRAMLAMA PR. (İÖ) (BK.320)|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273584|ELEKTRONİK HABERLEŞME PR.|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273585|ELEKTRONİK HABERLEŞME PR. (İÖ)|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273582|ELEKTRİK PR.|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273583|ELEKTRİK PR. (İÖ)|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273586|ENDÜSTRİYEL ELEKTRONİK PR.|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273587|ENDÜSTRİYEL ELEKTRONİK PR. (İÖ)|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273588|ENDÜSTRİYEL OTOMASYON PR.|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273589|ENDÜSTRİYEL OTOMASYON PR. (İÖ)|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273590|ENDÜSTRİYEL OTOMASYON TEKNOLOJİSİ PR.|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273591|HABERLEŞME PR.|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273592|HABERLEŞME PR. (İÖ)|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273593|HARİTA KADASTRO PR.|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273594|HARİTA KADASTROPR. (İÖ)|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273595|HAZIR GİYİM PR. (İÖ) (BK.322)|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273598|KONTROL SİSTEMLERİ TEKNOLOJİSİ PR.|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273599|KONTROL SİSTEMLERİ TEKNOLOJİSİ PR. (İÖ)|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273600|MAKİNE PR. (İÖ) (BK.320)|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273601|MUHASEBE PR.|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273602|MUHASEBE PR. (İÖ)|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273603|OTOMOTİV PR. (İÖ) (BK.320)|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273604|PAZARLAMA PR.|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273605|PAZARLAMA PR. (İÖ)|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273606|TEKSTİL PR. (İÖ) (BK.322)|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273607|TURİZM PR.|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273608|TURİZM VE OTEL İŞLETMECİLİĞİ PR.|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273609|TURİZM VE OTEL İŞLETMECİLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273610|TURİZM VE OTELCİLİK PR.|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273611|TURİZM VE OTELCİLİK PR. (İÖ)|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273596|İNŞAAT PR.|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+273597|İNŞAAT PR. (İÖ)|Önlisans/Lisans Programı|269758|Arşiv|Türkçe||2
+269759|AMASYA SAĞLIK HİZMETLERİ MESLEK YÜKSEKOKULU|Meslek Yüksekokulu|121946|Arşiv|Türkçe||
+273612|HEMŞİRELİK PR. (A)|Önlisans/Lisans Programı|269759|Arşiv|Türkçe||2
+273613|HEMŞİRELİK PR. (B)|Önlisans/Lisans Programı|269759|Arşiv|Türkçe||2
+269760|AMASYA SAĞLIK YÜKSEKOKULU|Yüksekokul|121946|Arşiv|Türkçe||
+273614|HEMŞİRELİK PR.|Önlisans/Lisans Programı|269760|Arşiv|Türkçe||4
+122390|ATATÜRK İLKELERİ VE İNKILAP TARİHİ UYGULAMA VE ARAŞTIRMA MERKEZİ|Araştırma ve Uygulama Merkezi|121946|Aktif|Türkçe|10.09.2009|
+269761|AYANCIK MESLEK YÜKSEKOKULU|Meslek Yüksekokulu|121946|Arşiv|Türkçe||
+273615|ENDÜSTRİYEL ELEKTRONİK PR. (İÖ) (BK.611)|Önlisans/Lisans Programı|269761|Arşiv|Türkçe||2
+273616|MUHASEBE PR.|Önlisans/Lisans Programı|269761|Arşiv|Türkçe||2
+122355|BAFRA MESLEK YÜKSEKOKULU|Meslek Yüksekokulu|121946|Aktif|Türkçe|03.03.1992|
+169441|BİLGİSAYAR TEKNOLOJİLERİ BÖLÜMÜ|Bölüm|122355|Aktif|Türkçe||
+169446|BİLGİSAYAR PROGRAMCILIĞI PR.|Önlisans/Lisans Programı|169441|Aktif|Türkçe|10.09.2009|2
+169447|BİLGİSAYAR PROGRAMCILIĞI PR. (İÖ)|Önlisans/Lisans Programı|169441|Aktif|Türkçe||2
+169417|BİTKİSEL VE HAYVANSAL ÜRETİM BÖLÜMÜ|Bölüm|122355|Aktif|Türkçe||
+254936|BİTKİ KORUMA PR.|Önlisans/Lisans Programı|169417|Aktif|Türkçe|16.04.2014|2
+254509|FİDAN YETİŞTİRİCİLİĞİ PR.|Önlisans/Lisans Programı|169417|Kapalı|Türkçe|26.03.2014|2
+169419|ORGANİK TARIM PR.|Önlisans/Lisans Programı|169417|Aktif|Türkçe||2
+169421|ORGANİK TARIM PR. (İÖ)|Önlisans/Lisans Programı|169417|Yarı Pasif|Türkçe|10.09.2009|2
+169478|SERACILIK PR.|Önlisans/Lisans Programı|169417|Yarı Pasif|Türkçe||2
+169425|TIBBİ VE AROMATİK BİTKİLER PR.|Önlisans/Lisans Programı|169417|Aktif|Türkçe||2
+169426|TIBBİ VE AROMATİK BİTKİLER PR. (İÖ)|Önlisans/Lisans Programı|169417|Aktif|Türkçe|10.09.2009|2
+122358|TÜTÜN YETİŞTİRİCİLİĞİ VE İŞLEMECİLİĞİ PR.|Önlisans/Lisans Programı|169417|Yarı Pasif|Türkçe|10.09.2009|2
+145887|TÜTÜN YETİŞTİRİCİLİĞİ VE İŞLEMECİLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|169417|Yarı Pasif|Türkçe|10.09.2009|2
+282777|EL SANATLARI BÖLÜMÜ|Bölüm|122355|Aktif|Türkçe|09.12.2015|
+282778|GELENEKSEL EL SANATLARI PR.|Önlisans/Lisans Programı|282777|Pasif|Türkçe|09.12.2015|2
+282775|FİNANS BANKACILIK VE SİGORTACILIK BÖLÜMÜ|Bölüm|122355|Aktif|Türkçe|09.12.2015|
+282776|BANKACILIK VE SİGORTACILIK PR.|Önlisans/Lisans Programı|282775|Pasif|Türkçe|09.12.2015|2
+169471|MUHASEBE VE VERGİ BÖLÜMÜ|Bölüm|122355|Aktif|Türkçe||
+145961|MUHASEBE VE VERGİ UYGULAMALARI PR. (İÖ) (BK. 605)|Önlisans/Lisans Programı|169471|Aktif|Türkçe|10.09.2009|2
+282779|MÜLKİYET KORUMA VE GÜVENLİK BÖLÜMÜ|Bölüm|122355|Aktif|Türkçe|09.12.2015|
+333586|ÖZEL GÜVENLİK VE KORUMA PR.|Önlisans/Lisans Programı|282779|Pasif|Türkçe|28.02.2018|2
+282780|İŞ SAĞLIĞI VE GÜVENLİĞİ PR.|Önlisans/Lisans Programı|282779|Pasif|Türkçe|09.12.2015|2
+254507|OTEL, LOKANTA VE İKRAM HİZMETLERİ BÖLÜMÜ|Bölüm|122355|Aktif|Türkçe|26.03.2014|
+254508|TURİZM VE OTEL İŞLETMECİLİĞİ PR.|Önlisans/Lisans Programı|254507|Kapalı|Türkçe|26.03.2014|2
+145755|TARIMSAL BİYOTEKNOLOJİ BÖLÜMÜ|Bölüm|122355|Aktif|Türkçe|10.09.2009|
+122356|TEKNİK PROGRAMLAR BÖLÜMÜ|Bölüm|122355|Kapalı|Türkçe||
+122359|BİLGİSAYAR TEKNOLOJİSİ VE PROGRAMLAMA PR.|Önlisans/Lisans Programı|122356|Kapalı|Türkçe|10.09.2009|2
+145886|BİLGİSAYAR TEKNOLOJİSİ VE PROGRAMLAMA PR. (İÖ)|Önlisans/Lisans Programı|122356|Kapalı|Türkçe|10.09.2009|2
+128050|ENDÜSTRİYEL ELEKTRONİK PR.|Önlisans/Lisans Programı|122356|Kapalı|Türkçe|10.09.2009|2
+145790|ORGANİK TARIM PR.|Önlisans/Lisans Programı|122356|Kapalı|Türkçe|10.09.2009|2
+122357|SERACILIK PR.|Önlisans/Lisans Programı|122356|Kapalı|Türkçe|10.09.2009|2
+169434|SERACILIK PR. (İÖ)|Önlisans/Lisans Programı|122356|Kapalı|Türkçe|10.09.2009|2
+145786|TIBBİ VE AROMATİK BİTKİLER PR.|Önlisans/Lisans Programı|122356|Kapalı|Türkçe|10.09.2009|2
+282773|VETERİNERLİK BÖLÜMÜ|Bölüm|122355|Aktif|Türkçe|09.12.2015|
+282774|LABORANT VE VETERİNER SAĞLIK PR.|Önlisans/Lisans Programı|282773|Pasif|Türkçe|09.12.2015|2
+128052|İKTİSADİ VE İDARİ BİLİMLER BÖLÜMÜ|Bölüm|122355|Aktif|Türkçe||
+128053|MUHASEBE PR. (İÖ)|Önlisans/Lisans Programı|128052|Pasif|Türkçe|10.09.2009|2
+265280|BAFRA TURİZM MESLEK YÜKSEKOKULU|Meslek Yüksekokulu|121946|Aktif|Türkçe|04.02.2015|
+279026|OTEL LOKANTA VE İKRAM HİZMETLERİ BÖLÜMÜ|Bölüm|265280|Aktif|Türkçe|01.07.2015|
+279027|TURİZM VE OTEL İŞLETMECİLİĞİ PR.|Önlisans/Lisans Programı|279026|Pasif|Türkçe|01.07.2015|2
+279024|SEYAHAT-TURİZM VE EĞLENCE HİZMETLERİ BÖLÜMÜ|Bölüm|265280|Aktif|Türkçe|01.07.2015|
+279025|TURİZM VE SEYAHAT HİZMETLERİ PR.|Önlisans/Lisans Programı|279024|Pasif|Türkçe|01.07.2015|2
+293681|BAFRA İŞLETME FAKÜLTESİ|Fakülte|121946|Pasif|Türkçe|08.04.2016|
+284516|BALLICA MESLEK YÜKSEKOKULU|Meslek Yüksekokulu|121946|Aktif|Türkçe|15.01.2016|
+296412|ULAŞTIRMA HİZMETLERİ BÖLÜMÜ|Bölüm|284516|Aktif|Türkçe|08.06.2016|
+296413|SİVİL HAVACILIK KABİN HİZMETLERİ PR.|Önlisans/Lisans Programı|296412|Pasif|Türkçe|08.06.2016|2
+296416|UÇUŞ HAREKAT YÖNETİCİLİĞİ PR.|Önlisans/Lisans Programı|296412|Pasif|Türkçe|08.06.2016|2
+296414|YÖNETİM VE ORGANİZASYON BÖLÜMÜ|Bölüm|284516|Aktif|Türkçe|08.06.2016|
+296415|HAVACILIKTA YER HİZMETLERİ YÖNETİMİ PR.|Önlisans/Lisans Programı|296414|Pasif|Türkçe|08.06.2016|2
+269762|BOYABAT MESLEK YÜKSEKOKULU|Meslek Yüksekokulu|121946|Arşiv|Türkçe||
+273617|HARİTA KADASTRO PR.|Önlisans/Lisans Programı|269762|Arşiv|Türkçe||2
+273618|HAZIR GİYİM PR. (İÖ) (BK.612)|Önlisans/Lisans Programı|269762|Arşiv|Türkçe||2
+273620|TEKSTİL PR. (İÖ) (BK.612)|Önlisans/Lisans Programı|269762|Arşiv|Türkçe||2
+273619|İNŞAAT PR.|Önlisans/Lisans Programı|269762|Arşiv|Türkçe||2
+169418|BÖLGESEL KALKINMA VE STRATEJİK ARAŞTIRMALAR UYGULAMA VE ARAŞTIRMA MERKEZİ|Araştırma ve Uygulama Merkezi|121946|Aktif|Türkçe|22.06.2010|
+169403|BİLGİ VE İLETİŞİ TEKNOLOJİLERİ ARAŞTIRMA VE UYGULAMA MERKEZİ|Araştırma ve Uygulama Merkezi|121946|Kapalı|Türkçe||
+327269|BİLGİSAYAR ARAŞTIRMALARI UYGULAMA VE ARAŞTIRMA MERKEZİ|Araştırma ve Uygulama Merkezi|121946|Aktif|Türkçe|27.07.2017|
+122393|BİLGİSAYAR BİLİMLERİ UYGULAMA VE ARAŞTIRMA MERKEZİ|Araştırma ve Uygulama Merkezi|121946|Kapalı|Türkçe|01.01.1900|
+122115|BİLGİSAYAR ÖĞRETİM VE TEKNOLOJİSİ EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|121946|Kapalı|Türkçe|10.09.2009|
+169404|BİYOTEKNOLOJİ ARAŞTIRMA VE UYGULAMA MERKEZİ|Araştırma ve Uygulama Merkezi|121946|Kapalı|Türkçe||
+214121|DENEY HAYVANLARI UYGULAMA VE ARAŞTIRMA MERKEZİ|Araştırma ve Uygulama Merkezi|121946|Aktif|Türkçe|22.02.2012|
+122303|DEVLET KONSERVATUVARI|Yüksekokul|121946|Aktif|Türkçe|10.09.2009|
+122304|MÜZİK BÖLÜMÜ|Bölüm|122303|Aktif|Türkçe|10.09.2009|
+256111|GELENEKSEL TÜRK MÜZİKLERİ PR.|Önlisans/Lisans Programı|122304|Aktif|Türkçe|17.04.2014|4
+122308|KOMPOZİSYON VE ORKESTRA ŞEFİ ANABİLİM DALI|Anabilim Dalı|122304|Kapalı|Türkçe|10.09.2009|
+122307|PİYANO ANABİLİM DALI|Anabilim Dalı|122304|Kapalı|Türkçe|10.09.2009|
+122306|YAYLI ÇALGILAR ANABİLİM DALI|Anabilim Dalı|122304|Kapalı|Türkçe|10.09.2009|
+122305|ÜFLEMELİ VE VURMALI ÇALGILAR ANABİLİM DALI|Anabilim Dalı|122304|Kapalı|Türkçe|10.09.2009|
+122309|MÜZİKOLOJİ BÖLÜMÜ|Bölüm|122303|Kapalı|Türkçe|10.09.2009|
+122311|ETNOMÜZİKOLOJİ VE FOLKLOR ANABİLİM DALI|Anabilim Dalı|122309|Kapalı|Türkçe|10.09.2009|
+122312|GELENEKSEL VE MODAL MÜZİKLER ANABİLİM DALI|Anabilim Dalı|122309|Kapalı|Türkçe|10.09.2009|
+122310|GENEL MÜZİKOLOJİ ANABİLİM DALI|Anabilim Dalı|122309|Kapalı|Türkçe|10.09.2009|
+122313|SAHNE SANATLARI BÖLÜMÜ|Bölüm|122303|Kapalı|Türkçe|10.09.2009|
+122315|BALE ANABİLİM DALI|Anabilim Dalı|122313|Kapalı|Türkçe|10.09.2009|
+143426|OPERA ANABİLİM DALI|Anabilim Dalı|122313|Kapalı|Türkçe|10.09.2009|
+122314|TİYATRO ANABİLİM DALI|Anabilim Dalı|122313|Kapalı|Türkçe|10.09.2009|
+121996|DİŞ HEKİMLİĞİ FAKÜLTESİ|Fakülte|121946|Aktif|Türkçe|11.07.1992|
+228143|DİŞ HEKİMLİĞİ PR.|Önlisans/Lisans Programı|121996|Aktif|Türkçe||5
+258804|DİŞ HEKİMLİĞİ PR. (KKTC UYRUKLU)|Önlisans/Lisans Programı|121996|Kapalı|Türkçe|11.08.2014|5
+121997|KLİNİK BİLİMLER BÖLÜMÜ|Bölüm|121996|Aktif|Türkçe||
+121998|AĞIZ, DİŞ VE ÇENE CERRAHİSİ ANABİLİM DALI|Anabilim Dalı|121997|Aktif|Türkçe|10.09.2009|
+121999|DİŞ HASTALIKLARI VE TEDAVİSİ ANABİLİM DALI|Anabilim Dalı|121997|Aktif|Türkçe|10.09.2009|
+208207|ENDODONTİ ANABİLİM DALI|Anabilim Dalı|121997|Aktif|Türkçe||
+122004|ORAL DİAGNOZ VE RADYOLOJİ ANABİLİM DALI|Anabilim Dalı|121997|Kapalı|Türkçe|01.01.1900|
+122000|ORTODONTİ ANABİLİM DALI|Anabilim Dalı|121997|Aktif|Türkçe||
+122003|PEDODONTİ ANABİLİM DALI|Anabilim Dalı|121997|Aktif|Türkçe||
+122001|PERİODONTOLOJİ ANABİLİM DALI|Anabilim Dalı|121997|Aktif|Türkçe||
+122002|PROTETİK DİŞ TEDAVİSİ ANABİLİM DALI|Anabilim Dalı|121997|Aktif|Türkçe||
+176332|RESTORATİF DİŞ TEDAVİSİ ANABİLİM DALI|Anabilim Dalı|121997|Kapalı|Türkçe||
+231871|TEMEL BİLİMLER BÖLÜMÜ|Bölüm|121996|Aktif|Türkçe||
+174846|EĞİTİM BİLİMLERİ ENSTİTÜSÜ|Enstitü|121946|Aktif|Türkçe|26.02.2010|
+267762|ALMAN DİLİ EĞİTİMİ (DR)|Doktora Programı|174846|Yarı Pasif|Türkçe||4
+267761|ALMAN DİLİ EĞİTİMİ (YL)|Yüksek Lisans Programı|174846|Yarı Pasif|Türkçe||2
+244883|BİLGİSAYAR VE ÖĞRETİM TEKNOLOJİLERİ EĞİTİMİ (YL) (TEZLİ)|Yüksek Lisans Programı|174846|Aktif|İngilizce|15.08.2013|2
+301215|BİYOLOJİ EĞİTİMİ (YL) (TEZLİ)|Yüksek Lisans Programı|174846|Aktif|Türkçe|10.08.2016|2
+267769|COĞRAFYA EĞİTİMİ (YL)|Yüksek Lisans Programı|174846|Yarı Pasif|Türkçe||2
+174849|EĞİTİM BİLİMLERİ (DR)|Doktora Programı|174846|Aktif|Türkçe|26.02.2010|4
+207882|EĞİTİM BİLİMLERİ ANABİLİM DALI|Anabilim Dalı|174849|Aktif|Türkçe|03.05.2011|
+327688|EĞİTİM FELSEFİ SOSYAL VE TARİHİ TEMELLERİ (YL) (TEZLİ)|Yüksek Lisans Programı|174846|Aktif|Türkçe|08.08.2017|2
+207884|EĞİTİM PROGRAMLARI VE ÖĞRETİM (YL)|Yüksek Lisans Programı|174846|Aktif|Türkçe|03.05.2011|2
+327630|EĞİTİM YÖNETİMİ (DR)|Doktora Programı|174846|Aktif|Türkçe|08.08.2017|4
+327629|EĞİTİM YÖNETİMİ (YL)|Yüksek Lisans Programı|174846|Aktif|Türkçe|08.08.2017|2
+327678|EĞİTİM YÖNETİMİ (YL) (TEZSİZ) (UZAKTAN ÖĞRETİM)|Yüksek Lisans Programı|174846|Aktif|Türkçe|08.08.2017|2
+327631|EĞİTİM YÖNETİMİ (YL) (TEZSİZ) (İÖ)|Yüksek Lisans Programı|174846|Aktif|Türkçe|08.08.2017|2
+267767|EĞİTİM YÖNETİMİ, TEFTİŞİ, PLANLAMASI VE EKONOMİSİ (YL)|Yüksek Lisans Programı|174846|Yarı Pasif|Türkçe||2
+234519|EĞİTİM YÖNETİMİ, TEFTİŞİ, PLANLAMASI VE EKONOMİSİ (YL) (TEZSİZ) (UZAKTAN ÖĞRETİM)|Yüksek Lisans Programı|174846|Yarı Pasif|Türkçe|01.01.1900|2
+267768|EĞİTİM YÖNETİMİ, TEFTİŞİ, PLANLAMASI VE EKONOMİSİ (YL) (TEZSİZ) (İÖ)|Yüksek Lisans Programı|174846|Yarı Pasif|Türkçe||2
+255124|EĞİTİMİN SOSYAL TARİHİ VE TEMELLERİ (YL) (TEZLİ)|Yüksek Lisans Programı|174846|Yarı Pasif|Türkçe|10.06.2015|2
+267754|FEN BİLGİSİ EĞİTİM (DR)|Doktora Programı|174846|Aktif|Türkçe|08.08.2017|4
+267753|FEN BİLGİSİ EĞİTİM (YL)|Yüksek Lisans Programı|174846|Aktif|Türkçe|01.01.1900|2
+244484|FEN BİLGİSİ EĞİTİM (YL) (TEZSİZ) (UZAKTAN ÖĞRETİM)|Yüksek Lisans Programı|174846|Aktif|Türkçe|06.06.2013|2
+235189|FEN BİLGİSİ EĞİTİMİ (YL) (TEZSİZ) (İÖ)|Yüksek Lisans Programı|174846|Aktif|Türkçe|01.03.2013|2
+267763|FRANSIZ DİLİ EĞİTİMİ (YL)|Yüksek Lisans Programı|174846|Yarı Pasif|Türkçe||2
+245968|FİZİK EĞİTİMİ (YL)|Yüksek Lisans Programı|174846|Aktif|Türkçe|12.09.2013|2
+211119|GÜZEL SANATLAR EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|174846|Aktif|Türkçe||
+267755|MÜZİK EĞİTİMİ (DR)|Doktora Programı|174846|Yarı Pasif|Türkçe||4
+230796|MÜZİK EĞİTİMİ (YL)|Yüksek Lisans Programı|174846|Aktif|Türkçe|29.01.2004|2
+244884|MÜZİK EĞİTİMİ (YL) (TEZSİZ) (İÖ)|Yüksek Lisans Programı|174846|Aktif|Türkçe|15.08.2013|2
+174856|ORTAÖĞRETİM FEN VE MATEMATİK ALANLARI EĞİTİMİ (DR)|Doktora Programı|174846|Aktif|Türkçe|26.02.2010|4
+174850|ORTAÖĞRETİM SOSYAL ALANLAR EĞİTİMİ (DR)|Doktora Programı|174846|Aktif|Türkçe|26.02.2010|4
+267766|REHBERLİK VE PSİKOLOJİK DANIŞMANLIK (DR)|Doktora Programı|174846|Yarı Pasif|Türkçe||4
+267765|REHBERLİK VE PSİKOLOJİK DANIŞMANLIK (YL)|Yüksek Lisans Programı|174846|Yarı Pasif|Türkçe||2
+280865|REHBERLİK VE PSİKOLOJİK DANIŞMANLIK (YL) (TEZLİ) (ORDU ÜNİV. ORTAK)|Yüksek Lisans Programı|174846|Aktif|Türkçe|09.09.2015|2
+230808|RESİM-İŞ EĞİTİMİ (DR)|Doktora Programı|174846|Aktif|Türkçe|19.02.2003|4
+230810|RESİM-İŞ EĞİTİMİ (YL)|Yüksek Lisans Programı|174846|Aktif|Türkçe|13.07.2001|2
+267760|SINIF EĞİTİMİ (DR)|Doktora Programı|174846|Aktif|Türkçe|02.08.2017|4
+267759|SINIF EĞİTİMİ (YL)|Yüksek Lisans Programı|174846|Aktif|Türkçe|02.08.2017|2
+244486|SINIF EĞİTİMİ (YL) (TEZSİZ) (UZAKTAN ÖĞRETİM)|Yüksek Lisans Programı|174846|Aktif|Türkçe|06.06.2013|2
+327682|SINIF EĞİTİMİ (YL) (TEZSİZ) (İÖ)|Yüksek Lisans Programı|174846|Aktif|Türkçe|08.08.2017|2
+327681|SOSYAL BİLGİLER EĞİTİMİ (DR)|Doktora Programı|174846|Aktif|Türkçe|08.08.2017|4
+327632|SOSYAL BİLGİLER EĞİTİMİ (YL)|Yüksek Lisans Programı|174846|Aktif|Türkçe|08.08.2017|2
+244485|SOSYAL BİLGİLER EĞİTİMİ (YL) (TEZSİZ) (UZAKTAN ÖĞRETİM)|Yüksek Lisans Programı|174846|Aktif|Türkçe|06.06.2013|2
+327680|SOSYAL BİLGİLER EĞİTİMİ (YL) (TEZSİZ) (İÖ)|Yüksek Lisans Programı|174846|Aktif|Türkçe|08.08.2017|2
+169483|SOSYAL BİLİMLER EĞİTİMİ (DR)|Doktora Programı|174846|Yarı Pasif|Türkçe|08.02.2010|4
+267756|SOSYAL BİLİMLER EĞİTİMİ (YL)|Yüksek Lisans Programı|174846|Yarı Pasif|Türkçe||2
+213373|TARİH EĞİTİMİ (YL)|Yüksek Lisans Programı|174846|Aktif|Türkçe|02.02.2012|2
+244483|TARİH EĞİTİMİ (YL) (TEZSİZ) (UZAKTAN ÖĞRETİM)|Yüksek Lisans Programı|174846|Aktif|Türkçe|06.06.2013|2
+174852|TÜRKÇE EĞİTİMİ (DR)|Doktora Programı|174846|Aktif|Türkçe|26.02.2010|4
+267757|TÜRKÇE EĞİTİMİ (YL)|Yüksek Lisans Programı|174846|Aktif|Türkçe|08.08.2010|2
+211120|YABANCI DİLLER EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|174846|Aktif|Türkçe||
+174851|İLKÖĞRETİM (DR)|Doktora Programı|174846|Aktif|Türkçe|26.02.2010|4
+267758|İLKÖĞRETİM MATEMATİK EĞİTİMİ (YL)|Yüksek Lisans Programı|174846|Aktif|Türkçe|08.02.2010|2
+235186|İLKÖĞRETİM SINIF ÖĞRETMENLİĞİ (YL) (TEZSİZ) (İÖ)|Yüksek Lisans Programı|174846|Aktif|Türkçe|01.03.2013|2
+267764|İNGİLİZ DİLİ EĞİTİMİ (YL)|Yüksek Lisans Programı|174846|Yarı Pasif|Türkçe||2
+235313|İNGİLİZ DİLİ EĞİTİMİ (YL) (GAZİ ÜNİV. ORTAK)|Yüksek Lisans Programı|174846|Aktif|Türkçe|01.03.2013|2
+122082|EĞİTİM FAKÜLTESİ|Fakülte|121946|Aktif|Türkçe|11.07.1992|
+277321|BEDEN EĞİTİMİ VE SPOR ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|122082|Arşiv|Türkçe|27.05.2015|4
+277322|BEDEN EĞİTİMİ VE SPOR ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|122082|Arşiv|Türkçe|27.05.2015|4
+122154|BİLGİSAYAR VE ÖĞRETİM TEKNOLOJİLERİ EĞİTİMİ BÖLÜMÜ|Bölüm|122082|Aktif|Türkçe|10.09.2009|
+122155|BİLGİSAYAR VE ÖĞRETİM TEKNOLOJİLERİ EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|122154|Aktif|Türkçe|10.09.2009|
+168652|BİLGİSAYAR VE ÖĞRETİM TEKNOLOJİLERİ ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|122154|Aktif|Türkçe|10.09.2009|4
+168653|BİLGİSAYAR VE ÖĞRETİM TEKNOLOJİLERİ ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|122154|Yarı Pasif|Türkçe|10.09.2009|4
+285292|DİN KÜLTÜRÜ VE AHLAK BİLGİSİ ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|122082|Yarı Pasif|Türkçe|01.01.1900|4
+285283|DİN KÜLTÜRÜ VE AHLAK BİLGİSİ ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|122082|Kapalı|Türkçe|01.01.1900|4
+122083|EĞİTİM BİLİMLERİ BÖLÜMÜ|Bölüm|122082|Aktif|Türkçe||
+122085|EĞİTİM PROGRAMLARI VE ÖĞRETİM ANABİLİM DALI|Anabilim Dalı|122083|Aktif|Türkçe|10.09.2009|
+122086|EĞİTİM YÖNETİMİ ANABİLİM DALI|Anabilim Dalı|122083|Aktif|Türkçe|10.09.2009|
+122084|EĞİTİMDE ÖLÇME VE DEĞERLENDİRME ANABİLİM DALI|Anabilim Dalı|122083|Aktif|Türkçe|10.09.2009|
+314245|EĞİTİMİN FELSEFİ, SOSYAL VE TARİHİ TEMELLERİ ANABİLİM DALI|Anabilim Dalı|122083|Aktif|Türkçe|01.02.2017|
+122087|REHBERLİK VE PSİKOLOJİK DANIŞMANLIK ANABİLİM DALI|Anabilim Dalı|122083|Aktif|Türkçe||
+147735|REHBERLİK VE PSİKOLOJİK DANIŞMANLIK ANABİLİM DALI|Anabilim Dalı|122083|Aktif|Türkçe|10.09.2009|
+168674|REHBERLİK VE PSİKOLOJİK DANIŞMANLIK PR.|Önlisans/Lisans Programı|122083|Aktif|Türkçe|10.09.2009|4
+299025|REHBERLİK VE PSİKOLOJİK DANIŞMANLIK PR. (%25 BURSLU)|Önlisans/Lisans Programı|122083|Yarı Pasif|Türkçe|02.08.2016|4
+299026|REHBERLİK VE PSİKOLOJİK DANIŞMANLIK PR. (%50 BURSLU)|Önlisans/Lisans Programı|122083|Yarı Pasif|Türkçe|02.08.2016|4
+299023|REHBERLİK VE PSİKOLOJİK DANIŞMANLIK PR. (TAM BURSLU)|Önlisans/Lisans Programı|122083|Yarı Pasif|Türkçe|02.08.2016|4
+299024|REHBERLİK VE PSİKOLOJİK DANIŞMANLIK PR. (ÜCRETLİ)|Önlisans/Lisans Programı|122083|Yarı Pasif|Türkçe|02.08.2016|4
+168675|REHBERLİK VE PSİKOLOJİK DANIŞMANLIK PR. (İÖ)|Önlisans/Lisans Programı|122083|Yarı Pasif|Türkçe|10.09.2009|4
+122097|GÜZEL SANATLAR EĞİTİMİ BÖLÜMÜ|Bölüm|122082|Aktif|Türkçe||
+122099|MÜZİK EĞİTİMİ ANASANAT DALI|Anasanat Dalı|122097|Pasif|Türkçe|10.09.2009|
+169386|MÜZİK ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|122097|Aktif|Türkçe|10.09.2009|4
+279641|MÜZİK ÖĞRETMENLİĞİ PR. (KKTC UYRUKLU)|Önlisans/Lisans Programı|122097|Aktif|Türkçe|01.01.1900|4
+122098|RESİM-İŞ EĞİTİMİ ANASANAT DALI|Anasanat Dalı|122097|Aktif|Türkçe|10.09.2009|
+169387|RESİM-İŞ ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|122097|Aktif|Türkçe|10.09.2009|4
+169388|RESİM-İŞ ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|122097|Yarı Pasif|Türkçe|10.09.2009|4
+298694|MATEMATİK VE FEN BİLİMLERİ EĞİTİMİ BÖLÜMÜ|Bölüm|122082|Aktif| ||
+122107|BİYOLOJİ EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|298694|Aktif|Türkçe|10.09.2009|
+168654|BİYOLOJİ ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|298694|Aktif|Türkçe||4
+318208|BİYOLOJİ ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|298694|Kapalı|Türkçe|24.03.2017|4
+122101|FEN BİLGİSİ EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|298694|Aktif|Türkçe||
+168656|FEN BİLGİSİ ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|298694|Aktif|Türkçe||4
+168657|FEN BİLGİSİ ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|298694|Yarı Pasif|Türkçe|10.09.2009|4
+122108|FİZİK EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|298694|Aktif|Türkçe|10.09.2009|
+168660|FİZİK ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|298694|Yarı Pasif|Türkçe|10.09.2009|4
+268109|FİZİK ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|298694|Kapalı|Türkçe|01.01.1900|4
+122109|KİMYA EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|298694|Aktif|Türkçe|10.09.2009|
+168670|KİMYA ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|298694|Yarı Pasif|Türkçe||4
+122110|MATEMATİK EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|298694|Aktif|Türkçe|10.09.2009|
+168671|MATEMATİK ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|298694|Aktif|Türkçe||4
+275945|MATEMATİK ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|298694|Arşiv|Türkçe|08.05.2015|4
+122104|İLKÖĞRETİM MATEMATİK EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|298694|Kapalı|Türkçe||
+168663|İLKÖĞRETİM MATEMATİK ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|298694|Aktif|Türkçe|10.09.2009|4
+308562|İLKÖĞRETİM MATEMATİK ÖĞRETMENLİĞİ PR. (%50 BURSLU)|Önlisans/Lisans Programı|298694|Yarı Pasif|Türkçe|20.10.2016|4
+168664|İLKÖĞRETİM MATEMATİK ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|298694|Yarı Pasif|Türkçe|10.09.2009|4
+122106|ORTAÖĞRETİM FEN VE MATEMATİK ALANLAR EĞİTİMİ BÖLÜMÜ|Bölüm|122082|Yarı Pasif|Türkçe|10.09.2009|
+323968|BİYOLOJİ ÖĞRETMENLİĞİ PR. (5 YILLIK)|Önlisans/Lisans Programı|122106|Yarı Pasif|Türkçe|01.01.1999|5
+323969|FİZİK ÖĞRETMENLİĞİ PR. (5 YILLIK)|Önlisans/Lisans Programı|122106|Yarı Pasif|Türkçe|01.01.1999|5
+323970|KİMYA ÖĞRETMENLİĞİ PR. (5 YILLIK)|Önlisans/Lisans Programı|122106|Yarı Pasif|Türkçe|01.01.1999|5
+323971|MATEMATİK ÖĞRETMENLİĞİ PR. (5 YILLIK)|Önlisans/Lisans Programı|122106|Yarı Pasif|Türkçe|01.01.1999|5
+122111|ORTAÖĞRETİM SOSYAL ALANLAR EĞİTİMİ BÖLÜMÜ|Bölüm|122082|Kapalı|Türkçe|10.09.2009|
+298632|TEMEL EĞİTİM BÖLÜMÜ|Bölüm|122082|Aktif| ||
+122103|OKUL ÖNCESİ EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|298632|Aktif|Türkçe||
+168672|OKUL ÖNCESİ ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|298632|Aktif|Türkçe||4
+308561|OKUL ÖNCESİ ÖĞRETMENLİĞİ PR. (%25 BURSLU)|Önlisans/Lisans Programı|298632|Yarı Pasif|Türkçe|20.10.2016|4
+304532|OKUL ÖNCESİ ÖĞRETMENLİĞİ PR. (TAM BURSLU)|Önlisans/Lisans Programı|298632|Yarı Pasif|Türkçe|29.09.2016|4
+168673|OKUL ÖNCESİ ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|298632|Yarı Pasif|Türkçe|10.09.2009|4
+122105|SINIF EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|298632|Aktif|Türkçe||
+168676|SINIF ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|298632|Aktif|Türkçe|10.09.2009|4
+168677|SINIF ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|298632|Yarı Pasif|Türkçe|10.09.2009|4
+122095|TÜRKÇE EĞİTİMİ BÖLÜMÜ|Bölüm|122082|Yarı Pasif|Türkçe||
+299029|TÜRKÇE ÖĞRETMENLİĞİ PR. (%25 BURSLU)|Önlisans/Lisans Programı|122095|Yarı Pasif|Türkçe|02.08.2016|4
+299030|TÜRKÇE ÖĞRETMENLİĞİ PR. (%50 BURSLU)|Önlisans/Lisans Programı|122095|Yarı Pasif|Türkçe|02.08.2016|4
+299027|TÜRKÇE ÖĞRETMENLİĞİ PR. (TAM BURSLU)|Önlisans/Lisans Programı|122095|Yarı Pasif|Türkçe|02.08.2016|4
+299028|TÜRKÇE ÖĞRETMENLİĞİ PR. (ÜCRETLİ)|Önlisans/Lisans Programı|122095|Yarı Pasif|Türkçe|02.08.2016|4
+298815|TÜRKÇE VE SOSYAL BİLİMLER EĞİTİMİ BÖLÜMÜ|Bölüm|122082|Aktif| ||
+122112|COĞRAFYA EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|298815|Aktif|Türkçe|10.09.2009|
+275946|COĞRAFYA ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|298815|Arşiv|Türkçe|08.05.2015|4
+275947|COĞRAFYA ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|298815|Arşiv|Türkçe|08.05.2015|4
+122152|FELSEFE GRUBU EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|298815|Aktif|Türkçe|10.09.2009|
+122102|SOSYAL BİLGİLER EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|298815|Aktif|Türkçe||
+168678|SOSYAL BİLGİLER ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|298815|Aktif|Türkçe|10.09.2009|4
+168679|SOSYAL BİLGİLER ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|298815|Yarı Pasif|Türkçe|10.09.2009|4
+122113|TARİH EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|298815|Aktif|Türkçe|10.09.2009|
+268110|TARİH ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|298815|Yarı Pasif|Türkçe|01.01.1900|4
+321775|TARİH ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|298815|Arşiv|Türkçe|01.01.1999|4
+122114|TÜRK DİLİ VE EDEBİYATI EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|298815|Aktif|Türkçe|10.09.2009|
+275948|TÜRK DİLİ VE EDEBİYATI ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|298815|Arşiv|Türkçe|08.05.2015|4
+275949|TÜRK DİLİ VE EDEBİYATI ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|298815|Arşiv|Türkçe|08.05.2015|4
+122096|TÜRKÇE EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|298815|Aktif|Türkçe||
+168680|TÜRKÇE ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|298815|Aktif|Türkçe||4
+168681|TÜRKÇE ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|298815|Yarı Pasif|Türkçe||4
+122088|YABANCI DİLLER EĞİTİMİ BÖLÜMÜ|Bölüm|122082|Aktif|Türkçe||
+122089|ALMAN DİLİ EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|122088|Aktif|Türkçe||
+168650|ALMANCA ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|122088|Aktif|Türkçe||4
+168651|ALMANCA ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|122088|Yarı Pasif|Türkçe|10.09.2009|4
+122125|ARAP DİLİ EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|122088|Aktif|Türkçe|10.09.2009|
+122090|FRANSIZ DİLİ EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|122088|Aktif|Türkçe|10.09.2009|
+168658|FRANSIZCA ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|122088|Aktif|Türkçe|10.09.2009|4
+168662|FRANSIZCA ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|122088|Yarı Pasif|Türkçe|10.09.2009|4
+122126|JAPON DİLİ EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|122088|Aktif|Türkçe|10.09.2009|
+122091|İNGİLİZ DİLİ EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|122088|Aktif|Türkçe||
+168665|İNGİLİZCE ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|122088|Aktif|Türkçe||4
+299021|İNGİLİZCE ÖĞRETMENLİĞİ PR. (%25 BURSLU)|Önlisans/Lisans Programı|122088|Yarı Pasif|Türkçe|02.08.2016|4
+299022|İNGİLİZCE ÖĞRETMENLİĞİ PR. (%50 BURSLU)|Önlisans/Lisans Programı|122088|Yarı Pasif|Türkçe|02.08.2016|4
+299019|İNGİLİZCE ÖĞRETMENLİĞİ PR. (TAM BURSLU)|Önlisans/Lisans Programı|122088|Yarı Pasif|Türkçe|02.08.2016|4
+299020|İNGİLİZCE ÖĞRETMENLİĞİ PR. (ÜCRETLİ)|Önlisans/Lisans Programı|122088|Yarı Pasif|Türkçe|02.08.2016|4
+168667|İNGİLİZCE ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|122088|Yarı Pasif|Türkçe|10.09.2009|4
+122092|ÖZEL EĞİTİM BÖLÜMÜ|Bölüm|122082|Aktif|Türkçe||
+122094|ZİHİN ENGELLİLER EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|122092|Aktif|Türkçe||
+168682|ZİHİN ENGELLİLER ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|122092|Yarı Pasif|Türkçe|10.09.2009|4
+258805|ZİHİN ENGELLİLER ÖĞRETMENLİĞİ PR. (KKTC UYRUKLU)|Önlisans/Lisans Programı|122092|Kapalı|Türkçe|11.08.2014|4
+168683|ZİHİN ENGELLİLER ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|122092|Yarı Pasif|Türkçe|10.09.2009|4
+283503|ÖZEL EĞİTİM ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|122092|Aktif|Türkçe|30.12.2015|4
+122093|İŞİTME ENGELLİLER EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|122092|Aktif|Türkçe||
+168668|İŞİTME ENGELLİLER ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|122092|Yarı Pasif|Türkçe||4
+168669|İŞİTME ENGELLİLER ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|122092|Yarı Pasif|Türkçe|10.09.2009|4
+122100|İLKÖĞRETİM BÖLÜMÜ|Bölüm|122082|Yarı Pasif|Türkçe||
+285293|İLKÖĞRETİM DİN KÜLTÜRÜ VE AHLAK BİLGİSİ ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|122100|Yarı Pasif|Türkçe|01.01.1900|4
+285294|İLKÖĞRETİM DİN KÜLTÜRÜ VE AHLAK BİLGİSİ ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|122100|Yarı Pasif|Türkçe|01.01.1900|4
+122386|FEN BİLİMLERİ ENSTİTÜSÜ|Enstitü|121946|Aktif|Türkçe|20.07.1982|
+255365|ADLİ BİLİMLER (YL) (TEZLİ)|Yüksek Lisans Programı|122386|Aktif|Türkçe|26.02.2014|2
+255366|AKILLI SİSTEMLER MÜHENDİSLİĞİ (YL) (TEZLİ)|Yüksek Lisans Programı|122386|Aktif|Türkçe|26.02.2014|2
+211283|BAHÇE BİTKİLERİ (DR)|Doktora Programı|122386|Aktif|Türkçe||4
+211284|BAHÇE BİTKİLERİ (YL) (TEZLİ)|Yüksek Lisans Programı|122386|Aktif|Türkçe||2
+211296|BİLGİSAYAR MÜHENDİSLİĞİ (YL)|Yüksek Lisans Programı|122386|Aktif|Türkçe||2
+211294|BİTKİ KORUMA (DR)|Doktora Programı|122386|Aktif|Türkçe||4
+211293|BİTKİ KORUMA (YL)|Yüksek Lisans Programı|122386|Aktif|Türkçe||2
+211282|BİYOLOJİ (DR)|Doktora Programı|122386|Aktif|Türkçe||4
+211261|BİYOLOJİ (YL)|Yüksek Lisans Programı|122386|Aktif|Türkçe||2
+234077|BİYOLOJİ (YL) (TEZSİZ)|Yüksek Lisans Programı|122386|Aktif|Türkçe||2
+317402|BİYOLOJİ (YL) (TEZSİZ) (UZAKTAN ÖĞRETİM)|Yüksek Lisans Programı|122386|Aktif|Türkçe|29.04.2012|2
+330618|BİYOLOJİ EĞİTİMİ (YL) (TEZSİZ)|Yüksek Lisans Programı|122386|Arşiv|Türkçe|01.01.1999|2
+211254|ELEKTRİK-ELEKTRONİK MÜHENDİSLİĞİ (DR)|Doktora Programı|122386|Aktif|Türkçe||4
+211253|ELEKTRİK-ELEKTRONİK MÜHENDİSLİĞİ (YL)|Yüksek Lisans Programı|122386|Aktif|Türkçe||2
+258271|FEN BİLGİSİ EĞİTİM (YL) (TEZLİ) (ORDU ÜNİV. ORTAK)|Yüksek Lisans Programı|122386|Aktif|Türkçe|19.06.2014|2
+169496|FEN BİLGİSİ EĞİTİMİ (DR)|Doktora Programı|122386|Aktif|Türkçe||4
+211257|FİZİK (DR)|Doktora Programı|122386|Aktif|Türkçe||4
+211258|FİZİK (YL)|Yüksek Lisans Programı|122386|Aktif|Türkçe||2
+234095|FİZİK (YL) (TEZSİZ)|Yüksek Lisans Programı|122386|Aktif|Türkçe||2
+317401|FİZİK (YL) (TEZSİZ) (UZAKTAN ÖĞRETİM)|Yüksek Lisans Programı|122386|Aktif|Türkçe|29.04.2012|2
+330619|FİZİK EĞİTİMİ (YL) (TEZSİZ)|Yüksek Lisans Programı|122386|Arşiv|Türkçe|01.01.1999|2
+211298|GIDA MÜHENDİSLİĞİ (DR)|Doktora Programı|122386|Aktif|Türkçe||4
+279463|GIDA MÜHENDİSLİĞİ (DR) (ORDU ÜNİV. ORTAK)|Doktora Programı|122386|Aktif|Türkçe|08.07.2015|4
+211297|GIDA MÜHENDİSLİĞİ (YL)|Yüksek Lisans Programı|122386|Aktif|Türkçe||2
+226065|GIDA MÜHENDİSLİĞİ (YL) (ORDU ÜNİV. ORTAK)|Yüksek Lisans Programı|122386|Aktif|Türkçe|13.09.2012|2
+211266|HARİTA MÜHENDİSLİĞİ (DR)|Doktora Programı|122386|Aktif|Türkçe||4
+215657|HARİTA MÜHENDİSLİĞİ (DR) (KARADENİZ TEKNİK ÜNİV. ORTAK)|Doktora Programı|122386|Aktif|Türkçe||4
+211265|HARİTA MÜHENDİSLİĞİ (YL)|Yüksek Lisans Programı|122386|Aktif|Türkçe||2
+255368|HESAPLAMALI BİLİMLER (DR)|Doktora Programı|122386|Aktif|Türkçe|26.02.2014|4
+255367|HESAPLAMALI BİLİMLER (YL) (TEZLİ)|Yüksek Lisans Programı|122386|Kapalı|Türkçe|26.02.2014|2
+211290|KİMYA (DR)|Doktora Programı|122386|Aktif|Türkçe||4
+211289|KİMYA (YL)|Yüksek Lisans Programı|122386|Aktif|Türkçe||2
+317403|KİMYA (YL) (TEZSİZ) (UZAKTAN ÖĞRETİM)|Yüksek Lisans Programı|122386|Aktif|Türkçe|29.04.2012|2
+234078|KİMYA ANABİLİM DALI|Anabilim Dalı|122386|Aktif|Türkçe||
+330620|KİMYA EĞİTİMİ (YL) (TEZSİZ)|Yüksek Lisans Programı|122386|Arşiv|Türkçe|01.01.1999|2
+225905|KİMYA MÜHENDİSLİĞİ (YL)|Yüksek Lisans Programı|122386|Aktif|Türkçe|09.08.2012|2
+209678|MAKİNE MÜHENDİSLİĞİ (DR)|Doktora Programı|122386|Aktif|Türkçe|23.08.2011|4
+169494|MAKİNE MÜHENDİSLİĞİ (YL)|Yüksek Lisans Programı|122386|Aktif|Türkçe|10.09.2009|2
+211288|MALZEME BİLİMİ VE MÜHENDİSLİĞİ (YL)|Yüksek Lisans Programı|122386|Aktif|Türkçe||2
+211256|MATEMATİK (DR)|Doktora Programı|122386|Aktif|Türkçe||4
+242518|MATEMATİK (DR) (ORDU ÜNİV. ORTAK)|Doktora Programı|122386|Aktif|Türkçe|27.06.2013|4
+211255|MATEMATİK (YL)|Yüksek Lisans Programı|122386|Aktif|Türkçe||2
+234094|MATEMATİK (YL) (TEZSİZ)|Yüksek Lisans Programı|122386|Aktif|Türkçe||2
+317399|MATEMATİK (YL) (TEZSİZ) (UZAKTAN ÖĞRETİM)|Yüksek Lisans Programı|122386|Aktif|Türkçe|29.04.2012|2
+330621|MATEMATİK EĞİTİMİ (YL) (TEZSİZ)|Yüksek Lisans Programı|122386|Arşiv|Türkçe|01.01.1999|2
+299032|MOLEKÜLER BİYOLOJİ VE GENETİK (DR) (ÜCRETLİ)|Doktora Programı|122386|Yarı Pasif|Türkçe|02.08.2016|4
+299033|MOLEKÜLER BİYOLOJİ VE GENETİK (YL) (TEZLİ) (ÜCRETLİ)|Yüksek Lisans Programı|122386|Yarı Pasif|Türkçe|02.08.2016|2
+255370|NANOBİLİM VE NANOTEKNOLOJİ (DR) (İNGİLİZCE)|Doktora Programı|122386|Aktif|İngilizce|26.02.2014|4
+255369|NANOBİLİM VE NANOTEKNOLOJİ (YL) (TEZLİ) (İNGİLİZCE)|Yüksek Lisans Programı|122386|Aktif|İngilizce|26.02.2014|2
+261702|SAĞLIK, GIDA GÜVENLİĞİ VE İLGİLİ POLİTİKALAR (YL) (TEZLİ)|Yüksek Lisans Programı|122386|Aktif|Türkçe|25.09.2014|2
+321481|SU ÜRÜNLERİ (DR)|Doktora Programı|122386|Arşiv|Türkçe|01.01.1999|4
+330622|SU ÜRÜNLERİ (YL) (TEZLİ)|Yüksek Lisans Programı|122386|Arşiv|Türkçe|01.01.1999|2
+321447|SU ÜRÜNLERİ AVLAMA VE İŞLEME TEKNİĞİ (DR)|Doktora Programı|122386|Arşiv|Türkçe|01.01.1999|4
+317808|SU ÜRÜNLERİ AVLAMA VE İŞLEME TEKNİĞİ  (YL) (TEZLİ)|Yüksek Lisans Programı|122386|Arşiv|Türkçe||2
+321482|SU ÜRÜNLERİ YETİŞTİRİCİLİĞİ (DR)|Doktora Programı|122386|Arşiv|Türkçe|01.01.1999|4
+176121|TARIM EKONOMİSİ (DR)|Doktora Programı|122386|Aktif|Türkçe|26.08.2010|4
+230597|TARIM EKONOMİSİ (YL)|Yüksek Lisans Programı|122386|Aktif|Türkçe||2
+211260|TARIM MAKİNALARI VE TEKNOLOJİ MÜHENDİSLİĞİ (DR)|Doktora Programı|122386|Aktif|Türkçe|15.09.2008|4
+211259|TARIM MAKİNALARI VE TEKNOLOJİ MÜHENDİSLİĞİ (YL)|Yüksek Lisans Programı|122386|Aktif|Türkçe|03.06.2015|2
+255701|TARIMSAL BİYOTEKNOLOJİ (DR)|Doktora Programı|122386|Aktif|Türkçe|20.02.2014|4
+211287|TARIMSAL BİYOTEKNOLOJİ (YL)|Yüksek Lisans Programı|122386|Aktif|Türkçe||2
+211250|TARIMSAL YAPILAR VE SULAMA (DR)|Doktora Programı|122386|Aktif|Türkçe||4
+211249|TARIMSAL YAPILAR VE SULAMA (YL)|Yüksek Lisans Programı|122386|Aktif|Türkçe||2
+211286|TARLA BİTKİLERİ (DR)|Doktora Programı|122386|Aktif|Türkçe||4
+211285|TARLA BİTKİLERİ (YL)|Yüksek Lisans Programı|122386|Aktif|Türkçe||2
+215852|TAŞINMAZ GELİŞTİRME (YL) (TEZSİZ) (UZAKTAN ÖĞRETİM)|Yüksek Lisans Programı|122386|Aktif|Türkçe|19.04.2012|2
+203725|TOPRAK BİLİMİ VE BİTKİ BESLEME (DR)|Doktora Programı|122386|Aktif|Türkçe|17.02.2011|4
+203724|TOPRAK BİLİMİ VE BİTKİ BESLEME (YL)|Yüksek Lisans Programı|122386|Aktif|Türkçe|17.02.2011|2
+303063|YENİLENEBİLİR ENERJİ VE UYGULAMALARI ANABİLİM DALI (DİSİPLİNLERARASI)|Disiplinlerarası Anabilim Dalı|122386|Aktif|Türkçe|01.06.2016|
+303045|YENİLENEBİLİR ENERJİ VE UYGULAMALARI (YL) (TEZLİ)|Disiplinlerarası Yüksek Lisans Programı|303063|Aktif|Türkçe|01.06.2016|2
+211291|ZOOTEKNİ (DR)|Doktora Programı|122386|Aktif|Türkçe||4
+211292|ZOOTEKNİ (YL)|Yüksek Lisans Programı|122386|Aktif|Türkçe||2
+226064|ZOOTEKNİ (YL) (ORDU ÜNİV. ORTAK)|Yüksek Lisans Programı|122386|Aktif|Türkçe|13.09.2012|2
+211248|ÇEVRE MÜHENDİSLİĞİ (DR)|Doktora Programı|122386|Aktif|Türkçe||4
+211247|ÇEVRE MÜHENDİSLİĞİ (YL)|Yüksek Lisans Programı|122386|Aktif|Türkçe||2
+244882|ÇEVRE MÜHENDİSLİĞİ (YL) (TEZLİ) (İNGİLİZCE)|Yüksek Lisans Programı|122386|Aktif|İngilizce|15.08.2013|2
+324884|İLKÖĞRETİM FEN BİLGİSİ EĞİTİMİ (YL) (TEZLİ)|Yüksek Lisans Programı|122386|Arşiv|Türkçe|01.01.1999|2
+213374|İNŞAAT MÜHENDİSLİĞİ (DR)|Doktora Programı|122386|Aktif|Türkçe|02.02.2012|4
+231330|İNŞAAT MÜHENDİSLİĞİ (YL)|Yüksek Lisans Programı|122386|Aktif|Türkçe||2
+299031|İNŞAAT MÜHENDİSLİĞİ (YL) (ÜCRETLİ)|Yüksek Lisans Programı|122386|Yarı Pasif|Türkçe|02.08.2016|2
+202003|İNŞAAT MÜHENDİSLİĞİ ANABİLİM DALI|Anabilim Dalı|122386|Aktif|Türkçe||
+211251|İSTATİSTİK (DR)|Doktora Programı|122386|Aktif|Türkçe||4
+213389|İSTATİSTİK (DR) (KARADENİZ TEKNİK ÜNİV. ORTAK)|Doktora Programı|122386|Aktif|Türkçe|02.02.2012|4
+211252|İSTATİSTİK (YL)|Yüksek Lisans Programı|122386|Aktif|Türkçe||2
+269765|FEN VE MÜHENDİSLİK BİLİMLERİ FAKÜLTESİ|Fakülte|121946|Arşiv|Türkçe||
+273640|BİYOLOJİ PR.|Önlisans/Lisans Programı|269765|Arşiv|Türkçe||4
+273643|KİMYA LİSANS VE KİMYAGERLİK PR.|Önlisans/Lisans Programı|269765|Arşiv|Türkçe||4
+273644|UYGULAMALI MATEMATİK PR.|Önlisans/Lisans Programı|269765|Arşiv|Türkçe||4
+273641|ÇEVRE MÜHENDİSLİĞİ PR.|Önlisans/Lisans Programı|269765|Arşiv|Türkçe||4
+273642|İSTATİSTİK VE YÖNEYLEM ARAŞTIRMASI PR.|Önlisans/Lisans Programı|269765|Arşiv|Türkçe||4
+122005|FEN-EDEBİYAT FAKÜLTESİ|Fakülte|121946|Aktif|Türkçe|20.07.1982|
+168685|ANTROPOLOJİ BÖLÜMÜ|Bölüm|122005|Pasif|Türkçe||
+140229|ARKEOLOJİ BÖLÜMÜ|Bölüm|122005|Aktif|Türkçe|10.09.2009|
+140230|ARKEOLOJİ ANABİLİM DALI|Anabilim Dalı|140229|Aktif|Türkçe|10.09.2009|
+228891|ARKEOLOJİ PR.|Önlisans/Lisans Programı|140229|Aktif|Türkçe||4
+213019|KLASİK ARKEOLOJİ ANABİLİM DALI|Anabilim Dalı|140229|Aktif|Türkçe|25.01.2012|
+213020|PROTOHİSTORYA VE ÖNASYA ARKEOLOJİSİ ANABİLİM DALI|Anabilim Dalı|140229|Aktif|Türkçe|25.01.2012|
+213021|SUALTI ARKEOLOJİSİ ANABİLİM DALI|Anabilim Dalı|140229|Aktif|Türkçe|25.01.2012|
+122006|BİYOLOJİ BÖLÜMÜ|Bölüm|122005|Aktif|Türkçe||
+122007|BOTANİK ANABİLİM DALI|Anabilim Dalı|122006|Aktif|Türkçe||
+168686|BİYOLOJİ PR.|Önlisans/Lisans Programı|122006|Aktif|Türkçe||4
+168688|BİYOLOJİ PR. (İÖ)|Önlisans/Lisans Programı|122006|Yarı Pasif|Türkçe|10.09.2009|4
+122008|GENEL BİYOLOJİ ANABİLİM DALI|Anabilim Dalı|122006|Aktif|Türkçe||
+122011|HİDROBİYOLOJİ ANABİLİM DALI|Anabilim Dalı|122006|Aktif|Türkçe||
+122009|MOLEKÜLER BİYOLOJİ ANABİLİM DALI|Anabilim Dalı|122006|Aktif|Türkçe||
+122010|ZOOLOJİ ANABİLİM DALI|Anabilim Dalı|122006|Aktif|Türkçe||
+122012|COĞRAFYA BÖLÜMÜ|Bölüm|122005|Aktif|Türkçe||
+122013|BEŞERİ VE İKTİSADİ COĞRAFYA ANABİLİM DALI|Anabilim Dalı|122012|Aktif|Türkçe|10.09.2009|
+122014|BÖLGESEL COĞRAFYA ANABİLİM DALI|Anabilim Dalı|122012|Aktif|Türkçe||
+168692|COĞRAFYA PR.|Önlisans/Lisans Programı|122012|Aktif|Türkçe||4
+168694|COĞRAFYA PR. (İÖ)|Önlisans/Lisans Programı|122012|Yarı Pasif|Türkçe|10.09.2009|4
+122015|FİZİKİ COĞRAFYA ANABİLİM DALI|Anabilim Dalı|122012|Aktif|Türkçe||
+122016|TÜRKİYE COĞRAFYASI ANABİLİM DALI|Anabilim Dalı|122012|Aktif|Türkçe||
+128020|FELSEFE BÖLÜMÜ|Bölüm|122005|Aktif|Türkçe|10.09.2009|
+319525|BİLİM FELSEFESİ VE MANTIK ANABİLİM DALI|Anabilim Dalı|128020|Aktif|Türkçe|05.04.2017|
+143417|FELSEFE ANABİLİM DALI|Anabilim Dalı|128020|Aktif|Türkçe|10.09.2009|
+168695|FELSEFE PR.|Önlisans/Lisans Programı|128020|Aktif|Türkçe|10.09.2009|4
+241626|FELSEFE PR. (İÖ)|Önlisans/Lisans Programı|128020|Yarı Pasif|Türkçe|01.01.1900|4
+319341|FELSEFE TARİHİ ANABİLİM DALI|Anabilim Dalı|128020|Aktif|Türkçe|05.04.2017|
+319342|SİSTEMATİK FELSEFE ANABİLİM DALI|Anabilim Dalı|128020|Aktif|Türkçe|05.04.2017|
+319343|TÜRK İSLAM DÜŞÜNCESİ ANABİLİM DALI|Anabilim Dalı|128020|Aktif|Türkçe|05.04.2017|
+122017|FİZİK BÖLÜMÜ|Bölüm|122005|Aktif|Türkçe||
+122018|ATOM VE MOLEKÜL FİZİĞİ ANABİLİM DALI|Anabilim Dalı|122017|Aktif|Türkçe||
+168699|FİZİK PR.|Önlisans/Lisans Programı|122017|Yarı Pasif|Türkçe||4
+168705|FİZİK PR. (İÖ)|Önlisans/Lisans Programı|122017|Yarı Pasif|Türkçe|10.09.2009|4
+122019|GENEL FİZİK ANABİLİM DALI|Anabilim Dalı|122017|Aktif|Türkçe||
+122020|KATIHAL FİZİĞİ ANABİLİM DALI|Anabilim Dalı|122017|Aktif|Türkçe||
+122021|NÜKLEER FİZİK ANABİLİM DALI|Anabilim Dalı|122017|Aktif|Türkçe||
+122022|YÜKSEK ENERJİ VE PLAZMA FİZİĞİ ANABİLİM DALI|Anabilim Dalı|122017|Aktif|Türkçe||
+122027|KİMYA BÖLÜMÜ|Bölüm|122005|Aktif|Türkçe||
+122028|ANALİTİK KİMYA ANABİLİM DALI|Anabilim Dalı|122027|Aktif|Türkçe||
+122029|ANORGANİK KİMYA ANABİLİM DALI|Anabilim Dalı|122027|Aktif|Türkçe||
+122030|BİYOKİMYA ANABİLİM DALI|Anabilim Dalı|122027|Aktif|Türkçe||
+122031|FİZİKOKİMYA ANABİLİM DALI|Anabilim Dalı|122027|Aktif|Türkçe||
+168708|KİMYA PR.|Önlisans/Lisans Programı|122027|Aktif|Türkçe||4
+304539|KİMYA PR. (%50 BURSLU)|Önlisans/Lisans Programı|122027|Yarı Pasif|Türkçe|29.09.2016|4
+168709|KİMYA PR. (İÖ)|Önlisans/Lisans Programı|122027|Yarı Pasif|Türkçe|10.09.2009|4
+122032|ORGANİK KİMYA ANABİLİM DALI|Anabilim Dalı|122027|Aktif|Türkçe||
+122033|MATEMATİK BÖLÜMÜ|Bölüm|122005|Aktif|Türkçe||
+147737|ANALİZ VE FONKSİYONLAR TEORİSİ ANABİLİM DALI|Anabilim Dalı|122033|Aktif|Türkçe|10.09.2009|
+122034|CEBİR VE SAYILAR TEORİSİ ANABİLİM DALI|Anabilim Dalı|122033|Aktif|Türkçe||
+122035|FONKSİYONLAR TEORİSİ VE FONKSİYONEL ANALİZ ANABİLİM DALI|Anabilim Dalı|122033|Aktif|Türkçe|10.09.2009|
+122036|GEOMETRİ ANABİLİM DALI|Anabilim Dalı|122033|Aktif|Türkçe||
+168710|MATEMATİK PR.|Önlisans/Lisans Programı|122033|Aktif|Türkçe||4
+168713|MATEMATİK PR. (İÖ)|Önlisans/Lisans Programı|122033|Yarı Pasif|Türkçe||4
+122037|MATEMATİĞİN TEMELLERİ VE MATEMATİK LOJİK ANABİLİM DALI|Anabilim Dalı|122033|Aktif|Türkçe|10.09.2009|
+122038|TOPOLOJİ ANABİLİM DALI|Anabilim Dalı|122033|Aktif|Türkçe||
+122039|UYGULAMALI MATEMATİK ANABİLİM DALI|Anabilim Dalı|122033|Aktif|Türkçe||
+299034|MOLEKÜLER BİYOLOJİ VE GENETİK BÖLÜMÜ|Bölüm|122005|Yarı Pasif|Türkçe|02.08.2016|
+299036|MOLEKÜLER BİYOLOJİ VE GENETİK PR. (%25 BURSLU)|Önlisans/Lisans Programı|299034|Yarı Pasif|Türkçe|02.08.2016|4
+299037|MOLEKÜLER BİYOLOJİ VE GENETİK PR. (%50 BURSLU)|Önlisans/Lisans Programı|299034|Yarı Pasif|Türkçe|02.08.2016|4
+309339|MOLEKÜLER BİYOLOJİ VE GENETİK PR. (%75 BURSLU)|Önlisans/Lisans Programı|299034|Yarı Pasif|Türkçe|29.09.2016|4
+299035|MOLEKÜLER BİYOLOJİ VE GENETİK PR. (TAM BURSLU)|Önlisans/Lisans Programı|299034|Yarı Pasif|Türkçe|02.08.2016|4
+309084|MOLEKÜLER BİYOLOJİ VE GENETİK PR. (ÜCRETLİ)|Önlisans/Lisans Programı|299034|Yarı Pasif|Türkçe|10.11.2016|4
+320926|MOLEKÜLER BİYOLOJİ VE GENETİK BÖLÜMÜ|Bölüm|122005|Aktif|Türkçe|20.04.2017|
+328410|MOLEKÜLER BİYOLOJİ VE GENETİK ANABİLİM DALI|Anabilim Dalı|320926|Aktif|Türkçe|14.08.2017|
+320927|MOLEKÜLER BİYOLOJİ VE GENETİK PR.|Önlisans/Lisans Programı|320926|Aktif|Türkçe|20.04.2017|4
+122040|PSİKOLOJİ BÖLÜMÜ|Bölüm|122005|Aktif|Türkçe|10.09.2009|
+122041|DENEYSEL PSİKOLOJİ ANABİLİM DALI|Anabilim Dalı|122040|Aktif|Türkçe|10.09.2009|
+122042|GELİŞİM PSİKOLOJİSİ ANABİLİM DALI|Anabilim Dalı|122040|Aktif|Türkçe|10.09.2009|
+168714|PSİKOLOJİ PR.|Önlisans/Lisans Programı|122040|Aktif|Türkçe|10.09.2009|4
+299040|PSİKOLOJİ PR. (%25 BURSLU)|Önlisans/Lisans Programı|122040|Yarı Pasif|Türkçe|02.08.2016|4
+299039|PSİKOLOJİ PR. (%50 BURSLU)|Önlisans/Lisans Programı|122040|Yarı Pasif|Türkçe|02.08.2016|4
+299038|PSİKOLOJİ PR. (TAM BURSLU)|Önlisans/Lisans Programı|122040|Yarı Pasif|Türkçe|02.08.2016|4
+299041|PSİKOLOJİ PR. (ÜCRETLİ)|Önlisans/Lisans Programı|122040|Yarı Pasif|Türkçe|02.08.2016|4
+122043|PSİKOMETRİ ANABİLİM DALI|Anabilim Dalı|122040|Aktif|Türkçe|10.09.2009|
+122044|SOSYAL PSİKOLOJİ ANABİLİM DALI|Anabilim Dalı|122040|Aktif|Türkçe|10.09.2009|
+128019|UYGULAMALI PSİKOLOJİ ANABİLİM DALI|Anabilim Dalı|122040|Aktif|Türkçe|10.09.2009|
+166108|SANAT TARİHİ BÖLÜMÜ|Bölüm|122005|Aktif|Türkçe||
+166111|BATI SANATI ANABİLİM DALI|Anabilim Dalı|166108|Aktif|Türkçe||
+166110|BİZANS SANATI ANABİLİM DALI|Anabilim Dalı|166108|Aktif|Türkçe||
+231278|SANAT TARİHİ PR.|Önlisans/Lisans Programı|166108|Aktif|Türkçe||4
+166109|TÜRK İSLAM SANATI ANABİLİM DALI|Anabilim Dalı|166108|Aktif|Türkçe||
+166112|ÇAĞDAŞ SANAT ANABİLİM DALI|Anabilim Dalı|166108|Aktif|Türkçe||
+122077|SOSYOLOJİ BÖLÜMÜ|Bölüm|122005|Aktif|Türkçe|10.09.2009|
+319344|GENEL SOSYOLOJİ VE METODOLOJİ ANABİLİM DALI|Anabilim Dalı|122077|Aktif|Türkçe|05.04.2017|
+319345|KURUMLAR SOSYOLOJİSİ ANABİLİM DALI|Anabilim Dalı|122077|Aktif|Türkçe|05.04.2017|
+122078|SOSYAL ANTROPOLOJİ ANABİLİM DALI|Anabilim Dalı|122077|Aktif|Türkçe|10.09.2009|
+122079|SOSYOLOJİ ANABİLİM DALI|Anabilim Dalı|122077|Aktif|Türkçe|10.09.2009|
+203698|SOSYOLOJİ PR.|Önlisans/Lisans Programı|122077|Aktif|Türkçe|17.02.2011|4
+308529|SOSYOLOJİ PR. (%50 BURSLU)|Önlisans/Lisans Programı|122077|Yarı Pasif|Türkçe|20.10.2016|4
+308530|SOSYOLOJİ PR. (TAM BURSLU)|Önlisans/Lisans Programı|122077|Yarı Pasif|Türkçe|20.10.2016|4
+319346|UYGULAMALI SOSYOLOJİ ANABİLİM DALI|Anabilim Dalı|122077|Aktif|Türkçe|05.04.2017|
+122045|TARİH BÖLÜMÜ|Bölüm|122005|Aktif|Türkçe||
+122046|ESKİÇAĞ TARİHİ ANABİLİM DALI|Anabilim Dalı|122045|Aktif|Türkçe||
+174942|GENEL TÜRK TARİHİ ANABİLİM DALI|Anabilim Dalı|122045|Aktif|Türkçe|21.07.2010|
+174941|ORTAÇAĞ TARİHİ ANABİLİM DALI|Anabilim Dalı|122045|Aktif|Türkçe|21.07.2010|
+168716|TARİH PR.|Önlisans/Lisans Programı|122045|Aktif|Türkçe||4
+168718|TARİH PR. (İÖ)|Önlisans/Lisans Programı|122045|Yarı Pasif|Türkçe|10.09.2009|4
+122047|TÜRKİYE CUMHURİYETİ TARİHİ ANABİLİM DALI|Anabilim Dalı|122045|Aktif|Türkçe||
+122048|YAKINÇAĞ TARİHİ ANABİLİM DALI|Anabilim Dalı|122045|Aktif|Türkçe||
+122049|YENİÇAĞ TARİHİ ANABİLİM DALI|Anabilim Dalı|122045|Aktif|Türkçe||
+122050|TÜRK DİLİ VE EDEBİYATI BÖLÜMÜ|Bölüm|122005|Aktif|Türkçe||
+122051|ESKİ TÜRK DİLİ ANABİLİM DALI|Anabilim Dalı|122050|Aktif|Türkçe||
+122052|ESKİ TÜRK EDEBİYATI ANABİLİM DALI|Anabilim Dalı|122050|Aktif|Türkçe||
+168721|TÜRK DİLİ VE EDEBİYATI PR.|Önlisans/Lisans Programı|122050|Aktif|Türkçe||4
+299043|TÜRK DİLİ VE EDEBİYATI PR. (%25 BURSLU)|Önlisans/Lisans Programı|122050|Yarı Pasif|Türkçe|02.08.2016|4
+299044|TÜRK DİLİ VE EDEBİYATI PR. (%50 BURSLU)|Önlisans/Lisans Programı|122050|Yarı Pasif|Türkçe|02.08.2016|4
+299042|TÜRK DİLİ VE EDEBİYATI PR. (TAM BURSLU)|Önlisans/Lisans Programı|122050|Yarı Pasif|Türkçe|02.08.2016|4
+168722|TÜRK DİLİ VE EDEBİYATI PR. (İÖ)|Önlisans/Lisans Programı|122050|Yarı Pasif|Türkçe||4
+122055|TÜRK HALK EDEBİYATI ANABİLİM DALI|Anabilim Dalı|122050|Aktif|Türkçe||
+122053|YENİ TÜRK DİLİ ANABİLİM DALI|Anabilim Dalı|122050|Aktif|Türkçe||
+122054|YENİ TÜRK EDEBİYATI ANABİLİM DALI|Anabilim Dalı|122050|Aktif|Türkçe||
+122056|ÇAĞDAŞ TÜRK LEHÇELERİ VE EDEBİYATLARI ANABİLİM DALI|Anabilim Dalı|122050|Aktif|Türkçe|26.05.2010|
+314697|ÇEVRE MÜHENDİSLİĞİ BÖLÜMÜ|Bölüm|122005|Arşiv|Türkçe|13.02.2017|
+314696|ÇEVRE MÜHENDİSLİĞİ PR.|Önlisans/Lisans Programı|314697|Arşiv|Türkçe|13.02.2017|4
+122023|İSTATİSTİK BÖLÜMÜ|Bölüm|122005|Aktif|Türkçe||
+174937|OLASILIK TEORİSİ VE SÜREÇLERİ ANABİLİM DALI|Anabilim Dalı|122023|Aktif|Türkçe|21.07.2010|
+174939|RİSK ANALİZİ ANABİLİM DALI|Anabilim Dalı|122023|Aktif|Türkçe|21.07.2010|
+122024|UYGULAMALI İSTATİSTİK ANABİLİM DALI|Anabilim Dalı|122023|Aktif|Türkçe||
+122026|YÖNEYLEM ARAŞTIRMA ANABİLİM DALI|Anabilim Dalı|122023|Aktif|Türkçe||
+174940|İSTATİKSEL BİLGİ SİSTEMLERİ ANABİLİM DALI|Anabilim Dalı|122023|Aktif|Türkçe|21.07.2010|
+168706|İSTATİSTİK PR.|Önlisans/Lisans Programı|122023|Aktif|Türkçe||4
+168707|İSTATİSTİK PR. (İÖ)|Önlisans/Lisans Programı|122023|Yarı Pasif|Türkçe||4
+122025|İSTATİSTİK TEORİSİ ANABİLİM DALI|Anabilim Dalı|122023|Aktif|Türkçe||
+122394|FINDIK VE DİĞER SERT KABUKLU MEYVELERİ ARAŞTIRMA VE UYGULAMA MERKEZİ|Araştırma ve Uygulama Merkezi|121946|Kapalı|Türkçe|10.09.2009|
+122391|GELİŞİMSEL EĞİTİM UYGULAMA VE ARAŞTIRMA MERKEZİ|Araştırma ve Uygulama Merkezi|121946|Aktif|Türkçe|05.01.2011|
+227978|GEMİ İNŞAATI VE DENİZ BİLİMLERİ FAKÜLTESİ|Fakülte|121946|Aktif|Türkçe|25.11.2012|
+292394|DENİZ ULAŞTIRMA İŞLETME MÜHENDİSLİĞİ BÖLÜMÜ|Bölüm|227978|Aktif|Türkçe|30.03.2016|
+327936|DENİZ ULAŞTIRMA İŞLETME MÜHENDİSLİĞİ ANABİLİM DALI|Anabilim Dalı|292394|Aktif|Türkçe|14.08.2017|
+292392|DENİZCİLİK İŞLETMELERİ YÖNETİMİ BÖLÜMÜ|Bölüm|227978|Aktif|Türkçe|30.03.2016|
+327941|DENİZCİLİK İŞLETMELERİ YÖNETİMİ ANABİLİM DALI|Anabilim Dalı|292392|Aktif|Türkçe|14.08.2017|
+292393|GEMİ İNŞAATI VE GEMİ MAKİNELERİ MÜHENDİSLİĞİ BÖLÜMÜ|Bölüm|227978|Aktif|Türkçe|30.03.2016|
+328109|GEMİ İNŞAATI VE GEMİ MAKİNELERİ MÜHENDİSLİĞİ ANABİLİM DALI|Anabilim Dalı|292393|Aktif|Türkçe|14.08.2017|
+169531|GERZE MESLEK YÜKSEKOKULU|Meslek Yüksekokulu|121946|Arşiv|Türkçe||
+169534|İKTİSADİ VE İDARİ PROGRAMLAR BÖLÜMÜ|Bölüm|169531|Arşiv|Türkçe||
+275950|MUHASEBE PR.|Önlisans/Lisans Programı|169534|Arşiv|Türkçe|08.05.2015|2
+275951|TEKSTİL PR.|Önlisans/Lisans Programı|169534|Arşiv|Türkçe|08.05.2015|2
+169537|TURİZM VE OTEL İŞLETMECİLİĞİ PR.|Önlisans/Lisans Programı|169534|Arşiv|Türkçe||2
+208606|GÜZEL SANATLAR ENSTİTÜSÜ|Enstitü|121946|Aktif|Türkçe|20.07.1982|
+255316|GÖRSEL İLETİŞİM TASARIMI (YL) (TEZLİ)|Yüksek Lisans Programı|208606|Aktif|Türkçe|20.02.2014|2
+258248|MÜZİKTE YORUMCULUK (YL) (TEZLİ)|Yüksek Lisans Programı|208606|Aktif|Türkçe|19.06.2014|2
+258249|MÜZİKTE YORUMCULUK (YL) (TEZSİZ)|Yüksek Lisans Programı|208606|Aktif|Türkçe|19.06.2014|2
+281828|RESİM (YL) (TEZLİ)|Yüksek Lisans Programı|208606|Aktif|Türkçe|28.10.2015|2
+325573|SANAT VE TASARIM (SY)|Sanatta Yeterlilik Programı|208606|Aktif|Türkçe|12.07.2017|4
+278819|TIBBİ RESİMLEME (YL) (TEZLİ)|Yüksek Lisans Programı|208606|Aktif|Türkçe|24.06.2015|2
+278818|TIBBİ RESİMLEME ANABİLİM DALI (DİSİPLİNLERARASI)|Disiplinlerarası Anabilim Dalı|208606|Aktif|Türkçe|24.06.2015|
+215087|GÜZEL SANATLAR FAKÜLTESİ|Fakülte|121946|Aktif|Türkçe|11.04.2012|
+232411|ENDÜSTRİYEL TASARIM BÖLÜMÜ|Bölüm|215087|Aktif|Türkçe|15.01.2013|
+319349|ENDÜSTRİ ÜRÜNLERİ TASARIMI ANASANAT DALI|Anasanat Dalı|232411|Aktif|Türkçe|05.04.2017|
+232412|GÖRSEL İLETİŞİM TASARIMI BÖLÜMÜ|Bölüm|215087|Aktif|Türkçe|15.01.2013|
+319348|ANİMASYON ANASANAT DALI|Anasanat Dalı|232412|Aktif|Türkçe|05.04.2017|
+319347|GRAFİK ANASANAT DALI|Anasanat Dalı|232412|Aktif|Türkçe|05.04.2017|
+245360|GÖRSEL İLETİŞİM TASARIMI PR.|Önlisans/Lisans Programı|232412|Aktif|Türkçe|15.08.2013|4
+304543|GÖRSEL İLETİŞİM TASARIMI PR. (TAM BURSLU)|Önlisans/Lisans Programı|232412|Yarı Pasif|Türkçe|29.09.2016|4
+232415|HEYKEL BÖLÜMÜ|Bölüm|215087|Aktif|Türkçe|15.01.2013|
+328218|HEYKEL ANABİLİM DALI|Anabilim Dalı|232415|Aktif|Türkçe|14.08.2017|
+232414|RESİM BÖLÜMÜ|Bölüm|215087|Aktif|Türkçe|15.01.2013|
+319228|RESİM ANASANAT DALI|Anasanat Dalı|232414|Aktif|Türkçe|05.04.2017|
+252835|RESİM PR.|Önlisans/Lisans Programı|232414|Aktif|Türkçe|20.02.2014|4
+232413|SERAMİK VE CAM BÖLÜMÜ|Bölüm|215087|Aktif|Türkçe|15.01.2013|
+319229|SERAMİK VE CAM ANASANAT DALI|Anasanat Dalı|232413|Aktif|Türkçe|05.04.2017|
+270024|SERAMİK-CAM PR.|Önlisans/Lisans Programı|232413|Aktif|Türkçe|09.04.2015|4
+204856|HAVACILIK VE UZAY BİLİMLERİ FAKÜLTESİ|Fakülte|121946|Aktif|Türkçe|26.02.2010|
+204865|METEOROLOJİ MÜHENDİSLİĞİ BÖLÜMÜ|Bölüm|204856|Aktif|Türkçe|02.03.2011|
+320789|METEOROLOJİ MÜHENDİSLİĞİ ANABİLİM DALI|Anabilim Dalı|204865|Aktif|Türkçe|02.05.2017|
+276274|METEOROLOJİ MÜHENDİSLİĞİ PR.|Önlisans/Lisans Programı|204865|Aktif|Türkçe|30.04.2015|4
+327587|METEOROLOJİ MÜHENDİSLİĞİ PR. (KKTC UYRUKLU)|Önlisans/Lisans Programı|204865|Aktif|Türkçe|04.08.2017|4
+276275|METEOROLOJİ MÜHENDİSLİĞİ PR. (YURTDIŞI KONTENJANI)|Önlisans/Lisans Programı|204865|Kapalı|Türkçe|30.04.2015|4
+204864|UZAY MÜHENDİSLİĞİ BÖLÜMÜ|Bölüm|204856|Aktif|Türkçe|02.03.2011|
+328843|UZAY MÜHENDİSLİĞİ ANABİLİM DALI|Anabilim Dalı|204864|Aktif|Türkçe|14.08.2017|
+293983|UÇAK BAKIM VE ONARIM BÖLÜMÜ|Bölüm|204856|Aktif|Türkçe|19.04.2016|
+320788|UÇAK BAKIM VE ONARIM ANABİLİM DALI|Anabilim Dalı|293983|Aktif|Türkçe|02.05.2017|
+204857|UÇAK VE UZAY MÜHENDİSLİĞİ BÖLÜMÜ|Bölüm|204856|Aktif|Türkçe|02.03.2011|
+320787|UÇAK VE UZAY MÜHENDİSLİĞİ ANABİLİM DALI|Anabilim Dalı|204857|Aktif|Türkçe|02.05.2017|
+256686|UÇAK VE UZAY MÜHENDİSLİĞİ PR.|Önlisans/Lisans Programı|204857|Aktif|İngilizce (%30)|17.04.2014|4
+327589|UÇAK VE UZAY MÜHENDİSLİĞİ PR. (KKTC UYRUKLU)|Önlisans/Lisans Programı|204857|Aktif|Türkçe|04.08.2017|4
+233015|HAVACILIK VE UZAY TEKNOLOJİLERİ UYGULAMA VE ARAŞTIRMA MERKEZİ|Araştırma ve Uygulama Merkezi|121946|Aktif|Türkçe|23.11.2011|
+122379|HAVZA MESLEK YÜKSEKOKULU|Meslek Yüksekokulu|121946|Aktif|Türkçe|24.06.1993|
+169579|BÜRO HİZMETLERİ VE SEKRETERLİK BÖLÜMÜ|Bölüm|122379|Aktif|Türkçe|24.06.1993|
+169581|BÜRO YÖNETİMİ VE SEKRETERLİK PR.|Önlisans/Lisans Programı|169579|Kapalı|Türkçe||2
+169582|BÜRO YÖNETİMİ VE SEKRETERLİK PR. (İÖ)|Önlisans/Lisans Programı|169579|Kapalı|Türkçe||2
+175630|BÜRO YÖNETİMİ VE YÖNETİCİ ASİSTANLIĞI PR.|Önlisans/Lisans Programı|169579|Aktif|Türkçe||2
+294856|BÜRO YÖNETİMİ VE YÖNETİCİ ASİSTANLIĞI PR. (UZAKTAN ÖĞRETİM)|Önlisans/Lisans Programı|169579|Aktif|Türkçe|27.04.2016|2
+175631|BÜRO YÖNETİMİ VE YÖNETİCİ ASİSTANLIĞI PR. (İÖ)|Önlisans/Lisans Programı|169579|Aktif|Türkçe|10.09.2009|2
+249948|MÜLKİYET KORUMA VE GÜVENLİK BÖLÜMÜ|Bölüm|122379|Aktif|Türkçe||
+282781|SİVİL SAVUNMA VE İTFAİYECİLİK PR.|Önlisans/Lisans Programı|249948|Pasif|Türkçe|09.12.2015|2
+249949|İŞ SAĞLIĞI VE GÜVENLİĞİ PR.|Önlisans/Lisans Programı|249948|Aktif|Türkçe|15.01.2014|2
+320062|İŞ SAĞLIĞI VE GÜVENLİĞİ PR. (UZAKTAN ÖĞRETİM)|Önlisans/Lisans Programı|249948|Aktif|Türkçe|19.04.2017|2
+169571|OTEL, LOKANTA VE İKRAM HİZMETLERİ BÖLÜMÜ|Bölüm|122379|Aktif|Türkçe|24.06.1993|
+169573|TURİZM VE OTEL İŞLETMECİLİĞİ PR.|Önlisans/Lisans Programı|169571|Aktif|Türkçe|10.09.2009|2
+169575|TURİZM VE OTEL İŞLETMECİLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|169571|Aktif|Türkçe||2
+147579|SAĞLIK PROGRAMLARI BÖLÜMÜ|Bölüm|122379|Kapalı|Türkçe||
+147581|FİZYOTERAPİ PR.|Önlisans/Lisans Programı|147579|Kapalı|Türkçe|10.09.2009|2
+169583|FİZYOTERAPİ PR. (İÖ)|Önlisans/Lisans Programı|147579|Kapalı|Türkçe|10.09.2009|2
+122380|TEKNİK PROGRAMLAR BÖLÜMÜ|Bölüm|122379|Kapalı|Türkçe||
+169592|ELEKTRİK PR.|Önlisans/Lisans Programı|122380|Kapalı|Türkçe||2
+122381|İNŞAAT PR.|Önlisans/Lisans Programı|122380|Kapalı|Türkçe|10.09.2009|2
+169584|TERAPİ VE RAHABİLİTASYON BÖLÜMÜ|Bölüm|122379|Aktif|Türkçe|10.09.2009|
+169586|FİZYOTERAPİ PR.|Önlisans/Lisans Programı|169584|Aktif|Türkçe|10.09.2009|2
+304552|FİZYOTERAPİ PR. (ÜCRETLİ)|Önlisans/Lisans Programı|169584|Yarı Pasif|Türkçe|29.09.2016|2
+169588|FİZYOTERAPİ PR. (İÖ)|Önlisans/Lisans Programı|169584|Aktif|Türkçe|10.09.2009|2
+251125|TOPTAN VE PERAKENDE SATIŞ BÖLÜMÜ|Bölüm|122379|Aktif|Türkçe||
+228124|EMLAK VE EMLAK YÖNETİMİ PR.|Önlisans/Lisans Programı|251125|Aktif|Türkçe||2
+228555|EMLAK VE EMLAK YÖNETİMİ PR. (İÖ)|Önlisans/Lisans Programı|251125|Yarı Pasif|Türkçe||2
+169598|YÖNETİM VE ORGANİZASYON BÖLÜMÜ|Bölüm|122379|Aktif|Türkçe||
+145893|İŞLETME YÖNETİMİ PR.|Önlisans/Lisans Programı|169598|Aktif|Türkçe|10.09.2009|2
+294855|İŞLETME YÖNETİMİ PR. (UZAKTAN ÖĞRETİM)|Önlisans/Lisans Programı|169598|Aktif|Türkçe|27.04.2016|2
+240432|İŞLETME YÖNETİMİ PR. (İÖ)|Önlisans/Lisans Programı|169598|Aktif|Türkçe|01.01.1900|2
+122382|İKTİSADİ VE İDARİ PROGRAMLAR BÖLÜMÜ|Bölüm|122379|Kapalı|Türkçe||
+145908|AĞIRLAMA HİZMETLERİ PR.|Önlisans/Lisans Programı|122382|Kapalı|Türkçe|10.09.2009|2
+122384|BÜRO YÖNETİMİ VE SEKRETERLİK PR.|Önlisans/Lisans Programı|122382|Kapalı|Türkçe|10.09.2009|2
+169577|BÜRO YÖNETİMİ VE SEKRETERLİK PR. (İÖ)|Önlisans/Lisans Programı|122382|Kapalı|Türkçe||2
+122385|TURİZM VE OTEL İŞLETMECİLİĞİ PR.|Önlisans/Lisans Programı|122382|Kapalı|Türkçe|10.09.2009|2
+122383|İŞLETME PR.|Önlisans/Lisans Programı|122382|Kapalı|Türkçe|10.09.2009|2
+169596|İNŞAAT BÖLÜMÜ|Bölüm|122379|Aktif|Türkçe||
+169597|İNŞAAT TEKNOLOJİSİ PR.|Önlisans/Lisans Programı|169596|Yarı Pasif|Türkçe||2
+145888|İNŞAAT TEKNOLOJİSİ PR. (İÖ)|Önlisans/Lisans Programı|169596|Yarı Pasif|Türkçe|10.09.2009|2
+269766|HUKUK FAKÜLTESİ|Fakülte|121946|Arşiv|Türkçe||
+273645|HUKUK PR.|Önlisans/Lisans Programı|269766|Arşiv|Türkçe||4
+232499|KADIN VE TOPLUM UYGULAMA VE ARAŞTIRMA MERKEZİ|Araştırma ve Uygulama Merkezi|121946|Aktif|Türkçe|16.02.2011|
+169407|KAFKASYA VE ORTA ASYA ARAŞTIRMA VE UYGULAMA MERKEZİ|Araştırma ve Uygulama Merkezi|121946|Kapalı|Türkçe|01.01.1900|
+311015|KARADENİZ İLERİ TEKNOLOJİ UYGULAMA VE ARAŞTIRMA MERKEZİ|Araştırma ve Uygulama Merkezi|121946|Aktif|Türkçe|21.12.2016|
+122292|KAVAK MESLEK YÜKSEKOKULU|Meslek Yüksekokulu|121946|Aktif|Türkçe|28.09.1995|
+309357|ELEKTRİK VE ENERJİ BÖLÜMÜ|Bölüm|122292|Aktif|Türkçe||
+309358|ELEKTRİK PR.|Önlisans/Lisans Programı|309357|Pasif|Türkçe|01.01.1900|2
+309359|GAZ VE TESİSATI TEKNOLOJİSİ PR.|Önlisans/Lisans Programı|309357|Pasif|Türkçe|01.01.1900|2
+258381|MOTORLU ARAÇLAR VE ULAŞTIRMA TEKNOLOJİLERİ BÖLÜMÜ|Bölüm|122292|Aktif|Türkçe||
+258382|İŞ MAKİNELERİ OPERATÖRLÜĞÜ PR.|Önlisans/Lisans Programı|258381|Aktif|Türkçe|20.03.2013|2
+169626|MİMARLIK VE ŞEHİR PLANLAMA BÖLÜMÜ|Bölüm|122292|Aktif|Türkçe||
+284580|COĞRAFİ BİLGİ SİSTEMLERİ PR.|Önlisans/Lisans Programı|169626|Pasif|Türkçe|20.01.2016|2
+169629|HARİTA VE KADASTRO PR.|Önlisans/Lisans Programı|169626|Aktif|Türkçe|10.09.2009|2
+169633|HARİTA VE KADASTRO PR. (İÖ)|Önlisans/Lisans Programı|169626|Aktif|Türkçe|10.09.2009|2
+236269|MİMARİ RESTORASYON PR.|Önlisans/Lisans Programı|169626|Aktif|Türkçe|20.03.2013|2
+267991|MİMARİ RESTORASYON PR. (İÖ)|Önlisans/Lisans Programı|169626|Aktif|Türkçe|26.03.2015|2
+122293|TEKNİK PROGRAMLAR BÖLÜMÜ|Bölüm|122292|Kapalı|Türkçe|10.09.2009|
+169603|DOĞALGAZ ISITMA PR.|Önlisans/Lisans Programı|122293|Kapalı|Türkçe||2
+169606|ELEKTRİK PR.|Önlisans/Lisans Programı|122293|Kapalı|Türkçe||2
+122295|HARİTA VE KADASTRO PR.|Önlisans/Lisans Programı|122293|Kapalı|Türkçe|10.09.2009|2
+169612|HARİTA VE KADASTRO PR. (İÖ)|Önlisans/Lisans Programı|122293|Kapalı|Türkçe|10.09.2009|2
+169618|İNŞAAT BÖLÜMÜ|Bölüm|122292|Aktif|Türkçe||
+206498|YAPI DENETİMİ PR.|Önlisans/Lisans Programı|169618|Aktif|Türkçe|13.04.2011|2
+229172|YAPI DENETİMİ PR. (İÖ)|Önlisans/Lisans Programı|169618|Aktif|Türkçe||2
+122294|İNŞAAT PR.|Önlisans/Lisans Programı|169618|Kapalı|Türkçe|10.09.2009|2
+145978|İNŞAAT PR. (İÖ)|Önlisans/Lisans Programı|169618|Pasif|Türkçe|10.09.2009|2
+240431|İNŞAAT TEKNOLOJİSİ PR.|Önlisans/Lisans Programı|169618|Aktif|Türkçe|01.01.1900|2
+238467|İNŞAAT TEKNOLOJİSİ PR. (İÖ)|Önlisans/Lisans Programı|169618|Aktif|Türkçe|01.01.1900|2
+269767|MERZİFON MESLEK YÜKSEKOKULU|Meslek Yüksekokulu|121946|Arşiv|Türkçe||
+273647|BÜRO YÖNETİMİ VE SEKRETERLİK PR.|Önlisans/Lisans Programı|269767|Arşiv|Türkçe||2
+273648|BÜRO YÖNETİMİ VE SEKRETERLİK PR. (İÖ)|Önlisans/Lisans Programı|269767|Arşiv|Türkçe||2
+273646|BİLGİSAYAR TEKNOLOJİSİ VE PROGRAMLAMA PR.|Önlisans/Lisans Programı|269767|Arşiv|Türkçe||2
+273649|HARİTA KADASTRO PR.|Önlisans/Lisans Programı|269767|Arşiv|Türkçe||2
+273652|PAZARLAMA PR.|Önlisans/Lisans Programı|269767|Arşiv|Türkçe||2
+273653|PAZARLAMA PR. (İÖ)|Önlisans/Lisans Programı|269767|Arşiv|Türkçe||2
+273650|İNŞAAT PR.|Önlisans/Lisans Programı|269767|Arşiv|Türkçe||2
+273651|İNŞAAT PR. (İÖ)|Önlisans/Lisans Programı|269767|Arşiv|Türkçe||2
+269768|MESUDİYE MESLEK YÜKSEKOKULU|Meslek Yüksekokulu|121946|Arşiv|Türkçe||
+273654|BİLGİSAYAR PROGRAMCILIĞI PR.|Önlisans/Lisans Programı|269768|Arşiv|Türkçe||2
+273655|BİLGİSAYAR TEKNOLOJİSİ VE PROGRAMLAMA PR.|Önlisans/Lisans Programı|269768|Arşiv|Türkçe||2
+273656|MOBİLYA VE DEKORASYON PR.|Önlisans/Lisans Programı|269768|Arşiv|Türkçe||2
+273657|MUHASEBE PR.|Önlisans/Lisans Programı|269768|Arşiv|Türkçe||2
+273658|TURİZM VE OTEL İŞLETMECİLİĞİ PR.|Önlisans/Lisans Programı|269768|Arşiv|Türkçe||2
+122183|MÜHENDİSLİK FAKÜLTESİ|Fakülte|121946|Aktif|Türkçe|11.07.1992|
+122184|BİLGİSAYAR MÜHENDİSLİĞİ BÖLÜMÜ|Bölüm|122183|Aktif|Türkçe|10.09.2009|
+122185|BİLGİSAYAR BİLİMLERİ ANABİLİM DALI|Anabilim Dalı|122184|Aktif|Türkçe|10.09.2009|
+122186|BİLGİSAYAR DONANIMI ANABİLİM DALI|Anabilim Dalı|122184|Aktif|Türkçe|10.09.2009|
+168861|BİLGİSAYAR MÜHENDİSLİĞİ PR.|Önlisans/Lisans Programı|122184|Aktif|Türkçe|10.09.2009|4
+308509|BİLGİSAYAR MÜHENDİSLİĞİ PR. (%25 BURSLU)|Önlisans/Lisans Programı|122184|Yarı Pasif|Türkçe|20.10.2016|4
+308510|BİLGİSAYAR MÜHENDİSLİĞİ PR. (%50 BURSLU)|Önlisans/Lisans Programı|122184|Kapalı|Türkçe|20.10.2016|4
+122187|BİLGİSAYAR YAZILIMI ANABİLİM DALI|Anabilim Dalı|122184|Aktif|Türkçe|10.09.2009|
+168784|HİDROLİK ANABİLİM DALI|Anabilim Dalı|122184|Aktif|Türkçe||
+122225|ELEKTRİK-ELEKTRONİK MÜHENDİSLİĞİ BÖLÜMÜ|Bölüm|122183|Aktif|Türkçe|10.09.2009|
+201436|DEVRELER VE SİSTEMLER ANABİLİM DALI|Anabilim Dalı|122225|Aktif|Türkçe||
+122226|DEVRELER VE SİSTEMLER TEORİSİ ANABİLİM DALI|Anabilim Dalı|122225|Aktif|Türkçe|10.09.2009|
+122232|ELEKTRO MANYETİK ALANLAR VE MİKRO DALGA TEKNİĞİ ANABİLİM DALI|Anabilim Dalı|122225|Aktif|Türkçe|10.09.2009|
+122229|ELEKTRONİK ANABİLİM DALI|Anabilim Dalı|122225|Aktif|Türkçe||
+122227|ELEKTRİK MAKİNELERİ ANABİLİM DALI|Anabilim Dalı|122225|Aktif|Türkçe||
+122228|ELEKTRİK TESİSLERİ ANABİLİM DALI|Anabilim Dalı|122225|Aktif|Türkçe||
+168865|ELEKTRİK-ELEKTRONİK MÜHENDİSLİĞİ PR.|Önlisans/Lisans Programı|122225|Aktif|Türkçe|10.09.2009|4
+308531|ELEKTRİK-ELEKTRONİK MÜHENDİSLİĞİ PR. (%25 BURSLU)|Önlisans/Lisans Programı|122225|Kapalı|Türkçe|20.10.2016|4
+304617|ELEKTRİK-ELEKTRONİK MÜHENDİSLİĞİ PR. (%50 BURSLU)|Önlisans/Lisans Programı|122225|Yarı Pasif|Türkçe|29.09.2016|4
+304600|ELEKTRİK-ELEKTRONİK MÜHENDİSLİĞİ PR. (TAM BURSLU)|Önlisans/Lisans Programı|122225|Yarı Pasif|Türkçe|29.09.2016|4
+308532|ELEKTRİK-ELEKTRONİK MÜHENDİSLİĞİ PR. (ÜCRETLİ)|Önlisans/Lisans Programı|122225|Yarı Pasif|Türkçe|20.10.2016|4
+299060|ELEKTRİK-ELEKTRONİK MÜHENDİSLİĞİ PR. (İNGİLİZCE) (%50 BURSLU)|Önlisans/Lisans Programı|122225|Kapalı|İngilizce|02.08.2016|4
+299059|ELEKTRİK-ELEKTRONİK MÜHENDİSLİĞİ PR. (İNGİLİZCE) (TAM BURSLU)|Önlisans/Lisans Programı|122225|Kapalı|İngilizce|02.08.2016|4
+122230|KONTROL VE KUMANDA SİSTEMLERİ ANABİLİM DALI|Anabilim Dalı|122225|Aktif|Türkçe||
+122231|TELEKOMÜNİKASYON ANABİLİM DALI|Anabilim Dalı|122225|Aktif|Türkçe||
+122192|ENDÜSTRİ MÜHENDİSLİĞİ BÖLÜMÜ|Bölüm|122183|Aktif|Türkçe|10.09.2009|
+122193|ENDÜSTRİ MÜHENDİSLİĞİ ANABİLİM DALI|Anabilim Dalı|122192|Aktif|Türkçe|10.09.2009|
+168866|ENDÜSTRİ MÜHENDİSLİĞİ PR.|Önlisans/Lisans Programı|122192|Aktif|Türkçe|10.09.2009|4
+304641|ENDÜSTRİ MÜHENDİSLİĞİ PR. (ÜCRETLİ)|Önlisans/Lisans Programı|122192|Yarı Pasif|Türkçe|29.09.2016|4
+122194|YÖNEYLEM ARAŞTIRMA ANABİLİM DALI|Anabilim Dalı|122192|Aktif|Türkçe|10.09.2009|
+122195|GIDA MÜHENDİSLİĞİ BÖLÜMÜ|Bölüm|122183|Aktif|Türkçe|10.09.2009|
+122196|GIDA BİLİMLERİ ANABİLİM DALI|Anabilim Dalı|122195|Aktif|Türkçe|10.09.2009|
+168867|GIDA MÜHENDİSLİĞİ PR.|Önlisans/Lisans Programı|122195|Aktif|Türkçe||4
+168868|GIDA MÜHENDİSLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|122195|Yarı Pasif|Türkçe|10.09.2009|4
+122197|GIDA TEKNOLOJİSİ ANABİLİM DALI|Anabilim Dalı|122195|Aktif|Türkçe|10.09.2009|
+122204|HARİTA MÜHENDİSLİĞİ BÖLÜMÜ|Bölüm|122183|Aktif|Türkçe||
+122205|FOTOGRAMETRİ ANABİLİM DALI|Anabilim Dalı|122204|Aktif|Türkçe||
+168869|HARİTA MÜHENDİSLİĞİ PR.|Önlisans/Lisans Programı|122204|Aktif|Türkçe||4
+279642|HARİTA MÜHENDİSLİĞİ PR. (KKTC UYRUKLU)|Önlisans/Lisans Programı|122204|Aktif|Türkçe|01.01.1900|4
+168870|HARİTA MÜHENDİSLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|122204|Yarı Pasif|Türkçe||4
+122206|JEODEZİ ANABİLİM DALI|Anabilim Dalı|122204|Aktif|Türkçe||
+122208|KAMU ÖLÇMELERİ ANABİLİM DALI|Anabilim Dalı|122204|Aktif|Türkçe||
+128044|KARTOGRAFYA ANABİLİM DALI|Anabilim Dalı|122204|Aktif|Türkçe|10.09.2009|
+122207|ÖLÇME TEKNİĞİ ANABİLİM DALI|Anabilim Dalı|122204|Aktif|Türkçe||
+147731|JEODEZİ VE FOTOGRAMETRİ MÜHENDİSLİĞİ BÖLÜMÜ|Bölüm|122183|Aktif|Türkçe|10.09.2009|
+147732|FOTOGRAMETRİ ANABİLİM DALI|Anabilim Dalı|147731|Aktif|Türkçe|10.09.2009|
+147733|JEODEZİ ANABİLİM DALI|Anabilim Dalı|147731|Aktif|Türkçe|10.09.2009|
+275952|JEODEZİ VE FOTOGRAMETRİ MÜHENDİSLİĞİ PR.|Önlisans/Lisans Programı|147731|Arşiv|Türkçe|08.05.2015|4
+275953|JEODEZİ VE FOTOGRAMETRİ MÜHENDİSLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|147731|Arşiv|Türkçe|08.05.2015|4
+147734|KAMU ÖLÇMELERİ ANABİLİM DALI|Anabilim Dalı|147731|Aktif|Türkçe|10.09.2009|
+201357|ÖLÇME TEKNİĞİ ANABİLİM DALI|Anabilim Dalı|147731|Aktif|Türkçe||
+122209|KİMYA MÜHENDİSLİĞİ BÖLÜMÜ|Bölüm|122183|Aktif|Türkçe|10.09.2009|
+230641|KİMYA MÜHENDİSLİĞİ PR.|Önlisans/Lisans Programı|122209|Aktif|Türkçe||4
+122210|KİMYASAL TEKNOLOJİLER ANABİLİM DALI|Anabilim Dalı|122209|Aktif|Türkçe|10.09.2009|
+122211|PROSES VE REAKTÖR TASARIMI ANABİLİM DALI|Anabilim Dalı|122209|Aktif|Türkçe|10.09.2009|
+122213|TEMEL İŞLEMLER ANABİLİM DALI|Anabilim Dalı|122209|Aktif|Türkçe|10.09.2009|
+122212|TERMODİNAMİK ANABİLİM DALI|Anabilim Dalı|122209|Aktif|Türkçe|10.09.2009|
+122214|TERMODİNAMİK VE ENERJİ TEKNOLOJİSİ ANABİLİM DALI|Anabilim Dalı|122209|Aktif|Türkçe|10.09.2009|
+122215|MAKİNE MÜHENDİSLİĞİ BÖLÜMÜ|Bölüm|122183|Aktif|Türkçe|10.09.2009|
+122216|ENERJİ ANABİLİM DALI|Anabilim Dalı|122215|Aktif|Türkçe||
+122222|KARTOGRAFYA ANABİLİM DALI|Anabilim Dalı|122215|Aktif|Türkçe|10.09.2009|
+122217|KONSTRÜKSİYON VE İMALAT ANABİLİM DALI|Anabilim Dalı|122215|Aktif|Türkçe||
+122221|MAKİNE MÜHENDİSLİĞİ ANABİLİM DALI|Anabilim Dalı|122215|Aktif|Türkçe|10.09.2009|
+168873|MAKİNE MÜHENDİSLİĞİ PR.|Önlisans/Lisans Programı|122215|Aktif|Türkçe|10.09.2009|4
+168874|MAKİNE MÜHENDİSLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|122215|Yarı Pasif|Türkçe|10.09.2009|4
+122218|MAKİNE TEORİSİ VE DİNAMİĞİ ANABİLİM DALI|Anabilim Dalı|122215|Aktif|Türkçe||
+122219|MEKANİK ANABİLİM DALI|Anabilim Dalı|122215|Aktif|Türkçe||
+122220|TERMODİNAMİK ANABİLİM DALI|Anabilim Dalı|122215|Aktif|Türkçe||
+122223|MALZEME BİLİMİ VE MÜHENDİSLİĞİ BÖLÜMÜ|Bölüm|122183|Aktif|Türkçe|10.09.2009|
+122224|MALZEME BİLİMİ VE MÜHENDİSLİĞİ ANABİLİM DALI|Anabilim Dalı|122223|Aktif|Türkçe|10.09.2009|
+168875|MALZEME BİLİMİ VE MÜHENDİSLİĞİ PR.|Önlisans/Lisans Programı|122223|Aktif|İngilizce (%30)|10.09.2009|4
+168790|TIP MÜHENDİSLİĞİ BÖLÜMÜ|Bölüm|122183|Pasif|Türkçe|10.09.2009|
+122188|ÇEVRE MÜHENDİSLİĞİ BÖLÜMÜ|Bölüm|122183|Aktif|Türkçe|10.09.2009|
+122189|ÇEVRE BİLİMLERİ ANABİLİM DALI|Anabilim Dalı|122188|Aktif|Türkçe|10.09.2009|
+122191|ÇEVRE MÜHENDİSLİĞİ ANABİLİM DALI|Anabilim Dalı|122188|Aktif|Türkçe||
+168862|ÇEVRE MÜHENDİSLİĞİ PR.|Önlisans/Lisans Programı|122188|Aktif|Türkçe|10.09.2009|4
+168863|ÇEVRE MÜHENDİSLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|122188|Yarı Pasif|Türkçe||4
+122190|ÇEVRE TEKNOLOJİSİ ANABİLİM DALI|Anabilim Dalı|122188|Aktif|Türkçe|10.09.2009|
+122198|İNŞAAT MÜHENDİSLİĞİ BÖLÜMÜ|Bölüm|122183|Aktif|Türkçe|10.09.2009|
+122199|GEOTEKNİK ANABİLİM DALI|Anabilim Dalı|122198|Aktif|Türkçe||
+122200|HİDROLİK ANABİLİM DALI|Anabilim Dalı|122198|Aktif|Türkçe||
+122201|MEKANİK ANABİLİM DALI|Anabilim Dalı|122198|Aktif|Türkçe||
+122202|ULAŞTIRMA ANABİLİM DALI|Anabilim Dalı|122198|Aktif|Türkçe||
+122203|YAPI ANABİLİM DALI|Anabilim Dalı|122198|Aktif|Türkçe||
+168871|İNŞAAT MÜHENDİSLİĞİ PR.|Önlisans/Lisans Programı|122198|Aktif|Türkçe||4
+299067|İNŞAAT MÜHENDİSLİĞİ PR. (%25 BURSLU)|Önlisans/Lisans Programı|122198|Yarı Pasif|Türkçe|02.08.2016|4
+299068|İNŞAAT MÜHENDİSLİĞİ PR. (%50 BURSLU)|Önlisans/Lisans Programı|122198|Yarı Pasif|Türkçe|02.08.2016|4
+299065|İNŞAAT MÜHENDİSLİĞİ PR. (TAM BURSLU)|Önlisans/Lisans Programı|122198|Yarı Pasif|Türkçe|02.08.2016|4
+299066|İNŞAAT MÜHENDİSLİĞİ PR. (ÜCRETLİ)|Önlisans/Lisans Programı|122198|Yarı Pasif|Türkçe|02.08.2016|4
+168872|İNŞAAT MÜHENDİSLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|122198|Yarı Pasif|Türkçe|10.09.2009|4
+208604|MİMARLIK FAKÜLTESİ|Fakülte|121946|Aktif|Türkçe|26.02.2010|
+214339|MİMARLIK BÖLÜMÜ|Bölüm|208604|Aktif|Türkçe|14.03.2012|
+319350|MİMARLIK ANABİLİM DALI|Anabilim Dalı|214339|Aktif|Türkçe|05.04.2017|
+245567|MİMARLIK PR.|Önlisans/Lisans Programı|214339|Aktif|Türkçe|12.09.2013|4
+299071|MİMARLIK PR. (%25 BURSLU)|Önlisans/Lisans Programı|214339|Yarı Pasif|Türkçe|02.08.2016|4
+299072|MİMARLIK PR. (%50 BURSLU)|Önlisans/Lisans Programı|214339|Yarı Pasif|Türkçe|02.08.2016|4
+310648|MİMARLIK PR. (%75 BURSLU)|Önlisans/Lisans Programı|214339|Yarı Pasif|Türkçe|19.12.2016|4
+299069|MİMARLIK PR. (TAM BURSLU)|Önlisans/Lisans Programı|214339|Yarı Pasif|Türkçe|02.08.2016|4
+299070|MİMARLIK PR. (ÜCRETLİ)|Önlisans/Lisans Programı|214339|Yarı Pasif|Türkçe|02.08.2016|4
+247957|PEYZAJ MİMARLIĞI BÖLÜMÜ|Bölüm|208604|Aktif|Türkçe|01.01.1900|
+328482|PEYZAJ MİMARLIĞI ANABİLİM DALI|Anabilim Dalı|247957|Aktif|Türkçe|14.08.2017|
+247958|İÇ MİMARLIK BÖLÜMÜ|Bölüm|208604|Aktif|Türkçe|01.01.1900|
+319351|İÇ MİMARLIK ANABİLİM DALI|Anabilim Dalı|247958|Aktif|Türkçe|05.04.2017|
+299063|İÇ MİMARLIK PR. (%25 BURSLU)|Önlisans/Lisans Programı|247958|Yarı Pasif|Türkçe|02.08.2016|4
+299064|İÇ MİMARLIK PR. (%50 BURSLU)|Önlisans/Lisans Programı|247958|Yarı Pasif|Türkçe|02.08.2016|4
+299061|İÇ MİMARLIK PR. (TAM BURSLU)|Önlisans/Lisans Programı|247958|Yarı Pasif|Türkçe|02.08.2016|4
+299062|İÇ MİMARLIK PR. (ÜCRETLİ)|Önlisans/Lisans Programı|247958|Yarı Pasif|Türkçe|02.08.2016|4
+251540|ŞEHİR VE BÖLGE PLANLAMA BÖLÜMÜ|Bölüm|208604|Aktif|Türkçe|29.01.2014|
+319352|ŞEHİR VE BÖLGE PLANLAMA ANABİLİM DALI|Anabilim Dalı|251540|Aktif|Türkçe|05.04.2017|
+232712|OKUL ÖNCESİ EĞİTİMİ UYGULAMA VE ARAŞTIRMA MERKEZİ|Araştırma ve Uygulama Merkezi|121946|Aktif|Türkçe|17.08.2011|
+269769|ORDU FEN-EDEBİYAT FAKÜLTESİ|Fakülte|121946|Arşiv|Türkçe||
+273659|BİYOLOJİ PR.|Önlisans/Lisans Programı|269769|Arşiv|Türkçe||4
+273660|MATEMATİK PR.|Önlisans/Lisans Programı|269769|Arşiv|Türkçe||4
+273661|TARİH PR.|Önlisans/Lisans Programı|269769|Arşiv|Türkçe||4
+273662|TÜRK DİLİ VE EDEBİYATI PR.|Önlisans/Lisans Programı|269769|Arşiv|Türkçe||4
+269770|ORDU SAĞLIK HİZMETLERİ MESLEK YÜKSEKOKULU|Meslek Yüksekokulu|121946|Arşiv|Türkçe||
+273663|EBELİK PR.|Önlisans/Lisans Programı|269770|Arşiv|Türkçe||2
+273664|HEMŞİRELİK PR. (A)|Önlisans/Lisans Programı|269770|Arşiv|Türkçe||2
+273665|HEMŞİRELİK PR. (B)|Önlisans/Lisans Programı|269770|Arşiv|Türkçe||2
+269771|ORDU SAĞLIK YÜKSEKOKULU|Yüksekokul|121946|Arşiv|Türkçe||
+273666|HEMŞİRELİK PR.|Önlisans/Lisans Programı|269771|Arşiv|Türkçe||4
+169410|ORNİTOLOJİ ARAŞTIRMA VE UYGULAMA MERKEZİ|Araştırma ve Uygulama Merkezi|121946|Aktif|Türkçe|30.04.2009|
+284594|PSİKOLOJİ UYGULAMA VE ARAŞTIRMA MERKEZİ|Araştırma ve Uygulama Merkezi|121946|Aktif|Türkçe|20.01.2016|
+122287|REKTÖRLÜK|Rektörlük|121946|Aktif|Türkçe|26.02.2009|
+169437|ATATÜRK İLKELERİ VE İNKILAP TARİHİ BÖLÜMÜ|Bölüm|122287|Aktif|Türkçe||
+169448|BEDEN EĞİTİMİ VE SPOR BÖLÜMÜ|Bölüm|122287|Aktif|Türkçe|26.02.2009|
+122288|ENFORMATİK BÖLÜMÜ|Bölüm|122287|Kapalı|Türkçe|10.09.2009|
+169450|GÜZEL SANATLAR BÖLÜMÜ|Bölüm|122287|Aktif|Türkçe||
+128046|ORTAK DERSLER BÖLÜMÜ|Bölüm|122287|Aktif|Türkçe|10.09.2009|
+169452|TÜRK DİLİ BÖLÜMÜ|Bölüm|122287|Aktif|Türkçe||
+169457|YABANCI DİLLER BÖLÜMÜ|Bölüm|122287|Aktif|Türkçe||
+321363|SAMSUN EĞİTİM YÜKSEKOKULU|Yüksekokul|121946|Arşiv|Türkçe|01.01.2009|
+321364|SINIF ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|321363|Arşiv|Türkçe|01.01.1999|2
+122360|SAMSUN MESLEK YÜKSEKOKULU|Meslek Yüksekokulu|121946|Aktif|Türkçe|11.03.1992|
+169871|BİLGİSAYAR TEKNOLOJİLERİ BÖLÜMÜ|Bölüm|122360|Aktif|Türkçe||
+169874|BİLGİSAYAR PROGRAMCILIĞI PR.|Önlisans/Lisans Programı|169871|Aktif|Türkçe||2
+253369|BİLGİSAYAR PROGRAMCILIĞI PR. (UZAKTAN ÖĞRETİM)|Önlisans/Lisans Programı|169871|Aktif|Türkçe|19.03.2014|2
+169876|BİLGİSAYAR PROGRAMCILIĞI PR. (İÖ)|Önlisans/Lisans Programı|169871|Aktif|Türkçe||2
+169860|BİTKİSEL VE HAYVANSAL ÜRETİM BÖLÜMÜ|Bölüm|122360|Aktif|Türkçe||
+169861|SERACILIK PR.|Önlisans/Lisans Programı|169860|Aktif|Türkçe||2
+169847|EL SANATLARI BÖLÜMÜ|Bölüm|122360|Aktif|Türkçe|10.09.2009|
+169851|MİMARİ DEKORATİF SANATLAR PR.|Önlisans/Lisans Programı|169847|Aktif|Türkçe|10.09.2009|2
+169850|MİMARİ DEKORATİF SANATLAR PR. (İÖ)|Önlisans/Lisans Programı|169847|Aktif|Türkçe||2
+169899|ELEKTRONİK VE OTOMASYON BÖLÜMÜ|Bölüm|122360|Aktif|Türkçe||
+169903|ELEKTRONİK TEKNOLOJİSİ PR.|Önlisans/Lisans Programı|169899|Kapalı|Türkçe||2
+169905|ELEKTRONİK TEKNOLOJİSİ PR. (İÖ)|Önlisans/Lisans Programı|169899|Kapalı|Türkçe||2
+169892|ELEKTRİK VE ENERJİ BÖLÜMÜ|Bölüm|122360|Aktif|Türkçe||
+174844|ELEKTRİK PR.|Önlisans/Lisans Programı|169892|Pasif|Türkçe||2
+169895|ELEKTRİK PR. (İÖ)|Önlisans/Lisans Programı|169892|Pasif|Türkçe|10.09.2009|2
+169828|GÖRSEL, İŞİTSEL TEKNİKLER VE MEDYA YAPIMCILIĞI BÖLÜMÜ|Bölüm|122360|Aktif|Türkçe|10.09.2009|
+146267|BASIM VE YAYIN TEKNOLOJİLERİ PR.|Önlisans/Lisans Programı|169828|Aktif|Türkçe|10.09.2009|2
+174840|KİMYA VE KİMYASAL İŞLEME TEKNOLOJİLERİ BÖLÜMÜ|Bölüm|122360|Aktif|Türkçe||
+174841|KİMYA TEKNOLOJİSİ PR.|Önlisans/Lisans Programı|174840|Pasif|Türkçe||2
+169866|MAKİNE VE METAL TEKNOLOJİLERİ BÖLÜMÜ|Bölüm|122360|Aktif|Türkçe|10.09.2009|
+146268|TARIM MAKİNELERİ PR.|Önlisans/Lisans Programı|169866|Aktif|Türkçe|10.09.2009|2
+169909|MOTORLU ARAÇLAR VE ULAŞTIRMA TEKNOLOJİLERİ BÖLÜMÜ|Bölüm|122360|Aktif|Türkçe||
+145865|OTOMOTİV TEKNOLOJİSİ PR. (İÖ)|Önlisans/Lisans Programı|169909|Arşiv|Türkçe|10.09.2009|2
+169802|MUHASEBE VE VERGİ BÖLÜMÜ|Bölüm|122360|Aktif|Türkçe||
+145863|MUHASEBE VE VERGİ UYGULAMALARI PR.|Önlisans/Lisans Programı|169802|Aktif|Türkçe|10.09.2009|2
+169804|MUHASEBE VE VERGİ UYGULAMALARI PR. (İÖ)|Önlisans/Lisans Programı|169802|Aktif|Türkçe|10.09.2009|2
+275954|OPTİSYENLİK PR.|Önlisans/Lisans Programı|122360|Arşiv|Türkçe|08.05.2015|2
+168851|OTEL, LOKANTA VE İKRAM HİZMETLERİ BÖLÜMÜ|Bölüm|122360|Aktif|Türkçe|11.03.1992|
+168852|AĞIRLAMA HİZMETLERİ PR.|Önlisans/Lisans Programı|168851|Kapalı|Türkçe|10.09.2009|2
+169807|AĞIRLAMA HİZMETLERİ PR. (İÖ)|Önlisans/Lisans Programı|168851|Kapalı|Türkçe|10.09.2009|2
+258274|TURİZM VE OTEL İŞLETMECİLİĞİ PR.|Önlisans/Lisans Programı|168851|Aktif|Türkçe|01.01.1900|2
+320498|TURİZM VE OTEL İŞLETMECİLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|168851|Aktif|Türkçe|20.04.2017|2
+174835|PARK VE BAHÇE BİTKİLERİ BÖLÜMÜ|Bölüm|122360|Aktif|Türkçe|11.03.1992|
+174836|PEYZAJ VE SÜS BİTKİLERİ PR.|Önlisans/Lisans Programı|174835|Aktif|Türkçe|10.09.2009|2
+174838|PEYZAJ VE SÜS BİTKİLERİ PR. (İÖ)|Önlisans/Lisans Programı|174835|Yarı Pasif|Türkçe||2
+253372|PAZARLAMA VE REKLAMCILIK BÖLÜMÜ|Bölüm|122360|Aktif|Türkçe|19.03.2014|
+213760|HALKLA İLİŞKİLER VE TANITIM PR.|Önlisans/Lisans Programı|253372|Aktif|Türkçe|15.02.2012|2
+253373|MEDYA VE İLETİŞİM PR. (UZAKTAN ÖĞRETİM)|Önlisans/Lisans Programı|253372|Aktif|Türkçe|19.03.2014|2
+128071|SAĞLIK PROGRAMLARI BÖLÜMÜ|Bölüm|122360|Kapalı|Türkçe|10.09.2009|
+128073|ÇOCUK GELİŞİMİ PR. (İÖ)|Önlisans/Lisans Programı|128071|Kapalı|Türkçe|10.09.2009|2
+169841|TASARIM BÖLÜMÜ|Bölüm|122360|Aktif|Türkçe|10.09.2009|
+145864|GRAFİK TASARIM PR. (İÖ)|Önlisans/Lisans Programı|169841|Kapalı|Türkçe|10.09.2009|2
+240430|GRAFİK TASARIMI PR.|Önlisans/Lisans Programı|169841|Aktif|Türkçe|01.01.1900|2
+122361|TEKNİK PROGRAMLAR BÖLÜMÜ|Bölüm|122360|Aktif|Türkçe|10.09.2009|
+122369|BASIM VE YAYIN TEKNOLOJİLERİ PR.|Önlisans/Lisans Programı|122361|Kapalı|Türkçe|10.09.2009|2
+122363|BASIM VE YAYIN TEKNOLOJİLERİ PR. (İÖ)|Önlisans/Lisans Programı|122361|Kapalı|Türkçe|10.09.2009|2
+145810|BİLGİSAYAR TEKNOLOJİSİ VE PROGRAMLAMA PR.|Önlisans/Lisans Programı|122361|Kapalı|Türkçe|10.09.2009|2
+122367|BİLGİSAYAR TEKNOLOJİSİ VE PROGRAMLAMA PR. (İÖ)|Önlisans/Lisans Programı|122361|Kapalı|Türkçe|10.09.2009|2
+301883|DUVAR SÜSLEME SANATLARI PR.|Önlisans/Lisans Programı|122361|Arşiv|Türkçe|01.01.1999|2
+301884|DUVAR SÜSLEME SANATLARI PR. (İÖ)|Önlisans/Lisans Programı|122361|Arşiv|Türkçe|01.01.1999|2
+128057|EL SANATLARI PR.|Önlisans/Lisans Programı|122361|Kapalı|Türkçe|10.09.2009|2
+122362|ELEKTRONİK PR.|Önlisans/Lisans Programı|122361|Arşiv|Türkçe|10.09.2009|2
+128058|ELEKTRİK PR. (İÖ)|Önlisans/Lisans Programı|122361|Kapalı|Türkçe|10.09.2009|2
+122366|ENDÜSTRİYEL ELEKTRONİK PR.|Önlisans/Lisans Programı|122361|Kapalı|Türkçe|10.09.2009|2
+145813|ENDÜSTRİYEL ELEKTRONİK TEKNOLOJİSİ PR. (İÖ)|Önlisans/Lisans Programı|122361|Kapalı|Türkçe|10.09.2009|2
+128059|GRAFİK TASARIMI PR. (İÖ)|Önlisans/Lisans Programı|122361|Yarı Pasif|Türkçe|10.09.2009|2
+128061|MAKİNE PR.|Önlisans/Lisans Programı|122361|Kapalı|Türkçe|10.09.2009|2
+122368|MİMARİ DEKORATİF SANATLAR PR.|Önlisans/Lisans Programı|122361|Kapalı|Türkçe|10.09.2009|2
+169843|MİMARİ DEKORATİF SANATLAR PR. (İÖ)|Önlisans/Lisans Programı|122361|Kapalı|Türkçe|10.09.2009|2
+128065|OTOMOTİV PR. (İÖ)|Önlisans/Lisans Programı|122361|Arşiv|Türkçe|10.09.2009|2
+122365|SERACILIK PR.|Önlisans/Lisans Programı|122361|Kapalı|Türkçe|10.09.2009|2
+122364|TARIM ALET VE MAKİNELERİ PR.|Önlisans/Lisans Programı|122361|Kapalı|Türkçe|10.09.2009|2
+128069|TEKSTİL PR.|Önlisans/Lisans Programı|122361|Yarı Pasif|Türkçe|10.09.2009|2
+282782|TEKSTİL, GİYİM, AYAKKABI VE DERİ BÖLÜMÜ|Bölüm|122360|Aktif|Türkçe|09.12.2015|
+282783|GİYİM ÜRETİM TEKNOLOJİSİ PR.|Önlisans/Lisans Programı|282782|Pasif|Türkçe|09.12.2015|2
+215482|ÇOCUK BAKIMI VE GENÇLİK HİZMETLERİ BÖLÜMÜ|Bölüm|122360|Aktif|Türkçe||
+215483|ÇOCUK GELİŞİMİ PR.|Önlisans/Lisans Programı|215482|Aktif|Türkçe|10.09.2009|2
+253371|ÇOCUK GELİŞİMİ PR. (UZAKTAN ÖĞRETİM)|Önlisans/Lisans Programı|215482|Aktif|Türkçe|19.03.2014|2
+304693|ÇOCUK GELİŞİMİ PR. (UZAKTAN ÖĞRETİM) (%25 BURSLU)|Önlisans/Lisans Programı|215482|Yarı Pasif|Türkçe|29.09.2016|2
+304695|ÇOCUK GELİŞİMİ PR. (ÜCRETLİ)|Önlisans/Lisans Programı|215482|Kapalı|Türkçe|29.09.2016|2
+169885|ÇOCUK GELİŞİMİ PR. (İÖ)|Önlisans/Lisans Programı|215482|Yarı Pasif|Türkçe|10.09.2009|2
+122370|İKTİSADİ VE İDARİ PROGRAMLAR BÖLÜMÜ|Bölüm|122360|Aktif|Türkçe|10.09.2009|
+145866|AĞIRLAMA HİZMETLERİ PR.|Önlisans/Lisans Programı|122370|Kapalı|Türkçe|10.09.2009|2
+169806|AĞIRLAMA HİZMETLERİ PR. (İÖ)|Önlisans/Lisans Programı|122370|Kapalı|Türkçe||2
+122371|MUHASEBE VE VERGİ UYGULAMALARI PR.|Önlisans/Lisans Programı|122370|Kapalı|Türkçe|10.09.2009|2
+169803|MUHASEBE VE VERGİ UYGULAMALARI PR. (İÖ)|Önlisans/Lisans Programı|122370|Kapalı|Türkçe||2
+122372|TURİZM VE OTEL İŞLETMECİLİĞİ PR.|Önlisans/Lisans Programı|122370|Yarı Pasif|Türkçe|10.09.2009|2
+169805|TURİZM VE OTEL İŞLETMECİLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|122370|Yarı Pasif|Türkçe|10.09.2009|2
+301948|TURİZM VE OTELCİLİK PR.|Önlisans/Lisans Programı|122370|Arşiv|Türkçe|01.01.1999|2
+301949|TURİZM VE OTELCİLİK PR. (İÖ)|Önlisans/Lisans Programı|122370|Arşiv|Türkçe|01.01.1999|2
+269772|SAMSUN SAĞLIK HİZMETLERİ MESLEK YÜKSEKOKULU|Meslek Yüksekokulu|121946|Arşiv|Türkçe||
+273667|EBELİK PR.|Önlisans/Lisans Programı|269772|Arşiv|Türkçe||2
+273668|HEMŞİRELİK PR. (A)|Önlisans/Lisans Programı|269772|Arşiv|Türkçe||2
+273669|HEMŞİRELİK PR. (B)|Önlisans/Lisans Programı|269772|Arşiv|Türkçe||2
+122352|SAMSUN SAĞLIK YÜKSEKOKULU|Yüksekokul|121946|Yarı Pasif|Türkçe|02.11.1996|
+147574|BESLENME VE DİYETETİK BÖLÜMÜ|Bölüm|122352|Yarı Pasif|Türkçe|10.09.2009|
+250147|BESLENME BİLİMLERİ ANABİLİM DALI|Anabilim Dalı|147574|Kapalı|Türkçe|29.01.2014|
+240429|BESLENME VE DİYETETİK PR.|Önlisans/Lisans Programı|147574|Yarı Pasif|Türkçe|01.01.1900|4
+308558|BESLENME VE DİYETETİK PR. (%25 BURSLU)|Önlisans/Lisans Programı|147574|Yarı Pasif|Türkçe|20.10.2016|4
+304711|BESLENME VE DİYETETİK PR. (%50 BURSLU)|Önlisans/Lisans Programı|147574|Yarı Pasif|Türkçe|29.09.2016|4
+308559|BESLENME VE DİYETETİK PR. (ÜCRETLİ)|Önlisans/Lisans Programı|147574|Yarı Pasif|Türkçe|20.10.2016|4
+250148|DİYETETİK ANABİLİM DALI|Anabilim Dalı|147574|Kapalı|Türkçe|29.01.2014|
+250150|TOPLU BESLENME SİSTEMLERİ ANABİLİM DALI|Anabilim Dalı|147574|Kapalı|Türkçe|29.01.2014|
+250149|TOPLUM BESLENMESİ ANABİLİM DALI|Anabilim Dalı|147574|Kapalı|Türkçe|29.01.2014|
+259860|DİL VE KONUŞMA TERAPİSİ BÖLÜMÜ|Bölüm|122352|Yarı Pasif|Türkçe|01.10.2014|
+122353|EBELİK BÖLÜMÜ|Bölüm|122352|Yarı Pasif|Türkçe|10.09.2009|
+169395|EBELİK PR.|Önlisans/Lisans Programı|122353|Yarı Pasif|Türkçe||4
+147596|EBELİK BÖLÜMÜ (LİSANS TAMAMLAMA)|Bölüm|122352|Yarı Pasif|Türkçe|10.09.2009|
+245410|EBELİK PR. (LİSANS TAMAMLAMA)|Önlisans/Lisans Programı|147596|Yarı Pasif|Türkçe|01.01.1900|4
+122354|HEMŞİRELİK BÖLÜMÜ|Bölüm|122352|Yarı Pasif|Türkçe|10.09.2009|
+250153|CERRAHİ HASTALIKLAR HEMŞİRELİĞİ ANABİLİM DALI|Anabilim Dalı|122354|Kapalı|Türkçe|29.01.2014|
+250154|DOĞUM VE KADIN HASTALIKLARI HEMŞİRELİĞİ ANABİLİM DALI|Anabilim Dalı|122354|Kapalı|Türkçe|29.01.2014|
+250157|HALK SAĞLIĞI HEMŞİRELİĞİ ANABİLİM DALI|Anabilim Dalı|122354|Kapalı|Türkçe|29.01.2014|
+250151|HEMŞİRELİK ESASLARI ANABİLİM DALI|Anabilim Dalı|122354|Kapalı|Türkçe|29.01.2014|
+169397|HEMŞİRELİK PR.|Önlisans/Lisans Programı|122354|Yarı Pasif|Türkçe||4
+308534|HEMŞİRELİK PR. (%25 BURSLU)|Önlisans/Lisans Programı|122354|Yarı Pasif|Türkçe|20.10.2016|4
+304714|HEMŞİRELİK PR. (%50 BURSLU)|Önlisans/Lisans Programı|122354|Yarı Pasif|Türkçe|29.09.2016|4
+304713|HEMŞİRELİK PR. (TAM BURSLU)|Önlisans/Lisans Programı|122354|Yarı Pasif|Türkçe|29.09.2016|4
+308553|HEMŞİRELİK PR. (ÜCRETLİ)|Önlisans/Lisans Programı|122354|Yarı Pasif|Türkçe|20.10.2016|4
+250158|HEMŞİRELİKTE YÖNETİM ANABİLİM DALI|Anabilim Dalı|122354|Kapalı|Türkçe|29.01.2014|
+250156|PSİKİYATRİ HEMŞİRELİĞİ ANABİLİM DALI|Anabilim Dalı|122354|Kapalı|Türkçe|29.01.2014|
+250155|ÇOCUK SAĞLIĞI VE HASTALIKLARI HEMŞİRELİĞİ ANABİLİM DALI|Anabilim Dalı|122354|Kapalı|Türkçe|29.01.2014|
+250152|İÇ HASTALIKLARI HEMŞİRELİĞİ ANABİLİM DALI|Anabilim Dalı|122354|Kapalı|Türkçe|29.01.2014|
+220472|SAĞLIK YÖNETİMİ BÖLÜMÜ|Bölüm|122352|Yarı Pasif|Türkçe|26.07.2012|
+267871|SAĞLIK YÖNETİMİ PR.|Önlisans/Lisans Programı|220472|Yarı Pasif|Türkçe|26.03.2015|4
+201577|SOSYAL HİZMETLER BÖLÜMÜ|Bölüm|122352|Yarı Pasif|Türkçe|05.01.2011|
+256685|SOSYAL HİZMET PR.|Önlisans/Lisans Programı|201577|Yarı Pasif|Türkçe|17.04.2014|4
+304722|SOSYAL HİZMET PR. (TAM BURSLU)|Önlisans/Lisans Programı|201577|Yarı Pasif|Türkçe|29.09.2016|4
+308560|SOSYAL HİZMET PR. (ÜCRETLİ)|Önlisans/Lisans Programı|201577|Yarı Pasif|Türkçe|20.10.2016|4
+122387|SAĞLIK BİLİMLERİ ENSTİTÜSÜ|Enstitü|121946|Aktif|Türkçe|20.07.1982|
+329992|ACİL HEMŞİRELİĞİ (DR)|Doktora Programı|122387|Aktif|Türkçe|22.02.2017|4
+329991|ACİL HEMŞİRELİĞİ (YL) (TEZLİ)|Yüksek Lisans Programı|122387|Aktif|Türkçe|22.02.2017|2
+257558|ACİL TIP HEMŞİRELİĞİ (DR)|Doktora Programı|122387|Yarı Pasif|Türkçe|17.04.2014|4
+213248|ACİL TIP HEMŞİRELİĞİ (YL)|Yüksek Lisans Programı|122387|Yarı Pasif|Türkçe|30.11.2011|2
+219171|ALERJİ-İMMÜNOLOJİ (YL)|Yüksek Lisans Programı|122387|Aktif|Türkçe||2
+169540|ANATOMİ (DR)|Doktora Programı|122387|Aktif|Türkçe||4
+267772|ANATOMİ (VETERİNER) (DR)|Doktora Programı|122387|Yarı Pasif|Türkçe|01.01.1900|4
+169511|ANATOMİ (VETERİNER) (YL) (TEZLİ)|Yüksek Lisans Programı|122387|Aktif|Türkçe|10.09.2009|2
+267774|ANATOMİ (YL) (TEZLİ)|Yüksek Lisans Programı|122387|Yarı Pasif|Türkçe||2
+267669|ANTRENÖRLÜK EĞİTİMİ (DR)|Doktora Programı|122387|Aktif|Türkçe|25.03.2015|4
+267668|ANTRENÖRLÜK EĞİTİMİ (YL) (TEZLİ)|Yüksek Lisans Programı|122387|Aktif|Türkçe|25.03.2015|2
+169547|AĞIZ ÇENE VE DİŞ HASTALIKLARI CERRAHİSİ (DR)|Doktora Programı|122387|Aktif|Türkçe||4
+267775|AĞIZ, DİŞ VE ÇENE RADYOLOJİSİ (DR)|Doktora Programı|122387|Yarı Pasif|Türkçe||4
+169551|BEDEN EĞİTİMİ VE SPOR (DR)|Doktora Programı|122387|Aktif|Türkçe||4
+267776|BEDEN EĞİTİMİ VE SPOR (YL)|Yüksek Lisans Programı|122387|Yarı Pasif|Türkçe||2
+225937|BESLENME BİLİMLERİ (YL)|Yüksek Lisans Programı|122387|Aktif|Türkçe|09.08.2012|2
+169576|BESİN HİJYENİ VE TEKNOLOJİSİ (DR)|Doktora Programı|122387|Aktif|Türkçe||4
+169516|BESİN HİJYENİ VE TEKNOLOJİSİ (YL) (TEZLİ)|Yüksek Lisans Programı|122387|Aktif|Türkçe|10.09.2009|2
+213250|BİYOKİMYA (DR) (VETERİNER)|Doktora Programı|122387|Aktif|Türkçe|30.11.2011|4
+213249|BİYOKİMYA (VETERİNER) (YL)|Yüksek Lisans Programı|122387|Aktif|Türkçe|30.11.2011|2
+211302|BİYOİSTATİSTİK VE TIP BİLİMİ (DR)|Doktora Programı|122387|Aktif|Türkçe||4
+211301|BİYOİSTATİSTİK VE TIP BİLİMİ (YL)|Yüksek Lisans Programı|122387|Aktif|Türkçe||2
+255317|CERRAHİ (VETERİNER) (DR)|Doktora Programı|122387|Aktif|Türkçe|20.02.2014|4
+244886|CERRAHİ (VETERİNER) (YL) (TEZLİ)|Yüksek Lisans Programı|122387|Aktif|Türkçe|15.08.2013|2
+169578|DOĞUM VE JİNEKOLOJİ (DR)|Doktora Programı|122387|Aktif|Türkçe||4
+301224|DOĞUM VE KADIN HASTALIKLARI HEMŞİRELİĞİ (DR)|Doktora Programı|122387|Aktif|Türkçe|10.08.2016|4
+301216|DOĞUM VE KADIN HASTALIKLARI HEMŞİRELİĞİ (YL) (TEZLİ)|Yüksek Lisans Programı|122387|Aktif|Türkçe|10.08.2016|2
+301217|DOĞUM VE KADIN HASTALIKLARI HEMŞİRELİĞİ (YL) (TEZSİZ) (İÖ)|Yüksek Lisans Programı|122387|Aktif|Türkçe|10.08.2016|2
+169535|DOĞUM VE VİNEKOLOJİ (VETERİNER) (YL) (TEZLİ)|Yüksek Lisans Programı|122387|Aktif|Türkçe||2
+169574|DÖLERME VE SUNİ TOHUMLAMA (DR)|Doktora Programı|122387|Aktif|Türkçe||4
+169517|DÖLERME VE SUNİ TOHUMLAMA (VETERİNER) (YL) (TEZLİ)|Yüksek Lisans Programı|122387|Aktif|Türkçe|10.09.2009|2
+169553|DİŞ HASTALIKLARI VE TEDAVİSİ (DR)|Doktora Programı|122387|Aktif|Türkçe||4
+323921|EBELİK (YL) (TEZLİ)|Yüksek Lisans Programı|122387|Aktif|Türkçe|07.06.2017|2
+209677|ENDODONTİ (DR)|Doktora Programı|122387|Aktif|Türkçe|23.08.2011|4
+267777|EVDE BAKIM HEMŞİRELİĞİ (YL) (TEZLİ)|Yüksek Lisans Programı|122387|Yarı Pasif|Türkçe||2
+267778|EVDE BAKIM HEMŞİRELİĞİ (YL) (TEZSİZ) (UZAKTAN ÖĞRETİM)|Yüksek Lisans Programı|122387|Yarı Pasif|Türkçe||2
+220719|EVDE BAKIM HEMŞİRELİĞİ (YL) (TEZSİZ) (İÖ)|Yüksek Lisans Programı|122387|Aktif|Türkçe|05.06.2012|2
+169567|FARMAKOLOJİ (DR)|Doktora Programı|122387|Aktif|Türkçe||4
+169572|FARMAKOLOJİ VE TOKSİKOLOJİ (DR)|Doktora Programı|122387|Aktif|Türkçe|10.09.2009|4
+283800|FARMAKOLOJİ VE TOKSİKOLOJİ VETERİNER (YL) (TEZLİ)|Yüksek Lisans Programı|122387|Aktif|Türkçe|06.01.2016|2
+169541|FİZYOLOJİ (DR)|Doktora Programı|122387|Aktif|Türkçe||4
+257559|FİZYOLOJİ (VETERİNER) (YL) (TEZLİ)|Yüksek Lisans Programı|122387|Aktif|Türkçe|17.04.2014|2
+267779|FİZYOLOJİ (YL) (TEZLİ)|Yüksek Lisans Programı|122387|Yarı Pasif|Türkçe|01.01.1900|2
+169558|HALK SAĞLIĞI (DR)|Doktora Programı|122387|Aktif|Türkçe||4
+169518|HALK SAĞLIĞI HEMŞİRELİĞİ (YL) (TEZLİ)|Yüksek Lisans Programı|122387|Aktif|Türkçe|10.09.2009|2
+219170|HASTALIKLAR (DR) (VETERİNER)|Doktora Programı|122387|Aktif|Türkçe||4
+169580|HAYVAN BESLEME VE BESLENME HASTALIKLARI (DR)|Doktora Programı|122387|Aktif|Türkçe||4
+169521|HAYVAN BESLEME VE BESLENME HASTALIKLARI (YL) (TEZLİ) (VETERİNER)|Yüksek Lisans Programı|122387|Aktif|Türkçe||2
+285232|HEMŞİRELİK (DR)|Doktora Programı|122387|Aktif|Türkçe|22.06.2015|4
+285233|HEMŞİRELİK (YL) (TEZLİ)|Yüksek Lisans Programı|122387|Aktif|Türkçe|22.06.2015|2
+284464|HEMŞİRELİK (YL) (TEZLİ) (HİTİT ÜNİV. ORTAK)|Yüksek Lisans Programı|122387|Aktif|Türkçe|13.01.2016|2
+290926|HEMŞİRELİK (YL) (TEZSİZ)|Yüksek Lisans Programı|122387|Aktif|Türkçe|10.06.2015|2
+219168|HİSTOLOJİ VE EMBRİYOLOJİ (DR)|Doktora Programı|122387|Aktif|Türkçe||4
+219167|HİSTOLOJİ VE EMBRİYOLOJİ (YL)|Yüksek Lisans Programı|122387|Aktif|Türkçe||2
+230172|KARDİYOPULMONER FİZYOTERAPİ (YL)|Yüksek Lisans Programı|122387|Aktif|Türkçe|25.08.2011|2
+236919|KLİNİK SİNİR BİLİMLERİ (DR)|Doktora Programı|122387|Aktif|Türkçe|28.03.2013|4
+297555|KLİNİK TOKSİKOLOJİ ANABİLİM DALI (DİSİPLİNLERARASI)|Disiplinlerarası Anabilim Dalı|122387|Aktif|Türkçe|22.06.2016|
+297556|KLİNİK TOKSİKOLOJİ (DR) (DİSİPLİNLERARASI)|Doktora Programı|297555|Aktif|Türkçe|22.06.2016|4
+257542|MOLEKÜLER TIP (DR)|Doktora Programı|122387|Aktif|Türkçe|17.04.2014|4
+257541|MOLEKÜLER TIP (YL) (TEZLİ)|Yüksek Lisans Programı|122387|Aktif|Türkçe|17.04.2014|2
+225902|MİKROBİYOLOJİ (VETERİNER) (YL)|Yüksek Lisans Programı|122387|Aktif|Türkçe|09.08.2012|2
+280440|MİKROBİYOLOJİ ANABİLİM DALI (DİSİPLİNLERARASI)|Disiplinlerarası Anabilim Dalı|122387|Aktif|Türkçe|05.08.2015|
+280441|MİKROBİYOLOJİ (DR)|Disiplinlerarası Doktora Programı|280440|Aktif|Türkçe|05.08.2015|4
+169523|ODYOLOJİ (YL) (TEZLİ)|Yüksek Lisans Programı|122387|Aktif|Türkçe||2
+169555|ORAL DİAGNOZ VE RADYOLOJİ (DR)|Doktora Programı|122387|Aktif|Türkçe||4
+169543|ORTODONTİ (DR)|Doktora Programı|122387|Aktif|Türkçe||4
+169560|PARAZİTOLOJİ (DR)|Doktora Programı|122387|Aktif|Türkçe||4
+225901|PARAZİTOLOJİ (VETERİNER) (YL)|Yüksek Lisans Programı|122387|Aktif|Türkçe|09.08.2012|2
+169561|PATOLOJİ (DR)|Doktora Programı|122387|Aktif|Türkçe||4
+219169|PATOLOJİ (DR) (VETERİNER)|Doktora Programı|122387|Aktif|Türkçe||4
+169570|PEDODONTİ (DR)|Doktora Programı|122387|Aktif|Türkçe||4
+169546|PERİODONTOLOJİ (DR)|Doktora Programı|122387|Aktif|Türkçe||4
+169556|PROTETİK DİŞ TEDAVİSİ (DR)|Doktora Programı|122387|Aktif|Türkçe||4
+309657|RADYOLOJİK BİLİMLER (DR)|Doktora Programı|122387|Aktif|Türkçe|28.03.2013|4
+219260|RADYOLOJİK BİLİMLER (YL)|Yüksek Lisans Programı|122387|Aktif|Türkçe|20.07.1982|2
+169527|RUH SAĞLIĞI VE HASTALIKLARI HEMŞİRELİĞİ (YL) (TEZLİ)|Yüksek Lisans Programı|122387|Aktif|Türkçe||2
+235440|SAĞLIK KURUMLARI YÖNETİMİ (YL) (TEZSİZ) (İÖ) (CANİK BAŞARI ORTAK)|Yüksek Lisans Programı|122387|Kapalı|Türkçe|01.03.2013|2
+278605|SAĞLIK YÖNETİMİ (DR)|Doktora Programı|122387|Aktif|Türkçe|16.06.2015|4
+213229|SAĞLIK YÖNETİMİ (YL)|Yüksek Lisans Programı|122387|Aktif|Türkçe|30.11.2011|2
+215871|SAĞLIK YÖNETİMİ (YL) (TEZSİZ) (UZAKTAN ÖĞRETİM)|Yüksek Lisans Programı|122387|Aktif|Türkçe|19.04.2012|2
+225903|SAĞLIK YÖNETİMİ (YL) (TEZSİZ) (İÖ)|Yüksek Lisans Programı|122387|Aktif|Türkçe|09.08.2012|2
+261143|SU ÜRÜNLERİ HASTALIKLARI (YL) (TEZLİ)|Yüksek Lisans Programı|122387|Aktif|Türkçe|25.09.2014|2
+203748|SİNİR BİLİMLERİ ANABİLİM DALI|Anabilim Dalı|122387|Aktif|Türkçe|03.03.2011|
+203750|SİNİR BİLİMLERİ (DR)|Doktora Programı|203748|Aktif|Türkçe|03.03.2011|4
+203749|SİNİR BİLİMLERİ (YL)|Yüksek Lisans Programı|203748|Aktif|Türkçe|03.03.2011|2
+169539|TIBBİ BİYOKİMYA (DR)|Doktora Programı|122387|Aktif|Türkçe|01.01.2009|4
+267781|TIBBİ BİYOKİMYA (YL) (TEZLİ)|Yüksek Lisans Programı|122387|Yarı Pasif|Türkçe|01.01.2009|2
+211304|TIBBİ BİYOLOJİ (DR)|Doktora Programı|122387|Aktif|Türkçe||4
+211303|TIBBİ BİYOLOJİ (YL)|Yüksek Lisans Programı|122387|Aktif|Türkçe||2
+211300|TIBBİ FARMAKOLOJİ (DR)|Doktora Programı|122387|Aktif|Türkçe||4
+211299|TIBBİ FARMAKOLOJİ (YL)|Yüksek Lisans Programı|122387|Aktif|Türkçe||2
+169549|TIBBİ MİKROBİYOLOJİ (DR)|Doktora Programı|122387|Aktif|Türkçe|01.01.2009|4
+267780|TIBBİ MİKROBİYOLOJİ (YL) (TEZLİ)|Yüksek Lisans Programı|122387|Yarı Pasif|Türkçe|01.01.2009|2
+301225|TIP HUKUKU ANABİLİM DALI (DİSİPLİNLERARASI)|Disiplinlerarası Anabilim Dalı|122387|Aktif|Türkçe|10.08.2016|
+301226|TIP HUKUKU (YL) (TEZLİ)|Disiplinlerarası Yüksek Lisans Programı|301225|Aktif|Türkçe|10.08.2016|2
+261826|ULUSLARARASI DÜZENLEYİCİ BİLİM (YL) (TEZLİ)|Yüksek Lisans Programı|122387|Aktif|Türkçe|15.10.2014|2
+255372|VETERİNER HEKİMLİĞİ TARİHİ VE DEONTOLOJİ (DR)|Doktora Programı|122387|Aktif|Türkçe|26.02.2014|4
+255371|VETERİNER HEKİMLİĞİ TARİHİ VE DEONTOLOJİ (YL) (TEZLİ)|Yüksek Lisans Programı|122387|Aktif|Türkçe|26.02.2014|2
+325734|VETERİNER HİSTOLOJİ VE EMBRİYOLOJİ (YL) (TEZLİ)|Yüksek Lisans Programı|122387|Aktif|Türkçe|19.07.2017|2
+169563|VİROLOJİ (DR)|Doktora Programı|122387|Aktif|Türkçe||4
+244885|VİROLOJİ (VETERİNER) (DR)|Doktora Programı|122387|Aktif|Türkçe|15.08.2013|4
+169533|VİROLOJİ (YL) (TEZLİ)|Yüksek Lisans Programı|122387|Aktif|Türkçe||2
+169565|ZOOTEKNİ (DR)|Doktora Programı|122387|Aktif|Türkçe||4
+278856|ZOOTEKNİ (YL) (TEZLİ)|Yüksek Lisans Programı|122387|Aktif|Türkçe|24.06.2015|2
+169569|İÇ HASTALIKLARI (DR)|Doktora Programı|122387|Aktif|Türkçe||4
+281621|İÇ HASTALIKLARI (YL) (VETERİNER) (TEZLİ)|Yüksek Lisans Programı|122387|Aktif|Türkçe|22.10.2015|2
+293577|SAĞLIK BİLİMLERİ FAKÜLTESİ|Fakülte|121946|Aktif|Türkçe|08.04.2016|
+293578|BESLENME VE DİYETETİK BÖLÜMÜ|Bölüm|293577|Aktif|Türkçe|08.04.2016|
+293587|BESLENME BİLİMLERİ ANABİLİM DALI|Anabilim Dalı|293578|Aktif|Türkçe|29.01.2014|
+293582|BESLENME VE DİYETETİK PR.|Önlisans/Lisans Programı|293578|Aktif|Türkçe|08.04.2016|4
+293583|DİYETETİK ANABİLİM DALI|Anabilim Dalı|293578|Aktif|Türkçe|29.01.2014|
+293584|TOPLU BESLENME SİSTEMLERİ ANABİLİM DALI|Anabilim Dalı|293578|Aktif|Türkçe|29.01.2014|
+293585|TOPLUM BESLENMESİ ANABİLİM DALI|Anabilim Dalı|293578|Aktif|Türkçe|29.01.2014|
+293579|DİL VE KONUŞMA TERAPİSİ BÖLÜMÜ|Bölüm|293577|Aktif|Türkçe|01.10.2014|
+321515|DİL VE KONUŞMA TERAPİSİ ANABİLİM DALI|Anabilim Dalı|293579|Aktif|Türkçe|11.05.2017|
+293580|EBELİK BÖLÜMÜ|Bölüm|293577|Aktif|Türkçe|08.04.2016|
+321512|EBELİK ANABİLİM DALI|Anabilim Dalı|293580|Aktif|Türkçe|11.05.2017|
+293594|EBELİK PR.|Önlisans/Lisans Programı|293580|Aktif|Türkçe|08.04.2016|4
+293581|HEMŞİRELİK BÖLÜMÜ|Bölüm|293577|Aktif|Türkçe|08.04.2016|
+293595|CERRAHİ HASTALIKLAR HEMŞİRELİĞİ ANABİLİM DALI|Anabilim Dalı|293581|Aktif|Türkçe|29.01.2014|
+293607|DOĞUM VE KADIN HASTALIKLARI HEMŞİRELİĞİ ANABİLİM DALI|Anabilim Dalı|293581|Aktif|Türkçe|29.01.2014|
+293608|HALK SAĞLIĞI HEMŞİRELİĞİ ANABİLİM DALI|Anabilim Dalı|293581|Aktif|Türkçe|29.01.2014|
+293609|HEMŞİRELİK ESASLARI ANABİLİM DALI|Anabilim Dalı|293581|Aktif|Türkçe|29.01.2014|
+293597|HEMŞİRELİK PR.|Önlisans/Lisans Programı|293581|Aktif|Türkçe|08.04.2016|4
+293600|HEMŞİRELİKTE YÖNETİM ANABİLİM DALI|Anabilim Dalı|293581|Aktif|Türkçe|29.01.2014|
+293602|PSİKİYATRİ HEMŞİRELİĞİ ANABİLİM DALI|Anabilim Dalı|293581|Aktif|Türkçe|29.01.2014|
+293606|ÇOCUK SAĞLIĞI VE HASTALIKLARI HEMŞİRELİĞİ ANABİLİM DALI|Anabilim Dalı|293581|Aktif|Türkçe|29.01.2014|
+293601|İÇ HASTALIKLARI HEMŞİRELİĞİ ANABİLİM DALI|Anabilim Dalı|293581|Aktif|Türkçe|29.01.2014|
+293524|SAĞLIK YÖNETİMİ BÖLÜMÜ|Bölüm|293577|Aktif|Türkçe|26.07.2012|
+321513|SAĞLIK YÖNETİMİ ANABİLİM DALI|Anabilim Dalı|293524|Aktif|Türkçe|11.05.2017|
+293610|SAĞLIK YÖNETİMİ PR.|Önlisans/Lisans Programı|293524|Aktif|Türkçe|26.03.2015|4
+293525|SOSYAL HİZMET BÖLÜMÜ|Bölüm|293577|Aktif|Türkçe|08.04.2016|
+321514|SOSYAL HİZMET ANABİLİM DALI|Anabilim Dalı|293525|Aktif|Türkçe|11.05.2017|
+293611|SOSYAL HİZMET PR.|Önlisans/Lisans Programı|293525|Aktif|Türkçe|17.04.2014|4
+122336|SAĞLIK HİZMETLERİ MESLEK YÜKSEKOKULU|Meslek Yüksekokulu|121946|Aktif|Türkçe|22.03.1988|
+207663|DİŞÇİLİK HİZMETLERİ BÖLÜMÜ|Bölüm|122336|Aktif|Türkçe||
+228122|AĞIZ VE DİŞ SAĞLIĞI PR.|Önlisans/Lisans Programı|207663|Aktif|Türkçe||2
+304661|AĞIZ VE DİŞ SAĞLIĞI PR. (ÜCRETLİ)|Önlisans/Lisans Programı|207663|Kapalı|Türkçe|29.09.2016|2
+207664|DİŞ PROTEZ TEKNOLOJİSİ PR.|Önlisans/Lisans Programı|207663|Pasif|Türkçe||2
+240437|SAĞLIK BAKIM HİZMETLERİ BÖLÜMÜ|Bölüm|122336|Aktif|Türkçe||
+240438|YAŞLI BAKIMI PR.|Önlisans/Lisans Programı|240437|Aktif|Türkçe|01.01.1900|2
+240439|YAŞLI BAKIMI PR. (İÖ)|Önlisans/Lisans Programı|240437|Aktif|Türkçe|01.01.1900|2
+122337|SAĞLIK PROGRAMLARI BÖLÜMÜ|Bölüm|122336|Yarı Pasif|Türkçe|10.09.2009|
+122350|AMBULANS VE ACİL BAKIM TEKNİKERLİĞİ PR.|Önlisans/Lisans Programı|122337|Kapalı|Türkçe|10.09.2009|2
+122338|ANESTEZİ PR.|Önlisans/Lisans Programı|122337|Kapalı|Türkçe|10.09.2009|2
+304665|ANESTEZİ PR. (ÜCRETLİ)|Önlisans/Lisans Programı|122337|Kapalı|Türkçe|29.09.2016|2
+122351|DİŞ TEKNİK SEKRETERLİĞİ PR.|Önlisans/Lisans Programı|122337|Yarı Pasif|Türkçe|10.09.2009|2
+122339|EBELİK PR.|Önlisans/Lisans Programı|122337|Kapalı|Türkçe|10.09.2009|2
+122348|FİZİK TEDAVİ PR.|Önlisans/Lisans Programı|122337|Kapalı|Türkçe|10.09.2009|2
+122349|GÖZLÜKÇÜLÜK PR.|Önlisans/Lisans Programı|122337|Kapalı|Türkçe|10.09.2009|2
+122345|HEMŞİRELİK PR.|Önlisans/Lisans Programı|122337|Kapalı|Türkçe|10.09.2009|2
+322461|HEMŞİRELİK PR. (İÖ)|Önlisans/Lisans Programı|122337|Arşiv|Türkçe|01.01.1999|2
+122346|LABORATUVAR PR.|Önlisans/Lisans Programı|122337|Kapalı|Türkçe|10.09.2009|2
+122340|ODYOMETRİ PR.|Önlisans/Lisans Programı|122337|Yarı Pasif|Türkçe|10.09.2009|2
+122343|OPTİSYENLİK PR.|Önlisans/Lisans Programı|122337|Kapalı|Türkçe|10.09.2009|2
+122341|PROTEZ VE ORTEZ PR.|Önlisans/Lisans Programı|122337|Kapalı|Türkçe|10.09.2009|2
+122347|RADYOLOJİ PR.|Önlisans/Lisans Programı|122337|Kapalı|Türkçe|10.09.2009|2
+169788|TIBBİ DOKÜMANTASYON VE SEKRETERLİK PR.|Önlisans/Lisans Programı|122337|Kapalı|Türkçe||2
+122342|TIBBİ DOKÜMANTASYON VE SEKRETERLİK PR. (İÖ)|Önlisans/Lisans Programı|122337|Kapalı|Türkçe|10.09.2009|2
+122344|TIBBİ LABORATUVAR PR.|Önlisans/Lisans Programı|122337|Kapalı|Türkçe|10.09.2009|2
+169792|YAŞLI BAKIM HİZMETLERİ PR.|Önlisans/Lisans Programı|122337|Kapalı|Türkçe|10.09.2009|2
+169794|YAŞLI BAKIM HİZMETLERİ PR. (İÖ)|Önlisans/Lisans Programı|122337|Kapalı|Türkçe|10.09.2009|2
+169645|TIBBİ HİZMETLER VE TEKNİKLER BÖLÜMÜ|Bölüm|122336|Aktif|Türkçe|10.09.2009|
+169647|ANESTEZİ PR.|Önlisans/Lisans Programı|169645|Aktif|Türkçe|10.09.2009|2
+215479|DİYALİZ PR.|Önlisans/Lisans Programı|169645|Aktif|Türkçe||2
+304672|DİYALİZ PR. (ÜCRETLİ)|Önlisans/Lisans Programı|169645|Yarı Pasif|Türkçe|29.09.2016|2
+254937|ODYOMETRİ PR.|Önlisans/Lisans Programı|169645|Aktif|Türkçe|16.04.2014|2
+169649|OPTİSYENLİK PR.|Önlisans/Lisans Programı|169645|Aktif|Türkçe|10.09.2009|2
+304647|OPTİSYENLİK PR. (ÜCRETLİ)|Önlisans/Lisans Programı|169645|Kapalı|Türkçe|29.09.2016|2
+145871|PARAMEDİK PR.|Önlisans/Lisans Programı|169645|Pasif|Türkçe|10.09.2009|2
+215480|PATOLOJİ LABORATUVAR TEKNİKLERİ PR.|Önlisans/Lisans Programı|169645|Aktif|Türkçe||2
+259048|PATOLOJİ LABORATUVAR TEKNİKLERİ PR. (KKTC UYRUKLU)|Önlisans/Lisans Programı|169645|Pasif|Türkçe|11.08.2014|2
+304648|PATOLOJİ LABORATUVAR TEKNİKLERİ PR. (TAM BURSLU)|Önlisans/Lisans Programı|169645|Kapalı|Türkçe|29.09.2016|2
+215481|PATOLOJİ LABORATUVAR TEKNİKLERİ PR. (İÖ)|Önlisans/Lisans Programı|169645|Aktif|Türkçe||2
+169655|TIBBİ DOKÜMANTASYON VE SEKRETERLİK PR.|Önlisans/Lisans Programı|169645|Aktif|Türkçe||2
+304682|TIBBİ DOKÜMANTASYON VE SEKRETERLİK PR. (%50 BURSLU)|Önlisans/Lisans Programı|169645|Kapalı|Türkçe|29.09.2016|2
+169658|TIBBİ DOKÜMANTASYON VE SEKRETERLİK PR. (İÖ)|Önlisans/Lisans Programı|169645|Aktif|Türkçe|10.09.2009|2
+145869|TIBBİ GÖRÜNTÜLEME TEKNİKLERİ PR.|Önlisans/Lisans Programı|169645|Aktif|Türkçe|10.09.2009|2
+304699|TIBBİ GÖRÜNTÜLEME TEKNİKLERİ PR. (%25 BURSLU)|Önlisans/Lisans Programı|169645|Kapalı|Türkçe|29.09.2016|2
+304658|TIBBİ GÖRÜNTÜLEME TEKNİKLERİ PR. (ÜCRETLİ)|Önlisans/Lisans Programı|169645|Yarı Pasif|Türkçe|29.09.2016|2
+243775|TIBBİ GÖRÜNTÜLEME TEKNİKLERİ PR. (İÖ)|Önlisans/Lisans Programı|169645|Aktif|Türkçe|01.01.1900|2
+304701|TIBBİ GÖRÜNTÜLEME TEKNİKLERİ PR. (İÖ) (ÜCRETLİ)|Önlisans/Lisans Programı|169645|Yarı Pasif|Türkçe|29.09.2016|2
+244308|TIBBİ LABORATUVAR TEKNİKLERİ PR.|Önlisans/Lisans Programı|169645|Aktif|Türkçe|01.01.1900|2
+145881|TIBBİ LABORATUVAR TEKNİKLERİ PR. (İÖ)|Önlisans/Lisans Programı|169645|Pasif|Türkçe|10.09.2009|2
+229073|İLK VE ACİL YARDIM PR.|Önlisans/Lisans Programı|169645|Aktif|Türkçe||2
+304675|İLK VE ACİL YARDIM PR. (ÜCRETLİ)|Önlisans/Lisans Programı|169645|Kapalı|Türkçe|29.09.2016|2
+229074|İLK VE ACİL YARDIM PR. (İÖ)|Önlisans/Lisans Programı|169645|Aktif|Türkçe||2
+122388|SOSYAL BİLİMLER ENSTİTÜSÜ|Enstitü|121946|Aktif|Türkçe|20.07.1982|
+324897|ALMAN DİLİ EĞİTİMİ (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Arşiv|Türkçe|01.01.1999|2
+258247|ARKEOLOJİ (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Aktif|Türkçe|19.06.2014|2
+261825|AVRUPA-AKDENİZ KÜLTÜRLER VE TURİZM (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Aktif|Türkçe|15.10.2014|2
+266388|BEDEN EĞİTİMİ VE SPOR (DR)|Doktora Programı|122388|Aktif|Türkçe|18.04.2013|4
+175687|COĞRAFYA (DR)|Doktora Programı|122388|Aktif|Türkçe|01.07.2010|4
+230727|COĞRAFYA (YL)|Yüksek Lisans Programı|122388|Aktif|Türkçe||2
+330606|COĞRAFYA EĞİTİMİ (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Arşiv|Türkçe|01.01.1999|2
+330607|COĞRAFYA EĞİTİMİ (YL) (TEZSİZ)|Yüksek Lisans Programı|122388|Arşiv|Türkçe|01.01.1999|2
+330594|DİN EĞİTİMİ (DR)|Doktora Programı|122388|Arşiv|Türkçe|01.01.1999|4
+330593|DİN EĞİTİMİ (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Arşiv|Türkçe|01.01.1999|2
+330596|DİN FELSEFESİ (DR)|Doktora Programı|122388|Arşiv|Türkçe|01.01.1999|4
+330595|DİN FELSEFESİ (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Arşiv|Türkçe|01.01.1999|2
+330598|DİN PSİKOLOJİSİ (DR)|Doktora Programı|122388|Arşiv|Türkçe|01.01.1999|4
+330597|DİN PSİKOLOJİSİ (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Arşiv|Türkçe|01.01.1999|2
+330599|DİN SOSYOLOJİSİ (DR)|Doktora Programı|122388|Arşiv|Türkçe|01.01.1999|4
+330601|DİNLER TARİHİ (DR)|Doktora Programı|122388|Arşiv|Türkçe|01.01.1999|4
+330600|DİNLER TARİHİ (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Arşiv|Türkçe|01.01.1999|2
+225938|DİNİ DANIŞMANLIK VE REHBERLİK (YL) (TEZSİZ) (İÖ)|Yüksek Lisans Programı|122388|Aktif|Türkçe|09.08.2012|2
+207834|ENDÜSTRİ İLİŞKİLERİ ANABİLİM DALI|Anabilim Dalı|122388|Aktif|Türkçe|21.07.2011|
+330616|ESKİ TÜRK DİLİ (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Arşiv|Türkçe|01.01.1999|2
+330617|ESKİ TÜRK EDEBİYATI (DR)|Doktora Programı|122388|Arşiv|Türkçe|01.01.1999|4
+255364|EVLİLİK VE AİLE DANIŞMANLIĞI (YL) (TEZSİZ) (İÖ)|Yüksek Lisans Programı|122388|Aktif|Türkçe|26.02.2014|2
+324886|EĞİTİM BİLİMLERİ (DR)|Doktora Programı|122388|Arşiv|Türkçe|01.01.1999|4
+324885|EĞİTİM BİLİMLERİ (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Arşiv|Türkçe|01.01.1999|2
+176437|EĞİTİM YÖNETİMİ, TEFTİŞİ VE PLANLAMASI (YL) (TEZSİZ)|Yüksek Lisans Programı|122388|Aktif|Türkçe|23.09.2010|2
+301218|FELSEFE (DR)|Doktora Programı|122388|Aktif|Türkçe|10.08.2016|4
+219791|FELSEFE (YL)|Yüksek Lisans Programı|122388|Aktif|Türkçe|26.06.2012|2
+169480|FELSEFE VE DİN BİLİMLERİ (DR)|Doktora Programı|122388|Aktif|Türkçe||4
+230721|FELSEFE VE DİN BİLİMLERİ (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Aktif|Türkçe||2
+297036|GELENEKSEL TÜRK MÜZİĞİ (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Aktif|Türkçe|15.06.2016|2
+324890|GÜZEL SANATLAR EĞİTİMİ (DR)|Doktora Programı|122388|Arşiv|Türkçe|01.01.1999|4
+324889|GÜZEL SANATLAR EĞİTİMİ (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Arşiv|Türkçe|01.01.1999|2
+230643|KADIN VE AİLE ARAŞTIRMALARI (YL)|Yüksek Lisans Programı|122388|Aktif|Türkçe|23.06.2011|2
+225763|KAMU HUKUKU (DR) (KARADENİZ TEKNİK ÜNİV. ORTAK)|Doktora Programı|122388|Aktif|Türkçe|12.07.2012|4
+176119|KAMU HUKUKU (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Aktif|Türkçe|26.08.2010|2
+230164|KAMU HUKUKU (YL) (TEZSİZ) (İÖ)|Yüksek Lisans Programı|122388|Aktif|Türkçe|07.07.2011|2
+235191|KAMU YÖNETİMİ (DR)|Doktora Programı|122388|Aktif|Türkçe|01.03.2013|4
+219792|KAMU YÖNETİMİ (YL)|Yüksek Lisans Programı|122388|Aktif|Türkçe|26.06.2012|2
+264822|MUHASEBE-FİNANSMAN (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Aktif|Türkçe|20.01.2015|2
+264823|MUHASEBE-FİNANSMAN (YL) (TEZSİZ)|Yüksek Lisans Programı|122388|Aktif|Türkçe|20.01.2015|2
+324891|MÜZİK EĞİTİMİ (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Arşiv|Türkçe|01.01.1999|2
+330608|ORTAÖĞRETİM SOSYAL ALANLAR EĞİTİMİ (YL) (TEZSİZ)|Yüksek Lisans Programı|122388|Arşiv|Türkçe|01.01.1999|2
+258246|PSİKOLOJİ (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Aktif|Türkçe|19.06.2014|2
+324888|REHBERLİK VE PSİKOLOJİK DANIŞMANLIK (DR)|Doktora Programı|122388|Arşiv|Türkçe|01.01.1999|4
+324887|REHBERLİK VE PSİKOLOJİK DANIŞMANLIK (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Arşiv|Türkçe|01.01.1999|2
+324893|RESİM-İŞ EĞİTİMİ (DR)|Doktora Programı|122388|Arşiv|Türkçe|01.01.1999|4
+324892|RESİM-İŞ EĞİTİMİ (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Arşiv|Türkçe|01.01.1999|2
+283048|SANAT TARİHİ (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Aktif|Türkçe|16.12.2015|2
+300981|SAĞLIK KURUMLARI YÖNETİMİ (YL) (TEZSİZ) (İÖ) (OMÜ ORTAK) (ÜCRETLİ)|Yüksek Lisans Programı|122388|Kapalı|Türkçe|02.08.2016|2
+314753|SINIF ÖĞRETMENLİĞİ (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Arşiv|Türkçe|01.01.1999|2
+323943|SOSYOLOJİ (DR)|Doktora Programı|122388|Aktif|Türkçe|07.06.2017|4
+219789|SOSYOLOJİ (YL)|Yüksek Lisans Programı|122388|Aktif|Türkçe|26.06.2012|2
+280862|SPOR YÖNETİCİLİĞİ (DR)|Doktora Programı|122388|Aktif|Türkçe|09.09.2015|4
+281995|SPOR YÖNETİCİLİĞİ (YL)|Yüksek Lisans Programı|122388|Aktif|Türkçe|09.09.2015|2
+267770|SİYASET BİLİMİ VE KAMU YÖNETİMİ (YL) (TEZSİZ) (UZAKTAN ÖĞRETİM)|Yüksek Lisans Programı|122388|Aktif|Türkçe|01.01.1900|2
+169484|TARİH (DR)|Doktora Programı|122388|Aktif|Türkçe||4
+230726|TARİH (YL)|Yüksek Lisans Programı|122388|Aktif|Türkçe||2
+330610|TARİH EĞİTİMİ (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Arşiv|Türkçe|01.01.1999|2
+330609|TARİH EĞİTİMİ (YL) (TEZSİZ)|Yüksek Lisans Programı|122388|Arşiv|Türkçe|01.01.1999|2
+169474|TEMEL İSLAM BİLİMLERİ (DR)|Doktora Programı|122388|Aktif|Türkçe||4
+230720|TEMEL İSLAM BİLİMLERİ (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Aktif|Türkçe||2
+323944|TURİZM İŞLETMECİLİĞİ (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Aktif|Türkçe|07.06.2017|2
+301219|TURİZM İŞLETMECİLİĞİ (YL) (TEZSİZ)|Yüksek Lisans Programı|122388|Aktif|Türkçe|10.08.2016|2
+169487|TÜRK DİLİ VE EDEBİYATI (DR)|Doktora Programı|122388|Aktif|Türkçe||4
+230723|TÜRK DİLİ VE EDEBİYATI (YL)|Yüksek Lisans Programı|122388|Aktif|Türkçe||2
+311762|TÜRK DİLİ VE EDEBİYATI (YL) (ÜCRETLİ)|Yüksek Lisans Programı|122388|Yarı Pasif|Türkçe|28.09.2016|2
+330611|TÜRK DİLİ VE EDEBİYATI EĞİTİMİ (YL) (TEZSİZ)|Yüksek Lisans Programı|122388|Arşiv|Türkçe|01.01.1999|2
+330605|TÜRK İSLAM SANATLARI TARİHİ (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Arşiv|Türkçe|01.01.1999|2
+324896|TÜRKÇE EĞİTİMİ (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Arşiv|Türkçe|01.01.1999|2
+267771|TÜRKİYE CUMHURİYETİ TARİHİ (DR)|Doktora Programı|122388|Yarı Pasif|Türkçe||4
+327638|TÜRKİYE CUMHURİYETİ TARİHİ (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Arşiv|Türkçe|01.01.1999|2
+299076|ULUSLARARASI TİCARET VE İŞLETMECİLİK (YL) (TEZLİ) (ÜCRETLİ)|Yüksek Lisans Programı|122388|Yarı Pasif|Türkçe|02.08.2016|2
+299077|ULUSLARARASI TİCARET VE İŞLETMECİLİK (YL) (TEZSİZ) (ÜCRETLİ)|Yüksek Lisans Programı|122388|Yarı Pasif|Türkçe|02.08.2016|2
+169470|ULUSLARARASI İLİŞKİLER (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Aktif|Türkçe||2
+324899|YABANCI DİLLER EĞİTİMİ (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Arşiv|Türkçe|01.01.1999|2
+330613|YAKIN ÇAĞ TARİHİ (DR)|Doktora Programı|122388|Arşiv|Türkçe|01.01.1999|4
+330612|YAKIN ÇAĞ TARİHİ (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Arşiv|Türkçe|01.01.1999|2
+299078|YENİ TÜRK EDEBİYATI (YL) (TEZLİ) (ÜCRETLİ)|Yüksek Lisans Programı|122388|Yarı Pasif|Türkçe|02.08.2016|2
+330614|YENİ ÇAĞ TARİHİ (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Arşiv|Türkçe|01.01.1999|2
+258555|YEREL YÖNETİMLER (YL) (TEZSİZ) (UZAKTAN ÖĞRETİM)|Yüksek Lisans Programı|122388|Aktif|Türkçe|19.06.2014|2
+330615|ÇAĞDAŞ TÜRK LEHÇELERİ VE EDEBİYATLARI (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Arşiv|Türkçe|01.01.1999|2
+255439|ÖZEL HUKUK (YL) (TEZLİ) (KARADENİZ TEKNİK ÜNİV. ORTAK)|Yüksek Lisans Programı|122388|Aktif|Türkçe|20.02.2014|2
+281623|İKTİSAT (DR)|Doktora Programı|122388|Aktif|Türkçe|22.10.2015|4
+219793|İKTİSAT (YL)|Yüksek Lisans Programı|122388|Aktif|Türkçe|26.06.2012|2
+323942|İKTİSAT (YL) (TEZSİZ) (İÖ)|Yüksek Lisans Programı|122388|Aktif|Türkçe|07.06.2017|2
+297535|İLETİŞİM BİLİMLERİ ANABİLİM DALI (DİSİPLİNLERARASI)|Disiplinlerarası Anabilim Dalı|122388|Aktif|Türkçe|22.06.2016|
+297536|MEDYA VE İLETİŞİM BİLİMLERİ (YL) (TEZLİ)|Disiplinlerarası Yüksek Lisans Programı|297535|Aktif|Türkçe|22.06.2016|2
+324894|İLKÖĞRETİM (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Arşiv|Türkçe|01.01.1999|2
+314880|İLKÖĞRETİM SINIF ÖĞRETMENLİĞİ (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Arşiv|Türkçe|16.02.2017|2
+324898|İNGİLİZ DİLİ EĞİTİMİ (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Arşiv|Türkçe|01.01.1999|2
+330602|İSLAM FELSEFESİ (DR)|Doktora Programı|122388|Arşiv|Türkçe|01.01.1999|4
+330604|İSLAM TARİHİ (DR)|Doktora Programı|122388|Arşiv|Türkçe|01.01.1999|4
+330603|İSLAM TARİHİ (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Arşiv|Türkçe|01.01.1999|2
+169479|İSLAM TARİHİ VE SANATLARI (DR)|Doktora Programı|122388|Aktif|Türkçe||4
+230799|İSLAM TARİHİ VE SANATLARI (YL) (TEZLİ)|Yüksek Lisans Programı|122388|Aktif|Türkçe||2
+235190|İŞLETME (DR)|Doktora Programı|122388|Aktif|Türkçe|01.03.2013|4
+209533|İŞLETME (YL)|Yüksek Lisans Programı|122388|Aktif|Türkçe|22.09.2011|2
+209537|İŞLETME (YL) (TEZSİZ)|Yüksek Lisans Programı|122388|Aktif|Türkçe|22.09.2011|2
+235338|İŞLETME (YL) (TEZSİZ) (İÖ) (CANİK BAŞARI ORTAK)|Yüksek Lisans Programı|122388|Kapalı|Türkçe|01.03.2013|2
+300980|İŞLETME (YL) (TEZSİZ) (İÖ) (ONDOKUZ MAYIS ORTAK) (ÜCRETLİ)|Yüksek Lisans Programı|122388|Kapalı|Türkçe|02.08.2016|2
+207833|İŞLETME ANABİLİM DALI|Anabilim Dalı|122388|Aktif|Türkçe|21.07.2011|
+219261|İŞLETME VE ENDÜSTRİ İLİŞKİLERİ (YL)|Yüksek Lisans Programı|122388|Aktif|Türkçe||2
+169424|SU EKOSİSTEMLERİ ARAŞTIRMA VE UYGULAMA MERKEZİ|Araştırma ve Uygulama Merkezi|121946|Kapalı|Türkçe|10.09.2009|
+122389|SÜREKLİ EĞİTİM MERKEZİ|Araştırma ve Uygulama Merkezi|121946|Aktif|Türkçe|10.09.2009|
+269773|SİNOP EĞİTİM FAKÜLTESİ|Fakülte|121946|Arşiv|Türkçe||
+273670|FEN BİLGİSİ ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|269773|Arşiv|Türkçe||4
+273671|OKUL ÖNCESİ ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|269773|Arşiv|Türkçe||4
+273672|SINIF ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|269773|Arşiv|Türkçe||4
+269774|SİNOP FEN-EDEBİYAT FAKÜLTESİ|Fakülte|121946|Arşiv|Türkçe||
+273673|BİYOLOJİ PR.|Önlisans/Lisans Programı|269774|Arşiv|Türkçe||4
+273675|MATEMATİK PR.|Önlisans/Lisans Programı|269774|Arşiv|Türkçe||4
+273674|İSTATİSTİK PR.|Önlisans/Lisans Programı|269774|Arşiv|Türkçe||4
+269775|SİNOP MESLEK YÜKSEKOKULU|Meslek Yüksekokulu|121946|Arşiv|Türkçe||
+273676|BİLGİSAYAR PROGRAMCILIĞI PR.|Önlisans/Lisans Programı|269775|Arşiv|Türkçe||2
+273677|BİLGİSAYAR TEKNOLOJİSİ VE PROGRAMLAMA PR.|Önlisans/Lisans Programı|269775|Arşiv|Türkçe||2
+273679|BİLGİSAYARLI MUHASEBE VE VERGİ UYGULAMA PR.|Önlisans/Lisans Programı|269775|Arşiv|Türkçe||2
+273678|BİLGİSAYARLI MUHASEBE VE VERGİ UYGULAMA PR. (İÖ) (BK.613)|Önlisans/Lisans Programı|269775|Arşiv|Türkçe||2
+273680|CAM-SERAMİK PR.|Önlisans/Lisans Programı|269775|Arşiv|Türkçe||2
+273681|ELEKTRİK PR.|Önlisans/Lisans Programı|269775|Arşiv|Türkçe||2
+273682|ELEKTRİK PR. (İÖ) (BK.610)|Önlisans/Lisans Programı|269775|Arşiv|Türkçe||2
+273683|ENDÜSTRİYEL ELEKTRONİK PR. (İÖ) (BK.611)|Önlisans/Lisans Programı|269775|Arşiv|Türkçe||2
+273684|MAKİNE PR.|Önlisans/Lisans Programı|269775|Arşiv|Türkçe||2
+273685|MAKİNE PR. (İÖ) (BK.610)|Önlisans/Lisans Programı|269775|Arşiv|Türkçe||2
+273686|MOBİLYA VE DEKORASYON PR. (İÖ) (BK.610)|Önlisans/Lisans Programı|269775|Arşiv|Türkçe||2
+273687|MUHASEBE PR.|Önlisans/Lisans Programı|269775|Arşiv|Türkçe||2
+273688|MUHASEBE PR. (İÖ) (BK.613)|Önlisans/Lisans Programı|269775|Arşiv|Türkçe||2
+269776|SİNOP SAĞLIK HİZMETLERİ MESLEK YÜKSEKOKULU|Meslek Yüksekokulu|121946|Arşiv|Türkçe||
+273689|HEMŞİRELİK PR. (A)|Önlisans/Lisans Programı|269776|Arşiv|Türkçe||2
+273690|HEMŞİRELİK PR. (B)|Önlisans/Lisans Programı|269776|Arşiv|Türkçe||2
+269777|SİNOP SAĞLIK YÜKSEKOKULU|Yüksekokul|121946|Arşiv|Türkçe||
+273691|HEMŞİRELİK PR.|Önlisans/Lisans Programı|269777|Arşiv|Türkçe||4
+269778|SİNOP SU ÜRÜNLERİ FAKÜLTESİ|Fakülte|121946|Arşiv|Türkçe||
+273692|SİNOP SU ÜRÜNLERİ PR.|Önlisans/Lisans Programı|269778|Arşiv|Türkçe||4
+273693|SİNOP SU ÜRÜNLERİ PR. (İÖ)|Önlisans/Lisans Programı|269778|Arşiv|Türkçe||4
+269779|SİNOP SU ÜRÜNLERİ YÜKSEKOKULU|Yüksekokul|121946|Arşiv|Türkçe||
+273694|SİNOP SU ÜRÜNLERİ YÜKSEKOKULU PR.|Önlisans/Lisans Programı|269779|Arşiv|Türkçe||4
+155936|SİVİL HAVACILIK YÜKSEKOKULU|Yüksekokul|121946|Aktif|Türkçe|23.03.2009|
+174930|HAVA TRAFİK KONTROL BÖLÜMÜ|Bölüm|155936|Aktif|Türkçe|02.06.2010|
+320619|HAVA TRAFİK KONTROL ANABİLİM DALI|Anabilim Dalı|174930|Aktif|Türkçe|25.04.2017|
+174927|HAVACILIK ELEKTRİK-ELEKTRONİĞİ BÖLÜMÜ|Bölüm|155936|Yarı Pasif|Türkçe|02.06.2010|
+281324|HAVACILIK YÖNETİMİ BÖLÜMÜ|Bölüm|155936|Aktif|Türkçe|07.10.2015|
+320618|HAVACILIK YÖNETİMİ ANABİLİM DALI|Anabilim Dalı|281324|Aktif|Türkçe|25.04.2017|
+281325|HAVACILIK YÖNETİMİ PR.|Önlisans/Lisans Programı|281324|Aktif|Türkçe|07.10.2015|4
+209272|PİLOTAJ BÖLÜMÜ|Bölüm|155936|Aktif|Türkçe||
+320620|PİLOTAJ ANABİLİM DALI|Anabilim Dalı|209272|Aktif|Türkçe|25.04.2017|
+174926|SİVİL HAVACILIK İŞLETMECİLİĞİ BÖLÜMÜ|Bölüm|155936|Aktif|Türkçe|02.06.2010|
+230729|SİVİL HAVA ULAŞTIRMA İŞLETMECİLİĞİ PR.|Önlisans/Lisans Programı|174926|Yarı Pasif|Türkçe||4
+328627|SİVİL HAVACILIK İŞLETMECİLİĞİ ANABİLİM DALI|Anabilim Dalı|174926|Aktif|Türkçe|14.08.2017|
+174928|UÇAK GÖVDE-MOTOR BAKIMI BÖLÜMÜ|Bölüm|155936|Yarı Pasif|Türkçe|02.06.2010|
+249894|TARIMSAL UYGULAMA VE ARAŞTIRMA MERKEZİ|Araştırma ve Uygulama Merkezi|121946|Aktif|Türkçe|15.01.2014|
+169429|TEMİZ ENERJİ ARAŞTIRMA VE UYGULAMA MERKEZİ|Araştırma ve Uygulama Merkezi|121946|Aktif|Türkçe||
+122330|TERME MESLEK YÜKSEKOKULU|Meslek Yüksekokulu|121946|Aktif|Türkçe|12.02.1999|
+236265|DIŞ TİCARET BÖLÜMÜ|Bölüm|122330|Aktif|Türkçe|20.03.2013|
+236266|DIŞ TİCARET PR.|Önlisans/Lisans Programı|236265|Aktif|Türkçe|20.03.2013|2
+169952|GIDA İŞLEME BÖLÜMÜ|Bölüm|122330|Aktif|Türkçe|10.09.2009|
+236268|GIDA KALİTE KONTROLÜ VE ANALİZİ PR.|Önlisans/Lisans Programı|169952|Aktif|Türkçe|20.03.2013|2
+327585|GIDA KALİTE KONTROLÜ VE ANALİZİ PR. (KKTC UYRUKLU)|Önlisans/Lisans Programı|169952|Aktif|Türkçe|04.08.2017|2
+276137|GIDA KALİTE KONTROLÜ VE ANALİZİ PR. (İÖ)|Önlisans/Lisans Programı|169952|Aktif|Türkçe|30.04.2015|2
+169956|GIDA TEKNOLOJİSİ PR.|Önlisans/Lisans Programı|169952|Aktif|Türkçe|10.09.2009|2
+169947|MUHASEBE VE VERGİ BÖLÜMÜ|Bölüm|122330|Aktif|Türkçe|10.09.2009|
+169951|MUHASEBE VE VERGİ UYGULAMALARI PR.|Önlisans/Lisans Programı|169947|Aktif|Türkçe||2
+145983|MUHASEBE VE VERGİ UYGULAMALARI PR. (İÖ)|Önlisans/Lisans Programı|169947|Yarı Pasif|Türkçe|10.09.2009|2
+169960|PAZARLAMA VE REKLAMCILIK BÖLÜMÜ|Bölüm|122330|Aktif|Türkçe|10.09.2009|
+169968|PAZARLAMA PR.|Önlisans/Lisans Programı|169960|Aktif|Türkçe|10.09.2009|2
+317331|REKLAMCILIK PR.|Önlisans/Lisans Programı|169960|Pasif|Türkçe|02.03.2017|2
+122331|TEKNİK PROGRAMLAR BÖLÜMÜ|Bölüm|122330|Kapalı|Türkçe|10.09.2009|
+122332|GIDA TEKNOLOJİSİ PR.|Önlisans/Lisans Programı|122331|Kapalı|Türkçe|10.09.2009|2
+317332|YÖNETİM VE ORGANİZASYON BÖLÜMÜ|Bölüm|122330|Aktif|Türkçe|02.03.2017|
+317313|LOJİSTİK PR.|Önlisans/Lisans Programı|317332|Pasif|Türkçe|02.03.2017|2
+122333|İKTİSADİ VE İDARİ PROGRAMLAR BÖLÜMÜ|Bölüm|122330|Kapalı|Türkçe|10.09.2009|
+122335|MUHASEBE PR.|Önlisans/Lisans Programı|122333|Kapalı|Türkçe|10.09.2009|2
+122334|PAZARLAMA PR.|Önlisans/Lisans Programı|122333|Kapalı|Türkçe|10.09.2009|2
+121947|TIP FAKÜLTESİ|Fakülte|121946|Aktif|Türkçe|01.04.1975|
+121948|CERRAHİ TIP BİLİMLERİ BÖLÜMÜ|Bölüm|121947|Aktif|Türkçe|10.09.2009|
+121949|ANESTEZİYOLOJİ VE REANİMASYON ANABİLİM DALI|Anabilim Dalı|121948|Aktif|Türkçe|26.02.2009|
+169147|ALGOLOJİ BİLİM DALI|Bilim Dalı|121949|Aktif|Türkçe||
+121955|BEYİN VE SİNİR CERRAHİSİ ANABİLİM DALI|Anabilim Dalı|121948|Aktif|Türkçe|26.02.2009|
+121951|GENEL CERRAHİ ANABİLİM DALI|Anabilim Dalı|121948|Aktif|Türkçe|26.02.2009|
+121952|GÖZ HASTALIKLARI ANABİLİM DALI|Anabilim Dalı|121948|Aktif|Türkçe|26.02.2009|
+121960|GÖĞÜS CERRAHİSİ ANABİLİM DALI|Anabilim Dalı|121948|Aktif|Türkçe|26.02.2009|
+121953|KADIN HASTALIKLARI VE DOĞUM ANABİLİM DALI|Anabilim Dalı|121948|Aktif|Türkçe|26.02.2009|
+121961|KALP VE DAMAR CERRAHİSİ ANABİLİM DALI|Anabilim Dalı|121948|Aktif|Türkçe|26.02.2009|
+121954|KULAK BURUN VE BOĞAZ HASTALIKLARI ANABİLİM DALI|Anabilim Dalı|121948|Aktif|Türkçe|26.02.2009|
+169151|ODYOLOJİ BİLİM DALI|Bilim Dalı|121954|Aktif|Türkçe||
+169152|NÖROŞİRURJİ ANABİLİM DALI|Anabilim Dalı|121948|Aktif|Türkçe||
+121956|ORTOPEDİ VE TRAVMATOLOJİ ANABİLİM DALI|Anabilim Dalı|121948|Aktif|Türkçe|26.02.2009|
+169153|PATOLOJİ ANABİLİM DALI|Anabilim Dalı|121948|Aktif|Türkçe||
+169165|KLİNİK SİTOLOJİ BİLİM DALI|Bilim Dalı|169153|Aktif|Türkçe||
+121958|PLASTİK, REKONSTRÜKTİF VE ESTETİK CERRAHİ ANABİLİM DALI|Anabilim Dalı|121948|Aktif|Türkçe|26.02.2009|
+121957|TIBBİ PATOLOJİ ANABİLİM DALI|Anabilim Dalı|121948|Aktif|Türkçe|26.02.2009|
+121950|ÇOCUK CERRAHİSİ ANABİLİM DALI|Anabilim Dalı|121948|Aktif|Türkçe|26.02.2009|
+169148|ÇOCUK ÜROLOJİSİ BİLİM DALI|Bilim Dalı|121950|Aktif|Türkçe||
+121959|ÜROLOJİ ANABİLİM DALI|Anabilim Dalı|121948|Aktif|Türkçe|26.02.2009|
+169196|ANDROLOJİ BİLİM DALI|Bilim Dalı|121959|Aktif|Türkçe||
+214338|ÇOCUK ÜROLOJİ BİLİM DALI|Bilim Dalı|121959|Aktif|Türkçe|14.03.2012|
+121962|İLK VE ACİL YARDIM ANABİLİM DALI|Anabilim Dalı|121948|Aktif|Türkçe|26.02.2009|
+121963|DAHİLİ TIP BİLİMLERİ BÖLÜMÜ|Bölüm|121947|Aktif|Türkçe|10.09.2009|
+128016|ACİL TIP ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe|26.02.2009|
+121964|ADLİ TIP ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe|26.02.2009|
+121976|AİLE HEKİMLİĞİ ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe|26.02.2009|
+128017|DEONTOLOJİ ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe|26.02.2009|
+169259|DERMATOLOJİ ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe||
+121966|DERİ VE ZÜHREVİ HASTALIKLAR ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe|26.02.2009|
+121983|ENFEKSİYON HASTALIKLARI VE KLİNİK MİKROBİYOLOJİ ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe|26.02.2009|
+169265|FARMAKOLOJİ ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe||
+121968|FİZİKSEL TEDAVİ VE REHABİLİTASYON ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe|26.02.2009|
+169267|ROMATOLOJİ BİLİM DALI|Bilim Dalı|121968|Aktif|Türkçe||
+121977|GÖĞÜS HASTALIKLARI ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe|26.02.2009|
+262980|İŞ VE MESLEK HASTALIKLARI BİLİM DALI|Bilim Dalı|121977|Aktif|Türkçe|17.12.2014|
+121969|HALK SAĞLIĞI ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe|26.02.2009|
+121980|HAVA VE UZAY HEKİMLİĞİ ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe|26.02.2009|
+121981|KARDİYOLOJİ ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe|26.02.2009|
+121971|NÖROLOJİ ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe|26.02.2009|
+243104|KLİNİK NÖROFİZYOLOJİ BİLİM DALI|Bilim Dalı|121971|Aktif|Türkçe|26.06.2013|
+121972|NÜKLEER TIP ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe|26.02.2009|
+169288|PSİKİYATRİ ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe||
+121978|RADYASYON ONKOLOJİSİ ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe|26.02.2009|
+143494|RADYODİAGNOSTİK ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe|26.02.2009|
+121979|RADYOLOJİ ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe|26.02.2009|
+233257|GİRİŞİMSEL RADYOLOJİ BİLİM DALI|Bilim Dalı|121979|Aktif|Türkçe|06.12.2011|
+233258|NÖRORADYOLOJİ BİLİM DALI|Bilim Dalı|121979|Aktif|Türkçe|06.12.2011|
+233259|ÇOCUK RADYOLOJİSİ BİLİM DALI|Bilim Dalı|121979|Aktif|Türkçe|06.12.2011|
+121973|RUH SAĞLIĞI VE HASTALIKLARI ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe|26.02.2009|
+121975|SPOR HEKİMLİĞİ ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe|26.02.2009|
+140281|SU ALTI HEKİMLİĞİ VE HİPERBARİK TIP ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe|26.02.2009|
+121974|TIBBİ EKOLOJİ VE HİDROKLİMATOLOJİ ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe|26.02.2009|
+121967|TIBBİ FARMAKOLOJİ ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe|26.02.2009|
+121982|TIBBİ GENETİK ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe||
+169237|ÇOCUK PSİKİYATRİSİ ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe||
+121965|ÇOCUK SAĞLIĞI VE HASTALIKLARI ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe|26.02.2009|
+232751|GELİŞİMSEL PEDİTATRİ İLİM DALI|Bilim Dalı|121965|Aktif|Türkçe|13.10.2011|
+169254|PEDİATRİK GASTROENTEROLOJİ BİLİM DALI|Bilim Dalı|121965|Aktif|Türkçe||
+207758|SOSYAL PEDİATRİ BİLİM DALI|Bilim Dalı|121965|Aktif|Türkçe||
+207756|ÇOCUK ACİL BİLİM DALI|Bilim Dalı|121965|Aktif|Türkçe||
+169238|ÇOCUK ALERJİSİ BİLİM DALI|Bilim Dalı|121965|Aktif|Türkçe||
+169240|ÇOCUK ENDOKRİNOLOJİSİ BİLİM DALI|Bilim Dalı|121965|Aktif|Türkçe||
+208758|ÇOCUK GÖGÜS HASTALIKLARI BİLİM DALI|Bilim Dalı|121965|Pasif|Türkçe|13.10.2011|
+169241|ÇOCUK HEMATOLOJİSİ BİLİM DALI|Bilim Dalı|121965|Aktif|Türkçe||
+169242|ÇOCUK KARDİYOLOJİSİ BİLİM DALI|Bilim Dalı|121965|Aktif|Türkçe||
+232764|ÇOCUK METABOLİZMA HAST. BİLİM DALI|Bilim Dalı|121965|Aktif|Türkçe|13.10.2011|
+169243|ÇOCUK NEFROLOJİSİ BİLİM DALI|Bilim Dalı|121965|Aktif|Türkçe||
+169244|ÇOCUK NEONATOLOJİSİ BİLİM DALI|Bilim Dalı|121965|Aktif|Türkçe||
+169246|ÇOCUK NÖROLOJİSİ BİLİM DALI|Bilim Dalı|121965|Aktif|Türkçe||
+169248|ÇOCUK ONKOLOJİSİ BİLİM DALI|Bilim Dalı|121965|Aktif|Türkçe||
+232648|ÇOCUK ROMATOLOJİSİ BİLİM DALI|Bilim Dalı|121965|Aktif|Türkçe|16.06.2011|
+207757|ÇOCUK YOĞUN BAKIM BİLİM DALI|Bilim Dalı|121965|Aktif|Türkçe||
+121984|ÇOCUK VE ERGEN RUH SAĞLIĞI VE HASTALIKLARI ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe|26.02.2009|
+169287|İLK VE ACİL YARDIM ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe||
+121970|İÇ HASTALIKLARI ANABİLİM DALI|Anabilim Dalı|121963|Aktif|Türkçe|26.02.2009|
+169270|ENDOKRİNOLOJİ VE METABOLİZMA HASTALIKLARI BİLİM DALI|Bilim Dalı|121970|Aktif|Türkçe||
+169273|GASTROENTEROLOJİ BİLİM DALI|Bilim Dalı|121970|Aktif|Türkçe||
+205902|GERİATRİ BİLİM DALI|Bilim Dalı|121970|Aktif|Türkçe|26.02.2009|
+169276|HEMATOLOJİ BİLİM DALI|Bilim Dalı|121970|Aktif|Türkçe||
+169280|NEFROLOJİ BİLİM DALI|Bilim Dalı|121970|Aktif|Türkçe||
+169286|ONKOLOJİ BİLİM DALI|Bilim Dalı|121970|Aktif|Türkçe||
+205900|ROMATOLOJİ BİLİM DALI|Bilim Dalı|121970|Aktif|Türkçe|26.02.2009|
+205901|YOĞUN BAKIM BİLİM DALI|Bilim Dalı|121970|Aktif|Türkçe|26.02.2009|
+121985|TEMEL TIP BİLİMLERİ BÖLÜMÜ|Bölüm|121947|Aktif|Türkçe|10.09.2009|
+121992|ANATOMİ ANABİLİM DALI|Anabilim Dalı|121985|Aktif|Türkçe|26.02.2009|
+243102|ANESTEZİYOLOJİ VE REANİMASYON ANABİLİM DALI|Anabilim Dalı|121985|Aktif|Türkçe|26.06.2013|
+243103|YOĞUN BAKIM BİLİM DALI|Bilim Dalı|243102|Aktif|Türkçe|26.06.2013|
+121991|BİYOFİZİK ANABİLİM DALI|Anabilim Dalı|121985|Aktif|Türkçe|26.02.2009|
+121994|BİYOİSTATİSTİK VE TIBBİ BİLİŞİM ANABİLİM DALI|Anabilim Dalı|121985|Aktif|Türkçe|26.02.2009|
+121988|FİZYOLOJİ ANABİLİM DALI|Anabilim Dalı|121985|Aktif|Türkçe||
+121993|HİSTOLOJİ VE EMBRİYOLOJİ ANABİLİM DALI|Anabilim Dalı|121985|Aktif|Türkçe|26.02.2009|
+121986|TIBBİ BİYOKİMYA ANABİLİM DALI|Anabilim Dalı|121985|Aktif|Türkçe|26.02.2009|
+121990|TIBBİ BİYOLOJİ ANABİLİM DALI|Anabilim Dalı|121985|Aktif|Türkçe|26.02.2009|
+220474|MOLEKÜLER GENETİK BİLİM DALI|Bilim Dalı|121990|Aktif|Türkçe|26.07.2012|
+220473|SİTOGENETİK BİLİM DALI|Bilim Dalı|121990|Aktif|Türkçe|26.07.2012|
+220475|TIBBİ BİYOLOJİ BİLİM DALI|Bilim Dalı|121990|Aktif|Türkçe|26.07.2012|
+169290|TIBBİ GENETİK BİLİM DALI|Bilim Dalı|121990|Aktif|Türkçe|26.02.2009|
+121989|TIBBİ MİKROBİYOLOJİ ANABİLİM DALI|Anabilim Dalı|121985|Aktif|Türkçe|26.02.2009|
+121995|TIP EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|121985|Aktif|Türkçe|26.02.2009|
+121987|TIP TARİHİ VE ETİK ANABİLİM DALI|Anabilim Dalı|121985|Aktif|Türkçe|26.02.2009|
+169289|TIP TARİHİ VE ETİK ANABİLİM DALI|Anabilim Dalı|121985|Aktif|Türkçe|01.01.1900|
+228132|TIP PR.|Önlisans/Lisans Programı|121947|Aktif|Türkçe||6
+308528|TIP PR. (ÜCRETLİ)|Önlisans/Lisans Programı|121947|Yarı Pasif|Türkçe|20.10.2016|6
+215484|TIP PR. (İNGİLİZCE)|Önlisans/Lisans Programı|121947|Aktif|İngilizce||6
+208125|TURİZM FAKÜLTESİ|Fakülte|121946|Aktif|Türkçe|03.07.2011|
+214342|GASTRONOMİ VE MUTFAK SANATLARI BÖLÜMÜ|Bölüm|208125|Aktif|Türkçe|14.03.2012|
+319340|GASTRONOMİ VE MUTFAK SANATLARI ANABİLİM DALI|Anabilim Dalı|214342|Aktif|Türkçe|05.04.2017|
+214341|REKREASYON YÖNETİMİ BÖLÜMÜ|Bölüm|208125|Aktif|Türkçe|14.03.2012|
+328526|REKREASYON YÖNETİMİ ANABİLİM DALI|Anabilim Dalı|214341|Aktif|Türkçe|14.08.2017|
+214321|TURİZM REHBERLİĞİ BÖLÜMÜ|Bölüm|208125|Aktif|Türkçe|14.03.2012|
+319339|TURİZM REHBERLİĞİ ANABİLİM DALI|Anabilim Dalı|214321|Aktif|Türkçe|05.04.2017|
+320344|TURİZM REHBERLİĞİ PR.|Önlisans/Lisans Programı|214321|Aktif|Türkçe|20.04.2017|4
+214340|TURİZM İŞLETMECİLİĞİ BÖLÜMÜ|Bölüm|208125|Aktif|Türkçe|14.03.2012|
+319338|TURİZM İŞLETMECİLİĞİ ANABİLİM DALI|Anabilim Dalı|214340|Aktif|Türkçe|05.04.2017|
+245361|TURİZM İŞLETMECİLİĞİ PR.|Önlisans/Lisans Programı|214340|Aktif|Türkçe|15.08.2013|4
+235511|TÜRKÇE ÖĞRETİMİ UYGULAMA VE ARAŞTIRMA MERKEZİ|Araştırma ve Uygulama Merkezi|121946|Aktif|Türkçe|13.03.2013|
+169431|UZAKTAN EĞİTİM ARAŞTIRMA VE UYGULAMA MERKEZİ|Araştırma ve Uygulama Merkezi|121946|Aktif|Türkçe||
+122233|VETERİNER FAKÜLTESİ|Fakülte|121946|Aktif|Türkçe|04.12.1995|
+140284|BESİN HİJYENİ VE TEKNOLOJİSİ BÖLÜMÜ|Bölüm|122233|Aktif|Türkçe|26.02.2009|
+122235|VETERİNERLİK BESİN HİJYENİ VE TEKNOLOJİSİ ANABİLİM DALI|Anabilim Dalı|140284|Aktif|Türkçe|26.02.2009|
+122234|HASTALIKLAR VE KLİNİK BİLİMLERİ BÖLÜMÜ|Bölüm|122233|Kapalı|Türkçe|26.02.2009|
+122244|DÖLERME VE SUNİ TOHUMLAMA ANABİLİM DALI|Anabilim Dalı|122234|Kapalı|Türkçe|26.02.2009|
+122241|SU ÜRÜNLERİ VE HASTALIKLARI ANABİLİM DALI|Anabilim Dalı|122234|Kapalı|Türkçe|26.02.2009|
+147750|VETERİNERLİK BESİN HİJYENİ VE TEKNOLOJİSİ ANABİLİM DALI|Anabilim Dalı|122234|Kapalı|Türkçe|26.02.2009|
+122236|VETERİNERLİK CERRAHİSİ ANABİLİM DALI|Anabilim Dalı|122234|Kapalı|Türkçe|26.02.2009|
+169319|VETERİNERLİK DOĞUM VE JİNEKOLOJİSİ ANABİLİM DALI|Anabilim Dalı|122234|Kapalı|Türkçe|01.01.1900|
+147752|VETERİNERLİK FARMAKOLOJİ VE TOKSİKOLOJİ ANABİLİM DALI|Anabilim Dalı|122234|Kapalı|Türkçe|26.02.2009|
+147742|VETERİNERLİK PARAZİTOLOJİSİ ANABİLİM DALI|Anabilim Dalı|122234|Kapalı|Türkçe|26.02.2009|
+147743|VETERİNERLİK PATOLOJİSİ ANABİLİM DALI|Anabilim Dalı|122234|Kapalı|Türkçe|26.02.2009|
+147741|VETERİNERLİK TIBBİ MİKROBİYOLOJİSİ ANABİLİM DALI|Anabilim Dalı|122234|Kapalı|Türkçe|26.02.2009|
+147744|VETERİNERLİK VİROLOJİ ANABİLİM DALI|Anabilim Dalı|122234|Kapalı|Türkçe|26.02.2009|
+122237|VETERİNERLİK İÇ HASTALIKLARI ANABİLİM DALI|Anabilim Dalı|122234|Kapalı|Türkçe|26.02.2009|
+169317|KLİNİK BİLİMLER BÖLÜMÜ|Bölüm|122233|Aktif|Türkçe|10.09.2009|
+169346|DÖLERME VE SUNİ TOHUMLAMA ANABİLİM DALI|Anabilim Dalı|169317|Aktif|Türkçe||
+169353|VETERİNERLİK İÇ HASTALIKLARI ANABİLİM DALI|Anabilim Dalı|169317|Aktif|Türkçe|01.01.1900|
+331656|VETERİNERİNERLİK DOĞUM VE JİNEKOLOJİSİ ANABİLİM DALI|Anabilim Dalı|169317|Aktif|Türkçe|26.02.2009|
+140285|KLİNİK ÖNCESİ BİLİMLER BÖLÜMÜ|Bölüm|122233|Aktif|Türkçe|26.02.2009|
+174933|SU ÜRÜNLERİ VE HASTALIKLARI ANABİLİM DALI|Anabilim Dalı|140285|Aktif|Türkçe|02.06.2010|
+169358|VETERİNERLİK CERRAHİSİ ANABİLİM DALI|Anabilim Dalı|140285|Aktif|Türkçe|01.01.1900|
+122243|VETERİNERLİK DOĞUM VE JİNEKOLOJİSİ ANABİLİM DALI|Anabilim Dalı|140285|Pasif|Türkçe|26.02.2009|
+122242|VETERİNERLİK FARMAKOLOJİ VE TOKSİKOLOJİSİ ANABİLİM DALI|Anabilim Dalı|140285|Aktif|Türkçe|26.02.2009|
+122238|VETERİNERLİK MİKROBİYOLOJİSİ ANABİLİM DALI|Anabilim Dalı|140285|Aktif|Türkçe|26.02.2009|
+122239|VETERİNERLİK PARAZİTOLOJİSİ ANABİLİM DALI|Anabilim Dalı|140285|Aktif|Türkçe|26.02.2009|
+122240|VETERİNERLİK PATOLOJİSİ ANABİLİM DALI|Anabilim Dalı|140285|Aktif|Türkçe|26.02.2009|
+122245|VETERİNERLİK VİROLOJİ ANABİLİM DALI|Anabilim Dalı|140285|Aktif|Türkçe|26.02.2009|
+122246|TEMEL BİLİMLER BÖLÜMÜ|Bölüm|122233|Aktif|Türkçe|26.02.2009|
+254782|LABORATUVAR HAYVANLARI ANABİLİM DALI|Anabilim Dalı|122246|Aktif|Türkçe|16.04.2014|
+122249|VETERİNER HEKİMLİĞİ TARİHİ VE DEONTOLOJİ ANABİLİM DALI|Anabilim Dalı|122246|Aktif|Türkçe|26.02.2009|
+122250|VETERİNERLİK ANATOMİSİ ANABİLİM DALI|Anabilim Dalı|122246|Aktif|Türkçe|26.02.2009|
+122247|VETERİNERLİK BİYOKİMYASI ANABİLİM DALI|Anabilim Dalı|122246|Aktif|Türkçe|26.02.2009|
+122248|VETERİNERLİK FİZYOLOJİSİ ANABİLİM DALI|Anabilim Dalı|122246|Aktif|Türkçe|26.02.2009|
+122251|VETERİNERLİK HİSTOLOJİ VE EMBRİYOLOJİ ANABİLİM DALI|Anabilim Dalı|122246|Aktif|Türkçe|26.02.2009|
+147745|VETERİNER HEKİMLİĞİ TEMEL BİLİMLER BÖLÜMÜ|Bölüm|122233|Kapalı|Türkçe|26.02.2009|
+147753|VETERİNER HEKİMLİĞİ TARİHİ VE DEONTOLOJİ ANABİLİM DALI|Anabilim Dalı|147745|Kapalı|Türkçe|26.02.2009|
+147746|VETERİNERLİK ANATOMİSİ ANABİLİM DALI|Anabilim Dalı|147745|Kapalı|Türkçe|26.02.2009|
+147747|VETERİNERLİK BİYOKİMYASI ANABİLİM DALI|Anabilim Dalı|147745|Kapalı|Türkçe|26.02.2009|
+147748|VETERİNERLİK FİZYOLOJİSİ ANABİLİM DALI|Anabilim Dalı|147745|Kapalı|Türkçe|26.02.2009|
+147749|VETERİNERLİK HİSTOLOJİ VE EMBRİYOLOJİ ANABİLİM DALI|Anabilim Dalı|147745|Kapalı|Türkçe|26.02.2009|
+170029|VETERİNER PR.|Önlisans/Lisans Programı|122233|Aktif|Türkçe|10.09.2009|5
+122252|ZOOTEKNİ VE HAYVAN BESLEME BÖLÜMÜ|Bölüm|122233|Aktif|Türkçe|26.02.2009|
+122253|HAYVAN BESLEME VE BESLENME HASTALIKLARI ANABİLİM DALI|Anabilim Dalı|122252|Aktif|Türkçe|26.02.2009|
+122256|HAYVANCILIK EKONOMİSİ VE İŞLETMECİLİĞİ ANABİLİM DALI|Anabilim Dalı|122252|Aktif|Türkçe|26.02.2009|
+122257|VETERİNERLİK BİYOMETRİ ANABİLİM DALI|Anabilim Dalı|122252|Aktif|Türkçe|26.02.2009|
+122255|VETERİNERLİK GENETİĞİ ANABİLİM DALI|Anabilim Dalı|122252|Aktif|Türkçe|26.02.2009|
+122254|VETERİNERLİK ZOOTEKNİ ANABİLİM DALI|Anabilim Dalı|122252|Aktif|Türkçe|26.02.2009|
+122296|VEZİRKÖPRÜ MESLEK YÜKSEKOKULU|Meslek Yüksekokulu|121946|Aktif|Türkçe|18.11.1993|
+169999|BİLGİSAYAR TEKNOLOJİLERİ BÖLÜMÜ|Bölüm|122296|Aktif|Türkçe|26.02.2009|
+170002|BİLGİSAYAR PROGRAMCILIĞI PR.|Önlisans/Lisans Programı|169999|Aktif|Türkçe|26.02.2009|2
+170003|BİLGİSAYAR PROGRAMCILIĞI PR. (İÖ)|Önlisans/Lisans Programı|169999|Aktif|Türkçe|26.02.2009|2
+169985|MALZEME VE İŞLEME TEKNOLOJİLERİ BÖLÜMÜ|Bölüm|122296|Aktif|Türkçe||
+145801|MOBİLYA VE DEKORASYON PR.|Önlisans/Lisans Programı|169985|Aktif|Türkçe|26.02.2009|2
+170007|MUHASEBE VE VERGİ BÖLÜMÜ|Bölüm|122296|Aktif|Türkçe||
+170009|MUHASEBE VE VERGİ UYGULAMALARI PR.|Önlisans/Lisans Programı|170007|Aktif|Türkçe||2
+170010|MUHASEBE VE VERGİ UYGULAMALARI PR. (İÖ)|Önlisans/Lisans Programı|170007|Yarı Pasif|Türkçe||2
+207454|ORMANCILIK BÖLÜMÜ|Bölüm|122296|Aktif|Türkçe||
+267532|AVCILIK VE YABAN HAYATI PR.|Önlisans/Lisans Programı|207454|Pasif|Türkçe|18.03.2015|2
+207429|ORMANCILIK VE ORMAN ÜRÜNLERİ PR.|Önlisans/Lisans Programı|207454|Aktif|Türkçe|21.07.2011|2
+239580|ORMANCILIK VE ORMAN ÜRÜNLERİ PR. (İÖ)|Önlisans/Lisans Programı|207454|Aktif|Türkçe|02.05.2013|2
+122301|SAĞLIK PROGRAMLARI BÖLÜMÜ|Bölüm|122296|Kapalı|Türkçe|26.02.2009|
+122302|ÇOCUK GELİŞİMİ PR.|Önlisans/Lisans Programı|122301|Kapalı|Türkçe|26.02.2009|2
+169995|ÇOCUK GELİŞİMİ PR. (İÖ)|Önlisans/Lisans Programı|122301|Kapalı|Türkçe|26.02.2009|2
+319442|SEYAHAT-TURİZM VE EĞLENCE HİZMETLERİ BÖLÜMÜ|Bölüm|122296|Aktif|Türkçe|05.04.2017|
+319443|KÜLTÜREL MİRAS VE TURİZM PR.|Önlisans/Lisans Programı|319442|Pasif|Türkçe|05.04.2017|2
+122297|TEKNİK PROGRAMLAR BÖLÜMÜ|Bölüm|122296|Kapalı|Türkçe|26.02.2009|
+122298|BİLGİSAYAR TEKNOLOJİSİ VE PROGRAMLAMA PR.|Önlisans/Lisans Programı|122297|Kapalı|Türkçe|26.02.2009|2
+145966|BİLGİSAYAR TEKNOLOJİSİ VE PROGRAMLAMA PR. (İÖ)|Önlisans/Lisans Programı|122297|Kapalı|Türkçe|26.02.2009|2
+170004|ÇOCUK BAKIMI VE GENÇLİK HİZMETLERİ BÖLÜMÜ|Bölüm|122296|Aktif|Türkçe||
+170005|ÇOCUK GELİŞİMİ PR.|Önlisans/Lisans Programı|170004|Aktif|Türkçe||2
+170006|ÇOCUK GELİŞİMİ PR. (İÖ)|Önlisans/Lisans Programı|170004|Aktif|Türkçe||2
+298592|ÇOCUK BAKIMI VE GENÇLİK HİZMETLERİ BÖLÜMÜ|Bölüm|122296|Arşiv|Türkçe||
+122299|İKTİSADİ VE İDARİ PROGRAMLAR BÖLÜMÜ|Bölüm|122296|Kapalı|Türkçe|26.02.2009|
+122300|MUHASEBE PR.|Önlisans/Lisans Programı|122299|Kapalı|Türkçe|26.02.2009|2
+145973|MUHASEBE PR. (İÖ)|Önlisans/Lisans Programı|122299|Kapalı|Türkçe|26.02.2009|2
+294854|İNTERNET VE AĞ TEKNOLOJİLERİ PR. (UZAKTAN ÖĞRETİM)|Önlisans/Lisans Programı|122296|Aktif|Türkçe|27.04.2016|2
+169435|YABANCI DİLLER EĞİTİMİ UYGULAMA VE ARAŞTIRMA MERKEZİ|Araştırma ve Uygulama Merkezi|121946|Kapalı|Türkçe||
+201921|YABANCI DİLLER YÜKSEKOKULU|Yüksekokul|121946|Aktif|Türkçe|13.11.2010|
+207276|MÜTERCİM TERCÜMANLIK BÖLÜMÜ|Bölüm|201921|Aktif|Türkçe|21.07.2011|
+207340|MÜTERCİM TERCÜMANLIK (ALMANCA) ANABİLİM DALI|Anabilim Dalı|207276|Aktif|Türkçe|21.07.2011|
+207342|MÜTERCİM TERCÜMANLIK (ARAPÇA) ANABİLİM DALI|Anabilim Dalı|207276|Aktif|Türkçe|21.07.2011|
+267558|MÜTERCİM TERCÜMANLIK (ÇİNCE) ANABİLİM DALI|Anabilim Dalı|207276|Aktif|Türkçe|25.03.2015|
+207277|MÜTERCİM TERCÜMANLIK (İNGİLİZCE) ANABİLİM DALI|Anabilim Dalı|207276|Aktif|Türkçe|21.07.2011|
+332465|YABANCI DİLLER BÖLÜMÜ|Bölüm|201921|Aktif|İngilizce|14.09.2017|
+212704|YARATICI YAZARLIK UYGULAMA VE ARAŞTIRMA MERKEZİ|Araştırma ve Uygulama Merkezi|121946|Aktif|Türkçe|21.12.2011|
+122373|YAŞAR DOĞU BEDEN EĞİTİMİ VE SPOR YÜKSEKOKULU|Yüksekokul|121946|Yarı Pasif|Türkçe|10.06.1997|
+295465|ANTRENÖRLÜK EĞİTİMİ PR.|Önlisans/Lisans Programı|122373|Yarı Pasif|Türkçe|01.01.1999|4
+295466|ANTRENÖRLÜK EĞİTİMİ PR. (İÖ) (BK.2)|Önlisans/Lisans Programı|122373|Yarı Pasif|Türkçe|01.01.1999|4
+295467|BEDEN EĞİTİMİ VE SPOR ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|122373|Yarı Pasif|Türkçe|01.01.1999|4
+295468|BEDEN EĞİTİMİ VE SPOR ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|122373|Kapalı|Türkçe|01.01.1999|4
+295469|SPOR YÖNETİCİLİĞİ PR.|Önlisans/Lisans Programı|122373|Yarı Pasif|Türkçe|01.01.1999|4
+295470|SPOR YÖNETİCİLİĞİ PR. (İÖ) (BK.2)|Önlisans/Lisans Programı|122373|Yarı Pasif|Türkçe|01.01.1999|4
+242486|YAŞAR DOĞU SPOR BİLİMLERİ FAKÜLTESİ|Fakülte|121946|Aktif|Türkçe|24.07.2013|
+122377|ANTRENÖRLÜK EĞİTİMİ BÖLÜMÜ|Bölüm|242486|Aktif|Türkçe|26.02.2009|
+122378|ANTRENÖRLÜK EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|122377|Aktif|Türkçe|26.02.2009|
+169399|ANTRENÖRLÜK EĞİTİMİ PR.|Önlisans/Lisans Programı|122377|Aktif|Türkçe||4
+319847|ANTRENÖRLÜK EĞİTİMİ PR. (İÖ)|Önlisans/Lisans Programı|122377|Aktif|Türkçe|20.04.2017|4
+169400|ANTRENÖRLÜK EĞİTİMİ PR. (İÖ) (BK.2)|Önlisans/Lisans Programı|122377|Aktif|Türkçe|26.02.2009|4
+122374|BEDEN EĞİTİMİ VE SPOR BÖLÜMÜ|Bölüm|242486|Aktif|Türkçe|26.02.2009|
+122375|BEDEN EĞİTİMİ VE SPOR EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|122374|Aktif|Türkçe|26.02.2009|
+169401|BEDEN EĞİTİMİ VE SPOR ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|122374|Aktif|Türkçe||4
+277323|BEDEN EĞİTİMİ VE SPOR ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|122374|Arşiv|Türkçe|27.05.2015|4
+176337|BEDEN EĞİTİMİ VE SPOR EĞİTİMİ BÖLÜMÜ|Bölüm|242486|Aktif|Türkçe|02.10.2013|
+327807|BEDEN EĞİTİMİ VE SPOR EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|176337|Aktif|Türkçe|14.08.2017|
+214343|REKREASYON BÖLÜMÜ|Bölüm|242486|Aktif|Türkçe|14.03.2012|
+322903|REKREASYON ANABİLİM DALI|Anabilim Dalı|214343|Aktif|Türkçe|31.05.2017|
+122376|SPOR YÖNETİCİLİĞİ BÖLÜMÜ|Bölüm|242486|Aktif|Türkçe|26.02.2009|
+322902|SPOR YÖNETİCİLİĞİ ANABİLİM DALI|Anabilim Dalı|122376|Aktif|Türkçe|31.05.2017|
+169402|SPOR YÖNETİCİLİĞİ PR.|Önlisans/Lisans Programı|122376|Aktif|Türkçe||4
+320347|SPOR YÖNETİCİLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|122376|Aktif|Türkçe|20.04.2017|4
+169406|SPOR YÖNETİCİLİĞİ PR. (İÖ) (BK.2)|Önlisans/Lisans Programı|122376|Aktif|Türkçe|26.02.2009|4
+201881|YEŞİLYURT DEMİR ÇELİK MESLEK YÜKSEKOKULU|Meslek Yüksekokulu|121946|Aktif|Türkçe|23.12.2010|
+207456|BİLGİSAYAR TEKNOLOJİLERİ BÖLÜMÜ|Bölüm|201881|Aktif|Türkçe||
+207430|BİLGİSAYAR TEKNOLOJİSİ PR.|Önlisans/Lisans Programı|207456|Pasif|Türkçe|21.07.2011|2
+215486|ELEKTRONİK VE OTOMASYON BÖLÜMÜ|Bölüm|201881|Aktif|Türkçe||
+216376|BİYOMEDİKAL CİHAZ TEKNOLOJİSİ PR.|Önlisans/Lisans Programı|215486|Aktif|Türkçe|09.05.2012|2
+215487|ELEKTRONİK TEKNOLOJİSİ PR.|Önlisans/Lisans Programı|215486|Aktif|Türkçe||2
+215491|ELEKTRONİK TEKNOLOJİSİ PR. (İÖ)|Önlisans/Lisans Programı|215486|Aktif|Türkçe||2
+202398|ELEKTRİK VE ENERJİ BÖLÜMÜ|Bölüm|201881|Aktif|Türkçe|19.01.2011|
+215485|ELEKTRİK PR.|Önlisans/Lisans Programı|202398|Aktif|Türkçe||2
+215490|ELEKTRİK PR. (İÖ)|Önlisans/Lisans Programı|202398|Aktif|Türkçe||2
+202462|GAZ VE TESİSATI TEKNOLOJİSİ PR.|Önlisans/Lisans Programı|202398|Pasif|Türkçe|19.01.2011|2
+202460|GIDA İŞLEME BÖLÜMÜ|Bölüm|201881|Aktif|Türkçe|19.01.2011|
+202461|GIDA TEKNOLOJİSİ PR.|Önlisans/Lisans Programı|202460|Aktif|Türkçe|19.01.2011|2
+267990|GIDA TEKNOLOJİSİ PR. (İÖ)|Önlisans/Lisans Programı|202460|Aktif|Türkçe|26.03.2015|2
+215488|KİMYA VE KİMYASAL İŞLEME TEKNOLOJİLERİ BÖLÜMÜ|Bölüm|201881|Aktif|Türkçe||
+215489|KİMYA TEKNOLOJİSİ PR.|Önlisans/Lisans Programı|215488|Aktif|Türkçe|23.12.2010|2
+238468|KİMYA TEKNOLOJİSİ PR. (İÖ)|Önlisans/Lisans Programı|215488|Aktif|Türkçe|01.01.1900|2
+202463|MAKİNE VE METAL TEKNOLOJİLERİ BÖLÜMÜ|Bölüm|201881|Aktif|Türkçe|19.01.2011|
+202464|ENDÜSTRİYEL KALIPÇILIK PR.|Önlisans/Lisans Programı|202463|Aktif|Türkçe|19.01.2011|2
+257436|ENDÜSTRİYEL KALIPÇILIK PR. (İÖ)|Önlisans/Lisans Programı|202463|Aktif|Türkçe|17.04.2014|2
+292439|MAKİNE PR.|Önlisans/Lisans Programı|202463|Pasif|Türkçe|30.03.2016|2
+216349|MEKATRONİK PR.|Önlisans/Lisans Programı|202463|Pasif|Türkçe|09.05.2012|2
+215492|MOTORLU ARAÇLAR VE ULAŞTIRMA TEKNOLOJİLERİ BÖLÜMÜ|Bölüm|201881|Aktif|Türkçe||
+215493|OTOMOTİV TEKNOLOJİSİ PR.|Önlisans/Lisans Programı|215492|Aktif|Türkçe||2
+240434|OTOMOTİV TEKNOLOJİSİ PR. (İÖ)|Önlisans/Lisans Programı|215492|Aktif|Türkçe|01.01.1900|2
+122258|ZİRAAT FAKÜLTESİ|Fakülte|121946|Aktif|Türkçe|16.05.1976|
+122259|BAHÇE BİTKİLERİ BÖLÜMÜ|Bölüm|122258|Aktif|Türkçe|26.02.2009|
+122260|BAHÇE BİTKİLERİ ANABİLİM DALI|Anabilim Dalı|122259|Aktif|Türkçe||
+169293|BAHÇE BİTKİLERİ PR.|Önlisans/Lisans Programı|122259|Aktif|Türkçe|26.02.2009|4
+275955|BAHÇE BİTKİLERİ PR. (İÖ)|Önlisans/Lisans Programı|122259|Arşiv|Türkçe|08.05.2015|4
+206910|BAĞ YETİŞTİRME VE ISLAHI ANABİLİM DALI|Anabilim Dalı|122259|Aktif|Türkçe|01.06.2011|
+206908|MEYVE YETİŞTİRME VE ISLAHI ANABİLİM DALI|Anabilim Dalı|122259|Aktif|Türkçe|01.06.2011|
+206909|SEBZE YETİŞTİRME VE ISLAHI ANABİLİM DALI|Anabilim Dalı|122259|Aktif|Türkçe|01.06.2011|
+207804|SÜS BİTKİLERİ YETİŞTİRME VE ISLAHI ANABİLİM DALI|Anabilim Dalı|122259|Aktif|Türkçe|01.06.2011|
+122261|BİTKİ KORUMA BÖLÜMÜ|Bölüm|122258|Aktif|Türkçe|26.02.2009|
+169294|BİTKİ KORUMA PR.|Önlisans/Lisans Programı|122261|Aktif|Türkçe|26.02.2009|4
+122262|ENTOMOLOJİ ANABİLİM DALI|Anabilim Dalı|122261|Aktif|Türkçe||
+122263|FİTOPATOLOJİ ANABİLİM DALI|Anabilim Dalı|122261|Aktif|Türkçe||
+122284|BİTKİSEL ÜRETİM BÖLÜMÜ|Bölüm|122258|Aktif|Türkçe|26.02.2009|
+327865|BİTKİSEL ÜRETİM ANABİLİM DALI|Anabilim Dalı|122284|Aktif|Türkçe|14.08.2017|
+268124|BİTKİSEL ÜRETİM PR.|Önlisans/Lisans Programı|122284|Yarı Pasif|Türkçe|01.01.1900|4
+321366|GENEL ZİRAİ BİLGİLER PR.|Önlisans/Lisans Programı|122258|Arşiv|Türkçe|01.01.1999|4
+122275|GIDA BİLİMİ VE TEKNOLOJİSİ BÖLÜMÜ|Bölüm|122258|Aktif|Türkçe|26.02.2009|
+122278|DERİ VE LİF TEKNOLOJİSİ ANABİLİM DALI|Anabilim Dalı|122275|Aktif|Türkçe|26.02.2009|
+122276|GIDA BİLİMİ VE TEKNOLOJİSİ ANABİLİM DALI|Anabilim Dalı|122275|Aktif|Türkçe|26.02.2009|
+306381|GIDA BİLİMİ VE TEKNOLOJİSİ PR.|Önlisans/Lisans Programı|122275|Arşiv|Türkçe|01.01.1999|4
+275956|GIDA MÜHENDİSLİĞİ PR.|Önlisans/Lisans Programı|122275|Arşiv|Türkçe|08.05.2015|4
+122277|SÜT TEKNOLOJİSİ ANABİLİM DALI|Anabilim Dalı|122275|Aktif|Türkçe|26.02.2009|
+321367|GIDA BİLİMİ VE TEKNOLOJİSİ PR.|Önlisans/Lisans Programı|122258|Arşiv|Türkçe|01.01.1999|4
+122285|HAYVANSAL ÜRETİM BÖLÜMÜ|Bölüm|122258|Aktif|Türkçe|26.02.2009|
+328194|HAYVANSAL ÜRETİM ANABİLİM DALI|Anabilim Dalı|122285|Aktif|Türkçe|14.08.2017|
+268108|HAYVANSAL ÜRETİM PR.|Önlisans/Lisans Programı|122285|Kapalı|Türkçe|01.01.1900|4
+122264|TARIM EKONOMİSİ BÖLÜMÜ|Bölüm|122258|Aktif|Türkçe|26.02.2009|
+169295|TARIM EKONOMİSİ PR.|Önlisans/Lisans Programı|122264|Aktif|Türkçe|26.02.2009|4
+122266|TARIM POLİTİKASI VE YAYIM ANABİLİM DALI|Anabilim Dalı|122264|Aktif|Türkçe||
+122265|TARIM İŞLETMECİLİĞİ ANABİLİM DALI|Anabilim Dalı|122264|Aktif|Türkçe||
+122279|TARIM MAKİNELERİ VE TEKNOLOJİLERİ MÜHENDİLİĞİ BÖLÜMÜ|Bölüm|122258|Aktif|Türkçe|26.02.2009|
+122280|TARIM MAKİNELERİ ANABİLİM DALI|Anabilim Dalı|122279|Aktif|Türkçe||
+169296|TARIM MAKİNELERİ PR.|Önlisans/Lisans Programı|122279|Yarı Pasif|Türkçe|26.02.2009|4
+261783|TARIM MAKİNELERİ VE TEKNOLOJİLERİ MÜHENDİSLİĞİ PR.|Önlisans/Lisans Programı|122279|Aktif|Türkçe|25.09.2014|4
+122286|TARIM TEKNOLOJİSİ BÖLÜMÜ|Bölüm|122258|Aktif|Türkçe|26.02.2009|
+328703|TARIM TEKNOLOJİSİ ANABİLİM DALI|Anabilim Dalı|122286|Aktif|Türkçe|14.08.2017|
+275957|TARIM TEKNOLOJİSİ PR.|Önlisans/Lisans Programı|122286|Arşiv|Türkçe|08.05.2015|4
+321365|TARIM ÜRÜNLERİ TEKNOLOJİSİ PR.|Önlisans/Lisans Programı|122258|Arşiv|Türkçe|01.01.1999|4
+146101|TARIMSAL BİYOTEKNOLOJİ BÖLÜMÜ|Bölüm|122258|Aktif|Türkçe||
+176341|BİTKİSEL BİYOTEKNOLOJİ ANABİLİM DALI|Anabilim Dalı|146101|Aktif|Türkçe||
+161569|ENZİM VE MİKROBİYEL BİYOTEKNOLOJİ ANABİLİM DALI|Anabilim Dalı|146101|Aktif|Türkçe|26.02.2009|
+161570|HAYVANSAL BİYOTEKNOLOJİ ANABİLİM DALI|Anabilim Dalı|146101|Aktif|Türkçe|26.02.2009|
+169297|TARIMSAL BİYOTEKNOLOJİ PR.|Önlisans/Lisans Programı|146101|Aktif|Türkçe|26.02.2009|4
+122281|TARIMSAL YAPILAR VE SULAMA BÖLÜMÜ|Bölüm|122258|Aktif|Türkçe|26.02.2009|
+122282|TARIMSAL YAPILAR VE SULAMA ANABİLİM DALI|Anabilim Dalı|122281|Aktif|Türkçe||
+169299|TARIMSAL YAPILAR VE SULAMA PR.|Önlisans/Lisans Programı|122281|Yarı Pasif|Türkçe|26.02.2009|4
+122267|TARLA BİTKİLERİ BÖLÜMÜ|Bölüm|122258|Aktif|Türkçe|26.02.2009|
+213016|ENDÜSTRİ BİTKİLERİ ANABİLİM DALI|Anabilim Dalı|122267|Aktif|Türkçe|25.01.2012|
+213018|TAHILLAR VE YEMEKLK BAKLAGİLLER ANABİLİM DALI|Anabilim Dalı|122267|Aktif|Türkçe|25.01.2012|
+122268|TARLA BİTKİLERİ ANABİLİM DALI|Anabilim Dalı|122267|Aktif|Türkçe||
+169300|TARLA BİTKİLERİ PR.|Önlisans/Lisans Programı|122267|Aktif|Türkçe|26.02.2009|4
+275958|TARLA BİTKİLERİ PR. (İÖ)|Önlisans/Lisans Programı|122267|Arşiv|Türkçe|08.05.2015|4
+213017|ÇAYIR MERA VE YEM BİTKİLERİ ANABİLİM DALI|Anabilim Dalı|122267|Aktif|Türkçe|25.01.2012|
+145775|TOPRAK BİLİMİ VE BİTKİ BESLEME BÖLÜMÜ|Bölüm|122258|Aktif|Türkçe||
+209316|BİTKİ BESLEME ANABİLİM DALI|Anabilim Dalı|145775|Aktif|Türkçe||
+122270|TOPRAK ANABİLİM DALI|Anabilim Dalı|145775|Aktif|Türkçe|26.02.2009|
+208208|TOPRAK BİLİMİ VE BİTKİ BESLEME ANABİLİM DALI|Anabilim Dalı|145775|Aktif|Türkçe||
+169301|TOPRAK BİLİMİ VE BİTKİ BESLEME PR.|Önlisans/Lisans Programı|145775|Aktif|Türkçe||4
+258806|TOPRAK BİLİMİ VE BİTKİ BESLEME PR. (KKTC UYRUKLU)|Önlisans/Lisans Programı|145775|Pasif|Türkçe|11.08.2014|4
+275959|TOPRAK PR.|Önlisans/Lisans Programı|145775|Kapalı|Türkçe|08.05.2015|4
+122271|ZOOTEKNİ BÖLÜMÜ|Bölüm|122258|Aktif|Türkçe|26.02.2009|
+122272|BİYOMETRİ VE GENETİK ANABİLİM DALI|Anabilim Dalı|122271|Aktif|Türkçe||
+122273|HAYVAN YETİŞTİRME ANABİLİM DALI|Anabilim Dalı|122271|Aktif|Türkçe||
+122274|YEMLER VE HAYVAN BESLEME ANABİLİM DALI|Anabilim Dalı|122271|Aktif|Türkçe||
+169302|ZOOTEKNİ PR.|Önlisans/Lisans Programı|122271|Aktif|Türkçe|26.02.2009|4
+275960|ZOOTEKNİ PR. (İÖ)|Önlisans/Lisans Programı|122271|Arşiv|Türkçe|08.05.2015|4
+122283|ZİRAAT MÜHENDİSLİĞİ BÖLÜMÜ|Bölüm|122258|Aktif|Türkçe|26.02.2009|
+328883|ZİRAAT MÜHENDİSLİĞİ ANABİLİM DALI|Anabilim Dalı|122283|Aktif|Türkçe|14.08.2017|
+319790|ZİRAAT MÜHENDİSLİĞİ PR.|Önlisans/Lisans Programı|122283|Yarı Pasif|Türkçe|18.04.2017|4
+269763|ÇARŞAMBA MESLEK YÜKSEKOKULU|Meslek Yüksekokulu|121946|Arşiv|Türkçe||
+273621|BİLGİSAYAR PROGRAMCILIĞI PR.|Önlisans/Lisans Programı|269763|Arşiv|Türkçe||2
+273622|BİLGİSAYAR PROGRAMCILIĞI PR. (İÖ) (BK.601)|Önlisans/Lisans Programı|269763|Arşiv|Türkçe||2
+273623|BİLGİSAYAR TEKNOLOJİSİ VE PROGRAMLAMA PR. (İÖ) (BK.601)|Önlisans/Lisans Programı|269763|Arşiv|Türkçe||2
+273624|MUHASEBE PR.|Önlisans/Lisans Programı|269763|Arşiv|Türkçe||2
+273625|MUHASEBE PR. (İÖ) (BK.606)|Önlisans/Lisans Programı|269763|Arşiv|Türkçe||2
+273626|MUHASEBE VE VERGİ UYGULAMALARI PR.|Önlisans/Lisans Programı|269763|Arşiv|Türkçe||2
+273627|MUHASEBE VE VERGİ UYGULAMALARI PR. (İÖ) (BK.606)|Önlisans/Lisans Programı|269763|Arşiv|Türkçe||2
+169488|ÇARŞAMBA TİCARET BORSASI MESLEK YÜKSEKOKULU|Meslek Yüksekokulu|121946|Aktif|Türkçe|14.09.1992|
+237237|BÜRO HİZMETLERİ VE SEKRETERLİK BÖLÜMÜ|Bölüm|169488|Aktif|Türkçe|02.04.2013|
+237238|BÜRO YÖNETİMİ VE YÖNETİCİ ASİSTANLIĞI PR.|Önlisans/Lisans Programı|237237|Pasif|Türkçe|02.04.2013|2
+238470|ÇAĞRI MERKEZİ HİZMETLERİ PR.|Önlisans/Lisans Programı|237237|Aktif|Türkçe|01.01.1900|2
+294078|ÇAĞRI MERKEZİ HİZMETLERİ PR. (İÖ)|Önlisans/Lisans Programı|237237|Aktif|Türkçe|20.04.2016|2
+229374|BİLGİSAYAR TEKNOLOJİLERİ BÖLÜMÜ|Bölüm|169488|Aktif|Türkçe||
+267067|BİLGİ GÜVENLİĞİ TEKNOLOJİSİ PR.|Önlisans/Lisans Programı|229374|Aktif|Türkçe|05.03.2015|2
+327583|BİLGİ GÜVENLİĞİ TEKNOLOJİSİ PR. (KKTC UYRUKLU)|Önlisans/Lisans Programı|229374|Aktif|Türkçe|04.08.2017|2
+267068|BİLGİ GÜVENLİĞİ TEKNOLOJİSİ PR. (İÖ)|Önlisans/Lisans Programı|229374|Aktif|Türkçe|05.03.2015|2
+229375|BİLGİSAYAR PROGRAMCILIĞI PR.|Önlisans/Lisans Programı|229374|Aktif|Türkçe||2
+229376|BİLGİSAYAR PROGRAMCILIĞI PR. (İÖ)|Önlisans/Lisans Programı|229374|Aktif|Türkçe||2
+324470|BİLGİSAYAR TEKNOLOJİSİ VE PROGRAMLAMA PR. (İÖ)|Önlisans/Lisans Programı|169488|Arşiv|Türkçe|01.01.1999|2
+229371|FİNANS BANKACILIK VE SİGORTACILIK BÖLÜMÜ|Bölüm|169488|Aktif|Türkçe||
+174834|BANKACILIK VE SİGORTACILIK PR.|Önlisans/Lisans Programı|229371|Aktif|Türkçe||2
+238469|BANKACILIK VE SİGORTACILIK PR. (İÖ)|Önlisans/Lisans Programı|229371|Aktif|Türkçe|01.01.1900|2
+257433|HUKUK BÖLÜMÜ|Bölüm|169488|Aktif|Türkçe|17.04.2014|
+229377|MUHASEBE VE VERGİ BÖLÜMÜ|Bölüm|169488|Aktif|Türkçe||
+229378|MUHASEBE VE VERGİ UYGULAMALARI PR.|Önlisans/Lisans Programı|229377|Aktif|Türkçe||2
+229379|MUHASEBE VE VERGİ UYGULAMALARI PR. (İÖ)|Önlisans/Lisans Programı|229377|Aktif|Türkçe||2
+284505|MÜLKİYET KORUMA VE GÜVENLİK BÖLÜMÜ|Bölüm|169488|Aktif|Türkçe|13.01.2016|
+257434|SOSYAL GÜVENLİK PR.|Önlisans/Lisans Programı|284505|Aktif|Türkçe|17.04.2014|2
+257435|SOSYAL GÜVENLİK PR. (İÖ)|Önlisans/Lisans Programı|284505|Aktif|Türkçe|17.04.2014|2
+128047|TEKNİK PROGRAMLAR BÖLÜMÜ|Bölüm|169488|Kapalı|Türkçe||
+128048|BİLGİSAYAR PROGRAMCILIĞI PR.|Önlisans/Lisans Programı|128047|Kapalı|Türkçe|10.09.2009|2
+145991|BİLGİSAYAR PROGRAMCILIĞI PR. (İÖ)|Önlisans/Lisans Programı|128047|Kapalı|Türkçe|10.09.2009|2
+169524|HARİTA VE KADASTRO PR.|Önlisans/Lisans Programı|128047|Kapalı|Türkçe|10.09.2009|2
+169525|MEYVE VE SEBZE İŞLEME PR.|Önlisans/Lisans Programı|128047|Kapalı|Türkçe|10.09.2009|2
+122290|İKTİSADİ VE İDARİ PROGRAMLAR BÖLÜMÜ|Bölüm|169488|Kapalı|Türkçe||
+122291|MUHASEBE VE VERGİ UYGULAMALARI PR.|Önlisans/Lisans Programı|122290|Kapalı|Türkçe|10.09.2009|2
+145987|MUHASEBE VE VERGİ UYGULAMALARI PR. (İÖ)|Önlisans/Lisans Programı|122290|Kapalı|Türkçe|10.09.2009|2
+169522|TURİZM VE OTEL İŞLETMECİLİĞİ PR.|Önlisans/Lisans Programı|122290|Kapalı|Türkçe||2
+293682|ÇARŞAMBA İNSAN VE TOPLUM BİLİMLERİ FAKÜLTESİ|Fakülte|121946|Pasif|Türkçe|08.04.2016|
+122392|ÇEVRE SORUNLARI UYGULAMA VE ARAŞTIRMA MERKEZİ|Araştırma ve Uygulama Merkezi|121946|Aktif|Türkçe|10.09.2009|
+205247|ÇOCUK EĞİTİMİ UYGULAMA VE ARAŞTIRMA MERKEZİ|Araştırma ve Uygulama Merkezi|121946|Aktif|Türkçe|16.02.2011|
+229373|BİLGİSAYAR TEKNOLOJİLERİ BÖLÜMÜ|Bölüm|205247|Aktif|Türkçe||
+269764|ÇORUM MESLEK YÜKSEKOKULU|Meslek Yüksekokulu|121946|Arşiv|Türkçe||
+273629|BÜRO YÖNETİMİ VE SEKRETERLİK PR.|Önlisans/Lisans Programı|269764|Arşiv|Türkçe||2
+273628|BİLGİSAYAR PROGRAMCILIĞI PR.|Önlisans/Lisans Programı|269764|Arşiv|Türkçe||2
+273630|ELEKTRİK PR.|Önlisans/Lisans Programı|269764|Arşiv|Türkçe||2
+273631|HARİTA KADASTRO PR.|Önlisans/Lisans Programı|269764|Arşiv|Türkçe||2
+273634|MAKİNE PR.|Önlisans/Lisans Programı|269764|Arşiv|Türkçe||2
+273635|MOTOR PR.|Önlisans/Lisans Programı|269764|Arşiv|Türkçe||2
+273636|MUHASEBE PR.|Önlisans/Lisans Programı|269764|Arşiv|Türkçe||2
+273637|PAZARLAMA PR.|Önlisans/Lisans Programı|269764|Arşiv|Türkçe||2
+273638|SEKRETERLİK PR.|Önlisans/Lisans Programı|269764|Arşiv|Türkçe||2
+273639|SERAMİK PR.|Önlisans/Lisans Programı|269764|Arşiv|Türkçe||2
+273632|İNŞAAT PR.|Önlisans/Lisans Programı|269764|Arşiv|Türkçe||2
+273633|İŞLETMECİLİK PR.|Önlisans/Lisans Programı|269764|Arşiv|Türkçe||2
+269781|ÜNYE İKTİSADİ VE İDARİ BİLİMLER FAKÜLTESİ|Fakülte|121946|Arşiv|Türkçe||
+273695|İKTİSAT PR.|Önlisans/Lisans Programı|269781|Arşiv|Türkçe||4
+273696|İŞLETME PR.|Önlisans/Lisans Programı|269781|Arşiv|Türkçe||4
+206457|ÜNİVERSİTE-SANAYİ-İŞ DÜNYASI İŞBİRLİĞİNİ GELİŞTİRME UYGULAMA VE ARAŞTIRMA MERKEZİ|Araştırma ve Uygulama Merkezi|121946|Kapalı|Türkçe|01.01.1900|
+122181|İKTİSADİ VE İDARİ BİLİMLER FAKÜLTESİ|Fakülte|121946|Aktif|Türkçe|04.12.1995|
+128036|SİYASET BİLİMİ VE KAMU YÖNETİMİ BÖLÜMÜ|Bölüm|122181|Aktif|Türkçe|26.02.2009|
+140256|HUKUK BİLİMLERİ ANABİLİM DALI|Anabilim Dalı|128036|Aktif|Türkçe|26.02.2009|
+140259|KENTLEŞME VE ÇEVRE SORUNLARI ANABİLİM DALI|Anabilim Dalı|128036|Aktif|Türkçe|26.02.2009|
+128038|SİYASET BİLİMİ VE KAMU YÖNETİMİ ANABİLİM DALI|Anabilim Dalı|128036|Aktif|Türkçe||
+169309|SİYASET BİLİMİ VE KAMU YÖNETİMİ PR.|Önlisans/Lisans Programı|128036|Aktif|Türkçe|26.02.2009|4
+305047|SİYASET BİLİMİ VE KAMU YÖNETİMİ PR. (%50 BURSLU)|Önlisans/Lisans Programı|128036|Yarı Pasif|Türkçe|29.09.2016|4
+305046|SİYASET BİLİMİ VE KAMU YÖNETİMİ PR. (TAM BURSLU)|Önlisans/Lisans Programı|128036|Yarı Pasif|Türkçe|29.09.2016|4
+308554|SİYASET BİLİMİ VE KAMU YÖNETİMİ PR. (ÜCRETLİ)|Önlisans/Lisans Programı|128036|Yarı Pasif|Türkçe|20.10.2016|4
+241628|SİYASET BİLİMİ VE KAMU YÖNETİMİ PR. (İÖ)|Önlisans/Lisans Programı|128036|Yarı Pasif|Türkçe|01.01.1900|4
+140253|SİYASET VE SOSYAL BİLİMLER ANABİLİM DALI|Anabilim Dalı|128036|Aktif|Türkçe|26.02.2009|
+140262|YÖNETİM BİLİMLERİ ANABİLİM DALI|Anabilim Dalı|128036|Aktif|Türkçe|26.02.2009|
+299049|SİYASET BİLİMİ VE ULUSLARARASI İLİŞKİLER BÖLÜMÜ|Bölüm|122181|Yarı Pasif|Türkçe|02.08.2016|
+299052|SİYASET BİLİMİ VE ULUSLARARASI İLİŞKİLER PR. (%25 BURSLU)|Önlisans/Lisans Programı|299049|Yarı Pasif|Türkçe|02.08.2016|4
+299053|SİYASET BİLİMİ VE ULUSLARARASI İLİŞKİLER PR. (%50 BURSLU)|Önlisans/Lisans Programı|299049|Yarı Pasif|Türkçe|02.08.2016|4
+299050|SİYASET BİLİMİ VE ULUSLARARASI İLİŞKİLER PR. (TAM BURSLU)|Önlisans/Lisans Programı|299049|Yarı Pasif|Türkçe|02.08.2016|4
+299051|SİYASET BİLİMİ VE ULUSLARARASI İLİŞKİLER PR. (ÜCRETLİ)|Önlisans/Lisans Programı|299049|Yarı Pasif|Türkçe|02.08.2016|4
+235948|ULUSLARARASI TİCARET VE LOJİSTİK BÖLÜMÜ|Bölüm|122181|Aktif|Türkçe|13.03.2013|
+326681|LOJİSTİK VE TEDARİK ZİNCİRİ YÖNETİMİ ANABİLİM DALI|Anabilim Dalı|235948|Aktif|Türkçe|27.07.2017|
+326680|ULUSLARARASI TİCARET ANABİLİM DALI|Anabilim Dalı|235948|Aktif|Türkçe|27.07.2017|
+252836|ULUSLARARASI TİCARET VE LOJİSTİK PR.|Önlisans/Lisans Programı|235948|Aktif|Türkçe|20.02.2014|4
+308556|ULUSLARARASI TİCARET VE LOJİSTİK PR. (%25 BURSLU)|Önlisans/Lisans Programı|235948|Yarı Pasif|Türkçe|20.10.2016|4
+304580|ULUSLARARASI TİCARET VE LOJİSTİK PR. (%50 BURSLU)|Önlisans/Lisans Programı|235948|Yarı Pasif|Türkçe|29.09.2016|4
+304558|ULUSLARARASI TİCARET VE LOJİSTİK PR. (TAM BURSLU)|Önlisans/Lisans Programı|235948|Yarı Pasif|Türkçe|29.09.2016|4
+308557|ULUSLARARASI TİCARET VE LOJİSTİK PR. (ÜCRETLİ)|Önlisans/Lisans Programı|235948|Yarı Pasif|Türkçe|20.10.2016|4
+299054|ULUSLARARASI TİCARET VE İŞLETMECİLİK BÖLÜMÜ|Bölüm|122181|Yarı Pasif|Türkçe|02.08.2016|
+299057|ULUSLARARASI TİCARET VE İŞLETMECİLİK PR. (%25 BURSLU)|Önlisans/Lisans Programı|299054|Yarı Pasif|Türkçe|02.08.2016|4
+299058|ULUSLARARASI TİCARET VE İŞLETMECİLİK PR. (%50 BURSLU)|Önlisans/Lisans Programı|299054|Yarı Pasif|Türkçe|02.08.2016|4
+299055|ULUSLARARASI TİCARET VE İŞLETMECİLİK PR. (TAM BURSLU)|Önlisans/Lisans Programı|299054|Yarı Pasif|Türkçe|02.08.2016|4
+299056|ULUSLARARASI TİCARET VE İŞLETMECİLİK PR. (ÜCRETLİ)|Önlisans/Lisans Programı|299054|Yarı Pasif|Türkçe|02.08.2016|4
+128039|ULUSLARARASI İLİŞKİLER BÖLÜMÜ|Bölüm|122181|Aktif|Türkçe|10.09.2009|
+128040|ULUSLARARASI İLİŞKİLER ANABİLİM DALI|Anabilim Dalı|128039|Aktif|Türkçe||
+122182|İKTİSAT BÖLÜMÜ|Bölüm|122181|Aktif|Türkçe||
+209993|İKTİSADİ GELİŞME VE ULUSLARARASI İKTİSAT ANABİLİM DALI|Anabilim Dalı|122182|Aktif|Türkçe|03.11.2011|
+128029|İKTİSAT ANABİLİM DALI|Anabilim Dalı|122182|Aktif|Türkçe||
+209991|İKTİSAT POLİTİKASI ANABİLİM DALI|Anabilim Dalı|122182|Aktif|Türkçe|03.11.2011|
+169307|İKTİSAT PR.|Önlisans/Lisans Programı|122182|Aktif|Türkçe|26.02.2009|4
+275765|İKTİSAT PR. (İNGİLİZCE)|Önlisans/Lisans Programı|122182|Aktif|İngilizce|30.04.2015|4
+209992|İKTİSAT TARİHİ ANABİLİM DALI|Anabilim Dalı|122182|Aktif|Türkçe|03.11.2011|
+209990|İKTİSAT TEORİSİ ANABİLİM DALI|Anabilim Dalı|122182|Aktif|Türkçe|03.11.2011|
+128030|İŞLETME BÖLÜMÜ|Bölüm|122181|Aktif|Türkçe||
+140383|MUHASEBE VE FİNANSMAN ANABİLİM DALI|Anabilim Dalı|128030|Aktif|Türkçe|26.02.2009|
+140384|SAYISAL YÖNTEMLER ANABİLİM DALI|Anabilim Dalı|128030|Aktif|Türkçe|26.02.2009|
+140241|YÖNETİM VE ORGANİZASYON ANABİLİM DALI|Anabilim Dalı|128030|Aktif|Türkçe|26.02.2009|
+140243|ÜRETİM YÖNETİMİ VE PAZARLAMA ANABİLİM DALI|Anabilim Dalı|128030|Aktif|Türkçe|26.02.2009|
+128032|İŞLETME ANABİLİM DALI|Anabilim Dalı|128030|Aktif|Türkçe||
+169308|İŞLETME PR.|Önlisans/Lisans Programı|128030|Aktif|Türkçe||4
+299047|İŞLETME PR. (%25 BURSLU)|Önlisans/Lisans Programı|128030|Yarı Pasif|Türkçe|02.08.2016|4
+299048|İŞLETME PR. (%50 BURSLU)|Önlisans/Lisans Programı|128030|Yarı Pasif|Türkçe|02.08.2016|4
+304555|İŞLETME PR. (%75 BURSLU)|Önlisans/Lisans Programı|128030|Yarı Pasif|Türkçe|29.09.2016|4
+299045|İŞLETME PR. (TAM BURSLU)|Önlisans/Lisans Programı|128030|Yarı Pasif|Türkçe|02.08.2016|4
+299046|İŞLETME PR. (ÜCRETLİ)|Önlisans/Lisans Programı|128030|Yarı Pasif|Türkçe|02.08.2016|4
+241627|İŞLETME PR. (İÖ)|Önlisans/Lisans Programı|128030|Yarı Pasif|Türkçe|01.01.1900|4
+122157|İLAHİYAT FAKÜLTESİ|Fakülte|121946|Aktif|Türkçe|20.07.1982|
+122166|FELSEFE VE DİN BİLİMLERİ BÖLÜMÜ|Bölüm|122157|Aktif|Türkçe|10.09.2009|
+122167|DİN EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|122166|Aktif|Türkçe||
+168737|DİN EĞİTİMİ BİLİM DALI|Bilim Dalı|122167|Aktif|Türkçe||
+168740|DİN EĞİTİMİ TARİHİ BİLİM DALI|Bilim Dalı|122167|Aktif|Türkçe||
+122171|DİN FELSEFESİ ANABİLİM DALI|Anabilim Dalı|122166|Aktif|Türkçe||
+122174|DİN PSİKOLOJİSİ ANABİLİM DALI|Anabilim Dalı|122166|Aktif|Türkçe||
+122173|DİN SOSYOLOJİSİ ANABİLİM DALI|Anabilim Dalı|122166|Aktif|Türkçe||
+122168|DİNLER TARİHİ ANABİLİM DALI|Anabilim Dalı|122166|Aktif|Türkçe||
+168742|DİN FENOMENOLOJİSİ BİLİM DALI|Bilim Dalı|122168|Aktif|Türkçe||
+168743|DİNLER TARİHİ BİLİM DALI|Bilim Dalı|122168|Aktif|Türkçe||
+168744|MUKAYESELİ DİNLER BİLİM DALI|Bilim Dalı|122168|Aktif|Türkçe||
+122169|FELSEFE TARİHİ ANABİLİM DALI|Anabilim Dalı|122166|Aktif|Türkçe||
+168747|YENİÇAĞ FELSEFESİ TARİHİ BİLİM DALI|Bilim Dalı|122169|Aktif|Türkçe|10.09.2009|
+168746|İLKÇAĞ FELSEFESİ TARİHİ BİLİM DALI|Bilim Dalı|122169|Aktif|Türkçe||
+122172|MANTIK ANABİLİM DALI|Anabilim Dalı|122166|Aktif|Türkçe||
+122170|İSLAM FELSEFESİ ANABİLİM DALI|Anabilim Dalı|122166|Aktif|Türkçe||
+168751|TÜRK DÜŞÜNCE TARİHİ BİLİM DALI|Bilim Dalı|122170|Aktif|Türkçe||
+168748|İSLAM AHLAKI BİLİM DALI|Bilim Dalı|122170|Aktif|Türkçe||
+168750|İSLAM FELSEFESİ TARİHİ BİLİM DALI|Bilim Dalı|122170|Aktif|Türkçe||
+122158|TEMEL İSLAM BİLİMLERİ BÖLÜMÜ|Bölüm|122157|Aktif|Türkçe|10.09.2009|
+122165|ARAP DİLİ VE BELAGATI ANABİLİM DALI|Anabilim Dalı|122158|Aktif|Türkçe||
+168759|DİN EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|122158|Aktif|Türkçe||
+122159|HADİS ANABİLİM DALI|Anabilim Dalı|122158|Aktif|Türkçe||
+168761|HADİS BİLİM DALI|Bilim Dalı|122159|Aktif|Türkçe||
+168762|HADİS USULÜ VE TARİHİ BİLİM DALI|Bilim Dalı|122159|Aktif|Türkçe||
+122160|KELAM ANABİLİM DALI|Anabilim Dalı|122158|Aktif|Türkçe||
+168729|KELAM TARİHİ BİLİM DALI|Bilim Dalı|122160|Aktif|Türkçe||
+168731|SİSTEMATİK TASAVVUF BİLİM DALI|Bilim Dalı|122160|Aktif|Türkçe||
+166016|KUR'AN-I KERİM OKUMA VE KIRAAT İLMİ ANABİLİM DALI|Anabilim Dalı|122158|Aktif|Türkçe|10.09.2009|
+122164|TASAVVUF ANABİLİM DALI|Anabilim Dalı|122158|Aktif|Türkçe||
+168727|SİSTEMATİK TASAVVUF BİLİM DALI|Bilim Dalı|122164|Aktif|Türkçe||
+168728|TASAVVUF TARİHİ BİLİM DALI|Bilim Dalı|122164|Aktif|Türkçe||
+122161|TEFSİR ANABİLİM DALI|Anabilim Dalı|122158|Aktif|Türkçe||
+168723|KIRAAT BİLİM DALI|Bilim Dalı|122161|Aktif|Türkçe||
+168724|TEFSİR BİLİM DALI|Bilim Dalı|122161|Aktif|Türkçe||
+168725|TEFSİR USULÜ VE TARİHİ BİLİM DALI|Bilim Dalı|122161|Aktif|Türkçe||
+122162|İSLAM HUKUKU ANABİLİM DALI|Anabilim Dalı|122158|Aktif|Türkçe||
+168769|MUKAYESELİ İSLAM HUKUKU BİLİM DALI|Bilim Dalı|122162|Aktif|Türkçe||
+168763|İSLAM HUKUKU BİLİM DALI|Bilim Dalı|122162|Aktif|Türkçe||
+168766|İSLAM HUKUKU USULÜ VE TARİHİ BİLİM DALI|Bilim Dalı|122162|Aktif|Türkçe||
+122163|İSLAM MEZHEPLERİ TARİHİ ANABİLİM DALI|Anabilim Dalı|122158|Aktif|Türkçe||
+168734|KLASİK İSLAM MEZHEPLERİ BİLİM DALI|Bilim Dalı|122163|Aktif|Türkçe||
+168736|ÇAĞDAŞ İSLAM AKIMLARI BİLİM DALI|Bilim Dalı|122163|Aktif|Türkçe||
+122180|İLAHİYAT BÖLÜMÜ|Bölüm|122157|Aktif|Türkçe|10.09.2009|
+168773|İLAHİYAT PR.|Önlisans/Lisans Programı|122157|Aktif|Türkçe|10.09.2009|4
+215478|İLAHİYAT PR. (UZAKTAN ÖĞRETİM)|Önlisans/Lisans Programı|122157|Yarı Pasif|Türkçe||4
+304583|İLAHİYAT PR. (ÜCRETLİ)|Önlisans/Lisans Programı|122157|Kapalı|Türkçe|29.09.2016|4
+168774|İLAHİYAT PR. (İÖ)|Önlisans/Lisans Programı|122157|Aktif|Türkçe||4
+122117|İLKÖĞRETİM DİN KÜLTÜRÜ VE AHLAK BİLGİSİ EĞİTİMİ BÖLÜMÜ|Bölüm|122157|Aktif|Türkçe|11.07.1992|
+122156|İLKÖĞRETİM DİN KÜLTÜRÜ VE AHLAK BİLGİSİ EĞİTİMİ ANABİLİM DALI|Anabilim Dalı|122117|Aktif|Türkçe|10.09.2009|
+128027|İLKÖĞRETİM DİN KÜLTÜRÜ VE AHLAK BİLGİSİ EĞİTİMİ BÖLÜMÜ|Bölüm|122157|Aktif|Türkçe||
+168655|İLKÖĞRETİM DİN KÜLTÜRÜ VE AHLAK BİLGİSİ ÖĞRETMENLİĞİ PR.|Önlisans/Lisans Programı|128027|Yarı Pasif|Türkçe||4
+241629|İLKÖĞRETİM DİN KÜLTÜRÜ VE AHLAK BİLGİSİ ÖĞRETMENLİĞİ PR. (İÖ)|Önlisans/Lisans Programı|128027|Yarı Pasif|Türkçe|01.01.1900|4
+122175|İSLAM TARİHİ VE SANATLARI BÖLÜMÜ|Bölüm|122157|Aktif|Türkçe|10.09.2009|
+122179|TÜRK DİN MUSİKİSİ ANABİLİM DALI|Anabilim Dalı|122175|Aktif|Türkçe||
+201435|TÜRK VE İSLAM SANATLARI ANABİLİM DALI|Anabilim Dalı|122175|Aktif|Türkçe||
+122178|TÜRK İSLAM EDEBİYATI ANABİLİM DALI|Anabilim Dalı|122175|Aktif|Türkçe||
+122177|TÜRK İSLAM SANATLARI TARİHİ ANABİLİM DALI|Anabilim Dalı|122175|Aktif|Türkçe|10.09.2009|
+168756|TÜRK SÜSLEME VE HAT SANATLARI BİLİM DALI|Bilim Dalı|122177|Aktif|Türkçe||
+168755|TÜRK İSLAM MİMARİSİ BİLİM DALI|Bilim Dalı|122177|Aktif|Türkçe||
+122176|İSLAM TARİHİ ANABİLİM DALI|Anabilim Dalı|122175|Aktif|Türkçe||
+168754|TÜRK İSLAM TARİHİ BİLİM DALI|Bilim Dalı|122176|Aktif|Türkçe||
+168752|İSLAM KURUMLARI TARİHİ BİLİM DALI|Bilim Dalı|122176|Aktif|Türkçe||
+168753|İSLAM TARİHİ BİLİM DALI|Bilim Dalı|122176|Aktif|Türkçe||
+207558|İLERİ TEKNOLOJİ UYGULAMA VE ARAŞTIRMA MERKEZİ|Araştırma ve Uygulama Merkezi|121946|Yarı Pasif|Türkçe|01.01.1900|
+169371|İLETİŞİM FAKÜLTESİ|Fakülte|121946|Aktif|Türkçe|26.02.2010|
+204804|GAZETECİLİK BÖLÜMÜ|Bölüm|169371|Aktif|Türkçe|02.03.2011|
+214011|GAZETECİLİK ANABİLİM DALI|Anabilim Dalı|204804|Aktif|Türkçe||
+239111|GAZETECİLİK PR.|Önlisans/Lisans Programı|204804|Aktif|Türkçe|18.04.2013|4
+204836|GÖRSEL İLETİŞİM TASARIMI BÖLÜMÜ|Bölüm|169371|Aktif|Türkçe|02.03.2011|
+214010|GÖRSEL İLETİŞİM TASARIMI ANABİLİM DALI|Anabilim Dalı|204836|Aktif|Türkçe||
+204803|HALKLA İLİŞKİLER VE TANITIM BÖLÜMÜ|Bölüm|169371|Aktif|Türkçe|02.03.2011|
+229170|HALKLA İLİŞKİLER VE TANITIM ANABİLİM DALI|Anabilim Dalı|204803|Aktif|Türkçe||
+239110|HALKLA İLİŞKİLER VE TANITIM PR.|Önlisans/Lisans Programı|204803|Aktif|Türkçe|18.04.2013|4
+291019|HALKLA İLİŞKİLER VE TANITIM PR. (İÖ)|Önlisans/Lisans Programı|204803|Aktif|Türkçe|18.02.2016|4
+204805|RADYO, SİNEMA VE TELEVİZYON BÖLÜMÜ|Bölüm|169371|Aktif|Türkçe|02.03.2011|
+214009|RADYO TELEVİZYON VE SİNEMA ANABİLİM DALI|Anabilim Dalı|204805|Aktif|Türkçe||
+294037|RADYO, TELEVİZYON VE SİNEMA PR.|Önlisans/Lisans Programı|204805|Aktif|Türkçe|20.04.2016|4
+282786|YENİ MEDYA VE İLETİŞİM TASARIMI BÖLÜMÜ|Bölüm|169371|Aktif|Türkçe|09.12.2015|
+323146|YENİ MEDYA VE İLETİŞİM TASARIMI ANABİLİM DALI|Anabilim Dalı|282786|Aktif|Türkçe|31.05.2017|
+233174|İLETİŞİM TASARIMI BÖLÜMÜ|Bölüm|169371|Kapalı|Türkçe|31.01.2013|
+309995|İŞ SAĞLIĞI VE GÜVENLİĞİ, MESLEK HASTALIKLARI UYGULAMA VE ARAŞTIRMA MERKEZİ|Araştırma ve Uygulama Merkezi|121946|Aktif|Türkçe|17.04.2013|

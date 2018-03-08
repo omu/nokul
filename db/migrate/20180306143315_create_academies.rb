@@ -3,10 +3,9 @@ class CreateAcademies < ActiveRecord::Migration[5.1]
     create_table :academies do |t|
       t.string :name
       t.integer :yoksis_id
-      t.boolean :active
+      t.integer :status, default: 0
       t.date :founded_at
       t.belongs_to :university, foreign_key: true
-
       t.timestamps
     end
   end

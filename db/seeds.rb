@@ -44,6 +44,103 @@ File.open(Rails.root.join('db', 'cities.yml')) do |cities|
   end
 end
 
+# Create units [YOKSIS'ten alınan export'la birimleri oluştur.]
+File.open(Rails.root.join('db', 'units.csv')) do |university_units|
+  university_units.read.each_line do |unit|
+    yoksis_id, name, unit_type, parent_yoksis_id, status, language_code, founded_at, duration = unit.chomp.split('|')
+
+    statuses = {
+      'Aktif' => 0,
+      'Yarı Pasif' => 1,
+      'Pasif' => 2,
+      'Kapalı' => 3,
+      'Arşiv'=> 4
+    }
+
+    case unit_type
+    when 'Üniversite'
+      University.create!(
+        name: name,
+        university_type: 0,
+        yoksis_id: yoksis_id,
+        status: statuses["#{status}"].to_i,
+        founded_at: founded_at.to_date,
+        city: City.find_by(iso: "TR-55")
+      )
+    when 'Fakülte'
+      Faculty.create!(
+        name: name,
+        yoksis_id: yoksis_id,
+        status: statuses["#{status}"].to_i,
+        founded_at: founded_at ? founded_at.to_date : nil,
+        university: University.find_by(yoksis_id: parent_yoksis_id)
+      )
+    when 'Yüksekokul'
+      Academy.create!(
+        name: name,
+        yoksis_id: yoksis_id,
+        status: statuses["#{status}"].to_i,
+        founded_at: founded_at ? founded_at.to_date : nil,
+        university: University.find_by(yoksis_id: parent_yoksis_id)
+      )
+    when 'Meslek Yüksekokulu'
+      VocationalSchool.create!(
+        name: name,
+        yoksis_id: yoksis_id,
+        status: statuses["#{status}"].to_i,
+        founded_at: founded_at ? founded_at.to_date : nil,
+        university: University.find_by(yoksis_id: parent_yoksis_id)
+      )
+    when 'Enstitü'
+      Institute.create!(
+        name: name,
+        yoksis_id: yoksis_id,
+        status: statuses["#{status}"].to_i,
+        founded_at: founded_at ? founded_at.to_date : nil,
+        university: University.find_by(yoksis_id: parent_yoksis_id)
+      )
+    # when 'Bölüm'
+    #   faculty = Faculty.find_by(yoksis_id: parent_yoksis_id)
+    #   vocational_school = VocationalSchool.find_by(yoksis_id: parent_yoksis_id)
+    #   academy = Academy.find_by(yoksis_id: parent_yoksis_id)
+    #   university = University.find_by(yoksis_id: parent_yoksis_id)
+
+    #   department = Department.new(name: name, yoksis_id: yoksis_id, active: active == 'Aktif' ? true : false, language_code: language_code)
+
+    #   if faculty
+    #     faculty.departments << department
+    #   elsif vocational_school
+    #     vocational_school.departments << department
+    #   elsif academy
+    #     academy.departments << department
+    #   else
+    #     puts "can not find the parent for #{name}"
+    #   end
+    # when 'Önlisans/Lisans Programı'
+    #   faculty = Faculty.find_by(yoksis_id: parent_yoksis_id)
+    #   vocational_school = VocationalSchool.find_by(yoksis_id: parent_yoksis_id)
+    #   academy = Academy.find_by(yoksis_id: parent_yoksis_id)
+    #   department = Department.find_by(yoksis_id: parent_yoksis_id)
+
+    #   undergrad_program = UndergraduateProgram.new(name: name, yoksis_id: yoksis_id, active: active == 'Aktif' ? true : false, language_code: language_code)
+
+    #   if faculty
+    #     faculty.undergraduate_programs << undergrad_program
+    #   elsif vocational_school
+    #     vocational_school.undergraduate_programs << undergrad_program
+    #   elsif academy
+    #     academy.undergraduate_programs << undergrad_program
+    #   elsif department
+    #     department.undergraduate_programs << undergrad_program
+    #   else
+    #     puts "can not find the parent for #{name}"
+    #   end
+    else
+      "We have no idea about this unit!"
+    end
+  end
+end
+
 # Create academic staff
 # client = Services::Yoksis::V1::AkademikPersonel.new
 # number_of_pages = client.number_of_pages

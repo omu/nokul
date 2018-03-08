@@ -6,8 +6,7 @@ class CreateDepartments < ActiveRecord::Migration[5.1]
       t.boolean :active
       t.string :language_code
       t.date :founded_at
-      t.integer :unit_id, foreign_key: true
-      t.string :unity_type
+      t.references :unit, polymorphic: true, index: true
       t.timestamps
     end
   end

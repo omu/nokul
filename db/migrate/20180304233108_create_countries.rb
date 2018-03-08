@@ -4,7 +4,6 @@ class CreateCountries < ActiveRecord::Migration[5.1]
       t.string :name
       t.string :iso
       t.string :code
-      t.timestamps
     end
   end
 end

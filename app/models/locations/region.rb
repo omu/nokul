@@ -3,7 +3,7 @@ class Region < ApplicationRecord
 
   # relations
   belongs_to :country
-  has_many :cities, dependent: :destroy
+  has_many :cities, dependent: :nullify
 
   # validations
   validates :name, :nuts_code, presence: true, uniqueness: true, strict: true
