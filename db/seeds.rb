@@ -57,6 +57,13 @@ File.open(Rails.root.join('db', 'units.csv')) do |university_units|
       'Arşiv'=> 4
     }
 
+    unit_types = {
+      'Fakülte' => 'Faculty',
+      'Yüksekokul' => 'Academy',
+      'Meslek Yüksekokulu' => 'VocationalSchool',
+      'Enstitü' => 'Institute'
+    }
+
     case unit_type
     when 'Üniversite'
       University.create!(
@@ -67,38 +74,18 @@ File.open(Rails.root.join('db', 'units.csv')) do |university_units|
         founded_at: founded_at.to_date,
         city: City.find_by(iso: "TR-55")
       )
-    when 'Fakülte'
-      Faculty.create!(
+    when 'Fakülte' || 'Yüksekokul' || 'Meslek Yüksekokulu' || 'Enstitü'
+      university = University.find_by(yoksis_id: parent_yoksis_id)
+
+      university.units << Unit.new(
         name: name,
         yoksis_id: yoksis_id,
         status: statuses["#{status}"].to_i,
         founded_at: founded_at ? founded_at.to_date : nil,
-        university: University.find_by(yoksis_id: parent_yoksis_id)
+        university: university,
+        type: unit_types["#{unit_type}"]
       )
-    when 'Yüksekokul'
-      Academy.create!(
-        name: name,
-        yoksis_id: yoksis_id,
-        status: statuses["#{status}"].to_i,
-        founded_at: founded_at ? founded_at.to_date : nil,
-        university: University.find_by(yoksis_id: parent_yoksis_id)
-      )
-    when 'Meslek Yüksekokulu'
-      VocationalSchool.create!(
-        name: name,
-        yoksis_id: yoksis_id,
-        status: statuses["#{status}"].to_i,
-        founded_at: founded_at ? founded_at.to_date : nil,
-        university: University.find_by(yoksis_id: parent_yoksis_id)
-      )
-    when 'Enstitü'
-      Institute.create!(
-        name: name,
-        yoksis_id: yoksis_id,
-        status: statuses["#{status}"].to_i,
-        founded_at: founded_at ? founded_at.to_date : nil,
-        university: University.find_by(yoksis_id: parent_yoksis_id)
-      )
+
     # when 'Bölüm'
     #   faculty = Faculty.find_by(yoksis_id: parent_yoksis_id)
     #   vocational_school = VocationalSchool.find_by(yoksis_id: parent_yoksis_id)

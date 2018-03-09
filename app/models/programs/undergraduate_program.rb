@@ -1,5 +1,5 @@
 class UndergraduateProgram < ApplicationRecord
-  belongs_to :program, polymorphic: true
+  # belongs_to :program, polymorphic: true
 end
 
 # TODO: active alanı bool değil enum olacak. çok durum var.

@@ -5,12 +5,8 @@ class University < ApplicationRecord
 
   # relations
   belongs_to :city
-  has_many :faculties, dependent: :destroy
-  has_many :institutes, dependent: :destroy
-  has_many :vocational_schools, dependent: :destroy
-  has_many :academies, dependent: :destroy
-  has_many :departments, dependent: :destroy
-
+  has_many :units
+  
   # validations
   validates :name, :short_name, :yoksis_id, :university_type, :status,
             presence: true, strict: true
@@ -22,4 +18,7 @@ class University < ApplicationRecord
     self.name = name.mb_chars.titlecase
     self.short_name = name.split(' ').map(&:first).join.mb_chars.upcase
   end
+
+  # delegations
+  delegate :faculties, :institutes, :vocational_schools, :academies, to: :units
 end

@@ -1,10 +1,11 @@
-class CreateVocationalSchools < ActiveRecord::Migration[5.1]
+class CreateUnits < ActiveRecord::Migration[5.1]
   def change
-    create_table :vocational_schools do |t|
+    create_table :units do |t|
       t.string :name
       t.integer :yoksis_id
       t.integer :status, default: 0
       t.date :founded_at
+      t.string :type
       t.belongs_to :university, foreign_key: true
       t.timestamps
     end
