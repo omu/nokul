@@ -49,6 +49,8 @@ File.open(Rails.root.join('db', 'units.csv')) do |university_units|
   university_units.read.each_line do |unit|
     yoksis_id, name, unit_type, parent_yoksis_id, status, language_code, founded_at, duration = unit.chomp.split('|')
 
+    puts "processing unit with yoksis_id: #{yoksis_id}, name: #{name}, type: #{unit_type}, parent_yoksis_id: #{parent_yoksis_id}"
+
     statuses = {
       'Aktif' => 0,
       'Yarı Pasif' => 1,
@@ -61,12 +63,15 @@ File.open(Rails.root.join('db', 'units.csv')) do |university_units|
       'Fakülte' => 'Faculty',
       'Yüksekokul' => 'Academy',
       'Meslek Yüksekokulu' => 'VocationalSchool',
-      'Enstitü' => 'Institute'
+      'Enstitü' => 'Institute',
+      'Bölüm' => 'Department',
+      'Anabilim Dalı' => 'ScienceDiscipline',
+      'Anasanat Dalı' => 'ArtDiscipline'
     }
 
-    case unit_type
+    case unit_type.chomp
     when 'Üniversite'
-      University.create!(
+      university = University.create!(
         name: name,
         university_type: 0,
         yoksis_id: yoksis_id,
@@ -74,10 +79,10 @@ File.open(Rails.root.join('db', 'units.csv')) do |university_units|
         founded_at: founded_at.to_date,
         city: City.find_by(iso: "TR-55")
       )
-    when 'Fakülte' || 'Yüksekokul' || 'Meslek Yüksekokulu' || 'Enstitü'
-      university = University.find_by(yoksis_id: parent_yoksis_id)
 
-      university.units << Unit.new(
+    when 'Fakülte', 'Yüksekokul', 'Meslek Yüksekokulu', 'Enstitü'
+      university = University.find_by(yoksis_id: parent_yoksis_id)
+      university.units << Unit.create!(
         name: name,
         yoksis_id: yoksis_id,
         status: statuses["#{status}"].to_i,
@@ -85,6 +90,32 @@ File.open(Rails.root.join('db', 'units.csv')) do |university_units|
         university: university,
         type: unit_types["#{unit_type}"]
       )
+
+    when 'Anabilim Dalı', 'Anasanat Dalı', 'Bölüm'
+      arr = []
+      arr << University.find_by(yoksis_id: parent_yoksis_id)
+      arr << Unit.find_by(yoksis_id: parent_yoksis_id)
+
+      if arr.first.is_a?(University)
+        university.units << Unit.new(
+          name: name,
+          yoksis_id: yoksis_id,
+          status: statuses["#{status}"].to_i,
+          founded_at: founded_at ? founded_at.to_date : nil,
+          university: university,
+          type: unit_types["#{unit_type}"]
+        )
+      elsif arr.first.is_a?(Unit)
+        university.units << Unit.new(
+          name: name,
+          yoksis_id: yoksis_id,
+          status: statuses["#{status}"].to_i,
+          founded_at: founded_at ? founded_at.to_date : nil,
+          university: arr.first.university,
+          type: unit_types["#{unit_type}"],
+          parent: arr.first
+        )
+      end
 
     # when 'Bölüm'
     #   faculty = Faculty.find_by(yoksis_id: parent_yoksis_id)

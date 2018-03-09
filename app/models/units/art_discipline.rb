@@ -1,0 +1,2 @@
+class ArtDiscipline < Unit
+end

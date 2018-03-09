@@ -5,7 +5,7 @@ class CreateUnits < ActiveRecord::Migration[5.1]
       t.integer :yoksis_id
       t.integer :status, default: 0
       t.date :founded_at
-      t.string :type
+      t.string :type # STI field
       t.belongs_to :university, foreign_key: true
       t.timestamps
     end

@@ -3,6 +3,7 @@ class Unit < ApplicationRecord
   include UnitStatus
 
   # relations
+  has_ancestry
   belongs_to :university
 
   # validations
@@ -18,11 +19,14 @@ class Unit < ApplicationRecord
 
   # STI helpers
   def self.types
-    %w(Faculty Institute VocationalSchool Academy)
+    %w(Faculty Institute VocationalSchool Academy Department ScienceDiscipline ArtDiscipline)
   end
 
   scope :faculties, -> { where(type: 'Faculty') } 
   scope :institutes, -> { where(type: 'Institute') }
   scope :vocational_schools, -> { where(type: 'VocationalSchool') }
-  scope :academies, -> { where(type: 'Academy') } 
+  scope :academies, -> { where(type: 'Academy') }
+  scope :departments, -> { where(type: 'Department') }
+  scope :science_disciplines, -> { where(type: 'ScienceDiscipline') }
+  scope :art_disciplines, -> { where(type: 'ArtDiscipline') }
 end

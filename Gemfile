@@ -5,6 +5,9 @@ gem 'pg'
 gem 'puma', '~> 3.7'
 gem 'rails', '~> 5.1.5'
 
+# active-record
+gem 'ancestry'
+
 # assets
 gem 'coffee-rails', '~> 4.2'
 gem 'sass-rails', '~> 5.0'

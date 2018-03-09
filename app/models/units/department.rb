@@ -1,0 +1,2 @@
+class Department < Unit
+end
