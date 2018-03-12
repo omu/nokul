@@ -1,7 +1,0 @@
-autoload :Faculty, 'unit'
-autoload :Institute, 'unit'
-autoload :VocationalSchool, 'unit'
-autoload :Academy, 'unit'
-autoload :Department, 'unit'
-autoload :ScienceDiscipline, 'unit'
-autoload :ArtDiscipline, 'unit'

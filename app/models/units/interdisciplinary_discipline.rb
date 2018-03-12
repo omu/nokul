@@ -1,0 +1,2 @@
+class InterdisciplinaryDiscipline < Unit
+end

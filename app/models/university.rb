@@ -20,5 +20,6 @@ class University < ApplicationRecord
   end
 
   # delegations
-  delegate :faculties, :institutes, :vocational_schools, :academies, to: :units
+  delegate :faculties, :institutes, :vocational_schools, :academies, :departments, :science_disciplines,
+           :art_disciplines, :interdisciplinary_disciplines, to: :units
 end

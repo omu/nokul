@@ -1,0 +1,2 @@
+class InterdisciplinaryDoctoralProgram < Program
+end

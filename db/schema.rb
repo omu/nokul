@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180309133152) do
+ActiveRecord::Schema.define(version: 20180312115623) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,20 @@ ActiveRecord::Schema.define(version: 20180309133152) do
     t.string "name"
     t.string "iso"
     t.string "code"
+  end
+
+  create_table "programs", force: :cascade do |t|
+    t.string "name"
+    t.integer "yoksis_id"
+    t.integer "status", default: 0
+    t.date "founded_at"
+    t.integer "language"
+    t.integer "duration"
+    t.string "type"
+    t.bigint "unit_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["unit_id"], name: "index_programs_on_unit_id"
   end
 
   create_table "regions", force: :cascade do |t|
@@ -65,6 +79,7 @@ ActiveRecord::Schema.define(version: 20180309133152) do
 
   add_foreign_key "cities", "countries"
   add_foreign_key "cities", "regions"
+  add_foreign_key "programs", "units"
   add_foreign_key "regions", "countries"
   add_foreign_key "units", "universities"
   add_foreign_key "universities", "cities"

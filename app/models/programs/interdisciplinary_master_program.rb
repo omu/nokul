@@ -1,0 +1,2 @@
+class InterdisciplinaryMasterProgram < Program
+end

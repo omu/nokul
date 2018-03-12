@@ -1,4 +1,2 @@
-class MasterProgram < ApplicationRecord
-  # belongs_to :institute
+class MasterProgram < Program
 end
-# TODO: active alanı bool değil enum olacak. çok durum var.

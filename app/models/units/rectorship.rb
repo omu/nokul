@@ -1,0 +1,2 @@
+class Rectorship < Unit
+end

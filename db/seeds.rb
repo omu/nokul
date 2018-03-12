@@ -47,9 +47,9 @@ end
 # Create units [YOKSIS'ten alınan export'la birimleri oluştur.]
 File.open(Rails.root.join('db', 'units.csv')) do |university_units|
   university_units.read.each_line do |unit|
-    yoksis_id, name, unit_type, parent_yoksis_id, status, language_code, founded_at, duration = unit.chomp.split('|')
+    yoksis_id, name, unit_type, parent_yoksis_id, status, language, founded_at, duration = unit.chomp.split('|')
 
-    puts "processing unit with yoksis_id: #{yoksis_id}, name: #{name}, type: #{unit_type}, parent_yoksis_id: #{parent_yoksis_id}"
+    # puts "processing unit with yoksis_id: #{yoksis_id}, name: #{name}, type: #{unit_type}, parent_yoksis_id: #{parent_yoksis_id}"
 
     statuses = {
       'Aktif' => 0,
@@ -66,7 +66,17 @@ File.open(Rails.root.join('db', 'units.csv')) do |university_units|
       'Enstitü' => 'Institute',
       'Bölüm' => 'Department',
       'Anabilim Dalı' => 'ScienceDiscipline',
-      'Anasanat Dalı' => 'ArtDiscipline'
+      'Anasanat Dalı' => 'ArtDiscipline',
+      'Disiplinlerarası Anabilim Dalı' => 'InterdisciplinaryDiscipline',
+      'Önlisans/Lisans Programı' => 'UndergraduateProgram',
+      'Yüksek Lisans Programı' => 'MasterProgram',
+      'Doktora Programı' => 'DoctoralProgram',
+      'Disiplinlerarası Yüksek Lisans Programı' => 'InterdisciplinaryMasterProgram',
+      'Disiplinlerarası Doktora Programı' => 'InterdisciplinaryDoctoralProgram',
+      'Rektörlük' => 'Rectorship',
+      'Araştırma ve Uygulama Merkezi' => 'ResearchCenter',
+      'Sanatta Yeterlilik Programı' => 'ProficiencyInArtProgram',
+      'Bilim Dalı' => 'Discipline'
     }
 
     case unit_type.chomp
@@ -80,9 +90,9 @@ File.open(Rails.root.join('db', 'units.csv')) do |university_units|
         city: City.find_by(iso: "TR-55")
       )
 
-    when 'Fakülte', 'Yüksekokul', 'Meslek Yüksekokulu', 'Enstitü'
+    when 'Fakülte', 'Yüksekokul', 'Meslek Yüksekokulu', 'Enstitü', 'Rektörlük', 'Araştırma ve Uygulama Merkezi'
       university = University.find_by(yoksis_id: parent_yoksis_id)
-      university.units << Unit.create!(
+      university.units << Unit.new(
         name: name,
         yoksis_id: yoksis_id,
         status: statuses["#{status}"].to_i,
@@ -91,13 +101,14 @@ File.open(Rails.root.join('db', 'units.csv')) do |university_units|
         type: unit_types["#{unit_type}"]
       )
 
-    when 'Anabilim Dalı', 'Anasanat Dalı', 'Bölüm'
+    when 'Anabilim Dalı', 'Anasanat Dalı', 'Bölüm', 'Disiplinlerarası Anabilim Dalı', 'Bilim Dalı'
       arr = []
       arr << University.find_by(yoksis_id: parent_yoksis_id)
       arr << Unit.find_by(yoksis_id: parent_yoksis_id)
+      arr = arr.compact.first
 
-      if arr.first.is_a?(University)
-        university.units << Unit.new(
+      if arr.is_a?(University)
+        arr.units << Unit.new(
           name: name,
           yoksis_id: yoksis_id,
           status: statuses["#{status}"].to_i,
@@ -105,70 +116,33 @@ File.open(Rails.root.join('db', 'units.csv')) do |university_units|
           university: university,
           type: unit_types["#{unit_type}"]
         )
-      elsif arr.first.is_a?(Unit)
-        university.units << Unit.new(
+      elsif arr.is_a?(Unit)
+        arr.university.units << Unit.new(
           name: name,
           yoksis_id: yoksis_id,
           status: statuses["#{status}"].to_i,
           founded_at: founded_at ? founded_at.to_date : nil,
-          university: arr.first.university,
+          university: arr.university,
           type: unit_types["#{unit_type}"],
-          parent: arr.first
+          parent: arr
         )
       end
 
-    # when 'Bölüm'
-    #   faculty = Faculty.find_by(yoksis_id: parent_yoksis_id)
-    #   vocational_school = VocationalSchool.find_by(yoksis_id: parent_yoksis_id)
-    #   academy = Academy.find_by(yoksis_id: parent_yoksis_id)
-    #   university = University.find_by(yoksis_id: parent_yoksis_id)
+    when 'Önlisans/Lisans Programı', 'Yüksek Lisans Programı', 'Doktora Programı', 'Disiplinlerarası Yüksek Lisans Programı', 'Disiplinlerarası Doktora Programı', 'Sanatta Yeterlilik Programı'
+      unit = Unit.find_by(yoksis_id: parent_yoksis_id)
 
-    #   department = Department.new(name: name, yoksis_id: yoksis_id, active: active == 'Aktif' ? true : false, language_code: language_code)
-
-    #   if faculty
-    #     faculty.departments << department
-    #   elsif vocational_school
-    #     vocational_school.departments << department
-    #   elsif academy
-    #     academy.departments << department
-    #   else
-    #     puts "can not find the parent for #{name}"
-    #   end
-    # when 'Önlisans/Lisans Programı'
-    #   faculty = Faculty.find_by(yoksis_id: parent_yoksis_id)
-    #   vocational_school = VocationalSchool.find_by(yoksis_id: parent_yoksis_id)
-    #   academy = Academy.find_by(yoksis_id: parent_yoksis_id)
-    #   department = Department.find_by(yoksis_id: parent_yoksis_id)
-
-    #   undergrad_program = UndergraduateProgram.new(name: name, yoksis_id: yoksis_id, active: active == 'Aktif' ? true : false, language_code: language_code)
-
-    #   if faculty
-    #     faculty.undergraduate_programs << undergrad_program
-    #   elsif vocational_school
-    #     vocational_school.undergraduate_programs << undergrad_program
-    #   elsif academy
-    #     academy.undergraduate_programs << undergrad_program
-    #   elsif department
-    #     department.undergraduate_programs << undergrad_program
-    #   else
-    #     puts "can not find the parent for #{name}"
-    #   end
+      unit.programs << Program.new(
+        name: name,
+        yoksis_id: yoksis_id,
+        status: statuses["#{status}"].to_i,
+        founded_at: founded_at ? founded_at.to_date : nil,
+        language: language,
+        duration: duration,
+        type: unit_types["#{unit_type}"],
+        unit: unit
+      )
     else
-      "We have no idea about this unit!"
+      puts "We have no idea about this unit: #{unit}"
     end
   end
 end
-
-# Create academic staff
-# client = Services::Yoksis::V1::AkademikPersonel.new
-# number_of_pages = client.number_of_pages
-
-# for i in 1..number_of_pages
-#   client.list_academic_staff(i).each do |academic_staff|
-#     foo = academic_staff[:tc_kimlik_no]
-#     bar = academic_staff[:adi]
-#     baz = academic_staff[:soyadi]
-#     taz = academic_staff[:kadro_unvan]
-#     kaz = academic_staff[:birim_id]
-#   end
-# end
