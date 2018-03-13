@@ -6,7 +6,8 @@ class Country < ApplicationRecord
   has_many :regions, dependent: :nullify
 
   # validations
-  validates :name, :iso, :code, presence: true, uniqueness: true, strict: true
+  validates :name, :iso, :code,
+            presence: true, uniqueness: true, strict: true
   validates_associated :cities
   validates_associated :regions
 

@@ -6,7 +6,8 @@ class Region < ApplicationRecord
   has_many :cities, dependent: :nullify
 
   # validations
-  validates :name, :nuts_code, presence: true, uniqueness: true, strict: true
+  validates :name, :nuts_code,
+            presence: true, uniqueness: true, strict: true
   validates_associated :cities
 
   # callbacks

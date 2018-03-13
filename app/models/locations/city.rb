@@ -9,6 +9,7 @@ class City < ApplicationRecord
   # validations
   validates :name, :iso, :nuts_code,
             presence: true, uniqueness: true, strict: true
+  validates_associated :universities
 
   # callbacks
   before_create do

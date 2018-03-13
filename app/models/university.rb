@@ -1,17 +1,17 @@
 class University < ApplicationRecord
   # concerns
   include UnitStatus
-  include UniversityType
 
   # relations
   belongs_to :city
-  has_many :units
-  
+  has_many :units, dependent: :nullify
+
   # validations
   validates :name, :short_name, :yoksis_id, :university_type, :status,
             presence: true, strict: true
   validates :name, :short_name, :yoksis_id,
             uniqueness: true, strict: true
+  validates_associated :units
 
   # callbacks
   before_validation do
@@ -21,5 +21,8 @@ class University < ApplicationRecord
 
   # delegations
   delegate :faculties, :institutes, :vocational_schools, :academies, :departments, :science_disciplines,
-           :art_disciplines, :interdisciplinary_disciplines, to: :units
+           :art_disciplines, :interdisciplinary_disciplines, :disciplines, :rectorship, :research_centers, to: :units
+
+  # enumerations
+  enum university_type: %w[state foundation]
 end

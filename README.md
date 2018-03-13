@@ -28,6 +28,12 @@ bundle
 rake db:setup
 ```
 
+- [OPTIONAL]. If you want to create YOKSIS departments inside your app, run the task shown below:
+
+```bash
+rake yoksis:departments
+```
+
 ## Design
 
 ![model-diagrams](https://yuml.me/serhat/Nokul.png)

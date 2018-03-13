@@ -10,6 +10,8 @@ class Program < ApplicationRecord
             presence: true, strict: true
   validates :yoksis_id,
             uniqueness: true, strict: true
+  validates :name,
+            uniqueness: { scope: [:unit_id, :status] }
 
   # callbacks
   before_validation do
@@ -18,10 +20,13 @@ class Program < ApplicationRecord
 
   # STI helpers
   def self.types
-    %w(UndergraduateProgram MasterProgram DoctoralProgram InterdisciplinaryMasterProgram InterdisciplinaryDoctoralProgram ProficiencyInArtProgram)
+    %w[
+      UndergraduateProgram MasterProgram DoctoralProgram InterdisciplinaryMasterProgram
+      InterdisciplinaryDoctoralProgram ProficiencyInArtProgram
+    ]
   end
 
-  scope :undergraduate_programs, -> { where(type: 'UndergraduateProgram') } 
+  scope :undergraduate_programs, -> { where(type: 'UndergraduateProgram') }
   scope :master_programs, -> { where(type: 'MasterProgram') }
   scope :doctoral_programs, -> { where(type: 'DoctoralProgram') }
   scope :interdisciplinary_master_programs, -> { where(type: 'InterdisciplinaryMasterProgram') }
