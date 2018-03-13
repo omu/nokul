@@ -30,4 +30,26 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 tr:
-  hello: "Hello world"
+  programs:
+    doctoral_program: "Doktora Programı"
+    interdisciplinary_doctoral_program: "Disiplinlerarası Doktora Programı"
+    interdisciplinary_master_program: "Disiplinlerarası Yüksek Lisans Programı"
+    master_program: "Yüksek Lisans Programı"
+    proficiency_in_art_program: "Sanatta Yeterlilik Programı"
+    undergraduate_program: "Önlisans/Lisans Programı"
+  units:
+    academy: "Yüksekokul"
+    art_discipline: "Anasanat Dalı"
+    department: "Bölüm"
+    discipline: "Bilim Dalı"
+    faculty: "Fakülte"
+    institute: "Enstitü"
+    interdisciplinary_discipline: "Disiplinlerarası Anabilim Dalı"
+    rectorship: "Rektörlük"
+    research_center: "Research Center"
+    science_discipline: "Araştırma ve Uygulama Merkezi"
+    vocational_school: "Meslek Yüksekokulu"
+  locations:
+    city: "Şehir"
+    country: "Ülke"
+    region: "Bölge"
