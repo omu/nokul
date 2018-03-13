@@ -20,8 +20,18 @@ class University < ApplicationRecord
   end
 
   # delegations
-  delegate :faculties, :institutes, :vocational_schools, :academies, :departments, :science_disciplines,
-           :art_disciplines, :interdisciplinary_disciplines, :disciplines, :rectorship, :research_centers, to: :units
+  delegate :faculties,
+           :institutes,
+           :vocational_schools,
+           :academies,
+           :departments,
+           :science_disciplines,
+           :art_disciplines,
+           :interdisciplinary_disciplines,
+           :disciplines,
+           :rectorship,
+           :research_centers,
+           to: :units
 
   # enumerations
   enum university_type: %w[state foundation]
