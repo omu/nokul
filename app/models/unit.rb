@@ -13,7 +13,7 @@ class Unit < ApplicationRecord
   validates :yoksis_id,
             uniqueness: true, strict: true
   validates :name,
-            uniqueness: { scope: [:ancestry, :status] }
+            uniqueness: { scope: %i[ancestry status] }
   validates_associated :programs
 
   # callbacks

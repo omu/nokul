@@ -11,7 +11,7 @@ class Program < ApplicationRecord
   validates :yoksis_id,
             uniqueness: true, strict: true
   validates :name,
-            uniqueness: { scope: [:unit_id, :status] }
+            uniqueness: { scope: %i[unit_id status] }
 
   # callbacks
   before_validation do

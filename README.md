@@ -34,9 +34,13 @@ rake db:setup
 rake yoksis:departments
 ```
 
+## HowTo
+
+See [Wiki pages](https://github.com/omu/nokul-bati/wiki) for how-to documents.
+
 ## Design
 
-![model-diagrams](https://yuml.me/serhat/Nokul.png)
+![model-diagrams](http://i66.tinypic.com/2hyhc6.png)
 
 ## Code Quality
 
