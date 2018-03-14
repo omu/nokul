@@ -1,13 +1,13 @@
 class CreatePrograms < ActiveRecord::Migration[5.1]
   def change
     create_table :programs do |t|
-      t.string :name
-      t.integer :yoksis_id, unique: true
+      t.string :name, null: false
+      t.integer :yoksis_id, unique: true, null: false
       t.integer :status, default: 0
       t.date :founded_at
       t.string :language
       t.integer :duration
-      t.string :type # STI field
+      t.string :type, null: false # STI field
       t.belongs_to :unit, foreign_key: true
       t.timestamps
     end
