@@ -15,7 +15,7 @@ class Program < ApplicationRecord
 
   # callbacks
   before_validation do
-    self.name = name.mb_chars.titlecase
+    self.name = name.capitalize_all
   end
 
   # STI helpers
