@@ -1,6 +1,6 @@
 namespace :yoksis do
   namespace :referanslar do
-    task :pozisyonlar => [:define_client] do
+    task pozisyonlar: [:define_client] do
       response = @client.get_personel_gorev
       calculate_sha1(response)
       find_current_response

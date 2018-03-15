@@ -1,6 +1,6 @@
 class String
   def capitalize_all
-    split.map{|word| word.capitalize(:turkic)}.join(' ')
+    split.map { |word| word.capitalize(:turkic) }.join(' ')
   end
 
   def abbreviation

@@ -8,6 +8,7 @@ AllCops:
     - test/test_helper.rb
     - db/schema.rb
     - db/migrate/*.rb
+    - config/initializers/devise.rb
 Style/AsciiComments:
   Description: 'Use only ascii symbols in comments.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#english-comments'
@@ -16,3 +17,11 @@ Metrics/LineLength:
   Max: 120
 Documentation:
   Enabled: false
+
+# Do not check rake tasks!
+Metrics/ModuleLength:
+  Exclude:
+    - "**/**/*.rake"
+Metrics/BlockLength:
+  Exclude:
+    - "**/**/*.rake"

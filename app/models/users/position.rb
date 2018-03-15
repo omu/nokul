@@ -1,5 +1,3 @@
-# Run rake yoksis:referanslar:pozisyonlar for updating definitions.
-
 class Position < ApplicationRecord
   # validations
   validates :name, :yoksis_id,
