@@ -1,0 +1,2 @@
+class University < Unit
+end

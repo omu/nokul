@@ -2,12 +2,9 @@
 
 ## Location, Unit ve Program
 
-- [ ] Universiteyi'de Unit altına al.
 - [ ] Modeller için testler yazılacak.
-- [ ] Program modeline ve yöksis data parser'ına öğrenim türü alanı eklenecek.
-- [ ] Program modelinde language alanı çalışır hale gelecek, enumeration eklenecek.
 - [ ] Location, Unit ve Program modellerinde name alanı upcase yapılırken ı ve i'lerde sorun var.
-- [ ] YOKSIS birim datası ile, sistemi senkron tutan bir worker/background job yazılacak.
+- [ ] YOKSIS birim datası ile, sistemi senkron tutan bir rake task worker/background job olarak yazılacak.
 
 ## YOKSIS API
 

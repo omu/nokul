@@ -1,12 +1,13 @@
 class Program < ApplicationRecord
   # concerns
   include UnitStatus
+  include InstructionType
 
   # relations
   belongs_to :unit
 
   # validations
-  validates :name, :yoksis_id, :status, :type,
+  validates :name, :yoksis_id, :status, :type, :instruction_type,
             presence: true, strict: true
   validates :yoksis_id,
             uniqueness: true, strict: true

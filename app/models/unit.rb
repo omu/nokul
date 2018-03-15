@@ -1,15 +1,16 @@
 class Unit < ApplicationRecord
   # concerns
   include UnitStatus
+  include InstructionType
 
   # relations
   has_ancestry
-  belongs_to :university
+  belongs_to :city
   has_many :programs, dependent: :nullify
   has_many :responsibles, foreign_key: 'unit_id', class_name: 'Responsibility'
 
   # validations
-  validates :name, :yoksis_id, :status, :type,
+  validates :name, :yoksis_id, :status, :type, :instruction_type,
             presence: true, strict: true
   validates :yoksis_id,
             uniqueness: true, strict: true
@@ -25,11 +26,12 @@ class Unit < ApplicationRecord
   # STI helpers
   def self.types
     %w[
-      Faculty Institute VocationalSchool Academy Department ScienceDiscipline ArtDiscipline
+      University Faculty Institute VocationalSchool Academy Department ScienceDiscipline ArtDiscipline
       InterdisciplinaryDiscipline Discipline Rectorship ResearchCenter
     ]
   end
 
+  scope :universities, -> { where(type: 'University') }
   scope :faculties, -> { where(type: 'Faculty') }
   scope :institutes, -> { where(type: 'Institute') }
   scope :vocational_schools, -> { where(type: 'VocationalSchool') }

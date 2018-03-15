@@ -40,8 +40,10 @@ ActiveRecord::Schema.define(version: 20180315005613) do
   create_table "programs", force: :cascade do |t|
     t.string "name", null: false
     t.integer "yoksis_id", null: false
-    t.integer "status", default: 0
+    t.integer "status", default: 1, null: false
     t.date "founded_at"
+    t.integer "instruction_type", default: 1, null: false
+    t.integer "foet_code"
     t.string "language"
     t.integer "duration"
     t.string "type", null: false
@@ -71,26 +73,17 @@ ActiveRecord::Schema.define(version: 20180315005613) do
   create_table "units", force: :cascade do |t|
     t.string "name", null: false
     t.integer "yoksis_id", null: false
-    t.integer "status", default: 0
+    t.integer "status", default: 1, null: false
     t.date "founded_at"
+    t.integer "instruction_type", default: 1, null: false
+    t.integer "foet_code"
     t.string "type", null: false
-    t.bigint "university_id"
+    t.bigint "city_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "ancestry"
     t.index ["ancestry"], name: "index_units_on_ancestry"
-    t.index ["university_id"], name: "index_units_on_university_id"
-  end
-
-  create_table "universities", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "short_name", null: false
-    t.integer "university_type", default: 0
-    t.integer "yoksis_id", null: false
-    t.integer "status", default: 0
-    t.date "founded_at"
-    t.bigint "city_id"
-    t.index ["city_id"], name: "index_universities_on_city_id"
+    t.index ["city_id"], name: "index_units_on_city_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -130,6 +123,5 @@ ActiveRecord::Schema.define(version: 20180315005613) do
   add_foreign_key "regions", "countries"
   add_foreign_key "responsibilities", "positions"
   add_foreign_key "responsibilities", "units"
-  add_foreign_key "units", "universities"
-  add_foreign_key "universities", "cities"
+  add_foreign_key "units", "cities"
 end
