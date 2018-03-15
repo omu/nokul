@@ -6,6 +6,7 @@ class Unit < ApplicationRecord
   has_ancestry
   belongs_to :university
   has_many :programs, dependent: :nullify
+  has_many :responsibles, foreign_key: 'unit_id', class_name: 'Responsibility'
 
   # validations
   validates :name, :yoksis_id, :status, :type,

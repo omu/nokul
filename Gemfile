@@ -8,6 +8,9 @@ gem 'rails', '~> 5.1.5'
 # active-record
 gem 'ancestry'
 
+# authentication
+gem 'devise'
+
 # assets
 gem 'coffee-rails', '~> 4.2'
 gem 'sass-rails', '~> 5.0'

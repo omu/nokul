@@ -34,5 +34,15 @@ class University < ApplicationRecord
            to: :units
 
   # enumerations
-  enum university_type: %w[state foundation]
+  enum university_type: {
+    state: 1,
+    foundation: 2,
+    private_vocational: 3,
+    military: 4,
+    police_academy: 5,
+    kktc: 6,
+    turkic_republics: 7,
+    todaie: 8,
+    other: 9
+  }.freeze
 end

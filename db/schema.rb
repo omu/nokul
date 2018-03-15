@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180312115623) do
+ActiveRecord::Schema.define(version: 20180315005613) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "cities", force: :cascade do |t|
-    t.string "name"
-    t.string "iso"
-    t.string "nuts_code"
+    t.string "name", null: false
+    t.string "iso", null: false
+    t.string "nuts_code", null: false
     t.bigint "region_id"
     t.bigint "country_id"
     t.index ["country_id"], name: "index_cities_on_country_id"
@@ -26,19 +26,25 @@ ActiveRecord::Schema.define(version: 20180312115623) do
   end
 
   create_table "countries", force: :cascade do |t|
-    t.string "name"
-    t.string "iso"
-    t.string "code"
+    t.string "name", null: false
+    t.string "iso", null: false
+    t.integer "code", null: false
+  end
+
+  create_table "positions", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "yoksis_id", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "programs", force: :cascade do |t|
-    t.string "name"
-    t.integer "yoksis_id"
+    t.string "name", null: false
+    t.integer "yoksis_id", null: false
     t.integer "status", default: 0
     t.date "founded_at"
-    t.integer "language"
+    t.string "language"
     t.integer "duration"
-    t.string "type"
+    t.string "type", null: false
     t.bigint "unit_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -46,18 +52,28 @@ ActiveRecord::Schema.define(version: 20180312115623) do
   end
 
   create_table "regions", force: :cascade do |t|
-    t.string "name"
-    t.string "nuts_code"
+    t.string "name", null: false
+    t.string "nuts_code", null: false
     t.bigint "country_id"
     t.index ["country_id"], name: "index_regions_on_country_id"
   end
 
+  create_table "responsibilities", force: :cascade do |t|
+    t.bigint "unit_id"
+    t.bigint "position_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id", null: false
+    t.index ["position_id"], name: "index_responsibilities_on_position_id"
+    t.index ["unit_id"], name: "index_responsibilities_on_unit_id"
+  end
+
   create_table "units", force: :cascade do |t|
-    t.string "name"
-    t.integer "yoksis_id"
+    t.string "name", null: false
+    t.integer "yoksis_id", null: false
     t.integer "status", default: 0
     t.date "founded_at"
-    t.string "type"
+    t.string "type", null: false
     t.bigint "university_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -67,20 +83,53 @@ ActiveRecord::Schema.define(version: 20180312115623) do
   end
 
   create_table "universities", force: :cascade do |t|
-    t.string "name"
-    t.string "short_name"
+    t.string "name", null: false
+    t.string "short_name", null: false
     t.integer "university_type", default: 0
-    t.integer "yoksis_id"
+    t.integer "yoksis_id", null: false
     t.integer "status", default: 0
     t.date "founded_at"
     t.bigint "city_id"
     t.index ["city_id"], name: "index_universities_on_city_id"
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet "current_sign_in_ip"
+    t.inet "last_sign_in_ip"
+    t.integer "failed_attempts", default: 0, null: false
+    t.string "unlock_token"
+    t.datetime "locked_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "type", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
+  end
+
+  create_table "yoksis_responses", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "endpoint", null: false
+    t.string "action", null: false
+    t.string "sha1", null: false
+    t.datetime "created_at", null: false
+    t.datetime "syncronized_at"
+  end
+
   add_foreign_key "cities", "countries"
   add_foreign_key "cities", "regions"
   add_foreign_key "programs", "units"
   add_foreign_key "regions", "countries"
+  add_foreign_key "responsibilities", "positions"
+  add_foreign_key "responsibilities", "units"
   add_foreign_key "units", "universities"
   add_foreign_key "universities", "cities"
 end

@@ -39,7 +39,7 @@ namespace :yoksis do
           when 'Üniversite'
             university = University.new(
               name: name,
-              university_type: 0,
+              university_type: 1,
               yoksis_id: yoksis_id,
               status: statuses[status.to_s].to_i,
               founded_at: founded_at.to_date,
