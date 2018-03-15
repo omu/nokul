@@ -32,6 +32,7 @@ rake db:setup
 
 ```bash
 rake yoksis:departments
+rake yoksis:referanslar:pozisyonlar
 ```
 
 ## HowTo

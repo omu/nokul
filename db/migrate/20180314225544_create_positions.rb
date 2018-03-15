@@ -3,7 +3,6 @@ class CreatePositions < ActiveRecord::Migration[5.1]
     create_table :positions do |t|
       t.string :name, unique: true, null: false
       t.integer :yoksis_id, unique: true, null: false
-      t.datetime :updated_at, null: false
     end
   end
 end
