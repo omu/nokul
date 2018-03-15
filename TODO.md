@@ -3,7 +3,6 @@
 ## Location, Unit ve Program
 
 - [ ] Modeller için testler yazılacak.
-- [ ] Location, Unit ve Program modellerinde name alanı upcase yapılırken ı ve i'lerde sorun var.
 - [ ] YOKSIS birim datası ile, sistemi senkron tutan bir rake task worker/background job olarak yazılacak.
 
 ## YOKSIS API
