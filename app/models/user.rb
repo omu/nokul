@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   # devise
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :lockable
+  devise :database_authenticatable, :registerable, :recoverable,
+         :rememberable, :trackable, :validatable, :lockable
 
   def email_required?
     false

@@ -41,7 +41,7 @@ See [Wiki pages](https://github.com/omu/nokul-bati/wiki) for how-to documents.
 
 ## Design
 
-![model-diagrams](http://i66.tinypic.com/2hyhc6.png)
+![model-diagrams](http://i68.tinypic.com/wilim0.png)
 
 ## Code Quality
 
