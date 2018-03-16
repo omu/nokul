@@ -3,10 +3,18 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :lockable
 
+  def email_required?
+    false
+  end
+
+  def will_save_change_to_email?
+    false
+  end
+
   # validations
-  validates :email,
+  validates :email, :id_number,
             presence: true, strict: true
-  validates :email,
+  validates :email, :id_number,
             uniqueness: true, strict: true
 
   # STI helpers
