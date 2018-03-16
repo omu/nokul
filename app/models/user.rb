@@ -11,11 +11,21 @@ class User < ApplicationRecord
     false
   end
 
+  # relations
+  has_one :identity, dependent: :destroy
+  has_many :addresses, dependent: :destroy
+
   # validations
   validates :email, :id_number,
             presence: true, strict: true
   validates :email, :id_number,
             uniqueness: true, strict: true
+  validates_associated :identity
+  validates_associated :addresses
+
+  # callbacks
+  before_create :build_identical_information
+  before_create :build_address_information
 
   # STI helpers
   def self.types
@@ -25,4 +35,18 @@ class User < ApplicationRecord
   scope :academicians, -> { where(type: 'Academician') }
   scope :employees, -> { where(type: 'Employee') }
   scope :students, -> { where(type: 'Student') }
+
+  private
+
+  # TODO: Will be moved to background jobs.
+  def build_identical_information
+    params = Services::Kps::Omu::Kimlik.new.sorgula(id_number)
+    build_identity(params) && true if params
+  end
+
+  # TODO: Will be moved to background jobs.
+  def build_address_information
+    params = Services::Kps::Omu::Adres.new.sorgula(id_number)
+    addresses.build(params) && true if params
+  end
 end

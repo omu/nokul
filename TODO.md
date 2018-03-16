@@ -19,3 +19,4 @@
 - [ ] Öğrencinin ek olarak bölüme enrollment olayı var. Birden çok bölüme enroll durumunda da olabilir. Hemde öğrenci, yatay, dikey, çap, yandal vs. olarak.
 - [ ] Tüm personeli yöksis'ten alıp import etsek?
 - [ ] Tüm öğrencileri ubs'den alıp import etsek?
+- [ ] User'daki KPS callback'leri background job olarak tasarlanacak. Error handling yapılacak, KPS'te sıkıntı olursa sistem çakılmayacak.

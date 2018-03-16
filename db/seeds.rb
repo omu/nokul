@@ -44,5 +44,17 @@ File.open(Rails.root.join('db', 'cities.yml')) do |cities|
   end
 end
 
-User.create!(email: 'msdundars@gmail.com', password: '123456', password_confirmation: '123456', type: 'Academician')
-Employee.create!(email: 'mkc@gmail.com', password: '123456', password_confirmation: '123456', type: 'Employee')
+User.create!(
+  id_number: 14674478966,
+  email: 'msdundars@gmail.com',
+  password: '123456',
+  password_confirmation: '123456',
+  type: 'Academician'
+)
+Employee.create!(
+  id_number: 52840560572,
+  email: 'mkc@gmail.com',
+  password: '123456',
+  password_confirmation: '123456',
+  type: 'Employee'
+)
