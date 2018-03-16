@@ -58,3 +58,17 @@ Employee.create!(
   password_confirmation: '123456',
   type: 'Employee'
 )
+
+# Create academic staff
+client = Services::Yoksis::V1::AkademikPersonel.new
+number_of_pages = client.number_of_pages
+
+for i in 1..number_of_pages
+  client.list_academic_staff(i).each do |academic_staff|
+    id_number = academic_staff[:tc_kimlik_no]
+    first_name = academic_staff[:adi]
+    last_name = academic_staff[:soyadi]
+    title = academic_staff[:kadro_unvan]
+    unit_id = academic_staff[:birim_id]
+  end
+end

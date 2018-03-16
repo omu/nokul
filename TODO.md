@@ -13,10 +13,16 @@
 
 ## User
 
-- [ ] Bir kişi aynı anda hem hocam, hem memur hem de öğrenci olabilir.
-- [ ] Tüm User'ların mernis'ten gelen kimlik bilgileri, adres bilgileri ve temel bilgileri sınav sonuç bilgilerini tutmak faydalı olabilir.
+- [ ] User'ların sınav sonuçlarını da tutmak faydalı olabilir.
 - [ ] Akademisyenin ek olarak ünvan olayı var.
-- [ ] Öğrencinin ek olarak bölüme enrollment olayı var. Birden çok bölüme enroll durumunda da olabilir. Hemde öğrenci, yatay, dikey, çap, yandal vs. olarak.
+- [ ] Öğrencinin bölüme enrollment olayı var. Birden çok bölüme enroll durumunda da olabilir. Hemde öğrenci, yatay, dikey, çap, yandal vs. olarak.
+- [ ] Hocaların bölümde görevlendirilmesi olayı var.
 - [ ] Tüm personeli yöksis'ten alıp import etsek?
 - [ ] Tüm öğrencileri ubs'den alıp import etsek?
 - [ ] User'daki KPS callback'leri background job olarak tasarlanacak. Error handling yapılacak, KPS'te sıkıntı olursa sistem çakılmayacak.
+
+## Other
+
+- [ ] Update Wiki.
+- [ ] Update yuml.me
+- [ ] Rake quality.
