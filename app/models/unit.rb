@@ -27,7 +27,8 @@ class Unit < ApplicationRecord
   def self.types
     %w[
       University Faculty Institute VocationalSchool Academy Department ScienceDiscipline ArtDiscipline
-      InterdisciplinaryDiscipline Discipline Rectorship ResearchCenter
+      InterdisciplinaryDiscipline Discipline Rectorship ResearchCenter UndergraduateProgram MasterProgram
+      DoctoralProgram InterdisciplinaryMasterProgram InterdisciplinaryDoctoralProgram ProficiencyInArtProgram
     ]
   end
 
@@ -43,13 +44,10 @@ class Unit < ApplicationRecord
   scope :disciplines, -> { where(type: 'Discipline') }
   scope :rectorship, -> { where(type: 'Rectorship') }
   scope :research_centers, -> { where(type: 'ResearchCenter') }
-
-  # delegations
-  delegate :undergraduate_programs,
-           :master_programs,
-           :doctoral_programs,
-           :interdisciplinary_master_programs,
-           :interdisciplinary_doctoral_programs,
-           :proficiency_in_art_programs,
-           to: :programs
+  scope :undergraduate_programs, -> { where(type: 'UndergraduateProgram') }
+  scope :master_programs, -> { where(type: 'MasterProgram') }
+  scope :doctoral_programs, -> { where(type: 'DoctoralProgram') }
+  scope :interdisciplinary_master_programs, -> { where(type: 'InterdisciplinaryMasterProgram') }
+  scope :interdisciplinary_doctoral_programs, -> { where(type: 'InterdisciplinaryDoctoralProgram') }
+  scope :proficiency_in_art_programs, -> { where(type: 'ProficiencyInArtProgram') }
 end

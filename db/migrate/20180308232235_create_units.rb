@@ -7,6 +7,8 @@ class CreateUnits < ActiveRecord::Migration[5.1]
       t.date :founded_at
       t.integer :instruction_type, default: 1, null: false
       t.integer :foet_code
+      t.string :language
+      t.integer :duration
       t.string :type, null: false # STI field
       t.belongs_to :city, foreign_key: true
       t.timestamps
