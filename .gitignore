@@ -20,5 +20,7 @@
 /node_modules
 /yarn-error.log
 /vendor/*
-
 .byebug_history
+
+# never remove!
+config/master.key
