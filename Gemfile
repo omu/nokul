@@ -1,9 +1,13 @@
 source 'https://rubygems.org'
 
+ruby '2.5.0'
+
 # core
+gem 'bootsnap', '>= 1.1.0', require: false # Reduces boot times through caching; required in config/boot.rb
 gem 'pg'
-gem 'puma', '~> 3.7'
-gem 'rails', '~> 5.1.5'
+gem 'puma', '~> 3.11'
+gem 'rails', '~> 5.2.0'
+gem 'redis'
 
 # active-record
 gem 'ancestry'
@@ -27,7 +31,8 @@ gem 'bcrypt', '~> 3.1.7'
 group :development, :test do
   gem 'brakeman', require: false
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'capybara', '~> 2.13'
+  gem 'capybara', '>= 2.15', '< 4.0'
+  gem 'chromedriver-helper'
   gem 'pry-rails'
   gem 'reek'
   gem 'rubocop'
@@ -35,6 +40,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'annotate'
   gem 'bundler-audit'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'rubycritic'
