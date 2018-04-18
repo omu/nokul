@@ -45,6 +45,9 @@ GEM
       nokogiri
     ancestry (3.0.1)
       activerecord (>= 3.2.0)
+    annotate (2.7.2)
+      activerecord (>= 3.2, < 6.0)
+      rake (>= 10.4, < 13.0)
     arel (8.0.0)
     ast (2.4.0)
     axiom-types (0.1.1)
@@ -286,6 +289,7 @@ PLATFORMS
 
 DEPENDENCIES
   ancestry
+  annotate
   bcrypt (~> 3.1.7)
   brakeman
   bundler-audit
