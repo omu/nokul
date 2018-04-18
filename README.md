@@ -71,6 +71,15 @@ rake test
 
 Third-party integrations are located under `app/services/foo/v1`. Follow up /docs subfolder (ie. `app/services/foo/v1/docs` for SOAPUI templates.
 
+## App Upgrade
+
+
+```bash
+bin/rails app:update
+```
+
+**Run only if you know what you are doing!**
+
 ## License
 
 Read [LICENSE](LICENSE.md) for details.
