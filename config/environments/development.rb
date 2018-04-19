@@ -9,11 +9,7 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
-  # Enable eager load only for these files
-  config.eager_load_paths += Dir[
-    Rails.root.join('app', 'models', 'units', '*.rb')
-  ]
-
+  # Enable auto-load only for these files
   Rails.application.reloader.to_prepare do
     Dir[
       Rails.root.join('app', 'models', 'units', '*.rb')
