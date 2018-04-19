@@ -1,2 +1,2 @@
-class UndergraduateProgram < Program
+class UndergraduateProgram < Unit
 end

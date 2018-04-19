@@ -1,2 +1,2 @@
-class MasterProgram < Program
+class MasterProgram < Unit
 end

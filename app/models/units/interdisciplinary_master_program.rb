@@ -1,2 +1,2 @@
-class InterdisciplinaryMasterProgram < Program
+class InterdisciplinaryMasterProgram < Unit
 end
