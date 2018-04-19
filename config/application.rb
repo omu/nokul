@@ -14,6 +14,15 @@ module Nokul
     # time-zone. ActiveSupport::TimeZone.all for all possible values
     config.time_zone = 'Istanbul'
 
+    # set default locale to Turkish
+    config.i18n.default_locale = :tr
+
+    # but still support English as secondary locale
+    I18n.available_locales = [:tr, :en]
+
+    # auto-load nested translation folders ie: locales/models/foo.yml
+    I18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.yml').to_s]
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
