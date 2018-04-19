@@ -1,2 +1,2 @@
-class InterdisciplinaryDoctoralProgram < Program
+class InterdisciplinaryDoctoralProgram < Unit
 end

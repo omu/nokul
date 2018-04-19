@@ -1,2 +1,2 @@
-class ProficiencyInArtProgram < Program
+class ProficiencyInArtProgram < Unit
 end

@@ -1,2 +1,2 @@
-class DoctoralProgram < Program
+class DoctoralProgram < Unit
 end

@@ -6,7 +6,6 @@ class Unit < ApplicationRecord
   # relations
   has_ancestry
   belongs_to :city
-  has_many :programs, dependent: :nullify
   has_many :responsibles, foreign_key: 'unit_id', class_name: 'Responsibility'
 
   # validations
@@ -16,7 +15,6 @@ class Unit < ApplicationRecord
             uniqueness: true, strict: true
   validates :name,
             uniqueness: { scope: %i[ancestry status] }
-  validates_associated :programs
 
   # callbacks
   before_validation do
