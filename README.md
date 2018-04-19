@@ -35,6 +35,13 @@ rake yoksis:departments
 rake yoksis:referanslar:pozisyonlar
 ```
 
+- [IN PRODUCTION]. Generate secrets for the app and define them as SECRET_KEY_BASE environment variable:
+
+```bash
+RAILS_ENV=production rake secret
+export SECRET_KEY_BASE=GENERATED_SECRET_VALUE
+```
+
 ## HowTo
 
 See [Wiki pages](https://github.com/omu/nokul-bati/wiki) for how-to documents.

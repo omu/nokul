@@ -23,29 +23,11 @@ class Unit < ApplicationRecord
 
   # STI helpers
   def self.types
-    %w[
-      University Faculty Institute VocationalSchool Academy Department ScienceDiscipline ArtDiscipline
-      InterdisciplinaryDiscipline Discipline Rectorship ResearchCenter UndergraduateProgram MasterProgram
-      DoctoralProgram InterdisciplinaryMasterProgram InterdisciplinaryDoctoralProgram ProficiencyInArtProgram
-    ]
+    descendants.map(&:name)
   end
 
-  scope :universities, -> { where(type: 'University') }
-  scope :faculties, -> { where(type: 'Faculty') }
-  scope :institutes, -> { where(type: 'Institute') }
-  scope :vocational_schools, -> { where(type: 'VocationalSchool') }
-  scope :academies, -> { where(type: 'Academy') }
-  scope :departments, -> { where(type: 'Department') }
-  scope :science_disciplines, -> { where(type: 'ScienceDiscipline') }
-  scope :art_disciplines, -> { where(type: 'ArtDiscipline') }
-  scope :interdisciplinary_disciplines, -> { where(type: 'InterdisciplinaryDiscipline') }
-  scope :disciplines, -> { where(type: 'Discipline') }
-  scope :rectorship, -> { where(type: 'Rectorship') }
-  scope :research_centers, -> { where(type: 'ResearchCenter') }
-  scope :undergraduate_programs, -> { where(type: 'UndergraduateProgram') }
-  scope :master_programs, -> { where(type: 'MasterProgram') }
-  scope :doctoral_programs, -> { where(type: 'DoctoralProgram') }
-  scope :interdisciplinary_master_programs, -> { where(type: 'InterdisciplinaryMasterProgram') }
-  scope :interdisciplinary_doctoral_programs, -> { where(type: 'InterdisciplinaryDoctoralProgram') }
-  scope :proficiency_in_art_programs, -> { where(type: 'ProficiencyInArtProgram') }
+  types.each do |type|
+    # define_method("#{type.underscore.pluralize}") { Unit.where(type: type) }
+    scope type.tableize.to_sym, where(type: type)
+  end
 end
