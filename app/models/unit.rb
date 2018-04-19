@@ -26,8 +26,8 @@ class Unit < ApplicationRecord
     descendants.map(&:name)
   end
 
+  # Dynamically generate scopes for STI-related models
   types.each do |type|
-    # define_method("#{type.underscore.pluralize}") { Unit.where(type: type) }
     scope type.tableize.to_sym, where(type: type)
   end
 end
