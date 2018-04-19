@@ -4,12 +4,12 @@ class City < ApplicationRecord
   # relations
   belongs_to :region
   belongs_to :country
-  has_many :universities, dependent: :nullify
+  has_many :units, dependent: :nullify
 
   # validations
   validates :name, :iso, :nuts_code,
             presence: true, uniqueness: true, strict: true
-  validates_associated :universities
+  validates_associated :units
 
   # callbacks
   before_create do
