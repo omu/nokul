@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -8,6 +10,13 @@ Rails.application.configure do
 
   # Do not eager load code on boot.
   config.eager_load = false
+
+  # Enable auto-load only for these files
+  Rails.application.reloader.to_prepare do
+    Dir[
+      Rails.root.join('app', 'models', 'units', '*.rb')
+    ].each { |file| require_dependency file }
+  end
 
   # Show full error reports.
   config.consider_all_requests_local = true

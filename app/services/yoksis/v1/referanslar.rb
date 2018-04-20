@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Services
   module Yoksis
     module V1
@@ -35,7 +37,7 @@ module Services
           define_method("get_#{method}") { |args = {}| send_request(__method__, args) }
         end
 
-        WSDL_ENDPOINT = 'http://servisler.yok.gov.tr/ws/Referanslarv1?WSDL'.freeze
+        WSDL_ENDPOINT = 'http://servisler.yok.gov.tr/ws/Referanslarv1?WSDL'
 
         attr_reader :client, :response
 

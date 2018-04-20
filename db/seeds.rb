@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file is used to create initial data, that is needed for app to live.
 
 # Create countries
@@ -45,14 +47,14 @@ File.open(Rails.root.join('db', 'cities.yml')) do |cities|
 end
 
 User.create!(
-  id_number: 14674478966,
+  id_number: 14_674_478_966,
   email: 'msdundars@gmail.com',
   password: '123456',
   password_confirmation: '123456',
   type: 'Academician'
 )
 Employee.create!(
-  id_number: 52840560572,
+  id_number: 52_840_560_572,
   email: 'mkc@gmail.com',
   password: '123456',
   password_confirmation: '123456',
@@ -60,15 +62,15 @@ Employee.create!(
 )
 
 # Create academic staff
-client = Services::Yoksis::V1::AkademikPersonel.new
-number_of_pages = client.number_of_pages
+# client = Services::Yoksis::V1::AkademikPersonel.new
+# number_of_pages = client.number_of_pages
 
-for i in 1..number_of_pages
-  client.list_academic_staff(i).each do |academic_staff|
-    id_number = academic_staff[:tc_kimlik_no]
-    first_name = academic_staff[:adi]
-    last_name = academic_staff[:soyadi]
-    title = academic_staff[:kadro_unvan]
-    unit_id = academic_staff[:birim_id]
-  end
-end
+# (1..number_of_pages).each do |page_number|
+#   client.list_academic_staff(page_number).each do |academic_staff|
+#     id_number = academic_staff[:tc_kimlik_no]
+#     first_name = academic_staff[:adi]
+#     last_name = academic_staff[:soyadi]
+#     title = academic_staff[:kadro_unvan]
+#     unit_id = academic_staff[:birim_id]
+#   end
+# end

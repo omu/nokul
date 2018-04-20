@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Position < ApplicationRecord
   # relations
   has_many :responsibilities

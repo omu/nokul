@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class String
   def capitalize_all
     split.map { |word| word.capitalize(:turkic) }.join(' ')

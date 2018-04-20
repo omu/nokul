@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Country < ApplicationRecord
   # name, iso and code fields follow the ISO3166 standard.
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Services
   module Kps
     module Omu
@@ -16,7 +18,9 @@ module Services
           ).body[:adres_sorgula_response][:return][:sorgula_result][:sorgu_sonucu][:kimlik_noile_kisi_adres_bilgileri]
 
           # return false if something went wrong.
-          unless response[:hata_bilgisi].present?
+          if response[:hata_bilgisi].present?
+            false
+          else
             # İl/ilçe merkezi adresi
             if response[:yerlesim_yeri_adresi][:il_ilce_merkez_adresi].present?
               address_root = response[:yerlesim_yeri_adresi][:il_ilce_merkez_adresi]
@@ -39,8 +43,6 @@ module Services
 
             # return a hash, ready to use for building an Address.
             return address_information
-          else
-            false
           end
         end
       end
