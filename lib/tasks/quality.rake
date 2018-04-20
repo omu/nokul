@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 namespace :quality do
   desc 'Runs Ruby specific code quality testing'
   task :ruby do

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Services
   module Kps
     module Omu
@@ -16,11 +18,12 @@ module Services
           ).body[:sorgula_response][:return][:sorgula_result][:sorgu_sonucu][:bilesik_kutuk_bilgileri]
 
           # return false if something went wrong.
-          unless response[:hata_bilgisi].present?
+          if response[:hata_bilgisi].present?
+            false
+          else
             # Türk ise - IE: 14674478966
             if response[:tc_vatandasi_kisi_kutukleri][:kisi_bilgisi][:durum_bilgisi][:durum].present?
               information_root = response[:tc_vatandasi_kisi_kutukleri][:kisi_bilgisi]
-              id_number = information_root[:tc_kimlik_no]
               identical_information[:date_of_birth] = (
                 information_root[:temel_bilgisi][:dogum_tarih][:gun] + '.' +
                 information_root[:temel_bilgisi][:dogum_tarih][:ay] + '.' +
@@ -35,7 +38,6 @@ module Services
             # BlueCard ise - IE: 42283908130
             elsif response[:mavi_kartli_kisi_kutukleri][:kisi_bilgisi][:durum_bilgisi][:durum].present?
               information_root = response[:mavi_kartli_kisi_kutukleri][:kisi_bilgisi]
-              id_number = information_root[:kimlik_no]
               identical_information[:date_of_birth] = (
                 information_root[:temel_bilgisi][:dogum_tarih][:gun] + '.' +
                 information_root[:temel_bilgisi][:dogum_tarih][:ay] + '.' +
@@ -46,7 +48,6 @@ module Services
             # Yabancı ise - IE: 99878074596
             elsif response[:yabanci_kisi_kutukleri][:kisi_bilgisi][:durum_bilgisi][:durum].present?
               information_root = response[:yabanci_kisi_kutukleri][:kisi_bilgisi]
-              id_number = information_root[:kimlik_no]
               identical_information[:date_of_birth] = (
                 information_root[:dogum_tarih][:gun] + '.' +
                 information_root[:dogum_tarih][:ay] + '.' +
@@ -84,8 +85,6 @@ module Services
                                                      end
             # return a hash, ready to use for building an Identity.
             return identical_information
-          else
-            false
           end
         end
       end

@@ -1,14 +1,10 @@
+# Do not exclude files from ALL COPS unless it's really necessary!
 AllCops:
   Exclude:
-    - Rakefile
     - bin/**/*
     - vendor/bundle/**/*
-    - config/application.rb
-    - config/spring.rb
-    - test/test_helper.rb
     - db/schema.rb
     - db/migrate/*.rb
-    - config/initializers/devise.rb
 Style/AsciiComments:
   Description: 'Use only ascii symbols in comments.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#english-comments'
@@ -18,10 +14,25 @@ Metrics/LineLength:
 Documentation:
   Enabled: false
 
-# Do not check rake tasks!
-Metrics/ModuleLength:
-  Exclude:
-    - "**/**/*.rake"
+# Put your file specific configuration below this line, not under AllCops!
 Metrics/BlockLength:
   Exclude:
+    - config/environments/development.rb
     - "**/**/*.rake"
+Metrics/AbcSize:
+  Exclude:
+    - app/services/kps/omu/adres.rb
+    - app/services/kps/omu/kimlik.rb
+Metrics/MethodLength:
+  Exclude:
+    - app/services/kps/omu/adres.rb
+    - app/services/kps/omu/kimlik.rb
+Metrics/CyclomaticComplexity:
+  Exclude:
+    - app/services/kps/omu/kimlik.rb
+Metrics/PerceivedComplexity:
+  Exclude:
+    - app/services/kps/omu/kimlik.rb
+Style/ClassAndModuleChildren:
+  Exclude:
+    - test/test_helper.rb

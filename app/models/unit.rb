@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Unit < ApplicationRecord
   # concerns
   include UnitStatus
@@ -28,6 +30,6 @@ class Unit < ApplicationRecord
 
   # Dynamically generate scopes for STI-related models
   types.each do |type|
-    scope type.tableize.to_sym, where(type: type)
+    scope type.tableize.to_sym, -> { where(type: type) }
   end
 end

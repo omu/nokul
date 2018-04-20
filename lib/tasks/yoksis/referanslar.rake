@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 namespace :yoksis do
   namespace :referanslar do
     task pozisyonlar: [:define_client] do
