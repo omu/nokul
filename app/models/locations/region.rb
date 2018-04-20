@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Region < ApplicationRecord
   # nuts_code field follows the NUTS-1 standard, since there is no ISO schema for Turkish regions.
 

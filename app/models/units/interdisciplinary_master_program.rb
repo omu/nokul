@@ -1,2 +1,4 @@
-class InterdisciplinaryMasterProgram < Program
+# frozen_string_literal: true
+
+class InterdisciplinaryMasterProgram < Unit
 end
