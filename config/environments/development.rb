@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -13,7 +15,7 @@ Rails.application.configure do
   Rails.application.reloader.to_prepare do
     Dir[
       Rails.root.join('app', 'models', 'units', '*.rb')
-    ].each {|file| require_dependency file}
+    ].each { |file| require_dependency file }
   end
 
   # Show full error reports.

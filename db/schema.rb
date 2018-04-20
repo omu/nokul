@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180316131709) do
+ActiveRecord::Schema.define(version: 2018_03_16_131709) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,22 +65,6 @@ ActiveRecord::Schema.define(version: 20180316131709) do
     t.integer "yoksis_id", null: false
   end
 
-  create_table "programs", force: :cascade do |t|
-    t.string "name", null: false
-    t.integer "yoksis_id", null: false
-    t.integer "status", default: 1, null: false
-    t.date "founded_at"
-    t.integer "instruction_type", default: 1, null: false
-    t.integer "foet_code"
-    t.string "language"
-    t.integer "duration"
-    t.string "type", null: false
-    t.bigint "unit_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["unit_id"], name: "index_programs_on_unit_id"
-  end
-
   create_table "regions", force: :cascade do |t|
     t.string "name", null: false
     t.string "nuts_code", null: false
@@ -105,6 +89,8 @@ ActiveRecord::Schema.define(version: 20180316131709) do
     t.date "founded_at"
     t.integer "instruction_type", default: 1, null: false
     t.integer "foet_code"
+    t.string "language"
+    t.integer "duration"
     t.string "type", null: false
     t.bigint "city_id"
     t.datetime "created_at", null: false
@@ -150,7 +136,6 @@ ActiveRecord::Schema.define(version: 20180316131709) do
   add_foreign_key "cities", "countries"
   add_foreign_key "cities", "regions"
   add_foreign_key "identities", "users"
-  add_foreign_key "programs", "units"
   add_foreign_key "regions", "countries"
   add_foreign_key "responsibilities", "positions"
   add_foreign_key "responsibilities", "units"

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Responsibility < ApplicationRecord
   # relations
   belongs_to :user

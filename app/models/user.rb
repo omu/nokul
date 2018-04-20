@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   # devise
   devise :database_authenticatable, :registerable, :recoverable,
@@ -40,13 +42,13 @@ class User < ApplicationRecord
 
   # TODO: Will be moved to background jobs.
   def build_identical_information
-    params = Services::Kps::Omu::Kimlik.new.sorgula(id_number)
-    build_identity(params) && true if params
+    # params = Services::Kps::Omu::Kimlik.new.sorgula(id_number)
+    # build_identity(params) && true if params
   end
 
   # TODO: Will be moved to background jobs.
   def build_address_information
-    params = Services::Kps::Omu::Adres.new.sorgula(id_number)
-    addresses.build(params) && true if params
+    # params = Services::Kps::Omu::Adres.new.sorgula(id_number)
+    # addresses.build(params) && true if params
   end
 end

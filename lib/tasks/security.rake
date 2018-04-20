@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 namespace :security do
   desc 'Runs brakeman for vulnerabilities'
   task :brakeman do

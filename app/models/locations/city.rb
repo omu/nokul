@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class City < ApplicationRecord
   # iso field follows the ISO3166 standard, nuts_code field follows the NUTS-1 standard.
 
