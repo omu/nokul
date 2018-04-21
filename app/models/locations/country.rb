@@ -9,7 +9,7 @@ class Country < ApplicationRecord
 
   # validations
   validates :name, :iso, :code,
-            presence: true, uniqueness: true, strict: true
+            presence: true, uniqueness: true
   validates_associated :cities
   validates_associated :regions
 
