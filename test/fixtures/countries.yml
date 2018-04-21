@@ -1,11 +1,16 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  name: MyString
-  iso: MyString
-  code: MyString
-
-two:
-  name: MyString
-  iso: MyString
-  code: MyString
+turkey: 
+  name: Türkiye 
+  iso: TR 
+  code: 52 
+sweden: 
+  name: İsveç 
+  iso: SE 
+  code: 30 
+denmark: 
+  name: Danimarka 
+  iso: DK 
+  code: 8 
+norway: 
+  name: Norveç 
+  iso: NO 
+  code: 28
