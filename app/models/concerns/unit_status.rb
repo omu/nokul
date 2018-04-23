@@ -4,6 +4,6 @@ module UnitStatus
   extend ActiveSupport::Concern
 
   included do
-    enum status: { passive: 0, active: 1, partially_passive: 3, closed: 4, archived: 5, unknown: 6 }
+    enum status: { passive: 0, active: 1, partially_passive: 2, closed: 3, archived: 4, unknown: 5 }
   end
 end

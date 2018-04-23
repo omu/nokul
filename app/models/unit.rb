@@ -29,7 +29,9 @@ class Unit < ApplicationRecord
   end
 
   # Dynamically generate scopes for STI-related models
-  types.each do |type|
-    scope type.tableize.to_sym, -> { where(type: type) }
+  def self.generate_scopes
+    types.each do |type|
+      scope type.tableize.to_sym, -> { where(type: type) }
+    end
   end
 end
