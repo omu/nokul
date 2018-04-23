@@ -10,7 +10,7 @@ class City < ApplicationRecord
 
   # validations
   validates :name, :iso, :nuts_code,
-            presence: true, uniqueness: true, strict: true
+            presence: true, uniqueness: true
   validates_associated :units
 
   # callbacks
