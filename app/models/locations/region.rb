@@ -9,7 +9,7 @@ class Region < ApplicationRecord
 
   # validations
   validates :name, :nuts_code,
-            presence: true, uniqueness: true, strict: true
+            presence: true, uniqueness: true
   validates_associated :cities
 
   # callbacks

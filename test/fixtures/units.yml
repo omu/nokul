@@ -1,0 +1,20 @@
+omu: 
+  name: Ondokuz Mayıs Üniversitesi 
+  yoksis_id: 121946 
+  status: active 
+  founded_at: 11.04.1975 
+  instruction_type: formal 
+  language: Türkçe 
+  duration: 0 
+  type: University 
+  city: samsun 
+cbu: 
+  name: Canik Başarı Üniversitesi 
+  yoksis_id: 163896 
+  status: closed 
+  founded_at: 12.04.2010 
+  instruction_type: formal 
+  language: Türkçe 
+  duration: 0 
+  type: University 
+  city: samsun 
