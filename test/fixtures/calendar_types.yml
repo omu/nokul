@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  name: Lisans - Önlisans
+
+two:
+  id: 2
+  name: Yüksek Lisans
+
+three:
+  id: 3
+  name: Ali Fuat Başgil Hukuk Fakültesi
+
+four:
+  id: 4
+  name: Yabancı Diller Yüksekokulu
+
+five:
+  id: 5
+  name: Tıp Fakültesi
+
+six:
+  id: 6
+  name: Dik Hekimliği Fakültesi (1-2-3. Sınıflar)
+
+seven:
+  id: 7
+  name: Dik Hekimliği Fakültesi (4-5. Sınıflar)
+
+eight:
+  id: 8
+  name: Veteriner Fakültesi
+
+nine:
+  id: 9
+  name: UZEM Önlisans/Lisans
+
+ten:
+  id: 10
+  name: UZEM Lisansüstü
+
+eleven:
+  id: 11
+  name: Yaz Dönemi
+
+twelve:
+  id: 12
+  name: Öğrenci
