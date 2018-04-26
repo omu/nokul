@@ -1,0 +1,116 @@
+one:
+  id: 1
+  name: Açılan derslerin ilanı
+
+two:
+  id: 2
+  name: Ders Kayıtları
+
+three:
+  id: 3
+  name: Derslerin Başlaması
+
+four:
+  id: 4
+  name: Ders Ekleme ve Bırakma
+
+five:
+  id: 5
+  name: Derslerin Bitimi
+
+six:
+  id: 6
+  name: Ara Sınav Haftası
+
+seven:
+  id: 7
+  name: Yarıyıl Sonu Sınav Haftası
+
+eight:
+  id: 8
+  name: Bütünleme Sınav Haftası
+
+nine:
+  id: 9
+  name: Çift Anadal ve Yandal Başvuruları
+
+ten:
+  id: 10
+  name: Çift Anadal ve Yandal Başvurularının Birimlerce Değerlendirilmesi ve İlanı
+
+eleven:
+  id: 11
+  name: Zorunlu Hazırlık Sınıfları Yabancı Dil Yeterlik Sınavı
+
+twelve:
+  id: 12
+  name: Yeterlik Sınav Sonuçlarının İlanı
+
+thirteen:
+  id: 13
+  name: Hazırlık Sınıfları İçin Düzey Belirleme Sınavı
+
+fourteen:
+  id: 14
+  name: Öğrencilerin WEB’de Ders Kayıtları (Çiftanadal, Yandal Öğrencileri Dahil)
+
+fifteen:
+  id: 15
+  name: Yabancı Dil Muafiyet Sınavları (5/i Dersleri İçin)
+
+sixteen:
+  id: 16
+  name: Danışman Onay İşlemleri, Kontenjan Nedeni ile Açılamayan Seçmeli Dersteki
+        Öğrencilerin Danışmanlarca Bir Başka Seçmeli Derse Aktarılması
+
+seventeen:
+  id: 17
+  name: Mazeretli Ders Kaydı Başvuruları Son Günü
+
+eighteen:
+  id: 18
+  name: Ara Mazeret Sınav Başvurusu Son Günü
+
+nineteen:
+  id: 19
+  name: Yarıyıl Sonu Sınav Sonuçlarının İnternetten Girilmesinin Son Günü ve Sonuçların İlanı
+
+twenty:
+  id: 20
+  name: Bütünleme Sınav Sonuçlarının İnternetten Girilmesinin Son Günü
+
+twenty-one:
+  id: 21
+  name: Tek Ders Sınav Müracaatları
+
+twenty-two:
+  id: 22
+  name: Tek Ders Sınavları
+
+twenty-three:
+  id: 23
+  name: Tek Ders Sınav Sonuçlarının ÖİDB’ye Gönderilmesi
+
+twenty-four:
+  id: 24
+  name: Doktora Yeterlik Sınavları
+
+twenty-five:
+  id: 25
+  name: Dönem Projesi Teslimi
+
+twenty-six:
+  id: 26
+  name: Öğrencilerin WEB’de Ders Kayıtları
+
+twenty-seven:
+  id: 27
+  name: Ek Sınav Müracaatlarının Son Günü (Önlisans öğrencileri için)
+
+twenty-eight:
+  id: 28
+  name: Ek Sınav Tarihleri (Önlisans öğrencileri için)
+
+twenty-nine:
+  id: 29
+  name: Ek Sınav Sonuçlarının ÖİDB’ye Gönderilmesi
