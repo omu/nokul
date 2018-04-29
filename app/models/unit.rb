@@ -12,26 +12,39 @@ class Unit < ApplicationRecord
 
   # validations
   validates :name, :yoksis_id, :status, :type, :instruction_type,
-            presence: true, strict: true
+            presence: true
   validates :yoksis_id,
-            uniqueness: true, strict: true
+            uniqueness: true
   validates :name,
             uniqueness: { scope: %i[ancestry status] }
 
   # callbacks
   before_validation do
-    self.name = name.capitalize_all
+    self.name = name.capitalize_all if name
   end
 
-  # STI helpers
+  # list all unit types
   def self.types
     descendants.map(&:name)
   end
 
-  # Dynamically generate scopes for STI-related models
-  def self.generate_scopes
-    types.each do |type|
-      scope type.tableize.to_sym, -> { where(type: type) }
-    end
-  end
+  # scopes
+  scope :academies, -> { where(type: 'Academy') }
+  scope :art_disciplines, -> { where(type: 'ArtDiscipline') }
+  scope :departments, -> { where(type: 'Department') }
+  scope :disciplines, -> { where(type: 'Discipline') }
+  scope :doctoral_programs, -> { where(type: 'DoctoralProgram') }
+  scope :faculties, -> { where(type: 'Faculty') }
+  scope :institutes, -> { where(type: 'Institute') }
+  scope :interdisciplinary_disciplines, -> { where(type: 'InterdisciplinaryDiscipline') }
+  scope :interdisciplinary_doctoral_programs, -> { where(type: 'InterdisciplinaryDoctoralProgram') }
+  scope :interdisciplinary_master_programs, -> { where(type: 'InterdisciplinaryMasterProgram') }
+  scope :master_programs, -> { where(type: 'MasterProgram') }
+  scope :proficiency_in_art_programs, -> { where(type: 'ProficiencyInArtProgram') }
+  scope :rectorships, -> { where(type: 'Rectorship') }
+  scope :research_centers, -> { where(type: 'ResearchCenter') }
+  scope :science_disciplines, -> { where(type: 'ScienceDiscipline') }
+  scope :undergraduate_programs, -> { where(type: 'UndergraduateProgram') }
+  scope :universities, -> { where(type: 'University') }
+  scope :vocational_schools, -> { where(type: 'VocationalSchool') }
 end
