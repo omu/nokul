@@ -1,7 +1,16 @@
 ---
 exclude_paths:
-  - db
-  - config/initializers
-  - vendor/bundle
+  - bin/**/*
+  - vendor/bundle/**/*
+  - db/migrate/
+  - lib/tasks/yoksis/referanslar*.rake # TODO: WIP
+  - app/models/users/*.rb # TODO: WIP
+  - app/models/unit*.rb # TODO: WIP => has_many :responsibles
 IrresponsibleModule:
   enabled: false
+UncommunicativeModuleName:
+  accept:
+    - V1
+    - V2
+    - V3
+    - V4
