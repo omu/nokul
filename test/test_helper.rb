@@ -1,6 +1,13 @@
 # frozen_string_literal: true
 
 ENV['RAILS_ENV'] ||= 'test'
+
+# simplecov and codacy coverage
+require 'simplecov'
+require 'codacy-coverage'
+SimpleCov.start 'rails'
+Codacy::Reporter.start
+
 require_relative '../config/environment'
 require 'rails/test_help'
 
