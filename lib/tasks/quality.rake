@@ -4,7 +4,6 @@ namespace :quality do
   desc 'Runs Ruby specific code quality testing'
   task :ruby do
     sh 'bundle exec rubocop -f fu -D'
-    sh 'bundle exec reek'
     sh 'bundle exec rubycritic --format console'
   end
 

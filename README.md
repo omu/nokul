@@ -55,9 +55,9 @@ See [Wiki pages](https://github.com/omu/nokul-bati/wiki) for how-to documents.
 - Rake task named as 'quality' checks for code smells.
 
 ```bash
-rake quality:ruby # rubocop (checks only ruby offenses) and reek
-rake quality:rails # rubocop (checks ruby and rails offenses) and rubycritic
-rake quality:all # both ruby and rails.
+rake quality:ruby # runs rubocop and checks only for ruby offenses & runs rubycritic (rubycritic includes reek!)
+rake quality:rails # runs rubocop and checks both for ruby and rails offenses
+rake quality:all # runs both ruby and rails tasks.
 ```
 
 - Rake task named as 'security' checks for security issues:
