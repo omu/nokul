@@ -1,0 +1,44 @@
+one:
+  id: 1
+  year: 2016-2017
+  term: 0
+
+two:
+  id: 2
+  year: 2016-2017
+  term: 1
+
+three:
+  id: 3
+  year: 2016-2017
+  term: 2
+
+four:
+  id: 4
+  year: 2017-2018
+  term: 0
+
+five:
+  id: 5
+  year: 2017-2018
+  term: 1
+
+six:
+  id: 6
+  year: 2017-2018
+  term: 2
+
+seven:
+  id: 7
+  year: 2018-2019
+  term: 0
+
+eight:
+  id: 8
+  year: 2018-2019
+  term: 1
+
+nine:
+  id: 9
+  year: 2018-2019
+  term: 2
