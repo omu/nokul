@@ -1,0 +1,114 @@
+one:
+  type_id: 1
+  title_id: 3
+  status: 0
+
+two:
+  type_id: 1
+  title_id: 4
+  status: 0
+
+three:
+  type_id: 1
+  title_id: 5
+  status: 0
+
+four:
+  type_id: 1
+  title_id: 6
+  status: 0
+
+five:
+  type_id: 1
+  title_id: 7
+  status: 0
+
+six:
+  type_id: 1
+  title_id: 8
+  status: 0
+
+seven:
+  type_id: 1
+  title_id: 9
+  status: 0
+
+eight:
+  type_id: 1
+  title_id: 10
+  status: 0
+
+nine:
+  type_id: 1
+  title_id: 11
+  status: 0
+
+ten:
+  type_id: 1
+  title_id: 12
+  status: 0
+
+eleven:
+  type_id: 1
+  title_id: 13
+  status: 0
+
+twelve:
+  type_id: 1
+  title_id: 14
+  status: 0
+
+thirteen:
+  type_id: 1
+  title_id: 15
+  status: 0
+
+fourteen:
+  type_id: 1
+  title_id: 16
+  status: 0
+
+fifteen:
+  type_id: 1
+  title_id: 17
+  status: 0
+
+sixteen:
+  type_id: 1
+  title_id: 19
+  status: 0
+
+seventeen:
+  type_id: 1
+  title_id: 20
+  status: 0
+
+eightteen:
+  type_id: 1
+  title_id: 21
+  status: 0
+
+nineteen:
+  type_id: 1
+  title_id: 22
+  status: 0
+
+twenty:
+  type_id: 1
+  title_id: 23
+  status: 0
+
+twenty-one:
+  type_id: 1
+  title_id: 27
+  status: 0
+
+twenty-two:
+  type_id: 1
+  title_id: 28
+  status: 0
+
+twenty-three:
+  type_id: 1
+  title_id: 29
+  status: 0
