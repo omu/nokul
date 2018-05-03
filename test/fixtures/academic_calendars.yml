@@ -1,0 +1,13 @@
+one:
+  name: 2017-2018 EĞİTİM ÖĞRETİM YILI AKADEMİK TAKVİMİ
+  year: 2017
+  academic_term_id: 4
+  calendar_type_id: 1
+  senatus_consultum_no: ABC123
+
+two:
+  name: 2017-2018 EĞİTİM ÖĞRETİM YILI AKADEMİK TAKVİMİ
+  year: 2018
+  academic_term_id: 5
+  calendar_type_id: 1
+  senatus_consultum_no: ABC123

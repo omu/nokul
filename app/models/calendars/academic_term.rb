@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class AcademicTerm < ApplicationRecord
+  # relations
+  has_many :academic_calendars
+
   # validations
   validates :year, :term, presence: true
   validates :year, uniqueness: { scope: :term }
