@@ -8,8 +8,13 @@ class AcademicCalendarTest < ActiveSupport::TestCase
     assert_not academic_calendars(:one).valid?
   end
 
-  test 'should not save academic calendar without senatus_consultum_no' do
-    academic_calendars(:one).senatus_consultum_no = nil
+  test 'should not save academic calendar without senate_decision_date' do
+    academic_calendars(:one).senate_decision_date = nil
+    assert_not academic_calendars(:one).valid?
+  end
+
+  test 'should not save academic calendar without senate_decision_no' do
+    academic_calendars(:one).senate_decision_no = nil
     assert_not academic_calendars(:one).valid?
   end
 

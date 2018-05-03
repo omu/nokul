@@ -5,7 +5,9 @@ class CreateAcademicCalendars < ActiveRecord::Migration[5.2]
       t.integer :year
       t.references :academic_term, foreign_key: true
       t.references :calendar_type, foreign_key: true
-      t.string :senatus_consultum_no
+      t.date :senate_decision_date, null: false
+      t.string :senate_decision_no, null: false
+      t.text :description
 
       t.timestamps
     end
