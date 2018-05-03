@@ -3,15 +3,17 @@
 require 'test_helper'
 
 class AcademicTermTest < ActiveSupport::TestCase
-  test 'should not save academic term without year and term' do
-    academic_term = AcademicTerm.new
-    assert_not academic_term.save
+  test 'should not save academic term without year' do
+    academic_terms(:one).year = nil
+    assert_not academic_terms(:one).valid?
+  end
+
+  test 'should not save academic term without term' do
+    academic_terms(:one).term = nil
+    assert_not academic_terms(:one).valid?
   end
 
   test 'term should be unique based on year' do
-    academic_term = academic_terms(:one)
-    academic_term.save
-    academic_term_dup = academic_term.dup
-    assert_not academic_term_dup.valid?
+    assert_not academic_terms(:one).dup.valid?
   end
 end
