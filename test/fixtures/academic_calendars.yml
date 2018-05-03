@@ -1,13 +1,20 @@
 one:
+  id: 1
   name: 2017-2018 EĞİTİM ÖĞRETİM YILI AKADEMİK TAKVİMİ
   year: 2017
   academic_term_id: 4
   calendar_type_id: 1
-  senatus_consultum_no: ABC123
+  senate_decision_date: 15.06.2017
+  senate_decision_no: 2017/138
+  description: Ders kayıtlarının yapabilmesi için katkı payı ve öğrenim ücreti
+               ödemelerinin bankaya yapılması gerekmektedir.
 
 two:
+  id: 2
   name: 2017-2018 EĞİTİM ÖĞRETİM YILI AKADEMİK TAKVİMİ
   year: 2018
   academic_term_id: 5
   calendar_type_id: 1
-  senatus_consultum_no: ABC123
+  senate_decision_date: 12.04.2018
+  senate_decision_no: 2018/112
+  description:
