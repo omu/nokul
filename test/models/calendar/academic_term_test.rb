@@ -16,4 +16,8 @@ class AcademicTermTest < ActiveSupport::TestCase
   test 'term should be unique based on year' do
     assert_not academic_terms(:one).dup.valid?
   end
+
+  test 'should contain academic calendars' do
+    assert academic_terms(:one).academic_calendars
+  end
 end
