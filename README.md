@@ -4,9 +4,14 @@
 
 ## Setup
 
-- Database configuration file reads username, password and host settings from environment variables.
+- You must have an up-to-dated JS interpreter (preferably NodeJS) installed on your system in order to run Rails applications:
 
-Make sure to define these environment variables before setting up the project:
+```bash
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+
+- Database configuration file reads username, password and host settings from environment variables. Make sure to define these environment variables before setting up the project:
 
 ```
 RDS_USERNAME: PostgreSQL username
@@ -22,7 +27,7 @@ YOKSIS_PASSWORD: YOKSIS password.
 bundle
 ```
 
-- Create databases and migrate tables:
+- Create databases and migration tables:
 
 ```bash
 rake db:setup
@@ -31,8 +36,8 @@ rake db:setup
 - [OPTIONAL]. If you want to create YOKSIS departments inside your app, run the task shown below:
 
 ```bash
+rake yoksis:referanslar:all
 rake yoksis:departments
-rake yoksis:referanslar:pozisyonlar
 ```
 
 - [IN PRODUCTION]. Generate secrets for the app and define them as SECRET_KEY_BASE environment variable:
