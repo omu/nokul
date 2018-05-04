@@ -1,0 +1,9 @@
+phd:
+  name: Doktora
+  code: 6
+undergraduate:
+  name: Lisans
+  code: 4
+master:
+  name: Yüksek Lisans
+  code: 5

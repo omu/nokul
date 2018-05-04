@@ -162,7 +162,6 @@ ActiveRecord::Schema.define(version: 2018_05_03_201708) do
     t.integer "yoksis_id", null: false
     t.integer "foet_code"
     t.date "founded_at"
-    t.string "language"
     t.integer "duration"
     t.string "type", null: false
     t.bigint "city_id"

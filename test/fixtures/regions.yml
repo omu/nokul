@@ -1,16 +1,16 @@
-bati_karadeniz: 
-  name: Batı Karadeniz Bölgesi 
-  nuts_code: TR8 
-  country: turkey 
-dogu_karadeniz: 
-  name: Doğu Karadeniz Bölgesi 
-  nuts_code: TR9 
-  country: turkey 
-east_sweden: 
-  name: East Sweden 
-  nuts_code: SE1 
-  country: sweden 
-south_sweden: 
-  name: South Sweden 
-  nuts_code: SE2 
-  country: sweden 
+bati_karadeniz:
+  name: Batı Karadeniz Bölgesi
+  nuts_code: TR8
+  country: turkey
+dogu_karadeniz:
+  name: Doğu Karadeniz Bölgesi
+  nuts_code: TR9
+  country: turkey
+east_sweden:
+  name: East Sweden
+  nuts_code: SE1
+  country: sweden
+south_sweden:
+  name: South Sweden
+  nuts_code: SE2
+  country: sweden

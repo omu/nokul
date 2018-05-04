@@ -1,0 +1,9 @@
+erasmus:
+  name: Erasmus
+  code: 18
+farabi:
+  name: Farabi
+  code: 16
+discipline_penalty:
+  name: Disiplin Cezası
+  code: 4

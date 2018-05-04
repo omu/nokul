@@ -1,0 +1,6 @@
+warning:
+  name: Uyarma
+  code: 1
+cencure:
+  name: Kınama
+  code: 2
