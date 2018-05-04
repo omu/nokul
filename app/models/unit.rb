@@ -14,12 +14,12 @@ class Unit < ApplicationRecord
   belongs_to :university_type
 
   # validations
-  validates :name, :yoksis_id, :status, :type, :instruction_type,
+  validates :name, :yoksis_id, :type,
             presence: true
   validates :yoksis_id,
             uniqueness: true
   validates :name,
-            uniqueness: { scope: %i[ancestry status] }
+            uniqueness: { scope: %i[ancestry unit_status_id] }
 
   # callbacks
   before_validation do

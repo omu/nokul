@@ -1,0 +1,9 @@
+dean:
+  name: Dekan
+  code: 13
+rector:
+  name: Rektör
+  code: 15
+yok_member:
+  name: Yök Üyesi
+  code: 18
