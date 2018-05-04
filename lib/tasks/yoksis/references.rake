@@ -29,11 +29,13 @@ namespace :yoksis do
 
     mapping.each do |action, klass|
       Rake::Task['yoksis:reference'].invoke(action, klass)
+      # https://stackoverflow.com/questions/4822020/why-does-a-rake-task-in-a-loop-execute-only-once
+      Rake::Task['yoksis:reference'].reenable
     end
   end
 
   desc 'fetch an individual reference'
-  task :reference, %i[soap_method klass] => [:environment] do |_t, args|
+  task :reference, %i[soap_method klass] => [:environment] do |_, args|
     client = Services::Yoksis::V1::Referanslar.new
     api_name = client.class.to_s.split('::')[1]
     endpoint = client.class.to_s.split('::')[3]
@@ -49,7 +51,6 @@ namespace :yoksis do
 
     # find if any records exists for this api_action
     current_response = YoksisResponse.find_by(name: api_name, endpoint: endpoint, action: api_action)
-
     # create records and log the action if no records found
     create_records(response, args[:klass].constantize) unless current_response
 

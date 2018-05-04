@@ -36,7 +36,7 @@ rake db:setup
 - [OPTIONAL]. If you want to create YOKSIS departments inside your app, run the task shown below:
 
 ```bash
-rake yoksis:referanslar:all
+rake yoksis:references
 rake yoksis:departments
 ```
 

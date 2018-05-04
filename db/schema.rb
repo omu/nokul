@@ -82,7 +82,7 @@ ActiveRecord::Schema.define(version: 2018_05_03_201708) do
     t.index ["unit_id"], name: "index_responsibilities_on_unit_id"
   end
 
-  create_table "staff_academician_titles", force: :cascade do |t|
+  create_table "staff_academic_titles", force: :cascade do |t|
     t.string "name"
     t.integer "code"
   end
