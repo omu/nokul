@@ -1,14 +1,17 @@
 # frozen_string_literal: true
 
 class Unit < ApplicationRecord
-  # concerns
-  include UnitStatus
-  include InstructionType
-
   # relations
   has_ancestry
   belongs_to :city
   has_many :responsibles, foreign_key: 'unit_id', class_name: 'Responsibility'
+
+  # reference models
+  belongs_to :unit_status
+  belongs_to :unit_type
+  belongs_to :unit_instruction_language
+  belongs_to :unit_instruction_type
+  belongs_to :university_type
 
   # validations
   validates :name, :yoksis_id, :status, :type, :instruction_type,
