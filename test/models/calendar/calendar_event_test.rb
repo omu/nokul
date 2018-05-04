@@ -3,7 +3,7 @@
 require 'test_helper'
 
 class CalendarEventTest < ActiveSupport::TestCase
-  test 'should not save calendar_title without start_date' do
+  test 'should not save without start_date' do
     calendar_events(:one).start_date = nil
     assert_not calendar_events(:one).valid?
   end
