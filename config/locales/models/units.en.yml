@@ -19,7 +19,3 @@ en:
     master_program: "Master Program"
     proficiency_in_art_program: "Proficiency In Art Program"
     undergraduate_program: "Undergraduate Program"
-  locations:
-    city: "City"
-    country: "Country"
-    region: "Region"
