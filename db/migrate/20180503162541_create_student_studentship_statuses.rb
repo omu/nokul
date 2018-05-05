@@ -1,8 +1,8 @@
 class CreateStudentStudentshipStatuses < ActiveRecord::Migration[5.2]
   def change
     create_table :student_studentship_statuses do |t|
-      t.string :name
-      t.integer :code
+      t.string :name, unique: true, null: false
+      t.integer :code, unique: true, null: false
     end
   end
 end
