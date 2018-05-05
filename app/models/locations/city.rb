@@ -14,7 +14,7 @@ class City < ApplicationRecord
   validates_associated :units
 
   # callbacks
-  before_create do
+  before_save do
     self.name = name.mb_chars.titlecase
     self.iso = iso.mb_chars.upcase
     self.nuts_code = nuts_code.mb_chars.upcase

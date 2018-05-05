@@ -6,7 +6,7 @@ namespace :yoksis do
   # if you are using zsh you must escape braces though, ie:
   # rake yoksis:reference\['get_birim_turu','UnitType'\]
 
-  desc 'fetches all references'
+  desc 'fetch all references'
   task :references do
     mapping = {
       get_ogrenim_dili: 'UnitInstructionLanguage',

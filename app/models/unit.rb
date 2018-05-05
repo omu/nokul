@@ -4,14 +4,12 @@ class Unit < ApplicationRecord
   # relations
   has_ancestry
   belongs_to :city
-  has_many :responsibles, foreign_key: 'unit_id', class_name: 'Responsibility'
-
-  # reference models
   belongs_to :unit_status
   belongs_to :unit_type
   belongs_to :unit_instruction_language
   belongs_to :unit_instruction_type
   belongs_to :university_type
+  has_many :responsibles, foreign_key: 'unit_id', class_name: 'Responsibility'
 
   # validations
   validates :name, :yoksis_id, :type,
@@ -20,6 +18,8 @@ class Unit < ApplicationRecord
             uniqueness: true
   validates :name,
             uniqueness: { scope: %i[ancestry unit_status_id] }
+  validates :city, :unit_status, :unit_type, :unit_instruction_language, :unit_instruction_type,
+            presence: true
 
   # callbacks
   before_validation do
