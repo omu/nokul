@@ -11,14 +11,19 @@ curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-- Database configuration file reads username, password and host settings from environment variables. Make sure to define these environment variables before setting up the project:
+- Database configuration file reads username, password and host settings from environment variables. Make sure to define these environment variables before setting up the project. Add environment variables to your .bashrc or .zshrc etc.:
 
 ```
-RDS_USERNAME: PostgreSQL username
-RDS_PASSWORD: PostgreSQL password
-RDS_HOSTNAME: PostgreSQL hostname (probably localhost)
-YOKSIS_USER: YOKSIS username.
-YOKSIS_PASSWORD: YOKSIS password.
+export RDS_USERNAME=PostgreSQL username
+export RDS_PASSWORD=PostgreSQL password
+export RDS_HOSTNAME=localhost
+```
+
+In order to communicate with YOKSIS API, you also need to setup some environmental variables:
+
+```
+export YOKSIS_USER=41242414552
+export YOKSIS_PASSWORD=876ytr
 ```
 
 - Install dependencies:
@@ -27,7 +32,7 @@ YOKSIS_PASSWORD: YOKSIS password.
 bundle
 ```
 
-- Create databases and migration tables:
+- Create database and migrate tables:
 
 ```bash
 rake db:setup
@@ -51,19 +56,17 @@ export SECRET_KEY_BASE=GENERATED_SECRET_VALUE
 
 See [Wiki pages](https://github.com/omu/nokul-bati/wiki) for how-to documents.
 
-## Design
-
-![model-diagrams](http://i65.tinypic.com/23u370m.png)
-
 ## Code Quality
 
 - Rake task named as 'quality' checks for code smells.
 
 ```bash
-rake quality:ruby # runs rubocop and checks only for ruby offenses & runs rubycritic (rubycritic includes reek!)
-rake quality:rails # runs rubocop and checks both for ruby and rails offenses
-rake quality:all # runs both ruby and rails tasks.
+rake quality:ruby # rubocop [ruby] + rubycritic [with reek]
+rake quality:rails # rubocop [ruby + rails]
+rake quality:all # ruby and rails tasks together
 ```
+
+## Security
 
 - Rake task named as 'security' checks for security issues:
 
@@ -79,12 +82,29 @@ Run tests with:
 rake test
 ```
 
+## Test Coverage
+
+Currently coverage reports are being send to Codacy automatically. If you would like to generate a local report for yourself (using SimpleCov), you need to comment out some lines of `test_helper.rb` as shown below:
+
+```ruby
+require 'simplecov'
+# require 'codacy-coverage'
+SimpleCov.start 'rails'
+# Codacy::Reporter.start
+```
+
+then run your tests as usual:
+
+```ruby
+rake test
+```
+
+
 ## Third-Parties
 
 Third-party integrations are located under `app/services/foo/v1`. Follow up /docs subfolder (ie. `app/services/foo/v1/docs` for SOAPUI templates.
 
 ## App Upgrade
-
 
 ```bash
 bin/rails app:update
