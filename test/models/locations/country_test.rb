@@ -64,7 +64,7 @@ class CountryTest < ActiveSupport::TestCase
   end
 
   # callback tests
-  test 'callbacks must titlecase the name and must upcase the iso codes for a country' do
+  test 'callbacks must titlecase the name and must upcase the iso codes of a country' do
     country = Country.create(name: 'wonderland of alice', iso: 'wl1', code: 1)
     assert_equal country.name, 'Wonderland Of Alice'
     assert_equal country.iso, 'WL1'

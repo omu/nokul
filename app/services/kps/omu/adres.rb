@@ -22,18 +22,19 @@ module Services
             false
           else
             # İl/ilçe merkezi adresi
-            if response[:yerlesim_yeri_adresi][:il_ilce_merkez_adresi].present?
-              address_root = response[:yerlesim_yeri_adresi][:il_ilce_merkez_adresi]
+            yerlesim_yeri_adresi = yerlesim_yeri_adresi
+            if yerlesim_yeri_adresi[:il_ilce_merkez_adresi].present?
+              address_root = yerlesim_yeri_adresi[:il_ilce_merkez_adresi]
             # Köy adresi
-            elsif response[:yerlesim_yeri_adresi][:koy_adresi].present?
-              address_root = response[:yerlesim_yeri_adresi][:koy_adresi]
+            elsif yerlesim_yeri_adresi[:koy_adresi].present?
+              address_root = yerlesim_yeri_adresi[:koy_adresi]
             # Yurt dışı adresi
-            elsif response[:yerlesim_yeri_adresi][:yurt_disi_adresi].present?
-              address_root = response[:yerlesim_yeri_adresi][:yurt_disi_adresi]
+            elsif yerlesim_yeri_adresi[:yurt_disi_adresi].present?
+              address_root = yerlesim_yeri_adresi[:yurt_disi_adresi]
             end
 
             # Common data for all
-            address_information[:full_address] = response[:yerlesim_yeri_adresi][:acik_adres]
+            address_information[:full_address] = yerlesim_yeri_adresi[:acik_adres]
             address_information[:city] = address_root[:il]
             address_information[:city_id] = address_root[:il_kodu]
             address_information[:district] = address_root[:ilce]

@@ -1,16 +1,16 @@
-turkey: 
-  name: Türkiye 
-  iso: TR 
-  code: 52 
-sweden: 
-  name: İsveç 
-  iso: SE 
-  code: 30 
-denmark: 
-  name: Danimarka 
-  iso: DK 
-  code: 8 
-norway: 
-  name: Norveç 
-  iso: NO 
+turkey:
+  name: Türkiye
+  iso: TR
+  code: 52
+sweden:
+  name: İsveç
+  iso: SE
+  code: 30
+denmark:
+  name: Danimarka
+  iso: DK
+  code: 8
+norway:
+  name: Norveç
+  iso: NO
   code: 28

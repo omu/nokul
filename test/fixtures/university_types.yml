@@ -1,0 +1,6 @@
+government:
+  name: Devlet Üniversiteleri
+  code: 1
+foundation:
+  name: Vakıf Üniversiteleri
+  code: 2

@@ -20,6 +20,7 @@ gem 'devise'
 # assets
 gem 'coffee-rails', '~> 4.2'
 gem 'sass-rails', '~> 5.0'
+gem 'simple_form'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 
@@ -35,10 +36,12 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'capybara', '>= 2.15', '< 4.0'
   gem 'chromedriver-helper'
+  gem 'codacy-coverage', require: false
   gem 'pry-rails'
   gem 'reek'
   gem 'rubocop'
   gem 'selenium-webdriver'
+  gem 'simplecov', require: false
 end
 
 group :development do

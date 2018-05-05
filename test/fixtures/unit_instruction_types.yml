@@ -1,0 +1,12 @@
+open_education:
+  name: Açık Öğretim
+  code: 4
+evening_education:
+  name: İkinci Öğretim
+  code: 2
+distance_education:
+  name: Uzaktan Öğretim
+  code: 3
+normal_education:
+  name: Normal Öğretim
+  code: 1

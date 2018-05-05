@@ -10,10 +10,10 @@ class Region < ApplicationRecord
   # validations
   validates :name, :nuts_code,
             presence: true, uniqueness: true
-  validates_associated :cities
+  validates :country, presence: true
 
   # callbacks
-  before_create do
+  before_save do
     self.name = name.mb_chars.titlecase
     self.nuts_code = nuts_code.mb_chars.upcase
   end

@@ -1,0 +1,12 @@
+german:
+  name: Almanca
+  code: 4
+french:
+  name: Fransızca
+  code: 3
+english:
+  name: İngilizce
+  code: 2
+turkish:
+  name: Türkçe
+  code: 1

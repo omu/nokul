@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     working_directory: ~/nokul
-    docker: 
+    docker:
       - image: circleci/ruby:latest-node-browsers
         environment:
           TZ: '/usr/share/zoneinfo/Asia/Baghdad'

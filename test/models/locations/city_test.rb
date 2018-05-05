@@ -63,8 +63,14 @@ class CityTest < ActiveSupport::TestCase
   end
 
   # callback tests
-  test 'callbacks must titlecase the name and must upcase the nuts_code for a city' do
-    city = City.create(name: 'wonderland', nuts_code: 'wl1', iso: 'wl11', country: Country.first, region: Region.first)
+  test 'callbacks must titlecase the name and must upcase the nuts_code of a city' do
+    city = City.create(
+      name: 'wonderland',
+      nuts_code: 'wl1',
+      iso: 'wl11',
+      country: countries(:turkey),
+      region: regions(:bati_karadeniz)
+    )
     assert_equal city.name, 'Wonderland'
     assert_equal city.nuts_code, 'WL1'
     assert_equal city.iso, 'WL11'

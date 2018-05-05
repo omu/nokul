@@ -48,8 +48,8 @@ class RegionTest < ActiveSupport::TestCase
   end
 
   # callback tests
-  test 'callbacks must titlecase the name and must upcase the nuts_code for a region' do
-    region = Region.create(name: 'wonderland of alice', nuts_code: 'wl1', country: Country.first)
+  test 'callbacks must titlecase the name and must upcase the nuts_code of a region' do
+    region = Region.create(name: 'wonderland of alice', nuts_code: 'wl1', country: countries(:turkey))
     assert_equal region.name, 'Wonderland Of Alice'
     assert_equal region.nuts_code, 'WL1'
   end
