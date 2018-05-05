@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_03_201708) do
+ActiveRecord::Schema.define(version: 2018_05_05_142048) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,13 @@ ActiveRecord::Schema.define(version: 2018_05_03_201708) do
     t.string "name", null: false
     t.string "iso", null: false
     t.integer "code", null: false
+  end
+
+  create_table "districts", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "yoksis_id"
+    t.bigint "city_id"
+    t.index ["city_id"], name: "index_districts_on_city_id"
   end
 
   create_table "identities", force: :cascade do |t|
@@ -83,78 +90,78 @@ ActiveRecord::Schema.define(version: 2018_05_03_201708) do
   end
 
   create_table "staff_academic_titles", force: :cascade do |t|
-    t.string "name"
-    t.integer "code"
+    t.string "name", null: false
+    t.integer "code", null: false
   end
 
   create_table "staff_administrative_functions", force: :cascade do |t|
-    t.string "name"
-    t.integer "code"
+    t.string "name", null: false
+    t.integer "code", null: false
   end
 
   create_table "student_disability_types", force: :cascade do |t|
-    t.string "name"
-    t.integer "code"
+    t.string "name", null: false
+    t.integer "code", null: false
   end
 
   create_table "student_drop_out_types", force: :cascade do |t|
-    t.string "name"
-    t.integer "code"
+    t.string "name", null: false
+    t.integer "code", null: false
   end
 
   create_table "student_education_levels", force: :cascade do |t|
-    t.string "name"
-    t.integer "code"
+    t.string "name", null: false
+    t.integer "code", null: false
   end
 
   create_table "student_entrance_point_types", force: :cascade do |t|
-    t.string "name"
-    t.integer "code"
+    t.string "name", null: false
+    t.integer "code", null: false
   end
 
   create_table "student_entrance_types", force: :cascade do |t|
-    t.string "name"
-    t.integer "code"
+    t.string "name", null: false
+    t.integer "code", null: false
   end
 
   create_table "student_grades", force: :cascade do |t|
-    t.string "name"
-    t.integer "code"
+    t.string "name", null: false
+    t.integer "code", null: false
   end
 
   create_table "student_grading_systems", force: :cascade do |t|
-    t.string "name"
-    t.integer "code"
+    t.string "name", null: false
+    t.integer "code", null: false
   end
 
   create_table "student_punishment_types", force: :cascade do |t|
-    t.string "name"
-    t.integer "code"
+    t.string "name", null: false
+    t.integer "code", null: false
   end
 
   create_table "student_studentship_statuses", force: :cascade do |t|
-    t.string "name"
-    t.integer "code"
+    t.string "name", null: false
+    t.integer "code", null: false
   end
 
   create_table "unit_instruction_languages", force: :cascade do |t|
-    t.string "name"
-    t.integer "code"
+    t.string "name", null: false
+    t.integer "code", null: false
   end
 
   create_table "unit_instruction_types", force: :cascade do |t|
-    t.string "name"
-    t.integer "code"
+    t.string "name", null: false
+    t.integer "code", null: false
   end
 
   create_table "unit_statuses", force: :cascade do |t|
-    t.string "name"
-    t.integer "code"
+    t.string "name", null: false
+    t.integer "code", null: false
   end
 
   create_table "unit_types", force: :cascade do |t|
-    t.string "name"
-    t.integer "code"
+    t.string "name", null: false
+    t.integer "code", null: false
   end
 
   create_table "units", force: :cascade do |t|
@@ -178,8 +185,8 @@ ActiveRecord::Schema.define(version: 2018_05_03_201708) do
   end
 
   create_table "university_types", force: :cascade do |t|
-    t.string "name"
-    t.integer "code"
+    t.string "name", null: false
+    t.integer "code", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -217,6 +224,7 @@ ActiveRecord::Schema.define(version: 2018_05_03_201708) do
   add_foreign_key "addresses", "users"
   add_foreign_key "cities", "countries"
   add_foreign_key "cities", "regions"
+  add_foreign_key "districts", "cities"
   add_foreign_key "identities", "users"
   add_foreign_key "regions", "countries"
   add_foreign_key "responsibilities", "positions"
