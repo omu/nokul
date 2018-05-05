@@ -54,12 +54,6 @@ class UnitTest < ActiveSupport::TestCase
     assert_not_nil units(:omu).errors[:unit_status]
   end
 
-  test 'presence validations for unit_instruction_language relation' do
-    units(:omu).unit_instruction_language_id = nil
-    refute units(:omu).valid?
-    assert_not_nil units(:omu).errors[:unit_instruction_language]
-  end
-
   test 'presence validations for unit_instruction_type relation' do
     units(:omu).unit_instruction_type_id = nil
     refute units(:omu).valid?
