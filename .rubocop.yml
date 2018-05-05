@@ -5,8 +5,8 @@ AllCops:
     - vendor/bundle/**/*
     - db/schema.rb
     - db/migrate/*.rb
-    - lib/tasks/yoksis/referanslar.rake # TODO: WIP
-    - app/models/unit.rb # TODO: WIP
+    - config/initializers/simple_form.rb
+    - config/initializers/simple_form_bootstrap.rb
     - app/models/users/*.rb # TODO: WIP
 Style/AsciiComments:
   Description: 'Use only ascii symbols in comments.'

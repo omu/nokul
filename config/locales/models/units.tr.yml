@@ -19,7 +19,3 @@ tr:
     master_program: "Yüksek Lisans Programı"
     proficiency_in_art_program: "Sanatta Yeterlilik Programı"
     undergraduate_program: "Önlisans/Lisans Programı"
-  locations:
-    city: "Şehir"
-    country: "Ülke"
-    region: "Bölge"

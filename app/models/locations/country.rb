@@ -10,11 +10,9 @@ class Country < ApplicationRecord
   # validations
   validates :name, :iso, :code,
             presence: true, uniqueness: true
-  validates_associated :cities
-  validates_associated :regions
 
   # callbacks
-  before_create do
+  before_save do
     self.name = name.mb_chars.titlecase
     self.iso = iso.mb_chars.upcase
   end

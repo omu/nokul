@@ -1,0 +1,9 @@
+passive:
+  name: Pasif
+  code: 0
+active:
+  name: Aktif
+  code: 1
+archived:
+  name: Arşiv
+  code: 4
