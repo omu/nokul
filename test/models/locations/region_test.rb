@@ -12,6 +12,14 @@ class RegionTest < ActiveSupport::TestCase
     assert regions(:bati_karadeniz).cities
   end
 
+  test 'a region can communicate with districts' do
+    assert regions(:bati_karadeniz).districts
+  end
+
+  test 'a region can communicate with units' do
+    assert regions(:bati_karadeniz).units
+  end
+
   # nullify tests
   test 'city nullifies the region_id when a region gets deleted' do
     regions(:east_sweden).destroy

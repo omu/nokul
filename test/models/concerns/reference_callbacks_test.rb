@@ -8,7 +8,7 @@ module ReferenceCallbacksTest
   included do
     test 'callbacks must titlecase the name for reference objects' do
       @object.update!(name: 'ışık ılık süt iç')
-      assert_equal @object.name, 'Işık Ilık Süt Iç'
+      assert_equal @object.name, 'Işık Ilık Süt İç'
     end
   end
 end

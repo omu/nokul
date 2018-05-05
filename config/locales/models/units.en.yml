@@ -1,7 +1,7 @@
 en:
   units:
     # Do not change this translations since they are matching with YOKSIS data!
-    university: "Üniversite"
+    university: "University"
     academy: "Academy"
     art_discipline: "Art Discipline"
     department: "Department"

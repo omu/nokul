@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_05_142048) do
+ActiveRecord::Schema.define(version: 2018_05_03_201708) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,8 +34,6 @@ ActiveRecord::Schema.define(version: 2018_05_05_142048) do
     t.string "iso", null: false
     t.string "nuts_code", null: false
     t.bigint "region_id"
-    t.bigint "country_id"
-    t.index ["country_id"], name: "index_cities_on_country_id"
     t.index ["region_id"], name: "index_cities_on_region_id"
   end
 
@@ -159,11 +157,6 @@ ActiveRecord::Schema.define(version: 2018_05_05_142048) do
     t.integer "code", null: false
   end
 
-  create_table "unit_types", force: :cascade do |t|
-    t.string "name", null: false
-    t.integer "code", null: false
-  end
-
   create_table "units", force: :cascade do |t|
     t.string "name", null: false
     t.integer "yoksis_id", null: false
@@ -171,7 +164,7 @@ ActiveRecord::Schema.define(version: 2018_05_05_142048) do
     t.date "founded_at"
     t.integer "duration"
     t.string "type", null: false
-    t.bigint "city_id"
+    t.bigint "district_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "ancestry"
@@ -181,7 +174,7 @@ ActiveRecord::Schema.define(version: 2018_05_05_142048) do
     t.integer "unit_instruction_type_id"
     t.integer "university_type_id"
     t.index ["ancestry"], name: "index_units_on_ancestry"
-    t.index ["city_id"], name: "index_units_on_city_id"
+    t.index ["district_id"], name: "index_units_on_district_id"
   end
 
   create_table "university_types", force: :cascade do |t|
@@ -222,12 +215,11 @@ ActiveRecord::Schema.define(version: 2018_05_05_142048) do
   end
 
   add_foreign_key "addresses", "users"
-  add_foreign_key "cities", "countries"
   add_foreign_key "cities", "regions"
   add_foreign_key "districts", "cities"
   add_foreign_key "identities", "users"
   add_foreign_key "regions", "countries"
   add_foreign_key "responsibilities", "positions"
   add_foreign_key "responsibilities", "units"
-  add_foreign_key "units", "cities"
+  add_foreign_key "units", "districts"
 end

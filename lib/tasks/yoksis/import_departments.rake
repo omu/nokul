@@ -1,12 +1,13 @@
 # frozen_string_literal: true
 
 namespace :yoksis do
-  task departments: :environment do
-    file = File.open(Rails.root.join('db', 'units.yml'))
+  task import_departments: :environment do
+    file = File.open(Rails.root.join('db', 'static_data', 'units.yml'))
   rescue Errno::ENOENT => e
     puts "File/path not found! #{e}"
   else
-    city = City.find_by(iso: 'TR-55') # default city set to Samsun for this case
+    # YOKSIS export doesn't provide unit locations, so the default district set to Atakum for this case
+    district = District.find_by(name: 'Atakum')
     puts 'It works silently if all OK, otherwise you will receive errors.'
 
     file.read.each_line do |unit|
@@ -14,18 +15,18 @@ namespace :yoksis do
       foet_code = unit.split('|').map(&:strip)
 
       statuses = {
-        'Pasif' => Unit.statuses['passive'],
-        'Aktif' => Unit.statuses['active'],
-        'Yarı Pasif' => Unit.statuses['partially_passive'],
-        'Kapalı' => Unit.statuses['closed'],
-        'Arşiv' => Unit.statuses['archived']
+        'Pasif' => UnitStatus.find_by(code: 0),
+        'Aktif' => UnitStatus.find_by(code: 1),
+        'Yarı Pasif' => UnitStatus.find_by(code: 2),
+        'Kapalı' => UnitStatus.find_by(code: 3),
+        'Arşiv' => UnitStatus.find_by(code: 4)
       }
 
       instruction_types = {
-        'NORMAL ÖĞRETİM' => Unit.instruction_types['formal'],
-        'İKİNCİ ÖĞRETİM' => Unit.instruction_types['evening'],
-        'UZAKTAN ÖĞRETİM' => Unit.instruction_types['distance_education'],
-        'AÇIK ÖĞRETİM' => Unit.instruction_types['open_education']
+        'NORMAL ÖĞRETİM' => UnitInstructionType.find_by(code: 1),
+        'İKİNCİ ÖĞRETİM' => UnitInstructionType.find_by(code: 2),
+        'UZAKTAN ÖĞRETİM' => UnitInstructionType.find_by(code: 3),
+        'AÇIK ÖĞRETİM' => UnitInstructionType.find_by(code: 4)
       }
 
       # matching hash for English-Turkish unit names.
@@ -40,15 +41,15 @@ namespace :yoksis do
         unit = Unit.new(
           name: name.strip,
           yoksis_id: yoksis_id,
-          status: statuses[status.to_s],
           founded_at: founded_at ? founded_at.to_date : nil,
-          instruction_type: instruction_types[instruction_type.to_s],
           foet_code: foet_code,
-          language: language,
           duration: duration.to_i,
           type: unit_types[unit_type.to_s],
           parent: Unit.find_by(yoksis_id: parent_yoksis_id),
-          city: city
+          district: district,
+          unit_instruction_type: instruction_types[instruction_type.to_s],
+          unit_instruction_language: UnitInstructionLanguage.find_by(name: language),
+          unit_status: statuses[status.to_s]
         )
         puts "FAIL: #{unit.id} - #{unit.name} can not be created!" unless unit.save!
       else

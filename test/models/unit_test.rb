@@ -9,16 +9,12 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   # relational tests
-  test 'a unit can communicate with a city' do
-    assert units(:omu).city
+  test 'a unit can communicate with a district' do
+    assert units(:omu).district
   end
 
   test 'a unit can communicate with an unit status' do
     assert units(:omu).unit_status
-  end
-
-  test 'a unit can communicate with an unit type' do
-    assert units(:omu).unit_type
   end
 
   test 'a unit can communicate with an unit_instruction_language' do
@@ -56,12 +52,6 @@ class UnitTest < ActiveSupport::TestCase
     units(:omu).unit_status_id = nil
     refute units(:omu).valid?
     assert_not_nil units(:omu).errors[:unit_status]
-  end
-
-  test 'presence validations for unit_type relation' do
-    units(:omu).unit_type_id = nil
-    refute units(:omu).valid?
-    assert_not_nil units(:omu).errors[:unit_type]
   end
 
   test 'presence validations for unit_instruction_language relation' do

@@ -5,13 +5,17 @@ require 'test_helper'
 class DistrictTest < ActiveSupport::TestCase
   # relational tests
   test 'a district can communicate with a city' do
-    assert cities(:samsun).country
+    assert districts(:vezirkopru).city
+  end
+
+  test 'a district can communicate with units' do
+    assert districts(:atakum).units
   end
 
   # nullify tests
-  test 'district nullifies the city_id when a city gets deleted' do
-    cities(:sinop).destroy
-    assert_nil districts(:gerze).city_id
+  test 'unit nullifies the district_id when a city gets deleted' do
+    districts(:atakum).destroy
+    assert_nil units(:cbu).district_id
   end
 
   # validation tests for presence
