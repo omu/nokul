@@ -4,9 +4,8 @@ omu:
   founded_at: 11.04.1975
   duration: 0
   type: University
-  city: samsun
+  district: atakum
   unit_status: active
-  unit_type: university
   unit_instruction_language: turkish
   unit_instruction_type: normal_education
   university_type: government
@@ -17,9 +16,8 @@ cbu:
   founded_at: 12.04.2010
   duration: 0
   type: University
-  city: samsun
+  district: atakum
   unit_status: passive
-  unit_type: university
   unit_instruction_language: english
   unit_instruction_type: normal_education
   university_type: foundation

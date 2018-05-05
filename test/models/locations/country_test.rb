@@ -12,15 +12,18 @@ class CountryTest < ActiveSupport::TestCase
     assert countries(:turkey).cities
   end
 
+  test 'a country can communicate with districts' do
+    assert countries(:turkey).districts
+  end
+
+  test 'a country can communicate with units' do
+    assert countries(:turkey).units
+  end
+
   # nullify tests
   test 'region nullifies the country_id when a country gets deleted' do
     countries(:sweden).destroy
     assert_nil regions(:east_sweden).country_id
-  end
-
-  test 'city nullifies the country_id when a country gets deleted' do
-    countries(:sweden).destroy
-    assert_nil cities(:stockholm).country_id
   end
 
   # validation tests for presence

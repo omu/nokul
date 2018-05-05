@@ -4,22 +4,22 @@ require 'test_helper'
 
 class CityTest < ActiveSupport::TestCase
   # relational tests
-  test 'a city can communicate with a country' do
-    assert cities(:samsun).country
-  end
-
   test 'a city can communicate with a region' do
     assert cities(:samsun).region
   end
 
-  test 'a city can communicate with a unit' do
+  test 'a city can communicate with districts' do
+    assert cities(:samsun).districts
+  end
+
+  test 'a city can communicate with units' do
     assert cities(:samsun).units
   end
 
   # nullify tests
-  test 'unit nullifies the city_id when a city gets deleted' do
+  test 'district nullifies the city_id when a city gets deleted' do
     cities(:samsun).destroy
-    assert_nil units(:omu).city_id
+    assert_nil districts(:atakum).city_id
   end
 
   # validation tests for presence
@@ -68,7 +68,6 @@ class CityTest < ActiveSupport::TestCase
       name: 'wonderland',
       nuts_code: 'wl1',
       iso: 'wl11',
-      country: countries(:turkey),
       region: regions(:bati_karadeniz)
     )
     assert_equal city.name, 'Wonderland'
