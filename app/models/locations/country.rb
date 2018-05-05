@@ -14,7 +14,7 @@ class Country < ApplicationRecord
   validates_associated :regions
 
   # callbacks
-  before_create do
+  before_save do
     self.name = name.mb_chars.titlecase
     self.iso = iso.mb_chars.upcase
   end

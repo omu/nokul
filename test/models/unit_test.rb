@@ -13,6 +13,26 @@ class UnitTest < ActiveSupport::TestCase
     assert units(:omu).city
   end
 
+  test 'a unit can communicate with an unit status' do
+    assert units(:omu).unit_status
+  end
+
+  test 'a unit can communicate with an unit type' do
+    assert units(:omu).unit_type
+  end
+
+  test 'a unit can communicate with an unit_instruction_language' do
+    assert units(:omu).unit_instruction_language
+  end
+
+  test 'a unit can communicate with an unit_instruction_type' do
+    assert units(:omu).unit_instruction_type
+  end
+
+  test 'a unit can communicate with an university_type' do
+    assert units(:omu).university_type
+  end
+
   # validation tests for presence
   test 'presence validations for name of a unit' do
     units(:omu).name = nil
@@ -32,6 +52,30 @@ class UnitTest < ActiveSupport::TestCase
     assert_not_nil units(:omu).errors[:type]
   end
 
+  test 'presence validations for unit_status relation' do
+    units(:omu).unit_status_id = nil
+    refute units(:omu).valid?
+    assert_not_nil units(:omu).errors[:unit_status]
+  end
+
+  test 'presence validations for unit_type relation' do
+    units(:omu).unit_type_id = nil
+    refute units(:omu).valid?
+    assert_not_nil units(:omu).errors[:unit_type]
+  end
+
+  test 'presence validations for unit_instruction_language relation' do
+    units(:omu).unit_instruction_language_id = nil
+    refute units(:omu).valid?
+    assert_not_nil units(:omu).errors[:unit_instruction_language]
+  end
+
+  test 'presence validations for unit_instruction_type relation' do
+    units(:omu).unit_instruction_type_id = nil
+    refute units(:omu).valid?
+    assert_not_nil units(:omu).errors[:unit_instruction_type]
+  end
+
   # validation tests for uniqueness
   test 'uniqueness validations for units' do
     fake = units(:omu).dup
@@ -43,17 +87,11 @@ class UnitTest < ActiveSupport::TestCase
     assert_not_nil fake.errors[:yoksis_id]
   end
 
-  # callback tests for uniqueness
-  # test 'callbacks must titlecase the name for a unit' do
-  #   unit = Unit.create(
-  #     name: 'wonderunit department',
-  #     yoksis_id: Random.new_seed,
-  #     status: 1,
-  #     type: 'Department',
-  #     instruction_type: 1
-  #   )
-  #   assert_equal unit.name, 'Wonderunit Department'
-  # end
+  test 'callbacks must titlecase the name for a unit' do
+    unit = units(:omu).dup
+    unit.update(yoksis_id: 1234, name: 'wonderunit department')
+    assert_equal unit.name, 'Wonderunit Department'
+  end
 
   # custom tests
   test 'types method can return all models inheriting from the Unit model' do
