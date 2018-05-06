@@ -8,7 +8,7 @@ namespace :yoksis do
 
   desc 'fetch all references'
   task :fetch_references do
-    mapping = {
+    {
       get_ogrenim_dili: 'UnitInstructionLanguage',
       get_ogrenim_turu: 'UnitInstructionType',
       get_aktiflik_durumu: 'UnitStatus',
@@ -24,9 +24,7 @@ namespace :yoksis do
       get_ogrenci_diploma_not_sistemi: 'StudentGradingSystem',
       get_ceza_turu: 'StudentPunishmentType',
       get_ogrenci_ogrencilik_hakki: 'StudentStudentshipStatus'
-    }
-
-    mapping.each do |action, klass|
+    }.each do |action, klass|
       Rake::Task['yoksis:fetch_reference'].invoke(action, klass)
       # https://stackoverflow.com/questions/4822020/why-does-a-rake-task-in-a-loop-execute-only-once
       Rake::Task['yoksis:fetch_reference'].reenable
