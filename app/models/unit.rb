@@ -7,7 +7,6 @@ class Unit < ApplicationRecord
   belongs_to :unit_status
   belongs_to :unit_instruction_type
   belongs_to :unit_instruction_language, optional: true
-  # has_many :responsibles, foreign_key: 'unit_id', class_name: 'Responsibility'
 
   # validations
   validates :name, :yoksis_id, :type,
