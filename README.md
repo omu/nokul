@@ -32,7 +32,7 @@ export YOKSIS_PASSWORD=876ytr
 bundle
 ```
 
-- Create database and migrate tables:
+- Create database, migrate tables and run the seed data:
 
 ```bash
 rake db:setup
