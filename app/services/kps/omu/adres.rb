@@ -10,8 +10,6 @@ module Services
         end
 
         def sorgula(queried_id_number)
-          address_information = {}
-
           message = { KimlikNo: queried_id_number.to_s }
           response = @client.call(
             :adres_sorgula, message: message
@@ -21,29 +19,25 @@ module Services
           if response[:hata_bilgisi].present?
             false
           else
-            # İl/ilçe merkezi adresi
-            yerlesim_yeri_adresi = yerlesim_yeri_adresi
-            if yerlesim_yeri_adresi[:il_ilce_merkez_adresi].present?
-              address_root = yerlesim_yeri_adresi[:il_ilce_merkez_adresi]
-            # Köy adresi
-            elsif yerlesim_yeri_adresi[:koy_adresi].present?
-              address_root = yerlesim_yeri_adresi[:koy_adresi]
-            # Yurt dışı adresi
-            elsif yerlesim_yeri_adresi[:yurt_disi_adresi].present?
-              address_root = yerlesim_yeri_adresi[:yurt_disi_adresi]
-            end
-
-            # Common data for all
-            address_information[:full_address] = yerlesim_yeri_adresi[:acik_adres]
-            address_information[:city] = address_root[:il]
-            address_information[:city_id] = address_root[:il_kodu]
-            address_information[:district] = address_root[:ilce]
-            address_information[:district_id] = address_root[:ilce_kodu]
-            address_information[:neighbourhood] = address_root[:mahalle]
-            address_information[:neighbourhood_id] = address_root[:mahalle_kodu]
-
+            yerlesim_yeri = response[:yerlesim_yeri_adresi]
+            address_root = if yerlesim_yeri[:il_ilce_merkez_adresi].present?
+                             yerlesim_yeri[:il_ilce_merkez_adresi]
+                           elsif yerlesim_yeri[:koy_adresi].present?
+                             yerlesim_yeri[:koy_adresi]
+                           elsif yerlesim_yeri[:yurt_disi_adresi].present?
+                             yerlesim_yeri[:yurt_disi_adresi]
+                           end
             # return a hash, ready to use for building an Address.
-            return address_information
+            address_information = {
+              full_address: yerlesim_yeri[:acik_adres],
+              city: address_root[:il],
+              city_id: address_root[:il_kodu],
+              district: address_root[:ilce],
+              district_id: address_root[:ilce_kodu],
+              neighbourhood: address_root[:mahalle],
+              neighbourhood_id: address_root[:mahalle_kodu]
+            }
+            address_information
           end
         end
       end
