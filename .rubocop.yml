@@ -8,8 +8,8 @@ AllCops:
     - config/initializers/simple_form.rb
     - config/initializers/simple_form_bootstrap.rb
 
-    # put work in progress files under this line:
-    - app/models/users/*.rb
+    # put work in progress files under this line, ie:
+    # - app/models/users/*.rb
 Style/AsciiComments:
   Description: 'Use only ascii symbols in comments.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#english-comments'
@@ -38,6 +38,3 @@ Metrics/CyclomaticComplexity:
 Metrics/PerceivedComplexity:
   Exclude:
     - app/services/kps/omu/kimlik.rb
-Style/ClassAndModuleChildren:
-  Exclude:
-    - test/test_helper.rb

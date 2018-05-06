@@ -8,7 +8,6 @@ class CreateAddresses < ActiveRecord::Migration[5.1]
       t.string :neighbourhood
       t.integer :neighbourhood_id
       t.text :full_address, null: false
-      t.belongs_to :user, foreign_key: true
       t.timestamps
     end
   end
