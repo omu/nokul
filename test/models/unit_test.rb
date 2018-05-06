@@ -8,66 +8,37 @@ class UnitTest < ActiveSupport::TestCase
     assert Unit.has_attribute?('type')
   end
 
-  # relational tests
-  test 'a unit can communicate with a district' do
-    assert units(:omu).district
+  # relational tests for the related models of unit
+  %i[
+    district
+    unit_status
+    unit_instruction_language
+    unit_instruction_type
+    university_type
+  ].each do |property|
+    test "a unit can communicate with #{property}" do
+      assert units(:omu).send(property)
+    end
   end
 
-  test 'a unit can communicate with an unit status' do
-    assert units(:omu).unit_status
-  end
-
-  test 'a unit can communicate with an unit_instruction_language' do
-    assert units(:omu).unit_instruction_language
-  end
-
-  test 'a unit can communicate with an unit_instruction_type' do
-    assert units(:omu).unit_instruction_type
-  end
-
-  test 'a unit can communicate with an university_type' do
-    assert units(:omu).university_type
-  end
-
-  # validation tests for presence
-  test 'presence validations for name of a unit' do
-    units(:omu).name = nil
-    refute units(:omu).valid?
-    assert_not_nil units(:omu).errors[:name]
-  end
-
-  test 'presence validations for yoksis_id of a unit' do
-    units(:omu).yoksis_id = nil
-    refute units(:omu).valid?
-    assert_not_nil units(:omu).errors[:yoksis_id]
-  end
-
-  test 'presence validations for type of a unit' do
-    units(:omu).type = nil
-    refute units(:omu).valid?
-    assert_not_nil units(:omu).errors[:type]
-  end
-
-  test 'presence validations for unit_status relation' do
-    units(:omu).unit_status_id = nil
-    refute units(:omu).valid?
-    assert_not_nil units(:omu).errors[:unit_status]
-  end
-
-  test 'presence validations for unit_instruction_type relation' do
-    units(:omu).unit_instruction_type_id = nil
-    refute units(:omu).valid?
-    assert_not_nil units(:omu).errors[:unit_instruction_type]
-  end
-
-  # validation tests for uniqueness
-  test 'uniqueness validations for units' do
-    fake = units(:omu).dup
-    refute fake.valid?
+  # validation tests for the presence of listed properties
+  %i[
+    name
+    yoksis_id
+    type
+    unit_status
+    unit_instruction_type
+  ].each do |property|
+    test "presence validations for #{property} of a unit" do
+      units(:omu).send("#{property}=", nil)
+      refute units(:omu).valid?
+      assert_not_nil units(:omu).errors[property]
+    end
   end
 
   test 'uniqueness validations for yoksis_id field of a unit' do
     fake = units(:omu).dup
+    refute fake.valid?
     assert_not_nil fake.errors[:yoksis_id]
   end
 
