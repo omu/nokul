@@ -22,8 +22,8 @@ export RDS_HOSTNAME=localhost
 In order to communicate with YOKSIS API, you also need to setup some environmental variables:
 
 ```
-export YOKSIS_USER=41242414552
-export YOKSIS_PASSWORD=876ytr
+export YOKSIS_USER=YOKSIS username
+export YOKSIS_PASSWORD=YOKSIS password
 ```
 
 - Install dependencies:
