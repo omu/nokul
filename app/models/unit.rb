@@ -19,7 +19,7 @@ class Unit < ApplicationRecord
             presence: true
 
   # callbacks
-  before_validation do
+  before_save do
     self.name = name.capitalize_all if name
   end
 

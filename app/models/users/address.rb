@@ -11,7 +11,7 @@ class Address < ApplicationRecord
             uniqueness: { scope: %i[city user_id] }
 
   # callbacks
-  before_validation do
+  before_save do
     self.city = city.capitalize_all
     self.district = district.capitalize_all
     self.neighbourhood = neighbourhood.capitalize_all
