@@ -5,10 +5,10 @@ class CreateIdentities < ActiveRecord::Migration[5.1]
       t.string :last_name, null: false
       t.string :mothers_name
       t.string :fathers_name
-      t.integer :gender
-      t.string :place_of_birth
-      t.integer :marital_status
-      t.date :date_of_birth
+      t.integer :gender, null: false
+      t.integer :marital_status, null: false
+      t.string :place_of_birth, null: false
+      t.date :date_of_birth, null: false
       t.string :registered_to
       t.datetime :updated_at, null: false
       t.belongs_to :user, foreign_key: true
