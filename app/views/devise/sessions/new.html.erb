@@ -1,0 +1,14 @@
+<h2>Giriş Yap</h2>
+
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="form-inputs">
+    <%= f.input :id_number, required: true, autofocus: true, label: 'T.C. Kimlik Numarası' %>
+    <%= f.input :password, required: true, label: 'Şifre' %>
+    <%= f.input :remember_me, as: :boolean, label: 'Beni hatırla' if devise_mapping.rememberable? %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, 'Giriş Yap', class: 'btn btn-primary' %> |
+    <%= render 'devise/shared/links' %>
+  </div>
+<% end %>
