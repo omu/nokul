@@ -5,7 +5,7 @@ module ReferenceCallbacks
 
   included do
     before_save do
-      self.name = name.mb_chars.titlecase
+      self.name = name.capitalize_all
     end
   end
 end

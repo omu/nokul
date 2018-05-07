@@ -24,7 +24,7 @@ File.open(Rails.root.join('db', 'static_data', 'cities.yml')) do |cities|
   cities.read.each_line do |city|
     name, iso, nuts_code = city.chomp.split('|')
     region = Region.find_by(nuts_code: nuts_code[0..2])
-    region.cities.create!(name: name, iso: iso, nuts_code: nuts_code, country: region.country)
+    region.cities.create!(name: name, iso: iso, nuts_code: nuts_code)
   end
 end
 
@@ -37,6 +37,12 @@ File.open(Rails.root.join('db', 'static_data', 'districts.yml')) do |districts|
     city.districts.create!(name: name, yoksis_id: yoksis_id)
   end
 end
+
+# Fetch YOKSIS References
+Rake::Task['yoksis:fetch_references'].invoke
+
+# Import YOKSIS Departments
+Rake::Task['yoksis:import_departments'].invoke
 
 # Create academic staff
 # client = Services::Yoksis::V1::AkademikPersonel.new

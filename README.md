@@ -1,6 +1,6 @@
 # Nokul
 
-[![CircleCI](https://circleci.com/gh/omu/nokul/tree/master.svg?style=svg&circle-token=a25e63abc0e1e6c074750d9b2ce5396e3e279d82)](https://circleci.com/gh/omu/nokul/tree/master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/6578e7454b81431aa0e0fe74e9cce9c9)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=omu/nokul&amp;utm_campaign=Badge_Grade)
+[![Dependency Status](https://gemnasium.com/badges/github.com/omu/nokul.svg)](https://gemnasium.com/github.com/omu/nokul) [![Maintainability](https://api.codeclimate.com/v1/badges/32e076b5cbd4ee545f48/maintainability)](https://codeclimate.com/github/omu/nokul/maintainability) [![CircleCI](https://circleci.com/gh/omu/nokul/tree/master.svg?style=svg&circle-token=a25e63abc0e1e6c074750d9b2ce5396e3e279d82)](https://circleci.com/gh/omu/nokul/tree/master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2c7333e690454bbd99811c8860f08d2b)](https://www.codacy.com/app/msdundar/nokul?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=omu/nokul&amp;utm_campaign=Badge_Grade)
 
 ## Setup
 
@@ -22,8 +22,8 @@ export RDS_HOSTNAME=localhost
 In order to communicate with YOKSIS API, you also need to setup some environmental variables:
 
 ```
-export YOKSIS_USER=41242414552
-export YOKSIS_PASSWORD=876ytr
+export YOKSIS_USER=YOKSIS username
+export YOKSIS_PASSWORD=YOKSIS password
 ```
 
 - Install dependencies:
@@ -32,17 +32,10 @@ export YOKSIS_PASSWORD=876ytr
 bundle
 ```
 
-- Create database and migrate tables:
+- Create database, migrate tables and run the seed data:
 
 ```bash
 rake db:setup
-```
-
-- [OPTIONAL]. If you want to create YOKSIS departments inside your app, run the task shown below:
-
-```bash
-rake yoksis:references
-rake yoksis:departments
 ```
 
 - [IN PRODUCTION]. Generate secrets for the app and define them as SECRET_KEY_BASE environment variable:
@@ -99,6 +92,16 @@ then run your tests as usual:
 rake test
 ```
 
+## Rake Tasks
+
+- [OPTIONAL]. `setup` or `seed` already does it, but if you want to externally create YOKSIS references and departments inside your app, run the tasks shown below:
+
+```bash
+rake yoksis:fetch_references
+rake yoksis:import_departments
+```
+
+* `fetch` prefix has used for API operations, `import` prefix has used for local CSV importing operations.
 
 ## Third-Parties
 

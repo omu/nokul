@@ -3,37 +3,37 @@
 require 'test_helper'
 
 class DistrictTest < ActiveSupport::TestCase
-  # relational tests
-  test 'a district can communicate with a city' do
-    assert cities(:samsun).country
+  # relational tests for the related models of district
+  %i[
+    city
+    units
+  ].each do |property|
+    test "a district can communicate with #{property}" do
+      assert districts(:atakum).send(property)
+    end
   end
 
   # nullify tests
-  test 'district nullifies the city_id when a city gets deleted' do
-    cities(:sinop).destroy
-    assert_nil districts(:gerze).city_id
+  test 'unit nullifies the district_id when a city gets deleted' do
+    districts(:atakum).destroy
+    assert_nil units(:cbu).district_id
   end
 
-  # validation tests for presence
-  test 'presence validations for the name of a district' do
-    districts(:vezirkopru).name = nil
-    refute districts(:vezirkopru).valid?
-    assert_not_nil districts(:vezirkopru).errors[:name]
-  end
-
-  test 'presence validations for the city relation' do
-    districts(:vezirkopru).city = nil
-    refute districts(:vezirkopru).valid?
-  end
-
-  # validation tests for uniqueness
-  test 'uniqueness validations for districts' do
-    fake = districts(:vezirkopru).dup
-    refute fake.valid?
+  # validation tests for the presence of listed properties
+  %i[
+    name
+    city
+  ].each do |property|
+    test "presence validations for #{property} of a district" do
+      districts(:vezirkopru).send("#{property}=", nil)
+      refute districts(:vezirkopru).valid?
+      assert_not_nil districts(:vezirkopru).errors[property]
+    end
   end
 
   test 'uniqueness validations for name field of a district, scoped with city' do
     fake = districts(:vezirkopru).dup
+    refute fake.valid?
     assert_not_nil fake.errors[:name]
   end
 
