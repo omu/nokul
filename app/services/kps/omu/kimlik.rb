@@ -10,82 +10,56 @@ module Services
         end
 
         def sorgula(queried_id_number)
-          identical_information = {}
+          make_request(queried_id_number)
 
+          err_args = %i[kisi_bilgisi hata_bilgisi aciklama]
+          id_info_args = %i[kisi_bilgisi temel_bilgisi]
+          marital_info_args = %i[kisi_bilgisi durum_bilgisi]
+          date_of_birth_args = [:dogum_tarih, %i[gun ay yil]]
+
+          blue_card = @response[:mavi_kartli_kisi_kutukleri]
+          turkish_citizen = @response[:tc_vatandasi_kisi_kutukleri]
+          foreign_citizen = @response[:yabanci_kisi_kutukleri]
+
+          id_type = if blue_card.dig(*err_args).nil?
+                      blue_card
+                    elsif turkish_citizen.dig(*err_args).nil?
+                      turkish_citizen
+                    elsif foreign_citizen.dig(*err_args).nil?
+                      foreign_citizen
+                    end
+          date_of_birth = if id_type == foreign_citizen
+                            id_type.dig(*id_info_args[0], *date_of_birth_args[0]).values.join(' ')
+                          else
+                            id_type.dig(*id_info_args, *date_of_birth_args[0]).values.join(' ')
+                          end
+
+          # common behavior
+          kimlik = id_type.dig(*id_info_args)
+
+          identical_information = {
+            first_name: kimlik[:ad],
+            last_name: kimlik[:soyad],
+            mothers_name: kimlik[:anne_ad],
+            fathers_name: kimlik[:baba_ad],
+            place_of_birth: kimlik[:dogum_yer],
+            gender: kimlik[:cinsiyet][:aciklama],
+            marital_status: id_type.dig(*marital_info_args)[:medeni_hal][:aciklama],
+            registered_to: id_type.dig(id_info_args[0])[:kayit_yeri_bilgisi],
+            date_of_birth: Date.strptime(date_of_birth, '%m %d %Y')
+          }
+
+          identical_information
+        end
+
+        def make_request(queried_id_number)
           message = { KimlikNo: queried_id_number.to_s }
-          response = @client.call(
+          @response = @client.call(
             :sorgula, message: message
           ).body[:sorgula_response][:return][:sorgula_result][:sorgu_sonucu][:bilesik_kutuk_bilgileri]
 
-          # return false if something went wrong.
-          if response[:hata_bilgisi].present?
-            false
-          else
-            # Türk ise - IE: 14674478966
-            if response[:tc_vatandasi_kisi_kutukleri][:kisi_bilgisi][:durum_bilgisi][:durum].present?
-              information_root = response[:tc_vatandasi_kisi_kutukleri][:kisi_bilgisi]
-              identical_information[:date_of_birth] = (
-                information_root[:temel_bilgisi][:dogum_tarih][:gun] + '.' +
-                information_root[:temel_bilgisi][:dogum_tarih][:ay] + '.' +
-                information_root[:temel_bilgisi][:dogum_tarih][:yil]
-              ).to_date
-              identical_information[:registered_to] = information_root[:kayit_yeri_bilgisi][:il][:aciklama] + '/' +
-                                                      information_root[:kayit_yeri_bilgisi][:ilce][:aciklama] + '/' +
-                                                      information_root[:kayit_yeri_bilgisi][:cilt][:aciklama] + '/' +
-                                                      information_root[:kayit_yeri_bilgisi][:aile_sira_no] + ':' +
-                                                      information_root[:kayit_yeri_bilgisi][:birey_sira_no]
-
-            # BlueCard ise - IE: 42283908130
-            elsif response[:mavi_kartli_kisi_kutukleri][:kisi_bilgisi][:durum_bilgisi][:durum].present?
-              information_root = response[:mavi_kartli_kisi_kutukleri][:kisi_bilgisi]
-              identical_information[:date_of_birth] = (
-                information_root[:temel_bilgisi][:dogum_tarih][:gun] + '.' +
-                information_root[:temel_bilgisi][:dogum_tarih][:ay] + '.' +
-                information_root[:temel_bilgisi][:dogum_tarih][:yil]
-              ).to_date
-              identical_information[:registered_to] = information_root[:ulke][:aciklama]
-
-            # Yabancı ise - IE: 99878074596
-            elsif response[:yabanci_kisi_kutukleri][:kisi_bilgisi][:durum_bilgisi][:durum].present?
-              information_root = response[:yabanci_kisi_kutukleri][:kisi_bilgisi]
-              identical_information[:date_of_birth] = (
-                information_root[:dogum_tarih][:gun] + '.' +
-                information_root[:dogum_tarih][:ay] + '.' +
-                information_root[:dogum_tarih][:yil]
-              ).to_date
-
-              identical_information[:registered_to] = information_root[:uyruk][:aciklama]
-            end
-
-            # Common data for all
-            identical_information[:first_name] = information_root[:temel_bilgisi][:ad]
-            identical_information[:last_name] = information_root[:temel_bilgisi][:soyad]
-            identical_information[:mothers_name] = information_root[:temel_bilgisi][:anne_ad]
-            identical_information[:fathers_name] = information_root[:temel_bilgisi][:baba_ad]
-            identical_information[:place_of_birth] = information_root[:temel_bilgisi][:dogum_yer]
-
-            gender_data = information_root[:temel_bilgisi][:cinsiyet][:aciklama]
-            identical_information[:gender] = if gender_data.eql?('Kadın')
-                                               Identity.genders[:female]
-                                             elsif gender_data.eql?('Erkek')
-                                               Identity.genders[:male]
-                                             else
-                                               Identity.genders[:other]
-                                             end
-
-            marital_status_data = information_root[:durum_bilgisi][:medeni_hal][:aciklama]
-            identical_information[:marital_status] = if marital_status_data.eql?('Bekâr')
-                                                       Identity.marital_statuses[:single]
-                                                     elsif marital_status_data.eql?('Evli')
-                                                       Identity.marital_statuses[:married]
-                                                     elsif marital_status_data.eql?('Boşanmış')
-                                                       Identity.marital_statuses[:divorced]
-                                                     else
-                                                       Identity.marital_statuses[:unknown]
-                                                     end
-            # return a hash, ready to use for building an Identity.
-            return identical_information
-          end
+          # return false if something went wrong, otherwise return the response
+          @response[:hata_bilgisi].present? ? false : @response
         end
       end
     end

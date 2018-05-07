@@ -9,7 +9,7 @@ class Identity < ApplicationRecord
             presence: true, strict: true
 
   # callbacks
-  before_validation do
+  before_save do
     self.first_name = first_name.capitalize_all
     self.last_name = last_name.upcase(:turkic)
     self.mothers_name = mothers_name.capitalize_all
