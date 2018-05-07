@@ -20,6 +20,7 @@ gem 'devise'
 # assets
 gem 'coffee-rails', '~> 4.2'
 gem 'font-awesome-rails'
+gem 'jquery-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'simple_form'
 gem 'turbolinks', '~> 5'
