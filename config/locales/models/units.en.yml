@@ -1,7 +1,7 @@
 en:
   units:
     # Do not change this translations since they are matching with YOKSIS data!
-    university: "Üniversite"
+    university: "University"
     academy: "Academy"
     art_discipline: "Art Discipline"
     department: "Department"
@@ -19,7 +19,3 @@ en:
     master_program: "Master Program"
     proficiency_in_art_program: "Proficiency In Art Program"
     undergraduate_program: "Undergraduate Program"
-  locations:
-    city: "City"
-    country: "Country"
-    region: "Region"

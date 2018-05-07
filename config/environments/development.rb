@@ -14,7 +14,8 @@ Rails.application.configure do
   # Enable auto-load only for these files
   Rails.application.reloader.to_prepare do
     Dir[
-      Rails.root.join('app', 'models', 'units', '*.rb')
+      Rails.root.join('app', 'models', 'units', '*.rb'),
+      Rails.root.join('app', 'services', '**', '*.rb'),
     ].each { |file| require_dependency file }
   end
 

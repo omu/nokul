@@ -3,5 +3,7 @@
 class YoksisResponse < ApplicationRecord
   # validations
   validates :name, :endpoint, :action, :sha1,
-            presence: true, strict: true
+            presence: true
+  validates :sha1,
+            uniqueness: true
 end

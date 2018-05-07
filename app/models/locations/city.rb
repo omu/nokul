@@ -5,18 +5,19 @@ class City < ApplicationRecord
 
   # relations
   belongs_to :region
-  belongs_to :country
-  has_many :units, dependent: :nullify
+  has_many :districts, dependent: :nullify
+  has_many :units, through: :districts
 
   # validations
   validates :name, :iso, :nuts_code,
             presence: true, uniqueness: true
-  validates_associated :units
+  validates :region,
+            presence: true
 
   # callbacks
-  before_create do
-    self.name = name.mb_chars.titlecase
-    self.iso = iso.mb_chars.upcase
-    self.nuts_code = nuts_code.mb_chars.upcase
+  before_save do
+    self.name = name.capitalize_all
+    self.iso = iso.upcase_tr
+    self.nuts_code = nuts_code.upcase_tr
   end
 end

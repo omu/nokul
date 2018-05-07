@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_03_16_131709) do
+ActiveRecord::Schema.define(version: 2018_05_03_201708) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,8 +34,6 @@ ActiveRecord::Schema.define(version: 2018_03_16_131709) do
     t.string "iso", null: false
     t.string "nuts_code", null: false
     t.bigint "region_id"
-    t.bigint "country_id"
-    t.index ["country_id"], name: "index_cities_on_country_id"
     t.index ["region_id"], name: "index_cities_on_region_id"
   end
 
@@ -43,6 +41,13 @@ ActiveRecord::Schema.define(version: 2018_03_16_131709) do
     t.string "name", null: false
     t.string "iso", null: false
     t.integer "code", null: false
+  end
+
+  create_table "districts", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "yoksis_id"
+    t.bigint "city_id"
+    t.index ["city_id"], name: "index_districts_on_city_id"
   end
 
   create_table "identities", force: :cascade do |t|
@@ -82,22 +87,99 @@ ActiveRecord::Schema.define(version: 2018_03_16_131709) do
     t.index ["unit_id"], name: "index_responsibilities_on_unit_id"
   end
 
+  create_table "staff_academic_titles", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "code", null: false
+  end
+
+  create_table "staff_administrative_functions", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "code", null: false
+  end
+
+  create_table "student_disability_types", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "code", null: false
+  end
+
+  create_table "student_drop_out_types", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "code", null: false
+  end
+
+  create_table "student_education_levels", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "code", null: false
+  end
+
+  create_table "student_entrance_point_types", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "code", null: false
+  end
+
+  create_table "student_entrance_types", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "code", null: false
+  end
+
+  create_table "student_grades", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "code", null: false
+  end
+
+  create_table "student_grading_systems", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "code", null: false
+  end
+
+  create_table "student_punishment_types", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "code", null: false
+  end
+
+  create_table "student_studentship_statuses", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "code", null: false
+  end
+
+  create_table "unit_instruction_languages", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "code", null: false
+  end
+
+  create_table "unit_instruction_types", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "code", null: false
+  end
+
+  create_table "unit_statuses", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "code", null: false
+  end
+
   create_table "units", force: :cascade do |t|
     t.string "name", null: false
     t.integer "yoksis_id", null: false
-    t.integer "status", default: 1, null: false
-    t.date "founded_at"
-    t.integer "instruction_type", default: 1, null: false
     t.integer "foet_code"
-    t.string "language"
+    t.date "founded_at"
     t.integer "duration"
     t.string "type", null: false
-    t.bigint "city_id"
+    t.bigint "district_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "ancestry"
+    t.integer "unit_status_id"
+    t.integer "unit_type_id"
+    t.integer "unit_instruction_language_id"
+    t.integer "unit_instruction_type_id"
+    t.integer "university_type_id"
     t.index ["ancestry"], name: "index_units_on_ancestry"
-    t.index ["city_id"], name: "index_units_on_city_id"
+    t.index ["district_id"], name: "index_units_on_district_id"
+  end
+
+  create_table "university_types", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "code", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -133,11 +215,11 @@ ActiveRecord::Schema.define(version: 2018_03_16_131709) do
   end
 
   add_foreign_key "addresses", "users"
-  add_foreign_key "cities", "countries"
   add_foreign_key "cities", "regions"
+  add_foreign_key "districts", "cities"
   add_foreign_key "identities", "users"
   add_foreign_key "regions", "countries"
   add_foreign_key "responsibilities", "positions"
   add_foreign_key "responsibilities", "units"
-  add_foreign_key "units", "cities"
+  add_foreign_key "units", "districts"
 end

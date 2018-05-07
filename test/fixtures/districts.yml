@@ -1,0 +1,20 @@
+gerze:
+  name: Gerze
+  yoksis_id: 1349
+  city: sinop
+vezirkopru:
+  name: Vezirköprü
+  yoksis_id: 1712
+  city: samsun
+havza:
+  name: Havza
+  yoksis_id: 1386
+  city: samsun
+tekkekoy:
+  name: Tekkeköy
+  yoksis_id: 1849
+  city: samsun
+atakum:
+  name: Atakum
+  yoksis_id: 2072
+  city: samsun

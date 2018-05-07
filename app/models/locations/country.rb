@@ -4,18 +4,18 @@ class Country < ApplicationRecord
   # name, iso and code fields follow the ISO3166 standard.
 
   # relations
-  has_many :cities, dependent: :nullify
   has_many :regions, dependent: :nullify
+  has_many :cities, through: :regions
+  has_many :districts, through: :cities
+  has_many :units, through: :districts
 
   # validations
   validates :name, :iso, :code,
             presence: true, uniqueness: true
-  validates_associated :cities
-  validates_associated :regions
 
   # callbacks
-  before_create do
-    self.name = name.mb_chars.titlecase
-    self.iso = iso.mb_chars.upcase
+  before_save do
+    self.name = name.capitalize_all
+    self.iso = iso.upcase_tr
   end
 end

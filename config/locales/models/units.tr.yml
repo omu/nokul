@@ -10,7 +10,7 @@ tr:
     institute: "Enstitü"
     interdisciplinary_discipline: "Disiplinlerarası Anabilim Dalı"
     rectorship: "Rektörlük"
-    research_center: "Araştırma ve Uygulama Merkezi"
+    research_center: "Araştırma Ve Uygulama Merkezi"
     science_discipline: "Anabilim Dalı"
     vocational_school: "Meslek Yüksekokulu"
     doctoral_program: "Doktora Programı"
@@ -19,7 +19,3 @@ tr:
     master_program: "Yüksek Lisans Programı"
     proficiency_in_art_program: "Sanatta Yeterlilik Programı"
     undergraduate_program: "Önlisans/Lisans Programı"
-  locations:
-    city: "Şehir"
-    country: "Ülke"
-    region: "Bölge"

@@ -1,0 +1,6 @@
+tr:
+  locations:
+    city: "Şehir"
+    country: "Ülke"
+    region: "Bölge"
+    district: "İlçe"
