@@ -7,7 +7,9 @@ AllCops:
     - db/migrate/*.rb
     - config/initializers/simple_form.rb
     - config/initializers/simple_form_bootstrap.rb
-    - app/models/users/*.rb # TODO: WIP
+
+    # put work in progress files under this line:
+    - app/models/users/*.rb
 Style/AsciiComments:
   Description: 'Use only ascii symbols in comments.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#english-comments'

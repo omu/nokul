@@ -2,17 +2,16 @@
 
 namespace :yoksis do
   # call a specific task by mentioning it's name and class, ie:
-  # rake yoksis:reference['get_birim_turu','UnitType']
+  # rake yoksis:reference['get_ogrenim_dili','UnitInstructionLanguag']
   # if you are using zsh you must escape braces though, ie:
-  # rake yoksis:reference\['get_birim_turu','UnitType'\]
+  # rake yoksis:reference\['get_ogrenim_dili','UnitInstructionLanguag'\]
 
   desc 'fetch all references'
-  task :references do
-    mapping = {
+  task :fetch_references do
+    {
       get_ogrenim_dili: 'UnitInstructionLanguage',
       get_ogrenim_turu: 'UnitInstructionType',
       get_aktiflik_durumu: 'UnitStatus',
-      get_birim_turu: 'UnitType',
       get_universite_turu: 'UniversityType',
       get_kadro_gorev_unvan: 'StaffAcademicTitle',
       get_personel_gorev: 'StaffAdministrativeFunction',
@@ -25,17 +24,15 @@ namespace :yoksis do
       get_ogrenci_diploma_not_sistemi: 'StudentGradingSystem',
       get_ceza_turu: 'StudentPunishmentType',
       get_ogrenci_ogrencilik_hakki: 'StudentStudentshipStatus'
-    }
-
-    mapping.each do |action, klass|
-      Rake::Task['yoksis:reference'].invoke(action, klass)
+    }.each do |action, klass|
+      Rake::Task['yoksis:fetch_reference'].invoke(action, klass)
       # https://stackoverflow.com/questions/4822020/why-does-a-rake-task-in-a-loop-execute-only-once
-      Rake::Task['yoksis:reference'].reenable
+      Rake::Task['yoksis:fetch_reference'].reenable
     end
   end
 
   desc 'fetch an individual reference'
-  task :reference, %i[soap_method klass] => [:environment] do |_, args|
+  task :fetch_reference, %i[soap_method klass] => [:environment] do |_, args|
     client = Services::Yoksis::V1::Referanslar.new
     api_name = client.class.to_s.split('::')[1]
     endpoint = client.class.to_s.split('::')[3]

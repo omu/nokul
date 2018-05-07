@@ -3,13 +3,16 @@
 require 'test_helper'
 
 class CountryTest < ActiveSupport::TestCase
-  # relational tests
-  test 'a country can communicate with regions' do
-    assert countries(:turkey).regions
-  end
-
-  test 'a country can communicate with cities' do
-    assert countries(:turkey).cities
+  # relational tests for the related models of country
+  %i[
+    regions
+    cities
+    districts
+    units
+  ].each do |property|
+    test "a country can communicate with #{property}" do
+      assert countries(:turkey).send(property)
+    end
   end
 
   # nullify tests
@@ -18,49 +21,30 @@ class CountryTest < ActiveSupport::TestCase
     assert_nil regions(:east_sweden).country_id
   end
 
-  test 'city nullifies the country_id when a country gets deleted' do
-    countries(:sweden).destroy
-    assert_nil cities(:stockholm).country_id
+  # validation tests for the presence of listed properties
+  %i[
+    name
+    iso
+    code
+  ].each do |property|
+    test "presence validations for #{property} of a country" do
+      countries(:turkey).send("#{property}=", nil)
+      refute countries(:turkey).valid?
+      assert_not_nil countries(:turkey).errors[property]
+    end
   end
 
-  # validation tests for presence
-  test 'presence validations for the name of a country' do
-    countries(:turkey).name = nil
-    refute countries(:turkey).valid?
-    assert_not_nil countries(:turkey).errors[:name]
-  end
-
-  test 'presence validations for the iso of a country' do
-    countries(:turkey).iso = nil
-    refute countries(:turkey).valid?
-    assert_not_nil countries(:turkey).errors[:iso]
-  end
-
-  test 'presence validations for the code of a country' do
-    countries(:turkey).code = nil
-    refute countries(:turkey).valid?
-    assert_not_nil countries(:turkey).errors[:code]
-  end
-
-  # validation tests for uniqueness
-  test 'uniqueness validations for countries' do
-    fake = countries(:turkey).dup
-    refute fake.valid?
-  end
-
-  test 'uniqueness validations for name field of a country' do
-    fake = countries(:turkey).dup
-    assert_not_nil fake.errors[:name]
-  end
-
-  test 'uniqueness validations for iso field of a country' do
-    fake = countries(:turkey).dup
-    assert_not_nil fake.errors[:iso]
-  end
-
-  test 'uniqueness validations for code field of a country' do
-    fake = countries(:turkey).dup
-    assert_not_nil fake.errors[:code]
+  # validation tests for the uniqueness of listed properties
+  %i[
+    name
+    iso
+    code
+  ].each do |property|
+    test "uniqueness validations for #{property} of a country" do
+      fake = countries(:turkey).dup
+      refute fake.valid?
+      assert_not_nil fake.errors[property]
+    end
   end
 
   # callback tests
