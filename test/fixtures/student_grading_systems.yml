@@ -1,0 +1,9 @@
+four_point_grading_system:
+  name: 4 Lük Not Sistemi
+  code: 4
+ten_point_grading_system:
+  name: 10 Luk Not Sistemi
+  code: 10
+hundred_point_grading_system:
+  name: 100 Lük Not Sistemi
+  code: 100

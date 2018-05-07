@@ -26,8 +26,8 @@ class User < ApplicationRecord
   validates_associated :addresses
 
   # callbacks
-  before_create :build_identical_information
-  before_create :build_address_information
+  before_save :build_identical_information
+  before_save :build_address_information
 
   # STI helpers
   def self.types

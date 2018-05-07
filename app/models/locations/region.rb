@@ -6,15 +6,17 @@ class Region < ApplicationRecord
   # relations
   belongs_to :country
   has_many :cities, dependent: :nullify
+  has_many :districts, through: :cities
+  has_many :units, through: :districts
 
   # validations
   validates :name, :nuts_code,
             presence: true, uniqueness: true
-  validates_associated :cities
+  validates :country, presence: true
 
   # callbacks
-  before_create do
-    self.name = name.mb_chars.titlecase
+  before_save do
+    self.name = name.capitalize_all
     self.nuts_code = nuts_code.mb_chars.upcase
   end
 end

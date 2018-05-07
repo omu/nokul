@@ -1,0 +1,6 @@
+can_be_a_student:
+  name: Var
+  code: 1
+can_not_be_a_student:
+  name: Yok
+  code: 2
