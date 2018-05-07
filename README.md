@@ -38,6 +38,14 @@ bundle
 rake db:setup
 ```
 
+- If you are setting up again, when you already have previous databases:
+
+```bash
+rake db:reset
+```
+
+`reset` is equivalent of `rake db:drop & rake db:setup`.
+
 - [IN PRODUCTION]. Generate secrets for the app and define them as SECRET_KEY_BASE environment variable:
 
 ```bash
