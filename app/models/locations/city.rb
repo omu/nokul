@@ -9,10 +9,10 @@ class City < ApplicationRecord
   has_many :units, through: :districts
 
   # validations
-  validates :name, :iso, :nuts_code,
-            presence: true, uniqueness: true
-  validates :region,
-            presence: true
+  validates :name, presence: true, uniqueness: true
+  validates :iso, presence: true, uniqueness: true
+  validates :nuts_code, presence: true, uniqueness: true
+  validates :region, presence: true
 
   # callbacks
   before_save do
