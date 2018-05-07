@@ -1,15 +1,4 @@
-# Do not exclude files from ALL COPS unless it's really necessary!
-AllCops:
-  Exclude:
-    - bin/**/*
-    - vendor/bundle/**/*
-    - db/schema.rb
-    - db/migrate/*.rb
-    - config/initializers/simple_form.rb
-    - config/initializers/simple_form_bootstrap.rb
-
-    # put work in progress files under this line, ie:
-    # - app/models/users/*.rb
+# Common settings!
 Style/AsciiComments:
   Description: 'Use only ascii symbols in comments.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#english-comments'
@@ -19,11 +8,24 @@ Metrics/LineLength:
 Documentation:
   Enabled: false
 
-# Put your file specific configuration below this line, not under AllCops!
+# Do not exclude files from ALL COPS unless it's really necessary!
+AllCops:
+  Exclude:
+    - bin/**/*
+    - vendor/bundle/**/*
+    - db/schema.rb
+    - db/migrate/*.rb
+    - config/initializers/simple_form.rb
+    - config/initializers/simple_form_bootstrap.rb
+    - config/environments/development.rb
+Style/ClassAndModuleChildren:
+  Exclude:
+    - app/controllers/user/*rb
 Metrics/BlockLength:
   Exclude:
-    - config/environments/development.rb
-    - "**/**/*.rake"
+    - "lib/tasks/**/*.rake"
+
+# Put your WIP file specific configuration below this line, not under AllCops!
 Metrics/AbcSize:
   Exclude:
     - app/services/kps/omu/adres.rb
@@ -32,9 +34,4 @@ Metrics/MethodLength:
   Exclude:
     - app/services/kps/omu/adres.rb
     - app/services/kps/omu/kimlik.rb
-Metrics/CyclomaticComplexity:
-  Exclude:
-    - app/services/kps/omu/kimlik.rb
-Metrics/PerceivedComplexity:
-  Exclude:
-    - app/services/kps/omu/kimlik.rb
+

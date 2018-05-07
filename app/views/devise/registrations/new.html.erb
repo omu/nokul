@@ -1,0 +1,18 @@
+<h2>Kayıt Ol</h2>
+
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :email, required: true, autofocus: true, label: 'E-mail' %>
+    <%= f.input :id_number, required: true, label: 'T.C. Kimlik Numarası' %>
+    <%= f.input :password, required: true, label: 'Şifre', hint: ("en az #{@minimum_password_length} karekter" if @minimum_password_length) %>
+    <%= f.input :password_confirmation, required: true, label: 'Şifre (tekrar)' %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Kayıt Ol", class: 'btn btn-primary' %> |
+    <%= render "devise/shared/links" %>
+  </div>
+<% end %>
+
