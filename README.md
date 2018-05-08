@@ -28,10 +28,16 @@ export YOKSIS_USER=YOKSIS username
 export YOKSIS_PASSWORD=YOKSIS password
 ```
 
-- Install dependencies:
+- Install GEM dependencies:
 
 ```bash
 bundle
+```
+
+- Install asset dependencies:
+
+```bash
+yarn install
 ```
 
 - Create database, migrate tables and run the seed data:
