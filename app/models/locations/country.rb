@@ -10,8 +10,9 @@ class Country < ApplicationRecord
   has_many :units, through: :districts
 
   # validations
-  validates :name, :iso, :code,
-            presence: true, uniqueness: true
+  validates :name, presence: true, uniqueness: true
+  validates :iso, presence: true, uniqueness: true
+  validates :code, presence: true, uniqueness: true
 
   # callbacks
   before_save do
