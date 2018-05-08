@@ -10,8 +10,8 @@ class Region < ApplicationRecord
   has_many :units, through: :districts
 
   # validations
-  validates :name, :nuts_code,
-            presence: true, uniqueness: true
+  validates :name, presence: true, uniqueness: true
+  validates :nuts_code, presence: true, uniqueness: true
   validates :country, presence: true
 
   # callbacks

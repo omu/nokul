@@ -5,8 +5,8 @@ class Identity < ApplicationRecord
   belongs_to :user
 
   # validations
-  validates :first_name, :last_name,
-            presence: true, strict: true
+  validates :first_name, presence: true
+  validates :last_name, presence: true
 
   # callbacks
   before_save do

@@ -5,10 +5,10 @@ class Address < ApplicationRecord
   belongs_to :user
 
   # validations
-  validates :city, :city_id, :district, :full_address,
-            presence: true, strict: true
-  validates :full_address,
-            uniqueness: { scope: %i[city user_id] }
+  validates :city, presence: true
+  validates :city_id, presence: true
+  validates :district, presence: true
+  validates :full_address, presence: true, uniqueness: { scope: %i[city user_id] }
 
   # callbacks
   before_save do

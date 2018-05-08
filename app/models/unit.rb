@@ -9,14 +9,13 @@ class Unit < ApplicationRecord
   belongs_to :unit_instruction_language, optional: true
 
   # validations
-  validates :name, :yoksis_id, :type,
-            presence: true
-  validates :yoksis_id,
-            uniqueness: true
-  validates :name,
-            uniqueness: { scope: %i[ancestry unit_status_id] }
-  validates :district, :unit_status, :unit_instruction_type,
-            presence: true
+  validates :type, presence: true
+  validates :district, presence: true
+  validates :unit_status, presence: true
+  validates :unit_instruction_type, presence: true
+  validates :yoksis_id, presence: true, uniqueness: true, numericality: { only_integer: true }
+  validates :name, presence: true, uniqueness: { scope: %i[ancestry unit_status_id] }
+  validates :duration, numericality: { only_integer: true }, allow_blank: true
 
   # callbacks
   before_save do
