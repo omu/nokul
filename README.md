@@ -11,7 +11,20 @@ curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-- Install yarn: https://yarnpkg.com/lang/en/docs/install/#debian-stable
+- You must have `yarn` package manager installed on your sistem for front-end dependencies:
+
+```bash
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update && sudo apt-get install yarn
+```
+
+- You must have redis installed on your system, for background jobs:
+
+```bash
+sudo apt install redis
+
+```
 
 - Database configuration file reads username, password and host settings from environment variables. Make sure to define these environment variables before setting up the project. Add environment variables to your .bashrc, .zshrc, .bash_profile etc.:
 

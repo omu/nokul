@@ -10,6 +10,7 @@ gem 'pg'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.0'
 gem 'redis'
+gem 'sidekiq'
 
 # active-record
 gem 'ancestry'
