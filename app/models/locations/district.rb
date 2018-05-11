@@ -6,10 +6,9 @@ class District < ApplicationRecord
   has_many :units, dependent: :nullify
 
   # validations
-  validates :name,
-            presence: true, uniqueness: { scope: %i[city_id] }
-  validates :city,
-            presence: true
+  validates :name, presence: true, uniqueness: { scope: %i[city_id] }
+  validates :city, presence: true
+  validates :yoksis_id, numericality: { only_integer: true }, allow_blank: true
 
   # callbacks
   before_save do
