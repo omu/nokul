@@ -21,6 +21,10 @@ class UnitTest < ActiveSupport::TestCase
     end
   end
 
+  test 'university can communicate with university_types' do
+    assert units(:omu).university_type
+  end
+
   # validation tests for the presence of listed properties
   %i[
     name

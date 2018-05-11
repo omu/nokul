@@ -27,6 +27,9 @@ module Nokul
     # organize models in sub-folders
     config.autoload_paths += Dir[Rails.root.join('app', 'models', '**')]
 
+    # back-end adapter for active job
+    config.active_job.queue_adapter = :sidekiq
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading

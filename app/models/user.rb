@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many :addresses, dependent: :destroy
 
   # validations
-  validates :email, :id_number,
-            presence: true, uniqueness: true
-  validates :id_number, numericality: { only_integer: true, message: 'Hatalı kimlik numarası' }
+  validates :email, presence: true, uniqueness: true
+  validates :id_number, presence: true, uniqueness: true, numericality: { only_integer: true }
+  validates_with EmailAddress::ActiveRecordValidator, field: :email
 end

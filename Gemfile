@@ -10,6 +10,7 @@ gem 'pg'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.0'
 gem 'redis'
+gem 'sidekiq'
 
 # active-record
 gem 'ancestry'
@@ -31,6 +32,9 @@ gem 'savon', '~> 2.12.0'
 
 # security
 gem 'bcrypt', '~> 3.1.7'
+
+# validators
+gem 'email_address'
 
 group :development, :test do
   gem 'brakeman', require: false

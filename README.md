@@ -1,6 +1,6 @@
 # Nokul
 
-[![Dependency Status](https://gemnasium.com/badges/github.com/omu/nokul.svg)](https://gemnasium.com/github.com/omu/nokul) [![Maintainability](https://api.codeclimate.com/v1/badges/32e076b5cbd4ee545f48/maintainability)](https://codeclimate.com/github/omu/nokul/maintainability) [![CircleCI](https://circleci.com/gh/omu/nokul/tree/master.svg?style=svg&circle-token=a25e63abc0e1e6c074750d9b2ce5396e3e279d82)](https://circleci.com/gh/omu/nokul/tree/master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2c7333e690454bbd99811c8860f08d2b)](https://www.codacy.com/app/msdundar/nokul?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=omu/nokul&amp;utm_campaign=Badge_Grade)
+[![Dependency Status](https://gemnasium.com/badges/github.com/omu/nokul.svg)](https://gemnasium.com/github.com/omu/nokul) [![Maintainability](https://api.codeclimate.com/v1/badges/32e076b5cbd4ee545f48/maintainability)](https://codeclimate.com/github/omu/nokul/maintainability) [![CircleCI](https://circleci.com/gh/omu/nokul/tree/master.svg?style=svg&circle-token=a25e63abc0e1e6c074750d9b2ce5396e3e279d82)](https://circleci.com/gh/omu/nokul/tree/master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2c7333e690454bbd99811c8860f08d2b)](https://www.codacy.com/app/msdundar/nokul?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=omu/nokul&amp;utm_campaign=Badge_Grade) [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/2c7333e690454bbd99811c8860f08d2b)](https://www.codacy.com/app/msdundar/nokul?utm_source=github.com&utm_medium=referral&utm_content=omu/nokul&utm_campaign=Badge_Coverage)
 
 ## Setup
 
@@ -9,6 +9,21 @@
 ```bash
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get install -y nodejs
+```
+
+- You must have `yarn` package manager installed on your sistem for front-end dependencies:
+
+```bash
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update && sudo apt-get install yarn
+```
+
+- You must have redis installed on your system, for background jobs:
+
+```bash
+sudo apt install redis
+
 ```
 
 - Database configuration file reads username, password and host settings from environment variables. Make sure to define these environment variables before setting up the project. Add environment variables to your .bashrc, .zshrc, .bash_profile etc.:
@@ -26,10 +41,16 @@ export YOKSIS_USER=YOKSIS username
 export YOKSIS_PASSWORD=YOKSIS password
 ```
 
-- Install dependencies:
+- Install GEM dependencies:
 
 ```bash
 bundle
+```
+
+- Install asset dependencies:
+
+```bash
+yarn install
 ```
 
 - Create database, migrate tables and run the seed data:
@@ -37,6 +58,14 @@ bundle
 ```bash
 rake db:setup
 ```
+
+- If you are setting up again, when you already have previous databases:
+
+```bash
+rake db:reset
+```
+
+`reset` is equivalent of `rake db:drop & rake db:setup`.
 
 - [IN PRODUCTION]. Generate secrets for the app and define them as SECRET_KEY_BASE environment variable:
 
