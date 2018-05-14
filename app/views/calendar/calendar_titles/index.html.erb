@@ -1,0 +1,28 @@
+<div class="card">
+  <br><h4 class="card-heading text-center">Takvim Başlığı</h4>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Başlık</th>
+        <th colspan="2">İşlemler</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @calendar_titles.each do |calendar_title| %>
+        <tr>
+          <td><%= calendar_title.name %></td>
+          <td>
+            <%= link_to 'Düzenle', edit_calendar_title_path(calendar_title), class: "btn btn-secondary btn-sm" %>
+            <%= link_to 'Sil', calendar_title, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <div class="card-footer">
+    <%= link_to 'Yeni Takvim Başlığı', new_calendar_title_path, class: "btn btn-success" %>
+  </div>
+</div>

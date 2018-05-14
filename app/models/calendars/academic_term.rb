@@ -2,10 +2,11 @@
 
 class AcademicTerm < ApplicationRecord
   # relations
-  has_many :academic_calendars
+  has_many :academic_calendars, dependent: :nullify
 
   # validations
-  validates :year, :term, presence: true
+  validates :year, presence: true
+  validates :term, presence: true
   validates :year, uniqueness: { scope: :term }
 
   # enums
@@ -13,5 +14,9 @@ class AcademicTerm < ApplicationRecord
 
   def self.years
     (1975..Time.now.year).map { |year| "#{year}-#{year + 1}" }.reverse
+  end
+
+  def fullname
+    "#{year} / #{term}"
   end
 end

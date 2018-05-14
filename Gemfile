@@ -36,6 +36,9 @@ gem 'bcrypt', '~> 3.1.7'
 # validators
 gem 'email_address'
 
+# nested form
+gem 'cocoon'
+
 group :development, :test do
   gem 'brakeman', require: false
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
