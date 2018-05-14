@@ -7,5 +7,6 @@ class CreateCalendarTitleTypes < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
+    add_index :calendar_title_types, [:type_id, :title_id], unique: true, name: 'index_of_calendar_title_types'
   end
 end

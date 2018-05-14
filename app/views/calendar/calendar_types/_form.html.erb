@@ -1,0 +1,18 @@
+<%= simple_form_for(@calendar_type) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <center><h3>Başlıklar</h3></center>
+    <%= f.simple_fields_for :calendar_title_types do |title| %>
+      <%= render "calendar_title_type_fields", f: title %>
+    <% end %>
+    <br>
+    <center><%= link_to_add_association 'Başlık Ekle', f, :calendar_title_types, class: 'btn btn-light' %></center>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-success' %>
+  </div>
+<% end %>

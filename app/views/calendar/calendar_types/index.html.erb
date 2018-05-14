@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="card">
+    <br><h4 class="card-title text-center">Takvim Türleri</h4>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Takvim Türü</th>
+          <th colspan="2">İşlemler</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @calendar_types.each do |calendar_type| %>
+          <tr>
+            <td><%= calendar_type.name %></td>
+            <td>
+              <%= link_to 'Görüntüle', calendar_type_path(calendar_type), class: "btn btn-secondary btn-sm" %>
+              <%= link_to 'Düzenle', edit_calendar_type_path(calendar_type), class: "btn btn-secondary btn-sm" %>
+              <%= link_to 'Sil', calendar_type, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <br>
+    <div class="card-footer">
+      <%= link_to 'Yeni Takvim Türü', new_calendar_type_path, class: "btn btn-success" %>
+    </div>
+  </div>
+</div>

@@ -8,5 +8,7 @@ class CreateCalendarEvents < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
+    add_index :calendar_events, [:academic_calendar_id, :calendar_title_id],
+                                unique: true, name: 'index_of_calendar_events'
   end
 end

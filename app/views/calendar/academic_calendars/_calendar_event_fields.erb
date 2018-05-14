@@ -1,0 +1,12 @@
+<div class="nested-fields">
+  <div class="card card-default">
+    <div class="card-body bg-light">
+      <%= f.input :calendar_title_id, collection: @calendar_titles, label: 'Başlık' %>
+      <%= f.input :start_date, label: 'Başlama Tarihi' %>
+      <%= f.input :end_date, label: 'Bitiş Tarihi', include_blank: true %>
+    </div>
+    <div class="card-footer">
+      <center><%= link_to_remove_association "Etkinliği Sil", f, class: "btn btn-danger btn-sm" %></center>
+    </div>
+  </div>
+</div>
