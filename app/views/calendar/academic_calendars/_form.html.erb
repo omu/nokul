@@ -7,7 +7,7 @@
     <%= f.input :year, collection: 1975..Time.now.year, label: 'Yıl' %>
     <%= f.association :academic_term, label_method: :fullname, value_method: :id, label: 'Dönem' %>
     <%= f.association :calendar_type, label: 'Takvim Türü' %>
-    <%= f.input :senate_decision_date, label: 'Senato Karar Tarihi' %>
+    <%= f.input :senate_decision_date, start_year: 1975, label: 'Senato Karar Tarihi' %>
     <%= f.input :senate_decision_no, label: 'Senato Karar No' %>
     <%= f.input :description, label: 'Açıklama' %>
   </div>

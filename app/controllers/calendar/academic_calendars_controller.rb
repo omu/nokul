@@ -13,7 +13,9 @@ module Calendar
 
     # GET /academic_calendars/1
     # GET /academic_calendars/1.json
-    def show; end
+    def show
+      @events = @academic_calendar.calendar_events
+    end
 
     # GET /academic_calendars/new
     def new

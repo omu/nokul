@@ -28,10 +28,34 @@
           <%= link_to 'Sil', @academic_calendar, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
         </td>
       </tr>
+      <tr>
+        <td colspan="6">
+          <b>Takvim Açıklamaları:</b>
+          <%= @academic_calendar.description %>
+        </td>
+      </tr>
     </tbody>
   </table>
+  <hr>
   <br>
-  <div class="card-footer">
-    <%= link_to 'Geri', academic_calendars_path %>
-  </div>
+  <h4 class="card-heading text-center">Takvim Etkinlikleri</h4>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Etkinlik</th>
+        <th>Başlama Tarihi</th>
+        <th>Bitiş Tarihi</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @events.each do |event| %>
+        <tr>
+          <td><%= event.calendar_title_name %></td>
+          <td><%= event.start_date.strftime("%d-%m-%Y %H:%M:%S") %></td>
+          <td><%= event.end_date.try(:strftime, "%d-%m-%Y %H:%M:%S") %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
