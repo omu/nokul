@@ -15,6 +15,27 @@ ActiveRecord::Schema.define(version: 2018_05_07_131709) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "academic_calendars", force: :cascade do |t|
+    t.string "name"
+    t.integer "year"
+    t.bigint "academic_term_id"
+    t.bigint "calendar_type_id"
+    t.date "senate_decision_date", null: false
+    t.string "senate_decision_no", null: false
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["academic_term_id"], name: "index_academic_calendars_on_academic_term_id"
+    t.index ["calendar_type_id"], name: "index_academic_calendars_on_calendar_type_id"
+  end
+
+  create_table "academic_terms", force: :cascade do |t|
+    t.string "year", null: false
+    t.integer "term", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "addresses", force: :cascade do |t|
     t.integer "district_id", null: false
     t.string "neighbourhood"
@@ -22,6 +43,41 @@ ActiveRecord::Schema.define(version: 2018_05_07_131709) do
     t.datetime "updated_at", null: false
     t.bigint "user_id"
     t.index ["user_id"], name: "index_addresses_on_user_id"
+  end
+
+  create_table "calendar_events", force: :cascade do |t|
+    t.bigint "academic_calendar_id"
+    t.bigint "calendar_title_id"
+    t.datetime "start_date", null: false
+    t.datetime "end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["academic_calendar_id", "calendar_title_id"], name: "index_of_calendar_events", unique: true
+    t.index ["academic_calendar_id"], name: "index_calendar_events_on_academic_calendar_id"
+    t.index ["calendar_title_id"], name: "index_calendar_events_on_calendar_title_id"
+  end
+
+  create_table "calendar_title_types", force: :cascade do |t|
+    t.bigint "type_id"
+    t.bigint "title_id"
+    t.integer "status", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["title_id"], name: "index_calendar_title_types_on_title_id"
+    t.index ["type_id", "title_id"], name: "index_of_calendar_title_types", unique: true
+    t.index ["type_id"], name: "index_calendar_title_types_on_type_id"
+  end
+
+  create_table "calendar_titles", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "calendar_types", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "cities", force: :cascade do |t|
@@ -122,6 +178,19 @@ ActiveRecord::Schema.define(version: 2018_05_07_131709) do
     t.integer "code", null: false
   end
 
+  create_table "unit_calendar_events", force: :cascade do |t|
+    t.bigint "academic_calendar_id"
+    t.bigint "unit_id"
+    t.bigint "calendar_title_id"
+    t.datetime "start_date", null: false
+    t.datetime "end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["academic_calendar_id"], name: "index_unit_calendar_events_on_academic_calendar_id"
+    t.index ["calendar_title_id"], name: "index_unit_calendar_events_on_calendar_title_id"
+    t.index ["unit_id"], name: "index_unit_calendar_events_on_unit_id"
+  end
+
   create_table "unit_instruction_languages", force: :cascade do |t|
     t.string "name", null: false
     t.integer "code", null: false
@@ -190,10 +259,19 @@ ActiveRecord::Schema.define(version: 2018_05_07_131709) do
     t.datetime "syncronized_at"
   end
 
+  add_foreign_key "academic_calendars", "academic_terms"
+  add_foreign_key "academic_calendars", "calendar_types"
   add_foreign_key "addresses", "users"
+  add_foreign_key "calendar_events", "academic_calendars"
+  add_foreign_key "calendar_events", "calendar_titles"
+  add_foreign_key "calendar_title_types", "calendar_titles", column: "title_id"
+  add_foreign_key "calendar_title_types", "calendar_types", column: "type_id"
   add_foreign_key "cities", "regions"
   add_foreign_key "districts", "cities"
   add_foreign_key "identities", "users"
   add_foreign_key "regions", "countries"
+  add_foreign_key "unit_calendar_events", "academic_calendars"
+  add_foreign_key "unit_calendar_events", "calendar_titles"
+  add_foreign_key "unit_calendar_events", "units"
   add_foreign_key "units", "districts"
 end
