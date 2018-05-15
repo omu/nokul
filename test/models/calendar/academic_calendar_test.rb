@@ -9,7 +9,7 @@ class AcademicCalendarTest < ActiveSupport::TestCase
     senate_decision_date
     senate_decision_no
   ].each do |property|
-    test "presence validations for #{property} of a academic calendar" do
+    test "presence validations for #{property} of an academic calendar" do
       academic_calendars(:one).send("#{property}=", nil)
       refute academic_calendars(:one).valid?
       assert_not_nil academic_calendars(:one).errors[property]

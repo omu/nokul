@@ -14,7 +14,7 @@ class CalendarEventTest < ActiveSupport::TestCase
     academic_calendar
     calendar_title
   ].each do |property|
-    test "an academic calendar can communicate with #{property}" do
+    test "a calendar event can communicate with #{property}" do
       assert calendar_events(:one).send(property)
     end
   end
