@@ -43,7 +43,7 @@
       </div>
     </nav>
 
-    <div class="container">
+    <div class="container-fluid">
       <div class="row row-offcanvas row-offcanvas-right">
         <div class="col-12 col-md-9">
           <% flash.each do |name, msg| %>
@@ -66,8 +66,10 @@
               <%= fa_icon('calendar', text: 'Akademik Takvim') %>
             </a>
             <div id="sm" class="sublinks collapse">
-              <%= link_to fa_icon('calendar-plus-o', text: 'Takvim Olayları'), calendar_titles_path, { class: 'list-group-item' } %>
+              <%= link_to fa_icon('calendar-plus-o', text: 'Takvim Başlığı'), calendar_titles_path, { class: 'list-group-item' } %>
               <%= link_to fa_icon('calendar-check-o', text: 'Takvim Türleri'), calendar_types_path, { class: 'list-group-item' } %>
+              <%= link_to fa_icon('graduation-cap', text: 'Akademik Dönemler'), academic_terms_path, { class: 'list-group-item' } %>
+              <%= link_to fa_icon('calendar', text: 'Akademik Takvimler'), academic_calendars_path, { class: 'list-group-item' } %>
             </div>
           </div>
         </div><!--/span-->
