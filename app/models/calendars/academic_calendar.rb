@@ -14,17 +14,6 @@ class AcademicCalendar < ApplicationRecord
   validates :senate_decision_no, presence: true
   validates :academic_term, uniqueness: { scope: :calendar_type }
 
-  # callbacks
-  around_save :catch_uniqueness_exception
-
   # delegates
   delegate :name, to: :calendar_type, prefix: :type
-
-  private
-
-  def catch_uniqueness_exception
-    yield
-  rescue ActiveRecord::RecordNotUnique
-    errors.add(:calendar_event, 'event is already taken')
-  end
 end

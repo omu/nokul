@@ -13,7 +13,7 @@ class AcademicTerm < ApplicationRecord
   enum term: { fall: 0, spring: 1, summer: 2 }
 
   def self.years
-    (1975..Time.now.year).map { |year| "#{year}-#{year + 1}" }.reverse
+    @years ||= (1975..Time.now.year).map { |year| "#{year}-#{year + 1}" }.reverse
   end
 
   def fullname

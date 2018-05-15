@@ -19,6 +19,6 @@ class CalendarTitleType < ApplicationRecord
   def catch_uniqueness_exception
     yield
   rescue ActiveRecord::RecordNotUnique
-    errors.add(:type, 'title is already taken')
+    errors.add(:calendar_title_type, 'title is already taken')
   end
 end
