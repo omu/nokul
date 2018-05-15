@@ -3,16 +3,19 @@
 require 'test_helper'
 
 class CalendarTypeTest < ActiveSupport::TestCase
+  # presence validation tests
   test 'should not save calendar_type without name' do
-    assert_not CalendarType.new.save
+    calendar_types(:one).name = nil
+    assert_not calendar_types(:one).valid?
   end
 
-  test 'name should be unique' do
-    dup_calendar_type = calendar_types(:one).dup
-    assert_not dup_calendar_type.valid?
-  end
-
+  # relational tests
   test 'should contain titles' do
     assert calendar_types(:one).titles
+  end
+
+  # duplication tests
+  test 'name should be unique' do
+    assert_not calendar_types(:one).dup.valid?
   end
 end

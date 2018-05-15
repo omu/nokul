@@ -8,5 +8,5 @@ class UnitCalendarEvent < ApplicationRecord
 
   # validations
   validates :start_date, presence: true
-  validates :unit_id, uniqueness: { scope: %i[academic_calendar_id calendar_title_id] }
+  validates :unit, uniqueness: { scope: %i[academic_calendar calendar_title] }
 end

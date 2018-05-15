@@ -8,5 +8,4 @@ class CalendarType < ApplicationRecord
 
   # validations
   validates :name, presence: true, uniqueness: true
-  validates_associated :calendar_title_types
 end
