@@ -12,6 +12,9 @@ class CalendarEvent < ApplicationRecord
   # callbacks
   around_save :catch_uniqueness_exception
 
+  # delegates
+  delegate :name, to: :calendar_title, prefix: :calendar_title
+
   private
 
   def catch_uniqueness_exception
