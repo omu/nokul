@@ -11,7 +11,7 @@ class AcademicTermTest < ActiveSupport::TestCase
     test "presence validations for #{property} of an academic term" do
       academic_terms(:one).send("#{property}=", nil)
       refute academic_terms(:one).valid?
-      assert_not_nil academic_terms(:one).errors[property]
+      refute_empty academic_terms(:one).errors[property]
     end
   end
 
@@ -22,6 +22,6 @@ class AcademicTermTest < ActiveSupport::TestCase
 
   # duplication tests
   test 'term should be unique based on year' do
-    assert_not academic_terms(:one).dup.valid?
+    refute academic_terms(:one).dup.valid?
   end
 end

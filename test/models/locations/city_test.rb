@@ -29,7 +29,7 @@ class CityTest < ActiveSupport::TestCase
     test "presence validations for #{property} of a city" do
       cities(:samsun).send("#{property}=", nil)
       refute cities(:samsun).valid?
-      assert_not_nil cities(:samsun).errors[property]
+      refute_empty cities(:samsun).errors[property]
     end
   end
 
@@ -42,7 +42,7 @@ class CityTest < ActiveSupport::TestCase
     test "uniqueness validations for #{property} of a city" do
       fake = cities(:samsun).dup
       refute fake.valid?
-      assert_not_nil fake.errors[property]
+      refute_empty fake.errors[property]
     end
   end
 
