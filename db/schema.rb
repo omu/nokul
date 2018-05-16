@@ -16,8 +16,7 @@ ActiveRecord::Schema.define(version: 2018_05_07_131709) do
   enable_extension "plpgsql"
 
   create_table "academic_calendars", force: :cascade do |t|
-    t.string "name"
-    t.integer "year"
+    t.string "name", null: false
     t.bigint "academic_term_id"
     t.bigint "calendar_type_id"
     t.date "senate_decision_date", null: false
@@ -52,7 +51,6 @@ ActiveRecord::Schema.define(version: 2018_05_07_131709) do
     t.datetime "end_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["academic_calendar_id", "calendar_title_id"], name: "index_of_calendar_events", unique: true
     t.index ["academic_calendar_id"], name: "index_calendar_events_on_academic_calendar_id"
     t.index ["calendar_title_id"], name: "index_calendar_events_on_calendar_title_id"
   end
@@ -60,24 +58,19 @@ ActiveRecord::Schema.define(version: 2018_05_07_131709) do
   create_table "calendar_title_types", force: :cascade do |t|
     t.bigint "type_id"
     t.bigint "title_id"
-    t.integer "status", default: 0
+    t.integer "status", default: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["title_id"], name: "index_calendar_title_types_on_title_id"
-    t.index ["type_id", "title_id"], name: "index_of_calendar_title_types", unique: true
     t.index ["type_id"], name: "index_calendar_title_types_on_type_id"
   end
 
   create_table "calendar_titles", force: :cascade do |t|
     t.string "name", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "calendar_types", force: :cascade do |t|
     t.string "name", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "cities", force: :cascade do |t|
@@ -204,6 +197,8 @@ ActiveRecord::Schema.define(version: 2018_05_07_131709) do
   create_table "unit_statuses", force: :cascade do |t|
     t.string "name", null: false
     t.integer "code", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "units", force: :cascade do |t|
@@ -212,7 +207,7 @@ ActiveRecord::Schema.define(version: 2018_05_07_131709) do
     t.integer "foet_code"
     t.date "founded_at"
     t.integer "duration"
-    t.string "type", null: false
+    t.string "type", null: false, comment: "STI field"
     t.bigint "district_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -251,10 +246,10 @@ ActiveRecord::Schema.define(version: 2018_05_07_131709) do
   end
 
   create_table "yoksis_responses", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "endpoint", null: false
-    t.string "action", null: false
-    t.string "sha1", null: false
+    t.string "name", null: false, comment: "API endpoint, ie: Yoksis"
+    t.string "endpoint", null: false, comment: "API endpoint name, ie: Referanslar"
+    t.string "action", null: false, comment: "Endpoint action, ie: get_ogrenim_dili_response"
+    t.string "sha1", null: false, comment: "SHA1 hash of the API response"
     t.datetime "created_at", null: false
     t.datetime "syncronized_at"
   end

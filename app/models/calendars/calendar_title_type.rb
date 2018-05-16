@@ -8,17 +8,6 @@ class CalendarTitleType < ApplicationRecord
   # validations
   validates :type, uniqueness: { scope: :title }
 
-  # callbacks
-  around_save :catch_uniqueness_exception
-
   # enums
-  enum status: { active: 0, passive: 1 }
-
-  private
-
-  def catch_uniqueness_exception
-    yield
-  rescue ActiveRecord::RecordNotUnique
-    errors.add(:calendar_title_type, 'title is already taken')
-  end
+  enum status: { passive: 0, active: 1 }
 end

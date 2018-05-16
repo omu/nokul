@@ -1,114 +1,114 @@
 one:
-  type_id: 1
-  title_id: 3
-  status: 0
+  type: lisans_önlisans
+  title: three
+  status: active
 
 two:
-  type_id: 1
-  title_id: 4
-  status: 0
+  type: lisans_önlisans
+  title: four
+  status: active
 
 three:
-  type_id: 1
-  title_id: 5
-  status: 0
+  type: lisans_önlisans
+  title: five
+  status: active
 
 four:
-  type_id: 1
-  title_id: 6
-  status: 0
+  type: lisans_önlisans
+  title: six
+  status: active
 
 five:
-  type_id: 1
-  title_id: 7
-  status: 0
+  type: lisans_önlisans
+  title: seven
+  status: active
 
 six:
-  type_id: 1
-  title_id: 8
-  status: 0
+  type: lisans_önlisans
+  title: eight
+  status: active
 
 seven:
-  type_id: 1
-  title_id: 9
-  status: 0
+  type: lisans_önlisans
+  title: nine
+  status: active
 
 eight:
-  type_id: 1
-  title_id: 10
-  status: 0
+  type: lisans_önlisans
+  title: ten
+  status: active
 
 nine:
-  type_id: 1
-  title_id: 11
-  status: 0
+  type: lisans_önlisans
+  title: eleven
+  status: active
 
 ten:
-  type_id: 1
-  title_id: 12
-  status: 0
+  type: lisans_önlisans
+  title: twelve
+  status: active
 
 eleven:
-  type_id: 1
-  title_id: 13
-  status: 0
+  type: lisans_önlisans
+  title: thirteen
+  status: active
 
 twelve:
-  type_id: 1
-  title_id: 14
-  status: 0
+  type: lisans_önlisans
+  title: fourteen
+  status: active
 
 thirteen:
-  type_id: 1
-  title_id: 15
-  status: 0
+  type: lisans_önlisans
+  title: fifteen
+  status: active
 
 fourteen:
-  type_id: 1
-  title_id: 16
-  status: 0
+  type: lisans_önlisans
+  title: sixteen
+  status: active
 
 fifteen:
-  type_id: 1
-  title_id: 17
-  status: 0
+  type: lisans_önlisans
+  title: seventeen
+  status: active
 
 sixteen:
-  type_id: 1
-  title_id: 19
-  status: 0
+  type: lisans_önlisans
+  title: nineteen
+  status: active
 
 seventeen:
-  type_id: 1
-  title_id: 20
-  status: 0
+  type: lisans_önlisans
+  title: twenty
+  status: active
 
 eighteen:
-  type_id: 1
-  title_id: 21
-  status: 0
+  type: lisans_önlisans
+  title: twenty-one
+  status: active
 
 nineteen:
-  type_id: 1
-  title_id: 22
-  status: 0
+  type: lisans_önlisans
+  title: twenty-two
+  status: active
 
 twenty:
-  type_id: 1
-  title_id: 23
-  status: 0
+  type: lisans_önlisans
+  title: twenty-three
+  status: active
 
 twenty-one:
-  type_id: 1
-  title_id: 27
-  status: 0
+  type: lisans_önlisans
+  title: twenty-seven
+  status: active
 
 twenty-two:
-  type_id: 1
-  title_id: 28
-  status: 0
+  type: lisans_önlisans
+  title: twenty-eight
+  status: active
 
 twenty-three:
-  type_id: 1
-  title_id: 29
-  status: 0
+  type: lisans_önlisans
+  title: twenty-nine
+  status: active

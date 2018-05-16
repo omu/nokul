@@ -1,44 +1,23 @@
-one:
-  id: 1
-  year: 2016-2017
-  term: 0
-
-two:
-  id: 2
-  year: 2016-2017
-  term: 1
-
-three:
-  id: 3
-  year: 2016-2017
-  term: 2
-
-four:
-  id: 4
+fall_2017_2018:
   year: 2017-2018
-  term: 0
+  term: fall
 
-five:
-  id: 5
+spring_2017_2018:
   year: 2017-2018
-  term: 1
+  term: spring
 
-six:
-  id: 6
+summer_2017_2018:
   year: 2017-2018
-  term: 2
+  term: summer
 
-seven:
-  id: 7
+fall_2018_2019:
   year: 2018-2019
-  term: 0
+  term: fall
 
-eight:
-  id: 8
+spring_2018_2019:
   year: 2018-2019
-  term: 1
+  term: spring
 
-nine:
-  id: 9
+summer_2018_2019:
   year: 2018-2019
-  term: 2
+  term: summer
