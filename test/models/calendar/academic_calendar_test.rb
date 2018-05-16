@@ -10,9 +10,9 @@ class AcademicCalendarTest < ActiveSupport::TestCase
     senate_decision_no
   ].each do |property|
     test "presence validations for #{property} of an academic calendar" do
-      academic_calendars(:one).send("#{property}=", nil)
-      refute academic_calendars(:one).valid?
-      refute_empty academic_calendars(:one).errors[property]
+      academic_calendars(:lisans_calendar_fall_2017_2018).send("#{property}=", nil)
+      refute academic_calendars(:lisans_calendar_fall_2017_2018).valid?
+      refute_empty academic_calendars(:lisans_calendar_fall_2017_2018).errors[property]
     end
   end
 
@@ -23,12 +23,12 @@ class AcademicCalendarTest < ActiveSupport::TestCase
     calendar_type
   ].each do |property|
     test "an academic calendar can communicate with #{property}" do
-      assert academic_calendars(:one).send(property)
+      assert academic_calendars(:lisans_calendar_fall_2017_2018).send(property)
     end
   end
 
   # duplication test
   test 'academic_term should be unique based on calendar_type' do
-    refute academic_calendars(:one).dup.valid?
+    refute academic_calendars(:lisans_calendar_fall_2017_2018).dup.valid?
   end
 end

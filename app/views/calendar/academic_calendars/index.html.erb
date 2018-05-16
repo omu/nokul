@@ -5,7 +5,6 @@
     <thead>
       <tr>
         <th>Takvim Adı</th>
-        <th>Yıl</th>
         <th>Dönem</th>
         <th>Takvim Türü</th>
         <th>Senato Karar Tarihi</th>
@@ -18,8 +17,7 @@
       <% @academic_calendars.each do |academic_calendar| %>
         <tr>
           <td><%= academic_calendar.name %></td>
-          <td><%= academic_calendar.year %></td>
-          <td><%= academic_calendar.academic_term.fullname %></td>
+          <td><%= full_name(academic_calendar.academic_term) %></td>
           <td><%= academic_calendar.type_name %></td>
           <td><%= academic_calendar.senate_decision_date %></td>
           <td><%= academic_calendar.senate_decision_no %></td>
