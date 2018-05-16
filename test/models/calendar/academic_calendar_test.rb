@@ -12,7 +12,7 @@ class AcademicCalendarTest < ActiveSupport::TestCase
     test "presence validations for #{property} of an academic calendar" do
       academic_calendars(:one).send("#{property}=", nil)
       refute academic_calendars(:one).valid?
-      assert_not_nil academic_calendars(:one).errors[property]
+      refute_empty academic_calendars(:one).errors[property]
     end
   end
 
@@ -29,6 +29,6 @@ class AcademicCalendarTest < ActiveSupport::TestCase
 
   # duplication test
   test 'academic_term should be unique based on calendar_type' do
-    assert_not academic_calendars(:one).dup.valid?
+    refute academic_calendars(:one).dup.valid?
   end
 end
