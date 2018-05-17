@@ -11,8 +11,7 @@ class AcademicCalendarTest < ActiveSupport::TestCase
   ].each do |property|
     test "presence validations for #{property} of an academic calendar" do
       academic_calendars(:lisans_calendar_fall_2017_2018).send("#{property}=", nil)
-      refute academic_calendars(:lisans_calendar_fall_2017_2018).valid?
-      refute_empty academic_calendars(:lisans_calendar_fall_2017_2018).errors[property]
+      assert_not academic_calendars(:lisans_calendar_fall_2017_2018).valid?
     end
   end
 
@@ -29,6 +28,6 @@ class AcademicCalendarTest < ActiveSupport::TestCase
 
   # duplication test
   test 'academic_term should be unique based on calendar_type' do
-    refute academic_calendars(:lisans_calendar_fall_2017_2018).dup.valid?
+    assert_not academic_calendars(:lisans_calendar_fall_2017_2018).dup.valid?
   end
 end

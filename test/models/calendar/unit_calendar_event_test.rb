@@ -6,7 +6,7 @@ class UnitCalendarEventTest < ActiveSupport::TestCase
   # presence validation tests
   test 'should not save without start_date' do
     unit_calendar_events(:one).start_date = nil
-    refute unit_calendar_events(:one).valid?
+    assert_not unit_calendar_events(:one).valid?
   end
 
   # relational tests
@@ -22,6 +22,6 @@ class UnitCalendarEventTest < ActiveSupport::TestCase
 
   # duplication tests
   test 'unit event should be unique' do
-    refute unit_calendar_events(:one).dup.valid?
+    assert_not unit_calendar_events(:one).dup.valid?
   end
 end
