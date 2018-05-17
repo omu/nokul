@@ -30,3 +30,17 @@ tr:
         success: Takvim türü başarıyla silindi.
       update:
         success: Takvim türü başarıyla güncellendi.
+  helpers:
+    submit:
+      calendar_title:
+        create: Takvim başlığı oluştur
+        update: Takvim başlığını güncelle
+      calendar_type:
+        create: Takvim türü oluştur
+        update: Takvim türünü güncelle
+      academic_term:
+        create: Akademik dönem oluştur
+        update: Akademik dönemi güncelle
+      academic_calendar:
+        create: Akademik takvim oluştur
+        update: Akademik takvimi güncelle
