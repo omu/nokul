@@ -17,17 +17,15 @@ module Calendar
 
     def create
       @calendar_title = CalendarTitle.new(calendar_title_params)
-      return redirect_to(calendar_titles_url, notice: t('.success')) if @calendar_title.save
-      render(:new)
+      @calendar_title.save ? redirect_to(action: :index, notice: t('.success')) : render(:new)
     end
 
     def update
-      return redirect_to(calendar_titles_url, notice: t('.success')) if @calendar_title.update(calendar_title_params)
-      render(:edit)
+      @calendar_title.update(calendar_title_params) ? redirect_to(action: :index, notice: t('.success')) : render(:edit)
     end
 
     def destroy
-      redirect_to(calendar_titles_url, notice: t('.success')) if @calendar_title.destroy
+      redirect_to(action: :index, notice: t('.success')) if @calendar_title.destroy
     end
 
     private

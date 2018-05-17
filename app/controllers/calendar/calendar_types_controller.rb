@@ -21,17 +21,15 @@ module Calendar
 
     def create
       @calendar_type = CalendarType.new(calendar_type_params)
-      return redirect_to(calendar_types_url, notice: t('.success')) if @calendar_type.save
-      render(:new)
+      @calendar_type.save ? redirect_to(action: :index, notice: t('.success')) : render(:new)
     end
 
     def update
-      return redirect_to(calendar_types_url, notice: t('.success')) if @calendar_type.update(calendar_type_params)
-      render(:edit)
+      @calendar_type.update(calendar_type_params) ? redirect_to(action: :index, notice: t('.success')) : render(:edit)
     end
 
     def destroy
-      redirect_to(calendar_types_url, notice: t('.success')) if @calendar_type.destroy
+      redirect_to(action: :index, notice: t('.success')) if @calendar_type.destroy
     end
 
     private

@@ -8,7 +8,7 @@ class AcademicTermHelperTest < ActionView::TestCase
   end
 
   test 'years should return a list of ranged years from 1975 to today' do
-    assert_equal years.size, DateTime.now.year-1975+1
+    assert_equal years.size, Time.zone.now.year - 1975 + 1
   end
 
   test 'full_name should return a full name for academic term' do
