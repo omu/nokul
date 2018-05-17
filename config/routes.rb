@@ -24,4 +24,11 @@ Rails.application.routes.draw do
   authenticate :user do
     mount Sidekiq::Web => '/sidekiq'
   end
+
+  scope module: :calendar do
+    resources :academic_calendars
+    resources :academic_terms, except: :show
+    resources :calendar_titles, except: :show
+    resources :calendar_types
+  end
 end

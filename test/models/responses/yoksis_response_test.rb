@@ -13,7 +13,7 @@ class YoksisResponseTest < ActiveSupport::TestCase
     test "presence validations for #{property} of a yoksis_response" do
       yoksis_responses(:response_1).send("#{property}=", nil)
       refute yoksis_responses(:response_1).valid?
-      assert_not_nil yoksis_responses(:response_1).errors[property]
+      refute_empty yoksis_responses(:response_1).errors[property]
     end
   end
 
@@ -21,6 +21,6 @@ class YoksisResponseTest < ActiveSupport::TestCase
   test 'uniqueness validations for sha1 field of a unit' do
     fake = yoksis_responses(:response_1).dup
     refute fake.valid?
-    assert_not_nil fake.errors[:sha1]
+    refute_empty fake.errors[:sha1]
   end
 end

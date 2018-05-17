@@ -36,14 +36,14 @@ class UnitTest < ActiveSupport::TestCase
     test "presence validations for #{property} of a unit" do
       units(:omu).send("#{property}=", nil)
       refute units(:omu).valid?
-      assert_not_nil units(:omu).errors[property]
+      refute_empty units(:omu).errors[property]
     end
   end
 
   test 'uniqueness validations for yoksis_id field of a unit' do
     fake = units(:omu).dup
     refute fake.valid?
-    assert_not_nil fake.errors[:yoksis_id]
+    refute_empty fake.errors[:yoksis_id]
   end
 
   test 'callbacks must titlecase the name for a unit' do

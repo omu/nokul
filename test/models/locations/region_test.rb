@@ -29,7 +29,7 @@ class RegionTest < ActiveSupport::TestCase
     test "presence validations for #{property} of a region" do
       regions(:bati_karadeniz).send("#{property}=", nil)
       refute regions(:bati_karadeniz).valid?
-      assert_not_nil regions(:bati_karadeniz).errors[property]
+      refute_empty regions(:bati_karadeniz).errors[property]
     end
   end
 
@@ -41,7 +41,7 @@ class RegionTest < ActiveSupport::TestCase
     test "uniqueness validations for #{property} of a region" do
       fake = regions(:bati_karadeniz).dup
       refute fake.valid?
-      assert_not_nil fake.errors[property]
+      refute_empty fake.errors[property]
     end
   end
 

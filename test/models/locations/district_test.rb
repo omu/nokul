@@ -27,14 +27,14 @@ class DistrictTest < ActiveSupport::TestCase
     test "presence validations for #{property} of a district" do
       districts(:vezirkopru).send("#{property}=", nil)
       refute districts(:vezirkopru).valid?
-      assert_not_nil districts(:vezirkopru).errors[property]
+      refute_empty districts(:vezirkopru).errors[property]
     end
   end
 
   test 'uniqueness validations for name field of a district, scoped with city' do
     fake = districts(:vezirkopru).dup
     refute fake.valid?
-    assert_not_nil fake.errors[:name]
+    refute_empty fake.errors[:name]
   end
 
   # callback tests
