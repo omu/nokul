@@ -6,7 +6,7 @@ class CalendarTypeTest < ActiveSupport::TestCase
   # presence validation tests
   test 'should not save calendar_type without name' do
     calendar_types(:lisans_önlisans).name = nil
-    refute calendar_types(:lisans_önlisans).valid?
+    assert_not calendar_types(:lisans_önlisans).valid?
   end
 
   # relational tests
@@ -16,6 +16,6 @@ class CalendarTypeTest < ActiveSupport::TestCase
 
   # duplication tests
   test 'name should be unique' do
-    refute calendar_types(:lisans_önlisans).dup.valid?
+    assert_not calendar_types(:lisans_önlisans).dup.valid?
   end
 end

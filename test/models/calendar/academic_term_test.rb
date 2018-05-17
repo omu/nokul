@@ -10,8 +10,7 @@ class AcademicTermTest < ActiveSupport::TestCase
   ].each do |property|
     test "presence validations for #{property} of an academic term" do
       academic_terms(:fall_2017_2018).send("#{property}=", nil)
-      refute academic_terms(:fall_2017_2018).valid?
-      refute_empty academic_terms(:fall_2017_2018).errors[property]
+      assert_not academic_terms(:fall_2017_2018).valid?
     end
   end
 
@@ -22,6 +21,6 @@ class AcademicTermTest < ActiveSupport::TestCase
 
   # duplication tests
   test 'term should be unique based on year' do
-    refute academic_terms(:fall_2017_2018).dup.valid?
+    assert_not academic_terms(:fall_2017_2018).dup.valid?
   end
 end

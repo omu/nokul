@@ -6,7 +6,7 @@ class CalendarEventTest < ActiveSupport::TestCase
   # presence validation tests
   test 'should not save without start_date' do
     calendar_events(:one).start_date = nil
-    refute calendar_events(:one).valid?
+    assert_not calendar_events(:one).valid?
   end
 
   # relational tests
@@ -21,6 +21,6 @@ class CalendarEventTest < ActiveSupport::TestCase
 
   # duplication tests
   test 'event should be unique' do
-    refute calendar_events(:one).dup.valid?
+    assert_not calendar_events(:one).dup.valid?
   end
 end
