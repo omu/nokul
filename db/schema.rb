@@ -197,8 +197,6 @@ ActiveRecord::Schema.define(version: 2018_05_07_131709) do
   create_table "unit_statuses", force: :cascade do |t|
     t.string "name", null: false
     t.integer "code", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "units", force: :cascade do |t|
