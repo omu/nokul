@@ -1,8 +1,8 @@
 <div class="nested-fields">
   <div class="card card-default">
     <div class="card-body bg-light">
-      <%= f.association :title, collection: CalendarTitle.all, label: 'Başlık' %>
-      <%= f.input :status, collection: f.object.class.statuses.keys, label: 'Durum' %>
+      <%= f.association :title, collection: CalendarTitle.all %>
+      <%= f.input :status, collection: f.object.class.statuses.keys %>
     </div>
     <div class="card-footer">
       <center><%= link_to_remove_association "Başlığı Sil", f, class: "btn btn-danger btn-sm" %></center>

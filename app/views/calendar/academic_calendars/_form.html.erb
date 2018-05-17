@@ -3,12 +3,12 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.input :name, label: 'Takvim Adı' %>
-    <%= f.association :academic_term, label_method: lambda { |academic_term| full_name(academic_term) }, value_method: :id, label: 'Dönem' %>
-    <%= f.association :calendar_type, label: 'Takvim Türü' %>
-    <%= f.input :senate_decision_date, start_year: 1975, label: 'Senato Karar Tarihi' %>
-    <%= f.input :senate_decision_no, label: 'Senato Karar No' %>
-    <%= f.input :description, label: 'Açıklama' %>
+    <%= f.input :name %>
+    <%= f.association :academic_term, label_method: lambda { |academic_term| full_name(academic_term) }, value_method: :id %>
+    <%= f.association :calendar_type %>
+    <%= f.input :senate_decision_date, start_year: 1975 %>
+    <%= f.input :senate_decision_no %>
+    <%= f.input :description %>
   </div>
 
   <% if @academic_calendar.persisted?  %>
@@ -23,6 +23,6 @@
   <% end %>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: "btn btn-success" %>
   </div>
 <% end %>

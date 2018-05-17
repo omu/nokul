@@ -16,7 +16,7 @@ module Nokul
     config.time_zone = 'Istanbul'
 
     # we will set default locale to Turkish in the future
-    config.i18n.default_locale = :en
+    config.i18n.default_locale = :tr
 
     # support Turkish and English as locales
     I18n.available_locales = %i[tr en]
