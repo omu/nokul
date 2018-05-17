@@ -29,7 +29,7 @@ module Calendar
 
     def update
       if @academic_calendar.update(academic_calendar_params)
-        redirect_to(academic_calendars_url, notice: t('.success'))
+        redirect_to(academic_calendar_url(@academic_calendar), notice: t('.success'))
       else
         render(:edit)
       end
@@ -47,7 +47,6 @@ module Calendar
 
     def set_academic_calendar
       @academic_calendar = AcademicCalendar.find(params[:id])
-      @calendar_titles = @academic_calendar.calendar_type.titles
     end
 
     def academic_calendar_params
