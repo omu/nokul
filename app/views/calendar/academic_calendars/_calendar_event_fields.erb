@@ -1,9 +1,9 @@
 <div class="nested-fields">
   <div class="card card-default">
     <div class="card-body bg-light">
-      <%= f.input :calendar_title_id, collection: @academic_calendar.calendar_type.titles, label: 'Başlık' %>
-      <%= f.input :start_date, start_year: 1975, label: 'Başlama Tarihi' %>
-      <%= f.input :end_date, start_year: 1975, include_blank: true, label: 'Bitiş Tarihi' %>
+      <%= f.input :calendar_title_id, collection: @academic_calendar.calendar_type.titles %>
+      <%= f.input :start_date, start_year: 1975 %>
+      <%= f.input :end_date, start_year: 1975, include_blank: true %>
     </div>
     <div class="card-footer">
       <center><%= link_to_remove_association "Etkinliği Sil", f, class: "btn btn-danger btn-sm" %></center>
