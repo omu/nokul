@@ -17,17 +17,15 @@ module Calendar
 
     def create
       @academic_term = AcademicTerm.new(academic_term_params)
-      return redirect_to(academic_terms_url, notice: t('.success')) if @academic_term.save
-      render(:new)
+      @academic_term.save ? redirect_to(action: :index, notice: t('.success')) : render(:new)
     end
 
     def update
-      return redirect_to(academic_terms_url, notice: t('.success')) if @academic_term.update(academic_term_params)
-      render(:edit)
+      @academic_term.update(academic_term_params) ? redirect_to(action: :index, notice: t('.success')) : render(:edit)
     end
 
     def destroy
-      redirect_to(academic_terms_url, notice: t('.success')) if @academic_term.destroy
+      redirect_to(action: :index, notice: t('.success')) if @academic_term.destroy
     end
 
     private
