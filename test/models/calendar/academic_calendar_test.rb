@@ -20,6 +20,7 @@ class AcademicCalendarTest < ActiveSupport::TestCase
     calendar_events
     academic_term
     calendar_type
+    unit_calendar_events
   ].each do |property|
     test "an academic calendar can communicate with #{property}" do
       assert academic_calendars(:lisans_calendar_fall_2017_2018).send(property)
@@ -28,6 +29,13 @@ class AcademicCalendarTest < ActiveSupport::TestCase
 
   # duplication test
   test 'academic_term should be unique based on calendar_type' do
-    assert_not academic_calendars(:lisans_calendar_fall_2017_2018).dup.valid?
+    fake_calendar = academic_calendars(:lisans_calendar_fall_2017_2018).dup
+    assert_not fake_calendar.valid?
+    refute_empty fake_calendar.errors[:academic_term]
+  end
+
+  # delegation test
+  test 'name delegation responds to calendar_type name' do
+    assert academic_calendars(:lisans_calendar_fall_2017_2018).type_name
   end
 end

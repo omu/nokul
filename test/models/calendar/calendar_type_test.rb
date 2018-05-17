@@ -7,11 +7,17 @@ class CalendarTypeTest < ActiveSupport::TestCase
   test 'should not save calendar_type without name' do
     calendar_types(:lisans_önlisans).name = nil
     assert_not calendar_types(:lisans_önlisans).valid?
+    refute_empty calendar_types(:lisans_önlisans).errors[:name]
   end
 
   # relational tests
-  test 'should contain titles' do
-    assert calendar_types(:lisans_önlisans).titles
+  %i[
+    titles
+    calendar_title_types
+  ].each do |property|
+    test "a calendar type can communicate with #{property}" do
+      calendar_types(:lisans_önlisans).send(property)
+    end
   end
 
   # duplication tests
