@@ -1,0 +1,37 @@
+<div class="card">
+  <br><h4 class="card-heading text-center">Akademik Takvimler</h4>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Takvim Adı</th>
+        <th>Dönem</th>
+        <th>Takvim Türü</th>
+        <th>Senato Karar Tarihi</th>
+        <th>Senato Karar No</th>
+        <th>İşlemler</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @academic_calendars.each do |academic_calendar| %>
+        <tr>
+          <td><%= academic_calendar.name %></td>
+          <td><%= full_name(academic_calendar.academic_term) %></td>
+          <td><%= academic_calendar.type_name %></td>
+          <td><%= academic_calendar.senate_decision_date %></td>
+          <td><%= academic_calendar.senate_decision_no %></td>
+          <td>
+            <%= link_to 'Görüntüle', academic_calendar_path(academic_calendar), class: "btn btn-secondary btn-sm" %>
+            <%= link_to 'Düzenle', edit_academic_calendar_path(academic_calendar), class: "btn btn-secondary btn-sm" %>
+            <%= link_to 'Sil', academic_calendar, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <div class="card-footer">
+    <%= link_to 'Yeni Akademik Takvim', new_academic_calendar_path, class: "btn btn-success" %>
+  </div>
+</div>

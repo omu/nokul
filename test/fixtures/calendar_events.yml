@@ -1,0 +1,113 @@
+one:
+  academic_calendar: lisans_calendar_fall_2017_2018
+  calendar_title: three
+  start_date: 2017-09-18 00:00:00
+  end_date:
+
+two:
+  academic_calendar: lisans_calendar_fall_2017_2018
+  calendar_title: five
+  start_date: 2017-12-22 00:00:00
+  end_date:
+
+three:
+  academic_calendar: lisans_calendar_fall_2017_2018
+  calendar_title: six
+  start_date: 2017-11-11 00:00:00
+  end_date: 2017-11-19 23:59:59
+
+four:
+  academic_calendar: lisans_calendar_fall_2017_2018
+  calendar_title: seven
+  start_date: 2017-12-25 00:00:00
+  end_date: 2018-01-05 23:59:59
+
+five:
+  academic_calendar: lisans_calendar_fall_2017_2018
+  calendar_title: eight
+  start_date: 2018-01-13 13:27:49
+  end_date: 2018-01-21 13:27:49
+
+six:
+  academic_calendar: lisans_calendar_fall_2017_2018
+  calendar_title: nine
+  start_date: 2017-09-06 00:00:00
+  end_date: 2017-09-12 23:59:59
+
+seven:
+  academic_calendar: lisans_calendar_fall_2017_2018
+  calendar_title: ten
+  start_date: 2017-09-13 00:00:00
+  end_date: 2017-09-15 23:59:59
+
+eight:
+  academic_calendar: lisans_calendar_fall_2017_2018
+  calendar_title: eleven
+  start_date: 2017-09-12 00:00:00
+  end_date: 2017-09-13 23:59:59
+
+nine:
+  academic_calendar: lisans_calendar_fall_2017_2018
+  calendar_title: twelve
+  start_date: 2017-09-15 00:00:00
+  end_date:
+
+ten:
+  academic_calendar: lisans_calendar_fall_2017_2018
+  calendar_title: thirteen
+  start_date: 2017-09-18 00:00:00
+  end_date:
+
+eleven:
+  academic_calendar: lisans_calendar_fall_2017_2018
+  calendar_title: fourteen
+  start_date: 2017-09-11 00:00:00
+  end_date: 2017-09-20 23:59:59
+
+twelve:
+  academic_calendar: lisans_calendar_fall_2017_2018
+  calendar_title: fifteen
+  start_date: 2017-09-20 00:00:00
+  end_date:
+
+thirteen:
+  academic_calendar: lisans_calendar_fall_2017_2018
+  calendar_title: sixteen
+  start_date: 2017-09-18 00:00:00
+  end_date: 2017-09-25 23:59:59
+
+fourteen:
+  academic_calendar: lisans_calendar_fall_2017_2018
+  calendar_title: seventeen
+  start_date: 2017-10-13 23:59:59
+  end_date:
+
+fiveteen:
+  academic_calendar: lisans_calendar_fall_2017_2018
+  calendar_title: nineteen
+  start_date: 2018-01-10 23:59:59
+  end_date:
+
+sixteen:
+  academic_calendar: lisans_calendar_fall_2017_2018
+  calendar_title: twenty
+  start_date: 2018-01-14 23:59:59
+  end_date:
+
+seventeen:
+  academic_calendar: lisans_calendar_fall_2017_2018
+  calendar_title: twenty-one
+  start_date: 2018-01-25 00:00:00
+  end_date: 2018-01-26 23:59:59
+
+eighteen:
+  academic_calendar: lisans_calendar_fall_2017_2018
+  calendar_title: twenty-two
+  start_date: 2018-01-29 00:00:00
+  end_date: 2018-01-30 23:59:59
+
+nineteen:
+  academic_calendar: lisans_calendar_fall_2017_2018
+  calendar_title: twenty-three
+  start_date: 2018-02-02 23:59:59
+  end_date:

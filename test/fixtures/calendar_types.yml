@@ -1,0 +1,35 @@
+lisans_önlisans:
+  name: Lisans - Önlisans
+
+yüksek_lisans:
+  name: Yüksek Lisans
+
+hukuk:
+  name: Ali Fuat Başgil Hukuk Fakültesi
+
+yabancı_diller:
+  name: Yabancı Diller Yüksekokulu
+
+tıp:
+  name: Tıp Fakültesi
+
+diş1:
+  name: Dik Hekimliği Fakültesi (1-2-3. Sınıflar)
+
+diş2:
+  name: Dik Hekimliği Fakültesi (4-5. Sınıflar)
+
+veteriner:
+  name: Veteriner Fakültesi
+
+uzem_önlisans:
+  name: UZEM Önlisans/Lisans
+
+uzem_lisans:
+  name: UZEM Lisansüstü
+
+yaz:
+  name: Yaz Dönemi
+
+öğrenci:
+  name: Öğrenci

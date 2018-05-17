@@ -1,0 +1,27 @@
+<div class="card">
+  <br>
+  <h4 class="card-heading text-center">
+    <%= "#{@calendar_type.name} Akademik Takvim Türü" %>
+  </h4>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Başlıklar</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @titles.each do |title| %>
+        <tr>
+          <td><%= title.name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <div class="card-footer">
+    <%= link_to 'Geri', calendar_types_path %> |
+    <%= link_to 'Düzenle', edit_calendar_type_path(@calendar_type) %>
+  </div>
+</div>

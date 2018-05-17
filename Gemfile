@@ -18,13 +18,16 @@ gem 'ancestry'
 # authentication
 gem 'devise'
 
-# assets
+# assets: core asset dependencies
 gem 'coffee-rails', '~> 4.2'
-gem 'font-awesome-rails'
 gem 'sass-rails', '~> 5.0'
-gem 'simple_form'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
+
+# view helpers: tools for forms, views, etc.
+gem 'cocoon'
+gem 'font-awesome-rails'
+gem 'simple_form'
 
 # api
 gem 'jbuilder', '~> 2.5'

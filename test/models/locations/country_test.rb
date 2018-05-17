@@ -30,7 +30,7 @@ class CountryTest < ActiveSupport::TestCase
     test "presence validations for #{property} of a country" do
       countries(:turkey).send("#{property}=", nil)
       refute countries(:turkey).valid?
-      assert_not_nil countries(:turkey).errors[property]
+      refute_empty countries(:turkey).errors[property]
     end
   end
 
@@ -43,7 +43,7 @@ class CountryTest < ActiveSupport::TestCase
     test "uniqueness validations for #{property} of a country" do
       fake = countries(:turkey).dup
       refute fake.valid?
-      assert_not_nil fake.errors[property]
+      refute_empty fake.errors[property]
     end
   end
 
