@@ -46,6 +46,7 @@ group :development, :test do
   gem 'chromedriver-helper'
   gem 'codacy-coverage', require: false
   gem 'pry-rails'
+  gem 'rails_best_practices'
   gem 'reek'
   gem 'rubocop'
   gem 'selenium-webdriver'
