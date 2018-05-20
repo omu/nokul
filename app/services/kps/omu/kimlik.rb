@@ -69,12 +69,14 @@ module Services
             date_of_birth: Date.strptime(date_of_birth, '%m %d %Y')
           }
 
-          identical_information = {
-            registered_to:
-              registered_to[:cilt][:aciklama] + '/' +
-              registered_to[:ilce][:aciklama] + '/' +
-              registered_to[:il][:aciklama]
-          }.merge(identical_information) if id_type == turkish_citizen
+          if id_type == turkish_citizen
+            identical_information = {
+              registered_to:
+                registered_to[:cilt][:aciklama] + '/' +
+                registered_to[:ilce][:aciklama] + '/' +
+                registered_to[:il][:aciklama]
+            }.merge(identical_information)
+          end
 
           identical_information
         end
