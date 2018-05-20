@@ -3,11 +3,12 @@
 require 'test_helper'
 
 class RegionTest < ActiveSupport::TestCase
-  # relational tests for the related models of region
+  # relations
   %i[
     country
     cities
     districts
+    addresses
     units
   ].each do |property|
     test "a region can communicate with #{property}" do
@@ -15,37 +16,31 @@ class RegionTest < ActiveSupport::TestCase
     end
   end
 
-  # nullify tests
-  test 'city nullifies the region_id when a region gets deleted' do
-    regions(:east_sweden).destroy
-    assert_nil cities(:stockholm).region_id
-  end
-
-  # validation tests for the presence of listed properties
+  # validations: presence
   %i[
     name
     nuts_code
   ].each do |property|
     test "presence validations for #{property} of a region" do
       regions(:bati_karadeniz).send("#{property}=", nil)
-      refute regions(:bati_karadeniz).valid?
-      refute_empty regions(:bati_karadeniz).errors[property]
+      assert_not regions(:bati_karadeniz).valid?
+      assert_not_empty regions(:bati_karadeniz).errors[property]
     end
   end
 
-  # validation tests for the uniqueness of listed properties
+  # validations: uniqueness
   %i[
     name
     nuts_code
   ].each do |property|
     test "uniqueness validations for #{property} of a region" do
       fake = regions(:bati_karadeniz).dup
-      refute fake.valid?
-      refute_empty fake.errors[property]
+      assert_not fake.valid?
+      assert_not_empty fake.errors[property]
     end
   end
 
-  # callback tests
+  # callbacks
   test 'callbacks must titlecase the name and must upcase the nuts_code of a region' do
     region = Region.create(name: 'wonderland of alice', nuts_code: 'wl1', country: countries(:turkey))
     assert_equal region.name, 'Wonderland Of Alice'

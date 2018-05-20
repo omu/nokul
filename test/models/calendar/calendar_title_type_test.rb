@@ -3,7 +3,7 @@
 require 'test_helper'
 
 class CalendarTitleTypeTest < ActiveSupport::TestCase
-  # relational tests
+  # relations
   %i[
     type
     title
@@ -13,10 +13,10 @@ class CalendarTitleTypeTest < ActiveSupport::TestCase
     end
   end
 
-  # duplication tests
+  # validations: uniqueness
   test 'title_id should be unique based on type_id' do
     fake = calendar_title_types(:one).dup
     assert_not fake.valid?
-    refute_empty fake.errors[:type]
+    assert_not_empty fake.errors[:type]
   end
 end
