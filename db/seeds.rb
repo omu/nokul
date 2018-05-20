@@ -38,6 +38,14 @@ File.open(Rails.root.join('db', 'static_data', 'districts.yml')) do |districts|
   end
 end
 
+# create titles
+File.open(Rails.root.join('db', 'static_data', 'titles.yml')) do |titles|
+  titles.read.each_line do |title|
+    code, name, branch = title.chomp.split('|')
+    Title.create!(name: name, code: code, branch: branch)
+  end
+end
+
 # Fetch YOKSIS References
 Rake::Task['yoksis:fetch_references'].invoke
 
