@@ -14,6 +14,19 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :id_number, presence: true, uniqueness: true, numericality: { only_integer: true }, length: { is: 11 }
   validates_with EmailAddress::ActiveRecordValidator, field: :email
+
+  # background jobs
+  after_commit :build_address_information, on: :create, if: proc { addresses.formal.empty? }
+  after_commit :build_identity_information, on: :create, if: proc { identities.formal.empty? }
+
+  def build_address_information
+    KpsAddressCreateJob.perform_later(self)
+  end
+
+  def build_identity_information
+    KpsIdentityCreateJob.perform_later(self)
+  end
+
   # custom methods
   def accounts
     (students + [employee]).flatten
