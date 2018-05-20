@@ -10,14 +10,8 @@ class UniversityTypeTest < ActiveSupport::TestCase
     @object = university_types(:foundation)
   end
 
-  # relational tests
+  # relations
   test 'university_type can communicate with units' do
     assert @object.units
-  end
-
-  # nullify tests
-  test 'university_type nullifies the related foreign key from unit when it gets deleted' do
-    @object.destroy
-    assert_nil units(:cbu).university_type
   end
 end

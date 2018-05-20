@@ -3,7 +3,12 @@
 require 'test_helper'
 
 class AcademicTermTest < ActiveSupport::TestCase
-  # validation tests for the presence of listed properties
+  # relations
+  test 'should contain academic calendars' do
+    assert academic_terms(:fall_2017_2018).academic_calendars
+  end
+
+  # validations: presence
   %i[
     year
     term
@@ -14,21 +19,10 @@ class AcademicTermTest < ActiveSupport::TestCase
     end
   end
 
-  # relational tests
-  test 'should contain academic calendars' do
-    assert academic_terms(:fall_2017_2018).academic_calendars
-  end
-
-  # duplication tests
+  # validations: uniqueness
   test 'term should be unique based on year' do
     fake_term = academic_terms(:fall_2017_2018).dup
     assert_not fake_term.valid?
-    refute_empty fake_term.errors[:year]
-  end
-
-  # nullify tests
-  test 'academic calendar nullifies academic_term_id when academic_term gets deleted' do
-    academic_terms(:spring_2017_2018).destroy
-    assert_nil academic_calendars(:lisans_calendar_spring_2017_2018).academic_term
+    assert_not_empty fake_term.errors[:year]
   end
 end
