@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-class UnitTest < ActiveSupport::TestCase
+class StringTest < ActiveSupport::TestCase
   test 'capitalize_all method can capitalize words in Turkish' do
     word = 'ışık ılık süt iç'
     assert_equal word.capitalize_all, 'Işık Ilık Süt İç'
