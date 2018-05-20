@@ -1,0 +1,12 @@
+formal:
+  name: formal
+  phone_number: 12345678
+  full_address: 'Lorem ipsum street'
+  district: atakum
+  user: serhat
+home:
+  name: home
+  phone_number: 12345678
+  full_address: 'Cumhuriyet mahallesi'
+  district: atakum
+  user: serhat

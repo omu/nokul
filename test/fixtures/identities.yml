@@ -1,0 +1,19 @@
+serhat:
+  name: formal
+  first_name: john
+  last_name: doe
+  gender: male
+  marital_status: married
+  place_of_birth: london
+  date_of_birth: <%= Time.zone.now - 20.years %>
+  user: serhat
+  student: serhat
+john:
+  name: informal
+  first_name: jane
+  last_name: doe
+  gender: female
+  marital_status: single
+  place_of_birth: manchester
+  date_of_birth: <%= Time.zone.now - 25.years %>
+  user: john
