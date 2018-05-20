@@ -25,6 +25,18 @@ Rails.application.routes.draw do
     mount Sidekiq::Web => '/sidekiq'
   end
 
+  # Account home page
+  scope module: :account do
+    get 'account', to: 'home#index'
+    resources :identities, except: [:show] do
+      get 'mernis', to: 'identities#update_from_mernis'
+    end
+    resources :addresses, except: :show do
+      get 'mernis', to: 'addresses#update_from_mernis'
+    end
+  end
+
+  # Academic calendars
   scope module: :calendar do
     resources :academic_calendars
     resources :academic_terms, except: :show
