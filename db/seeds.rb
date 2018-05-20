@@ -2,7 +2,7 @@
 
 # This file is used to create initial data, that is needed for app to live.
 
-# Create countries
+# create countries
 File.open(Rails.root.join('db', 'static_data', 'countries.yml')) do |countries|
   countries.read.each_line do |country|
     iso, name, code = country.chomp.split('|')
@@ -10,7 +10,7 @@ File.open(Rails.root.join('db', 'static_data', 'countries.yml')) do |countries|
   end
 end
 
-# Create regions
+# create regions
 File.open(Rails.root.join('db', 'static_data', 'regions.yml')) do |regions|
   regions.read.each_line do |region|
     name, nuts_code = region.chomp.split('|')
@@ -19,7 +19,7 @@ File.open(Rails.root.join('db', 'static_data', 'regions.yml')) do |regions|
   end
 end
 
-# Create cities
+# create cities
 File.open(Rails.root.join('db', 'static_data', 'cities.yml')) do |cities|
   cities.read.each_line do |city|
     name, iso, nuts_code = city.chomp.split('|')
@@ -28,7 +28,7 @@ File.open(Rails.root.join('db', 'static_data', 'cities.yml')) do |cities|
   end
 end
 
-# Create districts
+# create districts
 File.open(Rails.root.join('db', 'static_data', 'districts.yml')) do |districts|
   districts.read.each_line do |district|
     name, yoksis_id, city_code = district.chomp.split('|')
