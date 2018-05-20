@@ -44,16 +44,5 @@ Rake::Task['yoksis:fetch_references'].invoke
 # Import YOKSIS Departments
 Rake::Task['yoksis:import_departments'].invoke
 
-# Create academic staff
-# client = Services::Yoksis::V1::AkademikPersonel.new
-# number_of_pages = client.number_of_pages
-
-# (1..number_of_pages).each do |page_number|
-#   client.list_academic_staff(page_number).each do |academic_staff|
-#     id_number = academic_staff[:tc_kimlik_no]
-#     first_name = academic_staff[:adi]
-#     last_name = academic_staff[:soyadi]
-#     title = academic_staff[:kadro_unvan]
-#     unit_id = academic_staff[:birim_id]
-#   end
-# end
+# Import Academic Staff from YOKSIS
+# Rake::Task['yoksis:fetch_academic_staff'].invoke
