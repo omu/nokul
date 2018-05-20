@@ -85,30 +85,30 @@ seventeen:
 
 eighteen:
   type: lisans_önlisans
-  title: twenty-one
+  title: twenty_one
   status: active
 
 nineteen:
   type: lisans_önlisans
-  title: twenty-two
+  title: twenty_two
   status: active
 
 twenty:
   type: lisans_önlisans
-  title: twenty-three
+  title: twenty_three
   status: active
 
-twenty-one:
+twenty_one:
   type: lisans_önlisans
-  title: twenty-seven
+  title: twenty_seven
   status: active
 
-twenty-two:
+twenty_two:
   type: lisans_önlisans
-  title: twenty-eight
+  title: twenty_eight
   status: active
 
-twenty-three:
+twenty_three:
   type: lisans_önlisans
-  title: twenty-nine
+  title: twenty_nine
   status: active
