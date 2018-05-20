@@ -2,10 +2,7 @@
 
 module Calendar
   class AcademicCalendarsController < ApplicationController
-    before_action :authenticate_user!
     before_action :set_academic_calendar, only: %i[show edit update destroy]
-
-    rescue_from ActiveRecord::RecordNotFound, with: :not_found
 
     def index
       @academic_calendars = AcademicCalendar.all
@@ -23,7 +20,7 @@ module Calendar
 
     def create
       @academic_calendar = AcademicCalendar.new(calendar_params)
-      @academic_calendar.save ? redirect_to(action: :index, notice: t('.success')) : render(:new)
+      @academic_calendar.save ? redirect_with('success') : render(:new)
     end
 
     def update
@@ -35,13 +32,13 @@ module Calendar
     end
 
     def destroy
-      redirect_to(action: :index, notice: t('.success')) if @academic_calendar.destroy
+      redirect_with('success') if @academic_calendar.destroy
     end
 
     private
 
-    def not_found
-      redirect_to action: :index, notice: t('.alert')
+    def redirect_with(message)
+      redirect_to(academic_calendars_path, notice: t(".#{message}"))
     end
 
     def set_academic_calendar
