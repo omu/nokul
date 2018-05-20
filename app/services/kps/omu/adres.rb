@@ -30,12 +30,12 @@ module Services
             # return a hash, ready to use for building an Address.
             address_information = {
               full_address: yerlesim_yeri[:acik_adres],
-              city: address_root[:il],
-              city_id: address_root[:il_kodu],
-              district: address_root[:ilce],
-              district_id: address_root[:ilce_kodu],
-              neighbourhood: address_root[:mahalle],
-              neighbourhood_id: address_root[:mahalle_kodu]
+              district_id: address_root[:ilce_kodu].to_i
+              # city: address_root[:il],
+              # city_id: address_root[:il_kodu],
+              # district: address_root[:ilce],
+              # neighbourhood: address_root[:mahalle],
+              # neighbourhood_id: address_root[:mahalle_kodu]
             }
             address_information
           end

@@ -36,6 +36,27 @@ module Services
 
           # common behavior
           kimlik = id_type.dig(*id_info_args)
+          registered_to = id_type.dig(id_info_args[0])[:kayit_yeri_bilgisi]
+
+          gender = case kimlik[:cinsiyet][:aciklama]
+                   when 'Erkek'
+                     1
+                   when 'Kadın'
+                     2
+                   else
+                     3
+                   end
+
+          marital_status = case id_type.dig(*marital_info_args)[:medeni_hal][:aciklama]
+                           when 'Bekâr'
+                             1
+                           when 'Evli'
+                             2
+                           when 'Boşanmış'
+                             3
+                           else
+                             4
+                           end
 
           identical_information = {
             first_name: kimlik[:ad],
@@ -43,11 +64,17 @@ module Services
             mothers_name: kimlik[:anne_ad],
             fathers_name: kimlik[:baba_ad],
             place_of_birth: kimlik[:dogum_yer],
-            gender: kimlik[:cinsiyet][:aciklama],
-            marital_status: id_type.dig(*marital_info_args)[:medeni_hal][:aciklama],
-            registered_to: id_type.dig(id_info_args[0])[:kayit_yeri_bilgisi],
+            gender: gender,
+            marital_status: marital_status,
             date_of_birth: Date.strptime(date_of_birth, '%m %d %Y')
           }
+
+          identical_information = {
+            registered_to:
+              registered_to[:cilt][:aciklama] + '/' +
+              registered_to[:ilce][:aciklama] + '/' +
+              registered_to[:il][:aciklama]
+          }.merge(identical_information) if id_type == turkish_citizen
 
           identical_information
         end

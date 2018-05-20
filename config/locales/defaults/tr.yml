@@ -214,3 +214,4 @@ tr:
       long: "%e %B %Y, %A, %H:%M"
       short: "%e %B, %H:%M"
     pm: öğleden sonra
+  not_found: 'Erişmeye çalıştığınız sayfa bulunamadı!'
