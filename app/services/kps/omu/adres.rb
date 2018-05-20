@@ -17,7 +17,7 @@ module Services
 
           # return false if something went wrong.
           if response[:hata_bilgisi].present?
-            false
+            raise IdNumberError
           else
             yerlesim_yeri = response[:yerlesim_yeri_adresi]
             address_root = if yerlesim_yeri[:il_ilce_merkez_adresi].present?
