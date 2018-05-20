@@ -1,0 +1,19 @@
+tr:
+  account:
+    identities:
+      edit:
+        warning: Yasal kimlik bilgilerinizi düzenleyemezsiniz!
+      create:
+        success: Kimlik başarıyla oluşturuldu!
+      update:
+        success: Kimlik başarıyla güncellendi!
+      destroy:
+        success: Kimlik başarıyla silindi!
+      update_from_mernis:
+        wait: Kimliğinizi yakın bir zamanda oluşturdunuz veya güncellediniz. Kimliğinizi haftada bir güncelleyebilirsiniz.
+        will_update: Kimlik güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde adresiniz güncellenecek.
+  helpers:
+    submit:
+      identity:
+        create: Kimliği kaydet
+        update: Kimliği güncelle

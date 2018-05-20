@@ -1,0 +1,54 @@
+<div class='card'>
+  <br><h4 class='card-heading text-center'>Kimlik Bilgilerim</h4>
+
+  <table class='table'>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Anne Adı</th>
+        <th>Baba Adı</th>
+        <th>Cinsiyet</th>
+        <th>Medeni Hal</th>
+        <th>Doğum Yeri</th>
+        <th>Doğum Tarihi</th>
+        <th>Kütük Bilgisi</th>
+        <th>İşlemler</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @identities.each do |identity| %>
+        <tr>
+          <td>
+            <span class="badge badge-primary">
+              <%= fa_icon('gavel', text: 'Resmi Kimlik') if identity.formal? %>
+              <%= fa_icon('user', text: 'Diğer Kimlik') if identity.informal? %>
+            </span>
+          </td>
+          <td><%= identity.first_name %></td>
+          <td><%= identity.last_name %></td>
+          <td><%= identity.mothers_name %></td>
+          <td><%= identity.fathers_name %></td>
+          <td><%= identity.gender %></td>
+          <td><%= identity.marital_status %></td>
+          <td><%= identity.place_of_birth %></td>
+          <td><%= identity.date_of_birth %></td>
+          <td><%= identity.registered_to %></td>
+          <td>
+            <% if identity.formal? %>
+              <%= link_to "MERNIS'ten Güncelle", identity_mernis_path(identity), class: 'btn btn-secondary btn-sm' %>
+            <% else %>
+              <%= link_to('Düzenle', edit_identity_path(identity), class: 'btn btn-secondary btn-sm') %>
+              <%= link_to('Sil', identity, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm') %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <div class='card-footer'>
+    <%= link_to 'Yeni Kimlik Ekle', new_identity_path, class: 'btn btn-success' %>
+  </div>
+</div>
