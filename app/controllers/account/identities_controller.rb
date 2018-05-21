@@ -32,7 +32,7 @@ module Account
       if (Time.zone.now - @identity.updated_at) / 1.day < 7
         redirect_with('wait')
       else
-        # KpsAddressUpdateJob.perform_later(identity)
+        # TODO: KpsIdentityUpdateJob.perform_later(identity)
         redirect_with('will_update')
       end
     end

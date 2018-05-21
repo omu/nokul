@@ -12,7 +12,7 @@ class Student < ApplicationRecord
   validates :unit, presence: true
 
   # background jobs
-  after_commit :build_identity_information, on: :create, if: proc { identity.nil? }
+  after_create_commit :build_identity_information, if: proc { identity.nil? }
 
   def build_identity_information
     KpsIdentityCreateJob.perform_later(user, id)
