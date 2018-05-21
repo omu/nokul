@@ -18,8 +18,8 @@ class User < ApplicationRecord
   validates_with EmailAddress::ActiveRecordValidator, field: :email
 
   # background jobs
-  after_commit :build_address_information, on: :create, if: proc { addresses.formal.empty? }
-  after_commit :build_identity_information, on: :create, if: proc { identities.formal.empty? }
+  after_create_commit :build_address_information, if: proc { addresses.formal.empty? }
+  after_create_commit :build_identity_information, if: proc { identities.formal.empty? }
 
   def build_address_information
     KpsAddressCreateJob.perform_later(self)
