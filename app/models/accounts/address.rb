@@ -7,9 +7,7 @@ class Address < ApplicationRecord
 
   # validations
   validates :name, presence: true, uniqueness: { scope: %i[user district] }
-  validates :district, presence: true
   validates :full_address, presence: true
-  validates :user, presence: true
 
   # enums
   enum name: { formal: 1, home: 2, work: 3, other: 4 }

@@ -8,8 +8,7 @@ class Employee < ApplicationRecord
   has_many :units, through: :duties
 
   # validations
-  validates :title, presence: true
-  validates :user, presence: true, uniqueness: true
+  validates :user, uniqueness: true
 
   # delegations
   delegate :identities, to: :user

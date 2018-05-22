@@ -8,7 +8,5 @@ class Duty < ApplicationRecord
   # validations
   validates :temporary, presence: true
   validates :start_date, presence: true
-  validates :employee, presence: true
-  validates :unit, presence: true
   validates :unit_id, uniqueness: { scope: %i[employee] }
 end
