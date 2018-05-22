@@ -6,19 +6,19 @@ module ReferenceValidationsTest
   extend ActiveSupport::Concern
 
   included do
-    # validation tests for the presence of listed properties
+    # validations: presence
     %i[
       name
       code
     ].each do |property|
       test "presence validations for #{property} of a reference" do
         @object.send("#{property}=", nil)
-        refute @object.valid?
+        assert_not @object.valid?
         assert_not_nil @object.errors[property]
       end
     end
 
-    # validation tests for the uniqueness of listed properties
+    # validations: uniqueness
     %i[
       name
       code

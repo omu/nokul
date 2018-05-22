@@ -1,0 +1,20 @@
+<%= simple_form_for(identity) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :mothers_name %>
+    <%= f.input :fathers_name %>
+    <%= f.input :gender, collection: f.object.class.genders.keys %>
+    <%= f.input :marital_status, collection: f.object.class.marital_statuses.keys %>
+    <%= f.input :place_of_birth, collection: City.all %>
+    <%= f.input :date_of_birth %>
+    <%= f.input :registered_to %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-success' %>
+  </div>
+<% end %>

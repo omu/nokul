@@ -18,9 +18,7 @@ AllCops:
     - config/initializers/simple_form.rb
     - config/initializers/simple_form_bootstrap.rb
     - config/environments/development.rb
-Style/ClassAndModuleChildren:
-  Exclude:
-    - app/controllers/user/*rb
+    - config/routes.rb
 Metrics/BlockLength:
   Exclude:
     - "lib/tasks/**/*.rake"
@@ -34,4 +32,11 @@ Metrics/MethodLength:
   Exclude:
     - app/services/kps/omu/adres.rb
     - app/services/kps/omu/kimlik.rb
-
+Metrics/CyclomaticComplexity:
+  Exclude:
+    - app/services/kps/omu/adres.rb
+    - app/services/kps/omu/kimlik.rb
+Metrics/PerceivedComplexity:
+  Exclude:
+    - app/services/kps/omu/adres.rb
+    - app/services/kps/omu/kimlik.rb
