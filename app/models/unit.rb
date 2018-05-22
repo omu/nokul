@@ -14,8 +14,6 @@ class Unit < ApplicationRecord
 
   # validations
   validates :type, presence: true
-  validates :district, presence: true
-  validates :unit_status, presence: true
   validates :yoksis_id, presence: true, uniqueness: true, numericality: { only_integer: true }
   validates :name, presence: true, uniqueness: { scope: %i[ancestry unit_status] }
   validates :duration, numericality: { only_integer: true }, allow_blank: true

@@ -8,8 +8,6 @@ class Student < ApplicationRecord
 
   # validations
   validates :student_number, presence: true, uniqueness: true
-  validates :user, presence: true
-  validates :unit, presence: true
 
   # background jobs
   after_create_commit :build_identity_information, if: proc { identity.nil? }

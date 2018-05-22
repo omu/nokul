@@ -13,7 +13,6 @@ class City < ApplicationRecord
   validates :name, presence: true, uniqueness: true
   validates :iso, presence: true, uniqueness: true
   validates :nuts_code, presence: true, uniqueness: true
-  validates :region, presence: true
 
   # callbacks
   after_commit do
