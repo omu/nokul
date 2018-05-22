@@ -30,7 +30,7 @@ class KpsAddressJobTest < ActiveJob::TestCase
     KpsAddressUpdateJob
   ].each do |property|
     test "can perform enqueued jobs for #{property}" do
-      skip 'this block on CircleCI since it needs IP permissions to run.' unless ENV['CI']
+      skip 'this block on CircleCI since it needs IP permissions to run.' if ENV['CI']
       assert_performed_jobs 0
       args = if property.eql?('KpsAddressCreateJob')
                users(:serhat)
