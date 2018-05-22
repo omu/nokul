@@ -23,7 +23,7 @@
           <td><%= address.full_address %></td>
           <td>
             <% if address.formal? %>
-              <%= link_to "MERNIS'ten Güncelle", address_mernis_path(address), class: 'btn btn-secondary btn-sm' %>
+              <%= link_to "MERNIS'ten Güncelle", mernis_address_path(address), class: 'btn btn-secondary btn-sm' %>
             <% else %>
               <%= link_to('Düzenle', edit_address_path(address), class: 'btn btn-secondary btn-sm') %>
               <%= link_to('Sil', address, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm') %>

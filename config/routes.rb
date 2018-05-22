@@ -29,10 +29,10 @@ Rails.application.routes.draw do
   scope module: :account do
     get 'account', to: 'home#index'
     resources :identities, except: [:show] do
-      get 'mernis', to: 'identities#update_from_mernis'
+      get 'mernis', on: :member
     end
     resources :addresses, except: :show do
-      get 'mernis', to: 'addresses#update_from_mernis'
+      get 'mernis', on: :member
     end
   end
 

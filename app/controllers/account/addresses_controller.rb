@@ -2,7 +2,7 @@
 
 module Account
   class AddressesController < ApplicationController
-    before_action :set_address, only: %i[edit update destroy]
+    before_action :set_address, only: %i[edit update destroy mernis]
     before_action :check_formality, only: %i[edit update destroy]
 
     def index
@@ -25,10 +25,10 @@ module Account
     end
 
     def destroy
-      redirect_with('success') if @address.destroy
+      @address.destroy ? redirect_with('success') : redirect_with('warning')
     end
 
-    def update_from_mernis
+    def mernis
       if (Time.zone.now - @address.updated_at) / 1.day < 7
         redirect_with('wait')
       else

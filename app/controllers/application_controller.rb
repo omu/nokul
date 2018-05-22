@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def not_found
-    redirect_to(root_path, error: t('not_found'))
+    redirect_back(fallback_location: root_path, error: t('not_found'))
   end
 
   def configure_permitted_parameters
