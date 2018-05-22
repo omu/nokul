@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateUnits < ActiveRecord::Migration[5.1]
   def change
     create_table :units do |t|
@@ -7,7 +9,7 @@ class CreateUnits < ActiveRecord::Migration[5.1]
       t.date :founded_at
       t.integer :duration
       t.string :type, null: false, comment: 'STI field'
-      t.belongs_to :district, foreign_key: true
+      t.references :district, foreign_key: true
       t.timestamps
     end
   end
