@@ -14,8 +14,8 @@ class CreateIdentities < ActiveRecord::Migration[5.1]
       t.date :date_of_birth, null: false
       t.string :registered_to
       t.datetime :updated_at, null: false
-      t.belongs_to :user, foreign_key: true
-      t.belongs_to :student, foreign_key: true
+      t.references :user, foreign_key: true
+      t.references :student, foreign_key: true
     end
   end
 end
