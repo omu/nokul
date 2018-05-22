@@ -2,9 +2,9 @@
 
 namespace :yoksis do
   # call a specific task by mentioning it's name and class, ie:
-  # rake yoksis:reference['get_ogrenim_dili','UnitInstructionLanguag']
+  # rake yoksis:reference['get_ogrenim_dili','UnitInstructionLanguage']
   # if you are using zsh you must escape braces though, ie:
-  # rake yoksis:reference\['get_ogrenim_dili','UnitInstructionLanguag'\]
+  # rake yoksis:reference\['get_ogrenim_dili','UnitInstructionLanguage'\]
 
   desc 'fetch all references'
   task :fetch_references do
@@ -13,7 +13,6 @@ namespace :yoksis do
       get_ogrenim_turu: 'UnitInstructionType',
       get_aktiflik_durumu: 'UnitStatus',
       get_universite_turu: 'UniversityType',
-      get_kadro_gorev_unvan: 'StaffAcademicTitle',
       get_personel_gorev: 'StaffAdministrativeFunction',
       get_ogrenci_engel_turu: 'StudentDisabilityType',
       get_ogrenci_ayrilma_nedeni: 'StudentDropOutType',

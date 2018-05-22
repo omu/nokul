@@ -1,0 +1,20 @@
+professor:
+  name: Profesör
+  code: 1550
+  branch: ÖE
+associate_professor:
+  name: Doçent
+  code: 1555
+  branch: ÖE
+research_assistant:
+  name: Araştırma Görevlisi
+  code: 1590
+  branch: ÖE
+computer_operator:
+  name: Bilgisayar İşletmeni
+  code: 7820
+  branch: GİH
+chief:
+  name: Şef
+  code: 6835
+  branch: GİH

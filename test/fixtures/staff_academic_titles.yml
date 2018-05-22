@@ -1,9 +1,0 @@
-professor:
-  name: Profesör
-  code: 1
-associate_professor:
-  name: Doçent
-  code: 2
-research_assistant:
-  name: Araştırma Görevlisi
-  code: 7

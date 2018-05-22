@@ -3,10 +3,11 @@
 require 'test_helper'
 
 class CityTest < ActiveSupport::TestCase
-  # relational tests for the related models of city
+  # relations
   %i[
     region
     districts
+    addresses
     units
   ].each do |property|
     test "a city can communicate with #{property}" do
@@ -14,13 +15,7 @@ class CityTest < ActiveSupport::TestCase
     end
   end
 
-  # nullify tests
-  test 'district nullifies the city_id when a city gets deleted' do
-    cities(:samsun).destroy
-    assert_nil districts(:atakum).city_id
-  end
-
-  # validation tests for the presence of listed properties
+  # validations: presence
   %i[
     name
     iso
@@ -28,12 +23,12 @@ class CityTest < ActiveSupport::TestCase
   ].each do |property|
     test "presence validations for #{property} of a city" do
       cities(:samsun).send("#{property}=", nil)
-      refute cities(:samsun).valid?
-      assert_not_nil cities(:samsun).errors[property]
+      assert_not cities(:samsun).valid?
+      assert_not_empty cities(:samsun).errors[property]
     end
   end
 
-  # validation tests for the uniqueness of listed properties
+  # validations: uniqueness
   %i[
     name
     iso
@@ -41,12 +36,12 @@ class CityTest < ActiveSupport::TestCase
   ].each do |property|
     test "uniqueness validations for #{property} of a city" do
       fake = cities(:samsun).dup
-      refute fake.valid?
-      assert_not_nil fake.errors[property]
+      assert_not fake.valid?
+      assert_not_empty fake.errors[property]
     end
   end
 
-  # callback tests
+  # callbacks
   test 'callbacks must titlecase the name and must upcase the nuts_code of a city' do
     city = City.create(
       name: 'wonderland',

@@ -10,14 +10,8 @@ class UnitInstructionTypeTest < ActiveSupport::TestCase
     @object = unit_instruction_types(:normal_education)
   end
 
-  # relational tests
+  # relations
   test 'unit_instruction_type can communicate with units' do
     assert @object.units
-  end
-
-  # nullify tests
-  test 'unit_instruction_type nullifies the related foreign key from unit when it gets deleted' do
-    @object.destroy
-    assert_nil units(:cbu).unit_instruction_type
   end
 end

@@ -4,6 +4,7 @@ class District < ApplicationRecord
   # relations
   belongs_to :city
   has_many :units, dependent: :nullify
+  has_many :addresses, dependent: :nullify
 
   # validations
   validates :name, presence: true, uniqueness: { scope: %i[city_id] }
@@ -11,7 +12,7 @@ class District < ApplicationRecord
   validates :yoksis_id, numericality: { only_integer: true }, allow_blank: true
 
   # callbacks
-  before_save do
+  after_commit do
     self.name = name.capitalize_all
   end
 end

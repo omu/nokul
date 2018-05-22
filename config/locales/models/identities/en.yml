@@ -1,0 +1,10 @@
+en:
+  account:
+    identities:
+      edit:
+        warning: You can not edit your formal identity!
+      create:
+        success: Identity successfully created!
+      update_from_mernis:
+        wait: You recently created or updated your identity. You can update your identity once every week.
+        will_update: We got your identity update request. In a couple of seconds/minutes you will be able to see your new identity.

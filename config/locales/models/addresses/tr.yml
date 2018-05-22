@@ -1,0 +1,20 @@
+tr:
+  account:
+    addresses:
+      edit:
+        warning: Yasal ikamet adresinizi düzenleyemezsiniz!
+      create:
+        success: Adres başarıyla oluşturuldu!
+      update:
+        success: Adres başarıyla güncellendi!
+      destroy:
+        success: Adres başarıyla silindi!
+        warning: Adres silinemedi!
+      mernis:
+        wait: Adresinizi yakın bir zamanda oluşturdunuz veya güncellediniz. Adresinizi haftada bir güncelleyebilirsiniz.
+        will_update: Adres güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde adresiniz güncellenecek.
+  helpers:
+    submit:
+      address:
+        create: Adresi kaydet
+        update: Adresi güncelle

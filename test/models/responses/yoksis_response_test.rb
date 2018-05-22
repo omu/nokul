@@ -3,7 +3,7 @@
 require 'test_helper'
 
 class YoksisResponseTest < ActiveSupport::TestCase
-  # validation tests for the presence of listed properties
+  # validations: presence
   %i[
     name
     endpoint
@@ -12,15 +12,15 @@ class YoksisResponseTest < ActiveSupport::TestCase
   ].each do |property|
     test "presence validations for #{property} of a yoksis_response" do
       yoksis_responses(:response_1).send("#{property}=", nil)
-      refute yoksis_responses(:response_1).valid?
-      assert_not_nil yoksis_responses(:response_1).errors[property]
+      assert_not yoksis_responses(:response_1).valid?
+      assert_not_empty yoksis_responses(:response_1).errors[property]
     end
   end
 
-  # validation tests for uniqueness
+  # validations: uniqueness
   test 'uniqueness validations for sha1 field of a unit' do
     fake = yoksis_responses(:response_1).dup
-    refute fake.valid?
-    assert_not_nil fake.errors[:sha1]
+    assert_not fake.valid?
+    assert_not_empty fake.errors[:sha1]
   end
 end

@@ -1,0 +1,12 @@
+<%= simple_form_for academic_term do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :year, collection: years %>
+    <%= f.input :term, collection: AcademicTerm.terms.keys %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: "btn btn-success" %>
+  </div>
+<% end %>

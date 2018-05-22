@@ -1,0 +1,114 @@
+one:
+  type: lisans_önlisans
+  title: three
+  status: active
+
+two:
+  type: lisans_önlisans
+  title: four
+  status: active
+
+three:
+  type: lisans_önlisans
+  title: five
+  status: active
+
+four:
+  type: lisans_önlisans
+  title: six
+  status: active
+
+five:
+  type: lisans_önlisans
+  title: seven
+  status: active
+
+six:
+  type: lisans_önlisans
+  title: eight
+  status: active
+
+seven:
+  type: lisans_önlisans
+  title: nine
+  status: active
+
+eight:
+  type: lisans_önlisans
+  title: ten
+  status: active
+
+nine:
+  type: lisans_önlisans
+  title: eleven
+  status: active
+
+ten:
+  type: lisans_önlisans
+  title: twelve
+  status: active
+
+eleven:
+  type: lisans_önlisans
+  title: thirteen
+  status: active
+
+twelve:
+  type: lisans_önlisans
+  title: fourteen
+  status: active
+
+thirteen:
+  type: lisans_önlisans
+  title: fifteen
+  status: active
+
+fourteen:
+  type: lisans_önlisans
+  title: sixteen
+  status: active
+
+fifteen:
+  type: lisans_önlisans
+  title: seventeen
+  status: active
+
+sixteen:
+  type: lisans_önlisans
+  title: nineteen
+  status: active
+
+seventeen:
+  type: lisans_önlisans
+  title: twenty
+  status: active
+
+eighteen:
+  type: lisans_önlisans
+  title: twenty_one
+  status: active
+
+nineteen:
+  type: lisans_önlisans
+  title: twenty_two
+  status: active
+
+twenty:
+  type: lisans_önlisans
+  title: twenty_three
+  status: active
+
+twenty_one:
+  type: lisans_önlisans
+  title: twenty_seven
+  status: active
+
+twenty_two:
+  type: lisans_önlisans
+  title: twenty_eight
+  status: active
+
+twenty_three:
+  type: lisans_önlisans
+  title: twenty_nine
+  status: active

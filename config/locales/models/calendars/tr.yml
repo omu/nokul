@@ -1,0 +1,50 @@
+tr:
+  calendar:
+    academic_calendars:
+      create:
+        success: Akademik takvim başarıyla oluşturuldu.
+      destroy:
+        success: Akademik takvim başarıyla silindi.
+        warning: Akademik takvim silinemedi!
+      show:
+        alert: Böyle bir kayıt bulunamadı!
+      update:
+        success: Akademik takvim başarıyla güncellendi.
+    academic_terms:
+      create:
+        success: Akademik dönem başarıyla oluşturuldu.
+      destroy:
+        success: Akademik dönem başarıyla silindi.
+        warning: Akademik dönem silinemedi!
+      update:
+        success: Akademik dönem başarıyla güncellendi.
+    calendar_titles:
+      create:
+        success: Takvim başlığı başarıyla oluşturuldu.
+      destroy:
+        success: Takvim başlığı başarıyla silindi.
+        warning: Takvim başlığı silinemedi!
+      update:
+        success: Takvim başlığı başarıyla güncellendi.
+    calendar_types:
+      create:
+        success: Takvim türü başarıyla oluşturuldu.
+      destroy:
+        success: Takvim türü başarıyla silindi.
+        warning: Takvim başlığı silinemedi!
+      update:
+        success: Takvim türü başarıyla güncellendi.
+  helpers:
+    submit:
+      calendar_title:
+        create: Takvim başlığı oluştur
+        update: Takvim başlığını güncelle
+      calendar_type:
+        create: Takvim türü oluştur
+        update: Takvim türünü güncelle
+      academic_term:
+        create: Akademik dönem oluştur
+        update: Akademik dönemi güncelle
+      academic_calendar:
+        create: Akademik takvim oluştur
+        update: Akademik takvimi güncelle

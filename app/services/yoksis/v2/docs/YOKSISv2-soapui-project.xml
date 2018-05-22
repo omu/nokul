@@ -168,7 +168,7 @@
    <soap:Body>
       <yok:mezuniyetVerileriniGetir>
          <!--Optional:-->
-         <yok:TCKIMLIKNO>14674478966</yok:TCKIMLIKNO>
+         <yok:TCKIMLIKNO>12345678912</yok:TCKIMLIKNO>
          <!--Optional:-->
          <yok:ServicePassWord>?</yok:ServicePassWord>
       </yok:mezuniyetVerileriniGetir>
@@ -350,7 +350,7 @@
    <soapenv:Body>
       <yok:mezuniyetVerileriniGetir>
          <!--Optional:-->
-         <yok:TCKIMLIKNO>14674478966</yok:TCKIMLIKNO>
+         <yok:TCKIMLIKNO>12345678912</yok:TCKIMLIKNO>
          <!--Optional:-->
          <yok:ServicePassWord></yok:ServicePassWord>
       </yok:mezuniyetVerileriniGetir>
@@ -449,10 +449,10 @@
    <soapenv:Header/>
    <soapenv:Body>
       <mez:TcKimlikNoilMezunOgrenciSorgulav2>
-         <TCKNO>14674478966</TCKNO>
+         <TCKNO>12345678912</TCKNO>
       </mez:TcKimlikNoilMezunOgrenciSorgulav2>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Ogrenci_MezunOgrenciv2_Binder_TcKimlikNoilMezunOgrenciSorgulav2"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:endpointStrategy xsi:type="con:DefaultEndpointStrategy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:endpoint mode="COMPLEMENT" username="41242414552" password="876ytr">http://servisler.yok.gov.tr/ws/mebmezunsorgulav2</con:endpoint><con:endpoint mode="COMPLEMENT" username="41242414552" password="876ytr">http://servisler.yok.gov.tr/ws/TcKimlikNoileMezunOgrenciSorgulav2</con:endpoint></con:endpointStrategy><con:properties/>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="WSDLs_Ogrenci_MezunOgrenciv2_Binder_TcKimlikNoilMezunOgrenciSorgulav2"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:endpointStrategy xsi:type="con:DefaultEndpointStrategy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:endpoint mode="COMPLEMENT" username="41242414552" password="">http://servisler.yok.gov.tr/ws/mebmezunsorgulav2</con:endpoint><con:endpoint mode="COMPLEMENT" username="41242414552" password="">http://servisler.yok.gov.tr/ws/TcKimlikNoileMezunOgrenciSorgulav2</con:endpoint></con:endpointStrategy><con:properties/>
   <con:wssContainer/>
   <con:oAuth2ProfileContainer/>
   <con:oAuth1ProfileContainer/>
