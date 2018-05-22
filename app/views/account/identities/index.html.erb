@@ -37,7 +37,7 @@
           <td><%= identity.registered_to %></td>
           <td>
             <% if identity.formal? %>
-              <%= link_to "MERNIS'ten Güncelle", identity_mernis_path(identity), class: 'btn btn-secondary btn-sm' %>
+              <%= link_to "MERNIS'ten Güncelle", mernis_identity_path(identity), class: 'btn btn-secondary btn-sm' %>
             <% else %>
               <%= link_to('Düzenle', edit_identity_path(identity), class: 'btn btn-secondary btn-sm') %>
               <%= link_to('Sil', identity, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm') %>

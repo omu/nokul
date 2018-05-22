@@ -28,7 +28,7 @@ module Calendar
     end
 
     def destroy
-      redirect_with('success') if @calendar_type.destroy
+      @calendar_type.destroy ? redirect_with('success') : redirect_with('warning')
     end
 
     private

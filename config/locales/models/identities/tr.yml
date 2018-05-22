@@ -9,7 +9,8 @@ tr:
         success: Kimlik başarıyla güncellendi!
       destroy:
         success: Kimlik başarıyla silindi!
-      update_from_mernis:
+        warning: Kimlik silinemedi!
+      mernis:
         wait: Kimliğinizi yakın bir zamanda oluşturdunuz veya güncellediniz. Kimliğinizi haftada bir güncelleyebilirsiniz.
         will_update: Kimlik güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde adresiniz güncellenecek.
   helpers:
