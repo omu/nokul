@@ -5,21 +5,22 @@ class Unit < ApplicationRecord
   has_ancestry
   belongs_to :district
   belongs_to :unit_status
-  belongs_to :unit_instruction_type
+  belongs_to :unit_instruction_type, optional: true
   belongs_to :unit_instruction_language, optional: true
+  belongs_to :university_type, optional: true
+  has_many :duties, dependent: :destroy
+  has_many :employees, through: :duties
+  has_many :students, dependent: :nullify
 
   # validations
   validates :type, presence: true
-  validates :district, presence: true
-  validates :unit_status, presence: true
-  validates :unit_instruction_type, presence: true
   validates :yoksis_id, presence: true, uniqueness: true, numericality: { only_integer: true }
-  validates :name, presence: true, uniqueness: { scope: %i[ancestry unit_status_id] }
+  validates :name, presence: true, uniqueness: { scope: %i[ancestry unit_status] }
   validates :duration, numericality: { only_integer: true }, allow_blank: true
 
   # callbacks
-  before_save do
-    self.name = name.capitalize_all if name
+  after_commit do
+    self.name = name.capitalize_all
   end
 
   # list all unit types

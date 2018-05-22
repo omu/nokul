@@ -37,13 +37,11 @@ module Services
           define_method("get_#{method}") { |args = {}| send_request(__method__, args) }
         end
 
-        WSDL_ENDPOINT = 'http://servisler.yok.gov.tr/ws/Referanslarv1?WSDL'
-
         attr_reader :client, :response
 
         def initialize
           @client = Savon.client(
-            wsdl: WSDL_ENDPOINT,
+            wsdl: 'http://servisler.yok.gov.tr/ws/Referanslarv1?WSDL',
             convert_request_keys_to: :camelcase
           )
         end

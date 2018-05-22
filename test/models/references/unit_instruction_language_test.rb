@@ -10,14 +10,8 @@ class UnitInstructionLanguageTest < ActiveSupport::TestCase
     @object = unit_instruction_languages(:english)
   end
 
-  # relational tests
+  # relations
   test 'unit_instruction_language can communicate with units' do
     assert @object.units
-  end
-
-  # nullify tests
-  test 'unit_instruction_language nullifies the related foreign key from unit when it gets deleted' do
-    @object.destroy
-    assert_nil units(:cbu).unit_instruction_language
   end
 end

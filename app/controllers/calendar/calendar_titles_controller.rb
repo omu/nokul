@@ -2,7 +2,6 @@
 
 module Calendar
   class CalendarTitlesController < ApplicationController
-    before_action :authenticate_user!
     before_action :set_calendar_title, only: %i[edit update destroy]
 
     def index
@@ -17,18 +16,22 @@ module Calendar
 
     def create
       @calendar_title = CalendarTitle.new(calendar_title_params)
-      @calendar_title.save ? redirect_to(action: :index, notice: t('.success')) : render(:new)
+      @calendar_title.save ? redirect_with('success') : render(:new)
     end
 
     def update
-      @calendar_title.update(calendar_title_params) ? redirect_to(action: :index, notice: t('.success')) : render(:edit)
+      @calendar_title.update(calendar_title_params) ? redirect_with('success') : render(:edit)
     end
 
     def destroy
-      redirect_to(action: :index, notice: t('.success')) if @calendar_title.destroy
+      @calendar_title.destroy ? redirect_with('success') : redirect_with('warning')
     end
 
     private
+
+    def redirect_with(message)
+      redirect_to(calendar_titles_path, notice: t(".#{message}"))
+    end
 
     def set_calendar_title
       @calendar_title = CalendarTitle.find(params[:id])

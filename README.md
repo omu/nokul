@@ -1,30 +1,14 @@
 # Nokul
 
-[![Dependency Status](https://gemnasium.com/badges/github.com/omu/nokul.svg)](https://gemnasium.com/github.com/omu/nokul) [![Maintainability](https://api.codeclimate.com/v1/badges/32e076b5cbd4ee545f48/maintainability)](https://codeclimate.com/github/omu/nokul/maintainability) [![CircleCI](https://circleci.com/gh/omu/nokul/tree/master.svg?style=svg&circle-token=a25e63abc0e1e6c074750d9b2ce5396e3e279d82)](https://circleci.com/gh/omu/nokul/tree/master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2c7333e690454bbd99811c8860f08d2b)](https://www.codacy.com/app/msdundar/nokul?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=omu/nokul&amp;utm_campaign=Badge_Grade) [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/2c7333e690454bbd99811c8860f08d2b)](https://www.codacy.com/app/msdundar/nokul?utm_source=github.com&utm_medium=referral&utm_content=omu/nokul&utm_campaign=Badge_Coverage)
+[![Product](https://assets.omu.sh/badge/product.svg)](https://omu.sh "BAUM Product") [![Maintainability](https://api.codeclimate.com/v1/badges/32e076b5cbd4ee545f48/maintainability)](https://codeclimate.com/github/omu/nokul/maintainability) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2c7333e690454bbd99811c8860f08d2b)](https://www.codacy.com/app/msdundar/nokul?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=omu/nokul&amp;utm_campaign=Badge_Grade) [![CircleCI](https://circleci.com/gh/omu/nokul/tree/master.svg?style=svg&circle-token=a25e63abc0e1e6c074750d9b2ce5396e3e279d82)](https://circleci.com/gh/omu/nokul/tree/master) [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/2c7333e690454bbd99811c8860f08d2b)](https://www.codacy.com/app/msdundar/nokul?utm_source=github.com&utm_medium=referral&utm_content=omu/nokul&utm_campaign=Badge_Coverage) [![Known Vulnerabilities](https://snyk.io/test/github/omu/nokul/badge.svg)](https://snyk.io/test/github/omu/nokul)
+
+## Prerequisites
+
+- [NodeJS (>=10.x)](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions)
+- [Yarn](https://yarnpkg.com/lang/en/docs/install/#debian-stable)
+- [Redis](https://packages.debian.org/search?keywords=redis)
 
 ## Setup
-
-- You must have an up-to-dated JS interpreter (preferably NodeJS) installed on your system in order to run Rails applications:
-
-```bash
-curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-sudo apt-get install -y nodejs
-```
-
-- You must have `yarn` package manager installed on your sistem for front-end dependencies:
-
-```bash
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt-get update && sudo apt-get install yarn
-```
-
-- You must have redis installed on your system, for background jobs:
-
-```bash
-sudo apt install redis
-
-```
 
 - Database configuration file reads username, password and host settings from environment variables. Make sure to define these environment variables before setting up the project. Add environment variables to your .bashrc, .zshrc, .bash_profile etc.:
 
@@ -88,6 +72,8 @@ rake quality:rails # rubocop [ruby + rails]
 rake quality:all # ruby and rails tasks together
 ```
 
+You can also run `rails_best_practices .` for additional tips and possible improvements for this project.
+
 ## Security
 
 - Rake task named as 'security' checks for security issues:
@@ -106,16 +92,7 @@ rake test
 
 ## Test Coverage
 
-Currently coverage reports are being send to Codacy automatically. If you would like to generate a local report for yourself (using SimpleCov), you need to comment out some lines of `test_helper.rb` as shown below:
-
-```ruby
-require 'simplecov'
-# require 'codacy-coverage'
-SimpleCov.start 'rails'
-# Codacy::Reporter.start
-```
-
-then run your tests as usual:
+Currently coverage reports are being send to Codacy automatically in CI environment. If you would like to generate a local report for yourself (using SimpleCov), you simply need to run tests and view the generated file in `coverage/index.html.erb`:
 
 ```ruby
 rake test
@@ -135,6 +112,18 @@ rake yoksis:import_departments
 ## Third-Parties
 
 Third-party integrations are located under `app/services/foo/v1`. Follow up /docs subfolder (ie. `app/services/foo/v1/docs` for SOAPUI templates.
+
+## Background Jobs
+
+This app heavily uses Sidekiq (as ActiveJob objects) for performing background jobs. Make sure to start sidekiq for processing queues:
+
+```
+bundle exec sidekiq -q high -q low
+```
+
+**`bundle exec` is not optional here! Otherwise you will receive errors.**.
+
+Sidekiq also provides a fancy [web interface](http://localhost:3000/sidekiq/).
 
 ## App Upgrade
 

@@ -7,6 +7,7 @@ class Country < ApplicationRecord
   has_many :regions, dependent: :nullify
   has_many :cities, through: :regions
   has_many :districts, through: :cities
+  has_many :addresses, through: :districts
   has_many :units, through: :districts
 
   # validations
@@ -15,7 +16,7 @@ class Country < ApplicationRecord
   validates :code, presence: true, uniqueness: true
 
   # callbacks
-  before_save do
+  after_commit do
     self.name = name.capitalize_all
     self.iso = iso.upcase_tr
   end

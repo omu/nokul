@@ -1,0 +1,15 @@
+omu:
+  employee: serhat
+  unit: omu
+  temporary: false
+  start_date: 01.01.2015
+uzem:
+  employee: serhat
+  unit: uzem
+  temporary: true
+  start_date: 01.01.2009
+baum:
+  employee: serhat
+  unit: baum
+  temporary: true
+  start_date: 01.01.2017
