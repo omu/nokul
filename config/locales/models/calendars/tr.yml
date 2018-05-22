@@ -5,6 +5,7 @@ tr:
         success: Akademik takvim başarıyla oluşturuldu.
       destroy:
         success: Akademik takvim başarıyla silindi.
+        warning: Akademik takvim silinemedi!
       show:
         alert: Böyle bir kayıt bulunamadı!
       update:
@@ -14,6 +15,7 @@ tr:
         success: Akademik dönem başarıyla oluşturuldu.
       destroy:
         success: Akademik dönem başarıyla silindi.
+        warning: Akademik dönem silinemedi!
       update:
         success: Akademik dönem başarıyla güncellendi.
     calendar_titles:
@@ -21,6 +23,7 @@ tr:
         success: Takvim başlığı başarıyla oluşturuldu.
       destroy:
         success: Takvim başlığı başarıyla silindi.
+        warning: Takvim başlığı silinemedi!
       update:
         success: Takvim başlığı başarıyla güncellendi.
     calendar_types:
@@ -28,6 +31,7 @@ tr:
         success: Takvim türü başarıyla oluşturuldu.
       destroy:
         success: Takvim türü başarıyla silindi.
+        warning: Takvim başlığı silinemedi!
       update:
         success: Takvim türü başarıyla güncellendi.
   helpers:

@@ -9,17 +9,6 @@ class CalendarEvent < ApplicationRecord
   validates :start_date, presence: true
   validates :academic_calendar, uniqueness: { scope: :calendar_title }
 
-  # callbacks
-  around_save :catch_uniqueness_exception
-
   # delegates
   delegate :name, to: :calendar_title, prefix: :calendar_title
-
-  private
-
-  def catch_uniqueness_exception
-    yield
-  rescue ActiveRecord::RecordNotUnique
-    errors.add(:calendar_event, 'event is already taken')
-  end
 end

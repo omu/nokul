@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_07_131709) do
+ActiveRecord::Schema.define(version: 2018_05_19_215220) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,11 +36,14 @@ ActiveRecord::Schema.define(version: 2018_05_07_131709) do
   end
 
   create_table "addresses", force: :cascade do |t|
-    t.integer "district_id", null: false
-    t.string "neighbourhood"
+    t.integer "name", default: 4, null: false
+    t.string "phone_number", default: "", null: false
     t.text "full_address", null: false
-    t.datetime "updated_at", null: false
+    t.bigint "district_id"
     t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["district_id"], name: "index_addresses_on_district_id"
     t.index ["user_id"], name: "index_addresses_on_user_id"
   end
 
@@ -94,18 +97,42 @@ ActiveRecord::Schema.define(version: 2018_05_07_131709) do
     t.index ["city_id"], name: "index_districts_on_city_id"
   end
 
+  create_table "duties", force: :cascade do |t|
+    t.boolean "temporary"
+    t.date "start_date"
+    t.date "end_date"
+    t.bigint "employee_id"
+    t.bigint "unit_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["employee_id"], name: "index_duties_on_employee_id"
+    t.index ["unit_id"], name: "index_duties_on_unit_id"
+  end
+
+  create_table "employees", force: :cascade do |t|
+    t.bigint "title_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["title_id"], name: "index_employees_on_title_id"
+    t.index ["user_id"], name: "index_employees_on_user_id"
+  end
+
   create_table "identities", force: :cascade do |t|
+    t.integer "name", null: false
     t.string "first_name", null: false
     t.string "last_name", null: false
     t.string "mothers_name"
     t.string "fathers_name"
     t.integer "gender", null: false
-    t.integer "marital_status", null: false
+    t.integer "marital_status"
     t.string "place_of_birth", null: false
     t.date "date_of_birth", null: false
     t.string "registered_to"
     t.datetime "updated_at", null: false
     t.bigint "user_id"
+    t.bigint "student_id"
+    t.index ["student_id"], name: "index_identities_on_student_id"
     t.index ["user_id"], name: "index_identities_on_user_id"
   end
 
@@ -114,11 +141,6 @@ ActiveRecord::Schema.define(version: 2018_05_07_131709) do
     t.string "nuts_code", null: false
     t.bigint "country_id"
     t.index ["country_id"], name: "index_regions_on_country_id"
-  end
-
-  create_table "staff_academic_titles", force: :cascade do |t|
-    t.string "name", null: false
-    t.integer "code", null: false
   end
 
   create_table "staff_administrative_functions", force: :cascade do |t|
@@ -171,6 +193,22 @@ ActiveRecord::Schema.define(version: 2018_05_07_131709) do
     t.integer "code", null: false
   end
 
+  create_table "students", force: :cascade do |t|
+    t.string "student_number", null: false
+    t.bigint "user_id"
+    t.bigint "unit_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["unit_id"], name: "index_students_on_unit_id"
+    t.index ["user_id"], name: "index_students_on_user_id"
+  end
+
+  create_table "titles", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "code", null: false
+    t.string "branch", null: false
+  end
+
   create_table "unit_calendar_events", force: :cascade do |t|
     t.bigint "academic_calendar_id"
     t.bigint "unit_id"
@@ -217,6 +255,10 @@ ActiveRecord::Schema.define(version: 2018_05_07_131709) do
     t.integer "university_type_id"
     t.index ["ancestry"], name: "index_units_on_ancestry"
     t.index ["district_id"], name: "index_units_on_district_id"
+    t.index ["unit_instruction_language_id"], name: "index_units_on_unit_instruction_language_id"
+    t.index ["unit_instruction_type_id"], name: "index_units_on_unit_instruction_type_id"
+    t.index ["unit_status_id"], name: "index_units_on_unit_status_id"
+    t.index ["unit_type_id"], name: "index_units_on_unit_type_id"
   end
 
   create_table "university_types", force: :cascade do |t|
@@ -254,6 +296,7 @@ ActiveRecord::Schema.define(version: 2018_05_07_131709) do
 
   add_foreign_key "academic_calendars", "academic_terms"
   add_foreign_key "academic_calendars", "calendar_types"
+  add_foreign_key "addresses", "districts"
   add_foreign_key "addresses", "users"
   add_foreign_key "calendar_events", "academic_calendars"
   add_foreign_key "calendar_events", "calendar_titles"
@@ -261,8 +304,15 @@ ActiveRecord::Schema.define(version: 2018_05_07_131709) do
   add_foreign_key "calendar_title_types", "calendar_types", column: "type_id"
   add_foreign_key "cities", "regions"
   add_foreign_key "districts", "cities"
+  add_foreign_key "duties", "employees"
+  add_foreign_key "duties", "units"
+  add_foreign_key "employees", "titles"
+  add_foreign_key "employees", "users"
+  add_foreign_key "identities", "students"
   add_foreign_key "identities", "users"
   add_foreign_key "regions", "countries"
+  add_foreign_key "students", "units"
+  add_foreign_key "students", "users"
   add_foreign_key "unit_calendar_events", "academic_calendars"
   add_foreign_key "unit_calendar_events", "calendar_titles"
   add_foreign_key "unit_calendar_events", "units"

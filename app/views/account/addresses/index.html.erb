@@ -1,0 +1,40 @@
+<div class='card'>
+  <br><h4 class='card-heading text-center'>Adreslerim</h4>
+
+  <table class='table'>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Açık Adres</th>
+        <th>İşlemler</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @addresses.each do |address| %>
+        <tr>
+          <td>
+            <span class="badge badge-primary">
+              <%= fa_icon('gavel', text: 'İkamet Adresi') if address.formal? %>
+              <%= fa_icon('home', text: 'Ev Adresi') if address.home? %>
+              <%= fa_icon('building', text: 'İş Adresi') if address.work? %>
+              <%= fa_icon('address-book', text: 'Diğer Adres') if address.other? %>
+            </span>
+          </td>
+          <td><%= address.full_address %></td>
+          <td>
+            <% if address.formal? %>
+              <%= link_to "MERNIS'ten Güncelle", mernis_address_path(address), class: 'btn btn-secondary btn-sm' %>
+            <% else %>
+              <%= link_to('Düzenle', edit_address_path(address), class: 'btn btn-secondary btn-sm') %>
+              <%= link_to('Sil', address, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm') %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <div class='card-footer'>
+    <%= link_to 'Yeni Adres Ekle', new_address_path, class: 'btn btn-success' %>
+  </div>
+</div>

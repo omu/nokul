@@ -2,7 +2,6 @@
 
 module Calendar
   class AcademicTermsController < ApplicationController
-    before_action :authenticate_user!
     before_action :set_academic_term, only: %i[edit update destroy]
 
     def index
@@ -17,18 +16,22 @@ module Calendar
 
     def create
       @academic_term = AcademicTerm.new(academic_term_params)
-      @academic_term.save ? redirect_to(action: :index, notice: t('.success')) : render(:new)
+      @academic_term.save ? redirect_with('success') : render(:new)
     end
 
     def update
-      @academic_term.update(academic_term_params) ? redirect_to(action: :index, notice: t('.success')) : render(:edit)
+      @academic_term.update(academic_term_params) ? redirect_with('success') : render(:edit)
     end
 
     def destroy
-      redirect_to(action: :index, notice: t('.success')) if @academic_term.destroy
+      @academic_term.destroy ? redirect_with('success') : redirect_with('warning')
     end
 
     private
+
+    def redirect_with(message)
+      redirect_to(academic_terms_path, notice: t(".#{message}"))
+    end
 
     def set_academic_term
       @academic_term = AcademicTerm.find(params[:id])

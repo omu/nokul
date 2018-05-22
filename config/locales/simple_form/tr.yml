@@ -10,6 +10,9 @@ tr:
       # html: '<abbr title="required">*</abbr>'
     error_notification:
       default_message: "Lütfen aşağıdaki sorunları gözden geçirin:"
+    hints:
+      address:
+        full_address: Mahalle, cadde, sokak, apartman adı ve kapı numarası
     labels:
       defaults:
         description: 'Açıklama'
@@ -34,3 +37,18 @@ tr:
         calendar_title_types:
           title: 'Başlık'
           status: 'Durum'
+      address:
+        name: Adres türü
+        phone_number: Telefon numarası
+        full_address: Açık Adres
+        district: İlçe
+      identity:
+        first_name: Ad
+        last_name: Soyad
+        mothers_name: Anne Adı
+        fathers_name: Baba Adı
+        gender: Cinsiyet
+        marital_status: Medeni Hal
+        place_of_birth: Doğum Yeri
+        date_of_birth: Doğum Tarihi
+        registered_to: Nüfusa Kayıtlı Olduğu Yer

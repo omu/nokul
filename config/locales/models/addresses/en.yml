@@ -1,0 +1,10 @@
+en:
+  account:
+    addresses:
+      edit:
+        warning: You can not edit your formal address!
+      create:
+        success: Address successfully created!
+      update_from_mernis:
+        wait: You recently created or updated your address. You can update your address once every week.
+        will_update: We got your address update request. In a couple of seconds/minutes you will be able to see your new address.

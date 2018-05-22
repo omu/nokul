@@ -96,18 +96,18 @@ sixteen:
 
 seventeen:
   academic_calendar: lisans_calendar_fall_2017_2018
-  calendar_title: twenty-one
+  calendar_title: twenty_one
   start_date: 2018-01-25 00:00:00
   end_date: 2018-01-26 23:59:59
 
 eighteen:
   academic_calendar: lisans_calendar_fall_2017_2018
-  calendar_title: twenty-two
+  calendar_title: twenty_two
   start_date: 2018-01-29 00:00:00
   end_date: 2018-01-30 23:59:59
 
 nineteen:
   academic_calendar: lisans_calendar_fall_2017_2018
-  calendar_title: twenty-three
+  calendar_title: twenty_three
   start_date: 2018-02-02 23:59:59
   end_date:
