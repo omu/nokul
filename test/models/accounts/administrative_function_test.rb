@@ -3,7 +3,7 @@
 require 'test_helper'
 
 class AdministrativeFunctionTest < ActiveSupport::TestCase
-  relations
+  # relations
   %i[
     positions
     duties

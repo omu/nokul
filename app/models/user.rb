@@ -9,8 +9,10 @@ class User < ApplicationRecord
   has_many :students, dependent: :destroy
   has_many :identities, dependent: :destroy
   has_many :addresses, dependent: :destroy
-  has_many :duties, through: :employee
-  has_many :units, through: :employee
+  has_many :duties, through: :employees
+  has_many :units, through: :employees
+  has_many :positions, through: :duties
+  has_many :administrative_functions, through: :duties
 
   # validations
   validates :email, presence: true, uniqueness: true

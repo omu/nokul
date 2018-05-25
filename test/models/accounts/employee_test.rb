@@ -9,6 +9,8 @@ class EmployeeTest < ActiveSupport::TestCase
     title
     duties
     units
+    positions
+    administrative_functions
   ].each do |property|
     test "an employee can communicate with #{property}" do
       assert employees(:serhat).send(property)

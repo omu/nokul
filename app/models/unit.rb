@@ -14,6 +14,8 @@ class Unit < ApplicationRecord
   has_many :duties, dependent: :destroy
   has_many :employees, through: :duties
   has_many :students, dependent: :nullify
+  has_many :positions, through: :duties
+  has_many :administrative_functions, through: :duties
 
   # validations
   validates :type, presence: true
@@ -38,7 +40,7 @@ class Unit < ApplicationRecord
     art_discipline: 8,
     interdisciplinary_discipline: 9,
     science_discipline: 10,
-    interdisciplinary_master_program: 10,
+    interdisciplinary_master_program: 11,
     interdisciplinary_doctoral_program: 12,
     proficiency_in_art_program: 13,
     undergraduate_program: 14,
