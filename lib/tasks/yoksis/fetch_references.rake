@@ -13,7 +13,7 @@ namespace :yoksis do
       get_ogrenim_turu: 'UnitInstructionType',
       get_aktiflik_durumu: 'UnitStatus',
       get_universite_turu: 'UniversityType',
-      get_personel_gorev: 'StaffAdministrativeFunction',
+      get_personel_gorev: 'AdministrativeFunction',
       get_ogrenci_engel_turu: 'StudentDisabilityType',
       get_ogrenci_ayrilma_nedeni: 'StudentDropOutType',
       get_ogrenci_doykm: 'StudentEducationLevel',
