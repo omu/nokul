@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_19_215220) do
+ActiveRecord::Schema.define(version: 2018_05_25_173627) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,11 @@ ActiveRecord::Schema.define(version: 2018_05_19_215220) do
     t.datetime "updated_at", null: false
     t.index ["district_id"], name: "index_addresses_on_district_id"
     t.index ["user_id"], name: "index_addresses_on_user_id"
+  end
+
+  create_table "administrative_functions", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "code", null: false
   end
 
   create_table "calendar_events", force: :cascade do |t|
@@ -110,6 +115,7 @@ ActiveRecord::Schema.define(version: 2018_05_19_215220) do
   end
 
   create_table "employees", force: :cascade do |t|
+    t.boolean "status", default: true, null: false
     t.bigint "title_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
@@ -136,16 +142,20 @@ ActiveRecord::Schema.define(version: 2018_05_19_215220) do
     t.index ["user_id"], name: "index_identities_on_user_id"
   end
 
+  create_table "positions", force: :cascade do |t|
+    t.bigint "duty_id"
+    t.bigint "administrative_function_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["administrative_function_id"], name: "index_positions_on_administrative_function_id"
+    t.index ["duty_id"], name: "index_positions_on_duty_id"
+  end
+
   create_table "regions", force: :cascade do |t|
     t.string "name", null: false
     t.string "nuts_code", null: false
     t.bigint "country_id"
     t.index ["country_id"], name: "index_regions_on_country_id"
-  end
-
-  create_table "staff_administrative_functions", force: :cascade do |t|
-    t.string "name", null: false
-    t.integer "code", null: false
   end
 
   create_table "student_disability_types", force: :cascade do |t|
@@ -249,7 +259,6 @@ ActiveRecord::Schema.define(version: 2018_05_19_215220) do
     t.datetime "updated_at", null: false
     t.string "ancestry"
     t.integer "unit_status_id"
-    t.integer "unit_type_id"
     t.integer "unit_instruction_language_id"
     t.integer "unit_instruction_type_id"
     t.integer "university_type_id"
@@ -258,7 +267,6 @@ ActiveRecord::Schema.define(version: 2018_05_19_215220) do
     t.index ["unit_instruction_language_id"], name: "index_units_on_unit_instruction_language_id"
     t.index ["unit_instruction_type_id"], name: "index_units_on_unit_instruction_type_id"
     t.index ["unit_status_id"], name: "index_units_on_unit_status_id"
-    t.index ["unit_type_id"], name: "index_units_on_unit_type_id"
   end
 
   create_table "university_types", force: :cascade do |t|
@@ -310,6 +318,8 @@ ActiveRecord::Schema.define(version: 2018_05_19_215220) do
   add_foreign_key "employees", "users"
   add_foreign_key "identities", "students"
   add_foreign_key "identities", "users"
+  add_foreign_key "positions", "administrative_functions"
+  add_foreign_key "positions", "duties"
   add_foreign_key "regions", "countries"
   add_foreign_key "students", "units"
   add_foreign_key "students", "users"

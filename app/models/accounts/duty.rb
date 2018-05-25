@@ -4,6 +4,8 @@ class Duty < ApplicationRecord
   # relations
   belongs_to :employee
   belongs_to :unit
+  has_many :positions
+  has_many :administrative_functions, through: :positions
 
   # validations
   validates :temporary, presence: true

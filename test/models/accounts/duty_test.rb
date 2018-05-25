@@ -7,6 +7,8 @@ class DutyTest < ActiveSupport::TestCase
   %i[
     employee
     unit
+    positions
+    administrative_functions
   ].each do |property|
     test "a duty can communicate with #{property}" do
       assert duties(:baum).send(property)

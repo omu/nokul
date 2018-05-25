@@ -9,6 +9,8 @@ class UserTest < ActiveSupport::TestCase
     students
     identities
     addresses
+    positions
+    administrative_functions
   ].each do |property|
     test "a user can communicate with #{property}" do
       assert users(:serhat).send(property)
