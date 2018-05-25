@@ -10,7 +10,5 @@ class AdministrativeFunction < ApplicationRecord
   validates :code, presence: true, uniqueness: true, numericality: { only_integer: true }
 
   # callbacks
-  after_commit do
-    self.name = name.capitalize_all
-  end
+  before_save { self.name = name.capitalize_all }
 end

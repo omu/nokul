@@ -4,8 +4,6 @@ module ReferenceCallbacks
   extend ActiveSupport::Concern
 
   included do
-    after_commit do
-      self.name = name.capitalize_all
-    end
+    before_save { self.name = name.capitalize_all }
   end
 end

@@ -16,7 +16,7 @@ class Country < ApplicationRecord
   validates :code, presence: true, uniqueness: true
 
   # callbacks
-  after_commit do
+  before_save do
     self.name = name.capitalize_all
     self.iso = iso.upcase_tr
   end

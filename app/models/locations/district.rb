@@ -12,7 +12,7 @@ class District < ApplicationRecord
   validates :yoksis_id, numericality: { only_integer: true }, allow_blank: true
 
   # callbacks
-  after_commit do
+  before_save do
     self.name = name.capitalize_all
   end
 end
