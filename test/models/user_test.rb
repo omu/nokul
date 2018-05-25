@@ -5,7 +5,7 @@ require 'test_helper'
 class UserTest < ActiveSupport::TestCase
   # relations
   %i[
-    employee
+    employees
     students
     identities
     addresses
