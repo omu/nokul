@@ -2,7 +2,7 @@
 
 class AdministrativeFunction < ApplicationRecord
   # relations
-  has_many :positions
+  has_many :positions, dependent: :destroy
   has_many :duties, through: :positions
 
   # validations
