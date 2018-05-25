@@ -243,7 +243,7 @@ ActiveRecord::Schema.define(version: 2018_05_19_215220) do
     t.integer "foet_code"
     t.date "founded_at"
     t.integer "duration"
-    t.string "type", null: false, comment: "STI field"
+    t.integer "type", null: false
     t.bigint "district_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -1,21 +1,21 @@
 en:
   units:
     # Do not change this translations since they are matching with YOKSIS data!
-    university: "University"
-    academy: "Academy"
-    art_discipline: "Art Discipline"
-    department: "Department"
-    discipline: "Discipline"
-    faculty: "Faculty"
-    institute: "Institute"
-    interdisciplinary_discipline: "Interdisciplinary Discipline"
-    rectorship: "Rectorship"
-    research_center: "Research Center"
-    science_discipline: "Science Discipline"
-    vocational_school: "Vocational School"
-    doctoral_program: "Doctoral Program"
-    interdisciplinary_doctoral_program: "Interdisciplinary Doctoral Program"
-    interdisciplinary_master_program: "Interdisciplinary Master Program"
-    master_program: "Master Program"
-    proficiency_in_art_program: "Proficiency In Art Program"
-    undergraduate_program: "Undergraduate Program"
+    university: 'University'
+    academy: 'Academy'
+    art_discipline: 'Art Discipline'
+    department: 'Department'
+    discipline: 'Discipline'
+    faculty: 'Faculty'
+    institute: 'Institute'
+    interdisciplinary_discipline: 'Interdisciplinary Discipline'
+    rectorship: 'Rectorship'
+    research_center: 'Research Center'
+    science_discipline: 'Science Discipline'
+    vocational_school: 'Vocational School'
+    doctoral_program: 'Doctoral Program'
+    interdisciplinary_doctoral_program: 'Interdisciplinary Doctoral Program'
+    interdisciplinary_master_program: 'Interdisciplinary Master Program'
+    master_program: 'Master Program'
+    proficiency_in_art_program: 'Proficiency In Art Program'
+    undergraduate_program: 'Undergraduate Program'
