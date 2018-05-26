@@ -13,6 +13,7 @@ class Identity < ApplicationRecord
   validates :place_of_birth, presence: true
   validates :date_of_birth, presence: true
   validates :name, presence: true, uniqueness: { scope: %i[user student] }
+  validates_with IdentityValidator
 
   # enums
   enum name: { formal: 1, informal: 2 }
