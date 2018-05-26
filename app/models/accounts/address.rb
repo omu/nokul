@@ -6,6 +6,7 @@ class Address < ApplicationRecord
   belongs_to :district
 
   # validations
+  validates :name, presence: true
   validates :full_address, presence: true
   validates_with AddressValidator
 

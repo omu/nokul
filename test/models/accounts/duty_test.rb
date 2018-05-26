@@ -19,8 +19,6 @@ class DutyTest < ActiveSupport::TestCase
   %i[
     temporary
     start_date
-    employee
-    unit
   ].each do |property|
     test "presence validations for #{property} of a duty" do
       duties(:baum).send("#{property}=", nil)

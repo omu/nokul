@@ -19,8 +19,6 @@ class EmployeeTest < ActiveSupport::TestCase
 
   # validations: presence
   %i[
-    title
-    user
     active
   ].each do |property|
     test "presence validations for #{property} of an employee" do

@@ -17,21 +17,12 @@ class AddressTest < ActiveSupport::TestCase
   %i[
     name
     full_address
-    district
-    user
   ].each do |property|
-    test "presence validations for #{property} of a user" do
-      addresses(:formal).send("#{property}=", nil)
-      assert_not addresses(:formal).valid?
-      assert_not_empty addresses(:formal).errors[property]
+    test "presence validations for #{property} of an address user" do
+      addresses(:home).send("#{property}=", nil)
+      assert_not addresses(:home).valid?
+      assert_not_empty addresses(:home).errors[property]
     end
-  end
-
-  # validations: uniqueness
-  test 'users can not save duplicate addresses' do
-    fake = addresses(:formal).dup
-    assert_not fake.valid?
-    assert_not_empty fake.errors[:name]
   end
 
   # enumerations
@@ -42,8 +33,7 @@ class AddressTest < ActiveSupport::TestCase
 
   # callbacks
   test 'callbacks must titlecase the full_address of an address' do
-    fake = addresses(:formal).dup
-    fake.update!(full_address: 'ABC SOKAK', name: 'other')
-    assert_equal fake.full_address, 'Abc Sokak'
+    addresses(:formal).update!(full_address: 'ABC SOKAK', name: 'other')
+    assert_equal addresses(:formal).full_address, 'Abc Sokak'
   end
 end
