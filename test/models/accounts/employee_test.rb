@@ -21,7 +21,7 @@ class EmployeeTest < ActiveSupport::TestCase
   %i[
     title
     user
-    status
+    active
   ].each do |property|
     test "presence validations for #{property} of an employee" do
       employees(:serhat).send("#{property}=", nil)

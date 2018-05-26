@@ -115,7 +115,7 @@ ActiveRecord::Schema.define(version: 2018_05_25_173627) do
   end
 
   create_table "employees", force: :cascade do |t|
-    t.boolean "status", default: true, null: false
+    t.boolean "active", default: true, null: false
     t.bigint "title_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false

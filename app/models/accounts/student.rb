@@ -7,6 +7,7 @@ class Student < ApplicationRecord
   has_one :identity, dependent: :destroy
 
   # validations
+  validates :unit_id, uniqueness: { scope: %i[user] }
   validates :student_number, presence: true, uniqueness: true
 
   # background jobs
