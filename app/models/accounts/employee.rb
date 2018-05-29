@@ -10,8 +10,7 @@ class Employee < ApplicationRecord
   has_many :administrative_functions, through: :duties
 
   # validations
-  validates :title_id, uniqueness: { scope: %i[user] }
-  validates :active, presence: true
+  validates :title_id, uniqueness: { scope: %i[user active] }
   validates_with EmployeeValidator
 
   # delegations

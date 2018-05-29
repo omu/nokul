@@ -13,32 +13,21 @@ class EmployeeTest < ActiveSupport::TestCase
     administrative_functions
   ].each do |property|
     test "an employee can communicate with #{property}" do
-      assert employees(:serhat).send(property)
-    end
-  end
-
-  # validations: presence
-  %i[
-    active
-  ].each do |property|
-    test "presence validations for #{property} of an employee" do
-      employees(:serhat).send("#{property}=", nil)
-      assert_not employees(:serhat).valid?
-      assert_not_empty employees(:serhat).errors[property]
+      assert employees(:serhat_active).send(property)
     end
   end
 
   # validations: uniqueness
   test 'an employee can not have duplicate titles' do
-    fake = employees(:serhat).dup
+    fake = employees(:serhat_active).dup
     assert_not fake.valid?
     assert_not_empty fake.errors[:title_id]
   end
 
   # delegations
   test 'an employee can reach addresses and identities over user' do
-    assert employees(:serhat).addresses
-    assert employees(:serhat).identities
+    assert employees(:serhat_active).addresses
+    assert employees(:serhat_active).identities
   end
 
   # scopes
@@ -49,8 +38,13 @@ class EmployeeTest < ActiveSupport::TestCase
 
   # employee validator
   test 'a user can only have one active employees' do
-    fake = employees(:serhat).dup
+    fake = employees(:serhat_active).dup
     assert_not fake.valid?
     assert_not_empty fake.errors[:base]
+  end
+
+  # scopes
+  test 'active scope returns active employees of user' do
+    assert users(:serhat).employees.active.include?([employees(:serhat_active)])
   end
 end
