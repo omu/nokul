@@ -46,4 +46,21 @@ class IdentityTest < ActiveSupport::TestCase
     fake.save
     assert_not_empty fake.errors[:base]
   end
+
+  # callbacks
+  test 'callbacks must titlecase first_name, mothers_name, fathers_name and place_of_birth of an identity' do
+    identity = identities(:serhat_formal)
+    identity.update(
+      first_name: 'ışık',
+      last_name: 'ılık',
+      mothers_name: 'süt',
+      fathers_name: 'iç',
+      place_of_birth: 'ıişüğ'
+    )
+    assert_equal identity.first_name, 'Işık'
+    assert_equal identity.last_name, 'ILIK'
+    assert_equal identity.mothers_name, 'Süt'
+    assert_equal identity.fathers_name, 'İç'
+    assert_equal identity.place_of_birth, 'Iişüğ'
+  end
 end
