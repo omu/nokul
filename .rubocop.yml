@@ -5,6 +5,8 @@ Style/AsciiComments:
   Enabled: false
 Metrics/LineLength:
   Max: 120
+  Exclude:
+    - app/validators/duty_validator.rb
 Documentation:
   Enabled: false
 
@@ -23,7 +25,7 @@ AllCops:
     - config/routes.rb
 Metrics/BlockLength:
   Exclude:
-    - "lib/tasks/**/*.rake"
+    - lib/tasks/**/*.rake
 
 # Put your WIP file specific configuration below this line, not under AllCops!
 Metrics/AbcSize:

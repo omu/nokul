@@ -2,7 +2,6 @@
 
 class EmployeeValidator < ActiveModel::Validator
   def validate(record)
-    # TODO: i18n
-    record.errors[:base] << 'Bu kullanıcının aktif bir personel kaydı var!' if record.user.employees.active.present?
+    record.errors[:base] << I18n.t('employee.active') if record.user.employees.active.present? && record.active?
   end
 end

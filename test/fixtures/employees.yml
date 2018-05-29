@@ -1,4 +1,8 @@
-serhat:
+serhat_active:
   user: serhat
   title: research_assistant
   active: true
+serhat_passive:
+  user: serhat
+  title: associate_professor
+  active: false
