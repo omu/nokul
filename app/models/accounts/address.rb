@@ -8,7 +8,7 @@ class Address < ApplicationRecord
   # validations
   validates :name, presence: true
   validates :full_address, presence: true
-  validates_with AddressValidator
+  validates_with AddressValidator, on: :create
 
   # enums
   enum name: { formal: 1, home: 2, work: 3, other: 4 }
