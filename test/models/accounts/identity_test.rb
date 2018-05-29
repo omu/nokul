@@ -29,13 +29,6 @@ class IdentityTest < ActiveSupport::TestCase
     end
   end
 
-  # validations: uniqueness
-  test 'users can not save duplicate identities' do
-    fake = identities(:serhat_formal).dup
-    assert_not fake.valid?
-    assert_not_empty fake.errors[:name]
-  end
-
   # enumerations
   %i[
     formal?
@@ -50,7 +43,7 @@ class IdentityTest < ActiveSupport::TestCase
   # identity validator
   test 'a user can only have one legal identity' do
     fake = identities(:serhat_formal).dup
-    assert_not fake.valid?
+    fake.save
     assert_not_empty fake.errors[:base]
   end
 end

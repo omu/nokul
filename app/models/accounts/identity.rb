@@ -12,7 +12,7 @@ class Identity < ApplicationRecord
   validates :gender, presence: true
   validates :place_of_birth, presence: true
   validates :date_of_birth, presence: true
-  validates_with IdentityValidator
+  validates_with IdentityValidator, on: :create
 
   # enums
   enum name: { formal: 1, informal: 2 }

@@ -14,7 +14,6 @@ class DistrictTest < ActiveSupport::TestCase
     end
   end
 
-  # validations: presence
   %i[
     name
     city
