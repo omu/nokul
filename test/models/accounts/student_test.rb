@@ -17,23 +17,23 @@ class StudentTest < ActiveSupport::TestCase
   end
 
   # validations: presence
-  %i[
-    student_number
-    user
-    unit
-  ].each do |property|
-    test "presence validations for #{property} of a student" do
-      students(:serhat).send("#{property}=", nil)
-      assert_not students(:serhat).valid?
-      assert_not_empty students(:serhat).errors[property]
-    end
+  test 'presence validations for student_number of a student' do
+    students(:serhat).update(student_number: nil)
+    assert_not students(:serhat).valid?
+    assert_not_empty students(:serhat).errors[:student_number]
   end
 
   # validations: uniqueness
-  test 'uniqueness validations for student_number of a student' do
+  test 'a student can not have a duplicate unit and a duplicate student number' do
     fake = students(:serhat).dup
     assert_not fake.valid?
     assert_not_empty fake.errors[:student_number]
+    assert_not_empty fake.errors[:unit_id]
+  end
+
+  # delegations
+  test 'a student can communicate with addresses over the user' do
+    assert students(:serhat).addresses
   end
 
   # callback tests

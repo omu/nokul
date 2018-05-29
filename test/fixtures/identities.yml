@@ -1,4 +1,4 @@
-serhat:
+serhat_formal:
   name: formal
   first_name: john
   last_name: doe
@@ -8,6 +8,15 @@ serhat:
   date_of_birth: <%= Time.zone.now - 20.years %>
   user: serhat
   student: serhat
+serhat_informal:
+  name: informal
+  first_name: john
+  last_name: doe
+  gender: male
+  marital_status: married
+  place_of_birth: london
+  date_of_birth: <%= Time.zone.now - 20.years %>
+  user: serhat
 john:
   name: informal
   first_name: jane

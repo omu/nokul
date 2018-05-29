@@ -33,4 +33,11 @@ class DutyTest < ActiveSupport::TestCase
     assert_not fake.valid?
     assert_not_empty fake.errors[:unit_id]
   end
+
+  # duty validator
+  test 'a user can only have one active tenure duty' do
+    fake = duties(:omu).dup
+    assert_not fake.valid?
+    assert_not_empty fake.errors[:base]
+  end
 end

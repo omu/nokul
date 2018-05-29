@@ -27,4 +27,30 @@ class EmployeeTest < ActiveSupport::TestCase
       assert_not_empty employees(:serhat).errors[property]
     end
   end
+
+  # validations: uniqueness
+  test 'an employee can not have duplicate titles' do
+    fake = employees(:serhat).dup
+    assert_not fake.valid?
+    assert_not_empty fake.errors[:title_id]
+  end
+
+  # delegations
+  test 'an employee can reach addresses and identities over user' do
+    assert employees(:serhat).addresses
+    assert employees(:serhat).identities
+  end
+
+  # scopes
+  test 'an employee have defined scopes for active and passive situation' do
+    assert users(:serhat).employees.active
+    assert users(:serhat).employees.passive
+  end
+
+  # employee validator
+  test 'a user can only have one active employees' do
+    fake = employees(:serhat).dup
+    assert_not fake.valid?
+    assert_not_empty fake.errors[:base]
+  end
 end
