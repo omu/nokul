@@ -31,6 +31,11 @@ class AddressTest < ActiveSupport::TestCase
     assert addresses(:home).home?
   end
 
+  # delegations
+  test 'address delegates id_number for activejob objects' do
+    assert addresses(:formal).id_number
+  end
+
   # callbacks
   test 'callbacks must titlecase the full_address of an address' do
     addresses(:formal).update!(full_address: 'ABC SOKAK', name: 'other')

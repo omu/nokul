@@ -16,6 +16,7 @@ class Employee < ApplicationRecord
 
   # delegations
   delegate :identities, to: :user
+  delegate :addresses, to: :user
 
   # scopes
   scope :active, -> { where(active: true) }

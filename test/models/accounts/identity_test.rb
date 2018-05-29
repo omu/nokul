@@ -9,7 +9,7 @@ class IdentityTest < ActiveSupport::TestCase
     student
   ].each do |property|
     test "an identity can communicate with #{property}" do
-      assert identities(:serhat).send(property)
+      assert identities(:serhat_formal).send(property)
     end
   end
 
@@ -23,15 +23,15 @@ class IdentityTest < ActiveSupport::TestCase
     date_of_birth
   ].each do |property|
     test "presence validations for #{property} of a user" do
-      identities(:serhat).send("#{property}=", nil)
-      assert_not identities(:serhat).valid?
-      assert_not_empty identities(:serhat).errors[property]
+      identities(:serhat_formal).send("#{property}=", nil)
+      assert_not identities(:serhat_formal).valid?
+      assert_not_empty identities(:serhat_formal).errors[property]
     end
   end
 
   # validations: uniqueness
   test 'users can not save duplicate identities' do
-    fake = identities(:serhat).dup
+    fake = identities(:serhat_formal).dup
     assert_not fake.valid?
     assert_not_empty fake.errors[:name]
   end
@@ -43,7 +43,14 @@ class IdentityTest < ActiveSupport::TestCase
     married?
   ].each do |property|
     test "identities can respond to #{property} enum" do
-      assert identities(:serhat).send(property)
+      assert identities(:serhat_formal).send(property)
     end
+  end
+
+  # identity validator
+  test 'a user can only have one legal identity' do
+    fake = identities(:serhat_formal).dup
+    assert_not fake.valid?
+    assert_not_empty fake.errors[:base]
   end
 end
