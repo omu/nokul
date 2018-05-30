@@ -54,4 +54,11 @@ class UnitTest < ActiveSupport::TestCase
     unit.update!(yoksis_id: 1234, name: 'wonderunit department')
     assert_equal unit.name, 'Wonderunit Department'
   end
+
+  # search
+  test 'unit is a searchable model' do
+    assert_not_empty Unit.search('Ondokuz')
+    assert Unit.search('Ondokuz').include?(units(:omu))
+    assert_not Unit.search('Ondokuz').include?(units(:uzem))
+  end
 end

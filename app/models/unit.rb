@@ -7,7 +7,7 @@ class Unit < ApplicationRecord
   # search
   include PgSearch
   pg_search_scope(
-    :autocomplete,
+    :search,
     against: %i[name yoksis_id],
     associated_against: { district: :name },
     using: { tsearch: { prefix: true } }
