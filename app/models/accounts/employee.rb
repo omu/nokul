@@ -11,6 +11,7 @@ class Employee < ApplicationRecord
 
   # validations
   validates :title_id, uniqueness: { scope: %i[user active] }
+  validates :active, inclusion: { in: [true, false] }
   validates_with EmployeeValidator
 
   # delegations

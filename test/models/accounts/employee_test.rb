@@ -17,6 +17,17 @@ class EmployeeTest < ActiveSupport::TestCase
     end
   end
 
+  # validations: presence
+  %i[
+    active
+  ].each do |property|
+    test "presence validations for #{property} of an employee" do
+      employees(:serhat_active).send("#{property}=", nil)
+      assert_not employees(:serhat_active).valid?
+      assert_not_empty employees(:serhat_active).errors[property]
+    end
+  end
+
   # validations: uniqueness
   test 'an employee can not have duplicate titles' do
     fake = employees(:serhat_active).dup

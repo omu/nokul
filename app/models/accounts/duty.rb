@@ -8,7 +8,7 @@ class Duty < ApplicationRecord
   has_many :administrative_functions, through: :positions
 
   # validations
-  validates :temporary, presence: true
+  validates :temporary, inclusion: { in: [true, false] }
   validates :start_date, presence: true
   validates :unit_id, uniqueness: { scope: %i[employee start_date] }
   validates_with DutyValidator
