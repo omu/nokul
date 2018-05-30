@@ -12,14 +12,6 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
-  # Enable auto-load for these files
-  Rails.application.reloader.to_prepare do
-    Dir[
-      Rails.root.join('app', 'models', 'units', '*.rb'),
-      Rails.root.join('app', 'services', '**', '*.rb'),
-    ].each { |file| require_dependency file }
-  end
-
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
