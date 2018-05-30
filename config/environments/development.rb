@@ -11,14 +11,6 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
-  # Enable auto-load only for these files
-  Rails.application.reloader.to_prepare do
-    Dir[
-      Rails.root.join('app', 'models', 'units', '*.rb'),
-      Rails.root.join('app', 'services', '**', '*.rb'),
-    ].each { |file| require_dependency file }
-  end
-
   # Show full error reports.
   config.consider_all_requests_local = true
 
