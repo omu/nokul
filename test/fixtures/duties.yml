@@ -1,15 +1,17 @@
 omu:
-  employee: serhat
+  employee: serhat_active
   unit: omu
   temporary: false
   start_date: 01.01.2015
 uzem:
-  employee: serhat
+  employee: serhat_active
   unit: uzem
   temporary: true
   start_date: 01.01.2009
+  end_date: <%= Time.zone.now - 2.years %>
 baum:
-  employee: serhat
+  employee: serhat_active
   unit: baum
   temporary: true
   start_date: 01.01.2017
+  end_date: <%= Time.zone.now + 5.years %>

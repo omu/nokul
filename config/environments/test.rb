@@ -14,13 +14,6 @@ Rails.application.configure do
   # preloads Rails for running tests, you may have to set it to true.
   config.eager_load = true
 
-  # Enable auto-load only for these files
-  Rails.application.reloader.to_prepare do
-    Dir[
-      Rails.root.join('lib', 'extensions', '*.rb')
-    ].each { |file| require_dependency file }
-  end
-
   # Configure public file server for tests with Cache-Control for performance.
   config.public_file_server.enabled = true
   config.public_file_server.headers = {
