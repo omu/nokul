@@ -29,6 +29,13 @@ Metrics/BlockLength:
   Exclude:
     - lib/tasks/**/*.rake
 
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - development
+    - test
+    - beta
+
 # Put your WIP file specific configuration below this line, not under AllCops!
 Metrics/AbcSize:
   Exclude:
