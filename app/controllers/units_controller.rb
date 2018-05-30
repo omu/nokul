@@ -4,7 +4,11 @@ class UnitsController < ApplicationController
   before_action :set_unit, only: %i[edit update destroy show]
 
   def index
-    @units = Unit.all
+    @units = if params[:term]
+      Unit.autocomplete(params[:term])
+    else
+      Unit.all
+    end
   end
 
   def show
