@@ -5,14 +5,13 @@ class UnitsController < ApplicationController
 
   def index
     @units = if params[:term]
-      Unit.autocomplete(params[:term])
-    else
-      Unit.all
-    end
+               Unit.autocomplete(params[:term])
+             else
+               Unit.all
+             end
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @unit = Unit.new
