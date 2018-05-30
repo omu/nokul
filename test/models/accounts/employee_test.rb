@@ -41,10 +41,13 @@ class EmployeeTest < ActiveSupport::TestCase
     fake = employees(:serhat_active).dup
     assert_not fake.valid?
     assert_not_empty fake.errors[:base]
+    assert fake.errors[:base].include?(I18n.t('employee.active'))
   end
 
   # scopes
   test 'active scope returns active employees of user' do
-    assert users(:serhat).employees.active.include?([employees(:serhat_active)])
+    active = users(:serhat).employees.active
+    assert active.to_a.include?(employees(:serhat_active))
+    assert_not active.to_a.include?(employees(:serhat_passive))
   end
 end

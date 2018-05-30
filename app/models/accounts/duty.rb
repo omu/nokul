@@ -10,11 +10,16 @@ class Duty < ApplicationRecord
   # validations
   validates :temporary, presence: true
   validates :start_date, presence: true
-  validates :unit_id, uniqueness: { scope: %i[employee] }
+  validates :unit_id, uniqueness: { scope: %i[employee start_date] }
   validates_with DutyValidator
 
   # scopes
   scope :temporary, -> { where(temporary: true) }
   scope :tenure, -> { where(temporary: false) }
-  scope :active, -> { where('end_date < ? OR end_date IS NULL', Time.zone.today) }
+  scope :active, -> { where('end_date > ? OR end_date IS NULL', Time.zone.today) }
+
+  # custom methods
+  def active?
+    end_date.nil? || end_date.future?
+  end
 end

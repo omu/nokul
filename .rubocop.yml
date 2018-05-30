@@ -7,6 +7,8 @@ Metrics/LineLength:
   Max: 120
   Exclude:
     - app/validators/duty_validator.rb
+    - app/validators/address_validator.rb
+    - app/validators/identity_validator.rb
 Documentation:
   Enabled: false
 

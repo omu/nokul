@@ -40,13 +40,6 @@ class IdentityTest < ActiveSupport::TestCase
     end
   end
 
-  # identity validator
-  test 'a user can only have one legal identity' do
-    fake = identities(:serhat_formal).dup
-    fake.save
-    assert_not_empty fake.errors[:base]
-  end
-
   # callbacks
   test 'callbacks must titlecase first_name, mothers_name, fathers_name and place_of_birth of an identity' do
     identity = identities(:serhat_formal)
@@ -62,5 +55,20 @@ class IdentityTest < ActiveSupport::TestCase
     assert_equal identity.mothers_name, 'Süt'
     assert_equal identity.fathers_name, 'İç'
     assert_equal identity.place_of_birth, 'Iişüğ'
+  end
+
+  # identity validator
+  test 'a user can only have one legal identity' do
+    fake = identities(:serhat_formal).dup
+    assert_not fake.valid?
+    assert_not_empty fake.errors[:base]
+    assert fake.errors[:base].include?(I18n.t('identity.max_legal', limit: 1))
+  end
+
+  test 'a user can have 2 identities in total' do
+    fake = identities(:serhat_informal).dup
+    assert_not fake.valid?
+    assert_not_empty fake.errors[:base]
+    assert fake.errors[:base].include?(I18n.t('identity.max_total', limit: 2))
   end
 end

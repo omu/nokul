@@ -1,12 +1,11 @@
 en:
-  validators:
-    address:
-      max_total: You can have %{limit} addresses maximum.
-      max_legal: You can have %{limit} legal addresses maximum.
-    identity:
-      max_total: You can have %{limit} identities maximum.
-      max_legal: You can have %{limit} legal identities maximum.
-    duty:
-      active_and_tenure: This user already has an active and tenure duty. Edit the existing duty or make it passive in order to create a new one.
-    employee:
-      active: This user already has an active employee. Edit the existing employee or make it passive in order to create a new one.
+  address:
+    max_total: You can have %{limit} addresses maximum.
+    max_legal: You can have %{limit} legal addresses maximum.
+  identity:
+    max_total: You can have %{limit} identities maximum.
+    max_legal: You can have %{limit} legal identities maximum.
+  duty:
+    active_and_tenure: This user already has an active and tenure duty. Edit the existing duty or make it passive in order to create a new one.
+  employee:
+    active: This user already has an active employee. Edit the existing employee or make it passive in order to create a new one.
