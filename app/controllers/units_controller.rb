@@ -5,7 +5,7 @@ class UnitsController < ApplicationController
 
   def index
     @units = if params[:term]
-               Unit.autocomplete(params[:term])
+               Unit.search(params[:term])
              else
                Unit.all
              end
@@ -19,13 +19,13 @@ class UnitsController < ApplicationController
 
   def create
     @unit = Unit.new(unit_params)
-    @unit.save ? redirect_to(@unit, notice: t(".success")) : render(:new)
+    @unit.save ? redirect_to(@unit, notice: t('.success')) : render(:new)
   end
 
   def edit; end
 
   def update
-    @unit.update(unit_params) ? redirect_to(@unit, notice: t(".success")) : render(:edit)
+    @unit.update(unit_params) ? redirect_to(@unit, notice: t('.success')) : render(:edit)
   end
 
   def destroy
