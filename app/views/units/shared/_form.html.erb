@@ -1,0 +1,21 @@
+<%= simple_form_for(unit) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name, label: 'Birimin Adı', required: true %>
+    <%= f.input :yoksis_id, label: 'YOKSIS ID', required: true %>
+    <%= f.input :founded_at, label: 'Kuruluş Tarihi' %>
+    <%= f.input :duration, label: 'Öğretim Süresi (Yıl)', collection: 1..8 %>
+    <%= f.association :district, label: 'Buluduğu İlçe', collection: City.order(:name), as: :grouped_select, group_method: :districts, group_label_method: :name %>
+    <%= f.association :unit_status, label: 'Aktiflik Durumu' %>
+    <%= f.association :unit_instruction_language, label: 'Öğretim Dili' %>
+    <%= f.association :unit_instruction_type, label: 'Öğretim Türü', required: false %>
+    <%= f.input :type, label: 'Birim Türü', collection: Unit.types.keys, required: true %>
+    <%= f.input :parent_id, as: :select, collection: Unit.all.order('name ASC'), label: 'Üst Birim' %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: "btn btn-primary", role: "button" %>
+    <%= link_to 'Geri', units_path, class: "btn btn-secondary", role: "button" %>
+  </div>
+<% end %>
