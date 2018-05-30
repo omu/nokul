@@ -1,16 +1,28 @@
-# Common settings!
 Style/AsciiComments:
   Description: 'Use only ascii symbols in comments.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#english-comments'
   Enabled: false
+Documentation:
+  Enabled: false
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - development
+    - test
+    - beta
 Metrics/LineLength:
   Max: 120
   Exclude:
-    - app/validators/duty_validator.rb
-    - app/validators/address_validator.rb
-    - app/validators/identity_validator.rb
-Documentation:
-  Enabled: false
+    - app/validators/duty_validator.rb # Won't fix
+    - app/validators/address_validator.rb # Won't fix
+    - app/validators/identity_validator.rb # Won't fix
+Metrics/AbcSize:
+  Exclude:
+    - app/validators/address_validator.rb # Won't fix
+    - app/validators/identity_validator.rb # Won't fix
+Metrics/BlockLength:
+  Exclude:
+    - lib/tasks/**/*.rake # Won't fix
 
 # Do not exclude files from ALL COPS unless it's really necessary!
 AllCops:
@@ -25,33 +37,5 @@ AllCops:
     - config/environments/production.rb
     - config/environments/test.rb
     - config/routes.rb
-Metrics/BlockLength:
-  Exclude:
-    - lib/tasks/**/*.rake
-
-Rails/UnknownEnv:
-  Environments:
-    - production
-    - development
-    - test
-    - beta
-
-# Put your WIP file specific configuration below this line, not under AllCops!
-Metrics/AbcSize:
-  Exclude:
-    - app/validators/address_validator.rb
-    - app/validators/identity_validator.rb
-    - app/services/kps/omu/adres.rb
-    - app/services/kps/omu/kimlik.rb
-Metrics/MethodLength:
-  Exclude:
-    - app/services/kps/omu/adres.rb
-    - app/services/kps/omu/kimlik.rb
-Metrics/CyclomaticComplexity:
-  Exclude:
-    - app/services/kps/omu/adres.rb
-    - app/services/kps/omu/kimlik.rb
-Metrics/PerceivedComplexity:
-  Exclude:
-    - app/services/kps/omu/adres.rb
-    - app/services/kps/omu/kimlik.rb
+    - app/services/kps/omu/adres.rb # WIP
+    - app/services/kps/omu/kimlik.rb # WIP
