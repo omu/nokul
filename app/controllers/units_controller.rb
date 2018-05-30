@@ -19,24 +19,20 @@ class UnitsController < ApplicationController
 
   def create
     @unit = Unit.new(unit_params)
-    @unit.save ? redirect_with('success') : render(:new)
+    @unit.save ? redirect_to(@unit, notice: t(".success")) : render(:new)
   end
 
   def edit; end
 
   def update
-    @unit.update(unit_params) ? redirect_with('success') : render(:edit)
+    @unit.update(unit_params) ? redirect_to(@unit, notice: t(".success")) : render(:edit)
   end
 
   def destroy
-    @unit.destroy ? redirect_with('success') : redirect_with('warning')
+    @unit.destroy ? redirect_to(units_path, notice: t('success')) : redirect_with('warning')
   end
 
   private
-
-  def redirect_with(message)
-    redirect_to(units_path, notice: t(".#{message}"))
-  end
 
   def set_unit
     @unit = Unit.find(params[:id])

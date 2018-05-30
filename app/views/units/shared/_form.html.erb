@@ -1,4 +1,4 @@
-<%= simple_form_for(@unit, url: url) do |f| %>
+<%= simple_form_for(unit) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
@@ -10,12 +10,12 @@
     <%= f.association :unit_status, label: 'Aktiflik Durumu' %>
     <%= f.association :unit_instruction_language, label: 'Öğretim Dili' %>
     <%= f.association :unit_instruction_type, label: 'Öğretim Türü', required: false %>
-    <%= f.input :type, label: 'Birim Türü', collection: Unit.types, required: true %>
+    <%= f.input :type, label: 'Birim Türü', collection: Unit.types.keys, required: true %>
     <%= f.input :parent_id, as: :select, collection: Unit.all.order('name ASC'), label: 'Üst Birim' %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, 'Birim Oluştur', class: "btn btn-primary", role: "button" %>
+    <%= f.button :submit, class: "btn btn-primary", role: "button" %>
     <%= link_to 'Geri', units_path, class: "btn btn-secondary", role: "button" %>
   </div>
 <% end %>
