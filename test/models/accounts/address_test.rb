@@ -41,4 +41,29 @@ class AddressTest < ActiveSupport::TestCase
     addresses(:formal).update!(full_address: 'ABC SOKAK', name: 'other')
     assert_equal addresses(:formal).full_address, 'Abc Sokak'
   end
+
+  # address_validator
+  test 'a user can only have one formal address' do
+    fake = addresses(:formal).dup
+    assert_not fake.valid?
+    assert_not_empty fake.errors[:base]
+    assert fake.errors[:base].include?(I18n.t('address.max_legal', limit: 1))
+  end
+
+  test 'a user can have 5 addresses in total' do
+    val = 5 - users(:serhat).addresses.count
+    val.times do
+      users(:serhat).addresses.create!(
+        name: :other,
+        phone_number: '123456',
+        full_address: 'foobar',
+        district: districts(:atakum)
+      )
+    end
+
+    fake = addresses(:home).dup
+    assert_not fake.valid?
+    assert_not_empty fake.errors[:base]
+    assert fake.errors[:base].include?(I18n.t('address.max_total', limit: 5))
+  end
 end
