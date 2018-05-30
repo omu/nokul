@@ -1,0 +1,44 @@
+<div class='card'>
+  <br><h4 class='card-heading text-center'>Adreslerim</h4>
+
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Birim Adı</th>
+        <th>YOKSIS ID</th>
+        <th>FOET Kodu</th>
+        <th>Kuruluş Tarihi</th>
+        <th>Öğrenim Süresi</th>
+        <th>Birim Türü</th>
+        <th>Konumu</th>
+        <th>Birim Durumu</th>
+        <th>Öğretim Dili</th>
+        <th>Öğretim Türü</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @units.each do |unit| %>
+        <tr>
+          <td><%= unit.name %></td>
+          <td><%= unit.yoksis_id %></td>
+          <td><%= unit.foet_code %></td>
+          <td><%= unit.founded_at %></td>
+          <td><%= unit.duration %></td>
+          <td><%= t("units.#{unit.type}") %></td>
+          <td><%= unit.district.name %> / <%= unit.district.city.name %></td>
+          <td><%= unit.unit_status.try(:name) %></td>
+          <td><%= unit.unit_instruction_language.try(:name) %></td>
+          <td><%= unit.unit_instruction_type.try(:name) %></td>
+          <td>
+            <%= link_to('Düzenle', edit_unit_path(unit), class: 'btn btn-secondary btn-sm') %>
+            <%= link_to('Sil', unit, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm') %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <div class='card-footer'>
+    <%= render 'units/shared/new_unit' %>
+  </div>
+</div>
