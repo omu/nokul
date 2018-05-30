@@ -12,7 +12,7 @@ class Identity < ApplicationRecord
   validates :gender, presence: true
   validates :place_of_birth, presence: true
   validates :date_of_birth, presence: true
-  validates :name, presence: true, uniqueness: { scope: %i[user student] }
+  validates_with IdentityValidator, on: :create
 
   # enums
   enum name: { formal: 1, informal: 2 }
@@ -20,7 +20,7 @@ class Identity < ApplicationRecord
   enum marital_status: { single: 1, married: 2, divorced: 3, unknown: 4 }
 
   # callbacks
-  after_commit do
+  before_save do
     self.first_name = first_name.capitalize_all
     self.last_name = last_name.upcase_tr
     self.mothers_name = mothers_name.capitalize_all

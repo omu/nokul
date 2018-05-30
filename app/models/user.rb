@@ -5,12 +5,14 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
   # relations
-  has_one :employee, dependent: :destroy
+  has_many :employees, dependent: :destroy
   has_many :students, dependent: :destroy
   has_many :identities, dependent: :destroy
   has_many :addresses, dependent: :destroy
-  has_many :duties, through: :employee
-  has_many :units, through: :employee
+  has_many :duties, through: :employees
+  has_many :units, through: :employees
+  has_many :positions, through: :duties
+  has_many :administrative_functions, through: :duties
 
   # validations
   validates :email, presence: true, uniqueness: true
@@ -31,6 +33,6 @@ class User < ApplicationRecord
 
   # custom methods
   def accounts
-    (students + [employee]).flatten
+    (students + employees).flatten
   end
 end

@@ -5,10 +5,12 @@ require 'test_helper'
 class UserTest < ActiveSupport::TestCase
   # relations
   %i[
-    employee
+    employees
     students
     identities
     addresses
+    positions
+    administrative_functions
   ].each do |property|
     test "a user can communicate with #{property}" do
       assert users(:serhat).send(property)

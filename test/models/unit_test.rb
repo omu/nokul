@@ -3,11 +3,6 @@
 require 'test_helper'
 
 class UnitTest < ActiveSupport::TestCase
-  # fields
-  test 'Unit has a type field for single-table inheritance' do
-    assert Unit.has_attribute?('type')
-  end
-
   # relations
   %i[
     district
@@ -18,6 +13,8 @@ class UnitTest < ActiveSupport::TestCase
     duties
     employees
     students
+    positions
+    administrative_functions
   ].each do |property|
     test "a unit can communicate with #{property}" do
       assert units(:omu).send(property)
@@ -54,14 +51,7 @@ class UnitTest < ActiveSupport::TestCase
   # callbacks
   test 'callbacks must titlecase the name for a unit' do
     unit = units(:omu).dup
-    unit.update(yoksis_id: 1234, name: 'wonderunit department')
+    unit.update!(yoksis_id: 1234, name: 'wonderunit department')
     assert_equal unit.name, 'Wonderunit Department'
-  end
-
-  # custom tests
-  test 'types method can return all models inheriting from the Unit model' do
-    types = Unit.types
-    assert types.is_a?(Array)
-    assert_not types.empty?
   end
 end
