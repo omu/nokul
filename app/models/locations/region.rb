@@ -16,7 +16,7 @@ class Region < ApplicationRecord
   validates :country, presence: true
 
   # callbacks
-  after_commit do
+  before_save do
     self.name = name.capitalize_all
     self.nuts_code = nuts_code.mb_chars.upcase
   end

@@ -6,9 +6,10 @@ namespace :yoksis do
   rescue Errno::ENOENT => e
     puts "File/path not found! #{e}"
   else
+    puts 'It works silently if all OK, otherwise you will receive errors.'
+
     # YOKSIS export doesn't provide unit locations, so the default district set to Atakum for this case
     district = District.find_by(name: 'Atakum')
-    puts 'It works silently if all OK, otherwise you will receive errors.'
 
     file.read.each_line do |unit|
       yoksis_id, name, unit_type, parent_yoksis_id, status, language, instruction_type, founded_at, duration,
@@ -30,31 +31,23 @@ namespace :yoksis do
       }
 
       # matching hash for English-Turkish unit names.
-      unit_types = {}
-      Unit.types.each do |unit_en|
-        tr = I18n.t("units.#{unit_en.underscore}", locale: :tr)
-        unit_types[tr] = unit_en
-      end
+      type = I18n.t('.')[:units].key(unit_type)
 
-      case unit_type
-      when *unit_types.keys
-        unit = Unit.new(
-          name: name.strip,
-          yoksis_id: yoksis_id,
-          founded_at: founded_at ? founded_at.to_date : nil,
-          foet_code: foet_code,
-          duration: duration.to_i,
-          type: unit_types[unit_type.to_s],
-          parent: Unit.find_by(yoksis_id: parent_yoksis_id),
-          district: district,
-          unit_instruction_type: instruction_types[instruction_type.to_s],
-          unit_instruction_language: UnitInstructionLanguage.find_by(name: language),
-          unit_status: statuses[status.to_s]
-        )
-        puts "FAIL: #{unit.id} - #{unit.name} can not be created!" unless unit.save!
-      else
-        puts "We have no idea about this unit: #{unit}. Check your locales for missing translations for the unit."
-      end
+      unit = Unit.new(
+        name: name.strip,
+        yoksis_id: yoksis_id,
+        founded_at: founded_at ? founded_at.to_date : nil,
+        foet_code: foet_code,
+        duration: duration.to_i,
+        type: type,
+        parent: Unit.find_by(yoksis_id: parent_yoksis_id),
+        district: district,
+        unit_instruction_type: instruction_types[instruction_type.to_s],
+        unit_instruction_language: UnitInstructionLanguage.find_by(name: language),
+        unit_status: statuses[status.to_s]
+      )
+
+      puts "FAIL: #{unit.id} - #{unit.name} can not be created!" unless unit.save!
     end
   ensure
     file.close

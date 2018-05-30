@@ -6,8 +6,9 @@ class Address < ApplicationRecord
   belongs_to :district
 
   # validations
-  validates :name, presence: true, uniqueness: { scope: %i[user district] }
+  validates :name, presence: true
   validates :full_address, presence: true
+  validates_with AddressValidator, on: :create
 
   # enums
   enum name: { formal: 1, home: 2, work: 3, other: 4 }
@@ -16,7 +17,5 @@ class Address < ApplicationRecord
   delegate :id_number, to: :user
 
   # callbacks
-  after_commit do
-    self.full_address = full_address.capitalize_all
-  end
+  before_save { self.full_address = full_address.capitalize_all }
 end

@@ -9,28 +9,56 @@ class EmployeeTest < ActiveSupport::TestCase
     title
     duties
     units
+    positions
+    administrative_functions
   ].each do |property|
     test "an employee can communicate with #{property}" do
-      assert employees(:serhat).send(property)
+      assert employees(:serhat_active).send(property)
     end
   end
 
   # validations: presence
   %i[
-    title
-    user
+    active
   ].each do |property|
     test "presence validations for #{property} of an employee" do
-      employees(:serhat).send("#{property}=", nil)
-      assert_not employees(:serhat).valid?
-      assert_not_empty employees(:serhat).errors[property]
+      employees(:serhat_active).send("#{property}=", nil)
+      assert_not employees(:serhat_active).valid?
+      assert_not_empty employees(:serhat_active).errors[property]
     end
   end
 
   # validations: uniqueness
-  test 'a user can only have an employee' do
-    fake = employees(:serhat).dup
+  test 'an employee can not have duplicate titles' do
+    fake = employees(:serhat_active).dup
     assert_not fake.valid?
-    assert_not_empty fake.errors[:user]
+    assert_not_empty fake.errors[:title_id]
+  end
+
+  # delegations
+  test 'an employee can reach addresses and identities over user' do
+    assert employees(:serhat_active).addresses
+    assert employees(:serhat_active).identities
+  end
+
+  # scopes
+  test 'an employee have defined scopes for active and passive situation' do
+    assert users(:serhat).employees.active
+    assert users(:serhat).employees.passive
+  end
+
+  # employee validator
+  test 'a user can only have one active employees' do
+    fake = employees(:serhat_active).dup
+    assert_not fake.valid?
+    assert_not_empty fake.errors[:base]
+    assert fake.errors[:base].include?(I18n.t('employee.active'))
+  end
+
+  # scopes
+  test 'active scope returns active employees of user' do
+    active = users(:serhat).employees.active
+    assert active.to_a.include?(employees(:serhat_active))
+    assert_not active.to_a.include?(employees(:serhat_passive))
   end
 end
