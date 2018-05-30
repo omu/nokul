@@ -5,10 +5,4 @@
 
 require_relative 'config/application'
 
-Rails.application.reloader.to_prepare do
-  Dir[
-    Rails.root.join('app', 'services', '**', '*.rb'),
-  ].each { |file| require_dependency file }
-end
-
 Rails.application.load_tasks
