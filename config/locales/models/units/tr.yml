@@ -19,3 +19,16 @@ tr:
     master_program: 'Yüksek Lisans Programı'
     proficiency_in_art_program: 'Sanatta Yeterlilik Programı'
     undergraduate_program: 'Önlisans/Lisans Programı'
+
+    update:
+      success: Birim başarıyla güncellendi.
+    create:
+      success: Birim başarıyla oluşturuldu.
+    destroy:
+      success: Birim başarıyla silindi!
+      warning: Birim silinemedi!
+  helpers:
+    submit:
+      unit:
+        create: Birim oluştur
+        update: Birimi güncelle
