@@ -6,7 +6,7 @@ module Services
       # client = Services::Yoksis::V4::OgrenciBilgiToplama.new
       class OgrenciBilgiToplama
         def initialize
-          wsdl = if Rails.env.production?
+          wsdl = if Rails.env.production? || Rails.env.beta?
                    'https://servisler.yok.gov.tr/ws/ogrencibilgitoplamav4?WSDL'
                  else
                    'https://servisler.yok.gov.tr/ws/ogrencibilgitoplamav4Test?WSDL'

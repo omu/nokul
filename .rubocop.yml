@@ -18,10 +18,18 @@ AllCops:
     - config/initializers/simple_form.rb
     - config/initializers/simple_form_bootstrap.rb
     - config/environments/development.rb
+    - config/environments/production.rb
     - config/routes.rb
 Metrics/BlockLength:
   Exclude:
     - "lib/tasks/**/*.rake"
+
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - development
+    - test
+    - beta
 
 # Put your WIP file specific configuration below this line, not under AllCops!
 Metrics/AbcSize:
