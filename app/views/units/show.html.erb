@@ -1,0 +1,53 @@
+<h2><%= @unit.name %></h2>
+
+<%= render 'units/shared/new_unit' %>
+
+<hr \>
+
+<table class="table">
+  <tbody>
+    <tr>
+      <td>Birim Adı</td>
+      <td><%= @unit.name %></td>
+    </tr>
+    <tr>
+      <td>YOKSIS ID</td>
+      <td><%= @unit.yoksis_id %></td>
+    </tr>
+    <tr>
+      <td>FOET Kodu</td>
+      <td><%= @unit.foet_code %></td>
+    </tr>
+    <tr>
+      <td>Kuruluş Tarihi</td>
+      <td><%= @unit.founded_at %></td>
+    </tr>
+    <tr>
+      <td>Öğretim Süresi</td>
+      <td><%= @unit.duration %></td>
+    </tr>
+    <tr>
+      <td>Birim Türü</td>
+      <td><%= t("units.#{@unit.type}") %></td>
+    </tr>
+    <tr>
+      <td>Konumu</td>
+      <td><%= @unit.district.name %> / <%= @unit.district.city.name %></td>
+    </tr>
+    <tr>
+      <td>Birim Durumu</td>
+      <td><%= @unit.unit_status.name %></td>
+    </tr>
+    <tr>
+      <td>Öğretim Dili</td>
+      <td><%= @unit.unit_instruction_language.name %></td>
+    </tr>
+    <tr>
+      <td>Öğretim Türü</td>
+      <td><%= @unit.unit_instruction_type.name %></td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to 'Düzenle', edit_unit_path(@unit), class: "btn btn-primary", role: "button" %> |
+<%= link_to 'Sil', units_path(@unit), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger", role: "button" %>
