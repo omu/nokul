@@ -4,6 +4,15 @@ class Unit < ApplicationRecord
   # type column doesn't reference STI
   self.inheritance_column = nil
 
+  # search
+  include PgSearch
+  pg_search_scope(
+    :search,
+    against: %i[name yoksis_id],
+    associated_against: { district: :name },
+    using: { tsearch: { prefix: true } }
+  )
+
   # relations
   has_ancestry
   belongs_to :district
