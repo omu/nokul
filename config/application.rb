@@ -25,7 +25,15 @@ module Nokul
     I18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '', '*.yml').to_s]
 
     # organize models in sub-folders
-    config.autoload_paths += Dir[Rails.root.join('app', 'models', '**')]
+    config.autoload_paths += Dir[
+      Rails.root.join('app', 'models', '**'),
+    ]
+
+    reloader.to_prepare do
+      Dir[
+        Rails.root.join('app', 'services', '**', '*.rb')
+      ].each { |file| require_dependency file }
+    end
 
     # back-end adapter for active job
     config.active_job.queue_adapter = :sidekiq

@@ -43,4 +43,6 @@ Rails.application.routes.draw do
     resources :calendar_titles, except: :show
     resources :calendar_types
   end
+
+  resources :units
 end
