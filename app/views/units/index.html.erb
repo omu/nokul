@@ -46,19 +46,19 @@
                     <div class="col-sm-3">
                       <div class="form-group">
                         <label for="ccnumber">Birim Durumu</label>
-                        <%= select_tag(:unit_status_id, options_from_collection_for_select(UnitStatus.all, :id, :name), include_blank: true, class: 'form-control') %>
+                        <%= select_tag(:unit_status_id, options_from_collection_for_select(UnitStatus.all, :id, :name), class: 'form-control') %>
                       </div>
                     </div>
                     <div class="col-sm-3">
                       <div class="form-group">
                         <label for="ccnumber">Öğretim Dili</label>
-                        <%= select_tag(:unit_instruction_language_id, options_from_collection_for_select(UnitInstructionLanguage.all, :id, :name), include_blank: true, class: 'form-control') %>
+                        <%= select_tag(:unit_instruction_language_id, options_from_collection_for_select(UnitInstructionLanguage.all, :id, :name), class: 'form-control') %>
                       </div>
                     </div>
                     <div class="col-sm-3">
                       <div class="form-group">
                         <label for="ccnumber">Öğretim Türü</label>
-                        <%= select_tag(:unit_instruction_type_id, options_from_collection_for_select(UnitInstructionType.all, :id, :name), include_blank: true, class: 'form-control') %>
+                        <%= select_tag(:unit_instruction_type_id, options_from_collection_for_select(UnitInstructionType.all, :id, :name), class: 'form-control') %>
                       </div>
                     </div>
                   </div>
