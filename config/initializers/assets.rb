@@ -15,3 +15,4 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # folder are already added.
 Rails.application.config.assets.precompile += %w[guest.scss guest.js]
 Rails.application.config.assets.precompile << %r{simple-line-icons/fonts/[\w-]+\.(?:eot|svg|ttf|woff2?)$}
+
