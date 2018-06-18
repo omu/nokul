@@ -68,7 +68,7 @@
           <ul class="nav">
             <li class="nav-item">
               <%= link_to root_path, class: 'nav-link' do %>
-                <i class="nav-icon icon-speedometer"></i> Anasayfa
+                <%= fa_icon('home', class: 'nav-icon') %> Anasayfa
               <% end %>
             </li>
             <li class="nav-item">
@@ -83,7 +83,8 @@
             </li>
             <li class="nav-item nav-dropdown">
               <a class="nav-link nav-dropdown-toggle" href="#">
-                <i class="nav-icon icon-puzzle"></i> Akademik Takvim</a>
+                <%= fa_icon('calendar', class: 'nav-icon') %>Akademik Takvim
+              </a>
               <ul class="nav-dropdown-items">
                 <li class="nav-item">
                   <%= link_to calendar_titles_path, class: 'nav-link' do %>
