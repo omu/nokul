@@ -9,7 +9,7 @@
         <%= link_to edit_unit_path(@unit), class: "card-header-action" do %>
           <%= fa_icon 'edit', text: 'Düzenle' %>
         <% end %>
-        <%= link_to units_path(@unit), class: "card-header-action", method: :delete, data: { confirm: 'Emin misiniz? Bu işlem geri alınamaz.' } do %>
+        <%= link_to unit_path(@unit), class: "card-header-action", method: :delete, data: { confirm: 'Emin misiniz? Bu işlem geri alınamaz.' } do %>
           <%= fa_icon 'trash', text: 'Sil' %>
         <% end %>
       </div>
@@ -20,7 +20,7 @@
         <tbody>
           <tr>
             <td>Üst Birim</td>
-            <td><%= @unit.parent %></td>
+            <td><%= @unit.parent.name %></td>
           <tr>
             <td>YOKSIS ID</td>
             <td><%= @unit.yoksis_id %></td>
