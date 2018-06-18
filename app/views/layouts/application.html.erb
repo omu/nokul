@@ -20,9 +20,8 @@
       <ul class="nav navbar-nav ml-auto">
         <li class="nav-item dropdown">
           <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-            <%= fa_icon 'user' do %>
-              <span class='d-md-down-none'> <%= current_user.email %></span>
-            <% end %>
+            <%= fa_icon 'user' %>
+            <span class='d-md-down-none'> <%= current_user.email %></span>
           </a>
           <div class="dropdown-menu dropdown-menu-right">
             <div class="dropdown-header text-center">
