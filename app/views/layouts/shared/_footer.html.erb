@@ -1,0 +1,17 @@
+<footer class="app-footer">
+  <div>
+    <%= link_to 'Nokul', root_path %>
+    <span>
+      <%= link_to "http://baum.omu.edu.tr" do %>
+        &copy; <%= "#{Time.zone.now.year} BAUM" %>
+      <% end %>
+    </span>
+  </div>
+  <div class="ml-auto">
+    <span>
+      <%= link_to 'https://omu.sh' do %>
+        <%= image_tag 'baum-product.svg', height: '20', width: '110', alt: 'BAUM Logo', class: 'navbar-brand-full' %>
+      <% end %>
+    </span>
+  </div>
+</footer>

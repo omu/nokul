@@ -1,0 +1,47 @@
+<div class="card-group mb-4">
+  <!-- TODO: Yaklaşan akademik takvim olayları -->
+  <div class="card">
+    <div class="card-body">
+      <div class="h1 text-muted text-right mb-4">
+        <i class="icon-calendar"></i>
+      </div>
+      <div class="text-value">8</div>
+      <small class="text-muted text-uppercase font-weight-bold">Yaklaşan takvim etkinlikleri</small>
+      <div class="progress progress-xs mt-3 mb-0">
+        <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <div class="h1 text-muted text-right mb-4">
+        <i class="icon-user-follow"></i>
+      </div>
+      <div class="text-value"><%= profile_completion_rate(current_user) %>%</div>
+      <small class="text-muted text-uppercase font-weight-bold">Profil tamamlama oranı</small>
+      <div class="progress progress-xs mt-3 mb-0">
+        <div class="progress-bar bg-success" role="progressbar" style="width: <%= profile_completion_rate(current_user) %>%" aria-valuenow="<%= profile_completion_rate(current_user) %>" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+      <hr>
+      <% unless current_user.addresses.any? %>
+        <p><small class="text-muted"><%= link_to 'Adres bilgileriniz', addresses_path %> eksik görünüyor.</small></p>
+      <% end %>
+      <% unless current_user.identities.any? %>
+        <p><small class="text-muted"><%= link_to 'Kimlik bilgileriniz', identities_path %> eksik görünüyor.</small></p>
+      <% end %>
+    </div>
+  </div>
+  <!-- TODO: Şifrenizi şu kadar gün önce değiştirdiniz. Conditional bir şey, OK'se yeşil, değilse değiştirmesi için link -->
+  <div class="card">
+    <div class="card-body">
+      <div class="h1 text-muted text-right mb-4">
+        <i class="icon-speedometer"></i>
+      </div>
+      <div class="text-value">5:34:11</div>
+      <small class="text-muted text-uppercase font-weight-bold">Son şifre değişikliği</small>
+      <div class="progress progress-xs mt-3 mb-0">
+       <div class="progress-bar bg-danger" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+     </div>
+   </div>
+ </div>
+</div>
