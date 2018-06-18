@@ -1,17 +1,31 @@
-<h2>Şifrenizi Değiştirin</h2>
+<div class="col-md-6">
+  <div class="card mx-4">
+    <div class="card-body p-4">
+      <h1>Şifrenizi Sıfırlayın</h1>
+      <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+        <%= f.error_notification %>
+        <%= f.input :reset_password_token, as: :hidden %>
+        <%= f.full_error :reset_password_token %>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="icon-lock"></i>
+            </span>
+          </div>
+          <%= f.input :password, required: true, label: false, input_html: { class: 'form-control', type: 'password' }, placeholder: 'Şifreniz', wrapper: false  %>
+        </div>
 
-<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
-  <%= f.error_notification %>
-  <%= f.input :reset_password_token, as: :hidden %>
-  <%= f.full_error :reset_password_token %>
+        <div class="input-group mb-4">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="icon-lock"></i>
+            </span>
+          </div>
+          <%= f.input :password_confirmation, required: true, label: false, input_html: { class: 'form-control', type: 'password' }, placeholder: 'Şifreniz (tekrar)', wrapper: false  %>
+        </div>
 
-  <div class='form-inputs'>
-    <%= f.input :password, label: 'Yeni şifre', required: true, autofocus: true, hint: ("en az #{@minimum_password_length} karakter" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, label: 'Yeni şifre (tekrar)', required: true %>
+        <%= f.button :submit, 'Şifremi Sıfırla', class: 'btn btn-block btn-primary' %>
+      <% end %>
+    </div>
   </div>
-
-  <div class='form-actions'>
-    <%= f.button :submit, 'Şifremi Değiştir', class: 'btn btn-primary' %> |
-    <%= render 'devise/shared/links' %>
-  </div>
-<% end %>
+</div>

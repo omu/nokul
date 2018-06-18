@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <%= render 'layouts/shared/meta' %>
+    <%= stylesheet_link_tag 'guest', media: 'all' %>
+  </head>
+  <body class='app flex-row align-items-center'>
+    <div class="container">
+      <div class="row justify-content-center">
+        <%= yield %>
+      </div>
+    </div>
+    <%= javascript_include_tag 'guest' %>
+    <%= render 'layouts/shared/toastr' %>
+  </body>
+</html>
