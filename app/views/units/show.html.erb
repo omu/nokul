@@ -1,53 +1,72 @@
-<h2><%= @unit.name %></h2>
+<div class="col-lg-12">
+  <div class="card">
+    <div class="card-header">
+      <%= fa_icon 'university' %><strong><%= @unit.name %></strong>
+      <div class="card-header-actions">
+        <%= link_to new_unit_path, class: "card-header-action" do %>
+          <%= fa_icon 'plus', text: 'Yeni Ekle' %>
+        <% end %>
+        <%= link_to edit_unit_path(@unit), class: "card-header-action" do %>
+          <%= fa_icon 'edit', text: 'Düzenle' %>
+        <% end %>
+        <%= link_to units_path(@unit), class: "card-header-action", method: :delete, data: { confirm: 'Emin misiniz? Bu işlem geri alınamaz.' } do %>
+          <%= fa_icon 'trash', text: 'Sil' %>
+        <% end %>
+      </div>
+    </div>
 
-<%= render 'units/shared/new_unit' %>
-
-<hr \>
-
-<table class="table">
-  <tbody>
-    <tr>
-      <td>Birim Adı</td>
-      <td><%= @unit.name %></td>
-    </tr>
-    <tr>
-      <td>YOKSIS ID</td>
-      <td><%= @unit.yoksis_id %></td>
-    </tr>
-    <tr>
-      <td>FOET Kodu</td>
-      <td><%= @unit.foet_code %></td>
-    </tr>
-    <tr>
-      <td>Kuruluş Tarihi</td>
-      <td><%= @unit.founded_at %></td>
-    </tr>
-    <tr>
-      <td>Öğretim Süresi</td>
-      <td><%= @unit.duration %></td>
-    </tr>
-    <tr>
-      <td>Birim Türü</td>
-      <td><%= t("units.#{@unit.type}") %></td>
-    </tr>
-    <tr>
-      <td>Konumu</td>
-      <td><%= @unit.district.name %> / <%= @unit.district.city.name %></td>
-    </tr>
-    <tr>
-      <td>Birim Durumu</td>
-      <td><%= @unit.unit_status.name %></td>
-    </tr>
-    <tr>
-      <td>Öğretim Dili</td>
-      <td><%= @unit.unit_instruction_language.name %></td>
-    </tr>
-    <tr>
-      <td>Öğretim Türü</td>
-      <td><%= @unit.unit_instruction_type.name %></td>
-    </tr>
-  </tbody>
-</table>
-
-<%= link_to 'Düzenle', edit_unit_path(@unit), class: "btn btn-primary", role: "button" %> |
-<%= link_to 'Sil', units_path(@unit), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger", role: "button" %>
+    <div class="card-body">
+      <table class="table table-responsive-sm">
+        <tbody>
+          <tr>
+            <td>Üst Birim</td>
+            <td><%= @unit.parent %></td>
+          <tr>
+            <td>YOKSIS ID</td>
+            <td><%= @unit.yoksis_id %></td>
+          </tr>
+          <tr>
+            <td>FOET Kodu</td>
+            <td><%= @unit.foet_code %></td>
+          </tr>
+          <tr>
+            <td>Kuruluş Tarihi</td>
+            <td><%= @unit.founded_at %></td>
+          </tr>
+          <tr>
+            <td>Öğretim Süresi</td>
+            <td><%= @unit.duration %></td>
+          </tr>
+          <tr>
+            <td>Birim Türü</td>
+            <td><%= t("units.#{@unit.type}") %></td>
+          </tr>
+          <tr>
+            <td>Konumu</td>
+            <td><%= @unit.district.name %> / <%= @unit.district.city.name %></td>
+          </tr>
+          <tr>
+            <td>Birim Durumu</td>
+            <td><%= @unit.unit_status.name %></td>
+          </tr>
+          <tr>
+            <td>Öğretim Dili</td>
+            <td><%= @unit.unit_instruction_language.name %></td>
+          </tr>
+          <tr>
+            <td>Öğretim Türü</td>
+            <td><%= @unit.unit_instruction_type.name %></td>
+          </tr>
+          <tr>
+            <td>Oluşturulma Tarihi</td>
+            <td><%= @unit.created_at %></td>
+          </tr>
+          <tr>
+            <td>Son Güncelleme</td>
+            <td><%= @unit.updated_at %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

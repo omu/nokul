@@ -1,54 +1,136 @@
-<div class='card'>
-  <br><h4 class='card-heading text-center'>Birimler</h4>
-
-  <%= form_tag units_path, method: :get do %>
-    <div class="form-group">
-      <%= text_field_tag 'term', params[:term], placeholder: "Birim adı veya YOKSIS numarası", class: 'form-control' %>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'search', text: 'Arama Yap' %>
+      </div>
+      <div class="card-body">
+        <div id="accordion" role="tablist">
+          <div class="card">
+            <div class="card-header" role="tab" id="headingOne">
+              <h5 class="mb-0">
+                <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Akıllı Arama
+                </a>
+              </h5>
+            </div>
+            <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" style="">
+              <div class="card-body">
+                <%= form_tag units_path, method: :get do %>
+                  <div class="form-group">
+                    <%= text_field_tag 'term', params[:term], placeholder: "Birim adı veya YOKSIS numarası", class: 'form-control' %>
+                  </div>
+                  <%= submit_tag 'Birimleri Ara', class: 'btn btn-primary' %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" role="tab" id="headingTwo">
+              <h5 class="mb-0">
+                <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Detaylı Arama
+                </a>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion" style="">
+              <div class="card-body">
+                <%= form_tag units_path, method: :get do %>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <div class="form-group">
+                        <label for="name">Öğretim Süresi</label>
+                        <%= text_field_tag 'duration', params[:duration], placeholder: "Öğretim Süresi (Yıl)", class: 'form-control' %>
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="form-group">
+                        <label for="ccnumber">Birim Durumu</label>
+                        <%= select_tag(:unit_status_id, options_from_collection_for_select(UnitStatus.all, :id, :name), class: 'form-control') %>
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="form-group">
+                        <label for="ccnumber">Öğretim Dili</label>
+                        <%= select_tag(:unit_instruction_language_id, options_from_collection_for_select(UnitInstructionLanguage.all, :id, :name), class: 'form-control') %>
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="form-group">
+                        <label for="ccnumber">Öğretim Türü</label>
+                        <%= select_tag(:unit_instruction_type_id, options_from_collection_for_select(UnitInstructionType.all, :id, :name), class: 'form-control') %>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <%= submit_tag 'Birimleri Ara', class: 'btn btn-primary' %>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <%= submit_tag 'Birimleri Ara', class: 'btn btn-primary' %>
-  <% end %>
+  </div>
+</div>
 
-  <br>
-
-  <table class='table table-responsive'>
-    <thead>
-      <tr>
-        <th>Birim Adı</th>
-        <th>YOKSIS ID</th>
-        <th>FOET Kodu</th>
-        <th>Kuruluş Tarihi</th>
-        <th>Öğrenim Süresi</th>
-        <th>Birim Türü</th>
-        <th>Konumu</th>
-        <th>Birim Durumu</th>
-        <th>Öğretim Dili</th>
-        <th>Öğretim Türü</th>
-        <th>İşlemler</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @units.each do |unit| %>
-        <tr>
-          <td><%= unit.name %></td>
-          <td><%= unit.yoksis_id %></td>
-          <td><%= unit.foet_code %></td>
-          <td><%= unit.founded_at %></td>
-          <td><%= unit.duration %></td>
-          <td><%= t("units.#{unit.type}") %></td>
-          <td><%= unit.district.name %> / <%= unit.district.city.name %></td>
-          <td><%= unit.unit_status.try(:name) %></td>
-          <td><%= unit.unit_instruction_language.try(:name) %></td>
-          <td><%= unit.unit_instruction_type.try(:name) %></td>
-          <td>
-            <%= link_to('Düzenle', edit_unit_path(unit), class: 'btn btn-secondary btn-sm') %>
-            <%= link_to('Sil', unit, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm') %>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-  <br>
-  <div class='card-footer'>
-    <%= render 'units/shared/new_unit' %>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'align-justify', text: 'Birimler' %>
+        <div class="card-header-actions">
+          <%= link_to new_unit_path, class: "card-header-action" do %>
+            <%= fa_icon 'plus', text: 'Yeni Ekle' %>
+          <% end %>
+        </div>
+      </div>
+      <div class="card-body">
+        <table class="table table-responsive-sm table-striped">
+          <thead>
+            <tr>
+              <th>Birim Adı</th>
+              <th>YOKSIS ID</th>
+              <th>FOET Kodu</th>
+              <th>Kuruluş Tarihi</th>
+              <th>Öğrenim Süresi</th>
+              <th>Birim Türü</th>
+              <th>Konumu</th>
+              <th>Birim Durumu</th>
+              <th>Öğretim Dili</th>
+              <th>Öğretim Türü</th>
+              <th colspan="3">İşlemler</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @units.each do |unit| %>
+              <tr>
+                <td><%= unit.name %></td>
+                <td><%= unit.yoksis_id %></td>
+                <td><%= unit.foet_code %></td>
+                <td><%= unit.founded_at %></td>
+                <td><%= unit.duration %></td>
+                <td><%= t("units.#{unit.type}") %></td>
+                <td><%= unit.district.name %> / <%= unit.district.city.name %></td>
+                <td><%= unit.unit_status.try(:name) %></td>
+                <td><%= unit.unit_instruction_language.try(:name) %></td>
+                <td><%= unit.unit_instruction_type.try(:name) %></td>
+                <td><%= link_to('Görüntüle', unit_path(unit), class: 'btn btn-secondary btn-sm') %></td>
+                <td><%= link_to('Düzenle', edit_unit_path(unit), class: 'btn btn-secondary btn-sm') %></td>
+                <td><%= link_to('Sil', unit, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm') %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <%== pagy_nav_bootstrap(@pagy) %>
+      </ul>
+    </nav>
   </div>
 </div>
