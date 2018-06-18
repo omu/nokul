@@ -20,9 +20,8 @@
       <ul class="nav navbar-nav ml-auto">
         <li class="nav-item dropdown">
           <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-            <%= fa_icon 'user' do %>
-              <span class='d-md-down-none'> <%= current_user.email %></span>
-            <% end %>
+            <%= fa_icon 'user' %>
+            <span class='d-md-down-none'> <%= current_user.email %></span>
           </a>
           <div class="dropdown-menu dropdown-menu-right">
             <div class="dropdown-header text-center">
@@ -68,7 +67,7 @@
           <ul class="nav">
             <li class="nav-item">
               <%= link_to root_path, class: 'nav-link' do %>
-                <i class="nav-icon icon-speedometer"></i> Anasayfa
+                <%= fa_icon('home', class: 'nav-icon') %> Anasayfa
               <% end %>
             </li>
             <li class="nav-item">
@@ -83,7 +82,8 @@
             </li>
             <li class="nav-item nav-dropdown">
               <a class="nav-link nav-dropdown-toggle" href="#">
-                <i class="nav-icon icon-puzzle"></i> Akademik Takvim</a>
+                <%= fa_icon('calendar', class: 'nav-icon') %>Akademik Takvim
+              </a>
               <ul class="nav-dropdown-items">
                 <li class="nav-item">
                   <%= link_to calendar_titles_path, class: 'nav-link' do %>

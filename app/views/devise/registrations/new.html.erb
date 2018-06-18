@@ -8,7 +8,7 @@
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text">
-              <i class="icon-user"></i>
+              <%= fa_icon('user-o') %>
             </span>
           </div>
           <%= f.input :id_number, required: true, label: false, input_html: { class: 'form-control', type: 'text' }, placeholder: 'T.C. Kimlik Numaranız', wrapper: false %>
@@ -24,7 +24,7 @@
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text">
-              <i class="icon-lock"></i>
+              <%= fa_icon('lock') %>
             </span>
           </div>
           <%= f.input :password, required: true, label: false, input_html: { class: 'form-control', type: 'password' }, placeholder: 'Şifreniz', wrapper: false  %>
@@ -33,7 +33,7 @@
         <div class="input-group mb-4">
           <div class="input-group-prepend">
             <span class="input-group-text">
-              <i class="icon-lock"></i>
+              <%= fa_icon('lock') %>
             </span>
           </div>
           <%= f.input :password_confirmation, required: true, label: false, input_html: { class: 'form-control', type: 'password' }, placeholder: 'Şifreniz (tekrar)', wrapper: false  %>

@@ -3,7 +3,7 @@
   <div class="card">
     <div class="card-body">
       <div class="h1 text-muted text-right mb-4">
-        <i class="icon-calendar"></i>
+        <%= fa_icon('calendar') %>
       </div>
       <div class="text-value">8</div>
       <small class="text-muted text-uppercase font-weight-bold">Yaklaşan takvim etkinlikleri</small>
@@ -15,7 +15,7 @@
   <div class="card">
     <div class="card-body">
       <div class="h1 text-muted text-right mb-4">
-        <i class="icon-user-follow"></i>
+        <%= fa_icon('user-plus') %>
       </div>
       <div class="text-value"><%= profile_completion_rate(current_user) %>%</div>
       <small class="text-muted text-uppercase font-weight-bold">Profil tamamlama oranı</small>
@@ -35,7 +35,7 @@
   <div class="card">
     <div class="card-body">
       <div class="h1 text-muted text-right mb-4">
-        <i class="icon-speedometer"></i>
+        <%= fa_icon('clock-o') %>
       </div>
       <div class="text-value">5:34:11</div>
       <small class="text-muted text-uppercase font-weight-bold">Son şifre değişikliği</small>
