@@ -1,86 +1,138 @@
 <!DOCTYPE html>
 <html lang="tr">
   <head>
-    <title>Nokul</title>
-    <meta name="description" content="Nokul, nitelikli okul!">
-    <meta name="keywords" content="baum, omu, nokul, otomasyon, öğrenci işleri" />
-    <meta name="author" content="BAUM">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render 'layouts/shared/meta' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
   </head>
-
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" href="#">Nokul</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+    <header class="app-header navbar">
+      <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <%= link_to fa_icon('home', text: 'Anasayfa'), root_path, { class: 'nav-link' } %>
-          </li>
-        </ul>
-        <ul class="navbar-nav px-3">
-          <% if user_signed_in? %>
-            <li class="nav-item">
-              <%= link_to fa_icon("user", text: "Hesabım"), account_path, { class: 'nav-link' } %>
-            </li>
-            <li class="nav-item">
-              <%= link_to fa_icon("external-link-square", text: "Çıkış Yap"), logout_path, { class: 'nav-link' } %>
-            </li>
-          <% else %>
-            <li class="nav-item">
-              <%= link_to fa_icon('key', text: 'Giriş Yap'), login_path, { class: 'nav-link' } %>
-            </li>
-          <% end %>
-        </ul>
-      </div>
-    </nav>
-
-    <div class="container-fluid">
-      <div class="row row-offcanvas row-offcanvas-right">
-        <div class="col-12 col-md-9">
-          <% flash.each do |type, msg| %>
-            <%= content_tag :div, { class: "alert alert-warning alert-dismissible fade show", role: "alert"} do %>
-            <%= msg %>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+      <%= link_to root_path, class: 'navbar-brand' do %>
+        <%= image_tag 'baum-logo.svg', height: '36', width: '134', alt: 'BAUM Logo', class: 'navbar-brand-full' %>
+      <% end %>
+      </a>
+      <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <%= fa_icon 'user' do %>
+              <span class='d-md-down-none'> <%= current_user.email %></span>
             <% end %>
-          <% end %>
-          <%= yield %>
-        </div>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <div class="dropdown-header text-center">
+              <strong>Hesabım</strong>
+            </div>
+            <%= link_to identities_path, class: 'dropdown-item' do %>
+              <%= fa_icon('id-card', text: 'Kimlik Bilgilerim') %>
+              <%= content_tag(:span, class: 'badge badge-warning') do %>
+                <%= current_user.identities.count %>
+              <% end %>
+            <% end %>
+            <%= link_to addresses_path, class: 'dropdown-item' do %>
+              <%= fa_icon('home', text: 'Adres Bilgilerim') %>
+              <%= content_tag(:span, class: 'badge badge-warning') do %>
+                <%= current_user.addresses.count %>
+              <% end %>
+            <% end %>
+            <%= link_to root_path, class: 'dropdown-item' do %>
+              <%= fa_icon('try', text: 'IBAN Bilgilerim') %>
+            <% end %>
+            <div class="dropdown-header text-center">
+              <strong>Ayarlar</strong>
+            </div>
+            <%= link_to edit_user_registration_path, class: 'dropdown-item' do %>
+              <%= fa_icon('shield', text: 'Şifre Değişikliği') %>
+            <% end %>
+            <%= link_to destroy_user_session_path, class: "dropdown-item", method: :delete do %>
+              <%= fa_icon('lock', text: 'Çıkış Yap') %>
+            <% end %>
+          </div>
+        </li>
+      </ul>
+      <button class="navbar-toggler aside-menu-toggler d-md-down-none" type="button" data-toggle="aside-menu-lg-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <button class="navbar-toggler aside-menu-toggler d-lg-none" type="button" data-toggle="aside-menu-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </header>
+    <div class="app-body">
+      <div class="sidebar">
+        <nav class="sidebar-nav">
+          <ul class="nav">
+            <li class="nav-item">
+              <%= link_to root_path, class: 'nav-link' do %>
+                <i class="nav-icon icon-speedometer"></i> Anasayfa
+              <% end %>
+            </li>
+            <li class="nav-item">
+              <%= link_to units_path, class: 'nav-link' do %>
+                <%= fa_icon('sitemap', text: 'Birimler', class: 'nav-icon') %>
+              <% end %>
+            </li>
+            <li class="nav-item">
+              <%= link_to root_path, class: 'nav-link' do %>
+                <%= fa_icon('map-marker', text: 'Konumlar', class: 'nav-icon') %>
+              <% end %>
+            </li>
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-puzzle"></i> Akademik Takvim</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <%= link_to calendar_titles_path, class: 'nav-link' do %>
+                    <%= fa_icon('calendar-plus-o', text: 'Takvim Başlığı', class: 'nav-icon') %>
+                  <% end %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to calendar_types_path, class: 'nav-link' do %>
+                    <%= fa_icon('calendar-check-o', text: 'Takvim Türleri', class: 'nav-icon') %>
+                  <% end %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to academic_terms_path, class: 'nav-link' do %>
+                    <%= fa_icon('graduation-cap', text: 'Akademik Dönemler', class: 'nav-icon') %>
+                  <% end %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to academic_calendars_path, class: 'nav-link' do %>
+                    <%= fa_icon('calendar', text: 'Akademik Takvimler', class: 'nav-icon') %>
+                  <% end %>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+      </div>
 
-        <div class="col-6 col-md-3 sidebar-offcanvas" id="sidebar">
-          <div class="list-group">
-            <%= link_to fa_icon('home', text: 'Anasayfa'), root_path, { class: 'list-group-item' } %>
-            <%= link_to fa_icon('sitemap', text: 'Birimler'), units_path, { class: 'list-group-item' } %>
-            <%= link_to fa_icon('map-marker', text: 'Konumlar'), root_path, { class: 'list-group-item' } %>
-            <a href="#" class="list-group-item" data-toggle="collapse" data-target="#sm" data-parent="#menu">
-              <%= fa_icon('calendar', text: 'Akademik Takvim') %>
-            </a>
-            <div id="sm" class="sublinks collapse">
-              <%= link_to fa_icon('calendar-plus-o', text: 'Takvim Başlığı'), calendar_titles_path, { class: 'list-group-item' } %>
-              <%= link_to fa_icon('calendar-check-o', text: 'Takvim Türleri'), calendar_types_path, { class: 'list-group-item' } %>
-              <%= link_to fa_icon('graduation-cap', text: 'Akademik Dönemler'), academic_terms_path, { class: 'list-group-item' } %>
-              <%= link_to fa_icon('calendar', text: 'Akademik Takvimler'), academic_calendars_path, { class: 'list-group-item' } %>
+      <main class="main">
+        <ol class='breadcrumb'>
+          <% breadcrumb_trail do |crumb| %>
+            <li class="breadcrumb-item <%= crumb.current? ? 'active' : '' %>">
+              <%= link_to_unless crumb.current?, crumb.name, crumb.url, (crumb.current? ? {'aria-current' => 'page'} : {}) %>
+            </li>
+          <% end %>
+        </ol>
+        <div class="container-fluid">
+          <div class="animated fadeIn">
+            <div class="row">
+              <div class="col">
+                <%= yield %>
+              </div>
             </div>
           </div>
-        </div><!--/span-->
-      </div><!--/row-->
-
-      <hr>
-
-      <footer>
-        <p>&copy; BAUM 2017</p>
-      </footer>
-
-    </div><!--/.container-->
+        </div>
+      </main>
+      <%= render 'layouts/shared/aside' %>
+    </div>
+    <%= render 'layouts/shared/footer' %>
+    <%= render 'layouts/shared/toastr' %>
   </body>
 </html>

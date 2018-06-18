@@ -12,14 +12,6 @@ Rails.application.routes.draw do
     sessions: 'user/sessions'
   }
 
-  devise_scope :user do
-    get 'register', to: 'devise/registrations#new'
-    get 'login', to: 'devise/sessions#new'
-    get 'update', to: 'devise/registrations#edit'
-    get 'logout', to: 'devise/sessions#destroy'
-    get 'recover', to: 'devise/passwords#new'
-  end
-
   # TODO: will add authorization when ready
   authenticate :user do
     mount Sidekiq::Web => '/sidekiq'
@@ -27,7 +19,6 @@ Rails.application.routes.draw do
 
   # Account home page
   scope module: :account do
-    get 'account', to: 'home#index'
     resources :identities, except: [:show] do
       get 'mernis', on: :member
     end

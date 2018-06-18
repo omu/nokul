@@ -13,10 +13,13 @@ class Duty < ApplicationRecord
   validates :unit_id, uniqueness: { scope: %i[employee start_date] }
   validates_with DutyValidator
 
+  # arel tables
+  duties = Duty.arel_table
+
   # scopes
   scope :temporary, -> { where(temporary: true) }
   scope :tenure, -> { where(temporary: false) }
-  scope :active, -> { where('end_date > ? OR end_date IS NULL', Time.zone.today) }
+  scope :active, -> { where(duties[:end_date].gt(Time.zone.today).or(duties[:end_date].eq(nil))) }
 
   # custom methods
   def active?
