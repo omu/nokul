@@ -42,6 +42,9 @@ gem 'email_address'
 # search
 gem 'pg_search'
 
+# error tracking
+gem 'rollbar'
+
 group :development, :test do
   gem 'brakeman', require: false
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
