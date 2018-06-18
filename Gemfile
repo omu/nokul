@@ -21,12 +21,13 @@ gem 'devise'
 # assets: core asset dependencies
 gem 'coffee-rails', '~> 4.2'
 gem 'sass-rails', '~> 5.0'
-gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 
 # view helpers: tools for forms, views, etc.
 gem 'cocoon'
 gem 'font-awesome-rails'
+gem 'loaf'
+gem 'pagy'
 gem 'simple_form'
 
 # api
@@ -62,6 +63,7 @@ end
 group :development do
   gem 'bullet'
   gem 'bundler-audit'
+  gem 'letter_opener'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'rubycritic'
   gem 'spring'
