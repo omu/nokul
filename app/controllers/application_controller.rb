@@ -8,6 +8,8 @@ class ApplicationController < ActionController::Base
 
   rescue_from ActiveRecord::RecordNotFound, with: :not_found
 
+  breadcrumb 'Anasayfa', :root_path
+
   protected
 
   def not_found
