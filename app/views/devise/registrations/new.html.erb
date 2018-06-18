@@ -1,19 +1,56 @@
-<div class="jumbotron">
-  <h2>Kayıt Ol</h2>
+<div class="col-md-6">
+  <div class="card mx-4">
+    <div class="card-body p-4">
+      <h1>Kayıt Ol</h1>
+      <p class="text-muted">Hesabınızı oluşturun.</p>
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= f.error_notification %>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="icon-user"></i>
+            </span>
+          </div>
+          <%= f.input :id_number, required: true, label: false, input_html: { class: 'form-control', type: 'text' }, placeholder: 'T.C. Kimlik Numaranız', wrapper: false %>
+        </div>
 
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= f.error_notification %>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">@</span>
+          </div>
+          <%= f.input :email, required: true, autofocus: true, label: false, input_html: { class: 'form-control', type: 'text' }, placeholder: 'E-mail adresiniz', wrapper: false %>
+        </div>
 
-    <div class="form-inputs">
-      <%= f.input :email, required: true, autofocus: true, label: 'E-mail' %>
-      <%= f.input :id_number, required: true, label: 'T.C. Kimlik Numarası' %>
-      <%= f.input :password, required: true, label: 'Şifre', hint: ("en az #{@minimum_password_length} karekter" if @minimum_password_length) %>
-      <%= f.input :password_confirmation, required: true, label: 'Şifre (tekrar)' %>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="icon-lock"></i>
+            </span>
+          </div>
+          <%= f.input :password, required: true, label: false, input_html: { class: 'form-control', type: 'password' }, placeholder: 'Şifreniz', wrapper: false  %>
+        </div>
+
+        <div class="input-group mb-4">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="icon-lock"></i>
+            </span>
+          </div>
+          <%= f.input :password_confirmation, required: true, label: false, input_html: { class: 'form-control', type: 'password' }, placeholder: 'Şifreniz (tekrar)', wrapper: false  %>
+        </div>
+
+        <%= f.button :submit, "Kayıt Ol", class: 'btn btn-block btn-success' %>
+      <% end %>
     </div>
-
-    <div class="form-actions">
-      <%= f.button :submit, "Kayıt Ol", class: 'btn btn-primary' %> |
-      <%= render "devise/shared/links" %>
+    <div class="card-footer p-4">
+      <div class="row">
+        <div class="col-6">
+          <%= link_to 'Giriş Yap', new_session_path(resource_name), class: 'btn btn-secondary btn-block', role: 'button' %>
+        </div>
+        <div class="col-6">
+          <%= link_to 'Şifreni mi Unuttun?', new_password_path(resource_name), class: 'btn btn-secondary btn-block', role: 'button' %>
+        </div>
+      </div>
     </div>
-  <% end %>
+  </div>
 </div>

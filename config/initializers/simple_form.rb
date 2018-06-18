@@ -52,10 +52,10 @@ SimpleForm.setup do |config|
     b.optional :readonly
 
     ## Inputs
-    # b.use :input, class: 'input', error_class: 'is-invalid', valid_class: 'is-valid'
-    b.use :label_input
-    b.use :hint,  wrap_with: { tag: :span, class: :hint }
-    b.use :error, wrap_with: { tag: :span, class: :error }
+    b.use :input, class: 'input', error_class: 'is-invalid', valid_class: 'is-valid'
+    # b.use :label_input
+    b.use :hint, wrap_with: { tag: :div, class: 'alert-danger', role: 'alert' }
+    b.use :error, wrap_with: { tag: :div, class: 'alert-danger', role: 'alert' }
 
     ## full_messages_for
     # If you want to display the full error message for the attribute, you can

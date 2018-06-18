@@ -1,9 +1,13 @@
-<h1>Birimi Düzenle</h1>
+<%#= render 'units/shared/new_unit' %>
 
-<%= render 'units/shared/new_unit' %>
-
-<hr \>
-
-<%= render 'units/shared/form', unit: @unit %>
-
-<hr \>
+<div class="col-sm-12">
+  <div class="card">
+    <div class="card-header">
+      <%= fa_icon 'university' %>
+      <strong>Birimi Düzenle</strong>
+    </div>
+    <div class="card-body">
+      <%= render 'units/shared/form', unit: @unit %>
+    </div>
+  </div>
+</div>
