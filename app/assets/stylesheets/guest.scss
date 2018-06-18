@@ -2,7 +2,7 @@
   * Manifest file for guest template. Only include assets that you need.
 
   * form icons
-  *= require font-awesome
+  *= require simple-line-icons/css/simple-line-icons.css
 
   * coreui base
   *= require @coreui/coreui/dist/css/coreui.min
