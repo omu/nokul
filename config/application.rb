@@ -35,8 +35,8 @@ module Nokul
       ].each { |file| require_dependency file }
     end
 
-    # back-end adapter for active job
-    config.active_job.queue_adapter = :sidekiq
+    # use app-wide e-mail template for devise
+    config.to_prepare { Devise::Mailer.layout 'mailer' }
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
