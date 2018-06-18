@@ -19,7 +19,6 @@ Rails.application.routes.draw do
 
   # Account home page
   scope module: :account do
-    get 'account', to: 'home#index'
     resources :identities, except: [:show] do
       get 'mernis', on: :member
     end
