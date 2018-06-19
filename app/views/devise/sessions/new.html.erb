@@ -11,7 +11,7 @@
                 <%= fa_icon('user') %>
               </span>
             </div>
-            <%= f.input :id_number, required: true, autofocus: true, label: false, input_html: { class: 'form-control', type: 'text' }, placeholder: 'T.C. Kimlik No', wrapper: false %>
+            <%= f.input :id_number, required: true, autofocus: true, label: false, input_html: { class: 'form-control', type: 'text' }, placeholder: 'T.C. Kimlik No', wrapper: false, as: :integer %>
           </div>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
