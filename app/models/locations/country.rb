@@ -4,8 +4,7 @@ class Country < ApplicationRecord
   # name, iso and code fields follow the ISO3166 standard.
 
   # relations
-  has_many :regions, dependent: :nullify
-  has_many :cities, through: :regions
+  has_many :cities, dependent: :nullify
   has_many :districts, through: :cities
   has_many :addresses, through: :districts
   has_many :units, through: :districts
