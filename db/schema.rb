@@ -85,8 +85,8 @@ ActiveRecord::Schema.define(version: 2018_05_25_173627) do
     t.string "name", null: false
     t.string "iso", null: false
     t.string "nuts_code", null: false
-    t.bigint "region_id"
-    t.index ["region_id"], name: "index_cities_on_region_id"
+    t.bigint "country_id"
+    t.index ["country_id"], name: "index_cities_on_country_id"
   end
 
   create_table "countries", force: :cascade do |t|
@@ -149,13 +149,6 @@ ActiveRecord::Schema.define(version: 2018_05_25_173627) do
     t.datetime "updated_at", null: false
     t.index ["administrative_function_id"], name: "index_positions_on_administrative_function_id"
     t.index ["duty_id"], name: "index_positions_on_duty_id"
-  end
-
-  create_table "regions", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "nuts_code", null: false
-    t.bigint "country_id"
-    t.index ["country_id"], name: "index_regions_on_country_id"
   end
 
   create_table "student_disability_types", force: :cascade do |t|
@@ -310,7 +303,7 @@ ActiveRecord::Schema.define(version: 2018_05_25_173627) do
   add_foreign_key "calendar_events", "calendar_titles"
   add_foreign_key "calendar_title_types", "calendar_titles", column: "title_id"
   add_foreign_key "calendar_title_types", "calendar_types", column: "type_id"
-  add_foreign_key "cities", "regions"
+  add_foreign_key "cities", "countries"
   add_foreign_key "districts", "cities"
   add_foreign_key "duties", "employees"
   add_foreign_key "duties", "units"
@@ -320,7 +313,6 @@ ActiveRecord::Schema.define(version: 2018_05_25_173627) do
   add_foreign_key "identities", "users"
   add_foreign_key "positions", "administrative_functions"
   add_foreign_key "positions", "duties"
-  add_foreign_key "regions", "countries"
   add_foreign_key "students", "units"
   add_foreign_key "students", "users"
   add_foreign_key "unit_calendar_events", "academic_calendars"

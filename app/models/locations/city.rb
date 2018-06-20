@@ -4,7 +4,7 @@ class City < ApplicationRecord
   # iso field follows the ISO3166 standard, nuts_code field follows the NUTS-1 standard.
 
   # relations
-  belongs_to :region
+  belongs_to :country
   has_many :districts, dependent: :nullify
   has_many :addresses, through: :districts
   has_many :units, through: :districts

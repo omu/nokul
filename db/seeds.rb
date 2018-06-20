@@ -10,21 +10,12 @@ File.open(Rails.root.join('db', 'static_data', 'countries.yml')) do |countries|
   end
 end
 
-# create regions
-File.open(Rails.root.join('db', 'static_data', 'regions.yml')) do |regions|
-  regions.read.each_line do |region|
-    name, nuts_code = region.chomp.split('|')
-    country = Country.find_by(iso: nuts_code[0..1])
-    country.regions.create!(name: name, nuts_code: nuts_code)
-  end
-end
-
 # create cities
 File.open(Rails.root.join('db', 'static_data', 'cities.yml')) do |cities|
   cities.read.each_line do |city|
     name, iso, nuts_code = city.chomp.split('|')
-    region = Region.find_by(nuts_code: nuts_code[0..2])
-    region.cities.create!(name: name, iso: iso, nuts_code: nuts_code)
+    country = Country.find_by(iso: iso.split('-').first)
+    country.cities.create!(name: name, iso: iso, nuts_code: nuts_code)
   end
 end
 
