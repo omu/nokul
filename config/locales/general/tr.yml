@@ -1,0 +1,11 @@
+tr:
+  actions: İşlemler
+  action_group:
+    add: Ekle
+    back: Geri
+    destroy: Sil
+    edit: Düzenle
+    new: Yeni
+    show: Görüntüle
+    update: Güncelle
+  are_you_sure: Emin misiniz?

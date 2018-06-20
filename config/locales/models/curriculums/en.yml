@@ -1,0 +1,45 @@
+en:
+  course_attributes: &course_attributes
+    credit: Credit
+    code: Code
+    education_type: Education Type
+    laboratory: Laboratory
+    language: Language
+    name: Name
+    practice: Practice
+    status: Status
+    theoric: Theoric
+    unit: Unit
+
+  activerecord:
+    models:
+      course: 'Course'
+    enums:
+      course:
+        education_types:
+          undergraduate: Undergraduate
+          master: Master
+          doctoral: Doctoral
+        statuses:
+          passive: Passive
+          active: Active
+          abrogated: Abrogated
+  
+  curriculum:
+    courses:
+      create:
+        success: Course was successfully created.
+      destroy:
+        success: Course was successfully destroyed.
+        error: There was an error deleting the course.
+      update:
+        success: Course was successfully updated.
+      show:
+        *course_attributes
+      index:
+        *course_attributes
+  
+  simple_form:
+    labels:
+      course:
+        *course_attributes
