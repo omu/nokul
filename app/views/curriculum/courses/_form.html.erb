@@ -1,0 +1,60 @@
+<div class="card shadow">
+  <div class="card-body">
+    <%= simple_form_for(@course) do |f| %>
+      <%= f.error_notification %>
+
+      <div class="row">
+        <div class='form-group col-sm-4'>
+          <%= f.label :unit %>
+          <%= f.association :unit, input_html: { class: 'form-control' } %>
+        </div>
+        <div class='form-group col-sm-4'>
+          <%= f.label :name %>
+          <%= f.input :name, input_html: { class: 'form-control' } %>
+        </div>
+        <div class='form-group col-sm-4'>
+          <%= f.label :code %>
+          <%= f.input :code, input_html: { class: 'form-control' } %>
+        </div>
+        <div class='form-group col-sm-4'>
+          <%= f.label :theoric %>
+          <%= f.input :theoric, input_html: { class: 'form-control' } %>
+        </div>
+        <div class='form-group col-sm-4'>
+          <%= f.label :practice %>
+          <%= f.input :practice, input_html: { class: 'form-control' } %>
+        </div>
+        <div class='form-group col-sm-4'>
+          <%= f.label :laboratory %>
+          <%= f.input :laboratory, input_html: { class: 'form-control' } %>
+        </div>
+        <div class='form-group col-sm-4'>
+          <%= f.label :education_type %>
+          <%= f.input :education_type,
+                      collection: enum_options_for_select(f.object.class, :education_type),
+                      input_html: { class: 'form-control' } %>
+        </div>
+        <div class='form-group col-sm-4'>
+          <%= f.label :language %>
+          <%= f.input :language, input_html: { class: 'form-control' } %>
+        </div>
+        <div class='form-group col-sm-4'>
+          <%= f.label :status %>
+          <%= f.input :status,
+                      collection: enum_options_for_select(f.object.class, :status),
+                      input_html: { class: 'form-control' } %>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, class: 'btn btn-success' %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#course_unit_id, #course_education_type, #course_status').select2();
+  });
+</script>

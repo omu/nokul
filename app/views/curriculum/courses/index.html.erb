@@ -1,0 +1,54 @@
+<div class="well shadow">
+  <%= link_to_new new_course_path, text: 'Yeni Ders Ekle' %>
+</div>
+
+<div class="card shadow">
+  <div class="card-header">
+    <h4 class="text-center">Dersler</h4>
+  </div>
+  <div class="card-body">
+    <table class='table table-responsive-sm table-striped table-hover'>
+      <thead class="thead-inverse">
+        <tr>
+          <th><%= t('.name') %></th>
+          <th><%= t('.code') %></th>
+          <th><%= t('.unit') %></th>
+          <th><%= t('.theoric') %></th>
+          <th><%= t('.practice') %></th>
+          <th><%= t('.credit') %></th>
+          <th><%= t('.education_type') %></th>
+          <th><%= t('.language') %></th>
+          <th><%= t('.status') %></th>
+          <th><%= t('actions') %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @courses.each do |course| %>
+          <tr class="<%= course.active? ? '' : 'table-warning' %>">
+            <td><%= course.name %></td>
+            <td><%= course.code %></td>
+            <td><%= course.unit.try(:name) %></td>
+            <td><%= course.theoric %></td>
+            <td><%= course.practice %></td>
+            <td><%= course.credit %></td>
+            <td><%= enum_t(course, :education_type) %></td>
+            <td><%= course.language %></td>
+            <td><%= enum_t(course, :status) %></td>
+            <td>
+              <%= link_to_show course %>
+              <%= link_to_edit edit_course_path(course) %>
+              <%= link_to_destroy course %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="card-footer">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <%== pagy_nav_bootstrap(@pagy) %>
+      </ul>
+    </nav>
+  </div>
+</div>
