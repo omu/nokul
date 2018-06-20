@@ -21,6 +21,8 @@
 /vendor/*
 /coverage
 .byebug_history
+.vagrant/*
+.env
 
 # never remove!
 config/master.key
