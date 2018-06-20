@@ -1,0 +1,58 @@
+<div class="well shadow">
+  <%= link_to_back courses_path %>
+  <%= link_to_edit edit_course_path(@course) %>
+</div>
+
+<div class="card shadow">
+  <div class="card-header">
+    <h4 class="text-center"><%= @course.name %></h4>
+  </div>
+  <div class="card-body table-responsive">
+    <table class='table table-bordered table-hover'>
+      <tbody>
+        <tr>
+          <th><%= t('.unit') %></th>
+          <td><%= @course.unit.try(:name) %></td>
+        </tr>
+        <tr>
+          <th><%= t('.name') %></th>
+          <td><%= @course.name %></td>
+        </tr>
+        <tr>
+          <th><%= t('.code') %></th>
+          <td><%= @course.code %></td>
+        </tr>
+        <tr>
+          <th><%= t('.theoric') %></th>
+          <td><%= @course.theoric %></td>
+        </tr>
+        <tr>
+          <th><%= t('.practice') %></th>
+          <td><%= @course.practice %></td>
+        </tr>
+        <tr>
+          <th><%= t('.laboratory') %></th>
+          <td><%= @course.laboratory %></td>
+        </tr>
+        <tr>
+          <th><%= t('.credit') %></th>
+          <td><%= @course.credit %></td>
+        </tr>
+        <tr>
+          <th><%= t('.education_type') %></th>
+          <td><%= enum_t(@course, :education_type) %></td>
+        </tr>
+        <tr>
+          <th><%= t('.language') %></th>
+          <td><%= @course.language %></td>
+        </tr>
+        <tr>
+          <th><%= t('.status') %></th>
+          <td><%= enum_t(@course, :status) %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card-footer">
+  </div>
+</div>
