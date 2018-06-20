@@ -39,4 +39,3 @@ AllCops:
     - config/routes.rb
     - app/services/kps/omu/adres.rb # WIP
     - app/services/kps/omu/kimlik.rb # WIP
-    - app/controllers/units_controller.rb # WIP

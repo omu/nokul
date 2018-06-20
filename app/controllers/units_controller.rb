@@ -6,33 +6,19 @@ class UnitsController < ApplicationController
   before_action :set_unit, only: %i[edit update destroy show]
 
   def index
-    # TODO: refactor
-
     breadcrumb 'Birimler', units_path
 
-    @units = Unit.includes(:unit_status, :unit_instruction_language, :unit_instruction_type, district: [:city])
+    units = Unit.includes(:unit_status, :unit_instruction_language, :unit_instruction_type, district: [:city])
 
-    search_params = []
-    %i[duration unit_status_id unit_instruction_type_id unit_instruction_language_id].each do |param|
-      search_params << [param.to_s, params[param]] if params[param].present?
-    end
-
-    if params[:term]
-      @units = @units.search(params[:term])
-    elsif search_params.any?
-      search_params.each do |column, value|
-        @units = @units.where("#{column}": value.to_s)
-      end
-    else
-      @units = @units.all
-    end
-
-    @pagy, @units = pagy(@units)
+    @pagy, @units = if params[:term].present?
+                      pagy(smart_search(units))
+                    else
+                      pagy(dynamic_search(units))
+                    end
   end
 
   def show
     breadcrumb @unit.name, unit_path(@unit), match: :exact
-    # breadcrumb 'Yeni Akademik Dönem', :new_academic_term_path
   end
 
   def new
@@ -56,10 +42,21 @@ class UnitsController < ApplicationController
   end
 
   def destroy
-    @unit.destroy ? redirect_to(units_path, notice: t('success')) : redirect_with('warning')
+    @unit.destroy ? redirect_to(units_path, notice: t('.success')) : redirect_with('warning')
   end
 
   private
+
+  def smart_search(units)
+    units.search(params[:term])
+  end
+
+  def dynamic_search(units)
+    %i[duration unit_status_id unit_instruction_type_id unit_instruction_language_id].each do |param|
+      units = units.send(param, params[param]) if params[param].present?
+    end
+    units
+  end
 
   def set_unit
     @unit = Unit.find(params[:id])
