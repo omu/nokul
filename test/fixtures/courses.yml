@@ -1,0 +1,51 @@
+ati:
+  name: Atatürk İlke ve Inkılapları Tarihi
+  code: ATI101
+  theoric: 3
+  practice: 0
+  credit: 2
+  laboratory: 0
+  unit: omu
+  education_type: :undergraduate
+  language: Türkçe
+  status: :active
+  abrogated_date: nil
+
+ydi:
+  name: İngilizce
+  code: YDI101
+  theoric: 3
+  practice: 0
+  credit: 2
+  laboratory: 1
+  unit: omu
+  education_type: :undergraduate
+  language: İngilizce
+  status: :active
+  abrogated_date: nil
+
+test:
+  name: 'Test Course'
+  code: TC101
+  theoric: 5
+  practice: 2
+  credit: 3
+  laboratory: 0
+  unit: omu
+  education_type: :undergraduate
+  language: Türkçe
+  status: :active
+  abrogated_date: nil
+
+fi_tarihi:
+  name: 'Fi Tarihi'
+  code: FT101
+  theoric: 3
+  practice: 0
+  credit: 2
+  laboratory: 0
+  unit: omu
+  education_type: :undergraduate
+  language: Türkçe
+  status: :abrogated
+  abrogated_date: 15.05.2018
