@@ -1,0 +1,11 @@
+en:
+  actions: Actions
+  action_group:
+    add: Add
+    back: Back
+    destroy: Destroy
+    edit: Edit
+    new: New
+    show: Show
+    update: Update
+  are_you_sure: Are you sure?
