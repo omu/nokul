@@ -44,10 +44,11 @@ jobs:
   deploy:
     machine:
       enabled: true
+    working_directory: ~/nokul
     steps:
+      - checkout
       - run:
           name: Deploy Master to Dokku
-          working_directory: ~/nokul
           command: |
             git remote add beta dokku@app.omu.sh:nokul &&
             git push beta master
