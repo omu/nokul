@@ -37,6 +37,10 @@ Rails.application.routes.draw do
 
   resources :units
 
+  scope module: :curriculum do
+    resources :courses
+  end
+
   scope module: :locations do
     resources :countries do
       resources :cities do
