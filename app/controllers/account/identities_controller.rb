@@ -6,14 +6,20 @@ module Account
     before_action :check_formality, only: %i[edit update destroy]
 
     def index
+      breadcrumb t('.card_header'), identities_path
       @identities = current_user.identities
     end
 
     def new
+      breadcrumb t('.index.card_header'), identities_path, match: :exact
+      breadcrumb t('.form_title'), identities_path
       @identity = current_user.identities.informal.new
     end
 
-    def edit; end
+    def edit
+      breadcrumb t('.index.card_header'), identities_path, match: :exact
+      breadcrumb t('.form_title'), identities_path
+    end
 
     def create
       @identity = current_user.identities.informal.new(identity_params)
