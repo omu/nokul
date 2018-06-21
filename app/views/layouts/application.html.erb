@@ -62,56 +62,7 @@
       </button>
     </header>
     <div class="app-body">
-      <div class="sidebar">
-        <nav class="sidebar-nav">
-          <ul class="nav">
-            <li class="nav-item">
-              <%= link_to root_path, class: 'nav-link' do %>
-                <%= fa_icon('home', class: 'nav-icon') %> Anasayfa
-              <% end %>
-            </li>
-            <li class="nav-item">
-              <%= link_to units_path, class: 'nav-link' do %>
-                <%= fa_icon('sitemap', text: 'Birimler', class: 'nav-icon') %>
-              <% end %>
-            </li>
-            <li class="nav-item">
-              <%= link_to root_path, class: 'nav-link' do %>
-                <%= fa_icon('map-marker', text: 'Konumlar', class: 'nav-icon') %>
-              <% end %>
-            </li>
-            <li class="nav-item nav-dropdown">
-              <a class="nav-link nav-dropdown-toggle" href="#">
-                <%= fa_icon('calendar', class: 'nav-icon') %>Akademik Takvim
-              </a>
-              <ul class="nav-dropdown-items">
-                <li class="nav-item">
-                  <%= link_to calendar_titles_path, class: 'nav-link' do %>
-                    <%= fa_icon('calendar-plus-o', text: 'Takvim Başlığı', class: 'nav-icon') %>
-                  <% end %>
-                </li>
-                <li class="nav-item">
-                  <%= link_to calendar_types_path, class: 'nav-link' do %>
-                    <%= fa_icon('calendar-check-o', text: 'Takvim Türleri', class: 'nav-icon') %>
-                  <% end %>
-                </li>
-                <li class="nav-item">
-                  <%= link_to academic_terms_path, class: 'nav-link' do %>
-                    <%= fa_icon('graduation-cap', text: 'Akademik Dönemler', class: 'nav-icon') %>
-                  <% end %>
-                </li>
-                <li class="nav-item">
-                  <%= link_to academic_calendars_path, class: 'nav-link' do %>
-                    <%= fa_icon('calendar', text: 'Akademik Takvimler', class: 'nav-icon') %>
-                  <% end %>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-        <button class="sidebar-minimizer brand-minimizer" type="button"></button>
-      </div>
-
+      <%= render 'layouts/shared/sidebar' %>
       <main class="main">
         <ol class='breadcrumb'>
           <% breadcrumb_trail do |crumb| %>

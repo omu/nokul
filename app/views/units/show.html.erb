@@ -3,9 +3,6 @@
     <div class="card-header">
       <%= fa_icon 'university' %><strong><%= @unit.name %></strong>
       <div class="card-header-actions">
-        <%= link_to new_unit_path, class: "card-header-action" do %>
-          <%= fa_icon 'plus', text: 'Yeni Ekle' %>
-        <% end %>
         <%= link_to edit_unit_path(@unit), class: "card-header-action" do %>
           <%= fa_icon 'edit', text: 'Düzenle' %>
         <% end %>
@@ -21,6 +18,7 @@
           <tr>
             <td>Üst Birim</td>
             <td><%= @unit.parent.try(:name) %></td>
+          </tr>
           <tr>
             <td>YOKSIS ID</td>
             <td><%= @unit.yoksis_id %></td>

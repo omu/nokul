@@ -52,7 +52,7 @@ require 'pagy/extras/bootstrap'
 # Pagy::Frontend::I18N Constant
 # See https://ddnexus.github.io/pagy/api/frontend#i18n
 # Pagy::Frontend::I18N[:plurals] = -> (c) {([:zero, :one][c] || :other).to_s   # default
-# Pagy::Frontend::I18N.load_file('path/to/dictionary.yml')                     # load a custom file
+Pagy::Frontend::I18N.load_file('config/locales/pagy/tr.yml') # load a custom file
 
 # Rails: extras assets path required by compact, items qnd responsive extras
 # See https://ddnexus.github.io/pagy/extras/compact and https://ddnexus.github.io/pagy/extras/responsive

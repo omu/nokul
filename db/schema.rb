@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_25_173627) do
+ActiveRecord::Schema.define(version: 2018_06_21_072455) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -85,14 +85,31 @@ ActiveRecord::Schema.define(version: 2018_05_25_173627) do
     t.string "name", null: false
     t.string "iso", null: false
     t.string "nuts_code", null: false
-    t.bigint "region_id"
-    t.index ["region_id"], name: "index_cities_on_region_id"
+    t.bigint "country_id"
+    t.index ["country_id"], name: "index_cities_on_country_id"
   end
 
   create_table "countries", force: :cascade do |t|
     t.string "name", null: false
     t.string "iso", null: false
     t.integer "code", null: false
+  end
+
+  create_table "courses", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "code", null: false
+    t.integer "theoric", null: false
+    t.integer "practice", null: false
+    t.integer "laboratory", null: false
+    t.decimal "credit", precision: 5, scale: 2, default: "0.0", null: false
+    t.bigint "unit_id"
+    t.integer "education_type", null: false
+    t.string "language", null: false
+    t.integer "status", null: false
+    t.date "abrogated_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["unit_id"], name: "index_courses_on_unit_id"
   end
 
   create_table "districts", force: :cascade do |t|
@@ -149,13 +166,6 @@ ActiveRecord::Schema.define(version: 2018_05_25_173627) do
     t.datetime "updated_at", null: false
     t.index ["administrative_function_id"], name: "index_positions_on_administrative_function_id"
     t.index ["duty_id"], name: "index_positions_on_duty_id"
-  end
-
-  create_table "regions", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "nuts_code", null: false
-    t.bigint "country_id"
-    t.index ["country_id"], name: "index_regions_on_country_id"
   end
 
   create_table "student_disability_types", force: :cascade do |t|
@@ -310,7 +320,8 @@ ActiveRecord::Schema.define(version: 2018_05_25_173627) do
   add_foreign_key "calendar_events", "calendar_titles"
   add_foreign_key "calendar_title_types", "calendar_titles", column: "title_id"
   add_foreign_key "calendar_title_types", "calendar_types", column: "type_id"
-  add_foreign_key "cities", "regions"
+  add_foreign_key "cities", "countries"
+  add_foreign_key "courses", "units"
   add_foreign_key "districts", "cities"
   add_foreign_key "duties", "employees"
   add_foreign_key "duties", "units"
@@ -320,7 +331,6 @@ ActiveRecord::Schema.define(version: 2018_05_25_173627) do
   add_foreign_key "identities", "users"
   add_foreign_key "positions", "administrative_functions"
   add_foreign_key "positions", "duties"
-  add_foreign_key "regions", "countries"
   add_foreign_key "students", "units"
   add_foreign_key "students", "users"
   add_foreign_key "unit_calendar_events", "academic_calendars"
