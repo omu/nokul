@@ -6,7 +6,7 @@ class CreateCities < ActiveRecord::Migration[5.1]
       t.string :name, unique: true, null: false
       t.string :iso, unique: true, null: false
       t.string :nuts_code, unique: true, null: false
-      t.references :region, foreign_key: true
+      t.references :country, foreign_key: true
     end
   end
 end
