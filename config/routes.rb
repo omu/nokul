@@ -37,9 +37,11 @@ Rails.application.routes.draw do
 
   resources :units
 
-  resources :countries do
-    resources :cities do
-      resources :districts do
+  scope module: :locations do
+    resources :countries do
+      resources :cities do
+        resources :districts do
+        end
       end
     end
   end

@@ -2,7 +2,6 @@
 
 class UnitsController < ApplicationController
   include Pagy::Backend
-
   before_action :set_unit, only: %i[edit update destroy show]
 
   def index
@@ -18,7 +17,8 @@ class UnitsController < ApplicationController
   end
 
   def show
-    breadcrumb @unit.name, unit_path(@unit), match: :exact
+    breadcrumb 'Birimler', units_path, match: :exact
+    breadcrumb @unit.name, unit_path(@unit)
   end
 
   def new
