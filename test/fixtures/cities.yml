@@ -2,29 +2,29 @@ samsun:
   name: Samsun
   iso: TR-55
   nuts_code: TR831
-  region: bati_karadeniz
+  country: turkey
 sinop:
   name: Sinop
   iso: TR-57
   nuts_code: TR823
-  region: bati_karadeniz
+  country: turkey
 tokat:
   name: Tokat
   iso: TR-50
   nuts_code: TR832
-  region: bati_karadeniz
+  country: turkey
 rize:
   name: Rize
   iso: TR-53
   nuts_code: TR904
-  region: dogu_karadeniz
+  country: turkey
 ordu:
   name: Trabzon
   iso: TR-61
   nuts_code: TR901
-  region: dogu_karadeniz
+  country: turkey
 stockholm:
   name: Stockholm
   iso: SE-11
   nuts_code: SE110
-  region: east_sweden
+  country: sweden
