@@ -120,7 +120,7 @@
                 <td><%= unit.unit_instruction_type.try(:name) %></td>
                 <td><%= link_to('Görüntüle', unit_path(unit), class: 'btn btn-secondary btn-sm') %></td>
                 <td><%= link_to('Düzenle', edit_unit_path(unit), class: 'btn btn-secondary btn-sm') %></td>
-                <td><%= link_to('Sil', unit, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm') %></td>
+                <td><%= link_to('Sil', unit, method: :delete, data: { confirm: 'Emin misiniz? Bu işlem geri alınamaz.' }, class: 'btn btn-danger btn-sm') %></td>
               </tr>
             <% end %>
           </tbody>
