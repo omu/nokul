@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-
+#
 # Uncomment this and change the path if necessary to include your own
 # components.
 # See https://github.com/plataformatec/simple_form#custom-components to know
@@ -52,10 +52,10 @@ SimpleForm.setup do |config|
     b.optional :readonly
 
     ## Inputs
-    b.use :input, class: 'input', error_class: 'is-invalid', valid_class: 'is-valid'
-    # b.use :label_input
-    b.use :hint, wrap_with: { tag: :span, class: 'help-block' }
-    b.use :error, wrap_with: { tag: :div, class: 'invalid-feedback' }
+    # b.use :input, class: 'input', error_class: 'is-invalid', valid_class: 'is-valid'
+    b.use :label_input
+    b.use :hint,  wrap_with: { tag: :span, class: :hint }
+    b.use :error, wrap_with: { tag: :span, class: :error }
 
     ## full_messages_for
     # If you want to display the full error message for the attribute, you can
@@ -130,10 +130,10 @@ SimpleForm.setup do |config|
   # in this configuration, which is recommended due to some quirks from different browsers.
   # To stop SimpleForm from generating the novalidate option, enabling the HTML5 validations,
   # change this configuration to true.
-  config.browser_validations = true
+  config.browser_validations = false
 
   # Collection of methods to detect if a file type was given.
-  # config.file_methods = [ :mounted_as, :file?, :public_filename :attached? ]
+  # config.file_methods = [ :mounted_as, :file?, :public_filename, :attached? ]
 
   # Custom mappings for input types. This should be a hash containing a regexp
   # to match as key, and the input type that will be used when the field name
@@ -177,6 +177,6 @@ SimpleForm.setup do |config|
   # config.i18n_scope = 'simple_form'
 
   # Defines validation classes to the input_field. By default it's nil.
-  config.input_field_valid_class = 'is-valid'
-  config.input_field_error_class = 'is-invalid'
+  # config.input_field_valid_class = 'is-valid'
+  # config.input_field_error_class = 'is-invalid'
 end
