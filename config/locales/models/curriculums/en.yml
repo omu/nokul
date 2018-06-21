@@ -24,7 +24,7 @@ en:
           passive: Passive
           active: Active
           abrogated: Abrogated
-  
+
   curriculum:
     courses:
       create:
@@ -38,7 +38,7 @@ en:
         *course_attributes
       index:
         *course_attributes
-  
+
   simple_form:
     labels:
       course:

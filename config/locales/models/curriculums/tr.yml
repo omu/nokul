@@ -17,7 +17,7 @@ tr:
     enums:
       course:
         education_types:
-          undergraduate: Onlisans/Lisans
+          undergraduate: Önlisans/Lisans
           master: Yüksek Lisans
           doctoral: Doktora
         statuses:
@@ -38,7 +38,7 @@ tr:
         *course_attributes
       index:
         *course_attributes
-  
+
   simple_form:
     labels:
       course:
