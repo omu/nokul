@@ -33,6 +33,6 @@ class Course < ApplicationRecord
   default_scope -> { order('name DESC') }
 
   def calculate_credit
-    theoric + (practice.to_f / 2)
+    theoric.to_f + (practice.to_f / 2)
   end
 end
