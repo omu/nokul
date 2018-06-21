@@ -9,7 +9,6 @@ class Unit < ApplicationRecord
   pg_search_scope(
     :search,
     against: %i[name yoksis_id],
-    associated_against: { district: :name },
     using: { tsearch: { prefix: true } }
   )
 
@@ -56,4 +55,10 @@ class Unit < ApplicationRecord
     rectorship: 17,
     research_center: 18
   }
+
+  # dynamic search scopes
+  scope :duration, ->(time) { where(duration: time) }
+  scope :unit_status_id, ->(id) { where(unit_status_id: id) }
+  scope :unit_instruction_type_id, ->(id) { where(unit_instruction_type_id: id) }
+  scope :unit_instruction_language_id, ->(id) { where(unit_instruction_language_id: id) }
 end

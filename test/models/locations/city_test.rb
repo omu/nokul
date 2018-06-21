@@ -5,7 +5,6 @@ require 'test_helper'
 class CityTest < ActiveSupport::TestCase
   # relations
   %i[
-    region
     districts
     addresses
     units
@@ -47,7 +46,7 @@ class CityTest < ActiveSupport::TestCase
       name: 'wonderland',
       nuts_code: 'wl1',
       iso: 'wl11',
-      region: regions(:bati_karadeniz)
+      country: countries(:turkey)
     )
     assert_equal city.name, 'Wonderland'
     assert_equal city.nuts_code, 'WL1'

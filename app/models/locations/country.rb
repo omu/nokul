@@ -3,9 +3,16 @@
 class Country < ApplicationRecord
   # name, iso and code fields follow the ISO3166 standard.
 
+  # search
+  include PgSearch
+  pg_search_scope(
+    :search,
+    against: %i[name iso],
+    using: { tsearch: { prefix: true } }
+  )
+
   # relations
-  has_many :regions, dependent: :nullify
-  has_many :cities, through: :regions
+  has_many :cities, dependent: :nullify
   has_many :districts, through: :cities
   has_many :addresses, through: :districts
   has_many :units, through: :districts
