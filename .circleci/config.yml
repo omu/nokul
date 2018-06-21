@@ -41,3 +41,25 @@ jobs:
       - run: bundle exec rake security:all
       - run: bundle exec rake db:migrate
       - run: bundle exec rake test
+  deploy:
+    machine:
+      enabled: true
+    steps:
+      - run:
+          name: Deploy Master to Dokku
+          working_directory: ~/nokul
+          command: |
+            git remote add beta dokku@app.omu.sh:nokul &&
+            git push beta master
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
