@@ -21,7 +21,7 @@
 /vendor/*
 /coverage
 .byebug_history
-.vagrant/*
+.vagrant*/
 .env
 
 # never remove!
