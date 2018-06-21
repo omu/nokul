@@ -44,7 +44,6 @@ jobs:
   deploy:
     machine:
       enabled: true
-    working_directory: ~/nokul
     steps:
       - checkout
       - run:
