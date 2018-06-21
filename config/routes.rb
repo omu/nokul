@@ -40,4 +40,13 @@ Rails.application.routes.draw do
   scope module: :curriculum do
     resources :courses
   end
+
+  scope module: :locations do
+    resources :countries do
+      resources :cities do
+        resources :districts do
+        end
+      end
+    end
+  end
 end

@@ -4,3 +4,28 @@ tr:
     country: "Ülke"
     region: "Bölge"
     district: "İlçe"
+
+    countries:
+      update:
+        success: Ülke başarıyla güncellendi.
+      create:
+        success: Ülke başarıyla oluşturuldu.
+      destroy:
+        success: Ülke başarıyla silindi!
+        warning: Ülke silinemedi!
+    cities:
+      update:
+        success: Şehir başarıyla güncellendi.
+      create:
+        success: Şehir başarıyla oluşturuldu.
+      destroy:
+        success: Şehir başarıyla silindi!
+        warning: Şehir silinemedi!
+  helpers:
+    submit:
+      country:
+        create: Ülke Oluştur
+        update: Ülkeyi Güncelle
+      city:
+        create: Şehir Oluştur
+        update: Şehri Güncelle

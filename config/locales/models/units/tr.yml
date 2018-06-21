@@ -30,5 +30,5 @@ tr:
   helpers:
     submit:
       unit:
-        create: Birim oluştur
-        update: Birimi güncelle
+        create: Birim Oluştur
+        update: Birimi Güncelle
