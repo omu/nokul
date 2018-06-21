@@ -1,0 +1,13 @@
+{
+  "name": "nokul",
+  "description": "Nokul, nitelikli okul universiteler icin ogrenci ve personel otomasyonudur.",
+  "keywords": [
+    "dokku",
+    "rails"
+  ],
+  "scripts": {
+    "dokku": {
+      "postdeploy": "bundle exec rails db:migrate"
+    }
+  }
+}
