@@ -52,6 +52,7 @@ group :development, :test do
   gem 'capybara', '>= 2.15', '< 4.0'
   gem 'chromedriver-helper'
   gem 'codacy-coverage', require: false
+  gem 'dotenv-rails'
   gem 'pry-rails'
   gem 'rails_best_practices'
   gem 'reek'
