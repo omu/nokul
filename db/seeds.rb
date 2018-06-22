@@ -45,3 +45,35 @@ Rake::Task['yoksis:import_departments'].invoke
 
 # Import Academic Staff from YOKSIS
 # Rake::Task['yoksis:fetch_academic_staff'].invoke
+
+# TODO: Below lines will not be in production
+# Create sample calendar titles
+CalendarTitle.create(name: 'Açılan derslerin ilanı')
+CalendarTitle.create(name: 'Ders Kayıtları')
+CalendarTitle.create(name: 'Derslerin Başlaması')
+CalendarTitle.create(name: 'Ders Ekleme ve Bırakma')
+CalendarTitle.create(name: 'Derslerin Bitimi')
+CalendarTitle.create(name: 'Ara Sınav Haftası')
+CalendarTitle.create(name: 'Yarıyıl Sonu Sınav Haftası')
+CalendarTitle.create(name: 'Bütünleme Sınav Haftası')
+CalendarTitle.create(name: 'Çift Anadal ve Yandal Başvuruları')
+CalendarTitle.create(name: 'Çift Anadal ve Yandal Başvurularının Birimlerce Değerlendirilmesi ve İlanı')
+CalendarTitle.create(name: 'Zorunlu Hazırlık Sınıfları Yabancı Dil Yeterlik Sınavı')
+CalendarTitle.create(name: 'Yeterlik Sınav Sonuçlarının İlanı')
+CalendarTitle.create(name: 'Hazırlık Sınıfları İçin Düzey Belirleme Sınavı')
+CalendarTitle.create(name: 'Öğrencilerin WEB\'de Ders Kayıtları (Çiftanadal, Yandal Öğrencileri Dahil)')
+CalendarTitle.create(name: 'Yabancı Dil Muafiyet Sınavları (5/i Dersleri İçin)')
+CalendarTitle.create(name: 'Danışman Onay İşlemleri, Kontenjan Nedeni ile Açılamayan Seçmeli Dersteki Öğrencilerin Danışmanlarca Bir Başka Seçmeli Derse Aktarılması')
+CalendarTitle.create(name: 'Mazeretli Ders Kaydı Başvuruları Son Günü')
+CalendarTitle.create(name: 'Ara Mazeret Sınav Başvurusu Son Günü')
+CalendarTitle.create(name: 'Yarıyıl Sonu Sınav Sonuçlarının İnternetten Girilmesinin Son Günü ve Sonuçların İlanı')
+CalendarTitle.create(name: 'Bütünleme Sınav Sonuçlarının İnternetten Girilmesinin Son Günü')
+CalendarTitle.create(name: 'Tek Ders Sınav Müracaatları')
+CalendarTitle.create(name: 'Tek Ders Sınavları')
+CalendarTitle.create(name: 'Tek Ders Sınav Sonuçlarının ÖİDB\'ye Gönderilmesi')
+CalendarTitle.create(name: 'Doktora Yeterlik Sınavları')
+CalendarTitle.create(name: 'Dönem Projesi Teslimi')
+CalendarTitle.create(name: 'Öğrencilerin WEB\'de Ders Kayıtları')
+CalendarTitle.create(name: 'Ek Sınav Müracaatlarının Son Günü (Önlisans öğrencileri için)')
+CalendarTitle.create(name: 'Ek Sınav Tarihleri (Önlisans öğrencileri için)')
+CalendarTitle.create(name: 'Ek Sınav Sonuçlarının ÖİDB\'ye Gönderilmesi')

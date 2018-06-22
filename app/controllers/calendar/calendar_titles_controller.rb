@@ -2,17 +2,29 @@
 
 module Calendar
   class CalendarTitlesController < ApplicationController
+    include Pagy::Backend
     before_action :set_calendar_title, only: %i[edit update destroy]
 
     def index
-      @calendar_titles = CalendarTitle.all
+      breadcrumb t('.card_header'), calendar_titles_path
+
+      @pagy, @calendar_titles = if params[:term].present?
+                                  pagy(CalendarTitle.search(params[:term]))
+                                else
+                                  pagy(CalendarTitle.all)
+                                end
     end
 
     def new
+       breadcrumb t('.index.card_header'), calendar_titles_path, match: :exact
+       breadcrumb t('.form_title'), new_calendar_title_path
       @calendar_title = CalendarTitle.new
     end
 
-    def edit; end
+    def edit
+       breadcrumb t('.index.card_header'), calendar_titles_path, match: :exact
+       breadcrumb t('.form_title'), edit_calendar_title_path
+    end
 
     def create
       @calendar_title = CalendarTitle.new(calendar_title_params)
