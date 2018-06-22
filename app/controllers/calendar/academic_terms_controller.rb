@@ -2,17 +2,24 @@
 
 module Calendar
   class AcademicTermsController < ApplicationController
+    include Pagy::Backend
     before_action :set_academic_term, only: %i[edit update destroy]
 
     def index
-      @academic_terms = AcademicTerm.all
+      breadcrumb t('.card_header'), academic_terms_path
+      @pagy, @academic_terms = pagy(AcademicTerm.all)
     end
 
     def new
+       breadcrumb t('.index.card_header'), academic_terms_path, match: :exact
+       breadcrumb t('.form_title'), new_academic_term_path
       @academic_term = AcademicTerm.new
     end
 
-    def edit; end
+    def edit
+       breadcrumb t('.index.card_header'), academic_terms_path, match: :exact
+       breadcrumb t('.form_title'), edit_academic_term_path
+    end
 
     def create
       @academic_term = AcademicTerm.new(academic_term_params)

@@ -1,11 +1,1 @@
-<div class="card">
-  <div class="card-title">
-    <br><h3 class="text-center">Akademik Dönem Düzenleme</h3>
-  </div>
-  <div class="card-body">
-    <%= render 'form', academic_term: @academic_term %>
-  </div>
-  <div class="card-footer">
-    <%= link_to 'Geri', :back %>
-  </div>
-</div>
+<%= render 'form', academic_term: @academic_term, form_title: t('.form_title') %>
