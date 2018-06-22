@@ -39,9 +39,6 @@
                 <%= current_user.addresses.count %>
               <% end %>
             <% end %>
-            <%= link_to root_path, class: 'dropdown-item' do %>
-              <%= fa_icon('try', text: 'IBAN Bilgilerim') %>
-            <% end %>
             <div class="dropdown-header text-center">
               <strong>Ayarlar</strong>
             </div>
@@ -73,11 +70,7 @@
         </ol>
         <div class="container-fluid">
           <div class="animated fadeIn">
-            <div class="row">
-              <div class="col">
-                <%= yield %>
-              </div>
-            </div>
+            <%= yield %>
           </div>
         </div>
       </main>

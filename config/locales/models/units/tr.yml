@@ -20,6 +20,28 @@ tr:
     proficiency_in_art_program: 'Sanatta Yeterlilik Programı'
     undergraduate_program: 'Önlisans/Lisans Programı'
 
+  activerecord:
+    enums:
+      unit:
+        types:
+          university: 'Üniversite'
+          academy: 'Yüksekokul'
+          art_discipline: 'Anasanat Dalı'
+          department: 'Bölüm'
+          discipline: 'Bilim Dalı'
+          faculty: 'Fakülte'
+          institute: 'Enstitü'
+          interdisciplinary_discipline: 'Disiplinlerarası Anabilim Dalı'
+          rectorship: 'Rektörlük'
+          research_center: 'Araştırma Ve Uygulama Merkezi'
+          science_discipline: 'Anabilim Dalı'
+          vocational_school: 'Meslek Yüksekokulu'
+          doctoral_program: 'Doktora Programı'
+          interdisciplinary_doctoral_program: 'Disiplinlerarası Doktora Programı'
+          interdisciplinary_master_program: 'Disiplinlerarası Yüksek Lisans Programı'
+          master_program: 'Yüksek Lisans Programı'
+          proficiency_in_art_program: 'Sanatta Yeterlilik Programı'
+          undergraduate_program: 'Önlisans/Lisans Programı'
     update:
       success: Birim başarıyla güncellendi.
     create:
