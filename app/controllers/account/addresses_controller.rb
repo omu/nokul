@@ -6,14 +6,20 @@ module Account
     before_action :check_formality, only: %i[edit update destroy]
 
     def index
-      @addresses = current_user.addresses
+      breadcrumb t('.card_header'), addresses_path
+      @addresses = current_user.addresses.includes(district: [:city])
     end
 
     def new
+      breadcrumb t('.index.card_header'), addresses_path, match: :exact
+      breadcrumb t('.form_title'), addresses_path
       @address = current_user.addresses.new
     end
 
-    def edit; end
+    def edit
+      breadcrumb t('.index.card_header'), addresses_path, match: :exact
+      breadcrumb t('.form_title'), addresses_path
+    end
 
     def create
       @address = current_user.addresses.new(address_params)

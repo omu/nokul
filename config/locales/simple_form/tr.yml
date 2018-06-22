@@ -37,8 +37,3 @@ tr:
         calendar_title_types:
           title: 'Başlık'
           status: 'Durum'
-      address:
-        name: Adres türü
-        phone_number: Telefon numarası
-        full_address: Açık Adres
-        district: İlçe

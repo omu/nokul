@@ -1,8 +1,40 @@
 tr:
+  activerecord:
+    attributes:
+      address: &address_attributes
+        name: Adres Türü
+        phone_number: Cep Telefonu Numarası
+        full_address: Açık Adres
+        district: İlçe
+    enums:
+      address:
+        names:
+          formal: Resmi Adres
+          home: Ev Adresi
+          work: İş Adresi
+          other: Diğer Adres
+  helpers:
+    submit:
+      address:
+        create: Adresi Kaydet
+        update: Adresi Güncelle
+  validators:
+    address:
+      max_total: En fazla %{limit} tane adres ekleyebilirsiniz.
+      max_legal: En fazla %{limit} tane ikamet adresiniz olabilir.
   account:
     addresses:
+      index:
+        <<: *address_attributes
+        new_address: Yeni Adres Ekle
+        card_header: Adres Bilgileri
+        district_and_city: İlçe / İl
+        update_from_mernis: MERNİS'ten Güncelle
+      new:
+        form_title: Adres Oluştur
       edit:
         warning: Yasal ikamet adresinizi düzenleyemezsiniz!
+        form_title: Adresi Düzenle
       create:
         success: Adres başarıyla oluşturuldu!
       update:
@@ -13,8 +45,3 @@ tr:
       mernis:
         wait: Adresinizi yakın bir zamanda oluşturdunuz veya güncellediniz. Adresinizi haftada bir güncelleyebilirsiniz.
         will_update: Adres güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde adresiniz güncellenecek.
-  helpers:
-    submit:
-      address:
-        create: Adresi kaydet
-        update: Adresi güncelle

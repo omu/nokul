@@ -1,15 +1,39 @@
-<%= simple_form_for(address) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-  <div class="form-inputs">
-    <%= f.input :name, collection: f.object.class.names.except!(:formal).keys %>
-    <%= f.input :phone_number %>
-    <%= f.input :full_address %>
-    <%= f.association :district %>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'id-card' %>
+        <strong><%= form_title %></strong>
+      </div>
+      <div class="card-body">
+        <%= simple_form_for(address, html: { class: 'vertical-form' }) do |f| %>
+          <div class="row">
+            <div class='form-group col-sm-12'>
+              <%= f.error_notification %>
+              <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+            </div>
+            <div class='form-group col-sm-4'>
+              <%= f.input :name, collection: enum_options_for_select(f.object.class, :name) %>
+            </div>
+            <div class='form-group col-sm-4'>
+              <%= f.association :district, collection: City.includes(:districts).order(:name), as: :grouped_select, group_method: :districts, group_label_method: :name %>
+            </div>
+            <div class='form-group col-sm-4'>
+              <div class="country"></div>
+              <%= f.input :phone_number, placeholder: '555-444-3322' %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.input :full_address %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
+              <%= link_to_back(:back) %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
+</div>
 
-  <div class="form-actions">
-    <%= f.button :submit, class: 'btn btn-success' %>
-  </div>
-<% end %>
+<%= render 'select2' %>
