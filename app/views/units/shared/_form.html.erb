@@ -34,7 +34,9 @@
   </div>
   <div class='form-group'>
     <label>Birim Türü</label>
-    <%= f.input :type, label: false, collection: Unit.types.keys, input_html: { class: 'form-control' } %>
+    <%= f.input :type,
+               collection: enum_options_for_select(f.object.class, :type),
+               input_html: { class: 'form-control' } %>
   </div>
   <div class='form-group'>
     <label>Bulunduğu İlçe</label>

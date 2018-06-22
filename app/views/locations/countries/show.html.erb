@@ -1,74 +1,76 @@
-<div class="col-lg-12">
-  <div class="card">
-    <div class="card-header">
-      <%= fa_icon 'university' %><strong><%= @country.name %></strong>
-      <div class="card-header-actions">
-        <%= link_to edit_country_path(@country), class: "card-header-action" do %>
-          <%= fa_icon 'edit', text: 'Düzenle' %>
-        <% end %>
-        <%= link_to country_path(@country), class: "card-header-action", method: :delete, data: { confirm: 'Emin misiniz? Bu işlem geri alınamaz.' } do %>
-          <%= fa_icon 'trash', text: 'Sil' %>
-        <% end %>
-      </div>
-    </div>
-
-    <div class="card-body">
-      <table class="table table-responsive-sm">
-        <tbody>
-          <tr>
-            <td>Ülke Adı</td>
-            <td><%= @country.name %></td>
-          </tr>
-          <tr>
-            <td>YOKSIS ID</td>
-            <td><%= @country.iso %></td>
-          </tr>
-          <tr>
-            <td>Resmi Kod</td>
-            <td><%= @country.code %></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-header">
-      <%= fa_icon 'align-justify', text: 'Şehirler' %>
-      <div class="card-header-actions">
-        <%= link_to new_country_city_path(@country), class: "card-header-action" do %>
-          <%= fa_icon 'plus', text: 'Yeni Şehir Ekle' %>
-        <% end %>
-      </div>
-    </div>
-    <div class="card-body">
-      <table class="table table-responsive-sm table-striped">
-        <thead>
-          <tr>
-            <th>Şehir Adı</th>
-            <th>ISO</th>
-            <th>Nuts Kodu</th>
-            <th colspan="3">İşlemler</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @cities.each do |city| %>
-            <tr>
-              <td><%= city.name %></td>
-              <td><%= city.iso %></td>
-              <td><%= city.nuts_code %></td>
-              <td><%= link_to('Görüntüle', country_city_path(@country, city), class: 'btn btn-secondary btn-sm') %></td>
-              <td><%= link_to('Düzenle', edit_country_city_path(@country, city), class: 'btn btn-secondary btn-sm') %></td>
-              <td><%= link_to('Sil', country_city_path(@country, city), method: :delete, data: { confirm: 'Emin misiniz? Bu işlem geri alınamaz.' }, class: 'btn btn-danger btn-sm') %></td>
-            </tr>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'university' %><strong><%= @country.name %></strong>
+        <div class="card-header-actions">
+          <%= link_to edit_country_path(@country), class: "card-header-action" do %>
+            <%= fa_icon 'edit', text: 'Düzenle' %>
           <% end %>
-        </tbody>
-      </table>
+          <%= link_to country_path(@country), class: "card-header-action", method: :delete, data: { confirm: 'Emin misiniz? Bu işlem geri alınamaz.' } do %>
+            <%= fa_icon 'trash', text: 'Sil' %>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <table class="table table-responsive-sm">
+          <tbody>
+            <tr>
+              <td>Ülke Adı</td>
+              <td><%= @country.name %></td>
+            </tr>
+            <tr>
+              <td>YOKSIS ID</td>
+              <td><%= @country.iso %></td>
+            </tr>
+            <tr>
+              <td>Resmi Kod</td>
+              <td><%= @country.code %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
+
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'align-justify', text: 'Şehirler' %>
+        <div class="card-header-actions">
+          <%= link_to new_country_city_path(@country), class: "card-header-action" do %>
+            <%= fa_icon 'plus', text: 'Yeni Şehir Ekle' %>
+          <% end %>
+        </div>
+      </div>
+      <div class="card-body">
+        <table class="table table-responsive-sm table-striped">
+          <thead>
+            <tr>
+              <th>Şehir Adı</th>
+              <th>ISO</th>
+              <th>Nuts Kodu</th>
+              <th colspan="3">İşlemler</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @cities.each do |city| %>
+              <tr>
+                <td><%= city.name %></td>
+                <td><%= city.iso %></td>
+                <td><%= city.nuts_code %></td>
+                <td><%= link_to('Görüntüle', country_city_path(@country, city), class: 'btn btn-secondary btn-sm') %></td>
+                <td><%= link_to('Düzenle', edit_country_city_path(@country, city), class: 'btn btn-secondary btn-sm') %></td>
+                <td><%= link_to('Sil', country_city_path(@country, city), method: :delete, data: { confirm: 'Emin misiniz? Bu işlem geri alınamaz.' }, class: 'btn btn-danger btn-sm') %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <%== pagy_nav_bootstrap(@pagy) %>
+      </ul>
+    </nav>
   </div>
-  <nav aria-label="Page navigation example">
-    <ul class="pagination justify-content-center">
-      <%== pagy_nav_bootstrap(@pagy) %>
-    </ul>
-  </nav>
 </div>

@@ -21,7 +21,7 @@ class Identity < ApplicationRecord
 
   # callbacks
   before_save do
-    self.name = 'informal' unless name.present?
+    self.name = 'informal' if name.blank?
     self.first_name = first_name.capitalize_all
     self.last_name = last_name.upcase_tr
     self.mothers_name = mothers_name.capitalize_all
