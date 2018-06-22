@@ -1,10 +1,47 @@
 en:
+  activerecord:
+    attributes:
+      address: &address_attributes
+        name: Address Type
+        phone_number: Phone Number
+        full_address: Full Address
+        district: District
+    enums:
+      address:
+        names:
+          formal: Formal Address
+          home: Home Address
+          work: Office Address
+          other: Other Address
+  helpers:
+    submit:
+      address:
+        create: Save the Address
+        update: Update the Address
+  validators:
+    address:
+      max_total: You can add up to %{limit} addresses maximum.
+      max_legal: You can have up to %{limit} formal addresses maximum.
   account:
     addresses:
+      index:
+        <<: *address_attributes
+        new_address: Add a New Address
+        card_header: Address Information
+        district_and_city: District / City
+        update_from_mernis: Update from MERNİS
+      new:
+        form_title: Create Address
       edit:
         warning: You can not edit your formal address!
+        form_title: Edit Address
       create:
         success: Address successfully created!
-      update_from_mernis:
+      update:
+        success: Address successfully updated!
+      destroy:
+        success: Address successfully deleted!
+        warning: Address can not be deleted!
+      mernis:
         wait: You recently created or updated your address. You can update your address once every week.
         will_update: We got your address update request. In a couple of seconds/minutes you will be able to see your new address.
