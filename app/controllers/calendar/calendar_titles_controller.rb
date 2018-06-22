@@ -7,7 +7,6 @@ module Calendar
 
     def index
       breadcrumb t('.card_header'), calendar_titles_path
-
       @pagy, @calendar_titles = if params[:term].present?
                                   pagy(CalendarTitle.search(params[:term]))
                                 else

@@ -47,7 +47,7 @@ Rake::Task['yoksis:import_departments'].invoke
 # Rake::Task['yoksis:fetch_academic_staff'].invoke
 
 # TODO: Below lines will not be in production
-# Create sample calendar titles
+# Create sample calendars
 CalendarTitle.create(name: 'Açılan derslerin ilanı')
 CalendarTitle.create(name: 'Ders Kayıtları')
 CalendarTitle.create(name: 'Derslerin Başlaması')
@@ -77,3 +77,9 @@ CalendarTitle.create(name: 'Öğrencilerin WEB\'de Ders Kayıtları')
 CalendarTitle.create(name: 'Ek Sınav Müracaatlarının Son Günü (Önlisans öğrencileri için)')
 CalendarTitle.create(name: 'Ek Sınav Tarihleri (Önlisans öğrencileri için)')
 CalendarTitle.create(name: 'Ek Sınav Sonuçlarının ÖİDB\'ye Gönderilmesi')
+AcademicTerm.create(year: '2017 - 2018', term: 'fall')
+AcademicTerm.create(year: '2017 - 2018', term: 'spring')
+AcademicTerm.create(year: '2017 - 2018', term: 'summer')
+AcademicTerm.create(year: '2018 - 2019', term: 'fall')
+AcademicTerm.create(year: '2018 - 2019', term: 'spring')
+AcademicTerm.create(year: '2018 - 2019', term: 'summer')
