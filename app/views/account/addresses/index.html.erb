@@ -1,3 +1,9 @@
+<div class="alert alert-light">
+  <%= link_to_new(new_address_path, t('.new_address')) do %>
+    <%= fa_icon 'plus' %>
+  <% end %>
+</div>
+
 <div class="row">
   <% @addresses.each do |address| %>
     <div class="col-sm-6">
@@ -5,11 +11,6 @@
         <div class="card-header">
           <%= fa_icon 'id-card' %>
           <strong><%= t('.card_header') %></strong>
-          <div class="card-header-actions">
-            <%= link_to_new(new_address_path, t('.new_address')) do %>
-              <%= fa_icon 'plus' %>
-            <% end %>
-          </div>
         </div>
         <div class="card-body">
           <table class='table table-responsive-sm'>
