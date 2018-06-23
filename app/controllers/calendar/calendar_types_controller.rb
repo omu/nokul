@@ -2,21 +2,30 @@
 
 module Calendar
   class CalendarTypesController < ApplicationController
+    include Pagy::Backend
     before_action :set_calendar_type, only: %i[show edit update destroy]
 
     def index
-      @calendar_types = CalendarType.all
+      breadcrumb t('.card_header'), calendar_types_path
+      @pagy, @calendar_types = pagy(CalendarType.all)
     end
 
     def show
+      breadcrumb t('.index.card_header'), calendar_types_path, match: :exact
+      breadcrumb "#{@calendar_type.name}", calendar_type_path
       @titles = @calendar_type.titles
     end
 
     def new
+      breadcrumb t('.index.card_header'), calendar_types_path, match: :exact
+      breadcrumb t('.form_title'), new_calendar_type_path
       @calendar_type = CalendarType.new
     end
 
-    def edit; end
+    def edit
+      breadcrumb t('.index.card_header'), calendar_types_path, match: :exact
+      breadcrumb t('.form_title'), edit_calendar_type_path
+    end
 
     def create
       @calendar_type = CalendarType.new(calendar_type_params)
