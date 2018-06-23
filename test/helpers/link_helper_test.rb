@@ -7,7 +7,7 @@ class LinkHelperTest < ActionView::TestCase
 
   test '#link_to_back' do
     link = <<-HTML.squish
-      <a class="btn btn-dark btn-sm" href="#"><i class="fa fa-arrow-left"></i> Back</a>
+      <a class="btn btn-secondary btn-sm" href="#"><i class="fa fa-arrow-left"></i> Back</a>
     HTML
     assert_equal link_to_back('#', 'Back'), link
   end
