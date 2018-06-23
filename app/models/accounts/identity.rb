@@ -24,8 +24,8 @@ class Identity < ApplicationRecord
     self.name = 'informal' if name.blank?
     self.first_name = first_name.capitalize_all
     self.last_name = last_name.upcase_tr
-    self.mothers_name = mothers_name.capitalize_all
-    self.fathers_name = fathers_name.capitalize_all
-    self.place_of_birth = place_of_birth.capitalize_all
+    self.mothers_name = mothers_name.capitalize_all if mothers_name
+    self.fathers_name = fathers_name.capitalize_all if fathers_name
+    self.place_of_birth = place_of_birth.capitalize_all if place_of_birth
   end
 end

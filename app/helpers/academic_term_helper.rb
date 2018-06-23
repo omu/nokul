@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 module AcademicTermHelper
+  include EnumI18nHelper
+
   def years
     Time.zone.now.year.downto(1975).map { |year| "#{year} - #{year + 1}" }
   end
