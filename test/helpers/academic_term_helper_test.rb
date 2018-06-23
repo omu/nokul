@@ -12,6 +12,6 @@ class AcademicTermHelperTest < ActionView::TestCase
   end
 
   test 'full_name should return a full name for academic term' do
-    assert_equal full_name(academic_terms(:fall_2017_2018)), '2017-2018 / fall'
+    assert_equal academic_term_full_name(academic_terms(:fall_2017_2018)), '2017 - 2018 / fall'
   end
 end
