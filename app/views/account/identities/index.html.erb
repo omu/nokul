@@ -1,54 +1,75 @@
-<div class='card'>
-  <br><h4 class='card-heading text-center'>Kimlik Bilgilerim</h4>
+<div class="alert alert-light">
+  <%= link_to_new(new_identity_path, t('.new_identity')) %>
+</div>
 
-  <table class='table'>
-    <thead>
-      <tr>
-        <th></th>
-        <th>Ad</th>
-        <th>Soyad</th>
-        <th>Anne Adı</th>
-        <th>Baba Adı</th>
-        <th>Cinsiyet</th>
-        <th>Medeni Hal</th>
-        <th>Doğum Yeri</th>
-        <th>Doğum Tarihi</th>
-        <th>Kütük Bilgisi</th>
-        <th>İşlemler</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @identities.each do |identity| %>
-        <tr>
-          <td>
-            <span class="badge badge-primary">
-              <%= fa_icon('gavel', text: 'Resmi Kimlik') if identity.formal? %>
-              <%= fa_icon('user', text: 'Diğer Kimlik') if identity.informal? %>
-            </span>
-          </td>
-          <td><%= identity.first_name %></td>
-          <td><%= identity.last_name %></td>
-          <td><%= identity.mothers_name %></td>
-          <td><%= identity.fathers_name %></td>
-          <td><%= identity.gender %></td>
-          <td><%= identity.marital_status %></td>
-          <td><%= identity.place_of_birth %></td>
-          <td><%= identity.date_of_birth %></td>
-          <td><%= identity.registered_to %></td>
-          <td>
-            <% if identity.formal? %>
-              <%= link_to "MERNIS'ten Güncelle", mernis_identity_path(identity), class: 'btn btn-secondary btn-sm' %>
-            <% else %>
-              <%= link_to('Düzenle', edit_identity_path(identity), class: 'btn btn-secondary btn-sm') %>
-              <%= link_to('Sil', identity, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm') %>
-            <% end %>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-  <br>
-  <div class='card-footer'>
-    <%= link_to 'Yeni Kimlik Ekle', new_identity_path, class: 'btn btn-success' %>
-  </div>
+<div class="row">
+  <% @identities.each do |identity| %>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-header">
+          <%= fa_icon 'id-card' %>
+          <strong><%= t('.card_header') %></strong>
+        </div>
+        <div class="card-body">
+          <table class='table table-responsive-sm'>
+            <tr>
+              <td><%= t('.name') %></td>
+              <td>
+                <span class="badge badge-secondary">
+                  <%= fa_icon('gavel', text: t('activerecord.enums.identity.names.formal')) if identity.formal? %>
+                  <%= fa_icon('user', text: t('activerecord.enums.identity.names.informal')) if identity.informal? %>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><%= t('.last_name') %></td>
+              <td><%= identity.last_name %></td>
+            </tr>
+            <tr>
+              <td><%= t('.first_name') %></td>
+              <td><%= identity.first_name %></td>
+            </tr>
+            <tr>
+              <td><%= t('.mothers_name') %></td>
+              <td><%= identity.mothers_name %></td>
+            </tr>
+            <tr>
+              <td><%= t('.fathers_name') %></td>
+              <td><%= identity.fathers_name %></td>
+            </tr>
+            <tr>
+              <td><%= t('.gender') %></td>
+              <td><%= enum_t(identity, :gender) %></td>
+            </tr>
+            <tr>
+              <td><%= t('.marital_status') %></td>
+              <td><%= enum_t(identity, :marital_status) %></td>
+            </tr>
+            <tr>
+              <td><%= t('.place_of_birth') %></td>
+              <td><%= identity.place_of_birth %></td>
+            </tr>
+            <tr>
+              <td><%= t('.date_of_birth') %></td>
+              <td><%= identity.date_of_birth %></td>
+            </tr>
+            <tr>
+              <td><%= t('.registered_to') %></td>
+              <td><%= identity.registered_to %></td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <% if identity.formal? %>
+                  <%= link_to(t('.update_from_mernis'), mernis_identity_path(identity), class: 'btn btn-outline-primary btn-sm') %>
+                <% else %>
+                  <%= link_to_edit(edit_identity_path(identity)) %>
+                  <%= link_to_destroy(identity) %>
+                <% end %>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>

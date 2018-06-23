@@ -10,10 +10,9 @@ en:
     status: Status
     theoric: Theoric
     unit: Unit
-
   activerecord:
     models:
-      course: 'Course'
+      course: Course
     enums:
       course:
         education_types:
@@ -24,22 +23,26 @@ en:
           passive: Passive
           active: Active
           abrogated: Abrogated
-  
   curriculum:
     courses:
+      new:
+        form_title: Create a Course
+      edit:
+        form_title: Update the Course
       create:
-        success: Course was successfully created.
+        success: Course successfully created.
       destroy:
-        success: Course was successfully destroyed.
-        error: There was an error deleting the course.
+        success: Course successfully destroyed.
+        error: An error occured when deleting the course.
       update:
-        success: Course was successfully updated.
+        success: Course successfully updated.
       show:
-        *course_attributes
+        <<: *course_attributes
       index:
-        *course_attributes
-  
+        <<: *course_attributes
+        add_new_course: Add a New Course
+        courses: Courses
   simple_form:
     labels:
       course:
-        *course_attributes
+        <<: *course_attributes

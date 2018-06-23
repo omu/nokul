@@ -1,0 +1,13 @@
+tr:
+  layouts:
+    shared:
+      sidebar:
+        home: Anasayfa
+        units: Birimler
+        locations: Konumlar
+        calendars: Takvimler
+        calendar_titles: Takvim Başlıkları
+        calendar_types: Takvim Türleri
+        academic_terms: Akademik Dönemler
+        academic_calendars: Akademik Takvimler
+        courses: Dersler

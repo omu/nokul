@@ -1,26 +1,18 @@
 tr:
-  locations:
-    city: "Şehir"
-    country: "Ülke"
-    region: "Bölge"
-    district: "İlçe"
-
-    countries:
-      update:
-        success: Ülke başarıyla güncellendi.
-      create:
-        success: Ülke başarıyla oluşturuldu.
-      destroy:
-        success: Ülke başarıyla silindi!
-        warning: Ülke silinemedi!
-    cities:
-      update:
-        success: Şehir başarıyla güncellendi.
-      create:
-        success: Şehir başarıyla oluşturuldu.
-      destroy:
-        success: Şehir başarıyla silindi!
-        warning: Şehir silinemedi!
+  activerecord:
+    attributes:
+      city: &city_attributes
+        name: Şehir Adı
+        iso: ISO Kodu
+        nuts_code: NUTS Kodu
+      country: &country_attributes
+        name: Ülke Adı
+        iso: ISO Kodu
+        code: Ülke Kodu
+      district: &district_attributes
+        name: İlçe Adı
+        yoksis_id: YOKSIS ID
+        city_id: Şehir
   helpers:
     submit:
       country:
@@ -29,3 +21,41 @@ tr:
       city:
         create: Şehir Oluştur
         update: Şehri Güncelle
+  locations:
+    cities:
+      common:
+        countries: Ülkeler
+      new:
+        form_title: Şehir Oluştur
+      edit:
+        form_title: Şehri Düzenle
+      update:
+        success: Şehir başarıyla güncellendi.
+      create:
+        success: Şehir başarıyla oluşturuldu.
+      destroy:
+        success: Şehir başarıyla silindi!
+        warning: Şehir silinemedi!
+    countries:
+      common:
+        countries: Ülkeler
+      index:
+        <<: *country_attributes
+        new_country_link: Yeni Ülke Ekle
+        card_header: Ülkeler
+      show:
+        <<: *city_attributes
+        card_header: Şehirler
+        new_city_link: Yeni Şehir Ekle
+      new:
+        form_title: Ülke Oluştur
+        new_country: Yeni Ülke
+      edit:
+        form_title: Ülkeyi Düzenle
+      update:
+        success: Ülke başarıyla güncellendi.
+      create:
+        success: Ülke başarıyla oluşturuldu.
+      destroy:
+        success: Ülke başarıyla silindi!
+        warning: Ülke silinemedi!

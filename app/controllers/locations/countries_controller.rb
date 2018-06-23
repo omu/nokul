@@ -3,10 +3,11 @@
 module Locations
   class CountriesController < ApplicationController
     include Pagy::Backend
+
     before_action :set_country, only: %i[show edit update destroy]
+    before_action :set_root_breadcrumb, only: %i[index show new edit]
 
     def index
-      breadcrumb 'Ülkeler', countries_path
       countries = Country.all
 
       @pagy, @countries = if params[:term].present?
@@ -17,14 +18,16 @@ module Locations
     end
 
     def show
-      breadcrumb 'Ülkeler', countries_path, match: :exact
       breadcrumb @country.name, country_path(@country)
-      @pagy, @cities = pagy(@country.cities)
+      @pagy, @cities = if params[:term].present?
+                         pagy(@country.cities.search(params[:term]))
+                       else
+                         pagy(@country.cities)
+                       end
     end
 
     def new
-      breadcrumb 'Ülkeler', countries_path, match: :exact
-      breadcrumb 'Yeni Ülke', new_country_path
+      breadcrumb t('.new_country'), new_country_path
       @country = Country.new
     end
 
@@ -34,7 +37,6 @@ module Locations
     end
 
     def edit
-      breadcrumb 'Ülkeler', countries_path, match: :exact
       breadcrumb @country.name, edit_country_path(@country)
     end
 
@@ -47,6 +49,10 @@ module Locations
     end
 
     private
+
+    def set_root_breadcrumb
+      breadcrumb t('.common.countries'), countries_path, match: :exact
+    end
 
     def set_country
       @country = Country.find(params[:id])

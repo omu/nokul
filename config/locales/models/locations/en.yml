@@ -1,6 +1,61 @@
 en:
+  activerecord:
+    attributes:
+      city: &city_attributes
+        name: Name of City
+        iso: ISO Code
+        nuts_code: NUTS Code
+      country: &country_attributes
+        name: Name of Country
+        iso: ISO Code
+        code: Country Code
+      district: &district_attributes
+        name: Name of District
+        yoksis_id: YOKSIS ID
+        city_id: City
+  helpers:
+    submit:
+      country:
+        create: Create Country
+        update: Update Country
+      city:
+        create: Create City
+        update: Update City
   locations:
-    city: "City"
-    country: "Country"
-    region: "Region"
-    district: "District"
+    cities:
+      common:
+        countries: Countries
+      new:
+        form_title: Create a City
+      edit:
+        form_title: Update the City
+      update:
+        success: City successfully updated.
+      create:
+        success: City successfully created.
+      destroy:
+        success: City successfully deleted!
+        warning: City can not be deleted.
+    countries:
+      common:
+        countries: Countries
+      index:
+        <<: *country_attributes
+        new_country_link: Add a New Country
+        card_header: Countries
+      show:
+        <<: *city_attributes
+        card_header: Cities
+        new_city_link: Add a New City
+      new:
+        form_title: Create Country
+        new_country: New Country
+      edit:
+        form_title: Edit the Country
+      update:
+        success: Country successfully updated.
+      create:
+        success: Country successfully created.
+      destroy:
+        success: Country successfully deleted.
+        warning: Country can not be deleted.
