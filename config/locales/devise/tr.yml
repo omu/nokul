@@ -21,6 +21,10 @@ tr:
         subject: "Parola sıfırlama talimatları"
       unlock_instructions:
         subject: "Kilit kaldırma talimalatları"
+      email_changed:
+        subject: "Email Adresiniz Değişti"
+      password_change:
+        subject: "Şifreniz Değişti"
     omniauth_callbacks:
       failure: "\"%{reason}\" olduğu için %{kind}'den doğrulama yapılamıyor."
       success: "%{kind} hesabından başarılı bir şekilde doğrulandı."

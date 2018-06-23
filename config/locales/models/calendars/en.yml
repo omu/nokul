@@ -1,32 +1,134 @@
-en:
+tr:
+  activerecord:
+    attributes:
+      calendar_title: &calendar_title_attributes
+        name: Calendar Title
+      academic_term: &academic_term_attributes
+        year: Year
+        term: Term
+      calendar_type: &calendar_type_attributes
+        name: Calendar Type
+      calendar_title_type:
+        type: Type
+        title: Title
+        status: Status
+      academic_calendar: &academic_calendar_attributes
+        name: Calendar Name
+        academic_term: Academic Term
+        calendar_type: Calendar Type
+        senate_decision_date: Senate Decision Date
+        senate_decision_no: Senate Decision No
+        description: Description
+        created_at: Created At
+        updated_at: Updated At
+      calendar_event:
+        calendar_title_id: Title
+        start_date: Date of Start
+        end_date: Date of End
+    enums:
+      academic_term:
+        terms:
+          fall: Fall
+          spring: Spring
+          summer: Summer
+      calendar_title_type:
+        statuses:
+          passive: Passive
+          active: Active
+  helpers:
+    submit:
+      calendar_title:
+        create: Create Calendar Title
+        update: Update Calendar Title
+      academic_term:
+        create: Create Academic Term
+        update: Update Academic Term
+      calendar_type:
+        create: Create Calendar Type
+        update: Update Calendar Type
+      academic_calendar:
+        create: Create Academic Calendar
+        update: Update Academic Calendar
   calendar:
-    academic_calendars:
+    calendar_titles:
+      index:
+        <<: *calendar_title_attributes
+        new_calender_title_link: New Calendar Title
+        card_header: Calendar Titles
+        search: Search in Titles
+      new:
+        form_title: Create a Calendar Title
+      edit:
+        form_title: Edit the Calendar Title
       create:
-        success: Academic calendar was successfully created.
+        success: Calendar title successfully created.
       destroy:
-        success: Academic calendar was successfully destroyed
+        success: Calendar title successfully deleted.
+        warning: Calendar title could not be deleted.
+      update:
+        success: Calendar title successfully updated.
+    academic_terms:
+      index:
+        <<: *academic_term_attributes
+        new_academic_term_link: New Academic Term
+        card_header: Academic Terms
+      new:
+        form_title: Create a New Academic Term
+      edit:
+        form_title: Update the Academic Term
+      create:
+        success: Academic term successfully created.
+      destroy:
+        success: Academic term successfully deleted.
+        warning: Academic term could not be deleted.
+      update:
+        success: Academic term successfully updated.
+    calendar_types:
+      index:
+        <<: *calendar_type_attributes
+        new_calendar_type_link: New Calendar Type
+        card_header: Calendar Types
+      form:
+        new_title_link: New Calendar Title
+        titles: Calendar Titles
+      calendar_title_type_fields:
+        delete_title_type: Delete Calendar Title
       show:
+        <<: *calendar_type_attributes
+        card_header: '%{calendar_type} Calendar Type'
+      new:
+        form_title: Create a Calendar Type
+      edit:
+        form_title: Update the Calendar Type
+      create:
+        success: Calendar type successfully created.
+      destroy:
+        success: Calendar type successfully deleted.
+        warning: Calendar type could not be deleted.
+      update:
+        success: Calendar type successfully updated.
+    academic_calendars:
+      index:
+        <<: *academic_calendar_attributes
+        new_academic_calendar_link: New Academic Calendar
+        card_header: Academic Calendars
+        search: Search in Academic Calendars
+      form:
+        new_event_link: Add a New Event
+        events: Events
+      calendar_event_fields:
+        delete_event: Delete the Event
+      new:
+        form_title: Create an Academic Calendar
+      edit:
+        form_title: Update the Academic Calendar
+      create:
+        success: Academic calendar successfully created.
+      destroy:
+        success: Academic calendar successfully deleted
+        warning: Academic calendar could not be deleted.
+      show:
+        <<: *academic_calendar_attributes
         alert: Record could not be found!
       update:
-        success: Academic calendar was successfully updated.
-    academic_terms:
-      create:
-        success: Academic term was successfully created.
-      destroy:
-        success: Academic term was successfully destroyed.
-      update:
-        success: Academic term was successfully created.
-    calendar_titles:
-      create:
-        success: Calendar title was successfully created.
-      destroy:
-        success: Calendar title was successfully destroyed.
-      update:
-        success: Calendar title was successfully updated.
-    calendar_types:
-      create:
-        success: Calendar type was successfully created.
-      destroy:
-        success: Calendar type was successfully destroyed.
-      update:
-        success: Calendar type was successfully updated.
+        success: Academic calendar successfully updated.

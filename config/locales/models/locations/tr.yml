@@ -1,9 +1,9 @@
 tr:
   locations:
-    city: "Şehir"
-    country: "Ülke"
-    region: "Bölge"
-    district: "İlçe"
+    city: Şehir
+    country: Ülke
+    region: Bölge
+    district: İlçe
 
     countries:
       update:
