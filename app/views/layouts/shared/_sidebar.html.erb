@@ -3,42 +3,42 @@
     <ul class="nav">
       <li class="nav-item">
         <%= link_to root_path, class: 'nav-link' do %>
-          <%= fa_icon('home', class: 'nav-icon') %> Anasayfa
+          <%= fa_icon('home', class: 'nav-icon') %> <%= t('.home') %>
         <% end %>
       </li>
       <li class="nav-item">
         <%= link_to units_path, class: 'nav-link' do %>
-          <%= fa_icon('sitemap', text: 'Birimler', class: 'nav-icon') %>
+          <%= fa_icon('sitemap', text: t('.units'), class: 'nav-icon') %>
         <% end %>
       </li>
       <li class="nav-item">
         <%= link_to countries_path, class: 'nav-link' do %>
-          <%= fa_icon('street-view', text: 'Konumlar', class: 'nav-icon') %>
+          <%= fa_icon('street-view', text: t('.locations'), class: 'nav-icon') %>
         <% end %>
       </li>
       <li class="nav-item nav-dropdown">
         <a class="nav-link nav-dropdown-toggle" href="#">
-          <%= fa_icon('calendar', class: 'nav-icon') %>Akademik Takvim
+          <%= fa_icon('calendar', class: 'nav-icon') %><%= t('.calendars') %>
         </a>
         <ul class="nav-dropdown-items">
           <li class="nav-item">
             <%= link_to calendar_titles_path, class: 'nav-link' do %>
-              <%= fa_icon('calendar-plus-o', text: 'Takvim Başlığı', class: 'nav-icon') %>
+              <%= fa_icon('calendar-plus-o', text: t('.calendar_titles'), class: 'nav-icon') %>
             <% end %>
           </li>
           <li class="nav-item">
             <%= link_to calendar_types_path, class: 'nav-link' do %>
-              <%= fa_icon('calendar-check-o', text: 'Takvim Türleri', class: 'nav-icon') %>
+              <%= fa_icon('calendar-check-o', text: t('.calendar_types'), class: 'nav-icon') %>
             <% end %>
           </li>
           <li class="nav-item">
             <%= link_to academic_terms_path, class: 'nav-link' do %>
-              <%= fa_icon('graduation-cap', text: 'Akademik Dönemler', class: 'nav-icon') %>
+              <%= fa_icon('graduation-cap', text: t('.academic_terms'), class: 'nav-icon') %>
             <% end %>
           </li>
           <li class="nav-item">
             <%= link_to academic_calendars_path, class: 'nav-link' do %>
-              <%= fa_icon('calendar', text: 'Akademik Takvimler', class: 'nav-icon') %>
+              <%= fa_icon('calendar', text: t('.academic_calendars'), class: 'nav-icon') %>
             <% end %>
           </li>
 
@@ -46,7 +46,7 @@
       </li>
       <li class="nav-item">
         <%= link_to courses_path, class: 'nav-link' do %>
-          <%= fa_icon('book', text: 'Dersler', class: 'nav-icon') %>
+          <%= fa_icon('book', text: t('.courses'), class: 'nav-icon') %>
         <% end %>
       </li>
     </ul>

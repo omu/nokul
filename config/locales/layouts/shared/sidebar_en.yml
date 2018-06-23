@@ -1,0 +1,13 @@
+en:
+  layouts:
+    shared:
+      sidebar:
+        home: Home
+        units: Units
+        locations: Locations
+        calendars: Calendars
+        calendar_titles: Calendar Titles
+        calendar_types: Calendar Types
+        academic_terms: Academic Terms
+        academic_calendars: Academic Calendars
+        courses: Courses
