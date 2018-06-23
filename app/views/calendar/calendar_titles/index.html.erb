@@ -1,7 +1,5 @@
 <div class='alert alert-light'>
-  <%= link_to_new(new_calendar_title_path, t('.new_calender_title_link')) do %>
-    <%= fa_icon 'plus' %>
-  <% end %>
+  <%= link_to_new(new_calendar_title_path, t('.new_calender_title_link')) %>
 </div>
 
 <div class='row'>
@@ -15,22 +13,24 @@
           <div class="form-group">
             <%= text_field_tag 'term', params[:term], placeholder: t('.name'), class: 'form-control' %>
           </div>
-          <%= submit_tag t('.search'), class: 'btn btn-primary' %>
+          <%= submit_tag t('search'), class: 'btn btn-primary' %>
         <% end %>
         <hr \>
         <table class='table table-responsive-sm table-striped'>
           <thead>
             <tr>
               <th><%= t('.name') %></th>
-              <th colspan='2'><%= t('actions') %></th>
+              <th><%= t('actions') %></th>
             </tr>
           </thead>
           <tbody>
             <% @calendar_titles.each do |calendar_title| %>
               <tr>
                 <td><%= calendar_title.name %></td>
-                <td><%= link_to_edit(edit_calendar_title_path(calendar_title)) %></td>
-                <td><%= link_to_destroy(calendar_title) %></td>
+                <td>
+                  <%= link_to_edit(edit_calendar_title_path(calendar_title)) %>
+                  <%= link_to_destroy(calendar_title) %>
+                </td>
               </tr>
             <% end %>
           </tbody>

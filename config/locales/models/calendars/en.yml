@@ -1,4 +1,4 @@
-tr:
+en:
   activerecord:
     attributes:
       calendar_title: &calendar_title_attributes
@@ -55,7 +55,6 @@ tr:
         <<: *calendar_title_attributes
         new_calender_title_link: New Calendar Title
         card_header: Calendar Titles
-        search: Search in Titles
       new:
         form_title: Create a Calendar Title
       edit:
@@ -112,7 +111,6 @@ tr:
         <<: *academic_calendar_attributes
         new_academic_calendar_link: New Academic Calendar
         card_header: Academic Calendars
-        search: Search in Academic Calendars
       form:
         new_event_link: Add a New Event
         events: Events

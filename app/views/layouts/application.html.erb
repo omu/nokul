@@ -34,7 +34,7 @@
               <% end %>
             <% end %>
             <%= link_to addresses_path, class: 'dropdown-item' do %>
-              <%= fa_icon('home', text: t('.identities')) %>
+              <%= fa_icon('home', text: t('.addresses')) %>
               <%= content_tag(:span, class: 'badge badge-warning') do %>
                 <%= current_user.addresses.count %>
               <% end %>

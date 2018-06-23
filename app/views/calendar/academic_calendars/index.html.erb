@@ -1,7 +1,5 @@
 <div class='alert alert-light'>
-  <%= link_to_new(new_academic_calendar_path, t('.new_academic_calendar_link')) do %>
-    <%= fa_icon 'plus' %>
-  <% end %>
+  <%= link_to_new(new_academic_calendar_path, t('.new_academic_calendar_link')) %>
 </div>
 
 <div class='row'>
@@ -15,7 +13,7 @@
           <div class="form-group">
             <%= text_field_tag 'term', params[:term], placeholder: t('.name'), class: 'form-control' %>
           </div>
-          <%= submit_tag t('.search'), class: 'btn btn-primary' %>
+          <%= submit_tag t('search'), class: 'btn btn-primary' %>
         <% end %>
         <hr \>
         <table class='table table-responsive-sm table-striped'>
@@ -28,7 +26,7 @@
               <th><%= t('.senate_decision_no') %></th>
               <th><%= t('.created_at') %></th>
               <th><%= t('.updated_at') %></th>
-              <th colspan='3'><%= t('actions') %></th>
+              <th><%= t('actions') %></th>
             </tr>
           </thead>
           <tbody>
@@ -41,9 +39,11 @@
                 <td><%= academic_calendar.senate_decision_no %></td>
                 <td><%= academic_calendar.created_at.to_date %></td>
                 <td><%= academic_calendar.updated_at.to_date %></td>
-                <td><%= link_to_show(academic_calendar_path(academic_calendar)) %>
-                <td><%= link_to_edit(edit_academic_calendar_path(academic_calendar)) %></td>
-                <td><%= link_to_destroy(academic_calendar) %></td>
+                <td>
+                  <%= link_to_show(academic_calendar_path(academic_calendar)) %>
+                  <%= link_to_edit(edit_academic_calendar_path(academic_calendar)) %>
+                  <%= link_to_destroy(academic_calendar) %>
+                </td>
               </tr>
             <% end %>
           </tbody>

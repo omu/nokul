@@ -1,7 +1,5 @@
 <div class='alert alert-light'>
-  <%= link_to_new(new_academic_term_path, t('.new_academic_term_link')) do %>
-    <%= fa_icon 'plus' %>
-  <% end %>
+  <%= link_to_new(new_academic_term_path, t('.new_academic_term_link')) %>
 </div>
 
 <div class='row'>
@@ -16,7 +14,7 @@
             <tr>
               <th><%= t('.year') %></th>
               <th><%= t('.term') %></th>
-              <th colspan='2'><%= t('actions') %></th>
+              <th><%= t('actions') %></th>
             </tr>
           </thead>
           <tbody>
@@ -24,8 +22,10 @@
               <tr>
                 <td><%= academic_term.year %></td>
                 <td><%= enum_t(academic_term, :term) %></td>
-                <td><%= link_to_edit(edit_academic_term_path(academic_term)) %></td>
-                <td><%= link_to_destroy(academic_term) %></td>
+                <td>
+                  <%= link_to_edit(edit_academic_term_path(academic_term)) %>
+                  <%= link_to_destroy(academic_term) %>
+                </td>
               </tr>
             <% end %>
           </tbody>
