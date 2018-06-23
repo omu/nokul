@@ -1,0 +1,9 @@
+tr:
+  layouts:
+    application:
+      my_account: Hesabım
+      identities: Kimlik Bilgilerim
+      addresses: Adres Bilgilerim
+      settings: Ayarlar
+      change_password: Şifre Değişikliği
+      logout: Çıkış Yap

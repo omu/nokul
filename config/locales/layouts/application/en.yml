@@ -1,0 +1,9 @@
+en:
+  layouts:
+    application:
+      my_account: My Account
+      identities: Identities
+      addresses: Addresses
+      settings: Settings
+      change_password: Change Password
+      logout: Logout

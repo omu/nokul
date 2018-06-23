@@ -10,23 +10,25 @@ tr:
     status: Durumu
     theoric: Teorik
     unit: Birim
-
   activerecord:
     models:
-      course: 'Ders'
+      course: Ders
     enums:
       course:
         education_types:
-          undergraduate: Onlisans/Lisans
+          undergraduate: Önlisans/Lisans
           master: Yüksek Lisans
           doctoral: Doktora
         statuses:
           passive: Pasif
           active: Aktif
           abrogated: Yürürlükten Kaldırılmış
-
   curriculum:
     courses:
+      new:
+        form_title: Ders Oluştur
+      edit:
+        form_title: Dersi Düzenle
       create:
         success: Ders başarıyla oluşturuldu.
       destroy:
@@ -35,11 +37,12 @@ tr:
       update:
         success: Ders başarıyla güncellendi.
       show:
-        *course_attributes
+        <<: *course_attributes
       index:
-        *course_attributes
-  
+        <<: *course_attributes
+        add_new_course: Yeni Ders Ekle
+        courses: Dersler
   simple_form:
     labels:
       course:
-        *course_attributes
+        <<: *course_attributes

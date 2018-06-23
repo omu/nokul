@@ -25,31 +25,28 @@
           </a>
           <div class="dropdown-menu dropdown-menu-right">
             <div class="dropdown-header text-center">
-              <strong>Hesabım</strong>
+              <strong class='<%= t(".my_account") %>'><%= t('.my_account') %></strong>
             </div>
             <%= link_to identities_path, class: 'dropdown-item' do %>
-              <%= fa_icon('id-card', text: 'Kimlik Bilgilerim') %>
+              <%= fa_icon('id-card', text: t('.identities')) %>
               <%= content_tag(:span, class: 'badge badge-warning') do %>
                 <%= current_user.identities.count %>
               <% end %>
             <% end %>
             <%= link_to addresses_path, class: 'dropdown-item' do %>
-              <%= fa_icon('home', text: 'Adres Bilgilerim') %>
+              <%= fa_icon('home', text: t('.addresses')) %>
               <%= content_tag(:span, class: 'badge badge-warning') do %>
                 <%= current_user.addresses.count %>
               <% end %>
             <% end %>
-            <%= link_to root_path, class: 'dropdown-item' do %>
-              <%= fa_icon('try', text: 'IBAN Bilgilerim') %>
-            <% end %>
             <div class="dropdown-header text-center">
-              <strong>Ayarlar</strong>
+              <strong><%= t('.settings') %></strong>
             </div>
             <%= link_to edit_user_registration_path, class: 'dropdown-item' do %>
-              <%= fa_icon('shield', text: 'Şifre Değişikliği') %>
+              <%= fa_icon('shield', text: t('.change_password')) %>
             <% end %>
             <%= link_to destroy_user_session_path, class: "dropdown-item", method: :delete do %>
-              <%= fa_icon('lock', text: 'Çıkış Yap') %>
+              <%= fa_icon('lock', text: t('.logout')) %>
             <% end %>
           </div>
         </li>
@@ -73,11 +70,7 @@
         </ol>
         <div class="container-fluid">
           <div class="animated fadeIn">
-            <div class="row">
-              <div class="col">
-                <%= yield %>
-              </div>
-            </div>
+            <%= yield %>
           </div>
         </div>
       </main>
