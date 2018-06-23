@@ -1,0 +1,6 @@
+tr:
+  loaf:
+    errors:
+      invalid_options: "Geçersiz seçenek: %{invalid}. Geçerli seçenekler şunlardır: %{valid}, lütfen bunlardan birini seçiniz."
+    breadcrumbs:
+      home: 'Anasayfa'

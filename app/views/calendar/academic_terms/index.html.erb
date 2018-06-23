@@ -1,30 +1,41 @@
-<div class="card">
-  <br><h4 class="card-heading text-center">Akademik Dönemler</h4>
+<div class='alert alert-light'>
+  <%= link_to_new(new_academic_term_path, t('.new_academic_term_link')) %>
+</div>
 
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Yıl</th>
-        <th>Dönem</th>
-        <th>İşlemler</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @academic_terms.each do |academic_term| %>
-        <tr>
-          <td><%= academic_term.year %></td>
-          <td><%= academic_term.term %></td>
-          <td>
-            <%= link_to 'Düzenle', edit_academic_term_path(academic_term), class: "btn btn-secondary btn-sm" %>
-            <%= link_to 'Sil', academic_term, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-  <br>
-  <div class="card-footer">
-    <%= link_to 'Yeni Akademik Dönem', new_academic_term_path, class: "btn btn-success" %>
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'align-justify', text: t('.card_header') %>
+      </div>
+      <div class='card-body'>
+        <table class='table table-responsive-sm table-striped'>
+          <thead>
+            <tr>
+              <th><%= t('.year') %></th>
+              <th><%= t('.term') %></th>
+              <th><%= t('actions') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @academic_terms.each do |academic_term| %>
+              <tr>
+                <td><%= academic_term.year %></td>
+                <td><%= enum_t(academic_term, :term) %></td>
+                <td>
+                  <%= link_to_edit(edit_academic_term_path(academic_term)) %>
+                  <%= link_to_destroy(academic_term) %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <nav aria-label='pagination'>
+      <ul class='pagination justify-content-center'>
+        <%== pagy_nav_bootstrap(@pagy) %>
+      </ul>
+    </nav>
   </div>
 </div>

@@ -1,6 +1,6 @@
-<p>Merhaba, <%= @email %>!</p>
+<p><%= t('devise.mailer.common.hello', mail: @email) %></p>
 
 <% if @resource.try(:unconfirmed_email?) %>
-  <p>Kayıtlı e-mail adresiniz başarıyla değiştirilmiştir. Bir yanlışlık olduğunu düşünüyorsanız hotline@baum.omu.edu.tr adresine durumu anlatan bir e-mail gönderebilirsiniz.</p>
-  <p>Yeni e-mail adresiniz: <%= @resource.email %></p>
+  <p><%= t('.body') %></p>
+  <p><%= t('.new_mail', mail: @resource.email) %></p>
 <% end %>

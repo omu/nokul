@@ -1,18 +1,39 @@
-<%= simple_form_for(calendar_type) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <center><h3>Başlıklar</h3></center>
-    <%= f.simple_fields_for :calendar_title_types do |title| %>
-      <%= render "calendar_title_type_fields", f: title %>
-    <% end %>
-    <br>
-    <center><%= link_to_add_association 'Başlık Ekle', f, :calendar_title_types, class: 'btn btn-light' %></center>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'calendar' %>
+        <strong><%= form_title %></strong>
+      </div>
+      <div class="card-body">
+        <%= simple_form_for(calendar_type) do |f| %>
+          <div class="row">
+            <div class='form-group col-sm-12'>
+              <%= f.error_notification %>
+              <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.input :name %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
+              <%= link_to_back(:back) %>
+            </div>
+          </div>
+          <hr \>
+            <center><h3><%= t('.titles') %></h3></center>
+            <div class="col-lg-12">
+              <%= f.simple_fields_for :calendar_title_types do |title| %>
+                <%= render "calendar_title_type_fields", f: title %>
+              <% end %>
+              <br>
+              <%= link_to_add_association t('.new_title_link'), f, :calendar_title_types, class: 'btn btn-outline-primary btn-sm' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
+</div>
 
-  <div class="form-actions">
-    <%= f.button :submit, class: 'btn btn-success' %>
-  </div>
-<% end %>
+<%= javascript_include_tag 'shared/cocoon' %>

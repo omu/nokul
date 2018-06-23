@@ -2,17 +2,27 @@
 
 module Calendar
   class CalendarTitlesController < ApplicationController
+    include Pagy::Backend
+
     before_action :set_calendar_title, only: %i[edit update destroy]
+    before_action :set_root_breadcrumb, only: %i[index new edit]
 
     def index
-      @calendar_titles = CalendarTitle.all
+      @pagy, @calendar_titles = if params[:term].present?
+                                  pagy(CalendarTitle.search(params[:term]))
+                                else
+                                  pagy(CalendarTitle.all)
+                                end
     end
 
     def new
+      breadcrumb t('.form_title'), new_calendar_title_path
       @calendar_title = CalendarTitle.new
     end
 
-    def edit; end
+    def edit
+      breadcrumb t('.form_title'), edit_calendar_title_path
+    end
 
     def create
       @calendar_title = CalendarTitle.new(calendar_title_params)
@@ -28,6 +38,10 @@ module Calendar
     end
 
     private
+
+    def set_root_breadcrumb
+      breadcrumb t('.index.card_header'), calendar_titles_path, match: :exact
+    end
 
     def redirect_with(message)
       redirect_to(calendar_titles_path, notice: t(".#{message}"))

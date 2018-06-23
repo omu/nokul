@@ -1,62 +1,61 @@
-<div class="card">
-  <br>
-  <h4 class="card-heading text-center">
-    <%= @academic_calendar.name %>
-  </h4>
+<div class='alert alert-light'>
+  <%= link_to_back(:back) %>
+</div>
 
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Dönem</th>
-        <th>Takvim Türü</th>
-        <th>Senato Karar Tarihi</th>
-        <th>Senato Karar No</th>
-        <th colspan="3">İşlemler</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr>
-        <td><%= full_name(@academic_calendar.academic_term) %></td>
-        <td><%= @academic_calendar.type_name %></td>
-        <td><%= @academic_calendar.senate_decision_date %></td>
-        <td><%= @academic_calendar.senate_decision_no %></td>
-        <td>
-          <%= link_to 'Düzenle', edit_academic_calendar_path(@academic_calendar), class: "btn btn-secondary btn-sm" %>
-          <%= link_to 'Sil', @academic_calendar, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="6">
-          <b>Takvim Açıklamaları:</b>
-          <%= @academic_calendar.description %>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <hr>
-  <br>
-  <h4 class="card-heading text-center">Takvim Etkinlikleri</h4>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Etkinlik</th>
-        <th>Başlama Tarihi</th>
-        <th>Bitiş Tarihi</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @events.each do |event| %>
-        <tr>
-          <td><%= event.calendar_title_name %></td>
-          <td><%= event.start_date.strftime("%d-%m-%Y %H:%M:%S") %></td>
-          <td><%= event.end_date.try(:strftime, "%d-%m-%Y %H:%M:%S") %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-  <div class="card-footer">
-    <%= link_to 'Geri', :back %>
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'calendar', text: @academic_calendar.name %>
+      </div>
+      <div class='card-body'>
+        <table class='table table-responsive-sm table-striped'>
+          <thead>
+            <tr>
+              <th><%= t('.name') %></th>
+              <th><%= t('.calendar_type') %></th>
+              <th><%= t('.senate_decision_date') %></th>
+              <th><%= t('.senate_decision_no') %></th>
+              <th><%= t('.created_at') %></th>
+              <th><%= t('.updated_at') %></th>
+              <th><%= t('actions') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><%= academic_term_full_name(@academic_calendar.academic_term) %></td>
+              <td><%= @academic_calendar.type_name %></td>
+              <td><%= @academic_calendar.senate_decision_date %></td>
+              <td><%= @academic_calendar.senate_decision_no %></td>
+              <td><%= @academic_calendar.created_at.to_date %></td>
+              <td><%= @academic_calendar.updated_at.to_date %></td>
+              <td><%= link_to_edit(edit_academic_calendar_path(@academic_calendar)) %></td>
+            </tr>
+            <tr>
+              <td colspan="8">
+                <b><%= t('.description') %>: </b><%= @academic_calendar.description %>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <hr \>
+      <div class='card-body'>
+        <table class='table table-responsive-sm table-striped'>
+          <% @events.each do |event| %>
+            <tr>
+              <td><%= event.calendar_title_name %></td>
+              <td><%= event.start_date.strftime('%F %T') %></td>
+              <td><%= event.end_date.try(:strftime, '%F %T') %></td>
+            </tr>
+          <% end %>
+        </table>
+      </div>
+    </div>
+    <nav aria-label='pagination'>
+      <ul class='pagination justify-content-center'>
+        <%== pagy_nav_bootstrap(@pagy) %>
+      </ul>
+    </nav>
   </div>
 </div>

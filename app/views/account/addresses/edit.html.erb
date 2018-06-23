@@ -1,9 +1,1 @@
-<div class="card">
-  <br><h3 class="card-title text-center">Adresi Düzenle</h3>
-  <div class="card-body">
-    <%= render 'form', address: @address %>
-  </div>
-  <div class="card-footer">
-    <%= link_to 'Geri', :back %>
-  </div>
-</div>
+<%= render 'form', address: @address, form_title: t('.form_title') %>

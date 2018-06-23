@@ -1,8 +1,52 @@
 tr:
+  activerecord:
+    attributes:
+      identity: &identity_attributes
+        name: Kimlik Türü
+        first_name: Ad
+        last_name: Soyad
+        mothers_name: Anne Adı
+        fathers_name: Baba Adı
+        gender: Cinsiyet
+        marital_status: Medeni Hal
+        place_of_birth: Doğum Yeri
+        date_of_birth: Doğum Tarihi
+        registered_to: Kütük Bilgisi
+    enums:
+      identity:
+        names:
+          formal: Resmi Kimlik
+          informal: Diğer Kimlik
+        genders:
+          male: Erkek
+          female: Kadın
+          other: Diğer
+        marital_statuses:
+          single: Bekâr
+          married: Evli
+          divorced: Boşanmış
+          unknown: Bilinmiyor
+  helpers:
+    submit:
+      identity:
+        create: Kimliği Kaydet
+        update: Kimliği Güncelle
+  validators:
+    identity:
+      max_total: En fazla %{limit} tane kimlik ekleyebilirsiniz.
+      max_legal: En fazla %{limit} tane resmi kimliğiniz olabilir.
   account:
     identities:
+      index:
+        <<: *identity_attributes
+        new_identity: Yeni Kimlik Ekle
+        card_header: Kimlik Bilgileri
+        update_from_mernis: MERNİS'ten Güncelle
       edit:
         warning: Yasal kimlik bilgilerinizi düzenleyemezsiniz!
+        form_title: Kimliği Düzenle
+      new:
+        form_title: Kimlik Oluştur
       create:
         success: Kimlik başarıyla oluşturuldu!
       update:
@@ -13,8 +57,3 @@ tr:
       mernis:
         wait: Kimliğinizi yakın bir zamanda oluşturdunuz veya güncellediniz. Kimliğinizi haftada bir güncelleyebilirsiniz.
         will_update: Kimlik güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde adresiniz güncellenecek.
-  helpers:
-    submit:
-      identity:
-        create: Kimliği kaydet
-        update: Kimliği güncelle

@@ -1,12 +1,29 @@
-<%= simple_form_for academic_term do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :year, collection: years %>
-    <%= f.input :term, collection: AcademicTerm.terms.keys %>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'calendar' %>
+        <strong><%= form_title %></strong>
+      </div>
+      <div class="card-body">
+        <%= simple_form_for(academic_term) do |f| %>
+          <div class="row">
+            <div class='form-group col-sm-12'>
+              <%= f.error_notification %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :year, collection: years %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :term, collection: enum_options_for_select(f.object.class, :term) %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
+              <%= link_to_back(:back) %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, class: "btn btn-success" %>
-  </div>
-<% end %>
+</div>

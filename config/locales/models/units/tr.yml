@@ -1,25 +1,71 @@
 tr:
+  activerecord:
+    attributes:
+      unit: &unit_attributes
+        name: Birim Adı
+        yoksis_id: YOKSIS ID
+        foet_code: FOET Kodu
+        founded_at: Kuruluş Tarihi
+        duration: Öğretim Süresi
+        type: Birim Türü
+        district: Bulunduğu İlçe
+        ancestry: Üst/Alt Birim
+        unit_status: Birim Durumu
+        unit_instruction_language: Öğretim Dili
+        unit_instruction_type: Öğretim Türü
+        university_type: Üniversite Türü
+        parent_id: Üst Birim
+        created_at: Oluşturulma Tarihi
+        updated_at: Son Güncelleme
+    enums:
+      unit:
+        types: &unit_types
+          university: 'Üniversite'
+          academy: 'Yüksekokul'
+          art_discipline: 'Anasanat Dalı'
+          department: 'Bölüm'
+          discipline: 'Bilim Dalı'
+          faculty: 'Fakülte'
+          institute: 'Enstitü'
+          interdisciplinary_discipline: 'Disiplinlerarası Anabilim Dalı'
+          rectorship: 'Rektörlük'
+          research_center: 'Araştırma Ve Uygulama Merkezi'
+          science_discipline: 'Anabilim Dalı'
+          vocational_school: 'Meslek Yüksekokulu'
+          doctoral_program: 'Doktora Programı'
+          interdisciplinary_doctoral_program: 'Disiplinlerarası Doktora Programı'
+          interdisciplinary_master_program: 'Disiplinlerarası Yüksek Lisans Programı'
+          master_program: 'Yüksek Lisans Programı'
+          proficiency_in_art_program: 'Sanatta Yeterlilik Programı'
+          undergraduate_program: 'Önlisans/Lisans Programı'
+  helpers:
+    submit:
+      unit:
+        create: Birim Oluştur
+        update: Birimi Güncelle
   units:
-    # Do not change this translations since they are matching with YOKSIS data!
-    university: 'Üniversite'
-    academy: 'Yüksekokul'
-    art_discipline: 'Anasanat Dalı'
-    department: 'Bölüm'
-    discipline: 'Bilim Dalı'
-    faculty: 'Fakülte'
-    institute: 'Enstitü'
-    interdisciplinary_discipline: 'Disiplinlerarası Anabilim Dalı'
-    rectorship: 'Rektörlük'
-    research_center: 'Araştırma Ve Uygulama Merkezi'
-    science_discipline: 'Anabilim Dalı'
-    vocational_school: 'Meslek Yüksekokulu'
-    doctoral_program: 'Doktora Programı'
-    interdisciplinary_doctoral_program: 'Disiplinlerarası Doktora Programı'
-    interdisciplinary_master_program: 'Disiplinlerarası Yüksek Lisans Programı'
-    master_program: 'Yüksek Lisans Programı'
-    proficiency_in_art_program: 'Sanatta Yeterlilik Programı'
-    undergraduate_program: 'Önlisans/Lisans Programı'
-
+    <<: *unit_types # Do not remove this line since they are matching with YOKSIS data!
+    common:
+      units: Birimler
+    search:
+      smart_search_placeholder: Birim adı veya YOKSIS numarası
+      smart_search: Akıllı Arama
+      detailed_search: Detaylı Arama
+      duration: Öğretim Süresi
+      unit_status: Birim Durumu
+      unit_instruction_language: Öğretim Dili
+      unit_instruction_type: Öğretim Türü
+    show:
+      <<: *unit_attributes
+      parent: Üst Birim
+    index:
+      <<: *unit_attributes
+      new_unit_link: Yeni Birim Oluştur
+      card_header: Birimler
+    new:
+      form_title: Birim Oluştur
+    edit:
+      form_title: Birim Güncelle
     update:
       success: Birim başarıyla güncellendi.
     create:
@@ -27,8 +73,3 @@ tr:
     destroy:
       success: Birim başarıyla silindi!
       warning: Birim silinemedi!
-  helpers:
-    submit:
-      unit:
-        create: Birim Oluştur
-        update: Birimi Güncelle

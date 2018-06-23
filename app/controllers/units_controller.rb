@@ -2,11 +2,11 @@
 
 class UnitsController < ApplicationController
   include Pagy::Backend
+
   before_action :set_unit, only: %i[edit update destroy show]
+  before_action :set_root_breadcrumb, only: %i[index show new edit]
 
   def index
-    breadcrumb 'Birimler', units_path
-
     units = Unit.includes(:unit_status, :unit_instruction_language, :unit_instruction_type, district: [:city])
 
     @pagy, @units = if params[:term].present?
@@ -17,13 +17,11 @@ class UnitsController < ApplicationController
   end
 
   def show
-    breadcrumb 'Birimler', units_path, match: :exact
     breadcrumb @unit.name, unit_path(@unit)
   end
 
   def new
-    breadcrumb 'Birimler', units_path, match: :exact
-    breadcrumb 'Yeni Birim', new_unit_path
+    breadcrumb t('.form_title'), new_unit_path
     @unit = Unit.new
   end
 
@@ -33,8 +31,8 @@ class UnitsController < ApplicationController
   end
 
   def edit
-    breadcrumb 'Birimler', units_path, match: :exact
-    breadcrumb @unit.name, edit_unit_path(@unit)
+    breadcrumb @unit.name, unit_path(@unit), match: :exact
+    breadcrumb t('action_group.edit'), edit_unit_path(@unit)
   end
 
   def update
@@ -46,6 +44,10 @@ class UnitsController < ApplicationController
   end
 
   private
+
+  def set_root_breadcrumb
+    breadcrumb t('.common.units'), units_path, match: :exact
+  end
 
   def smart_search(units)
     units.search(params[:term])
