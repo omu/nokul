@@ -1,55 +1,56 @@
-<%= simple_form_for(unit) do |f| %>
-  <%= f.error_notification %>
-  <div class="row">
-    <div class='form-group col-sm-8'>
-      <label>Birimin Adı</label>
-      <%= f.input :name, required: true, label: false, input_html: { class: 'form-control' }, wrapper: false %>
-    </div>
-    <div class='form-group col-sm-4'>
-      <label>YOKSIS ID</label>
-      <%= f.input :yoksis_id, required: true, label: false, input_html: { class: 'form-control' }, wrapper: false %>
-    </div>
-  </div>
-  <div class='form-group'>
-    <label>Kuruluş Tarihi</label>
-    <%= f.input :founded_at, required: true, label: false, start_year: Date.today.year - 50 %>
-  </div>
-  <div class="row">
-    <div class='form-group col-sm-4'>
-      <label>Aktiflik Durumu</label>
-      <%= f.association :unit_status, label: false, input_html: { class: 'form-control' } %>
-    </div>
-    <div class='form-group col-sm-4'>
-      <label>Öğretim Dili</label>
-      <%= f.association :unit_instruction_language, label: false, input_html: { class: 'form-control' } %>
-    </div>
-    <div class='form-group col-sm-4'>
-      <label>Öğretim Türü</label>
-      <%= f.association :unit_instruction_type, label: false, input_html: { class: 'form-control' } %>
-    </div>
-  </div>
-  <div class='form-group'>
-    <label>Öğretim Süresi (Yıl)</label>
-    <%= f.input :duration, label: false, collection: 1..8, input_html: { class: 'form-control' } %>
-  </div>
-  <div class='form-group'>
-    <label>Birim Türü</label>
-    <%= f.input :type,
-               collection: enum_options_for_select(f.object.class, :type),
-               input_html: { class: 'form-control' } %>
-  </div>
-  <div class='form-group'>
-    <label>Bulunduğu İlçe</label>
-    <%= f.association :district, label: false, collection: City.includes(:districts).order(:name), as: :grouped_select, group_method: :districts, group_label_method: :name, input_html: { class: 'form-control', id: 'district_list' } %>
-  </div>
-  <div class='form-group'>
-    <label>Üst Birim</label>
-    <%= f.input :parent_id, as: :select, collection: Unit.all.order('name ASC'), label: false, input_html: { class: 'form-control', id: 'parent_unit_list' } %>
-  </div>
-  <div class="form-actions">
-    <%= f.button :submit, class: "btn btn-primary", role: "button" %>
-    <%= link_to 'Geri', :back, class: "btn btn-secondary", role: "button" %>
-  </div>
-<% end %>
+<div class='row'>
+  <div class='col-sm-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'calendar' %>
+        <strong><%= form_title %></strong>
+      </div>
+      <div class='card-body'>
+        <%= simple_form_for(unit) do |f| %>
+          <div class='row'>
+            <div class='form-group col-sm-12'>
+              <%= f.error_notification %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.input :name, required: true %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :yoksis_id, required: true %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :founded_at, required: true, start_year: Date.today.year - 50 %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.association :unit_status %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.association :unit_instruction_language %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.association :unit_instruction_type %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :duration,collection: 1..8 %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :type, collection: enum_options_for_select(f.object.class, :type) %>
+            </div>
 
-<%= render 'units/shared/select2' %>
+            <div class='form-group col-sm-6'>
+              <%= f.association :district, collection: City.includes(:districts).order(:name), as: :grouped_select, group_method: :districts, group_label_method: :name, input_html: { id: 'district_list' } %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :parent_id, as: :select, collection: Unit.all.order('name ASC'), input_html: { id: 'parent_unit_list' } %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
+              <%= link_to_back(:back) %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'select2' %>
