@@ -10,7 +10,6 @@ en:
     status: Status
     theoric: Theoric
     unit: Unit
-
   activerecord:
     models:
       course: Course
@@ -24,7 +23,6 @@ en:
           passive: Passive
           active: Active
           abrogated: Abrogated
-
   curriculum:
     courses:
       new:

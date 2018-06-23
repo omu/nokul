@@ -10,7 +10,6 @@ tr:
     status: Durumu
     theoric: Teorik
     unit: Birim
-
   activerecord:
     models:
       course: Ders
@@ -24,13 +23,12 @@ tr:
           passive: Pasif
           active: Aktif
           abrogated: Yürürlükten Kaldırılmış
-
   curriculum:
     courses:
       new:
         form_title: Ders Oluştur
       edit:
-        form_title: Dersi Güncelle
+        form_title: Dersi Düzenle
       create:
         success: Ders başarıyla oluşturuldu.
       destroy:
@@ -44,7 +42,6 @@ tr:
         <<: *course_attributes
         add_new_course: Yeni Ders Ekle
         courses: Dersler
-
   simple_form:
     labels:
       course:
