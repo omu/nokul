@@ -1,27 +1,27 @@
 <div class="col-md-6">
   <div class="card mx-4">
     <div class="card-body p-4">
-      <h1>Şifre Sıfırlama</h1>
-      <p class="text-muted">Hesabınızda kullandığınız e-mail adresini girerek şifre sıfırlama talimatlarını alabilirsiniz.<p>
+      <h1><%= t('devise.common.reset_password') %></h1>
+      <p class="text-muted"><%= t('.hint') %><p>
       <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
         <%= f.error_notification %>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text">@</span>
           </div>
-          <%= f.input :email, required: true, autofocus: true, label: false, input_html: { class: 'form-control', type: 'text' }, placeholder: 'E-mail adresiniz', wrapper: false %>
+          <%= f.input :email, required: true, autofocus: true, label: false, wrapper: false %>
         </div>
 
-        <%= f.button :submit, 'Şifre sıfırlama talimatlarını gönder', class: 'btn btn-block btn-primary' %>
+        <%= f.button :submit, t('.send_instructions'), class: 'btn btn-block btn-primary' %>
       <% end %>
     </div>
     <div class="card-footer p-4">
       <div class="row">
         <div class="col-6">
-          <%= link_to 'Giriş Yap', new_session_path(resource_name), class: 'btn btn-secondary btn-block', role: 'button' %>
+          <%= link_to t('devise.common.login'), new_session_path(resource_name), class: 'btn btn-secondary btn-block', role: 'button' %>
         </div>
         <div class="col-6">
-          <%= link_to 'Kayıt Ol', new_registration_path(resource_name), class: 'btn btn-secondary btn-block', role: 'button' %>
+          <%= link_to t('devise.common.register'), new_registration_path(resource_name), class: 'btn btn-secondary btn-block', role: 'button' %>
         </div>
       </div>
     </div>
