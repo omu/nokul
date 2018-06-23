@@ -1,108 +1,29 @@
-<div class="row">
-  <div class="col-sm-12">
-    <div class="card">
-      <div class="card-header">
-        <%= fa_icon 'search', text: 'Arama Yap' %>
-      </div>
-      <div class="card-body">
-        <div id="accordion" role="tablist">
-          <div class="card">
-            <div class="card-header" role="tab" id="headingOne">
-              <h5 class="mb-0">
-                <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Akıllı Arama
-                </a>
-              </h5>
-            </div>
-            <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" style="">
-              <div class="card-body">
-                <%= form_tag units_path, method: :get do %>
-                  <div class="form-group">
-                    <%= text_field_tag 'term', params[:term], placeholder: "Birim adı veya YOKSIS numarası", class: 'form-control' %>
-                  </div>
-                  <%= submit_tag 'Birimleri Ara', class: 'btn btn-primary' %>
-                <% end %>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header" role="tab" id="headingTwo">
-              <h5 class="mb-0">
-                <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Detaylı Arama
-                </a>
-              </h5>
-            </div>
-            <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion" style="">
-              <div class="card-body">
-                <%= form_tag units_path, method: :get do %>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <div class="form-group">
-                        <label for="name">Öğretim Süresi</label>
-                        <%= text_field_tag 'duration', params[:duration], placeholder: "Öğretim Süresi (Yıl)", class: 'form-control' %>
-                      </div>
-                    </div>
-                    <div class="col-sm-3">
-                      <div class="form-group">
-                        <label for="ccnumber">Birim Durumu</label>
-                        <%= select_tag(:unit_status_id, options_from_collection_for_select(UnitStatus.all, :id, :name), include_blank: true, class: 'form-control') %>
-                      </div>
-                    </div>
-                    <div class="col-sm-3">
-                      <div class="form-group">
-                        <label for="ccnumber">Öğretim Dili</label>
-                        <%= select_tag(:unit_instruction_language_id, options_from_collection_for_select(UnitInstructionLanguage.all, :id, :name), include_blank: true, class: 'form-control') %>
-                      </div>
-                    </div>
-                    <div class="col-sm-3">
-                      <div class="form-group">
-                        <label for="ccnumber">Öğretim Türü</label>
-                        <%= select_tag(:unit_instruction_type_id, options_from_collection_for_select(UnitInstructionType.all, :id, :name), include_blank: true, class: 'form-control') %>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <%= submit_tag 'Birimleri Ara', class: 'btn btn-primary' %>
-                    </div>
-                  </div>
-                <% end %>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class='alert alert-light'>
+  <%= link_to_new(new_unit_path, t('.new_unit_link')) %>
 </div>
 
-<div class="row">
-  <div class="col-lg-12">
-    <div class="card">
-      <div class="card-header">
-        <%= fa_icon 'align-justify', text: 'Birimler' %>
-        <div class="card-header-actions">
-          <%= link_to new_unit_path, class: "card-header-action" do %>
-            <%= fa_icon 'plus', text: 'Yeni Ekle' %>
-          <% end %>
-        </div>
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'align-justify', text: t('.card_header') %>
       </div>
-      <div class="card-body">
-        <table class="table table-responsive table-striped">
+      <div class='card-body'>
+        <%= render 'search' %>
+        <table class='table table-responsive-sm table-sm'>
           <thead>
             <tr>
-              <th>Birim Adı</th>
-              <th>YOKSIS ID</th>
-              <th>FOET Kodu</th>
-              <th>Kuruluş Tarihi</th>
-              <th>Öğrenim Süresi</th>
-              <th>Birim Türü</th>
-              <th>Konumu</th>
-              <th>Birim Durumu</th>
-              <th>Öğretim Dili</th>
-              <th>Öğretim Türü</th>
-              <th colspan="3">İşlemler</th>
+              <th><%= t('.name') %></th>
+              <th><%= t('.yoksis_id') %></th>
+              <th><%= t('.foet_code') %></th>
+              <th><%= t('.founded_at') %></th>
+              <th><%= t('.duration') %></th>
+              <th><%= t('.type') %></th>
+              <th><%= t('.district') %></th>
+              <th><%= t('.unit_status') %></th>
+              <th><%= t('.unit_instruction_language') %></th>
+              <th><%= t('.unit_instruction_type') %></th>
+              <th><%= t('actions') %></th>
             </tr>
           </thead>
           <tbody>
@@ -118,17 +39,19 @@
                 <td><%= unit.unit_status.try(:name) %></td>
                 <td><%= unit.unit_instruction_language.try(:name) %></td>
                 <td><%= unit.unit_instruction_type.try(:name) %></td>
-                <td><%= link_to('Görüntüle', unit_path(unit), class: 'btn btn-secondary btn-sm') %></td>
-                <td><%= link_to('Düzenle', edit_unit_path(unit), class: 'btn btn-secondary btn-sm') %></td>
-                <td><%= link_to('Sil', unit, method: :delete, data: { confirm: 'Emin misiniz? Bu işlem geri alınamaz.' }, class: 'btn btn-danger btn-sm') %></td>
+                <td>
+                  <%= link_to_show(unit_path(unit)) %>
+                  <%= link_to_edit(edit_unit_path(unit)) %>
+                  <%= link_to_destroy(unit) %>
+                </td>
               </tr>
             <% end %>
           </tbody>
         </table>
       </div>
     </div>
-    <nav aria-label="pagination">
-      <ul class="pagination justify-content-center">
+    <nav aria-label='pagination'>
+      <ul class='pagination justify-content-center'>
         <%== pagy_nav_bootstrap(@pagy) %>
       </ul>
     </nav>
