@@ -1,0 +1,48 @@
+en:
+  activerecord:
+    attributes:
+      user: &user_attributes
+        id_number: ID Number
+        email: E-mail
+        password: Password
+        password_confirmation: Password Confirmation
+        current_password: Current Password
+  simple_form:
+    placeholders:
+      user:
+        <<: *user_attributes
+  validators:
+    duty:
+      active_and_tenure: This user already has an active and tenure duty. Edit the existing duty or make it passive in order to create a new one.
+    employee:
+      active: This user already has an active employee. Edit the existing employee or make it passive in order to create a new one.
+  helpers:
+    submit:
+      user:
+        update: Change my Password
+  devise:
+    common:
+      reset_password: Reset Password
+      login: Login
+      register: Register
+    passwords:
+      edit:
+        reset_my_password: Reset my Password
+      new:
+        send_instructions: Send Reset Password Instructions
+        hint: You can request password reset instruction by typing your e-mail.
+    registrations:
+      edit:
+        change_password: Change Password
+        leave_blank: leave blank if you don't want to change
+        current_password: you must enter your current password for changing your e-maila address
+      new:
+        did_you_forget: Forgot Your Password?
+        create_your_account: Create Your Account
+    sessions:
+      new:
+        login_to_your_account: Login to your account
+        did_you_forget: Forgot your password?
+        remember_login: Remember Login
+        registration_description: Students and staff joining to our university need to create an account by registering.
+        create_account: Create Account

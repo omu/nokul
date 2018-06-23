@@ -1,11 +1,1 @@
-<div class="col-sm-12">
-  <div class="card">
-    <div class="card-header">
-      <%= fa_icon 'street-view' %>
-      <strong>Ülkeyi Düzenle</strong>
-    </div>
-    <div class="card-body">
-      <%= render 'locations/countries/shared/form', country: @country %>
-    </div>
-  </div>
-</div>
+<%= render 'form', country: @country, form_title: t('.form_title') %>

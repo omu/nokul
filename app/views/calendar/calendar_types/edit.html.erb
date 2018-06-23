@@ -1,9 +1,1 @@
-<div class="card">
-  <br><h3 class="card-title text-center">Takvim Türü Düzenleme</h3>
-  <div class="card-body">
-    <%= render 'form', calendar_type: @calendar_type %>
-  </div>
-  <div class="card-footer">
-    <%= link_to 'Geri', :back %>
-  </div>
-</div>
+<%= render 'form', calendar_type: @calendar_type, form_title: t('.form_title') %>

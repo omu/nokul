@@ -1,10 +1,59 @@
 en:
+  activerecord:
+    attributes:
+      identity: &identity_attributes
+        name: Identity Type
+        first_name: First Name
+        last_name: Last Name
+        mothers_name: Mothers Name
+        fathers_name: Fathers Name
+        gender: Gender
+        marital_status: Marital Status
+        place_of_birth: Place of Birth
+        date_of_birth: Date of Birth
+        registered_to: Registration
+    enums:
+      identity:
+        names:
+          formal: Formal Identity
+          informal: Informal Identity
+        genders:
+          male: Male
+          female: Female
+          other: Other
+        marital_statuses:
+          single: Single
+          married: Married
+          divorced: Divorced
+          unknown: Unknown
+  helpers:
+    submit:
+      identity:
+        create: Create Identity
+        update: Update Identity
+  validators:
+    identity:
+      max_total: You can add up to %{limit} identities maximum.
+      max_legal: You can have up to %{limit} formal identities maximum.
   account:
     identities:
+      index:
+        <<: *identity_attributes
+        new_identity: Add a New Identity
+        card_header: Identity Information
+        update_from_mernis: Update from MERNIS
       edit:
         warning: You can not edit your formal identity!
+        form_title: Edit Identity
+      new:
+        form_title: Create Identity
       create:
         success: Identity successfully created!
-      update_from_mernis:
-        wait: You recently created or updated your identity. You can update your identity once every week.
-        will_update: We got your identity update request. In a couple of seconds/minutes you will be able to see your new identity.
+      update:
+        success: Identity successfully updated!
+      destroy:
+        success: Identity successfully deleted!
+        warning: Identity can not be deleted!
+      mernis:
+        wait: You recently created or updated your identity. You can only update your identity once a week from MERNIS.
+        will_update: We have received your identity update request. Your identity will be updated in a couple of seconds/minutes.

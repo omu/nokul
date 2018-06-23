@@ -17,12 +17,13 @@ module Curriculum
     end
 
     def new
-      breadcrumb 'Yeni Ders Ekle', new_course_path, match: :exact
+      breadcrumb t('.index.add_new_course'), new_course_path, match: :exact
       @course = Course.new
     end
 
     def edit
-      breadcrumb "#{@course.name} - Düzenle", edit_course_path(@course), match: :exact
+      breadcrumb @course.name, course_path(@course), match: :exact
+      breadcrumb t('.form_title'), edit_course_path(@course), match: :exact
     end
 
     def create

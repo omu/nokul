@@ -1,28 +1,55 @@
-<%= simple_form_for(academic_calendar) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.association :academic_term, label_method: lambda { |academic_term| full_name(academic_term) }, value_method: :id %>
-    <%= f.association :calendar_type %>
-    <%= f.input :senate_decision_date, start_year: 1975 %>
-    <%= f.input :senate_decision_no %>
-    <%= f.input :description %>
-  </div>
-
-  <% if academic_calendar.persisted?  %>
-    <center><h3>Etkinlikler</h3></center>
-    <div class="col-lg-12">
-      <%= f.simple_fields_for :calendar_events do |event| %>
-        <%= render "calendar_event_fields", f: event %>
-      <% end %>
-      <br>
-      <center><%= link_to_add_association 'Etkinlik Ekle', f, :calendar_events, class: 'btn btn-light' %></center>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'calendar' %>
+        <strong><%= form_title %></strong>
+      </div>
+      <div class="card-body">
+        <%= simple_form_for(academic_calendar) do |f| %>
+          <div class="row">
+            <div class='form-group col-sm-12'>
+              <%= f.error_notification %>
+              <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.input :name %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.association :academic_term, label_method: lambda { |academic_term| academic_term_full_name(academic_term) }, value_method: :id %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.association :calendar_type %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :senate_decision_date, start_year: 1975 %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :senate_decision_no %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.input :description %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
+              <%= link_to_back(:back) %>
+            </div>
+          </div>
+          <% if academic_calendar.persisted?  %>
+            <hr \>
+            <center><h3><%= t('.events') %></h3></center>
+            <div class="col-lg-12">
+              <%= f.simple_fields_for :calendar_events do |event| %>
+                <%= render 'calendar_event_fields', f: event %>
+              <% end %>
+              <br>
+              <%= link_to_add_association t('.new_event_link'), f, :calendar_events, class: 'btn btn-outline-primary btn-sm' %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
     </div>
-  <% end %>
-
-  <div class="form-actions">
-    <%= f.button :submit, class: "btn btn-success" %>
   </div>
-<% end %>
+</div>
+
+<%= javascript_include_tag 'shared/cocoon' %>

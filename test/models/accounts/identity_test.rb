@@ -62,13 +62,15 @@ class IdentityTest < ActiveSupport::TestCase
     fake = identities(:serhat_formal).dup
     assert_not fake.valid?
     assert_not_empty fake.errors[:base]
-    assert fake.errors[:base].include?(I18n.t('identity.max_legal', limit: 1))
+    assert fake.errors[:base].include?(I18n.t('validators.identity.max_legal', limit: 1))
   end
 
   test 'a user can have 2 identities in total' do
     fake = identities(:serhat_informal).dup
+    fake.save
+    fake = identities(:serhat_informal).dup
     assert_not fake.valid?
     assert_not_empty fake.errors[:base]
-    assert fake.errors[:base].include?(I18n.t('identity.max_total', limit: 2))
+    assert fake.errors[:base].include?(I18n.t('validators.identity.max_total', limit: 2))
   end
 end

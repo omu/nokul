@@ -43,7 +43,7 @@ class DutyTest < ActiveSupport::TestCase
     fake = duties(:omu).dup
     assert_not fake.valid?
     assert_not_empty fake.errors[:base]
-    assert fake.errors[:base].include?(I18n.t('duty.active_and_tenure'))
+    assert fake.errors[:base].include?(I18n.t('validators.duty.active_and_tenure'))
   end
 
   # scopes

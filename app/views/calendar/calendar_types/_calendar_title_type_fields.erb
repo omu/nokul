@@ -1,11 +1,11 @@
-<div class="nested-fields">
-  <div class="card card-default">
-    <div class="card-body bg-light">
+<div class='nested-fields'>
+  <div class='card card-default'>
+    <div class='card-body bg-light'>
       <%= f.association :title, collection: CalendarTitle.all %>
-      <%= f.input :status, collection: f.object.class.statuses.keys %>
+      <%= f.input :status, collection: enum_options_for_select(f.object.class, :status) %>
     </div>
-    <div class="card-footer">
-      <center><%= link_to_remove_association "Başlığı Sil", f, class: "btn btn-danger btn-sm" %></center>
+    <div class='card-footer'>
+      <%= link_to_remove_association t('.delete_title_type'), f, class: 'btn btn-outline-danger btn-sm' %>
     </div>
   </div>
 </div>

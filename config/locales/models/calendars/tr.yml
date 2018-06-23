@@ -1,24 +1,64 @@
 tr:
+  activerecord:
+    attributes:
+      calendar_title: &calendar_title_attributes
+        name: Takvim Başlığı
+      academic_term: &academic_term_attributes
+        year: Akademik Yıl
+        term: Akademik Dönem
+      calendar_type: &calendar_type_attributes
+        name: Takvim Türü
+      calendar_title_type:
+        type: Tür
+        title: Başlık
+        status: Durum
+      academic_calendar: &academic_calendar_attributes
+        name: Takvim Adı
+        academic_term: Akademik Dönem
+        calendar_type: Takvim Türü
+        senate_decision_date: Senato Karar Tarihi
+        senate_decision_no: Senato Karar No
+        description: Açıklama
+        created_at: Oluşturulma Tarihi
+        updated_at: Son Güncellenme
+      calendar_event:
+        calendar_title_id: Başlık
+        start_date: Başlama Tarihi
+        end_date: Bitiş Tarihi
+    enums:
+      academic_term:
+        terms:
+          fall: Güz
+          spring: Bahar
+          summer: Yaz
+      calendar_title_type:
+        statuses:
+          passive: Pasif
+          active: Aktif
+  helpers:
+    submit:
+      calendar_title:
+        create: Takvim Başlığı Oluştur
+        update: Takvim Başlığını Güncelle
+      academic_term:
+        create: Akademik Dönem Oluştur
+        update: Akademik Dönemi Güncelle
+      calendar_type:
+        create: Takvim Türü Oluştur
+        update: Takvim Türünü Güncelle
+      academic_calendar:
+        create: Akademik Takvim Oluştur
+        update: Akademik Takvimi Güncelle
   calendar:
-    academic_calendars:
-      create:
-        success: Akademik takvim başarıyla oluşturuldu.
-      destroy:
-        success: Akademik takvim başarıyla silindi.
-        warning: Akademik takvim silinemedi!
-      show:
-        alert: Böyle bir kayıt bulunamadı!
-      update:
-        success: Akademik takvim başarıyla güncellendi.
-    academic_terms:
-      create:
-        success: Akademik dönem başarıyla oluşturuldu.
-      destroy:
-        success: Akademik dönem başarıyla silindi.
-        warning: Akademik dönem silinemedi!
-      update:
-        success: Akademik dönem başarıyla güncellendi.
     calendar_titles:
+      index:
+        <<: *calendar_title_attributes
+        new_calender_title_link: Yeni Takvim Başlığı
+        card_header: Takvim Başlıkları
+      new:
+        form_title: Takvim Başlığı Oluştur
+      edit:
+        form_title: Takvim Başlığını Güncelle
       create:
         success: Takvim başlığı başarıyla oluşturuldu.
       destroy:
@@ -26,25 +66,67 @@ tr:
         warning: Takvim başlığı silinemedi!
       update:
         success: Takvim başlığı başarıyla güncellendi.
+    academic_terms:
+      index:
+        <<: *academic_term_attributes
+        new_academic_term_link: Yeni Akademik Dönem
+        card_header: Akademik Dönemler
+      new:
+        form_title: Akademik Dönem Oluştur
+      edit:
+        form_title: Akademik Dönemi Güncelle
+      create:
+        success: Akademik dönem başarıyla oluşturuldu.
+      destroy:
+        success: Akademik dönem başarıyla silindi.
+        warning: Akademik dönem silinemedi!
+      update:
+        success: Akademik dönem başarıyla güncellendi.
     calendar_types:
+      index:
+        <<: *calendar_type_attributes
+        new_calendar_type_link: Yeni Takvim Türü
+        card_header: Takvim Türleri
+      form:
+        new_title_link: Yeni Başlık Ekle
+        titles: Takvim Başlıkları
+      calendar_title_type_fields:
+        delete_title_type: Başlığı Sil
+      show:
+        <<: *calendar_type_attributes
+        card_header: '%{calendar_type} Takvim Türü'
+      new:
+        form_title: Takvim Türü Oluştur
+      edit:
+        form_title: Takvim Türünü Güncelle
       create:
         success: Takvim türü başarıyla oluşturuldu.
       destroy:
         success: Takvim türü başarıyla silindi.
-        warning: Takvim başlığı silinemedi!
+        warning: Takvim türü silinemedi!
       update:
         success: Takvim türü başarıyla güncellendi.
-  helpers:
-    submit:
-      calendar_title:
-        create: Takvim başlığı oluştur
-        update: Takvim başlığını güncelle
-      calendar_type:
-        create: Takvim türü oluştur
-        update: Takvim türünü güncelle
-      academic_term:
-        create: Akademik dönem oluştur
-        update: Akademik dönemi güncelle
-      academic_calendar:
-        create: Akademik takvim oluştur
-        update: Akademik takvimi güncelle
+    academic_calendars:
+      index:
+        <<: *academic_calendar_attributes
+        new_academic_calendar_link: Yeni Akademik Takvim
+        card_header: Akademik Takvimler
+      form:
+        new_event_link: Etkinlik Ekle
+        events: Etkinlikler
+      calendar_event_fields:
+        delete_event: Etkinliği Sil
+      new:
+        form_title: Akademik Takvim Oluştur
+      edit:
+        form_title: Akademik Takvimi Düzenle
+      create:
+        success: Akademik takvim başarıyla oluşturuldu.
+      destroy:
+        success: Akademik takvim başarıyla silindi.
+        warning: Akademik takvim silinemedi!
+      show:
+        <<: *academic_calendar_attributes
+        alert: Böyle bir kayıt bulunamadı!
+      update:
+        success: Akademik takvim başarıyla güncellendi.
