@@ -55,7 +55,6 @@ tr:
         <<: *calendar_title_attributes
         new_calender_title_link: Yeni Takvim Başlığı
         card_header: Takvim Başlıkları
-        search: Başlıkları Ara
       new:
         form_title: Takvim Başlığı Oluştur
       edit:
@@ -112,7 +111,6 @@ tr:
         <<: *academic_calendar_attributes
         new_academic_calendar_link: Yeni Akademik Takvim
         card_header: Akademik Takvimler
-        search: Takvimleri Ara
       form:
         new_event_link: Etkinlik Ekle
         events: Etkinlikler
