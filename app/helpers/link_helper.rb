@@ -5,7 +5,7 @@ module LinkHelper
     link_to(
       fa_icon('arrow-left', text: text),
       path,
-      class: 'btn btn-dark btn-sm'
+      class: 'btn btn-secondary btn-sm'
     )
   end
 

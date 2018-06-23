@@ -1,23 +1,32 @@
-<%= simple_form_for(country) do |f| %>
-  <%= f.error_notification %>
-  <div class="row">
-    <div class='form-group col-sm-12'>
-      <label>Ülkenin Adı</label>
-      <%= f.input :name, required: true, label: false, input_html: { class: 'form-control' }, wrapper: false %>
+<div class='row'>
+  <div class='col-sm-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'calendar' %>
+        <strong><%= form_title %></strong>
+      </div>
+      <div class='card-body'>
+        <%= simple_form_for(country) do |f| %>
+          <div class='row'>
+            <div class='form-group col-sm-12'>
+              <%= f.error_notification %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.input :name, required: true %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :iso, required: true %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :code, required: true %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
+              <%= link_to_back(:back) %>
+            </div>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
-  <div class="row">
-    <div class='form-group col-sm-6'>
-      <label>ISO Kodu</label>
-      <%= f.input :iso, required: true, label: false, input_html: { class: 'form-control' }, wrapper: false %>
-    </div>
-    <div class='form-group col-sm-6'>
-      <label>Resmi Kod</label>
-      <%= f.input :code, required: true, label: false, input_html: { class: 'form-control' }, wrapper: false %>
-    </div>
-  </div>
-  <div class="form-actions">
-    <%= f.button :submit, class: "btn btn-primary", role: "button" %>
-    <%= link_to 'Geri', :back, class: "btn btn-secondary", role: "button" %>
-  </div>
-<% end %>
+</div>
