@@ -13,6 +13,10 @@ tr:
           home: Ev Adresi
           work: İş Adresi
           other: Diğer Adres
+  simple_form:
+    hints:
+      address:
+        full_address: Mahalle, cadde, sokak, apartman adı ve kapı numarası
   helpers:
     submit:
       address:

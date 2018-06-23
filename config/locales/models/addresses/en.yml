@@ -13,6 +13,10 @@ en:
           home: Home Address
           work: Office Address
           other: Other Address
+  simple_form:
+    hints:
+      address:
+        full_address: Neighbourhood, street and door number
   helpers:
     submit:
       address:

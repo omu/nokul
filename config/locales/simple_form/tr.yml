@@ -10,30 +10,3 @@ tr:
       # html: '<abbr title="required">*</abbr>'
     error_notification:
       default_message: "Lütfen aşağıdaki sorunları gözden geçirin:"
-    hints:
-      address:
-        full_address: Mahalle, cadde, sokak, apartman adı ve kapı numarası
-    labels:
-      defaults:
-        description: 'Açıklama'
-      academic_calendar:
-        name: 'Takvim Adı'
-        academic_term: 'Akademik Dönem'
-        calendar_type: 'Takvim Türü'
-        senate_decision_date: 'Senato Karar Tarihi'
-        senate_decision_no: 'Senato Karar No'
-        calendar_events:
-          calendar_title_id: 'Başlık'
-          start_date: 'Başlama Tarihi'
-          end_date: 'Bitiş Tarihi'
-      academic_term:
-        year: Akademik Yıl
-        term: Akademik Dönem
-      academic_term:
-        year: Akademik Yıl
-        term: Akademik Dönem
-      calendar_type:
-        name: 'Takvim Türü'
-        calendar_title_types:
-          title: 'Başlık'
-          status: 'Durum'
