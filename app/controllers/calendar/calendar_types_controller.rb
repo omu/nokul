@@ -12,8 +12,8 @@ module Calendar
 
     def show
       breadcrumb t('.index.card_header'), calendar_types_path, match: :exact
-      breadcrumb "#{@calendar_type.name}", calendar_type_path
-      @titles = @calendar_type.titles
+      breadcrumb @calendar_type.name, calendar_type_path
+      @pagy, @titles = pagy(@calendar_type.titles)
     end
 
     def new

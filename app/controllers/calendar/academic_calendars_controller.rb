@@ -2,21 +2,30 @@
 
 module Calendar
   class AcademicCalendarsController < ApplicationController
+    include Pagy::Backend
     before_action :set_academic_calendar, only: %i[show edit update destroy]
 
     def index
-      @academic_calendars = AcademicCalendar.all
+      breadcrumb t('.card_header'), academic_calendars_path
+      @pagy, @academic_calendars =  pagy(AcademicCalendar.includes(:academic_term, :calendar_type))
     end
 
     def show
-      @events = @academic_calendar.calendar_events
+      breadcrumb t('.index.card_header'), academic_calendars_path, match: :exact
+      breadcrumb @academic_calendar.name, academic_calendars_path
+      @pagy, @events = pagy(@academic_calendar.calendar_events.includes(:calendar_title))
     end
 
     def new
+      breadcrumb t('.index.card_header'), academic_calendars_path, match: :exact
+      breadcrumb t('.form_title'), new_academic_calendar_path
       @academic_calendar = AcademicCalendar.new
     end
 
-    def edit; end
+    def edit
+      breadcrumb t('.index.card_header'), academic_calendars_path, match: :exact
+      breadcrumb t('.form_title'), edit_academic_calendar_path
+    end
 
     def create
       @academic_calendar = AcademicCalendar.new(calendar_params)
