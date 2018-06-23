@@ -6,12 +6,15 @@ module Locations
     before_action :set_city, only: %i[show edit update destroy]
 
     def show
-      breadcrumb 'Ülkeler', countries_path, match: :exact
+      breadcrumb t('.common.countries'), countries_path, match: :exact
       breadcrumb @country.name, country_path(@country), match: :exact
       breadcrumb @city.name, country_city_path(@country, @city)
     end
 
     def new
+      breadcrumb t('.common.countries'), countries_path, match: :exact
+      breadcrumb @country.name, country_path(@country), match: :exact
+      breadcrumb t('.form_title'), new_country_city_path
       @city = @country.cities.new
     end
 
@@ -21,7 +24,7 @@ module Locations
     end
 
     def edit
-      breadcrumb 'Ülkeler', countries_path, match: :exact
+      breadcrumb t('.common.countries'), countries_path, match: :exact
       breadcrumb @country.name, country_path(@country), match: :exact
       breadcrumb @city.name, country_city_path(@country, @city)
     end
