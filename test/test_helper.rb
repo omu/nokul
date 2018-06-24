@@ -17,7 +17,7 @@ require 'rails/test_help'
 
 module ActiveSupport
   class TestCase
-    # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
+    include AbstractController::Translation # Use t() in tests, instead of I18n.t()
     fixtures :all
   end
 end
