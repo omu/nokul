@@ -47,7 +47,7 @@ class AddressTest < ActiveSupport::TestCase
     fake = addresses(:formal).dup
     assert_not fake.valid?
     assert_not_empty fake.errors[:base]
-    assert fake.errors[:base].include?(I18n.t('validators.address.max_legal', limit: 1))
+    assert fake.errors[:base].include?(t('validators.address.max_legal', limit: 1))
   end
 
   test 'a user can have 5 addresses in total' do
@@ -64,6 +64,6 @@ class AddressTest < ActiveSupport::TestCase
     fake = addresses(:home).dup
     assert_not fake.valid?
     assert_not_empty fake.errors[:base]
-    assert fake.errors[:base].include?(I18n.t('validators.address.max_total', limit: 5))
+    assert fake.errors[:base].include?(t('validators.address.max_total', limit: 5))
   end
 end
