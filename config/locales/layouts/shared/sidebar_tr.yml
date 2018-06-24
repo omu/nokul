@@ -2,7 +2,6 @@ tr:
   layouts:
     shared:
       sidebar:
-        home: Anasayfa
         units: Birimler
         locations: Konumlar
         calendars: Takvimler
