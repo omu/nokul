@@ -2,8 +2,6 @@
 
 ENV['RAILS_ENV'] ||= 'test'
 
-require 'minitest/autorun'
-
 # simplecov and codacy coverage
 require 'simplecov'
 require 'codacy-coverage' if ENV['CI']
@@ -12,12 +10,13 @@ SimpleCov.start 'rails' do
 end
 Codacy::Reporter.start if ENV['CI']
 
+require 'minitest/autorun'
 require_relative '../config/environment'
 require 'rails/test_help'
 
 module ActiveSupport
   class TestCase
-    # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
+    include AbstractController::Translation # Use t() in tests, instead of I18n.t()
     fixtures :all
   end
 end
