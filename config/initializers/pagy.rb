@@ -20,7 +20,7 @@ require 'pagy/extras/bootstrap'
 
 # I18n: Use the `I18n` gem instead of the pagy implementation
 # See https://ddnexus.github.io/pagy/extras/i18n
-# require 'pagy/extras/i18n'
+require 'pagy/extras/i18n'
 
 # Items: Handle the page :items passed with the params
 # See https://ddnexus.github.io/pagy/extras/items

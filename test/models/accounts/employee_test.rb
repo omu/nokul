@@ -52,7 +52,7 @@ class EmployeeTest < ActiveSupport::TestCase
     fake = employees(:serhat_active).dup
     assert_not fake.valid?
     assert_not_empty fake.errors[:base]
-    assert fake.errors[:base].include?(I18n.t('validators.employee.active'))
+    assert fake.errors[:base].include?(t('validators.employee.active'))
   end
 
   # scopes
