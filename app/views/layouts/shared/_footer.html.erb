@@ -1,10 +1,11 @@
 <footer class="app-footer">
   <span>
     <%= link_to(url_for(locale: 'tr'), class: 'btn btn-light') do %>
+      <%= image_tag 'tr.svg', height: '21', width: '28' %>
       <i class="flag-icon flag-icon-tr" title="tr" id="tr"></i>&nbsp;Türkçe
     <% end %>
     <%= link_to(url_for(locale: 'en'), class: 'btn btn-light') do %>
-      <i class="flag-icon flag-icon-us" title="us" id="us"></i>&nbsp;English
+      <%= image_tag 'um.svg', height: '21', width: '28' %></i>&nbsp;English
     <% end %>
   </span>
   <div class="ml-auto">
