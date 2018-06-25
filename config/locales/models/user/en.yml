@@ -35,7 +35,7 @@ en:
       edit:
         change_password: Change Password
         leave_blank: leave blank if you don't want to change
-        current_password: you must enter your current password for changing your e-maila address
+        current_password: you must enter your current password for changing your e-mail address
       new:
         did_you_forget: Forgot Your Password?
         create_your_account: Create Your Account
