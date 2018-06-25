@@ -3,6 +3,8 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
+  include ActiveJob::TestHelper
+
   # relations
   %i[
     employees
@@ -79,5 +81,28 @@ class UserTest < ActiveSupport::TestCase
   # custom tests
   test 'user can respond to account method' do
     assert users(:serhat).accounts
+  end
+
+  # callback tests
+  test 'user runs KpsAddressCreateJob after being created' do
+    assert_enqueued_with(job: KpsAddressCreateJob) do
+      User.create(
+        id_number: '12345678912',
+        email: 'fakeuser@fakemail.com',
+        password: '1234567',
+        password_confirmation: '1234567'
+      )
+    end
+  end
+
+  test 'user runs KpsIdentityCreateJob after being created' do
+    assert_enqueued_with(job: KpsIdentityCreateJob) do
+      User.create(
+        id_number: '98765432198',
+        email: 'anotherfakeuser@fakemail.com',
+        password: '1234567',
+        password_confirmation: '1234567'
+      )
+    end
   end
 end
