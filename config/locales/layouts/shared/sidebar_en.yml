@@ -2,7 +2,6 @@ en:
   layouts:
     shared:
       sidebar:
-        home: Home
         units: Units
         locations: Locations
         calendars: Calendars
