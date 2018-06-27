@@ -28,7 +28,6 @@ Vagrant.configure('2') do |config|
     sudo -u postgres psql <<<"CREATE USER $RDS_USERNAME WITH ENCRYPTED PASSWORD '$RDS_PASSWORD';"
     sudo -u postgres psql <<<"ALTER ROLE $RDS_USERNAME LOGIN CREATEDB;"
 
-
     sudo gem install bundler foreman
 
     cd /vagrant
