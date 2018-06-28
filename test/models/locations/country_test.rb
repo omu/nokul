@@ -35,6 +35,7 @@ class CountryTest < ActiveSupport::TestCase
     alpha_2_code
     alpha_3_code
     numeric_code
+    mernis_code
   ].each do |property|
     test "uniqueness validations for #{property} of a country" do
       fake = countries(:turkey).dup
