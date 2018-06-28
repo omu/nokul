@@ -1,14 +1,15 @@
 en:
   activerecord:
     attributes:
-      city: &city_attributes
-        name: Name of City
-        iso: ISO Code
-        nuts_code: NUTS Code
       country: &country_attributes
         name: Name of Country
-        iso: ISO Code
-        code: Country Code
+        alpha_2_code: Alpha 2 Code
+        alpha_3_code: Alpha 3 Code
+        numeric_code: ISO3166 Numeric
+        mernis_code: MERNIS Code
+      city: &city_attributes
+        name: Name of City
+        alpha_2_code: Alpha 2 Code
       district: &district_attributes
         name: Name of District
         yoksis_id: YOKSIS ID

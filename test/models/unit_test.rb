@@ -7,6 +7,7 @@ class UnitTest < ActiveSupport::TestCase
   %i[
     district
     unit_status
+    unit_type
     unit_instruction_type
     unit_instruction_language
     university_type
@@ -21,15 +22,11 @@ class UnitTest < ActiveSupport::TestCase
     end
   end
 
-  test 'university can communicate with university_types' do
-    assert units(:omu).university_type
-  end
-
   # validations: presence
   %i[
-    type
     district
     unit_status
+    unit_type
     yoksis_id
     name
   ].each do |property|

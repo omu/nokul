@@ -33,7 +33,7 @@
               <%= f.input :duration,collection: 1..8 %>
             </div>
             <div class='form-group col-sm-6'>
-              <%= f.input :type, collection: enum_options_for_select(f.object.class, :type) %>
+              <%= f.association :unit_type %>
             </div>
 
             <div class='form-group col-sm-6'>

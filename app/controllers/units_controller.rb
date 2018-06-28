@@ -7,7 +7,9 @@ class UnitsController < ApplicationController
   before_action :set_root_breadcrumb, only: %i[index show new edit]
 
   def index
-    units = Unit.includes(:unit_status, :unit_instruction_language, :unit_instruction_type, district: [:city])
+    units = Unit.includes(
+      :unit_status, :unit_instruction_language, :unit_instruction_type, :unit_type, district: [:city]
+    )
 
     @pagy, @units = if params[:term].present?
                       pagy(smart_search(units))
@@ -66,8 +68,8 @@ class UnitsController < ApplicationController
 
   def unit_params
     params.require(:unit).permit(
-      :name, :yoksis_id, :foet_code, :founded_at, :duration, :type, :district_id, :parent_id, :unit_status_id,
-      :unit_instruction_language_id, :unit_instruction_type_id, :university_type_id
+      :name, :yoksis_id, :foet_code, :founded_at, :duration, :district_id, :parent_id, :unit_status_id,
+      :unit_instruction_language_id, :unit_instruction_type_id, :unit_type_id, :university_type_id
     )
   end
 end
