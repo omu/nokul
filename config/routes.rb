@@ -43,8 +43,8 @@ Rails.application.routes.draw do
 
   scope module: :locations do
     resources :countries do
-      resources :cities do
-        resources :districts do
+      resources :cities, except: [:index] do
+        resources :districts, except: [:show, :index] do
         end
       end
     end
