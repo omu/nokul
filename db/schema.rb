@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_24_005303) do
+ActiveRecord::Schema.define(version: 2018_06_21_072455) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -83,16 +83,17 @@ ActiveRecord::Schema.define(version: 2018_06_24_005303) do
 
   create_table "cities", force: :cascade do |t|
     t.string "name", null: false
-    t.string "iso", null: false
-    t.string "nuts_code", null: false
+    t.string "alpha_2_code", null: false
     t.bigint "country_id"
     t.index ["country_id"], name: "index_cities_on_country_id"
   end
 
   create_table "countries", force: :cascade do |t|
     t.string "name", null: false
-    t.string "iso", null: false
-    t.integer "code", null: false
+    t.string "alpha_2_code", null: false
+    t.string "alpha_3_code", null: false
+    t.string "numeric_code", null: false
+    t.string "mernis_code"
   end
 
   create_table "courses", force: :cascade do |t|
@@ -114,7 +115,8 @@ ActiveRecord::Schema.define(version: 2018_06_24_005303) do
 
   create_table "districts", force: :cascade do |t|
     t.string "name", null: false
-    t.integer "yoksis_id"
+    t.string "mernis_code"
+    t.boolean "active", default: true, null: false
     t.bigint "city_id"
     t.index ["city_id"], name: "index_districts_on_city_id"
   end
@@ -257,26 +259,34 @@ ActiveRecord::Schema.define(version: 2018_06_24_005303) do
     t.integer "code", null: false
   end
 
+  create_table "unit_types", force: :cascade do |t|
+    t.string "name"
+    t.integer "code"
+  end
+
   create_table "units", force: :cascade do |t|
     t.string "name", null: false
     t.integer "yoksis_id", null: false
+    t.integer "detsis_id"
     t.integer "foet_code"
     t.date "founded_at"
     t.integer "duration"
-    t.integer "type", null: false
+    t.string "ancestry"
     t.bigint "district_id"
+    t.bigint "unit_status_id"
+    t.bigint "unit_instruction_language_id"
+    t.bigint "unit_instruction_type_id"
+    t.bigint "university_type_id"
+    t.bigint "unit_type_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "ancestry"
-    t.integer "unit_status_id"
-    t.integer "unit_instruction_language_id"
-    t.integer "unit_instruction_type_id"
-    t.integer "university_type_id"
     t.index ["ancestry"], name: "index_units_on_ancestry"
     t.index ["district_id"], name: "index_units_on_district_id"
     t.index ["unit_instruction_language_id"], name: "index_units_on_unit_instruction_language_id"
     t.index ["unit_instruction_type_id"], name: "index_units_on_unit_instruction_type_id"
     t.index ["unit_status_id"], name: "index_units_on_unit_status_id"
+    t.index ["unit_type_id"], name: "index_units_on_unit_type_id"
+    t.index ["university_type_id"], name: "index_units_on_university_type_id"
   end
 
   create_table "university_types", force: :cascade do |t|
@@ -296,9 +306,9 @@ ActiveRecord::Schema.define(version: 2018_06_24_005303) do
     t.datetime "last_sign_in_at"
     t.inet "current_sign_in_ip"
     t.inet "last_sign_in_ip"
+    t.string "preferred_language", default: "tr"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "language", default: "tr"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["id_number"], name: "index_users_on_id_number", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
@@ -338,4 +348,9 @@ ActiveRecord::Schema.define(version: 2018_06_24_005303) do
   add_foreign_key "unit_calendar_events", "calendar_titles"
   add_foreign_key "unit_calendar_events", "units"
   add_foreign_key "units", "districts"
+  add_foreign_key "units", "unit_instruction_languages"
+  add_foreign_key "units", "unit_instruction_types"
+  add_foreign_key "units", "unit_statuses"
+  add_foreign_key "units", "unit_types"
+  add_foreign_key "units", "university_types"
 end
