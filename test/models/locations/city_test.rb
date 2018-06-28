@@ -17,8 +17,7 @@ class CityTest < ActiveSupport::TestCase
   # validations: presence
   %i[
     name
-    iso
-    nuts_code
+    alpha_2_code
   ].each do |property|
     test "presence validations for #{property} of a city" do
       cities(:samsun).send("#{property}=", nil)
@@ -30,8 +29,7 @@ class CityTest < ActiveSupport::TestCase
   # validations: uniqueness
   %i[
     name
-    iso
-    nuts_code
+    alpha_2_code
   ].each do |property|
     test "uniqueness validations for #{property} of a city" do
       fake = cities(:samsun).dup
@@ -41,15 +39,13 @@ class CityTest < ActiveSupport::TestCase
   end
 
   # callbacks
-  test 'callbacks must titlecase the name and must upcase the nuts_code of a city' do
+  test 'callbacks must titlecase the name and must upcase the alpha_2_code of a city' do
     city = City.create(
       name: 'wonderland',
-      nuts_code: 'wl1',
-      iso: 'wl11',
+      alpha_2_code: 'wl-11',
       country: countries(:turkey)
     )
     assert_equal city.name, 'Wonderland'
-    assert_equal city.nuts_code, 'WL1'
-    assert_equal city.iso, 'WL11'
+    assert_equal city.alpha_2_code, 'WL-11'
   end
 end
