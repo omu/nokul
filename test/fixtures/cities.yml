@@ -1,30 +1,24 @@
 samsun:
   name: Samsun
-  iso: TR-55
-  nuts_code: TR831
+  alpha_2_code: TR-55
   country: turkey
 sinop:
   name: Sinop
-  iso: TR-57
-  nuts_code: TR823
+  alpha_2_code: TR-57
   country: turkey
 tokat:
   name: Tokat
-  iso: TR-50
-  nuts_code: TR832
+  alpha_2_code: TR-50
   country: turkey
 rize:
   name: Rize
-  iso: TR-53
-  nuts_code: TR904
+  alpha_2_code: TR-53
   country: turkey
 ordu:
   name: Trabzon
-  iso: TR-61
-  nuts_code: TR901
+  alpha_2_code: TR-61
   country: turkey
 stockholm:
   name: Stockholm
-  iso: SE-11
-  nuts_code: SE110
+  alpha_2_code: SE-11
   country: sweden

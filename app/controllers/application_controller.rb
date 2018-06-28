@@ -15,8 +15,8 @@ class ApplicationController < ActionController::Base
     language = language_params
 
     if user_signed_in?
-      current_user.update(language: language) if language
-      I18n.locale = current_user.language
+      current_user.update(preferred_language: language) if language
+      I18n.locale = current_user.preferred_language
     else
       I18n.locale = language || I18n.default_locale
     end

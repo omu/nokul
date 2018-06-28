@@ -7,9 +7,9 @@ en:
         foet_code: FOET Code
         founded_at: Founded At
         duration: Duration of Instruction
-        type: Unit Type
         district: Location
         ancestry: Parent/Children Unit
+        unit_type: Unit Type
         unit_status: Unit Status
         unit_instruction_language: Instruction Language
         unit_instruction_type: Instruction Type
@@ -17,34 +17,12 @@ en:
         parent_id: Parent Unit
         created_at: Created At
         updated_at: Updated At
-    enums:
-      unit:
-        types: &unit_types
-          university: 'University'
-          academy: 'Academy'
-          art_discipline: 'Art Discipline'
-          department: 'Department'
-          discipline: 'Discipline'
-          faculty: 'Faculty'
-          institute: 'Institute'
-          interdisciplinary_discipline: 'Interdisciplinary Discipline'
-          rectorship: 'Rectorship'
-          research_center: 'Research Center'
-          science_discipline: 'Science Discipline'
-          vocational_school: 'Vocational School'
-          doctoral_program: 'Doctoral Program'
-          interdisciplinary_doctoral_program: 'Interdisciplinary Doctoral Program'
-          interdisciplinary_master_program: 'Interdisciplinary Master Program'
-          master_program: 'Master Program'
-          proficiency_in_art_program: 'Proficiency In Art Program'
-          undergraduate_program: 'Undergraduate Program'
   helpers:
     submit:
       unit:
         create: Create Unit
         update: Update Unit
   units:
-    <<: *unit_types # Do not remove this line since they are matching with YOKSIS data!
     common:
       units: Units
     search:

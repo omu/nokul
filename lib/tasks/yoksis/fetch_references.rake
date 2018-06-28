@@ -9,6 +9,7 @@ namespace :yoksis do
   desc 'fetch all references'
   task :fetch_references do
     {
+      get_birim_turu: 'UnitType',
       get_ogrenim_dili: 'UnitInstructionLanguage',
       get_ogrenim_turu: 'UnitInstructionType',
       get_aktiflik_durumu: 'UnitStatus',
