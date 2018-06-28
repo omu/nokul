@@ -5,7 +5,7 @@ module Locations
     include Pagy::Backend
 
     before_action :set_country, only: %i[show edit update destroy]
-    before_action :set_root_breadcrumb, only: %i[index show new edit]
+    before_action :add_breadcrumbs, only: %i[index show new edit]
 
     def index
       countries = Country.all
@@ -18,7 +18,6 @@ module Locations
     end
 
     def show
-      breadcrumb @country.name, country_path(@country)
       @pagy, @cities = if params[:term].present?
                          pagy(@country.cities.search(params[:term]))
                        else
@@ -27,7 +26,6 @@ module Locations
     end
 
     def new
-      breadcrumb t('.new_country'), new_country_path
       @country = Country.new
     end
 
@@ -36,9 +34,7 @@ module Locations
       @country.save ? redirect_to(@country, notice: t('.success')) : render(:new)
     end
 
-    def edit
-      breadcrumb @country.name, edit_country_path(@country)
-    end
+    def edit; end
 
     def update
       @country.update(country_params) ? redirect_to(@country, notice: t('.success')) : render(:edit)
@@ -50,16 +46,25 @@ module Locations
 
     private
 
-    def set_root_breadcrumb
-      breadcrumb t('.common.countries'), countries_path, match: :exact
-    end
-
     def set_country
       @country = Country.find(params[:id])
     end
 
     def country_params
       params.require(:country).permit(:name, :alpha_2_code, :alpha_3_code, :numeric_code, :mernis_code)
+    end
+
+    def add_breadcrumbs
+      breadcrumb t('locations.common.countries'), countries_path, match: :exact
+
+      case params[:action]
+      when 'show'
+        breadcrumb @country.name, country_path(@country)
+      when 'new'
+        breadcrumb t('.new_country'), new_country_path
+      when 'edit'
+        breadcrumb @country.name, edit_country_path(@country)
+      end
     end
   end
 end

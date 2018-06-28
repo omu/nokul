@@ -5,20 +5,17 @@ module Calendar
     include Pagy::Backend
 
     before_action :set_academic_term, only: %i[edit update destroy]
-    before_action :set_root_breadcrumb, only: %i[index new edit]
+    before_action :add_breadcrumbs, only: %i[index new edit]
 
     def index
       @pagy, @academic_terms = pagy(AcademicTerm.all)
     end
 
     def new
-      breadcrumb t('.form_title'), new_academic_term_path
       @academic_term = AcademicTerm.new
     end
 
-    def edit
-      breadcrumb t('.form_title'), edit_academic_term_path
-    end
+    def edit; end
 
     def create
       @academic_term = AcademicTerm.new(academic_term_params)
@@ -35,10 +32,6 @@ module Calendar
 
     private
 
-    def set_root_breadcrumb
-      breadcrumb t('.index.card_header'), academic_terms_path, match: :exact
-    end
-
     def redirect_with(message)
       redirect_to(academic_terms_path, notice: t(".#{message}"))
     end
@@ -49,6 +42,14 @@ module Calendar
 
     def academic_term_params
       params.require(:academic_term).permit(:year, :term)
+    end
+
+    def add_breadcrumbs
+      breadcrumb t('.index.card_header'), academic_terms_path, match: :exact
+      case params[:action]
+      when 'new', 'edit'
+        breadcrumb t('.form_title'), academic_terms_path
+      end
     end
   end
 end

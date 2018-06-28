@@ -30,6 +30,7 @@ class DistrictTest < ActiveSupport::TestCase
     fake = districts(:vezirkopru).dup
     assert_not fake.valid?
     assert_not_empty fake.errors[:name]
+    assert_not_empty fake.errors[:mernis_code]
   end
 
   # callbacks
