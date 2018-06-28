@@ -4,20 +4,17 @@ module Account
   class IdentitiesController < ApplicationController
     before_action :set_identity, only: %i[edit update destroy mernis]
     before_action :check_formality, only: %i[edit update destroy]
-    before_action :set_root_breadcrumb, only: %i[index new edit]
+    before_action :add_breadcrumbs, only: %i[index new edit]
 
     def index
       @identities = current_user.identities
     end
 
     def new
-      breadcrumb t('.form_title'), identities_path
       @identity = current_user.identities.informal.new
     end
 
-    def edit
-      breadcrumb t('.form_title'), identities_path
-    end
+    def edit; end
 
     def create
       @identity = current_user.identities.informal.new(identity_params)
@@ -43,10 +40,6 @@ module Account
 
     private
 
-    def set_root_breadcrumb
-      breadcrumb t('.index.card_header'), identities_path, match: :exact
-    end
-
     def check_formality
       redirect_with('warning') if @identity.formal?
     end
@@ -64,6 +57,14 @@ module Account
         :name, :first_name, :last_name, :mothers_name, :fathers_name, :gender, :marital_status, :place_of_birth,
         :date_of_birth, :registered_to
       )
+    end
+
+    def add_breadcrumbs
+      breadcrumb t('account.identities.index.card_header'), addresses_path, match: :exact
+      case params[:action]
+      when 'new', 'edit'
+        breadcrumb t('.form_title'), identities_path
+      end
     end
   end
 end

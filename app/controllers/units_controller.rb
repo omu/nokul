@@ -4,7 +4,7 @@ class UnitsController < ApplicationController
   include Pagy::Backend
 
   before_action :set_unit, only: %i[edit update destroy show]
-  before_action :set_root_breadcrumb, only: %i[index show new edit]
+  before_action :add_breadcrumbs, only: %i[index show new edit]
 
   def index
     units = Unit.includes(
@@ -18,12 +18,9 @@ class UnitsController < ApplicationController
                     end
   end
 
-  def show
-    breadcrumb @unit.name, unit_path(@unit)
-  end
+  def show; end
 
   def new
-    breadcrumb t('.form_title'), new_unit_path
     @unit = Unit.new
   end
 
@@ -32,10 +29,7 @@ class UnitsController < ApplicationController
     @unit.save ? redirect_to(@unit, notice: t('.success')) : render(:new)
   end
 
-  def edit
-    breadcrumb @unit.name, unit_path(@unit), match: :exact
-    breadcrumb t('action_group.edit'), edit_unit_path(@unit)
-  end
+  def edit; end
 
   def update
     @unit.update(unit_params) ? redirect_to(@unit, notice: t('.success')) : render(:edit)
@@ -46,10 +40,6 @@ class UnitsController < ApplicationController
   end
 
   private
-
-  def set_root_breadcrumb
-    breadcrumb t('.common.units'), units_path, match: :exact
-  end
 
   def smart_search(units)
     units.search(params[:term])
@@ -71,5 +61,15 @@ class UnitsController < ApplicationController
       :name, :yoksis_id, :foet_code, :founded_at, :duration, :district_id, :parent_id, :unit_status_id,
       :unit_instruction_language_id, :unit_instruction_type_id, :unit_type_id, :university_type_id
     )
+  end
+
+  def add_breadcrumbs
+    breadcrumb t('.common.units'), units_path, match: :exact
+    case params[:action]
+    when 'show'
+      breadcrumb @unit.name, unit_path(@unit)
+    when 'new', 'edit'
+      breadcrumb t('.form_title'), units_path
+    end
   end
 end
