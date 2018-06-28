@@ -30,18 +30,15 @@ namespace :yoksis do
         'AÇIK ÖĞRETİM' => UnitInstructionType.find_by(code: 4)
       }
 
-      # matching hash for English-Turkish unit names.
-      type = I18n.t('.')[:units].key(unit_type)
-
       unit = Unit.new(
         name: name.strip,
         yoksis_id: yoksis_id,
         founded_at: founded_at ? founded_at.to_date : nil,
         foet_code: foet_code,
         duration: duration.to_i,
-        type: type,
         parent: Unit.find_by(yoksis_id: parent_yoksis_id),
         district: district,
+        unit_type: UnitType.find_by(name: unit_type),
         unit_instruction_type: instruction_types[instruction_type.to_s],
         unit_instruction_language: UnitInstructionLanguage.find_by(name: language),
         unit_status: statuses[status.to_s]

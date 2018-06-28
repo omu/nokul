@@ -18,7 +18,7 @@
               <th><%= t('.foet_code') %></th>
               <th><%= t('.founded_at') %></th>
               <th><%= t('.duration') %></th>
-              <th><%= t('.type') %></th>
+              <th><%= t('.unit_type') %></th>
               <th><%= t('.district') %></th>
               <th><%= t('.unit_status') %></th>
               <th><%= t('.unit_instruction_language') %></th>
@@ -34,7 +34,7 @@
                 <td><%= unit.foet_code %></td>
                 <td><%= unit.founded_at %></td>
                 <td><%= unit.duration %></td>
-                <td><%= t("units.#{unit.type}") %></td>
+                <td><%= unit.unit_type.name %></td>
                 <td><%= unit.district.name %> / <%= unit.district.city.name %></td>
                 <td><%= unit.unit_status.try(:name) %></td>
                 <td><%= unit.unit_instruction_language.try(:name) %></td>

@@ -33,8 +33,8 @@
               <td><%= @unit.duration %></td>
             </tr>
             <tr>
-              <td><%= t('.type') %></td>
-              <td><%= t("units.#{@unit.type}") %></td>
+              <td><%= t('.unit_type') %></td>
+              <td><%= @unit.unit_type.name %></td>
             </tr>
             <tr>
               <td><%= t('.district') %></td>
@@ -46,11 +46,11 @@
             </tr>
             <tr>
               <td><%= t('.unit_instruction_language') %></td>
-              <td><%= @unit.unit_instruction_language.name %></td>
+              <td><%= @unit.unit_instruction_language.try(:name) %></td>
             </tr>
             <tr>
               <td><%= t('.unit_instruction_type') %></td>
-              <td><%= @unit.unit_instruction_type.name %></td>
+              <td><%= @unit.unit_instruction_type.try(:name) %></td>
             </tr>
             <tr>
               <td><%= t('.created_at') %></td>
