@@ -2,14 +2,11 @@
 
 module Locations
   class DistrictsController < ApplicationController
-    before_action :set_city
+    before_action :set_city_and_country
     before_action :set_district, only: %i[edit update destroy]
     before_action :add_breadcrumbs, only: %i[new edit]
 
     def new
-      breadcrumb @country.name, country_path(@country), match: :exact
-      breadcrumb @city.name, country_city_path(@country, @city), match: :exact
-      breadcrumb t('.form_title'), new_country_city_district_path
       @district = @city.districts.new
     end
 
@@ -18,11 +15,7 @@ module Locations
       @city.save ? redirect_to([@country, @city], notice: t('.success')) : render(:new)
     end
 
-    def edit
-      breadcrumb @country.name, country_path(@country), match: :exact
-      breadcrumb @city.name, country_city_path(@country, @city), match: :exact
-      breadcrumb @district.name, edit_country_city_district_path(@country, @city, @district)
-    end
+    def edit; end
 
     def update
       @district.update(district_params) ? redirect_to([@country, @city], notice: t('.success')) : render(:edit)
@@ -34,14 +27,10 @@ module Locations
 
     private
 
-    def set_root_breadcrumb
-      breadcrumb t('.common.countries'), countries_path, match: :exact
-    end
-
-    def set_city
-      @country = Country.find(params[:country_id])
-      @city = @country.cities.find(params[:city_id])
+    def set_city_and_country
+      @city = City.find(params[:city_id])
       not_found unless @city
+      @country = @city.country
     end
 
     def set_district
@@ -51,5 +40,20 @@ module Locations
     def district_params
       params.require(:district).permit(:name, :mernis_code, :active)
     end
+
+    # rubocop:disable Metrics/AbcSize
+    def add_breadcrumbs
+      breadcrumb t('locations.common.countries'), countries_path, match: :exact
+      breadcrumb @country.name, country_path(@country), match: :exact
+      breadcrumb @city.name, country_city_path(@country, @city), match: :exact
+
+      case params[:action]
+      when 'new'
+        breadcrumb t('.form_title'), new_country_city_district_path
+      when 'edit'
+        breadcrumb @district.name, edit_country_city_district_path(@country, @city, @district)
+      end
+    end
+    # rubocop:enable Metrics/AbcSize
   end
 end
