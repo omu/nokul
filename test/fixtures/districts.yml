@@ -1,20 +1,25 @@
 gerze:
   name: Gerze
-  yoksis_id: 1349
+  mernis_code: 1349
+  active: true
   city: sinop
 vezirkopru:
   name: Vezirköprü
-  yoksis_id: 1712
+  mernis_code: 1712
+  active: true
   city: samsun
 havza:
   name: Havza
-  yoksis_id: 1386
+  mernis_code: 1386
+  active: true
   city: samsun
 tekkekoy:
   name: Tekkeköy
-  yoksis_id: 1849
+  mernis_code: 1849
+  active: true
   city: samsun
 atakum:
   name: Atakum
-  yoksis_id: 2072
+  mernis_code: 2072
+  active: true
   city: samsun

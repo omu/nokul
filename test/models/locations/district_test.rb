@@ -34,7 +34,7 @@ class DistrictTest < ActiveSupport::TestCase
 
   # callbacks
   test 'callbacks must titlecase the name of a district' do
-    district = District.create(name: 'wonderland of samsun', city: cities(:samsun))
+    district = District.create!(name: 'wonderland of samsun', city: cities(:samsun), active: true)
     assert_equal district.name, 'Wonderland Of Samsun'
   end
 end

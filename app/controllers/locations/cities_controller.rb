@@ -51,7 +51,7 @@ module Locations
     end
 
     def city_params
-      params.require(:city).permit(:name, :iso, :nuts_code)
+      params.require(:city).permit(:name, :alpha_2_code)
     end
   end
 end
