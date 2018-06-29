@@ -4,7 +4,6 @@ class UnitsController < ApplicationController
   include Pagy::Backend
 
   before_action :set_unit, only: %i[edit update destroy show]
-  before_action :add_breadcrumbs, only: %i[index show new edit]
 
   def index
     units = Unit.includes(
@@ -61,15 +60,5 @@ class UnitsController < ApplicationController
       :name, :yoksis_id, :foet_code, :founded_at, :duration, :district_id, :parent_id, :unit_status_id,
       :unit_instruction_language_id, :unit_instruction_type_id, :unit_type_id, :university_type_id
     )
-  end
-
-  def add_breadcrumbs
-    breadcrumb t('.common.units'), units_path, match: :exact
-    case params[:action]
-    when 'show'
-      breadcrumb @unit.name, unit_path(@unit)
-    when 'new', 'edit'
-      breadcrumb t('.form_title'), units_path
-    end
   end
 end

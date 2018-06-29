@@ -5,7 +5,6 @@ module Calendar
     include Pagy::Backend
 
     before_action :set_academic_calendar, only: %i[show edit update destroy]
-    before_action :add_breadcrumbs, only: %i[index show new edit]
 
     def index
       @pagy, @academic_calendars = pagy(AcademicCalendar.includes(:academic_term, :calendar_type))
@@ -39,16 +38,6 @@ module Calendar
     end
 
     private
-
-    def add_breadcrumbs
-      breadcrumb t('.index.card_header'), academic_calendars_path, match: :exact
-      case params[:action]
-      when 'show'
-        breadcrumb @academic_calendar.name, academic_calendars_path
-      when 'new', 'edit'
-        breadcrumb t('.form_title'), academic_calendars_path
-      end
-    end
 
     def redirect_with(message)
       redirect_to(academic_calendars_path, notice: t(".#{message}"))

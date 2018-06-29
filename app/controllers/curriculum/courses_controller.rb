@@ -5,7 +5,6 @@ module Curriculum
     include Pagy::Backend
 
     before_action :set_course, only: %i[show edit update destroy]
-    before_action :add_breadcrumbs, only: %i[index show new edit]
 
     def index
       @courses = Course.includes(:unit).all
@@ -49,16 +48,6 @@ module Curriculum
         :unit_id, :name, :code, :theoric, :practice, :education_type,
         :language, :laboratory, :status
       )
-    end
-
-    def add_breadcrumbs
-      breadcrumb t('.index.courses'), courses_path, match: :exact
-      case params[:action]
-      when 'show'
-        breadcrumb @course.name, course_path(@course), match: :exact
-      when 'new', 'edit'
-        breadcrumb t('.form_title'), courses_path
-      end
     end
   end
 end
