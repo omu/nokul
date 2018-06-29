@@ -4,7 +4,6 @@ module Account
   class IdentitiesController < ApplicationController
     before_action :set_identity, only: %i[edit update destroy mernis]
     before_action :check_formality, only: %i[edit update destroy]
-    before_action :add_breadcrumbs, only: %i[index new edit]
 
     def index
       @identities = current_user.identities
@@ -57,14 +56,6 @@ module Account
         :name, :first_name, :last_name, :mothers_name, :fathers_name, :gender, :marital_status, :place_of_birth,
         :date_of_birth, :registered_to
       )
-    end
-
-    def add_breadcrumbs
-      breadcrumb t('account.identities.index.card_header'), addresses_path, match: :exact
-      case params[:action]
-      when 'new', 'edit'
-        breadcrumb t('.form_title'), identities_path
-      end
     end
   end
 end

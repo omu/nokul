@@ -5,7 +5,6 @@ module Calendar
     include Pagy::Backend
 
     before_action :set_calendar_title, only: %i[edit update destroy]
-    before_action :add_breadcrumbs, only: %i[index new edit]
 
     def index
       @pagy, @calendar_titles = if params[:term].present?
@@ -46,14 +45,6 @@ module Calendar
 
     def calendar_title_params
       params.require(:calendar_title).permit(:name)
-    end
-
-    def add_breadcrumbs
-      breadcrumb t('.index.card_header'), calendar_titles_path, match: :exact
-      case params[:action]
-      when 'new', 'edit'
-        breadcrumb t('.form_title'), calendar_titles_path
-      end
     end
   end
 end

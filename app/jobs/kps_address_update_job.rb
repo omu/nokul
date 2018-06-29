@@ -10,7 +10,7 @@ class KpsAddressUpdateJob < ApplicationJob
 
   # callbacks
   after_perform do |job|
-    district = District.find_by(yoksis_id: @params[:district_id])
+    district = District.find_by(mernis_code: @params[:district_id])
     job.arguments.first.update(district: district, name: :formal, full_address: @params[:full_address])
   end
 end

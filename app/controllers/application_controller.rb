@@ -6,7 +6,6 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :authenticate_user!
   before_action :set_locale
-  before_action :root_breadcrumb
 
   rescue_from ActiveRecord::RecordNotFound, with: :not_found
 
@@ -37,9 +36,5 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: %i[id_number email])
-  end
-
-  def root_breadcrumb
-    breadcrumb I18n.t('home_nav'), :root_path
   end
 end

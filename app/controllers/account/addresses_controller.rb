@@ -4,7 +4,6 @@ module Account
   class AddressesController < ApplicationController
     before_action :set_address, only: %i[edit update destroy mernis]
     before_action :check_formality, only: %i[edit update destroy]
-    before_action :add_breadcrumbs, only: %i[index new edit]
 
     def index
       @addresses = current_user.addresses.includes(district: [:city])
@@ -54,14 +53,6 @@ module Account
 
     def address_params
       params.require(:address).permit(:name, :phone_number, :full_address, :district_id)
-    end
-
-    def add_breadcrumbs
-      breadcrumb t('account.addresses.index.card_header'), addresses_path, match: :exact
-      case params[:action]
-      when 'new', 'edit'
-        breadcrumb t('.form_title'), addresses_path
-      end
     end
   end
 end

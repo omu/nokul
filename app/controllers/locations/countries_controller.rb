@@ -5,7 +5,6 @@ module Locations
     include Pagy::Backend
 
     before_action :set_country, only: %i[show edit update destroy]
-    before_action :add_breadcrumbs, only: %i[index show new edit]
 
     def index
       countries = Country.all
@@ -52,19 +51,6 @@ module Locations
 
     def country_params
       params.require(:country).permit(:name, :alpha_2_code, :alpha_3_code, :numeric_code, :mernis_code)
-    end
-
-    def add_breadcrumbs
-      breadcrumb t('locations.common.countries'), countries_path, match: :exact
-
-      case params[:action]
-      when 'show'
-        breadcrumb @country.name, country_path(@country)
-      when 'new'
-        breadcrumb t('.new_country'), new_country_path
-      when 'edit'
-        breadcrumb @country.name, edit_country_path(@country)
-      end
     end
   end
 end

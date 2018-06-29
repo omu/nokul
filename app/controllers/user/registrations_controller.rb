@@ -18,10 +18,9 @@ class User
     # end
 
     # GET /resource/edit
-    def edit
-      breadcrumb t('devise.registrations.edit.change_password'), edit_user_registration_path, match: :exact
-      super
-    end
+    # def edit
+    #   super
+    # end
 
     # PUT /resource
     # def update

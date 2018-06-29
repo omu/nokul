@@ -5,7 +5,6 @@ module Calendar
     include Pagy::Backend
 
     before_action :set_calendar_type, only: %i[show edit update destroy]
-    before_action :add_breadcrumbs, only: %i[index show new edit]
 
     def index
       @pagy, @calendar_types = pagy(CalendarType.all)
@@ -47,16 +46,6 @@ module Calendar
     def calendar_type_params
       params.require(:calendar_type)
             .permit(:name, calendar_title_types_attributes: %i[id type_id title_id status _destroy])
-    end
-
-    def add_breadcrumbs
-      breadcrumb t('.index.card_header'), calendar_types_path, match: :exact
-      case params[:action]
-      when 'show'
-        breadcrumb @calendar_type.name, calendar_type_path
-      when 'new', 'edit'
-        breadcrumb t('.form_title'), calendar_types_path
-      end
     end
   end
 end
