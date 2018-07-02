@@ -26,7 +26,6 @@ gem 'uglifier', '>= 1.3.0'
 # view helpers: tools for forms, views, etc.
 gem 'cocoon'
 gem 'font-awesome-rails'
-gem 'loaf'
 gem 'pagy'
 gem 'simple_form'
 
