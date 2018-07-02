@@ -1,1 +1,75 @@
-İlçeler
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'university' %><strong><%= @city.name %></strong>
+        <div class="card-header-actions">
+          <%= link_to_edit([:edit, @country, @city]) %>
+          <%= link_to_destroy([@country, @city]) %>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <table class="table table-responsive-sm">
+          <tbody>
+            <tr>
+              <td><%= t('activerecord.attributes.city.name') %></td>
+              <td><%= @city.name %></td>
+            </tr>
+            <tr>
+              <td><%= t('activerecord.attributes.city.alpha_2_code') %></td>
+              <td><%= @city.alpha_2_code %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'street-view', text: t('.card_header') %>
+        <div class="card-header-actions">
+          <%= link_to_new [:new, @country, @city, :district], t('.new_district_link') %>
+        </div>
+      </div>
+      <div class='card-body'>
+        <%= form_tag country_city_path(@country, @city), method: :get do %>
+          <div class="form-group">
+            <%= text_field_tag 'term', params[:term], placeholder: t('.name'), class: 'form-control' %>
+          </div>
+          <%= submit_tag t('search'), class: 'btn btn-primary' %>
+        <% end %>
+        <hr \>
+        <table class='table table-responsive-sm table-striped'>
+          <thead>
+            <tr>
+              <th><%= t('.name') %></th>
+              <th><%= t('.mernis_code') %></th>
+              <th><%= t('.active') %></th>
+              <th><%= t('actions') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @districts.each do |district| %>
+              <tr>
+                <td><%= district.name %></td>
+                <td><%= district.mernis_code %></td>
+                <td><%= district.active ? t('yes') : t('no') %></td>
+                <td>
+                  <%= link_to_edit([:edit, @country, @city, district]) %>
+                  <%= link_to_destroy([@country, @city, district]) %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <nav aria-label="pagination">
+      <ul class="pagination justify-content-center">
+        <%== pagy_nav_bootstrap(@pagy) %>
+      </ul>
+    </nav>
+  </div>
+</div>

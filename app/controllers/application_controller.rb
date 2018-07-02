@@ -9,8 +9,6 @@ class ApplicationController < ActionController::Base
 
   rescue_from ActiveRecord::RecordNotFound, with: :not_found
 
-  breadcrumb I18n.t('home_nav'), :root_path
-
   def set_locale
     language = language_params
 

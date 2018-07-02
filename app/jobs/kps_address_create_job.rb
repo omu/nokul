@@ -10,7 +10,7 @@ class KpsAddressCreateJob < ApplicationJob
 
   # callbacks
   after_perform do |job|
-    district = District.find_by(yoksis_id: @response[:district_id])
+    district = District.find_by(mernis_code: @response[:district_id])
     job.arguments.first.addresses.formal.create(district: district, full_address: @response[:full_address])
   end
 end
