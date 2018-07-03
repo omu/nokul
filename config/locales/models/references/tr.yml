@@ -1,0 +1,131 @@
+tr:
+  activerecord:
+    attributes:
+      unit_instruction_language: &unit_instruction_language_attributes
+        name: Öğrenim Dili
+        code: Kodu
+      unit_instruction_type: &unit_instruction_type_attributes
+        name: Öğrenim Türü
+        code: Kodu
+      unit_status: &unit_status_attributes
+        name: Aktiflik Durumu
+        code: Kodu
+      unit_type: &unit_type_attributes
+        name: Birim Türü
+        code: Kodu
+      university_type: &university_type_attributes
+        name: Üniversite Türü
+        code: Kodu
+  helpers:
+    submit:
+      unit_instruction_language:
+        create: Öğrenim Dili Oluştur
+        update: Öğrenim Dilini Güncelle
+      unit_instruction_type:
+        create: Öğrenim Türü Oluştur
+        update: Öğrenim Türünü Güncelle
+      unit_status:
+        create: Aktiflik Durumu Oluştur
+        update: Aktiflik Durumunu Güncelle
+      unit_type:
+        create: Birim Türü Oluştur
+        update: Birim Türünü Güncelle
+      university_type:
+        create: Üniversite Türü Oluştur
+        update: Üniversite Türünü Güncelle
+  references:
+    unit_instruction_languages:
+      index:
+        <<: *unit_instruction_language_attributes
+        new_unit_instruction_language_link: Yeni Öğrenim Dili
+        card_header: Öğrenim Dilleri
+      show:
+        <<: *unit_instruction_language_attributes
+        card_header: '%{unit_instruction_language} Öğrenim Dili'
+      new:
+        form_title: Öğrenim Dili Oluştur
+      edit:
+        form_title: Öğrenim Dilini Güncelle
+      create:
+        success: Öğrenim Dili başarıyla oluşturuldu.
+      destroy:
+        success: Öğrenim Dili başarıyla silindi.
+        warning: Öğrenim Dili silinemedi!
+      update:
+        success: Öğrenim Dili başarıyla güncellendi.
+    unit_instruction_types:
+      index:
+        <<: *unit_instruction_type_attributes
+        new_unit_instruction_type_link: Yeni Öğrenim Türü
+        card_header: Öğrenim Türleri
+      show:
+        <<: *unit_instruction_type_attributes
+        card_header: '%{unit_instruction_type} Öğrenim Türü'
+      new:
+        form_title: Öğrenim Türü Oluştur
+      edit:
+        form_title: Öğrenim Türünü Güncelle
+      create:
+        success: Öğrenim türü başarıyla oluşturuldu.
+      destroy:
+        success: Öğrenim türü başarıyla silindi.
+        warning: Öğrenim türü silinemedi!
+      update:
+        success: Öğrenim türü başarıyla güncellendi.
+    unit_statuses:
+      index:
+        <<: *unit_status_attributes
+        new_unit_status_link: Yeni Aktiflik Durumu
+        card_header: Aktiflik Durumları
+      show:
+        <<: *unit_status_attributes
+        card_header: '%{unit_status} Aktiflik Durumu'
+      new:
+        form_title: Aktiflik durumu Oluştur
+      edit:
+        form_title: Aktiflik durumunu Güncelle
+      create:
+        success: Aktiflik durumu başarıyla oluşturuldu.
+      destroy:
+        success: Aktiflik durumu başarıyla silindi.
+        warning: Aktiflik durumu silinemedi!
+      update:
+        success: Aktiflik durumu başarıyla güncellendi.
+    unit_types:
+      index:
+        <<: *unit_type_attributes
+        new_unit_type_link: Yeni Birim Türü
+        card_header: Birim Türleri
+      show:
+        <<: *unit_type_attributes
+        card_header: '%{unit_type} Birim Türü'
+      new:
+        form_title: Birim Türü Oluştur
+      edit:
+        form_title: Birim Türünü Güncelle
+      create:
+        success: Birim türü başarıyla oluşturuldu.
+      destroy:
+        success: Birim türü başarıyla silindi.
+        warning: Birim türü silinemedi!
+      update:
+        success: Birim türü başarıyla güncellendi.
+    university_types:
+      index:
+        <<: *university_type_attributes
+        new_university_type_link: Yeni Üniversite Türü
+        card_header: Üniversite Türleri
+      show:
+        <<: *university_type_attributes
+        card_header: '%{university_type} Üniversite Türü'
+      new:
+        form_title: Üniversite Türü Oluştur
+      edit:
+        form_title: Üniversite Türünü Güncelle
+      create:
+        success: Üniversite türü başarıyla oluşturuldu.
+      destroy:
+        success: Üniversite türü başarıyla silindi.
+        warning: Üniversite türü silinemedi!
+      update:
+        success: Üniversite türü başarıyla güncellendi.
