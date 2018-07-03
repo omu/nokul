@@ -1,0 +1,131 @@
+en:
+  activerecord:
+    attributes:
+      unit_instruction_language: &unit_instruction_language_attributes
+        name: Unit Instruction Language
+        code: Code
+      unit_instruction_type: &unit_instruction_type_attributes
+        name: Unit Instruction Type
+        code: Code
+      unit_status: &unit_status_attributes
+        name: Unit Statuse
+        code: Code
+      unit_type: &unit_type_attributes
+        name: Unit Type
+        code: Code
+      university_type: &university_type_attributes
+        name: University Type
+        code: Code
+  helpers:
+    submit:
+      unit_instruction_language:
+        create: Create Unit Instruction Language
+        update: Update Unit Instruction Language
+      unit_instruction_type:
+        create: Create Unit Instruction Type
+        update: Update Unit Instruction Type
+      unit_status:
+        create: Create Unit Status
+        update: Update Unit Status
+      unit_type:
+        create: Create Unit Type
+        update: Update Unit Type
+      university_type:
+        create: Create University Type
+        update: Update University Type
+  references:
+    unit_instruction_languages:
+      index:
+        <<: *unit_instruction_language_attributes
+        new_unit_instruction_language_link: New Unit Instruction Language
+        card_header: Unit Instruction Languages
+      show:
+        <<: *unit_instruction_language_attributes
+        card_header: '%{unit_instruction_language} Unit Instruction Language'
+      new:
+        form_title: Create a Unit Instruction Language
+      edit:
+        form_title: Update the Unit  Instruction Language
+      create:
+        success: Unit instruction language successfully created.
+      destroy:
+        success: Unit instruction language successfully deleted.
+        warning: Unit instruction language could not be deleted.
+      update:
+        success: Unit instruction language successfully updated.
+    unit_instruction_types:
+      index:
+        <<: *unit_instruction_type_attributes
+        new_unit_instruction_type_link: New Unit Instruction Type
+        card_header: Unit Instruction Types
+      show:
+        <<: *unit_instruction_type_attributes
+        card_header: '%{unit_instruction_type} Unit Instruction Type'
+      new:
+        form_title: Create a Unit Instruction Type
+      edit:
+        form_title: Update the Unit Instruction Type
+      create:
+        success: Unit instruction type successfully created.
+      destroy:
+        success: Unit instruction type successfully deleted.
+        warning: Unit instruction type could not be deleted.
+      update:
+        success: Unit instruction type successfully updated.
+    unit_statuses:
+      index:
+        <<: *unit_status_attributes
+        new_unit_status_link: New Unit Status
+        card_header: Unit Statuses
+      show:
+        <<: *unit_status_attributes
+        card_header: '%{unit_status} Unit Status'
+      new:
+        form_title: Create a Unit Status
+      edit:
+        form_title: Update the Unit Status
+      create:
+        success: Unit status successfully created.
+      destroy:
+        success: Unit status successfully deleted.
+        warning: Unit status could not be deleted.
+      update:
+        success: Unit status successfully updated.
+    unit_types:
+      index:
+        <<: *unit_type_attributes
+        new_unit_type_link: New Unit Type
+        card_header: Unit Types
+      show:
+        <<: *unit_type_attributes
+        card_header: '%{unit_type} Unit Type'
+      new:
+        form_title: Create a Unit Type
+      edit:
+        form_title: Update the Unit Type
+      create:
+        success: Unit type successfully created.
+      destroy:
+        success: Unit type successfully deleted.
+        warning: Unit type could not be deleted.
+      update:
+        success: Unit type successfully updated.
+    university_types:
+      index:
+        <<: *university_type_attributes
+        new_university_type_link: New University Type
+        card_header: University Types
+      show:
+        <<: *university_type_attributes
+        card_header: '%{university_type} University Type'
+      new:
+        form_title: Create a University Type
+      edit:
+        form_title: Update the University Type
+      create:
+        success: University type successfully created.
+      destroy:
+        success: University type successfully deleted.
+        warning: University type could not be deleted.
+      update:
+        success: University type successfully updated.

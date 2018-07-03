@@ -49,4 +49,12 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  scope module: :references do
+    resources :unit_instruction_languages
+    resources :unit_instruction_types
+    resources :unit_statuses
+    resources :unit_types
+    resources :university_types
+  end
 end

@@ -1,0 +1,32 @@
+<div class='alert alert-light'>
+  <%= link_to_back(:back) %>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'calendar' %><strong><%= @unit_status.name %></strong>
+        <div class="card-header-actions">
+          <%= link_to_edit(edit_unit_status_path(@unit_status)) %>
+          <%= link_to_destroy(@unit_status) %>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <table class="table table-responsive-sm">
+          <tbody>
+            <tr>
+              <td><%= t('activerecord.attributes.unit_status.name') %></td>
+              <td><%= @unit_status.name %></td>
+            </tr>
+            <tr>
+              <td><%= t('activerecord.attributes.unit_status.code') %></td>
+              <td><%= @unit_status.code %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
