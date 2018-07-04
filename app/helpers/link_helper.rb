@@ -31,7 +31,8 @@ module LinkHelper
     link_to(
       fa_icon('plus', text: text),
       path,
-      class: 'btn btn-outline-primary btn-sm'
+      class: 'btn btn-outline-primary btn-sm',
+      id: 'add-button'
     )
   end
 
