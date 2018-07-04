@@ -31,7 +31,7 @@ class LinkHelperTest < ActionView::TestCase
 
   test '#link_to_new' do
     link = <<-HTML.squish
-      <a class="btn btn-outline-primary btn-sm"
+      <a class="btn btn-outline-primary btn-sm" id="add-button"
          href="#"><i class="fa fa-plus"></i> Test New</a>
     HTML
     assert_equal link_to_new('#', 'Test New'), link
