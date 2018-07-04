@@ -12,6 +12,7 @@ class CalendarTitle < ApplicationRecord
   # relations
   has_many :calendar_title_types, foreign_key: :title_id, inverse_of: :title, dependent: :destroy
   has_many :types, through: :calendar_title_types
+  has_many :calendar_events, dependent: :destroy
 
   # validations
   validates :name, presence: true, uniqueness: true
