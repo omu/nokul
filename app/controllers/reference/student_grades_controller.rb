@@ -10,15 +10,13 @@ module Reference
       @pagy, @student_grades = pagy(StudentGrade.all)
     end
 
-    def show
-    end
+    def show; end
 
     def new
       @student_grade = StudentGrade.new
     end
 
-    def edit
-    end
+    def edit; end
 
     def create
       @student_grade = StudentGrade.new(student_grade_params)

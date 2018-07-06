@@ -10,15 +10,13 @@ module Reference
       @pagy, @unit_statuses = pagy(UnitStatus.all)
     end
 
-    def show
-    end
+    def show; end
 
     def new
       @unit_status = UnitStatus.new
     end
 
-    def edit
-    end
+    def edit; end
 
     def create
       @unit_status = UnitStatus.new(unit_status_params)

@@ -10,16 +10,13 @@ module Reference
       @pagy, @student_punishment_types = pagy(StudentPunishmentType.all)
     end
 
-    def show
-      breadcrumb @student_punishment_type.name, student_punishment_type_path
-    end
+    def show; end
 
     def new
       @student_punishment_type = StudentPunishmentType.new
     end
 
-    def edit
-    end
+    def edit; end
 
     def create
       @student_punishment_type = StudentPunishmentType.new(student_punishment_type_params)

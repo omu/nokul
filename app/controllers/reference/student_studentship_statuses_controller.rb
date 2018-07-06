@@ -10,15 +10,13 @@ module Reference
       @pagy, @student_studentship_statuses = pagy(StudentStudentshipStatus.all)
     end
 
-    def show
-    end
+    def show; end
 
     def new
       @student_studentship_status = StudentStudentshipStatus.new
     end
 
-    def edit
-    end
+    def edit; end
 
     def create
       @student_studentship_status = StudentStudentshipStatus.new(student_studentship_status_params)

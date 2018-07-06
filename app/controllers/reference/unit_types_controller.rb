@@ -10,15 +10,13 @@ module Reference
       @pagy, @unit_types = pagy(UnitType.all)
     end
 
-    def show
-    end
+    def show; end
 
     def new
       @unit_type = UnitType.new
     end
 
-    def edit
-    end
+    def edit; end
 
     def create
       @unit_type = UnitType.new(unit_type_params)
