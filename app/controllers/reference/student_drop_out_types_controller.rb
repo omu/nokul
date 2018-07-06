@@ -5,23 +5,19 @@ module Reference
     include Pagy::Backend
 
     before_action :set_student_drop_out_type, only: %i[show edit update destroy]
-    before_action :set_root_breadcrumb, only: %i[index show new edit]
 
     def index
       @pagy, @student_drop_out_types = pagy(StudentDropOutType.all)
     end
 
     def show
-      breadcrumb @student_drop_out_type.name, student_drop_out_type_path
     end
 
     def new
-      breadcrumb t('.form_title'), new_student_drop_out_type_path
       @student_drop_out_type = StudentDropOutType.new
     end
 
     def edit
-      breadcrumb t('.form_title'), edit_student_drop_out_type_path
     end
 
     def create
@@ -42,10 +38,6 @@ module Reference
     end
 
     private
-
-    def set_root_breadcrumb
-      breadcrumb t('.index.card_header'), student_drop_out_types_path, match: :exact
-    end
 
     def redirect_with(message)
       redirect_to(student_drop_out_types_path, notice: t(".#{message}"))

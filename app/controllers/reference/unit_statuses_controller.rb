@@ -5,23 +5,19 @@ module Reference
     include Pagy::Backend
 
     before_action :set_unit_status, only: %i[show edit update destroy]
-    before_action :set_root_breadcrumb, only: %i[index show new edit]
 
     def index
       @pagy, @unit_statuses = pagy(UnitStatus.all)
     end
 
     def show
-      breadcrumb @unit_status.name, unit_status_path
     end
 
     def new
-      breadcrumb t('.form_title'), new_unit_status_path
       @unit_status = UnitStatus.new
     end
 
     def edit
-      breadcrumb t('.form_title'), edit_unit_status_path
     end
 
     def create
@@ -42,10 +38,6 @@ module Reference
     end
 
     private
-
-    def set_root_breadcrumb
-      breadcrumb t('.index.card_header'), unit_statuses_path, match: :exact
-    end
 
     def redirect_with(message)
       redirect_to(unit_statuses_path, notice: t(".#{message}"))
