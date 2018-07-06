@@ -12,7 +12,7 @@ tr:
         alpha_2_code: Alpha 2 Kodu
       district: &district_attributes
         name: İlçe Adı
-        yoksis_id: YOKSIS ID
+        mernis_code: MERNIS Kodu
         city_id: Şehir
   helpers:
     submit:
@@ -22,10 +22,18 @@ tr:
       city:
         create: Şehir Oluştur
         update: Şehri Güncelle
+      district:
+        create: İlçe Oluştur
+        update: İlçeyi Güncelle
   locations:
+    common:
+      countries: Ülkeler
     cities:
-      common:
-        countries: Ülkeler
+      show:
+        <<: *district_attributes
+        card_header: İlçeler
+        new_district_link: Yeni Bir İlçe Ekle
+        active: Aktiflik Durumu
       new:
         form_title: Şehir Oluştur
       edit:
@@ -38,8 +46,6 @@ tr:
         success: Şehir başarıyla silindi!
         warning: Şehir silinemedi!
     countries:
-      common:
-        countries: Ülkeler
       index:
         <<: *country_attributes
         new_country_link: Yeni Ülke Ekle
@@ -60,3 +66,15 @@ tr:
       destroy:
         success: Ülke başarıyla silindi!
         warning: Ülke silinemedi!
+    districts:
+      new:
+        form_title: İlçe Oluştur
+      edit:
+        form_title: İlçeyi Düzenle
+      update:
+        success: İlçe başarıyla güncellendi.
+      create:
+        success: İlçe başarıyla oluşturuldu.
+      destroy:
+        success: İlçe başarıyla silindi!
+        warning: İlçe silinemedi!

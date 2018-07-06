@@ -4,7 +4,6 @@ class UnitsController < ApplicationController
   include Pagy::Backend
 
   before_action :set_unit, only: %i[edit update destroy show]
-  before_action :set_root_breadcrumb, only: %i[index show new edit]
 
   def index
     units = Unit.includes(
@@ -18,12 +17,9 @@ class UnitsController < ApplicationController
                     end
   end
 
-  def show
-    breadcrumb @unit.name, unit_path(@unit)
-  end
+  def show; end
 
   def new
-    breadcrumb t('.form_title'), new_unit_path
     @unit = Unit.new
   end
 
@@ -32,10 +28,7 @@ class UnitsController < ApplicationController
     @unit.save ? redirect_to(@unit, notice: t('.success')) : render(:new)
   end
 
-  def edit
-    breadcrumb @unit.name, unit_path(@unit), match: :exact
-    breadcrumb t('action_group.edit'), edit_unit_path(@unit)
-  end
+  def edit; end
 
   def update
     @unit.update(unit_params) ? redirect_to(@unit, notice: t('.success')) : render(:edit)
@@ -46,10 +39,6 @@ class UnitsController < ApplicationController
   end
 
   private
-
-  def set_root_breadcrumb
-    breadcrumb t('.common.units'), units_path, match: :exact
-  end
 
   def smart_search(units)
     units.search(params[:term])

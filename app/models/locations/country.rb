@@ -23,6 +23,7 @@ class Country < ApplicationRecord
   validates :alpha_2_code, presence: true, uniqueness: true
   validates :alpha_3_code, presence: true, uniqueness: true
   validates :numeric_code, presence: true, uniqueness: true
+  validates :mernis_code, numericality: { only_integer: true }, uniqueness: true, allow_blank: true
 
   # callbacks
   before_save do
