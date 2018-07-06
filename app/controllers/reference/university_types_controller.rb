@@ -5,23 +5,19 @@ module Reference
     include Pagy::Backend
 
     before_action :set_university_type, only: %i[show edit update destroy]
-    before_action :set_root_breadcrumb, only: %i[index show new edit]
 
     def index
       @pagy, @university_types = pagy(UniversityType.all)
     end
 
     def show
-      breadcrumb @university_type.name, university_type_path
     end
 
     def new
-      breadcrumb t('.form_title'), new_university_type_path
       @university_type = UniversityType.new
     end
 
     def edit
-      breadcrumb t('.form_title'), edit_university_type_path
     end
 
     def create
@@ -42,10 +38,6 @@ module Reference
     end
 
     private
-
-    def set_root_breadcrumb
-      breadcrumb t('.index.card_header'), university_types_path, match: :exact
-    end
 
     def redirect_with(message)
       redirect_to(university_types_path, notice: t(".#{message}"))
