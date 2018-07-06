@@ -1,0 +1,32 @@
+<div class='alert alert-light'>
+  <%= link_to_back(:back) %>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'calendar' %><strong><%= @student_disability_type.name %></strong>
+        <div class="card-header-actions">
+          <%= link_to_edit(edit_student_disability_type_path(@student_disability_type)) %>
+          <%= link_to_destroy(@student_disability_type) %>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <table class="table table-responsive-sm">
+          <tbody>
+            <tr>
+              <td><%= t('.name') %></td>
+              <td><%= @student_disability_type.name %></td>
+            </tr>
+            <tr>
+              <td><%= t('.code') %></td>
+              <td><%= @student_disability_type.code %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
