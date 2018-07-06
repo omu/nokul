@@ -10,15 +10,13 @@ module Reference
       @pagy, @unit_instruction_languages = pagy(UnitInstructionLanguage.all)
     end
 
-    def show
-    end
+    def show; end
 
     def new
       @unit_instruction_language = UnitInstructionLanguage.new
     end
 
-    def edit
-    end
+    def edit; end
 
     def create
       @unit_instruction_language = UnitInstructionLanguage.new(unit_instruction_language_params)

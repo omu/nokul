@@ -10,15 +10,13 @@ module Reference
       @pagy, @unit_instruction_types = pagy(UnitInstructionType.all)
     end
 
-    def show
-    end
+    def show; end
 
     def new
       @unit_instruction_type = UnitInstructionType.new
     end
 
-    def edit
-    end
+    def edit; end
 
     def create
       @unit_instruction_type = UnitInstructionType.new(unit_instruction_type_params)

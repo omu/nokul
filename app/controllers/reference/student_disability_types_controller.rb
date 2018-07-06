@@ -10,15 +10,13 @@ module Reference
       @pagy, @student_disability_types = pagy(StudentDisabilityType.all)
     end
 
-    def show
-    end
+    def show; end
 
     def new
       @student_disability_type = StudentDisabilityType.new
     end
 
-    def edit
-    end
+    def edit; end
 
     def create
       @student_disability_type = StudentDisabilityType.new(student_disability_type_params)

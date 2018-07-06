@@ -10,15 +10,13 @@ module Reference
       @pagy, @student_entrance_types = pagy(StudentEntranceType.all)
     end
 
-    def show
-    end
+    def show; end
 
     def new
       @student_entrance_type = StudentEntranceType.new
     end
 
-    def edit
-    end
+    def edit; end
 
     def create
       @student_entrance_type = StudentEntranceType.new(student_entrance_type_params)

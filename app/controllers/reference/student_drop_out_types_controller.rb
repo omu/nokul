@@ -10,15 +10,13 @@ module Reference
       @pagy, @student_drop_out_types = pagy(StudentDropOutType.all)
     end
 
-    def show
-    end
+    def show; end
 
     def new
       @student_drop_out_type = StudentDropOutType.new
     end
 
-    def edit
-    end
+    def edit; end
 
     def create
       @student_drop_out_type = StudentDropOutType.new(student_drop_out_type_params)

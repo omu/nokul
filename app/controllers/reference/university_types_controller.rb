@@ -10,15 +10,13 @@ module Reference
       @pagy, @university_types = pagy(UniversityType.all)
     end
 
-    def show
-    end
+    def show; end
 
     def new
       @university_type = UniversityType.new
     end
 
-    def edit
-    end
+    def edit; end
 
     def create
       @university_type = UniversityType.new(university_type_params)

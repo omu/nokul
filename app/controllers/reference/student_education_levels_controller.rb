@@ -10,15 +10,13 @@ module Reference
       @pagy, @student_education_levels = pagy(StudentEducationLevel.all)
     end
 
-    def show
-    end
+    def show; end
 
     def new
       @student_education_level = StudentEducationLevel.new
     end
 
-    def edit
-    end
+    def edit; end
 
     def create
       @student_education_level = StudentEducationLevel.new(student_education_level_params)
