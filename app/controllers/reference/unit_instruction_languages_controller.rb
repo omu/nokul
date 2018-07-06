@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module References
+module Reference
   class UnitInstructionLanguagesController < ApplicationController
     include Pagy::Backend
 

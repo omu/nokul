@@ -50,7 +50,16 @@ Rails.application.routes.draw do
     end
   end
 
-  scope module: :references do
+  scope module: :reference do
+    resources :student_disability_types
+    resources :student_drop_out_types
+    resources :student_education_levels
+    resources :student_entrance_point_types
+    resources :student_entrance_types
+    resources :student_grades
+    resources :student_grading_systems
+    resources :student_punishment_types
+    resources :student_studentship_statuses
     resources :unit_instruction_languages
     resources :unit_instruction_types
     resources :unit_statuses

@@ -1,0 +1,32 @@
+<div class='alert alert-light'>
+  <%= link_to_back(:back) %>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'calendar' %><strong><%= @student_studentship_status.name %></strong>
+        <div class="card-header-actions">
+          <%= link_to_edit(edit_student_studentship_status_path(@student_studentship_status)) %>
+          <%= link_to_destroy(@student_studentship_status) %>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <table class="table table-responsive-sm">
+          <tbody>
+            <tr>
+              <td><%= t('activerecord.attributes.student_studentship_status.name') %></td>
+              <td><%= @student_studentship_status.name %></td>
+            </tr>
+            <tr>
+              <td><%= t('activerecord.attributes.student_studentship_status.code') %></td>
+              <td><%= @student_studentship_status.code %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
