@@ -45,6 +45,9 @@ gem 'pg_search'
 # error tracking
 gem 'rollbar'
 
+# permalinks
+gem 'friendly_id', '~> 5.1.0'
+
 group :development, :test do
   gem 'brakeman', require: false
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
@@ -53,7 +56,6 @@ group :development, :test do
   gem 'codacy-coverage', require: false
   gem 'dotenv-rails'
   gem 'pry-rails'
-  gem 'rails_best_practices'
   gem 'reek'
   gem 'rubocop'
   gem 'selenium-webdriver'
@@ -65,7 +67,6 @@ group :development do
   gem 'bundler-audit'
   gem 'letter_opener'
   gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'rubycritic'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0' # call <%= console %> anywhere in the code.
