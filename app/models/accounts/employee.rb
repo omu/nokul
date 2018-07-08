@@ -12,7 +12,7 @@ class Employee < ApplicationRecord
   # validations
   validates :title_id, uniqueness: { scope: %i[user active] }
   validates :active, inclusion: { in: [true, false] }
-  validates_with EmployeeValidator
+  validates_with EmployeeValidator, on: :create
 
   # delegations
   delegate :identities, to: :user
@@ -21,4 +21,7 @@ class Employee < ApplicationRecord
   # scopes
   scope :active, -> { where(active: true) }
   scope :passive, -> { where(active: false) }
+  def academic?
+    title.branch.eql?('ÖE')
+  end
 end
