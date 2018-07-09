@@ -15,8 +15,6 @@ en:
         unit_instruction_type: Instruction Type
         university_type: University Type
         parent_id: Parent Unit
-        created_at: Created At
-        updated_at: Updated At
   helpers:
     submit:
       unit:
