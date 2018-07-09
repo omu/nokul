@@ -17,6 +17,7 @@ module ReferenceResource
 
     def new
       instance_variable_set(@singular_variable.to_sym, @model_name.new)
+      byebug
     end
 
     def create
@@ -40,7 +41,7 @@ module ReferenceResource
     private
 
     def set_variables
-      @controller_name = params[:controller].split('/').last
+      @controller_name = @_params[:controller].split('/').last
       @singular_variable = "@#{@controller_name.singularize}"
       @model_name = @controller_name.classify.constantize
     end
