@@ -40,4 +40,3 @@ AllCops:
     - config/routes.rb
     - app/services/kps/omu/adres.rb # WIP
     - app/services/kps/omu/kimlik.rb # WIP
-    - app/jobs/yoksis_publications_create_job.rb # WIP
