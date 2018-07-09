@@ -50,6 +50,11 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :users
+
+  # public profiles
+  get '/profiles/:id', to: 'public_profile#show'
+
   scope module: :references do
     resources :student_disability_types, except: :show
     resources :student_drop_out_types, except: :show
