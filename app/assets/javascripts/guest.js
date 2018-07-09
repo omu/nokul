@@ -1,4 +1,4 @@
-// Manifest file for guest template. Only include assets that you need.
+// Manifest file for guest template.
 
 //= require jquery/dist/jquery.min
 //= require toastr/build/toastr.min

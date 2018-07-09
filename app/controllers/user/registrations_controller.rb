@@ -6,6 +6,7 @@ class User
 
     # before_action :configure_sign_up_params, only: [:create]
     # before_action :configure_account_update_params, only: [:update]
+    after_action :update_password_change_time, only: :update
 
     # GET /resource/sign_up
     # def new
@@ -23,9 +24,9 @@ class User
     # end
 
     # PUT /resource
-    # def update
-    #   super
-    # end
+    def update
+      super
+    end
 
     # DELETE /resource
     # def destroy
@@ -62,5 +63,9 @@ class User
     # def after_inactive_sign_up_path_for(resource)
     #   super(resource)
     # end
+
+    def update_password_change_time
+      current_user.update!(password_changed_at: Time.zone.now)
+    end
   end
 end

@@ -11,12 +11,12 @@ tr:
         other: "Toplam <b>%{count}</b> %{item_name} gösteriliyor."
       multiple_pages: "<b>%{count}</b> %{item_name} içerisinden <b>%{from}-%{to}</b> kadarı gösteriliyor."
       item_name:
-        zero: "kayıtlar"
+        zero: "kayıt"
         one: "kayıt"
-        other: "kayıtlar"
+        other: "kayıt"
     compact:
       page: "Sayfa"
-      of: "'nın"
+      of: "/"
     items:
       show: "Göster"
       items: "sayfa başı"

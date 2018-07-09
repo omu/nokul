@@ -18,11 +18,10 @@ export RDS_PASSWORD=PostgreSQL password
 export RDS_HOSTNAME=localhost
 ```
 
-In order to communicate with YOKSIS API, you also need to setup some environmental variables:
+In order to communicate with third parties, you also need to setup some credentials which are stored in `credentials.yml.enc`. For obtaining credentials you can either download a copy of `master.key` into config/ or you can define the key value as `RAILS_MASTER_KEY` environment variable. For adding new secrets run the command show, below after you obtain the key:
 
-```
-export YOKSIS_USER=YOKSIS username
-export YOKSIS_PASSWORD=YOKSIS password
+```ruby
+bin/rails credentials:edit
 ```
 
 - Install GEM dependencies:
@@ -71,8 +70,6 @@ rake quality:ruby # rubocop [ruby] + rubycritic [with reek]
 rake quality:rails # rubocop [ruby + rails]
 rake quality:all # ruby and rails tasks together
 ```
-
-You can also run `rails_best_practices .` for additional tips and possible improvements for this project.
 
 ## Security
 

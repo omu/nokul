@@ -90,20 +90,20 @@ AcademicCalendar.create(
 CalendarEvent.create(
   academic_calendar: AcademicCalendar.first,
   calendar_title: CalendarTitle.all.sample,
-  start_date: '2017-09-18 00:00:00',
+  start_date: '2018-09-18 00:00:00',
   end_date: ''
 )
 CalendarEvent.create(
   academic_calendar: AcademicCalendar.first,
   calendar_title: CalendarTitle.all.sample,
-  start_date: '2017-12-22 00:00:00',
+  start_date: '2018-12-22 00:00:00',
   end_date: ''
 )
 CalendarEvent.create(
   academic_calendar: AcademicCalendar.first,
   calendar_title: CalendarTitle.all.sample,
-  start_date: '2017-11-11 00:00:00',
-  end_date: '2017-11-19 23:59:59'
+  start_date: '2018-11-11 00:00:00',
+  end_date: '2018-11-19 23:59:59'
 )
 CalendarEvent.create(
   academic_calendar: AcademicCalendar.first,
