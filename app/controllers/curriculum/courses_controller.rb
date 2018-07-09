@@ -5,26 +5,19 @@ module Curriculum
     include Pagy::Backend
 
     before_action :set_course, only: %i[show edit update destroy]
-    before_action :set_root_breadcrumb, only: %i[index show new edit]
 
     def index
       @courses = Course.includes(:unit).all
       @pagy, @courses = pagy(@courses)
     end
 
-    def show
-      breadcrumb @course.name, course_path(@course), match: :exact
-    end
+    def show; end
 
     def new
-      breadcrumb t('.index.add_new_course'), new_course_path, match: :exact
       @course = Course.new
     end
 
-    def edit
-      breadcrumb @course.name, course_path(@course), match: :exact
-      breadcrumb t('.form_title'), edit_course_path(@course), match: :exact
-    end
+    def edit; end
 
     def create
       @course = Course.new(course_params)
@@ -48,10 +41,6 @@ module Curriculum
 
     def set_course
       @course = Course.find(params[:id])
-    end
-
-    def set_root_breadcrumb
-      breadcrumb 'Dersler', courses_path, match: :exact
     end
 
     def course_params

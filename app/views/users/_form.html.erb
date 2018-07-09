@@ -1,0 +1,38 @@
+<div class='row'>
+  <div class='col-sm-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'calendar' %>
+        <strong><%= form_title %></strong>
+      </div>
+      <div class='card-body'>
+        <%= simple_form_for(user) do |f| %>
+          <div class='row'>
+            <div class='form-group col-sm-12'>
+              <%= f.error_notification %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.input :id_number, required: true %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :email, required: true %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :preferred_language, required: true, collection: I18n.available_locales %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :password %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :password_confirmation %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.button :submit, t('save'), class: 'btn btn-outline-success btn-sm' %>
+              <%= link_to_back(:back) %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

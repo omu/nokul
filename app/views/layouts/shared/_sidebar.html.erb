@@ -49,6 +49,87 @@
           <%= fa_icon('book', text: t('.courses'), class: 'nav-icon') %>
         <% end %>
       </li>
+      <li class="nav-item">
+        <%= link_to users_path, class: 'nav-link' do %>
+          <%= fa_icon('user', text: t('.users'), class: 'nav-icon') %>
+        <% end %>
+      <li class="nav-item nav-dropdown">
+        <a class="nav-link nav-dropdown-toggle" href="#">
+          <%= fa_icon('university', class: 'nav-icon') %><%= t('.references') %>
+        </a>
+        <ul class="nav-dropdown-items">
+          <li class="nav-item">
+            <%= link_to student_disability_types_path, class: 'nav-link' do %>
+              <%= fa_icon('university', text: t('.student_disability_types'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to student_drop_out_types_path, class: 'nav-link' do %>
+              <%= fa_icon('university', text: t('.student_drop_out_types'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to student_education_levels_path, class: 'nav-link' do %>
+              <%= fa_icon('university', text: t('.student_education_levels'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to student_entrance_point_types_path, class: 'nav-link' do %>
+              <%= fa_icon('university', text: t('.student_entrance_point_types'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to student_entrance_types_path, class: 'nav-link' do %>
+              <%= fa_icon('university', text: t('.student_entrance_types'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to student_grades_path, class: 'nav-link' do %>
+              <%= fa_icon('university', text: t('.student_grades'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to student_grading_systems_path, class: 'nav-link' do %>
+              <%= fa_icon('university', text: t('.student_grading_systems'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to student_punishment_types_path, class: 'nav-link' do %>
+              <%= fa_icon('university', text: t('.student_punishment_types'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to student_studentship_statuses_path, class: 'nav-link' do %>
+              <%= fa_icon('university', text: t('.student_studentship_statuses'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to unit_instruction_languages_path, class: 'nav-link' do %>
+              <%= fa_icon('language', text: t('.unit_instruction_languages'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to unit_instruction_types_path, class: 'nav-link' do %>
+              <%= fa_icon('graduation-cap', text: t('.unit_instruction_types'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to unit_statuses_path, class: 'nav-link' do %>
+              <%= fa_icon('university', text: t('.unit_statuses'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to unit_types_path, class: 'nav-link' do %>
+              <%= fa_icon('sitemap', text: t('.unit_types'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to university_types_path, class: 'nav-link' do %>
+              <%= fa_icon('university', text: t('.university_types'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+        </ul>
+      </li>
     </ul>
   </nav>
   <button class="sidebar-minimizer brand-minimizer" type="button"></button>

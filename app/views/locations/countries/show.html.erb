@@ -17,12 +17,20 @@
               <td><%= @country.name %></td>
             </tr>
             <tr>
-              <td><%= t('activerecord.attributes.country.iso') %></td>
-              <td><%= @country.iso %></td>
+              <td><%= t('activerecord.attributes.country.alpha_2_code') %></td>
+              <td><%= @country.alpha_2_code %></td>
             </tr>
             <tr>
-              <td><%= t('activerecord.attributes.country.code') %></td>
-              <td><%= @country.code %></td>
+              <td><%= t('activerecord.attributes.country.alpha_3_code') %></td>
+              <td><%= @country.alpha_3_code %></td>
+            </tr>
+            <tr>
+              <td><%= t('activerecord.attributes.country.numeric_code') %></td>
+              <td><%= @country.numeric_code %></td>
+            </tr>
+            <tr>
+              <td><%= t('activerecord.attributes.country.mernis_code') %></td>
+              <td><%= @country.mernis_code %></td>
             </tr>
           </tbody>
         </table>
@@ -34,7 +42,6 @@
         <%= fa_icon 'street-view', text: t('.card_header') %>
         <div class="card-header-actions">
           <%= link_to_new new_country_city_path(@country), t('.new_city_link') %>
-          <%= link_to_destroy(@country) %>
         </div>
       </div>
       <div class='card-body'>
@@ -49,8 +56,7 @@
           <thead>
             <tr>
               <th><%= t('.name') %></th>
-              <th><%= t('.iso') %></th>
-              <th><%= t('.nuts_code') %></th>
+              <th><%= t('.alpha_2_code') %></th>
               <th><%= t('actions') %></th>
             </tr>
           </thead>
@@ -58,8 +64,7 @@
             <% @cities.each do |city| %>
               <tr>
                 <td><%= city.name %></td>
-                <td><%= city.iso %></td>
-                <td><%= city.nuts_code %></td>
+                <td><%= city.alpha_2_code %></td>
                 <td>
                   <%= link_to_show(country_city_path(@country, city)) %>
                   <%= link_to_edit(edit_country_city_path(@country, city)) %>

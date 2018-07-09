@@ -1,16 +1,24 @@
 turkey:
   name: Türkiye
-  iso: TR
-  code: 52
+  alpha_2_code: TR
+  alpha_3_code: TUR
+  numeric_code: 792
+  mernis_code: 9980
 sweden:
   name: İsveç
-  iso: SE
-  code: 30
+  alpha_2_code: SE
+  alpha_3_code: SWE
+  numeric_code: 752
+  mernis_code: 9973
 denmark:
   name: Danimarka
-  iso: DK
-  code: 8
+  alpha_2_code: DK
+  alpha_3_code: DNK
+  numeric_code: 208
+  mernis_code: 9879
 norway:
   name: Norveç
-  iso: NO
-  code: 28
+  alpha_2_code: NO
+  alpha_3_code: NOR
+  numeric_code: 578
+  mernis_code: 9943

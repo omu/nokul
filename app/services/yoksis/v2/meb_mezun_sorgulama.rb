@@ -9,7 +9,10 @@ module Services
           @client = Savon.client(
             wsdl: 'https://servisler.yok.gov.tr/ws/mebmezunsorgulav2?WSDL',
             convert_request_keys_to: :camelcase,
-            basic_auth: [ENV['YOKSIS_USER'], ENV['YOKSIS_PASSWORD']],
+            basic_auth: [
+              Rails.application.credentials.yoksis[:user],
+              Rails.application.credentials.yoksis[:password]
+            ],
             soap_version: 2
           )
         end
@@ -17,7 +20,7 @@ module Services
         def mezuniyet_verilerini_getir(queried_id_number)
           message = {
             'TCKIMLIKNO' => queried_id_number,
-            'ServicePassWord' => ENV['YOKSIS_USER']
+            'ServicePassWord' => Rails.application.credentials.yoksis[:user]
           }
 
           @client.call(__method__, message: message)
@@ -27,7 +30,7 @@ module Services
         def mezuniyet_verilerini_getir_detay
           message = {
             'TCKIMLIKNO' => queried_id_number,
-            'ServicePassWord' => ENV['YOKSIS_USER']
+            'ServicePassWord' => Rails.application.credentials.yoksis[:user]
           }
 
           @client.call(__method__, message: message)

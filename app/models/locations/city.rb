@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 class City < ApplicationRecord
-  # iso field follows the ISO3166 standard, nuts_code field follows the NUTS-1 standard.
+  # alpha_2_code field follows the ISO3166-2 standard
 
   # search
   include PgSearch
   pg_search_scope(
     :search,
-    against: %i[name iso],
+    against: %i[name alpha_2_code],
     using: { tsearch: { prefix: true } }
   )
 
@@ -19,13 +19,11 @@ class City < ApplicationRecord
 
   # validations
   validates :name, presence: true, uniqueness: true
-  validates :iso, presence: true, uniqueness: true
-  validates :nuts_code, presence: true, uniqueness: true
+  validates :alpha_2_code, presence: true, uniqueness: true
 
   # callbacks
   before_save do
     self.name = name.capitalize_all
-    self.iso = iso.upcase_tr
-    self.nuts_code = nuts_code.upcase_tr
+    self.alpha_2_code = alpha_2_code.upcase_tr
   end
 end

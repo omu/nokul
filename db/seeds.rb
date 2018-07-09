@@ -5,27 +5,32 @@
 # create countries
 File.open(Rails.root.join('db', 'static_data', 'countries.yml')) do |countries|
   countries.read.each_line do |country|
-    iso, name, code = country.chomp.split('|')
-    Country.create!(name: name, iso: iso, code: code)
+    name, alpha_2_code, alpha_3_code, numeric_code, mernis_code = country.chomp.split('|')
+    Country.create!(
+      name: name,
+      alpha_2_code: alpha_2_code,
+      alpha_3_code: alpha_3_code,
+      numeric_code: numeric_code,
+      mernis_code: mernis_code
+    )
   end
 end
 
 # create cities
 File.open(Rails.root.join('db', 'static_data', 'cities.yml')) do |cities|
   cities.read.each_line do |city|
-    name, iso, nuts_code = city.chomp.split('|')
-    country = Country.find_by(iso: iso.split('-').first)
-    country.cities.create!(name: name, iso: iso, nuts_code: nuts_code)
+    name, alpha_2_code = city.chomp.split('|')
+    country = Country.find_by(alpha_2_code: alpha_2_code.split('-').first)
+    country.cities.create!(name: name, alpha_2_code: alpha_2_code)
   end
 end
 
 # create districts
 File.open(Rails.root.join('db', 'static_data', 'districts.yml')) do |districts|
   districts.read.each_line do |district|
-    name, yoksis_id, city_code = district.chomp.split('|')
-    iso = "TR-#{city_code}"
-    city = City.find_by(iso: iso)
-    city.districts.create!(name: name, yoksis_id: yoksis_id)
+    name, mernis_code, alpha_2_code, active = district.chomp.split('|')
+    city = City.find_by(alpha_2_code: alpha_2_code)
+    city.districts.create!(name: name, mernis_code: mernis_code, active: active.to_i)
   end
 end
 
@@ -44,7 +49,7 @@ Rake::Task['yoksis:fetch_references'].invoke
 Rake::Task['yoksis:import_departments'].invoke
 
 # Import Academic Staff from YOKSIS
-# Rake::Task['yoksis:fetch_academic_staff'].invoke
+Rake::Task['yoksis:fetch_academic_staff'].invoke
 
 # Produced data for beta environment
 if Rails.env.beta? || Rails.env.development?

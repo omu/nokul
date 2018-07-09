@@ -17,6 +17,7 @@ require 'rails/test_help'
 module ActiveSupport
   class TestCase
     include AbstractController::Translation # Use t() in tests, instead of I18n.t()
+    include Devise::Test::IntegrationHelpers
     fixtures :all
   end
 end

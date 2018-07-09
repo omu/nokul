@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_24_005303) do
+ActiveRecord::Schema.define(version: 2018_07_09_000610) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -81,18 +81,39 @@ ActiveRecord::Schema.define(version: 2018_06_24_005303) do
     t.string "name", null: false
   end
 
+  create_table "certifications", force: :cascade do |t|
+    t.integer "yoksis_id", null: false
+    t.integer "type", default: 1, null: false
+    t.string "name"
+    t.text "content"
+    t.string "location"
+    t.integer "scope"
+    t.string "duration"
+    t.date "start_date"
+    t.date "end_date"
+    t.string "title"
+    t.integer "number_of_authors"
+    t.string "city_and_country"
+    t.datetime "last_update"
+    t.float "incentive_point"
+    t.integer "status"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_certifications_on_user_id"
+  end
+
   create_table "cities", force: :cascade do |t|
     t.string "name", null: false
-    t.string "iso", null: false
-    t.string "nuts_code", null: false
+    t.string "alpha_2_code", null: false
     t.bigint "country_id"
     t.index ["country_id"], name: "index_cities_on_country_id"
   end
 
   create_table "countries", force: :cascade do |t|
     t.string "name", null: false
-    t.string "iso", null: false
-    t.integer "code", null: false
+    t.string "alpha_2_code", null: false
+    t.string "alpha_3_code", null: false
+    t.string "numeric_code", null: false
+    t.string "mernis_code"
   end
 
   create_table "courses", force: :cascade do |t|
@@ -114,7 +135,8 @@ ActiveRecord::Schema.define(version: 2018_06_24_005303) do
 
   create_table "districts", force: :cascade do |t|
     t.string "name", null: false
-    t.integer "yoksis_id"
+    t.string "mernis_code"
+    t.boolean "active", default: true, null: false
     t.bigint "city_id"
     t.index ["city_id"], name: "index_districts_on_city_id"
   end
@@ -137,8 +159,21 @@ ActiveRecord::Schema.define(version: 2018_06_24_005303) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "slug"
     t.index ["title_id"], name: "index_employees_on_title_id"
     t.index ["user_id"], name: "index_employees_on_user_id"
+  end
+
+  create_table "friendly_id_slugs", force: :cascade do |t|
+    t.string "slug", null: false
+    t.integer "sluggable_id", null: false
+    t.string "sluggable_type", limit: 50
+    t.string "scope"
+    t.datetime "created_at"
+    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
+    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
+    t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
+    t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
   create_table "identities", force: :cascade do |t|
@@ -257,26 +292,34 @@ ActiveRecord::Schema.define(version: 2018_06_24_005303) do
     t.integer "code", null: false
   end
 
+  create_table "unit_types", force: :cascade do |t|
+    t.string "name"
+    t.integer "code"
+  end
+
   create_table "units", force: :cascade do |t|
     t.string "name", null: false
     t.integer "yoksis_id", null: false
+    t.integer "detsis_id"
     t.integer "foet_code"
     t.date "founded_at"
     t.integer "duration"
-    t.integer "type", null: false
+    t.string "ancestry"
     t.bigint "district_id"
+    t.bigint "unit_status_id"
+    t.bigint "unit_instruction_language_id"
+    t.bigint "unit_instruction_type_id"
+    t.bigint "university_type_id"
+    t.bigint "unit_type_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "ancestry"
-    t.integer "unit_status_id"
-    t.integer "unit_instruction_language_id"
-    t.integer "unit_instruction_type_id"
-    t.integer "university_type_id"
     t.index ["ancestry"], name: "index_units_on_ancestry"
     t.index ["district_id"], name: "index_units_on_district_id"
     t.index ["unit_instruction_language_id"], name: "index_units_on_unit_instruction_language_id"
     t.index ["unit_instruction_type_id"], name: "index_units_on_unit_instruction_type_id"
     t.index ["unit_status_id"], name: "index_units_on_unit_status_id"
+    t.index ["unit_type_id"], name: "index_units_on_unit_type_id"
+    t.index ["university_type_id"], name: "index_units_on_university_type_id"
   end
 
   create_table "university_types", force: :cascade do |t|
@@ -296,9 +339,10 @@ ActiveRecord::Schema.define(version: 2018_06_24_005303) do
     t.datetime "last_sign_in_at"
     t.inet "current_sign_in_ip"
     t.inet "last_sign_in_ip"
+    t.string "preferred_language", default: "tr"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "language", default: "tr"
+    t.datetime "password_changed_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["id_number"], name: "index_users_on_id_number", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
@@ -321,6 +365,7 @@ ActiveRecord::Schema.define(version: 2018_06_24_005303) do
   add_foreign_key "calendar_events", "calendar_titles"
   add_foreign_key "calendar_title_types", "calendar_titles", column: "title_id"
   add_foreign_key "calendar_title_types", "calendar_types", column: "type_id"
+  add_foreign_key "certifications", "users"
   add_foreign_key "cities", "countries"
   add_foreign_key "courses", "units"
   add_foreign_key "districts", "cities"
@@ -338,4 +383,9 @@ ActiveRecord::Schema.define(version: 2018_06_24_005303) do
   add_foreign_key "unit_calendar_events", "calendar_titles"
   add_foreign_key "unit_calendar_events", "units"
   add_foreign_key "units", "districts"
+  add_foreign_key "units", "unit_instruction_languages"
+  add_foreign_key "units", "unit_instruction_types"
+  add_foreign_key "units", "unit_statuses"
+  add_foreign_key "units", "unit_types"
+  add_foreign_key "units", "university_types"
 end

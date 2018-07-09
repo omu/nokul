@@ -18,8 +18,9 @@ class CountryTest < ActiveSupport::TestCase
   # validations: presence
   %i[
     name
-    iso
-    code
+    alpha_2_code
+    alpha_3_code
+    numeric_code
   ].each do |property|
     test "presence validations for #{property} of a country" do
       countries(:turkey).send("#{property}=", nil)
@@ -31,8 +32,10 @@ class CountryTest < ActiveSupport::TestCase
   # validations: uniqueness
   %i[
     name
-    iso
-    code
+    alpha_2_code
+    alpha_3_code
+    numeric_code
+    mernis_code
   ].each do |property|
     test "uniqueness validations for #{property} of a country" do
       fake = countries(:turkey).dup
@@ -43,8 +46,9 @@ class CountryTest < ActiveSupport::TestCase
 
   # callbacks
   test 'callbacks must titlecase the name and must upcase the iso codes of a country' do
-    country = Country.create(name: 'wonderland of alice', iso: 'wl1', code: 1)
+    country = Country.create(name: 'wonderland of alice', alpha_2_code: 'wl', alpha_3_code: 'wlx', numeric_code: 1)
     assert_equal country.name, 'Wonderland Of Alice'
-    assert_equal country.iso, 'WL1'
+    assert_equal country.alpha_2_code, 'WL'
+    assert_equal country.alpha_3_code, 'WLX'
   end
 end

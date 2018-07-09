@@ -20,8 +20,10 @@
           <thead>
             <tr>
               <th><%= t('.name') %></th>
-              <th><%= t('.iso') %></th>
-              <th><%= t('.code') %></th>
+              <th><%= t('.alpha_2_code') %></th>
+              <th><%= t('.alpha_3_code') %></th>
+              <th><%= t('.numeric_code') %></th>
+              <th><%= t('.mernis_code') %></th>
               <th><%= t('actions') %></th>
             </tr>
           </thead>
@@ -29,8 +31,10 @@
             <% @countries.each do |country| %>
               <tr>
                 <td><%= country.name %></td>
-                <td><%= country.iso %></td>
-                <td><%= country.code %></td>
+                <td><%= country.alpha_2_code %></td>
+                <td><%= country.alpha_3_code %></td>
+                <td><%= country.numeric_code %></td>
+                <td><%= country.mernis_code %></td>
                 <td>
                   <%= link_to_show(country_path(country)) %>
                   <%= link_to_edit(edit_country_path(country)) %>

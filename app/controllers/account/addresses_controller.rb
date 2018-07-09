@@ -4,20 +4,16 @@ module Account
   class AddressesController < ApplicationController
     before_action :set_address, only: %i[edit update destroy mernis]
     before_action :check_formality, only: %i[edit update destroy]
-    before_action :set_root_breadcrumb, only: %i[index new edit]
 
     def index
       @addresses = current_user.addresses.includes(district: [:city])
     end
 
     def new
-      breadcrumb t('.form_title'), addresses_path
       @address = current_user.addresses.new
     end
 
-    def edit
-      breadcrumb t('.form_title'), addresses_path
-    end
+    def edit; end
 
     def create
       @address = current_user.addresses.new(address_params)
@@ -42,10 +38,6 @@ module Account
     end
 
     private
-
-    def set_root_breadcrumb
-      breadcrumb t('.index.card_header'), addresses_path, match: :exact
-    end
 
     def check_formality
       redirect_with('warning') if @address.formal?

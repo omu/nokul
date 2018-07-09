@@ -1,0 +1,9 @@
+university:
+  name: Üniversite
+  code: 1
+faculty:
+  name: Fakülte
+  code: 2
+research_center:
+  name: Araştırma ve Uygulama Merkezi
+  code: 8
