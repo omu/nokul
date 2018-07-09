@@ -6,7 +6,7 @@ namespace :yoksis do
   rescue Errno::ENOENT => e
     puts "File/path not found! #{e}"
   else
-    puts 'It works silently if all OK, otherwise you will receive errors.'
+    puts 'Importing departments from CSV.'
 
     # YOKSIS export doesn't provide unit locations, so the default district set to Atakum for this case
     district = District.find_by(name: 'Atakum')

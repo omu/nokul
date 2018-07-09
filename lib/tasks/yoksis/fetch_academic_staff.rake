@@ -2,9 +2,11 @@
 
 namespace :yoksis do
   desc 'fetches all academic staff defined in YOKSIS'
-  task :fetch_academic_staff do
+  task fetch_academic_staff: :environment do
     # we simply don't store YOKSISResponse of this action because there is no consistency between responses
     # of each page - no ordering, no timestamp etc.
+    puts 'Fetching academic staff from YOKSIS'
+
     client = Services::Yoksis::V1::AkademikPersonel.new
 
     # this endpoint uses pagination in a weird way
