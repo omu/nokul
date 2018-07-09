@@ -21,6 +21,16 @@ class Employee < ApplicationRecord
   # scopes
   scope :active, -> { where(active: true) }
   scope :passive, -> { where(active: false) }
+
+  # permalinks
+  extend FriendlyId
+  friendly_id :username_slug, use: :slugged
+
+  def username_slug
+    username, domain = user.email.split('@')
+    username if domain.eql?('omu.edu.tr')
+  end
+
   # custom methods
   def academic?
     title.branch.eql?('ÖE')
