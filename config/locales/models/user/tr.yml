@@ -7,6 +7,8 @@ tr:
         password: Parola
         password_confirmation: Parola (Tekrar)
         current_password: Mevcut Şifre
+        preferred_language: Tercih Edilen Dil
+        password_changed_at: Son Şifre Değişikliği
   simple_form:
     placeholders:
       user:
@@ -46,3 +48,27 @@ tr:
         remember_login: Girişi Hatırla
         registration_description: Üniversitemize katılan öğrenci ve personellerin, kayıt olarak kendi hesaplarını oluşturmaları gerekmektedir.
         create_account: Hesap Oluştur
+  users:
+    index:
+      <<: *user_attributes
+      card_header: Kullanıcı Hesapları
+      new_user_link: Yeni Kullanıcı Oluştur
+      addresses: Adres Bilgileri
+      identities: Kimlik Bilgileri
+    show:
+      <<: *user_attributes
+    search:
+      smart_search: Akıllı Arama
+      smart_search_placeholder: TC/YU numarası, e-mail adresi, ad veya soyad
+      detailed_search: Detaylı Arama
+    edit:
+      form_title: Hesabı Düzenle
+    new:
+      form_title: Hesap Oluştur
+    update:
+      success: Kullanıcı başarıyla güncellendi.
+    create:
+      success: Kullanıcı başarıyla oluşturuldu.
+    destroy:
+      success: Kullanıcı başarıyla silindi!
+      warning: Kullanıcı silinemedi!

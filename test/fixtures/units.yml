@@ -3,7 +3,7 @@ omu:
   yoksis_id: 121946
   founded_at: 11.04.1975
   duration: 0
-  type: university
+  unit_type: university
   district: atakum
   unit_status: active
   unit_instruction_language: turkish
@@ -15,7 +15,7 @@ cbu:
   yoksis_id: 163896
   founded_at: 12.04.2010
   duration: 0
-  type: university
+  unit_type: university
   district: atakum
   unit_status: passive
   unit_instruction_language: english
@@ -27,7 +27,7 @@ su:
   yoksis_id: 123456
   founded_at: 12.04.2010
   duration: 0
-  type: university
+  unit_type: university
   district: atakum
   unit_status: passive
   unit_instruction_language: english
@@ -38,7 +38,7 @@ uzem:
   name: Uzaktan Eğitim Araştırma ve Uygulama Merkezi
   yoksis_id: 169431
   duration: 0
-  type: research_center
+  unit_type: research_center
   district: atakum
   unit_status: active
   unit_instruction_language: turkish
@@ -49,7 +49,7 @@ baum:
   yoksis_id: 327269
   founded_at: 27.07.2017
   duration: 0
-  type: research_center
+  unit_type: research_center
   district: atakum
   unit_status: active
   unit_instruction_language: turkish

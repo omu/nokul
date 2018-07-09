@@ -1,0 +1,41 @@
+<div class='alert alert-light'>
+  <%= link_to_new(new_student_studentship_status_path, t('.new_student_studentship_status_link')) %>
+</div>
+
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'align-justify', text: t('.card_header') %>
+      </div>
+      <div class='card-body'>
+        <table class='table table-responsive-sm table-striped'>
+          <thead>
+            <tr>
+              <th><%= t('.name') %></th>
+              <th><%= t('.code') %></th>
+              <th><%= t('actions') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @student_studentship_statuses.each do |student_studentship_status| %>
+              <tr>
+                <td><%= student_studentship_status.name %></td>
+                <td><%= student_studentship_status.code %></td>
+                <td>
+                  <%= link_to_edit(edit_student_studentship_status_path(student_studentship_status)) %>
+                  <%= link_to_destroy(student_studentship_status) %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <nav aria-label='pagination'>
+      <ul class='pagination justify-content-center'>
+        <%== pagy_nav_bootstrap(@pagy) %>
+      </ul>
+    </nav>
+  </div>
+</div>

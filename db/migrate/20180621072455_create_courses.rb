@@ -12,7 +12,6 @@ class CreateCourses < ActiveRecord::Migration[5.2]
       t.string :language, null: false
       t.integer :status, null: false
       t.date :abrogated_date
-
       t.timestamps
     end
   end

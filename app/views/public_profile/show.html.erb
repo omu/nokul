@@ -1,0 +1,81 @@
+<style type="text/css">
+  .card-header {
+    background-image: url('<%= asset_url("public_profile/lecture-hall.jpg") %>');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
+
+<div class='col-sm-12'>
+  <div class='card'>
+    <div class="card-header">
+      <a href="https://placeholder.com"><img src="http://via.placeholder.com/150x150"></a>
+      <div class="card-header-actions">
+        <div class="card-header-action">
+          <span class="badge badge-light float-right">
+            <%= fa_icon('id-card', text: 'vCard') %>
+          </span>
+          <span class="badge badge-light float-right">
+            <%= fa_icon('id-card', text: 'ORCID') %>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class='card-body'>
+      <div class="col-sm-12">
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active show" data-toggle="tab" href="#home4" role="tab" aria-controls="home" aria-selected="true">
+              <i class="icon-calculator"></i> Özgeçmiş &nbsp;
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#profile4" role="tab" aria-controls="profile" aria-selected="false">
+              <i class="icon-basket-loaded"></i> Araştırma Alanları &nbsp;
+              <span class="badge badge-pill badge-danger">29</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#messages4" role="tab" aria-controls="messages" aria-selected="false">
+              <i class="icon-pie-chart"></i> Yayınlar</a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active show" id="home4" role="tabpanel">
+              <div class='row'>
+                <div class="col-sm-12">
+                  <table class='table table-responsive-sm'>
+                    <tr>
+                      <td>Email</td>
+                      <td><%= @employee.user.email %></td>
+                    </tr>
+                    <tr>
+                      <td>Ad</td>
+                      <td><%= @identity.first_name %></td>
+                    </tr>
+                    <tr>
+                      <td>Soyad</td>
+                      <td><%= @identity.last_name %></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="profile4" role="tabpanel">
+              2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+            <div class="tab-pane" id="messages4" role="tabpanel">
+              3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

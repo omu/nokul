@@ -9,5 +9,10 @@ tr:
     show: Görüntüle
     update: Güncelle
   are_you_sure: Emin misiniz?
-  search: Aramaya Yap
+  save: Kaydet
+  search: Arama Yap
   home_nav: Anasayfa
+  created_at: Oluşturulma Tarihi
+  updated_at: Güncellenme Tarihi
+  'yes': Evet
+  'no': Hayır

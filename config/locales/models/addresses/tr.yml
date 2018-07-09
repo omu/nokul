@@ -34,8 +34,6 @@ tr:
         card_header: Adres Bilgileri
         district_and_city: İlçe / İl
         update_from_mernis: MERNİS'ten Güncelle
-      show:
-        card_header: Şehirler
       new:
         form_title: Adres Oluştur
       edit:

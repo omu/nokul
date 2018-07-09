@@ -9,7 +9,10 @@ module Services
           @client = Savon.client(
             wsdl: 'http://servisler.yok.gov.tr/ws/UniversiteAkademikPersonelv1?WSDL',
             convert_request_keys_to: :camelcase,
-            basic_auth: [ENV['YOKSIS_USER'], ENV['YOKSIS_PASSWORD']]
+            basic_auth: [
+              Rails.application.credentials.yoksis[:user],
+              Rails.application.credentials.yoksis[:password]
+            ]
           )
         end
 
@@ -25,7 +28,7 @@ module Services
         # alias: academic_staff_information
         def kullaniciya_gore_tc_kimlik_nodan_akademik_personel_bilgisiv1(
           queried_id_number,
-          querier_id_number = ENV['YOKSIS_USER']
+          querier_id_number = Rails.application.credentials.yoksis[:user]
         )
 
           message = {
@@ -41,7 +44,7 @@ module Services
         # alias: list_academic_staff
         def kullaniciya_gore_universitedeki_akademik_personel_bilgisiv1(
           page,
-          querier_id_number = ENV['YOKSIS_USER']
+          querier_id_number = Rails.application.credentials.yoksis[:user]
         )
 
           message = {
@@ -56,7 +59,7 @@ module Services
 
         # alias: number_of_pages
         def kullaniciya_gore_universiteki_akademik_personel_sayfa_sayisiv1(
-          querier_id_number = ENV['YOKSIS_USER']
+          querier_id_number = Rails.application.credentials.yoksis[:user]
         )
 
           message = {

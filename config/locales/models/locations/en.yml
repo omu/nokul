@@ -1,17 +1,18 @@
 en:
   activerecord:
     attributes:
-      city: &city_attributes
-        name: Name of City
-        iso: ISO Code
-        nuts_code: NUTS Code
       country: &country_attributes
         name: Name of Country
-        iso: ISO Code
-        code: Country Code
+        alpha_2_code: Alpha 2 Code
+        alpha_3_code: Alpha 3 Code
+        numeric_code: ISO3166 Numeric
+        mernis_code: MERNIS Code
+      city: &city_attributes
+        name: Name of City
+        alpha_2_code: Alpha 2 Code
       district: &district_attributes
         name: Name of District
-        yoksis_id: YOKSIS ID
+        mernis_code: MERNIS Code
         city_id: City
   helpers:
     submit:
@@ -21,10 +22,18 @@ en:
       city:
         create: Create City
         update: Update City
+      district:
+        create: Create District
+        update: Update District
   locations:
+    common:
+      countries: Ülkeler
     cities:
-      common:
-        countries: Countries
+      show:
+        <<: *district_attributes
+        card_header: Districts
+        new_district_link: Add a New District
+        active: Is Active?
       new:
         form_title: Create a City
       edit:
@@ -37,8 +46,6 @@ en:
         success: City successfully deleted!
         warning: City can not be deleted.
     countries:
-      common:
-        countries: Countries
       index:
         <<: *country_attributes
         new_country_link: Add a New Country
@@ -59,3 +66,15 @@ en:
       destroy:
         success: Country successfully deleted.
         warning: Country can not be deleted.
+    districts:
+      new:
+        form_title: Create a District
+      edit:
+        form_title: Update the District
+      update:
+        success: District successfully updated.
+      create:
+        success: District successfully created.
+      destroy:
+        success: District successfully deleted.
+        warning: District can not be deleted.

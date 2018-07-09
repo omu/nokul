@@ -1,0 +1,29 @@
+<div class="card-group mb-4">
+  <div class="card">
+    <div class="card-body">
+      <div class="h1 text-muted text-right mb-4">
+        <%= fa_icon('user') %>
+      </div>
+      <div class="text-value"><%= User.count %></div>
+      <small class="text-muted text-uppercase font-weight-bold">Kayıtlı Kullanıcı</small>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <div class="h1 text-muted text-right mb-4">
+        <%= fa_icon('id-card-o') %>
+      </div>
+      <div class="text-value"><%= Identity.count %></div>
+      <small class="text-muted text-uppercase font-weight-bold">Kimlik Bilgileri</small>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <div class="h1 text-muted text-right mb-4">
+        <%= fa_icon('location-arrow') %>
+      </div>
+      <div class="text-value"><%= Address.count %></div>
+      <small class="text-muted text-uppercase font-weight-bold">Adres Bilgileri</small>
+    </div>
+  </div>
+</div>

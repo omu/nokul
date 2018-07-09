@@ -1,0 +1,41 @@
+<div class='alert alert-light'>
+  <%= link_to_new(new_unit_instruction_language_path, t('.new_unit_instruction_language_link')) %>
+</div>
+
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'align-justify', text: t('.card_header') %>
+      </div>
+      <div class='card-body'>
+        <table class='table table-responsive-sm table-striped'>
+          <thead>
+            <tr>
+              <th><%= t('.name') %></th>
+              <th><%= t('.code') %></th>
+              <th><%= t('actions') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @unit_instruction_languages.each do |unit_instruction_language| %>
+              <tr>
+                <td><%= unit_instruction_language.name %></td>
+                <td><%= unit_instruction_language.code %></td>
+                <td>
+                  <%= link_to_edit(edit_unit_instruction_language_path(unit_instruction_language)) %>
+                  <%= link_to_destroy(unit_instruction_language) %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <nav aria-label='pagination'>
+      <ul class='pagination justify-content-center'>
+        <%== pagy_nav_bootstrap(@pagy) %>
+      </ul>
+    </nav>
+  </div>
+</div>
