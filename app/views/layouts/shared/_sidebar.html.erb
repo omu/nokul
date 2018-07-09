@@ -49,6 +49,10 @@
           <%= fa_icon('book', text: t('.courses'), class: 'nav-icon') %>
         <% end %>
       </li>
+      <li class="nav-item">
+        <%= link_to users_path, class: 'nav-link' do %>
+          <%= fa_icon('user', text: t('.users'), class: 'nav-icon') %>
+        <% end %>
       <li class="nav-item nav-dropdown">
         <a class="nav-link nav-dropdown-toggle" href="#">
           <%= fa_icon('university', class: 'nav-icon') %><%= t('.references') %>

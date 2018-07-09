@@ -7,6 +7,7 @@ en:
         password: Password
         password_confirmation: Password Confirmation
         current_password: Current Password
+        preferred_language: Preferred Language
   simple_form:
     placeholders:
       user:
@@ -46,3 +47,27 @@ en:
         remember_login: Remember Login
         registration_description: Students and staff joining to our university need to create an account by registering.
         create_account: Create Account
+  users:
+    index:
+      <<: *user_attributes
+      card_header: User Accounts
+      new_user_link: Create a New User
+      addresses: Addresses
+      identities: Identities
+    show:
+      <<: *user_attributes
+    search:
+      smart_search: Smart Search
+      smart_search_placeholder: TC/YU number, e-mail address, first of last name
+      detailed_search: Detailed Search
+    edit:
+      form_title: Edit Account
+    new:
+      form_title: Create Account
+    update:
+      success: User successfully updated.
+    create:
+      success: User successfully created.
+    destroy:
+      success: User successfully deleted!
+      warning: User can not be deleted.
