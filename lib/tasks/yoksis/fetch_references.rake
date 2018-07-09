@@ -8,6 +8,8 @@ namespace :yoksis do
 
   desc 'fetch all references'
   task :fetch_references do
+    puts 'Fetching references from YOKSIS'
+
     {
       get_birim_turu: 'UnitType',
       get_ogrenim_dili: 'UnitInstructionLanguage',
