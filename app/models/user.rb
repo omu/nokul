@@ -23,6 +23,9 @@ class User < ApplicationRecord
   has_many :positions, through: :duties
   has_many :administrative_functions, through: :duties
 
+  # academic studies
+  has_many :certifications, dependent: :destroy
+
   # validations
   validates :email, presence: true, uniqueness: true
   validates :id_number, presence: true, uniqueness: true, numericality: { only_integer: true }, length: { is: 11 }
