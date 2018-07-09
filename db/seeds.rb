@@ -49,7 +49,7 @@ Rake::Task['yoksis:fetch_references'].invoke
 Rake::Task['yoksis:import_departments'].invoke
 
 # Import Academic Staff from YOKSIS
-# Rake::Task['yoksis:fetch_academic_staff'].invoke
+Rake::Task['yoksis:fetch_academic_staff'].invoke
 
 # Produced data for beta environment
 if Rails.env.beta? || Rails.env.development?
