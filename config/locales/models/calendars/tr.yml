@@ -19,8 +19,6 @@ tr:
         senate_decision_date: Senato Karar Tarihi
         senate_decision_no: Senato Karar No
         description: Açıklama
-        created_at: Oluşturulma Tarihi
-        updated_at: Son Güncellenme
       calendar_event:
         calendar_title_id: Başlık
         start_date: Başlama Tarihi

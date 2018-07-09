@@ -8,6 +8,7 @@ en:
         password_confirmation: Password Confirmation
         current_password: Current Password
         preferred_language: Preferred Language
+        password_changed_at: Last Password Change
   simple_form:
     placeholders:
       user:

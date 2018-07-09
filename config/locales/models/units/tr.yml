@@ -15,8 +15,6 @@ tr:
         unit_instruction_type: Öğretim Türü
         university_type: Üniversite Türü
         parent_id: Üst Birim
-        created_at: Oluşturulma Tarihi
-        updated_at: Son Güncelleme
   helpers:
     submit:
       unit:
