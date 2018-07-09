@@ -21,6 +21,7 @@ class Employee < ApplicationRecord
   # scopes
   scope :active, -> { where(active: true) }
   scope :passive, -> { where(active: false) }
+  # custom methods
   def academic?
     title.branch.eql?('ÖE')
   end
