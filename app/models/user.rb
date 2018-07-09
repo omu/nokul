@@ -1,6 +1,15 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
+  # search
+  include PgSearch
+  pg_search_scope(
+    :search,
+    against: %i[id_number email],
+    associated_against: { identities: %i[first_name last_name] },
+    using: { tsearch: { prefix: true } }
+  )
+
   # authentication
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
