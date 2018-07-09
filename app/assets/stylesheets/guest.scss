@@ -1,15 +1,7 @@
 /*
-  * Manifest file for guest template. Only include assets that you need.
-
-  * form icons
+  * Manifest file for guest template.
   *= require font-awesome
-
-  * coreui base
   *= require @coreui/coreui/dist/css/coreui.min
-
-  * toastr notifications
   *= require toastr/build/toastr.min
-
-  * background image
   *= require shared/background
 */
