@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_21_072455) do
+ActiveRecord::Schema.define(version: 2018_07_09_000610) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -81,6 +81,26 @@ ActiveRecord::Schema.define(version: 2018_06_21_072455) do
     t.string "name", null: false
   end
 
+  create_table "certifications", force: :cascade do |t|
+    t.integer "yoksis_id", null: false
+    t.integer "type", default: 1, null: false
+    t.string "name"
+    t.text "content"
+    t.string "location"
+    t.integer "scope"
+    t.string "duration"
+    t.date "start_date"
+    t.date "end_date"
+    t.string "title"
+    t.integer "number_of_authors"
+    t.string "city_and_country"
+    t.datetime "last_update"
+    t.float "incentive_point"
+    t.integer "status"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_certifications_on_user_id"
+  end
+
   create_table "cities", force: :cascade do |t|
     t.string "name", null: false
     t.string "alpha_2_code", null: false
@@ -139,8 +159,21 @@ ActiveRecord::Schema.define(version: 2018_06_21_072455) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "slug"
     t.index ["title_id"], name: "index_employees_on_title_id"
     t.index ["user_id"], name: "index_employees_on_user_id"
+  end
+
+  create_table "friendly_id_slugs", force: :cascade do |t|
+    t.string "slug", null: false
+    t.integer "sluggable_id", null: false
+    t.string "sluggable_type", limit: 50
+    t.string "scope"
+    t.datetime "created_at"
+    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
+    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
+    t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
+    t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
   create_table "identities", force: :cascade do |t|
@@ -309,6 +342,7 @@ ActiveRecord::Schema.define(version: 2018_06_21_072455) do
     t.string "preferred_language", default: "tr"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "password_changed_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["id_number"], name: "index_users_on_id_number", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
@@ -331,6 +365,7 @@ ActiveRecord::Schema.define(version: 2018_06_21_072455) do
   add_foreign_key "calendar_events", "calendar_titles"
   add_foreign_key "calendar_title_types", "calendar_titles", column: "title_id"
   add_foreign_key "calendar_title_types", "calendar_types", column: "type_id"
+  add_foreign_key "certifications", "users"
   add_foreign_key "cities", "countries"
   add_foreign_key "courses", "units"
   add_foreign_key "districts", "cities"
