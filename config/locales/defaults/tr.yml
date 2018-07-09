@@ -9,7 +9,8 @@ tr:
     show: Görüntüle
     update: Güncelle
   are_you_sure: Emin misiniz?
-  search: Aramaya Yap
+  save: Kaydet
+  search: Arama Yap
   home_nav: Anasayfa
   'yes': Evet
   'no': Hayır
