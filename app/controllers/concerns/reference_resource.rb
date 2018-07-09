@@ -12,12 +12,11 @@ module ReferenceResource
 
     def index
       @pagy, value = pagy(@model_name.all)
-      instance_variable_set("@#{@controller_name}", value)
+      instance_variable_set("@#{controller_name}", value)
     end
 
     def new
       instance_variable_set(@singular_variable.to_sym, @model_name.new)
-      byebug
     end
 
     def create
@@ -41,9 +40,8 @@ module ReferenceResource
     private
 
     def set_variables
-      @controller_name = @_params[:controller].split('/').last
-      @singular_variable = "@#{@controller_name.singularize}"
-      @model_name = @controller_name.classify.constantize
+      @singular_variable = "@#{controller_name.singularize}"
+      @model_name = controller_name.classify.constantize
     end
 
     def set_resource
@@ -51,7 +49,7 @@ module ReferenceResource
     end
 
     def redirect_with(message)
-      redirect_to(send("#{@controller_name}_path"), notice: t(".#{message}"))
+      redirect_to(send("#{controller_name}_path"), notice: t(".#{message}"))
     end
   end
   # rubocop:enable Metrics/BlockLength
