@@ -15,7 +15,7 @@ module Services
           @client = Savon.client(
             wsdl: wsdl,
             convert_request_keys_to: :camelcase,
-            basic_auth: [ENV['YOKSIS_USER'], ENV['YOKSIS_PASSWORD']]
+            basic_auth: [Rails.application.credentials.yoksis[:user], Rails.application.credentials.yoksis[:password]]
           )
         end
       end
