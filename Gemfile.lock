@@ -113,7 +113,7 @@ GEM
     dotenv-rails (2.5.0)
       dotenv (= 2.5.0)
       railties (>= 3.2, < 6.0)
-    email_address (0.1.9)
+    email_address (0.1.10)
       netaddr (~> 2.0)
       simpleidn
     equalizer (0.0.11)
@@ -169,7 +169,7 @@ GEM
       mini_portile2 (~> 2.3.0)
     nori (2.6.0)
     orm_adapter (0.5.0)
-    pagy (0.11.2)
+    pagy (0.12.0)
     parallel (1.12.1)
     parser (2.5.1.0)
       ast (~> 2.4.0)
@@ -231,7 +231,7 @@ GEM
       railties (>= 4.2.0, < 5.3)
     rollbar (2.16.2)
       multi_json
-    rubocop (0.57.2)
+    rubocop (0.58.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.5)
