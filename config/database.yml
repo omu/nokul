@@ -17,6 +17,8 @@ test:
 production: &production
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
+  pool: 40
+  timeout: 5000
 
 beta:
   <<: *production
