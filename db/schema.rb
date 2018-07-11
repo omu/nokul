@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_09_000610) do
+ActiveRecord::Schema.define(version: 2018_07_11_121944) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -114,6 +114,7 @@ ActiveRecord::Schema.define(version: 2018_07_09_000610) do
     t.string "alpha_3_code", null: false
     t.string "numeric_code", null: false
     t.string "mernis_code"
+    t.integer "yoksis_code"
   end
 
   create_table "courses", force: :cascade do |t|
@@ -342,7 +343,7 @@ ActiveRecord::Schema.define(version: 2018_07_09_000610) do
     t.string "preferred_language", default: "tr"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "password_changed_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.datetime "password_changed_at", default: -> { "now()" }, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["id_number"], name: "index_users_on_id_number", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
