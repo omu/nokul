@@ -50,7 +50,7 @@ module Locations
     end
 
     def country_params
-      params.require(:country).permit(:name, :alpha_2_code, :alpha_3_code, :numeric_code, :mernis_code, yoksis_code)
+      params.require(:country).permit(:name, :alpha_2_code, :alpha_3_code, :numeric_code, :mernis_code, :yoksis_code)
     end
   end
 end
