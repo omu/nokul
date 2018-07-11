@@ -7,6 +7,7 @@ en:
         alpha_3_code: Alpha 3 Code
         numeric_code: ISO3166 Numeric
         mernis_code: MERNIS Code
+        yoksis_code: YOKSIS Code
       city: &city_attributes
         name: Name of City
         alpha_2_code: Alpha 2 Code
