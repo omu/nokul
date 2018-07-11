@@ -43,7 +43,7 @@ module Locations
       assert_equal 'TCC', country.alpha_3_code
       assert_equal '10001', country.numeric_code
       assert_equal '20001', country.mernis_code
-      assert_equal _30001_, country.yoksis_code
+      assert_equal 30_001, country.yoksis_code
       assert_redirected_to country_path(country)
       assert_equal translate('.create.success'), flash[:notice]
     end
@@ -71,7 +71,7 @@ module Locations
       assert_equal 'TCCU', country.alpha_3_code
       assert_equal '10002', country.numeric_code
       assert_equal '20002', country.mernis_code
-      assert_equal _30002_, country.yoksis_code
+      assert_equal 30_002, country.yoksis_code
       assert_redirected_to country_path(country)
       assert_equal translate('.update.success'), flash[:notice]
     end
