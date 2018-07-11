@@ -52,6 +52,7 @@ tr:
         new_country_link: Yeni Ülke Ekle
         card_header: Ülkeler
       show:
+        <<: *country_attributes
         <<: *city_attributes
         card_header: Şehirler
         new_city_link: Yeni Şehir Ekle
