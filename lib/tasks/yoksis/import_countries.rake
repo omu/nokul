@@ -12,7 +12,7 @@ namespace :yoksis do
       yoksis_code, name = yoksis_country.split('|').map(&:strip)
 
       country = Country.find_by(name: name)
-      next unless country.present?
+      next if country.blank?
       country.yoksis_code = yoksis_code.to_i
       puts "FAIL: #{country.yoksis_code} - #{country.name} can not be updated!" unless country.save!
     end
