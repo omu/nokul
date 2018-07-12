@@ -21,7 +21,7 @@ class Article < ApplicationRecord
     sci_expanded: 6,
     ahci: 7,
     field_indexes: 8,
-    well_establised_indexes: 9,
+    well_established_indexes: 9,
     sci: 40,
     not_indexed: 42,
     ebsco: 46,
