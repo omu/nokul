@@ -21,7 +21,7 @@ module ActiveSupport
     fixtures :all
 
     def controller_name
-      @controller_name ||= class_name.sub(/ControllerTest$/, '').underscore
+      @controller_name ||= class_name.delete_suffix('ControllerTest').underscore
     end
   end
 end
