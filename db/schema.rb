@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_11_121944) do
+ActiveRecord::Schema.define(version: 2018_07_12_130547) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -240,6 +240,27 @@ ActiveRecord::Schema.define(version: 2018_07_11_121944) do
     t.index ["duty_id"], name: "index_positions_on_duty_id"
   end
 
+  create_table "projects", force: :cascade do |t|
+    t.integer "yoksis_id", null: false
+    t.text "name"
+    t.text "subject"
+    t.integer "status"
+    t.date "bastar"
+    t.date "bittar"
+    t.string "budget"
+    t.string "duty"
+    t.string "type"
+    t.string "currency"
+    t.datetime "last_update"
+    t.integer "activity"
+    t.integer "scope"
+    t.string "title"
+    t.integer "unit_id"
+    t.float "incentive_point"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_projects_on_user_id"
+  end
+
   create_table "student_disability_types", force: :cascade do |t|
     t.string "name", null: false
     t.integer "code", null: false
@@ -415,6 +436,7 @@ ActiveRecord::Schema.define(version: 2018_07_11_121944) do
   add_foreign_key "identities", "users"
   add_foreign_key "positions", "administrative_functions"
   add_foreign_key "positions", "duties"
+  add_foreign_key "projects", "users"
   add_foreign_key "students", "units"
   add_foreign_key "students", "users"
   add_foreign_key "unit_calendar_events", "academic_calendars"
