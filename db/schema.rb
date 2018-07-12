@@ -52,6 +52,42 @@ ActiveRecord::Schema.define(version: 2018_07_11_121944) do
     t.integer "code", null: false
   end
 
+  create_table "articles", force: :cascade do |t|
+    t.integer "yoksis_id", null: false
+    t.integer "scope"
+    t.integer "review"
+    t.integer "index"
+    t.text "title"
+    t.text "authors"
+    t.integer "number_of_authors"
+    t.integer "country"
+    t.string "city"
+    t.string "journal"
+    t.string "language_of_publication"
+    t.integer "month"
+    t.integer "year"
+    t.string "volume"
+    t.string "issue"
+    t.integer "first_page"
+    t.integer "last_page"
+    t.string "doi"
+    t.string "issn"
+    t.integer "access_type"
+    t.text "access_link"
+    t.text "discipline"
+    t.string "keyword"
+    t.integer "special_issue"
+    t.integer "special_issue_name"
+    t.string "sponsored_by"
+    t.integer "author_id"
+    t.datetime "last_update"
+    t.integer "status"
+    t.integer "type"
+    t.float "incentive_point"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_articles_on_user_id"
+  end
+
   create_table "calendar_events", force: :cascade do |t|
     t.bigint "academic_calendar_id"
     t.bigint "calendar_title_id"
@@ -362,6 +398,7 @@ ActiveRecord::Schema.define(version: 2018_07_11_121944) do
   add_foreign_key "academic_calendars", "calendar_types"
   add_foreign_key "addresses", "districts"
   add_foreign_key "addresses", "users"
+  add_foreign_key "articles", "users"
   add_foreign_key "calendar_events", "academic_calendars"
   add_foreign_key "calendar_events", "calendar_titles"
   add_foreign_key "calendar_title_types", "calendar_titles", column: "title_id"

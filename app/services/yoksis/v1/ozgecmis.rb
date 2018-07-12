@@ -16,6 +16,7 @@ module Services
           )
         end
 
+        # TODO: Will refactor.
         def get_arastirma_sertifka_bilgisi_v1(id_number)
           message = {
             'parametre' => {
@@ -27,8 +28,21 @@ module Services
 
           @client.call(__method__, message: message).body["#{__method__}_response".to_sym]
         end
-
         alias certifications get_arastirma_sertifka_bilgisi_v1
+
+        def get_makale_bilgisi_v1(id_number)
+          message = {
+            'parametre' => {
+              'P_KULLANICI_ID' => @username,
+              'P_SIFRE' => @password,
+              'P_TC_KIMLIK_NO' => id_number
+            }
+          }
+
+          @client.call(__method__, message: message).body["#{__method__}_response".to_sym]
+        end
+
+        alias articles get_makale_bilgisi_v1
       end
     end
   end
