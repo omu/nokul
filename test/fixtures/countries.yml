@@ -4,21 +4,25 @@ turkey:
   alpha_3_code: TUR
   numeric_code: 792
   mernis_code: 9980
+  yoksis_code: 52
 sweden:
   name: İsveç
   alpha_2_code: SE
   alpha_3_code: SWE
   numeric_code: 752
   mernis_code: 9973
+  yoksis_code: 30
 denmark:
   name: Danimarka
   alpha_2_code: DK
   alpha_3_code: DNK
   numeric_code: 208
   mernis_code: 9879
+  yoksis_code: 8
 norway:
   name: Norveç
   alpha_2_code: NO
   alpha_3_code: NOR
   numeric_code: 578
   mernis_code: 9943
+  yoksis_code: 28
