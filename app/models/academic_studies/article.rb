@@ -36,7 +36,8 @@ class Article < ApplicationRecord
     eric: 55,
     esci: 56,
     index_chemicus: 59,
-    turkish_index: 45
+    turkish_index: 45,
+    art_index: 62
   }
 
   enum type: {
