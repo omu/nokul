@@ -24,8 +24,10 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 
 # view helpers: tools for forms, views, etc.
+gem 'chartkick'
 gem 'cocoon'
 gem 'font-awesome-rails'
+gem 'groupdate' # for chartkick
 gem 'pagy'
 gem 'simple_form'
 
