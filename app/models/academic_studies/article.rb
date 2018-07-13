@@ -53,4 +53,12 @@ class Article < ApplicationRecord
     review_article: 10,
     short_article: 11
   }
+
+  def self.unique_count
+    active.group_by(&:yoksis_id).count
+  end
+
+  def self.most_recent
+    order(created_at: :desc).first(10)
+  end
 end
