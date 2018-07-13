@@ -4,15 +4,12 @@ class Certification < ApplicationRecord
   self.inheritance_column = nil
 
   # relations
-  # TODO: belongs_to user or employee?
   belongs_to :user
 
-  # # validations
-  # validates :article_title, presence: true
-  # validates :scope, presence: true
-  # validates :review, presence: true
-  # validates :index, presence: true
-  # validates :number_of_authors, presence: true
+  # validations
+  validates :yoksis_id, presence: true
+  validates :type, presence: true
+  validates :title, presence: true
 
   # enums
   enum type: {

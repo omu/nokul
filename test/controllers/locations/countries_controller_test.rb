@@ -31,7 +31,7 @@ module Locations
         post countries_path params: {
           country: {
             name: 'Test Country', alpha_2_code: 'TC', alpha_3_code: 'TCC',
-            numeric_code: '10001', mernis_code: '20001'
+            numeric_code: '10001', mernis_code: '20001', yoksis_code: '30001'
           }
         }
       end
@@ -43,6 +43,7 @@ module Locations
       assert_equal 'TCC', country.alpha_3_code
       assert_equal '10001', country.numeric_code
       assert_equal '20001', country.mernis_code
+      assert_equal 30_001, country.yoksis_code
       assert_redirected_to country_path(country)
       assert_equal translate('.create.success'), flash[:notice]
     end
@@ -59,7 +60,7 @@ module Locations
       patch country_path(country), params: {
         country: {
           name: 'Test Country Update', alpha_2_code: 'TCU', alpha_3_code: 'TCCU',
-          numeric_code: '10002', mernis_code: '20002'
+          numeric_code: '10002', mernis_code: '20002', yoksis_code: '30002'
         }
       }
 
@@ -70,6 +71,7 @@ module Locations
       assert_equal 'TCCU', country.alpha_3_code
       assert_equal '10002', country.numeric_code
       assert_equal '20002', country.mernis_code
+      assert_equal 30_002, country.yoksis_code
       assert_redirected_to country_path(country)
       assert_equal translate('.update.success'), flash[:notice]
     end
