@@ -49,4 +49,8 @@ class User < ApplicationRecord
   def accounts
     (students + employees).flatten
   end
+
+  def self.most_publishing
+    order('articles_count desc').first(10)
+  end
 end
