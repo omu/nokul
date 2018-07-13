@@ -7,6 +7,7 @@ tr:
         alpha_3_code: Alpha 3 Kodu
         numeric_code: ISO3166 Rakamsal
         mernis_code: MERNIS Kodu
+        yoksis_code: YOKSIS Kodu
       city: &city_attributes
         name: Şehir Adı
         alpha_2_code: Alpha 2 Kodu
@@ -51,6 +52,7 @@ tr:
         new_country_link: Yeni Ülke Ekle
         card_header: Ülkeler
       show:
+        <<: *country_attributes
         <<: *city_attributes
         card_header: Şehirler
         new_city_link: Yeni Şehir Ekle

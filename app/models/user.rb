@@ -25,6 +25,8 @@ class User < ApplicationRecord
 
   # academic studies
   has_many :certifications, dependent: :destroy
+  has_many :articles, dependent: :destroy
+  has_many :projects, dependent: :destroy
 
   # validations
   validates :email, presence: true, uniqueness: true

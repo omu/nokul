@@ -19,5 +19,9 @@ module ActiveSupport
     include AbstractController::Translation # Use t() in tests, instead of I18n.t()
     include Devise::Test::IntegrationHelpers
     fixtures :all
+
+    def controller_name
+      @controller_name ||= class_name.delete_suffix('ControllerTest').underscore
+    end
   end
 end

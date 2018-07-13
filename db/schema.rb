@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_09_000610) do
+ActiveRecord::Schema.define(version: 2018_07_12_130547) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,6 +50,42 @@ ActiveRecord::Schema.define(version: 2018_07_09_000610) do
   create_table "administrative_functions", force: :cascade do |t|
     t.string "name", null: false
     t.integer "code", null: false
+  end
+
+  create_table "articles", force: :cascade do |t|
+    t.integer "yoksis_id", null: false
+    t.integer "scope"
+    t.integer "review"
+    t.integer "index"
+    t.text "title"
+    t.text "authors"
+    t.integer "number_of_authors"
+    t.integer "country"
+    t.string "city"
+    t.string "journal"
+    t.string "language_of_publication"
+    t.integer "month"
+    t.integer "year"
+    t.string "volume"
+    t.string "issue"
+    t.integer "first_page"
+    t.integer "last_page"
+    t.string "doi"
+    t.string "issn"
+    t.integer "access_type"
+    t.text "access_link"
+    t.text "discipline"
+    t.string "keyword"
+    t.integer "special_issue"
+    t.integer "special_issue_name"
+    t.string "sponsored_by"
+    t.integer "author_id"
+    t.datetime "last_update"
+    t.integer "status"
+    t.integer "type"
+    t.float "incentive_point"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_articles_on_user_id"
   end
 
   create_table "calendar_events", force: :cascade do |t|
@@ -114,6 +150,7 @@ ActiveRecord::Schema.define(version: 2018_07_09_000610) do
     t.string "alpha_3_code", null: false
     t.string "numeric_code", null: false
     t.string "mernis_code"
+    t.integer "yoksis_code"
   end
 
   create_table "courses", force: :cascade do |t|
@@ -201,6 +238,27 @@ ActiveRecord::Schema.define(version: 2018_07_09_000610) do
     t.datetime "updated_at", null: false
     t.index ["administrative_function_id"], name: "index_positions_on_administrative_function_id"
     t.index ["duty_id"], name: "index_positions_on_duty_id"
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.integer "yoksis_id", null: false
+    t.text "name"
+    t.text "subject"
+    t.integer "status"
+    t.date "bastar"
+    t.date "bittar"
+    t.string "budget"
+    t.string "duty"
+    t.string "type"
+    t.string "currency"
+    t.datetime "last_update"
+    t.integer "activity"
+    t.integer "scope"
+    t.string "title"
+    t.integer "unit_id"
+    t.float "incentive_point"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_projects_on_user_id"
   end
 
   create_table "student_disability_types", force: :cascade do |t|
@@ -361,6 +419,7 @@ ActiveRecord::Schema.define(version: 2018_07_09_000610) do
   add_foreign_key "academic_calendars", "calendar_types"
   add_foreign_key "addresses", "districts"
   add_foreign_key "addresses", "users"
+  add_foreign_key "articles", "users"
   add_foreign_key "calendar_events", "academic_calendars"
   add_foreign_key "calendar_events", "calendar_titles"
   add_foreign_key "calendar_title_types", "calendar_titles", column: "title_id"
@@ -377,6 +436,7 @@ ActiveRecord::Schema.define(version: 2018_07_09_000610) do
   add_foreign_key "identities", "users"
   add_foreign_key "positions", "administrative_functions"
   add_foreign_key "positions", "duties"
+  add_foreign_key "projects", "users"
   add_foreign_key "students", "units"
   add_foreign_key "students", "users"
   add_foreign_key "unit_calendar_events", "academic_calendars"

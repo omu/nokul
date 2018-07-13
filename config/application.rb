@@ -26,7 +26,7 @@ module Nokul
 
     # organize models in sub-folders
     config.autoload_paths += Dir[
-      Rails.root.join('app', 'models', '**'),
+      Rails.root.join('app', 'models', '**')
     ]
 
     reloader.to_prepare do
