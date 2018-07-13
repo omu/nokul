@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 desc 'Counter cache for number of articles/projects a user have'
 
 namespace :update_counter_cache do
