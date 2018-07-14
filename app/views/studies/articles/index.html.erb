@@ -25,7 +25,7 @@
               <%= link_to user_path(user) do %>
                 <%= "#{user.identities.first.try(:first_name)} #{user.identities.first.try(:last_name)}" %>
               <% end %>
-              - <%= user.duties.tenure.first.unit.name %>
+              - <%= user.duties.tenure.first.try(:unit).try(:name) %>
             </li>
           <% end %>
         </ul>
