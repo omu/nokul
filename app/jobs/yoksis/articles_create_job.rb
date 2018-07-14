@@ -10,7 +10,6 @@ module Yoksis
     end
 
     # callbacks
-
     # rubocop:disable Metrics/BlockLength
     after_perform do |job|
       user = job.arguments.first
