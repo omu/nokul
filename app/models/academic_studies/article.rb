@@ -59,6 +59,6 @@ class Article < ApplicationRecord
   end
 
   def self.most_recent
-    order(created_at: :desc).first(10)
+    order(created_at: :desc).limit(10)
   end
 end
