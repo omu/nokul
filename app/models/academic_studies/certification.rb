@@ -7,9 +7,9 @@ class Certification < ApplicationRecord
   belongs_to :user
 
   # validations
-  validates :yoksis_id, presence: true
-  validates :type, presence: true
+  validates :yoksis_id, presence: true, uniqueness: { scope: %i[user_id status] }
   validates :title, presence: true
+  validates :type, presence: true
 
   # enums
   enum type: {

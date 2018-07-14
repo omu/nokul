@@ -71,4 +71,11 @@ Rails.application.routes.draw do
     resources :unit_types, except: :show
     resources :university_types, except: :show
   end
+
+  scope module: :studies do
+    get '/studies', to: 'dashboard#index'
+    get '/studies/articles', to: 'articles#index'
+    get '/studies/projects', to: 'projects#index'
+    get '/studies/certifications', to: 'certifications#index'
+  end
 end

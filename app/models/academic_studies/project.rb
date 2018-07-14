@@ -4,10 +4,10 @@ class Project < ApplicationRecord
   self.inheritance_column = nil
 
   # relations
-  belongs_to :user
+  belongs_to :user, counter_cache: true
 
   # validations
-  validates :yoksis_id, presence: true
+  validates :yoksis_id, presence: true, uniqueness: { scope: %i[user_id status] }
 
   # enums
   enum status: {
