@@ -51,6 +51,6 @@ class User < ApplicationRecord
   end
 
   def self.most_publishing
-    order('articles_count desc').limit(10)
+    where.not(articles_count: nil).order('articles_count desc').limit(10)
   end
 end
