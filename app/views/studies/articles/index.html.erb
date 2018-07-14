@@ -1,0 +1,100 @@
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body p-3 d-flex align-items-center">
+        <i class="fa fa-cogs bg-primary p-3 font-2xl mr-3"></i>
+        <div>
+          <div class="text-value-sm text-primary"><%= Article.unique_count %></div>
+          <div class="text-muted text-uppercase font-weight-bold small"><%= t('.article') %></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-header">
+        <i class="fa fa-align-justify"></i> <%= t('.top_publishers') %>
+      </div>
+      <div class="card-body">
+        <ul class="list-group">
+          <% User.most_publishing.each do |user| %>
+            <li class="list-group-item"><%= user.identities.first.try(:first_name) %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-header">
+        <i class="fa fa-align-justify"></i> <%= t('.recently_added') %>
+      </div>
+      <div class="card-body">
+        <ul class="list-group">
+          <% Article.most_recent.each do |article| %>
+            <small><li class="list-group-item"><%= apa_citation(article) %></li></small>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12">
+    <div class="card">
+      <div class='card-header'>
+        <%= t('.number_of_articles_by_years') %>
+      </div>
+      <div class="card-body">
+        <%= line_chart Article.active.group(:year).count %>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-sm-6">
+    <div class="card">
+      <div class='card-header'>
+        <%= t('.publications_by_index_types') %>
+      </div>
+      <div class="card-body">
+        <%= column_chart Article.active.group(:index).count %>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class='card-header'>
+        <%= t('.publications_by_publication_types') %>
+      </div>
+      <div class="card-body">
+        <%= column_chart Article.active.group(:type).count %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card">
+      <div class='card-header'>
+        <%= t('.publications_by_language') %>
+      </div>
+      <div class="card-body">
+        <%= pie_chart Article.active.group(:language_of_publication).count %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card">
+      <div class='card-header'>
+        <%= t('.publications_by_number_of_authors') %>
+      </div>
+      <div class="card-body">
+        <%= bar_chart Article.active.group(:number_of_authors).count %>
+      </div>
+    </div>
+  </div>
+</div>

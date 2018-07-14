@@ -2,7 +2,7 @@
 
 namespace :yoksis do
   desc 'import country codes from YOKSIS'
-  task import_countries: :environment do
+  task import_yoksis_country_codes: :environment do
     file = File.open(Rails.root.join('db', 'static_data', 'yoksis_countries.yml'))
   rescue Errno::ENOENT => e
     puts "File/path not found! #{e}"

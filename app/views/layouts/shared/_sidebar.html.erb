@@ -53,6 +53,7 @@
         <%= link_to users_path, class: 'nav-link' do %>
           <%= fa_icon('user', text: t('.users'), class: 'nav-icon') %>
         <% end %>
+      </li>
       <li class="nav-item nav-dropdown">
         <a class="nav-link nav-dropdown-toggle" href="#">
           <%= fa_icon('university', class: 'nav-icon') %><%= t('.references') %>
@@ -129,6 +130,11 @@
             <% end %>
           </li>
         </ul>
+      </li>
+      <li class="nav-item">
+        <%= link_to studies_path, class: 'nav-link' do %>
+          <%= fa_icon('file-text-o', text: t('.studies'), class: 'nav-icon') %>
+        <% end %>
       </li>
     </ul>
   </nav>
