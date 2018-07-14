@@ -12,7 +12,7 @@ module ApaHelper
     article.authors.split(',').map do |author|
       names = author.split
       last_name = names.shift.capitalize_all
-      first_name  = names.map(&:first).join('. ')
+      first_name = names.map(&:first).join('. ')
       "#{last_name}, #{first_name}"
     end.join(' & ')
   end
