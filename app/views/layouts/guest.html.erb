@@ -6,15 +6,20 @@
   </head>
   <body class='app flex-row align-items-center'>
     <div class="container">
-      <div class="row justify-content-center">
-        <%= yield %>
+      <div class="row justify-content-center" style="padding: 5px;">
+        <span>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <%= link_to(url_for(locale: 'tr'), class: 'btn btn-secondary') do %>
+              <%= image_tag 'tr.svg', height: '21', width: '28' %>&nbsp;Türkçe
+            <% end %>
+            <%= link_to(url_for(locale: 'en'), class: 'btn btn-secondary') do %>
+              <%= image_tag 'um.svg', height: '21', width: '28' %></i>&nbsp;English
+            <% end %>
+          </div>
+        </span>
       </div>
       <div class="row justify-content-center">
-        <div class="card">
-          <div class="card-body">
-            <%= render 'layouts/shared/footer' %>
-          </div>
-        </div>
+        <%= yield %>
       </div>
     </div>
     <%= javascript_include_tag 'guest' %>
