@@ -6,9 +6,9 @@
   </head>
   <body class='app flex-row align-items-center'>
     <div class="container">
-      <div class="row justify-content-center" style="padding: 5px;">
+      <div class="guest-language-buttons">
         <span>
-          <div class="btn-group" role="group" aria-label="Basic example">
+          <div class="btn-group" role="group" aria-label="Language buttons">
             <%= link_to(url_for(locale: 'tr'), class: 'btn btn-secondary') do %>
               <%= image_tag 'tr.svg', height: '21', width: '28' %>&nbsp;Türkçe
             <% end %>
@@ -26,7 +26,7 @@
           <%= link_to 'https://omu.sh' do %>
             <%= image_tag 'baum-beta.svg', height: '20', width: '110', alt: 'BAUM Logo', class: 'navbar-brand-full' %>
           <% end %>
-        </span>
+        </span> 
       </div>
     </div>
     <%= javascript_include_tag 'guest' %>
