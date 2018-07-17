@@ -4,10 +4,10 @@ class Article < ApplicationRecord
   self.inheritance_column = nil
 
   # relations
-  belongs_to :user
+  belongs_to :user, counter_cache: true
 
   # validations
-  validates :yoksis_id, presence: true
+  validates :yoksis_id, presence: true, uniqueness: { scope: %i[user_id status] }
   validates :title, presence: true
 
   # enums
@@ -36,7 +36,8 @@ class Article < ApplicationRecord
     eric: 55,
     esci: 56,
     index_chemicus: 59,
-    turkish_index: 45
+    turkish_index: 45,
+    art_index: 62
   }
 
   enum type: {
@@ -48,8 +49,16 @@ class Article < ApplicationRecord
     abstract: 6,
     book_review: 7,
     research_note: 8,
-    export_report: 9,
+    expert_report: 9,
     review_article: 10,
     short_article: 11
   }
+
+  def self.unique_count
+    active.group_by(&:yoksis_id).count
+  end
+
+  def self.most_recent
+    order(created_at: :desc).limit(10)
+  end
 end

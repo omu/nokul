@@ -20,6 +20,7 @@ class Unit < ApplicationRecord
   has_many :duties, dependent: :destroy
   has_many :employees, through: :duties
   has_many :students, dependent: :nullify
+  has_many :users, through: :employees
   has_many :positions, through: :duties
   has_many :administrative_functions, through: :duties
 
