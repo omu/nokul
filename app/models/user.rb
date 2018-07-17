@@ -49,4 +49,8 @@ class User < ApplicationRecord
   def accounts
     (students + employees).flatten
   end
+
+  def self.most_publishing
+    where.not(articles_count: nil).order('articles_count desc').limit(10)
+  end
 end

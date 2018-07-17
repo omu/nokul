@@ -9,3 +9,5 @@
 //= require perfect-scrollbar/dist/perfect-scrollbar.min
 //= require select2/dist/js/select2.min
 //= require jquery.maskedinput/src/jquery.maskedinput
+//= require Chart.bundle
+//= require chartkick

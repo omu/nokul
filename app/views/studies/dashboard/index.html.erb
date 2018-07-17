@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <nav class="nav">
+          <%= link_to studies_articles_path, class: 'nav-link' do %>
+            <%= t('.articles') %>
+          <% end %>
+          <%= link_to studies_projects_path, class: 'nav-link' do %>
+            <%= t('.projects') %>
+          <% end %>
+          <%= link_to studies_certifications_path, class: 'nav-link' do %>
+            <%= t('.certifications') %>
+          <% end %>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
