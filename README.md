@@ -59,7 +59,7 @@ export SECRET_KEY_BASE=GENERATED_SECRET_VALUE
 
 ## HowTo
 
-See [Wiki pages](https://github.com/omu/nokul-bati/wiki) for how-to documents.
+See [Wiki pages](https://github.com/omu/nokul/wiki) for how-to documents.
 
 ## Code Quality
 
@@ -97,11 +97,13 @@ rake test
 
 ## Rake Tasks
 
-- [OPTIONAL]. `setup` or `seed` already does it, but if you want to externally create YOKSIS references and departments inside your app, run the tasks shown below:
+- [OPTIONAL]. `setup` or `seed` already does it, but if you want to externally create YOKSIS references, departments, country codes and academic staffs inside your app, run the tasks shown below:
 
 ```bash
 rake yoksis:fetch_references
+rake yoksis:fetch_academic_staff
 rake yoksis:import_departments
+rake yoksis:import_yoksis_country_codes
 ```
 
 * `fetch` prefix has used for API operations, `import` prefix has used for local CSV importing operations.
@@ -132,4 +134,4 @@ bin/rails app:update
 
 ## License
 
-Read [LICENSE](LICENSE.md) for details.
+Read [LICENCE](LICENCE.md) for details.
