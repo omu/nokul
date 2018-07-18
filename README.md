@@ -134,4 +134,4 @@ bin/rails app:update
 
 ## License
 
-Read [LICENCE](LICENCE.md) for details.
+Read [LICENSE](LICENSE.md) for details.
