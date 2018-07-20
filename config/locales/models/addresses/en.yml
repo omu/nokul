@@ -34,6 +34,7 @@ en:
         card_header: Address Information
         district_and_city: District / City
         update_from_mernis: Update from MERNİS
+        get_from_mernis: Get from MERNIS
       new:
         form_title: Create Address
       edit:
