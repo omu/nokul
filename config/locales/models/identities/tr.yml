@@ -42,6 +42,7 @@ tr:
         new_identity: Yeni Kimlik Ekle
         card_header: Kimlik Bilgileri
         update_from_mernis: MERNİS'ten Güncelle
+        get_from_mernis: MERNİS'ten Getir
       edit:
         warning: Yasal kimlik bilgilerinizi düzenleyemezsiniz!
         form_title: Kimliği Düzenle

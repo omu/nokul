@@ -42,6 +42,7 @@ en:
         new_identity: Add a New Identity
         card_header: Identity Information
         update_from_mernis: Update from MERNIS
+        get_from_mernis: Get from MERNIS
       edit:
         warning: You can not edit your formal identity!
         form_title: Edit Identity
