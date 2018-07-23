@@ -4,7 +4,7 @@ require 'test_helper'
 
 class KpsIdentityJobTest < ActiveJob::TestCase
   %w[
-    KpsIdentityCreateOrUpdateJob
+    KpsIdentitySaveJob
   ].each do |property|
     test "can enqueue #{property}" do
       assert_enqueued_jobs 0
@@ -25,7 +25,7 @@ class KpsIdentityJobTest < ActiveJob::TestCase
   end
 
   %w[
-    KpsIdentityCreateOrUpdateJob
+    KpsIdentitySaveJob
   ].each do |property|
     test "can perform enqueued jobs for #{property}" do
       skip 'this block on CircleCI since it needs IP permissions to run.' if ENV['CI']

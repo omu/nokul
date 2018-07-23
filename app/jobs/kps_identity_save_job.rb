@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class KpsIdentityCreateOrUpdateJob < ApplicationJob
+class KpsIdentitySaveJob < ApplicationJob
   queue_as :high
 
   # slow operation
