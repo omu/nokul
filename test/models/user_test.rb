@@ -95,8 +95,8 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test 'user runs KpsIdentityCreateJob after being created' do
-    assert_enqueued_with(job: KpsIdentityCreateJob) do
+  test 'user runs KpsIdentityCreateOrUpdateJob after being created' do
+    assert_enqueued_with(job: KpsIdentityCreateOrUpdateJob) do
       User.create(
         id_number: '98765432198',
         email: 'anotherfakeuser@fakemail.com',
