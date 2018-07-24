@@ -50,7 +50,15 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :users
+  resources :users do
+    scope module: :account do
+      resources :employees, except: :index do
+        resources :duties, except: :index do
+          resources :positions, except: :index
+        end
+      end
+    end
+  end
 
   # public profiles
   get '/profiles/:id', to: 'public_profile#show'
