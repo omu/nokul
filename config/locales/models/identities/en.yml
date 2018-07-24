@@ -42,7 +42,7 @@ en:
         new_identity: Add a New Identity
         card_header: Identity Information
         update_from_mernis: Update from MERNIS
-        get_from_mernis: Get from MERNIS
+        import_from_mernis: Import from MERNIS
       edit:
         warning: You can not edit your formal identity!
         form_title: Edit Identity
@@ -58,3 +58,6 @@ en:
       mernis:
         wait: You recently created or updated your identity. You can only update your identity once a week from MERNIS.
         will_update: We have received your identity update request. Your identity will be updated in a couple of seconds/minutes.
+      import_from_mernis:
+        wait: We have received your identity update request. Your identity will be updated in a couple of seconds/minutes.
+        will_update: Your identity information has been transferred to the system via MERNIS.

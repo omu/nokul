@@ -21,9 +21,15 @@ Rails.application.routes.draw do
   scope module: :account do
     resources :identities, except: [:show] do
       get 'mernis', on: :member
+      collection do 
+        get 'import_from_mernis'
+      end 
     end
     resources :addresses, except: :show do
       get 'mernis', on: :member
+      collection do 
+        get 'import_from_mernis'
+      end 
     end
   end
 

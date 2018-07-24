@@ -37,6 +37,15 @@ module Account
       end
     end
 
+    def import_from_mernis
+      if current_user.identities.formal.blank?
+        KpsIdentitySaveJob.perform_later(current_user)
+        redirect_with('will_update')
+      else
+        redirect_with('wait')
+      end
+    end
+
     private
 
     def check_formality
