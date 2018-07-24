@@ -1,0 +1,68 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'university' %><strong><%= @duty.unit.name %></strong>
+        <div class="card-header-actions">
+          <%= link_to_edit(edit_user_employee_duty_path(@user, @employee, @duty)) %>
+          <%= link_to_destroy(user_employee_duty_path(@user, @employee, @duty)) %>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <table class="table table-responsive-sm">
+          <tbody>
+            <tr>
+              <td><%= '.name' %></td>
+              <td><%= @duty.temporary %></td>
+            </tr>
+            <tr>
+              <td><%= '.start_date' %></td>
+              <td><%= @duty.start_date %></td>
+            </tr>
+            <tr>
+              <td><%= '.end_date' %></td>
+              <td><%= @duty.end_date %></td>
+            </tr>
+            <tr>
+              <td><%= '.unit' %></td>
+              <td><%= @duty.unit.name %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'street-view', text: '.card_header' %>
+        <div class="card-header-actions">
+          <%= link_to_new new_user_employee_duty_position_path(@user, @employee, @duty), '.new_position_link' %>
+        </div>
+      </div>
+      <div class='card-body'>
+        <table class='table table-responsive-sm table-striped'>
+          <thead>
+            <tr>
+              <th><%= '.name' %></th>
+              <th><%= '.alpha_2_code' %></th>
+              <th><%= 'actions' %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @positions.each do |position| %>
+              <tr>
+                <td><%= position.administrative_function.name %></td>
+                <td>
+                  <%= link_to_show(user_employee_duty_position_path(@user, @employee, @duty, position)) %>
+                  <%= link_to_edit(edit_user_employee_duty_position_path(@user, @employee, @duty, position)) %>
+                  <%= link_to_destroy(user_employee_duty_position_path(@user, @employee, @duty, position)) %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

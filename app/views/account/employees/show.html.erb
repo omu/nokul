@@ -1,0 +1,65 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'university' %><strong><%= @employee.title.name %></strong>
+        <div class="card-header-actions">
+          <%= link_to_edit(edit_user_employee_path(@user, @employee)) %>
+          <%= link_to_destroy(@user, @employee) %>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <table class="table table-responsive-sm">
+          <tbody>
+            <tr>
+              <td><%= '.name' %></td>
+              <td><%= @employee.active %></td>
+            </tr>
+            <tr>
+              <td><%= '.alpha_2_code' %></td>
+              <td><%= @employee.title.name %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'street-view', text: '.card_header' %>
+        <div class="card-header-actions">
+          <%= link_to_new new_user_employee_duty_path(@user, @employee, @duty), '.new_duty_link' %>
+        </div>
+      </div>
+      <div class='card-body'>
+        <table class='table table-responsive-sm table-striped'>
+          <thead>
+            <tr>
+              <th><%= '.temporary' %></th>
+              <th><%= '.start_date' %></th>
+              <th><%= '.end_date' %></th>
+              <th><%= '.unit' %></th>
+              <th><%= 'actions' %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @employee.duties.each do |duty| %>
+              <tr>
+                <td><%= duty.temporary %></td>
+                <td><%= duty.start_date %></td>
+                <td><%= duty.end_date %></td>
+                <td><%= duty.unit %></td>
+                <td>
+                  <%= link_to_show(user_employee_duty_path(@user, @employee, duty)) %>
+                  <%= link_to_edit(edit_user_employee_duty_path(@user, @employee, duty)) %>
+                  <%= link_to_destroy(user_employee_duty_path(@user, @employee, duty)) %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
