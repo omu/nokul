@@ -42,7 +42,7 @@ class User < ApplicationRecord
   end
 
   def build_identity_information
-    KpsIdentityCreateJob.perform_later(self)
+    KpsIdentitySaveJob.perform_later(self)
   end
 
   # custom methods
