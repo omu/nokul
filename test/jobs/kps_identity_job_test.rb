@@ -23,9 +23,8 @@ class KpsIdentityJobTest < ActiveJob::TestCase
   test 'can perform enqueued jobs for KpsIdentityJobTest' do
     skip 'this block on CircleCI since it needs IP permissions to run.' if ENV['CI']
     assert_performed_jobs 0
-    args = users(:serhat)
     perform_enqueued_jobs do
-      'KpsIdentitySaveJob'.constantize.perform_later(args)
+      'KpsIdentitySaveJob'.constantize.perform_later(users(:serhat))
     end
     assert_performed_jobs 1
   end
