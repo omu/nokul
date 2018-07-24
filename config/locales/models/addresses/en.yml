@@ -34,7 +34,7 @@ en:
         card_header: Address Information
         district_and_city: District / City
         update_from_mernis: Update from MERNİS
-        get_from_mernis: Get from MERNIS
+        import_from_mernis: Import from MERNIS
       new:
         form_title: Create Address
       edit:
@@ -50,3 +50,6 @@ en:
       mernis:
         wait: You recently created or updated your address. You can update your address once every week.
         will_update: We got your address update request. In a couple of seconds/minutes you will be able to see your new address.
+      import_from_mernis:
+        wait: We got your address update request. In a couple of seconds/minutes you will be able to see your new address.
+        will_update: Your address information has been transferred to the system via MERNIS.

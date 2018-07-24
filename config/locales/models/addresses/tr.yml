@@ -34,7 +34,7 @@ tr:
         card_header: Adres Bilgileri
         district_and_city: İlçe / İl
         update_from_mernis: MERNİS'ten Güncelle
-        get_from_mernis: MERNİS'ten Getir
+        import_from_mernis: MERNİS'ten Getir
       new:
         form_title: Adres Oluştur
       edit:
@@ -50,3 +50,6 @@ tr:
       mernis:
         wait: Adresinizi yakın bir zamanda oluşturdunuz veya güncellediniz. Adresinizi haftada bir güncelleyebilirsiniz.
         will_update: Adres güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde adresiniz güncellenecek.
+      import_from_mernis:
+        wait: Adresinizi yakın bir zamanda oluşturdunuz veya güncellediniz. Adresinizi haftada bir güncelleyebilirsiniz.
+        will_update: Adres bilginiz MERNİS üzerinden sisteme aktarım işlemi başlatılmıştır.

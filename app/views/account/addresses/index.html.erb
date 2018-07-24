@@ -1,6 +1,6 @@
 <div class="alert alert-light">
   <%= link_to_new(new_address_path, t('.new_address')) %>
-  <%= link_to_new(new_address_path, t('.get_from_mernis')) unless @addresses.present? %>
+  <%= link_to_new(import_from_mernis_addresses_path, t('.import_from_mernis')) unless @addresses.present? %>
 </div>
 
 <div class="row">
