@@ -12,9 +12,9 @@ class KpsIdentitySaveJob < ApplicationJob
 
   # callbacks
   after_perform do |_job|
-    data = @response.merge(student_id: @student_id)
+    response = @response.merge(student_id: @student_id)
     formal = @user.identities.formal
     # Eğer kişinin formal kimliği varsa; kimlik bilgilerini güncelle, yoksa formal kimlik oluştur.
-    formal.present? ? formal.update(data) : formal.create(data)
+    formal.present? ? formal.update(response) : formal.create(response)
   end
 end
