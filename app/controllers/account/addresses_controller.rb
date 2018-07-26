@@ -32,14 +32,14 @@ module Account
       if (Time.zone.now - @address.updated_at) / 1.day < 7
         redirect_with('wait')
       else
-        KpsAddressUpdateJob.perform_later(address)
+        KpsAddressSaveJob.perform_later(current_user)
         redirect_with('will_update')
       end
     end
 
     def import_from_mernis
       if current_user.addresses.formal.blank?
-        KpsAddressCreateJob.perform_later(current_user)
+        KpsAddressSaveJob.perform_later(current_user)
         redirect_with('will_update')
       else
         redirect_with('wait')
