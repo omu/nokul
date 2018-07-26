@@ -11,11 +11,8 @@ class KpsAddressSaveJob < ApplicationJob
   # callbacks
   after_perform do |job|
     district = District.find_by(mernis_code: @response[:district_id])
-    formal = job.arguments.first.addresses.formal
-    if formal.present?
-      formal.update(district: district, full_address: @response[:full_address])
-    else
-      formal.create(district: district, full_address: @response[:full_address])
-    end
+    address = job.arguments.first.addresses.formal
+    response = { district: district, full_address: @response[:full_address] }
+    address.present? ? address.update(response) : address.create(response)
   end
 end
