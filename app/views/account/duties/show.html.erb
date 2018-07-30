@@ -13,20 +13,28 @@
         <table class="table table-responsive-sm">
           <tbody>
             <tr>
-              <td><%= '.name' %></td>
-              <td><%= @duty.temporary %></td>
+              <td><%= t('.user_id') %></td>
+              <td><%= link_to(@user.email, @user) %></td>
             </tr>
             <tr>
-              <td><%= '.start_date' %></td>
+              <td><%= t('.employee_id') %></td>
+              <td><%= link_to(@employee.title.name, [@user, @employee]) %></td>
+            </tr>
+            <tr>
+              <td><%= t('.unit_id') %></td>
+              <td><%= @duty.unit.name %></td>
+            </tr>
+            <tr>
+              <td><%= t('.temporary') %></td>
+              <td><%= t('.temporaries')[@duty.temporary.to_s.to_sym] %></td>
+            </tr>
+            <tr>
+              <td><%= t('.start_date') %></td>
               <td><%= @duty.start_date %></td>
             </tr>
             <tr>
-              <td><%= '.end_date' %></td>
+              <td><%= t('.end_date') %></td>
               <td><%= @duty.end_date %></td>
-            </tr>
-            <tr>
-              <td><%= '.unit' %></td>
-              <td><%= @duty.unit.name %></td>
             </tr>
           </tbody>
         </table>
@@ -35,18 +43,17 @@
 
     <div class='card'>
       <div class='card-header'>
-        <%= fa_icon 'street-view', text: '.card_header' %>
+        <%= fa_icon 'university', text: t('.positions') %>
         <div class="card-header-actions">
-          <%= link_to_new new_user_employee_duty_position_path(@user, @employee, @duty), '.new_position_link' %>
+          <%= link_to_new new_user_employee_duty_position_path(@user, @employee, @duty), t('.new_position_link') %>
         </div>
       </div>
       <div class='card-body'>
         <table class='table table-responsive-sm table-striped'>
           <thead>
             <tr>
-              <th><%= '.name' %></th>
-              <th><%= '.alpha_2_code' %></th>
-              <th><%= 'actions' %></th>
+              <th><%= t('.position') %></th>
+              <th><%= t('actions') %></th>
             </tr>
           </thead>
           <tbody>
@@ -54,7 +61,6 @@
               <tr>
                 <td><%= position.administrative_function.name %></td>
                 <td>
-                  <%= link_to_show(user_employee_duty_position_path(@user, @employee, @duty, position)) %>
                   <%= link_to_edit(edit_user_employee_duty_position_path(@user, @employee, @duty, position)) %>
                   <%= link_to_destroy(user_employee_duty_position_path(@user, @employee, @duty, position)) %>
                 </td>

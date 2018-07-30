@@ -16,6 +16,10 @@
         <%= fa_icon 'university' %><strong> Adres Bilgileri</strong></a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#positions" role="tab" aria-controls="positions">
+        <%= fa_icon 'university' %><strong> <%= t('.employees') %></strong></a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" data-toggle="tab" href="#studies" role="tab" aria-controls="studies">
         <%= fa_icon 'university' %><strong> Akademik Çalışmalar</strong></a>
       </li>
@@ -57,28 +61,6 @@
             </table>
           </div>
         </div>
-        <div class="card">
-          <div class="card-header">
-            <div class="card-header-actions">
-              <%= link_to_new(new_user_employee_path(@user)) %>
-            </div>
-          </div>
-
-          <div class="card-body">
-            <table class="table table-responsive-sm">
-              <tbody>
-                <% @user.employees.each do |employee| %>
-                  <tr>
-                    <td><%= employee.active %></td>
-                    <td><%= employee.title.name %></td>
-                    <td><%= link_to_show(user_employee_path(@user, employee)) %></td>
-                  </tr>
-                <% end %>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
       </div>
       <div class="tab-pane" id="identities" role="tabpanel">
         <div class="row">
@@ -212,6 +194,29 @@
               </div>
             </div>
           <% end %>
+        </div>
+      </div>
+      <div class="tab-pane" id="positions" role="tabpanel">
+        <div class="card">
+          <div class="card-header">
+            <%= t('.employees') %>
+            <div class="card-header-actions">
+              <%= link_to_new(new_user_employee_path(@user)) %>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <table class="table table-responsive-sm">
+              <tbody>
+                <% @employees.each do |employee| %>
+                  <tr>
+                    <td><%= employee.title.name %></td>
+                    <td><%= link_to_show(user_employee_path(@user, employee.id)) %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
       <div class="tab-pane" id="studies" role="tabpanel">

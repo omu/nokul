@@ -6,7 +6,7 @@ module Account
     before_action :set_employee, only: %i[show edit update destroy]
 
     def show
-      @positions = @employee.positions
+      @duties = @employee.duties.includes(:unit)
     end
 
     def new
@@ -15,7 +15,7 @@ module Account
 
     def create
       @employee = @user.employees.new(employee_params)
-      @employee.save ? redirect_to(user_employee_path(@user, @employee), notice: t('.success')) : render(:new)
+      @employee.save ? redirect_to([@user, @employee], notice: t('.success')) : render(:new)
     end
 
     def edit; end
@@ -36,7 +36,8 @@ module Account
     end
 
     def set_employee
-      @employee = @user.employees.find(params[:id]) if @employee
+      @employee = @user.employees.find(params[:id]) if @user
+      not_found unless @employee
     end
 
     def employee_params
