@@ -15,7 +15,9 @@ class UsersController < ApplicationController
                     end
   end
 
-  def show; end
+  def show
+    @employees = @user.employees.includes(:title).order(active: :desc)
+  end
 
   def new
     @user = User.new

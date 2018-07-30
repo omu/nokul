@@ -5,7 +5,7 @@
         <%= fa_icon 'university' %><strong><%= @employee.title.name %></strong>
         <div class="card-header-actions">
           <%= link_to_edit(edit_user_employee_path(@user, @employee)) %>
-          <%= link_to_destroy(@user, @employee) %>
+          <%= link_to_destroy(user_employee_path(@user, @employee)) %>
         </div>
       </div>
 
@@ -13,12 +13,16 @@
         <table class="table table-responsive-sm">
           <tbody>
             <tr>
-              <td><%= '.name' %></td>
-              <td><%= @employee.active %></td>
+              <td><%= t('.user_id') %></td>
+              <td><%= link_to(@user.email, user_path(@user)) %></td>
             </tr>
             <tr>
-              <td><%= '.alpha_2_code' %></td>
+              <td><%= t('.title_id') %></td>
               <td><%= @employee.title.name %></td>
+            </tr>
+            <tr>
+              <td><%= t('.active') %></td>
+              <td><%= t('.actives')[@employee.active.to_s.to_sym] %></td>
             </tr>
           </tbody>
         </table>
@@ -27,29 +31,29 @@
 
     <div class='card'>
       <div class='card-header'>
-        <%= fa_icon 'street-view', text: '.card_header' %>
+        <%= fa_icon 'university', text: t('.duties') %>
         <div class="card-header-actions">
-          <%= link_to_new new_user_employee_duty_path(@user, @employee, @duty), '.new_duty_link' %>
+          <%= link_to_new new_user_employee_duty_path(@user, @employee, @duty), t('.new_duty_link') %>
         </div>
       </div>
       <div class='card-body'>
         <table class='table table-responsive-sm table-striped'>
           <thead>
             <tr>
-              <th><%= '.temporary' %></th>
-              <th><%= '.start_date' %></th>
-              <th><%= '.end_date' %></th>
-              <th><%= '.unit' %></th>
-              <th><%= 'actions' %></th>
+              <th><%= t('.temporary') %></th>
+              <th><%= t('.start_date') %></th>
+              <th><%= t('.end_date') %></th>
+              <th><%= t('.unit_id') %></th>
+              <th><%= t('actions') %></th>
             </tr>
           </thead>
           <tbody>
-            <% @employee.duties.each do |duty| %>
+            <% @duties.each do |duty| %>
               <tr>
-                <td><%= duty.temporary %></td>
+                <td><%= t('.temporaries')[duty.temporary.to_s.to_sym] %></td>
                 <td><%= duty.start_date %></td>
                 <td><%= duty.end_date %></td>
-                <td><%= duty.unit %></td>
+                <td><%= duty.unit.name %></td>
                 <td>
                   <%= link_to_show(user_employee_duty_path(@user, @employee, duty)) %>
                   <%= link_to_edit(edit_user_employee_duty_path(@user, @employee, duty)) %>
