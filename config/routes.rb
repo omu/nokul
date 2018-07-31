@@ -20,14 +20,10 @@ Rails.application.routes.draw do
   # Account home page
   scope module: :account do
     resources :identities, except: [:show] do
-      collection do 
-        get 'save_from_mernis'
-      end 
+      get 'save_from_mernis', on: :collection
     end
     resources :addresses, except: :show do
-      collection do 
-        get 'save_from_mernis'
-      end 
+      get 'save_from_mernis', on: :collection
     end
   end
 
