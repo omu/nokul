@@ -2,7 +2,7 @@
 
 module Account
   class AddressesController < ApplicationController
-    before_action :set_address, only: %i[edit update destroy mernis]
+    before_action :set_address, only: %i[edit update destroy]
     before_action :check_formality, only: %i[edit update destroy]
     before_action :set_formal_address, only: %i[save_from_mernis]
     before_action :set_elapsed_time, only: %i[save_from_mernis]
@@ -42,7 +42,7 @@ module Account
     private
 
     def set_formal_address
-      @address = current_user.addresses.formal.present? ? current_user.addresses.formal : nil
+      @address = current_user.addresses.formal.presence ? current_user.addresses.formal : nil
     end
 
     def set_elapsed_time
