@@ -46,7 +46,7 @@ module Account
     end
 
     def set_elapsed_time
-      @elapsed_time = (Time.zone.now - current_user.addresses.formal.first.updated_at) / 1.day if @address.present?
+      @elapsed_time = (Time.zone.now - @address.first.updated_at) / 1.day if @address.present?
     end
 
     def check_formality
