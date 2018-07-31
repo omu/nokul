@@ -42,7 +42,7 @@ tr:
         new_identity: Yeni Kimlik Ekle
         card_header: Kimlik Bilgileri
         update_from_mernis: MERNİS'ten Güncelle
-        import_from_mernis: MERNİS'ten Getir
+        create_from_mernis: MERNİS'ten Oluştur
       edit:
         warning: Yasal kimlik bilgilerinizi düzenleyemezsiniz!
         form_title: Kimliği Düzenle
@@ -55,9 +55,6 @@ tr:
       destroy:
         success: Kimlik başarıyla silindi!
         warning: Kimlik silinemedi!
-      mernis:
+      save_from_mernis:
         wait: Kimliğinizi yakın bir zamanda oluşturdunuz veya güncellediniz. Kimliğinizi haftada bir güncelleyebilirsiniz.
-        will_update: Kimlik güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde adresiniz güncellenecek.
-      import_from_mernis:
-        wait: Kimliğinizi yakın bir zamanda oluşturdunuz veya güncellediniz. Kimliğinizi haftada bir güncelleyebilirsiniz.
-        will_update: Kimlik bilginiz MERNİS üzerinden sisteme aktarım işlemi başlatılmıştır.
+        will_update: Kimlik oluşturma veya güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde adresiniz güncellenecek.
