@@ -2,7 +2,7 @@
 
 module Account
   class IdentitiesController < ApplicationController
-    before_action :set_identity, only: %i[edit update destroy mernis]
+    before_action :set_identity, only: %i[edit update destroy]
     before_action :check_formality, only: %i[edit update destroy]
     before_action :set_formal_identities, only: %i[save_from_mernis]
     before_action :set_elapsed_time, only: %i[save_from_mernis]
@@ -42,7 +42,7 @@ module Account
     private
 
     def set_formal_identities
-      @identities = current_user.identities.formal.present? ? current_user.identities.formal : nil
+      @identities = current_user.identities.formal.presence ? current_user.identities.formal : nil
     end
 
     def set_elapsed_time
