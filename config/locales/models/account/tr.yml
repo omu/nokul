@@ -2,17 +2,14 @@ tr:
   activerecord:
     attributes:
       employee: &employee_attributes
-        active: Aktiflik
-        actives:
-          'true': Aktif
-          'false': Aktif Değil
-        title_id: Personel
+        is_active: Aktif mi?
+        title_id: Ünvan
         user_id: Kullanıcı
+        id_number: Kimlik Numarası
       duty: &duty_attributes
-        temporary: Geçicilik
-        temporaries:
-          'true': Geçici
-          'false': Geçici Değil
+        tenure_status: Kadro Durumu
+        tenure: Kadrolu
+        temporary: Geçici Görevlendirme
         start_date: Başlangıç Tarihi
         end_date: Bitiş Tarihi
         employee_id: Personel
@@ -35,8 +32,8 @@ tr:
       show:
         <<: *employee_attributes
         <<: *duty_attributes
-        duties: Birimler
-        new_duty_link: Yeni Birim Ekle
+        duties: Görevli Olduğu Birimler
+        new_duty_link: Yeni Görevlendirme Ekle
       new:
         form_title: Personel Kaydı Oluştur
       edit:

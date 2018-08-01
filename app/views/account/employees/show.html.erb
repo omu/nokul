@@ -13,6 +13,10 @@
         <table class="table table-responsive-sm">
           <tbody>
             <tr>
+              <td><%= t('.id_number') %></td>
+              <td><%= @user.id_number %></td>
+            </tr>
+            <tr>
               <td><%= t('.user_id') %></td>
               <td><%= link_to(@user.email, user_path(@user)) %></td>
             </tr>
@@ -21,8 +25,8 @@
               <td><%= @employee.title.name %></td>
             </tr>
             <tr>
-              <td><%= t('.active') %></td>
-              <td><%= t('.actives')[@employee.active.to_s.to_sym] %></td>
+              <td><%= t('.is_active') %></td>
+              <td><%= @employee.active? ? t('yes') : t('no') %></td>
             </tr>
           </tbody>
         </table>
@@ -33,14 +37,14 @@
       <div class='card-header'>
         <%= fa_icon 'university', text: t('.duties') %>
         <div class="card-header-actions">
-          <%= link_to_new new_user_employee_duty_path(@user, @employee, @duty), t('.new_duty_link') %>
+          <%= link_to_new new_user_employee_duty_path(@user, @employee), t('.new_duty_link') %>
         </div>
       </div>
       <div class='card-body'>
         <table class='table table-responsive-sm table-striped'>
           <thead>
             <tr>
-              <th><%= t('.temporary') %></th>
+              <th><%= t('.tenure_status') %></th>
               <th><%= t('.start_date') %></th>
               <th><%= t('.end_date') %></th>
               <th><%= t('.unit_id') %></th>
@@ -50,7 +54,7 @@
           <tbody>
             <% @duties.each do |duty| %>
               <tr>
-                <td><%= t('.temporaries')[duty.temporary.to_s.to_sym] %></td>
+                <td><%= duty.temporary? ? t('.temporary') : t('.tenure') %></td>
                 <td><%= duty.start_date %></td>
                 <td><%= duty.end_date %></td>
                 <td><%= duty.unit.name %></td>

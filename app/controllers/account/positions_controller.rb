@@ -34,17 +34,17 @@ module Account
     end
 
     def set_employee
-      @employee = @user.employees.find(params[:employee_id]) if @user
+      @employee = @user.employees.friendly.find(params[:employee_id])
       not_found unless @employee
     end
 
     def set_duty
-      @duty = @user.duties.find(params[:duty_id]) if @user
+      @duty = @user.duties.find(params[:duty_id])
       not_found unless @duty
     end
 
     def set_position
-      @position = @user.positions.find(params[:id]) if @duty
+      @position = @user.positions.find(params[:id])
       not_found unless @position
     end
 

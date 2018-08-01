@@ -2,17 +2,14 @@ en:
   activerecord:
     attributes:
       employee: &employee_attributes
-        active: Active
-        actives:
-          'true': True
-          'false': False
+        is_active: Is Active?
         title_id: Title
-        user: User
+        user_id: User
+        id_number: ID Number
       duty: &duty_attributes
-        temporary: Temporary
-        temporaries:
-          'true': True
-          'false': Fale
+        tenure_status: Tenure Status
+        tenure: Tenure
+        temporary: Temporary Duty
         start_date: Start Date
         end_date: End Date
         employee: Employee

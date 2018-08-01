@@ -24,9 +24,9 @@
             <td><%= as_date_and_time(employee.created_at) %></td>
             <td><%= as_date_and_time(employee.updated_at) %></td>
             <td>
-              <%= link_to_show(user_employee_path(@user, employee.id)) %>
-              <%= link_to_edit(edit_user_employee_path(@user, employee.id)) %>
-              <%= link_to_destroy(user_employee_path(@user, employee.id)) %>
+              <%= link_to_show(user_employee_path(@user, employee)) %>
+              <%= link_to_edit(edit_user_employee_path(@user, employee)) %>
+              <%= link_to_destroy(user_employee_path(@user, employee)) %>
             </td>
           </tr>
         <% end %>
