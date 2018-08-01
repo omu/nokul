@@ -55,8 +55,12 @@ tr:
       new_user_link: Yeni Kullanıcı Oluştur
       addresses: Adres Bilgileri
       identities: Kimlik Bilgileri
-    show:
+    account:
       <<: *user_attributes
+    show:
+      account: Hesap Bilgileri
+      identities: Kimlik Bilgileri
+      addresses: Adres Bilgileri
       employees: Personel Kayıtları
     search:
       smart_search: Akıllı Arama
