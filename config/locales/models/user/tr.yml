@@ -57,6 +57,9 @@ tr:
       identities: Kimlik Bilgileri
     account:
       <<: *user_attributes
+    employees:
+      active: Aktif mi?
+      title: Ünvan
     show:
       account: Hesap Bilgileri
       identities: Kimlik Bilgileri

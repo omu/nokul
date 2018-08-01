@@ -57,8 +57,11 @@ en:
       identities: Identities
     account:
       <<: *user_attributes
+    employees:
+      active: Is Active?
+      title: Title
     show:
-      account: Account Information
+      account: Account
       identities: Identities
       addresses: Addresses
       employees: Employees
