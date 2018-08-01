@@ -20,7 +20,7 @@ gem 'devise'
 
 # assets: core asset dependencies
 gem 'coffee-rails', '~> 4.2'
-gem 'sass-rails', '~> 5.0'
+gem 'sassc-rails'
 gem 'uglifier', '>= 1.3.0'
 
 # view helpers: tools for forms, views, etc.
@@ -48,7 +48,7 @@ gem 'pg_search'
 gem 'rollbar'
 
 # permalinks
-gem 'friendly_id', '~> 5.1.0'
+gem 'friendly_id', '~> 5.2.0'
 
 group :development, :test do
   gem 'brakeman', require: false

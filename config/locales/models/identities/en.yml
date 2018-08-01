@@ -42,6 +42,7 @@ en:
         new_identity: Add a New Identity
         card_header: Identity Information
         update_from_mernis: Update from MERNIS
+        create_from_mernis: Create from MERNIS
       edit:
         warning: You can not edit your formal identity!
         form_title: Edit Identity
@@ -54,6 +55,6 @@ en:
       destroy:
         success: Identity successfully deleted!
         warning: Identity can not be deleted!
-      mernis:
+      save_from_mernis:
         wait: You recently created or updated your identity. You can only update your identity once a week from MERNIS.
-        will_update: We have received your identity update request. Your identity will be updated in a couple of seconds/minutes.
+        will_update: We have received your identity create or update request. Your identity will be updated in a couple of seconds/minutes.

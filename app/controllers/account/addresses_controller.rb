@@ -2,8 +2,11 @@
 
 module Account
   class AddressesController < ApplicationController
-    before_action :set_address, only: %i[edit update destroy mernis]
+    include LastUpdateFromMernis
+
+    before_action :set_address, only: %i[edit update destroy]
     before_action :check_formality, only: %i[edit update destroy]
+    before_action :set_elapsed_time, only: %i[save_from_mernis]
 
     def index
       @addresses = current_user.addresses.includes(district: [:city])
@@ -28,27 +31,29 @@ module Account
       @address.destroy ? redirect_with('success') : redirect_with('warning')
     end
 
-    def mernis
-      if (Time.zone.now - @address.updated_at) / 1.day < 7
-        redirect_with('wait')
-      else
-        KpsAddressUpdateJob.perform_later(address)
-        redirect_with('will_update')
-      end
+    def save_from_mernis
+      KpsAddressSaveJob.perform_later(current_user)
+      redirect_with('will_update')
     end
 
     private
+
+    def set_address
+      @address = current_user.addresses.find(params[:id])
+    end
 
     def check_formality
       redirect_with('warning') if @address.formal?
     end
 
-    def redirect_with(message)
-      redirect_to(addresses_path, notice: t(".#{message}"))
+    def set_elapsed_time
+      formal_address = current_user.addresses.formal
+      return if formal_address.blank?
+      elapsed_time(formal_address)
     end
 
-    def set_address
-      @address = current_user.addresses.find(params[:id])
+    def redirect_with(message)
+      redirect_to(addresses_path, notice: t(".#{message}"))
     end
 
     def address_params
