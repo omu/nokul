@@ -55,8 +55,13 @@ en:
       new_user_link: Create a New User
       addresses: Addresses
       identities: Identities
-    show:
+    account:
       <<: *user_attributes
+    show:
+      account: Account Information
+      identities: Identities
+      addresses: Addresses
+      employees: Employees
     search:
       smart_search: Smart Search
       smart_search_placeholder: TC/YU number, e-mail address, first of last name
