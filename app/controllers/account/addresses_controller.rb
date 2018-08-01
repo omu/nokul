@@ -2,6 +2,8 @@
 
 module Account
   class AddressesController < ApplicationController
+    include LastUpdateFromMernis
+
     before_action :set_address, only: %i[edit update destroy]
     before_action :check_formality, only: %i[edit update destroy]
     before_action :set_elapsed_time, only: %i[save_from_mernis]
@@ -46,10 +48,8 @@ module Account
 
     def set_elapsed_time
       formal_address = current_user.addresses.formal
-      return unless formal_address.present?
-
-      elapsed_time = (Time.zone.now - formal_address.first.updated_at) / 1.day
-      redirect_with('wait') if elapsed_time.present? && elapsed_time < 7
+      return if formal_address.blank?
+      elapsed_time(formal_address)
     end
 
     def redirect_with(message)
