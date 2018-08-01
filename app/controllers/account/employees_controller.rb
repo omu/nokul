@@ -36,12 +36,12 @@ module Account
     end
 
     def set_employee
-      @employee = @user.employees.find(params[:id]) if @user
+      @employee = @user.employees.friendly.find(params[:id])
       not_found unless @employee
     end
 
     def employee_params
-      params.require(:employee).permit(:active, :title_id, :user_id)
+      params.require(:employee).permit(:active, :title_id)
     end
   end
 end
