@@ -7,11 +7,27 @@
 
   <div class="card-body">
     <table class="table table-responsive-sm">
+      <thead>
+        <tr>
+          <th><%= t('.active') %></th>
+          <th><%= t('.title') %></th>
+          <th><%= t('created_at') %></th>
+          <th><%= t('updated_at') %></th>
+          <th><%= t('actions') %></th>
+        </tr>
+      </thead>
       <tbody>
         <% @employees.each do |employee| %>
-          <tr>
+          <tr class="<%= employee.active? ? 'table-success' : 'table-secondary' %>">
+            <td><%= employee.active? ? t('yes') : t('no') %></td>
             <td><%= employee.title.name %></td>
-            <td><%= link_to_show(user_employee_path(@user, employee.id)) %></td>
+            <td><%= as_date_and_time(employee.created_at) %></td>
+            <td><%= as_date_and_time(employee.updated_at) %></td>
+            <td>
+              <%= link_to_show(user_employee_path(@user, employee.id)) %>
+              <%= link_to_edit(edit_user_employee_path(@user, employee.id)) %>
+              <%= link_to_destroy(user_employee_path(@user, employee.id)) %>
+            </td>
           </tr>
         <% end %>
       </tbody>
