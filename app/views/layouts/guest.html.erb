@@ -4,10 +4,31 @@
     <%= render 'layouts/shared/meta' %>
     <%= stylesheet_link_tag 'guest', media: 'all' %>
   </head>
-  <body class='app flex-row align-items-center'>
-    <div class="container">
-      <div class="row justify-content-center">
-        <%= yield %>
+  <body>
+    <nav class="navbar fixed-top navbar-light">
+      <a class="navbar-brand"></a>
+      <ul class="nav justify-content-end">
+        <div class="btn-group position-fixed" role="group" aria-label="Language buttons">
+          <%= link_to(url_for(locale: 'tr'), class: 'btn btn-secondary') do %>
+            <%= image_tag 'tr.svg', height: '21', width: '28' %>&nbsp;Türkçe
+          <% end %>
+          <%= link_to(url_for(locale: 'en'), class: 'btn btn-secondary') do %>
+            <%= image_tag 'um.svg', height: '21', width: '28' %>&nbsp;English
+          <% end %>
+        </div>
+      </ul>
+    </nav>
+
+    <div class="app flex-row align-items-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <%= yield %>
+        </div>
+        <nav class="navbar fixed-bottom justify-content-center">
+          <%= link_to 'https://omu.sh' do %>
+            <%= image_tag 'baum-beta.svg', height: '20', width: '110', alt: 'BAUM Logo', class: 'navbar-brand-full' %>
+          <% end %>
+        </nav>
       </div>
     </div>
     <%= javascript_include_tag 'guest' %>

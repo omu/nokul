@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class KpsAddressCreateJob < ApplicationJob
+class KpsAddressSaveJob < ApplicationJob
   queue_as :high
 
   # slow operation
@@ -11,6 +11,8 @@ class KpsAddressCreateJob < ApplicationJob
   # callbacks
   after_perform do |job|
     district = District.find_by(mernis_code: @response[:district_id])
-    job.arguments.first.addresses.formal.create(district: district, full_address: @response[:full_address])
+    address = job.arguments.first.addresses.formal
+    response = { district: district, full_address: @response[:full_address] }
+    address.present? ? address.update(response) : address.create(response)
   end
 end

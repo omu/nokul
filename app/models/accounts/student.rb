@@ -17,6 +17,6 @@ class Student < ApplicationRecord
   after_create_commit :build_identity_information, if: proc { identity.nil? }
 
   def build_identity_information
-    KpsIdentityCreateJob.perform_later(user, id)
+    KpsIdentitySaveJob.perform_later(user, id)
   end
 end

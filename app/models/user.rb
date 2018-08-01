@@ -38,11 +38,11 @@ class User < ApplicationRecord
   after_create_commit :build_identity_information, if: proc { identities.formal.empty? }
 
   def build_address_information
-    KpsAddressCreateJob.perform_later(self)
+    KpsAddressSaveJob.perform_later(self)
   end
 
   def build_identity_information
-    KpsIdentityCreateJob.perform_later(self)
+    KpsIdentitySaveJob.perform_later(self)
   end
 
   # custom methods

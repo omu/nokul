@@ -84,8 +84,8 @@ class UserTest < ActiveSupport::TestCase
   end
 
   # callback tests
-  test 'user runs KpsAddressCreateJob after being created' do
-    assert_enqueued_with(job: KpsAddressCreateJob) do
+  test 'user runs KpsAddressSaveJob after being created' do
+    assert_enqueued_with(job: KpsAddressSaveJob) do
       User.create(
         id_number: '12345678912',
         email: 'fakeuser@fakemail.com',
@@ -95,8 +95,8 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  test 'user runs KpsIdentityCreateJob after being created' do
-    assert_enqueued_with(job: KpsIdentityCreateJob) do
+  test 'user runs KpsIdentitySaveJob after being created' do
+    assert_enqueued_with(job: KpsIdentitySaveJob) do
       User.create(
         id_number: '98765432198',
         email: 'anotherfakeuser@fakemail.com',
