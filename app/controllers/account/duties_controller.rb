@@ -11,7 +11,7 @@ module Account
     end
 
     def new
-      @duty = @user.duties.new
+      @duty = @employee.duties.new
     end
 
     def create
@@ -37,17 +37,17 @@ module Account
     end
 
     def set_employee
-      @employee = @user.employees.find(params[:employee_id]) if @user
+      @employee = @user.employees.friendly.find(params[:employee_id])
       not_found unless @employee
     end
 
     def set_duty
-      @duty = @user.duties.find(params[:id]) if @employee
+      @duty = @employee.duties.find(params[:id])
       not_found unless @duty
     end
 
     def duty_params
-      params.require(:duty).permit(:temporary, :start_date, :end_date, :employee_id, :unit_id)
+      params.require(:duty).permit(:temporary, :start_date, :end_date, :unit_id)
     end
   end
 end

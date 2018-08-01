@@ -61,6 +61,7 @@ en:
       active: Is Active?
       title: Title
     show:
+      <<: *user_attributes
       account: Account
       identities: Identities
       addresses: Addresses

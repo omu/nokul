@@ -25,8 +25,8 @@
               <td><%= @duty.unit.name %></td>
             </tr>
             <tr>
-              <td><%= t('.temporary') %></td>
-              <td><%= t('.temporaries')[@duty.temporary.to_s.to_sym] %></td>
+              <td><%= t('.tenure_status') %></td>
+              <td><%= @duty.temporary? ? t('.temporary') : t('.tenure') %></td>
             </tr>
             <tr>
               <td><%= t('.start_date') %></td>

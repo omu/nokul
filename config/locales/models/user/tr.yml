@@ -61,6 +61,7 @@ tr:
       active: Aktif mi?
       title: Ünvan
     show:
+      <<: *user_attributes
       account: Hesap Bilgileri
       identities: Kimlik Bilgileri
       addresses: Adres Bilgileri
