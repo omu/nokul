@@ -34,6 +34,7 @@ en:
         card_header: Address Information
         district_and_city: District / City
         update_from_mernis: Update from MERNİS
+        create_from_mernis: Create from MERNIS
       new:
         form_title: Create Address
       edit:
@@ -46,6 +47,6 @@ en:
       destroy:
         success: Address successfully deleted!
         warning: Address can not be deleted!
-      mernis:
+      save_from_mernis:
         wait: You recently created or updated your address. You can update your address once every week.
-        will_update: We got your address update request. In a couple of seconds/minutes you will be able to see your new address.
+        will_update: We got your address create or update request. In a couple of seconds/minutes you will be able to see your new address.
