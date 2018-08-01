@@ -2,8 +2,11 @@
 
 module Account
   class IdentitiesController < ApplicationController
-    before_action :set_identity, only: %i[edit update destroy mernis]
+    include LastUpdateFromMernis
+
+    before_action :set_identity, only: %i[edit update destroy]
     before_action :check_formality, only: %i[edit update destroy]
+    before_action :set_elapsed_time, only: %i[save_from_mernis]
 
     def index
       @identities = current_user.identities
@@ -28,27 +31,29 @@ module Account
       @identity.destroy ? redirect_with('success') : redirect_with('warning')
     end
 
-    def mernis
-      if (Time.zone.now - @identity.updated_at) / 1.day < 7
-        redirect_with('wait')
-      else
-        # TODO: KpsIdentityUpdateJob.perform_later(identity)
-        redirect_with('will_update')
-      end
+    def save_from_mernis
+      KpsIdentitySaveJob.perform_later(current_user)
+      redirect_with('will_update')
     end
 
     private
+
+    def set_identity
+      @identity = current_user.identities.find(params[:id])
+    end
 
     def check_formality
       redirect_with('warning') if @identity.formal?
     end
 
-    def redirect_with(message)
-      redirect_to(identities_path, notice: t(".#{message}"))
+    def set_elapsed_time
+      formal_identity = current_user.identities.formal
+      return if formal_identity.blank?
+      elapsed_time(formal_identity)
     end
 
-    def set_identity
-      @identity = current_user.identities.find(params[:id])
+    def redirect_with(message)
+      redirect_to(identities_path, notice: t(".#{message}"))
     end
 
     def identity_params

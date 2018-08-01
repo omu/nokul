@@ -1,5 +1,6 @@
 <div class="alert alert-light">
   <%= link_to_new(new_identity_path, t('.new_identity')) %>
+  <%= link_to (@identities.formal.present? ? t('.update_from_mernis') :  t('.create_from_mernis') ), save_from_mernis_identities_path, class: "btn btn-outline-primary btn-sm"  %>
 </div>
 
 <div class="row">
@@ -56,16 +57,6 @@
             <tr>
               <td><%= t('.registered_to') %></td>
               <td><%= identity.registered_to %></td>
-            </tr>
-            <tr>
-              <td colspan="2">
-                <% if identity.formal? %>
-                  <%= link_to(t('.update_from_mernis'), mernis_identity_path(identity), class: 'btn btn-outline-primary btn-sm') %>
-                <% else %>
-                  <%= link_to_edit(edit_identity_path(identity)) %>
-                  <%= link_to_destroy(identity) %>
-                <% end %>
-              </td>
             </tr>
           </table>
         </div>
