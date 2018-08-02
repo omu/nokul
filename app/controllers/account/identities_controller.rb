@@ -58,7 +58,7 @@ module Account
 
     def identity_params
       params.require(:identity).permit(
-        :name, :first_name, :last_name, :mothers_name, :fathers_name, :gender, :marital_status, :place_of_birth,
+        :type, :first_name, :last_name, :mothers_name, :fathers_name, :gender, :marital_status, :place_of_birth,
         :date_of_birth, :registered_to
       )
     end
