@@ -15,22 +15,5 @@
     <%= javascript_include_tag 'guest' %>
     <%= render 'layouts/shared/toastr' %>
   </body>
-
-  <footer class="app-footer">
-    <div>
-      <%= link_to('TR', url_for(locale: 'tr')) %> | 
-      <%= link_to('EN', url_for(locale: 'en')) %>
-    </div>
-    <div class="container">
-      <div class="row justify-content-center">
-        <a href="https://github.com/omu/nokul">Nokul</a>
-        <span>&nbsp;© 2018 BAUM</span>
-      </div>
-    </div>
-    <div class="ml-auto">
-      <%= link_to 'https://omu.sh' do %>
-        <%= image_tag 'baum-beta.svg', height: '20', width: '110', alt: 'BAUM Logo' %>
-      <% end %>
-    </div>
-  </footer>
+  <%= render 'layouts/shared/footer' %>
 </html>
