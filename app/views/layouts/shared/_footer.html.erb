@@ -1,7 +1,10 @@
 <footer class="app-footer">
   <div>
-    <%= link_to('TR', url_for(locale: 'tr')) %> | 
-    <%= link_to('EN', url_for(locale: 'en')) %>
+    <% if locale.eql?(:tr) %>
+      <%= link_to('EN', url_for(locale: 'en')) %>
+    <% else %>
+      <%= link_to('TR', url_for(locale: 'tr')) %>
+    <% end %>
   </div>
   <div class="container">
     <div class="row justify-content-center">
