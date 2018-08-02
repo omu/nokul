@@ -30,7 +30,7 @@ namespace :yoksis do
         'AÇIK ÖĞRETİM' => UnitInstructionType.find_by(code: 4)
       }
 
-      unit = Unit.new(
+      unit = Unit.create(
         name: name.strip,
         yoksis_id: yoksis_id,
         founded_at: founded_at ? founded_at.to_date : nil,
@@ -43,8 +43,6 @@ namespace :yoksis do
         unit_instruction_language: UnitInstructionLanguage.find_by(name: language),
         unit_status: statuses[status.to_s]
       )
-
-      puts "FAIL: #{unit.id} - #{unit.name} can not be created!" unless unit.save!
     end
   ensure
     file.close
