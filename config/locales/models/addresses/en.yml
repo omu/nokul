@@ -10,9 +10,7 @@ en:
       address:
         names:
           formal: Formal Address
-          home: Home Address
-          work: Office Address
-          other: Other Address
+          informal: Other Address
   simple_form:
     hints:
       address:
@@ -24,8 +22,8 @@ en:
         update: Update the Address
   validators:
     address:
-      max_total: You can add up to %{limit} addresses maximum.
-      max_legal: You can have up to %{limit} formal addresses maximum.
+      max_formal: You can have up to %{limit} formal addresses maximum.
+      max_informal: You can add up to %{limit} addresses maximum.
   account:
     addresses:
       index:

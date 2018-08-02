@@ -30,7 +30,7 @@ namespace :yoksis do
         'AÇIK ÖĞRETİM' => UnitInstructionType.find_by(code: 4)
       }
 
-      unit = Unit.create(
+      Unit.create(
         name: name.strip,
         yoksis_id: yoksis_id,
         founded_at: founded_at ? founded_at.to_date : nil,

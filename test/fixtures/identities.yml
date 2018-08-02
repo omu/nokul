@@ -1,30 +1,35 @@
-serhat_formal:
-  name: formal
+formal_user:
+  type: formal
   first_name: john
   last_name: doe
-  mothers_name: foo
-  fathers_name: bar
   gender: male
   marital_status: married
+  place_of_birth: london
+  date_of_birth: <%= Time.zone.now - 20.years %>
+  user: serhat
+formal_student:
+  type: formal
+  first_name: john
+  last_name: doe
+  gender: male
   place_of_birth: london
   date_of_birth: <%= Time.zone.now - 20.years %>
   user: serhat
   student: serhat
-serhat_informal:
-  name: informal
+formal_student_omu:
+  type: formal
   first_name: john
   last_name: doe
   gender: male
-  marital_status: married
   place_of_birth: london
   date_of_birth: <%= Time.zone.now - 20.years %>
   user: serhat
-john:
-  name: informal
-  first_name: jane
+  student: serhat_omu
+informal:
+  type: informal
+  first_name: john
   last_name: doe
-  gender: female
-  marital_status: single
-  place_of_birth: manchester
-  date_of_birth: <%= Time.zone.now - 25.years %>
-  user: john
+  gender: male
+  place_of_birth: london
+  date_of_birth: <%= Time.zone.now - 20.years %>
+  user: serhat

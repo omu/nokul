@@ -33,16 +33,19 @@ en:
         update: Update Identity
   validators:
     identity:
-      max_total: You can add up to %{limit} identities maximum.
-      max_legal: You can have up to %{limit} formal identities maximum.
+      max_formal: You can have up to %{limit} identities related with your user account.
+      max_informal: You can create up to %{limit} informal identities.
   account:
     identities:
       index:
         <<: *identity_attributes
         new_identity: Add a New Identity
-        card_header: Identity Information
+        user_identity: User Identity
+        student_identity: Student Identity
+        informal_identity: Informal Identity
         update_from_mernis: Update from MERNIS
         create_from_mernis: Create from MERNIS
+        department: Department
       edit:
         warning: You can not edit your formal identity!
         form_title: Edit Identity

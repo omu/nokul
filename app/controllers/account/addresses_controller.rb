@@ -5,7 +5,6 @@ module Account
     include LastUpdateFromMernis
 
     before_action :set_address, only: %i[edit update destroy]
-    before_action :check_formality, only: %i[edit update destroy]
     before_action :set_elapsed_time, only: %i[save_from_mernis]
 
     def index
@@ -13,13 +12,13 @@ module Account
     end
 
     def new
-      @address = current_user.addresses.new
+      @address = current_user.addresses.informal.new
     end
 
     def edit; end
 
     def create
-      @address = current_user.addresses.new(address_params)
+      @address = current_user.addresses.informal.new(address_params)
       @address.save ? redirect_with('success') : render(:new)
     end
 
@@ -39,17 +38,13 @@ module Account
     private
 
     def set_address
-      @address = current_user.addresses.find(params[:id])
-    end
-
-    def check_formality
-      redirect_with('warning') if @address.formal?
+      @address = current_user.addresses.informal.find(params[:id])
     end
 
     def set_elapsed_time
       formal_address = current_user.addresses.formal
       return if formal_address.blank?
-      elapsed_time(formal_address)
+      elapsed_time(formal_address.first)
     end
 
     def redirect_with(message)
@@ -57,7 +52,7 @@ module Account
     end
 
     def address_params
-      params.require(:address).permit(:type, :phone_number, :full_address, :district_id)
+      params.require(:address).permit(:phone_number, :full_address, :district_id)
     end
   end
 end

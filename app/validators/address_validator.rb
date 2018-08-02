@@ -2,7 +2,24 @@
 
 class AddressValidator < ActiveModel::Validator
   def validate(record)
-    record.errors[:base] << I18n.t('max_total', limit: 5, scope: %i[validators address]) if record.user.addresses.size > 5
-    record.errors[:base] << I18n.t('max_legal', limit: 1, scope: %i[validators address]) if record.user.addresses.formal.size >= 1 && record.formal?
+    @addresses = record.user.addresses
+    @record = record
+
+    restrict_formal_addresses if record.formal?
+    restrict_informal_addresses if record.informal?
+  end
+
+  private
+
+  def restrict_formal_addresses(limit = 1)
+    @record.errors[:base] << message('max_formal', limit) if @addresses.formal.any?
+  end
+
+  def restrict_informal_addresses(limit = 1)
+    @record.errors[:base] << message('max_informal', limit) if @addresses.informal.any?
+  end
+
+  def message(key, limit)
+    I18n.t(key, limit: limit, scope: %i[validators address])
   end
 end

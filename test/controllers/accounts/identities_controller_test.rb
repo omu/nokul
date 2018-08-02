@@ -12,7 +12,6 @@ module Accounts
     test 'should get index' do
       get identities_path
       assert_response :success
-
       assert_select '#add-button', translate('.index.new_identity')
     end
 
@@ -22,18 +21,18 @@ module Accounts
     end
 
     test 'should create identity' do
-      @user.identities.find_by(name: :informal).destroy
+      @user.identities.informal.destroy_all
       assert_difference('@user.identities.count') do
         post identities_path, params: {
           identity: {
-            name: :informal, first_name: 'Mustafa Serhat', last_name: 'Dündar', gender: :male,
+            first_name: 'Mustafa Serhat', last_name: 'Dündar', gender: :male,
             marital_status: :married, place_of_birth: cities(:samsun).id,
             date_of_birth: Time.zone.now - 20.years
           }
         }
       end
 
-      identity = @user.identities.find_by(name: :informal)
+      identity = @user.identities.informal.first
 
       assert_equal 'Mustafa Serhat', identity.first_name
       assert_equal 'DÜNDAR', identity.last_name
@@ -45,7 +44,7 @@ module Accounts
     end
 
     test 'should not get edit for formal identity' do
-      formal_identity = @user.identities.find_by(name: :formal)
+      formal_identity = @user.identities.formal.first
 
       get edit_identity_path(formal_identity)
 
