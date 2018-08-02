@@ -1,17 +1,20 @@
 <footer class="app-footer">
-  <span>
-    <%= link_to(url_for(locale: 'tr'), class: 'btn btn-light') do %>
-      <%= image_tag 'tr.svg', height: '21', width: '28' %>&nbsp;Türkçe
+  <div>
+    <% if locale.eql?(:tr) %>
+      <%= link_to('EN', url_for(locale: 'en')) %>
+    <% else %>
+      <%= link_to('TR', url_for(locale: 'tr')) %>
     <% end %>
-    <%= link_to(url_for(locale: 'en'), class: 'btn btn-light') do %>
-      <%= image_tag 'um.svg', height: '21', width: '28' %></i>&nbsp;English
-    <% end %>
-  </span>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <a href="https://github.com/omu/nokul">Nokul</a>
+      <span>&nbsp;© 2018 BAUM</span>
+    </div>
+  </div>
   <div class="ml-auto">
-    <span>
-      <%= link_to 'https://omu.sh' do %>
-        <%= image_tag 'baum-beta.svg', height: '20', width: '110', alt: 'BAUM Logo', class: 'navbar-brand-full' %>
-      <% end %>
-    </span>
+    <%= link_to 'https://omu.sh' do %>
+      <%= image_tag 'baum-beta.svg', height: '20', width: '110', alt: 'BAUM Logo' %>
+    <% end %>
   </div>
 </footer>
