@@ -5,7 +5,7 @@
         <%= fa_icon('user') %>
       </div>
       <div class="text-value"><%= User.count %></div>
-      <small class="text-muted text-uppercase font-weight-bold">Kayıtlı Kullanıcı</small>
+      <small class="text-muted text-uppercase font-weight-bold"><%= t('.registered_users') %></small>
     </div>
   </div>
   <div class="card">
@@ -14,7 +14,7 @@
         <%= fa_icon('id-card-o') %>
       </div>
       <div class="text-value"><%= Identity.count %></div>
-      <small class="text-muted text-uppercase font-weight-bold">Kimlik Bilgileri</small>
+      <small class="text-muted text-uppercase font-weight-bold"><%= t('.identities') %></small>
     </div>
   </div>
   <div class="card">
@@ -23,7 +23,7 @@
         <%= fa_icon('location-arrow') %>
       </div>
       <div class="text-value"><%= Address.count %></div>
-      <small class="text-muted text-uppercase font-weight-bold">Adres Bilgileri</small>
+      <small class="text-muted text-uppercase font-weight-bold"><%= t('.addresses') %></small>
     </div>
   </div>
 </div>
