@@ -15,20 +15,20 @@ class AddressTest < ActiveSupport::TestCase
 
   # validations: presence
   %i[
-    name
+    type
     full_address
   ].each do |property|
     test "presence validations for #{property} of an address user" do
-      addresses(:home).send("#{property}=", nil)
-      assert_not addresses(:home).valid?
-      assert_not_empty addresses(:home).errors[property]
+      addresses(:informal).send("#{property}=", nil)
+      assert_not addresses(:informal).valid?
+      assert_not_empty addresses(:informal).errors[property]
     end
   end
 
   # enumerations
   test 'addresses can respond to enumerators' do
     assert addresses(:formal).formal?
-    assert addresses(:home).home?
+    assert addresses(:informal).informal?
   end
 
   # delegations
@@ -61,7 +61,7 @@ class AddressTest < ActiveSupport::TestCase
       )
     end
 
-    fake = addresses(:home).dup
+    fake = addresses(:informal).dup
     assert_not fake.valid?
     assert_not_empty fake.errors[:base]
     assert fake.errors[:base].include?(t('validators.address.max_total', limit: 5))

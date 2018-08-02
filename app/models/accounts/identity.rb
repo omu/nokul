@@ -14,12 +14,16 @@ class Identity < ApplicationRecord
   validates :gender, presence: true
   validates :place_of_birth, presence: true
   validates :date_of_birth, presence: true
+  validates :student_id, uniqueness: true, allow_blank: true
   validates_with IdentityValidator, on: :create
 
   # enums
   enum type: { formal: 1, informal: 2 }
   enum gender: { male: 1, female: 2, other: 3 }
   enum marital_status: { single: 1, married: 2, divorced: 3, unknown: 4 }
+
+  # scopes
+  scope :user_identity, -> { formal.find_by(student_id: nil) }
 
   # callbacks
   before_save do

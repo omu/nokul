@@ -33,16 +33,19 @@ tr:
         update: Kimliği Güncelle
   validators:
     identity:
-      max_total: En fazla %{limit} tane kimlik ekleyebilirsiniz.
-      max_legal: En fazla %{limit} tane resmi kimliğiniz olabilir.
+      max_formal: Kullanıcı hesabınıza ilişkin en fazla %{limit} tane kimliğiniz olabilir.
+      max_informal: En fazla %{limit} tane kimlik oluşturabilirsiniz.
   account:
     identities:
       index:
         <<: *identity_attributes
         new_identity: Yeni Kimlik Ekle
-        card_header: Kimlik Bilgileri
+        user_identity: Kullancı Kimliğiniz
+        student_identity: Öğrencilik Kimliğiniz
+        informal_identity: Diğer Kimliğiniz
         update_from_mernis: MERNİS'ten Güncelle
         create_from_mernis: MERNİS'ten Oluştur
+        department: Öğrencilik Birimi
       edit:
         warning: Yasal kimlik bilgilerinizi düzenleyemezsiniz!
         form_title: Kimliği Düzenle

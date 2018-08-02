@@ -9,7 +9,15 @@
       <div class="card">
         <div class="card-header">
           <%= fa_icon 'id-card' %>
-          <strong><%= t('.card_header') %></strong>
+          <% if identity.formal? %>
+            <strong><%= identity.student_id.present? ? t('.student_identity') : t('.user_identity') %></strong>
+          <% else %>
+            <strong><%= t('.informal_identity') %></strong>
+            <div class="card-header-actions">
+              <%= link_to_edit(edit_identity_path(identity)) %>
+              <%= link_to_destroy(identity_path(identity)) %>
+            </div>
+          <% end %>
         </div>
         <div class="card-body">
           <table class='table table-responsive-sm'>
@@ -58,6 +66,12 @@
               <td><%= t('.registered_to') %></td>
               <td><%= identity.registered_to %></td>
             </tr>
+            <% if identity.student_id.present? %>
+              <tr>
+                <td><%= t('.department') %></td>
+                <td><%= identity.student.unit.name %> / <%= identity.student.student_number %></td>
+              </tr>
+            <% end %>
           </table>
         </div>
       </div>

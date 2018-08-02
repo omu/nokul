@@ -2,3 +2,7 @@ serhat:
   student_number: 12345
   user: serhat
   unit: su
+serhat_omu:
+  student_number: 98765
+  user: serhat
+  unit: omu

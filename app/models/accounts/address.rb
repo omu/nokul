@@ -13,7 +13,7 @@ class Address < ApplicationRecord
   validates_with AddressValidator, on: :create
 
   # enums
-  enum type: { formal: 1, home: 2, work: 3, other: 4 }
+  enum type: { formal: 1, informal: 2 }
 
   # delegations
   delegate :id_number, to: :user

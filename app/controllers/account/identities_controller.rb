@@ -5,11 +5,10 @@ module Account
     include LastUpdateFromMernis
 
     before_action :set_identity, only: %i[edit update destroy]
-    before_action :check_formality, only: %i[edit update destroy]
     before_action :set_elapsed_time, only: %i[save_from_mernis]
 
     def index
-      @identities = current_user.identities
+      @identities = current_user.identities.includes(:student)
     end
 
     def new
@@ -39,17 +38,13 @@ module Account
     private
 
     def set_identity
-      @identity = current_user.identities.find(params[:id])
-    end
-
-    def check_formality
-      redirect_with('warning') if @identity.formal?
+      @identity = current_user.identities.informal.find(params[:id])
     end
 
     def set_elapsed_time
-      formal_identity = current_user.identities.formal
+      formal_identity = current_user.identities.user_identity
       return if formal_identity.blank?
-      elapsed_time(formal_identity)
+      elapsed_time(formal_identity.first)
     end
 
     def redirect_with(message)
@@ -58,7 +53,7 @@ module Account
 
     def identity_params
       params.require(:identity).permit(
-        :type, :first_name, :last_name, :mothers_name, :fathers_name, :gender, :marital_status, :place_of_birth,
+        :first_name, :last_name, :mothers_name, :fathers_name, :gender, :marital_status, :place_of_birth,
         :date_of_birth, :registered_to
       )
     end
