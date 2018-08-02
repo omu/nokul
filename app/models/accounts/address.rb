@@ -1,17 +1,19 @@
 # frozen_string_literal: true
 
 class Address < ApplicationRecord
+  self.inheritance_column = nil
+
   # relations
   belongs_to :user
   belongs_to :district
 
   # validations
-  validates :name, presence: true
+  validates :type, presence: true
   validates :full_address, presence: true
   validates_with AddressValidator, on: :create
 
   # enums
-  enum name: { formal: 1, home: 2, work: 3, other: 4 }
+  enum type: { formal: 1, home: 2, work: 3, other: 4 }
 
   # delegations
   delegate :id_number, to: :user

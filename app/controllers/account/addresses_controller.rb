@@ -57,7 +57,7 @@ module Account
     end
 
     def address_params
-      params.require(:address).permit(:name, :phone_number, :full_address, :district_id)
+      params.require(:address).permit(:type, :phone_number, :full_address, :district_id)
     end
   end
 end
