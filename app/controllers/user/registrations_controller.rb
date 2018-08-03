@@ -6,6 +6,7 @@ class User
 
     # before_action :configure_sign_up_params, only: [:create]
     # before_action :configure_account_update_params, only: [:update]
+    before_action :update_slug, only: :update
     after_action :update_password_change_time, only: :update
 
     # GET /resource/sign_up
@@ -66,6 +67,12 @@ class User
 
     def update_password_change_time
       current_user.update!(password_changed_at: Time.zone.now)
+    end
+
+    def update_slug
+      # rubocop:disable Lint/UselessAssignment
+      slug = nil if params[:email].present?
+      # rubocop:enable Lint/UselessAssignment
     end
   end
 end
