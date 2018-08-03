@@ -15,7 +15,7 @@ class Identity < ApplicationRecord
   validates :place_of_birth, presence: true
   validates :date_of_birth, presence: true
   validates :student_id, uniqueness: true, allow_blank: true
-  validates_with IdentityValidator, on: :create
+  validates_with AddressAndIdentityValidator, on: :create
 
   # enums
   enum type: { formal: 1, informal: 2 }

@@ -10,7 +10,7 @@ class Address < ApplicationRecord
   # validations
   validates :type, presence: true, uniqueness: { scope: :user }
   validates :full_address, presence: true
-  validates_with AddressValidator, on: :create
+  validates_with AddressAndIdentityValidator, on: :create
 
   # enums
   enum type: { formal: 1, informal: 2 }
