@@ -8,7 +8,7 @@ class Address < ApplicationRecord
   belongs_to :district
 
   # validations
-  validates :type, presence: true
+  validates :type, presence: true, uniqueness: { scope: :user }
   validates :full_address, presence: true
   validates_with AddressValidator, on: :create
 

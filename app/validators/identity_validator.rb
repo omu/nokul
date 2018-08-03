@@ -5,17 +5,17 @@ class IdentityValidator < ActiveModel::Validator
     @identities = record.user.identities
     @record = record
 
-    restrict_formal_identities if record.formal? && record.student_id.nil?
-    restrict_informal_identities if record.informal?
+    restrict_formal if record.formal? && record.student_id.nil?
+    restrict_informal if record.informal?
   end
 
   private
 
-  def restrict_formal_identities(limit = 1)
+  def restrict_formal(limit = 1)
     @record.errors[:base] << message('max_formal', limit) if @identities.formal.user_identity.present?
   end
 
-  def restrict_informal_identities(limit = 1)
+  def restrict_informal(limit = 1)
     @record.errors[:base] << message('max_informal', limit) if @identities.informal.any?
   end
 
