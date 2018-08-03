@@ -49,11 +49,11 @@ module Accounts
       get edit_identity_path(formal_identity)
 
       assert_response :redirect
-      assert_equal translate('.edit.warning'), flash[:notice]
+      assert_redirected_to root_path
     end
 
     test 'should get edit for informal identity' do
-      identity = @user.identities.find_by(name: :informal)
+      identity = @user.identities.find_by(type: :informal)
 
       get edit_identity_path(identity)
       assert_response :success
@@ -61,7 +61,7 @@ module Accounts
     end
 
     test 'should update identity' do
-      identity = @user.identities.find_by(name: :informal)
+      identity = @user.identities.find_by(type: :informal)
 
       patch identity_path(identity), params: {
         identity: {
@@ -80,16 +80,15 @@ module Accounts
 
     test 'should not destroy for formal identity' do
       assert_difference('@user.identities.count', 0) do
-        delete identity_path(@user.identities.find_by(name: :formal))
+        delete identity_path(@user.identities.find_by(type: :formal))
       end
 
-      assert_redirected_to identities_path
-      assert_equal translate('.destroy.warning'), flash[:notice]
+      assert_redirected_to root_path
     end
 
     test 'should destroy for informal identity' do
       assert_difference('@user.identities.count', -1) do
-        delete identity_path(@user.identities.find_by(name: :informal))
+        delete identity_path(@user.identities.find_by(type: :informal))
       end
 
       assert_redirected_to identities_path

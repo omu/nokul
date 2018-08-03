@@ -1,7 +1,6 @@
 <div class="alert alert-light">
   <%= link_to_new(new_address_path, t('.new_address')) %>
   <%= link_to (@addresses.formal.present? ? t('.update_from_mernis') :  t('.create_from_mernis') ), save_from_mernis_addresses_path, class: "btn btn-outline-primary btn-sm"  %>
-
 </div>
 
 <div class="row">
@@ -11,6 +10,12 @@
         <div class="card-header">
           <%= fa_icon 'id-card' %>
           <strong><%= t('.card_header') %></strong>
+          <% if address.informal? %>
+            <div class="card-header-actions">
+              <%= link_to_edit(edit_address_path(address)) %>
+              <%= link_to_destroy(address_path(address)) %>
+            </div>
+          <% end %>
         </div>
         <div class="card-body">
           <table class='table table-responsive-sm'>

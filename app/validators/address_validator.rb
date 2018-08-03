@@ -5,17 +5,17 @@ class AddressValidator < ActiveModel::Validator
     @addresses = record.user.addresses
     @record = record
 
-    restrict_formal_addresses if record.formal?
-    restrict_informal_addresses if record.informal?
+    restrict_formal if record.formal?
+    restrict_informal if record.informal?
   end
 
   private
 
-  def restrict_formal_addresses(limit = 1)
+  def restrict_formal(limit = 1)
     @record.errors[:base] << message('max_formal', limit) if @addresses.formal.any?
   end
 
-  def restrict_informal_addresses(limit = 1)
+  def restrict_informal(limit = 1)
     @record.errors[:base] << message('max_informal', limit) if @addresses.informal.any?
   end
 

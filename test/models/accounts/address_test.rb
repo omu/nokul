@@ -25,6 +25,16 @@ class AddressTest < ActiveSupport::TestCase
     end
   end
 
+  # validations: uniqueness
+  test 'a user can only have one formal and one informal address' do
+    formal = addresses(:formal).dup
+    informal = addresses(:informal).dup
+    assert_not formal.valid?
+    assert_not informal.valid?
+    assert_not_empty formal.errors[:type]
+    assert_not_empty informal.errors[:type]
+  end
+
   # enumerations
   test 'addresses can respond to enumerators' do
     assert addresses(:formal).formal?
@@ -38,32 +48,22 @@ class AddressTest < ActiveSupport::TestCase
 
   # callbacks
   test 'callbacks must titlecase the full_address of an address' do
-    addresses(:formal).update!(full_address: 'ABC SOKAK', name: 'other')
+    addresses(:formal).update!(full_address: 'ABC SOKAK', type: 'informal')
     assert_equal addresses(:formal).full_address, 'Abc Sokak'
   end
 
   # address_validator
   test 'a user can only have one formal address' do
-    fake = addresses(:formal).dup
-    assert_not fake.valid?
-    assert_not_empty fake.errors[:base]
-    assert fake.errors[:base].include?(t('validators.address.max_legal', limit: 1))
+    formal = addresses(:formal).dup
+    assert_not formal.valid?
+    assert_not_empty formal.errors[:base]
+    assert formal.errors[:base].include?(t('validators.address.max_formal', limit: 1))
   end
 
-  test 'a user can have 5 addresses in total' do
-    val = 6 - users(:serhat).addresses.count
-    val.times do
-      users(:serhat).addresses.create!(
-        name: :other,
-        phone_number: '123456',
-        full_address: 'foobar',
-        district: districts(:atakum)
-      )
-    end
-
-    fake = addresses(:informal).dup
-    assert_not fake.valid?
-    assert_not_empty fake.errors[:base]
-    assert fake.errors[:base].include?(t('validators.address.max_total', limit: 5))
+  test 'a user can only have one informal address' do
+    informal = addresses(:informal).dup
+    assert_not informal.valid?
+    assert_not_empty informal.errors[:base]
+    assert informal.errors[:base].include?(t('validators.address.max_informal', limit: 1))
   end
 end
