@@ -12,13 +12,13 @@
     <div class="card-header">
       <a href="https://placeholder.com"><img src="http://via.placeholder.com/150x150"></a>
       <div class="card-header-actions">
-        <div class="card-header-action">
-          <span class="badge badge-light float-right">
+        <div class="card-header-actions">
+          <%= link_to(profile_vcard_path(format: 'vcf'), class: 'btn btn-sm btn-light') do %>
             <%= fa_icon('id-card', text: 'vCard') %>
-          </span>
-          <span class="badge badge-light float-right">
+          <% end %>
+          <%= link_to(root_path, class: 'btn btn-sm btn-light') do %>
             <%= fa_icon('id-card', text: 'ORCID') %>
-          </span>
+          <% end %>
         </div>
       </div>
     </div>
