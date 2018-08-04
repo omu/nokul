@@ -62,6 +62,7 @@ Rails.application.routes.draw do
 
   # public profiles
   get '/profiles/:id', to: 'public_profile#show'
+  get '/profiles/:id/vcard',  to: 'public_profile#vcard', as: :profile_vcard
 
   scope module: :references do
     resources :student_disability_types, except: :show

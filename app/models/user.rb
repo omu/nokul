@@ -63,4 +63,8 @@ class User < ApplicationRecord
   def self.most_publishing
     where.not(articles_count: nil).order('articles_count desc').limit(10)
   end
+
+  def title
+    employees.active.first.try(:title).try(:name)
+  end
 end
