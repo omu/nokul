@@ -1,3 +1,5 @@
+<!-- WORK IN PROGRESS. DRAFT TEMPLATE -->
+
 <style type="text/css">
   .card-header {
     background-image: url('<%= asset_url("public_profile/lecture-hall.jpg") %>');
@@ -10,16 +12,14 @@
 <div class='col-sm-12'>
   <div class='card'>
     <div class="card-header">
-      <a href="https://placeholder.com"><img src="http://via.placeholder.com/150x150"></a>
+      <a href="https://placeholder.com"><img class="img-responsive" src="http://via.placeholder.com/150x150"></a>
       <div class="card-header-actions">
-        <div class="card-header-actions">
-          <%= link_to(profile_vcard_path(format: 'vcf'), class: 'btn btn-sm btn-light') do %>
-            <%= fa_icon('id-card', text: 'vCard') %>
-          <% end %>
-          <%= link_to(root_path, class: 'btn btn-sm btn-light') do %>
-            <%= fa_icon('id-card', text: 'ORCID') %>
-          <% end %>
-        </div>
+        <%= link_to(profile_vcard_path(format: 'vcf'), class: 'btn btn-sm btn-light') do %>
+          <%= fa_icon('id-card', text: 'vCard') %>
+        <% end %>
+        <%= link_to(root_path, class: 'btn btn-sm btn-light') do %>
+          <%= fa_icon('id-card', text: 'ORCID') %>
+        <% end %>
       </div>
     </div>
     <div class='card-body'>
@@ -57,10 +57,6 @@
                     <tr>
                       <td>Soyad</td>
                       <td><%= @identity.last_name %></td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
                     </tr>
                   </table>
                 </div>
