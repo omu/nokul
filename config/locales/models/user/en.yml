@@ -35,7 +35,7 @@ en:
         hint: You can request password reset instruction by typing your e-mail.
     registrations:
       edit:
-        change_password: Change Password
+        account_settings: Account Settings
         leave_blank: leave blank if you don't want to change
         current_password: you must enter your current password for changing your e-mail address
       new:
