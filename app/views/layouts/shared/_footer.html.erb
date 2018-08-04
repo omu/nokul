@@ -1,18 +1,18 @@
 <footer class="app-footer">
-  <div>
+  <div class="mr-auto d-block">
     <% if locale.eql?(:tr) %>
       <%= link_to('EN', url_for(locale: 'en')) %>
     <% else %>
       <%= link_to('TR', url_for(locale: 'tr')) %>
     <% end %>
   </div>
-  <div class="container">
-    <div class="row justify-content-center">
-      <a href="https://github.com/omu/nokul">Nokul</a>
-      <span>&nbsp;© 2018 BAUM</span>
-    </div>
+
+  <div class="d-none d-sm-block">
+    <a href="https://github.com/omu/nokul">Nokul</a>
+    <span>&nbsp;© 2018 BAUM</span>
   </div>
-  <div class="ml-auto">
+
+  <div class="ml-auto d-none d-md-block">
     <%= link_to 'https://omu.sh' do %>
       <%= image_tag 'baum-beta.svg', height: '20', width: '110', alt: 'BAUM Logo' %>
     <% end %>

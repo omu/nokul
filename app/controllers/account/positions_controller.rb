@@ -29,12 +29,12 @@ module Account
     private
 
     def set_user
-      @user = User.find(params[:user_id])
+      @user = User.friendly.find(params[:user_id])
       not_found unless @user
     end
 
     def set_employee
-      @employee = @user.employees.friendly.find(params[:employee_id])
+      @employee = @user.employees.find(params[:employee_id])
       not_found unless @employee
     end
 

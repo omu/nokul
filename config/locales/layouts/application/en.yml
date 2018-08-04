@@ -5,7 +5,7 @@ en:
       identities: Identities
       addresses: Addresses
       settings: Settings
-      change_password: Change Password
+      account_settings: Account Settings
       logout: Logout
   home:
     components:

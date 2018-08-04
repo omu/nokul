@@ -42,7 +42,7 @@
               <strong><%= t('.settings') %></strong>
             </div>
             <%= link_to edit_user_registration_path, class: 'dropdown-item' do %>
-              <%= fa_icon('shield', text: t('.change_password')) %>
+              <%= fa_icon('shield', text: t('.account_settings')) %>
             <% end %>
             <%= link_to destroy_user_session_path, class: "dropdown-item", method: :delete do %>
               <%= fa_icon('lock', text: t('.logout')) %>

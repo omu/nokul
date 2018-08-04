@@ -29,6 +29,7 @@ class User < ApplicationRecord
   has_many :projects, dependent: :destroy
 
   # validations
+
   validates :email, presence: true, uniqueness: true
   validates :id_number, presence: true, uniqueness: true, numericality: { only_integer: true }, length: { is: 11 }
   validates_with EmailAddress::ActiveRecordValidator, field: :email
@@ -45,6 +46,15 @@ class User < ApplicationRecord
     KpsIdentitySaveJob.perform_later(self)
   end
 
+  # permalinks
+  extend FriendlyId
+  friendly_id :permalink, use: :slugged
+
+  def permalink
+    username, domain = email.split('@') if email
+    username if domain.eql?('omu.edu.tr')
+  end
+
   # custom methods
   def accounts
     (students + employees).flatten
@@ -52,5 +62,9 @@ class User < ApplicationRecord
 
   def self.most_publishing
     where.not(articles_count: nil).order('articles_count desc').limit(10)
+  end
+
+  def title
+    employees.active.first.try(:title).try(:name)
   end
 end

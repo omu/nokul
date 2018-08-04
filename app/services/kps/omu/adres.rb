@@ -25,7 +25,7 @@ module Services
                           elsif yerlesim_yeri[:yurt_disi_adresi].present?
                             yerlesim_yeri[:yurt_disi_adresi]
                           end
-          
+
           # return a hash, ready to use for building an Address.
           address_information = {
             full_address: yerlesim_yeri[:acik_adres],
