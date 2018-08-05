@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_13_224006) do
+ActiveRecord::Schema.define(version: 2018_08_03_203638) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2018_07_13_224006) do
   end
 
   create_table "addresses", force: :cascade do |t|
-    t.integer "name", default: 4, null: false
+    t.integer "type", default: 4, null: false
     t.string "phone_number", default: "", null: false
     t.text "full_address", null: false
     t.bigint "district_id"
@@ -198,7 +198,6 @@ ActiveRecord::Schema.define(version: 2018_07_13_224006) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "slug"
     t.index ["title_id"], name: "index_employees_on_title_id"
     t.index ["user_id"], name: "index_employees_on_user_id"
   end
@@ -216,7 +215,7 @@ ActiveRecord::Schema.define(version: 2018_07_13_224006) do
   end
 
   create_table "identities", force: :cascade do |t|
-    t.integer "name", null: false
+    t.integer "type", null: false
     t.string "first_name", null: false
     t.string "last_name", null: false
     t.string "mothers_name"
@@ -406,6 +405,7 @@ ActiveRecord::Schema.define(version: 2018_07_13_224006) do
     t.datetime "password_changed_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.integer "articles_count"
     t.integer "projects_count"
+    t.string "slug"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["id_number"], name: "index_users_on_id_number", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

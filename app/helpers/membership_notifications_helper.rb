@@ -9,7 +9,10 @@ module MembershipNotificationsHelper
   end
 
   def password_change_progress_bar(user)
-    last_password_change = Time.zone.now - user.password_changed_at
-    last_password_change * 100 / 1.month.to_i
+    last_password_change(user) * 100
+  end
+
+  def last_password_change(user)
+    (Time.zone.now - user.password_changed_at) / 1.month.to_i
   end
 end

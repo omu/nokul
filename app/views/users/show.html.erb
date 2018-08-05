@@ -1,250 +1,35 @@
-<!-- TODO: WIP. Locales + tasarım. -->
-
 <div class="row">
   <div class="col-sm-12 mb-4">
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
         <a class="nav-link active" data-toggle="tab" href="#account" role="tab" aria-controls="account">
-        <%= fa_icon 'university' %><strong> Hesap Bilgileri</strong></a>
+        <%= fa_icon 'user' %><strong> <%= t('.account') %></strong></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" data-toggle="tab" href="#identities" role="tab" aria-controls="identities">
-        <%= fa_icon 'university' %><strong> Kimlik Bilgileri</strong></a>
+        <%= fa_icon 'id-card' %><strong> <%= t('.identities') %></strong></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" data-toggle="tab" href="#addresses" role="tab" aria-controls="addresses">
-        <%= fa_icon 'university' %><strong> Adres Bilgileri</strong></a>
+        <%= fa_icon 'home' %><strong> <%= t('.addresses') %></strong></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#studies" role="tab" aria-controls="studies">
-        <%= fa_icon 'university' %><strong> Akademik Çalışmalar</strong></a>
+        <a class="nav-link" data-toggle="tab" href="#employees" role="tab" aria-controls="employees">
+        <%= fa_icon 'graduation-cap' %><strong> <%= t('.employees') %></strong></a>
       </li>
     </ul>
     <div class="tab-content">
       <div class="tab-pane active" id="account" role="tabpanel">
-        <div class="card">
-          <div class="card-header">
-            <div class="card-header-actions">
-              <%= link_to_edit(edit_user_path(@user)) %>
-              <%= link_to_destroy(@user) %>
-            </div>
-          </div>
-
-          <div class="card-body">
-            <table class="table table-responsive-sm">
-              <tbody>
-                <tr>
-                  <td><%= t('.id_number') %></td>
-                  <td><%= @user.id_number %></td>
-                </tr>
-                <tr>
-                  <td><%= t('.email') %></td>
-                  <td><%= @user.email %></td>
-                </tr>
-                <tr>
-                  <td><%= t('.preferred_language') %></td>
-                  <td><%= @user.preferred_language %></td>
-                </tr>
-                <tr>
-                  <td><%= t('created_at') %></td>
-                  <td><%= @user.created_at %></td>
-                </tr>
-                <tr>
-                  <td><%= t('updated_at') %></td>
-                  <td><%= @user.updated_at %></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+        <%= render 'account' %>
       </div>
       <div class="tab-pane" id="identities" role="tabpanel">
-        <div class="row">
-          <% if @identities.any? %>
-            <% @identities.each do |identity| %>
-              <div class="col-sm-6">
-                <div class="card">
-                  <div class="card-header">
-                    <div class="card-header-actions">
-                      <%= link_to_edit(edit_identity_path(identity)) %>
-                      <%= link_to_destroy(identity) %>
-                    </div>
-                  </div>
-
-                  <div class="card-body">
-                    <table class='table table-responsive-sm'>
-                      <tr>
-                        <td><%= t('activerecord.attributes.identity.name') %></td>
-                        <td>
-                          <span class="badge badge-secondary">
-                            <%= fa_icon('gavel', text: t('activerecord.enums.identity.names.formal')) if identity.formal? %>
-                            <%= fa_icon('user', text: t('activerecord.enums.identity.names.informal')) if identity.informal? %>
-                          </span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><%= t('activerecord.attributes.identity.last_name') %></td>
-                        <td><%= identity.last_name %></td>
-                      </tr>
-                      <tr>
-                        <td><%= t('activerecord.attributes.identity.first_name') %></td>
-                        <td><%= identity.first_name %></td>
-                      </tr>
-                      <tr>
-                        <td><%= t('activerecord.attributes.identity.mothers_name') %></td>
-                        <td><%= identity.mothers_name %></td>
-                      </tr>
-                      <tr>
-                        <td><%= t('activerecord.attributes.identity.fathers_name') %></td>
-                        <td><%= identity.fathers_name %></td>
-                      </tr>
-                      <tr>
-                        <td><%= t('activerecord.attributes.identity.gender') %></td>
-                        <td><%= enum_t(identity, :gender) %></td>
-                      </tr>
-                      <tr>
-                        <td><%= t('activerecord.attributes.identity.marital_status') %></td>
-                        <td><%= enum_t(identity, :marital_status) %></td>
-                      </tr>
-                      <tr>
-                        <td><%= t('activerecord.attributes.identity.place_of_birth') %></td>
-                        <td><%= identity.place_of_birth %></td>
-                      </tr>
-                      <tr>
-                        <td><%= t('activerecord.attributes.identity.date_of_birth') %></td>
-                        <td><%= identity.date_of_birth %></td>
-                      </tr>
-                      <tr>
-                        <td><%= t('activerecord.attributes.identity.registered_to') %></td>
-                        <td><%= identity.registered_to %></td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            <% end %>
-          <% else %>
-            <div class="col-sm-12">
-              <div class="card">
-                <div class="card-header">
-                </div>
-                <div class="card-body">
-                  Kullanıcının kimlik bilgisi bulunmuyor. MERNİS'ten getir.
-                </div>
-              </div>
-            </div>
-          <% end %>
-        </div>
+        <%= render 'identities' %>
       </div>
       <div class="tab-pane" id="addresses" role="tabpanel">
-        <div class="row">
-          <% if @addresses.any? %>
-            <% @addresses.each do |address| %>
-              <div class="col-sm-6">
-                <div class="card">
-                  <div class="card-header">
-                    <div class="card-header-actions">
-                      <%= link_to_edit(edit_address_path(address)) %>
-                      <%= link_to_destroy(address) %>
-                    </div>
-                  </div>
-
-                  <div class="card-body">
-                    <table class='table table-responsive-sm'>
-                      <tr>
-                        <td><%= t('activerecord.attributes.address.name') %></td>
-                        <td>
-                          <span class="badge badge-secondary">
-                            <%= fa_icon('gavel', text: t('activerecord.enums.address.names.formal')) if address.formal? %>
-                            <%= fa_icon('home', text: t('activerecord.enums.address.names.home')) if address.home? %>
-                            <%= fa_icon('building', text: t('activerecord.enums.address.names.work')) if address.work? %>
-                            <%= fa_icon('address-book', text: t('activerecord.enums.address.names.other')) if address.other? %>
-                          </span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><%= t('activerecord.attributes.address.phone_number') %></td>
-                        <td><%= address.phone_number %></td>
-                      </tr>
-                      <tr>
-                        <td><%= t('activerecord.attributes.address.full_address') %></td>
-                        <td><%= address.full_address %></td>
-                      </tr>
-                      <tr>
-                        <td><%= t('activerecord.attributes.address.district') %></td>
-                        <td><%= address.district.name %> / <%= address.district.city.name %></td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            <% end %>
-          <% else %>
-            <div class="col-sm-12">
-              <div class="card">
-                <div class="card-header">
-                </div>
-                <div class="card-body">
-                  Kullanıcının adres bilgisi bulunmuyor. MERNİS'ten getir.
-                </div>
-              </div>
-            </div>
-          <% end %>
-        </div>
+        <%= render 'addresses' %>
       </div>
-      <div class="tab-pane" id="studies" role="tabpanel">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="card">
-              <div class="card-body">
-                <div id="accordion" role="tablist">
-                  <div class="card">
-                    <div class="card-header" role="tab" id="headingOne">
-                      <h5 class="mb-0">
-                        <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="">
-                          Sertifikalar
-                        </a>
-                      </h5>
-                    </div>
-                    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" style="">
-                      <div class="card-body">
-                        Lorem ipsum.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header" role="tab" id="headingTwo">
-                      <h5 class="mb-0">
-                        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          Makaleler
-                        </a>
-                      </h5>
-                    </div>
-                    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion" style="">
-                      <div class="card-body">
-                        Lorem ipsum.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header" role="tab" id="headingThree">
-                      <h5 class="mb-0">
-                        <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Bildiriler
-                        </a>
-                      </h5>
-                    </div>
-                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
-                      <div class="card-body">
-                        Lorem ipsum.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="tab-pane" id="employees" role="tabpanel">
+        <%= render 'employees' %>
       </div>
     </div>
   </div>

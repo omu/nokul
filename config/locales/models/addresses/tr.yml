@@ -10,9 +10,7 @@ tr:
       address:
         names:
           formal: Resmi Adres
-          home: Ev Adresi
-          work: İş Adresi
-          other: Diğer Adres
+          informal: Diğer Adres
   simple_form:
     hints:
       address:
@@ -24,8 +22,8 @@ tr:
         update: Adresi Güncelle
   validators:
     address:
-      max_total: En fazla %{limit} tane adres ekleyebilirsiniz.
-      max_legal: En fazla %{limit} tane ikamet adresiniz olabilir.
+      max_formal: En fazla %{limit} tane ikamet adresi ekleyebilirsiniz.
+      max_informal: En fazla %{limit} tane adres ekleyebilirsiniz.
   account:
     addresses:
       index:

@@ -1,0 +1,77 @@
+en:
+  activerecord:
+    attributes:
+      employee: &employee_attributes
+        is_active: Is Active?
+        title_id: Title
+        user_id: User
+        id_number: ID Number
+      duty: &duty_attributes
+        tenure_status: Tenure Status
+        tenure: Tenure
+        temporary: Temporary Duty
+        start_date: Start Date
+        end_date: End Date
+        employee: Employee
+        unit_id: Unit
+      position: &position_attributes
+        administrative_function_id: Administrative Function
+  helpers:
+    submit:
+      employee:
+        create: Create Employee
+        update: Update Employee
+      duty:
+        create: Create Duty
+        update: Update Duty
+      position:
+        create: Create Position
+        update: Update Position
+  account:
+    employees:
+      show:
+        <<: *employee_attributes
+        <<: *duty_attributes
+        duties: Duties
+        new_duty_link: New Duty
+      new:
+        form_title: Create a Employee
+      edit:
+        form_title: Update the Employee
+      create:
+        success: Employee successfully created.
+      destroy:
+        success: Employee successfully deleted.
+        warning: Employee could not be deleted.
+      update:
+        success: Employee successfully updated.
+    duties:
+      show:
+        <<: *employee_attributes
+        <<: *duty_attributes
+        position: Position
+        positions: Positions
+        new_position_link: New Position
+      new:
+        form_title: Create a Duty
+      edit:
+        form_title: Update the Duty
+      create:
+        success: Duty successfully created.
+      destroy:
+        success: Duty successfully deleted.
+        warning: Duty could not be deleted.
+      update:
+        success: Duty successfully updated.
+    positions:
+      new:
+        form_title: Create a Position
+      edit:
+        form_title: Update the Position
+      create:
+        success: Position successfully created.
+      destroy:
+        success: Position successfully deleted.
+        warning: Position could not be deleted.
+      update:
+        success: Position successfully updated.

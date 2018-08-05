@@ -5,5 +5,19 @@ en:
       identities: Identities
       addresses: Addresses
       settings: Settings
-      change_password: Change Password
+      account_settings: Account Settings
       logout: Logout
+  home:
+    components:
+      membership_notifications:
+        upcoming_events: Upcoming academic calendar events
+        profile_completion_rate: Profile completion rate
+        address_information: You address information
+        identity_information: Your identity information
+        seems_missing: seems missing.
+        last_password_change: Last password change
+        change_password: Change your password.
+      user_and_account_statistics:
+        registered_users: Registered Users
+        identities: Identities
+        addresses: Addresses

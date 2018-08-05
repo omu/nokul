@@ -3,19 +3,23 @@
 require 'test_helper'
 
 class IdentityTest < ActiveSupport::TestCase
+  test 'type column does not refer to STI' do
+    assert_empty Identity.inheritance_column
+  end
+
   # relations
   %i[
     user
     student
   ].each do |property|
     test "an identity can communicate with #{property}" do
-      assert identities(:serhat_formal).send(property)
+      assert identities(:formal_student).send(property)
     end
   end
 
   # validations: presence
   %i[
-    name
+    type
     first_name
     last_name
     gender
@@ -23,10 +27,17 @@ class IdentityTest < ActiveSupport::TestCase
     date_of_birth
   ].each do |property|
     test "presence validations for #{property} of a user" do
-      identities(:serhat_formal).send("#{property}=", nil)
-      assert_not identities(:serhat_formal).valid?
-      assert_not_empty identities(:serhat_formal).errors[property]
+      identities(:formal_user).send("#{property}=", nil)
+      assert_not identities(:formal_user).valid?
+      assert_not_empty identities(:formal_user).errors[property]
     end
+  end
+
+  # validations: uniqueness
+  test 'an identity can not belong to multiple students' do
+    student_identity = identities(:formal_student).dup
+    assert_not student_identity.valid?
+    assert_not_empty student_identity.errors[:student_id]
   end
 
   # enumerations
@@ -36,13 +47,18 @@ class IdentityTest < ActiveSupport::TestCase
     married?
   ].each do |property|
     test "identities can respond to #{property} enum" do
-      assert identities(:serhat_formal).send(property)
+      assert identities(:formal_user).send(property)
     end
+  end
+
+  # scopes
+  test 'user_identity can return formal identities which does not belongs_to students' do
+    assert_equal identities(:formal_user), users(:serhat).identities.user_identity
   end
 
   # callbacks
   test 'callbacks must titlecase first_name, mothers_name, fathers_name and place_of_birth of an identity' do
-    identity = identities(:serhat_formal)
+    identity = identities(:formal_user)
     identity.update(
       first_name: 'ışık',
       last_name: 'ılık',
@@ -58,19 +74,20 @@ class IdentityTest < ActiveSupport::TestCase
   end
 
   # identity validator
-  test 'a user can only have one legal identity' do
-    fake = identities(:serhat_formal).dup
+  test 'a user can only have one formal user identity' do
+    fake = identities(:formal_user).dup
     assert_not fake.valid?
-    assert_not_empty fake.errors[:base]
-    assert fake.errors[:base].include?(t('validators.identity.max_legal', limit: 1))
+    assert fake.errors[:base].include?(t('validators.identity.max_formal', limit: 1))
   end
 
-  test 'a user can have 2 identities in total' do
-    fake = identities(:serhat_informal).dup
-    fake.save
-    fake = identities(:serhat_informal).dup
+  test 'a user can only have one informal user identity' do
+    fake = identities(:informal).dup
     assert_not fake.valid?
-    assert_not_empty fake.errors[:base]
-    assert fake.errors[:base].include?(t('validators.identity.max_total', limit: 2))
+    assert fake.errors[:base].include?(t('validators.identity.max_informal', limit: 1))
+  end
+
+  test 'a user can have one formal identity for each studentship' do
+    assert identities(:formal_student).valid?
+    assert identities(:formal_student_omu).valid?
   end
 end

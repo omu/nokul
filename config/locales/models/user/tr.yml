@@ -35,7 +35,7 @@ tr:
         hint: Hesabınızda kullandığınız e-mail adresini girerek şifre sıfırlama talimatlarını alabilirsiniz.
     registrations:
       edit:
-        change_password: Şifre Değişikliği
+        account_settings: Hesap Ayarları
         leave_blank: değiştirmek istemiyorsanız boş bırakın
         current_password: e-mail adresinizi değiştirebilmek için mevcut şifrenizi girmeniz gerekmektedir
       new:
@@ -55,8 +55,17 @@ tr:
       new_user_link: Yeni Kullanıcı Oluştur
       addresses: Adres Bilgileri
       identities: Kimlik Bilgileri
+    account:
+      <<: *user_attributes
+    employees:
+      active: Aktif mi?
+      title: Ünvan
     show:
       <<: *user_attributes
+      account: Hesap Bilgileri
+      identities: Kimlik Bilgileri
+      addresses: Adres Bilgileri
+      employees: Personel Kayıtları
     search:
       smart_search: Akıllı Arama
       smart_search_placeholder: TC/YU numarası, e-mail adresi, ad veya soyad

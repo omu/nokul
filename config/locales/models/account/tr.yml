@@ -1,0 +1,77 @@
+tr:
+  activerecord:
+    attributes:
+      employee: &employee_attributes
+        is_active: Aktif mi?
+        title_id: Ünvan
+        user_id: Kullanıcı
+        id_number: Kimlik Numarası
+      duty: &duty_attributes
+        tenure_status: Kadro Durumu
+        tenure: Kadrolu
+        temporary: Geçici Görevlendirme
+        start_date: Başlangıç Tarihi
+        end_date: Bitiş Tarihi
+        employee_id: Personel
+        unit_id: Birim
+      position: &position_attributes
+        administrative_function_id: Görev
+  helpers:
+    submit:
+      employee:
+        create: Personel Kaydı Oluştur
+        update: Personel Kaydını Güncelle
+      duty:
+        create: Birim Kaydı Oluştur
+        update: Birim Kaydını Güncelle
+      position:
+        create: Görev Kaydı Oluştur
+        update: Görev Kaydını Güncelle
+  account:
+    employees:
+      show:
+        <<: *employee_attributes
+        <<: *duty_attributes
+        duties: Görevli Olduğu Birimler
+        new_duty_link: Yeni Görevlendirme Ekle
+      new:
+        form_title: Personel Kaydı Oluştur
+      edit:
+        form_title: Personel Kaydını Güncelle
+      create:
+        success: Personel kaydı başarıyla oluşturuldu.
+      destroy:
+        success: Personel kaydı başarıyla silindi.
+        warning: Personel kaydı silinemedi!
+      update:
+        success: Personel kaydı başarıyla güncellendi.
+    duties:
+      show:
+        <<: *employee_attributes
+        <<: *duty_attributes
+        position: Görev
+        positions: Görevler
+        new_position_link: Yeni Görev Ekle
+      new:
+        form_title: Birim Kaydı Oluştur
+      edit:
+        form_title: Birim Kaydını Güncelle
+      create:
+        success: Birim kaydı başarıyla oluşturuldu.
+      destroy:
+        success: Birim kaydı başarıyla silindi.
+        warning: Birim kaydı silinemedi!
+      update:
+        success: Birim kaydı başarıyla güncellendi.
+    positions:
+      new:
+        form_title: Görev Kaydı Oluştur
+      edit:
+        form_title: Görev Kaydını Güncelle
+      create:
+        success: Görev kaydı başarıyla oluşturuldu.
+      destroy:
+        success: Görev kaydı başarıyla silindi.
+        warning: Görev kaydı silinemedi!
+      update:
+        success: Görev kaydı başarıyla güncellendi.
