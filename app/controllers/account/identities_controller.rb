@@ -44,7 +44,7 @@ module Account
     def set_elapsed_time
       formal_identity = current_user.identities.user_identity
       return if formal_identity.blank?
-      elapsed_time(formal_identity.first)
+      elapsed_time(formal_identity)
     end
 
     def redirect_with(message)

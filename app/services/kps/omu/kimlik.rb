@@ -12,6 +12,8 @@ module Services
         def sorgula(queried_id_number)
           make_request(queried_id_number)
 
+          raise IdNumberError if @response[:hata_bilgisi].present?
+
           err_args = %i[kisi_bilgisi hata_bilgisi aciklama]
           id_info_args = %i[kisi_bilgisi temel_bilgisi]
           marital_info_args = %i[kisi_bilgisi durum_bilgisi]
