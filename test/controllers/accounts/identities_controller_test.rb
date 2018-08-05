@@ -12,7 +12,6 @@ module Accounts
     test 'should get index' do
       get identities_path
       assert_response :success
-
       assert_select '#add-button', translate('.index.new_identity')
     end
 
@@ -22,18 +21,18 @@ module Accounts
     end
 
     test 'should create identity' do
-      @user.identities.find_by(name: :informal).destroy
+      @user.identities.informal.destroy_all
       assert_difference('@user.identities.count') do
         post identities_path, params: {
           identity: {
-            name: :informal, first_name: 'Mustafa Serhat', last_name: 'Dündar', gender: :male,
+            first_name: 'Mustafa Serhat', last_name: 'Dündar', gender: :male,
             marital_status: :married, place_of_birth: cities(:samsun).id,
             date_of_birth: Time.zone.now - 20.years
           }
         }
       end
 
-      identity = @user.identities.find_by(name: :informal)
+      identity = @user.identities.informal.first
 
       assert_equal 'Mustafa Serhat', identity.first_name
       assert_equal 'DÜNDAR', identity.last_name
@@ -45,16 +44,16 @@ module Accounts
     end
 
     test 'should not get edit for formal identity' do
-      formal_identity = @user.identities.find_by(name: :formal)
+      formal_identity = @user.identities.formal.first
 
       get edit_identity_path(formal_identity)
 
       assert_response :redirect
-      assert_equal translate('.edit.warning'), flash[:notice]
+      assert_redirected_to root_path
     end
 
     test 'should get edit for informal identity' do
-      identity = @user.identities.find_by(name: :informal)
+      identity = @user.identities.find_by(type: :informal)
 
       get edit_identity_path(identity)
       assert_response :success
@@ -62,7 +61,7 @@ module Accounts
     end
 
     test 'should update identity' do
-      identity = @user.identities.find_by(name: :informal)
+      identity = @user.identities.find_by(type: :informal)
 
       patch identity_path(identity), params: {
         identity: {
@@ -81,16 +80,15 @@ module Accounts
 
     test 'should not destroy for formal identity' do
       assert_difference('@user.identities.count', 0) do
-        delete identity_path(@user.identities.find_by(name: :formal))
+        delete identity_path(@user.identities.find_by(type: :formal))
       end
 
-      assert_redirected_to identities_path
-      assert_equal translate('.destroy.warning'), flash[:notice]
+      assert_redirected_to root_path
     end
 
     test 'should destroy for informal identity' do
       assert_difference('@user.identities.count', -1) do
-        delete identity_path(@user.identities.find_by(name: :informal))
+        delete identity_path(@user.identities.find_by(type: :informal))
       end
 
       assert_redirected_to identities_path

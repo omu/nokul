@@ -5,5 +5,19 @@ tr:
       identities: Kimlik Bilgilerim
       addresses: Adres Bilgilerim
       settings: Ayarlar
-      change_password: Şifre Değişikliği
+      account_settings: Hesap Ayaları
       logout: Çıkış Yap
+  home:
+    components:
+      membership_notifications:
+        upcoming_events: Yaklaşan akademik takvim olayları
+        profile_completion_rate: Profil tamamlama oranı
+        address_information: Adres bilgileriniz
+        identity_information: Kimlik bilgileriniz
+        seems_missing: eksik görünüyor.
+        last_password_change: Son şifre değişikliği
+        change_password: Şifrenizi değiştirin.
+      user_and_account_statistics:
+        registered_users: Kayıtlı Kullanıcılar
+        identities: Kimlik Bilgileri
+        addresses: Adres Bilgileri

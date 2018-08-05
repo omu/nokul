@@ -15,7 +15,9 @@ class UsersController < ApplicationController
                     end
   end
 
-  def show; end
+  def show
+    @employees = @user.employees.includes(:title).order(active: :desc)
+  end
 
   def new
     @user = User.new
@@ -39,7 +41,7 @@ class UsersController < ApplicationController
   private
 
   def set_user
-    @user = User.find(params[:id])
+    @user = User.friendly.find(params[:id])
   end
 
   def set_identities

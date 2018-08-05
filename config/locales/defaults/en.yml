@@ -14,5 +14,5 @@ en:
   home_nav: Home
   created_at: Created At
   updated_at: Updated At
-  'yes': Yes
-  'no': No
+  'yes': 'Yes'
+  'no': 'No'

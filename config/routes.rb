@@ -50,10 +50,19 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :users
+  resources :users do
+    scope module: :account do
+      resources :employees, except: :index do
+        resources :duties, except: :index do
+          resources :positions, except: %i[index show]
+        end
+      end
+    end
+  end
 
   # public profiles
   get '/profiles/:id', to: 'public_profile#show'
+  get '/profiles/:id/vcard',  to: 'public_profile#vcard', as: :profile_vcard
 
   scope module: :references do
     resources :student_disability_types, except: :show

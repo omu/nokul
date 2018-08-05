@@ -35,7 +35,7 @@ en:
         hint: You can request password reset instruction by typing your e-mail.
     registrations:
       edit:
-        change_password: Change Password
+        account_settings: Account Settings
         leave_blank: leave blank if you don't want to change
         current_password: you must enter your current password for changing your e-mail address
       new:
@@ -55,8 +55,17 @@ en:
       new_user_link: Create a New User
       addresses: Addresses
       identities: Identities
+    account:
+      <<: *user_attributes
+    employees:
+      active: Is Active?
+      title: Title
     show:
       <<: *user_attributes
+      account: Account
+      identities: Identities
+      addresses: Addresses
+      employees: Employees
     search:
       smart_search: Smart Search
       smart_search_placeholder: TC/YU number, e-mail address, first of last name
