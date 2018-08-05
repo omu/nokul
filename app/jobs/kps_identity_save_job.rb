@@ -10,7 +10,7 @@ class KpsIdentitySaveJob < ApplicationJob
   end
 
   # callbacks
-  after_perform do |_job|
+  after_perform do |job|
     response = @response.merge(student_id: @student_id)
     formal_address = job.arguments.first.identities.formal
     formal_address.present? ? formal_address.update(response) : formal_address.create(response)

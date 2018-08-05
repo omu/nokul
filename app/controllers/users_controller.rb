@@ -31,6 +31,7 @@ class UsersController < ApplicationController
   def edit; end
 
   def update
+    @user.slug = nil if user_params[:email].present?
     @user.update_without_password(user_params) ? redirect_with('.success') : render(:edit)
   end
 
