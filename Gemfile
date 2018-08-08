@@ -15,6 +15,9 @@ gem 'sidekiq'
 # active-record
 gem 'ancestry'
 
+# active-storage
+gem 'aws-sdk-s3', require: false
+
 # authentication
 gem 'devise'
 
