@@ -23,6 +23,7 @@
 .byebug_history
 .vagrant*/
 .env
+/storage/*
 
 # never remove!
 config/master.key
