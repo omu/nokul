@@ -9,6 +9,10 @@ en:
         current_password: Current Password
         preferred_language: Preferred Language
         password_changed_at: Last Password Change
+        articles_count: Articles Count
+        projects_count: Projects Count
+        profile: Profile Settings
+        preferences: Visibility Settings
   simple_form:
     placeholders:
       user:

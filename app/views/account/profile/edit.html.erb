@@ -1,0 +1,96 @@
+<div class='row'>
+  <div class='col-sm-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'calendar' %>
+        <strong><%#= form_title %></strong>
+      </div>
+      <div class='card-body'>
+        <%= simple_form_for current_user, url: profile_path, method: :post do |f| %>
+          <div class='row'>
+            <div class='form-group col-sm-12'>
+              <%= f.error_notification %>
+            </div>
+
+            <div class='form-group col-sm-8'>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><%= fa_icon('phone') %></span>
+                </div>
+                <%= f.input :phone_number, wrapper: false, label: false %>
+              </div>
+            </div>
+
+            <div class='form-group col-sm-4'>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><%= fa_icon('phone-square') %></span>
+                </div>
+                <%= f.input :extension_number, wrapper: false, label: false %>
+              </div>
+            </div>
+
+            <div class='form-group col-sm-4'>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><%= fa_icon('globe') %></span>
+                </div>
+                <%= f.input :website, wrapper: false, label: false %>
+              </div>
+            </div>
+
+            <div class='form-group col-sm-12'>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><%= fa_icon('twitter') %></span>
+                </div>
+                <%= f.input :twitter, wrapper: false, label: false %>
+              </div>
+            </div>
+
+            <div class='form-group col-sm-12'>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><%= fa_icon('linkedin') %></span>
+                </div>
+                <%= f.input :linkedin, wrapper: false, label: false %>
+              </div>
+            </div>
+
+            <div class='form-group col-sm-12'>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><%= fa_icon('skype') %></span>
+                </div>
+                <%= f.input :skype, wrapper: false, label: false %>
+              </div>
+            </div>
+
+            <div class='form-group col-sm-12'>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><%= fa_icon('graduation-cap') %></span>
+                </div>
+                <%= f.input :orcid, wrapper: false, label: false %>
+              </div>
+            </div>
+
+            <div class='form-group col-sm-12'>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><%= fa_icon('cog') %></span>
+                </div>
+                <%= f.input :preferences, wrapper: false, label: false %>
+              </div>
+            </div>
+
+            <div class='form-group col-sm-12'>
+              <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
+              <%= link_to_back(:back) %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
