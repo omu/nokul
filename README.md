@@ -7,6 +7,7 @@
 - [NodeJS (>=10.x)](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions)
 - [Yarn](https://yarnpkg.com/lang/en/docs/install/#debian-stable)
 - [Redis](https://packages.debian.org/search?keywords=redis)
+- [libvips](https://github.com/jcupitt/libvips/wiki/Build-for-Ubuntu)
 
 ## Setup
 
