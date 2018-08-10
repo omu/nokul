@@ -46,6 +46,10 @@ class User < ApplicationRecord
     KpsIdentitySaveJob.perform_later(self)
   end
 
+  # store accessors
+  store :profile, accessors: %i[phone_number extension_number website twitter linkedin skype orcid], coder: JSON
+  store :preferences, accessors: %i[public_photo public_studies], coder: JSON
+
   # permalinks
   extend FriendlyId
   friendly_id :permalink, use: :slugged
