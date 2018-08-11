@@ -5,7 +5,11 @@ module Account
     def edit; end
 
     def update
-      current_user.update_without_password(profile_params) ? redirect_to(profile_path, notice: t('.success')) : render(:edit)
+      if current_user.update_without_password(profile_params)
+        redirect_to profile_path, notice: t('.success')
+      else
+        render(:edit)
+      end
     end
 
     private
