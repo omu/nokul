@@ -88,6 +88,8 @@ en:
         orcid: ORCID
         public_photo: Show picture on my profile
         public_studies: Show academic studies on my profile
+      update:
+        success: Profile successfully updated.
   simple_form:
     placeholders:
       user:

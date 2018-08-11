@@ -88,6 +88,8 @@ tr:
         orcid: ORCID
         public_photo: Profilimde Fotoğrafımı Göster
         public_studies: Profilimde Akademik Çalışmalarımı Göster
+      update:
+        success: Profiliniz başarıyla güncellendi
   simple_form:
     placeholders:
       user:
