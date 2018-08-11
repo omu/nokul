@@ -13,7 +13,7 @@
             </div>
 
             <div class='col-sm-12'>
-              <% if current_user.avatar.persisted? && current_user.avatar.variable? %>
+              <% if current_user.avatar.attached? && current_user.avatar.variable? %>
                 <%= image_tag current_user.avatar.variant(resize: '150x150') %>
               <% else %>
                 <%= image_tag 'profile/avatar_placeholder.svg', width: '150px' %>
