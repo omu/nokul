@@ -1,18 +1,18 @@
 <div class='row'>
   <div class='col-sm-12'>
-    <div class='card'>
-      <div class='card-header'>
-        <%= fa_icon 'calendar' %>
-        <strong><%#= form_title %></strong>
-      </div>
-      <div class='card-body'>
-        <%= simple_form_for current_user, url: profile_path, method: :post do |f| %>
+    <%= simple_form_for current_user, url: profile_path, method: :post do |f| %>
+      <div class='card'>
+        <div class='card-header'>
+          <%= t('.profile_settings') %>
+        </div>
+        <div class='card-body'>
           <div class='row'>
             <div class='form-group col-sm-12'>
               <%= f.error_notification %>
             </div>
 
             <div class='form-group col-sm-8'>
+              <label for="name"><%= t('.phone_number') %></label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><%= fa_icon('phone') %></span>
@@ -22,6 +22,7 @@
             </div>
 
             <div class='form-group col-sm-4'>
+              <label for="name"><%= t('.extension_number') %></label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><%= fa_icon('phone-square') %></span>
@@ -30,7 +31,8 @@
               </div>
             </div>
 
-            <div class='form-group col-sm-4'>
+            <div class='form-group col-sm-12'>
+              <label for="name"><%= t('.website') %></label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><%= fa_icon('globe') %></span>
@@ -40,6 +42,7 @@
             </div>
 
             <div class='form-group col-sm-12'>
+              <label for="name"><%= t('.twitter') %></label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><%= fa_icon('twitter') %></span>
@@ -49,6 +52,7 @@
             </div>
 
             <div class='form-group col-sm-12'>
+              <label for="name"><%= t('.linkedin') %></label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><%= fa_icon('linkedin') %></span>
@@ -58,6 +62,7 @@
             </div>
 
             <div class='form-group col-sm-12'>
+              <label for="name"><%= t('.skype') %></label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><%= fa_icon('skype') %></span>
@@ -67,6 +72,7 @@
             </div>
 
             <div class='form-group col-sm-12'>
+              <label for="name"><%= t('.orcid') %></label>
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><%= fa_icon('graduation-cap') %></span>
@@ -74,23 +80,28 @@
                 <%= f.input :orcid, wrapper: false, label: false %>
               </div>
             </div>
-
-            <div class='form-group col-sm-12'>
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text"><%= fa_icon('cog') %></span>
-                </div>
-                <%= f.input :preferences, wrapper: false, label: false %>
-              </div>
-            </div>
-
-            <div class='form-group col-sm-12'>
-              <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
-              <%= link_to_back(:back) %>
-            </div>
           </div>
-        <% end %>
+        </div>
       </div>
-    </div>
+      <div class="card">
+        <div class="card-header">
+          <%= t('.visiblity_settings') %>
+        </div>
+        <div class="card-body">
+          <div class='form-group col-sm-6'>
+            <%= f.input :public_photo, label: t('.public_photo'), as: :boolean %>
+          </div>
+
+          <div class='form-group col-sm-6'>
+            <%= f.input :public_studies, label: t('.public_studies'), as: :boolean, class: 'form-check-input' %>
+          </div>
+          <hr \>
+          <div class='form-group col-sm-12'>
+            <%= f.button :submit, t('save'), class: 'btn btn-outline-success btn-sm' %>
+            <%= link_to_back(:back) %>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
