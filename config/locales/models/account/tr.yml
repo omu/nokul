@@ -75,3 +75,21 @@ tr:
         warning: Görev kaydı silinemedi!
       update:
         success: Görev kaydı başarıyla güncellendi.
+    profile:
+      edit:
+        profile_settings: Profil Ayarları
+        visiblity_settings: Görünürlük Ayarları
+        phone_number: Telefon numaranız
+        extension_number: Dahili numaranız
+        website: Web Sayfanız
+        twitter: Twitter Kullanıcı Adı
+        linkedin: Linkedin Kullanıcı Adı
+        skype: Skype Kullanıcı Adı
+        orcid: ORCID
+        public_photo: Profilimde Fotoğrafımı Göster
+        public_studies: Profilimde Akademik Çalışmalarımı Göster
+  simple_form:
+    placeholders:
+      user:
+        twitter: twitter.com/
+        linkedin: linkedin.com/
