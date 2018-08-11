@@ -1,0 +1,12 @@
+en:
+  validators:
+    address:
+      max_formal: You can have up to %{limit} formal addresses maximum.
+      max_informal: You can add up to %{limit} addresses maximum.
+    identity:
+      max_formal: You can have up to %{limit} identities related with your user account.
+      max_informal: You can create up to %{limit} informal identities.
+    duty:
+      active_and_tenure: This user already has an active and tenure duty. Edit the existing duty or make it passive in order to create a new one.
+    employee:
+      active: This user already has an active employee. Edit the existing employee or make it passive in order to create a new one.
