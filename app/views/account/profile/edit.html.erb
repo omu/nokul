@@ -9,11 +9,12 @@
           <div class='row'>
             <div class='form-group col-sm-12'>
               <%= f.error_notification %>
+              <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
             </div>
 
             <div class='col-sm-12'>
-              <% if current_user.avatar.attached? %>
-                <%= image_tag(current_user.avatar) %>
+              <% if current_user.avatar.attached? && current_user.avatar.variable? %>
+                <%= image_tag current_user.avatar.variant(resize: '150x150') %>
               <% else %>
                 <%= image_tag 'profile/avatar_placeholder.svg', width: '150px' %>
               <% end %>
@@ -90,6 +91,14 @@
                 <%= f.input :orcid, wrapper: false, label: false %>
               </div>
             </div>
+
+            <% unless current_user.employees.active.any? %>
+              <div class='form-group col-sm-12'>
+                <hr \>
+                <%= f.button :submit, t('save'), class: 'btn btn-outline-success btn-sm' %>
+                <%= link_to_back(:back) %>
+              </div>
+            <% end %>
           </div>
         </div>
       </div>
