@@ -34,8 +34,9 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :id_number, presence: true, uniqueness: true, numericality: { only_integer: true }, length: { is: 11 }
   validates_with EmailAddress::ActiveRecordValidator, field: :email
+  validates_with ImageValidator, field: :avatar
 
-  # background jobs
+  # callbacks
   after_create_commit :build_address_information, if: proc { addresses.formal.empty? }
   after_create_commit :build_identity_information, if: proc { identities.formal.empty? }
 
