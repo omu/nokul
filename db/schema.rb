@@ -427,8 +427,7 @@ ActiveRecord::Schema.define(version: 2018_08_10_114449) do
     t.integer "articles_count"
     t.integer "projects_count"
     t.string "slug"
-    t.jsonb "profile"
-    t.jsonb "preferences"
+    t.jsonb "profile_preferences"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["id_number"], name: "index_users_on_id_number", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

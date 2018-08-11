@@ -47,8 +47,17 @@ class User < ApplicationRecord
   end
 
   # store accessors
-  store :profile, accessors: %i[phone_number extension_number website twitter linkedin skype orcid], coder: JSON
-  store :preferences, accessors: %i[public_photo public_studies], coder: JSON
+  store :profile_preferences, accessors: %i[
+    phone_number
+    extension_number
+    website
+    twitter
+    linkedin
+    skype
+    orcid
+    public_photo
+    public_studies
+  ], coder: JSON
 
   # permalinks
   extend FriendlyId
