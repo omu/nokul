@@ -1,4 +1,4 @@
 https://github.com/heroku/heroku-buildpack-nodejs.git#v123
-https://github.com/heroku/heroku-buildpack-ruby.git#v183
+https://github.com/heroku/heroku-buildpack-ruby.git#v190
 https://github.com/heroku/heroku-buildpack-activestorage-preview.git
 https://github.com/mokolabs/heroku-buildpack-vips.git
