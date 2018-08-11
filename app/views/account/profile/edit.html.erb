@@ -11,6 +11,16 @@
               <%= f.error_notification %>
             </div>
 
+            <div class='col-sm-12'>
+              <% if current_user.avatar.attached? %>
+                <%= image_tag(current_user.avatar) %>
+              <% else %>
+                <%= image_tag 'profile/avatar_placeholder.svg', width: '150px' %>
+              <% end %>
+              <p><%= f.input :avatar, label: false, as: :file %></p>
+              <hr \>
+            </div>
+
             <div class='form-group col-sm-8'>
               <label for="name"><%= t('.phone_number') %></label>
               <div class="input-group">

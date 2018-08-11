@@ -14,6 +14,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
   # relations
+  has_one_attached :avatar
   has_many :employees, dependent: :destroy
   has_many :students, dependent: :destroy
   has_many :identities, dependent: :destroy
