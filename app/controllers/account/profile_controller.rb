@@ -2,6 +2,8 @@
 
 module Account
   class ProfileController < ApplicationController
+    before_action :purge_avatar, only: :update
+
     def edit; end
 
     def update
@@ -13,6 +15,10 @@ module Account
     end
 
     private
+
+    def purge_avatar
+      current_user.avatar.purge
+    end
 
     def profile_params
       params.require(:user).permit(
