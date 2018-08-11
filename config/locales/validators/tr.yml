@@ -12,3 +12,4 @@ tr:
       active: Bu personelin zaten aktif bir personel kaydı var! Yeni kayıt girmek yerine aktif kaydı düzenleyin veya öncelikle aktif kaydı pasifleştirin.
     image:
       not_permitted: '%{mime_type} izin verilen bir dosya türü değil. %{extension_whitelist} türlerinde bir dosya yükleyebilirsiniz'
+      size_not_satisfied: Dosya boyutu izin verilen aralıkta değil. Yükleyeceğiniz dosya en az %{minimum} KB, en çok %{maximum} MB boyutunda olabilir.
