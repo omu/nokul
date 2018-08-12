@@ -31,7 +31,7 @@ jobs:
             - yarn-packages-master
             - yarn-packages
 
-      - run: bundle install --deployment --without development test
+      - run: bundle install --without development test
       - run: bin/yarn install
 
       - save_cache:
