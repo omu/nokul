@@ -1,8 +1,4 @@
-development:
-  service: Disk
-  root: <%= Rails.root.join('storage') %>
-
-production:
+minio:
   service: S3
   access_key_id: <%= Rails.application.credentials.minio[:access_key] %>
   secret_access_key: <%= Rails.application.credentials.minio[:secret_key] %>
@@ -11,6 +7,22 @@ production:
   endpoint: https://s3.omu.sh
   force_path_style: true # use https://domain.com/bucket, instead of bucket.domain.com
 
+azure:
+  service: AzureStorage
+  storage_account_name: nokul
+  storage_access_key: <%= Rails.application.credentials.azure[:access_key] %>
+  container: nokul
+
+development:
+  service: Disk
+  root: <%= Rails.root.join('storage') %>
+
 test:
   service: Disk
   root: <%= Rails.root.join('tmp/storage') %>
+
+production:
+  service: Mirror
+  primary: minio
+  mirrors:
+    - azure
