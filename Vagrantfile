@@ -4,19 +4,16 @@
 # vi: set ft=ruby :
 
 Vagrant.configure('2') do |config|
-  config.vm.box = 'omu/debian-stable-server'
+  config.vm.define 'dev'do |dev|
+    dev.vm.box = 'omu/debian-stable-server'
 
-  config.vm.network 'forwarded_port', guest: 3000, host: 3000
+    dev.vm.network 'forwarded_port', guest: 3000, host: 3000
 
-  config.vm.provider 'virtualbox' do |vb|
-    vb.memory = '2048'
-  end
+    dev.vm.provider :lxc do |lxc|
+      lxc.customize 'cgroup.memory.limit_in_bytes', '2048M'
+    end
 
-  config.vm.provider :lxc do |lxc|
-    lxc.customize 'cgroup.memory.limit_in_bytes', '2048M'
-  end
-
-  config.vm.provision 'shell', privileged: false, inline: <<-SHELL
+    dev.vm.provision 'shell', privileged: false, inline: <<-SHELL
     sudo systemctl enable postgresql
     sudo systemctl start postgresql
     sudo systemctl enable redis-server
@@ -46,5 +43,14 @@ Vagrant.configure('2') do |config|
     sudo foreman export -p3000 --app nokul --user op systemd /etc/systemd/system/
     sudo systemctl enable nokul.target
     sudo systemctl start nokul.target
-  SHELL
+    SHELL
+  end
+
+  config.vm.define 'paas', autostart: false do |paas|
+    paas.vm.box = 'omu/debian-stable-paas'
+
+    paas.vm.provider 'virtualbox' do |vb|
+      vb.memory = '2048'
+    end
+  end
 end
