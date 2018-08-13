@@ -8,7 +8,7 @@ postgres_environment: &postgres_environment
     POSTGRES_PASSWORD: nokul
 rails_environment: &rails_environment
   environment:
-    TZ: '/usr/share/zoneinfo/Asia/Baghdad'
+    TZ: '/usr/share/zoneinfo/Asia/Istanbul'
     RAILS_ENV: test
     RACK_ENV: test
     RDS_USERNAME: nokul
@@ -19,7 +19,6 @@ rails_environment: &rails_environment
 
 # flow defaults
 defaults: &defaults
-  working_directory: ~/nokul
   parallelism: 4
 
 # cache keys
