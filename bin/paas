@@ -1,0 +1,81 @@
+#!/usr/bin/env bash
+
+set -euo pipefail; [[ -z ${TRACE:-} ]] || set -x
+
+cd "$(dirname "$(readlink -f "$0")")/.."
+
+application=${PWD##*/}
+domain=local.omu.sh
+remote=dokku
+
+main() {
+	if ! vagrant status --machine-readable | grep -q ',metadata,provider,virtualbox'; then
+		echo -e >&2 '\e[31m'"Only virtualbox supported"'\e[0m'
+		exit 1
+	fi
+
+	if ! command -v direnv &>/dev/null; then
+		echo >&2 'Please install and setup direnv(1).'
+	fi
+
+	if [[ ! -r ~/.ssh/id_rsa.pub ]]; then
+		echo -e >&2 '\e[31m'"You need an ssh public key: ~/.ssh/id_rsa.pub"'\e[0m'
+		exit 1
+	fi
+
+	[[ -z ${1:-} ]] || application=$1
+
+	if ! echo "$application" | grep -q -E '^[a-zA-Z0-9_-]+$'; then
+		echo -e >&2 '\e[31m'"Malformed application name: $application"'\e[0m'
+		exit 1
+	fi
+
+	git remote remove "$remote" &>/dev/null || true
+	git remote add "$remote" "dokku@${domain}:${application}"
+
+	vagrant ssh paas -- 'sudo -E bash -s' <<-SCRIPT
+		dokku domains:set-global "$domain"
+		echo "$domain" >/home/dokku/HOSTNAME
+
+		dokku --force apps:destroy "$application" &>/dev/null || true
+		dokku apps:create "$application"
+
+		dokku postgres:create nokul-database &>/dev/null || true
+		dokku postgres:link nokul-database nokul
+
+		dokku redis:create nokul-redis &>/dev/null || true
+		dokku redis:link nokul-redis nokul
+
+		dokku config:set nokul RAILS_ENV=beta RAILS_LOG_TO_STDOUT=true
+
+		dokku ssh-keys:remove op &>/dev/null || true
+	SCRIPT
+	vagrant ssh paas -- 'sudo dokku ssh-keys:add op' <~/.ssh/id_rsa.pub &>/dev/null
+
+	curl -fsSL https://raw.githubusercontent.com/dokku/dokku/master/contrib/dokku_client.sh >bin/dokku
+	chmod +x bin/dokku
+
+	direnv allow . &>/dev/null
+
+	local branch
+	branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
+
+	local refspec
+	if [[ $branch = master ]]; then
+		refspec=master
+	else
+		refspec=$branch:master
+	fi
+
+	echo -e >&2  '\e[1m'
+	cat >&2 <<-DOCUMENT
+		PaaS setup completed.
+
+		    Browse	http://${application}.${domain}
+		    Push	git push $remote $refspec
+		    Manage	dokku
+	DOCUMENT
+	echo -e >&2  '\e[0m'
+}
+
+main "$@"
