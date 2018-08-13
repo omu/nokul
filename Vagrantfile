@@ -3,7 +3,6 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-# rubocop:disable Metrics/BlockLength
 Vagrant.configure('2') do |config|
   config.vm.define 'dev' do |dev|
     dev.vm.box = 'omu/debian-stable-server'
@@ -51,4 +50,3 @@ Vagrant.configure('2') do |config|
     paas.vm.box = 'omu/debian-stable-paas'
   end
 end
-# rubocop:enable Metrics/BlockLength
