@@ -28,15 +28,12 @@
             </div>
             <%= link_to identities_path, class: 'dropdown-item' do %>
               <%= fa_icon('id-card', text: t('.identities')) %>
-              <%= content_tag(:span, class: 'badge badge-warning') do %>
-                <%= current_user.identities.count %>
-              <% end %>
             <% end %>
             <%= link_to addresses_path, class: 'dropdown-item' do %>
               <%= fa_icon('home', text: t('.addresses')) %>
-              <%= content_tag(:span, class: 'badge badge-warning') do %>
-                <%= current_user.addresses.count %>
-              <% end %>
+            <% end %>
+            <%= link_to profile_path, class: 'dropdown-item' do %>
+              <%= fa_icon('user', text: t('.profile_settings')) %>
             <% end %>
             <div class="dropdown-header text-center">
               <strong><%= t('.settings') %></strong>
