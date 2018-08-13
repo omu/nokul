@@ -54,7 +54,7 @@ jobs:
       - save_cache:
           <<: *repository
           paths:
-            - ~/nokul
+            - ~/project
   bundle_dependencies:
     <<: *ruby_2_5_1
     steps:
