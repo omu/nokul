@@ -99,7 +99,7 @@ GEM
       archive-zip (~> 0.10)
       nokogiri (~> 1.8)
     cocoon (1.2.11)
-    codacy-coverage (1.1.8)
+    codacy-coverage (2.0.1)
       simplecov
     codeclimate-engine-rb (0.4.1)
       virtus (~> 1.0)
