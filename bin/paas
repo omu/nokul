@@ -23,6 +23,11 @@ main() {
 		exit 1
 	fi
 
+	if [[ -z ${RAILS_MASTER_KEY:-} ]]; then
+		echo -e >&2 '\e[31m'"You need to set environment variable: RAILS_MASTER_KEY"'\e[0m'
+		exit 1
+	fi
+
 	[[ -z ${1:-} ]] || application=$1
 
 	if ! echo "$application" | grep -q -E '^[a-zA-Z0-9_-]+$'; then
@@ -39,14 +44,15 @@ main() {
 
 		dokku --force apps:destroy "$application" &>/dev/null || true
 		dokku apps:create "$application"
+		echo -e "web=1\nworker=1" >/home/dokku/$application/DOKKU_SCALE
 
-		dokku postgres:create nokul-database &>/dev/null || true
-		dokku postgres:link nokul-database nokul
+		dokku postgres:create $application-database &>/dev/null || true
+		dokku postgres:link $application-database $application
 
-		dokku redis:create nokul-redis &>/dev/null || true
-		dokku redis:link nokul-redis nokul
+		dokku redis:create $application-redis &>/dev/null || true
+		dokku redis:link $application-redis $application
 
-		dokku config:set nokul RAILS_ENV=beta RAILS_LOG_TO_STDOUT=true
+		dokku config:set $application RAILS_ENV=beta RAILS_LOG_TO_STDOUT=true RAILS_MASTER_KEY=$RAILS_MASTER_KEY
 
 		dokku ssh-keys:remove op &>/dev/null || true
 	SCRIPT
