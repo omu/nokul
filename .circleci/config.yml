@@ -1,61 +1,111 @@
+# Fan In/Fan Out Workflow
+
+# environment variables
+postgres_environment: &postgres_environment
+  environment:
+    POSTGRES_DB: nokul_test
+    POSTGRES_USER: nokul
+    POSTGRES_PASSWORD: nokul
+rails_environment: &rails_environment
+  environment:
+    TZ: '/usr/share/zoneinfo/Asia/Baghdad'
+    RAILS_ENV: test
+    RACK_ENV: test
+    RDS_USERNAME: nokul
+    RDS_PASSWORD: nokul
+    RDS_HOSTNAME: localhost
+    RDS_PORT: 5432
+    BUNDLE_JOBS: 4
+
+# flow defaults
+defaults: &defaults
+  working_directory: ~/nokul
+  parallelism: 4
+
+# cache keys
+restore_bundle: &restore_bundle
+  keys:
+    - nokul-bundle-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+    - nokul-bundle-{{ .Branch }}
+    - nokul-bundle
+restore_yarn: &restore_yarn
+  keys:
+    - nokul-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
+    - nokul-yarn-{{ .Branch }}
+    - nokul-yarn
+repository: &repository
+  key: nokul-repo-{{ .Environment.CIRCLE_SHA1 }}
+
+# build image
+ruby_2_5_1: &ruby_2_5_1
+  <<: *defaults
+  docker:
+    - image: circleci/ruby:2.5.1-node-browsers
+      <<: *rails_environment
+    - image: circleci/postgres:10.5-alpine
+      <<: *postgres_environment
+
+# build jobs
 version: 2
 jobs:
-  build:
-    working_directory: ~/nokul
-    docker:
-      - image: circleci/ruby:latest-node-browsers
-        environment:
-          TZ: '/usr/share/zoneinfo/Asia/Baghdad'
-          RAILS_ENV: test
-          RACK_ENV: test
-          RDS_USERNAME: nokul
-          RDS_PASSWORD: nokul
-          RDS_HOSTNAME: localhost
-          RDS_PORT: 5432
-      - image: circleci/postgres:9.6.7
-        environment:
-          POSTGRES_DB: nokul_test
-          POSTGRES_USER: nokul
-          POSTGRES_PASSWORD: nokul
+  checkout_code:
+    <<: *ruby_2_5_1
     steps:
       - checkout
+      - save_cache:
+          <<: *repository
+          paths:
+            - ~/nokul
+  bundle_dependencies:
+    <<: *ruby_2_5_1
+    steps:
       - restore_cache:
-          keys:
-            - gem-cache-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
-            - gem-cache-{{ .Branch }}
-            - gem-cache
+          <<: *repository
       - restore_cache:
-          keys:
-            - yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
-            - yarn-packages-{{ .Branch }}
-            - yarn-packages-master
-            - yarn-packages
-
+          <<: *restore_bundle
       - run: bundle install --path vendor/bundle
+      - save_cache:
+          key: nokul-bundle-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+  bundle_assets:
+    <<: *ruby_2_5_1
+    steps:
+      - restore_cache:
+          <<: *repository
+      - restore_cache:
+          <<: *restore_bundle
+      - restore_cache:
+          <<: *restore_yarn
       - run: bin/yarn install
-
       - save_cache:
-          key: gem-cache-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
-          paths:
-            - vendor/bundle
-      - save_cache:
-          key: gem-cache-{{ .Branch }}
-          paths:
-            - vendor/bundle
-      - save_cache:
-          key: gem-cache
-          paths:
-            - vendor/bundle
-      - save_cache:
-          name: Save Yarn Package Cache
-          key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          key: nokul-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
             - node_modules/
-
+  rake_test:
+    <<: *ruby_2_5_1
+    steps:
+      - restore_cache:
+          <<: *repository
+      - restore_cache:
+          <<: *restore_bundle
+      - restore_cache:
+          <<: *restore_yarn
+      - run: bundle --path vendor/bundle
+      - run: bundle exec rake db:create db:schema:load
+      - run: bundle exec rake test
+  karma:
+    <<: *ruby_2_5_1
+    steps:
+      - restore_cache:
+          <<: *repository
+      - restore_cache:
+          <<: *restore_bundle
+      - restore_cache:
+          <<: *restore_yarn
+      - run: bundle --path vendor/bundle
       - run: bundle exec rake quality:rails
       - run: bundle exec rake security:all
-      - run: bundle exec rake db:migrate
-      - run: bundle exec rake test
   deploy:
     machine:
       enabled: true
@@ -67,14 +117,27 @@ jobs:
             git remote add beta dokku@app.omu.sh:nokul &&
             git push beta master
 
+# build flow
 workflows:
   version: 2
-  build-and-deploy:
+  build-test-and-deploy:
     jobs:
-      - build
+      - checkout_code
+      - bundle_dependencies:
+          requires:
+            - checkout_code
+      - bundle_assets:
+          requires:
+            - bundle_dependencies
+      - rake_test:
+          requires:
+            - bundle_assets
+      - karma:
+          requires:
+            - bundle_assets
       - deploy:
           requires:
-            - build
+            - karma
           filters:
             branches:
               only: master
