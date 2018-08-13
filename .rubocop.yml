@@ -24,6 +24,9 @@ Metrics/AbcSize:
 Metrics/BlockLength:
   Exclude:
     - lib/tasks/**/*.rake # Won't fix
+Metrics/ClassLength:
+  Exclude:
+    - test/**/*.rb
 
 # Do not exclude files from ALL COPS unless it's really necessary!
 AllCops:
