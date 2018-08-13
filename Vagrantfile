@@ -49,10 +49,6 @@ Vagrant.configure('2') do |config|
 
   config.vm.define 'paas', autostart: false do |paas|
     paas.vm.box = 'omu/debian-stable-paas'
-
-    paas.vm.provider 'virtualbox' do |vb|
-      vb.memory = '2048'
-    end
   end
 end
 # rubocop:enable Metrics/BlockLength
