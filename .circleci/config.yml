@@ -91,6 +91,8 @@ jobs:
       - restore_cache:
           <<: *restore_yarn
       - run: bundle --path vendor/bundle
+      - run: bundle install
+      - run: bin/yarn install
       - run: bundle exec rake db:create db:schema:load
       - run: bundle exec rake test
   karma:
@@ -103,6 +105,8 @@ jobs:
       - restore_cache:
           <<: *restore_yarn
       - run: bundle --path vendor/bundle
+      - run: bundle install
+      - run: bin/yarn install
       - run: bundle exec rake quality:rails
       - run: bundle exec rake security:all
   deploy:
