@@ -60,6 +60,11 @@ Rails.application.routes.draw do
     end
   end
 
+  scope module: :account do
+    get '/profile', to: 'profile#edit'
+    post '/profile', to: 'profile#update'
+  end
+
   # public profiles
   get '/profiles/:id', to: 'public_profile#show'
   get '/profiles/:id/vcard',  to: 'public_profile#vcard', as: :profile_vcard
