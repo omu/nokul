@@ -141,7 +141,7 @@ paas # only on the first deploy
 dokku config:set RAILS_MASTER_KEY=xxxxxxxxx # You have to have the MASTER KEY
 git push dokku <branch_adı>:master
 dokku run rails db:seed
-dokku ps:scale nokul worker=1
+dokku ps:scale worker=1
 ```
 
 ## License
