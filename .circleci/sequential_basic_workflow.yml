@@ -3,11 +3,10 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/nokul
     docker:
       - image: circleci/ruby:latest-node-browsers
         environment:
-          TZ: '/usr/share/zoneinfo/Asia/Baghdad'
+          TZ: '/usr/share/zoneinfo/Asia/Istanbul'
           RAILS_ENV: test
           RACK_ENV: test
           RDS_USERNAME: nokul
