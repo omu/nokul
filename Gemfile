@@ -17,6 +17,7 @@ gem 'ancestry'
 
 # active-storage
 gem 'aws-sdk-s3', require: false
+gem 'azure-storage', require: false
 gem 'image_processing', '~> 1.0'
 
 # authentication

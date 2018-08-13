@@ -45,6 +45,7 @@ class EmployeeTest < ActiveSupport::TestCase
   test 'an employee have defined scopes for active and passive situation' do
     assert users(:serhat).employees.active
     assert users(:serhat).employees.passive
+    assert users(:serhat).employees.academic
   end
 
   # employee validator

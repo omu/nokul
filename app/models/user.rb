@@ -14,6 +14,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
   # relations
+  has_one_attached :avatar
   has_many :employees, dependent: :destroy
   has_many :students, dependent: :destroy
   has_many :identities, dependent: :destroy
@@ -33,8 +34,9 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :id_number, presence: true, uniqueness: true, numericality: { only_integer: true }, length: { is: 11 }
   validates_with EmailAddress::ActiveRecordValidator, field: :email
+  validates_with ImageValidator, field: :avatar, if: proc { |a| a.avatar.attached? }
 
-  # background jobs
+  # callbacks
   after_create_commit :build_address_information, if: proc { addresses.formal.empty? }
   after_create_commit :build_identity_information, if: proc { identities.formal.empty? }
 
@@ -45,6 +47,19 @@ class User < ApplicationRecord
   def build_identity_information
     KpsIdentitySaveJob.perform_later(self)
   end
+
+  # store accessors
+  store :profile_preferences, accessors: %i[
+    phone_number
+    extension_number
+    website
+    twitter
+    linkedin
+    skype
+    orcid
+    public_photo
+    public_studies
+  ], coder: JSON
 
   # permalinks
   extend FriendlyId
