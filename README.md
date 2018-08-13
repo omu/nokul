@@ -136,9 +136,8 @@ bin/rails app:update
 ## Local Dokku Deployment
 
 ```bash
-vagrant up paas
-paas # only on the first deploy
-dokku config:set RAILS_MASTER_KEY=xxxxxxxxx # You have to have the MASTER KEY
+vagrant up paas --provider=virtualbox
+RAILS_MASTER_KEY=xxxxxxxxx paas # only on the first deploy
 git push dokku <branch_adı>:master
 dokku run rails db:seed
 dokku ps:scale worker=1
