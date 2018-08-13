@@ -75,3 +75,23 @@ en:
         warning: Position could not be deleted.
       update:
         success: Position successfully updated.
+    profile:
+      edit:
+        profile_settings: Profile Settings
+        visiblity_settings: Visiblity Settings
+        phone_number: Phone Number
+        extension_number: Extension Number
+        website: Website
+        twitter: Twitter Username
+        linkedin: Linkedin Username
+        skype: Skype Username
+        orcid: ORCID
+        public_photo: Show picture on my profile
+        public_studies: Show academic studies on my profile
+      update:
+        success: Profile successfully updated.
+  simple_form:
+    placeholders:
+      user:
+        twitter: twitter.com/
+        linkedin: linkedin.com/
