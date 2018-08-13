@@ -4,6 +4,7 @@ en:
       my_account: My Account
       identities: Identities
       addresses: Addresses
+      profile_settings: Profile Settings
       settings: Settings
       account_settings: Account Settings
       logout: Logout

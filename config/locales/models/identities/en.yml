@@ -31,10 +31,6 @@ en:
       identity:
         create: Create Identity
         update: Update Identity
-  validators:
-    identity:
-      max_formal: You can have up to %{limit} identities related with your user account.
-      max_informal: You can create up to %{limit} informal identities.
   account:
     identities:
       index:

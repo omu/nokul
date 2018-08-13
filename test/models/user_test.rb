@@ -13,6 +13,7 @@ class UserTest < ActiveSupport::TestCase
     addresses
     positions
     administrative_functions
+    avatar
   ].each do |property|
     test "a user can communicate with #{property}" do
       assert users(:serhat).send(property)
@@ -75,6 +76,36 @@ class UserTest < ActiveSupport::TestCase
       fake.email = email
       assert_not fake.valid?
       assert_not_empty fake.errors[:id_number]
+    end
+  end
+
+  # validations: avatar
+  test 'a user can upload a valid JPG/JPEG/PNG images as avatar' do
+    skip # TODO: https://github.com/rails/rails/issues/33016
+    [
+      ['valid_jpg_picture.jpg', 'image/jpg'],
+      ['valid_jpeg_picture.jpeg', 'image/jpeg'],
+      ['valid_png_picture.png', 'image/png']
+    ].each do |mime_type|
+      assert_difference 'ActiveStorage::Attachment.count' do
+        users(:serhat).avatar.attach!(file_fixture(mime_type.first))
+        assert users(:serhat).avatar.attached?
+      end
+    end
+  end
+
+  test 'a user can not try media type spoofing' do
+    skip # TODO: https://github.com/rails/rails/issues/33016
+    [
+      ['invalid_sh_file.jpg', 'image/jpg'],
+      ['invalid_xml_file.jpg', 'image/jpg'],
+      ['invalid_small_picture.jpg', 'image/jpg'],
+      ['invalid_big_picture.jpg', 'image/jpg']
+    ].each do |mime_type|
+      assert_no_difference 'ActiveStorage::Attachment.count' do
+        users(:serhat).avatar.attach(file_fixture(mime_type.first))
+        assert_not users(:serhat).avatar.attached?
+      end
     end
   end
 

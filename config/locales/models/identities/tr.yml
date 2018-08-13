@@ -31,10 +31,6 @@ tr:
       identity:
         create: Kimliği Kaydet
         update: Kimliği Güncelle
-  validators:
-    identity:
-      max_formal: Kullanıcı hesabınıza ilişkin en fazla %{limit} tane kimliğiniz olabilir.
-      max_informal: En fazla %{limit} tane kimlik oluşturabilirsiniz.
   account:
     identities:
       index:
