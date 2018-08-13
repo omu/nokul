@@ -1,0 +1,160 @@
+# Parallel Jobs Workflow
+
+# environment variables
+postgres_environment: &postgres_environment
+  environment:
+    POSTGRES_DB: nokul_test
+    POSTGRES_USER: nokul
+    POSTGRES_PASSWORD: nokul
+rails_environment: &rails_environment
+  environment:
+    TZ: '/usr/share/zoneinfo/Asia/Istanbul'
+    RAILS_ENV: test
+    RACK_ENV: test
+    RDS_USERNAME: nokul
+    RDS_PASSWORD: nokul
+    RDS_HOSTNAME: localhost
+    RDS_PORT: 5432
+    BUNDLE_JOBS: 4
+
+# cache keys
+bundle_keys: &bundle_keys
+  keys:
+    - nokul-bundle-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+    - nokul-bundle-{{ .Branch }}
+    - nokul-bundle
+yarn_keys: &yarn_keys
+  keys:
+    - nokul-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
+    - nokul-yarn-{{ .Branch }}
+    - nokul-yarn
+
+# common flow steps
+build_steps: &build_steps
+  - restore_cache:
+      <<: *bundle_keys
+  - run: bundle install --path vendor/bundle
+  - save_cache:
+      key: nokul-bundle-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+      paths:
+        - vendor/bundle
+  - restore_cache:
+      <<: *yarn_keys
+  - run: bin/yarn install
+  - save_cache:
+      key: nokul-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      paths:
+        - node_modules/
+  - run: bundle exec rake quality:rails
+  - run: bundle exec rake security:all
+  - run: bundle exec rake db:migrate
+  - run: bundle exec rake test
+
+# build jobs
+version: 2
+jobs:
+  build_2_4_4:
+    docker:
+      - image: circleci/ruby:2.4.4-node-browsers
+        <<: *rails_environment
+      - image: circleci/postgres:9.5.14-alpine
+        <<: *postgres_environment
+    steps:
+      - checkout
+      - run:
+          name: Echo ruby 2.4.4
+          command: |
+            echo "2.4.4" > .ruby-version
+      - restore_cache:
+          <<: *bundle_keys
+      - run: bundle install --path vendor/bundle
+      - save_cache:
+          key: nokul-bundle-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+      - restore_cache:
+          <<: *yarn_keys
+      - run: bin/yarn install
+      - save_cache:
+          key: nokul-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules/
+      - run: bundle exec rake quality:rails
+      - run: bundle exec rake security:all
+      - run: bundle exec rake db:migrate
+      - run: bundle exec rake test
+  build_2_5_1:
+    docker:
+      - image: circleci/ruby:2.5.1-node-browsers
+        <<: *rails_environment
+      - image: circleci/postgres:9.6.10-alpine
+        <<: *postgres_environment
+    steps:
+      - checkout
+      - run:
+          name: Echo ruby 2.5.1
+          command: |
+            echo "2.5.1" > .ruby-version
+      - restore_cache:
+          <<: *bundle_keys
+      - run: bundle install --path vendor/bundle
+      - save_cache:
+          key: nokul-bundle-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+      - restore_cache:
+          <<: *yarn_keys
+      - run: bin/yarn install
+      - save_cache:
+          key: nokul-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules/
+      - run: bundle exec rake quality:rails
+      - run: bundle exec rake security:all
+      - run: bundle exec rake db:migrate
+      - run: bundle exec rake test
+  build_2_6_0_preview2:
+    docker:
+      - image: circleci/ruby:2.6.0-preview2-node-browsers
+        <<: *rails_environment
+      - image: circleci/postgres:10.5-alpine
+        <<: *postgres_environment
+    steps:
+      - checkout
+      - run:
+          name: Echo ruby 2.6.0-preview2
+          command: |
+            echo "2.6.0-preview2" > .ruby-version
+      - restore_cache:
+          <<: *bundle_keys
+      - run: bundle install --path vendor/bundle
+      - save_cache:
+          key: nokul-bundle-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+      - restore_cache:
+          <<: *yarn_keys
+      - run: bin/yarn install
+      - save_cache:
+          key: nokul-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules/
+      - run: bundle exec rake quality:rails
+      - run: bundle exec rake security:all
+      - run: bundle exec rake db:migrate
+      - run: bundle exec rake test
+
+# build flow
+workflows:
+  version: 2
+  build-test-and-deploy:
+    jobs:
+      - build_2_4_4
+      - build_2_5_1
+      - build_2_6_0_preview2
+      - deploy:
+          requires:
+            - build_2_5_1
+          filters:
+            branches:
+              only: master
