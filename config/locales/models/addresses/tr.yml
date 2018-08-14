@@ -20,10 +20,6 @@ tr:
       address:
         create: Adresi Kaydet
         update: Adresi Güncelle
-  validators:
-    address:
-      max_formal: En fazla %{limit} tane ikamet adresi ekleyebilirsiniz.
-      max_informal: En fazla %{limit} tane adres ekleyebilirsiniz.
   account:
     addresses:
       index:

@@ -2,8 +2,6 @@
 
 source 'https://rubygems.org'
 
-ruby '2.5.1'
-
 # core
 gem 'bootsnap', '>= 1.1.0', require: false # Reduces boot times through caching; required in config/boot.rb
 gem 'pg'
@@ -17,6 +15,8 @@ gem 'ancestry'
 
 # active-storage
 gem 'aws-sdk-s3', require: false
+gem 'azure-storage', require: false
+gem 'image_processing', '~> 1.0'
 
 # authentication
 gem 'devise'

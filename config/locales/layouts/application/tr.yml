@@ -2,8 +2,9 @@ tr:
   layouts:
     application:
       my_account: Hesabım
-      identities: Kimlik Bilgilerim
-      addresses: Adres Bilgilerim
+      identities: Kimlik Bilgileri
+      addresses: Adres Bilgileri
+      profile_settings: Profil Ayarları
       settings: Ayarlar
       account_settings: Hesap Ayaları
       logout: Çıkış Yap
