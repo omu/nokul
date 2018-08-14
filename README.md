@@ -133,6 +133,15 @@ bin/rails app:update
 
 **Run only if you know what you are doing!**
 
+## Local Dokku Deployment
+
+```bash
+vagrant up paas --provider=virtualbox
+RAILS_MASTER_KEY=xxxxxxxxx paas # only on the first deploy
+git push dokku <branch_adı>:master
+dokku run rails db:seed
+```
+
 ## License
 
 Read [LICENSE](LICENSE.md) for details.
