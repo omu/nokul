@@ -24,6 +24,9 @@ Metrics/AbcSize:
 Metrics/BlockLength:
   Exclude:
     - lib/tasks/**/*.rake # Won't fix
+Metrics/ClassLength:
+  Exclude:
+    - test/**/*.rb
 
 # Do not exclude files from ALL COPS unless it's really necessary!
 AllCops:
@@ -40,3 +43,4 @@ AllCops:
     - config/routes.rb
     - app/services/kps/omu/adres.rb # WIP
     - app/services/kps/omu/kimlik.rb # WIP
+    - Vagrantfile

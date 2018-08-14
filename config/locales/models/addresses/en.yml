@@ -20,10 +20,6 @@ en:
       address:
         create: Save the Address
         update: Update the Address
-  validators:
-    address:
-      max_formal: You can have up to %{limit} formal addresses maximum.
-      max_informal: You can add up to %{limit} addresses maximum.
   account:
     addresses:
       index:
