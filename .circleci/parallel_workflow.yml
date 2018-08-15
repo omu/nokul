@@ -59,12 +59,10 @@ jobs:
         <<: *rails_environment
       - image: circleci/postgres:9.5.14-alpine
         <<: *postgres_environment
+    environment:
+      CUSTOM_RUBY_VERSION: 2.4.4
     steps:
       - checkout
-      - run:
-          name: Echo ruby 2.4.4
-          command: |
-            echo "2.4.4" > .ruby-version
       - restore_cache:
           <<: *bundle_keys
       - run: bundle install --path vendor/bundle
@@ -89,12 +87,10 @@ jobs:
         <<: *rails_environment
       - image: circleci/postgres:9.6.10-alpine
         <<: *postgres_environment
+    environment:
+      CUSTOM_RUBY_VERSION: 2.5.1
     steps:
       - checkout
-      - run:
-          name: Echo ruby 2.5.1
-          command: |
-            echo "2.5.1" > .ruby-version
       - restore_cache:
           <<: *bundle_keys
       - run: bundle install --path vendor/bundle
@@ -119,12 +115,10 @@ jobs:
         <<: *rails_environment
       - image: circleci/postgres:10.5-alpine
         <<: *postgres_environment
+    environment:
+      CUSTOM_RUBY_VERSION: 2.6.0-preview2
     steps:
       - checkout
-      - run:
-          name: Echo ruby 2.6.0-preview2
-          command: |
-            echo "2.6.0-preview2" > .ruby-version
       - restore_cache:
           <<: *bundle_keys
       - run: bundle install --path vendor/bundle
