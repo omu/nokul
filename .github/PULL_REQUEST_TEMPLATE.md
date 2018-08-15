@@ -21,6 +21,9 @@ Bu PR merge edildiğinde sunucular üzerinde bir değişiklik (paket kurulması,
 * [ ] Yaptığınız iş/değişikliğin testlerini yazdınız mı?
 * [ ] Test coverage oranını kontrol ettiniz mi?
 * [ ] Kod kalitesi (karma) ve test suite dahil olmak üzere tüm entegre kontroller başarıyla geçiyor mu?
+* [ ] Kendinizi bu PR'e assign ettiniz mi?
+* [ ] Yaptığınız iş/değişiklik ile ilgili **tüm** proje üyelerinden review talep ettiniz mi?
+* [ ] Gerekli etiketleri (bug, feature-step, help-wanted vb.) girdiniz mi?
 
 **Ek içerik**
 Kaynaklar, dış bağlantılar, ekran görüntüleri, örnek çözümler ve benzeri diğer kaynakları ekleyiniz.
