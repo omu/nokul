@@ -5,7 +5,7 @@ about: Tespit ettiğiniz hataları, beklenen dışında çalışan özelliklerin
 ---
 
 **Hatayı ve/veya bug'ı açıklayın**
-Kısa ve net bir şekilde hatanın ne olduğunu açıklanmalıdır.
+Kısa ve net bir şekilde hatanın ne olduğu açıklanmalıdır.
 
 **Tekrarlama adımları**
 Hatayı tekrarlama için takip edilmesi gereken adımlar:
@@ -39,7 +39,7 @@ Bu iş kaydının size atanmasını istiyor musunuz* Yardımına/bilgisine ihtiy
 **Kontrol listesi**
 
 * [ ] İş kaydınızın başlığı kurallara (sadece ilk harf büyük, emir kipinde problem cümlesi vb.) uygun mu?
-* [ ] [Katkı sağlama dökümanını](https://github.com/omu/nokul/CONTRIBUTING.md) okudunuz mu?
+* [ ] [Katkı sağlama dokümanını](https://github.com/omu/nokul/CONTRIBUTING.md) okudunuz mu?
 * [ ] Öneriniz ile alakalı açık olarak bekleyen bir [issue](https://github.com/omu/nokul/issues) veya [pull request](https://github.com/omu/nokul/pulls) var mı?
 
 **Ek içerik**
