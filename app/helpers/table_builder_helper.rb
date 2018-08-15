@@ -11,32 +11,34 @@ module TableBuilderHelper
     end
 
     def transform_headers
-      if i18n
-        headers.map { |header| I18n.t(".#{header}", scope: i18n_scope) }
-      else
-        headers.map { |header| header.to_s.humanize }
-      end
+      headers.map { |header| t(header) }
     end
 
     def table_html_class
       'table table-responsive-sm table-striped table-hover'
+    end
+
+    private
+
+    def t(attribute)
+      return attribute.to_s.humanize unless i18n
+      I18n.t(".#{attribute}", scope: i18n_scope)
     end
   end
 
   # Table Builder:
   #
   # @example
-  # table(
-  #  schema: {
-  #    name: :string,
-  #    unit: ->(obj){ obj.unit.try(:name) },
-  #    status: :enum
-  #  },
-  #  actions: ->(obj){ link_to_actions(@unit, obj)},
-  #  collection: @courses
-  # )
+  # table(schema: {
+  #         name: :string,
+  #         unit: ->(obj) { obj.unit.try(:name) },
+  #         status: :enum
+  #       },
+  #       actions: ->(obj) { link_to_actions(@unit, obj) },
+  #       collection: @courses,
+  #       i18n: true)
   def table(config = {})
-    config[:i18n_scope] = @virtual_path.split('/')
+    config[:i18n_scope] = @virtual_path.to_s.split('/')
     opts = TableOption.new(config)
     tag.table class: opts.table_html_class do
       create_thead(opts) + create_tbody(opts)
@@ -61,12 +63,8 @@ module TableBuilderHelper
   end
 
   def create_tr_content(object, schema, actions)
-    elements = schema.map do |key, type|
-      content = case type
-                when :string then object[key.to_sym]
-                when :enum then enum_t(object, key)
-                when Proc then type.call(object)
-                end
+    elements = schema.map do |attribute, type|
+      content = set_content(object, attribute, type)
       td(content)
     end
     elements << create_action_links(object, actions)
@@ -76,6 +74,14 @@ module TableBuilderHelper
   def create_action_links(object, actions)
     return '' unless actions.is_a?(Proc)
     td(actions.call(object))
+  end
+
+  def set_content(object, attribute, type)
+    case type
+    when :string then object[attribute.to_sym]
+    when :enum then enum_t(object, attribute)
+    when Proc then type.call(object)
+    end
   end
 
   def th(content)
