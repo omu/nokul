@@ -59,6 +59,8 @@ Harici servisler yalnızca BAUM-VPN'e açıktır. Geliştirme yaparken ihtiyaç 
 
 - Arka plan görevleri için `sidekiq`'i çalıştırın (`bundle exec sidekiq -q high -q low`).
 
+- [Stil](https://github.com/omu/nokul/docs/style/) kurallarını dikkatlice gözden geçirin.
+
 - Kod üzerinde değişiklikleri yapın.
 
 - [Commit](https://github.com/omu/nokul/docs/git/commit.md) kurallarını dikkatlice gözden geçirin.
