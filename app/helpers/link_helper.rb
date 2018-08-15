@@ -1,6 +1,21 @@
 # frozen_string_literal: true
 
 module LinkHelper
+  # Dynamic link builder for show, edit and destroy
+  #
+  # @example
+  #   link_to_actions(@unit, course)
+  #   link_to_actions(@unit, course, only: %i[show])
+  def link_to_actions(*objects, only: %i[show edit destroy])
+    only = only.inquiry
+    links = []
+    links << link_to_show(objects) if only.show?
+    links << link_to_edit([:edit, *objects]) if only.edit?
+    links << link_to_destroy(objects) if only.destroy?
+
+    tag.div safe_join(links), class: 'btn-group', role: 'group'
+  end
+
   def link_to_back(path = nil, text = t('action_group.back'))
     link_to(
       fa_icon('arrow-left', text: text),
