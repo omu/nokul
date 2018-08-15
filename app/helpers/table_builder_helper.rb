@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module TableBuilderHelper
-  TableOption = Struct.new(:schema, :actions, :collection, :i18n, keyword_init: true) do
+  TableOption = Struct.new(:schema, :actions, :collection, :i18n, :i18n_scope, keyword_init: true) do
     def headers
       schema.keys
     end
@@ -12,7 +12,7 @@ module TableBuilderHelper
 
     def transform_headers
       if i18n
-        headers.map { |header| t(".#{header}") }
+        headers.map { |header| I18n.t(".#{header}", scope: i18n_scope) }
       else
         headers.map { |header| header.to_s.humanize }
       end
@@ -36,6 +36,7 @@ module TableBuilderHelper
   #  collection: @courses
   # )
   def table(config = {})
+    config[:i18n_scope] = @virtual_path.split('/')
     opts = TableOption.new(config)
     tag.table class: opts.table_html_class do
       create_thead(opts) + create_tbody(opts)
