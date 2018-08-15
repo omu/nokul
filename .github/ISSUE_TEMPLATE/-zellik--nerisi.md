@@ -15,6 +15,7 @@ Konuyla veya sunduğunuz çözümle ilgili düşündüğünüz diğer alternatif
 
 **Katkı sağlama**
 Bu iş kaydının size atanmasını istiyor musunuz* Yardımına/bilgisine ihtiyaç duyduğunuz diğer ekip üyeleri varsa burada nasıl bir yardıma ihtiyaç duyduğunuzu belirtin.
+* [ ] Evet, bu iş kaydının bana atanmasını istiyorum.
 
 **Kontrol listesi**
 
