@@ -4,7 +4,7 @@
 ----------------
 
 - Projenin yayında bulunan sürümü `master` branch'inde bulunmaktadır.
-- Projenin aktif geliştirme alan kararlı sürümü `develop` branch'inde bulunmaktadır.
+- Projenin aktif geliştirme yapılan kararlı sürümü `develop` branch'inde bulunmaktadır.
 - `develop` branch'i sürüm yöneticisi (release manager) tarafından uygun görülen zamanlarda `master`'a merge edilerek yayına alınır. Dolayısıyla `develop` branch'i her zaman `master`'dan daha güncel ve önde gitmektedir.
 - Geliştiriciler sağlayacakları her türlü katkı için (ufak bir imla düzeltmesi dahil) kendi branch'lerini oluşturmalıdır.
 -  `master` ve `develop` branch'leri protected branch'ler olup geliştiriciler bu branch'lere doğrudan commit push edemezler.
