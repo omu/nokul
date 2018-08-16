@@ -15,32 +15,40 @@ rails_environment: &rails_environment
     RDS_PASSWORD: nokul
     RDS_HOSTNAME: localhost
     RDS_PORT: 5432
+    BUNDLE_JOBS: 4
 
 # cache keys
-restore_bundle_keys: &restore_bundle_keys
+bundle_keys: &bundle_keys
   keys:
     - nokul-bundle-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
-    - nokul-bundle-{{ checksum "Gemfile.lock" }}
-restore_yarn_keys: &restore_yarn_keys
+    - nokul-bundle-{{ .Branch }}
+    - nokul-bundle
+yarn_keys: &yarn_keys
   keys:
     - nokul-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
-    - nokul-yarn-{{ checksum "yarn.lock" }}
-save_bundle_keys: &save_bundle_keys
-  key: nokul-bundle-{{ checksum "Gemfile.lock" }}
-  paths:
-    - vendor/bundle
-save_bundle_branch_keys: &save_bundle_branch_keys
-  key: nokul-bundle-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
-  paths:
-    - vendor/bundle
-save_yarn_keys: &save_yarn_keys
-  key: nokul-yarn-{{ checksum "yarn.lock" }}
-  paths:
-    - node_modules/
-save_yarn_branch_keys: &save_yarn_branch_keys
-  key: nokul-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
-  paths:
-    - node_modules/
+    - nokul-yarn-{{ .Branch }}
+    - nokul-yarn
+
+# common flow steps
+build_steps: &build_steps
+  - restore_cache:
+      <<: *bundle_keys
+  - run: bundle install --path vendor/bundle
+  - save_cache:
+      key: nokul-bundle-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+      paths:
+        - vendor/bundle
+  - restore_cache:
+      <<: *yarn_keys
+  - run: bin/yarn install
+  - save_cache:
+      key: nokul-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      paths:
+        - node_modules/
+  - run: bundle exec rake quality:rails
+  - run: bundle exec rake security:all
+  - run: bundle exec rake db:migrate
+  - run: bundle exec rake test
 
 # build jobs
 version: 2
@@ -58,19 +66,19 @@ jobs:
           command: |
             echo "2.4.4" > .ruby-version
       - restore_cache:
-          <<: *restore_bundle_keys
+          <<: *bundle_keys
       - run: bundle install --path vendor/bundle
       - save_cache:
-          <<: *save_bundle_keys
-      - save_cache:
-          <<: *save_bundle_branch_keys
+          key: nokul-bundle-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
       - restore_cache:
-          <<: *restore_yarn_keys
+          <<: *yarn_keys
       - run: bin/yarn install
       - save_cache:
-          <<: *save_yarn_keys
-      - save_cache:
-          <<: *save_yarn_branch_keys
+          key: nokul-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules/
       - run: bundle exec rake quality:rails
       - run: bundle exec rake security:all
       - run: bundle exec rake db:migrate
@@ -88,19 +96,19 @@ jobs:
           command: |
             echo "2.5.1" > .ruby-version
       - restore_cache:
-          <<: *restore_bundle_keys
+          <<: *bundle_keys
       - run: bundle install --path vendor/bundle
       - save_cache:
-          <<: *save_bundle_keys
-      - save_cache:
-          <<: *save_bundle_branch_keys
+          key: nokul-bundle-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
       - restore_cache:
-          <<: *restore_yarn_keys
+          <<: *yarn_keys
       - run: bin/yarn install
       - save_cache:
-          <<: *save_yarn_keys
-      - save_cache:
-          <<: *save_yarn_branch_keys
+          key: nokul-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules/
       - run: bundle exec rake quality:rails
       - run: bundle exec rake security:all
       - run: bundle exec rake db:migrate
@@ -118,19 +126,19 @@ jobs:
           command: |
             echo "2.6.0-preview2" > .ruby-version
       - restore_cache:
-          <<: *restore_bundle_keys
+          <<: *bundle_keys
       - run: bundle install --path vendor/bundle
       - save_cache:
-          <<: *save_bundle_keys
-      - save_cache:
-          <<: *save_bundle_branch_keys
+          key: nokul-bundle-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
       - restore_cache:
-          <<: *restore_yarn_keys
+          <<: *yarn_keys
       - run: bin/yarn install
       - save_cache:
-          <<: *save_yarn_keys
-      - save_cache:
-          <<: *save_yarn_branch_keys
+          key: nokul-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules/
       - run: bundle exec rake quality:rails
       - run: bundle exec rake security:all
       - run: bundle exec rake db:migrate
