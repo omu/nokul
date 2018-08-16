@@ -70,6 +70,7 @@ end
 group :development do
   gem 'bullet'
   gem 'bundler-audit'
+  gem 'fit-commit'
   gem 'letter_opener'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'

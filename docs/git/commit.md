@@ -1,5 +1,7 @@
 # Commit
 
+- Projeyi `bundle` ettikten sonra `fit-commit` git hook'larını kurun: `fit-commit install`
+
 - Her bir commit'in kendi içerisinde anlamsal bir bütünlüğe sahip olması için özen gösterin. Yaptığınız tüm değişiklikleri tek bir commit mesajı ile commitlemeyin.
 
 - Her bir commit yalnızca tek anlamsal değişikliği ifade etmeli. Örneğin hem bir bug'ı düzelttiniz, hem de renki hatalı olan bir butonun rengini düzelttiyseniz bunları ayrı ayrı commitleyin.
