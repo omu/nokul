@@ -5,14 +5,24 @@ require 'test_helper'
 class LinkHelperTest < ActionView::TestCase
   include FontAwesome::Rails::IconHelper
 
-  test '#link_to_back' do
+  test 'link_to_actions method' do
+    unit = Unit.first
+    links = '<div class="btn-group" role="group">'
+    links += link_to_show(unit)
+    links += link_to_edit([:edit, unit])
+    links += link_to_destroy(unit)
+    links += '</div>'
+    assert_equal link_to_actions(unit), links
+  end
+
+  test 'link_to_back method' do
     link = <<-HTML.squish
       <a class="btn btn-secondary btn-sm" href="#"><i class="fa fa-arrow-left"></i> Back</a>
     HTML
     assert_equal link_to_back('#', 'Back'), link
   end
 
-  test '#link_to_destroy' do
+  test 'link_to_destroy method' do
     link = <<-HTML.squish
       <a data-confirm="#{t('are_you_sure')}"
          class="btn btn-outline-danger btn-sm"
@@ -21,34 +31,30 @@ class LinkHelperTest < ActionView::TestCase
     assert_equal link_to_destroy('#', 'Test Destroy'), link
   end
 
-  test '#link_to_edit' do
+  test 'link_to_edit method' do
     link = <<-HTML.squish
-      <a class="btn btn-outline-success btn-sm"
-         href="#"><i class="fa fa-pencil"></i> Test Edit</a>
+      <a class="btn btn-outline-success btn-sm" href="#"><i class="fa fa-pencil"></i> Test Edit</a>
     HTML
     assert_equal link_to_edit('#', 'Test Edit'), link
   end
 
-  test '#link_to_new' do
+  test 'link_to_new method' do
     link = <<-HTML.squish
-      <a class="btn btn-outline-primary btn-sm" id="add-button"
-         href="#"><i class="fa fa-plus"></i> Test New</a>
+      <a class="btn btn-outline-primary btn-sm" id="add-button" href="#"><i class="fa fa-plus"></i> Test New</a>
     HTML
     assert_equal link_to_new('#', 'Test New'), link
   end
 
-  test '#link_to_show' do
+  test 'link_to_show method' do
     link = <<-HTML.squish
-      <a class="btn btn-outline-info btn-sm"
-         href="#"><i class="fa fa-eye"></i> Test Show</a>
+      <a class="btn btn-outline-info btn-sm" href="#"><i class="fa fa-eye"></i> Test Show</a>
     HTML
     assert_equal link_to_show('#', 'Test Show'), link
   end
 
-  test '#link_to_update' do
+  test 'link_to_update method' do
     link = <<-HTML.squish
-      <a class="btn btn-outline-info btn-sm"
-        href="#"><i class="fa fa-pencil-square-o"></i> Test Update</a>
+      <a class="btn btn-outline-info btn-sm" href="#"><i class="fa fa-pencil-square-o"></i> Test Update</a>
     HTML
     assert_equal link_to_update('#', 'Test Update'), link
   end
