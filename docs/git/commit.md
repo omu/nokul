@@ -4,7 +4,7 @@
 
 - Her bir commit'in kendi içerisinde anlamsal bir bütünlüğe sahip olması için özen gösterin. Yaptığınız tüm değişiklikleri tek bir commit mesajı ile commitlemeyin.
 
-- Her bir commit yalnızca tek anlamsal değişikliği ifade etmeli. Örneğin hem bir bug'ı düzelttiniz, hem de renki hatalı olan bir butonun rengini düzelttiyseniz bunları ayrı ayrı commitleyin.
+- Her bir commit yalnızca tek anlamsal değişikliği ifade etmeli. Örneğin hem bir bug'ı düzelttiniz, hem de rengi hatalı olan bir butonun rengini düzelttiyseniz bunları ayrı ayrı commitleyin.
 
 - Erken ve sık aralıklarla commit edin. Küçük ve bağımsız commitlerin anlaşılması ve eski haline döndürülmesi bir şeylerin yanlış gitmesi durumunda daha kolaydır.
 
@@ -17,7 +17,7 @@ DOĞRU: git commit
 
 Güzel bir commit mesajının 7 altın kuralını takip edin:
 
-1. Commit başlığı ve gözdesini boş bir satırla ayırın
+1. Commit başlığı ve gövdesini boş bir satırla ayırın
 1. Commit başlığını 72 karakterle sınırlayın
 1. Başlığın ilk harfini büyük harf yapın
 1. Başlık cümlesini nokta işareti ile bitirmeyin
@@ -37,7 +37,7 @@ YANLIŞ: add authorization roles as admin and user
 DOĞRU: Add authorization roles as admin and user
 ```
 
-- Commit başlığını en fazla 72 karakterden, tercihen ise 50 karakterden oluşacak şekilde düzenleyin.
+- Commit başlığını en fazla 72 karakter, tercihen 50 karakterden oluşacak şekilde düzenleyin.
 
 ```
 YANLIŞ: Add authorization roles as admin and user, so that people can get roles in other controllers and admins can assign roles to other users.
