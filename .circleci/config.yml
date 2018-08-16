@@ -25,13 +25,11 @@ defaults: &defaults
 restore_bundle: &restore_bundle
   keys:
     - nokul-bundle-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
-    - nokul-bundle-{{ .Branch }}
-    - nokul-bundle
+    - nokul-bundle-{{ checksum "Gemfile.lock" }}
 restore_yarn: &restore_yarn
   keys:
     - nokul-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
-    - nokul-yarn-{{ .Branch }}
-    - nokul-yarn
+    - nokul-yarn-{{ checksum "yarn.lock" }}
 repository: &repository
   key: nokul-repo-{{ .Environment.CIRCLE_SHA1 }}
 
@@ -67,6 +65,10 @@ jobs:
           key: nokul-bundle-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
+      - save_cache:
+          key: nokul-bundle-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
   bundle_assets:
     <<: *ruby_2_5_1
     steps:
@@ -79,6 +81,10 @@ jobs:
       - run: bin/yarn install
       - save_cache:
           key: nokul-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules/
+      - save_cache:
+          key: nokul-yarn-{{ checksum "yarn.lock" }}
           paths:
             - node_modules/
   rake_test:
