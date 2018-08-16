@@ -15,11 +15,6 @@ rails_environment: &rails_environment
     RDS_PASSWORD: nokul
     RDS_HOSTNAME: localhost
     RDS_PORT: 5432
-    BUNDLE_JOBS: 4
-
-# flow defaults
-defaults: &defaults
-  parallelism: 4
 
 # cache keys
 restore_bundle: &restore_bundle
@@ -35,7 +30,6 @@ repository: &repository
 
 # build image
 ruby_2_5_1: &ruby_2_5_1
-  <<: *defaults
   docker:
     - image: circleci/ruby:2.5.1-node-browsers
       <<: *rails_environment
