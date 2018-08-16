@@ -8,15 +8,15 @@ Dealing with ill-structured processes of a university is hard, especially when t
 
 ## Installation
 
-See [installation guide](https://github.com/omu/nokul/development/installation.md) for details.
+See [installation guide](/development/installation.md) for details.
 
 ## Contributing
 
-See [contributing guide](https://github.com/omu/nokul/CONTRIBUTING.md) for details.
+See [contributing guide](/CONTRIBUTING.md) for details.
 
 ## HowTo
 
-See [/docs](https://github.com/omu/nokul/docs) for other documents.
+See [/docs](/docs) for other documents.
 
 ## License
 
@@ -24,4 +24,4 @@ See [LICENSE](LICENSE.md) for details.
 
 ## Authors
 
-Thanks to [contributors](https://github.com/omu/nokul/graphs/contributors).
+Thanks to [contributors](/graphs/contributors).
