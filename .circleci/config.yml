@@ -15,21 +15,29 @@ rails_environment: &rails_environment
     RDS_PASSWORD: nokul
     RDS_HOSTNAME: localhost
     RDS_PORT: 5432
+    BUNDLE_JOBS: 4
+
+# flow defaults
+defaults: &defaults
+  parallelism: 4
 
 # cache keys
 restore_bundle: &restore_bundle
   keys:
     - nokul-bundle-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
-    - nokul-bundle-{{ checksum "Gemfile.lock" }}
+    - nokul-bundle-{{ .Branch }}
+    - nokul-bundle
 restore_yarn: &restore_yarn
   keys:
     - nokul-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
-    - nokul-yarn-{{ checksum "yarn.lock" }}
+    - nokul-yarn-{{ .Branch }}
+    - nokul-yarn
 repository: &repository
   key: nokul-repo-{{ .Environment.CIRCLE_SHA1 }}
 
 # build image
 ruby_2_5_1: &ruby_2_5_1
+  <<: *defaults
   docker:
     - image: circleci/ruby:2.5.1-node-browsers
       <<: *rails_environment
@@ -59,10 +67,6 @@ jobs:
           key: nokul-bundle-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
-      - save_cache:
-          key: nokul-bundle-{{ checksum "Gemfile.lock" }}
-          paths:
-            - vendor/bundle
   bundle_assets:
     <<: *ruby_2_5_1
     steps:
@@ -75,10 +79,6 @@ jobs:
       - run: bin/yarn install
       - save_cache:
           key: nokul-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
-          paths:
-            - node_modules/
-      - save_cache:
-          key: nokul-yarn-{{ checksum "yarn.lock" }}
           paths:
             - node_modules/
   rake_test:
