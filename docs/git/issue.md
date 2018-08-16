@@ -11,7 +11,7 @@ Sağlayacağınız katkıyla alakalı olarak bir iş kaydı açarak:
 
 sağlamış olacaksınız.
 
-Açtığınız iş kaydı üzerinde karara bağlanan iş, size atandıktan sonra ilgili geliştirmeye yapmaya başlayabilirsiniz. Pull request açmadan önce iş kaydı açarak:
+Açtığınız iş kaydı üzerinde karara bağlanan iş size atandıktan sonra geliştirme yapmaya başlayabilirsiniz. Pull request açmadan önce iş kaydı açarak:
 
 - PR'e review yapanları bu PR'in ne iş yaptığı ve buna neden gerek olduğu,
 - PR'in kabul edilmesi durumunda CHANGELOG'a ne yazılacağını ve sürüm notlarında nelerden bahsedileceği
@@ -45,7 +45,7 @@ YANLIŞ: Ders: Ders ekleme sırasında okutulma türünün seçilmesini sağla
 DOĞRU: Ders ekleme sırasında dersin okutulma türü seçilebilmeli
 ```
 
-Hatalı örnekte `prefix` yoluyla kategorizasyona gidilmiş. Eğer bir seri halinde iş kayıtları mevcutsa bunlar bir `milestone` altında gruplanmalı. Ayrıca _seçilmesini sağla_ kelimeleri bir probleme/öneriye işaret etmiyor. _seçilebilmeli_ kelimesi şuan bu özelliğin mevcut olmadığına işaret etmekte. Hatalı örneğin başlığı bir PR için uygun, issue için değil.
+Hatalı örnekte `prefix` yoluyla kategorizasyona gidilmiş. Eğer bir seri halinde iş kayıtları mevcutsa bunlar bir `milestone` altında gruplanmalı. Ayrıca _seçilmesini sağla_ kelimeleri bir probleme/öneriye işaret etmiyor. _seçilebilmeli_ kelimesi şu an bu özelliğin mevcut olmadığına işaret etmekte. Hatalı örneğin başlığı bir PR için uygun, issue için değil.
 
 ```
 YANLIŞ: Ülke, şehir ve ilçe seçimlerinde dynamic select'e ihtiyaç var
@@ -72,7 +72,7 @@ YANLIŞ: katkı sağlama rehberi hazırla
 DOĞRU: Katkı sağlama rehberi hazırla
 ```
 
-İstisna olarak farklı stide yazılması gereken model isimleri (UserDuty), kısaltmalar (YÖK, MEB vb.) hala büyük harfle yazılmalıdır.
+İstisna olarak farklı stilde yazılması gereken model isimleri (UserDuty), kısaltmalar (YÖK, MEB vb.) yine büyük harfle yazılmalıdır.
 
 ## Issue Gövdesi
 ----------------

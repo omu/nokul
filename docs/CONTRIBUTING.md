@@ -6,17 +6,17 @@ Bu rehber bu projeye (bundan sonra [nokul](https://github.com/omu/nokul) olarak 
 
 Nokul'a katkı yaparak Ondokuz Mayıs Üniversitesi [bilişim politikalarını](https://github.com/omu/resmi/tree/master/bilgi-g%C3%BCvenli%C4%9Fi-politikas%C4%B1) ve gelecekte eklenmesi muhtemel yeni politikaları peşinen kabul ettiğinizi beyan etmiş sayılırsınız.
 
-Nokul uygulamanın tüm hakları Ondokuz Mayıs Üniversitesi'ne aittir. Uygulamaya yapacağınız katkıların hakları da Ondokuz Mayıs Üniversitesi'ne ait olacaktır. Nokul projesinde çalışma sorumluluğu bulunmayan kişilerin yaptıkları katkılar tamamen gönüllü katkı olarak değerlendirilecek olup, bu kişilerin yaptıkları katkılar için telif hakkı, ücret, projenin herhangi bir yerinde isminin anılması (mention) gibi herhangi bir istekte bulunma hakları bulunmamaktadır. `Katkı sağlayan` olarak kullanıcı adınız, isminiz, sağladığınız katkı ve katkı sağladığınız tarih gibi bilgiler bu projede herkese açık bir biçimde görüntülenebilir. Nokul'a yapacağınız katkılar Ondokuz Mayıs Üniversitesi'ne ait olacağı için gelecekte yaptığınız katkıların projeden kaldırılmasını talep etme hakkınız bulunmamaktadır.
+Nokul uygulamasının tüm hakları Ondokuz Mayıs Üniversitesine aittir. Uygulamaya yapacağınız katkıların hakları da Ondokuz Mayıs Üniversitesine ait olacaktır. Nokul projesinde çalışma sorumluluğu bulunmayan kişilerin yaptıkları katkılar tamamen gönüllü katkı olarak değerlendirilecek olup, bu kişilerin yaptıkları katkılar için telif hakkı, ücret, projenin herhangi bir yerinde isminin anılması (mention) gibi herhangi bir istekte bulunma hakları bulunmamaktadır. `Katkı sağlayan` olarak kullanıcı adınız, isminiz, sağladığınız katkı ve katkı sağladığınız tarih gibi bilgiler bu projede herkese açık bir biçimde görüntülenebilir. Nokul'a yapacağınız katkılar Ondokuz Mayıs Üniversitesine ait olacağı için gelecekte yaptığınız katkıların projeden kaldırılmasını talep etme hakkınız bulunmamaktadır.
 
-Nokul projesi gelecekte herkese açık (public) bir proje olmayı garanti etmemektedir. Projenin görünürlüğü Ondokuz Mayıs Üniversitesi tarafından gerekli görüldüğü taktirde gizli (private) duruma çekilebilir. Bu durumda sağladığınız katkının kullanılmaya devam edeceğini peşinen kabul etmiş sayılırsınız. Projenin güncel lisansı [LICENCE.md](https://github.com/omu/nokul/blob/develop/LICENSE.md) dosyasında açıkça sunulmuştur.
+Nokul projesi gelecekte herkese açık (public) bir proje olmayı garanti etmemektedir. Projenin görünürlüğü Ondokuz Mayıs Üniversitesi tarafından gerekli görüldüğü taktirde gizli (private) duruma çekilebilir. Bu durumda sağladığınız katkının kullanılmaya devam edeceğini peşinen kabul etmiş sayılırsınız. Projenin güncel lisansı [LICENSE.md](https://github.com/omu/nokul/blob/master/LICENSE.md) dosyasında açıkça sunulmuştur.
 
 ## Güvenlik Açığı Bildirimi
 
-Bu projede herhangi bir güvenlik açığı tespit ederseniz lütfen `baum@omu.edu.tr` adresinden bildirim yapınız. Güvenlik açığı bildirimleri için herkese açık olan `issues` sayfasını kullanmayınız.
+Bu projede herhangi bir güvenlik açığı tespit ederseniz lütfen `security@baum.omu.edu.tr` adresinden bildirim yapınız. Güvenlik açığı bildirimleri için herkese açık olan `issues` sayfasını kullanmayınız.
 
 ## Neye katkı yapabilirim?
 
-İsteyen herkes, projede görebildiği herşeye katkı yapabilir. Projenin kaynak koduna, tasarımına, dökümanlarına, açık iş kayıtlarına, açık katkı taleplerine (pull request) ve diğer kısımlarına katkı yapabilirsiniz.
+İsteyen herkes, projede görebildiği her şeye katkı yapabilir. Projenin kaynak koduna, tasarımına, dokümanlarına, açık iş kayıtlarına, açık katkı taleplerine (pull request) ve diğer kısımlarına katkı yapabilirsiniz.
 
 -----------------------------------
 
@@ -27,12 +27,12 @@ Bu projede herhangi bir güvenlik açığı tespit ederseniz lütfen `baum@omu.e
 
 - Projeye katkı sağlamadan önce, katkı sağlamak istediğiniz konuyla ilişkili bir iş kaydı açın. İş kaydı bulunmayan ve bir iş kaydına atıfta bulunmayan pull request'ler değerlendirmeye alınmayabilir veya geç değerlendirmeye alınabilir.
 
-- [Issue](https://github.com/omu/nokul/docs/git/issue.md) kurallarını dikkatlice gözden geçirin.
+- [Issue](/docs/git/issue.md) kurallarını dikkatlice gözden geçirin.
 
 ### Geliştirme Öncesi
 ---------------------
 
-Bu projenin bazı kısımları gönüllülerden gelecek katkılara açık olmakla birlikte, projenin bazı kısımları bir takım kısıtlı servisler ile haberleşmekte ve çeşitli erişim bilgilerine ihtiyaç duymaktadır.
+Bu projenin bazı kısımları gönüllülerden gelecek katkılara açık olmakla birlikte, projenin bazı kısımları birtakım kısıtlı servisler ile haberleşmekte ve çeşitli erişim bilgilerine ihtiyaç duymaktadır.
 
 - Sırlar
 
@@ -51,39 +51,39 @@ Harici servisler yalnızca BAUM-VPN'e açıktır. Geliştirme yaparken ihtiyaç 
 
 - Projeye yazma yetkiniz varsa projeyi klonlayın, yazma yetkiniz yoksa projeyi `fork` edin.
 
-- [Branch](https://github.com/omu/nokul/docs/git/branch.md) kurallarını dikkatlice gözden geçirin.
+- [Branch](/docs/git/branch.md) kurallarını dikkatlice gözden geçirin.
 
 - Proje klonunda veya kendi `fork`'unuzda, branch kurallarını dikkate alan bir branch oluşturun: `git checkout -b my-awesome-feature`
 
-- [Kurulum dokümanını](https://github.com/omu/nokul/docs/development/installation.md) takip ederek projenin kurulumunu yapın.
+- [Kurulum dokümanını](/docs/development/installation.md) takip ederek projenin kurulumunu yapın.
 
 - Arka plan görevleri için `sidekiq`'i çalıştırın (`bundle exec sidekiq -q high -q low`).
 
-- [Stil](https://github.com/omu/nokul/docs/style/) kurallarını dikkatlice gözden geçirin.
+- [Stil](/docs/style/) kurallarını dikkatlice gözden geçirin.
 
 - Kod üzerinde değişiklikleri yapın.
 
-- [Commit](https://github.com/omu/nokul/docs/git/commit.md) kurallarını dikkatlice gözden geçirin.
+- [Commit](/docs/git/commit.md) kurallarını dikkatlice gözden geçirin.
 
 - Değişiklerinizi commit'leyin.
 
-- [Test Coverage](https://github.com/omu/nokul/docs/development/test-coverage.md) kurallarını dikkatlice gözden geçirin.
+- [Test Coverage](/docs/development/test-coverage.md) kurallarını dikkatlice gözden geçirin.
 
 - Yaptığınız değişikliğin test coverage oranını düşürmediğinden emin olun.
 
 - Değişikliklerinizi push etmeden önce çeşitli kontrolleri gerçekleştiren `pr` rake task'ini çalıştırın (`rake pr`):
 
-- `pr` task'inden hata aldıysanız öncelikle bunları çözün ve commitleyin.
+- `pr` task'inden hata aldıysanız öncelikle bunları çözün ve commit'leyin.
 
 - `pr` task'i başarıyla çalışıyorsa commit'lerinizi kendi branch'inize push edin.
 
 ### Geliştirme Sonrası
 ----------------------
 
-- [Pull Request](https://github.com/omu/nokul/docs/git/pull-request.md) kurallarını dikkatlice gözden geçirin.
+- [Pull Request](/docs/git/pull-request.md) kurallarını dikkatlice gözden geçirin.
 
 - Geliştirmenizi tamamladıktan sonra kendi branch'inizden `develop`'a doğru bir `pull request` (diğer adıyla `merge request`) açın.
 
-- [Review](https://github.com/omu/nokul/docs/git/review.md) kurallarını dikkatlice gözden geçirin.
+- [Review](/docs/git/review.md) kurallarını dikkatlice gözden geçirin.
 
 - Pull request'inizin review sürecinin tamamlanmasını bekleyin.

@@ -6,7 +6,6 @@
 - [Redis](https://packages.debian.org/search?keywords=redis)
 - [libvips](https://github.com/jcupitt/libvips/wiki/Build-for-Ubuntu)
 
-
 ## Installation
 
 - Database configuration file reads username, password and host settings from environment variables. Make sure to define these environment variables before setting up the project. Add environment variables to your .bashrc, .zshrc, .bash_profile etc.:
