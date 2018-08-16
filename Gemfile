@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
+ruby File.read('.ruby-version')
 
 # core
 gem 'bootsnap', '>= 1.1.0', require: false # Reduces boot times through caching; required in config/boot.rb
@@ -70,6 +71,7 @@ end
 group :development do
   gem 'bullet'
   gem 'bundler-audit'
+  gem 'fit-commit'
   gem 'letter_opener'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
