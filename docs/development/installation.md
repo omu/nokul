@@ -39,7 +39,7 @@ yarn install
 
 ```bash
 rake db:create
-rake db:migrata
+rake db:migrate
 rake db:seed
 ```
 
