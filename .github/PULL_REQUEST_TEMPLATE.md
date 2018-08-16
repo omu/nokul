@@ -1,19 +1,24 @@
-**Bu PR'in yaptığı işi/değişikliği ve bu işi/değişikliği neden yaptığını açıklayın**
-Kısa ve net bir şekilde bu PR'e neden ihtiyaç var, ne iş/değişiklik yapıyor açıklanmalıdır.
+**Bu PR'in yaptığı işi/değişikliği ve bu işi/değişikliği neden yaptığını açıklayın:**
 
-**İlgili iş kayıtları**
-Bu PR ile ilişkili iş kayıtlarının ID numaraları (örn. #123456, #123457, #123458) listeleyin.
+[//]: # (Kısa ve net bir şekilde bu PR'e neden ihtiyaç var, ne iş/değişiklik yapıyor açıklanmalıdır.)
 
-**Kapatılacak iş kayıtları**
-Bu PR merge edildiğinde hangi iş kayıtları kapatılacak, `Closes`, `Fixes` gibi anahtar kelimeler ile birlikte ID numaralarını listeleyin.
+**İlgili iş kayıtları:**
 
-**Veritabanı**
-Bu PR merge edildiğinde veritabanı üzerinde herhangi bir değişiklik (migration, seed, add/drop vb.) yapılması gerekecek mi açıklayın.
+[//]: # (Bu PR ile ilişkili iş kayıtlarının ID numaraları, örn. #123456, #123457, #123458, listeleyin.)
 
-**Sistem/Ops**
-Bu PR merge edildiğinde sunucular üzerinde bir değişiklik (paket kurulması, buildpack eklenmesi vb.) yapılması gerekecekmi, açıklayın.
+**Kapatılacak iş kayıtları:**
 
-**Kontrol listesi**
+[//]: # (Bu PR merge edildiğinde hangi iş kayıtları kapatılacak, `Closes`, `Fixes` gibi anahtar kelimeler ile birlikte ID numaralarını listeleyin.)
+
+**Veritabanına etkileri:**
+
+[//]: # (Bu PR merge edildiğinde veritabanı üzerinde herhangi bir değişiklik -migration, seed, add/drop vb.- yapılması gerekecek mi açıklayın.)
+
+**Sistem/Ops etkileri:**
+
+[//]: # (Bu PR merge edildiğinde sunucular üzerinde bir değişiklik - paket kurulması, buildpack eklenmesi vb. - yapılması gerekecekmi, açıklayın.)
+
+**Kontrol listesi:**
 
 * [ ] Açtığınız PR'in başlığı kurallara (sadece ilk harf büyük, emir kipinde problem cümlesi vb.) uygun mu?
 * [ ] [Katkı sağlama dokümanını](https://github.com/omu/nokul/CONTRIBUTING.md) okudunuz mu?
@@ -25,5 +30,6 @@ Bu PR merge edildiğinde sunucular üzerinde bir değişiklik (paket kurulması,
 * [ ] Yaptığınız iş/değişiklik ile ilgili **tüm** proje üyelerinden review talep ettiniz mi?
 * [ ] Gerekli etiketleri (bug, feature-step, help-wanted vb.) girdiniz mi?
 
-**Ek içerik**
-Kaynaklar, dış bağlantılar, ekran görüntüleri, örnek çözümler ve benzeri diğer kaynakları ekleyiniz.
+**Ek içerik:**
+
+[//]: # (Kaynaklar, dış bağlantılar, ekran görüntüleri, örnek çözümler ve benzeri diğer kaynakları ekleyiniz.)
