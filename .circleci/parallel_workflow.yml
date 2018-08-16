@@ -15,7 +15,6 @@ rails_environment: &rails_environment
     RDS_PASSWORD: nokul
     RDS_HOSTNAME: localhost
     RDS_PORT: 5432
-    BUNDLE_JOBS: 4
 
 # cache keys
 restore_bundle_keys: &restore_bundle_keys
