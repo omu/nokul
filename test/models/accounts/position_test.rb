@@ -16,7 +16,6 @@ class PositionTest < ActiveSupport::TestCase
   # validations: presence
   %i[
     start_date
-    end_date
   ].each do |property|
     test "presence validations for #{property} of a position" do
       positions(:baum_dean).send("#{property}=", nil)
