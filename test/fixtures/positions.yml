@@ -1,6 +1,10 @@
 baum_dean:
   administrative_function: dean
   duty: baum
+  start_date: 01.01.2017
+  end_date: <%= Time.zone.now - 2.years %>
 omu_rector:
   administrative_function: rector
   duty: omu
+  start_date: 01.01.2016
+  end_date: <%= Time.zone.now - 2.years %>
