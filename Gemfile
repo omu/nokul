@@ -58,7 +58,7 @@ group :development, :test do
   gem 'brakeman', require: false
   gem 'bundler-audit'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  # gem 'capybara'
+  # gem 'capybara', '>= 2.15', '< 4.0'
   # gem 'chromedriver-helper'
   gem 'codacy-coverage', require: false
   gem 'dotenv-rails'
