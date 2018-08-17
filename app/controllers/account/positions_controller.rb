@@ -49,7 +49,7 @@ module Account
     end
 
     def position_params
-      params.require(:position).permit(:administrative_function_id)
+      params.require(:position).permit(:administrative_function_id, :start_date, :end_date)
     end
   end
 end
