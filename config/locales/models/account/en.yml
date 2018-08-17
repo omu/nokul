@@ -16,8 +16,8 @@ en:
         unit_id: Unit
       position: &position_attributes
         administrative_function_id: Administrative Function
+        start_date: Start Date
         end_date: End Date
-        employee: Employee
   helpers:
     submit:
       employee:
