@@ -16,6 +16,8 @@ tr:
         unit_id: Birim
       position: &position_attributes
         administrative_function_id: Görev
+        start_date: Başlangıç Tarihi
+        end_date: Bitiş Tarihi
   helpers:
     submit:
       employee:
