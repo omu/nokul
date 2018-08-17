@@ -59,7 +59,7 @@ jobs:
             echo "2.4.4" > .ruby-version
       - restore_cache:
           <<: *restore_bundle_keys
-      - run: bundle install --path vendor/bundle
+      - run: bundle install --path vendor/bundle --without development
       - save_cache:
           <<: *save_bundle_keys
       - save_cache:
@@ -89,7 +89,7 @@ jobs:
             echo "2.5.1" > .ruby-version
       - restore_cache:
           <<: *restore_bundle_keys
-      - run: bundle install --path vendor/bundle
+      - run: bundle install --path vendor/bundle --without development
       - save_cache:
           <<: *save_bundle_keys
       - save_cache:
@@ -119,7 +119,7 @@ jobs:
             echo "2.6.0-preview2" > .ruby-version
       - restore_cache:
           <<: *restore_bundle_keys
-      - run: bundle install --path vendor/bundle
+      - run: bundle install --path vendor/bundle --without development
       - save_cache:
           <<: *save_bundle_keys
       - save_cache:

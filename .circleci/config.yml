@@ -54,7 +54,7 @@ jobs:
           <<: *repository
       - restore_cache:
           <<: *restore_bundle
-      - run: bundle install --path vendor/bundle
+      - run: bundle install --path vendor/bundle --without development
       - save_cache:
           key: nokul-bundle-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
           paths:
@@ -90,7 +90,7 @@ jobs:
           <<: *restore_bundle
       - restore_cache:
           <<: *restore_yarn
-      - run: bundle --path vendor/bundle
+      - run: bundle --path vendor/bundle --without development
       - run: bundle install
       - run: bin/yarn install
       - run: bundle exec rake db:create db:schema:load
@@ -104,7 +104,7 @@ jobs:
           <<: *restore_bundle
       - restore_cache:
           <<: *restore_yarn
-      - run: bundle --path vendor/bundle
+      - run: bundle --path vendor/bundle --without development
       - run: bundle install
       - run: bin/yarn install
       - run: bundle exec rake quality:rails
