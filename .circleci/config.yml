@@ -15,29 +15,21 @@ rails_environment: &rails_environment
     RDS_PASSWORD: nokul
     RDS_HOSTNAME: localhost
     RDS_PORT: 5432
-    BUNDLE_JOBS: 4
-
-# flow defaults
-defaults: &defaults
-  parallelism: 4
 
 # cache keys
 restore_bundle: &restore_bundle
   keys:
     - nokul-bundle-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
-    - nokul-bundle-{{ .Branch }}
-    - nokul-bundle
+    - nokul-bundle-{{ checksum "Gemfile.lock" }}
 restore_yarn: &restore_yarn
   keys:
     - nokul-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
-    - nokul-yarn-{{ .Branch }}
-    - nokul-yarn
+    - nokul-yarn-{{ checksum "yarn.lock" }}
 repository: &repository
   key: nokul-repo-{{ .Environment.CIRCLE_SHA1 }}
 
 # build image
 ruby_2_5_1: &ruby_2_5_1
-  <<: *defaults
   docker:
     - image: circleci/ruby:2.5.1-node-browsers
       <<: *rails_environment
@@ -62,9 +54,13 @@ jobs:
           <<: *repository
       - restore_cache:
           <<: *restore_bundle
-      - run: bundle install --path vendor/bundle
+      - run: bundle install --path vendor/bundle --without development
       - save_cache:
           key: nokul-bundle-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+      - save_cache:
+          key: nokul-bundle-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
   bundle_assets:
@@ -81,6 +77,10 @@ jobs:
           key: nokul-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
             - node_modules/
+      - save_cache:
+          key: nokul-yarn-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules/
   rake_test:
     <<: *ruby_2_5_1
     steps:
@@ -90,7 +90,7 @@ jobs:
           <<: *restore_bundle
       - restore_cache:
           <<: *restore_yarn
-      - run: bundle --path vendor/bundle
+      - run: bundle --path vendor/bundle --without development
       - run: bundle install
       - run: bin/yarn install
       - run: bundle exec rake db:create db:schema:load
@@ -104,7 +104,7 @@ jobs:
           <<: *restore_bundle
       - restore_cache:
           <<: *restore_yarn
-      - run: bundle --path vendor/bundle
+      - run: bundle --path vendor/bundle --without development
       - run: bundle install
       - run: bin/yarn install
       - run: bundle exec rake quality:rails
