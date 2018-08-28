@@ -56,24 +56,24 @@ gem 'friendly_id', '~> 5.2.0'
 
 group :development, :test do
   gem 'brakeman', require: false
+  gem 'bundler-audit'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'capybara', '>= 2.15', '< 4.0'
-  gem 'chromedriver-helper'
+  # gem 'capybara', '>= 2.15', '< 4.0'
+  # gem 'chromedriver-helper'
   gem 'codacy-coverage', require: false
   gem 'dotenv-rails'
-  gem 'pry-rails'
   gem 'reek'
   gem 'rubocop'
-  gem 'selenium-webdriver'
+  # gem 'selenium-webdriver'
   gem 'simplecov', require: false
 end
 
 group :development do
   gem 'bullet'
-  gem 'bundler-audit'
   gem 'fit-commit'
   gem 'letter_opener'
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'pry-rails'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0' # call <%= console %> anywhere in the code.

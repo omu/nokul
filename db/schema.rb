@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_10_114449) do
+ActiveRecord::Schema.define(version: 2018_08_17_060355) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -258,6 +258,8 @@ ActiveRecord::Schema.define(version: 2018_08_10_114449) do
     t.bigint "administrative_function_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "start_date"
+    t.date "end_date"
     t.index ["administrative_function_id"], name: "index_positions_on_administrative_function_id"
     t.index ["duty_id"], name: "index_positions_on_duty_id"
   end
@@ -423,7 +425,7 @@ ActiveRecord::Schema.define(version: 2018_08_10_114449) do
     t.string "preferred_language", default: "tr"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "password_changed_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.datetime "password_changed_at", default: -> { "now()" }, null: false
     t.integer "articles_count"
     t.integer "projects_count"
     t.string "slug"

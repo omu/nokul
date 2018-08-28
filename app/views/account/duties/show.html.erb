@@ -53,6 +53,8 @@
           <thead>
             <tr>
               <th><%= t('.position') %></th>
+              <th><%= t('.start_date') %></th>
+              <th><%= t('.end_date') %></th>
               <th><%= t('actions') %></th>
             </tr>
           </thead>
@@ -60,6 +62,8 @@
             <% @positions.each do |position| %>
               <tr>
                 <td><%= position.administrative_function.name %></td>
+                <td><%= position.start_date %></td>
+                <td><%= position.end_date %></td>
                 <td>
                   <%= link_to_edit(edit_user_employee_duty_position_path(@user, @employee, @duty, position)) %>
                   <%= link_to_destroy(user_employee_duty_position_path(@user, @employee, @duty, position)) %>

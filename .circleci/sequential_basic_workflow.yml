@@ -23,16 +23,13 @@ jobs:
       - restore_cache:
           keys:
             - gem-cache-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
-            - gem-cache-{{ .Branch }}
-            - gem-cache
+            - gem-cache-{{ checksum "Gemfile.lock" }}
       - restore_cache:
           keys:
             - yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
-            - yarn-packages-{{ .Branch }}
-            - yarn-packages-master
-            - yarn-packages
+            - yarn-packages-{{ checksum "yarn.lock" }}
 
-      - run: bundle install --path vendor/bundle
+      - run: bundle install --path vendor/bundle --without development
       - run: bin/yarn install
 
       - save_cache:
@@ -40,19 +37,17 @@ jobs:
           paths:
             - vendor/bundle
       - save_cache:
-          key: gem-cache-{{ .Branch }}
+          key: gem-cache-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
       - save_cache:
-          key: gem-cache
-          paths:
-            - vendor/bundle
-      - save_cache:
-          name: Save Yarn Package Cache
           key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
             - node_modules/
-
+      - save_cache:
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules/
       - run: bundle exec rake quality:rails
       - run: bundle exec rake security:all
       - run: bundle exec rake db:migrate
