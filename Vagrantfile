@@ -24,12 +24,12 @@ Vagrant.configure('2') do |config|
       EOF
 
       sudo -u op sh -xs <<-EOF
-        bundle install --path vendor/bundle --binstubs vendor/bundle/bin -j4 --deployment || true
+        bundle install --path vendor/bundle -j4 --deployment || true
         yarn install
 
-        bundle exec rake db:create
-        bundle exec rake db:migrate
-        bundle exec rake db:seed
+        bin/rails db:create
+        bin/rails db:migrate
+        bin/rails db:seed
       EOF
 
       foreman export -p3000 --app nokul --user op systemd /etc/systemd/system/
