@@ -1,24 +1,23 @@
+<% name = Rails.application.class.parent.to_s.underscore %>
+
 default: &default
   adapter: postgresql
-  encoding: unicode
-  username: <%= ENV['RDS_USERNAME'] %>
-  password: <%= ENV['RDS_PASSWORD'] %>
-  host: <%= ENV['RDS_HOSTNAME'] %>
+  pool: 5
+  timeout: 5000
 
 development:
   <<: *default
-  database: nokul_dev
+  url: <%= 'postgresql://' + name + ':' + name + '@' + 'localhost' + '/' + name + '_development' %>
 
 test:
   <<: *default
-  pool: 5
-  database: nokul_test
+  url: <%= 'postgresql://' + name + ':' + name + '@' + 'localhost' + '/' + name + '_test' %>
 
 production: &production
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
-  pool: 40
-  timeout: 5000
+  pool: <%= ENV.fetch('RAILS_MAX_THREADS', 40) %>
+  prepared_statements: true
 
 beta:
   <<: *production
