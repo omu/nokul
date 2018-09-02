@@ -21,7 +21,7 @@ class DatabaseConfigTest < ActiveSupport::TestCase
 
   test "Development and test environment database users must be #{name}" do
     %w[development test].all? do |environment|
-      assert_equal ActiveRecord::Base.configurations[environment]['username'], "#{name}"
+      assert_equal ActiveRecord::Base.configurations[environment]['username'], name
     end
   end
 
