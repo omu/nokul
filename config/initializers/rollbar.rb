@@ -2,10 +2,7 @@
 
 Rollbar.configure do |config|
   # Exit early in development and test environments
-  next if Rails.env.test? || Rails.env.development?
-
-  # Enabled in other environments
-  config.enabled = true
+  next unless (config.enabled = !Rails.env.test? && !Rails.env.development?)
 
   config.access_token = Rails.application.credentials.rollbar[:access_token]
 
