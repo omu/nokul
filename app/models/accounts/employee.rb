@@ -23,6 +23,9 @@ class Employee < ApplicationRecord
   scope :passive, -> { where(active: false) }
   scope :academic, -> { joins(:title).where('titles.branch = ?', 'ÖE') }
 
+  # delegations
+  delegate :name, to: :title, prefix: true
+
   # custom methods
   def academic?
     title.branch.eql?('ÖE')
