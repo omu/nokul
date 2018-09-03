@@ -44,7 +44,7 @@ Proje sırları `credentials.yml.enc` dosyasında tutulmaktadır. Bu dosyaya eri
 
 - VPN
 
-Harici servisler yalnızca BAUM-VPN'e açıktır. Geliştirme yaparken ihtiyaç duyacağınız bu servisleri kullanmak için BAUM-VPN'e bağlı olmalısınız. VPN erişimi için [sistem grubu](https://github.com/orgs/omu/teams/ops) ile iletişime geçin. Tüm geliştirme süreciniz boyunca ve testleri çalıştırırken mutlaka BAUM-VPN'e bağlı olun.
+Harici servisler yalnızca BAUM-VPN'e açıktır. Geliştirme yaparken ihtiyaç duyacağınız bu servisleri kullanmak için BAUM-VPN'e bağlı olmalısınız. VPN erişimi için [sistem grubu](https://github.com/orgs/omu/teams/ops) ile iletişime geçin. Tüm geliştirme süreciniz boyunca ve testleri çalıştırırken mutlaka [BAUM-VPN'e bağlı olun](https://github.com/omu/omu/blob/master/doc/vpn.md#baum-vpn).
 
 ### Geliştirme Süreci
 ---------------------
