@@ -37,9 +37,9 @@ class StudentTest < ActiveSupport::TestCase
   end
 
   # callback tests
-  test 'student runs KpsIdentitySaveJob after being created' do
+  test 'student runs Kps::IdentitySaveJob after being created' do
     users(:serhat).students.destroy_all
-    assert_enqueued_with(job: KpsIdentitySaveJob) do
+    assert_enqueued_with(job: Kps::IdentitySaveJob) do
       Student.create(student_number: '1234', user: users(:serhat), unit: units(:omu))
     end
   end
