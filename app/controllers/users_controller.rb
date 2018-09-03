@@ -32,6 +32,10 @@ class UsersController < ApplicationController
 
   def update
     @user.slug = nil if user_params[:email].present?
+    if params[:user][:password].blank?
+      params[:user].delete(:password)
+      params[:user].delete(:password_confirmation)
+    end
     @user.update_without_password(user_params) ? redirect_with('.success') : render(:edit)
   end
 
