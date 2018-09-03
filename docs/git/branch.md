@@ -16,31 +16,31 @@
 
 - Branch isimleri tümü küçük harf, Türkçe karakter içermeyen (branch ismi Türkçe olabilir) metinlerden oluşmalıdır.
 
-```
-YANLIŞ: Redesign-Login-Page
-DOĞRU: redesign-login-page
-```
+  ```
+  YANLIŞ: Redesign-Login-Page
+  DOĞRU: redesign-login-page
+  ```
 
 - Sürüm numarasını ifade edebileceği için branch isimleri rakam ile başlamamalıdır.
 
-```
-YANLIŞ: 1-den-baslat
-DOĞRU: birden-baslat
-```
+  ```
+  YANLIŞ: 1-den-baslat
+  DOĞRU: birden-baslat
+  ```
 
 - Branch isimleri kısa, net ve anlaşılır olmalıdır.
 
-```
-YANLIŞ: fix-errors
-DOĞRU: fix-auth-error-in-ldap
-```
+  ```
+  YANLIŞ: fix-errors
+  DOĞRU: fix-auth-error-in-ldap
+  ```
 
 - Branch isimlerinde kelimeler `tire` ile ayrılmalıdır.
 
-```
-YANLIŞ: redesign_login_page
-DOĞRU: redesign-login-page
-```
+  ```
+  YANLIŞ: redesign_login_page
+  DOĞRU: redesign-login-page
+  ```
 
 ## Branch'i Güncel Tutma
 ------------------------
