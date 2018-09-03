@@ -24,6 +24,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should create user' do
+    skip 'this block on CircleCI since it needs IP permissions to run.' if ENV['CI']
     assert_difference('User.count') do
       post users_path params: {
         user: {
