@@ -8,22 +8,22 @@
 
 - Açtığınız pull request'in başlığının ilk harfini büyük, diğer harfleri küçük yazın.
 
-```
-YANLIŞ: ADD AUTHORIZATION ROLES AS ADMIN AND USER
-YANLIŞ: add authorization roles as admin and user
-DOĞRU: Add authorization roles as admin and user
-```
+  ```
+  YANLIŞ: ADD AUTHORIZATION ROLES AS ADMIN AND USER
+  YANLIŞ: add authorization roles as admin and user
+  DOĞRU: Add authorization roles as admin and user
+  ```
 
 - Başlıkta emir kipi kullanın
 
-```
-YANLIŞ: Geliştiriciler için issue dokümanı ekledim
-DOĞRU: Geliştiriciler için issue dokümanı ekle
-```
+  ```
+  YANLIŞ: Geliştiriciler için issue dokümanı ekledim
+  DOĞRU: Geliştiriciler için issue dokümanı ekle
+  ```
 
 - Başlık cümlesini nokta işareti ile bitirmeyin
 
-```
-YANLIŞ: Geliştiriciler için issue dokümanı ekle.
-DOĞRU: Geliştiriciler için issue dokümanı ekle
-```
+  ```
+  YANLIŞ: Geliştiriciler için issue dokümanı ekle.
+  DOĞRU: Geliştiriciler için issue dokümanı ekle
+  ```
