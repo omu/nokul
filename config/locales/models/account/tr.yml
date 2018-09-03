@@ -24,18 +24,13 @@ tr:
         create: Personel Kaydı Oluştur
         update: Personel Kaydını Güncelle
       duty:
-        create: Birim Kaydı Oluştur
-        update: Birim Kaydını Güncelle
+        create: Görevlendirme Oluştur
+        update: Görevlendirmeyi Güncelle
       position:
-        create: Görev Kaydı Oluştur
-        update: Görev Kaydını Güncelle
+        create: İdari Görev Oluştur
+        update: İdari Görevi Güncelle
   account:
     employees:
-      show:
-        <<: *employee_attributes
-        <<: *duty_attributes
-        duties: Görevli Olduğu Birimler
-        new_duty_link: Yeni Görevlendirme Ekle
       new:
         form_title: Personel Kaydı Oluştur
       edit:
@@ -48,35 +43,29 @@ tr:
       update:
         success: Personel kaydı başarıyla güncellendi.
     duties:
-      show:
-        <<: *employee_attributes
-        <<: *duty_attributes
-        position: Görev
-        positions: Görevler
-        new_position_link: Yeni Görev Ekle
       new:
-        form_title: Birim Kaydı Oluştur
+        form_title: Görevlendirme Oluştur
       edit:
-        form_title: Birim Kaydını Güncelle
+        form_title: Görevlendirmeyi Güncelle
       create:
-        success: Birim kaydı başarıyla oluşturuldu.
+        success: Görevlendirme başarıyla oluşturuldu.
       destroy:
-        success: Birim kaydı başarıyla silindi.
-        warning: Birim kaydı silinemedi!
+        success: Görevlendirme başarıyla silindi.
+        warning: Görevlendirme silinemedi!
       update:
-        success: Birim kaydı başarıyla güncellendi.
+        success: Görevlendirme başarıyla güncellendi.
     positions:
       new:
-        form_title: Görev Kaydı Oluştur
+        form_title: İdari Görev Oluştur
       edit:
-        form_title: Görev Kaydını Güncelle
+        form_title: İdari Görevi Güncelle
       create:
-        success: Görev kaydı başarıyla oluşturuldu.
+        success: İdari görev başarıyla oluşturuldu.
       destroy:
-        success: Görev kaydı başarıyla silindi.
-        warning: Görev kaydı silinemedi!
+        success: İdari görev başarıyla silindi.
+        warning: İdari görev silinemedi!
       update:
-        success: Görev kaydı başarıyla güncellendi.
+        success: İdari görev başarıyla güncellendi.
     profile:
       edit:
         profile_settings: Profil Ayarları

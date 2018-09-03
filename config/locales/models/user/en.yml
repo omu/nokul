@@ -13,6 +13,23 @@ en:
         projects_count: Projects Count
         profile: Profile Settings
         preferences: Visibility Settings
+      employee: &employee_attributes
+        is_active: Is Active?
+        title_id: Title
+        user_id: User
+        id_number: ID Number
+      duty: &duty_attributes
+        tenure_status: Tenure Status
+        tenure: Tenure
+        temporary: Temporary Duty
+        start_date: Start Date
+        end_date: End Date
+        employee: Employee
+        unit_id: Unit
+      position: &position_attributes
+        administrative_function_id: Administrative Function
+        start_date: Start Date
+        end_date: End Date
   simple_form:
     placeholders:
       user:
@@ -59,8 +76,13 @@ en:
     employees:
       active: Is Active?
       title: Title
+      employees: Employee Records
+      duties: Duties
+      positions: Positions
+      <<: *employee_attributes
+      <<: *duty_attributes
+      <<: *position_attributes
     show:
-      <<: *user_attributes
       account: Account
       identities: Identities
       addresses: Addresses
