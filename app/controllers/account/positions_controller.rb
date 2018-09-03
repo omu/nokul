@@ -3,27 +3,26 @@
 module Account
   class PositionsController < ApplicationController
     before_action :set_user
-    before_action :set_employee
-    before_action :set_duty
+    before_action :set_duty, only: %i[create update]
     before_action :set_position, only: %i[edit update destroy]
 
     def new
-      @position = @duty.positions.new
+      @position = Position.new
     end
 
     def create
       @position = @duty.positions.new(position_params)
-      @position.save ? redirect_to([@user, @employee, @duty], notice: t('.success')) : render(:new)
+      @position.save ? redirect_to(@user, notice: t('.success')) : render(:new)
     end
 
     def edit; end
 
     def update
-      @position.update(position_params) ? redirect_to([@user, @employee, @duty], notice: t('.success')) : render(:edit)
+      @position.update(position_params) ? redirect_to(@user, notice: t('.success')) : render(:edit)
     end
 
     def destroy
-      @position.destroy ? redirect_to([@user, @employee, @duty], notice: t('.success')) : redirect_with('warning')
+      @position.destroy ? redirect_to(@user, notice: t('.success')) : redirect_with('warning')
     end
 
     private
@@ -33,13 +32,8 @@ module Account
       not_found unless @user
     end
 
-    def set_employee
-      @employee = @user.employees.find(params[:employee_id])
-      not_found unless @employee
-    end
-
     def set_duty
-      @duty = @user.duties.find(params[:duty_id])
+      @duty = @user.duties.find(position_params[:duty_id])
       not_found unless @duty
     end
 
@@ -49,7 +43,7 @@ module Account
     end
 
     def position_params
-      params.require(:position).permit(:administrative_function_id, :start_date, :end_date)
+      params.require(:position).permit(:duty_id, :administrative_function_id, :start_date, :end_date)
     end
   end
 end
