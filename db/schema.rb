@@ -425,7 +425,7 @@ ActiveRecord::Schema.define(version: 2018_08_17_060355) do
     t.string "preferred_language", default: "tr"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "password_changed_at", default: -> { "now()" }, null: false
+    t.datetime "password_changed_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.integer "articles_count"
     t.integer "projects_count"
     t.string "slug"

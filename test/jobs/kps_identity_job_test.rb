@@ -28,4 +28,8 @@ class KpsIdentityJobTest < ActiveJob::TestCase
     end
     assert_performed_jobs 1
   end
+
+  test 'KPS::Identity jobs runs in the high priority queue' do
+    assert_equal Kps::IdentitySaveJob.new.queue_name, 'high'
+  end
 end
