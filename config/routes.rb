@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   # devise routes
-  devise_for :users, controllers: {
+  devise_for :users, path_prefix: 'devise', controllers: {
     registrations: 'user/registrations',
     passwords: 'user/passwords',
     sessions: 'user/sessions'
