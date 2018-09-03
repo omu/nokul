@@ -24,7 +24,7 @@ Vagrant.configure('2') do |config|
       EOF
 
       sudo -u op sh -xs <<-EOF
-        bundle install --path vendor/bundle -j4 --deployment || true
+        bundle install -j4 --deployment
         yarn install
 
         bin/rails db:create

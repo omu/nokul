@@ -25,54 +25,54 @@ Sağlamayı düşündüğünüz katkı proje ekibinin gündeminde bulunmayabilir
 
 - İş kaydının başlığı emir kipinde yazılmış bir **sorun veya öneri** cümlesi olmalıdır. Örneğin:
 
-```
-YANLIŞ: Katkı sağlama rehberi hazırla
-DOĞRU: Katkı sağlama rehberi eksik
-DOĞRU: Katkı sağlama rehberi hazırlanmalı
-```
+  ```
+  YANLIŞ: Katkı sağlama rehberi hazırla
+  DOĞRU: Katkı sağlama rehberi eksik
+  DOĞRU: Katkı sağlama rehberi hazırlanmalı
+  ```
 
-Hatalı örnekte başlık sorun/öneri cümlesi içermiyor.
+  Hatalı örnekte başlık sorun/öneri cümlesi içermiyor.
 
-```
-YANLIŞ: Dokku ve ruby
-DOĞRU: Dokku'da yanlış ruby versiyonu kuruluyor
-```
+  ```
+  YANLIŞ: Dokku ve ruby
+  DOĞRU: Dokku'da yanlış ruby versiyonu kuruluyor
+  ```
 
-Hatalı örnekte sorun açıklanmıyor, başlık okuyana herhangi bir şey ifade etmiyor.
+  Hatalı örnekte sorun açıklanmıyor, başlık okuyana herhangi bir şey ifade etmiyor.
 
-```
-YANLIŞ: Ders: Ders ekleme sırasında okutulma türünün seçilmesini sağla
-DOĞRU: Ders ekleme sırasında dersin okutulma türü seçilebilmeli
-```
+  ```
+  YANLIŞ: Ders: Ders ekleme sırasında okutulma türünün seçilmesini sağla
+  DOĞRU: Ders ekleme sırasında dersin okutulma türü seçilebilmeli
+  ```
 
-Hatalı örnekte `prefix` yoluyla kategorizasyona gidilmiş. Eğer bir seri halinde iş kayıtları mevcutsa bunlar bir `milestone` altında gruplanmalı. Ayrıca _seçilmesini sağla_ kelimeleri bir probleme/öneriye işaret etmiyor. _seçilebilmeli_ kelimesi şu an bu özelliğin mevcut olmadığına işaret etmekte. Hatalı örneğin başlığı bir PR için uygun, issue için değil.
+  Hatalı örnekte `prefix` yoluyla kategorizasyona gidilmiş. Eğer bir seri halinde iş kayıtları mevcutsa bunlar bir `milestone` altında gruplanmalı. Ayrıca _seçilmesini sağla_ kelimeleri bir probleme/öneriye işaret etmiyor. _seçilebilmeli_ kelimesi şu an bu özelliğin mevcut olmadığına işaret etmekte. Hatalı örneğin başlığı bir PR için uygun, issue için değil.
 
-```
-YANLIŞ: Ülke, şehir ve ilçe seçimlerinde dynamic select'e ihtiyaç var
-DOĞRU: Ülke, şehir ve ilçe seçimleri kullanışsız
-```
+  ```
+  YANLIŞ: Ülke, şehir ve ilçe seçimlerinde dynamic select'e ihtiyaç var
+  DOĞRU: Ülke, şehir ve ilçe seçimleri kullanışsız
+  ```
 
-Hatalı örnekte issue içerisinde konuşulması ve detaylandırılması gereken `dynamic_select` başlıkta verilmiş. Ülke, şehir ve ilçe seçimlerinin kullanışsız olması bir problem, bunun detayları ve olası çözümleri issue içerisinde konuşulmalı.
+  Hatalı örnekte issue içerisinde konuşulması ve detaylandırılması gereken `dynamic_select` başlıkta verilmiş. Ülke, şehir ve ilçe seçimlerinin kullanışsız olması bir problem, bunun detayları ve olası çözümleri issue içerisinde konuşulmalı.
 
 - İş kaydı bir to-do list değildir
 
-```
-YANLIŞ: DutyValidator ve EmployeeValidator'ü iyileştir
-DOĞRU: DutyValidator ve EmployeeValidator'ü hatalı çalışıyor
-DOĞRU: DutyValidator ve EmployeeValidator'de eksik validasyonlar var
-```
+  ```
+  YANLIŞ: DutyValidator ve EmployeeValidator'ü iyileştir
+  DOĞRU: DutyValidator ve EmployeeValidator'ü hatalı çalışıyor
+  DOĞRU: DutyValidator ve EmployeeValidator'de eksik validasyonlar var
+  ```
 
-Hatalı örneğin başlığı bir PR için uygun, issue için uygun değil.
+  Hatalı örneğin başlığı bir PR için uygun, issue için uygun değil.
 
 - İş kaydının yalnızca ilk harfi büyük harf olmalı
 
-```
-YANLIŞ: KATKI SAĞLAMA REHBERİ HAZIRLA
-YANLIŞ: katkı sağlama rehberi hazırla
-DOĞRU: Katkı sağlama rehberi hazırla
-```
+  ```
+  YANLIŞ: KATKI SAĞLAMA REHBERİ HAZIRLA
+  YANLIŞ: katkı sağlama rehberi hazırla
+  DOĞRU: Katkı sağlama rehberi hazırla
+  ```
 
-İstisna olarak farklı stilde yazılması gereken model isimleri (UserDuty), kısaltmalar (YÖK, MEB vb.) yine büyük harfle yazılmalıdır.
+  İstisna olarak farklı stilde yazılması gereken model isimleri (UserDuty), kısaltmalar (YÖK, MEB vb.) yine büyük harfle yazılmalıdır.
 
 ## Issue Gövdesi
 ----------------
