@@ -10,10 +10,10 @@
 
 - Commit mesajı yazarken terminal değil editör kullanın:
 
-```
-YANLIŞ: git commit -m 'Foo bar lorem ipsum'
-DOĞRU: git commit
-```
+  ```
+  YANLIŞ: git commit -m 'Foo bar lorem ipsum'
+  DOĞRU: git commit
+  ```
 
 Güzel bir commit mesajının 7 altın kuralını takip edin:
 
@@ -31,34 +31,33 @@ Güzel bir commit mesajının 7 altın kuralını takip edin:
 
 - Commit başlığını daima büyük harfle başlatıp küçük harflerle devam ettirin.
 
-```
-YANLIŞ: ADD AUTHORIZATION ROLES AS ADMIN AND USER
-YANLIŞ: add authorization roles as admin and user
-DOĞRU: Add authorization roles as admin and user
-```
+  ```
+  YANLIŞ: ADD AUTHORIZATION ROLES AS ADMIN AND USER
+  YANLIŞ: add authorization roles as admin and user
+  DOĞRU: Add authorization roles as admin and user
+  ```
 
 - Commit başlığını en fazla 72 karakter, tercihen 50 karakterden oluşacak şekilde düzenleyin.
 
-```
-YANLIŞ: Add authorization roles as admin and user, so that people can get roles in other controllers and admins can assign roles to other users.
+  ```
+  YANLIŞ: Add authorization roles as admin and user, so that people can get roles in other controllers and admins can assign roles to other users.
 
-DOĞRU: Add authorization roles as admin and user
-```
+  DOĞRU: Add authorization roles as admin and user
+  ```
 
 - Başlıkta emir kipi kullanın
 
-```
-YANLIŞ: Geliştiriciler için issue dokümanı ekledim
-DOĞRU: Geliştiriciler için issue dokümanı ekle
-```
+  ```
+  YANLIŞ: Geliştiriciler için issue dokümanı ekledim
+  DOĞRU: Geliştiriciler için issue dokümanı ekle
+  ```
 
 - Başlık cümlesini nokta işareti ile bitirmeyin
 
-```
-YANLIŞ: Geliştiriciler için issue dokümanı ekle.
-DOĞRU: Geliştiriciler için issue dokümanı ekle
-```
-
+  ```
+  YANLIŞ: Geliştiriciler için issue dokümanı ekle.
+  DOĞRU: Geliştiriciler için issue dokümanı ekle
+  ```
 
 # Commit Gövdesi
 ----------------
@@ -67,19 +66,19 @@ DOĞRU: Geliştiriciler için issue dokümanı ekle
 
 - Commit gövdesinde ilgili iş kaydına (varsa) mention yapın ve diğer referansları da belirtin.
 
-```
-Lorem ipsum dolor sit amet
+  ```
+  Lorem ipsum dolor sit amet
 
-Morbi ante magna, ultricies et tortor vel, sensus vitae.
-Vestibulum ut rhoncus neque. Praesent quis odio mauris.
-Donec at fermentum neque. Mauris in tellus posuere risus.
-Felis vitae, porttitor quam. Morbi eget pulvinar mi.
-Cras tincidunt fringilla nulla, vitae imperdiet justo
-molestie sed. Pellentesque congue metus non dolor magna
-aliquam. Morbi vel magna est. Aliquam risus arcu.
+  Morbi ante magna, ultricies et tortor vel, sensus vitae.
+  Vestibulum ut rhoncus neque. Praesent quis odio mauris.
+  Donec at fermentum neque. Mauris in tellus posuere risus.
+  Felis vitae, porttitor quam. Morbi eget pulvinar mi.
+  Cras tincidunt fringilla nulla, vitae imperdiet justo
+  molestie sed. Pellentesque congue metus non dolor magna
+  aliquam. Morbi vel magna est. Aliquam risus arcu.
 
-Fixes: #9991
-Closes: #9992
-Revolves: #9993
-References: #9994, #9995, #9996
-```
+  Fixes: #9991
+  Closes: #9992
+  Revolves: #9993
+  References: #9994, #9995, #9996
+  ```

@@ -39,13 +39,12 @@ Ondokuz Mayıs Üniversitesi [University]
 
 ## Navigating Between Units
 
-- Return **all records of a unit type**:
+### all records of a unit type
 
 ```ruby
 Unit.university.all
 Unit.faculty.all
 Unit.department.all
-...
 ```
 
 You can navigate your way between units with `parent`, `root`, `ancestors`, `children`, `siblings`, `subtree` and `descendants` methods of ancestry.
@@ -190,20 +189,20 @@ Ondokuz Mayıs Üniversitesi [University]
 
 See [ancestry](https://github.com/stefankroes/ancestry) document for more details and other helpers.
 
-- Return **all sub-units** (faculties, departments, disciplines, everything) of another unit:
+### all sub-units
+
+Return **all sub-units** (faculties, departments, disciplines, everything) of another unit:
 
 ```ruby
 Unit.university.first.descendants.units
 Unit.faculty.last.descendants.departments
 Unit.department.last.descendants.undergraduate_programs
-...
 ```
 
-- You can also directly communicate with children classes such as Faculty and Department:
+You can also directly communicate with children classes such as Faculty and Department:
 
 ```ruby
 Unit.faculty
 Unit.research_center.find_by(yoksis_id: 12345)
 Unit.department.find_by(status: 1)
-...
 ```
