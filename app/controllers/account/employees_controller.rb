@@ -37,7 +37,7 @@ module Account
     end
 
     def employee_params
-      params.require(:employee).permit(:active, :title_id, :unit_id, :start_date)
+      params.require(:employee).permit(:active, :title_id)
     end
   end
 end

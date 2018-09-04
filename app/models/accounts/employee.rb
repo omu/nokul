@@ -17,14 +17,12 @@ class Employee < ApplicationRecord
   # delegations
   delegate :identities, to: :user
   delegate :addresses, to: :user
+  delegate :name, to: :title, prefix: true
 
   # scopes
   scope :active, -> { where(active: true) }
   scope :passive, -> { where(active: false) }
   scope :academic, -> { joins(:title).where('titles.branch = ?', 'ÖE') }
-
-  # delegations
-  delegate :name, to: :title, prefix: true
 
   # custom methods
   def academic?

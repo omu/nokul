@@ -56,7 +56,7 @@
       <tbody>
         <% @duties.each do |duty| %>
           <tr>
-            <td><%= duty.unit.name %></td>
+            <td><%= duty.unit_name %></td>
             <td><%= duty.temporary? ? t('.temporary') : t('.tenure') %></td>
             <td><%= duty.start_date %></td>
             <td><%= duty.end_date %></td>
