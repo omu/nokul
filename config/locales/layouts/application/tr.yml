@@ -6,7 +6,7 @@ tr:
       addresses: Adres Bilgileri
       profile_settings: Profil Ayarları
       settings: Ayarlar
-      account_settings: Hesap Ayaları
+      account_settings: Hesap Ayarları
       logout: Çıkış Yap
   home:
     components:

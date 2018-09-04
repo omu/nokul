@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   # devise routes
-  devise_for :users, controllers: {
+  devise_for :users, path_prefix: 'devise', controllers: {
     registrations: 'user/registrations',
     passwords: 'user/passwords',
     sessions: 'user/sessions'
@@ -52,11 +52,9 @@ Rails.application.routes.draw do
 
   resources :users do
     scope module: :account do
-      resources :employees, except: :index do
-        resources :duties, except: :index do
-          resources :positions, except: %i[index show]
-        end
-      end
+      resources :employees, except: %i[index show]
+      resources :duties, except: %i[index show]
+      resources :positions, except: %i[index show]
     end
   end
 

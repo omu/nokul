@@ -1,10 +1,7 @@
 # frozen_string_literal: true
 
-# -*- mode: ruby -*-
-# vi: set ft=ruby :
-
 Vagrant.configure('2') do |config|
-  config.vm.define 'dev' do |dev|
+  config.vm.define 'dev', primary: true do |dev|
     dev.vm.box = 'omu/debian-stable-server'
 
     dev.vm.network 'forwarded_port', guest: 3000, host: 3000
@@ -13,36 +10,30 @@ Vagrant.configure('2') do |config|
       lxc.customize 'cgroup.memory.limit_in_bytes', '2048M'
     end
 
-    dev.vm.provision 'shell', privileged: false, inline: <<-SHELL
-    sudo systemctl enable postgresql
-    sudo systemctl start postgresql
-    sudo systemctl enable redis-server
-    sudo systemctl start redis-server
+    dev.vm.provision 'shell', inline: <<~SHELL
+      systemctl enable --now postgresql
+      systemctl enable --now redis-server
 
-    export RDS_USERNAME=nokul
-    export RDS_PASSWORD=nokul
+      gem install bundler foreman
 
-    sudo -u postgres psql <<<"CREATE USER $RDS_USERNAME WITH ENCRYPTED PASSWORD '$RDS_PASSWORD';"
-    sudo -u postgres psql <<<"ALTER ROLE $RDS_USERNAME LOGIN CREATEDB SUPERUSER;"
+      cd /vagrant
 
-    sudo gem install bundler foreman
+      sudo -u postgres psql <<-EOF
+        CREATE USER nokul WITH ENCRYPTED PASSWORD 'nokul';
+        ALTER ROLE nokul LOGIN CREATEDB SUPERUSER;
+      EOF
 
-    cd /vagrant
+      sudo -u op sh -xs <<-EOF
+        bundle install -j4 --deployment
+        yarn install
 
-    bundle install --deployment
-    yarn install
+        bin/rails db:create
+        bin/rails db:migrate
+        bin/rails db:seed
+      EOF
 
-    echo "RDS_USERNAME=$RDS_USERNAME" >.env
-    echo "RDS_PASSWORD=$RDS_PASSWORD" >>.env
-    echo "RDS_HOSTNAME=localhost" >>.env
-
-    bundle exec rake db:create
-    bundle exec rake db:migrate
-    bundle exec rake db:seed
-
-    sudo foreman export -p3000 --app nokul --user op systemd /etc/systemd/system/
-    sudo systemctl enable nokul.target
-    sudo systemctl start nokul.target
+      foreman export -p3000 --app nokul --user op systemd /etc/systemd/system/
+      systemctl enable --now nokul.target
     SHELL
   end
 

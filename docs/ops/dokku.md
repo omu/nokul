@@ -16,8 +16,6 @@ dokku run rails c --remote=beta
 dokku run rake some_namespace:some_rake_task --remote=beta
 ```
 
-gibi.
-
 ## Operatör olarak
 
 ```

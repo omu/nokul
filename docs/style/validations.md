@@ -9,7 +9,7 @@ Her bir `attribute` için ayrı bir validates satırı ve aynı satırda validas
 1. numericality || length
 1. diğerleri
 
-**Good:**
+**DOĞRU:**
 
 ```ruby
 validates :type, presence: true
@@ -21,7 +21,7 @@ validates :name, presence: true, uniqueness: { scope: %i[ancestry unit_status_id
 validates :duration, numericality: { only_integer: true }, allow_blank: true
 ```
 
-**Bad: [compact]**
+**YANLIŞ: [compact]**
 
 ```ruby
 validates :email, :id_number, :date_of_birth
@@ -30,7 +30,7 @@ validates :id_number,
           numericality: { only_integer: true }
 ```
 
-**Bad: [compact + her bir validasyon ayrı satırda]**
+**YANLIŞ: [compact + her bir validasyon ayrı satırda]**
 
 ```ruby
 validates :email, :id_number, :date_of_birth
@@ -40,7 +40,7 @@ validates :id_number,
           numericality: { only_integer: true }
 ```
 
-**Bad: [her bir validasyon türü için ayrı bir validates satırı, validasyonlar ayrı satırda]**
+**YANLIŞ: [her bir validasyon türü için ayrı bir validates satırı, validasyonlar ayrı satırda]**
 
 ```ruby
 validates :email, :id_number, :date_of_birth
@@ -51,7 +51,7 @@ validates :id_number,
           numericality: { only_integer: true }
 ```
 
-**Bad: [her bir attribute için ayrı bir validates satırı, validasyonlar ayrı satırda]**
+**YANLIŞ: [her bir attribute için ayrı bir validates satırı, validasyonlar ayrı satırda]**
 
 ```ruby
 validates :email,
@@ -62,7 +62,7 @@ validates :date_of_birth,
           presence: true, uniqueness: true
 ```
 
-**Bad: [her bir attribute için ayrı bir validates satırı, her bir validasyon ayrı satırda]**
+**YANLIŞ: [her bir attribute için ayrı bir validates satırı, her bir validasyon ayrı satırda]**
 
 ```ruby
 validates :email,
@@ -77,7 +77,7 @@ validates :date_of_birth,
           uniqueness: true
 ```
 
-**Bad: [her bir attribute ve validasyon türü için ayrı bir validates satırı]**
+**YANLIŞ: [her bir attribute ve validasyon türü için ayrı bir validates satırı]**
 
 ```ruby
 validates :email, presence: true
@@ -89,3 +89,4 @@ validates :date_of_birth, presence: true
 validates :date_of_birth, uniqueness: true
 validates :email, uniqueness: true
 ```
+

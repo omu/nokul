@@ -31,7 +31,7 @@ module Account
     end
 
     def save_from_mernis
-      KpsIdentitySaveJob.perform_later(current_user)
+      Kps::IdentitySaveJob.perform_later(current_user)
       redirect_with('will_update')
     end
 
