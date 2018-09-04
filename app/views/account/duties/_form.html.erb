@@ -6,10 +6,13 @@
         <strong><%= form_title %></strong>
       </div>
       <div class='card-body'>
-        <%= simple_form_for([@user, @employee, duty]) do |f| %>
+        <%= simple_form_for([@user, duty]) do |f| %>
           <div class='row'>
             <div class='form-group col-sm-12'>
               <%= f.error_notification %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.input :employee_id, collection: @user.employees, label_method: :title_name, required: true %>
             </div>
             <div class='form-group col-sm-4'>
               <%= f.input :unit_id, collection: Unit.all, required: true %>

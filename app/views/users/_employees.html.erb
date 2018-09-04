@@ -1,5 +1,6 @@
 <div class="card">
   <div class="card-header">
+    <%= fa_icon 'user', text: t('.employees') %>
     <div class="card-header-actions">
       <%= link_to_new(new_user_employee_path(@user)) %>
     </div>
@@ -9,8 +10,8 @@
     <table class="table table-responsive-sm">
       <thead>
         <tr>
-          <th><%= t('.active') %></th>
           <th><%= t('.title') %></th>
+          <th><%= t('.active') %></th>
           <th><%= t('created_at') %></th>
           <th><%= t('updated_at') %></th>
           <th><%= t('actions') %></th>
@@ -19,14 +20,85 @@
       <tbody>
         <% @employees.each do |employee| %>
           <tr class="<%= employee.active? ? 'table-success' : 'table-secondary' %>">
-            <td><%= employee.active? ? t('yes') : t('no') %></td>
             <td><%= employee.title.name %></td>
+            <td><%= employee.active? ? t('yes') : t('no') %></td>
             <td><%= as_date_and_time(employee.created_at) %></td>
             <td><%= as_date_and_time(employee.updated_at) %></td>
             <td>
-              <%= link_to_show(user_employee_path(@user, employee)) %>
               <%= link_to_edit(edit_user_employee_path(@user, employee)) %>
               <%= link_to_destroy(user_employee_path(@user, employee)) %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class='card'>
+  <div class='card-header'>
+    <%= fa_icon 'group', text: t('.duties') %>
+    <div class="card-header-actions">
+      <%= link_to_new new_user_duty_path(@user) %>
+    </div>
+  </div>
+  <div class='card-body'>
+    <table class='table table-responsive-sm table-striped'>
+      <thead>
+        <tr>
+          <th><%= t('.unit_id') %></th>
+          <th><%= t('.tenure_status') %></th>
+          <th><%= t('.start_date') %></th>
+          <th><%= t('.end_date') %></th>
+          <th><%= t('actions') %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @duties.each do |duty| %>
+          <tr>
+            <td><%= duty.unit_name %></td>
+            <td><%= duty.temporary? ? t('.temporary') : t('.tenure') %></td>
+            <td><%= duty.start_date %></td>
+            <td><%= duty.end_date %></td>
+            <td>
+              <%= link_to_edit(edit_user_duty_path(@user, duty)) %>
+              <%= link_to_destroy(user_duty_path(@user, duty)) %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class='card'>
+  <div class='card-header'>
+    <%= fa_icon 'star', text: t('.positions') %>
+    <div class="card-header-actions">
+      <%= link_to_new new_user_position_path(@user) %>
+    </div>
+  </div>
+  <div class='card-body'>
+    <table class='table table-responsive-sm table-striped'>
+      <thead>
+        <tr>
+          <th><%= t('.unit_id') %></th>
+          <th><%= t('.administrative_function_id') %></th>
+          <th><%= t('.start_date') %></th>
+          <th><%= t('.end_date') %></th>
+          <th><%= t('actions') %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @positions.each do |position| %>
+          <tr>
+            <td><%= position.duty.unit.name %></td>
+            <td><%= position.administrative_function.name %></td>
+            <td><%= position.start_date %></td>
+            <td><%= position.end_date %></td>
+            <td>
+              <%= link_to_edit(edit_user_position_path(@user, position)) %>
+              <%= link_to_destroy(user_position_path(@user, position)) %>
             </td>
           </tr>
         <% end %>

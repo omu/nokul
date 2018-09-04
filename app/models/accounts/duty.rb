@@ -21,6 +21,9 @@ class Duty < ApplicationRecord
   scope :tenure, -> { where(temporary: false) }
   scope :active, -> { where(duties[:end_date].gt(Time.zone.today).or(duties[:end_date].eq(nil))) }
 
+  # delegations
+  delegate :name, to: :unit, prefix: true
+
   # custom methods
   def active?
     end_date.nil? || end_date.future?
