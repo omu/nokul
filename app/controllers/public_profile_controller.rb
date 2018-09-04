@@ -28,7 +28,7 @@ class PublicProfileController < ApplicationController
 
   def check_identity
     @identity = @user.identities.user_identity
-    not_found unless @identity
+    not_found unless @identity.present?
   end
 
   def vcard_content(identity)
