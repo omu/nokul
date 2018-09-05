@@ -31,11 +31,6 @@ en:
         update: Update Position
   account:
     employees:
-      show:
-        <<: *employee_attributes
-        <<: *duty_attributes
-        duties: Duties
-        new_duty_link: New Duty
       new:
         form_title: Create a Employee
       edit:
@@ -48,12 +43,6 @@ en:
       update:
         success: Employee successfully updated.
     duties:
-      show:
-        <<: *employee_attributes
-        <<: *duty_attributes
-        position: Position
-        positions: Positions
-        new_position_link: New Position
       new:
         form_title: Create a Duty
       edit:
