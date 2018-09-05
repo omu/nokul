@@ -13,6 +13,23 @@ tr:
         projects_count: Proje Sayısı
         profile: Profil Ayarları
         preferences: Görünürlük Ayarları
+      employee: &employee_attributes
+        is_active: Aktif mi?
+        title_id: Ünvan
+        user_id: Kullanıcı
+        id_number: Kimlik Numarası
+      duty: &duty_attributes
+        tenure_status: Kadro Durumu
+        tenure: Kadrolu
+        temporary: Geçici Görevlendirme
+        start_date: Başlangıç Tarihi
+        end_date: Bitiş Tarihi
+        employee_id: Personel
+        unit_id: Birim
+      position: &position_attributes
+        administrative_function_id: Görev
+        start_date: Başlangıç Tarihi
+        end_date: Bitiş Tarihi
   simple_form:
     placeholders:
       user:
@@ -59,12 +76,17 @@ tr:
     employees:
       active: Aktif mi?
       title: Ünvan
+      employees: Personel Kayıtları
+      duties: Görevlendirmeler
+      positions: İdari Görevler
+      <<: *employee_attributes
+      <<: *duty_attributes
+      <<: *position_attributes
     show:
-      <<: *user_attributes
       account: Hesap Bilgileri
       identities: Kimlik Bilgileri
       addresses: Adres Bilgileri
-      employees: Personel Kayıtları
+      employees: Personel İşlemleri
     search:
       smart_search: Akıllı Arama
       smart_search_placeholder: TC/YU numarası, e-mail adresi, ad veya soyad

@@ -17,6 +17,8 @@ class UsersController < ApplicationController
 
   def show
     @employees = @user.employees.includes(:title).order(active: :desc)
+    @duties = @user.duties.includes(:unit)
+    @positions = @user.positions.includes(:administrative_function, :duty)
   end
 
   def new

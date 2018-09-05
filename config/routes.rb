@@ -52,11 +52,9 @@ Rails.application.routes.draw do
 
   resources :users do
     scope module: :account do
-      resources :employees, except: :index do
-        resources :duties, except: :index do
-          resources :positions, except: %i[index show]
-        end
-      end
+      resources :employees, except: %i[index show]
+      resources :duties, except: %i[index show]
+      resources :positions, except: %i[index show]
     end
   end
 
