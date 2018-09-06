@@ -1,0 +1,32 @@
+tr:
+  activerecord:
+    attributes:
+      language: &language_attributes
+        name: Ad
+        iso: ISO Kodu
+        yoksis_code: YOKSIS Kodu
+  helpers:
+    submit:
+      language:
+        create: Dil Oluştur
+        update: Dil Güncelle
+  languages:
+    common:
+      languages: Diller
+    show:
+      <<: *language_attributes
+    index:
+      <<: *language_attributes
+      new_language_link: Yeni Dil Oluştur
+      card_header: Diller
+    new:
+      form_title: Dil Oluştur
+    edit:
+      form_title: Dil Güncelle
+    update:
+      success: Dil başarıyla güncellendi.
+    create:
+      success: Dil başarıyla oluşturuldu.
+    destroy:
+      success: Dil başarıyla silindi!
+      warning: Dil silinemedi.
