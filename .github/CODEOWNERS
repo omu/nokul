@@ -1,6 +1,5 @@
 # OPs team
 .circleci @msdundar @roktas @huseyin @ecylmz
-.vagrant @roktas @huseyin @ecylmz @sinansh
 .buildpacks @roktas @huseyin @ecylmz @sinansh
 .ruby-version @roktas @isubas @ecmelkytz @huseyin @ecylmz @sinansh
 Vagrantfile @roktas @huseyin @ecylmz @sinansh
