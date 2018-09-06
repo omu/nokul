@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+turkce:
+  name: Turkçe
+  iso: TR
+  yoksis_code: 1
+
+ingilizce:
+  name: İngilizce
+  iso: EN
+  yoksis_code: 2
