@@ -10,6 +10,7 @@ Vagrantfile @roktas @huseyin @ecylmz @sinansh
 .gitignore @msdundar @roktas @isubas @ecmelkytz
 .rubocop.yml @msdundar @roktas @isubas @ecmelkytz
 /docs/ @msdundar @roktas @isubas @ecmelkytz
+/docs/product/ @omu/product
 
 # Back-end
 /app/ @msdundar @ecmelkytz @dilara @isubas @sinansh
