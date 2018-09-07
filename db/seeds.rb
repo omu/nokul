@@ -40,6 +40,11 @@ File.open(Rails.root.join('db', 'static_data', 'titles.yml')) do |titles|
   end
 end
 
+# create languages
+YAML.load_file(Rails.root.join('db', 'static_data', 'languages.yml')).each do |_, language|
+  Language.create(language)
+end
+
 # Fetch YOKSIS References
 Rake::Task['yoksis:fetch_references'].invoke
 
