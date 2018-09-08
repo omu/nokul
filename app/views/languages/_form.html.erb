@@ -6,22 +6,19 @@
         <strong><%= form_title %></strong>
       </div>
       <div class='card-body'>
-        <%= simple_form_for([@user, position]) do |f| %>
+        <%= simple_form_for(language) do |f| %>
           <div class='row'>
             <div class='form-group col-sm-12'>
               <%= f.error_notification %>
             </div>
-            <div class='form-group col-sm-12'>
-              <%= f.input :duty_id, collection: @user.duties, label_method: :unit_name, required: true %>
+            <div class='form-group col-sm-4'>
+              <%= f.input :name, required: true %>
             </div>
             <div class='form-group col-sm-4'>
-              <%= f.input :administrative_function_id, collection: AdministrativeFunction.all, required: true %>
+              <%= f.input :iso, required: true %>
             </div>
             <div class='form-group col-sm-4'>
-              <%= f.input :start_date, required: true %>
-            </div>
-            <div class='form-group col-sm-4'>
-              <%= f.input :end_date, include_blank: true %>
+              <%= f.input :yoksis_code, required: true %>
             </div>
             <div class='form-group col-sm-12'>
               <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
