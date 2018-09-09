@@ -7,5 +7,6 @@ class Position < ApplicationRecord
 
   # validations
   validates :start_date, presence: true
-  validates :duty, uniqueness: { scope: %i[administrative_function] }
+  validates :duty, uniqueness: { scope: %i[administrative_function start_date] }
+  validates_with PositionValidator
 end
