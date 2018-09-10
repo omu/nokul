@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   rescue_from ActiveRecord::RecordNotFound, with: :not_found
 
   def set_locale
-    language = language_params
+    language = locale_params
 
     if user_signed_in?
       current_user.update(preferred_language: language) if language
@@ -26,7 +26,7 @@ class ApplicationController < ActionController::Base
 
   protected
 
-  def language_params
+  def locale_params
     params[:locale] && I18n.available_locales.include?(params[:locale].to_sym) ? params[:locale] : nil
   end
 
