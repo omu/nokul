@@ -39,11 +39,40 @@ class DutyTest < ActiveSupport::TestCase
   end
 
   # duty validator
-  test 'a user can only have one active tenure duty' do
-    fake = duties(:omu).dup
+  test 'start date can not be after end date' do
+    fake = duties(:uzem).dup
+    fake.update(end_date: fake.start_date - 1.year)
     assert_not fake.valid?
-    assert_not_empty fake.errors[:base]
-    assert fake.errors[:base].include?(t('validators.duty.active_and_tenure'))
+    assert_not_empty fake.errors[:end_date]
+    assert fake.errors[:end_date].include?(t('validators.duty.invalid_end_date'))
+  end
+
+  test 'a user can only have one active tenure duty' do
+    tenure = duties(:omu).dup
+    assert_not tenure.valid?
+    assert_not_empty tenure.errors[:base]
+    assert tenure.errors[:base].include?(t('validators.duty.active_and_tenure'))
+  end
+
+  test 'a user can have more than one active temporary duty' do
+    temporary = duties(:baum).dup
+    temporary.update(unit: units(:cbu))
+    assert temporary.valid?
+    assert_empty temporary.errors[:base]
+  end
+
+  test 'a user can only have one active duty per unit' do
+    active = duties(:baum).dup
+    assert_not active.valid?
+    assert_not_empty active.errors[:base]
+    assert active.errors[:base].include?(t('validators.duty.multiple_active'))
+  end
+
+  test 'a user can have more than one passive duty' do
+    passive = duties(:uzem).dup
+    passive.update(unit: units(:baum))
+    assert passive.valid?
+    assert_empty passive.errors[:base]
   end
 
   # scopes
