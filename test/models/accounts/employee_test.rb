@@ -49,11 +49,18 @@ class EmployeeTest < ActiveSupport::TestCase
   end
 
   # employee validator
-  test 'a user can only have one active employees' do
+  test 'a user can not have more than one active employees' do
     fake = employees(:serhat_active).dup
     assert_not fake.valid?
     assert_not_empty fake.errors[:base]
     assert fake.errors[:base].include?(t('validators.employee.active'))
+  end
+
+  test 'a user can have more than one passive employees' do
+    fake = employees(:serhat_passive).dup
+    fake.update(title: titles(:chief))
+    assert fake.valid?
+    assert_empty fake.errors[:base]
   end
 
   # scopes
