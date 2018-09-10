@@ -13,6 +13,7 @@ namespace :yoksis do
 
       country = Country.find_by(name: name)
       next if country.blank?
+
       country.yoksis_code = yoksis_code.to_i
       puts "FAIL: #{country.yoksis_code} - #{country.name} can not be updated!" unless country.save!
     end
