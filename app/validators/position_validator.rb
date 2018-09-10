@@ -14,8 +14,11 @@ class PositionValidator < ActiveModel::Validator
   end
 
   def restrict_positions
-    return unless @positions.active.where(administrative_function: @position.administrative_function).any?
-    add_to_base_error('multiple_active_repetitive')
+    repetitive_positions = @positions.active.where(
+      administrative_function: @position.administrative_function,
+      duty: @position.duty
+    )
+    add_to_base_error('multiple_active_repetitive') if repetitive_positions.any?
   end
 
   private
