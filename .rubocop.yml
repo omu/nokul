@@ -13,14 +13,7 @@ Rails/UnknownEnv:
 Metrics/LineLength:
   Max: 120
   Exclude:
-    - app/validators/duty_validator.rb # Won't fix
     - app/validators/employee_validator.rb # Won't fix
-    - app/validators/address_validator.rb # Won't fix
-    - app/validators/identity_validator.rb # Won't fix
-Metrics/AbcSize:
-  Exclude:
-    - app/validators/address_validator.rb # Won't fix
-    - app/validators/identity_validator.rb # Won't fix
 Metrics/BlockLength:
   Exclude:
     - lib/tasks/**/*.rake # Won't fix
