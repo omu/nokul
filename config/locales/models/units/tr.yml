@@ -4,6 +4,7 @@ tr:
       unit: &unit_attributes
         name: Birim Adı
         yoksis_id: YOKSIS ID
+        detsis_id: DETSIS ID
         foet_code: FOET Kodu
         founded_at: Kuruluş Tarihi
         duration: Öğretim Süresi
