@@ -12,8 +12,8 @@ class Unit < ApplicationRecord
   # relations
   has_ancestry
   belongs_to :district
-  belongs_to :unit_status
-  belongs_to :unit_type
+  belongs_to :unit_status, optional: true
+  belongs_to :unit_type, optional: true
   belongs_to :unit_instruction_type, optional: true
   belongs_to :unit_instruction_language, optional: true
   belongs_to :university_type, optional: true
@@ -25,7 +25,8 @@ class Unit < ApplicationRecord
   has_many :administrative_functions, through: :duties
 
   # validations
-  validates :yoksis_id, presence: true, uniqueness: true, numericality: { only_integer: true }
+  validates :yoksis_id, uniqueness: true, allow_blank: true, numericality: { only_integer: true }
+  validates :detsis_id, uniqueness: true, allow_blank: true, numericality: { only_integer: true }
   validates :name, presence: true, uniqueness: { scope: %i[ancestry unit_status] }
   validates :duration, numericality: { only_integer: true }, allow_blank: true
 

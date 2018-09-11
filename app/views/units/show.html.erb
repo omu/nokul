@@ -21,6 +21,10 @@
               <td><%= @unit.yoksis_id %></td>
             </tr>
             <tr>
+              <td><%= t('.detsis_id') %></td>
+              <td><%= @unit.detsis_id %></td>
+            </tr>
+            <tr>
               <td><%= t('.foet_code') %></td>
               <td><%= @unit.foet_code %></td>
             </tr>
@@ -34,7 +38,7 @@
             </tr>
             <tr>
               <td><%= t('.unit_type') %></td>
-              <td><%= @unit.unit_type.name %></td>
+              <td><%= @unit.unit_type.try(:name) %></td>
             </tr>
             <tr>
               <td><%= t('.district') %></td>
@@ -42,7 +46,7 @@
             </tr>
             <tr>
               <td><%= t('.unit_status') %></td>
-              <td><%= @unit.unit_status.name %></td>
+              <td><%= @unit.unit_status.try(:name) %></td>
             </tr>
             <tr>
               <td><%= t('.unit_instruction_language') %></td>
