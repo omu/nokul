@@ -44,6 +44,7 @@ module Account
     def set_elapsed_time
       formal_address = current_user.addresses.formal
       return if formal_address.blank?
+
       elapsed_time(formal_address.first)
     end
 

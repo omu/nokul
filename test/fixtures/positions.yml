@@ -8,3 +8,8 @@ omu_rector:
   duty: omu
   start_date: 01.01.2016
   end_date: <%= Time.zone.now - 2.years %>
+uzem_yok_member:
+  administrative_function: yok_member
+  duty: uzem
+  start_date: 01.01.2015
+  end_date: <%= Time.zone.now + 2.years %>
