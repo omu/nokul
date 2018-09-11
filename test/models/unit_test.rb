@@ -26,6 +26,7 @@ class UnitTest < ActiveSupport::TestCase
   %i[
     district
     name
+    unit_status
   ].each do |property|
     test "presence validations for #{property} of a unit" do
       units(:omu).send("#{property}=", nil)
