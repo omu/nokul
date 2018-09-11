@@ -25,9 +25,6 @@ class UnitTest < ActiveSupport::TestCase
   # validations: presence
   %i[
     district
-    unit_status
-    unit_type
-    yoksis_id
     name
   ].each do |property|
     test "presence validations for #{property} of a unit" do
@@ -38,11 +35,15 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   # validations: uniqueness
-  test 'uniqueness validations for yoksis_id and name fields of a unit' do
-    fake = units(:omu).dup
-    assert_not fake.valid?
-    assert_not_empty fake.errors[:yoksis_id]
-    assert_not_empty fake.errors[:name]
+  %i[
+    name
+    yoksis_id
+    detsis_id
+  ].each do |property|
+    test "uniqueness validations for #{property} of a unit" do
+      fake = units(:omu).dup
+      assert_not fake.valid?
+    end
   end
 
   # callbacks
