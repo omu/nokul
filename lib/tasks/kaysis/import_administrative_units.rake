@@ -2,12 +2,10 @@
 
 namespace :kaysis do
   task import_administrative_units: :environment do
-    file = File.open(Rails.root.join('db', 'static_data', 'administrative_units.yml'))
-  rescue Errno::ENOENT => e
-    puts "File/path not found! #{e}"
-  else
+    file = Rails.root.join('db', 'static_data', 'administrative_units.yml')
+    abort "File not found: #{file}" unless File.exist? file
     puts 'Importing administrative units from CSV.'
-    file.read.each_line do |unit|
+    File.readlines(file).each do |unit|
       parent_id, detsis_id, name, district_id = unit.split('|').map(&:strip)
       parent =
         if parent_id.length.equal?(6)
@@ -23,7 +21,5 @@ namespace :kaysis do
         district_id: district_id
       )
     end
-  ensure
-    file.close
   end
 end
