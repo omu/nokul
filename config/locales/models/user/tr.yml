@@ -73,6 +73,12 @@ tr:
       identities: Kimlik Bilgileri
     account:
       <<: *user_attributes
+    addresses:
+      update_from_mernis: MERNİS'ten Güncelle
+      create_from_mernis: MERNİS'ten Oluştur
+    identities:
+      update_from_mernis: MERNİS'ten Güncelle
+      create_from_mernis: MERNİS'ten Oluştur
     employees:
       active: Aktif mi?
       title: Ünvan
@@ -102,3 +108,9 @@ tr:
     destroy:
       success: Kullanıcı başarıyla silindi!
       warning: Kullanıcı silinemedi!
+    save_address_from_mernis:
+        wait: Adres yakın bir zamanda oluşturulmuş veya güncellenmiş. Adresi haftada bir güncelleyebilirsiniz.
+        will_update: Adres oluşturma veya güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde adres güncellenecek.
+    save_identity_from_mernis:
+        wait: Kimlik yakın bir zamanda oluşturulmuş veya güncellenmiş. Kimliği haftada bir güncelleyebilirsiniz.
+        will_update: Kimlik oluşturma veya güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde kimlik güncellenecek.

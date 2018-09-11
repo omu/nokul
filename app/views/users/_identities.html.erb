@@ -1,6 +1,13 @@
 <!-- TODO: WIP. Locales + tasarım. -->
 
 <div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <%= link_to (@user.identities.formal.present? ? t('.update_from_mernis') : t('.create_from_mernis') ), save_identity_from_mernis_user_path, class: "btn btn-outline-primary btn-sm"  %>
+      </div>
+    </div>
+  </div>
   <% if @identities.any? %>
     <% @identities.each do |identity| %>
       <div class="col-sm-6">

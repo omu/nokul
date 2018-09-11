@@ -2,10 +2,13 @@
 
 class UsersController < ApplicationController
   include Pagy::Backend
+  include LastUpdateFromMernis
 
-  before_action :set_user, only: %i[show edit update destroy]
+  before_action :set_user, only: %i[show edit update destroy save_address_from_mernis save_identity_from_mernis]
   before_action :set_identities, only: :show
   before_action :set_addresses, only: :show
+  before_action :set_address_elapsed_time, only: %i[save_address_from_mernis]
+  before_action :set_identity_elapsed_time, only: %i[save_identity_from_mernis]
 
   def index
     @pagy, @users = if params[:term].present?
@@ -41,6 +44,16 @@ class UsersController < ApplicationController
     @user.destroy ? redirect_with('.success') : redirect_with('.warning')
   end
 
+  def save_address_from_mernis
+    Kps::AddressSaveJob.perform_later(@user)
+    redirect_with('will_update')
+  end
+
+  def save_identity_from_mernis
+    Kps::IdentitySaveJob.perform_later(@user)
+    redirect_with('will_update')
+  end
+
   private
 
   def set_user
@@ -55,11 +68,26 @@ class UsersController < ApplicationController
     @addresses = @user.addresses
   end
 
+  def set_address_elapsed_time
+    formal_address = @user.addresses.formal
+    return if formal_address.blank?
+
+    elapsed_time(formal_address.first)
+  end
+
+  def set_identity_elapsed_time
+    formal_identity = @user.identities.user_identity
+    return if formal_identity.blank?
+
+    elapsed_time(formal_identity)
+  end
+
   def user_params
     params.require(:user).permit(:id_number, :email, :password, :password_confirmation, :preferred_language)
   end
 
   def redirect_with(message)
-    redirect_to(users_path, notice: t(".#{message}"))
+    redirect_to(users_path, notice: t(".#{message}")) if @user.blank?
+    redirect_to(user_path(@user), notice: t(".#{message}"))
   end
 end
