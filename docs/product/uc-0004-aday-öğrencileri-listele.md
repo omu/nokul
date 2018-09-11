@@ -16,14 +16,7 @@ Use Case: Aday Öğrencileri Listele
 - Adaylar listelenmeli.
 - Adaylar yıllara, bölüme, ada, soyada, TC’ye göre filtrelenebilmeli.
 
-**Actor:** Kullanıcı, “Aday Listesi” menüsüne tıklar.
-
-**System:** Sistem, içerisinde bulunulan yıldaki bölüm adaylarını listeler.
-
-**Actor:** Kullanıcı, arama alanındaki anahtar kelime kısmına ad, soyad, bölüm
-ya da TC bilgisi girer; ayrıca isterse arama alanındaki yıl alanında bir yıl
-seçer ve ara butonuna tıklar.
-
-**System:** Sistem, girilen anahtar kelimeyi, bölüm adayları listesindeki
-kayıtların ad, soyad, bölüm ve TC alanlarında, gönderilen yıl bilgisiyle
-filtreleyerek arar ve sonuçları listeler.
+| Actor        | System       |
+| :----------- |:-------------|
+| Kullanıcı, “Aday Listesi” menüsüne tıklar. | Sistem, içerisinde bulunulan yıldaki bölüm adaylarını listeler.|
+| Kullanıcı, arama alanındaki anahtar kelime kısmına ad, soyad, bölüm ya da TC bilgisi girer; ayrıca isterse arama alanındaki yıl alanında bir yıl seçer ve ara butonuna tıklar.| Sistem, girilen anahtar kelimeyi, bölüm adayları listesindeki kayıtların ad, soyad, bölüm ve TC alanlarında, gönderilen yıl bilgisiyle filtreleyerek arar ve sonuçları listeler.|

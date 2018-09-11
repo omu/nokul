@@ -1,0 +1,45 @@
+Use Case: Ders grubu oluştur
+============
+
+**Story:** Admin olarak, daha önce oluşturulmuş dersleri gruplayarak seçmeli
+ders grubu oluşturmak istiyorum.
+
+**Actor:** Admin
+
+**Preconditions:**
+
+- Birimler tanımlanmış olmalı
+- Programlar tanımlanmış olmalı
+- Tanımlı programlar arasında hazırlık programları belirtilmiş olmalı
+- Senotaya ait kurul/komisyon kararlarına erişilebilir olmalı
+- Dersler tanımlanmış olmalı
+
+
+| Actor        | System       |
+| :----------- |:-------------|
+| Kullanıcı, “Ders Grubu oluştur” butonuna tıklar.| Sistem kullanıcıya ders grubu oluşturma formunu gösterir.|
+| Kullanıcı formda istenen bilgileri doldurur.| Sistem, kullanıcıya formda belirtilen birime ait veya bu birim ile paylaşılan dersleri listeler.|
+| Kullanıcı listelenen derslerden gruplanacak olanları seçer ve kaydet butonuna tıklar.| Sistem kullanıcıya “Emin misiniz?” diye sorar.|
+| Kullanıcı validasyon sorusuna “Eminim” diye cevap verir.| Sistem varsa grup koşullarının seçim yapılan dersler ile sağlanıp sağlanamadığını kontrol eder. |
+|| Koşullar sağlanabiliyor ise sistem ilgili ders grubunu oluşturur.|
+|| Koşullar sağlanamıyor ise hata mesajı döndürür.|
+|| Örnek kontrol-1: Ders grubunda bulunan toplam AKTS değerinin koşul olarak verilen min AKTS değerinden büyük olması gerekir. Örnek kontrol-2: Ders grubunda yer alan ders sayısının koşul olarak verilen min ders sayısından büyük olması gerekir.|
+
+**Ders Grubu Formu:**
+
+- Ders Grubu Adı
+- Ders Grubu Birimi
+- Paylaşılan Birimler
+- Ders Grubu Koşulları
+  * Min AKTS
+  * Min Ders Sayısı
+- Ders Grubu Tipi
+  * Sosyal Seçmeli
+  * Bölüm Seçmeli
+  * Üniversite Seçmeli
+  * …
+
+**Ders Listesi**
+
+- Ders Grubu oluşturulan birim için tanımlanan dersler
+- Ders Grubu oluşturulan birim ile paylaşılan dersler
