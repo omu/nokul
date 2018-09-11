@@ -5,21 +5,16 @@ namespace :kaysis do
     file = Rails.root.join('db', 'static_data', 'administrative_units.yml')
     abort "File not found: #{file}" unless File.exist? file
     puts 'Importing administrative units from CSV.'
-    File.readlines(file).each do |unit|
-      parent_id, detsis_id, name, district_id = unit.split('|').map(&:strip)
+    YAML.safe_load(File.read(file)).each_pair do |_, unit|
       parent =
-        if parent_id.length.equal?(6)
-          Unit.find_by(yoksis_id: parent_id)
-        elsif parent_id.length.equal?(8)
-          Unit.find_by(detsis_id: parent_id)
+        if unit['parent_yoksis_id']
+          Unit.find_by(yoksis_id: unit['parent_yoksis_id'])
+        else
+          Unit.find_by(detsis_id: unit['parent_detsis_id'])
         end
-
-      Unit.create(
-        name: name,
-        detsis_id: detsis_id,
-        parent: parent,
-        district_id: district_id
-      )
+      unit.shift
+      unit['parent'] = parent
+      Unit.create(unit)
     end
   end
 end

@@ -12,7 +12,7 @@ class Unit < ApplicationRecord
   # relations
   has_ancestry
   belongs_to :district
-  belongs_to :unit_status, optional: true
+  belongs_to :unit_status
   belongs_to :unit_type, optional: true
   belongs_to :unit_instruction_type, optional: true
   belongs_to :unit_instruction_language, optional: true
