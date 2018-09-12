@@ -46,12 +46,12 @@ class UsersController < ApplicationController
 
   def save_address_from_mernis
     Kps::AddressSaveJob.perform_later(@user)
-    redirect_with('will_update')
+    redirect_to(@user, notice: t('.will_update'))
   end
 
   def save_identity_from_mernis
     Kps::IdentitySaveJob.perform_later(@user)
-    redirect_with('will_update')
+    redirect_to(@user, notice: t('.will_update'))
   end
 
   private
@@ -87,7 +87,6 @@ class UsersController < ApplicationController
   end
 
   def redirect_with(message)
-    redirect_to(users_path, notice: t(".#{message}")) if @user.blank?
-    redirect_to(user_path(@user), notice: t(".#{message}"))
+    redirect_to(users_path, notice: t(".#{message}"))
   end
 end
