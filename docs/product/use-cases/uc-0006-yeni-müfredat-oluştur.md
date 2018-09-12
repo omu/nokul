@@ -15,8 +15,7 @@ Use Case: Yeni müfredat oluştur
 | Actor        | System       |
 | :----------- |:-------------|
 | Kullanıcı, “Yeni Müfredat Oluştur” butonuna tıklar.| Sistem, kullanıcıya “Müfredat Ekle Formu” görüntüler.|
-| Kullanıcı, formu doldurur ve “Kaydet” butonuna tıklar.| Sistem, formdaki zorunlu alanları kontrol ederek ilgili kaydı gerçekleştirir. |
-| | Sistem kayıtlı müfredatları listeleme ekranına döner.|
+| Kullanıcı, formu doldurur ve “Kaydet” butonuna tıklar.| Sistem, formdaki zorunlu alanları kontrol ederek ilgili kaydı gerçekleştirir. <br><br> Sistem kayıtlı müfredatları listeleme ekranına döner.|
 
 
 ![alt text](assets/mockups/mufredat/1.png)

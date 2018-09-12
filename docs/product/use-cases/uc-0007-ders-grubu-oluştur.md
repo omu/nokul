@@ -19,10 +19,7 @@ ders grubu oluşturmak istiyorum.
 | :----------- |:-------------|
 | Kullanıcı, “Ders Grubu Oluştur” butonuna tıklar.| Sistem kullanıcıya ders grubu oluşturma formunu gösterir.|
 | Kullanıcı formda istenen bilgileri doldurur.| Sistem, kullanıcıya formda belirtilen birime ait veya bu birim ile paylaşılan dersleri listeler.|
-| Kullanıcı listelenen derslerden gruplanacak olanları seçer ve "Kaydet" butonuna tıklar.| Sistem varsa grup koşullarının seçim yapılan dersler ile sağlanıp sağlanamadığını kontrol eder. |
-|| Koşullar sağlanabiliyor ise sistem ilgili ders grubunu oluşturur.|
-|| Koşullar sağlanamıyor ise hata mesajı döndürür.|
-|| Örnek kontrol-1: Ders grubunda bulunan toplam AKTS değerinin koşul olarak verilen min AKTS değerinden büyük olması gerekir. Örnek kontrol-2: Ders grubunda yer alan ders sayısının koşul olarak verilen min ders sayısından büyük olması gerekir.|
+| Kullanıcı listelenen derslerden gruplanacak olanları seçer ve "Kaydet" butonuna tıklar.| Sistem varsa grup koşullarının seçim yapılan dersler ile sağlanıp sağlanamadığını kontrol eder. <br><br> Koşullar sağlanabiliyor ise sistem ilgili ders grubunu oluşturur.<br><br> Koşullar sağlanamıyor ise hata mesajı döndürür.<br><br> Örnek kontrol-1: Ders grubunda bulunan toplam AKTS değerinin koşul olarak verilen min AKTS değerinden büyük olması gerekir. <br><br> Örnek kontrol-2: Ders grubunda yer alan ders sayısının koşul olarak verilen min ders sayısından büyük olması gerekir.|
 
 **Ders Grubu Formu:**
 
