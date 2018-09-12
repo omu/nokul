@@ -15,15 +15,20 @@ Use Case: Yeni müfredat oluştur
 | Actor        | System       |
 | :----------- |:-------------|
 | Kullanıcı, “Yeni Müfredat Oluştur” butonuna tıklar.| Sistem, kullanıcıya “Müfredat Ekle Formu” görüntüler.|
-| Kullanıcı, formu doldurur ve “Kaydet” butonuna tıklar.| Sistem, formdaki alanları kontrol ederek ilgili kaydı gerçekleştirir. |
-|| Sistem kayıtlı müfredatları listeleme ekranına döner.|
+| Kullanıcı, formu doldurur ve “Kaydet” butonuna tıklar.| Sistem, formdaki zorunlu alanları kontrol ederek ilgili kaydı gerçekleştirir. |
+| | Sistem kayıtlı müfredatları listeleme ekranına döner.|
+
+
+![alt text](assets/mockups/mufredat/1.png)
+
+![alt text](assets/mockups/mufredat/2.png)
 
 **Not:** Yeni Müfredat Oluştur Formunda bulunması gereken alanlar:
 
-- Müfredat adı
-- Birimi
-- Yarıyıl sayısı
-- İlk uygulandığı yıl ve dönem
-- Kaldırılma yıl ve dönem
-- Senato kararı
-- İlgili birimler
+| Field | Type | Required | Note |
+| :---: | :---: | :---: | :---: |
+| Müfredat Adı | Text | True | |
+| Birim | Select | True | |
+| Program | Multi Select | True | |
+| Yarıyıl Sayısı | Int | True | |
+| Senato Kararı | Select | True | |

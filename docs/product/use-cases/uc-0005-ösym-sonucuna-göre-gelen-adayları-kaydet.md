@@ -53,3 +53,15 @@ geçici kayıtlanmalarını gerçekleştirmek istiyorum.
 || Formdaki “Müfredat” verisinde, hazırlık zorunlu ise oluşturulacak öğrencinin sınıfı 0 olarak sistem tarafından belirlenir.|
 || Formdaki “Müfredat” verisinde, hazırlık zorunlu değil ise ve formdaki “Hazırlık okumak istiyorum” verisi “Evet” olarak gönderilmiş ise, oluşturulacak öğrencinin sınıfı sistem tarafından 0 olarak ayarlanır. Aksi halde 1 olarak ayarlanır.|
 || Sistem, oluşturulan öğrenciyi formda gönderilen “Müfredat” verisiyle ilişkilendirir.|
+
+
+![alt text](assets/mockups/kayit/1.png)
+![alt text](assets/mockups/kayit/2.png)
+![alt text](assets/mockups/kayit/3.png)
+![alt text](assets/mockups/kayit/4.png)
+![alt text](assets/mockups/kayit/5.png)
+![alt text](assets/mockups/kayit/6.png)
+![alt text](assets/mockups/kayit/7.png)
+![alt text](assets/mockups/kayit/8.png)
+![alt text](assets/mockups/kayit/9.png)
+![alt text](assets/mockups/kayit/10.png)
