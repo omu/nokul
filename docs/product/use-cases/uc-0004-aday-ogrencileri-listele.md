@@ -8,9 +8,7 @@ Use Case: Aday Öğrencileri Listele
 
 **Preconditions:**
 
-- Üniversitemizin herhangi bir bölümünü kazanmış adayları, yıl bilgileri ve aday
-  oldukları bölüm bilgileri ile birlikte sistemdeki bölüm aday listesine
-  aktarılmış olmalı.
+- Üniversitemizin herhangi bir bölümünü kazanmış adayları, yıl bilgileri ve aday oldukları bölüm bilgileri ile birlikte sistemdeki bölüm aday listesine aktarılmış olmalı.
 
 **Postconditions:**
 

@@ -26,7 +26,7 @@ Use Case: Yeni müfredat oluştur
 **Not:** Yeni Müfredat Oluştur Formunda bulunması gereken alanlar:
 
 | Field | Type | Required | Note |
-| :---: | :---: | :---: | :---: |
+| --- | --- | --- | --- |
 | Müfredat Adı | Text | True | |
 | Birim | Select | True | |
 | Program | Multi Select | True | |
