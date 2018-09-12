@@ -6,10 +6,6 @@ actor: Admin
 Use Case: Yeni müfredat oluştur
 ============
 
-**Story:** .
-
-**Actor:** Admin
-
 **Preconditions:**
 
 - Birimler tanımlanmış olmalı
