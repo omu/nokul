@@ -1,6 +1,5 @@
 ---
-story: Admin olarak ÖSYM sonucuna göre gelen adayların kesin veya
-geçici kayıtlanmalarını gerçekleştirmek istiyorum
+story: Admin olarak ÖSYM sonucuna göre gelen adayların kesin veya geçici kayıtlanmalarını gerçekleştirmek istiyorum
 actor: Admin
 ---
 

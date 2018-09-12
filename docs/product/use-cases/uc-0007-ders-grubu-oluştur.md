@@ -1,6 +1,5 @@
 ---
-story: Admin olarak, daha önce oluşturulmuş dersleri gruplayarak seçmeli
-ders grubu oluşturmak istiyorum
+story: Admin olarak, daha önce oluşturulmuş dersleri gruplayarak seçmeli ders grubu oluşturmak istiyorum
 actor: Admin
 ---
 
