@@ -34,7 +34,7 @@ Rails.application.routes.draw do
     resources :calendar_titles, except: :show
     resources :calendar_types
   end
-  
+
   resources :languages
   resources :units
 
@@ -52,6 +52,8 @@ Rails.application.routes.draw do
   end
 
   resources :users do
+    get 'save_address_from_mernis', on: :member
+    get 'save_identity_from_mernis', on: :member
     scope module: :account do
       resources :employees, except: %i[index show]
       resources :duties, except: %i[index show]
