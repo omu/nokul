@@ -17,10 +17,9 @@ ders grubu oluşturmak istiyorum.
 
 | Actor        | System       |
 | :----------- |:-------------|
-| Kullanıcı, “Ders Grubu oluştur” butonuna tıklar.| Sistem kullanıcıya ders grubu oluşturma formunu gösterir.|
+| Kullanıcı, “Ders Grubu Oluştur” butonuna tıklar.| Sistem kullanıcıya ders grubu oluşturma formunu gösterir.|
 | Kullanıcı formda istenen bilgileri doldurur.| Sistem, kullanıcıya formda belirtilen birime ait veya bu birim ile paylaşılan dersleri listeler.|
-| Kullanıcı listelenen derslerden gruplanacak olanları seçer ve kaydet butonuna tıklar.| Sistem kullanıcıya “Emin misiniz?” diye sorar.|
-| Kullanıcı validasyon sorusuna “Eminim” diye cevap verir.| Sistem varsa grup koşullarının seçim yapılan dersler ile sağlanıp sağlanamadığını kontrol eder. |
+| Kullanıcı listelenen derslerden gruplanacak olanları seçer ve "Kaydet" butonuna tıklar.| Sistem varsa grup koşullarının seçim yapılan dersler ile sağlanıp sağlanamadığını kontrol eder. |
 || Koşullar sağlanabiliyor ise sistem ilgili ders grubunu oluşturur.|
 || Koşullar sağlanamıyor ise hata mesajı döndürür.|
 || Örnek kontrol-1: Ders grubunda bulunan toplam AKTS değerinin koşul olarak verilen min AKTS değerinden büyük olması gerekir. Örnek kontrol-2: Ders grubunda yer alan ders sayısının koşul olarak verilen min ders sayısından büyük olması gerekir.|
@@ -39,7 +38,7 @@ ders grubu oluşturmak istiyorum.
   * Üniversite Seçmeli
   * …
 
-**Ders Listesi**
+**Ders Listesi:**
 
 - Ders Grubu oluşturulan birim için tanımlanan dersler
 - Ders Grubu oluşturulan birim ile paylaşılan dersler

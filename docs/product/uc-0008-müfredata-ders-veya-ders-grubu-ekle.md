@@ -1,7 +1,7 @@
-Use Case: Müfredatla ders ve ders grubunu ilişkilendir
+Use Case: Müfredata ders veya ders grubu ekle
 ============
 
-**Story:** Admin olarak daha önce oluşturmuş olduğum müfredatla ders veya ders grubunu ilişkilendirmek istiyorum.
+**Story:** Admin olarak daha önce oluşturmuş olduğum müfredata ders veya ders grubu eklemek istiyorum.
 
 **Actor:** Admin
 
