@@ -5,6 +5,8 @@ module LastUpdateFromMernis
 
   def elapsed_time(resource)
     elapsed_time = (Time.zone.now - resource.updated_at) / 1.day
-    redirect_with('wait') if elapsed_time.present? && elapsed_time < 7
+    return unless elapsed_time.blank? || elapsed_time < 7
+
+    @user.present? ? redirect_to(@user, notice: t('.wait')) : redirect_with('wait')
   end
 end
