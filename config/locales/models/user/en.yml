@@ -71,6 +71,12 @@ en:
       new_user_link: Create a New User
       addresses: Addresses
       identities: Identities
+    addresses:
+      update_from_mernis: Update from MERNIS
+      create_from_mernis: Create from MERNIS
+    identities:
+      update_from_mernis: Update from MERNIS
+      create_from_mernis: Create from MERNIS
     account:
       <<: *user_attributes
     employees:
@@ -87,6 +93,8 @@ en:
       identities: Identities
       addresses: Addresses
       employees: Employees
+      update_from_mernis: Update from MERNİS
+      create_from_mernis: Create from MERNIS
     search:
       smart_search: Smart Search
       smart_search_placeholder: TC/YU number, e-mail address, first of last name
@@ -102,3 +110,9 @@ en:
     destroy:
       success: User successfully deleted!
       warning: User can not be deleted.
+    save_address_from_mernis:
+        wait: The address was recently created or updated. You can update the address once a week.
+        will_update: We have received your request to create or update addresses, the address will be updated within a few seconds.
+    save_identity_from_mernis:
+        wait: The identity was recently created or updated. You can update the identity once a week.
+        will_update: We have received your request for an identity creation or an update, and within a few seconds/minutes the identity will be updated.
