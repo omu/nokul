@@ -1,10 +1,11 @@
+---
+story: Admin olarak, daha önce oluşturulmuş dersleri gruplayarak seçmeli
+ders grubu oluşturmak istiyorum
+actor: Admin
+---
+
 Use Case: Ders grubu oluştur
 ============
-
-**Story:** Admin olarak, daha önce oluşturulmuş dersleri gruplayarak seçmeli
-ders grubu oluşturmak istiyorum.
-
-**Actor:** Admin
 
 **Preconditions:**
 
@@ -13,7 +14,6 @@ ders grubu oluşturmak istiyorum.
 - Tanımlı programlar arasında hazırlık programları belirtilmiş olmalı
 - Senotaya ait kurul/komisyon kararlarına erişilebilir olmalı
 - Dersler tanımlanmış olmalı
-
 
 | Actor        | System       |
 | :----------- |:-------------|

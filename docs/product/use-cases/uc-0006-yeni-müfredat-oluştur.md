@@ -1,7 +1,12 @@
+---
+story: Admin olarak, birimlerle ilişkili olarak müfredat tanımı eklemek istiyorum
+actor: Admin
+---
+
 Use Case: Yeni müfredat oluştur
 ============
 
-**Story:** Admin olarak, birimlerle ilişkili olarak müfredat tanımı eklemek istiyorum.
+**Story:** .
 
 **Actor:** Admin
 

@@ -1,9 +1,10 @@
+---
+story: Admin olarak müfredatlarda arama yapmak istiyorum
+actor: Admin
+---
+
 Use Case: Müfredatlarda ara
 ============
-
-**Story:** Admin olarak müfredatlarda arama yapmak istiyorum.
-
-**Actor:** Admin
 
 **Preconditions:**
 

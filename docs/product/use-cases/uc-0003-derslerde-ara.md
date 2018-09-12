@@ -1,9 +1,10 @@
+---
+story: Admin olarak derslerde arama yapmak istiyorum
+actor: Admin
+---
+
 Use Case: Derslerde ara
 ============
-
-**Story:** Admin olarak derslerde arama yapmak istiyorum.
-
-**Actor:** Admin
 
 **Preconditions:**
 

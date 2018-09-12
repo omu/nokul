@@ -1,10 +1,11 @@
+---
+story: Admin olarak ÖSYM sonucuna göre gelen adayların kesin veya
+geçici kayıtlanmalarını gerçekleştirmek istiyorum
+actor: Admin
+---
+
 Use Case: ÖSYM sonucuna göre gelen adayları kaydet
 ============
-
-**Story:** Admin olarak ÖSYM sonucuna göre gelen adayların kesin veya
-geçici kayıtlanmalarını gerçekleştirmek istiyorum.
-
-**Actor:** Admin
 
 **Preconditions:**
 

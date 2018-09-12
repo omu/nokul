@@ -1,9 +1,10 @@
+---
+story: Admin olarak daha önce oluşturmuş olduğum müfredata ders veya ders grubu eklemek istiyorum
+actor: Admin
+---
+
 Use Case: Müfredata ders veya ders grubu ekle
 ============
-
-**Story:** Admin olarak daha önce oluşturmuş olduğum müfredata ders veya ders grubu eklemek istiyorum.
-
-**Actor:** Admin
 
 **Preconditions:**
 

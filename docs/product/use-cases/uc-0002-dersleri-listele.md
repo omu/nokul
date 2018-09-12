@@ -1,9 +1,10 @@
+---
+story: Admin olarak dersleri listelemek istiyorum
+actor: Admin
+---
+
 Use Case: Dersleri listele
 ============
-
-**Story:** Admin olarak dersleri listelemek istiyorum.
-
-**Actor:** Admin
 
 **Preconditions:**
 

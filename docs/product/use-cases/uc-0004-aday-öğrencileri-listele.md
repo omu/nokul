@@ -1,9 +1,10 @@
+---
+story: Admin olarak aday öğrencileri listelemek istiyorum
+actor: Admin
+---
+
 Use Case: Aday Öğrencileri Listele
 ============
-
-**Story:** Admin olarak aday öğrencileri listelemek istiyorum.
-
-**Actor:** Admin
 
 **Preconditions:**
 

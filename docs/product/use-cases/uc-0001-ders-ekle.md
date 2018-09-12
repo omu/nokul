@@ -1,9 +1,10 @@
+---
+story: Admin olarak ilgili bölüme ders eklemek istiyorum
+actor: Admin
+---
+
 Use Case: Ders ekle
 ============
-
-**Story:** Admin olarak ilgili bölüme ders eklemek istiyorum.
-
-**Actor:** Admin
 
 **Preconditions:**
 
