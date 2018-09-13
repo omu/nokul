@@ -1,0 +1,27 @@
+tr:
+  activerecord:
+    attributes:
+      agenda_type: &agenda_type_attributes
+        name: Gündem Türü Adı
+  helpers:
+    submit:
+      agenda_type:
+        create: Gündem Türü Oluştur
+        update: Gündem Türü Güncelle
+  committee:
+    agenda_types:
+      index:
+        <<: *agenda_type_attributes
+        new_agenda_type_link: Yeni Bir Gündem Türü Oluştur
+        card_header: Gündem Türleri
+      new:
+        form_title: Gündem Türü Oluştur
+      edit:
+        form_title: Gündem Türü Güncelle
+      create:
+        success: Gündem Türü başarıyla oluşturuldu.
+      update:
+        success: Gündem Türü başarıyla güncellendi.
+      destroy:
+        success: Gündem Türü başarıyla silindi.
+        warning: Gündem Türü silinemedi!
