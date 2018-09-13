@@ -1,0 +1,27 @@
+en:
+  activerecord:
+    attributes:
+      agenda_type: &agenda_type_attributes
+        name: Name of Agenda Type
+  helpers:
+    submit:
+      agenda_type:
+        create: Create Agenda Type
+        update: Update Agenda Type
+  committee:
+    agenda_types:
+      index:
+        <<: *agenda_type_attributes
+        new_agenda_type_link: Create a New Agenda Type
+        card_header: Agenda Types
+      new:
+        form_title: Create a Agenda Type
+      edit:
+        form_title: Update the Agenda Type
+      update:
+        success: Agenda Type successfully updated.
+      create:
+        success: Agenda Type successfully created.
+      destroy:
+        success: Agenda Type successfully deleted.
+        warning: Agenda Type can not be deleted!

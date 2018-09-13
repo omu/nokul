@@ -93,4 +93,8 @@ Rails.application.routes.draw do
     get '/studies/projects', to: 'projects#index'
     get '/studies/certifications', to: 'certifications#index'
   end
+
+  scope module: :committee do
+    resources :agenda_types, except: :show
+  end
 end
