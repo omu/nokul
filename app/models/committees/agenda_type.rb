@@ -9,6 +9,9 @@ class AgendaType < ApplicationRecord
     using: { tsearch: { prefix: true } }
   )
 
+  # reloations
+  has_many :agendas, dependent: :nullify
+
   # validations
   validates :name, presence: true
 
