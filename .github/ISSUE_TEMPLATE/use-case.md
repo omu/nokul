@@ -14,7 +14,7 @@ about: Product ekibi tarafından hazırlanmış `use case` için iş kaydı.
 
 * [ ] İş kaydınızın başlığı kurallara (sadece ilk harf büyük, emir kipinde problem cümlesi vb.) uygun mu?
 * [ ] Use case, product ekibi tarafından incelenip onaylandı mı?
-* [ ] USe case ve oluşturulan mockup'lar müşteri tarafından onaylandı mı?
+* [ ] Use case ve oluşturulan mockup'lar müşteri tarafından onaylandı mı?
 
 **Ek içerik:**
 
