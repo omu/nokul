@@ -8,7 +8,7 @@ about: Product ekibi tarafından hazırlanmış `use case` için iş kaydı.
 
 **Açıklama:**
 
-[//]: # (Kısa ve net bir şekilde konuyla ilişkili olarak sizin önerileriniz neler, sizin öneriniz kabul edilirse neler olacak, uygulama da neler iyileşecek açıklayınız.)
+[//]: # (Kısa ve net bir şekilde konuyla ilişkili olarak sizin önerileriniz neler, sizin öneriniz kabul edilirse neler olacak, uygulamada neler iyileşecek açıklayınız.)
 
 **Kontrol listesi**
 
