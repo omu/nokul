@@ -1,0 +1,20 @@
+<div class='col-sm-12'>
+  <div class='card'>
+    <div class="card-header">
+      <i class="fa fa-search"></i> `<%= params[:word] %>` için arama sonuçları
+    </div>
+    <div class="card-body">
+      <div class="col-sm-12">
+        <% if @users %>
+          <div class="list-group">
+            <% @users.each do |user| %>
+              <%= link_to user.email, profiles_show_path(user.slug), class: 'list-group-item list-group-item-action'  %>
+            <% end %>
+          </div>
+        <% else %>
+          <h2> Aradığınız kriterlere göre bir sonuç bulunamadı </h2>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
