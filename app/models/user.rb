@@ -82,4 +82,5 @@ class User < ApplicationRecord
   def title
     employees.active.first.try(:title).try(:name)
   end
+
 end

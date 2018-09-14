@@ -14,20 +14,24 @@ class PublicProfileController < ApplicationController
     send_data vcard_content(@identity), type: 'text/vcard; charset=utf-8; header=present', filename: 'contact.vcf'
   end
 
+  def search
+    @users = User.search(params[:word])
+  end
+
   private
 
   def set_user
-    @user = User.friendly.find(params[:id])
+    @user = User.includes(:articles, duties: [:unit]).friendly.find(params[:id])
     not_found unless @user
   end
 
   def set_employee
-    @employee = @user.employees.active.first
+    @employee = @user.employees.includes(:title, positions: [ :administrative_function ]).active.first
     not_found unless @employee
   end
 
   def check_identity
-    @identity = @user.identities.user_identity
+    @identity = @user.identities.user_identity.take
     not_found if @identity.blank?
   end
 
