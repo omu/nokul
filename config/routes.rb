@@ -96,5 +96,11 @@ Rails.application.routes.draw do
 
   scope module: :committee do
     resources :agenda_types, except: :show
+    get '/committees', to: 'dashboard#index'
+    get '/committees/:id', to: 'dashboard#show', as: :committee
+  end
+
+resources :committees, only: [] do
+    resources :agendas, except: :show, module: :committee
   end
 end

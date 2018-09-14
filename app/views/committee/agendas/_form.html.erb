@@ -1,0 +1,36 @@
+<div class='row'>
+  <div class='col-sm-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'calendar' %>
+        <strong><%= form_title %></strong>
+      </div>
+      <div class='card-body'>
+        <%= simple_form_for([:committee, agenda]) do |f| %>
+          <div class='row'>
+            <div class='form-group col-sm-12'>
+              <%= f.error_notification %>
+              <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.input :unit_id, as: :hidden, input_html: { value: @committee.id } %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.input :description, required: true %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.input :agenda_type_id, collection: AgendaType.all %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.input :status, collection: enum_options_for_select(f.object.class, :status) %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
+              <%= link_to_back(:back) %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

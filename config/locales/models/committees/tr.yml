@@ -1,14 +1,46 @@
 tr:
   activerecord:
     attributes:
+      agenda: &agenda_attributes
+        description: Gündem Açıklaması
+        agenda_type: Gündem Türü
+        status: Gündem Durumu
       agenda_type: &agenda_type_attributes
         name: Gündem Türü Adı
+      dashboard:
+        name: Kurul / Komisyon Adı
+    enums:
+      agenda:
+        statuses:
+          newly: Yeni
+          desided: Karar Verildi
+          delayed: Ertelendi
   helpers:
     submit:
+      agenda:
+        create: Gündem Oluştur
+        update: Gündem Güncelle
       agenda_type:
         create: Gündem Türü Oluştur
         update: Gündem Türü Güncelle
   committee:
+    agendas:
+      index:
+        <<: *agenda_attributes
+        new_agenda_link: Yeni Bir Gündem Oluştur
+        card_header: Gündemler
+        unit: Birim
+      new:
+        form_title: Gündem Oluştur
+      edit:
+        form_title: Gündem Güncelle
+      create:
+        success: Gündem başarıyla oluşturuldu.
+      update:
+        success: Gündem başarıyla güncellendi.
+      destroy:
+        success: Gündem başarıyla silindi.
+        warning: Gündem silinemedi!
     agenda_types:
       index:
         <<: *agenda_type_attributes
@@ -25,3 +57,19 @@ tr:
       destroy:
         success: Gündem Türü başarıyla silindi.
         warning: Gündem Türü silinemedi!
+    dashboard:
+      index:
+        name: Kurul / Komisyon Adı
+        detsis_id: DETSIS ID
+        yoksis_id: YOKSIS ID
+        unit_status: Birim Durumu
+        unit_type: Birim Türü
+        district: Bulunduğu İlçe
+        card_header: Kurul / Komisyon
+      show:
+        description: Açıklama
+        unit: Üst Birim
+        agenda_type: Gündem Türü
+        status: Gündem Durumu
+        actions: İşlemler
+        agenda_card_header: Gündemler
