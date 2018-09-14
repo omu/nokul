@@ -141,6 +141,11 @@
           <%= fa_icon('file-text-o', text: t('.studies'), class: 'nav-icon') %>
         <% end %>
       </li>
+      <li class="nav-item">
+        <%= link_to committees_path, class: 'nav-link' do %>
+          <%= fa_icon('tasks', text: t('.committees'), class: 'nav-icon') %>
+        <% end %>
+      </li>
     </ul>
   </nav>
   <button class="sidebar-minimizer brand-minimizer" type="button"></button>
