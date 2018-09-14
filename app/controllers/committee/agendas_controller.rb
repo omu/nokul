@@ -4,11 +4,11 @@ module Committee
   class AgendasController < ApplicationController
     include Pagy::Backend
 
-    before_action :set_agenda, only: %i[edit update destroy]
     before_action :set_committee
+    before_action :set_agenda, only: %i[edit update destroy]
 
     def index
-      agendas = Agenda.where(unit: @committee).includes(:unit, :agenda_type)
+      agendas = @committee.agendas.includes(:agenda_type)
       @pagy, @agendas = if params[:term].present?
                           pagy(agendas.search(params[:term]))
                         else
@@ -17,18 +17,17 @@ module Committee
     end
 
     def new
-      @agenda = Agenda.new
+      @agenda = @committee.agendas.new
     end
 
     def edit; end
 
     def create
-      @agenda = Agenda.new(agenda_params)
+      @agenda = @committee.agendas.new(agenda_params)
       @agenda.save ? redirect_with('success') : render(:new)
     end
 
     def update
-      @committee = Unit.find(agenda_params[:unit_id])
       @agenda.update(agenda_params) ? redirect_with('success') : render(:edit)
     end
 
@@ -42,12 +41,13 @@ module Committee
       redirect_to(committee_agendas_path(@committee), notice: t(".#{message}"))
     end
 
-    def set_agenda
-      @agenda = Agenda.find(params[:id])
-    end
-
     def set_committee
       @committee = Unit.find(params[:committee_id])
+      not_found unless @committee
+    end
+
+    def set_agenda
+      @agenda = @committee.agendas.find(params[:id]) if @committee
     end
 
     def agenda_params
