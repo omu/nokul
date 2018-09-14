@@ -43,7 +43,6 @@ module Committee
 
     def set_committee
       @committee = Unit.find(params[:committee_id])
-      not_found unless @committee
     end
 
     def set_agenda
