@@ -100,7 +100,7 @@ Rails.application.routes.draw do
     get '/committees/:id', to: 'dashboard#show', as: :committee
   end
 
-resources :committees, only: [] do
+  resources :committees, only: [] do
     resources :agendas, except: :show, module: :committee
   end
 end
