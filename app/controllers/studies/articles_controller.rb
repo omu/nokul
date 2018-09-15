@@ -2,8 +2,6 @@
 
 module Studies
   class ArticlesController < ApplicationController
-    include Pagy::Backend
-
     def index; end
   end
 end
