@@ -4,6 +4,7 @@ en:
       unit: &unit_attributes
         name: Unit Name
         yoksis_id: YOKSIS ID
+        detsis_id: DETSIS ID
         foet_code: FOET Code
         founded_at: Founded At
         duration: Duration of Instruction
