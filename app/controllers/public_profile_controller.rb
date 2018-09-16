@@ -15,7 +15,7 @@ class PublicProfileController < ApplicationController
   end
 
   def search
-    #TODO: identity kaydı bulunmayanlar seçilmeli.
+    # TODO: identity kaydı bulunmayanlar seçilmeli.
     @users = User.search(params[:word])
   end
 
@@ -27,7 +27,7 @@ class PublicProfileController < ApplicationController
   end
 
   def set_employee
-    @employee = @user.employees.includes(:title, positions: [ :administrative_function ]).active.first
+    @employee = @user.employees.includes(:title, positions: [:administrative_function]).active.first
     not_found unless @employee
   end
 
