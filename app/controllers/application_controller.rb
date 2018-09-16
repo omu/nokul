@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
-  include PagyBackendWithSearch
+  include PagyBackendWithHelpers
 
   protect_from_forgery with: :exception
 
