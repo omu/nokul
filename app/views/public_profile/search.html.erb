@@ -5,14 +5,17 @@
     </div>
     <div class="card-body">
       <div class="col-sm-12">
-        <% if @users %>
+        <% if @users.count > 0 %>
           <div class="list-group">
             <% @users.each do |user| %>
-              <%= link_to user.email, profiles_show_path(user.slug), class: 'list-group-item list-group-item-action'  %>
+              <%= link_to profiles_show_path(user.slug), class: 'list-group-item list-group-item-action' do %>
+                <%= user.identities.user_identity.take.try(:name) %>
+                <small><%= user.try(:title) %></small>
+              <% end %>
             <% end %>
           </div>
         <% else %>
-          <h2> Aradığınız kriterlere göre bir sonuç bulunamadı </h2>
+          <h2> Aradığınız kriterlere göre bir sonuç bulunamadı...</h2>
         <% end %>
       </div>
     </div>
