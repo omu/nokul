@@ -2,6 +2,7 @@
 
 class EmployeeValidator < ActiveModel::Validator
   def validate(record)
-    record.errors[:base] << I18n.t('active', scope: %i[validators employee]) if record.user.employees.active.present? && record.active?
+    employees = record.user.employees.where.not(id: record.id)
+    record.errors[:base] << I18n.t('active', scope: %i[validators employee]) if employees.active.present? && record.active?
   end
 end
