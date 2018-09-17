@@ -2,7 +2,7 @@ en:
   course_attributes: &course_attributes
     credit: Credit
     code: Code
-    education_type: Education Type
+    program_type: Program Type
     laboratory: Laboratory
     language: Language
     name: Name
@@ -15,14 +15,14 @@ en:
       course: Course
     enums:
       course:
-        education_types:
+        program_types:
+          associate: Associate
           undergraduate: Undergraduate
           master: Master
           doctoral: Doctoral
         statuses:
           passive: Passive
           active: Active
-          abrogated: Abrogated
   curriculum:
     courses:
       new:
@@ -36,6 +36,9 @@ en:
         error: An error occured when deleting the course.
       update:
         success: Course successfully updated.
+      search:
+        smart_search_placeholder: Course name or code
+        <<: *course_attributes
       show:
         <<: *course_attributes
       index:
