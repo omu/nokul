@@ -39,5 +39,5 @@ class Unit < ApplicationRecord
   scope :unit_status_id, ->(id) { where(unit_status_id: id) }
   scope :unit_instruction_type_id, ->(id) { where(unit_instruction_type_id: id) }
   scope :unit_instruction_language_id, ->(id) { where(unit_instruction_language_id: id) }
-  scope :committees, -> { where(unit_type: UnitType.find_by(name: 'Kurul / Komisyon')) }
+  scope :committees, -> { where(unit_type: UnitType.find_by(code: 200)) }
 end
