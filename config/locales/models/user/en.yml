@@ -71,14 +71,14 @@ en:
       new_user_link: Create a New User
       addresses: Addresses
       identities: Identities
+    account:
+      <<: *user_attributes
     addresses:
       update_from_mernis: Update from MERNIS
       create_from_mernis: Create from MERNIS
     identities:
       update_from_mernis: Update from MERNIS
       create_from_mernis: Create from MERNIS
-    account:
-      <<: *user_attributes
     employees:
       active: Is Active?
       title: Title
@@ -93,12 +93,8 @@ en:
       identities: Identities
       addresses: Addresses
       employees: Employees
-      update_from_mernis: Update from MERNİS
-      create_from_mernis: Create from MERNIS
     search:
-      smart_search: Smart Search
       smart_search_placeholder: TC/YU number, e-mail address, first of last name
-      detailed_search: Detailed Search
     edit:
       form_title: Edit Account
     new:
