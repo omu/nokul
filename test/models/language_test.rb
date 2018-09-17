@@ -7,6 +7,10 @@ class LanguageTest < ActiveSupport::TestCase
     @language = languages(:turkce)
   end
 
+  test 'langugage can communicate with courses' do
+    assert @language.courses
+  end
+
   # validations: presence
   %i[
     name
