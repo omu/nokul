@@ -26,8 +26,6 @@ tr:
       units: Birimler
     search:
       smart_search_placeholder: Birim adı veya YOKSIS numarası
-      smart_search: Akıllı Arama
-      detailed_search: Detaylı Arama
       duration: Öğretim Süresi
       unit_status: Birim Durumu
       unit_instruction_language: Öğretim Dili
