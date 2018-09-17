@@ -6,9 +6,9 @@ ati:
   credit: 2
   laboratory: 0
   unit: omu
-  program_type: :undergraduate
+  program_type: undergraduate
   language: turkce
-  status: :active
+  status: active
 
 ydi:
   name: İngilizce
@@ -18,9 +18,9 @@ ydi:
   credit: 2
   laboratory: 1
   unit: omu
-  program_type: :undergraduate
+  program_type: undergraduate
   language: ingilizce
-  status: :active
+  status: active
 
 test:
   name: 'Test Course'
@@ -30,9 +30,9 @@ test:
   credit: 3
   laboratory: 0
   unit: omu
-  program_type: :undergraduate
+  program_type: undergraduate
   language: turkce
-  status: :active
+  status: active
 
 fi_tarihi:
   name: 'Fi Tarihi'
@@ -42,6 +42,6 @@ fi_tarihi:
   credit: 2
   laboratory: 0
   unit: omu
-  program_type: :undergraduate
+  program_type: undergraduate
   language: turkce
-  status: :passive
+  status: passive
