@@ -2,7 +2,7 @@ tr:
   course_attributes: &course_attributes
     credit: Kredi
     code: Dersin Kodu
-    education_type: Eğitim Türü
+    program_type: Program Türü
     laboratory: Laboratuvar
     language: Dil
     name: Dersin Adı
@@ -15,14 +15,14 @@ tr:
       course: Ders
     enums:
       course:
-        education_types:
-          undergraduate: Önlisans/Lisans
+        program_types:
+          associate: Önlisans
+          undergraduate: Lisans
           master: Yüksek Lisans
           doctoral: Doktora
         statuses:
           passive: Pasif
           active: Aktif
-          abrogated: Yürürlükten Kaldırılmış
   curriculum:
     courses:
       new:
@@ -36,6 +36,9 @@ tr:
         error: Ders silinirken bir hata oluştu.
       update:
         success: Ders başarıyla güncellendi.
+      search:
+        smart_search_placeholder: Ders adı veya kodu
+        <<: *course_attributes
       show:
         <<: *course_attributes
       index:
