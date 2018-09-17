@@ -31,7 +31,7 @@
           <tbody>
             <% @committees.each do |committee| %>
               <tr>
-                <td><%= committee.name %></td>
+                <td><%= link_to(committee.name, unit_path(committee)) %></td>
                 <td><%= committee.yoksis_id %></td>
                 <td><%= committee.detsis_id %></td>
                 <td><%= committee.unit_status.name %></td>
