@@ -28,3 +28,6 @@ tr:
         unit_types: Birim Türleri
         university_types: Üniversite Türleri
         studies: Akademik Çalışmalar
+        committees: Kurullar/Komisyonlar
+        committee_units: Kurul/Komisyon Birimleri
+        agenda_types: Gündem Türleri
