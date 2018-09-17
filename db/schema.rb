@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_16_113158) do
+ActiveRecord::Schema.define(version: 2018_09_17_205157) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -185,10 +185,10 @@ ActiveRecord::Schema.define(version: 2018_09_16_113158) do
     t.decimal "credit", precision: 5, scale: 2, default: "0.0", null: false
     t.bigint "unit_id"
     t.integer "program_type", null: false
-    t.bigint "language_id"
     t.integer "status", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "language_id"
     t.index ["language_id"], name: "index_courses_on_language_id"
     t.index ["unit_id"], name: "index_courses_on_unit_id"
   end
@@ -433,7 +433,7 @@ ActiveRecord::Schema.define(version: 2018_09_16_113158) do
     t.string "preferred_language", default: "tr"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "password_changed_at", default: -> { "now()" }, null: false
+    t.datetime "password_changed_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.integer "articles_count"
     t.integer "projects_count"
     t.string "slug"
@@ -463,7 +463,6 @@ ActiveRecord::Schema.define(version: 2018_09_16_113158) do
   add_foreign_key "calendar_title_types", "calendar_types", column: "type_id"
   add_foreign_key "certifications", "users"
   add_foreign_key "cities", "countries"
-  add_foreign_key "courses", "languages"
   add_foreign_key "courses", "units"
   add_foreign_key "districts", "cities"
   add_foreign_key "duties", "employees"
