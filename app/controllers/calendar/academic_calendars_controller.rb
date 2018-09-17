@@ -2,16 +2,16 @@
 
 module Calendar
   class AcademicCalendarsController < ApplicationController
-    include Pagy::Backend
-
     before_action :set_academic_calendar, only: %i[show edit update destroy]
 
     def index
-      @pagy, @academic_calendars = pagy(AcademicCalendar.includes(:academic_term, :calendar_type))
+      @academic_calendars = pagy_by_search(
+        AcademicCalendar.includes(:academic_term, :calendar_type)
+      )
     end
 
     def show
-      @pagy, @events = pagy(@academic_calendar.calendar_events.includes(:calendar_title))
+      @events = pagy_by_search(@academic_calendar.calendar_events.includes(:calendar_title))
     end
 
     def new
