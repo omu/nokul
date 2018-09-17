@@ -26,6 +26,12 @@ class ApplicationController < ActionController::Base
 
   protected
 
+  def search_params(model = nil)
+    parameters = [:term]
+    parameters << model.dynamic_search_keys if model
+    params.permit(parameters)
+  end
+
   def locale_params
     params[:locale] && I18n.available_locales.include?(params[:locale].to_sym) ? params[:locale] : nil
   end
