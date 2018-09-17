@@ -18,15 +18,19 @@ module DynamicSearch
       raise ArgumentError, 'parameter must be Hash' unless [ActionController::Parameters, Hash].include?(params.class)
       return search(params[:term]) if params[:term].present?
 
-      query = build_search_query(params)
-      query.present? ? where(query) : current_scope
+      dynamic_where(params)
     end
 
     private
 
-    def build_search_query(params)
+    def dynamic_where(params)
+      query = build_query_for_dynamic_where(params)
+      query.present? ? where(query) : current_scope
+    end
+
+    def build_query_for_dynamic_where(params)
       dynamic_search_keys.each_with_object({}) do |key, hash|
-        hash[key] = params[key] if params.key?(key) && params[key].present?
+        hash[key] = params[key] if params[key].present?
       end
     end
   end
