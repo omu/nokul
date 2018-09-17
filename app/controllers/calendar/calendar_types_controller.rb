@@ -2,16 +2,14 @@
 
 module Calendar
   class CalendarTypesController < ApplicationController
-    include Pagy::Backend
-
     before_action :set_calendar_type, only: %i[show edit update destroy]
 
     def index
-      @pagy, @calendar_types = pagy(CalendarType.all)
+      @calendar_types = pagy_by_search(CalendarType.all)
     end
 
     def show
-      @pagy, @titles = pagy(@calendar_type.titles)
+      @titles = pagy_by_search(@calendar_type.titles)
     end
 
     def new

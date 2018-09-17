@@ -2,13 +2,10 @@
 
 module Curriculum
   class CoursesController < ApplicationController
-    include Pagy::Backend
-
     before_action :set_course, only: %i[show edit update destroy]
 
     def index
-      @courses = Course.includes(:unit).all
-      @pagy, @courses = pagy(@courses)
+      @courses = pagy_by_search(Course.includes(:unit))
     end
 
     def show; end
