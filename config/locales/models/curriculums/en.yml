@@ -1,16 +1,17 @@
 en:
-  course_attributes: &course_attributes
-    credit: Credit
-    code: Code
-    program_type: Program Type
-    laboratory: Laboratory
-    language: Language
-    name: Name
-    practice: Practice
-    status: Status
-    theoric: Theoric
-    unit: Unit
   activerecord:
+    attributes:
+      course: &course_attributes
+        credit: Credit
+        code: Code
+        program_type: Program Type
+        laboratory: Laboratory
+        language: Language
+        name: Name
+        practice: Practice
+        status: Status
+        theoric: Theoric
+        unit: Unit
     models:
       course: Course
     enums:

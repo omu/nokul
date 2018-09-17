@@ -8,7 +8,16 @@
       <div class='card-body'>
         <%= simple_form_for(@course) do |f| %>
           <%= f.error_notification %>
-          <div class='row'>
+          <% if f.object.errors.any? %>
+            <ul class="list-group list-group-accent">
+              <% f.object.errors.full_messages.each do |message| %>
+                <li class="list-group-item list-group-item-accent-danger list-group-item-danger">
+                  <%= message %>
+                </li>
+              <% end %>
+            </ul>
+          <% end %>
+          <div class='row mt-3'>
             <div class='form-group col-sm-4'>
               <%= f.association :unit %>
             </div>

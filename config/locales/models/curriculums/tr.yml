@@ -1,16 +1,17 @@
 tr:
-  course_attributes: &course_attributes
-    credit: Kredi
-    code: Dersin Kodu
-    program_type: Program Türü
-    laboratory: Laboratuvar
-    language: Dil
-    name: Dersin Adı
-    practice: Uygulama
-    status: Durumu
-    theoric: Teorik
-    unit: Birim
   activerecord:
+    attributes:
+      course: &course_attributes
+        credit: Kredi
+        code: Dersin Kodu
+        program_type: Program Türü
+        laboratory: Laboratuvar
+        language: Dil
+        name: Dersin Adı
+        practice: Uygulama
+        status: Durumu
+        theoric: Teorik
+        unit: Birim
     models:
       course: Ders
     enums:
