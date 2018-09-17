@@ -41,12 +41,12 @@
               <td><%= @course.credit %></td>
             </tr>
             <tr>
-              <th><%= t('.education_type') %></th>
-              <td><%= enum_t(@course, :education_type) %></td>
+              <th><%= t('.program_type') %></th>
+              <td><%= enum_t(@course, :program_type) %></td>
             </tr>
             <tr>
               <th><%= t('.language') %></th>
-              <td><%= @course.language %></td>
+              <td><%= @course.language.try(:name) %></td>
             </tr>
             <tr>
               <th><%= t('.status') %></th>
