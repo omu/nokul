@@ -3,15 +3,15 @@ en:
     attributes:
       agenda: &agenda_attributes
         description: Agenda Description
-        agenda_type: Agenda Type
+        agenda_type_id: Agenda Type
         status: Agenda Status
       agenda_type: &agenda_type_attributes
         name: Name of Agenda Type
     enums:
       agenda:
         statuses:
-          newly: Yeni
-          desided: Karar Verildi
+          recent: Yeni
+          decided: Karar Verildi
           delayed: Ertelendi
   helpers:
     submit:
@@ -28,6 +28,7 @@ en:
         new_agenda_link: Create a New Agenda
         card_header: Agendas
         unit: Unit
+        agenda_type: Agenda Type
       new:
         form_title: Create a Agenda
       edit:
@@ -64,6 +65,7 @@ en:
         unit_type: Unit Type
         district: Location
         card_header: Committee / Commission
+        new_committee_link: Create a New Committee/Commission
       show:
         description: Description
         unit: Parent Unit

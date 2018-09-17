@@ -3,7 +3,7 @@ tr:
     attributes:
       agenda: &agenda_attributes
         description: Gündem Açıklaması
-        agenda_type: Gündem Türü
+        agenda_type_id: Gündem Türü
         status: Gündem Durumu
       agenda_type: &agenda_type_attributes
         name: Gündem Türü Adı
@@ -12,8 +12,8 @@ tr:
     enums:
       agenda:
         statuses:
-          newly: Yeni
-          desided: Karar Verildi
+          recent: Yeni
+          decided: Karar Verildi
           delayed: Ertelendi
   helpers:
     submit:
@@ -30,6 +30,7 @@ tr:
         new_agenda_link: Yeni Bir Gündem Oluştur
         card_header: Gündemler
         unit: Birim
+        agenda_type: Gündem Türü
       new:
         form_title: Gündem Oluştur
       edit:
@@ -66,6 +67,7 @@ tr:
         unit_type: Birim Türü
         district: Bulunduğu İlçe
         card_header: Kurul / Komisyon
+        new_committee_link: Yeni Bir Kurul/Komisyon Oluştur
       show:
         description: Açıklama
         unit: Üst Birim
