@@ -1,0 +1,11 @@
+one:
+  description: Gündemdeki maddelerin okunması ve bir önceki fakülte yönetim kurulu kararlarının onaylanması.
+  unit: mühendislik_fakültesi_yönetim_kurulu
+  agenda_type: three
+  status: newly
+
+two:
+  description: 2018-2019 Eğitim öğretim yılı danışmanlık hizmetleri verecek personelin belirlenmesi konusunun görülmesi.
+  unit: mühendislik_fakültesi_yönetim_kurulu
+  agenda_type: three
+  status: newly
