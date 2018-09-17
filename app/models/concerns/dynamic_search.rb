@@ -10,12 +10,14 @@ module DynamicSearch
 
     def dynamic_search_keys
       raise ArgumentError, 'must be defined in search_keys' unless @dynamic_search_keys
+
       @dynamic_search_keys
     end
 
     def dynamic_search(params = {})
       raise ArgumentError, 'parameter must be Hash' unless [ActionController::Parameters, Hash].include?(params.class)
       return search(params[:term]) if params[:term].present?
+
       query = build_search_query(params)
       query.present? ? where(query) : current_scope
     end
