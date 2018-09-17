@@ -1,0 +1,75 @@
+en:
+  activerecord:
+    attributes:
+      agenda: &agenda_attributes
+        description: Agenda Description
+        agenda_type_id: Agenda Type
+        status: Agenda Status
+      agenda_type: &agenda_type_attributes
+        name: Name of Agenda Type
+    enums:
+      agenda:
+        statuses:
+          recent: Yeni
+          decided: Karar Verildi
+          delayed: Ertelendi
+  helpers:
+    submit:
+      agenda:
+        create: Create Agenda
+        update: Update Agenda
+      agenda_type:
+        create: Create Agenda Type
+        update: Update Agenda Type
+  committee:
+    agendas:
+      index:
+        <<: *agenda_attributes
+        new_agenda_link: Create a New Agenda
+        card_header: Agendas
+        unit: Unit
+        agenda_type: Agenda Type
+      new:
+        form_title: Create a Agenda
+      edit:
+        form_title: Update a Agenda
+      create:
+        success: Agenda successfully created.
+      update:
+        success: Agenda successfully updated.
+      destroy:
+        success: Agenda successfully deleted.
+        warning: Agenda can not be deleted!
+    agenda_types:
+      index:
+        <<: *agenda_type_attributes
+        new_agenda_type_link: Create a New Agenda Type
+        card_header: Agenda Types
+      new:
+        form_title: Create a Agenda Type
+      edit:
+        form_title: Update the Agenda Type
+      create:
+        success: Agenda Type successfully created.
+      update:
+        success: Agenda Type successfully updated.
+      destroy:
+        success: Agenda Type successfully deleted.
+        warning: Agenda Type can not be deleted!
+    dashboard:
+      index:
+        name: Committee / Commission Name
+        detsis_id: DETSIS ID
+        yoksis_id: YOKSIS ID
+        unit_status: Unit Status
+        unit_type: Unit Type
+        district: Location
+        card_header: Committee / Commission
+        new_committee_link: Create a New Committee/Commission
+      show:
+        description: Description
+        unit: Parent Unit
+        agenda_type: Agenda Type
+        status: Agenda Status
+        actions: Actions
+        agenda_card_header: Agendas
