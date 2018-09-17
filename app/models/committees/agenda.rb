@@ -18,5 +18,5 @@ class Agenda < ApplicationRecord
   validates :status, presence: true
 
   # enums
-  enum status: { newly: 0, desided: 1, delayed: 2 }
+  enum status: { recent: 0, decided: 1, delayed: 2 }
 end
