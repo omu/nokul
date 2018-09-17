@@ -30,8 +30,8 @@
             <% @agendas.each do |agenda| %>
             <tr>
               <td><%= agenda.description %></td>
-              <td><%= agenda.unit.name %></td>
-              <td><%= agenda.agenda_type.name %></td>
+              <td><%= agenda.unit.try(:name) %></td>
+              <td><%= agenda.agenda_type.try(:name) %></td>
               <td><%= enum_t(agenda, :status) %></td>
               <td>
                 <%= link_to_edit(edit_committee_agenda_path(@committee.id, agenda.id)) %>

@@ -24,7 +24,6 @@
               <thead>
                 <tr>
                   <th><%= t('.description') %></th>
-                  <th><%= t('.unit') %></th>
                   <th><%= t('.agenda_type') %></th>
                   <th><%= t('.status') %></th>
                   <th><%= t('.actions') %></th>
@@ -34,8 +33,7 @@
                 <% @agendas.each do |agenda| %>
                 <tr>
                   <td><%= agenda.description %></td>
-                  <td><%= agenda.unit.parent.name %></td>
-                  <td><%= agenda.agenda_type.name %></td>
+                  <td><%= agenda.agenda_type.try(:name) %></td>
                   <td><%= enum_t(agenda, :status) %></td>
                   <td>
                     <%= link_to_edit(edit_committee_agenda_path(@committee.id, agenda.id)) %>
