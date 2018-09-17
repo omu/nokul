@@ -7,7 +7,7 @@ module Curriculum
     def index
       courses = Course.includes(:unit)
                       .dynamic_search(search_params(Course))
-      @courses = pagy_by_search(Course.includes(:unit))
+      @pagy, @courses = pagy(courses)
     end
 
     def show; end
