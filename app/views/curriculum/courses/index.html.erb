@@ -2,6 +2,8 @@
   <%= link_to_new new_course_path, t('.add_new_course') %>
 </div>
 
+<%= render 'search' %>
+
 <div class='row'>
   <div class='col-lg-12'>
     <div class="card">
@@ -10,15 +12,18 @@
       </div>
       <div class="card-body">
         <table class='table table-responsive-sm table-striped table-hover'>
-          <thead class="thead-inverse">
+          <thead class="thead-dark">
             <tr>
               <th><%= t('.name') %></th>
               <th><%= t('.code') %></th>
               <th><%= t('.unit') %></th>
-              <th><%= t('.theoric') %></th>
-              <th><%= t('.practice') %></th>
-              <th><%= t('.credit') %></th>
-              <th><%= t('.education_type') %></th>
+              <th>
+                <span class="badge badge-primary">T: <%= t('.theoric') %></span>
+                <span class="badge badge-warning">P: <%= t('.practice') %></span>
+                <span class="badge badge-info">L: <%= t('.laboratory') %></span>
+                <span class="badge badge-success">K: <%= t('.credit') %></span>
+              </th>
+              <th><%= t('.program_type') %></th>
               <th><%= t('.language') %></th>
               <th><%= t('.status') %></th>
               <th><%= t('actions') %></th>
@@ -30,15 +35,18 @@
                 <td><%= course.name %></td>
                 <td><%= course.code %></td>
                 <td><%= course.unit.try(:name) %></td>
-                <td><%= course.theoric %></td>
-                <td><%= course.practice %></td>
-                <td><%= course.credit %></td>
-                <td><%= enum_t(course, :education_type) %></td>
-                <td><%= course.language %></td>
+                <td>
+                  <span class="badge badge-primary">T: <%= course.theoric %></span>
+                  <span class="badge badge-warning">P: <%= course.practice %></span>
+                  <span class="badge badge-info">L: <%= course.laboratory %></span>
+                  <span class="badge badge-success">K: <%= course.credit %></span>
+                </td>
+                <td><%= enum_t(course, :program_type) %></td>
+                <td><%= course.language.try(:name) %></td>
                 <td><%= enum_t(course, :status) %></td>
                 <td>
                   <%= link_to_show course %>
-                  <%= link_to_edit edit_course_path(course) %>
+                  <%= link_to_edit [:edit, course] %>
                   <%= link_to_destroy course %>
                 </td>
               </tr>

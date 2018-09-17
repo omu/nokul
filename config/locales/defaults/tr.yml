@@ -16,3 +16,6 @@ tr:
   updated_at: Güncellenme Tarihi
   'yes': Evet
   'no': Hayır
+  detailed_search: Detaylı Arama
+  reset: Reset
+  smart_search: Akıllı Arama
