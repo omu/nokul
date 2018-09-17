@@ -2,14 +2,12 @@
 
 module Curriculum
   class CoursesController < ApplicationController
-    include Pagy::Backend
-
     before_action :set_course, only: %i[show edit update destroy]
 
     def index
       courses = Course.includes(:unit)
                       .dynamic_search(search_params(Course))
-      @pagy, @courses = pagy(courses)
+      @courses = pagy_by_search(Course.includes(:unit))
     end
 
     def show; end

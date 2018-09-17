@@ -73,6 +73,23 @@ ActiveRecord::Schema.define(version: 2018_09_17_205157) do
     t.integer "code", null: false
   end
 
+  create_table "agenda_types", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "agendas", force: :cascade do |t|
+    t.text "description", null: false
+    t.bigint "unit_id"
+    t.bigint "agenda_type_id"
+    t.integer "status", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["agenda_type_id"], name: "index_agendas_on_agenda_type_id"
+    t.index ["unit_id"], name: "index_agendas_on_unit_id"
+  end
+
   create_table "articles", force: :cascade do |t|
     t.integer "yoksis_id", null: false
     t.integer "scope"
@@ -456,6 +473,8 @@ ActiveRecord::Schema.define(version: 2018_09_17_205157) do
   add_foreign_key "academic_calendars", "calendar_types"
   add_foreign_key "addresses", "districts"
   add_foreign_key "addresses", "users"
+  add_foreign_key "agendas", "agenda_types"
+  add_foreign_key "agendas", "units"
   add_foreign_key "articles", "users"
   add_foreign_key "calendar_events", "academic_calendars"
   add_foreign_key "calendar_events", "calendar_titles"
