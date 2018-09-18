@@ -24,7 +24,7 @@ tr:
         statuses:
           passive: Pasif
           active: Aktif
-  curriculum:
+  course_management:
     courses:
       new:
         form_title: Ders Oluştur
