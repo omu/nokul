@@ -16,7 +16,7 @@ class CourseUnitGroupTest < ActiveSupport::TestCase
   # validations: presence
   %i[
     name
-    total_akts_condition
+    total_ects_condition
   ].each do |property|
     test "presence validations for #{property} of a course unit group" do
       course_unit_groups(:one).send("#{property}=", nil)

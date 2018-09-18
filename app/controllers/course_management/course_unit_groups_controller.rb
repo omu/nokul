@@ -5,7 +5,7 @@ module CourseManagement
     before_action :set_course_unit_group, only: %i[edit update destroy]
 
     def index
-      @course_unit_groups = pagy_by_search(CourseUnitGroup.all)
+      @course_unit_groups = pagy_by_search(CourseUnitGroup.includes(:unit, :course_group_type))
     end
 
     def new
@@ -38,7 +38,7 @@ module CourseManagement
     end
 
     def course_unit_group_params
-      params.require(:course_unit_group).permit(:name)
+      params.require(:course_unit_group).permit(:name, :total_ects_condition, :unit_id, :course_group_type_id)
     end
   end
 end
