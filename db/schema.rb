@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_17_205157) do
+ActiveRecord::Schema.define(version: 2018_09_18_094522) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -208,6 +208,14 @@ ActiveRecord::Schema.define(version: 2018_09_17_205157) do
     t.integer "language_id"
     t.index ["language_id"], name: "index_courses_on_language_id"
     t.index ["unit_id"], name: "index_courses_on_unit_id"
+  end
+
+  create_table "curriculums", force: :cascade do |t|
+    t.string "name"
+    t.bigint "unit_id"
+    t.integer "number_of_semesters"
+    t.integer "status", null: false
+    t.index ["unit_id"], name: "index_curriculums_on_unit_id"
   end
 
   create_table "districts", force: :cascade do |t|
@@ -450,7 +458,7 @@ ActiveRecord::Schema.define(version: 2018_09_17_205157) do
     t.string "preferred_language", default: "tr"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "password_changed_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.datetime "password_changed_at", default: -> { "now()" }, null: false
     t.integer "articles_count"
     t.integer "projects_count"
     t.string "slug"
@@ -483,6 +491,7 @@ ActiveRecord::Schema.define(version: 2018_09_17_205157) do
   add_foreign_key "certifications", "users"
   add_foreign_key "cities", "countries"
   add_foreign_key "courses", "units"
+  add_foreign_key "curriculums", "units"
   add_foreign_key "districts", "cities"
   add_foreign_key "duties", "employees"
   add_foreign_key "duties", "units"
