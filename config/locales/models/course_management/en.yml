@@ -12,6 +12,11 @@ en:
         status: Status
         theoric: Theoric
         unit: Unit
+      curriculum: &curriculum_attributes
+        name: Curriculum Name
+        number_of_semesters: Number of Semesters
+        unit: Unit
+        status: Status
     models:
       course: Course
     enums:
@@ -24,6 +29,10 @@ en:
         statuses:
           passive: Passive
           active: Active
+      curriculum:
+        statuses:
+          active: Active
+          passive: Passive
   course_management:
     courses:
       new:
@@ -46,7 +55,30 @@ en:
         <<: *course_attributes
         add_new_course: Add a New Course
         courses: Courses
+    curriculums:
+      create:
+        success: Curriculum successfully created.
+      destroy:
+        error: An error occured when deleting the curriculum.
+        success: Curriculum successfully destroyed.
+      edit:
+        form_title: Update the Curriculum
+      index:
+        <<: *curriculum_attributes
+        add_new_curriculum: Add a New Curriculum
+        curriculums: Curriculums
+      new:
+        form_title: Create a Curriculum
+      search:
+        smart_search_placeholder: Curriculum Name
+        <<: *curriculum_attributes
+      show:
+        <<: *curriculum_attributes
+      update:
+        success: Curriculum successfully updated.
   simple_form:
     labels:
       course:
         <<: *course_attributes
+      curriculum:
+        <<: *curriculum_attributes

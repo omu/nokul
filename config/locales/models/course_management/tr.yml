@@ -12,8 +12,14 @@ tr:
         status: Durumu
         theoric: Teorik
         unit: Birim
+      curriculum: &curriculum_attributes
+          name: Müfredat Adı
+          unit: Birim
+          number_of_semesters: Dönem Sayısı
+          status: Durumu
     models:
       course: Ders
+      curriculum: Müfreadat
     enums:
       course:
         program_types:
@@ -21,6 +27,10 @@ tr:
           undergraduate: Lisans
           master: Yüksek Lisans
           doctoral: Doktora
+        statuses:
+          passive: Pasif
+          active: Aktif
+      curriculum:
         statuses:
           passive: Pasif
           active: Aktif
@@ -46,7 +56,30 @@ tr:
         <<: *course_attributes
         add_new_course: Yeni Ders Ekle
         courses: Dersler
+    curriculums:
+      create:
+        success: Müfredat başarıyla oluşturuldu.
+      destroy:
+        error: Müfredat silinirken bir hata oluştu.
+        success: Müfredat başarıyla silindi.
+      edit:
+        form_title: Müfredatı Düzenle
+      index:
+        <<: *curriculum_attributes
+        add_new_curriculum: Yeni Müfredat Ekle
+        curriculums: Müfredatlar
+      new:
+        form_title: Müfredat Oluştur
+      search:
+        smart_search_placeholder: Müfredat Adı
+        <<: *curriculum_attributes
+      show:
+        <<: *curriculum_attributes
+      update:
+        success: Müfredat başarıyla güncellendi.
   simple_form:
     labels:
       course:
         <<: *course_attributes
+      curriculum:
+        <<: *curriculum_attributes
