@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
+  include PagyBackendWithHelpers
+
   protect_from_forgery with: :exception
 
   before_action :configure_permitted_parameters, if: :devise_controller?
@@ -25,6 +27,12 @@ class ApplicationController < ActionController::Base
   end
 
   protected
+
+  def search_params(model = nil)
+    parameters = [:term]
+    parameters << model.dynamic_search_keys if model
+    params.permit(parameters)
+  end
 
   def locale_params
     params[:locale] && I18n.available_locales.include?(params[:locale].to_sym) ? params[:locale] : nil

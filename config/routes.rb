@@ -34,7 +34,7 @@ Rails.application.routes.draw do
     resources :calendar_titles, except: :show
     resources :calendar_types
   end
-  
+
   resources :languages
   resources :units
 
@@ -52,6 +52,8 @@ Rails.application.routes.draw do
   end
 
   resources :users do
+    get 'save_address_from_mernis', on: :member
+    get 'save_identity_from_mernis', on: :member
     scope module: :account do
       resources :employees, except: %i[index show]
       resources :duties, except: %i[index show]
@@ -90,5 +92,11 @@ Rails.application.routes.draw do
     get '/studies/articles', to: 'articles#index'
     get '/studies/projects', to: 'projects#index'
     get '/studies/certifications', to: 'certifications#index'
+  end
+
+  resources :agenda_types, except: :show, module: :committee
+
+  resources :committees, only: %i[index show], controller: 'committee/dashboard' do
+    resources :agendas, except: :show, module: :committee
   end
 end

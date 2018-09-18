@@ -54,6 +54,9 @@ Rake::Task['yoksis:import_departments'].invoke
 # Import Academic Staff from YOKSIS
 Rake::Task['yoksis:fetch_academic_staff'].invoke
 
+# Create UnitType for Committee/Commission
+UnitType.create(name: 'Kurul / Komisyon', code: 200)
+
 # Produced data for beta environment
 if Rails.env.beta? || Rails.env.development?
   Dir[Rails.root.join('db', 'beta_seed', '*.rb')].sort.each do |seed|

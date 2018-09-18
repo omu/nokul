@@ -2,7 +2,6 @@
 
 module ReferenceResource
   extend ActiveSupport::Concern
-  include Pagy::Backend
 
   # rubocop:disable Metrics/BlockLength
   # rubocop:disable Rails/LexicallyScopedActionFilter
@@ -11,7 +10,7 @@ module ReferenceResource
     before_action :set_resource, only: %i[edit update destroy]
 
     def index
-      @pagy, value = pagy(@model_name.all)
+      value = pagy_by_search(@model_name.all)
       instance_variable_set("@#{controller_name}", value)
     end
 

@@ -8,7 +8,16 @@
       <div class='card-body'>
         <%= simple_form_for(@course) do |f| %>
           <%= f.error_notification %>
-          <div class='row'>
+          <% if f.object.errors.any? %>
+            <ul class="list-group list-group-accent">
+              <% f.object.errors.full_messages.each do |message| %>
+                <li class="list-group-item list-group-item-accent-danger list-group-item-danger">
+                  <%= message %>
+                </li>
+              <% end %>
+            </ul>
+          <% end %>
+          <div class='row mt-3'>
             <div class='form-group col-sm-4'>
               <%= f.association :unit %>
             </div>
@@ -28,11 +37,11 @@
               <%= f.input :laboratory %>
             </div>
             <div class='form-group col-sm-4'>
-              <%= f.input :education_type,
-                          collection: enum_options_for_select(f.object.class, :education_type) %>
+              <%= f.input :program_type,
+                          collection: enum_options_for_select(f.object.class, :program_type) %>
             </div>
             <div class='form-group col-sm-4'>
-              <%= f.input :language %>
+              <%= f.association :language %>
             </div>
             <div class='form-group col-sm-4'>
               <%= f.input :status,

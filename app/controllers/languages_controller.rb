@@ -1,18 +1,10 @@
 # frozen_string_literal: true
 
 class LanguagesController < ApplicationController
-  include Pagy::Backend
-
   before_action :set_language, only: %i[show edit update destroy]
 
   def index
-    languages = Language.all
-
-    @pagy, @languages = if params[:term].present?
-                          pagy(languages.search(params[:term]))
-                        else
-                          pagy(languages)
-                        end
+    @languages = pagy_by_search(Language.all)
   end
 
   def show; end
