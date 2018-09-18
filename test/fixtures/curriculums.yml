@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Test Müfredatı 1
+  unit: omu
+  number_of_semesters: 8
+  status: active
+
+two:
+  name: Test Müfredatı 2
+  unit: omu
+  number_of_semesters: 6
+  status: active
