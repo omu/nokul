@@ -23,6 +23,7 @@ class Unit < ApplicationRecord
   has_many :users, through: :employees
   has_many :positions, through: :duties
   has_many :administrative_functions, through: :duties
+  has_many :agendas, dependent: :nullify
 
   # validations
   validates :yoksis_id, uniqueness: true, allow_blank: true, numericality: { only_integer: true }
@@ -38,4 +39,5 @@ class Unit < ApplicationRecord
   scope :unit_status_id, ->(id) { where(unit_status_id: id) }
   scope :unit_instruction_type_id, ->(id) { where(unit_instruction_type_id: id) }
   scope :unit_instruction_language_id, ->(id) { where(unit_instruction_language_id: id) }
+  scope :committees, -> { where(unit_type: UnitType.find_by(code: 200)) }
 end

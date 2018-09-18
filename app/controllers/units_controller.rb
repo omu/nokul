@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class UnitsController < ApplicationController
-  include Pagy::Backend
-
   before_action :set_unit, only: %i[edit update destroy show]
 
   def index
@@ -10,11 +8,7 @@ class UnitsController < ApplicationController
       :unit_status, :unit_instruction_language, :unit_instruction_type, :unit_type, district: [:city]
     )
 
-    @pagy, @units = if params[:term].present?
-                      pagy(smart_search(units))
-                    else
-                      pagy(dynamic_search(units))
-                    end
+    @pagy, @units = pagy(smart_search(units))
   end
 
   def show; end
@@ -41,7 +35,7 @@ class UnitsController < ApplicationController
   private
 
   def smart_search(units)
-    units.search(params[:term])
+    params[:term].present? ? units.search(params[:term]) : dynamic_search(units)
   end
 
   def dynamic_search(units)

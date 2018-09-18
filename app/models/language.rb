@@ -9,6 +9,9 @@ class Language < ApplicationRecord
     using: { tsearch: { prefix: true } }
   )
 
+  # relations
+  has_many :courses, dependent: :nullify
+
   # validations
   validates :name, presence: true, uniqueness: true
   validates :iso, presence: true, uniqueness: true

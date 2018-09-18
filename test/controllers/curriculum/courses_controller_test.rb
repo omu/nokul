@@ -13,6 +13,8 @@ module Curriculum
       get courses_path
       assert_response :success
       assert_select '#add-button', translate('.index.add_new_course')
+      assert_select '#collapseSmartSearchLink', t('smart_search')
+      assert_select '#collapseDetailedSearchLink', t('detailed_search')
     end
 
     test 'should get show' do
@@ -29,17 +31,18 @@ module Curriculum
       assert_difference('Course.count') do
         post courses_path, params: {
           course: {
-            name: 'Test Course', code: 'TTC', theoric: 3, practice: 0,
-            laboratory: 0, unit_id: units(:omu).id, education_type: :undergraduate,
-            language: 'Türkçe', status: :active
+            name: 'Test Controller Course', code: 'TTC', theoric: 3, practice: 0,
+            laboratory: 0, unit_id: units(:omu).id, program_type: :undergraduate,
+            language_id: languages(:turkce).id, status: :active
           }
         }
       end
 
-      course = Course.unscope(:order).last
+      course = Course.last
 
-      assert_equal 'Test Course', course.name
+      assert_equal 'Test Controller Course', course.name
       assert_equal 3.0, course.credit.to_f
+      assert_equal 'undergraduate', course.program_type
       assert_equal units(:omu), course.unit
       assert course.active?
       assert_redirected_to courses_path
@@ -53,7 +56,7 @@ module Curriculum
     end
 
     test 'should update course' do
-      course = Course.unscope(:order).last
+      course = Course.last
       patch course_path(course), params: {
         course: {
           name: 'Test Course Update', code: 'TTCU', theoric: 4, practice: 2

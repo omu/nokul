@@ -2,13 +2,12 @@
 
 module Curriculum
   class CoursesController < ApplicationController
-    include Pagy::Backend
-
     before_action :set_course, only: %i[show edit update destroy]
 
     def index
-      @courses = Course.includes(:unit).all
-      @pagy, @courses = pagy(@courses)
+      courses = Course.includes(:unit)
+                      .dynamic_search(search_params(Course))
+      @pagy, @courses = pagy(courses)
     end
 
     def show; end
@@ -45,8 +44,8 @@ module Curriculum
 
     def course_params
       params.require(:course).permit(
-        :unit_id, :name, :code, :theoric, :practice, :education_type,
-        :language, :laboratory, :status
+        :unit_id, :name, :code, :theoric, :practice, :program_type,
+        :language_id, :laboratory, :status
       )
     end
   end

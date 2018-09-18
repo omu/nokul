@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_10_105541) do
+ActiveRecord::Schema.define(version: 2018_09_17_205157) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,6 +71,23 @@ ActiveRecord::Schema.define(version: 2018_09_10_105541) do
   create_table "administrative_functions", force: :cascade do |t|
     t.string "name", null: false
     t.integer "code", null: false
+  end
+
+  create_table "agenda_types", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "agendas", force: :cascade do |t|
+    t.text "description", null: false
+    t.bigint "unit_id"
+    t.bigint "agenda_type_id"
+    t.integer "status", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["agenda_type_id"], name: "index_agendas_on_agenda_type_id"
+    t.index ["unit_id"], name: "index_agendas_on_unit_id"
   end
 
   create_table "articles", force: :cascade do |t|
@@ -184,12 +201,12 @@ ActiveRecord::Schema.define(version: 2018_09_10_105541) do
     t.integer "laboratory", null: false
     t.decimal "credit", precision: 5, scale: 2, default: "0.0", null: false
     t.bigint "unit_id"
-    t.integer "education_type", null: false
-    t.string "language", null: false
+    t.integer "program_type", null: false
     t.integer "status", null: false
-    t.date "abrogated_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "language_id"
+    t.index ["language_id"], name: "index_courses_on_language_id"
     t.index ["unit_id"], name: "index_courses_on_unit_id"
   end
 
@@ -433,7 +450,7 @@ ActiveRecord::Schema.define(version: 2018_09_10_105541) do
     t.string "preferred_language", default: "tr"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "password_changed_at", default: -> { "now()" }, null: false
+    t.datetime "password_changed_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.integer "articles_count"
     t.integer "projects_count"
     t.string "slug"
@@ -456,6 +473,8 @@ ActiveRecord::Schema.define(version: 2018_09_10_105541) do
   add_foreign_key "academic_calendars", "calendar_types"
   add_foreign_key "addresses", "districts"
   add_foreign_key "addresses", "users"
+  add_foreign_key "agendas", "agenda_types"
+  add_foreign_key "agendas", "units"
   add_foreign_key "articles", "users"
   add_foreign_key "calendar_events", "academic_calendars"
   add_foreign_key "calendar_events", "calendar_titles"

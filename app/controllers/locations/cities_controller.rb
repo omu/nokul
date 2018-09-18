@@ -2,19 +2,11 @@
 
 module Locations
   class CitiesController < ApplicationController
-    include Pagy::Backend
-
     before_action :set_country
     before_action :set_city, only: %i[show edit update destroy]
 
     def show
-      districts = @city.districts
-
-      @pagy, @districts = if params[:term].present?
-                            pagy(districts.search(params[:term]))
-                          else
-                            pagy(districts)
-                          end
+      @districts = pagy_by_search(@city.districts)
     end
 
     def new
