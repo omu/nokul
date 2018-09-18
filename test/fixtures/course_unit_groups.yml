@@ -1,0 +1,11 @@
+one:
+  name: Teknik Seçmeli Ders 1
+  total_akts_condition: 5
+  unit: muh_bolum
+  course_group_type: one
+
+two:
+  name: Teknik Seçmeli Ders 2
+  total_akts_condition: 6
+  unit: muh_bolum
+  course_group_type: one
