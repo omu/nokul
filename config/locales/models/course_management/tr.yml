@@ -12,8 +12,11 @@ tr:
         status: Durumu
         theoric: Teorik
         unit: Birim
+      course_group_type: &course_group_type_attributes
+        name: Ders Grup Tür Adı
     models:
       course: Ders
+      course_group_type: Ders Grup Türü
     enums:
       course:
         program_types:
@@ -46,6 +49,22 @@ tr:
         <<: *course_attributes
         add_new_course: Yeni Ders Ekle
         courses: Dersler
+    course_group_types:
+      new:
+        form_title: Ders Grup Türü Oluştur
+      edit:
+        form_title: Ders Grup Türü Düzenle
+      create:
+        success: Ders grup türü başarıyla oluşturuldu.
+      destroy:
+        success: Ders grup türü başarıyla silindi.
+        error: Ders grup türü silinirken bir hata oluştu.
+      update:
+        success: Ders grup türü başarıyla güncellendi.
+      index:
+        <<: *course_group_type_attributes
+        new_course_group_type_link: Yeni Ders Grup Türü Ekle
+        card_header: Ders Grup Türleri
   simple_form:
     labels:
       course:
