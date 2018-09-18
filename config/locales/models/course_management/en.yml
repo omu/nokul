@@ -24,7 +24,7 @@ en:
         statuses:
           passive: Passive
           active: Active
-  curriculum:
+  course_management:
     courses:
       new:
         form_title: Create a Course
