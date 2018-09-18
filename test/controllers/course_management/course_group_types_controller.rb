@@ -3,7 +3,7 @@
 require 'test_helper'
 
 module CourseManagement
-  class CourseGroupTypeControllerTest < ActionDispatch::IntegrationTest
+  class CourseGroupTypesControllerTest < ActionDispatch::IntegrationTest
     setup do
       sign_in users(:serhat)
       @course_group_type = course_group_types(:one)

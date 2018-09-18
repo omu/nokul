@@ -40,6 +40,7 @@ Rails.application.routes.draw do
 
   scope module: :course_management do
     resources :courses
+    resources :course_unit_groups
     resources :course_group_types, except: :show
   end
 

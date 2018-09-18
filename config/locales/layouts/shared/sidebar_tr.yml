@@ -11,6 +11,7 @@ tr:
         academic_calendars: Akademik Takvimler
         courses: Dersler
         course_management: Ders İşlemler
+        course_unit_groups: Ders Grupları
         course_group_types: Ders Grup Türleri
         languages: Diller
         users: Kullanıcılar
