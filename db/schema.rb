@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_17_205157) do
+ActiveRecord::Schema.define(version: 2018_09_18_174839) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -191,6 +191,23 @@ ActiveRecord::Schema.define(version: 2018_09_17_205157) do
     t.string "numeric_code", null: false
     t.string "mernis_code"
     t.integer "yoksis_code"
+  end
+
+  create_table "course_group_types", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "course_unit_groups", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "total_akts_condition", null: false
+    t.bigint "unit_id"
+    t.bigint "course_group_type_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_group_type_id"], name: "index_course_unit_groups_on_course_group_type_id"
+    t.index ["unit_id"], name: "index_course_unit_groups_on_unit_id"
   end
 
   create_table "courses", force: :cascade do |t|
@@ -450,7 +467,7 @@ ActiveRecord::Schema.define(version: 2018_09_17_205157) do
     t.string "preferred_language", default: "tr"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "password_changed_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.datetime "password_changed_at", default: -> { "now()" }, null: false
     t.integer "articles_count"
     t.integer "projects_count"
     t.string "slug"
@@ -482,6 +499,8 @@ ActiveRecord::Schema.define(version: 2018_09_17_205157) do
   add_foreign_key "calendar_title_types", "calendar_types", column: "type_id"
   add_foreign_key "certifications", "users"
   add_foreign_key "cities", "countries"
+  add_foreign_key "course_unit_groups", "course_group_types"
+  add_foreign_key "course_unit_groups", "units"
   add_foreign_key "courses", "units"
   add_foreign_key "districts", "cities"
   add_foreign_key "duties", "employees"
