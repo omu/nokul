@@ -1,0 +1,48 @@
+<div class="alert alert-light">
+  <%= link_to_new new_curriculum_path, t('.add_new_curriculum') %>
+</div>
+<%= render 'search' %>
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'align-justify', text: t('.curriculums') %>
+      </div>
+      <div class="card-body">
+        <table class='table table-responsive-sm table-striped table-hover'>
+          <thead class="thead-dark">
+            <tr>
+              <th><%= t('.name') %></th>
+              <th><%= t('.unit') %></th>
+              <th><%= t('.number_of_semesters') %></th>
+              <th><%= t('.status') %></th>
+              <th><%= t('actions') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @curriculums.each do |curriculum| %>
+              <tr>
+                <td><%= link_to curriculum.name, curriculum %></td>
+                <td><%= curriculum.unit.try(:name) %></td>
+                <td><%= curriculum.number_of_semesters %></td>
+                <td><%= enum_t(curriculum, :status) %></td>
+                <td>
+                  <%= link_to_show curriculum %>
+                  <%= link_to_edit [:edit, curriculum] %>
+                  <%= link_to_destroy curriculum %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-footer">
+        <nav aria-label="pagination">
+          <ul class="pagination justify-content-center">
+            <%== pagy_nav_bootstrap(@pagy) %>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
