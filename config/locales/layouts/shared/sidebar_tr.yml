@@ -10,7 +10,8 @@ tr:
         academic_terms: Akademik Dönemler
         academic_calendars: Akademik Takvimler
         courses: Dersler
-        course_management: Ders İşlemleri
+        course_management: Ders İşlemler
+        course_group_types: Ders Grup Türleri
         languages: Diller
         users: Kullanıcılar
         references: Referanslar

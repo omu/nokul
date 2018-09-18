@@ -12,8 +12,11 @@ en:
         status: Status
         theoric: Theoric
         unit: Unit
+      course_group_type: &course_group_type_attributes
+        name: Course Group Type Name
     models:
       course: Course
+      course_group_type: Course Group Type
     enums:
       course:
         program_types:
@@ -46,6 +49,22 @@ en:
         <<: *course_attributes
         add_new_course: Add a New Course
         courses: Courses
+    course_group_types:
+      new:
+        form_title: Course Group Type successfully created.
+      edit:
+        form_title: Course Group Type successfully updated.
+      create:
+        success: Course group type created.
+      destroy:
+        success: Course group type successfully destroyed.
+        error: An error occured when deleting the course group type.
+      update:
+        success: Course group type successfully updated.
+      index:
+        <<: *course_group_type_attributes
+        new_course_group_type_link: Add a New Course Group Type
+        card_header: Course Group Types
   simple_form:
     labels:
       course:
