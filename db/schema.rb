@@ -201,7 +201,7 @@ ActiveRecord::Schema.define(version: 2018_09_18_174839) do
 
   create_table "course_unit_groups", force: :cascade do |t|
     t.string "name", null: false
-    t.integer "total_akts_condition", null: false
+    t.integer "total_ects_condition", null: false
     t.bigint "unit_id"
     t.bigint "course_group_type_id"
     t.datetime "created_at", null: false

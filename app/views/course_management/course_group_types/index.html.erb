@@ -9,7 +9,7 @@
         <%= fa_icon 'tags', text: t('.card_header') %>
       </div>
       <div class='card-body'>
-        <%= form_tag agenda_types_path, method: :get do %>
+        <%= form_tag course_group_types_path, method: :get do %>
           <div class="form-group">
             <%= text_field_tag 'term', params[:term], placeholder: t('.name'), class: 'form-control' %>
           </div>
