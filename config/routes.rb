@@ -37,6 +37,7 @@ Rails.application.routes.draw do
 
   resources :languages
   resources :units
+  resources :documents
 
   scope module: :curriculum do
     resources :courses
