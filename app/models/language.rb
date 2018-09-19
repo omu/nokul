@@ -3,6 +3,7 @@
 class Language < ApplicationRecord
   # search
   include PgSearch
+
   pg_search_scope(
     :search,
     against: %i[name iso yoksis_code],
