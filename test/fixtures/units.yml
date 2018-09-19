@@ -54,3 +54,15 @@ baum:
   unit_status: active
   unit_instruction_language: turkish
   unit_instruction_type: normal_education
+
+mühendislik_fakültesi_yönetim_kurulu:
+  name: Mühendislik Fakültesi Yönetim Kurulu
+  yoksis_id:
+  detsis_id: 96980227
+  founded_at:
+  duration:
+  unit_type:
+  district: atakum
+  unit_status: active
+  unit_instruction_language:
+  unit_instruction_type:

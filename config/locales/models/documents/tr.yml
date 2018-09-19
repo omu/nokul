@@ -1,0 +1,31 @@
+tr:
+  activerecord:
+    attributes:
+      document: &document_attributes
+        name: Doküman Adı
+        statement: Açıklama
+  helpers:
+    submit:
+      document:
+        create: Doküman Oluştur
+        update: Dokümanı Güncelle
+  documents:
+    common:
+      documents: Dokümanlar
+    show:
+      <<: *document_attributes
+    index:
+      <<: *document_attributes
+      new_document_link: Yeni Doküman Oluştur
+      card_header: Dokümanlar
+    new:
+      form_title: Doküman Oluştur
+    edit:
+      form_title: Doküman Güncelle
+    update:
+      success: Doküman başarıyla güncellendi.
+    create:
+      success: Doküman başarıyla oluşturuldu.
+    destroy:
+      success: Doküman başarıyla silindi!
+      warning: Doküman silinemedi!

@@ -2,16 +2,10 @@
 
 module Calendar
   class CalendarTitlesController < ApplicationController
-    include Pagy::Backend
-
     before_action :set_calendar_title, only: %i[edit update destroy]
 
     def index
-      @pagy, @calendar_titles = if params[:term].present?
-                                  pagy(CalendarTitle.search(params[:term]))
-                                else
-                                  pagy(CalendarTitle.all)
-                                end
+      @calendar_titles = pagy_by_search(CalendarTitle.all)
     end
 
     def new

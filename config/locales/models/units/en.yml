@@ -26,8 +26,6 @@ en:
       units: Units
     search:
       smart_search_placeholder: Unit name or YOKSIS ID
-      smart_search: Smart Search
-      detailed_search: Detailed Search
       duration: Duration of Instruction
       unit_status: Unit Status
       unit_instruction_language: Language of Instruction

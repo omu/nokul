@@ -1,0 +1,61 @@
+<div class='row'>
+  <div class='col-sm-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'calendar' %>
+        <strong><%= form_title %></strong>
+      </div>
+      <div class='card-body'>
+        <%= simple_form_for(@course) do |f| %>
+          <%= f.error_notification %>
+          <% if f.object.errors.any? %>
+            <ul class="list-group list-group-accent">
+              <% f.object.errors.full_messages.each do |message| %>
+                <li class="list-group-item list-group-item-accent-danger list-group-item-danger">
+                  <%= message %>
+                </li>
+              <% end %>
+            </ul>
+          <% end %>
+          <div class='row mt-3'>
+            <div class='form-group col-sm-4'>
+              <%= f.association :unit %>
+            </div>
+            <div class='form-group col-sm-4'>
+              <%= f.input :name %>
+            </div>
+            <div class='form-group col-sm-4'>
+              <%= f.input :code %>
+            </div>
+            <div class='form-group col-sm-4'>
+              <%= f.input :theoric %>
+            </div>
+            <div class='form-group col-sm-4'>
+              <%= f.input :practice %>
+            </div>
+            <div class='form-group col-sm-4'>
+              <%= f.input :laboratory %>
+            </div>
+            <div class='form-group col-sm-4'>
+              <%= f.input :program_type,
+                          collection: enum_options_for_select(f.object.class, :program_type) %>
+            </div>
+            <div class='form-group col-sm-4'>
+              <%= f.association :language %>
+            </div>
+            <div class='form-group col-sm-4'>
+              <%= f.input :status,
+                          collection: enum_options_for_select(f.object.class, :status) %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
+              <%= link_to_back(:back) %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'select2' %>

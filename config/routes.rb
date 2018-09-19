@@ -37,8 +37,9 @@ Rails.application.routes.draw do
 
   resources :languages
   resources :units
+  resources :documents
 
-  scope module: :curriculum do
+  scope module: :course_management do
     resources :courses
   end
 
@@ -95,5 +96,11 @@ Rails.application.routes.draw do
     get '/studies/articles', to: 'articles#index'
     get '/studies/projects', to: 'projects#index'
     get '/studies/certifications', to: 'certifications#index'
+  end
+
+  resources :agenda_types, except: :show, module: :committee
+
+  resources :committees, only: %i[index show], controller: 'committee/dashboard' do
+    resources :agendas, except: :show, module: :committee
   end
 end
