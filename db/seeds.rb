@@ -54,6 +54,9 @@ Rake::Task['yoksis:import_departments'].invoke
 # Import Academic Staff from YOKSIS
 Rake::Task['yoksis:fetch_academic_staff'].invoke
 
+# Import Administrative Units
+Rake::Task['kaysis:import_administrative_units'].invoke
+
 # Create UnitType for Committee/Commission
 UnitType.create(name: 'Kurul / Komisyon', code: 200)
 
