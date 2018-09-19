@@ -68,6 +68,11 @@
           <%= fa_icon('language', text: t('.languages'), class: 'nav-icon') %>
         <% end %>
       </li>
+      <li class="nav-item">
+        <%= link_to documents_path, class: 'nav-link' do %>
+          <%= fa_icon('file-text-o', text: t('.documents'), class: 'nav-icon') %>
+        <% end %>
+      </li>
       <li class="nav-item nav-dropdown">
         <a class="nav-link nav-dropdown-toggle" href="#">
           <%= fa_icon('university', class: 'nav-icon') %><%= t('.references') %>
