@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class UnitsController < ApplicationController
-  before_action :set_unit, only: %i[edit update destroy show]
+  before_action :set_unit, only: %i[edit update destroy show courses]
 
   def index
     units = Unit.includes(
@@ -30,6 +30,10 @@ class UnitsController < ApplicationController
 
   def destroy
     @unit.destroy ? redirect_to(units_path, notice: t('.success')) : redirect_with('warning')
+  end
+
+  def courses
+    render json: @unit.courses.to_json(methods: :name)
   end
 
   private
