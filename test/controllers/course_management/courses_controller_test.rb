@@ -83,7 +83,7 @@ module Curriculum
     private
 
     def translate(key)
-      t("curriculum.courses#{key}")
+      t("course_management.courses#{key}")
     end
   end
 end

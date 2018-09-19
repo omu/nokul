@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Curriculum
+module CourseManagement
   class CoursesController < ApplicationController
     before_action :set_course, only: %i[show edit update destroy]
 
