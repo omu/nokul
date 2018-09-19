@@ -40,6 +40,8 @@ Rails.application.routes.draw do
     get :courses, on: :member
   end
 
+  resources :documents
+
   scope module: :course_management do
     resources :courses
     resources :course_unit_groups
