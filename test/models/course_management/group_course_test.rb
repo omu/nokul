@@ -12,4 +12,10 @@ class GroupCourseTest < ActiveSupport::TestCase
       assert group_courses(:one).send(property)
     end
   end
+
+  # validations: uniqueness
+  test 'group_course should be unique based on course' do
+    fake_group_course = group_courses(:one).dup
+    assert_not fake_group_course.valid?
+  end
 end

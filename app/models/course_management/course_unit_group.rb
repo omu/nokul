@@ -10,6 +10,7 @@ class CourseUnitGroup < ApplicationRecord
   # validations
   validates :name, presence: true
   validates :total_ects_condition, presence: true
+  validates :course_ids, presence: true
 
   # callbacks
   before_save { self.name = name.capitalize_all }
