@@ -1,0 +1,76 @@
+tr:
+  activerecord:
+    attributes:
+      prospective_student: &prospective_student_attributes
+        id_number: Kimlik Numarası
+        first_name: Ad
+        last_name: Soyad
+        fathers_name: Baba Adı
+        mothers_name: Anne Adı
+        date_of_birth: Doğum Tarihi
+        gender: Cinsiyet
+        nationality: Uyruk
+        place_of_birth: Doğum Yeri
+        registration_city: Nüfusa Kayıtlı Olduğu İl
+        registration_district: Nüfusa Kayıtlı Olduğu İlçe
+        school_code: Okul Kodu
+        school_type: Okul Türü
+        school_branch: Okul Dalı
+        type_of_education: Eğitim Türü
+        high_school_graduation_year: Lise Mezuniyet Yılı
+        placement_type: Yerleşme Türü
+        exam_score: Sınav Puanı
+        language_id: Dil ID
+        address: Adres
+        home_phone: Ev Telefonu
+        mobile_phone: Cep Telefonu
+        email: E-posta
+        student_disability_type_id: Öğrenci Engel Türü
+        top_student: Okul Birincisi
+        placement_score: Yerleşme Puanı
+        placement_rank: Yerleşme Sırası
+        unit: Yerleştiği Birim
+        preference_order: Tercih Sırası
+        placement_score_type: Yerleşme Puan Türü
+        additional_score: Ek Puan
+        meb_status: Lise Mezuniyet Durumu
+        meb_status_date: Lise Mezuniyet Tarihi
+        military_status: Askerlik Durumu
+        military_status_date: Askerlik Durum Tarihi
+        obs_status: Öğrencilik Durumu
+        obs_status_date: Öğrencilik Durum Tarihi
+        obs_registered_program: Öğrenci Olarak Kayıtlı Olduğu Program
+        graduated: Mezun
+        not_graduated_or_unknown: Mezun Değil/Bilinmiyor
+        unproblematic: Sorunsuz
+        must_see_recruiting_office: Askerlik Şubesiyle Görüşmeli
+        student_in_a_different_unit: Başka Bir Üniversite/Birimde Öğrenci
+        smart_search_placeholder: Aday öğrenci kimlik numarası, adı veya soyadı
+    enums:
+      prospective_student:
+        genders:
+          male: Erkek
+          female: Kadın
+        nationality:
+          turkish: Türk Vatandaşı
+          kktc: Kuzey Kıbrıs Türk Vatandaşı
+          foreign: Yabancı Uyruklu
+        placement_types:
+          general: Genel
+          additional_score: Ek Puanlı
+        additional_score:
+          handicapped: Engelli Ek Puanı
+  student_management:
+    prospective_students:
+      search:
+        <<: *prospective_student_attributes
+      show:
+        <<: *prospective_student_attributes
+        prospective_student: Aday Öğrenci
+      index:
+        <<: *prospective_student_attributes
+        prospective_students: Aday Öğrenciler
+  simple_form:
+    labels:
+      prospective_student:
+        <<: *prospective_student_attributes
