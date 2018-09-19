@@ -2,10 +2,14 @@
 
 module CourseManagement
   class CourseUnitGroupsController < ApplicationController
-    before_action :set_course_unit_group, only: %i[edit update destroy]
+    before_action :set_course_unit_group, only: %i[show edit update destroy]
 
     def index
       @course_unit_groups = pagy_by_search(CourseUnitGroup.includes(:unit, :course_group_type))
+    end
+
+    def show
+      @courses = @course_unit_group.courses
     end
 
     def new

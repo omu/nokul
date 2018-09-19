@@ -59,6 +59,12 @@ en:
     course_unit_groups:
       new:
         form_title: Course Group successfully created.
+      show:
+        name: Course Unit Group Name
+        total_ects_condition: Total ECTS Condition
+        unit: Unit
+        course_group_type: Course Group Type
+        courses: Courses
       edit:
         form_title: Course Group successfully updated.
       create:

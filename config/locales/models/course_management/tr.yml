@@ -58,9 +58,15 @@ tr:
         courses: Dersler
     course_unit_groups:
       new:
-        form_title: Ders Grubu Oluştur
+        form_title: Ders Grup Oluştur
+      show:
+        name: Ders Grup Adı
+        total_ects_condition: Toplam AKTS Koşulu
+        unit: Birim
+        course_group_type: Ders Grup Türü
+        courses: Dersler
       edit:
-        form_title: Ders Grubu Düzenle
+        form_title: Ders Grup Düzenle
       create:
         success: Ders grubu başarıyla oluşturuldu.
       destroy:
@@ -70,7 +76,7 @@ tr:
         success: Ders grubu başarıyla güncellendi.
       index:
         <<: *course_unit_group_attributes
-        new_course_unit_group_link: Yeni Ders Grubu Ekle
+        new_course_unit_group_link: Yeni Ders Grup Ekle
         card_header: Ders Grupları
     course_group_types:
       new:
