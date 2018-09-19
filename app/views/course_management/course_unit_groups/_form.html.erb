@@ -24,7 +24,10 @@
               <%= f.association :course_group_type %>
             </div>
             <div class="form-group col-sm-6">
-              <%= f.association :courses, collection: Course.all, required: true, label_method: :name_with_code %>
+              <%= f.association :courses,
+                                collection: f.object.new_record? ? [] : f.object.unit.courses,
+                                required: true,
+                                label_method: :name_with_code %>
             </div>
             <div class='form-group col-sm-12'>
               <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
@@ -37,4 +40,4 @@
   </div>
 </div>
 
-<%= render 'select2' %>
+<%= render 'js' %>

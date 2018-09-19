@@ -37,7 +37,9 @@ Rails.application.routes.draw do
 
   resources :languages
   resources :units do
-    get :courses, on: :member
+    member do
+      get :courses, defaults: { format: :json }
+    end
   end
 
   resources :documents

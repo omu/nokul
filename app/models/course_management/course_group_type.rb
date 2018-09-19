@@ -9,6 +9,9 @@ class CourseGroupType < ApplicationRecord
     using: { tsearch: { prefix: true } }
   )
 
+  # relations
+  has_many :course_unit_groups, dependent: :nullify
+
   # validations
   validates :name, presence: true
 
