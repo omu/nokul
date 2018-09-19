@@ -16,6 +16,7 @@ tr:
         languages: Diller
         users: Kullanıcılar
         references: Referanslar
+        documents: Belgeler
         student_disability_types: Engel Türleri
         student_drop_out_types: Ayrılma Nedenleri
         student_education_levels: Eğitim Düzeyleri
