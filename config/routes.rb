@@ -43,6 +43,10 @@ Rails.application.routes.draw do
     resources :courses
   end
 
+  scope module: :student_management do
+    resources :prospective_students
+  end
+
   scope module: :locations do
     resources :countries do
       resources :cities, except: [:index] do
