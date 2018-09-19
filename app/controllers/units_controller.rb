@@ -33,7 +33,7 @@ class UnitsController < ApplicationController
   end
 
   def courses
-    render json: @unit.courses.to_json(methods: :name)
+    @courses = @unit.courses
   end
 
   private
