@@ -6,6 +6,11 @@ class ProspectiveStudent < ApplicationRecord
   belongs_to :student_disability_type, optional: true
   belongs_to :unit
 
+  # validations
+  validates :id_number, presence: true, uniqueness: { scope: %i[unit_id exam_score] }
+  validates :gender, presence: true
+  validates :size, inclusion: { in: %w(true false) }
+
   # callbacks
   before_create do
     self.first_name = first_name.capitalize_all
