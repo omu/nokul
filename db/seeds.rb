@@ -58,6 +58,9 @@ Rake::Task['yoksis:fetch_academic_staff'].invoke
 # Create UnitType for Committee/Commission
 UnitType.create(name: 'Kurul / Komisyon', code: 200)
 
+# Import prospective students of 2018
+Osym::ImportProspectiveStudentsJob.new.perform_now
+
 # Produced data for beta environment
 if Rails.env.beta? || Rails.env.development?
   Dir[Rails.root.join('db', 'beta_seed', '*.rb')].sort.each do |seed|
