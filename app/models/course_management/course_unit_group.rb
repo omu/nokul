@@ -1,6 +1,15 @@
 # frozen_string_literal: true
 
 class CourseUnitGroup < ApplicationRecord
+  # search
+  include PgSearch
+  pg_search_scope(
+    :search,
+    against: %i[name unit_id course_group_type_id],
+    associated_against: { unit: :name, course_group_type: :name },
+    using: { tsearch: { prefix: true } }
+  )
+
   # relations
   belongs_to :unit
   belongs_to :course_group_type

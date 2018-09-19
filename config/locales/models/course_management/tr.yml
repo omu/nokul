@@ -18,6 +18,7 @@ tr:
         unit: Birim
         course_group_type: Ders Grup Türü
         courses: Dersler
+        search_placeholder: Ders Grup Adı / Birim Adı / Ders Grup Türü Adı
       course_group_type: &course_group_type_attributes
         name: Ders Grup Tür Adı
     models:
