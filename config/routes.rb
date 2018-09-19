@@ -36,8 +36,9 @@ Rails.application.routes.draw do
   end
 
   resources :languages
-  resources :units
-  resources :documents
+  resources :units do
+    get :courses, on: :member
+  end
 
   scope module: :course_management do
     resources :courses
