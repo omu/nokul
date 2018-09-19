@@ -14,14 +14,17 @@
             <div class='form-group col-sm-12'>
               <%= f.input :name, required: true %>
             </div>
-            <div class='form-group col-sm-12'>
+            <div class='form-group col-sm-6'>
               <%= f.input :total_ects_condition, required: true %>
             </div>
-            <div class='form-group col-sm-4'>
+            <div class='form-group col-sm-6'>
               <%= f.association :unit %>
             </div>
-            <div class='form-group col-sm-4'>
+            <div class='form-group col-sm-6'>
               <%= f.association :course_group_type %>
+            </div>
+            <div class="form-group col-sm-6">
+              <%= f.association :courses, collection: Course.all, required: true, label_method: :name_with_code %>
             </div>
             <div class='form-group col-sm-12'>
               <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
@@ -33,3 +36,5 @@
     </div>
   </div>
 </div>
+
+<%= render 'select2' %>

@@ -38,7 +38,8 @@ module CourseManagement
     end
 
     def course_unit_group_params
-      params.require(:course_unit_group).permit(:name, :total_ects_condition, :unit_id, :course_group_type_id)
+      params.require(:course_unit_group)
+            .permit(:name, :total_ects_condition, :unit_id, :course_group_type_id, course_ids: [])
     end
   end
 end

@@ -1,0 +1,7 @@
+one:
+  course: test
+  course_unit_group: one
+
+two:
+  course: test
+  course_unit_group: two

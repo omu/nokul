@@ -7,6 +7,8 @@ class CourseUnitGroupTest < ActiveSupport::TestCase
   %i[
     unit
     course_group_type
+    group_courses
+    courses
   ].each do |property|
     test "a course unit group can communicate with #{property}" do
       assert course_unit_groups(:one).send(property)

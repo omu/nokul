@@ -17,6 +17,7 @@ tr:
         total_ects_condition: Toplam AKTS Koşulu
         unit: Birim
         course_group_type: Ders Grup Türü
+        courses: Dersler
       course_group_type: &course_group_type_attributes
         name: Ders Grup Tür Adı
     models:
