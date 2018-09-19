@@ -103,7 +103,7 @@ module Osym
     end
 
     def find_additional_score(str)
-      'disabled' if str.eql?('Özürlü Ek Puan')
+      'handicapped' if str.eql?('Özürlü Ek Puan')
     end
   end
 end
