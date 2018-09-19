@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_17_205157) do
+ActiveRecord::Schema.define(version: 2018_09_18_163756) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -309,6 +309,52 @@ ActiveRecord::Schema.define(version: 2018_09_17_205157) do
     t.bigint "user_id"
     t.datetime "created_at"
     t.index ["user_id"], name: "index_projects_on_user_id"
+  end
+
+  create_table "prospective_students", force: :cascade do |t|
+    t.string "id_number", null: false
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.string "fathers_name"
+    t.string "mothers_name"
+    t.date "date_of_birth"
+    t.integer "gender"
+    t.integer "nationality"
+    t.string "place_of_birth"
+    t.string "registration_city"
+    t.string "registration_district"
+    t.string "school_code"
+    t.string "school_type"
+    t.string "school_branch"
+    t.integer "type_of_education"
+    t.integer "high_school_graduation_year"
+    t.integer "placement_type"
+    t.float "exam_score"
+    t.bigint "language_id"
+    t.text "address"
+    t.string "home_phone"
+    t.string "mobile_phone"
+    t.string "email"
+    t.bigint "student_disability_type_id"
+    t.boolean "top_student", default: false
+    t.float "placement_score"
+    t.integer "placement_rank"
+    t.bigint "unit_id"
+    t.integer "preference_order"
+    t.string "placement_score_type"
+    t.integer "additional_score"
+    t.boolean "meb_status"
+    t.datetime "meb_status_date"
+    t.boolean "military_status"
+    t.datetime "military_status_date"
+    t.boolean "obs_status"
+    t.datetime "obs_status_date"
+    t.string "obs_registered_program"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["language_id"], name: "index_prospective_students_on_language_id"
+    t.index ["student_disability_type_id"], name: "index_prospective_students_on_student_disability_type_id"
+    t.index ["unit_id"], name: "index_prospective_students_on_unit_id"
   end
 
   create_table "student_disability_types", force: :cascade do |t|
