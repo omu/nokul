@@ -3,6 +3,7 @@
 //= require rails-ujs
 //= require activestorage
 //= require coreui
+//= require helpers/dynamic_select
 //= require toastr/build/toastr.min
 //= require shared/toastr_config
 //= require pace-progress/pace.min.js
