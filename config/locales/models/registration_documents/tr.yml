@@ -10,7 +10,7 @@ tr:
     submit:
       registration_document:
         create: Belge Oluştur
-        update: Belgeyi Güncelle
+        update: Belge Güncelle
   registration_documents:
     common:
       registration_documents: Belgeler
