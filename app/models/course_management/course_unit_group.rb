@@ -4,6 +4,8 @@ class CourseUnitGroup < ApplicationRecord
   # relations
   belongs_to :unit
   belongs_to :course_group_type
+  has_many :group_courses, dependent: :destroy
+  has_many :courses, through: :group_courses
 
   # validations
   validates :name, presence: true

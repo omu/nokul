@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_18_174839) do
+ActiveRecord::Schema.define(version: 2018_09_19_063348) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -269,6 +269,15 @@ ActiveRecord::Schema.define(version: 2018_09_18_174839) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
+  create_table "group_courses", force: :cascade do |t|
+    t.bigint "course_id"
+    t.bigint "course_unit_group_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_group_courses_on_course_id"
+    t.index ["course_unit_group_id"], name: "index_group_courses_on_course_unit_group_id"
+  end
+
   create_table "identities", force: :cascade do |t|
     t.integer "type", null: false
     t.string "first_name", null: false
@@ -507,6 +516,8 @@ ActiveRecord::Schema.define(version: 2018_09_18_174839) do
   add_foreign_key "duties", "units"
   add_foreign_key "employees", "titles"
   add_foreign_key "employees", "users"
+  add_foreign_key "group_courses", "course_unit_groups"
+  add_foreign_key "group_courses", "courses"
   add_foreign_key "identities", "students"
   add_foreign_key "identities", "users"
   add_foreign_key "positions", "administrative_functions"

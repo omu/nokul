@@ -17,6 +17,7 @@ en:
         total_ects_condition: Total ECTS Condition
         unit: Unit
         course_group_type: Course Group Type
+        courses: Courses
       course_group_type: &course_group_type_attributes
         name: Course Group Type Name
     models:
