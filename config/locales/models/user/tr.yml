@@ -94,9 +94,7 @@ tr:
       addresses: Adres Bilgileri
       employees: Personel İşlemleri
     search:
-      smart_search: Akıllı Arama
       smart_search_placeholder: TC/YU numarası, e-mail adresi, ad veya soyad
-      detailed_search: Detaylı Arama
     edit:
       form_title: Hesabı Düzenle
     new:

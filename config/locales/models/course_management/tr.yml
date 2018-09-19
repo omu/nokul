@@ -1,0 +1,52 @@
+tr:
+  activerecord:
+    attributes:
+      course: &course_attributes
+        credit: Kredi
+        code: Dersin Kodu
+        program_type: Program Türü
+        laboratory: Laboratuvar
+        language: Dil
+        name: Dersin Adı
+        practice: Uygulama
+        status: Durumu
+        theoric: Teorik
+        unit: Birim
+    models:
+      course: Ders
+    enums:
+      course:
+        program_types:
+          associate: Önlisans
+          undergraduate: Lisans
+          master: Yüksek Lisans
+          doctoral: Doktora
+        statuses:
+          passive: Pasif
+          active: Aktif
+  course_management:
+    courses:
+      new:
+        form_title: Ders Oluştur
+      edit:
+        form_title: Dersi Düzenle
+      create:
+        success: Ders başarıyla oluşturuldu.
+      destroy:
+        success: Ders başarıyla silindi.
+        error: Ders silinirken bir hata oluştu.
+      update:
+        success: Ders başarıyla güncellendi.
+      search:
+        smart_search_placeholder: Ders adı veya kodu
+        <<: *course_attributes
+      show:
+        <<: *course_attributes
+      index:
+        <<: *course_attributes
+        add_new_course: Yeni Ders Ekle
+        courses: Dersler
+  simple_form:
+    labels:
+      course:
+        <<: *course_attributes

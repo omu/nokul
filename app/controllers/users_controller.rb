@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-  include Pagy::Backend
   include LastUpdateFromMernis
 
   before_action :set_user, only: %i[show edit update destroy save_address_from_mernis save_identity_from_mernis]
@@ -11,11 +10,7 @@ class UsersController < ApplicationController
   before_action :set_identity_elapsed_time, only: %i[save_identity_from_mernis]
 
   def index
-    @pagy, @users = if params[:term].present?
-                      pagy(User.all.search(params[:term]))
-                    else
-                      pagy(User.all)
-                    end
+    @users = pagy_by_search(User.all)
   end
 
   def show

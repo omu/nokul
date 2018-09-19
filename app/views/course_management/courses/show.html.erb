@@ -1,0 +1,60 @@
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class="alert alert-light">
+      <%= link_to_back courses_path %>
+      <%= link_to_edit edit_course_path(@course) %>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+         <%= fa_icon 'book' %><strong><%= @course.name %></strong>
+      </div>
+      <div class="card-body table-responsive">
+        <table class='table table-bordered table-hover'>
+          <tbody>
+            <tr>
+              <th><%= t('.unit') %></th>
+              <td><%= @course.unit.try(:name) %></td>
+            </tr>
+            <tr>
+              <th><%= t('.name') %></th>
+              <td><%= @course.name %></td>
+            </tr>
+            <tr>
+              <th><%= t('.code') %></th>
+              <td><%= @course.code %></td>
+            </tr>
+            <tr>
+              <th><%= t('.theoric') %></th>
+              <td><%= @course.theoric %></td>
+            </tr>
+            <tr>
+              <th><%= t('.practice') %></th>
+              <td><%= @course.practice %></td>
+            </tr>
+            <tr>
+              <th><%= t('.laboratory') %></th>
+              <td><%= @course.laboratory %></td>
+            </tr>
+            <tr>
+              <th><%= t('.credit') %></th>
+              <td><%= @course.credit %></td>
+            </tr>
+            <tr>
+              <th><%= t('.program_type') %></th>
+              <td><%= enum_t(@course, :program_type) %></td>
+            </tr>
+            <tr>
+              <th><%= t('.language') %></th>
+              <td><%= @course.language.try(:name) %></td>
+            </tr>
+            <tr>
+              <th><%= t('.status') %></th>
+              <td><%= enum_t(@course, :status) %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -44,11 +44,20 @@
 
         </ul>
       </li>
-      <li class="nav-item">
-        <%= link_to courses_path, class: 'nav-link' do %>
-          <%= fa_icon('book', text: t('.courses'), class: 'nav-icon') %>
-        <% end %>
+
+      <li class="nav-item nav-dropdown">
+        <a class="nav-link nav-dropdown-toggle" href="#">
+          <%= fa_icon('list', class: 'nav-icon') %><%= t('.course_management') %>
+        </a>
+        <ul class="nav-dropdown-items">
+          <li class="nav-item">
+            <%= link_to courses_path, class: 'nav-link' do %>
+              <%= fa_icon('book', text: t('.courses'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+        </ul>
       </li>
+
       <li class="nav-item">
         <%= link_to users_path, class: 'nav-link' do %>
           <%= fa_icon('user', text: t('.users'), class: 'nav-icon') %>
@@ -57,6 +66,11 @@
       <li class="nav-item">
         <%= link_to languages_path, class: 'nav-link' do %>
           <%= fa_icon('language', text: t('.languages'), class: 'nav-icon') %>
+        <% end %>
+      </li>
+      <li class="nav-item">
+        <%= link_to documents_path, class: 'nav-link' do %>
+          <%= fa_icon('file-text-o', text: t('.documents'), class: 'nav-icon') %>
         <% end %>
       </li>
       <li class="nav-item nav-dropdown">
@@ -140,6 +154,23 @@
         <%= link_to studies_path, class: 'nav-link' do %>
           <%= fa_icon('file-text-o', text: t('.studies'), class: 'nav-icon') %>
         <% end %>
+      </li>
+      <li class="nav-item nav-dropdown">
+        <a class="nav-link nav-dropdown-toggle" href="#">
+          <%= fa_icon('tasks', class: 'nav-icon') %><%= t('.committees') %>
+        </a>
+        <ul class="nav-dropdown-items">
+          <li class="nav-item">
+            <%= link_to agenda_types_path, class: 'nav-link' do %>
+              <%= fa_icon('tags', text: t('.agenda_types'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to committees_path, class: 'nav-link' do %>
+              <%= fa_icon('cubes', text: t('.committee_units'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+        </ul>
       </li>
     </ul>
   </nav>
