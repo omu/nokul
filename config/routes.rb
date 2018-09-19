@@ -39,7 +39,7 @@ Rails.application.routes.draw do
   resources :units
   resources :documents
 
-  scope module: :curriculum do
+  scope module: :course_management do
     resources :courses
   end
 
