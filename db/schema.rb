@@ -235,6 +235,13 @@ ActiveRecord::Schema.define(version: 2018_09_19_063348) do
     t.index ["city_id"], name: "index_districts_on_city_id"
   end
 
+  create_table "documents", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "statement"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "duties", force: :cascade do |t|
     t.boolean "temporary"
     t.date "start_date"
