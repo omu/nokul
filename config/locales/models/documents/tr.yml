@@ -8,7 +8,7 @@ tr:
     submit:
       document:
         create: Belge Oluştur
-        update: Belgeyi Güncelle
+        update: Belge Güncelle
   documents:
     common:
       documents: Belgeler
@@ -17,7 +17,7 @@ tr:
     index:
       <<: *document_attributes
       new_document_link: Yeni Belge Oluştur
-      card_header: Belgelar
+      card_header: Belgeler
     new:
       form_title: Belge Oluştur
     edit:
