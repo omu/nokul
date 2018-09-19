@@ -34,6 +34,7 @@
                 <td><%= course_unit_group.unit.name %></td>
                 <td><%= course_unit_group.course_group_type.try(:name) %></td>
                 <td>
+                  <%= link_to_show(course_unit_group_path(course_unit_group)) %>
                   <%= link_to_edit(edit_course_unit_group_path(course_unit_group)) %>
                   <%= link_to_destroy(course_unit_group) %>
                 </td>
