@@ -12,8 +12,19 @@ tr:
         status: Durumu
         theoric: Teorik
         unit: Birim
+      course_unit_group: &course_unit_group_attributes
+        name: Ders Grup Adı
+        total_ects_condition: Toplam AKTS Koşulu
+        unit: Birim
+        course_group_type: Ders Grup Türü
+        courses: Dersler
+        search_placeholder: Ders Grup Adı / Birim Adı / Ders Grup Türü Adı
+      course_group_type: &course_group_type_attributes
+        name: Ders Grup Tür Adı
     models:
       course: Ders
+      course_unit_group: Ders Grubu
+      course_group_type: Ders Grup Türü
     enums:
       course:
         program_types:
@@ -46,6 +57,44 @@ tr:
         <<: *course_attributes
         add_new_course: Yeni Ders Ekle
         courses: Dersler
+    course_unit_groups:
+      new:
+        form_title: Ders Grup Oluştur
+      show:
+        name: Ders Grup Adı
+        total_ects_condition: Toplam AKTS Koşulu
+        unit: Birim
+        course_group_type: Ders Grup Türü
+        courses: Dersler
+      edit:
+        form_title: Ders Grup Düzenle
+      create:
+        success: Ders grubu başarıyla oluşturuldu.
+      destroy:
+        success: Ders grubu başarıyla silindi.
+        error: Ders grubu silinirken bir hata oluştu.
+      update:
+        success: Ders grubu başarıyla güncellendi.
+      index:
+        <<: *course_unit_group_attributes
+        new_course_unit_group_link: Yeni Ders Grup Ekle
+        card_header: Ders Grupları
+    course_group_types:
+      new:
+        form_title: Ders Grup Türü Oluştur
+      edit:
+        form_title: Ders Grup Türü Düzenle
+      create:
+        success: Ders grup türü başarıyla oluşturuldu.
+      destroy:
+        success: Ders grup türü başarıyla silindi.
+        error: Ders grup türü silinirken bir hata oluştu.
+      update:
+        success: Ders grup türü başarıyla güncellendi.
+      index:
+        <<: *course_group_type_attributes
+        new_course_group_type_link: Yeni Ders Grup Türü Ekle
+        card_header: Ders Grup Türleri
   simple_form:
     labels:
       course:
