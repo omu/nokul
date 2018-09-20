@@ -32,7 +32,7 @@ class RegistrationDocumentsController < ApplicationController
   private
 
   def set_unit
-    @unit = Unit.find(params[:unit_id])
+    @unit = Unit.programs.find(params[:unit_id])
   end
 
   def set_registration_document
