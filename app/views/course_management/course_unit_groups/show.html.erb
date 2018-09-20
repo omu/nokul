@@ -31,8 +31,9 @@
           </tbody>
         </table>
       </div>
-      <hr \>
-      <center><h4><%= t('.courses') %></h4></center>
+      <div class='card-header'>
+        <%= fa_icon 'book', text: t('.courses') %>
+      </div>
       <div class='card-body'>
         <table class='table table-responsive-sm table-striped'>
           <% @courses.each do |course| %>
