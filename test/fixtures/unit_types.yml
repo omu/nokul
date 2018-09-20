@@ -1,9 +1,24 @@
 university:
   name: Üniversite
   code: 1
+  group: university
 faculty:
   name: Fakülte
   code: 2
+  group: faculty
 research_center:
   name: Araştırma ve Uygulama Merkezi
   code: 8
+  group: other
+department:
+  name: Bölüm
+  code: 10
+  group: department
+program:
+  name: Önlisans Programı
+  code: 20
+  group: program
+committee:
+  name: Kurul
+  code: 200
+  group: committee
