@@ -33,12 +33,10 @@ class RegistrationDocumentsController < ApplicationController
 
   def set_unit
     @unit = Unit.find(params[:unit_id])
-    not_found unless @unit
   end
 
   def set_registration_document
     @registration_document = @unit.registration_documents.find(params[:id])
-    not_found unless @registration_document
   end
 
   def document_params
