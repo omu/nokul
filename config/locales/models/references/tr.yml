@@ -40,9 +40,19 @@ tr:
       unit_type: &unit_type_attributes
         name: Birim Türü
         code: Kodu
+        group: Grup
       university_type: &university_type_attributes
         name: Üniversite Türü
         code: Kodu
+    enums:
+      unit_type:
+        groups:
+          other: Diğer
+          university: Üniversite
+          faculty: Fakülte
+          department: Bölüm
+          program: Program
+          committee: Kurul
   helpers:
     submit:
       student_disability_type:
