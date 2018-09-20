@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class UnitsController < ApplicationController
-  before_action :set_unit, only: %i[edit update destroy show programs]
+  before_action :set_unit, only: %i[edit update destroy show]
 
   def index
     units = Unit.includes(

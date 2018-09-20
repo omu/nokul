@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Unit < ApplicationRecord
   # search
   include PgSearch
