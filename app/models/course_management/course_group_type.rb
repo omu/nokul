@@ -3,11 +3,7 @@
 class CourseGroupType < ApplicationRecord
   # search
   include PgSearch
-  pg_search_scope(
-    :search,
-    against: :name,
-    using: { tsearch: { prefix: true } }
-  )
+  pg_search_scope(:search, against: :name, using: { tsearch: { prefix: true } })
 
   # relations
   has_many :course_unit_groups, dependent: :nullify
