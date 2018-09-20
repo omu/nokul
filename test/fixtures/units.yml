@@ -55,7 +55,18 @@ baum:
   unit_instruction_language: turkish
   unit_instruction_type: normal_education
 
-mühendislik_fakültesi_yönetim_kurulu:
+muh_bolum:
+  name: Bilgisayar Mühendisliği Bölümü
+  yoksis_id: 122184
+  founded_at: 10.09.2009
+  duration: 4
+  unit_type: department
+  district: atakum
+  unit_status: active
+  unit_instruction_language: turkish
+  unit_instruction_type: normal_education
+
+muhendislik_fakultesi_yonetim_kurulu:
   name: Mühendislik Fakültesi Yönetim Kurulu
   yoksis_id:
   detsis_id: 96980227
@@ -65,7 +76,7 @@ mühendislik_fakültesi_yönetim_kurulu:
   district: atakum
   unit_status: active
   unit_instruction_language:
-  unit_instruction_type: 
+  unit_instruction_type:
   unit_type: committee
 
 egitim_fakultesi:

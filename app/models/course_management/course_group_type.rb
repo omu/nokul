@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-class AgendaType < ApplicationRecord
+class CourseGroupType < ApplicationRecord
   # search
   include PgSearch
   pg_search_scope(:search, against: :name, using: { tsearch: { prefix: true } })
 
   # relations
-  has_many :agendas, dependent: :nullify
+  has_many :course_unit_groups, dependent: :nullify
 
   # validations
   validates :name, presence: true
