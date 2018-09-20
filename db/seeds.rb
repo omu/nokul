@@ -45,6 +45,14 @@ YAML.load_file(Rails.root.join('db', 'static_data', 'languages.yml')).each do |_
   Language.create(language)
 end
 
+# create high_school_codes
+File.open(Rails.root.join('db', 'static_data', 'high_school_codes.yml')) do |high_school_codes|
+  high_school_codes.read.each_line do |high_school_code|
+    name, code = high_school_code.chomp.split('|')
+    HighSchoolCode.create(name: name, code: code)
+  end
+end
+
 # Fetch YOKSIS References
 Rake::Task['yoksis:fetch_references'].invoke
 
