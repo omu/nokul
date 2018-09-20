@@ -65,4 +65,35 @@ mühendislik_fakültesi_yönetim_kurulu:
   district: atakum
   unit_status: active
   unit_instruction_language:
-  unit_instruction_type:
+  unit_instruction_type: 
+  unit_type: committee
+
+egitim_fakultesi:
+  name: Eğitim Fakültesi
+  yoksis_id: 122082
+  duration: 0
+  district: atakum
+  unit_status: active
+  unit_instruction_language: turkish
+  unit_instruction_type: normal_education
+  unit_type: faculty
+
+bilgisayar_muhendisligi:
+  name: Bilgisayar Mühendisliği Bölümü
+  yoksis_id: 122184
+  duration: 0
+  district: atakum
+  unit_status: active
+  unit_instruction_language: turkish
+  unit_instruction_type: normal_education
+  unit_type: department
+
+fen_bilgisi_ogretmenligi_programi:
+  name: Fen Bilgisi Öğretmenliği Pr.
+  yoksis_id: 168656
+  duration: 4
+  district: atakum
+  unit_status: active
+  unit_instruction_language: turkish
+  unit_instruction_type: normal_education
+  unit_type: program
