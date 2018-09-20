@@ -6,4 +6,7 @@ class UnitStatus < ApplicationRecord
 
   # relations
   has_many :units, dependent: :nullify
+
+  # scopes
+  scope :active, -> { where(code: 1) }
 end

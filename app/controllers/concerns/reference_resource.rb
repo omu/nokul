@@ -10,7 +10,7 @@ module ReferenceResource
     before_action :set_resource, only: %i[edit update destroy]
 
     def index
-      value = pagy_by_search(@model_name.all)
+      value = pagy_by_search(@model_name.order(:code))
       instance_variable_set("@#{controller_name}", value)
     end
 
