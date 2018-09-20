@@ -1,23 +1,25 @@
 tr:
   activerecord:
     attributes:
-      document: &document_attributes
-        name: Belge Adı
+      registration_document: &registration_document_attributes
+        unit: Birim
+        academic_term: Akademik Dönem
+        document: Belge
         statement: Açıklama
   helpers:
     submit:
-      document:
+      registration_document:
         create: Belge Oluştur
         update: Belge Güncelle
-  documents:
+  registration_documents:
     common:
-      documents: Belgeler
+      registration_documents: Belgeler
     show:
-      <<: *document_attributes
+      <<: *registration_document_attributes
     index:
-      <<: *document_attributes
-      new_document_link: Yeni Belge Oluştur
-      card_header: Belgeler
+      <<: *registration_document_attributes
+      new_registration_document_link: Yeni Belge Oluştur
+      card_header: '%{unit} Kayıt İçin Gerekli Belgeler'
     new:
       form_title: Belge Oluştur
     edit:

@@ -1,0 +1,36 @@
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'university' %><strong><%= @registration_document.document.name %></strong>
+        <div class="card-header-actions">
+          <%= link_to_edit(edit_unit_registration_document_path(@unit, @registration_document)) %>
+          <%= link_to_destroy(unit_registration_document_path(@unit, @registration_document)) %>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <table class="table table-responsive-sm">
+          <tbody>
+            <tr>
+              <td><%= t('.unit') %></td>
+              <td><%= @unit.name %></td>
+            </tr>
+            <tr>
+              <td><%= t('.academic_term') %></td>
+              <td><%= academic_term_full_name(@registration_document.academic_term) %></td>
+            </tr>
+            <tr>
+              <td><%= t('.document') %></td>
+              <td><%= @registration_document.document.name %></td>
+            </tr>
+            <tr>
+              <td><%= t('.statement') %></td>
+              <td><%= @registration_document.document.statement %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
