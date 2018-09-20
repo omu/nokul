@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_19_072617) do
-
+ActiveRecord::Schema.define(version: 2018_09_19_115101) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -421,6 +420,7 @@ ActiveRecord::Schema.define(version: 2018_09_19_072617) do
   create_table "unit_types", force: :cascade do |t|
     t.string "name"
     t.integer "code"
+    t.integer "group"
   end
 
   create_table "units", force: :cascade do |t|
@@ -468,7 +468,7 @@ ActiveRecord::Schema.define(version: 2018_09_19_072617) do
     t.string "preferred_language", default: "tr"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "password_changed_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.datetime "password_changed_at", default: -> { "now()" }, null: false
     t.integer "articles_count"
     t.integer "projects_count"
     t.string "slug"
