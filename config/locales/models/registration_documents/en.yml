@@ -2,9 +2,9 @@ en:
   activerecord:
     attributes:
       registration_document: &registration_document_attributes
-        unit_id: Unit
-        academic_term_id: Academic Term
-        document_id: Document
+        unit: Unit
+        academic_term: Academic Term
+        document: Document
         statement: Statement
   helpers:
     submit:

@@ -2,9 +2,9 @@ tr:
   activerecord:
     attributes:
       registration_document: &registration_document_attributes
-        unit_id: Birim
-        academic_term_id: Akademik Dönem
-        document_id: Belge
+        unit: Birim
+        academic_term: Akademik Dönem
+        document: Belge
         statement: Açıklama
   helpers:
     submit:
