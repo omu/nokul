@@ -36,6 +36,7 @@ Rails.application.routes.draw do
   end
 
   resources :languages
+
   resources :units do
     member do
       get :courses, defaults: { format: :json }
@@ -43,6 +44,10 @@ Rails.application.routes.draw do
   end
 
   resources :documents
+
+  resources :units do
+    resources :registration_documents
+  end
 
   scope module: :course_management do
     resources :courses

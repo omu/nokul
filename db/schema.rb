@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_19_063348) do
-
+ActiveRecord::Schema.define(version: 2018_09_19_072617) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -344,6 +343,17 @@ ActiveRecord::Schema.define(version: 2018_09_19_063348) do
     t.index ["user_id"], name: "index_projects_on_user_id"
   end
 
+  create_table "registration_documents", force: :cascade do |t|
+    t.bigint "unit_id"
+    t.bigint "document_id"
+    t.bigint "academic_term_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["academic_term_id"], name: "index_registration_documents_on_academic_term_id"
+    t.index ["document_id"], name: "index_registration_documents_on_document_id"
+    t.index ["unit_id"], name: "index_registration_documents_on_unit_id"
+  end
+
   create_table "student_disability_types", force: :cascade do |t|
     t.string "name", null: false
     t.integer "code", null: false
@@ -530,6 +540,9 @@ ActiveRecord::Schema.define(version: 2018_09_19_063348) do
   add_foreign_key "positions", "administrative_functions"
   add_foreign_key "positions", "duties"
   add_foreign_key "projects", "users"
+  add_foreign_key "registration_documents", "academic_terms"
+  add_foreign_key "registration_documents", "documents"
+  add_foreign_key "registration_documents", "units"
   add_foreign_key "students", "units"
   add_foreign_key "students", "users"
   add_foreign_key "unit_calendar_events", "academic_calendars"
