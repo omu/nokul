@@ -317,6 +317,7 @@ ActiveRecord::Schema.define(version: 2018_09_18_163756) do
     t.index ["user_id"], name: "index_projects_on_user_id"
   end
 
+<<<<<<< HEAD
   create_table "prospective_students", force: :cascade do |t|
     t.string "id_number", null: false
     t.string "first_name", null: false
@@ -361,6 +362,17 @@ ActiveRecord::Schema.define(version: 2018_09_18_163756) do
     t.index ["language_id"], name: "index_prospective_students_on_language_id"
     t.index ["student_disability_type_id"], name: "index_prospective_students_on_student_disability_type_id"
     t.index ["unit_id"], name: "index_prospective_students_on_unit_id"
+=======
+  create_table "registration_documents", force: :cascade do |t|
+    t.bigint "unit_id"
+    t.bigint "document_id"
+    t.bigint "academic_term_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["academic_term_id"], name: "index_registration_documents_on_academic_term_id"
+    t.index ["document_id"], name: "index_registration_documents_on_document_id"
+    t.index ["unit_id"], name: "index_registration_documents_on_unit_id"
+>>>>>>> develop
   end
 
   create_table "student_disability_types", force: :cascade do |t|
@@ -455,6 +467,7 @@ ActiveRecord::Schema.define(version: 2018_09_18_163756) do
   create_table "unit_types", force: :cascade do |t|
     t.string "name"
     t.integer "code"
+    t.integer "group"
   end
 
   create_table "units", force: :cascade do |t|
@@ -503,7 +516,7 @@ ActiveRecord::Schema.define(version: 2018_09_18_163756) do
     t.string "preferred_language", default: "tr"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "password_changed_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.datetime "password_changed_at", default: -> { "now()" }, null: false
     t.integer "articles_count"
     t.integer "projects_count"
     t.string "slug"
@@ -546,6 +559,9 @@ ActiveRecord::Schema.define(version: 2018_09_18_163756) do
   add_foreign_key "positions", "administrative_functions"
   add_foreign_key "positions", "duties"
   add_foreign_key "projects", "users"
+  add_foreign_key "registration_documents", "academic_terms"
+  add_foreign_key "registration_documents", "documents"
+  add_foreign_key "registration_documents", "units"
   add_foreign_key "students", "units"
   add_foreign_key "students", "users"
   add_foreign_key "unit_calendar_events", "academic_calendars"

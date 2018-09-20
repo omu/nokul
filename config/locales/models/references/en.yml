@@ -40,9 +40,19 @@ en:
       unit_type: &unit_type_attributes
         name: Unit Type
         code: Code
+        group: Group
       university_type: &university_type_attributes
         name: University Type
         code: Code
+    enums:
+      unit_type:
+        groups:
+          other: Other
+          university: University
+          faculty: Faculty
+          department: Department
+          program: Program
+          committee: Committee
   helpers:
     submit:
       student_disability_type:
