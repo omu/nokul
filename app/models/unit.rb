@@ -3,11 +3,16 @@
 class Unit < ApplicationRecord
   # search
   include PgSearch
+  include DynamicSearch
+
   pg_search_scope(
     :search,
     against: %i[name yoksis_id],
     using: { tsearch: { prefix: true } }
   )
+
+  # dynamic_search
+  search_keys :duration, :unit_status_id, :unit_instruction_type_id, :unit_instruction_language_id
 
   # relations
   has_ancestry
@@ -36,10 +41,11 @@ class Unit < ApplicationRecord
   # callbacks
   before_save { self.name = name.capitalize_all }
 
-  # dynamic search scopes
-  scope :duration, ->(time) { where(duration: time) }
-  scope :unit_status_id, ->(id) { where(unit_status_id: id) }
-  scope :unit_instruction_type_id, ->(id) { where(unit_instruction_type_id: id) }
-  scope :unit_instruction_language_id, ->(id) { where(unit_instruction_language_id: id) }
-  scope :committees, -> { where(unit_type: UnitType.find_by(code: 200)) }
+  # scopes
+  scope :active,       -> { where(unit_status: UnitStatus.active) }
+  scope :committees,   -> { where(unit_type: UnitType.committee) }
+  scope :departments,  -> { where(unit_type: UnitType.department) }
+  scope :faculties,    -> { where(unit_type: UnitType.faculty) }
+  scope :programs,     -> { where(unit_type: UnitType.program) }
+  scope :universities, -> { where(unit_type: UnitType.university) }
 end

@@ -7,7 +7,7 @@ module References
     private
 
     def secure_params
-      params.require(:unit_type).permit(:name, :code)
+      params.require(:unit_type).permit(:name, :code, :group)
     end
   end
 end
