@@ -40,8 +40,10 @@ class Unit < ApplicationRecord
   before_save { self.name = name.capitalize_all }
 
   # scopes
-  scope :active,      -> { where(unit_status: UnitStatus.active) }
-  scope :committees,  -> { where(unit_type: UnitType.committee) }
-  scope :programs,    -> { where(unit_type: UnitType.program) }
-  scope :departments, -> { where(unit_type: UnitType.department) }
+  scope :active,       -> { where(unit_status: UnitStatus.active) }
+  scope :committees,   -> { where(unit_type: UnitType.committee) }
+  scope :departments,  -> { where(unit_type: UnitType.department) }
+  scope :faculties,    -> { where(unit_type: UnitType.faculty) }
+  scope :programs,     -> { where(unit_type: UnitType.program) }
+  scope :universities, -> { where(unit_type: UnitType.university) }
 end
