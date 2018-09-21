@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-module Curriculums
+module CourseManagement
   class CurriculumsControllerTest < ActionDispatch::IntegrationTest
     setup do
       sign_in users(:serhat)
