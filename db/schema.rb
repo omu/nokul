@@ -193,6 +193,23 @@ ActiveRecord::Schema.define(version: 2018_09_20_223813) do
     t.integer "yoksis_code"
   end
 
+  create_table "course_group_types", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "course_unit_groups", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "total_ects_condition", null: false
+    t.bigint "unit_id"
+    t.bigint "course_group_type_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_group_type_id"], name: "index_course_unit_groups_on_course_group_type_id"
+    t.index ["unit_id"], name: "index_course_unit_groups_on_unit_id"
+  end
+
   create_table "courses", force: :cascade do |t|
     t.string "name", null: false
     t.string "code", null: false
@@ -262,6 +279,15 @@ ActiveRecord::Schema.define(version: 2018_09_20_223813) do
   create_table "high_school_types", force: :cascade do |t|
     t.string "name", null: false
     t.integer "code", null: false
+  end
+
+  create_table "group_courses", force: :cascade do |t|
+    t.bigint "course_id"
+    t.bigint "course_unit_group_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_group_courses_on_course_id"
+    t.index ["course_unit_group_id"], name: "index_group_courses_on_course_unit_group_id"
   end
 
   create_table "identities", force: :cascade do |t|
@@ -551,12 +577,16 @@ ActiveRecord::Schema.define(version: 2018_09_20_223813) do
   add_foreign_key "calendar_title_types", "calendar_types", column: "type_id"
   add_foreign_key "certifications", "users"
   add_foreign_key "cities", "countries"
+  add_foreign_key "course_unit_groups", "course_group_types"
+  add_foreign_key "course_unit_groups", "units"
   add_foreign_key "courses", "units"
   add_foreign_key "districts", "cities"
   add_foreign_key "duties", "employees"
   add_foreign_key "duties", "units"
   add_foreign_key "employees", "titles"
   add_foreign_key "employees", "users"
+  add_foreign_key "group_courses", "course_unit_groups"
+  add_foreign_key "group_courses", "courses"
   add_foreign_key "identities", "students"
   add_foreign_key "identities", "users"
   add_foreign_key "positions", "administrative_functions"

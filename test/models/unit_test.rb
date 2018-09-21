@@ -16,6 +16,7 @@ class UnitTest < ActiveSupport::TestCase
     students
     positions
     administrative_functions
+    courses
   ].each do |property|
     test "a unit can communicate with #{property}" do
       assert units(:omu).send(property)
@@ -74,7 +75,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'committees scope returns committees type units' do
-    assert_includes Unit.committees, units(:mühendislik_fakültesi_yönetim_kurulu)
+    assert_includes Unit.committees, units(:muhendislik_fakultesi_yonetim_kurulu)
     assert_not_includes Unit.committees, units(:omu)
   end
 

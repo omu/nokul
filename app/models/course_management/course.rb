@@ -41,4 +41,8 @@ class Course < ApplicationRecord
   def calculate_credit
     theoric.to_f + (practice.to_f / 2)
   end
+
+  def name_with_code
+    "#{code} - #{name}"
+  end
 end

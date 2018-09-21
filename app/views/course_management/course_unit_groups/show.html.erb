@@ -1,0 +1,48 @@
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class='alert alert-light'>
+      <%= link_to_back course_unit_groups_path %>
+    </div>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'calendar', text: @course_unit_group.name %>
+      </div>
+      <div class='card-body'>
+        <table class='table table-responsive-sm table-striped'>
+          <thead>
+            <tr>
+              <th><%= t('.name') %></th>
+              <th><%= t('.total_ects_condition') %></th>
+              <th><%= t('.unit') %></th>
+              <th><%= t('.course_group_type') %></th>
+              <th><%= t('created_at') %></th>
+              <th><%= t('actions') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><%= @course_unit_group.name %></td>
+              <td><%= @course_unit_group.total_ects_condition %></td>
+              <td><%= @course_unit_group.unit.name %></td>
+              <td><%= @course_unit_group.course_group_type.try(:name) %></td>
+              <td><%= @course_unit_group.created_at.to_date %></td>
+              <td><%= link_to_edit edit_course_unit_group_path(@course_unit_group) %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class='card-header'>
+        <%= fa_icon 'book', text: t('.courses') %>
+      </div>
+      <div class='card-body'>
+        <table class='table table-responsive-sm table-striped'>
+          <% @courses.each do |course| %>
+            <tr>
+              <td><%= course.name %></td>
+            </tr>
+          <% end %>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
