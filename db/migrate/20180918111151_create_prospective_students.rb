@@ -12,10 +12,10 @@ class CreateProspectiveStudents < ActiveRecord::Migration[5.2]
       t.string :place_of_birth
       t.string :registration_city
       t.string :registration_district
-      t.string :school_code
-      t.string :school_type
-      t.string :school_branch
-      t.integer :type_of_education
+      t.string :high_school_code
+      t.references :high_school_type
+      t.string :high_school_branch
+      t.integer :state_of_education
       t.integer :high_school_graduation_year
       t.integer :placement_type
       t.float :exam_score

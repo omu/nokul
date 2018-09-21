@@ -13,10 +13,10 @@ tr:
         place_of_birth: Doğum Yeri
         registration_city: Nüfusa Kayıtlı Olduğu İl
         registration_district: Nüfusa Kayıtlı Olduğu İlçe
-        school_code: Okul Kodu
-        school_type: Okul Türü
-        school_branch: Okul Dalı
-        type_of_education: Eğitim Türü
+        high_school_code: Lise Kodu
+        high_school_type: Lise Türü
+        high_school_branch: Lise Dalı
+        state_of_education: Öğrenim Durumu
         high_school_graduation_year: Lise Mezuniyet Yılı
         placement_type: Yerleşme Türü
         exam_score: Sınav Puanı
@@ -34,11 +34,11 @@ tr:
         placement_score_type: Yerleşme Puan Türü
         additional_score: Ek Puan
         meb_status: Lise Mezuniyet Durumu
-        meb_status_date: Lise Mezuniyet Tarihi
+        meb_status_date: Lise Mezuniyet Kontrol Tarihi
         military_status: Askerlik Durumu
-        military_status_date: Askerlik Durum Tarihi
+        military_status_date: Askerlik Durum Kontrol Tarihi
         obs_status: Öğrencilik Durumu
-        obs_status_date: Öğrencilik Durum Tarihi
+        obs_status_date: Öğrencilik Durum Kontrol Tarihi
         obs_registered_program: Öğrenci Olarak Kayıtlı Olduğu Program
         graduated: Mezun
         not_graduated_or_unknown: Mezun Değil/Bilinmiyor
@@ -67,6 +67,8 @@ tr:
       show:
         <<: *prospective_student_attributes
         prospective_student: Aday Öğrenci
+        identity_information: Kimlik Bilgileri
+        other_information: Diğer Bilgileri
       index:
         <<: *prospective_student_attributes
         prospective_students: Aday Öğrenciler
