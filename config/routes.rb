@@ -36,11 +36,27 @@ Rails.application.routes.draw do
   end
 
   resources :languages
-  resources :units
+
+  resources :units do
+    member do
+      get :courses, defaults: { format: :json }
+    end
+  end
+
   resources :documents
+
+  resources :units do
+    resources :registration_documents
+  end
 
   scope module: :course_management do
     resources :courses
+    resources :course_unit_groups
+    resources :course_group_types, except: :show
+  end
+
+  scope module: :student_management do
+    resources :prospective_students
   end
 
   scope module: :locations do

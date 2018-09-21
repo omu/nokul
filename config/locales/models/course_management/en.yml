@@ -12,8 +12,19 @@ en:
         status: Status
         theoric: Theoric
         unit: Unit
+      course_unit_group: &course_unit_group_attributes
+        name: Course Group Name
+        total_ects_condition: Total ECTS Condition
+        unit: Unit
+        course_group_type: Course Group Type
+        courses: Courses
+        search_placeholder: Course Group Name / Unit Name / Course Group Type Name
+      course_group_type: &course_group_type_attributes
+        name: Course Group Type Name
     models:
       course: Course
+      course_unit_group: Course Group
+      course_group_type: Course Group Type
     enums:
       course:
         program_types:
@@ -46,6 +57,44 @@ en:
         <<: *course_attributes
         add_new_course: Add a New Course
         courses: Courses
+    course_unit_groups:
+      new:
+        form_title: Course Group successfully created.
+      show:
+        name: Course Unit Group Name
+        total_ects_condition: Total ECTS Condition
+        unit: Unit
+        course_group_type: Course Group Type
+        courses: Courses
+      edit:
+        form_title: Course Group successfully updated.
+      create:
+        success: Course group created.
+      destroy:
+        success: Course group successfully destroyed.
+        error: An error occured when deleting the course group.
+      update:
+        success: Course group successfully updated.
+      index:
+        <<: *course_unit_group_attributes
+        new_course_unit_group_link: Add a New Course Group
+        card_header: Course Groups
+    course_group_types:
+      new:
+        form_title: Course Group Type successfully created.
+      edit:
+        form_title: Course Group Type successfully updated.
+      create:
+        success: Course group type created.
+      destroy:
+        success: Course group type successfully destroyed.
+        error: An error occured when deleting the course group type.
+      update:
+        success: Course group type successfully updated.
+      index:
+        <<: *course_group_type_attributes
+        new_course_group_type_link: Add a New Course Group Type
+        card_header: Course Group Types
   simple_form:
     labels:
       course:

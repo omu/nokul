@@ -1,3836 +1,3195 @@
-15086663:
-  parent_yoksis_id: 174829
-  detsis_id: 15086663
-  name: ADALET MESLEK YÜKSEKOKULU MÜDÜRLÜĞÜ
-  district_id: 756
-  unit_status_id: 2
-10190983:
-  parent_yoksis_id: 174829
-  detsis_id: 10190983
-  name: ADALET HUKUK BÖLÜM BAŞKANLIĞI
-  district_id: 756
-  unit_status_id: 2
-26903244:
-  parent_yoksis_id: 174829
-  detsis_id: 26903244
-  name: ADALET MESLEK YÜKSEKOKULU SEKRETERLİĞİ
-  district_id: 756
-  unit_status_id: 2
-70808284:
-  parent_detsis_id: 15086663
-  detsis_id: 70808284
-  name: ADALET MESLEK YÜKSEKOKULU DİSİPLİN KURULU
-  district_id: 756
-  unit_status_id: 2
-25420189:
-  parent_detsis_id: 15086663
-  detsis_id: 25420189
-  name: ADALET MESLEK YÜKSEKOKULU KURULU
-  district_id: 756
-  unit_status_id: 2
-37724678:
-  parent_detsis_id: 15086663
-  detsis_id: 37724678
-  name: ADALET MESLEK YÜKSEKOKULU YÖNETİM KURULU
-  district_id: 756
-  unit_status_id: 2
-68459231:
-  parent_yoksis_id: 147730
+-
+  name: Alaçam Meslek Yüksekokulu Müdürlüğü
   detsis_id: 68459231
-  name: ALAÇAM MESLEK YÜKSEKOKULU MÜDÜRLÜĞÜ
-  district_id: 754
-  unit_status_id: 2
-84354183:
-  parent_yoksis_id: 242252
+  parent_yoksis_id: 147730
+  district_id: Alaçam
+-
+  name: Büro Hizmetleri Ve Sekreterlik Bölüm Başkanlığı
   detsis_id: 84354183
-  name: BÜRO HİZMETLERİ VE SEKRETERLİK BÖLÜM BAŞKANLIĞI
-  district_id: 754
-  unit_status_id: 2
-80234327:
-  parent_detsis_id: 68459231
+  parent_yoksis_id: 242252
+  district_id: Alaçam
+-
+  name: Alaçam Meslek Yüksekokulu Sekreterliği
   detsis_id: 80234327
-  name: ALAÇAM MESLEK YÜKSEKOKULU SEKRETERLİĞİ
-  district_id: 754
-  unit_status_id: 2
-72286599:
-  parent_yoksis_id: 205956
+  parent_yoksis_id: 68459231
+  district_id: Alaçam
+-
+  name: Ulaştırma Hizmetleri Bölüm Başkanlığı
   detsis_id: 72286599
-  name: ULAŞTIRMA HİZMETLERİ BÖLÜM BAŞKANLIĞI
-  district_id: 754
-  unit_status_id: 2
-37588931:
-  parent_yoksis_id: 153820
+  parent_yoksis_id: 205956
+  district_id: Alaçam
+-
+  name: Yönetim Ve Organizasyon Bölüm Başkanlığı
   detsis_id: 37588931
-  name: YÖNETİM VE ORGANİZASYON BÖLÜM BAŞKANLIĞI
-  district_id: 754
-  unit_status_id: 2
-67787986:
-  parent_detsis_id: 68459231
+  parent_yoksis_id: 153820
+  district_id: Alaçam
+-
+  name: Alaçam Meslek Yüksekokulu Disiplin Kurulu
   detsis_id: 67787986
-  name: ALAÇAM MESLEK YÜKSEKOKULU DİSİPLİN KURULU
-  district_id: 754
-  unit_status_id: 2
-63300708:
-  parent_detsis_id: 68459231
+  parent_yoksis_id: 68459231
+  district_id: Alaçam
+-
+  name: Alaçam Meslek Yüksekokulu Kurulu
   detsis_id: 63300708
-  name: ALAÇAM MESLEK YÜKSEKOKULU KURULU
-  district_id: 754
-  unit_status_id: 2
-49709020:
-  parent_detsis_id: 68459231
+  parent_yoksis_id: 68459231
+  district_id: Alaçam
+-
+  name: Alaçam Meslek Yüksekokulu Yönetim Kurulu
   detsis_id: 49709020
-  name: ALAÇAM MESLEK YÜKSEKOKULU YÖNETİM KURULU
-  district_id: 754
-  unit_status_id: 2
-80803429:
-  parent_yoksis_id: 128074
-  detsis_id: 80803429
-  name: ALİ FUAD BAŞGİL HUKUK FAKÜLTESİ DEKANLIĞI
-  district_id: 756
-  unit_status_id: 2
-47375421:
-  parent_detsis_id: 80803429
-  detsis_id: 47375421
-  name: ALİ FUAT BAŞGİL HUKUK FAKÜLTESİ SEKRETERLİĞİ
-  district_id: 756
-  unit_status_id: 2
-32538491:
-  parent_yoksis_id: 140231
-  detsis_id: 32538491
-  name: KAMU HUKUKU BÖLÜM BAŞKANLIĞI
-  district_id: 756
-  unit_status_id: 2
-16375723:
-  parent_yoksis_id: 140251
-  detsis_id: 16375723
-  name: ANAYASA HUKUKU ANABİLİM DALI BAŞKANLIĞI
-  district_id: 756
-  unit_status_id: 2
-33708429:
-  parent_yoksis_id: 140275
-  detsis_id: 33708429
-  name: CEZA VE CEZA MUHAKEMESİ HUKUKU ANABİLİM DALI BAŞKANLIĞI
-  district_id: 756
-  unit_status_id: 2
-66159227:
-  parent_yoksis_id: 140232
-  detsis_id: 66159227
-  name: GENEL KAMU HUKUKU ANABİLİM DALI BAŞKANLIĞI
-  district_id: 756
-  unit_status_id: 2
-81394423:
-  parent_yoksis_id: 140272
-  detsis_id: 81394423
-  name: HUKUK FELSEFESİ VE SOSYOLOJİSİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 756
-  unit_status_id: 2
-28884811:
-  parent_yoksis_id: 140234
-  detsis_id: 28884811
-  name: İDARE HUKUKU ANABİLİM DALI BAŞKANLIĞI
-  district_id: 756
-  unit_status_id: 2
-92359565:
-  parent_yoksis_id: 159917
-  detsis_id: 92359565
-  name: MALİ HUKUK ANABİLİM DALI BAŞKANLIĞI
-  district_id: 756
-  unit_status_id: 2
-13929285:
-  parent_yoksis_id: 159920
-  detsis_id: 13929285
-  name: MİLLETLERARASI HUKUK ANABİLİM DALI BAŞKANLIĞI
-  district_id: 756
-  unit_status_id: 2
-78415181:
-  parent_yoksis_id: 140235
-  detsis_id: 78415181
-  name: ÖZEL HUKUK BÖLÜM BAŞKANLIĞI
-  district_id: 756
-  unit_status_id: 2
-77357407:
-  parent_yoksis_id: 140270
-  detsis_id: 77357407
-  name: İŞ VE SOSYAL GÜVENLİK HUKUKU ANABİLİM DALI BAŞKANLIĞI
-  district_id: 756
-  unit_status_id: 2
-26684789:
-  parent_yoksis_id: 140236
-  detsis_id: 26684789
-  name: MEDENİ HUKUK ANABİLİM DALI BAŞKANLIĞI
-  district_id: 756
-  unit_status_id: 2
-47872027:
-  parent_yoksis_id: 140269
-  detsis_id: 47872027
-  name: MEDENİ USUL VE İCRA İFLAS HUKUKU ANABİLİM DALI BAŞKANLIĞI
-  district_id: 756
-  unit_status_id: 2
-67662873:
-  parent_yoksis_id: 140237
-  detsis_id: 67662873
-  name: TİCARET HUKUKU ANABİLİM DALI BAŞKANLIĞI
-  district_id: 756
-  unit_status_id: 2
-89389677:
-  parent_detsis_id: 80803429
-  detsis_id: 89389677
-  name: ALİ FUAT BAŞGİL HUKUK FAKÜLTESİ DİSİPLİN KURULU
-  district_id: 756
-  unit_status_id: 2
-50698085:
-  parent_detsis_id: 80803429
-  detsis_id: 50698085
-  name: ALİ FUAT BAŞGİL HUKUK FAKÜLTESİ KURULU
-  district_id: 756
-  unit_status_id: 2
-36961307:
-  parent_detsis_id: 80803429
-  detsis_id: 36961307
-  name: ALİ FUAT BAŞGİL HUKUK FAKÜLTESİ YÖNETİM KURULU
-  district_id: 756
-  unit_status_id: 2
-50057338:
-  parent_yoksis_id: 122390
-  detsis_id: 50057338
-  name: ATATÜRK İLKELERİ VE İNKILAP TARİHİ ARAŞTIRMA VE UYGULAMA MERKEZİ MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-43125506:
-  parent_yoksis_id: 169437
-  detsis_id: 43125506
-  name: ATATÜRK İLKELERİ VE İNKILAP TARİHİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-50713553:
-  parent_yoksis_id: 122355
+  parent_yoksis_id: 68459231
+  district_id: Alaçam
+-
+  name: Bafra Meslek Yüksekokulu Müdürlüğü
   detsis_id: 50713553
-  name: BAFRA MESLEK YÜKSEKOKULU MÜDÜRLÜĞÜ
-  district_id: 755
-  unit_status_id: 2
-85835274:
-  parent_yoksis_id: 169441
+  parent_yoksis_id: 122355
+  district_id: Bafra
+-
+  name: Bilgisayar Teknolojileri Bölüm Başkanlığı
   detsis_id: 85835274
-  name: BİLGİSAYAR TEKNOLOJİLERİ BÖLÜM BAŞKANLIĞI
-  district_id: 755
-  unit_status_id: 2
-63395826:
-  parent_detsis_id: 50713553
+  parent_yoksis_id: 169441
+  district_id: Bafra
+-
+  name: Bafra Meslek Yüksekokulu Sekreterliği
   detsis_id: 63395826
-  name: BAFRA MESLEK YÜKSEKOKULU SEKRETERLİĞİ
-  district_id: 755
-  unit_status_id: 2
-52857079:
-  parent_yoksis_id: 169471
+  parent_yoksis_id: 50713553
+  district_id: Bafra
+-
+  name: Muhasebe Ve Vergi Bölüm Başkanlığı
   detsis_id: 52857079
-  name: MUHASEBE VE VERGİ BÖLÜM BAŞKANLIĞI
-  district_id: 755
-  unit_status_id: 2
-91891436:
-  parent_yoksis_id: 282779
+  parent_yoksis_id: 169471
+  district_id: Bafra
+-
+  name: Mülkiyet Koruma Ve Güvenlik Bölüm Başkanlığı
   detsis_id: 91891436
-  name: MÜLKİYET KORUMA VE GÜVENLİK BÖLÜM BAŞKANLIĞI
-  district_id: 755
-  unit_status_id: 2
-65871243:
-  parent_detsis_id: 50713553
+  parent_yoksis_id: 282779
+  district_id: Bafra
+-
+  name: Bafra Meslek Yüksekokulu Disiplin Kurulu
   detsis_id: 65871243
-  name: BAFRA MESLEK YÜKSEKOKULU DİSİPLİN KURULU
-  district_id: 755
-  unit_status_id: 2
-14895932:
-  parent_detsis_id: 50713553
+  parent_yoksis_id: 50713553
+  district_id: Bafra
+-
+  name: Bafra Meslek Yüksekokulu Kurulu
   detsis_id: 14895932
-  name: BAFRA MESLEK YÜKSEKOKULU KURULU
-  district_id: 755
-  unit_status_id: 2
-58151099:
-  parent_detsis_id: 50713553
+  parent_yoksis_id: 50713553
+  district_id: Bafra
+-
+  name: Bafra Meslek Yüksekokulu Yönetim Kurulu
   detsis_id: 58151099
-  name: BAFRA MESLEK YÜKSEKOKULU YÖNETİM KURULU
-  district_id: 755
-  unit_status_id: 2
-27516806:
-  parent_yoksis_id: 265280
+  parent_yoksis_id: 50713553
+  district_id: Bafra
+-
+  name: Bafra Turizm Meslek Yüksekokulu Müdürlüğü
   detsis_id: 27516806
-  name: BAFRA TURİZM MESLEK YÜKSEKOKULU MÜDÜRLÜĞÜ
-  district_id: 755
-  unit_status_id: 2
-94861059:
-  parent_detsis_id: 27516806
+  parent_yoksis_id: 265280
+  district_id: Bafra
+-
+  name: Bafra Turizm Meslek Yüksekokulu Sekreterliği
   detsis_id: 94861059
-  name: BAFRA TURİZM MESLEK YÜKSEKOKULU SEKRETERLİĞİ
-  district_id: 755
-  unit_status_id: 2
-93129860:
-  parent_yoksis_id: 279026
+  parent_yoksis_id: 27516806
+  district_id: Bafra
+-
+  name: Otel, Lokanta Ve İkram Hizmetleri Bölüm Başkanlığı
   detsis_id: 93129860
-  name: OTEL, LOKANTA VE İKRAM HİZMETLERİ BÖLÜM BAŞKANLIĞI
-  district_id: 755
-  unit_status_id: 2
-92124673:
-  parent_yoksis_id: 279024
+  parent_yoksis_id: 279026
+  district_id: Bafra
+-
+  name: Seyahat-Turizm Ve Eğlence Hizmetleri Bölüm Başkanlığı
   detsis_id: 92124673
-  name: SEYAHAT-TURİZM VE EĞLENCE HİZMETLERİ BÖLÜM BAŞKANLIĞI
-  district_id: 755
-  unit_status_id: 2
-54165989:
-  parent_yoksis_id: 122287
-  detsis_id: 54165989
-  name: BİLGİ İŞLEM DAİRE BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-38418139:
-  parent_yoksis_id: 327269
-  detsis_id: 38418139
-  name: BİLGİSAYAR ARAŞTIRMALARI UYGULAMA VE ARAŞTIRMA MERKEZİ MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-35354231:
-  parent_detsis_id: 38418139
-  detsis_id: 35354231
-  name: YAZILIM TALEPLERİ DEĞERLENDİRME KOMİSYONU
-  district_id: 769
-  unit_status_id: 2
-65401134:
-  parent_yoksis_id: 169418
-  detsis_id: 65401134
-  name: BÖLGESEL KALKINMA VE STRATEJİK ARAŞTIRMALAR UYGULAMA VE ARAŞTIRMA MERKEZİ
-    MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-93417155:
-  parent_yoksis_id: 293682
-  detsis_id: 93417155
-  name: ÇARŞAMBA İNSAN VE TOPLUM BİLİMLERİ FAKÜLTESİ DEKANLIĞI
-  district_id: 756
-  unit_status_id: 2
-19904871:
-  parent_detsis_id: 93417155
-  detsis_id: 19904871
-  name: ÇARŞAMBA İNSAN VE TOPLUM BİLİMLERİ FAKÜLTE SEKRETERLİĞİ
-  district_id: 756
-  unit_status_id: 2
-71370999:
-  parent_detsis_id: 93417155
-  detsis_id: 71370999
-  name: ÇARŞAMBA İNSAN VE TOPLUM BİLİMLERİ FAKÜLTE DİSİPLİN KURULU
-  district_id: 756
-  unit_status_id: 2
-90739052:
-  parent_detsis_id: 93417155
-  detsis_id: 90739052
-  name: ÇARŞAMBA İNSAN VE TOPLUM BİLİMLERİ FAKÜLTE KURULU
-  district_id: 756
-  unit_status_id: 2
-19171612:
-  parent_detsis_id: 93417155
-  detsis_id: 19171612
-  name: ÇARŞAMBA İNSAN VE TOPLUM BİLİMLERİ FAKÜLTE YÖNETİM KURULU
-  district_id: 756
-  unit_status_id: 2
-21071378:
-  parent_yoksis_id: 169488
-  detsis_id: 21071378
-  name: ÇARŞAMBA TİCARET BORSASI MESLEK YÜKSEKOKULU MÜDÜRLÜĞÜ
-  district_id: 756
-  unit_status_id: 2
-42092164:
-  parent_yoksis_id: 229374
-  detsis_id: 42092164
-  name: BİLGİSAYAR TEKNOLOJİLERİ BÖLÜM BAŞKANLIĞI
-  district_id: 756
-  unit_status_id: 2
-22978309:
-  parent_yoksis_id: 237237
-  detsis_id: 22978309
-  name: BÜRO HİZMETLERİ VE SEKRETERLİK BÖLÜM BAŞKANLIĞI
-  district_id: 756
-  unit_status_id: 2
-75851438:
-  parent_yoksis_id: 229371
-  detsis_id: 75851438
-  name: FİNANS-BANKACILIK VE SİGORTACILIK BÖLÜM BAŞKANLIĞI
-  district_id: 756
-  unit_status_id: 2
-80462939:
-  parent_yoksis_id: 257433
-  detsis_id: 80462939
-  name: HUKUK BÖLÜM BAŞKANLIĞI
-  district_id: 756
-  unit_status_id: 2
-87953753:
-  parent_detsis_id: 21071378
-  detsis_id: 87953753
-  name: ÇARŞAMBA TİCARET BORSASI MESLEK YÜKSEKOKULU SEKRETERLİĞİ
-  district_id: 756
-  unit_status_id: 2
-84899036:
-  parent_yoksis_id: 229377
-  detsis_id: 84899036
-  name: MUHASEBE VE VERGİ BÖLÜM BAŞKANLIĞI
-  district_id: 756
-  unit_status_id: 2
-73516775:
-  parent_yoksis_id: 284505
-  detsis_id: 73516775
-  name: MÜLKİYET KORUMA VE GÜVENLİK BÖLÜM BAŞKANLIĞI
-  district_id: 756
-  unit_status_id: 2
-35949938:
-  parent_detsis_id: 21071378
-  detsis_id: 35949938
-  name: ÇARŞAMBA TİCARET BORSASI MESLEK YÜKSEKOKULU DİSİPLİN KURULU
-  district_id: 756
-  unit_status_id: 2
-65993268:
-  parent_detsis_id: 21071378
-  detsis_id: 65993268
-  name: ÇARŞAMBA TİCARET BORSASI MESLEK YÜKSEKOKULU KURULU
-  district_id: 756
-  unit_status_id: 2
-32165550:
-  parent_detsis_id: 21071378
-  detsis_id: 32165550
-  name: ÇARŞAMBA TİCARET BORSASI MESLEK YÜKSEKOKULU YÖNETİM KURULU
-  district_id: 756
-  unit_status_id: 2
-37181009:
-  parent_yoksis_id: 122392
-  detsis_id: 37181009
-  name: ÇEVRE SORUNLARI ARAŞTIRMA VE UYGULAMA MERKEZİ MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-87320973:
-  parent_yoksis_id: 205247
-  detsis_id: 87320973
-  name: ÇOCUK EĞİTİMİ UYGULAMA VE ARAŞTIRMA MERKEZİ MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-62228674:
-  parent_yoksis_id: 214121
-  detsis_id: 62228674
-  name: DENEY HAYVANLARI UYGULAMA VE ARAŞTIRMA MERKEZİ MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-95441125:
-  parent_yoksis_id: 122303
-  detsis_id: 95441125
-  name: DEVLET KONSERVATUVARI MÜDÜRLÜĞÜ
-  district_id: 771
-  unit_status_id: 2
-52718513:
-  parent_detsis_id: 95441125
-  detsis_id: 52718513
-  name: DEVLET KONSERVATUVARI SEKRETERLİĞİ
-  district_id: 771
-  unit_status_id: 2
-55870850:
-  parent_yoksis_id: 122304
-  detsis_id: 55870850
-  name: MÜZİK BÖLÜM BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-40140864:
-  parent_yoksis_id: 254783
-  detsis_id: 40140864
-  name: GELENEKSEL TÜRK MÜZİKLERİ ANASANAT DALI BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-22937161:
-  parent_yoksis_id: 122309
-  detsis_id: 22937161
-  name: MÜZİKOLOJİ BÖLÜM BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-50929935:
-  parent_yoksis_id: 122313
-  detsis_id: 50929935
-  name: SAHNE SANATLARI BÖLÜM BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-45458912:
-  parent_yoksis_id: 121996
-  detsis_id: 45458912
-  name: DİŞ HEKİMLİĞİ FAKÜLTESİ DEKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-99439659:
-  parent_detsis_id: 45458912
-  detsis_id: 99439659
-  name: AĞIZ VE DİŞ SAĞLIĞI EĞİTİM VE ARAŞTIRMA HASTANESİ BAŞHEKİMLİĞİ
-  district_id: 769
-  unit_status_id: 2
-60761909:
-  parent_detsis_id: 45458912
-  detsis_id: 60761909
-  name: DİŞ HEKİMLİĞİ FAKÜLTESİ SEKRETERLİĞİ
-  district_id: 769
-  unit_status_id: 2
-38581703:
-  parent_yoksis_id: 121997
-  detsis_id: 38581703
-  name: KLİNİK BİLİMLER BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-54725013:
-  parent_yoksis_id: 121998
-  detsis_id: 54725013
-  name: AĞIZ, DİŞ VE ÇENE CERRAHİSİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-69004845:
-  parent_yoksis_id: 208207
-  detsis_id: 69004845
-  name: ENDODONTİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-77151331:
-  parent_yoksis_id: 122003
-  detsis_id: 77151331
-  name: PEDODONTİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-28469072:
-  parent_yoksis_id: 122001
-  detsis_id: 28469072
-  name: PERİODONTOLOJİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-69811069:
-  parent_yoksis_id: 122002
-  detsis_id: 69811069
-  name: PROTETİK DİŞ TEDAVİSİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-88995615:
-  parent_yoksis_id: 176332
-  detsis_id: 88995615
-  name: RESTORATİF DİŞ TEDAVİSİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-64223946:
-  parent_detsis_id: 45458912
-  detsis_id: 64223946
-  name: DİŞ HEKİMLİĞİ FAKÜLTE DİSİPLİN KURULU
-  district_id: 769
-  unit_status_id: 2
-76916655:
-  parent_detsis_id: 45458912
-  detsis_id: 76916655
-  name: DİŞ HEKİMLİĞİ FAKÜLTE KURULU
-  district_id: 769
-  unit_status_id: 2
-5618961:
-  parent_detsis_id: 45458912
-  detsis_id: 5618961
-  name: DİŞ HEKİMLİĞİ FAKÜLTE YÖNETİM KURULU
-  district_id: 769
-  unit_status_id: 2
-42301062:
-  parent_yoksis_id: 174846
-  detsis_id: 42301062
-  name: EĞİTİM BİLİMLERİ ENSTİTÜSÜ MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-27148102:
-  parent_detsis_id: 42301062
-  detsis_id: 27148102
-  name: EĞİTİM BİLİMLERİ ENSTİTÜ SEKRETERLİĞİ
-  district_id: 769
-  unit_status_id: 2
-60162193:
-  parent_detsis_id: 42301062
-  detsis_id: 60162193
-  name: EĞİTİM BİLİMLERİ ENSTİTÜ DİSİPLİN KURULU
-  district_id: 769
-  unit_status_id: 2
-39971369:
-  parent_detsis_id: 42301062
-  detsis_id: 39971369
-  name: EĞİTİM BİLİMLERİ ENSTİTÜ KURULU
-  district_id: 769
-  unit_status_id: 2
-90709856:
-  parent_detsis_id: 42301062
-  detsis_id: 90709856
-  name: EĞİTİM BİLİMLERİ ENSTİTÜ YÖNETİM KURULU
-  district_id: 769
-  unit_status_id: 2
-98725097:
-  parent_yoksis_id: 122082
-  detsis_id: 98725097
-  name: EĞİTİM FAKÜLTESİ DEKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-34359275:
-  parent_yoksis_id: 122154
-  detsis_id: 34359275
-  name: BİLGİSAYAR VE ÖĞRETİM TEKNOLOJİLERİ EĞİTİMİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-20582185:
-  parent_yoksis_id: 122155
-  detsis_id: 20582185
-  name: BİLGİSAYAR VE ÖĞRETİM TEKNOLOJİLERİ EĞİTİMİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-53279789:
-  parent_yoksis_id: 122083
-  detsis_id: 53279789
-  name: EĞİTİM BİLİMLERİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-47824572:
-  parent_yoksis_id: 122085
-  detsis_id: 47824572
-  name: EĞİTİM PROGRAMLARI VE ÖĞRETİM ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-56043766:
-  parent_yoksis_id: 122086
-  detsis_id: 56043766
-  name: EĞİTİM YÖNETİMİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-54052542:
-  parent_yoksis_id: 122084
-  detsis_id: 54052542
-  name: EĞİTİMDE ÖLÇME VE DEĞERLENDİRME ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-14662647:
-  parent_yoksis_id: 314245
-  detsis_id: 14662647
-  name: EĞİTİMİN FELSEFİ, SOSYAL VE TARİHİ TEMELLERİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-60653398:
-  parent_yoksis_id: 122087
-  detsis_id: 60653398
-  name: REHBERLİK VE PSİKOLOJİK DANIŞMANLIK ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-97972159:
-  parent_detsis_id: 98725097
-  detsis_id: 97972159
-  name: EĞİTİM FAKÜLTESİ SEKRETERLİĞİ
-  district_id: 769
-  unit_status_id: 2
-78339419:
-  parent_yoksis_id: 122097
-  detsis_id: 78339419
-  name: GÜZEL SANATLAR EĞİTİMİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-27162665:
-  parent_yoksis_id: 122098
-  detsis_id: 27162665
-  name: RESİM İŞ EĞİTİMİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-5147921:
-  parent_yoksis_id: 298694
-  detsis_id: 5147921
-  name: MATEMATİK VE FEN BİLİMLERİ EĞİTİMİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-97162243:
-  parent_yoksis_id: 122107
-  detsis_id: 97162243
-  name: BİYOLOJİ EĞİTİMİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-84084405:
-  parent_yoksis_id: 122101
-  detsis_id: 84084405
-  name: FEN BİLGİSİ EĞİTİMİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-19744892:
-  parent_yoksis_id: 122108
-  detsis_id: 19744892
-  name: FİZİK EĞİTİMİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-81130866:
-  parent_yoksis_id: 122109
-  detsis_id: 81130866
-  name: KİMYA EĞİTİMİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-1946687:
-  parent_yoksis_id: 122110
-  detsis_id: 1946687
-  name: MATEMATİK EĞİTİMİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-81004858:
-  parent_yoksis_id: 122092
-  detsis_id: 81004858
-  name: ÖZEL EĞİTİM BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-88219318:
-  parent_yoksis_id: 122093
-  detsis_id: 88219318
-  name: İŞİTME ENGELLİLER EĞİTİMİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-64658489:
-  parent_yoksis_id: 122094
-  detsis_id: 64658489
-  name: ZİHİN ENGELLİLER EĞİTİMİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-11211358:
-  parent_yoksis_id: 298632
-  detsis_id: 11211358
-  name: TEMEL EĞİTİM BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-35024017:
-  parent_yoksis_id: 122103
-  detsis_id: 35024017
-  name: OKUL ÖNCESİ EĞİTİMİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-75639555:
-  parent_yoksis_id: 122105
-  detsis_id: 75639555
-  name: SINIF EĞİTİMİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-63688363:
-  parent_yoksis_id: 298815
-  detsis_id: 63688363
-  name: TÜRKÇE VE SOSYAL BİLİMLER EĞİTİMİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-61695360:
-  parent_yoksis_id: 122112
-  detsis_id: 61695360
-  name: COĞRAFYA EĞİTİMİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-88470904:
-  parent_yoksis_id: 122102
-  detsis_id: 88470904
-  name: SOSYAL BİLGİLER EĞİTİMİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-82160726:
-  parent_yoksis_id: 122113
-  detsis_id: 82160726
-  name: TARİH EĞİTİMİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-82756004:
-  parent_yoksis_id: 122114
-  detsis_id: 82756004
-  name: TÜRK DİLİ VE EDEBİYATI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-80144990:
-  parent_yoksis_id: 122096
-  detsis_id: 80144990
-  name: TÜRKÇE EĞİTİMİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-22561136:
-  parent_yoksis_id: 122088
-  detsis_id: 22561136
-  name: YABANCI DİLLER EĞİTİMİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-25065799:
-  parent_yoksis_id: 122089
-  detsis_id: 25065799
-  name: ALMAN DİLİ EĞİTİMİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-50065298:
-  parent_yoksis_id: 122090
-  detsis_id: 50065298
-  name: FRANSIZ DİLİ EĞİTİMİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-96035516:
-  parent_yoksis_id: 122091
-  detsis_id: 96035516
-  name: İNGİLİZ DİLİ EĞİTİMİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-86432742:
-  parent_detsis_id: 98725097
-  detsis_id: 86432742
-  name: EĞİTİM FAKÜLTESİ DİSİPLİN KURULU
-  district_id: 769
-  unit_status_id: 2
-55818690:
-  parent_detsis_id: 98725097
-  detsis_id: 55818690
-  name: EĞİTİM FAKÜLTESİ KURULU
-  district_id: 769
-  unit_status_id: 2
-47695088:
-  parent_detsis_id: 98725097
-  detsis_id: 47695088
-  name: EĞİTİM FAKÜLTESİ YÖNETİM KURULU
-  district_id: 769
-  unit_status_id: 2
-35105448:
-  parent_yoksis_id: 122287
-  detsis_id: 35105448
-  name: ERASMUS DEĞİŞİM PROGRAMI KOORDİNATÖRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-64639444:
-  parent_yoksis_id: 122287
-  detsis_id: 64639444
-  name: FARABİ DEĞİŞİM PROGRAMI KOORDİNATÖRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-43847920:
-  parent_yoksis_id: 122386
-  detsis_id: 43847920
-  name: FEN BİLİMLERİ ENSTİTÜSÜ MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-75119924:
-  parent_detsis_id: 43847920
-  detsis_id: 75119924
-  name: FEN BİLİMLERİ ENSTİTÜ SEKRETERLİĞİ
-  district_id: 769
-  unit_status_id: 2
-96900798:
-  parent_detsis_id: 43847920
-  detsis_id: 96900798
-  name: FEN BİLİMLERİ ENSTİTÜ DİSİPLİN KURULU
-  district_id: 769
-  unit_status_id: 2
-11805131:
-  parent_detsis_id: 43847920
-  detsis_id: 11805131
-  name: FEN BİLİMLERİ ENSTİTÜ KURULU
-  district_id: 769
-  unit_status_id: 2
-17608650:
-  parent_detsis_id: 43847920
-  detsis_id: 17608650
-  name: FEN BİLİMLERİ ENSTİTÜ YÖNETİM KURULU
-  district_id: 769
-  unit_status_id: 2
-41130367:
-  parent_yoksis_id: 122005
-  detsis_id: 41130367
-  name: FEN EDEBİYAT FAKÜLTESİ DEKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-72070008:
-  parent_yoksis_id: 168685
-  detsis_id: 72070008
-  name: ANTROPOLOJİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-19159065:
-  parent_yoksis_id: 140229
-  detsis_id: 19159065
-  name: ARKEOLOJİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-24049479:
-  parent_yoksis_id: 213019
-  detsis_id: 24049479
-  name: KLASİK ARKEOLOJİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-32065293:
-  parent_yoksis_id: 213020
-  detsis_id: 32065293
-  name: PROHİSTORYA VE ÖNASYA ARKEOLOJİSİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-90431388:
-  parent_yoksis_id: 213021
-  detsis_id: 90431388
-  name: SU ALTI ARKEOLOJİSİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-27277496:
-  parent_yoksis_id: 122006
-  detsis_id: 27277496
-  name: BİYOLOJİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-47049584:
-  parent_yoksis_id: 122007
-  detsis_id: 47049584
-  name: BOTANİK ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-56085658:
-  parent_yoksis_id: 122008
-  detsis_id: 56085658
-  name: GENEL BİYOLOJİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-89353011:
-  parent_yoksis_id: 122011
-  detsis_id: 89353011
-  name: HİDROBİYOLOJİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-71099053:
-  parent_yoksis_id: 122009
-  detsis_id: 71099053
-  name: MOLEKÜLER BİYOLOJİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-95502276:
-  parent_yoksis_id: 122010
-  detsis_id: 95502276
-  name: ZOOLOJİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-15094764:
-  parent_yoksis_id: 122012
-  detsis_id: 15094764
-  name: COĞRAFYA BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-74119005:
-  parent_yoksis_id: 122013
-  detsis_id: 74119005
-  name: BEŞERİ VE İKTİSADİ COĞRAFYA ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-59474131:
-  parent_yoksis_id: 122014
-  detsis_id: 59474131
-  name: BÖLGESEL COĞRAFYA ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-81246891:
-  parent_yoksis_id: 122015
-  detsis_id: 81246891
-  name: FİZİKİ COĞRAFYA ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-31469889:
-  parent_yoksis_id: 122016
-  detsis_id: 31469889
-  name: TÜRKİYE COĞRAFYASI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-67917440:
-  parent_detsis_id: 41130367
-  detsis_id: 67917440
-  name: FEN EDEBİYAT FAKÜLTE SEKRETERLİĞİ
-  district_id: 769
-  unit_status_id: 2
-71132989:
-  parent_yoksis_id: 128020
-  detsis_id: 71132989
-  name: FELSEFE BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-85522198:
-  parent_yoksis_id: 319341
-  detsis_id: 85522198
-  name: FELSEFE TARİHİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-17615902:
-  parent_yoksis_id: 319342
-  detsis_id: 17615902
-  name: SİSTEMATİK FELSEFE ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-91292595:
-  parent_yoksis_id: 319343
-  detsis_id: 91292595
-  name: TÜRK İSLAM DÜŞÜNCESİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-46136456:
-  parent_yoksis_id: 122017
-  detsis_id: 46136456
-  name: FİZİK BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-83031069:
-  parent_yoksis_id: 122018
-  detsis_id: 83031069
-  name: ATOM VE MOLEKÜL FİZİĞİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-73526496:
-  parent_yoksis_id: 122019
-  detsis_id: 73526496
-  name: GENEL FİZİK ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-59931499:
-  parent_yoksis_id: 122020
-  detsis_id: 59931499
-  name: KATI HAL FİZİĞİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-86945667:
-  parent_yoksis_id: 122021
-  detsis_id: 86945667
-  name: NÜKLEER FİZİK ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-65201220:
-  parent_yoksis_id: 122022
-  detsis_id: 65201220
-  name: YÜKSEK ENERJİ VE PLAZMA ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-63747188:
-  parent_yoksis_id: 122023
-  detsis_id: 63747188
-  name: İSTATİSTİK BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-11923756:
-  parent_yoksis_id: 122025
-  detsis_id: 11923756
-  name: İSTATİSTİK TEORİSİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-29931732:
-  parent_yoksis_id: 174940
-  detsis_id: 29931732
-  name: İSTATİSTİKSEL BİLGİ SİSTEMLERİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-44786286:
-  parent_yoksis_id: 174937
-  detsis_id: 44786286
-  name: OLASILIK TEORİSİ VE SÜREÇLERİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-87324533:
-  parent_yoksis_id: 174939
-  detsis_id: 87324533
-  name: RİSK ANALİZİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-92112419:
-  parent_yoksis_id: 122024
-  detsis_id: 92112419
-  name: UYGULAMALI İSTATİSTİK ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-74760773:
-  parent_yoksis_id: 122026
-  detsis_id: 74760773
-  name: YÖNEYLEM ARAŞTIRMASI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-71950693:
-  parent_yoksis_id: 122027
-  detsis_id: 71950693
-  name: KİMYA BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-28731924:
-  parent_yoksis_id: 122028
-  detsis_id: 28731924
-  name: ANALİTİK KİMYA ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-56230246:
-  parent_yoksis_id: 122029
-  detsis_id: 56230246
-  name: ANORGANİK KİMYA ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-70813888:
-  parent_yoksis_id: 122018
-  detsis_id: 70813888
-  name: ATOM VE MOLEKÜL FİZİĞİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-38077292:
-  parent_yoksis_id: 122030
-  detsis_id: 38077292
-  name: BİYOKİMYA ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-33868171:
-  parent_yoksis_id: 122031
-  detsis_id: 33868171
-  name: FİZİKOKİMYA ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-32115404:
-  parent_yoksis_id: 122033
-  detsis_id: 32115404
-  name: MATEMATİK BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-59241429:
-  parent_yoksis_id: 122034
-  detsis_id: 59241429
-  name: CEBİR VE SAYILAR TEORİSİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-41492042:
-  parent_yoksis_id: 147737
-  detsis_id: 41492042
-  name: FONKSİYONLAR TEORİSİ VE FONKSİYONEL ANALİZ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-84142827:
-  parent_yoksis_id: 122036
-  detsis_id: 84142827
-  name: GEOMETRİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-98043419:
-  parent_yoksis_id: 122037
-  detsis_id: 98043419
-  name: MATEMATİĞİN TEMELLERİ VE MATEMATİK LOJİK ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-84021492:
-  parent_yoksis_id: 122038
-  detsis_id: 84021492
-  name: TOPOLOJİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-13823793:
-  parent_yoksis_id: 122039
-  detsis_id: 13823793
-  name: UYGULAMALI MATEMATİK ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-73947134:
-  parent_yoksis_id: 212950
-  detsis_id: 73947134
-  name: MOLEKÜLER BİYOLOJİ VE GENETİK BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-17469156:
-  parent_yoksis_id: 122040
-  detsis_id: 17469156
-  name: PSİKOLOJİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-38605357:
-  parent_yoksis_id: 122041
-  detsis_id: 38605357
-  name: DENEYSEL PSİKOLOJİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-13410412:
-  parent_yoksis_id: 122042
-  detsis_id: 13410412
-  name: GELİŞİM PSİKOLOJİSİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-40231245:
-  parent_yoksis_id: 122043
-  detsis_id: 40231245
-  name: PSİKOMETRİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-85810235:
-  parent_yoksis_id: 122044
-  detsis_id: 85810235
-  name: SOSYAL PSİKOLOJİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-53175826:
-  parent_yoksis_id: 128019
-  detsis_id: 53175826
-  name: UYGULAMALI PSİKOLOJİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-80726151:
-  parent_yoksis_id: 166108
-  detsis_id: 80726151
-  name: SANAT TARİHİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-87499534:
-  parent_yoksis_id: 166111
-  detsis_id: 87499534
-  name: BATI SANATI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-71328794:
-  parent_yoksis_id: 166110
-  detsis_id: 71328794
-  name: BİZANS SANATI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-49177713:
-  parent_yoksis_id: 166112
-  detsis_id: 49177713
-  name: ÇAĞDAŞ SANAT ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-17950384:
-  parent_yoksis_id: 166109
-  detsis_id: 17950384
-  name: TÜRK İSLAM SANATI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-17393991:
-  parent_yoksis_id: 122077
-  detsis_id: 17393991
-  name: SOSYOLOJİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-13336011:
-  parent_yoksis_id: 319344
-  detsis_id: 13336011
-  name: GENEL SOSYOLOJİ VE METODOLOJİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-89011487:
-  parent_yoksis_id: 319345
-  detsis_id: 89011487
-  name: KURUMLAR SOSYOLOJİSİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-26626383:
-  parent_yoksis_id: 319346
-  detsis_id: 26626383
-  name: UYGULAMALI SOSYOLOJİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-59711119:
-  parent_yoksis_id: 122045
-  detsis_id: 59711119
-  name: TARİH BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-34173675:
-  parent_yoksis_id: 122046
-  detsis_id: 34173675
-  name: ESKİ ÇAĞ TARİHİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-20652998:
-  parent_yoksis_id: 174942
-  detsis_id: 20652998
-  name: GENEL TÜRK TARİHİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-89443286:
-  parent_yoksis_id: 174941
-  detsis_id: 89443286
-  name: ORTA ÇAĞ TARİHİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-69157605:
-  parent_yoksis_id: 122047
-  detsis_id: 69157605
-  name: TÜRKİYE CUMHURİYETİ TARİHİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-28860819:
-  parent_yoksis_id: 122048
-  detsis_id: 28860819
-  name: YAKIN ÇAĞ TARİHİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-43153589:
-  parent_yoksis_id: 122049
-  detsis_id: 43153589
-  name: YENİ ÇAĞ TARİHİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-60093878:
-  parent_yoksis_id: 122050
-  detsis_id: 60093878
-  name: TÜRK DİLİ VE EDEBİYATI BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-48603806:
-  parent_yoksis_id: 122056
-  detsis_id: 48603806
-  name: ÇAĞDAŞ TÜRK DİLLERİ VE EDEBİYATLARI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-52734793:
-  parent_yoksis_id: 122051
-  detsis_id: 52734793
-  name: ESKİ TÜRK DİLİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-20586288:
-  parent_yoksis_id: 122052
-  detsis_id: 20586288
-  name: ESKİ TÜRK EDEBİYATI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-39556959:
-  parent_yoksis_id: 122055
-  detsis_id: 39556959
-  name: TÜRK HALK EDEBİYATI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-58411407:
-  parent_yoksis_id: 122053
-  detsis_id: 58411407
-  name: YENİ TÜRK DİLİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-38027367:
-  parent_yoksis_id: 122054
-  detsis_id: 38027367
-  name: YENİ TÜRK EDEBİYATI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-68341997:
-  parent_detsis_id: 41130367
-  detsis_id: 68341997
-  name: FEN EDEBİYAT FAKÜLTE DİSİPLİN KURULU
-  district_id: 769
-  unit_status_id: 2
-20824451:
-  parent_detsis_id: 41130367
-  detsis_id: 20824451
-  name: FEN EDEBİYAT FAKÜLTE KURULU
-  district_id: 769
-  unit_status_id: 2
-14753958:
-  parent_detsis_id: 41130367
-  detsis_id: 14753958
-  name: FEN EDEBİYAT FAKÜLTE YÖNETİM KURULU
-  district_id: 769
-  unit_status_id: 2
-70080549:
-  parent_yoksis_id: 122391
-  detsis_id: 70080549
-  name: GELİŞİMSEL EĞİTİM ARAŞTIRMA UYGULAMA MERKEZİ MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-54143312:
-  parent_yoksis_id: 169450
-  detsis_id: 54143312
-  name: GÜZEL SANATLAR BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-28913907:
-  parent_yoksis_id: 208606
-  detsis_id: 28913907
-  name: GÜZEL SANATLAR ENSTİTÜSÜ MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-64024110:
-  parent_detsis_id: 28913907
-  detsis_id: 64024110
-  name: GÜZEL SANATLAR ENSTİTÜ SEKRETERLİĞİ
-  district_id: 769
-  unit_status_id: 2
-83982316:
-  parent_yoksis_id: 278818
-  detsis_id: 83982316
-  name: TIBBİ RESİMLEME ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-94725245:
-  parent_detsis_id: 28913907
-  detsis_id: 94725245
-  name: GÜZEL SANATLAR ENSTİTÜ DİSİPLİN KURULU
-  district_id: 769
-  unit_status_id: 2
-86004387:
-  parent_detsis_id: 28913907
-  detsis_id: 86004387
-  name: GÜZEL SANATLAR ENSTİTÜ KURULU
-  district_id: 769
-  unit_status_id: 2
-28791890:
-  parent_detsis_id: 28913907
-  detsis_id: 28791890
-  name: GÜZEL SANATLAR ENSTİTÜ YÖNETİM KURULU
-  district_id: 769
-  unit_status_id: 2
-32859882:
-  parent_yoksis_id: 215087
-  detsis_id: 32859882
-  name: GÜZEL SANATLAR FAKÜLTESİ DEKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-11792936:
-  parent_yoksis_id: 232411
-  detsis_id: 11792936
-  name: ENDÜSTRİYEL TASARIM BÖLÜM BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-13424126:
-  parent_yoksis_id: 319349
-  detsis_id: 13424126
-  name: ENDÜSTRİ ÜRÜNLERİ TASARIMI ANASANAT DALI BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-84694922:
-  parent_detsis_id: 32859882
-  detsis_id: 84694922
-  name: GÜZEL SANATLAR FAKÜLTE SEKRETERLİĞİ
-  district_id: 771
-  unit_status_id: 2
-78239466:
-  parent_yoksis_id: 232412
-  detsis_id: 78239466
-  name: GÖRSEL İLETİŞİM TASARIMI BÖLÜM BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-75115885:
-  parent_yoksis_id: 319348
-  detsis_id: 75115885
-  name: ANİMASYON ANASANAT DALI BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-65075573:
-  parent_yoksis_id: 319347
-  detsis_id: 65075573
-  name: GRAFİK ANASANAT DALI BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-21674358:
-  parent_yoksis_id: 232414
-  detsis_id: 21674358
-  name: RESİM BÖLÜM BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-42721937:
-  parent_yoksis_id: 319228
-  detsis_id: 42721937
-  name: RESİM ANASANAT DALI BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-37936364:
-  parent_yoksis_id: 232413
-  detsis_id: 37936364
-  name: SERAMİK VE CAM BÖLÜM BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-19704520:
-  parent_yoksis_id: 319229
-  detsis_id: 19704520
-  name: SERAMİK CAM ANASANAT DALI BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-97565555:
-  parent_detsis_id: 32859882
-  detsis_id: 97565555
-  name: GÜZEL SANATLAR FAKÜLTE DİSİPLİN KURULU
-  district_id: 771
-  unit_status_id: 2
-25054318:
-  parent_detsis_id: 32859882
-  detsis_id: 25054318
-  name: GÜZEL SANATLAR FAKÜLTE KURULU
-  district_id: 771
-  unit_status_id: 2
-52757481:
-  parent_detsis_id: 32859882
-  detsis_id: 52757481
-  name: GÜZEL SANATLAR FAKÜLTE YÖNETİM KURULU
-  district_id: 771
-  unit_status_id: 2
-17854746:
-  parent_yoksis_id: 233015
-  detsis_id: 17854746
-  name: HAVACILIK VE UZAY TEKNOLOJİLERİ UYGULAMA ARAŞTIRMA MERKEZİ MÜDÜRLÜĞÜ
-  district_id: 764
-  unit_status_id: 2
-78645283:
-  parent_yoksis_id: 122379
-  detsis_id: 78645283
-  name: HAVZA MESLEK YÜKSEKOKULU MÜDÜRLÜĞÜ
-  district_id: 757
-  unit_status_id: 2
-58495702:
-  parent_yoksis_id: 169579
-  detsis_id: 58495702
-  name: BÜRO HİZMETLERİ VE SEKRETERLİK BÖLÜM BAŞKANLIĞI
-  district_id: 757
-  unit_status_id: 2
-50612754:
-  parent_yoksis_id: 169596
-  detsis_id: 50612754
-  name: İNŞAAT BÖLÜM BAŞKANLIĞI
-  district_id: 757
-  unit_status_id: 2
-43413601:
-  parent_detsis_id: 78645283
-  detsis_id: 43413601
-  name: HAVZA MESLEK YÜKSEKOKULU SEKRETERLİĞİ
-  district_id: 757
-  unit_status_id: 2
-97413425:
-  parent_yoksis_id: 249948
-  detsis_id: 97413425
-  name: MÜLKİYET KORUMA VE GÜVENLİK BÖLÜM BAŞKANLIĞI
-  district_id: 757
-  unit_status_id: 2
-29817164:
-  parent_yoksis_id: 169571
-  detsis_id: 29817164
-  name: OTEL, LOKANTA VE İKRAM HİZMETLERİ BÖLÜM BAŞKANLIĞI
-  district_id: 757
-  unit_status_id: 2
-83115249:
-  parent_yoksis_id: 169584
-  detsis_id: 83115249
-  name: TERAPİ VE REHABİLİTASYON BÖLÜM BAŞKANLIĞI
-  district_id: 757
-  unit_status_id: 2
-75194625:
-  parent_yoksis_id: 251125
-  detsis_id: 75194625
-  name: TOPTAN VE PERAKENDE SATIŞ BÖLÜM BAŞKANLIĞI
-  district_id: 757
-  unit_status_id: 2
-44735465:
-  parent_yoksis_id: 169598
-  detsis_id: 44735465
-  name: YÖNETİM VE ORGANİZASYON BÖLÜM BAŞKANLIĞI
-  district_id: 757
-  unit_status_id: 2
-12896414:
-  parent_detsis_id: 78645283
-  detsis_id: 12896414
-  name: HAVZA MESLEK YÜKSEKOKULU DİSİPLİN KURULU
-  district_id: 757
-  unit_status_id: 2
-28348975:
-  parent_detsis_id: 78645283
-  detsis_id: 28348975
-  name: HAVZA MESLEK YÜKSEKOKULU KURULU
-  district_id: 757
-  unit_status_id: 2
-45728884:
-  parent_detsis_id: 78645283
-  detsis_id: 45728884
-  name: HAVZA MESLEK YÜKSEKOKULU YÖNETİM KURULU
-  district_id: 757
-  unit_status_id: 2
-42405272:
-  parent_yoksis_id: 122287
-  detsis_id: 42405272
-  name: HUKUK MÜŞAVİRLİĞİ
-  district_id: 769
-  unit_status_id: 2
-15327320:
-  parent_yoksis_id: 122287
-  detsis_id: 15327320
-  name: İDARİ VE MALİ İŞLER DAİRE BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-50569681:
-  parent_yoksis_id: 122181
-  detsis_id: 50569681
-  name: İKTİSADİ VE İDARİ BİLİMLER FAKÜLTESİ DEKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-23904279:
-  parent_yoksis_id: 122181
-  detsis_id: 23904279
-  name: İKTİSADİ VE İDARİ BİLİMLER FAKÜLTE SEKRETERLİĞİ
-  district_id: 769
-  unit_status_id: 2
-85215827:
-  parent_yoksis_id: 122182
-  detsis_id: 85215827
-  name: İKTİSAT BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-69363381:
-  parent_yoksis_id: 209993
-  detsis_id: 69363381
-  name: İKTİSADİ GELİŞME VE ULUSLARARASI İKTİSAT ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-82457173:
-  parent_yoksis_id: 209991
-  detsis_id: 82457173
-  name: İKTİSAT POLİTİKASI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-38412874:
-  parent_yoksis_id: 209990
-  detsis_id: 38412874
-  name: İKTİSAT TEORİSİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-50848157:
-  parent_yoksis_id: 128030
-  detsis_id: 50848157
-  name: İŞLETME BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-77148849:
-  parent_yoksis_id: 140383
-  detsis_id: 77148849
-  name: MUHASEBE VE FİNANSMAN ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-54568174:
-  parent_yoksis_id: 140384
-  detsis_id: 54568174
-  name: SAYISAL YÖNTEMLER ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-69958571:
-  parent_yoksis_id: 140243
-  detsis_id: 69958571
-  name: ÜRETİM YÖNETİMİ VE PAZARLAMA ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-41808829:
-  parent_yoksis_id: 140241
-  detsis_id: 41808829
-  name: YÖNETİM VE ORGANİZASYON ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-53132832:
-  parent_yoksis_id: 128036
-  detsis_id: 53132832
-  name: SİYASET BİLİMİ VE KAMU YÖNETİMİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-69480894:
-  parent_yoksis_id: 140256
-  detsis_id: 69480894
-  name: HUKUK BİLİMLERİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-28428836:
-  parent_yoksis_id: 140259
-  detsis_id: 28428836
-  name: KENTLEŞME VE ÇEVRE SORUNLARI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-80965038:
-  parent_yoksis_id: 140262
-  detsis_id: 80965038
-  name: YÖNETİM BİLİMLERİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-90667682:
-  parent_yoksis_id: 128039
-  detsis_id: 90667682
-  name: ULUSLARARASI İLİŞKİLER BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-26676436:
-  parent_yoksis_id: 235948
-  detsis_id: 26676436
-  name: ULUSLARARASI TİCARET VE LOJİSTİK BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-36300383:
-  parent_yoksis_id: 326681
-  detsis_id: 36300383
-  name: LOJİSTİK VE TEDARİK ZİNCİRİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-58745977:
-  parent_detsis_id: 50569681
-  detsis_id: 58745977
-  name: İKTİSADİ VE İDARİ BİLİMLER FAKÜLTE DİSİPLİN KURULU
-  district_id: 769
-  unit_status_id: 2
-58611596:
-  parent_detsis_id: 50569681
-  detsis_id: 58611596
-  name: İKTİSADİ VE İDARİ BİLİMLER FAKÜLTE KURULU
-  district_id: 769
-  unit_status_id: 2
-81660084:
-  parent_detsis_id: 50569681
-  detsis_id: 81660084
-  name: İKTİSADİ VE İDARİ BİLİMLER FAKÜLTE YÖNETİM KURULU
-  district_id: 769
-  unit_status_id: 2
-79586685:
-  parent_yoksis_id: 122157
-  detsis_id: 79586685
-  name: İLAHİYAT FAKÜLTESİ DEKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-10986835:
-  parent_detsis_id: 79586685
-  detsis_id: 10986835
-  name: İLAHİYAT FAKÜLTE SEKRETERLİĞİ
-  district_id: 769
-  unit_status_id: 2
-17646606:
-  parent_yoksis_id: 122166
-  detsis_id: 17646606
-  name: FELSEFE VE DİN BİLİMLERİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-78917437:
-  parent_yoksis_id: 122167
-  detsis_id: 78917437
-  name: DİN EĞİTİMİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-52443415:
-  parent_yoksis_id: 122171
-  detsis_id: 52443415
-  name: DİN FELSEFESİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-45455078:
-  parent_yoksis_id: 122174
-  detsis_id: 45455078
-  name: DİN PSİKOLOJİSİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-67743338:
-  parent_yoksis_id: 122173
-  detsis_id: 67743338
-  name: DİN SOSYOLOJİSİ ANABİLİM DALI BAŞKANLIĞı
-  district_id: 769
-  unit_status_id: 2
-17194020:
-  parent_yoksis_id: 122168
-  detsis_id: 17194020
-  name: DİNLER TARİHİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-60927548:
-  parent_yoksis_id: 122169
-  detsis_id: 60927548
-  name: FELSEFE TARİHİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-51130924:
-  parent_yoksis_id: 122170
-  detsis_id: 51130924
-  name: İSLAM FELSEFESİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-72866993:
-  parent_yoksis_id: 122172
-  detsis_id: 72866993
-  name: MANTIK ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-19880815:
-  parent_yoksis_id: 128027
-  detsis_id: 19880815
-  name: İLKÖĞRETİM DİN KÜLTÜRÜ VE AHLAK BİLGİSİ EĞİTİMİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-92769146:
-  parent_yoksis_id: 122156
-  detsis_id: 92769146
-  name: İLKÖĞRETİM DİN KÜLTÜRÜ VE AHLAK BİLGİSİ EĞİTİMİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-54819629:
-  parent_yoksis_id: 122175
-  detsis_id: 54819629
-  name: İSLAM TARİHİ VE SANATLARI BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-51223175:
-  parent_yoksis_id: 122179
-  detsis_id: 51223175
-  name: DİN MUSİKİSİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-87751793:
-  parent_yoksis_id: 122176
-  detsis_id: 87751793
-  name: İSLAM TARİHİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-68486278:
-  parent_yoksis_id: 122178
-  detsis_id: 68486278
-  name: TÜRK İSLAM EDEBİYATI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-87820776:
-  parent_yoksis_id: 122172
-  detsis_id: 87820776
-  name: TÜRK İSLAM SANATLARI TARİHİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-24155143:
-  parent_yoksis_id: 122158
-  detsis_id: 24155143
-  name: TEMEL İSLAM BİLİMLERİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-88548661:
-  parent_yoksis_id: 122165
-  detsis_id: 88548661
-  name: ARAP DİLİ VE BELAGATI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-20689546:
-  parent_yoksis_id: 122159
-  detsis_id: 20689546
-  name: HADİS ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-76957991:
-  parent_yoksis_id: 122162
-  detsis_id: 76957991
-  name: İSLAM HUKUKU ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-87438560:
-  parent_yoksis_id: 122163
-  detsis_id: 87438560
-  name: İSLAM MEZHEPLERİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-10110400:
-  parent_yoksis_id: 122160
-  detsis_id: 10110400
-  name: KELAM ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-41600798:
-  parent_yoksis_id: 166016
-  detsis_id: 41600798
-  name: KUR'AN-I KERİM OKUMA VE KIRAAT İLMİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-88981654:
-  parent_yoksis_id: 122164
-  detsis_id: 88981654
-  name: TASAVVUF ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-21962476:
-  parent_yoksis_id: 122161
-  detsis_id: 21962476
-  name: TEFSİR ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-76774637:
-  parent_detsis_id: 79586685
-  detsis_id: 76774637
-  name: İLAHİYAT FAKÜLTE DİSİPLİN KURULU
-  district_id: 769
-  unit_status_id: 2
-90949410:
-  parent_detsis_id: 79586685
-  detsis_id: 90949410
-  name: İLAHİYAT FAKÜLTE KURULU
-  district_id: 769
-  unit_status_id: 2
-55929602:
-  parent_detsis_id: 79586685
-  detsis_id: 55929602
-  name: İLAHİYAT FAKÜLTE YÖNETİM KURULU
-  district_id: 769
-  unit_status_id: 2
-34806956:
-  parent_yoksis_id: 169371
-  detsis_id: 34806956
-  name: İLETİŞİM FAKÜLTESİ DEKANLIĞI
-  district_id: 756
-  unit_status_id: 2
-50925799:
-  parent_detsis_id: 34806956
-  detsis_id: 50925799
-  name: İLETİŞİM FAKÜLTESİ SEKRETERLİĞİ
-  district_id: 756
-  unit_status_id: 2
-27633393:
-  parent_yoksis_id: 204804
-  detsis_id: 27633393
-  name: GAZETECİLİK BÖLÜM BAŞKANLIĞI
-  district_id: 756
-  unit_status_id: 2
-23260498:
-  parent_yoksis_id: 204803
-  detsis_id: 23260498
-  name: HALKLA İLİŞKİLER VE TANITIM BÖLÜM BAŞKANLIĞI
-  district_id: 756
-  unit_status_id: 2
-10326855:
-  parent_yoksis_id: 204805
-  detsis_id: 10326855
-  name: RADYO, TELEVİZYON VE SİNEMA BÖLÜM BAŞKANLIĞI
-  district_id: 756
-  unit_status_id: 2
-47463258:
-  parent_yoksis_id: 282786
-  detsis_id: 47463258
-  name: YENİ MEDYA VE İLETİŞİM TASARIMI BÖLÜM BAŞKANLIĞI
-  district_id: 756
-  unit_status_id: 2
-55547789:
-  parent_detsis_id: 34806956
-  detsis_id: 55547789
-  name: İLETİŞİM FAKÜLTE DİSİPLİN KURULU
-  district_id: 756
-  unit_status_id: 2
-70731287:
-  parent_detsis_id: 34806956
-  detsis_id: 70731287
-  name: İLETİŞİM FAKÜLTE KURULU
-  district_id: 756
-  unit_status_id: 2
-51368560:
-  parent_detsis_id: 34806956
-  detsis_id: 51368560
-  name: İLETİŞİM FAKÜLTE YÖNETİM KURULU
-  district_id: 756
-  unit_status_id: 2
-32551313:
-  parent_yoksis_id: 309995
-  detsis_id: 32551313
-  name: İŞ SAĞLIĞI VE GÜVENLİĞİ, MESLEKHASTALIKLARI UYGULAMA VE ARAŞTIRMA MERKEZİ
-    MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-89356180:
-  parent_yoksis_id: 232499
-  detsis_id: 89356180
-  name: KADIN VE TOPLUM UYGULAMA VE ARAŞTIRMA MERKEZİ MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-83781499:
-  parent_yoksis_id: 122287
-  detsis_id: 83781499
-  name: KALİTE KOORDİNATÖRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-38701709:
-  parent_yoksis_id: 311015
-  detsis_id: 38701709
-  name: KARADENİZ İLERİ TEKNOLOJİ ARAŞTIRMA VE UYGULAMA MERKEZİ MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-24802611:
-  parent_yoksis_id: 122287
-  detsis_id: 24802611
-  name: KARİYER MERKEZİ MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-83478762:
-  parent_yoksis_id: 122287
-  detsis_id: 83478762
-  name: KÖK HÜCRE ARAŞTIRMA MERKEZİ MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-51831040:
-  parent_yoksis_id: 122287
-  detsis_id: 51831040
-  name: KÜTÜPHANE VE DOKÜMANTASYON DAİRE BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-23314928:
-  parent_yoksis_id: 122287
-  detsis_id: 23314928
-  name: MEVLANA DEĞİŞİM PROGRAMI KOORDİNATÖRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-85074962:
-  parent_yoksis_id: 208604
-  detsis_id: 85074962
-  name: MİMARLIK FAKÜLTESİ DEKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-80040216:
-  parent_detsis_id: 85074962
-  detsis_id: 80040216
-  name: MİMARLIK FAKÜLTE SEKRETERLİĞİ
-  district_id: 771
-  unit_status_id: 2
-49641871:
-  parent_yoksis_id: 247958
-  detsis_id: 49641871
-  name: İÇ MİMARLIK BÖLÜM BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-87370315:
-  parent_yoksis_id: 319351
-  detsis_id: 87370315
-  name: İÇ MİMARLIK ANABİLİM DALI BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-34690896:
-  parent_yoksis_id: 214339
-  detsis_id: 34690896
-  name: MİMARLIK BÖLÜM BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-94604353:
-  parent_yoksis_id: 319350
-  detsis_id: 94604353
-  name: MİMARLIK ANABİLİM DALI BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-13882392:
-  parent_yoksis_id: 251540
-  detsis_id: 13882392
-  name: ŞEHİR VE BÖLGE PLANLAMA BÖLÜM BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-17832846:
-  parent_yoksis_id: 319352
-  detsis_id: 17832846
-  name: ŞEHİR VE BÖLGE PLANLAMA ANABİLİM DALI BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-35933795:
-  parent_detsis_id: 85074962
-  detsis_id: 35933795
-  name: MİMARLIK FAKÜLTE DİSİPLİN KURULU
-  district_id: 771
-  unit_status_id: 2
-36259705:
-  parent_detsis_id: 85074962
-  detsis_id: 36259705
-  name: MİMARLIK FAKÜLTE KURULU
-  district_id: 771
-  unit_status_id: 2
-17012768:
-  parent_detsis_id: 85074962
-  detsis_id: 17012768
-  name: MİMARLIK FAKÜLTE YÖNETİM KURULU
-  district_id: 771
-  unit_status_id: 2
-81181891:
-  parent_yoksis_id: 269525
-  detsis_id: 81181891
-  name: MÜHENDİSLİK FAKÜLTESİ DEKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-25705727:
-  parent_yoksis_id: 122184
-  detsis_id: 25705727
-  name: BİLGİSAYAR MÜHENDİSLİĞİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-52799688:
-  parent_yoksis_id: 122185
-  detsis_id: 52799688
-  name: BİLGİSAYAR BİLİMLERİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-97615129:
-  parent_yoksis_id: 122186
-  detsis_id: 97615129
-  name: BİLGİSAYAR DONANIMI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-22060668:
-  parent_yoksis_id: 122187
-  detsis_id: 22060668
-  name: BİLGİSAYAR YAZILIMI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-90345454:
-  parent_yoksis_id: 122188
-  detsis_id: 90345454
-  name: ÇEVRE MÜHENDİSLİĞİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-98041822:
-  parent_yoksis_id: 122191
-  detsis_id: 98041822
-  name: ÇEVRE MÜHENDİSLİĞİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-86351342:
-  parent_yoksis_id: 122225
-  detsis_id: 86351342
-  name: ELEKTRİK-ELEKTRONİK MÜHENDİSLİĞİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-15980226:
-  parent_yoksis_id: 201436
-  detsis_id: 15980226
-  name: DEVRELER VE SİSTEMLER ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-42143048:
-  parent_yoksis_id: 122227
-  detsis_id: 42143048
-  name: ELEKTRİK MAKİNELERİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-72919977:
-  parent_yoksis_id: 122228
-  detsis_id: 72919977
-  name: ELEKTRİK TESİSLERİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-41364293:
-  parent_yoksis_id: 122232
-  detsis_id: 41364293
-  name: ELEKTROMANYETİK ALANLAR VE MİKRODALGA TEKNİĞİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-79122794:
-  parent_yoksis_id: 122229
-  detsis_id: 79122794
-  name: ELEKTRONİK ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-15190730:
-  parent_yoksis_id: 122230
-  detsis_id: 15190730
-  name: KONTROL VE KUMANDA SİSTEMLERİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-44826496:
-  parent_yoksis_id: 122231
-  detsis_id: 44826496
-  name: TELEKOMÜNİKASYON ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-75972044:
-  parent_yoksis_id: 122192
-  detsis_id: 75972044
-  name: ENDÜSTRİ MÜHENDİSLİĞİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-69257390:
-  parent_yoksis_id: 122193
-  detsis_id: 69257390
-  name: ENDÜSTRİ MÜHENDİSLİĞİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-80716811:
-  parent_yoksis_id: 122194
-  detsis_id: 80716811
-  name: YÖNEYLEM ARAŞTIRMASI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-45476048:
-  parent_detsis_id: 81181891
-  detsis_id: 45476048
-  name: MÜHENDİSLİK FAKÜLTE SEKRETERLİĞİ
-  district_id: 769
-  unit_status_id: 2
-20437969:
-  parent_yoksis_id: 122195
-  detsis_id: 20437969
-  name: GIDA MÜHENDİSLİĞİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-93637083:
-  parent_yoksis_id: 122196
-  detsis_id: 93637083
-  name: GIDA BİLİMLERİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-16349405:
-  parent_yoksis_id: 122197
-  detsis_id: 16349405
-  name: GIDA TEKNOLOJİSİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-23060321:
-  parent_yoksis_id: 122204
-  detsis_id: 23060321
-  name: HARİTA MÜHENDİSLİĞİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-42331622:
-  parent_yoksis_id: 122205
-  detsis_id: 42331622
-  name: FOTOGRAMETRİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-78235995:
-  parent_yoksis_id: 122206
-  detsis_id: 78235995
-  name: JEODEZİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-34215046:
-  parent_yoksis_id: 122208
-  detsis_id: 34215046
-  name: KAMU ÖLÇMELERİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-80937560:
-  parent_yoksis_id: 128044
-  detsis_id: 80937560
-  name: KARTOGRAFYA ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-17556533:
-  parent_yoksis_id: 122207
-  detsis_id: 17556533
-  name: ÖLÇME TEKNİĞİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-56621346:
-  parent_yoksis_id: 122198
-  detsis_id: 56621346
-  name: İNŞAAT MÜHENDİSLİĞİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-77199613:
-  parent_yoksis_id: 122199
-  detsis_id: 77199613
-  name: GEOTEKNİK ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-39969170:
-  parent_yoksis_id: 122200
-  detsis_id: 39969170
-  name: HİDROLİK ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-92414147:
-  parent_yoksis_id: 122201
-  detsis_id: 92414147
-  name: MEKANİK ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-54234801:
-  parent_yoksis_id: 122202
-  detsis_id: 54234801
-  name: ULAŞTIRMA ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-82015179:
-  parent_yoksis_id: 122203
-  detsis_id: 82015179
-  name: YAPI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-43198645:
-  parent_yoksis_id: 122209
-  detsis_id: 43198645
-  name: KİMYA MÜHENDİSLİĞİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-97722893:
-  parent_yoksis_id: 122210
-  detsis_id: 97722893
-  name: KİMYASAL TEKNOLOJİLER ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-73623994:
-  parent_yoksis_id: 122211
-  detsis_id: 73623994
-  name: PROSES VE REAKTÖR ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-44479733:
-  parent_yoksis_id: 122213
-  detsis_id: 44479733
-  name: TEMEL İŞLEMLER ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-31208660:
-  parent_yoksis_id: 122212
-  detsis_id: 31208660
-  name: TERMODİNAMİK VE ENERJİ TEKNOLOJİLERİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-34442177:
-  parent_yoksis_id: 122215
-  detsis_id: 34442177
-  name: MAKİNE MÜHENDİSLİĞİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-20732671:
-  parent_yoksis_id: 122216
-  detsis_id: 20732671
-  name: ENERJİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-73652245:
-  parent_yoksis_id: 122217
-  detsis_id: 73652245
-  name: KONSTRÜKSİYON VE İMALAT ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-30043858:
-  parent_yoksis_id: 122218
-  detsis_id: 30043858
-  name: MAKİNE TEORİSİ VE DİNAMİĞİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-53184312:
-  parent_yoksis_id: 122219
-  detsis_id: 53184312
-  name: MEKANİK ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-34154716:
-  parent_yoksis_id: 122220
-  detsis_id: 34154716
-  name: TERMODİNAMİK ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-50636204:
-  parent_yoksis_id: 122223
-  detsis_id: 50636204
-  name: METALURJİ VE MALZEME MÜHENDİSLİĞİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-75101718:
-  parent_yoksis_id: 122224
-  detsis_id: 75101718
-  name: METALURJİ VE MALZEME MÜHENDİSLİĞİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-35273770:
-  parent_detsis_id: 81181891
-  detsis_id: 35273770
-  name: MÜHENDİSLİK FAKÜLTE DİSİPLİN KURULU
-  district_id: 769
-  unit_status_id: 2
-43335087:
-  parent_detsis_id: 81181891
-  detsis_id: 43335087
-  name: MÜHENDİSLİK FAKÜLTE KURULU
-  district_id: 769
-  unit_status_id: 2
-96980227:
-  parent_detsis_id: 81181891
-  detsis_id: 96980227
-  name: MÜHENDİSLİK FAKÜLTE YÖNETİM KURULU
-  district_id: 769
-  unit_status_id: 2
-83716618:
-  parent_yoksis_id: 232712
-  detsis_id: 83716618
-  name: OKUL ÖNCESİ EĞİTİMİ UYGULAMA VE ARAŞTIRMA MERKEZİ MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-39073269:
-  parent_yoksis_id: 122287
-  detsis_id: 39073269
-  name: ONDOKUZ MAYIS ÜNİVERSİTESİ MEZUNLAR KOORDİNATÖRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-50636870:
-  parent_yoksis_id: 169410
-  detsis_id: 50636870
-  name: ORNİTOLOJİ ARAŞTIRMA MERKEZİ MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-36607105:
-  parent_yoksis_id: 122287
-  detsis_id: 36607105
-  name: ÖĞRENCİ İŞLERİ DAİRE BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-62354096:
-  parent_yoksis_id: 122287
-  detsis_id: 62354096
-  name: ÖĞRETİM ÜYESİ YETİŞTİRME PROGRAMI KOORDİNATÖRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-90212823:
-  parent_yoksis_id: 122287
-  detsis_id: 90212823
-  name: PERSONEL DAİRE BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-59712486:
-  parent_yoksis_id: 122287
-  detsis_id: 59712486
-  name: PROJE YÖNETİM OFİSİ BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-12947530:
-  parent_yoksis_id: 284594
-  detsis_id: 12947530
-  name: PSİKOLOJİ UYGULAMA VE ARAŞTIRMA MERKEZİ MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-93771576:
-  parent_yoksis_id: 122387
-  detsis_id: 93771576
-  name: SAĞLIK BİLİMLERİ ENSTİTÜSÜ MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-29283638:
-  parent_detsis_id: 93771576
-  detsis_id: 29283638
-  name: SAĞLIK BİLİMLERİ ENSTİTÜ DİSİPLİN KURULU
-  district_id: 769
-  unit_status_id: 2
-99323623:
-  parent_detsis_id: 93771576
-  detsis_id: 99323623
-  name: SAĞLIK BİLİMLERİ ENSTİTÜ KURULU
-  district_id: 769
-  unit_status_id: 2
-99576486:
-  parent_detsis_id: 93771576
-  detsis_id: 99576486
-  name: SAĞLIK BİLİMLERİ ENSTİTÜ YÖNETİM KURULU
-  district_id: 769
-  unit_status_id: 2
-28050591:
-  parent_yoksis_id: 293577
-  detsis_id: 28050591
-  name: SAĞLIK BİLİMLERİ FAKÜLTESİ DEKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-47124861:
-  parent_yoksis_id: 293578
-  detsis_id: 47124861
-  name: BESLENME VE DİYETETİK BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-29071444:
-  parent_yoksis_id: 293587
-  detsis_id: 29071444
-  name: BESLENME BİLİMLERİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-13293441:
-  parent_yoksis_id: 293583
-  detsis_id: 13293441
-  name: DİYETETİK ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-64472731:
-  parent_yoksis_id: 293584
-  detsis_id: 64472731
-  name: TOPLU BESLENME SİSTEMLERİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-94242427:
-  parent_yoksis_id: 293585
-  detsis_id: 94242427
-  name: TOPLUM BESLENMESİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-49547628:
-  parent_yoksis_id: 293579
-  detsis_id: 49547628
-  name: DİL VE KONUŞMA TERAPİSİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-25696470:
-  parent_yoksis_id: 321515
-  detsis_id: 25696470
-  name: DİL VE KONUŞMA TERAPİSİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-72517064:
-  parent_yoksis_id: 293580
-  detsis_id: 72517064
-  name: EBELİK BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-23851096:
-  parent_yoksis_id: 321512
-  detsis_id: 23851096
-  name: EBELİK ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-82204150:
-  parent_detsis_id: 28050591
-  detsis_id: 82204150
-  name: SAĞLIK BİLİMLERİ FAKÜLTE SEKRETERLİĞİ
-  district_id: 769
-  unit_status_id: 2
-81006479:
-  parent_yoksis_id: 293581
-  detsis_id: 81006479
-  name: HEMŞİRELİK BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-97315433:
-  parent_yoksis_id: 293595
-  detsis_id: 97315433
-  name: CERRAHİ HASTALIKLARI HEMŞİRELİĞİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-60330574:
-  parent_yoksis_id: 293606
-  detsis_id: 60330574
-  name: ÇOCUK SAĞLIĞI VE HASTALIKLARI HEMŞİRELİĞİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-11647793:
-  parent_yoksis_id: 293607
-  detsis_id: 11647793
-  name: DOĞUM VE KADIN HASTALIKLARI HEMŞİRELİĞİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-15698631:
-  parent_yoksis_id: 293608
-  detsis_id: 15698631
-  name: HALK SAĞLIĞI HEMŞİRELİĞİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-48885381:
-  parent_yoksis_id: 293609
-  detsis_id: 48885381
-  name: HEMŞİRELİK ESASLARI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-45073324:
-  parent_yoksis_id: 293600
-  detsis_id: 45073324
-  name: HEMŞİRELİKTE YÖNETİM ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-17346464:
-  parent_yoksis_id: 293601
-  detsis_id: 17346464
-  name: İÇ HASTALIKLARI HEMŞİRELİĞİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-65877367:
-  parent_yoksis_id: 293602
-  detsis_id: 65877367
-  name: PSİKİYATRİ HEMŞİRELİĞİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-76382891:
-  parent_yoksis_id: 293524
-  detsis_id: 76382891
-  name: SAĞLIK YÖNETİMİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-39341962:
-  parent_yoksis_id: 321513
-  detsis_id: 39341962
-  name: SAĞLIK YÖNETİMİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-60933651:
-  parent_yoksis_id: 293525
-  detsis_id: 60933651
-  name: SOSYAL HİZMET BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-16381147:
-  parent_yoksis_id: 321514
-  detsis_id: 16381147
-  name: SOSYAL HİZMET ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-30104911:
-  parent_detsis_id: 28050591
-  detsis_id: 30104911
-  name: SAĞLIK BİLİMLERİ FAKÜLTE DİSİPLİN KURULU
-  district_id: 769
-  unit_status_id: 2
-78048140:
-  parent_detsis_id: 28050591
-  detsis_id: 78048140
-  name: SAĞLIK BİLİMLERİ FAKÜLTE KURULU
-  district_id: 769
-  unit_status_id: 2
-29075217:
-  parent_detsis_id: 28050591
-  detsis_id: 29075217
-  name: SAĞLIK BİLİMLERİ FAKÜLTE YÖNETİM KURULU
-  district_id: 769
-  unit_status_id: 2
-45664456:
-  parent_yoksis_id: 122336
-  detsis_id: 45664456
-  name: SAĞLIK HİZMETLERİ MESLEK YÜKSEKOKULU MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-33810830:
-  parent_yoksis_id: 207663
-  detsis_id: 33810830
-  name: DİŞÇİLİK HİZMETLERİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-90501840:
-  parent_detsis_id: 45664456
-  detsis_id: 90501840
-  name: SAĞLIK HİZMETLERİ MESLEK YÜKSEKOKULU SEKRETERLİĞİ
-  district_id: 769
-  unit_status_id: 2
-76762600:
-  parent_yoksis_id: 240437
-  detsis_id: 76762600
-  name: SAĞLIK BAKIM HİZMETLERİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-75296948:
-  parent_yoksis_id: 169645
-  detsis_id: 75296948
-  name: TIBBİ HİZMETLER VE TEKNİKLER BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-81688174:
-  parent_detsis_id: 45664456
-  detsis_id: 81688174
-  name: SAĞLIK HİZMETLERİ MESLEK YÜKSEKOKULU DİSİPLİN KURULU
-  district_id: 769
-  unit_status_id: 2
-69429532:
-  parent_detsis_id: 45664456
-  detsis_id: 69429532
-  name: SAĞLIK HİZMETLERİ MESLEK YÜKSEKOKULU KURULU
-  district_id: 769
-  unit_status_id: 2
-60577894:
-  parent_detsis_id: 45664456
-  detsis_id: 60577894
-  name: SAĞLIK HİZMETLERİ MESLEK YÜKSEKOKULU DİSİPLİN KURULU
-  district_id: 769
-  unit_status_id: 2
-53521241:
-  parent_yoksis_id: 122287
-  detsis_id: 53521241
-  name: SAĞLIK KÜLTÜR VE SPOR DAİRE BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-64211159:
-  parent_detsis_id: 53521241
-  detsis_id: 64211159
-  name: GÜZEL SANATLAR KAMPÜSÜ ŞUBE MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-87380393:
-  parent_detsis_id: 53521241
-  detsis_id: 87380393
-  name: İDARİ İŞLER ŞUBE MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-88096012:
-  parent_detsis_id: 53521241
-  detsis_id: 88096012
-  name: İKTİSADİ İŞLETME ŞUBE MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-27290195:
-  parent_detsis_id: 53521241
-  detsis_id: 27290195
-  name: KÜLTÜR VE SPOR ŞUBE MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-69264226:
-  parent_detsis_id: 53521241
-  detsis_id: 69264226
-  name: MALİ İŞLER ŞUBE MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-50881910:
-  parent_detsis_id: 53521241
-  detsis_id: 50881910
-  name: SAĞLIK HİZMETLERİ ŞUBE MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-10539022:
-  parent_detsis_id: 53521241
-  detsis_id: 10539022
-  name: SOSYAL HİZMETLER ŞUBE MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-56591305:
-  parent_yoksis_id: 122360
-  detsis_id: 56591305
-  name: SAMSUN MESLEK YÜKSEKOKULU MÜDÜRLÜĞÜ
-  district_id: 771
-  unit_status_id: 2
-27974305:
-  parent_yoksis_id: 169871
-  detsis_id: 27974305
-  name: BİLGİSAYAR TEKNOLOJİLERİ BÖLÜM BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-86912044:
-  parent_yoksis_id: 169860
-  detsis_id: 86912044
-  name: BİTKİSEL VE HAYVANSAL ÜRETİM BÖLÜM BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-37500600:
-  parent_yoksis_id: 215482
-  detsis_id: 37500600
-  name: ÇOCUK BAKIMI VE GENÇLİK HİZMETLERİ BÖLÜM BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-73668257:
-  parent_yoksis_id: 169847
-  detsis_id: 73668257
-  name: EL SANATLARI BÖLÜM BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-91097286:
-  parent_yoksis_id: 169828
-  detsis_id: 91097286
-  name: GÖRSEL-İŞİTSEL TEKNİKLER VE MEDYA YAPIMCILIĞI BÖLÜM BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-55177162:
-  parent_yoksis_id: 169866
-  detsis_id: 55177162
-  name: MAKİNE VE METAL TEKNOLOJİLERİ BÖLÜM BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-88496548:
-  parent_detsis_id: 56591305
-  detsis_id: 88496548
-  name: SAMSUN MESLEK YÜKSEKOKULU SEKRETERLİĞİ
-  district_id: 771
-  unit_status_id: 2
-59424017:
-  parent_yoksis_id: 169802
-  detsis_id: 59424017
-  name: MUHASEBE VE VERGİ BÖLÜM BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-21272681:
-  parent_yoksis_id: 168851
-  detsis_id: 21272681
-  name: OTEL, LOKANTA VE İKRAM HİZMETLERİ BÖLÜM BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-74699895:
-  parent_yoksis_id: 174835
-  detsis_id: 74699895
-  name: PARK VE BAHÇE BİTKİLERİ BÖLÜM BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-62196293:
-  parent_yoksis_id: 253372
-  detsis_id: 62196293
-  name: PAZARLAMA VE REKLAMCILIK BÖLÜM BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-46131419:
-  parent_yoksis_id: 169841
-  detsis_id: 46131419
-  name: TASARIM BÖLÜM BAŞKANLIĞI
-  district_id: 771
-  unit_status_id: 2
-19817726:
-  parent_detsis_id: 56591305
-  detsis_id: 19817726
-  name: SAMSUN MESLEK YÜKSEKOKULU DİSİPLİN KURULU
-  district_id: 771
-  unit_status_id: 2
-25664880:
-  parent_detsis_id: 56591305
-  detsis_id: 25664880
-  name: SAMSUN MESLEK YÜKSEKOKULU KURULU
-  district_id: 771
-  unit_status_id: 2
-10123157:
-  parent_detsis_id: 56591305
-  detsis_id: 10123157
-  name: SAMSUN MESLEK YÜKSEKOKULU YÖNETİM KURULU
-  district_id: 771
-  unit_status_id: 2
-61232311:
-  parent_yoksis_id: 122388
-  detsis_id: 61232311
-  name: SOSYAL BİLİMLER ENSTİTÜSÜ MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-35792979:
-  parent_detsis_id: 61232311
-  detsis_id: 35792979
-  name: SOSYAL BİLİMLER ENSTİTÜ SEKRETERLİĞİ
-  district_id: 769
-  unit_status_id: 2
-96478647:
-  parent_detsis_id: 61232311
-  detsis_id: 96478647
-  name: SOSYAL BİLİMLER ENSTİTÜ DİSİPLİN KURULU
-  district_id: 769
-  unit_status_id: 2
-24254010:
-  parent_detsis_id: 61232311
-  detsis_id: 24254010
-  name: SOSYAL BİLİMLER ENSTİTÜ KURULU
-  district_id: 769
-  unit_status_id: 2
-83752120:
-  parent_detsis_id: 61232311
-  detsis_id: 83752120
-  name: SOSYAL BİLİMLER ENSTİTÜ YÖNETİM KURULU
-  district_id: 769
-  unit_status_id: 2
-91511444:
-  parent_yoksis_id: 122287
-  detsis_id: 91511444
-  name: STRATEJİ GELİŞTİRME DAİRE BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-18036936:
-  parent_detsis_id: 91511444
-  detsis_id: 18036936
-  name: BÜTÇE PERFORMANS PROGRAM ŞUBE MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-37272602:
-  parent_detsis_id: 91511444
-  detsis_id: 37272602
-  name: İÇ KONTROL VE ÖN MALİ KONTROL ŞUBE MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-46578399:
-  parent_detsis_id: 91511444
-  detsis_id: 46578399
-  name: MUHASEBE KESİN HESAP VE RAPORLAMA ŞUBE MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-56016456:
-  parent_detsis_id: 91511444
-  detsis_id: 56016456
-  name: STRATEJİK PLANLAMA ŞUBE MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-12956141:
-  parent_yoksis_id: 122389
-  detsis_id: 12956141
-  name: SÜREKLİ EĞİTİM MERKEZİ MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-60422539:
-  parent_yoksis_id: 249894
-  detsis_id: 60422539
-  name: TARIMSAL UYGULAMA VE ARAŞTIRMA MERKEZİ MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-75539574:
-  parent_yoksis_id: 169429
-  detsis_id: 75539574
-  name: TEMİZ ENERJİ TEKNOLOJİLERİ UYGULAMA VE ARAŞTIRMA MERKEZİ MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-36024139:
-  parent_yoksis_id: 122330
-  detsis_id: 36024139
-  name: TERME MESLEK YÜKSEKOKULU MÜDÜRLÜĞÜ
-  district_id: 761
-  unit_status_id: 2
-90709859:
-  parent_yoksis_id: 236265
-  detsis_id: 90709859
-  name: DIŞ TİCARET BÖLÜM BAŞKANLIĞI
-  district_id: 761
-  unit_status_id: 2
-67358542:
-  parent_yoksis_id: 169952
-  detsis_id: 67358542
-  name: GIDA İŞLEME BÖLÜM BAŞKANLIĞI
-  district_id: 761
-  unit_status_id: 2
-89716816:
-  parent_detsis_id: 90709859
-  detsis_id: 89716816
-  name: TERME MESLEK YÜKSEKOKULU SEKRETERLİĞİ
-  district_id: 761
-  unit_status_id: 2
-44502530:
-  parent_yoksis_id: 169947
-  detsis_id: 44502530
-  name: MUHASEBE VE VERGİ BÖLÜM BAŞKANLIĞI
-  district_id: 761
-  unit_status_id: 2
-45447142:
-  parent_yoksis_id: 169960
-  detsis_id: 45447142
-  name: PAZARLAMA VE REKLAMCILIK BÖLÜM BAŞKANLIĞI
-  district_id: 761
-  unit_status_id: 2
-37225687:
-  parent_detsis_id: 36024139
-  detsis_id: 37225687
-  name: TERME MESLEK YÜKSEKOKULU DİSİPLİN KURULU
-  district_id: 761
-  unit_status_id: 2
-86846638:
-  parent_detsis_id: 36024139
-  detsis_id: 86846638
-  name: TERME MESLEK YÜKSEKOKULU KURULU
-  district_id: 761
-  unit_status_id: 2
-28679253:
-  parent_detsis_id: 36024139
-  detsis_id: 28679253
-  name: TERME MESLEK YÜKSEKOKULU YÖNETİM KURULU
-  district_id: 761
-  unit_status_id: 2
-45829229:
-  parent_yoksis_id: 121947
-  detsis_id: 45829229
-  name: TIP FAKÜLTESİ DEKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-96747049:
-  parent_yoksis_id: 121948
-  detsis_id: 96747049
-  name: CERRAHİ TIP BİLİMLERİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-10295953:
-  parent_yoksis_id: 121949
-  detsis_id: 10295953
-  name: ANESTEZİYOLOJİ VE REANİMASYON ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-14505165:
-  parent_yoksis_id: 121955
-  detsis_id: 14505165
-  name: BEYİN VE SİNİR CERRAHİSİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-37843852:
-  parent_yoksis_id: 121950
-  detsis_id: 37843852
-  name: ÇOCUK CERRAHİSİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-17355633:
-  parent_yoksis_id: 121951
-  detsis_id: 17355633
-  name: GENEL CERRAHİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-16763371:
-  parent_yoksis_id: 121960
-  detsis_id: 16763371
-  name: GÖĞÜS CERRAHİSİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-89013421:
-  parent_yoksis_id: 121952
-  detsis_id: 89013421
-  name: GÖZ HASTALIKLARI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-79468029:
-  parent_yoksis_id: 121953
-  detsis_id: 79468029
-  name: KADIN HASTALIKLARI VE DOĞUM ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-30391143:
-  parent_yoksis_id: 121961
-  detsis_id: 30391143
-  name: KALP VE DAMAR CERRAHİSİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-34750814:
-  parent_yoksis_id: 121954
-  detsis_id: 34750814
-  name: KULAK, BURUN VE BOĞAZ HASTALIKLARI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-91668077:
-  parent_yoksis_id: 121956
-  detsis_id: 91668077
-  name: ORTOPEDİ VE TRAVMATOLOJİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-99848509:
-  parent_yoksis_id: 121958
-  detsis_id: 99848509
-  name: PLASTİK, REKONSTRÜKTİF VE ESTETİK CERRAHİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-95030594:
-  parent_yoksis_id: 121957
-  detsis_id: 95030594
-  name: TIBBİ PATOLOJİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-48834514:
-  parent_yoksis_id: 121959
-  detsis_id: 48834514
-  name: ÜROLOJİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-37439758:
-  parent_yoksis_id: 121963
-  detsis_id: 37439758
-  name: DAHİLİ TIP BİLİMLERİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-85620421:
-  parent_yoksis_id: 128016
-  detsis_id: 85620421
-  name: ACİL TIP ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-67655394:
-  parent_yoksis_id: 121964
-  detsis_id: 67655394
-  name: ADLİ TIP ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-69061891:
-  parent_yoksis_id: 121976
-  detsis_id: 69061891
-  name: AİLE HEKİMLİĞİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-35408457:
-  parent_yoksis_id: 121965
-  detsis_id: 35408457
-  name: ÇOCUK SAĞLIĞI VE HASTALIKLARI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-58191623:
-  parent_yoksis_id: 121984
-  detsis_id: 58191623
-  name: ÇOCUK VE ERGEN RUH SAĞLIĞI VE HASTALIKLARI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-82295067:
-  parent_yoksis_id: 169259
-  detsis_id: 82295067
-  name: DERMATOLOJİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-14534803:
-  parent_yoksis_id: 121983
-  detsis_id: 14534803
-  name: ENFEKSİYON HASTALIKLARI VE KLİNİK MİKROBİYOLOJİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-93349843:
-  parent_yoksis_id: 121968
-  detsis_id: 93349843
-  name: FİZİKSEL TIP VE REHABİLİTASYON ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-38098876:
-  parent_yoksis_id: 121977
-  detsis_id: 38098876
-  name: GÖĞÜS HASTALIKLARI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-35103913:
-  parent_yoksis_id: 121969
-  detsis_id: 35103913
-  name: HALK SAĞLIĞI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-37920755:
-  parent_yoksis_id: 121980
-  detsis_id: 37920755
-  name: HAVA VE UZAY HEKİMLİĞİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-44076052:
-  parent_yoksis_id: 121970
-  detsis_id: 44076052
-  name: İÇ HASTALIKLARI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-29391255:
-  parent_yoksis_id: 121981
-  detsis_id: 29391255
-  name: KARDİYOLOJİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-63076498:
-  parent_yoksis_id: 121971
-  detsis_id: 63076498
-  name: NÖROLOJİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-93420269:
-  parent_yoksis_id: 121972
-  detsis_id: 93420269
-  name: NÜKLEER TIP ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-28960095:
-  parent_yoksis_id: 169288
-  detsis_id: 28960095
-  name: PSİKİYATRİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-80058605:
-  parent_yoksis_id: 121978
-  detsis_id: 80058605
-  name: RADYASYON ONKOLOJİSİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-18393763:
-  parent_yoksis_id: 143494
-  detsis_id: 18393763
-  name: RADYODİAGNOSTİK ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-19915580:
-  parent_yoksis_id: 121967
-  detsis_id: 19915580
-  name: TIBBİ FARMAKOLOJİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-98982588:
-  parent_yoksis_id: 121982
-  detsis_id: 98982588
-  name: TIBBİ GENETİK ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-19054817:
-  parent_detsis_id: 45829229
-  detsis_id: 19054817
-  name: TIP FAKÜLTESİ SEKRETERLİĞİ
-  district_id: 769
-  unit_status_id: 2
-21673019:
-  parent_yoksis_id: 121985
-  detsis_id: 21673019
-  name: TEMEL TIP BİLİMLERİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-22109282:
-  parent_yoksis_id: 121992
-  detsis_id: 22109282
-  name: ANATOMİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-13090298:
-  parent_yoksis_id: 121991
-  detsis_id: 13090298
-  name: BİYOFİZİK ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-74379093:
-  parent_yoksis_id: 121994
-  detsis_id: 74379093
-  name: BİYOİSTATİSTİK VE TIP BİLİŞİMİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-47287339:
-  parent_yoksis_id: 121988
-  detsis_id: 47287339
-  name: FİZYOLOJİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-67652676:
-  parent_yoksis_id: 121993
-  detsis_id: 67652676
-  name: HİSTOLOJİ VE EMBRİYOLOJİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-55719193:
-  parent_yoksis_id: 121986
-  detsis_id: 55719193
-  name: TIBBİ BİYOKİMYA ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-18496168:
-  parent_yoksis_id: 121990
-  detsis_id: 18496168
-  name: TIBBİ BİYOLOJİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-58991175:
-  parent_yoksis_id: 121989
-  detsis_id: 58991175
-  name: TIBBİ MİKROBİYOLOJİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-27867424:
-  parent_yoksis_id: 121995
-  detsis_id: 27867424
-  name: TIP EĞİTİMİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-82000575:
-  parent_yoksis_id: 121987
-  detsis_id: 82000575
-  name: TIP TARİHİ VE ETİK ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-64933695:
-  parent_detsis_id: 45829229
-  detsis_id: 64933695
-  name: AMELİYATHANE KOORDİNASYON KURULU
-  district_id: 769
-  unit_status_id: 2
-95040631:
-  parent_detsis_id: 45829229
-  detsis_id: 95040631
-  name: TIP FAKÜLTE DİSİPLİN KURULU
-  district_id: 769
-  unit_status_id: 2
-32835143:
-  parent_detsis_id: 45829229
-  detsis_id: 32835143
-  name: TIP FAKÜLTE KURULU
-  district_id: 769
-  unit_status_id: 2
-73169471:
-  parent_detsis_id: 45829229
-  detsis_id: 73169471
-  name: TIP FAKÜLTE YÖNETİM KURULU
-  district_id: 769
-  unit_status_id: 2
-37195700:
-  parent_yoksis_id: 208125
+  parent_yoksis_id: 279024
+  district_id: Bafra
+-
+  name: Turizm Fakültesi Dekanlığı
   detsis_id: 37195700
-  name: TURİZM FAKÜLTESİ DEKANLIĞI
-  district_id: 755
-  unit_status_id: 2
-43784936:
-  parent_detsis_id: 37195700
+  parent_yoksis_id: 208125
+  district_id: Bafra
+-
+  name: Turizm Fakülte Sekreterliği
   detsis_id: 43784936
-  name: TURİZM FAKÜLTE SEKRETERLİĞİ
-  district_id: 755
-  unit_status_id: 2
-22017889:
-  parent_yoksis_id: 319338
+  parent_yoksis_id: 37195700
+  district_id: Bafra
+-
+  name: Turizm İşletmeciliği Bölüm Başkanlığı
   detsis_id: 22017889
-  name: TURİZM İŞLETMECİLİĞİ BÖLÜM BAŞKANLIĞI
-  district_id: 755
-  unit_status_id: 2
-17503256:
-  parent_yoksis_id: 214321
+  parent_yoksis_id: 319338
+  district_id: Bafra
+-
+  name: Turizm Rehberliği Bölüm Başkanlığı
   detsis_id: 17503256
-  name: TURİZM REHBERLİĞİ BÖLÜM BAŞKANLIĞI
-  district_id: 755
-  unit_status_id: 2
-58508002:
-  parent_detsis_id: 37195700
+  parent_yoksis_id: 214321
+  district_id: Bafra
+-
+  name: Turizm Fakülte Disiplin Kurulu
   detsis_id: 58508002
-  name: TURİZM FAKÜLTE DİSİPLİN KURULU
-  district_id: 755
-  unit_status_id: 2
-61878927:
-  parent_detsis_id: 37195700
+  parent_yoksis_id: 37195700
+  district_id: Bafra
+-
+  name: Turizm Fakülte Kurulu
   detsis_id: 61878927
-  name: TURİZM FAKÜLTE KURULU
-  district_id: 755
-  unit_status_id: 2
-36987262:
-  parent_detsis_id: 37195700
+  parent_yoksis_id: 37195700
+  district_id: Bafra
+-
+  name: Turizm Fakülte Yönetim Kurulu
   detsis_id: 36987262
-  name: TURİZM FAKÜLTE YÖNETİM KURULU
-  district_id: 755
-  unit_status_id: 2
-96962981:
-  parent_yoksis_id: 169452
-  detsis_id: 96962981
-  name: TÜRK DİLİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-74429815:
-  parent_yoksis_id: 235511
-  detsis_id: 74429815
-  name: TÜRKÇE ÖĞRETİMİ UYGULAMA VE ARAŞTIRMA MERKEZİ MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-12566392:
-  parent_yoksis_id: 169431
-  detsis_id: 12566392
-  name: UZAKTAN EĞİTİM UYGULAMA VE ARAŞTIRMA MERKEZİ MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-32319693:
-  parent_yoksis_id: 122233
-  detsis_id: 32319693
-  name: VETERİNER FAKÜLTESİ DEKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-93878008:
-  parent_yoksis_id: 140284
-  detsis_id: 93878008
-  name: BESİN HİJYENİ VE TEKNOLOJİSİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-61809848:
-  parent_yoksis_id: 122235
-  detsis_id: 61809848
-  name: VETERİNERLİK BESİN HİJYENİ VE TEKNOLOJİSİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-96596525:
-  parent_detsis_id: 32319693
-  detsis_id: 96596525
-  name: EĞİTİM UYGULAMA VE ARAŞTIRMA HASTANESİ BAŞHEKİMLİĞİ
-  district_id: 769
-  unit_status_id: 2
-22223993:
-  parent_detsis_id: 32319693
-  detsis_id: 22223993
-  name: VETERİNER FAKÜLTESİ SEKRETERLİĞİ
-  district_id: 769
-  unit_status_id: 2
-39766743:
-  parent_yoksis_id: 169317
-  detsis_id: 39766743
-  name: KLİNİK BİLİMLER BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-18686594:
-  parent_yoksis_id: 169346
-  detsis_id: 18686594
-  name: DÖLERME VE SUNİ TOHUMLAMA ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-87376928:
-  parent_yoksis_id: 169358
-  detsis_id: 87376928
-  name: VETERİNERLİK CERRAHİSİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-97174272:
-  parent_yoksis_id: 331656
-  detsis_id: 97174272
-  name: VETERİNERLİK DOĞUM VE JİNEKOLOJİSİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-30556331:
-  parent_yoksis_id: 169353
-  detsis_id: 30556331
-  name: VETERİNERLİK İÇ HASTALIKLARI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-73181402:
-  parent_yoksis_id: 140285
-  detsis_id: 73181402
-  name: KLİNİK ÖNCESİ BİLİMLER BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-99624584:
-  parent_yoksis_id: 174933
-  detsis_id: 99624584
-  name: SU ÜRÜNLERİ HASTALIKLARI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-14776988:
-  parent_yoksis_id: 122242
-  detsis_id: 14776988
-  name: VETERİNERLİK FARMAKOLOJİ VE TOKSİKOLOJİSİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-55640858:
-  parent_yoksis_id: 122238
-  detsis_id: 55640858
-  name: VETERİNERLİK MİKROBİYOLOJİSİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-19311194:
-  parent_yoksis_id: 122239
-  detsis_id: 19311194
-  name: VETERİNERLİK PARAZİTOLOJİSİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-98669102:
-  parent_yoksis_id: 122240
-  detsis_id: 98669102
-  name: VETERİNERLİK PATOLOJİSİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-69631996:
-  parent_yoksis_id: 122245
-  detsis_id: 69631996
-  name: VETERİNERLİK VİROLOJİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-17638934:
-  parent_yoksis_id: 147745
-  detsis_id: 17638934
-  name: VETERİNER HEKİMLİĞİ TEMEL BİLİMLER BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-32881995:
-  parent_yoksis_id: 254782
-  detsis_id: 32881995
-  name: LABORATUVAR HAYVANLARI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-98682229:
-  parent_yoksis_id: 122250
-  detsis_id: 98682229
-  name: VETERİNERLİK ANATOMİSİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-62455781:
-  parent_yoksis_id: 122247
-  detsis_id: 62455781
-  name: VETERİNERLİK BİYOKİMYASI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-51014483:
-  parent_yoksis_id: 122248
-  detsis_id: 51014483
-  name: VETERİNERLİK FİZYOLOJİSİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-68000003:
-  parent_yoksis_id: 122249
-  detsis_id: 68000003
-  name: VETERİNERLİK HEKİMLİĞİ TARİHİ VE DEONTOLOJİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-39134280:
-  parent_yoksis_id: 122251
-  detsis_id: 39134280
-  name: VETERİNERLİK HİSTOLOJİ VE EMBRİYOLOJİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-68432838:
-  parent_yoksis_id: 122271
-  detsis_id: 68432838
-  name: ZOOTEKNİ VE HAYVAN BESLEME BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-79552729:
-  parent_yoksis_id: 122253
-  detsis_id: 79552729
-  name: HAYVAN BESLEME VE BESLENME HASTALIKLARI ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-73573829:
-  parent_yoksis_id: 122256
-  detsis_id: 73573829
-  name: HAYVANCILIK EKONOMİSİ VE İŞLETMECİLİĞİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-75665806:
-  parent_yoksis_id: 122257
-  detsis_id: 75665806
-  name: VETERİNERLİK BİYOMETRİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-10276681:
-  parent_yoksis_id: 122255
-  detsis_id: 10276681
-  name: VETERİNERLİK GENETİĞİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-41115119:
-  parent_yoksis_id: 122254
-  detsis_id: 41115119
-  name: VETERİNERLİK ZOOTEKNİ ANABİLİM DALI BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-68979211:
-  parent_detsis_id: 32319693
-  detsis_id: 68979211
-  name: VETERİNER FAKÜLTESİ DİSİPLİN KURULU
-  district_id: 769
-  unit_status_id: 2
-12369507:
-  parent_detsis_id: 32319693
-  detsis_id: 12369507
-  name: VETERİNER FAKÜLTESİ KURULU
-  district_id: 769
-  unit_status_id: 2
-85685189:
-  parent_detsis_id: 32319693
-  detsis_id: 85685189
-  name: VETERİNER FAKÜLTESİ YÖNETİM KURULU
-  district_id: 769
-  unit_status_id: 2
-61206311:
-  parent_yoksis_id: 122296
+  parent_yoksis_id: 37195700
+  district_id: Bafra
+-
+  name: Adalet Meslek Yüksekokulu Müdürlüğü
+  detsis_id: 15086663
+  parent_yoksis_id: 174829
+  district_id: Çarşamba
+-
+  name: Adalet Hukuk Bölüm Başkanlığı
+  detsis_id: 10190983
+  parent_yoksis_id: 174829
+  district_id: Çarşamba
+-
+  name: Adalet Meslek Yüksekokulu Sekreterliği
+  detsis_id: 26903244
+  parent_yoksis_id: 174829
+  district_id: Çarşamba
+-
+  name: Adalet Meslek Yüksekokulu Disiplin Kurulu
+  detsis_id: 70808284
+  parent_yoksis_id: 15086663
+  district_id: Çarşamba
+-
+  name: Adalet Meslek Yüksekokulu Kurulu
+  detsis_id: 25420189
+  parent_yoksis_id: 15086663
+  district_id: Çarşamba
+-
+  name: Adalet Meslek Yüksekokulu Yönetim Kurulu
+  detsis_id: 37724678
+  parent_yoksis_id: 15086663
+  district_id: Çarşamba
+-
+  name: Ali Fuad Başgil Hukuk Fakültesi Dekanlığı
+  detsis_id: 80803429
+  parent_yoksis_id: 128074
+  district_id: Çarşamba
+-
+  name: Ali Fuat Başgil Hukuk Fakültesi Sekreterliği
+  detsis_id: 47375421
+  parent_yoksis_id: 80803429
+  district_id: Çarşamba
+-
+  name: Kamu Hukuku Bölüm Başkanlığı
+  detsis_id: 32538491
+  parent_yoksis_id: 140231
+  district_id: Çarşamba
+-
+  name: Anayasa Hukuku Anabilim Dalı Başkanlığı
+  detsis_id: 16375723
+  parent_yoksis_id: 140251
+  district_id: Çarşamba
+-
+  name: Ceza Ve Ceza Muhakemesi Hukuku Anabilim Dalı Başkanlığı
+  detsis_id: 33708429
+  parent_yoksis_id: 140275
+  district_id: Çarşamba
+-
+  name: Genel Kamu Hukuku Anabilim Dalı Başkanlığı
+  detsis_id: 66159227
+  parent_yoksis_id: 140232
+  district_id: Çarşamba
+-
+  name: Hukuk Felsefesi Ve Sosyolojisi Anabilim Dalı Başkanlığı
+  detsis_id: 81394423
+  parent_yoksis_id: 140272
+  district_id: Çarşamba
+-
+  name: İdare Hukuku Anabilim Dalı Başkanlığı
+  detsis_id: 28884811
+  parent_yoksis_id: 140234
+  district_id: Çarşamba
+-
+  name: Mali Hukuk Anabilim Dalı Başkanlığı
+  detsis_id: 92359565
+  parent_yoksis_id: 159917
+  district_id: Çarşamba
+-
+  name: Milletlerarası Hukuk Anabilim Dalı Başkanlığı
+  detsis_id: 13929285
+  parent_yoksis_id: 159920
+  district_id: Çarşamba
+-
+  name: Özel Hukuk Bölüm Başkanlığı
+  detsis_id: 78415181
+  parent_yoksis_id: 140235
+  district_id: Çarşamba
+-
+  name: İş Ve Sosyal Güvenlik Hukuku Anabilim Dalı Başkanlığı
+  detsis_id: 77357407
+  parent_yoksis_id: 140270
+  district_id: Çarşamba
+-
+  name: Medeni Hukuk Anabilim Dalı Başkanlığı
+  detsis_id: 26684789
+  parent_yoksis_id: 140236
+  district_id: Çarşamba
+-
+  name: Medeni Usul Ve İcra İflas Hukuku Anabilim Dalı Başkanlığı
+  detsis_id: 47872027
+  parent_yoksis_id: 140269
+  district_id: Çarşamba
+-
+  name: Ticaret Hukuku Anabilim Dalı Başkanlığı
+  detsis_id: 67662873
+  parent_yoksis_id: 140237
+  district_id: Çarşamba
+-
+  name: Ali Fuat Başgil Hukuk Fakültesi Disiplin Kurulu
+  detsis_id: 89389677
+  parent_yoksis_id: 80803429
+  district_id: Çarşamba
+-
+  name: Ali Fuat Başgil Hukuk Fakültesi Kurulu
+  detsis_id: 50698085
+  parent_yoksis_id: 80803429
+  district_id: Çarşamba
+-
+  name: Ali Fuat Başgil Hukuk Fakültesi Yönetim Kurulu
+  detsis_id: 36961307
+  parent_yoksis_id: 80803429
+  district_id: Çarşamba
+-
+  name: Çarşamba İnsan Ve Toplum Bilimleri Fakültesi Dekanlığı
+  detsis_id: 93417155
+  parent_yoksis_id: 293682
+  district_id: Çarşamba
+-
+  name: Çarşamba İnsan Ve Toplum Bilimleri Fakülte Sekreterliği
+  detsis_id: 19904871
+  parent_yoksis_id: 93417155
+  district_id: Çarşamba
+-
+  name: Çarşamba İnsan Ve Toplum Bilimleri Fakülte Disiplin Kurulu
+  detsis_id: 71370999
+  parent_yoksis_id: 93417155
+  district_id: Çarşamba
+-
+  name: Çarşamba İnsan Ve Toplum Bilimleri Fakülte Kurulu
+  detsis_id: 90739052
+  parent_yoksis_id: 93417155
+  district_id: Çarşamba
+-
+  name: Çarşamba İnsan Ve Toplum Bilimleri Fakülte Yönetim Kurulu
+  detsis_id: 19171612
+  parent_yoksis_id: 93417155
+  district_id: Çarşamba
+-
+  name: Çarşamba Ticaret Borsası Meslek Yüksekokulu Müdürlüğü
+  detsis_id: 21071378
+  parent_yoksis_id: 169488
+  district_id: Çarşamba
+-
+  name: Bilgisayar Teknolojileri Bölüm Başkanlığı
+  detsis_id: 42092164
+  parent_yoksis_id: 229374
+  district_id: Çarşamba
+-
+  name: Büro Hizmetleri Ve Sekreterlik Bölüm Başkanlığı
+  detsis_id: 22978309
+  parent_yoksis_id: 237237
+  district_id: Çarşamba
+-
+  name: Finans-Bankacılık Ve Sigortacılık Bölüm Başkanlığı
+  detsis_id: 75851438
+  parent_yoksis_id: 229371
+  district_id: Çarşamba
+-
+  name: Hukuk Bölüm Başkanlığı
+  detsis_id: 80462939
+  parent_yoksis_id: 257433
+  district_id: Çarşamba
+-
+  name: Çarşamba Ticaret Borsası Meslek Yüksekokulu Sekreterliği
+  detsis_id: 87953753
+  parent_yoksis_id: 21071378
+  district_id: Çarşamba
+-
+  name: Muhasebe Ve Vergi Bölüm Başkanlığı
+  detsis_id: 84899036
+  parent_yoksis_id: 229377
+  district_id: Çarşamba
+-
+  name: Mülkiyet Koruma Ve Güvenlik Bölüm Başkanlığı
+  detsis_id: 73516775
+  parent_yoksis_id: 284505
+  district_id: Çarşamba
+-
+  name: Çarşamba Ticaret Borsası Meslek Yüksekokulu Disiplin Kurulu
+  detsis_id: 35949938
+  parent_yoksis_id: 21071378
+  district_id: Çarşamba
+-
+  name: Çarşamba Ticaret Borsası Meslek Yüksekokulu Kurulu
+  detsis_id: 65993268
+  parent_yoksis_id: 21071378
+  district_id: Çarşamba
+-
+  name: Çarşamba Ticaret Borsası Meslek Yüksekokulu Yönetim Kurulu
+  detsis_id: 32165550
+  parent_yoksis_id: 21071378
+  district_id: Çarşamba
+-
+  name: İletişim Fakültesi Dekanlığı
+  detsis_id: 34806956
+  parent_yoksis_id: 169371
+  district_id: Çarşamba
+-
+  name: İletişim Fakültesi Sekreterliği
+  detsis_id: 50925799
+  parent_yoksis_id: 34806956
+  district_id: Çarşamba
+-
+  name: Gazetecilik Bölüm Başkanlığı
+  detsis_id: 27633393
+  parent_yoksis_id: 204804
+  district_id: Çarşamba
+-
+  name: Halkla İlişkiler Ve Tanıtım Bölüm Başkanlığı
+  detsis_id: 23260498
+  parent_yoksis_id: 204803
+  district_id: Çarşamba
+-
+  name: Radyo, Televizyon Ve Sinema Bölüm Başkanlığı
+  detsis_id: 10326855
+  parent_yoksis_id: 204805
+  district_id: Çarşamba
+-
+  name: Yeni Medya Ve İletişim Tasarımı Bölüm Başkanlığı
+  detsis_id: 47463258
+  parent_yoksis_id: 282786
+  district_id: Çarşamba
+-
+  name: İletişim Fakülte Disiplin Kurulu
+  detsis_id: 55547789
+  parent_yoksis_id: 34806956
+  district_id: Çarşamba
+-
+  name: İletişim Fakülte Kurulu
+  detsis_id: 70731287
+  parent_yoksis_id: 34806956
+  district_id: Çarşamba
+-
+  name: İletişim Fakülte Yönetim Kurulu
+  detsis_id: 51368560
+  parent_yoksis_id: 34806956
+  district_id: Çarşamba
+-
+  name: Havza Meslek Yüksekokulu Müdürlüğü
+  detsis_id: 78645283
+  parent_yoksis_id: 122379
+  district_id: Havza
+-
+  name: Büro Hizmetleri Ve Sekreterlik Bölüm Başkanlığı
+  detsis_id: 58495702
+  parent_yoksis_id: 169579
+  district_id: Havza
+-
+  name: İnşaat Bölüm Başkanlığı
+  detsis_id: 50612754
+  parent_yoksis_id: 169596
+  district_id: Havza
+-
+  name: Havza Meslek Yüksekokulu Sekreterliği
+  detsis_id: 43413601
+  parent_yoksis_id: 78645283
+  district_id: Havza
+-
+  name: Mülkiyet Koruma Ve Güvenlik Bölüm Başkanlığı
+  detsis_id: 97413425
+  parent_yoksis_id: 249948
+  district_id: Havza
+-
+  name: Otel, Lokanta Ve İkram Hizmetleri Bölüm Başkanlığı
+  detsis_id: 29817164
+  parent_yoksis_id: 169571
+  district_id: Havza
+-
+  name: Terapi Ve Rehabilitasyon Bölüm Başkanlığı
+  detsis_id: 83115249
+  parent_yoksis_id: 169584
+  district_id: Havza
+-
+  name: Toptan Ve Perakende Satış Bölüm Başkanlığı
+  detsis_id: 75194625
+  parent_yoksis_id: 251125
+  district_id: Havza
+-
+  name: Yönetim Ve Organizasyon Bölüm Başkanlığı
+  detsis_id: 44735465
+  parent_yoksis_id: 169598
+  district_id: Havza
+-
+  name: Havza Meslek Yüksekokulu Disiplin Kurulu
+  detsis_id: 12896414
+  parent_yoksis_id: 78645283
+  district_id: Havza
+-
+  name: Havza Meslek Yüksekokulu Kurulu
+  detsis_id: 28348975
+  parent_yoksis_id: 78645283
+  district_id: Havza
+-
+  name: Havza Meslek Yüksekokulu Yönetim Kurulu
+  detsis_id: 45728884
+  parent_yoksis_id: 78645283
+  district_id: Havza
+-
+  name: Terme Meslek Yüksekokulu Müdürlüğü
+  detsis_id: 36024139
+  parent_yoksis_id: 122330
+  district_id: Terme
+-
+  name: Dış Ticaret Bölüm Başkanlığı
+  detsis_id: 90709859
+  parent_yoksis_id: 236265
+  district_id: Terme
+-
+  name: Gıda İşleme Bölüm Başkanlığı
+  detsis_id: 67358542
+  parent_yoksis_id: 169952
+  district_id: Terme
+-
+  name: Terme Meslek Yüksekokulu Sekreterliği
+  detsis_id: 89716816
+  parent_yoksis_id: 90709859
+  district_id: Terme
+-
+  name: Muhasebe Ve Vergi Bölüm Başkanlığı
+  detsis_id: 44502530
+  parent_yoksis_id: 169947
+  district_id: Terme
+-
+  name: Pazarlama Ve Reklamcılık Bölüm Başkanlığı
+  detsis_id: 45447142
+  parent_yoksis_id: 169960
+  district_id: Terme
+-
+  name: Terme Meslek Yüksekokulu Disiplin Kurulu
+  detsis_id: 37225687
+  parent_yoksis_id: 36024139
+  district_id: Terme
+-
+  name: Terme Meslek Yüksekokulu Kurulu
+  detsis_id: 86846638
+  parent_yoksis_id: 36024139
+  district_id: Terme
+-
+  name: Terme Meslek Yüksekokulu Yönetim Kurulu
+  detsis_id: 28679253
+  parent_yoksis_id: 36024139
+  district_id: Terme
+-
+  name: Vezirköprü Meslek Yüksekokulu Müdürlüğü
   detsis_id: 61206311
-  name: VEZİRKÖPRÜ MESLEK YÜKSEKOKULU MÜDÜRLÜĞÜ
-  district_id: 762
-  unit_status_id: 2
-65262987:
-  parent_yoksis_id: 169999
+  parent_yoksis_id: 122296
+  district_id: Vezirköprü
+-
+  name: Bilgisayar Teknolojileri Bölüm Başkanlığı
   detsis_id: 65262987
-  name: BİLGİSAYAR TEKNOLOJİLERİ BÖLÜM BAŞKANLIĞI
-  district_id: 762
-  unit_status_id: 2
-89587065:
-  parent_yoksis_id: 170004
-  detsis_id: 89587065
-  name: ÇOCUK BAKIMI VE GENÇLİK HİZMETLERİ BÖLÜM BAŞKANLIĞI
-  district_id: 762
-  unit_status_id: 2
-82300649:
-  parent_yoksis_id: 169985
-  detsis_id: 82300649
-  name: MALZEME VE MALZEME İŞLEME TEKNOLOJİLERİ BÖLÜM BAŞKANLIĞI
-  district_id: 762
-  unit_status_id: 2
-48974914:
-  parent_detsis_id: 61206311
-  detsis_id: 48974914
-  name: VEZİRKÖPRÜ MESLEK YÜKSEKOKULU SEKRETERLİĞİ
-  district_id: 762
-  unit_status_id: 2
-88418293:
-  parent_yoksis_id: 170007
-  detsis_id: 88418293
-  name: MUHASEBE VE VERGİ BÖLÜM BAŞKANLIĞI
-  district_id: 762
-  unit_status_id: 2
-99534530:
-  parent_yoksis_id: 207454
-  detsis_id: 99534530
-  name: ORMANCILIK BÖLÜM BAŞKANLIĞI
-  district_id: 762
-  unit_status_id: 2
-46275906:
-  parent_detsis_id: 61206311
-  detsis_id: 46275906
-  name: VEZİRKÖPRÜ MESLEK YÜKSEKOKULU KURULU
-  district_id: 762
-  unit_status_id: 2
-43583466:
-  parent_detsis_id: 61206311
-  detsis_id: 43583466
-  name: VEZİRKÖPRÜ MESLEK YÜKSEKOKULU YÖNETİM KURULU
-  district_id: 762
-  unit_status_id: 2
-66544345:
-  parent_yoksis_id: 169457
-  detsis_id: 66544345
-  name: YABANCI DİLLER BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-19676956:
-  parent_yoksis_id: 201921
-  detsis_id: 19676956
-  name: YABANCI DİLLER YÜKSEKOKULU MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-20346779:
-  parent_yoksis_id: 207276
-  detsis_id: 20346779
-  name: MÜTERCİM TERCÜMANLIK BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-90040670:
-  parent_detsis_id: 19676956
-  detsis_id: 90040670
-  name: YABANCI DİLLER YÜKSEKOKULU SEKRETERLİĞİ
-  district_id: 769
-  unit_status_id: 2
-56360828:
-  parent_detsis_id: 19676956
-  detsis_id: 56360828
-  name: YABANCI DİLLER YÜKSEKOKULU DİSİPLİN KURULU
-  district_id: 769
-  unit_status_id: 2
-43044129:
-  parent_detsis_id: 19676956
-  detsis_id: 43044129
-  name: YABANCI DİLLER YÜKSEKOKULU KURULU
-  district_id: 769
-  unit_status_id: 2
-98617224:
-  parent_detsis_id: 19676956
-  detsis_id: 98617224
-  name: YABANCI DİLLER YÜKSEKOKULU YÖNETİM KURULU
-  district_id: 769
-  unit_status_id: 2
-68380559:
-  parent_yoksis_id: 212704
-  detsis_id: 68380559
-  name: YARATICI YAZARLIK UYGULAMA VE ARAŞTIRMA MERKEZİ MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-80270232:
-  parent_yoksis_id: 242486
-  detsis_id: 80270232
-  name: YAŞAR DOĞU SPOR BİLİMLERİ FAKÜLTESİ DEKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-81601610:
-  parent_yoksis_id: 122377
-  detsis_id: 81601610
-  name: ANTRENÖRLÜK EĞİTİMİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-36370335:
-  parent_yoksis_id: 122374
-  detsis_id: 36370335
-  name: BEDEN EĞİTİMİ VE SPOR BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-88279611:
-  parent_detsis_id: 80270232
-  detsis_id: 88279611
-  name: YAŞAR DOĞU SPOR BİLİMLERİ FAKÜLTE SEKRETERLİĞİ
-  district_id: 769
-  unit_status_id: 2
-56933569:
-  parent_yoksis_id: 214343
-  detsis_id: 56933569
-  name: REKREASYON BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-80259062:
-  parent_yoksis_id: 122376
-  detsis_id: 80259062
-  name: SPOR YÖNETİCİLİĞİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-43682562:
-  parent_detsis_id: 80270232
-  detsis_id: 43682562
-  name: YAŞAR DOĞU SPOR BİLİMLERİ FAKÜLTE DİSİPLİN KURULU
-  district_id: 769
-  unit_status_id: 2
-92455265:
-  parent_detsis_id: 80270232
-  detsis_id: 92455265
-  name: YAŞAR DOĞU SPOR BİLİMLERİ FAKÜLTE KURULU
-  district_id: 769
-  unit_status_id: 2
-15350033:
-  parent_detsis_id: 80270232
-  detsis_id: 15350033
-  name: YAŞAR DOĞU SPOR BİLİMLERİ FAKÜLTE YÖNETİM KURULU
-  district_id: 769
-  unit_status_id: 2
-30423168:
-  parent_yoksis_id: 201881
-  detsis_id: 30423168
-  name: YEŞİLYURT DEMİR ÇELİK MESLEK YÜKSEKOKULU MÜDÜRLÜĞÜ
-  district_id: 766
-  unit_status_id: 2
-31224800:
   parent_yoksis_id: 169999
+  district_id: Vezirköprü
+-
+  name: Çocuk Bakımı Ve Gençlik Hizmetleri Bölüm Başkanlığı
+  detsis_id: 89587065
+  parent_yoksis_id: 170004
+  district_id: Vezirköprü
+-
+  name: Malzeme Ve Malzeme İşleme Teknolojileri Bölüm Başkanlığı
+  detsis_id: 82300649
+  parent_yoksis_id: 169985
+  district_id: Vezirköprü
+-
+  name: Vezirköprü Meslek Yüksekokulu Sekreterliği
+  detsis_id: 48974914
+  parent_yoksis_id: 61206311
+  district_id: Vezirköprü
+-
+  name: Muhasebe Ve Vergi Bölüm Başkanlığı
+  detsis_id: 88418293
+  parent_yoksis_id: 170007
+  district_id: Vezirköprü
+-
+  name: Ormancılık Bölüm Başkanlığı
+  detsis_id: 99534530
+  parent_yoksis_id: 207454
+  district_id: Vezirköprü
+-
+  name: Vezirköprü Meslek Yüksekokulu Kurulu
+  detsis_id: 46275906
+  parent_yoksis_id: 61206311
+  district_id: Vezirköprü
+-
+  name: Vezirköprü Meslek Yüksekokulu Yönetim Kurulu
+  detsis_id: 43583466
+  parent_yoksis_id: 61206311
+  district_id: Vezirköprü
+-
+  name: Havacılık Ve Uzay Teknolojileri Uygulama Araştırma Merkezi Müdürlüğü
+  detsis_id: 17854746
+  parent_yoksis_id: 233015
+  district_id: 19 Mayıs
+-
+  name: Yeşilyurt Demir Çelik Meslek Yüksekokulu Müdürlüğü
+  detsis_id: 30423168
+  parent_yoksis_id: 201881
+  district_id: Tekkeköy
+-
+  name: Bilgisayar Teknolojileri Bölüm Başkanlığı
   detsis_id: 31224800
-  name: BİLGİSAYAR TEKNOLOJİLERİ BÖLÜM BAŞKANLIĞI
-  district_id: 766
-  unit_status_id: 2
-56441771:
-  parent_yoksis_id: 202398
+  parent_yoksis_id: 169999
+  district_id: Tekkeköy
+-
+  name: Elektrik Ve Enerji Bölüm Başkanlığı
   detsis_id: 56441771
-  name: ELEKTRİK VE ENERJİ BÖLÜM BAŞKANLIĞI
-  district_id: 766
-  unit_status_id: 2
-26650433:
-  parent_yoksis_id: 215486
+  parent_yoksis_id: 202398
+  district_id: Tekkeköy
+-
+  name: Elektronik Ve Otomasyon Bölüm Başkanlığı
   detsis_id: 26650433
-  name: ELEKTRONİK VE OTOMASYON BÖLÜM BAŞKANLIĞI
-  district_id: 766
-  unit_status_id: 2
-61279147:
-  parent_yoksis_id: 202460
+  parent_yoksis_id: 215486
+  district_id: Tekkeköy
+-
+  name: Gıda İşleme Bölüm Başkanlığı
   detsis_id: 61279147
-  name: GIDA İŞLEME BÖLÜM BAŞKANLIĞI
-  district_id: 766
-  unit_status_id: 2
-36423302:
-  parent_yoksis_id: 215488
+  parent_yoksis_id: 202460
+  district_id: Tekkeköy
+-
+  name: Kimya Ve Kimyasal İşleme Teknolojileri Bölüm Başkanlığı
   detsis_id: 36423302
-  name: KİMYA VE KİMYASAL İŞLEME TEKNOLOJİLERİ BÖLÜM BAŞKANLIĞI
-  district_id: 766
-  unit_status_id: 2
-56066727:
-  parent_yoksis_id: 202463
+  parent_yoksis_id: 215488
+  district_id: Tekkeköy
+-
+  name: Makine Ve Metal Teknolojileri Bölüm Başkanlığı
   detsis_id: 56066727
-  name: MAKİNE VE METAL TEKNOLOJİLERİ BÖLÜM BAŞKANLIĞI
-  district_id: 766
-  unit_status_id: 2
-37077418:
-  parent_detsis_id: 30423168
+  parent_yoksis_id: 202463
+  district_id: Tekkeköy
+-
+  name: Yeşilyurt Demir Çelik Meslek Yüksekokulu Sekreterliği
   detsis_id: 37077418
-  name: YEŞİLYURT DEMİR ÇELİK MESLEK YÜKSEKOKULU SEKRETERLİĞİ
-  district_id: 766
-  unit_status_id: 2
-91760724:
-  parent_yoksis_id: 215492
+  parent_yoksis_id: 30423168
+  district_id: Tekkeköy
+-
+  name: Motorlu Araçlar Ve Ulaştırma Teknolojileri Bölüm Başkanlığı
   detsis_id: 91760724
-  name: MOTORLU ARAÇLAR VE ULAŞTIRMA TEKNOLOJİLERİ BÖLÜM BAŞKANLIĞI
-  district_id: 766
-  unit_status_id: 2
-55101226:
-  parent_detsis_id: 30423168
+  parent_yoksis_id: 215492
+  district_id: Tekkeköy
+-
+  name: Yeşilyurt Demir Çelik Meslek Yüksekokulu Disiplin Kurulu
   detsis_id: 55101226
-  name: YEŞİLYURT DEMİR ÇELİK MESLEK YÜKSEKOKULU DİSİPLİN KURULU
-  district_id: 766
-  unit_status_id: 2
-75674136:
-  parent_detsis_id: 30423168
+  parent_yoksis_id: 30423168
+  district_id: Tekkeköy
+-
+  name: Yeşilyurt Demir Çelik Meslek Yüksekokulu Kurulu
   detsis_id: 75674136
-  name: YEŞİLYURT DEMİR ÇELİK MESLEK YÜKSEKOKULU KURULU
-  district_id: 766
-  unit_status_id: 2
-66604919:
-  parent_detsis_id: 30423168
+  parent_yoksis_id: 30423168
+  district_id: Tekkeköy
+-
+  name: Yeşilyurt Demir Çelik Meslek Yüksekokulu Yönetim Kurulu
   detsis_id: 66604919
-  name: YEŞİLYURT DEMİR ÇELİK MESLEK YÜKSEKOKULU YÖNETİM KURULU
-  district_id: 766
-  unit_status_id: 2
-52180288:
-  parent_yoksis_id: 122258
-  detsis_id: 52180288
-  name: ZİRAAT FAKÜLTESİ DEKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-51766710:
-  parent_yoksis_id: 122259
-  detsis_id: 51766710
-  name: BAHÇE BİTKİLERİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-30360806:
-  parent_yoksis_id: 122261
-  detsis_id: 30360806
-  name: BİTKİ KORUMA BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-20802809:
-  parent_detsis_id: 52180288
-  detsis_id: 20802809
-  name: ZİRAAT FAKÜLTE SEKRETERLİĞİ
-  district_id: 769
-  unit_status_id: 2
-41945832:
-  parent_yoksis_id: 122264
-  detsis_id: 41945832
-  name: TARIM EKONOMİSİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-38298812:
-  parent_yoksis_id: 122279
-  detsis_id: 38298812
-  name: TARIM MAKİNELERİ VE TEKNOLOJİLERİ MÜHENDİSLİĞİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-39322077:
-  parent_yoksis_id: 145755
-  detsis_id: 39322077
-  name: TARIMSAL BİYOTEKNOLOJİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-69046183:
-  parent_yoksis_id: 122281
-  detsis_id: 69046183
-  name: TARIMSAL YAPILAR VE SULAMA BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-88073621:
-  parent_yoksis_id: 122267
-  detsis_id: 88073621
-  name: TARLA BİTKİLERİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-25676019:
-  parent_yoksis_id: 145775
-  detsis_id: 25676019
-  name: TOPRAK BİLİMİ VE BİTKİ BESLEME BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-59625322:
+  parent_yoksis_id: 30423168
+  district_id: Tekkeköy
+-
+  name: Atatürk İlkeleri Ve İnkılap Tarihi Araştırma Ve Uygulama Merkezi Müdürlüğü
+  detsis_id: 50057338
+  parent_yoksis_id: 122390
+  district_id: Atakum
+-
+  name: Atatürk İlkeleri Ve İnkılap Tarihi Bölüm Başkanlığı
+  detsis_id: 43125506
+  parent_yoksis_id: 169437
+  district_id: Atakum
+-
+  name: Bilgi İşlem Daire Başkanlığı
+  detsis_id: 54165989
+  parent_yoksis_id: 122287
+  district_id: Atakum
+-
+  name: Bilgisayar Araştırmaları Uygulama Ve Araştırma Merkezi Müdürlüğü
+  detsis_id: 38418139
+  parent_yoksis_id: 327269
+  district_id: Atakum
+-
+  name: Yazılım Talepleri Değerlendirme Komisyonu
+  detsis_id: 35354231
+  parent_yoksis_id: 38418139
+  district_id: Atakum
+-
+  name: Bölgesel Kalkınma Ve Stratejik Araştırmalar Uygulama Ve Araştırma Merkezi Müdürlüğü
+  detsis_id: 65401134
+  parent_yoksis_id: 169418
+  district_id: Atakum
+-
+  name: Çevre Sorunları Araştırma Ve Uygulama Merkezi Müdürlüğü
+  detsis_id: 37181009
+  parent_yoksis_id: 122392
+  district_id: Atakum
+-
+  name: Çocuk Eğitimi Uygulama Ve Araştırma Merkezi Müdürlüğü
+  detsis_id: 87320973
+  parent_yoksis_id: 205247
+  district_id: Atakum
+-
+  name: Deney Hayvanları Uygulama Ve Araştırma Merkezi Müdürlüğü
+  detsis_id: 62228674
+  parent_yoksis_id: 214121
+  district_id: Atakum
+-
+  name: Diş Hekimliği Fakültesi Dekanlığı
+  detsis_id: 45458912
+  parent_yoksis_id: 121996
+  district_id: Atakum
+-
+  name: Ağız Ve Diş Sağlığı Eğitim Ve Araştırma Hastanesi Başhekimliği
+  detsis_id: 99439659
+  parent_yoksis_id: 45458912
+  district_id: Atakum
+-
+  name: Diş Hekimliği Fakültesi Sekreterliği
+  detsis_id: 60761909
+  parent_yoksis_id: 45458912
+  district_id: Atakum
+-
+  name: Klinik Bilimler Bölüm Başkanlığı
+  detsis_id: 38581703
+  parent_yoksis_id: 121997
+  district_id: Atakum
+-
+  name: Ağız, Diş Ve Çene Cerrahisi Anabilim Dalı Başkanlığı
+  detsis_id: 54725013
+  parent_yoksis_id: 121998
+  district_id: Atakum
+-
+  name: Endodonti Anabilim Dalı Başkanlığı
+  detsis_id: 69004845
+  parent_yoksis_id: 208207
+  district_id: Atakum
+-
+  name: Pedodonti Anabilim Dalı Başkanlığı
+  detsis_id: 77151331
+  parent_yoksis_id: 122003
+  district_id: Atakum
+-
+  name: Periodontoloji Anabilim Dalı Başkanlığı
+  detsis_id: 28469072
+  parent_yoksis_id: 122001
+  district_id: Atakum
+-
+  name: Protetik Diş Tedavisi Anabilim Dalı Başkanlığı
+  detsis_id: 69811069
+  parent_yoksis_id: 122002
+  district_id: Atakum
+-
+  name: Restoratif Diş Tedavisi Anabilim Dalı Başkanlığı
+  detsis_id: 88995615
+  parent_yoksis_id: 176332
+  district_id: Atakum
+-
+  name: Diş Hekimliği Fakülte Disiplin Kurulu
+  detsis_id: 64223946
+  parent_yoksis_id: 45458912
+  district_id: Atakum
+-
+  name: Diş Hekimliği Fakülte Kurulu
+  detsis_id: 76916655
+  parent_yoksis_id: 45458912
+  district_id: Atakum
+-
+  name: Diş Hekimliği Fakülte Yönetim Kurulu
+  detsis_id: 5618961
+  parent_yoksis_id: 45458912
+  district_id: Atakum
+-
+  name: Eğitim Bilimleri Enstitüsü Müdürlüğü
+  detsis_id: 42301062
+  parent_yoksis_id: 174846
+  district_id: Atakum
+-
+  name: Eğitim Bilimleri Enstitü Sekreterliği
+  detsis_id: 27148102
+  parent_yoksis_id: 42301062
+  district_id: Atakum
+-
+  name: Eğitim Bilimleri Enstitü Disiplin Kurulu
+  detsis_id: 60162193
+  parent_yoksis_id: 42301062
+  district_id: Atakum
+-
+  name: Eğitim Bilimleri Enstitü Kurulu
+  detsis_id: 39971369
+  parent_yoksis_id: 42301062
+  district_id: Atakum
+-
+  name: Eğitim Bilimleri Enstitü Yönetim Kurulu
+  detsis_id: 90709856
+  parent_yoksis_id: 42301062
+  district_id: Atakum
+-
+  name: Eğitim Fakültesi Dekanlığı
+  detsis_id: 98725097
+  parent_yoksis_id: 122082
+  district_id: Atakum
+-
+  name: Bilgisayar Ve Öğretim Teknolojileri Eğitimi Bölüm Başkanlığı
+  detsis_id: 34359275
+  parent_yoksis_id: 122154
+  district_id: Atakum
+-
+  name: Bilgisayar Ve Öğretim Teknolojileri Eğitimi Anabilim Dalı Başkanlığı
+  detsis_id: 20582185
+  parent_yoksis_id: 122155
+  district_id: Atakum
+-
+  name: Eğitim Bilimleri Bölüm Başkanlığı
+  detsis_id: 53279789
+  parent_yoksis_id: 122083
+  district_id: Atakum
+-
+  name: Eğitim Programları Ve Öğretim Anabilim Dalı Başkanlığı
+  detsis_id: 47824572
+  parent_yoksis_id: 122085
+  district_id: Atakum
+-
+  name: Eğitim Yönetimi Anabilim Dalı Başkanlığı
+  detsis_id: 56043766
+  parent_yoksis_id: 122086
+  district_id: Atakum
+-
+  name: Eğitimde Ölçme Ve Değerlendirme Anabilim Dalı Başkanlığı
+  detsis_id: 54052542
+  parent_yoksis_id: 122084
+  district_id: Atakum
+-
+  name: Eğitimin Felsefi, Sosyal Ve Tarihi Temelleri Anabilim Dalı Başkanlığı
+  detsis_id: 14662647
+  parent_yoksis_id: 314245
+  district_id: Atakum
+-
+  name: Rehberlik Ve Psikolojik Danışmanlık Anabilim Dalı Başkanlığı
+  detsis_id: 60653398
+  parent_yoksis_id: 122087
+  district_id: Atakum
+-
+  name: Eğitim Fakültesi Sekreterliği
+  detsis_id: 97972159
+  parent_yoksis_id: 98725097
+  district_id: Atakum
+-
+  name: Güzel Sanatlar Eğitimi Bölüm Başkanlığı
+  detsis_id: 78339419
+  parent_yoksis_id: 122097
+  district_id: Atakum
+-
+  name: Resim İş Eğitimi Anabilim Dalı Başkanlığı
+  detsis_id: 27162665
+  parent_yoksis_id: 122098
+  district_id: Atakum
+-
+  name: Matematik Ve Fen Bilimleri Eğitimi Bölüm Başkanlığı
+  detsis_id: 5147921
+  parent_yoksis_id: 298694
+  district_id: Atakum
+-
+  name: Biyoloji Eğitimi Anabilim Dalı Başkanlığı
+  detsis_id: 97162243
+  parent_yoksis_id: 122107
+  district_id: Atakum
+-
+  name: Fen Bilgisi Eğitimi Anabilim Dalı Başkanlığı
+  detsis_id: 84084405
+  parent_yoksis_id: 122101
+  district_id: Atakum
+-
+  name: Fizik Eğitimi Anabilim Dalı Başkanlığı
+  detsis_id: 19744892
+  parent_yoksis_id: 122108
+  district_id: Atakum
+-
+  name: Kimya Eğitimi Anabilim Dalı Başkanlığı
+  detsis_id: 81130866
+  parent_yoksis_id: 122109
+  district_id: Atakum
+-
+  name: Matematik Eğitimi Anabilim Dalı Başkanlığı
+  detsis_id: 1946687
+  parent_yoksis_id: 122110
+  district_id: Atakum
+-
+  name: Özel Eğitim Bölüm Başkanlığı
+  detsis_id: 81004858
+  parent_yoksis_id: 122092
+  district_id: Atakum
+-
+  name: İşitme Engelliler Eğitimi Anabilim Dalı Başkanlığı
+  detsis_id: 88219318
+  parent_yoksis_id: 122093
+  district_id: Atakum
+-
+  name: Zihin Engelliler Eğitimi Anabilim Dalı Başkanlığı
+  detsis_id: 64658489
+  parent_yoksis_id: 122094
+  district_id: Atakum
+-
+  name: Temel Eğitim Bölüm Başkanlığı
+  detsis_id: 11211358
+  parent_yoksis_id: 298632
+  district_id: Atakum
+-
+  name: Okul Öncesi Eğitimi Anabilim Dalı Başkanlığı
+  detsis_id: 35024017
+  parent_yoksis_id: 122103
+  district_id: Atakum
+-
+  name: Sınıf Eğitimi Anabilim Dalı Başkanlığı
+  detsis_id: 75639555
+  parent_yoksis_id: 122105
+  district_id: Atakum
+-
+  name: Türkçe Ve Sosyal Bilimler Eğitimi Bölüm Başkanlığı
+  detsis_id: 63688363
+  parent_yoksis_id: 298815
+  district_id: Atakum
+-
+  name: Coğrafya Eğitimi Anabilim Dalı Başkanlığı
+  detsis_id: 61695360
+  parent_yoksis_id: 122112
+  district_id: Atakum
+-
+  name: Sosyal Bilgiler Eğitimi Anabilim Dalı Başkanlığı
+  detsis_id: 88470904
+  parent_yoksis_id: 122102
+  district_id: Atakum
+-
+  name: Tarih Eğitimi Anabilim Dalı Başkanlığı
+  detsis_id: 82160726
+  parent_yoksis_id: 122113
+  district_id: Atakum
+-
+  name: Türk Dili Ve Edebiyatı Anabilim Dalı Başkanlığı
+  detsis_id: 82756004
+  parent_yoksis_id: 122114
+  district_id: Atakum
+-
+  name: Türkçe Eğitimi Anabilim Dalı Başkanlığı
+  detsis_id: 80144990
+  parent_yoksis_id: 122096
+  district_id: Atakum
+-
+  name: Yabancı Diller Eğitimi Bölüm Başkanlığı
+  detsis_id: 22561136
+  parent_yoksis_id: 122088
+  district_id: Atakum
+-
+  name: Alman Dili Eğitimi Anabilim Dalı Başkanlığı
+  detsis_id: 25065799
+  parent_yoksis_id: 122089
+  district_id: Atakum
+-
+  name: Fransız Dili Eğitimi Anabilim Dalı Başkanlığı
+  detsis_id: 50065298
+  parent_yoksis_id: 122090
+  district_id: Atakum
+-
+  name: İngiliz Dili Eğitimi Anabilim Dalı Başkanlığı
+  detsis_id: 96035516
+  parent_yoksis_id: 122091
+  district_id: Atakum
+-
+  name: Eğitim Fakültesi Disiplin Kurulu
+  detsis_id: 86432742
+  parent_yoksis_id: 98725097
+  district_id: Atakum
+-
+  name: Eğitim Fakültesi Kurulu
+  detsis_id: 55818690
+  parent_yoksis_id: 98725097
+  district_id: Atakum
+-
+  name: Eğitim Fakültesi Yönetim Kurulu
+  detsis_id: 47695088
+  parent_yoksis_id: 98725097
+  district_id: Atakum
+-
+  name: Erasmus Değişim Programı Koordinatörlüğü
+  detsis_id: 35105448
+  parent_yoksis_id: 122287
+  district_id: Atakum
+-
+  name: Farabi Değişim Programı Koordinatörlüğü
+  detsis_id: 64639444
+  parent_yoksis_id: 122287
+  district_id: Atakum
+-
+  name: Fen Bilimleri Enstitüsü Müdürlüğü
+  detsis_id: 43847920
+  parent_yoksis_id: 122386
+  district_id: Atakum
+-
+  name: Fen Bilimleri Enstitü Sekreterliği
+  detsis_id: 75119924
+  parent_yoksis_id: 43847920
+  district_id: Atakum
+-
+  name: Fen Bilimleri Enstitü Disiplin Kurulu
+  detsis_id: 96900798
+  parent_yoksis_id: 43847920
+  district_id: Atakum
+-
+  name: Fen Bilimleri Enstitü Kurulu
+  detsis_id: 11805131
+  parent_yoksis_id: 43847920
+  district_id: Atakum
+-
+  name: Fen Bilimleri Enstitü Yönetim Kurulu
+  detsis_id: 17608650
+  parent_yoksis_id: 43847920
+  district_id: Atakum
+-
+  name: Fen Edebiyat Fakültesi Dekanlığı
+  detsis_id: 41130367
+  parent_yoksis_id: 122005
+  district_id: Atakum
+-
+  name: Antropoloji Bölüm Başkanlığı
+  detsis_id: 72070008
+  parent_yoksis_id: 168685
+  district_id: Atakum
+-
+  name: Arkeoloji Bölüm Başkanlığı
+  detsis_id: 19159065
+  parent_yoksis_id: 140229
+  district_id: Atakum
+-
+  name: Klasik Arkeoloji Anabilim Dalı Başkanlığı
+  detsis_id: 24049479
+  parent_yoksis_id: 213019
+  district_id: Atakum
+-
+  name: Prohistorya Ve Önasya Arkeolojisi Anabilim Dalı Başkanlığı
+  detsis_id: 32065293
+  parent_yoksis_id: 213020
+  district_id: Atakum
+-
+  name: Su Altı Arkeolojisi Anabilim Dalı Başkanlığı
+  detsis_id: 90431388
+  parent_yoksis_id: 213021
+  district_id: Atakum
+-
+  name: Biyoloji Bölüm Başkanlığı
+  detsis_id: 27277496
+  parent_yoksis_id: 122006
+  district_id: Atakum
+-
+  name: Botanik Anabilim Dalı Başkanlığı
+  detsis_id: 47049584
+  parent_yoksis_id: 122007
+  district_id: Atakum
+-
+  name: Genel Biyoloji Anabilim Dalı Başkanlığı
+  detsis_id: 56085658
+  parent_yoksis_id: 122008
+  district_id: Atakum
+-
+  name: Hidrobiyoloji Anabilim Dalı Başkanlığı
+  detsis_id: 89353011
+  parent_yoksis_id: 122011
+  district_id: Atakum
+-
+  name: Moleküler Biyoloji Anabilim Dalı Başkanlığı
+  detsis_id: 71099053
+  parent_yoksis_id: 122009
+  district_id: Atakum
+-
+  name: Zooloji Anabilim Dalı Başkanlığı
+  detsis_id: 95502276
+  parent_yoksis_id: 122010
+  district_id: Atakum
+-
+  name: Coğrafya Bölüm Başkanlığı
+  detsis_id: 15094764
+  parent_yoksis_id: 122012
+  district_id: Atakum
+-
+  name: Beşeri Ve İktisadi Coğrafya Anabilim Dalı Başkanlığı
+  detsis_id: 74119005
+  parent_yoksis_id: 122013
+  district_id: Atakum
+-
+  name: Bölgesel Coğrafya Anabilim Dalı Başkanlığı
+  detsis_id: 59474131
+  parent_yoksis_id: 122014
+  district_id: Atakum
+-
+  name: Fiziki Coğrafya Anabilim Dalı Başkanlığı
+  detsis_id: 81246891
+  parent_yoksis_id: 122015
+  district_id: Atakum
+-
+  name: Türkiye Coğrafyası Anabilim Dalı Başkanlığı
+  detsis_id: 31469889
+  parent_yoksis_id: 122016
+  district_id: Atakum
+-
+  name: Fen Edebiyat Fakülte Sekreterliği
+  detsis_id: 67917440
+  parent_yoksis_id: 41130367
+  district_id: Atakum
+-
+  name: Felsefe Bölüm Başkanlığı
+  detsis_id: 71132989
+  parent_yoksis_id: 128020
+  district_id: Atakum
+-
+  name: Felsefe Tarihi Anabilim Dalı Başkanlığı
+  detsis_id: 85522198
+  parent_yoksis_id: 319341
+  district_id: Atakum
+-
+  name: Sistematik Felsefe Anabilim Dalı Başkanlığı
+  detsis_id: 17615902
+  parent_yoksis_id: 319342
+  district_id: Atakum
+-
+  name: Türk İslam Düşüncesi Anabilim Dalı Başkanlığı
+  detsis_id: 91292595
+  parent_yoksis_id: 319343
+  district_id: Atakum
+-
+  name: Fizik Bölüm Başkanlığı
+  detsis_id: 46136456
+  parent_yoksis_id: 122017
+  district_id: Atakum
+-
+  name: Atom Ve Molekül Fiziği Anabilim Dalı Başkanlığı
+  detsis_id: 83031069
+  parent_yoksis_id: 122018
+  district_id: Atakum
+-
+  name: Genel Fizik Anabilim Dalı Başkanlığı
+  detsis_id: 73526496
+  parent_yoksis_id: 122019
+  district_id: Atakum
+-
+  name: Katı Hal Fiziği Anabilim Dalı Başkanlığı
+  detsis_id: 59931499
+  parent_yoksis_id: 122020
+  district_id: Atakum
+-
+  name: Nükleer Fizik Anabilim Dalı Başkanlığı
+  detsis_id: 86945667
+  parent_yoksis_id: 122021
+  district_id: Atakum
+-
+  name: Yüksek Enerji Ve Plazma Anabilim Dalı Başkanlığı
+  detsis_id: 65201220
+  parent_yoksis_id: 122022
+  district_id: Atakum
+-
+  name: İstatistik Bölüm Başkanlığı
+  detsis_id: 63747188
+  parent_yoksis_id: 122023
+  district_id: Atakum
+-
+  name: İstatistik Teorisi Anabilim Dalı Başkanlığı
+  detsis_id: 11923756
+  parent_yoksis_id: 122025
+  district_id: Atakum
+-
+  name: İstatistiksel Bilgi Sistemleri Anabilim Dalı Başkanlığı
+  detsis_id: 29931732
+  parent_yoksis_id: 174940
+  district_id: Atakum
+-
+  name: Olasılık Teorisi Ve Süreçleri Anabilim Dalı Başkanlığı
+  detsis_id: 44786286
+  parent_yoksis_id: 174937
+  district_id: Atakum
+-
+  name: Risk Analizi Anabilim Dalı Başkanlığı
+  detsis_id: 87324533
+  parent_yoksis_id: 174939
+  district_id: Atakum
+-
+  name: Uygulamalı İstatistik Anabilim Dalı Başkanlığı
+  detsis_id: 92112419
+  parent_yoksis_id: 122024
+  district_id: Atakum
+-
+  name: Yöneylem Araştırması Anabilim Dalı Başkanlığı
+  detsis_id: 74760773
+  parent_yoksis_id: 122026
+  district_id: Atakum
+-
+  name: Kimya Bölüm Başkanlığı
+  detsis_id: 71950693
+  parent_yoksis_id: 122027
+  district_id: Atakum
+-
+  name: Analitik Kimya Anabilim Dalı Başkanlığı
+  detsis_id: 28731924
+  parent_yoksis_id: 122028
+  district_id: Atakum
+-
+  name: Anorganik Kimya Anabilim Dalı Başkanlığı
+  detsis_id: 56230246
+  parent_yoksis_id: 122029
+  district_id: Atakum
+-
+  name: Atom Ve Molekül Fiziği Anabilim Dalı Başkanlığı
+  detsis_id: 70813888
+  parent_yoksis_id: 122018
+  district_id: Atakum
+-
+  name: Biyokimya Anabilim Dalı Başkanlığı
+  detsis_id: 38077292
+  parent_yoksis_id: 122030
+  district_id: Atakum
+-
+  name: Fizikokimya Anabilim Dalı Başkanlığı
+  detsis_id: 33868171
+  parent_yoksis_id: 122031
+  district_id: Atakum
+-
+  name: Matematik Bölüm Başkanlığı
+  detsis_id: 32115404
+  parent_yoksis_id: 122033
+  district_id: Atakum
+-
+  name: Cebir Ve Sayılar Teorisi Anabilim Dalı Başkanlığı
+  detsis_id: 59241429
+  parent_yoksis_id: 122034
+  district_id: Atakum
+-
+  name: Fonksiyonlar Teorisi Ve Fonksiyonel Analiz Anabilim Dalı Başkanlığı
+  detsis_id: 41492042
+  parent_yoksis_id: 147737
+  district_id: Atakum
+-
+  name: Geometri Anabilim Dalı Başkanlığı
+  detsis_id: 84142827
+  parent_yoksis_id: 122036
+  district_id: Atakum
+-
+  name: Matematiğin Temelleri Ve Matematik Lojik Anabilim Dalı Başkanlığı
+  detsis_id: 98043419
+  parent_yoksis_id: 122037
+  district_id: Atakum
+-
+  name: Topoloji Anabilim Dalı Başkanlığı
+  detsis_id: 84021492
+  parent_yoksis_id: 122038
+  district_id: Atakum
+-
+  name: Uygulamalı Matematik Anabilim Dalı Başkanlığı
+  detsis_id: 13823793
+  parent_yoksis_id: 122039
+  district_id: Atakum
+-
+  name: Moleküler Biyoloji Ve Genetik Bölüm Başkanlığı
+  detsis_id: 73947134
+  parent_yoksis_id: 212950
+  district_id: Atakum
+-
+  name: Psikoloji Bölüm Başkanlığı
+  detsis_id: 17469156
+  parent_yoksis_id: 122040
+  district_id: Atakum
+-
+  name: Deneysel Psikoloji Anabilim Dalı Başkanlığı
+  detsis_id: 38605357
+  parent_yoksis_id: 122041
+  district_id: Atakum
+-
+  name: Gelişim Psikolojisi Anabilim Dalı Başkanlığı
+  detsis_id: 13410412
+  parent_yoksis_id: 122042
+  district_id: Atakum
+-
+  name: Psikometri Anabilim Dalı Başkanlığı
+  detsis_id: 40231245
+  parent_yoksis_id: 122043
+  district_id: Atakum
+-
+  name: Sosyal Psikoloji Anabilim Dalı Başkanlığı
+  detsis_id: 85810235
+  parent_yoksis_id: 122044
+  district_id: Atakum
+-
+  name: Uygulamalı Psikoloji Anabilim Dalı Başkanlığı
+  detsis_id: 53175826
+  parent_yoksis_id: 128019
+  district_id: Atakum
+-
+  name: Sanat Tarihi Bölüm Başkanlığı
+  detsis_id: 80726151
+  parent_yoksis_id: 166108
+  district_id: Atakum
+-
+  name: Batı Sanatı Anabilim Dalı Başkanlığı
+  detsis_id: 87499534
+  parent_yoksis_id: 166111
+  district_id: Atakum
+-
+  name: Bizans Sanatı Anabilim Dalı Başkanlığı
+  detsis_id: 71328794
+  parent_yoksis_id: 166110
+  district_id: Atakum
+-
+  name: Çağdaş Sanat Anabilim Dalı Başkanlığı
+  detsis_id: 49177713
+  parent_yoksis_id: 166112
+  district_id: Atakum
+-
+  name: Türk İslam Sanatı Anabilim Dalı Başkanlığı
+  detsis_id: 17950384
+  parent_yoksis_id: 166109
+  district_id: Atakum
+-
+  name: Sosyoloji Bölüm Başkanlığı
+  detsis_id: 17393991
+  parent_yoksis_id: 122077
+  district_id: Atakum
+-
+  name: Genel Sosyoloji Ve Metodoloji Anabilim Dalı Başkanlığı
+  detsis_id: 13336011
+  parent_yoksis_id: 319344
+  district_id: Atakum
+-
+  name: Kurumlar Sosyolojisi Anabilim Dalı Başkanlığı
+  detsis_id: 89011487
+  parent_yoksis_id: 319345
+  district_id: Atakum
+-
+  name: Uygulamalı Sosyoloji Anabilim Dalı Başkanlığı
+  detsis_id: 26626383
+  parent_yoksis_id: 319346
+  district_id: Atakum
+-
+  name: Tarih Bölüm Başkanlığı
+  detsis_id: 59711119
+  parent_yoksis_id: 122045
+  district_id: Atakum
+-
+  name: Eski Çağ Tarihi Anabilim Dalı Başkanlığı
+  detsis_id: 34173675
+  parent_yoksis_id: 122046
+  district_id: Atakum
+-
+  name: Genel Türk Tarihi Anabilim Dalı Başkanlığı
+  detsis_id: 20652998
+  parent_yoksis_id: 174942
+  district_id: Atakum
+-
+  name: Orta Çağ Tarihi Anabilim Dalı Başkanlığı
+  detsis_id: 89443286
+  parent_yoksis_id: 174941
+  district_id: Atakum
+-
+  name: Türkiye Cumhuriyeti Tarihi Anabilim Dalı Başkanlığı
+  detsis_id: 69157605
+  parent_yoksis_id: 122047
+  district_id: Atakum
+-
+  name: Yakın Çağ Tarihi Anabilim Dalı Başkanlığı
+  detsis_id: 28860819
+  parent_yoksis_id: 122048
+  district_id: Atakum
+-
+  name: Yeni Çağ Tarihi Anabilim Dalı Başkanlığı
+  detsis_id: 43153589
+  parent_yoksis_id: 122049
+  district_id: Atakum
+-
+  name: Türk Dili Ve Edebiyatı Bölüm Başkanlığı
+  detsis_id: 60093878
+  parent_yoksis_id: 122050
+  district_id: Atakum
+-
+  name: Çağdaş Türk Dilleri Ve Edebiyatları Anabilim Dalı Başkanlığı
+  detsis_id: 48603806
+  parent_yoksis_id: 122056
+  district_id: Atakum
+-
+  name: Eski Türk Dili Anabilim Dalı Başkanlığı
+  detsis_id: 52734793
+  parent_yoksis_id: 122051
+  district_id: Atakum
+-
+  name: Eski Türk Edebiyatı Anabilim Dalı Başkanlığı
+  detsis_id: 20586288
+  parent_yoksis_id: 122052
+  district_id: Atakum
+-
+  name: Türk Halk Edebiyatı Anabilim Dalı Başkanlığı
+  detsis_id: 39556959
+  parent_yoksis_id: 122055
+  district_id: Atakum
+-
+  name: Yeni Türk Dili Anabilim Dalı Başkanlığı
+  detsis_id: 58411407
+  parent_yoksis_id: 122053
+  district_id: Atakum
+-
+  name: Yeni Türk Edebiyatı Anabilim Dalı Başkanlığı
+  detsis_id: 38027367
+  parent_yoksis_id: 122054
+  district_id: Atakum
+-
+  name: Fen Edebiyat Fakülte Disiplin Kurulu
+  detsis_id: 68341997
+  parent_yoksis_id: 41130367
+  district_id: Atakum
+-
+  name: Fen Edebiyat Fakülte Kurulu
+  detsis_id: 20824451
+  parent_yoksis_id: 41130367
+  district_id: Atakum
+-
+  name: Fen Edebiyat Fakülte Yönetim Kurulu
+  detsis_id: 14753958
+  parent_yoksis_id: 41130367
+  district_id: Atakum
+-
+  name: Gelişimsel Eğitim Araştırma Uygulama Merkezi Müdürlüğü
+  detsis_id: 70080549
+  parent_yoksis_id: 122391
+  district_id: Atakum
+-
+  name: Güzel Sanatlar Bölüm Başkanlığı
+  detsis_id: 54143312
+  parent_yoksis_id: 169450
+  district_id: Atakum
+-
+  name: Güzel Sanatlar Enstitüsü Müdürlüğü
+  detsis_id: 28913907
+  parent_yoksis_id: 208606
+  district_id: Atakum
+-
+  name: Güzel Sanatlar Enstitü Sekreterliği
+  detsis_id: 64024110
+  parent_yoksis_id: 28913907
+  district_id: Atakum
+-
+  name: Tıbbi Resimleme Anabilim Dalı Başkanlığı
+  detsis_id: 83982316
+  parent_yoksis_id: 278818
+  district_id: Atakum
+-
+  name: Güzel Sanatlar Enstitü Disiplin Kurulu
+  detsis_id: 94725245
+  parent_yoksis_id: 28913907
+  district_id: Atakum
+-
+  name: Güzel Sanatlar Enstitü Kurulu
+  detsis_id: 86004387
+  parent_yoksis_id: 28913907
+  district_id: Atakum
+-
+  name: Güzel Sanatlar Enstitü Yönetim Kurulu
+  detsis_id: 28791890
+  parent_yoksis_id: 28913907
+  district_id: Atakum
+-
+  name: Hukuk Müşavirliği
+  detsis_id: 42405272
+  parent_yoksis_id: 122287
+  district_id: Atakum
+-
+  name: İdari Ve Mali İşler Daire Başkanlığı
+  detsis_id: 15327320
+  parent_yoksis_id: 122287
+  district_id: Atakum
+-
+  name: İktisadi Ve İdari Bilimler Fakültesi Dekanlığı
+  detsis_id: 50569681
+  parent_yoksis_id: 122181
+  district_id: Atakum
+-
+  name: İktisadi Ve İdari Bilimler Fakülte Sekreterliği
+  detsis_id: 23904279
+  parent_yoksis_id: 122181
+  district_id: Atakum
+-
+  name: İktisat Bölüm Başkanlığı
+  detsis_id: 85215827
+  parent_yoksis_id: 122182
+  district_id: Atakum
+-
+  name: İktisadi Gelişme Ve Uluslararası İktisat Anabilim Dalı Başkanlığı
+  detsis_id: 69363381
+  parent_yoksis_id: 209993
+  district_id: Atakum
+-
+  name: İktisat Politikası Anabilim Dalı Başkanlığı
+  detsis_id: 82457173
+  parent_yoksis_id: 209991
+  district_id: Atakum
+-
+  name: İktisat Teorisi Anabilim Dalı Başkanlığı
+  detsis_id: 38412874
+  parent_yoksis_id: 209990
+  district_id: Atakum
+-
+  name: İşletme Bölüm Başkanlığı
+  detsis_id: 50848157
+  parent_yoksis_id: 128030
+  district_id: Atakum
+-
+  name: Muhasebe Ve Finansman Anabilim Dalı Başkanlığı
+  detsis_id: 77148849
+  parent_yoksis_id: 140383
+  district_id: Atakum
+-
+  name: Sayısal Yöntemler Anabilim Dalı Başkanlığı
+  detsis_id: 54568174
+  parent_yoksis_id: 140384
+  district_id: Atakum
+-
+  name: Üretim Yönetimi Ve Pazarlama Anabilim Dalı Başkanlığı
+  detsis_id: 69958571
+  parent_yoksis_id: 140243
+  district_id: Atakum
+-
+  name: Yönetim Ve Organizasyon Anabilim Dalı Başkanlığı
+  detsis_id: 41808829
+  parent_yoksis_id: 140241
+  district_id: Atakum
+-
+  name: Siyaset Bilimi Ve Kamu Yönetimi Bölüm Başkanlığı
+  detsis_id: 53132832
+  parent_yoksis_id: 128036
+  district_id: Atakum
+-
+  name: Hukuk Bilimleri Anabilim Dalı Başkanlığı
+  detsis_id: 69480894
+  parent_yoksis_id: 140256
+  district_id: Atakum
+-
+  name: Kentleşme Ve Çevre Sorunları Anabilim Dalı Başkanlığı
+  detsis_id: 28428836
+  parent_yoksis_id: 140259
+  district_id: Atakum
+-
+  name: Yönetim Bilimleri Anabilim Dalı Başkanlığı
+  detsis_id: 80965038
+  parent_yoksis_id: 140262
+  district_id: Atakum
+-
+  name: Uluslararası İlişkiler Bölüm Başkanlığı
+  detsis_id: 90667682
+  parent_yoksis_id: 128039
+  district_id: Atakum
+-
+  name: Uluslararası Ticaret Ve Lojistik Bölüm Başkanlığı
+  detsis_id: 26676436
+  parent_yoksis_id: 235948
+  district_id: Atakum
+-
+  name: Lojistik Ve Tedarik Zinciri Anabilim Dalı Başkanlığı
+  detsis_id: 36300383
+  parent_yoksis_id: 326681
+  district_id: Atakum
+-
+  name: İktisadi Ve İdari Bilimler Fakülte Disiplin Kurulu
+  detsis_id: 58745977
+  parent_yoksis_id: 50569681
+  district_id: Atakum
+-
+  name: İktisadi Ve İdari Bilimler Fakülte Kurulu
+  detsis_id: 58611596
+  parent_yoksis_id: 50569681
+  district_id: Atakum
+-
+  name: İktisadi Ve İdari Bilimler Fakülte Yönetim Kurulu
+  detsis_id: 81660084
+  parent_yoksis_id: 50569681
+  district_id: Atakum
+-
+  name: İlahiyat Fakültesi Dekanlığı
+  detsis_id: 79586685
+  parent_yoksis_id: 122157
+  district_id: Atakum
+-
+  name: İlahiyat Fakülte Sekreterliği
+  detsis_id: 10986835
+  parent_yoksis_id: 79586685
+  district_id: Atakum
+-
+  name: Felsefe Ve Din Bilimleri Bölüm Başkanlığı
+  detsis_id: 17646606
+  parent_yoksis_id: 122166
+  district_id: Atakum
+-
+  name: Din Eğitimi Anabilim Dalı Başkanlığı
+  detsis_id: 78917437
+  parent_yoksis_id: 122167
+  district_id: Atakum
+-
+  name: Din Felsefesi Anabilim Dalı Başkanlığı
+  detsis_id: 52443415
+  parent_yoksis_id: 122171
+  district_id: Atakum
+-
+  name: Din Psikolojisi Anabilim Dalı Başkanlığı
+  detsis_id: 45455078
+  parent_yoksis_id: 122174
+  district_id: Atakum
+-
+  name: Din Sosyolojisi Anabilim Dalı Başkanlığı
+  detsis_id: 67743338
+  parent_yoksis_id: 122173
+  district_id: Atakum
+-
+  name: Dinler Tarihi Anabilim Dalı Başkanlığı
+  detsis_id: 17194020
+  parent_yoksis_id: 122168
+  district_id: Atakum
+-
+  name: Felsefe Tarihi Anabilim Dalı Başkanlığı
+  detsis_id: 60927548
+  parent_yoksis_id: 122169
+  district_id: Atakum
+-
+  name: İslam Felsefesi Anabilim Dalı Başkanlığı
+  detsis_id: 51130924
+  parent_yoksis_id: 122170
+  district_id: Atakum
+-
+  name: Mantık Anabilim Dalı Başkanlığı
+  detsis_id: 72866993
+  parent_yoksis_id: 122172
+  district_id: Atakum
+-
+  name: İlköğretim Din Kültürü Ve Ahlak Bilgisi Eğitimi Bölüm Başkanlığı
+  detsis_id: 19880815
+  parent_yoksis_id: 128027
+  district_id: Atakum
+-
+  name: İlköğretim Din Kültürü Ve Ahlak Bilgisi Eğitimi Anabilim Dalı Başkanlığı
+  detsis_id: 92769146
+  parent_yoksis_id: 122156
+  district_id: Atakum
+-
+  name: İslam Tarihi Ve Sanatları Bölüm Başkanlığı
+  detsis_id: 54819629
+  parent_yoksis_id: 122175
+  district_id: Atakum
+-
+  name: Din Musikisi Anabilim Dalı Başkanlığı
+  detsis_id: 51223175
+  parent_yoksis_id: 122179
+  district_id: Atakum
+-
+  name: İslam Tarihi Anabilim Dalı Başkanlığı
+  detsis_id: 87751793
+  parent_yoksis_id: 122176
+  district_id: Atakum
+-
+  name: Türk İslam Edebiyatı Anabilim Dalı Başkanlığı
+  detsis_id: 68486278
+  parent_yoksis_id: 122178
+  district_id: Atakum
+-
+  name: Türk İslam Sanatları Tarihi Anabilim Dalı Başkanlığı
+  detsis_id: 87820776
+  parent_yoksis_id: 122172
+  district_id: Atakum
+-
+  name: Temel İslam Bilimleri Bölüm Başkanlığı
+  detsis_id: 24155143
+  parent_yoksis_id: 122158
+  district_id: Atakum
+-
+  name: Arap Dili Ve Belagatı Anabilim Dalı Başkanlığı
+  detsis_id: 88548661
+  parent_yoksis_id: 122165
+  district_id: Atakum
+-
+  name: Hadis Anabilim Dalı Başkanlığı
+  detsis_id: 20689546
+  parent_yoksis_id: 122159
+  district_id: Atakum
+-
+  name: İslam Hukuku Anabilim Dalı Başkanlığı
+  detsis_id: 76957991
+  parent_yoksis_id: 122162
+  district_id: Atakum
+-
+  name: İslam Mezhepleri Anabilim Dalı Başkanlığı
+  detsis_id: 87438560
+  parent_yoksis_id: 122163
+  district_id: Atakum
+-
+  name: Kelam Anabilim Dalı Başkanlığı
+  detsis_id: 10110400
+  parent_yoksis_id: 122160
+  district_id: Atakum
+-
+  name: 'Kur''An-I Kerim Okuma Ve Kıraat İlmi Anabilim Dalı Başkanlığı'
+  detsis_id: 41600798
+  parent_yoksis_id: 166016
+  district_id: Atakum
+-
+  name: Tasavvuf Anabilim Dalı Başkanlığı
+  detsis_id: 88981654
+  parent_yoksis_id: 122164
+  district_id: Atakum
+-
+  name: Tefsir Anabilim Dalı Başkanlığı
+  detsis_id: 21962476
+  parent_yoksis_id: 122161
+  district_id: Atakum
+-
+  name: İlahiyat Fakülte Disiplin Kurulu
+  detsis_id: 76774637
+  parent_yoksis_id: 79586685
+  district_id: Atakum
+-
+  name: İlahiyat Fakülte Kurulu
+  detsis_id: 90949410
+  parent_yoksis_id: 79586685
+  district_id: Atakum
+-
+  name: İlahiyat Fakülte Yönetim Kurulu
+  detsis_id: 55929602
+  parent_yoksis_id: 79586685
+  district_id: Atakum
+-
+  name: İş Sağlığı Ve Güvenliği, Meslekhastalıkları Uygulama Ve Araştırma Merkezi Müdürlüğü
+  detsis_id: 32551313
+  parent_yoksis_id: 309995
+  district_id: Atakum
+-
+  name: Kadın Ve Toplum Uygulama Ve Araştırma Merkezi Müdürlüğü
+  detsis_id: 89356180
+  parent_yoksis_id: 232499
+  district_id: Atakum
+-
+  name: Kalite Koordinatörlüğü
+  detsis_id: 83781499
+  parent_yoksis_id: 122287
+  district_id: Atakum
+-
+  name: Karadeniz İleri Teknoloji Araştırma Ve Uygulama Merkezi Müdürlüğü
+  detsis_id: 38701709
+  parent_yoksis_id: 311015
+  district_id: Atakum
+-
+  name: Kariyer Merkezi Müdürlüğü
+  detsis_id: 24802611
+  parent_yoksis_id: 122287
+  district_id: Atakum
+-
+  name: Kök Hücre Araştırma Merkezi Müdürlüğü
+  detsis_id: 83478762
+  parent_yoksis_id: 122287
+  district_id: Atakum
+-
+  name: Kütüphane Ve Dokümantasyon Daire Başkanlığı
+  detsis_id: 51831040
+  parent_yoksis_id: 122287
+  district_id: Atakum
+-
+  name: Mevlana Değişim Programı Koordinatörlüğü
+  detsis_id: 23314928
+  parent_yoksis_id: 122287
+  district_id: Atakum
+-
+  name: Mühendislik Fakültesi Dekanlığı
+  detsis_id: 81181891
+  parent_yoksis_id: 269525
+  district_id: Atakum
+-
+  name: Bilgisayar Mühendisliği Bölüm Başkanlığı
+  detsis_id: 25705727
+  parent_yoksis_id: 122184
+  district_id: Atakum
+-
+  name: Bilgisayar Bilimleri Anabilim Dalı Başkanlığı
+  detsis_id: 52799688
+  parent_yoksis_id: 122185
+  district_id: Atakum
+-
+  name: Bilgisayar Donanımı Anabilim Dalı Başkanlığı
+  detsis_id: 97615129
+  parent_yoksis_id: 122186
+  district_id: Atakum
+-
+  name: Bilgisayar Yazılımı Anabilim Dalı Başkanlığı
+  detsis_id: 22060668
+  parent_yoksis_id: 122187
+  district_id: Atakum
+-
+  name: Çevre Mühendisliği Bölüm Başkanlığı
+  detsis_id: 90345454
+  parent_yoksis_id: 122188
+  district_id: Atakum
+-
+  name: Çevre Mühendisliği Anabilim Dalı Başkanlığı
+  detsis_id: 98041822
+  parent_yoksis_id: 122191
+  district_id: Atakum
+-
+  name: Elektrik-Elektronik Mühendisliği Bölüm Başkanlığı
+  detsis_id: 86351342
+  parent_yoksis_id: 122225
+  district_id: Atakum
+-
+  name: Devreler Ve Sistemler Anabilim Dalı Başkanlığı
+  detsis_id: 15980226
+  parent_yoksis_id: 201436
+  district_id: Atakum
+-
+  name: Elektrik Makineleri Anabilim Dalı Başkanlığı
+  detsis_id: 42143048
+  parent_yoksis_id: 122227
+  district_id: Atakum
+-
+  name: Elektrik Tesisleri Anabilim Dalı Başkanlığı
+  detsis_id: 72919977
+  parent_yoksis_id: 122228
+  district_id: Atakum
+-
+  name: Elektromanyetik Alanlar Ve Mikrodalga Tekniği Anabilim Dalı Başkanlığı
+  detsis_id: 41364293
+  parent_yoksis_id: 122232
+  district_id: Atakum
+-
+  name: Elektronik Anabilim Dalı Başkanlığı
+  detsis_id: 79122794
+  parent_yoksis_id: 122229
+  district_id: Atakum
+-
+  name: Kontrol Ve Kumanda Sistemleri Anabilim Dalı Başkanlığı
+  detsis_id: 15190730
+  parent_yoksis_id: 122230
+  district_id: Atakum
+-
+  name: Telekomünikasyon Anabilim Dalı Başkanlığı
+  detsis_id: 44826496
+  parent_yoksis_id: 122231
+  district_id: Atakum
+-
+  name: Endüstri Mühendisliği Bölüm Başkanlığı
+  detsis_id: 75972044
+  parent_yoksis_id: 122192
+  district_id: Atakum
+-
+  name: Endüstri Mühendisliği Anabilim Dalı Başkanlığı
+  detsis_id: 69257390
+  parent_yoksis_id: 122193
+  district_id: Atakum
+-
+  name: Yöneylem Araştırması Anabilim Dalı Başkanlığı
+  detsis_id: 80716811
+  parent_yoksis_id: 122194
+  district_id: Atakum
+-
+  name: Mühendislik Fakülte Sekreterliği
+  detsis_id: 45476048
+  parent_yoksis_id: 81181891
+  district_id: Atakum
+-
+  name: Gıda Mühendisliği Bölüm Başkanlığı
+  detsis_id: 20437969
+  parent_yoksis_id: 122195
+  district_id: Atakum
+-
+  name: Gıda Bilimleri Anabilim Dalı Başkanlığı
+  detsis_id: 93637083
+  parent_yoksis_id: 122196
+  district_id: Atakum
+-
+  name: Gıda Teknolojisi Anabilim Dalı Başkanlığı
+  detsis_id: 16349405
+  parent_yoksis_id: 122197
+  district_id: Atakum
+-
+  name: Harita Mühendisliği Bölüm Başkanlığı
+  detsis_id: 23060321
+  parent_yoksis_id: 122204
+  district_id: Atakum
+-
+  name: Fotogrametri Anabilim Dalı Başkanlığı
+  detsis_id: 42331622
+  parent_yoksis_id: 122205
+  district_id: Atakum
+-
+  name: Jeodezi Anabilim Dalı Başkanlığı
+  detsis_id: 78235995
+  parent_yoksis_id: 122206
+  district_id: Atakum
+-
+  name: Kamu Ölçmeleri Anabilim Dalı Başkanlığı
+  detsis_id: 34215046
+  parent_yoksis_id: 122208
+  district_id: Atakum
+-
+  name: Kartografya Anabilim Dalı Başkanlığı
+  detsis_id: 80937560
+  parent_yoksis_id: 128044
+  district_id: Atakum
+-
+  name: Ölçme Tekniği Anabilim Dalı Başkanlığı
+  detsis_id: 17556533
+  parent_yoksis_id: 122207
+  district_id: Atakum
+-
+  name: İnşaat Mühendisliği Bölüm Başkanlığı
+  detsis_id: 56621346
+  parent_yoksis_id: 122198
+  district_id: Atakum
+-
+  name: Geoteknik Anabilim Dalı Başkanlığı
+  detsis_id: 77199613
+  parent_yoksis_id: 122199
+  district_id: Atakum
+-
+  name: Hidrolik Anabilim Dalı Başkanlığı
+  detsis_id: 39969170
+  parent_yoksis_id: 122200
+  district_id: Atakum
+-
+  name: Mekanik Anabilim Dalı Başkanlığı
+  detsis_id: 92414147
+  parent_yoksis_id: 122201
+  district_id: Atakum
+-
+  name: Ulaştırma Anabilim Dalı Başkanlığı
+  detsis_id: 54234801
+  parent_yoksis_id: 122202
+  district_id: Atakum
+-
+  name: Yapı Anabilim Dalı Başkanlığı
+  detsis_id: 82015179
+  parent_yoksis_id: 122203
+  district_id: Atakum
+-
+  name: Kimya Mühendisliği Bölüm Başkanlığı
+  detsis_id: 43198645
+  parent_yoksis_id: 122209
+  district_id: Atakum
+-
+  name: Kimyasal Teknolojiler Anabilim Dalı Başkanlığı
+  detsis_id: 97722893
+  parent_yoksis_id: 122210
+  district_id: Atakum
+-
+  name: Proses Ve Reaktör Anabilim Dalı Başkanlığı
+  detsis_id: 73623994
+  parent_yoksis_id: 122211
+  district_id: Atakum
+-
+  name: Temel İşlemler Anabilim Dalı Başkanlığı
+  detsis_id: 44479733
+  parent_yoksis_id: 122213
+  district_id: Atakum
+-
+  name: Termodinamik Ve Enerji Teknolojileri Anabilim Dalı Başkanlığı
+  detsis_id: 31208660
+  parent_yoksis_id: 122212
+  district_id: Atakum
+-
+  name: Makine Mühendisliği Bölüm Başkanlığı
+  detsis_id: 34442177
+  parent_yoksis_id: 122215
+  district_id: Atakum
+-
+  name: Enerji Anabilim Dalı Başkanlığı
+  detsis_id: 20732671
+  parent_yoksis_id: 122216
+  district_id: Atakum
+-
+  name: Konstrüksiyon Ve İmalat Anabilim Dalı Başkanlığı
+  detsis_id: 73652245
+  parent_yoksis_id: 122217
+  district_id: Atakum
+-
+  name: Makine Teorisi Ve Dinamiği Anabilim Dalı Başkanlığı
+  detsis_id: 30043858
+  parent_yoksis_id: 122218
+  district_id: Atakum
+-
+  name: Mekanik Anabilim Dalı Başkanlığı
+  detsis_id: 53184312
+  parent_yoksis_id: 122219
+  district_id: Atakum
+-
+  name: Termodinamik Anabilim Dalı Başkanlığı
+  detsis_id: 34154716
+  parent_yoksis_id: 122220
+  district_id: Atakum
+-
+  name: Metalurji Ve Malzeme Mühendisliği Bölüm Başkanlığı
+  detsis_id: 50636204
+  parent_yoksis_id: 122223
+  district_id: Atakum
+-
+  name: Metalurji Ve Malzeme Mühendisliği Anabilim Dalı Başkanlığı
+  detsis_id: 75101718
+  parent_yoksis_id: 122224
+  district_id: Atakum
+-
+  name: Mühendislik Fakülte Disiplin Kurulu
+  detsis_id: 35273770
+  parent_yoksis_id: 81181891
+  district_id: Atakum
+-
+  name: Mühendislik Fakülte Kurulu
+  detsis_id: 43335087
+  parent_yoksis_id: 81181891
+  district_id: Atakum
+-
+  name: Mühendislik Fakülte Yönetim Kurulu
+  detsis_id: 96980227
+  parent_yoksis_id: 81181891
+  district_id: Atakum
+-
+  name: Okul Öncesi Eğitimi Uygulama Ve Araştırma Merkezi Müdürlüğü
+  detsis_id: 83716618
+  parent_yoksis_id: 232712
+  district_id: Atakum
+-
+  name: Ondokuz Mayıs Üniversitesi Mezunlar Koordinatörlüğü
+  detsis_id: 39073269
+  parent_yoksis_id: 122287
+  district_id: Atakum
+-
+  name: Ornitoloji Araştırma Merkezi Müdürlüğü
+  detsis_id: 50636870
+  parent_yoksis_id: 169410
+  district_id: Atakum
+-
+  name: Öğrenci İşleri Daire Başkanlığı
+  detsis_id: 36607105
+  parent_yoksis_id: 122287
+  district_id: Atakum
+-
+  name: Öğretim Üyesi Yetiştirme Programı Koordinatörlüğü
+  detsis_id: 62354096
+  parent_yoksis_id: 122287
+  district_id: Atakum
+-
+  name: Personel Daire Başkanlığı
+  detsis_id: 90212823
+  parent_yoksis_id: 122287
+  district_id: Atakum
+-
+  name: Proje Yönetim Ofisi Başkanlığı
+  detsis_id: 59712486
+  parent_yoksis_id: 122287
+  district_id: Atakum
+-
+  name: Psikoloji Uygulama Ve Araştırma Merkezi Müdürlüğü
+  detsis_id: 12947530
+  parent_yoksis_id: 284594
+  district_id: Atakum
+-
+  name: Sağlık Bilimleri Enstitüsü Müdürlüğü
+  detsis_id: 93771576
+  parent_yoksis_id: 122387
+  district_id: Atakum
+-
+  name: Sağlık Bilimleri Enstitü Disiplin Kurulu
+  detsis_id: 29283638
+  parent_yoksis_id: 93771576
+  district_id: Atakum
+-
+  name: Sağlık Bilimleri Enstitü Kurulu
+  detsis_id: 99323623
+  parent_yoksis_id: 93771576
+  district_id: Atakum
+-
+  name: Sağlık Bilimleri Enstitü Yönetim Kurulu
+  detsis_id: 99576486
+  parent_yoksis_id: 93771576
+  district_id: Atakum
+-
+  name: Sağlık Bilimleri Fakültesi Dekanlığı
+  detsis_id: 28050591
+  parent_yoksis_id: 293577
+  district_id: Atakum
+-
+  name: Beslenme Ve Diyetetik Bölüm Başkanlığı
+  detsis_id: 47124861
+  parent_yoksis_id: 293578
+  district_id: Atakum
+-
+  name: Beslenme Bilimleri Anabilim Dalı Başkanlığı
+  detsis_id: 29071444
+  parent_yoksis_id: 293587
+  district_id: Atakum
+-
+  name: Diyetetik Anabilim Dalı Başkanlığı
+  detsis_id: 13293441
+  parent_yoksis_id: 293583
+  district_id: Atakum
+-
+  name: Toplu Beslenme Sistemleri Anabilim Dalı Başkanlığı
+  detsis_id: 64472731
+  parent_yoksis_id: 293584
+  district_id: Atakum
+-
+  name: Toplum Beslenmesi Anabilim Dalı Başkanlığı
+  detsis_id: 94242427
+  parent_yoksis_id: 293585
+  district_id: Atakum
+-
+  name: Dil Ve Konuşma Terapisi Bölüm Başkanlığı
+  detsis_id: 49547628
+  parent_yoksis_id: 293579
+  district_id: Atakum
+-
+  name: Dil Ve Konuşma Terapisi Anabilim Dalı Başkanlığı
+  detsis_id: 25696470
+  parent_yoksis_id: 321515
+  district_id: Atakum
+-
+  name: Ebelik Bölüm Başkanlığı
+  detsis_id: 72517064
+  parent_yoksis_id: 293580
+  district_id: Atakum
+-
+  name: Ebelik Anabilim Dalı Başkanlığı
+  detsis_id: 23851096
+  parent_yoksis_id: 321512
+  district_id: Atakum
+-
+  name: Sağlık Bilimleri Fakülte Sekreterliği
+  detsis_id: 82204150
+  parent_yoksis_id: 28050591
+  district_id: Atakum
+-
+  name: Hemşirelik Bölüm Başkanlığı
+  detsis_id: 81006479
+  parent_yoksis_id: 293581
+  district_id: Atakum
+-
+  name: Cerrahi Hastalıkları Hemşireliği Anabilim Dalı Başkanlığı
+  detsis_id: 97315433
+  parent_yoksis_id: 293595
+  district_id: Atakum
+-
+  name: Çocuk Sağlığı Ve Hastalıkları Hemşireliği Anabilim Dalı Başkanlığı
+  detsis_id: 60330574
+  parent_yoksis_id: 293606
+  district_id: Atakum
+-
+  name: Doğum Ve Kadın Hastalıkları Hemşireliği Anabilim Dalı Başkanlığı
+  detsis_id: 11647793
+  parent_yoksis_id: 293607
+  district_id: Atakum
+-
+  name: Halk Sağlığı Hemşireliği Anabilim Dalı Başkanlığı
+  detsis_id: 15698631
+  parent_yoksis_id: 293608
+  district_id: Atakum
+-
+  name: Hemşirelik Esasları Anabilim Dalı Başkanlığı
+  detsis_id: 48885381
+  parent_yoksis_id: 293609
+  district_id: Atakum
+-
+  name: Hemşirelikte Yönetim Anabilim Dalı Başkanlığı
+  detsis_id: 45073324
+  parent_yoksis_id: 293600
+  district_id: Atakum
+-
+  name: İç Hastalıkları Hemşireliği Anabilim Dalı Başkanlığı
+  detsis_id: 17346464
+  parent_yoksis_id: 293601
+  district_id: Atakum
+-
+  name: Psikiyatri Hemşireliği Anabilim Dalı Başkanlığı
+  detsis_id: 65877367
+  parent_yoksis_id: 293602
+  district_id: Atakum
+-
+  name: Sağlık Yönetimi Bölüm Başkanlığı
+  detsis_id: 76382891
+  parent_yoksis_id: 293524
+  district_id: Atakum
+-
+  name: Sağlık Yönetimi Anabilim Dalı Başkanlığı
+  detsis_id: 39341962
+  parent_yoksis_id: 321513
+  district_id: Atakum
+-
+  name: Sosyal Hizmet Bölüm Başkanlığı
+  detsis_id: 60933651
+  parent_yoksis_id: 293525
+  district_id: Atakum
+-
+  name: Sosyal Hizmet Anabilim Dalı Başkanlığı
+  detsis_id: 16381147
+  parent_yoksis_id: 321514
+  district_id: Atakum
+-
+  name: Sağlık Bilimleri Fakülte Disiplin Kurulu
+  detsis_id: 30104911
+  parent_yoksis_id: 28050591
+  district_id: Atakum
+-
+  name: Sağlık Bilimleri Fakülte Kurulu
+  detsis_id: 78048140
+  parent_yoksis_id: 28050591
+  district_id: Atakum
+-
+  name: Sağlık Bilimleri Fakülte Yönetim Kurulu
+  detsis_id: 29075217
+  parent_yoksis_id: 28050591
+  district_id: Atakum
+-
+  name: Sağlık Hizmetleri Meslek Yüksekokulu Müdürlüğü
+  detsis_id: 45664456
+  parent_yoksis_id: 122336
+  district_id: Atakum
+-
+  name: Dişçilik Hizmetleri Bölüm Başkanlığı
+  detsis_id: 33810830
+  parent_yoksis_id: 207663
+  district_id: Atakum
+-
+  name: Sağlık Hizmetleri Meslek Yüksekokulu Sekreterliği
+  detsis_id: 90501840
+  parent_yoksis_id: 45664456
+  district_id: Atakum
+-
+  name: Sağlık Bakım Hizmetleri Bölüm Başkanlığı
+  detsis_id: 76762600
+  parent_yoksis_id: 240437
+  district_id: Atakum
+-
+  name: Tıbbi Hizmetler Ve Teknikler Bölüm Başkanlığı
+  detsis_id: 75296948
+  parent_yoksis_id: 169645
+  district_id: Atakum
+-
+  name: Sağlık Hizmetleri Meslek Yüksekokulu Disiplin Kurulu
+  detsis_id: 81688174
+  parent_yoksis_id: 45664456
+  district_id: Atakum
+-
+  name: Sağlık Hizmetleri Meslek Yüksekokulu Kurulu
+  detsis_id: 69429532
+  parent_yoksis_id: 45664456
+  district_id: Atakum
+-
+  name: Sağlık Hizmetleri Meslek Yüksekokulu Disiplin Kurulu
+  detsis_id: 60577894
+  parent_yoksis_id: 45664456
+  district_id: Atakum
+-
+  name: Sağlık Kültür Ve Spor Daire Başkanlığı
+  detsis_id: 53521241
+  parent_yoksis_id: 122287
+  district_id: Atakum
+-
+  name: Güzel Sanatlar Kampüsü Şube Müdürlüğü
+  detsis_id: 64211159
+  parent_yoksis_id: 53521241
+  district_id: Atakum
+-
+  name: İdari İşler Şube Müdürlüğü
+  detsis_id: 87380393
+  parent_yoksis_id: 53521241
+  district_id: Atakum
+-
+  name: İktisadi İşletme Şube Müdürlüğü
+  detsis_id: 88096012
+  parent_yoksis_id: 53521241
+  district_id: Atakum
+-
+  name: Kültür Ve Spor Şube Müdürlüğü
+  detsis_id: 27290195
+  parent_yoksis_id: 53521241
+  district_id: Atakum
+-
+  name: Mali İşler Şube Müdürlüğü
+  detsis_id: 69264226
+  parent_yoksis_id: 53521241
+  district_id: Atakum
+-
+  name: Sağlık Hizmetleri Şube Müdürlüğü
+  detsis_id: 50881910
+  parent_yoksis_id: 53521241
+  district_id: Atakum
+-
+  name: Sosyal Hizmetler Şube Müdürlüğü
+  detsis_id: 10539022
+  parent_yoksis_id: 53521241
+  district_id: Atakum
+-
+  name: Sosyal Bilimler Enstitüsü Müdürlüğü
+  detsis_id: 61232311
+  parent_yoksis_id: 122388
+  district_id: Atakum
+-
+  name: Sosyal Bilimler Enstitü Sekreterliği
+  detsis_id: 35792979
+  parent_yoksis_id: 61232311
+  district_id: Atakum
+-
+  name: Sosyal Bilimler Enstitü Disiplin Kurulu
+  detsis_id: 96478647
+  parent_yoksis_id: 61232311
+  district_id: Atakum
+-
+  name: Sosyal Bilimler Enstitü Kurulu
+  detsis_id: 24254010
+  parent_yoksis_id: 61232311
+  district_id: Atakum
+-
+  name: Sosyal Bilimler Enstitü Yönetim Kurulu
+  detsis_id: 83752120
+  parent_yoksis_id: 61232311
+  district_id: Atakum
+-
+  name: Strateji Geliştirme Daire Başkanlığı
+  detsis_id: 91511444
+  parent_yoksis_id: 122287
+  district_id: Atakum
+-
+  name: Bütçe Performans Program Şube Müdürlüğü
+  detsis_id: 18036936
+  parent_yoksis_id: 91511444
+  district_id: Atakum
+-
+  name: İç Kontrol Ve Ön Mali Kontrol Şube Müdürlüğü
+  detsis_id: 37272602
+  parent_yoksis_id: 91511444
+  district_id: Atakum
+-
+  name: Muhasebe Kesin Hesap Ve Raporlama Şube Müdürlüğü
+  detsis_id: 46578399
+  parent_yoksis_id: 91511444
+  district_id: Atakum
+-
+  name: Stratejik Planlama Şube Müdürlüğü
+  detsis_id: 56016456
+  parent_yoksis_id: 91511444
+  district_id: Atakum
+-
+  name: Sürekli Eğitim Merkezi Müdürlüğü
+  detsis_id: 12956141
+  parent_yoksis_id: 122389
+  district_id: Atakum
+-
+  name: Tarımsal Uygulama Ve Araştırma Merkezi Müdürlüğü
+  detsis_id: 60422539
+  parent_yoksis_id: 249894
+  district_id: Atakum
+-
+  name: Temiz Enerji Teknolojileri Uygulama Ve Araştırma Merkezi Müdürlüğü
+  detsis_id: 75539574
+  parent_yoksis_id: 169429
+  district_id: Atakum
+-
+  name: Tıp Fakültesi Dekanlığı
+  detsis_id: 45829229
+  parent_yoksis_id: 121947
+  district_id: Atakum
+-
+  name: Cerrahi Tıp Bilimleri Bölüm Başkanlığı
+  detsis_id: 96747049
+  parent_yoksis_id: 121948
+  district_id: Atakum
+-
+  name: Anesteziyoloji Ve Reanimasyon Anabilim Dalı Başkanlığı
+  detsis_id: 10295953
+  parent_yoksis_id: 121949
+  district_id: Atakum
+-
+  name: Beyin Ve Sinir Cerrahisi Anabilim Dalı Başkanlığı
+  detsis_id: 14505165
+  parent_yoksis_id: 121955
+  district_id: Atakum
+-
+  name: Çocuk Cerrahisi Anabilim Dalı Başkanlığı
+  detsis_id: 37843852
+  parent_yoksis_id: 121950
+  district_id: Atakum
+-
+  name: Genel Cerrahi Anabilim Dalı Başkanlığı
+  detsis_id: 17355633
+  parent_yoksis_id: 121951
+  district_id: Atakum
+-
+  name: Göğüs Cerrahisi Anabilim Dalı Başkanlığı
+  detsis_id: 16763371
+  parent_yoksis_id: 121960
+  district_id: Atakum
+-
+  name: Göz Hastalıkları Anabilim Dalı Başkanlığı
+  detsis_id: 89013421
+  parent_yoksis_id: 121952
+  district_id: Atakum
+-
+  name: Kadın Hastalıkları Ve Doğum Anabilim Dalı Başkanlığı
+  detsis_id: 79468029
+  parent_yoksis_id: 121953
+  district_id: Atakum
+-
+  name: Kalp Ve Damar Cerrahisi Anabilim Dalı Başkanlığı
+  detsis_id: 30391143
+  parent_yoksis_id: 121961
+  district_id: Atakum
+-
+  name: Kulak, Burun Ve Boğaz Hastalıkları Anabilim Dalı Başkanlığı
+  detsis_id: 34750814
+  parent_yoksis_id: 121954
+  district_id: Atakum
+-
+  name: Ortopedi Ve Travmatoloji Anabilim Dalı Başkanlığı
+  detsis_id: 91668077
+  parent_yoksis_id: 121956
+  district_id: Atakum
+-
+  name: Plastik, Rekonstrüktif Ve Estetik Cerrahi Anabilim Dalı Başkanlığı
+  detsis_id: 99848509
+  parent_yoksis_id: 121958
+  district_id: Atakum
+-
+  name: Tıbbi Patoloji Anabilim Dalı Başkanlığı
+  detsis_id: 95030594
+  parent_yoksis_id: 121957
+  district_id: Atakum
+-
+  name: Üroloji Anabilim Dalı Başkanlığı
+  detsis_id: 48834514
+  parent_yoksis_id: 121959
+  district_id: Atakum
+-
+  name: Dahili Tıp Bilimleri Bölüm Başkanlığı
+  detsis_id: 37439758
+  parent_yoksis_id: 121963
+  district_id: Atakum
+-
+  name: Acil Tıp Anabilim Dalı Başkanlığı
+  detsis_id: 85620421
+  parent_yoksis_id: 128016
+  district_id: Atakum
+-
+  name: Adli Tıp Anabilim Dalı Başkanlığı
+  detsis_id: 67655394
+  parent_yoksis_id: 121964
+  district_id: Atakum
+-
+  name: Aile Hekimliği Anabilim Dalı Başkanlığı
+  detsis_id: 69061891
+  parent_yoksis_id: 121976
+  district_id: Atakum
+-
+  name: Çocuk Sağlığı Ve Hastalıkları Anabilim Dalı Başkanlığı
+  detsis_id: 35408457
+  parent_yoksis_id: 121965
+  district_id: Atakum
+-
+  name: Çocuk Ve Ergen Ruh Sağlığı Ve Hastalıkları Anabilim Dalı Başkanlığı
+  detsis_id: 58191623
+  parent_yoksis_id: 121984
+  district_id: Atakum
+-
+  name: Dermatoloji Anabilim Dalı Başkanlığı
+  detsis_id: 82295067
+  parent_yoksis_id: 169259
+  district_id: Atakum
+-
+  name: Enfeksiyon Hastalıkları Ve Klinik Mikrobiyoloji Anabilim Dalı Başkanlığı
+  detsis_id: 14534803
+  parent_yoksis_id: 121983
+  district_id: Atakum
+-
+  name: Fiziksel Tıp Ve Rehabilitasyon Anabilim Dalı Başkanlığı
+  detsis_id: 93349843
+  parent_yoksis_id: 121968
+  district_id: Atakum
+-
+  name: Göğüs Hastalıkları Anabilim Dalı Başkanlığı
+  detsis_id: 38098876
+  parent_yoksis_id: 121977
+  district_id: Atakum
+-
+  name: Halk Sağlığı Anabilim Dalı Başkanlığı
+  detsis_id: 35103913
+  parent_yoksis_id: 121969
+  district_id: Atakum
+-
+  name: Hava Ve Uzay Hekimliği Anabilim Dalı Başkanlığı
+  detsis_id: 37920755
+  parent_yoksis_id: 121980
+  district_id: Atakum
+-
+  name: İç Hastalıkları Anabilim Dalı Başkanlığı
+  detsis_id: 44076052
+  parent_yoksis_id: 121970
+  district_id: Atakum
+-
+  name: Kardiyoloji Anabilim Dalı Başkanlığı
+  detsis_id: 29391255
+  parent_yoksis_id: 121981
+  district_id: Atakum
+-
+  name: Nöroloji Anabilim Dalı Başkanlığı
+  detsis_id: 63076498
+  parent_yoksis_id: 121971
+  district_id: Atakum
+-
+  name: Nükleer Tıp Anabilim Dalı Başkanlığı
+  detsis_id: 93420269
+  parent_yoksis_id: 121972
+  district_id: Atakum
+-
+  name: Psikiyatri Anabilim Dalı Başkanlığı
+  detsis_id: 28960095
+  parent_yoksis_id: 169288
+  district_id: Atakum
+-
+  name: Radyasyon Onkolojisi Anabilim Dalı Başkanlığı
+  detsis_id: 80058605
+  parent_yoksis_id: 121978
+  district_id: Atakum
+-
+  name: Radyodiagnostik Anabilim Dalı Başkanlığı
+  detsis_id: 18393763
+  parent_yoksis_id: 143494
+  district_id: Atakum
+-
+  name: Tıbbi Farmakoloji Anabilim Dalı Başkanlığı
+  detsis_id: 19915580
+  parent_yoksis_id: 121967
+  district_id: Atakum
+-
+  name: Tıbbi Genetik Anabilim Dalı Başkanlığı
+  detsis_id: 98982588
+  parent_yoksis_id: 121982
+  district_id: Atakum
+-
+  name: Tıp Fakültesi Sekreterliği
+  detsis_id: 19054817
+  parent_yoksis_id: 45829229
+  district_id: Atakum
+-
+  name: Temel Tıp Bilimleri Bölüm Başkanlığı
+  detsis_id: 21673019
+  parent_yoksis_id: 121985
+  district_id: Atakum
+-
+  name: Anatomi Anabilim Dalı Başkanlığı
+  detsis_id: 22109282
+  parent_yoksis_id: 121992
+  district_id: Atakum
+-
+  name: Biyofizik Anabilim Dalı Başkanlığı
+  detsis_id: 13090298
+  parent_yoksis_id: 121991
+  district_id: Atakum
+-
+  name: Biyoistatistik Ve Tıp Bilişimi Anabilim Dalı Başkanlığı
+  detsis_id: 74379093
+  parent_yoksis_id: 121994
+  district_id: Atakum
+-
+  name: Fizyoloji Anabilim Dalı Başkanlığı
+  detsis_id: 47287339
+  parent_yoksis_id: 121988
+  district_id: Atakum
+-
+  name: Histoloji Ve Embriyoloji Anabilim Dalı Başkanlığı
+  detsis_id: 67652676
+  parent_yoksis_id: 121993
+  district_id: Atakum
+-
+  name: Tıbbi Biyokimya Anabilim Dalı Başkanlığı
+  detsis_id: 55719193
+  parent_yoksis_id: 121986
+  district_id: Atakum
+-
+  name: Tıbbi Biyoloji Anabilim Dalı Başkanlığı
+  detsis_id: 18496168
+  parent_yoksis_id: 121990
+  district_id: Atakum
+-
+  name: Tıbbi Mikrobiyoloji Anabilim Dalı Başkanlığı
+  detsis_id: 58991175
+  parent_yoksis_id: 121989
+  district_id: Atakum
+-
+  name: Tıp Eğitimi Anabilim Dalı Başkanlığı
+  detsis_id: 27867424
+  parent_yoksis_id: 121995
+  district_id: Atakum
+-
+  name: Tıp Tarihi Ve Etik Anabilim Dalı Başkanlığı
+  detsis_id: 82000575
+  parent_yoksis_id: 121987
+  district_id: Atakum
+-
+  name: Ameliyathane Koordinasyon Kurulu
+  detsis_id: 64933695
+  parent_yoksis_id: 45829229
+  district_id: Atakum
+-
+  name: Tıp Fakülte Disiplin Kurulu
+  detsis_id: 95040631
+  parent_yoksis_id: 45829229
+  district_id: Atakum
+-
+  name: Tıp Fakülte Kurulu
+  detsis_id: 32835143
+  parent_yoksis_id: 45829229
+  district_id: Atakum
+-
+  name: Tıp Fakülte Yönetim Kurulu
+  detsis_id: 73169471
+  parent_yoksis_id: 45829229
+  district_id: Atakum
+-
+  name: Türk Dili Bölüm Başkanlığı
+  detsis_id: 96962981
+  parent_yoksis_id: 169452
+  district_id: Atakum
+-
+  name: Türkçe Öğretimi Uygulama Ve Araştırma Merkezi Müdürlüğü
+  detsis_id: 74429815
+  parent_yoksis_id: 235511
+  district_id: Atakum
+-
+  name: Uzaktan Eğitim Uygulama Ve Araştırma Merkezi Müdürlüğü
+  detsis_id: 12566392
+  parent_yoksis_id: 169431
+  district_id: Atakum
+-
+  name: Veteriner Fakültesi Dekanlığı
+  detsis_id: 32319693
+  parent_yoksis_id: 122233
+  district_id: Atakum
+-
+  name: Besin Hijyeni Ve Teknolojisi Bölüm Başkanlığı
+  detsis_id: 93878008
+  parent_yoksis_id: 140284
+  district_id: Atakum
+-
+  name: Veterinerlik Besin Hijyeni Ve Teknolojisi Anabilim Dalı Başkanlığı
+  detsis_id: 61809848
+  parent_yoksis_id: 122235
+  district_id: Atakum
+-
+  name: Eğitim Uygulama Ve Araştırma Hastanesi Başhekimliği
+  detsis_id: 96596525
+  parent_yoksis_id: 32319693
+  district_id: Atakum
+-
+  name: Veteriner Fakültesi Sekreterliği
+  detsis_id: 22223993
+  parent_yoksis_id: 32319693
+  district_id: Atakum
+-
+  name: Klinik Bilimler Bölüm Başkanlığı
+  detsis_id: 39766743
+  parent_yoksis_id: 169317
+  district_id: Atakum
+-
+  name: Dölerme Ve Suni Tohumlama Anabilim Dalı Başkanlığı
+  detsis_id: 18686594
+  parent_yoksis_id: 169346
+  district_id: Atakum
+-
+  name: Veterinerlik Cerrahisi Anabilim Dalı Başkanlığı
+  detsis_id: 87376928
+  parent_yoksis_id: 169358
+  district_id: Atakum
+-
+  name: Veterinerlik Doğum Ve Jinekolojisi Anabilim Dalı Başkanlığı
+  detsis_id: 97174272
+  parent_yoksis_id: 331656
+  district_id: Atakum
+-
+  name: Veterinerlik İç Hastalıkları Anabilim Dalı Başkanlığı
+  detsis_id: 30556331
+  parent_yoksis_id: 169353
+  district_id: Atakum
+-
+  name: Klinik Öncesi Bilimler Bölüm Başkanlığı
+  detsis_id: 73181402
+  parent_yoksis_id: 140285
+  district_id: Atakum
+-
+  name: Su Ürünleri Hastalıkları Anabilim Dalı Başkanlığı
+  detsis_id: 99624584
+  parent_yoksis_id: 174933
+  district_id: Atakum
+-
+  name: Veterinerlik Farmakoloji Ve Toksikolojisi Anabilim Dalı Başkanlığı
+  detsis_id: 14776988
+  parent_yoksis_id: 122242
+  district_id: Atakum
+-
+  name: Veterinerlik Mikrobiyolojisi Anabilim Dalı Başkanlığı
+  detsis_id: 55640858
+  parent_yoksis_id: 122238
+  district_id: Atakum
+-
+  name: Veterinerlik Parazitolojisi Anabilim Dalı Başkanlığı
+  detsis_id: 19311194
+  parent_yoksis_id: 122239
+  district_id: Atakum
+-
+  name: Veterinerlik Patolojisi Anabilim Dalı Başkanlığı
+  detsis_id: 98669102
+  parent_yoksis_id: 122240
+  district_id: Atakum
+-
+  name: Veterinerlik Viroloji Anabilim Dalı Başkanlığı
+  detsis_id: 69631996
+  parent_yoksis_id: 122245
+  district_id: Atakum
+-
+  name: Veteriner Hekimliği Temel Bilimler Bölüm Başkanlığı
+  detsis_id: 17638934
+  parent_yoksis_id: 147745
+  district_id: Atakum
+-
+  name: Laboratuvar Hayvanları Anabilim Dalı Başkanlığı
+  detsis_id: 32881995
+  parent_yoksis_id: 254782
+  district_id: Atakum
+-
+  name: Veterinerlik Anatomisi Anabilim Dalı Başkanlığı
+  detsis_id: 98682229
+  parent_yoksis_id: 122250
+  district_id: Atakum
+-
+  name: Veterinerlik Biyokimyası Anabilim Dalı Başkanlığı
+  detsis_id: 62455781
+  parent_yoksis_id: 122247
+  district_id: Atakum
+-
+  name: Veterinerlik Fizyolojisi Anabilim Dalı Başkanlığı
+  detsis_id: 51014483
+  parent_yoksis_id: 122248
+  district_id: Atakum
+-
+  name: Veterinerlik Hekimliği Tarihi Ve Deontoloji Anabilim Dalı Başkanlığı
+  detsis_id: 68000003
+  parent_yoksis_id: 122249
+  district_id: Atakum
+-
+  name: Veterinerlik Histoloji Ve Embriyoloji Anabilim Dalı Başkanlığı
+  detsis_id: 39134280
+  parent_yoksis_id: 122251
+  district_id: Atakum
+-
+  name: Zootekni Ve Hayvan Besleme Bölüm Başkanlığı
+  detsis_id: 68432838
   parent_yoksis_id: 122271
+  district_id: Atakum
+-
+  name: Hayvan Besleme Ve Beslenme Hastalıkları Anabilim Dalı Başkanlığı
+  detsis_id: 79552729
+  parent_yoksis_id: 122253
+  district_id: Atakum
+-
+  name: Hayvancılık Ekonomisi Ve İşletmeciliği Anabilim Dalı Başkanlığı
+  detsis_id: 73573829
+  parent_yoksis_id: 122256
+  district_id: Atakum
+-
+  name: Veterinerlik Biyometri Anabilim Dalı Başkanlığı
+  detsis_id: 75665806
+  parent_yoksis_id: 122257
+  district_id: Atakum
+-
+  name: Veterinerlik Genetiği Anabilim Dalı Başkanlığı
+  detsis_id: 10276681
+  parent_yoksis_id: 122255
+  district_id: Atakum
+-
+  name: Veterinerlik Zootekni Anabilim Dalı Başkanlığı
+  detsis_id: 41115119
+  parent_yoksis_id: 122254
+  district_id: Atakum
+-
+  name: Veteriner Fakültesi Disiplin Kurulu
+  detsis_id: 68979211
+  parent_yoksis_id: 32319693
+  district_id: Atakum
+-
+  name: Veteriner Fakültesi Kurulu
+  detsis_id: 12369507
+  parent_yoksis_id: 32319693
+  district_id: Atakum
+-
+  name: Veteriner Fakültesi Yönetim Kurulu
+  detsis_id: 85685189
+  parent_yoksis_id: 32319693
+  district_id: Atakum
+-
+  name: Yabancı Diller Bölüm Başkanlığı
+  detsis_id: 66544345
+  parent_yoksis_id: 169457
+  district_id: Atakum
+-
+  name: Yabancı Diller Yüksekokulu Müdürlüğü
+  detsis_id: 19676956
+  parent_yoksis_id: 201921
+  district_id: Atakum
+-
+  name: Mütercim Tercümanlık Bölüm Başkanlığı
+  detsis_id: 20346779
+  parent_yoksis_id: 207276
+  district_id: Atakum
+-
+  name: Yabancı Diller Yüksekokulu Sekreterliği
+  detsis_id: 90040670
+  parent_yoksis_id: 19676956
+  district_id: Atakum
+-
+  name: Yabancı Diller Yüksekokulu Disiplin Kurulu
+  detsis_id: 56360828
+  parent_yoksis_id: 19676956
+  district_id: Atakum
+-
+  name: Yabancı Diller Yüksekokulu Kurulu
+  detsis_id: 43044129
+  parent_yoksis_id: 19676956
+  district_id: Atakum
+-
+  name: Yabancı Diller Yüksekokulu Yönetim Kurulu
+  detsis_id: 98617224
+  parent_yoksis_id: 19676956
+  district_id: Atakum
+-
+  name: Yaratıcı Yazarlık Uygulama Ve Araştırma Merkezi Müdürlüğü
+  detsis_id: 68380559
+  parent_yoksis_id: 212704
+  district_id: Atakum
+-
+  name: Yaşar Doğu Spor Bilimleri Fakültesi Dekanlığı
+  detsis_id: 80270232
+  parent_yoksis_id: 242486
+  district_id: Atakum
+-
+  name: Antrenörlük Eğitimi Bölüm Başkanlığı
+  detsis_id: 81601610
+  parent_yoksis_id: 122377
+  district_id: Atakum
+-
+  name: Beden Eğitimi Ve Spor Bölüm Başkanlığı
+  detsis_id: 36370335
+  parent_yoksis_id: 122374
+  district_id: Atakum
+-
+  name: Yaşar Doğu Spor Bilimleri Fakülte Sekreterliği
+  detsis_id: 88279611
+  parent_yoksis_id: 80270232
+  district_id: Atakum
+-
+  name: Rekreasyon Bölüm Başkanlığı
+  detsis_id: 56933569
+  parent_yoksis_id: 214343
+  district_id: Atakum
+-
+  name: Spor Yöneticiliği Bölüm Başkanlığı
+  detsis_id: 80259062
+  parent_yoksis_id: 122376
+  district_id: Atakum
+-
+  name: Yaşar Doğu Spor Bilimleri Fakülte Disiplin Kurulu
+  detsis_id: 43682562
+  parent_yoksis_id: 80270232
+  district_id: Atakum
+-
+  name: Yaşar Doğu Spor Bilimleri Fakülte Kurulu
+  detsis_id: 92455265
+  parent_yoksis_id: 80270232
+  district_id: Atakum
+-
+  name: Yaşar Doğu Spor Bilimleri Fakülte Yönetim Kurulu
+  detsis_id: 15350033
+  parent_yoksis_id: 80270232
+  district_id: Atakum
+-
+  name: Ziraat Fakültesi Dekanlığı
+  detsis_id: 52180288
+  parent_yoksis_id: 122258
+  district_id: Atakum
+-
+  name: Bahçe Bitkileri Bölüm Başkanlığı
+  detsis_id: 51766710
+  parent_yoksis_id: 122259
+  district_id: Atakum
+-
+  name: Bitki Koruma Bölüm Başkanlığı
+  detsis_id: 30360806
+  parent_yoksis_id: 122261
+  district_id: Atakum
+-
+  name: Ziraat Fakülte Sekreterliği
+  detsis_id: 20802809
+  parent_yoksis_id: 52180288
+  district_id: Atakum
+-
+  name: Tarım Ekonomisi Bölüm Başkanlığı
+  detsis_id: 41945832
+  parent_yoksis_id: 122264
+  district_id: Atakum
+-
+  name: Tarım Makineleri Ve Teknolojileri Mühendisliği Bölüm Başkanlığı
+  detsis_id: 38298812
+  parent_yoksis_id: 122279
+  district_id: Atakum
+-
+  name: Tarımsal Biyoteknoloji Bölüm Başkanlığı
+  detsis_id: 39322077
+  parent_yoksis_id: 145755
+  district_id: Atakum
+-
+  name: Tarımsal Yapılar Ve Sulama Bölüm Başkanlığı
+  detsis_id: 69046183
+  parent_yoksis_id: 122281
+  district_id: Atakum
+-
+  name: Tarla Bitkileri Bölüm Başkanlığı
+  detsis_id: 88073621
+  parent_yoksis_id: 122267
+  district_id: Atakum
+-
+  name: Toprak Bilimi Ve Bitki Besleme Bölüm Başkanlığı
+  detsis_id: 25676019
+  parent_yoksis_id: 145775
+  district_id: Atakum
+-
+  name: Zootekni Bölüm Başkanlığı
   detsis_id: 59625322
-  name: ZOOTEKNİ BÖLÜM BAŞKANLIĞI
-  district_id: 769
-  unit_status_id: 2
-88222046:
-  parent_detsis_id: 52180288
+  parent_yoksis_id: 122271
+  district_id: Atakum
+-
+  name: Ziraat Fakülte Disiplin Kurulu
   detsis_id: 88222046
-  name: ZİRAAT FAKÜLTE DİSİPLİN KURULU
-  district_id: 769
-  unit_status_id: 2
-44737134:
-  parent_detsis_id: 52180288
+  parent_yoksis_id: 52180288
+  district_id: Atakum
+-
+  name: Ziraat Fakülte Kurulu
   detsis_id: 44737134
-  name: ZİRAAT FAKÜLTE KURULU
-  district_id: 769
-  unit_status_id: 2
-62111144:
-  parent_detsis_id: 52180288
+  parent_yoksis_id: 52180288
+  district_id: Atakum
+-
+  name: Ziraat Fakülte Yönetim Kurulu
   detsis_id: 62111144
-  name: ZİRAAT FAKÜLTE YÖNETİM KURULU
-  district_id: 769
-  unit_status_id: 2
-90404739:
-  parent_yoksis_id: 122287
+  parent_yoksis_id: 52180288
+  district_id: Atakum
+-
+  name: Genel Sekreterlik
   detsis_id: 90404739
-  name: GENEL SEKRETERLİK
-  district_id: 769
-  unit_status_id: 2
-30142872:
-  parent_detsis_id: 90404739
+  parent_yoksis_id: 122287
+  district_id: Atakum
+-
+  name: Genel Sekreter Yardımcılığı
   detsis_id: 30142872
-  name: GENEL SEKRETER YARDIMCILIĞI
-  district_id: 769
-  unit_status_id: 2
-82259522:
-  parent_detsis_id: 90404739
+  parent_yoksis_id: 90404739
+  district_id: Atakum
+-
+  name: İş Sağlığı Ve Güvenliği Şube Müdürlüğü
   detsis_id: 82259522
-  name: İŞ SAĞLIĞI VE GÜVENLİĞİ ŞUBE MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-51407721:
-  parent_detsis_id: 90404739
+  parent_yoksis_id: 90404739
+  district_id: Atakum
+-
+  name: Arabuluculuk Komisyonu
   detsis_id: 51407721
-  name: ARABULUCULUK KOMİSYONU
-  district_id: 769
-  unit_status_id: 2
-51017550:
-  parent_yoksis_id: 122287
+  parent_yoksis_id: 90404739
+  district_id: Atakum
+-
+  name: Akademik Değerlendirme Ve Kalite Geliştirme Kurulu
   detsis_id: 51017550
-  name: AKADEMİK DEĞERLENDİRME VE KALİTE GELİŞTİRME KURULU
-  district_id: 769
-  unit_status_id: 2
-52551054:
   parent_yoksis_id: 122287
+  district_id: Atakum
+-
+  name: Akademik Teşvik Düzenleme, Denetleme Ve İtiraz Komisyonu
   detsis_id: 52551054
-  name: AKADEMİK TEŞVİK DÜZENLEME, DENETLEME VE İTİRAZ KOMİSYONU
-  district_id: 769
-  unit_status_id: 2
-64153742:
   parent_yoksis_id: 122287
+  district_id: Atakum
+-
+  name: Döner Sermaye İşletme Müdürlüğü
   detsis_id: 64153742
-  name: DÖNER SERMAYE İŞLETME MÜDÜRLÜĞÜ
-  district_id: 769
-  unit_status_id: 2
-68489742:
   parent_yoksis_id: 122287
+  district_id: Atakum
+-
+  name: Hayvan Deneyleri Yerel Etik Kurulu
   detsis_id: 68489742
-  name: HAYVAN DENEYLERİ YEREL ETİK KURULU
-  district_id: 769
-  unit_status_id: 2
-12203253:
   parent_yoksis_id: 122287
+  district_id: Atakum
+-
+  name: İş Etik Kurulu
   detsis_id: 12203253
-  name: İŞ ETİK KURULU
-  district_id: 769
-  unit_status_id: 2
-99824844:
   parent_yoksis_id: 122287
+  district_id: Atakum
+-
+  name: Senato
   detsis_id: 99824844
-  name: SENATO
-  district_id: 769
-  unit_status_id: 2
-45428382:
   parent_yoksis_id: 122287
+  district_id: Atakum
+-
+  name: Sosyal Ve Beşeri Bilimler Araştırmaları Etik Kurulu
   detsis_id: 45428382
-  name: SOSYAL VE BEŞERİ BİLİMLER ARAŞTIRMALARI ETİK KURULU
-  district_id: 769
-  unit_status_id: 2
-60416774:
   parent_yoksis_id: 122287
+  district_id: Atakum
+-
+  name: Tasarruf Komisyonu
   detsis_id: 60416774
-  name: TASARRUF KOMİSYONU
-  district_id: 769
-  unit_status_id: 2
-92035111:
   parent_yoksis_id: 122287
+  district_id: Atakum
+-
+  name: Üniversite Disiplin Kurulu
   detsis_id: 92035111
-  name: ÜNİVERSİTE DİSİPLİN KURULU
-  district_id: 769
-  unit_status_id: 2
-46149191:
   parent_yoksis_id: 122287
+  district_id: Atakum
+-
+  name: Üniversite Yönetim Kurulu
   detsis_id: 46149191
-  name: ÜNİVERSİTE YÖNETİM KURULU
-  district_id: 769
-  unit_status_id: 2
-19423957:
   parent_yoksis_id: 122287
+  district_id: Atakum
+-
+  name: Yayın Komisyonu
   detsis_id: 19423957
-  name: YAYIN KOMİSYONU
-  district_id: 769
-  unit_status_id: 2
+  parent_yoksis_id: 122287
+  district_id: Atakum
+-
+  name: Devlet Konservatuvarı Müdürlüğü
+  detsis_id: 95441125
+  parent_yoksis_id: 122303
+  district_id: İlkadım
+-
+  name: Devlet Konservatuvarı Sekreterliği
+  detsis_id: 52718513
+  parent_yoksis_id: 95441125
+  district_id: İlkadım
+-
+  name: Müzik Bölüm Başkanlığı
+  detsis_id: 55870850
+  parent_yoksis_id: 122304
+  district_id: İlkadım
+-
+  name: Geleneksel Türk Müzikleri Anasanat Dalı Başkanlığı
+  detsis_id: 40140864
+  parent_yoksis_id: 254783
+  district_id: İlkadım
+-
+  name: Müzikoloji Bölüm Başkanlığı
+  detsis_id: 22937161
+  parent_yoksis_id: 122309
+  district_id: İlkadım
+-
+  name: Sahne Sanatları Bölüm Başkanlığı
+  detsis_id: 50929935
+  parent_yoksis_id: 122313
+  district_id: İlkadım
+-
+  name: Güzel Sanatlar Fakültesi Dekanlığı
+  detsis_id: 32859882
+  parent_yoksis_id: 215087
+  district_id: İlkadım
+-
+  name: Endüstriyel Tasarım Bölüm Başkanlığı
+  detsis_id: 11792936
+  parent_yoksis_id: 232411
+  district_id: İlkadım
+-
+  name: Endüstri Ürünleri Tasarımı Anasanat Dalı Başkanlığı
+  detsis_id: 13424126
+  parent_yoksis_id: 319349
+  district_id: İlkadım
+-
+  name: Güzel Sanatlar Fakülte Sekreterliği
+  detsis_id: 84694922
+  parent_yoksis_id: 32859882
+  district_id: İlkadım
+-
+  name: Görsel İletişim Tasarımı Bölüm Başkanlığı
+  detsis_id: 78239466
+  parent_yoksis_id: 232412
+  district_id: İlkadım
+-
+  name: Animasyon Anasanat Dalı Başkanlığı
+  detsis_id: 75115885
+  parent_yoksis_id: 319348
+  district_id: İlkadım
+-
+  name: Grafik Anasanat Dalı Başkanlığı
+  detsis_id: 65075573
+  parent_yoksis_id: 319347
+  district_id: İlkadım
+-
+  name: Resim Bölüm Başkanlığı
+  detsis_id: 21674358
+  parent_yoksis_id: 232414
+  district_id: İlkadım
+-
+  name: Resim Anasanat Dalı Başkanlığı
+  detsis_id: 42721937
+  parent_yoksis_id: 319228
+  district_id: İlkadım
+-
+  name: Seramik Ve Cam Bölüm Başkanlığı
+  detsis_id: 37936364
+  parent_yoksis_id: 232413
+  district_id: İlkadım
+-
+  name: Seramik Cam Anasanat Dalı Başkanlığı
+  detsis_id: 19704520
+  parent_yoksis_id: 319229
+  district_id: İlkadım
+-
+  name: Güzel Sanatlar Fakülte Disiplin Kurulu
+  detsis_id: 97565555
+  parent_yoksis_id: 32859882
+  district_id: İlkadım
+-
+  name: Güzel Sanatlar Fakülte Kurulu
+  detsis_id: 25054318
+  parent_yoksis_id: 32859882
+  district_id: İlkadım
+-
+  name: Güzel Sanatlar Fakülte Yönetim Kurulu
+  detsis_id: 52757481
+  parent_yoksis_id: 32859882
+  district_id: İlkadım
+-
+  name: Mimarlık Fakültesi Dekanlığı
+  detsis_id: 85074962
+  parent_yoksis_id: 208604
+  district_id: İlkadım
+-
+  name: Mimarlık Fakülte Sekreterliği
+  detsis_id: 80040216
+  parent_yoksis_id: 85074962
+  district_id: İlkadım
+-
+  name: İç Mimarlık Bölüm Başkanlığı
+  detsis_id: 49641871
+  parent_yoksis_id: 247958
+  district_id: İlkadım
+-
+  name: İç Mimarlık Anabilim Dalı Başkanlığı
+  detsis_id: 87370315
+  parent_yoksis_id: 319351
+  district_id: İlkadım
+-
+  name: Mimarlık Bölüm Başkanlığı
+  detsis_id: 34690896
+  parent_yoksis_id: 214339
+  district_id: İlkadım
+-
+  name: Mimarlık Anabilim Dalı Başkanlığı
+  detsis_id: 94604353
+  parent_yoksis_id: 319350
+  district_id: İlkadım
+-
+  name: Şehir Ve Bölge Planlama Bölüm Başkanlığı
+  detsis_id: 13882392
+  parent_yoksis_id: 251540
+  district_id: İlkadım
+-
+  name: Şehir Ve Bölge Planlama Anabilim Dalı Başkanlığı
+  detsis_id: 17832846
+  parent_yoksis_id: 319352
+  district_id: İlkadım
+-
+  name: Mimarlık Fakülte Disiplin Kurulu
+  detsis_id: 35933795
+  parent_yoksis_id: 85074962
+  district_id: İlkadım
+-
+  name: Mimarlık Fakülte Kurulu
+  detsis_id: 36259705
+  parent_yoksis_id: 85074962
+  district_id: İlkadım
+-
+  name: Mimarlık Fakülte Yönetim Kurulu
+  detsis_id: 17012768
+  parent_yoksis_id: 85074962
+  district_id: İlkadım
+-
+  name: Samsun Meslek Yüksekokulu Müdürlüğü
+  detsis_id: 56591305
+  parent_yoksis_id: 122360
+  district_id: İlkadım
+-
+  name: Bilgisayar Teknolojileri Bölüm Başkanlığı
+  detsis_id: 27974305
+  parent_yoksis_id: 169871
+  district_id: İlkadım
+-
+  name: Bitkisel Ve Hayvansal Üretim Bölüm Başkanlığı
+  detsis_id: 86912044
+  parent_yoksis_id: 169860
+  district_id: İlkadım
+-
+  name: Çocuk Bakımı Ve Gençlik Hizmetleri Bölüm Başkanlığı
+  detsis_id: 37500600
+  parent_yoksis_id: 215482
+  district_id: İlkadım
+-
+  name: El Sanatları Bölüm Başkanlığı
+  detsis_id: 73668257
+  parent_yoksis_id: 169847
+  district_id: İlkadım
+-
+  name: Görsel-İşitsel Teknikler Ve Medya Yapımcılığı Bölüm Başkanlığı
+  detsis_id: 91097286
+  parent_yoksis_id: 169828
+  district_id: İlkadım
+-
+  name: Makine Ve Metal Teknolojileri Bölüm Başkanlığı
+  detsis_id: 55177162
+  parent_yoksis_id: 169866
+  district_id: İlkadım
+-
+  name: Samsun Meslek Yüksekokulu Sekreterliği
+  detsis_id: 88496548
+  parent_yoksis_id: 56591305
+  district_id: İlkadım
+-
+  name: Muhasebe Ve Vergi Bölüm Başkanlığı
+  detsis_id: 59424017
+  parent_yoksis_id: 169802
+  district_id: İlkadım
+-
+  name: Otel, Lokanta Ve İkram Hizmetleri Bölüm Başkanlığı
+  detsis_id: 21272681
+  parent_yoksis_id: 168851
+  district_id: İlkadım
+-
+  name: Park Ve Bahçe Bitkileri Bölüm Başkanlığı
+  detsis_id: 74699895
+  parent_yoksis_id: 174835
+  district_id: İlkadım
+-
+  name: Pazarlama Ve Reklamcılık Bölüm Başkanlığı
+  detsis_id: 62196293
+  parent_yoksis_id: 253372
+  district_id: İlkadım
+-
+  name: Tasarım Bölüm Başkanlığı
+  detsis_id: 46131419
+  parent_yoksis_id: 169841
+  district_id: İlkadım
+-
+  name: Samsun Meslek Yüksekokulu Disiplin Kurulu
+  detsis_id: 19817726
+  parent_yoksis_id: 56591305
+  district_id: İlkadım
+-
+  name: Samsun Meslek Yüksekokulu Kurulu
+  detsis_id: 25664880
+  parent_yoksis_id: 56591305
+  district_id: İlkadım
+-
+  name: Samsun Meslek Yüksekokulu Yönetim Kurulu
+  detsis_id: 10123157
+  parent_yoksis_id: 56591305
+  district_id: İlkadım

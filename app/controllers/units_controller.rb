@@ -1,14 +1,16 @@
 # frozen_string_literal: true
 
 class UnitsController < ApplicationController
-  before_action :set_unit, only: %i[edit update destroy show]
+  include PagyBackendWithHelpers
+
+  before_action :set_unit, only: %i[edit update destroy show courses]
 
   def index
     units = Unit.includes(
       :unit_status, :unit_instruction_language, :unit_instruction_type, :unit_type, district: [:city]
     )
 
-    @pagy, @units = pagy(smart_search(units))
+    @pagy, @units = pagy(units.dynamic_search(search_params(Unit)))
   end
 
   def show; end
@@ -32,18 +34,11 @@ class UnitsController < ApplicationController
     @unit.destroy ? redirect_to(units_path, notice: t('.success')) : redirect_with('warning')
   end
 
+  def courses
+    @courses = @unit.courses
+  end
+
   private
-
-  def smart_search(units)
-    params[:term].present? ? units.search(params[:term]) : dynamic_search(units)
-  end
-
-  def dynamic_search(units)
-    %i[duration unit_status_id unit_instruction_type_id unit_instruction_language_id].each do |param|
-      units = units.send(param, params[param]) if params[param].present?
-    end
-    units
-  end
 
   def set_unit
     @unit = Unit.find(params[:id])
