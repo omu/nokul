@@ -7,12 +7,19 @@ module Osym
     # rubocop:disable Metrics/AbcSize
     # rubocop:disable Metrics/MethodLength
     # rubocop:disable Metrics/BlockLength
-    def perform(file)
+    def perform
+      path = Rails.root.join('db', 'static_data', 'prospective_students.csv')
+
+      file = File.open(path)
+      number_of_lines = `wc -l "#{path}"`.strip.split(' ')[0].to_i
+
+      progress_bar = ProgressBar.create(title: 'Prospective Students', total: number_of_lines, format: '%t %B %c/%C %a')
+
       file.read.each_line do |prospective_student|
         id_number, first_name, last_name, fathers_name, mothers_name, d, m, y, gender, turkish, kktc, foreign,
-        place_of_birth, registration_city, registration_district, school_code, school_type, school_branch,
-        type_of_education, high_school_graduation_year, placement_type, exam_score, language, address,
-        district, city, home_phone, mobile_phone, email, student_disability_type, top_student, placement_score,
+        place_of_birth, registration_city, registration_district, high_school_code, high_school_type,
+        high_school_branch, state_of_education, high_school_graduation_year, placement_type, exam_score, language,
+        address, district, city, home_phone, mobile_phone, email, student_disability_type, top_student, placement_score,
         placement_rank, _university_code, _university_name, _faculty_name, department_code, _department_name,
         preference_order, placement_score_type, additional_score, _quota, meb_status, _meb_status_description,
         meb_status_date, military_status, _military_status_description, military_status_date, obs_status,
@@ -25,8 +32,9 @@ module Osym
         student_disability_type = find_student_disability_type(student_disability_type)
         additional_score = find_additional_score(additional_score)
         obs_registered_program = find_obs_registered_program(obs_registered_program)
+        high_school_type = find_high_school_type(high_school_type)
 
-        ProspectiveStudent.create!(
+        ProspectiveStudent.create(
           id_number: id_number,
           first_name: first_name,
           last_name: last_name,
@@ -38,10 +46,10 @@ module Osym
           place_of_birth: place_of_birth,
           registration_city: registration_city,
           registration_district: registration_district,
-          school_code: school_code,
-          school_type: school_type,
-          school_branch: school_branch,
-          type_of_education: type_of_education,
+          high_school_code: high_school_code,
+          high_school_type: high_school_type,
+          high_school_branch: high_school_branch,
+          state_of_education: state_of_education,
           high_school_graduation_year: high_school_graduation_year,
           placement_type: placement_type,
           exam_score: exam_score,
@@ -59,13 +67,14 @@ module Osym
           placement_score_type: placement_score_type,
           additional_score: additional_score,
           meb_status: meb_status.eql?('1') ? true : false,
-          meb_status_date: Date.parse(meb_status_date),
+          meb_status_date: parse_date(meb_status_date),
           military_status: military_status.eql?('101') ? true : false,
-          military_status_date: Time.zone.parse(military_status_date),
+          military_status_date: parse_date(military_status_date),
           obs_status: obs_status.eql?('0') ? true : false,
-          obs_status_date: obs_status_date,
+          obs_status_date: parse_date(obs_status_date),
           obs_registered_program: obs_registered_program
         )
+        progress_bar.increment
       end
 
       file.close
@@ -92,7 +101,7 @@ module Osym
     end
 
     def find_obs_registered_program(program)
-      return if program.nil? || program.eql?('0')
+      return if program.eql?('0') || program.eql?('null')
 
       response = Services::Yoksis::V4::UniversiteBirimler.new.program_name(program)
       "#{response[:universite][:ad]} / #{response[:birim][:ad]}"
@@ -104,6 +113,14 @@ module Osym
 
     def find_additional_score(str)
       'handicapped' if str.eql?('Özürlü Ek Puan')
+    end
+
+    def find_high_school_type(high_school_type)
+      HighSchoolType.find_by(code: high_school_type) unless high_school_type.eql?('null')
+    end
+
+    def parse_date(date)
+      Date.parse(date) unless date.eql?('null')
     end
   end
 end

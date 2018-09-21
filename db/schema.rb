@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_20_143007) do
+ActiveRecord::Schema.define(version: 2018_09_20_223813) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -285,9 +285,6 @@ ActiveRecord::Schema.define(version: 2018_09_20_143007) do
   create_table "languages", force: :cascade do |t|
     t.string "name", null: false
     t.string "iso", null: false
-    t.integer "yoksis_code"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "positions", force: :cascade do |t|
@@ -335,10 +332,10 @@ ActiveRecord::Schema.define(version: 2018_09_20_143007) do
     t.string "place_of_birth"
     t.string "registration_city"
     t.string "registration_district"
-    t.string "school_code"
-    t.string "school_type"
-    t.string "school_branch"
-    t.integer "type_of_education"
+    t.string "high_school_code"
+    t.bigint "high_school_type_id"
+    t.string "high_school_branch"
+    t.integer "state_of_education"
     t.integer "high_school_graduation_year"
     t.integer "placement_type"
     t.float "exam_score"
@@ -364,6 +361,7 @@ ActiveRecord::Schema.define(version: 2018_09_20_143007) do
     t.string "obs_registered_program"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["high_school_type_id"], name: "index_prospective_students_on_high_school_type_id"
     t.index ["language_id"], name: "index_prospective_students_on_language_id"
     t.index ["student_disability_type_id"], name: "index_prospective_students_on_student_disability_type_id"
     t.index ["unit_id"], name: "index_prospective_students_on_unit_id"
