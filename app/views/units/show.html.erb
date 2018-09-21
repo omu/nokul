@@ -4,7 +4,7 @@
       <div class="card-header">
         <%= fa_icon 'university' %><strong><%= @unit.name %></strong>
         <div class="card-header-actions">
-          <%= link_to_show(unit_registration_documents_path(@unit), t('.registration_documents')) %>
+          <%= link_to_show(unit_registration_documents_path(@unit), t('.registration_documents'))  if @unit.unit_type.program? %>
           <%= link_to_edit(edit_unit_path(@unit)) %>
           <%= link_to_destroy(@unit) %>
         </div>
