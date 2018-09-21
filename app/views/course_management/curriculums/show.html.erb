@@ -28,6 +28,16 @@
               <th><%= t('.status') %></th>
               <td><%= enum_t(@curriculum, :status) %></td>
             </tr>
+            <tr>
+              <th><%= t('.programs') %></th>
+              <td>
+                <ul class="list-group">
+                  <% @curriculum.programs.each do |program| %>
+                    <li class="list-group-item list-group-item-info"><%= program.name %></li>
+                  <% end %>
+                </ul>
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>

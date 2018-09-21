@@ -21,7 +21,7 @@
           </thead>
           <tbody>
             <% @curriculums.each do |curriculum| %>
-              <tr>
+              <tr class="<%= curriculum.active? ? '' : 'table-warning' %>">
                 <td><%= link_to curriculum.name, curriculum %></td>
                 <td><%= curriculum.unit.try(:name) %></td>
                 <td><%= curriculum.number_of_semesters %></td>

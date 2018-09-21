@@ -1,5 +1,17 @@
 <script type='text/javascript'>
   $(document).ready(function() {
-    $('#curriculum_unit_id, #curriculum_number_of_semester, #curriculum_status').select2();
+    $('#curriculum_unit_id, #curriculum_number_of_semester, #curriculum_status, #curriculum_program_ids').select2();
+
+    var parameters = [
+      {
+        el: '#curriculum_unit_id',
+        target: '#curriculum_program_ids',
+        params: { 'unit_id': '#curriculum_unit_id' },
+        source: '/units/:unit_id/programs',
+        reset_selectors: '#curriculum_program_ids'
+      }
+    ]
+    var dynamic_select = new DynamicSelect(parameters)
+    dynamic_select.init()
   });
 </script>
