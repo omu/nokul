@@ -40,6 +40,7 @@ Rails.application.routes.draw do
   resources :units do
     member do
       get :courses, defaults: { format: :json }
+      get :programs, defaults: { format: :json }
     end
   end
 
@@ -53,6 +54,7 @@ Rails.application.routes.draw do
     resources :courses
     resources :course_unit_groups
     resources :course_group_types, except: :show
+    resources :curriculums
   end
 
   scope module: :student_management do
