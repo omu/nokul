@@ -15,8 +15,7 @@ class PublicProfileController < ApplicationController
   end
 
   def search
-    # TODO: identity kaydı bulunmayanlar seçilmeli.
-    @users = User.search(params[:word])
+    @users = User.joins(:identities).search(params[:word])
   end
 
   private
