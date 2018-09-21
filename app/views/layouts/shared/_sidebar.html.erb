@@ -53,10 +53,14 @@
               <%= fa_icon('book', text: t('.courses'), class: 'nav-icon') %>
             <% end %>
           </li>
-
           <li class="nav-item">
-            <%= link_to curriculums_path, class: 'nav-link' do %>
-              <%= fa_icon('book', text: t('.curriculums'), class: 'nav-icon') %>
+            <%= link_to course_unit_groups_path, class: 'nav-link' do %>
+              <%= fa_icon('cubes', text: t('.course_unit_groups'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to course_group_types_path, class: 'nav-link' do %>
+              <%= fa_icon('clone', text: t('.course_group_types'), class: 'nav-icon') %>
             <% end %>
           </li>
         </ul>
@@ -69,6 +73,11 @@
       <li class="nav-item">
         <%= link_to languages_path, class: 'nav-link' do %>
           <%= fa_icon('language', text: t('.languages'), class: 'nav-icon') %>
+        <% end %>
+      </li>
+      <li class="nav-item">
+        <%= link_to documents_path, class: 'nav-link' do %>
+          <%= fa_icon('file-text-o', text: t('.documents'), class: 'nav-icon') %>
         <% end %>
       </li>
       <li class="nav-item nav-dropdown">

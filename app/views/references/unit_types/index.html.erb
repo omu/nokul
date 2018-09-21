@@ -14,6 +14,7 @@
             <tr>
               <th><%= t('.name') %></th>
               <th><%= t('.code') %></th>
+              <th><%= t('.group') %></th>
               <th><%= t('actions') %></th>
             </tr>
           </thead>
@@ -22,6 +23,7 @@
               <tr>
                 <td><%= unit_type.name %></td>
                 <td><%= unit_type.code %></td>
+                <td><%= enum_t(unit_type, :group) %></td>
                 <td>
                   <%= link_to_edit(edit_unit_type_path(unit_type)) %>
                   <%= link_to_destroy(unit_type) %>

@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_18_094522) do
-
+ActiveRecord::Schema.define(version: 2018_09_19_115101) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -193,6 +192,23 @@ ActiveRecord::Schema.define(version: 2018_09_18_094522) do
     t.integer "yoksis_code"
   end
 
+  create_table "course_group_types", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "course_unit_groups", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "total_ects_condition", null: false
+    t.bigint "unit_id"
+    t.bigint "course_group_type_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_group_type_id"], name: "index_course_unit_groups_on_course_group_type_id"
+    t.index ["unit_id"], name: "index_course_unit_groups_on_unit_id"
+  end
+
   create_table "courses", force: :cascade do |t|
     t.string "name", null: false
     t.string "code", null: false
@@ -224,6 +240,13 @@ ActiveRecord::Schema.define(version: 2018_09_18_094522) do
     t.boolean "active", default: true, null: false
     t.bigint "city_id"
     t.index ["city_id"], name: "index_districts_on_city_id"
+  end
+
+  create_table "documents", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "statement"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "duties", force: :cascade do |t|
@@ -258,6 +281,15 @@ ActiveRecord::Schema.define(version: 2018_09_18_094522) do
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
     t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+  end
+
+  create_table "group_courses", force: :cascade do |t|
+    t.bigint "course_id"
+    t.bigint "course_unit_group_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_group_courses_on_course_id"
+    t.index ["course_unit_group_id"], name: "index_group_courses_on_course_unit_group_id"
   end
 
   create_table "identities", force: :cascade do |t|
@@ -317,6 +349,17 @@ ActiveRecord::Schema.define(version: 2018_09_18_094522) do
     t.bigint "user_id"
     t.datetime "created_at"
     t.index ["user_id"], name: "index_projects_on_user_id"
+  end
+
+  create_table "registration_documents", force: :cascade do |t|
+    t.bigint "unit_id"
+    t.bigint "document_id"
+    t.bigint "academic_term_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["academic_term_id"], name: "index_registration_documents_on_academic_term_id"
+    t.index ["document_id"], name: "index_registration_documents_on_document_id"
+    t.index ["unit_id"], name: "index_registration_documents_on_unit_id"
   end
 
   create_table "student_disability_types", force: :cascade do |t|
@@ -411,6 +454,7 @@ ActiveRecord::Schema.define(version: 2018_09_18_094522) do
   create_table "unit_types", force: :cascade do |t|
     t.string "name"
     t.integer "code"
+    t.integer "group"
   end
 
   create_table "units", force: :cascade do |t|
@@ -490,6 +534,8 @@ ActiveRecord::Schema.define(version: 2018_09_18_094522) do
   add_foreign_key "calendar_title_types", "calendar_types", column: "type_id"
   add_foreign_key "certifications", "users"
   add_foreign_key "cities", "countries"
+  add_foreign_key "course_unit_groups", "course_group_types"
+  add_foreign_key "course_unit_groups", "units"
   add_foreign_key "courses", "units"
   add_foreign_key "curriculums", "units"
   add_foreign_key "districts", "cities"
@@ -497,11 +543,16 @@ ActiveRecord::Schema.define(version: 2018_09_18_094522) do
   add_foreign_key "duties", "units"
   add_foreign_key "employees", "titles"
   add_foreign_key "employees", "users"
+  add_foreign_key "group_courses", "course_unit_groups"
+  add_foreign_key "group_courses", "courses"
   add_foreign_key "identities", "students"
   add_foreign_key "identities", "users"
   add_foreign_key "positions", "administrative_functions"
   add_foreign_key "positions", "duties"
   add_foreign_key "projects", "users"
+  add_foreign_key "registration_documents", "academic_terms"
+  add_foreign_key "registration_documents", "documents"
+  add_foreign_key "registration_documents", "units"
   add_foreign_key "students", "units"
   add_foreign_key "students", "users"
   add_foreign_key "unit_calendar_events", "academic_calendars"

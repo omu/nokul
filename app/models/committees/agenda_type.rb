@@ -3,13 +3,9 @@
 class AgendaType < ApplicationRecord
   # search
   include PgSearch
-  pg_search_scope(
-    :search,
-    against: :name,
-    using: { tsearch: { prefix: true } }
-  )
+  pg_search_scope(:search, against: :name, using: { tsearch: { prefix: true } })
 
-  # reloations
+  # relations
   has_many :agendas, dependent: :nullify
 
   # validations

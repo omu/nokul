@@ -10,11 +10,13 @@ tr:
         academic_terms: Akademik Dönemler
         academic_calendars: Akademik Takvimler
         courses: Dersler
-        course_management: Ders İşlemleri
-        curriculums: Müfredatlar
+        course_management: Ders İşlemler
+        course_unit_groups: Ders Grupları
+        course_group_types: Ders Grup Türleri
         languages: Diller
         users: Kullanıcılar
         references: Referanslar
+        documents: Belgeler
         student_disability_types: Engel Türleri
         student_drop_out_types: Ayrılma Nedenleri
         student_education_levels: Eğitim Düzeyleri
