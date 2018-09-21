@@ -37,6 +37,6 @@ class LanguagesController < ApplicationController
   end
 
   def language_params
-    params.require(:language).permit(:name, :iso, :yoksis_code)
+    params.require(:language).permit(:name, :iso)
   end
 end

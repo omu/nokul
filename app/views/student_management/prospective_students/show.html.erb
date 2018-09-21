@@ -71,7 +71,7 @@
             </tr>
             <tr>
               <td><%= t('.state_of_education') %></td>
-              <td><%= @prospective_student.state_of_education.name %></td>
+              <td><%= @prospective_student.state_of_education %></td>
             </tr>
             <tr class="<%= @prospective_student.meb_status ? 'table-success' : 'table-danger' %>">
               <td><%= t('.meb_status') %></td>
@@ -120,12 +120,12 @@
         <table class="table table-responsive-sm">
           <tbody>
             <tr>
-              <td><%= t('.school_code') %></td>
-              <td><%= @prospective_student.school_code %></td>
+              <td><%= t('.high_school_code') %></td>
+              <td><%= @prospective_student.high_school_code %></td>
             </tr>
             <tr>
-              <td><%= t('.school_type') %></td>
-              <td><%= @prospective_student.school_type %></td>
+              <td><%= t('.high_school_type') %></td>
+              <td><%= @prospective_student.high_school_type.try(:name) %></td>
             </tr>
             <tr>
               <td><%= t('.high_school_graduation_year') %></td>
