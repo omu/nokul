@@ -25,6 +25,7 @@ en:
         student_grades: Grades
         student_grading_systems: Grading Systems
         student_punishment_types: Punishment Types
+        student_management: Student Management
         student_studentship_statuses: Studentship Statuses
         unit_instruction_languages:  Instruction Languages
         unit_instruction_types: Instruction Types
@@ -35,3 +36,4 @@ en:
         committees: Committees
         committee_units: Committee Units
         agenda_types: Agenda Types
+        first_registration: Prospective Students

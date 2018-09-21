@@ -11,7 +11,7 @@
         </a>
       </h5>
     </div>
-    <div id="collapseSmartSearch" 
+    <div id="collapseSmartSearch"
          class="collapse show"
          role="tabpanel"
          aria-labelledby="smartSearch"
@@ -32,7 +32,7 @@
   <div class="card">
     <div class="card-header" role="tab" id="detailedSearch">
       <h5 class="mb-0">
-        <a class="collapsed" 
+        <a class="collapsed"
            data-toggle="collapse"
            href="#collapseDetailedSearch"
            id="collapseDetailedSearchLink"
@@ -56,9 +56,9 @@
             <div class="col-sm-4">
               <div class="form-group">
                 <%= label_tag(:unit_id, t('.unit')) %>
-                <%= select_tag(:unit_id, 
+                <%= select_tag(:unit_id,
                               options_from_collection_for_select(Unit.all, :id, :name, params[:unit_id]),
-                              include_blank: true, 
+                              include_blank: true,
                               class: 'form-control',
                               style: 'width: 100%') %>
               </div>
@@ -66,9 +66,9 @@
             <div class="col-sm-3">
               <div class="form-group">
                 <%= label_tag(:program_type, t('.program_type')) %>
-                <%= select_tag(:program_type, 
+                <%= select_tag(:program_type,
                               options_for_select(enum_options_for_select(Course, :program_type), params[:program_type]),
-                              include_blank: true, 
+                              include_blank: true,
                               class: 'form-control',
                               style: 'width: 100%') %>
               </div>
@@ -77,9 +77,9 @@
             <div class="col-sm-3">
               <div class="form-group">
                 <%= label_tag(:language_id, t('.language')) %>
-                <%= select_tag(:language_id, 
+                <%= select_tag(:language_id,
                               options_from_collection_for_select(Language.all, :id, :name, params[:language_id]),
-                              include_blank: true, 
+                              include_blank: true,
                               class: 'form-control',
                               style: 'width: 100%') %>
               </div>
@@ -88,9 +88,9 @@
             <div class="col-sm-2">
               <div class="form-group">
                 <%= label_tag(:status, t('.status')) %>
-                <%= select_tag(:status, 
+                <%= select_tag(:status,
                               options_for_select(enum_options_for_select(Course, :status), params[:status]),
-                              include_blank: true, 
+                              include_blank: true,
                               class: 'form-control',
                               style: 'width: 100%') %>
               </div>

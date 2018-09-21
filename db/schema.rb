@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_19_115101) do
+ActiveRecord::Schema.define(version: 2018_09_20_223813) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -275,6 +276,11 @@ ActiveRecord::Schema.define(version: 2018_09_19_115101) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
+  create_table "high_school_types", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "code", null: false
+  end
+
   create_table "group_courses", force: :cascade do |t|
     t.bigint "course_id"
     t.bigint "course_unit_group_id"
@@ -305,9 +311,6 @@ ActiveRecord::Schema.define(version: 2018_09_19_115101) do
   create_table "languages", force: :cascade do |t|
     t.string "name", null: false
     t.string "iso", null: false
-    t.integer "yoksis_code"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "positions", force: :cascade do |t|
@@ -341,6 +344,53 @@ ActiveRecord::Schema.define(version: 2018_09_19_115101) do
     t.bigint "user_id"
     t.datetime "created_at"
     t.index ["user_id"], name: "index_projects_on_user_id"
+  end
+
+  create_table "prospective_students", force: :cascade do |t|
+    t.string "id_number", null: false
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.string "fathers_name"
+    t.string "mothers_name"
+    t.date "date_of_birth"
+    t.integer "gender"
+    t.integer "nationality"
+    t.string "place_of_birth"
+    t.string "registration_city"
+    t.string "registration_district"
+    t.string "high_school_code"
+    t.bigint "high_school_type_id"
+    t.string "high_school_branch"
+    t.integer "state_of_education"
+    t.integer "high_school_graduation_year"
+    t.integer "placement_type"
+    t.float "exam_score"
+    t.bigint "language_id"
+    t.text "address"
+    t.string "home_phone"
+    t.string "mobile_phone"
+    t.string "email"
+    t.bigint "student_disability_type_id"
+    t.boolean "top_student", default: false
+    t.float "placement_score"
+    t.integer "placement_rank"
+    t.bigint "unit_id"
+    t.integer "preference_order"
+    t.string "placement_score_type"
+    t.integer "additional_score"
+    t.boolean "meb_status"
+    t.datetime "meb_status_date"
+    t.boolean "military_status"
+    t.datetime "military_status_date"
+    t.boolean "obs_status"
+    t.datetime "obs_status_date"
+    t.string "obs_registered_program"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["high_school_type_id"], name: "index_prospective_students_on_high_school_type_id"
+    t.index ["language_id"], name: "index_prospective_students_on_language_id"
+    t.index ["student_disability_type_id"], name: "index_prospective_students_on_student_disability_type_id"
+    t.index ["unit_id"], name: "index_prospective_students_on_unit_id"
   end
 
   create_table "registration_documents", force: :cascade do |t|
@@ -444,8 +494,8 @@ ActiveRecord::Schema.define(version: 2018_09_19_115101) do
   end
 
   create_table "unit_types", force: :cascade do |t|
-    t.string "name"
-    t.integer "code"
+    t.string "name", null: false
+    t.integer "code", null: false
     t.integer "group"
   end
 
@@ -465,6 +515,7 @@ ActiveRecord::Schema.define(version: 2018_09_19_115101) do
     t.bigint "unit_type_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "osym_id"
     t.index ["ancestry"], name: "index_units_on_ancestry"
     t.index ["district_id"], name: "index_units_on_district_id"
     t.index ["unit_instruction_language_id"], name: "index_units_on_unit_instruction_language_id"
@@ -494,7 +545,7 @@ ActiveRecord::Schema.define(version: 2018_09_19_115101) do
     t.string "preferred_language", default: "tr"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "password_changed_at", default: -> { "now()" }, null: false
+    t.datetime "password_changed_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.integer "articles_count"
     t.integer "projects_count"
     t.string "slug"

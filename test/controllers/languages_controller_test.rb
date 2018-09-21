@@ -28,7 +28,7 @@ class LangugesControllerTest < ActionDispatch::IntegrationTest
     assert_difference('Language.count') do
       post languages_path params: {
         language: {
-          name: 'Test language', iso: 'TLC', yoksis_code: 5
+          name: 'Test language', iso: 'TLC'
         }
       }
     end
@@ -37,7 +37,6 @@ class LangugesControllerTest < ActionDispatch::IntegrationTest
 
     assert_equal 'Test Language', language.name
     assert_equal 'TLC', language.iso
-    assert_equal 5, language.yoksis_code
     assert_redirected_to language_path(language)
     assert_equal translate('.create.success'), flash[:notice]
   end
@@ -53,7 +52,7 @@ class LangugesControllerTest < ActionDispatch::IntegrationTest
     language = Language.last
     patch language_path(language), params: {
       language: {
-        name: 'Test language Update', iso: 'TLU', yoksis_code: nil
+        name: 'Test language Update', iso: 'TLU'
       }
     }
 
@@ -61,7 +60,6 @@ class LangugesControllerTest < ActionDispatch::IntegrationTest
 
     assert_equal 'Test Language Update', language.name
     assert_equal 'TLU', language.iso
-    assert_nil language.yoksis_code
     assert_redirected_to language_path(language)
     assert_equal translate('.update.success'), flash[:notice]
   end

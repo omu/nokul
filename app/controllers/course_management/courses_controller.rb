@@ -2,6 +2,8 @@
 
 module CourseManagement
   class CoursesController < ApplicationController
+    include PagyBackendWithHelpers
+
     before_action :set_course, only: %i[show edit update destroy]
 
     def index

@@ -1,0 +1,196 @@
+<div class='row'>
+  <div class='col-lg-6'>
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'university' %><strong><%= t('.identity_information') %></strong>
+      </div>
+      <div class="card-body">
+        <table class="table table-responsive-sm">
+          <tbody>
+            <tr>
+              <td><%= t('.id_number') %></td>
+              <td><%= @prospective_student.id_number %></td>
+            </tr>
+            <tr>
+              <td><%= t('.first_name') %></td>
+              <td><%= @prospective_student.first_name %></td>
+            </tr>
+            <tr>
+              <td><%= t('.last_name') %></td>
+              <td><%= @prospective_student.last_name %></td>
+            </tr>
+            <tr>
+              <td><%= t('.date_of_birth') %></td>
+              <td><%= @prospective_student.date_of_birth %></td>
+            </tr>
+            <tr>
+              <td><%= t('.fathers_name') %></td>
+              <td><%= @prospective_student.fathers_name %></td>
+            </tr>
+            <tr>
+              <td><%= t('.mothers_name') %></td>
+              <td><%= @prospective_student.mothers_name %></td>
+            </tr>
+            <tr>
+              <td><%= t('.gender') %></td>
+              <td><%= enum_t(@prospective_student, :gender) %></td>
+            </tr>
+            <tr>
+              <td><%= t('.nationality') %></td>
+              <td><%= @prospective_student.nationality %></td>
+            </tr>
+            <tr>
+              <td><%= t('.place_of_birth') %></td>
+              <td><%= @prospective_student.place_of_birth %></td>
+            </tr>
+            <tr>
+              <td><%= t('.registration_city') %></td>
+              <td><%= @prospective_student.registration_city %></td>
+            </tr>
+            <tr>
+              <td><%= t('.registration_district') %></td>
+              <td><%= @prospective_student.registration_district %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class='col-lg-6'>
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'university' %><strong><%= t('.prospective_student') %></strong>
+      </div>
+      <div class="card-body">
+        <table class="table table-responsive-sm">
+          <tbody>
+            <tr>
+              <td><%= t('.unit') %></td>
+              <% unit = @prospective_student.unit %>
+              <td><%= unit.name %> / <%= unit.parent.name %> / <%= unit.parent.try(:parent).name %></td>
+            </tr>
+            <tr>
+              <td><%= t('.state_of_education') %></td>
+              <td><%= @prospective_student.state_of_education %></td>
+            </tr>
+            <tr class="<%= @prospective_student.meb_status ? 'table-success' : 'table-danger' %>">
+              <td><%= t('.meb_status') %></td>
+              <td>
+                <%= @prospective_student.meb_status ? t('.graduated') : t('.not_graduated_or_unknown') %></td>
+            </tr>
+            <tr>
+              <td><%= t('.meb_status_date') %></td>
+              <td><%= @prospective_student.meb_status_date %></td>
+            </tr>
+            <tr class="<%= @prospective_student.military_status ? 'table-success' : 'table-danger' %>">
+              <td><%= t('.military_status') %></td>
+              <td><%= @prospective_student.military_status ? t('.unproblematic') : t('.must_see_recruiting_office') %></td>
+            </tr>
+            <tr>
+              <td><%= t('.military_status_date') %></td>
+              <td><%= @prospective_student.military_status_date %></td>
+            </tr>
+            <tr class="<%= @prospective_student.obs_status ? 'table-success' : 'table-danger' %>">
+              <td><%= t('.obs_status') %></td>
+              <td><%= @prospective_student.obs_status ? t('.unproblematic') : t('.student_in_a_different_unit') %></td>
+            </tr>
+            <tr>
+              <td><%= t('.obs_status_date') %></td>
+              <td><%= @prospective_student.obs_status_date %></td>
+            </tr>
+            <tr>
+              <td><%= t('.obs_registered_program') %></td>
+              <td><%= @prospective_student.obs_registered_program %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'university' %><strong><%= t('.other_information') %></strong>
+      </div>
+
+      <div class="card-body">
+        <table class="table table-responsive-sm">
+          <tbody>
+            <tr>
+              <td><%= t('.high_school_code') %></td>
+              <td><%= @prospective_student.high_school_code %></td>
+            </tr>
+            <tr>
+              <td><%= t('.high_school_type') %></td>
+              <td><%= @prospective_student.high_school_type.try(:name) %></td>
+            </tr>
+            <tr>
+              <td><%= t('.high_school_graduation_year') %></td>
+              <td><%= @prospective_student.high_school_graduation_year %></td>
+            </tr>
+            <tr>
+              <td><%= t('.placement_type') %></td>
+              <td><%= enum_t(@prospective_student, :placement_type) %></td>
+            </tr>
+            <tr>
+              <td><%= t('.exam_score') %></td>
+              <td><%= @prospective_student.exam_score %></td>
+            </tr>
+            <tr>
+              <td><%= t('.language_id') %></td>
+              <td><%= @prospective_student.language_id %></td>
+            </tr>
+            <tr>
+              <td><%= t('.address') %></td>
+              <td><%= @prospective_student.address %></td>
+            </tr>
+            <tr>
+              <td><%= t('.home_phone') %></td>
+              <td><%= @prospective_student.home_phone %></td>
+            </tr>
+            <tr>
+              <td><%= t('.mobile_phone') %></td>
+              <td><%= @prospective_student.mobile_phone %></td>
+            </tr>
+            <tr>
+              <td><%= t('.email') %></td>
+              <td><%= @prospective_student.email %></td>
+            </tr>
+            <tr>
+              <td><%= t('.student_disability_type_id') %></td>
+              <td><%= @prospective_student.student_disability_type_id %></td>
+            </tr>
+            <tr>
+              <td><%= t('.top_student') %></td>
+              <td><%= @prospective_student.top_student ? t('yes') : t('no') %></td>
+            </tr>
+            <tr>
+              <td><%= t('.placement_score') %></td>
+              <td><%= @prospective_student.placement_score %></td>
+            </tr>
+            <tr>
+              <td><%= t('.placement_rank') %></td>
+              <td><%= @prospective_student.placement_rank %></td>
+            </tr>
+            <tr>
+              <td><%= t('.preference_order') %></td>
+              <td><%= @prospective_student.preference_order %></td>
+            </tr>
+            <tr>
+              <td><%= t('.placement_score') %></td>
+              <td><%= @prospective_student.placement_score %></td>
+            </tr>
+            <tr>
+              <td><%= t('.additional_score') %></td>
+              <td><%= @prospective_student.additional_score %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+

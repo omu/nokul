@@ -2,6 +2,8 @@
 
 module CourseManagement
   class CourseGroupTypesController < ApplicationController
+    include PagyBackendWithHelpers
+
     before_action :set_course_group_type, only: %i[edit update destroy]
 
     def index

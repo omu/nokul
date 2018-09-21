@@ -1,12 +1,9 @@
 # Rake Tasks
 
-- [OPTIONAL]. `setup` or `seed` already does it, but if you want to externally create YOKSIS references, departments, country codes and academic staffs inside your app, run the tasks shown below:
+- [OPTIONAL]. `setup` or `seed` already does it, but if you want to externally create YOKSIS references, departments, country codes etc. inside your app, run the specific tasks alone:
 
   ```bash
-  rake yoksis:fetch_references
-  rake yoksis:fetch_academic_staff
-  rake yoksis:import_departments
-  rake yoksis:import_yoksis_country_codes
+  rake -T # lists all available rake tasks, see ones categorized under import or fetch
   ```
 
 - `fetch` prefix has used for API operations, `import` prefix has used for local CSV importing operations.
