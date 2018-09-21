@@ -3,7 +3,7 @@
 class UnitsController < ApplicationController
   include PagyBackendWithHelpers
   before_action :set_unit, only: %i[edit update destroy show courses programs]
-  
+
   def index
     units = Unit.includes(
       :unit_status, :unit_instruction_language, :unit_instruction_type, :unit_type, district: [:city]
