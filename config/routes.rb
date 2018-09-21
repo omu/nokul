@@ -55,6 +55,10 @@ Rails.application.routes.draw do
     resources :course_group_types, except: :show
   end
 
+  scope module: :student_management do
+    resources :prospective_students
+  end
+
   scope module: :locations do
     resources :countries do
       resources :cities, except: [:index] do

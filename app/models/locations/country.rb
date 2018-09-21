@@ -13,7 +13,7 @@ class Country < ApplicationRecord
   )
 
   # relations
-  has_many :cities, dependent: :nullify
+  has_many :cities, dependent: :destroy
   has_many :districts, through: :cities
   has_many :addresses, through: :districts
   has_many :units, through: :districts

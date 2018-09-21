@@ -2,6 +2,8 @@
 
 module Locations
   class CountriesController < ApplicationController
+    include PagyBackendWithHelpers
+
     before_action :set_country, only: %i[show edit update destroy]
 
     def index

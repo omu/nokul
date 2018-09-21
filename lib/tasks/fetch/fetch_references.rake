@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-namespace :yoksis do
+namespace :fetch do
   # call a specific task by mentioning it's name and class, ie:
   # rake yoksis:reference['get_ogrenim_dili','UnitInstructionLanguage']
   # if you are using zsh you must escape braces though, ie:
   # rake yoksis:reference\['get_ogrenim_dili','UnitInstructionLanguage'\]
 
-  desc 'fetch all references'
-  task :fetch_references do
-    puts 'Fetching references from YOKSIS'
+  desc 'fetches all references'
+  task :references do
+    progress_bar = ProgressBar.spawn('YOKSIS Referanslar', 15)
 
     {
       get_birim_turu: 'UnitType',
@@ -27,14 +27,15 @@ namespace :yoksis do
       get_ceza_turu: 'StudentPunishmentType',
       get_ogrenci_ogrencilik_hakki: 'StudentStudentshipStatus'
     }.each do |action, klass|
-      Rake::Task['yoksis:fetch_reference'].invoke(action, klass)
+      Rake::Task['fetch:reference'].invoke(action, klass)
       # https://stackoverflow.com/questions/4822020/why-does-a-rake-task-in-a-loop-execute-only-once
-      Rake::Task['yoksis:fetch_reference'].reenable
+      Rake::Task['fetch:reference'].reenable
+      progress_bar.increment
     end
   end
 
-  desc 'fetch an individual reference'
-  task :fetch_reference, %i[soap_method klass] => [:environment] do |_, args|
+  desc 'fetches an individual reference'
+  task :reference, %i[soap_method klass] => [:environment] do |_, args|
     client = Services::Yoksis::V1::Referanslar.new
     api_name = client.class.to_s.split('::')[1]
     endpoint = client.class.to_s.split('::')[3]
@@ -50,6 +51,7 @@ namespace :yoksis do
 
     # find if any records exists for this api_action
     current_response = YoksisResponse.find_by(name: api_name, endpoint: endpoint, action: api_action)
+
     # create records and log the action if no records found
     create_records(response, args[:klass].constantize) unless current_response
 
@@ -68,7 +70,7 @@ namespace :yoksis do
 
   def create_records(response, klass)
     response.values.first[:referanslar].each do |referans|
-      klass.create!(name: referans[:ad], code: referans[:kod])
+      klass.create(name: referans[:ad], code: referans[:kod])
     end
   end
 end

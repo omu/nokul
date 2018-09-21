@@ -2,6 +2,8 @@
 
 module CourseManagement
   class CourseUnitGroupsController < ApplicationController
+    include PagyBackendWithHelpers
+
     before_action :set_course_unit_group, only: %i[show edit update destroy]
 
     def index

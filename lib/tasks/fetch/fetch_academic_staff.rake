@@ -1,12 +1,10 @@
 # frozen_string_literal: true
 
-namespace :yoksis do
+namespace :fetch do
   desc 'fetches all academic staff defined in YOKSIS'
-  task fetch_academic_staff: :environment do
+  task academic_staff: :environment do
     # we simply don't store YOKSISResponse of this action because there is no consistency between responses
     # of each page - no ordering, no timestamp etc.
-    puts 'Fetching academic staff from YOKSIS'
-
     client = Services::Yoksis::V1::AkademikPersonel.new
 
     # this endpoint uses pagination in a weird way
@@ -18,6 +16,7 @@ namespace :yoksis do
     # fetch academic staff from each page
     (1..number_of_pages).each do |page_number|
       response = client.list_academic_staff(page_number)
+      progress_bar = ProgressBar.spawn("Academic Staff - Page #{page_number}", response.size)
 
       response.each do |academic_staff|
         password = SecureRandom.uuid
@@ -32,6 +31,8 @@ namespace :yoksis do
         )
 
         next unless user.save
+
+        progress_bar.increment
 
         title = Title.find_by(name: academic_staff[:kadro_unvan].capitalize_all)
         unit = Unit.find_by(yoksis_id: academic_staff[:birim_id])

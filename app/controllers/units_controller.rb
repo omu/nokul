@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class UnitsController < ApplicationController
+  include PagyBackendWithHelpers
+
   before_action :set_unit, only: %i[edit update destroy show courses]
 
   def index

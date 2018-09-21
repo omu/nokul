@@ -2,6 +2,8 @@
 
 module Calendar
   class CalendarTitlesController < ApplicationController
+    include PagyBackendWithHelpers
+
     before_action :set_calendar_title, only: %i[edit update destroy]
 
     def index

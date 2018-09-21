@@ -13,7 +13,7 @@ class City < ApplicationRecord
 
   # relations
   belongs_to :country
-  has_many :districts, dependent: :nullify
+  has_many :districts, dependent: :destroy
   has_many :addresses, through: :districts
   has_many :units, through: :districts
 

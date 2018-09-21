@@ -1,620 +1,465 @@
-AA:
+-
   name: Afar
   iso: AA
-  yoksis_code:
-AB:
+-
   name: Abhazca
   iso: AB
-  yoksis_code:
-ADY:
+-
   name: Adigece
   iso: ADY
-  yoksis_code:
-DE:
+-
   name: Almanca
   iso: DE
-  yoksis_code:
-AR:
+-
   name: Arapça
   iso: AR
-  yoksis_code:
-SQ:
+-
   name: Arnavutça
   iso: SQ
-  yoksis_code:
-AX:
+-
   name: Asur Dili
   iso: AX
-  yoksis_code:
-AZ:
+-
   name: Azerice
   iso: AZ
-  yoksis_code:
-EU:
+-
   name: Baskça
   iso: EU
-  yoksis_code:
-BE:
+-
   name: Belarusça
   iso: BE
-  yoksis_code:
-BN:
+-
   name: Bengalli
   iso: BN
-  yoksis_code:
-DZ:
+-
   name: Bhutanlı Dili
   iso: DZ
-  yoksis_code:
-BH:
+-
   name: Bihar Dili
   iso: BH
-  yoksis_code:
-MY:
+-
   name: Birmanya Dili
   iso: MY
-  yoksis_code:
-BS:
+-
   name: Boşnakça
   iso: BS
-  yoksis_code:
-BG:
+-
   name: Bulgarca
   iso: BG
-  yoksis_code:
-CE:
+-
   name: Çeçen
   iso: CE
-  yoksis_code:
-CS:
+-
   name: Çekce
   iso: CS
-  yoksis_code:
-ZH:
+-
   name: Çince
   iso: ZH
-  yoksis_code:
-CV:
+-
   name: Çuvaş
   iso: CV
-  yoksis_code:
-DA:
+-
   name: Danca
   iso: DA
-  yoksis_code:
-PG:
+-
   name: Dari
   iso: PG
-  yoksis_code:
-ID:
+-
   name: Endonezya Dili
   iso: ID
-  yoksis_code:
-HY:
+-
   name: Ermenice
   iso: HY
-  yoksis_code:
-EO:
+-
   name: Esperanto
   iso: EO
-  yoksis_code:
-ET:
+-
   name: Estonyaca
   iso: ET
-  yoksis_code:
-FA:
+-
   name: Farsça
   iso: FA
-  yoksis_code:
-NL:
+-
   name: Felemenkçe
   iso: NL
-  yoksis_code:
-FJ:
+-
   name: Fiji
   iso: FJ
-  yoksis_code:
-FI:
+-
   name: Fince
   iso: FI
-  yoksis_code:
-FL:
+-
   name: Flaman Dili
   iso: FL
-  yoksis_code:
-FR:
+-
   name: Fransızca
   iso: FR
-  yoksis_code:
-FY:
+-
   name: Frizye Dili
   iso: FY
-  yoksis_code:
-GL:
+-
   name: Galiçyaca
   iso: GL
-  yoksis_code:
-KL:
+-
   name: Grönland
   iso: KL
-  yoksis_code:
-NR:
+-
   name: Güney Ndebele
   iso: NR
-  yoksis_code:
-KA:
+-
   name: Gürcüce
   iso: KA
-  yoksis_code:
-HC:
+-
   name: Haiti Creole
   iso: HC
-  yoksis_code:
-HA:
+-
   name: Hausa
   iso: HA
-  yoksis_code:
-HZ:
+-
   name: Herero
   iso: HZ
-  yoksis_code:
-SH:
+-
   name: Hırvatça
   iso: SH
-  yoksis_code:
-HL:
+-
   name: Hiligaynon
   iso: HL
-  yoksis_code:
-HI:
+-
   name: Hintçe
   iso: HI
-  yoksis_code:
-HO:
+-
   name: Hiri Motu
   iso: HO
-  yoksis_code:
-HM:
+-
   name: Hmong
   iso: HM
-  yoksis_code:
-IB:
+-
   name: Iban
   iso: IB
-  yoksis_code:
-IL:
+-
   name: Ilocano
   iso: IL
-  yoksis_code:
-IA:
+-
   name: Interlingua
   iso: IA
-  yoksis_code:
-IK:
+-
   name: Inupiak
   iso: IK
-  yoksis_code:
-HE:
+-
   name: İbranice
   iso: HE
-  yoksis_code:
-EN:
+-
   name: İngilizce
   iso: EN
-  yoksis_code:
-IU:
+-
   name: İnuktitut
   iso: IU
-  yoksis_code:
-GA:
+-
   name: İrlandaca
   iso: GA
-  yoksis_code:
-GD:
+-
   name: İskoç Gallicesi
   iso: GD
-  yoksis_code:
-SCO:
+-
   name: İskoçca
   iso: SCO
-  yoksis_code:
-ES:
+-
   name: İspanyolca
   iso: ES
-  yoksis_code:
-SV:
+-
   name: İsveççe
   iso: SV
-  yoksis_code:
-IT:
+-
   name: İtalyanca
   iso: IT
-  yoksis_code:
-IS:
+-
   name: İzlandaca
   iso: IS
-  yoksis_code:
-JA:
+-
   name: Japonca
   iso: JA
-  yoksis_code:
-JW:
+-
   name: Javanese
   iso: JW
-  yoksis_code:
-KM:
+-
   name: Kamboçyaca
   iso: KM
-  yoksis_code:
-CA:
+-
   name: Katalanca
   iso: CA
-  yoksis_code:
-KK:
+-
   name: Kazakça
   iso: KK
-  yoksis_code:
-KW:
+-
   name: Keltçe
   iso: KW
-  yoksis_code:
-KS:
+-
   name: Keşmir
   iso: KS
-  yoksis_code:
-KY:
+-
   name: Kırgızca
   iso: KY
-  yoksis_code:
-KI:
+-
   name: Kikuyu
   iso: KI
-  yoksis_code:
-RW:
+-
   name: Kinyaruanda
   iso: RW
-  yoksis_code:
-RN:
+-
   name: Kirundi
   iso: RN
-  yoksis_code:
-KV:
+-
   name: Komi
   iso: KV
-  yoksis_code:
-KO:
+-
   name: Korece
   iso: KO
-  yoksis_code:
-CO:
+-
   name: Korsika
   iso: CO
-  yoksis_code:
-KP:
+-
   name: Kpelle
   iso: KP
-  yoksis_code:
-ND:
+-
   name: Kuzey Dakota
   iso: ND
-  yoksis_code:
-LA:
+-
   name: Latin
   iso: LA
-  yoksis_code:
-PL:
+-
   name: Lehçe
   iso: PL
-  yoksis_code:
-LV:
+-
   name: Letonca
   iso: LV
-  yoksis_code:
-LN:
+-
   name: Lingala
   iso: LN
-  yoksis_code:
-LT:
+-
   name: Litvanyaca
   iso: LT
-  yoksis_code:
-LB:
+-
   name: Lüksemburg Dili
   iso: LB
-  yoksis_code:
-HU:
+-
   name: Macarca
   iso: HU
-  yoksis_code:
-MG:
+-
   name: Madagaskar Dili
   iso: MG
-  yoksis_code:
-MK:
+-
   name: Makedonca
   iso: MK
-  yoksis_code:
-ML:
+-
   name: Malayalam
   iso: ML
-  yoksis_code:
-MS:
+-
   name: Malayca
   iso: MS
-  yoksis_code:
-MT:
+-
   name: Malta Dili
   iso: MT
-  yoksis_code:
-CM:
+-
   name: Mandarin
   iso: CM
-  yoksis_code:
-MI:
+-
   name: Maori
   iso: MI
-  yoksis_code:
-MR:
+-
   name: Marathi
   iso: MR
-  yoksis_code:
-MH:
+-
   name: Marshallese
   iso: MH
-  yoksis_code:
-MN:
+-
   name: Moğolca
   iso: MN
-  yoksis_code:
-NA:
+-
   name: Nauru
   iso: NA
-  yoksis_code:
-NV:
+-
   name: Navajo
   iso: NV
-  yoksis_code:
-NG:
+-
   name: Ndonga
   iso: NG
-  yoksis_code:
-NE:
+-
   name: Nepali
   iso: NE
-  yoksis_code:
-NI:
+-
   name: Nijerya Dili
   iso: NI
-  yoksis_code:
-'NO':
+-
   name: Norveççe
-  iso: 'NO'
-  yoksis_code:
-NY:
+  iso: NO
+-
   name: Nyanja
   iso: NY
-  yoksis_code:
-OC:
+-
   name: Occitan
   iso: OC
-  yoksis_code:
-OR:
+-
   name: Oriya
   iso: OR
-  yoksis_code:
-OM:
+-
   name: Oromo
   iso: OM
-  yoksis_code:
-OS:
+-
   name: Osetçe
   iso: OS
-  yoksis_code:
-UZ:
+-
   name: Özbekçe
   iso: UZ
-  yoksis_code:
-PI:
+-
   name: Pali
   iso: PI
-  yoksis_code:
-PN:
+-
   name: Pananyano
   iso: PN
-  yoksis_code:
-PP:
+-
   name: Papiamento
   iso: PP
-  yoksis_code:
-PS:
+-
   name: Pashto
   iso: PS
-  yoksis_code:
-PA:
+-
   name: Pencap Dili
   iso: PA
-  yoksis_code:
-PT:
+-
   name: Portuguese
   iso: PT
-  yoksis_code:
-QU:
+-
   name: Quechua
   iso: QU
-  yoksis_code:
-RO:
+-
   name: Romence
   iso: RO
-  yoksis_code:
-RU:
+-
   name: Rusça
   iso: RU
-  yoksis_code:
-SE:
+-
   name: Sámi
   iso: SE
-  yoksis_code:
-SM:
+-
   name: Samoaca
   iso: SM
-  yoksis_code:
-SG:
+-
   name: Sangho
   iso: SG
-  yoksis_code:
-SA:
+-
   name: Sanskritçe
   iso: SA
-  yoksis_code:
-SC:
+-
   name: Sardince
   iso: SC
-  yoksis_code:
-TN:
+-
   name: Setswana
   iso: TN
-  yoksis_code:
-SN:
+-
   name: Shona
   iso: SN
-  yoksis_code:
-SR:
+-
   name: Sırpça
   iso: SR
-  yoksis_code:
-SD:
+-
   name: Sindhi
   iso: SD
-  yoksis_code:
-SI:
+-
   name: Sinhalese
   iso: SI
-  yoksis_code:
-SS:
+-
   name: Siswati
   iso: SS
-  yoksis_code:
-SK:
+-
   name: Slovak
   iso: SK
-  yoksis_code:
-SL:
+-
   name: Slovence
   iso: SL
-  yoksis_code:
-SO:
+-
   name: Somali Dili
   iso: SO
-  yoksis_code:
-SU:
+-
   name: Sundanese
   iso: SU
-  yoksis_code:
-SW:
+-
   name: Swahili
   iso: SW
-  yoksis_code:
-TG:
+-
   name: Tacikçe
   iso: TG
-  yoksis_code:
-TY:
+-
   name: Tahitian
   iso: TY
-  yoksis_code:
-TW:
+-
   name: Taiwan
   iso: TW
-  yoksis_code:
-TL:
+-
   name: Takalotça
   iso: TL
-  yoksis_code:
-TM:
+-
   name: Tamil
   iso: TM
-  yoksis_code:
-TT:
+-
   name: Tatar
   iso: TT
-  yoksis_code:
-TH:
+-
   name: Tayland Dili
   iso: TH
-  yoksis_code:
-TE:
+-
   name: Telugu
   iso: TE
-  yoksis_code:
-BO:
+-
   name: Tibetçe
   iso: BO
-  yoksis_code:
-TI:
+-
   name: Tigrinya
   iso: TI
-  yoksis_code:
-TO:
+-
   name: Tonga
   iso: TO
-  yoksis_code:
-TS:
+-
   name: Tsonga
   iso: TS
-  yoksis_code:
-TR:
+-
   name: Türkçe
   iso: TR
-  yoksis_code:
-TK:
+-
   name: Türkmence
   iso: TK
-  yoksis_code:
-UK:
+-
   name: Ukraynaca
   iso: UK
-  yoksis_code:
-UR:
+-
   name: Urduca
   iso: UR
-  yoksis_code:
-UG:
+-
   name: Uygurca
   iso: UG
-  yoksis_code:
-VI:
+-
   name: Vietnam Dili
   iso: VI
-  yoksis_code:
-CY:
+-
   name: Welsh
   iso: CY
-  yoksis_code:
-WO:
+-
   name: Wolof
   iso: WO
-  yoksis_code:
-XH:
+-
   name: Xhosa
   iso: XH
-  yoksis_code:
-YI:
+-
   name: Yidce
   iso: YI
-  yoksis_code:
-YO:
+-
   name: Yoruba
   iso: YO
-  yoksis_code:
-EL:
+-
   name: Yunanca
   iso: EL
-  yoksis_code:
-ZJ:
+-
   name: Zhuang
   iso: ZJ
-  yoksis_code:
-ZU:
+-
   name: Zulu
   iso: ZU
-  yoksis_code:
