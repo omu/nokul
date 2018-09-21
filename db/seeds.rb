@@ -10,7 +10,7 @@ Rake::Task['import:all'].invoke
 UnitType.create(name: 'Kurul / Komisyon', code: 200)
 
 # Import prospective students of 2018
-Osym::ImportProspectiveStudentsJob.new.perform_now
+Osym::ImportProspectiveStudentsJob.perform_later
 
 # Fetch Academic Staff from YOKSIS
 Rake::Task['fetch:academic_staff'].invoke
