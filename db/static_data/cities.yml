@@ -1,81 +1,243 @@
-Adana|TR-01
-Adıyaman|TR-02
-Afyonkarahisar|TR-03
-Ağrı|TR-04
-Aksaray|TR-68
-Amasya|TR-05
-Ankara|TR-06
-Antalya|TR-07
-Ardahan|TR-75
-Artvin|TR-08
-Aydın|TR-09
-Balıkesir|TR-10
-Bartın|TR-74
-Batman|TR-72
-Bayburt|TR-69
-Bilecik|TR-11
-Bingöl|TR-12
-Bitlis|TR-13
-Bolu|TR-14
-Burdur|TR-15
-Bursa|TR-16
-Çanakkale|TR-17
-Çankırı|TR-18
-Çorum|TR-19
-Denizli|TR-20
-Diyarbakır|TR-21
-Düzce|TR-81
-Edirne|TR-22
-Elazığ|TR-23
-Erzincan|TR-24
-Erzurum|TR-25
-Eskisehir|TR-26
-Gaziantep|TR-27
-Giresun|TR-28
-Gümüşhane|TR-29
-Hakkari|TR-30
-Hatay|TR-31
-Iğdır|TR-76
-Isparta|TR-32
-Istanbul|TR-34
-İzmir|TR-35
-Kahramanmaraş|TR-46
-Karabük|TR-78
-Karaman|TR-70
-Kars|TR-36
-Kastamonu|TR-37
-Kayseri|TR-38
-Kilis|TR-79
-Kırıkkale|TR-71
-Kırklareli|TR-39
-Kırşehir|TR-40
-Kocaeli|TR-41
-Konya|TR-42
-Kütahya|TR-43
-Malatya|TR-44
-Manisa|TR-45
-Mardin|TR-47
-Mersin|TR-33
-Muğla|TR-48
-Muş|TR-49
-Nevşehir|TR-50
-Niğde|TR-51
-Ordu|TR-52
-Osmaniye|TR-80
-Rize|TR-53
-Sakarya|TR-54
-Samsun|TR-55
-Şanlıurfa|TR-63
-Siirt|TR-56
-Sinop|TR-57
-Sivas|TR-58
-Şırnak|TR-73
-Tekirdağ|TR-59
-Tokat|TR-60
-Trabzon|TR-61
-Tunceli|TR-62
-Uşak|TR-64
-Van|TR-65
-Yalova|TR-77
-Yozgat|TR-66
-Zonguldak|TR-67
+-
+  name: Adana
+  alpha_2_code: TR-01
+-
+  name: Adıyaman
+  alpha_2_code: TR-02
+-
+  name: Afyonkarahisar
+  alpha_2_code: TR-03
+-
+  name: Ağrı
+  alpha_2_code: TR-04
+-
+  name: Aksaray
+  alpha_2_code: TR-68
+-
+  name: Amasya
+  alpha_2_code: TR-05
+-
+  name: Ankara
+  alpha_2_code: TR-06
+-
+  name: Antalya
+  alpha_2_code: TR-07
+-
+  name: Ardahan
+  alpha_2_code: TR-75
+-
+  name: Artvin
+  alpha_2_code: TR-08
+-
+  name: Aydın
+  alpha_2_code: TR-09
+-
+  name: Balıkesir
+  alpha_2_code: TR-10
+-
+  name: Bartın
+  alpha_2_code: TR-74
+-
+  name: Batman
+  alpha_2_code: TR-72
+-
+  name: Bayburt
+  alpha_2_code: TR-69
+-
+  name: Bilecik
+  alpha_2_code: TR-11
+-
+  name: Bingöl
+  alpha_2_code: TR-12
+-
+  name: Bitlis
+  alpha_2_code: TR-13
+-
+  name: Bolu
+  alpha_2_code: TR-14
+-
+  name: Burdur
+  alpha_2_code: TR-15
+-
+  name: Bursa
+  alpha_2_code: TR-16
+-
+  name: Çanakkale
+  alpha_2_code: TR-17
+-
+  name: Çankırı
+  alpha_2_code: TR-18
+-
+  name: Çorum
+  alpha_2_code: TR-19
+-
+  name: Denizli
+  alpha_2_code: TR-20
+-
+  name: Diyarbakır
+  alpha_2_code: TR-21
+-
+  name: Düzce
+  alpha_2_code: TR-81
+-
+  name: Edirne
+  alpha_2_code: TR-22
+-
+  name: Elazığ
+  alpha_2_code: TR-23
+-
+  name: Erzincan
+  alpha_2_code: TR-24
+-
+  name: Erzurum
+  alpha_2_code: TR-25
+-
+  name: Eskisehir
+  alpha_2_code: TR-26
+-
+  name: Gaziantep
+  alpha_2_code: TR-27
+-
+  name: Giresun
+  alpha_2_code: TR-28
+-
+  name: Gümüşhane
+  alpha_2_code: TR-29
+-
+  name: Hakkari
+  alpha_2_code: TR-30
+-
+  name: Hatay
+  alpha_2_code: TR-31
+-
+  name: Iğdır
+  alpha_2_code: TR-76
+-
+  name: Isparta
+  alpha_2_code: TR-32
+-
+  name: Istanbul
+  alpha_2_code: TR-34
+-
+  name: İzmir
+  alpha_2_code: TR-35
+-
+  name: Kahramanmaraş
+  alpha_2_code: TR-46
+-
+  name: Karabük
+  alpha_2_code: TR-78
+-
+  name: Karaman
+  alpha_2_code: TR-70
+-
+  name: Kars
+  alpha_2_code: TR-36
+-
+  name: Kastamonu
+  alpha_2_code: TR-37
+-
+  name: Kayseri
+  alpha_2_code: TR-38
+-
+  name: Kilis
+  alpha_2_code: TR-79
+-
+  name: Kırıkkale
+  alpha_2_code: TR-71
+-
+  name: Kırklareli
+  alpha_2_code: TR-39
+-
+  name: Kırşehir
+  alpha_2_code: TR-40
+-
+  name: Kocaeli
+  alpha_2_code: TR-41
+-
+  name: Konya
+  alpha_2_code: TR-42
+-
+  name: Kütahya
+  alpha_2_code: TR-43
+-
+  name: Malatya
+  alpha_2_code: TR-44
+-
+  name: Manisa
+  alpha_2_code: TR-45
+-
+  name: Mardin
+  alpha_2_code: TR-47
+-
+  name: Mersin
+  alpha_2_code: TR-33
+-
+  name: Muğla
+  alpha_2_code: TR-48
+-
+  name: Muş
+  alpha_2_code: TR-49
+-
+  name: Nevşehir
+  alpha_2_code: TR-50
+-
+  name: Niğde
+  alpha_2_code: TR-51
+-
+  name: Ordu
+  alpha_2_code: TR-52
+-
+  name: Osmaniye
+  alpha_2_code: TR-80
+-
+  name: Rize
+  alpha_2_code: TR-53
+-
+  name: Sakarya
+  alpha_2_code: TR-54
+-
+  name: Samsun
+  alpha_2_code: TR-55
+-
+  name: Şanlıurfa
+  alpha_2_code: TR-63
+-
+  name: Siirt
+  alpha_2_code: TR-56
+-
+  name: Sinop
+  alpha_2_code: TR-57
+-
+  name: Sivas
+  alpha_2_code: TR-58
+-
+  name: Şırnak
+  alpha_2_code: TR-73
+-
+  name: Tekirdağ
+  alpha_2_code: TR-59
+-
+  name: Tokat
+  alpha_2_code: TR-60
+-
+  name: Trabzon
+  alpha_2_code: TR-61
+-
+  name: Tunceli
+  alpha_2_code: TR-62
+-
+  name: Uşak
+  alpha_2_code: TR-64
+-
+  name: Van
+  alpha_2_code: TR-65
+-
+  name: Yalova
+  alpha_2_code: TR-77
+-
+  name: Yozgat
+  alpha_2_code: TR-66
+-
+  name: Zonguldak
+  alpha_2_code: TR-67

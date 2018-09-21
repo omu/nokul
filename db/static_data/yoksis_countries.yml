@@ -1,254 +1,762 @@
-1|Fransa
-3|Hollanda
-4|Almanya
-5|Italya
-6|Birleşik Krallık
-7|İrlanda
-8|Danimarka
-9|Yunanistan
-10|Portekiz
-11|İspanya
-17|Belçika
-18|Lüksemburg
-21|Ceuta
-23|Melilla
-24|İzlanda
-28|Norveç
-30|İsveç
-32|Finlandiya
-37|Lihtenştayn
-38|Avusturya
-39|İsviçre
-41|Faroe Adaları
-43|Andorra
-44|Cebelitarık
-45|Vatikan
-46|Malta
-47|San Marino
-52|Türkiye
-53|Estonya
-54|Letonya
-55|Litvanya
-60|Polonya
-61|Çekya
-63|Slovakya
-64|Macaristan
-66|Romanya
-68|Bulgaristan
-70|Arnavutluk
-72|Ukrayna
-73|Belarus
-74|Moldova
-75|Rusya
-76|Gürcistan
-77|Ermenistan
-78|Azerbaycan
-79|Kazakistan
-80|Türkmenistan
-81|Özbekistan
-82|Tacikistan
-83|Kırgızistan
-91|Slovenya
-92|Hırvatistan
-93|Bosna Hersek
-94|Sırbistan
-95|Kosova
-96|Makedonya
-97|Karadağ
-204|Fas
-208|Cezayir
-212|Tunus
-216|Libya
-220|Mısır
-224|Sudan
-228|Moritanya
-232|Mali
-236|Burkina Faso
-240|Nijer
-244|Çad
-247|Yeşil Burun Adaları
-248|Senegal
-252|Gambiya
-257|Gine-bissau
-260|Gine
-264|Sierra Leone
-268|Liberya
-272|Fildişi Sahili
-276|Gana
-280|Togo
-284|Benin
-288|Nijerya
-302|Kamerun
-306|Orta Afrika Cumhuriyeti
-310|Ekvator Ginesi
-311|Sao Tome Ve Príncipe
-314|Gabon
-318|Kongo Cumhuriyeti
-322|Demokratik Kongo Cumhuriyeti
-324|Ruanda
-328|Burundi
-329|Saint Helena, Ascension Ve Tristan Da Cunha
-330|Angola
-334|Etiyopya
-336|Eritre
-338|Cibuti
-342|Somali
-346|Kenya
-350|Uganda
-352|Tanzanya
-355|Seyşel Adaları
-357|Britanya Hint Okyanusu Toprakları
-366|Mozambik
-370|Madagaskar
-373|Mauritius
-375|Komorlar
-377|Mayotte
-378|Zambiya
-382|Zimbabve
-386|Malavi
-388|Güney Afrika
-389|Namibya
-391|Botsvana
-393|Svaziland
-395|Lesotho
-400|Amerika Birleşik Devletleri
-404|Kanada
-406|Grönland
-408|Saint Pierre Ve Miquelon
-412|Meksika
-413|Bermuda
-416|Guatemala
-421|Belize
-424|Honduras
-428|El Salvador
-432|Nikaragua
-436|Kosta Rika
-442|Panama
-446|Anguilla
-448|Küba
-449|Saint Kitts Ve Nevi
-452|Haiti
-453|Bahamalar
-454|Turks Ve Caicos Adaları
-456|Dominik Cumhuriyeti
-457|Amerika Birleşik Devletleri Virgin Adaları
-459|Antigua Ve Barbuda
-460|Dominika
-463|Cayman Adaları
-464|Jamaika
-465|Saint Lucia
-467|Saint Vincent Ve Grenadinler
-468|Britanya Virjin Adaları
-469|Barbados
-470|Montserrat
-472|Trinidad Ve Tobago
-473|Grenada
-474|Aruba
-478|Holanda Antilleri
-480|Kolombiya
-484|Venezuela
-488|Guyana
-492|Surinam
-500|Ekvador
-504|Peru
-508|Brezilya
-512|Şili
-516|Bolivya
-520|Paraguay
-524|Uruguay
-528|Arjantin
-529|Falkland Adaları
-600|Güney Kıbrıs Rum Kesimi
-601|Kıbrıs
-604|Lübnan
-608|Suriye
-612|Irak
-616|İran
-624|İsrail
-625|Filistin
-626|Doğu Timor
-628|Ürdün
-632|Suudi Arabistan
-636|Kuveyt
-640|Bahreyn
-644|Katar
-647|Birleşik Arap Emirlikleri
-649|Umman
-653|Yemen
-660|Afganistan
-662|Pakistan
-664|Hindistan
-666|Bangladeş
-667|Maldivler
-669|Sri Lanka
-672|Nepal
-675|Butan
-676|Myanmar
-680|Tayland
-684|Laos
-690|Vietnam
-696|Kamboçya
-700|Endonezya
-701|Malezya
-703|Brunei
-706|Singapur
-708|Filipinler
-716|Moğolistan
-720|Çin
-724|Kuzey Kore
-728|Güney Kore
-732|Japonya
-736|Tayvan
-740|Hong Kong
-743|Makao
-800|Avustralya
-801|Papua Yeni Gine
-803|Nauru
-804|Yeni Zelanda
-806|Solomon Adaları
-807|Tuvalu
-809|Yeni Kaledonya
-811|Wallis Ve Futuna
-812|Kiribati
-813|Pitcairn Adaları
-815|Fiji
-816|Vanuatu
-817|Tonga
-819|Samoa
-820|Kuzey Mariana Adaları
-822|Fransız Polinezyası
-823|Mikronezya Federal Devletleri
-824|Marshall Adaları
-825|Palau
-830|Amerikan Samoası
-831|Guam
-832|Amerika Birleşik Devletleri Küçük Dış Adaları
-833|Cocos Adaları
-834|Christmas Adası
-835|Heard Adası Ve Mcdonald Adaları
-836|Norfolk Adası
-837|Cook Adaları
-838|Niue
-839|Tokelau
-891|Antarktika
-892|Bouvet Adası
-893|Güney Georgia Ve Güney Sandwich Adaları
-894|Fransız Güney Ve Antarktika Toprakları
-958|Aland Adaları
-958|Batı Sahra
-958|Bonaire, Sint Eustatius Ve Saba
-958|Curaçao
-958|Fransız Guyanası
-958|Guadeloupe
-958|Guernsey
-958|Güney Sudan
-958|Jersey
-958|Man Adası
-958|Martinik
-958|Monako
-958|Porto Riko
-958|Reunion
-958|Saint Barthelemy
-958|Saint Martin
-958|Sint Maarten
-958|Svalbard Ve Jan Mayen
+-
+  yoksis_code: 1
+  name: Fransa
+-
+  yoksis_code: 3
+  name: Hollanda
+-
+  yoksis_code: 4
+  name: Almanya
+-
+  yoksis_code: 5
+  name: İtalya
+-
+  yoksis_code: 6
+  name: Birleşik Krallık
+-
+  yoksis_code: 7
+  name: İrlanda
+-
+  yoksis_code: 8
+  name: Danimarka
+-
+  yoksis_code: 9
+  name: Yunanistan
+-
+  yoksis_code: 10
+  name: Portekiz
+-
+  yoksis_code: 11
+  name: İspanya
+-
+  yoksis_code: 17
+  name: Belçika
+-
+  yoksis_code: 18
+  name: Lüksemburg
+-
+  yoksis_code: 21
+  name: Ceuta
+-
+  yoksis_code: 23
+  name: Melilla
+-
+  yoksis_code: 24
+  name: İzlanda
+-
+  yoksis_code: 28
+  name: Norveç
+-
+  yoksis_code: 30
+  name: İsveç
+-
+  yoksis_code: 32
+  name: Finlandiya
+-
+  yoksis_code: 37
+  name: Lihtenştayn
+-
+  yoksis_code: 38
+  name: Avusturya
+-
+  yoksis_code: 39
+  name: İsviçre
+-
+  yoksis_code: 41
+  name: Faroe Adaları
+-
+  yoksis_code: 43
+  name: Andorra
+-
+  yoksis_code: 44
+  name: Cebelitarık
+-
+  yoksis_code: 45
+  name: Vatikan
+-
+  yoksis_code: 46
+  name: Malta
+-
+  yoksis_code: 47
+  name: San Marino
+-
+  yoksis_code: 52
+  name: Türkiye
+-
+  yoksis_code: 53
+  name: Estonya
+-
+  yoksis_code: 54
+  name: Letonya
+-
+  yoksis_code: 55
+  name: Litvanya
+-
+  yoksis_code: 60
+  name: Polonya
+-
+  yoksis_code: 61
+  name: Çekya
+-
+  yoksis_code: 63
+  name: Slovakya
+-
+  yoksis_code: 64
+  name: Macaristan
+-
+  yoksis_code: 66
+  name: Romanya
+-
+  yoksis_code: 68
+  name: Bulgaristan
+-
+  yoksis_code: 70
+  name: Arnavutluk
+-
+  yoksis_code: 72
+  name: Ukrayna
+-
+  yoksis_code: 73
+  name: Belarus
+-
+  yoksis_code: 74
+  name: Moldova
+-
+  yoksis_code: 75
+  name: Rusya
+-
+  yoksis_code: 76
+  name: Gürcistan
+-
+  yoksis_code: 77
+  name: Ermenistan
+-
+  yoksis_code: 78
+  name: Azerbaycan
+-
+  yoksis_code: 79
+  name: Kazakistan
+-
+  yoksis_code: 80
+  name: Türkmenistan
+-
+  yoksis_code: 81
+  name: Özbekistan
+-
+  yoksis_code: 82
+  name: Tacikistan
+-
+  yoksis_code: 83
+  name: Kırgızistan
+-
+  yoksis_code: 91
+  name: Slovenya
+-
+  yoksis_code: 92
+  name: Hırvatistan
+-
+  yoksis_code: 93
+  name: Bosna Hersek
+-
+  yoksis_code: 94
+  name: Sırbistan
+-
+  yoksis_code: 95
+  name: Kosova
+-
+  yoksis_code: 96
+  name: Makedonya
+-
+  yoksis_code: 97
+  name: Karadağ
+-
+  yoksis_code: 204
+  name: Fas
+-
+  yoksis_code: 208
+  name: Cezayir
+-
+  yoksis_code: 212
+  name: Tunus
+-
+  yoksis_code: 216
+  name: Libya
+-
+  yoksis_code: 220
+  name: Mısır
+-
+  yoksis_code: 224
+  name: Sudan
+-
+  yoksis_code: 228
+  name: Moritanya
+-
+  yoksis_code: 232
+  name: Mali
+-
+  yoksis_code: 236
+  name: Burkina Faso
+-
+  yoksis_code: 240
+  name: Nijer
+-
+  yoksis_code: 244
+  name: Çad
+-
+  yoksis_code: 247
+  name: Yeşil Burun Adaları
+-
+  yoksis_code: 248
+  name: Senegal
+-
+  yoksis_code: 252
+  name: Gambiya
+-
+  yoksis_code: 257
+  name: Gine-bissau
+-
+  yoksis_code: 260
+  name: Gine
+-
+  yoksis_code: 264
+  name: Sierra Leone
+-
+  yoksis_code: 268
+  name: Liberya
+-
+  yoksis_code: 272
+  name: Fildişi Sahili
+-
+  yoksis_code: 276
+  name: Gana
+-
+  yoksis_code: 280
+  name: Togo
+-
+  yoksis_code: 284
+  name: Benin
+-
+  yoksis_code: 288
+  name: Nijerya
+-
+  yoksis_code: 302
+  name: Kamerun
+-
+  yoksis_code: 306
+  name: Orta Afrika Cumhuriyeti
+-
+  yoksis_code: 310
+  name: Ekvator Ginesi
+-
+  yoksis_code: 311
+  name: Sao Tome Ve Príncipe
+-
+  yoksis_code: 314
+  name: Gabon
+-
+  yoksis_code: 318
+  name: Kongo Cumhuriyeti
+-
+  yoksis_code: 322
+  name: Demokratik Kongo Cumhuriyeti
+-
+  yoksis_code: 324
+  name: Ruanda
+-
+  yoksis_code: 328
+  name: Burundi
+-
+  yoksis_code: 329
+  name: Saint Helena, Ascension Ve Tristan Da Cunha
+-
+  yoksis_code: 330
+  name: Angola
+-
+  yoksis_code: 334
+  name: Etiyopya
+-
+  yoksis_code: 336
+  name: Eritre
+-
+  yoksis_code: 338
+  name: Cibuti
+-
+  yoksis_code: 342
+  name: Somali
+-
+  yoksis_code: 346
+  name: Kenya
+-
+  yoksis_code: 350
+  name: Uganda
+-
+  yoksis_code: 352
+  name: Tanzanya
+-
+  yoksis_code: 355
+  name: Seyşel Adaları
+-
+  yoksis_code: 357
+  name: Britanya Hint Okyanusu Toprakları
+-
+  yoksis_code: 366
+  name: Mozambik
+-
+  yoksis_code: 370
+  name: Madagaskar
+-
+  yoksis_code: 373
+  name: Mauritius
+-
+  yoksis_code: 375
+  name: Komorlar
+-
+  yoksis_code: 377
+  name: Mayotte
+-
+  yoksis_code: 378
+  name: Zambiya
+-
+  yoksis_code: 382
+  name: Zimbabve
+-
+  yoksis_code: 386
+  name: Malavi
+-
+  yoksis_code: 388
+  name: Güney Afrika
+-
+  yoksis_code: 389
+  name: Namibya
+-
+  yoksis_code: 391
+  name: Botsvana
+-
+  yoksis_code: 393
+  name: Svaziland
+-
+  yoksis_code: 395
+  name: Lesotho
+-
+  yoksis_code: 400
+  name: Amerika Birleşik Devletleri
+-
+  yoksis_code: 404
+  name: Kanada
+-
+  yoksis_code: 406
+  name: Grönland
+-
+  yoksis_code: 408
+  name: Saint Pierre Ve Miquelon
+-
+  yoksis_code: 412
+  name: Meksika
+-
+  yoksis_code: 413
+  name: Bermuda
+-
+  yoksis_code: 416
+  name: Guatemala
+-
+  yoksis_code: 421
+  name: Belize
+-
+  yoksis_code: 424
+  name: Honduras
+-
+  yoksis_code: 428
+  name: El Salvador
+-
+  yoksis_code: 432
+  name: Nikaragua
+-
+  yoksis_code: 436
+  name: Kosta Rika
+-
+  yoksis_code: 442
+  name: Panama
+-
+  yoksis_code: 446
+  name: Anguilla
+-
+  yoksis_code: 448
+  name: Küba
+-
+  yoksis_code: 449
+  name: Saint Kitts Ve Nevi
+-
+  yoksis_code: 452
+  name: Haiti
+-
+  yoksis_code: 453
+  name: Bahamalar
+-
+  yoksis_code: 454
+  name: Turks Ve Caicos Adaları
+-
+  yoksis_code: 456
+  name: Dominik Cumhuriyeti
+-
+  yoksis_code: 457
+  name: Amerika Birleşik Devletleri Virgin Adaları
+-
+  yoksis_code: 459
+  name: Antigua Ve Barbuda
+-
+  yoksis_code: 460
+  name: Dominika
+-
+  yoksis_code: 463
+  name: Cayman Adaları
+-
+  yoksis_code: 464
+  name: Jamaika
+-
+  yoksis_code: 465
+  name: Saint Lucia
+-
+  yoksis_code: 467
+  name: Saint Vincent Ve Grenadinler
+-
+  yoksis_code: 468
+  name: Britanya Virjin Adaları
+-
+  yoksis_code: 469
+  name: Barbados
+-
+  yoksis_code: 470
+  name: Montserrat
+-
+  yoksis_code: 472
+  name: Trinidad Ve Tobago
+-
+  yoksis_code: 473
+  name: Grenada
+-
+  yoksis_code: 474
+  name: Aruba
+-
+  yoksis_code: 478
+  name: Holanda Antilleri
+-
+  yoksis_code: 480
+  name: Kolombiya
+-
+  yoksis_code: 484
+  name: Venezuela
+-
+  yoksis_code: 488
+  name: Guyana
+-
+  yoksis_code: 492
+  name: Surinam
+-
+  yoksis_code: 500
+  name: Ekvador
+-
+  yoksis_code: 504
+  name: Peru
+-
+  yoksis_code: 508
+  name: Brezilya
+-
+  yoksis_code: 512
+  name: Şili
+-
+  yoksis_code: 516
+  name: Bolivya
+-
+  yoksis_code: 520
+  name: Paraguay
+-
+  yoksis_code: 524
+  name: Uruguay
+-
+  yoksis_code: 528
+  name: Arjantin
+-
+  yoksis_code: 529
+  name: Falkland Adaları
+-
+  yoksis_code: 600
+  name: Güney Kıbrıs Rum Kesimi
+-
+  yoksis_code: 601
+  name: Kıbrıs
+-
+  yoksis_code: 604
+  name: Lübnan
+-
+  yoksis_code: 608
+  name: Suriye
+-
+  yoksis_code: 612
+  name: Irak
+-
+  yoksis_code: 616
+  name: İran
+-
+  yoksis_code: 624
+  name: İsrail
+-
+  yoksis_code: 625
+  name: Filistin
+-
+  yoksis_code: 626
+  name: Doğu Timor
+-
+  yoksis_code: 628
+  name: Ürdün
+-
+  yoksis_code: 632
+  name: Suudi Arabistan
+-
+  yoksis_code: 636
+  name: Kuveyt
+-
+  yoksis_code: 640
+  name: Bahreyn
+-
+  yoksis_code: 644
+  name: Katar
+-
+  yoksis_code: 647
+  name: Birleşik Arap Emirlikleri
+-
+  yoksis_code: 649
+  name: Umman
+-
+  yoksis_code: 653
+  name: Yemen
+-
+  yoksis_code: 660
+  name: Afganistan
+-
+  yoksis_code: 662
+  name: Pakistan
+-
+  yoksis_code: 664
+  name: Hindistan
+-
+  yoksis_code: 666
+  name: Bangladeş
+-
+  yoksis_code: 667
+  name: Maldivler
+-
+  yoksis_code: 669
+  name: Sri Lanka
+-
+  yoksis_code: 672
+  name: Nepal
+-
+  yoksis_code: 675
+  name: Butan
+-
+  yoksis_code: 676
+  name: Myanmar
+-
+  yoksis_code: 680
+  name: Tayland
+-
+  yoksis_code: 684
+  name: Laos
+-
+  yoksis_code: 690
+  name: Vietnam
+-
+  yoksis_code: 696
+  name: Kamboçya
+-
+  yoksis_code: 700
+  name: Endonezya
+-
+  yoksis_code: 701
+  name: Malezya
+-
+  yoksis_code: 703
+  name: Brunei
+-
+  yoksis_code: 706
+  name: Singapur
+-
+  yoksis_code: 708
+  name: Filipinler
+-
+  yoksis_code: 716
+  name: Moğolistan
+-
+  yoksis_code: 720
+  name: Çin
+-
+  yoksis_code: 724
+  name: Kuzey Kore
+-
+  yoksis_code: 728
+  name: Güney Kore
+-
+  yoksis_code: 732
+  name: Japonya
+-
+  yoksis_code: 736
+  name: Tayvan
+-
+  yoksis_code: 740
+  name: Hong Kong
+-
+  yoksis_code: 743
+  name: Makao
+-
+  yoksis_code: 800
+  name: Avustralya
+-
+  yoksis_code: 801
+  name: Papua Yeni Gine
+-
+  yoksis_code: 803
+  name: Nauru
+-
+  yoksis_code: 804
+  name: Yeni Zelanda
+-
+  yoksis_code: 806
+  name: Solomon Adaları
+-
+  yoksis_code: 807
+  name: Tuvalu
+-
+  yoksis_code: 809
+  name: Yeni Kaledonya
+-
+  yoksis_code: 811
+  name: Wallis Ve Futuna
+-
+  yoksis_code: 812
+  name: Kiribati
+-
+  yoksis_code: 813
+  name: Pitcairn Adaları
+-
+  yoksis_code: 815
+  name: Fiji
+-
+  yoksis_code: 816
+  name: Vanuatu
+-
+  yoksis_code: 817
+  name: Tonga
+-
+  yoksis_code: 819
+  name: Samoa
+-
+  yoksis_code: 820
+  name: Kuzey Mariana Adaları
+-
+  yoksis_code: 822
+  name: Fransız Polinezyası
+-
+  yoksis_code: 823
+  name: Mikronezya Federal Devletleri
+-
+  yoksis_code: 824
+  name: Marshall Adaları
+-
+  yoksis_code: 825
+  name: Palau
+-
+  yoksis_code: 830
+  name: Amerikan Samoası
+-
+  yoksis_code: 831
+  name: Guam
+-
+  yoksis_code: 832
+  name: Amerika Birleşik Devletleri Küçük Dış Adaları
+-
+  yoksis_code: 833
+  name: Cocos Adaları
+-
+  yoksis_code: 834
+  name: Christmas Adası
+-
+  yoksis_code: 835
+  name: Heard Adası Ve Mcdonald Adaları
+-
+  yoksis_code: 836
+  name: Norfolk Adası
+-
+  yoksis_code: 837
+  name: Cook Adaları
+-
+  yoksis_code: 838
+  name: Niue
+-
+  yoksis_code: 839
+  name: Tokelau
+-
+  yoksis_code: 891
+  name: Antarktika
+-
+  yoksis_code: 892
+  name: Bouvet Adası
+-
+  yoksis_code: 893
+  name: Güney Georgia Ve Güney Sandwich Adaları
+-
+  yoksis_code: 894
+  name: Fransız Güney Ve Antarktika Toprakları
+-
+  yoksis_code: 958
+  name: Aland Adaları
+-
+  yoksis_code: 958
+  name: Batı Sahra
+-
+  yoksis_code: 958
+  name: Bonaire, Sint Eustatius Ve Saba
+-
+  yoksis_code: 958
+  name: Curaçao
+-
+  yoksis_code: 958
+  name: Fransız Guyanası
+-
+  yoksis_code: 958
+  name: Guadeloupe
+-
+  yoksis_code: 958
+  name: Guernsey
+-
+  yoksis_code: 958
+  name: Güney Sudan
+-
+  yoksis_code: 958
+  name: Jersey
+-
+  yoksis_code: 958
+  name: Man Adası
+-
+  yoksis_code: 958
+  name: Martinik
+-
+  yoksis_code: 958
+  name: Monako
+-
+  yoksis_code: 958
+  name: Porto Riko
+-
+  yoksis_code: 958
+  name: Reunion
+-
+  yoksis_code: 958
+  name: Saint Barthelemy
+-
+  yoksis_code: 958
+  name: Saint Martin
+-
+  yoksis_code: 958
+  name: Sint Maarten
+-
+  yoksis_code: 958
+  name: Svalbard Ve Jan Mayen

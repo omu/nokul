@@ -1,0 +1,483 @@
+-
+  name: Akşam Lisesi
+  code: 11082
+-
+  name: Anadolu Lisesi (Yabancı Dille Öğretim Yapan Resmi Liseler)
+  code: 11033
+-
+  name: Askeri Lise
+  code: 11074
+-
+  name: Fen Lisesi
+  code: 11058
+-
+  name: Güzel Sanatlar ve Spor Lisesi
+  code: 80208
+-
+  name: Lise, Özel Lise (Yabancı Dil Ağırlıklı Program Uygulayan Liseler)
+  code: 11106
+-
+  name: Lise (Resmi ve Gündüz Öğretimi Yapan Liseler)
+  code: 11017
+-
+  name: Özel Akşam Lisesi
+  code: 11099
+-
+  name: Özel Fen Lisesi
+  code: 11066
+-
+  name: Özel Lise
+  code: 11025
+-
+  name: Özel Güzel Sanatlar ve Spor Lisesi
+  code: 80216
+-
+  name: Polis Koleji
+  code: 80062
+-
+  name: Sosyal Bilimler Lisesi
+  code: 11122
+-
+  name: Spor Lisesi/Özel Spor Lisesi
+  code: 11139
+-
+  name: Yabancı Dille Öğretim Yapan Özel Lise / Özel Anadolu Lisesi
+  code: 11041
+-
+  name: Özel Temel Lise
+  code: 11147
+-
+  name: Batı Avrupa Programı
+  code: 20073
+-
+  name: Endüstri Meslek Lisesi Programı
+  code: 20032
+-
+  name: İmam Hatip Lisesi Programı
+  code: 20065
+-
+  name: Kız Meslek Lisesi Programı
+  code: 20049
+-
+  name: Lise Programı
+  code: 20024
+-
+  name: Meslek Lisesi Programı
+  code: 20098
+-
+  name: Ortadoğu Programı
+  code: 20081
+-
+  name: Ticaret Meslek Lisesi Programı
+  code: 20057
+-
+  name: Anadolu İmam Hatip Lisesi Programı
+  code: 30069
+-
+  name: Anadolu Meslek Lisesi Programı
+  code: 30085
+-
+  name: Anadolu Teknik Lisesi Programı (Erkek Teknik)
+  code: 30117
+-
+  name: Endüstri Meslek Lisesi Programı
+  code: 30036
+-
+  name: İmam Hatip Lisesi Programı
+  code: 30069
+-
+  name: Kız Meslek Lisesi Programı
+  code: 30044
+-
+  name: Lise Programı
+  code: 30028
+-
+  name: Lise Programı (Yabancı Dil Ağırlıklı)
+  code: 30077
+-
+  name: Sağlık Meslek Lisesi Programı
+  code: 30125
+-
+  name: Teknik Lise Programı (Erkek Teknik)
+  code: 30109
+-
+  name: Teknik Lise Programı (Kız Teknik)
+  code: 30093
+-
+  name: Ticaret Meslek Lisesi Programı
+  code: 30052
+-
+  name: Anadolu Güzel Sanatlar Lisesi
+  code: 40015
+-
+  name: Güzel Sanatlar Lisesi
+  code: 40023
+-
+  name: Anadolu Öğretmen Lisesi
+  code: 50027
+-
+  name: Özel Anadolu Öğretmen Lisesi
+  code: 50872
+-
+  name: Öğretmen Lisesi
+  code: 50019
+-
+  name: Öğretmen Okulu-Köy Enstitüsü
+  code: 50035
+-
+  name: Anadolu İmam Hatip Lisesi
+  code: 51023
+-
+  name: İmam Hatip Lisesi
+  code: 51015
+-
+  name: İmam Hatip Lisesi (Yabancı Dil Ağırlıklı)
+  code: 51048
+-
+  name: İmam Hatip Okulu
+  code: 51031
+-
+  name: Akşam Ticaret Meslek Lisesi
+  code: 52044
+-
+  name: Anadolu Dış Ticaret Meslek Lisesi
+  code: 52036
+-
+  name: Anadolu Ticaret Meslek Lisesi
+  code: 52028
+-
+  name: LİMME Programı Uygulayan Ticaret Meslek Lisesi
+  code: 52199
+-
+  name: Özel  Ticaret Meslek Lisesi
+  code: 52052
+-
+  name: Ticaret Meslek Lisesi
+  code: 52011
+-
+  name: Anadolu Gazetecilik Lisesi
+  code: 53032
+-
+  name: Anadolu Teknik Lisesi
+  code: 53162
+-
+  name: Anadolu Teknik Lisesi (Erkek Teknik)
+  code: 53024
+-
+  name: Anadolu Teknik Lisesi (Kız Teknik)
+  code: 53098
+-
+  name: Anadolu Tekstil Teknik Lisesi (Erkek Teknik)
+  code: 53154
+-
+  name: Anadolu Tekstil Teknik Lisesi (Kız Teknik)
+  code: 53113
+-
+  name: İnşaat Teknik Lisesi
+  code: 53049
+-
+  name: Kimya Teknik Lisesi
+  code: 53057
+-
+  name: Meteoroloji Teknik Lisesi
+  code: 53065
+-
+  name: Motor Teknik Lisesi
+  code: 53073
+-
+  name: Özel Anadolu Teknik Lisesi
+  code: 53146
+-
+  name: Teknik Lise (Erkek Teknik)
+  code: 53016
+-
+  name: Teknik Lise (Kız Teknik)
+  code: 53081
+-
+  name: Tekstil Teknik Lisesi (Erkek Teknik)
+  code: 53138
+-
+  name: Tekstil Teknik Lisesi (Kız Teknik)
+  code: 53121
+-
+  name: Ziraat Teknik Lisesi
+  code: 53105
+-
+  name: Ağaç ve Metal İşleri Meslek Lisesi
+  code: 54175
+-
+  name: Anadolu Gazetecilik Meslek Lisesi
+  code: 54167
+-
+  name: Anadolu Meslek Lisesi
+  code: 54029
+-
+  name: Anadolu Tekstil Meslek Lisesi
+  code: 54183
+-
+  name: Denizcilik Endüstri Meslek Lisesi
+  code: 54207
+-
+  name: Denizcilik ve Su Ürünleri Meslek Lisesi
+  code: 54045
+-
+  name: Endüstri Meslek Lisesi
+  code: 54012
+-
+  name: Erkek Sanat Enstitüsü
+  code: 54134
+-
+  name: Gemi Yapı Meslek Lisesi
+  code: 54053
+-
+  name: Kimya Meslek Lisesi
+  code: 54061
+-
+  name: LİMME Programı Uygulayan Endüstri Meslek Lisesi
+  code: 54191
+-
+  name: Matbaa Meslek Lisesi
+  code: 54078
+-
+  name: Motor Meslek Lisesi
+  code: 54086
+-
+  name: Özel Eğitim Meslek Lisesi (Ortopedik Engelliler)/Ortopedik Özürlüler Meslek Lisesi
+  code: 54126
+-
+  name: Özel Anadolu Meslek Lisesi
+  code: 54215
+-
+  name: Özel Meslek Lisesi
+  code: 54223
+-
+  name: Tekstil Meslek Lisesi
+  code: 54142
+-
+  name: Yapı Meslek Lisesi
+  code: 54094
+-
+  name: Anadolu Hazır Giyim ve Deri Hazır Giyim Meslek Lisesi
+  code: 55041
+-
+  name: Anadolu Meslek Lisesi  (Kız Teknik)
+  code: 55025
+-
+  name: Anadolu Moda Tasarımı Meslek Lisesi
+  code: 55171
+-
+  name: Anadolu Seramik Meslek Lisesi
+  code: 55188
+-
+  name: Anadolu Süs Bitkileri Meslek Lisesi
+  code: 55211
+-
+  name: Anadolu Tekstil Meslek Lisesi
+  code: 55066
+-
+  name: Anadolu Terzilik Meslek Lisesi
+  code: 55203
+-
+  name: Büro Yönetimi ve Sekreterlik Anadolu Meslek Lisesi (Kız Teknik)
+  code: 55147
+-
+  name: Geleneksel Türk Sanatları Meslek Lisesi (Kız Teknik)
+  code: 55114
+-
+  name: İç Mimarlık ve Restorasyon Anadolu Meslek Lisesi (Kız Teknik)
+  code: 55139
+-
+  name: Kız  Enstitüsü
+  code: 55106
+-
+  name: Kuaförlük Meslek Lisesi
+  code: 55074
+-
+  name: LİMME Programı Uygulayan Meslek Lisesi (Kız Teknik)
+  code: 55196
+-
+  name: Meslek Lisesi (Kız Teknik)
+  code: 55017
+-
+  name: Özel Anadolu Meslek Lisesi (Kız Teknik)
+  code: 55228
+-
+  name: Özel Meslek Lisesi (Kız Teknik)
+  code: 55033
+-
+  name: Seramik Meslek Lisesi
+  code: 55082
+-
+  name: Süs Bitkileri Meslek Lisesi
+  code: 55163
+-
+  name: Tekstil  Meslek Lisesi
+  code: 55058
+-
+  name: Terzilik Meslek Lisesi
+  code: 55099
+-
+  name: Turizm Anadolu Meslek Lisesi (Kız Teknik)
+  code: 55155
+-
+  name: Uygulamalı Sanatlar Anadolu Meslek Lisesi (Kız Teknik)
+  code: 55122
+-
+  name: Anadolu Sağlık Meslek Lisesi
+  code: 56127
+-
+  name: Çevre Sağlığı Meslek Lisesi
+  code: 56038
+-
+  name: Hayvan Sağlığı Memurları Meslek Lisesi
+  code: 56095
+-
+  name: Hemşirelik Meslek Lisesi
+  code: 56054
+-
+  name: Laborant Meslek Lisesi
+  code: 56119
+-
+  name: Laboratuvar  Sağlık Meslek Lisesi
+  code: 56046
+-
+  name: Ortopedik Cihaz ve Protez Teknisyen Okulu
+  code: 56079
+-
+  name: Özel Anadolu Sağlık Meslek Lisesi
+  code: 56135
+-
+  name: Özel Hemşirelik Meslek Lisesi
+  code: 56062
+-
+  name: Özel Sağlık Meslek Lisesi
+  code: 56021
+-
+  name: Sağlık Bilimleri Koleji
+  code: 56087
+-
+  name: Sağlık Meslek Lisesi
+  code: 56013
+-
+  name: Veteriner Sağlık Meslek Lisesi
+  code: 56102
+-
+  name: Veteriner Sağlık Teknisyenleri Meslek Lisesi
+  code: 56102
+-
+  name: Anadolu Aşçılık Meslek Lisesi
+  code: 57059
+-
+  name: Anadolu Otelcilik ve Turizm Meslek Lisesi
+  code: 57026
+-
+  name: LİMME Programı Uygulayan Otelcilik ve Turizm Meslek Lisesi
+  code: 57197
+-
+  name: Otelcilik ve Turizm Meslek Lisesi
+  code: 57018
+-
+  name: Özel Anadolu Otelcilik ve Turizm Meslek Lisesi
+  code: 57067
+-
+  name: Özel Otelcilik ve Turizm Meslek Lisesi
+  code: 57034
+-
+  name: Anadolu Sekreterlik Meslek Lisesi
+  code: 58022
+-
+  name: Sekreterlik Meslek Lisesi
+  code: 58014
+-
+  name: Deniz Astsubay Hazırlama Okulu
+  code: 59019
+-
+  name: Elektronik Astsubay Hazırlama Okulu
+  code: 59027
+-
+  name: Jandarma Astsubay Hazırlama Okulu
+  code: 59035
+-
+  name: Kara Astsubay Hazırlama Okulu
+  code: 59043
+-
+  name: Mızıka Astsubay Hazırlama Okulu
+  code: 59051
+-
+  name: Sağlık Astsubay Hazırlama Okulu
+  code: 59068
+-
+  name: Teknik Astsubay Hazırlama Okulu
+  code: 59076
+-
+  name: Anadolu Meslek Programı
+  code: 60132
+-
+  name: Özel Anadolu Meslek Programı
+  code: 60284
+-
+  name: Özel Anadolu Teknik Programı
+  code: 60495
+-
+  name: Adalet Meslek Lisesi
+  code: 80013
+-
+  name: Anadolu Denizcilik Meslek Lisesi
+  code: 80038
+-
+  name: Anadolu İletişim Meslek Lisesi
+  code: 80168
+-
+  name: Anadolu Mahalli İdareler Meslek Lisesi
+  code: 80127
+-
+  name: Anadolu Meteoroloji Meslek Lisesi
+  code: 80151
+-
+  name: Anadolu Tapu Kadastro Meslek Lisesi
+  code: 80176
+-
+  name: Anadolu Tarım Meslek Lisesi
+  code: 80192
+-
+  name: Demiryolu Meslek Lisesi
+  code: 80135
+-
+  name: Denizcilik Meslek Lisesi
+  code: 80021
+-
+  name: Denizcilik Anadolu Teknik Lisesi
+  code: 80232
+-
+  name: Ev Ekonomisi Meslek Lisesi
+  code: 80046
+-
+  name: Özel Eğitim Meslek Lisesi (İşitme Engelliler)/İşitme Engelliler Meslek Lisesi
+  code: 80184
+-
+  name: Konservatuvar
+  code: 80102
+-
+  name: Mahalli İdareler Meslek Lisesi
+  code: 80119
+-
+  name: Maliye Meslek Lisesi
+  code: 80054
+-
+  name: Meteoroloji Meslek Lisesi
+  code: 80143
+-
+  name: Özel Denizcilik Anadolu Meslek Lisesi
+  code: 80224
+-
+  name: Spor Meslek Lisesi
+  code: 80079
+-
+  name: Tapu Kadastro Meslek Lisesi
+  code: 80087
+-
+  name: Tarım (Ziraat) Meslek Lisesi
+  code: 80095
+-
+  name: Diğer
+  code: 91005
