@@ -387,6 +387,7 @@ DEPENDENCIES
   reek
   rollbar
   rubocop
+  ruby-progressbar
   sassc-rails
   savon (~> 2.12.0)
   sidekiq
