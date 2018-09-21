@@ -12,6 +12,10 @@ class CurriculumTest < ActiveSupport::TestCase
     assert @curriculum.unit
   end
 
+  test 'curriculum can communicate with programs' do
+    assert @curriculum.programs
+  end
+
   # validations: presence
   %i[
     name
