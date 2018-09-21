@@ -62,6 +62,7 @@ group :development, :test do
   gem 'bundler-audit'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'codacy-coverage', require: false
+  gem 'codecov', require: false
   gem 'dotenv-rails'
   gem 'reek'
   gem 'rubocop'
