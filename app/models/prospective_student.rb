@@ -21,7 +21,6 @@ class ProspectiveStudent < ApplicationRecord
   # validations
   validates :id_number, presence: true, uniqueness: { scope: %i[unit_id exam_score] }
   validates :gender, presence: true
-  validates :size, inclusion: { in: %w(true false) }
 
   # callbacks
   before_create do
