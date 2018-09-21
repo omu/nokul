@@ -8,14 +8,15 @@ module Osym
     # rubocop:disable Metrics/MethodLength
     # rubocop:disable Metrics/BlockLength
     def perform
-      file = File.open(Rails.root.join('db', 'static_data', 'prospective_students.csv'))
+      file_path = Rails.root.join('db', 'static_data', 'prospective_students.csv')
+
       progress_bar = ProgressBar.create(
         title: 'Prospective Students',
-        total: file.readlines.length,
+        total: File.readlines(file_path).length,
         format: '%t %B %c/%C %a'
       )
 
-      file.read.each_line do |prospective_student|
+      File.read(file_path).each_line do |prospective_student|
         id_number, first_name, last_name, fathers_name, mothers_name, d, m, y, gender, turkish, kktc, foreign,
         place_of_birth, registration_city, registration_district, high_school_code, high_school_type,
         high_school_branch, state_of_education, high_school_graduation_year, placement_type, exam_score, language,
