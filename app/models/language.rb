@@ -12,11 +12,11 @@ class Language < ApplicationRecord
 
   # relations
   has_many :courses, dependent: :nullify
+  has_many :prospective_students, dependent: :nullify
 
   # validations
   validates :name, presence: true, uniqueness: true
   validates :iso, presence: true, uniqueness: true
-  validates :yoksis_code, uniqueness: true, allow_nil: true
 
   # callbacks
   before_save do
