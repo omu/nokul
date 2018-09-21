@@ -3,7 +3,7 @@
 class UnitsController < ApplicationController
   include PagyBackendWithHelpers
 
-  before_action :set_unit, only: %i[edit update destroy show]
+  before_action :set_unit, only: %i[edit update destroy show courses]
 
   def index
     units = Unit.includes(
@@ -32,6 +32,10 @@ class UnitsController < ApplicationController
 
   def destroy
     @unit.destroy ? redirect_to(units_path, notice: t('.success')) : redirect_with('warning')
+  end
+
+  def courses
+    @courses = @unit.courses
   end
 
   private

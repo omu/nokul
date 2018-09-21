@@ -11,6 +11,8 @@ en:
         academic_calendars: Academic Calendars
         courses: Courses
         course_management: Course Management
+        course_unit_groups: Course Unit Group
+        course_group_types: Course Group Type
         languages: Languages
         users: Users
         references: References
