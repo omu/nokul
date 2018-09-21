@@ -2,6 +2,8 @@
 
 module Calendar
   class AcademicCalendarsController < ApplicationController
+    include PagyBackendWithHelpers
+
     before_action :set_academic_calendar, only: %i[show edit update destroy]
 
     def index

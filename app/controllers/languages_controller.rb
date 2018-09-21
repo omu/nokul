@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class LanguagesController < ApplicationController
+  include PagyBackendWithHelpers
+
   before_action :set_language, only: %i[show edit update destroy]
 
   def index
@@ -35,6 +37,6 @@ class LanguagesController < ApplicationController
   end
 
   def language_params
-    params.require(:language).permit(:name, :iso, :yoksis_code)
+    params.require(:language).permit(:name, :iso)
   end
 end

@@ -19,6 +19,9 @@
               <%= f.input :code %>
             </div>
             <div class='form-group col-sm-12'>
+              <%= f.input :group, collection: enum_options_for_select(f.object.class, :group) %>
+            </div>
+            <div class='form-group col-sm-12'>
               <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
               <%= link_to_back(:back) %>
             </div>

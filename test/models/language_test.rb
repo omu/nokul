@@ -27,7 +27,6 @@ class LanguageTest < ActiveSupport::TestCase
   %i[
     name
     iso
-    yoksis_code
   ].each do |property|
     test "uniqueness validations for #{property} of a language" do
       fake = @language.dup

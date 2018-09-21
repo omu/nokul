@@ -1,0 +1,53 @@
+<div class='alert alert-light'>
+  <%= link_to_new new_course_unit_group_path, t('.new_course_unit_group_link') %>
+</div>
+
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'tags', text: t('.card_header') %>
+      </div>
+      <div class='card-body'>
+        <%= form_tag course_unit_groups_path, method: :get do %>
+          <div class="form-group">
+            <%= text_field_tag 'term', params[:term], placeholder: t('.search_placeholder'), class: 'form-control' %>
+          </div>
+          <%= submit_tag t('search'), class: 'btn btn-primary' %>
+        <% end %>
+        <hr \>
+        <table class='table table-responsive-sm table-striped'>
+          <thead>
+            <tr>
+              <th><%= t('.name') %></th>
+              <th><%= t('.total_ects_condition') %></th>
+              <th><%= t('.unit') %></th>
+              <th><%= t('.course_group_type') %></th>
+              <th><%= t('actions') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @course_unit_groups.each do |course_unit_group| %>
+              <tr>
+                <td><%= course_unit_group.name %></td>
+                <td><%= course_unit_group.total_ects_condition %></td>
+                <td><%= course_unit_group.unit.name %></td>
+                <td><%= course_unit_group.course_group_type.try(:name) %></td>
+                <td>
+                  <%= link_to_show(course_unit_group_path(course_unit_group)) %>
+                  <%= link_to_edit(edit_course_unit_group_path(course_unit_group)) %>
+                  <%= link_to_destroy(course_unit_group) %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <nav aria-label='pagination'>
+      <ul class='pagination justify-content-center'>
+        <%== pagy_nav_bootstrap(@pagy) %>
+      </ul>
+    </nav>
+  </div>
+</div>

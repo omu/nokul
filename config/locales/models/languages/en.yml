@@ -4,7 +4,6 @@ en:
       language: &language_attributes
         name: Name
         iso: ISO Code
-        yoksis_code: YOKSIS Code
   helpers:
     submit:
       language:
