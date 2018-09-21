@@ -16,6 +16,8 @@ class Curriculum < ApplicationRecord
 
   # relations
   belongs_to :unit
+  has_many :unit_curriculums
+  has_many :programs, through: :unit_curriculums, source: :unit
 
   # validations
   validates :name, presence: true, uniqueness: { scope: :unit_id }

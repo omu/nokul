@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_19_115101) do
+ActiveRecord::Schema.define(version: 2018_09_19_121858) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -437,6 +437,13 @@ ActiveRecord::Schema.define(version: 2018_09_19_115101) do
     t.index ["unit_id"], name: "index_unit_calendar_events_on_unit_id"
   end
 
+  create_table "unit_curriculums", force: :cascade do |t|
+    t.bigint "unit_id"
+    t.bigint "curriculum_id"
+    t.index ["curriculum_id"], name: "index_unit_curriculums_on_curriculum_id"
+    t.index ["unit_id"], name: "index_unit_curriculums_on_unit_id"
+  end
+
   create_table "unit_instruction_languages", force: :cascade do |t|
     t.string "name", null: false
     t.integer "code", null: false
@@ -559,6 +566,8 @@ ActiveRecord::Schema.define(version: 2018_09_19_115101) do
   add_foreign_key "unit_calendar_events", "academic_calendars"
   add_foreign_key "unit_calendar_events", "calendar_titles"
   add_foreign_key "unit_calendar_events", "units"
+  add_foreign_key "unit_curriculums", "curriculums"
+  add_foreign_key "unit_curriculums", "units"
   add_foreign_key "units", "districts"
   add_foreign_key "units", "unit_instruction_languages"
   add_foreign_key "units", "unit_instruction_types"
