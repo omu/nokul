@@ -8,7 +8,7 @@ namespace :import do
 
     file.each do |yoksis_country|
       country = Country.find_by(name: yoksis_country['name'])
-      country.update(yoksis_code: yoksis_country['yoksis_code']) if country
+      country&.update(yoksis_code: yoksis_country['yoksis_code'])
       progress_bar.increment
     end
   end
