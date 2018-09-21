@@ -2,6 +2,8 @@
 
 module StudentManagement
   class ProspectiveStudentsController < ApplicationController
+    include PagyBackendWithHelpers
+
     before_action :set_prospective_student, only: %i[show]
 
     def index
