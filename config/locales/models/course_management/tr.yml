@@ -21,10 +21,17 @@ tr:
         search_placeholder: Ders Grup Adı / Birim Adı / Ders Grup Türü Adı
       course_group_type: &course_group_type_attributes
         name: Ders Grup Tür Adı
+      curriculum: &curriculum_attributes
+          name: Müfredat Adı
+          unit: Birim
+          number_of_semesters: Dönem Sayısı
+          status: Durumu
+          programs: Programlar
     models:
       course: Ders
       course_unit_group: Ders Grubu
       course_group_type: Ders Grup Türü
+      curriculum: Müfreadat
     enums:
       course:
         program_types:
@@ -99,6 +106,27 @@ tr:
         <<: *course_group_type_attributes
         new_course_group_type_link: Yeni Ders Grup Türü Ekle
         card_header: Ders Grup Türleri
+    curriculums:
+      create:
+        success: Müfredat başarıyla oluşturuldu.
+      destroy:
+        error: Müfredat silinirken bir hata oluştu.
+        success: Müfredat başarıyla silindi.
+      edit:
+        form_title: Müfredatı Düzenle
+      index:
+        <<: *curriculum_attributes
+        add_new_curriculum: Yeni Müfredat Ekle
+        curriculums: Müfredatlar
+      new:
+        form_title: Müfredat Oluştur
+      search:
+        smart_search_placeholder: Müfredat Adı
+        <<: *curriculum_attributes
+      show:
+        <<: *curriculum_attributes
+      update:
+        success: Müfredat başarıyla güncellendi.
   simple_form:
     labels:
       course:

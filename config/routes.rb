@@ -53,6 +53,7 @@ Rails.application.routes.draw do
     resources :courses
     resources :course_unit_groups
     resources :course_group_types, except: :show
+    resources :curriculums
   end
 
   scope module: :locations do
