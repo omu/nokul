@@ -1,0 +1,93 @@
+<div id="SearchForms" role="tablist">
+  <div class="card">
+    <div class="card-header" role="tab" id="smartSearch">
+      <h5 class="mb-0">
+        <a data-toggle="collapse"
+           href="#collapseSmartSearch"
+           id="collapseSmartSearchLink"
+           aria-expanded="true"
+           aria-controls="SmartSearch">
+          <%= t('smart_search') %>
+        </a>
+      </h5>
+    </div>
+    <div id="collapseSmartSearch"
+         class="collapse show"
+         role="tabpanel"
+         aria-labelledby="smartSearch"
+         data-parent="#SearchForms">
+      <div class="card-body">
+        <%= form_tag curriculums_path, method: :get do %>
+          <div class="form-group">
+            <%= text_field_tag :term,
+                               params[:term],
+                               placeholder: t('.smart_search_placeholder'),
+                               class: 'form-control' %>
+          </div>
+          <%= submit_tag t('search'), class: 'btn btn-primary' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab" id="detailedSearch">
+      <h5 class="mb-0">
+        <a class="collapsed"
+           data-toggle="collapse"
+           href="#collapseDetailedSearch"
+           id="collapseDetailedSearchLink"
+           aria-expanded="false"
+           aria-controls="DetailedSearch">
+          <%= t('detailed_search') %>
+        </a>
+        <div class="float-right">
+          <%= link_to t('reset'), curriculums_path, class: 'btn btn-warning btn-sm' %>
+        </div>
+      </h5>
+    </div>
+    <div id="collapseDetailedSearch"
+         class="collapse"
+         role="tabpanel"
+         aria-labelledby="detailedSearch"
+         data-parent="#SearchForms">
+      <div class="card-body">
+        <%= form_tag curriculums_path, method: :get do %>
+          <div class="row">
+            <div class="col-sm-8">
+              <div class="form-group">
+                <%= label_tag(:unit_id, t('.unit')) %>
+                <%= select_tag(:unit_id,
+                              options_from_collection_for_select(Unit.active.departments, :id, :name, params[:unit_id]),
+                              include_blank: true,
+                              class: 'form-control',
+                              style: 'width: 100%') %>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="form-group">
+                <%= label_tag(:status, t('.status')) %>
+                <%= select_tag(:status,
+                              options_for_select(enum_options_for_select(Curriculum, :status), params[:status]),
+                              include_blank: true,
+                              class: 'form-control',
+                              style: 'width: 100%') %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <%= submit_tag t('search'), class: 'btn btn-primary' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type='text/javascript'>
+  $(document).ready(function() {
+    $('#unit_id, #program_type, #language_id, #status').select2();
+  });
+</script>
