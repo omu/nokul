@@ -30,6 +30,7 @@ class Unit < ApplicationRecord
   has_many :administrative_functions, through: :duties
   has_many :agendas, dependent: :nullify
   has_many :registration_documents, dependent: :destroy
+  has_many :prospective_students, dependent: :destroy
 
   # validations
   validates :yoksis_id, uniqueness: true, allow_blank: true, numericality: { only_integer: true }
