@@ -1,4 +1,3 @@
-<!-- WORK IN PROGRESS. DRAFT TEMPLATE -->
 <style type="text/css">
   .card-header {
     background-image: url('<%= asset_url("public_profile/lecture-hall.jpg") %>');
@@ -6,60 +5,21 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .user_field {
-    padding-top: 25px;
-    line-height: 10pt;
-  }
-  .user_field > h1 {
-    color: white;
-    font-size: 20pt;
-    font-weight: bold;
-    text-shadow: 0 0 0.35714em rgba(0, 0, 0, 0.5);
-  }
-  .user_field > h2 {
-    color: white;
-    font-size: 13pt;
-  }
-  #resume h3 {
-    color: #8c1515;
-    font-size: 18px;
-  }
-  #resume hr {
-    width: 1.3em;
-    border-bottom: 0.15em solid #8c1515;
-    margin: 0.5em 0;
-  }
-
-  .tab-pane ul {
-    padding-left: 5px;
-  }
-
-  .tab-pane li {
-    list-style: none;
-  } 
-
-  .tab-pane li::before {
-    content: "— ";
-  }
-
-  .section {
-    padding-top: 15px;
-  }
 </style>
 
-<div class='col-sm-12'>
-  <div class='card'>
-    <div class="card-header">
+<div class="col-sm-12">
+  <div class="card">
+    <div class="card-header text-white">
       <div class="row">
         <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12" style="text-align: right;">
           <a href="https://placeholder.com"><img class="img-fluid" src="https://via.placeholder.com/150x150" /></a>
         </div>
         <div class="col-lg-8 col-md-7 col-sm-8 col-xs-12">
-          <div class="user_field">
-            <h1>
+          <div class="pt-4">
+            <h2>
               <%= @identity.name %>
-            </h1>
-            <h2><%= @user.title %></h2>
+            </h2>
+            <h3><%= @user.title %></h3>
             <p class="social">
               <a class="btn btn-brand btn-sm btn-twitter" target="_blank" href="https://www.twitter.com/<%= @user.twitter %>" type="button" style="margin-bottom: 4px">
                 <i class="fa fa-twitter"></i>
@@ -88,7 +48,7 @@
         </div>
       </div>
     </div>
-    <div class='card-body'>
+    <div class="card-body">
       <div class="col-sm-12">
         <ul class="nav nav-tabs" role="tablist">
           <li class="nav-item">
@@ -125,49 +85,49 @@
         </ul>
         <div class="tab-content">
           <div class="tab-pane active show" id="resume" role="tabpanel">
-            <div class='row'>
+            <div class="row">
               <div class="col-sm-8">
-                <div class="section">
-                  <h3>Uzmanlık Alanları</h3>
-                  <hr>
+              
+                <div class="pl-1 pt-2">
+                  <h4>Uzmanlık Alanları</h4>
                   &mdash;
                 </div>
 
-                <div class="section">
-                  <h3>Akademik Görevler</h3>
-                  <hr>
-                  <ul>
+                <div class="pl-1 pt-2">
+                  <h4>Akademik Görevler</h4>
+                  <ul class="pl-1 text-muted">
                     <% @user.duties.each do |duty| %>
                       <li>
                         <%= duty.unit.name %> 
                         (<%= duty.start_date.strftime('%Y') %> - <%= duty.end_date ? duty.end_date.strftime('%Y') : ' Halen ' %>)
                       </li>
+                    <% end.empty? and begin %>
+                      <li style="list-style: none;">&mdash;</li>
                     <% end %>
                   </ul>
                 </div>
 
-                <div class="section">
-                  <h3>İdari Görevler</h3>
-                  <hr>
-                    <ul>
-                      <% @employee.positions.each do |position| %>
-                        <li>
-                          <%= position.duty.unit.name %> - 
-                          <%= position.administrative_function.name %>
-                        </li>
-                      <% end %>
-                    </ul>
+                <div class="pl-1 pt-2">
+                  <h4>İdari Görevler</h4>
+                  <ul class="pl-1 text-muted">
+                    <% @employee.positions.each do |position| %>
+                      <li>
+                        <%= position.duty.unit.name %> - 
+                        <%= position.administrative_function.name %>
+                      </li>
+                    <% end.empty? and begin %>
+                      <li style="list-style: none;">&mdash;</li>
+                    <% end %>
+                  </ul>
                 </div>
 
-                <div class="section">
-                  <h3>Ödüller</h3>
-                  <hr>
+                <div class="pl-1 pt-2">
+                  <h4>Ödüller</h4>
                   &mdash;
                 </div>
 
-                <div class="section">
-                  <h3>Eğitim Bilgileri</h3>
-                  <hr>
+                <div class="pl-1 pt-2">
+                  <h4>Eğitim Bilgileri</h4>
                   &mdash;
                 </div>
               </div>
@@ -202,12 +162,14 @@
             </div>
           </div>
           <div class="tab-pane" id="articles" role="tabpanel">
-            <% @user.articles.each do |article| %>
-              <li><%= article.title %> - (<%= article.journal %>)</li>
-            <% end %>
+            <ul class="pl-1">
+              <% @user.articles.each do |article| %>
+                <li><%= article.title %> - (<%= article.journal %>)</li>
+              <% end %>
+            </ul>
           </div>
           <div class="tab-pane" id="projects" role="tabpanel">
-            <ul>
+            <ul class="pl-1">
               <% @user.projects.each do |project| %>
                 <li><%= project.name %></li>
               <% end %>
