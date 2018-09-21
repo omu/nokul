@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class LanguagesController < ApplicationController
+  include PagyBackendWithHelpers
+
   before_action :set_language, only: %i[show edit update destroy]
 
   def index
