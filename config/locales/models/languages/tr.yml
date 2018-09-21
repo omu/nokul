@@ -4,7 +4,6 @@ tr:
       language: &language_attributes
         name: Ad
         iso: ISO Kodu
-        yoksis_code: YOKSIS Kodu
   helpers:
     submit:
       language:

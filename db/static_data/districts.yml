@@ -1,995 +1,4975 @@
-Seyhan|1104|TR-01|1
-Ceyhan|1219|TR-01|1
-Feke|1329|TR-01|1
-Karaisalı|1437|TR-01|1
-Karataş|1443|TR-01|1
-Kozan|1486|TR-01|1
-Pozantı|1580|TR-01|1
-Saimbeyli|1588|TR-01|1
-Tufanbeyli|1687|TR-01|1
-Yumurtalık|1734|TR-01|1
-Yüreğir|1748|TR-01|1
-Aladağ|1757|TR-01|1
-İmamoğlu|1806|TR-01|1
-Sarıçam|2032|TR-01|1
-Çukurova|2033|TR-01|1
-Adıyaman Merkez|1105|TR-02|1
-Besni|1182|TR-02|1
-Çelikhan|1246|TR-02|1
-Gerger|1347|TR-02|1
-Gölbaşı|1354|TR-02|1
-Kahta|1425|TR-02|1
-Samsat|1592|TR-02|1
-Sincik|1985|TR-02|1
-Tut|1989|TR-02|1
-Afyonkarahisar Merkez|1108|TR-03|1
-Bolvadin|1200|TR-03|1
-Çay|1239|TR-03|1
-Dazkırı|1267|TR-03|1
-Dinar|1281|TR-03|1
-Emirdağ|1306|TR-03|1
-İhsaniye|1404|TR-03|1
-Sandıklı|1594|TR-03|1
-Sinanpaşa|1626|TR-03|1
-Sultandağı|1639|TR-03|1
-Şuhut|1664|TR-03|1
-Başmakçı|1771|TR-03|1
-Bayat|1773|TR-03|1
-İscehisar|1809|TR-03|1
-Çobanlar|1906|TR-03|1
-Evciler|1923|TR-03|1
-Hocalar|1944|TR-03|1
-Kızılören|1961|TR-03|1
-Ağrı Merkez|1111|TR-04|1
-Diyadin|1283|TR-04|1
-Doğubayazıt|1287|TR-04|1
-Eleşkirt|1301|TR-04|1
-Hamur|1379|TR-04|1
-Patnos|1568|TR-04|1
-Taşlıçay|1667|TR-04|1
-Tutak|1691|TR-04|1
-Amasya Merkez|1134|TR-05|1
-Göynücek|1363|TR-05|1
-Gümüşhacıköy|1368|TR-05|1
-Merzifon|1524|TR-05|1
-Suluova|1641|TR-05|1
-Taşova|1668|TR-05|1
-Hamamözü|1938|TR-05|1
-Altındağ|1130|TR-06|1
-Ayaş|1157|TR-06|1
-Bala|1167|TR-06|1
-Beypazarı|1187|TR-06|1
-Çamlıdere|1227|TR-06|1
-Çankaya|1231|TR-06|1
-Çubuk|1260|TR-06|1
-Elmadağ|1302|TR-06|1
-Güdül|1365|TR-06|1
-Haymana|1387|TR-06|1
-Kalecik|1427|TR-06|1
-Kızılcahamam|1473|TR-06|1
-Nallıhan|1539|TR-06|1
-Polatlı|1578|TR-06|1
-Şereflikoçhisar|1658|TR-06|1
-Yenimahalle|1723|TR-06|1
-Gölbaşı|1744|TR-06|1
-Keçiören|1745|TR-06|1
-Mamak|1746|TR-06|1
-Sincan|1747|TR-06|1
-Kazan|1815|TR-06|1
-Akyurt|1872|TR-06|1
-Etimesgut|1922|TR-06|1
-Evren|1924|TR-06|1
-Pursaklar|2034|TR-06|1
-Akseki|1121|TR-07|1
-Alanya|1126|TR-07|1
-Antalya Merkez|1138|TR-07|0
-Elmalı|1303|TR-07|1
-Finike|1333|TR-07|1
-Gazipaşa|1337|TR-07|1
-Gündoğmuş|1370|TR-07|1
-Kaş|1451|TR-07|1
-Korkuteli|1483|TR-07|1
-Kumluca|1492|TR-07|1
-Manavgat|1512|TR-07|1
-Serik|1616|TR-07|1
-Demre|1811|TR-07|1
-İbradı|1946|TR-07|1
-Kemer|1959|TR-07|1
-Aksu|2035|TR-07|1
-Döşemealtı|2036|TR-07|1
-Kepez|2037|TR-07|1
-Konyaaltı|2038|TR-07|1
-Muratpaşa|2039|TR-07|1
-Ardanuç|1145|TR-08|1
-Arhavi|1147|TR-08|1
-Artvin Merkez|1152|TR-08|1
-Borçka|1202|TR-08|1
-Hopa|1395|TR-08|1
-Şavşat|1653|TR-08|1
-Yusufeli|1736|TR-08|1
-Murgul|1828|TR-08|1
-Kemalpaşa|2105|TR-08|0
-Aydın Merkez|1159|TR-09|0
-Bozdoğan|1206|TR-09|1
-Çine|1256|TR-09|1
-Germencik|1348|TR-09|1
-Karacasu|1435|TR-09|1
-Koçarlı|1479|TR-09|1
-Kuşadası|1497|TR-09|1
-Kuyucak|1498|TR-09|1
-Nazilli|1542|TR-09|1
-Söke|1637|TR-09|1
-Sultanhisar|1640|TR-09|1
-Yenipazar|1724|TR-09|1
-Buharkent|1781|TR-09|1
-İncirliova|1807|TR-09|1
-Karpuzlu|1957|TR-09|1
-Köşk|1968|TR-09|1
-Didim|2000|TR-09|1
-Efeler|2076|TR-09|1
-Ayvalık|1161|TR-10|1
-Balıkesir Merkez|1168|TR-10|0
-Balya|1169|TR-10|1
-Bandırma|1171|TR-10|1
-Bigadiç|1191|TR-10|1
-Burhaniye|1216|TR-10|1
-Dursunbey|1291|TR-10|1
-Edremit|1294|TR-10|1
-Erdek|1310|TR-10|1
-Gönen|1360|TR-10|1
-Havran|1384|TR-10|1
-İvrindi|1418|TR-10|1
-Kepsut|1462|TR-10|1
-Manyas|1514|TR-10|1
-Savaştepe|1608|TR-10|1
-Sındırgı|1619|TR-10|1
-Susurluk|1644|TR-10|1
-Marmara|1824|TR-10|1
-Gömeç|1928|TR-10|1
-Altıeylül|2077|TR-10|1
-Karesi|2078|TR-10|1
-Bilecik Merkez|1192|TR-11|1
-Bozüyük|1210|TR-11|1
-Gölpazarı|1359|TR-11|1
-Osmaneli|1559|TR-11|1
-Pazaryeri|1571|TR-11|1
-Söğüt|1636|TR-11|1
-Yenipazar|1857|TR-11|1
-İnhisar|1948|TR-11|1
-Bingöl Merkez|1193|TR-12|1
-Genç|1344|TR-12|1
-Karlıova|1446|TR-12|1
-Kiğı|1475|TR-12|1
-Solhan|1633|TR-12|1
-Adaklı|1750|TR-12|1
-Yayladere|1855|TR-12|1
-Yedisu|1996|TR-12|1
-Adilcevaz|1106|TR-13|1
-Ahlat|1112|TR-13|1
-Bitlis Merkez|1196|TR-13|1
-Hizan|1394|TR-13|1
-Mutki|1537|TR-13|1
-Tatvan|1669|TR-13|1
-Güroymak|1798|TR-13|1
-Bolu Merkez|1199|TR-14|1
-Gerede|1346|TR-14|1
-Göynük|1364|TR-14|1
-Kıbrıscık|1466|TR-14|1
-Mengen|1522|TR-14|1
-Mudurnu|1531|TR-14|1
-Seben|1610|TR-14|1
-Dörtdivan|1916|TR-14|1
-Yeniçağa|1997|TR-14|1
-Ağlasun|1109|TR-15|1
-Bucak|1211|TR-15|1
-Burdur Merkez|1215|TR-15|1
-Gölhisar|1357|TR-15|1
-Tefenni|1672|TR-15|1
-Yeşilova|1728|TR-15|1
-Karamanlı|1813|TR-15|1
-Kemer|1816|TR-15|1
-Altınyayla|1874|TR-15|1
-Çavdır|1899|TR-15|1
-Çeltikçi|1903|TR-15|1
-Gemlik|1343|TR-16|1
-İnegöl|1411|TR-16|1
-İznik|1420|TR-16|1
-Karacabey|1434|TR-16|1
-Keles|1457|TR-16|1
-Mudanya|1530|TR-16|1
-Mustafakemalpaşa|1535|TR-16|1
-Orhaneli|1553|TR-16|1
-Orhangazi|1554|TR-16|1
-Yenişehir|1725|TR-16|1
-Büyükorhan|1783|TR-16|1
-Harmancık|1799|TR-16|1
-Nilüfer|1829|TR-16|1
-Osmangazi|1832|TR-16|1
-Yıldırım|1859|TR-16|1
-Gürsu|1935|TR-16|1
-Kestel|1960|TR-16|1
-Ayvacık|1160|TR-17|1
-Bayramiç|1180|TR-17|1
-Biga|1190|TR-17|1
-Bozcaada|1205|TR-17|1
-Çan|1229|TR-17|1
-Çanakkale Merkez|1230|TR-17|1
-Eceabat|1293|TR-17|1
-Ezine|1326|TR-17|1
-Gelibolu|1340|TR-17|1
-Gökçeada|1408|TR-17|1
-Lapseki|1503|TR-17|1
-Yenice|1722|TR-17|1
-Çankırı Merkez|1232|TR-18|1
-Çerkeş|1248|TR-18|1
-Eldivan|1300|TR-18|1
-Ilgaz|1399|TR-18|1
-Kurşunlu|1494|TR-18|1
-Orta|1555|TR-18|1
-Şabanözü|1649|TR-18|1
-Yapraklı|1718|TR-18|1
-Atkaracalar|1765|TR-18|1
-Kızılırmak|1817|TR-18|1
-Bayramören|1885|TR-18|1
-Korgun|1963|TR-18|1
-Alaca|1124|TR-19|1
-Bayat|1177|TR-19|1
-Çorum Merkez|1259|TR-19|1
-İskilip|1414|TR-19|1
-Kargı|1445|TR-19|1
-Mecitözü|1520|TR-19|1
-Ortaköy|1556|TR-19|1
-Osmancık|1558|TR-19|1
-Sungurlu|1642|TR-19|1
-Boğazkale|1778|TR-19|1
-Uğurludağ|1850|TR-19|1
-Dodurga|1911|TR-19|1
-Laçin|1972|TR-19|1
-Oğuzlar|1976|TR-19|1
-Acıpayam|1102|TR-20|1
-Buldan|1214|TR-20|1
-Çal|1224|TR-20|1
-Çameli|1226|TR-20|1
-Çardak|1233|TR-20|1
-Çivril|1257|TR-20|1
-Denizli Merkez|1271|TR-20|0
-Güney|1371|TR-20|1
-Kale|1426|TR-20|1
-Sarayköy|1597|TR-20|1
-Tavas|1670|TR-20|1
-Babadağ|1769|TR-20|1
-Bekilli|1774|TR-20|1
-Honaz|1803|TR-20|1
-Serinhisar|1840|TR-20|1
-Pamukkale|1871|TR-20|1
-Baklan|1881|TR-20|1
-Beyağaç|1888|TR-20|1
-Bozkurt|1889|TR-20|1
-Merkezefendi|2079|TR-20|1
-Bismil|1195|TR-21|1
-Çermik|1249|TR-21|1
-Çınar|1253|TR-21|1
-Çüngüş|1263|TR-21|1
-Dicle|1278|TR-21|1
-Diyarbakır Merkez|1284|TR-21|0
-Ergani|1315|TR-21|1
-Hani|1381|TR-21|1
-Hazro|1389|TR-21|1
-Kulp|1490|TR-21|1
-Lice|1504|TR-21|1
-Silvan|1624|TR-21|1
-Eğil|1791|TR-21|1
-Kocaköy|1962|TR-21|1
-Bağlar|2040|TR-21|1
-Kayapınar|2041|TR-21|1
-Sur|2042|TR-21|1
-Yenişehir|2043|TR-21|1
-Edirne Merkez|1295|TR-22|1
-Enez|1307|TR-22|1
-Havsa|1385|TR-22|1
-İpsala|1412|TR-22|1
-Keşan|1464|TR-22|1
-Lalapaşa|1502|TR-22|1
-Meriç|1523|TR-22|1
-Uzunköprü|1705|TR-22|1
-Süloğlu|1988|TR-22|1
-Ağın|1110|TR-23|1
-Baskil|1173|TR-23|1
-Elazığ Merkez|1298|TR-23|1
-Karakoçan|1438|TR-23|1
-Keban|1455|TR-23|1
-Maden|1506|TR-23|1
-Palu|1566|TR-23|1
-Sivrice|1631|TR-23|1
-Arıcak|1762|TR-23|1
-Kovancılar|1820|TR-23|1
-Alacakaya|1873|TR-23|1
-Çayırlı|1243|TR-24|1
-Erzincan Merkez|1318|TR-24|1
-İliç|1406|TR-24|1
-Kemah|1459|TR-24|1
-Kemaliye|1460|TR-24|1
-Refahiye|1583|TR-24|1
-Tercan|1675|TR-24|1
-Üzümlü|1853|TR-24|1
-Otlukbeli|1977|TR-24|1
-Aşkale|1153|TR-25|1
-Çat|1235|TR-25|1
-Erzurum Merkez|1319|TR-25|0
-Hınıs|1392|TR-25|1
-Horasan|1396|TR-25|1
-İspir|1416|TR-25|1
-Karayazı|1444|TR-25|1
-Narman|1540|TR-25|1
-Oltu|1550|TR-25|1
-Olur|1551|TR-25|1
-Pasinler|1567|TR-25|1
-Şenkaya|1657|TR-25|1
-Tekman|1674|TR-25|1
-Tortum|1683|TR-25|1
-Karaçoban|1812|TR-25|1
-Uzundere|1851|TR-25|1
-Pazaryolu|1865|TR-25|1
-Aziziye|1945|TR-25|1
-Köprüköy|1967|TR-25|1
-Palandöken|2044|TR-25|1
-Yakutiye|2045|TR-25|1
-Çifteler|1255|TR-26|1
-Eskişehir Merkez|1322|TR-26|0
-Mahmudiye|1508|TR-26|1
-Mihalıççık|1527|TR-26|1
-Sarıcakaya|1599|TR-26|1
-Seyitgazi|1618|TR-26|1
-Sivrihisar|1632|TR-26|1
-Alpu|1759|TR-26|1
-Beylikova|1777|TR-26|1
-İnönü|1808|TR-26|1
-Günyüzü|1934|TR-26|1
-Han|1939|TR-26|1
-Mihalgazi|1973|TR-26|1
-Odunpazarı|2046|TR-26|1
-Tepebaşı|2047|TR-26|1
-Araban|1139|TR-27|1
-İslahiye|1415|TR-27|1
-Nizip|1546|TR-27|1
-Oğuzeli|1549|TR-27|1
-Yavuzeli|1720|TR-27|1
-Şahinbey|1841|TR-27|1
-Şehitkamil|1844|TR-27|1
-Karkamış|1956|TR-27|1
-Nurdağı|1974|TR-27|1
-Alucra|1133|TR-28|1
-Bulancak|1212|TR-28|1
-Dereli|1272|TR-28|1
-Espiye|1320|TR-28|1
-Eynesil|1324|TR-28|1
-Giresun Merkez|1352|TR-28|1
-Görele|1361|TR-28|1
-Keşap|1465|TR-28|1
-Şebinkarahisar|1654|TR-28|1
-Tirebolu|1678|TR-28|1
-Piraziz|1837|TR-28|1
-Yağlıdere|1854|TR-28|1
-Çamoluk|1893|TR-28|1
-Çanakçı|1894|TR-28|1
-Doğankent|1912|TR-28|1
-Güce|1930|TR-28|1
-Gümüşhane Merkez|1369|TR-29|1
-Kelkit|1458|TR-29|1
-Şiran|1660|TR-29|1
-Torul|1684|TR-29|1
-Köse|1822|TR-29|1
-Kürtün|1971|TR-29|1
-Çukurca|1261|TR-30|1
-Hakkari Merkez|1377|TR-30|1
-Şemdinli|1656|TR-30|1
-Yüksekova|1737|TR-30|1
-Altınözü|1131|TR-31|1
-Dörtyol|1289|TR-31|1
-Hassa|1382|TR-31|1
-Hatay Merkez|1383|TR-31|0
-İskenderun|1413|TR-31|1
-Kırıkhan|1468|TR-31|1
-Reyhanlı|1585|TR-31|1
-Samandağ|1591|TR-31|1
-Yayladağı|1721|TR-31|1
-Erzin|1792|TR-31|1
-Belen|1887|TR-31|1
-Kumlu|1970|TR-31|1
-Antakya|2080|TR-31|1
-Arsuz|2081|TR-31|1
-Defne|2082|TR-31|1
-Payas|2083|TR-31|1
-Atabey|1154|TR-32|1
-Eğirdir|1297|TR-32|1
-Gelendost|1341|TR-32|1
-Isparta Merkez|1401|TR-32|1
-Keçiborlu|1456|TR-32|1
-Senirkent|1615|TR-32|1
-Sütçüler|1648|TR-32|1
-Şarkikaraağaç|1651|TR-32|1
-Uluborlu|1699|TR-32|1
-Yalvaç|1717|TR-32|1
-Aksu|1755|TR-32|1
-Gönen|1929|TR-32|1
-Yenişarbademli|2001|TR-32|1
-Anamur|1135|TR-33|1
-Erdemli|1311|TR-33|1
-Gülnar|1366|TR-33|1
-Mersin Merkez|1402|TR-33|0
-Mut|1536|TR-33|1
-Silifke|1621|TR-33|1
-Tarsus|1665|TR-33|1
-Aydıncık|1766|TR-33|1
-Bozyazı|1779|TR-33|1
-Çamlıyayla|1892|TR-33|1
-Akdeniz|2064|TR-33|1
-Mezitli|2065|TR-33|1
-Toroslar|2066|TR-33|1
-Yenişehir|2067|TR-33|1
-Adalar|1103|TR-34|1
-Bakırköy|1166|TR-34|1
-Beşiktaş|1183|TR-34|1
-Beykoz|1185|TR-34|1
-Beyoğlu|1186|TR-34|1
-Çatalca|1237|TR-34|1
-Eminönü|1305|TR-34|0
-Eyüp|1325|TR-34|1
-Fatih|1327|TR-34|1
-Gaziosmanpaşa|1336|TR-34|1
-Kadıköy|1421|TR-34|1
-Kartal|1449|TR-34|1
-Sarıyer|1604|TR-34|1
-Silivri|1622|TR-34|1
-Şile|1659|TR-34|1
-Şişli|1663|TR-34|1
-Üsküdar|1708|TR-34|1
-Zeytinburnu|1739|TR-34|1
-Büyükçekmece|1782|TR-34|1
-Kağıthane|1810|TR-34|1
-Küçükçekmece|1823|TR-34|1
-Pendik|1835|TR-34|1
-Ümraniye|1852|TR-34|1
-Bayrampaşa|1886|TR-34|1
-Avcılar|2003|TR-34|1
-Bağcılar|2004|TR-34|1
-Bahçelievler|2005|TR-34|1
-Güngören|2010|TR-34|1
-Maltepe|2012|TR-34|1
-Sultanbeyli|2014|TR-34|1
-Tuzla|2015|TR-34|1
-Esenler|2016|TR-34|1
-Arnavutköy|2048|TR-34|1
-Ataşehir|2049|TR-34|1
-Başakşehir|2050|TR-34|1
-Beylikdüzü|2051|TR-34|1
-Çekmeköy|2052|TR-34|1
-Esenyurt|2053|TR-34|1
-Sancaktepe|2054|TR-34|1
-Sultangazi|2055|TR-34|1
-Aliağa|1128|TR-35|1
-Bayındır|1178|TR-35|1
-Bergama|1181|TR-35|1
-Bornova|1203|TR-35|1
-Çeşme|1251|TR-35|1
-Dikili|1280|TR-35|1
-Foça|1334|TR-35|1
-Karaburun|1432|TR-35|1
-Karşıyaka|1448|TR-35|1
-Kemalpaşa|1461|TR-35|1
-Kınık|1467|TR-35|1
-Kiraz|1477|TR-35|1
-Menemen|1521|TR-35|1
-Ödemiş|1563|TR-35|1
-Seferihisar|1611|TR-35|1
-Selçuk|1612|TR-35|1
-Tire|1677|TR-35|1
-Torbalı|1682|TR-35|1
-Urla|1703|TR-35|1
-Beydağ|1776|TR-35|1
-Buca|1780|TR-35|1
-Konak|1819|TR-35|1
-Menderes|1826|TR-35|1
-Balçova|2006|TR-35|1
-Çiğli|2007|TR-35|1
-Gaziemir|2009|TR-35|1
-Narlıdere|2013|TR-35|1
-Güzelbahçe|2018|TR-35|1
-Bayraklı|2056|TR-35|1
-Karabağlar|2057|TR-35|1
-Arpaçay|1149|TR-36|1
-Digor|1279|TR-36|1
-Kağızman|1424|TR-36|1
-Kars Merkez|1447|TR-36|1
-Sarıkamış|1601|TR-36|1
-Selim|1614|TR-36|1
-Susuz|1645|TR-36|1
-Akyaka|1756|TR-36|1
-Abana|1101|TR-37|1
-Araç|1140|TR-37|1
-Azdavay|1162|TR-37|1
-Bozkurt|1208|TR-37|1
-Cide|1221|TR-37|1
-Çatalzeytin|1238|TR-37|1
-Daday|1264|TR-37|1
-Devrekani|1277|TR-37|1
-İnebolu|1410|TR-37|1
-Kastamonu Merkez|1450|TR-37|1
-Küre|1499|TR-37|1
-Taşköprü|1666|TR-37|1
-Tosya|1685|TR-37|1
-İhsangazi|1805|TR-37|1
-Pınarbaşı|1836|TR-37|1
-Şenpazar|1845|TR-37|1
-Ağlı|1867|TR-37|1
-Doğanyurt|1915|TR-37|1
-Hanönü|1940|TR-37|1
-Seydiler|1984|TR-37|1
-Bünyan|1218|TR-38|1
-Develi|1275|TR-38|1
-Felahiye|1330|TR-38|1
-İncesu|1409|TR-38|1
-Pınarbaşı|1576|TR-38|1
-Sarıoğlan|1603|TR-38|1
-Sarız|1605|TR-38|1
-Tomarza|1680|TR-38|1
-Yahyalı|1715|TR-38|1
-Yeşilhisar|1727|TR-38|1
-Akkışla|1752|TR-38|1
-Talas|1846|TR-38|1
-Kocasinan|1863|TR-38|1
-Melikgazi|1864|TR-38|1
-Hacılar|1936|TR-38|1
-Özvatan|1978|TR-38|1
-Babaeski|1163|TR-39|1
-Demirköy|1270|TR-39|1
-Kırklareli Merkez|1471|TR-39|1
-Kofçaz|1480|TR-39|1
-Lüleburgaz|1505|TR-39|1
-Pehlivanköy|1572|TR-39|1
-Pınarhisar|1577|TR-39|1
-Vize|1714|TR-39|1
-Çiçekdağı|1254|TR-40|1
-Kaman|1429|TR-40|1
-Kırşehir Merkez|1472|TR-40|1
-Mucur|1529|TR-40|1
-Akpınar|1754|TR-40|1
-Akçakent|1869|TR-40|1
-Boztepe|1890|TR-40|1
-Gebze|1338|TR-41|1
-Gölcük|1355|TR-41|1
-Kandıra|1430|TR-41|1
-Karamürsel|1440|TR-41|1
-Kocaeli Merkez|1478|TR-41|0
-Körfez|1821|TR-41|1
-Derince|2030|TR-41|1
-Başiskele|2058|TR-41|1
-Çayırova|2059|TR-41|1
-Darıca|2060|TR-41|1
-Dilovası|2061|TR-41|1
-İzmit|2062|TR-41|1
-Kartepe|2063|TR-41|1
-Akşehir|1122|TR-42|1
-Beyşehir|1188|TR-42|1
-Bozkır|1207|TR-42|1
-Cihanbeyli|1222|TR-42|1
-Çumra|1262|TR-42|1
-Doğanhisar|1285|TR-42|1
-Ereğli|1312|TR-42|1
-Hadim|1375|TR-42|1
-Ilgın|1400|TR-42|1
-Kadınhanı|1422|TR-42|1
-Karapınar|1441|TR-42|1
-Kulu|1491|TR-42|1
-Sarayönü|1598|TR-42|1
-Seydişehir|1617|TR-42|1
-Yunak|1735|TR-42|1
-Akören|1753|TR-42|1
-Altınekin|1760|TR-42|1
-Derebucak|1789|TR-42|1
-Hüyük|1804|TR-42|1
-Karatay|1814|TR-42|1
-Meram|1827|TR-42|1
-Selçuklu|1839|TR-42|1
-Taşkent|1848|TR-42|1
-Ahırlı|1868|TR-42|1
-Çeltik|1902|TR-42|1
-Derbent|1907|TR-42|1
-Emirgazi|1920|TR-42|1
-Güneysınır|1933|TR-42|1
-Halkapınar|1937|TR-42|1
-Tuzlukçu|1990|TR-42|1
-Yalıhüyük|1994|TR-42|1
-Altıntaş|1132|TR-43|1
-Domaniç|1288|TR-43|1
-Emet|1304|TR-43|1
-Gediz|1339|TR-43|1
-Kütahya Merkez|1500|TR-43|1
-Simav|1625|TR-43|1
-Tavşanlı|1671|TR-43|1
-Aslanapa|1764|TR-43|1
-Dumlupınar|1790|TR-43|1
-Hisarcık|1802|TR-43|1
-Şaphane|1843|TR-43|1
-Çavdarhisar|1898|TR-43|1
-Pazarlar|1979|TR-43|1
-Akçadağ|1114|TR-44|1
-Arapgir|1143|TR-44|1
-Arguvan|1148|TR-44|1
-Darende|1265|TR-44|1
-Doğanşehir|1286|TR-44|1
-Hekimhan|1390|TR-44|1
-Malatya Merkez|1509|TR-44|0
-Pütürge|1582|TR-44|1
-Yeşilyurt|1729|TR-44|1
-Battalgazi|1772|TR-44|1
-Doğanyol|1914|TR-44|1
-Kale|1953|TR-44|1
-Kuluncak|1969|TR-44|1
-Yazıhan|1995|TR-44|1
-Akhisar|1118|TR-45|1
-Alaşehir|1127|TR-45|1
-Demirci|1269|TR-45|1
-Gördes|1362|TR-45|1
-Kırkağaç|1470|TR-45|1
-Kula|1489|TR-45|1
-Manisa Merkez|1513|TR-45|0
-Salihli|1590|TR-45|1
-Sarıgöl|1600|TR-45|1
-Saruhanlı|1606|TR-45|1
-Selendi|1613|TR-45|1
-Soma|1634|TR-45|1
-Turgutlu|1689|TR-45|1
-Ahmetli|1751|TR-45|1
-Gölmarmara|1793|TR-45|1
-Köprübaşı|1965|TR-45|1
-Şehzadeler|2086|TR-45|1
-Yunusemre|2087|TR-45|1
-Afşin|1107|TR-46|1
-Andırın|1136|TR-46|1
-Elbistan|1299|TR-46|1
-Göksun|1353|TR-46|1
-Kahramanmaraş Merkez|1515|TR-46|0
-Pazarcık|1570|TR-46|1
-Türkoğlu|1694|TR-46|1
-Çağlayancerit|1785|TR-46|1
-Ekinözü|1919|TR-46|1
-Nurhak|1975|TR-46|1
-Dulkadiroğlu|2084|TR-46|1
-Onikişubat|2085|TR-46|1
-Derik|1273|TR-47|1
-Kızıltepe|1474|TR-47|1
-Mardin Merkez|1516|TR-47|0
-Mazıdağı|1519|TR-47|1
-Midyat|1526|TR-47|1
-Nusaybin|1547|TR-47|1
-Ömerli|1564|TR-47|1
-Savur|1609|TR-47|1
-Dargeçit|1787|TR-47|1
-Yeşilli|2002|TR-47|1
-Artuklu|2088|TR-47|1
-Bodrum|1197|TR-48|1
-Datça|1266|TR-48|1
-Fethiye|1331|TR-48|1
-Köyceğiz|1488|TR-48|1
-Marmaris|1517|TR-48|1
-Milas|1528|TR-48|1
-Muğla Merkez|1532|TR-48|0
-Ula|1695|TR-48|1
-Yatağan|1719|TR-48|1
-Dalaman|1742|TR-48|1
-Ortaca|1831|TR-48|1
-Kavaklıdere|1958|TR-48|1
-Menteşe|2089|TR-48|1
-Seydikemer|2090|TR-48|1
-Bulanık|1213|TR-49|1
-Malazgirt|1510|TR-49|1
-Muş Merkez|1534|TR-49|1
-Varto|1711|TR-49|1
-Hasköy|1801|TR-49|1
-Korkut|1964|TR-49|1
-Avanos|1155|TR-50|1
-Derinkuyu|1274|TR-50|1
-Gülşehir|1367|TR-50|1
-Hacıbektaş|1374|TR-50|1
-Kozaklı|1485|TR-50|1
-Nevşehir Merkez|1543|TR-50|1
-Ürgüp|1707|TR-50|1
-Acıgöl|1749|TR-50|1
-Bor|1201|TR-51|1
-Çamardı|1225|TR-51|1
-Niğde Merkez|1544|TR-51|1
-Ulukışla|1700|TR-51|1
-Altunhisar|1876|TR-51|1
-Çiftlik|1904|TR-51|1
-Akkuş|1119|TR-52|1
-Aybastı|1158|TR-52|1
-Fatsa|1328|TR-52|1
-Gölköy|1358|TR-52|1
-Korgan|1482|TR-52|1
-Kumru|1493|TR-52|1
-Mesudiye|1525|TR-52|1
-Ordu Merkez|1552|TR-52|0
-Perşembe|1573|TR-52|1
-Ulubey|1696|TR-52|1
-Ünye|1706|TR-52|1
-Gülyalı|1795|TR-52|1
-Gürgentepe|1797|TR-52|1
-Çamaş|1891|TR-52|1
-Çatalpınar|1897|TR-52|1
-Çaybaşı|1900|TR-52|1
-İkizce|1947|TR-52|1
-Kabadüz|1950|TR-52|1
-Kabataş|1951|TR-52|1
-Altınordu|2103|TR-52|1
-Ardeşen|1146|TR-53|1
-Çamlıhemşin|1228|TR-53|1
-Çayeli|1241|TR-53|1
-Fındıklı|1332|TR-53|1
-İkizdere|1405|TR-53|1
-Kalkandere|1428|TR-53|1
-Pazar|1569|TR-53|1
-Rize Merkez|1586|TR-53|1
-Güneysu|1796|TR-53|1
-Derepazarı|1908|TR-53|1
-Hemşin|1943|TR-53|1
-İyidere|1949|TR-53|1
-Akyazı|1123|TR-54|1
-Geyve|1351|TR-54|1
-Hendek|1391|TR-54|1
-Karasu|1442|TR-54|1
-Kaynarca|1453|TR-54|1
-Sakarya Merkez|1589|TR-54|0
-Sapanca|1595|TR-54|1
-Kocaali|1818|TR-54|1
-Pamukova|1833|TR-54|1
-Taraklı|1847|TR-54|1
-Ferizli|1925|TR-54|1
-Karapürçek|1955|TR-54|1
-Söğütlü|1986|TR-54|1
-Adapazarı|2068|TR-54|1
-Arifiye|2069|TR-54|1
-Erenler|2070|TR-54|1
-Serdivan|2071|TR-54|1
-Alaçam|1125|TR-55|1
-Bafra|1164|TR-55|1
-Çarşamba|1234|TR-55|1
-Havza|1386|TR-55|1
-Kavak|1452|TR-55|1
-Ladik|1501|TR-55|1
-Samsun Merkez|1593|TR-55|0
-Terme|1676|TR-55|1
-Vezirköprü|1712|TR-55|1
-Asarcık|1763|TR-55|1
-19 Mayıs|1830|TR-55|1
-Salıpazarı|1838|TR-55|1
-Tekkeköy|1849|TR-55|1
-Ayvacık|1879|TR-55|1
-Yakakent|1993|TR-55|1
-Atakum|2072|TR-55|1
-Canik|2073|TR-55|1
-İlkadım|2074|TR-55|1
-Baykan|1179|TR-56|1
-Eruh|1317|TR-56|1
-Kurtalan|1495|TR-56|1
-Pervari|1575|TR-56|1
-Siirt Merkez|1620|TR-56|1
-Şirvan|1662|TR-56|1
-Tillo|1878|TR-56|1
-Ayancık|1156|TR-57|1
-Boyabat|1204|TR-57|1
-Durağan|1290|TR-57|1
-Erfelek|1314|TR-57|1
-Gerze|1349|TR-57|1
-Sinop Merkez|1627|TR-57|1
-Türkeli|1693|TR-57|1
-Dikmen|1910|TR-57|1
-Saraydüzü|1981|TR-57|1
-Divriği|1282|TR-58|1
-Gemerek|1342|TR-58|1
-Gürün|1373|TR-58|1
-Hafik|1376|TR-58|1
-İmranlı|1407|TR-58|1
-Kangal|1431|TR-58|1
-Koyulhisar|1484|TR-58|1
-Sivas Merkez|1628|TR-58|1
-Suşehri|1646|TR-58|1
-Şarkışla|1650|TR-58|1
-Yıldızeli|1731|TR-58|1
-Zara|1738|TR-58|1
-Akıncılar|1870|TR-58|1
-Altınyayla|1875|TR-58|1
-Doğanşar|1913|TR-58|1
-Gölova|1927|TR-58|1
-Ulaş|1991|TR-58|1
-Çerkezköy|1250|TR-59|1
-Çorlu|1258|TR-59|1
-Hayrabolu|1388|TR-59|1
-Malkara|1511|TR-59|1
-Muratlı|1538|TR-59|1
-Saray|1596|TR-59|1
-Şarköy|1652|TR-59|1
-Tekirdağ Merkez|1673|TR-59|0
-Marmaraereğlisi|1825|TR-59|1
-Ergene|2094|TR-59|1
-Kapaklı|2095|TR-59|1
-Süleymanpaşa|2096|TR-59|1
-Almus|1129|TR-60|1
-Artova|1151|TR-60|1
-Erbaa|1308|TR-60|1
-Niksar|1545|TR-60|1
-Reşadiye|1584|TR-60|1
-Tokat Merkez|1679|TR-60|1
-Turhal|1690|TR-60|1
-Zile|1740|TR-60|1
-Pazar|1834|TR-60|1
-Yeşilyurt|1858|TR-60|1
-Başçiftlik|1883|TR-60|1
-Sulusaray|1987|TR-60|1
-Akçaabat|1113|TR-61|1
-Araklı|1141|TR-61|1
-Arsin|1150|TR-61|1
-Çaykara|1244|TR-61|1
-Maçka|1507|TR-61|1
-Of|1548|TR-61|1
-Sürmene|1647|TR-61|1
-Tonya|1681|TR-61|1
-Trabzon Merkez|1686|TR-61|0
-Vakfıkebir|1709|TR-61|1
-Yomra|1732|TR-61|1
-Beşikdüzü|1775|TR-61|1
-Şalpazarı|1842|TR-61|1
-Çarşıbaşı|1896|TR-61|1
-Dernekpazarı|1909|TR-61|1
-Düzköy|1917|TR-61|1
-Hayrat|1942|TR-61|1
-Köprübaşı|1966|TR-61|1
-Ortahisar|2097|TR-61|1
-Çemişgezek|1247|TR-62|1
-Hozat|1397|TR-62|1
-Mazgirt|1518|TR-62|1
-Nazımiye|1541|TR-62|1
-Ovacık|1562|TR-62|1
-Pertek|1574|TR-62|1
-Pülümür|1581|TR-62|1
-Tunceli Merkez|1688|TR-62|1
-Akçakale|1115|TR-63|1
-Birecik|1194|TR-63|1
-Bozova|1209|TR-63|1
-Ceylanpınar|1220|TR-63|1
-Halfeti|1378|TR-63|1
-Hilvan|1393|TR-63|1
-Siverek|1630|TR-63|1
-Suruç|1643|TR-63|1
-Şanlıurfa Merkez|1702|TR-63|0
-Viranşehir|1713|TR-63|1
-Harran|1800|TR-63|1
-Eyyübiye|2091|TR-63|1
-Haliliye|2092|TR-63|1
-Karaköprü|2093|TR-63|1
-Banaz|1170|TR-64|1
-Eşme|1323|TR-64|1
-Karahallı|1436|TR-64|1
-Sivaslı|1629|TR-64|1
-Ulubey|1697|TR-64|1
-Uşak Merkez|1704|TR-64|1
-Başkale|1175|TR-65|1
-Çatak|1236|TR-65|1
-Erciş|1309|TR-65|1
-Gevaş|1350|TR-65|1
-Gürpınar|1372|TR-65|1
-Muradiye|1533|TR-65|1
-Özalp|1565|TR-65|1
-Van Merkez|1710|TR-65|0
-Bahçesaray|1770|TR-65|1
-Çaldıran|1786|TR-65|1
-Edremit|1918|TR-65|1
-Saray|1980|TR-65|1
-İpekyolu|2098|TR-65|1
-Tuşba|2099|TR-65|1
-Akdağmadeni|1117|TR-66|1
-Boğazlıyan|1198|TR-66|1
-Çayıralan|1242|TR-66|1
-Çekerek|1245|TR-66|1
-Sarıkaya|1602|TR-66|1
-Sorgun|1635|TR-66|1
-Şefaatli|1655|TR-66|1
-Yerköy|1726|TR-66|1
-Yozgat Merkez|1733|TR-66|1
-Aydıncık|1877|TR-66|1
-Çandır|1895|TR-66|1
-Kadışehri|1952|TR-66|1
-Saraykent|1982|TR-66|1
-Yenifakılı|1998|TR-66|1
-Çaycuma|1240|TR-67|1
-Devrek|1276|TR-67|1
-Ereğli|1313|TR-67|1
-Zonguldak Merkez|1741|TR-67|1
-Alaplı|1758|TR-67|1
-Gökçebey|1926|TR-67|1
-Kilimli|2100|TR-67|1
-Kozlu|2101|TR-67|1
-Aksaray Merkez|1120|TR-68|1
-Ortaköy|1557|TR-68|1
-Ağaçören|1860|TR-68|1
-Güzelyurt|1861|TR-68|1
-Sarıyahşi|1866|TR-68|1
-Eskil|1921|TR-68|1
-Gülağaç|1932|TR-68|1
-Sultanhanı|2106|TR-68|0
-Bayburt Merkez|1176|TR-69|1
-Aydıntepe|1767|TR-69|1
-Demirözü|1788|TR-69|1
-Ermenek|1316|TR-70|1
-Karaman Merkez|1439|TR-70|1
-Ayrancı|1768|TR-70|1
-Kazımkarabekir|1862|TR-70|1
-Başyayla|1884|TR-70|1
-Sarıveliler|1983|TR-70|1
-Delice|1268|TR-71|1
-Keskin|1463|TR-71|1
-Kırıkkale Merkez|1469|TR-71|1
-Sulakyurt|1638|TR-71|1
-Bahşili|1880|TR-71|1
-Balışeyh|1882|TR-71|1
-Çelebi|1901|TR-71|1
-Karakeçili|1954|TR-71|1
-Yahşihan|1992|TR-71|1
-Batman Merkez|1174|TR-72|1
-Beşiri|1184|TR-72|1
-Gercüş|1345|TR-72|1
-Kozluk|1487|TR-72|1
-Sason|1607|TR-72|1
-Hasankeyf|1941|TR-72|1
-Beytüşşebap|1189|TR-73|1
-Cizre|1223|TR-73|1
-İdil|1403|TR-73|1
-Silopi|1623|TR-73|1
-Şırnak Merkez|1661|TR-73|1
-Uludere|1698|TR-73|1
-Güçlükonak|1931|TR-73|1
-Bartın Merkez|1172|TR-74|1
-Kurucaşile|1496|TR-74|1
-Ulus|1701|TR-74|1
-Amasra|1761|TR-74|1
-Ardahan Merkez|1144|TR-75|1
-Çıldır|1252|TR-75|1
-Göle|1356|TR-75|1
-Hanak|1380|TR-75|1
-Posof|1579|TR-75|1
-Damal|2008|TR-75|1
-Aralık|1142|TR-76|1
-Iğdır Merkez|1398|TR-76|1
-Tuzluca|1692|TR-76|1
-Karakoyunlu|2011|TR-76|1
-Yalova Merkez|1716|TR-77|1
-Altınova|2019|TR-77|1
-Armutlu|2020|TR-77|1
-Çınarcık|2021|TR-77|1
-Çiftlikköy|2022|TR-77|1
-Termal|2026|TR-77|1
-Eflani|1296|TR-78|1
-Eskipazar|1321|TR-78|1
-Karabük Merkez|1433|TR-78|1
-Ovacık|1561|TR-78|1
-Safranbolu|1587|TR-78|1
-Yenice|1856|TR-78|1
-Kilis Merkez|1476|TR-79|1
-Elbeyli|2023|TR-79|1
-Musabeyli|2024|TR-79|1
-Polateli|2025|TR-79|1
-Bahçe|1165|TR-80|1
-Kadirli|1423|TR-80|1
-Osmaniye Merkez|1560|TR-80|1
-Düziçi|1743|TR-80|1
-Hasanbeyli|2027|TR-80|1
-Sumbas|2028|TR-80|1
-Toprakkale|2029|TR-80|1
-Akçakoca|1116|TR-81|1
-Düzce Merkez|1292|TR-81|1
-Yığılca|1730|TR-81|1
-Cumayeri|1784|TR-81|1
-Gölyaka|1794|TR-81|1
-Çilimli|1905|TR-81|1
-Gümüşova|2017|TR-81|1
-Kaynaşlı|2031|TR-81|1
+-
+  name: Seyhan
+  mernis_code: 1104
+  alpha_2_code: TR-01
+  active: true
+-
+  name: Ceyhan
+  mernis_code: 1219
+  alpha_2_code: TR-01
+  active: true
+-
+  name: Feke
+  mernis_code: 1329
+  alpha_2_code: TR-01
+  active: true
+-
+  name: Karaisalı
+  mernis_code: 1437
+  alpha_2_code: TR-01
+  active: true
+-
+  name: Karataş
+  mernis_code: 1443
+  alpha_2_code: TR-01
+  active: true
+-
+  name: Kozan
+  mernis_code: 1486
+  alpha_2_code: TR-01
+  active: true
+-
+  name: Pozantı
+  mernis_code: 1580
+  alpha_2_code: TR-01
+  active: true
+-
+  name: Saimbeyli
+  mernis_code: 1588
+  alpha_2_code: TR-01
+  active: true
+-
+  name: Tufanbeyli
+  mernis_code: 1687
+  alpha_2_code: TR-01
+  active: true
+-
+  name: Yumurtalık
+  mernis_code: 1734
+  alpha_2_code: TR-01
+  active: true
+-
+  name: Yüreğir
+  mernis_code: 1748
+  alpha_2_code: TR-01
+  active: true
+-
+  name: Aladağ
+  mernis_code: 1757
+  alpha_2_code: TR-01
+  active: true
+-
+  name: İmamoğlu
+  mernis_code: 1806
+  alpha_2_code: TR-01
+  active: true
+-
+  name: Sarıçam
+  mernis_code: 2032
+  alpha_2_code: TR-01
+  active: true
+-
+  name: Çukurova
+  mernis_code: 2033
+  alpha_2_code: TR-01
+  active: true
+-
+  name: Adıyaman Merkez
+  mernis_code: 1105
+  alpha_2_code: TR-02
+  active: true
+-
+  name: Besni
+  mernis_code: 1182
+  alpha_2_code: TR-02
+  active: true
+-
+  name: Çelikhan
+  mernis_code: 1246
+  alpha_2_code: TR-02
+  active: true
+-
+  name: Gerger
+  mernis_code: 1347
+  alpha_2_code: TR-02
+  active: true
+-
+  name: Gölbaşı
+  mernis_code: 1354
+  alpha_2_code: TR-02
+  active: true
+-
+  name: Kahta
+  mernis_code: 1425
+  alpha_2_code: TR-02
+  active: true
+-
+  name: Samsat
+  mernis_code: 1592
+  alpha_2_code: TR-02
+  active: true
+-
+  name: Sincik
+  mernis_code: 1985
+  alpha_2_code: TR-02
+  active: true
+-
+  name: Tut
+  mernis_code: 1989
+  alpha_2_code: TR-02
+  active: true
+-
+  name: Afyonkarahisar Merkez
+  mernis_code: 1108
+  alpha_2_code: TR-03
+  active: true
+-
+  name: Bolvadin
+  mernis_code: 1200
+  alpha_2_code: TR-03
+  active: true
+-
+  name: Çay
+  mernis_code: 1239
+  alpha_2_code: TR-03
+  active: true
+-
+  name: Dazkırı
+  mernis_code: 1267
+  alpha_2_code: TR-03
+  active: true
+-
+  name: Dinar
+  mernis_code: 1281
+  alpha_2_code: TR-03
+  active: true
+-
+  name: Emirdağ
+  mernis_code: 1306
+  alpha_2_code: TR-03
+  active: true
+-
+  name: İhsaniye
+  mernis_code: 1404
+  alpha_2_code: TR-03
+  active: true
+-
+  name: Sandıklı
+  mernis_code: 1594
+  alpha_2_code: TR-03
+  active: true
+-
+  name: Sinanpaşa
+  mernis_code: 1626
+  alpha_2_code: TR-03
+  active: true
+-
+  name: Sultandağı
+  mernis_code: 1639
+  alpha_2_code: TR-03
+  active: true
+-
+  name: Şuhut
+  mernis_code: 1664
+  alpha_2_code: TR-03
+  active: true
+-
+  name: Başmakçı
+  mernis_code: 1771
+  alpha_2_code: TR-03
+  active: true
+-
+  name: Bayat
+  mernis_code: 1773
+  alpha_2_code: TR-03
+  active: true
+-
+  name: İscehisar
+  mernis_code: 1809
+  alpha_2_code: TR-03
+  active: true
+-
+  name: Çobanlar
+  mernis_code: 1906
+  alpha_2_code: TR-03
+  active: true
+-
+  name: Evciler
+  mernis_code: 1923
+  alpha_2_code: TR-03
+  active: true
+-
+  name: Hocalar
+  mernis_code: 1944
+  alpha_2_code: TR-03
+  active: true
+-
+  name: Kızılören
+  mernis_code: 1961
+  alpha_2_code: TR-03
+  active: true
+-
+  name: Ağrı Merkez
+  mernis_code: 1111
+  alpha_2_code: TR-04
+  active: true
+-
+  name: Diyadin
+  mernis_code: 1283
+  alpha_2_code: TR-04
+  active: true
+-
+  name: Doğubayazıt
+  mernis_code: 1287
+  alpha_2_code: TR-04
+  active: true
+-
+  name: Eleşkirt
+  mernis_code: 1301
+  alpha_2_code: TR-04
+  active: true
+-
+  name: Hamur
+  mernis_code: 1379
+  alpha_2_code: TR-04
+  active: true
+-
+  name: Patnos
+  mernis_code: 1568
+  alpha_2_code: TR-04
+  active: true
+-
+  name: Taşlıçay
+  mernis_code: 1667
+  alpha_2_code: TR-04
+  active: true
+-
+  name: Tutak
+  mernis_code: 1691
+  alpha_2_code: TR-04
+  active: true
+-
+  name: Amasya Merkez
+  mernis_code: 1134
+  alpha_2_code: TR-05
+  active: true
+-
+  name: Göynücek
+  mernis_code: 1363
+  alpha_2_code: TR-05
+  active: true
+-
+  name: Gümüşhacıköy
+  mernis_code: 1368
+  alpha_2_code: TR-05
+  active: true
+-
+  name: Merzifon
+  mernis_code: 1524
+  alpha_2_code: TR-05
+  active: true
+-
+  name: Suluova
+  mernis_code: 1641
+  alpha_2_code: TR-05
+  active: true
+-
+  name: Taşova
+  mernis_code: 1668
+  alpha_2_code: TR-05
+  active: true
+-
+  name: Hamamözü
+  mernis_code: 1938
+  alpha_2_code: TR-05
+  active: true
+-
+  name: Altındağ
+  mernis_code: 1130
+  alpha_2_code: TR-06
+  active: true
+-
+  name: Ayaş
+  mernis_code: 1157
+  alpha_2_code: TR-06
+  active: true
+-
+  name: Bala
+  mernis_code: 1167
+  alpha_2_code: TR-06
+  active: true
+-
+  name: Beypazarı
+  mernis_code: 1187
+  alpha_2_code: TR-06
+  active: true
+-
+  name: Çamlıdere
+  mernis_code: 1227
+  alpha_2_code: TR-06
+  active: true
+-
+  name: Çankaya
+  mernis_code: 1231
+  alpha_2_code: TR-06
+  active: true
+-
+  name: Çubuk
+  mernis_code: 1260
+  alpha_2_code: TR-06
+  active: true
+-
+  name: Elmadağ
+  mernis_code: 1302
+  alpha_2_code: TR-06
+  active: true
+-
+  name: Güdül
+  mernis_code: 1365
+  alpha_2_code: TR-06
+  active: true
+-
+  name: Haymana
+  mernis_code: 1387
+  alpha_2_code: TR-06
+  active: true
+-
+  name: Kalecik
+  mernis_code: 1427
+  alpha_2_code: TR-06
+  active: true
+-
+  name: Kızılcahamam
+  mernis_code: 1473
+  alpha_2_code: TR-06
+  active: true
+-
+  name: Nallıhan
+  mernis_code: 1539
+  alpha_2_code: TR-06
+  active: true
+-
+  name: Polatlı
+  mernis_code: 1578
+  alpha_2_code: TR-06
+  active: true
+-
+  name: Şereflikoçhisar
+  mernis_code: 1658
+  alpha_2_code: TR-06
+  active: true
+-
+  name: Yenimahalle
+  mernis_code: 1723
+  alpha_2_code: TR-06
+  active: true
+-
+  name: Gölbaşı
+  mernis_code: 1744
+  alpha_2_code: TR-06
+  active: true
+-
+  name: Keçiören
+  mernis_code: 1745
+  alpha_2_code: TR-06
+  active: true
+-
+  name: Mamak
+  mernis_code: 1746
+  alpha_2_code: TR-06
+  active: true
+-
+  name: Sincan
+  mernis_code: 1747
+  alpha_2_code: TR-06
+  active: true
+-
+  name: Kazan
+  mernis_code: 1815
+  alpha_2_code: TR-06
+  active: true
+-
+  name: Akyurt
+  mernis_code: 1872
+  alpha_2_code: TR-06
+  active: true
+-
+  name: Etimesgut
+  mernis_code: 1922
+  alpha_2_code: TR-06
+  active: true
+-
+  name: Evren
+  mernis_code: 1924
+  alpha_2_code: TR-06
+  active: true
+-
+  name: Pursaklar
+  mernis_code: 2034
+  alpha_2_code: TR-06
+  active: true
+-
+  name: Akseki
+  mernis_code: 1121
+  alpha_2_code: TR-07
+  active: true
+-
+  name: Alanya
+  mernis_code: 1126
+  alpha_2_code: TR-07
+  active: true
+-
+  name: Antalya Merkez
+  mernis_code: 1138
+  alpha_2_code: TR-07
+  active: 0
+-
+  name: Elmalı
+  mernis_code: 1303
+  alpha_2_code: TR-07
+  active: true
+-
+  name: Finike
+  mernis_code: 1333
+  alpha_2_code: TR-07
+  active: true
+-
+  name: Gazipaşa
+  mernis_code: 1337
+  alpha_2_code: TR-07
+  active: true
+-
+  name: Gündoğmuş
+  mernis_code: 1370
+  alpha_2_code: TR-07
+  active: true
+-
+  name: Kaş
+  mernis_code: 1451
+  alpha_2_code: TR-07
+  active: true
+-
+  name: Korkuteli
+  mernis_code: 1483
+  alpha_2_code: TR-07
+  active: true
+-
+  name: Kumluca
+  mernis_code: 1492
+  alpha_2_code: TR-07
+  active: true
+-
+  name: Manavgat
+  mernis_code: 1512
+  alpha_2_code: TR-07
+  active: true
+-
+  name: Serik
+  mernis_code: 1616
+  alpha_2_code: TR-07
+  active: true
+-
+  name: Demre
+  mernis_code: 1811
+  alpha_2_code: TR-07
+  active: true
+-
+  name: İbradı
+  mernis_code: 1946
+  alpha_2_code: TR-07
+  active: true
+-
+  name: Kemer
+  mernis_code: 1959
+  alpha_2_code: TR-07
+  active: true
+-
+  name: Aksu
+  mernis_code: 2035
+  alpha_2_code: TR-07
+  active: true
+-
+  name: Döşemealtı
+  mernis_code: 2036
+  alpha_2_code: TR-07
+  active: true
+-
+  name: Kepez
+  mernis_code: 2037
+  alpha_2_code: TR-07
+  active: true
+-
+  name: Konyaaltı
+  mernis_code: 2038
+  alpha_2_code: TR-07
+  active: true
+-
+  name: Muratpaşa
+  mernis_code: 2039
+  alpha_2_code: TR-07
+  active: true
+-
+  name: Ardanuç
+  mernis_code: 1145
+  alpha_2_code: TR-08
+  active: true
+-
+  name: Arhavi
+  mernis_code: 1147
+  alpha_2_code: TR-08
+  active: true
+-
+  name: Artvin Merkez
+  mernis_code: 1152
+  alpha_2_code: TR-08
+  active: true
+-
+  name: Borçka
+  mernis_code: 1202
+  alpha_2_code: TR-08
+  active: true
+-
+  name: Hopa
+  mernis_code: 1395
+  alpha_2_code: TR-08
+  active: true
+-
+  name: Şavşat
+  mernis_code: 1653
+  alpha_2_code: TR-08
+  active: true
+-
+  name: Yusufeli
+  mernis_code: 1736
+  alpha_2_code: TR-08
+  active: true
+-
+  name: Murgul
+  mernis_code: 1828
+  alpha_2_code: TR-08
+  active: true
+-
+  name: Kemalpaşa
+  mernis_code: 2105
+  alpha_2_code: TR-08
+  active: 0
+-
+  name: Aydın Merkez
+  mernis_code: 1159
+  alpha_2_code: TR-09
+  active: 0
+-
+  name: Bozdoğan
+  mernis_code: 1206
+  alpha_2_code: TR-09
+  active: true
+-
+  name: Çine
+  mernis_code: 1256
+  alpha_2_code: TR-09
+  active: true
+-
+  name: Germencik
+  mernis_code: 1348
+  alpha_2_code: TR-09
+  active: true
+-
+  name: Karacasu
+  mernis_code: 1435
+  alpha_2_code: TR-09
+  active: true
+-
+  name: Koçarlı
+  mernis_code: 1479
+  alpha_2_code: TR-09
+  active: true
+-
+  name: Kuşadası
+  mernis_code: 1497
+  alpha_2_code: TR-09
+  active: true
+-
+  name: Kuyucak
+  mernis_code: 1498
+  alpha_2_code: TR-09
+  active: true
+-
+  name: Nazilli
+  mernis_code: 1542
+  alpha_2_code: TR-09
+  active: true
+-
+  name: Söke
+  mernis_code: 1637
+  alpha_2_code: TR-09
+  active: true
+-
+  name: Sultanhisar
+  mernis_code: 1640
+  alpha_2_code: TR-09
+  active: true
+-
+  name: Yenipazar
+  mernis_code: 1724
+  alpha_2_code: TR-09
+  active: true
+-
+  name: Buharkent
+  mernis_code: 1781
+  alpha_2_code: TR-09
+  active: true
+-
+  name: İncirliova
+  mernis_code: 1807
+  alpha_2_code: TR-09
+  active: true
+-
+  name: Karpuzlu
+  mernis_code: 1957
+  alpha_2_code: TR-09
+  active: true
+-
+  name: Köşk
+  mernis_code: 1968
+  alpha_2_code: TR-09
+  active: true
+-
+  name: Didim
+  mernis_code: 2000
+  alpha_2_code: TR-09
+  active: true
+-
+  name: Efeler
+  mernis_code: 2076
+  alpha_2_code: TR-09
+  active: true
+-
+  name: Ayvalık
+  mernis_code: 1161
+  alpha_2_code: TR-10
+  active: true
+-
+  name: Balıkesir Merkez
+  mernis_code: 1168
+  alpha_2_code: TR-10
+  active: 0
+-
+  name: Balya
+  mernis_code: 1169
+  alpha_2_code: TR-10
+  active: true
+-
+  name: Bandırma
+  mernis_code: 1171
+  alpha_2_code: TR-10
+  active: true
+-
+  name: Bigadiç
+  mernis_code: 1191
+  alpha_2_code: TR-10
+  active: true
+-
+  name: Burhaniye
+  mernis_code: 1216
+  alpha_2_code: TR-10
+  active: true
+-
+  name: Dursunbey
+  mernis_code: 1291
+  alpha_2_code: TR-10
+  active: true
+-
+  name: Edremit
+  mernis_code: 1294
+  alpha_2_code: TR-10
+  active: true
+-
+  name: Erdek
+  mernis_code: 1310
+  alpha_2_code: TR-10
+  active: true
+-
+  name: Gönen
+  mernis_code: 1360
+  alpha_2_code: TR-10
+  active: true
+-
+  name: Havran
+  mernis_code: 1384
+  alpha_2_code: TR-10
+  active: true
+-
+  name: İvrindi
+  mernis_code: 1418
+  alpha_2_code: TR-10
+  active: true
+-
+  name: Kepsut
+  mernis_code: 1462
+  alpha_2_code: TR-10
+  active: true
+-
+  name: Manyas
+  mernis_code: 1514
+  alpha_2_code: TR-10
+  active: true
+-
+  name: Savaştepe
+  mernis_code: 1608
+  alpha_2_code: TR-10
+  active: true
+-
+  name: Sındırgı
+  mernis_code: 1619
+  alpha_2_code: TR-10
+  active: true
+-
+  name: Susurluk
+  mernis_code: 1644
+  alpha_2_code: TR-10
+  active: true
+-
+  name: Marmara
+  mernis_code: 1824
+  alpha_2_code: TR-10
+  active: true
+-
+  name: Gömeç
+  mernis_code: 1928
+  alpha_2_code: TR-10
+  active: true
+-
+  name: Altıeylül
+  mernis_code: 2077
+  alpha_2_code: TR-10
+  active: true
+-
+  name: Karesi
+  mernis_code: 2078
+  alpha_2_code: TR-10
+  active: true
+-
+  name: Bilecik Merkez
+  mernis_code: 1192
+  alpha_2_code: TR-11
+  active: true
+-
+  name: Bozüyük
+  mernis_code: 1210
+  alpha_2_code: TR-11
+  active: true
+-
+  name: Gölpazarı
+  mernis_code: 1359
+  alpha_2_code: TR-11
+  active: true
+-
+  name: Osmaneli
+  mernis_code: 1559
+  alpha_2_code: TR-11
+  active: true
+-
+  name: Pazaryeri
+  mernis_code: 1571
+  alpha_2_code: TR-11
+  active: true
+-
+  name: Söğüt
+  mernis_code: 1636
+  alpha_2_code: TR-11
+  active: true
+-
+  name: Yenipazar
+  mernis_code: 1857
+  alpha_2_code: TR-11
+  active: true
+-
+  name: İnhisar
+  mernis_code: 1948
+  alpha_2_code: TR-11
+  active: true
+-
+  name: Bingöl Merkez
+  mernis_code: 1193
+  alpha_2_code: TR-12
+  active: true
+-
+  name: Genç
+  mernis_code: 1344
+  alpha_2_code: TR-12
+  active: true
+-
+  name: Karlıova
+  mernis_code: 1446
+  alpha_2_code: TR-12
+  active: true
+-
+  name: Kiğı
+  mernis_code: 1475
+  alpha_2_code: TR-12
+  active: true
+-
+  name: Solhan
+  mernis_code: 1633
+  alpha_2_code: TR-12
+  active: true
+-
+  name: Adaklı
+  mernis_code: 1750
+  alpha_2_code: TR-12
+  active: true
+-
+  name: Yayladere
+  mernis_code: 1855
+  alpha_2_code: TR-12
+  active: true
+-
+  name: Yedisu
+  mernis_code: 1996
+  alpha_2_code: TR-12
+  active: true
+-
+  name: Adilcevaz
+  mernis_code: 1106
+  alpha_2_code: TR-13
+  active: true
+-
+  name: Ahlat
+  mernis_code: 1112
+  alpha_2_code: TR-13
+  active: true
+-
+  name: Bitlis Merkez
+  mernis_code: 1196
+  alpha_2_code: TR-13
+  active: true
+-
+  name: Hizan
+  mernis_code: 1394
+  alpha_2_code: TR-13
+  active: true
+-
+  name: Mutki
+  mernis_code: 1537
+  alpha_2_code: TR-13
+  active: true
+-
+  name: Tatvan
+  mernis_code: 1669
+  alpha_2_code: TR-13
+  active: true
+-
+  name: Güroymak
+  mernis_code: 1798
+  alpha_2_code: TR-13
+  active: true
+-
+  name: Bolu Merkez
+  mernis_code: 1199
+  alpha_2_code: TR-14
+  active: true
+-
+  name: Gerede
+  mernis_code: 1346
+  alpha_2_code: TR-14
+  active: true
+-
+  name: Göynük
+  mernis_code: 1364
+  alpha_2_code: TR-14
+  active: true
+-
+  name: Kıbrıscık
+  mernis_code: 1466
+  alpha_2_code: TR-14
+  active: true
+-
+  name: Mengen
+  mernis_code: 1522
+  alpha_2_code: TR-14
+  active: true
+-
+  name: Mudurnu
+  mernis_code: 1531
+  alpha_2_code: TR-14
+  active: true
+-
+  name: Seben
+  mernis_code: 1610
+  alpha_2_code: TR-14
+  active: true
+-
+  name: Dörtdivan
+  mernis_code: 1916
+  alpha_2_code: TR-14
+  active: true
+-
+  name: Yeniçağa
+  mernis_code: 1997
+  alpha_2_code: TR-14
+  active: true
+-
+  name: Ağlasun
+  mernis_code: 1109
+  alpha_2_code: TR-15
+  active: true
+-
+  name: Bucak
+  mernis_code: 1211
+  alpha_2_code: TR-15
+  active: true
+-
+  name: Burdur Merkez
+  mernis_code: 1215
+  alpha_2_code: TR-15
+  active: true
+-
+  name: Gölhisar
+  mernis_code: 1357
+  alpha_2_code: TR-15
+  active: true
+-
+  name: Tefenni
+  mernis_code: 1672
+  alpha_2_code: TR-15
+  active: true
+-
+  name: Yeşilova
+  mernis_code: 1728
+  alpha_2_code: TR-15
+  active: true
+-
+  name: Karamanlı
+  mernis_code: 1813
+  alpha_2_code: TR-15
+  active: true
+-
+  name: Kemer
+  mernis_code: 1816
+  alpha_2_code: TR-15
+  active: true
+-
+  name: Altınyayla
+  mernis_code: 1874
+  alpha_2_code: TR-15
+  active: true
+-
+  name: Çavdır
+  mernis_code: 1899
+  alpha_2_code: TR-15
+  active: true
+-
+  name: Çeltikçi
+  mernis_code: 1903
+  alpha_2_code: TR-15
+  active: true
+-
+  name: Gemlik
+  mernis_code: 1343
+  alpha_2_code: TR-16
+  active: true
+-
+  name: İnegöl
+  mernis_code: 1411
+  alpha_2_code: TR-16
+  active: true
+-
+  name: İznik
+  mernis_code: 1420
+  alpha_2_code: TR-16
+  active: true
+-
+  name: Karacabey
+  mernis_code: 1434
+  alpha_2_code: TR-16
+  active: true
+-
+  name: Keles
+  mernis_code: 1457
+  alpha_2_code: TR-16
+  active: true
+-
+  name: Mudanya
+  mernis_code: 1530
+  alpha_2_code: TR-16
+  active: true
+-
+  name: Mustafakemalpaşa
+  mernis_code: 1535
+  alpha_2_code: TR-16
+  active: true
+-
+  name: Orhaneli
+  mernis_code: 1553
+  alpha_2_code: TR-16
+  active: true
+-
+  name: Orhangazi
+  mernis_code: 1554
+  alpha_2_code: TR-16
+  active: true
+-
+  name: Yenişehir
+  mernis_code: 1725
+  alpha_2_code: TR-16
+  active: true
+-
+  name: Büyükorhan
+  mernis_code: 1783
+  alpha_2_code: TR-16
+  active: true
+-
+  name: Harmancık
+  mernis_code: 1799
+  alpha_2_code: TR-16
+  active: true
+-
+  name: Nilüfer
+  mernis_code: 1829
+  alpha_2_code: TR-16
+  active: true
+-
+  name: Osmangazi
+  mernis_code: 1832
+  alpha_2_code: TR-16
+  active: true
+-
+  name: Yıldırım
+  mernis_code: 1859
+  alpha_2_code: TR-16
+  active: true
+-
+  name: Gürsu
+  mernis_code: 1935
+  alpha_2_code: TR-16
+  active: true
+-
+  name: Kestel
+  mernis_code: 1960
+  alpha_2_code: TR-16
+  active: true
+-
+  name: Ayvacık
+  mernis_code: 1160
+  alpha_2_code: TR-17
+  active: true
+-
+  name: Bayramiç
+  mernis_code: 1180
+  alpha_2_code: TR-17
+  active: true
+-
+  name: Biga
+  mernis_code: 1190
+  alpha_2_code: TR-17
+  active: true
+-
+  name: Bozcaada
+  mernis_code: 1205
+  alpha_2_code: TR-17
+  active: true
+-
+  name: Çan
+  mernis_code: 1229
+  alpha_2_code: TR-17
+  active: true
+-
+  name: Çanakkale Merkez
+  mernis_code: 1230
+  alpha_2_code: TR-17
+  active: true
+-
+  name: Eceabat
+  mernis_code: 1293
+  alpha_2_code: TR-17
+  active: true
+-
+  name: Ezine
+  mernis_code: 1326
+  alpha_2_code: TR-17
+  active: true
+-
+  name: Gelibolu
+  mernis_code: 1340
+  alpha_2_code: TR-17
+  active: true
+-
+  name: Gökçeada
+  mernis_code: 1408
+  alpha_2_code: TR-17
+  active: true
+-
+  name: Lapseki
+  mernis_code: 1503
+  alpha_2_code: TR-17
+  active: true
+-
+  name: Yenice
+  mernis_code: 1722
+  alpha_2_code: TR-17
+  active: true
+-
+  name: Çankırı Merkez
+  mernis_code: 1232
+  alpha_2_code: TR-18
+  active: true
+-
+  name: Çerkeş
+  mernis_code: 1248
+  alpha_2_code: TR-18
+  active: true
+-
+  name: Eldivan
+  mernis_code: 1300
+  alpha_2_code: TR-18
+  active: true
+-
+  name: Ilgaz
+  mernis_code: 1399
+  alpha_2_code: TR-18
+  active: true
+-
+  name: Kurşunlu
+  mernis_code: 1494
+  alpha_2_code: TR-18
+  active: true
+-
+  name: Orta
+  mernis_code: 1555
+  alpha_2_code: TR-18
+  active: true
+-
+  name: Şabanözü
+  mernis_code: 1649
+  alpha_2_code: TR-18
+  active: true
+-
+  name: Yapraklı
+  mernis_code: 1718
+  alpha_2_code: TR-18
+  active: true
+-
+  name: Atkaracalar
+  mernis_code: 1765
+  alpha_2_code: TR-18
+  active: true
+-
+  name: Kızılırmak
+  mernis_code: 1817
+  alpha_2_code: TR-18
+  active: true
+-
+  name: Bayramören
+  mernis_code: 1885
+  alpha_2_code: TR-18
+  active: true
+-
+  name: Korgun
+  mernis_code: 1963
+  alpha_2_code: TR-18
+  active: true
+-
+  name: Alaca
+  mernis_code: 1124
+  alpha_2_code: TR-19
+  active: true
+-
+  name: Bayat
+  mernis_code: 1177
+  alpha_2_code: TR-19
+  active: true
+-
+  name: Çorum Merkez
+  mernis_code: 1259
+  alpha_2_code: TR-19
+  active: true
+-
+  name: İskilip
+  mernis_code: 1414
+  alpha_2_code: TR-19
+  active: true
+-
+  name: Kargı
+  mernis_code: 1445
+  alpha_2_code: TR-19
+  active: true
+-
+  name: Mecitözü
+  mernis_code: 1520
+  alpha_2_code: TR-19
+  active: true
+-
+  name: Ortaköy
+  mernis_code: 1556
+  alpha_2_code: TR-19
+  active: true
+-
+  name: Osmancık
+  mernis_code: 1558
+  alpha_2_code: TR-19
+  active: true
+-
+  name: Sungurlu
+  mernis_code: 1642
+  alpha_2_code: TR-19
+  active: true
+-
+  name: Boğazkale
+  mernis_code: 1778
+  alpha_2_code: TR-19
+  active: true
+-
+  name: Uğurludağ
+  mernis_code: 1850
+  alpha_2_code: TR-19
+  active: true
+-
+  name: Dodurga
+  mernis_code: 1911
+  alpha_2_code: TR-19
+  active: true
+-
+  name: Laçin
+  mernis_code: 1972
+  alpha_2_code: TR-19
+  active: true
+-
+  name: Oğuzlar
+  mernis_code: 1976
+  alpha_2_code: TR-19
+  active: true
+-
+  name: Acıpayam
+  mernis_code: 1102
+  alpha_2_code: TR-20
+  active: true
+-
+  name: Buldan
+  mernis_code: 1214
+  alpha_2_code: TR-20
+  active: true
+-
+  name: Çal
+  mernis_code: 1224
+  alpha_2_code: TR-20
+  active: true
+-
+  name: Çameli
+  mernis_code: 1226
+  alpha_2_code: TR-20
+  active: true
+-
+  name: Çardak
+  mernis_code: 1233
+  alpha_2_code: TR-20
+  active: true
+-
+  name: Çivril
+  mernis_code: 1257
+  alpha_2_code: TR-20
+  active: true
+-
+  name: Denizli Merkez
+  mernis_code: 1271
+  alpha_2_code: TR-20
+  active: 0
+-
+  name: Güney
+  mernis_code: 1371
+  alpha_2_code: TR-20
+  active: true
+-
+  name: Kale
+  mernis_code: 1426
+  alpha_2_code: TR-20
+  active: true
+-
+  name: Sarayköy
+  mernis_code: 1597
+  alpha_2_code: TR-20
+  active: true
+-
+  name: Tavas
+  mernis_code: 1670
+  alpha_2_code: TR-20
+  active: true
+-
+  name: Babadağ
+  mernis_code: 1769
+  alpha_2_code: TR-20
+  active: true
+-
+  name: Bekilli
+  mernis_code: 1774
+  alpha_2_code: TR-20
+  active: true
+-
+  name: Honaz
+  mernis_code: 1803
+  alpha_2_code: TR-20
+  active: true
+-
+  name: Serinhisar
+  mernis_code: 1840
+  alpha_2_code: TR-20
+  active: true
+-
+  name: Pamukkale
+  mernis_code: 1871
+  alpha_2_code: TR-20
+  active: true
+-
+  name: Baklan
+  mernis_code: 1881
+  alpha_2_code: TR-20
+  active: true
+-
+  name: Beyağaç
+  mernis_code: 1888
+  alpha_2_code: TR-20
+  active: true
+-
+  name: Bozkurt
+  mernis_code: 1889
+  alpha_2_code: TR-20
+  active: true
+-
+  name: Merkezefendi
+  mernis_code: 2079
+  alpha_2_code: TR-20
+  active: true
+-
+  name: Bismil
+  mernis_code: 1195
+  alpha_2_code: TR-21
+  active: true
+-
+  name: Çermik
+  mernis_code: 1249
+  alpha_2_code: TR-21
+  active: true
+-
+  name: Çınar
+  mernis_code: 1253
+  alpha_2_code: TR-21
+  active: true
+-
+  name: Çüngüş
+  mernis_code: 1263
+  alpha_2_code: TR-21
+  active: true
+-
+  name: Dicle
+  mernis_code: 1278
+  alpha_2_code: TR-21
+  active: true
+-
+  name: Diyarbakır Merkez
+  mernis_code: 1284
+  alpha_2_code: TR-21
+  active: 0
+-
+  name: Ergani
+  mernis_code: 1315
+  alpha_2_code: TR-21
+  active: true
+-
+  name: Hani
+  mernis_code: 1381
+  alpha_2_code: TR-21
+  active: true
+-
+  name: Hazro
+  mernis_code: 1389
+  alpha_2_code: TR-21
+  active: true
+-
+  name: Kulp
+  mernis_code: 1490
+  alpha_2_code: TR-21
+  active: true
+-
+  name: Lice
+  mernis_code: 1504
+  alpha_2_code: TR-21
+  active: true
+-
+  name: Silvan
+  mernis_code: 1624
+  alpha_2_code: TR-21
+  active: true
+-
+  name: Eğil
+  mernis_code: 1791
+  alpha_2_code: TR-21
+  active: true
+-
+  name: Kocaköy
+  mernis_code: 1962
+  alpha_2_code: TR-21
+  active: true
+-
+  name: Bağlar
+  mernis_code: 2040
+  alpha_2_code: TR-21
+  active: true
+-
+  name: Kayapınar
+  mernis_code: 2041
+  alpha_2_code: TR-21
+  active: true
+-
+  name: Sur
+  mernis_code: 2042
+  alpha_2_code: TR-21
+  active: true
+-
+  name: Yenişehir
+  mernis_code: 2043
+  alpha_2_code: TR-21
+  active: true
+-
+  name: Edirne Merkez
+  mernis_code: 1295
+  alpha_2_code: TR-22
+  active: true
+-
+  name: Enez
+  mernis_code: 1307
+  alpha_2_code: TR-22
+  active: true
+-
+  name: Havsa
+  mernis_code: 1385
+  alpha_2_code: TR-22
+  active: true
+-
+  name: İpsala
+  mernis_code: 1412
+  alpha_2_code: TR-22
+  active: true
+-
+  name: Keşan
+  mernis_code: 1464
+  alpha_2_code: TR-22
+  active: true
+-
+  name: Lalapaşa
+  mernis_code: 1502
+  alpha_2_code: TR-22
+  active: true
+-
+  name: Meriç
+  mernis_code: 1523
+  alpha_2_code: TR-22
+  active: true
+-
+  name: Uzunköprü
+  mernis_code: 1705
+  alpha_2_code: TR-22
+  active: true
+-
+  name: Süloğlu
+  mernis_code: 1988
+  alpha_2_code: TR-22
+  active: true
+-
+  name: Ağın
+  mernis_code: 1110
+  alpha_2_code: TR-23
+  active: true
+-
+  name: Baskil
+  mernis_code: 1173
+  alpha_2_code: TR-23
+  active: true
+-
+  name: Elazığ Merkez
+  mernis_code: 1298
+  alpha_2_code: TR-23
+  active: true
+-
+  name: Karakoçan
+  mernis_code: 1438
+  alpha_2_code: TR-23
+  active: true
+-
+  name: Keban
+  mernis_code: 1455
+  alpha_2_code: TR-23
+  active: true
+-
+  name: Maden
+  mernis_code: 1506
+  alpha_2_code: TR-23
+  active: true
+-
+  name: Palu
+  mernis_code: 1566
+  alpha_2_code: TR-23
+  active: true
+-
+  name: Sivrice
+  mernis_code: 1631
+  alpha_2_code: TR-23
+  active: true
+-
+  name: Arıcak
+  mernis_code: 1762
+  alpha_2_code: TR-23
+  active: true
+-
+  name: Kovancılar
+  mernis_code: 1820
+  alpha_2_code: TR-23
+  active: true
+-
+  name: Alacakaya
+  mernis_code: 1873
+  alpha_2_code: TR-23
+  active: true
+-
+  name: Çayırlı
+  mernis_code: 1243
+  alpha_2_code: TR-24
+  active: true
+-
+  name: Erzincan Merkez
+  mernis_code: 1318
+  alpha_2_code: TR-24
+  active: true
+-
+  name: İliç
+  mernis_code: 1406
+  alpha_2_code: TR-24
+  active: true
+-
+  name: Kemah
+  mernis_code: 1459
+  alpha_2_code: TR-24
+  active: true
+-
+  name: Kemaliye
+  mernis_code: 1460
+  alpha_2_code: TR-24
+  active: true
+-
+  name: Refahiye
+  mernis_code: 1583
+  alpha_2_code: TR-24
+  active: true
+-
+  name: Tercan
+  mernis_code: 1675
+  alpha_2_code: TR-24
+  active: true
+-
+  name: Üzümlü
+  mernis_code: 1853
+  alpha_2_code: TR-24
+  active: true
+-
+  name: Otlukbeli
+  mernis_code: 1977
+  alpha_2_code: TR-24
+  active: true
+-
+  name: Aşkale
+  mernis_code: 1153
+  alpha_2_code: TR-25
+  active: true
+-
+  name: Çat
+  mernis_code: 1235
+  alpha_2_code: TR-25
+  active: true
+-
+  name: Erzurum Merkez
+  mernis_code: 1319
+  alpha_2_code: TR-25
+  active: 0
+-
+  name: Hınıs
+  mernis_code: 1392
+  alpha_2_code: TR-25
+  active: true
+-
+  name: Horasan
+  mernis_code: 1396
+  alpha_2_code: TR-25
+  active: true
+-
+  name: İspir
+  mernis_code: 1416
+  alpha_2_code: TR-25
+  active: true
+-
+  name: Karayazı
+  mernis_code: 1444
+  alpha_2_code: TR-25
+  active: true
+-
+  name: Narman
+  mernis_code: 1540
+  alpha_2_code: TR-25
+  active: true
+-
+  name: Oltu
+  mernis_code: 1550
+  alpha_2_code: TR-25
+  active: true
+-
+  name: Olur
+  mernis_code: 1551
+  alpha_2_code: TR-25
+  active: true
+-
+  name: Pasinler
+  mernis_code: 1567
+  alpha_2_code: TR-25
+  active: true
+-
+  name: Şenkaya
+  mernis_code: 1657
+  alpha_2_code: TR-25
+  active: true
+-
+  name: Tekman
+  mernis_code: 1674
+  alpha_2_code: TR-25
+  active: true
+-
+  name: Tortum
+  mernis_code: 1683
+  alpha_2_code: TR-25
+  active: true
+-
+  name: Karaçoban
+  mernis_code: 1812
+  alpha_2_code: TR-25
+  active: true
+-
+  name: Uzundere
+  mernis_code: 1851
+  alpha_2_code: TR-25
+  active: true
+-
+  name: Pazaryolu
+  mernis_code: 1865
+  alpha_2_code: TR-25
+  active: true
+-
+  name: Aziziye
+  mernis_code: 1945
+  alpha_2_code: TR-25
+  active: true
+-
+  name: Köprüköy
+  mernis_code: 1967
+  alpha_2_code: TR-25
+  active: true
+-
+  name: Palandöken
+  mernis_code: 2044
+  alpha_2_code: TR-25
+  active: true
+-
+  name: Yakutiye
+  mernis_code: 2045
+  alpha_2_code: TR-25
+  active: true
+-
+  name: Çifteler
+  mernis_code: 1255
+  alpha_2_code: TR-26
+  active: true
+-
+  name: Eskişehir Merkez
+  mernis_code: 1322
+  alpha_2_code: TR-26
+  active: 0
+-
+  name: Mahmudiye
+  mernis_code: 1508
+  alpha_2_code: TR-26
+  active: true
+-
+  name: Mihalıççık
+  mernis_code: 1527
+  alpha_2_code: TR-26
+  active: true
+-
+  name: Sarıcakaya
+  mernis_code: 1599
+  alpha_2_code: TR-26
+  active: true
+-
+  name: Seyitgazi
+  mernis_code: 1618
+  alpha_2_code: TR-26
+  active: true
+-
+  name: Sivrihisar
+  mernis_code: 1632
+  alpha_2_code: TR-26
+  active: true
+-
+  name: Alpu
+  mernis_code: 1759
+  alpha_2_code: TR-26
+  active: true
+-
+  name: Beylikova
+  mernis_code: 1777
+  alpha_2_code: TR-26
+  active: true
+-
+  name: İnönü
+  mernis_code: 1808
+  alpha_2_code: TR-26
+  active: true
+-
+  name: Günyüzü
+  mernis_code: 1934
+  alpha_2_code: TR-26
+  active: true
+-
+  name: Han
+  mernis_code: 1939
+  alpha_2_code: TR-26
+  active: true
+-
+  name: Mihalgazi
+  mernis_code: 1973
+  alpha_2_code: TR-26
+  active: true
+-
+  name: Odunpazarı
+  mernis_code: 2046
+  alpha_2_code: TR-26
+  active: true
+-
+  name: Tepebaşı
+  mernis_code: 2047
+  alpha_2_code: TR-26
+  active: true
+-
+  name: Araban
+  mernis_code: 1139
+  alpha_2_code: TR-27
+  active: true
+-
+  name: İslahiye
+  mernis_code: 1415
+  alpha_2_code: TR-27
+  active: true
+-
+  name: Nizip
+  mernis_code: 1546
+  alpha_2_code: TR-27
+  active: true
+-
+  name: Oğuzeli
+  mernis_code: 1549
+  alpha_2_code: TR-27
+  active: true
+-
+  name: Yavuzeli
+  mernis_code: 1720
+  alpha_2_code: TR-27
+  active: true
+-
+  name: Şahinbey
+  mernis_code: 1841
+  alpha_2_code: TR-27
+  active: true
+-
+  name: Şehitkamil
+  mernis_code: 1844
+  alpha_2_code: TR-27
+  active: true
+-
+  name: Karkamış
+  mernis_code: 1956
+  alpha_2_code: TR-27
+  active: true
+-
+  name: Nurdağı
+  mernis_code: 1974
+  alpha_2_code: TR-27
+  active: true
+-
+  name: Alucra
+  mernis_code: 1133
+  alpha_2_code: TR-28
+  active: true
+-
+  name: Bulancak
+  mernis_code: 1212
+  alpha_2_code: TR-28
+  active: true
+-
+  name: Dereli
+  mernis_code: 1272
+  alpha_2_code: TR-28
+  active: true
+-
+  name: Espiye
+  mernis_code: 1320
+  alpha_2_code: TR-28
+  active: true
+-
+  name: Eynesil
+  mernis_code: 1324
+  alpha_2_code: TR-28
+  active: true
+-
+  name: Giresun Merkez
+  mernis_code: 1352
+  alpha_2_code: TR-28
+  active: true
+-
+  name: Görele
+  mernis_code: 1361
+  alpha_2_code: TR-28
+  active: true
+-
+  name: Keşap
+  mernis_code: 1465
+  alpha_2_code: TR-28
+  active: true
+-
+  name: Şebinkarahisar
+  mernis_code: 1654
+  alpha_2_code: TR-28
+  active: true
+-
+  name: Tirebolu
+  mernis_code: 1678
+  alpha_2_code: TR-28
+  active: true
+-
+  name: Piraziz
+  mernis_code: 1837
+  alpha_2_code: TR-28
+  active: true
+-
+  name: Yağlıdere
+  mernis_code: 1854
+  alpha_2_code: TR-28
+  active: true
+-
+  name: Çamoluk
+  mernis_code: 1893
+  alpha_2_code: TR-28
+  active: true
+-
+  name: Çanakçı
+  mernis_code: 1894
+  alpha_2_code: TR-28
+  active: true
+-
+  name: Doğankent
+  mernis_code: 1912
+  alpha_2_code: TR-28
+  active: true
+-
+  name: Güce
+  mernis_code: 1930
+  alpha_2_code: TR-28
+  active: true
+-
+  name: Gümüşhane Merkez
+  mernis_code: 1369
+  alpha_2_code: TR-29
+  active: true
+-
+  name: Kelkit
+  mernis_code: 1458
+  alpha_2_code: TR-29
+  active: true
+-
+  name: Şiran
+  mernis_code: 1660
+  alpha_2_code: TR-29
+  active: true
+-
+  name: Torul
+  mernis_code: 1684
+  alpha_2_code: TR-29
+  active: true
+-
+  name: Köse
+  mernis_code: 1822
+  alpha_2_code: TR-29
+  active: true
+-
+  name: Kürtün
+  mernis_code: 1971
+  alpha_2_code: TR-29
+  active: true
+-
+  name: Çukurca
+  mernis_code: 1261
+  alpha_2_code: TR-30
+  active: true
+-
+  name: Hakkari Merkez
+  mernis_code: 1377
+  alpha_2_code: TR-30
+  active: true
+-
+  name: Şemdinli
+  mernis_code: 1656
+  alpha_2_code: TR-30
+  active: true
+-
+  name: Yüksekova
+  mernis_code: 1737
+  alpha_2_code: TR-30
+  active: true
+-
+  name: Altınözü
+  mernis_code: 1131
+  alpha_2_code: TR-31
+  active: true
+-
+  name: Dörtyol
+  mernis_code: 1289
+  alpha_2_code: TR-31
+  active: true
+-
+  name: Hassa
+  mernis_code: 1382
+  alpha_2_code: TR-31
+  active: true
+-
+  name: Hatay Merkez
+  mernis_code: 1383
+  alpha_2_code: TR-31
+  active: 0
+-
+  name: İskenderun
+  mernis_code: 1413
+  alpha_2_code: TR-31
+  active: true
+-
+  name: Kırıkhan
+  mernis_code: 1468
+  alpha_2_code: TR-31
+  active: true
+-
+  name: Reyhanlı
+  mernis_code: 1585
+  alpha_2_code: TR-31
+  active: true
+-
+  name: Samandağ
+  mernis_code: 1591
+  alpha_2_code: TR-31
+  active: true
+-
+  name: Yayladağı
+  mernis_code: 1721
+  alpha_2_code: TR-31
+  active: true
+-
+  name: Erzin
+  mernis_code: 1792
+  alpha_2_code: TR-31
+  active: true
+-
+  name: Belen
+  mernis_code: 1887
+  alpha_2_code: TR-31
+  active: true
+-
+  name: Kumlu
+  mernis_code: 1970
+  alpha_2_code: TR-31
+  active: true
+-
+  name: Antakya
+  mernis_code: 2080
+  alpha_2_code: TR-31
+  active: true
+-
+  name: Arsuz
+  mernis_code: 2081
+  alpha_2_code: TR-31
+  active: true
+-
+  name: Defne
+  mernis_code: 2082
+  alpha_2_code: TR-31
+  active: true
+-
+  name: Payas
+  mernis_code: 2083
+  alpha_2_code: TR-31
+  active: true
+-
+  name: Atabey
+  mernis_code: 1154
+  alpha_2_code: TR-32
+  active: true
+-
+  name: Eğirdir
+  mernis_code: 1297
+  alpha_2_code: TR-32
+  active: true
+-
+  name: Gelendost
+  mernis_code: 1341
+  alpha_2_code: TR-32
+  active: true
+-
+  name: Isparta Merkez
+  mernis_code: 1401
+  alpha_2_code: TR-32
+  active: true
+-
+  name: Keçiborlu
+  mernis_code: 1456
+  alpha_2_code: TR-32
+  active: true
+-
+  name: Senirkent
+  mernis_code: 1615
+  alpha_2_code: TR-32
+  active: true
+-
+  name: Sütçüler
+  mernis_code: 1648
+  alpha_2_code: TR-32
+  active: true
+-
+  name: Şarkikaraağaç
+  mernis_code: 1651
+  alpha_2_code: TR-32
+  active: true
+-
+  name: Uluborlu
+  mernis_code: 1699
+  alpha_2_code: TR-32
+  active: true
+-
+  name: Yalvaç
+  mernis_code: 1717
+  alpha_2_code: TR-32
+  active: true
+-
+  name: Aksu
+  mernis_code: 1755
+  alpha_2_code: TR-32
+  active: true
+-
+  name: Gönen
+  mernis_code: 1929
+  alpha_2_code: TR-32
+  active: true
+-
+  name: Yenişarbademli
+  mernis_code: 2001
+  alpha_2_code: TR-32
+  active: true
+-
+  name: Anamur
+  mernis_code: 1135
+  alpha_2_code: TR-33
+  active: true
+-
+  name: Erdemli
+  mernis_code: 1311
+  alpha_2_code: TR-33
+  active: true
+-
+  name: Gülnar
+  mernis_code: 1366
+  alpha_2_code: TR-33
+  active: true
+-
+  name: Mersin Merkez
+  mernis_code: 1402
+  alpha_2_code: TR-33
+  active: 0
+-
+  name: Mut
+  mernis_code: 1536
+  alpha_2_code: TR-33
+  active: true
+-
+  name: Silifke
+  mernis_code: 1621
+  alpha_2_code: TR-33
+  active: true
+-
+  name: Tarsus
+  mernis_code: 1665
+  alpha_2_code: TR-33
+  active: true
+-
+  name: Aydıncık
+  mernis_code: 1766
+  alpha_2_code: TR-33
+  active: true
+-
+  name: Bozyazı
+  mernis_code: 1779
+  alpha_2_code: TR-33
+  active: true
+-
+  name: Çamlıyayla
+  mernis_code: 1892
+  alpha_2_code: TR-33
+  active: true
+-
+  name: Akdeniz
+  mernis_code: 2064
+  alpha_2_code: TR-33
+  active: true
+-
+  name: Mezitli
+  mernis_code: 2065
+  alpha_2_code: TR-33
+  active: true
+-
+  name: Toroslar
+  mernis_code: 2066
+  alpha_2_code: TR-33
+  active: true
+-
+  name: Yenişehir
+  mernis_code: 2067
+  alpha_2_code: TR-33
+  active: true
+-
+  name: Adalar
+  mernis_code: 1103
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Bakırköy
+  mernis_code: 1166
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Beşiktaş
+  mernis_code: 1183
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Beykoz
+  mernis_code: 1185
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Beyoğlu
+  mernis_code: 1186
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Çatalca
+  mernis_code: 1237
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Eminönü
+  mernis_code: 1305
+  alpha_2_code: TR-34
+  active: 0
+-
+  name: Eyüp
+  mernis_code: 1325
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Fatih
+  mernis_code: 1327
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Gaziosmanpaşa
+  mernis_code: 1336
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Kadıköy
+  mernis_code: 1421
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Kartal
+  mernis_code: 1449
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Sarıyer
+  mernis_code: 1604
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Silivri
+  mernis_code: 1622
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Şile
+  mernis_code: 1659
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Şişli
+  mernis_code: 1663
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Üsküdar
+  mernis_code: 1708
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Zeytinburnu
+  mernis_code: 1739
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Büyükçekmece
+  mernis_code: 1782
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Kağıthane
+  mernis_code: 1810
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Küçükçekmece
+  mernis_code: 1823
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Pendik
+  mernis_code: 1835
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Ümraniye
+  mernis_code: 1852
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Bayrampaşa
+  mernis_code: 1886
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Avcılar
+  mernis_code: 2003
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Bağcılar
+  mernis_code: 2004
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Bahçelievler
+  mernis_code: 2005
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Güngören
+  mernis_code: 2010
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Maltepe
+  mernis_code: 2012
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Sultanbeyli
+  mernis_code: 2014
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Tuzla
+  mernis_code: 2015
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Esenler
+  mernis_code: 2016
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Arnavutköy
+  mernis_code: 2048
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Ataşehir
+  mernis_code: 2049
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Başakşehir
+  mernis_code: 2050
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Beylikdüzü
+  mernis_code: 2051
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Çekmeköy
+  mernis_code: 2052
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Esenyurt
+  mernis_code: 2053
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Sancaktepe
+  mernis_code: 2054
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Sultangazi
+  mernis_code: 2055
+  alpha_2_code: TR-34
+  active: true
+-
+  name: Aliağa
+  mernis_code: 1128
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Bayındır
+  mernis_code: 1178
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Bergama
+  mernis_code: 1181
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Bornova
+  mernis_code: 1203
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Çeşme
+  mernis_code: 1251
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Dikili
+  mernis_code: 1280
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Foça
+  mernis_code: 1334
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Karaburun
+  mernis_code: 1432
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Karşıyaka
+  mernis_code: 1448
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Kemalpaşa
+  mernis_code: 1461
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Kınık
+  mernis_code: 1467
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Kiraz
+  mernis_code: 1477
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Menemen
+  mernis_code: 1521
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Ödemiş
+  mernis_code: 1563
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Seferihisar
+  mernis_code: 1611
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Selçuk
+  mernis_code: 1612
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Tire
+  mernis_code: 1677
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Torbalı
+  mernis_code: 1682
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Urla
+  mernis_code: 1703
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Beydağ
+  mernis_code: 1776
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Buca
+  mernis_code: 1780
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Konak
+  mernis_code: 1819
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Menderes
+  mernis_code: 1826
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Balçova
+  mernis_code: 2006
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Çiğli
+  mernis_code: 2007
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Gaziemir
+  mernis_code: 2009
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Narlıdere
+  mernis_code: 2013
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Güzelbahçe
+  mernis_code: 2018
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Bayraklı
+  mernis_code: 2056
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Karabağlar
+  mernis_code: 2057
+  alpha_2_code: TR-35
+  active: true
+-
+  name: Arpaçay
+  mernis_code: 1149
+  alpha_2_code: TR-36
+  active: true
+-
+  name: Digor
+  mernis_code: 1279
+  alpha_2_code: TR-36
+  active: true
+-
+  name: Kağızman
+  mernis_code: 1424
+  alpha_2_code: TR-36
+  active: true
+-
+  name: Kars Merkez
+  mernis_code: 1447
+  alpha_2_code: TR-36
+  active: true
+-
+  name: Sarıkamış
+  mernis_code: 1601
+  alpha_2_code: TR-36
+  active: true
+-
+  name: Selim
+  mernis_code: 1614
+  alpha_2_code: TR-36
+  active: true
+-
+  name: Susuz
+  mernis_code: 1645
+  alpha_2_code: TR-36
+  active: true
+-
+  name: Akyaka
+  mernis_code: 1756
+  alpha_2_code: TR-36
+  active: true
+-
+  name: Abana
+  mernis_code: 1101
+  alpha_2_code: TR-37
+  active: true
+-
+  name: Araç
+  mernis_code: 1140
+  alpha_2_code: TR-37
+  active: true
+-
+  name: Azdavay
+  mernis_code: 1162
+  alpha_2_code: TR-37
+  active: true
+-
+  name: Bozkurt
+  mernis_code: 1208
+  alpha_2_code: TR-37
+  active: true
+-
+  name: Cide
+  mernis_code: 1221
+  alpha_2_code: TR-37
+  active: true
+-
+  name: Çatalzeytin
+  mernis_code: 1238
+  alpha_2_code: TR-37
+  active: true
+-
+  name: Daday
+  mernis_code: 1264
+  alpha_2_code: TR-37
+  active: true
+-
+  name: Devrekani
+  mernis_code: 1277
+  alpha_2_code: TR-37
+  active: true
+-
+  name: İnebolu
+  mernis_code: 1410
+  alpha_2_code: TR-37
+  active: true
+-
+  name: Kastamonu Merkez
+  mernis_code: 1450
+  alpha_2_code: TR-37
+  active: true
+-
+  name: Küre
+  mernis_code: 1499
+  alpha_2_code: TR-37
+  active: true
+-
+  name: Taşköprü
+  mernis_code: 1666
+  alpha_2_code: TR-37
+  active: true
+-
+  name: Tosya
+  mernis_code: 1685
+  alpha_2_code: TR-37
+  active: true
+-
+  name: İhsangazi
+  mernis_code: 1805
+  alpha_2_code: TR-37
+  active: true
+-
+  name: Pınarbaşı
+  mernis_code: 1836
+  alpha_2_code: TR-37
+  active: true
+-
+  name: Şenpazar
+  mernis_code: 1845
+  alpha_2_code: TR-37
+  active: true
+-
+  name: Ağlı
+  mernis_code: 1867
+  alpha_2_code: TR-37
+  active: true
+-
+  name: Doğanyurt
+  mernis_code: 1915
+  alpha_2_code: TR-37
+  active: true
+-
+  name: Hanönü
+  mernis_code: 1940
+  alpha_2_code: TR-37
+  active: true
+-
+  name: Seydiler
+  mernis_code: 1984
+  alpha_2_code: TR-37
+  active: true
+-
+  name: Bünyan
+  mernis_code: 1218
+  alpha_2_code: TR-38
+  active: true
+-
+  name: Develi
+  mernis_code: 1275
+  alpha_2_code: TR-38
+  active: true
+-
+  name: Felahiye
+  mernis_code: 1330
+  alpha_2_code: TR-38
+  active: true
+-
+  name: İncesu
+  mernis_code: 1409
+  alpha_2_code: TR-38
+  active: true
+-
+  name: Pınarbaşı
+  mernis_code: 1576
+  alpha_2_code: TR-38
+  active: true
+-
+  name: Sarıoğlan
+  mernis_code: 1603
+  alpha_2_code: TR-38
+  active: true
+-
+  name: Sarız
+  mernis_code: 1605
+  alpha_2_code: TR-38
+  active: true
+-
+  name: Tomarza
+  mernis_code: 1680
+  alpha_2_code: TR-38
+  active: true
+-
+  name: Yahyalı
+  mernis_code: 1715
+  alpha_2_code: TR-38
+  active: true
+-
+  name: Yeşilhisar
+  mernis_code: 1727
+  alpha_2_code: TR-38
+  active: true
+-
+  name: Akkışla
+  mernis_code: 1752
+  alpha_2_code: TR-38
+  active: true
+-
+  name: Talas
+  mernis_code: 1846
+  alpha_2_code: TR-38
+  active: true
+-
+  name: Kocasinan
+  mernis_code: 1863
+  alpha_2_code: TR-38
+  active: true
+-
+  name: Melikgazi
+  mernis_code: 1864
+  alpha_2_code: TR-38
+  active: true
+-
+  name: Hacılar
+  mernis_code: 1936
+  alpha_2_code: TR-38
+  active: true
+-
+  name: Özvatan
+  mernis_code: 1978
+  alpha_2_code: TR-38
+  active: true
+-
+  name: Babaeski
+  mernis_code: 1163
+  alpha_2_code: TR-39
+  active: true
+-
+  name: Demirköy
+  mernis_code: 1270
+  alpha_2_code: TR-39
+  active: true
+-
+  name: Kırklareli Merkez
+  mernis_code: 1471
+  alpha_2_code: TR-39
+  active: true
+-
+  name: Kofçaz
+  mernis_code: 1480
+  alpha_2_code: TR-39
+  active: true
+-
+  name: Lüleburgaz
+  mernis_code: 1505
+  alpha_2_code: TR-39
+  active: true
+-
+  name: Pehlivanköy
+  mernis_code: 1572
+  alpha_2_code: TR-39
+  active: true
+-
+  name: Pınarhisar
+  mernis_code: 1577
+  alpha_2_code: TR-39
+  active: true
+-
+  name: Vize
+  mernis_code: 1714
+  alpha_2_code: TR-39
+  active: true
+-
+  name: Çiçekdağı
+  mernis_code: 1254
+  alpha_2_code: TR-40
+  active: true
+-
+  name: Kaman
+  mernis_code: 1429
+  alpha_2_code: TR-40
+  active: true
+-
+  name: Kırşehir Merkez
+  mernis_code: 1472
+  alpha_2_code: TR-40
+  active: true
+-
+  name: Mucur
+  mernis_code: 1529
+  alpha_2_code: TR-40
+  active: true
+-
+  name: Akpınar
+  mernis_code: 1754
+  alpha_2_code: TR-40
+  active: true
+-
+  name: Akçakent
+  mernis_code: 1869
+  alpha_2_code: TR-40
+  active: true
+-
+  name: Boztepe
+  mernis_code: 1890
+  alpha_2_code: TR-40
+  active: true
+-
+  name: Gebze
+  mernis_code: 1338
+  alpha_2_code: TR-41
+  active: true
+-
+  name: Gölcük
+  mernis_code: 1355
+  alpha_2_code: TR-41
+  active: true
+-
+  name: Kandıra
+  mernis_code: 1430
+  alpha_2_code: TR-41
+  active: true
+-
+  name: Karamürsel
+  mernis_code: 1440
+  alpha_2_code: TR-41
+  active: true
+-
+  name: Kocaeli Merkez
+  mernis_code: 1478
+  alpha_2_code: TR-41
+  active: 0
+-
+  name: Körfez
+  mernis_code: 1821
+  alpha_2_code: TR-41
+  active: true
+-
+  name: Derince
+  mernis_code: 2030
+  alpha_2_code: TR-41
+  active: true
+-
+  name: Başiskele
+  mernis_code: 2058
+  alpha_2_code: TR-41
+  active: true
+-
+  name: Çayırova
+  mernis_code: 2059
+  alpha_2_code: TR-41
+  active: true
+-
+  name: Darıca
+  mernis_code: 2060
+  alpha_2_code: TR-41
+  active: true
+-
+  name: Dilovası
+  mernis_code: 2061
+  alpha_2_code: TR-41
+  active: true
+-
+  name: İzmit
+  mernis_code: 2062
+  alpha_2_code: TR-41
+  active: true
+-
+  name: Kartepe
+  mernis_code: 2063
+  alpha_2_code: TR-41
+  active: true
+-
+  name: Akşehir
+  mernis_code: 1122
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Beyşehir
+  mernis_code: 1188
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Bozkır
+  mernis_code: 1207
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Cihanbeyli
+  mernis_code: 1222
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Çumra
+  mernis_code: 1262
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Doğanhisar
+  mernis_code: 1285
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Ereğli
+  mernis_code: 1312
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Hadim
+  mernis_code: 1375
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Ilgın
+  mernis_code: 1400
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Kadınhanı
+  mernis_code: 1422
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Karapınar
+  mernis_code: 1441
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Kulu
+  mernis_code: 1491
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Sarayönü
+  mernis_code: 1598
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Seydişehir
+  mernis_code: 1617
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Yunak
+  mernis_code: 1735
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Akören
+  mernis_code: 1753
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Altınekin
+  mernis_code: 1760
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Derebucak
+  mernis_code: 1789
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Hüyük
+  mernis_code: 1804
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Karatay
+  mernis_code: 1814
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Meram
+  mernis_code: 1827
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Selçuklu
+  mernis_code: 1839
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Taşkent
+  mernis_code: 1848
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Ahırlı
+  mernis_code: 1868
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Çeltik
+  mernis_code: 1902
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Derbent
+  mernis_code: 1907
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Emirgazi
+  mernis_code: 1920
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Güneysınır
+  mernis_code: 1933
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Halkapınar
+  mernis_code: 1937
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Tuzlukçu
+  mernis_code: 1990
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Yalıhüyük
+  mernis_code: 1994
+  alpha_2_code: TR-42
+  active: true
+-
+  name: Altıntaş
+  mernis_code: 1132
+  alpha_2_code: TR-43
+  active: true
+-
+  name: Domaniç
+  mernis_code: 1288
+  alpha_2_code: TR-43
+  active: true
+-
+  name: Emet
+  mernis_code: 1304
+  alpha_2_code: TR-43
+  active: true
+-
+  name: Gediz
+  mernis_code: 1339
+  alpha_2_code: TR-43
+  active: true
+-
+  name: Kütahya Merkez
+  mernis_code: 1500
+  alpha_2_code: TR-43
+  active: true
+-
+  name: Simav
+  mernis_code: 1625
+  alpha_2_code: TR-43
+  active: true
+-
+  name: Tavşanlı
+  mernis_code: 1671
+  alpha_2_code: TR-43
+  active: true
+-
+  name: Aslanapa
+  mernis_code: 1764
+  alpha_2_code: TR-43
+  active: true
+-
+  name: Dumlupınar
+  mernis_code: 1790
+  alpha_2_code: TR-43
+  active: true
+-
+  name: Hisarcık
+  mernis_code: 1802
+  alpha_2_code: TR-43
+  active: true
+-
+  name: Şaphane
+  mernis_code: 1843
+  alpha_2_code: TR-43
+  active: true
+-
+  name: Çavdarhisar
+  mernis_code: 1898
+  alpha_2_code: TR-43
+  active: true
+-
+  name: Pazarlar
+  mernis_code: 1979
+  alpha_2_code: TR-43
+  active: true
+-
+  name: Akçadağ
+  mernis_code: 1114
+  alpha_2_code: TR-44
+  active: true
+-
+  name: Arapgir
+  mernis_code: 1143
+  alpha_2_code: TR-44
+  active: true
+-
+  name: Arguvan
+  mernis_code: 1148
+  alpha_2_code: TR-44
+  active: true
+-
+  name: Darende
+  mernis_code: 1265
+  alpha_2_code: TR-44
+  active: true
+-
+  name: Doğanşehir
+  mernis_code: 1286
+  alpha_2_code: TR-44
+  active: true
+-
+  name: Hekimhan
+  mernis_code: 1390
+  alpha_2_code: TR-44
+  active: true
+-
+  name: Malatya Merkez
+  mernis_code: 1509
+  alpha_2_code: TR-44
+  active: 0
+-
+  name: Pütürge
+  mernis_code: 1582
+  alpha_2_code: TR-44
+  active: true
+-
+  name: Yeşilyurt
+  mernis_code: 1729
+  alpha_2_code: TR-44
+  active: true
+-
+  name: Battalgazi
+  mernis_code: 1772
+  alpha_2_code: TR-44
+  active: true
+-
+  name: Doğanyol
+  mernis_code: 1914
+  alpha_2_code: TR-44
+  active: true
+-
+  name: Kale
+  mernis_code: 1953
+  alpha_2_code: TR-44
+  active: true
+-
+  name: Kuluncak
+  mernis_code: 1969
+  alpha_2_code: TR-44
+  active: true
+-
+  name: Yazıhan
+  mernis_code: 1995
+  alpha_2_code: TR-44
+  active: true
+-
+  name: Akhisar
+  mernis_code: 1118
+  alpha_2_code: TR-45
+  active: true
+-
+  name: Alaşehir
+  mernis_code: 1127
+  alpha_2_code: TR-45
+  active: true
+-
+  name: Demirci
+  mernis_code: 1269
+  alpha_2_code: TR-45
+  active: true
+-
+  name: Gördes
+  mernis_code: 1362
+  alpha_2_code: TR-45
+  active: true
+-
+  name: Kırkağaç
+  mernis_code: 1470
+  alpha_2_code: TR-45
+  active: true
+-
+  name: Kula
+  mernis_code: 1489
+  alpha_2_code: TR-45
+  active: true
+-
+  name: Manisa Merkez
+  mernis_code: 1513
+  alpha_2_code: TR-45
+  active: 0
+-
+  name: Salihli
+  mernis_code: 1590
+  alpha_2_code: TR-45
+  active: true
+-
+  name: Sarıgöl
+  mernis_code: 1600
+  alpha_2_code: TR-45
+  active: true
+-
+  name: Saruhanlı
+  mernis_code: 1606
+  alpha_2_code: TR-45
+  active: true
+-
+  name: Selendi
+  mernis_code: 1613
+  alpha_2_code: TR-45
+  active: true
+-
+  name: Soma
+  mernis_code: 1634
+  alpha_2_code: TR-45
+  active: true
+-
+  name: Turgutlu
+  mernis_code: 1689
+  alpha_2_code: TR-45
+  active: true
+-
+  name: Ahmetli
+  mernis_code: 1751
+  alpha_2_code: TR-45
+  active: true
+-
+  name: Gölmarmara
+  mernis_code: 1793
+  alpha_2_code: TR-45
+  active: true
+-
+  name: Köprübaşı
+  mernis_code: 1965
+  alpha_2_code: TR-45
+  active: true
+-
+  name: Şehzadeler
+  mernis_code: 2086
+  alpha_2_code: TR-45
+  active: true
+-
+  name: Yunusemre
+  mernis_code: 2087
+  alpha_2_code: TR-45
+  active: true
+-
+  name: Afşin
+  mernis_code: 1107
+  alpha_2_code: TR-46
+  active: true
+-
+  name: Andırın
+  mernis_code: 1136
+  alpha_2_code: TR-46
+  active: true
+-
+  name: Elbistan
+  mernis_code: 1299
+  alpha_2_code: TR-46
+  active: true
+-
+  name: Göksun
+  mernis_code: 1353
+  alpha_2_code: TR-46
+  active: true
+-
+  name: Kahramanmaraş Merkez
+  mernis_code: 1515
+  alpha_2_code: TR-46
+  active: 0
+-
+  name: Pazarcık
+  mernis_code: 1570
+  alpha_2_code: TR-46
+  active: true
+-
+  name: Türkoğlu
+  mernis_code: 1694
+  alpha_2_code: TR-46
+  active: true
+-
+  name: Çağlayancerit
+  mernis_code: 1785
+  alpha_2_code: TR-46
+  active: true
+-
+  name: Ekinözü
+  mernis_code: 1919
+  alpha_2_code: TR-46
+  active: true
+-
+  name: Nurhak
+  mernis_code: 1975
+  alpha_2_code: TR-46
+  active: true
+-
+  name: Dulkadiroğlu
+  mernis_code: 2084
+  alpha_2_code: TR-46
+  active: true
+-
+  name: Onikişubat
+  mernis_code: 2085
+  alpha_2_code: TR-46
+  active: true
+-
+  name: Derik
+  mernis_code: 1273
+  alpha_2_code: TR-47
+  active: true
+-
+  name: Kızıltepe
+  mernis_code: 1474
+  alpha_2_code: TR-47
+  active: true
+-
+  name: Mardin Merkez
+  mernis_code: 1516
+  alpha_2_code: TR-47
+  active: 0
+-
+  name: Mazıdağı
+  mernis_code: 1519
+  alpha_2_code: TR-47
+  active: true
+-
+  name: Midyat
+  mernis_code: 1526
+  alpha_2_code: TR-47
+  active: true
+-
+  name: Nusaybin
+  mernis_code: 1547
+  alpha_2_code: TR-47
+  active: true
+-
+  name: Ömerli
+  mernis_code: 1564
+  alpha_2_code: TR-47
+  active: true
+-
+  name: Savur
+  mernis_code: 1609
+  alpha_2_code: TR-47
+  active: true
+-
+  name: Dargeçit
+  mernis_code: 1787
+  alpha_2_code: TR-47
+  active: true
+-
+  name: Yeşilli
+  mernis_code: 2002
+  alpha_2_code: TR-47
+  active: true
+-
+  name: Artuklu
+  mernis_code: 2088
+  alpha_2_code: TR-47
+  active: true
+-
+  name: Bodrum
+  mernis_code: 1197
+  alpha_2_code: TR-48
+  active: true
+-
+  name: Datça
+  mernis_code: 1266
+  alpha_2_code: TR-48
+  active: true
+-
+  name: Fethiye
+  mernis_code: 1331
+  alpha_2_code: TR-48
+  active: true
+-
+  name: Köyceğiz
+  mernis_code: 1488
+  alpha_2_code: TR-48
+  active: true
+-
+  name: Marmaris
+  mernis_code: 1517
+  alpha_2_code: TR-48
+  active: true
+-
+  name: Milas
+  mernis_code: 1528
+  alpha_2_code: TR-48
+  active: true
+-
+  name: Muğla Merkez
+  mernis_code: 1532
+  alpha_2_code: TR-48
+  active: 0
+-
+  name: Ula
+  mernis_code: 1695
+  alpha_2_code: TR-48
+  active: true
+-
+  name: Yatağan
+  mernis_code: 1719
+  alpha_2_code: TR-48
+  active: true
+-
+  name: Dalaman
+  mernis_code: 1742
+  alpha_2_code: TR-48
+  active: true
+-
+  name: Ortaca
+  mernis_code: 1831
+  alpha_2_code: TR-48
+  active: true
+-
+  name: Kavaklıdere
+  mernis_code: 1958
+  alpha_2_code: TR-48
+  active: true
+-
+  name: Menteşe
+  mernis_code: 2089
+  alpha_2_code: TR-48
+  active: true
+-
+  name: Seydikemer
+  mernis_code: 2090
+  alpha_2_code: TR-48
+  active: true
+-
+  name: Bulanık
+  mernis_code: 1213
+  alpha_2_code: TR-49
+  active: true
+-
+  name: Malazgirt
+  mernis_code: 1510
+  alpha_2_code: TR-49
+  active: true
+-
+  name: Muş Merkez
+  mernis_code: 1534
+  alpha_2_code: TR-49
+  active: true
+-
+  name: Varto
+  mernis_code: 1711
+  alpha_2_code: TR-49
+  active: true
+-
+  name: Hasköy
+  mernis_code: 1801
+  alpha_2_code: TR-49
+  active: true
+-
+  name: Korkut
+  mernis_code: 1964
+  alpha_2_code: TR-49
+  active: true
+-
+  name: Avanos
+  mernis_code: 1155
+  alpha_2_code: TR-50
+  active: true
+-
+  name: Derinkuyu
+  mernis_code: 1274
+  alpha_2_code: TR-50
+  active: true
+-
+  name: Gülşehir
+  mernis_code: 1367
+  alpha_2_code: TR-50
+  active: true
+-
+  name: Hacıbektaş
+  mernis_code: 1374
+  alpha_2_code: TR-50
+  active: true
+-
+  name: Kozaklı
+  mernis_code: 1485
+  alpha_2_code: TR-50
+  active: true
+-
+  name: Nevşehir Merkez
+  mernis_code: 1543
+  alpha_2_code: TR-50
+  active: true
+-
+  name: Ürgüp
+  mernis_code: 1707
+  alpha_2_code: TR-50
+  active: true
+-
+  name: Acıgöl
+  mernis_code: 1749
+  alpha_2_code: TR-50
+  active: true
+-
+  name: Bor
+  mernis_code: 1201
+  alpha_2_code: TR-51
+  active: true
+-
+  name: Çamardı
+  mernis_code: 1225
+  alpha_2_code: TR-51
+  active: true
+-
+  name: Niğde Merkez
+  mernis_code: 1544
+  alpha_2_code: TR-51
+  active: true
+-
+  name: Ulukışla
+  mernis_code: 1700
+  alpha_2_code: TR-51
+  active: true
+-
+  name: Altunhisar
+  mernis_code: 1876
+  alpha_2_code: TR-51
+  active: true
+-
+  name: Çiftlik
+  mernis_code: 1904
+  alpha_2_code: TR-51
+  active: true
+-
+  name: Akkuş
+  mernis_code: 1119
+  alpha_2_code: TR-52
+  active: true
+-
+  name: Aybastı
+  mernis_code: 1158
+  alpha_2_code: TR-52
+  active: true
+-
+  name: Fatsa
+  mernis_code: 1328
+  alpha_2_code: TR-52
+  active: true
+-
+  name: Gölköy
+  mernis_code: 1358
+  alpha_2_code: TR-52
+  active: true
+-
+  name: Korgan
+  mernis_code: 1482
+  alpha_2_code: TR-52
+  active: true
+-
+  name: Kumru
+  mernis_code: 1493
+  alpha_2_code: TR-52
+  active: true
+-
+  name: Mesudiye
+  mernis_code: 1525
+  alpha_2_code: TR-52
+  active: true
+-
+  name: Ordu Merkez
+  mernis_code: 1552
+  alpha_2_code: TR-52
+  active: 0
+-
+  name: Perşembe
+  mernis_code: 1573
+  alpha_2_code: TR-52
+  active: true
+-
+  name: Ulubey
+  mernis_code: 1696
+  alpha_2_code: TR-52
+  active: true
+-
+  name: Ünye
+  mernis_code: 1706
+  alpha_2_code: TR-52
+  active: true
+-
+  name: Gülyalı
+  mernis_code: 1795
+  alpha_2_code: TR-52
+  active: true
+-
+  name: Gürgentepe
+  mernis_code: 1797
+  alpha_2_code: TR-52
+  active: true
+-
+  name: Çamaş
+  mernis_code: 1891
+  alpha_2_code: TR-52
+  active: true
+-
+  name: Çatalpınar
+  mernis_code: 1897
+  alpha_2_code: TR-52
+  active: true
+-
+  name: Çaybaşı
+  mernis_code: 1900
+  alpha_2_code: TR-52
+  active: true
+-
+  name: İkizce
+  mernis_code: 1947
+  alpha_2_code: TR-52
+  active: true
+-
+  name: Kabadüz
+  mernis_code: 1950
+  alpha_2_code: TR-52
+  active: true
+-
+  name: Kabataş
+  mernis_code: 1951
+  alpha_2_code: TR-52
+  active: true
+-
+  name: Altınordu
+  mernis_code: 2103
+  alpha_2_code: TR-52
+  active: true
+-
+  name: Ardeşen
+  mernis_code: 1146
+  alpha_2_code: TR-53
+  active: true
+-
+  name: Çamlıhemşin
+  mernis_code: 1228
+  alpha_2_code: TR-53
+  active: true
+-
+  name: Çayeli
+  mernis_code: 1241
+  alpha_2_code: TR-53
+  active: true
+-
+  name: Fındıklı
+  mernis_code: 1332
+  alpha_2_code: TR-53
+  active: true
+-
+  name: İkizdere
+  mernis_code: 1405
+  alpha_2_code: TR-53
+  active: true
+-
+  name: Kalkandere
+  mernis_code: 1428
+  alpha_2_code: TR-53
+  active: true
+-
+  name: Pazar
+  mernis_code: 1569
+  alpha_2_code: TR-53
+  active: true
+-
+  name: Rize Merkez
+  mernis_code: 1586
+  alpha_2_code: TR-53
+  active: true
+-
+  name: Güneysu
+  mernis_code: 1796
+  alpha_2_code: TR-53
+  active: true
+-
+  name: Derepazarı
+  mernis_code: 1908
+  alpha_2_code: TR-53
+  active: true
+-
+  name: Hemşin
+  mernis_code: 1943
+  alpha_2_code: TR-53
+  active: true
+-
+  name: İyidere
+  mernis_code: 1949
+  alpha_2_code: TR-53
+  active: true
+-
+  name: Akyazı
+  mernis_code: 1123
+  alpha_2_code: TR-54
+  active: true
+-
+  name: Geyve
+  mernis_code: 1351
+  alpha_2_code: TR-54
+  active: true
+-
+  name: Hendek
+  mernis_code: 1391
+  alpha_2_code: TR-54
+  active: true
+-
+  name: Karasu
+  mernis_code: 1442
+  alpha_2_code: TR-54
+  active: true
+-
+  name: Kaynarca
+  mernis_code: 1453
+  alpha_2_code: TR-54
+  active: true
+-
+  name: Sakarya Merkez
+  mernis_code: 1589
+  alpha_2_code: TR-54
+  active: 0
+-
+  name: Sapanca
+  mernis_code: 1595
+  alpha_2_code: TR-54
+  active: true
+-
+  name: Kocaali
+  mernis_code: 1818
+  alpha_2_code: TR-54
+  active: true
+-
+  name: Pamukova
+  mernis_code: 1833
+  alpha_2_code: TR-54
+  active: true
+-
+  name: Taraklı
+  mernis_code: 1847
+  alpha_2_code: TR-54
+  active: true
+-
+  name: Ferizli
+  mernis_code: 1925
+  alpha_2_code: TR-54
+  active: true
+-
+  name: Karapürçek
+  mernis_code: 1955
+  alpha_2_code: TR-54
+  active: true
+-
+  name: Söğütlü
+  mernis_code: 1986
+  alpha_2_code: TR-54
+  active: true
+-
+  name: Adapazarı
+  mernis_code: 2068
+  alpha_2_code: TR-54
+  active: true
+-
+  name: Arifiye
+  mernis_code: 2069
+  alpha_2_code: TR-54
+  active: true
+-
+  name: Erenler
+  mernis_code: 2070
+  alpha_2_code: TR-54
+  active: true
+-
+  name: Serdivan
+  mernis_code: 2071
+  alpha_2_code: TR-54
+  active: true
+-
+  name: Alaçam
+  mernis_code: 1125
+  alpha_2_code: TR-55
+  active: true
+-
+  name: Bafra
+  mernis_code: 1164
+  alpha_2_code: TR-55
+  active: true
+-
+  name: Çarşamba
+  mernis_code: 1234
+  alpha_2_code: TR-55
+  active: true
+-
+  name: Havza
+  mernis_code: 1386
+  alpha_2_code: TR-55
+  active: true
+-
+  name: Kavak
+  mernis_code: 1452
+  alpha_2_code: TR-55
+  active: true
+-
+  name: Ladik
+  mernis_code: 1501
+  alpha_2_code: TR-55
+  active: true
+-
+  name: Samsun Merkez
+  mernis_code: 1593
+  alpha_2_code: TR-55
+  active: 0
+-
+  name: Terme
+  mernis_code: 1676
+  alpha_2_code: TR-55
+  active: true
+-
+  name: Vezirköprü
+  mernis_code: 1712
+  alpha_2_code: TR-55
+  active: true
+-
+  name: Asarcık
+  mernis_code: 1763
+  alpha_2_code: TR-55
+  active: true
+-
+  name: 19 Mayıs
+  mernis_code: 1830
+  alpha_2_code: TR-55
+  active: true
+-
+  name: Salıpazarı
+  mernis_code: 1838
+  alpha_2_code: TR-55
+  active: true
+-
+  name: Tekkeköy
+  mernis_code: 1849
+  alpha_2_code: TR-55
+  active: true
+-
+  name: Ayvacık
+  mernis_code: 1879
+  alpha_2_code: TR-55
+  active: true
+-
+  name: Yakakent
+  mernis_code: 1993
+  alpha_2_code: TR-55
+  active: true
+-
+  name: Atakum
+  mernis_code: 2072
+  alpha_2_code: TR-55
+  active: true
+-
+  name: Canik
+  mernis_code: 2073
+  alpha_2_code: TR-55
+  active: true
+-
+  name: İlkadım
+  mernis_code: 2074
+  alpha_2_code: TR-55
+  active: true
+-
+  name: Baykan
+  mernis_code: 1179
+  alpha_2_code: TR-56
+  active: true
+-
+  name: Eruh
+  mernis_code: 1317
+  alpha_2_code: TR-56
+  active: true
+-
+  name: Kurtalan
+  mernis_code: 1495
+  alpha_2_code: TR-56
+  active: true
+-
+  name: Pervari
+  mernis_code: 1575
+  alpha_2_code: TR-56
+  active: true
+-
+  name: Siirt Merkez
+  mernis_code: 1620
+  alpha_2_code: TR-56
+  active: true
+-
+  name: Şirvan
+  mernis_code: 1662
+  alpha_2_code: TR-56
+  active: true
+-
+  name: Tillo
+  mernis_code: 1878
+  alpha_2_code: TR-56
+  active: true
+-
+  name: Ayancık
+  mernis_code: 1156
+  alpha_2_code: TR-57
+  active: true
+-
+  name: Boyabat
+  mernis_code: 1204
+  alpha_2_code: TR-57
+  active: true
+-
+  name: Durağan
+  mernis_code: 1290
+  alpha_2_code: TR-57
+  active: true
+-
+  name: Erfelek
+  mernis_code: 1314
+  alpha_2_code: TR-57
+  active: true
+-
+  name: Gerze
+  mernis_code: 1349
+  alpha_2_code: TR-57
+  active: true
+-
+  name: Sinop Merkez
+  mernis_code: 1627
+  alpha_2_code: TR-57
+  active: true
+-
+  name: Türkeli
+  mernis_code: 1693
+  alpha_2_code: TR-57
+  active: true
+-
+  name: Dikmen
+  mernis_code: 1910
+  alpha_2_code: TR-57
+  active: true
+-
+  name: Saraydüzü
+  mernis_code: 1981
+  alpha_2_code: TR-57
+  active: true
+-
+  name: Divriği
+  mernis_code: 1282
+  alpha_2_code: TR-58
+  active: true
+-
+  name: Gemerek
+  mernis_code: 1342
+  alpha_2_code: TR-58
+  active: true
+-
+  name: Gürün
+  mernis_code: 1373
+  alpha_2_code: TR-58
+  active: true
+-
+  name: Hafik
+  mernis_code: 1376
+  alpha_2_code: TR-58
+  active: true
+-
+  name: İmranlı
+  mernis_code: 1407
+  alpha_2_code: TR-58
+  active: true
+-
+  name: Kangal
+  mernis_code: 1431
+  alpha_2_code: TR-58
+  active: true
+-
+  name: Koyulhisar
+  mernis_code: 1484
+  alpha_2_code: TR-58
+  active: true
+-
+  name: Sivas Merkez
+  mernis_code: 1628
+  alpha_2_code: TR-58
+  active: true
+-
+  name: Suşehri
+  mernis_code: 1646
+  alpha_2_code: TR-58
+  active: true
+-
+  name: Şarkışla
+  mernis_code: 1650
+  alpha_2_code: TR-58
+  active: true
+-
+  name: Yıldızeli
+  mernis_code: 1731
+  alpha_2_code: TR-58
+  active: true
+-
+  name: Zara
+  mernis_code: 1738
+  alpha_2_code: TR-58
+  active: true
+-
+  name: Akıncılar
+  mernis_code: 1870
+  alpha_2_code: TR-58
+  active: true
+-
+  name: Altınyayla
+  mernis_code: 1875
+  alpha_2_code: TR-58
+  active: true
+-
+  name: Doğanşar
+  mernis_code: 1913
+  alpha_2_code: TR-58
+  active: true
+-
+  name: Gölova
+  mernis_code: 1927
+  alpha_2_code: TR-58
+  active: true
+-
+  name: Ulaş
+  mernis_code: 1991
+  alpha_2_code: TR-58
+  active: true
+-
+  name: Çerkezköy
+  mernis_code: 1250
+  alpha_2_code: TR-59
+  active: true
+-
+  name: Çorlu
+  mernis_code: 1258
+  alpha_2_code: TR-59
+  active: true
+-
+  name: Hayrabolu
+  mernis_code: 1388
+  alpha_2_code: TR-59
+  active: true
+-
+  name: Malkara
+  mernis_code: 1511
+  alpha_2_code: TR-59
+  active: true
+-
+  name: Muratlı
+  mernis_code: 1538
+  alpha_2_code: TR-59
+  active: true
+-
+  name: Saray
+  mernis_code: 1596
+  alpha_2_code: TR-59
+  active: true
+-
+  name: Şarköy
+  mernis_code: 1652
+  alpha_2_code: TR-59
+  active: true
+-
+  name: Tekirdağ Merkez
+  mernis_code: 1673
+  alpha_2_code: TR-59
+  active: 0
+-
+  name: Marmaraereğlisi
+  mernis_code: 1825
+  alpha_2_code: TR-59
+  active: true
+-
+  name: Ergene
+  mernis_code: 2094
+  alpha_2_code: TR-59
+  active: true
+-
+  name: Kapaklı
+  mernis_code: 2095
+  alpha_2_code: TR-59
+  active: true
+-
+  name: Süleymanpaşa
+  mernis_code: 2096
+  alpha_2_code: TR-59
+  active: true
+-
+  name: Almus
+  mernis_code: 1129
+  alpha_2_code: TR-60
+  active: true
+-
+  name: Artova
+  mernis_code: 1151
+  alpha_2_code: TR-60
+  active: true
+-
+  name: Erbaa
+  mernis_code: 1308
+  alpha_2_code: TR-60
+  active: true
+-
+  name: Niksar
+  mernis_code: 1545
+  alpha_2_code: TR-60
+  active: true
+-
+  name: Reşadiye
+  mernis_code: 1584
+  alpha_2_code: TR-60
+  active: true
+-
+  name: Tokat Merkez
+  mernis_code: 1679
+  alpha_2_code: TR-60
+  active: true
+-
+  name: Turhal
+  mernis_code: 1690
+  alpha_2_code: TR-60
+  active: true
+-
+  name: Zile
+  mernis_code: 1740
+  alpha_2_code: TR-60
+  active: true
+-
+  name: Pazar
+  mernis_code: 1834
+  alpha_2_code: TR-60
+  active: true
+-
+  name: Yeşilyurt
+  mernis_code: 1858
+  alpha_2_code: TR-60
+  active: true
+-
+  name: Başçiftlik
+  mernis_code: 1883
+  alpha_2_code: TR-60
+  active: true
+-
+  name: Sulusaray
+  mernis_code: 1987
+  alpha_2_code: TR-60
+  active: true
+-
+  name: Akçaabat
+  mernis_code: 1113
+  alpha_2_code: TR-61
+  active: true
+-
+  name: Araklı
+  mernis_code: 1141
+  alpha_2_code: TR-61
+  active: true
+-
+  name: Arsin
+  mernis_code: 1150
+  alpha_2_code: TR-61
+  active: true
+-
+  name: Çaykara
+  mernis_code: 1244
+  alpha_2_code: TR-61
+  active: true
+-
+  name: Maçka
+  mernis_code: 1507
+  alpha_2_code: TR-61
+  active: true
+-
+  name: Of
+  mernis_code: 1548
+  alpha_2_code: TR-61
+  active: true
+-
+  name: Sürmene
+  mernis_code: 1647
+  alpha_2_code: TR-61
+  active: true
+-
+  name: Tonya
+  mernis_code: 1681
+  alpha_2_code: TR-61
+  active: true
+-
+  name: Trabzon Merkez
+  mernis_code: 1686
+  alpha_2_code: TR-61
+  active: 0
+-
+  name: Vakfıkebir
+  mernis_code: 1709
+  alpha_2_code: TR-61
+  active: true
+-
+  name: Yomra
+  mernis_code: 1732
+  alpha_2_code: TR-61
+  active: true
+-
+  name: Beşikdüzü
+  mernis_code: 1775
+  alpha_2_code: TR-61
+  active: true
+-
+  name: Şalpazarı
+  mernis_code: 1842
+  alpha_2_code: TR-61
+  active: true
+-
+  name: Çarşıbaşı
+  mernis_code: 1896
+  alpha_2_code: TR-61
+  active: true
+-
+  name: Dernekpazarı
+  mernis_code: 1909
+  alpha_2_code: TR-61
+  active: true
+-
+  name: Düzköy
+  mernis_code: 1917
+  alpha_2_code: TR-61
+  active: true
+-
+  name: Hayrat
+  mernis_code: 1942
+  alpha_2_code: TR-61
+  active: true
+-
+  name: Köprübaşı
+  mernis_code: 1966
+  alpha_2_code: TR-61
+  active: true
+-
+  name: Ortahisar
+  mernis_code: 2097
+  alpha_2_code: TR-61
+  active: true
+-
+  name: Çemişgezek
+  mernis_code: 1247
+  alpha_2_code: TR-62
+  active: true
+-
+  name: Hozat
+  mernis_code: 1397
+  alpha_2_code: TR-62
+  active: true
+-
+  name: Mazgirt
+  mernis_code: 1518
+  alpha_2_code: TR-62
+  active: true
+-
+  name: Nazımiye
+  mernis_code: 1541
+  alpha_2_code: TR-62
+  active: true
+-
+  name: Ovacık
+  mernis_code: 1562
+  alpha_2_code: TR-62
+  active: true
+-
+  name: Pertek
+  mernis_code: 1574
+  alpha_2_code: TR-62
+  active: true
+-
+  name: Pülümür
+  mernis_code: 1581
+  alpha_2_code: TR-62
+  active: true
+-
+  name: Tunceli Merkez
+  mernis_code: 1688
+  alpha_2_code: TR-62
+  active: true
+-
+  name: Akçakale
+  mernis_code: 1115
+  alpha_2_code: TR-63
+  active: true
+-
+  name: Birecik
+  mernis_code: 1194
+  alpha_2_code: TR-63
+  active: true
+-
+  name: Bozova
+  mernis_code: 1209
+  alpha_2_code: TR-63
+  active: true
+-
+  name: Ceylanpınar
+  mernis_code: 1220
+  alpha_2_code: TR-63
+  active: true
+-
+  name: Halfeti
+  mernis_code: 1378
+  alpha_2_code: TR-63
+  active: true
+-
+  name: Hilvan
+  mernis_code: 1393
+  alpha_2_code: TR-63
+  active: true
+-
+  name: Siverek
+  mernis_code: 1630
+  alpha_2_code: TR-63
+  active: true
+-
+  name: Suruç
+  mernis_code: 1643
+  alpha_2_code: TR-63
+  active: true
+-
+  name: Şanlıurfa Merkez
+  mernis_code: 1702
+  alpha_2_code: TR-63
+  active: 0
+-
+  name: Viranşehir
+  mernis_code: 1713
+  alpha_2_code: TR-63
+  active: true
+-
+  name: Harran
+  mernis_code: 1800
+  alpha_2_code: TR-63
+  active: true
+-
+  name: Eyyübiye
+  mernis_code: 2091
+  alpha_2_code: TR-63
+  active: true
+-
+  name: Haliliye
+  mernis_code: 2092
+  alpha_2_code: TR-63
+  active: true
+-
+  name: Karaköprü
+  mernis_code: 2093
+  alpha_2_code: TR-63
+  active: true
+-
+  name: Banaz
+  mernis_code: 1170
+  alpha_2_code: TR-64
+  active: true
+-
+  name: Eşme
+  mernis_code: 1323
+  alpha_2_code: TR-64
+  active: true
+-
+  name: Karahallı
+  mernis_code: 1436
+  alpha_2_code: TR-64
+  active: true
+-
+  name: Sivaslı
+  mernis_code: 1629
+  alpha_2_code: TR-64
+  active: true
+-
+  name: Ulubey
+  mernis_code: 1697
+  alpha_2_code: TR-64
+  active: true
+-
+  name: Uşak Merkez
+  mernis_code: 1704
+  alpha_2_code: TR-64
+  active: true
+-
+  name: Başkale
+  mernis_code: 1175
+  alpha_2_code: TR-65
+  active: true
+-
+  name: Çatak
+  mernis_code: 1236
+  alpha_2_code: TR-65
+  active: true
+-
+  name: Erciş
+  mernis_code: 1309
+  alpha_2_code: TR-65
+  active: true
+-
+  name: Gevaş
+  mernis_code: 1350
+  alpha_2_code: TR-65
+  active: true
+-
+  name: Gürpınar
+  mernis_code: 1372
+  alpha_2_code: TR-65
+  active: true
+-
+  name: Muradiye
+  mernis_code: 1533
+  alpha_2_code: TR-65
+  active: true
+-
+  name: Özalp
+  mernis_code: 1565
+  alpha_2_code: TR-65
+  active: true
+-
+  name: Van Merkez
+  mernis_code: 1710
+  alpha_2_code: TR-65
+  active: 0
+-
+  name: Bahçesaray
+  mernis_code: 1770
+  alpha_2_code: TR-65
+  active: true
+-
+  name: Çaldıran
+  mernis_code: 1786
+  alpha_2_code: TR-65
+  active: true
+-
+  name: Edremit
+  mernis_code: 1918
+  alpha_2_code: TR-65
+  active: true
+-
+  name: Saray
+  mernis_code: 1980
+  alpha_2_code: TR-65
+  active: true
+-
+  name: İpekyolu
+  mernis_code: 2098
+  alpha_2_code: TR-65
+  active: true
+-
+  name: Tuşba
+  mernis_code: 2099
+  alpha_2_code: TR-65
+  active: true
+-
+  name: Akdağmadeni
+  mernis_code: 1117
+  alpha_2_code: TR-66
+  active: true
+-
+  name: Boğazlıyan
+  mernis_code: 1198
+  alpha_2_code: TR-66
+  active: true
+-
+  name: Çayıralan
+  mernis_code: 1242
+  alpha_2_code: TR-66
+  active: true
+-
+  name: Çekerek
+  mernis_code: 1245
+  alpha_2_code: TR-66
+  active: true
+-
+  name: Sarıkaya
+  mernis_code: 1602
+  alpha_2_code: TR-66
+  active: true
+-
+  name: Sorgun
+  mernis_code: 1635
+  alpha_2_code: TR-66
+  active: true
+-
+  name: Şefaatli
+  mernis_code: 1655
+  alpha_2_code: TR-66
+  active: true
+-
+  name: Yerköy
+  mernis_code: 1726
+  alpha_2_code: TR-66
+  active: true
+-
+  name: Yozgat Merkez
+  mernis_code: 1733
+  alpha_2_code: TR-66
+  active: true
+-
+  name: Aydıncık
+  mernis_code: 1877
+  alpha_2_code: TR-66
+  active: true
+-
+  name: Çandır
+  mernis_code: 1895
+  alpha_2_code: TR-66
+  active: true
+-
+  name: Kadışehri
+  mernis_code: 1952
+  alpha_2_code: TR-66
+  active: true
+-
+  name: Saraykent
+  mernis_code: 1982
+  alpha_2_code: TR-66
+  active: true
+-
+  name: Yenifakılı
+  mernis_code: 1998
+  alpha_2_code: TR-66
+  active: true
+-
+  name: Çaycuma
+  mernis_code: 1240
+  alpha_2_code: TR-67
+  active: true
+-
+  name: Devrek
+  mernis_code: 1276
+  alpha_2_code: TR-67
+  active: true
+-
+  name: Ereğli
+  mernis_code: 1313
+  alpha_2_code: TR-67
+  active: true
+-
+  name: Zonguldak Merkez
+  mernis_code: 1741
+  alpha_2_code: TR-67
+  active: true
+-
+  name: Alaplı
+  mernis_code: 1758
+  alpha_2_code: TR-67
+  active: true
+-
+  name: Gökçebey
+  mernis_code: 1926
+  alpha_2_code: TR-67
+  active: true
+-
+  name: Kilimli
+  mernis_code: 2100
+  alpha_2_code: TR-67
+  active: true
+-
+  name: Kozlu
+  mernis_code: 2101
+  alpha_2_code: TR-67
+  active: true
+-
+  name: Aksaray Merkez
+  mernis_code: 1120
+  alpha_2_code: TR-68
+  active: true
+-
+  name: Ortaköy
+  mernis_code: 1557
+  alpha_2_code: TR-68
+  active: true
+-
+  name: Ağaçören
+  mernis_code: 1860
+  alpha_2_code: TR-68
+  active: true
+-
+  name: Güzelyurt
+  mernis_code: 1861
+  alpha_2_code: TR-68
+  active: true
+-
+  name: Sarıyahşi
+  mernis_code: 1866
+  alpha_2_code: TR-68
+  active: true
+-
+  name: Eskil
+  mernis_code: 1921
+  alpha_2_code: TR-68
+  active: true
+-
+  name: Gülağaç
+  mernis_code: 1932
+  alpha_2_code: TR-68
+  active: true
+-
+  name: Sultanhanı
+  mernis_code: 2106
+  alpha_2_code: TR-68
+  active: 0
+-
+  name: Bayburt Merkez
+  mernis_code: 1176
+  alpha_2_code: TR-69
+  active: true
+-
+  name: Aydıntepe
+  mernis_code: 1767
+  alpha_2_code: TR-69
+  active: true
+-
+  name: Demirözü
+  mernis_code: 1788
+  alpha_2_code: TR-69
+  active: true
+-
+  name: Ermenek
+  mernis_code: 1316
+  alpha_2_code: TR-70
+  active: true
+-
+  name: Karaman Merkez
+  mernis_code: 1439
+  alpha_2_code: TR-70
+  active: true
+-
+  name: Ayrancı
+  mernis_code: 1768
+  alpha_2_code: TR-70
+  active: true
+-
+  name: Kazımkarabekir
+  mernis_code: 1862
+  alpha_2_code: TR-70
+  active: true
+-
+  name: Başyayla
+  mernis_code: 1884
+  alpha_2_code: TR-70
+  active: true
+-
+  name: Sarıveliler
+  mernis_code: 1983
+  alpha_2_code: TR-70
+  active: true
+-
+  name: Delice
+  mernis_code: 1268
+  alpha_2_code: TR-71
+  active: true
+-
+  name: Keskin
+  mernis_code: 1463
+  alpha_2_code: TR-71
+  active: true
+-
+  name: Kırıkkale Merkez
+  mernis_code: 1469
+  alpha_2_code: TR-71
+  active: true
+-
+  name: Sulakyurt
+  mernis_code: 1638
+  alpha_2_code: TR-71
+  active: true
+-
+  name: Bahşili
+  mernis_code: 1880
+  alpha_2_code: TR-71
+  active: true
+-
+  name: Balışeyh
+  mernis_code: 1882
+  alpha_2_code: TR-71
+  active: true
+-
+  name: Çelebi
+  mernis_code: 1901
+  alpha_2_code: TR-71
+  active: true
+-
+  name: Karakeçili
+  mernis_code: 1954
+  alpha_2_code: TR-71
+  active: true
+-
+  name: Yahşihan
+  mernis_code: 1992
+  alpha_2_code: TR-71
+  active: true
+-
+  name: Batman Merkez
+  mernis_code: 1174
+  alpha_2_code: TR-72
+  active: true
+-
+  name: Beşiri
+  mernis_code: 1184
+  alpha_2_code: TR-72
+  active: true
+-
+  name: Gercüş
+  mernis_code: 1345
+  alpha_2_code: TR-72
+  active: true
+-
+  name: Kozluk
+  mernis_code: 1487
+  alpha_2_code: TR-72
+  active: true
+-
+  name: Sason
+  mernis_code: 1607
+  alpha_2_code: TR-72
+  active: true
+-
+  name: Hasankeyf
+  mernis_code: 1941
+  alpha_2_code: TR-72
+  active: true
+-
+  name: Beytüşşebap
+  mernis_code: 1189
+  alpha_2_code: TR-73
+  active: true
+-
+  name: Cizre
+  mernis_code: 1223
+  alpha_2_code: TR-73
+  active: true
+-
+  name: İdil
+  mernis_code: 1403
+  alpha_2_code: TR-73
+  active: true
+-
+  name: Silopi
+  mernis_code: 1623
+  alpha_2_code: TR-73
+  active: true
+-
+  name: Şırnak Merkez
+  mernis_code: 1661
+  alpha_2_code: TR-73
+  active: true
+-
+  name: Uludere
+  mernis_code: 1698
+  alpha_2_code: TR-73
+  active: true
+-
+  name: Güçlükonak
+  mernis_code: 1931
+  alpha_2_code: TR-73
+  active: true
+-
+  name: Bartın Merkez
+  mernis_code: 1172
+  alpha_2_code: TR-74
+  active: true
+-
+  name: Kurucaşile
+  mernis_code: 1496
+  alpha_2_code: TR-74
+  active: true
+-
+  name: Ulus
+  mernis_code: 1701
+  alpha_2_code: TR-74
+  active: true
+-
+  name: Amasra
+  mernis_code: 1761
+  alpha_2_code: TR-74
+  active: true
+-
+  name: Ardahan Merkez
+  mernis_code: 1144
+  alpha_2_code: TR-75
+  active: true
+-
+  name: Çıldır
+  mernis_code: 1252
+  alpha_2_code: TR-75
+  active: true
+-
+  name: Göle
+  mernis_code: 1356
+  alpha_2_code: TR-75
+  active: true
+-
+  name: Hanak
+  mernis_code: 1380
+  alpha_2_code: TR-75
+  active: true
+-
+  name: Posof
+  mernis_code: 1579
+  alpha_2_code: TR-75
+  active: true
+-
+  name: Damal
+  mernis_code: 2008
+  alpha_2_code: TR-75
+  active: true
+-
+  name: Aralık
+  mernis_code: 1142
+  alpha_2_code: TR-76
+  active: true
+-
+  name: Iğdır Merkez
+  mernis_code: 1398
+  alpha_2_code: TR-76
+  active: true
+-
+  name: Tuzluca
+  mernis_code: 1692
+  alpha_2_code: TR-76
+  active: true
+-
+  name: Karakoyunlu
+  mernis_code: 2011
+  alpha_2_code: TR-76
+  active: true
+-
+  name: Yalova Merkez
+  mernis_code: 1716
+  alpha_2_code: TR-77
+  active: true
+-
+  name: Altınova
+  mernis_code: 2019
+  alpha_2_code: TR-77
+  active: true
+-
+  name: Armutlu
+  mernis_code: 2020
+  alpha_2_code: TR-77
+  active: true
+-
+  name: Çınarcık
+  mernis_code: 2021
+  alpha_2_code: TR-77
+  active: true
+-
+  name: Çiftlikköy
+  mernis_code: 2022
+  alpha_2_code: TR-77
+  active: true
+-
+  name: Termal
+  mernis_code: 2026
+  alpha_2_code: TR-77
+  active: true
+-
+  name: Eflani
+  mernis_code: 1296
+  alpha_2_code: TR-78
+  active: true
+-
+  name: Eskipazar
+  mernis_code: 1321
+  alpha_2_code: TR-78
+  active: true
+-
+  name: Karabük Merkez
+  mernis_code: 1433
+  alpha_2_code: TR-78
+  active: true
+-
+  name: Ovacık
+  mernis_code: 1561
+  alpha_2_code: TR-78
+  active: true
+-
+  name: Safranbolu
+  mernis_code: 1587
+  alpha_2_code: TR-78
+  active: true
+-
+  name: Yenice
+  mernis_code: 1856
+  alpha_2_code: TR-78
+  active: true
+-
+  name: Kilis Merkez
+  mernis_code: 1476
+  alpha_2_code: TR-79
+  active: true
+-
+  name: Elbeyli
+  mernis_code: 2023
+  alpha_2_code: TR-79
+  active: true
+-
+  name: Musabeyli
+  mernis_code: 2024
+  alpha_2_code: TR-79
+  active: true
+-
+  name: Polateli
+  mernis_code: 2025
+  alpha_2_code: TR-79
+  active: true
+-
+  name: Bahçe
+  mernis_code: 1165
+  alpha_2_code: TR-80
+  active: true
+-
+  name: Kadirli
+  mernis_code: 1423
+  alpha_2_code: TR-80
+  active: true
+-
+  name: Osmaniye Merkez
+  mernis_code: 1560
+  alpha_2_code: TR-80
+  active: true
+-
+  name: Düziçi
+  mernis_code: 1743
+  alpha_2_code: TR-80
+  active: true
+-
+  name: Hasanbeyli
+  mernis_code: 2027
+  alpha_2_code: TR-80
+  active: true
+-
+  name: Sumbas
+  mernis_code: 2028
+  alpha_2_code: TR-80
+  active: true
+-
+  name: Toprakkale
+  mernis_code: 2029
+  alpha_2_code: TR-80
+  active: true
+-
+  name: Akçakoca
+  mernis_code: 1116
+  alpha_2_code: TR-81
+  active: true
+-
+  name: Düzce Merkez
+  mernis_code: 1292
+  alpha_2_code: TR-81
+  active: true
+-
+  name: Yığılca
+  mernis_code: 1730
+  alpha_2_code: TR-81
+  active: true
+-
+  name: Cumayeri
+  mernis_code: 1784
+  alpha_2_code: TR-81
+  active: true
+-
+  name: Gölyaka
+  mernis_code: 1794
+  alpha_2_code: TR-81
+  active: true
+-
+  name: Çilimli
+  mernis_code: 1905
+  alpha_2_code: TR-81
+  active: true
+-
+  name: Gümüşova
+  mernis_code: 2017
+  alpha_2_code: TR-81
+  active: true
+-
+  name: Kaynaşlı
+  mernis_code: 2031
+  alpha_2_code: TR-81
+  active: true

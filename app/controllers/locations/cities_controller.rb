@@ -2,6 +2,8 @@
 
 module Locations
   class CitiesController < ApplicationController
+    include PagyBackendWithHelpers
+
     before_action :set_country
     before_action :set_city, only: %i[show edit update destroy]
 

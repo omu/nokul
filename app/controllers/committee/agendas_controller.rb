@@ -2,6 +2,8 @@
 
 module Committee
   class AgendasController < ApplicationController
+    include PagyBackendWithHelpers
+
     before_action :set_committee
     before_action :set_agenda, only: %i[edit update destroy]
 

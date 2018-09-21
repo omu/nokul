@@ -26,6 +26,7 @@ tr:
         student_grades: Sınıflar
         student_grading_systems: Not Sistemleri
         student_punishment_types: Ceza Türleri
+        student_management: Öğrenci Yönetimi
         student_studentship_statuses: Öğrencilik Hakları
         unit_instruction_languages: Öğrenim Dilleri
         unit_instruction_types: Öğrenim Türleri
@@ -36,3 +37,4 @@ tr:
         committees: Kurullar/Komisyonlar
         committee_units: Kurul/Komisyon Birimleri
         agenda_types: Gündem Türleri
+        first_registration: İlk Kayıt
