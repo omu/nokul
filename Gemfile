@@ -54,6 +54,9 @@ gem 'rollbar'
 # permalinks
 gem 'friendly_id', '~> 5.2.0'
 
+# progressbar
+gem 'ruby-progressbar'
+
 group :development, :test do
   gem 'brakeman', require: false
   gem 'bundler-audit'
