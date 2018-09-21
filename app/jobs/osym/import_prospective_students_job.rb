@@ -77,8 +77,6 @@ module Osym
         )
         progress_bar.increment
       end
-
-      file.close
     end
     # rubocop:enable Metrics/AbcSize
     # rubocop:enable Metrics/MethodLength
