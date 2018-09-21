@@ -90,12 +90,14 @@
               
                 <div class="pl-1 pt-2">
                   <h4>Uzmanlık Alanları</h4>
-                  &mdash;
+                  <ul class="pl-4">
+                    <li style="list-style: none;">&mdash;</li>
+                  </ul>
                 </div>
 
                 <div class="pl-1 pt-2">
                   <h4>Akademik Görevler</h4>
-                  <ul class="pl-1 text-muted">
+                  <ul class="pl-4 text-muted">
                     <% @user.duties.each do |duty| %>
                       <li>
                         <%= duty.unit.name %> 
@@ -109,7 +111,7 @@
 
                 <div class="pl-1 pt-2">
                   <h4>İdari Görevler</h4>
-                  <ul class="pl-1 text-muted">
+                  <ul class="pl-4 text-muted">
                     <% @employee.positions.each do |position| %>
                       <li>
                         <%= position.duty.unit.name %> - 
@@ -123,12 +125,16 @@
 
                 <div class="pl-1 pt-2">
                   <h4>Ödüller</h4>
-                  &mdash;
+                  <ul class="pl-4">
+                    <li style="list-style: none;">&mdash;</li>
+                  </ul>
                 </div>
 
                 <div class="pl-1 pt-2">
                   <h4>Eğitim Bilgileri</h4>
-                  &mdash;
+                  <ul class="pl-4">
+                    <li style="list-style: none;">&mdash;</li>
+                  </ul>
                 </div>
               </div>
               <div class="col-sm-4">
@@ -162,14 +168,14 @@
             </div>
           </div>
           <div class="tab-pane" id="articles" role="tabpanel">
-            <ul class="pl-1">
+            <ul class="pl-4">
               <% @user.articles.each do |article| %>
                 <li><%= article.title %> - (<%= article.journal %>)</li>
               <% end %>
             </ul>
           </div>
           <div class="tab-pane" id="projects" role="tabpanel">
-            <ul class="pl-1">
+            <ul class="pl-4">
               <% @user.projects.each do |project| %>
                 <li><%= project.name %></li>
               <% end %>
@@ -179,7 +185,10 @@
             <div id="certAccordion" data-children=".item">
               <% @user.certifications.each do |cert| %>
               <div class="item">
-                <a data-toggle="collapse" data-parent="#certAccordion" href="#cert<%= cert.id %>" aria-expanded="false" aria-controls="certAccordion" > &mdash; <%= cert.name %></a>
+                <a data-toggle="collapse" data-parent="#certAccordion" href="#cert<%= cert.id %>" aria-expanded="false" aria-controls="certAccordion" >
+                  <i class="fa fa-caret-right"></i>
+                  <%= cert.name %>
+                </a>
                 <div class="collapse" id="cert<%= cert.id %>" role="tab" style="">
                   <p class="mb-3"><%= cert.content %></p>
                 </div>
