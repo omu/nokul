@@ -7,12 +7,6 @@ minio:
   endpoint: https://s3.omu.sh
   force_path_style: true # use https://domain.com/bucket, instead of bucket.domain.com
 
-azure:
-  service: AzureStorage
-  storage_account_name: nokul
-  storage_access_key: <%= Rails.application.credentials.azure[:access_key] %>
-  container: nokul
-
 development:
   service: Disk
   root: <%= Rails.root.join('storage') %>
@@ -24,5 +18,3 @@ test:
 production:
   service: Mirror
   primary: minio
-  mirrors:
-    - azure
