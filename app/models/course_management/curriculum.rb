@@ -16,7 +16,7 @@ class Curriculum < ApplicationRecord
 
   # relations
   belongs_to :unit
-  has_many :unit_curriculums
+  has_many :unit_curriculums, dependent: :destroy
   has_many :programs, through: :unit_curriculums, source: :unit
 
   # validations
