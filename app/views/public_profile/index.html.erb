@@ -5,59 +5,21 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-
-  form {
-    padding: 30px;
-  }
-
-  #word {
-    border-radius: 15px;
-    width: 100%;
-  }
-
-  .submit-button {
-    position: absolute;
-    top: 35px;
-    right: 53px;
-    background: none;
-    border: none;
-    font-size: 18px;
-    color: grey;
-  }
-
-  .search-form {
-    margin: 0 auto;
-  }
-
-  h1 {
-    color: white;
-    text-align: center;
-    font-size: 2.2em;
-  }
-
-  .card-header {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
 </style>
- 
-<div class='col-sm-12'>
-  <div class='card'>
-    <div class="card-header">
-      <div class="row">
-        <div id="search-title" class="col-xs-12 col-sm-12 col-md-6 col-lg-9 search-form">
-          <h1>Bir arama yapın</h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-9 search-form">
-          <%= form_tag profiles_search_path do |f| %>
-            <div class="search-field">
-              <%= text_field_tag :word, '', class: 'form-control', placeholder: 'Aramak istediğiniz isim, e-posta veya birim adı girin..', required: true, autocomplete: 'off' %>
-              <button class="submit-button" type="submit"><i class="fa fa-search"></i></button>
-            </div>
-          <% end %>
-        </div>
+
+<div class="col-sm-12">
+  <div class="card">
+    <div class="card-header py-5">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-9 mx-auto">
+        <h3 class="text-white">Bir arama yapın</h3>
+        <%= form_tag profiles_search_path do |f| %>
+          <div class="input-group">
+            <%= text_field_tag :word, '', class: 'form-control', placeholder: 'Aramak istediğiniz isim, e-posta veya birim adı girin..', required: true, autocomplete: 'off' %>
+            <span class="input-group-append">
+              <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
+            </span>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
