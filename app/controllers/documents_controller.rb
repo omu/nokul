@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class DocumentsController < ApplicationController
+  include PagyBackendWithHelpers
+
   before_action :set_document, only: %i[edit update destroy show]
 
   def index

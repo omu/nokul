@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
+  include PagyBackendWithHelpers
   include LastUpdateFromMernis
 
   before_action :set_user, only: %i[show edit update destroy save_address_from_mernis save_identity_from_mernis]

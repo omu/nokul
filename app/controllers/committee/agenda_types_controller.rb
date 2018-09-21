@@ -2,6 +2,8 @@
 
 module Committee
   class AgendaTypesController < ApplicationController
+    include PagyBackendWithHelpers
+
     before_action :set_agenda_type, only: %i[edit update destroy]
 
     def index

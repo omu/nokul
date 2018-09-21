@@ -2,6 +2,8 @@
 
 module Calendar
   class AcademicTermsController < ApplicationController
+    include PagyBackendWithHelpers
+
     before_action :set_academic_term, only: %i[edit update destroy]
 
     def index
