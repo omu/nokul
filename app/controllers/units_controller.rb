@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class UnitsController < ApplicationController
-  before_action :set_unit, only: %i[edit update destroy show courses]
+  before_action :set_unit, only: %i[edit update destroy show courses programs]
 
   def index
     units = Unit.includes(
@@ -34,6 +34,13 @@ class UnitsController < ApplicationController
 
   def courses
     @courses = @unit.courses
+  end
+
+  def programs
+    @units = @unit.children.includes(
+      :unit_status, :unit_instruction_language, :unit_instruction_type, :unit_type, district: [:city]
+    ).programs.active
+    render json: @units
   end
 
   private

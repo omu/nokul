@@ -2,11 +2,12 @@
 
 module CourseManagement
   class CurriculumsController < ApplicationController
+    include PagyBackendWithHelpers
     before_action :set_curriculum, only: %i[show edit update destroy]
 
     def index
       @pagy, @curriculums = pagy(
-        Curriculum.all.dynamic_search(search_params(Curriculum))
+        Curriculum.includes(:unit).dynamic_search(search_params(Curriculum))
       )
     end
 
@@ -43,7 +44,7 @@ module CourseManagement
     end
 
     def curriculum_params
-      params.require(:curriculum).permit(:name, :unit_id, :number_of_semesters, :status)
+      params.require(:curriculum).permit(:name, :unit_id, :number_of_semesters, :status,  program_ids: [])
     end
   end
 end

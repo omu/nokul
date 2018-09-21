@@ -40,6 +40,7 @@ Rails.application.routes.draw do
   resources :units do
     member do
       get :courses, defaults: { format: :json }
+      get :programs, defaults: { format: :json }
     end
   end
 
