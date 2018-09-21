@@ -7,7 +7,7 @@ module Committee
     setup do
       sign_in users(:serhat)
       @agenda = agendas(:one)
-      @committee = units(:mühendislik_fakültesi_yönetim_kurulu)
+      @committee = units(:muhendislik_fakultesi_yonetim_kurulu)
     end
 
     test 'should get index' do
@@ -27,7 +27,7 @@ module Committee
              params: {
                agenda: {
                  description: 'Test Agenda', status: :recent,
-                 unit_id: units(:mühendislik_fakültesi_yönetim_kurulu).id,
+                 unit_id: units(:muhendislik_fakultesi_yonetim_kurulu).id,
                  agenda_type_id: agenda_types(:two).id
                }
              }
@@ -36,7 +36,7 @@ module Committee
       agenda = Agenda.last
 
       assert_equal 'Test Agenda', agenda.description
-      assert_equal units(:mühendislik_fakültesi_yönetim_kurulu).id, agenda.unit.id
+      assert_equal units(:muhendislik_fakultesi_yonetim_kurulu).id, agenda.unit.id
       assert_equal 'recent', agenda.status
       assert_equal agenda_types(:two).id, agenda.agenda_type_id
       assert_redirected_to committee_agendas_path(@committee)
@@ -55,7 +55,7 @@ module Committee
             params: {
               agenda: {
                 description: 'Test Agenda Update', status: :recent,
-                unit_id: units(:mühendislik_fakültesi_yönetim_kurulu).id,
+                unit_id: units(:muhendislik_fakultesi_yonetim_kurulu).id,
                 agenda_type_id: agenda_types(:one).id
               }
             }
@@ -63,7 +63,7 @@ module Committee
       agenda.reload
 
       assert_equal 'Test Agenda Update', agenda.description
-      assert_equal units(:mühendislik_fakültesi_yönetim_kurulu).id, agenda.unit_id
+      assert_equal units(:muhendislik_fakultesi_yonetim_kurulu).id, agenda.unit_id
       assert_equal 'recent', agenda.status
       assert_equal agenda_types(:one).id, agenda.agenda_type_id
       assert_redirected_to committee_agendas_path(@committee)

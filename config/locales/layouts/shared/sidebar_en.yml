@@ -11,10 +11,12 @@ en:
         academic_calendars: Academic Calendars
         courses: Courses
         course_management: Course Management
-        curriculums: Curriculums
+        course_unit_groups: Course Unit Group
+        course_group_types: Course Group Type
         languages: Languages
         users: Users
         references: References
+        documents: Documents
         student_disability_types: Disability Types
         student_drop_out_types: Drop Out Types
         student_education_levels: Education Levels

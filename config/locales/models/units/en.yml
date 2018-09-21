@@ -33,6 +33,7 @@ en:
     show:
       <<: *unit_attributes
       parent: Parent Unit
+      registration_documents: Registration Documents
     index:
       <<: *unit_attributes
       new_unit_link: Create a New Unit
