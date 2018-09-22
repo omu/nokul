@@ -87,114 +87,21 @@
           <div class="tab-pane active show" id="resume" role="tabpanel">
             <div class="row">
               <div class="col-sm-8">
-              
-                <div class="pl-1 pt-2">
-                  <h4>Uzmanlık Alanları</h4>
-                  <ul class="pl-4">
-                    <li style="list-style: none;">&mdash;</li>
-                  </ul>
-                </div>
-
-                <div class="pl-1 pt-2">
-                  <h4>Akademik Görevler</h4>
-                  <ul class="pl-4 text-muted">
-                    <% @user.duties.each do |duty| %>
-                      <li>
-                        <%= duty.unit.name %> 
-                        (<%= duty.start_date.strftime('%Y') %> - <%= duty.end_date ? duty.end_date.strftime('%Y') : ' Halen ' %>)
-                      </li>
-                    <% end.empty? and begin %>
-                      <li style="list-style: none;">&mdash;</li>
-                    <% end %>
-                  </ul>
-                </div>
-
-                <div class="pl-1 pt-2">
-                  <h4>İdari Görevler</h4>
-                  <ul class="pl-4 text-muted">
-                    <% @employee.positions.each do |position| %>
-                      <li>
-                        <%= position.duty.unit.name %> - 
-                        <%= position.administrative_function.name %>
-                      </li>
-                    <% end.empty? and begin %>
-                      <li style="list-style: none;">&mdash;</li>
-                    <% end %>
-                  </ul>
-                </div>
-
-                <div class="pl-1 pt-2">
-                  <h4>Ödüller</h4>
-                  <ul class="pl-4">
-                    <li style="list-style: none;">&mdash;</li>
-                  </ul>
-                </div>
-
-                <div class="pl-1 pt-2">
-                  <h4>Eğitim Bilgileri</h4>
-                  <ul class="pl-4">
-                    <li style="list-style: none;">&mdash;</li>
-                  </ul>
-                </div>
+                <%= render 'resume', locals: { duties: @user.duties, positions: @employee.positions } %>
               </div>
               <div class="col-sm-4">
-                <table class='table table-responsive-sm'>
-                  <tr>
-                    <td>Doğum Yeri</td>
-                    <td><%= @identity.place_of_birth %></td>
-                  </tr>
-                  <tr>
-                    <td>Yabancı Diller</td>
-                    <td>&mdash;</td>
-                  </tr>
-                  <tr>
-                    <td>E-posta</td>
-                    <td><%= @user.email %></td>
-                  </tr>
-                  <tr>
-                    <td>Website</td>
-                    <td><%= @user.profile_preferences['website'] || '&mdash;'.html_safe %></td>
-                  </tr>
-                  <tr>
-                    <td>Dahili</td>
-                    <td><%= @user.profile_preferences['extension_number'] || '&mdash;'.html_safe %></td>
-                  </tr>
-                  <tr>
-                    <td>Uzmanlık Alanları</td>
-                    <td>&mdash;</td>
-                  </tr>
-                </table>
+                <%= render 'info' %>
               </div>
             </div>
           </div>
           <div class="tab-pane" id="articles" role="tabpanel">
-            <ul class="pl-4">
-              <% @user.articles.each do |article| %>
-                <li><%= article.title %> - (<%= article.journal %>)</li>
-              <% end %>
-            </ul>
+            <%= render 'articles', locals: { articles: @user.articles } %>
           </div>
           <div class="tab-pane" id="projects" role="tabpanel">
-            <ul class="pl-4">
-              <% @user.projects.each do |project| %>
-                <li><%= project.name %></li>
-              <% end %>
-            </ul>
+            <%= render 'projects', locals: { projects: @user.projects } %>
           </div>
           <div class="tab-pane" id="certs" role="tablist">
-            <div id="certAccordion" data-children=".item">
-              <% @user.certifications.each do |cert| %>
-              <div class="item">
-                <a data-toggle="collapse" data-parent="#certAccordion" href="#cert<%= cert.id %>" aria-expanded="false" aria-controls="certAccordion" >
-                  <i class="fa fa-caret-right"></i>
-                  <%= cert.name %>
-                </a>
-                <div class="collapse" id="cert<%= cert.id %>" role="tab" style="">
-                  <p class="mb-3"><%= cert.content %></p>
-                </div>
-              </div>
-              <% end %>
-            </div>
+            <%= render 'certifications', locals: { certifications: @user.certifications } %>
           </div>
         </div>
       </div>
