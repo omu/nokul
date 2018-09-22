@@ -22,7 +22,6 @@ class PublicProfileController < ApplicationController
 
   def set_user
     @user = User.includes(:articles, duties: [:unit]).friendly.find(params[:id])
-    not_found unless @user
   end
 
   def set_employee
