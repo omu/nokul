@@ -30,7 +30,7 @@ class PublicProfileController < ApplicationController
   end
 
   def check_identity
-    @identity = @user.identities.user_identity.take
+    @identity = @user.identities.user_identity
     not_found if @identity.blank?
   end
 
