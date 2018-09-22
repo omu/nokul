@@ -22,11 +22,9 @@ class Encryptor
   private
 
   def rails_master_key
-    begin
-      ENV['RAILS_MASTER_KEY'] || File.read(Rails.root.join('config', 'master.key'))
-    rescue Errno::ENOENT => e
-      abort("Master key not found! #{e}")
-    end
+    ENV['RAILS_MASTER_KEY'] || File.read(Rails.root.join('config', 'master.key'))
+  rescue Errno::ENOENT => e
+    abort("Master key not found! #{e}")
   end
 end
 
