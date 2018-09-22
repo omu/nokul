@@ -121,6 +121,7 @@ GEM
     equalizer (0.0.11)
     erubi (1.7.1)
     execjs (2.7.0)
+    fakefs (0.18.0)
     ffi (1.9.25)
     fit-commit (3.8.0)
       swearjar (~> 1.0)
@@ -354,6 +355,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   email_address
+  fakefs
   fit-commit
   font-awesome-rails
   friendly_id (~> 5.2.0)
