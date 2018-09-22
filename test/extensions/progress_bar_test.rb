@@ -7,6 +7,6 @@ class ProgressBarTest < ActiveSupport::TestCase
     progress_bar = ProgressBar.spawn('Test', 100, ProgressBar::Outputs::Null)
     assert progress_bar.is_a?(ProgressBar::Base)
     assert_equal progress_bar.title, 'Test'
-    assert_nil progress_bar.total, 100
+    assert_equal progress_bar.total, 100
   end
 end
