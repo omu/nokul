@@ -50,6 +50,7 @@ module Encrypted
 
     def self.root
       return DEFAULT_ROOT unless (root = CONFIGURATION.root)
+
       Pathname.new ::File.expand_path(root, Rails.root)
     end
 
