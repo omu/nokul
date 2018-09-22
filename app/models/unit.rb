@@ -37,7 +37,7 @@ class Unit < ApplicationRecord
   validates :yoksis_id, uniqueness: true, allow_blank: true, numericality: { only_integer: true }
   validates :detsis_id, uniqueness: true, allow_blank: true, numericality: { only_integer: true }
   validates :name, presence: true, uniqueness: { scope: %i[ancestry unit_status] }
-  validates :duration, numericality: { only_integer: true }, allow_blank: true
+  validates :duration, numericality: { only_integer: true }, allow_blank: true, inclusion: 1..8
 
   # callbacks
   before_save { self.name = name.capitalize_all }
