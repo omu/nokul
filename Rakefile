@@ -5,6 +5,6 @@
 
 require_relative 'config/application'
 require_relative 'lib/modules/import_from_yml'
-require_relative 'lib/modules/progress_bar'
+require_relative 'lib/extensions/progress_bar'
 
 Rails.application.load_tasks

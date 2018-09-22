@@ -16,7 +16,6 @@ gem 'ancestry'
 
 # active-storage
 gem 'aws-sdk-s3', require: false
-gem 'azure-storage', require: false
 gem 'image_processing', '~> 1.0'
 
 # authentication
@@ -62,7 +61,6 @@ group :development, :test do
   gem 'bundler-audit'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'codacy-coverage', require: false
-  gem 'codecov', require: false
   gem 'dotenv-rails'
   gem 'reek'
   gem 'rubocop'
