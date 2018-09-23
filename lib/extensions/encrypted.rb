@@ -70,7 +70,7 @@ module Encrypted
     end
 
     def self.readlines(pathname)
-      read(pathname).split '\n'
+      read(pathname).split "\n"
     end
 
     def self.write(content, pathname)
@@ -82,7 +82,7 @@ module Encrypted
     end
 
     def self.writelines(lines, pathname)
-      write(lines.join('\n'), pathname)
+      write(lines.join("\n"), pathname)
     end
 
     def self.exist?(pathname)
