@@ -8,15 +8,15 @@ module Osym
     # rubocop:disable Metrics/MethodLength
     # rubocop:disable Metrics/BlockLength
     def perform
-      file_path = Rails.root.join('db', 'static_data', 'prospective_students.csv')
+      content = FileEncryptor.decrypt_lines('db/encrypted_data/prospective_students.csv.enc')
 
       progress_bar = ProgressBar.create(
         title: 'Prospective Students',
-        total: File.readlines(file_path).length,
+        total: content.count,
         format: '%t %B %c/%C %a'
       )
 
-      File.read(file_path).each_line do |prospective_student|
+      content.each do |prospective_student|
         id_number, first_name, last_name, fathers_name, mothers_name, d, m, y, gender, turkish, kktc, foreign,
         place_of_birth, registration_city, registration_district, high_school_code, high_school_type,
         high_school_branch, state_of_education, high_school_graduation_year, placement_type, exam_score, language,
@@ -102,7 +102,7 @@ module Osym
     def find_obs_registered_program(program)
       return if program.eql?('0') || program.eql?('null')
 
-      response = Services::Yoksis::V4::UniversiteBirimler.new.program_name(program)
+      response = Yoksis::V4::UniversiteBirimler.new.program_name(program)
       "#{response[:universite][:ad]} / #{response[:birim][:ad]}"
     end
 

@@ -29,11 +29,10 @@ module Nokul
       Rails.root.join('app', 'models', '**')
     ]
 
-    reloader.to_prepare do
-      Dir[
-        Rails.root.join('app', 'services', '**', '*.rb')
-      ].each { |file| require_dependency file }
-    end
+    Dir[
+      Rails.root.join('lib', 'support', '**', '*.rb'),
+      Rails.root.join('lib', 'api', '**', '*.rb')
+    ].each { |file| require file }
 
     # use app-wide e-mail template for devise
     config.to_prepare { Devise::Mailer.layout 'mailer' }

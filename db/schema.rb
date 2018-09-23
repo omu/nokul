@@ -284,11 +284,6 @@ ActiveRecord::Schema.define(version: 2018_09_20_223813) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
-  create_table "high_school_types", force: :cascade do |t|
-    t.string "name", null: false
-    t.integer "code", null: false
-  end
-
   create_table "group_courses", force: :cascade do |t|
     t.bigint "course_id"
     t.bigint "course_unit_group_id"
@@ -296,6 +291,11 @@ ActiveRecord::Schema.define(version: 2018_09_20_223813) do
     t.datetime "updated_at", null: false
     t.index ["course_id"], name: "index_group_courses_on_course_id"
     t.index ["course_unit_group_id"], name: "index_group_courses_on_course_unit_group_id"
+  end
+
+  create_table "high_school_types", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "code", null: false
   end
 
   create_table "identities", force: :cascade do |t|
