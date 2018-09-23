@@ -5,7 +5,7 @@ namespace :fetch do
   task academic_staff: :environment do
     # we simply don't store YOKSISResponse of this action because there is no consistency between responses
     # of each page - no ordering, no timestamp etc.
-    client = Services::Yoksis::V1::AkademikPersonel.new
+    client = Yoksis::V1::AkademikPersonel.new
 
     # this endpoint uses pagination in a weird way
     number_of_pages = client.number_of_pages

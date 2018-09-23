@@ -6,7 +6,7 @@ module Kps
 
     # slow operation
     def perform(user)
-      @response = Services::Kps::Omu::Adres.new.sorgula(user.id_number.to_i)
+      @response = Kps::Omu::Adres.new.sorgula(user.id_number.to_i)
     end
 
     # callbacks

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class FileEncryptor
+module FileEncryptor
   DEFAULT_PARAMS = {
     env_key: 'RAILS_MASTER_KEY',
     key_path: Rails.root.join('config', 'master.key'),

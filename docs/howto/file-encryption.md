@@ -44,7 +44,7 @@ co-author: M. Serhat Dündar
   FileEncryptor.decrypt('db/encrypted_data/prospective_students.csv.enc')
   ```
 
-- Şifrelenmiş olan herhangi bir dosyayı satırlar halinde (sizi) oku:
+- Şifrelenmiş olan herhangi bir dosyayı satırlar halinde (dizi) oku:
 
   ```ruby
   FileEncryptor.decrypt_lines('db/encrypted_data/prospective_students.csv.enc')
