@@ -102,7 +102,7 @@ module Osym
     def find_obs_registered_program(program)
       return if program.eql?('0') || program.eql?('null')
 
-      response = Services::Yoksis::V4::UniversiteBirimler.new.program_name(program)
+      response = Yoksis::V4::UniversiteBirimler.new.program_name(program)
       "#{response[:universite][:ad]} / #{response[:birim][:ad]}"
     end
 
