@@ -5,7 +5,7 @@ class FileEncryptor
     env_key: 'RAILS_MASTER_KEY',
     key_path: Rails.root.join('config', 'master.key'),
     raise_if_missing_key: true
-  }
+  }.freeze
 
   def self.encrypt(path)
     encryptor = ActiveSupport::EncryptedFile.new(
@@ -28,10 +28,8 @@ class FileEncryptor
       merge_with_content_path(Rails.root.join(path))
     )
 
-    self.encryptor.read.split("\n")
+    encryptor.read.split("\n")
   end
-
-  private
 
   def self.merge_with_content_path(value)
     DEFAULT_PARAMS.merge(
