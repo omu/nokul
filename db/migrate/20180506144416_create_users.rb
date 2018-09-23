@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
-class DeviseCreateUsers < ActiveRecord::Migration[5.2]
+class CreateUsers < ActiveRecord::Migration[5.2]
   def change
     create_table :users do |t|
       ## Database authenticatable
-      t.string :id_number,          null: false, unique: true
-      t.string :email,              null: false, unique: true
-      t.string :encrypted_password, null: false, default: ''
+      t.string :id_number,          null: false, limit: 255
+      t.string :email,              null: false, limit: 255
+      t.string :encrypted_password, null: false, default: '', limit: 255
 
       ## Recoverable
-      t.string   :reset_password_token
+      t.string   :reset_password_token, limit: 255
       t.datetime :reset_password_sent_at
 
       ## Rememberable
@@ -21,6 +21,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.datetime :last_sign_in_at
       t.inet     :current_sign_in_ip
       t.inet     :last_sign_in_ip
+      t.datetime :password_changed_at, null: false, default: -> { 'CURRENT_TIMESTAMP' }
 
       ## Confirmable
       # t.string   :confirmation_token
@@ -33,7 +34,12 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
 
-      t.string :preferred_language, default: 'tr'
+      # Custom fields
+      t.string :slug, limit: 255
+      t.string :preferred_language, default: 'tr', limit: 2
+      t.integer :articles_count, null: false, default: 0
+      t.integer :projects_count, null: false, default: 0
+      t.jsonb :profile_preferences
       t.timestamps null: false
     end
 

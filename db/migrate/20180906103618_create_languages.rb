@@ -1,11 +1,10 @@
+# frozen_string_literal: true
+
 class CreateLanguages < ActiveRecord::Migration[5.2]
   def change
     create_table :languages do |t|
-      t.string :name, null: false, unique: true
-      t.string :iso, null: false, unique: true
-      t.integer :yoksis_code
-
-      t.timestamps
+      t.string :name, null: false, limit: 255
+      t.string :iso, null: false, limit: 255
     end
   end
 end
