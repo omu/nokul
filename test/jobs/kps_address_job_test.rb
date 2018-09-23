@@ -15,7 +15,7 @@ class KpsAddressJobTest < ActiveJob::TestCase
       true
     end
 
-    Services::Kps::Omu::Adres.stub :new, client do
+    Kps::Omu::Adres.stub :new, client do
       assert Kps::AddressSaveJob.perform_later({}) # dummy hash
     end
   end
