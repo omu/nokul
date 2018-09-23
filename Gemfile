@@ -77,3 +77,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0' # call <%= console %> anywhere in the code.
 end
+
+group :test do
+  gem 'fakefs', require: 'fakefs/safe'
+end
