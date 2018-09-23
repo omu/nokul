@@ -25,9 +25,7 @@ module Nokul
     I18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.yml').to_s]
 
     # organize models in sub-folders
-    config.autoload_paths += Dir[
-      Rails.root.join('app', 'models', '**')
-    ]
+    config.autoload_paths += Dir[Rails.root.join("app", "models", "{*/}")]
 
     Dir[
       Rails.root.join('lib', 'support', '**', '*.rb'),
