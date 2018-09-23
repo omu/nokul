@@ -34,7 +34,6 @@ module Nokul
       Rails.root.join('lib', 'api', '**', '*.rb')
     ].each { |file| require file }
 
-
     # use app-wide e-mail template for devise
     config.to_prepare { Devise::Mailer.layout 'mailer' }
 
