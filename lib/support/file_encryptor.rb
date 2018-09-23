@@ -24,11 +24,7 @@ module FileEncryptor
   end
 
   def self.decrypt_lines(path)
-    encryptor = ActiveSupport::EncryptedFile.new(
-      merge_with_content_path(Rails.root.join(path))
-    )
-
-    encryptor.read.split("\n")
+    decrypt(path).split("\n")
   end
 
   def self.merge_with_content_path(value)
