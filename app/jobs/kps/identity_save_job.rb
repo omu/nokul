@@ -7,7 +7,7 @@ module Kps
     # slow operation
     def perform(user, student_id = nil)
       @student_id = student_id
-      @response = Services::Kps::Omu::Kimlik.new.sorgula(user.id_number.to_i)
+      @response = Kps::Omu::Kimlik.new.sorgula(user.id_number.to_i)
     end
 
     # callbacks

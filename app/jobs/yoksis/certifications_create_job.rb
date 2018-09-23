@@ -6,7 +6,7 @@ module Yoksis
 
     # slow operation
     def perform(user)
-      @response = Services::Yoksis::V1::Ozgecmis.new(user.id_number.to_i).certifications
+      @response = Yoksis::V1::Ozgecmis.new(user.id_number.to_i).certifications
     end
 
     # callbacks
