@@ -32,6 +32,6 @@ AllCops:
     - config/initializers/simple_form_bootstrap.rb
     - config/environments/*.rb
     - config/routes.rb
-    - app/services/kps/omu/adres.rb # WIP
-    - app/services/kps/omu/kimlik.rb # WIP
+    - lib/api/kps/omu/adres.rb # WIP
+    - lib/api/kps/omu/kimlik.rb # WIP
     - Vagrantfile

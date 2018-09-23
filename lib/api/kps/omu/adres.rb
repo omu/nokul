@@ -18,11 +18,11 @@ module Kps
 
         yerlesim_yeri = response[:yerlesim_yeri_adresi]
         address_root = if yerlesim_yeri[:il_ilce_merkez_adresi].present?
-                          yerlesim_yeri[:il_ilce_merkez_adresi]
-                        elsif yerlesim_yeri[:koy_adresi].present?
-                          yerlesim_yeri[:koy_adresi]
-                        elsif yerlesim_yeri[:yurt_disi_adresi].present?
-                          yerlesim_yeri[:yurt_disi_adresi]
+                         yerlesim_yeri[:il_ilce_merkez_adresi]
+                       elsif yerlesim_yeri[:koy_adresi].present?
+                         yerlesim_yeri[:koy_adresi]
+                       elsif yerlesim_yeri[:yurt_disi_adresi].present?
+                         yerlesim_yeri[:yurt_disi_adresi]
                         end
 
         # return a hash, ready to use for building an Address.
