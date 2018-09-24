@@ -66,7 +66,7 @@ class User < ApplicationRecord
 
   def permalink
     username, domain = email.split('@') if email
-    username if domain.eql?('omu.edu.tr')
+    username if domain.eql?(SETTINGS['email']['domain'])
   end
 
   # custom methods
