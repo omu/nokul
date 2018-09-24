@@ -227,6 +227,14 @@ ActiveRecord::Schema.define(version: 2018_09_20_223813) do
     t.index ["unit_id"], name: "index_courses_on_unit_id"
   end
 
+  create_table "curriculums", force: :cascade do |t|
+    t.string "name"
+    t.bigint "unit_id"
+    t.integer "number_of_semesters"
+    t.integer "status", null: false
+    t.index ["unit_id"], name: "index_curriculums_on_unit_id"
+  end
+
   create_table "districts", force: :cascade do |t|
     t.string "name", null: false
     t.string "mernis_code"
@@ -276,11 +284,6 @@ ActiveRecord::Schema.define(version: 2018_09_20_223813) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
-  create_table "high_school_types", force: :cascade do |t|
-    t.string "name", null: false
-    t.integer "code", null: false
-  end
-
   create_table "group_courses", force: :cascade do |t|
     t.bigint "course_id"
     t.bigint "course_unit_group_id"
@@ -288,6 +291,11 @@ ActiveRecord::Schema.define(version: 2018_09_20_223813) do
     t.datetime "updated_at", null: false
     t.index ["course_id"], name: "index_group_courses_on_course_id"
     t.index ["course_unit_group_id"], name: "index_group_courses_on_course_unit_group_id"
+  end
+
+  create_table "high_school_types", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "code", null: false
   end
 
   create_table "identities", force: :cascade do |t|
@@ -478,6 +486,13 @@ ActiveRecord::Schema.define(version: 2018_09_20_223813) do
     t.index ["unit_id"], name: "index_unit_calendar_events_on_unit_id"
   end
 
+  create_table "unit_curriculums", force: :cascade do |t|
+    t.bigint "unit_id"
+    t.bigint "curriculum_id"
+    t.index ["curriculum_id"], name: "index_unit_curriculums_on_curriculum_id"
+    t.index ["unit_id"], name: "index_unit_curriculums_on_unit_id"
+  end
+
   create_table "unit_instruction_languages", force: :cascade do |t|
     t.string "name", null: false
     t.integer "code", null: false
@@ -580,6 +595,7 @@ ActiveRecord::Schema.define(version: 2018_09_20_223813) do
   add_foreign_key "course_unit_groups", "course_group_types"
   add_foreign_key "course_unit_groups", "units"
   add_foreign_key "courses", "units"
+  add_foreign_key "curriculums", "units"
   add_foreign_key "districts", "cities"
   add_foreign_key "duties", "employees"
   add_foreign_key "duties", "units"
@@ -600,6 +616,8 @@ ActiveRecord::Schema.define(version: 2018_09_20_223813) do
   add_foreign_key "unit_calendar_events", "academic_calendars"
   add_foreign_key "unit_calendar_events", "calendar_titles"
   add_foreign_key "unit_calendar_events", "units"
+  add_foreign_key "unit_curriculums", "curriculums"
+  add_foreign_key "unit_curriculums", "units"
   add_foreign_key "units", "districts"
   add_foreign_key "units", "unit_instruction_languages"
   add_foreign_key "units", "unit_instruction_types"

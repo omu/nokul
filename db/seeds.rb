@@ -10,10 +10,7 @@ Rake::Task['import:all'].invoke
 UnitType.create(name: 'Kurul / Komisyon', code: 200)
 
 # Import prospective students of 2018
-Osym::ImportProspectiveStudentsJob.new.perform_now
-
-# Fetch Academic Staff from YOKSIS
-Rake::Task['fetch:academic_staff'].invoke
+Osym::ImportProspectiveStudentsJob.perform_later
 
 # Produced data for beta environment
 if Rails.env.beta? || Rails.env.development?
@@ -21,3 +18,6 @@ if Rails.env.beta? || Rails.env.development?
     load seed
   end
 end
+
+# Fetch Academic Staff from YOKSIS
+Rake::Task['fetch:academic_staff'].invoke

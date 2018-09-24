@@ -36,7 +36,7 @@ namespace :fetch do
 
   desc 'fetches an individual reference'
   task :reference, %i[soap_method klass] => [:environment] do |_, args|
-    client = Services::Yoksis::V1::Referanslar.new
+    client = Yoksis::V1::Referanslar.new
     api_name = client.class.to_s.split('::')[1]
     endpoint = client.class.to_s.split('::')[3]
 
