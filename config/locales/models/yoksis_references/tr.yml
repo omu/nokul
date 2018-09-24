@@ -1,6 +1,9 @@
 tr:
   activerecord:
     attributes:
+      high_school_type: &high_school_type_attributes
+        name: Lise Türü
+        code: Kodu
       student_disability_type: &student_disability_type_attributes
         name: Öğrenci Engel Türü
         code: Kodu
@@ -55,6 +58,9 @@ tr:
           committee: Kurul
   helpers:
     submit:
+      high_school_type:
+        create: Lise Giriş Türü Oluştur
+        update: Lise Giriş Türünü Güncelle
       student_disability_type:
         create: Öğrenci Engel Türü Oluştur
         update: Öğrenci Engel Türünü Güncelle
@@ -98,6 +104,22 @@ tr:
         create: Üniversite Türü Oluştur
         update: Üniversite Türünü Güncelle
   yoksis_references:
+    high_school_types:
+      index:
+        <<: *high_school_type_attributes
+        new_high_school_type_link: Yeni Lise Türü
+        card_header: Lise Türleri
+      new:
+        form_title: Lise Türü Oluştur
+      edit:
+        form_title: Lise Türünü Güncelle
+      create:
+        success: Lise türü başarıyla oluşturuldu.
+      destroy:
+        success: Lise türü başarıyla silindi.
+        warning: Lise türü silinemedi!
+      update:
+        success: Lise türü başarıyla güncellendi.
     student_disability_types:
       index:
         <<: *student_disability_type_attributes
