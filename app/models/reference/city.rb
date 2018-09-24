@@ -18,7 +18,7 @@ class City < ApplicationRecord
   has_many :units, through: :districts
 
   # validations
-  validates :name, presence: true, uniqueness: true
+  validates :name, presence: true, uniqueness: { scope: %i[country_id] }
   validates :alpha_2_code, presence: true, uniqueness: true
 
   # callbacks
