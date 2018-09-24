@@ -73,7 +73,7 @@ module ReferenceResourceTest
     end
 
     def translate(key)
-      t("references.#{controller_name}#{key}")
+      t("yoksis_references.#{controller_name}#{key}")
     end
   end
   # rubocop:enable Metrics/BlockLength

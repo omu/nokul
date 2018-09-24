@@ -35,8 +35,6 @@ Rails.application.routes.draw do
     resources :calendar_types
   end
 
-  resources :languages
-
   resources :units do
     member do
       get :courses, defaults: { format: :json }
@@ -61,14 +59,8 @@ Rails.application.routes.draw do
     resources :prospective_students
   end
 
-  scope module: :locations do
-    resources :countries do
-      resources :cities, except: [:index] do
-        resources :districts, except: [:show, :index] do
-        end
-      end
-    end
-  end
+  draw :references
+  draw :yoksis_references
 
   resources :users do
     get 'save_address_from_mernis', on: :member
@@ -89,7 +81,7 @@ Rails.application.routes.draw do
   get '/profiles/:id', to: 'public_profile#show'
   get '/profiles/:id/vcard',  to: 'public_profile#vcard', as: :profile_vcard
 
-  scope module: :references do
+  scope module: :yoksis_references do
     resources :student_disability_types, except: :show
     resources :student_drop_out_types, except: :show
     resources :student_education_levels, except: :show
