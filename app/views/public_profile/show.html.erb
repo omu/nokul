@@ -1,5 +1,3 @@
-<!-- WORK IN PROGRESS. DRAFT TEMPLATE -->
-
 <style type="text/css">
   .card-header {
     background-image: url('<%= asset_url("public_profile/lecture-hall.jpg") %>');
@@ -9,69 +7,104 @@
   }
 </style>
 
-<div class='col-sm-12'>
-  <div class='card'>
-    <div class="card-header">
-      <a href="https://placeholder.com"><img class="img-responsive" src="http://via.placeholder.com/150x150"></a>
-      <div class="card-header-actions">
-        <%= link_to(profile_vcard_path(format: 'vcf'), class: 'btn btn-sm btn-light') do %>
-          <%= fa_icon('id-card', text: 'vCard') %>
-        <% end %>
-        <%= link_to(root_path, class: 'btn btn-sm btn-light') do %>
-          <%= fa_icon('id-card', text: 'ORCID') %>
-        <% end %>
+<div class="col-sm-12">
+  <div class="card">
+    <div class="card-header text-white">
+      <div class="row">
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12" style="text-align: right;">
+          <a href="https://placeholder.com"><img class="img-fluid" src="https://via.placeholder.com/150x150" /></a>
+        </div>
+        <div class="col-lg-8 col-md-7 col-sm-8 col-xs-12">
+          <div class="pt-4">
+            <h2>
+              <%= @identity.name %>
+            </h2>
+            <h3><%= @user.title %></h3>
+            <p class="social">
+              <a class="btn btn-brand btn-sm btn-twitter" target="_blank" href="https://www.twitter.com/<%= @user.twitter %>" type="button" style="margin-bottom: 4px">
+                <i class="fa fa-twitter"></i>
+              </a>
+              <a class="btn btn-brand btn-sm btn-linkedin" target="_blank" href="https://www.linkedin.com/<%= @user.linkedin %>" type="button" style="margin-bottom: 4px">
+                <i class="fa fa-linkedin"></i>
+              </a>
+              <a class="btn btn-brand btn-sm btn-html5" target="_blank" href="http://<%= @user.profile_preferences['website'] %>" rel="nofollow" type="button" style="margin-bottom: 4px">
+                <i class="fa fa-globe"></i>
+              </a>
+              <a class="btn btn-brand btn-sm btn-twitter" target="_blank" href="https://www.skype.com/<%= @user.skype %>" type="button" style="margin-bottom: 4px">
+                <i class="fa fa-skype"></i>
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-12 col-xs-12">
+          <div class="card-header-actions">            
+            <%= link_to(root_path, class: 'btn btn-sm btn-light') do %>
+              <%= fa_icon('id-card', text: 'ORCID') %>
+            <% end %>
+            <%= link_to(profile_vcard_path(format: 'vcf'), class: 'btn btn-sm btn-light') do %>
+              <%= fa_icon('id-card', text: 'vCard') %>
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
-    <div class='card-body'>
+    <div class="card-body">
       <div class="col-sm-12">
         <ul class="nav nav-tabs" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active show" data-toggle="tab" href="#home4" role="tab" aria-controls="home" aria-selected="true">
-              <i class="icon-calculator"></i> Özgeçmiş &nbsp;
+            <a class="nav-link active show" data-toggle="tab" href="#resume" role="tab" aria-controls="home" aria-selected="true">
+              <i class="fa fa-user"></i> Özgeçmiş &nbsp;
             </a>
           </li>
+          <% unless (count = @user.articles.count).zero? %>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#profile4" role="tab" aria-controls="profile" aria-selected="false">
-              <i class="icon-basket-loaded"></i> Araştırma Alanları &nbsp;
-              <span class="badge badge-pill badge-danger">29</span>
+            <a class="nav-link" data-toggle="tab" href="#articles" role="tab" aria-controls="profile" aria-selected="false">
+              <i class="fa fa-research"></i> Makaleler &nbsp;
+              <span class="badge badge-pill badge-warning"><%= count %></span>
             </a>
           </li>
+          <% end %>
+
+          <% unless (count = @user.projects.count).zero? %>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#messages4" role="tab" aria-controls="messages" aria-selected="false">
-              <i class="icon-pie-chart"></i> Yayınlar</a>
-            </li>
-          </ul>
-          <div class="tab-content">
-            <div class="tab-pane active show" id="home4" role="tabpanel">
-              <div class='row'>
-                <div class="col-sm-12">
-                  <table class='table table-responsive-sm'>
-                    <tr>
-                      <td>Email</td>
-                      <td><%= @employee.user.email %></td>
-                    </tr>
-                    <tr>
-                      <td>Ad</td>
-                      <td><%= @identity.first_name %></td>
-                    </tr>
-                    <tr>
-                      <td>Soyad</td>
-                      <td><%= @identity.last_name %></td>
-                    </tr>
-                  </table>
-                </div>
+            <a class="nav-link" data-toggle="tab" href="#projects" role="tab" aria-controls="messages" aria-selected="false">
+              <i class="fa fa-book"></i> Projeler
+              <span class="badge badge-pill badge-success"><%= count %></span>
+            </a>
+          </li>
+          <% end %>
+
+          <% unless (count = @user.certifications.count).zero? %>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#certs" role="tab" aria-controls="messages" aria-selected="false">
+              <i class="fa fa-book"></i> Sertifikalar
+              <span class="badge badge-pill badge-info"><%= count %></span>
+            </a>
+          </li>
+          <% end %>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active show" id="resume" role="tabpanel">
+            <div class="row">
+              <div class="col-sm-8">
+                <%= render 'resume', locals: { duties: @user.duties, positions: @employee.positions } %>
+              </div>
+              <div class="col-sm-4">
+                <%= render 'info' %>
               </div>
             </div>
-            <div class="tab-pane" id="profile4" role="tabpanel">
-              2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </div>
-            <div class="tab-pane" id="messages4" role="tabpanel">
-              3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </div>
+          </div>
+          <div class="tab-pane" id="articles" role="tabpanel">
+            <%= render 'articles', locals: { articles: @user.articles } %>
+          </div>
+          <div class="tab-pane" id="projects" role="tabpanel">
+            <%= render 'projects', locals: { projects: @user.projects } %>
+          </div>
+          <div class="tab-pane" id="certs" role="tablist">
+            <%= render 'certifications', locals: { certifications: @user.certifications } %>
           </div>
         </div>
+      </div>
     </div>
   </div>
 </div>
