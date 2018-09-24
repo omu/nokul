@@ -18,6 +18,7 @@ en:
         users: Users
         references: References
         documents: Documents
+        high_school_types: High School Types
         student_disability_types: Disability Types
         student_drop_out_types: Drop Out Types
         student_education_levels: Education Levels

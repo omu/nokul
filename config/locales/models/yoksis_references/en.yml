@@ -1,6 +1,9 @@
 en:
   activerecord:
     attributes:
+      high_school_type: &high_school_type_attributes
+        name: High School Type
+        code: Code
       student_disability_type: &student_disability_type_attributes
         name: Student Disability Type
         code: Code
@@ -55,6 +58,9 @@ en:
           committee: Committee
   helpers:
     submit:
+      high_school_type:
+        create: Create High School Type
+        update: Update High School Type
       student_disability_type:
         create: Create Student Disability Type
         update: Update Student Disability Type
@@ -98,6 +104,22 @@ en:
         create: Create University Type
         update: Update University Type
   yoksis_references:
+    high_school_types:
+      index:
+        <<: *high_school_type_attributes
+        new_high_school_type_link: New High School Type
+        card_header: High School Types
+      new:
+        form_title: Create a High School Type
+      edit:
+        form_title: Update the High School Type
+      create:
+        success: High school type successfully created.
+      destroy:
+        success: High school type successfully deleted.
+        warning: High school type could not be deleted.
+      update:
+        success: High school type successfully updated.
     student_disability_types:
       index:
         <<: *student_disability_type_attributes
