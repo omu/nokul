@@ -1,0 +1,48 @@
+<div class="pl-1 pt-2">
+  <h4>Uzmanlık Alanları</h4>
+  <ul class="pl-4">
+    <li style="list-style: none;">&mdash;</li>
+  </ul>
+</div>
+
+<div class="pl-1 pt-2">
+  <h4>Akademik Görevler</h4>
+  <ul class="pl-4 text-muted">
+    <% locals[:duties].each do |duty| %>
+      <li>
+        <%= duty.unit.name %> 
+        (<%= duty.start_date.strftime('%Y') %> - <%= duty.end_date ? duty.end_date.strftime('%Y') : ' Halen ' %>)
+      </li>
+    <% end.empty? and begin %>
+      <li style="list-style: none;">&mdash;</li>
+    <% end %>
+  </ul>
+</div>
+
+<div class="pl-1 pt-2">
+  <h4>İdari Görevler</h4>
+  <ul class="pl-4 text-muted">
+    <% locals[:positions].each do |position| %>
+      <li>
+        <%= position.duty.unit.name %> - 
+        <%= position.administrative_function.name %>
+      </li>
+    <% end.empty? and begin %>
+      <li style="list-style: none;">&mdash;</li>
+    <% end %>
+  </ul>
+</div>
+
+<div class="pl-1 pt-2">
+  <h4>Ödüller</h4>
+  <ul class="pl-4">
+    <li style="list-style: none;">&mdash;</li>
+  </ul>
+</div>
+
+<div class="pl-1 pt-2">
+  <h4>Eğitim Bilgileri</h4>
+  <ul class="pl-4">
+    <li style="list-style: none;">&mdash;</li>
+  </ul>
+</div>
