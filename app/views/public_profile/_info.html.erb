@@ -1,0 +1,26 @@
+<table class='table table-responsive-sm'>
+  <tr>
+    <td>Doğum Yeri</td>
+    <td><%= @identity.place_of_birth %></td>
+  </tr>
+  <tr>
+    <td>Yabancı Diller</td>
+    <td>&mdash;</td>
+  </tr>
+  <tr>
+    <td>E-posta</td>
+    <td><%= @user.email %></td>
+  </tr>
+  <tr>
+    <td>Website</td>
+    <td><%= @user.profile_preferences['website'] || '&mdash;'.html_safe %></td>
+  </tr>
+  <tr>
+    <td>Dahili</td>
+    <td><%= @user.profile_preferences['extension_number'] || '&mdash;'.html_safe %></td>
+  </tr>
+  <tr>
+    <td>Uzmanlık Alanları</td>
+    <td>&mdash;</td>
+  </tr>
+</table>

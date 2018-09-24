@@ -78,6 +78,9 @@ Rails.application.routes.draw do
   end
 
   # public profiles
+  get '/profiles', to: 'public_profile#index'
+  post '/profiles/search', to: 'public_profile#search'
+  get '/profiles/:id', to: 'public_profile#show', as: :profiles_show
   get '/profiles/:id', to: 'public_profile#show'
   get '/profiles/:id/vcard',  to: 'public_profile#vcard', as: :profile_vcard
 

@@ -34,4 +34,9 @@ class Identity < ApplicationRecord
     self.fathers_name = fathers_name.capitalize_all if fathers_name
     self.place_of_birth = place_of_birth.capitalize_all if place_of_birth
   end
+
+  # custom methods
+  def name
+    "#{first_name} #{last_name}"
+  end
 end
