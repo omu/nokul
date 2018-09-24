@@ -5,12 +5,12 @@
 # TODO: will refactor when we decide how to manage organizational settings
 
 settings = {
-  "omu" => {
-    "host" => "https://nokul.app.omu.sh",
-    "email" => {
-      "domain" => "omu.edu.tr",
-      "default_from" => "noreply@baum.omu.edu.tr",
-      "support" => "hotline@baum.omu.edu.tr"
+  'omu' => {
+    'host' => 'https://nokul.app.omu.sh',
+    'email' => {
+      'domain' => 'omu.edu.tr',
+      'default_from' => 'noreply@baum.omu.edu.tr',
+      'support' => 'hotline@baum.omu.edu.tr'
     }
   }
 }
