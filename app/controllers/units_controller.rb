@@ -34,7 +34,7 @@ class UnitsController < ApplicationController
   end
 
   def courses
-    @courses = @unit.courses
+    @courses = @unit.courses.active
   end
 
   def programs
