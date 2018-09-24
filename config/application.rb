@@ -25,15 +25,14 @@ module Nokul
     I18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.yml').to_s]
 
     # organize models in sub-folders
-    config.autoload_paths += Dir[
-      Rails.root.join('app', 'models', '**')
-    ]
+    # rubocop:disable Rails/FilePath
+    config.autoload_paths += Dir[Rails.root.join('app', 'models', '{*/}')]
+    # rubocop:enable Rails/FilePath
 
-    reloader.to_prepare do
-      Dir[
-        Rails.root.join('app', 'services', '**', '*.rb')
-      ].each { |file| require_dependency file }
-    end
+    Dir[
+      Rails.root.join('lib', 'support', '**', '*.rb'),
+      Rails.root.join('lib', 'api', '**', '*.rb')
+    ].each { |file| require file }
 
     # use app-wide e-mail template for devise
     config.to_prepare { Devise::Mailer.layout 'mailer' }
