@@ -18,7 +18,7 @@ class CourseUnitGroup < ApplicationRecord
 
   # validations
   validates :name, presence: true
-  validates :total_ects_condition, presence: true
+  validates :total_ects_condition, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :course_ids, presence: true
 
   # callbacks
