@@ -15,7 +15,7 @@ class KpsIdentityJobTest < ActiveJob::TestCase
       true
     end
 
-    Services::Kps::Omu::Kimlik.stub :new, client do
+    Kps::Omu::Kimlik.stub :new, client do
       assert Kps::IdentitySaveJob.perform_later({}) # dummy hash
     end
   end
