@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 scope module: :yoksis_references do
   resources :high_school_types, except: :show
   resources :student_disability_types, except: :show
