@@ -24,11 +24,6 @@ module Nokul
     # auto-load nested translation folders ie: locales/models/foo.yml
     I18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.yml').to_s]
 
-    # organize models in sub-folders
-    # rubocop:disable Rails/FilePath
-    config.autoload_paths += Dir[Rails.root.join('app', 'models', '{*/}')]
-    # rubocop:enable Rails/FilePath
-
     Dir[
       Rails.root.join('lib', 'support', '**', '*.rb'),
       Rails.root.join('lib', 'api', '**', '*.rb')
