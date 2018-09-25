@@ -63,6 +63,7 @@ en:
         warning: Agenda Type can not be deleted!
     dashboard:
       index:
+        agendas: Agendas
         name: Committee / Commission Name
         detsis_id: DETSIS ID
         yoksis_id: YOKSIS ID
