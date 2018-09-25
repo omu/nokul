@@ -2,8 +2,6 @@
   <%= link_to_new new_committee_agenda_path(@committee), t('.new_agenda_link') %>
 </div>
 
-<%= render 'search' %>
-
 <div class='row'>
   <div class='col-lg-12'>
     <div class='card'>
@@ -11,6 +9,7 @@
         <%= fa_icon 'tasks', text: t('.card_header') %>
       </div>
       <div class='card-body'>
+        <%= render 'search' %>
         <table class='table table-responsive-sm table-striped'>
           <thead>
             <tr>
