@@ -65,6 +65,7 @@ tr:
         warning: Gündem Türü silinemedi!
     dashboard:
       index:
+        agendas: Gündemler
         name: Kurul / Komisyon Adı
         detsis_id: DETSIS ID
         yoksis_id: YOKSIS ID
