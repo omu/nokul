@@ -41,6 +41,10 @@ en:
       destroy:
         success: Agenda successfully deleted.
         warning: Agenda can not be deleted!
+      search:
+        agenda_type_id: Agenda Type
+        smart_search_placeholder: Agenda Description
+        status: Agenda Status
     agenda_types:
       index:
         <<: *agenda_type_attributes
