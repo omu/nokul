@@ -11,7 +11,7 @@ module Committee
     end
 
     def show
-      @committee = Unit.find(params[:id])
+      @committee = Unit.committees.find(params[:id])
       @agendas = pagy_by_search(
         @committee.agendas.includes(:agenda_type)
       )
