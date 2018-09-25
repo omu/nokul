@@ -51,4 +51,12 @@ module LinkHelper
       class: 'btn btn-outline-info btn-sm'
     )
   end
+
+  def link_to_file(path = nil, text = t('action_group.file'))
+    link_to(
+      fa_icon('file-word-o', text: text),
+      path,
+      class: 'btn btn-secondary btn-sm'
+    )
+  end
 end
