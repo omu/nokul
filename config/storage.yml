@@ -14,7 +14,3 @@ development:
 test:
   service: Disk
   root: <%= Rails.root.join('tmp/storage') %>
-
-production:
-  service: Mirror
-  primary: minio
