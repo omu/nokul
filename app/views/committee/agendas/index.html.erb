@@ -34,6 +34,7 @@
               <td><%= agenda.agenda_type.try(:name) %></td>
               <td><%= enum_t(agenda, :status) %></td>
               <td>
+                <%= link_to_file(url_for(agenda.agenda_file)) if agenda.agenda_file.attached? %>
                 <%= link_to_edit(edit_committee_agenda_path(@committee.id, agenda.id)) %>
                 <%= link_to_destroy(committee_agenda_path(@committee.id, agenda.id)) %>
               </td>
