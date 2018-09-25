@@ -8,6 +8,7 @@ tr:
     new: Yeni
     show: Görüntüle
     update: Güncelle
+    file: Dosya Görüntüle
   are_you_sure: Emin misiniz?
   save: Kaydet
   search: Arama Yap

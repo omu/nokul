@@ -2,8 +2,9 @@ tr:
   activerecord:
     attributes:
       agenda: &agenda_attributes
-        description: Gündem Açıklaması
         agenda_type_id: Gündem Türü
+        agenda_file: Gündem Dosyası
+        description: Gündem Açıklaması
         status: Gündem Durumu
       agenda_type: &agenda_type_attributes
         name: Gündem Türü Adı

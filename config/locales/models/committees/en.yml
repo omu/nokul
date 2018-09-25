@@ -2,8 +2,9 @@ en:
   activerecord:
     attributes:
       agenda: &agenda_attributes
-        description: Agenda Description
         agenda_type_id: Agenda Type
+        agenda_file: Agenda File
+        description: Agenda Description
         status: Agenda Status
       agenda_type: &agenda_type_attributes
         name: Name of Agenda Type

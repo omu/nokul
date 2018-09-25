@@ -10,6 +10,7 @@ class Agenda < ApplicationRecord
   )
 
   # relations
+  has_one_attached :agenda_file
   belongs_to :unit
   belongs_to :agenda_type
 
