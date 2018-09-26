@@ -22,11 +22,11 @@
         <div class="card-body">
           <table class='table table-responsive-sm'>
             <tr>
-              <td><%= t('.name') %></td>
+              <td><%= t('.type') %></td>
               <td>
                 <span class="badge badge-secondary">
-                  <%= fa_icon('gavel', text: t('activerecord.enums.identity.names.formal')) if identity.formal? %>
-                  <%= fa_icon('user', text: t('activerecord.enums.identity.names.informal')) if identity.informal? %>
+                  <%= fa_icon('gavel', text: t('activerecord.enums.identity.types.formal')) if identity.formal? %>
+                  <%= fa_icon('user', text: t('activerecord.enums.identity.types.informal')) if identity.informal? %>
                 </span>
               </td>
             </tr>

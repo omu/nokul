@@ -19,11 +19,11 @@
         <div class="card-body">
           <table class='table table-responsive-sm'>
             <tr>
-              <td><%= t('activerecord.attributes.address.name') %></td>
+              <td><%= t('activerecord.attributes.address.type') %></td>
               <td>
                 <span class="badge badge-secondary">
-                  <%= fa_icon('gavel', text: t('activerecord.enums.address.names.formal')) if address.formal? %>
-                  <%= fa_icon('address-book', text: t('activerecord.enums.address.names.informal')) if address.informal? %>
+                  <%= fa_icon('gavel', text: t('activerecord.enums.address.types.formal')) if address.formal? %>
+                  <%= fa_icon('address-book', text: t('activerecord.enums.address.types.informal')) if address.informal? %>
                 </span>
               </td>
             </tr>
