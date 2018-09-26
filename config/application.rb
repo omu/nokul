@@ -35,6 +35,9 @@ module Nokul
     # image-processor
     config.active_storage.variant_processor = :vips
 
+    # tenant configuration
+    config.tenant = config_for("tenants/#{ENV['RAILS_TENANT'] || 'omu'}").to_deep_ostruct
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
