@@ -40,4 +40,13 @@ class ProspectiveStudent < ApplicationRecord
   enum nationality: { turkish: 1, kktc: 2, foreign: 3 }
   enum placement_type: { general: 1, additional_score: 2 }
   enum additional_score: { handicapped: 1 }
+
+  # custom methods
+  def can_permanently_register?
+    military_status && obs_status && meb_status
+  end
+
+  def can_temporarily_register?
+    military_status
+  end
 end

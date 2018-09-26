@@ -4,7 +4,7 @@ module StudentManagement
   class ProspectiveStudentsController < ApplicationController
     include PagyBackendWithHelpers
 
-    before_action :set_prospective_student, only: %i[show]
+    before_action :set_prospective_student, only: %i[show register]
 
     def index
       prospective_students = ProspectiveStudent.includes(:unit, :student_entrance_type)
@@ -13,6 +13,10 @@ module StudentManagement
     end
 
     def show; end
+
+    def register
+      
+    end
 
     private
 

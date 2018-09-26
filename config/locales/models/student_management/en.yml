@@ -70,6 +70,10 @@ en:
         prospective_student: Prospective Student
         identity_information: Identity Information
         other_information: Other Information
+        registered_to: 'Already registered to %{program}.'
+        permanently_register: Permanently Register
+        temporarily_register: Temporarily Register
+        can_not_register: Can Not Register
       index:
         <<: *prospective_student_attributes
         prospective_students: Prospective Students
