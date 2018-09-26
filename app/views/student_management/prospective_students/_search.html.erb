@@ -64,7 +64,17 @@
               <div class="form-group">
                 <label for="unit_id"><%= t('.unit') %></label>
                 <%= select_tag(:unit_id,
-                               options_from_collection_for_select(Unit.all, :id, :name),
+                               options_from_collection_for_select(Unit.active.programs.order(:name), :id, :name),
+                               include_blank: true,
+                               class: 'form-control',
+                               style: 'width: 100%') %>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <label for="student_entrance_type_id"><%= t('.student_entrance_type') %></label>
+                <%= select_tag(:student_entrance_type_id,
+                               options_from_collection_for_select(StudentEntranceType.order(:name), :id, :name),
                                include_blank: true,
                                class: 'form-control',
                                style: 'width: 100%') %>
