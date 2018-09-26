@@ -12,7 +12,7 @@
               <%= f.error_notification %>
             </div>
             <div class='form-group col-sm-6'>
-              <%= f.input :year, collection: years %>
+              <%= f.input :year, collection: selectible_year_range(1975) %>
             </div>
             <div class='form-group col-sm-6'>
               <%= f.input :term, collection: enum_options_for_select(f.object.class, :term) %>

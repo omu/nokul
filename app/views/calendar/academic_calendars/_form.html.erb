@@ -16,7 +16,7 @@
               <%= f.input :name %>
             </div>
             <div class='form-group col-sm-6'>
-              <%= f.association :academic_term, label_method: lambda { |academic_term| academic_term_full_name(academic_term) }, value_method: :id %>
+              <%= f.association :academic_term, label_method: lambda { |academic_term| full_name(academic_term) }, value_method: :id %>
             </div>
             <div class='form-group col-sm-6'>
               <%= f.association :calendar_type %>
