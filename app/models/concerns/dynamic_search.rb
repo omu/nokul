@@ -16,9 +16,10 @@ module DynamicSearch
 
     def dynamic_search(params = {})
       raise ArgumentError, 'parameter must be Hash' unless [ActionController::Parameters, Hash].include?(params.class)
-      return search(params[:term]) if params[:term].present?
 
-      dynamic_where(params)
+      results = dynamic_where(params)
+
+      params[:term].present? ? results.search(params[:term]) : results
     end
 
     private
