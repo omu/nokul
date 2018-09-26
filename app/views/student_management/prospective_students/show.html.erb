@@ -65,9 +65,13 @@
         <table class="table table-responsive-sm">
           <tbody>
             <tr>
+              <td><%= t('.student_entrance_type') %></td>
+              <td><%= @prospective_student.student_entrance_type.name %></td>
+            </tr>
+            <tr>
               <td><%= t('.unit') %></td>
               <% unit = @prospective_student.unit %>
-              <td><%= unit.name %> / <%= unit.parent.name %> / <%= unit.parent.try(:parent).name %></td>
+              <td><%= unit.name %> / <%= unit.parent.name %> / <%= unit.parent.try(:parent).try(:name) %></td>
             </tr>
             <tr>
               <td><%= t('.state_of_education') %></td>

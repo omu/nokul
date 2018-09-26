@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_19_121858) do
+ActiveRecord::Schema.define(version: 2018_09_26_182120) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -400,9 +400,11 @@ ActiveRecord::Schema.define(version: 2018_09_19_121858) do
     t.string "obs_registered_program", limit: 255
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "student_entrance_type_id"
     t.index ["high_school_type_id"], name: "index_prospective_students_on_high_school_type_id"
     t.index ["language_id"], name: "index_prospective_students_on_language_id"
     t.index ["student_disability_type_id"], name: "index_prospective_students_on_student_disability_type_id"
+    t.index ["student_entrance_type_id"], name: "index_prospective_students_on_student_entrance_type_id"
     t.index ["unit_id"], name: "index_prospective_students_on_unit_id"
   end
 

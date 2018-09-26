@@ -5,7 +5,8 @@ namespace :import do
   task all: %w[
     countries
     yoksis_country_codes
-    cities districts
+    cities
+    districts
     languages
     titles
     high_school_types

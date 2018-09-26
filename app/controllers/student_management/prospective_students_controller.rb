@@ -7,7 +7,8 @@ module StudentManagement
     before_action :set_prospective_student, only: %i[show]
 
     def index
-      prospective_students = ProspectiveStudent.includes(:unit).dynamic_search(search_params(ProspectiveStudent))
+      prospective_students = ProspectiveStudent.includes(:unit, :student_entrance_type)
+                                               .dynamic_search(search_params(ProspectiveStudent))
       @pagy, @prospective_students = pagy(prospective_students)
     end
 
