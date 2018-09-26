@@ -7,7 +7,7 @@ module CourseManagement
     before_action :set_course, only: %i[show edit update destroy]
 
     def index
-      courses = Course.includes(:unit)
+      courses = Course.includes(:unit, :language)
                       .dynamic_search(search_params(Course))
       @pagy, @courses = pagy(courses)
     end
