@@ -62,7 +62,10 @@ tr:
         success: Ders başarıyla güncellendi.
       search:
         smart_search_placeholder: Ders adı veya kodu
-        <<: *course_attributes
+        program_type: Tüm Program Türleri
+        language: Tüm Diller
+        unit: Tüm Birimler
+        status: Tüm Durumlar
       show:
         <<: *course_attributes
       index:
