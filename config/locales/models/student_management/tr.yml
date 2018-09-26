@@ -70,6 +70,10 @@ tr:
         prospective_student: Aday Öğrenci
         identity_information: Kimlik Bilgileri
         other_information: Diğer Bilgileri
+        registered_to: '%{program} isimli programda kayıtlı.'
+        permanently_register: Kesin Kayıt Yap
+        temporarily_register: Geçici Kayıt Yap
+        can_not_register: Kayıt Yapılamaz
       index:
         <<: *prospective_student_attributes
         prospective_students: Aday Öğrenciler
