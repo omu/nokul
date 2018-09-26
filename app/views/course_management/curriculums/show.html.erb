@@ -1,0 +1,46 @@
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class="alert alert-light">
+      <%= link_to_back curriculums_path %>
+      <%= link_to_edit edit_curriculum_path(@curriculum) %>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+         <%= fa_icon 'book' %><strong><%= @curriculum.name %></strong>
+      </div>
+      <div class="card-body table-responsive">
+        <table class='table table-bordered table-hover'>
+          <tbody>
+            <tr>
+              <th><%= t('.name') %></th>
+              <td><%= @curriculum.name %></td>
+            </tr>
+            <tr>
+              <th><%= t('.unit') %></th>
+              <td><%= @curriculum.unit.try(:name) %></td>
+            </tr>
+            <tr>
+              <th><%= t('.number_of_semesters') %></th>
+              <td><%= @curriculum.number_of_semesters %></td>
+            </tr>
+            <tr>
+              <th><%= t('.status') %></th>
+              <td><%= enum_t(@curriculum, :status) %></td>
+            </tr>
+            <tr>
+              <th><%= t('.programs') %></th>
+              <td>
+                <ul class="list-group">
+                  <% @curriculum.programs.each do |program| %>
+                    <li class="list-group-item list-group-item-info"><%= program.name %></li>
+                  <% end %>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

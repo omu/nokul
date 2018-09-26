@@ -2,54 +2,42 @@
 
 Rails.application.routes.draw do
   require 'sidekiq/web'
-
-  root to: 'home#index'
-
-  # devise routes
-  devise_for :users, path_prefix: 'devise', controllers: {
-    registrations: 'user/registrations',
-    passwords: 'user/passwords',
-    sessions: 'user/sessions'
-  }
-
-  # TODO: will add authorization when ready
   authenticate :user do
     mount Sidekiq::Web => '/sidekiq'
   end
 
-  # Account home page
-  scope module: :account do
-    resources :identities, except: [:show] do
-      get 'save_from_mernis', on: :collection
-    end
-    resources :addresses, except: :show do
-      get 'save_from_mernis', on: :collection
+  root to: 'home#index'
+
+  draw :devise
+  draw :account
+  draw :calendar
+
+  resources :units do
+    member do
+      get :courses, defaults: { format: :json }
+      get :programs, defaults: { format: :json }
     end
   end
 
-  # Academic calendars
-  scope module: :calendar do
-    resources :academic_calendars
-    resources :academic_terms, except: :show
-    resources :calendar_titles, except: :show
-    resources :calendar_types
+  resources :documents
+
+  resources :units do
+    resources :registration_documents
   end
 
-  resources :languages
-  resources :units
-
-  scope module: :curriculum do
+  scope module: :course_management do
     resources :courses
+    resources :course_unit_groups
+    resources :course_group_types, except: :show
+    resources :curriculums
   end
 
-  scope module: :locations do
-    resources :countries do
-      resources :cities, except: [:index] do
-        resources :districts, except: [:show, :index] do
-        end
-      end
-    end
+  scope module: :student_management do
+    resources :prospective_students
   end
+
+  draw :references
+  draw :yoksis_references
 
   resources :users do
     get 'save_address_from_mernis', on: :member
@@ -61,31 +49,12 @@ Rails.application.routes.draw do
     end
   end
 
-  scope module: :account do
-    get '/profile', to: 'profile#edit'
-    post '/profile', to: 'profile#update'
-  end
-
   # public profiles
+  get '/profiles', to: 'public_profile#index'
+  post '/profiles/search', to: 'public_profile#search'
+  get '/profiles/:id', to: 'public_profile#show', as: :profiles_show
   get '/profiles/:id', to: 'public_profile#show'
   get '/profiles/:id/vcard',  to: 'public_profile#vcard', as: :profile_vcard
-
-  scope module: :references do
-    resources :student_disability_types, except: :show
-    resources :student_drop_out_types, except: :show
-    resources :student_education_levels, except: :show
-    resources :student_entrance_point_types, except: :show
-    resources :student_entrance_types, except: :show
-    resources :student_grades, except: :show
-    resources :student_grading_systems, except: :show
-    resources :student_punishment_types, except: :show
-    resources :student_studentship_statuses, except: :show
-    resources :unit_instruction_languages, except: :show
-    resources :unit_instruction_types, except: :show
-    resources :unit_statuses, except: :show
-    resources :unit_types, except: :show
-    resources :university_types, except: :show
-  end
 
   scope module: :studies do
     get '/studies', to: 'dashboard#index'

@@ -16,6 +16,7 @@ class UnitTest < ActiveSupport::TestCase
     students
     positions
     administrative_functions
+    courses
   ].each do |property|
     test "a unit can communicate with #{property}" do
       assert units(:omu).send(property)
@@ -59,5 +60,57 @@ class UnitTest < ActiveSupport::TestCase
     assert_not_empty Unit.search('Ondokuz')
     assert Unit.search('Ondokuz').include?(units(:omu))
     assert_not Unit.search('Ondokuz').include?(units(:uzem))
+  end
+
+  # scopes
+  test 'active scope returns active units' do
+    assert_includes Unit.active, units(:omu)
+    assert_not_includes Unit.active, units(:cbu)
+  end
+
+  test 'committees scope returns committees type units' do
+    assert_includes Unit.committees, units(:muhendislik_fakultesi_yonetim_kurulu)
+    assert_not_includes Unit.committees, units(:omu)
+  end
+
+  test 'departments scope returns departments type units' do
+    assert_includes Unit.departments, units(:bilgisayar_muhendisligi)
+    assert_not_includes Unit.departments, units(:omu)
+  end
+
+  test 'faculties scope returns faculties type units' do
+    assert_includes Unit.faculties, units(:egitim_fakultesi)
+    assert_not_includes Unit.faculties, units(:omu)
+  end
+
+  test 'programs scope returns programs type units' do
+    assert_includes Unit.programs, units(:fen_bilgisi_ogretmenligi_programi)
+    assert_not_includes Unit.programs, units(:egitim_fakultesi)
+  end
+
+  test 'universities scope returns universities type units' do
+    assert_includes Unit.universities, units(:omu)
+    assert_not_includes Unit.universities, units(:egitim_fakultesi)
+  end
+
+  test 'majors scope returns majors type units' do
+    assert_includes Unit.majors, units(:bote_anabilim_dali)
+    assert_not_includes Unit.majors, units(:egitim_fakultesi)
+  end
+
+  test 'institutes scope returns institutes type units' do
+    assert_includes Unit.institutes, units(:egitim_bilimleri_enstitusu)
+    assert_not_includes Unit.institutes, units(:egitim_fakultesi)
+  end
+
+  test 'coursable scope returns coursable units' do
+    assert_equal Unit.coursable.count.to_i,
+                 Unit.departments.count +
+                 Unit.faculties.count +
+                 Unit.universities.count +
+                 Unit.majors.count +
+                 Unit.institutes.count +
+                 Unit.rectorships.count
+    assert_not_includes Unit.coursable, units(:uzem)
   end
 end

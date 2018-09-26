@@ -13,16 +13,19 @@
               <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
             </div>
             <div class='form-group col-sm-12'>
-              <%= f.input :unit_id, as: :hidden, input_html: { value: @committee.id } %>
-            </div>
-            <div class='form-group col-sm-12'>
               <%= f.input :description, required: true %>
             </div>
-            <div class='form-group col-sm-12'>
+            <div class='form-group col-sm-6'>
               <%= f.input :agenda_type_id, collection: AgendaType.all %>
             </div>
-            <div class='form-group col-sm-12'>
+            <div class='form-group col-sm-6'>
               <%= f.input :status, collection: enum_options_for_select(f.object.class, :status) %>
+            </div>
+            <div class='form-group col-sm-2'>
+              <%= f.input :agenda_file, as: :file %>
+            </div>
+            <div class='form-group'>
+              <%= link_to_file(url_for(agenda.agenda_file)) if f.object.agenda_file.attached? %>
             </div>
             <div class='form-group col-sm-12'>
               <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>

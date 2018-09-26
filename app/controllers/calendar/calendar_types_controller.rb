@@ -2,6 +2,8 @@
 
 module Calendar
   class CalendarTypesController < ApplicationController
+    include PagyBackendWithHelpers
+
     before_action :set_calendar_type, only: %i[show edit update destroy]
 
     def index

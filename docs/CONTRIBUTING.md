@@ -57,8 +57,6 @@ Harici servisler yalnızca BAUM-VPN'e açıktır. Geliştirme yaparken ihtiyaç 
 
 - [Kurulum dokümanını](/docs/development/installation.md) takip ederek projenin kurulumunu yapın.
 
-- Arka plan görevleri için `sidekiq`'i çalıştırın (`bundle exec sidekiq -q high -q low`).
-
 - [Stil](/docs/style/) kurallarını dikkatlice gözden geçirin.
 
 - Kod üzerinde değişiklikleri yapın.
@@ -71,11 +69,11 @@ Harici servisler yalnızca BAUM-VPN'e açıktır. Geliştirme yaparken ihtiyaç 
 
 - Yaptığınız değişikliğin test coverage oranını düşürmediğinden emin olun.
 
-- Değişikliklerinizi push etmeden önce çeşitli kontrolleri gerçekleştiren `pr` rake task'ini çalıştırın (`rake pr`):
+- Değişikliklerinizi push etmeden önce çeşitli kontrolleri gerçekleştiren `pull_request` rake task'ini çalıştırın (`rake pull_request`):
 
-- `pr` task'inden hata aldıysanız öncelikle bunları çözün ve commit'leyin.
+- `pull_request` task'inden hata aldıysanız öncelikle bunları çözün ve commit'leyin.
 
-- `pr` task'i başarıyla çalışıyorsa commit'lerinizi kendi branch'inize push edin.
+- `pull_request` task'i başarıyla çalışıyorsa commit'lerinizi kendi branch'inize push edin.
 
 ### Geliştirme Sonrası
 ----------------------

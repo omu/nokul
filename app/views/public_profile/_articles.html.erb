@@ -1,0 +1,5 @@
+<ul class="pl-4">
+  <% locals[:articles].each do |article| %>
+    <li><%= article.title %> - (<%= article.journal %>)</li>
+  <% end %>
+</ul>

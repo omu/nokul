@@ -10,9 +10,15 @@ en:
         academic_terms: Academic Terms
         academic_calendars: Academic Calendars
         courses: Courses
+        course_management: Course Management
+        course_unit_groups: Course Unit Group
+        course_group_types: Course Group Type
+        curriculums: Curriculums
         languages: Languages
         users: Users
         references: References
+        documents: Documents
+        high_school_types: High School Types
         student_disability_types: Disability Types
         student_drop_out_types: Drop Out Types
         student_education_levels: Education Levels
@@ -21,6 +27,7 @@ en:
         student_grades: Grades
         student_grading_systems: Grading Systems
         student_punishment_types: Punishment Types
+        student_management: Student Management
         student_studentship_statuses: Studentship Statuses
         unit_instruction_languages:  Instruction Languages
         unit_instruction_types: Instruction Types
@@ -31,3 +38,4 @@ en:
         committees: Committees
         committee_units: Committee Units
         agenda_types: Agenda Types
+        first_registration: Prospective Students

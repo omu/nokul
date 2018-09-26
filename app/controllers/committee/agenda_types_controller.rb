@@ -2,10 +2,12 @@
 
 module Committee
   class AgendaTypesController < ApplicationController
+    include PagyBackendWithHelpers
+
     before_action :set_agenda_type, only: %i[edit update destroy]
 
     def index
-      @agenda_types = pagy_by_search(AgendaType.all)
+      @agenda_types = pagy_by_search(AgendaType.order(:name))
     end
 
     def new

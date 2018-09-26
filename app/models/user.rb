@@ -30,7 +30,6 @@ class User < ApplicationRecord
   has_many :projects, dependent: :destroy
 
   # validations
-
   validates :email, presence: true, uniqueness: true
   validates :id_number, presence: true, uniqueness: true, numericality: { only_integer: true }, length: { is: 11 }
   validates_with EmailAddress::ActiveRecordValidator, field: :email
@@ -67,7 +66,7 @@ class User < ApplicationRecord
 
   def permalink
     username, domain = email.split('@') if email
-    username if domain.eql?('omu.edu.tr')
+    username if domain.eql?(Rails.application.config.tenant.email.domain)
   end
 
   # custom methods

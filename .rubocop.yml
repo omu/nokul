@@ -2,6 +2,8 @@ Style/AsciiComments:
   Description: 'Use only ascii symbols in comments.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#english-comments'
   Enabled: false
+Style/Lambda:
+  Enabled: false
 Documentation:
   Enabled: false
 Rails/UnknownEnv:
@@ -30,10 +32,8 @@ AllCops:
     - db/migrate/*.rb
     - config/initializers/simple_form.rb
     - config/initializers/simple_form_bootstrap.rb
-    - config/environments/development.rb
-    - config/environments/production.rb
-    - config/environments/test.rb
+    - config/environments/*.rb
     - config/routes.rb
-    - app/services/kps/omu/adres.rb # WIP
-    - app/services/kps/omu/kimlik.rb # WIP
+    - lib/api/kps/omu/adres.rb # WIP
+    - lib/api/kps/omu/kimlik.rb # WIP
     - Vagrantfile

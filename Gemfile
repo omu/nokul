@@ -16,7 +16,6 @@ gem 'ancestry'
 
 # active-storage
 gem 'aws-sdk-s3', require: false
-gem 'azure-storage', require: false
 gem 'image_processing', '~> 1.0'
 
 # authentication
@@ -54,17 +53,17 @@ gem 'rollbar'
 # permalinks
 gem 'friendly_id', '~> 5.2.0'
 
+# progressbar
+gem 'ruby-progressbar'
+
 group :development, :test do
   gem 'brakeman', require: false
   gem 'bundler-audit'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  # gem 'capybara', '>= 2.15', '< 4.0'
-  # gem 'chromedriver-helper'
   gem 'codacy-coverage', require: false
   gem 'dotenv-rails'
   gem 'reek'
   gem 'rubocop'
-  # gem 'selenium-webdriver'
   gem 'simplecov', require: false
 end
 

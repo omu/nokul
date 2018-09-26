@@ -9,13 +9,7 @@
         <%= fa_icon 'tasks', text: t('.card_header') %>
       </div>
       <div class='card-body'>
-        <%= form_tag committee_agendas_path, method: :get do %>
-          <div class="form-group">
-            <%= text_field_tag 'term', params[:term], placeholder: t('.description'), class: 'form-control' %>
-          </div>
-          <%= submit_tag t('search'), class: 'btn btn-primary' %>
-        <% end %>
-        <hr \>
+        <%= render 'search' %>
         <table class='table table-responsive-sm table-striped'>
           <thead>
             <tr>
@@ -34,6 +28,7 @@
               <td><%= agenda.agenda_type.try(:name) %></td>
               <td><%= enum_t(agenda, :status) %></td>
               <td>
+                <%= link_to_file(url_for(agenda.agenda_file)) if agenda.agenda_file.attached? %>
                 <%= link_to_edit(edit_committee_agenda_path(@committee.id, agenda.id)) %>
                 <%= link_to_destroy(committee_agenda_path(@committee.id, agenda.id)) %>
               </td>

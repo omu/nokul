@@ -1,0 +1,349 @@
+tr:
+  activerecord:
+    attributes:
+      high_school_type: &high_school_type_attributes
+        name: Lise Türü
+        code: Kodu
+      student_disability_type: &student_disability_type_attributes
+        name: Öğrenci Engel Türü
+        code: Kodu
+      student_drop_out_type: &student_drop_out_type_attributes
+        name: Öğrenci Ayrılma Nedeni
+        code: Kodu
+      student_education_level: &student_education_level_attributes
+        name: Öğrenci Doykm
+        code: Kodu
+      student_entrance_point_type: &student_entrance_point_type_attributes
+        name: Öğrenci Giriş Puan Türü
+        code: Kodu
+      student_entrance_type: &student_entrance_type_attributes
+        name: Öğrenci Giriş Türü
+        code: Kodu
+      student_grade: &student_grade_attributes
+        name: Öğrenci Sınıfı
+        code: Kodu
+      student_grading_system: &student_grading_system_attributes
+        name: Öğrenci Diploma Not Sistemi
+        code: Kodu
+      student_punishment_type: &student_punishment_type_attributes
+        name: Öğrenci Ceza Türü
+        code: Kodu
+      student_studentship_status: &student_studentship_status_attributes
+        name: Öğrencilik Hakkı
+        code: Kodu
+      unit_instruction_language: &unit_instruction_language_attributes
+        name: Öğrenim Dili
+        code: Kodu
+      unit_instruction_type: &unit_instruction_type_attributes
+        name: Öğrenim Türü
+        code: Kodu
+      unit_status: &unit_status_attributes
+        name: Aktiflik Durumu
+        code: Kodu
+      unit_type: &unit_type_attributes
+        name: Birim Türü
+        code: Kodu
+        group: Grup
+      university_type: &university_type_attributes
+        name: Üniversite Türü
+        code: Kodu
+    enums:
+      unit_type:
+        groups:
+          other: Diğer
+          university: Üniversite
+          faculty: Fakülte
+          department: Bölüm
+          program: Program
+          committee: Kurul
+          institute: Enstitü
+          rectorship: Rektörlük
+          major: Anabilim Dalı
+  helpers:
+    submit:
+      high_school_type:
+        create: Lise Giriş Türü Oluştur
+        update: Lise Giriş Türünü Güncelle
+      student_disability_type:
+        create: Öğrenci Engel Türü Oluştur
+        update: Öğrenci Engel Türünü Güncelle
+      student_drop_out_type:
+        create: Öğrenci Ayrılma Nedeni Oluştur
+        update: Öğrenci Ayrılma Nedenini Güncelle
+      student_education_level:
+        create: Öğrenci Öğrenci Doykm Oluştur
+        update: Öğrenci Öğrenci Doykm Güncelle
+      student_entrance_point_type:
+        create: Öğrenci Giriş Puan Türü Oluştur
+        update: Öğrenci Giriş Puan Türünü Güncelle
+      student_entrance_type:
+        create: Öğrenci Giriş Türü Oluştur
+        update: Öğrenci Giriş Türünü Güncelle
+      student_grade:
+        create: Öğrenci Öğrenci Sınıfı Oluştur
+        update: Öğrenci Öğrenci Sınıfını Güncelle
+      student_grading_system:
+        create: Öğrenci Diploma Not Sistemi Oluştur
+        update: Öğrenci Diploma Not Sistemini Güncelle
+      student_punishment_type:
+        create: Öğrenci Ceza Türü Oluştur
+        update: Öğrenci Ceza Türünü Güncelle
+      student_studentship_status:
+        create: Öğrencilik Hakkı Oluştur
+        update: Öğrencilik Hakkını Güncelle
+      unit_instruction_language:
+        create: Öğrenim Dili Oluştur
+        update: Öğrenim Dilini Güncelle
+      unit_instruction_type:
+        create: Öğrenim Türü Oluştur
+        update: Öğrenim Türünü Güncelle
+      unit_status:
+        create: Aktiflik Durumu Oluştur
+        update: Aktiflik Durumunu Güncelle
+      unit_type:
+        create: Birim Türü Oluştur
+        update: Birim Türünü Güncelle
+      university_type:
+        create: Üniversite Türü Oluştur
+        update: Üniversite Türünü Güncelle
+  yoksis_references:
+    high_school_types:
+      index:
+        <<: *high_school_type_attributes
+        new_high_school_type_link: Yeni Lise Türü
+        card_header: Lise Türleri
+      new:
+        form_title: Lise Türü Oluştur
+      edit:
+        form_title: Lise Türünü Güncelle
+      create:
+        success: Lise türü başarıyla oluşturuldu.
+      destroy:
+        success: Lise türü başarıyla silindi.
+        warning: Lise türü silinemedi!
+      update:
+        success: Lise türü başarıyla güncellendi.
+    student_disability_types:
+      index:
+        <<: *student_disability_type_attributes
+        new_student_disability_type_link: Yeni Öğrenci Engel Türü
+        card_header: Öğrenci Engel Türleri
+      new:
+        form_title: Öğrenci Engel Türü Oluştur
+      edit:
+        form_title: Öğrenci Engel Türünü Güncelle
+      create:
+        success: Öğrenci engel türü başarıyla oluşturuldu.
+      destroy:
+        success: Öğrenci engel türü başarıyla silindi.
+        warning: Öğrenci engel türü silinemedi!
+      update:
+        success: Öğrenci engel türü başarıyla güncellendi.
+    student_drop_out_types:
+      index:
+        <<: *student_drop_out_type_attributes
+        new_student_drop_out_type_link: Yeni Öğrenci Ayrılma Nedeni
+        card_header: Öğrenci Ayrılma Nedenleri
+      new:
+        form_title: Öğrenci Ayrılma Nedeni Oluştur
+      edit:
+        form_title: Öğrenci Ayrılma Nedenini Güncelle
+      create:
+        success: Öğrenci ayrılma nedeni başarıyla oluşturuldu.
+      destroy:
+        success: Öğrenci ayrılma nedeni başarıyla silindi.
+        warning: Öğrenci ayrılma nedeni silinemedi!
+      update:
+        success: Öğrenci ayrılma nedeni başarıyla güncellendi.
+    student_education_levels:
+      index:
+        <<: *student_education_level_attributes
+        new_student_education_level_link: Yeni Öğrenci Doykm
+        card_header: Öğrenci Doykm
+      new:
+        form_title: Öğrenci Doykm Oluştur
+      edit:
+        form_title: Öğrenci Doykm Güncelle
+      create:
+        success: Öğrenci doykm başarıyla oluşturuldu.
+      destroy:
+        success: Öğrenci doykm başarıyla silindi.
+        warning: Öğrenci doykm silinemedi!
+      update:
+        success: Öğrenci doykm başarıyla güncellendi.
+    student_entrance_point_types:
+      index:
+        <<: *student_entrance_point_type_attributes
+        new_student_entrance_point_type_link: Yeni Öğrenci Giriş Türü
+        card_header: Öğrenci Giriş Türleri
+      new:
+        form_title: Öğrenci Giriş Puan Türü Oluştur
+      edit:
+        form_title: Öğrenci Giriş Puan Türünü Güncelle
+      create:
+        success: Öğrenci giriş puan türü başarıyla oluşturuldu.
+      destroy:
+        success: Öğrenci giriş puan türü başarıyla silindi.
+        warning: Öğrenci giriş puan türü silinemedi!
+      update:
+        success: Öğrenci giriş puan türü başarıyla güncellendi.
+    student_entrance_types:
+      index:
+        <<: *student_entrance_type_attributes
+        new_student_entrance_type_link: Yeni Öğrenci Giriş Türü
+        card_header: Öğrenci  Türleri
+      new:
+        form_title: Öğrenci Giriş Türü Oluştur
+      edit:
+        form_title: Öğrenci Giriş Türünü Güncelle
+      create:
+        success: Öğrenci giriş türü başarıyla oluşturuldu.
+      destroy:
+        success: Öğrenci giriş türü başarıyla silindi.
+        warning: Öğrenci giriş türü silinemedi!
+      update:
+        success: Öğrenci giriş türü başarıyla güncellendi.
+    student_grades:
+      index:
+        <<: *student_grade_attributes
+        new_student_grade_link: Yeni Öğrenci Sınıfı
+        card_header: Öğrenci Sınıfı
+      new:
+        form_title: Öğrenci Sınıfı Oluştur
+      edit:
+        form_title: Öğrenci Sınıfını Güncelle
+      create:
+        success: Öğrenci sınıfı başarıyla oluşturuldu.
+      destroy:
+        success: Öğrenci sınıfı başarıyla silindi.
+        warning: Öğrenci sınıfı silinemedi!
+      update:
+        success: Öğrenci sınıfı başarıyla güncellendi.
+    student_grading_systems:
+      index:
+        <<: *student_grading_system_attributes
+        new_student_grading_system_link: Yeni Öğrenci Diploma Not Sistemi
+        card_header: Öğrenci Diploma Not Sistemleri
+      new:
+        form_title: Öğrenci Diploma Not Sistemi Oluştur
+      edit:
+        form_title: Öğrenci Diploma Not Sistemini Güncelle
+      create:
+        success: Öğrenci diploma not sistemi başarıyla oluşturuldu.
+      destroy:
+        success: Öğrenci diploma not sistemi başarıyla silindi.
+        warning: Öğrenci diploma not sistemi silinemedi!
+      update:
+        success: Öğrenci diploma not sistemi başarıyla güncellendi.
+    student_punishment_types:
+      index:
+        <<: *student_punishment_type_attributes
+        new_student_punishment_type_link: Yeni Öğrenci Ceza Türü
+        card_header: Öğrenci Ceza Türleri
+      new:
+        form_title: Öğrenci Ceza Türü Oluştur
+      edit:
+        form_title: Öğrenci Ceza Türünü Güncelle
+      create:
+        success: Öğrenci ceza türü başarıyla oluşturuldu.
+      destroy:
+        success: Öğrenci ceza türü başarıyla silindi.
+        warning: Öğrenci ceza türü silinemedi!
+      update:
+        success: Öğrenci ceza türü başarıyla güncellendi.
+    student_studentship_statuses:
+      index:
+        <<: *student_studentship_status_attributes
+        new_student_studentship_status_link: Yeni Öğrencilik Hakkı
+        card_header: Öğrencilik Hakları
+      new:
+        form_title: Öğrencilik Hakkı Oluştur
+      edit:
+        form_title: Öğrencilik Hakkı Güncelle
+      create:
+        success: Öğrencilik hakkı başarıyla oluşturuldu.
+      destroy:
+        success: Öğrencilik hakkı başarıyla silindi.
+        warning: Öğrencilik hakkı silinemedi!
+      update:
+        success: Öğrencilik hakkı başarıyla güncellendi.
+    unit_instruction_languages:
+      index:
+        <<: *unit_instruction_language_attributes
+        new_unit_instruction_language_link: Yeni Öğrenim Dili
+        card_header: Öğrenim Dilleri
+      new:
+        form_title: Öğrenim Dili Oluştur
+      edit:
+        form_title: Öğrenim Dilini Güncelle
+      create:
+        success: Öğrenim Dili başarıyla oluşturuldu.
+      destroy:
+        success: Öğrenim Dili başarıyla silindi.
+        warning: Öğrenim Dili silinemedi!
+      update:
+        success: Öğrenim Dili başarıyla güncellendi.
+    unit_instruction_types:
+      index:
+        <<: *unit_instruction_type_attributes
+        new_unit_instruction_type_link: Yeni Öğrenim Türü
+        card_header: Öğrenim Türleri
+      new:
+        form_title: Öğrenim Türü Oluştur
+      edit:
+        form_title: Öğrenim Türünü Güncelle
+      create:
+        success: Öğrenim türü başarıyla oluşturuldu.
+      destroy:
+        success: Öğrenim türü başarıyla silindi.
+        warning: Öğrenim türü silinemedi!
+      update:
+        success: Öğrenim türü başarıyla güncellendi.
+    unit_statuses:
+      index:
+        <<: *unit_status_attributes
+        new_unit_status_link: Yeni Aktiflik Durumu
+        card_header: Aktiflik Durumları
+      new:
+        form_title: Aktiflik durumu Oluştur
+      edit:
+        form_title: Aktiflik durumunu Güncelle
+      create:
+        success: Aktiflik durumu başarıyla oluşturuldu.
+      destroy:
+        success: Aktiflik durumu başarıyla silindi.
+        warning: Aktiflik durumu silinemedi!
+      update:
+        success: Aktiflik durumu başarıyla güncellendi.
+    unit_types:
+      index:
+        <<: *unit_type_attributes
+        new_unit_type_link: Yeni Birim Türü
+        card_header: Birim Türleri
+      new:
+        form_title: Birim Türü Oluştur
+      edit:
+        form_title: Birim Türünü Güncelle
+      create:
+        success: Birim türü başarıyla oluşturuldu.
+      destroy:
+        success: Birim türü başarıyla silindi.
+        warning: Birim türü silinemedi!
+      update:
+        success: Birim türü başarıyla güncellendi.
+    university_types:
+      index:
+        <<: *university_type_attributes
+        new_university_type_link: Yeni Üniversite Türü
+        card_header: Üniversite Türleri
+      new:
+        form_title: Üniversite Türü Oluştur
+      edit:
+        form_title: Üniversite Türünü Güncelle
+      create:
+        success: Üniversite türü başarıyla oluşturuldu.
+      destroy:
+        success: Üniversite türü başarıyla silindi.
+        warning: Üniversite türü silinemedi!
+      update:
+        success: Üniversite türü başarıyla güncellendi.

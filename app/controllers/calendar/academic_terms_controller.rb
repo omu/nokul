@@ -2,10 +2,12 @@
 
 module Calendar
   class AcademicTermsController < ApplicationController
+    include PagyBackendWithHelpers
+
     before_action :set_academic_term, only: %i[edit update destroy]
 
     def index
-      @academic_terms = pagy_by_search(AcademicTerm.all)
+      @academic_terms = pagy_by_search(AcademicTerm.order(:year))
     end
 
     def new
