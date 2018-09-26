@@ -8,7 +8,9 @@ module Committee
     before_action :set_agenda, only: %i[edit update destroy]
 
     def index
-      @agendas = pagy_by_search(@committee.agendas.includes(:agenda_type, agenda_file_attachment: :blob))
+      agendas =
+        @committee.agendas.includes(:agenda_type, agenda_file_attachment: :blob).dynamic_search(search_params(Agenda))
+      @pagy, @agendas = pagy(agendas)
     end
 
     def new
