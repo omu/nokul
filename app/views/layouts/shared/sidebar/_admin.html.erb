@@ -107,14 +107,14 @@
       <% end %>
     </li>
     <li class="nav-item">
-      <%= link_to course_group_types_path, class: 'nav-link' do %>
-        <%= fa_icon('clone', text: t('.course_group_types'), class: 'nav-icon') %>
-      <% end %>
-    </li>
-    <li class="nav-item">
       <%= link_to references_path, class: 'nav-link' do %>
         <%= fa_icon('user-secret', text: t('.references'), class: 'nav-icon') %>
       <% end %>
     </li>
+    <li class="nav-item">
+      <%= link_to course_group_types_path, class: 'nav-link' do %>
+        <%= fa_icon('clone', text: t('.course_group_types'), class: 'nav-icon') %>
+      <% end %>
+    </li>    
   </ul>
 </li>
