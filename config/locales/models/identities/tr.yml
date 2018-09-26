@@ -2,7 +2,7 @@ tr:
   activerecord:
     attributes:
       identity: &identity_attributes
-        name: Kimlik Türü
+        type: Kimlik Türü
         first_name: Ad
         last_name: Soyad
         mothers_name: Anne Adı
@@ -14,7 +14,7 @@ tr:
         registered_to: Kütük Bilgisi
     enums:
       identity:
-        names:
+        types:
           formal: Resmi Kimlik
           informal: Diğer Kimlik
         genders:

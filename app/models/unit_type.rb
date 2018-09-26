@@ -14,6 +14,9 @@ class UnitType < ApplicationRecord
     faculty: 2,
     department: 3,
     program: 4,
-    committee: 5
+    committee: 5,
+    major: 6,
+    institute: 7,
+    rectorship: 8
   }
 end

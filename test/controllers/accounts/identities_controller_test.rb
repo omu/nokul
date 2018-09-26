@@ -78,6 +78,11 @@ module Accounts
       assert_equal translate('.update.success'), flash[:notice]
     end
 
+    test 'should be able to fetch identity from mernis' do
+      get save_from_mernis_identities_path
+      assert_redirected_to identities_path
+    end
+
     test 'should not destroy for formal identity' do
       assert_difference('@user.identities.count', 0) do
         delete identity_path(@user.identities.find_by(type: :formal))
