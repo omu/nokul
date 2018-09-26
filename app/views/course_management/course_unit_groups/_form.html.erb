@@ -18,7 +18,7 @@
               <%= f.input :total_ects_condition, required: true %>
             </div>
             <div class='form-group col-sm-6'>
-              <%= f.association :unit, collection: Unit.academic_units_except_programs %>
+              <%= f.association :unit, collection: Unit.without_programs %>
             </div>
             <div class='form-group col-sm-6'>
               <%= f.association :course_group_type %>
