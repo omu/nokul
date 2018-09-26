@@ -52,7 +52,7 @@ class Unit < ApplicationRecord
   scope :majors,       -> { where(unit_type: UnitType.major) }
   scope :institutes,   -> { where(unit_type: UnitType.institute) }
   scope :rectorships,  -> { where(unit_type: UnitType.rectorship) }
-  scope :academic_units_except_programs, -> { where.not(unit_type: UnitType.program) }
+  scope :without_programs, -> { where.not(unit_type: UnitType.program) }
 
   scope :coursable, -> {
     departments
