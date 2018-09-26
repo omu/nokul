@@ -2,7 +2,7 @@ en:
   activerecord:
     attributes:
       identity: &identity_attributes
-        name: Identity Type
+        type: Identity Type
         first_name: First Name
         last_name: Last Name
         mothers_name: Mothers Name
@@ -14,7 +14,7 @@ en:
         registered_to: Registration
     enums:
       identity:
-        names:
+        types:
           formal: Formal Identity
           informal: Informal Identity
         genders:
