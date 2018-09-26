@@ -40,6 +40,7 @@ tr:
         obs_status: Öğrencilik Durumu
         obs_status_date: Öğrencilik Durum Kontrol Tarihi
         obs_registered_program: Öğrenci Olarak Kayıtlı Olduğu Program
+        student_entrance_type: Giriş Türü
         graduated: Mezun
         not_graduated_or_unknown: Mezun Değil/Bilinmiyor
         unproblematic: Sorunsuz

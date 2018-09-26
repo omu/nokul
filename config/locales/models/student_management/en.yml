@@ -39,7 +39,8 @@ en:
         military_status_date: Military Status Check Date
         obs_status: Studentship Status
         obs_status_date: Studentship Status Check Date
-        obs_registered_program: Registered to
+        obs_registered_program: Registered To
+        student_entrance_type: Entrance Type
         graduated: Graduated
         not_graduated_or_unknown: Not Graduated/Unknown
         unproblematic: Unproblematic

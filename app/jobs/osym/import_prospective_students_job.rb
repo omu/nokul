@@ -73,7 +73,8 @@ module Osym
           military_status_date: parse_date(military_status_date),
           obs_status: obs_status.eql?('0') ? true : false,
           obs_status_date: parse_date(obs_status_date),
-          obs_registered_program: obs_registered_program
+          obs_registered_program: obs_registered_program,
+          student_entrance_type: StudentEntranceType.find_by(code: 1) # TODO: will be dynamic in the future
         )
         progress_bar.increment
       end
