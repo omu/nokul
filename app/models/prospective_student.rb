@@ -11,14 +11,14 @@ class ProspectiveStudent < ApplicationRecord
     using: { tsearch: { prefix: true } }
   )
 
-  search_keys :meb_status, :military_status, :obs_status, :unit_id
+  search_keys :meb_status, :military_status, :obs_status, :unit_id, :student_entrance_type_id
 
   # relations
   belongs_to :unit
   belongs_to :language, optional: true
   belongs_to :student_disability_type, optional: true
   belongs_to :high_school_type, optional: true
-  belongs_to :student_entrance_type, optional: true
+  belongs_to :student_entrance_type
 
   # validations
   validates :id_number, presence: true, uniqueness: { scope: %i[unit_id exam_score] }
