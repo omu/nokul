@@ -8,12 +8,14 @@ en:
         status: Agenda Status
       agenda_type: &agenda_type_attributes
         name: Name of Agenda Type
+      dashboard:
+        name: Committee / Commission Name
     enums:
       agenda:
         statuses:
-          recent: Yeni
-          decided: Karar Verildi
-          delayed: Ertelendi
+          recent: Recent
+          decided: Decided
+          delayed: Delayed
   helpers:
     submit:
       agenda:
