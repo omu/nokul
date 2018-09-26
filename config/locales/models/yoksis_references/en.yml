@@ -56,6 +56,9 @@ en:
           department: Department
           program: Program
           committee: Committee
+          institute: Institute
+          rectorship: Rectorship
+          major: Major
   helpers:
     submit:
       high_school_type:

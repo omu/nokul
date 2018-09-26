@@ -2,13 +2,13 @@ en:
   activerecord:
     attributes:
       address: &address_attributes
-        name: Address Type
+        type: Address Type
         phone_number: Phone Number
         full_address: Full Address
         district: District
     enums:
       address:
-        names:
+        types:
           formal: Formal Address
           informal: Other Address
   simple_form:
