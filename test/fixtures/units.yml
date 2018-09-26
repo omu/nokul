@@ -3,68 +3,80 @@ omu:
   yoksis_id: 121946
   founded_at: 11.04.1975
   duration:
-  unit_type: university
   district: atakum
   unit_status: active
   unit_instruction_language: turkish
   unit_instruction_type: normal_education
   university_type: government
+  unit_type: university
+
+omu_rektorluk:
+  name: Rektörlük
+  yoksis_id: 122287
+  founded_at:
+  duration:
+  district: atakum
+  unit_status: active
+  unit_instruction_language: turkish
+  unit_instruction_type: normal_education
+  university_type:
+  unit_type: rectorship
 
 cbu:
   name: Canik Başarı Üniversitesi
   yoksis_id: 163896
   founded_at: 12.04.2010
   duration:
-  unit_type: university
   district: atakum
   unit_status: passive
   unit_instruction_language: english
   unit_instruction_type: normal_education
   university_type: foundation
+  unit_type: university
 
 su:
   name: Samsun Üniversitesi
   yoksis_id: 123456
   founded_at: 12.04.2010
   duration:
-  unit_type: university
   district: atakum
   unit_status: passive
   unit_instruction_language: english
   unit_instruction_type: normal_education
   university_type: government
+  unit_type: university
 
 uzem:
   name: Uzaktan Eğitim Araştırma ve Uygulama Merkezi
   yoksis_id: 169431
   duration:
-  unit_type: research_center
   district: atakum
   unit_status: active
   unit_instruction_language: turkish
   unit_instruction_type: distance_education
+  unit_type: research_center
 
 baum:
   name: Bilgisayar Araştırmaları Uygulama ve Araştırma Merkezi
   yoksis_id: 327269
   founded_at: 27.07.2017
   duration:
-  unit_type: research_center
   district: atakum
   unit_status: active
   unit_instruction_language: turkish
   unit_instruction_type: normal_education
+  unit_type: research_center
 
 muh_bolum:
   name: Bilgisayar Mühendisliği Bölümü
   yoksis_id: 122184
   founded_at: 10.09.2009
   duration: 4
-  unit_type: department
   district: atakum
   unit_status: active
   unit_instruction_language: turkish
   unit_instruction_type: normal_education
+  unit_type: department
 
 muhendislik_fakultesi_yonetim_kurulu:
   name: Mühendislik Fakültesi Yönetim Kurulu
@@ -108,3 +120,23 @@ fen_bilgisi_ogretmenligi_programi:
   unit_instruction_language: turkish
   unit_instruction_type: normal_education
   unit_type: program
+
+bote_anabilim_dali:
+  name: Bilgisayar Öğretim Ve Teknolojisi Eğitimi Anabilim Dalı
+  yoksis_id: 122115
+  duration:
+  district: atakum
+  unit_status: active
+  unit_instruction_type: turkish
+  unit_instruction_type: normal_education
+  unit_type: major
+
+egitim_bilimleri_enstitusu:
+  name: Eğitim Bilimleri Enstitüsü
+  yoksis_id: 174846
+  duration:
+  district: atakum
+  unit_status: active
+  unit_instruction_type: turkish
+  unit_instruction_type: normal_education
+  unit_type: institute

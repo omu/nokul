@@ -43,6 +43,10 @@ tr:
       destroy:
         success: Gündem başarıyla silindi.
         warning: Gündem silinemedi!
+      search:
+        agenda_type_id: Gündem Türü
+        smart_search_placeholder: Gündem Açıklaması
+        status: Gündem Durumu
     agenda_types:
       index:
         <<: *agenda_type_attributes
@@ -61,6 +65,7 @@ tr:
         warning: Gündem Türü silinemedi!
     dashboard:
       index:
+        agendas: Gündemler
         name: Kurul / Komisyon Adı
         detsis_id: DETSIS ID
         yoksis_id: YOKSIS ID
