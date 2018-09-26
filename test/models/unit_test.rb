@@ -105,12 +105,12 @@ class UnitTest < ActiveSupport::TestCase
 
   test 'coursable scope returns coursable units' do
     assert_equal Unit.coursable.count.to_i,
-      Unit.departments.count +
-      Unit.faculties.count +
-      Unit.universities.count +
-      Unit.majors.count +
-      Unit.institutes.count +
-      Unit.rectorships.count
+                 Unit.departments.count +
+                 Unit.faculties.count +
+                 Unit.universities.count +
+                 Unit.majors.count +
+                 Unit.institutes.count +
+                 Unit.rectorships.count
     assert_not_includes Unit.coursable, units(:uzem)
   end
 end
