@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateCalendarTitleTypes < ActiveRecord::Migration[5.2]
   def change
     create_table :calendar_title_types do |t|

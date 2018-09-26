@@ -1,314 +1,105 @@
 en:
   activerecord:
     attributes:
-      student_disability_type: &student_disability_type_attributes
-        name: Student Disability Type
-        code: Code
-      student_drop_out_type: &student_drop_out_type_attributes
-        name: Student Drop Out Type
-        code: Code
-      student_education_level: &student_education_level_attributes
-        name: Student Education Level
-        code: Code
-      student_entrance_point_type: &student_entrance_point_type_attributes
-        name: Student Entrance Point Type
-        code: Code
-      student_entrance_type: &student_entrance_type_attributes
-        name: Student Entrance Type
-        code: Code
-      student_grade: &student_grade_attributes
-        name: Student Grade
-        code: Code
-      student_grading_system: &student_grading_system_attributes
-        name: Student Grading System
-        code: Code
-      student_punishment_type: &student_punishment_type_attributes
-        name: Student Punishment Type
-        code: Code
-      student_studentship_status: &student_studentship_status_attributes
-        name: Student Studentship Status
-        code: Code
-      unit_instruction_language: &unit_instruction_language_attributes
-        name: Unit Instruction Language
-        code: Code
-      unit_instruction_type: &unit_instruction_type_attributes
-        name: Unit Instruction Type
-        code: Code
-      unit_status: &unit_status_attributes
-        name: Unit Statuse
-        code: Code
-      unit_type: &unit_type_attributes
-        name: Unit Type
-        code: Code
-      university_type: &university_type_attributes
-        name: University Type
-        code: Code
+      country: &country_attributes
+        name: Name of Country
+        alpha_2_code: Alpha 2 Code
+        alpha_3_code: Alpha 3 Code
+        numeric_code: ISO3166 Numeric
+        mernis_code: MERNIS Code
+        yoksis_code: YOKSIS Code
+      city: &city_attributes
+        name: Name of City
+        alpha_2_code: Alpha 2 Code
+      district: &district_attributes
+        name: Name of District
+        mernis_code: MERNIS Code
+        city_id: City
+      language: &language_attributes
+        name: Name
+        iso: ISO Code
   helpers:
     submit:
-      student_disability_type:
-        create: Create Student Disability Type
-        update: Update Student Disability Type
-      student_drop_out_type:
-        create: Create Student Drop Out Type
-        update: Update Student Drop Out Type
-      student_education_level:
-        create: Create Student Education Level
-        update: Update Student Education Level
-      student_entrance_point_type:
-        create: Create Student Entrance Point Type
-        update: Update Student Entrance Point Type
-      student_entrance_type:
-        create: Create Student Entrance Type
-        update: Update Student Entrance Type
-      student_grade:
-        create: Create Student Grade
-        update: Update Student Grade
-      student_grading_system:
-        create: Create Student Grading System
-        update: Update Student Grading System
-      student_punishment_type:
-        create: Create Student Punishment Type
-        update: Update Student Punishment Type
-      student_studentship_status:
-        create: Create Student Studentship Status
-        update: Update Student Studentship Status
-      unit_instruction_language:
-        create: Create Unit Instruction Language
-        update: Update Unit Instruction Language
-      unit_instruction_type:
-        create: Create Unit Instruction Type
-        update: Update Unit Instruction Type
-      unit_status:
-        create: Create Unit Status
-        update: Update Unit Status
-      unit_type:
-        create: Create Unit Type
-        update: Update Unit Type
-      university_type:
-        create: Create University Type
-        update: Update University Type
+      country:
+        create: Create Country
+        update: Update Country
+      city:
+        create: Create City
+        update: Update City
+      district:
+        create: Create District
+        update: Update District
+      language:
+        create: Create Language
+        update: Update Language
   references:
-    student_disability_types:
-      index:
-        <<: *student_disability_type_attributes
-        new_student_disability_type_link: New Student Disability Type
-        card_header: Student Disability Types
+    common:
+      countries: Ülkeler
+    cities:
+      show:
+        <<: *district_attributes
+        card_header: Districts
+        new_district_link: Add a New District
+        active: Is Active?
       new:
-        form_title: Create a Student Disability Type
+        form_title: Create a City
       edit:
-        form_title: Update the Student Disability Type
-      create:
-        success: Student disability type successfully created.
-      destroy:
-        success: Student disability type successfully deleted.
-        warning: Student disability type could not be deleted.
+        form_title: Update the City
       update:
-        success: Student disability type successfully updated.
-    student_drop_out_types:
+        success: City successfully updated.
+      create:
+        success: City successfully created.
+      destroy:
+        success: City successfully deleted!
+        warning: City can not be deleted.
+    countries:
       index:
-        <<: *student_drop_out_type_attributes
-        new_student_drop_out_type_link: New Student  Type
-        card_header: Student  Types
+        <<: *country_attributes
+        new_country_link: Add a New Country
+        card_header: Countries
+      show:
+        <<: *city_attributes
+        card_header: Cities
+        new_city_link: Add a New City
       new:
-        form_title: Create a Student Drop Out Type
+        form_title: Create Country
+        new_country: New Country
       edit:
-        form_title: Update the Student Drop Out Type
-      create:
-        success: Student drop out type successfully created.
-      destroy:
-        success: Student drop out type successfully deleted.
-        warning: Student drop out type could not be deleted.
+        form_title: Edit the Country
       update:
-        success: Student drop out type successfully updated.
-    student_education_levels:
+        success: Country successfully updated.
+      create:
+        success: Country successfully created.
+      destroy:
+        success: Country successfully deleted.
+        warning: Country can not be deleted.
+    districts:
+      new:
+        form_title: Create a District
+      edit:
+        form_title: Update the District
+      update:
+        success: District successfully updated.
+      create:
+        success: District successfully created.
+      destroy:
+        success: District successfully deleted.
+        warning: District can not be deleted.
+    languages:
+      common:
+        languages: Languages
       index:
-        <<: *student_education_level_attributes
-        new_student_education_level_link: New Student Education Level Type
-        card_header: Student Education Level Types
+        <<: *language_attributes
+        new_language_link: Create a New Language
+        card_header: Languages
       new:
-        form_title: Create a Student Education Level Type
+        form_title: Create a Language
       edit:
-        form_title: Update the Student Education Level Type
-      create:
-        success: Student education level type successfully created.
-      destroy:
-        success: Student education level type successfully deleted.
-        warning: Student education level type could not be deleted.
+        form_title: Update the Language
       update:
-        success: Student education level type successfully updated.
-    student_entrance_point_types:
-      index:
-        <<: *student_entrance_point_type_attributes
-        new_student_entrance_point_type_link: New Student Entrance Point Type
-        card_header: Student Entrance Point Types
-      new:
-        form_title: Create a Student Entrance Point Type
-      edit:
-        form_title: Update the Student Entrance Point Type
+        success: Language successfully updated.
       create:
-        success: Student entrance point type successfully created.
+        success: Language successfully created.
       destroy:
-        success: Student entrance point type successfully deleted.
-        warning: Student entrance point type could not be deleted.
-      update:
-        success: Student entrance point type successfully updated.
-    student_entrance_types:
-      index:
-        <<: *student_entrance_type_attributes
-        new_student_entrance_type_link: New Student Entrance Type
-        card_header: Student Entrance Types
-      new:
-        form_title: Create a Student Entrance Type
-      edit:
-        form_title: Update the Student Entrance Type
-      create:
-        success: Student entrance type successfully created.
-      destroy:
-        success: Student entrance type successfully deleted.
-        warning: Student entrance type could not be deleted.
-      update:
-        success: Student entrance type successfully updated.
-    student_grades:
-      index:
-        <<: *student_grade_attributes
-        new_student_grade_link: New Student Grade
-        card_header: Student Grades
-      new:
-        form_title: Create a Student Grade
-      edit:
-        form_title: Update the Student Grade
-      create:
-        success: Student grade successfully created.
-      destroy:
-        success: Student grade successfully deleted.
-        warning: Student grade could not be deleted.
-      update:
-        success: Student grade successfully updated.
-    student_grading_systems:
-      index:
-        <<: *student_grading_system_attributes
-        new_student_grading_system_link: New Student Grading System Type
-        card_header: Student Grading System Types
-      new:
-        form_title: Create a Student Grading System Type
-      edit:
-        form_title: Update the Student Grading System Type
-      create:
-        success: Student grading system successfully created.
-      destroy:
-        success: Student grading system successfully deleted.
-        warning: Student grading system could not be deleted.
-      update:
-        success: Student grading system successfully updated.
-    student_punishment_types:
-      index:
-        <<: *student_punishment_type_attributes
-        new_student_punishment_type_link: New Student Punishment Type
-        card_header: Student Punishment Types
-      new:
-        form_title: Create a Student Punishment Type
-      edit:
-        form_title: Update the Student Punishment Type
-      create:
-        success: Student punishment type successfully created.
-      destroy:
-        success: Student punishment type successfully deleted.
-        warning: Student punishment type could not be deleted.
-      update:
-        success: Student punishment type successfully updated.
-    student_studentship_statuses:
-      index:
-        <<: *student_studentship_status_attributes
-        new_student_studentship_status_link: New Student Studentship Status
-        card_header: Student Studentship Statuses
-      new:
-        form_title: Create a Student Studentship Status
-      edit:
-        form_title: Update the Student Studentship Status
-      create:
-        success: Student studentship status successfully created.
-      destroy:
-        success: Student studentship status successfully deleted.
-        warning: Student studentship status could not be deleted.
-      update:
-        success: Student studentship status successfully updated.
-    unit_instruction_languages:
-      index:
-        <<: *unit_instruction_language_attributes
-        new_unit_instruction_language_link: New Unit Instruction Language
-        card_header: Unit Instruction Languages
-      new:
-        form_title: Create a Unit Instruction Language
-      edit:
-        form_title: Update the Unit  Instruction Language
-      create:
-        success: Unit instruction language successfully created.
-      destroy:
-        success: Unit instruction language successfully deleted.
-        warning: Unit instruction language could not be deleted.
-      update:
-        success: Unit instruction language successfully updated.
-    unit_instruction_types:
-      index:
-        <<: *unit_instruction_type_attributes
-        new_unit_instruction_type_link: New Unit Instruction Type
-        card_header: Unit Instruction Types
-      new:
-        form_title: Create a Unit Instruction Type
-      edit:
-        form_title: Update the Unit Instruction Type
-      create:
-        success: Unit instruction type successfully created.
-      destroy:
-        success: Unit instruction type successfully deleted.
-        warning: Unit instruction type could not be deleted.
-      update:
-        success: Unit instruction type successfully updated.
-    unit_statuses:
-      index:
-        <<: *unit_status_attributes
-        new_unit_status_link: New Unit Status
-        card_header: Unit Statuses
-      new:
-        form_title: Create a Unit Status
-      edit:
-        form_title: Update the Unit Status
-      create:
-        success: Unit status successfully created.
-      destroy:
-        success: Unit status successfully deleted.
-        warning: Unit status could not be deleted.
-      update:
-        success: Unit status successfully updated.
-    unit_types:
-      index:
-        <<: *unit_type_attributes
-        new_unit_type_link: New Unit Type
-        card_header: Unit Types
-      new:
-        form_title: Create a Unit Type
-      edit:
-        form_title: Update the Unit Type
-      create:
-        success: Unit type successfully created.
-      destroy:
-        success: Unit type successfully deleted.
-        warning: Unit type could not be deleted.
-      update:
-        success: Unit type successfully updated.
-    university_types:
-      index:
-        <<: *university_type_attributes
-        new_university_type_link: New University Type
-        card_header: University Types
-      new:
-        form_title: Create a University Type
-      edit:
-        form_title: Update the University Type
-      create:
-        success: University type successfully created.
-      destroy:
-        success: University type successfully deleted.
-        warning: University type could not be deleted.
-      update:
-        success: University type successfully updated.
+        success: Language successfully deleted!
+        warning: Language can not be deleted.

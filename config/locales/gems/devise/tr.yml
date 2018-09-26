@@ -5,11 +5,11 @@ tr:
         hello: 'Merhaba, %{mail}!'
       email_changed:
         subject: Email Adresiniz Değişti
-        body: Kayıtlı e-mail adresiniz başarıyla değiştirilmiştir. Bir yanlışlık olduğunu düşünüyorsanız hotline@baum.omu.edu.tr adresine durumu anlatan bir e-mail gönderebilirsiniz.
+        body: Kayıtlı e-mail adresiniz başarıyla değiştirilmiştir. Bir yanlışlık olduğunu düşünüyorsanız <%= Rails.application.config.tenant.email.support %> adresine durumu anlatan bir e-mail gönderebilirsiniz.
         new_mail: 'Yeni e-mail adresiniz: %{mail}'
       password_change:
         subject: Şifreniz Değişti
-        body: Şifreniz başarıyla değiştirilmiştir. Bir yanlışlık olduğunu düşünüyorsanız hotline@baum.omu.edu.tr adresine durumu anlatan bir e-mail gönderebilirsiniz.
+        body: Şifreniz başarıyla değiştirilmiştir. Bir yanlışlık olduğunu düşünüyorsanız <%= Rails.application.config.tenant.email.support %> adresine durumu anlatan bir e-mail gönderebilirsiniz.
       reset_password_instructions:
         subject: Parola sıfırlama talimatları
         body: Siz veya başka birisi şifrenizi sıfırlama talebinde bulundu. Şifrenizi sıfırlamak istiyorsanız aşağıdaki linke tıklayabilirsiniz.

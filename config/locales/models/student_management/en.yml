@@ -1,0 +1,78 @@
+en:
+  activerecord:
+    attributes:
+      prospective_student: &prospective_student_attributes
+        id_number: ID Number
+        first_name: First Name
+        last_name: Last Name
+        fathers_name: Father's Name
+        mothers_name: Mother's Name
+        date_of_birth: Date of Birth
+        gender: Gender
+        nationality: Nationality
+        place_of_birth: Place of Birth
+        registration_city: Registration City
+        registration_district: Registration District
+        high_school_code: School Code
+        high_school_type: School Type
+        high_school_branch: School Branch
+        state_of_education: State of Education
+        high_school_graduation_year: High Scholl Graduation Year
+        placement_type: Placement Type
+        exam_score: Exam Score
+        language_id: Language ID
+        address: Address
+        home_phone: Home Phone
+        mobile_phone: Mobile phone
+        email: Email
+        student_disability_type_id: Student Disability Type ID
+        top_student: Top Student
+        placement_score: Placement Score
+        placement_rank: Placement Rank
+        unit: Placement Unit
+        preference_order: Preference Order
+        placement_score_type: Placement Score Type
+        additional_score: Additional Score
+        meb_status: MEB Status
+        meb_status_date: MEB Status Check Date
+        military_status: Military Status
+        military_status_date: Military Status Check Date
+        obs_status: Studentship Status
+        obs_status_date: Studentship Status Check Date
+        obs_registered_program: Registered to
+        graduated: Graduated
+        not_graduated_or_unknown: Not Graduated/Unknown
+        unproblematic: Unproblematic
+        must_see_recruiting_office: Must see recruiting unit
+        student_in_a_different_unit: Student in a different university/unit
+        smart_search_placeholder: Prospective student id number, first name or last name.
+    enums:
+      prospective_student:
+        genders:
+          male: Male
+          female: Female
+        nationality:
+          turkish: Turkish Citizen
+          kktc: Northern Cyprus Citizen
+          foreign: Foreign Citizen
+        placement_types:
+          general: General
+          additional_score: Additional Scored
+        additional_score:
+          handicapped: Handicapped Additional Score
+  student_management:
+    prospective_students:
+      search:
+        <<: *prospective_student_attributes
+      show:
+        <<: *prospective_student_attributes
+        prospective_student: Prospective Student
+        identity_information: Identity Information
+        other_information: Other Information
+      index:
+        <<: *prospective_student_attributes
+        prospective_students: Prospective Students
+  simple_form:
+    labels:
+      prospective_student:
+        <<: *prospective_student_attributes

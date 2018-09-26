@@ -33,6 +33,7 @@ tr:
     show:
       <<: *unit_attributes
       parent: Üst Birim
+      registration_documents: Gerekli Belgeler
     index:
       <<: *unit_attributes
       new_unit_link: Yeni Birim Oluştur

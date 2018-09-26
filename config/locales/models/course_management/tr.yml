@@ -1,0 +1,136 @@
+tr:
+  activerecord:
+    attributes:
+      course: &course_attributes
+        credit: Kredi
+        code: Dersin Kodu
+        program_type: Program Türü
+        laboratory: Laboratuvar
+        language: Dil
+        name: Dersin Adı
+        practice: Uygulama
+        status: Durumu
+        theoric: Teorik
+        unit: Birim
+      course_unit_group: &course_unit_group_attributes
+        courses: Dersler
+        course_group_type: Ders Grup Türü
+        course_ids: Dersler
+        name: Ders Grup Adı
+        search_placeholder: Ders Grup Adı / Birim Adı / Ders Grup Türü Adı
+        total_ects_condition: Toplam AKTS Koşulu
+        unit: Birim
+      course_group_type: &course_group_type_attributes
+        name: Ders Grup Tür Adı
+      curriculum: &curriculum_attributes
+          name: Müfredat Adı
+          unit: Birim
+          number_of_semesters: Dönem Sayısı
+          status: Durumu
+          programs: Programlar
+    models:
+      course: Ders
+      course_unit_group: Ders Grubu
+      course_group_type: Ders Grup Türü
+      curriculum: Müfreadat
+    enums:
+      course:
+        program_types:
+          associate: Önlisans
+          undergraduate: Lisans
+          master: Yüksek Lisans
+          doctoral: Doktora
+        statuses:
+          passive: Pasif
+          active: Aktif
+      curriculum:
+        statuses:
+          passive: Pasif
+          active: Aktif
+  course_management:
+    courses:
+      new:
+        form_title: Ders Oluştur
+      edit:
+        form_title: Dersi Düzenle
+      create:
+        success: Ders başarıyla oluşturuldu.
+      destroy:
+        success: Ders başarıyla silindi.
+        error: Ders silinirken bir hata oluştu.
+      update:
+        success: Ders başarıyla güncellendi.
+      search:
+        smart_search_placeholder: Ders adı veya kodu
+        <<: *course_attributes
+      show:
+        <<: *course_attributes
+      index:
+        <<: *course_attributes
+        add_new_course: Yeni Ders Ekle
+        courses: Dersler
+    course_unit_groups:
+      new:
+        form_title: Ders Grup Oluştur
+      show:
+        name: Ders Grup Adı
+        total_ects_condition: Toplam AKTS Koşulu
+        unit: Birim
+        course_group_type: Ders Grup Türü
+        courses: Dersler
+      edit:
+        form_title: Ders Grup Düzenle
+      create:
+        success: Ders grubu başarıyla oluşturuldu.
+      destroy:
+        success: Ders grubu başarıyla silindi.
+        error: Ders grubu silinirken bir hata oluştu.
+      update:
+        success: Ders grubu başarıyla güncellendi.
+      index:
+        <<: *course_unit_group_attributes
+        new_course_unit_group_link: Yeni Ders Grup Ekle
+        card_header: Ders Grupları
+    course_group_types:
+      new:
+        form_title: Ders Grup Türü Oluştur
+      edit:
+        form_title: Ders Grup Türü Düzenle
+      create:
+        success: Ders grup türü başarıyla oluşturuldu.
+      destroy:
+        success: Ders grup türü başarıyla silindi.
+        error: Ders grup türü silinirken bir hata oluştu.
+      update:
+        success: Ders grup türü başarıyla güncellendi.
+      index:
+        <<: *course_group_type_attributes
+        new_course_group_type_link: Yeni Ders Grup Türü Ekle
+        card_header: Ders Grup Türleri
+    curriculums:
+      create:
+        success: Müfredat başarıyla oluşturuldu.
+      destroy:
+        error: Müfredat silinirken bir hata oluştu.
+        success: Müfredat başarıyla silindi.
+      edit:
+        form_title: Müfredatı Düzenle
+      index:
+        <<: *curriculum_attributes
+        add_new_curriculum: Yeni Müfredat Ekle
+        curriculums: Müfredatlar
+      new:
+        form_title: Müfredat Oluştur
+      search:
+        smart_search_placeholder: Müfredat Adı
+        <<: *curriculum_attributes
+      show:
+        <<: *curriculum_attributes
+      update:
+        success: Müfredat başarıyla güncellendi.
+  simple_form:
+    labels:
+      course:
+        <<: *course_attributes
+      curriculum:
+        <<: *curriculum_attributes

@@ -1,0 +1,31 @@
+en:
+  activerecord:
+    attributes:
+      document: &document_attributes
+        name: Document Name
+        statement: Statement
+  helpers:
+    submit:
+      document:
+        create: Create Document
+        update: Update Document
+  documents:
+    common:
+      documents: Documents
+    show:
+      <<: *document_attributes
+    index:
+      <<: *document_attributes
+      new_document_link: Create a New Document
+      card_header: Documents
+    new:
+      form_title: Create a Document
+    edit:
+      form_title: Update the Document
+    update:
+      success: Document successfully updated.
+    create:
+      success: Document successfully created.
+    destroy:
+      success: Document successfully deleted!
+      warning: Document can not be deleted.

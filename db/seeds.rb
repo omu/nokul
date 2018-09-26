@@ -1,61 +1,16 @@
 # frozen_string_literal: true
 
-# create countries
-File.open(Rails.root.join('db', 'static_data', 'countries.yml')) do |countries|
-  countries.read.each_line do |country|
-    name, alpha_2_code, alpha_3_code, numeric_code, mernis_code = country.chomp.split('|')
-    Country.create(
-      name: name,
-      alpha_2_code: alpha_2_code,
-      alpha_3_code: alpha_3_code,
-      numeric_code: numeric_code,
-      mernis_code: mernis_code
-    )
-  end
-end
-
-# create cities
-File.open(Rails.root.join('db', 'static_data', 'cities.yml')) do |cities|
-  cities.read.each_line do |city|
-    name, alpha_2_code = city.chomp.split('|')
-    country = Country.find_by(alpha_2_code: alpha_2_code.split('-').first)
-    country.cities.create(name: name, alpha_2_code: alpha_2_code)
-  end
-end
-
-# create districts
-File.open(Rails.root.join('db', 'static_data', 'districts.yml')) do |districts|
-  districts.read.each_line do |district|
-    name, mernis_code, alpha_2_code, active = district.chomp.split('|')
-    city = City.find_by(alpha_2_code: alpha_2_code)
-    city.districts.create(name: name, mernis_code: mernis_code, active: active.to_i)
-  end
-end
-
-# create titles
-File.open(Rails.root.join('db', 'static_data', 'titles.yml')) do |titles|
-  titles.read.each_line do |title|
-    code, name, branch = title.chomp.split('|')
-    Title.create(name: name, code: code, branch: branch)
-  end
-end
-
-# create languages
-YAML.load_file(Rails.root.join('db', 'static_data', 'languages.yml')).each do |_, language|
-  Language.create(language)
-end
-
 # Fetch YOKSIS References
-Rake::Task['yoksis:fetch_references'].invoke
+Rake::Task['fetch:references'].invoke
 
-# Import YOKSIS Departments
-Rake::Task['yoksis:import_departments'].invoke
+# import all static data
+Rake::Task['import:all'].invoke
 
-# Import Academic Staff from YOKSIS
-Rake::Task['yoksis:fetch_academic_staff'].invoke
-
-# Create UnitType for Committee/Commission
+# Create a single unit_type for commissions
 UnitType.create(name: 'Kurul / Komisyon', code: 200)
+
+# Import prospective students of 2018
+Osym::ImportProspectiveStudentsJob.perform_later
 
 # Produced data for beta environment
 if Rails.env.beta? || Rails.env.development?
@@ -63,3 +18,17 @@ if Rails.env.beta? || Rails.env.development?
     load seed
   end
 end
+
+# Assign unit types to groups
+UnitType.where(code: [7, 8]).update(group: 'other')
+UnitType.where(code: [0, 1]).update(group: 'university')
+UnitType.where(code: [5, 6, 2]).update(group: 'faculty')
+UnitType.where(code: [10]).update(group: 'department')
+UnitType.where(code: [13, 16, 17, 18, 19, 20, 22, 23, 24, 25]).update(group: 'program')
+UnitType.where(code: 200).update(group: 'committee')
+UnitType.where(code: [11, 12, 14, 15, 21]).update(group: 'major')
+UnitType.where(code: [4]).update(group: 'institute')
+UnitType.where(code: [9]).update(group: 'rectorship')
+
+# Fetch Academic Staff from YOKSIS
+Rake::Task['fetch:academic_staff'].invoke

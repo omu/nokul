@@ -8,6 +8,7 @@ en:
     new: New
     show: Show
     update: Update
+    file: Show File
   are_you_sure: Are you sure?
   save: Save
   search: Search
@@ -19,4 +20,3 @@ en:
   detailed_search: Detailed Search
   reset: Reset
   smart_search: Smart Search
-  

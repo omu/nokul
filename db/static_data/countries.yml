@@ -1,250 +1,1500 @@
-Afganistan|AF|AFG|004|9840
-Aland Adaları|AX|ALA|248|
-Almanya|DE|DEU|276|9893
-Amerika Birleşik Devletleri|US|USA|840|9988
-Amerika Birleşik Devletleri Küçük Dış Adaları|UM|UMI|581|
-Amerika Birleşik Devletleri Virgin Adaları|VI|VIR|850|
-Amerikan Samoası|AS|ASM|016|
-Andorra|AD|AND|020|9795
-Angola|AO|AGO|024|9843
-Anguilla|AI|AIA|660|
-Antarktika|AQ|ATA|010|
-Antigua ve Barbuda|AG|ATG|028|9844
-Arjantin|AR|ARG|032|9845
-Arnavutluk|AL|ALB|008|9841
-Aruba|AW|ABW|533|
-Avustralya|AU|AUS|036|9846
-Avusturya|AT|AUT|040|9847
-Azerbaycan|AZ|AZE|031|9814
-Bahamalar|BS|BHS|044|9848
-Bahreyn|BH|BHR|048|9849
-Bangladeş|BD|BGD|050|9850
-Barbados|BB|BRB|052|9851
-Batı Sahra|EH|ESH|732|
-Belarus|BY|BLR|112|9815
-Belçika|BE|BEL|056|9852
-Belize|BZ|BLZ|084|9853
-Benin|BJ|BEN|204|9854
-Bermuda|BM|BMU|060|
-Birleşik Arap Emirlikleri|AE|ARE|784|9984
-Birleşik Krallık|GB|GBR|826|9985
-Bolivya|BO|BOL|068|9856
-Bonaire, Sint Eustatius ve Saba|BQ|BES|535|
-Bosna Hersek|BA|BIH|070|9816
-Botsvana|BW|BWA|072|9857
-Bouvet Adası|BV|BVT|074|
-Brezilya|BR|BRA|076|9858
-Britanya Hint Okyanusu Toprakları|IO|IOT|086|
-Britanya Virjin Adaları|VG|VGB|092|
-Brunei|BN|BRN|096|9796
-Bulgaristan|BG|BGR|100|9859
-Burkina Faso|BF|BFA|854|9797
-Burundi|BI|BDI|108|9861
-Butan|BT|BTN|064|9855
-Çad|TD|TCD|148|9866
-Cayman Adaları|KY|CYM|136|
-Cebelitarık|GI|GIB|292|
-Çekya|CZ|CZE|203|9817
-Cezayir|DZ|DZA|012|9842
-Christmas Adası|CX|CXR|162|
-Cibuti|DJ|DJI|262|9880
-Çin|CN|CHN|156|9868
-Cocos Adaları|CC|CCK|166|
-Cook Adaları|CK|COK|184|
-Curaçao|CW|CUW|531|
-Danimarka|DK|DNK|208|9879
-Demokratik Kongo Cumhuriyeti|CD|COD|180|
-Doğu Timor|TL|TLS|626|
-Dominik Cumhuriyeti|DO|DOM|214|9882
-Dominika|DM|DMA|212|9881
-Ekvador|EC|ECU|218|9883
-Ekvator Ginesi|GQ|GNQ|226|9886
-El Salvador|SV|SLV|222|9885
-Endonezya|ID|IDN|360|9906
-Eritre|ER|ERI|232|9818
-Ermenistan|AM|ARM|051|9819
-Estonya|EE|EST|233|9820
-Etiyopya|ET|ETH|231|9887
-Falkland Adaları|FK|FLK|238|
-Faroe Adaları|FO|FRO|234|
-Fas|MA|MAR|504|9935
-Fiji|FJ|FJI|242|9888
-Fildişi Sahili|CI|CIV|384|9912
-Filipinler|PH|PHL|608|9950
-Filistin|PS|PSE|275|9812
-Finlandiya|FI|FIN|246|9889
-Fransa|FR|FRA|250|9890
-Fransız Güney ve Antarktika Toprakları|TF|ATF|260|
-Fransız Guyanası|GF|GUF|254|
-Fransız Polinezyası|PF|PYF|258|
-Gabon|GA|GAB|266|9891
-Gambiya|GM|GMB|270|9798
-Gana|GH|GHA|288|9894
-Gine|GN|GIN|324|9898
-Gine-Bissau|GW|GNB|624|9899
-Grenada|GD|GRD|308|9896
-Grönland|GL|GRL|304|
-Guadeloupe|GP|GLP|312|
-Guam|GU|GUM|316|
-Guatemala|GT|GTM|320|9897
-Guernsey|GG|GGY|831|
-Güney Afrika|ZA|ZAF|710|9967
-Güney Georgia ve Güney Sandwich Adaları|GS|SGS|239|
-Güney Kore|KR|KOR|410|9809
-Güney Sudan|SS|SSD|728|9759
-Gürcistan|GE|GEO|268|9821
-Guyana|GY|GUY|328|9900
-Haiti|HT|HTI|332|9901
-Heard Adası ve McDonald Adaları|HM|HMD|334|
-Hindistan|IN|IND|356|9905
-Hırvatistan|HR|HRV|191|9810
-Hollanda|NL|NLD|528|9938
-Honduras|HN|HND|340|9902
-Hong Kong|HK|HKG|344|
-Irak|IQ|IRQ|368|9908
-İran|IR|IRN|364|9907
-İrlanda|IE|IRL|372|9909
-İspanya|ES|ESP|724|9968
-İsrail|IL|ISR|376|9910
-İsveç|SE|SWE|752|9973
-İsviçre|CH|CHE|756|9974
-Italya|IT|ITA|380|9911
-İzlanda|IS|ISL|352|9904
-Jamaika|JM|JAM|388|9913
-Japonya|JP|JPN|392|9914
-Jersey|JE|JEY|832|
-Kamboçya|KH|KHM|116|9877
-Kamerun|CM|CMR|120|9986
-Kanada|CA|CAN|124|9863
-Karadağ|ME|MNE|499|9770
-Katar|QA|QAT|634|9953
-Kazakistan|KZ|KAZ|398|9822
-Kenya|KE|KEN|404|9916
-Kiribati|KI|KIR|296|9800
-Kıbrıs|CY|CYP|196|9875
-Kırgızistan|KG|KGZ|417|9823
-Kolombiya|CO|COL|170|9869
-Komorlar|KM|COM|174|9870
-Kongo Cumhuriyeti|CG|COG|178|9871
-Kosova|XK|XKX|383|9773
-Kosta Rika|CR|CRI|188|9872
-Küba|CU|CUB|192|9873
-Kuveyt|KW|KWT|414|9917
-Kuzey Kore|KP|PRK|408|9775
-Kuzey Mariana Adaları|MP|MNP|580|
-Laos|LA|LAO|418|9918
-Lesotho|LS|LSO|426|9920
-Letonya|LV|LVA|428|9824
-Liberya|LR|LBR|430|9921
-Libya|LY|LBY|434|9922
-Lihtenştayn|LI|LIE|438|9923
-Litvanya|LT|LTU|440|9825
-Lübnan|LB|LBN|422|9919
-Lüksemburg|LU|LUX|442|9924
-Macaristan|HU|HUN|348|9903
-Madagaskar|MG|MDG|450|9925
-Makao|MO|MAC|446|
-Makedonya|MK|MKD|807|9826
-Malavi|MW|MWI|454|9926
-Maldivler|MV|MDV|462|9928
-Malezya|MY|MYS|458|9927
-Mali|ML|MLI|466|9929
-Malta|MT|MLT|470|9930
-Man Adası|IM|IMN|833|
-Marshall Adaları|MH|MHL|584|9827
-Martinik|MQ|MTQ|474|
-Mauritius|MU|MUS|480|
-Mayotte|YT|MYT|175|
-Meksika|MX|MEX|484|9933
-Mikronezya Federal Devletleri|FM|FSM|583|9828
-Mısır|EG|EGY|818|9884
-Moğolistan|MN|MNG|496|9934
-Moldova|MD|MDA|498|9829
-Monako|MC|MCO|492|9801
-Montserrat|MS|MSR|500|
-Moritanya|MR|MRT|478|9931
-Mozambik|MZ|MOZ|508|9936
-Myanmar|MM|MMR|104|9802
-Namibya|NA|NAM|516|9830
-Nauru|NR|NRU|520|9803
-Nepal|NP|NPL|524|9937
-Nijer|NE|NER|562|9941
-Nijerya|NG|NGA|566|9942
-Nikaragua|NI|NIC|558|9940
-Niue|NU|NIU|570|
-Norfolk Adası|NF|NFK|574|
-Norveç|NO|NOR|578|9943
-Orta Afrika Cumhuriyeti|CF|CAF|140|9865
-Özbekistan|UZ|UZB|860|9836
-Pakistan|PK|PAK|586|9945
-Palau|PW|PLW|585|9804
-Panama|PA|PAN|591|9946
-Papua Yeni Gine|PG|PNG|598|9947
-Paraguay|PY|PRY|600|9948
-Peru|PE|PER|604|9949
-Pitcairn Adaları|PN|PCN|612|
-Polonya|PL|POL|616|9951
-Portekiz|PT|PRT|620|9952
-Porto Riko|PR|PRI|630|
-Reunion|RE|REU|638|
-Romanya|RO|ROU|642|9954
-Ruanda|RW|RWA|646|9955
-Rusya|RU|RUS|643|9831
-Saint Barthelemy|BL|BLM|652|
-Saint Helena, Ascension ve Tristan da Cunha|SH|SHN|654|
-Saint Kitts ve Nevi|KN|KNA|659|9806
-Saint Lucia|LC|LCA|662|9956
-Saint Martin|MF|MAF|663|
-Saint Pierre ve Miquelon|PM|SPM|666|
-Saint Vincent ve Grenadinler|VC|VCT|670|9957
-Samoa|WS|WSM|882|9958
-San Marino|SM|SMR|674|9805
-Sao Tome ve Príncipe|ST|STP|678|9959
-Senegal|SN|SEN|686|9961
-Seyşel Adaları|SC|SYC|690|9962
-Sierra Leone|SL|SLE|694|9963
-Şili|CL|CHL|152|9867
-Singapur|SG|SGP|702|9964
-Sint Maarten|SX|SXM|534|
-Sırbistan|RS|SRB|688|9771
-Slovakya|SK|SVK|703|9832
-Slovenya|SI|SVN|705|9833
-Solomon Adaları|SB|SLB|090|9965
-Somali|SO|SOM|706|9966
-Sri Lanka|LK|LKA|144|9969
-Sudan|SD|SDN|729|9970
-Surinam|SR|SUR|740|9971
-Suriye|SY|SYR|760|9975
-Suudi Arabistan|SA|SAU|682|9960
-Svalbard ve Jan Mayen|SJ|SJM|744|
-Svaziland|SZ|SWZ|748|9972
-Tacikistan|TJ|TJK|762|9834
-Tanzanya|TZ|TZA|834|9987
-Tayland|TH|THA|764|9976
-Tayvan|TW|TWN|158|9772
-Togo|TG|TGO|768|9977
-Tokelau|TK|TKL|772|
-Tonga|TO|TON|776|9807
-Trinidad ve Tobago|TT|TTO|780|9978
-Tunus|TN|TUN|788|9979
-Türkiye|TR|TUR|792|9980
-Türkmenistan|TM|TKM|795|9835
-Turks ve Caicos Adaları|TC|TCA|796|
-Tuvalu|TV|TUV|798|9808
-Uganda|UG|UGA|800|9981
-Ukrayna|UA|UKR|804|9837
-Umman|OM|OMN|512|9944
-Ürdün|JO|JOR|400|9915
-Uruguay|UY|URY|858|9990
-Vanuatu|VU|VUT|548|9991
-Vatikan|VA|VAT|336|9799
-Venezuela|VE|VEN|862|9992
-Vietnam|VN|VNM|704|9993
-Wallis ve Futuna|WF|WLF|876|
-Yemen|YE|YEM|887|9994
-Yeni Kaledonya|NC|NCL|540|
-Yeni Zelanda|NZ|NZL|554|9939
-Yeşil Burun Adaları|CV|CPV|132|
-Yunanistan|GR|GRC|300|9895
-Zambiya|ZM|ZMB|894|9997
-Zimbabve|ZW|ZWE|716|9998
+-
+  name: Afganistan
+  alpha_2_code: AF
+  alpha_3_code: AFG
+  numeric_code: 004
+  mernis_code: 9840
+-
+  name: Aland Adaları
+  alpha_2_code: AX
+  alpha_3_code: ALA
+  numeric_code: 248
+  mernis_code: 
+-
+  name: Almanya
+  alpha_2_code: DE
+  alpha_3_code: DEU
+  numeric_code: 276
+  mernis_code: 9893
+-
+  name: Amerika Birleşik Devletleri
+  alpha_2_code: US
+  alpha_3_code: USA
+  numeric_code: 840
+  mernis_code: 9988
+-
+  name: Amerika Birleşik Devletleri Küçük Dış Adaları
+  alpha_2_code: UM
+  alpha_3_code: UMI
+  numeric_code: 581
+  mernis_code: 
+-
+  name: Amerika Birleşik Devletleri Virgin Adaları
+  alpha_2_code: VI
+  alpha_3_code: VIR
+  numeric_code: 850
+  mernis_code: 
+-
+  name: Amerikan Samoası
+  alpha_2_code: AS
+  alpha_3_code: ASM
+  numeric_code: 016
+  mernis_code: 
+-
+  name: Andorra
+  alpha_2_code: AD
+  alpha_3_code: AND
+  numeric_code: 020
+  mernis_code: 9795
+-
+  name: Angola
+  alpha_2_code: AO
+  alpha_3_code: AGO
+  numeric_code: 024
+  mernis_code: 9843
+-
+  name: Anguilla
+  alpha_2_code: AI
+  alpha_3_code: AIA
+  numeric_code: 660
+  mernis_code: 
+-
+  name: Antarktika
+  alpha_2_code: AQ
+  alpha_3_code: ATA
+  numeric_code: 010
+  mernis_code: 
+-
+  name: Antigua ve Barbuda
+  alpha_2_code: AG
+  alpha_3_code: ATG
+  numeric_code: 028
+  mernis_code: 9844
+-
+  name: Arjantin
+  alpha_2_code: AR
+  alpha_3_code: ARG
+  numeric_code: 032
+  mernis_code: 9845
+-
+  name: Arnavutluk
+  alpha_2_code: AL
+  alpha_3_code: ALB
+  numeric_code: 008
+  mernis_code: 9841
+-
+  name: Aruba
+  alpha_2_code: AW
+  alpha_3_code: ABW
+  numeric_code: 533
+  mernis_code: 
+-
+  name: Avustralya
+  alpha_2_code: AU
+  alpha_3_code: AUS
+  numeric_code: 036
+  mernis_code: 9846
+-
+  name: Avusturya
+  alpha_2_code: AT
+  alpha_3_code: AUT
+  numeric_code: 040
+  mernis_code: 9847
+-
+  name: Azerbaycan
+  alpha_2_code: AZ
+  alpha_3_code: AZE
+  numeric_code: 031
+  mernis_code: 9814
+-
+  name: Bahamalar
+  alpha_2_code: BS
+  alpha_3_code: BHS
+  numeric_code: 044
+  mernis_code: 9848
+-
+  name: Bahreyn
+  alpha_2_code: BH
+  alpha_3_code: BHR
+  numeric_code: 048
+  mernis_code: 9849
+-
+  name: Bangladeş
+  alpha_2_code: BD
+  alpha_3_code: BGD
+  numeric_code: 050
+  mernis_code: 9850
+-
+  name: Barbados
+  alpha_2_code: BB
+  alpha_3_code: BRB
+  numeric_code: 052
+  mernis_code: 9851
+-
+  name: Batı Sahra
+  alpha_2_code: EH
+  alpha_3_code: ESH
+  numeric_code: 732
+  mernis_code: 
+-
+  name: Belarus
+  alpha_2_code: BY
+  alpha_3_code: BLR
+  numeric_code: 112
+  mernis_code: 9815
+-
+  name: Belçika
+  alpha_2_code: BE
+  alpha_3_code: BEL
+  numeric_code: 056
+  mernis_code: 9852
+-
+  name: Belize
+  alpha_2_code: BZ
+  alpha_3_code: BLZ
+  numeric_code: 084
+  mernis_code: 9853
+-
+  name: Benin
+  alpha_2_code: BJ
+  alpha_3_code: BEN
+  numeric_code: 204
+  mernis_code: 9854
+-
+  name: Bermuda
+  alpha_2_code: BM
+  alpha_3_code: BMU
+  numeric_code: 060
+  mernis_code: 
+-
+  name: Birleşik Arap Emirlikleri
+  alpha_2_code: AE
+  alpha_3_code: ARE
+  numeric_code: 784
+  mernis_code: 9984
+-
+  name: Birleşik Krallık
+  alpha_2_code: GB
+  alpha_3_code: GBR
+  numeric_code: 826
+  mernis_code: 9985
+-
+  name: Bolivya
+  alpha_2_code: BO
+  alpha_3_code: BOL
+  numeric_code: 068
+  mernis_code: 9856
+-
+  name: Bonaire, Sint Eustatius ve Saba
+  alpha_2_code: BQ
+  alpha_3_code: BES
+  numeric_code: 535
+  mernis_code: 
+-
+  name: Bosna Hersek
+  alpha_2_code: BA
+  alpha_3_code: BIH
+  numeric_code: 070
+  mernis_code: 9816
+-
+  name: Botsvana
+  alpha_2_code: BW
+  alpha_3_code: BWA
+  numeric_code: 072
+  mernis_code: 9857
+-
+  name: Bouvet Adası
+  alpha_2_code: BV
+  alpha_3_code: BVT
+  numeric_code: 074
+  mernis_code: 
+-
+  name: Brezilya
+  alpha_2_code: BR
+  alpha_3_code: BRA
+  numeric_code: 076
+  mernis_code: 9858
+-
+  name: Britanya Hint Okyanusu Toprakları
+  alpha_2_code: IO
+  alpha_3_code: IOT
+  numeric_code: 086
+  mernis_code: 
+-
+  name: Britanya Virjin Adaları
+  alpha_2_code: VG
+  alpha_3_code: VGB
+  numeric_code: 092
+  mernis_code: 
+-
+  name: Brunei
+  alpha_2_code: BN
+  alpha_3_code: BRN
+  numeric_code: 096
+  mernis_code: 9796
+-
+  name: Bulgaristan
+  alpha_2_code: BG
+  alpha_3_code: BGR
+  numeric_code: 100
+  mernis_code: 9859
+-
+  name: Burkina Faso
+  alpha_2_code: BF
+  alpha_3_code: BFA
+  numeric_code: 854
+  mernis_code: 9797
+-
+  name: Burundi
+  alpha_2_code: BI
+  alpha_3_code: BDI
+  numeric_code: 108
+  mernis_code: 9861
+-
+  name: Butan
+  alpha_2_code: BT
+  alpha_3_code: BTN
+  numeric_code: 064
+  mernis_code: 9855
+-
+  name: Çad
+  alpha_2_code: TD
+  alpha_3_code: TCD
+  numeric_code: 148
+  mernis_code: 9866
+-
+  name: Cayman Adaları
+  alpha_2_code: KY
+  alpha_3_code: CYM
+  numeric_code: 136
+  mernis_code: 
+-
+  name: Cebelitarık
+  alpha_2_code: GI
+  alpha_3_code: GIB
+  numeric_code: 292
+  mernis_code: 
+-
+  name: Çekya
+  alpha_2_code: CZ
+  alpha_3_code: CZE
+  numeric_code: 203
+  mernis_code: 9817
+-
+  name: Cezayir
+  alpha_2_code: DZ
+  alpha_3_code: DZA
+  numeric_code: 012
+  mernis_code: 9842
+-
+  name: Christmas Adası
+  alpha_2_code: CX
+  alpha_3_code: CXR
+  numeric_code: 162
+  mernis_code: 
+-
+  name: Cibuti
+  alpha_2_code: DJ
+  alpha_3_code: DJI
+  numeric_code: 262
+  mernis_code: 9880
+-
+  name: Çin
+  alpha_2_code: CN
+  alpha_3_code: CHN
+  numeric_code: 156
+  mernis_code: 9868
+-
+  name: Cocos Adaları
+  alpha_2_code: CC
+  alpha_3_code: CCK
+  numeric_code: 166
+  mernis_code: 
+-
+  name: Cook Adaları
+  alpha_2_code: CK
+  alpha_3_code: COK
+  numeric_code: 184
+  mernis_code: 
+-
+  name: Curaçao
+  alpha_2_code: CW
+  alpha_3_code: CUW
+  numeric_code: 531
+  mernis_code: 
+-
+  name: Danimarka
+  alpha_2_code: DK
+  alpha_3_code: DNK
+  numeric_code: 208
+  mernis_code: 9879
+-
+  name: Demokratik Kongo Cumhuriyeti
+  alpha_2_code: CD
+  alpha_3_code: COD
+  numeric_code: 180
+  mernis_code: 
+-
+  name: Doğu Timor
+  alpha_2_code: TL
+  alpha_3_code: TLS
+  numeric_code: 626
+  mernis_code: 
+-
+  name: Dominik Cumhuriyeti
+  alpha_2_code: DO
+  alpha_3_code: DOM
+  numeric_code: 214
+  mernis_code: 9882
+-
+  name: Dominika
+  alpha_2_code: DM
+  alpha_3_code: DMA
+  numeric_code: 212
+  mernis_code: 9881
+-
+  name: Ekvador
+  alpha_2_code: EC
+  alpha_3_code: ECU
+  numeric_code: 218
+  mernis_code: 9883
+-
+  name: Ekvator Ginesi
+  alpha_2_code: GQ
+  alpha_3_code: GNQ
+  numeric_code: 226
+  mernis_code: 9886
+-
+  name: El Salvador
+  alpha_2_code: SV
+  alpha_3_code: SLV
+  numeric_code: 222
+  mernis_code: 9885
+-
+  name: Endonezya
+  alpha_2_code: ID
+  alpha_3_code: IDN
+  numeric_code: 360
+  mernis_code: 9906
+-
+  name: Eritre
+  alpha_2_code: ER
+  alpha_3_code: ERI
+  numeric_code: 232
+  mernis_code: 9818
+-
+  name: Ermenistan
+  alpha_2_code: AM
+  alpha_3_code: ARM
+  numeric_code: 051
+  mernis_code: 9819
+-
+  name: Estonya
+  alpha_2_code: EE
+  alpha_3_code: EST
+  numeric_code: 233
+  mernis_code: 9820
+-
+  name: Etiyopya
+  alpha_2_code: ET
+  alpha_3_code: ETH
+  numeric_code: 231
+  mernis_code: 9887
+-
+  name: Falkland Adaları
+  alpha_2_code: FK
+  alpha_3_code: FLK
+  numeric_code: 238
+  mernis_code: 
+-
+  name: Faroe Adaları
+  alpha_2_code: FO
+  alpha_3_code: FRO
+  numeric_code: 234
+  mernis_code: 
+-
+  name: Fas
+  alpha_2_code: MA
+  alpha_3_code: MAR
+  numeric_code: 504
+  mernis_code: 9935
+-
+  name: Fiji
+  alpha_2_code: FJ
+  alpha_3_code: FJI
+  numeric_code: 242
+  mernis_code: 9888
+-
+  name: Fildişi Sahili
+  alpha_2_code: CI
+  alpha_3_code: CIV
+  numeric_code: 384
+  mernis_code: 9912
+-
+  name: Filipinler
+  alpha_2_code: PH
+  alpha_3_code: PHL
+  numeric_code: 608
+  mernis_code: 9950
+-
+  name: Filistin
+  alpha_2_code: PS
+  alpha_3_code: PSE
+  numeric_code: 275
+  mernis_code: 9812
+-
+  name: Finlandiya
+  alpha_2_code: FI
+  alpha_3_code: FIN
+  numeric_code: 246
+  mernis_code: 9889
+-
+  name: Fransa
+  alpha_2_code: FR
+  alpha_3_code: FRA
+  numeric_code: 250
+  mernis_code: 9890
+-
+  name: Fransız Güney ve Antarktika Toprakları
+  alpha_2_code: TF
+  alpha_3_code: ATF
+  numeric_code: 260
+  mernis_code: 
+-
+  name: Fransız Guyanası
+  alpha_2_code: GF
+  alpha_3_code: GUF
+  numeric_code: 254
+  mernis_code: 
+-
+  name: Fransız Polinezyası
+  alpha_2_code: PF
+  alpha_3_code: PYF
+  numeric_code: 258
+  mernis_code: 
+-
+  name: Gabon
+  alpha_2_code: GA
+  alpha_3_code: GAB
+  numeric_code: 266
+  mernis_code: 9891
+-
+  name: Gambiya
+  alpha_2_code: GM
+  alpha_3_code: GMB
+  numeric_code: 270
+  mernis_code: 9798
+-
+  name: Gana
+  alpha_2_code: GH
+  alpha_3_code: GHA
+  numeric_code: 288
+  mernis_code: 9894
+-
+  name: Gine
+  alpha_2_code: GN
+  alpha_3_code: GIN
+  numeric_code: 324
+  mernis_code: 9898
+-
+  name: Gine-Bissau
+  alpha_2_code: GW
+  alpha_3_code: GNB
+  numeric_code: 624
+  mernis_code: 9899
+-
+  name: Grenada
+  alpha_2_code: GD
+  alpha_3_code: GRD
+  numeric_code: 308
+  mernis_code: 9896
+-
+  name: Grönland
+  alpha_2_code: GL
+  alpha_3_code: GRL
+  numeric_code: 304
+  mernis_code: 
+-
+  name: Guadeloupe
+  alpha_2_code: GP
+  alpha_3_code: GLP
+  numeric_code: 312
+  mernis_code: 
+-
+  name: Guam
+  alpha_2_code: GU
+  alpha_3_code: GUM
+  numeric_code: 316
+  mernis_code: 
+-
+  name: Guatemala
+  alpha_2_code: GT
+  alpha_3_code: GTM
+  numeric_code: 320
+  mernis_code: 9897
+-
+  name: Guernsey
+  alpha_2_code: GG
+  alpha_3_code: GGY
+  numeric_code: 831
+  mernis_code: 
+-
+  name: Güney Afrika
+  alpha_2_code: ZA
+  alpha_3_code: ZAF
+  numeric_code: 710
+  mernis_code: 9967
+-
+  name: Güney Georgia ve Güney Sandwich Adaları
+  alpha_2_code: GS
+  alpha_3_code: SGS
+  numeric_code: 239
+  mernis_code: 
+-
+  name: Güney Kore
+  alpha_2_code: KR
+  alpha_3_code: KOR
+  numeric_code: 410
+  mernis_code: 9809
+-
+  name: Güney Sudan
+  alpha_2_code: SS
+  alpha_3_code: SSD
+  numeric_code: 728
+  mernis_code: 9759
+-
+  name: Gürcistan
+  alpha_2_code: GE
+  alpha_3_code: GEO
+  numeric_code: 268
+  mernis_code: 9821
+-
+  name: Guyana
+  alpha_2_code: GY
+  alpha_3_code: GUY
+  numeric_code: 328
+  mernis_code: 9900
+-
+  name: Haiti
+  alpha_2_code: HT
+  alpha_3_code: HTI
+  numeric_code: 332
+  mernis_code: 9901
+-
+  name: Heard Adası ve McDonald Adaları
+  alpha_2_code: HM
+  alpha_3_code: HMD
+  numeric_code: 334
+  mernis_code: 
+-
+  name: Hindistan
+  alpha_2_code: IN
+  alpha_3_code: IND
+  numeric_code: 356
+  mernis_code: 9905
+-
+  name: Hırvatistan
+  alpha_2_code: HR
+  alpha_3_code: HRV
+  numeric_code: 191
+  mernis_code: 9810
+-
+  name: Hollanda
+  alpha_2_code: NL
+  alpha_3_code: NLD
+  numeric_code: 528
+  mernis_code: 9938
+-
+  name: Honduras
+  alpha_2_code: HN
+  alpha_3_code: HND
+  numeric_code: 340
+  mernis_code: 9902
+-
+  name: Hong Kong
+  alpha_2_code: HK
+  alpha_3_code: HKG
+  numeric_code: 344
+  mernis_code: 
+-
+  name: Irak
+  alpha_2_code: IQ
+  alpha_3_code: IRQ
+  numeric_code: 368
+  mernis_code: 9908
+-
+  name: İran
+  alpha_2_code: IR
+  alpha_3_code: IRN
+  numeric_code: 364
+  mernis_code: 9907
+-
+  name: İrlanda
+  alpha_2_code: IE
+  alpha_3_code: IRL
+  numeric_code: 372
+  mernis_code: 9909
+-
+  name: İspanya
+  alpha_2_code: ES
+  alpha_3_code: ESP
+  numeric_code: 724
+  mernis_code: 9968
+-
+  name: İsrail
+  alpha_2_code: IL
+  alpha_3_code: ISR
+  numeric_code: 376
+  mernis_code: 9910
+-
+  name: İsveç
+  alpha_2_code: SE
+  alpha_3_code: SWE
+  numeric_code: 752
+  mernis_code: 9973
+-
+  name: İsviçre
+  alpha_2_code: CH
+  alpha_3_code: CHE
+  numeric_code: 756
+  mernis_code: 9974
+-
+  name: Italya
+  alpha_2_code: IT
+  alpha_3_code: ITA
+  numeric_code: 380
+  mernis_code: 9911
+-
+  name: İzlanda
+  alpha_2_code: IS
+  alpha_3_code: ISL
+  numeric_code: 352
+  mernis_code: 9904
+-
+  name: Jamaika
+  alpha_2_code: JM
+  alpha_3_code: JAM
+  numeric_code: 388
+  mernis_code: 9913
+-
+  name: Japonya
+  alpha_2_code: JP
+  alpha_3_code: JPN
+  numeric_code: 392
+  mernis_code: 9914
+-
+  name: Jersey
+  alpha_2_code: JE
+  alpha_3_code: JEY
+  numeric_code: 832
+  mernis_code: 
+-
+  name: Kamboçya
+  alpha_2_code: KH
+  alpha_3_code: KHM
+  numeric_code: 116
+  mernis_code: 9877
+-
+  name: Kamerun
+  alpha_2_code: CM
+  alpha_3_code: CMR
+  numeric_code: 120
+  mernis_code: 9986
+-
+  name: Kanada
+  alpha_2_code: CA
+  alpha_3_code: CAN
+  numeric_code: 124
+  mernis_code: 9863
+-
+  name: Karadağ
+  alpha_2_code: ME
+  alpha_3_code: MNE
+  numeric_code: 499
+  mernis_code: 9770
+-
+  name: Katar
+  alpha_2_code: QA
+  alpha_3_code: QAT
+  numeric_code: 634
+  mernis_code: 9953
+-
+  name: Kazakistan
+  alpha_2_code: KZ
+  alpha_3_code: KAZ
+  numeric_code: 398
+  mernis_code: 9822
+-
+  name: Kenya
+  alpha_2_code: KE
+  alpha_3_code: KEN
+  numeric_code: 404
+  mernis_code: 9916
+-
+  name: Kiribati
+  alpha_2_code: KI
+  alpha_3_code: KIR
+  numeric_code: 296
+  mernis_code: 9800
+-
+  name: Kıbrıs
+  alpha_2_code: CY
+  alpha_3_code: CYP
+  numeric_code: 196
+  mernis_code: 9875
+-
+  name: Kırgızistan
+  alpha_2_code: KG
+  alpha_3_code: KGZ
+  numeric_code: 417
+  mernis_code: 9823
+-
+  name: Kolombiya
+  alpha_2_code: CO
+  alpha_3_code: COL
+  numeric_code: 170
+  mernis_code: 9869
+-
+  name: Komorlar
+  alpha_2_code: KM
+  alpha_3_code: COM
+  numeric_code: 174
+  mernis_code: 9870
+-
+  name: Kongo Cumhuriyeti
+  alpha_2_code: CG
+  alpha_3_code: COG
+  numeric_code: 178
+  mernis_code: 9871
+-
+  name: Kosova
+  alpha_2_code: XK
+  alpha_3_code: XKX
+  numeric_code: 383
+  mernis_code: 9773
+-
+  name: Kosta Rika
+  alpha_2_code: CR
+  alpha_3_code: CRI
+  numeric_code: 188
+  mernis_code: 9872
+-
+  name: Küba
+  alpha_2_code: CU
+  alpha_3_code: CUB
+  numeric_code: 192
+  mernis_code: 9873
+-
+  name: Kuveyt
+  alpha_2_code: KW
+  alpha_3_code: KWT
+  numeric_code: 414
+  mernis_code: 9917
+-
+  name: Kuzey Kore
+  alpha_2_code: KP
+  alpha_3_code: PRK
+  numeric_code: 408
+  mernis_code: 9775
+-
+  name: Kuzey Mariana Adaları
+  alpha_2_code: MP
+  alpha_3_code: MNP
+  numeric_code: 580
+  mernis_code: 
+-
+  name: Laos
+  alpha_2_code: LA
+  alpha_3_code: LAO
+  numeric_code: 418
+  mernis_code: 9918
+-
+  name: Lesotho
+  alpha_2_code: LS
+  alpha_3_code: LSO
+  numeric_code: 426
+  mernis_code: 9920
+-
+  name: Letonya
+  alpha_2_code: LV
+  alpha_3_code: LVA
+  numeric_code: 428
+  mernis_code: 9824
+-
+  name: Liberya
+  alpha_2_code: LR
+  alpha_3_code: LBR
+  numeric_code: 430
+  mernis_code: 9921
+-
+  name: Libya
+  alpha_2_code: LY
+  alpha_3_code: LBY
+  numeric_code: 434
+  mernis_code: 9922
+-
+  name: Lihtenştayn
+  alpha_2_code: LI
+  alpha_3_code: LIE
+  numeric_code: 438
+  mernis_code: 9923
+-
+  name: Litvanya
+  alpha_2_code: LT
+  alpha_3_code: LTU
+  numeric_code: 440
+  mernis_code: 9825
+-
+  name: Lübnan
+  alpha_2_code: LB
+  alpha_3_code: LBN
+  numeric_code: 422
+  mernis_code: 9919
+-
+  name: Lüksemburg
+  alpha_2_code: LU
+  alpha_3_code: LUX
+  numeric_code: 442
+  mernis_code: 9924
+-
+  name: Macaristan
+  alpha_2_code: HU
+  alpha_3_code: HUN
+  numeric_code: 348
+  mernis_code: 9903
+-
+  name: Madagaskar
+  alpha_2_code: MG
+  alpha_3_code: MDG
+  numeric_code: 450
+  mernis_code: 9925
+-
+  name: Makao
+  alpha_2_code: MO
+  alpha_3_code: MAC
+  numeric_code: 446
+  mernis_code: 
+-
+  name: Makedonya
+  alpha_2_code: MK
+  alpha_3_code: MKD
+  numeric_code: 807
+  mernis_code: 9826
+-
+  name: Malavi
+  alpha_2_code: MW
+  alpha_3_code: MWI
+  numeric_code: 454
+  mernis_code: 9926
+-
+  name: Maldivler
+  alpha_2_code: MV
+  alpha_3_code: MDV
+  numeric_code: 462
+  mernis_code: 9928
+-
+  name: Malezya
+  alpha_2_code: MY
+  alpha_3_code: MYS
+  numeric_code: 458
+  mernis_code: 9927
+-
+  name: Mali
+  alpha_2_code: ML
+  alpha_3_code: MLI
+  numeric_code: 466
+  mernis_code: 9929
+-
+  name: Malta
+  alpha_2_code: MT
+  alpha_3_code: MLT
+  numeric_code: 470
+  mernis_code: 9930
+-
+  name: Man Adası
+  alpha_2_code: IM
+  alpha_3_code: IMN
+  numeric_code: 833
+  mernis_code: 
+-
+  name: Marshall Adaları
+  alpha_2_code: MH
+  alpha_3_code: MHL
+  numeric_code: 584
+  mernis_code: 9827
+-
+  name: Martinik
+  alpha_2_code: MQ
+  alpha_3_code: MTQ
+  numeric_code: 474
+  mernis_code: 
+-
+  name: Mauritius
+  alpha_2_code: MU
+  alpha_3_code: MUS
+  numeric_code: 480
+  mernis_code: 
+-
+  name: Mayotte
+  alpha_2_code: YT
+  alpha_3_code: MYT
+  numeric_code: 175
+  mernis_code: 
+-
+  name: Meksika
+  alpha_2_code: MX
+  alpha_3_code: MEX
+  numeric_code: 484
+  mernis_code: 9933
+-
+  name: Mikronezya Federal Devletleri
+  alpha_2_code: FM
+  alpha_3_code: FSM
+  numeric_code: 583
+  mernis_code: 9828
+-
+  name: Mısır
+  alpha_2_code: EG
+  alpha_3_code: EGY
+  numeric_code: 818
+  mernis_code: 9884
+-
+  name: Moğolistan
+  alpha_2_code: MN
+  alpha_3_code: MNG
+  numeric_code: 496
+  mernis_code: 9934
+-
+  name: Moldova
+  alpha_2_code: MD
+  alpha_3_code: MDA
+  numeric_code: 498
+  mernis_code: 9829
+-
+  name: Monako
+  alpha_2_code: MC
+  alpha_3_code: MCO
+  numeric_code: 492
+  mernis_code: 9801
+-
+  name: Montserrat
+  alpha_2_code: MS
+  alpha_3_code: MSR
+  numeric_code: 500
+  mernis_code: 
+-
+  name: Moritanya
+  alpha_2_code: MR
+  alpha_3_code: MRT
+  numeric_code: 478
+  mernis_code: 9931
+-
+  name: Mozambik
+  alpha_2_code: MZ
+  alpha_3_code: MOZ
+  numeric_code: 508
+  mernis_code: 9936
+-
+  name: Myanmar
+  alpha_2_code: MM
+  alpha_3_code: MMR
+  numeric_code: 104
+  mernis_code: 9802
+-
+  name: Namibya
+  alpha_2_code: NA
+  alpha_3_code: NAM
+  numeric_code: 516
+  mernis_code: 9830
+-
+  name: Nauru
+  alpha_2_code: NR
+  alpha_3_code: NRU
+  numeric_code: 520
+  mernis_code: 9803
+-
+  name: Nepal
+  alpha_2_code: NP
+  alpha_3_code: NPL
+  numeric_code: 524
+  mernis_code: 9937
+-
+  name: Nijer
+  alpha_2_code: NE
+  alpha_3_code: NER
+  numeric_code: 562
+  mernis_code: 9941
+-
+  name: Nijerya
+  alpha_2_code: NG
+  alpha_3_code: NGA
+  numeric_code: 566
+  mernis_code: 9942
+-
+  name: Nikaragua
+  alpha_2_code: NI
+  alpha_3_code: NIC
+  numeric_code: 558
+  mernis_code: 9940
+-
+  name: Niue
+  alpha_2_code: NU
+  alpha_3_code: NIU
+  numeric_code: 570
+  mernis_code: 
+-
+  name: Norfolk Adası
+  alpha_2_code: NF
+  alpha_3_code: NFK
+  numeric_code: 574
+  mernis_code: 
+-
+  name: Norveç
+  alpha_2_code: NO
+  alpha_3_code: NOR
+  numeric_code: 578
+  mernis_code: 9943
+-
+  name: Orta Afrika Cumhuriyeti
+  alpha_2_code: CF
+  alpha_3_code: CAF
+  numeric_code: 140
+  mernis_code: 9865
+-
+  name: Özbekistan
+  alpha_2_code: UZ
+  alpha_3_code: UZB
+  numeric_code: 860
+  mernis_code: 9836
+-
+  name: Pakistan
+  alpha_2_code: PK
+  alpha_3_code: PAK
+  numeric_code: 586
+  mernis_code: 9945
+-
+  name: Palau
+  alpha_2_code: PW
+  alpha_3_code: PLW
+  numeric_code: 585
+  mernis_code: 9804
+-
+  name: Panama
+  alpha_2_code: PA
+  alpha_3_code: PAN
+  numeric_code: 591
+  mernis_code: 9946
+-
+  name: Papua Yeni Gine
+  alpha_2_code: PG
+  alpha_3_code: PNG
+  numeric_code: 598
+  mernis_code: 9947
+-
+  name: Paraguay
+  alpha_2_code: PY
+  alpha_3_code: PRY
+  numeric_code: 600
+  mernis_code: 9948
+-
+  name: Peru
+  alpha_2_code: PE
+  alpha_3_code: PER
+  numeric_code: 604
+  mernis_code: 9949
+-
+  name: Pitcairn Adaları
+  alpha_2_code: PN
+  alpha_3_code: PCN
+  numeric_code: 612
+  mernis_code: 
+-
+  name: Polonya
+  alpha_2_code: PL
+  alpha_3_code: POL
+  numeric_code: 616
+  mernis_code: 9951
+-
+  name: Portekiz
+  alpha_2_code: PT
+  alpha_3_code: PRT
+  numeric_code: 620
+  mernis_code: 9952
+-
+  name: Porto Riko
+  alpha_2_code: PR
+  alpha_3_code: PRI
+  numeric_code: 630
+  mernis_code: 
+-
+  name: Reunion
+  alpha_2_code: RE
+  alpha_3_code: REU
+  numeric_code: 638
+  mernis_code: 
+-
+  name: Romanya
+  alpha_2_code: RO
+  alpha_3_code: ROU
+  numeric_code: 642
+  mernis_code: 9954
+-
+  name: Ruanda
+  alpha_2_code: RW
+  alpha_3_code: RWA
+  numeric_code: 646
+  mernis_code: 9955
+-
+  name: Rusya
+  alpha_2_code: RU
+  alpha_3_code: RUS
+  numeric_code: 643
+  mernis_code: 9831
+-
+  name: Saint Barthelemy
+  alpha_2_code: BL
+  alpha_3_code: BLM
+  numeric_code: 652
+  mernis_code: 
+-
+  name: Saint Helena, Ascension ve Tristan da Cunha
+  alpha_2_code: SH
+  alpha_3_code: SHN
+  numeric_code: 654
+  mernis_code: 
+-
+  name: Saint Kitts ve Nevi
+  alpha_2_code: KN
+  alpha_3_code: KNA
+  numeric_code: 659
+  mernis_code: 9806
+-
+  name: Saint Lucia
+  alpha_2_code: LC
+  alpha_3_code: LCA
+  numeric_code: 662
+  mernis_code: 9956
+-
+  name: Saint Martin
+  alpha_2_code: MF
+  alpha_3_code: MAF
+  numeric_code: 663
+  mernis_code: 
+-
+  name: Saint Pierre ve Miquelon
+  alpha_2_code: PM
+  alpha_3_code: SPM
+  numeric_code: 666
+  mernis_code: 
+-
+  name: Saint Vincent ve Grenadinler
+  alpha_2_code: VC
+  alpha_3_code: VCT
+  numeric_code: 670
+  mernis_code: 9957
+-
+  name: Samoa
+  alpha_2_code: WS
+  alpha_3_code: WSM
+  numeric_code: 882
+  mernis_code: 9958
+-
+  name: San Marino
+  alpha_2_code: SM
+  alpha_3_code: SMR
+  numeric_code: 674
+  mernis_code: 9805
+-
+  name: Sao Tome ve Príncipe
+  alpha_2_code: ST
+  alpha_3_code: STP
+  numeric_code: 678
+  mernis_code: 9959
+-
+  name: Senegal
+  alpha_2_code: SN
+  alpha_3_code: SEN
+  numeric_code: 686
+  mernis_code: 9961
+-
+  name: Seyşel Adaları
+  alpha_2_code: SC
+  alpha_3_code: SYC
+  numeric_code: 690
+  mernis_code: 9962
+-
+  name: Sierra Leone
+  alpha_2_code: SL
+  alpha_3_code: SLE
+  numeric_code: 694
+  mernis_code: 9963
+-
+  name: Şili
+  alpha_2_code: CL
+  alpha_3_code: CHL
+  numeric_code: 152
+  mernis_code: 9867
+-
+  name: Singapur
+  alpha_2_code: SG
+  alpha_3_code: SGP
+  numeric_code: 702
+  mernis_code: 9964
+-
+  name: Sint Maarten
+  alpha_2_code: SX
+  alpha_3_code: SXM
+  numeric_code: 534
+  mernis_code: 
+-
+  name: Sırbistan
+  alpha_2_code: RS
+  alpha_3_code: SRB
+  numeric_code: 688
+  mernis_code: 9771
+-
+  name: Slovakya
+  alpha_2_code: SK
+  alpha_3_code: SVK
+  numeric_code: 703
+  mernis_code: 9832
+-
+  name: Slovenya
+  alpha_2_code: SI
+  alpha_3_code: SVN
+  numeric_code: 705
+  mernis_code: 9833
+-
+  name: Solomon Adaları
+  alpha_2_code: SB
+  alpha_3_code: SLB
+  numeric_code: 090
+  mernis_code: 9965
+-
+  name: Somali
+  alpha_2_code: SO
+  alpha_3_code: SOM
+  numeric_code: 706
+  mernis_code: 9966
+-
+  name: Sri Lanka
+  alpha_2_code: LK
+  alpha_3_code: LKA
+  numeric_code: 144
+  mernis_code: 9969
+-
+  name: Sudan
+  alpha_2_code: SD
+  alpha_3_code: SDN
+  numeric_code: 729
+  mernis_code: 9970
+-
+  name: Surinam
+  alpha_2_code: SR
+  alpha_3_code: SUR
+  numeric_code: 740
+  mernis_code: 9971
+-
+  name: Suriye
+  alpha_2_code: SY
+  alpha_3_code: SYR
+  numeric_code: 760
+  mernis_code: 9975
+-
+  name: Suudi Arabistan
+  alpha_2_code: SA
+  alpha_3_code: SAU
+  numeric_code: 682
+  mernis_code: 9960
+-
+  name: Svalbard ve Jan Mayen
+  alpha_2_code: SJ
+  alpha_3_code: SJM
+  numeric_code: 744
+  mernis_code: 
+-
+  name: Svaziland
+  alpha_2_code: SZ
+  alpha_3_code: SWZ
+  numeric_code: 748
+  mernis_code: 9972
+-
+  name: Tacikistan
+  alpha_2_code: TJ
+  alpha_3_code: TJK
+  numeric_code: 762
+  mernis_code: 9834
+-
+  name: Tanzanya
+  alpha_2_code: TZ
+  alpha_3_code: TZA
+  numeric_code: 834
+  mernis_code: 9987
+-
+  name: Tayland
+  alpha_2_code: TH
+  alpha_3_code: THA
+  numeric_code: 764
+  mernis_code: 9976
+-
+  name: Tayvan
+  alpha_2_code: TW
+  alpha_3_code: TWN
+  numeric_code: 158
+  mernis_code: 9772
+-
+  name: Togo
+  alpha_2_code: TG
+  alpha_3_code: TGO
+  numeric_code: 768
+  mernis_code: 9977
+-
+  name: Tokelau
+  alpha_2_code: TK
+  alpha_3_code: TKL
+  numeric_code: 772
+  mernis_code: 
+-
+  name: Tonga
+  alpha_2_code: TO
+  alpha_3_code: TON
+  numeric_code: 776
+  mernis_code: 9807
+-
+  name: Trinidad ve Tobago
+  alpha_2_code: TT
+  alpha_3_code: TTO
+  numeric_code: 780
+  mernis_code: 9978
+-
+  name: Tunus
+  alpha_2_code: TN
+  alpha_3_code: TUN
+  numeric_code: 788
+  mernis_code: 9979
+-
+  name: Türkiye
+  alpha_2_code: TR
+  alpha_3_code: TUR
+  numeric_code: 792
+  mernis_code: 9980
+-
+  name: Türkmenistan
+  alpha_2_code: TM
+  alpha_3_code: TKM
+  numeric_code: 795
+  mernis_code: 9835
+-
+  name: Turks ve Caicos Adaları
+  alpha_2_code: TC
+  alpha_3_code: TCA
+  numeric_code: 796
+  mernis_code: 
+-
+  name: Tuvalu
+  alpha_2_code: TV
+  alpha_3_code: TUV
+  numeric_code: 798
+  mernis_code: 9808
+-
+  name: Uganda
+  alpha_2_code: UG
+  alpha_3_code: UGA
+  numeric_code: 800
+  mernis_code: 9981
+-
+  name: Ukrayna
+  alpha_2_code: UA
+  alpha_3_code: UKR
+  numeric_code: 804
+  mernis_code: 9837
+-
+  name: Umman
+  alpha_2_code: OM
+  alpha_3_code: OMN
+  numeric_code: 512
+  mernis_code: 9944
+-
+  name: Ürdün
+  alpha_2_code: JO
+  alpha_3_code: JOR
+  numeric_code: 400
+  mernis_code: 9915
+-
+  name: Uruguay
+  alpha_2_code: UY
+  alpha_3_code: URY
+  numeric_code: 858
+  mernis_code: 9990
+-
+  name: Vanuatu
+  alpha_2_code: VU
+  alpha_3_code: VUT
+  numeric_code: 548
+  mernis_code: 9991
+-
+  name: Vatikan
+  alpha_2_code: VA
+  alpha_3_code: VAT
+  numeric_code: 336
+  mernis_code: 9799
+-
+  name: Venezuela
+  alpha_2_code: VE
+  alpha_3_code: VEN
+  numeric_code: 862
+  mernis_code: 9992
+-
+  name: Vietnam
+  alpha_2_code: VN
+  alpha_3_code: VNM
+  numeric_code: 704
+  mernis_code: 9993
+-
+  name: Wallis ve Futuna
+  alpha_2_code: WF
+  alpha_3_code: WLF
+  numeric_code: 876
+  mernis_code: 
+-
+  name: Yemen
+  alpha_2_code: YE
+  alpha_3_code: YEM
+  numeric_code: 887
+  mernis_code: 9994
+-
+  name: Yeni Kaledonya
+  alpha_2_code: NC
+  alpha_3_code: NCL
+  numeric_code: 540
+  mernis_code: 
+-
+  name: Yeni Zelanda
+  alpha_2_code: NZ
+  alpha_3_code: NZL
+  numeric_code: 554
+  mernis_code: 9939
+-
+  name: Yeşil Burun Adaları
+  alpha_2_code: CV
+  alpha_3_code: CPV
+  numeric_code: 132
+  mernis_code: 
+-
+  name: Yunanistan
+  alpha_2_code: GR
+  alpha_3_code: GRC
+  numeric_code: 300
+  mernis_code: 9895
+-
+  name: Zambiya
+  alpha_2_code: ZM
+  alpha_3_code: ZMB
+  numeric_code: 894
+  mernis_code: 9997
+-
+  name: Zimbabve
+  alpha_2_code: ZW
+  alpha_3_code: ZWE
+  numeric_code: 716
+  mernis_code: 9998

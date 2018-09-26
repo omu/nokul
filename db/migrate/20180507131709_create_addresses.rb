@@ -3,11 +3,11 @@
 class CreateAddresses < ActiveRecord::Migration[5.1]
   def change
     create_table :addresses do |t|
-      t.integer :name, null: false, default: 4
-      t.string :phone_number, null: false, default: ''
-      t.text :full_address, null: false
-      t.references :district, foreign_key: true
-      t.references :user, foreign_key: true
+      t.integer :type, null: false
+      t.string :phone_number, limit: 255
+      t.string :full_address, null: false, limit: 255
+      t.references :district
+      t.references :user
       t.timestamps
     end
   end
