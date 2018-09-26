@@ -1,0 +1,12 @@
+<div class="col-md-3 col-xs-4">
+  <div class="card">
+    <div class="card-body text-center">
+      <div class="text-muted text-uppercase font-weight-bold"><%= t(text) %></div>
+      <div class="text-value-lg py-3"><%= size %></div>
+      <%= link_to path, class: 'btn btn-block btn-secondary' do %>
+        <span class="small font-weight-bold"><%= t('action_group.show') %></span>
+        <i class="fa fa-angle-right"></i>
+      <% end %>
+    </div>
+  </div>
+</div>
