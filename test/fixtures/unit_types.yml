@@ -2,6 +2,10 @@ university:
   name: Üniversite
   code: 1
   group: university
+rectorship:
+  name: Rektörlük
+  code: 9
+  group: rectorship
 faculty:
   name: Fakülte
   code: 2
@@ -22,3 +26,11 @@ committee:
   name: Kurul
   code: 200
   group: committee
+major:
+  name: Anabilim Dalı
+  code: 11
+  group: major
+institute:
+  name: Enstitü
+  code: 4
+  group: institute
