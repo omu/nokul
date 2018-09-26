@@ -2,38 +2,15 @@
 
 Rails.application.routes.draw do
   require 'sidekiq/web'
-
-  root to: 'home#index'
-
-  # devise routes
-  devise_for :users, path_prefix: 'devise', controllers: {
-    registrations: 'user/registrations',
-    passwords: 'user/passwords',
-    sessions: 'user/sessions'
-  }
-
-  # TODO: will add authorization when ready
   authenticate :user do
     mount Sidekiq::Web => '/sidekiq'
   end
 
-  # Account home page
-  scope module: :account do
-    resources :identities, except: [:show] do
-      get 'save_from_mernis', on: :collection
-    end
-    resources :addresses, except: :show do
-      get 'save_from_mernis', on: :collection
-    end
-  end
+  root to: 'home#index'
 
-  # Academic calendars
-  scope module: :calendar do
-    resources :academic_calendars
-    resources :academic_terms, except: :show
-    resources :calendar_titles, except: :show
-    resources :calendar_types
-  end
+  draw :devise
+  draw :account
+  draw :calendar
 
   resources :units do
     member do
@@ -70,11 +47,6 @@ Rails.application.routes.draw do
       resources :duties, except: %i[index show]
       resources :positions, except: %i[index show]
     end
-  end
-
-  scope module: :account do
-    get '/profile', to: 'profile#edit'
-    post '/profile', to: 'profile#update'
   end
 
   # public profiles

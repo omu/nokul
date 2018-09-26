@@ -43,7 +43,7 @@ module Committee
     end
 
     def set_agenda
-      @agenda = @committee.agendas.find(params[:id]) if @committee
+      @agenda = @committee.agendas.find(params[:id])
     end
 
     def agenda_params

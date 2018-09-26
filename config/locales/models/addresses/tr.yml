@@ -2,13 +2,13 @@ tr:
   activerecord:
     attributes:
       address: &address_attributes
-        name: Adres Türü
+        type: Adres Türü
         phone_number: Cep Telefonu Numarası
         full_address: Açık Adres
         district: İlçe
     enums:
       address:
-        names:
+        types:
           formal: Resmi Adres
           informal: Diğer Adres
   simple_form:

@@ -7,6 +7,7 @@ class CalendarTypeTest < ActiveSupport::TestCase
   %i[
     titles
     calendar_title_types
+    academic_calendars
   ].each do |property|
     test "a calendar type can communicate with #{property}" do
       calendar_types(:lisans_önlisans).send(property)
