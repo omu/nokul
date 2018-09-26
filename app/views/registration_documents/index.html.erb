@@ -20,7 +20,7 @@
           <tbody>
             <% @registration_documents.each do |registration_document| %>
               <tr>
-                <td><%= academic_term_full_name(registration_document.academic_term) %></td>
+                <td><%= full_name(registration_document.academic_term) %></td>
                 <td><%= registration_document.document.name %></td>
                 <td>
                   <%= link_to_show(unit_registration_document_path(@unit, registration_document)) %>

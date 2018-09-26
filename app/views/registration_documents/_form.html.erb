@@ -12,7 +12,7 @@
               <%= f.error_notification %>
             </div>
             <div class='form-group col-sm-12'>
-              <%= f.association :academic_term, label_method: lambda { |academic_term| academic_term_full_name(academic_term) }, required: true %>
+              <%= f.association :academic_term, label_method: lambda { |academic_term| full_name(academic_term) }, required: true %>
             </div>
             <div class='form-group col-sm-12'>
               <%= f.association :document, required: true %>
