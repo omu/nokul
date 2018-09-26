@@ -62,12 +62,6 @@ class UnitTest < ActiveSupport::TestCase
     assert_not Unit.search('Ondokuz').include?(units(:uzem))
   end
 
-  # scope :committees,   -> { where(unit_type: UnitType.committee) }
-  # scope :departments,  -> { where(unit_type: UnitType.department) }
-  # scope :faculties,    -> { where(unit_type: UnitType.faculty) }
-  # scope :programs,     -> { where(unit_type: UnitType.program) }
-  # scope :universities, -> { where(unit_type: UnitType.university) }
-
   # scopes
   test 'active scope returns active units' do
     assert_includes Unit.active, units(:omu)
@@ -97,5 +91,26 @@ class UnitTest < ActiveSupport::TestCase
   test 'universities scope returns universities type units' do
     assert_includes Unit.universities, units(:omu)
     assert_not_includes Unit.universities, units(:egitim_fakultesi)
+  end
+
+  test 'majors scope returns majors type units' do
+    assert_includes Unit.majors, units(:bote_anabilim_dali)
+    assert_not_includes Unit.majors, units(:egitim_fakultesi)
+  end
+
+  test 'institutes scope returns institutes type units' do
+    assert_includes Unit.institutes, units(:egitim_bilimleri_enstitusu)
+    assert_not_includes Unit.institutes, units(:egitim_fakultesi)
+  end
+
+  test 'coursable scope returns coursable units' do
+    assert_equal Unit.coursable.count.to_i,
+                 Unit.departments.count +
+                 Unit.faculties.count +
+                 Unit.universities.count +
+                 Unit.majors.count +
+                 Unit.institutes.count +
+                 Unit.rectorships.count
+    assert_not_includes Unit.coursable, units(:uzem)
   end
 end

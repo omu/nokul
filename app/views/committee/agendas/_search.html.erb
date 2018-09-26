@@ -1,7 +1,7 @@
 <div id="SearchForms" role="tablist">
 
   <%= render 'layouts/shared/smart_search',
-             search_path: courses_path,
+             search_path: committee_agendas_path,
              placeholder: t('.smart_search_placeholder') %>
 
   <div class="card">
@@ -16,7 +16,7 @@
           <%= t('detailed_search') %>
         </a>
         <div class="float-right">
-          <%= link_to t('reset'), courses_path, class: 'btn btn-warning btn-sm' %>
+          <%= link_to t('reset'), committee_agendas_path, class: 'btn btn-warning btn-sm' %>
         </div>
       </h5>
     </div>
@@ -26,45 +26,23 @@
          aria-labelledby="detailedSearch"
          data-parent="#SearchForms">
       <div class="card-body">
-        <%= form_tag courses_path, method: :get do %>
+        <%= form_tag committee_agendas_path, method: :get do %>
           <div class="row">
-            <div class="col-sm-4">
-              <div class="form-group">
-                <%= label_tag(:unit_id, t('.unit')) %>
-                <%= select_tag(:unit_id,
-                              options_from_collection_for_select(Unit.all, :id, :name, params[:unit_id]),
-                              include_blank: true,
-                              class: 'form-control',
-                              style: 'width: 100%') %>
-              </div>
-            </div>
             <div class="col-sm-3">
-              <div class="form-group">
-                <%= label_tag(:program_type, t('.program_type')) %>
-                <%= select_tag(:program_type,
-                              options_for_select(enum_options_for_select(Course, :program_type), params[:program_type]),
-                              include_blank: true,
-                              class: 'form-control',
-                              style: 'width: 100%') %>
-              </div>
-            </div>
-
-            <div class="col-sm-3">
-              <div class="form-group">
-                <%= label_tag(:language_id, t('.language')) %>
-                <%= select_tag(:language_id,
-                              options_from_collection_for_select(Language.all, :id, :name, params[:language_id]),
-                              include_blank: true,
-                              class: 'form-control',
-                              style: 'width: 100%') %>
-              </div>
-            </div>
-
-            <div class="col-sm-2">
               <div class="form-group">
                 <%= label_tag(:status, t('.status')) %>
                 <%= select_tag(:status,
-                              options_for_select(enum_options_for_select(Course, :status), params[:status]),
+                              options_for_select(enum_options_for_select(Agenda, :status), params[:status]),
+                              include_blank: true,
+                              class: 'form-control',
+                              style: 'width: 100%') %>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <%= label_tag(:agenda_type_id, t('.agenda_type_id')) %>
+                <%= select_tag(:agenda_type_id,
+                              options_from_collection_for_select(AgendaType.all, :id, :name, params[:agenda_type_id]),
                               include_blank: true,
                               class: 'form-control',
                               style: 'width: 100%') %>
@@ -84,6 +62,6 @@
 
 <script type='text/javascript'>
   $(document).ready(function() {
-    $('#unit_id, #program_type, #language_id, #status').select2();
+    $('#agenda_type_id').select2();
   });
 </script>
