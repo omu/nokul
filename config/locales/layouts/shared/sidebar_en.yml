@@ -2,40 +2,43 @@ en:
   layouts:
     shared:
       sidebar:
-        units: Units
-        locations: Locations
-        calendars: Calendars
-        calendar_titles: Calendar Titles
-        calendar_types: Calendar Types
-        academic_terms: Academic Terms
-        academic_calendars: Academic Calendars
-        courses: Courses
-        course_management: Course Management
-        course_unit_groups: Course Unit Group
-        course_group_types: Course Group Type
-        curriculums: Curriculums
-        languages: Languages
-        users: Users
-        references: References
-        documents: Documents
-        high_school_types: High School Types
-        student_disability_types: Disability Types
-        student_drop_out_types: Drop Out Types
-        student_education_levels: Education Levels
-        student_entrance_point_types: Entrance Point Types
-        student_entrance_types: Entrance Types
-        student_grades: Grades
-        student_grading_systems: Grading Systems
-        student_punishment_types: Punishment Types
-        student_management: Student Management
-        student_studentship_statuses: Studentship Statuses
-        unit_instruction_languages:  Instruction Languages
-        unit_instruction_types: Instruction Types
-        unit_statuses: Unit Statuses
-        unit_types: Unit Types
-        university_types: University Types
-        studies: Academic Studies
-        committees: Committees
-        committee_units: Committee Units
-        agenda_types: Agenda Types
-        first_registration: Prospective Students
+        admin:
+          units: Units
+          locations: Locations
+          calendars: Calendars
+          calendar_titles: Calendar Titles
+          calendar_types: Calendar Types
+          academic_terms: Academic Terms
+          academic_calendars: Academic Calendars
+          courses: Courses
+          course_management: Course Management
+          course_unit_groups: Course Unit Group
+          course_group_types: Course Group Type
+          curriculums: Curriculums
+          languages: Languages
+          users: Users
+          references: References
+          documents: Required Documents
+          high_school_types: High School Types
+          student_disability_types: Disability Types
+          student_drop_out_types: Drop Out Types
+          student_education_levels: Education Levels
+          student_entrance_point_types: Entrance Point Types
+          student_entrance_types: Entrance Types
+          student_grades: Grades
+          student_grading_systems: Grading Systems
+          student_punishment_types: Punishment Types
+          student_management: Student Management
+          student_studentship_statuses: Studentship Statuses
+          unit_instruction_languages:  Instruction Languages
+          unit_instruction_types: Instruction Types
+          unit_statuses: Unit Statuses
+          unit_types: Unit Types
+          university_types: University Types
+          studies: Academic Studies
+          committees: Committees
+          committee_units: Committee Units
+          agenda_types: Agenda Types
+          first_registration: Prospective Students
+          definitions: Definitions
+          units: Units
