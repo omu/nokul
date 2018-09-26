@@ -2,10 +2,10 @@ one:
   description: Gündemdeki maddelerin okunması ve bir önceki fakülte yönetim kurulu kararlarının onaylanması.
   unit: muhendislik_fakultesi_yonetim_kurulu
   agenda_type: three
-  status: newly
+  status: recent
 
 two:
   description: 2018-2019 Eğitim öğretim yılı danışmanlık hizmetleri verecek personelin belirlenmesi konusunun görülmesi.
   unit: muhendislik_fakultesi_yonetim_kurulu
   agenda_type: three
-  status: newly
+  status: recent
