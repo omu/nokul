@@ -77,6 +77,11 @@ module Accounts
       assert_equal translate('.update.success'), flash[:notice]
     end
 
+    test 'should be able to fetch address from mernis' do
+      get save_from_mernis_addresses_path
+      assert_redirected_to addresses_path
+    end
+
     test 'should not destroy for formal address' do
       assert_difference('@user.addresses.count', 0) do
         delete address_path(@user.addresses.find_by(type: :formal))

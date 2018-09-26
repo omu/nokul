@@ -56,6 +56,9 @@ tr:
           department: Bölüm
           program: Program
           committee: Kurul
+          institute: Enstitü
+          rectorship: Rektörlük
+          major: Anabilim Dalı
   helpers:
     submit:
       high_school_type:

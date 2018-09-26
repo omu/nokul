@@ -28,12 +28,10 @@ module Account
 
     def set_user
       @user = User.friendly.find(params[:user_id])
-      not_found unless @user
     end
 
     def set_duty
       @duty = @user.duties.find(params[:id])
-      not_found unless @duty
     end
 
     def duty_params
