@@ -13,12 +13,13 @@ tr:
         theoric: Teorik
         unit: Birim
       course_unit_group: &course_unit_group_attributes
+        courses: Dersler
+        course_group_type: Ders Grup Türü
+        course_ids: Dersler
         name: Ders Grup Adı
+        search_placeholder: Ders Grup Adı / Birim Adı / Ders Grup Türü Adı
         total_ects_condition: Toplam AKTS Koşulu
         unit: Birim
-        course_group_type: Ders Grup Türü
-        courses: Dersler
-        search_placeholder: Ders Grup Adı / Birim Adı / Ders Grup Türü Adı
       course_group_type: &course_group_type_attributes
         name: Ders Grup Tür Adı
       curriculum: &curriculum_attributes
