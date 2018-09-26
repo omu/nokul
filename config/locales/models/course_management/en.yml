@@ -13,12 +13,13 @@ en:
         theoric: Theoric
         unit: Unit
       course_unit_group: &course_unit_group_attributes
+        courses: Courses
+        course_group_type: Course Group Type
+        course_ids: Courses
         name: Course Group Name
+        search_placeholder: Course Group Name / Unit Name / Course Group Type Name
         total_ects_condition: Total ECTS Condition
         unit: Unit
-        course_group_type: Course Group Type
-        courses: Courses
-        search_placeholder: Course Group Name / Unit Name / Course Group Type Name
       course_group_type: &course_group_type_attributes
         name: Course Group Type Name
       curriculum: &curriculum_attributes
