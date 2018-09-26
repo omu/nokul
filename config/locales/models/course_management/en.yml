@@ -62,7 +62,10 @@ en:
         success: Course successfully updated.
       search:
         smart_search_placeholder: Course name or code
-        <<: *course_attributes
+        program_type: All Program Types
+        language: All Languages
+        unit: All Units
+        status: All Statuses
       show:
         <<: *course_attributes
       index:
