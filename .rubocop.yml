@@ -2,6 +2,8 @@ Style/AsciiComments:
   Description: 'Use only ascii symbols in comments.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#english-comments'
   Enabled: false
+Style/Lambda:
+  Enabled: false
 Documentation:
   Enabled: false
 Rails/UnknownEnv:
