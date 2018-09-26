@@ -11,7 +11,7 @@
           <div class="list-group">
             <% @users.each do |user| %>
               <%= link_to profiles_show_path(user.slug), class: 'list-group-item list-group-item-action' do %>
-                <%= user.identities.user_identity.try(:name) %>
+                <%= full_name(user.identities.user_identity) %>
                 <small><%= user.try(:title) %></small>
               <% end %>
             <% end %>

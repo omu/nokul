@@ -17,7 +17,7 @@
         <div class="col-lg-8 col-md-7 col-sm-8 col-xs-12">
           <div class="pt-4">
             <h2>
-              <%= @identity.name %>
+              <%= full_name(@identity) %>
             </h2>
             <h3><%= @user.title %></h3>
             <p class="social">
@@ -37,7 +37,7 @@
           </div>
         </div>
         <div class="col-md-2 col-sm-12 col-xs-12">
-          <div class="card-header-actions">            
+          <div class="card-header-actions">
             <%= link_to(root_path, class: 'btn btn-sm btn-light') do %>
               <%= fa_icon('id-card', text: 'ORCID') %>
             <% end %>
