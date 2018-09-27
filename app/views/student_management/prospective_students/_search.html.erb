@@ -1,73 +1,72 @@
-<div id="accordion" role="tablist">
+
+<div id="SearchForms" role="tablist">
   <div class="card">
-    <div class="card-header" role="tab" id="headingOne">
+    <div class="card-header" role="tab" id="Search">
       <h5 class="mb-0">
-        <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          <%= t('smart_search') %>
+        <a class="collapsed"
+           data-toggle="collapse"
+           href="#collapseSearch"
+           id="collapseSearchLink"
+           aria-expanded="false"
+           aria-controls="Search">
+          <%= t('search') %>
         </a>
+        <div class="float-right">
+          <%= link_to t('reset'), prospective_students_path, class: 'btn btn-warning btn-sm' %>
+        </div>
       </h5>
     </div>
-    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" style="">
-      <div class="card-body">
-        <%= form_tag prospective_students_path, method: :get do %>
-          <div class="form-group">
-            <%= text_field_tag 'term', params[:term], placeholder: t('.smart_search_placeholder'), class: 'form-control' %>
-          </div>
-          <%= submit_tag t('search'), class: 'btn btn-primary' %>
-        <% end %>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab" id="headingTwo">
-      <h5 class="mb-0">
-        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          <%= t('detailed_search') %>
-        </a>
-      </h5>
-    </div>
-    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion" style="">
+    <div id="collapseSearch"
+         class="collapse show"
+         role="tabpanel"
+         aria-labelledby="Search"
+         data-parent="#SearchForms">
       <div class="card-body">
         <%= form_tag prospective_students_path, method: :get do %>
           <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <%= label_tag :term, t('smart_search') %>
+                <%= text_field_tag :term,
+                                   params[:term],
+                                   placeholder: t('.smart_search_placeholder'),
+                                   class: 'form-control' %>
+              </div>
+            </div>
             <div class="col-sm-3">
               <div class="form-group">
-                <label for="name"><%= t('.meb_status') %></label>
+                <%= label_tag :meb_status, t('.meb_status') %>
                 <%= select_tag(:meb_status,
-                              options_for_select([[t('.graduated'), true], [t('.not_graduated_or_unknown'), false]]),
-                              include_blank: true,
-                              class: 'form-control',
-                              style: 'width: 100%') %>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="form-group">
-                <label for="name"><%= t('.military_status') %></label>
-                <%= select_tag(:military_status,
-                              options_for_select([[t('.unproblematic'), true], [t('.must_see_recruiting_office'), false]]),
-                              include_blank: true,
-                              class: 'form-control',
-                              style: 'width: 100%') %>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="form-group">
-                <label for="name"><%= t('.obs_status') %></label>
-                <%= select_tag(:obs_status,
-                              options_for_select([[t('.unproblematic'), true], [t('.student_in_a_different_unit'), false]]),
-                              include_blank: true,
-                              class: 'form-control',
-                              style: 'width: 100%') %>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="form-group">
-                <label for="unit_id"><%= t('.unit') %></label>
-                <%= select_tag(:unit_id,
-                               options_from_collection_for_select(Unit.all, :id, :name),
+                               options_for_select([[t('.graduated'), true], [t('.not_graduated_or_unknown'), false]], params[:meb_status]),
                                include_blank: true,
-                               class: 'form-control',
-                               style: 'width: 100%') %>
+                               class: 'form-control') %>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <%= label_tag :military_status, t('.military_status') %>
+                <%= select_tag(:military_status,
+                               options_for_select([[t('.unproblematic'), true], [t('.must_see_recruiting_office'), false]], params[:military_status]),
+                               include_blank: true,
+                               class: 'form-control') %>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <%= label_tag :obs_status, t('.obs_status') %>
+                <%= select_tag(:obs_status,
+                               options_for_select([[t('.unproblematic'), true], [t('.student_in_a_different_unit'), false]], params[:obs_status]),
+                               include_blank: true,
+                               class: 'form-control') %>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <%= label_tag :unit_id, t('.unit') %>
+                <%= select_tag(:unit_id,
+                               options_from_collection_for_select(Unit.all, :id, :name, params[:unit_id]),
+                               include_blank: true,
+                               class: 'form-control') %>
               </div>
             </div>
           </div>
