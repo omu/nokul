@@ -33,4 +33,16 @@ class ApplicationConfigTest < ActiveSupport::TestCase
     assert_not_nil @config.tenant.abbreviation
     assert_not_nil @config.tenant.host
   end
+
+  test 'Tenant configuration includes keys for various environments' do
+    files = Dir.glob(Rails.root.join('config', 'tenants', '*.yml'))
+
+    files.each do |file|
+      file = YAML.load_file(file)
+      assert file.key?('production')
+      assert file.key?('beta')
+      assert file.key?('test')
+      assert file.key?('development')
+    end
+  end
 end
