@@ -3,18 +3,18 @@ tr:
     address:
       max_formal: En fazla %{limit} tane ikamet adresi ekleyebilirsiniz.
       max_informal: En fazla %{limit} tane adres ekleyebilirsiniz.
+    duty:
+      active_and_tenure: Bu personelin zaten aktif ve kadrolu bir görevi var! Yeni kayıt girmek yerine aktif kaydı düzenleyin veya öncelikle aktif kaydı pasifleştirin.
+      invalid_end_date: Görev başlangıç tarihi bitiş tarihinden sonraki bir tarih olarak seçilmiş.
+      multiple_active: Personelin seçilen birimde zaten aktif görevlendirmesi var!
+    employee:
+      active: Bu personelin zaten aktif bir personel kaydı var! Yeni kayıt girmek yerine aktif kaydı düzenleyin veya öncelikle aktif kaydı pasifleştirin.
     identity:
       max_formal: Kullanıcı hesabınıza ilişkin en fazla %{limit} tane kimliğiniz olabilir.
       max_informal: En fazla %{limit} tane kimlik oluşturabilirsiniz.
-    position:
-      multiple_active_repetitive: Bu personelin seçilen birimde aktif olarak aynı görevi var!
-      invalid_end_date: Görev başlangıç tarihi bitiş tarihinden sonraki bir tarih olarak seçilmiş.
-    duty:
-      active_and_tenure: Bu personelin zaten aktif ve kadrolu bir görevi var! Yeni kayıt girmek yerine aktif kaydı düzenleyin veya öncelikle aktif kaydı pasifleştirin.
-      multiple_active: Personelin seçilen birimde zaten aktif görevlendirmesi var!
-      invalid_end_date: Görev başlangıç tarihi bitiş tarihinden sonraki bir tarih olarak seçilmiş.
-    employee:
-      active: Bu personelin zaten aktif bir personel kaydı var! Yeni kayıt girmek yerine aktif kaydı düzenleyin veya öncelikle aktif kaydı pasifleştirin.
     image:
       not_permitted: '%{mime_type} izin verilen bir dosya türü değil. %{extension_whitelist} türlerinde bir dosya yükleyebilirsiniz'
       size_not_satisfied: Dosya boyutu izin verilen aralıkta değil. Yükleyeceğiniz dosya en az %{minimum} KB, en çok %{maximum} MB boyutunda olabilir.
+    position:
+      invalid_end_date: Görev başlangıç tarihi bitiş tarihinden sonraki bir tarih olarak seçilmiş.
+      multiple_active_repetitive: Bu personelin seçilen birimde aktif olarak aynı görevi var!

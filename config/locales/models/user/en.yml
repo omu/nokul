@@ -1,114 +1,114 @@
 en:
   activerecord:
     attributes:
-      user: &user_attributes
-        id_number: ID Number
-        email: E-mail
-        password: Password
-        password_confirmation: Password Confirmation
-        current_password: Current Password
-        preferred_language: Preferred Language
-        password_changed_at: Last Password Change
-        articles_count: Articles Count
-        projects_count: Projects Count
-        profile: Profile Settings
-        preferences: Visibility Settings
+      duty: &duty_attributes
+        employee: Employee
+        end_date: End Date
+        start_date: Start Date
+        temporary: Temporary Duty
+        tenure: Tenure
+        tenure_status: Tenure Status
+        unit_id: Unit
       employee: &employee_attributes
+        id_number: ID Number
         is_active: Is Active?
         title_id: Title
         user_id: User
-        id_number: ID Number
-      duty: &duty_attributes
-        tenure_status: Tenure Status
-        tenure: Tenure
-        temporary: Temporary Duty
-        start_date: Start Date
-        end_date: End Date
-        employee: Employee
-        unit_id: Unit
       position: &position_attributes
         administrative_function_id: Administrative Function
-        start_date: Start Date
         end_date: End Date
-  simple_form:
-    placeholders:
-      user:
-        <<: *user_attributes
-  helpers:
-    submit:
-      user:
-        update: Change my Password
+        start_date: Start Date
+      user: &user_attributes
+        articles_count: Articles Count
+        current_password: Current Password
+        email: E-mail
+        id_number: ID Number
+        password: Password
+        password_changed_at: Last Password Change
+        password_confirmation: Password Confirmation
+        preferences: Visibility Settings
+        preferred_language: Preferred Language
+        profile: Profile Settings
+        projects_count: Projects Count
   devise:
     common:
-      reset_password: Reset Password
       login: Login
       register: Register
+      reset_password: Reset Password
     passwords:
       edit:
         reset_my_password: Reset my Password
       new:
-        send_instructions: Send Reset Password Instructions
         hint: You can request password reset instruction by typing your e-mail.
+        send_instructions: Send Reset Password Instructions
     registrations:
       edit:
         account_settings: Account Settings
-        leave_blank: leave blank if you don't want to change
         current_password: you must enter your current password for changing your e-mail address
+        leave_blank: leave blank if you don't want to change
       new:
-        did_you_forget: Forgot Your Password?
         create_your_account: Create Your Account
+        did_you_forget: Forgot Your Password?
     sessions:
       new:
-        login_to_your_account: Login to your account
-        did_you_forget: Forgot your password?
-        remember_login: Remember Login
-        registration_description: Students and staff joining to our university need to create an account by registering.
         create_account: Create Account
+        did_you_forget: Forgot your password?
+        login_to_your_account: Login to your account
+        registration_description: Students and staff joining to our university need to create an account by registering.
+        remember_login: Remember Login
+  helpers:
+    submit:
+      user:
+        update: Change my Password
+  simple_form:
+    placeholders:
+      user:
+        <<: *user_attributes
   users:
-    index:
-      <<: *user_attributes
-      card_header: User Accounts
-      new_user_link: Create a New User
-      addresses: Addresses
-      identities: Identities
     account:
       <<: *user_attributes
     addresses:
-      update_from_mernis: Update from MERNIS
       create_from_mernis: Create from MERNIS
-    identities:
       update_from_mernis: Update from MERNIS
-      create_from_mernis: Create from MERNIS
-    employees:
-      active: Is Active?
-      title: Title
-      employees: Employee Records
-      duties: Duties
-      positions: Positions
-      <<: *employee_attributes
-      <<: *duty_attributes
-      <<: *position_attributes
-    show:
-      account: Account
-      identities: Identities
-      addresses: Addresses
-      employees: Employees
-    search:
-      smart_search_placeholder: TC/YU number, e-mail address, first of last name
-    edit:
-      form_title: Edit Account
-    new:
-      form_title: Create Account
-    update:
-      success: User successfully updated.
     create:
       success: User successfully created.
     destroy:
       success: User successfully deleted!
       warning: User can not be deleted.
+    edit:
+      form_title: Edit Account
+    employees:
+      active: Is Active?
+      duties: Duties
+      employees: Employee Records
+      positions: Positions
+      <<: *employee_attributes
+      <<: *duty_attributes
+      <<: *position_attributes
+      title: Title
+    identities:
+      create_from_mernis: Create from MERNIS
+      update_from_mernis: Update from MERNIS
+    index:
+      <<: *user_attributes
+      addresses: Addresses
+      card_header: User Accounts
+      identities: Identities
+      new_user_link: Create a New User
+    new:
+      form_title: Create Account
     save_address_from_mernis:
         wait: The address was recently created or updated. You can update the address once a week.
         will_update: We have received your request to create or update addresses, the address will be updated within a few seconds.
     save_identity_from_mernis:
         wait: The identity was recently created or updated. You can update the identity once a week.
         will_update: We have received your request for an identity creation or an update, and within a few seconds/minutes the identity will be updated.
+    search:
+      smart_search_placeholder: TC/YU number, e-mail address, first of last name
+    show:
+      account: Account
+      addresses: Addresses
+      employees: Employees
+      identities: Identities
+    update:
+      success: User successfully updated.

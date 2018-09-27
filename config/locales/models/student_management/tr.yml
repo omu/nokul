@@ -2,87 +2,87 @@ tr:
   activerecord:
     attributes:
       prospective_student: &prospective_student_attributes
-        id_number: Kimlik Numarası
-        first_name: Ad
-        last_name: Soyad
-        fathers_name: Baba Adı
-        mothers_name: Anne Adı
-        date_of_birth: Doğum Tarihi
-        gender: Cinsiyet
-        nationality: Uyruk
-        place_of_birth: Doğum Yeri
-        registration_city: Nüfusa Kayıtlı Olduğu İl
-        registration_district: Nüfusa Kayıtlı Olduğu İlçe
-        high_school_code: Lise Kodu
-        high_school_type: Lise Türü
-        high_school_branch: Lise Dalı
-        state_of_education: Öğrenim Durumu
-        high_school_graduation_year: Lise Mezuniyet Yılı
-        placement_type: Yerleşme Türü
-        exam_score: Sınav Puanı
-        language_id: Dil ID
-        address: Adres
-        home_phone: Ev Telefonu
-        mobile_phone: Cep Telefonu
-        email: E-posta
-        student_disability_type_id: Öğrenci Engel Türü
-        top_student: Okul Birincisi
-        placement_score: Yerleşme Puanı
-        placement_rank: Yerleşme Sırası
-        unit: Yerleştiği Program
-        preference_order: Tercih Sırası
-        placement_score_type: Yerleşme Puan Türü
         additional_score: Ek Puan
+        address: Adres
+        date_of_birth: Doğum Tarihi
+        email: E-posta
+        exam_score: Sınav Puanı
+        fathers_name: Baba Adı
+        first_name: Ad
+        gender: Cinsiyet
+        graduated: Mezun
+        high_school_branch: Lise Dalı
+        high_school_code: Lise Kodu
+        high_school_graduation_year: Lise Mezuniyet Yılı
+        high_school_type: Lise Türü
+        home_phone: Ev Telefonu
+        id_number: Kimlik Numarası
+        language_id: Dil ID
+        last_name: Soyad
         meb_status: Lise Mezuniyet Durumu
         meb_status_date: Lise Mezuniyet Kontrol Tarihi
         military_status: Askerlik Durumu
         military_status_date: Askerlik Durum Kontrol Tarihi
+        mobile_phone: Cep Telefonu
+        mothers_name: Anne Adı
+        must_see_recruiting_office: Askerlik Şubesiyle Görüşmeli
+        nationality: Uyruk
+        not_graduated_or_unknown: Mezun Değil/Bilinmiyor
+        obs_registered_program: Öğrenci Olarak Kayıtlı Olduğu Program
         obs_status: Öğrencilik Durumu
         obs_status_date: Öğrencilik Durum Kontrol Tarihi
-        obs_registered_program: Öğrenci Olarak Kayıtlı Olduğu Program
-        student_entrance_type: Giriş Türü
-        graduated: Mezun
-        not_graduated_or_unknown: Mezun Değil/Bilinmiyor
-        unproblematic: Sorunsuz
-        must_see_recruiting_office: Askerlik Şubesiyle Görüşmeli
-        student_in_a_different_unit: Başka Bir Üniversite/Birimde Öğrenci
+        place_of_birth: Doğum Yeri
+        placement_rank: Yerleşme Sırası
+        placement_score: Yerleşme Puanı
+        placement_score_type: Yerleşme Puan Türü
+        placement_type: Yerleşme Türü
+        preference_order: Tercih Sırası
+        registration_city: Nüfusa Kayıtlı Olduğu İl
+        registration_district: Nüfusa Kayıtlı Olduğu İlçe
         smart_search_placeholder: Aday öğrenci kimlik numarası, adı veya soyadı
+        state_of_education: Öğrenim Durumu
+        student_disability_type_id: Öğrenci Engel Türü
+        student_entrance_type: Giriş Türü
+        student_in_a_different_unit: Başka Bir Üniversite/Birimde Öğrenci
+        top_student: Okul Birincisi
+        unit: Yerleştiği Program
+        unproblematic: Sorunsuz
     enums:
       prospective_student:
-        genders:
-          male: Erkek
-          female: Kadın
-        nationality:
-          turkish: Türk Vatandaşı
-          kktc: Kuzey Kıbrıs Türk Vatandaşı
-          foreign: Yabancı Uyruklu
-        placement_types:
-          general: Genel
-          additional_score: Ek Puanlı
         additional_score:
           handicapped: Engelli Ek Puanı
-  student_management:
-    prospective_students:
-      search:
-        <<: *prospective_student_attributes
-      show:
-        <<: *prospective_student_attributes
-        prospective_student: Aday Öğrenci
-        identity_information: Kimlik Bilgileri
-        other_information: Diğer Bilgileri
-        registered_to: '%{program} isimli programda kayıtlı.'
-        permanently_register: Kesin Kayıt Yap
-        temporarily_register: Geçici Kayıt Yap
-        can_not_register: Kayıt Yapılamaz
-        last_update: Son Güncelleme
-      index:
-        <<: *prospective_student_attributes
-        prospective_students: Aday Öğrenciler
-      register:
-        success: Öğrenci başarıyla kayıt edildi
-        warning: Öğrenci kayıt edilemedi
-        can_not_register: Kayıt Yapılamaz
+        genders:
+          female: Kadın
+          male: Erkek
+        nationality:
+          foreign: Yabancı Uyruklu
+          kktc: Kuzey Kıbrıs Türk Vatandaşı
+          turkish: Türk Vatandaşı
+        placement_types:
+          additional_score: Ek Puanlı
+          general: Genel
   simple_form:
     labels:
       prospective_student:
         <<: *prospective_student_attributes
+  student_management:
+    prospective_students:
+      index:
+        <<: *prospective_student_attributes
+        prospective_students: Aday Öğrenciler
+      register:
+        can_not_register: Kayıt Yapılamaz
+        success: Öğrenci başarıyla kayıt edildi
+        warning: Öğrenci kayıt edilemedi
+      search:
+        <<: *prospective_student_attributes
+      show:
+        <<: *prospective_student_attributes
+        can_not_register: Kayıt Yapılamaz
+        identity_information: Kimlik Bilgileri
+        last_update: Son Güncelleme
+        other_information: Diğer Bilgileri
+        permanently_register: Kesin Kayıt Yap
+        prospective_student: Aday Öğrenci
+        registered_to: '%{program} isimli programda kayıtlı.'
+        temporarily_register: Geçici Kayıt Yap

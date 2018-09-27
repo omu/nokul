@@ -3,18 +3,18 @@ en:
     address:
       max_formal: You can have up to %{limit} formal addresses maximum.
       max_informal: You can add up to %{limit} addresses maximum.
+    duty:
+      active_and_tenure: This user already has an active and tenure duty. Edit the existing duty or make it passive in order to create a new one.
+      invalid_end_date: Start date is selected as a date after the end date
+      multiple_active: This user has already active duty at the selected unit
+    employee:
+      active: This user already has an active employee. Edit the existing employee or make it passive in order to create a new one.
     identity:
       max_formal: You can have up to %{limit} identities related with your user account.
       max_informal: You can create up to %{limit} informal identities.
-    position:
-      multiple_active_repetitive:
-      invalid_end_date: Start date is selected as a date after the end date
-    duty:
-      active_and_tenure: This user already has an active and tenure duty. Edit the existing duty or make it passive in order to create a new one.
-      multiple_active: This user has already active duty at the selected unit
-      invalid_end_date: Start date is selected as a date after the end date
-    employee:
-      active: This user already has an active employee. Edit the existing employee or make it passive in order to create a new one.
     image:
       not_permitted: '%{mime_type} is not an allowed file type. You can upload files in %{extension_whitelist} formats.'
       size_not_satisfied: File size is not between the permitted range. You can upload files from minimum %{minimum} KBs to maximum %{maximum} MBs.
+    position:
+      invalid_end_date: Start date is selected as a date after the end date
+      multiple_active_repetitive:
