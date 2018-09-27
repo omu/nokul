@@ -21,7 +21,11 @@ module Account
     end
 
     def destroy
-      @duty.destroy ? redirect_to(@user, notice: t('.success')) : redirect_with('warning')
+      if @duty.destroy
+        redirect_to(@user, notice: t('.success'))
+      else
+        redirect_to(users_path(@user), alert: t('.warning'))
+      end
     end
 
     private
