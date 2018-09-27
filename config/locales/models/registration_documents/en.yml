@@ -2,10 +2,10 @@ en:
   activerecord:
     attributes:
       registration_document: &registration_document_attributes
-        unit: Unit
         academic_term: Academic Term
         document: Document
         statement: Statement
+        unit: Unit
   helpers:
     submit:
       registration_document:
@@ -14,20 +14,20 @@ en:
   registration_documents:
     common:
       registration_documents: Documents
-    show:
-      <<: *registration_document_attributes
-    index:
-      <<: *registration_document_attributes
-      new_registration_document_link: Create a New Document
-      card_header: '%{unit} Documents Required for Registration'
-    new:
-      form_title: Create a Document
-    edit:
-      form_title: Update the Document
-    update:
-      success: Document successfully updated.
     create:
       success: Document successfully created.
     destroy:
       success: Document successfully deleted!
       warning: Document can not be deleted.
+    edit:
+      form_title: Update the Document
+    index:
+      <<: *registration_document_attributes
+      card_header: '%{unit} Documents Required for Registration'
+      new_registration_document_link: Create a New Document
+    new:
+      form_title: Create a Document
+    show:
+      <<: *registration_document_attributes
+    update:
+      success: Document successfully updated.

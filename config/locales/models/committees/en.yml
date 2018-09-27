@@ -2,8 +2,8 @@ en:
   activerecord:
     attributes:
       agenda: &agenda_attributes
-        agenda_type_id: Agenda Type
         agenda_file: Agenda File
+        agenda_type_id: Agenda Type
         description: Agenda Description
         status: Agenda Status
       agenda_type: &agenda_type_attributes
@@ -13,9 +13,66 @@ en:
     enums:
       agenda:
         statuses:
-          recent: Recent
           decided: Decided
           delayed: Delayed
+          recent: Recent
+  committee:
+    agenda_types:
+      create:
+        success: Agenda Type successfully created.
+      destroy:
+        success: Agenda Type successfully deleted.
+        warning: Agenda Type can not be deleted!
+      edit:
+        form_title: Update the Agenda Type
+      index:
+        <<: *agenda_type_attributes
+        card_header: Agenda Types
+        new_agenda_type_link: Create a New Agenda Type
+      new:
+        form_title: Create a Agenda Type
+      update:
+        success: Agenda Type successfully updated.
+    agendas:
+      create:
+        success: Agenda successfully created.
+      destroy:
+        success: Agenda successfully deleted.
+        warning: Agenda can not be deleted!
+      edit:
+        form_title: Update a Agenda
+      index:
+        <<: *agenda_attributes
+        agenda_type: Agenda Type
+        card_header: Agendas
+        new_agenda_link: Create a New Agenda
+        unit: Unit
+      new:
+        form_title: Create a Agenda
+      search:
+        agenda_type_id: Agenda Type
+        smart_search_placeholder: Agenda Description
+        status: Agenda Status
+      update:
+        success: Agenda successfully updated.
+    dashboard:
+      index:
+        agendas: Agendas
+        card_header: Committee / Commission
+        detsis_id: DETSIS ID
+        district: Location
+        name: Committee / Commission Name
+        new_committee_link: Create a New Committee/Commission
+        unit_status: Unit Status
+        unit_type: Unit Type
+        yoksis_id: YOKSIS ID
+      show:
+        actions: Actions
+        agenda_card_header: Agendas
+        agenda_type: Agenda Type
+        description: Description
+        status: Agenda Status
+        unit: Parent Unit
   helpers:
     submit:
       agenda:
@@ -24,60 +81,3 @@ en:
       agenda_type:
         create: Create Agenda Type
         update: Update Agenda Type
-  committee:
-    agendas:
-      index:
-        <<: *agenda_attributes
-        new_agenda_link: Create a New Agenda
-        card_header: Agendas
-        unit: Unit
-        agenda_type: Agenda Type
-      new:
-        form_title: Create a Agenda
-      edit:
-        form_title: Update a Agenda
-      create:
-        success: Agenda successfully created.
-      update:
-        success: Agenda successfully updated.
-      destroy:
-        success: Agenda successfully deleted.
-        warning: Agenda can not be deleted!
-      search:
-        agenda_type_id: Agenda Type
-        smart_search_placeholder: Agenda Description
-        status: Agenda Status
-    agenda_types:
-      index:
-        <<: *agenda_type_attributes
-        new_agenda_type_link: Create a New Agenda Type
-        card_header: Agenda Types
-      new:
-        form_title: Create a Agenda Type
-      edit:
-        form_title: Update the Agenda Type
-      create:
-        success: Agenda Type successfully created.
-      update:
-        success: Agenda Type successfully updated.
-      destroy:
-        success: Agenda Type successfully deleted.
-        warning: Agenda Type can not be deleted!
-    dashboard:
-      index:
-        agendas: Agendas
-        name: Committee / Commission Name
-        detsis_id: DETSIS ID
-        yoksis_id: YOKSIS ID
-        unit_status: Unit Status
-        unit_type: Unit Type
-        district: Location
-        card_header: Committee / Commission
-        new_committee_link: Create a New Committee/Commission
-      show:
-        description: Description
-        unit: Parent Unit
-        agenda_type: Agenda Type
-        status: Agenda Status
-        actions: Actions
-        agenda_card_header: Agendas

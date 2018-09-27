@@ -2,45 +2,45 @@ tr:
   activerecord:
     attributes:
       address: &address_attributes
-        type: Adres Türü
-        phone_number: Cep Telefonu Numarası
-        full_address: Açık Adres
         district: İlçe
+        full_address: Açık Adres
+        phone_number: Cep Telefonu Numarası
+        type: Adres Türü
     enums:
       address:
         types:
           formal: Resmi Adres
           informal: Diğer Adres
-  simple_form:
-    hints:
-      address:
-        full_address: Mahalle, cadde, sokak, apartman adı ve kapı numarası
+  account:
+    addresses:
+      create:
+        success: Adres başarıyla oluşturuldu!
+      destroy:
+        success: Adres başarıyla silindi!
+        warning: Adres silinemedi!
+      edit:
+        form_title: Adresi Düzenle
+        warning: Yasal ikamet adresinizi düzenleyemezsiniz!
+      index:
+        <<: *address_attributes
+        card_header: Adres Bilgileri
+        create_from_mernis: MERNİS'ten Oluştur
+        district_and_city: İlçe / İl
+        new_address: Yeni Adres Ekle
+        update_from_mernis: MERNİS'ten Güncelle
+      new:
+        form_title: Adres Oluştur
+      save_from_mernis:
+        wait: Adresinizi yakın bir zamanda oluşturdunuz veya güncellediniz. Adresinizi haftada bir güncelleyebilirsiniz.
+        will_update: Adres oluşturma veya güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde adresiniz güncellenecek.
+      update:
+        success: Adres başarıyla güncellendi!
   helpers:
     submit:
       address:
         create: Adresi Kaydet
         update: Adresi Güncelle
-  account:
-    addresses:
-      index:
-        <<: *address_attributes
-        new_address: Yeni Adres Ekle
-        card_header: Adres Bilgileri
-        district_and_city: İlçe / İl
-        update_from_mernis: MERNİS'ten Güncelle
-        create_from_mernis: MERNİS'ten Oluştur
-      new:
-        form_title: Adres Oluştur
-      edit:
-        warning: Yasal ikamet adresinizi düzenleyemezsiniz!
-        form_title: Adresi Düzenle
-      create:
-        success: Adres başarıyla oluşturuldu!
-      update:
-        success: Adres başarıyla güncellendi!
-      destroy:
-        success: Adres başarıyla silindi!
-        warning: Adres silinemedi!
-      save_from_mernis:
-        wait: Adresinizi yakın bir zamanda oluşturdunuz veya güncellediniz. Adresinizi haftada bir güncelleyebilirsiniz.
-        will_update: Adres oluşturma veya güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde adresiniz güncellenecek.
+  simple_form:
+    hints:
+      address:
+        full_address: Mahalle, cadde, sokak, apartman adı ve kapı numarası

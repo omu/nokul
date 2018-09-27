@@ -1,88 +1,88 @@
 tr:
-  activerecord:
-    attributes:
-      employee: &employee_attributes
-        is_active: Aktif mi?
-        title_id: Ünvan
-        user_id: Kullanıcı
-        id_number: Kimlik Numarası
-      duty: &duty_attributes
-        tenure_status: Kadro Durumu
-        tenure: Kadrolu
-        temporary: Geçici Görevlendirme
-        start_date: Başlangıç Tarihi
-        end_date: Bitiş Tarihi
-        employee_id: Personel
-        unit_id: Birim
-      position: &position_attributes
-        administrative_function_id: Görev
-        start_date: Başlangıç Tarihi
-        end_date: Bitiş Tarihi
-  helpers:
-    submit:
-      employee:
-        create: Personel Kaydı Oluştur
-        update: Personel Kaydını Güncelle
-      duty:
-        create: Görevlendirme Oluştur
-        update: Görevlendirmeyi Güncelle
-      position:
-        create: İdari Görev Oluştur
-        update: İdari Görevi Güncelle
   account:
-    employees:
-      new:
-        form_title: Personel Kaydı Oluştur
-      edit:
-        form_title: Personel Kaydını Güncelle
-      create:
-        success: Personel kaydı başarıyla oluşturuldu.
-      destroy:
-        success: Personel kaydı başarıyla silindi.
-        warning: Personel kaydı silinemedi!
-      update:
-        success: Personel kaydı başarıyla güncellendi.
     duties:
-      new:
-        form_title: Görevlendirme Oluştur
-      edit:
-        form_title: Görevlendirmeyi Güncelle
       create:
         success: Görevlendirme başarıyla oluşturuldu.
       destroy:
         success: Görevlendirme başarıyla silindi.
         warning: Görevlendirme silinemedi!
+      edit:
+        form_title: Görevlendirmeyi Güncelle
+      new:
+        form_title: Görevlendirme Oluştur
       update:
         success: Görevlendirme başarıyla güncellendi.
-    positions:
-      new:
-        form_title: İdari Görev Oluştur
+    employees:
+      create:
+        success: Personel kaydı başarıyla oluşturuldu.
+      destroy:
+        success: Personel kaydı başarıyla silindi.
+        warning: Personel kaydı silinemedi!
       edit:
-        form_title: İdari Görevi Güncelle
+        form_title: Personel Kaydını Güncelle
+      new:
+        form_title: Personel Kaydı Oluştur
+      update:
+        success: Personel kaydı başarıyla güncellendi.
+    positions:
       create:
         success: İdari görev başarıyla oluşturuldu.
       destroy:
         success: İdari görev başarıyla silindi.
         warning: İdari görev silinemedi!
+      edit:
+        form_title: İdari Görevi Güncelle
+      new:
+        form_title: İdari Görev Oluştur
       update:
         success: İdari görev başarıyla güncellendi.
     profile:
       edit:
-        profile_settings: Profil Ayarları
-        visiblity_settings: Görünürlük Ayarları
-        phone_number: Telefon numaranız
         extension_number: Dahili numaranız
-        website: Web Sayfanız
-        twitter: Twitter Kullanıcı Adı
         linkedin: Linkedin Kullanıcı Adı
-        skype: Skype Kullanıcı Adı
         orcid: ORCID
+        phone_number: Telefon numaranız
+        profile_settings: Profil Ayarları
         public_photo: Profilimde Fotoğrafımı Göster
         public_studies: Profilimde Akademik Çalışmalarımı Göster
+        skype: Skype Kullanıcı Adı
+        twitter: Twitter Kullanıcı Adı
+        visiblity_settings: Görünürlük Ayarları
+        website: Web Sayfanız
       update:
         success: Profiliniz başarıyla güncellendi
+  activerecord:
+    attributes:
+      duty: &duty_attributes
+        employee_id: Personel
+        end_date: Bitiş Tarihi
+        start_date: Başlangıç Tarihi
+        temporary: Geçici Görevlendirme
+        tenure: Kadrolu
+        tenure_status: Kadro Durumu
+        unit_id: Birim
+      employee: &employee_attributes
+        id_number: Kimlik Numarası
+        is_active: Aktif mi?
+        title_id: Ünvan
+        user_id: Kullanıcı
+      position: &position_attributes
+        administrative_function_id: Görev
+        end_date: Bitiş Tarihi
+        start_date: Başlangıç Tarihi
+  helpers:
+    submit:
+      duty:
+        create: Görevlendirme Oluştur
+        update: Görevlendirmeyi Güncelle
+      employee:
+        create: Personel Kaydı Oluştur
+        update: Personel Kaydını Güncelle
+      position:
+        create: İdari Görev Oluştur
+        update: İdari Görevi Güncelle
   simple_form:
     placeholders:
       user:
-        twitter: twitter.com/
         linkedin: linkedin.com/
+        twitter: twitter.com/

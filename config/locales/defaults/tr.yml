@@ -1,23 +1,22 @@
 tr:
-  actions: İşlemler
   action_group:
     add: Ekle
     back: Geri
     destroy: Sil
     edit: Düzenle
+    file: Dosya Görüntüle
     new: Yeni
     show: Görüntüle
     update: Güncelle
-    file: Dosya Görüntüle
+  actions: İşlemler
   are_you_sure: Emin misiniz?
+  created_at: Oluşturulma Tarihi
+  detailed_search: Detaylı Arama
+  home_nav: Anasayfa
+  'no': Hayır
+  reset: Reset
   save: Kaydet
   search: Arama Yap
-  home_nav: Anasayfa
-  created_at: Oluşturulma Tarihi
+  smart_search: Akıllı Arama
   updated_at: Güncellenme Tarihi
   'yes': Evet
-  'no': Hayır
-  detailed_search: Detaylı Arama
-  reset: Reset
-  search: Arama
-  smart_search: Akıllı Arama
