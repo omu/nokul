@@ -6,7 +6,7 @@ class DocumentsController < ApplicationController
   before_action :set_document, only: %i[edit update destroy show]
 
   def index
-    @pagy, @documents = pagy(Document.all)
+    @pagy, @documents = pagy(Document.order(:name))
   end
 
   def show; end

@@ -7,7 +7,7 @@ module CourseManagement
     before_action :set_course_group_type, only: %i[edit update destroy]
 
     def index
-      @course_group_types = pagy_by_search(CourseGroupType.all)
+      @course_group_types = pagy_by_search(CourseGroupType.order(:name))
     end
 
     def new
@@ -26,7 +26,11 @@ module CourseManagement
     end
 
     def destroy
-      @course_group_type.destroy ? redirect_with('success') : redirect_with('warning')
+      if @course_group_type.destroy
+        redirect_with('success')
+      else
+        redirect_to(course_group_types_path, alert: t('.warning'))
+      end
     end
 
     private
