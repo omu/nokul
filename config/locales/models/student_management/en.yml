@@ -72,7 +72,6 @@ en:
         prospective_students: Prospective Students
       register:
         can_not_register: Can Not Register
-        success: Student successfully registered.
         warning: Student could not be registered.
       search:
         <<: *prospective_student_attributes
@@ -86,3 +85,5 @@ en:
         prospective_student: Prospective Student
         registered_to: 'Already registered to %{program}.'
         temporarily_register: Temporarily Register
+      redirect_with_success:
+        success: Student successfully registered
