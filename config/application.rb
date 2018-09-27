@@ -25,6 +25,7 @@ module Nokul
     I18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.yml').to_s]
 
     Dir[
+      Rails.root.join('app', 'services', '**', '*.rb'),
       Rails.root.join('lib', 'support', '**', '*.rb'),
       Rails.root.join('lib', 'api', '**', '*.rb')
     ].each { |file| require file }

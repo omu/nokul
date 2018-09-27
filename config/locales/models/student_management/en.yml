@@ -74,9 +74,14 @@ en:
         permanently_register: Permanently Register
         temporarily_register: Temporarily Register
         can_not_register: Can Not Register
+        last_update: Last Update
       index:
         <<: *prospective_student_attributes
         prospective_students: Prospective Students
+      register:
+        success: Student successfully registered.
+        warning: Student could not be registered.
+        can_not_register: Can Not Register
   simple_form:
     labels:
       prospective_student:

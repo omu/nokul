@@ -5,6 +5,7 @@ module StudentManagement
     include PagyBackendWithHelpers
 
     before_action :set_prospective_student, only: %i[show register]
+    before_action :can_register?, only: :register
 
     def index
       prospective_students = ProspectiveStudent.includes(:unit, :student_entrance_type)
@@ -15,17 +16,33 @@ module StudentManagement
     def show; end
 
     def register
-      
+      prospective_student = ProspectiveStudentService.new(@prospective_student)
+      user = prospective_student.create_user
+
+      if user.save
+        student = prospective_student.create_student
+        student.save ? redirect_with_success : redirect_with_warning('.warning')
+      else
+        redirect_with_warning('.warning')
+      end
     end
 
     private
 
-    def redirect_with(message)
-      redirect_to prospective_students_path, flash: { info: t(".#{message}") }
-    end
-
     def set_prospective_student
       @prospective_student = ProspectiveStudent.find(params[:id])
+    end
+
+    def can_register?
+      redirect_with_warning('.can_not_register') unless @prospective_student.can_temporarily_register?
+    end
+
+    def redirect_with_success
+      redirect_to(prospective_students_path, flash: { notice: t('.success') })
+    end
+
+    def redirect_with_warning(message)
+      redirect_to(prospective_students_path, flash: { alert: t(".#{message}") })
     end
   end
 end

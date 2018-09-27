@@ -21,7 +21,7 @@
               <td><%= @prospective_student.meb_status ? t('.graduated') : t('.not_graduated_or_unknown') %></td>
             </tr>
             <tr class="<%= @prospective_student.meb_status ? 'table-success' : 'table-danger' %>">
-              <td><small>Kontrol tarihi: <%= as_date_and_time(@prospective_student.meb_status_date) %></small></td>
+              <td><small><%= t('.last_update') %>: <%= as_date_and_time(@prospective_student.meb_status_date) %></small></td>
             </tr>
 
             <tr class="<%= @prospective_student.military_status ? 'table-success' : 'table-danger' %>">
@@ -29,7 +29,7 @@
               <td><%= @prospective_student.military_status ? t('.unproblematic') : t('.must_see_recruiting_office') %></td>
             </tr>
             <tr class="<%= @prospective_student.military_status ? 'table-success' : 'table-danger' %>">
-              <td><small>Kontrol tarihi: <%= as_date_and_time(@prospective_student.military_status_date) %></small></td>
+              <td><small><%= t('.last_update') %>: <%= as_date_and_time(@prospective_student.military_status_date) %></small></td>
             </tr>
 
             <tr class="<%= @prospective_student.obs_status ? 'table-success' : 'table-danger' %>">
@@ -38,13 +38,21 @@
             </tr>
             <tr class="<%= @prospective_student.obs_status ? 'table-success' : 'table-danger' %>">
               <td>
-                <small>Kontrol tarihi: <%= as_date_and_time(@prospective_student.obs_status_date) %></small>
+                <small><%= t('.last_update') %>: <%= as_date_and_time(@prospective_student.obs_status_date) %></small>
                 <% if @prospective_student.obs_registered_program %>
                   <hr>
                   <p><small><%= t('.registered_to', program: @prospective_student.obs_registered_program) %></small></p>
                 <% end %>
               </td>
             </tr>
+
+            <% @prospective_student.unit.registration_documents.each do |registration_document| %>
+              <tr>
+                <td><%= registration_document.document.name %></td>
+                <td><%= check_box("post", "validated") %></td>
+                </td>
+              </tr>
+            <% end %>
           </tbody>
         </table>
       </div>
