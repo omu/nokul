@@ -11,13 +11,14 @@ class ProspectiveStudent < ApplicationRecord
     using: { tsearch: { prefix: true } }
   )
 
-  search_keys :meb_status, :military_status, :obs_status, :unit_id
+  search_keys :meb_status, :military_status, :obs_status, :unit_id, :student_entrance_type_id
 
   # relations
   belongs_to :unit
   belongs_to :language, optional: true
   belongs_to :student_disability_type, optional: true
   belongs_to :high_school_type, optional: true
+  belongs_to :student_entrance_type
 
   # validations
   validates :id_number, presence: true, uniqueness: { scope: %i[unit_id exam_score] }
@@ -39,4 +40,13 @@ class ProspectiveStudent < ApplicationRecord
   enum nationality: { turkish: 1, kktc: 2, foreign: 3 }
   enum placement_type: { general: 1, additional_score: 2 }
   enum additional_score: { handicapped: 1 }
+
+  # custom methods
+  def can_permanently_register?
+    military_status && obs_status && meb_status
+  end
+
+  def can_temporarily_register?
+    military_status
+  end
 end
