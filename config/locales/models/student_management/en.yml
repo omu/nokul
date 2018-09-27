@@ -29,7 +29,7 @@ en:
         top_student: Top Student
         placement_score: Placement Score
         placement_rank: Placement Rank
-        unit: Placement Unit
+        unit: Placement Program
         preference_order: Preference Order
         placement_score_type: Placement Score Type
         additional_score: Additional Score
@@ -39,7 +39,8 @@ en:
         military_status_date: Military Status Check Date
         obs_status: Studentship Status
         obs_status_date: Studentship Status Check Date
-        obs_registered_program: Registered to
+        obs_registered_program: Registered To
+        student_entrance_type: Entrance Type
         graduated: Graduated
         not_graduated_or_unknown: Not Graduated/Unknown
         unproblematic: Unproblematic
@@ -69,9 +70,18 @@ en:
         prospective_student: Prospective Student
         identity_information: Identity Information
         other_information: Other Information
+        registered_to: 'Already registered to %{program}.'
+        permanently_register: Permanently Register
+        temporarily_register: Temporarily Register
+        can_not_register: Can Not Register
+        last_update: Last Update
       index:
         <<: *prospective_student_attributes
         prospective_students: Prospective Students
+      register:
+        success: Student successfully registered.
+        warning: Student could not be registered.
+        can_not_register: Can Not Register
   simple_form:
     labels:
       prospective_student:
