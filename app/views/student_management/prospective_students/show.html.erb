@@ -2,6 +2,80 @@
   <div class='col-lg-6'>
     <div class="card">
       <div class="card-header">
+        <%= fa_icon 'university' %><strong><%= t('.prospective_student') %></strong>
+      </div>
+      <div class="card-body">
+        <table class="table table-responsive-sm">
+          <tbody>
+            <tr>
+              <td><%= t('.student_entrance_type') %></td>
+              <td><%= @prospective_student.student_entrance_type.name %></td>
+            </tr>
+            <tr>
+              <td><%= t('.unit') %></td>
+              <% unit = @prospective_student.unit %>
+              <td><%= unit.name %> / <%= unit.parent.name %> / <%= unit.parent.try(:parent).try(:name) %></td>
+            </tr>
+            <tr class="<%= @prospective_student.meb_status ? 'table-success' : 'table-danger' %>">
+              <td rowspan="2"><%= t('.meb_status') %></td>
+              <td><%= @prospective_student.meb_status ? t('.graduated') : t('.not_graduated_or_unknown') %></td>
+            </tr>
+            <tr class="<%= @prospective_student.meb_status ? 'table-success' : 'table-danger' %>">
+              <td><small><%= t('.last_update') %>: <%= as_date_and_time(@prospective_student.meb_status_date) %></small></td>
+            </tr>
+
+            <tr class="<%= @prospective_student.military_status ? 'table-success' : 'table-danger' %>">
+              <td rowspan="2"><%= t('.military_status') %></td>
+              <td><%= @prospective_student.military_status ? t('.unproblematic') : t('.must_see_recruiting_office') %></td>
+            </tr>
+            <tr class="<%= @prospective_student.military_status ? 'table-success' : 'table-danger' %>">
+              <td><small><%= t('.last_update') %>: <%= as_date_and_time(@prospective_student.military_status_date) %></small></td>
+            </tr>
+
+            <tr class="<%= @prospective_student.obs_status ? 'table-success' : 'table-danger' %>">
+              <td rowspan="2"><%= t('.obs_status') %></td>
+              <td><%= @prospective_student.obs_status ? t('.unproblematic') : t('.student_in_a_different_unit') %></td>
+            </tr>
+            <tr class="<%= @prospective_student.obs_status ? 'table-success' : 'table-danger' %>">
+              <td>
+                <small><%= t('.last_update') %>: <%= as_date_and_time(@prospective_student.obs_status_date) %></small>
+                <% if @prospective_student.obs_registered_program %>
+                  <hr>
+                  <p><small><%= t('.registered_to', program: @prospective_student.obs_registered_program) %></small></p>
+                <% end %>
+              </td>
+            </tr>
+
+            <% @prospective_student.unit.registration_documents.each do |registration_document| %>
+              <tr>
+                <td><%= registration_document.document.name %></td>
+                <td><%= check_box("post", "validated") %></td>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-footer">
+         <% if @prospective_student.can_permanently_register? %>
+          <%= link_to register_prospective_student_path, class: "btn btn-block btn-success" do %>
+            <%= t('.permanently_register') %>
+          <% end %>
+        <% elsif @prospective_student.can_temporarily_register? %>
+          <%= link_to register_prospective_student_path, class: "btn btn-block btn-warning" do %>
+            <%= t('.temporarily_register') %>
+          <% end %>
+        <% else %>
+          <%= link_to register_prospective_student_path, class: "btn btn-block btn-danger disabled" do %>
+            <%= t('.can_not_register') %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class='col-lg-6'>
+    <div class="card">
+      <div class="card-header">
         <%= fa_icon 'university' %><strong><%= t('.identity_information') %></strong>
       </div>
       <div class="card-body">
@@ -51,56 +125,9 @@
               <td><%= t('.registration_district') %></td>
               <td><%= @prospective_student.registration_district %></td>
             </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-  <div class='col-lg-6'>
-    <div class="card">
-      <div class="card-header">
-        <%= fa_icon 'university' %><strong><%= t('.prospective_student') %></strong>
-      </div>
-      <div class="card-body">
-        <table class="table table-responsive-sm">
-          <tbody>
-            <tr>
-              <td><%= t('.unit') %></td>
-              <% unit = @prospective_student.unit %>
-              <td><%= unit.name %> / <%= unit.parent.name %> / <%= unit.parent.try(:parent).name %></td>
-            </tr>
             <tr>
               <td><%= t('.state_of_education') %></td>
               <td><%= @prospective_student.state_of_education %></td>
-            </tr>
-            <tr class="<%= @prospective_student.meb_status ? 'table-success' : 'table-danger' %>">
-              <td><%= t('.meb_status') %></td>
-              <td>
-                <%= @prospective_student.meb_status ? t('.graduated') : t('.not_graduated_or_unknown') %></td>
-            </tr>
-            <tr>
-              <td><%= t('.meb_status_date') %></td>
-              <td><%= @prospective_student.meb_status_date %></td>
-            </tr>
-            <tr class="<%= @prospective_student.military_status ? 'table-success' : 'table-danger' %>">
-              <td><%= t('.military_status') %></td>
-              <td><%= @prospective_student.military_status ? t('.unproblematic') : t('.must_see_recruiting_office') %></td>
-            </tr>
-            <tr>
-              <td><%= t('.military_status_date') %></td>
-              <td><%= @prospective_student.military_status_date %></td>
-            </tr>
-            <tr class="<%= @prospective_student.obs_status ? 'table-success' : 'table-danger' %>">
-              <td><%= t('.obs_status') %></td>
-              <td><%= @prospective_student.obs_status ? t('.unproblematic') : t('.student_in_a_different_unit') %></td>
-            </tr>
-            <tr>
-              <td><%= t('.obs_status_date') %></td>
-              <td><%= @prospective_student.obs_status_date %></td>
-            </tr>
-            <tr>
-              <td><%= t('.obs_registered_program') %></td>
-              <td><%= @prospective_student.obs_registered_program %></td>
             </tr>
           </tbody>
         </table>

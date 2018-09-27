@@ -2,23 +2,26 @@ tr:
   layouts:
     shared:
       sidebar:
-        units: Birimler
-        locations: Konumlar
-        calendars: Takvimler
+        academic_calendars: Akademik Takvimler
+        academic_terms: Akademik Dönemler
+        agenda_types: Gündem Türleri
         calendar_titles: Takvim Başlıkları
         calendar_types: Takvim Türleri
-        academic_terms: Akademik Dönemler
-        academic_calendars: Akademik Takvimler
-        courses: Dersler
+        calendars: Takvimler
+        committee_units: Kurul/Komisyon Birimleri
+        committees: Kurullar/Komisyonlar
+        course_group_types: Ders Grup Türleri
         course_management: Ders İşlemler
         course_unit_groups: Ders Grupları
-        course_group_types: Ders Grup Türleri
+        courses: Dersler
         curriculums: Müfredatlar
-        languages: Diller
-        users: Kullanıcılar
-        references: Referanslar
-        documents: Belgeler
+        definitions: Tanımlar
+        documents: Gerekli Belgeler
+        first_registration: İlk Kayıt
         high_school_types: Lise Türleri
+        languages: Diller
+        locations: Konumlar
+        references: Referanslar
         student_disability_types: Engel Türleri
         student_drop_out_types: Ayrılma Nedenleri
         student_education_levels: Eğitim Düzeyleri
@@ -26,16 +29,15 @@ tr:
         student_entrance_types: Giriş Türleri
         student_grades: Sınıflar
         student_grading_systems: Not Sistemleri
-        student_punishment_types: Ceza Türleri
         student_management: Öğrenci Yönetimi
+        student_punishment_types: Ceza Türleri
         student_studentship_statuses: Öğrencilik Hakları
+        studies: Akademik Çalışmalar
         unit_instruction_languages: Öğrenim Dilleri
         unit_instruction_types: Öğrenim Türleri
         unit_statuses: Aktiflik Durumları
         unit_types: Birim Türleri
+        units: Birimler
         university_types: Üniversite Türleri
-        studies: Akademik Çalışmalar
-        committees: Kurullar/Komisyonlar
-        committee_units: Kurul/Komisyon Birimleri
-        agenda_types: Gündem Türleri
-        first_registration: İlk Kayıt
+        users: Kullanıcılar
+      
