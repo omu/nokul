@@ -2,20 +2,20 @@ tr:
   activerecord:
     attributes:
       unit: &unit_attributes
-        name: Birim Adı
-        yoksis_id: YOKSIS ID
+        ancestry: Üst/Alt Birim
         detsis_id: DETSIS ID
+        district: Bulunduğu İlçe
+        duration: Öğretim Süresi
         foet_code: FOET Kodu
         founded_at: Kuruluş Tarihi
-        duration: Öğretim Süresi
-        district: Bulunduğu İlçe
-        ancestry: Üst/Alt Birim
-        unit_type: Birim Türü
-        unit_status: Birim Durumu
+        name: Birim Adı
+        parent_id: Üst Birim
         unit_instruction_language: Öğretim Dili
         unit_instruction_type: Öğretim Türü
+        unit_status: Birim Durumu
+        unit_type: Birim Türü
         university_type: Üniversite Türü
-        parent_id: Üst Birim
+        yoksis_id: YOKSIS ID
   helpers:
     submit:
       unit:
@@ -24,28 +24,28 @@ tr:
   units:
     common:
       units: Birimler
-    search:
-      smart_search_placeholder: Birim adı veya YOKSIS numarası
-      duration: Öğretim Süresi
-      unit_status: Birim Durumu
-      unit_instruction_language: Öğretim Dili
-      unit_instruction_type: Öğretim Türü
-    show:
-      <<: *unit_attributes
-      parent: Üst Birim
-      registration_documents: Gerekli Belgeler
-    index:
-      <<: *unit_attributes
-      new_unit_link: Yeni Birim Oluştur
-      card_header: Birimler
-    new:
-      form_title: Birim Oluştur
-    edit:
-      form_title: Birim Güncelle
-    update:
-      success: Birim başarıyla güncellendi.
     create:
       success: Birim başarıyla oluşturuldu.
     destroy:
       success: Birim başarıyla silindi!
       warning: Birim silinemedi!
+    edit:
+      form_title: Birim Güncelle
+    index:
+      <<: *unit_attributes
+      card_header: Birimler
+      new_unit_link: Yeni Birim Oluştur
+    new:
+      form_title: Birim Oluştur
+    search:
+      duration: Öğretim Süresi
+      smart_search_placeholder: Birim adı veya YOKSIS numarası
+      unit_instruction_language: Öğretim Dili
+      unit_instruction_type: Öğretim Türü
+      unit_status: Birim Durumu
+    show:
+      <<: *unit_attributes
+      parent: Üst Birim
+      registration_documents: Gerekli Belgeler
+    update:
+      success: Birim başarıyla güncellendi.
