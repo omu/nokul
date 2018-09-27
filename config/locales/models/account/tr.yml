@@ -1,3 +1,4 @@
+---
 tr:
   account:
     duties:
@@ -53,7 +54,7 @@ tr:
         success: Profiliniz başarıyla güncellendi
   activerecord:
     attributes:
-      duty: &duty_attributes
+      duty:
         employee_id: Personel
         end_date: Bitiş Tarihi
         start_date: Başlangıç Tarihi
@@ -61,12 +62,12 @@ tr:
         tenure: Kadrolu
         tenure_status: Kadro Durumu
         unit_id: Birim
-      employee: &employee_attributes
+      employee:
         id_number: Kimlik Numarası
         is_active: Aktif mi?
         title_id: Ünvan
         user_id: Kullanıcı
-      position: &position_attributes
+      position:
         administrative_function_id: Görev
         end_date: Bitiş Tarihi
         start_date: Başlangıç Tarihi
