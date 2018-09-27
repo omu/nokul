@@ -14,8 +14,7 @@ module CourseManagement
       get index_path
       assert_response :success
       assert_select '#add-button', translate('.index.add_new_curriculum')
-      assert_select '#collapseSmartSearchLink', t('smart_search')
-      assert_select '#collapseDetailedSearchLink', t('detailed_search')
+      assert_select '#collapseSearchLink', t('search')
     end
 
     test 'should get show' do
