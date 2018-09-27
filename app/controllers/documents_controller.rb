@@ -27,7 +27,11 @@ class DocumentsController < ApplicationController
   end
 
   def destroy
-    @document.destroy ? redirect_to(documents_path, notice: t('.success')) : redirect_with('warning')
+    if @document.destroy
+      redirect_to(documents_path, notice: t('.success'))
+    else
+      redirect_to(documents_path, alert: t('.warning'))
+    end
   end
 
   private
