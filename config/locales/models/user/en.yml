@@ -71,6 +71,7 @@ en:
       new_user_link: Create a New User
       addresses: Addresses
       identities: Identities
+      smart_search_placeholder: TC/YU number, e-mail address, first of last name
     account:
       <<: *user_attributes
     addresses:
@@ -93,8 +94,6 @@ en:
       identities: Identities
       addresses: Addresses
       employees: Employees
-    search:
-      smart_search_placeholder: TC/YU number, e-mail address, first of last name
     edit:
       form_title: Edit Account
     new:
