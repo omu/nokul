@@ -1,25 +1,5 @@
 en:
   devise:
-    mailer:
-      common:
-        hello: 'Hello, %{mail}!'
-      email_changed:
-        subject: Email Changed
-        body: You have successfully updated your registered e-mail address. You can drop us a line explaining the case at <%= Rails.application.config.tenant.email.support %>, if you think there is a mistake.
-        new_mail: 'Your new e-mail: %{mail}'
-      password_change:
-        subject: Password Changed
-        body: You have successfully updated your password. You can drop us a line explaining the case at <%= Rails.application.config.tenant.email.support %>, if you think there is a mistake.
-      reset_password_instructions:
-        subject: Reset password instructions
-        body: You or someone else made a request to reset your password. Click the link below to reset your password.
-        reset_password: Reset Password
-        didnt_requested: You can ignore this e-mail if you didn't requested a password change. Your password will not change unless you click the link shown above and then set a new password.
-      confirmation_instructions:
-        subject: Confirmation instructions
-      unlock_instructions:
-        subject: Unlock instructions
-
     confirmations:
       confirmed: "Your email address has been successfully confirmed."
       send_instructions: "You will receive an email with instructions for how to confirm your email address in a few minutes."
@@ -28,12 +8,31 @@ en:
       already_authenticated: "You are already signed in."
       inactive: "Your account is not activated yet."
       invalid: "Invalid %{authentication_keys} or password."
-      locked: "Your account is locked."
       last_attempt: "You have one more attempt before your account is locked."
+      locked: "Your account is locked."
       not_found_in_database: "Invalid %{authentication_keys} or password."
       timeout: "Your session expired. Please sign in again to continue."
       unauthenticated: "You need to sign in or sign up before continuing."
       unconfirmed: "You have to confirm your email address before continuing."
+    mailer:
+      common:
+        hello: 'Hello, %{mail}!'
+      confirmation_instructions:
+        subject: Confirmation instructions
+      email_changed:
+        body: You have successfully updated your registered e-mail address. You can drop us a line explaining the case at <%= Rails.application.config.tenant.email.support %>, if you think there is a mistake.
+        new_mail: 'Your new e-mail: %{mail}'
+        subject: Email Changed
+      password_change:
+        body: You have successfully updated your password. You can drop us a line explaining the case at <%= Rails.application.config.tenant.email.support %>, if you think there is a mistake.
+        subject: Password Changed
+      reset_password_instructions:
+        body: You or someone else made a request to reset your password. Click the link below to reset your password.
+        didnt_requested: You can ignore this e-mail if you didn't requested a password change. Your password will not change unless you click the link shown above and then set a new password.
+        reset_password: Reset Password
+        subject: Reset password instructions
+      unlock_instructions:
+        subject: Unlock instructions
     omniauth_callbacks:
       failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
       success: "Successfully authenticated from %{kind} account."
@@ -52,9 +51,9 @@ en:
       update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirm link to confirm your new email address."
       updated: "Your account has been updated successfully."
     sessions:
+      already_signed_out: "Signed out successfully."
       signed_in: "Signed in successfully."
       signed_out: "Signed out successfully."
-      already_signed_out: "Signed out successfully."
     unlocks:
       send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."

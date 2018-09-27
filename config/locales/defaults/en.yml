@@ -1,23 +1,22 @@
 en:
-  actions: Actions
   action_group:
     add: Add
     back: Back
     destroy: Destroy
     edit: Edit
+    file: Show File
     new: New
     show: Show
     update: Update
-    file: Show File
+  actions: Actions
   are_you_sure: Are you sure?
+  created_at: Created At
+  detailed_search: Detailed Search
+  home_nav: Home
+  'no': 'No'
+  reset: Reset
   save: Save
   search: Search
-  home_nav: Home
-  created_at: Created At
+  smart_search: Smart Search
   updated_at: Updated At
   'yes': 'Yes'
-  'no': 'No'
-  detailed_search: Detailed Search
-  reset: Reset
-  search: Search
-  smart_search: Smart Search

@@ -2,10 +2,10 @@ tr:
   activerecord:
     attributes:
       registration_document: &registration_document_attributes
-        unit: Birim
         academic_term: Akademik Dönem
         document: Belge
         statement: Açıklama
+        unit: Birim
   helpers:
     submit:
       registration_document:
@@ -14,20 +14,20 @@ tr:
   registration_documents:
     common:
       registration_documents: Belgeler
-    show:
-      <<: *registration_document_attributes
-    index:
-      <<: *registration_document_attributes
-      new_registration_document_link: Yeni Belge Oluştur
-      card_header: '%{unit} Kayıt İçin Gerekli Belgeler'
-    new:
-      form_title: Belge Oluştur
-    edit:
-      form_title: Belge Güncelle
-    update:
-      success: Belge başarıyla güncellendi.
     create:
       success: Belge başarıyla oluşturuldu.
     destroy:
       success: Belge başarıyla silindi!
       warning: Belge silinemedi!
+    edit:
+      form_title: Belge Güncelle
+    index:
+      <<: *registration_document_attributes
+      card_header: '%{unit} Kayıt İçin Gerekli Belgeler'
+      new_registration_document_link: Yeni Belge Oluştur
+    new:
+      form_title: Belge Oluştur
+    show:
+      <<: *registration_document_attributes
+    update:
+      success: Belge başarıyla güncellendi.

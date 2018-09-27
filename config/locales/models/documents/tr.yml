@@ -4,28 +4,28 @@ tr:
       document: &document_attributes
         name: Belge Adı
         statement: Açıklama
-  helpers:
-    submit:
-      document:
-        create: Belge Oluştur
-        update: Belge Güncelle
   documents:
     common:
       documents: Belgeler
-    show:
-      <<: *document_attributes
-    index:
-      <<: *document_attributes
-      new_document_link: Yeni Belge Oluştur
-      card_header: Belgeler
-    new:
-      form_title: Belge Oluştur
-    edit:
-      form_title: Belge Güncelle
-    update:
-      success: Belge başarıyla güncellendi.
     create:
       success: Belge başarıyla oluşturuldu.
     destroy:
       success: Belge başarıyla silindi!
       warning: Belge silinemedi!
+    edit:
+      form_title: Belge Güncelle
+    index:
+      <<: *document_attributes
+      card_header: Belgeler
+      new_document_link: Yeni Belge Oluştur
+    new:
+      form_title: Belge Oluştur
+    show:
+      <<: *document_attributes
+    update:
+      success: Belge başarıyla güncellendi.
+  helpers:
+    submit:
+      document:
+        create: Belge Oluştur
+        update: Belge Güncelle

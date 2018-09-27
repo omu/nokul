@@ -2,20 +2,20 @@ en:
   activerecord:
     attributes:
       unit: &unit_attributes
-        name: Unit Name
-        yoksis_id: YOKSIS ID
+        ancestry: Parent/Children Unit
         detsis_id: DETSIS ID
+        district: Location
+        duration: Duration of Instruction
         foet_code: FOET Code
         founded_at: Founded At
-        duration: Duration of Instruction
-        district: Location
-        ancestry: Parent/Children Unit
-        unit_type: Unit Type
-        unit_status: Unit Status
+        name: Unit Name
+        parent_id: Parent Unit
         unit_instruction_language: Instruction Language
         unit_instruction_type: Instruction Type
+        unit_status: Unit Status
+        unit_type: Unit Type
         university_type: University Type
-        parent_id: Parent Unit
+        yoksis_id: YOKSIS ID
   helpers:
     submit:
       unit:
@@ -24,28 +24,28 @@ en:
   units:
     common:
       units: Units
-    search:
-      smart_search_placeholder: Unit name or YOKSIS ID
-      duration: Duration of Instruction
-      unit_status: Unit Status
-      unit_instruction_language: Language of Instruction
-      unit_instruction_type: Instruction Type
-    show:
-      <<: *unit_attributes
-      parent: Parent Unit
-      registration_documents: Registration Documents
-    index:
-      <<: *unit_attributes
-      new_unit_link: Create a New Unit
-      card_header: Units
-    new:
-      form_title: Create a Unit
-    edit:
-      form_title: Update the Unit
-    update:
-      success: Unit successfully updated.
     create:
       success: Unit successfully created.
     destroy:
       success: Unit successfully deleted!
       warning: Unit can not be deleted.
+    edit:
+      form_title: Update the Unit
+    index:
+      <<: *unit_attributes
+      card_header: Units
+      new_unit_link: Create a New Unit
+    new:
+      form_title: Create a Unit
+    search:
+      duration: Duration of Instruction
+      smart_search_placeholder: Unit name or YOKSIS ID
+      unit_instruction_language: Language of Instruction
+      unit_instruction_type: Instruction Type
+      unit_status: Unit Status
+    show:
+      <<: *unit_attributes
+      parent: Parent Unit
+      registration_documents: Registration Documents
+    update:
+      success: Unit successfully updated.

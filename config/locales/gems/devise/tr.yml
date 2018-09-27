@@ -1,25 +1,5 @@
 tr:
   devise:
-    mailer:
-      common:
-        hello: 'Merhaba, %{mail}!'
-      email_changed:
-        subject: Email Adresiniz Değişti
-        body: Kayıtlı e-mail adresiniz başarıyla değiştirilmiştir. Bir yanlışlık olduğunu düşünüyorsanız <%= Rails.application.config.tenant.email.support %> adresine durumu anlatan bir e-mail gönderebilirsiniz.
-        new_mail: 'Yeni e-mail adresiniz: %{mail}'
-      password_change:
-        subject: Şifreniz Değişti
-        body: Şifreniz başarıyla değiştirilmiştir. Bir yanlışlık olduğunu düşünüyorsanız <%= Rails.application.config.tenant.email.support %> adresine durumu anlatan bir e-mail gönderebilirsiniz.
-      reset_password_instructions:
-        subject: Parola sıfırlama talimatları
-        body: Siz veya başka birisi şifrenizi sıfırlama talebinde bulundu. Şifrenizi sıfırlamak istiyorsanız aşağıdaki linke tıklayabilirsiniz.
-        reset_password: Şifremi Sıfırla
-        didnt_requested: Eğer böyle bir istekte bulunmadıysanız bu e-mail'i görmezden gelebilirsiniz. Yukarıdaki linke tıklayarak yeni bir şifre belirledikçe şifreniz değişmeyecektir.
-      confirmation_instructions:
-        subject: Onaylama talimatları
-      unlock_instructions:
-        subject: Kilit kaldırma talimalatları
-
     confirmations:
       confirmed: "Eposta adresiniz başırılı bir şekilde onaylandı."
       send_instructions: "Bir kaç dakika içerisinde eposta adresinizi nasıl onaylayacağınız hakkında bir eposta alacaksınız."
@@ -28,12 +8,31 @@ tr:
       already_authenticated: "Zaten giriş yaptınız."
       inactive: "Hesabınız henüz aktif edilmedi."
       invalid: "Geçersiz %{authentication_keys} veya parola."
-      locked: "Hesabınız kilitli."
       last_attempt: "Hesabınız kilitlenmeden önceki son şansınız."
+      locked: "Hesabınız kilitli."
       not_found_in_database: "Geçersiz %{authentication_keys} veya parola."
       timeout: "Oturum süreniz sonlandı. Lütfen devam etmek için tekrar giriş yapın."
       unauthenticated: "Devam etmeden önce giriş yapmalı veya kayıt olmalısınız."
       unconfirmed: "Devam etmeden önce eposta adresinizi onaylamalısınız."
+    mailer:
+      common:
+        hello: 'Merhaba, %{mail}!'
+      confirmation_instructions:
+        subject: Onaylama talimatları
+      email_changed:
+        body: Kayıtlı e-mail adresiniz başarıyla değiştirilmiştir. Bir yanlışlık olduğunu düşünüyorsanız <%= Rails.application.config.tenant.email.support %> adresine durumu anlatan bir e-mail gönderebilirsiniz.
+        new_mail: 'Yeni e-mail adresiniz: %{mail}'
+        subject: Email Adresiniz Değişti
+      password_change:
+        body: Şifreniz başarıyla değiştirilmiştir. Bir yanlışlık olduğunu düşünüyorsanız <%= Rails.application.config.tenant.email.support %> adresine durumu anlatan bir e-mail gönderebilirsiniz.
+        subject: Şifreniz Değişti
+      reset_password_instructions:
+        body: Siz veya başka birisi şifrenizi sıfırlama talebinde bulundu. Şifrenizi sıfırlamak istiyorsanız aşağıdaki linke tıklayabilirsiniz.
+        didnt_requested: Eğer böyle bir istekte bulunmadıysanız bu e-mail'i görmezden gelebilirsiniz. Yukarıdaki linke tıklayarak yeni bir şifre belirledikçe şifreniz değişmeyecektir.
+        reset_password: Şifremi Sıfırla
+        subject: Parola sıfırlama talimatları
+      unlock_instructions:
+        subject: Kilit kaldırma talimalatları
     omniauth_callbacks:
       failure: "\"%{reason}\" olduğu için %{kind}'den doğrulama yapılamıyor."
       success: "%{kind} hesabından başarılı bir şekilde doğrulandı."
@@ -52,9 +51,9 @@ tr:
       update_needs_confirmation: "Hesabınız başarılı bir şekilde güncellendi. Fakar eposta adresinizi onaylamanız gerekmekteir. Lütfen eposta kutunuzu kontrol ediniz ve yeni eposta adresinizi onaylama linkine tıklayınız."
       updated: "Hesabınız başarılı bir şekilde güncellendi."
     sessions:
+      already_signed_out: "Başarılı çıkış."
       signed_in: "Başarılı giriş."
       signed_out: "Başarılı çıkış."
-      already_signed_out: "Başarılı çıkış."
     unlocks:
       send_instructions: "Birkaç dakika içerisinde hesabınızın kilidini nasıl kaldıracağınız hakkında bir eposta alacaksınız."
       send_paranoid_instructions: "Eğer hesabınız varsa birkaç dakika içerisinde hesabınızın kilidini nasıl kaldırıcağınız hakkında bir eposta alacaksınız."

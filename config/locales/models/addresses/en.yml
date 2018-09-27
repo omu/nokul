@@ -2,45 +2,45 @@ en:
   activerecord:
     attributes:
       address: &address_attributes
-        type: Address Type
-        phone_number: Phone Number
-        full_address: Full Address
         district: District
+        full_address: Full Address
+        phone_number: Phone Number
+        type: Address Type
     enums:
       address:
         types:
           formal: Formal Address
           informal: Other Address
-  simple_form:
-    hints:
-      address:
-        full_address: Neighbourhood, street and door number
+  account:
+    addresses:
+      create:
+        success: Address successfully created!
+      destroy:
+        success: Address successfully deleted!
+        warning: Address can not be deleted!
+      edit:
+        form_title: Edit Address
+        warning: You can not edit your formal address!
+      index:
+        <<: *address_attributes
+        card_header: Address Information
+        create_from_mernis: Create from MERNIS
+        district_and_city: District / City
+        new_address: Add a New Address
+        update_from_mernis: Update from MERNİS
+      new:
+        form_title: Create Address
+      save_from_mernis:
+        wait: You recently created or updated your address. You can update your address once every week.
+        will_update: We got your address create or update request. In a couple of seconds/minutes you will be able to see your new address.
+      update:
+        success: Address successfully updated!
   helpers:
     submit:
       address:
         create: Save the Address
         update: Update the Address
-  account:
-    addresses:
-      index:
-        <<: *address_attributes
-        new_address: Add a New Address
-        card_header: Address Information
-        district_and_city: District / City
-        update_from_mernis: Update from MERNİS
-        create_from_mernis: Create from MERNIS
-      new:
-        form_title: Create Address
-      edit:
-        warning: You can not edit your formal address!
-        form_title: Edit Address
-      create:
-        success: Address successfully created!
-      update:
-        success: Address successfully updated!
-      destroy:
-        success: Address successfully deleted!
-        warning: Address can not be deleted!
-      save_from_mernis:
-        wait: You recently created or updated your address. You can update your address once every week.
-        will_update: We got your address create or update request. In a couple of seconds/minutes you will be able to see your new address.
+  simple_form:
+    hints:
+      address:
+        full_address: Neighbourhood, street and door number

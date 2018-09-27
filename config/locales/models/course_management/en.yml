@@ -2,114 +2,114 @@ en:
   activerecord:
     attributes:
       course: &course_attributes
-        credit: Credit
         code: Code
-        program_type: Program Type
+        credit: Credit
         laboratory: Laboratory
         language: Language
         name: Name
         practice: Practice
+        program_type: Program Type
         status: Status
         theoric: Theoric
         unit: Unit
+      course_group_type: &course_group_type_attributes
+        name: Course Group Type Name
       course_unit_group: &course_unit_group_attributes
-        courses: Courses
         course_group_type: Course Group Type
         course_ids: Courses
+        courses: Courses
         name: Course Group Name
         search_placeholder: Course Group Name / Unit Name / Course Group Type Name
         total_ects_condition: Total ECTS Condition
         unit: Unit
-      course_group_type: &course_group_type_attributes
-        name: Course Group Type Name
       curriculum: &curriculum_attributes
         name: Curriculum Name
         number_of_semesters: Number of Semesters
-        unit: Unit
-        status: Status
         programs: Programs
-    models:
-      course: Course
-      course_unit_group: Course Group
-      course_group_type: Course Group Type
-      curriculum: Curriculum
+        status: Status
+        unit: Unit
     enums:
       course:
         program_types:
           associate: Associate
-          undergraduate: Undergraduate
-          master: Master
           doctoral: Doctoral
+          master: Master
+          undergraduate: Undergraduate
         statuses:
-          passive: Passive
           active: Active
+          passive: Passive
       curriculum:
         statuses:
           active: Active
           passive: Passive
+    models:
+      course: Course
+      course_group_type: Course Group Type
+      course_unit_group: Course Group
+      curriculum: Curriculum
   course_management:
-    courses:
-      new:
-        form_title: Create a Course
+    course_group_types:
+      create:
+        success: Course group type created.
+      destroy:
+        error: An error occured when deleting the course group type.
+        success: Course group type successfully destroyed.
       edit:
-        form_title: Update the Course
+        form_title: Course Group Type successfully updated.
+      index:
+        <<: *course_group_type_attributes
+        card_header: Course Group Types
+        new_course_group_type_link: Add a New Course Group Type
+      new:
+        form_title: Course Group Type successfully created.
+      update:
+        success: Course group type successfully updated.
+    course_unit_groups:
+      create:
+        success: Course group created.
+      destroy:
+        error: An error occured when deleting the course group.
+        success: Course group successfully destroyed.
+      edit:
+        form_title: Course Group successfully updated.
+      index:
+        <<: *course_unit_group_attributes
+        card_header: Course Groups
+        new_course_unit_group_link: Add a New Course Group
+      new:
+        form_title: Course Group successfully created.
+      show:
+        course_group_type: Course Group Type
+        courses: Courses
+        name: Course Unit Group Name
+        total_ects_condition: Total ECTS Condition
+        unit: Unit
+      update:
+        success: Course group successfully updated.
+    courses:
       create:
         success: Course successfully created.
       destroy:
-        success: Course successfully destroyed.
         error: An error occured when deleting the course.
-      update:
-        success: Course successfully updated.
-      search:
-        smart_search_placeholder: Course name or code
-        program_type: All Program Types
-        language: All Languages
-        unit: All Units
-        status: All Statuses
-      show:
-        <<: *course_attributes
+        success: Course successfully destroyed.
+      edit:
+        form_title: Update the Course
       index:
         <<: *course_attributes
         add_new_course: Add a New Course
         courses: Courses
-    course_unit_groups:
       new:
-        form_title: Course Group successfully created.
+        form_title: Create a Course
+      search:
+        language: All Languages
+        program_type: All Program Types
+        smart_search_placeholder: Course name or code
+        status: All Statuses
+        unit: All Units
       show:
-        name: Course Unit Group Name
-        total_ects_condition: Total ECTS Condition
-        unit: Unit
-        course_group_type: Course Group Type
-        courses: Courses
-      edit:
-        form_title: Course Group successfully updated.
-      create:
-        success: Course group created.
-      destroy:
-        success: Course group successfully destroyed.
-        error: An error occured when deleting the course group.
+        <<: *course_attributes
       update:
-        success: Course group successfully updated.
-      index:
-        <<: *course_unit_group_attributes
-        new_course_unit_group_link: Add a New Course Group
-        card_header: Course Groups
-    course_group_types:
-      new:
-        form_title: Course Group Type successfully created.
-      edit:
-        form_title: Course Group Type successfully updated.
-      create:
-        success: Course group type created.
-      destroy:
-        success: Course group type successfully destroyed.
-        error: An error occured when deleting the course group type.
-      update:
-        success: Course group type successfully updated.
-      index:
-        <<: *course_group_type_attributes
-        new_course_group_type_link: Add a New Course Group Type
-        card_header: Course Group Types
+        success: Course successfully updated.
     curriculums:
       create:
         success: Curriculum successfully created.
