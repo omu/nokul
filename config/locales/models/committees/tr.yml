@@ -2,8 +2,8 @@ tr:
   activerecord:
     attributes:
       agenda: &agenda_attributes
-        agenda_type_id: Gündem Türü
         agenda_file: Gündem Dosyası
+        agenda_type_id: Gündem Türü
         description: Gündem Açıklaması
         status: Gündem Durumu
       agenda_type: &agenda_type_attributes
@@ -13,9 +13,66 @@ tr:
     enums:
       agenda:
         statuses:
-          recent: Yeni
           decided: Karar Verildi
           delayed: Ertelendi
+          recent: Yeni
+  committee:
+    agenda_types:
+      create:
+        success: Gündem Türü başarıyla oluşturuldu.
+      destroy:
+        success: Gündem Türü başarıyla silindi.
+        warning: Gündem Türü silinemedi!
+      edit:
+        form_title: Gündem Türü Güncelle
+      index:
+        <<: *agenda_type_attributes
+        card_header: Gündem Türleri
+        new_agenda_type_link: Yeni Bir Gündem Türü Oluştur
+      new:
+        form_title: Gündem Türü Oluştur
+      update:
+        success: Gündem Türü başarıyla güncellendi.
+    agendas:
+      create:
+        success: Gündem başarıyla oluşturuldu.
+      destroy:
+        success: Gündem başarıyla silindi.
+        warning: Gündem silinemedi!
+      edit:
+        form_title: Gündem Güncelle
+      index:
+        <<: *agenda_attributes
+        agenda_type: Gündem Türü
+        card_header: Gündemler
+        new_agenda_link: Yeni Bir Gündem Oluştur
+        unit: Birim
+      new:
+        form_title: Gündem Oluştur
+      search:
+        agenda_type_id: Gündem Türü
+        smart_search_placeholder: Gündem Açıklaması
+        status: Gündem Durumu
+      update:
+        success: Gündem başarıyla güncellendi.
+    dashboard:
+      index:
+        agendas: Gündemler
+        card_header: Kurul / Komisyon
+        detsis_id: DETSIS ID
+        district: Bulunduğu İlçe
+        name: Kurul / Komisyon Adı
+        new_committee_link: Yeni Bir Kurul/Komisyon Oluştur
+        unit_status: Birim Durumu
+        unit_type: Birim Türü
+        yoksis_id: YOKSIS ID
+      show:
+        actions: İşlemler
+        agenda_card_header: Gündemler
+        agenda_type: Gündem Türü
+        description: Açıklama
+        status: Gündem Durumu
+        unit: Üst Birim
   helpers:
     submit:
       agenda:
@@ -24,60 +81,3 @@ tr:
       agenda_type:
         create: Gündem Türü Oluştur
         update: Gündem Türü Güncelle
-  committee:
-    agendas:
-      index:
-        <<: *agenda_attributes
-        new_agenda_link: Yeni Bir Gündem Oluştur
-        card_header: Gündemler
-        unit: Birim
-        agenda_type: Gündem Türü
-      new:
-        form_title: Gündem Oluştur
-      edit:
-        form_title: Gündem Güncelle
-      create:
-        success: Gündem başarıyla oluşturuldu.
-      update:
-        success: Gündem başarıyla güncellendi.
-      destroy:
-        success: Gündem başarıyla silindi.
-        warning: Gündem silinemedi!
-      search:
-        agenda_type_id: Gündem Türü
-        smart_search_placeholder: Gündem Açıklaması
-        status: Gündem Durumu
-    agenda_types:
-      index:
-        <<: *agenda_type_attributes
-        new_agenda_type_link: Yeni Bir Gündem Türü Oluştur
-        card_header: Gündem Türleri
-      new:
-        form_title: Gündem Türü Oluştur
-      edit:
-        form_title: Gündem Türü Güncelle
-      create:
-        success: Gündem Türü başarıyla oluşturuldu.
-      update:
-        success: Gündem Türü başarıyla güncellendi.
-      destroy:
-        success: Gündem Türü başarıyla silindi.
-        warning: Gündem Türü silinemedi!
-    dashboard:
-      index:
-        agendas: Gündemler
-        name: Kurul / Komisyon Adı
-        detsis_id: DETSIS ID
-        yoksis_id: YOKSIS ID
-        unit_status: Birim Durumu
-        unit_type: Birim Türü
-        district: Bulunduğu İlçe
-        card_header: Kurul / Komisyon
-        new_committee_link: Yeni Bir Kurul/Komisyon Oluştur
-      show:
-        description: Açıklama
-        unit: Üst Birim
-        agenda_type: Gündem Türü
-        status: Gündem Durumu
-        actions: İşlemler
-        agenda_card_header: Gündemler

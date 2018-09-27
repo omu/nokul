@@ -1,24 +1,24 @@
 tr:
-  layouts:
-    application:
-      my_account: Hesabım
-      identities: Kimlik Bilgileri
-      addresses: Adres Bilgileri
-      profile_settings: Profil Ayarları
-      settings: Ayarlar
-      account_settings: Hesap Ayarları
-      logout: Çıkış Yap
   home:
     components:
       membership_notifications:
-        upcoming_events: Yaklaşan akademik takvim olayları
-        profile_completion_rate: Profil tamamlama oranı
         address_information: Adres bilgileriniz
-        identity_information: Kimlik bilgileriniz
-        seems_missing: eksik görünüyor.
-        last_password_change: Son şifre değişikliği
         change_password: Şifrenizi değiştirin.
+        identity_information: Kimlik bilgileriniz
+        last_password_change: Son şifre değişikliği
+        profile_completion_rate: Profil tamamlama oranı
+        seems_missing: eksik görünüyor.
+        upcoming_events: Yaklaşan akademik takvim olayları
       user_and_account_statistics:
-        registered_users: Kayıtlı Kullanıcılar
-        identities: Kimlik Bilgileri
         addresses: Adres Bilgileri
+        identities: Kimlik Bilgileri
+        registered_users: Kayıtlı Kullanıcılar
+  layouts:
+    application:
+      account_settings: Hesap Ayarları
+      addresses: Adres Bilgileri
+      identities: Kimlik Bilgileri
+      logout: Çıkış Yap
+      my_account: Hesabım
+      profile_settings: Profil Ayarları
+      settings: Ayarlar
