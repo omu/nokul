@@ -74,9 +74,14 @@ tr:
         permanently_register: Kesin Kayıt Yap
         temporarily_register: Geçici Kayıt Yap
         can_not_register: Kayıt Yapılamaz
+        last_update: Son Güncelleme
       index:
         <<: *prospective_student_attributes
         prospective_students: Aday Öğrenciler
+      register:
+        success: Öğrenci başarıyla kayıt edildi
+        warning: Öğrenci kayıt edilemedi
+        can_not_register: Kayıt Yapılamaz
   simple_form:
     labels:
       prospective_student:
