@@ -1,3 +1,4 @@
+---
 en:
   account:
     duties:
@@ -53,20 +54,20 @@ en:
         success: Profile successfully updated.
   activerecord:
     attributes:
-      duty: &duty_attributes
-        employee: Employee
+      duty:
+        employee_id: Employee
         end_date: End Date
         start_date: Start Date
         temporary: Temporary Duty
         tenure: Tenure
         tenure_status: Tenure Status
         unit_id: Unit
-      employee: &employee_attributes
+      employee:
         id_number: ID Number
         is_active: Is Active?
         title_id: Title
         user_id: User
-      position: &position_attributes
+      position:
         administrative_function_id: Administrative Function
         end_date: End Date
         start_date: Start Date

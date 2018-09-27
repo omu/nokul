@@ -52,7 +52,7 @@ tr:
       create:
         success: Ders grup türü başarıyla oluşturuldu.
       destroy:
-        error: Ders grup türü silinirken bir hata oluştu.
+        warning: Ders grup türü silinirken bir hata oluştu.
         success: Ders grup türü başarıyla silindi.
       edit:
         form_title: Ders Grup Türü Düzenle

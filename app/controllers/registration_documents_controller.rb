@@ -26,7 +26,11 @@ class RegistrationDocumentsController < ApplicationController
   end
 
   def destroy
-    @registration_document.destroy ? redirect_to(@unit, notice: t('.success')) : redirect_with('warning')
+    if @registration_document.destroy
+      redirect_to(@unit, notice: t('.success'))
+    else
+      redirect_to(@unit, alert: t('.warning'))
+    end
   end
 
   private

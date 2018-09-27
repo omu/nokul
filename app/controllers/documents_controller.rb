@@ -6,7 +6,7 @@ class DocumentsController < ApplicationController
   before_action :set_document, only: %i[edit update destroy show]
 
   def index
-    @pagy, @documents = pagy(Document.all)
+    @pagy, @documents = pagy(Document.order(:name))
   end
 
   def show; end
@@ -27,7 +27,11 @@ class DocumentsController < ApplicationController
   end
 
   def destroy
-    @document.destroy ? redirect_to(documents_path, notice: t('.success')) : redirect_with('warning')
+    if @document.destroy
+      redirect_to(documents_path, notice: t('.success'))
+    else
+      redirect_to(documents_path, alert: t('.warning'))
+    end
   end
 
   private

@@ -17,4 +17,4 @@ en:
       size_not_satisfied: File size is not between the permitted range. You can upload files from minimum %{minimum} KBs to maximum %{maximum} MBs.
     position:
       invalid_end_date: Start date is selected as a date after the end date
-      multiple_active_repetitive:
+      multiple_active_repetitive: This employee already has this position in this unit

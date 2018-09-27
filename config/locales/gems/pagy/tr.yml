@@ -1,22 +1,23 @@
+---
 tr:
   pagy:
     compact:
       of: "/"
-      page: "Sayfa"
+      page: Sayfa
     info:
       item_name:
-        one: "kayıt"
-        other: "kayıt"
-        zero: "kayıt"
+        one: kayıt
+        other: kayıt
+        zero: kayıt
       multiple_pages: "<b>%{count}</b> %{item_name} içerisinden <b>%{from}-%{to}</b> kadarı gösteriliyor."
       single_page:
         one: "<b>1</b> %{item_name} gösteriliyor."
-        other: "Toplam <b>%{count}</b> %{item_name} gösteriliyor."
-        zero: "Hiç %{item_name} bulunamadı."
+        other: Toplam <b>%{count}</b> %{item_name} gösteriliyor.
+        zero: Hiç %{item_name} bulunamadı.
     items:
-      items: "sayfa başı"
-      show: "Göster"
+      items: sayfa başı
+      show: Göster
     nav:
       gap: "&hellip;"
-      next: "Sonraki&nbsp;&rsaquo;"
+      next: Sonraki&nbsp;&rsaquo;
       prev: "&lsaquo;&nbsp;Önceki"
