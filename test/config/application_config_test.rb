@@ -19,4 +19,18 @@ class ApplicationConfigTest < ActiveSupport::TestCase
   test 'Time zone should match with Istanbul' do
     assert_equal @config.time_zone, 'Istanbul'
   end
+
+  test 'Default locale should be Turkish' do
+    assert_equal @config.i18n.default_locale, :tr
+  end
+
+  test 'Tenant settings must be configured in tenants/*.yml' do
+    files_count = Dir.glob(Rails.root.join('config', 'tenants', '*.yml')).count
+    assert_operator files_count, :>, 0
+  end
+
+  test 'Configuration can read tenant settings' do
+    assert_not_nil @config.tenant.abbreviation
+    assert_not_nil @config.tenant.host
+  end
 end
