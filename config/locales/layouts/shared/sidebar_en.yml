@@ -2,23 +2,26 @@ en:
   layouts:
     shared:
       sidebar:
-        units: Units
-        locations: Locations
-        calendars: Calendars
+        academic_calendars: Academic Calendars
+        academic_terms: Academic Terms
+        agenda_types: Agenda Types
         calendar_titles: Calendar Titles
         calendar_types: Calendar Types
-        academic_terms: Academic Terms
-        academic_calendars: Academic Calendars
-        courses: Courses
+        calendars: Calendars
+        committee_units: Committee Units
+        committees: Committees
+        course_group_types: Course Group Type
         course_management: Course Management
         course_unit_groups: Course Unit Group
-        course_group_types: Course Group Type
+        courses: Courses
         curriculums: Curriculums
-        languages: Languages
-        users: Users
-        references: References
-        documents: Documents
+        definitions: Definitions
+        documents: Required Documents
+        first_registration: Prospective Students
         high_school_types: High School Types
+        languages: Languages
+        locations: Locations
+        references: References
         student_disability_types: Disability Types
         student_drop_out_types: Drop Out Types
         student_education_levels: Education Levels
@@ -26,16 +29,14 @@ en:
         student_entrance_types: Entrance Types
         student_grades: Grades
         student_grading_systems: Grading Systems
-        student_punishment_types: Punishment Types
         student_management: Student Management
+        student_punishment_types: Punishment Types
         student_studentship_statuses: Studentship Statuses
+        studies: Academic Studies
         unit_instruction_languages:  Instruction Languages
         unit_instruction_types: Instruction Types
         unit_statuses: Unit Statuses
         unit_types: Unit Types
+        units: Units
         university_types: University Types
-        studies: Academic Studies
-        committees: Committees
-        committee_units: Committee Units
-        agenda_types: Agenda Types
-        first_registration: Prospective Students
+        users: Users

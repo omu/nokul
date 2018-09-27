@@ -29,7 +29,7 @@ tr:
         top_student: Okul Birincisi
         placement_score: Yerleşme Puanı
         placement_rank: Yerleşme Sırası
-        unit: Yerleştiği Birim
+        unit: Yerleştiği Program
         preference_order: Tercih Sırası
         placement_score_type: Yerleşme Puan Türü
         additional_score: Ek Puan
@@ -40,6 +40,7 @@ tr:
         obs_status: Öğrencilik Durumu
         obs_status_date: Öğrencilik Durum Kontrol Tarihi
         obs_registered_program: Öğrenci Olarak Kayıtlı Olduğu Program
+        student_entrance_type: Giriş Türü
         graduated: Mezun
         not_graduated_or_unknown: Mezun Değil/Bilinmiyor
         unproblematic: Sorunsuz
@@ -69,9 +70,18 @@ tr:
         prospective_student: Aday Öğrenci
         identity_information: Kimlik Bilgileri
         other_information: Diğer Bilgileri
+        registered_to: '%{program} isimli programda kayıtlı.'
+        permanently_register: Kesin Kayıt Yap
+        temporarily_register: Geçici Kayıt Yap
+        can_not_register: Kayıt Yapılamaz
+        last_update: Son Güncelleme
       index:
         <<: *prospective_student_attributes
         prospective_students: Aday Öğrenciler
+      register:
+        success: Öğrenci başarıyla kayıt edildi
+        warning: Öğrenci kayıt edilemedi
+        can_not_register: Kayıt Yapılamaz
   simple_form:
     labels:
       prospective_student:
