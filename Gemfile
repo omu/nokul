@@ -67,6 +67,12 @@ group :development, :test do
   gem 'simplecov', require: false
 end
 
+group :test do
+  gem 'capybara'
+  gem 'chromedriver-helper'
+  gem 'selenium-webdriver'
+end
+
 group :development do
   gem 'bullet'
   gem 'fit-commit'
