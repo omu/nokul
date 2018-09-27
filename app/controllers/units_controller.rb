@@ -30,7 +30,11 @@ class UnitsController < ApplicationController
   end
 
   def destroy
-    @unit.destroy ? redirect_to(units_path, notice: t('.success')) : redirect_with('warning')
+    if @unit.destroy
+      redirect_to(units_path, notice: t('.success'))
+    else
+      redirect_to(units_path, alert: t('.warning'))
+    end
   end
 
   def courses
