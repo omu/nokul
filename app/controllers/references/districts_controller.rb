@@ -21,7 +21,11 @@ module References
     end
 
     def destroy
-      @district.destroy ? redirect_to([@city.country, @city], notice: t('.success')) : redirect_with('warning')
+      if @district.destroy
+        redirect_to([@city.country, @city], notice: t('.success'))
+      else
+        redirect_to([@city.country, @city], alert: t('.warning'))
+      end
     end
 
     private

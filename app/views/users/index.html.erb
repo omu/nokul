@@ -9,7 +9,9 @@
         <%= fa_icon 'align-justify', text: t('.card_header') %>
       </div>
       <div class='card-body'>
-        <%= render 'search' %>
+        <%= render 'components/smart_search_form',
+                   path: users_path,
+                   placeholder: t('.smart_search_placeholder') %>
         <table class='table table-responsive-sm'>
           <thead>
             <tr>

@@ -19,7 +19,7 @@
           <% end %>
           <div class='row mt-3'>
             <div class='form-group col-sm-4'>
-              <%= f.association :unit %>
+              <%= f.association :unit, collection: Unit.coursable.active.order(:name) %>
             </div>
             <div class='form-group col-sm-4'>
               <%= f.input :name %>
@@ -28,13 +28,13 @@
               <%= f.input :code %>
             </div>
             <div class='form-group col-sm-4'>
-              <%= f.input :theoric %>
+              <%= f.input :theoric, input_html: { min: 0 } %>
             </div>
             <div class='form-group col-sm-4'>
-              <%= f.input :practice %>
+              <%= f.input :practice, input_html: { min: 0 } %>
             </div>
             <div class='form-group col-sm-4'>
-              <%= f.input :laboratory %>
+              <%= f.input :laboratory, input_html: { min: 0 } %>
             </div>
             <div class='form-group col-sm-4'>
               <%= f.input :program_type,

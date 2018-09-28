@@ -5,7 +5,7 @@ class Language < ApplicationRecord
   include PgSearch
   pg_search_scope(
     :search,
-    against: %i[name iso yoksis_code],
+    against: %i[name iso],
     using: { tsearch: { prefix: true } }
   )
 

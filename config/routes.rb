@@ -33,7 +33,9 @@ Rails.application.routes.draw do
   end
 
   scope module: :student_management do
-    resources :prospective_students
+    resources :prospective_students do
+      get 'register', on: :member
+    end
   end
 
   draw :references

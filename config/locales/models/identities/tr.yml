@@ -2,58 +2,58 @@ tr:
   activerecord:
     attributes:
       identity: &identity_attributes
-        type: Kimlik Türü
-        first_name: Ad
-        last_name: Soyad
-        mothers_name: Anne Adı
-        fathers_name: Baba Adı
-        gender: Cinsiyet
-        marital_status: Medeni Hal
-        place_of_birth: Doğum Yeri
         date_of_birth: Doğum Tarihi
+        fathers_name: Baba Adı
+        first_name: Ad
+        gender: Cinsiyet
+        last_name: Soyad
+        marital_status: Medeni Hal
+        mothers_name: Anne Adı
+        place_of_birth: Doğum Yeri
         registered_to: Kütük Bilgisi
+        type: Kimlik Türü
     enums:
       identity:
+        genders:
+          female: Kadın
+          male: Erkek
+          other: Diğer
+        marital_statuses:
+          divorced: Boşanmış
+          married: Evli
+          single: Bekâr
+          unknown: Bilinmiyor
         types:
           formal: Resmi Kimlik
           informal: Diğer Kimlik
-        genders:
-          male: Erkek
-          female: Kadın
-          other: Diğer
-        marital_statuses:
-          single: Bekâr
-          married: Evli
-          divorced: Boşanmış
-          unknown: Bilinmiyor
+  account:
+    identities:
+      create:
+        success: Kimlik başarıyla oluşturuldu!
+      destroy:
+        success: Kimlik başarıyla silindi!
+        warning: Kimlik silinemedi!
+      edit:
+        form_title: Kimliği Düzenle
+        warning: Yasal kimlik bilgilerinizi düzenleyemezsiniz!
+      index:
+        <<: *identity_attributes
+        create_from_mernis: MERNİS'ten Oluştur
+        department: Öğrencilik Birimi
+        informal_identity: Diğer Kimliğiniz
+        new_identity: Yeni Kimlik Ekle
+        student_identity: Öğrencilik Kimliğiniz
+        update_from_mernis: MERNİS'ten Güncelle
+        user_identity: Kullanıcı Kimliğiniz
+      new:
+        form_title: Kimlik Oluştur
+      save_from_mernis:
+        wait: Kimliğinizi yakın bir zamanda oluşturdunuz veya güncellediniz. Kimliğinizi haftada bir güncelleyebilirsiniz.
+        will_update: Kimlik oluşturma veya güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde adresiniz güncellenecek.
+      update:
+        success: Kimlik başarıyla güncellendi!
   helpers:
     submit:
       identity:
         create: Kimliği Kaydet
         update: Kimliği Güncelle
-  account:
-    identities:
-      index:
-        <<: *identity_attributes
-        new_identity: Yeni Kimlik Ekle
-        user_identity: Kullancı Kimliğiniz
-        student_identity: Öğrencilik Kimliğiniz
-        informal_identity: Diğer Kimliğiniz
-        update_from_mernis: MERNİS'ten Güncelle
-        create_from_mernis: MERNİS'ten Oluştur
-        department: Öğrencilik Birimi
-      edit:
-        warning: Yasal kimlik bilgilerinizi düzenleyemezsiniz!
-        form_title: Kimliği Düzenle
-      new:
-        form_title: Kimlik Oluştur
-      create:
-        success: Kimlik başarıyla oluşturuldu!
-      update:
-        success: Kimlik başarıyla güncellendi!
-      destroy:
-        success: Kimlik başarıyla silindi!
-        warning: Kimlik silinemedi!
-      save_from_mernis:
-        wait: Kimliğinizi yakın bir zamanda oluşturdunuz veya güncellediniz. Kimliğinizi haftada bir güncelleyebilirsiniz.
-        will_update: Kimlik oluşturma veya güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde adresiniz güncellenecek.

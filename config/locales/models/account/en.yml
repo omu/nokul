@@ -1,88 +1,89 @@
+---
 en:
-  activerecord:
-    attributes:
-      employee: &employee_attributes
-        is_active: Is Active?
-        title_id: Title
-        user_id: User
-        id_number: ID Number
-      duty: &duty_attributes
-        tenure_status: Tenure Status
-        tenure: Tenure
-        temporary: Temporary Duty
-        start_date: Start Date
-        end_date: End Date
-        employee: Employee
-        unit_id: Unit
-      position: &position_attributes
-        administrative_function_id: Administrative Function
-        start_date: Start Date
-        end_date: End Date
-  helpers:
-    submit:
-      employee:
-        create: Create Employee
-        update: Update Employee
-      duty:
-        create: Create Duty
-        update: Update Duty
-      position:
-        create: Create Position
-        update: Update Position
   account:
-    employees:
-      new:
-        form_title: Create a Employee
-      edit:
-        form_title: Update the Employee
-      create:
-        success: Employee successfully created.
-      destroy:
-        success: Employee successfully deleted.
-        warning: Employee could not be deleted.
-      update:
-        success: Employee successfully updated.
     duties:
-      new:
-        form_title: Create a Duty
-      edit:
-        form_title: Update the Duty
       create:
         success: Duty successfully created.
       destroy:
         success: Duty successfully deleted.
         warning: Duty could not be deleted.
+      edit:
+        form_title: Update the Duty
+      new:
+        form_title: Create a Duty
       update:
         success: Duty successfully updated.
-    positions:
-      new:
-        form_title: Create a Position
+    employees:
+      create:
+        success: Employee successfully created.
+      destroy:
+        success: Employee successfully deleted.
+        warning: Employee could not be deleted.
       edit:
-        form_title: Update the Position
+        form_title: Update the Employee
+      new:
+        form_title: Create a Employee
+      update:
+        success: Employee successfully updated.
+    positions:
       create:
         success: Position successfully created.
       destroy:
         success: Position successfully deleted.
         warning: Position could not be deleted.
+      edit:
+        form_title: Update the Position
+      new:
+        form_title: Create a Position
       update:
         success: Position successfully updated.
     profile:
       edit:
-        profile_settings: Profile Settings
-        visiblity_settings: Visiblity Settings
-        phone_number: Phone Number
         extension_number: Extension Number
-        website: Website
-        twitter: Twitter Username
         linkedin: Linkedin Username
-        skype: Skype Username
         orcid: ORCID
+        phone_number: Phone Number
+        profile_settings: Profile Settings
         public_photo: Show picture on my profile
         public_studies: Show academic studies on my profile
+        skype: Skype Username
+        twitter: Twitter Username
+        visiblity_settings: Visiblity Settings
+        website: Website
       update:
         success: Profile successfully updated.
+  activerecord:
+    attributes:
+      duty:
+        employee_id: Employee
+        end_date: End Date
+        start_date: Start Date
+        temporary: Temporary Duty
+        tenure: Tenure
+        tenure_status: Tenure Status
+        unit_id: Unit
+      employee:
+        id_number: ID Number
+        is_active: Is Active?
+        title_id: Title
+        user_id: User
+      position:
+        administrative_function_id: Administrative Function
+        end_date: End Date
+        start_date: Start Date
+  helpers:
+    submit:
+      duty:
+        create: Create Duty
+        update: Update Duty
+      employee:
+        create: Create Employee
+        update: Update Employee
+      position:
+        create: Create Position
+        update: Update Position
   simple_form:
     placeholders:
       user:
-        twitter: twitter.com/
         linkedin: linkedin.com/
+        twitter: twitter.com/
