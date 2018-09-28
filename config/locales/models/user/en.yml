@@ -95,6 +95,7 @@ en:
       card_header: User Accounts
       identities: Identities
       new_user_link: Create a New User
+      smart_search_placeholder: TC/YU number, e-mail address, first of last name
     new:
       form_title: Create Account
     save_address_from_mernis:
@@ -103,8 +104,6 @@ en:
     save_identity_from_mernis:
         wait: The identity was recently created or updated. You can update the identity once a week.
         will_update: We have received your request for an identity creation or an update, and within a few seconds/minutes the identity will be updated.
-    search:
-      smart_search_placeholder: TC/YU number, e-mail address, first of last name
     show:
       account: Account
       addresses: Addresses

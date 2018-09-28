@@ -9,13 +9,9 @@
         <%= fa_icon 'tags', text: t('.card_header') %>
       </div>
       <div class='card-body'>
-        <%= form_tag course_unit_groups_path, method: :get do %>
-          <div class="form-group">
-            <%= text_field_tag 'term', params[:term], placeholder: t('.search_placeholder'), class: 'form-control' %>
-          </div>
-          <%= submit_tag t('search'), class: 'btn btn-primary' %>
-        <% end %>
-        <hr \>
+        <%= render 'components/smart_search_form',
+                   path: course_unit_groups_path,
+                   placeholder: t('.search_placeholder') %>
         <table class='table table-responsive-sm table-striped'>
           <thead>
             <tr>

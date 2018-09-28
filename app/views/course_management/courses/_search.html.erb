@@ -25,6 +25,7 @@
           <div class="row">
             <div class="col-sm-12">
               <div class="form-group">
+                <%= label_tag :term, t('smart_search') %>
                 <%= text_field_tag :term,
                                     params[:term],
                                     placeholder: t('.smart_search_placeholder'),
@@ -51,7 +52,6 @@
                               style: 'width: 100%') %>
               </div>
             </div>
-
             <div class="col-sm-3">
               <div class="form-group">
                 <%= label_tag(:language_id, t('.language')) %>
@@ -62,7 +62,6 @@
                               style: 'width: 100%') %>
               </div>
             </div>
-
             <div class="col-sm-2">
               <div class="form-group">
                 <%= label_tag(:status, t('.status')) %>

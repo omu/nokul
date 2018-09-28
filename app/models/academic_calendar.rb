@@ -1,6 +1,14 @@
 # frozen_string_literal: true
 
 class AcademicCalendar < ApplicationRecord
+  # search
+  include PgSearch
+  pg_search_scope(
+    :search,
+    against: %i[name],
+    using: { tsearch: { prefix: true } }
+  )
+
   # relations
   belongs_to :academic_term
   belongs_to :calendar_type
