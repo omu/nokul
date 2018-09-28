@@ -26,7 +26,11 @@ module References
     end
 
     def destroy
-      @language.destroy ? redirect_to(languages_path, notice: t('.success')) : redirect_with('warning')
+      if @language.destroy
+        redirect_to(languages_path, notice: t('.success'))
+      else
+        redirect_to(languages_path, alert: t('.warning'))
+      end
     end
 
     private

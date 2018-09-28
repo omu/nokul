@@ -68,6 +68,7 @@ en:
         form_title: Create Country
         new_country: New Country
       show:
+        <<: *country_attributes
         <<: *city_attributes
         card_header: Cities
         new_city_link: Add a New City

@@ -30,7 +30,11 @@ module References
     end
 
     def destroy
-      @country.destroy ? redirect_to(countries_path, notice: t('.success')) : redirect_with('warning')
+      if @country.destroy
+        redirect_to(countries_path, notice: t('.success'))
+      else
+        redirect_to(countries_path, alert: t('.warning'))
+      end
     end
 
     private

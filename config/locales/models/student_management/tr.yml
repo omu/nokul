@@ -72,7 +72,6 @@ tr:
         prospective_students: Aday Öğrenciler
       register:
         can_not_register: Kayıt Yapılamaz
-        success: Öğrenci başarıyla kayıt edildi
         warning: Öğrenci kayıt edilemedi
       search:
         <<: *prospective_student_attributes
@@ -86,3 +85,5 @@ tr:
         prospective_student: Aday Öğrenci
         registered_to: '%{program} isimli programda kayıtlı.'
         temporarily_register: Geçici Kayıt Yap
+      redirect_with_success:
+        success: Öğrenci başarıyla kayıt edildi
