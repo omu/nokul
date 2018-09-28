@@ -20,7 +20,7 @@ module Xokul
         request.headers['Content-Type'] = 'application/json'
         request.headers['Accept'] = 'application/json'
         request.url path
-        request.body = '{"id_number": %{id_number}}' % {id_number: id_number}
+        request.body = format('{"id_number": %<id_number>s}', id_number: id_number)
       end
 
       response.body if response.status.eql?(200)
