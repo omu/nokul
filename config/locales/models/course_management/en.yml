@@ -52,7 +52,7 @@ en:
       create:
         success: Course group type created.
       destroy:
-        error: An error occured when deleting the course group type.
+        warning: An error occured when deleting the course group type.
         success: Course group type successfully destroyed.
       edit:
         form_title: Course Group Type successfully updated.

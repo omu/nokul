@@ -2,7 +2,7 @@ en:
   activerecord:
     attributes:
       duty: &duty_attributes
-        employee: Employee
+        employee_id: Employee
         end_date: End Date
         start_date: Start Date
         temporary: Temporary Duty
