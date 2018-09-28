@@ -89,6 +89,7 @@ en:
     home:
       card:
         high_school_types: High School Types
+        languages: Languages
         student_disability_types: Disability Types
         student_drop_out_types: Drop Out Types
         student_education_levels: Education Levels
