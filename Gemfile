@@ -35,6 +35,7 @@ gem 'pagy'
 gem 'simple_form'
 
 # api
+gem 'faraday'
 gem 'jbuilder', '~> 2.5'
 gem 'savon', '~> 2.12.0'
 
