@@ -1,22 +1,23 @@
+---
 en:
   pagy:
-    nav:
-      prev: "&lsaquo;&nbsp;Prev"
-      next: "Next&nbsp;&rsaquo;"
-      gap: "&hellip;"
-    info:
-      single_page:
-        zero: "No %{item_name} found"
-        one: "Displaying <b>1</b> %{item_name}"
-        other: "Displaying <b>all %{count}</b> %{item_name}"
-      multiple_pages: "Displaying %{item_name} <b>%{from}-%{to}</b> of <b>%{count}</b> in total"
-      item_name:
-        zero: "items"
-        one: "item"
-        other: "items"
     compact:
-      page: "Page"
-      of: "of"
+      of: of
+      page: Page
+    info:
+      item_name:
+        one: item
+        other: items
+        zero: items
+      multiple_pages: Displaying %{item_name} <b>%{from}-%{to}</b> of <b>%{count}</b> in total
+      single_page:
+        one: Displaying <b>1</b> %{item_name}
+        other: Displaying <b>all %{count}</b> %{item_name}
+        zero: No %{item_name} found
     items:
-      show: "Show"
-      items: "items per page"
+      items: items per page
+      show: Show
+    nav:
+      gap: "&hellip;"
+      next: Next&nbsp;&rsaquo;
+      prev: "&lsaquo;&nbsp;Prev"

@@ -9,13 +9,9 @@
         <%= fa_icon 'align-justify', text: t('.card_header') %>
       </div>
       <div class='card-body'>
-        <%= form_tag academic_calendars_path, method: :get do %>
-          <div class="form-group">
-            <%= text_field_tag 'term', params[:term], placeholder: t('.name'), class: 'form-control' %>
-          </div>
-          <%= submit_tag t('search'), class: 'btn btn-primary' %>
-        <% end %>
-        <hr \>
+        <%= render 'components/smart_search_form',
+                   path: academic_calendars_path,
+                   placeholder: t('.name') %>
         <table class='table table-responsive-sm table-striped'>
           <thead>
             <tr>

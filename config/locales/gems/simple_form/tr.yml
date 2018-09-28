@@ -1,12 +1,10 @@
+---
 tr:
   simple_form:
-    "yes": 'Evet'
-    "no": 'Hayır'
-    required:
-      text: 'zorunlu alan'
-      mark: '*'
-      # You can uncomment the line below if you need to overwrite the whole required html.
-      # When using html, text and mark won't be used.
-      # html: '<abbr title="required">*</abbr>'
     error_notification:
-      default_message: "Lütfen aşağıdaki sorunları gözden geçirin:"
+      default_message: 'Lütfen aşağıdaki sorunları gözden geçirin:'
+    'no': Hayır
+    required:
+      mark: "*"
+      text: zorunlu alan
+    'yes': Evet

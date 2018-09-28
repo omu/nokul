@@ -1,17 +1,17 @@
 en:
   studies:
-    dashboard:
-      index:
-        articles: Articles
-        projects: Projects
-        certifications: Certifications
     articles:
       index:
         article: Article
-        top_publishers: Top Publishing Academics
-        recently_added: Recently Added Articles
         number_of_articles_by_years: Number of Articles by Years
         publications_by_index_types: Publications by Index Types
-        publications_by_publication_types: Publications by Publication Types
         publications_by_language: Publications by Publication Language
         publications_by_number_of_authors: Publications by Number of Authors
+        publications_by_publication_types: Publications by Publication Types
+        recently_added: Recently Added Articles
+        top_publishers: Top Publishing Academics
+    dashboard:
+      index:
+        articles: Articles
+        certifications: Certifications
+        projects: Projects

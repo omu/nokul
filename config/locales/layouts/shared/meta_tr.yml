@@ -2,6 +2,6 @@ tr:
   layouts:
     shared:
       meta:
-        title: Nokul - Üniversite Otomasyonu
-        description: Nokul, nitelikli okul üniversiteler için öğrenci ve personel otomasyonudur.
         author: OMÜ - BAUM
+        description: Nokul, nitelikli okul üniversiteler için öğrenci ve personel otomasyonudur.
+        title: Nokul - Üniversite Otomasyonu
