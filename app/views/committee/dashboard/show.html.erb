@@ -13,13 +13,9 @@
             </div>
           </div>
           <div class="card-body">
-            <%= form_tag committee_path(@committee.id), method: :get do %>
-              <div class="form-group">
-                <%= text_field_tag 'term', params[:term], placeholder: t('.description'), class: 'form-control' %>
-              </div>
-              <%= submit_tag t('search'), class: 'btn btn-primary' %>
-            <% end %>
-            <hr \>
+            <%= render 'components/smart_search_form',
+                       path: committee_path(@committee.id),
+                       placeholder: t('.description') %>
             <table class="table table-responsive-sm">
               <thead>
                 <tr>
