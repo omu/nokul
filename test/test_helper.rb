@@ -36,8 +36,14 @@ module ActiveSupport
       )
     end
 
-    SUPPORTED_SCREEN_RESOLUTIONS = [[360, 640], [1024, 768], [1366, 768], [1920, 1080]].freeze
+    SUPPORTED_SCREEN_RESOLUTIONS = [
+      [360,   640],
+      [1024,  768],
+      [1366,  768],
+      [1920, 1080]
+    ].freeze
 
+    # Switch to :selenium_chrome for real-time browser experience.
     Capybara.default_driver = :selenium_chrome_headless
     Capybara.server = :puma, { Silent: true }
 
