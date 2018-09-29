@@ -33,7 +33,7 @@ Rails.application.routes.draw do
   end
 
   scope module: :student_management do
-    resources :prospective_students do
+    resources :prospective_students, only: %i[index show] do
       get 'register', on: :member
     end
   end
