@@ -12,9 +12,10 @@ module Kps
 
     # callbacks
     after_perform do |job|
-      response = @response.merge(student_id: @student_id)
-      formal_identity = job.arguments.first.identities.user_identity
-      formal_identity.present? ? formal_identity.update(response) : formal_identity.create(response)
+      response = @response.merge(student_id: @student_id, type: 'formal')
+      user = job.arguments.first
+      formal_identity = user.identities.user_identity
+      formal_identity.present? ? formal_identity.update(response) : user.identities.create(response)
     end
   end
 end

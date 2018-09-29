@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class PublicProfileController < ApplicationController
+  include PagyBackendWithHelpers
+
   skip_before_action :authenticate_user!
   before_action :set_user, only: %i[show vcard]
   before_action :set_employee, only: %i[show vcard]
@@ -8,14 +10,12 @@ class PublicProfileController < ApplicationController
 
   def show; end
 
-  def index; end
-
-  def vcard
-    send_data vcard_content(@identity), type: 'text/vcard; charset=utf-8; header=present', filename: 'contact.vcf'
+  def index
+    @users = User.joins(:employees).search(params[:term])
   end
 
-  def search
-    @users = User.joins(:identities).search(params[:word])
+  def vcard
+    send_data VcardBuilder.new(@identity), type: 'text/vcard; charset=utf-8; header=present', filename: 'contact.vcf'
   end
 
   private
@@ -32,19 +32,5 @@ class PublicProfileController < ApplicationController
   def check_identity
     @identity = @user.identities.user_identity
     not_found if @identity.blank?
-  end
-
-  def vcard_content(identity)
-    <<~VCARD
-      BEGIN:VCARD
-      VERSION:3.0
-      N:#{identity.last_name};#{identity.first_name};;;
-      FN:#{identity.first_name} #{identity.last_name}
-      ORG:Ondokuz Mayıs Üniversitesi
-      TITLE:#{identity.user.title}
-      TEL;TYPE=WORK,VOICE:+90 (362) 312-1919
-      EMAIL:#{identity.user.email}
-      END:VCARD
-    VCARD
   end
 end
