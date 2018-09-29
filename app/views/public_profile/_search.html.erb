@@ -12,11 +12,16 @@
     <div class="card-header special-header py-5">
       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-9 mx-auto">
         <h3 class="text-white">Bir arama yapın</h3>
-        <%= form_tag profiles_search_path do |f| %>
+        <%= form_tag profiles_path, method: :get do |f| %>
           <div class="input-group">
-            <%= text_field_tag :word, locals[:word], class: 'form-control', placeholder: 'Aramak istediğiniz isim, e-posta veya birim adı girin..', required: true, autocomplete: 'off' %>
+            <%= text_field_tag :term,
+                               params[:term],
+                               placeholder: 'Aramak istediğiniz isim, e-posta veya birim adı girin..',
+                               required: true,
+                               autocomplete: 'off',
+                               class: 'form-control' %>
             <span class="input-group-append">
-              <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
+              <%= submit_tag t('search'), class: 'btn btn-primary' %>
             </span>
           </div>
         <% end %>

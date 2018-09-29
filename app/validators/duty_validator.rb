@@ -5,7 +5,7 @@ class DutyValidator < ActiveModel::Validator
     @duty = record
     @duties = record.employee.user.duties.where.not(id: @duty.id)
 
-    date_validation if @duty.start_date.present? && @duty.end_date.present?
+    date_validation if @duty.start_date? && @duty.end_date?
     restrict_duties if @duty.active?
   end
 
