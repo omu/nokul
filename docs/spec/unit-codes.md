@@ -60,13 +60,13 @@ alınmıştır:
 |:-----------|:------------|:------------|:-----------------------------|
 | 000        | 099         | 100         | Rezerve                      |
 | 100        | 199         | 100         | Legacy rezerve               |
-| 200        | 599         | 400         | Lisans ve ön lisans program  |
+| 200        | 599         | 400         | Lisans ve ön lisans programı |
 | 600        | 999         | 400         | Lisans üstü program          |
 
 Uzaktan Eğitim Programları
 --------------------------
 
-1. hanede rakamlar: U (1 adet) = 1 simge
+1. hanede harfler: U (1 adet) = 1 simge
 2. hanede rakamlar: 0123456789 (10 adet) = 10 simge
 3. hanede rakamlar: 0123456789 (10 adet) = 10 simge
 

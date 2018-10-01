@@ -41,7 +41,7 @@ kurallara göre oluşturulur.
 
 2. Olağan yeni öğrenci sayısının 999'u geçtiği programlarda sıra numarasında
    yılın olmadığı Form 2 kullanılır.  Ör. Yıl içinde en fazla 1800 yeni
-   öğrencinin kayıtlandığı görülen U21 birim numaralı İlahiyat Uzakten Eğitim
+   öğrencinin kayıtlandığı görülen U21 birim numaralı İlahiyat Uzaktan Eğitim
    programına 2020-2021 eğitim/öğretim yılında 1234'ncü sırada kayıtlanan
    öğrencinin numarası:
 
