@@ -97,12 +97,12 @@ Akademik Birimler
 --------------
 
 1. hanede harfler: GHJKMN (6 adet) = 6 simge
-2. hanede rakamlar: 0123456789 (10 adet) + harfler: ABCDEFGHJKMNPRSTUVYZ (20 adet) = 30 simge
-3. hanede rakamlar: 0123456789 (10 adet) + harfler: ABCDEFGHJKMNPRSTUVYZ (20 adet) = 30 simge
+2. hanede rakamlar: 0123456789 (10 adet) + harfler: GHJKMN (6 adet) = 16 simge
+3. hanede rakamlar: 0123456789 (10 adet) + harfler: GHJKMN (6 adet) = 16 simge
 
 | Başlangıç  | Bitiş       | Havuz       | Kullanım                     |
 |:-----------|:------------|:------------|:-----------------------------|
-| G00        | NZZ         | 5400        | İdari birimler               |
+| G00        | NNN         | 1536        | İdari birimler               |
 
 Genel Rezervasyon
 -----------------
