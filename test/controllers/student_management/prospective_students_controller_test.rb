@@ -19,6 +19,7 @@ class ProspectiveStudentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should register prospective_student' do
+    skip 'this block on CircleCI since it needs IP permissions to run.' if ENV['CI']
     assert_difference('User.count') do
       assert_difference('Student.count') do
         get register_prospective_student_path(@prospective_student.id)
@@ -36,6 +37,7 @@ class ProspectiveStudentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should temporarily register prospective_student' do
+    skip 'this block on CircleCI since it needs IP permissions to run.' if ENV['CI']
     john = prospective_students(:john)
     john.update(military_status: true)
 
