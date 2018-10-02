@@ -54,7 +54,7 @@ module Committee
             params: {
               committee_meeting: {
                 meeting_no: 8,
-                meeting_date: Time.zone.today - 5.month,
+                meeting_date: Time.zone.today - 5.months,
                 year: Time.zone.today.year,
                 unit: @committee
               }
@@ -63,7 +63,7 @@ module Committee
       committee_meeting.reload
 
       assert_equal 8, committee_meeting.meeting_no
-      assert_equal Time.zone.today - 5.month, committee_meeting.meeting_date
+      assert_equal Time.zone.today - 5.months, committee_meeting.meeting_date
       assert_equal Time.zone.today.year, committee_meeting.year
       assert_redirected_to committee_meeting_index_path(@committee)
       assert_equal translate('.update.success'), flash[:notice]

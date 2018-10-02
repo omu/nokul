@@ -84,6 +84,7 @@ en:
         card_header: Committee / Commission
         detsis_id: DETSIS ID
         district: Location
+        meetings: Meetings
         name: Committee / Commission Name
         new_committee_link: Create a New Committee/Commission
         unit_status: Unit Status
