@@ -5,10 +5,11 @@ class CommitteeMeeting < ApplicationRecord
   belongs_to :unit
 
   # validations
-  validates :meeting_no, presence: true, uniqueness: { scope: :year }
+  validates :meeting_no, presence: true, uniqueness: { scope: :year },
+                         numericality: { only_integer: true, greater_than_or_equal_to: 1 }
   validates :meeting_date, presence: true
   validates :year, presence: true
 
   # callbacks
-  after_initialize { self.year = meeting_date.year }
+  before_validation { self.year = meeting_date.year }
 end
