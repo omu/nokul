@@ -8,6 +8,9 @@ en:
         status: Agenda Status
       agenda_type: &agenda_type_attributes
         name: Name of Agenda Type
+      committee_meeting: &committee_meeting_attributes
+        meeting_date: Committee Meeting Date
+        meeting_no: Committee Meeting No
       dashboard:
         name: Committee / Commission Name
     enums:
@@ -37,7 +40,7 @@ en:
       create:
         success: Agenda successfully created.
       destroy:
-        success: Agenda successfully deleted.
+        success: Agenda successfully created.
         warning: Agenda can not be deleted!
       edit:
         form_title: Update a Agenda
@@ -55,6 +58,26 @@ en:
         status: Agenda Status
       update:
         success: Agenda successfully updated.
+    committee_meetings:
+      create:
+        success: Committee Meeting successfully created.
+      destroy:
+        success: Committee Meeting successfully created.
+        warning: Committee Meeting can not be deleted!
+      edit:
+        form_title: Update a Committee Meeting
+      index:
+        card_header: Committee Meetings
+        meeting_date: Committee Meeting Date
+        meeting_no: Committee Meeting No
+        new_committee_meeting_link: Create a New Committee Meeting
+        unit: Unit
+        year: Year
+      new:
+        <<: *committee_meeting_attributes
+        form_title: Create a Committee Meeting
+      update:
+        success: Committee Meeting successfully updated.
     dashboard:
       index:
         agendas: Agendas
@@ -81,3 +104,6 @@ en:
       agenda_type:
         create: Create Agenda Type
         update: Update Agenda Type
+      committee_meeting:
+        create: Create Committee Meeting
+        update: Update Committee Meeting

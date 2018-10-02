@@ -1,0 +1,40 @@
+<div class='alert alert-light'>
+  <%= link_to_new new_committee_meeting_path(@committee), t('.new_committee_meeting_link') %>
+</div>
+
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'tasks', text: t('.card_header') %>
+      </div>
+      <div class='card-body'>
+        <table class='table table-responsive-sm table-striped'>
+          <thead>
+            <tr>
+              <th><%= t('.meeting_no') %></th>
+              <th><%= t('.meeting_date') %></th>
+              <th><%= t('.year') %></th>
+              <th><%= t('.unit') %></th>
+              <th><%= t('actions') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @committee_meetings.each do |committee_meeting| %>
+            <tr>
+              <td><%= committee_meeting.meeting_no %></td>
+              <td><%= committee_meeting.meeting_date %></td>
+              <td><%= committee_meeting.year %></td>
+              <td><%= committee_meeting.unit.name %></td>
+              <td>
+                <%= link_to_edit(edit_committee_meeting_path(@committee, committee_meeting)) %>
+                <%= link_to_destroy(committee_meeting_path(@committee, committee_meeting)) %>
+              </td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
