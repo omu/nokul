@@ -11,5 +11,5 @@ class CommitteeMeeting < ApplicationRecord
   validates :year, presence: true
 
   # callbacks
-  before_validation { self.year = meeting_date.year }
+  before_validation { self.year = meeting_date.try(:year) }
 end
