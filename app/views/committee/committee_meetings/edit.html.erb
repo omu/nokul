@@ -1,0 +1,4 @@
+<%= render 'form',
+           committee_meeting: @committee_meeting,
+           url: committee_meeting_path(@committee, @committee_meeting),
+           method: :patch, form_title: t('.form_title') %>

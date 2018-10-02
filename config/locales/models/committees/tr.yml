@@ -8,6 +8,9 @@ tr:
         status: Gündem Durumu
       agenda_type: &agenda_type_attributes
         name: Gündem Türü Adı
+      committee_meeting: &committee_meeting_attributes
+        meeting_date: Toplantı Tarihi
+        meeting_no: Toplantı No
       dashboard:
         name: Kurul / Komisyon Adı
     enums:
@@ -55,6 +58,26 @@ tr:
         status: Gündem Durumu
       update:
         success: Gündem başarıyla güncellendi.
+    committee_meetings:
+      create:
+        success: Toplantı başarıyla oluşturuldu.
+      destroy:
+        success: Toplantı başarıyla silindi.
+        warning: Toplantı silinemedi!
+      edit:
+        form_title: Toplantı Güncelle
+      index:
+        card_header: Toplantılar
+        meeting_date: Toplantı Tarihi
+        meeting_no: Toplantı No
+        new_committee_meeting_link: Yeni Bir Toplantı Oluştur
+        unit: Birim
+        year: Yıl
+      new:
+        <<: *committee_meeting_attributes
+        form_title: Toplantı Oluştur
+      update:
+        success: Toplantı başarıyla güncellendi.
     dashboard:
       index:
         agendas: Gündemler
@@ -81,3 +104,6 @@ tr:
       agenda_type:
         create: Gündem Türü Oluştur
         update: Gündem Türü Güncelle
+      committee_meeting:
+        create: Toplantı Oluştur
+        update: Toplantı Güncelle
