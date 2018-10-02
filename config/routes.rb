@@ -65,7 +65,7 @@ Rails.application.routes.draw do
 
   resources :agenda_types, except: :show, module: :committee
 
-  resources :committees, only: %i[index show], controller: 'committee/dashboard' do
+  resources :committees, only: :index, controller: 'committee/dashboard' do
     scope module: :committee do
       resources :agendas, except: :show
       resources :committee_meetings, as: :meeting
