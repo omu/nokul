@@ -13,7 +13,7 @@
               <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
             </div>
             <div class='form-group col-sm-6'>
-              <%= f.input :meeting_no, required: true %>
+              <%= f.input :meeting_no, required: true, input_html: { min: 1 } %>
             </div>
             <div class='form-group col-sm-6'>
               <%= f.input :meeting_date, as: :date %>
