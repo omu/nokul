@@ -84,6 +84,7 @@ tr:
         card_header: Kurul / Komisyon
         detsis_id: DETSIS ID
         district: Bulunduğu İlçe
+        meetings: Toplantılar
         name: Kurul / Komisyon Adı
         new_committee_link: Yeni Bir Kurul/Komisyon Oluştur
         unit_status: Birim Durumu
