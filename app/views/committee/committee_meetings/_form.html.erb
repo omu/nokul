@@ -3,7 +3,7 @@
     <div class='card'>
       <div class='card-header'>
         <%= fa_icon 'archive' %>
-        <strong><%= "#{@committee.name} Birimi - #{form_title}" %></strong>
+        <strong><%= form_title %></strong>
       </div>
       <div class='card-body'>
         <%= simple_form_for([@committee, committee_meeting], url: url, method: method) do |f| %>
