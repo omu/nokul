@@ -6,7 +6,7 @@ module Committee
     before_action :set_committee_meeting, only: %i[edit update destroy]
 
     def index
-      @committee_meetings = @committee.meetings
+      @committee_meetings = @committee.meetings.order(year: :desc, meeting_no: :asc)
     end
 
     def new
