@@ -1,4 +1,3 @@
-<%= render 'form',
-           committee_meeting: @committee_meeting,
-           url: committee_meeting_index_path(@committee),
-           method: :post, form_title: t('.form_title') %>
+<%= render 'form', meeting: @meeting,
+                   url: committee_meetings_path(@committee),
+                   method: :post, form_title: t('.form_title') %>
