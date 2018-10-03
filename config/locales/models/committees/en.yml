@@ -58,7 +58,7 @@ en:
         status: Agenda Status
       update:
         success: Agenda successfully updated.
-    committee_meetings:
+    meetings:
       create:
         success: Committee Meeting successfully created.
       destroy:

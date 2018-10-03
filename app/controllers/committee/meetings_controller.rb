@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Committee
-  class CommitteeMeetingsController < ApplicationController
+  class MeetingsController < ApplicationController
     before_action :set_committee
     before_action :set_meeting, only: %i[edit update destroy]
 
