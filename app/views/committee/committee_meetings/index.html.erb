@@ -20,17 +20,17 @@
             </tr>
           </thead>
           <tbody>
-            <% @committee_meetings.each do |committee_meeting| %>
-            <tr>
-              <td><%= committee_meeting.meeting_no %></td>
-              <td><%= committee_meeting.meeting_date %></td>
-              <td><%= committee_meeting.year %></td>
-              <td><%= committee_meeting.unit.name %></td>
-              <td>
-                <%= link_to_edit(edit_committee_meeting_path(@committee, committee_meeting)) %>
-                <%= link_to_destroy(committee_meeting_path(@committee, committee_meeting)) %>
-              </td>
-            </tr>
+            <% @meetings.each do |meeting| %>
+              <tr>
+                <td><%= meeting.meeting_no %></td>
+                <td><%= meeting.meeting_date %></td>
+                <td><%= meeting.year %></td>
+                <td><%= meeting.unit.name %></td>
+                <td>
+                  <%= link_to_edit(edit_committee_meeting_path(@committee, meeting)) %>
+                  <%= link_to_destroy(committee_meeting_path(@committee, meeting)) %>
+                </td>
+              </tr>
             <% end %>
           </tbody>
         </table>

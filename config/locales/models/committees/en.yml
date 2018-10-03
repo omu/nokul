@@ -40,7 +40,7 @@ en:
       create:
         success: Agenda successfully created.
       destroy:
-        success: Agenda successfully created.
+        success: Agenda successfully deleted.
         warning: Agenda can not be deleted!
       edit:
         form_title: Update a Agenda
@@ -62,7 +62,7 @@ en:
       create:
         success: Committee Meeting successfully created.
       destroy:
-        success: Committee Meeting successfully created.
+        success: Committee Meeting successfully deleted.
         warning: Committee Meeting can not be deleted!
       edit:
         form_title: Update a Committee Meeting
