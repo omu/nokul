@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 ruby File.read('.ruby-version')
 
 # core
-gem 'bootsnap', '>= 1.1.0', require: false # Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', '>= 1.1.0', require: false
 gem 'pg'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.1'
