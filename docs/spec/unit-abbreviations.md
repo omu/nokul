@@ -37,10 +37,20 @@ Kurallar
 
 - Türkçe karakterler daima korunur
 
-  + Doğru:  BİLGİSAYAR
-  + Yanlış: BILGISAYAR
+  Ör. "BILGISAYAR" yerine "BİLGİSAYAR"
 
   Örnekteki iki kelime aynı kısaltmaya karşı düşmektedir (bk. tekillik şartları)
+
+- Artık kelimeler çıkarıldıktan sonra (ör. "X Mühendisliği"nde sadece "X"
+  dikkate alınır) kısaltmaya konu tek kelime kalıyor ve bu kelime aşırı uzun
+  değilse (örneğin 12 harfi geçmiyor) kısaltılmadan yazılır
+
+  Ör. "BİL" yerine "BİLGİSAYAR"
+
+- Birim adı artık kelimeler çıkarıldıktan sonra birden fazla kelime kalıyorsa
+  uygun bir kısaltma tekniğiyle (bk. "Kısaltma Teknikleri") kısaltılır
+
+  Ör. "Bilgisayar Öğretimi Teknolojileri Eğitimi" için BÖTE
 
 - Fakülte adları şunlar olmalıdır
 
@@ -74,61 +84,61 @@ Kurallar
   | Eğitim Bilimleri                | EĞİTİM-BİLİM   |
   | Güzel Sanatlar                  | GÜZEL-SANAT    |
 
-
 - Konservatuvar adları şunlar olmalıdır
 
   | Konservatuvar                   | Kısaltma       |
   |:--------------------------------|:---------------|
   | Devlet Konservatuvarı           | KONSERVATUVAR  |
 
-- Yerleşke adları şunlar olmalıdır
+- Meslek Yüksek Okulu adları şunlar olmalıdır
 
-  | Yerleşke                        | Kısaltma       |
-  |:--------------------------------|:---------------|
-  | Bafra                           | BAFRA          |
-  | Alaçam                          | ALAÇAM         |
-  | Terme                           | TERME          |
-  | Vezirköprü                      | VEZİRKÖPRÜ     |
-  | Ballıca                         | BALLICA        |
-  | Çarşamba                        | ÇARŞAMBA       |
-  | Havza                           | HAVZA          |
+  | Okul                                      | Kısaltma         |
+  |:------------------------------------------|:-----------------|
+  | Adalet Meslek Yüksek Okulu                | ADALET-MYO       |
+  | Alaçam Meslek Yüksek Okulu                | ALAÇAM-MYO       |
+  | Bafra Meslek Yüksek Okulu                 | BAFRA-MYO        |
+  | Bafra Turizm Meslek Yüksek Okulu          | TURİZM-MYO       |
+  | Ballıca Meslek Yüksek Okulu               | BALLICA-MYO      |
+  | Çarşamba Meslek Yüksek Okulu              | ÇARŞAMBA-MYO     |
+  | Havza Meslek Yüksek Okulu                 | HAVZA-MYO        |
+  | Sağlık Hizmetleri Meslek Yüksek Okulu     | SAĞLIK-MYO       |
+  | Samsun Meslek Yüksek Okulu                | SAMSUN-MYO       |
+  | Terme Meslek Yüksek Okulu                 | TERME-MYO        |
+  | Vezirköprü Meslek Yüksek Okulu            | VEZİRKÖPRÜ-MYO   |
+  | Yeşilyurt Demir Çelik Meslek Yüksek Okulu | YEŞİLYURT-MYO    |
 
-- Bölüm adları artık kelimeler çıkarıldıktan sonra (ör. "X Mühendisliği"nde
-  sadece "X" dikkate alınır)  tek kelime kalıyorsa kısaltılmadan yazılır
+- Aşağıdaki türde birimlerde belirtilen son ekler kullanılır
 
-  + Doğru:  BİLGİSAYAR
-  + Yanlış: BİL
+  | Birim                           | Son ek    |
+  |:--------------------------------|:----------|
+  | Ana Bilim Dalı                  | ABD       |
+  | Ana Sanat Dalı                  | ASD       |
+  | Lisans/Önlisans Programı        | PR        |
+  | Yüksek Lisans Programı (Tezli)  | YL        |
+  | Yüksek Lisans Programı (Tezsiz) | YZ        |
+  | Doktora Programı                | DR        |
+  | Disiplinler arası Program       | DA        |
+  | Uzaktan Eğitim Programı         | UZ        |
+  | İkinci Öğretim Programı         | 2         |
 
-- Bölüm adları artık kelimeler çıkarıldıktan sonra birden fazla kelime kalıyorsa
-  uygun bir kısaltma tekniğiyle (bk. "Kısaltma Teknikleri") kısaltılır
+  Ör. Bilgisayar Mühendisliği lisans programı için "BİLGİSAYAR-PR"
 
-  Ör. "Bilgisayar Öğretimi Teknolojileri Eğitimi" için BÖTE
+- Lisans bölümleri, programlar ve lisans üstü programlar **çakışma yoksa** ön ek
+  kullanılmadan yazılır
 
-- Bölüm adları **çakışma yoksa** daima birinci seviyede ön eksiz yazılır
+  Ör. "MÜHENDİSLİK-BİLGİSAYAR" yerine "BİLGİSAYAR"
 
-  + Doğru:  BİLGİSAYAR
-  + Yanlış: MÜHENDİSLİK-BİLGİSAYAR
+- Aşağıdaki türde birimlerde çakışma yoksa bile **daima** ön ek kullanılır
 
-- Aynı seviyede yazıldığında ortaya çıkan çakışmalar özel kurallar oluşturularak
-  çözülür.
+  + Meslek yüksek okulu birimleri ait olduğu Meslek Yüksek Okulu kısaltmasıyla
+    ön eklenir
 
-  Ör. Çakışan birim adlarından bir tanesi ön eksiz yazılır, diğerleri üst birim
-  adıyla ön eklenir.  "Kimya Mühendisliği Bölümü" için KİMYA, "Fen Edebiyat
-  Fakültesi Kimya Bölümü" için "FEN-KİMYA"
+    Ör. "BAFRA-MYO-BİLGİSAYAR"
 
-- Birim, merkez yerleşke dışında ise yerleşke adlarıyla ön eklenir
+  + Ana bilim/sanat dalları (yalın halde yazıldığında anlam belirsizliği
+    oluşabileceğinden) ait olduğu üst birimle ön eklenir
 
-- Meslek Yüksek Okullarına ait birimler daima MYO ile ön eklenir
-
-- Lisans/Önlisans programları, Ana bilim/sanat dalları ve Lisansüstü programları
-  ilgili bölüm adına eklenen standart son eklerle yazılır
-
-  Ör. BİLGİSAYAR-ABD, BİLGİSAYAR-PR
-
-- Aynı programın farklı türevlerinde aşağıdaki son ekler kullanılır
-
-  + Uzaktan Eğitim için `U`
-  + İkinci öğretim için `2`
+    Ör. "DONANIM-ABD" yerine "BİLGİSAYAR-DONANIM-ABD"
 
 ### Kısaltma Teknikleri
 
@@ -165,17 +175,6 @@ Kısaltma üretmenin kaçınılmaz olduğu durumlarda aşağıdaki teknikleri ku
 | Şube                            | ŞB          |
 | Daire Başkanliği                | DB          |
 | Müdürlüğü                       | MD          |
-
-#### Son ekler
-
-| Kelime                          | Kısaltma    |
-|:--------------------------------|:------------|
-| Ana Bilim Dalı                  | ABD         |
-| Ana Sanat Dalı                  | ASD         |
-| Lisans/Önlisans Programı        | PR          |
-| Yüksek Lisans Programı (Tezli)  | YL          |
-| Yüksek Lisans Programı (Tezsiz) | YZ          |
-| Doktora Programı                | DR          |
 
 #### Bitişler (son ek değil)
 
