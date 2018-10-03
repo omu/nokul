@@ -140,6 +140,29 @@ Kurallar
 
     Ör. "DONANIM-ABD" yerine "BİLGİSAYAR-DONANIM-ABD"
 
+- Araştırma ve/veya Uygulama merkezlerinin kısaltılmasında (yaygın bir başka
+  alternatif olmadığı sürece) ilk harfler esas alınır ve aşağıdaki bitişler
+  tercih edilir
+
+  | Kelime                          | Kısaltma    |
+  |:--------------------------------|:------------|
+  | Araştırma Uygulama Merkezi      | AUM         |
+  | Uygulama Merkezi                | UM          |
+  | Araştırma Merkezi               | AM          |
+
+- İdari birimlerde aşağıdaki son ekler kullanılır
+
+  | Kelime                          | Kısaltma    |
+  |:--------------------------------|:------------|
+  | Kurul                           | KUR         |
+  | Komisyon                        | KOM         |
+  | Sekreterlik                     | SEK         |
+  | Dekanlık                        | DEK         |
+  | Bölüm Başkanlığı                | BŞK         |
+  | Şube                            | ŞB          |
+  | Daire Başkanlığı                | DB          |
+  | Müdürlük                        | MD          |
+
 ### Kısaltma Teknikleri
 
 Kısaltma üretmenin kaçınılmaz olduğu durumlarda aşağıdaki teknikleri kullanın
@@ -160,31 +183,7 @@ Kısaltma üretmenin kaçınılmaz olduğu durumlarda aşağıdaki teknikleri ku
 
   Ör. "Genel Sekreterlik" için GENSEK
 
-### Standart Kısaltmalar
-
-
-#### İdari birimler
-
-| Kelime                          | Kısaltma    |
-|:--------------------------------|:------------|
-| Kurulu                          | KUR         |
-| Komisyonu                       | KOM         |
-| Sekreterliği                    | SEK         |
-| Dekanliği                       | DEK         |
-| Bölüm Başkanliği                | BŞK         |
-| Şube                            | ŞB          |
-| Daire Başkanliği                | DB          |
-| Müdürlüğü                       | MD          |
-
-#### Bitişler (son ek değil)
-
-| Kelime                          | Kısaltma    |
-|:--------------------------------|:------------|
-| Araştırma Uygulama Merkezi      | AUM         |
-| Uygulama Merkezi                | UM          |
-| Araştırma Merkezi               | AM          |
-
-#### Kelimeler
+### Kısaltma Dağarcığı
 
 | Kelime                          | Kısaltma    |
 |:--------------------------------|:------------|
