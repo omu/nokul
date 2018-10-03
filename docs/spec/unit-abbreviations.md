@@ -1,10 +1,21 @@
 Birim Kısaltmaları
 ==================
 
-Birim kısaltması kanonik formda her biri büyük harfle yazılmış ve tire ile
-ayrılmış tekil veya birleşik kelimelerden oluşan bir kelime öbeğidir.  Ör.
+Birim kısaltması kanonik formda her biri (Türkçe karakter olabilen) büyük
+harflerle yazılmış ve tire ile ayrılmış tekil veya birleşik Türkçe kelimelerden
+oluşan bir kelime öbeğidir.  Ör.
 
         BİLGİSAYAR-PR
+
+Kısaltmalarda izin verilen karakter aralığı:
+
+- Başta: `ABCÇDEFGHIİJKLMNOÖPRSŞTUÜVYZ` (Türkçe harfler)
+- Ortada: `ABCÇDEFGHIİJKLMNOÖPRSŞTUÜVYZ0123456789-` (Türkçe harfler + rakamlar +
+  tire)
+- Sonda: `ABCÇDEFGHIİJKLMNOÖPRSŞTUÜVYZ0123456789` (Türkçe harfler + rakamlar)
+
+(Özel olarak tire dışında `.,;:_` gibi noktalama işaretlerine izin verilmediğine
+dikkat edin.)
 
 Kısaltma aşağıdaki tüm durumlarda daima tekil olmalıdır.
 
