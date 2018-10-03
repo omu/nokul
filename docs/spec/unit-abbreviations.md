@@ -70,7 +70,7 @@ Kurallar
         EĞİTİM-BİLİM
         GÜZEL-SANAT
 
-- Konservatuvar adları ön eksiz şekilde şunlar olmalıdır
+- Konservatuvar adları şunlar olmalıdır
 
         KONSERVATUVAR
 
@@ -85,8 +85,7 @@ Kurallar
 
   Ör. "Bilgisayar Öğretimi Teknolojileri Eğitimi" için BÖTE
 
-- Bölüm adları çakışma yoksa daima birinci seviyede ön eksiz yazılır; çakışma
-  halinde çakışma çözme kuralı uygulanır
+- Bölüm adları **çakışma yoksa** daima birinci seviyede ön eksiz yazılır
 
   + Doğru:  BİLGİSAYAR
   + Yanlış: MÜHENDİSLİK-BİLGİSAYAR
@@ -111,7 +110,7 @@ Kurallar
 - Meslek Yüksek Okulları daima MYO ile ön eklenir
 
 - Lisans/Önlisans programları, Ana bilim/sanat dalları ve Lisansüstü programları
-  ön ekli yazılır
+  ilgili bölüm adına eklenen standart son eklerle yazılır
 
   Ör. BİLGİSAYAR-ABD, BİLGİSAYAR-PR
 
@@ -142,32 +141,44 @@ Kısaltma üretmenin kaçınılmaz olduğu durumlarda aşağıdaki teknikleri ku
 
 ### Standart Kısaltmalar
 
-- İdari birim kısaltmaları
 
-        Kurulu                            KUR
-        Komisyonu                         KOM
-        Sekreterliği                      SEK
-        Dekanliği                         DEK
-        Bölüm Başkanliği                  BŞK
-        Şube                              ŞB
-        Daire Başkanliği                  DB
-        Müdürlüğü                         MD
+#### İdari birimler
 
-- Diğer
+| Kelime                          | Kısaltma    |
+|:--------------------------------|:------------|
+| Kurulu                          | KUR         |
+| Komisyonu                       | KOM         |
+| Sekreterliği                    | SEK         |
+| Dekanliği                       | DEK         |
+| Bölüm Başkanliği                | BŞK         |
+| Şube                            | ŞB          |
+| Daire Başkanliği                | DB          |
+| Müdürlüğü                       | MD          |
 
-         Meslek Yüksek Okulu	          MYO
-         Ana Bilim Dalı                   ABD
-         Ana Sanat Dalı                   ASD
-         Araştırma Uygulama Merkezi       AUM
-         Uygulama Merkezi                 UM
-         Araştırma Merkezi                AM
+#### Son ekler
 
-         Lisans/Önlisans Programı         PR
-         Yüksek Lisans Programı (Tezli)   YL
-         Yüksek Lisans Programı (Tezsiz)  YZ
-         Doktora Programı                 DR
+| Kelime                          | Kısaltma    |
+|:--------------------------------|:------------|
+| Ana Bilim Dalı                  | ABD         |
+| Ana Sanat Dalı                  | ASD         |
+| Lisans/Önlisans Programı        | PR          |
+| Yüksek Lisans Programı (Tezli)  | YL          |
+| Yüksek Lisans Programı (Tezsiz) | YZ          |
+| Doktora Programı                | DR          |
 
-         Teknoloji                        TEKNO
-         Teknik                           TEK
-         Mekanik                          MEKA
-         Biyoloji/Biyolojik               BİYO
+#### Bitişler (son ek değil)
+
+| Kelime                          | Kısaltma    |
+|:--------------------------------|:------------|
+| Araştırma Uygulama Merkezi      | AUM         |
+| Uygulama Merkezi                | UM          |
+| Araştırma Merkezi               | AM          |
+
+#### Kelimeler
+
+| Kelime                          | Kısaltma    |
+|:--------------------------------|:------------|
+| Teknoloji                       | TEKNO       |
+| Teknik                          | TEK         |
+| Mekanik                         | MEKA        |
+| Biyoloji/Biyolojik              | BİYO        |
