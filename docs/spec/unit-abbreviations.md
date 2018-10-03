@@ -44,35 +44,54 @@ Kurallar
 
 - Fakülte adları şunlar olmalıdır
 
-        HUKUK
-        İŞLETME
-        DİŞ
-        EĞİTİM
-        FEN
-        GÜZELSANATLAR
-        MÜHENDİSLİK
-        MİMARLIK
-        SAĞLIK
-        TIP
-        TURİZM
-        VETERİNER
-        SPOR
-        ZİRAAT
-        İKTİSAT
-        İLAHİYAT
-        İLETİŞİM
+  | Fakülte                         | Kısaltma       |
+  |:--------------------------------|:---------------|
+  | Ali Fuat Başgil Hukuk           | HUKUK          |
+  | İşletme                         | İŞLETME        |
+  | Diş Hekimliği                   | DİŞ            |
+  | Eğitim                          | EĞİTİM         |
+  | Fen Edebiyat                    | FEN            |
+  | Güzel Sanatlar                  | GÜZELSANATLAR  |
+  | Mühendislik                     | MÜHENDİSLİK    |
+  | Mimarlık                        | MİMARLIK       |
+  | Sağlık Bilimleri                | SAĞLIK         |
+  | Tıp                             | TIP            |
+  | Turizm                          | TURİZM         |
+  | Veteriner                       | VETERİNER      |
+  | Yaşar Doğu Spor Bilimleri       | SPOR           |
+  | Ziraat                          | ZİRAAT         |
+  | İktisadi ve İdari Bilimler      | İKTİSAT        |
+  | İlahiyat                        | İLAHİYAT       |
+  | İletişim                        | İLETİŞİM       |
 
 - Enstitü adları şunlar olmalıdır
 
-        FEN-BİLİM
-        SOSYAL-BİLİM
-        SAĞLIK-BİLİM
-        EĞİTİM-BİLİM
-        GÜZEL-SANAT
+  | Ensititü                        | Kısaltma       |
+  |:--------------------------------|:---------------|
+  | Fen Bilimleri                   | FEN-BİLİM      |
+  | Sosyal Bilimler                 | SOSYAL-BİLİM   |
+  | Sağlık Bilimleri                | SAĞLIK-BİLİM   |
+  | Eğitim Bilimleri                | EĞİTİM-BİLİM   |
+  | Güzel Sanatlar                  | GÜZEL-SANAT    |
+
 
 - Konservatuvar adları şunlar olmalıdır
 
-        KONSERVATUVAR
+  | Konservatuvar                   | Kısaltma       |
+  |:--------------------------------|:---------------|
+  | Devlet Konservatuvarı           | KONSERVATUVAR  |
+
+- Yerleşke adları şunlar olmalıdır
+
+  | Yerleşke                        | Kısaltma       |
+  |:--------------------------------|:---------------|
+  | Bafra                           | BAFRA          |
+  | Alaçam                          | ALAÇAM         |
+  | Terme                           | TERME          |
+  | Vezirköprü                      | VEZİRKÖPRÜ     |
+  | Ballıca                         | BALLICA        |
+  | Çarşamba                        | ÇARŞAMBA       |
+  | Havza                           | HAVZA          |
 
 - Bölüm adları artık kelimeler çıkarıldıktan sonra (ör. "X Mühendisliği"nde
   sadece "X" dikkate alınır)  tek kelime kalıyorsa kısaltılmadan yazılır
@@ -97,17 +116,9 @@ Kurallar
   adıyla ön eklenir.  "Kimya Mühendisliği Bölümü" için KİMYA, "Fen Edebiyat
   Fakültesi Kimya Bölümü" için "FEN-KİMYA"
 
-- Birim, merkez yerleşke dışında ise aşağıdaki yerleşke adlarıyla ön eklenir
+- Birim, merkez yerleşke dışında ise yerleşke adlarıyla ön eklenir
 
-        BAFRA
-        ALAÇAM
-        TERME
-        VEZİRKÖPRÜ
-        BALLICA
-        ÇARŞAMBA
-        HAVZA
-
-- Meslek Yüksek Okulları daima MYO ile ön eklenir
+- Meslek Yüksek Okullarına ait birimler daima MYO ile ön eklenir
 
 - Lisans/Önlisans programları, Ana bilim/sanat dalları ve Lisansüstü programları
   ilgili bölüm adına eklenen standart son eklerle yazılır
