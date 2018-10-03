@@ -31,7 +31,7 @@ Kurallar
 
   Örnekteki iki kelime aynı kısaltmaya karşı düşmektedir (bk. tekillik şartları)
 
-- Fakülte adları ön eksiz şekilde şunlar olmalıdır
+- Fakülte adları şunlar olmalıdır
 
         HUKUK
         İŞLETME
@@ -51,7 +51,7 @@ Kurallar
         İLAHİYAT
         İLETİŞİM
 
-- Enstitü adları ön eksiz şekilde şunlar olmalıdır
+- Enstitü adları şunlar olmalıdır
 
         FEN-BİLİM
         SOSYAL-BİLİM
@@ -74,10 +74,18 @@ Kurallar
 
   Ör. "Bilgisayar Öğretimi Teknolojileri Eğitimi" için BÖTE
 
-- Bölüm adları daima ön eksiz yazılır
+- Bölüm adları çakışma yoksa daima birinci seviyede ön eksiz yazılır; çakışma
+  halinde çakışma çözme kuralı uygulanır
 
   + Doğru:  BİLGİSAYAR
   + Yanlış: MÜHENDİSLİK-BİLGİSAYAR
+
+- Aynı seviyede yazıldığında ortaya çıkan çakışmalar özel kurallar oluşturularak
+  çözülür.
+
+  Ör. Çakışan birim adlarından bir tanesi ön eksiz yazılır, diğerleri üst birim
+  adıyla ön eklenir.  "Kimya Mühendisliği Bölümü" için KİMYA, "Fen Edebiyat
+  Fakültesi Kimya Bölümü" için "FEN-KİMYA"
 
 - Birim, merkez yerleşke dışında ise aşağıdaki yerleşke adlarıyla ön eklenir
 
@@ -95,6 +103,11 @@ Kurallar
   ön ekli yazılır
 
   Ör. BİLGİSAYAR-ABD, BİLGİSAYAR-PR
+
+- Aynı programın farklı türevlerinde aşağıdaki son ekler kullanılır
+
+  + Uzaktan Eğitim için `U`
+  + İkinci öğretim için `2`
 
 ### Kısaltma Teknikleri
 
@@ -120,29 +133,30 @@ Kısaltma üretmenin kaçınılmaz olduğu durumlarda aşağıdaki teknikleri ku
 
 - İdari birim kısaltmaları
 
-        Kurulu                          KUR
-        Komisyonu                       KOM
-        Sekreterliği                    SEK
-        Dekanliği                       DEK
-        Bölüm Başkanliği                BŞK
-        Şube                            ŞB
-        Daire Başkanliği                DB
-        Müdürlüğü                       MD
+        Kurulu                            KUR
+        Komisyonu                         KOM
+        Sekreterliği                      SEK
+        Dekanliği                         DEK
+        Bölüm Başkanliği                  BŞK
+        Şube                              ŞB
+        Daire Başkanliği                  DB
+        Müdürlüğü                         MD
 
 - Diğer
 
-         Meslek Yüksek Okulu	        MYO
-         Ana Bilim Dalı                 ABD
-         Ana Sanat Dalı                 ASD
-         Araştırma Uygulama Merkezi     AUM
-         Uygulama Merkezi               UM
-         Araştırma Merkezi              AM
+         Meslek Yüksek Okulu	          MYO
+         Ana Bilim Dalı                   ABD
+         Ana Sanat Dalı                   ASD
+         Araştırma Uygulama Merkezi       AUM
+         Uygulama Merkezi                 UM
+         Araştırma Merkezi                AM
 
-         Lisans/Önlisans Programı       PR
-         Yüksek Lisans Programı         YL
-         Doktora Programı               DR
+         Lisans/Önlisans Programı         PR
+         Yüksek Lisans Programı (Tezli)   YL
+         Yüksek Lisans Programı (Tezsiz)  YZ
+         Doktora Programı                 DR
 
-         Teknoloji                      TEKNO
-         Teknik                         TEK
-         Mekanik                        MEKA
-         Biyoloji/Biyolojik             BİYO
+         Teknoloji                        TEKNO
+         Teknik                           TEK
+         Mekanik                          MEKA
+         Biyoloji/Biyolojik               BİYO
