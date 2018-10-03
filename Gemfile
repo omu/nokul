@@ -22,7 +22,6 @@ gem 'image_processing', '~> 1.0'
 gem 'devise'
 
 # assets: core asset dependencies
-gem 'coffee-rails', '~> 4.2'
 gem 'sassc-rails'
 gem 'uglifier', '>= 1.3.0'
 
