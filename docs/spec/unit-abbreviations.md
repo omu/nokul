@@ -187,7 +187,10 @@ Kısaltma üretmenin kaçınılmaz olduğu durumlarda aşağıdaki teknikleri ku
 
 | Kelime                          | Kısaltma    |
 |:--------------------------------|:------------|
-| Teknoloji                       | TEKNO       |
-| Teknik                          | TEK         |
-| Mekanik                         | MEKA        |
 | Biyoloji/Biyolojik              | BİYO        |
+| Matematik                       | MAT         |
+| Mekanik                         | MEKA        |
+| Teknik                          | TEK         |
+| Teknoloji                       | TEKNO       |
+| Teori/Teorik                    | TEO         |
+| Termodinamik                    | TERMO       |
