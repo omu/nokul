@@ -123,8 +123,8 @@ Kurallar
 
   Ör. Bilgisayar Mühendisliği lisans programı için "BİLGİSAYAR-PR"
 
-- Lisans bölümleri, programlar ve lisans üstü programlar **çakışma yoksa** ön ek
-  kullanılmadan yazılır
+- Lisans bölümleri ve Meslek Yüksek okullarına ait olmayan tüm programlar
+  **çakışma yoksa** ön ek kullanılmadan yazılır
 
   Ör. "MÜHENDİSLİK-BİLGİSAYAR" yerine "BİLGİSAYAR"
 
