@@ -47,6 +47,6 @@ kurallara göre oluşturulur.
 
         U21001234
 
-3. (Teorik ekleme) Öğrenci numaraları en fazla 100 yılda bir sıfırlanır.  Bunun
-   anlamı 20320042 gibi Form 1'de yazılmış bir numara 2120 yılında 42'nci sırada
-   kayıtlanan öğrenciye verilir.
+Öğrenci numaralarının daima korunması tercih edilmekle birlikte numara
+havuzlarının tükenmesi halinde zorunlu olarak sıfırlanabilir. Ör. (Teorik) 100
+yıl sonra 2 haneli yıl alanının yetmemesi.
