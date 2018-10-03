@@ -58,7 +58,7 @@ tr:
         status: Gündem Durumu
       update:
         success: Gündem başarıyla güncellendi.
-    committee_meetings:
+    meetings:
       create:
         success: Toplantı başarıyla oluşturuldu.
       destroy:

@@ -81,7 +81,7 @@ module Committee
     private
 
     def translate(key)
-      t("committee.committee_meetings#{key}")
+      t("committee.meetings#{key}")
     end
   end
 end
