@@ -11,7 +11,7 @@ module Committee
     end
 
     test 'should get index' do
-      get committee_meeting_index_path(@committee)
+      get committee_meetings_path(@committee)
       assert_response :success
       assert_select '#add-button', translate('.index.new_committee_meeting_link')
     end
@@ -23,7 +23,7 @@ module Committee
 
     test 'should create committee meeting' do
       assert_difference('@committee.meetings.count') do
-        post committee_meeting_index_path(@committee),
+        post committee_meetings_path(@committee),
              params: {
                committee_meeting: {
                  meeting_no: 5,
@@ -38,7 +38,7 @@ module Committee
       assert_equal 5, committee_meeting.meeting_no
       assert_equal Time.zone.today, committee_meeting.meeting_date
       assert_equal Time.zone.today.year, committee_meeting.year
-      assert_redirected_to committee_meeting_index_path(@committee)
+      assert_redirected_to committee_meetings_path(@committee)
       assert_equal translate('.create.success'), flash[:notice]
     end
 
@@ -65,7 +65,7 @@ module Committee
       assert_equal 8, committee_meeting.meeting_no
       assert_equal Time.zone.today - 5.months, committee_meeting.meeting_date
       assert_equal Time.zone.today.year, committee_meeting.year
-      assert_redirected_to committee_meeting_index_path(@committee)
+      assert_redirected_to committee_meetings_path(@committee)
       assert_equal translate('.update.success'), flash[:notice]
     end
 
@@ -74,7 +74,7 @@ module Committee
         delete committee_meeting_path(@committee, @committee_meeting)
       end
 
-      assert_redirected_to committee_meeting_index_path(@committee)
+      assert_redirected_to committee_meetings_path(@committee)
       assert_equal translate('.destroy.success'), flash[:notice]
     end
 
