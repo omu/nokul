@@ -23,7 +23,9 @@ module Xokul
       request.add_field 'Accept', 'application/json'
 
       response = @http.request request, params.to_json
-      JSON.parse(response.body) if response.code.eql? '200'
+      response.error! unless response.code.eql? '200'
+
+      JSON.parse(response.body)
     end
   end
 
