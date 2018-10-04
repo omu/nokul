@@ -75,8 +75,8 @@ class UsersController < ApplicationController
   end
 
   def nullify_slug
-    # generate a new slug if the e-mail changes
-    @user.slug = nil unless user_params[:email].blank?
+    # generate a new slug when the e-mail changes
+    @user.slug = nil if user_params[:email].present?
   end
 
   def user_params
