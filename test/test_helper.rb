@@ -4,11 +4,11 @@ ENV['RAILS_ENV'] ||= 'test'
 
 # simplecov and codacy coverage
 require 'simplecov'
-require 'codacy-coverage' if ENV['CI']
-
 SimpleCov.start 'rails' do
   add_filter '/app/channels'
 end
+
+require 'codacy-coverage' if ENV['CI']
 Codacy::Reporter.start if ENV['CI']
 
 require 'minitest/autorun'
