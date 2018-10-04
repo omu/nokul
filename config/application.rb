@@ -9,14 +9,6 @@ Bundler.require(*Rails.groups)
 
 module Nokul
   class Application < Rails::Application
-    # require support libraries
-    Dir[
-      Rails.root.join('lib', 'support', '**', '*.rb'),
-    ].each { |file| require file }
-
-    # tenant configuration
-    config.tenant = config_for("tenants/#{ENV['RAILS_TENANT'] || 'omu'}").to_deep_ostruct
-
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
@@ -37,6 +29,14 @@ module Nokul
 
     # image-processor
     config.active_storage.variant_processor = :vips
+
+    # support libraries are required to load before tenant configuration
+    Dir[
+      Rails.root.join('lib', 'support', '**', '*.rb'),
+    ].each { |file| require file }
+
+    # tenant configuration
+    config.tenant = config_for("tenants/#{ENV['RAILS_TENANT'] || 'omu'}").to_deep_ostruct
 
     # require service and api libraries
     Dir[
