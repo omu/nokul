@@ -2,7 +2,12 @@
 
 require 'test_helper'
 
-class CommitteeMeetingTest < ActiveSupport::TestCase
+class MeetingTest < ActiveSupport::TestCase
+  # relations
+  test 'a meeting can communicate with unit' do
+    assert committee_meetings(:one).unit
+  end
+
   # validations: presence
   %i[
     meeting_no
