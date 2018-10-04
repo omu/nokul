@@ -28,10 +28,11 @@ biçimde yazılan **8 haneli** numaralardır.
 Sıra numarası her eğitim/öğretim yılında güncellenecek şekilde aşağıdaki
 kurallara göre oluşturulur.
 
-1. Eski kayıtlanmalara bakıldığında programa bir eğitim/öğretimi dönemi içinde
-   kayıtlanan öğrenci sayısının (buna olağan yeni öğrenci sayısı diyelim) 999'a
-   yaklaşmadığı programlarda USN için sıra numarasının iki haneli eğitim/öğretim
-   yılıyla başladığı Form 1 kullanılır.
+1. Öğrenci sıra numaraları kendisine ayrılan havuzda daima 1'den başlar.
+
+2. Eski kayıtlanmalara bakıldığında programa bir eğitim/öğretimi dönemi içinde
+   kayıtlanan öğrenci sayısının 999'a yaklaşmadığı programlarda USN için sıra
+   numarasının iki haneli eğitim/öğretim yılıyla başladığı Form 1 kullanılır.
 
    Ör. Yıl içinde en fazla 150 yeni öğrencinin kayıtlandığı görülen 203 birim
    numaralı Bilgisayar Mühendisliği Lisans programına 2020-2021 eğitim/öğretim
@@ -39,13 +40,31 @@ kurallara göre oluşturulur.
 
         20320042
 
-2. Olağan yeni öğrenci sayısının 999'u geçtiği programlarda sıra numarasında
-   yılın olmadığı Form 2 kullanılır.  Ör. Yıl içinde en fazla 1800 yeni
-   öğrencinin kayıtlandığı görülen U21 birim numaralı İlahiyat Uzaktan Eğitim
-   programına 2020-2021 eğitim/öğretim yılında 1234'ncü sırada kayıtlanan
-   öğrencinin numarası:
+3. Yeni öğrenci sayısının 999'u geçtiği **yeni** programlarda sıra numarasında
+   yılın olmadığı Form 2 kullanılır.
+
+   Ör. Kayıtlanma döneminde toplamda 1800 yeni öğrencinin kayıtlandığı **yeni
+   açılmış** U21 birim numaralı İlahiyat Uzaktan Eğitim programına 1234'ncü
+   sırada kayıtlanan öğrencinin numarası:
 
         U21001234
+
+4. Geçmişte Form 1'in kullanıldığı **yeni olmayan** programlarda (çakışma
+   çıkarabilecek eski öğrenci numaraları var) sıra numarasının ilk hanesi
+   geçmişte kullanılmayan rakamların en düşüğüyle başlar ve kullanılan rakamlar
+   atlanmak şartıyla doğrusal olarak arttırılır.
+
+   Ör. 2020-2021 yılında açılmış 203 isimli bir programa 2023-2024 dönemine
+   kadar her yıl 100 öğrenci kayıtlanmış (20320XXX-20322XXX numaraları mevcut).
+   Bu durumda sıra numarasında kullanılmayan en düşük rakam 0 olduğundan Form 2
+   bu rakamla başlamalıdır.  Buna göre 2023-2024 döneminde 1900 öğrenci
+   kayıtlanacaksa bu öğrencilerden 1234'ncü sırada kayıtlanan öğrencinin
+   numarası:
+
+        203001234
+
+5. Öğrenci numaralarında Form 2'ye geçiş yapıldığında (öğrenci sayısının
+   azalması dikkate alınarak) tekrar Form 1'e dönüş yapılamaz.
 
 Öğrenci numaralarının daima korunması tercih edilmekle birlikte numara
 havuzlarının tükenmesi halinde zorunlu olarak sıfırlanabilir. Ör. (Teorik) 100
