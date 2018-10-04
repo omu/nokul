@@ -7,14 +7,10 @@ module Osym
     # rubocop:disable Metrics/AbcSize
     # rubocop:disable Metrics/MethodLength
     # rubocop:disable Metrics/BlockLength
-    def perform
-      content = FileEncryptor.decrypt_lines('db/encrypted_data/prospective_students.csv.enc')
+    def perform(file_path)
+      content = FileEncryptor.decrypt_lines(file_path)
 
-      progress_bar = ProgressBar.create(
-        title: 'Prospective Students',
-        total: content.count,
-        format: '%t %B %c/%C %a'
-      )
+      progress_bar = ProgressBar.spawn('Prospective Students', content.count)
 
       content.each do |prospective_student|
         id_number, first_name, last_name, fathers_name, mothers_name, d, m, y, gender, turkish, kktc, foreign,
@@ -76,7 +72,7 @@ module Osym
           obs_registered_program: obs_registered_program,
           student_entrance_type: StudentEntranceType.find_by(code: 1) # TODO: will be dynamic in the future
         )
-        progress_bar.increment
+        progress_bar&.increment
       end
     end
     # rubocop:enable Metrics/AbcSize

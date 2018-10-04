@@ -1,0 +1,29 @@
+serhat:
+  first_name: Serhat
+  last_name: Dündar
+  unit: bilgisayar_muhendisligi
+  student_entrance_type: dgs
+  id_number: 10570898198 # Sample ID number provided by KPS
+  gender: 1
+  military_status: true
+  obs_status: true
+  meb_status: true
+john:
+  email: johndoe@gmail.com
+  first_name: John
+  last_name: Doe
+  unit: bilgisayar_muhendisligi
+  student_entrance_type: dgs
+  id_number: 10026078778 # Sample ID number provided by KPS
+  gender: 1
+jane:
+  email: janedoe@gmail.com
+  first_name: Jane
+  last_name: Doe
+  unit: bilgisayar_muhendisligi
+  student_entrance_type: dgs
+  id_number: 99007254028 # Sample ID number provided by KPS
+  gender: 0
+  military_status: true
+  obs_status: true
+  meb_status: true
