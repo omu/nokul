@@ -52,9 +52,6 @@ gem 'rollbar'
 # permalinks
 gem 'friendly_id', '~> 5.2.0'
 
-# progressbar
-gem 'ruby-progressbar'
-
 group :development, :test do
   gem 'brakeman', require: false
   gem 'bundler-audit'
@@ -77,6 +74,7 @@ group :development do
   gem 'letter_opener'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'pry-rails'
+  gem 'ruby-progressbar'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0' # call <%= console %> anywhere in the code.

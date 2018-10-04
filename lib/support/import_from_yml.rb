@@ -7,7 +7,7 @@ module ImportFromYml
 
     file.each do |line|
       klass.constantize.create(line)
-      progress_bar.increment
+      progress_bar&.increment
     end
   end
 end
