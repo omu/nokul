@@ -1,0 +1,17 @@
+one:
+  meeting_no: 1
+  meeting_date: 2018-09-01
+  year: 2018
+  unit: muhendislik_fakultesi_yonetim_kurulu
+
+two:
+  meeting_no: 2
+  meeting_date: 2018-10-01
+  year: 2018
+  unit: muhendislik_fakultesi_yonetim_kurulu
+
+three:
+  meeting_no: 1
+  meeting_date: 2019-10-01
+  year: 2019
+  unit: muhendislik_fakultesi_yonetim_kurulu

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_26_213938) do
+ActiveRecord::Schema.define(version: 2018_10_01_111810) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -186,6 +186,16 @@ ActiveRecord::Schema.define(version: 2018_09_26_213938) do
     t.string "alpha_2_code", limit: 255, null: false
     t.bigint "country_id"
     t.index ["country_id"], name: "index_cities_on_country_id"
+  end
+
+  create_table "committee_meetings", force: :cascade do |t|
+    t.integer "meeting_no", null: false
+    t.date "meeting_date", null: false
+    t.integer "year", null: false
+    t.bigint "unit_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["unit_id"], name: "index_committee_meetings_on_unit_id"
   end
 
   create_table "countries", force: :cascade do |t|
@@ -565,7 +575,7 @@ ActiveRecord::Schema.define(version: 2018_09_26_213938) do
     t.datetime "last_sign_in_at"
     t.inet "current_sign_in_ip"
     t.inet "last_sign_in_ip"
-    t.datetime "password_changed_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.datetime "password_changed_at", default: -> { "now()" }, null: false
     t.string "slug", limit: 255
     t.string "preferred_language", limit: 2, default: "tr"
     t.integer "articles_count", default: 0, null: false
