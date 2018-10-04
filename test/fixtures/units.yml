@@ -121,6 +121,7 @@ fen_bilgisi_ogretmenligi_programi:
   unit_instruction_language: turkish
   unit_instruction_type: normal_education
   unit_type: program
+  osym_id: 108210065
 
 bote_anabilim_dali:
   name: Bilgisayar Öğretim Ve Teknolojisi Eğitimi Anabilim Dalı
