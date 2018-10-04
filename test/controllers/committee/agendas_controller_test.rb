@@ -70,7 +70,7 @@ module Committee
       assert_equal translate('.update.success'), flash[:notice]
     end
 
-    test 'should destroy agenda type' do
+    test 'should destroy agenda' do
       assert_difference('Agenda.count', -1) do
         delete committee_agenda_path(@committee, Agenda.last)
       end
