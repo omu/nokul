@@ -10,7 +10,9 @@ module Xokul
       end
 
       def districts(city_code:)
-        Connection.instance.get '/yoksis/references/districts', params: { city_code: city_code }
+        Connection.instance.get(
+          '/yoksis/references/districts', params: { city_code: city_code }
+        )
       end
 
       class << self

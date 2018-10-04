@@ -6,7 +6,9 @@ module Xokul
       module_function
 
       def informations(id_number:)
-        Connection.instance.get '/yoksis/graduates/informations', params: { id_number: id_number }
+        Connection.instance.get(
+          '/yoksis/graduates/informations', params: { id_number: id_number }
+        )
       end
     end
   end

@@ -6,15 +6,21 @@ module Xokul
       module_function
 
       def academic_duties(id_number:)
-        Connection.instance.get "/yoksis/resumes/#{__callee__}", params: { id_number: id_number }
+        Connection.instance.get(
+          "/yoksis/resumes/#{__callee__}", params: { id_number: id_number }
+        )
       end
 
       def authors(author_id:)
-        Connection.instance.get '/yoksis/resumes/authors', params: { author_id: author_id }
+        Connection.instance.get(
+          '/yoksis/resumes/authors', params: { author_id: author_id }
+        )
       end
 
       def citations(id_number:, year:)
-        Connection.instance.get '/yoksis/resumes/citations', params: { id_number: id_number, year: year }
+        Connection.instance.get(
+          '/yoksis/resumes/citations', params: { id_number: id_number, year: year }
+        )
       end
 
       class << self

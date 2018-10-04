@@ -6,7 +6,9 @@ module Xokul
       module_function
 
       def academicians(id_number:)
-        Connection.instance.get '/yoksis/staff/academicians', params: { id_number: id_number }
+        Connection.instance.get(
+          '/yoksis/staff/academicians', params: { id_number: id_number }
+        )
       end
 
       def nationalities
