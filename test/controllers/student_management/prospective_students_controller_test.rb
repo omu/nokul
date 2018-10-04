@@ -57,7 +57,7 @@ class ProspectiveStudentsControllerTest < ActionDispatch::IntegrationTest
     assert_equal t('student_management.prospective_students.register.success'), flash[:notice]
   end
 
-  test 'should not register prospective_student with invalid values' do
+  test 'should not register prospective_student without e-mail' do
     assert_no_difference('User.count') do
       assert_no_difference('Student.count') do
         get register_prospective_student_path(prospective_students(:serhat))
