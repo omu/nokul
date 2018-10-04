@@ -6,11 +6,11 @@ module Xokul
       module_function
 
       def administrative_functions
-        connection.get "/yoksis/references/#{__callee__}"
+        Connection.instance.get "/yoksis/references/#{__callee__}"
       end
 
       def districts(city_code:)
-        connection.get '/yoksis/references/districts', params: { city_code: city_code }
+        Connection.instance.get '/yoksis/references/districts', params: { city_code: city_code }
       end
 
       class << self
@@ -38,12 +38,6 @@ module Xokul
         alias unit_types                   administrative_functions
         alias university_types             administrative_functions
       end
-
-      def connection
-        Connection.instance
-      end
-
-      private_class_method :connection
     end
   end
 end

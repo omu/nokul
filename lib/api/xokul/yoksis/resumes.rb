@@ -6,15 +6,15 @@ module Xokul
       module_function
 
       def academic_duties(id_number:)
-        connection.get "/yoksis/resumes/#{__callee__}", params: { id_number: id_number }
+        Connection.instance.get "/yoksis/resumes/#{__callee__}", params: { id_number: id_number }
       end
 
       def authors(author_id:)
-        connection.get '/yoksis/resumes/authors', params: { author_id: author_id }
+        Connection.instance.get '/yoksis/resumes/authors', params: { author_id: author_id }
       end
 
       def citations(id_number:, year:)
-        connection.get '/yoksis/resumes/citations', params: { id_number: id_number, year: year }
+        Connection.instance.get '/yoksis/resumes/citations', params: { id_number: id_number, year: year }
       end
 
       class << self
@@ -41,12 +41,6 @@ module Xokul
         alias incentive_applications          citations
         alias incentive_activity_declarations citations
       end
-
-      def connection
-        Connection.instance
-      end
-
-      private_class_method :connection
     end
   end
 end
