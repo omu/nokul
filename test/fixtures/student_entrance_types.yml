@@ -1,3 +1,6 @@
+osys:
+  name: Ösys
+  code: 1
 dgs:
   name: Dgs
   code: 5

@@ -7,8 +7,8 @@ module Osym
     # rubocop:disable Metrics/AbcSize
     # rubocop:disable Metrics/MethodLength
     # rubocop:disable Metrics/BlockLength
-    def perform
-      content = FileEncryptor.decrypt_lines('db/encrypted_data/prospective_students.csv.enc')
+    def perform(file_path)
+      content = FileEncryptor.decrypt_lines(file_path)
 
       progress_bar = ProgressBar.create(
         title: 'Prospective Students',
