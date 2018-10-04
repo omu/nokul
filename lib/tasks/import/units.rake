@@ -26,7 +26,7 @@ namespace :import do
         name: 'Atakum'
       ).id
       Unit.create(unit.except('parent_yoksis_id'))
-      progress_bar.increment
+      progress_bar&.increment
     end
   end
 end

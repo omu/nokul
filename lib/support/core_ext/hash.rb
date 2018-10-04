@@ -4,7 +4,6 @@ require 'ostruct'
 
 class Hash
   # Stolen and refactored from https://stackoverflow.com/a/11137694
-
   def to_deep_ostruct
     internal_hashes = {}
     each do |key, value|

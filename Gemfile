@@ -52,16 +52,11 @@ gem 'rollbar'
 # permalinks
 gem 'friendly_id', '~> 5.2.0'
 
-# progressbar
-gem 'ruby-progressbar'
-
 group :development, :test do
   gem 'brakeman', require: false
   gem 'bundler-audit'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'codacy-coverage', require: false
   gem 'dotenv-rails'
-  gem 'reek'
   gem 'rubocop'
   gem 'simplecov', require: false
 end
@@ -69,6 +64,7 @@ end
 group :test do
   gem 'capybara'
   gem 'chromedriver-helper'
+  gem 'codacy-coverage', require: false
   gem 'selenium-webdriver'
 end
 
@@ -78,6 +74,7 @@ group :development do
   gem 'letter_opener'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'pry-rails'
+  gem 'ruby-progressbar'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0' # call <%= console %> anywhere in the code.
