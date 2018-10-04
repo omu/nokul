@@ -2,30 +2,21 @@
   <div class='col-sm-12'>
     <div class='card'>
       <div class='card-header'>
-        <%= fa_icon 'tasks' %>
+        <%= fa_icon 'archive' %>
         <strong><%= form_title %></strong>
       </div>
       <div class='card-body'>
-        <%= simple_form_for([@committee, agenda], url: url, method: method) do |f| %>
+        <%= simple_form_for(meeting, url: url, method: method) do |f| %>
           <div class='row'>
             <div class='form-group col-sm-12'>
               <%= f.error_notification %>
               <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
             </div>
-            <div class='form-group col-sm-12'>
-              <%= f.input :description, required: true %>
+            <div class='form-group col-sm-6'>
+              <%= f.input :meeting_no, required: true, input_html: { min: 1 } %>
             </div>
             <div class='form-group col-sm-6'>
-              <%= f.input :agenda_type_id, collection: AgendaType.all %>
-            </div>
-            <div class='form-group col-sm-6'>
-              <%= f.input :status, collection: enum_options_for_select(f.object.class, :status) %>
-            </div>
-            <div class='form-group col-sm-2'>
-              <%= f.input :agenda_file, as: :file %>
-            </div>
-            <div class='form-group'>
-              <%= link_to_file(url_for(agenda.agenda_file)) if f.object.agenda_file.attached? %>
+              <%= f.input :meeting_date %>
             </div>
             <div class='form-group col-sm-12'>
               <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
