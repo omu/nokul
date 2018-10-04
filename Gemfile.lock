@@ -128,8 +128,6 @@ GEM
     equalizer (0.0.11)
     erubi (1.7.1)
     execjs (2.7.0)
-    faraday (0.15.3)
-      multipart-post (>= 1.2, < 3)
     ffi (1.9.25)
     fit-commit (3.8.0)
       swearjar (~> 1.0)
@@ -183,7 +181,6 @@ GEM
     minitest (5.11.3)
     msgpack (1.2.4)
     multi_json (1.13.1)
-    multipart-post (2.0.0)
     netaddr (2.0.3)
     nio4r (2.3.1)
     nokogiri (1.8.4)
@@ -372,7 +369,6 @@ DEPENDENCIES
   devise
   dotenv-rails
   email_address
-  faraday
   fit-commit
   font-awesome-rails
   friendly_id (~> 5.2.0)
