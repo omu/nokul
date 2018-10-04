@@ -16,7 +16,11 @@ class UnitTest < ActiveSupport::TestCase
     students
     positions
     administrative_functions
+    agendas
+    meetings
     courses
+    registration_documents
+    prospective_students
   ].each do |property|
     test "a unit can communicate with #{property}" do
       assert units(:omu).send(property)
