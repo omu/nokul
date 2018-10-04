@@ -5,7 +5,7 @@ class PositionValidator < ActiveModel::Validator
     @position = record
     @positions = record.duty.employee.user.positions.where.not(id: @position.id)
 
-    date_validation if @position.start_date.present? && @position.end_date.present?
+    date_validation if @position.start_date? && @position.end_date?
     restrict_positions if @position.active?
   end
 
