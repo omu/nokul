@@ -34,10 +34,12 @@
                 <td><%= committee.unit_type.try(:name) %></td>
                 <td><%= committee.district.name %> / <%= committee.district.city.name %></td>
                 <td>
+                  <%= link_to(fa_icon('archive', text: t('.meetings')),
+                              committee_meetings_path(committee),
+                              class: 'btn btn-secondary btn-sm') %>
                   <%= link_to(fa_icon('tasks', text: t('.agendas')),
                               committee_agendas_path(committee),
                               class: 'btn btn-secondary btn-sm') %>
-                  <%= link_to_show(committee_path(committee)) %>
                 </td>
               </tr>
             <% end %>
