@@ -57,22 +57,22 @@ Kurallar
   | Fakülte                         | Kısaltma       |
   |:--------------------------------|:---------------|
   | Ali Fuat Başgil Hukuk           | HUKUK          |
-  | İşletme                         | İŞLETME        |
   | Diş Hekimliği                   | DİŞ            |
   | Eğitim                          | EĞİTİM         |
   | Fen Edebiyat                    | FEN            |
   | Güzel Sanatlar                  | GÜZELSANATLAR  |
-  | Mühendislik                     | MÜHENDİSLİK    |
+  | İktisadi ve İdari Bilimler      | İKTİSAT        |
+  | İlahiyat                        | İLAHİYAT       |
+  | İletişim                        | İLETİŞİM       |
+  | İşletme                         | İŞLETME        |
   | Mimarlık                        | MİMARLIK       |
+  | Mühendislik                     | MÜHENDİSLİK    |
   | Sağlık Bilimleri                | SAĞLIK         |
   | Tıp                             | TIP            |
   | Turizm                          | TURİZM         |
   | Veteriner                       | VETERİNER      |
   | Yaşar Doğu Spor Bilimleri       | SPOR           |
   | Ziraat                          | ZİRAAT         |
-  | İktisadi ve İdari Bilimler      | İKTİSAT        |
-  | İlahiyat                        | İLAHİYAT       |
-  | İletişim                        | İLETİŞİM       |
 
 - Enstitü adları şunlar olmalıdır
 
@@ -113,20 +113,26 @@ Kurallar
   |:--------------------------------|:----------|
   | Ana Bilim Dalı                  | ABD       |
   | Ana Sanat Dalı                  | ASD       |
+  | Disiplinler arası Program       | DA        |
+  | Doktora Programı                | DR        |
+  | İkinci Öğretim Programı         | 2         |
   | Lisans/Önlisans Programı        | PR        |
+  | Sanatta Yeterlilik              | SY        |
+  | Uzaktan Eğitim Programı         | UZ        |
   | Yüksek Lisans Programı (Tezli)  | YL        |
   | Yüksek Lisans Programı (Tezsiz) | YZ        |
-  | Doktora Programı                | DR        |
-  | Disiplinler arası Program       | DA        |
-  | Uzaktan Eğitim Programı         | UZ        |
-  | İkinci Öğretim Programı         | 2         |
 
   Ör. Bilgisayar Mühendisliği lisans programı için "BİLGİSAYAR-PR"
 
-- Lisans bölümleri ve Meslek Yüksek okullarına ait olmayan tüm programlar
-  **çakışma yoksa** ön ek kullanılmadan yazılır
+- Lisans bölüm adları **çakışma yoksa** ön ek kullanılmadan yazılır
 
   Ör. "MÜHENDİSLİK-BİLGİSAYAR" yerine "BİLGİSAYAR"
+
+- Ait olduğu birimle aynı isimdeki program adları **çakışma yoksa** ön ek
+  kullanılmadan yazılır
+
+  Ör. Bilgisayar Mühendisliği bölümüne ("BİLGİSAYAR") ait "Bilgisayar
+  Mühendisliği Programı" için "BİLGİSAYAR-PR"
 
 - Aşağıdaki türde birimlerde çakışma yoksa bile **daima** ön ek kullanılır
 
@@ -146,22 +152,22 @@ Kurallar
 
   | Kelime                          | Kısaltma    |
   |:--------------------------------|:------------|
+  | Araştırma Merkezi               | AM          |
   | Araştırma Uygulama Merkezi      | AUM         |
   | Uygulama Merkezi                | UM          |
-  | Araştırma Merkezi               | AM          |
 
 - İdari birimlerde aşağıdaki son ekler kullanılır
 
   | Kelime                          | Kısaltma    |
   |:--------------------------------|:------------|
-  | Kurul                           | KUR         |
-  | Komisyon                        | KOM         |
-  | Sekreterlik                     | SEK         |
-  | Dekanlık                        | DEK         |
   | Bölüm Başkanlığı                | BŞK         |
-  | Şube                            | ŞB          |
   | Daire Başkanlığı                | DB          |
+  | Dekanlık                        | DEK         |
+  | Komisyon                        | KOM         |
+  | Kurul                           | KUR         |
   | Müdürlük                        | MD          |
+  | Sekreterlik                     | SEK         |
+  | Şube                            | ŞB          |
 
 ### Kısaltma Teknikleri
 
@@ -187,9 +193,11 @@ Kısaltma üretmenin kaçınılmaz olduğu durumlarda aşağıdaki teknikleri ku
 
 | Kelime                          | Kısaltma    |
 |:--------------------------------|:------------|
+| Bilgi Teknolojileri             | BT          |
 | Biyoloji/Biyolojik              | BİYO        |
 | Matematik                       | MAT         |
 | Mekanik                         | MEKA        |
+| Nano Teknoloji                  | NANO        |
 | Teknik                          | TEK         |
 | Teknoloji                       | TEKNO       |
 | Teori/Teorik                    | TEO         |
