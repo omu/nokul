@@ -50,16 +50,15 @@ kurallara göre oluşturulur.
         U21001234
 
 4. Geçmişte Form 1'in kullanıldığı **yeni olmayan** programlarda (çakışma
-   çıkarabilecek eski öğrenci numaraları var) sıra numarasının ilk hanesi
-   geçmişte kullanılmayan rakamların en düşüğüyle başlar ve kullanılan rakamlar
-   atlanmak şartıyla doğrusal olarak arttırılır.
+   çıkarabilecek eski öğrenci numaraları var) sıra numarası elverişli numara
+   havuzundaki rakamların en düşüğüyle başlar ve kullanılan rakamlar atlanmak
+   şartıyla doğrusal olarak arttırılır.
 
    Ör. 2020-2021 yılında açılmış 203 isimli bir programa 2023-2024 dönemine
    kadar her yıl 100 öğrenci kayıtlanmış (20320XXX-20322XXX numaraları mevcut).
-   Bu durumda sıra numarasında kullanılmayan en düşük rakam 0 olduğundan Form 2
-   bu rakamla başlamalıdır.  Buna göre 2023-2024 döneminde 1900 öğrenci
-   kayıtlanacaksa bu öğrencilerden 1234'ncü sırada kayıtlanan öğrencinin
-   numarası:
+   Buna göre 2023-2024 döneminde 1900 öğrenci kayıtlanacaksa numaralar 00001
+   sıra numarasıyla başlar.  Bu öğrencilerden 1234'ncü sırada kayıtlanan
+   öğrencinin numarası:
 
         203001234
 
