@@ -61,7 +61,6 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'codacy-coverage', require: false
   gem 'dotenv-rails'
-  gem 'reek'
   gem 'rubocop'
   gem 'simplecov', require: false
 end
