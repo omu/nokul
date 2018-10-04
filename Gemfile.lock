@@ -55,7 +55,7 @@ GEM
     ast (2.4.0)
     aws-eventstream (1.0.1)
     aws-partitions (1.105.0)
-    aws-sdk-core (3.28.0)
+    aws-sdk-core (3.29.0)
       aws-eventstream (~> 1.0)
       aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.0)
@@ -106,13 +106,6 @@ GEM
     coderay (1.1.2)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
-    coffee-rails (4.2.2)
-      coffee-script (>= 2.2.0)
-      railties (>= 4.0.0)
-    coffee-script (2.4.1)
-      coffee-script-source
-      execjs
-    coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     connection_pool (2.2.2)
     crass (1.0.4)
@@ -194,7 +187,7 @@ GEM
       mini_portile2 (~> 2.3.0)
     nori (2.6.0)
     orm_adapter (0.5.0)
-    pagy (0.19.3)
+    pagy (0.20.0)
     parallel (1.12.1)
     parser (2.5.1.2)
       ast (~> 2.4.0)
@@ -373,7 +366,6 @@ DEPENDENCIES
   chromedriver-helper
   cocoon
   codacy-coverage
-  coffee-rails (~> 4.2)
   devise
   dotenv-rails
   email_address
