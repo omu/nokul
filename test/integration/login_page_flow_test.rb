@@ -7,6 +7,9 @@ class LoginPageFlowTest < ActionDispatch::IntegrationTest
     test "can login with correct credentials with a #{resolution} screen" do
       page.driver.browser.manage.window.resize_to(resolution[0], resolution[1])
       visit('/')
+      assert find_button(t('devise.common.login'), visible: true).visible?
+      assert find_link(t('devise.sessions.new.did_you_forget'), visible: true).visible?
+      assert find_link(t('devise.sessions.new.create_account'), visible: true).visible?
       fill_in('user[id_number]', with: users(:serhat).id_number)
       fill_in('user[password]', with: '123456')
       check(t('devise.sessions.new.remember_login'))
