@@ -59,7 +59,6 @@ group :development, :test do
   gem 'brakeman', require: false
   gem 'bundler-audit'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'codacy-coverage', require: false
   gem 'dotenv-rails'
   gem 'rubocop'
   gem 'simplecov', require: false
@@ -68,6 +67,7 @@ end
 group :test do
   gem 'capybara'
   gem 'chromedriver-helper'
+  gem 'codacy-coverage', require: false
   gem 'selenium-webdriver'
 end
 
