@@ -43,7 +43,11 @@ module Committee
     end
 
     def meeting_params
-      params.require(:committee_meeting).permit(:meeting_no, :meeting_date)
+      params.require(:committee_meeting)
+            .permit(:meeting_no, :meeting_date,
+                    meeting_agendas_attributes: %i[
+                      id agenda_id committee_meeting_id sequence_no _destroy
+                    ])
     end
   end
 end

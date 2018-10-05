@@ -13,6 +13,9 @@ en:
         meeting_no: Committee Meeting No
       dashboard:
         name: Committee / Commission Name
+      meeting_agenda:
+        agenda_id: Agenda
+        sequence_no: Sequence No
     enums:
       agenda:
         statuses:
@@ -66,7 +69,11 @@ en:
         warning: Committee Meeting can not be deleted!
       edit:
         form_title: Update a Committee Meeting
+      form:
+        agendas: Agendas
+        new_agenda_link: Add a New Agenda
       index:
+        agendas_count: Agendas Count
         card_header: Committee Meetings
         meeting_date: Committee Meeting Date
         meeting_no: Committee Meeting No

@@ -13,6 +13,9 @@ tr:
         meeting_no: Toplantı No
       dashboard:
         name: Kurul / Komisyon Adı
+      meeting_agenda:
+        agenda_id: Gündem
+        sequence_no: Sıra No
     enums:
       agenda:
         statuses:
@@ -66,7 +69,11 @@ tr:
         warning: Toplantı silinemedi!
       edit:
         form_title: Toplantı Güncelle
+      form:
+        agendas: Gündemler
+        new_agenda_link: Gündem Ekle
       index:
+        agendas_count: Gündem Sayısı
         card_header: Toplantılar
         meeting_date: Toplantı Tarihi
         meeting_no: Toplantı No
