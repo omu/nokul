@@ -4,7 +4,7 @@ namespace :nitpick do
   desc 'Nitpick for executables'
   task :executable do
     suspicious_executables =
-      `find . -type f -executable -print | grep -Ev '^[.]/(vendor|node_modules|.git|bin|sbin|scripts)'`
+      `find . -type f -executable -print | grep -Ev '^[.]/([.]git|vendor|node_modules|tmp|log|bin|sbin|scripts)'`
       .split("\n").reject do |filename|
         File.open(filename).first.start_with? '#!'
       end
