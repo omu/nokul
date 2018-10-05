@@ -100,6 +100,7 @@ Kurallar
   | Bafra Turizm Meslek Yüksek Okulu          | TURİZM-MYO       |
   | Ballıca Meslek Yüksek Okulu               | BALLICA-MYO      |
   | Çarşamba Meslek Yüksek Okulu              | ÇARŞAMBA-MYO     |
+  | Çarşamba Ticaret Meslek Yüksek Okulu      | TİCARET-MYO      |
   | Havza Meslek Yüksek Okulu                 | HAVZA-MYO        |
   | Sağlık Hizmetleri Meslek Yüksek Okulu     | SAĞLIK-MYO       |
   | Samsun Meslek Yüksek Okulu                | SAMSUN-MYO       |
@@ -194,7 +195,9 @@ Kısaltma üretmenin kaçınılmaz olduğu durumlarda aşağıdaki teknikleri ku
 | Kelime                          | Kısaltma    |
 |:--------------------------------|:------------|
 | Bilgi Teknolojileri             | BT          |
+| Bilim Dalı                      | DL          |
 | Biyoloji/Biyolojik              | BİYO        |
+| Eğitim Merkezi                  | EM          |
 | Matematik                       | MAT         |
 | Mekanik                         | MEKA        |
 | Nano Teknoloji                  | NANO        |
@@ -202,3 +205,4 @@ Kısaltma üretmenin kaçınılmaz olduğu durumlarda aşağıdaki teknikleri ku
 | Teknoloji                       | TEKNO       |
 | Teori/Teorik                    | TEO         |
 | Termodinamik                    | TERMO       |
+| Yüksek Okul                     | YO          |
