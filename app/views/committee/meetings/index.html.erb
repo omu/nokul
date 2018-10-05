@@ -29,6 +29,7 @@
                 <td><%= meeting.unit.name %></td>
                 <td><%= meeting.agendas.size %></td>
                 <td>
+                  <%= link_to_show(committee_meeting_path(@committee, meeting)) %>
                   <%= link_to_edit(edit_committee_meeting_path(@committee, meeting)) %>
                   <%= link_to_destroy(committee_meeting_path(@committee, meeting)) %>
                 </td>

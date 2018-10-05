@@ -18,6 +18,8 @@ class Agenda < ApplicationRecord
   has_one_attached :agenda_file
   belongs_to :unit
   belongs_to :agenda_type
+  has_many :meeting_agendas, dependent: :destroy
+  has_many :meetings, through: :meeting_agendas, source: :committee_meeting
 
   # validations
   validates :description, presence: true

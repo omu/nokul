@@ -61,6 +61,18 @@ en:
         status: Agenda Status
       update:
         success: Agenda successfully updated.
+    dashboard:
+      index:
+        agendas: Agendas
+        card_header: Committee / Commission
+        detsis_id: DETSIS ID
+        district: Location
+        meetings: Meetings
+        name: Committee / Commission Name
+        new_committee_link: Create a New Committee/Commission
+        unit_status: Unit Status
+        unit_type: Unit Type
+        yoksis_id: YOKSIS ID
     meetings:
       create:
         success: Committee Meeting successfully created.
@@ -83,27 +95,17 @@ en:
       new:
         <<: *committee_meeting_attributes
         form_title: Create a Committee Meeting
-      update:
-        success: Committee Meeting successfully updated.
-    dashboard:
-      index:
-        agendas: Agendas
-        card_header: Committee / Commission
-        detsis_id: DETSIS ID
-        district: Location
-        meetings: Meetings
-        name: Committee / Commission Name
-        new_committee_link: Create a New Committee/Commission
-        unit_status: Unit Status
-        unit_type: Unit Type
-        yoksis_id: YOKSIS ID
       show:
-        actions: Actions
-        agenda_card_header: Agendas
+        agendas: Agendas
         agenda_type: Agenda Type
         description: Description
-        status: Agenda Status
-        unit: Parent Unit
+        meeting_date: Meeting Date
+        meeting_no: Meeting No
+        sequence_no: Sequence No
+        status: Status
+        year: Year
+      update:
+        success: Committee Meeting successfully updated.
   helpers:
     submit:
       agenda:

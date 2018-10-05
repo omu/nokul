@@ -1,0 +1,56 @@
+<div class='alert alert-light'>
+  <%= link_to_back(:back) %>
+</div>
+
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'archive', text: @meeting.unit.name %>
+      </div>
+      <div class='card-body'>
+        <table class='table table-responsive-sm table-striped'>
+          <thead>
+            <tr>
+              <th><%= t('.meeting_no') %></th>
+              <th><%= t('.meeting_date') %></th>
+              <th><%= t('.year') %></th>
+              <th><%= t('actions') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><%= @meeting.meeting_no %></td>
+              <td><%= @meeting.meeting_date %></td>
+              <td><%= @meeting.year %></td>
+              <td><%= link_to_edit(edit_committee_meeting_path(@committee, @meeting)) %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class='card-header'>
+        <%= fa_icon 'tasks', text: t('.agendas') %>
+      </div>
+      <div class='card-body'>
+        <table class='table table-responsive-sm table-striped'>
+          <thead>
+            <tr>
+              <th><%= t('.sequence_no') %></th>
+              <th><%= t('.description') %></th>
+              <th><%= t('.status') %></th>
+              <th><%= t('.agenda_type') %></th>
+            </tr>
+          </thead>
+          <% @agendas.each do |agenda| %>
+            <tr>
+              <td><%= agenda.sequence_no %></td>
+              <td><%= agenda.description %></td>
+              <td><%= agenda.status %></td>
+              <td><%= agenda.agenda_type.name %></td>
+            </tr>
+          <% end %>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

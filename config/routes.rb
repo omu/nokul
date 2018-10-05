@@ -68,7 +68,7 @@ Rails.application.routes.draw do
   resources :committees, only: :index, controller: 'committee/dashboard' do
     scope module: :committee do
       resources :agendas, except: :show
-      resources :meetings, except: :show
+      resources :meetings
     end
   end
 end
