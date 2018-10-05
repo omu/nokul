@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 ruby File.read('.ruby-version')
 
 # core
-gem 'bootsnap', '>= 1.1.0', require: false # Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', '>= 1.1.0', require: false
 gem 'pg'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.1'
@@ -22,7 +22,6 @@ gem 'image_processing', '~> 1.0'
 gem 'devise'
 
 # assets: core asset dependencies
-gem 'coffee-rails', '~> 4.2'
 gem 'sassc-rails'
 gem 'uglifier', '>= 1.3.0'
 
@@ -53,16 +52,11 @@ gem 'rollbar'
 # permalinks
 gem 'friendly_id', '~> 5.2.0'
 
-# progressbar
-gem 'ruby-progressbar'
-
 group :development, :test do
   gem 'brakeman', require: false
   gem 'bundler-audit'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'codacy-coverage', require: false
   gem 'dotenv-rails'
-  gem 'reek'
   gem 'rubocop'
   gem 'simplecov', require: false
 end
@@ -70,6 +64,7 @@ end
 group :test do
   gem 'capybara'
   gem 'chromedriver-helper'
+  gem 'codacy-coverage', require: false
   gem 'selenium-webdriver'
 end
 
@@ -79,6 +74,7 @@ group :development do
   gem 'letter_opener'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'pry-rails'
+  gem 'ruby-progressbar'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0' # call <%= console %> anywhere in the code.

@@ -30,7 +30,7 @@ namespace :fetch do
       Rake::Task['fetch:reference'].invoke(action, klass)
       # https://stackoverflow.com/questions/4822020/why-does-a-rake-task-in-a-loop-execute-only-once
       Rake::Task['fetch:reference'].reenable
-      progress_bar.increment
+      progress_bar&.increment
     end
   end
 
