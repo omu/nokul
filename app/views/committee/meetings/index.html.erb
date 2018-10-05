@@ -16,6 +16,7 @@
               <th><%= t('.meeting_date') %></th>
               <th><%= t('.year') %></th>
               <th><%= t('.unit') %></th>
+              <th><%= t('.agendas_count') %></th>
               <th><%= t('actions') %></th>
             </tr>
           </thead>
@@ -26,6 +27,7 @@
                 <td><%= meeting.meeting_date %></td>
                 <td><%= meeting.year %></td>
                 <td><%= meeting.unit.name %></td>
+                <td><%= meeting.agendas.size %></td>
                 <td>
                   <%= link_to_edit(edit_committee_meeting_path(@committee, meeting)) %>
                   <%= link_to_destroy(committee_meeting_path(@committee, meeting)) %>

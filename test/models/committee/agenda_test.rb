@@ -24,4 +24,10 @@ class AgendaTest < ActiveSupport::TestCase
       assert_not_empty agendas(:one).errors[property]
     end
   end
+
+  # scopes
+  test 'active scope returns recent and delayed agendas' do
+    assert_equal Agenda.active.count, Agenda.recent.count + Agenda.delayed.count
+    assert_not_includes Agenda.active, agendas(:three)
+  end
 end

@@ -25,4 +25,7 @@ class Agenda < ApplicationRecord
 
   # enums
   enum status: { recent: 0, decided: 1, delayed: 2 }
+
+  # scopes
+  scope :active, -> { where(status: %i[recent delayed]) }
 end
