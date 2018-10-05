@@ -192,12 +192,12 @@ Kısaltma üretmenin kaçınılmaz olduğu durumlarda aşağıdaki teknikleri ku
 
 ### Kısaltma Dağarcığı
 
+#### Kelimeler
+
 | Kelime                          | Kısaltma    |
 |:--------------------------------|:------------|
 | Bilgi Teknolojileri             | BT          |
-| Bilim Dalı                      | DL          |
 | Biyoloji/Biyolojik              | BİYO        |
-| Eğitim Merkezi                  | EM          |
 | Matematik                       | MAT         |
 | Mekanik                         | MEKA        |
 | Nano Teknoloji                  | NANO        |
@@ -205,4 +205,11 @@ Kısaltma üretmenin kaçınılmaz olduğu durumlarda aşağıdaki teknikleri ku
 | Teknoloji                       | TEKNO       |
 | Teori/Teorik                    | TEO         |
 | Termodinamik                    | TERMO       |
+
+#### Son ekler
+
+| Kelime                          | Kısaltma    |
+|:--------------------------------|:------------|
+| Bilim Dalı                      | DL          |
+| Eğitim Merkezi                  | EM          |
 | Yüksek Okul                     | YO          |
