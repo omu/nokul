@@ -114,6 +114,7 @@ Kurallar
   |:--------------------------------|:----------|
   | Ana Bilim Dalı                  | ABD       |
   | Ana Sanat Dalı                  | ASD       |
+  | Bilim Dalı                      | BD        |
   | Disiplinler arası Program       | DA        |
   | Doktora Programı                | DR        |
   | İkinci Öğretim Programı         | 2         |
@@ -210,6 +211,5 @@ Kısaltma üretmenin kaçınılmaz olduğu durumlarda aşağıdaki teknikleri ku
 
 | Kelime                          | Kısaltma    |
 |:--------------------------------|:------------|
-| Bilim Dalı                      | DL          |
 | Eğitim Merkezi                  | EM          |
 | Yüksek Okul                     | YO          |
