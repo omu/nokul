@@ -15,15 +15,16 @@ module Xokul
         Connection.instance.get '/yoksis/units/universities'
       end
 
-      def units(unit_id:)
-        Connection.instance.get(
-          "/yoksis/units/#{__callee__}", params: { unit_id: unit_id }
-        )
-      end
-
-      class << self
-        alias subunits units
-        alias programs units
+      %i[
+        programs
+        subunits
+        units
+      ].each do |method|
+        define_method(method) do |unit_id:|
+          Connection.instance.get(
+            "/yoksis/units/#{method}", params: { unit_id: unit_id }
+          )
+        end
       end
     end
   end
