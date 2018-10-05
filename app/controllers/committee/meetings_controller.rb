@@ -3,10 +3,14 @@
 module Committee
   class MeetingsController < ApplicationController
     before_action :set_committee
-    before_action :set_meeting, only: %i[edit update destroy]
+    before_action :set_meeting, only: %i[show edit update destroy]
 
     def index
       @meetings = @committee.meetings.order(year: :desc, meeting_no: :asc)
+    end
+
+    def show
+      @agendas = @meeting.meeting_agendas.includes(agenda: :agenda_type).order(:sequence_no)
     end
 
     def new

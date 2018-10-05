@@ -61,6 +61,18 @@ tr:
         status: Gündem Durumu
       update:
         success: Gündem başarıyla güncellendi.
+    dashboard:
+      index:
+        agendas: Gündemler
+        card_header: Kurul / Komisyon
+        detsis_id: DETSIS ID
+        district: Bulunduğu İlçe
+        meetings: Toplantılar
+        name: Kurul / Komisyon Adı
+        new_committee_link: Yeni Bir Kurul/Komisyon Oluştur
+        unit_status: Birim Durumu
+        unit_type: Birim Türü
+        yoksis_id: YOKSIS ID
     meetings:
       create:
         success: Toplantı başarıyla oluşturuldu.
@@ -83,27 +95,17 @@ tr:
       new:
         <<: *committee_meeting_attributes
         form_title: Toplantı Oluştur
-      update:
-        success: Toplantı başarıyla güncellendi.
-    dashboard:
-      index:
-        agendas: Gündemler
-        card_header: Kurul / Komisyon
-        detsis_id: DETSIS ID
-        district: Bulunduğu İlçe
-        meetings: Toplantılar
-        name: Kurul / Komisyon Adı
-        new_committee_link: Yeni Bir Kurul/Komisyon Oluştur
-        unit_status: Birim Durumu
-        unit_type: Birim Türü
-        yoksis_id: YOKSIS ID
       show:
-        actions: İşlemler
-        agenda_card_header: Gündemler
+        agendas: Gündemler
         agenda_type: Gündem Türü
         description: Açıklama
-        status: Gündem Durumu
-        unit: Üst Birim
+        meeting_date: Toplantı Tarihi
+        meeting_no: Toplantı No
+        sequence_no: Sıra No
+        status: Durum
+        year: Yıl
+      update:
+        success: Toplantı başarıyla güncellendi.
   helpers:
     submit:
       agenda:

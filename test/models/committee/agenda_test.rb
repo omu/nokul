@@ -7,6 +7,8 @@ class AgendaTest < ActiveSupport::TestCase
   %i[
     unit
     agenda_type
+    meeting_agendas
+    meetings
   ].each do |property|
     test "a agenda can communicate with #{property}" do
       assert agendas(:one).send(property)

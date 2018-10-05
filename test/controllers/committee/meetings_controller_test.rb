@@ -6,7 +6,7 @@ module Committee
   class CommitteeMeetingsControllerTest < ActionDispatch::IntegrationTest
     setup do
       sign_in users(:serhat)
-      @committee_meeting = committee_meetings(:one)
+      @meeting = committee_meetings(:one)
       @committee = units(:muhendislik_fakultesi_yonetim_kurulu)
     end
 
@@ -14,6 +14,11 @@ module Committee
       get committee_meetings_path(@committee)
       assert_response :success
       assert_select '#add-button', translate('.index.new_committee_meeting_link')
+    end
+
+    test 'should get show' do
+      get committee_meeting_path(@committee, @meeting)
+      assert_response :success
     end
 
     test 'should get new' do
@@ -43,7 +48,7 @@ module Committee
     end
 
     test 'should get edit' do
-      get edit_committee_meeting_path(@committee, @committee_meeting)
+      get edit_committee_meeting_path(@committee, @meeting)
       assert_response :success
       assert_select '.card-header strong', translate('.edit.form_title')
     end
@@ -71,7 +76,7 @@ module Committee
 
     test 'should destroy committee meeting' do
       assert_difference('@committee.meetings.count', -1) do
-        delete committee_meeting_path(@committee, @committee_meeting)
+        delete committee_meeting_path(@committee, @meeting)
       end
 
       assert_redirected_to committee_meetings_path(@committee)
