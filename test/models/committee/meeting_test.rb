@@ -4,8 +4,14 @@ require 'test_helper'
 
 class MeetingTest < ActiveSupport::TestCase
   # relations
-  test 'a meeting can communicate with unit' do
-    assert committee_meetings(:one).unit
+  %i[
+    unit
+    meeting_agendas
+    agendas
+  ].each do |property|
+    test "a meeting can communicate with #{property}" do
+      assert committee_meetings(:one).send(property)
+    end
   end
 
   # validations: presence
