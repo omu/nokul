@@ -18,6 +18,19 @@
             <div class='form-group col-sm-6'>
               <%= f.input :meeting_date %>
             </div>
+            <div class="form-group col-lg-12">
+              <div class='card-header'>
+                <%= fa_icon 'tasks', text: t('.agendas') %>
+              </div>
+            </div>
+            <%= f.simple_fields_for :meeting_agendas do |meeting_agenda| %>
+              <%= render 'meeting_agenda_fields', f: meeting_agenda %>
+            <% end %>
+            <div class="form-group col-sm-12">
+              <%= link_to_add_association t('.new_agenda_link'), f, :meeting_agendas, class: 'btn btn-outline-primary btn-sm' %>
+            </div>
+          </div>
+          <div class="card-footer">
             <div class='form-group col-sm-12'>
               <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
               <%= link_to_back(:back) %>
@@ -28,3 +41,5 @@
     </div>
   </div>
 </div>
+
+<%= javascript_include_tag 'shared/cocoon' %>

@@ -13,6 +13,9 @@ tr:
         meeting_no: Toplantı No
       dashboard:
         name: Kurul / Komisyon Adı
+      meeting_agenda:
+        agenda_id: Gündem
+        sequence_no: Sıra No
     enums:
       agenda:
         statuses:
@@ -58,26 +61,6 @@ tr:
         status: Gündem Durumu
       update:
         success: Gündem başarıyla güncellendi.
-    meetings:
-      create:
-        success: Toplantı başarıyla oluşturuldu.
-      destroy:
-        success: Toplantı başarıyla silindi.
-        warning: Toplantı silinemedi!
-      edit:
-        form_title: Toplantı Güncelle
-      index:
-        card_header: Toplantılar
-        meeting_date: Toplantı Tarihi
-        meeting_no: Toplantı No
-        new_committee_meeting_link: Yeni Bir Toplantı Oluştur
-        unit: Birim
-        year: Yıl
-      new:
-        <<: *committee_meeting_attributes
-        form_title: Toplantı Oluştur
-      update:
-        success: Toplantı başarıyla güncellendi.
     dashboard:
       index:
         agendas: Gündemler
@@ -90,13 +73,39 @@ tr:
         unit_status: Birim Durumu
         unit_type: Birim Türü
         yoksis_id: YOKSIS ID
+    meetings:
+      create:
+        success: Toplantı başarıyla oluşturuldu.
+      destroy:
+        success: Toplantı başarıyla silindi.
+        warning: Toplantı silinemedi!
+      edit:
+        form_title: Toplantı Güncelle
+      form:
+        agendas: Gündemler
+        new_agenda_link: Gündem Ekle
+      index:
+        agendas_count: Gündem Sayısı
+        card_header: Toplantılar
+        meeting_date: Toplantı Tarihi
+        meeting_no: Toplantı No
+        new_committee_meeting_link: Yeni Bir Toplantı Oluştur
+        unit: Birim
+        year: Yıl
+      new:
+        <<: *committee_meeting_attributes
+        form_title: Toplantı Oluştur
       show:
-        actions: İşlemler
-        agenda_card_header: Gündemler
+        agendas: Gündemler
         agenda_type: Gündem Türü
         description: Açıklama
-        status: Gündem Durumu
-        unit: Üst Birim
+        meeting_date: Toplantı Tarihi
+        meeting_no: Toplantı No
+        sequence_no: Sıra No
+        status: Durum
+        year: Yıl
+      update:
+        success: Toplantı başarıyla güncellendi.
   helpers:
     submit:
       agenda:
