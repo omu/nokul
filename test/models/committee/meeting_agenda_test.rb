@@ -24,4 +24,15 @@ class MeetingAgendaTest < ActiveSupport::TestCase
       assert_not_empty meeting_agendas(:one).errors[property]
     end
   end
+
+  # delegates
+  %i[
+    agenda_type
+    description
+    status
+  ].each do |property|
+    test "a meeting agenda reach agenda's #{property} parameter" do
+      assert meeting_agendas(:one).send(property)
+    end
+  end
 end
