@@ -64,6 +64,7 @@ Kurallar
   | İktisadi ve İdari Bilimler      | İKTİSAT        |
   | İlahiyat                        | İLAHİYAT       |
   | İletişim                        | İLETİŞİM       |
+  | İnsan ve Toplum Bilimleri       | İNSAN          |
   | İşletme                         | İŞLETME        |
   | Mimarlık                        | MİMARLIK       |
   | Mühendislik                     | MÜHENDİSLİK    |
@@ -156,20 +157,24 @@ Kurallar
   |:--------------------------------|:------------|
   | Araştırma Merkezi               | AM          |
   | Araştırma Uygulama Merkezi      | AUM         |
+  | Eğitim Merkezi                  | EM          |
   | Uygulama Merkezi                | UM          |
 
 - İdari birimlerde aşağıdaki son ekler kullanılır
 
   | Kelime                          | Kısaltma    |
   |:--------------------------------|:------------|
-  | Bölüm Başkanlığı                | BŞK         |
+  | Ana Bilim Dalı Başkanlığı       | ABDB        |
+  | Bölüm Başkanlığı                | BB          |
   | Daire Başkanlığı                | DB          |
   | Dekanlık                        | DEK         |
+  | Disiplin Kurulu                 | DİSKUR      |
+  | Fakülte/MYO/Enstitü Kurulu      | KUR         |
   | Komisyon                        | KOM         |
-  | Kurul                           | KUR         |
   | Müdürlük                        | MD          |
   | Sekreterlik                     | SEK         |
   | Şube                            | ŞB          |
+  | Yönetim Kurulu                  | YÖNKUR      |
 
 ### Kısaltma Teknikleri
 
@@ -206,10 +211,3 @@ Kısaltma üretmenin kaçınılmaz olduğu durumlarda aşağıdaki teknikleri ku
 | Teknoloji                       | TEKNO       |
 | Teori/Teorik                    | TEO         |
 | Termodinamik                    | TERMO       |
-
-#### Son ekler
-
-| Kelime                          | Kısaltma    |
-|:--------------------------------|:------------|
-| Eğitim Merkezi                  | EM          |
-| Yüksek Okul                     | YO          |
