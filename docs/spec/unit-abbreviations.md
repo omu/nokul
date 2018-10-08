@@ -93,21 +93,21 @@ Kurallar
 
 - Meslek Yüksek Okulu adları şunlar olmalıdır
 
-  | Okul                                      | Kısaltma         |
-  |:------------------------------------------|:-----------------|
-  | Adalet Meslek Yüksek Okulu                | ADALET-MYO       |
-  | Alaçam Meslek Yüksek Okulu                | ALAÇAM-MYO       |
-  | Bafra Meslek Yüksek Okulu                 | BAFRA-MYO        |
-  | Bafra Turizm Meslek Yüksek Okulu          | TURİZM-MYO       |
-  | Ballıca Meslek Yüksek Okulu               | BALLICA-MYO      |
-  | Çarşamba Meslek Yüksek Okulu              | ÇARŞAMBA-MYO     |
-  | Çarşamba Ticaret Meslek Yüksek Okulu      | TİCARET-MYO      |
-  | Havza Meslek Yüksek Okulu                 | HAVZA-MYO        |
-  | Sağlık Hizmetleri Meslek Yüksek Okulu     | SAĞLIK-MYO       |
-  | Samsun Meslek Yüksek Okulu                | SAMSUN-MYO       |
-  | Terme Meslek Yüksek Okulu                 | TERME-MYO        |
-  | Vezirköprü Meslek Yüksek Okulu            | VEZİRKÖPRÜ-MYO   |
-  | Yeşilyurt Demir Çelik Meslek Yüksek Okulu | YEŞİLYURT-MYO    |
+  | Okul                                         | Kısaltma         |
+  |:------------------------------------------   |:-----------------|
+  | Adalet Meslek Yüksek Okulu                   | ADALET-MYO       |
+  | Alaçam Meslek Yüksek Okulu                   | ALAÇAM-MYO       |
+  | Bafra Meslek Yüksek Okulu                    | BAFRA-MYO        |
+  | Bafra Turizm Meslek Yüksek Okulu             | TURİZM-MYO       |
+  | Ballıca Meslek Yüksek Okulu                  | BALLICA-MYO      |
+  | Çarşamba Meslek Yüksek Okulu                 | ÇARŞAMBA-MYO     |
+  | Çarşamba Ticaret Borsası Meslek Yüksek Okulu | TİCARET-MYO      |
+  | Havza Meslek Yüksek Okulu                    | HAVZA-MYO        |
+  | Sağlık Hizmetleri Meslek Yüksek Okulu        | SAĞLIK-MYO       |
+  | Samsun Meslek Yüksek Okulu                   | SAMSUN-MYO       |
+  | Terme Meslek Yüksek Okulu                    | TERME-MYO        |
+  | Vezirköprü Meslek Yüksek Okulu               | VEZİRKÖPRÜ-MYO   |
+  | Yeşilyurt Demir Çelik Meslek Yüksek Okulu    | YEŞİLYURT-MYO    |
 
 - Aşağıdaki türde birimlerde belirtilen son ekler kullanılır
 
