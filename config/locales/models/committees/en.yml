@@ -13,6 +13,9 @@ en:
         meeting_no: Committee Meeting No
       dashboard:
         name: Committee / Commission Name
+      meeting_agenda:
+        agenda_id: Agenda
+        sequence_no: Sequence No
     enums:
       agenda:
         statuses:
@@ -58,26 +61,6 @@ en:
         status: Agenda Status
       update:
         success: Agenda successfully updated.
-    meetings:
-      create:
-        success: Committee Meeting successfully created.
-      destroy:
-        success: Committee Meeting successfully deleted.
-        warning: Committee Meeting can not be deleted!
-      edit:
-        form_title: Update a Committee Meeting
-      index:
-        card_header: Committee Meetings
-        meeting_date: Committee Meeting Date
-        meeting_no: Committee Meeting No
-        new_committee_meeting_link: Create a New Committee Meeting
-        unit: Unit
-        year: Year
-      new:
-        <<: *committee_meeting_attributes
-        form_title: Create a Committee Meeting
-      update:
-        success: Committee Meeting successfully updated.
     dashboard:
       index:
         agendas: Agendas
@@ -90,13 +73,39 @@ en:
         unit_status: Unit Status
         unit_type: Unit Type
         yoksis_id: YOKSIS ID
+    meetings:
+      create:
+        success: Committee Meeting successfully created.
+      destroy:
+        success: Committee Meeting successfully deleted.
+        warning: Committee Meeting can not be deleted!
+      edit:
+        form_title: Update a Committee Meeting
+      form:
+        agendas: Agendas
+        new_agenda_link: Add a New Agenda
+      index:
+        agendas_count: Agendas Count
+        card_header: Committee Meetings
+        meeting_date: Committee Meeting Date
+        meeting_no: Committee Meeting No
+        new_committee_meeting_link: Create a New Committee Meeting
+        unit: Unit
+        year: Year
+      new:
+        <<: *committee_meeting_attributes
+        form_title: Create a Committee Meeting
       show:
-        actions: Actions
-        agenda_card_header: Agendas
+        agendas: Agendas
         agenda_type: Agenda Type
         description: Description
-        status: Agenda Status
-        unit: Parent Unit
+        meeting_date: Meeting Date
+        meeting_no: Meeting No
+        sequence_no: Sequence No
+        status: Status
+        year: Year
+      update:
+        success: Committee Meeting successfully updated.
   helpers:
     submit:
       agenda:

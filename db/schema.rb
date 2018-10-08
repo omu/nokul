@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_01_111810) do
+ActiveRecord::Schema.define(version: 2018_10_04_112631) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -333,6 +333,16 @@ ActiveRecord::Schema.define(version: 2018_10_01_111810) do
   create_table "languages", force: :cascade do |t|
     t.string "name", limit: 255, null: false
     t.string "iso", limit: 255, null: false
+  end
+
+  create_table "meeting_agendas", force: :cascade do |t|
+    t.bigint "agenda_id"
+    t.bigint "committee_meeting_id"
+    t.integer "sequence_no", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["agenda_id"], name: "index_meeting_agendas_on_agenda_id"
+    t.index ["committee_meeting_id"], name: "index_meeting_agendas_on_committee_meeting_id"
   end
 
   create_table "positions", force: :cascade do |t|
