@@ -164,16 +164,20 @@ Kurallar
 
   | Kelime                          | Kısaltma    |
   |:--------------------------------|:------------|
-  | Ana Bilim Dalı Başkanlığı       | ABDB        |
+  | Ana Bilim/Sanat Dalı Başkanlığı | ADB         |
+  | Baş Hekimliği                   | BAŞHEK      |
   | Bölüm Başkanlığı                | BB          |
   | Daire Başkanlığı                | DB          |
   | Dekanlık                        | DEK         |
   | Disiplin Kurulu                 | DİSKUR      |
+  | Etik Kurulu                     | ETİKUR      |
   | Fakülte/MYO/Enstitü Kurulu      | KUR         |
   | Komisyon                        | KOM         |
+  | Koordinatörlük                  | KOR         |
   | Müdürlük                        | MD          |
+  | Müşavirlik                      | MŞ          |
   | Sekreterlik                     | SEK         |
-  | Şube                            | ŞB          |
+  | Şube Müdürlüğü                  | ŞB          |
   | Yönetim Kurulu                  | YÖNKUR      |
 
 ### Kısaltma Teknikleri
