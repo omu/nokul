@@ -113,8 +113,7 @@ Kurallar
 
   | Birim                           | Son ek    |
   |:--------------------------------|:----------|
-  | Ana Bilim Dalı                  | ABD       |
-  | Ana Sanat Dalı                  | ASD       |
+  | Ana Bilim/Sanat Dalı            | AD        |
   | Bilim Dalı                      | BD        |
   | Disiplinler arası Program       | DA        |
   | Doktora Programı                | DR        |
