@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_04_112631) do
+ActiveRecord::Schema.define(version: 2018_10_09_073057) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -186,6 +186,15 @@ ActiveRecord::Schema.define(version: 2018_10_04_112631) do
     t.string "alpha_2_code", limit: 255, null: false
     t.bigint "country_id"
     t.index ["country_id"], name: "index_cities_on_country_id"
+  end
+
+  create_table "committee_decisions", force: :cascade do |t|
+    t.text "description", null: false
+    t.string "decision_no", null: false
+    t.bigint "meeting_agenda_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["meeting_agenda_id"], name: "index_committee_decisions_on_meeting_agenda_id"
   end
 
   create_table "committee_meetings", force: :cascade do |t|
