@@ -26,6 +26,8 @@ module Xokul
       response.error! unless response.code.eql? '200'
 
       JSON.parse(response.body)
+    rescue StandardError
+      raise response.error_type.new response.body, response
     end
   end
 
