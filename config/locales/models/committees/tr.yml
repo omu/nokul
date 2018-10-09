@@ -23,6 +23,29 @@ tr:
           delayed: Ertelendi
           recent: Yeni
   committee:
+    agendas:
+      create:
+        success: Gündem başarıyla oluşturuldu.
+      destroy:
+        success: Gündem başarıyla silindi.
+        warning: Gündem silinemedi!
+      edit:
+        form_title: Gündem Güncelle
+      index:
+        <<: *agenda_attributes
+        agenda_type: Gündem Türü
+        card_header: Gündemler
+        new_agenda_link: Yeni Bir Gündem Oluştur
+        unit: Birim
+        meetings: Toplantılar
+      new:
+        form_title: Gündem Oluştur
+      search:
+        agenda_type_id: Gündem Türü
+        smart_search_placeholder: Gündem Açıklaması
+        status: Gündem Durumu
+      update:
+        success: Gündem başarıyla güncellendi.
     agenda_types:
       create:
         success: Gündem Türü başarıyla oluşturuldu.
@@ -39,28 +62,6 @@ tr:
         form_title: Gündem Türü Oluştur
       update:
         success: Gündem Türü başarıyla güncellendi.
-    agendas:
-      create:
-        success: Gündem başarıyla oluşturuldu.
-      destroy:
-        success: Gündem başarıyla silindi.
-        warning: Gündem silinemedi!
-      edit:
-        form_title: Gündem Güncelle
-      index:
-        <<: *agenda_attributes
-        agenda_type: Gündem Türü
-        card_header: Gündemler
-        new_agenda_link: Yeni Bir Gündem Oluştur
-        unit: Birim
-      new:
-        form_title: Gündem Oluştur
-      search:
-        agenda_type_id: Gündem Türü
-        smart_search_placeholder: Gündem Açıklaması
-        status: Gündem Durumu
-      update:
-        success: Gündem başarıyla güncellendi.
     dashboard:
       index:
         agendas: Gündemler
@@ -85,6 +86,7 @@ tr:
         agendas: Gündemler
         new_agenda_link: Gündem Ekle
       index:
+        agendas: Gündemler
         agendas_count: Gündem Sayısı
         card_header: Toplantılar
         meeting_date: Toplantı Tarihi

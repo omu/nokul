@@ -13,4 +13,5 @@ class MeetingAgenda < ApplicationRecord
 
   # delegates
   delegate :description, :status, :agenda_type, to: :agenda
+  delegate :meeting_no, :meeting_date, :year, :unit, to: :committee_meeting
 end
