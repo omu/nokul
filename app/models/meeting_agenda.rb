@@ -4,6 +4,7 @@ class MeetingAgenda < ApplicationRecord
   # relations
   belongs_to :agenda
   belongs_to :committee_meeting
+  has_one :committee_decision
 
   # validations
   validates :sequence_no, presence: true, uniqueness: { scope: %i[committee_meeting] },
