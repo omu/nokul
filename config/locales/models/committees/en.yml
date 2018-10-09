@@ -23,6 +23,29 @@ en:
           delayed: Delayed
           recent: Recent
   committee:
+    agendas:
+      create:
+        success: Agenda successfully created.
+      destroy:
+        success: Agenda successfully deleted.
+        warning: Agenda can not be deleted!
+      edit:
+        form_title: Update a Agenda
+      index:
+        <<: *agenda_attributes
+        agenda_type: Agenda Type
+        card_header: Agendas
+        new_agenda_link: Create a New Agenda
+        unit: Unit
+        meetings: Meetings
+      new:
+        form_title: Create a Agenda
+      search:
+        agenda_type_id: Agenda Type
+        smart_search_placeholder: Agenda Description
+        status: Agenda Status
+      update:
+        success: Agenda successfully updated.
     agenda_types:
       create:
         success: Agenda Type successfully created.
@@ -39,28 +62,6 @@ en:
         form_title: Create a Agenda Type
       update:
         success: Agenda Type successfully updated.
-    agendas:
-      create:
-        success: Agenda successfully created.
-      destroy:
-        success: Agenda successfully deleted.
-        warning: Agenda can not be deleted!
-      edit:
-        form_title: Update a Agenda
-      index:
-        <<: *agenda_attributes
-        agenda_type: Agenda Type
-        card_header: Agendas
-        new_agenda_link: Create a New Agenda
-        unit: Unit
-      new:
-        form_title: Create a Agenda
-      search:
-        agenda_type_id: Agenda Type
-        smart_search_placeholder: Agenda Description
-        status: Agenda Status
-      update:
-        success: Agenda successfully updated.
     dashboard:
       index:
         agendas: Agendas
@@ -85,6 +86,7 @@ en:
         agendas: Agendas
         new_agenda_link: Add a New Agenda
       index:
+        agendas: Agendas
         agendas_count: Agendas Count
         card_header: Committee Meetings
         meeting_date: Committee Meeting Date
