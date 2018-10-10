@@ -1,5 +1,9 @@
 <div class='alert alert-light'>
   <%= link_to_back(:back) %>
+  <span class="pull-right">
+    <%= link_to(fa_icon('tasks', text: t('.agendas')), committee_agendas_path(@committee),
+                class: 'btn btn-dark btn-sm') %>
+  </span>
 </div>
 
 <div class='row'>
@@ -41,6 +45,7 @@
               <th><%= t('.agenda_type') %></th>
               <th><%= t('.decision_no')%></th>
               <th><%= t('.decision_description') %></th>
+              <th><%= t('.decision_date') %></th>
               <th><%= t('actions') %></th>
             </tr>
           </thead>
@@ -52,6 +57,7 @@
               <td><%= agenda.agenda_type.name %></td>
               <td><%= agenda.decision.try(:decision_no) %></td>
               <td><%= agenda.decision.try(:description) %></td>
+              <td><%= agenda.decision.try(:created_at).try(:to_date) %></td>
               <td>
                 <%= link_to_new(new_committee_meeting_agenda_decision_path(@committee, agenda),
                                 t('.create_decision')) unless agenda.decision.present? %>
