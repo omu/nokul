@@ -29,16 +29,17 @@ class ReferencesTest < ActiveSupport::TestCase
     unit_types
     university_types
   ].each do |method|
-    test "try to get references of #{method}" do
+    test "trying to get #{method} reference" do
       assert Xokul::Yoksis::References.send method
     end
   end
 
-  test 'try to get references of districts' do
+  test 'trying to get districts reference' do
     assert Xokul::Yoksis::References.districts city_code: 55
 
     assert_raises Net::HTTPError, Net::HTTPFatalError do
       Xokul::Yoksis::References.districts city_code: -1
+      Xokul::Yoksis::References.districts city_code: 'city code as string'
     end
   end
 end
