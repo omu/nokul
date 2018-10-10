@@ -8,6 +8,9 @@ tr:
         status: Gündem Durumu
       agenda_type: &agenda_type_attributes
         name: Gündem Türü Adı
+      committee_decision:
+        description: Karar Açıklaması
+        decision_no: Karar No
       committee_meeting: &committee_meeting_attributes
         meeting_date: Toplantı Tarihi
         meeting_no: Toplantı No
@@ -74,6 +77,24 @@ tr:
         unit_status: Birim Durumu
         unit_type: Birim Türü
         yoksis_id: YOKSIS ID
+    decisions:
+      create:
+        success: Kurul kararı başarıyla oluşturuldu.
+      destroy:
+        success: Kurul kararı başarıyla silindi.
+        warning: Kurul kararı silinemedi!
+      edit:
+        form_title: Kurul Kararı Güncelle
+      form:
+        agenda_type: Gündem Türü
+        description: Gündem Açıklama
+        sequence_no: Gündem Sıra No
+        status: Gündem Durumu
+      new:
+        form_title: Kurul Kararı Oluştur
+        description: Kurul Kararı
+      update:
+        success: Kurul kararı başarıyla güncellendi.
     meetings:
       create:
         success: Toplantı başarıyla oluşturuldu.
@@ -100,11 +121,16 @@ tr:
       show:
         agendas: Gündemler
         agenda_type: Gündem Türü
+        create_decision: Karar Ekle
+        decision_description: Toplantı Kararı
+        decision_no: Karar No
         description: Açıklama
+        destroy_decision: Karar Sil
         meeting_date: Toplantı Tarihi
         meeting_no: Toplantı No
         sequence_no: Sıra No
         status: Durum
+        update_decision: Karar Güncelle
         year: Yıl
       update:
         success: Toplantı başarıyla güncellendi.
@@ -116,6 +142,9 @@ tr:
       agenda_type:
         create: Gündem Türü Oluştur
         update: Gündem Türü Güncelle
+      committee_decision:
+        create: Karar Oluştur
+        update: Karar Güncelle
       committee_meeting:
         create: Toplantı Oluştur
         update: Toplantı Güncelle
