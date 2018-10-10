@@ -122,7 +122,8 @@ tr:
         agendas: Gündemler
         agenda_type: Gündem Türü
         create_decision: Karar Ekle
-        decision_description: Toplantı Kararı
+        decision_description: Gündem Kararı
+        decision_date: Karar Tarihi
         decision_no: Karar No
         description: Açıklama
         destroy_decision: Karar Sil

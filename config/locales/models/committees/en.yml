@@ -122,6 +122,7 @@ en:
         agenda_type: Agenda Type
         create_decision: Create Decision
         decision_description: Decision Description
+        decision_date: Decision Date
         decision_no: Decision No
         description: Description
         destroy_decision: Destroy Decision
