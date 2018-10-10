@@ -39,6 +39,9 @@
               <th><%= t('.description') %></th>
               <th><%= t('.status') %></th>
               <th><%= t('.agenda_type') %></th>
+              <th><%= t('.decision_no')%></th>
+              <th><%= t('.decision_description') %></th>
+              <th><%= t('actions') %></th>
             </tr>
           </thead>
           <% @agendas.each do |agenda| %>
@@ -47,6 +50,18 @@
               <td><%= agenda.description %></td>
               <td><%= agenda.status %></td>
               <td><%= agenda.agenda_type.name %></td>
+              <td><%= agenda.decision.try(:decision_no) %></td>
+              <td><%= agenda.decision.try(:description) %></td>
+              <td>
+                <%= link_to_new(new_committee_meeting_agenda_decision_path(@committee, agenda),
+                                t('.create_decision')) unless agenda.decision.present? %>
+                <% if agenda.decision.present? %>
+                  <%= link_to_edit(edit_committee_meeting_agenda_decision_path(@committee, agenda),
+                                   t('.update_decision')) %>
+                  <%= link_to_destroy(committee_meeting_agenda_decision_path(@committee, agenda),
+                                      t('.destroy_decision')) %>
+                <% end %>
+              </td>
             </tr>
           <% end %>
         </table>

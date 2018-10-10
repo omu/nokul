@@ -8,6 +8,9 @@ en:
         status: Agenda Status
       agenda_type: &agenda_type_attributes
         name: Name of Agenda Type
+      committee_decision:
+        description: Decision Description
+        decision_no: Decision No
       committee_meeting: &committee_meeting_attributes
         meeting_date: Committee Meeting Date
         meeting_no: Committee Meeting No
@@ -74,6 +77,23 @@ en:
         unit_status: Unit Status
         unit_type: Unit Type
         yoksis_id: YOKSIS ID
+    decisions:
+      destroy:
+        success: Committee decision successfully deleted.
+        warning: Committee decision can not be deleted!
+      create:
+        success: Committee decision successfully created.
+      edit:
+        form_title: Update the Committee Decision
+      form:
+        agenda_type: Agenda Type
+        description: Agenda Description
+        sequence_no: Agenda Sequence No
+        status: Agenda Durum
+      new:
+        form_title: Create a New Committee Decision
+      update:
+        success: Committee Decision successfully updated.
     meetings:
       create:
         success: Committee Meeting successfully created.
@@ -100,11 +120,16 @@ en:
       show:
         agendas: Agendas
         agenda_type: Agenda Type
+        create_decision: Create Decision
+        decision_description: Decision Description
+        decision_no: Decision No
         description: Description
+        destroy_decision: Destroy Decision
         meeting_date: Meeting Date
         meeting_no: Meeting No
         sequence_no: Sequence No
         status: Status
+        update_decision: Update Decision
         year: Year
       update:
         success: Committee Meeting successfully updated.
@@ -116,6 +141,9 @@ en:
       agenda_type:
         create: Create Agenda Type
         update: Update Agenda Type
+      committee_decision:
+        create: Create Committee Decision
+        update: Create Committee Decision
       committee_meeting:
         create: Create Committee Meeting
         update: Update Committee Meeting
