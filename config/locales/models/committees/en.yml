@@ -21,10 +21,12 @@ en:
         sequence_no: Sequence No
     enums:
       agenda:
-        statuses:
+        statuses: &agenda_statuses
           decided: Decided
           delayed: Delayed
           recent: Recent
+      meeting_agenda:
+        statuses: *agenda_statuses
   committee:
     agendas:
       create:
