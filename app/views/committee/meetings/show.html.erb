@@ -53,7 +53,7 @@
             <tr>
               <td><%= agenda.sequence_no %></td>
               <td><%= agenda.description %></td>
-              <td><%= agenda.status %></td>
+              <td><%= enum_t(agenda, :status) %></td>
               <td><%= agenda.agenda_type.name %></td>
               <td><%= agenda.decision.try(:decision_no) %></td>
               <td><%= agenda.decision.try(:description) %></td>

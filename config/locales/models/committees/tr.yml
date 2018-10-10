@@ -21,10 +21,12 @@ tr:
         sequence_no: Sıra No
     enums:
       agenda:
-        statuses:
+        statuses: &agenda_statuses
           decided: Karar Verildi
           delayed: Ertelendi
           recent: Yeni
+      meeting_agenda:
+        statuses: *agenda_statuses
   committee:
     agendas:
       create:
