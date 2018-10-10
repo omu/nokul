@@ -109,6 +109,16 @@ jobs:
       - run: bin/yarn install
       - run: bundle exec rake quality:rails
       - run: bundle exec rake security:all
+  deploy_develop:
+    machine:
+      enabled: true
+    steps:
+      - checkout
+      - run:
+          name: Deploy Develop to Dokku
+          command: |
+            git remote add develop dokku@app.omu.sh:nokul-develop &&
+            git push develop develop:master
   deploy:
     machine:
       enabled: true
@@ -138,6 +148,12 @@ workflows:
       - karma:
           requires:
             - bundle_assets
+      - deploy_develop:
+          requires:
+            - karma
+          filters:
+            branches:
+              only: develop
       - deploy:
           requires:
             - karma
