@@ -80,9 +80,6 @@ en:
         unit_type: Unit Type
         yoksis_id: YOKSIS ID
     decisions:
-      destroy:
-        success: Committee decision successfully deleted.
-        warning: Committee decision can not be deleted!
       create:
         success: Committee decision successfully created.
       edit:

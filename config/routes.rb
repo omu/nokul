@@ -70,7 +70,7 @@ Rails.application.routes.draw do
       resources :agendas, except: :show
       resources :meetings
       resources :meeting_agendas, only: [] do
-        resources :decisions, except: %i[show index]
+        resources :decisions, except: %i[show index destroy]
       end
     end
   end
