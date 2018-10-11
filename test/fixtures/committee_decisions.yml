@@ -1,14 +1,17 @@
 one:
   description: Mühendislik Fakültesi Yönetim Kurulu test kararı 1
   decision_no: 2018/1
+  year: 2018
   meeting_agenda: one
 
 two:
   description: Mühendislik Fakültesi Yönetim Kurulu test kararı 2
   decision_no: 2018/2
+  year: 2018
   meeting_agenda: one
 
 three:
   description: Mühendislik Fakültesi Yönetim Kurulu test kararı 3
   decision_no: 2018/3
+  year: 2018
   meeting_agenda: one

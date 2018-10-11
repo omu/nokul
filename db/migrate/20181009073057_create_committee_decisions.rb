@@ -5,6 +5,7 @@ class CreateCommitteeDecisions < ActiveRecord::Migration[5.2]
     create_table :committee_decisions do |t|
       t.text :description, null: false, limit: 65535
       t.string :decision_no, null: false
+      t.integer :year, null: false
       t.references :meeting_agenda
       t.timestamps
     end
