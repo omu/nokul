@@ -33,9 +33,9 @@ class DynamicSearchTest < ActiveSupport::TestCase
       assert_raise(ArgumentError) { DynamicSearchModel.dynamic_search(parameter) }
     end
 
-    exception = assert_raise(ArgumentError) {
+    exception = assert_raise(ArgumentError) do
       DynamicSearchModel.dynamic_search(->(item) { puts item })
-    }
+    end
     assert_equal 'parameter must be Hash', exception.message
   end
 
