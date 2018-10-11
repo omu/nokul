@@ -33,7 +33,7 @@
                                    class: 'form-control' %>
               </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-4">
               <div class="form-group">
                 <%= label_tag :meb_status, t('.meb_status') %>
                 <%= select_tag(:meb_status,
@@ -42,7 +42,7 @@
                                class: 'form-control') %>
               </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-4">
               <div class="form-group">
                 <%= label_tag :military_status, t('.military_status') %>
                 <%= select_tag(:military_status,
@@ -51,7 +51,7 @@
                                class: 'form-control') %>
               </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-4">
               <div class="form-group">
                 <%= label_tag :obs_status, t('.obs_status') %>
                 <%= select_tag(:obs_status,
@@ -60,23 +60,29 @@
                                class: 'form-control') %>
               </div>
             </div>
-            <div class="col-sm-3">
-              <div class="form-group">
-                <%= label_tag :unit_id, t('.unit') %>
-                <%= select_tag(:unit_id,
-                               options_from_collection_for_select(Unit.active.programs.order(:name), :id, :name),
-                               include_blank: true,
-                               class: 'form-control',
-                               style: 'width: 100%') %>
-              </div>
-            </div>
-            <div class="col-sm-3">
+            <div class="col-sm-4">
               <div class="form-group">
                 <label for="student_entrance_type_id"><%= t('.student_entrance_type') %></label>
                 <%= select_tag(:student_entrance_type_id,
                                options_from_collection_for_select(StudentEntranceType.order(:name), :id, :name),
                                include_blank: true,
                                class: 'form-control') %>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <%= label_tag :root_unit_id, t('.root_unit') %>
+                <%= select_tag(:root_unit_id,
+                               options_from_collection_for_select(Unit.active.without_programs.order(:name), :id, :name),
+                               include_blank: true,
+                               class: 'form-control',
+                               style: 'width: 100%') %>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <%= label_tag :unit_id, t('.unit') %>
+                <%= select_tag(:unit_id, include_blank: true, class: 'form-control', style: 'width: 100%') %>
               </div>
             </div>
           </div>
@@ -91,8 +97,4 @@
   </div>
 </div>
 
-<script type='text/javascript'>
-  $(document).ready(function() {
-    $('#unit_id').select2();
-  });
-</script>
+<%= render 'js' %>
