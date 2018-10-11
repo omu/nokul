@@ -44,6 +44,6 @@ class DecisionTest < ActiveSupport::TestCase
 
   # custom
   test 'count_of_decisions_by_year return decision count by year' do
-    assert_equal 3, @decision.count_of_decisions_by_year(2018)
+    assert_equal 3, @decision.send(:count_of_decisions_by_year, 2018)
   end
 end
