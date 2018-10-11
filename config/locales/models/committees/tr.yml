@@ -82,9 +82,6 @@ tr:
     decisions:
       create:
         success: Kurul kararı başarıyla oluşturuldu.
-      destroy:
-        success: Kurul kararı başarıyla silindi.
-        warning: Kurul kararı silinemedi!
       edit:
         form_title: Kurul Kararı Güncelle
       form:

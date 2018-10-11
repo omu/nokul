@@ -3,7 +3,7 @@
 module Committee
   class DecisionsController < ApplicationController
     before_action :set_committee_and_agenda
-    before_action :setup_decision, only: %i[edit update destroy]
+    before_action :setup_decision, only: %i[edit update]
 
     def new
       @decision = @agenda.build_decision
@@ -18,10 +18,6 @@ module Committee
 
     def update
       @decision.update(decision_params) ? redirect_with('success') : render(:edit)
-    end
-
-    def destroy
-      @decision.destroy ? redirect_with('success') : redirect_with('warning')
     end
 
     private

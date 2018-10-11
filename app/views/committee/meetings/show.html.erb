@@ -61,12 +61,8 @@
               <td>
                 <%= link_to_new(new_committee_meeting_agenda_decision_path(@committee, agenda),
                                 t('.create_decision')) unless agenda.decision.present? %>
-                <% if agenda.decision.present? %>
-                  <%= link_to_edit(edit_committee_meeting_agenda_decision_path(@committee, agenda),
-                                   t('.update_decision')) %>
-                  <%= link_to_destroy(committee_meeting_agenda_decision_path(@committee, agenda),
-                                      t('.destroy_decision')) %>
-                <% end %>
+                <%= link_to_edit(edit_committee_meeting_agenda_decision_path(@committee, agenda),
+                                  t('.update_decision')) if agenda.decision.present? %>
               </td>
             </tr>
           <% end %>
