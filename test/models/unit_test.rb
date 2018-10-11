@@ -117,4 +117,15 @@ class UnitTest < ActiveSupport::TestCase
                  Unit.rectorships.count
     assert_not_includes Unit.coursable, units(:uzem)
   end
+
+  test 'curriculumable scope returns curriculumable units' do
+    assert_equal Unit.curriculumable.count.to_i,
+                 Unit.departments.count +
+                 Unit.faculties.count +
+                 Unit.universities.count +
+                 Unit.majors.count +
+                 Unit.institutes.count +
+                 Unit.rectorships.count
+    assert_not_includes Unit.curriculumable, units(:uzem)
+  end
 end
