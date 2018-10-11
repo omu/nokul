@@ -144,7 +144,7 @@ en:
         update: Update Agenda Type
       committee_decision:
         create: Create Committee Decision
-        update: Create Committee Decision
+        update: Update Committee Decision
       committee_meeting:
         create: Create Committee Meeting
         update: Update Committee Meeting

@@ -36,7 +36,7 @@ module Committee
     end
 
     def decision_params
-      params.require(:committee_decision).permit(:description, :decision_no, :year)
+      params.require(:committee_decision).permit(:description)
     end
   end
 end
