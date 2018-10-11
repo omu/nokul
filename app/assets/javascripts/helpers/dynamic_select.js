@@ -2,7 +2,7 @@
 
 'use strict'
 
-var DynamicSelect = function (parameters) {
+var DynamicSelect = function (parameters) { // eslint-disable-line no-unused-vars
   function init () {
     $.each(parameters, function (k, parameter) {
       $(parameter['el']).change(function (event) {
