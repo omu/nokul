@@ -91,7 +91,8 @@ en:
         agenda_type: Agenda Type
         description: Agenda Description
         sequence_no: Agenda Sequence No
-        status: Agenda Durum
+        status: Agenda Status
+        unit: Unit
       new:
         form_title: Create a New Committee Decision
       update:
