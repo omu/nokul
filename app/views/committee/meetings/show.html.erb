@@ -59,10 +59,11 @@
               <td><%= agenda.decision.try(:description) %></td>
               <td><%= agenda.decision.try(:created_at).try(:to_date) %></td>
               <td>
-                <%= link_to_new(new_committee_meeting_agenda_decision_path(@committee, agenda),
-                                t('.create_decision')) unless agenda.decision.present? %>
-                <%= link_to_edit(edit_committee_meeting_agenda_decision_path(@committee, agenda),
-                                  t('.update_decision')) if agenda.decision.present? %>
+                <% if agenda.decision.present? %>
+                  <%= link_to_edit(edit_committee_meeting_agenda_decision_path(@committee, agenda), t('.update_decision')) %>
+                <% else %>
+                  <%= link_to_new(new_committee_meeting_agenda_decision_path(@committee, agenda), t('.create_decision')) %>
+                <% end %>
               </td>
             </tr>
           <% end %>
