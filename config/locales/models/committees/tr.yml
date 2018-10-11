@@ -92,6 +92,7 @@ tr:
         description: Gündem Açıklama
         sequence_no: Gündem Sıra No
         status: Gündem Durumu
+        unit: Birim
       new:
         form_title: Kurul Kararı Oluştur
         description: Kurul Kararı
