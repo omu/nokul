@@ -17,6 +17,7 @@
               <th><%= t('.military_status') %></th>
               <th><%= t('.obs_status') %></th>
               <th><%= t('.student_entrance_type') %></th>
+              <th><%= t('.year') %></th>
               <th><%= t('actions') %></th>
             </tr>
           </thead>
@@ -31,6 +32,7 @@
                 <td><%= prospective_student.military_status ? t('.unproblematic') : t('.must_see_recruiting_office') %></td>
                 <td><%= prospective_student.obs_status ? t('.unproblematic') : t('.student_in_a_different_unit') %></td>
                 <td><%= prospective_student.student_entrance_type.name %></td>
+                <td><%= prospective_student.created_at.year %></td>
                 <td>
                   <%= link_to_show(prospective_student_path(prospective_student)) %>
                 </td>
