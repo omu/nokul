@@ -13,10 +13,10 @@
               <%= f.input :name %>
             </div>
             <div class='form-group col-sm-6'>
-              <%= f.association :unit, collection: Unit.active.departments %>
+              <%= f.association :unit, collection: Unit.active.curriculumable %>
             </div>
             <div class='form-group col-sm-6'>
-              <%= f.input :number_of_semesters, collection: (2..12) %>
+              <%= f.input :number_of_semesters, collection: (2..Curriculum::MAX_NUMBER_OF_SEMESTERS) %>
             </div>
             <div class='form-group col-sm-6'>
               <%= f.input :status,
