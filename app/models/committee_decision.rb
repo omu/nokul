@@ -3,6 +3,7 @@
 class CommitteeDecision < ApplicationRecord
   # relations
   belongs_to :meeting_agenda
+  has_one :agenda, through: :meeting_agenda
 
   # validations
   validates :description, presence: true
@@ -11,6 +12,7 @@ class CommitteeDecision < ApplicationRecord
 
   # callbacks
   before_validation :set_year_and_decision_no, on: :create
+  after_create { agenda.update(status: :decided) }
 
   # delegates
   delegate :meeting_no, :meeting_date, :year, :unit, to: :meeting_agenda, prefix: true

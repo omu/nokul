@@ -8,8 +8,13 @@ class DecisionTest < ActiveSupport::TestCase
   end
 
   # relations
-  test 'decision can communicate with meeting_agenda' do
-    assert @decision.meeting_agenda
+  %i[
+    meeting_agenda
+    agenda
+  ].each do |property|
+    test "decision can communicate with #{property}" do
+      assert @decision.send(property)
+    end
   end
 
   # validations: presence
@@ -40,6 +45,11 @@ class DecisionTest < ActiveSupport::TestCase
     decision = CommitteeDecision.create(description: 'Test Karar', meeting_agenda: meeting_agendas(:one))
     assert_equal 2018, decision.year
     assert_equal '2018/4', decision.decision_no
+  end
+
+  test 'agenda status must update after decision is created' do
+    decision = CommitteeDecision.create(description: 'Test Karar', meeting_agenda: meeting_agendas(:four))
+    assert_equal 'decided', decision.agenda.status
   end
 
   # custom
