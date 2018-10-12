@@ -1,5 +1,10 @@
 <div class='alert alert-light'>
   <%= link_to_new new_committee_agenda_path(@committee), t('.new_agenda_link') %>
+  <span class="pull-right">
+    <%= link_to(fa_icon('archive', text: t('.meetings')),
+                committee_meetings_path(@committee),
+                class: 'btn btn-dark btn-sm') %>
+  </span>
 </div>
 
 <div class='row'>
