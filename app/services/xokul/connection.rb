@@ -16,6 +16,7 @@ module Xokul
       @http.verify_mode = OpenSSL::SSL::VERIFY_PEER
     end
 
+    # rubocop:disable Metrics/AbcSize
     def get(path, params: {})
       request = Net::HTTP::Get.new path, Authorization: "Bearer #{@bearer_token}"
 
@@ -25,10 +26,11 @@ module Xokul
       response = @http.request request, params.to_json
       response.error! unless response.code.eql? '200'
 
-      JSON.parse(response.body)
+      JSON.parse(response.body).deep_symbolize_keys
     rescue StandardError
       raise response.error_type.new response.body, response
     end
+    # rubocop:enable Metrics/AbcSize
   end
 
   private_constant :Connection
