@@ -2,7 +2,7 @@
 
 class UnitsController < ApplicationController
   include PagyBackendWithHelpers
-  before_action :set_unit, only: %i[edit update destroy show courses programs all_programs]
+  before_action :set_unit, only: %i[edit update destroy show courses programs]
 
   def index
     units = Unit.includes(
@@ -42,18 +42,8 @@ class UnitsController < ApplicationController
   end
 
   def programs
-    @units = @unit.children.includes(
-      :unit_status, :unit_instruction_language, :unit_instruction_type, :unit_type, district: [:city]
-    ).programs.active
+    @units = @unit.descendants.programs.active
     render json: @units
-  end
-
-  def all_programs
-    @units = @unit.children.active
-    ancestries = @units.without_programs.collect { |unit| "#{unit.ancestry}/#{unit.id}" }
-    @programs = @units.programs + Unit.programs.active.where(ancestry: ancestries)
-
-    render json: @programs
   end
 
   private

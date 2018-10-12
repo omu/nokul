@@ -94,8 +94,8 @@ class UnitsControllerTest < ActionDispatch::IntegrationTest
     assert_equal translate('units.destroy.success'), flash[:notice]
   end
 
-  test 'should get all_programs' do
-    get all_programs_unit_path(units(:egitim_bilimleri_enstitusu), format: :json)
+  test 'should get programs' do
+    get programs_unit_path(units(:egitim_bilimleri_enstitusu), format: :json)
     json_response = JSON.parse(response.body)
     assert_equal 1, json_response.length
     assert_equal units(:alman_dili_egitimi_dr).id, json_response[0]['id']

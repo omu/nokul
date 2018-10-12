@@ -16,7 +16,6 @@ Rails.application.routes.draw do
     member do
       get :courses, defaults: { format: :json }
       get :programs, defaults: { format: :json }
-      get :all_programs, defaults: { format: :json }
     end
   end
 
