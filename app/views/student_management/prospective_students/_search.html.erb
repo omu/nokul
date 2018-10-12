@@ -62,7 +62,7 @@
             </div>
             <div class="col-sm-4">
               <div class="form-group">
-                <label for="student_entrance_type_id"><%= t('.student_entrance_type') %></label>
+                <%= label_tag :student_entrance_type_id, t('.student_entrance_type') %>
                 <%= select_tag(:student_entrance_type_id,
                                options_from_collection_for_select(StudentEntranceType.order(:name), :id, :name),
                                include_blank: true,
