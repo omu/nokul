@@ -3,7 +3,7 @@
 module Committee
   class DecisionsController < ApplicationController
     before_action :set_committee_and_agenda
-    before_action :setup_decision, only: %i[edit update]
+    before_action :set_decision, only: %i[edit update]
 
     def new
       @decision = @agenda.build_decision
@@ -31,7 +31,7 @@ module Committee
       @agenda = @committee.meeting_agendas.find(params[:meeting_agenda_id])
     end
 
-    def setup_decision
+    def set_decision
       @decision = @agenda.decision
     end
 
