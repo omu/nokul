@@ -4,12 +4,12 @@ tr:
       agenda: &agenda_attributes
         agenda_file: Gündem Dosyası
         agenda_type_id: Gündem Türü
-        description: Gündem Açıklaması
+        description: Gündem İçeriği
         status: Gündem Durumu
       agenda_type: &agenda_type_attributes
         name: Gündem Türü Adı
       committee_decision:
-        description: Karar Açıklaması
+        description: Karar İçeriği
         decision_no: Karar No
       committee_meeting: &committee_meeting_attributes
         meeting_date: Toplantı Tarihi
@@ -84,15 +84,19 @@ tr:
         success: Kurul kararı başarıyla oluşturuldu.
       edit:
         form_title: Kurul Kararı Güncelle
-      form:
+      form: &agendas
         agenda_type: Gündem Türü
-        description: Gündem Açıklama
-        sequence_no: Gündem Sıra No
-        status: Gündem Durumu
+        agenda_description: Gündem İçeriği
+        agenda_sequence_no: Gündem Sıra No
+        agenda_status: Gündem Durumu
         unit: Birim
       new:
         form_title: Kurul Kararı Oluştur
-        description: Kurul Kararı
+      show:
+        <<: *agendas
+        decision_description: Karar İçeriği
+        decision_no: Karar No
+        update_decision: Karar Güncelle
       update:
         success: Kurul kararı başarıyla güncellendi.
     meetings:
@@ -122,14 +126,14 @@ tr:
         agendas: Gündemler
         agenda_type: Gündem Türü
         create_decision: Karar Ekle
-        decision_description: Gündem Kararı
-        decision_date: Karar Tarihi
+        decision_description: Karar İçeriği
         decision_no: Karar No
-        description: Açıklama
+        description: Gündem İçeriği
         destroy_decision: Karar Sil
         meeting_date: Toplantı Tarihi
         meeting_no: Toplantı No
         sequence_no: Sıra No
+        show_decision: Karar Görüntüle
         status: Durum
         update_decision: Karar Güncelle
         year: Yıl

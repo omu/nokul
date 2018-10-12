@@ -11,6 +11,11 @@ module Committee
       @decision = committee_decisions(:one)
     end
 
+    test 'should get show' do
+      get committee_meeting_agenda_decision_path(@committee, @meeting_agenda, @decision)
+      assert_response :success
+    end
+
     test 'should get new' do
       get new_committee_meeting_agenda_decision_path(@committee, @meeting_agenda)
       assert_response :success
