@@ -2,13 +2,27 @@
 
 module Xokul
   module Kps
-    module_function
+    class Identity
+      delegate :dig, to: :@response
 
-    def identity(id_number:)
-      Connection.instance.get(
-        '/kps/queries/identities', params: { id_number: id_number }
-      )
+      attr_reader :blue_card, :citizenship, :foreigner
+
+      def initialize(id_number)
+        @response = Connection.instance.get(
+          '/kps/queries/identities', params: { id_number: id_number }
+        )
+
+        @blue_card   = OpenStruct.new @response[:blue_card_informations]
+        @citizenship = OpenStruct.new @response[:citizenship_informations]
+        @foreigner   = OpenStruct.new @response[:foreigner_informations]
+      end
+
+      def full_informations
+        @response
+      end
     end
+
+    module_function
 
     def address(id_number:)
       Connection.instance.get(
