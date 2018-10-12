@@ -84,14 +84,19 @@ en:
         success: Committee decision successfully created.
       edit:
         form_title: Update the Committee Decision
-      form:
+      form: &agendas
         agenda_type: Agenda Type
-        description: Agenda Description
-        sequence_no: Agenda Sequence No
-        status: Agenda Status
+        agenda_description: Agenda Description
+        agenda_sequence_no: Agenda Sequence No
+        agenda_status: Agenda Status
         unit: Unit
       new:
         form_title: Create a New Committee Decision
+      show:
+        <<: *agendas
+        decision_description: Decision Description
+        decision_no: Decision No
+        update_decision: Update Decision
       update:
         success: Committee Decision successfully updated.
     meetings:
@@ -122,13 +127,13 @@ en:
         agenda_type: Agenda Type
         create_decision: Create Decision
         decision_description: Decision Description
-        decision_date: Decision Date
         decision_no: Decision No
         description: Description
         destroy_decision: Destroy Decision
         meeting_date: Meeting Date
         meeting_no: Meeting No
         sequence_no: Sequence No
+        show_decision: Show Decision
         status: Status
         update_decision: Update Decision
         year: Year

@@ -18,15 +18,15 @@
                 <td><%= @agenda.unit.name %></td>
               </tr>
               <tr>
-                <th><%= t('.sequence_no') %></th>
+                <th><%= t('.agenda_sequence_no') %></th>
                 <td><%= @agenda.sequence_no %></td>
               </tr>
               <tr>
-                <th><%= t('.description') %></th>
+                <th><%= t('.agenda_description') %></th>
                 <td><%= @agenda.description %></td>
               </tr>
               <tr>
-                <th><%= t('.status') %></th>
+                <th><%= t('.agenda_status') %></th>
                 <td><%= enum_t(@agenda, :status) %></td>
               </tr>
               <tr>

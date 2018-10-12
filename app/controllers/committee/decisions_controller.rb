@@ -3,7 +3,9 @@
 module Committee
   class DecisionsController < ApplicationController
     before_action :set_committee_and_agenda
-    before_action :set_decision, only: %i[edit update]
+    before_action :set_decision, only: %i[show edit update]
+
+    def show; end
 
     def new
       @decision = @agenda.build_decision
