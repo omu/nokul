@@ -27,7 +27,7 @@
               </tr>
               <tr>
                 <th><%= t('.status') %></th>
-                <td><%= @agenda.status %></td>
+                <td><%= enum_t(@agenda, :status) %></td>
               </tr>
               <tr>
                 <th><%= t('.agenda_type') %></th>
