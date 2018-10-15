@@ -6,9 +6,11 @@ module CourseManagement
     before_action :set_curriculum, only: %i[show edit update destroy]
 
     def index
-      @pagy, @curriculums = pagy(
-        Curriculum.includes(:unit).dynamic_search(search_params(Curriculum))
-      )
+      curriculums = Curriculum.includes(:unit)
+                              .order(status: :desc, name: :asc)
+                              .order('units.name')
+                              .dynamic_search(search_params(Curriculum))
+      @pagy, @curriculums = pagy(curriculums)
     end
 
     def show; end
