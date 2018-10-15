@@ -74,7 +74,8 @@ en:
         prospective_students: Prospective Students
       register:
         can_not_register: Can Not Register
-        warning: Student could not be registered.
+        success: Student successfully registered
+        warning: Student could not be registered
       search:
         <<: *prospective_student_attributes
       show:
