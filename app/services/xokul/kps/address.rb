@@ -16,15 +16,15 @@ module Xokul
       end
 
       def address_type
-        return current_address[:abroad_address]            if abroad?
-        return current_address[:city_and_district_address] if city_and_district?
-        return current_address[:village_address]           if village?
+        return current_address[:abroad_address]              if abroad?
+        return current_address[:city_and_district_addresses] if city_and_district?
+        return current_address[:village_address]             if village?
       end
 
       def model_data
         {
           full_address: current_address[:full_address],
-          district_id:  address_tyoe.dig(:district, :code)
+          district_id:  address_type.dig(:district, :code)
         }
       end
 
