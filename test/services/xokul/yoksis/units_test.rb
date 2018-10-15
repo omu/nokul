@@ -21,7 +21,7 @@ class UnitsTest < ActiveSupport::TestCase
     subunits
   ].each do |method|
     test "trying to get #{method} under a department" do
-      assert Xokul::Yoksis::Units.send method, unit_id: ENV['DEPARTMENT_TEST_UNIT_ID']
+      assert Xokul::Yoksis::Units.send method, unit_id: 212_950
 
       assert_raises Net::HTTPError, Net::HTTPFatalError do
         Xokul::Yoksis::Units.send method, unit_id: -1
@@ -31,7 +31,7 @@ class UnitsTest < ActiveSupport::TestCase
   end
 
   test 'trying to get units under a university' do
-    assert Xokul::Yoksis::Units.units unit_id: ENV['UNIVERSITY_TEST_UNIT_ID']
+    assert Xokul::Yoksis::Units.units unit_id: 163_896
 
     assert_raises Net::HTTPError, Net::HTTPFatalError do
       Xokul::Yoksis::Units.units unit_id: -1

@@ -4,7 +4,9 @@ require 'test_helper'
 
 class StaffTest < ActiveSupport::TestCase
   test "trying to get an academician's informations" do
-    assert Xokul::Yoksis::Staff.academicians id_number: ENV['STAFF_TEST_ID_NUMBER']
+    assert Xokul::Yoksis::Staff.academicians(
+      id_number: Rails.application.credentials.yoksis[:academicians_test_id_number]
+    )
 
     assert_raises Net::HTTPError, Net::HTTPFatalError do
       Xokul::Yoksis::Staff.academicians id_number: 11_111_111_111
