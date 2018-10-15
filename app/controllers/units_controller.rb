@@ -42,7 +42,7 @@ class UnitsController < ApplicationController
   end
 
   def programs
-    @units = @unit.descendants.programs.active
+    @units = @unit.subprograms.active.order(:name)
     render json: @units
   end
 
