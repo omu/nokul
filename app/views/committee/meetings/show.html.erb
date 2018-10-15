@@ -1,5 +1,9 @@
 <div class='alert alert-light'>
   <%= link_to_back(:back) %>
+  <span class="pull-right">
+    <%= link_to(fa_icon('tasks', text: t('.agendas')), committee_agendas_path(@committee),
+                class: 'btn btn-dark btn-sm') %>
+  </span>
 </div>
 
 <div class='row'>
@@ -39,14 +43,25 @@
               <th><%= t('.description') %></th>
               <th><%= t('.status') %></th>
               <th><%= t('.agenda_type') %></th>
+              <th><%= t('.decision_no')%></th>
+              <th><%= t('actions') %></th>
             </tr>
           </thead>
           <% @agendas.each do |agenda| %>
             <tr>
               <td><%= agenda.sequence_no %></td>
               <td><%= agenda.description %></td>
-              <td><%= agenda.status %></td>
+              <td><%= enum_t(agenda, :status) %></td>
               <td><%= agenda.agenda_type.name %></td>
+              <td><%= agenda.decision.try(:decision_no) %></td>
+              <td>
+                <% if agenda.decision.present? %>
+                  <%= link_to_show(committee_meeting_agenda_decision_path(@committee, agenda, agenda.decision), t('.show_decision')) %>
+                  <%= link_to_edit(edit_committee_meeting_agenda_decision_path(@committee, agenda), t('.update_decision')) %>
+                <% else %>
+                  <%= link_to_new(new_committee_meeting_agenda_decision_path(@committee, agenda), t('.create_decision')) %>
+                <% end %>
+              </td>
             </tr>
           <% end %>
         </table>

@@ -14,10 +14,13 @@ class UnitTest < ActiveSupport::TestCase
     duties
     employees
     students
+    users
     positions
     administrative_functions
     agendas
     meetings
+    meeting_agendas
+    decisions
     courses
     registration_documents
     prospective_students

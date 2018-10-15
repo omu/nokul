@@ -8,6 +8,9 @@ en:
         status: Agenda Status
       agenda_type: &agenda_type_attributes
         name: Name of Agenda Type
+      committee_decision:
+        description: Decision Description
+        decision_no: Decision No
       committee_meeting: &committee_meeting_attributes
         meeting_date: Committee Meeting Date
         meeting_no: Committee Meeting No
@@ -18,11 +21,36 @@ en:
         sequence_no: Sequence No
     enums:
       agenda:
-        statuses:
+        statuses: &agenda_statuses
           decided: Decided
           delayed: Delayed
           recent: Recent
+      meeting_agenda:
+        statuses: *agenda_statuses
   committee:
+    agendas:
+      create:
+        success: Agenda successfully created.
+      destroy:
+        success: Agenda successfully deleted.
+        warning: Agenda can not be deleted!
+      edit:
+        form_title: Update a Agenda
+      index:
+        <<: *agenda_attributes
+        agenda_type: Agenda Type
+        card_header: Agendas
+        new_agenda_link: Create a New Agenda
+        unit: Unit
+        meetings: Meetings
+      new:
+        form_title: Create a Agenda
+      search:
+        agenda_type_id: Agenda Type
+        smart_search_placeholder: Agenda Description
+        status: Agenda Status
+      update:
+        success: Agenda successfully updated.
     agenda_types:
       create:
         success: Agenda Type successfully created.
@@ -39,28 +67,6 @@ en:
         form_title: Create a Agenda Type
       update:
         success: Agenda Type successfully updated.
-    agendas:
-      create:
-        success: Agenda successfully created.
-      destroy:
-        success: Agenda successfully deleted.
-        warning: Agenda can not be deleted!
-      edit:
-        form_title: Update a Agenda
-      index:
-        <<: *agenda_attributes
-        agenda_type: Agenda Type
-        card_header: Agendas
-        new_agenda_link: Create a New Agenda
-        unit: Unit
-      new:
-        form_title: Create a Agenda
-      search:
-        agenda_type_id: Agenda Type
-        smart_search_placeholder: Agenda Description
-        status: Agenda Status
-      update:
-        success: Agenda successfully updated.
     dashboard:
       index:
         agendas: Agendas
@@ -73,6 +79,26 @@ en:
         unit_status: Unit Status
         unit_type: Unit Type
         yoksis_id: YOKSIS ID
+    decisions:
+      create:
+        success: Committee decision successfully created.
+      edit:
+        form_title: Update the Committee Decision
+      form: &agendas
+        agenda_type: Agenda Type
+        agenda_description: Agenda Description
+        agenda_sequence_no: Agenda Sequence No
+        agenda_status: Agenda Status
+        unit: Unit
+      new:
+        form_title: Create a New Committee Decision
+      show:
+        <<: *agendas
+        decision_description: Decision Description
+        decision_no: Decision No
+        update_decision: Update Decision
+      update:
+        success: Committee Decision successfully updated.
     meetings:
       create:
         success: Committee Meeting successfully created.
@@ -85,6 +111,7 @@ en:
         agendas: Agendas
         new_agenda_link: Add a New Agenda
       index:
+        agendas: Agendas
         agendas_count: Agendas Count
         card_header: Committee Meetings
         meeting_date: Committee Meeting Date
@@ -98,11 +125,17 @@ en:
       show:
         agendas: Agendas
         agenda_type: Agenda Type
+        create_decision: Create Decision
+        decision_description: Decision Description
+        decision_no: Decision No
         description: Description
+        destroy_decision: Destroy Decision
         meeting_date: Meeting Date
         meeting_no: Meeting No
         sequence_no: Sequence No
+        show_decision: Show Decision
         status: Status
+        update_decision: Update Decision
         year: Year
       update:
         success: Committee Meeting successfully updated.
@@ -114,6 +147,9 @@ en:
       agenda_type:
         create: Create Agenda Type
         update: Update Agenda Type
+      committee_decision:
+        create: Create Committee Decision
+        update: Update Committee Decision
       committee_meeting:
         create: Create Committee Meeting
         update: Update Committee Meeting

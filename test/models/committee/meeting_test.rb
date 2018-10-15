@@ -8,6 +8,7 @@ class MeetingTest < ActiveSupport::TestCase
     unit
     meeting_agendas
     agendas
+    decisions
   ].each do |property|
     test "a meeting can communicate with #{property}" do
       assert committee_meetings(:one).send(property)
