@@ -4,6 +4,8 @@ module Xokul
   BASE_URL     = Rails.application.config.tenant.api_host
   BEARER_TOKEN = Rails.application.credentials.xokul[:bearer_token]
 
+  private_constant :BASE_URL, :BEARER_TOKEN
+
   class Connection
     include Singleton
 
