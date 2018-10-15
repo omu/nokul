@@ -84,7 +84,7 @@
                 <%= label_tag :unit_id, t('.unit') %>
                 <%= select_tag(:unit_id,
                                options_from_collection_for_select(
-                                 (params[:root_unit_id].present? ? Unit.find(params[:root_unit_id]).sub_programs.active.order(:name) : []), :id, :name, params[:unit_id]
+                                 (params[:root_unit_id].present? ? Unit.find(params[:root_unit_id]).subprograms.active.order(:name) : []), :id, :name, params[:unit_id]
                                ),
                                include_blank: true,
                                class: 'form-control', style: 'width: 100%') %>
