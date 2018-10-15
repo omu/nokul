@@ -17,40 +17,40 @@ class KpsTest < ActiveSupport::TestCase
 
   test 'trying to get personal informations' do
     IDENTITY_TEST_ID_NUMBERS.each do |id_number|
-      assert Xokul::Kps.identity id_number: id_number
+      assert Xokul::Kps::Identity.new id_number
     end
 
     assert_raises Net::HTTPError, Net::HTTPFatalError do
-      Xokul::Kps.identity id_number: 11_111_111_111
-      Xokul::Kps.identity id_number: 'id number as string'
+      Xokul::Kps::Identity.new 11_111_111_111
+      Xokul::Kps::Identity.new 'id number as string'
     end
   end
-
 
   test 'trying to get address informations' do
-    assert Xokul::Kps.address id_number: ENV['ADDRESS_TEST_ID_NUMBER']
+    assert Xokul::Kps::Address.new 10_114_899_148
 
     assert_raises Net::HTTPError, Net::HTTPFatalError do
-      Xokul::Kps.address id_number: 11_111_111_111
-      Xokul::Kps.address id_number: 'id number as string'
+      Xokul::Kps::Address.new 11_111_111_111
+      Xokul::Kps::Address.new 'id number as string'
     end
   end
 
-
   test 'trying to verify personal informations' do
-    assert Xokul::Kps.verify_identity(
-      id_number:     ENV['VERIFY_TEST_ID_NUMBER'],
-      first_name:    ENV['VERIFY_TEST_FIRST_NAME'],
-      last_name:     ENV['VERIFY_TEST_LAST_NAME'],
-      year_of_birth: ENV['VERIFY_TEST_YEAR_OF_BIRTH']
+    response = Xokul::Kps.verify_identity(
+      id_number:     11_111_111_111,
+      first_name:    'first name',
+      last_name:     'last name',
+      year_of_birth: 1999
     )
+
+    assert_equal response[:status], false
 
     assert_raises Net::HTTPError, Net::HTTPFatalError do
       Xokul::Kps.verify_identity(
         id_number:     'id number as string',
         first_name:    'foo',
         last_name:     'bar',
-        year_of_birth: 'year as string'
+        year_of_birth: -1
       )
     end
   end
