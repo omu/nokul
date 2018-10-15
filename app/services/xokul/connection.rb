@@ -28,7 +28,8 @@ module Xokul
       response = @http.request request, params.to_json
       response.error! unless response.code.eql? '200'
 
-      JSON.parse(response.body).deep_symbolize_keys
+      json = JSON.parse(response.body)
+      json.is_a?(Array) ? json.map(&:deep_symbolize_keys) : json.deep_symbolize_keys
     rescue StandardError
       raise response.error_type.new response.body, response
     end
