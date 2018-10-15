@@ -111,7 +111,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'coursable scope returns coursable units' do
-    assert_equal Unit.coursable.count.to_i,
+    assert_equal Unit.coursable.count,
                  Unit.departments.count +
                  Unit.faculties.count +
                  Unit.universities.count +
@@ -119,5 +119,10 @@ class UnitTest < ActiveSupport::TestCase
                  Unit.institutes.count +
                  Unit.rectorships.count
     assert_not_includes Unit.coursable, units(:uzem)
+  end
+
+  test 'subprograms method returns a unit subprograms' do
+    assert_equal units(:omu).subprograms.count, units(:omu).descendants.programs.count
+    assert_not_includes units(:omu).subprograms, units(:uzem)
   end
 end
