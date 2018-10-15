@@ -5,9 +5,10 @@ module Xokul
     module Resumes
       module_function
 
-      def authors(author_id:)
+      def authors(id_number:, author_id:)
         Connection.instance.get(
-          '/yoksis/resumes/authors', params: { author_id: author_id }
+          '/yoksis/resumes/authors',
+          params: { id_number: id_number, author_id: author_id }
         )
       end
 
