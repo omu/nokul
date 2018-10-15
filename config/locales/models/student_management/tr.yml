@@ -74,6 +74,7 @@ tr:
         prospective_students: Yerleşen Öğrenciler
       register:
         can_not_register: Kayıt Yapılamaz
+        success: Öğrenci başarıyla kaydedildi
         warning: Öğrenci kayıt edilemedi
       search:
         <<: *prospective_student_attributes

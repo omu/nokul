@@ -66,6 +66,8 @@ class Unit < ApplicationRecord
       .or(rectorships)
   }
 
+  scope :curriculumable, -> { coursable }
+
   # custom methods
   def subprograms
     descendants.programs
