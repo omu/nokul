@@ -16,9 +16,9 @@ module Xokul
       end
 
       def id_type
-        return @response[:blue_card_informations]  if blue_card?
-        return @response[:citizenhip_informations] if citizenship?
-        return @response[:foreigner_informations]  if foreigner?
+        return @response[:blue_card_informations]   if blue_card?
+        return @response[:citizenship_informations] if citizenship?
+        return @response[:foreigner_informations]   if foreigner?
       end
 
       def personal_informations
@@ -35,13 +35,14 @@ module Xokul
 
       def place_of_registry
         place = personal_informations[:place_of_registry]
-        %w[city district volume].collect { |key| place.dig key, :description }
+        %i[volume district city].collect { |key| place.dig key, :description }
                                 .join '/'
       end
 
       def model_data
         {
           **basic_informations,
+          registered_to: place_of_registry,
           gender: basic_informations.dig(:gender, :code),
           marital_status: status_informations.dig(:marital_status, :code)
         }
