@@ -45,8 +45,10 @@ en:
         student_entrance_type: Entrance Type
         student_in_a_different_unit: Student in a different university/unit
         top_student: Top Student
+        root_unit: Unit
         unit: Placement Program
         unproblematic: Unproblematic
+        year: Year
     enums:
       prospective_student:
         additional_score:
