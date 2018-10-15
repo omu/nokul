@@ -65,4 +65,9 @@ class Unit < ApplicationRecord
       .or(institutes)
       .or(rectorships)
   }
+
+  # custom methods
+  def subprograms
+    descendants.programs
+  end
 end
