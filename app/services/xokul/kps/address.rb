@@ -24,7 +24,7 @@ module Xokul
       def model_data
         {
           full_address: current_address[:full_address],
-          district_id:  address_type.dig(:district, :code)
+          district:  district
         }
       end
 
@@ -32,6 +32,10 @@ module Xokul
 
       def current_address
         @response[:current_address]
+      end
+
+      def district
+        District.find_by(mernis_code: address_type.dig(:district, :code))
       end
 
       def abroad?
