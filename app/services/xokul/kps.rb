@@ -39,7 +39,7 @@ module Xokul
       end
 
       def city_and_district?
-        current_address[:city_and_district_address].present?
+        current_address[:city_and_district_addresses].present?
       end
 
       def village?
