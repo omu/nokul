@@ -6,35 +6,33 @@ module Yoksis
 
     # slow operation
     def perform(user)
-      @response = Yoksis::V1::Ozgecmis.new(user.id_number.to_i).projects
+      @response = Xokul::Yoksis::Resumes.projects(id_number: user.id_number.to_i)
     end
 
     # callbacks
     after_perform do |job|
       user = job.arguments.first
-      if @response[:sonuc][:durum_kodu].eql?('1') && @response[:proje_listesi].present?
-        response = [@response[:proje_listesi]].flatten
+      response = [@response].flatten
 
-        response.each do |study|
-          user.projects.create(
-            yoksis_id: study[:proje_id].try(:to_i),
-            name: study[:proje_ad],
-            subject: study[:proje_konusu],
-            status: study[:proje_durumu_id].try(:to_i),
-            start_date: study[:bas_tar],
-            end_date: study[:bit_tar],
-            budget: study[:butce],
-            duty: study[:proje_konumu_ad],
-            type: study[:proje_turu_ad],
-            currency: study[:para_birimi_ad],
-            last_update: study[:guncelleme_tarihi],
-            activity: study[:aktif_pasif].try(:to_i),
-            scope: study[:kapsam].try(:to_i),
-            title: study[:unvan_ad],
-            unit_id: study[:kurum_id].try(:to_i),
-            incentive_point: study[:tesv_puan]
-          )
-        end
+      response.each do |study|
+        user.projects.create(
+          yoksis_id: study[:project_id],
+          name: study[:name],
+          subject: study[:subject],
+          status: study[:status_id],
+          start_date: study[:date_of_start],
+          end_date: study[:date_of_end],
+          budget: study[:budget],
+          duty: study[:location_name],
+          type: study[:type_name],
+          currency: study[:currency_name],
+          last_update: study[:date_of_update],
+          activity: study[:active_or_passive_id],
+          scope: study[:scope_id],
+          title: study[:title_name],
+          unit_id: study[:institution_id],
+          incentive_point: study[:incentive_points]
+        )
       end
     end
   end
