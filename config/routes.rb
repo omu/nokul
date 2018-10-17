@@ -69,6 +69,9 @@ Rails.application.routes.draw do
     scope module: :committee do
       resources :agendas, except: :show
       resources :meetings
+      resources :meeting_agendas, only: [] do
+        resources :decisions, except: %i[index destroy]
+      end
     end
   end
 end

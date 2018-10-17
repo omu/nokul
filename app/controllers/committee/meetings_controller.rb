@@ -10,7 +10,7 @@ module Committee
     end
 
     def show
-      @agendas = @meeting.meeting_agendas.includes(agenda: :agenda_type).order(:sequence_no)
+      @agendas = @meeting.meeting_agendas.includes(:decision, agenda: :agenda_type).order(:sequence_no)
     end
 
     def new
@@ -39,7 +39,7 @@ module Committee
     end
 
     def set_committee
-      @committee = Unit.find(params[:committee_id])
+      @committee = Unit.committees.find(params[:committee_id])
     end
 
     def set_meeting

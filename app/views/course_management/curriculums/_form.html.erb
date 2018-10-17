@@ -13,18 +13,18 @@
               <%= f.input :name %>
             </div>
             <div class='form-group col-sm-6'>
-              <%= f.association :unit, collection: Unit.active.departments %>
+              <%= f.input :number_of_semesters, collection: (2..Curriculum::MAX_NUMBER_OF_SEMESTERS) %>
             </div>
             <div class='form-group col-sm-6'>
-              <%= f.input :number_of_semesters, collection: (2..12) %>
+              <%= f.association :unit, collection: Unit.active.curriculumable %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.association :programs,
+                                collection: f.object.new_record? ? [] : f.object.unit.children.programs %>
             </div>
             <div class='form-group col-sm-6'>
               <%= f.input :status,
                           collection: enum_options_for_select(f.object.class, :status) %>
-            </div>
-             <div class='form-group col-sm-6'>
-              <%= f.association :programs,
-                                collection: f.object.new_record? ? [] : f.object.unit.children.programs %>
             </div>
             <div class='form-group col-sm-12'>
               <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
