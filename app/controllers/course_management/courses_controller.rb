@@ -8,7 +8,9 @@ module CourseManagement
 
     def index
       courses = Course.includes(:unit, :language)
+                      .order('units.name, courses.name')
                       .dynamic_search(search_params(Course))
+
       @pagy, @courses = pagy(courses)
     end
 

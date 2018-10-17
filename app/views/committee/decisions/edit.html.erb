@@ -1,0 +1,3 @@
+<%= render 'form', agenda: @agenda, decision: @decision,
+                   url: committee_meeting_agenda_decision_path(@committee, @agenda, @decision),
+                   method: :patch, form_title: t('.form_title') %>

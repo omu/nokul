@@ -42,9 +42,7 @@ class UnitsController < ApplicationController
   end
 
   def programs
-    @units = @unit.children.includes(
-      :unit_status, :unit_instruction_language, :unit_instruction_type, :unit_type, district: [:city]
-    ).programs.active
+    @units = @unit.subprograms.active.order(:name)
     render json: @units
   end
 
