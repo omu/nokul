@@ -109,6 +109,7 @@ jobs:
       - run: bin/yarn install
       - run: bundle exec rake quality:rails
       - run: bundle exec rake security:all
+      - run: bin/yarn run lint
   deploy_develop:
     machine:
       enabled: true
