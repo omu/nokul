@@ -10,47 +10,34 @@ module Yoksis
     end
 
     # callbacks
-    # rubocop:disable Metrics/BlockLength
     after_perform do |job|
       user = job.arguments.first
       response = [@response].flatten
 
       response.each do |article|
         user.articles.create(
-          yoksis_id: article[:publishing_id],
+          yoksis_id: article[:publication_id],
           scope: article[:scope_id],
-          review: article[:referee_type_id],
+          review: article[:reviewer_id],
           index: article[:index_id],
           title: article[:name],
           authors: article[:authors].join(', '),
           number_of_authors: article[:number_of_author],
-          country: article[:country],
-          city: article[:city],
+          country: article[:country_id],
           journal: article[:journal_name],
-          language_of_publication: article[:publishing_language_name],
-          month: article[:month],
-          year: article[:year],
-          volume: article[:volume],
-          issue: article[:issue],
-          first_page: article[:first_page],
-          last_page: article[:last_page],
-          doi: article[:doi],
-          issn: article[:issn],
+          language_of_publication: article[:publication_language_name],
           access_type: article[:access_type_id],
-          access_link: article[:access_link],
-          discipline: article[:field],
           keyword: article[:keywords],
-          special_issue: article[:special_edition_id],
-          special_issue_name: article[:special_edition_name],
-          # sponsored_by: article[:sponsor]
-          author_id: article[:author_id],
-          last_update: article[:date_of_update],
-          status: article[:active_or_passive_id],
+          special_issue: article[:special_issue_id],
+          # sponsored_by: article[:sponsor],
+          status: article[:activity_id],
           type: article[:type_id],
-          incentive_point: article[:incentive_points]
+          **article.slice(
+            :city, :month, :year, :volume, :issue, :first_page, :last_page, :doi, :issn, :access_link,
+            :discipline, :special_issue_name, :author_id, :last_update, :incentive_point
+          )
         )
       end
     end
-    # rubocop:enable Metrics/BlockLength
   end
 end
