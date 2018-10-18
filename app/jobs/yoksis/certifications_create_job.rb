@@ -14,23 +14,18 @@ module Yoksis
       user = job.arguments.first
       response = [@response].flatten
 
-      response.each do |study|
+      response.each do |certification|
         user.certifications.create(
-          yoksis_id: study[:registry_id],
-          type: study[:type_id],
-          name: study[:name],
-          content: study[:content],
-          location: study[:place],
-          scope: study[:scope_id],
-          duration: study[:stint],
-          start_date: study[:date_of_start],
-          end_date: study[:date_of_end],
-          title: study[:title_name].try(:capitalize_all),
-          number_of_authors: study[:number_of_person],
-          city_and_country: "#{study[:country]}/#{study[:city]}",
-          last_update: study[:date_of_update],
-          incentive_point: study[:incentive_point],
-          status: study[:active_or_passive_id]
+          type: certification[:type_id],
+          scope: certification[:scope_id],
+          duration: certification[:stint],
+          title: certification[:title_name].try(:capitalize_all),
+          number_of_authors: certification[:number_of_person],
+          city_and_country: certification[:country],
+          status: certification[:activity_id],
+          **certification.slice(
+            :yoksis_id, :name, :content, :location, :start_date, :end_date, :last_update, :incentive_point
+          )
         )
       end
     end

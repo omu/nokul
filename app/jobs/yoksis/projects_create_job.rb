@@ -14,24 +14,17 @@ module Yoksis
       user = job.arguments.first
       response = [@response].flatten
 
-      response.each do |study|
+      response.each do |project|
         user.projects.create(
-          yoksis_id: study[:project_id],
-          name: study[:name],
-          subject: study[:subject],
-          status: study[:status_id],
-          start_date: study[:date_of_start],
-          end_date: study[:date_of_end],
-          budget: study[:budget],
-          duty: study[:location_name],
-          type: study[:type_name],
-          currency: study[:currency_name],
-          last_update: study[:date_of_update],
-          activity: study[:active_or_passive_id],
-          scope: study[:scope_id],
-          title: study[:title_name],
-          unit_id: study[:institution_id],
-          incentive_point: study[:incentive_points]
+          yoksis_id: project[:id],
+          status: project[:status_id],
+          duty: project[:location_name],
+          type: project[:type_name],
+          currency: project[:currency_name],
+          activity: project[:activity_id],
+          scope: project[:scope_id],
+          title: project[:title_name],
+          **project.slice(:name, :subject, :start_date, :end_date, :budget, :last_update, :unit_id, :incentive_point)
         )
       end
     end
