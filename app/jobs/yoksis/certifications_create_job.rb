@@ -18,13 +18,11 @@ module Yoksis
         user.certifications.create(
           type: certification[:type_id],
           scope: certification[:scope_id],
-          duration: certification[:stint],
           title: certification[:title_name].try(:capitalize_all),
-          number_of_authors: certification[:number_of_person],
-          city_and_country: certification[:country],
           status: certification[:activity_id],
           **certification.slice(
-            :yoksis_id, :name, :content, :location, :start_date, :end_date, :last_update, :incentive_point
+            :yoksis_id, :name, :content, :location, :start_date, :end_date, :last_update,
+            :incentive_point, :duration, :number_of_authors, :city_and_country
           )
         )
       end
