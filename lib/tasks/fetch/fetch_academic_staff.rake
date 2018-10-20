@@ -31,7 +31,7 @@ namespace :fetch do
 
         next unless user.save
 
-        progress_bar.increment
+        progress_bar&.increment
 
         title = Title.find_by(name: academic_staff[:kadro_unvan].capitalize_all)
         unit = Unit.find_by(yoksis_id: academic_staff[:birim_id])

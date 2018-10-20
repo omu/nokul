@@ -52,7 +52,9 @@ main() {
 		dokku redis:create $application-redis &>/dev/null || true
 		dokku redis:link $application-redis $application
 
-		dokku config:set $application RAILS_ENV=beta RAILS_LOG_TO_STDOUT=true RAILS_MASTER_KEY=$RAILS_MASTER_KEY
+		dokku docker-options:add $application build '--build-arg RAILS_ENV=beta'
+		dokku docker-options:add $application build '--build-arg RAILS_MASTER_KEY=$RAILS_MASTER_KEY'
+		dokku config:set $application RAILS_ENV=beta RAILS_MASTER_KEY=$RAILS_MASTER_KEY
 
 		dokku ssh-keys:remove op &>/dev/null || true
 	SCRIPT

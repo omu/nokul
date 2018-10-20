@@ -9,7 +9,7 @@ namespace :import do
     file.each do |city|
       country = Country.find_by(alpha_2_code: city['alpha_2_code'].split('-').first)
       country.cities.create(city)
-      progress_bar.increment
+      progress_bar&.increment
     end
   end
 end

@@ -30,6 +30,8 @@ class Unit < ApplicationRecord
   has_many :administrative_functions, through: :duties
   has_many :agendas, dependent: :nullify
   has_many :meetings, dependent: :nullify, class_name: 'CommitteeMeeting'
+  has_many :meeting_agendas, through: :meetings
+  has_many :decisions, through: :meeting_agendas, class_name: 'CommitteeDecision'
   has_many :courses, dependent: :nullify
   has_many :registration_documents, dependent: :destroy
   has_many :prospective_students, dependent: :destroy
@@ -63,4 +65,11 @@ class Unit < ApplicationRecord
       .or(institutes)
       .or(rectorships)
   }
+
+  scope :curriculumable, -> { coursable }
+
+  # custom methods
+  def subprograms
+    descendants.programs
+  end
 end

@@ -3,10 +3,14 @@
 module Committee
   class MeetingsController < ApplicationController
     before_action :set_committee
-    before_action :set_meeting, only: %i[edit update destroy]
+    before_action :set_meeting, only: %i[show edit update destroy]
 
     def index
       @meetings = @committee.meetings.order(year: :desc, meeting_no: :asc)
+    end
+
+    def show
+      @agendas = @meeting.meeting_agendas.includes(:decision, agenda: :agenda_type).order(:sequence_no)
     end
 
     def new
@@ -35,7 +39,7 @@ module Committee
     end
 
     def set_committee
-      @committee = Unit.find(params[:committee_id])
+      @committee = Unit.committees.find(params[:committee_id])
     end
 
     def set_meeting
@@ -43,7 +47,11 @@ module Committee
     end
 
     def meeting_params
-      params.require(:committee_meeting).permit(:meeting_no, :meeting_date)
+      params.require(:committee_meeting)
+            .permit(:meeting_no, :meeting_date,
+                    meeting_agendas_attributes: %i[
+                      id agenda_id committee_meeting_id sequence_no _destroy
+                    ])
     end
   end
 end
