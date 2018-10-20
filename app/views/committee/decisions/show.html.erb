@@ -1,0 +1,46 @@
+<div class='alert alert-light'>
+  <%= link_to_back(:back) %>
+</div>
+
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'file-o', text: "#{@committee.name} " + t('.decision_description') %>
+      </div>
+      <div class='card-body'>
+        <table class='table table-responsive-sm table-striped'>
+          <tbody>
+            <tr>
+              <th><%= t('.agenda_sequence_no') %></th>
+              <td><%= @agenda.sequence_no %></td>
+            </tr>
+            <tr>
+              <th><%= t('.agenda_description') %></th>
+              <td><%= @agenda.description %></td>
+            </tr>
+            <tr>
+              <th><%= t('.agenda_status') %></th>
+              <td><%= enum_t(@agenda, :status) %></td>
+            </tr>
+            <tr>
+              <th><%= t('.agenda_type') %></th>
+              <td><%= @agenda.agenda_type.name %></td>
+            </tr>
+            <tr>
+              <th><%= t('.decision_no')%></th>
+              <td><%= @agenda.decision.try(:decision_no) %></td>
+            </tr>
+            <tr>
+              <th><%= t('.decision_description') %></th>
+              <td><%= @agenda.decision.try(:description) %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-footer">
+        <%= link_to_edit(edit_committee_meeting_agenda_decision_path(@committee, @agenda), t('.update_decision')) %>
+      </div>
+    </div>
+  </div>
+</div>

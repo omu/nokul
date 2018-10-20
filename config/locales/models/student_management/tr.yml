@@ -39,14 +39,16 @@ tr:
         preference_order: Tercih Sırası
         registration_city: Nüfusa Kayıtlı Olduğu İl
         registration_district: Nüfusa Kayıtlı Olduğu İlçe
-        smart_search_placeholder: Aday öğrenci kimlik numarası, adı veya soyadı
+        smart_search_placeholder: Yerleşen öğrenci kimlik numarası, adı veya soyadı
         state_of_education: Öğrenim Durumu
         student_disability_type_id: Öğrenci Engel Türü
         student_entrance_type: Giriş Türü
         student_in_a_different_unit: Başka Bir Üniversite/Birimde Öğrenci
         top_student: Okul Birincisi
+        root_unit: Birim
         unit: Yerleştiği Program
         unproblematic: Sorunsuz
+        year: Yıl
     enums:
       prospective_student:
         additional_score:
@@ -69,9 +71,10 @@ tr:
     prospective_students:
       index:
         <<: *prospective_student_attributes
-        prospective_students: Aday Öğrenciler
+        prospective_students: Yerleşen Öğrenciler
       register:
         can_not_register: Kayıt Yapılamaz
+        success: Öğrenci başarıyla kaydedildi
         warning: Öğrenci kayıt edilemedi
       search:
         <<: *prospective_student_attributes
@@ -82,7 +85,7 @@ tr:
         last_update: Son Güncelleme
         other_information: Diğer Bilgileri
         permanently_register: Kesin Kayıt Yap
-        prospective_student: Aday Öğrenci
+        prospective_student: Yerleşen Öğrenci
         registered_to: '%{program} isimli programda kayıtlı.'
         temporarily_register: Geçici Kayıt Yap
       redirect_with_success:

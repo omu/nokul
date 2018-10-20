@@ -6,3 +6,7 @@ serhat_passive:
   user: serhat
   title: associate_professor
   active: false
+chief_john:
+  user: john
+  title: chief
+  active: true

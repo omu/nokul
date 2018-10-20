@@ -19,14 +19,14 @@ module DynamicSearch
 
       results = dynamic_where(params)
 
-      params[:term].present? ? results.search(params[:term]) : results
+      params[:term].present? ? results.reorder(nil).search(params[:term]) : results
     end
 
     private
 
     def dynamic_where(params)
       query = build_query_for_dynamic_where(params)
-      query.present? ? where(query) : current_scope
+      query.present? ? where(query) : (current_scope || all)
     end
 
     def build_query_for_dynamic_where(params)

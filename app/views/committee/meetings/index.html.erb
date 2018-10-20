@@ -1,5 +1,9 @@
 <div class='alert alert-light'>
   <%= link_to_new new_committee_meeting_path(@committee), t('.new_committee_meeting_link') %>
+  <span class="pull-right">
+    <%= link_to(fa_icon('tasks', text: t('.agendas')), committee_agendas_path(@committee),
+                class: 'btn btn-dark btn-sm') %>
+  </span>
 </div>
 
 <div class='row'>
@@ -16,6 +20,7 @@
               <th><%= t('.meeting_date') %></th>
               <th><%= t('.year') %></th>
               <th><%= t('.unit') %></th>
+              <th><%= t('.agendas_count') %></th>
               <th><%= t('actions') %></th>
             </tr>
           </thead>
@@ -26,7 +31,9 @@
                 <td><%= meeting.meeting_date %></td>
                 <td><%= meeting.year %></td>
                 <td><%= meeting.unit.name %></td>
+                <td><%= meeting.agendas.size %></td>
                 <td>
+                  <%= link_to_show(committee_meeting_path(@committee, meeting)) %>
                   <%= link_to_edit(edit_committee_meeting_path(@committee, meeting)) %>
                   <%= link_to_destroy(committee_meeting_path(@committee, meeting)) %>
                 </td>

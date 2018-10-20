@@ -9,3 +9,21 @@ two:
   unit: muhendislik_fakultesi_yonetim_kurulu
   agenda_type: three
   status: recent
+
+three:
+  description: 2018-2019 eğitim öğretim yılı bahar yarıyılı mazeret sınavına girmek isteyen öğrencilerin dilekçelerinin görüşülmesi.
+  unit: muhendislik_fakultesi_yonetim_kurulu
+  agenda_type: three
+  status: decided
+
+four:
+  description: 2018-2019 Eğitim öğretim yılı ders kayıtlanmaları hakkında alınan dilekçelerin görüşülmesi.
+  unit: muhendislik_fakultesi_yonetim_kurulu
+  agenda_type: three
+  status: recent
+
+five:
+  description: 2018-2019 eğitim öğretim yılı güz yarıyılı mazeret sınavına girmek isteyen öğrencilerin dilekçelerinin görüşülmesi.
+  unit: muhendislik_fakultesi_yonetim_kurulu
+  agenda_type: three
+  status: recent

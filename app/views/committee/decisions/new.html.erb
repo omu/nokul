@@ -1,0 +1,3 @@
+<%= render 'form', agenda: @agenda, decision: @decision,
+                   url: committee_meeting_agenda_decisions_path(@committee, @agenda),
+                   method: :post, form_title: t('.form_title') %>
