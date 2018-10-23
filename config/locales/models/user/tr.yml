@@ -89,7 +89,9 @@ tr:
       title: Ünvan
     identities:
       create_from_mernis: MERNİS'ten Oluştur
+      informal_identity: Diğer Kimliğiniz
       update_from_mernis: MERNİS'ten Güncelle
+      user_identity: Kullanıcı Kimliğiniz
     index:
       <<: *user_attributes
       addresses: Adres Bilgileri
