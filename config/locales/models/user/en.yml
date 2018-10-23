@@ -89,7 +89,9 @@ en:
       title: Title
     identities:
       create_from_mernis: Create from MERNIS
+      informal_identity: Informal Identity
       update_from_mernis: Update from MERNIS
+      user_identity: User Identity
     index:
       <<: *user_attributes
       addresses: Addresses

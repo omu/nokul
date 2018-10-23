@@ -10,10 +10,16 @@
     <div class="col-sm-6">
       <div class="card">
         <div class="card-header">
-          <div class="card-header-actions">
-            <%= link_to_edit(edit_user_identity_path(@user, identity)) %>
-            <%= link_to_destroy(user_identity_path(@user, identity)) %>
-          </div>
+          <%= fa_icon 'id-card' %>
+          <% if identity.formal? %>
+            <strong><%= identity.student_id.present? ? t('.student_identity') : t('.user_identity') %></strong>
+          <% else %>
+            <strong><%= t('.informal_identity') %></strong>
+            <div class="card-header-actions">
+              <%= link_to_edit(edit_user_identity_path(@user, identity)) %>
+              <%= link_to_destroy(user_identity_path(@user, identity)) %>
+            </div>
+          <% end %>
         </div>
 
         <div class="card-body">
