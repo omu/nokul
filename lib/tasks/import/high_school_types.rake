@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 namespace :import do
-  desc 'Imports high_school_types from db/static_data'
+  desc 'Imports high_school_types from yaml'
   task high_school_types: :environment do
-    ImportFromYml.parse('HighSchoolType')
+    Support.create_entities_from_yaml('HighSchoolType')
   end
 end
