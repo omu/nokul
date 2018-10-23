@@ -43,7 +43,7 @@ module Account
     end
 
     def set_address
-      @address = @user.addresses.find(params[:id])
+      @address = @user.addresses.informal.find(params[:id])
     end
 
     def set_elapsed_time
