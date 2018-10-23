@@ -29,6 +29,7 @@ module Xokul
         student_entrance_types
         student_grades
         student_grading_systems
+        student_punishment_types
         studentship_rights
         studentship_statuses
         unit_instruction_languages

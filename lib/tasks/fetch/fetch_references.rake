@@ -24,6 +24,7 @@ namespace :fetch do
       student_entrance_types: 'StudentEntranceType',
       student_grades: 'StudentGrade',
       student_grading_systems: 'StudentGradingSystem',
+      student_punishment_types: 'StudentPunishmentType',
       studentship_statuses: 'StudentStudentshipStatus'
     }.each do |action, klass|
       Rake::Task['fetch:reference'].invoke(action, klass)
