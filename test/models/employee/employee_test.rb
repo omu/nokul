@@ -69,4 +69,10 @@ class EmployeeTest < ActiveSupport::TestCase
     assert active.to_a.include?(employees(:serhat_active))
     assert_not active.to_a.include?(employees(:serhat_passive))
   end
+
+  # custom methods
+  test 'is an employee title academic' do
+    assert employees(:serhat_active).academic?
+    assert_not employees(:chief_john).academic?
+  end
 end

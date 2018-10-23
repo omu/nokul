@@ -14,10 +14,13 @@ class UnitTest < ActiveSupport::TestCase
     duties
     employees
     students
+    users
     positions
     administrative_functions
     agendas
     meetings
+    meeting_agendas
+    decisions
     courses
     registration_documents
     prospective_students
@@ -108,7 +111,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'coursable scope returns coursable units' do
-    assert_equal Unit.coursable.count.to_i,
+    assert_equal Unit.coursable.count,
                  Unit.departments.count +
                  Unit.faculties.count +
                  Unit.universities.count +
@@ -116,5 +119,21 @@ class UnitTest < ActiveSupport::TestCase
                  Unit.institutes.count +
                  Unit.rectorships.count
     assert_not_includes Unit.coursable, units(:uzem)
+  end
+
+  test 'curriculumable scope returns curriculumable units' do
+    assert_equal Unit.curriculumable.count.to_i,
+                 Unit.departments.count +
+                 Unit.faculties.count +
+                 Unit.universities.count +
+                 Unit.majors.count +
+                 Unit.institutes.count +
+                 Unit.rectorships.count
+    assert_not_includes Unit.curriculumable, units(:uzem)
+  end
+
+  test 'subprograms method returns a unit subprograms' do
+    assert_equal units(:omu).subprograms.count, units(:omu).descendants.programs.count
+    assert_not_includes units(:omu).subprograms, units(:uzem)
   end
 end

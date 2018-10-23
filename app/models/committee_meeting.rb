@@ -3,6 +3,10 @@
 class CommitteeMeeting < ApplicationRecord
   # relations
   belongs_to :unit
+  has_many :meeting_agendas, dependent: :destroy
+  has_many :agendas, through: :meeting_agendas
+  has_many :decisions, through: :meeting_agendas, class_name: 'CommitteeDecision'
+  accepts_nested_attributes_for :meeting_agendas, allow_destroy: true
 
   # validations
   validates :meeting_no, presence: true, uniqueness: { scope: %i[unit year] },

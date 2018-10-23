@@ -5,6 +5,8 @@ class Curriculum < ApplicationRecord
   include PgSearch
   include DynamicSearch
 
+  MAX_NUMBER_OF_SEMESTERS = 12
+
   pg_search_scope(
     :search,
     against: %i[name],
@@ -21,7 +23,9 @@ class Curriculum < ApplicationRecord
 
   # validations
   validates :name, presence: true, uniqueness: { scope: :unit_id }
-  validates :number_of_semesters, numericality: { greater_than: 0 }
+  validates :number_of_semesters, numericality: {
+    greater_than: 0, less_than_or_equal_to: MAX_NUMBER_OF_SEMESTERS
+  }
   validates :status, presence: true
 
   # enumerations

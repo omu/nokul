@@ -7,16 +7,20 @@ namespace :import do
     progress_bar = ProgressBar.spawn('Administrative Units', file.count)
 
     file.each do |unit|
-      unit['district_id'] = District.find_by(
-        name: unit['district_id']
-      ).id
-      unit['parent'] = Unit.find_by(
-        yoksis_id: unit['parent_yoksis_id']
-      )
-      unit['unit_status_id'] = UnitStatus.find_by(
-        name: 'Aktif'
-      ).id
-      Unit.create(unit.except('parent_yoksis_id'))
+      parent =
+        if unit['parent_yoksis_id']
+          Unit.find_by(yoksis_id: unit['parent_yoksis_id'])
+        else
+          Unit.find_by(detsis_id: unit['parent_detsis_id'])
+        end
+      existing_unit = Unit.find_by(detsis_id: unit['detsis_id'])
+
+      unit['district_id'] = District.find_by(name: unit['district_id']).id
+      unit['parent'] = parent
+      unit['unit_status_id'] = UnitStatus.find_by(name: 'Aktif').id
+      unit_params = unit.except('parent_yoksis_id', 'parent_detsis_id')
+
+      existing_unit.present? ? existing_unit.update(unit_params) : Unit.create(unit_params)
       progress_bar&.increment
     end
   end
