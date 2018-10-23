@@ -142,3 +142,14 @@ egitim_bilimleri_enstitusu:
   unit_instruction_type: turkish
   unit_instruction_type: normal_education
   unit_type: institute
+
+alman_dili_egitimi_dr:
+  name: Alman Dili Eğitimi (dr)
+  yoksis_id:  267762
+  duration: 4
+  district: atakum
+  unit_status: active
+  unit_instruction_language: turkish
+  unit_instruction_type: normal_education
+  unit_type: program
+  ancestry: <%= ActiveRecord::FixtureSet.identify(:egitim_bilimleri_enstitusu) %>

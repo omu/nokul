@@ -1,0 +1,49 @@
+<div class='row'>
+  <div class='col-sm-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'tasks' %>
+        <strong><%= form_title %></strong>
+      </div>
+      <div class='card-body'>
+        <%= simple_form_for(decision, url: url, method: method ) do |f| %>
+          <div class='row'>
+            <div class='form-group col-sm-12'>
+              <%= f.error_notification %>
+              <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+            </div>
+            <table class='table table-responsive-sm table-striped'>
+              <tr>
+                <th><%= t('.unit') %></th>
+                <td><%= @agenda.unit.name %></td>
+              </tr>
+              <tr>
+                <th><%= t('.agenda_sequence_no') %></th>
+                <td><%= @agenda.sequence_no %></td>
+              </tr>
+              <tr>
+                <th><%= t('.agenda_description') %></th>
+                <td><%= @agenda.description %></td>
+              </tr>
+              <tr>
+                <th><%= t('.agenda_status') %></th>
+                <td><%= enum_t(@agenda, :status) %></td>
+              </tr>
+              <tr>
+                <th><%= t('.agenda_type') %></th>
+                <td><%= @agenda.agenda_type.name %></td>
+              </tr>
+            </table>
+            <div class="form-group col-sm-12">
+              <%= f.input :description, required: true %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
+              <%= link_to_back(:back) %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -4,22 +4,53 @@ tr:
       agenda: &agenda_attributes
         agenda_file: Gündem Dosyası
         agenda_type_id: Gündem Türü
-        description: Gündem Açıklaması
+        description: Gündem İçeriği
         status: Gündem Durumu
       agenda_type: &agenda_type_attributes
         name: Gündem Türü Adı
+      committee_decision:
+        description: Karar İçeriği
+        decision_no: Karar No
       committee_meeting: &committee_meeting_attributes
         meeting_date: Toplantı Tarihi
         meeting_no: Toplantı No
       dashboard:
         name: Kurul / Komisyon Adı
+      meeting_agenda:
+        agenda_id: Gündem
+        sequence_no: Sıra No
     enums:
       agenda:
-        statuses:
+        statuses: &agenda_statuses
           decided: Karar Verildi
           delayed: Ertelendi
           recent: Yeni
+      meeting_agenda:
+        statuses: *agenda_statuses
   committee:
+    agendas:
+      create:
+        success: Gündem başarıyla oluşturuldu.
+      destroy:
+        success: Gündem başarıyla silindi.
+        warning: Gündem silinemedi!
+      edit:
+        form_title: Gündem Güncelle
+      index:
+        <<: *agenda_attributes
+        agenda_type: Gündem Türü
+        card_header: Gündemler
+        new_agenda_link: Yeni Bir Gündem Oluştur
+        unit: Birim
+        meetings: Toplantılar
+      new:
+        form_title: Gündem Oluştur
+      search:
+        agenda_type_id: Gündem Türü
+        smart_search_placeholder: Gündem Açıklaması
+        status: Gündem Durumu
+      update:
+        success: Gündem başarıyla güncellendi.
     agenda_types:
       create:
         success: Gündem Türü başarıyla oluşturuldu.
@@ -36,48 +67,6 @@ tr:
         form_title: Gündem Türü Oluştur
       update:
         success: Gündem Türü başarıyla güncellendi.
-    agendas:
-      create:
-        success: Gündem başarıyla oluşturuldu.
-      destroy:
-        success: Gündem başarıyla silindi.
-        warning: Gündem silinemedi!
-      edit:
-        form_title: Gündem Güncelle
-      index:
-        <<: *agenda_attributes
-        agenda_type: Gündem Türü
-        card_header: Gündemler
-        new_agenda_link: Yeni Bir Gündem Oluştur
-        unit: Birim
-      new:
-        form_title: Gündem Oluştur
-      search:
-        agenda_type_id: Gündem Türü
-        smart_search_placeholder: Gündem Açıklaması
-        status: Gündem Durumu
-      update:
-        success: Gündem başarıyla güncellendi.
-    meetings:
-      create:
-        success: Toplantı başarıyla oluşturuldu.
-      destroy:
-        success: Toplantı başarıyla silindi.
-        warning: Toplantı silinemedi!
-      edit:
-        form_title: Toplantı Güncelle
-      index:
-        card_header: Toplantılar
-        meeting_date: Toplantı Tarihi
-        meeting_no: Toplantı No
-        new_committee_meeting_link: Yeni Bir Toplantı Oluştur
-        unit: Birim
-        year: Yıl
-      new:
-        <<: *committee_meeting_attributes
-        form_title: Toplantı Oluştur
-      update:
-        success: Toplantı başarıyla güncellendi.
     dashboard:
       index:
         agendas: Gündemler
@@ -90,13 +79,66 @@ tr:
         unit_status: Birim Durumu
         unit_type: Birim Türü
         yoksis_id: YOKSIS ID
-      show:
-        actions: İşlemler
-        agenda_card_header: Gündemler
+    decisions:
+      create:
+        success: Kurul kararı başarıyla oluşturuldu.
+      edit:
+        form_title: Kurul Kararı Güncelle
+      form: &agendas
         agenda_type: Gündem Türü
-        description: Açıklama
-        status: Gündem Durumu
-        unit: Üst Birim
+        agenda_description: Gündem İçeriği
+        agenda_sequence_no: Gündem Sıra No
+        agenda_status: Gündem Durumu
+        unit: Birim
+      new:
+        form_title: Kurul Kararı Oluştur
+      show:
+        <<: *agendas
+        decision_description: Karar İçeriği
+        decision_no: Karar No
+        update_decision: Karar Güncelle
+      update:
+        success: Kurul kararı başarıyla güncellendi.
+    meetings:
+      create:
+        success: Toplantı başarıyla oluşturuldu.
+      destroy:
+        success: Toplantı başarıyla silindi.
+        warning: Toplantı silinemedi!
+      edit:
+        form_title: Toplantı Güncelle
+      form:
+        agendas: Gündemler
+        new_agenda_link: Gündem Ekle
+      index:
+        agendas: Gündemler
+        agendas_count: Gündem Sayısı
+        card_header: Toplantılar
+        meeting_date: Toplantı Tarihi
+        meeting_no: Toplantı No
+        new_committee_meeting_link: Yeni Bir Toplantı Oluştur
+        unit: Birim
+        year: Yıl
+      new:
+        <<: *committee_meeting_attributes
+        form_title: Toplantı Oluştur
+      show:
+        agendas: Gündemler
+        agenda_type: Gündem Türü
+        create_decision: Karar Ekle
+        decision_description: Karar İçeriği
+        decision_no: Karar No
+        description: Gündem İçeriği
+        destroy_decision: Karar Sil
+        meeting_date: Toplantı Tarihi
+        meeting_no: Toplantı No
+        sequence_no: Sıra No
+        show_decision: Karar Görüntüle
+        status: Durum
+        update_decision: Karar Güncelle
+        year: Yıl
+      update:
+        success: Toplantı başarıyla güncellendi.
   helpers:
     submit:
       agenda:
@@ -105,6 +147,9 @@ tr:
       agenda_type:
         create: Gündem Türü Oluştur
         update: Gündem Türü Güncelle
+      committee_decision:
+        create: Karar Oluştur
+        update: Karar Güncelle
       committee_meeting:
         create: Toplantı Oluştur
         update: Toplantı Güncelle

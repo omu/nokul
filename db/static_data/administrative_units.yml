@@ -11,7 +11,7 @@
 -
   name: Alaçam Meslek Yüksekokulu Sekreterliği
   detsis_id: 80234327
-  parent_yoksis_id: 68459231
+  parent_detsis_id: 68459231
   district_id: Alaçam
 -
   name: Ulaştırma Hizmetleri Bölüm Başkanlığı
@@ -26,17 +26,17 @@
 -
   name: Alaçam Meslek Yüksekokulu Disiplin Kurulu
   detsis_id: 67787986
-  parent_yoksis_id: 68459231
+  parent_detsis_id: 68459231
   district_id: Alaçam
 -
   name: Alaçam Meslek Yüksekokulu Kurulu
   detsis_id: 63300708
-  parent_yoksis_id: 68459231
+  parent_detsis_id: 68459231
   district_id: Alaçam
 -
   name: Alaçam Meslek Yüksekokulu Yönetim Kurulu
   detsis_id: 49709020
-  parent_yoksis_id: 68459231
+  parent_detsis_id: 68459231
   district_id: Alaçam
 -
   name: Bafra Meslek Yüksekokulu Müdürlüğü
@@ -51,7 +51,7 @@
 -
   name: Bafra Meslek Yüksekokulu Sekreterliği
   detsis_id: 63395826
-  parent_yoksis_id: 50713553
+  parent_detsis_id: 50713553
   district_id: Bafra
 -
   name: Muhasebe Ve Vergi Bölüm Başkanlığı
@@ -66,17 +66,17 @@
 -
   name: Bafra Meslek Yüksekokulu Disiplin Kurulu
   detsis_id: 65871243
-  parent_yoksis_id: 50713553
+  parent_detsis_id: 50713553
   district_id: Bafra
 -
   name: Bafra Meslek Yüksekokulu Kurulu
   detsis_id: 14895932
-  parent_yoksis_id: 50713553
+  parent_detsis_id: 50713553
   district_id: Bafra
 -
   name: Bafra Meslek Yüksekokulu Yönetim Kurulu
   detsis_id: 58151099
-  parent_yoksis_id: 50713553
+  parent_detsis_id: 50713553
   district_id: Bafra
 -
   name: Bafra Turizm Meslek Yüksekokulu Müdürlüğü
@@ -86,7 +86,7 @@
 -
   name: Bafra Turizm Meslek Yüksekokulu Sekreterliği
   detsis_id: 94861059
-  parent_yoksis_id: 27516806
+  parent_detsis_id: 27516806
   district_id: Bafra
 -
   name: Otel, Lokanta Ve İkram Hizmetleri Bölüm Başkanlığı
@@ -106,7 +106,7 @@
 -
   name: Turizm Fakülte Sekreterliği
   detsis_id: 43784936
-  parent_yoksis_id: 37195700
+  parent_detsis_id: 37195700
   district_id: Bafra
 -
   name: Turizm İşletmeciliği Bölüm Başkanlığı
@@ -121,17 +121,17 @@
 -
   name: Turizm Fakülte Disiplin Kurulu
   detsis_id: 58508002
-  parent_yoksis_id: 37195700
+  parent_detsis_id: 37195700
   district_id: Bafra
 -
   name: Turizm Fakülte Kurulu
   detsis_id: 61878927
-  parent_yoksis_id: 37195700
+  parent_detsis_id: 37195700
   district_id: Bafra
 -
   name: Turizm Fakülte Yönetim Kurulu
   detsis_id: 36987262
-  parent_yoksis_id: 37195700
+  parent_detsis_id: 37195700
   district_id: Bafra
 -
   name: Adalet Meslek Yüksekokulu Müdürlüğü
@@ -151,17 +151,17 @@
 -
   name: Adalet Meslek Yüksekokulu Disiplin Kurulu
   detsis_id: 70808284
-  parent_yoksis_id: 15086663
+  parent_detsis_id: 15086663
   district_id: Çarşamba
 -
   name: Adalet Meslek Yüksekokulu Kurulu
   detsis_id: 25420189
-  parent_yoksis_id: 15086663
+  parent_detsis_id: 15086663
   district_id: Çarşamba
 -
   name: Adalet Meslek Yüksekokulu Yönetim Kurulu
   detsis_id: 37724678
-  parent_yoksis_id: 15086663
+  parent_detsis_id: 15086663
   district_id: Çarşamba
 -
   name: Ali Fuad Başgil Hukuk Fakültesi Dekanlığı
@@ -171,7 +171,7 @@
 -
   name: Ali Fuat Başgil Hukuk Fakültesi Sekreterliği
   detsis_id: 47375421
-  parent_yoksis_id: 80803429
+  parent_detsis_id: 80803429
   district_id: Çarşamba
 -
   name: Kamu Hukuku Bölüm Başkanlığı
@@ -241,17 +241,17 @@
 -
   name: Ali Fuat Başgil Hukuk Fakültesi Disiplin Kurulu
   detsis_id: 89389677
-  parent_yoksis_id: 80803429
+  parent_detsis_id: 80803429
   district_id: Çarşamba
 -
   name: Ali Fuat Başgil Hukuk Fakültesi Kurulu
   detsis_id: 50698085
-  parent_yoksis_id: 80803429
+  parent_detsis_id: 80803429
   district_id: Çarşamba
 -
   name: Ali Fuat Başgil Hukuk Fakültesi Yönetim Kurulu
   detsis_id: 36961307
-  parent_yoksis_id: 80803429
+  parent_detsis_id: 80803429
   district_id: Çarşamba
 -
   name: Çarşamba İnsan Ve Toplum Bilimleri Fakültesi Dekanlığı
@@ -261,22 +261,22 @@
 -
   name: Çarşamba İnsan Ve Toplum Bilimleri Fakülte Sekreterliği
   detsis_id: 19904871
-  parent_yoksis_id: 93417155
+  parent_detsis_id: 93417155
   district_id: Çarşamba
 -
   name: Çarşamba İnsan Ve Toplum Bilimleri Fakülte Disiplin Kurulu
   detsis_id: 71370999
-  parent_yoksis_id: 93417155
+  parent_detsis_id: 93417155
   district_id: Çarşamba
 -
   name: Çarşamba İnsan Ve Toplum Bilimleri Fakülte Kurulu
   detsis_id: 90739052
-  parent_yoksis_id: 93417155
+  parent_detsis_id: 93417155
   district_id: Çarşamba
 -
   name: Çarşamba İnsan Ve Toplum Bilimleri Fakülte Yönetim Kurulu
   detsis_id: 19171612
-  parent_yoksis_id: 93417155
+  parent_detsis_id: 93417155
   district_id: Çarşamba
 -
   name: Çarşamba Ticaret Borsası Meslek Yüksekokulu Müdürlüğü
@@ -306,7 +306,7 @@
 -
   name: Çarşamba Ticaret Borsası Meslek Yüksekokulu Sekreterliği
   detsis_id: 87953753
-  parent_yoksis_id: 21071378
+  parent_detsis_id: 21071378
   district_id: Çarşamba
 -
   name: Muhasebe Ve Vergi Bölüm Başkanlığı
@@ -321,17 +321,17 @@
 -
   name: Çarşamba Ticaret Borsası Meslek Yüksekokulu Disiplin Kurulu
   detsis_id: 35949938
-  parent_yoksis_id: 21071378
+  parent_detsis_id: 21071378
   district_id: Çarşamba
 -
   name: Çarşamba Ticaret Borsası Meslek Yüksekokulu Kurulu
   detsis_id: 65993268
-  parent_yoksis_id: 21071378
+  parent_detsis_id: 21071378
   district_id: Çarşamba
 -
   name: Çarşamba Ticaret Borsası Meslek Yüksekokulu Yönetim Kurulu
   detsis_id: 32165550
-  parent_yoksis_id: 21071378
+  parent_detsis_id: 21071378
   district_id: Çarşamba
 -
   name: İletişim Fakültesi Dekanlığı
@@ -341,7 +341,7 @@
 -
   name: İletişim Fakültesi Sekreterliği
   detsis_id: 50925799
-  parent_yoksis_id: 34806956
+  parent_detsis_id: 34806956
   district_id: Çarşamba
 -
   name: Gazetecilik Bölüm Başkanlığı
@@ -366,17 +366,17 @@
 -
   name: İletişim Fakülte Disiplin Kurulu
   detsis_id: 55547789
-  parent_yoksis_id: 34806956
+  parent_detsis_id: 34806956
   district_id: Çarşamba
 -
   name: İletişim Fakülte Kurulu
   detsis_id: 70731287
-  parent_yoksis_id: 34806956
+  parent_detsis_id: 34806956
   district_id: Çarşamba
 -
   name: İletişim Fakülte Yönetim Kurulu
   detsis_id: 51368560
-  parent_yoksis_id: 34806956
+  parent_detsis_id: 34806956
   district_id: Çarşamba
 -
   name: Havza Meslek Yüksekokulu Müdürlüğü
@@ -396,7 +396,7 @@
 -
   name: Havza Meslek Yüksekokulu Sekreterliği
   detsis_id: 43413601
-  parent_yoksis_id: 78645283
+  parent_detsis_id: 78645283
   district_id: Havza
 -
   name: Mülkiyet Koruma Ve Güvenlik Bölüm Başkanlığı
@@ -426,17 +426,17 @@
 -
   name: Havza Meslek Yüksekokulu Disiplin Kurulu
   detsis_id: 12896414
-  parent_yoksis_id: 78645283
+  parent_detsis_id: 78645283
   district_id: Havza
 -
   name: Havza Meslek Yüksekokulu Kurulu
   detsis_id: 28348975
-  parent_yoksis_id: 78645283
+  parent_detsis_id: 78645283
   district_id: Havza
 -
   name: Havza Meslek Yüksekokulu Yönetim Kurulu
   detsis_id: 45728884
-  parent_yoksis_id: 78645283
+  parent_detsis_id: 78645283
   district_id: Havza
 -
   name: Terme Meslek Yüksekokulu Müdürlüğü
@@ -456,7 +456,7 @@
 -
   name: Terme Meslek Yüksekokulu Sekreterliği
   detsis_id: 89716816
-  parent_yoksis_id: 90709859
+  parent_detsis_id: 90709859
   district_id: Terme
 -
   name: Muhasebe Ve Vergi Bölüm Başkanlığı
@@ -471,17 +471,17 @@
 -
   name: Terme Meslek Yüksekokulu Disiplin Kurulu
   detsis_id: 37225687
-  parent_yoksis_id: 36024139
+  parent_detsis_id: 36024139
   district_id: Terme
 -
   name: Terme Meslek Yüksekokulu Kurulu
   detsis_id: 86846638
-  parent_yoksis_id: 36024139
+  parent_detsis_id: 36024139
   district_id: Terme
 -
   name: Terme Meslek Yüksekokulu Yönetim Kurulu
   detsis_id: 28679253
-  parent_yoksis_id: 36024139
+  parent_detsis_id: 36024139
   district_id: Terme
 -
   name: Vezirköprü Meslek Yüksekokulu Müdürlüğü
@@ -506,7 +506,7 @@
 -
   name: Vezirköprü Meslek Yüksekokulu Sekreterliği
   detsis_id: 48974914
-  parent_yoksis_id: 61206311
+  parent_detsis_id: 61206311
   district_id: Vezirköprü
 -
   name: Muhasebe Ve Vergi Bölüm Başkanlığı
@@ -519,14 +519,19 @@
   parent_yoksis_id: 207454
   district_id: Vezirköprü
 -
-  name: Vezirköprü Meslek Yüksekokulu Kurulu
+  name: Vezirköprü Meslek Yüksekokulu Disiplin Kurulu
   detsis_id: 46275906
-  parent_yoksis_id: 61206311
+  parent_detsis_id: 61206311
+  district_id: Vezirköprü
+-
+  name: Vezirköprü Meslek Yüksekokulu Kurulu
+  detsis_id: 19993096
+  parent_detsis_id: 61206311
   district_id: Vezirköprü
 -
   name: Vezirköprü Meslek Yüksekokulu Yönetim Kurulu
   detsis_id: 43583466
-  parent_yoksis_id: 61206311
+  parent_detsis_id: 61206311
   district_id: Vezirköprü
 -
   name: Havacılık Ve Uzay Teknolojileri Uygulama Araştırma Merkezi Müdürlüğü
@@ -571,7 +576,7 @@
 -
   name: Yeşilyurt Demir Çelik Meslek Yüksekokulu Sekreterliği
   detsis_id: 37077418
-  parent_yoksis_id: 30423168
+  parent_detsis_id: 30423168
   district_id: Tekkeköy
 -
   name: Motorlu Araçlar Ve Ulaştırma Teknolojileri Bölüm Başkanlığı
@@ -581,17 +586,17 @@
 -
   name: Yeşilyurt Demir Çelik Meslek Yüksekokulu Disiplin Kurulu
   detsis_id: 55101226
-  parent_yoksis_id: 30423168
+  parent_detsis_id: 30423168
   district_id: Tekkeköy
 -
   name: Yeşilyurt Demir Çelik Meslek Yüksekokulu Kurulu
   detsis_id: 75674136
-  parent_yoksis_id: 30423168
+  parent_detsis_id: 30423168
   district_id: Tekkeköy
 -
   name: Yeşilyurt Demir Çelik Meslek Yüksekokulu Yönetim Kurulu
   detsis_id: 66604919
-  parent_yoksis_id: 30423168
+  parent_detsis_id: 30423168
   district_id: Tekkeköy
 -
   name: Atatürk İlkeleri Ve İnkılap Tarihi Araştırma Ve Uygulama Merkezi Müdürlüğü
@@ -616,7 +621,7 @@
 -
   name: Yazılım Talepleri Değerlendirme Komisyonu
   detsis_id: 35354231
-  parent_yoksis_id: 38418139
+  parent_detsis_id: 38418139
   district_id: Atakum
 -
   name: Bölgesel Kalkınma Ve Stratejik Araştırmalar Uygulama Ve Araştırma Merkezi Müdürlüğü
@@ -646,12 +651,12 @@
 -
   name: Ağız Ve Diş Sağlığı Eğitim Ve Araştırma Hastanesi Başhekimliği
   detsis_id: 99439659
-  parent_yoksis_id: 45458912
+  parent_detsis_id: 45458912
   district_id: Atakum
 -
   name: Diş Hekimliği Fakültesi Sekreterliği
   detsis_id: 60761909
-  parent_yoksis_id: 45458912
+  parent_detsis_id: 45458912
   district_id: Atakum
 -
   name: Klinik Bilimler Bölüm Başkanlığı
@@ -691,17 +696,17 @@
 -
   name: Diş Hekimliği Fakülte Disiplin Kurulu
   detsis_id: 64223946
-  parent_yoksis_id: 45458912
+  parent_detsis_id: 45458912
   district_id: Atakum
 -
   name: Diş Hekimliği Fakülte Kurulu
   detsis_id: 76916655
-  parent_yoksis_id: 45458912
+  parent_detsis_id: 45458912
   district_id: Atakum
 -
   name: Diş Hekimliği Fakülte Yönetim Kurulu
   detsis_id: 5618961
-  parent_yoksis_id: 45458912
+  parent_detsis_id: 45458912
   district_id: Atakum
 -
   name: Eğitim Bilimleri Enstitüsü Müdürlüğü
@@ -711,22 +716,22 @@
 -
   name: Eğitim Bilimleri Enstitü Sekreterliği
   detsis_id: 27148102
-  parent_yoksis_id: 42301062
+  parent_detsis_id: 42301062
   district_id: Atakum
 -
   name: Eğitim Bilimleri Enstitü Disiplin Kurulu
   detsis_id: 60162193
-  parent_yoksis_id: 42301062
+  parent_detsis_id: 42301062
   district_id: Atakum
 -
   name: Eğitim Bilimleri Enstitü Kurulu
   detsis_id: 39971369
-  parent_yoksis_id: 42301062
+  parent_detsis_id: 42301062
   district_id: Atakum
 -
   name: Eğitim Bilimleri Enstitü Yönetim Kurulu
   detsis_id: 90709856
-  parent_yoksis_id: 42301062
+  parent_detsis_id: 42301062
   district_id: Atakum
 -
   name: Eğitim Fakültesi Dekanlığı
@@ -776,7 +781,7 @@
 -
   name: Eğitim Fakültesi Sekreterliği
   detsis_id: 97972159
-  parent_yoksis_id: 98725097
+  parent_detsis_id: 98725097
   district_id: Atakum
 -
   name: Güzel Sanatlar Eğitimi Bölüm Başkanlığı
@@ -901,17 +906,17 @@
 -
   name: Eğitim Fakültesi Disiplin Kurulu
   detsis_id: 86432742
-  parent_yoksis_id: 98725097
+  parent_detsis_id: 98725097
   district_id: Atakum
 -
   name: Eğitim Fakültesi Kurulu
   detsis_id: 55818690
-  parent_yoksis_id: 98725097
+  parent_detsis_id: 98725097
   district_id: Atakum
 -
   name: Eğitim Fakültesi Yönetim Kurulu
   detsis_id: 47695088
-  parent_yoksis_id: 98725097
+  parent_detsis_id: 98725097
   district_id: Atakum
 -
   name: Erasmus Değişim Programı Koordinatörlüğü
@@ -931,22 +936,22 @@
 -
   name: Fen Bilimleri Enstitü Sekreterliği
   detsis_id: 75119924
-  parent_yoksis_id: 43847920
+  parent_detsis_id: 43847920
   district_id: Atakum
 -
   name: Fen Bilimleri Enstitü Disiplin Kurulu
   detsis_id: 96900798
-  parent_yoksis_id: 43847920
+  parent_detsis_id: 43847920
   district_id: Atakum
 -
   name: Fen Bilimleri Enstitü Kurulu
   detsis_id: 11805131
-  parent_yoksis_id: 43847920
+  parent_detsis_id: 43847920
   district_id: Atakum
 -
   name: Fen Bilimleri Enstitü Yönetim Kurulu
   detsis_id: 17608650
-  parent_yoksis_id: 43847920
+  parent_detsis_id: 43847920
   district_id: Atakum
 -
   name: Fen Edebiyat Fakültesi Dekanlığı
@@ -1036,7 +1041,7 @@
 -
   name: Fen Edebiyat Fakülte Sekreterliği
   detsis_id: 67917440
-  parent_yoksis_id: 41130367
+  parent_detsis_id: 41130367
   district_id: Atakum
 -
   name: Felsefe Bölüm Başkanlığı
@@ -1141,7 +1146,7 @@
 -
   name: Atom Ve Molekül Fiziği Anabilim Dalı Başkanlığı
   detsis_id: 70813888
-  parent_yoksis_id: 122018
+  parent_detsis_id: 71950693
   district_id: Atakum
 -
   name: Biyokimya Anabilim Dalı Başkanlığı
@@ -1341,17 +1346,17 @@
 -
   name: Fen Edebiyat Fakülte Disiplin Kurulu
   detsis_id: 68341997
-  parent_yoksis_id: 41130367
+  parent_detsis_id: 41130367
   district_id: Atakum
 -
   name: Fen Edebiyat Fakülte Kurulu
   detsis_id: 20824451
-  parent_yoksis_id: 41130367
+  parent_detsis_id: 41130367
   district_id: Atakum
 -
   name: Fen Edebiyat Fakülte Yönetim Kurulu
   detsis_id: 14753958
-  parent_yoksis_id: 41130367
+  parent_detsis_id: 41130367
   district_id: Atakum
 -
   name: Gelişimsel Eğitim Araştırma Uygulama Merkezi Müdürlüğü
@@ -1371,7 +1376,7 @@
 -
   name: Güzel Sanatlar Enstitü Sekreterliği
   detsis_id: 64024110
-  parent_yoksis_id: 28913907
+  parent_detsis_id: 28913907
   district_id: Atakum
 -
   name: Tıbbi Resimleme Anabilim Dalı Başkanlığı
@@ -1381,17 +1386,17 @@
 -
   name: Güzel Sanatlar Enstitü Disiplin Kurulu
   detsis_id: 94725245
-  parent_yoksis_id: 28913907
+  parent_detsis_id: 28913907
   district_id: Atakum
 -
   name: Güzel Sanatlar Enstitü Kurulu
   detsis_id: 86004387
-  parent_yoksis_id: 28913907
+  parent_detsis_id: 28913907
   district_id: Atakum
 -
   name: Güzel Sanatlar Enstitü Yönetim Kurulu
   detsis_id: 28791890
-  parent_yoksis_id: 28913907
+  parent_detsis_id: 28913907
   district_id: Atakum
 -
   name: Hukuk Müşavirliği
@@ -1496,17 +1501,17 @@
 -
   name: İktisadi Ve İdari Bilimler Fakülte Disiplin Kurulu
   detsis_id: 58745977
-  parent_yoksis_id: 50569681
+  parent_detsis_id: 50569681
   district_id: Atakum
 -
   name: İktisadi Ve İdari Bilimler Fakülte Kurulu
   detsis_id: 58611596
-  parent_yoksis_id: 50569681
+  parent_detsis_id: 50569681
   district_id: Atakum
 -
   name: İktisadi Ve İdari Bilimler Fakülte Yönetim Kurulu
   detsis_id: 81660084
-  parent_yoksis_id: 50569681
+  parent_detsis_id: 50569681
   district_id: Atakum
 -
   name: İlahiyat Fakültesi Dekanlığı
@@ -1516,7 +1521,7 @@
 -
   name: İlahiyat Fakülte Sekreterliği
   detsis_id: 10986835
-  parent_yoksis_id: 79586685
+  parent_detsis_id: 79586685
   district_id: Atakum
 -
   name: Felsefe Ve Din Bilimleri Bölüm Başkanlığı
@@ -1646,17 +1651,17 @@
 -
   name: İlahiyat Fakülte Disiplin Kurulu
   detsis_id: 76774637
-  parent_yoksis_id: 79586685
+  parent_detsis_id: 79586685
   district_id: Atakum
 -
   name: İlahiyat Fakülte Kurulu
   detsis_id: 90949410
-  parent_yoksis_id: 79586685
+  parent_detsis_id: 79586685
   district_id: Atakum
 -
   name: İlahiyat Fakülte Yönetim Kurulu
   detsis_id: 55929602
-  parent_yoksis_id: 79586685
+  parent_detsis_id: 79586685
   district_id: Atakum
 -
   name: İş Sağlığı Ve Güvenliği, Meslekhastalıkları Uygulama Ve Araştırma Merkezi Müdürlüğü
@@ -1791,7 +1796,7 @@
 -
   name: Mühendislik Fakülte Sekreterliği
   detsis_id: 45476048
-  parent_yoksis_id: 81181891
+  parent_detsis_id: 81181891
   district_id: Atakum
 -
   name: Gıda Mühendisliği Bölüm Başkanlığı
@@ -1936,17 +1941,17 @@
 -
   name: Mühendislik Fakülte Disiplin Kurulu
   detsis_id: 35273770
-  parent_yoksis_id: 81181891
+  parent_detsis_id: 81181891
   district_id: Atakum
 -
   name: Mühendislik Fakülte Kurulu
   detsis_id: 43335087
-  parent_yoksis_id: 81181891
+  parent_detsis_id: 81181891
   district_id: Atakum
 -
   name: Mühendislik Fakülte Yönetim Kurulu
   detsis_id: 96980227
-  parent_yoksis_id: 81181891
+  parent_detsis_id: 81181891
   district_id: Atakum
 -
   name: Okul Öncesi Eğitimi Uygulama Ve Araştırma Merkezi Müdürlüğü
@@ -1996,17 +2001,17 @@
 -
   name: Sağlık Bilimleri Enstitü Disiplin Kurulu
   detsis_id: 29283638
-  parent_yoksis_id: 93771576
+  parent_detsis_id: 93771576
   district_id: Atakum
 -
   name: Sağlık Bilimleri Enstitü Kurulu
   detsis_id: 99323623
-  parent_yoksis_id: 93771576
+  parent_detsis_id: 93771576
   district_id: Atakum
 -
   name: Sağlık Bilimleri Enstitü Yönetim Kurulu
   detsis_id: 99576486
-  parent_yoksis_id: 93771576
+  parent_detsis_id: 93771576
   district_id: Atakum
 -
   name: Sağlık Bilimleri Fakültesi Dekanlığı
@@ -2061,7 +2066,7 @@
 -
   name: Sağlık Bilimleri Fakülte Sekreterliği
   detsis_id: 82204150
-  parent_yoksis_id: 28050591
+  parent_detsis_id: 28050591
   district_id: Atakum
 -
   name: Hemşirelik Bölüm Başkanlığı
@@ -2131,17 +2136,17 @@
 -
   name: Sağlık Bilimleri Fakülte Disiplin Kurulu
   detsis_id: 30104911
-  parent_yoksis_id: 28050591
+  parent_detsis_id: 28050591
   district_id: Atakum
 -
   name: Sağlık Bilimleri Fakülte Kurulu
   detsis_id: 78048140
-  parent_yoksis_id: 28050591
+  parent_detsis_id: 28050591
   district_id: Atakum
 -
   name: Sağlık Bilimleri Fakülte Yönetim Kurulu
   detsis_id: 29075217
-  parent_yoksis_id: 28050591
+  parent_detsis_id: 28050591
   district_id: Atakum
 -
   name: Sağlık Hizmetleri Meslek Yüksekokulu Müdürlüğü
@@ -2156,7 +2161,7 @@
 -
   name: Sağlık Hizmetleri Meslek Yüksekokulu Sekreterliği
   detsis_id: 90501840
-  parent_yoksis_id: 45664456
+  parent_detsis_id: 45664456
   district_id: Atakum
 -
   name: Sağlık Bakım Hizmetleri Bölüm Başkanlığı
@@ -2171,17 +2176,17 @@
 -
   name: Sağlık Hizmetleri Meslek Yüksekokulu Disiplin Kurulu
   detsis_id: 81688174
-  parent_yoksis_id: 45664456
+  parent_detsis_id: 45664456
   district_id: Atakum
 -
   name: Sağlık Hizmetleri Meslek Yüksekokulu Kurulu
   detsis_id: 69429532
-  parent_yoksis_id: 45664456
+  parent_detsis_id: 45664456
   district_id: Atakum
 -
   name: Sağlık Hizmetleri Meslek Yüksekokulu Disiplin Kurulu
   detsis_id: 60577894
-  parent_yoksis_id: 45664456
+  parent_detsis_id: 45664456
   district_id: Atakum
 -
   name: Sağlık Kültür Ve Spor Daire Başkanlığı
@@ -2191,37 +2196,37 @@
 -
   name: Güzel Sanatlar Kampüsü Şube Müdürlüğü
   detsis_id: 64211159
-  parent_yoksis_id: 53521241
+  parent_detsis_id: 53521241
   district_id: Atakum
 -
   name: İdari İşler Şube Müdürlüğü
   detsis_id: 87380393
-  parent_yoksis_id: 53521241
+  parent_detsis_id: 53521241
   district_id: Atakum
 -
   name: İktisadi İşletme Şube Müdürlüğü
   detsis_id: 88096012
-  parent_yoksis_id: 53521241
+  parent_detsis_id: 53521241
   district_id: Atakum
 -
   name: Kültür Ve Spor Şube Müdürlüğü
   detsis_id: 27290195
-  parent_yoksis_id: 53521241
+  parent_detsis_id: 53521241
   district_id: Atakum
 -
   name: Mali İşler Şube Müdürlüğü
   detsis_id: 69264226
-  parent_yoksis_id: 53521241
+  parent_detsis_id: 53521241
   district_id: Atakum
 -
   name: Sağlık Hizmetleri Şube Müdürlüğü
   detsis_id: 50881910
-  parent_yoksis_id: 53521241
+  parent_detsis_id: 53521241
   district_id: Atakum
 -
   name: Sosyal Hizmetler Şube Müdürlüğü
   detsis_id: 10539022
-  parent_yoksis_id: 53521241
+  parent_detsis_id: 53521241
   district_id: Atakum
 -
   name: Sosyal Bilimler Enstitüsü Müdürlüğü
@@ -2231,22 +2236,22 @@
 -
   name: Sosyal Bilimler Enstitü Sekreterliği
   detsis_id: 35792979
-  parent_yoksis_id: 61232311
+  parent_detsis_id: 61232311
   district_id: Atakum
 -
   name: Sosyal Bilimler Enstitü Disiplin Kurulu
   detsis_id: 96478647
-  parent_yoksis_id: 61232311
+  parent_detsis_id: 61232311
   district_id: Atakum
 -
   name: Sosyal Bilimler Enstitü Kurulu
   detsis_id: 24254010
-  parent_yoksis_id: 61232311
+  parent_detsis_id: 61232311
   district_id: Atakum
 -
   name: Sosyal Bilimler Enstitü Yönetim Kurulu
   detsis_id: 83752120
-  parent_yoksis_id: 61232311
+  parent_detsis_id: 61232311
   district_id: Atakum
 -
   name: Strateji Geliştirme Daire Başkanlığı
@@ -2256,22 +2261,22 @@
 -
   name: Bütçe Performans Program Şube Müdürlüğü
   detsis_id: 18036936
-  parent_yoksis_id: 91511444
+  parent_detsis_id: 91511444
   district_id: Atakum
 -
   name: İç Kontrol Ve Ön Mali Kontrol Şube Müdürlüğü
   detsis_id: 37272602
-  parent_yoksis_id: 91511444
+  parent_detsis_id: 91511444
   district_id: Atakum
 -
   name: Muhasebe Kesin Hesap Ve Raporlama Şube Müdürlüğü
   detsis_id: 46578399
-  parent_yoksis_id: 91511444
+  parent_detsis_id: 91511444
   district_id: Atakum
 -
   name: Stratejik Planlama Şube Müdürlüğü
   detsis_id: 56016456
-  parent_yoksis_id: 91511444
+  parent_detsis_id: 91511444
   district_id: Atakum
 -
   name: Sürekli Eğitim Merkezi Müdürlüğü
@@ -2471,7 +2476,7 @@
 -
   name: Tıp Fakültesi Sekreterliği
   detsis_id: 19054817
-  parent_yoksis_id: 45829229
+  parent_detsis_id: 45829229
   district_id: Atakum
 -
   name: Temel Tıp Bilimleri Bölüm Başkanlığı
@@ -2531,22 +2536,22 @@
 -
   name: Ameliyathane Koordinasyon Kurulu
   detsis_id: 64933695
-  parent_yoksis_id: 45829229
+  parent_detsis_id: 45829229
   district_id: Atakum
 -
   name: Tıp Fakülte Disiplin Kurulu
   detsis_id: 95040631
-  parent_yoksis_id: 45829229
+  parent_detsis_id: 45829229
   district_id: Atakum
 -
   name: Tıp Fakülte Kurulu
   detsis_id: 32835143
-  parent_yoksis_id: 45829229
+  parent_detsis_id: 45829229
   district_id: Atakum
 -
   name: Tıp Fakülte Yönetim Kurulu
   detsis_id: 73169471
-  parent_yoksis_id: 45829229
+  parent_detsis_id: 45829229
   district_id: Atakum
 -
   name: Türk Dili Bölüm Başkanlığı
@@ -2581,12 +2586,12 @@
 -
   name: Eğitim Uygulama Ve Araştırma Hastanesi Başhekimliği
   detsis_id: 96596525
-  parent_yoksis_id: 32319693
+  parent_detsis_id: 32319693
   district_id: Atakum
 -
   name: Veteriner Fakültesi Sekreterliği
   detsis_id: 22223993
-  parent_yoksis_id: 32319693
+  parent_detsis_id: 32319693
   district_id: Atakum
 -
   name: Klinik Bilimler Bölüm Başkanlığı
@@ -2716,17 +2721,17 @@
 -
   name: Veteriner Fakültesi Disiplin Kurulu
   detsis_id: 68979211
-  parent_yoksis_id: 32319693
+  parent_detsis_id: 32319693
   district_id: Atakum
 -
   name: Veteriner Fakültesi Kurulu
   detsis_id: 12369507
-  parent_yoksis_id: 32319693
+  parent_detsis_id: 32319693
   district_id: Atakum
 -
   name: Veteriner Fakültesi Yönetim Kurulu
   detsis_id: 85685189
-  parent_yoksis_id: 32319693
+  parent_detsis_id: 32319693
   district_id: Atakum
 -
   name: Yabancı Diller Bölüm Başkanlığı
@@ -2746,22 +2751,22 @@
 -
   name: Yabancı Diller Yüksekokulu Sekreterliği
   detsis_id: 90040670
-  parent_yoksis_id: 19676956
+  parent_detsis_id: 19676956
   district_id: Atakum
 -
   name: Yabancı Diller Yüksekokulu Disiplin Kurulu
   detsis_id: 56360828
-  parent_yoksis_id: 19676956
+  parent_detsis_id: 19676956
   district_id: Atakum
 -
   name: Yabancı Diller Yüksekokulu Kurulu
   detsis_id: 43044129
-  parent_yoksis_id: 19676956
+  parent_detsis_id: 19676956
   district_id: Atakum
 -
   name: Yabancı Diller Yüksekokulu Yönetim Kurulu
   detsis_id: 98617224
-  parent_yoksis_id: 19676956
+  parent_detsis_id: 19676956
   district_id: Atakum
 -
   name: Yaratıcı Yazarlık Uygulama Ve Araştırma Merkezi Müdürlüğü
@@ -2786,7 +2791,7 @@
 -
   name: Yaşar Doğu Spor Bilimleri Fakülte Sekreterliği
   detsis_id: 88279611
-  parent_yoksis_id: 80270232
+  parent_detsis_id: 80270232
   district_id: Atakum
 -
   name: Rekreasyon Bölüm Başkanlığı
@@ -2801,17 +2806,17 @@
 -
   name: Yaşar Doğu Spor Bilimleri Fakülte Disiplin Kurulu
   detsis_id: 43682562
-  parent_yoksis_id: 80270232
+  parent_detsis_id: 80270232
   district_id: Atakum
 -
   name: Yaşar Doğu Spor Bilimleri Fakülte Kurulu
   detsis_id: 92455265
-  parent_yoksis_id: 80270232
+  parent_detsis_id: 80270232
   district_id: Atakum
 -
   name: Yaşar Doğu Spor Bilimleri Fakülte Yönetim Kurulu
   detsis_id: 15350033
-  parent_yoksis_id: 80270232
+  parent_detsis_id: 80270232
   district_id: Atakum
 -
   name: Ziraat Fakültesi Dekanlığı
@@ -2831,7 +2836,7 @@
 -
   name: Ziraat Fakülte Sekreterliği
   detsis_id: 20802809
-  parent_yoksis_id: 52180288
+  parent_detsis_id: 52180288
   district_id: Atakum
 -
   name: Tarım Ekonomisi Bölüm Başkanlığı
@@ -2871,17 +2876,17 @@
 -
   name: Ziraat Fakülte Disiplin Kurulu
   detsis_id: 88222046
-  parent_yoksis_id: 52180288
+  parent_detsis_id: 52180288
   district_id: Atakum
 -
   name: Ziraat Fakülte Kurulu
   detsis_id: 44737134
-  parent_yoksis_id: 52180288
+  parent_detsis_id: 52180288
   district_id: Atakum
 -
   name: Ziraat Fakülte Yönetim Kurulu
   detsis_id: 62111144
-  parent_yoksis_id: 52180288
+  parent_detsis_id: 52180288
   district_id: Atakum
 -
   name: Genel Sekreterlik
@@ -2891,17 +2896,17 @@
 -
   name: Genel Sekreter Yardımcılığı
   detsis_id: 30142872
-  parent_yoksis_id: 90404739
+  parent_detsis_id: 90404739
   district_id: Atakum
 -
   name: İş Sağlığı Ve Güvenliği Şube Müdürlüğü
   detsis_id: 82259522
-  parent_yoksis_id: 90404739
+  parent_detsis_id: 90404739
   district_id: Atakum
 -
   name: Arabuluculuk Komisyonu
   detsis_id: 51407721
-  parent_yoksis_id: 90404739
+  parent_detsis_id: 90404739
   district_id: Atakum
 -
   name: Akademik Değerlendirme Ve Kalite Geliştirme Kurulu
@@ -2966,7 +2971,7 @@
 -
   name: Devlet Konservatuvarı Sekreterliği
   detsis_id: 52718513
-  parent_yoksis_id: 95441125
+  parent_detsis_id: 95441125
   district_id: İlkadım
 -
   name: Müzik Bölüm Başkanlığı
@@ -3006,7 +3011,7 @@
 -
   name: Güzel Sanatlar Fakülte Sekreterliği
   detsis_id: 84694922
-  parent_yoksis_id: 32859882
+  parent_detsis_id: 32859882
   district_id: İlkadım
 -
   name: Görsel İletişim Tasarımı Bölüm Başkanlığı
@@ -3046,17 +3051,17 @@
 -
   name: Güzel Sanatlar Fakülte Disiplin Kurulu
   detsis_id: 97565555
-  parent_yoksis_id: 32859882
+  parent_detsis_id: 32859882
   district_id: İlkadım
 -
   name: Güzel Sanatlar Fakülte Kurulu
   detsis_id: 25054318
-  parent_yoksis_id: 32859882
+  parent_detsis_id: 32859882
   district_id: İlkadım
 -
   name: Güzel Sanatlar Fakülte Yönetim Kurulu
   detsis_id: 52757481
-  parent_yoksis_id: 32859882
+  parent_detsis_id: 32859882
   district_id: İlkadım
 -
   name: Mimarlık Fakültesi Dekanlığı
@@ -3066,7 +3071,7 @@
 -
   name: Mimarlık Fakülte Sekreterliği
   detsis_id: 80040216
-  parent_yoksis_id: 85074962
+  parent_detsis_id: 85074962
   district_id: İlkadım
 -
   name: İç Mimarlık Bölüm Başkanlığı
@@ -3101,17 +3106,17 @@
 -
   name: Mimarlık Fakülte Disiplin Kurulu
   detsis_id: 35933795
-  parent_yoksis_id: 85074962
+  parent_detsis_id: 85074962
   district_id: İlkadım
 -
   name: Mimarlık Fakülte Kurulu
   detsis_id: 36259705
-  parent_yoksis_id: 85074962
+  parent_detsis_id: 85074962
   district_id: İlkadım
 -
   name: Mimarlık Fakülte Yönetim Kurulu
   detsis_id: 17012768
-  parent_yoksis_id: 85074962
+  parent_detsis_id: 85074962
   district_id: İlkadım
 -
   name: Samsun Meslek Yüksekokulu Müdürlüğü
@@ -3151,7 +3156,7 @@
 -
   name: Samsun Meslek Yüksekokulu Sekreterliği
   detsis_id: 88496548
-  parent_yoksis_id: 56591305
+  parent_detsis_id: 56591305
   district_id: İlkadım
 -
   name: Muhasebe Ve Vergi Bölüm Başkanlığı
@@ -3181,15 +3186,15 @@
 -
   name: Samsun Meslek Yüksekokulu Disiplin Kurulu
   detsis_id: 19817726
-  parent_yoksis_id: 56591305
+  parent_detsis_id: 56591305
   district_id: İlkadım
 -
   name: Samsun Meslek Yüksekokulu Kurulu
   detsis_id: 25664880
-  parent_yoksis_id: 56591305
+  parent_detsis_id: 56591305
   district_id: İlkadım
 -
   name: Samsun Meslek Yüksekokulu Yönetim Kurulu
   detsis_id: 10123157
-  parent_yoksis_id: 56591305
+  parent_detsis_id: 56591305
   district_id: İlkadım

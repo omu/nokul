@@ -1,0 +1,13 @@
+<div class='form-group col-sm-6'>
+  <div class='nested-fields'>
+    <div class='card card-default'>
+      <div class='card-body bg-light'>
+        <%= f.input :agenda_id, collection: @committee.agendas.active, label_method: :description %>
+        <%= f.input :sequence_no, input_html: { min: 1 } %>
+      </div>
+      <div class='card-footer'>
+        <%= link_to_remove_association 'Sil', f, class: 'btn btn-outline-danger btn-sm' %>
+      </div>
+    </div>
+  </div>
+</div>
