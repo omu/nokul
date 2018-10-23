@@ -69,6 +69,7 @@ en:
       <<: *user_attributes
     addresses:
       create_from_mernis: Create from MERNIS
+      new_address: Create New Address
       update_from_mernis: Update from MERNIS
     create:
       success: User successfully created.

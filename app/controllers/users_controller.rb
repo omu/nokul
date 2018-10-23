@@ -15,7 +15,7 @@ class UsersController < ApplicationController
 
   def show
     @identities = @user.identities
-    @addresses = @user.addresses
+    @addresses = @user.addresses.includes(district: :city)
     @employees = @user.employees.includes(:title).order(active: :desc)
     @duties = @user.duties.includes(:unit)
     @positions = @user.positions.includes(:administrative_function, :duty)

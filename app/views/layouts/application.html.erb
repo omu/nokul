@@ -26,13 +26,13 @@
             <div class="dropdown-header text-center">
               <strong class='<%= t(".my_account") %>'><%= t('.my_account') %></strong>
             </div>
-            <%= link_to identities_path, class: 'dropdown-item' do %>
+            <%= link_to user_identities_path(current_user), class: 'dropdown-item' do %>
               <%= fa_icon('id-card', text: t('.identities')) %>
             <% end %>
-            <%= link_to addresses_path, class: 'dropdown-item' do %>
+            <%= link_to user_addresses_path(current_user), class: 'dropdown-item' do %>
               <%= fa_icon('home', text: t('.addresses')) %>
             <% end %>
-            <%= link_to profile_path, class: 'dropdown-item' do %>
+            <%= link_to user_profile_path(current_user), class: 'dropdown-item' do %>
               <%= fa_icon('user', text: t('.profile_settings')) %>
             <% end %>
             <div class="dropdown-header text-center">

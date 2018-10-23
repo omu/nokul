@@ -11,8 +11,8 @@
       <div class="card">
         <div class="card-header">
           <div class="card-header-actions">
-            <%= link_to_edit(edit_identity_path(identity)) %>
-            <%= link_to_destroy(identity) %>
+            <%= link_to_edit(edit_user_identity_path(@user, identity)) %>
+            <%= link_to_destroy(user_identity_path(@user, identity)) %>
           </div>
         </div>
 
