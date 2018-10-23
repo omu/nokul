@@ -18,6 +18,10 @@ module Xokul
       def pages(page:)
         Connection.instance.get '/yoksis/staff/pages', params: { page: page }
       end
+
+      def total_pages
+        Connection.instance.get '/yoksis/staff/total_pages'
+      end
     end
   end
 end
