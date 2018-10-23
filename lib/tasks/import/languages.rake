@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 namespace :import do
-  desc 'Imports languages from db/static_data'
+  desc 'Imports languages from yaml'
   task languages: :environment do
-    ImportFromYml.parse('Language')
+    Support.create_entities_from_yaml('Language')
   end
 end
