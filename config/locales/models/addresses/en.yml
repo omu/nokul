@@ -26,6 +26,8 @@ en:
         card_header: Address Information
         create_from_mernis: Create from MERNIS
         district_and_city: District / City
+        formal_address: Formal Address
+        informal_address: Informal Address
         new_address: Add a New Address
         update_from_mernis: Update from MERNİS
       new:

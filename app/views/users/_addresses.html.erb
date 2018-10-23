@@ -11,12 +11,15 @@
     <div class="col-sm-6">
       <div class="card">
         <div class="card-header">
-          <div class="card-header-actions">
-            <% if address.informal? %>
+          <% if address.formal? %>
+            <strong><%= t('.formal_address') %></strong>
+          <% else %>
+            <strong><%= t('.informal_address') %></strong>
+            <div class="card-header-actions">
               <%= link_to_edit(edit_user_address_path(@user, address)) %>
               <%= link_to_destroy(user_identity_path(@user, address)) %>
-            <% end %>
-          </div>
+            </div>
+          <% end %>
         </div>
 
         <div class="card-body">
