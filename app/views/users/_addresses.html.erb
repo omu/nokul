@@ -2,6 +2,7 @@
   <div class="col-sm-12">
     <div class="card">
       <div class="card-body">
+        <%= link_to_new(new_user_address_path(@user), t('.new_address')) %>
         <%= link_to (@user.addresses.formal.present? ? t('.update_from_mernis') : t('.create_from_mernis') ), save_address_from_mernis_user_path, class: "btn btn-outline-primary btn-sm"  %>
       </div>
     </div>
@@ -11,8 +12,10 @@
       <div class="card">
         <div class="card-header">
           <div class="card-header-actions">
-            <%= link_to_edit(edit_address_path(address)) %>
-            <%= link_to_destroy(address) %>
+            <% if address.informal? %>
+              <%= link_to_edit(edit_user_address_path(@user, address)) %>
+              <%= link_to_destroy(user_identity_path(@user, address)) %>
+            <% end %>
           </div>
         </div>
 
