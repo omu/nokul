@@ -69,6 +69,8 @@ en:
       <<: *user_attributes
     addresses:
       create_from_mernis: Create from MERNIS
+      formal_address: Formal Address
+      informal_address: Informal Address
       new_address: Create New Address
       update_from_mernis: Update from MERNIS
     create:

@@ -69,6 +69,8 @@ tr:
       <<: *user_attributes
     addresses:
       create_from_mernis: MERNİS'ten Oluştur
+      formal_address: Kullanıcı Adresiniz
+      informal_address: Diğer Adresiniz
       new_address: Yeni Adres Ekle
       update_from_mernis: MERNİS'ten Güncelle
     create:

@@ -9,9 +9,10 @@
     <div class="col-sm-6">
       <div class="card">
         <div class="card-header">
-          <%= fa_icon 'id-card' %>
-          <strong><%= t('.card_header') %></strong>
-          <% if address.informal? %>
+          <% if address.formal? %>
+            <strong><%= t('.formal_address') %></strong>
+          <% else %>
+            <strong><%= t('.informal_address') %></strong>
             <div class="card-header-actions">
               <%= link_to_edit(edit_user_address_path(@user, address)) %>
               <%= link_to_destroy(user_address_path(@user, address)) %>
