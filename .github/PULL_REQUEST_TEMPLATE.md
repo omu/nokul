@@ -21,7 +21,7 @@
 **Kontrol listesi:**
 
 * [ ] Açtığınız PR'in başlığı kurallara (sadece ilk harf büyük, emir kipinde problem cümlesi vb.) uygun mu?
-* [ ] [Katkı sağlama dokümanını](https://github.com/omu/nokul/CONTRIBUTING.md) okudunuz mu?
+* [ ] [Katkı sağlama dokümanını](https://github.com/omu/nokul/.github/CONTRIBUTING.md) okudunuz mu?
 * [ ] Yaptığınız iş/değişikliği dokümante ettiniz mi?
 * [ ] Yaptığınız iş/değişikliğin testlerini yazdınız mı?
 * [ ] Test coverage oranını kontrol ettiniz mi?

@@ -27,7 +27,7 @@ Bu projede herhangi bir güvenlik açığı tespit ederseniz lütfen `security@b
 
 - Projeye katkı sağlamadan önce, katkı sağlamak istediğiniz konuyla ilişkili bir iş kaydı açın. İş kaydı bulunmayan ve bir iş kaydına atıfta bulunmayan pull request'ler değerlendirmeye alınmayabilir veya geç değerlendirmeye alınabilir.
 
-- [Issue](/docs/git/issue.md) kurallarını dikkatlice gözden geçirin.
+- [Issue](/doc/git/issue.md) kurallarını dikkatlice gözden geçirin.
 
 ### Geliştirme Öncesi
 ---------------------
@@ -51,21 +51,21 @@ Harici servisler yalnızca BAUM-VPN'e açıktır. Geliştirme yaparken ihtiyaç 
 
 - Projeye yazma yetkiniz varsa projeyi klonlayın, yazma yetkiniz yoksa projeyi `fork` edin.
 
-- [Branch](/docs/git/branch.md) kurallarını dikkatlice gözden geçirin.
+- [Branch](/doc/git/branch.md) kurallarını dikkatlice gözden geçirin.
 
 - Proje klonunda veya kendi `fork`'unuzda, branch kurallarını dikkate alan bir branch oluşturun: `git checkout -b my-awesome-feature`
 
-- [Kurulum dokümanını](/docs/development/installation.md) takip ederek projenin kurulumunu yapın.
+- [Kurulum dokümanını](/doc/development/installation.md) takip ederek projenin kurulumunu yapın.
 
-- [Stil](/docs/style/) kurallarını dikkatlice gözden geçirin.
+- [Stil](/doc/style/) kurallarını dikkatlice gözden geçirin.
 
 - Kod üzerinde değişiklikleri yapın.
 
-- [Commit](/docs/git/commit.md) kurallarını dikkatlice gözden geçirin.
+- [Commit](/doc/git/commit.md) kurallarını dikkatlice gözden geçirin.
 
 - Değişiklerinizi commit'leyin.
 
-- [Test Coverage](/docs/development/test-coverage.md) kurallarını dikkatlice gözden geçirin.
+- [Test Coverage](/doc/development/test-coverage.md) kurallarını dikkatlice gözden geçirin.
 
 - Yaptığınız değişikliğin test coverage oranını düşürmediğinden emin olun.
 
@@ -78,10 +78,10 @@ Harici servisler yalnızca BAUM-VPN'e açıktır. Geliştirme yaparken ihtiyaç 
 ### Geliştirme Sonrası
 ----------------------
 
-- [Pull Request](/docs/git/pull-request.md) kurallarını dikkatlice gözden geçirin.
+- [Pull Request](/doc/git/pull-request.md) kurallarını dikkatlice gözden geçirin.
 
 - Geliştirmenizi tamamladıktan sonra kendi branch'inizden `develop`'a doğru bir `pull request` (diğer adıyla `merge request`) açın.
 
-- [Review](/docs/git/review.md) kurallarını dikkatlice gözden geçirin.
+- [Review](/doc/git/review.md) kurallarını dikkatlice gözden geçirin.
 
 - Pull request'inizin review sürecinin tamamlanmasını bekleyin.
