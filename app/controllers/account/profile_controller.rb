@@ -8,7 +8,7 @@ module Account
 
     def update
       if current_user.update_without_password(profile_params)
-        redirect_to profile_path, notice: t('.success')
+        redirect_to user_profile_path(current_user), notice: t('.success')
       else
         render(:edit)
       end
