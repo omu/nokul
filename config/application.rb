@@ -37,6 +37,7 @@ module Nokul
     config.active_storage.variant_processor = :vips
 
     # tenant configuration
-    config.tenant = config_for("tenants/#{ENV['RAILS_TENANT'] || 'omu'}").to_deep_ostruct
+    config.active_tenant = Tenant.active
+    config.tenant = Tenant.configuration
   end
 end
