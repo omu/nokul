@@ -24,9 +24,9 @@ class ApplicationConfigTest < ActiveSupport::TestCase
     assert_equal @config.i18n.default_locale, :tr
   end
 
-  test 'Tenant settings must be configured in tenants/*.yml' do
-    files_count = Dir.glob(Rails.root.join('config', 'tenants', '*.yml')).count
-    assert_operator files_count, :>, 0
+  test 'Tenant setting must be configured in config/tenant.yml' do
+    config_file = Pathname.new(Rails.root.join('config', 'tenant.yml'))
+    assert config_file.exist?
   end
 
   test 'Configuration can read tenant settings' do
@@ -35,14 +35,14 @@ class ApplicationConfigTest < ActiveSupport::TestCase
   end
 
   test 'Tenant configuration includes keys for various environments' do
-    files = Dir.glob(Rails.root.join('config', 'tenants', '*.yml'))
+    config_file = Rails.root.join('config', 'tenant.yml')
 
-    files.each do |file|
-      file = YAML.load_file(file)
-      assert file.key?('production')
-      assert file.key?('beta')
-      assert file.key?('test')
-      assert file.key?('development')
-    end
+    config = YAML.load(
+      ERB.new(config_file.read).result
+    )
+    assert config.key?('production')
+    assert config.key?('beta')
+    assert config.key?('test')
+    assert config.key?('development')
   end
 end
