@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   draw :yoksis_references
 
   resources :units do
+    resources :registration_documents
     member do
       get :courses, defaults: { format: :json }
       get :programs, defaults: { format: :json }
@@ -22,10 +23,6 @@ Rails.application.routes.draw do
   end
 
   resources :documents
-
-  resources :units do
-    resources :registration_documents
-  end
 
   scope module: :course_management do
     resources :courses
