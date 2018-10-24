@@ -9,7 +9,7 @@ Vagrantfile @roktas @huseyin @ecylmz @sinansh
 .codebeatsettings @msdundar @roktas @isubas @ecmelkytz
 .gitignore @msdundar @roktas @isubas @ecmelkytz
 .rubocop.yml @msdundar @roktas @isubas @ecmelkytz
-/docs/ @msdundar @roktas @isubas @ecmelkytz
+/doc/ @msdundar @roktas @isubas @ecmelkytz
 
 # Back-end
 /app/ @msdundar @ecmelkytz @dilara @isubas @sinansh
