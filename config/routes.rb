@@ -11,8 +11,11 @@ Rails.application.routes.draw do
   draw :devise
   draw :account
   draw :calendar
+  draw :references
+  draw :yoksis_references
 
   resources :units do
+    resources :registration_documents
     member do
       get :courses, defaults: { format: :json }
       get :programs, defaults: { format: :json }
@@ -20,10 +23,6 @@ Rails.application.routes.draw do
   end
 
   resources :documents
-
-  resources :units do
-    resources :registration_documents
-  end
 
   scope module: :course_management do
     resources :courses
@@ -38,17 +37,9 @@ Rails.application.routes.draw do
     end
   end
 
-  draw :references
-  draw :yoksis_references
-
   resources :users do
     get 'save_address_from_mernis', on: :member
     get 'save_identity_from_mernis', on: :member
-    scope module: :account do
-      resources :employees, except: %i[index show]
-      resources :duties, except: %i[index show]
-      resources :positions, except: %i[index show]
-    end
   end
 
   # public profiles

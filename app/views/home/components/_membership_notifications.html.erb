@@ -12,12 +12,12 @@
       <hr>
       <% unless current_user.addresses.any? %>
         <div class="alert alert-warning" role="alert">
-          <small class="text-muted"><%= link_to t('.address_information'), addresses_path %> <%= t('.seems_missing') %></small>
+          <small class="text-muted"><%= link_to t('.address_information'), user_addresses_path(current_user) %> <%= t('.seems_missing') %></small>
         </div>
       <% end %>
       <% unless current_user.identities.any? %>
         <div class="alert alert-warning" role="alert">
-          <small class="text-muted"><%= link_to t('.identity_information'), identities_path %> <%= t('.seems_missing') %></small>
+          <small class="text-muted"><%= link_to t('.identity_information'), user_identities_path(current_user) %> <%= t('.seems_missing') %></small>
         </div>
       <% end %>
     </div>

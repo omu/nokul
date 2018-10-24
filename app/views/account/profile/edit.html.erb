@@ -1,6 +1,6 @@
 <div class='row'>
   <div class='col-sm-12'>
-    <%= simple_form_for current_user, url: profile_path, method: :post do |f| %>
+    <%= simple_form_for current_user, url: user_profile_path(current_user), method: :post do |f| %>
       <div class='card'>
         <div class='card-header'>
           <%= t('.profile_settings') %>

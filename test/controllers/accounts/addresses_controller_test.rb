@@ -13,20 +13,19 @@ module Accounts
     end
 
     test 'should get index' do
-      get addresses_path
+      get user_addresses_path(@user)
       assert_response :success
-      assert_select '#add-button', translate('.index.new_address')
     end
 
     test 'should get new' do
-      get new_address_path
+      get new_user_address_path(@user)
       assert_response :success
     end
 
     test 'should create address' do
       @user.addresses.informal.destroy_all
       assert_difference('@user.addresses.count') do
-        post addresses_path, params: {
+        post user_addresses_path(@user), params: {
           address: {
             phone_number: '03623121919', full_address: 'OMU BAUM', district_id: districts(:gerze).id
           }
@@ -39,14 +38,14 @@ module Accounts
       assert_equal 'Omu Baum', address.full_address
       assert_equal districts(:gerze), address.district
 
-      assert_redirected_to addresses_path
+      assert_redirected_to user_addresses_path(@user)
       assert_equal translate('.create.success'), flash[:notice]
     end
 
     test 'should not get edit for formal address' do
       formal_address = @user.addresses.find_by(type: :formal)
 
-      get edit_address_path(formal_address)
+      get edit_user_address_path(@user, formal_address)
       assert_response :redirect
       assert_redirected_to root_path
     end
@@ -54,15 +53,15 @@ module Accounts
     test 'should get edit for any address except formal' do
       address = @user.addresses.where(type: :informal).first
 
-      get edit_address_path(address)
+      get edit_user_address_path(@user, address)
       assert_response :success
       assert_select '.card-header strong', translate('.edit.form_title')
     end
 
     test 'should update address' do
-      address = @user.addresses.where(type: :informal).first
+      address = @user.addresses.informal.first
 
-      patch address_path(address), params: {
+      patch user_address_path(@user, address), params: {
         address: {
           phone_number: '03623121920', full_address: 'OMU UZEM'
         }
@@ -73,18 +72,18 @@ module Accounts
       assert_equal '03623121920', address.phone_number
       assert_equal 'Omu Uzem', address.full_address
 
-      assert_redirected_to addresses_path
+      assert_redirected_to user_addresses_path(@user)
       assert_equal translate('.update.success'), flash[:notice]
     end
 
     test 'should be able to fetch address from mernis' do
-      get save_from_mernis_addresses_path
-      assert_redirected_to addresses_path
+      get save_from_mernis_user_addresses_path(@user)
+      assert_redirected_to user_path(@user)
     end
 
     test 'should not destroy for formal address' do
       assert_difference('@user.addresses.count', 0) do
-        delete address_path(@user.addresses.find_by(type: :formal))
+        delete user_address_path(@user, @user.addresses.formal)
       end
 
       assert_redirected_to root_path
@@ -92,10 +91,10 @@ module Accounts
 
     test 'should destroy for any address except formal' do
       assert_difference('@user.addresses.count', -1) do
-        delete address_path(@user.addresses.where.not(type: :formal).first)
+        delete user_address_path(@user, @user.addresses.where.not(type: :formal).first)
       end
 
-      assert_redirected_to addresses_path
+      assert_redirected_to user_addresses_path(@user)
       assert_equal translate('.destroy.success'), flash[:notice]
     end
 
