@@ -28,7 +28,7 @@ module Tenant
   end
 
   def configuration
-    Rails.application.config_for(:tenant).to_deep_ostruct
+    YAML.load_file(config_file).fetch(Rails.env, {}).to_deep_ostruct
   end
 
   def root

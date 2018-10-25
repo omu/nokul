@@ -24,22 +24,13 @@ class ApplicationConfigTest < ActiveSupport::TestCase
     assert_equal @config.i18n.default_locale, :tr
   end
 
-  test 'Tenant setting must be configured in config/tenant.yml' do
-    config_file = Pathname.new(Rails.root.join('config', 'tenant.yml'))
-    assert config_file.exist?
-  end
-
   test 'Configuration can read tenant settings' do
     assert_not_nil @config.tenant.abbreviation
     assert_not_nil @config.tenant.host
   end
 
   test 'Tenant configuration includes keys for various environments' do
-    config_file = Rails.root.join('config', 'tenant.yml')
-
-    config = YAML.load(
-      ERB.new(config_file.read).result
-    )
+    config = YAML.load_file(Tenant.config_file)
     assert config.key?('production')
     assert config.key?('beta')
     assert config.key?('test')
