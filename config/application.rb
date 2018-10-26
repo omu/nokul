@@ -11,9 +11,7 @@ module Nokul
   class Application < Rails::Application
     # support libraries are used for tenant configuration and Rakefile,
     # therefore they have to required in the first place.
-    Dir[
-      Rails.root.join('lib', 'support', '**', '*.rb')
-    ].each { |file| require file }
+    require Rails.root.join('lib', 'support')
 
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
