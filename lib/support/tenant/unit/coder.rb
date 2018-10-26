@@ -41,7 +41,7 @@ module Tenant
 
       def code_by_selected_pool(units)
         units.each do |unit|
-          unless (code = unit.code).blank?
+          if (code = unit.code).present?
             memory.remember code
             next
           end
