@@ -47,13 +47,13 @@ module Tenant
     File.join(Path.common_app, 'rules')
   end
 
-  def load_rules
-    [*Path.common_rules, *rules].each do |dir|
-      Dir[File.join(dir, '**', '*.rb')].each { |rule| require rule }
-    end
-  end
+  # def load_rules
+  #   [*Path.common_rules, *rules].each do |dir|
+  #     Dir[File.join(dir, '**', '*.rb')].each { |rule| require rule }
+  #   end
+  # end
 
   def init
-    load_rules
+    # load_rules
   end
 end
