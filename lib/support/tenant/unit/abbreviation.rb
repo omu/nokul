@@ -42,7 +42,12 @@ module Tenant
       end
 
       delegate :asciified, to: :itself
-      delegate :dashless_asciified, to: :dashless
+
+      # rubocop:disable Rails/Delegate (due to the false positive)
+      def dashless_asciified
+        dashless.asciified
+      end
+      # rubocop:enable Rails/Delegate
 
       VARIATIONS_UPCASE.keys.each do |variation|
         define_method("downcase_#{variation}") do
