@@ -41,13 +41,8 @@ module Tenant
         itself.tr '-', ''
       end
 
-      def asciified
-        itself.asciified
-      end
-
-      def dashless_asciified
-        dashless.asciified
-      end
+      delegate :asciified, to: :itself
+      delegate :dashless_asciified, to: :dashless
 
       VARIATIONS_UPCASE.keys.each do |variation|
         define_method("downcase_#{variation}") do

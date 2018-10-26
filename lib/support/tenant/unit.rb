@@ -87,7 +87,7 @@ module Tenant
       end
 
       def undergraduate_registrable?
-        undergraduate_program? && !osym_id.blank?
+        undergraduate_program? && osym_id.present?
       end
 
       def undergraduate_unregistrable?
@@ -95,11 +95,11 @@ module Tenant
       end
 
       def administrative?
-        !detsis_id.blank?
+        detsis_id.present?
       end
 
       def academic?
-        !yoksis_id.blank?
+        yoksis_id.present?
       end
 
       def special?
