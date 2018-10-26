@@ -11,7 +11,7 @@ namespace :fetch do
     number_of_pages = client.number_of_pages
 
     # id_number:email pairs for academics
-    mail_list = FileEncryptor.decrypt_lines('db/encrypted_data/academics.csv.enc').map { |line| line.split('|') }
+    mail_list = Sensitive.readlines('db/encrypted_data/academics.csv').map { |line| line.split('|') }
 
     # fetch academic staff from each page
     (1..number_of_pages).each do |page_number|
