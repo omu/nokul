@@ -2,7 +2,6 @@
 
 require 'test_helper'
 
-# rubocop:disable Metrics/ClassLength
 class CollectionTest < ActiveSupport::TestCase
   class Unit
     class_attribute :units, default: []
@@ -174,4 +173,3 @@ class CollectionTest < ActiveSupport::TestCase
     assert_equal 'All collection items must be hash', exception.message
   end
 end
-# rubocop:enable Metrics/ClassLength

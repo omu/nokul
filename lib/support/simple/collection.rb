@@ -27,6 +27,7 @@ module Simple
 
     def self.collects
       raise Error, "Couldn't determine collection item class" unless (item_class = collection.collects)
+
       item_class
     end
 
