@@ -7,6 +7,7 @@ require_relative 'violation'
 module Ruling
   class Rule
     class_attribute :registery, default: Set.new
+    class_attribute :rules, default: {}
 
     class << self
       def setup(*); end
@@ -21,12 +22,15 @@ module Ruling
         alias_attribute prefered_name, :subject
       end
 
-      def runnable_methods
-        public_instance_methods(true).grep(/^rule_/).map(&:to_s)
+      def rule(name, skip: nil, &block)
+        return if skip || !block_given?
+
+        rules[name] = block
       end
 
-      def inherited(klass)
-        registery << klass
+      def inherited(child)
+        registery << child
+        child.rules = rules.dup
       end
     end
 
@@ -52,16 +56,19 @@ module Ruling
     end
 
     def check(context, **param)
-      self.class.runnable_methods.each do |method_name|
-        invoke(method_name, context, **param)
+      self.class.rules.each do |name, rule|
+        self.current_rule = name
+        instance_exec(context, **param, &rule)
+        self.current_rule = nil
         break unless issues.empty?
       end
 
       violations(context)
     end
 
-    def spot(issue = '')
-      issues << issue
+    def spot(issue = nil)
+      issue ||= "#{current_rule}: #{subject}" if current_rule
+      issues << (issue || '')
     end
 
     def code
@@ -75,23 +82,10 @@ module Ruling
     protected
 
     attr_reader :issues
+    attr_accessor :current_rule
 
     %i[after_initialize before_rules after_rules].each do |method|
       define_method(method) {}
-    end
-
-    def invoke(method_name, context, **param)
-      result = invoke_by_arity(method_name, context, **param)
-      spot if method_name.ends_with?('?') && !result
-      result
-    end
-
-    def invoke_by_arity(method_name, context, **param)
-      case method(method_name).arity
-      when 0 then send method_name
-      when 1 then send method_name, context
-      when 2 then send method_name, context, param
-      end
     end
 
     def violations(context)

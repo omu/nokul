@@ -14,8 +14,8 @@ class NameSafeRule < Ruling::Rule
   synopsis 'İsimlerde güvensiz karakterler olmamalı'
   subject :name
 
-  def rule_no_turkish_character_please
-    spot "Türkçe karakter içeriyor: #{name}" if name =~ /[şğüöçıĞÜŞÖÇİ]/
+  rule 'no Turkish character' do
+    spot if name =~ /[şğüöçıĞÜŞÖÇİ]/
   end
 end
 
@@ -34,16 +34,16 @@ violations.first.detail #=> "Türkçe karakter içeriyor: hüseyin"
 ```
 
 Örnekte görüldüğü öncelikle yapılması gereken `Ruling::Rule`'dan miras alan bir
-kural sınıfı oluşturup `rule_` ön ekiyle başlayan ve ortak bir amaca hizmet eden
-bir veya daha fazla sayıda kurallar yazmaktır.  Bu yapıldıktan sonra üzerinde
-çalışılacak olan diziyle bir `Ruling::Checker` nesnesi oluşturulur ve dizi bir
-veya daha fazla sayıda kural sınıfını argüman olarak vererek denetlenir.
-`Checker` nesnesi dizi üzerinde dolaşırken her seferinde kural sınıfı içindeki
-`rule_` kurallarını yazılış sırasıyla güncel dizi elemanı üzerinde uygular ve
-çalışması tamamlandığında tespit edilen tüm kural ihlallerini temsil eden bir
-`Violation` dizisi döner.
+kural sınıfı oluşturup `rule` DSL'yle ortak bir amaca hizmet eden bir veya daha
+fazla sayıda kurallar yazmaktır.  Bu yapıldıktan sonra üzerinde çalışılacak olan
+diziyle bir `Ruling::Checker` nesnesi oluşturulur ve dizi bir veya daha fazla
+sayıda kural sınıfını argüman olarak vererek denetlenir.  `Checker` nesnesi dizi
+üzerinde dolaşırken her seferinde kural sınıfı içinde `rule` ile kaydedilen
+kuralları yazılış sırasıyla güncel dizi elemanı üzerinde uygular ve çalışması
+tamamlandığında tespit edilen tüm kural ihlallerini temsil eden bir `Violation`
+dizisi döner.
 
-Dizi üzerinde dolaşırken `rule_` metodları güncel dizi elemanını genel olarak
+Dizi üzerinde dolaşırken kural blokları güncel dizi elemanını genel olarak
 `subject` değişkeniyle tanır.  Dilerseniz güncel dizi elemanı kural sınıfı
 içinde `subject :alternatif_isim` DSL'yle `subject` yerine `alternatif_isim`
 olarak ayarlanabilir. Örnekte `names` dizisinin elemanları için `name` ismi daha
@@ -61,15 +61,14 @@ kullanılması tavsiye edilen pratiktir.
 Kural metodu çalışırken kural ihlalleri `spot` metoduyla kayıtlanır.  **Kural
 metodunun dönüş değerinin kural ihlali açısından hiç bir önemi yoktur.**  `spot`
 metoduna isteğe bağlı argüman olarak verilen mesaj kural ihlali raporlanırken
-kullanılmaktadır.  Argüman verilmezse kural ihlali `synopsis` ile öntanımlı
-olarak eklenir.  Bir kural metodunda birden fazla `spot` çağrısı bulunabilir.
-Ama tavsiye ettiğimiz pratik her kural metodu için tek bir `spot` çağrısı
+kullanılmaktadır.  Argüman verilmezse kural ihlali kural adıyla öntanımlı olarak
+eklenir.  Bir kural metodunda birden fazla `spot` çağrısı bulunabilir.  Ama
+tavsiye ettiğimiz pratik her kural metodu için tek bir `spot` çağrısı
 kullanmaktır.
 
-Bir kural sınıfında birden fazla kural olabilir, tek koşul kuralların `rule_`
-ön ekiyle yazılmasıdır.  Kurallar sınıf içindeki yazılış sırasıyla uygulanır ve
-öntanımlı davranış olarak ilk kural ihlalinde diğer kurallar uygulanmadan bir
-sonraki elemana geçilir.
+Bir kural sınıfında birden fazla kural olabilir.  Kurallar sınıf içindeki
+yazılış sırasıyla uygulanır ve öntanımlı davranış olarak ilk kural ihlalinde
+diğer kurallar uygulanmadan bir sonraki elemana geçilir.
 
 Örneğe bir ekleme daha yaparak boşluk karakterinin olmaması kuralını "güvenli
 isim" kural kümesine ekleyelim.
@@ -79,12 +78,12 @@ class NameSafeRule < Ruling::Rule
   synopsis 'İsimlerde güvensiz karakterler olmamalı'
   subject :name
 
-  def rule_no_turkish_character_please
-    spot "Türkçe karakter içeriyor: #{name}" if name =~ /[şğüöçıĞÜŞÖÇİ]/
+  rule 'no Turkish character' do
+    spot if name =~ /[şğüöçıĞÜŞÖÇİ]/
   end
 
-  def rule_no_space_character_please
-    spot "Boşluk içeriyor: #{name}" if name =~ /\s/
+  rule 'no space character' do
+    spot if name =~ /\s/
   end
 end
 
@@ -124,17 +123,17 @@ class NameSafeRule < Ruling::Rule
     context.seen = {}
   end
 
-  def rule_no_turkish_character_please
-    spot "Türkçe karakter içeriyor: #{name}" if name =~ /[şğüöçıĞÜŞÖÇİ]/
+  rule 'no Turkish character' do
+    spot if name =~ /[şğüöçıĞÜŞÖÇİ]/
   end
 
-  def rule_no_space_character_please
-    spot "Boşluk içeriyor: #{name}" if name =~ /\s/
+  rule 'no space character' do
+    spot if name =~ /\s/
   end
 
-  def rule_must_unique(context)
-    spot "Tekrar eden isim: #{name}" if context.seen[name]
-    context.seen[name] = true
+  rule 'must be unique' do |context|
+    spot if (seen = context.seen)[name]
+    seen[name] = true
   end
 end
 
@@ -150,11 +149,11 @@ checker = Ruling::Checker.new names
 violations = checker.check NameSafeRule
 ```
 
-Bu örnekte `rule_must_unique` kural metoduna öncekilerden farklı olarak ekstra
-bir `context` geçirildiğini görüyoruz.  `ActiveSupport::OrderedOptions` türünde
-bir nesne olan `context` değişkeni isteğe bağlı olarak tüm kurallara geçirilen
-bir bilgidir.  Yapılması gereken ilgili kuralda bu değişkenin argüman listesine
-yazılarak talep edilmesidir.
+Bu örnekte `must be unique` kural bloğuna öncekilerden farklı olarak ekstra bir
+`context` argümanı geçirildiğini görüyoruz.  `ActiveSupport::OrderedOptions`
+türünde bir nesne olan `context` değişkeni isteğe bağlı olarak tüm kurallara
+geçirilen bir bilgidir.  Yapılması gereken ilgili kural bloğunda bu değişkenin
+argüman listesine yazılarak talep edilmesidir.
 
 Liste dolaşımı süresince yaşayan bu değişken ilgili kurallar uygulanırken bir
 tür genel değişken gibi davranır (ortam değişkenlerini tutan `ENV` gibi).  Yani
@@ -192,17 +191,17 @@ class NameSafeRule < Ruling::Rule
     context.seen = {}
   end
 
-  def rule_no_turkish_character_please
+  rule 'no Turkish character' do
     spot_if 'Türkçe karakter içeriyor'
   end
 
-  def rule_no_space_character_please
+  rule 'no space character' do
     spot_if 'Boşluk içeriyor'
   end
 
-  def rule_must_unique(context)
-    spot "Tekrar eden isim: #{name}" if context.seen[name]
-    context.seen[name] = true
+  rule 'must be unique' do |context|
+    spot if (seen = context.seen)[name]
+    seen[name] = true
   end
 
   protected
@@ -239,17 +238,17 @@ class NameSafeRule < Ruling::Rule
     self.number_of_applied_patterns = 0
   end
 
-  def rule_no_turkish_character_please
+  rule 'no Turkish character' do
     spot_if 'Türkçe karakter içeriyor'
   end
 
-  def rule_no_space_character_please
+  rule 'no space character' do
     spot_if 'Boşluk içeriyor'
   end
 
-  def rule_must_unique(context)
-    spot "Tekrar eden isim: #{name}" if context.seen[name]
-    context.seen[name] = true
+  rule 'must be unique' do |context|
+    spot if (seen = context.seen)[name]
+    seen[name] = true
   end
 
   def after_rules

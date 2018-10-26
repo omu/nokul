@@ -7,8 +7,8 @@ class RulingCheckerTest < ActiveSupport::TestCase
     synopsis 'İsimlerde güvensiz karakterler olmamalı'
     subject :name
 
-    def rule_no_turkish_character_please
-      spot "Türkçe karakter içeriyor: #{name}" if name =~ /[şğüöçıĞÜŞÖÇİ]/
+    rule 'no Turkish character' do
+      spot if name =~ /[şğüöçıĞÜŞÖÇİ]/
     end
   end
 
@@ -25,19 +25,19 @@ class RulingCheckerTest < ActiveSupport::TestCase
 
     assert_equal 1, violations.size
     assert violations.first.is_a? Ruling::Violation
-    assert_match(/Türkçe karakter içeriyor: hüseyin/, violations.first.to_s)
+    assert_match(/no Turkish character: hüseyin/, violations.first.to_s)
   end
 
   class NameExtraSafeRule < Ruling::Rule
     synopsis 'İsimlerde güvensiz karakterler olmamalı'
     subject :name
 
-    def rule_no_turkish_character_please
-      spot "Türkçe karakter içeriyor: #{name}" if name =~ /[şğüöçıĞÜŞÖÇİ]/
+    rule 'no Turkish character' do
+      spot if name =~ /[şğüöçıĞÜŞÖÇİ]/
     end
 
-    def rule_no_space_character_please
-      spot "Boşluk içeriyor: #{name}" if name =~ /\s/
+    rule 'no space character' do
+      spot if name =~ /\s/
     end
   end
 
@@ -54,8 +54,8 @@ class RulingCheckerTest < ActiveSupport::TestCase
     violations = checker.check NameExtraSafeRule
 
     assert_equal 2, violations.size
-    assert_match(/Türkçe karakter içeriyor: hüseyin/, violations.first.to_s)
-    assert_match(/Türkçe karakter içeriyor: ayşe begüm/, violations.second.to_s)
+    assert_match(/no Turkish character: hüseyin/, violations.first.to_s)
+    assert_match(/no Turkish character: ayşe begüm/, violations.second.to_s)
   end
 
   class NameSafeWithContextRule < Ruling::Rule
@@ -66,16 +66,16 @@ class RulingCheckerTest < ActiveSupport::TestCase
       context.seen = {}
     end
 
-    def rule_no_turkish_character_please
-      spot "Türkçe karakter içeriyor: #{name}" if name =~ /[şğüöçıĞÜŞÖÇİ]/
+    rule 'no Turkish character' do
+      spot if name =~ /[şğüöçıĞÜŞÖÇİ]/
     end
 
-    def rule_no_space_character_please
-      spot "Boşluk içeriyor: #{name}" if name =~ /\s/
+    rule 'no space character' do
+      spot if name =~ /\s/
     end
 
-    def rule_must_unique(context)
-      spot "Tekrar eden isim: #{name}" if (seen = context.seen)[name]
+    rule 'must be unique' do |context|
+      spot if (seen = context.seen)[name]
       seen[name] = true
     end
   end
@@ -93,8 +93,8 @@ class RulingCheckerTest < ActiveSupport::TestCase
     violations = checker.check NameSafeWithContextRule
 
     assert_equal 2, violations.size
-    assert_match(/Türkçe karakter içeriyor: hüseyin/, violations.first.to_s)
-    assert_match(/Tekrar eden isim: recai/, violations.second.to_s)
+    assert_match(/no Turkish character: hüseyin/, violations.first.to_s)
+    assert_match(/must be unique: recai/, violations.second.to_s)
   end
 
   class NameSafePORORule < Ruling::Rule
@@ -110,16 +110,16 @@ class RulingCheckerTest < ActiveSupport::TestCase
       context.seen = {}
     end
 
-    def rule_no_turkish_character_please
+    rule 'no Turkish character' do
       spot_if 'Türkçe karakter içeriyor'
     end
 
-    def rule_no_space_character_please
+    rule 'no space character' do
       spot_if 'Boşluk içeriyor'
     end
 
-    def rule_must_unique(context)
-      spot "Tekrar eden isim: #{name}" if (seen = context.seen)[name]
+    rule 'must be unique' do |context|
+      spot if (seen = context.seen)[name]
       seen[name] = true
     end
 
@@ -146,7 +146,7 @@ class RulingCheckerTest < ActiveSupport::TestCase
 
     assert_equal 3, violations.size
     assert_match(/Türkçe karakter içeriyor: hüseyin/, violations.first.to_s)
-    assert_match(/Tekrar eden isim: recai/, violations.second.to_s)
+    assert_match(/must be unique: recai/, violations.second.to_s)
     assert_match(/Boşluk içeriyor: emre can/, violations.third.to_s)
   end
 end

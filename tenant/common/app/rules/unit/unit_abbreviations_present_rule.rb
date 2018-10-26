@@ -4,7 +4,7 @@ class UnitAbbreviationsPresentRule < Ruling::Rule
   synopsis 'Unit abbreviations must be present'
   subject :unit
 
-  def rule_abbreviation_must_present
+  rule 'abbreviation must be present' do
     spot detail if unit.abbreviation.blank?
   end
 
