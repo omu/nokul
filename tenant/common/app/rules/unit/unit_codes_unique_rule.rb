@@ -12,10 +12,10 @@ class UnitCodesUniqueRule < Ruling::Rule
     skip if unit.code.blank?
   end
 
-  def rule_code_must_unique(context)
+  rule 'code must be unique' do |context|
     code = unit.code
     seen = context.seen
-    return unless seen.key? code
+    next unless seen.key? code
 
     spot detail(code: code, context: context)
   ensure

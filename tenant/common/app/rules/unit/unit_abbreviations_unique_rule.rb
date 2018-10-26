@@ -15,12 +15,12 @@ class UnitAbbreviationsUniqueRule < Ruling::Rule
     skip if unit.abbreviation.blank?
   end
 
-  def rule_abbreviation_itself_must_unique(context)
+  rule 'abbreviation itself must be unique' do |context|
     itself = unit.abbreviation
     seen = context.seen
-    return unless seen.key? itself
+    next unless seen.key? itself
 
-    return if already_violated? context
+    next if already_violated? context
 
     spot detail(abbreviation: itself, variation: :itself,
                 context: context)
@@ -28,7 +28,7 @@ class UnitAbbreviationsUniqueRule < Ruling::Rule
     seen[itself] = unit
   end
 
-  def rule_abbreviation_variants_must_unique(context)
+  rule 'abbreviation variants must be unique' do |context|
     itself = unit.abbreviation
     seen = context.seen
     Abbreviation.variants_excluding_itself(itself).each do |variation, variant|

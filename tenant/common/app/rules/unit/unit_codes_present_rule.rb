@@ -4,7 +4,7 @@ class UnitCodesPresentRule < Ruling::Rule
   synopsis 'Unit codes must be present'
   subject :unit
 
-  def rule_codes_must_present
+  rule 'codes must be present' do
     spot detail if unit.code.blank?
   end
 
