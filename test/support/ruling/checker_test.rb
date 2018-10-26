@@ -103,7 +103,7 @@ class RulingCheckerTest < ActiveSupport::TestCase
 
     VIOLATION_PATTERN = {
       'Türkçe karakter içeriyor' => /[şğüöçıĞÜŞÖÇİ]/,
-      'Boşluk içeriyor'          => /\s/
+      'Boşluk içeriyor' => /\s/
     }.freeze
 
     def self.setup(context)
