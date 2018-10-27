@@ -23,21 +23,25 @@ namespace :tenant do
   namespace :units do
     task :check_source do
       [YOK, DET, UNI].each do |collection_class|
-        collection_class.load.check_and_report [
-          UnitAbbreviationsUniqueRule,
-          UnitCodesUniqueRule
-        ]
+        Support.abort_on_yaml_syntax_errors do
+          collection_class.load.check_and_report [
+            UnitAbbreviationsUniqueRule,
+            UnitCodesUniqueRule
+          ]
+        end
       end
     end
 
     # TODO: add UnitAbbreviationsPresentRule when done
 
     task :check_output do
-      ALL.load.check_and_report [
-        UnitCodesPresentRule,
-        UnitAbbreviationsUniqueRule,
-        UnitCodesUniqueRule
-      ]
+      Support.abort_on_yaml_syntax_errors do
+        ALL.load.check_and_report [
+          UnitCodesPresentRule,
+          UnitAbbreviationsUniqueRule,
+          UnitCodesUniqueRule
+        ]
+      end
     end
 
     desc 'Check output units data'

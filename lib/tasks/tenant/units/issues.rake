@@ -20,7 +20,9 @@ end
 namespace :tenant do
   namespace :units do
     def run(key)
-      [YOK, DET, UNI].each { |collection_class| collection_class.load.report(key) }
+      Support.abort_on_yaml_syntax_errors do
+        [YOK, DET, UNI].each { |collection_class| collection_class.load.report(key) }
+      end
     end
 
     desc 'Display issues'
