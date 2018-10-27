@@ -2,6 +2,7 @@
   <div class="col-sm-12">
     <div class="card">
       <div class="card-body">
+        <%= link_to_new(new_user_identity_path(@user), t('.new_identity')) unless @user.identities.informal.present? %>
         <%= link_to (@user.identities.formal.present? ? t('.update_from_mernis') : t('.create_from_mernis') ), save_identity_from_mernis_user_path, class: "btn btn-outline-primary btn-sm"  %>
       </div>
     </div>
@@ -10,10 +11,16 @@
     <div class="col-sm-6">
       <div class="card">
         <div class="card-header">
-          <div class="card-header-actions">
-            <%= link_to_edit(edit_identity_path(identity)) %>
-            <%= link_to_destroy(identity) %>
-          </div>
+          <%= fa_icon 'id-card' %>
+          <% if identity.formal? %>
+            <strong><%= identity.student_id.present? ? t('.student_identity') : t('.user_identity') %></strong>
+          <% else %>
+            <strong><%= t('.informal_identity') %></strong>
+            <div class="card-header-actions">
+              <%= link_to_edit(edit_user_identity_path(@user, identity)) %>
+              <%= link_to_destroy(user_identity_path(@user, identity)) %>
+            </div>
+          <% end %>
         </div>
 
         <div class="card-body">
