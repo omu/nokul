@@ -16,7 +16,7 @@ module Xokul
           '/yoksis/units/programs', params: { sub_unit_id: sub_unit_id }
         )
       end
-      
+
       def universities
         Connection.instance.get '/yoksis/units/universities'
       end
