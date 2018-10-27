@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-Tenant.load_rules
+Tenant.load_rules 'unit'
 
 module Checkable
   def check_and_report(rules)
