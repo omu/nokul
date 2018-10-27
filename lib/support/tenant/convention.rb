@@ -8,37 +8,45 @@ module Tenant
   end
 
   def root
-    Pathname.new Rails.root.join('tenant')
+    Rails.root.join('tenant') # Pathname object
   end
 
-  def path(relative_path)
-    root.join(active, relative_path).to_s
+  def path(*paths)
+    root.join(active, *paths).to_s
   end
 
   def config_file
-    File.join(Path.config, 'config.yml')
+    Path.config.join('config.yml').to_s
   end
 
   def configuration
     YAML.load_file(config_file).fetch(Rails.env, {}).to_deep_ostruct
   end
 
-  def load_rules
-    [*File.join(Path.common_app, 'rules'), *File.join(Path.app, 'rules')].each do |dir|
-      Dir[File.join(dir, '**', '*.rb')].each { |rule| require rule }
+  def load_rules(*paths)
+    [*Path.common_app.join('rules'), *Path.app.join('rules')].each do |path|
+      next unless Dir.exist? path
+
+      Dir[path.join(*paths, '**', '*.rb')].each { |rule| require rule }
     end
   end
 
   module Path
     module_function
 
+    # All methods should return Pathname objects
+
+    def common(*paths)
+      Tenant.root.join('common', *paths)
+    end
+
     %w[app config db test].each do |subdir|
       define_method(subdir) do |*paths|
-        Tenant.root.join(Tenant.active, subdir, *paths).to_s
+        Tenant.root.join(Tenant.active, subdir, *paths)
       end
 
       define_method("common_#{subdir}") do |*paths|
-        Tenant.root.join('common', subdir, *paths).to_s
+        common.join(subdir, *paths)
       end
     end
   end
