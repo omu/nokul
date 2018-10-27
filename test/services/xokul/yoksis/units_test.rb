@@ -16,26 +16,30 @@ class UnitsTest < ActiveSupport::TestCase
     assert Xokul::Yoksis::Units.universities
   end
 
-  %i[
-    programs
-    subunits
-  ].each do |method|
-    test "trying to get #{method} under a department" do
-      assert Xokul::Yoksis::Units.send method, unit_id: 212_950
+  test 'trying to get programs under a department' do
+    assert Xokul::Yoksis::Units.programs sub_unit_id: 212_950
 
-      assert_raises Net::HTTPError, Net::HTTPFatalError do
-        Xokul::Yoksis::Units.send method, unit_id: -1
-        Xokul::Yoksis::Units.send method, unit_id: 'unit id as string'
-      end
+    assert_raises Net::HTTPError, Net::HTTPFatalError do
+      Xokul::Yoksis::Units.programs sub_unit_id: -1
+      Xokul::Yoksis::Units.programs sub_unit_id: 'unit id as string'
+    end
+  end
+
+  test 'trying to get subunits under a department' do
+    assert Xokul::Yoksis::Units.subunits unit_id: 212_950
+
+    assert_raises Net::HTTPError, Net::HTTPFatalError do
+      Xokul::Yoksis::Units.subunits unit_id: -1
+      Xokul::Yoksis::Units.subunits unit_id: 'unit id as string'
     end
   end
 
   test 'trying to get units under a university' do
-    assert Xokul::Yoksis::Units.units unit_id: 163_896
+    assert Xokul::Yoksis::Units.names unit_id: 163_896
 
     assert_raises Net::HTTPError, Net::HTTPFatalError do
-      Xokul::Yoksis::Units.units unit_id: -1
-      Xokul::Yoksis::Units.units unit_id: 'unit id as string'
+      Xokul::Yoksis::Units.names unit_id: -1
+      Xokul::Yoksis::Units.names unit_id: 'unit id as string'
     end
   end
 end
