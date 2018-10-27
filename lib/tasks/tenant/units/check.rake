@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+Tenant.load_rules
+
 module Checkable
   def check_and_report(rules)
     headline
