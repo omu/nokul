@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'support'
+require 'support/utils/rake_utils'
 
 YOK = Class.new Tenant::Units do
   collection.source   = 'db/src/yok.yml'
@@ -32,6 +33,8 @@ module Common
 end
 
 [YOK, DET, UNI, ALL].each { |collection_class| collection_class.include Common }
+
+Dir.glob(File.join(__dir__, 'units', '*.rake')).each { |rake| import rake }
 
 namespace :tenant do
   desc 'Default task for units'
