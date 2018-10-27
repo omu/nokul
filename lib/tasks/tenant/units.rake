@@ -34,8 +34,6 @@ end
 
 [YOK, DET, UNI, ALL].each { |collection_class| collection_class.include Common }
 
-Dir.glob(File.join(__dir__, 'units', '*.rake')).each { |rake| import rake }
-
 namespace :tenant do
   desc 'Default task for units'
   task units: %w[units:stats]
