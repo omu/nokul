@@ -90,7 +90,7 @@ Yeni bir kiracı geldiğinde sırayla aşağıdaki prosedürü uyguluyoruz.
 
    Ör. Bir idari birim olarak "Mühendislik Fakültesi Dekanlığı"nı YÖKSİS'teki
    "Mühendislik Fakültesi" akademik birimini üst birim kabul edecek şekilde
-   ilişkilendir.  Bu işlen tüm idari birimler için yapılmadığını not edelim.
+   ilişkilendir.  Bu işlemin tüm idari birimler için yapılmadığını not edelim.
    Ör. üst birimi de bir idari birim olan bir birimi bir YÖKSİS birimiyle
    ilişkilendirmek gerekmiyor.
 
