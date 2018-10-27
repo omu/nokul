@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'yaml'
-
 module Simple
   class Container < Module
     def initialize(properties)

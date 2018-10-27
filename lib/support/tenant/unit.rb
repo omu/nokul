@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 require_relative 'unit/abbreviation'
-# require_relative 'unit/rules'
-# require_relative 'unit/coder'
+require_relative 'unit/rules'
+require_relative 'unit/coder'
 
 module Tenant
   class Unit
