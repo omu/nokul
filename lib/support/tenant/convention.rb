@@ -1,59 +1,53 @@
 # frozen_string_literal: true
 
-require 'pathname'
-
 module Tenant
   module_function
-
-  module Path
-    module_function
-
-    %w[app config db test].each do |subdir|
-      define_method(subdir) do |*paths|
-        Tenant.root.join(Tenant.active, subdir, *paths).to_s
-      end
-
-      define_method("common_#{subdir}") do |*paths|
-        Tenant.root.join('common', subdir, *paths).to_s
-      end
-    end
-  end
 
   def active
     ENV['RAILS_TENANT'] || 'omu'
   end
 
+  def root
+    Rails.root.join('tenant') # Pathname object
+  end
+
+  def path(*paths)
+    root.join(active, *paths).to_s
+  end
+
   def config_file
-    File.join(Path.config, 'config.yml')
+    Path.config.join('config.yml').to_s
   end
 
   def configuration
     YAML.load_file(config_file).fetch(Rails.env, {}).to_deep_ostruct
   end
 
-  def root
-    Pathname.new Rails.root.join('tenant')
+  def load_rules(*paths)
+    [*Path.common_app.join('rules'), *Path.app.join('rules')].each do |path|
+      next unless Dir.exist? path
+
+      Dir[path.join(*paths, '**', '*.rb')].each { |rule| require rule }
+    end
   end
 
-  def file(relative_path)
-    root.join(active, relative_path).to_s
-  end
+  module Path
+    module_function
 
-  def rules
-    File.join(Path.app, 'rules')
-  end
+    # All methods should return Pathname objects
 
-  def common_rules
-    File.join(Path.common_app, 'rules')
-  end
+    def common(*paths)
+      Tenant.root.join('common', *paths)
+    end
 
-  # def load_rules
-  #   [*Path.common_rules, *rules].each do |dir|
-  #     Dir[File.join(dir, '**', '*.rb')].each { |rule| require rule }
-  #   end
-  # end
+    %w[app config db test].each do |subdir|
+      define_method(subdir) do |*paths|
+        Tenant.root.join(Tenant.active, subdir, *paths)
+      end
 
-  def init
-    # load_rules
+      define_method("common_#{subdir}") do |*paths|
+        common.join(subdir, *paths)
+      end
+    end
   end
 end

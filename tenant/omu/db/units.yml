@@ -14936,7 +14936,7 @@
   issues:
   notes:
 
-- abbreviation: REKTORLÜK
+- abbreviation: REKTÖRLÜK
   code: B32
   district_id:
   duration:
@@ -23143,13 +23143,13 @@
   issues:
   notes:
 
-- abbreviation: BAFRA-MYO-SEK
+- abbreviation: BAFRA-MYO-BİTKİ-BB
   code: G0A
   district_id: Bafra
   duration:
   foet_code:
   founded_at:
-  name: Bafra Meslek Yüksekokulu Sekreterliği
+  name: Bitkisel Ve Hayvansal Üretim Bölüm Başkanlığı
   osym_id:
   yoksis_id:
   parent_yoksis_id:
@@ -25765,7 +25765,7 @@
   issues:
   notes:
 
-- abbreviation: DİŞ-YÖNKUR
+- abbreviation: DİŞ-YÖNKUR-DİĞER
   code: G4N
   district_id: Atakum
   duration:
@@ -25783,6 +25783,7 @@
   unit_status_id:
   unit_type_id:
   issues:
+  - detsis_id hatalı, mükerrerlik sebebiyle -DİĞER eklendi
   notes:
 
 - abbreviation: EĞİTİM-BİLİM-MD
@@ -34033,19 +34034,19 @@
   issues:
   notes:
 
-- abbreviation: YY-AUM-MD
+- abbreviation: YAPIİŞ-DB
   code: GJE
   district_id: Atakum
   duration:
   foet_code:
   founded_at:
-  name: Yaratıcı Yazarlık Uygulama Ve Araştırma Merkezi Müdürlüğü
+  name: Yapı İşleri ve Teknik Daire Başkanlığı
   osym_id:
   yoksis_id:
   parent_yoksis_id:
   detsis_id: 68380559
   parent_detsis_id: 78633602
-  related_yoksis_id: 212704
+  related_yoksis_id:
   unit_instruction_language_id:
   unit_instruction_type_id:
   unit_status_id:
@@ -34153,7 +34154,7 @@
   issues:
   notes:
 
-- abbreviation: SPOR-YÖN-BB
+- abbreviation: SPORYÖN-BB
   code: GJM
   district_id: Atakum
   duration:
@@ -35757,9 +35758,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: VETERİNER-SKS-BR
   code: GNA
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -35777,9 +35778,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GÜZEL-SANAT-BASIN-BR
   code: GNB
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -35797,9 +35798,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-ADLİ-ADB
   code: GNC
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -35817,7 +35818,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-ECZANE-BR
   code: GND
   district_id:
   duration:
@@ -35837,7 +35838,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: KONSERVATUVAR-SKS-BR
   code: GNE
   district_id:
   duration:
@@ -35857,9 +35858,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-EEM-ADB
   code: GNF
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -35877,9 +35878,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TERME-MYO-YAPI-BR
   code: GNG
-  district_id:
+  district_id: Terme
   duration:
   foet_code:
   founded_at:
@@ -35897,9 +35898,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: BİDB-AĞ-BR
   code: GNH
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -35917,9 +35918,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: MİMARLIK-SKS-BR
   code: GNJ
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -35937,9 +35938,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLGİ-BR
   code: GNK
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -35957,9 +35958,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GÜZEL-SANAT-RESİM-ADB
   code: GNM
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -35977,9 +35978,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-ÖZELKALEM-BR
   code: GNN
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -35997,9 +35998,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TERME-MYO-YAYIN-BR
   code: GNP
-  district_id:
+  district_id: Terme
   duration:
   foet_code:
   founded_at:
@@ -36017,9 +36018,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ADALET-MYO-İDARİ-BR
   code: GNR
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -36037,9 +36038,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: T-AUM-SATINALMA-BR
   code: GNS
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36057,9 +36058,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: DİŞ-MALİ-BR
   code: GNT
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36077,9 +36078,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İLAHİYAT-SKS-BR
   code: GNU
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36097,9 +36098,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-PERSONEL-BR
   code: GNV
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36117,9 +36118,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-MALİ-BR
   code: GNY
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36137,9 +36138,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: BİDB-SİSTEM-BR
   code: GNZ
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36157,9 +36158,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: VEZİRKÖPRÜ-MYO-ÖĞRENCİ-BR
   code: GP0
-  district_id:
+  district_id: Vezirköprü
   duration:
   foet_code:
   founded_at:
@@ -36177,9 +36178,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-BİLİM-BÖTE-ADB
   code: GP1
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36197,9 +36198,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-BİLİM-SGK-BR
   code: GP2
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36217,9 +36218,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TIP-SKS-BR
   code: GP3
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36237,9 +36238,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-VMİKRO-ADB
   code: GP4
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36255,11 +36256,12 @@
   unit_status_id:
   unit_type_id:
   issues:
+  - Anabilim Dalı Veterinerlikte, Başkanlık Enstitüde
   notes:
 
-- abbreviation:
+- abbreviation: KONSERVATUVAR-YAPI-BR
   code: GP5
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -36277,9 +36279,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: VEZİRKÖPRÜ-MYO-BİLGİ-BR
   code: GP6
-  district_id:
+  district_id: Vezirköprü
   duration:
   foet_code:
   founded_at:
@@ -36297,9 +36299,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-MOLTIP-ADB
   code: GP7
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36317,7 +36319,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-MD
   code: GP8
   district_id:
   duration:
@@ -36337,9 +36339,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GÜZEL-SANAT-HUKUK-BR
   code: GP9
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36357,9 +36359,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GÜZEL-SANAT-SKS-BR
   code: GPA
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36377,9 +36379,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: BAFRA-MYO-SGK-BR
   code: GPB
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -36397,9 +36399,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-FİZYO-ADB
   code: GPC
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36417,9 +36419,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: YEŞİLYURT-MYO-BASIN-BR
   code: GPD
-  district_id:
+  district_id: Tekkeköy
   duration:
   foet_code:
   founded_at:
@@ -36437,9 +36439,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TERME-MYO-İDARİ-BR
   code: GPE
-  district_id:
+  district_id: Terme
   duration:
   foet_code:
   founded_at:
@@ -36457,9 +36459,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ÖZELKALEM
   code: GPF
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36477,9 +36479,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-SGK-BR
   code: GPG
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36497,9 +36499,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-FDB-ADB
   code: GPH
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36517,9 +36519,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: VEZİRKÖPRÜ-MYO-YAPI-BR
   code: GPJ
-  district_id:
+  district_id: Vezirköprü
   duration:
   foet_code:
   founded_at:
@@ -36537,9 +36539,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-KAMUYÖN-ADB
   code: GPK
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36557,9 +36559,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ADALET-MYO-YAPI-BR
   code: GPM
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -36575,11 +36577,12 @@
   unit_status_id:
   unit_type_id:
   issues:
+  - Tesis yazımı hatalı
   notes:
 
-- abbreviation:
+- abbreviation: TIP-DÖNER-BR
   code: GPN
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36597,9 +36600,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: MİMARLIK-SGK-BR
   code: GPP
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -36617,9 +36620,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ALAÇAM-MYO-YAYIN-BR
   code: GPR
-  district_id:
+  district_id: Alaçam
   duration:
   foet_code:
   founded_at:
@@ -36637,9 +36640,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAMSUN-MYO-İDARİ-BR
   code: GPS
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -36657,9 +36660,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: DİŞ-HUKUK-BR
   code: GPT
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36677,9 +36680,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-TİB-ADB
   code: GPU
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36697,9 +36700,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ZİRAAT-PERSONEL-BR
   code: GPV
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36717,9 +36720,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-BİTKİKOR-ADB
   code: GPY
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36737,9 +36740,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: PER-DB-İDARİ-BR
   code: GPZ
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36757,9 +36760,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-TARLABİTKİ-ADB
   code: GR0
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36777,9 +36780,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TIP-PROJE-BR
   code: GR1
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36797,9 +36800,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: DİŞ-SGK-BR
   code: GR2
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36817,9 +36820,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-BİLİM-BASIN-BR
   code: GR3
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36837,9 +36840,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TIP-PERSONEL-BR
   code: GR4
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36857,9 +36860,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SPOR-PERSONEL-BR
   code: GR5
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36877,9 +36880,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ALAÇAM-MYO-BİLGİ-BR
   code: GR6
-  district_id:
+  district_id: Alaçam
   duration:
   foet_code:
   founded_at:
@@ -36897,9 +36900,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TIP-İDARİ-BR
   code: GR7
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36917,9 +36920,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-İDARİ-BR
   code: GR8
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36937,9 +36940,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-SKS-BR
   code: GR9
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36957,9 +36960,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SKS-DB-TAŞINIR-BR
   code: GRA
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36977,9 +36980,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-İDARİ-BR
   code: GRB
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -36997,7 +37000,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-İDARİ-DEPO-BR
   code: GRC
   district_id:
   duration:
@@ -37017,7 +37020,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-MALİ-FATURA-BR
   code: GRD
   district_id:
   duration:
@@ -37037,9 +37040,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GÜZELSANATLAR-BİLGİ-BR
   code: GRE
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -37057,9 +37060,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TİCARET-MYO-SGK-BR
   code: GRF
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -37077,7 +37080,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-İDARİ-MORG-BR
   code: GRG
   district_id:
   duration:
@@ -37097,7 +37100,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-ERİŞKİN-BAŞHEK
   code: GRH
   district_id:
   duration:
@@ -37117,9 +37120,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-İDARİ-BR
   code: GRJ
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -37137,9 +37140,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: MİMARLIK-PERSONEL-BR
   code: GRK
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -37157,7 +37160,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-BİLGİ-BR
   code: GRM
   district_id:
   duration:
@@ -37177,9 +37180,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-BİLİM-YAPI-BR
   code: GRN
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -37197,9 +37200,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: MÜHENDİSLİK-HUKUK-BR
   code: GRP
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -37217,9 +37220,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-SGK-BR
   code: GRR
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -37237,9 +37240,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-MALİ-BR
   code: GRS
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -37257,9 +37260,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ZİRAAT-İDARİ-BR
   code: GRT
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -37277,9 +37280,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: VEZİRKÖPRÜ-MYO-HUKUK-BR
   code: GRU
-  district_id:
+  district_id: Vezirköprü
   duration:
   foet_code:
   founded_at:
@@ -37297,9 +37300,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-PATO-ADB
   code: GRV
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -37315,11 +37318,12 @@
   unit_status_id:
   unit_type_id:
   issues:
+  - Veterinerlik'te aynı adlı ADB var
   notes:
 
-- abbreviation:
+- abbreviation: İKTİSAT-PERSONEL-BR
   code: GRY
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -37337,9 +37341,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: KONSERVATUVAR-MALİ-BR
   code: GRZ
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -37357,9 +37361,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TURİZM-İDARİ-BR
   code: GS0
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -37377,9 +37381,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-SU-ADB
   code: GS1
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -37397,9 +37401,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-TOPRAKBİL-ADB
   code: GS2
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -37417,9 +37421,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TIP-YAYIN-BR
   code: GS3
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -37437,9 +37441,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-TARIMAK-ADB
   code: GS4
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -37457,7 +37461,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-İDARİ-GÜVENLİK-BR
   code: GS5
   district_id:
   duration:
@@ -37477,9 +37481,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-FİZİK-ADB
   code: GS6
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -37497,7 +37501,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-İDARİ-ARŞİV-BR
   code: GS7
   district_id:
   duration:
@@ -37517,9 +37521,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-AAKT-ADB
   code: GS8
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -37537,9 +37541,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ÖİDB-YAZIDIŞ-BR
   code: GS9
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -37557,9 +37561,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-HUKUK-BR
   code: GSA
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -37577,9 +37581,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İLETİŞİM-BİLGİ-BR
   code: GSB
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -37597,9 +37601,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: DİŞ-İDARİ-BR
   code: GSC
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -37617,9 +37621,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-BİLİM-ÖĞRENCİ-BR
   code: GSD
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -37637,9 +37641,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İLAHİYAT-PROJE-BR
   code: GSE
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -37657,7 +37661,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-PERSONEL-SÖZLEŞME-BR
   code: GSF
   district_id:
   duration:
@@ -37677,9 +37681,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: VETERİNER-İDARİ-BR
   code: GSG
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -37697,9 +37701,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TERME-MYO-SGK-BR
   code: GSH
-  district_id:
+  district_id: Terme
   duration:
   foet_code:
   founded_at:
@@ -37717,7 +37721,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-DDR-ADB
   code: GSJ
   district_id:
   duration:
@@ -37737,9 +37741,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: MÜHENDİSLİK-ÖĞRENCİ-BR
   code: GSK
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -37757,7 +37761,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-İDARİ-AMELİYAT-BR
   code: GSM
   district_id:
   duration:
@@ -37777,9 +37781,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-RUH-ADB
   code: GSN
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -37797,9 +37801,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-HSH-ADB
   code: GSP
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -37815,11 +37819,12 @@
   unit_status_id:
   unit_type_id:
   issues:
+  - Yüksek lisans isminde "ve" yok
   notes:
 
-- abbreviation:
+- abbreviation: İMİ-DB-BÜTÇE-BR
   code: GSR
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -37837,9 +37842,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: HUKUK-PERSONEL-BR
   code: GSS
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -37857,9 +37862,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TURİZM-PERSONEL-BR
   code: GST
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -37877,7 +37882,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-TBİYOKİMYA-LAB
   code: GSU
   district_id:
   duration:
@@ -37897,9 +37902,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-EBH-ADB
   code: GSV
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -37917,9 +37922,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GÜZELSANATLAR-SGK-BR
   code: GSY
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -37937,9 +37942,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-BİLGİ-BR
   code: GSZ
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -37957,9 +37962,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ZİRAAT-HUKUK-BR
   code: GT0
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -37977,9 +37982,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TIP-SGK-BR
   code: GT1
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -37997,9 +38002,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: YEŞİLYURT-MYO-BİLGİ-BR
   code: GT2
-  district_id:
+  district_id: Tekkeköy
   duration:
   foet_code:
   founded_at:
@@ -38017,9 +38022,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SPO-SKS-BR
   code: GT3
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38037,7 +38042,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-DÖNER-TAHAKKUK-BR
   code: GT4
   district_id:
   duration:
@@ -38057,9 +38062,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAMSUN-MYO-HUKUK-BR
   code: GT5
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -38077,9 +38082,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: HAVZA-MYO-BİLGİ-BR
   code: GT6
-  district_id:
+  district_id: Havza
   duration:
   foet_code:
   founded_at:
@@ -38097,9 +38102,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: YEŞİLYURT-MYO-SKS-BR
   code: GT7
-  district_id:
+  district_id: Tekkeköy
   duration:
   foet_code:
   founded_at:
@@ -38117,9 +38122,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: HUKUK-HUKUK-BR
   code: GT8
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -38137,9 +38142,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-MYO-MALİ-BR
   code: GT9
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38157,9 +38162,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-EVLİLİK-ADB
   code: GTA
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38177,9 +38182,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: VEZİRKÖPRÜ-MYO-YAYIN-BR
   code: GTB
-  district_id:
+  district_id: Vezirköprü
   duration:
   foet_code:
   founded_at:
@@ -38197,9 +38202,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-YAPI-BR
   code: GTC
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38217,9 +38222,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İLAHİYAT-İDARİ-BR
   code: GTD
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38237,9 +38242,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: MİMARLIK-BİLGİ-BR
   code: GTE
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -38257,9 +38262,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-EBELİK-ADB
   code: GTF
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38277,9 +38282,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İKTİSAT-MALİ-BR
   code: GTG
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38297,9 +38302,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-HUKUK-BR
   code: GTH
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38317,9 +38322,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: DİŞ_DÖNER-BR
   code: GTJ
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38337,9 +38342,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: DİŞ-PERSONEL-BR
   code: GTK
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38357,9 +38362,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-YAPI-BR
   code: GTM
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38377,9 +38382,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: Öİ-DB-SATINALMA-BR
   code: GTN
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38397,9 +38402,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-BİLİM-MALİ-BR
   code: GTP
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38417,9 +38422,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İKTİSAT-SKS-BR
   code: GTR
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38437,9 +38442,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İÇDENETİM
   code: GTS
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38457,9 +38462,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: HAVZA-MYO-ÖĞRENCİ-BR
   code: GTT
-  district_id:
+  district_id: Havza
   duration:
   foet_code:
   founded_at:
@@ -38477,9 +38482,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GÜZELSANATLAR-BASIN-BR
   code: GTU
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -38497,9 +38502,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ZİRAAT-PROJE-BR
   code: GTV
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38517,9 +38522,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İKTİSAT-İDARİ-BR
   code: GTY
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38537,9 +38542,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: HUKUK-BASIN-BR
   code: GTZ
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -38557,9 +38562,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İLAHİYAT-MALİ-BR
   code: GU0
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38577,9 +38582,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-MALİ-BR
   code: GU1
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38597,9 +38602,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-YAPI-BR
   code: GU2
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38617,9 +38622,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-BİLİM-DKAB-ADB
   code: GU3
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38637,9 +38642,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GÜZELSANATLAR-ÖZELKALEM-BR
   code: GU4
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -38657,9 +38662,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: Öİ-DB-KAYIT-BR
   code: GU5
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38677,9 +38682,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İLAHİYAT-PERSONEL-BR
   code: GU6
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38697,9 +38702,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-ÖĞRENCİ-BR
   code: GU7
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38717,9 +38722,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-SGK-BR
   code: GU8
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38737,9 +38742,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-ADÇC-ADB
   code: GU9
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38757,9 +38762,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: VETERİNER-SGK-BR
   code: GUA
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38777,9 +38782,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-ZOO-ADB
   code: GUB
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38795,11 +38800,12 @@
   unit_status_id:
   unit_type_id:
   issues:
+  - Veterinerlikte aynı isimli anabilim dalı
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-MAKİNE-ADB
   code: GUC
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38817,9 +38823,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ZİRAAT-YAPI-BR
   code: GUD
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38837,9 +38843,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GÜZELSANATLAR-GİT-ADB
   code: GUE
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -38857,9 +38863,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TİCARET-MYO-BASIN-BR
   code: GUF
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -38877,9 +38883,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GÜZELSANATLAR-MALİ-BR
   code: GUG
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -38897,9 +38903,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GÜZEL-SANAT-MALİ-BR
   code: GUH
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38917,9 +38923,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-MÜZİK-ADB
   code: GUJ
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38937,9 +38943,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: YDİL-YO-MALİ-BR
   code: GUK
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38957,9 +38963,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-ÖĞRENCİ-BR
   code: GUM
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38977,9 +38983,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: YDİL-YO-BİLGİ-BR
   code: GUN
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -38997,9 +39003,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GÜZELSANATLAR-İDARİ-BR
   code: GUP
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -39017,9 +39023,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-TBİYOKİMYA-ADB
   code: GUR
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39037,9 +39043,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: YDİL-YO-İDARİ-BR
   code: GUS
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39057,9 +39063,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: BAFRA-MYO-İDARİ-BR
   code: GUT
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -39077,9 +39083,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İKTİSAT-SGK-BR
   code: GUU
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39097,9 +39103,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-VANATOMİ-ADB
   code: GUV
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39115,11 +39121,12 @@
   unit_status_id:
   unit_type_id:
   issues:
+  - Veterinerlikte aynı isimli anabilim dalı başkanlığı
   notes:
 
-- abbreviation:
+- abbreviation: İLAHİYAT-YAYIN-BR
   code: GUY
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39137,9 +39144,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: HUKUK-ÖĞRENCİ-BR
   code: GUZ
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -39157,9 +39164,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TERME-MYO-ÖĞRENCİ-BR
   code: GV0
-  district_id:
+  district_id: Terme
   duration:
   foet_code:
   founded_at:
@@ -39177,9 +39184,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-HİSTO-ADB
   code: GV1
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39195,11 +39202,12 @@
   unit_status_id:
   unit_type_id:
   issues:
+  - İsimde yazım hatası
   notes:
 
-- abbreviation:
+- abbreviation: YDİL-YO-MÜTERCİM-ARAPÇA-ADB
   code: GV2
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39215,11 +39223,12 @@
   unit_status_id:
   unit_type_id:
   issues:
+  - İsimde yazım hatası
   notes:
 
-- abbreviation:
+- abbreviation: ZİRAAT-BİLGİ-BR
   code: GV3
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39237,9 +39246,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GÜZELSANATLAR-SKS-BR
   code: GV4
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -39257,9 +39266,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ZİRAAT-ÖĞRENCİ-BR
   code: GV5
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39277,9 +39286,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-PERİO-ADB
   code: GV6
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39297,7 +39306,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-SGK-BR
   code: GV7
   district_id:
   duration:
@@ -39317,9 +39326,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: Öİ-DB-YU-BR
   code: GV8
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39337,9 +39346,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-KAA-ADB
   code: GV9
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39357,9 +39366,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-MYO-ÖĞRENCİ-BR
   code: GVA
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39377,9 +39386,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TERME-MYO-MALİ-BR
   code: GVB
-  district_id:
+  district_id: Terme
   duration:
   foet_code:
   founded_at:
@@ -39397,9 +39406,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: VETERİNER-YAYIN-BR
   code: GVC
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39417,9 +39426,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-ÇEVRE-ADB
   code: GVD
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39437,9 +39446,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GENSEK-EVRAK-BR
   code: GVE
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39457,9 +39466,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TURİZM-SGK-BR
   code: GVF
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -39477,9 +39486,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: MÜHENDİSLİK-BİLGİ-BR
   code: GVG
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39497,9 +39506,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GÜZEL-SANAT-ST-ADB
   code: GVH
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39517,9 +39526,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TİCARET-MYO-PERSONEL-BR
   code: GVJ
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -39537,9 +39546,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-ARKEO-ADB-DİĞER
   code: GVK
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39557,7 +39566,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-PEDO-ADB
   code: GVM
   district_id:
   duration:
@@ -39575,11 +39584,12 @@
   unit_status_id:
   unit_type_id:
   issues:
+  - Diş'te aynı isimli anabilim dalı başkanlığı
   notes:
 
-- abbreviation:
+- abbreviation: MİMARLIK-PROJE-BR
   code: GVN
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -39597,9 +39607,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: KONSERVATUVAR-ÖĞRENCİ-BR
   code: GVP
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -39617,9 +39627,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GÜZELSANATLAR-YAYIN-BR
   code: GVR
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -39637,9 +39647,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-NANO-ADB
   code: GVS
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39657,9 +39667,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: T-AUM-DÖNER-BR
   code: GVT
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39677,9 +39687,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TIP-PERSONEL-AKADEMİK-BR
   code: GVU
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39697,9 +39707,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-MYO-BASIN-BR
   code: GVV
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39717,9 +39727,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: HUKUK-ÖZELHUKUK-MAÖH-ADB
   code: GVY
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -39737,9 +39747,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İLETİŞİM-YAPI-BR
   code: GVZ
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -39757,9 +39767,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: VETERİNER-YAPI-BR
   code: GY0
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39777,9 +39787,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: VETERİNER-HUKUK-BR
   code: GY1
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39797,9 +39807,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-BTB-ADB
   code: GY2
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39815,11 +39825,12 @@
   unit_status_id:
   unit_type_id:
   issues:
+  - Tıp'ta aynı isimli anabilim dalı bşk
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BASIN-BR
   code: GY3
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39837,9 +39848,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İMİ-DB-TAŞINIR-BR
   code: GY4
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39857,9 +39868,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: MİMARLIK-BASIN-BR
   code: GY5
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -39877,9 +39888,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: MÜHENDİSLİK-SKS-BR
   code: GY6
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39897,9 +39908,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GÜZELSANATLAR-PERSONEL-BR
   code: GY7
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -39917,7 +39928,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-PERSONEL-BR
   code: GY8
   district_id:
   duration:
@@ -39937,9 +39948,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: MİMARLIK-ÖĞRENCİ-BR
   code: GY9
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -39957,7 +39968,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-TÜPBEBEK-MR
   code: GYA
   district_id:
   duration:
@@ -39977,9 +39988,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GÜZEL-SANAT-YAPI-BR
   code: GYB
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -39997,9 +40008,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: BALLICA-MYO-MD
   code: GYC
-  district_id:
+  district_id: 19 Mayıs
   duration:
   foet_code:
   founded_at:
@@ -40017,9 +40028,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-VFİZYO-ADB
   code: GYD
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40037,9 +40048,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-ALERJİ-ADB
   code: GYE
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40057,9 +40068,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-MAT-ADB
   code: GYF
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40077,9 +40088,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ADALET-MYO-YAYIN-BR
   code: GYG
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -40097,9 +40108,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TERME-MYO-PERSONEL-BR
   code: GYH
-  district_id:
+  district_id: Terme
   duration:
   foet_code:
   founded_at:
@@ -40117,7 +40128,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-DÖNER-SATINALMA-BR
   code: GYJ
   district_id:
   duration:
@@ -40137,9 +40148,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-İŞLETME-ADB
   code: GYK
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40157,9 +40168,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: DİŞ-ÖĞRENCİ-BR
   code: GYM
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40177,9 +40188,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: KONSERVATUVAR-BİLGİ-BR
   code: GYN
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -40197,9 +40208,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-BİLGİ-BR
   code: GYP
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40217,9 +40228,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İKTİSAT-İKTİSATBB-İT-ADB
   code: GYR
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40237,9 +40248,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-PERSONEL
   code: GYS
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40257,9 +40268,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: Bİ-DB-TEKNİK-BR
   code: GYT
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40277,9 +40288,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: DİŞ-YAYIN-BR
   code: GYU
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40297,9 +40308,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-PROJE-BR
   code: GYV
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40317,9 +40328,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-SOSYOLOJİ-ADB
   code: GYY
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40337,9 +40348,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ADALET-MYO-SGK-BR
   code: GYZ
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -40357,9 +40368,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SPOR-YAPI-BR
   code: GZ0
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40377,9 +40388,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-YEU-ADB
   code: GZ1
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40397,9 +40408,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İLETİŞİM-BASIN-BR
   code: GZ2
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -40417,7 +40428,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-İDARİ-ŞSM-BR
   code: GZ3
   district_id:
   duration:
@@ -40437,9 +40448,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-MYO-PERSONEL-BR
   code: GZ4
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40457,9 +40468,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: YDİL-YO-MÜTERCİM-ÇİNCE-ADB
   code: GZ5
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40477,9 +40488,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: T-AUM-MALİ-BR
   code: GZ6
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40497,9 +40508,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GENSEK-KURUMSAL-BR
   code: GZ7
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40517,9 +40528,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-VBESİN-ADB
   code: GZ8
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40535,11 +40546,12 @@
   unit_status_id:
   unit_type_id:
   issues:
+  - Veterinerlikte aynı isimli anabilim dalı bşk
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-YAYIN-BR
   code: GZ9
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40557,9 +40569,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-PERSONEL-BR
   code: GZA
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40577,9 +40589,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-YAPI-BR
   code: GZB
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40597,9 +40609,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: MÜHENDİSLİK-İDARİ-BR
   code: GZC
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40617,9 +40629,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İLETİŞİM-SGK-BR
   code: GZD
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -40637,9 +40649,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-PERSONEL-BR
   code: GZE
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40657,9 +40669,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: BAFRA-MYO-SKS-BR
   code: GZF
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -40677,9 +40689,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: YDİL-YO-SGK-BR
   code: GZG
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40697,9 +40709,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-SEK
   code: GZH
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40717,9 +40729,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAMSUN-MYO-YAPI-BR
   code: GZJ
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -40737,9 +40749,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAMSUN-MYO-YAYIN-BR
   code: GZK
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -40757,9 +40769,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TERME-MYO-BASIN-BR
   code: GZM
-  district_id:
+  district_id: Terme
   duration:
   foet_code:
   founded_at:
@@ -40777,9 +40789,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-ANATOMİ-ADB
   code: GZN
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40797,9 +40809,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: BAFRA-MYO-HUKUK-BR
   code: GZP
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -40817,9 +40829,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: YDİL-YO-YAPI-BR
   code: GZR
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40837,9 +40849,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: PER-DB-AKADEMİK-BR
   code: GZS
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40857,7 +40869,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-İDARİ-BR
   code: GZT
   district_id:
   duration:
@@ -40877,9 +40889,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-TURİŞ-ADB
   code: GZU
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40897,9 +40909,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: HAVZA-MYO-İDARİ-BR
   code: GZV
-  district_id:
+  district_id: Havza
   duration:
   foet_code:
   founded_at:
@@ -40917,9 +40929,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SPOR-BASIN-BR
   code: GZY
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40937,9 +40949,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-MYO-BİLGİ-BR
   code: GZZ
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40957,9 +40969,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TIP-PERSONEL-İDARİ-BR
   code: H00
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -40977,9 +40989,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TİCARET-MYO-ÖĞRENCİ-BR
   code: H01
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -40997,9 +41009,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: VETERİNER-BASIN-BR
   code: H02
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41017,9 +41029,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GÜZEL-SANAT-SGK-BR
   code: H03
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41037,9 +41049,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ALAÇAM-MYO-İDARİ-BR
   code: H04
-  district_id:
+  district_id: Alaçam
   duration:
   foet_code:
   founded_at:
@@ -41057,7 +41069,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-HASTANE-BAŞMD
   code: H05
   district_id:
   duration:
@@ -41077,9 +41089,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-YAYIN-BR
   code: H06
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41097,9 +41109,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-BESLENME-ADB
   code: H07
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41117,9 +41129,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: BAFRA-MYO-BASIN-BR
   code: H08
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -41137,9 +41149,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-MYO-SKS-BR
   code: H09
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41157,9 +41169,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: VEZİRKÖPRÜ-MYO-MALİ-BR
   code: H0A
-  district_id:
+  district_id: Vezirköprü
   duration:
   foet_code:
   founded_at:
@@ -41177,9 +41189,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-HUKUK-BR
   code: H0B
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41197,9 +41209,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-VİÇH-ADB
   code: H0C
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41217,7 +41229,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-YAPI-BR
   code: H0D
   district_id:
   duration:
@@ -41237,7 +41249,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-ENFEKSİYON-MR
   code: H0E
   district_id:
   duration:
@@ -41257,9 +41269,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-VCERRAHİ-ADB
   code: H0F
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41277,9 +41289,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-ÖZELHUKUK-ADB
   code: H0G
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41297,9 +41309,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-YAPI-BR
   code: H0H
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41317,9 +41329,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-ÖĞRENCİ-BR
   code: H0J
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41337,9 +41349,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TERME-MYO-HUKUK-BR
   code: H0K
-  district_id:
+  district_id: Terme
   duration:
   foet_code:
   founded_at:
@@ -41357,9 +41369,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ZİRAAT-MALİ-BR
   code: H0M
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41377,9 +41389,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GÜZELSANATLAR-HUKUK-BR
   code: H0N
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -41397,7 +41409,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-TMİKRO-LAB
   code: H0P
   district_id:
   duration:
@@ -41417,7 +41429,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-HUKUK-BR
   code: H0R
   district_id:
   duration:
@@ -41437,9 +41449,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SPOR-BİLGİ-BR
   code: H0S
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41457,9 +41469,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: DİŞ-YÖNKUR
   code: H0T
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41477,9 +41489,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: KONSERVATUVAR-PERSONEL-BR
   code: H0U
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -41497,9 +41509,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-TDE-ADB
   code: H0V
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41517,9 +41529,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: KONSERVATUVAR-YAYIN-BR
   code: H0Y
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -41537,9 +41549,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-MYO-YAPI-BR
   code: H0Z
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41557,9 +41569,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAMSUN-MYO-DÖNER-BR
   code: H10
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41577,9 +41589,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-BASIN-BR
   code: H11
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41597,9 +41609,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-İNŞAAT-ADB
   code: H12
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41617,9 +41629,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-ÖĞRENCİ-BR
   code: H13
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41637,9 +41649,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-BİLİM-BİLGİ-BR
   code: H14
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41657,9 +41669,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GÜZEL-SANAT-YAYIN-BR
   code: H15
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -41677,9 +41689,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: HAVZA-MYO-SGK-BR
   code: H16
-  district_id:
+  district_id: Havza
   duration:
   foet_code:
   founded_at:
@@ -41697,9 +41709,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İŞLETME-DEK
   code: H17
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -41717,9 +41729,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-ORTO-ADB
   code: H18
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41737,9 +41749,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-YAYIN-BR
   code: H19
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41757,9 +41769,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-MYO-YAYIN-BR
   code: H1A
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41777,9 +41789,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: YDİL-YO-BASIN-BR
   code: H1B
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41797,9 +41809,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-SAĞLIKYÖN-ADB
   code: H1C
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41817,9 +41829,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-YAPI-BR
   code: H1D
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41837,9 +41849,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İLETİŞİM-PROJE-BR
   code: H1E
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -41857,9 +41869,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İLAHİYAT-BASIN-BR
   code: H1F
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41877,9 +41889,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GÜZEL-SANAT-BİLGİ-BR
   code: H1G
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41897,9 +41909,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-BİLİM-İDARİ-BR
   code: H1H
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41917,9 +41929,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TIP-ÖĞRENCİ-BR
   code: H1J
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41937,9 +41949,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İLETİŞİM-YAYIN-BR
   code: H1K
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -41957,9 +41969,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-TMİKRO-ADB
   code: H1M
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41977,9 +41989,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-BİYO-ADB
   code: H1N
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -41997,9 +42009,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: MİMARLIK-MALİ-BR
   code: H1P
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -42017,9 +42029,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: VEZİRKÖPRÜ-MYO-SGK-BR
   code: H1R
-  district_id:
+  district_id: Vezirköprü
   duration:
   foet_code:
   founded_at:
@@ -42037,9 +42049,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: YEŞİLYURT-MYO-ÖĞRENCİ-BR
   code: H1S
-  district_id:
+  district_id: Tekkeköy
   duration:
   foet_code:
   founded_at:
@@ -42057,9 +42069,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-BİLİM-PERSONEL-BR
   code: H1T
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42077,9 +42089,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ALAÇAM-MYO-HUKUK-BR
   code: H1U
-  district_id:
+  district_id: Alaçam
   duration:
   foet_code:
   founded_at:
@@ -42097,9 +42109,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-ÖĞRENCİ-BR
   code: H1V
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42117,9 +42129,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GÜZEL-SANAT-ÖĞRENCİ-BR
   code: H1Y
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42137,7 +42149,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-VBİYOKİMYA-ADB
   code: H1Z
   district_id:
   duration:
@@ -42157,9 +42169,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-YAYIN-BR
   code: H20
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42177,9 +42189,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: DİŞ-BİLGİ-BR
   code: H21
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42197,9 +42209,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-HBH-ADB
   code: H22
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42217,9 +42229,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GENSEK-YAZI-BR
   code: H23
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42237,9 +42249,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İLAHİYAT-HUKUK-BR
   code: H24
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42257,9 +42269,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: YY-AUM-MD
   code: H25
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42269,7 +42281,7 @@
   parent_yoksis_id:
   detsis_id: 61890576
   parent_detsis_id: 78633602
-  related_yoksis_id:
+  related_yoksis_id: 212704
   unit_instruction_language_id:
   unit_instruction_type_id:
   unit_status_id:
@@ -42277,9 +42289,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TİCARET-MYO-HUKUK-BR
   code: H26
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -42297,9 +42309,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ZİRAAT-SGK-BR
   code: H27
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42317,9 +42329,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-TFARMA-ADB
   code: H28
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42337,9 +42349,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: KONSERVATUVAR-SGK-BR
   code: H29
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -42357,9 +42369,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-TARIMEKO-ADB
   code: H2A
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42377,9 +42389,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İMİ-DB-TAŞINMAZ-BR
   code: H2B
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42397,9 +42409,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: HUKUK-YAPI-BR
   code: H2C
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -42417,9 +42429,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GÜZEL-SANAT-PERSONEL-BR
   code: H2D
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42437,7 +42449,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: BAFRA-MYO-SEK
   code: H2E
   district_id:
   duration:
@@ -42455,11 +42467,12 @@
   unit_status_id:
   unit_type_id:
   issues:
+  - tamamen mükerrer, biri silinebilir
   notes:
 
-- abbreviation:
+- abbreviation: BAFRA-MYO-PERSONEL-BR
   code: H2F
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -42477,9 +42490,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İLAHİYAT-SGK-BR
   code: H2G
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42497,9 +42510,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-BİLİM-YAYIN-BR
   code: H2H
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42517,9 +42530,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-BİLİM-ADB
   code: H2J
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42537,9 +42550,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GÜZEL-SANAT-MÜZİK-ADB
   code: H2K
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42557,9 +42570,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-KARFİZ-ADB
   code: H2M
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42577,9 +42590,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-SKS-BR
   code: H2N
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42597,9 +42610,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: MÜHENDİSLİK-PERSONEL-BR
   code: H2P
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42617,9 +42630,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TIP-MALİ-BR
   code: H2R
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42637,9 +42650,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TURİZM-GASTRO-BB
   code: H2S
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -42657,9 +42670,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: HUKUK-SKS-BR
   code: H2T
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -42677,9 +42690,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-ÖZELKALEM-BR
   code: H2U
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42697,9 +42710,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: KONSERVATUVAR-İDARİ-BR
   code: H2V
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -42717,9 +42730,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: MÜHENDİSLİK-YAYIN-BR
   code: H2Y
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42737,9 +42750,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-ADÇR-ADB
   code: H2Z
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42757,9 +42770,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: YDİL-YO-YAYIN-BR
   code: H30
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42777,9 +42790,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-HALK-ADB
   code: H31
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42797,9 +42810,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: MİMARLIK-HUKUK-BR
   code: H32
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -42817,9 +42830,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-BİLİM-MF-ADB
   code: H33
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42837,9 +42850,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-BİLGİ-BR
   code: H34
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42857,7 +42870,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-PERSONEL-BÜRO
   code: H35
   district_id:
   duration:
@@ -42877,9 +42890,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ADALET-MYO-ÖĞRENCİ-BR
   code: H36
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -42897,9 +42910,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-YAYIN-BR
   code: H37
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42917,9 +42930,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: DİŞ-YAPI-BR
   code: H38
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42937,9 +42950,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İLETİŞİM-ÖĞRENCİ-BR
   code: H39
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -42957,9 +42970,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TURİZM-YAPI-BR
   code: H3A
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -42977,9 +42990,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-RDT-ADB
   code: H3B
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -42997,9 +43010,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GÜZELSANATLAR-PROJE-BR
   code: H3C
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -43017,9 +43030,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: HAVZA-MYO-YAYIN-BR
   code: H3D
-  district_id:
+  district_id: Havza
   duration:
   foet_code:
   founded_at:
@@ -43037,9 +43050,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-PERSONEL-BR
   code: H3E
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -43057,9 +43070,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-KBBO-ADB
   code: H3F
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -43077,9 +43090,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAMSUN-MYO-BASIN-BR
   code: H3G
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -43097,9 +43110,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-HUKUK-BR
   code: H3H
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -43117,9 +43130,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TERME-MYO-BİLGİ-BR
   code: H3J
-  district_id:
+  district_id: Terme
   duration:
   foet_code:
   founded_at:
@@ -43137,9 +43150,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: YEŞİLYURT-MYO-SGK-BR
   code: H3K
-  district_id:
+  district_id: Tekkeköy
   duration:
   foet_code:
   founded_at:
@@ -43157,9 +43170,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: T-AUM-YAZI-BR
   code: H3M
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -43177,9 +43190,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-MYO-HUKUK-BR
   code: H3N
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -43197,9 +43210,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-TARİH-ADB
   code: H3P
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -43217,9 +43230,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İMİ-DB-SATINALMA-BR
   code: H3R
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -43237,9 +43250,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SPOR-HUKUK-BR
   code: H3S
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -43257,9 +43270,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: VETERİNER-MALİ-BR
   code: H3T
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -43277,9 +43290,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TIP-HUKUK-BR
   code: H3U
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -43297,9 +43310,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: HUKUK-İDARİ-BR
   code: H3V
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -43317,9 +43330,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: YEŞİLYURT-MYO-MALİ-BR
   code: H3Y
-  district_id:
+  district_id: Tekkeköy
   duration:
   foet_code:
   founded_at:
@@ -43337,9 +43350,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAMSUN-MYO-SKS-BR
   code: H3Z
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -43357,9 +43370,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: BAFRA-MYO-YAYIN-BR
   code: H40
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -43377,9 +43390,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: iKTİSAT-BİLGİ-BR
   code: H41
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -43397,9 +43410,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: HAVZA-MYO-PERSONEL-BR
   code: H42
-  district_id:
+  district_id: Havza
   duration:
   foet_code:
   founded_at:
@@ -43417,9 +43430,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İLETİŞİM-İDARİ-BR
   code: H43
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -43437,9 +43450,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-MYO-SGK-BR
   code: H44
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -43457,9 +43470,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: Öİ-DB-MEZUN-BR
   code: H45
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -43477,9 +43490,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İKTİSAT-SBKY-SSB-ADB
   code: H46
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -43497,9 +43510,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-BASIN-BR
   code: H47
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -43517,9 +43530,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İLETİŞİM-PERSONEL-BR
   code: H48
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -43537,9 +43550,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SPOR-MALİ-BR
   code: H49
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -43557,9 +43570,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GÜZEL-SANAT-İDARİ-BR
   code: H4A
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -43577,9 +43590,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İKTİSAT-YAYIN-BR
   code: H4B
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -43597,9 +43610,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: HAVZA-MYO-SKS-BR
   code: H4C
-  district_id:
+  district_id: Havza
   duration:
   foet_code:
   founded_at:
@@ -43617,9 +43630,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-İDARİ-BR
   code: H4D
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -43637,7 +43650,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-İDARİ-KABUL-BR
   code: H4E
   district_id:
   duration:
@@ -43657,9 +43670,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ZİRAAT-SKS-BR
   code: H4F
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -43677,9 +43690,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-UZEM-BR
   code: H4G
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -43697,9 +43710,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-VHİSTO-ADB
   code: H4H
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -43717,9 +43730,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SPOR-ÖĞRENCİ-BR
   code: H4J
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -43737,7 +43750,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-YAYIN-BR
   code: H4K
   district_id:
   duration:
@@ -43757,9 +43770,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: VETERİNER-BİLGİ-BR
   code: H4M
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -43777,9 +43790,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: VEZİRKÖPRÜ-MYO-İDARİ-BR
   code: H4N
-  district_id:
+  district_id: Vezirköprü
   duration:
   foet_code:
   founded_at:
@@ -43797,9 +43810,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-SGK-BR
   code: H4P
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -43817,9 +43830,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TİCARET-MYO-İDARİ-BR
   code: H4R
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -43837,9 +43850,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TURİZM-MALİ-BR
   code: H4S
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -43857,9 +43870,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-İEİ-ADB
   code: H4T
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -43877,9 +43890,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: KAMU-HT-ADB
   code: H4U
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -43897,9 +43910,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İKTİSAT-YAPI-BR
   code: H4V
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -43917,7 +43930,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-İDARİ-ADLİ-BR
   code: H4Y
   district_id:
   duration:
@@ -43937,9 +43950,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: Bİ-DB-WEB-BR
   code: H4Z
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -43957,9 +43970,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İMİ-DB-GÜVENLİK-BR
   code: H50
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -43977,9 +43990,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TİCARET-MYO-BİLGİ-BR
   code: H51
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -43997,9 +44010,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-İSTATİSTİK-ADB
   code: H52
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44017,9 +44030,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-HUKUK-BR
   code: H53
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44037,9 +44050,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İKTİSAT-ÖĞRENCİ-BR
   code: H54
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44057,9 +44070,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TURİZM-SKS-BR
   code: H55
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -44077,9 +44090,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: BAFRA-MYO-YAPI-BR
   code: H56
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -44097,9 +44110,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TERME-MYO-SKS-BR
   code: H57
-  district_id:
+  district_id: Terme
   duration:
   foet_code:
   founded_at:
@@ -44117,7 +44130,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-MALİ-MAAŞ-BR
   code: H58
   district_id:
   duration:
@@ -44137,9 +44150,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BASIN-BR
   code: H59
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44157,7 +44170,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-BİLGİ-BTBO-BR
   code: H5A
   district_id:
   duration:
@@ -44177,9 +44190,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-SANATTARİHİ-ADB
   code: H5B
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44197,9 +44210,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-ASM-ADB
   code: H5C
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44217,9 +44230,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-PSİKOLOJİ-ADB
   code: H5D
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44237,7 +44250,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-BİLGİ-İSTATİSTİK-BR
   code: H5E
   district_id:
   duration:
@@ -44257,9 +44270,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAMSUN-MYO-BİLGİ-BR
   code: H5F
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -44277,9 +44290,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-SPORYÖN-ADB
   code: H5G
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44297,9 +44310,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-HB-ADB
   code: H5H
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44317,9 +44330,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SPOR-YAYIN-BR
   code: H5J
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44337,9 +44350,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-GIDA-ADB
   code: H5K
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44357,9 +44370,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLGİ-BR
   code: H5M
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44377,9 +44390,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-YAYIN-BR
   code: H5N
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44397,9 +44410,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: VEZİRKÖPRÜ-MYO-SKS-BR
   code: H5P
-  district_id:
+  district_id: Vezirköprü
   duration:
   foet_code:
   founded_at:
@@ -44417,9 +44430,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TURİZM-YAYIN-BR
   code: H5R
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -44437,9 +44450,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: MÜHENDİSLİK-PROJE-BR
   code: H5S
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44457,9 +44470,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TİCARET-MYO-SKS-BR
   code: H5T
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -44477,9 +44490,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-TARIMYAP-ADB
   code: H5U
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44497,9 +44510,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İLAHİYAT-ÖĞRENCİ-BR
   code: H5V
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44517,9 +44530,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-KİMYA-ADB
   code: H5Y
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44537,9 +44550,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-BİLİM-SKS-BR
   code: H5Z
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44557,9 +44570,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: VEZİRKÖPRÜ-MYO-PERSONEL-BR
   code: H60
-  district_id:
+  district_id: Vezirköprü
   duration:
   foet_code:
   founded_at:
@@ -44577,9 +44590,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-SKS-BR
   code: H61
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44597,9 +44610,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-TARIMBİYOTEK-ADB
   code: H62
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44617,9 +44630,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İLETİŞİM-HUKUK-BR
   code: H63
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -44637,9 +44650,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TIP-EĞİTİM-BR
   code: H64
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44657,9 +44670,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: MÜHENDİSLİK-YAPI-BR
   code: H65
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44677,9 +44690,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ALAÇAM-MYO-MALİ-BR
   code: H66
-  district_id:
+  district_id: Alaçam
   duration:
   foet_code:
   founded_at:
@@ -44697,9 +44710,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-FENKİMYA-ADB
   code: H67
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44717,9 +44730,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: BAFRA-MYO-ÖĞRENCİ-BR
   code: H68
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -44737,9 +44750,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: Uİ-BR
   code: H69
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44757,9 +44770,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: HUKUK-BİLGİ-BR
   code: H6A
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -44777,9 +44790,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-ENDO-ADB
   code: H6B
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44797,9 +44810,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: REKTÖRLÜK-İDARİ
   code: H6C
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44817,9 +44830,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: HAVZA-MYO-YAPI-BR
   code: H6D
-  district_id:
+  district_id: Havza
   duration:
   foet_code:
   founded_at:
@@ -44837,9 +44850,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ADALET-MYO-PERSONEL-BR
   code: H6E
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -44857,9 +44870,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SPOR-İDARİ-BR
   code: H6F
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44877,9 +44890,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: VETERİNER-PERSONEL-BR
   code: H6G
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44897,9 +44910,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ADALET-MYO-BASIN-BR
   code: H6H
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -44917,9 +44930,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TE-MÜZİK-ADB
   code: H6J
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44937,9 +44950,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TIP-BİLGİ-BR
   code: H6K
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44957,9 +44970,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İMİ-DB-İDARİ-BR
   code: H6M
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44977,9 +44990,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-UDB-ADB
   code: H6N
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -44997,9 +45010,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TBD-KOOR
   code: H6P
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45017,9 +45030,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAMSUN-MYO-PERSONEL-BR
   code: H6R
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -45037,9 +45050,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-KTOKSİ-ADB
   code: H6S
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45057,9 +45070,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: DİŞ-SKS-BR
   code: H6T
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45077,9 +45090,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-SKS-BR
   code: H6U
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45097,9 +45110,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: KONSERVATUVAR-HUKUK-BR
   code: H6V
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -45117,9 +45130,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-PROJE-BR
   code: H6Y
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45137,9 +45150,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: YEŞİLYURT-MYO-PERSONEL-BR
   code: H6Z
-  district_id:
+  district_id: Tekkeköy
   duration:
   foet_code:
   founded_at:
@@ -45157,9 +45170,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: YEŞİLYURT-MYO-İDARİ-BR
   code: H70
-  district_id:
+  district_id: Tekkeköy
   duration:
   foet_code:
   founded_at:
@@ -45177,9 +45190,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: HAVZA-MYO-BASIN-BR
   code: H71
-  district_id:
+  district_id: Havza
   duration:
   foet_code:
   founded_at:
@@ -45197,9 +45210,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TURİZM-BASIN-BR
   code: H72
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -45217,9 +45230,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-VFARMA-ADB
   code: H73
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45237,9 +45250,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ZİRAAT-DÖNER-BR
   code: H74
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45257,9 +45270,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-İKTİSAT-ADB
   code: H75
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45277,9 +45290,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAMSUN-MYO-ÖĞRENCİ-BR
   code: H76
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -45297,9 +45310,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: YEŞİLYURT-MYO-YAYIN-BR
   code: H77
-  district_id:
+  district_id: Tekkeköy
   duration:
   foet_code:
   founded_at:
@@ -45317,9 +45330,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-BAHÇE-ADB
   code: H78
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45337,9 +45350,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: HUKUK-YAYIN-BR
   code: H79
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -45357,9 +45370,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: HUT-AUM-PLANET-BR
   code: H7A
-  district_id:
+  district_id: 19 Mayıs
   duration:
   foet_code:
   founded_at:
@@ -45377,9 +45390,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: Öİ-DB-BURS-BR
   code: H7B
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45397,9 +45410,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: YDİL-YO-ÖĞRENCİ-BR
   code: H7C
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45417,9 +45430,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: AÖ-AUM-MD
   code: H7D
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45437,9 +45450,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-BİLİM-ÖZELKALEM-BR
   code: H7E
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45457,9 +45470,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-BİLİM-HUKUK-BR
   code: H7F
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45477,9 +45490,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İMİ-DB-ARAÇ-BR
   code: H7G
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45497,9 +45510,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-İDARİ-BR
   code: H7H
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45517,9 +45530,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: VETERİNER-ÖĞRENCİ-BR
   code: H7J
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45537,9 +45550,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TURİZM-HUKUK-BR
   code: H7K
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -45557,9 +45570,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İKTİSAT-PROJE-BR
   code: H7M
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45577,9 +45590,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İLETİŞİM-MALİ-BR
   code: H7N
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -45597,9 +45610,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: YDİL-YO-PERSONEL-BR
   code: H7P
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45617,7 +45630,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-İDARİ-TLAB-BR
   code: H7R
   district_id:
   duration:
@@ -45637,9 +45650,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-PERSONEL-BR
   code: H7S
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45657,9 +45670,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: DİŞ-BASIN-BR
   code: H7T
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45677,9 +45690,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: YDİL-YO-SKS-BR
   code: H7U
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45697,9 +45710,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-BİLİM-YDİLE-ADB
   code: H7V
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45717,9 +45730,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ALAÇAM-MYO-BASIN-BR
   code: H7Y
-  district_id:
+  district_id: Alaçam
   duration:
   foet_code:
   founded_at:
@@ -45737,9 +45750,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: MÜHENDİSLİK-MALİ-BR
   code: H7Z
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45757,7 +45770,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-PERSONEL-HH-BR
   code: H80
   district_id:
   duration:
@@ -45777,9 +45790,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SKS-DB-BESLENME-BR
   code: H81
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45797,9 +45810,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: YDİL-YO-MÜTERCİM-İNG-ADB
   code: H82
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45817,9 +45830,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: DİŞ-KLİNİK-ORTO-ADB
   code: H83
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45835,11 +45848,12 @@
   unit_status_id:
   unit_type_id:
   issues:
+  - Aynı isimli ABD sağlık-bilim'de
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-BİLGİ-BR
   code: H84
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45857,9 +45871,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ADALET-MYO-BİLGİ-BR
   code: H85
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -45877,9 +45891,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-BİLİM-GÜZELSANATLAR-ADB
   code: H86
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45897,9 +45911,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TURİZM-ÖĞRENCİ-BR
   code: H87
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -45917,9 +45931,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TIP-BASIN-BR
   code: H88
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45937,9 +45951,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-ÖĞRENCİ-BR
   code: H89
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45957,9 +45971,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: BAFRA-MYO-MALİ-BR
   code: H8A
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -45977,9 +45991,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-MALİ-BR
   code: H8B
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -45997,9 +46011,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İLAHİYAT-BİLGİ-BR
   code: H8C
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46017,9 +46031,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-FELSEFE-ADB
   code: H8D
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46037,9 +46051,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-BİLİM-TS-ADB
   code: H8E
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46057,9 +46071,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-MYO-İDARİ-BR
   code: H8F
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46077,9 +46091,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-MALZEME-ADB
   code: H8G
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46097,9 +46111,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-İTS-ADB
   code: H8H
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46117,9 +46131,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: HAVZA-MYO-MALİ-BR
   code: H8J
-  district_id:
+  district_id: Havza
   duration:
   foet_code:
   founded_at:
@@ -46137,9 +46151,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ALAÇAM-MYO-ÖĞRENCİ-BR
   code: H8K
-  district_id:
+  district_id: Alaçam
   duration:
   foet_code:
   founded_at:
@@ -46157,9 +46171,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ZİRAAT-BASIN-BR
   code: H8M
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46177,9 +46191,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAMSUN-MYO-MALİ-BR
   code: H8N
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -46197,9 +46211,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-VPARAZİT-ADB
   code: H8P
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46215,11 +46229,12 @@
   unit_status_id:
   unit_type_id:
   issues:
+  - Aynı isimli ABD veterinerlikte
   notes:
 
-- abbreviation:
+- abbreviation: TIP-ÖK-MR
   code: H8R
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46237,9 +46252,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-SGK-BR
   code: H8S
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46257,9 +46272,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-KSB-ADB
   code: H8T
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46277,9 +46292,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: MİMARLIK-YAYIN-BR
   code: H8U
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -46297,9 +46312,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: Öİ-DB-APİ-BR
   code: H8V
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46317,9 +46332,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: HAVZA-MYO-HUKUK-BR
   code: H8Y
-  district_id:
+  district_id: Havza
   duration:
   foet_code:
   founded_at:
@@ -46337,9 +46352,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SPOR-SGK-BR
   code: H8Z
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46357,9 +46372,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: PER-DB-HİE-BR
   code: H90
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46377,9 +46392,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-İDARİ-BR
   code: H91
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46397,9 +46412,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İKTİSAT-HUKUK-BR
   code: H92
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46417,9 +46432,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: MİMARLIK-İDARİ-BR
   code: H93
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -46437,9 +46452,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-VJİNEKOLOJİ-ADB
   code: H94
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46457,9 +46472,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: HUKUK-MALİ-BR
   code: H95
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -46477,9 +46492,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-SKS-BR
   code: H96
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46497,9 +46512,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-MYO-DÖNER-BR
   code: H97
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46517,9 +46532,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ALAÇAM-MYO-SGK-BR
   code: H98
-  district_id:
+  district_id: Alaçam
   duration:
   foet_code:
   founded_at:
@@ -46537,9 +46552,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ALAÇAM-MYO-SKS-BR
   code: H99
-  district_id:
+  district_id: Alaçam
   duration:
   foet_code:
   founded_at:
@@ -46557,9 +46572,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TİCARET-MYO-YAPI-BR
   code: H9A
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -46577,9 +46592,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: HUKUK-SGK-BR
   code: H9B
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -46597,7 +46612,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-MALİ-BR
   code: H9C
   district_id:
   duration:
@@ -46617,9 +46632,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: Öİ-DB-BİLGİ-BR
   code: H9D
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46637,9 +46652,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-HEMŞİRE-ADB
   code: H9E
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46657,9 +46672,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-KAMU-ADB
   code: H9F
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46677,9 +46692,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: YDİL-YO-HUKUK-BR
   code: H9G
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46697,9 +46712,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ALAÇAM-MYO-YAPI-BR
   code: H9H
-  district_id:
+  district_id: Alaçam
   duration:
   foet_code:
   founded_at:
@@ -46717,9 +46732,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-BİLİM-TE-ADB
   code: H9J
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46737,9 +46752,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-MALİ-BR
   code: H9K
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46757,9 +46772,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: YEŞİLYURT-MYO-YAPI-BR
   code: H9M
-  district_id:
+  district_id: Tekkeköy
   duration:
   foet_code:
   founded_at:
@@ -46777,9 +46792,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-SGK-BR
   code: H9N
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46797,9 +46812,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ZİRAAT-YAYIN-BR
   code: H9P
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46817,9 +46832,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: KONSERVATUVAR-BASIN-BR
   code: H9R
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -46837,9 +46852,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GÜZELSANATLAR-YAPI-BR
   code: H9S
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -46857,9 +46872,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-ANTRENÖR-ADB
   code: H9T
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46877,9 +46892,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-BASIN-BR
   code: H9U
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46897,9 +46912,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-SİNİR-ADB
   code: H9V
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46917,9 +46932,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: BEDEN-BB
   code: H9Y
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46937,9 +46952,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: MİMARLIK-YAPI-BR
   code: H9Z
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -46957,9 +46972,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TURİZM-BİLGİ-BR
   code: HA0
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -46977,9 +46992,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: MÜHENDİSLİK-SGK-BR
   code: HA1
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -46997,9 +47012,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-MALİ-BR
   code: HA2
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47017,9 +47032,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-BASIN-BR
   code: HA3
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47037,9 +47052,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: MÜHENDİSLİK-BASIN-BR
   code: HA4
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47057,9 +47072,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-HUKUK-BR
   code: HA5
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47077,7 +47092,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-SKS-BR
   code: HA6
   district_id:
   duration:
@@ -47097,9 +47112,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: VETERİNER-PROJE-BR
   code: HA7
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47117,9 +47132,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-BİLGİSAYAR-ADB
   code: HA8
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47137,9 +47152,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: EĞİTİM-SKS-BR
   code: HA9
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47157,7 +47172,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-ÇH-BAŞHEK
   code: HAA
   district_id:
   duration:
@@ -47177,9 +47192,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: UTL-UT-ADB
   code: HAB
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47197,9 +47212,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GÜZELSANATLAR-ÖĞRENCİ-BR
   code: HAC
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -47217,9 +47232,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-DST-ADB
   code: HAD
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47237,9 +47252,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-İLETİŞİM-ADB
   code: HAE
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47257,9 +47272,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-RB-ADB
   code: HAF
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47277,9 +47292,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: YEŞİLYURT-MYO-HUKUK-BR
   code: HAG
-  district_id:
+  district_id: Tekkeköy
   duration:
   foet_code:
   founded_at:
@@ -47297,9 +47312,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-ARKEO-ADB
   code: HAH
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47317,9 +47332,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-HARİTA-ADB
   code: HAJ
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47337,9 +47352,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TIP-YAPI-BR
   code: HAK
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47357,9 +47372,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-DÖNER-BR
   code: HAM
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47377,9 +47392,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: YDİL-YO-MÜTERCİM-ALM-ADB
   code: HAN
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47397,9 +47412,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-VİRO-ADB
   code: HAP
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47417,9 +47432,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-COĞRAFYA-ADB
   code: HAR
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47437,9 +47452,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: iLAHİYAT-YAPI-BR
   code: HAS
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47457,9 +47472,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-ZOO-ADB
   code: HAT
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47477,9 +47492,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ADALET-MYO-SKS-BR
   code: HAU
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -47497,9 +47512,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: BAFRA-MYO-BİLGİ-BR
   code: HAV
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -47517,9 +47532,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-DEON-ADB
   code: HAY
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47535,11 +47550,12 @@
   unit_status_id:
   unit_type_id:
   issues:
+  - detsis_id 68000003 ile benzerlik, birinin ismi hatalı
   notes:
 
-- abbreviation:
+- abbreviation: FEN-BİLİM-TAŞINMAZ-ADB
   code: HAZ
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47557,9 +47573,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-PDT-ADB
   code: HB0
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47575,9 +47591,10 @@
   unit_status_id:
   unit_type_id:
   issues:
+  - Dişte aynı isimli ADB
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-DÖNER-BR
   code: HB1
   district_id:
   duration:
@@ -47597,9 +47614,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-ACİL-ADB
   code: HB2
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47617,9 +47634,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-BES-ADB
   code: HB3
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47637,9 +47654,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: VEZİRKÖPRÜ-MYO-BASIN-BR
   code: HB4
-  district_id:
+  district_id: Vezirköprü
   duration:
   foet_code:
   founded_at:
@@ -47657,9 +47674,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İLETİŞİM-SKS-BR
   code: HB5
-  district_id:
+  district_id: Bafra
   duration:
   foet_code:
   founded_at:
@@ -47677,9 +47694,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TİCARET-MYO-MALİ-BR
   code: HB6
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -47697,9 +47714,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SOSYAL-BİLİM-ÖZELKALEM-BR
   code: HB7
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47717,9 +47734,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-BİLİM-TBİYO-ADB
   code: HB8
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47737,9 +47754,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAMSUN-MYO-SGK-BR
   code: HB9
-  district_id:
+  district_id: İlkadım
   duration:
   foet_code:
   founded_at:
@@ -47757,9 +47774,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: TİCARET-MYO-YAYIN-BR
   code: HBA
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -47777,9 +47794,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: DİŞ-KLİNİK-ADÇR-ADB
   code: HBB
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47797,9 +47814,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: GENSEK-İSG-OSG-BR
   code: HBC
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47817,9 +47834,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ADALET-MYO-HUKUK-BR
   code: HBD
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:
@@ -47837,9 +47854,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ALAÇAM-MYO-PERSONEL-BR
   code: HBE
-  district_id:
+  district_id: Alaçam
   duration:
   foet_code:
   founded_at:
@@ -47857,9 +47874,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: İKTİSAT-BASIN-BR
   code: HBF
-  district_id:
+  district_id: Atakum
   duration:
   foet_code:
   founded_at:
@@ -47877,7 +47894,7 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: SAĞLIK-AUM-BASIN-BR
   code: HBG
   district_id:
   duration:
@@ -47897,9 +47914,9 @@
   issues:
   notes:
 
-- abbreviation:
+- abbreviation: ADALET-MYO-MALİ-BR
   code: HBH
-  district_id:
+  district_id: Çarşamba
   duration:
   foet_code:
   founded_at:

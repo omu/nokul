@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'active_support/ordered_options'
-
 module Ruling
   class Checker
     def initialize(subjects)
