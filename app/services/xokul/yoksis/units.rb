@@ -11,14 +11,19 @@ module Xokul
         )
       end
 
+      def programs(sub_unit_id:)
+        Connection.instance.get(
+          '/yoksis/units/programs', params: { sub_unit_id: sub_unit_id }
+        )
+      end
+      
       def universities
         Connection.instance.get '/yoksis/units/universities'
       end
 
       %i[
-        programs
         subunits
-        units
+        names
       ].each do |method|
         define_method(method) do |unit_id:|
           Connection.instance.get(

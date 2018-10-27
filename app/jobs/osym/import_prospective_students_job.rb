@@ -99,7 +99,7 @@ module Osym
     def find_obs_registered_program(program)
       return if program.eql?('0') || program.eql?('null')
 
-      Xokul::Yoksis::Units.units(unit_id: program)[:long_name]
+      Xokul::Yoksis::Units.names(unit_id: program)[:long_name]
     end
 
     def find_student_disability_type(student_disability_type)
