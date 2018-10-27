@@ -112,11 +112,11 @@ module Tenant
 
   class Units < Collection
     def self.load
-      read_from_yaml_file Tenant.file collection.source
+      read_from_yaml_file Tenant.path collection.source
     end
 
     def self.store(units, **options)
-      write_to_yaml_file Tenant.file(collection.source), units, **options
+      write_to_yaml_file Tenant.path(collection.source), units, **options
     end
 
     def list_by(*predicators)

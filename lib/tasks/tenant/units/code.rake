@@ -2,7 +2,7 @@
 
 module Codeable
   def code(comment = nil)
-    coder = Tenant::Unit::Coder.new Tenant.file(collection.coder)
+    coder = Tenant::Unit::Coder.new Tenant.path(collection.coder)
     self.class.store coder.code(self).sort_by(&:code), comment: comment
   end
 end
