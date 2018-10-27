@@ -24,7 +24,7 @@ module Tenant
   end
 
   def load_rules
-    [*Path.common_rules, *rules].each do |dir|
+    [*File.join(Path.common_app, 'rules'), *File.join(Path.app, 'rules')].each do |dir|
       Dir[File.join(dir, '**', '*.rb')].each { |rule| require rule }
     end
   end
