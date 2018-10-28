@@ -1,9 +1,6 @@
 # frozen_string_literal: true
 
 require 'delegate'
-require 'yaml'
-
-require 'active_support/inflections'
 
 module Simple
   class Collection < SimpleDelegator
