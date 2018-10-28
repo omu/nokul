@@ -3,7 +3,7 @@
 require 'test_helper'
 
 class StaffTest < ActiveSupport::TestCase
-  test "trying to get an academician's informations" do
+  test "trying to get academician's informations" do
     assert Xokul::Yoksis::Staff.academicians(
       id_number: Rails.application.credentials.yoksis[:academicians_test_id_number]
     )
