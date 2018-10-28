@@ -22,7 +22,10 @@ module Xokul
       end
 
       def basic_informations
-        personal_informations&.dig(:basic_informations) || {}
+        basic_informations = personal_informations&.dig(:basic_informations)
+        return basic_informations if basic_informations.key?(:date_of_birth)
+
+        basic_informations.merge(date_of_birth: personal_informations[:date_of_birth])
       end
 
       def status_informations
