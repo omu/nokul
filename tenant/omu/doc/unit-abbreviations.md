@@ -157,6 +157,7 @@ Kurallar
   | Araştırma Merkezi               | AM          |
   | Araştırma Uygulama Merkezi      | AUM         |
   | Eğitim Merkezi                  | EM          |
+  | Laboratuvar                     | LAB         |
   | Uygulama Merkezi                | UM          |
 
 - İdari birimlerde aşağıdaki son ekler kullanılır
@@ -165,7 +166,10 @@ Kurallar
   |:--------------------------------|:------------|
   | Ana Bilim/Sanat Dalı Başkanlığı | ADB         |
   | Baş Hekimliği                   | BAŞHEK      |
+  | Baş Müdürlük                    | BAŞMD       |
+  | Birim                           | BR          |
   | Bölüm Başkanlığı                | BB          |
+  | Büro                            | BÜRO        |
   | Daire Başkanlığı                | DB          |
   | Dekanlık                        | DEK         |
   | Disiplin Kurulu                 | DİSKUR      |
@@ -173,11 +177,21 @@ Kurallar
   | Fakülte/MYO/Enstitü Kurulu      | KUR         |
   | Komisyon                        | KOM         |
   | Koordinatörlük                  | KOR         |
+  | Merkez                          | MR          |
   | Müdürlük                        | MD          |
   | Müşavirlik                      | MŞ          |
   | Sekreterlik                     | SEK         |
   | Şube Müdürlüğü                  | ŞB          |
   | Yönetim Kurulu                  | YÖNKUR      |
+
+- Birim kodları farklı olmakla birlikte isimleri aynı olduğundan aynı kısaltmaya
+  eşlenen birimlerde çakışan kısaltmaya `-DİĞER` eklenir
+
+- Farklı akademik ve idari birimlere farklı birimlerde kısaltma oluşturulurken
+  ilgili birimin türü dikkate alınır; idari birim ise idari birim, akademik
+  birim ise akademik birim
+
+- Üst birimi pasif olan birimler için de kısaltma üretilir
 
 ### Kısaltma Teknikleri
 

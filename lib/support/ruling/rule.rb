@@ -1,12 +1,9 @@
 # frozen_string_literal: true
 
-require 'set'
-
 require_relative 'violation'
 
 module Ruling
   class Rule
-    class_attribute :registery, default: Set.new
     class_attribute :rules, default: {}
 
     class << self
@@ -29,7 +26,6 @@ module Ruling
       end
 
       def inherited(child)
-        registery << child
         child.rules = rules.dup
       end
     end

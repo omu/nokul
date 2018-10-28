@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 require_relative 'unit/abbreviation'
-# require_relative 'unit/rules'
-# require_relative 'unit/coder'
+require_relative 'unit/rules'
+require_relative 'unit/coder'
 
 module Tenant
   class Unit
@@ -112,11 +112,11 @@ module Tenant
 
   class Units < Collection
     def self.load
-      read_from_yaml_file Tenant.file collection.source
+      read_from_yaml_file Tenant.path collection.source
     end
 
     def self.store(units, **options)
-      write_to_yaml_file Tenant.file(collection.source), units, **options
+      write_to_yaml_file Tenant.path(collection.source), units, **options
     end
 
     def list_by(*predicators)

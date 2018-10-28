@@ -27,7 +27,9 @@ namespace :tenant do
   namespace :units do
     desc 'Display statistics'
     task :stats do
-      [YOK, DET, UNI].each { |collection_class| collection_class.load.stats }
+      Support.abort_on_yaml_syntax_errors do
+        [YOK, DET, UNI].each { |collection_class| collection_class.load.stats }
+      end
     end
   end
 end

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'support'
+require 'support/utils/rake_utils'
 
 YOK = Class.new Tenant::Units do
   collection.source   = 'db/src/yok.yml'
