@@ -16,9 +16,9 @@ module Xokul
       end
 
       def address_type
-        return current_address[:abroad_address]              if abroad?
-        return current_address[:city_and_district_addresses] if city_and_district?
-        return current_address[:village_address]             if village?
+        current_address[:abroad_address].presence ||
+          current_address[:city_and_district_addresses].presence ||
+          current_address[:village_address].presence
       end
 
       def model_data
@@ -36,18 +36,6 @@ module Xokul
 
       def district
         District.find_by(mernis_code: address_type.dig(:district, :code))
-      end
-
-      def abroad?
-        current_address[:abroad_address].present?
-      end
-
-      def city_and_district?
-        current_address[:city_and_district_addresses].present?
-      end
-
-      def village?
-        current_address[:village_address].present?
       end
     end
   end
