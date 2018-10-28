@@ -6,7 +6,7 @@ module Kps
 
     # slow operation
     def perform(user)
-      @response = Xokul::Kps::Address.new(user.id_number.to_i)
+      @response = Xokul::Kps::Address.new(user.id_number)
     end
 
     # callbacks

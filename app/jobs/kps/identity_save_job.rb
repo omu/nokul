@@ -7,7 +7,7 @@ module Kps
     # slow operation
     def perform(user, student_id = nil)
       @student_id = student_id
-      @response = Xokul::Kps::Identity.new(user.id_number.to_i)
+      @response = Xokul::Kps::Identity.new(user.id_number)
     end
 
     # callbacks

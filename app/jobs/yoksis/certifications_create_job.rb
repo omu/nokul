@@ -6,7 +6,7 @@ module Yoksis
 
     # slow operation
     def perform(user)
-      @response = Xokul::Yoksis::Resumes.certifications(id_number: user.id_number.to_i)
+      @response = Xokul::Yoksis::Resumes.certifications(id_number: user.id_number)
     end
 
     # callbacks
