@@ -16,9 +16,9 @@ module Xokul
       end
 
       def personal_informations
-        return @response.dig(:blue_card_informations, :personal_informations)   if blue_card?
-        return @response.dig(:citizenship_informations, :personal_informations) if citizenship?
-        return @response[:foreigner_informations]                               if foreigner?
+        @response.dig(:blue_card_informations, :personal_informations).presence ||
+          @response.dig(:citizenship_informations, :personal_informations).presence ||
+          @response[:foreigner_informations].presence
       end
 
       def basic_informations
@@ -43,20 +43,6 @@ module Xokul
           gender: basic_informations.dig(:gender, :code),
           marital_status: status_informations.dig(:marital_status, :code)
         }
-      end
-
-      private
-
-      def blue_card?
-        @response[:blue_card_informations].present?
-      end
-
-      def citizenship?
-        @response[:citizenship_informations].present?
-      end
-
-      def foreigner?
-        @response[:foreigner_informations].present?
       end
     end
   end
