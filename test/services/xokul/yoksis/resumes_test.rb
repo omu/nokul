@@ -40,7 +40,7 @@ class ResumesTest < ActiveSupport::TestCase
     refereeing
     thesis_advisors
   ].each do |method|
-    test "trying to get a staff's #{method}" do
+    test "trying to get staff's #{method}" do
       assert Xokul::Yoksis::Resumes.send(
         method,
         id_number: Rails.application.credentials.yoksis[:"#{method}_test_id_number"]
@@ -58,7 +58,7 @@ class ResumesTest < ActiveSupport::TestCase
     incentive_applications
     incentive_activity_declarations
   ].each do |method|
-    test "trying to get a staff's #{method}" do
+    test "trying to get staff's #{method}" do
       assert Xokul::Yoksis::Resumes.send(
         method,
         id_number: Rails.application.credentials.yoksis[:"#{method}_test_id_number"],
