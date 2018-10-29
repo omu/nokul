@@ -18,11 +18,11 @@ module RestClient
 
     attr_accessor :method, :url
 
-    def initialize(method:, url:, **options)
+    def initialize(method:, url:)
       @method = method
       @url    = url
 
-      build_http_object options
+      build_http_object
     end
 
     # rubocop:disable Style/IfUnlessModifier
@@ -42,11 +42,11 @@ module RestClient
 
     private
 
-    def build_http_object(options)
+    def build_http_object
       @uri              = URI.parse(url)
       @http             = Net::HTTP.new @uri.host, @uri.port
-      @http.use_ssl     = options[:use_ssl] || false
-      @http.verify_mode = options[:verify_mode] || nil
+      @http.use_ssl     = true
+      @http.verify_mode = OpenSSL::SSL::VERIFY_PEER
     end
   end
 
@@ -56,11 +56,11 @@ module RestClient
     delegate :body, to: :http_response
 
     def code
-      @http_response.code.to_i
+      http_response.code.to_i
     end
 
     def error!
-      @http_response.error! unless code.eql? 200
+      http_response.error! unless code.eql? 200
     end
 
     def unmarshal_json
@@ -73,7 +73,7 @@ module RestClient
   module_function
 
   SUPPORTED_HTTP_METHODS.each do |method|
-    define_method(method) do |url:, header: {}, payload: {}, **options|
+    define_method(method) do |url, header: {}, payload: {}, **options|
       Request.new(method: method, url: url, **options).execute(
         header: header, payload: payload
       )
