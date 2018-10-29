@@ -18,23 +18,21 @@ module RestClient
 
     attr_accessor :method, :url
 
-    def initialize(method:, url:)
+    def initialize(method:, url:, **options)
       @method = method
       @url    = url
 
-      build_http_object
+      build_http_object options
     end
 
     # rubocop:disable Style/IfUnlessModifier
-    def execute(path: nil, header: {}, payload: {})
+    def execute(header: {}, payload: {})
       unless method.in?(SUPPORTED_HTTP_METHODS)
         raise HTTPMethodError, "Undefined HTTP method: #{method}"
       end
 
-      path ||= @uri.request_uri
-
       klass = "Net::HTTP::#{method.capitalize}".constantize
-      request = klass.new path, header
+      request = klass.new @url, header
 
       Response.new @http.request request, payload.to_json
     end
@@ -42,11 +40,11 @@ module RestClient
 
     private
 
-    def build_http_object
+    def build_http_object(options)
       @uri              = URI.parse(url)
       @http             = Net::HTTP.new @uri.host, @uri.port
-      @http.use_ssl     = true
-      @http.verify_mode = OpenSSL::SSL::VERIFY_PEER
+      @http.use_ssl     = options[:use_ssl] || false
+      @http.verify_mode = options[:verify_mode] || nil
     end
   end
 
