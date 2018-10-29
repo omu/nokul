@@ -5,7 +5,7 @@ module Xokul
     module_function
 
     def verify_identity(id_number:, first_name:, last_name:, year_of_birth:)
-      Connection.instance.get(
+      Connection.request(
         '/kps/verifications/identities',
         params: {
           id_number:     id_number,

@@ -6,7 +6,7 @@ module Xokul
       module_function
 
       def authors(id_number:, author_id:)
-        Connection.instance.get(
+        Connection.request(
           '/yoksis/resumes/authors',
           params: { id_number: id_number, author_id: author_id }
         )
@@ -36,7 +36,7 @@ module Xokul
         thesis_advisors
       ].each do |method|
         define_method(method) do |id_number:|
-          Connection.instance.get(
+          Connection.request(
             "/yoksis/resumes/#{method}", params: { id_number: id_number }
           )
         end
@@ -48,7 +48,7 @@ module Xokul
         incentive_activity_declarations
       ].each do |method|
         define_method(method) do |id_number:, year:|
-          Connection.instance.get(
+          Connection.request(
             "/yoksis/resumes/#{method}", params: { id_number: id_number, year: year }
           )
         end
