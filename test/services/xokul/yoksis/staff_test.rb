@@ -3,9 +3,17 @@
 require 'test_helper'
 
 class StaffTest < ActiveSupport::TestCase
+  setup do
+    @id_numbers = YAML.safe_load(
+      Sensitive.read(
+        Rails.root.join('test', 'fixtures', 'files', 'xokul_id_numbers.yml')
+      )
+    ).deep_symbolize_keys
+  end
+
   test "trying to get academician's informations" do
     assert Xokul::Yoksis::Staff.academicians(
-      id_number: Rails.application.credentials.yoksis[:academicians_test_id_number]
+      id_number: @id_numbers[:academicians]
     )
 
     assert_raises Net::HTTPError, Net::HTTPFatalError do

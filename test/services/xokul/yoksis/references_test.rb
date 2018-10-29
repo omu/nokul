@@ -15,14 +15,14 @@ class ReferencesTest < ActiveSupport::TestCase
     nationalities
     staff_titles
     student_disability_types
-    student_dropout_types
+    student_drop_out_types
     student_education_levels
     student_entrance_point_types
     student_entrance_types
     student_grades
     student_grading_systems
-    studentship_rights
-    studentship_statuses
+    student_studentship_rights
+    student_studentship_statuses
     unit_instruction_languages
     unit_instruction_types
     unit_statuses
