@@ -6,7 +6,7 @@ module Xokul
       delegate :dig, :[], to: :@response
 
       def initialize(id_number)
-        @response = Connection.instance.get(
+        @response = Connection.request(
           '/kps/queries/identities', params: { id_number: id_number }
         )
       end

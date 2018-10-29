@@ -6,7 +6,7 @@ module Xokul
       module_function
 
       def districts(city_code:)
-        Connection.instance.get(
+        Connection.request(
           '/yoksis/references/districts', params: { city_code: city_code }
         )
       end
@@ -39,7 +39,7 @@ module Xokul
         university_types
       ].each do |method|
         define_method(method) do
-          Connection.instance.get "/yoksis/references/#{method}"
+          Connection.request "/yoksis/references/#{method}"
         end
       end
     end

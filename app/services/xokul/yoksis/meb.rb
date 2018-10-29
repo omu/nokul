@@ -6,7 +6,7 @@ module Xokul
       module_function
 
       def students(id_number:)
-        Connection.instance.get(
+        Connection.request(
           '/yoksis/meb/students', params: { id_number: id_number }
         )
       end

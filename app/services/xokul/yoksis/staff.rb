@@ -6,21 +6,21 @@ module Xokul
       module_function
 
       def academicians(id_number:)
-        Connection.instance.get(
+        Connection.request(
           '/yoksis/staff/academicians', params: { id_number: id_number }
         )
       end
 
       def nationalities
-        Connection.instance.get '/yoksis/staff/nationalities'
+        Connection.request '/yoksis/staff/nationalities'
       end
 
       def pages(page:)
-        Connection.instance.get '/yoksis/staff/pages', params: { page: page }
+        Connection.request '/yoksis/staff/pages', params: { page: page }
       end
 
       def total_pages
-        Connection.instance.get '/yoksis/staff/total_pages'
+        Connection.request '/yoksis/staff/total_pages'
       end
     end
   end
