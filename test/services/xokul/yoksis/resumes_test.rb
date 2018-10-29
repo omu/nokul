@@ -3,9 +3,17 @@
 require 'test_helper'
 
 class ResumesTest < ActiveSupport::TestCase
+  setup do
+    @id_numbers = YAML.safe_load(
+      Sensitive.read(
+        Rails.root.join('test', 'fixtures', 'files', 'xokul_id_numbers.yml')
+      )
+    ).deep_symbolize_keys
+  end
+
   test 'trying to get author informations' do
     assert Xokul::Yoksis::Resumes.authors(
-      id_number: Rails.application.credentials.yoksis[:authors_test_id_number],
+      id_number: @id_numbers[:authors],
       author_id: 252_882
     )
 
@@ -43,7 +51,7 @@ class ResumesTest < ActiveSupport::TestCase
     test "trying to get staff's #{method}" do
       assert Xokul::Yoksis::Resumes.send(
         method,
-        id_number: Rails.application.credentials.yoksis[:"#{method}_test_id_number"]
+        id_number: @id_numbers[method]
       )
 
       assert_raises Net::HTTPError, Net::HTTPFatalError do
@@ -61,7 +69,7 @@ class ResumesTest < ActiveSupport::TestCase
     test "trying to get staff's #{method}" do
       assert Xokul::Yoksis::Resumes.send(
         method,
-        id_number: Rails.application.credentials.yoksis[:"#{method}_test_id_number"],
+        id_number: @id_numbers[method],
         year: 2017
       )
 
