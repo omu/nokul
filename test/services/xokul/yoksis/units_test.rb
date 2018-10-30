@@ -35,11 +35,11 @@ class UnitsTest < ActiveSupport::TestCase
   end
 
   test 'trying to get units under a university' do
-    assert Xokul::Yoksis::Units.names unit_id: 163_896
+    assert Xokul::Yoksis::Units.unit_name_from_id unit_id: 163_896
 
     assert_raises Net::HTTPError, Net::HTTPFatalError do
-      Xokul::Yoksis::Units.names unit_id: -1
-      Xokul::Yoksis::Units.names unit_id: 'unit id as string'
+      Xokul::Yoksis::Units.unit_name_from_id unit_id: -1
+      Xokul::Yoksis::Units.unit_name_from_id unit_id: 'unit id as string'
     end
   end
 end
