@@ -8,7 +8,7 @@ namespace :fetch do
     client = Xokul::Yoksis::Staff
 
     # this endpoint uses pagination in a weird way
-    number_of_pages = client.total_pages[:total_pages]
+    number_of_pages = client.total_pages
 
     # id_number:email pairs for academics
     mail_list = Sensitive.readlines('db/encrypted_data/academics.csv').map { |line| line.split('|') }

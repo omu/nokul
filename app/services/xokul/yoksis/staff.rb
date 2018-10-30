@@ -20,7 +20,7 @@ module Xokul
       end
 
       def total_pages
-        Connection.request '/yoksis/staff/total_pages'
+        Connection.request('/yoksis/staff/total_pages')[:total_pages]
       end
     end
   end

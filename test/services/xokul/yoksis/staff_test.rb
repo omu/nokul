@@ -34,4 +34,8 @@ class StaffTest < ActiveSupport::TestCase
       Xokul::Yoksis::Staff.pages page: 'page as string'
     end
   end
+
+  test 'trying to get total pages' do
+    assert_not_nil Xokul::Yoksis::Staff.total_pages
+  end
 end
