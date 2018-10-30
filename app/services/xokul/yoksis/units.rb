@@ -21,15 +21,16 @@ module Xokul
         Connection.request '/yoksis/units/universities'
       end
 
-      %i[
-        subunits
-        names
-      ].each do |method|
-        define_method(method) do |unit_id:|
-          Connection.request(
-            "/yoksis/units/#{method}", params: { unit_id: unit_id }
-          )
-        end
+      def unit_name_from_id(unit_id:)
+        Connection.request(
+          '/yoksis/units/names', params: { unit_id: unit_id }
+        )
+      end
+
+      def subunits(unit_id:)
+        Connection.request(
+          '/yoksis/units/subunits', params: { unit_id: unit_id }
+        )
       end
     end
   end
