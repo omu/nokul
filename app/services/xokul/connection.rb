@@ -5,6 +5,8 @@ module Xokul
     BASE_URL     = Rails.application.config.tenant.api_host
     BEARER_TOKEN = Rails.application.credentials.xokul[:bearer_token]
 
+    private_constant :BASE_URL, :BEARER_TOKEN
+
     # rubocop:disable Metrics/MethodLength
     def self.request(path, params: {})
       response = RestClient.get(
@@ -21,7 +23,14 @@ module Xokul
       response.error!
 
       unmarshal = response.unmarshal_json
-      unmarshal.is_a?(Hash) ? unmarshal.deep_symbolize_keys : unmarshal
+      case unmarshal
+      when Array
+        unmarshal.map(&:deep_symbolize_keys)
+      when Hash
+        unmarshal.deep_symbolize_keys
+      else
+        unmarshal
+      end
     end
     # rubocop:enable Metrics/MethodLength
   end
