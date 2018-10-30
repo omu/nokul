@@ -37,9 +37,9 @@ class KpsTest < ActiveSupport::TestCase
 
   test 'trying to verify personal informations' do
     response = Xokul::Kps.verify_identity(
-      id_number:     11_111_111_111,
-      first_name:    'first name',
-      last_name:     'last name',
+      id_number: 11_111_111_111,
+      first_name: 'first name',
+      last_name: 'last name',
       year_of_birth: 1999
     )
 
@@ -47,9 +47,9 @@ class KpsTest < ActiveSupport::TestCase
 
     assert_raises Net::HTTPError, Net::HTTPFatalError do
       Xokul::Kps.verify_identity(
-        id_number:     'id number as string',
-        first_name:    'foo',
-        last_name:     'bar',
+        id_number: 'id number as string',
+        first_name: 'foo',
+        last_name: 'bar',
         year_of_birth: -1
       )
     end
