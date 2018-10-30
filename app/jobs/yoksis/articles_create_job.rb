@@ -6,53 +6,37 @@ module Yoksis
 
     # slow operation
     def perform(user)
-      @response = Yoksis::V1::Ozgecmis.new(user.id_number.to_i).articles
+      @response = Xokul::Yoksis::Resumes.articles(id_number: user.id_number)
     end
 
     # callbacks
-    # rubocop:disable Metrics/BlockLength
     after_perform do |job|
       user = job.arguments.first
-      if @response[:sonuc][:durum_kodu].eql?('1') && @response[:makale_liste].present?
-        response = [@response[:makale_liste]].flatten
+      response = [@response].flatten
 
-        response.each do |study|
-          user.articles.create(
-            yoksis_id: study[:yayin_id],
-            scope: study[:kapsam_id].try(:to_i),
-            review: study[:hakem_tur].try(:to_i),
-            index: study[:endeks_id].try(:to_i),
-            title: study[:makale_adi],
-            authors: study[:yazar_adi],
-            number_of_authors: study[:yazar_sayisi],
-            country: study[:ulke],
-            city: study[:sehir],
-            journal: study[:dergi_adi],
-            language_of_publication: study[:yayin_dili_adi],
-            month: study[:ay],
-            year: study[:yil],
-            volume: study[:cilt],
-            issue: study[:sayi],
-            first_page: study[:ilk_sayfa],
-            last_page: study[:son_sayfa],
-            doi: study[:doi],
-            issn: study[:issn],
-            access_type: study[:erisim_turu].try(:to_i),
-            access_link: study[:erisim_linki],
-            discipline: study[:alan_bilgisi],
-            keyword: study[:anahtar_kelime],
-            special_issue: study[:ozel_sayi],
-            special_issue_name: study[:ozel_sayi_ad],
-            sponsored_by: study[:sponsor],
-            author_id: study[:yazar_id],
-            last_update: study[:guncelleme_tarihi],
-            status: study[:aktif_pasif].try(:to_i),
-            type: study[:makale_turu_id].try(:to_i),
-            incentive_point: study[:tesv_puan]
+      response.each do |article|
+        user.articles.create(
+          yoksis_id: article[:publication_id],
+          scope: article[:scope_id],
+          review: article[:reviewer_id],
+          index: article[:index_id],
+          title: article[:name],
+          authors: article[:authors].join(', '),
+          country: article[:country_id],
+          journal: article[:journal_name],
+          language_of_publication: article[:publication_language_name],
+          access_type: article[:access_type_id],
+          keyword: article[:keywords],
+          special_issue: article[:special_issue_id],
+          status: article[:activity_id],
+          type: article[:type_id],
+          **article.slice(
+            :city, :month, :year, :volume, :issue, :first_page, :last_page,
+            :doi, :issn, :access_link, :discipline, :special_issue_name, :author_id,
+            :last_update, :incentive_point, :sponsored_by, :number_of_authors
           )
-        end
+        )
       end
     end
-    # rubocop:enable Metrics/BlockLength
   end
 end
