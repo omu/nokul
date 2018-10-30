@@ -24,7 +24,7 @@ module Xokul
       def model_data
         {
           full_address: current_address[:full_address],
-          district:  district
+          district: district
         }
       end
 
