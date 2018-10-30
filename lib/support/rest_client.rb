@@ -26,15 +26,13 @@ module RestClient
     end
 
     # rubocop:disable Style/IfUnlessModifier
-    def execute(path: nil, header: {}, payload: {})
+    def execute(header: {}, payload: {})
       unless method.in?(SUPPORTED_HTTP_METHODS)
-        raise HTTPMethodError, "Undefined HTTP method: #{method}"
+        raise HTTPMethodError, "Unsupported HTTP method: #{method}"
       end
 
-      path ||= @uri.request_uri
-
       klass = "Net::HTTP::#{method.capitalize}".constantize
-      request = klass.new path, header
+      request = klass.new @url, header
 
       Response.new @http.request request, payload.to_json
     end
@@ -56,11 +54,11 @@ module RestClient
     delegate :body, to: :http_response
 
     def code
-      @http_response.code.to_i
+      http_response.code.to_i
     end
 
     def error!
-      @http_response.error! unless code.eql? 200
+      http_response.error! unless code.eql? 200
     end
 
     def unmarshal_json
@@ -73,7 +71,7 @@ module RestClient
   module_function
 
   SUPPORTED_HTTP_METHODS.each do |method|
-    define_method(method) do |url:, header: {}, payload: {}, **options|
+    define_method(method) do |url, header: {}, payload: {}, **options|
       Request.new(method: method, url: url, **options).execute(
         header: header, payload: payload
       )
