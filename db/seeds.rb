@@ -31,4 +31,4 @@ UnitType.where(code: [9]).update(group: 'rectorship')
 Rake::Task['fetch:academic_staff'].invoke
 
 # Import prospective students of 2018
-Osym::ImportProspectiveStudentsJob.perform_later('db/encrypted_data/prospective_students.csv.enc')
+Osym::ImportProspectiveStudentsJob.perform_later('db/encrypted_data/prospective_students.csv')
