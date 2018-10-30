@@ -28,7 +28,7 @@ module RestClient
     # rubocop:disable Style/IfUnlessModifier
     def execute(header: {}, payload: {})
       unless method.in?(SUPPORTED_HTTP_METHODS)
-        raise HTTPMethodError, "Undefined HTTP method: #{method}"
+        raise HTTPMethodError, "Unsupported HTTP method: #{method}"
       end
 
       klass = "Net::HTTP::#{method.capitalize}".constantize
