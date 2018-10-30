@@ -3,16 +3,15 @@
 require 'test_helper'
 
 class SignUpPageFlowTest < ActionDispatch::IntegrationTest
-  
   SUPPORTED_SCREEN_RESOLUTIONS.each do |resolution|
     test "can sign up with correct credentials with a #{resolution} screen" do
       page.driver.browser.manage.window.resize_to(*resolution)
       visit(new_user_registration_path)
       {
-        id_number: 70336212330,
+        id_number: '70336212330',
         email: 'new_user@gmail.com',
         password: '123456',
-        password_confirmation: '123456',
+        password_confirmation: '123456'
       }.each do |key, value|
         fill_in("user[#{key}]", with: value)
       end
@@ -24,14 +23,12 @@ class SignUpPageFlowTest < ActionDispatch::IntegrationTest
       page.driver.browser.manage.window.resize_to(*resolution)
       visit(new_user_registration_path)
       {
-        id_number: 70336212330,
-        email: 'new_user@gmail.com',
-        password: '123456',
+        email: 'new_user@gmail.com'
       }.each do |key, value|
         fill_in("user[#{key}]", with: value)
       end
       click_button(t('devise.common.register'))
-      assert_not page.has_content?("Please fill out this field.") 
+      assert_not page.has_content?('Please fill out this field.')
     end
   end
 end
