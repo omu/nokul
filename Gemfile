@@ -35,7 +35,6 @@ gem 'simple_form'
 
 # api
 gem 'jbuilder', '~> 2.5'
-gem 'savon', '~> 2.12.0'
 
 # security
 gem 'bcrypt', '~> 3.1.7'

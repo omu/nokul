@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_09_073057) do
+ActiveRecord::Schema.define(version: 2018_10_28_080308) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -606,15 +606,6 @@ ActiveRecord::Schema.define(version: 2018_10_09_073057) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["id_number"], name: "index_users_on_id_number", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  end
-
-  create_table "yoksis_responses", force: :cascade do |t|
-    t.string "name", limit: 255, null: false, comment: "API endpoint, ie: Yoksis"
-    t.string "endpoint", limit: 255, null: false, comment: "API endpoint name, ie: Referanslar"
-    t.string "action", limit: 255, null: false, comment: "Endpoint action, ie: get_ogrenim_dili_response"
-    t.string "sha1", limit: 40, null: false, comment: "SHA1 hash of the API response"
-    t.datetime "created_at", null: false
-    t.datetime "syncronized_at"
   end
 
   add_foreign_key "calendar_title_types", "calendar_titles", column: "title_id"

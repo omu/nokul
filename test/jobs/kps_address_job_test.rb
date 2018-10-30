@@ -11,11 +11,8 @@ class KpsAddressJobTest < ActiveJob::TestCase
 
   test 'can initialize KPS queries as Kps::AddressSaveJob for given user and address' do
     client = Minitest::Mock.new
-    def client.sorgula
-      true
-    end
 
-    Kps::Omu::Adres.stub :new, client do
+    Xokul::Kps::Address.stub :new, client do
       assert Kps::AddressSaveJob.perform_later({}) # dummy hash
     end
   end
