@@ -10,7 +10,7 @@ module Xokul
     # rubocop:disable Metrics/MethodLength
     def self.request(path, params: {})
       response = RestClient.get(
-        File.join(BASE_URL, path),
+        URI.join(BASE_URL, path).to_s,
         header:  {
           Authorization: "Bearer #{BEARER_TOKEN}",
           'Content-Type': 'application/json'
