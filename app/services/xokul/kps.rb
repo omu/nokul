@@ -8,9 +8,9 @@ module Xokul
       Connection.request(
         '/kps/verifications/identities',
         params: {
-          id_number:     id_number,
-          first_name:    first_name,
-          last_name:     last_name,
+          id_number: id_number,
+          first_name: first_name,
+          last_name: last_name,
           year_of_birth: year_of_birth
         }
       )
