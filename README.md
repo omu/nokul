@@ -8,15 +8,15 @@ Dealing with ill-structured processes of a university is hard, especially when t
 
 ## Installation
 
-See [installation guide](/docs/development/installation.md) for details.
+See [installation guide](/doc/development/installation.md) for details.
 
 ## Contributing
 
-See [contributing guide](/docs/CONTRIBUTING.md) for details.
+See [contributing guide](/.github/CONTRIBUTING.md) for details.
 
 ## HowTo
 
-See [/docs](/docs) for other documents.
+See [/docs](/doc) for other documents.
 
 ## License
 

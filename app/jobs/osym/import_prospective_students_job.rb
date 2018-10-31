@@ -8,7 +8,7 @@ module Osym
     # rubocop:disable Metrics/MethodLength
     # rubocop:disable Metrics/BlockLength
     def perform(file_path)
-      content = FileEncryptor.decrypt_lines(file_path)
+      content = Sensitive.readlines(file_path)
 
       progress_bar = ProgressBar.spawn('Prospective Students', content.count)
 
@@ -99,8 +99,7 @@ module Osym
     def find_obs_registered_program(program)
       return if program.eql?('0') || program.eql?('null')
 
-      response = Yoksis::V4::UniversiteBirimler.new.program_name(program)
-      "#{response[:universite][:ad]} / #{response[:birim][:ad]}"
+      Xokul::Yoksis::Units.unit_name_from_id(unit_id: program)[:long_name]
     end
 
     def find_student_disability_type(student_disability_type)

@@ -6,15 +6,14 @@ module Kps
 
     # slow operation
     def perform(user)
-      @response = Kps::Omu::Adres.new.sorgula(user.id_number.to_i)
+      @response = Xokul::Kps::Address.new(user.id_number)
     end
 
     # callbacks
     after_perform do |job|
-      district = District.find_by(mernis_code: @response[:district_id])
+      model_data = @response.model_data
       address = job.arguments.first.addresses.formal
-      response = { district: district, full_address: @response[:full_address] }
-      address.present? ? address.update(response) : address.create(response)
+      address.present? ? address.update(model_data) : address.create(model_data)
     end
   end
 end

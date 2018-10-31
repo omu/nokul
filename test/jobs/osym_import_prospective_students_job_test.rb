@@ -5,23 +5,16 @@ require 'test_helper'
 class OsymImportProspectiveStudentsJobTest < ActiveJob::TestCase
   test 'can enqueue Osym::ImportProspectiveStudentsJob' do
     assert_enqueued_jobs 0
-    Osym::ImportProspectiveStudentsJob.perform_later('test/fixtures/files/prospective_students.csv.enc')
+    Osym::ImportProspectiveStudentsJob.perform_later('test/fixtures/files/prospective_students.csv')
     assert_enqueued_jobs 1
   end
 
   test 'can perform enqueued jobs for Osym::ImportProspectiveStudentsJob' do
-    client = Minitest::Mock.new
-    def client.program_name(*)
-      { universite: { ad: 'Üniversite' }, birim: { ad: 'Birim' } }
-    end
-
     assert_performed_jobs 0
 
     assert_difference('ProspectiveStudent.count', 3) do
       perform_enqueued_jobs do
-        Yoksis::V4::UniversiteBirimler.stub :new, client do
-          Osym::ImportProspectiveStudentsJob.perform_later('test/fixtures/files/prospective_students.csv.enc')
-        end
+        Osym::ImportProspectiveStudentsJob.perform_later('test/fixtures/files/prospective_students.csv')
       end
 
       assert_performed_jobs 1
