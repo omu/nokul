@@ -9,7 +9,7 @@ class AccountSettingsFlowTest < ActionDispatch::IntegrationTest
   end
 
   SUPPORTED_SCREEN_RESOLUTIONS.each do |resolution|
-    test "can update account settings with correct credentials with a #{resolution} screen" do
+    test "can update account password with valid password with a #{resolution} screen" do
       page.driver.browser.manage.window.resize_to(*resolution)
       visit(edit_user_registration_path)
       {
@@ -23,7 +23,7 @@ class AccountSettingsFlowTest < ActionDispatch::IntegrationTest
       assert_equal t('devise.registrations.updated'), page.find('div', class: 'toast-message').text
     end
 
-    test "can not update account settings with correct credentials with a #{resolution} screen" do
+    test "can not update account password with missing password with a #{resolution} screen" do
       page.driver.browser.manage.window.resize_to(*resolution)
       visit(edit_user_registration_path)
       {
