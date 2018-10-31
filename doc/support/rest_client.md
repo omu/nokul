@@ -2,7 +2,7 @@
 =============
 
 `RestClient` modülü basit bir HTTP ve REST istemcisidir. Arayüzünde aşağıdaki
-HTTP metotlarını destekleyen modül metotları bulundurur.
+HTTP metotlarını destekleyen modül metotları bulunur.
 
 - GET
 - DELETE
@@ -10,7 +10,7 @@ HTTP metotlarını destekleyen modül metotları bulundurur.
 - POST
 - PUT
 
-Tüm metotlar prototip olarak şöyledir:
+Tüm metotlar prototip olarak şöyle:
 
 ```ruby
 method(url, header: {}, payload: {}, **http_options)
@@ -26,7 +26,7 @@ RestClient.post(url, header: { foo: 'bar' }, payload: { baz: 'bar' })
 ```
 
 İstemci, içeride `net/http` kitaplığını kullanır ve bu değiştirilebilir
-değildir. Prototipte görülen `http_object`, içeride sarmalanmış olan bu `http`
+değildir. Prototipte görünen `http_object`, içeride sarmalanmış olan bu `http`
 nesnesine ayar geçirmek için kullanılır. Tipik kullanım senaryosu SSL ayarlarıdır.
 
 ```ruby
@@ -36,7 +36,7 @@ url = 'https://localhost'
 RestClient.get(url, use_ssl: true, verify_mode: OpenSSL::SSL::VERIFY_PEER)
 ```
 
-**Not:** Authentication için temel "HTTP Authentication" şemasını kullanılmalı.
+**Not:** Authentication için temel "HTTP Authentication" şeması kullanılmalı.
 
 ```ruby
 url = 'https://localhost'
