@@ -19,7 +19,7 @@ class AccountSettingsFlowTest < ActionDispatch::IntegrationTest
       }.each do |key, value|
         fill_in("user[#{key}]", with: value)
       end
-      click_button('Şifremi Değiştir')
+      click_button(t('helpers.submit.user.update'))
       assert_equal t('devise.registrations.updated'), page.find('div', class: 'toast-message').text
     end
 
@@ -32,7 +32,7 @@ class AccountSettingsFlowTest < ActionDispatch::IntegrationTest
       }.each do |key, value|
         fill_in("user[#{key}]", with: value)
       end
-      click_button('Şifremi Değiştir')
+      click_button(t('helpers.submit.user.update'))
       assert_not page.has_content?('Please fill out this field.')
     end
   end
