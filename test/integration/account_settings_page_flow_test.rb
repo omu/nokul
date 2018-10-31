@@ -23,7 +23,7 @@ class AccountSettingsFlowTest < ActionDispatch::IntegrationTest
       assert_equal t('devise.registrations.updated'), page.find('div', class: 'toast-message').text
     end
 
-    test "can not update account password with missing password with a #{resolution} screen" do
+    test "can not update account password with a missing password under a #{resolution} screen" do
       page.driver.browser.manage.window.resize_to(*resolution)
       visit(edit_user_registration_path)
       {
