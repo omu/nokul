@@ -13,4 +13,10 @@ module Support
       progress_bar&.increment
     end
   end
+
+  def abort_on_yaml_syntax_errors
+    yield
+  rescue Psych::SyntaxError => err
+    abort "Aborting due to the YAML syntax errors: #{err}"
+  end
 end

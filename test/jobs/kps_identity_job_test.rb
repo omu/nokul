@@ -11,11 +11,8 @@ class KpsIdentityJobTest < ActiveJob::TestCase
 
   test 'can initialize KPS queries as Kps::IdentitySaveJob for given user and identities' do
     client = Minitest::Mock.new
-    def client.sorgula
-      true
-    end
 
-    Kps::Omu::Kimlik.stub :new, client do
+    Xokul::Kps::Identity.stub :new, client do
       assert Kps::IdentitySaveJob.perform_later({}) # dummy hash
     end
   end
