@@ -9,7 +9,7 @@ class AccountSettingsFlowTest < ActionDispatch::IntegrationTest
   end
 
   SUPPORTED_SCREEN_RESOLUTIONS.each do |resolution|
-    test "can update account password with valid password with a #{resolution} screen" do
+    test "can update account password with a valid password under a #{resolution} screen" do
       page.driver.browser.manage.window.resize_to(*resolution)
       visit(edit_user_registration_path)
       {
