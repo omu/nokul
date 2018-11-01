@@ -37,8 +37,8 @@ class Unit < ApplicationRecord
   has_many :prospective_students, dependent: :destroy
 
   # validations
-  validates :yoksis_id, uniqueness: true, allow_blank: true, numericality: { only_integer: true }
-  validates :detsis_id, uniqueness: true, allow_blank: true, numericality: { only_integer: true }
+  validates :yoksis_id, uniqueness: true, allow_blank: true, numericality: { only_integer: true }, length: { is: 6 }
+  validates :detsis_id, uniqueness: true, allow_blank: true, numericality: { only_integer: true }, length: { is: 8 }
   validates :name, presence: true, uniqueness: { scope: %i[ancestry unit_status] }
   validates :duration, numericality: { only_integer: true }, allow_blank: true, inclusion: 1..8
 
