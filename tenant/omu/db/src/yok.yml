@@ -17,7 +17,7 @@
   issues:
     - Üst birim olan Yabancı Diller Yüksekokulu kapatılmış görünüyor
   notes:
-    - YDİL eki Rektörlük altındaki 169457 yoksis numaralı birimie verildi
+    - YDİL eki Rektörlük altındaki 169457 yoksis numaralı birimine verildi
 
 - name: Ondokuz Mayıs Üniversitesi
   yoksis_id: 121946
@@ -319,6 +319,8 @@
   parent_yoksis_id: 242252
   osym_id: 108251335
   abbreviation: ALAÇAM-MYO-BHS-ÇMH-PR-UZ
+  issues:
+    - Kuruluş tarihi hatalı
 
 - name: Toptan Ve Perakende Satış Bölümü
   yoksis_id: 317311
@@ -410,6 +412,8 @@
   parent_yoksis_id: 205956
   osym_id: 108251195
   abbreviation: ALAÇAM-MYO-UH-PH-PR-UZ
+  issues:
+    - Kuruluş tarihi hatalı
 
 - name: Posta Hizmetleri Pr. (İö)
   yoksis_id: 240435
@@ -423,6 +427,8 @@
   parent_yoksis_id: 205956
   osym_id: 108270932
   abbreviation: ALAÇAM-MYO-UH-PH-PR-2
+  issues:
+    - Kuruluş tarihi hatalı
 
 - name: Yönetim Ve Organizasyon Bölümü
   yoksis_id: 153820
@@ -462,6 +468,8 @@
   parent_yoksis_id: 153820
   osym_id: 108270923
   abbreviation: ALAÇAM-MYO-YO-L-PR-2
+  issues:
+    - Kuruluş tarihi hatalı
 
 - name: Ali Fuad Başgil Hukuk Fakültesi
   yoksis_id: 128074
@@ -559,6 +567,8 @@
   parent_yoksis_id: 140231
   osym_id:
   abbreviation: KAMU-CMH-AD
+  issues:
+    - Kuruluş tarihi hatalı
 
 - name: Ceza Ve Ceza Usul Hukuku Anabilim Dalı
   yoksis_id: 140275
@@ -899,6 +909,8 @@
   parent_yoksis_id: 122355
   osym_id:
   abbreviation: BAFRA-MYO-EL
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Finans Bankacılık Ve Sigortacılık Bölümü
   yoksis_id: 282775
@@ -912,6 +924,8 @@
   parent_yoksis_id: 122355
   osym_id:
   abbreviation: BAFRA-MYO-FİNANS
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Muhasebe Ve Vergi Bölümü
   yoksis_id: 169471
@@ -951,6 +965,8 @@
   parent_yoksis_id: 122355
   osym_id:
   abbreviation: BAFRA-MYO-MKG
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Otel, Lokanta Ve İkram Hizmetleri Bölümü
   yoksis_id: 254507
@@ -990,6 +1006,8 @@
   parent_yoksis_id: 122355
   osym_id:
   abbreviation: BAFRA-MYO-VET
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: İktisadi Ve İdari Bilimler Bölümü
   yoksis_id: 128052
@@ -1109,6 +1127,8 @@
   parent_yoksis_id: 284516
   osym_id:
   abbreviation: BALLICA-MYO-UH
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Yönetim Ve Organizasyon Bölümü
   yoksis_id: 296414
@@ -1122,6 +1142,8 @@
   parent_yoksis_id: 284516
   osym_id:
   abbreviation: BALLICA-MYO-YO
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Bölgesel Kalkınma Ve Stratejik Araştırmalar Uygulama Ve Araştırma Merkezi
   yoksis_id: 169418
@@ -1293,6 +1315,8 @@
   parent_yoksis_id: 121997
   osym_id:
   abbreviation: DİŞ-KLİNİK-ODR-AD
+  issues:
+    - Kuruluş tarihi hatalı
 
 - name: Ortodonti Anabilim Dalı
   yoksis_id: 122000
@@ -1423,6 +1447,8 @@
   parent_yoksis_id: 174846
   osym_id:
   abbreviation: EFST-YL
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Eğitim Programları Ve Öğretim (Yl) (Tezli)
   yoksis_id: 207884
@@ -1449,6 +1475,8 @@
   parent_yoksis_id: 174846
   osym_id:
   abbreviation: EPO-YZ
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Eğitim Yönetimi (Dr)
   yoksis_id: 327630
@@ -1462,6 +1490,8 @@
   parent_yoksis_id: 174846
   osym_id:
   abbreviation: EY-DR
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Eğitim Yönetimi (Yl) (Tezli)
   yoksis_id: 327629
@@ -1475,6 +1505,8 @@
   parent_yoksis_id: 174846
   osym_id:
   abbreviation: EY-YL
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Eğitim Yönetimi (Yl) (Tezsiz) (Uzaktan Öğretim)
   yoksis_id: 327678
@@ -1488,6 +1520,8 @@
   parent_yoksis_id: 174846
   osym_id:
   abbreviation: EY-YZ-UZ
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Eğitim Yönetimi (Yl) (Tezsiz) (İö)
   yoksis_id: 327631
@@ -1501,6 +1535,8 @@
   parent_yoksis_id: 174846
   osym_id:
   abbreviation: EY-YZ-2
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Eğitimin Felsefi, Sosyal Ve Tarihi Temelleri (Dr)
   yoksis_id: 376129
@@ -1527,6 +1563,8 @@
   parent_yoksis_id: 174846
   osym_id:
   abbreviation: FENBİL-DR
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Fen Bilgisi Eğitim (Yl) (Tezli)
   yoksis_id: 267753
@@ -1540,6 +1578,8 @@
   parent_yoksis_id: 174846
   osym_id:
   abbreviation: FENBİL-YL
+  issues:
+    - Kuruluş tarihi hatalı
 
 - name: Fen Bilgisi Eğitim (Yl) (Tezsiz) (Uzaktan Öğretim)
   yoksis_id: 244484
@@ -1657,6 +1697,8 @@
   parent_yoksis_id: 174846
   osym_id:
   abbreviation: PDR-YL-ORDU
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Resim-İş Eğitimi (Dr)
   yoksis_id: 230808
@@ -1735,6 +1777,8 @@
   parent_yoksis_id: 174846
   osym_id:
   abbreviation: SINIF-YZ-2
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Sosyal Bilgiler Eğitimi (Dr)
   yoksis_id: 327681
@@ -1748,6 +1792,8 @@
   parent_yoksis_id: 174846
   osym_id:
   abbreviation: SOSYALBİL-DR
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Sosyal Bilgiler Eğitimi (Yl) (Tezli)
   yoksis_id: 327632
@@ -1761,6 +1807,8 @@
   parent_yoksis_id: 174846
   osym_id:
   abbreviation: SOSYALBİL-YL
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Sosyal Bilgiler Eğitimi (Yl) (Tezsiz) (Uzaktan Öğretim)
   yoksis_id: 244485
@@ -1787,6 +1835,8 @@
   parent_yoksis_id: 174846
   osym_id:
   abbreviation: SOSYALBİL-YZ-2
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Tarih Eğitimi (Yl) (Tezli)
   yoksis_id: 213373
@@ -1839,6 +1889,8 @@
   parent_yoksis_id: 174846
   osym_id:
   abbreviation: TÜRKÇE-YL
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Yabancı Diller Eğitimi Anabilim Dalı
   yoksis_id: 211120
@@ -1878,6 +1930,8 @@
   parent_yoksis_id: 174846
   osym_id:
   abbreviation: İLKMAT-YL
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: İlköğretim Sınıf Öğretmenliği (Yl) (Tezsiz) (İö)
   yoksis_id: 235186
@@ -2073,6 +2127,8 @@
   parent_yoksis_id: 122097
   osym_id: 108290142
   abbreviation: MÜZİK-PR-KKTC
+  issues:
+    - Kuruluş tarihi hatalı
 
 - name: Resim-İş Eğitimi Anasanat Dalı
   yoksis_id: 122098
@@ -2790,6 +2846,8 @@
   parent_yoksis_id: 122386
   osym_id:
   abbreviation: FİZİK-YL
+  issues:
+    - Kuruluş tarihi hatalı
 
 - name: Fizik (Yl) (Tezsiz)
   yoksis_id: 234095
@@ -2842,6 +2900,8 @@
   parent_yoksis_id: 122386
   osym_id:
   abbreviation: GIDA-DR-ORDU
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Gıda Mühendisliği (Yl) (Tezli)
   yoksis_id: 211297
@@ -2894,6 +2954,8 @@
   parent_yoksis_id: 122386
   osym_id:
   abbreviation: HARİTA-YL
+  issues:
+    - Kuruluş tarihi hatalı
 
 - name: Hesaplamalı Bilimler (Dr)
   yoksis_id: 255368
@@ -2972,6 +3034,8 @@
   parent_yoksis_id: 122386
   osym_id:
   abbreviation: KİMYA-YL
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Makine Mühendisliği (Dr)
   yoksis_id: 209678
@@ -3286,6 +3350,8 @@
   parent_yoksis_id: 122386
   osym_id:
   abbreviation: UÇAK-YL
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Yenilenebilir Enerji Ve Uygulamaları Anabilim Dalı (Disiplinlerarası)
   yoksis_id: 303063
@@ -5069,6 +5135,8 @@
   parent_yoksis_id: 232413
   osym_id: 108290133
   abbreviation: SERAMİK-PR
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Havacılık Ve Uzay Teknolojileri Uygulama Ve Araştırma Merkezi
   yoksis_id: 233015
@@ -5342,6 +5410,8 @@
   parent_yoksis_id: 169598
   osym_id: 108270959
   abbreviation: HAVZA-MYO-YO-İY-PR-2
+  issues:
+    - Kuruluş tarihi hatalı
 
 - name: İnşaat Bölümü
   yoksis_id: 169596
@@ -5760,6 +5830,8 @@
   parent_yoksis_id: 122204
   osym_id: 108211036
   abbreviation: HARİTA-PR-KKTC
+  issues:
+    - Kuruluş tarihi hatalı
 
 - name: Jeodezi Anabilim Dalı
   yoksis_id: 122206
@@ -6347,6 +6419,8 @@
   parent_yoksis_id: 208604
   osym_id:
   abbreviation: PEYZAJ
+  issues:
+    - Kuruluş tarihi hatalı
 
 - name: Peyzaj Mimarlığı Anabilim Dalı
   yoksis_id: 328482
@@ -6373,6 +6447,8 @@
   parent_yoksis_id: 208604
   osym_id:
   abbreviation: İÇMİMAR
+  issues:
+    - Kuruluş tarihi hatalı
 
 - name: İç Mimarlık Anabilim Dalı
   yoksis_id: 319351
@@ -6841,6 +6917,8 @@
   parent_yoksis_id: 168851
   osym_id: 108250301
   abbreviation: SAMSUN-MYO-OTEL-TURİZM-PR
+  issues:
+    - Kuruluş tarihi hatalı
 
 - name: Turizm Ve Otel İşletmeciliği Pr. (İö)
   yoksis_id: 320498
@@ -6945,6 +7023,8 @@
   parent_yoksis_id: 169841
   osym_id: 108251123
   abbreviation: SAMSUN-MYO-TASARIM-GRAFİK-PR
+  issues:
+    - Kuruluş tarihi hatalı
 
 - name: Teknik Programlar Bölümü
   yoksis_id: 122361
@@ -6971,6 +7051,8 @@
   parent_yoksis_id: 122360
   osym_id:
   abbreviation: SAMSUN-MYO-TEKSTİL
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Çocuk Bakımı Ve Gençlik Hizmetleri Bölümü
   yoksis_id: 215482
@@ -7166,6 +7248,8 @@
   parent_yoksis_id: 122387
   osym_id:
   abbreviation: BESLENME-YL
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Besin Hijyeni Ve Teknolojisi (Dr)
   yoksis_id: 169576
@@ -7712,6 +7796,8 @@
   parent_yoksis_id: 122387
   osym_id:
   abbreviation: VETERİNER-MİKRO-YL
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Mikrobiyoloji Anabilim Dalı (Disiplinlerarası)
   yoksis_id: 280440
@@ -7803,6 +7889,8 @@
   parent_yoksis_id: 122387
   osym_id:
   abbreviation: VETERİNER-PARAZİT-YL
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Patoloji (Dr)
   yoksis_id: 169561
@@ -7959,6 +8047,8 @@
   parent_yoksis_id: 122387
   osym_id:
   abbreviation: SAĞLIKYÖN-YZ-2
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Su Ürünleri Hastalıkları (Yl) (Tezli)
   yoksis_id: 261143
@@ -8284,6 +8374,8 @@
   parent_yoksis_id: 121946
   osym_id:
   abbreviation: SAĞLIK
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Beslenme Ve Diyetetik Bölümü
   yoksis_id: 293578
@@ -8297,6 +8389,8 @@
   parent_yoksis_id: 293577
   osym_id:
   abbreviation: BESLENME
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Beslenme Bilimleri Anabilim Dalı
   yoksis_id: 293587
@@ -8323,6 +8417,8 @@
   parent_yoksis_id: 293578
   osym_id: 108211115
   abbreviation: BESLENME-PR
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Diyetetik Anabilim Dalı
   yoksis_id: 293583
@@ -8401,6 +8497,8 @@
   parent_yoksis_id: 293577
   osym_id:
   abbreviation: EBELİK
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Ebelik Anabilim Dalı
   yoksis_id: 321512
@@ -8427,6 +8525,8 @@
   parent_yoksis_id: 293580
   osym_id: 108211124
   abbreviation: EBELİK-PR
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Hemşirelik Bölümü
   yoksis_id: 293581
@@ -8440,6 +8540,8 @@
   parent_yoksis_id: 293577
   osym_id:
   abbreviation: HEMŞİRELİK
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Cerrahi Hastalıklar Hemşireliği Anabilim Dalı
   yoksis_id: 293595
@@ -8505,6 +8607,8 @@
   parent_yoksis_id: 293581
   osym_id: 108211133
   abbreviation: HEMŞİRELİK-PR
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Hemşirelikte Yönetim Anabilim Dalı
   yoksis_id: 293600
@@ -8609,6 +8713,8 @@
   parent_yoksis_id: 293577
   osym_id:
   abbreviation: SOSYALHİZMET
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Sosyal Hizmet Anabilim Dalı
   yoksis_id: 321514
@@ -8700,6 +8806,8 @@
   parent_yoksis_id: 240437
   osym_id: 108251044
   abbreviation: SAĞLIK-MYO-SBH-YAŞLI-PR
+  issues:
+    - Kuruluş tarihi hatalı
 
 - name: Yaşlı Bakımı Pr. (İö)
   yoksis_id: 240439
@@ -8713,6 +8821,8 @@
   parent_yoksis_id: 240437
   osym_id: 108270898
   abbreviation: SAĞLIK-MYO-SBH-YAŞLI-PR-2
+  issues:
+    - Kuruluş tarihi hatalı
 
 - name: Tıbbi Hizmetler Ve Teknikler Bölümü
   yoksis_id: 169645
@@ -8856,6 +8966,8 @@
   parent_yoksis_id: 169645
   osym_id: 108270977
   abbreviation: SAĞLIK-MYO-THT-TGT-PR-2
+  issues:
+    - Kuruluş tarihi hatalı
 
 - name: Tıbbi Laboratuvar Teknikleri Pr.
   yoksis_id: 244308
@@ -8869,6 +8981,8 @@
   parent_yoksis_id: 169645
   osym_id: 108250831
   abbreviation: SAĞLIK-MYO-THT-TLT-PR
+  issues:
+    - Kuruluş tarihi hatalı
 
 - name: İlk Ve Acil Yardım Pr.
   yoksis_id: 229073
@@ -8988,6 +9102,8 @@
   parent_yoksis_id: 122388
   osym_id:
   abbreviation: DDR-YZ-2
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Endüstri İlişkileri Anabilim Dalı
   yoksis_id: 207834
@@ -9248,6 +9364,8 @@
   parent_yoksis_id: 122388
   osym_id:
   abbreviation: SPORYÖN-DR
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Spor Yöneticiliği (Yl) (Tezli)
   yoksis_id: 281995
@@ -9261,6 +9379,8 @@
   parent_yoksis_id: 122388
   osym_id:
   abbreviation: SPORYÖN-YL
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Siyaset Bilimi Ve Kamu Yönetimi (Yl) (Tezsiz) (Uzaktan Öğretim)
   yoksis_id: 267770
@@ -9274,6 +9394,8 @@
   parent_yoksis_id: 122388
   osym_id:
   abbreviation: SBKY-YZ-UZ
+  issues:
+    - Kuruluş tarihi hatalı
 
 - name: Tarih (Dr)
   yoksis_id: 169484
@@ -11113,6 +11235,7 @@
   abbreviation: TIP-TEMEL-ETİK-AD-M
   issues:
     - Mükerrer Anabilim Dalı adı
+    - Kuruluş tarihi hatalı
 
 - name: Tıp Pr.
   yoksis_id: 228132
@@ -11386,6 +11509,8 @@
   parent_yoksis_id: 169317
   osym_id:
   abbreviation: VETERİNER-KLİNİK-İÇH-AD
+  issues:
+    - Kuruluş tarihi hatalı
 
 - name: Veterinerinerlik Doğum Ve Jinekolojisi Anabilim Dalı
   yoksis_id: 331656
@@ -11438,6 +11563,8 @@
   parent_yoksis_id: 140285
   osym_id:
   abbreviation: VETERİNER-KÖB-CERRAHİ-AD
+  issues:
+    - Kuruluş tarihi hatalı
 
 - name: Veterinerlik Doğum Ve Jinekolojisi Anabilim Dalı
   yoksis_id: 122243
@@ -12313,6 +12440,8 @@
   parent_yoksis_id: 215486
   osym_id: 108251362
   abbreviation: YEŞİLYURT-MYO-ELEKTRO-BİYO-PR
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Elektronik Teknolojisi Pr.
   yoksis_id: 215487
@@ -12456,6 +12585,8 @@
   parent_yoksis_id: 215488
   osym_id: 108270986
   abbreviation: YEŞİLYURT-MYO-KİMYA-TEKNO-PR-2
+  issues:
+    - Kuruluş tarihi hatalı
 
 - name: Makine Ve Metal Teknolojileri Bölümü
   yoksis_id: 202463
@@ -12534,6 +12665,8 @@
   parent_yoksis_id: 215492
   osym_id: 108270738
   abbreviation:  YEŞİLYURT-MYO-MOTOR-OTO-PR-2
+  issues:
+    - Kuruluş tarihi hatalı
 
 - name: Ziraat Fakültesi
   yoksis_id: 122258
@@ -13275,6 +13408,8 @@
   parent_yoksis_id: 237237
   osym_id: 108251186
   abbreviation: TİCARET-MYO-BHS-ÇMH-PR
+  issues:
+    - Kuruluş tarihi hatalı
 
 - name: Çağrı Merkezi Hizmetleri Pr. (İö)
   yoksis_id: 294078
@@ -13405,6 +13540,8 @@
   parent_yoksis_id: 229371
   osym_id: 108270995
   abbreviation: TİCARET-MYO-FİNANS-BANKA-PR-2
+  issues:
+    - Kuruluş tarihi hatalı
 
 - name: Hukuk Bölümü
   yoksis_id: 257433
@@ -14917,6 +15054,8 @@
   parent_yoksis_id: 169371
   osym_id:
   abbreviation: YMİT
+  issues:
+    - Kuruluş tarihi tırnak içinde yazılmamalı
 
 - name: Yeni Medya Ve İletişim Tasarımı Anabilim Dalı
   yoksis_id: 323146
@@ -14943,4 +15082,3 @@
   parent_yoksis_id: 121946
   osym_id:
   abbreviation: İSGMH-AUM
-
