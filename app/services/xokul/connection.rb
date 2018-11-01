@@ -11,7 +11,7 @@ module Xokul
     def self.request(path, params: {})
       response = RestClient.get(
         URI.join(BASE_URL, path).to_s,
-        header: {
+        headers: {
           Authorization: "Bearer #{BEARER_TOKEN}",
           'Content-Type': 'application/json'
         },
