@@ -45,7 +45,7 @@ module RestClient
     def execute(payload = nil)
       klass = "Net::HTTP::#{method.capitalize}".constantize
       request = klass.new url, headers
-      Response.new @http.request(request, payload && payload.to_json)
+      Response.new @http.request(request, payload)
     end
 
     protected

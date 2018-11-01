@@ -15,7 +15,7 @@ module Xokul
           Authorization: "Bearer #{BEARER_TOKEN}",
           'Content-Type': 'application/json'
         },
-        payload: params,
+        payload: params.to_json,
         use_ssl: true,
         verify_mode: OpenSSL::SSL::VERIFY_PEER
       )
