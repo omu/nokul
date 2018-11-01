@@ -18,6 +18,9 @@ require_relative '../config/environment'
 require 'rails/test_help'
 require 'capybara/rails'
 require 'capybara/minitest'
+require 'support'
+
+Tenant.init
 
 module ActiveSupport
   class TestCase
