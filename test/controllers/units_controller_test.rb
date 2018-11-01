@@ -29,7 +29,7 @@ class UnitsControllerTest < ActionDispatch::IntegrationTest
       post units_path params: {
         unit: {
           name: 'Test Unit',
-          yoksis_id: 200,
+          yoksis_id: 200_000,
           founded_at: '1.1.2018',
           duration: 1,
           unit_type_id: unit_types(:faculty).id,
@@ -45,7 +45,7 @@ class UnitsControllerTest < ActionDispatch::IntegrationTest
     unit = Unit.last
 
     assert_equal 'Test Unit', unit.name
-    assert_equal 200, unit.yoksis_id
+    assert_equal 200_000, unit.yoksis_id
     assert_equal 'Fakülte', unit.unit_type.try(:name)
     assert_equal units(:omu), unit.parent
     assert_redirected_to unit_path(unit)
@@ -63,7 +63,7 @@ class UnitsControllerTest < ActionDispatch::IntegrationTest
     patch unit_path(unit), params: {
       unit: {
         name: 'Test Unit Update',
-        yoksis_id: 300,
+        yoksis_id: 300_000,
         founded_at: '1.1.2018',
         duration: 2,
         unit_type_id: unit_types(:research_center).id,
@@ -78,7 +78,7 @@ class UnitsControllerTest < ActionDispatch::IntegrationTest
     unit.reload
 
     assert_equal 'Test Unit Update', unit.name
-    assert_equal 300, unit.yoksis_id
+    assert_equal 300_000, unit.yoksis_id
     assert_equal 'Araştırma ve Uygulama Merkezi', unit.unit_type.try(:name)
     assert_equal units(:cbu), unit.parent
     assert_redirected_to unit_path(unit)
