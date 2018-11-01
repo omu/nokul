@@ -65,6 +65,7 @@ group :test do
   gem 'chromedriver-helper'
   gem 'codacy-coverage', require: false
   gem 'selenium-webdriver'
+  gem 'webmock'
 end
 
 group :development do
