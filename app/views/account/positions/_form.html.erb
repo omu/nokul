@@ -16,7 +16,7 @@
               <%= f.input :duty_id, collection: @user.duties, label_method: :unit_name, required: true %>
             </div>
             <div class='form-group col-sm-4'>
-              <%= f.input :administrative_function_id, collection: AdministrativeFunction.all, required: true %>
+              <%= f.input :administrative_function_id, collection: AdministrativeFunction.order(:name), required: true %>
             </div>
             <div class='form-group col-sm-4'>
               <%= f.input :start_date, required: true %>

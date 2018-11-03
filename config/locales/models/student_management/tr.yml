@@ -62,7 +62,7 @@ tr:
           turkish: Türk Vatandaşı
         placement_types:
           additional_score: Ek Puanlı
-          general: Genel
+          general_score: Genel
   simple_form:
     labels:
       prospective_student:
