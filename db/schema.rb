@@ -201,7 +201,6 @@ ActiveRecord::Schema.define(version: 2018_10_28_080308) do
   create_table "committee_meetings", force: :cascade do |t|
     t.integer "meeting_no", null: false
     t.date "meeting_date", null: false
-    t.integer "year", null: false
     t.bigint "unit_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -595,7 +594,7 @@ ActiveRecord::Schema.define(version: 2018_10_28_080308) do
     t.datetime "last_sign_in_at"
     t.inet "current_sign_in_ip"
     t.inet "last_sign_in_ip"
-    t.datetime "password_changed_at", default: -> { "now()" }, null: false
+    t.datetime "password_changed_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.string "slug", limit: 255
     t.string "preferred_language", limit: 2, default: "tr"
     t.integer "articles_count", default: 0, null: false

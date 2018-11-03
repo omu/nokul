@@ -13,7 +13,8 @@
               <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
             </div>
             <div class='form-group col-sm-4'>
-              <%= f.input :title_id, collection: Title.all, required: true %>
+              <%= f.input :title_id, collection: Title.order(:name), required: true,
+                          label_method: lambda { |title| title.name + ' - ' + title.branch } %>
             </div>
             <div class='form-group col-sm-12'>
               <%= f.input :active %>
