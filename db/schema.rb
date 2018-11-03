@@ -201,6 +201,7 @@ ActiveRecord::Schema.define(version: 2018_10_28_080308) do
   create_table "committee_meetings", force: :cascade do |t|
     t.integer "meeting_no", null: false
     t.date "meeting_date", null: false
+    t.integer "year", null: false
     t.bigint "unit_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
