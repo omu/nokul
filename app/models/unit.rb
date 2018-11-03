@@ -46,16 +46,17 @@ class Unit < ApplicationRecord
   before_save { self.name = name.capitalize_all }
 
   # scopes
-  scope :active,       -> { where(unit_status: UnitStatus.active) }
-  scope :committees,   -> { where(unit_type: UnitType.committee) }
-  scope :departments,  -> { where(unit_type: UnitType.department) }
-  scope :faculties,    -> { where(unit_type: UnitType.faculty) }
-  scope :programs,     -> { where(unit_type: UnitType.program) }
-  scope :universities, -> { where(unit_type: UnitType.university) }
-  scope :majors,       -> { where(unit_type: UnitType.major) }
-  scope :institutes,   -> { where(unit_type: UnitType.institute) }
-  scope :rectorships,  -> { where(unit_type: UnitType.rectorship) }
-  scope :without_programs, -> { where.not(unit_type: UnitType.program) }
+  scope :active,            -> { where(unit_status: UnitStatus.active) }
+  scope :partially_passive, -> { where(unit_status: UnitStatus.partially_passive) }
+  scope :committees,        -> { where(unit_type: UnitType.committee) }
+  scope :departments,       -> { where(unit_type: UnitType.department) }
+  scope :faculties,         -> { where(unit_type: UnitType.faculty) }
+  scope :programs,          -> { where(unit_type: UnitType.program) }
+  scope :universities,      -> { where(unit_type: UnitType.university) }
+  scope :majors,            -> { where(unit_type: UnitType.major) }
+  scope :institutes,        -> { where(unit_type: UnitType.institute) }
+  scope :rectorships,       -> { where(unit_type: UnitType.rectorship) }
+  scope :without_programs,  -> { where.not(unit_type: UnitType.program) }
 
   scope :coursable, -> {
     departments
