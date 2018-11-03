@@ -93,7 +93,7 @@ module Osym
     end
 
     def find_language(language)
-      Language.find_by(name: language.capitalize_all) unless language.eql?('null')
+      Language.find_by(name: language.titleize_tr) unless language.eql?('null')
     end
 
     def find_obs_registered_program(program)

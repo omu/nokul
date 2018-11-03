@@ -19,5 +19,5 @@ class Address < ApplicationRecord
   delegate :id_number, to: :user
 
   # callbacks
-  before_save { self.full_address = full_address.capitalize_all }
+  before_save { self.full_address = full_address.titleize_tr }
 end

@@ -18,7 +18,7 @@ module Yoksis
         user.certifications.create(
           type: certification[:type_id],
           scope: certification[:scope_id],
-          title: certification[:title_name].try(:capitalize_all),
+          title: certification[:title_name].try(:titleize_tr),
           status: certification[:activity_id],
           **certification.slice(
             :yoksis_id, :name, :content, :location, :start_date, :end_date, :last_update,
