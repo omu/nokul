@@ -4,6 +4,6 @@ module ReferenceCallbacks
   extend ActiveSupport::Concern
 
   included do
-    before_save { self.name = name.capitalize_all }
+    before_save { self.name = name.titleize_tr }
   end
 end

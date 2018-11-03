@@ -12,5 +12,5 @@ class AgendaType < ApplicationRecord
   validates :name, presence: true
 
   # callbacks
-  before_save { self.name = name.capitalize_all }
+  before_save { self.name = name.titleize_tr }
 end

@@ -19,7 +19,7 @@ class Language < ApplicationRecord
 
   # callbacks
   before_save do
-    self.name = name.capitalize_all
+    self.name = name.titleize_tr
     self.iso  = iso.upcase_tr
   end
 end

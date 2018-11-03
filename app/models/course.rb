@@ -30,7 +30,7 @@ class Course < ApplicationRecord
 
   # callbacks
   before_validation do
-    self.name = name.capitalize_all if name
+    self.name = name.titleize_tr if name
     self.credit = calculate_credit
   end
 

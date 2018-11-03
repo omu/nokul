@@ -43,7 +43,7 @@ class Unit < ApplicationRecord
   validates :duration, numericality: { only_integer: true }, allow_blank: true, inclusion: 1..8
 
   # callbacks
-  before_save { self.name = name.capitalize_all }
+  before_save { self.name = name.titleize_tr }
 
   # scopes
   scope :active,       -> { where(unit_status: UnitStatus.active) }
