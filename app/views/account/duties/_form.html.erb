@@ -16,7 +16,10 @@
               <%= f.input :employee_id, collection: @user.employees, label_method: :title_name, required: true %>
             </div>
             <div class='form-group col-sm-4'>
-              <%= f.input :unit_id, collection: Unit.all, required: true %>
+              <%= f.input :unit_id,
+                  collection: Unit.active.without_programs.order(:name),
+                  required: true,
+                  label_method: lambda { |unit| "#{unit.name} (#{unit.parent.try(:name)})" } %>
             </div>
             <div class='form-group col-sm-4'>
               <%= f.input :start_date, required: true %>
