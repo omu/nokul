@@ -22,8 +22,17 @@ class String
     gsub(RE) { |char| CHARS[char] }
   end
 
-  def capitalize_all
-    split.map { |word| word.capitalize(:turkic) }.join(' ')
+  TURKISH_CONJUNCTIONS = %w[ama ancak fakat ve veya yani].freeze
+
+  def titleize_tr
+    split.map do |word|
+      downcased = word.downcase :turkic
+      next downcased if downcased.in?(TURKISH_CONJUNCTIONS)
+
+      word.capitalize(:turkic).gsub(/\b(?<!\w['’`])[a-zığüşöç]/) do |match|
+        match.capitalize :turkic
+      end
+    end.join ' '
   end
 
   def upcase_tr
