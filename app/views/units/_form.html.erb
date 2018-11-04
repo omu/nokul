@@ -33,7 +33,7 @@
               <%= f.association :unit_instruction_type %>
             </div>
             <div class='form-group col-sm-6'>
-              <%= f.input :duration,collection: 1..8 %>
+              <%= f.input :duration, collection: 1..8 %>
             </div>
             <div class='form-group col-sm-6'>
               <%= f.association :unit_type %>
@@ -43,7 +43,11 @@
               <%= f.association :district, collection: City.includes(:districts).order(:name), as: :grouped_select, group_method: :districts, group_label_method: :name, input_html: { id: 'district_list' } %>
             </div>
             <div class='form-group col-sm-6'>
-              <%= f.input :parent_id, as: :select, collection: Unit.all.order('name ASC'), input_html: { id: 'parent_unit_list' } %>
+              <%= f.input :parent_id, as: :select,
+                          collection: Unit.partially_passive.or(Unit.active).order(:name),
+                          input_html: { id: 'parent_unit_list' },
+                          label_method: lambda {|unit| "#{unit.name} (#{unit.parent.try(:name)})"}
+                          %>
             </div>
             <div class='form-group col-sm-12'>
               <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>

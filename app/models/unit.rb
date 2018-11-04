@@ -37,8 +37,8 @@ class Unit < ApplicationRecord
   has_many :prospective_students, dependent: :destroy
 
   # validations
-  validates :yoksis_id, uniqueness: true, allow_blank: true, numericality: { only_integer: true }
-  validates :detsis_id, uniqueness: true, allow_blank: true, numericality: { only_integer: true }
+  validates :yoksis_id, uniqueness: true, allow_blank: true, numericality: { only_integer: true }, length: { is: 6 }
+  validates :detsis_id, uniqueness: true, allow_blank: true, numericality: { only_integer: true }, length: { is: 8 }
   validates :name, presence: true, uniqueness: { scope: %i[ancestry unit_status] }
   validates :duration, numericality: { only_integer: true }, allow_blank: true, inclusion: 1..8
 
@@ -46,16 +46,17 @@ class Unit < ApplicationRecord
   before_save { self.name = name.capitalize_all }
 
   # scopes
-  scope :active,       -> { where(unit_status: UnitStatus.active) }
-  scope :committees,   -> { where(unit_type: UnitType.committee) }
-  scope :departments,  -> { where(unit_type: UnitType.department) }
-  scope :faculties,    -> { where(unit_type: UnitType.faculty) }
-  scope :programs,     -> { where(unit_type: UnitType.program) }
-  scope :universities, -> { where(unit_type: UnitType.university) }
-  scope :majors,       -> { where(unit_type: UnitType.major) }
-  scope :institutes,   -> { where(unit_type: UnitType.institute) }
-  scope :rectorships,  -> { where(unit_type: UnitType.rectorship) }
-  scope :without_programs, -> { where.not(unit_type: UnitType.program) }
+  scope :active,            -> { where(unit_status: UnitStatus.active) }
+  scope :partially_passive, -> { where(unit_status: UnitStatus.partially_passive) }
+  scope :committees,        -> { where(unit_type: UnitType.committee) }
+  scope :departments,       -> { where(unit_type: UnitType.department) }
+  scope :faculties,         -> { where(unit_type: UnitType.faculty) }
+  scope :programs,          -> { where(unit_type: UnitType.program) }
+  scope :universities,      -> { where(unit_type: UnitType.university) }
+  scope :majors,            -> { where(unit_type: UnitType.major) }
+  scope :institutes,        -> { where(unit_type: UnitType.institute) }
+  scope :rectorships,       -> { where(unit_type: UnitType.rectorship) }
+  scope :without_programs,  -> { where.not(unit_type: UnitType.program) }
 
   scope :coursable, -> {
     departments

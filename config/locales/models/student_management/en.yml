@@ -62,7 +62,7 @@ en:
           turkish: Turkish Citizen
         placement_types:
           additional_score: Additional Scored
-          general: General
+          general_score: General
   simple_form:
     labels:
       prospective_student:

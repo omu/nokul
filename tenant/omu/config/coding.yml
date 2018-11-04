@@ -37,3 +37,9 @@ reservations:
   - key: yoksis_id
     value: 168861
     reservation: 203
+  - key: yoksis_id
+    value: 168652
+    reservation: 307
+  - key: yoksis_id
+    value: 244883
+    reservation: 607
