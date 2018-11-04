@@ -708,6 +708,8 @@
   related_yoksis_id: 169985
   district_id: Vezirköprü
   abbreviation: VEZİRKÖPRÜ-MYO-MALZEME-BB
+  issues:
+    - İlişkili bölüm ve başkanlık isimleri farklı
 
 - name: Vezirköprü Meslek Yüksekokulu Sekreterliği
   detsis_id: 48974914
@@ -890,6 +892,8 @@
   related_yoksis_id: 122392
   district_id: Atakum
   abbreviation: ÇS-AUM-MD
+  issues:
+    - İlişkili merkez ve müdürlük isimleri farklı
 
 - name: Çocuk Eğitimi Uygulama Ve Araştırma Merkezi Müdürlüğü
   detsis_id: 87320973
@@ -1924,6 +1928,8 @@
   related_yoksis_id: 122391
   district_id: Atakum
   abbreviation: GE-AUM-MD
+  issues:
+    - Bağlı bulunduğu merkez ve müdürlük isimleri farklı
 
 - name: Güzel Sanatlar Bölüm Başkanlığı
   detsis_id: 54143312
@@ -3716,6 +3722,8 @@
   related_yoksis_id: 122238
   district_id: Atakum
   abbreviation: VETERİNER-KÖB-MİKRO-ADB
+  issues:
+    - Anabilim dalı veterinerlikte, başkanlık enstitüde
 
 - name: Veterinerlik Parazitolojisi Anabilim Dalı Başkanlığı
   detsis_id: 19311194
@@ -5948,7 +5956,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-BTB-ADB
   issues:
-    - Tıp'ta aynı isimli anabilim dalı bşk
+    - Tıp'ta aynı isimli anabilim dalı başkanlığı
 
 - name: Basın Yayın Ve Halkla İlişkiler Birimi
   detsis_id: 45563598
@@ -6202,7 +6210,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-VBESİN-ADB
   issues:
-    - Veterinerlikte aynı isimli anabilim dalı bşk
+    - Veterinerlikte aynı isimli anabilim dalı başkanlığı
 
 - name: Yayın, Kütüphane Ve Dokümantasyon Birimi
   detsis_id: 49972110
@@ -6875,8 +6883,6 @@
   related_yoksis_id:
   district_id:
   abbreviation: BAFRA-MYO-SEK
-  issues:
-    - tamamen mükerrer, biri silinebilir
 
 - name: Personel İşleri Birimi
   detsis_id: 63263995
@@ -8061,7 +8067,7 @@
   district_id: Atakum
   abbreviation: DİŞ-KLİNİK-ORTO-ADB
   issues:
-    - Aynı isimli ABD sağlık-bilim'de
+    - Aynı isimli anabilim dalı SAĞLIK-BİLİM'de
 
 - name: Bilgi İşlem Birimi
   detsis_id: 86248111
