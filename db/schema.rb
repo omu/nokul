@@ -251,9 +251,18 @@ ActiveRecord::Schema.define(version: 2018_10_28_080308) do
     t.index ["unit_id"], name: "index_courses_on_unit_id"
   end
 
+  create_table "curriculum_semesters", force: :cascade do |t|
+    t.string "name"
+    t.integer "sequence"
+    t.bigint "curriculum_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["curriculum_id"], name: "index_curriculum_semesters_on_curriculum_id"
+  end
+
   create_table "curriculums", force: :cascade do |t|
     t.string "name", limit: 255
-    t.integer "number_of_semesters"
+    t.integer "semesters_count", default: 0
     t.integer "status", null: false
     t.bigint "unit_id"
     t.index ["unit_id"], name: "index_curriculums_on_unit_id"
@@ -611,4 +620,5 @@ ActiveRecord::Schema.define(version: 2018_10_28_080308) do
   add_foreign_key "calendar_title_types", "calendar_titles", column: "title_id"
   add_foreign_key "calendar_title_types", "calendar_types", column: "type_id"
   add_foreign_key "courses", "languages"
+  add_foreign_key "curriculum_semesters", "curriculums"
 end

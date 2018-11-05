@@ -24,7 +24,7 @@ en:
         unit: Unit
       curriculum: &curriculum_attributes
         name: Curriculum Name
-        number_of_semesters: Number of Semesters
+        semesters_count: Number of Semesters
         programs: Programs
         status: Status
         unit: Unit

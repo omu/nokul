@@ -14,7 +14,7 @@
             <tr>
               <th><%= t('.name') %></th>
               <th><%= t('.unit') %></th>
-              <th><%= t('.number_of_semesters') %></th>
+              <th><%= t('.semesters_count') %></th>
               <th><%= t('.status') %></th>
               <th><%= t('actions') %></th>
             </tr>
@@ -24,7 +24,7 @@
               <tr class="<%= curriculum.active? ? '' : 'table-warning' %>">
                 <td><%= link_to curriculum.name, curriculum %></td>
                 <td><%= curriculum.unit.try(:name) %></td>
-                <td><%= curriculum.number_of_semesters %></td>
+                <td><%= curriculum.semesters_count %></td>
                 <td><%= enum_t(curriculum, :status) %></td>
                 <td>
                   <%= link_to_show curriculum %>

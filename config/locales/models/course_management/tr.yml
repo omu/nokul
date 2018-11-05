@@ -24,7 +24,7 @@ tr:
         unit: Birim
       curriculum: &curriculum_attributes
         name: Müfredat Adı
-        number_of_semesters: Dönem Sayısı
+        semesters_count: Dönem Sayısı
         programs: Programlar
         status: Durumu
         unit: Birim

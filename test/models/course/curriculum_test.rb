@@ -16,10 +16,14 @@ class CurriculumTest < ActiveSupport::TestCase
     assert @curriculum.programs
   end
 
+  test 'curriculum can communicate with semesters' do
+    assert @curriculum.semesters
+  end
+
   # validations: presence
   %i[
     name
-    number_of_semesters
+    semesters_count
     status
     unit
   ].each do |property|
@@ -42,10 +46,10 @@ class CurriculumTest < ActiveSupport::TestCase
   end
 
   # validations: numericality
-  test 'numericality validations for number_of_semesters of a curriculum' do
-    @curriculum.number_of_semesters = 0
+  test 'numericality validations for semesters_count of a curriculum' do
+    @curriculum.semesters_count = -1
     assert_not @curriculum.valid?
-    assert_not_empty @curriculum.errors[:number_of_semesters]
+    assert_not_empty @curriculum.errors[:semesters_count]
   end
 
   # enums

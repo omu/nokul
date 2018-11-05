@@ -5,8 +5,6 @@ class Curriculum < ApplicationRecord
   include PgSearch
   include DynamicSearch
 
-  MAX_NUMBER_OF_SEMESTERS = 12
-
   pg_search_scope(
     :search,
     against: %i[name],
@@ -20,13 +18,16 @@ class Curriculum < ApplicationRecord
   belongs_to :unit
   has_many :unit_curriculums, dependent: :destroy
   has_many :programs, through: :unit_curriculums, source: :unit
+  has_many :semesters, class_name: 'CurriculumSemester', dependent: :destroy
+
+  # nested models
+  accepts_nested_attributes_for :semesters, reject_if: :all_blank, allow_destroy: true
 
   # validations
   validates :name, presence: true, uniqueness: { scope: :unit_id }
-  validates :number_of_semesters, numericality: {
-    greater_than: 0, less_than_or_equal_to: MAX_NUMBER_OF_SEMESTERS
-  }
+  validates :semesters_count, numericality: { greater_than_or_equal_to: 0 }
   validates :status, presence: true
+  validates_associated :semesters
 
   # enumerations
   enum status: { passive: 0, active: 1 }
