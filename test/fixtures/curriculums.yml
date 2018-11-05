@@ -1,11 +1,14 @@
 one:
   name: Test Müfredatı 1
   unit: omu
-  number_of_semesters: 8
   status: active
 
 two:
   name: Test Müfredatı 2
   unit: omu
-  number_of_semesters: 6
+  status: active
+
+three:
+  name: Test Müfredatı 3
+  unit: omu
   status: active

@@ -31,7 +31,7 @@ module CourseManagement
       assert_difference('Curriculum.count') do
         post index_path, params: {
           curriculum: {
-            name: 'Test Create Curriculum', unit_id: @unit.id, number_of_semesters: 4, status: :active
+            name: 'Test Create Curriculum', unit_id: @unit.id, status: :active
           }
         }
       end
@@ -39,7 +39,6 @@ module CourseManagement
       curriculum = Curriculum.last
 
       assert_equal 'Test Create Curriculum', curriculum.name
-      assert_equal 4, curriculum.number_of_semesters
       assert curriculum.active?
       assert_redirected_to index_path
       assert_equal translate('.create.success'), flash[:notice]
@@ -55,14 +54,13 @@ module CourseManagement
       curriculum = Curriculum.last
       patch curriculum_path(curriculum), params: {
         curriculum: {
-          name: 'Test Update Curriculum', number_of_semesters: 4, status: :passive
+          name: 'Test Update Curriculum', status: :passive
         }
       }
 
       curriculum.reload
 
       assert_equal 'Test Update Curriculum', curriculum.name
-      assert_equal 4, curriculum.number_of_semesters
       assert curriculum.passive?
       assert_redirected_to index_path
       assert_equal translate('.update.success'), flash[:notice]

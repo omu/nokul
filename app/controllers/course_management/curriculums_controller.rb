@@ -46,7 +46,10 @@ module CourseManagement
     end
 
     def curriculum_params
-      params.require(:curriculum).permit(:name, :unit_id, :number_of_semesters, :status, program_ids: [])
+      params.require(:curriculum).permit(
+        :name, :unit_id, :status, program_ids: [],
+                                  semesters_attributes: %i[id name sequence _destroy]
+      )
     end
   end
 end

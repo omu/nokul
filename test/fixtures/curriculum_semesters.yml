@@ -1,0 +1,14 @@
+one:
+  name: First Semester
+  sequence: 1
+  curriculum: one
+
+two:
+  name: Second Semester
+  sequence: 1
+  curriculum: one
+
+three:
+  name: First Semester
+  sequence: 1
+  curriculum: two
