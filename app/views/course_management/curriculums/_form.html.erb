@@ -25,13 +25,13 @@
             </div>
           </div>
 
-          <h3>Semesters</h3>
-          <div id='semesters'>
+          <h3><%= t('.semesters') %></h3>
+          <div id='semesters' class='mb-2'>
             <%= f.simple_fields_for :semesters do |semester| %>
               <%= render 'semester_fields', f: semester %>
             <% end %>
             <div class='links'>
-              <%= link_to_add_association 'add semesters', f, :semesters %>
+              <%= link_to_add_association f, :semesters, class: 'btn btn-danger btn-sm' %>
             </div>
           </div>
 

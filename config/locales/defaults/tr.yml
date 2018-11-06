@@ -20,3 +20,8 @@ tr:
   smart_search: Akıllı Arama
   updated_at: Güncellenme Tarihi
   'yes': Evet
+
+  cocoon:
+    defaults:
+      add: 'Ekle'
+      remove: 'Sil'
