@@ -3939,6 +3939,8 @@
   parent_yoksis_id: 122017
   osym_id:
   abbreviation: FİZİK-KATI-AD
+  issues:
+    - "Katı Hal" olarak yazılmalı
 
 - name: Nükleer Fizik Anabilim Dalı
   yoksis_id: 122021
@@ -7419,6 +7421,8 @@
   parent_yoksis_id: 122387
   osym_id:
   abbreviation: VETERİNER-JİNEKOLOJİ-YL
+  issues:
+    - s/Vinekoloji/Jinekoloji
 
 - name: Dölerme Ve Suni Tohumlama (Dr)
   yoksis_id: 169574
@@ -10202,6 +10206,8 @@
   parent_yoksis_id: 121959
   osym_id:
   abbreviation: TIP-CERRAHİ-ÜROLOJİ-ÇOCUK-BD
+  issues:
+    - Çocuk Ürolojisi Bilim Dalı ile benzer, mükerrerlik kontrol edilmeli
 
 - name: İlk Ve Acil Yardım Anabilim Dalı
   yoksis_id: 121962
@@ -10776,6 +10782,8 @@
   parent_yoksis_id: 121965
   osym_id:
   abbreviation: TIP-DAHİLİ-ÇSH-META-BD
+  issues:
+    - İsimde kısaltma yapılmamalı
 
 - name: Çocuk Nefrolojisi Bilim Dalı
   yoksis_id: 169243
@@ -11232,7 +11240,7 @@
   unit_type_id: Anabilim Dalı
   parent_yoksis_id: 121985
   osym_id:
-  abbreviation: TIP-TEMEL-ETİK-AD-M
+  abbreviation: TIP-TEMEL-ETİK-AD-DİĞER
   issues:
     - Mükerrer Anabilim Dalı adı
     - Kuruluş tarihi hatalı
@@ -11524,6 +11532,9 @@
   parent_yoksis_id: 169317
   osym_id:
   abbreviation: VETERİNER-KLİNİK-JİNEKOLOJİ-AD
+  issues:
+    - "Veterinerlik" ismi düzeltilmeli
+    - VETERİNER-KÖB ve VETERİNER-KLİNİK altında aynı isimli Anabilim Dalı
 
 - name: Klinik Öncesi Bilimler Bölümü
   yoksis_id: 140285
@@ -12992,6 +13003,8 @@
   parent_yoksis_id: 122258
   osym_id:
   abbreviation: TARIMAK
+  issues:
+    - İsim "Mühendisliği" olarak düzeltimeli
 
 - name: Tarım Makineleri Anabilim Dalı
   yoksis_id: 122280
@@ -13174,6 +13187,8 @@
   parent_yoksis_id: 122267
   osym_id:
   abbreviation: TARLABİTKİ-TAHIL-AD
+  issues:
+    - İsimdeki "Yemeklik" yazımı hatalı
 
 - name: Tarla Bitkileri Anabilim Dalı
   yoksis_id: 122268
@@ -13645,7 +13660,9 @@
   unit_type_id: Bölüm
   parent_yoksis_id: 293682
   osym_id:
-  abbreviation: TİCARET-MYO-BBY
+  abbreviation: İNSAN-BBY
+  issues:
+    - Üst birimi olan Çarşamba İnsan Ve Toplum Bilimleri Fakültesi pasif görünüyor
 
 - name: Bilgi Ve Belge Yönetimi Anabilim Dalı
   yoksis_id: 334067
@@ -13658,7 +13675,7 @@
   unit_type_id: Anabilim Dalı
   parent_yoksis_id: 334066
   osym_id:
-  abbreviation: TİCARET-MYO-BBY-AD
+  abbreviation: İNSAN-BBY-AD
 
 - name: Çevre Sorunları Uygulama Ve Araştırma Merkezi
   yoksis_id: 122392
@@ -14491,6 +14508,8 @@
   parent_yoksis_id: 122164
   osym_id:
   abbreviation: TİB-TASAVVUF-ST-BD
+  issues:
+    - TİB-KELAM ve TİB-TASAVVUF altında aynı isimli ABD
 
 - name: Tasavvuf Tarihi Bilim Dalı
   yoksis_id: 168728
@@ -14516,7 +14535,7 @@
   unit_type_id: Anabilim Dalı
   parent_yoksis_id: 122158
   osym_id:
-  abbreviation: TİB-TESFİR-AD
+  abbreviation: TİB-TEFSİR-AD
 
 - name: Kıraat Bilim Dalı
   yoksis_id: 168723
@@ -14529,7 +14548,7 @@
   unit_type_id: Bilim Dalı
   parent_yoksis_id: 122161
   osym_id:
-  abbreviation: TİB-TESFİR-KIRAAT-BD
+  abbreviation: TİB-TEFSİR-KIRAAT-BD
 
 - name: Tefsir Bilim Dalı
   yoksis_id: 168724
@@ -14542,7 +14561,7 @@
   unit_type_id: Bilim Dalı
   parent_yoksis_id: 122161
   osym_id:
-  abbreviation: TİB-TESFİR-BD
+  abbreviation: TİB-TEFSİR-BD
 
 - name: Tefsir Usulü Ve Tarihi Bilim Dalı
   yoksis_id: 168725
@@ -14555,7 +14574,7 @@
   unit_type_id: Bilim Dalı
   parent_yoksis_id: 122161
   osym_id:
-  abbreviation: TİB-TESFİR-TUT-BD
+  abbreviation: TİB-TEFSİR-TUT-BD
 
 - name: İslam Hukuku Anabilim Dalı
   yoksis_id: 122162
@@ -14726,7 +14745,7 @@
   unit_type_id: Bölüm
   parent_yoksis_id: 122157
   osym_id:
-  abbreviation: İDKABE-M
+  abbreviation: İDKABE-DİĞER
   issues:
     - Mükerrer bölüm adı
 
@@ -15028,6 +15047,8 @@
   parent_yoksis_id: 204805
   osym_id:
   abbreviation: RST-AD
+  issues:
+    - "Radyo, Sinema Ve Televizyon" olarak düzeltilmeli
 
 - name: Radyo, Televizyon Ve Sinema Pr.
   yoksis_id: 294037
@@ -15041,6 +15062,8 @@
   parent_yoksis_id: 204805
   osym_id: 108211081
   abbreviation: RST-PR
+  issues:
+    - "Radyo, Sinema Ve Televizyon" olarak düzeltilmeli
 
 - name: Yeni Medya Ve İletişim Tasarımı Bölümü
   yoksis_id: 282786
