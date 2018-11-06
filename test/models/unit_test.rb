@@ -58,7 +58,7 @@ class UnitTest < ActiveSupport::TestCase
   # callbacks
   test 'callbacks must titlecase the name for a unit' do
     unit = units(:omu).dup
-    unit.update!(yoksis_id: 1234, name: 'wonderunit department')
+    unit.update!(yoksis_id: 123_459, name: 'wonderunit department')
     assert_equal unit.name, 'Wonderunit Department'
   end
 

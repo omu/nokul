@@ -9,7 +9,7 @@
           <tbody>
             <tr>
               <td><%= t('.student_entrance_type') %></td>
-              <td><%= @prospective_student.student_entrance_type.name %></td>
+              <td><%= @prospective_student.student_entrance_type.try(:name) %></td>
             </tr>
             <tr>
               <td><%= t('.unit') %></td>
