@@ -38,7 +38,7 @@ class ProspectiveStudent < ApplicationRecord
   # enumerations
   enum gender: { male: 1, female: 2 }
   enum nationality: { turkish: 1, kktc: 2, foreign: 3 }
-  enum placement_type: { general: 1, additional_score: 2 }
+  enum placement_type: { general_score: 1, additional_score: 2 }
   enum additional_score: { handicapped: 1 }
 
   # custom methods
