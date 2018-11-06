@@ -118,6 +118,8 @@ en:
         success: Curriculum successfully destroyed.
       edit:
         form_title: Update the Curriculum
+      form:
+        semesters: 'Semesters'
       index:
         <<: *curriculum_attributes
         add_new_curriculum: Add a New Curriculum

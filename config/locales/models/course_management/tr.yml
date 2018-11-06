@@ -118,6 +118,8 @@ tr:
         success: Müfredat başarıyla silindi.
       edit:
         form_title: Müfredatı Düzenle
+      form:
+        semesters: 'Yarıyıllar'
       index:
         <<: *curriculum_attributes
         add_new_curriculum: Yeni Müfredat Ekle
