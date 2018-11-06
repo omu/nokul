@@ -19,6 +19,9 @@ require 'rails/test_help'
 require 'capybara/rails'
 require 'capybara/minitest'
 
+require 'webmock/minitest'
+WebMock.allow_net_connect!
+
 module ActiveSupport
   class TestCase
     include AbstractController::Translation
