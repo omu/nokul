@@ -1,23 +1,41 @@
 fall_2017_2018:
   year: 2017 - 2018
   term: fall
+  start_of_term: Time.new(2017)
+  end_of_term: Time.new(2017) + 5.month
+  active: false
 
 spring_2017_2018:
   year: 2017 - 2018
   term: spring
+  start_of_term: Time.new(2017) + 6.month
+  end_of_term: Time.new(2018)
+  active: false
 
 summer_2017_2018:
   year: 2017 - 2018
   term: summer
+  start_of_term: Time.new(2018) + 1.month
+  end_of_term: Time.new(2018) + 3.month
+  active: false
 
 fall_2018_2019:
   year: 2018 - 2019
   term: fall
+  start_of_term: Time.zone.now
+  end_of_term: Time.zone.now + 5.month
+  active: active
 
 spring_2018_2019:
   year: 2018 - 2019
   term: spring
+  start_of_term: Time.zone.now + 6.month
+  end_of_term: Time.zone.now + 5.month
+  active: false
 
 summer_2018_2019:
   year: 2018 - 2019
   term: summer
+  start_of_term: Time.zone.now + 6.month
+  end_of_term: Time.zone.now + 8.month
+  active: false

@@ -9,6 +9,9 @@ en:
         senate_decision_date: Senate Decision Date
         senate_decision_no: Senate Decision No
       academic_term: &academic_term_attributes
+        active: Active Status
+        end_of_term: End of Term
+        start_of_term: Start of Term
         term: Term
         year: Year
       calendar_event:
