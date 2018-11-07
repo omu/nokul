@@ -32,6 +32,9 @@ tr:
       curriculum_semester:
         name: Yarıyıl Adı
         sequence: Sıra
+      curriculum_semester_course: &curriculum_semester_course_attributes
+        course: Ders
+        ects: AKTS
     enums:
       course:
         program_types:
@@ -51,6 +54,7 @@ tr:
       course_group_type: Ders Grup Türü
       course_unit_group: Ders Grubu
       curriculum: Müfreadat
+      curriculum_semester_course: Müfreadat Yarıyıl Ders
   course_management:
     course_group_types:
       create:
@@ -140,9 +144,23 @@ tr:
         <<: *curriculum_attributes
       update:
         success: Müfredat başarıyla güncellendi.
+    curriculum_semester_courses:
+      create:
+        success: Müfredat yarıyıl dersi başarıyla oluşturuldu.
+      destroy:
+        error: Müfredat yarıyıl dersi silinirken bir hata oluştu.
+        success: Müfredat yarıyıl dersi başarıyla silindi.
+      edit:
+        form_title: Müfredat Yarıyıl Dersi Düzenle
+      new:
+        form_title: Müfredat Yarıyıl Dersi Oluştur
+      update:
+        success: Müfredat yarıyıl dersi başarıyla güncellendi.
   simple_form:
     labels:
       course:
         <<: *course_attributes
       curriculum:
         <<: *curriculum_attributes
+      curriculum_semester_course:
+        <<: *curriculum_semester_course_attributes
