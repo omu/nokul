@@ -8,16 +8,15 @@ class CurriculumTest < ActiveSupport::TestCase
   end
 
   # relations
-  test 'curriculum can communicate with unit' do
-    assert @curriculum.unit
-  end
-
-  test 'curriculum can communicate with programs' do
-    assert @curriculum.programs
-  end
-
-  test 'curriculum can communicate with semesters' do
-    assert @curriculum.semesters
+  %i[
+    unit
+    programs
+    semesters
+    courses
+  ].each do |relation|
+    test "curriculum can communicate with #{relation}" do
+      assert @curriculum.send(relation)
+    end
   end
 
   # validations: presence
