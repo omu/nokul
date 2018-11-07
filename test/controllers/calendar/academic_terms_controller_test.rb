@@ -23,7 +23,9 @@ module Calendar
     test 'should create academic term' do
       assert_difference('AcademicTerm.count') do
         post academic_terms_path, params: {
-          academic_term: { year: '2019 - 2020', term: :spring }
+          academic_term: { year: '2019 - 2020', term: :spring,
+                           start_of_term: Time.new(2019),
+                           end_of_term: Time.new(2019) + 5.month }
         }
       end
 
@@ -45,7 +47,9 @@ module Calendar
       academic_term = AcademicTerm.last
       patch academic_term_path(academic_term),
             params: {
-              academic_term: { year: '2020 - 2021', term: :summer }
+              academic_term: { year: '2020 - 2021', term: :summer,
+                               start_of_term: Time.new(2019),
+                               end_of_term: Time.new(2019) + 5.month }
             }
 
       academic_term.reload
