@@ -24,8 +24,8 @@ module Calendar
       assert_difference('AcademicTerm.count') do
         post academic_terms_path, params: {
           academic_term: { year: '2019 - 2020', term: :spring,
-                           start_of_term: Time.new(2019),
-                           end_of_term: Time.new(2019) + 5.month }
+                           start_of_term: '2019-01-15 08:00:00'.in_time_zone,
+                           end_of_term: '2019-06-18 17:00:00'.in_time_zone }
         }
       end
 
@@ -33,6 +33,9 @@ module Calendar
 
       assert_equal '2019 - 2020', academic_term.year
       assert_equal 'spring', academic_term.term
+      assert_equal '2019-01-15 08:00:00'.in_time_zone, academic_term.start_of_term
+      assert_equal '2019-06-18 17:00:00'.in_time_zone, academic_term.end_of_term
+      assert_equal false, academic_term.active
       assert_redirected_to academic_terms_path
       assert_equal translate('.create.success'), flash[:notice]
     end
@@ -47,9 +50,7 @@ module Calendar
       academic_term = AcademicTerm.last
       patch academic_term_path(academic_term),
             params: {
-              academic_term: { year: '2020 - 2021', term: :summer,
-                               start_of_term: Time.new(2019),
-                               end_of_term: Time.new(2019) + 5.month }
+              academic_term: { year: '2020 - 2021', term: :summer }
             }
 
       academic_term.reload
