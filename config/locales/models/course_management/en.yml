@@ -32,6 +32,9 @@ en:
       curriculum_semester:
         name: Semester Name
         sequence: Sequence
+      curriculum_semester_course: &curriculum_semester_course_attributes
+        course: Ders
+        ects: AKTS
     enums:
       course:
         program_types:
@@ -51,6 +54,7 @@ en:
       course_group_type: Course Group Type
       course_unit_group: Course Group
       curriculum: Curriculum
+      curriculum_semester_course: Curriculum Semester Course
   course_management:
     course_group_types:
       create:
@@ -140,9 +144,23 @@ en:
         <<: *curriculum_attributes
       update:
         success: Curriculum successfully updated.
+    curriculum_semester_courses:
+      create:
+        success: Curriculum semester course successfully created.
+      destroy:
+        error: An error occured when deleting the curriculum semester course.
+        success: Curriculum semester course successfully destroyed.
+      edit:
+        form_title: Update the Curriculum Semester Course
+      new:
+        form_title: Create a Curriculum Semester Course
+      update:
+        success: Curriculum semester course successfully updated.
   simple_form:
     labels:
       course:
         <<: *course_attributes
       curriculum:
         <<: *curriculum_attributes
+      curriculum_semester_course:
+        <<: *curriculum_semester_course_attributes
