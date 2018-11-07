@@ -13,7 +13,11 @@ module CourseManagement
       @pagy, @curriculums = pagy(curriculums)
     end
 
-    def show; end
+    def show
+      @semesters = @curriculum.semesters.includes(
+        curriculum_semester_courses: :course
+      )
+    end
 
     def new
       @curriculum = Curriculum.new

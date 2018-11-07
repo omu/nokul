@@ -12,6 +12,7 @@ en:
         status: Status
         theoric: Theoric
         unit: Unit
+        ects: Ects
       course_group_type: &course_group_type_attributes
         name: Course Group Type Name
       course_unit_group: &course_unit_group_attributes
@@ -28,6 +29,9 @@ en:
         programs: Programs
         status: Status
         unit: Unit
+      curriculum_semester:
+        name: Semester Name
+        sequence: Sequence
     enums:
       course:
         program_types:
@@ -129,6 +133,9 @@ en:
       search:
         smart_search_placeholder: Curriculum Name
         <<: *curriculum_attributes
+      semesters:
+        course:
+          <<: *course_attributes
       show:
         <<: *curriculum_attributes
       update:
