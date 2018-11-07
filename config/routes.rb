@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   draw :devise
   draw :account
   draw :calendar
+  draw :course_management
   draw :references
   draw :yoksis_references
 
@@ -23,13 +24,6 @@ Rails.application.routes.draw do
   end
 
   resources :documents
-
-  scope module: :course_management do
-    resources :courses
-    resources :course_unit_groups
-    resources :course_group_types, except: :show
-    resources :curriculums
-  end
 
   scope module: :student_management do
     resources :prospective_students, only: %i[index show] do

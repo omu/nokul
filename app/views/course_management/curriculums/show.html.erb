@@ -45,32 +45,4 @@
   </div>
 </div>
 
-<div class="row">
-  <% @curriculum.semesters.each do |semester| %>
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-header">
-          <%= fa_icon 'book' %><strong><%= "#{semester.name} (#{semester.sequence})" %></strong>
-        </div>
-        <div class="card-body table-responsive">
-          <table class='table table-bordered table-hover'>
-            <thead>
-              <tr>
-                <th>Ders Adı</th>
-                <th>Ects</th>
-                <th>Kredi</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><%= 'Lorem ips..' %></td>
-                <td><%= 5 %></td>
-                <td><%= 2 %></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  <% end %>
-</div>
+<%= render 'semesters', semesters: @semesters %>

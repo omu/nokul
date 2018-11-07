@@ -1,0 +1,49 @@
+<div class="row">
+  <% semesters.each do |semester| %>
+    <div class="col-sm-6">
+      <div class="card border-success mb-3">
+        <div class="card-header">
+          <%= fa_icon 'book' %><strong><%= "#{semester.name} (#{semester.sequence})" %></strong>
+        </div>
+        <div class="card-body table-responsive">
+          <table class='table table-bordered table-hover'>
+            <thead>
+              <tr class="thead-dark">
+                <th><%= t('.course.name') %></th>
+                <th><%= t('.course.code') %></th>
+                <th><%= t('.course.credit') %></th>
+                <th><%= t('.course.ects') %></th>
+                <th><%= t('actions') %></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% semester.curriculum_semester_courses.each do |semester_course| %>
+                <tr>
+                  <td><%= semester_course.name %></td>
+                  <td><%= semester_course.code %></td>
+                  <td><%= semester_course.credit %></td>
+                  <td><%= semester_course.ects %></td>
+                  <td>
+                    <%= link_to_edit edit_curriculum_semester_curriculum_semester_course_path(semester, semester_course) %>
+                    <%= link_to_destroy [semester, semester_course] %>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+
+          <div class="text-right">
+            <%= link_to_new new_curriculum_semester_curriculum_semester_course_path(semester) %>
+          </div>
+        </div>
+
+        <div class="card-footer text-muted">
+          <p class="text-right">
+            <strong>Toplam Kredi: </strong> <%= semester.courses.sum(:credit) %>
+            <strong>Toplam Ects: </strong> <%= semester.curriculum_semester_courses.sum(:ects) %>
+          </p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

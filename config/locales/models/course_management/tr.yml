@@ -12,6 +12,7 @@ tr:
         status: Durumu
         theoric: Teorik
         unit: Birim
+        ects: Ects
       course_group_type: &course_group_type_attributes
         name: Ders Grup Tür Adı
       course_unit_group: &course_unit_group_attributes
@@ -28,6 +29,9 @@ tr:
         programs: Programlar
         status: Durumu
         unit: Birim
+      curriculum_semester:
+        name: Yarıyıl Adı
+        sequence: Sıra
     enums:
       course:
         program_types:
@@ -129,6 +133,9 @@ tr:
       search:
         smart_search_placeholder: Müfredat Adı
         <<: *curriculum_attributes
+      semesters:
+        course:
+          <<: *course_attributes
       show:
         <<: *curriculum_attributes
       update:
