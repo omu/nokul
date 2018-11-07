@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_28_080308) do
+ActiveRecord::Schema.define(version: 2018_11_07_102430) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -249,6 +249,16 @@ ActiveRecord::Schema.define(version: 2018_10_28_080308) do
     t.bigint "language_id"
     t.index ["language_id"], name: "index_courses_on_language_id"
     t.index ["unit_id"], name: "index_courses_on_unit_id"
+  end
+
+  create_table "curriculum_semester_courses", force: :cascade do |t|
+    t.bigint "course_id"
+    t.bigint "curriculum_semester_id"
+    t.decimal "ects", precision: 5, scale: 2, default: "0.0", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_curriculum_semester_courses_on_course_id"
+    t.index ["curriculum_semester_id"], name: "index_curriculum_semester_courses_on_curriculum_semester_id"
   end
 
   create_table "curriculum_semesters", force: :cascade do |t|
@@ -604,7 +614,7 @@ ActiveRecord::Schema.define(version: 2018_10_28_080308) do
     t.datetime "last_sign_in_at"
     t.inet "current_sign_in_ip"
     t.inet "last_sign_in_ip"
-    t.datetime "password_changed_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.datetime "password_changed_at", default: -> { "now()" }, null: false
     t.string "slug", limit: 255
     t.string "preferred_language", limit: 2, default: "tr"
     t.integer "articles_count", default: 0, null: false
@@ -620,5 +630,7 @@ ActiveRecord::Schema.define(version: 2018_10_28_080308) do
   add_foreign_key "calendar_title_types", "calendar_titles", column: "title_id"
   add_foreign_key "calendar_title_types", "calendar_types", column: "type_id"
   add_foreign_key "courses", "languages"
+  add_foreign_key "curriculum_semester_courses", "courses"
+  add_foreign_key "curriculum_semester_courses", "curriculum_semesters"
   add_foreign_key "curriculum_semesters", "curriculums"
 end
