@@ -81,7 +81,7 @@ jobs:
           key: nokul-yarn-{{ checksum "yarn.lock" }}
           paths:
             - node_modules/
-  rake_test:
+  test_suite:
     <<: *ruby_2_5_1
     steps:
       - restore_cache:
@@ -132,7 +132,7 @@ jobs:
           command: |
             git remote add develop dokku@app.omu.sh:nokul-develop &&
             git push develop develop:master
-  deploy:
+  deploy_master:
     machine:
       enabled: true
     steps:
@@ -155,7 +155,7 @@ workflows:
       - bundle_assets:
           requires:
             - bundle_dependencies
-      - rake_test:
+      - test_suite:
           requires:
             - bundle_assets
       - karma:
@@ -166,15 +166,15 @@ workflows:
             - bundle_assets
       - deploy_develop:
           requires:
-            - rake_test
+            - test_suite
             - karma
             - security
           filters:
             branches:
               only: develop
-      - deploy:
+      - deploy_master:
           requires:
-            - rake_test
+            - test_suite
             - karma
             - security
           filters:
