@@ -16,7 +16,10 @@ module Xokul
       end
 
       def pages(page:)
-        Connection.request '/yoksis/staff/pages', params: { page: page }
+        Connection.request(
+          '/yoksis/staff/pages',
+          params: { page: page }, read_timeout: 15
+        )
       end
 
       def total_pages
