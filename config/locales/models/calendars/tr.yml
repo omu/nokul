@@ -20,6 +20,7 @@ tr:
         start_date: Başlama Tarihi
       calendar_title: &calendar_title_attributes
         name: Takvim Başlığı
+        types: Takvim Türleri
       calendar_title_type:
         status: Durum
         title: Başlık
@@ -108,7 +109,6 @@ tr:
         form_title: Takvim Türünü Güncelle
       form:
         new_title_link: Yeni Başlık Ekle
-        titles: Takvim Başlıkları
       index:
         <<: *calendar_type_attributes
         card_header: Takvim Türleri

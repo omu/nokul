@@ -20,6 +20,7 @@ en:
         start_date: Date of Start
       calendar_title: &calendar_title_attributes
         name: Calendar Title
+        types: Calendar Types
       calendar_title_type:
         status: Status
         title: Title
@@ -108,7 +109,6 @@ en:
         form_title: Update the Calendar Type
       form:
         new_title_link: New Calendar Title
-        titles: Calendar Titles
       index:
         <<: *calendar_type_attributes
         card_header: Calendar Types
