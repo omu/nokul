@@ -59,6 +59,9 @@ en:
       show:
         <<: *academic_calendar_attributes
         alert: Record could not be found!
+        event_end_date: Event End Date
+        event_start_date: Event Start Date
+        event_title: Event Title
       update:
         success: Academic calendar successfully updated.
     academic_terms:
