@@ -8,8 +8,13 @@ class AcademicTermTest < ActiveSupport::TestCase
   end
 
   # relations
-  test 'a academic term can communicate with academic_calendars' do
-    assert @academic_term.send(:academic_calendars)
+  %i[
+    academic_calendars
+    calendar_events
+  ].each do |property|
+    test "a academic term can communicate with #{property}" do
+      assert @academic_term.send(property)
+    end
   end
 
   # validations: presence
