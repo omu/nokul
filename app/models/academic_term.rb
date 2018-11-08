@@ -3,6 +3,7 @@
 class AcademicTerm < ApplicationRecord
   # relations
   has_many :academic_calendars, dependent: :nullify
+  has_many :calendar_events, through: :academic_calendars
 
   # validations
   validates :term, presence: true
