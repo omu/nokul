@@ -59,6 +59,9 @@ tr:
       show:
         <<: *academic_calendar_attributes
         alert: Böyle bir kayıt bulunamadı!
+        event_end_date: Etkinlik Bitiş Tarihi
+        event_start_date: Etkinlik Başlama Tarihi
+        event_title: Etkinlik Başlığı
       update:
         success: Akademik takvim başarıyla güncellendi.
     academic_terms:
