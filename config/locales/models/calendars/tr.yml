@@ -118,6 +118,7 @@ tr:
       show:
         <<: *calendar_type_attributes
         card_header: '%{calendar_type} Takvim Türü'
+        calendar_titles: Takvim Başlıkları
       update:
         success: Takvim türü başarıyla güncellendi.
   helpers:

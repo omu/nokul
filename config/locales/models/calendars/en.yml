@@ -118,6 +118,7 @@ en:
       show:
         <<: *calendar_type_attributes
         card_header: '%{calendar_type} Calendar Type'
+        calendar_titles: Calendar Titles
       update:
         success: Calendar type successfully updated.
   helpers:
