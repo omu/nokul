@@ -108,8 +108,20 @@ jobs:
       - run: bundle install
       - run: bin/yarn install
       - run: bundle exec rake quality:rails
-      - run: bundle exec rake security:all
       - run: bin/yarn run lint
+  security:
+    <<: *ruby_2_5_1
+    steps:
+      - restore_cache:
+          <<: *repository
+      - restore_cache:
+          <<: *restore_bundle
+      - restore_cache:
+          <<: *restore_yarn
+      - run: bundle --path vendor/bundle --without development
+      - run: bundle install
+      - run: bin/yarn install
+      - run: bundle exec rake security:all
   deploy_develop:
     machine:
       enabled: true
@@ -149,15 +161,22 @@ workflows:
       - karma:
           requires:
             - bundle_assets
+      - security:
+          requires:
+            - bundle_assets
       - deploy_develop:
           requires:
+            - rake_test
             - karma
+            - security
           filters:
             branches:
               only: develop
       - deploy:
           requires:
+            - rake_test
             - karma
+            - security
           filters:
             branches:
               only: master
