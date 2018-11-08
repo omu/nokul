@@ -33,10 +33,6 @@ en:
           fall: Fall
           spring: Spring
           summer: Summer
-      calendar_title_type:
-        statuses:
-          active: Active
-          passive: Passive
   calendar:
     academic_calendars:
       calendar_event_fields:

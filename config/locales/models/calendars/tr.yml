@@ -33,10 +33,6 @@ tr:
           fall: Güz
           spring: Bahar
           summer: Yaz
-      calendar_title_type:
-        statuses:
-          active: Aktif
-          passive: Pasif
   calendar:
     academic_calendars:
       calendar_event_fields:
