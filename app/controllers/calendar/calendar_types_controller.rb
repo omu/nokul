@@ -44,8 +44,7 @@ module Calendar
     end
 
     def calendar_type_params
-      params.require(:calendar_type)
-            .permit(:name, calendar_title_types_attributes: %i[id type_id title_id status _destroy])
+      params.require(:calendar_type).permit(:name)
     end
   end
 end
