@@ -48,4 +48,15 @@ class CurriculumSemesterTest < ActiveSupport::TestCase
     assert_not @semester.valid?
     assert_not_empty @semester.errors[:sequence]
   end
+
+  # custom methods
+  test 'available_courses method return course for curriculum' do
+    courses = @semester.available_courses
+    assert_includes courses, courses(:test)
+    assert_not_includes courses, courses(:ati)
+    assert_not_includes courses, Course.passive.first
+
+    courses = @semester.available_courses(add_courses: [courses(:ati)])
+    assert_includes courses, courses(:ati)
+  end
 end
