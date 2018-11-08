@@ -33,8 +33,8 @@ en:
         name: Semester Name
         sequence: Sequence
       curriculum_semester_course: &curriculum_semester_course_attributes
-        course: Ders
-        ects: AKTS
+        course: Course
+        ects: ECTS
     enums:
       course:
         program_types:
@@ -138,6 +138,8 @@ en:
         smart_search_placeholder: Curriculum Name
         <<: *curriculum_attributes
       semesters:
+        total_credits: 'Total Credits'
+        total_ects: 'Total ECTS'
         course:
           <<: *course_attributes
       show:

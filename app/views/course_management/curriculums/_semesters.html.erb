@@ -39,8 +39,8 @@
 
         <div class="card-footer text-muted">
           <p class="text-right">
-            <strong>Toplam Kredi: </strong> <%= semester.courses.sum(:credit) %>
-            <strong>Toplam Ects: </strong> <%= semester.curriculum_semester_courses.sum(:ects) %>
+            <strong><%= t('.total_credits') %>: </strong> <%= semester.courses.sum(:credit) %>
+            <strong><%= t('.total_ects') %></strong> <%= semester.curriculum_semester_courses.sum(:ects) %>
           </p>
         </div>
       </div>

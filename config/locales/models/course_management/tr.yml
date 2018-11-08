@@ -138,6 +138,8 @@ tr:
         smart_search_placeholder: Müfredat Adı
         <<: *curriculum_attributes
       semesters:
+        total_credits: 'Toplam Kredi'
+        total_ects: 'Toplam ECTS'
         course:
           <<: *course_attributes
       show:
