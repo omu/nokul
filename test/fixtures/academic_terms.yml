@@ -1,23 +1,41 @@
 fall_2017_2018:
   year: 2017 - 2018
   term: fall
+  start_of_term: 2017-08-09 08:00:00
+  end_of_term: 2017-12-18 17:00:00
+  active: false
 
 spring_2017_2018:
   year: 2017 - 2018
   term: spring
+  start_of_term: 2018-01-18 08:00:00
+  end_of_term: 2018-06-18 17:00:00
+  active: false
 
 summer_2017_2018:
   year: 2017 - 2018
   term: summer
+  start_of_term: 2018-06-25 08:00:00
+  end_of_term: 2018-07-20 17:00:00
+  active: false
 
 fall_2018_2019:
   year: 2018 - 2019
   term: fall
+  start_of_term: 2018-08-12 08:00:00
+  end_of_term: 2018-12-18 17:00:00
+  active: true
 
 spring_2018_2019:
   year: 2018 - 2019
   term: spring
+  start_of_term: 2019-01-15 08:00:00
+  end_of_term: 2019-06-18 17:00:00
+  active: false
 
 summer_2018_2019:
   year: 2018 - 2019
   term: summer
+  start_of_term: 2019-07-05 08:00:00
+  end_of_term: 2019-08-13 17:00:00
+  active: false
