@@ -8,16 +8,19 @@ module Xokul
     private_constant :BASE_URL, :BEARER_TOKEN
 
     # rubocop:disable Metrics/MethodLength
-    def self.request(path, params: {})
+    def self.request(path, params: {}, **http_options)
+      http_options[:open_timeout] ||= http_options[:read_timeout] ||= 5 if Rails.env.test?
+
       response = RestClient.get(
         URI.join(BASE_URL, path).to_s,
         headers: {
-          Authorization: "Bearer #{BEARER_TOKEN}",
-          'Content-Type': 'application/json'
+          'Authorization' => "Bearer #{BEARER_TOKEN}",
+          'Content-Type' => 'application/json'
         },
         payload: params.to_json,
         use_ssl: true,
-        verify_mode: OpenSSL::SSL::VERIFY_PEER
+        verify_mode: OpenSSL::SSL::VERIFY_PEER,
+        **http_options
       )
 
       response.error!

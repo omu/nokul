@@ -13,9 +13,6 @@
               <%= f.input :name %>
             </div>
             <div class='form-group col-sm-6'>
-              <%= f.input :number_of_semesters, collection: (2..Curriculum::MAX_NUMBER_OF_SEMESTERS) %>
-            </div>
-            <div class='form-group col-sm-6'>
               <%= f.association :unit, collection: Unit.active.curriculumable %>
             </div>
             <div class='form-group col-sm-6'>
@@ -26,6 +23,19 @@
               <%= f.input :status,
                           collection: enum_options_for_select(f.object.class, :status) %>
             </div>
+          </div>
+
+          <h3><%= t('.semesters') %></h3>
+          <div id='semesters' class='mb-2'>
+            <%= f.simple_fields_for :semesters do |semester| %>
+              <%= render 'semester_fields', f: semester %>
+            <% end %>
+            <div class='links'>
+              <%= link_to_add_association f, :semesters, class: 'btn btn-success btn-sm' %>
+            </div>
+          </div>
+
+          <div class='row'>
             <div class='form-group col-sm-12'>
               <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
               <%= link_to_back(:back) %>
@@ -38,3 +48,4 @@
 </div>
 
 <%= render 'select2' %>
+<%= javascript_include_tag 'shared/cocoon' %>

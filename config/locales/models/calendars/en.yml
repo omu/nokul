@@ -9,6 +9,9 @@ en:
         senate_decision_date: Senate Decision Date
         senate_decision_no: Senate Decision No
       academic_term: &academic_term_attributes
+        active: Active Status
+        end_of_term: End of Term
+        start_of_term: Start of Term
         term: Term
         year: Year
       calendar_event:
@@ -17,6 +20,7 @@ en:
         start_date: Date of Start
       calendar_title: &calendar_title_attributes
         name: Calendar Title
+        types: Calendar Types
       calendar_title_type:
         status: Status
         title: Title
@@ -29,10 +33,6 @@ en:
           fall: Fall
           spring: Spring
           summer: Summer
-      calendar_title_type:
-        statuses:
-          active: Active
-          passive: Passive
   calendar:
     academic_calendars:
       calendar_event_fields:
@@ -56,6 +56,9 @@ en:
       show:
         <<: *academic_calendar_attributes
         alert: Record could not be found!
+        event_end_date: Event End Date
+        event_start_date: Event Start Date
+        event_title: Event Title
       update:
         success: Academic calendar successfully updated.
     academic_terms:
@@ -102,7 +105,6 @@ en:
         form_title: Update the Calendar Type
       form:
         new_title_link: New Calendar Title
-        titles: Calendar Titles
       index:
         <<: *calendar_type_attributes
         card_header: Calendar Types
@@ -112,6 +114,7 @@ en:
       show:
         <<: *calendar_type_attributes
         card_header: '%{calendar_type} Calendar Type'
+        calendar_titles: Calendar Titles
       update:
         success: Calendar type successfully updated.
   helpers:

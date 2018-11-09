@@ -68,7 +68,8 @@ tr:
         title_id: Ünvan
         user_id: Kullanıcı
       position:
-        administrative_function_id: Görev
+        duty_id: İdari Birim
+        administrative_function_id: İdari Görev
         end_date: Bitiş Tarihi
         start_date: Başlangıç Tarihi
   helpers:

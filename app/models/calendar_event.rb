@@ -4,6 +4,7 @@ class CalendarEvent < ApplicationRecord
   # relations
   belongs_to :academic_calendar
   belongs_to :calendar_title
+  has_one :term, through: :academic_calendar, source: :academic_term
 
   # validations
   validates :start_date, presence: true
