@@ -21,8 +21,8 @@
               <td><%= @curriculum.unit.try(:name) %></td>
             </tr>
             <tr>
-              <th><%= t('.number_of_semesters') %></th>
-              <td><%= @curriculum.number_of_semesters %></td>
+              <th><%= t('.semesters_count') %></th>
+              <td><%= @curriculum.semesters_count %></td>
             </tr>
             <tr>
               <th><%= t('.status') %></th>
@@ -44,3 +44,5 @@
     </div>
   </div>
 </div>
+
+<%= render 'semesters', semesters: @semesters %>
