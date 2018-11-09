@@ -12,6 +12,7 @@ en:
         status: Status
         theoric: Theoric
         unit: Unit
+        ects: Ects
       course_group_type: &course_group_type_attributes
         name: Course Group Type Name
       course_unit_group: &course_unit_group_attributes
@@ -24,10 +25,16 @@ en:
         unit: Unit
       curriculum: &curriculum_attributes
         name: Curriculum Name
-        number_of_semesters: Number of Semesters
+        semesters_count: Number of Semesters
         programs: Programs
         status: Status
         unit: Unit
+      curriculum_semester:
+        name: Semester Name
+        sequence: Sequence
+      curriculum_semester_course: &curriculum_semester_course_attributes
+        course: Course
+        ects: ECTS
     enums:
       course:
         program_types:
@@ -47,6 +54,7 @@ en:
       course_group_type: Course Group Type
       course_unit_group: Course Group
       curriculum: Curriculum
+      curriculum_semester_course: Curriculum Semester Course
   course_management:
     course_group_types:
       create:
@@ -118,6 +126,8 @@ en:
         success: Curriculum successfully destroyed.
       edit:
         form_title: Update the Curriculum
+      form:
+        semesters: 'Semesters'
       index:
         <<: *curriculum_attributes
         add_new_curriculum: Add a New Curriculum
@@ -127,13 +137,32 @@ en:
       search:
         smart_search_placeholder: Curriculum Name
         <<: *curriculum_attributes
+      semesters:
+        total_credits: 'Total Credits'
+        total_ects: 'Total ECTS'
+        course:
+          <<: *course_attributes
       show:
         <<: *curriculum_attributes
       update:
         success: Curriculum successfully updated.
+    curriculum_semester_courses:
+      create:
+        success: Curriculum semester course successfully created.
+      destroy:
+        error: An error occured when deleting the curriculum semester course.
+        success: Curriculum semester course successfully destroyed.
+      edit:
+        form_title: Update the Curriculum Semester Course
+      new:
+        form_title: Create a Curriculum Semester Course
+      update:
+        success: Curriculum semester course successfully updated.
   simple_form:
     labels:
       course:
         <<: *course_attributes
       curriculum:
         <<: *curriculum_attributes
+      curriculum_semester_course:
+        <<: *curriculum_semester_course_attributes

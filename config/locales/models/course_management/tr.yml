@@ -12,6 +12,7 @@ tr:
         status: Durumu
         theoric: Teorik
         unit: Birim
+        ects: Ects
       course_group_type: &course_group_type_attributes
         name: Ders Grup Tür Adı
       course_unit_group: &course_unit_group_attributes
@@ -24,10 +25,16 @@ tr:
         unit: Birim
       curriculum: &curriculum_attributes
         name: Müfredat Adı
-        number_of_semesters: Dönem Sayısı
+        semesters_count: Dönem Sayısı
         programs: Programlar
         status: Durumu
         unit: Birim
+      curriculum_semester:
+        name: Yarıyıl Adı
+        sequence: Sıra
+      curriculum_semester_course: &curriculum_semester_course_attributes
+        course: Ders
+        ects: AKTS
     enums:
       course:
         program_types:
@@ -47,6 +54,7 @@ tr:
       course_group_type: Ders Grup Türü
       course_unit_group: Ders Grubu
       curriculum: Müfreadat
+      curriculum_semester_course: Müfreadat Yarıyıl Ders
   course_management:
     course_group_types:
       create:
@@ -118,6 +126,8 @@ tr:
         success: Müfredat başarıyla silindi.
       edit:
         form_title: Müfredatı Düzenle
+      form:
+        semesters: 'Yarıyıllar'
       index:
         <<: *curriculum_attributes
         add_new_curriculum: Yeni Müfredat Ekle
@@ -127,13 +137,32 @@ tr:
       search:
         smart_search_placeholder: Müfredat Adı
         <<: *curriculum_attributes
+      semesters:
+        total_credits: 'Toplam Kredi'
+        total_ects: 'Toplam ECTS'
+        course:
+          <<: *course_attributes
       show:
         <<: *curriculum_attributes
       update:
         success: Müfredat başarıyla güncellendi.
+    curriculum_semester_courses:
+      create:
+        success: Müfredat yarıyıl dersi başarıyla oluşturuldu.
+      destroy:
+        error: Müfredat yarıyıl dersi silinirken bir hata oluştu.
+        success: Müfredat yarıyıl dersi başarıyla silindi.
+      edit:
+        form_title: Müfredat Yarıyıl Dersi Düzenle
+      new:
+        form_title: Müfredat Yarıyıl Dersi Oluştur
+      update:
+        success: Müfredat yarıyıl dersi başarıyla güncellendi.
   simple_form:
     labels:
       course:
         <<: *course_attributes
       curriculum:
         <<: *curriculum_attributes
+      curriculum_semester_course:
+        <<: *curriculum_semester_course_attributes
