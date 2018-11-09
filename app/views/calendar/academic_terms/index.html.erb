@@ -14,6 +14,9 @@
             <tr>
               <th><%= t('.year') %></th>
               <th><%= t('.term') %></th>
+              <th><%= t('.start_of_term') %></th>
+              <th><%= t('.end_of_term') %></th>
+              <th><%= t('.active') %></th>
               <th><%= t('actions') %></th>
             </tr>
           </thead>
@@ -22,6 +25,9 @@
               <tr>
                 <td><%= academic_term.year %></td>
                 <td><%= enum_t(academic_term, :term) %></td>
+                <td><%= academic_term.start_of_term.try(:strftime, '%F %T') %></td>
+                <td><%= academic_term.end_of_term.try(:strftime, '%F %T') %></td>
+                <td><%= academic_term.active? ? t('active') : t('passive') %></td>
                 <td>
                   <%= link_to_edit(edit_academic_term_path(academic_term)) %>
                   <%= link_to_destroy(academic_term) %>

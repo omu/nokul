@@ -29,11 +29,7 @@ module Calendar
       assert_difference('CalendarType.count') do
         post calendar_types_path, params: {
           calendar_type: {
-            name: 'Test Calendar Type',
-            calendar_title_types_attributes: {
-              0 => { title_id: calendar_titles(:one).id, status: :active },
-              1 => { title_id: calendar_titles(:two).id, status: :active }
-            }
+            name: 'Test Calendar Type'
           }
         }
       end
@@ -41,7 +37,6 @@ module Calendar
       calendar_type = CalendarType.last
 
       assert_equal 'Test Calendar Type', calendar_type.name
-      assert_equal 2, calendar_type.titles.count
       assert_redirected_to calendar_types_path
       assert_equal translate('.create.success'), flash[:notice]
     end
