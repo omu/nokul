@@ -17,6 +17,15 @@
             <div class='form-group col-sm-6'>
               <%= f.input :term, collection: enum_options_for_select(f.object.class, :term) %>
             </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :start_of_term, start_year: 2005 %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :end_of_term, start_year: 2005 %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :active %>
+            </div>
             <div class='form-group col-sm-12'>
               <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
               <%= link_to_back(:back) %>

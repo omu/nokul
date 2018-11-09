@@ -40,7 +40,7 @@ module Calendar
     end
 
     def calendar_title_params
-      params.require(:calendar_title).permit(:name)
+      params.require(:calendar_title).permit(:name, type_ids: [])
     end
   end
 end

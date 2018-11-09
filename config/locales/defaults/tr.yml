@@ -9,11 +9,13 @@ tr:
     show: Görüntüle
     update: Güncelle
   actions: İşlemler
+  active: Aktif
   are_you_sure: Emin misiniz?
   created_at: Oluşturulma Tarihi
   detailed_search: Detaylı Arama
   home_nav: Anasayfa
   'no': Hayır
+  passive: Pasif
   reset: Reset
   save: Kaydet
   search: Arama Yap
