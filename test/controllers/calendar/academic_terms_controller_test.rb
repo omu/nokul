@@ -23,7 +23,9 @@ module Calendar
     test 'should create academic term' do
       assert_difference('AcademicTerm.count') do
         post academic_terms_path, params: {
-          academic_term: { year: '2019 - 2020', term: :spring }
+          academic_term: { year: '2019 - 2020', term: :spring,
+                           start_of_term: '2019-01-15 08:00:00'.in_time_zone,
+                           end_of_term: '2019-06-18 17:00:00'.in_time_zone }
         }
       end
 
@@ -31,6 +33,9 @@ module Calendar
 
       assert_equal '2019 - 2020', academic_term.year
       assert_equal 'spring', academic_term.term
+      assert_equal '2019-01-15 08:00:00'.in_time_zone, academic_term.start_of_term
+      assert_equal '2019-06-18 17:00:00'.in_time_zone, academic_term.end_of_term
+      assert_equal false, academic_term.active
       assert_redirected_to academic_terms_path
       assert_equal translate('.create.success'), flash[:notice]
     end
