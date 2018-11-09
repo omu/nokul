@@ -21,7 +21,8 @@ module RestClient
 
   class Request
     SUPPORTED_HTTP_OPTIONS = {
-      open_timeout: nil,
+      open_timeout: 60,
+      read_timeout: 60,
       use_ssl: false,
       verify_mode: OpenSSL::SSL::VERIFY_NONE
     }.freeze

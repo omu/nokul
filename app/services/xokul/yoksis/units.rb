@@ -7,7 +7,8 @@ module Xokul
 
       def changes(day:, month:, year:)
         Connection.request(
-          '/yoksis/units/changes', params: { day: day, month: month, year: year }
+          '/yoksis/units/changes',
+          params: { day: day, month: month, year: year }, read_timeout: 10
         )
       end
 
