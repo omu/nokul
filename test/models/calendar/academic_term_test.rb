@@ -39,13 +39,14 @@ class AcademicTermTest < ActiveSupport::TestCase
   end
 
   # enums
-  %i[
-    fall
-    spring
-    summer
-  ].each do |property|
-    test "academic term can respond to #{property} enum" do
-      assert AcademicTerm.send(property)
+  {
+    term: { fall: 0, spring: 1, summer: 2 }
+  }.each do |property, hash|
+    hash.each do |key, value|
+      test "have a #{key} value of #{property} enum" do
+        enums = AcademicTerm.defined_enums.with_indifferent_access
+        assert_equal enums.dig(property, key), value
+      end
     end
   end
 end
