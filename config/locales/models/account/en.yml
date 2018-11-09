@@ -68,6 +68,7 @@ en:
         title_id: Title
         user_id: User
       position:
+        duty_id: Administrative Unit
         administrative_function_id: Administrative Function
         end_date: End Date
         start_date: Start Date
