@@ -13,7 +13,7 @@ class CurriculumSemester < ApplicationRecord
   # custom methods
   def available_courses(add_courses: [])
     courses = curriculum.unit.courses.active.where.not(id: curriculum.courses.ids)
-    add_courses.delete(nil)
+    add_courses.compact!
     add_courses.present? ? (courses.to_a + add_courses) : courses
   end
 end
