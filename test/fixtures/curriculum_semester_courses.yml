@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  course: ati
+  curriculum_semester: one
+  ects: 9.99
+
+two:
+  course: ydi
+  curriculum_semester: two
+  ects: 9.99

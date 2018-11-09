@@ -22,3 +22,8 @@ en:
   smart_search: Smart Search
   updated_at: Updated At
   'yes': 'Yes'
+
+  cocoon:
+    defaults:
+      add: 'Add'
+      remove: 'Remove'
