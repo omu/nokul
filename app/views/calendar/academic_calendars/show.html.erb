@@ -42,13 +42,22 @@
       <hr \>
       <div class='card-body'>
         <table class='table table-responsive-sm table-striped'>
-          <% @events.each do |event| %>
+          <thead>
             <tr>
-              <td><%= event.calendar_title_name %></td>
-              <td><%= event.start_date.strftime('%F %T') %></td>
-              <td><%= event.end_date.try(:strftime, '%F %T') %></td>
+              <th><%= t('.event_title') %></th>
+              <th><%= t('.event_start_date') %></th>
+              <th><%= t('.event_end_date') %></th>
             </tr>
-          <% end %>
+          </thead>
+          <tbody>
+            <% @events.each do |event| %>
+              <tr>
+                <td><%= event.calendar_title_name %></td>
+                <td><%= event.start_date.strftime('%F %T') %></td>
+                <td><%= event.end_date.try(:strftime, '%F %T') %></td>
+              </tr>
+            <% end %>
+          </tbody>
         </table>
       </div>
     </div>

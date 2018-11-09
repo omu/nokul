@@ -20,20 +20,8 @@
               <%= link_to_back(:back) %>
             </div>
           </div>
-          <hr \>
-            <center><h3><%= t('.titles') %></h3></center>
-            <div class="col-lg-12">
-              <%= f.simple_fields_for :calendar_title_types do |title| %>
-                <%= render "calendar_title_type_fields", f: title %>
-              <% end %>
-              <br>
-              <%= link_to_add_association t('.new_title_link'), f, :calendar_title_types, class: 'btn btn-outline-primary btn-sm' %>
-            </div>
-          </div>
         <% end %>
       </div>
     </div>
   </div>
 </div>
-
-<%= javascript_include_tag 'shared/cocoon' %>

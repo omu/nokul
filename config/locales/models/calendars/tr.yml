@@ -9,6 +9,9 @@ tr:
         senate_decision_date: Senato Karar Tarihi
         senate_decision_no: Senato Karar No
       academic_term: &academic_term_attributes
+        active: Aktiflik Durumu
+        end_of_term: Dönem Sonu
+        start_of_term: Dönem Başlangıcı
         term: Akademik Dönem
         year: Akademik Yıl
       calendar_event:
@@ -17,6 +20,7 @@ tr:
         start_date: Başlama Tarihi
       calendar_title: &calendar_title_attributes
         name: Takvim Başlığı
+        types: Takvim Türleri
       calendar_title_type:
         status: Durum
         title: Başlık
@@ -29,10 +33,6 @@ tr:
           fall: Güz
           spring: Bahar
           summer: Yaz
-      calendar_title_type:
-        statuses:
-          active: Aktif
-          passive: Pasif
   calendar:
     academic_calendars:
       calendar_event_fields:
@@ -56,6 +56,9 @@ tr:
       show:
         <<: *academic_calendar_attributes
         alert: Böyle bir kayıt bulunamadı!
+        event_end_date: Etkinlik Bitiş Tarihi
+        event_start_date: Etkinlik Başlama Tarihi
+        event_title: Etkinlik Başlığı
       update:
         success: Akademik takvim başarıyla güncellendi.
     academic_terms:
@@ -102,7 +105,6 @@ tr:
         form_title: Takvim Türünü Güncelle
       form:
         new_title_link: Yeni Başlık Ekle
-        titles: Takvim Başlıkları
       index:
         <<: *calendar_type_attributes
         card_header: Takvim Türleri
@@ -112,6 +114,7 @@ tr:
       show:
         <<: *calendar_type_attributes
         card_header: '%{calendar_type} Takvim Türü'
+        calendar_titles: Takvim Başlıkları
       update:
         success: Takvim türü başarıyla güncellendi.
   helpers:
