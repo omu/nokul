@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_28_080308) do
+ActiveRecord::Schema.define(version: 2018_11_07_112324) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,9 @@ ActiveRecord::Schema.define(version: 2018_10_28_080308) do
   create_table "academic_terms", force: :cascade do |t|
     t.string "year", limit: 255, null: false
     t.integer "term", limit: 2, null: false
+    t.datetime "start_of_term"
+    t.datetime "end_of_term"
+    t.boolean "active", default: false
   end
 
   create_table "active_storage_attachments", force: :cascade do |t|
@@ -595,7 +598,7 @@ ActiveRecord::Schema.define(version: 2018_10_28_080308) do
     t.datetime "last_sign_in_at"
     t.inet "current_sign_in_ip"
     t.inet "last_sign_in_ip"
-    t.datetime "password_changed_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.datetime "password_changed_at", default: -> { "now()" }, null: false
     t.string "slug", limit: 255
     t.string "preferred_language", limit: 2, default: "tr"
     t.integer "articles_count", default: 0, null: false

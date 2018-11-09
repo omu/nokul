@@ -7,7 +7,7 @@ module Calendar
     before_action :set_academic_term, only: %i[edit update destroy]
 
     def index
-      @academic_terms = pagy_by_search(AcademicTerm.order(:year))
+      @academic_terms = pagy_by_search(AcademicTerm.order(:year, :term))
     end
 
     def new
@@ -40,7 +40,7 @@ module Calendar
     end
 
     def academic_term_params
-      params.require(:academic_term).permit(:year, :term)
+      params.require(:academic_term).permit(:year, :term, :start_of_term, :end_of_term, :active)
     end
   end
 end

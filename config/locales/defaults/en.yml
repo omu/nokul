@@ -9,11 +9,13 @@ en:
     show: Show
     update: Update
   actions: Actions
+  active: Active
   are_you_sure: Are you sure?
   created_at: Created At
   detailed_search: Detailed Search
   home_nav: Home
   'no': 'No'
+  passive: Passive
   reset: Reset
   save: Save
   search: Search
