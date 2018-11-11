@@ -28,6 +28,7 @@ tr:
         must_see_recruiting_office: Askerlik Şubesiyle Görüşmeli
         nationality: Uyruk
         not_graduated_or_unknown: Mezun Değil/Bilinmiyor
+        not_registered: Kayıtlanmamış
         obs_registered_program: Öğrenci Olarak Kayıtlı Olduğu Program
         obs_status: Öğrencilik Durumu
         obs_status_date: Öğrencilik Durum Kontrol Tarihi
@@ -37,6 +38,8 @@ tr:
         placement_score_type: Yerleşme Puan Türü
         placement_type: Yerleşme Türü
         preference_order: Tercih Sırası
+        register_statue: Kayıt Durumu
+        registered: Kayıtlanmış
         registration_city: Nüfusa Kayıtlı Olduğu İl
         registration_district: Nüfusa Kayıtlı Olduğu İlçe
         smart_search_placeholder: Yerleşen öğrenci kimlik numarası, adı veya soyadı

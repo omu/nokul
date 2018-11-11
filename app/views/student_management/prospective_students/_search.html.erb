@@ -33,7 +33,16 @@
                                    class: 'form-control' %>
               </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
+              <div class="form-group">
+                <%= label_tag :registered, t('.register_statue') %>
+                <%= select_tag(:registered,
+                               options_for_select([[t('.registered'), true], [t('.not_registered'), false]], params[:registered]),
+                               include_blank: true,
+                               class: 'form-control') %>
+              </div>
+            </div>
+            <div class="col-sm-3">
               <div class="form-group">
                 <%= label_tag :meb_status, t('.meb_status') %>
                 <%= select_tag(:meb_status,
@@ -42,7 +51,7 @@
                                class: 'form-control') %>
               </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <div class="form-group">
                 <%= label_tag :military_status, t('.military_status') %>
                 <%= select_tag(:military_status,
@@ -51,7 +60,7 @@
                                class: 'form-control') %>
               </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <div class="form-group">
                 <%= label_tag :obs_status, t('.obs_status') %>
                 <%= select_tag(:obs_status,
