@@ -28,6 +28,7 @@ en:
         must_see_recruiting_office: Must see recruiting unit
         nationality: Nationality
         not_graduated_or_unknown: Not Graduated/Unknown
+        not_registered: Not Registered
         obs_registered_program: Registered To
         obs_status: Studentship Status
         obs_status_date: Studentship Status Check Date
@@ -37,6 +38,8 @@ en:
         placement_score_type: Placement Score Type
         placement_type: Placement Type
         preference_order: Preference Order
+        register_statue: Register Statue
+        registered: Registered
         registration_city: Registration City
         registration_district: Registration District
         smart_search_placeholder: Prospective student id number, first name or last name.

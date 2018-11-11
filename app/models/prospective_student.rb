@@ -11,7 +11,7 @@ class ProspectiveStudent < ApplicationRecord
     using: { tsearch: { prefix: true } }
   )
 
-  search_keys :meb_status, :military_status, :obs_status, :unit_id, :student_entrance_type_id
+  search_keys :meb_status, :military_status, :obs_status, :unit_id, :student_entrance_type_id, :registered
 
   # relations
   belongs_to :unit
