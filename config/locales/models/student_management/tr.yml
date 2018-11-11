@@ -38,7 +38,7 @@ tr:
         placement_score_type: Yerleşme Puan Türü
         placement_type: Yerleşme Türü
         preference_order: Tercih Sırası
-        register_statue: Kayıt Durumu
+        registration_status: Kayıt Durumu
         registered: Kayıtlanmış
         registration_city: Nüfusa Kayıtlı Olduğu İl
         registration_district: Nüfusa Kayıtlı Olduğu İlçe

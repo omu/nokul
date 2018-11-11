@@ -35,7 +35,7 @@
             </div>
             <div class="col-sm-3">
               <div class="form-group">
-                <%= label_tag :registered, t('.register_statue') %>
+                <%= label_tag :registered, t('.registration_status') %>
                 <%= select_tag(:registered,
                                options_for_select([[t('.registered'), true], [t('.not_registered'), false]], params[:registered]),
                                include_blank: true,
