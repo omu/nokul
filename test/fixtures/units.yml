@@ -47,7 +47,7 @@ su:
   unit_type: university
 
 uzem:
-  name: Uzaktan Eğitim Uygulama Ve Araştırma Merkezi
+  name: Uzaktan Eğitim Araştırma ve Uygulama Merkezi
   yoksis_id: 169431
   duration:
   district: atakum
@@ -57,7 +57,7 @@ uzem:
   unit_type: research_center
 
 baum:
-  name: Bilgisayar Araştırmaları Uygulama Ve Araştırma Merkezi
+  name: Bilgisayar Araştırmaları Uygulama ve Araştırma Merkezi
   yoksis_id: 327269
   founded_at: 27.07.2017
   duration:
@@ -153,3 +153,4 @@ alman_dili_egitimi_dr:
   unit_instruction_type: normal_education
   unit_type: program
   ancestry: <%= ActiveRecord::FixtureSet.identify(:egitim_bilimleri_enstitusu) %>
+  
