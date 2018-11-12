@@ -3767,7 +3767,7 @@
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Bilgi Ve İletişi Teknolojileri Uygulama Ve Araştırma Merkezi
+  name: Bilgi Ve İletişi Teknolojileri Araştırma Ve Uygulama Merkezi
   yoksis_id: 169403
   foet_code: 
   founded_at: 
@@ -3815,7 +3815,7 @@
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Biyoteknoloji Uygulama Ve Araştırma Merkezi
+  name: Biyoteknoloji Araştırma Ve Uygulama Merkezi
   yoksis_id: 169404
   foet_code: 
   founded_at: 
@@ -6887,7 +6887,7 @@
   parent_yoksis_id: 122386
   osym_id: 
 -
-  name: Su Ürünleri Avlama Ve İşleme Tekniği  (Yl) (Tezli)
+  name: Su Ürünleri Avlama Ve İşleme Tekniği  (Yl) (Tezli)
   yoksis_id: 317808
   foet_code: 624
   founded_at: 
@@ -8843,7 +8843,7 @@
   parent_yoksis_id: 122023
   osym_id: 
 -
-  name: Fındık Ve Diğer Sert Kabuklu Meyveleri Uygulama Ve Araştırma Merkezi
+  name: Fındık Ve Diğer Sert Kabuklu Meyveleri Araştırma Ve Uygulama Merkezi
   yoksis_id: 122394
   foet_code: 
   founded_at: 10.09.2009
@@ -10031,7 +10031,7 @@
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Kafkasya Ve Orta Asya Uygulama Ve Araştırma Merkezi
+  name: Kafkasya Ve Orta Asya Araştırma Ve Uygulama Merkezi
   yoksis_id: 169407
   foet_code: 
   founded_at: 01.01.1900
@@ -11987,7 +11987,7 @@
   parent_yoksis_id: 269771
   osym_id: 
 -
-  name: Ornitoloji Uygulama Ve Araştırma Merkezi
+  name: Ornitoloji Araştırma Ve Uygulama Merkezi
   yoksis_id: 169410
   foet_code: 
   founded_at: 30.04.2009
@@ -17075,7 +17075,7 @@
   parent_yoksis_id: 122388
   osym_id: 
 -
-  name: Su Ekosistemleri Uygulama Ve Araştırma Merkezi
+  name: Su Ekosistemleri Araştırma Ve Uygulama Merkezi
   yoksis_id: 169424
   foet_code: 
   founded_at: 10.09.2009
@@ -17651,7 +17651,7 @@
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Temiz Enerji Uygulama Ve Araştırma Merkezi
+  name: Temiz Enerji Araştırma Ve Uygulama Merkezi
   yoksis_id: 169429
   foet_code: 
   founded_at: 
@@ -19331,7 +19331,7 @@
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Uzaktan Eğitim Uygulama Ve Araştırma Merkezi
+  name: Uzaktan Eğitim Araştırma Ve Uygulama Merkezi
   yoksis_id: 169431
   foet_code: 
   founded_at: 
@@ -24214,3 +24214,4 @@
   unit_type_id: Uygulama Ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
+  
