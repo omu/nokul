@@ -79,7 +79,7 @@ class UnitsControllerTest < ActionDispatch::IntegrationTest
 
     assert_equal 'Test Unit Update', unit.name
     assert_equal 300_000, unit.yoksis_id
-    assert_equal 'Araştırma ve Uygulama Merkezi', unit.unit_type.try(:name)
+    assert_equal 'Uygulama Ve Araştırma Merkezi', unit.unit_type.try(:name)
     assert_equal units(:cbu), unit.parent
     assert_redirected_to unit_path(unit)
     assert_equal translate('units.update.success'), flash[:notice]

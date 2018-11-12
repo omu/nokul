@@ -844,7 +844,7 @@
   district_id: Tekkeköy
   abbreviation: YEŞİLYURT-MYO-YÖNKUR
 
-- name: Atatürk İlkeleri Ve İnkılap Tarihi Araştırma Ve Uygulama Merkezi Müdürlüğü
+- name: Atatürk İlkeleri Ve İnkılap Tarihi Uygulama Ve Araştırma Merkezi Müdürlüğü
   detsis_id: 50057338
   parent_detsis_id: 78633602
   related_yoksis_id: 122390
@@ -886,7 +886,7 @@
   district_id: Atakum
   abbreviation: BKS-AUM-MD
 
-- name: Çevre Sorunları Araştırma Ve Uygulama Merkezi Müdürlüğü
+- name: Çevre Sorunları Uygulama Ve Araştırma Merkezi Müdürlüğü
   detsis_id: 37181009
   parent_detsis_id: 78633602
   related_yoksis_id: 122392
@@ -2373,7 +2373,7 @@
   district_id: Atakum
   abbreviation: KALİTE-KOR
 
-- name: Karadeniz İleri Teknoloji Araştırma Ve Uygulama Merkezi Müdürlüğü
+- name: Karadeniz İleri Teknoloji Uygulama Ve Araştırma Merkezi Müdürlüğü
   detsis_id: 38701709
   parent_detsis_id: 78633602
   related_yoksis_id: 311015
@@ -4715,7 +4715,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-MOLTIP-ADB
 
-- name: Sağlık Araştırma Ve Uygulama Merkezi Müdürlüğü
+- name: Sağlık Uygulama Ve Araştırma Merkezi Müdürlüğü
   detsis_id: 15374210
   parent_detsis_id: 78633602
   related_yoksis_id:

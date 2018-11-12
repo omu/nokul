@@ -599,7 +599,7 @@
   parent_detsis_id: 30423168
   district_id: Tekkeköy
 -
-  name: Atatürk İlkeleri Ve İnkılap Tarihi Araştırma Ve Uygulama Merkezi Müdürlüğü
+  name: Atatürk İlkeleri Ve İnkılap Tarihi Uygulama Ve Araştırma Merkezi Müdürlüğü
   detsis_id: 50057338
   parent_yoksis_id: 122390
   district_id: Atakum
@@ -629,7 +629,7 @@
   parent_yoksis_id: 169418
   district_id: Atakum
 -
-  name: Çevre Sorunları Araştırma Ve Uygulama Merkezi Müdürlüğü
+  name: Çevre Sorunları Uygulama Ve Araştırma Merkezi Müdürlüğü
   detsis_id: 37181009
   parent_yoksis_id: 122392
   district_id: Atakum
@@ -1679,7 +1679,7 @@
   parent_yoksis_id: 122287
   district_id: Atakum
 -
-  name: Karadeniz İleri Teknoloji Araştırma Ve Uygulama Merkezi Müdürlüğü
+  name: Karadeniz İleri Teknoloji Uygulama Ve Araştırma Merkezi Müdürlüğü
   detsis_id: 38701709
   parent_yoksis_id: 311015
   district_id: Atakum

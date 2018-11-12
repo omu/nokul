@@ -762,7 +762,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Araştırma Ve Uygulama Merkezi
+  unit_type_id: Uygulama Ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id:
   abbreviation: ARAP-AUM
@@ -775,7 +775,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Araştırma Ve Uygulama Merkezi
+  unit_type_id: Uygulama Ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id:
   abbreviation: ATİ-AUM
@@ -1153,7 +1153,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Araştırma Ve Uygulama Merkezi
+  unit_type_id: Uygulama Ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id:
   abbreviation: BKS-AUM
@@ -1166,7 +1166,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Araştırma Ve Uygulama Merkezi
+  unit_type_id: Uygulama Ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id:
   abbreviation: B-AUM
@@ -1179,7 +1179,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Araştırma Ve Uygulama Merkezi
+  unit_type_id: Uygulama Ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id:
   abbreviation: DH-AUM
@@ -4795,7 +4795,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Araştırma Ve Uygulama Merkezi
+  unit_type_id: Uygulama Ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id:
   abbreviation: GE-AUM
@@ -5148,7 +5148,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Araştırma Ve Uygulama Merkezi
+  unit_type_id: Uygulama Ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id:
   abbreviation: HUT-AUM
@@ -5436,7 +5436,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Araştırma Ve Uygulama Merkezi
+  unit_type_id: Uygulama Ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id:
   abbreviation: KT-AUM
@@ -5449,7 +5449,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Araştırma Ve Uygulama Merkezi
+  unit_type_id: Uygulama Ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id:
   abbreviation: KİT-AM
@@ -6499,12 +6499,12 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Araştırma Ve Uygulama Merkezi
+  unit_type_id: Uygulama Ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id:
   abbreviation: OÖE-AUM
 
-- name: Ornitoloji Araştırma Ve Uygulama Merkezi
+- name: Ornitoloji Uygulama Ve Araştırma Merkezi
   yoksis_id: 169410
   foet_code:
   founded_at: 30.04.2009
@@ -6512,7 +6512,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Araştırma Ve Uygulama Merkezi
+  unit_type_id: Uygulama Ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id:
   abbreviation: O-AUM
@@ -6525,7 +6525,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Araştırma Ve Uygulama Merkezi
+  unit_type_id: Uygulama Ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id:
   abbreviation: P-AUM
@@ -9708,7 +9708,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Araştırma Ve Uygulama Merkezi
+  unit_type_id: Uygulama Ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id:
   abbreviation: SEM
@@ -9721,12 +9721,12 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Araştırma Ve Uygulama Merkezi
+  unit_type_id: Uygulama Ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id:
   abbreviation: T-AUM
 
-- name: Temiz Enerji Araştırma Ve Uygulama Merkezi
+- name: Temiz Enerji Uygulama Ve Araştırma Merkezi
   yoksis_id: 169429
   foet_code:
   founded_at:
@@ -9734,7 +9734,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Araştırma Ve Uygulama Merkezi
+  unit_type_id: Uygulama Ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id:
   abbreviation: TE-AUM
@@ -11422,12 +11422,12 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Araştırma Ve Uygulama Merkezi
+  unit_type_id: Uygulama Ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id:
   abbreviation: TÖ-AUM
 
-- name: Uzaktan Eğitim Araştırma Ve Uygulama Merkezi
+- name: Uzaktan Eğitim Uygulama Ve Araştırma Merkezi
   yoksis_id: 169431
   foet_code:
   founded_at:
@@ -11435,7 +11435,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Araştırma Ve Uygulama Merkezi
+  unit_type_id: Uygulama Ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id:
   abbreviation: UZEM
@@ -12144,7 +12144,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Araştırma Ve Uygulama Merkezi
+  unit_type_id: Uygulama Ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id:
   abbreviation: YY-AUM
@@ -13685,7 +13685,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Araştırma Ve Uygulama Merkezi
+  unit_type_id: Uygulama Ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id:
   abbreviation: ÇS-AUM
@@ -13698,7 +13698,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Araştırma Ve Uygulama Merkezi
+  unit_type_id: Uygulama Ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id:
   abbreviation: ÇE-AUM
@@ -15101,7 +15101,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Araştırma Ve Uygulama Merkezi
+  unit_type_id: Uygulama Ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id:
   abbreviation: İSGMH-AUM
