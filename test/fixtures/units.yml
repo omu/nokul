@@ -153,4 +153,3 @@ alman_dili_egitimi_dr:
   unit_instruction_type: normal_education
   unit_type: program
   ancestry: <%= ActiveRecord::FixtureSet.identify(:egitim_bilimleri_enstitusu) %>
-  
