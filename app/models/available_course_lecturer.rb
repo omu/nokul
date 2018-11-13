@@ -2,7 +2,7 @@
 
 class AvailableCourseLecturer < ApplicationRecord
   # relations
-  belongs_to :available_course_group
+  belongs_to :group, class_name: 'AvailableCourseGroup'
   belongs_to :lecturer, class_name: 'User'
 
   # validations

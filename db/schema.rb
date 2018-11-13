@@ -140,11 +140,11 @@ ActiveRecord::Schema.define(version: 2018_11_12_175343) do
 
   create_table "available_course_lecturers", force: :cascade do |t|
     t.boolean "coordinator", default: false, null: false
-    t.bigint "available_course_group_id"
+    t.bigint "group_id"
     t.bigint "lecturer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["available_course_group_id"], name: "index_available_course_lecturers_on_available_course_group_id"
+    t.index ["group_id"], name: "index_available_course_lecturers_on_group_id"
     t.index ["lecturer_id"], name: "index_available_course_lecturers_on_lecturer_id"
   end
 
@@ -659,6 +659,7 @@ ActiveRecord::Schema.define(version: 2018_11_12_175343) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "available_course_lecturers", "available_course_groups", column: "group_id"
   add_foreign_key "available_course_lecturers", "users", column: "lecturer_id"
   add_foreign_key "calendar_title_types", "calendar_titles", column: "title_id"
   add_foreign_key "calendar_title_types", "calendar_types", column: "type_id"
