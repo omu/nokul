@@ -187,6 +187,8 @@ GEM
     public_suffix (3.0.3)
     puma (3.12.0)
     rack (2.0.6)
+    rack-mini-profiler (1.0.0)
+      rack (>= 1.2.0)
     rack-protection (2.0.4)
       rack
     rack-test (1.1.0)
@@ -342,6 +344,7 @@ DEPENDENCIES
   pg_search
   pry-rails
   puma (~> 3.11)
+  rack-mini-profiler
   rails (~> 5.2.1)
   redis
   rollbar
