@@ -1,8 +1,8 @@
 ati_group_1_lecturer_john:
-  available_course_group: ati_group_1
+  group: ati_group_1
   lecturer: john
   coordinator: true
 ati_group_1_lecturer_serhat:
-  available_course_group: ati_group_1
+  group: ati_group_1
   lecturer: serhat
   coordinator: false

@@ -5,7 +5,7 @@ require 'test_helper'
 class AvailableCourseLecturerTest < ActiveSupport::TestCase
   # relations
   %i[
-    available_course_group
+    group
     lecturer
   ].each do |property|
     test "a available_course_lecturer can communicate with #{property}" do
