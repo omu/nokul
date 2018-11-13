@@ -758,7 +758,7 @@
   parent_detsis_id: 78633602
   related_yoksis_id: 233015
   district_id: 19 Mayıs
-  abbreviation: HUT-AUM-MD
+  abbreviation: UZAYTEM-MD
 
 - name: Yeşilyurt Demir Çelik Meslek Yüksekokulu Müdürlüğü
   detsis_id: 30423168
@@ -900,14 +900,14 @@
   parent_detsis_id: 78633602
   related_yoksis_id: 205247
   district_id: Atakum
-  abbreviation: ÇE-AUM-MD
+  abbreviation: OMÜÇEM-MD
 
 - name: Deney Hayvanları Uygulama Ve Araştırma Merkezi Müdürlüğü
   detsis_id: 62228674
   parent_detsis_id: 78633602
   related_yoksis_id: 214121
   district_id: Atakum
-  abbreviation: DH-AUM-MD
+  abbreviation: DEHAM-MD
 
 - name: Diş Hekimliği Fakültesi Dekanlığı
   detsis_id: 45458912
@@ -1927,7 +1927,7 @@
   parent_detsis_id: 78633602
   related_yoksis_id: 122391
   district_id: Atakum
-  abbreviation: GE-AUM-MD
+  abbreviation: OGEM-MD
   issues:
     - Bağlı bulunduğu merkez ve müdürlük isimleri farklı
 
@@ -2364,7 +2364,7 @@
   parent_detsis_id: 78633602
   related_yoksis_id: 232499
   district_id: Atakum
-  abbreviation: KT-AUM-MD
+  abbreviation: OKTAM-MD
 
 - name: Kalite Koordinatörlüğü
   detsis_id: 83781499
@@ -2779,7 +2779,7 @@
   parent_detsis_id: 78633602
   related_yoksis_id: 169410
   district_id: Atakum
-  abbreviation: O-AUM-MD
+  abbreviation: OAM-MD
 
 - name: Öğrenci İşleri Daire Başkanlığı
   detsis_id: 36607105
@@ -2814,7 +2814,7 @@
   parent_detsis_id: 78633602
   related_yoksis_id: 284594
   district_id: Atakum
-  abbreviation: P-AUM-MD
+  abbreviation: PUAMER-MD
 
 - name: Sağlık Bilimleri Enstitüsü Müdürlüğü
   detsis_id: 93771576
@@ -3227,7 +3227,7 @@
   parent_detsis_id: 78633602
   related_yoksis_id: 249894
   district_id: Atakum
-  abbreviation: T-AUM-MD
+  abbreviation: TUAM-MD
 
 - name: Temiz Enerji Teknolojileri Uygulama Ve Araştırma Merkezi Müdürlüğü
   detsis_id: 75539574
@@ -4721,6 +4721,8 @@
   related_yoksis_id:
   district_id:
   abbreviation: SAĞLIK-AUM-MD
+  issues:
+    - Bağlı olduğu Sağlık Araştırma Ve Uygulama Merkezi aktif değil
 
 - name: Hukuk İşleri Birimi
   detsis_id: 15437600
@@ -7923,9 +7925,9 @@
 - name: Arapça Öğretimi Uygulama Ve Araştırma Merkezi Müdürlüğü
   detsis_id: 83296456
   parent_detsis_id: 78633602
-  related_yoksis_id:
+  related_yoksis_id: 378824
   district_id: Atakum
-  abbreviation: AÖ-AUM-MD
+  abbreviation: ADİM-MD
 
 - name: Özel Kalem Birimi
   detsis_id: 83342748
