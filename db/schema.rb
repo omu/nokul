@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_11_134214) do
+ActiveRecord::Schema.define(version: 2018_11_12_175343) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -127,6 +127,34 @@ ActiveRecord::Schema.define(version: 2018_11_11_134214) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_articles_on_user_id"
+  end
+
+  create_table "available_course_groups", force: :cascade do |t|
+    t.string "name", limit: 50, null: false
+    t.integer "quota"
+    t.bigint "available_course_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["available_course_id"], name: "index_available_course_groups_on_available_course_id"
+  end
+
+  create_table "available_course_lecturers", force: :cascade do |t|
+    t.boolean "coordinator", default: false, null: false
+    t.bigint "available_course_group_id"
+    t.bigint "lecturer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["available_course_group_id"], name: "index_available_course_lecturers_on_available_course_group_id"
+    t.index ["lecturer_id"], name: "index_available_course_lecturers_on_lecturer_id"
+  end
+
+  create_table "available_courses", force: :cascade do |t|
+    t.bigint "academic_term_id"
+    t.bigint "course_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["academic_term_id"], name: "index_available_courses_on_academic_term_id"
+    t.index ["course_id"], name: "index_available_courses_on_course_id"
   end
 
   create_table "calendar_events", force: :cascade do |t|
@@ -265,7 +293,7 @@ ActiveRecord::Schema.define(version: 2018_11_11_134214) do
   end
 
   create_table "curriculum_semesters", force: :cascade do |t|
-    t.string "name"
+    t.string "name", limit: 255, null: false
     t.integer "sequence"
     t.bigint "curriculum_id"
     t.datetime "created_at", null: false
@@ -631,6 +659,7 @@ ActiveRecord::Schema.define(version: 2018_11_11_134214) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "available_course_lecturers", "users", column: "lecturer_id"
   add_foreign_key "calendar_title_types", "calendar_titles", column: "title_id"
   add_foreign_key "calendar_title_types", "calendar_types", column: "type_id"
   add_foreign_key "courses", "languages"
