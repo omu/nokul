@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class RenameNumberOfSemestersToCurriculum < ActiveRecord::Migration[5.2]
   def up
     rename_column :curriculums, :number_of_semesters, :semesters_count
