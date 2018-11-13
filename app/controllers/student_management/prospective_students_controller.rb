@@ -25,6 +25,8 @@ module StudentManagement
       else
         redirect_with_warning('.warning')
       end
+
+      @prospective_student.update(registered: true)
     end
 
     private
