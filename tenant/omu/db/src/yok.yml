@@ -765,7 +765,7 @@
   unit_type_id: Araştırma Ve Uygulama Merkezi
   parent_yoksis_id: 121946
   osym_id:
-  abbreviation: ARAP-AUM
+  abbreviation: ADİM
 
 - name: Atatürk İlkeleri Ve İnkılap Tarihi Uygulama Ve Araştırma Merkezi
   yoksis_id: 122390
@@ -1182,7 +1182,7 @@
   unit_type_id: Araştırma Ve Uygulama Merkezi
   parent_yoksis_id: 121946
   osym_id:
-  abbreviation: DH-AUM
+  abbreviation: DEHAM
 
 - name: Devlet Konservatuvarı
   yoksis_id: 122303
@@ -4798,7 +4798,7 @@
   unit_type_id: Araştırma Ve Uygulama Merkezi
   parent_yoksis_id: 121946
   osym_id:
-  abbreviation: GE-AUM
+  abbreviation: OGEM
 
 - name: Güzel Sanatlar Enstitüsü
   yoksis_id: 208606
@@ -5151,7 +5151,7 @@
   unit_type_id: Araştırma Ve Uygulama Merkezi
   parent_yoksis_id: 121946
   osym_id:
-  abbreviation: HUT-AUM
+  abbreviation: UZAYTEM
 
 - name: Havza Meslek Yüksekokulu
   yoksis_id: 122379
@@ -5439,7 +5439,7 @@
   unit_type_id: Araştırma Ve Uygulama Merkezi
   parent_yoksis_id: 121946
   osym_id:
-  abbreviation: KT-AUM
+  abbreviation: OKTAM
 
 - name: Karadeniz İleri Teknoloji Uygulama Ve Araştırma Merkezi
   yoksis_id: 311015
@@ -6515,7 +6515,7 @@
   unit_type_id: Araştırma Ve Uygulama Merkezi
   parent_yoksis_id: 121946
   osym_id:
-  abbreviation: O-AUM
+  abbreviation: OAM
 
 - name: Psikoloji Uygulama Ve Araştırma Merkezi
   yoksis_id: 284594
@@ -6528,7 +6528,7 @@
   unit_type_id: Araştırma Ve Uygulama Merkezi
   parent_yoksis_id: 121946
   osym_id:
-  abbreviation: P-AUM
+  abbreviation: PUAMER
 
 - name: Rektörlük
   yoksis_id: 122287
@@ -9724,7 +9724,7 @@
   unit_type_id: Araştırma Ve Uygulama Merkezi
   parent_yoksis_id: 121946
   osym_id:
-  abbreviation: T-AUM
+  abbreviation: TUAM
 
 - name: Temiz Enerji Araştırma Ve Uygulama Merkezi
   yoksis_id: 169429
@@ -13701,7 +13701,7 @@
   unit_type_id: Araştırma Ve Uygulama Merkezi
   parent_yoksis_id: 121946
   osym_id:
-  abbreviation: ÇE-AUM
+  abbreviation: OMÜÇEM
 
 - name: Bilgisayar Teknolojileri Bölümü
   yoksis_id: 229373
