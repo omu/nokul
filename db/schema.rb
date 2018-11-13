@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_11_134214) do
+ActiveRecord::Schema.define(version: 2018_11_13_144919) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -193,7 +193,7 @@ ActiveRecord::Schema.define(version: 2018_11_11_134214) do
 
   create_table "committee_decisions", force: :cascade do |t|
     t.text "description", null: false
-    t.string "decision_no", null: false
+    t.string "decision_no", limit: 255, null: false
     t.integer "year", null: false
     t.bigint "meeting_agenda_id"
     t.datetime "created_at", null: false
@@ -265,7 +265,7 @@ ActiveRecord::Schema.define(version: 2018_11_11_134214) do
   end
 
   create_table "curriculum_semesters", force: :cascade do |t|
-    t.string "name"
+    t.string "name", limit: 255, null: false
     t.integer "sequence"
     t.bigint "curriculum_id"
     t.datetime "created_at", null: false
@@ -592,6 +592,7 @@ ActiveRecord::Schema.define(version: 2018_11_11_134214) do
     t.bigint "unit_type_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "names_depth_cache", limit: 255
     t.index ["ancestry"], name: "index_units_on_ancestry"
     t.index ["district_id"], name: "index_units_on_district_id"
     t.index ["unit_instruction_language_id"], name: "index_units_on_unit_instruction_language_id"
@@ -618,7 +619,7 @@ ActiveRecord::Schema.define(version: 2018_11_11_134214) do
     t.datetime "last_sign_in_at"
     t.inet "current_sign_in_ip"
     t.inet "last_sign_in_ip"
-    t.datetime "password_changed_at", default: -> { "now()" }, null: false
+    t.datetime "password_changed_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.string "slug", limit: 255
     t.string "preferred_language", limit: 2, default: "tr"
     t.integer "articles_count", default: 0, null: false
