@@ -19,7 +19,9 @@
           <% end %>
           <div class='row mt-3'>
             <div class='form-group col-sm-4'>
-              <%= f.association :unit, collection: Unit.coursable.active.order(:name) %>
+              <%= f.association :unit,
+                                collection: Unit.active.coursable.order(:name),
+                                label_method: :names_depth_cache %>
             </div>
             <div class='form-group col-sm-4'>
               <%= f.input :name %>

@@ -13,7 +13,9 @@
               <%= f.input :name %>
             </div>
             <div class='form-group col-sm-6'>
-              <%= f.association :unit, collection: Unit.active.curriculumable %>
+              <%= f.association :unit,
+                                collection: Unit.active.curriculumable.order(:name),
+                                label_method: :names_depth_cache %>
             </div>
             <div class='form-group col-sm-6'>
               <%= f.association :programs,
