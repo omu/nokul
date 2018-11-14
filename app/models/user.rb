@@ -23,7 +23,6 @@ class User < ApplicationRecord
   has_many :units, through: :employees
   has_many :positions, through: :duties
   has_many :administrative_functions, through: :duties
-  has_many :available_course_lecturers, foreign_key: :lecturer_id, inverse_of: :lecturer, dependent: :destroy
 
   # academic studies
   has_many :certifications, dependent: :destroy
