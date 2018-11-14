@@ -1,0 +1,8 @@
+ati_group_1_lecturer_john:
+  group: ati_group_1
+  lecturer: chief_john
+  coordinator: true
+ati_group_1_lecturer_serhat:
+  group: ati_group_1
+  lecturer: serhat_active
+  coordinator: false

@@ -13,6 +13,7 @@ class CurriculumTest < ActiveSupport::TestCase
     programs
     semesters
     courses
+    available_courses
   ].each do |relation|
     test "curriculum can communicate with #{relation}" do
       assert @curriculum.send(relation)

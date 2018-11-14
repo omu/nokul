@@ -7,7 +7,7 @@ class UnitsController < ApplicationController
   def index
     units = Unit.includes(
       :unit_status, :unit_instruction_language, :unit_instruction_type, :unit_type, district: [:city]
-    )
+    ).order(:name)
 
     @pagy, @units = pagy(units.dynamic_search(search_params(Unit)))
   end

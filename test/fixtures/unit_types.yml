@@ -11,7 +11,7 @@ faculty:
   code: 2
   group: faculty
 research_center:
-  name: Araştırma ve Uygulama Merkezi
+  name: Uygulama Ve Araştırma Merkezi
   code: 8
   group: other
 department:
