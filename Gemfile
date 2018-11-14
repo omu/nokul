@@ -3,6 +3,11 @@
 source 'https://rubygems.org'
 ruby File.read('.ruby-version')
 
+git_source(:github) do |repo_name|
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
+  "https://github.com/#{repo_name}.git"
+end
+
 # core
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'pg'
@@ -74,6 +79,7 @@ group :development do
   gem 'letter_opener'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'pry-rails'
+  gem 'rack-mini-profiler'
   gem 'ruby-progressbar'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'

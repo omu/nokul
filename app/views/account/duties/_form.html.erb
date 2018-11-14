@@ -19,7 +19,7 @@
               <%= f.input :unit_id,
                   collection: Unit.active.without_programs.order(:name),
                   required: true,
-                  label_method: lambda { |unit| "#{unit.name} (#{unit.parent.try(:name)})" } %>
+                  label_method: :names_depth_cache %>
             </div>
             <div class='form-group col-sm-4'>
               <%= f.input :start_date, required: true %>
