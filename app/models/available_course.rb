@@ -3,6 +3,7 @@
 class AvailableCourse < ApplicationRecord
   # relations
   belongs_to :academic_term
+  belongs_to :curriculum
   belongs_to :course
   has_many :groups, class_name: 'AvailableCourseGroup', dependent: :destroy
 end

@@ -6,6 +6,7 @@ class AvailableCourseTest < ActiveSupport::TestCase
   # relations
   %i[
     academic_term
+    curriculum
     course
     groups
   ].each do |property|
