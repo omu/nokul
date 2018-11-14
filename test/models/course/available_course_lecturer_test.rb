@@ -13,6 +13,13 @@ class AvailableCourseLecturerTest < ActiveSupport::TestCase
     end
   end
 
+  # validations: presence
+  test 'should not save available_course_group without coordinator info' do
+    available_course_lecturers(:ati_group_1_lecturer_john).coordinator = nil
+    assert_not available_course_lecturers(:ati_group_1_lecturer_john).valid?
+    assert_not_empty available_course_lecturers(:ati_group_1_lecturer_john).errors[:coordinator]
+  end
+
   # scopes
   test 'coordinator scope returns coordinator lecturers' do
     lecturers = available_course_groups(:ati_group_1).lecturers
