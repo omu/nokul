@@ -663,7 +663,7 @@ ActiveRecord::Schema.define(version: 2018_11_13_144919) do
   end
 
   add_foreign_key "available_course_lecturers", "available_course_groups", column: "group_id"
-  add_foreign_key "available_course_lecturers", "users", column: "lecturer_id"
+  add_foreign_key "available_course_lecturers", "employees", column: "lecturer_id"
   add_foreign_key "calendar_title_types", "calendar_titles", column: "title_id"
   add_foreign_key "calendar_title_types", "calendar_types", column: "type_id"
   add_foreign_key "courses", "languages"
