@@ -705,7 +705,7 @@
   district_id: Atakum
 -
   name: Diş Hekimliği Fakülte Yönetim Kurulu
-  detsis_id: 5618961
+  detsis_id: 56178961
   parent_detsis_id: 45458912
   district_id: Atakum
 -
@@ -795,7 +795,7 @@
   district_id: Atakum
 -
   name: Matematik Ve Fen Bilimleri Eğitimi Bölüm Başkanlığı
-  detsis_id: 5147921
+  detsis_id: 51747921
   parent_yoksis_id: 298694
   district_id: Atakum
 -
@@ -820,7 +820,7 @@
   district_id: Atakum
 -
   name: Matematik Eğitimi Anabilim Dalı Başkanlığı
-  detsis_id: 1946687
+  detsis_id: 19476687
   parent_yoksis_id: 122110
   district_id: Atakum
 -
