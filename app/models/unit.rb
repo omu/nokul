@@ -7,12 +7,15 @@ class Unit < ApplicationRecord
 
   pg_search_scope(
     :search,
-    against: %i[name yoksis_id],
+    against: %i[name yoksis_id detsis_id],
     using: { tsearch: { prefix: true } }
   )
 
   # dynamic_search
   search_keys :duration, :unit_status_id, :unit_instruction_type_id, :unit_instruction_language_id
+
+  # callbacks
+  before_save :cache_ancestry
 
   # relations
   has_ancestry
@@ -66,8 +69,11 @@ class Unit < ApplicationRecord
       .or(institutes)
       .or(rectorships)
   }
-
   scope :curriculumable, -> { coursable }
+
+  def cache_ancestry
+    self.names_depth_cache = path.map(&:name).reverse.join(' / ')
+  end
 
   # custom methods
   def subprograms

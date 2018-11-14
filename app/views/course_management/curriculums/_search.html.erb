@@ -36,7 +36,7 @@
               <div class="form-group">
                 <%= label_tag(:unit_id, t('.unit')) %>
                 <%= select_tag(:unit_id,
-                               options_from_collection_for_select(Unit.active.departments, :id, :name, params[:unit_id]),
+                               options_from_collection_for_select(Unit.active.departments.order(:name), :id, :name, params[:unit_id]),
                                include_blank: true,
                                class: 'form-control') %>
               </div>
