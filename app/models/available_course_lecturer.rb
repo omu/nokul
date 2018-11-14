@@ -7,6 +7,7 @@ class AvailableCourseLecturer < ApplicationRecord
 
   # validations
   validates :coordinator, inclusion: { in: [true, false] }
+  validates :lecturer, uniqueness: { scope: :group }
 
   # scopes
   scope :coordinator, -> { where(coordinator: true) }
