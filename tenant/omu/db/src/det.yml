@@ -996,13 +996,11 @@
   abbreviation: DİŞ-KUR
 
 - name: Diş Hekimliği Fakülte Yönetim Kurulu
-  detsis_id: 5618961
+  detsis_id: 56178961
   parent_detsis_id: 45458912
   related_yoksis_id:
   district_id: Atakum
-  abbreviation: DİŞ-YÖNKUR-DİĞER
-  issues:
-    - detsis_id hatalı, mükerrerlik sebebiyle -DİĞER eklendi
+  abbreviation: DİŞ-YÖNKUR
 
 - name: Eğitim Bilimleri Enstitüsü Müdürlüğü
   detsis_id: 42301062
@@ -6535,13 +6533,6 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SPOR-BİLGİ-BR
-
-- name: Fakülte Yönetim Kurulu
-  detsis_id: 56178961
-  parent_detsis_id: 45458912
-  related_yoksis_id:
-  district_id: Atakum
-  abbreviation: DİŞ-YÖNKUR
 
 - name: Personel İşleri Birimi
   detsis_id: 56218344
