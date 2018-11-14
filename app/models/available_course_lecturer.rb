@@ -6,7 +6,7 @@ class AvailableCourseLecturer < ApplicationRecord
   belongs_to :lecturer, class_name: 'Employee'
 
   # validations
-  validates :coordinator, inclusion: { in: [true, false] }
+  validates :coordinator, presence: true, inclusion: { in: [true, false] }
 
   # scopes
   scope :coordinator, -> { where(coordinator: true) }
