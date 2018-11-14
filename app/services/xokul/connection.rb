@@ -9,7 +9,7 @@ module Xokul
 
     # rubocop:disable Metrics/MethodLength
     def self.request(path, params: {}, **http_options)
-      http_options[:open_timeout] ||= http_options[:read_timeout] ||= 5 if Rails.env.test?
+      http_options[:open_timeout] ||= http_options[:read_timeout] ||= 10 if Rails.env.test?
 
       response = RestClient.get(
         URI.join(BASE_URL, path).to_s,
