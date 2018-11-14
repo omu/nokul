@@ -8,6 +8,7 @@ class Employee < ApplicationRecord
   has_many :units, through: :duties
   has_many :positions, through: :duties
   has_many :administrative_functions, through: :duties
+  has_many :available_course_lecturers, foreign_key: :lecturer_id, inverse_of: :lecturer, dependent: :destroy
 
   # validations
   validates :title_id, uniqueness: { scope: %i[user active] }

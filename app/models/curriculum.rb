@@ -21,6 +21,7 @@ class Curriculum < ApplicationRecord
   has_many :semesters, class_name: 'CurriculumSemester',
                        inverse_of: :curriculum, dependent: :destroy
   has_many :courses, through: :semesters
+  has_many :available_courses, dependent: :destroy
 
   # nested models
   accepts_nested_attributes_for :semesters, reject_if: :all_blank, allow_destroy: true
