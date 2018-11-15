@@ -27,6 +27,7 @@ tr:
         type: Tür
       calendar_type: &calendar_type_attributes
         name: Takvim Türü
+        unit_types: Birim Türleri
     enums:
       academic_term:
         terms:

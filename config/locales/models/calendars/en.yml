@@ -27,6 +27,7 @@ en:
         type: Type
       calendar_type: &calendar_type_attributes
         name: Calendar Type
+        unit_types: Unit Types
     enums:
       academic_term:
         terms:
