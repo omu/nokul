@@ -16,6 +16,9 @@
               <%= f.input :name %>
             </div>
             <div class='form-group col-sm-12'>
+              <%= f.association :unit_types, as: :check_boxes %>
+            </div>
+            <div class='form-group col-sm-12'>
               <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
               <%= link_to_back(:back) %>
             </div>
