@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class Curriculum < ApplicationRecord
+  attr_accessor :number_of_semesters, :type
+
   # search
   include PgSearch
   include DynamicSearch
@@ -16,10 +18,12 @@ class Curriculum < ApplicationRecord
 
   # relations
   belongs_to :unit
-  has_many :unit_curriculums, dependent: :destroy
-  has_many :programs, through: :unit_curriculums, source: :unit
+  has_many :curriculum_programs, dependent: :destroy
+  has_many :programs, through: :curriculum_programs,
+                      source: :unit
   has_many :semesters, class_name: 'CurriculumSemester',
-                       inverse_of: :curriculum, dependent: :destroy
+                       inverse_of: :curriculum,
+                       dependent: :destroy
   has_many :courses, through: :semesters
   has_many :available_courses, dependent: :destroy
 
@@ -33,4 +37,12 @@ class Curriculum < ApplicationRecord
 
   # enumerations
   enum status: { passive: 0, active: 1 }
+
+  # custom methods
+  def build_semesters(number_of_semesters: 0, type: :periodic)
+    divisor = (type.to_sym == :periodic ? 2 : 1)
+    (1..number_of_semesters.to_i).each do |sequence|
+      semesters.build(sequence: sequence, year: (sequence.to_f / divisor).round)
+    end
+  end
 end
