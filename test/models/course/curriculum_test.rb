@@ -63,4 +63,17 @@ class CurriculumTest < ActiveSupport::TestCase
       end
     end
   end
+
+  # custom methods
+  test 'build_semester method' do
+    @curriculum.semesters.destroy_all
+    @curriculum.build_semesters(number_of_semesters: 8, type: :periodic)
+    assert_equal 8, @curriculum.semesters.size
+    assert_equal [1, 2, 3, 4], @curriculum.semesters.pluck(:year).uniq
+
+    @curriculum.semesters = []
+    @curriculum.build_semesters(number_of_semesters: 2, type: :yearly)
+    assert_equal 2, @curriculum.semesters.size
+    assert_equal [1, 2], @curriculum.semesters.pluck(:year).uniq
+  end
 end

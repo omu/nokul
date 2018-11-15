@@ -29,9 +29,11 @@ tr:
         programs: Programlar
         status: Durumu
         unit: Birim
+        number_of_semesters: Oluşturulacak Dönem Sayısı
+        type: Dönem Oluşturma Türü
       curriculum_semester:
-        name: Yarıyıl Adı
-        sequence: Sıra
+        sequence: Dönem Sırası
+        year: Yıl
       curriculum_semester_course: &curriculum_semester_course_attributes
         course: Ders
         ects: AKTS

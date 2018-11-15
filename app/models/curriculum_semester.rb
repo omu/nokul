@@ -1,14 +1,18 @@
 # frozen_string_literal: true
 
 class CurriculumSemester < ApplicationRecord
+  MAX_NUMBER_OF_SEMESTERS = 12
+
   # relations
   has_many :curriculum_semester_courses, dependent: :destroy
   has_many :courses, through: :curriculum_semester_courses
   belongs_to :curriculum, counter_cache: :semesters_count, inverse_of: :semesters
 
   # validations
-  validates :name, presence: true, uniqueness: { scope: :curriculum_id }
-  validates :sequence, numericality: { greater_than: 0 }, uniqueness: { scope: :curriculum_id }
+  validates :sequence, numericality: { greater_than: 0 },
+                       uniqueness: { scope: :curriculum_id }
+  validates :year, numericality: { greater_than: 0 },
+                   uniqueness: { scope: %i[sequence curriculum_id] }
 
   # custom methods
   def available_courses(add_courses: [])
