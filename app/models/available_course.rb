@@ -6,4 +6,7 @@ class AvailableCourse < ApplicationRecord
   belongs_to :curriculum
   belongs_to :course
   has_many :groups, class_name: 'AvailableCourseGroup', dependent: :destroy
+
+  # validations
+  validates :course, uniqueness: { scope: %i[academic_term curriculum] }
 end
