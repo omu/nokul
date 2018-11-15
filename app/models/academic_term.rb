@@ -13,4 +13,7 @@ class AcademicTerm < ApplicationRecord
 
   # enums
   enum term: { fall: 0, spring: 1, summer: 2 }
+
+  # scopes
+  scope :active, -> { where(active: true) }
 end

@@ -12,4 +12,7 @@ class CalendarEvent < ApplicationRecord
 
   # delegates
   delegate :name, to: :calendar_title, prefix: :calendar_title
+
+  # scopes
+  scope :active, -> { joins(:term).where('academic_terms.active') }
 end
