@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_13_144919) do
+ActiveRecord::Schema.define(version: 2018_11_15_115714) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -284,6 +284,13 @@ ActiveRecord::Schema.define(version: 2018_11_13_144919) do
     t.index ["unit_id"], name: "index_courses_on_unit_id"
   end
 
+  create_table "curriculum_programs", force: :cascade do |t|
+    t.bigint "unit_id"
+    t.bigint "curriculum_id"
+    t.index ["curriculum_id"], name: "index_curriculum_programs_on_curriculum_id"
+    t.index ["unit_id"], name: "index_curriculum_programs_on_unit_id"
+  end
+
   create_table "curriculum_semester_courses", force: :cascade do |t|
     t.bigint "course_id"
     t.bigint "curriculum_semester_id"
@@ -295,11 +302,11 @@ ActiveRecord::Schema.define(version: 2018_11_13_144919) do
   end
 
   create_table "curriculum_semesters", force: :cascade do |t|
-    t.string "name", limit: 255, null: false
     t.integer "sequence"
     t.bigint "curriculum_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "year"
     t.index ["curriculum_id"], name: "index_curriculum_semesters_on_curriculum_id"
   end
 
@@ -577,13 +584,6 @@ ActiveRecord::Schema.define(version: 2018_11_13_144919) do
     t.index ["unit_id"], name: "index_unit_calendar_events_on_unit_id"
   end
 
-  create_table "unit_curriculums", force: :cascade do |t|
-    t.bigint "unit_id"
-    t.bigint "curriculum_id"
-    t.index ["curriculum_id"], name: "index_unit_curriculums_on_curriculum_id"
-    t.index ["unit_id"], name: "index_unit_curriculums_on_unit_id"
-  end
-
   create_table "unit_instruction_languages", force: :cascade do |t|
     t.string "name", limit: 255, null: false
     t.integer "code", null: false
@@ -649,7 +649,7 @@ ActiveRecord::Schema.define(version: 2018_11_13_144919) do
     t.datetime "last_sign_in_at"
     t.inet "current_sign_in_ip"
     t.inet "last_sign_in_ip"
-    t.datetime "password_changed_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.datetime "password_changed_at", default: -> { "now()" }, null: false
     t.string "slug", limit: 255
     t.string "preferred_language", limit: 2, default: "tr"
     t.integer "articles_count", default: 0, null: false
