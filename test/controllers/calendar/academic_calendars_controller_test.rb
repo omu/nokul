@@ -30,7 +30,7 @@ module Calendar
         post academic_calendars_path, params: {
           academic_calendar: {
             name: 'Test Academic Calendar', academic_term_id: academic_terms(:spring_2018_2019).id,
-            calendar_type_id: calendar_types(:yüksek_lisans).id, senate_decision_date: '04.07.2018',
+            calendar_type_id: calendar_types(:yuksek_lisans).id, senate_decision_date: '04.07.2018',
             senate_decision_no: 'SK001/4', description: 'Açıklama',
             calendar_events_attributes: {
               0 => {
