@@ -111,3 +111,9 @@ nineteen:
   calendar_title: twenty_three
   start_date: 2018-02-02 23:59:59
   end_date:
+
+twenty:
+  academic_calendar: lisans_calendar_spring_2017_2018
+  calendar_title: three
+  start_date: 2018-01-25 08:00:00
+  end_date: 2018-04-18 08:00:00

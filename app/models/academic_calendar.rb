@@ -24,6 +24,7 @@ class AcademicCalendar < ApplicationRecord
 
   # delegates
   delegate :name, to: :calendar_type, prefix: :type
+  delegate :active?, to: :academic_term
 
   # scopes
   scope :active, -> { joins(:academic_term).merge(AcademicTerm.where(active: true)) }
