@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_13_144919) do
+ActiveRecord::Schema.define(version: 2018_11_15_113320) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -190,6 +190,15 @@ ActiveRecord::Schema.define(version: 2018_11_13_144919) do
     t.string "name", limit: 255, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "calendar_unit_types", force: :cascade do |t|
+    t.bigint "calendar_type_id"
+    t.bigint "unit_type_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["calendar_type_id"], name: "index_calendar_unit_types_on_calendar_type_id"
+    t.index ["unit_type_id"], name: "index_calendar_unit_types_on_unit_type_id"
   end
 
   create_table "certifications", force: :cascade do |t|
@@ -649,7 +658,7 @@ ActiveRecord::Schema.define(version: 2018_11_13_144919) do
     t.datetime "last_sign_in_at"
     t.inet "current_sign_in_ip"
     t.inet "last_sign_in_ip"
-    t.datetime "password_changed_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.datetime "password_changed_at", default: -> { "now()" }, null: false
     t.string "slug", limit: 255
     t.string "preferred_language", limit: 2, default: "tr"
     t.integer "articles_count", default: 0, null: false
@@ -666,6 +675,8 @@ ActiveRecord::Schema.define(version: 2018_11_13_144919) do
   add_foreign_key "available_course_lecturers", "employees", column: "lecturer_id"
   add_foreign_key "calendar_title_types", "calendar_titles", column: "title_id"
   add_foreign_key "calendar_title_types", "calendar_types", column: "type_id"
+  add_foreign_key "calendar_unit_types", "calendar_types"
+  add_foreign_key "calendar_unit_types", "unit_types"
   add_foreign_key "courses", "languages"
   add_foreign_key "curriculum_semester_courses", "courses"
   add_foreign_key "curriculum_semester_courses", "curriculum_semesters"
