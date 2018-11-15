@@ -6,7 +6,7 @@ module Calendar
   class CalendarTypesControllerTest < ActionDispatch::IntegrationTest
     setup do
       sign_in users(:john)
-      @calendar_type = calendar_types(:lisans_önlisans)
+      @calendar_type = calendar_types(:lisans_onlisans)
     end
 
     test 'should get index' do

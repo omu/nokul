@@ -1,7 +1,7 @@
 one:
-  calendar_type: lisans_önlisans
+  calendar_type: lisans_onlisans
   unit_type: undergraduate
 
 two:
-  calendar_type: yüksek_lisans
+  calendar_type: yuksek_lisans
   unit_type: master
