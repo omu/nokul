@@ -1,6 +1,6 @@
 # App Upgrade
 
-**Run only if you know what you are doing!**
+Bu işlem yalnızca repository yöneticileri tarafından gerçekleştirilebilir:
 
 ```bash
 bin/rails app:update
