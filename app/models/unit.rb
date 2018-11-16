@@ -38,6 +38,8 @@ class Unit < ApplicationRecord
   has_many :courses, dependent: :nullify
   has_many :registration_documents, dependent: :destroy
   has_many :prospective_students, dependent: :destroy
+  has_many :calendar_units, dependent: :destroy
+  has_many :academic_calendars, through: :calendar_units
 
   # validations
   validates :yoksis_id, uniqueness: true, allow_blank: true, numericality: { only_integer: true }, length: { is: 6 }
