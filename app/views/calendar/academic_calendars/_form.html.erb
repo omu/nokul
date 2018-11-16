@@ -31,6 +31,10 @@
               <%= f.input :description %>
             </div>
             <div class='form-group col-sm-12'>
+              <%= f.association :units, collection: Unit.where(unit_type: f.object.calendar_type).order(:name),
+                                        label_method: :names_depth_cache %>
+            </div>
+            <div class='form-group col-sm-12'>
               <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
               <%= link_to_back(:back) %>
             </div>
@@ -53,3 +57,10 @@
 </div>
 
 <%= javascript_include_tag 'shared/cocoon' %>
+<script type='text/javascript'>
+  $(document).ready(function() {
+    $('#academic_calendar_unit_ids').select2({
+      multiple: true
+    });
+  });
+</script>

@@ -8,6 +8,7 @@ en:
         name: Calendar Name
         senate_decision_date: Senate Decision Date
         senate_decision_no: Senate Decision No
+        units: Units
       academic_term: &academic_term_attributes
         active: Active Status
         end_of_term: End of Term
