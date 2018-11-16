@@ -12,6 +12,8 @@ class AcademicCalendarTest < ActiveSupport::TestCase
     calendar_events
     academic_term
     calendar_type
+    calendar_units
+    units
     unit_calendar_events
   ].each do |property|
     test "an academic calendar can communicate with #{property}" do

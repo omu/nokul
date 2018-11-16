@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_15_113320) do
+ActiveRecord::Schema.define(version: 2018_11_15_132317) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -199,6 +199,13 @@ ActiveRecord::Schema.define(version: 2018_11_15_113320) do
     t.datetime "updated_at", null: false
     t.index ["calendar_type_id"], name: "index_calendar_unit_types_on_calendar_type_id"
     t.index ["unit_type_id"], name: "index_calendar_unit_types_on_unit_type_id"
+  end
+
+  create_table "calendar_units", force: :cascade do |t|
+    t.bigint "academic_calendar_id"
+    t.bigint "unit_id"
+    t.index ["academic_calendar_id"], name: "index_calendar_units_on_academic_calendar_id"
+    t.index ["unit_id"], name: "index_calendar_units_on_unit_id"
   end
 
   create_table "certifications", force: :cascade do |t|
@@ -677,6 +684,8 @@ ActiveRecord::Schema.define(version: 2018_11_15_113320) do
   add_foreign_key "calendar_title_types", "calendar_types", column: "type_id"
   add_foreign_key "calendar_unit_types", "calendar_types"
   add_foreign_key "calendar_unit_types", "unit_types"
+  add_foreign_key "calendar_units", "academic_calendars"
+  add_foreign_key "calendar_units", "units"
   add_foreign_key "courses", "languages"
   add_foreign_key "curriculum_semester_courses", "courses"
   add_foreign_key "curriculum_semester_courses", "curriculum_semesters"
