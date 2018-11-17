@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_16_121953) do
+ActiveRecord::Schema.define(version: 2018_11_17_090506) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -582,19 +582,6 @@ ActiveRecord::Schema.define(version: 2018_11_16_121953) do
     t.string "name", limit: 255, null: false
     t.string "code", limit: 255, null: false
     t.string "branch", limit: 255, null: false
-  end
-
-  create_table "unit_calendar_events", force: :cascade do |t|
-    t.datetime "start_date", null: false
-    t.datetime "end_date"
-    t.bigint "academic_calendar_id"
-    t.bigint "unit_id"
-    t.bigint "calendar_title_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["academic_calendar_id"], name: "index_unit_calendar_events_on_academic_calendar_id"
-    t.index ["calendar_title_id"], name: "index_unit_calendar_events_on_calendar_title_id"
-    t.index ["unit_id"], name: "index_unit_calendar_events_on_unit_id"
   end
 
   create_table "unit_curriculums", force: :cascade do |t|

@@ -15,7 +15,6 @@ class AcademicCalendar < ApplicationRecord
   has_many :calendar_events, dependent: :destroy
   has_many :calendar_units, dependent: :destroy
   has_many :units, through: :calendar_units
-  has_many :unit_calendar_events, dependent: :destroy
   accepts_nested_attributes_for :calendar_events, allow_destroy: true
 
   # validations
