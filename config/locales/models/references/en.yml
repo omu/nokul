@@ -51,7 +51,7 @@ en:
       update:
         success: City successfully updated.
     common:
-      countries: Ülkeler
+      countries: Countries
     countries:
       create:
         success: Country successfully created.
