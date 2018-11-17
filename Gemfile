@@ -78,6 +78,7 @@ group :development do
   gem 'fit-commit'
   gem 'letter_opener'
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'lol_dba'
   gem 'pry-rails'
   gem 'rack-mini-profiler'
   gem 'ruby-progressbar'
