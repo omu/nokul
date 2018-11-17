@@ -6,7 +6,7 @@ namespace :database do
   desc 'Scans missing or unnecessary database indexes'
   task :index do |task|
     puts "########### #{task.full_comment} ###########"
-    sh 'rake db:find_indexes', verbose: false
+    Rake::Task['db:find_indexes'].invoke
   end
 
   desc 'Runs all database tasks'
