@@ -61,6 +61,7 @@ group :development, :test do
   gem 'bundler-audit'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'dotenv-rails'
+  gem 'lol_dba'
   gem 'rubocop'
   gem 'simplecov', require: false
 end
@@ -78,7 +79,6 @@ group :development do
   gem 'fit-commit'
   gem 'letter_opener'
   gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'lol_dba'
   gem 'pry-rails'
   gem 'rack-mini-profiler'
   gem 'ruby-progressbar'
