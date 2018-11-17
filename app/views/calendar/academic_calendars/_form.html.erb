@@ -57,10 +57,4 @@
 </div>
 
 <%= javascript_include_tag 'shared/cocoon' %>
-<script type='text/javascript'>
-  $(document).ready(function() {
-    $('#academic_calendar_unit_ids').select2({
-      multiple: true
-    });
-  });
-</script>
+<%= render 'select2' %>
