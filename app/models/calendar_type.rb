@@ -7,6 +7,7 @@ class CalendarType < ApplicationRecord
   has_many :academic_calendars, dependent: :destroy
   has_many :calendar_unit_types, dependent: :destroy
   has_many :unit_types, through: :calendar_unit_types
+  has_many :calendar_events, through: :academic_calendars
 
   # validations
   validates :name, presence: true, uniqueness: true

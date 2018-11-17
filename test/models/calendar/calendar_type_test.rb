@@ -14,6 +14,7 @@ class CalendarTypeTest < ActiveSupport::TestCase
     academic_calendars
     calendar_unit_types
     unit_types
+    calendar_events
   ].each do |property|
     test "a calendar type can communicate with #{property}" do
       @calendar_type.send(property)

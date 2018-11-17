@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_15_132317) do
+ActiveRecord::Schema.define(version: 2018_11_16_121953) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -166,8 +166,12 @@ ActiveRecord::Schema.define(version: 2018_11_15_132317) do
     t.bigint "calendar_title_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "calendar_type_id"
+    t.bigint "academic_term_id"
     t.index ["academic_calendar_id"], name: "index_calendar_events_on_academic_calendar_id"
+    t.index ["academic_term_id"], name: "index_calendar_events_on_academic_term_id"
     t.index ["calendar_title_id"], name: "index_calendar_events_on_calendar_title_id"
+    t.index ["calendar_type_id"], name: "index_calendar_events_on_calendar_type_id"
   end
 
   create_table "calendar_title_types", force: :cascade do |t|
@@ -680,6 +684,8 @@ ActiveRecord::Schema.define(version: 2018_11_15_132317) do
 
   add_foreign_key "available_course_lecturers", "available_course_groups", column: "group_id"
   add_foreign_key "available_course_lecturers", "employees", column: "lecturer_id"
+  add_foreign_key "calendar_events", "academic_terms"
+  add_foreign_key "calendar_events", "calendar_types"
   add_foreign_key "calendar_title_types", "calendar_titles", column: "title_id"
   add_foreign_key "calendar_title_types", "calendar_types", column: "type_id"
   add_foreign_key "calendar_unit_types", "calendar_types"
