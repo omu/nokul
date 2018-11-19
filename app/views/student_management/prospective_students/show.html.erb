@@ -46,23 +46,23 @@
               </td>
             </tr>
 
-            <% @prospective_student.unit.registration_documents.each do |registration_document| %>
-              <tr>
+            <% @registration_documents.each do |registration_document| %>
+              <tr class="table-danger">
                 <td><%= registration_document.document.name %></td>
-                <td><%= check_box("post", "validated") %></td>
-                </td>
+                <td><%= check_box('post', 'validated', { class: 'registration-documents' }) %></td>
               </tr>
             <% end %>
           </tbody>
         </table>
       </div>
       <div class="card-footer">
-         <% if @prospective_student.can_permanently_register? %>
-          <%= link_to register_prospective_student_path, class: "btn btn-block btn-success" do %>
+        <% needed_documents = @registration_documents.present? %>
+        <% if @prospective_student.can_permanently_register? %>
+          <%= link_to register_prospective_student_path, class: "btn btn-block btn-success registration-button #{'disabled' if needed_documents }" do %>
             <%= t('.permanently_register') %>
           <% end %>
         <% elsif @prospective_student.can_temporarily_register? %>
-          <%= link_to register_prospective_student_path, class: "btn btn-block btn-warning" do %>
+          <%= link_to register_prospective_student_path, class: "btn btn-block btn-warning registration-button #{'disabled' if needed_documents }" do %>
             <%= t('.temporarily_register') %>
           <% end %>
         <% else %>
@@ -221,3 +221,22 @@
   </div>
 </div>
 
+<script type='text/javascript'>
+  $(document).ready(function() {
+    $(".registration-documents").click(function(){
+      table = $(this).parent().parent();
+      if (this.checked == true ) {
+        table.removeClass('table-danger').addClass('table-success');
+      } else {
+        table.removeClass('table-success').addClass('table-danger');
+      }
+    });
+    $(".registration-documents").change(function(){
+      if ($('.registration-documents:checked').length == $('.registration-documents').length) {
+        $('.registration-button').removeClass('disabled');
+      } else {
+        $('.registration-button').addClass('disabled');
+      }
+    });
+  });
+</script>
