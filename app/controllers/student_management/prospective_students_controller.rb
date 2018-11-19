@@ -13,7 +13,9 @@ module StudentManagement
       @pagy, @prospective_students = pagy(prospective_students)
     end
 
-    def show; end
+    def show
+      @registration_documents = @prospective_student.unit.registration_documents.includes(:document)
+    end
 
     def register
       prospective_student = ProspectiveStudentService.new(@prospective_student)
