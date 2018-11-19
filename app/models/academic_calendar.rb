@@ -22,6 +22,7 @@ class AcademicCalendar < ApplicationRecord
   validates :senate_decision_date, presence: true
   validates :senate_decision_no, presence: true
   validates :academic_term, uniqueness: { scope: :calendar_type }
+  validates :units, presence: true, on: :update
 
   # delegates
   delegate :name, to: :calendar_type, prefix: :type

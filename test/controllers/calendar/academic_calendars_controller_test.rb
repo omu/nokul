@@ -61,7 +61,8 @@ module Calendar
       patch academic_calendar_path(academic_calendar),
             params: {
               academic_calendar: {
-                name: 'Test Academic Calendar Test', senate_decision_no: 'SK001/5', description: 'Açıklama Test'
+                name: 'Test Academic Calendar Test', senate_decision_no: 'SK001/5', description: 'Açıklama Test',
+                unit_ids: [units(:fen_bilgisi_ogretmenligi_programi).id]
               }
             }
 
@@ -70,6 +71,7 @@ module Calendar
       assert_equal 'Test Academic Calendar Test', academic_calendar.name
       assert_equal 'SK001/5', academic_calendar.senate_decision_no
       assert_equal 'Açıklama Test', academic_calendar.description
+      assert_includes academic_calendar.units.ids, units(:fen_bilgisi_ogretmenligi_programi).id
       assert_redirected_to academic_calendar_path(academic_calendar)
       assert_equal translate('.update.success'), flash[:notice]
     end
