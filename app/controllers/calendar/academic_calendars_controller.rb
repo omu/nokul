@@ -55,8 +55,7 @@ module Calendar
               :name, :year, :academic_term_id, :calendar_type_id,
               :senate_decision_date, :senate_decision_no, :description,
               calendar_events_attributes: %i[
-                id academic_calendar_id calendar_type_id academic_term_id
-                calendar_title_id start_date end_date _destroy
+                id calendar_type_id academic_term_id calendar_title_id start_date end_date _destroy
               ],
               unit_ids: []
             )
