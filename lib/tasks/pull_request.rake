@@ -2,7 +2,8 @@
 
 desc 'Runs all necessary checks before a pull request'
 task :pull_request do
-  Rake::Task['quality:rails'].invoke
+  Rake::Task['quality:all'].invoke
   Rake::Task['security:all'].invoke
-  sh 'bundle exec rake test'
+  Rake::Task['database:all'].invoke
+  Rake::Task['test:all'].invoke
 end
