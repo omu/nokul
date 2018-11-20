@@ -6,6 +6,8 @@ class UnitType < ApplicationRecord
 
   # relations
   has_many :units, dependent: :nullify
+  has_many :calendar_unit_types, dependent: :destroy
+  has_many :calendar_types, through: :calendar_unit_types
 
   # enums
   enum group: {
