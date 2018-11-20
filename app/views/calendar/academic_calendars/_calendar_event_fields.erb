@@ -1,7 +1,7 @@
 <div class='nested-fields'>
   <div class='card card-default'>
     <div class='card-body bg-light'>
-      <%= f.input :calendar_title_id, collection: @academic_calendar.calendar_type.titles %>
+      <%= f.input :calendar_title_id, collection: @academic_calendar.calendar_type.titles, input_html: { class: 'select_search_class' } %>
       <%= f.input :start_date, start_year: 2005 %>
       <%= f.input :end_date, start_year: 2005, include_blank: true %>
     </div>

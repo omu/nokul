@@ -10,6 +10,17 @@
       </div>
       <div class='card-body'>
         <table class='table table-responsive-sm table-striped'>
+          <tbody>
+            <tr>
+              <th><%= t('.unit_types') %></th>
+              <td><%= @calendar_type.unit_types.map(&:name).join(', ')%></td>
+            </tr>
+          </tbody>
+        </table>
+        <hr>
+      </div>
+      <div class='card-body'>
+        <table class='table table-responsive-sm table-striped'>
           <thead>
             <tr>
               <th><%= t('.calendar_titles') %></th>
