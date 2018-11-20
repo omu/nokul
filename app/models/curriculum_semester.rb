@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class CurriculumSemester < ApplicationRecord
-  MAX_NUMBER_OF_SEMESTERS = 12
-
   # relations
   has_many :curriculum_semester_courses, dependent: :destroy
   has_many :courses, through: :curriculum_semester_courses
