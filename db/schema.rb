@@ -199,8 +199,6 @@ ActiveRecord::Schema.define(version: 2018_11_17_090506) do
   create_table "calendar_unit_types", force: :cascade do |t|
     t.bigint "calendar_type_id"
     t.bigint "unit_type_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.index ["calendar_type_id"], name: "index_calendar_unit_types_on_calendar_type_id"
     t.index ["unit_type_id"], name: "index_calendar_unit_types_on_unit_type_id"
   end
