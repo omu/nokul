@@ -31,7 +31,8 @@ module CourseManagement
       assert_difference('Curriculum.count') do
         post index_path, params: {
           curriculum: {
-            name: 'Test Create Curriculum', unit_id: @unit.id, status: :active
+            name: 'Test Create Curriculum', unit_id: @unit.id, status: :active,
+            number_of_semesters: 8, type: :periodic
           }
         }
       end
@@ -40,6 +41,7 @@ module CourseManagement
 
       assert_equal 'Test Create Curriculum', curriculum.name
       assert curriculum.active?
+      assert_equal 8, curriculum.semesters.count
       assert_redirected_to index_path
       assert_equal translate('.create.success'), flash[:notice]
     end

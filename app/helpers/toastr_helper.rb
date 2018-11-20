@@ -2,13 +2,9 @@
 
 module ToastrHelper
   def toastr_flash_class(type)
-    case type
-    when 'alert'
-      'toastr.error'
-    when 'notice'
-      'toastr.success'
-    else
-      'toastr.info'
-    end
+    {
+      'alert' => 'toastr.error',
+      'notice' => 'toastr.success'
+    }.fetch(type, 'toastr.info')
   end
 end
