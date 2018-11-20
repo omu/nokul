@@ -33,7 +33,7 @@
           </div>
           <% if academic_calendar.persisted?  %>
             <div class='form-group col-sm-12'>
-              <%= f.association :units, collection: Unit.where(unit_type: f.object.calendar_type.unit_type_ids),
+              <%= f.association :units, collection: Unit.active.where(unit_type: f.object.calendar_type.unit_type_ids),
                                         label_method: :names_depth_cache, required: true %>
             </div>
             <hr \>
