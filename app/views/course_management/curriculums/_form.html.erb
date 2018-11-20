@@ -31,10 +31,16 @@
             </div>
             <% if curriculum.new_record? %>
               <div class='col-sm-6'>
-                <%= f.input :number_of_semesters, as: :integer %>
+                <%= f.input :number_of_semesters,
+                            collection: (1..Curriculum::MAX_NUMBER_OF_SEMESTERS),
+                            selected: 12,
+                            include_blank: false %>
               </div>
               <div class='col-sm-6'>
-                <%= f.input :type, collection: collection_options_for_select(%i[periodic yearly]) %>
+                <%= f.input :type,
+                            collection: collection_options_for_select(%i[periodic yearly]),
+                            selected: :periodic,
+                            include_blank: false %>
               </div>
             <% end %>
           </div>

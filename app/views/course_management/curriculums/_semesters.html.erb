@@ -1,6 +1,6 @@
 <div class="row">
   <% semesters.each do |semester| %>
-    <div class="col-sm-<%=semesters.size > 1 ? 6 : 12 %>">
+    <div class="col-lg-<%=semesters.size > 1 ? 6 : 12 %> col-md-12">
       <div class="card border-success mb-3">
         <div class="card-header">
           <%= fa_icon 'book' %><strong><%= "#{semester.sequence}. #{t('semester')}" %></strong>

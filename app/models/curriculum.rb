@@ -3,6 +3,10 @@
 class Curriculum < ApplicationRecord
   attr_accessor :number_of_semesters, :type
 
+  # constants
+  MAX_NUMBER_OF_SEMESTERS = 12
+  MAX_NUMBER_OF_YEARS = 6
+
   # search
   include PgSearch
   include DynamicSearch
