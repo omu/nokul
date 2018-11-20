@@ -199,8 +199,6 @@ ActiveRecord::Schema.define(version: 2018_11_17_090506) do
   create_table "calendar_unit_types", force: :cascade do |t|
     t.bigint "calendar_type_id"
     t.bigint "unit_type_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.index ["calendar_type_id"], name: "index_calendar_unit_types_on_calendar_type_id"
     t.index ["unit_type_id"], name: "index_calendar_unit_types_on_unit_type_id"
   end
@@ -304,6 +302,13 @@ ActiveRecord::Schema.define(version: 2018_11_17_090506) do
     t.index ["unit_id"], name: "index_courses_on_unit_id"
   end
 
+  create_table "curriculum_programs", force: :cascade do |t|
+    t.bigint "unit_id"
+    t.bigint "curriculum_id"
+    t.index ["curriculum_id"], name: "index_curriculum_programs_on_curriculum_id"
+    t.index ["unit_id"], name: "index_curriculum_programs_on_unit_id"
+  end
+
   create_table "curriculum_semester_courses", force: :cascade do |t|
     t.bigint "course_id"
     t.bigint "curriculum_semester_id"
@@ -315,11 +320,11 @@ ActiveRecord::Schema.define(version: 2018_11_17_090506) do
   end
 
   create_table "curriculum_semesters", force: :cascade do |t|
-    t.string "name", limit: 255, null: false
     t.integer "sequence"
     t.bigint "curriculum_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "year"
     t.index ["curriculum_id"], name: "index_curriculum_semesters_on_curriculum_id"
   end
 
@@ -582,13 +587,6 @@ ActiveRecord::Schema.define(version: 2018_11_17_090506) do
     t.string "name", limit: 255, null: false
     t.string "code", limit: 255, null: false
     t.string "branch", limit: 255, null: false
-  end
-
-  create_table "unit_curriculums", force: :cascade do |t|
-    t.bigint "unit_id"
-    t.bigint "curriculum_id"
-    t.index ["curriculum_id"], name: "index_unit_curriculums_on_curriculum_id"
-    t.index ["unit_id"], name: "index_unit_curriculums_on_unit_id"
   end
 
   create_table "unit_instruction_languages", force: :cascade do |t|

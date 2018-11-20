@@ -45,4 +45,17 @@
   </div>
 </div>
 
-<%= render 'semesters', semesters: @semesters %>
+<div class='row'>
+  <% @semesters.each do |year, semesters| %>
+    <div class="col-sm-12">
+      <div class="card border-success mb-3">
+        <div class="card-header">
+          <%= fa_icon 'book' %><strong><%= "#{year}. #{t('year')}" %></strong>
+        </div>
+        <div class="card-body">
+          <%= render 'semesters', semesters: semesters %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
