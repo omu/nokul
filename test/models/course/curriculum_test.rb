@@ -7,6 +7,16 @@ class CurriculumTest < ActiveSupport::TestCase
     @curriculum = curriculums(:one)
   end
 
+  # constants
+  {
+    MAX_NUMBER_OF_SEMESTERS: 12,
+    MAX_NUMBER_OF_YEARS: 6
+  }.each do |constant, value|
+    test "should have a #{constant} constant" do
+      assert_equal Curriculum.const_get(constant), value
+    end
+  end
+
   # relations
   %i[
     unit
