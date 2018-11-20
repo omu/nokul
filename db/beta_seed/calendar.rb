@@ -34,11 +34,8 @@ CalendarType.create(name: 'Yüksek Lisans')
 CalendarType.create(name: 'Ali Fuat Başgil Hukuk Fakültesi')
 CalendarType.create(name: 'Yabancı Diller Yüksekokulu')
 CalendarType.create(name: 'Tıp Fakültesi')
-CalendarType.create(name: 'Diş Hekimliği Fakültesi (1-2-3. Sınıflar)')
-CalendarType.create(name: 'Diş Hekimliği Fakültesi (4-5. Sınıflar)')
+CalendarType.create(name: 'Diş Hekimliği Fakültesi')
 CalendarType.create(name: 'Veteriner Fakültesi')
-CalendarType.create(name: 'UZEM Önlisans/Lisans')
-CalendarType.create(name: 'UZEM Lisansüstü')
 CalendarType.create(name: 'Yaz Dönemi')
 CalendarType.create(name: 'Öğrenci')
 CalendarTitleType.create(type: CalendarType.first, title: CalendarTitle.all.sample, status: 'active')
@@ -65,6 +62,13 @@ CalendarTitleType.create(type: CalendarType.first, title: CalendarTitle.all.samp
 CalendarTitleType.create(type: CalendarType.first, title: CalendarTitle.all.sample, status: 'passive')
 CalendarTitleType.create(type: CalendarType.first, title: CalendarTitle.all.sample, status: 'passive')
 CalendarTitleType.create(type: CalendarType.first, title: CalendarTitle.all.sample, status: 'passive')
+AcademicTerm.create(
+  year: '2017-2018',
+  term: 'spring',
+  start_of_term: '05.09.2017',
+  end_of_term: '15.06.2018',
+  active: true
+)
 AcademicCalendar.create(
   name: '2017-2018 Eğitim Öğretim Yılı Akademik Takvimi',
   academic_term: AcademicTerm.first,

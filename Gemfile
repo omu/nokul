@@ -61,6 +61,7 @@ group :development, :test do
   gem 'bundler-audit'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'dotenv-rails'
+  gem 'lol_dba'
   gem 'rubocop'
   gem 'simplecov', require: false
 end

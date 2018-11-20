@@ -1,20 +1,24 @@
 # frozen_string_literal: true
 
 namespace :quality do
-  desc 'Runs Rails specific code quality testing'
-  task :rails do
-    sh 'bundle exec rubocop -f fu -R -D'
+  Rake::TaskManager.record_task_metadata = true
+
+  desc 'Runs static code analyzer and style checker'
+  task :rubocop do |task|
+    puts "########### #{task.full_comment} ###########"
+    sh 'bundle exec rubocop -f fu -R -D --safe-auto-correct', verbose: false
   end
 
   desc 'Checks for suspicious executables'
-  task :executables do
+  task :executables do |task|
+    puts "########### #{task.full_comment} ###########"
     suspicious_executables =
       `find . -type f -executable -print | grep -Ev '^[.]/([.]git|vendor|node_modules|tmp|log|bin|sbin|scripts)'`
       .split("\n").reject do |filename|
         File.open(filename).first.start_with? '#!'
       end
 
-    next if suspicious_executables.empty?
+    next puts 'No suspicious files found! Yay!' if suspicious_executables.empty?
 
     warn 'Files with the executable bit set found:'
 
@@ -36,5 +40,5 @@ namespace :quality do
   end
 
   desc 'Runs all quality tasks'
-  task all: %w[rails executables]
+  task all: %w[rubocop executables]
 end
