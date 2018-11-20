@@ -8,6 +8,7 @@ tr:
         name: Takvim Adı
         senate_decision_date: Senato Karar Tarihi
         senate_decision_no: Senato Karar No
+        units: Birimler
       academic_term: &academic_term_attributes
         active: Aktiflik Durumu
         end_of_term: Dönem Sonu
@@ -27,6 +28,7 @@ tr:
         type: Tür
       calendar_type: &calendar_type_attributes
         name: Takvim Türü
+        unit_types: Birim Türleri
     enums:
       academic_term:
         terms:
