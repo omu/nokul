@@ -1,11 +1,6 @@
 class AddYearAndRemoveNameToCurriculumSemester < ActiveRecord::Migration[5.2]
-  def up
+  def change
     add_column :curriculum_semesters, :year, :integer
-    remove_column :curriculum_semesters, :name
-  end
-
-  def down
-    add_column :curriculum_semesters, :name, :string, limit: 255
-    remove_column :curriculum_semesters, :year
+    remove_column :curriculum_semesters, :name, :string, limit: 255
   end
 end
