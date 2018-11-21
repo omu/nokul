@@ -1,5 +1,9 @@
 <div class='row'>
   <div class='col-sm-12'>
+    <div class="alert alert-light">
+      <%= link_to_back(:back) %>
+    </div>
+
     <div class='card'>
       <div class='card-header'>
         <%= fa_icon 'book' %>
@@ -9,38 +13,51 @@
         <%= simple_form_for(curriculum) do |f| %>
           <%= f.error_notification %>
           <div class='row'>
-            <div class='form-group col-sm-6'>
+            <div class='col-sm-6'>
               <%= f.input :name %>
             </div>
-            <div class='form-group col-sm-6'>
+            <div class='col-sm-6'>
               <%= f.association :unit,
                                 collection: Unit.active.curriculumable.order(:name),
                                 label_method: :names_depth_cache %>
             </div>
-            <div class='form-group col-sm-6'>
+            <div class='col-sm-6'>
               <%= f.association :programs,
                                 collection: f.object.new_record? ? [] : f.object.unit.children.programs %>
             </div>
-            <div class='form-group col-sm-6'>
+            <div class='col-sm-6'>
               <%= f.input :status,
                           collection: enum_options_for_select(f.object.class, :status) %>
             </div>
-          </div>
-
-          <h3><%= t('.semesters') %></h3>
-          <div id='semesters' class='mb-2'>
-            <%= f.simple_fields_for :semesters do |semester| %>
-              <%= render 'semester_fields', f: semester %>
+            <% if curriculum.new_record? %>
+              <div class='col-sm-6'>
+                <%= f.input :number_of_semesters,
+                            collection: (1..Curriculum::MAX_NUMBER_OF_SEMESTERS),
+                            selected: 12,
+                            include_blank: false %>
+              </div>
+              <div class='col-sm-6'>
+                <%= f.input :type,
+                            collection: collection_options_for_select(%i[periodic yearly]),
+                            selected: :periodic,
+                            include_blank: false %>
+              </div>
             <% end %>
-            <div class='links'>
-              <%= link_to_add_association f, :semesters, class: 'btn btn-success btn-sm' %>
-            </div>
           </div>
-
+          <% unless curriculum.new_record? %>
+            <h3><%= t('.semesters') %></h3>
+            <div id='semesters' class='mb-2'>
+              <%= f.simple_fields_for :semesters do |semester| %>
+                <%= render 'semester_fields', f: semester %>
+              <% end %>
+              <div class='links'>
+                <%= link_to_add_association f, :semesters, class: 'btn btn-success btn-sm' %>
+              </div>
+            </div>
+          <% end %>
           <div class='row'>
-            <div class='form-group col-sm-12'>
+            <div class='form-group col-sm-12 '>
               <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
-              <%= link_to_back(:back) %>
             </div>
           </div>
         <% end %>
