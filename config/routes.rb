@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     member do
       get :courses, defaults: { format: :json }
       get :programs, defaults: { format: :json }
+      get :curriculums, defaults: { format: :json }
     end
   end
 

@@ -3,7 +3,7 @@
 module CourseManagement
   class CurriculumsController < ApplicationController
     include PagyBackendWithHelpers
-    before_action :set_curriculum, only: %i[show edit update destroy]
+    before_action :set_curriculum, only: %i[show edit update destroy courses]
 
     def index
       curriculums = Curriculum.includes(:unit)
@@ -37,6 +37,11 @@ module CourseManagement
     def destroy
       message = @curriculum.destroy ? 'success' : 'error'
       redirect_with(message)
+    end
+
+    def courses
+      @courses = @curriculum.courses
+      render json: @courses
     end
 
     private

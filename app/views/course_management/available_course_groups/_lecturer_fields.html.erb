@@ -1,0 +1,19 @@
+<div class='row'>
+  <div class='nested-fields col-sm-12'>
+    <div class='card card-default'>
+      <div class='card-body bg-light'>
+        <div class="row">
+          <div class="col-sm-6">
+            <%= f.input :lecturer_id, collection: Employee.all.limit(10).pluck(:id) %>
+          </div>
+          <div class="col-sm-6">
+            <%= f.input :coordinator, collection: [[t('yes'), true] ,[t('no'), false]] %>
+          </div>
+        </div>
+      </div>
+      <div class='card-footer'>
+        <%= link_to_remove_association f, class: 'btn btn-danger btn-sm' %>
+      </div>
+    </div>
+  </div>
+</div>

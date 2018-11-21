@@ -1,6 +1,17 @@
 tr:
   activerecord:
     attributes:
+      available_course: &available_course_attributes
+        academic_term: Akademik Dönem
+        curriculum: Müfredat
+        course: Ders
+        unit: Birim
+      available_course_group: &available_course_group_attributes
+        name: Grup Adı
+        quota: Kontenjan
+        lecturer: Öğretim Elemanı
+        title: Ünvan
+        coordinator: Koordinatör
       course: &course_attributes
         code: Dersin Kodu
         credit: Kredi
@@ -50,12 +61,51 @@ tr:
           active: Aktif
           passive: Pasif
     models:
+      available_course: Açılan Ders
+      available_course_group: Grup
       course: Ders
       course_group_type: Ders Grup Türü
       course_unit_group: Ders Grubu
       curriculum: Müfreadat
       curriculum_semester_course: Müfreadat Yarıyıl Ders
   course_management:
+    available_courses:
+      create:
+        success: Açılan Ders başarıyla oluşturuldu.
+      destroy:
+        error: Açılan Ders silinirken bir hata oluştu.
+        success: Açılan Ders başarıyla silindi.
+      edit:
+        form_title: Açılan Dersi Düzenle
+      index:
+        <<: *available_course_attributes
+        add_new_available_course: Yeni Açılan Ders Ekle
+        available_courses: Açılan Dersler
+        group_count: Grup Sayısı
+      new:
+        form_title: Ders Oluştur
+      form:
+        unit: Birim
+      show:
+        <<: *available_course_attributes
+        <<: *available_course_group_attributes
+        lecturers: Öğretim Elemanları
+      update:
+        success: Açılan ders başarıyla güncellendi.
+    available_course_groups:
+      create:
+        success: Grup başarıyla oluşturuldu.
+      destroy:
+        error: Grup silinirken bir hata oluştu.
+        success: Grup başarıyla silindi.
+      edit:
+        form_title: Grubu Düzenle
+      form:
+        lecturers: Öğretim Elemanları
+      new:
+        form_title: Grup Oluştur
+      update:
+        success: Grup başarıyla güncellendi.
     course_group_types:
       create:
         success: Ders grup türü başarıyla oluşturuldu.
@@ -160,6 +210,10 @@ tr:
         success: Müfredat yarıyıl dersi başarıyla güncellendi.
   simple_form:
     labels:
+      available_course:
+        <<: *available_course_attributes
+      available_course_group:
+        <<: *available_course_group_attributes
       course:
         <<: *course_attributes
       curriculum:

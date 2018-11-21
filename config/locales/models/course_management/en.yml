@@ -1,6 +1,17 @@
 en:
   activerecord:
     attributes:
+      available_course: &available_course_attributes
+        academic_term: Academic Term
+        curriculum: Curriculum
+        course: Course
+        unit: Unit
+      available_course_group: &available_course_group_attributes
+        name: Group Name
+        quota: Quota
+        lecturer: Lecturer
+        title: Title
+        coordinator: Coordinator
       course: &course_attributes
         code: Code
         credit: Credit
@@ -50,12 +61,51 @@ en:
           active: Active
           passive: Passive
     models:
+      available_course: Available Course
+      available_course_group: Group
       course: Course
       course_group_type: Course Group Type
       course_unit_group: Course Group
       curriculum: Curriculum
       curriculum_semester_course: Curriculum Semester Course
   course_management:
+    available_courses:
+      create:
+        success: Available course created.
+      destroy:
+        error: An error occured when deleting the available course.
+        success: Available course successfully destroyed.
+      edit:
+        form_title: Update the Available Course
+      index:
+        <<: *available_course_attributes
+        add_new_available_course: Add a New Available Course
+        available_courses: Available Courses
+        group_count: Group Count
+      new:
+        form_title: Create an Available Course
+      form:
+        unit: Unit
+      show:
+        <<: *available_course_attributes
+        <<: *available_course_group_attributes
+        lecturers: Lecturers
+      update:
+        success: Available course successfully updated.
+    available_course_groups:
+      create:
+        success: Group course created.
+      destroy:
+        error: An error occured when deleting the group.
+        success: Group successfully destroyed.
+      edit:
+        form_title: Update the Group
+      form:
+        lecturers: Lecturers
+      new:
+        form_title: Create a Group
+      update:
+        success: Group successfully updated.
     course_group_types:
       create:
         success: Course group type created.
@@ -160,6 +210,10 @@ en:
         success: Curriculum semester course successfully updated.
   simple_form:
     labels:
+      available_course:
+        <<: *available_course_attributes
+      available_course_group:
+        <<: *available_course_group_attributes
       course:
         <<: *course_attributes
       curriculum:
