@@ -1,7 +1,7 @@
 lisans_calendar_fall_2017_2018:
   name: 2017-2018 EĞİTİM ÖĞRETİM YILI AKADEMİK TAKVİMİ
   academic_term: fall_2017_2018
-  calendar_type: lisans_önlisans
+  calendar_type: lisans_onlisans
   senate_decision_date: 15.06.2017
   senate_decision_no: 2017/138
   description: Ders kayıtlarının yapabilmesi için katkı payı ve öğrenim ücreti
@@ -10,7 +10,7 @@ lisans_calendar_fall_2017_2018:
 lisans_calendar_spring_2017_2018:
   name: 2017-2018 EĞİTİM ÖĞRETİM YILI AKADEMİK TAKVİMİ
   academic_term: spring_2017_2018
-  calendar_type: lisans_önlisans
+  calendar_type: lisans_onlisans
   senate_decision_date: 12.04.2018
   senate_decision_no: 2018/112
   description:

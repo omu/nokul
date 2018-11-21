@@ -44,7 +44,7 @@ module Calendar
     end
 
     def calendar_type_params
-      params.require(:calendar_type).permit(:name)
+      params.require(:calendar_type).permit(:name, unit_type_ids: [])
     end
   end
 end
