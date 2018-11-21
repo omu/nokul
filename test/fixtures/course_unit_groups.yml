@@ -1,11 +1,11 @@
 one:
   name: Teknik Seçmeli Ders 1
   total_ects_condition: 5
-  unit: muh_bolum
+  unit: bilgisayar_muhendisligi
   course_group_type: one
 
 two:
   name: Teknik Seçmeli Ders 2
   total_ects_condition: 6
-  unit: muh_bolum
+  unit: bilgisayar_muhendisligi
   course_group_type: one

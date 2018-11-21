@@ -29,9 +29,11 @@ en:
         programs: Programs
         status: Status
         unit: Unit
+        number_of_semesters: Number of Semester to Create
+        type: Semester Creation Type
       curriculum_semester:
-        name: Semester Name
-        sequence: Sequence
+        sequence: Semester
+        year: Year
       curriculum_semester_course: &curriculum_semester_course_attributes
         course: Course
         ects: ECTS

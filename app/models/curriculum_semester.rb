@@ -7,8 +7,10 @@ class CurriculumSemester < ApplicationRecord
   belongs_to :curriculum, counter_cache: :semesters_count, inverse_of: :semesters
 
   # validations
-  validates :name, presence: true, uniqueness: { scope: :curriculum_id }
-  validates :sequence, numericality: { greater_than: 0 }, uniqueness: { scope: :curriculum_id }
+  validates :sequence, numericality: { greater_than: 0 },
+                       uniqueness: { scope: :curriculum_id }
+  validates :year, numericality: { greater_than: 0 },
+                   uniqueness: { scope: %i[sequence curriculum_id] }
 
   # custom methods
   def available_courses(add_courses: [])
