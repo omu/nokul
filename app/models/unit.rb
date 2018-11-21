@@ -25,6 +25,7 @@ class Unit < ApplicationRecord
   belongs_to :unit_instruction_type, optional: true
   belongs_to :unit_instruction_language, optional: true
   belongs_to :university_type, optional: true
+  has_many :curriculums, dependent: :destroy
   has_many :duties, dependent: :destroy
   has_many :employees, through: :duties
   has_many :students, dependent: :nullify

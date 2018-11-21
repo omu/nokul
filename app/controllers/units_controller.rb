@@ -2,7 +2,7 @@
 
 class UnitsController < ApplicationController
   include PagyBackendWithHelpers
-  before_action :set_unit, only: %i[edit update destroy show courses programs]
+  before_action :set_unit, only: %i[edit update destroy show courses programs curriculums]
 
   def index
     units = Unit.includes(
@@ -44,6 +44,11 @@ class UnitsController < ApplicationController
   def programs
     @units = @unit.subprograms.active.order(:name)
     render json: @units
+  end
+
+  def curriculums
+    @curriculums = @unit.curriculums.active.order(:name)
+    render json: @curriculums
   end
 
   private

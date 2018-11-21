@@ -14,6 +14,7 @@ tr:
         course_management: Ders İşlemleri
         course_unit_groups: Ders Grupları
         courses: Dersler
+        available_courses: Açılan Dersler
         curriculums: Müfredatlar
         definitions: Tanımlar
         documents: Gerekli Belgeler
