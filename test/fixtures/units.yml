@@ -67,17 +67,6 @@ baum:
   unit_instruction_type: normal_education
   unit_type: research_center
 
-muh_bolum:
-  name: Bilgisayar Mühendisliği Bölümü
-  yoksis_id: 122184
-  founded_at: 10.09.2009
-  duration: 4
-  district: atakum
-  unit_status: active
-  unit_instruction_language: turkish
-  unit_instruction_type: normal_education
-  unit_type: department
-
 muhendislik_fakultesi_yonetim_kurulu:
   name: Mühendislik Fakültesi Yönetim Kurulu
   yoksis_id:
@@ -153,3 +142,12 @@ alman_dili_egitimi_dr:
   unit_instruction_type: normal_education
   unit_type: program
   ancestry: <%= ActiveRecord::FixtureSet.identify(:egitim_bilimleri_enstitusu) %>
+
+veteriner_fakultesi:
+  name: Veteriner Fakültesi
+  yoksis_id: 122233
+  district: atakum
+  unit_status: active
+  unit_instruction_language: turkish
+  unit_instruction_type: normal_education
+  unit_type: faculty

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_13_144919) do
+ActiveRecord::Schema.define(version: 2018_11_17_090506) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -166,8 +166,12 @@ ActiveRecord::Schema.define(version: 2018_11_13_144919) do
     t.bigint "calendar_title_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "calendar_type_id"
+    t.bigint "academic_term_id"
     t.index ["academic_calendar_id"], name: "index_calendar_events_on_academic_calendar_id"
+    t.index ["academic_term_id"], name: "index_calendar_events_on_academic_term_id"
     t.index ["calendar_title_id"], name: "index_calendar_events_on_calendar_title_id"
+    t.index ["calendar_type_id"], name: "index_calendar_events_on_calendar_type_id"
   end
 
   create_table "calendar_title_types", force: :cascade do |t|
@@ -190,6 +194,20 @@ ActiveRecord::Schema.define(version: 2018_11_13_144919) do
     t.string "name", limit: 255, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "calendar_unit_types", force: :cascade do |t|
+    t.bigint "calendar_type_id"
+    t.bigint "unit_type_id"
+    t.index ["calendar_type_id"], name: "index_calendar_unit_types_on_calendar_type_id"
+    t.index ["unit_type_id"], name: "index_calendar_unit_types_on_unit_type_id"
+  end
+
+  create_table "calendar_units", force: :cascade do |t|
+    t.bigint "academic_calendar_id"
+    t.bigint "unit_id"
+    t.index ["academic_calendar_id"], name: "index_calendar_units_on_academic_calendar_id"
+    t.index ["unit_id"], name: "index_calendar_units_on_unit_id"
   end
 
   create_table "certifications", force: :cascade do |t|
@@ -284,6 +302,13 @@ ActiveRecord::Schema.define(version: 2018_11_13_144919) do
     t.index ["unit_id"], name: "index_courses_on_unit_id"
   end
 
+  create_table "curriculum_programs", force: :cascade do |t|
+    t.bigint "unit_id"
+    t.bigint "curriculum_id"
+    t.index ["curriculum_id"], name: "index_curriculum_programs_on_curriculum_id"
+    t.index ["unit_id"], name: "index_curriculum_programs_on_unit_id"
+  end
+
   create_table "curriculum_semester_courses", force: :cascade do |t|
     t.bigint "course_id"
     t.bigint "curriculum_semester_id"
@@ -295,11 +320,11 @@ ActiveRecord::Schema.define(version: 2018_11_13_144919) do
   end
 
   create_table "curriculum_semesters", force: :cascade do |t|
-    t.string "name", limit: 255, null: false
     t.integer "sequence"
     t.bigint "curriculum_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "year"
     t.index ["curriculum_id"], name: "index_curriculum_semesters_on_curriculum_id"
   end
 
@@ -564,26 +589,6 @@ ActiveRecord::Schema.define(version: 2018_11_13_144919) do
     t.string "branch", limit: 255, null: false
   end
 
-  create_table "unit_calendar_events", force: :cascade do |t|
-    t.datetime "start_date", null: false
-    t.datetime "end_date"
-    t.bigint "academic_calendar_id"
-    t.bigint "unit_id"
-    t.bigint "calendar_title_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["academic_calendar_id"], name: "index_unit_calendar_events_on_academic_calendar_id"
-    t.index ["calendar_title_id"], name: "index_unit_calendar_events_on_calendar_title_id"
-    t.index ["unit_id"], name: "index_unit_calendar_events_on_unit_id"
-  end
-
-  create_table "unit_curriculums", force: :cascade do |t|
-    t.bigint "unit_id"
-    t.bigint "curriculum_id"
-    t.index ["curriculum_id"], name: "index_unit_curriculums_on_curriculum_id"
-    t.index ["unit_id"], name: "index_unit_curriculums_on_unit_id"
-  end
-
   create_table "unit_instruction_languages", force: :cascade do |t|
     t.string "name", limit: 255, null: false
     t.integer "code", null: false
@@ -649,7 +654,7 @@ ActiveRecord::Schema.define(version: 2018_11_13_144919) do
     t.datetime "last_sign_in_at"
     t.inet "current_sign_in_ip"
     t.inet "last_sign_in_ip"
-    t.datetime "password_changed_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.datetime "password_changed_at", default: -> { "now()" }, null: false
     t.string "slug", limit: 255
     t.string "preferred_language", limit: 2, default: "tr"
     t.integer "articles_count", default: 0, null: false
@@ -664,8 +669,14 @@ ActiveRecord::Schema.define(version: 2018_11_13_144919) do
 
   add_foreign_key "available_course_lecturers", "available_course_groups", column: "group_id"
   add_foreign_key "available_course_lecturers", "employees", column: "lecturer_id"
+  add_foreign_key "calendar_events", "academic_terms"
+  add_foreign_key "calendar_events", "calendar_types"
   add_foreign_key "calendar_title_types", "calendar_titles", column: "title_id"
   add_foreign_key "calendar_title_types", "calendar_types", column: "type_id"
+  add_foreign_key "calendar_unit_types", "calendar_types"
+  add_foreign_key "calendar_unit_types", "unit_types"
+  add_foreign_key "calendar_units", "academic_calendars"
+  add_foreign_key "calendar_units", "units"
   add_foreign_key "courses", "languages"
   add_foreign_key "curriculum_semester_courses", "courses"
   add_foreign_key "curriculum_semester_courses", "curriculum_semesters"

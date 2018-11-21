@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module FullNameHelper
-  include EnumI18nHelper
+  include I18nHelper
 
   def full_name(object)
     case object.class.to_s
