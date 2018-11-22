@@ -9,12 +9,13 @@ module CourseManagement
     def index
       available_courses = AvailableCourse.includes([curriculum: :unit], :course, :academic_term)
                                          .order('units.name, curriculums.name')
+                                         .dynamic_search(search_params(AvailableCourse))
 
       @pagy, @available_courses = pagy(available_courses)
     end
 
     def show
-      @groups = @available_course.groups.includes(lecturers: [lecturer: [:title, :user]])
+      @groups = @available_course.groups.includes(lecturers: [lecturer: %i[title user]])
     end
 
     def new

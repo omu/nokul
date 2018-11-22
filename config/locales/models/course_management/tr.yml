@@ -83,9 +83,14 @@ tr:
         <<: *available_course_attributes
         add_new_available_course: Yeni Açılan Ders Ekle
         available_courses: Açılan Dersler
+        course_code: Ders Kodu
         group_count: Grup Sayısı
+        quota: Kontenjan
       new:
         form_title: Ders Oluştur
+      search:
+        <<: *available_course_attributes
+        list: Listele
       form:
         unit: Birim
       show:
