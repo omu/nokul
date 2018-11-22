@@ -1,6 +1,12 @@
 # frozen_string_literal: true
 
 class AvailableCourse < ApplicationRecord
+  # search
+  include DynamicSearch
+
+  # dynamic_search
+  search_keys :curriculum_id, :academic_term_id
+
   # relations
   belongs_to :academic_term
   belongs_to :curriculum
