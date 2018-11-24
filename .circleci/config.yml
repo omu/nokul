@@ -81,7 +81,7 @@ jobs:
           key: nokul-yarn-{{ checksum "yarn.lock" }}
           paths:
             - node_modules/
-  test_suite:
+  quality:
     <<: *ruby_2_5_1
     steps:
       - restore_cache:
@@ -92,20 +92,7 @@ jobs:
           <<: *restore_yarn
       - run: bundle --path vendor/bundle --without development
       - run: bin/yarn install
-      - run: bundle exec rake db:create db:schema:load
-      - run: bundle exec rake test
-  karma:
-    <<: *ruby_2_5_1
-    steps:
-      - restore_cache:
-          <<: *repository
-      - restore_cache:
-          <<: *restore_bundle
-      - restore_cache:
-          <<: *restore_yarn
-      - run: bundle --path vendor/bundle --without development
-      - run: bin/yarn install
-      - run: bundle exec rake quality:rails
+      - run: bundle exec rake quality:all
       - run: bin/yarn run lint
   security:
     <<: *ruby_2_5_1
@@ -119,6 +106,31 @@ jobs:
       - run: bundle --path vendor/bundle --without development
       - run: bin/yarn install
       - run: bundle exec rake security:all
+  database:
+    <<: *ruby_2_5_1
+    steps:
+      - restore_cache:
+          <<: *repository
+      - restore_cache:
+          <<: *restore_bundle
+      - restore_cache:
+          <<: *restore_yarn
+      - run: bundle --path vendor/bundle --without development
+      - run: bin/yarn install
+      - run: bundle exec rake database:all
+  test_suite:
+    <<: *ruby_2_5_1
+    steps:
+      - restore_cache:
+          <<: *repository
+      - restore_cache:
+          <<: *restore_bundle
+      - restore_cache:
+          <<: *restore_yarn
+      - run: bundle --path vendor/bundle --without development
+      - run: bin/yarn install
+      - run: bundle exec rake db:create db:schema:load
+      - run: bundle exec rake test
   deploy_develop:
     machine:
       enabled: true
@@ -152,28 +164,33 @@ workflows:
       - bundle_assets:
           requires:
             - bundle_dependencies
-      - test_suite:
-          requires:
-            - bundle_assets
-      - karma:
+      - quality:
           requires:
             - bundle_assets
       - security:
           requires:
             - bundle_assets
+      - database:
+          requires:
+            - bundle_assets
+      - test_suite:
+          requires:
+            - bundle_assets
       - deploy_develop:
           requires:
-            - test_suite
-            - karma
+            - quality
             - security
+            - database
+            - test_suite
           filters:
             branches:
               only: develop
       - deploy_master:
           requires:
-            - test_suite
-            - karma
+            - quality
             - security
+            - database
+            - test_suite
           filters:
             branches:
               only: master

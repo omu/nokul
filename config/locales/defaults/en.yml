@@ -19,9 +19,11 @@ en:
   reset: Reset
   save: Save
   search: Search
+  semester: Semester
   smart_search: Smart Search
   updated_at: Updated At
   'yes': 'Yes'
+  year: Year
 
   cocoon:
     defaults:
