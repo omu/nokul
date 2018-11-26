@@ -157,3 +157,11 @@ twenty:
   end_date: 2018-04-18 08:00:00
   academic_term: spring_2017_2018
   calendar_type: lisans_onlisans
+
+twenty_one:
+  academic_calendar: lisans_calendar_fall_2017_2018
+  calendar_title: two
+  start_date: 2017-09-01 00:00:00
+  end_date: 2017-09-15 23:59:59
+  academic_term: fall_2017_2018
+  calendar_type: lisans_onlisans
