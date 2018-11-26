@@ -22,7 +22,9 @@ class Findable < Module
     class_methods do
       class_eval do
         def find_by_identifier(ident)
-          find_by(name: findable[ident].title)
+          return find_by(name: findable[ident].title) if findable[ident].present?
+
+          nil
         end
       end
     end

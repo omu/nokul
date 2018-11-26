@@ -112,3 +112,8 @@ twenty_three:
   type: lisans_onlisans
   title: twenty_nine
   status: active
+
+twenty_four:
+  type: lisans_onlisans
+  title: two
+  status: active
