@@ -52,4 +52,12 @@ class CalendarEventTest < ActiveSupport::TestCase
     assert_includes CalendarEvent.active, @calendar_event
     assert_not_includes CalendarEvent.active, calendar_events(:twenty)
   end
+
+  # custom tests
+  test 'check calendar event whether in proper range or not' do
+    event = calendar_events(:three)
+    event.update(start_date: Time.zone.now, end_date: Time.zone.now + 5.days)
+    assert_equal true, event.proper_range?
+    assert_equal false, calendar_events(:two).proper_range?
+  end
 end
