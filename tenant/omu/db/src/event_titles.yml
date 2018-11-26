@@ -1,0 +1,41 @@
+course:
+  - name: registration
+    title: Ders Kayıtları
+  - name: add_and_drop
+    title: Ders Ekleme ve Bırakma
+  - name: start_date
+    title: Derslerin Başlaması
+  - name: end_date
+    title: Derslerin Bitimi
+exam:
+  - name: midterm_date
+    title: Ara Sınav Haftası
+  - name: final_date
+    title: Yarıyıl Sonu Sınav Haftası
+  - name: submission_final_date
+    title: Yarıyıl Sonu Sınav Sonuçlarının İnternetten Girilmesinin Son Günü ve Sonuçların İlanı
+  - name: makeup_date
+    title: Bütünleme Sınav Haftası
+  - name: submission_makeup_date
+    title: Bütünleme Sınav Sonuçlarının İnternetten Girilmesinin Son Günü ve Sonuçların İlanı
+  - name: single_course
+    title: Tek Ders Sınavları
+  - name: submission_single_course
+    title: Tek Ders Sınav Sonuçlarının ÖİDB'ye Gönderilmesi
+  - name: foreign_language_proficiency
+    title: Zorunlu Hazırlık Sınıfları Yabancı Dil Yeterlik Sınavı
+  - name: submission_proficiency
+    title: Yeterlik Sınav Sonuçlarının İlanı
+  - name: foreign_language_exemption
+    title: Yabancı Dil Muafiyet Sınavları (5/i Dersleri İçin)
+  - name: grading
+    title: Hazırlık Sınıfları İçin Düzey Belirleme Sınavı
+application:
+  - name: major_and_minor
+    title: Çift Anadal ve Yandal Başvuruları
+  - name: submission_major_and_minor
+    title: Çift Anadal ve Yandal Başvurularının Birimlerce Değerlendirilmesi ve İlanı
+  - name: exclusivly_course
+    title: Mazeretli Ders Kaydı Başvuruları Son Günü
+  - name: single_course
+    title: Tek Ders Sınav Müracaatları
