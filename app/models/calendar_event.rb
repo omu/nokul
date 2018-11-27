@@ -11,6 +11,7 @@ class CalendarEvent < ApplicationRecord
   validates :start_date, presence: true
   validates :end_date, presence: true
   validates :academic_calendar, uniqueness: { scope: :calendar_title }
+  validates_with CalendarEventValidator
 
   # callbacks
   after_create :set_calendar_type_and_term
