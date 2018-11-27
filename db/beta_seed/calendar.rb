@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-event_titles = YAML.load_file(Rails.root.join('tenant', 'omu', 'db', 'src', 'event_titles.yml'))
+event_titles = YAML.load_file(Tenant::Path.db.join('src', 'event_titles.yml'))
 event_titles.keys do |key|
   event_titles[key].each do |event|
     CalendarTitle.create(name: event['title'])
