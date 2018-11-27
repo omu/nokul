@@ -20,10 +20,15 @@ class CalendarEventTest < ActiveSupport::TestCase
   end
 
   # validations: presence
-  test 'should not save without start_date' do
-    @calendar_event.start_date = nil
-    assert_not @calendar_event.valid?
-    assert_not_empty @calendar_event.errors[:start_date]
+  %i[
+    start_date
+    end_date
+  ].each do |property|
+    test "presence validations for #{property} of a calendar event" do
+      @calendar_event.send("#{property}=", nil)
+      assert_not @calendar_event.valid?
+      assert_not_empty @calendar_event.errors[property]
+    end
   end
 
   # validations: uniqueness
@@ -41,7 +46,8 @@ class CalendarEventTest < ActiveSupport::TestCase
     event = CalendarEvent.create(
       academic_calendar: academic_calendars(:lisans_calendar_spring_2017_2018),
       calendar_title: calendar_titles(:two),
-      start_date: '2018-01-25 08:00:00'
+      start_date: '2018-01-25 08:00:00',
+      end_date: '2018-02-08 17:00:00'
     )
     assert_equal event.calendar_type, calendar.calendar_type
     assert_equal event.academic_term, calendar.academic_term
