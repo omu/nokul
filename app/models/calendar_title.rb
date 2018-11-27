@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class CalendarTitle < ApplicationRecord
-  include Findable.new Rails.root.join('tenant', 'omu', 'db', 'src', 'event_titles.yml')
+  include Findable.new Tenant::Path.db.join('src', 'event_titles.yml')
 
   # search
   include PgSearch

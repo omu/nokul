@@ -3,7 +3,7 @@
 require 'test_helper'
 
 class CalendarTitleTest < ActiveSupport::TestCase
-  include Findable.new Rails.root.join('tenant', 'omu', 'db', 'src', 'event_titles.yml')
+  include Findable.new Tenant::Path.db.join('src', 'event_titles.yml')
 
   # relations
   %i[
