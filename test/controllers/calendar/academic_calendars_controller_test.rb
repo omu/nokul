@@ -34,7 +34,7 @@ module Calendar
             senate_decision_no: 'SK001/4', description: 'Açıklama',
             calendar_events_attributes: {
               0 => {
-                calendar_title_id: calendar_titles(:one).id, start_date: '12.02.2018', end_date: '24.02.2018'
+                calendar_title_id: calendar_titles(:one).id, start_date: '16.01.2019', end_date: '05.02.2019'
               }
             }
           }
