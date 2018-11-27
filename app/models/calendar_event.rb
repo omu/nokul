@@ -9,6 +9,7 @@ class CalendarEvent < ApplicationRecord
 
   # validations
   validates :start_date, presence: true
+  validates :end_date, presence: true
   validates :academic_calendar, uniqueness: { scope: :calendar_title }
 
   # callbacks
