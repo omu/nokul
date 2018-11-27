@@ -26,13 +26,13 @@ class CalendarEvent < ApplicationRecord
   end
 
   def proper_range?
-    return Time.zone.now >= start_date && Time.zone.now <= end_date if end_date
+    return Time.current >= start_date && Time.current <= end_date if end_date
 
     check_start_date
   end
 
   def check_start_date
-    (Time.zone.now.to_date == start_date.to_date) &&
-      Time.zone.now.strftime('%H%M%S') >= start_date.strftime('%H%M%S')
+    (Time.current.to_date == start_date.to_date) &&
+      Time.current.strftime('%H%M%S') >= start_date.strftime('%H%M%S')
   end
 end
