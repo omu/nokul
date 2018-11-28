@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-event_titles = YAML.load_file(Tenant::Path.db.join('src', 'event_titles.yml'))
-event_titles.keys do |key|
+event_titles = YAML.load_file(Tenant::Path.db.join('event_titles.yml'))
+event_titles.keys.each do |key|
   event_titles[key].each do |event|
-    CalendarTitle.create(name: event['title'])
+    CalendarTitle.create(name: event['title'], identifier: "#{key}_#{event['name']}")
   end
 end
 CalendarType.create(name: 'Lisans - Önlisans')
@@ -15,37 +15,9 @@ CalendarType.create(name: 'Diş Hekimliği Fakültesi')
 CalendarType.create(name: 'Veteriner Fakültesi')
 CalendarType.create(name: 'Yaz Dönemi')
 CalendarType.create(name: 'Öğrenci')
-CalendarTitleType.create(type: CalendarType.first, title: CalendarTitle.all.sample, status: 'active')
-CalendarTitleType.create(type: CalendarType.first, title: CalendarTitle.all.sample, status: 'active')
-CalendarTitleType.create(type: CalendarType.first, title: CalendarTitle.all.sample, status: 'active')
-CalendarTitleType.create(type: CalendarType.first, title: CalendarTitle.all.sample, status: 'active')
-CalendarTitleType.create(type: CalendarType.first, title: CalendarTitle.all.sample, status: 'active')
-CalendarTitleType.create(type: CalendarType.first, title: CalendarTitle.all.sample, status: 'active')
-CalendarTitleType.create(type: CalendarType.first, title: CalendarTitle.all.sample, status: 'active')
-CalendarTitleType.create(type: CalendarType.first, title: CalendarTitle.all.sample, status: 'active')
-CalendarTitleType.create(type: CalendarType.first, title: CalendarTitle.all.sample, status: 'active')
-CalendarTitleType.create(type: CalendarType.first, title: CalendarTitle.all.sample, status: 'active')
-CalendarTitleType.create(type: CalendarType.first, title: CalendarTitle.all.sample, status: 'active')
-CalendarTitleType.create(type: CalendarType.first, title: CalendarTitle.all.sample, status: 'passive')
-CalendarTitleType.create(type: CalendarType.first, title: CalendarTitle.all.sample, status: 'passive')
-CalendarTitleType.create(type: CalendarType.first, title: CalendarTitle.all.sample, status: 'passive')
-CalendarTitleType.create(type: CalendarType.first, title: CalendarTitle.all.sample, status: 'passive')
-CalendarTitleType.create(type: CalendarType.first, title: CalendarTitle.all.sample, status: 'passive')
-CalendarTitleType.create(type: CalendarType.first, title: CalendarTitle.all.sample, status: 'passive')
-CalendarTitleType.create(type: CalendarType.first, title: CalendarTitle.all.sample, status: 'passive')
-CalendarTitleType.create(type: CalendarType.first, title: CalendarTitle.all.sample, status: 'passive')
-CalendarTitleType.create(type: CalendarType.first, title: CalendarTitle.all.sample, status: 'passive')
-CalendarTitleType.create(type: CalendarType.first, title: CalendarTitle.all.sample, status: 'passive')
-CalendarTitleType.create(type: CalendarType.first, title: CalendarTitle.all.sample, status: 'passive')
-CalendarTitleType.create(type: CalendarType.first, title: CalendarTitle.all.sample, status: 'passive')
-CalendarTitleType.create(type: CalendarType.first, title: CalendarTitle.all.sample, status: 'passive')
-AcademicTerm.create(
-  year: '2017-2018',
-  term: 'spring',
-  start_of_term: '05.09.2017',
-  end_of_term: '15.06.2018',
-  active: true
-)
+CalendarTitle.find_each do |title|
+  CalendarTitleType.create(type: CalendarType.first, title: title, status: :active)
+end
 AcademicCalendar.create(
   name: '2017-2018 Eğitim Öğretim Yılı Akademik Takvimi',
   academic_term: AcademicTerm.first,
@@ -56,7 +28,7 @@ AcademicCalendar.create(
 )
 AcademicCalendar.create(
   name: '2017-2018 Eğitim Öğretim Yılı Akademik Takvimi',
-  academic_term: AcademicTerm.last,
+  academic_term: AcademicTerm.second,
   calendar_type: CalendarType.first,
   senate_decision_date: '12.04.2018',
   senate_decision_no: '2018/112',
@@ -64,73 +36,105 @@ AcademicCalendar.create(
 )
 CalendarEvent.create(
   academic_calendar: AcademicCalendar.first,
-  calendar_title: CalendarTitle.all.sample,
+  calendar_title: CalendarTitle.find_by(identifier: :course_add_and_drop),
   start_date: '2018-09-18 00:00:00',
-  end_date: ''
+  end_date: '2018-09-25 00:00:00',
+  calendar_type: CalendarType.first,
+  academic_term: AcademicTerm.first
 )
 CalendarEvent.create(
   academic_calendar: AcademicCalendar.first,
-  calendar_title: CalendarTitle.all.sample,
+  calendar_title: CalendarTitle.find_by(identifier: :course_end_date),
   start_date: '2018-12-22 00:00:00',
-  end_date: ''
+  end_date: '2018-12-26 00:00:00',
+  calendar_type: CalendarType.first,
+  academic_term: AcademicTerm.first
 )
 CalendarEvent.create(
   academic_calendar: AcademicCalendar.first,
-  calendar_title: CalendarTitle.all.sample,
+  calendar_title: CalendarTitle.find_by(identifier: :course_registration),
   start_date: '2018-11-11 00:00:00',
-  end_date: '2018-11-19 23:59:59'
+  end_date: '2018-11-19 23:59:59',
+  calendar_type: CalendarType.first,
+  academic_term: AcademicTerm.first
 )
 CalendarEvent.create(
   academic_calendar: AcademicCalendar.first,
-  calendar_title: CalendarTitle.all.sample,
-  start_date: '2017-12-25 00:00:00',
-  end_date: '2018-01-05 23:59:59'
+  calendar_title: CalendarTitle.find_by(identifier: :exam_makeup_date),
+  start_date: '2018-12-25 00:00:00',
+  end_date: '2019-01-05 23:59:59',
+  calendar_type: CalendarType.first,
+  academic_term: AcademicTerm.first
 )
 CalendarEvent.create(
   academic_calendar: AcademicCalendar.first,
-  calendar_title: CalendarTitle.all.sample,
-  start_date: '2018-01-13 13:27:49',
-  end_date: '2018-01-21 13:27:49'
+  calendar_title: CalendarTitle.find_by(identifier: :exam_final_date),
+  start_date: '2018-10-13 13:27:49',
+  end_date: '2018-10-21 13:27:49',
+  calendar_type: CalendarType.first,
+  academic_term: AcademicTerm.first
 )
 CalendarEvent.create(
   academic_calendar: AcademicCalendar.first,
-  calendar_title: CalendarTitle.all.sample,
-  start_date: '2017-09-06 00:00:00',
-  end_date: '2017-09-12 23:59:59'
+  calendar_title: CalendarTitle.find_by(identifier: :exam_foreign_language_proficiency),
+  start_date: '2018-09-06 00:00:00',
+  end_date: '2018-09-12 23:59:59',
+  calendar_type: CalendarType.first,
+  academic_term: AcademicTerm.first
 )
 CalendarEvent.create(
   academic_calendar: AcademicCalendar.first,
-  calendar_title: CalendarTitle.all.sample,
-  start_date: '2017-09-13 00:00:00',
-  end_date: '2017-09-15 23:59:59'
+  calendar_title: CalendarTitle.find_by(identifier: :exam_grading),
+  start_date: '2018-09-13 00:00:00',
+  end_date: '2018-09-15 23:59:59',
+  calendar_type: CalendarType.first,
+  academic_term: AcademicTerm.first
 )
 CalendarEvent.create(
   academic_calendar: AcademicCalendar.first,
-  calendar_title: CalendarTitle.all.sample,
-  start_date: '2017-09-12 00:00:00',
-  end_date: '2017-09-13 23:59:59'
+  calendar_title: CalendarTitle.find_by(identifier: :exam_midterm_date),
+  start_date: '2018-09-12 00:00:00',
+  end_date: '2018-09-13 23:59:59',
+  calendar_type: CalendarType.first,
+  academic_term: AcademicTerm.first
 )
 CalendarEvent.create(
   academic_calendar: AcademicCalendar.first,
-  calendar_title: CalendarTitle.all.sample,
-  start_date: '2017-09-15 00:00:00',
-  end_date: ''
+  calendar_title: CalendarTitle.find_by(identifier: :grade_makeup_excuse),
+  start_date: '2018-09-15 00:00:00',
+  end_date: '2018-09-18 00:00:00',
+  calendar_type: CalendarType.first,
+  academic_term: AcademicTerm.first
 )
 CalendarEvent.create(
   academic_calendar: AcademicCalendar.first,
-  calendar_title: CalendarTitle.all.sample,
-  start_date: '2017-09-18 00:00:00',
-  end_date: ''
+  calendar_title: CalendarTitle.find_by(identifier: :grade_midterm_excuse),
+  start_date: '2018-09-18 00:00:00',
+  end_date: '2018-09-26 00:00:00',
+  calendar_type: CalendarType.first,
+  academic_term: AcademicTerm.first
 )
 CalendarEvent.create(
   academic_calendar: AcademicCalendar.first,
-  calendar_title: CalendarTitle.all.sample,
-  start_date: '2018-02-02 23:59:59',
-  end_date: ''
+  calendar_title: CalendarTitle.find_by(identifier: :grade_submission_final_date),
+  start_date: '2018-10-02 00:00:00',
+  end_date: '2018-10-09 00:00:00',
+  calendar_type: CalendarType.first,
+  academic_term: AcademicTerm.first
 )
 CalendarEvent.create(
   academic_calendar: AcademicCalendar.first,
-  calendar_title: CalendarTitle.all.sample,
-  start_date: '2018-01-03 23:59:59',
-  end_date: ''
+  calendar_title: CalendarTitle.find_by(identifier: :grade_submission_makeup_date),
+  start_date: '2018-11-03 00:00:00',
+  end_date: '2018-11-09 00:00:00',
+  calendar_type: CalendarType.first,
+  academic_term: AcademicTerm.first
+)
+CalendarEvent.create(
+  academic_calendar: AcademicCalendar.first,
+  calendar_title: CalendarTitle.find_by(identifier: :grade_submission_single_course),
+  start_date: '2019-01-03 00:00:00',
+  end_date: '2019-01-09 00:00:00',
+  calendar_type: CalendarType.first,
+  academic_term: AcademicTerm.first
 )

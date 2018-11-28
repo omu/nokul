@@ -24,7 +24,7 @@ class Student < ApplicationRecord
   def proper_event_range?(title)
     event =
       academic_calendars.last.calendar_events
-                        .find_by(calendar_title_id: CalendarTitle.find_by_identifier(title))
+                        .find_by(calendar_title: CalendarTitle.find_by(identifier: title))
     return event.proper_range? if event
 
     false
