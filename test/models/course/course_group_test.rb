@@ -2,7 +2,11 @@
 
 require 'test_helper'
 
-class CourseUnitGroupTest < ActiveSupport::TestCase
+class CourseGroupTest < ActiveSupport::TestCase
+  setup do
+    @course_group = course_groups(:one)
+  end
+
   # relations
   %i[
     unit
@@ -11,7 +15,7 @@ class CourseUnitGroupTest < ActiveSupport::TestCase
     courses
   ].each do |property|
     test "a course unit group can communicate with #{property}" do
-      assert course_unit_groups(:one).send(property)
+      assert @course_group.send(property)
     end
   end
 
@@ -22,9 +26,9 @@ class CourseUnitGroupTest < ActiveSupport::TestCase
     course_ids
   ].each do |property|
     test "presence validations for #{property} of a course unit group" do
-      course_unit_groups(:one).send("#{property}=", nil)
-      assert_not course_unit_groups(:one).valid?
-      assert_not_empty course_unit_groups(:one).errors[property]
+      @course_group.send("#{property}=", nil)
+      assert_not @course_group.valid?
+      assert_not_empty @course_group.errors[property]
     end
   end
 end

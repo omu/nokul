@@ -15,7 +15,7 @@ en:
         ects: Ects
       course_group_type: &course_group_type_attributes
         name: Course Group Type Name
-      course_unit_group: &course_unit_group_attributes
+      course_group: &course_group_attributes
         course_group_type: Course Group Type
         course_ids: Courses
         courses: Courses
@@ -54,7 +54,7 @@ en:
     models:
       course: Course
       course_group_type: Course Group Type
-      course_unit_group: Course Group
+      course_group: Course Group
       curriculum: Curriculum
       curriculum_semester_course: Curriculum Semester Course
   course_management:
@@ -74,7 +74,7 @@ en:
         form_title: Course Group Type successfully created.
       update:
         success: Course group type successfully updated.
-    course_unit_groups:
+    course_groups:
       create:
         success: Course group created.
       destroy:
@@ -83,9 +83,9 @@ en:
       edit:
         form_title: Course Group successfully updated.
       index:
-        <<: *course_unit_group_attributes
+        <<: *course_group_attributes
         card_header: Course Groups
-        new_course_unit_group_link: Add a New Course Group
+        new_course_group_link: Add a New Course Group
       new:
         form_title: Course Group successfully created.
       show:
