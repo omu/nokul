@@ -53,19 +53,9 @@ eleven:
   title: thirteen
   status: active
 
-twelve:
-  type: lisans_onlisans
-  title: fourteen
-  status: active
-
 thirteen:
   type: lisans_onlisans
   title: fifteen
-  status: active
-
-fourteen:
-  type: lisans_onlisans
-  title: sixteen
   status: active
 
 fifteen:
@@ -96,21 +86,6 @@ nineteen:
 twenty:
   type: lisans_onlisans
   title: twenty_three
-  status: active
-
-twenty_one:
-  type: lisans_onlisans
-  title: twenty_seven
-  status: active
-
-twenty_two:
-  type: lisans_onlisans
-  title: twenty_eight
-  status: active
-
-twenty_three:
-  type: lisans_onlisans
-  title: twenty_nine
   status: active
 
 twenty_four:

@@ -3,27 +3,44 @@
 require 'test_helper'
 
 class CalendarTitleTest < ActiveSupport::TestCase
+  setup do
+    @title = calendar_titles(:one)
+  end
+
   # relations
   %i[
     types
     calendar_title_types
+    calendar_events
   ].each do |property|
     test "a calendar title can communicate with #{property}" do
-      assert calendar_titles(:three).send(property)
+      assert @title.send(property)
     end
   end
 
   # validations: presence
-  test 'should not save calendar_title without name' do
-    calendar_titles(:one).name = nil
-    assert_not calendar_titles(:one).valid?
-    assert_not_empty calendar_titles(:one).errors[:name]
+  %i[
+    name
+    identifier
+  ].each do |property|
+    test "presence validations for #{property} of a calendar title" do
+      @title.send("#{property}=", nil)
+      assert_not @title.valid?
+      assert_not_empty @title.errors[property]
+    end
   end
 
   # validations: uniqueness
   test 'name should be unique' do
-    fake_title = calendar_titles(:one).dup
-    assert_not fake_title.valid?
-    assert_not_empty fake_title.errors[:name]
+    fake = @title.dup
+    assert_not fake.valid?
+    assert_not_empty fake.errors[:name]
+  end
+
+  test 'identifier should be unique' do
+    fake = @title.dup
+    fake.name = 'fake title'
+    assert_not fake.valid?
+    assert_not_empty fake.errors[:identifier]
   end
 end
