@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_17_090506) do
+ActiveRecord::Schema.define(version: 2018_11_28_113838) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -274,15 +274,15 @@ ActiveRecord::Schema.define(version: 2018_11_17_090506) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "course_unit_groups", force: :cascade do |t|
+  create_table "course_groups", force: :cascade do |t|
     t.string "name", limit: 255, null: false
     t.integer "total_ects_condition", null: false
     t.bigint "unit_id"
     t.bigint "course_group_type_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["course_group_type_id"], name: "index_course_unit_groups_on_course_group_type_id"
-    t.index ["unit_id"], name: "index_course_unit_groups_on_unit_id"
+    t.index ["course_group_type_id"], name: "index_course_groups_on_course_group_type_id"
+    t.index ["unit_id"], name: "index_course_groups_on_unit_id"
   end
 
   create_table "courses", force: :cascade do |t|
@@ -387,11 +387,11 @@ ActiveRecord::Schema.define(version: 2018_11_17_090506) do
 
   create_table "group_courses", force: :cascade do |t|
     t.bigint "course_id"
-    t.bigint "course_unit_group_id"
+    t.bigint "course_group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["course_group_id"], name: "index_group_courses_on_course_group_id"
     t.index ["course_id"], name: "index_group_courses_on_course_id"
-    t.index ["course_unit_group_id"], name: "index_group_courses_on_course_unit_group_id"
   end
 
   create_table "high_school_types", force: :cascade do |t|

@@ -1,5 +1,5 @@
 <div class='alert alert-light'>
-  <%= link_to_new new_course_unit_group_path, t('.new_course_unit_group_link') %>
+  <%= link_to_new new_course_group_path, t('.new_course_group_link') %>
 </div>
 
 <div class='row'>
@@ -10,7 +10,7 @@
       </div>
       <div class='card-body'>
         <%= render 'components/smart_search_form',
-                   path: course_unit_groups_path,
+                   path: course_groups_path,
                    placeholder: t('.search_placeholder') %>
         <table class='table table-responsive-sm table-striped'>
           <thead>
@@ -23,16 +23,16 @@
             </tr>
           </thead>
           <tbody>
-            <% @course_unit_groups.each do |course_unit_group| %>
+            <% @course_groups.each do |course_group| %>
               <tr>
-                <td><%= course_unit_group.name %></td>
-                <td><%= course_unit_group.total_ects_condition %></td>
-                <td><%= course_unit_group.unit.name %></td>
-                <td><%= course_unit_group.course_group_type.try(:name) %></td>
+                <td><%= course_group.name %></td>
+                <td><%= course_group.total_ects_condition %></td>
+                <td><%= course_group.unit.try(:name) %></td>
+                <td><%= course_group.course_group_type.try(:name) %></td>
                 <td>
-                  <%= link_to_show(course_unit_group_path(course_unit_group)) %>
-                  <%= link_to_edit(edit_course_unit_group_path(course_unit_group)) %>
-                  <%= link_to_destroy(course_unit_group) %>
+                  <%= link_to_show(course_group_path(course_group)) %>
+                  <%= link_to_edit(edit_course_group_path(course_group)) %>
+                  <%= link_to_destroy(course_group) %>
                 </td>
               </tr>
             <% end %>

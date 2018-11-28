@@ -15,7 +15,7 @@ tr:
         ects: Ects
       course_group_type: &course_group_type_attributes
         name: Ders Grup Tür Adı
-      course_unit_group: &course_unit_group_attributes
+      course_group: &course_group_attributes
         course_group_type: Ders Grup Türü
         course_ids: Dersler
         courses: Dersler
@@ -54,7 +54,7 @@ tr:
     models:
       course: Ders
       course_group_type: Ders Grup Türü
-      course_unit_group: Ders Grubu
+      course_group: Ders Grubu
       curriculum: Müfreadat
       curriculum_semester_course: Müfreadat Yarıyıl Ders
   course_management:
@@ -74,7 +74,7 @@ tr:
         form_title: Ders Grup Türü Oluştur
       update:
         success: Ders grup türü başarıyla güncellendi.
-    course_unit_groups:
+    course_groups:
       create:
         success: Ders grubu başarıyla oluşturuldu.
       destroy:
@@ -83,9 +83,9 @@ tr:
       edit:
         form_title: Ders Grup Düzenle
       index:
-        <<: *course_unit_group_attributes
+        <<: *course_group_attributes
         card_header: Ders Grupları
-        new_course_unit_group_link: Yeni Ders Grup Ekle
+        new_course_group_link: Yeni Ders Grup Ekle
       new:
         form_title: Ders Grup Oluştur
       show:

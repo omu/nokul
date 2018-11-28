@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class CourseUnitGroup < ApplicationRecord
+class CourseGroup < ApplicationRecord
   # search
   include PgSearch
   pg_search_scope(

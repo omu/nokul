@@ -1,7 +1,7 @@
 one:
   course: test
-  course_unit_group: one
+  course_group: one
 
 two:
   course: test
-  course_unit_group: two
+  course_group: two
