@@ -14,3 +14,8 @@ social_elective:
   name: Sosyal Seçmeli
   code: SS
   min_credit: 2
+
+compulsory_course:
+  name: Zorunlu Ders
+  code: ZD
+  min_credit: 1
