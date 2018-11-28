@@ -71,13 +71,13 @@ en:
         warning: An error occured when deleting the course group type.
         success: Course group type successfully destroyed.
       edit:
-        form_title: Course Group Type successfully updated.
+        form_title: Update the Course Group Type
       index:
         <<: *course_group_type_attributes
         card_header: Course Group Types
         new_course_group_type_link: Add a New Course Group Type
       new:
-        form_title: Course Group Type successfully created.
+        form_title: Create a Course Group Type
       update:
         success: Course group type successfully updated.
     course_types:
@@ -87,13 +87,13 @@ en:
         warning: An error occured when deleting the course type.
         success: Course type successfully destroyed.
       edit:
-        form_title: Course type successfully updated.
+        form_title: Update the Course Type
       index:
         <<: *course_type_attributes
         card_header: Course Types
         new_course_type_link: Add a New Course Type
       new:
-        form_title: Course type successfully created.
+        form_title: Create a Course Type
       update:
         success: Course type successfully updated.
     course_unit_groups:
@@ -103,13 +103,13 @@ en:
         error: An error occured when deleting the course group.
         success: Course group successfully destroyed.
       edit:
-        form_title: Course Group successfully updated.
+        form_title: Update the Course Group
       index:
         <<: *course_unit_group_attributes
         card_header: Course Groups
         new_course_unit_group_link: Add a New Course Group
       new:
-        form_title: Course Group successfully created.
+        form_title: Create a Course Group
       show:
         course_group_type: Course Group Type
         courses: Courses
