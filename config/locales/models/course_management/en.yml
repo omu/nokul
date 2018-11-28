@@ -4,6 +4,7 @@ en:
       course: &course_attributes
         code: Code
         credit: Credit
+        course_type: Course Type
         laboratory: Laboratory
         language: Language
         name: Name
@@ -132,6 +133,7 @@ en:
       new:
         form_title: Create a Course
       search:
+        course_type: All Course Types
         language: All Languages
         program_type: All Program Types
         smart_search_placeholder: Course name or code

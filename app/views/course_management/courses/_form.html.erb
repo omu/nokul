@@ -18,38 +18,47 @@
             </ul>
           <% end %>
           <div class='row mt-3'>
-            <div class='form-group col-sm-4'>
+            <div class='col-sm-4'>
               <%= f.association :unit,
                                 collection: Unit.active.coursable.order(:name),
                                 label_method: :names_depth_cache %>
             </div>
-            <div class='form-group col-sm-4'>
+            <div class='col-sm-4'>
               <%= f.input :name %>
             </div>
-            <div class='form-group col-sm-4'>
+            <div class='col-sm-4'>
               <%= f.input :code %>
             </div>
-            <div class='form-group col-sm-4'>
-              <%= f.input :theoric, input_html: { min: 0 } %>
+            <div class='col-sm-4'>
+              <%= f.association :course_type %>
             </div>
-            <div class='form-group col-sm-4'>
-              <%= f.input :practice, input_html: { min: 0 } %>
+            <div class='col-sm-4'>
+              <%= f.input :theoric,
+                          input_html: { min: 0 } %>
             </div>
-            <div class='form-group col-sm-4'>
-              <%= f.input :laboratory, input_html: { min: 0 } %>
+            <div class='col-sm-4'>
+              <%= f.input :practice,
+                          input_html: { min: 0 } %>
             </div>
-            <div class='form-group col-sm-4'>
+            <div class='col-sm-4'>
+              <%= f.input :laboratory,
+                          input_html: { min: 0 } %>
+            </div>
+            <div class='col-sm-4'>
               <%= f.input :program_type,
                           collection: enum_options_for_select(f.object.class, :program_type) %>
             </div>
-            <div class='form-group col-sm-4'>
-              <%= f.association :language %>
+            <div class='col-sm-4'>
+              <%= f.association :language,
+                                include_blank: false,
+                                selected: Language.find_by(name: 'Türkçe').try(:id) %>
             </div>
-            <div class='form-group col-sm-4'>
+            <div class='col-sm-4'>
               <%= f.input :status,
-                          collection: enum_options_for_select(f.object.class, :status) %>
+                          collection: enum_options_for_select(f.object.class, :status),
+                          selected: :active %>
             </div>
-            <div class='form-group col-sm-12'>
+            <div class='col-sm-12'>
               <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
               <%= link_to_back(:back) %>
             </div>
