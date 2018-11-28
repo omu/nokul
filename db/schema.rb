@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_27_113700) do
+ActiveRecord::Schema.define(version: 2018_11_28_093908) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -306,6 +306,8 @@ ActiveRecord::Schema.define(version: 2018_11_27_113700) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "language_id"
+    t.bigint "course_type_id"
+    t.index ["course_type_id"], name: "index_courses_on_course_type_id"
     t.index ["language_id"], name: "index_courses_on_language_id"
     t.index ["unit_id"], name: "index_courses_on_unit_id"
   end
@@ -685,6 +687,7 @@ ActiveRecord::Schema.define(version: 2018_11_27_113700) do
   add_foreign_key "calendar_unit_types", "unit_types"
   add_foreign_key "calendar_units", "academic_calendars"
   add_foreign_key "calendar_units", "units"
+  add_foreign_key "courses", "course_types"
   add_foreign_key "courses", "languages"
   add_foreign_key "curriculum_semester_courses", "courses"
   add_foreign_key "curriculum_semester_courses", "curriculum_semesters"
