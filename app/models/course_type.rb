@@ -10,7 +10,7 @@ class CourseType < ApplicationRecord
   )
 
   # relations
-  has_many :courses # , dependent: :nullify
+  has_many :courses, dependent: :nullify
 
   # validations
   validates :name, presence: true, uniqueness: true
