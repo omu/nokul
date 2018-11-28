@@ -3,8 +3,6 @@
 require 'test_helper'
 
 class CalendarTitleTest < ActiveSupport::TestCase
-  include Findable.new Tenant::Path.db.join('src', 'event_titles.yml')
-
   # relations
   %i[
     types
@@ -27,9 +25,5 @@ class CalendarTitleTest < ActiveSupport::TestCase
     fake_title = calendar_titles(:one).dup
     assert_not fake_title.valid?
     assert_not_empty fake_title.errors[:name]
-  end
-
-  test 'should work dynamic find_by class method' do
-    assert_equal CalendarTitle.find_by_identifier('course_registration'), calendar_titles(:two)
   end
 end

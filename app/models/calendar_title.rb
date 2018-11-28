@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class CalendarTitle < ApplicationRecord
-  include Findable.new Tenant::Path.db.join('src', 'event_titles.yml')
-
   # search
   include PgSearch
   pg_search_scope(
