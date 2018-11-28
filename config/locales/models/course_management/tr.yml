@@ -15,6 +15,10 @@ tr:
         ects: Ects
       course_group_type: &course_group_type_attributes
         name: Ders Grup Tür Adı
+      course_type: &course_type_attributes
+        name: Ders Türü
+        code: Kod
+        min_credit: Asgari Kredi
       course_unit_group: &course_unit_group_attributes
         course_group_type: Ders Grup Türü
         course_ids: Dersler
@@ -54,6 +58,7 @@ tr:
     models:
       course: Ders
       course_group_type: Ders Grup Türü
+      course_type: Ders Türü
       course_unit_group: Ders Grubu
       curriculum: Müfreadat
       curriculum_semester_course: Müfreadat Yarıyıl Ders
@@ -74,6 +79,22 @@ tr:
         form_title: Ders Grup Türü Oluştur
       update:
         success: Ders grup türü başarıyla güncellendi.
+    course_types:
+      create:
+        success: Ders türü başarıyla oluşturuldu.
+      destroy:
+        warning: Ders türü silinirken bir hata oluştu.
+        success: Ders türü başarıyla silindi.
+      edit:
+        form_title: Ders Türü Düzenle
+      index:
+        <<: *course_type_attributes
+        card_header: Ders Türleri
+        new_course_type_link: Yeni Ders Türü Ekle
+      new:
+        form_title: Ders Türü Oluştur
+      update:
+        success: Ders türü başarıyla güncellendi.
     course_unit_groups:
       create:
         success: Ders grubu başarıyla oluşturuldu.
