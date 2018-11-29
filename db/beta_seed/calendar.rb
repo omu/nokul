@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 event_titles = YAML.load_file(Tenant::Path.db.join('event_titles.yml'))
-event_titles.keys.each do |key|
-  event_titles[key].each do |event|
-    CalendarTitle.create(name: event['title'], identifier: "#{key}_#{event['name']}")
+event_titles.each do |category, events|
+  events.each do |event|
+    CalendarTitle.create(name: event['title'], identifier: "#{category}_#{event['name']}")
   end
 end
 CalendarType.create(name: 'Lisans - Önlisans')
