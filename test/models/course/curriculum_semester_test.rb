@@ -11,7 +11,7 @@ class CurriculumSemesterTest < ActiveSupport::TestCase
   %i[
     courses
     curriculum
-    curriculum_semester_courses
+    curriculum_courses
   ].each do |relation|
     test "curriculum semester can communicate with #{relation}" do
       assert @semester.send(relation)

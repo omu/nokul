@@ -7,6 +7,6 @@ scope module: :course_management do
   resources :curriculums
 
   resources :curriculum_semesters do
-    resources :curriculum_semester_courses
+    resources :curriculum_courses
   end
 end

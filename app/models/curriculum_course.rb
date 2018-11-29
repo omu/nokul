@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class CurriculumSemesterCourse < ApplicationRecord
+class CurriculumCourse < ApplicationRecord
   # relations
   belongs_to :course
   belongs_to :curriculum_semester

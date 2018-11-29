@@ -2,8 +2,8 @@
 
 class CurriculumSemester < ApplicationRecord
   # relations
-  has_many :curriculum_semester_courses, dependent: :destroy
-  has_many :courses, through: :curriculum_semester_courses
+  has_many :curriculum_courses, dependent: :destroy
+  has_many :courses, through: :curriculum_courses
   belongs_to :curriculum, counter_cache: :semesters_count, inverse_of: :semesters
 
   # validations
