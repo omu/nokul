@@ -8,6 +8,7 @@ class CourseTest < ActiveSupport::TestCase
   end
 
   %i[
+    course_type
     unit
     language
   ].each do |property|
@@ -19,6 +20,7 @@ class CourseTest < ActiveSupport::TestCase
   # validations: presence
   %i[
     code
+    course_type
     program_type
     laboratory
     language

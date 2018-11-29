@@ -4,6 +4,7 @@ en:
       course: &course_attributes
         code: Code
         credit: Credit
+        course_type: Course Type
         laboratory: Laboratory
         language: Language
         name: Name
@@ -15,6 +16,10 @@ en:
         ects: Ects
       course_group_type: &course_group_type_attributes
         name: Course Group Type Name
+      course_type: &course_type_attributes
+        name: Course Type
+        code: Code
+        min_credit: Minimum Credit
       course_unit_group: &course_unit_group_attributes
         course_group_type: Course Group Type
         course_ids: Courses
@@ -54,6 +59,7 @@ en:
     models:
       course: Course
       course_group_type: Course Group Type
+      course_type: Course Group Type
       course_unit_group: Course Group
       curriculum: Curriculum
       curriculum_semester_course: Curriculum Semester Course
@@ -65,15 +71,31 @@ en:
         warning: An error occured when deleting the course group type.
         success: Course group type successfully destroyed.
       edit:
-        form_title: Course Group Type successfully updated.
+        form_title: Update the Course Group Type
       index:
         <<: *course_group_type_attributes
         card_header: Course Group Types
         new_course_group_type_link: Add a New Course Group Type
       new:
-        form_title: Course Group Type successfully created.
+        form_title: Create a Course Group Type
       update:
         success: Course group type successfully updated.
+    course_types:
+      create:
+        success: Course type created.
+      destroy:
+        warning: An error occured when deleting the course type.
+        success: Course type successfully destroyed.
+      edit:
+        form_title: Update the Course Type
+      index:
+        <<: *course_type_attributes
+        card_header: Course Types
+        new_course_type_link: Add a New Course Type
+      new:
+        form_title: Create a Course Type
+      update:
+        success: Course type successfully updated.
     course_unit_groups:
       create:
         success: Course group created.
@@ -81,13 +103,13 @@ en:
         error: An error occured when deleting the course group.
         success: Course group successfully destroyed.
       edit:
-        form_title: Course Group successfully updated.
+        form_title: Update the Course Group
       index:
         <<: *course_unit_group_attributes
         card_header: Course Groups
         new_course_unit_group_link: Add a New Course Group
       new:
-        form_title: Course Group successfully created.
+        form_title: Create a Course Group
       show:
         course_group_type: Course Group Type
         courses: Courses
@@ -111,6 +133,7 @@ en:
       new:
         form_title: Create a Course
       search:
+        course_type: All Course Types
         language: All Languages
         program_type: All Program Types
         smart_search_placeholder: Course name or code
