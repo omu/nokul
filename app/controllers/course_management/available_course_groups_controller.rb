@@ -11,28 +11,25 @@ module CourseManagement
 
     def create
       @available_course_group = @available_course.groups.new(available_course_group_params)
-      @available_course_group.save ? redirect_to(@available_course, notice: t('.success')) : render(:new)
+      @available_course_group.save ? redirect_with('success') : render(:new)
     end
 
     def edit; end
 
     def update
-      if @available_course_group.update(available_course_group_params)
-        redirect_to(@available_course, notice: t('.success'))
-      else
-        render(:edit)
-      end
+      @available_course_group.update(available_course_group_params) ? redirect_with('success') : render(:edit)
     end
 
     def destroy
-      if @available_course_group.destroy
-        redirect_to(@available_course, notice: t('.success'))
-      else
-        redirect_to(available_courses_path(@available_course), alert: t('.warning'))
-      end
+      message = @available_course_group.destroy ? 'success' : 'error'
+      redirect_with(message)
     end
 
     private
+
+    def redirect_with(message)
+      redirect_to @available_course, flash: { info: t(".#{message}") }
+    end
 
     def set_available_course
       @available_course = AvailableCourse.find(params[:available_course_id])
