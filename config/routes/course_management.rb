@@ -2,8 +2,9 @@
 
 scope module: :course_management do
   resources :courses
-  resources :course_unit_groups
   resources :course_group_types, except: :show
+  resources :course_types,       except: :show
+  resources :course_unit_groups
   resources :curriculums
 
   resources :curriculum_semesters do
