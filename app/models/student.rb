@@ -25,8 +25,6 @@ class Student < ApplicationRecord
     event =
       academic_calendars.last.calendar_events
                         .find_by(calendar_title: CalendarTitle.find_by(identifier: title))
-    return event.proper_range? if event
-
-    false
+    !event.nil? && event.proper_range?
   end
 end
