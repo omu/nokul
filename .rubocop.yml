@@ -12,9 +12,6 @@ Rails/UnknownEnv:
     - development
     - test
     - beta
-Rails/DynamicFindBy:
-  Whitelist:
-    - find_by_identifier
 Metrics/LineLength:
   Max: 120
   Exclude:
