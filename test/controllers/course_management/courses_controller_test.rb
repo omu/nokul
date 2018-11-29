@@ -27,23 +27,26 @@ module CourseManagement
     end
 
     test 'should create course' do
+      parameters = {
+        name: 'Test Controller Course',
+        code: 'TTC',
+        course_type_id: course_types(:compulsory_course).id,
+        theoric: 3,
+        practice: 0,
+        laboratory: 0,
+        unit_id: units(:omu).id,
+        program_type: 'undergraduate',
+        language_id: languages(:turkce).id,
+        status: 'active'
+      }
       assert_difference('Course.count') do
-        post courses_path, params: {
-          course: {
-            name: 'Test Controller Course', code: 'TTC', theoric: 3, practice: 0,
-            laboratory: 0, unit_id: units(:omu).id, program_type: :undergraduate,
-            language_id: languages(:turkce).id, status: :active
-          }
-        }
+        post courses_path, params: { course: parameters }
       end
 
       course = Course.last
-
-      assert_equal 'Test Controller Course', course.name
-      assert_equal 3.0, course.credit.to_f
-      assert_equal 'undergraduate', course.program_type
-      assert_equal units(:omu), course.unit
-      assert course.active?
+      parameters.each do |attribute, value|
+        assert_equal value, course.send(attribute)
+      end
       assert_redirected_to courses_path
       assert_equal translate('.create.success'), flash[:info]
     end
@@ -56,16 +59,17 @@ module CourseManagement
 
     test 'should update course' do
       course = Course.last
-      patch course_path(course), params: {
-        course: {
-          name: 'Test Course Update', code: 'TTCU', theoric: 4, practice: 2
-        }
+      parameters = {
+        name: 'Test Course Update', code: 'TTCU', theoric: 4, practice: 2
       }
+      patch course_path(course), params: { course: parameters }
 
       course.reload
 
-      assert_equal 'Test Course Update', course.name
-      assert_equal 5.0, course.credit.to_f
+      parameters.each do |attribute, value|
+        assert_equal value, course.send(attribute)
+      end
+
       assert_redirected_to courses_path
       assert_equal translate('.update.success'), flash[:info]
     end

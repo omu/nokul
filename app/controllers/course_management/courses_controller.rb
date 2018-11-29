@@ -7,7 +7,7 @@ module CourseManagement
     before_action :set_course, only: %i[show edit update destroy]
 
     def index
-      courses = Course.includes(:unit, :language)
+      courses = Course.includes(:unit, :language, :course_type)
                       .order('units.name, courses.name')
                       .dynamic_search(search_params(Course))
 
@@ -49,7 +49,7 @@ module CourseManagement
     def course_params
       params.require(:course).permit(
         :unit_id, :name, :code, :theoric, :practice, :program_type,
-        :language_id, :laboratory, :status
+        :language_id, :laboratory, :status, :course_type_id
       )
     end
   end
