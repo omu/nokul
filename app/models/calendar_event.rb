@@ -28,6 +28,6 @@ class CalendarEvent < ApplicationRecord
   end
 
   def proper_range?
-    Time.current >= start_date && Time.current <= end_date
+    Time.current.between?(start_date, end_date)
   end
 end
