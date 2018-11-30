@@ -13,7 +13,9 @@
               <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
             </div>
             <div class='form-group col-sm-12'>
-              <%= f.input :name %>
+              <div class='card-header'>
+                <%= "#{t('.title')}: #{@calendar_title.name}" %>
+              </div>
             </div>
             <div class='form-group col-sm-12'>
               <%= f.association :types, as: :check_boxes %>

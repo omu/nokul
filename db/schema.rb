@@ -188,6 +188,7 @@ ActiveRecord::Schema.define(version: 2018_11_28_093908) do
     t.string "name", limit: 255, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "identifier", limit: 50, null: false
   end
 
   create_table "calendar_types", force: :cascade do |t|
