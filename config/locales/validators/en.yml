@@ -3,6 +3,10 @@ en:
     address:
       max_formal: You can have up to %{limit} formal addresses maximum.
       max_informal: You can add up to %{limit} addresses maximum.
+    calendar_event:
+      invalid_date_range: Event end date is not selected as a date before the start date.
+      invalid_end_date: Event is not selected as a date after the academic term end date.
+      invalid_start_date: Event is not selected as a date before the academic term start date.
     duty:
       active_and_tenure: This user already has an active and tenure duty. Edit the existing duty or make it passive in order to create a new one.
       invalid_end_date: Start date is selected as a date after the end date

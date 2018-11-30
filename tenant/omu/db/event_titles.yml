@@ -1,0 +1,52 @@
+application:
+  - name: advisor_approval
+    title: Danışman Onay İşlemleri
+  - name: excuse_course
+    title: Mazeretli Ders Kaydı Başvuruları Son Günü
+  - name: major_and_minor
+    title: Çift Anadal ve Yandal Başvuruları
+  - name: single_course
+    title: Tek Ders Sınav Müracaatları
+  - name: submission_major_and_minor
+    title: Çift Anadal ve Yandal Başvurularının Birimlerce Değerlendirilmesi ve İlanı
+course:
+  - name: add_and_drop
+    title: Ders Ekleme ve Bırakma
+  - name: end_date
+    title: Derslerin Bitimi
+  - name: registration
+    title: Ders Kayıtları
+  - name: start_date
+    title: Derslerin Başlaması
+  - name: syllabus
+    title: Ders İzlencesi Girişi
+exam:
+  - name: final_date
+    title: Yarıyıl Sonu Sınav Haftası
+  - name: foreign_language_exemption
+    title: Yabancı Dil Muafiyet Sınavları (5/i Dersleri İçin)
+  - name: foreign_language_proficiency
+    title: Zorunlu Hazırlık Sınıfları Yabancı Dil Yeterlik Sınavı
+  - name: grading
+    title: Hazırlık Sınıfları İçin Düzey Belirleme Sınavı
+  - name: makeup_date
+    title: Bütünleme Sınav Haftası
+  - name: midterm_date
+    title: Ara Sınav Haftası
+  - name: single_course
+    title: Tek Ders Sınavları
+grade:
+  - name: makeup_excuse
+    title: Bütünleme Mazeret Not Girişi
+  - name: midterm_excuse
+    title: Vize Mazeret Not Girişi
+  - name: submission_final_date
+    title: Yarıyıl Sonu Sınav Sonuçlarının İnternetten Girilmesinin Son Günü ve Sonuçların İlanı
+  - name: submission_makeup_date
+    title: Bütünleme Sınav Sonuçlarının İnternetten Girilmesinin Son Günü ve Sonuçların İlanı
+  - name: submission_proficiency
+    title: Yeterlik Sınav Sonuçlarının İlanı
+  - name: submission_single_course
+    title: Tek Ders Sınav Sonuçlarının ÖİDB'ye Gönderilmesi
+  - name: midterm_date
+    title: Dönemiçi Not Girişi

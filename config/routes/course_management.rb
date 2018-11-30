@@ -6,8 +6,10 @@ scope module: :course_management do
   end
 
   resources :courses
-  resources :course_unit_groups
   resources :course_group_types, except: :show
+
+  resources :course_types,       except: :show
+  resources :course_unit_groups
   resources :curriculums do
     member do
       get :courses, defaults: { format: :json }

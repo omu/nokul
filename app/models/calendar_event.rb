@@ -9,7 +9,9 @@ class CalendarEvent < ApplicationRecord
 
   # validations
   validates :start_date, presence: true
+  validates :end_date, presence: true
   validates :academic_calendar, uniqueness: { scope: :calendar_title }
+  validates_with CalendarEventValidator
 
   # callbacks
   after_create :set_calendar_type_and_term
@@ -23,5 +25,9 @@ class CalendarEvent < ApplicationRecord
   def set_calendar_type_and_term
     update(calendar_type_id: academic_calendar.calendar_type.id,
            academic_term_id: academic_calendar.academic_term.id)
+  end
+
+  def proper_range?
+    Time.current.between?(start_date, end_date)
   end
 end

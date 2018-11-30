@@ -4,29 +4,16 @@ module Calendar
   class CalendarTitlesController < ApplicationController
     include PagyBackendWithHelpers
 
-    before_action :set_calendar_title, only: %i[edit update destroy]
+    before_action :set_calendar_title, only: %i[edit update]
 
     def index
-      @calendar_titles = pagy_by_search(CalendarTitle.all)
-    end
-
-    def new
-      @calendar_title = CalendarTitle.new
+      @calendar_titles = pagy_by_search(CalendarTitle.includes(:types, :calendar_title_types))
     end
 
     def edit; end
 
-    def create
-      @calendar_title = CalendarTitle.new(calendar_title_params)
-      @calendar_title.save ? redirect_with('success') : render(:new)
-    end
-
     def update
       @calendar_title.update(calendar_title_params) ? redirect_with('success') : render(:edit)
-    end
-
-    def destroy
-      @calendar_title.destroy ? redirect_with('success') : redirect_with('warning')
     end
 
     private
@@ -40,7 +27,7 @@ module Calendar
     end
 
     def calendar_title_params
-      params.require(:calendar_title).permit(:name, type_ids: [])
+      params.require(:calendar_title).permit(type_ids: [])
     end
   end
 end
