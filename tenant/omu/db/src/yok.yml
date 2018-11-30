@@ -2,6 +2,23 @@
 # Yüksek Öğretim Bilgi Sistemi (YÖKSİS)
 # ------------------------------------------------------------------------------
 
+- name: Yabancı Diller Yüksekokulu
+  yoksis_id: 237870
+  foet_code:
+  founded_at: 25.04.2013
+  duration:
+  unit_status_id: Kapatılmış
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id:
+  unit_type_id: Yüksekokul
+  parent_yoksis_id: 121946
+  osym_id:
+  abbreviation: C-YDİL-YO
+  issues:
+    - parent Canik Başarı Üniversitesi olarak görünüyor
+  notes:
+    - Geçici çözüm için parent_yoksis_id OMÜ verildi
+
 - name: Yabancı Diller Bölümü
   yoksis_id: 330789
   foet_code: 222
@@ -13,7 +30,7 @@
   unit_type_id: Bölüm
   parent_yoksis_id: 237870
   osym_id:
-  abbreviation: YDİLB
+  abbreviation: C-YDİL-YO-B
   issues:
     - Üst birim olan Yabancı Diller Yüksekokulu kapatılmış görünüyor
   notes:
@@ -1074,6 +1091,20 @@
   osym_id: 108290161
   abbreviation: TURİZM-MYO-STEH-TSH-PR
 
+- name: Bafra İşletme Fakültesi
+  yoksis_id: 293681
+  foet_code:
+  founded_at: 08.04.2016
+  duration:
+  unit_status_id: Pasif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id:
+  unit_type_id: Fakülte
+  parent_yoksis_id: 121946
+  osym_id:
+  abbreviation: İŞLETME
+  issues:
+
 - name: Sigortacılık Ve Sosyal Güvenlik Bölümü
   yoksis_id: 334064
   foet_code: 343
@@ -1422,6 +1453,19 @@
   osym_id:
   abbreviation: BİYO-EĞ-YL
 
+- name: Eğitim Bilimleri (Dr)
+  yoksis_id: 174849
+  foet_code: 142
+  founded_at: 26.02.2010
+  duration:
+  unit_status_id: Arşiv
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id:
+  unit_type_id: Doktora Programı
+  parent_yoksis_id:
+  osym_id:
+  abbreviation: EĞİTİM-BİLİM-EB-DR
+
 - name: Eğitim Bilimleri Anabilim Dalı
   yoksis_id: 207882
   foet_code: 142
@@ -1434,6 +1478,8 @@
   parent_yoksis_id: 174849
   osym_id:
   abbreviation: EĞİTİM-BİLİM-EB-AD
+  issues:
+    - üst birim olan Eğitim Bilimleri (Dr) arşiv olarak görünüyor
 
 - name: Eğitim Felsefi Sosyal Ve Tarihi Temelleri (Yl) (Tezli)
   yoksis_id: 327688
@@ -9646,7 +9692,7 @@
   unit_type_id: Doktora Programı
   parent_yoksis_id: 122388
   osym_id:
-  abbreviation: İŞLETME-DR
+  abbreviation: SOSYAL-BİLİM-İŞLETME-DR
 
 - name: İşletme (Yl) (Tezli)
   yoksis_id: 209533
@@ -9659,7 +9705,7 @@
   unit_type_id: Yüksek Lisans Programı
   parent_yoksis_id: 122388
   osym_id:
-  abbreviation: İŞLETME-YL
+  abbreviation: SOSYAL-BİLİM-İŞLETME-YL
 
 - name: İşletme (Yl) (Tezsiz)
   yoksis_id: 209537
@@ -9672,7 +9718,7 @@
   unit_type_id: Yüksek Lisans Programı
   parent_yoksis_id: 122388
   osym_id:
-  abbreviation: İŞLETME-YZ
+  abbreviation: SOSYAL-BİLİM-İŞLETME-YZ
 
 - name: İşletme Anabilim Dalı
   yoksis_id: 207833
@@ -13649,6 +13695,19 @@
   osym_id: 108271021
   abbreviation: TİCARET-MYO-MKG-SG-PR-2
 
+- name: Çarşamba İnsan Ve Toplum Bilimleri Fakültesi
+  yoksis_id: 293682
+  foet_code:
+  founded_at: 08.04.2016
+  duration:
+  unit_status_id: Pasif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id:
+  unit_type_id: Fakülte
+  parent_yoksis_id: 121946
+  osym_id:
+  abbreviation: İNSAN
+
 - name: Bilgi Ve Belge Yönetimi Bölümü
   yoksis_id: 334066
   foet_code: 322
@@ -14013,7 +14072,7 @@
   unit_type_id: Bölüm
   parent_yoksis_id: 122181
   osym_id:
-  abbreviation: İŞLETME
+  abbreviation: İŞLETME-B
 
 - name: Muhasebe Ve Finansman Anabilim Dalı
   yoksis_id: 140383
@@ -14026,7 +14085,7 @@
   unit_type_id: Anabilim Dalı
   parent_yoksis_id: 128030
   osym_id:
-  abbreviation: İŞLETME-MUHASEBE-AD
+  abbreviation: İŞLETME-B-MUHASEBE-AD
 
 - name: Sayısal Yöntemler Anabilim Dalı
   yoksis_id: 140384
@@ -14039,7 +14098,7 @@
   unit_type_id: Anabilim Dalı
   parent_yoksis_id: 128030
   osym_id:
-  abbreviation: İŞLETME-SAYISAL-AD
+  abbreviation: İŞLETME-B-SAYISAL-AD
 
 - name: Yönetim Ve Organizasyon Anabilim Dalı
   yoksis_id: 140241
@@ -14052,7 +14111,7 @@
   unit_type_id: Anabilim Dalı
   parent_yoksis_id: 128030
   osym_id:
-  abbreviation: İŞLETME-YO-AD
+  abbreviation: İŞLETME-B-YO-AD
 
 - name: Üretim Yönetimi Ve Pazarlama Anabilim Dalı
   yoksis_id: 140243
@@ -14065,7 +14124,7 @@
   unit_type_id: Anabilim Dalı
   parent_yoksis_id: 128030
   osym_id:
-  abbreviation: İŞLETME-ÜYP-AD
+  abbreviation: İŞLETME-B-ÜYP-AD
 
 - name: İşletme Anabilim Dalı
   yoksis_id: 128032
@@ -14078,7 +14137,7 @@
   unit_type_id: Anabilim Dalı
   parent_yoksis_id: 128030
   osym_id:
-  abbreviation: İŞLETME-AD
+  abbreviation: İŞLETME-B-AD
 
 - name: İşletme Pr.
   yoksis_id: 169308
@@ -14091,7 +14150,7 @@
   unit_type_id: Önlisans/lisans Programı
   parent_yoksis_id: 128030
   osym_id: 108210798
-  abbreviation: İŞLETME-PR
+  abbreviation: İŞLETME-B-PR
 
 - name: İlahiyat Fakültesi
   yoksis_id: 122157
