@@ -80,19 +80,16 @@ en:
       update:
         success: Academic term successfully updated.
     calendar_titles:
-      create:
-        success: Calendar title successfully created.
-      destroy:
-        success: Calendar title successfully deleted.
-        warning: Calendar title could not be deleted.
       edit:
         form_title: Edit the Calendar Title
+      form:
+        title: Calendar Title
       index:
         <<: *calendar_title_attributes
         card_header: Calendar Titles
         new_calender_title_link: New Calendar Title
-      new:
-        form_title: Create a Calendar Title
+        select_calendar_type: Select Calendar Type
+        type: Calendar Type
       update:
         success: Calendar title successfully updated.
     calendar_types:

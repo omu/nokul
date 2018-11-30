@@ -1,6 +1,7 @@
 ati:
   name: Atatürk İlke ve Inkılapları Tarihi
   code: ATI101
+  course_type: compulsory_course
   theoric: 3
   practice: 0
   credit: 2
@@ -13,6 +14,7 @@ ati:
 ydi:
   name: İngilizce
   code: YDI101
+  course_type: compulsory_course
   theoric: 3
   practice: 0
   credit: 2
@@ -25,6 +27,7 @@ ydi:
 test:
   name: 'Test Course'
   code: TC101
+  course_type: compulsory_course
   theoric: 5
   practice: 2
   credit: 3
@@ -37,6 +40,7 @@ test:
 fi_tarihi:
   name: 'Fi Tarihi'
   code: FT101
+  course_type: compulsory_course
   theoric: 3
   practice: 0
   credit: 2

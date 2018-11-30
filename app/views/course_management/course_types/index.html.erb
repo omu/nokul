@@ -1,0 +1,46 @@
+<div class='alert alert-light'>
+  <%= link_to_new new_course_type_path, t('.new_course_type_link') %>
+</div>
+
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'tags', text: t('.card_header') %>
+      </div>
+      <div class='card-body'>
+        <%= render 'components/smart_search_form',
+                   path: course_types_path,
+                   placeholder: t('.name') %>
+        <table class='table table-responsive-sm table-striped table-hover'>
+          <thead class="thead-dark">
+            <tr>
+              <th><%= t('.name') %></th>
+              <th><%= t('.code') %></th>
+              <th><%= t('.min_credit') %></th>
+              <th><%= t('actions') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @course_types.each do |course_type| %>
+              <tr>
+                <td><%= course_type.name %></td>
+                <td><%= course_type.code %></td>
+                <td><%= course_type.min_credit %></td>
+                <td>
+                  <%= link_to_edit([:edit, course_type]) %>
+                  <%= link_to_destroy(course_type) %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <nav aria-label='pagination'>
+      <ul class='pagination justify-content-center'>
+        <%== pagy_nav_bootstrap(@pagy) %>
+      </ul>
+    </nav>
+  </div>
+</div>
