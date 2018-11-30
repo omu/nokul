@@ -35,8 +35,8 @@ class MeetingTest < ActiveSupport::TestCase
 
   # callbacks
   test 'before initialize callback must run for year attribute' do
-    meeting = CommitteeMeeting.create(meeting_no: 1, meeting_date: Time.zone.now,
+    meeting = CommitteeMeeting.create(meeting_no: 1, meeting_date: Time.current,
                                       unit: units(:muhendislik_fakultesi_yonetim_kurulu))
-    assert_equal meeting.year, Time.zone.now.year
+    assert_equal meeting.year, Time.current.year
   end
 end

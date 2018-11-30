@@ -80,19 +80,16 @@ tr:
       update:
         success: Akademik dönem başarıyla güncellendi.
     calendar_titles:
-      create:
-        success: Takvim başlığı başarıyla oluşturuldu.
-      destroy:
-        success: Takvim başlığı başarıyla silindi.
-        warning: Takvim başlığı silinemedi!
       edit:
         form_title: Takvim Başlığını Güncelle
+      form:
+        title: Takvim Başlığı
       index:
         <<: *calendar_title_attributes
         card_header: Takvim Başlıkları
         new_calender_title_link: Yeni Takvim Başlığı
-      new:
-        form_title: Takvim Başlığı Oluştur
+        select_calendar_type: Takvim Türü Seç
+        type: Takvim Türü
       update:
         success: Takvim başlığı başarıyla güncellendi.
     calendar_types:

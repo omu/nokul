@@ -10,6 +10,7 @@ class StudentTest < ActiveSupport::TestCase
     user
     unit
     identity
+    academic_calendars
   ].each do |property|
     test "a student can communicate with #{property}" do
       assert students(:serhat).send(property)
@@ -42,5 +43,11 @@ class StudentTest < ActiveSupport::TestCase
     assert_enqueued_with(job: Kps::IdentitySaveJob) do
       Student.create(student_number: '1234', user: users(:serhat), unit: units(:omu))
     end
+  end
+
+  # custom tests
+  test 'proper_event_range? returns if event date is proper range' do
+    student = students(:john)
+    assert_not student.proper_event_range?('course_registration')
   end
 end
