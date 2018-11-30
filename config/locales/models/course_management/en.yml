@@ -4,6 +4,7 @@ en:
       course: &course_attributes
         code: Code
         credit: Credit
+        course_type: Course Type
         laboratory: Laboratory
         language: Language
         name: Name
@@ -13,8 +14,6 @@ en:
         theoric: Theoric
         unit: Unit
         ects: Ects
-      course_group_type: &course_group_type_attributes
-        name: Course Group Type Name
       course_group: &course_group_attributes
         course_group_type: Course Group Type
         course_ids: Courses
@@ -23,6 +22,12 @@ en:
         search_placeholder: Course Group Name / Unit Name / Course Group Type Name
         total_ects_condition: Total ECTS Condition
         unit: Unit
+      course_group_type: &course_group_type_attributes
+        name: Course Group Type Name
+      course_type: &course_type_attributes
+        name: Course Type
+        code: Code
+        min_credit: Minimum Credit
       curriculum: &curriculum_attributes
         name: Curriculum Name
         semesters_count: Number of Semesters
@@ -31,12 +36,12 @@ en:
         unit: Unit
         number_of_semesters: Number of Semester to Create
         type: Semester Creation Type
-      curriculum_semester:
-        sequence: Semester
-        year: Year
       curriculum_course: &curriculum_course_attributes
         course: Course
         ects: ECTS
+      curriculum_semester:
+        sequence: Semester
+        year: Year
     enums:
       course:
         program_types:
@@ -55,47 +60,10 @@ en:
       course: Course
       course_group_type: Course Group Type
       course_group: Course Group
+      course_type: Course Type
       curriculum: Curriculum
       curriculum_course: Curriculum Course
   course_management:
-    course_group_types:
-      create:
-        success: Course group type created.
-      destroy:
-        warning: An error occured when deleting the course group type.
-        success: Course group type successfully destroyed.
-      edit:
-        form_title: Course Group Type successfully updated.
-      index:
-        <<: *course_group_type_attributes
-        card_header: Course Group Types
-        new_course_group_type_link: Add a New Course Group Type
-      new:
-        form_title: Course Group Type successfully created.
-      update:
-        success: Course group type successfully updated.
-    course_groups:
-      create:
-        success: Course group created.
-      destroy:
-        error: An error occured when deleting the course group.
-        success: Course group successfully destroyed.
-      edit:
-        form_title: Course Group successfully updated.
-      index:
-        <<: *course_group_attributes
-        card_header: Course Groups
-        new_course_group_link: Add a New Course Group
-      new:
-        form_title: Course Group successfully created.
-      show:
-        course_group_type: Course Group Type
-        courses: Courses
-        name: Course Unit Group Name
-        total_ects_condition: Total ECTS Condition
-        unit: Unit
-      update:
-        success: Course group successfully updated.
     courses:
       create:
         success: Course successfully created.
@@ -111,6 +79,7 @@ en:
       new:
         form_title: Create a Course
       search:
+        course_type: All Course Types
         language: All Languages
         program_type: All Program Types
         smart_search_placeholder: Course name or code
@@ -120,6 +89,60 @@ en:
         <<: *course_attributes
       update:
         success: Course successfully updated.
+    course_groups:
+      create:
+        success: Course group created.
+      destroy:
+        error: An error occured when deleting the course group.
+        success: Course group successfully destroyed.
+      edit:
+        form_title: Update the Course Group
+      index:
+        <<: *course_group_attributes
+        card_header: Course Groups
+        new_course_group_link: Add a New Course Group
+      new:
+        form_title: Create a Course Group
+      show:
+        course_group_type: Course Group Type
+        courses: Courses
+        name: Course Group Name
+        total_ects_condition: Total ECTS Condition
+        unit: Unit
+      update:
+        success: Course group successfully updated.
+    course_group_types:
+      create:
+        success: Course group type created.
+      destroy:
+        warning: An error occured when deleting the course group type.
+        success: Course group type successfully destroyed.
+      edit:
+        form_title: Update the Course Group Type
+      index:
+        <<: *course_group_type_attributes
+        card_header: Course Group Types
+        new_course_group_type_link: Add a New Course Group Type
+      new:
+        form_title: Create a Course Group Type
+      update:
+        success: Course group type successfully updated.
+    course_types:
+      create:
+        success: Course type created.
+      destroy:
+        warning: An error occured when deleting the course type.
+        success: Course type successfully destroyed.
+      edit:
+        form_title: Update the Course Type
+      index:
+        <<: *course_type_attributes
+        card_header: Course Types
+        new_course_type_link: Add a New Course Type
+      new:
+        form_title: Create a Course Type
+      update:
+        success: Course type successfully updated.
     curriculums:
       create:
         success: Curriculum successfully created.

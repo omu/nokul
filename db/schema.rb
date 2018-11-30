@@ -188,6 +188,7 @@ ActiveRecord::Schema.define(version: 2018_11_29_105535) do
     t.string "name", limit: 255, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "identifier", limit: 50, null: false
   end
 
   create_table "calendar_types", force: :cascade do |t|
@@ -285,6 +286,14 @@ ActiveRecord::Schema.define(version: 2018_11_29_105535) do
     t.index ["unit_id"], name: "index_course_groups_on_unit_id"
   end
 
+  create_table "course_types", force: :cascade do |t|
+    t.string "name", limit: 255
+    t.string "code", limit: 50
+    t.decimal "min_credit", precision: 5, scale: 2, default: "0.0", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "courses", force: :cascade do |t|
     t.string "name", limit: 255, null: false
     t.string "code", limit: 255, null: false
@@ -298,6 +307,8 @@ ActiveRecord::Schema.define(version: 2018_11_29_105535) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "language_id"
+    t.bigint "course_type_id"
+    t.index ["course_type_id"], name: "index_courses_on_course_type_id"
     t.index ["language_id"], name: "index_courses_on_language_id"
     t.index ["unit_id"], name: "index_courses_on_unit_id"
   end
@@ -677,6 +688,7 @@ ActiveRecord::Schema.define(version: 2018_11_29_105535) do
   add_foreign_key "calendar_unit_types", "unit_types"
   add_foreign_key "calendar_units", "academic_calendars"
   add_foreign_key "calendar_units", "units"
+  add_foreign_key "courses", "course_types"
   add_foreign_key "courses", "languages"
   add_foreign_key "curriculum_courses", "courses"
   add_foreign_key "curriculum_courses", "curriculum_semesters"
