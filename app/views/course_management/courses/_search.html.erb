@@ -42,7 +42,7 @@
                               style: 'width: 100%') %>
               </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-4">
               <div class="form-group">
                 <%= label_tag(:program_type, t('.program_type')) %>
                 <%= select_tag(:program_type,
@@ -52,7 +52,7 @@
                               style: 'width: 100%') %>
               </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-4">
               <div class="form-group">
                 <%= label_tag(:language_id, t('.language')) %>
                 <%= select_tag(:language_id,
@@ -62,7 +62,17 @@
                               style: 'width: 100%') %>
               </div>
             </div>
-            <div class="col-sm-2">
+            <div class="col-sm-4">
+              <div class="form-group">
+                <%= label_tag(:course_type_id, t('.course_type')) %>
+                <%= select_tag(:course_type_id,
+                              options_from_collection_for_select(CourseType.all, :id, :name, params[:course_type_id]),
+                              include_blank: true,
+                              class: 'form-control',
+                              style: 'width: 100%') %>
+              </div>
+            </div>
+            <div class="col-sm-4">
               <div class="form-group">
                 <%= label_tag(:status, t('.status')) %>
                 <%= select_tag(:status,
@@ -86,6 +96,6 @@
 
 <script type='text/javascript'>
   $(document).ready(function() {
-    $('#unit_id, #program_type, #language_id, #status').select2();
+    $('#course_type_id, #unit_id, #program_type, #language_id, #status').select2();
   });
 </script>
