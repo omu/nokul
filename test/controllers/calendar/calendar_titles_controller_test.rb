@@ -12,26 +12,6 @@ module Calendar
     test 'should get index' do
       get calendar_titles_path
       assert_response :success
-      assert_select '#add-button', translate('.index.new_calender_title_link')
-    end
-
-    test 'should get new' do
-      get new_calendar_title_path
-      assert_response :success
-    end
-
-    test 'should create calendar title' do
-      assert_difference('CalendarTitle.count') do
-        post calendar_titles_path, params: {
-          calendar_title: { name: 'Test Title' }
-        }
-      end
-
-      calendar_title = CalendarTitle.last
-
-      assert_equal 'Test Title', calendar_title.name
-      assert_redirected_to calendar_titles_path
-      assert_equal translate('.create.success'), flash[:notice]
     end
 
     test 'should get edit' do
@@ -41,24 +21,15 @@ module Calendar
     end
 
     test 'should update calendar title' do
-      calendar_title = CalendarTitle.last
+      calendar_title = calendar_titles(:one)
       patch calendar_title_path(calendar_title),
-            params: { calendar_title: { name: 'Test Title Update' } }
+            params: { calendar_title: { type_ids: [calendar_types(:veteriner).id] } }
 
       calendar_title.reload
 
-      assert_equal 'Test Title Update', calendar_title.name
+      assert_equal [calendar_types(:veteriner).id], calendar_title.types.ids
       assert_redirected_to calendar_titles_path
       assert_equal translate('.update.success'), flash[:notice]
-    end
-
-    test 'should destroy calendar title' do
-      assert_difference('CalendarTitle.count', -1) do
-        delete calendar_title_path(CalendarTitle.last)
-      end
-
-      assert_redirected_to calendar_titles_path
-      assert_equal translate('.destroy.success'), flash[:notice]
     end
 
     private

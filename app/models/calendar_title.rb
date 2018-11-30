@@ -16,4 +16,5 @@ class CalendarTitle < ApplicationRecord
 
   # validations
   validates :name, presence: true, uniqueness: true
+  validates :identifier, presence: true, uniqueness: true
 end
