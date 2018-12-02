@@ -6,3 +6,7 @@ serhat_omu:
   student_number: 98765
   user: serhat
   unit: omu
+john:
+  student_number: 45612
+  user: john
+  unit: bilgisayar_muhendisligi

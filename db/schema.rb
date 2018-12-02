@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_17_090506) do
+ActiveRecord::Schema.define(version: 2018_12_02_224529) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -188,6 +188,7 @@ ActiveRecord::Schema.define(version: 2018_11_17_090506) do
     t.string "name", limit: 255, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "identifier", limit: 50, null: false
   end
 
   create_table "calendar_types", force: :cascade do |t|
@@ -274,6 +275,14 @@ ActiveRecord::Schema.define(version: 2018_11_17_090506) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "course_types", force: :cascade do |t|
+    t.string "name", limit: 255
+    t.string "code", limit: 50
+    t.decimal "min_credit", precision: 5, scale: 2, default: "0.0", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "course_unit_groups", force: :cascade do |t|
     t.string "name", limit: 255, null: false
     t.integer "total_ects_condition", null: false
@@ -298,6 +307,8 @@ ActiveRecord::Schema.define(version: 2018_11_17_090506) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "language_id"
+    t.bigint "course_type_id"
+    t.index ["course_type_id"], name: "index_courses_on_course_type_id"
     t.index ["language_id"], name: "index_courses_on_language_id"
     t.index ["unit_id"], name: "index_courses_on_unit_id"
   end
@@ -654,7 +665,7 @@ ActiveRecord::Schema.define(version: 2018_11_17_090506) do
     t.datetime "last_sign_in_at"
     t.inet "current_sign_in_ip"
     t.inet "last_sign_in_ip"
-    t.datetime "password_changed_at", default: -> { "now()" }, null: false
+    t.datetime "password_changed_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.string "slug", limit: 255
     t.string "preferred_language", limit: 2, default: "tr"
     t.integer "articles_count", default: 0, null: false
@@ -662,6 +673,9 @@ ActiveRecord::Schema.define(version: 2018_11_17_090506) do
     t.jsonb "profile_preferences"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "failed_attempts", default: 0, null: false
+    t.string "unlock_token", limit: 255
+    t.datetime "locked_at"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["id_number"], name: "index_users_on_id_number", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
@@ -677,6 +691,7 @@ ActiveRecord::Schema.define(version: 2018_11_17_090506) do
   add_foreign_key "calendar_unit_types", "unit_types"
   add_foreign_key "calendar_units", "academic_calendars"
   add_foreign_key "calendar_units", "units"
+  add_foreign_key "courses", "course_types"
   add_foreign_key "courses", "languages"
   add_foreign_key "curriculum_semester_courses", "courses"
   add_foreign_key "curriculum_semester_courses", "curriculum_semesters"

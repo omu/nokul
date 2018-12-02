@@ -12,15 +12,18 @@ class Course < ApplicationRecord
   )
 
   # dynamic_search
-  search_keys :program_type, :language_id, :unit_id, :status
+  search_keys :course_type_id, :program_type, :language_id, :unit_id, :status
 
   # relations
+  belongs_to :course_type
   belongs_to :unit
   belongs_to :language
 
   # validations
   validates :code, presence: true, uniqueness: true
-  validates :credit, presence: true, numericality: { greater_than: 0 }
+  validates :credit, presence: true, numericality: {
+    greater_than_or_equal_to: ->(course) { course.course_type.try(:min_credit).to_i }
+  }
   validates :program_type, presence: true
   validates :laboratory, presence: true, numericality: { greater_than_or_equal_to: 0 }
   validates :name, presence: true, uniqueness: { scope: :unit_id }

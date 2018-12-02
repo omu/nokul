@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+internship:
+  name: Staj
+  code: STJ
+  min_credit: 0
+
+technical_elective:
+  name: Teknik Seçmeli
+  code: TS
+  min_credit: 1
+
+social_elective:
+  name: Sosyal Seçmeli
+  code: SS
+  min_credit: 2
+
+compulsory_course:
+  name: Zorunlu Ders
+  code: ZD
+  min_credit: 1
