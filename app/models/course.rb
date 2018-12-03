@@ -2,8 +2,9 @@
 
 class Course < ApplicationRecord
   # search
-  include PgSearch
   include DynamicSearch
+  include ExceptFor
+  include PgSearch
 
   pg_search_scope(
     :search,
