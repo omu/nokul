@@ -70,6 +70,7 @@ tr:
       course_type: Ders Türü
       curriculum: Müfreadat
       curriculum_course: Müfreadat Ders
+      curriculum_course_group: Müfreadat Ders Grup
   course_management:
     courses:
       create:
@@ -155,8 +156,8 @@ tr:
         success: Müfredat başarıyla oluşturuldu.
       curriculum_courses:
         type: Ders Türü
-        <<: *course_attributes
         total_ects: Toplam ECTS
+        <<: *course_attributes
       destroy:
         error: Müfredat silinirken bir hata oluştu.
         success: Müfredat başarıyla silindi.
