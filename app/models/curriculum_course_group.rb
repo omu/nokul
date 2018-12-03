@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CurriculumCourseGroup < ApplicationRecord
+  include ExceptFor
+
   # relations
   has_many :curriculum_courses, dependent: :destroy
   belongs_to :course_group
@@ -14,9 +16,9 @@ class CurriculumCourseGroup < ApplicationRecord
   # delegates
   delegate :name, to: :course_group
 
+  # TODO: workaround
   def build_curriculum_courses
-    created_courses_ids = curriculum_courses.pluck(:course_id)
-    course_group.courses.where.not(id: created_courses_ids).find_each do |course|
+    course_group.courses.except_for(curriculum_courses.pluck(:course_id)).find_each do |course|
       curriculum_courses.build(
         course_id: course.id, curriculum_semester_id: curriculum_semester_id
       )
