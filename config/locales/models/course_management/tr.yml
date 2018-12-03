@@ -39,6 +39,9 @@ tr:
       curriculum_course: &curriculum_course_attributes
         course: Ders
         ects: AKTS
+      curriculum_course_group: &curriculum_course_group_attributes
+        course_group: Ders Grubu
+        ects: AKTS
       curriculum_semester:
         sequence: Dönem Sırası
         year: Yıl
@@ -56,6 +59,10 @@ tr:
         statuses:
           active: Aktif
           passive: Pasif
+      curriculum_course:
+        types:
+          compulsory: Zorunlu
+          elective: Seçmeli
     models:
       course: Ders
       course_group: Ders Grubu
@@ -146,6 +153,10 @@ tr:
     curriculums:
       create:
         success: Müfredat başarıyla oluşturuldu.
+      curriculum_courses:
+        type: Ders Türü
+        <<: *course_attributes
+        total_ects: Toplam ECTS
       destroy:
         error: Müfredat silinirken bir hata oluştu.
         success: Müfredat başarıyla silindi.
@@ -163,10 +174,10 @@ tr:
         smart_search_placeholder: Müfredat Adı
         <<: *curriculum_attributes
       semesters:
-        total_credits: 'Toplam Kredi'
-        total_ects: 'Toplam ECTS'
-        course:
-          <<: *course_attributes
+        total_credits: Toplam Kredi
+        total_ects: Toplam ECTS
+        add_course: Ders Ekle
+        add_course_group: Ders Grubu Ekle
       show:
         <<: *curriculum_attributes
       update:
@@ -183,6 +194,18 @@ tr:
         form_title: Müfredat Dersi Oluştur
       update:
         success: Müfredat dersi başarıyla güncellendi.
+    curriculum_course_groups:
+      create:
+        success: Müfredat ders grubu başarıyla oluşturuldu.
+      destroy:
+        error: Müfredat ders grubu silinirken bir hata oluştu.
+        success: Müfredat ders grubu başarıyla silindi.
+      edit:
+        form_title: Müfredat Ders Grubu Düzenle
+      new:
+        form_title: Müfredat Ders Grubu Oluştur
+      update:
+        success: Müfredat ders grubu başarıyla güncellendi.
   simple_form:
     labels:
       course:
@@ -191,3 +214,5 @@ tr:
         <<: *curriculum_attributes
       curriculum_course:
         <<: *curriculum_course_attributes
+      curriculum_course_group:
+        <<: *curriculum_course_group_attributes

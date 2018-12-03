@@ -39,6 +39,9 @@ en:
       curriculum_course: &curriculum_course_attributes
         course: Course
         ects: ECTS
+      curriculum_course_group: &curriculum_course_group_attributes
+        course_group: Ders Grubu
+        ects: AKTS
       curriculum_semester:
         sequence: Semester
         year: Year
@@ -56,6 +59,10 @@ en:
         statuses:
           active: Active
           passive: Passive
+      curriculum_course:
+        types:
+          compulsory: Compulsory
+          elective: Elective
     models:
       course: Course
       course_group_type: Course Group Type
@@ -144,6 +151,10 @@ en:
       update:
         success: Course type successfully updated.
     curriculums:
+      curriculum_courses:
+        type: Course Type
+        total_ects: Toplam ECTS
+        <<: *course_attributes
       create:
         success: Curriculum successfully created.
       destroy:
@@ -163,10 +174,10 @@ en:
         smart_search_placeholder: Curriculum Name
         <<: *curriculum_attributes
       semesters:
-        total_credits: 'Total Credits'
-        total_ects: 'Total ECTS'
-        course:
-          <<: *course_attributes
+        total_credits: Total Credits
+        total_ects: Total ECTS
+        add_course: Add Course
+        add_course_group: Add Course Group
       show:
         <<: *curriculum_attributes
       update:
@@ -189,5 +200,7 @@ en:
         <<: *course_attributes
       curriculum:
         <<: *curriculum_attributes
-      curriculum_semester_course:
+      curriculum_course:
         <<: *curriculum_course_attributes
+      curriculum_course_group:
+        <<: *curriculum_course_group_attributes
