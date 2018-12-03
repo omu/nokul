@@ -6,7 +6,7 @@ module CourseManagement
   class CurriculumCoursesControllerTest < ActionDispatch::IntegrationTest
     setup do
       sign_in users(:serhat)
-      @curriculum_semester = curriculum_semesters(:one)
+      @curriculum_semester = CurriculumSemesterDecorator.new(curriculum_semesters(:one))
       @curriculum_course = @curriculum_semester.curriculum_courses.first
     end
 
@@ -15,22 +15,20 @@ module CourseManagement
       assert_response :success
     end
 
-    test 'should create curriculum' do
-      course = @curriculum_semester.available_courses.first
+    test 'should create curriculum course' do
+      parameters = {
+        course_id: @curriculum_semester.available_courses.first.id, ects: 5
+      }
       assert_difference('CurriculumCourse.count') do
         post curriculum_semester_curriculum_courses_path(
           @curriculum_semester
-        ), params: {
-          curriculum_course: {
-            course_id: course.id, ects: 5
-          }
-        }
+        ), params: { curriculum_course: parameters }
       end
 
       curriculum_course = CurriculumCourse.last
-
-      assert_equal course.name, curriculum_course.name
-      assert_equal 5.0, curriculum_course.ects
+      parameters.each do |attribute, value|
+        assert_equal value, curriculum_course.send(attribute)
+      end
       assert_redirected_to index_path
       assert_equal translate('.create.success'), flash[:notice]
     end
@@ -43,15 +41,11 @@ module CourseManagement
       assert_select '.card-header strong', translate('.edit.form_title')
     end
 
-    test 'should update curriculum' do
+    test 'should update curriculum course' do
       curriculum_course = CurriculumCourse.last
       patch curriculum_semester_curriculum_course_path(
         @curriculum_semester, curriculum_course
-      ), params: {
-        curriculum_course: {
-          ects: 10
-        }
-      }
+      ), params: { curriculum_course: { ects: 10 } }
 
       curriculum_course.reload
 
@@ -60,7 +54,7 @@ module CourseManagement
       assert_equal translate('.update.success'), flash[:notice]
     end
 
-    test 'should destroy curriculum' do
+    test 'should destroy curriculum course' do
       assert_difference('CurriculumCourse.count', -1) do
         delete curriculum_semester_curriculum_course_path(
           @curriculum_semester, CurriculumCourse.last
