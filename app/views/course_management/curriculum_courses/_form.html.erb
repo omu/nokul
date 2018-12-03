@@ -10,7 +10,7 @@
           <%= f.error_notification %>
           <div class='row'>
             <div class='form-group col-sm-6'>
-              <%= f.association :course, collection: @semester.available_courses(add_courses: [@curriculum_course.course]) %>
+              <%= f.association :course, collection: @semester.available_courses(addition: [@curriculum_course.course]) %>
             </div>
             <div class='form-group col-sm-6'>
               <%= f.input :ects %>

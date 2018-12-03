@@ -36,7 +36,9 @@ module CourseManagement
     end
 
     def set_semester
-      @semester = CurriculumSemester.find(params[:curriculum_semester_id])
+      @semester = CurriculumSemesterDecorator.new(
+        CurriculumSemester.find(params[:curriculum_semester_id])
+      )
     end
 
     def curriculum_course_params
