@@ -40,8 +40,8 @@ en:
         course: Course
         ects: ECTS
       curriculum_course_group: &curriculum_course_group_attributes
-        course_group: Ders Grubu
-        ects: AKTS
+        course_group: Course Group
+        ects: ECTS
       curriculum_semester:
         sequence: Semester
         year: Year
@@ -70,6 +70,7 @@ en:
       course_type: Course Type
       curriculum: Curriculum
       curriculum_course: Curriculum Course
+      curriculum_course_group: Curriculum Course Grup
   course_management:
     courses:
       create:
@@ -151,12 +152,12 @@ en:
       update:
         success: Course type successfully updated.
     curriculums:
+      create:
+        success: Curriculum successfully created.
       curriculum_courses:
         type: Course Type
         total_ects: Toplam ECTS
         <<: *course_attributes
-      create:
-        success: Curriculum successfully created.
       destroy:
         error: An error occured when deleting the curriculum.
         success: Curriculum successfully destroyed.
@@ -194,6 +195,18 @@ en:
         form_title: Create a Curriculum Course
       update:
         success: Curriculum course successfully updated.
+    curriculum_course_groups:
+      create:
+        success: Curriculum course group successfully created.
+      destroy:
+        error: An error occured when deleting the curriculum course group.
+        success: Curriculum course group successfully destroyed.
+      edit:
+        form_title: Update the Curriculum Course Group
+      new:
+        form_title: Create a Curriculum Course Group
+      update:
+        success: Curriculum course group successfully updated.
   simple_form:
     labels:
       course:
