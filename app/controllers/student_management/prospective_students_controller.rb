@@ -15,7 +15,8 @@ module StudentManagement
 
     def show
       @academic_calendar = @prospective_student.unit.academic_calendars.last
-      @registration_documents = @prospective_student.unit.registration_documents.includes(:document)
+      @registration_documents = @prospective_student.unit.registration_documents
+                                                    .where(academic_term: AcademicTerm.active.first).includes(:document)
     end
 
     def register
