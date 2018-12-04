@@ -19,7 +19,7 @@
           <% end %>
           <div class='row mt-3'>
             <div class='form-group col-sm-6'>
-              <%= f.association :unit, collection: Unit.active.coursable.order(:name) %>
+              <%= f.association :unit, collection: Unit.active.coursable.order(:name), label_method: :names_depth_cache %>
             </div>
             <div class='form-group col-sm-6'>
               <%= f.association :curriculum, collection: f.object.unit.present? ? f.object.unit.curriculums : [] %>

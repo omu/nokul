@@ -102,6 +102,7 @@ en:
       show:
         <<: *available_course_attributes
         <<: *available_course_group_attributes
+        create_available_course_group: Create Available Course Group
         lecturers: Lecturers
       update:
         success: Available course successfully updated.
