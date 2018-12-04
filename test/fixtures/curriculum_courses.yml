@@ -1,11 +1,18 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
   course: ati
   curriculum_semester: one
-  ects: 9.99
+  ects: 3
+  type: compulsory
 
 two:
   course: ydi
   curriculum_semester: two
-  ects: 9.99
+  ects: 2
+  type: compulsory
+
+three:
+  course: test
+  curriculum_semester: bilgisayar_muh_mufredati_birinci_donem
+  curriculum_course_group: one
+  ects: 2
+  type: elective
