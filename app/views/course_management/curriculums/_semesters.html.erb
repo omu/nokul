@@ -14,10 +14,10 @@
           <%= render 'curriculum_courses',
                      klass: 'border-primary',
                      actions: nil,
-                     title: 'Zorunlu Ders',
+                     title: t('.compulsory_courses'),
                      semester: semester,
-                     courses: semester.compulsory,
-                     total_ects: semester.compulsory.sum(:ects),
+                     courses: semester.curriculum_courses.compulsory,
+                     total_ects: semester.curriculum_courses.compulsory.sum(:ects),
                      action_visible: true %>
 
           <% semester.curriculum_course_groups.each do |curriculum_course_group| %>
@@ -29,7 +29,7 @@
                         ],
                         ' '
                       ),
-                      title: "Seçmeli Ders - #{curriculum_course_group.name}",
+                      title: "#{t('.elective_courses')} - #{curriculum_course_group.name}",
                       semester: semester,
                       courses: curriculum_course_group.curriculum_courses,
                       total_ects: curriculum_course_group.ects,

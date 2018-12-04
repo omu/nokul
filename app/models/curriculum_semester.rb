@@ -13,11 +13,8 @@ class CurriculumSemester < ApplicationRecord
   validates :year, numericality: { greater_than: 0 },
                    uniqueness: { scope: %i[sequence curriculum_id] }
 
-  # delegates
-  delegate :compulsory, :elective, to: :curriculum_courses
-
   # custom methods
   def total_ects
-    compulsory.sum(:ects).to_f + curriculum_course_groups.sum(:ects).to_f
+    curriculum_courses.compulsory.sum(:ects).to_f + curriculum_course_groups.sum(:ects).to_f
   end
 end
