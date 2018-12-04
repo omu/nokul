@@ -756,7 +756,7 @@
   abbreviation: ÖZELHUKUK-MAH-AD
   issues:
     - Detsis tarafında anabilim dalı başkanlığı Kamu Hukuku Bölümü altında.
-    - Detsis tarafında "ÖZELHUKUK-MAÖH-ADB" ile ilişkili olabilir, kontrol edilmeli.
+    - Detsis tarafında ÖZELHUKUK-MAÖH-ADB ile ilişkili olabilir, kontrol edilmeli.
 
 - name: Ticaret Hukuku Anabilim Dalı
   yoksis_id: 140237
@@ -3657,7 +3657,7 @@
   osym_id:
   abbreviation: ARKEO-AD
   issues:
-    - Detsis tarafında anabilim dalı başkanlığı SOSYAL-BİLİM altında iki tane; "SOSYAL-BİLİM-ARKEO-ADB" ve "SOSYAL-BİLİM-ARKEO-ADB-DİĞER"
+    - Detsis tarafında anabilim dalı başkanlığı SOSYAL-BİLİM altında iki tane; SOSYAL-BİLİM-ARKEO-ADB ve SOSYAL-BİLİM-ARKEO-ADB-DİĞER
 
 - name: Arkeoloji Pr.
   yoksis_id: 228891
@@ -3919,7 +3919,7 @@
   osym_id:
   abbreviation: FELSEFE-AD
   issues:
-    - Detsis tarafında anabilim dalı başkanlığı SOSYAL-BİLİM altında; "SOSYAL-BİLİM-FELSEFE-ADB"
+    - Detsis tarafında anabilim dalı başkanlığı SOSYAL-BİLİM altında; SOSYAL-BİLİM-FELSEFE-ADB
 
 - name: Felsefe Pr.
   yoksis_id: 168695
@@ -4025,7 +4025,7 @@
   osym_id:
   abbreviation: FİZİK-KATI-AD
   issues:
-    - "Katı Hal" olarak yazılmalı
+    - Katı Hal olarak yazılmalı
 
 - name: Nükleer Fizik Anabilim Dalı
   yoksis_id: 122021
@@ -4542,7 +4542,7 @@
   osym_id:
   abbreviation: SOSYOLOJİ-AD
   issues:
-    - Detsis tarafında anabilim dalı başkanlığı SOSYAL-BİLİM altında; "SOSYAL-BİLİM-SOSYOLOJİ-ADB"
+    - Detsis tarafında anabilim dalı başkanlığı SOSYAL-BİLİM altında; SOSYAL-BİLİM-SOSYOLOJİ-ADB
 
 - name: Sosyoloji Pr.
   yoksis_id: 203698
@@ -4856,7 +4856,7 @@
   osym_id:
   abbreviation: İSTATİSTİK-BİLSİS-AD
   issues:
-    - İsim "İstatistiksel" olarak düzeltilmeli
+    - İsim İstatistiksel olarak düzeltilmeli
 
 - name: İstatistik Pr.
   yoksis_id: 168706
@@ -6234,7 +6234,7 @@
   osym_id:
   abbreviation: MAKİNE-AD
   issues:
-    - Detsis tarafında anabilim dalı başkanlığı FEN-BİLİM altında; "FEN-BİLİM-MAKİNE-ADB"
+    - Detsis tarafında anabilim dalı başkanlığı FEN-BİLİM altında; FEN-BİLİM-MAKİNE-ADB
 
 - name: Makine Mühendisliği Pr.
   yoksis_id: 168873
@@ -7962,7 +7962,7 @@
   osym_id:
   abbreviation: SAĞLIK-BİLİM-MİKTO-AD-DA
   issues:
-    - Detsis tarafında anabilim dalı başkanlığı yok. "SAĞLIK-BİLİM-TMİKRO-ADB" ile benzerlik kontrol edilmeli.
+    - Detsis tarafında anabilim dalı başkanlığı yok. SAĞLIK-BİLİM-TMİKRO-ADB ile benzerlik kontrol edilmeli.
 
 - name: Mikrobiyoloji (Veteriner) (Dr)
   yoksis_id: 280441
@@ -9272,7 +9272,7 @@
   osym_id:
   abbreviation: SOSYAL-BİLİM-ENİLİŞ-AD
   issues:
-    - Detsis tarafında anabilim dalı başkanlığı yok. "SOSYAL-BİLİM-İEİ-ADB" ile benzerlik kontrol edilmeli.
+    - Detsis tarafında anabilim dalı başkanlığı yok. SOSYAL-BİLİM-İEİ-ADB ile benzerlik kontrol edilmeli.
 
 - name: Evlilik Ve Aile Danışmanlığı (Yl) (Tezsiz) (İö)
   yoksis_id: 255364
@@ -10101,7 +10101,7 @@
   osym_id:
   abbreviation: TIP-CERRAHİ-ANESTEZİ-AD
   issues:
-    - Mükerrer isimli birim; "TIP-TEMEL-ANESTEZİ-AD"
+    - Mükerrer isimli birim; TIP-TEMEL-ANESTEZİ-AD
 
 - name: Algoloji Bilim Dalı
   yoksis_id: 169147
@@ -10383,7 +10383,7 @@
   abbreviation: TIP-CERRAHİ-ACİL-AD
   issues:
     - Detsis tarafında anabilim dalı başkanlığı yok
-    - Mükerrer isimli birim; "TIP-DAHİLİ-İLKACİL-AD"
+    - Mükerrer isimli birim; TIP-DAHİLİ-İLKACİL-AD
 
 - name: Dahili Tıp Bilimleri Bölümü
   yoksis_id: 121963
@@ -10506,7 +10506,7 @@
   osym_id:
   abbreviation: TIP-DAHİLİ-FARMA-AD
   issues:
-    - "TIP-DAHİLİ-TFARMA-AD" ile benzerlik kontrol edilmeli
+    - TIP-DAHİLİ-TFARMA-AD ile benzerlik kontrol edilmeli
 
 - name: Fiziksel Tedavi Ve Rehabilitasyon Anabilim Dalı
   yoksis_id: 121968
@@ -10804,7 +10804,7 @@
   osym_id:
   abbreviation: TIP-DAHİLİ-TFARMA-AD
   issues:
-    - Detsis tarafında iki tane anabilim dalı başkanlığı; "TIP-DAHİLİ-TFARMA-ADB" ve "SAĞLIK-BİLİM-TFARMA-ADB"
+    - Detsis tarafında iki tane anabilim dalı başkanlığı; TIP-DAHİLİ-TFARMA-ADB ve SAĞLIK-BİLİM-TFARMA-ADB
 
 - name: Tıbbi Genetik Anabilim Dalı
   yoksis_id: 121982
@@ -11073,7 +11073,7 @@
   abbreviation: TIP-DAHİLİ-İLKACİL-AD
   issues:
     - Detsis tarafında anabilim dalı başkanlığı yok
-    - Mükerrer isimli birim; "TIP-CERRAHİ-ACİL-AD"
+    - Mükerrer isimli birim; TIP-CERRAHİ-ACİL-AD
 
 - name: İç Hastalıkları Anabilim Dalı
   yoksis_id: 121970
@@ -11231,7 +11231,7 @@
   osym_id:
   abbreviation: TIP-TEMEL-ANESTEZİ-AD
   issues:
-    - Mükerrer isimli birim; "TIP-CERRAHİ-ANESTEZİ-AD"
+    - Mükerrer isimli birim; TIP-CERRAHİ-ANESTEZİ-AD
     - Anabilim dalı başkanlığı Cerrahi'de
 
 - name: Yoğun Bakım Bilim Dalı
@@ -11598,7 +11598,7 @@
   osym_id:
   abbreviation: TURİZM-TURİŞ-AD
   issues:
-    - Detsis tarafında anabilim dalı başkanlığı SOSYAL-BİLİM altında; "SOSYAL-BİLİM-TURİŞ-ADB"
+    - Detsis tarafında anabilim dalı başkanlığı SOSYAL-BİLİM altında; SOSYAL-BİLİM-TURİŞ-ADB
 
 - name: Turizm İşletmeciliği Pr.
   yoksis_id: 245361
@@ -11732,7 +11732,7 @@
   osym_id:
   abbreviation: VETERİNER-KLİNİK-JİNEKOLOJİ-AD
   issues:
-    - "Veterinerlik" ismi düzeltilmeli
+    - Veterinerlik ismi düzeltilmeli
     - VETERİNER-KÖB ve VETERİNER-KLİNİK altında aynı isimli Anabilim Dalı
 
 - name: Klinik Öncesi Bilimler Bölümü
@@ -11775,7 +11775,7 @@
   abbreviation: VETERİNER-KÖB-CERRAHİ-AD
   issues:
     - Kuruluş tarihi hatalı
-    - Anabilim dalı "Klinik Öncesi Bilimler"e bağlı, başkanlık "Klinik Bilimler" altında
+    - Anabilim dalı Klinik Öncesi Bilimlere bağlı, başkanlık Klinik Bilimler altında
 
 - name: Veterinerlik Doğum Ve Jinekolojisi Anabilim Dalı
   yoksis_id: 122243
@@ -11790,7 +11790,7 @@
   osym_id:
   abbreviation: VETERİNER-KÖB-JİNEKOLOJİ-AD
   issues:
-    - Anabilim dalı "Klinik Öncesi Bilimler"e bağlı, başkanlık "Klinik Bilimler" altında
+    - Anabilim dalı Klinik Öncesi Bilimlere bağlı, başkanlık Klinik Bilimler altında
 
 - name: Veterinerlik Farmakoloji Ve Toksikolojisi Anabilim Dalı
   yoksis_id: 122242
@@ -11805,7 +11805,7 @@
   osym_id:
   abbreviation: VETERİNER-KÖB-FARMA-AD
   issues:
-    - Detsis tarafında iki anabilim dalı başkanlığı; "VETERİNER-KÖB-FARMA-ADB" ve "SAĞLIK-BİLİM-VFARMA-ADB"
+    - Detsis tarafında iki anabilim dalı başkanlığı; VETERİNER-KÖB-FARMA-ADB ve SAĞLIK-BİLİM-VFARMA-ADB
 
 - name: Veterinerlik Mikrobiyolojisi Anabilim Dalı
   yoksis_id: 122238
@@ -11820,7 +11820,7 @@
   osym_id:
   abbreviation: VETERİNER-KÖB-MİKRO-AD
   issues:
-    - Detsis tarafında iki anabilim dalı başkanlığı; "VETERİNER-KÖB-MİKRO-ADB" ve "SAĞLIK-BİLİM-VMİKRO-ADB"
+    - Detsis tarafında iki anabilim dalı başkanlığı; VETERİNER-KÖB-MİKRO-ADB ve SAĞLIK-BİLİM-VMİKRO-ADB
 
 - name: Veterinerlik Parazitolojisi Anabilim Dalı
   yoksis_id: 122239
@@ -11835,7 +11835,7 @@
   osym_id:
   abbreviation: VETERİNER-KÖB-PARAZİT-AD
   issues:
-    - Detsis tarafında iki anabilim dalı başkanlığı; "VETERİNER-KÖB-PARAZİT-ADB" ve "SAĞLIK-BİLİM-VPARAZİT-ADB"
+    - Detsis tarafında iki anabilim dalı başkanlığı; VETERİNER-KÖB-PARAZİT-ADB ve SAĞLIK-BİLİM-VPARAZİT-ADB
 
 - name: Veterinerlik Patolojisi Anabilim Dalı
   yoksis_id: 122240
@@ -11850,7 +11850,7 @@
   osym_id:
   abbreviation: VETERİNER-KÖB-PATO-AD
   issues:
-    - Detsis tarafında iki anabilim dalı başkanlığı; "VETERİNER-KÖB-PATO-ADB" ve "SAĞLIK-BİLİM-PATO-ADB"
+    - Detsis tarafında iki anabilim dalı başkanlığı; VETERİNER-KÖB-PATO-ADB ve SAĞLIK-BİLİM-PATO-ADB
 
 - name: Veterinerlik Viroloji Anabilim Dalı
   yoksis_id: 122245
@@ -11865,7 +11865,7 @@
   osym_id:
   abbreviation: VETERİNER-KÖB-VİRO-AD
   issues:
-    - Detsis tarafında iki anabilim dalı başkanlığı; "VETERİNER-KÖB-VİRO-ADB" ve "SAĞLIK-BİLİM-VİRO-ADB"
+    - Detsis tarafında iki anabilim dalı başkanlığı; VETERİNER-KÖB-VİRO-ADB ve SAĞLIK-BİLİM-VİRO-ADB
 
 - name: Temel Bilimler Bölümü
   yoksis_id: 122246
@@ -11880,7 +11880,7 @@
   osym_id:
   abbreviation: VETERİNER-TEMEL
   issues:
-    - Bölüm başkanlığı adı "Veteriner Hekimliği Temel Bilimler Bölüm Başkanlığı"
+    - Bölüm başkanlığı adı Veteriner Hekimliği Temel Bilimler Bölüm Başkanlığı
 
 - name: Laboratuvar Hayvanları Anabilim Dalı
   yoksis_id: 254782
@@ -11960,7 +11960,7 @@
   osym_id:
   abbreviation: VETERİNER-TEMEL-HİSTO-AD
   issues:
-    - Detsis tarafında anabilim dalı başkanlığı SAĞLIK-BİLİM altında; "SAĞLIK-BİLİM-VHİSTO-ADB"
+    - Detsis tarafında anabilim dalı başkanlığı SAĞLIK-BİLİM altında; SAĞLIK-BİLİM-VHİSTO-ADB
 
 - name: Veteriner Pr.
   yoksis_id: 170029
@@ -12408,7 +12408,7 @@
   osym_id:
   abbreviation: SPOR-ANTRENÖR-AD
   issues:
-    - Detsis tarafında anabilim dalı başkanlığı SAĞLIK-BİLİM altında; "SAĞLIK-BİLİM-ANTRENÖR-ADB"
+    - Detsis tarafında anabilim dalı başkanlığı SAĞLIK-BİLİM altında; SAĞLIK-BİLİM-ANTRENÖR-ADB
 
 - name: Antrenörlük Eğitimi Pr.
   yoksis_id: 169399
@@ -12475,9 +12475,9 @@
   osym_id:
   abbreviation: BES-AD
   issues:
-    - Detsis tarafında anabilim dalı başkanlığı SAĞLIK-BİLİM altında; "SAĞLIK-BİLİM-BES-ADB"
-    - Anabilim dalı başkanlığı ile isim farklı; "Beden Eğitimi Ve Spor Anabilim Dalı Başkanlığı"
-    - Mükerrer isimli birim; "SPOR-BESEĞ-AD"
+    - Detsis tarafında anabilim dalı başkanlığı SAĞLIK-BİLİM altında; SAĞLIK-BİLİM-BES-ADB
+    - Anabilim dalı başkanlığı ile isim farklı; Beden Eğitimi Ve Spor Anabilim Dalı Başkanlığı
+    - Mükerrer isimli birim; SPOR-BESEĞ-AD
 
 - name: Beden Eğitimi Ve Spor Öğretmenliği Pr.
   yoksis_id: 169401
@@ -12520,7 +12520,7 @@
   osym_id:
   abbreviation: SPOR-BESEĞ-AD
   issues:
-    - Mükerrer isimli birim; "BES-AD"
+    - Mükerrer isimli birim; BES-AD
 
 - name: Rekreasyon Bölümü
   yoksis_id: 214343
@@ -12589,7 +12589,7 @@
   osym_id:
   abbreviation: SPORYÖN-AD
   issues:
-    - Detsis tarafında anabilim dalı başkanlığı SOSYAL-BİLİM altında; "SOSYAL-BİLİM-SPORYÖN-ADB"
+    - Detsis tarafında anabilim dalı başkanlığı SOSYAL-BİLİM altında; SOSYAL-BİLİM-SPORYÖN-ADB
 
 - name: Spor Yöneticiliği Pr.
   yoksis_id: 169402
@@ -12948,7 +12948,7 @@
   osym_id:
   abbreviation: BAHÇE-AD
   issues:
-    - Detsis tarafında anabilim dalı başkanlığı FEN-BİLİM altında; "FEN-BİLİM-BAHÇE-ADB"
+    - Detsis tarafında anabilim dalı başkanlığı FEN-BİLİM altında; FEN-BİLİM-BAHÇE-ADB
 
 - name: Bahçe Bitkileri Pr.
   yoksis_id: 169293
@@ -13268,7 +13268,7 @@
   osym_id:
   abbreviation: TARIMAK
   issues:
-    - İsim "Mühendisliği" olarak düzeltimeli
+    - İsim Mühendisliği olarak düzeltimeli
 
 - name: Tarım Makineleri Anabilim Dalı
   yoksis_id: 122280
@@ -13283,7 +13283,7 @@
   osym_id:
   abbreviation: TARIMAK-AD
   issues:
-    - Detsis tarafında anabilim dalı başkanlığı FEN-BİLİM altında; "FEN-BİLİM-TARIMAK-ADB"
+    - Detsis tarafında anabilim dalı başkanlığı FEN-BİLİM altında; FEN-BİLİM-TARIMAK-ADB
 
 - name: Tarım Makineleri Ve Teknolojileri Mühendisliği Pr.
   yoksis_id: 261783
@@ -13425,7 +13425,7 @@
   osym_id:
   abbreviation: TARIMYAP-AD
   issues:
-    - Detsis tarafında anabilim dalı başkanlığı FEN-BİLİM altında; "FEN-BİLİM-TARIMYAP-ADB"
+    - Detsis tarafında anabilim dalı başkanlığı FEN-BİLİM altında; FEN-BİLİM-TARIMYAP-ADB
 
 - name: Tarla Bitkileri Bölümü
   yoksis_id: 122267
@@ -13468,7 +13468,7 @@
   osym_id:
   abbreviation: TARLABİTKİ-TAHIL-AD
   issues:
-    - İsimdeki "Yemeklik" yazımı hatalı
+    - İsimdeki Yemeklik yazımı hatalı
     - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Tarla Bitkileri Anabilim Dalı
@@ -13484,7 +13484,7 @@
   osym_id:
   abbreviation: TARLABİTKİ-AD
   issues:
-    - Detsis tarafında anabilim dalı başkanlığı FEN-BİLİM altında; "FEN-BİLİM-TARLABİTKİ-ADB"
+    - Detsis tarafında anabilim dalı başkanlığı FEN-BİLİM altında; FEN-BİLİM-TARLABİTKİ-ADB
 
 - name: Tarla Bitkileri Pr.
   yoksis_id: 169300
@@ -13570,7 +13570,7 @@
   osym_id:
   abbreviation: TOPRAKBİL-AD
   issues:
-    - Detsis tarafında anabilim dalı başkanlığı FEN-BİLİM altında; "FEN-BİLİM-TOPRAKBİL-ADB"
+    - Detsis tarafında anabilim dalı başkanlığı FEN-BİLİM altında; FEN-BİLİM-TOPRAKBİL-ADB
 
 - name: Toprak Bilimi Ve Bitki Besleme Pr.
   yoksis_id: 169301
@@ -14258,7 +14258,7 @@
   osym_id:
   abbreviation: İKTİSAT-AD
   issues:
-    - Detsis tarafında anabilim dalı başkanlığı SOSYAL-BİLİM altında; "SOSYAL-BİLİM-İKTİSAT-ADB"
+    - Detsis tarafında anabilim dalı başkanlığı SOSYAL-BİLİM altında; SOSYAL-BİLİM-İKTİSAT-ADB
 
 - name: İktisat Politikası Anabilim Dalı
   yoksis_id: 209991
@@ -14403,7 +14403,7 @@
   osym_id:
   abbreviation: İŞLETME-B-AD
   issues:
-    - Detsis tarafında anabilim dalı başkanlığı SOSYAL-BİLİM altında; "SOSYAL-BİLİM-İŞLETME-B-ADB"
+    - Detsis tarafında anabilim dalı başkanlığı SOSYAL-BİLİM altında; SOSYAL-BİLİM-İŞLETME-B-ADB
 
 - name: İşletme Pr.
   yoksis_id: 169308
@@ -14717,7 +14717,7 @@
   osym_id:
   abbreviation: TİB-DE-AD
   issues:
-    - Aynı isimli anabilim dalı; "FDE-DİNE-DİNET-BD"
+    - Aynı isimli anabilim dalı; FDE-DİNE-DİNET-BD
     - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Hadis Anabilim Dalı
@@ -15386,7 +15386,7 @@
   osym_id:
   abbreviation: RST-AD
   issues:
-    - "Radyo, Sinema Ve Televizyon" olarak düzeltilmeli
+    - Radyo, Sinema Ve Televizyon olarak düzeltilmeli
     - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Radyo, Televizyon Ve Sinema Pr.
@@ -15402,7 +15402,7 @@
   osym_id: 108211081
   abbreviation: RST-PR
   issues:
-    - "Radyo, Sinema Ve Televizyon" olarak düzeltilmeli
+    - Radyo, Sinema Ve Televizyon olarak düzeltilmeli
 
 - name: Yeni Medya Ve İletişim Tasarımı Bölümü
   yoksis_id: 282786

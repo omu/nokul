@@ -579,7 +579,7 @@
   district_id: Çarşamba
   abbreviation: RST-BB
   issues:
-    - "Radyo, Sinema Ve Televizyon" olarak düzeltilmeli
+    - Radyo, Sinema Ve Televizyon olarak düzeltilmeli
   level: 3
 
 - name: Yeni Medya Ve İletişim Tasarımı Bölüm Başkanlığı
@@ -1114,7 +1114,7 @@
   district_id: Atakum
   abbreviation: DİŞ-KLİNİK-PDT-ADB
   issues:
-    - Mükerrer isimli birim; "SAĞLIK-BİLİM-PDT-ADB"
+    - Mükerrer isimli birim; SAĞLIK-BİLİM-PDT-ADB
   level: 4
 
 - name: Restoratif Diş Tedavisi Anabilim Dalı Başkanlığı
@@ -1125,7 +1125,7 @@
   abbreviation: DİŞ-KLİNİK-RDT-ADB
   issues:
   - Bağlı olduğu ABD kapatılmış görünüyor
-  - Mükerrer isimli birim; "SAĞLIK-BİLİM-RDT-ADB"
+  - Mükerrer isimli birim; SAĞLIK-BİLİM-RDT-ADB
   level: 4
 
 - name: Diş Hekimliği Fakülte Disiplin Kurulu
@@ -1287,7 +1287,7 @@
   district_id: Atakum
   abbreviation: GÜZELSANATLARB-RESİM-ADB
   issues:
-  - Adı "Anasanat Dalı Başkanlığı" olmalı
+  - Adı Anasanat Dalı Başkanlığı olmalı
   level: 4
 
 - name: Matematik Ve Fen Bilimleri Eğitimi Bölüm Başkanlığı
@@ -1425,7 +1425,7 @@
   district_id: Atakum
   abbreviation: TS-TDE-ADB
   issues:
-    - Anabilim dalı adı farklı; "Türk Dili Ve Edebiyatı Eğitimi Anabilim Dalı"
+    - Anabilim dalı adı farklı; Türk Dili Ve Edebiyatı Eğitimi Anabilim Dalı
   level: 4
 
 - name: Türkçe Eğitimi Anabilim Dalı Başkanlığı
@@ -2135,7 +2135,7 @@
   district_id: Atakum
   abbreviation: TDE-ÇTLE-ADB
   issues:
-  - İsim "Çağdaş Türk Lehçeleri Ve Edebiyatları Anabilim Dalı Başkanlığı" olmalı
+  - İsim Çağdaş Türk Lehçeleri Ve Edebiyatları Anabilim Dalı Başkanlığı olmalı
   level: 4
 
 - name: Eski Türk Dili Anabilim Dalı Başkanlığı
@@ -2571,7 +2571,7 @@
   district_id: Atakum
   abbreviation: İTS-MUSİKİ-ABD
   issues:
-    - İsim "Türk Din Musikisi" olarak düzeltilmeli
+    - İsim Türk Din Musikisi olarak düzeltilmeli
   level: 4
 
 - name: İslam Tarihi Anabilim Dalı Başkanlığı
@@ -2702,7 +2702,7 @@
   district_id: Atakum
   abbreviation: İSGMH-AUM-MD
   issues:
-    - "Meslek Hastalıkları" ayrı yazılmalı
+    - Meslek Hastalıkları ayrı yazılmalı
   level: 2
 
 - name: Kadın Ve Toplum Uygulama Ve Araştırma Merkezi Müdürlüğü
@@ -2908,7 +2908,7 @@
   district_id: Atakum
   abbreviation: ENDÜSTRİ-YÖN-ADB
   issues:
-    - İlişkili olduğu anabilim dalı; "Yöneylem Araştırma Anabilim Dalı"
+    - İlişkili olduğu anabilim dalı; Yöneylem Araştırma Anabilim Dalı
   level: 4
 
 - name: Mühendislik Fakülte Sekreterliği
@@ -3062,7 +3062,7 @@
   district_id: Atakum
   abbreviation: KİMYA-PROSES-ADB
   issues:
-    - İlişkili olduğu anabilim dalı; "Proses Ve Reaktör Tasarımı Anabilim Dalı"
+    - İlişkili olduğu anabilim dalı; Proses Ve Reaktör Tasarımı Anabilim Dalı
   level: 4
 
 - name: Temel İşlemler Anabilim Dalı Başkanlığı
@@ -3080,7 +3080,7 @@
   district_id: Atakum
   abbreviation: KİMYA-ENERJİ-ADB
   issues:
-    - İlişkili olduğu anabilim dalı; "Termodinamik Ve Enerji Teknolojisi Anabilim Dalı"
+    - İlişkili olduğu anabilim dalı; Termodinamik Ve Enerji Teknolojisi Anabilim Dalı
   level: 4
 
 - name: Makine Mühendisliği Bölüm Başkanlığı
@@ -3146,7 +3146,7 @@
   district_id: Atakum
   abbreviation: MALZEME-ADB
   issues:
-    - İlişkili olduğu anabilim dalı farklı isimde; "Malzeme Bilimi Ve Mühendisliği Anabilim Dalı"
+    - İlişkili olduğu anabilim dalı farklı isimde; Malzeme Bilimi Ve Mühendisliği Anabilim Dalı
   level: 4
 
 - name: Mühendislik Fakülte Disiplin Kurulu
@@ -3196,7 +3196,7 @@
   district_id: Atakum
   abbreviation: OAM-MD
   issues:
-    - İlişkili olduğu merkez ile farklı isim; "Ornitoloji Araştırma Ve Uygulama Merkezi"
+    - İlişkili olduğu merkez ile farklı isim; Ornitoloji Araştırma Ve Uygulama Merkezi
   level: 2
 
 - name: Öğrenci İşleri Daire Başkanlığı
@@ -3718,7 +3718,7 @@
   district_id: Atakum
   abbreviation: TE-AUM-MD
   issues:
-    - İlişkili olduğu merkez adı farklı; "Temiz Enerji Araştırma Ve Uygulama Merkezi"
+    - İlişkili olduğu merkez adı farklı; Temiz Enerji Araştırma Ve Uygulama Merkezi
   level: 2
 
 - name: Tıp Fakültesi Dekanlığı
@@ -3912,7 +3912,7 @@
   district_id: Atakum
   abbreviation: TIP-DAHİLİ-FTR-ADB
   issues:
-    - İlişkili olduğu anabilim dalı ile farklı isim; "Fiziksel Tedavi Ve Rehabilitasyon Anabilim Dalı"
+    - İlişkili olduğu anabilim dalı ile farklı isim; Fiziksel Tedavi Ve Rehabilitasyon Anabilim Dalı
   level: 4
 
 - name: Göğüs Hastalıkları Anabilim Dalı Başkanlığı
@@ -3930,7 +3930,7 @@
   district_id: Atakum
   abbreviation: TIP-DAHİLİ-HALK-ADB
   issues:
-    - Mükerrer isimli birim; "SAĞLIK-BİLİM-HALK-ADB"
+    - Mükerrer isimli birim; SAĞLIK-BİLİM-HALK-ADB
   level: 4
 
 - name: Hava Ve Uzay Hekimliği Anabilim Dalı Başkanlığı
@@ -4052,7 +4052,7 @@
   district_id: Atakum
   abbreviation: TIP-TEMEL-BTB-ADB
   issues:
-    - İlişkili olduğu anabilim dalı ile isim farklı; "Biyoistatistik Ve Tıbbi Bilişim Anabilim Dalı"
+    - İlişkili olduğu anabilim dalı ile isim farklı; Biyoistatistik Ve Tıbbi Bilişim Anabilim Dalı
   level: 4
 
 - name: Fizyoloji Anabilim Dalı Başkanlığı
@@ -4086,7 +4086,7 @@
   district_id: Atakum
   abbreviation: TIP-TEMEL-TBİYOLOJİ-ADB
   issues:
-    - Mükerrer isimli birim; "SAĞLIK-BİLİM-TBİYO-ADB"
+    - Mükerrer isimli birim; SAĞLIK-BİLİM-TBİYO-ADB
   level: 4
 
 - name: Tıbbi Mikrobiyoloji Anabilim Dalı Başkanlığı
@@ -4168,7 +4168,7 @@
   district_id: Atakum
   abbreviation: UZEM-MD
   issues:
-    - İlişkili olduğu merkez ile ismi farklı; "Uzaktan Eğitim Araştırma Ve Uygulama Merkezi"
+    - İlişkili olduğu merkez ile ismi farklı; Uzaktan Eğitim Araştırma Ve Uygulama Merkezi
   level: 2
 
 - name: Veteriner Fakültesi Dekanlığı
@@ -4234,7 +4234,7 @@
   district_id: Atakum
   abbreviation: VETERİNER-KLİNİK-CERRAHİ-ABD
   issues:
-  - ABD "Klinik Öncesi Bilimler"e bağlı, başkanlık "Klinik Bilimler" altında
+  - ABD Klinik Öncesi Bilimlere bağlı, başkanlık Klinik Bilimler altında
   level: 4
 
 - name: Veterinerlik Doğum Ve Jinekolojisi Anabilim Dalı Başkanlığı
@@ -4244,8 +4244,8 @@
   district_id: Atakum
   abbreviation: VETERİNER-KLİNİK-JİNEKOLOJİ-ABD
   issues:
-  - Anabilim dalı "Klinik Öncesi Bilimler"e bağlı, başkanlık "Klinik Bilimler" altında
-  - Mükerrer isimli birim; "SAĞLIK-BİLİM-VJİNEKOLOJİ-ADB"
+  - Anabilim dalı Klinik Öncesi Bilimlere bağlı, başkanlık Klinik Bilimler altında
+  - Mükerrer isimli birim; SAĞLIK-BİLİM-VJİNEKOLOJİ-ADB
   level: 4
 
 - name: Veterinerlik İç Hastalıkları Anabilim Dalı Başkanlığı
@@ -4279,7 +4279,7 @@
   district_id: Atakum
   abbreviation: VETERİNER-KÖB-FARMA-ADB
   issues:
-    - Mükerrer isimli birim; "SAĞLIK-BİLİM-VFARMA-ADB"
+    - Mükerrer isimli birim; SAĞLIK-BİLİM-VFARMA-ADB
   level: 4
 
 - name: Veterinerlik Mikrobiyolojisi Anabilim Dalı Başkanlığı
@@ -4289,7 +4289,7 @@
   district_id: Atakum
   abbreviation: VETERİNER-KÖB-MİKRO-ADB
   issues:
-    - Mükerrer isimli birim; "SAĞLIK-BİLİM-VMİKRO-ADB"
+    - Mükerrer isimli birim; SAĞLIK-BİLİM-VMİKRO-ADB
   level: 4
 
 - name: Veterinerlik Parazitolojisi Anabilim Dalı Başkanlığı
@@ -4299,7 +4299,7 @@
   district_id: Atakum
   abbreviation: VETERİNER-KÖB-PARAZİT-ADB
   issues:
-    - Mükerrer isimli birim; "SAĞLIK-BİLİM-VPARAZİT-ADB"
+    - Mükerrer isimli birim; SAĞLIK-BİLİM-VPARAZİT-ADB
   level: 4
 
 - name: Veterinerlik Patolojisi Anabilim Dalı Başkanlığı
@@ -4309,7 +4309,7 @@
   district_id: Atakum
   abbreviation: VETERİNER-KÖB-PATO-ADB
   issues:
-    - Mükerrer isimli birim; "SAĞLIK-BİLİM-PATO-ADB"
+    - Mükerrer isimli birim; SAĞLIK-BİLİM-PATO-ADB
   level: 4
 
 - name: Veterinerlik Viroloji Anabilim Dalı Başkanlığı
@@ -4319,7 +4319,7 @@
   district_id: Atakum
   abbreviation: VETERİNER-KÖB-VİRO-ADB
   issues:
-    - Mükerrer isimli birim; "SAĞLIK-BİLİM-VİRO-ADB"
+    - Mükerrer isimli birim; SAĞLIK-BİLİM-VİRO-ADB
   level: 4
 
 - name: Veteriner Hekimliği Temel Bilimler Bölüm Başkanlığı
@@ -4329,7 +4329,7 @@
   district_id: Atakum
   abbreviation: VETERİNER-TEMEL-BB
   issues:
-    - Yoksis tarafında bölüm adı farklı; "Temel Bilimler Bölümü"
+    - Yoksis tarafında bölüm adı farklı; Temel Bilimler Bölümü
   level: 3
 
 - name: Laboratuvar Hayvanları Anabilim Dalı Başkanlığı
@@ -4827,7 +4827,7 @@
   district_id: İlkadım
   abbreviation: KONSERVATUVAR-MD
   issues:
-    - "Devlet Konservatuvarı" mı "19 Mayıs Samsun Devlet Konservatuvarı" mı?
+    - Devlet Konservatuvarı mı 19 Mayıs Samsun Devlet Konservatuvarı mı?
   level: 2
 
 - name: Devlet Konservatuvarı Sekreterliği
@@ -5388,7 +5388,7 @@
   district_id: Atakum
   abbreviation: EĞİTİM-BİLİM-BÖTE-ADB
   issues:
-    - Mükerrer isimli birim; "BÖTE-ADB"
+    - Mükerrer isimli birim; BÖTE-ADB
     - İlişkili olduğu anabilim dalı yok
   level: 3
 
@@ -5415,7 +5415,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-VMİKRO-ADB
   issues:
-  - Mükerrer isimli birim; "VETERİNER-KÖB-MİKRO-ADB"
+  - Mükerrer isimli birim; VETERİNER-KÖB-MİKRO-ADB
   level: 3
 
 - name: Yapı, Tesis Ve Teknik İşler Birimi
@@ -5485,7 +5485,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-FİZYO-ADB
   issues:
-    - Mükerrer isimli birim, "TIP-TEMEL-FİZYO-ADB"
+    - Mükerrer isimli birim, TIP-TEMEL-FİZYO-ADB
     - İlişkili olduğu anabilim dalı yok
   level: 3
 
@@ -5858,7 +5858,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-PATO-ADB
   issues:
-  - Mükerrer isimli birim; "VETERİNER-KÖB-PATO-ADB"
+  - Mükerrer isimli birim; VETERİNER-KÖB-PATO-ADB
   level: 3
 
 - name: Personel İşleri Birimi
@@ -6258,7 +6258,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-EBELİK-ADB
   issues:
-    - Mükerrer isimli birim; "EBELİK-ADB"
+    - Mükerrer isimli birim; EBELİK-ADB
     - Yoksis tarafında anabilim dalı yok
   level: 3
 
@@ -6455,7 +6455,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-ADÇC-ADB
   issues:
-    - Mükerrer isimli birim; "DİŞ-KLİNİK-ADCC-ADB"
+    - Mükerrer isimli birim; DİŞ-KLİNİK-ADCC-ADB
     - Yoksis tarafında anabilim dalı yok
   level: 3
 
@@ -6474,7 +6474,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-ZOO-ADB
   issues:
-  - Mükerrer isimli birim; "VETERİNER-ZOO-ADB"
+  - Mükerrer isimli birim; VETERİNER-ZOO-ADB
   - Yoksis tarafında anabilim dalı yok
   level: 3
 
@@ -6536,7 +6536,7 @@
   abbreviation: SOSYAL-BİLİM-MÜZİK-ADB
   issues:
     - Yoksis tarafında anasanat dalı yok
-    - Mükerrer isimli birim; "GÜZEL-SANAT-MÜZİK-ADB"
+    - Mükerrer isimli birim; GÜZEL-SANAT-MÜZİK-ADB
   level: 3
 
 - name: Mali İşler Birimi
@@ -6578,7 +6578,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-TBİYOKİMYA-ADB
   issues:
-    - Mükerrer isimli birim; "TIP-TEMEL-TBİYOKİMYA-ADB"
+    - Mükerrer isimli birim; TIP-TEMEL-TBİYOKİMYA-ADB
     - Yoksis tarafında anabilim dalı yok
   level: 3
 
@@ -6613,7 +6613,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-VANATOMİ-ADB
   issues:
-  - Mükerrer isimli birim, "VETERİNER-TEMEL-ANATOMİ-ADB"
+  - Mükerrer isimli birim, VETERİNER-TEMEL-ANATOMİ-ADB
   - Yoksis tarafında anabilim dalı yok
   level: 3
 
@@ -6693,7 +6693,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-PERİO-ADB
   issues:
-    - Mükerrer isimli birim; "DİŞ-KLİNİK-PERİO-ADB"
+    - Mükerrer isimli birim; DİŞ-KLİNİK-PERİO-ADB
     - Yoksis tarafında anabilim dalı yok
   level: 3
 
@@ -6817,7 +6817,7 @@
   district_id:
   abbreviation: SAĞLIK-BİLİM-PEDO-ADB
   issues:
-  - Mükerrer isimli birim; "DİŞ-KLİNİK-PEDO-ADB"
+  - Mükerrer isimli birim; DİŞ-KLİNİK-PEDO-ADB
   - Yoksis tarafında anabilim dalı DİŞ'e bağlı
   level: 3
 
@@ -6918,7 +6918,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-BTB-ADB
   issues:
-  - Mükerrer isimli birim; "TIP-TEMEL-BTB-ADB"
+  - Mükerrer isimli birim; TIP-TEMEL-BTB-ADB
   - Yoksis tarafında anabilim dalı yok
   level: 3
 
@@ -7009,7 +7009,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-VFİZYO-ADB
   issues:
-    - Mükerrer isimli birim; "VETERİNER-TEMEL-FİZYO-ADB"
+    - Mükerrer isimli birim; VETERİNER-TEMEL-FİZYO-ADB
     - Yoksis tarafında anabilim dalı yok
   level: 3
 
@@ -7021,7 +7021,7 @@
   abbreviation: SAĞLIK-BİLİM-ALERJİ-ADB
   issues:
     - Yoksis tarafında anabilim dalı yok
-    - "Alerji" olarak yazılmalı
+    - Alerji olarak yazılmalı
   level: 3
 
 - name: Matematik Anabilim Dalı Başkanlığı
@@ -7217,7 +7217,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-VBESİN-ADB
   issues:
-  - Mükerrer isimli birim; "VETERİNER-BESİN-ADB"
+  - Mükerrer isimli birim; VETERİNER-BESİN-ADB
   - Yoksis tarafında anabilim dalı yok
   level: 3
 
@@ -7324,7 +7324,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-ANATOMİ-ADB
   issues:
-    - Mükerrer isimli birim; "TIP-TEMEL-ANATOMİ-ADB"
+    - Mükerrer isimli birim; TIP-TEMEL-ANATOMİ-ADB
     - Yoksis tarafında anabilim dalı yok
   level: 3
 
@@ -7455,7 +7455,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-BESLENME-ADB
   issues:
-    - Mükerrer isimli birimi; "BESLENME-BİLİM-ADB"
+    - Mükerrer isimli birimi; BESLENME-BİLİM-ADB
     - Yoksis tarafında anabilim dalı yok
   level: 3
 
@@ -7498,7 +7498,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-VİÇH-ADB
   issues:
-    - Mükerrer isimli birim; "VETERİNER-KLİNİK-İÇH-ADB"
+    - Mükerrer isimli birim; VETERİNER-KLİNİK-İÇH-ADB
     - Yoksis tarafında anabilim dalı yok
   level: 3
 
@@ -7525,7 +7525,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-VCERRAHİ-ADB
   issues:
-    - Mükerrer isimli birim; "VETERİNER-KLİNİK-CERRAHİ-ABD"
+    - Mükerrer isimli birim; VETERİNER-KLİNİK-CERRAHİ-ABD
     - Yoksis tarafında anabilim dalı yok
   level: 3
 
@@ -7618,7 +7618,7 @@
   district_id: Atakum
   abbreviation: SOSYAL-BİLİM-TDE-ADB
   issues:
-    - Mükerrer isimli birim; "TS-TDE-ADB"
+    - Mükerrer isimli birim; TS-TDE-ADB
     - Yoksis tarafında anabilim dalı yok
   level: 3
 
@@ -7711,7 +7711,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-ORTO-ADB
   issues:
-    - Mükerrer isimli birim; "DİŞ-KLİNİK-ORTO-ADB"
+    - Mükerrer isimli birim; DİŞ-KLİNİK-ORTO-ADB
     - Yoksis tarafında anabilim dalı DİŞ'te
   level: 3
 
@@ -7746,7 +7746,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-SAĞLIKYÖN-ADB
   issues:
-    - Mükerrer isimli birim; "SAĞLIKYÖN-ADB"
+    - Mükerrer isimli birim; SAĞLIKYÖN-ADB
     - Yoksis tarafında anabilim dalı diğerine bağlı
   level: 3
 
@@ -7813,7 +7813,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-TMİKRO-ADB
   issues:
-    - İlişkili olduğu anabilim dalı yok. "SAĞLIK-BİLİM-MİKTO-AD-DA" ile benzerlik kontrol edilmeli.
+    - İlişkili olduğu anabilim dalı yok. SAĞLIK-BİLİM-MİKTO-AD-DA ile benzerlik kontrol edilmeli.
   level: 3
 
 - name: Biyoloji Anabilim Dalı Başkanlığı
@@ -7887,7 +7887,7 @@
   district_id:
   abbreviation: SAĞLIK-BİLİM-VBİYOKİMYA-ADB
   issues:
-    - Mükerrer isimli birim; "VETERİNER-TEMEL-BİYOKİMYA-ADB"
+    - Mükerrer isimli birim; VETERİNER-TEMEL-BİYOKİMYA-ADB
     - Yoksis tarafında anabilim dalı diğerine bağlı
   level: 3
 
@@ -7914,7 +7914,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-HBH-ADB
   issues:
-    - Mükerrer isimli birim; "VETERİNER-ZOO-HBH-ADB"
+    - Mükerrer isimli birim; VETERİNER-ZOO-HBH-ADB
     - Yoksis tarafında anabilim dalı diğerine bağlı
   level: 3
 
@@ -7965,7 +7965,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-TFARMA-ADB
   issues:
-    - Mükerrer isimli birim; "TIP-DAHİLİ-TFARMA-ADB"
+    - Mükerrer isimli birim; TIP-DAHİLİ-TFARMA-ADB
   level: 3
 
 - name: Strateji Geliştirme Ve Kalite Birimi
@@ -8058,7 +8058,7 @@
   abbreviation: GÜZEL-SANAT-MÜZİK-ADB
   issues:
     - Yoksis tarafında anasanat dalı yok
-    - Mükerrer isimli birim; "SOSYAL-BİLİM-MÜZİK-ADB"
+    - Mükerrer isimli birim; SOSYAL-BİLİM-MÜZİK-ADB
   level: 3
 
 - name: Kardiyopulmoner Fizyoterapi Anabilim Dalı Başkanlığı
@@ -8142,7 +8142,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-ADÇR-ADB
   issues:
-    - Mükerrer isimli birim; "DİŞ-KLİNİK-ADÇR-ADB"
+    - Mükerrer isimli birim; DİŞ-KLİNİK-ADÇR-ADB
     - Yoksis tarafında anabilim dalı yok
   level: 3
 
@@ -8161,7 +8161,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-HALK-ADB
   issues:
-    - Mükerrer isimli birim; "TIP-DAHİLİ-HALK-ADB"
+    - Mükerrer isimli birim; TIP-DAHİLİ-HALK-ADB
     - Yoksis tarafında anabilim dalı TIP'ta
   level: 3
 
@@ -8246,7 +8246,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-RDT-ADB
   issues:
-    - Mükerrer isimli birim; "DİŞ-KLİNİK-RDT-ADB"
+    - Mükerrer isimli birim; DİŞ-KLİNİK-RDT-ADB
     - Yoksis tarafında anabilim dalı yok
   level: 3
 
@@ -8542,7 +8542,7 @@
   abbreviation: SAĞLIK-BİLİM-VHİSTO-ADB
   issues:
     - Yoksis tarafında anabilim dalı VETERİNER'de.
-    - Anabilim dalı ile isim farklı; "Veterinerlik Histoloji Ve Embriyoloji Anabilim Dalı"
+    - Anabilim dalı ile isim farklı; Veterinerlik Histoloji Ve Embriyoloji Anabilim Dalı
   level: 3
 
 - name: Öğrenci İşleri Birimi
@@ -8996,7 +8996,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-ENDO-ADB
   issues:
-    - Mükerrer isimli birim; "DİŞ-KLİNİK-ENDO-ADB"
+    - Mükerrer isimli birim; DİŞ-KLİNİK-ENDO-ADB
     - Yoksis tarafında anabilim dalı DİŞ'te
   level: 3
 
@@ -9179,7 +9179,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-VFARMA-ADB
   issues:
-    - Mükerrer isimli birim; "VETERİNER-KÖB-FARMA-ADB"
+    - Mükerrer isimli birim; VETERİNER-KÖB-FARMA-ADB
     - Yoksis tarafında anabilim dalı VETERİNER'de
   level: 3
 
@@ -9422,7 +9422,7 @@
   district_id: Atakum
   abbreviation: DİŞ-KLİNİK-ORTO-ADB
   issues:
-  - Mükerrer isimli birim; "SAĞLIK-BİLİM-ORTO-ADB"
+  - Mükerrer isimli birim; SAĞLIK-BİLİM-ORTO-ADB
   level: 4
 
 - name: Bilgi İşlem Birimi
@@ -9530,7 +9530,7 @@
   district_id: Atakum
   abbreviation: FEN-BİLİM-MALZEME-ADB
   issues:
-    - Benzer isimli birim; "MALZEME-ADB"
+    - Benzer isimli birim; MALZEME-ADB
     - Yoksis tarafında anabilim dalı MALZEME'ye bağlı
   level: 3
 
@@ -9583,7 +9583,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-VPARAZİT-ADB
   issues:
-  - Mükerrer isimli birim; "VETERİNER-KÖB-PARAZİT-ADB"
+  - Mükerrer isimli birim; VETERİNER-KÖB-PARAZİT-ADB
   - Yoksis tarafında anabilim dalı diğerine bağlı
   level: 3
 
@@ -9684,7 +9684,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-VJİNEKOLOJİ-ADB
   issues:
-    - Mükerrer isimli birim; "VETERİNER-KLİNİK-JİNEKOLOJİ-ABD"
+    - Mükerrer isimli birim; VETERİNER-KLİNİK-JİNEKOLOJİ-ABD
     - Yoksis tarafında anabilim dalı diğerine bağlı
   level: 3
 
@@ -10009,7 +10009,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-DST-ADB
   issues:
-    - Mükerrer isimli birim; "VETERİNER-KLİNİK-DST-ADB"
+    - Mükerrer isimli birim; VETERİNER-KLİNİK-DST-ADB
     - Yoksis tarafında anabilim dalı diğerine bağlı
   level: 3
 
@@ -10090,7 +10090,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-VİRO-ADB
   issues:
-    - Mükerrer isimli birim; "VETERİNER-KÖB-VİRO-ADB"
+    - Mükerrer isimli birim; VETERİNER-KÖB-VİRO-ADB
     - Yoksis tarafında anabilim dalı diğerine bağlı
   level: 3
 
@@ -10145,7 +10145,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-DEON-ADB
   issues:
-    - Benzer isimli birim; "VETERİNER-TEMEL-DEON-ADB"
+    - Benzer isimli birim; VETERİNER-TEMEL-DEON-ADB
     - Yoksis tarafında anabilim dalı diğerine bağlı
   level: 3
 
@@ -10166,7 +10166,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-PDT-ADB
   issues:
-  - Mükerrer isimli birimi; "DİŞ-KLİNİK-PDT-ADB"
+  - Mükerrer isimli birimi; DİŞ-KLİNİK-PDT-ADB
   - Yoksis tarafında anabilim dalı diğerine bağlı
   level: 3
 
@@ -10195,7 +10195,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-BES-ADB
   issues:
-    - "BES-AD" anabilim dalı ile ilişkili olabilir, kontrol edilmeli
+    - BES-AD anabilim dalı ile ilişkili olabilir, kontrol edilmeli
   level: 3
 
 - name: Basın Yayın Ve Halkla İlişkiler Birimi
@@ -10237,7 +10237,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-TBİYO-ADB
   issues:
-    - Mükerrer isimli birim; "TIP-TEMEL-TBİYOLOJİ-ADB"
+    - Mükerrer isimli birim; TIP-TEMEL-TBİYOLOJİ-ADB
     - Yoksis tarafında anabilim dalı diğerine bağlı
   level: 3
 
@@ -10264,7 +10264,7 @@
   district_id: Atakum
   abbreviation: DİŞ-KLİNİK-ADÇR-ADB
   issues:
-    - Mükerrer isimli birim; "SAĞLIK-BİLİM-ADÇR-ADB"
+    - Mükerrer isimli birim; SAĞLIK-BİLİM-ADÇR-ADB
     - Yoksis tarafında anabilim dalı yok
   level: 4
 
