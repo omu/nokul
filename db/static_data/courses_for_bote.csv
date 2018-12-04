@@ -1,0 +1,63 @@
+yoksis_id|lang|program_type|type|year|semester|course_type_code|code|course_name|theoric|practice|credit|ects
+122154|Türkçe|undergraduate|compulsory|1|1|MB|BOTE-MB-EB|Eğitime Giriş|2|0|2|3
+122154|Türkçe|undergraduate|compulsory|1|1|MB|BOTE-MB-EF|Eğitim Felsefesi|2|0|2|3
+122154|Türkçe|undergraduate|compulsory|1|1|GK|BOTE-GK-ATİ101|Atatürk İlkeleri ve İnkılap Tarihi 1|2|0|2|3
+122154|Türkçe|undergraduate|compulsory|1|1|GK|BOTE-GK-YDİ101|Yabancı Dil 1|2|0|2|3
+122154|Türkçe|undergraduate|compulsory|1|1|GK|BOTE-GK-TDİ101|Türk Dili 1|3|0|3|5
+122154|Türkçe|undergraduate|compulsory|1|1|AE|BOTE-AE-BM|Bilişim ve Matematik|3|0|3|5
+122154|Türkçe|undergraduate|compulsory|1|1|AE|BOTE-AE-EBT|Eğitimde Bilgi Teknolojileri|2|2|3|5
+122154|Türkçe|undergraduate|compulsory|1|1|AE|BOTE-AE-OTT|Öğretim Teknolojilerinin Temelleri|2|0|2|3
+122154|Türkçe|undergraduate|compulsory|1|2|MB|BOTE-MB-EP|Eğitim Psikolojisi|2|0|2|3
+122154|Türkçe|undergraduate|compulsory|1|2|MB|BOTE-MB-ES|Eğitim Sosyolojisi|2|0|2|3
+122154|Türkçe|undergraduate|compulsory|1|2|GK|BOTE-GK-ATİ102|Atatürk İlkeleri ve İnkılap Tarihi 2|2|0|2|3
+122154|Türkçe|undergraduate|compulsory|1|2|GK|BOTE-GK-YDİ102|Yabancı Dil 2|2|0|2|3
+122154|Türkçe|undergraduate|compulsory|1|2|GK|BOTE-GK-TDİ102|Türk Dili 2|3|0|3|5
+122154|Türkçe|undergraduate|compulsory|1|2|AE|BOTE-AE-ATG|Algoritma Tasarımı ve Geliştirme|2|2|3|5
+122154|Türkçe|undergraduate|compulsory|1|2|AE|BOTE-AE-EDE|Elektronik Devre Elemanları|3|0|3|5
+122154|Türkçe|undergraduate|compulsory|1|2|AE|BOTE-AE-POY|Programlama Öğretimi Yaklaşımları|2|0|2|3
+122154|Türkçe|undergraduate|compulsory|2|3|MB|BOTE-MB-OİY|Öğretim İlke ve Yöntemleri|2|0|2|3
+122154|Türkçe|undergraduate|elective|2|3|MB|BOTE-MB-SEC201|Seçmeli1-1|2|0|2|4
+122154|Türkçe|undergraduate|elective|2|3|GK|BOTE-GK-SEC202|Seçmeli1-2|2|0|2|3
+122154|Türkçe|undergraduate|elective|2|3|AE|BOTE-AE-SEC203|Seçmeli1-3|2|0|2|4
+122154|Türkçe|undergraduate|compulsory|2|3|AE|BOTE-AE-BSD|Bilişim Sistemleri Donanımı|3|0|3|4
+122154|Türkçe|undergraduate|compulsory|2|3|AE|BOTE-AE-TP|Temel Programlama|2|2|3|4
+122154|Türkçe|undergraduate|compulsory|2|3|AE|BOTE-AE-EGC|Eğitimde Grafik ve Canlandırma|2|2|3|4
+122154|Türkçe|undergraduate|compulsory|2|3|AE|BOTE-AE-OT|Öğretim Tasarımı|3|0|3|4
+122154|Türkçe|undergraduate|compulsory|2|4|MB|BOTE-MB-TET|Türk Eğitim Tarihi|2|0|2|3
+122154|Türkçe|undergraduate|compulsory|2|4|MB|BOTE-MB-EAY|Eğitimde Araştırma Yöntemleri|2|0|2|3
+122154|Türkçe|undergraduate|elective|2|4|MB|BOTE-MB-SEC204|Seçmeli2-4|2|0|2|4
+122154|Türkçe|undergraduate|elective|2|4|GK|BOTE-GK-SEC205|Seçmeli2-5|2|0|2|3
+122154|Türkçe|undergraduate|elective|2|4|AE|BOTE-AE-SEC206|Seçmeli2-6|2|0|2|4
+122154|Türkçe|undergraduate|compulsory|2|4|AE|BOTE-AE-BOOY|Bilişimde Öğrenme ve Öğretim Yaklaşımları|2|0|2|3
+122154|Türkçe|undergraduate|compulsory|2|4|AE|BOTE-AE-BEG|Bilişim Etiği ve Güvenliği|2|0|2|3
+122154|Türkçe|undergraduate|compulsory|2|4|AE|BOTE-AE-VTYS|Veri Tabanı Yönetim Sistemleri|3|0|3|3
+122154|Türkçe|undergraduate|compulsory|2|4|AE|BOTE-AE-IP|İleri Programlama|2|2|3|4
+122154|Türkçe|undergraduate|compulsory|3|5|MB|BOTE-MB-SY|Sınıf Yönetimi|2|0|2|3
+122154|Türkçe|undergraduate|compulsory|3|5|MB|BOTE-MB-EAE|Eğitimde Ahlâk ve Etik|2|0|2|3
+122154|Türkçe|undergraduate|elective|3|5|MB|BOTE-MB-SEC301|Seçmeli3-7|2|0|2|4
+122154|Türkçe|undergraduate|elective|3|5|GK|BOTE-GK-SEC302|Seçmeli3-8|2|0|2|3
+122154|Türkçe|undergraduate|elective|3|5|AE|BOTE-AE-SEC303|Seçmeli3-9|2|0|2|4
+122154|Türkçe|undergraduate|compulsory|3|5|AE|BOTE-AE-EMT|Eğitimde Modelleme ve Tasarım|2|2|3|5
+122154|Türkçe|undergraduate|compulsory|3|5|AE|BOTE-AE-WTP|Web Tabanlı Programlama|2|2|3|5
+122154|Türkçe|undergraduate|compulsory|3|5|AE|BOTE-AE-BOP|Bilişim Öğretim Programları|2|0|2|3
+122154|Türkçe|undergraduate|compulsory|3|6|MB|BOTE-MB-EOD|Eğitimde Ölçme ve Değerlendirme|2|0|2|3
+122154|Türkçe|undergraduate|compulsory|3|6|MB|BOTE-MB-TESOY|Türk Eğitim Sistemi ve Okul Yönetimi|2|0|2|3
+122154|Türkçe|undergraduate|elective|3|6|MB|BOTE-MB-SEC304|Seçmeli4-10|2|0|2|4
+122154|Türkçe|undergraduate|elective|3|6|GK|BOTE-GK-SEC305|Seçmeli4-114|2|0|2|3
+122154|Türkçe|undergraduate|compulsory|3|6|GK|BOTE-GK-THU|Topluma Hizmet Uygulamaları|1|2|2|3
+122154|Türkçe|undergraduate|elective|3|6|AE|BOTE-AE-SEC306|Seçmeli4-12|2|0|2|4
+122154|Türkçe|undergraduate|compulsory|3|6|AE|BOTE-AE-BA|Bilgisayar Ağları|3|0|3|3
+122154|Türkçe|undergraduate|compulsory|3|6|AE|BOTE-AE-AUO|Açık ve Uzaktan Öğrenme|3|0|3|3
+122154|Türkçe|undergraduate|compulsory|3|6|AE|BOTE-AE-IS|İşletim Sistemleri|3|0|3|4
+122154|Türkçe|undergraduate|compulsory|4|7|MB|BOTE-MB-OU101|Öğretmenlik Uygulaması 1 |2|6|5|10
+122154|Türkçe|undergraduate|compulsory|4|7|MB|BOTE-MB-OEK|Özel Eğitim ve Kaynaştırma|2|0|2|3
+122154|Türkçe|undergraduate|elective|4|7|MB|BOTE-MB-SEC401|Seçmeli5-13|2|0|2|4
+122154|Türkçe|undergraduate|elective|4|7|AE|BOTE-AE-SEC402|Seçmeli5-14|2|0|2|4
+122154|Türkçe|undergraduate|compulsory|4|7|AE|BOTE-AE-FP|Fiziksel Programlama|2|2|3|5
+122154|Türkçe|undergraduate|compulsory|4|7|AE|BOTE-AE-TPU|Teknoloji Planlaması ve Uygulamaları|2|0|2|4
+122154|Türkçe|undergraduate|compulsory|4|8|MB|BOTE-MB-OU102|Öğretmenlik Uygulaması 2 |2|6|5|10
+122154|Türkçe|undergraduate|compulsory|4|8|MB|BOTE-MB-OR|Okullarda Rehberlik|2|0|2|3
+122154|Türkçe|undergraduate|elective|4|8|MB|BOTE-MB-SEC403|Seçmeli6-15|2|0|2|4
+122154|Türkçe|undergraduate|elective|4|8|AE|BOTE-AE-SEC404|Seçmeli6-16|2|0|2|4
+122154|Türkçe|undergraduate|compulsory|4|8|AE|BOTE-AE-PGY|Proje Geliştirme ve Yönetimi|3|0|3|4
+122154|Türkçe|undergraduate|compulsory|4|8|AE|BOTE-AE-MP|Mobil Programlama|2|2|3|5
