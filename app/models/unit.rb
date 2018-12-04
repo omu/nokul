@@ -42,6 +42,7 @@ class Unit < ApplicationRecord
   has_many :calendar_units, dependent: :destroy
   has_many :academic_calendars, through: :calendar_units
   has_many :calendar_events, through: :academic_calendars
+  has_many :available_courses, dependent: :destroy
 
   # validations
   validates :yoksis_id, uniqueness: true, allow_blank: true, numericality: { only_integer: true }, length: { is: 6 }

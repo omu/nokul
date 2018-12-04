@@ -19,7 +19,7 @@
             </tr>
             <tr>
               <th><%= t('.unit') %></th>
-              <td><%= @available_course.curriculum.unit.name %></td>
+              <td><%= @available_course.unit.name %></td>
             </tr>
             <tr>
               <th><%= t('.curriculum') %></th>
@@ -70,7 +70,7 @@
               </tr>
             </thead>
             <tbody>
-              <td><%= @available_course.curriculum.unit.name %></td>
+              <td><%= @available_course.unit.name %></td>
               <td><%= group.quota %></td>
             </tbody>
           </table>

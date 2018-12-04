@@ -11,6 +11,7 @@ class AvailableCourse < ApplicationRecord
   belongs_to :academic_term
   belongs_to :curriculum
   belongs_to :course
+  belongs_to :unit
   has_many :groups, class_name: 'AvailableCourseGroup', dependent: :destroy
 
   # validations
