@@ -13,7 +13,7 @@ tr:
         status: Durumu
         theoric: Teorik
         unit: Birim
-        ects: Ects
+        ects: AKTS
       course_group: &course_group_attributes
         course_group_type: Ders Grup Türü
         course_ids: Dersler
@@ -156,7 +156,7 @@ tr:
         success: Müfredat başarıyla oluşturuldu.
       curriculum_courses:
         type: Ders Türü
-        total_ects: Toplam ECTS
+        total_ects: Toplam AKTS
         <<: *course_attributes
       destroy:
         error: Müfredat silinirken bir hata oluştu.
@@ -180,7 +180,7 @@ tr:
         compulsory_courses: Zorunlu Dersler
         elective_courses: Seçmeli Dersler
         total_credits: Toplam Kredi
-        total_ects: Toplam ECTS
+        total_ects: Toplam AKTS
       show:
         <<: *curriculum_attributes
       update:
