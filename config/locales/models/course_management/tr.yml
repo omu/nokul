@@ -103,6 +103,7 @@ tr:
         <<: *available_course_attributes
         <<: *available_course_group_attributes
         lecturers: Öğretim Elemanları
+        create_available_course_group: Açılan Derse Grup Ekle
       update:
         success: Açılan ders başarıyla güncellendi.
     available_course_groups:
