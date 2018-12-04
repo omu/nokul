@@ -88,3 +88,16 @@ mobil_programlama:
   program_type: undergraduate
   language: turkce
   status: active
+
+programlamaya_giris:
+  name: Programlamaya Giriş
+  code: BİL103
+  course_type: compulsory_course
+  theoric: 3
+  practice: 2
+  credit: 34
+  laboratory: 0
+  unit: bilgisayar_muhendisligi
+  program_type: undergraduate
+  language: turkce
+  status: active
