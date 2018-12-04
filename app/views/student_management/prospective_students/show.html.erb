@@ -46,31 +46,48 @@
               </td>
             </tr>
 
-            <% @registration_documents.each do |registration_document| %>
-              <tr class="table-danger">
-                <td><%= registration_document.document.name %></td>
-                <td><%= check_box('post', 'validated', { class: 'registration-documents' }) %></td>
-              </tr>
+            <% unless @prospective_student.registered %>
+              <% @registration_documents.each do |registration_document| %>
+                <tr class="table-danger">
+                  <td><%= registration_document.document.name %></td>
+                  <td><%= check_box('post', 'validated', { class: 'registration-documents' }) %></td>
+                </tr>
+              <% end %>
             <% end %>
           </tbody>
         </table>
       </div>
-      <div class="card-footer">
-        <% needed_documents = @registration_documents.present? %>
-        <% if @prospective_student.can_permanently_register? %>
-          <%= link_to register_prospective_student_path, class: "btn btn-block btn-success registration-button #{'disabled' if needed_documents }" do %>
-            <%= t('.permanently_register') %>
+
+      <% unless @prospective_student.registered %>
+        <div class="card-footer">
+          <% needed_documents = @registration_documents.present? %>
+          <% if @prospective_student.can_permanently_register? %>
+            <% if @academic_calendar && @academic_calendar.proper_event_range?(:application_permanent_registration) %>
+              <%= link_to register_prospective_student_path, class: "btn btn-block btn-success registration-button #{'disabled' if needed_documents }" do %>
+                <%= t('.permanently_register') %>
+              <% end %>
+            <% else %>
+              <div class="alert alert-danger" role="alert">
+                <%= t('.not_proper_register_event_range') %>
+              </div>
+            <% end %>
+          <% elsif @prospective_student.can_temporarily_register? %>
+            <% if @academic_calendar && @academic_calendar.proper_event_range?(:application_temporary_registration) %>
+              <%= link_to register_prospective_student_path, class: "btn btn-block btn-warning registration-button #{'disabled' if needed_documents }" do %>
+                <%= t('.temporarily_register') %>
+              <% end %>
+            <% else %>
+              <div class="alert alert-danger" role="alert">
+                <%= t('.not_proper_register_event_range') %>
+              </div>
+            <% end %>
+          <% else %>
+            <%= link_to register_prospective_student_path, class: "btn btn-block btn-danger disabled" do %>
+              <%= t('.can_not_register') %>
+            <% end %>
           <% end %>
-        <% elsif @prospective_student.can_temporarily_register? %>
-          <%= link_to register_prospective_student_path, class: "btn btn-block btn-warning registration-button #{'disabled' if needed_documents }" do %>
-            <%= t('.temporarily_register') %>
-          <% end %>
-        <% else %>
-          <%= link_to register_prospective_student_path, class: "btn btn-block btn-danger disabled" do %>
-            <%= t('.can_not_register') %>
-          <% end %>
-        <% end %>
-      </div>
+        </div>
+      <% end %>
     </div>
   </div>
   <div class='col-lg-6'>
@@ -221,6 +238,7 @@
   </div>
 </div>
 
+<% unless @prospective_student.registered %>
 <script type='text/javascript'>
   $(document).ready(function() {
     $(".registration-documents").click(function(){
@@ -240,3 +258,4 @@
     });
   });
 </script>
+<% end %>
