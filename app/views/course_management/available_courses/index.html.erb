@@ -27,12 +27,12 @@
           <tbody>
             <% @available_courses.each do |available_course| %>
               <tr>
-                <td><%= available_course.curriculum.unit.name %></td>
+                <td><%= available_course.unit.name %></td>
                 <td><%= full_name(available_course.academic_term) %></td>
                 <td><%= available_course.curriculum.name %></td>
                 <td><%= available_course.course.code %></td>
                 <td><%= available_course.course.name %></td>
-                <td><%= available_course.groups.count %></td>
+                <td><%= available_course.groups_count %></td>
                 <td><%= available_course.groups.sum(:quota) %></td>
                 <td>
                   <%= link_to_show available_course %>
