@@ -82,6 +82,7 @@ class CourseTest < ActiveSupport::TestCase
     course = courses(:test)
     course.theoric = 8
     course.practice = 3
-    assert_equal course.calculate_credit, 9.5
+    course.laboratory = 4
+    assert_equal course.calculate_credit, 11.5
   end
 end

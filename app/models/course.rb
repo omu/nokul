@@ -43,7 +43,7 @@ class Course < ApplicationRecord
   enum status: { passive: 0, active: 1 }
 
   def calculate_credit
-    theoric.to_f + (practice.to_f / 2)
+    theoric.to_f + ((practice.to_f + laboratory.to_f) / 2)
   end
 
   def name_with_code
