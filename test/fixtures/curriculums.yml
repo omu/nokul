@@ -12,3 +12,8 @@ three:
   name: Test Müfredatı 3
   unit: omu
   status: active
+
+bilgisayar_muhendisligi_mufredati:
+  name: Bilgisayar Mühendiliği Müfredatı
+  unit: bilgisayar_muhendisligi
+  status: active

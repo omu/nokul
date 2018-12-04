@@ -12,6 +12,7 @@ class CurriculumSemesterTest < ActiveSupport::TestCase
     courses
     curriculum
     curriculum_courses
+    curriculum_course_groups
   ].each do |relation|
     test "curriculum semester can communicate with #{relation}" do
       assert @semester.send(relation)
@@ -35,5 +36,10 @@ class CurriculumSemesterTest < ActiveSupport::TestCase
     @semester.sequence = 0
     assert_not @semester.valid?
     assert_not_empty @semester.errors[:sequence]
+  end
+
+  # custom methods
+  test 'total_ects method' do
+    assert_equal @semester.total_ects, 3.0
   end
 end

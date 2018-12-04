@@ -11,9 +11,10 @@ class CurriculumCourseTest < ActiveSupport::TestCase
   %i[
     course
     curriculum_semester
+    curriculum_course_group
   ].each do |relation|
-    test "curriculum semester course can communicate with #{relation}" do
-      assert @curriculum_course.send(relation)
+    test "curriculum course can communicate with #{relation}" do
+      assert @curriculum_course.respond_to? relation
     end
   end
 
@@ -23,7 +24,7 @@ class CurriculumCourseTest < ActiveSupport::TestCase
     curriculum_semester_id: :curriculum_semester,
     ects: :ects
   }.each do |property, error_message_key|
-    test "presence validations for #{property} of a curriculum semester course" do
+    test "presence validations for #{property} of a curriculum course" do
       @curriculum_course.send("#{property}=", nil)
       assert_not @curriculum_course.valid?
       assert_not_empty @curriculum_course.errors[error_message_key]
@@ -31,9 +32,29 @@ class CurriculumCourseTest < ActiveSupport::TestCase
   end
 
   # validations: numericality
-  test 'numericality validations for ects of a curriculum semester course' do
+  test 'numericality validations for ects of a curriculum course' do
     @curriculum_course.ects = 0
     assert_not @curriculum_course.valid?
     assert_not_empty @curriculum_course.errors[:ects]
+  end
+
+  # enums
+  {
+    type: { compulsory: 0, elective: 1 }
+  }.each do |property, hash|
+    hash.each do |key, value|
+      test "have a #{key} value of #{property} enum" do
+        enums = CurriculumCourse.defined_enums.with_indifferent_access
+        assert_equal enums.dig(property, key), value
+      end
+    end
+  end
+
+  # callbacks
+  test 'callbacks must set value the type for a curriculum course' do
+    curriculum_course = @curriculum_course.dup
+    curriculum_course.course = courses(:test)
+    curriculum_course.save
+    assert_equal 'compulsory', curriculum_course.type
   end
 end

@@ -1,7 +1,7 @@
 one:
-  course: test
-  course_group: one
+  course: java
+  course_group: bilgisayar_muhendligi_teknik_secmeli_1
 
 two:
-  course: test
-  course_group: two
+  course: mobil_programlama
+  course_group: bilgisayar_muhendligi_teknik_secmeli_2
