@@ -8,7 +8,7 @@
     <% end %>
   </div>
   <div class="card-body">
-    <table class="table table-bordered table-hover">
+    <table class="table table-responsive-sm table-striped table-hover">
       <thead>
         <tr class="thead-dark">
           <th><%= t('.type') %></th>
@@ -16,7 +16,9 @@
           <th><%= t('.code') %></th>
           <th><%= t('.credit') %></th>
           <th><%= t('.ects') %></th>
-          <th><%= t('actions') %></th>
+          <% if action_visible %>
+            <th><%= t('actions') %></th>
+          <% end %>
         </tr>
       </thead>
       <tbody>
@@ -27,10 +29,12 @@
             <td><%= curriculum_course.code %></td>
             <td><%= curriculum_course.credit %></td>
             <td><%= curriculum_course.ects %></td>
-            <td>
-              <%= link_to_edit edit_curriculum_semester_curriculum_course_path(semester, curriculum_course) %>
-              <%= link_to_destroy [semester, curriculum_course] %>
-            </td>
+            <% if action_visible %>
+              <td>
+                <%= link_to_edit edit_curriculum_semester_curriculum_course_path(semester, curriculum_course) %>
+                <%= link_to_destroy [semester, curriculum_course] %>
+              </td>
+            <% end %>
           </tr>
         <% end %>
       </tbody>

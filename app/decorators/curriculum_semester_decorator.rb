@@ -8,7 +8,7 @@ class CurriculumSemesterDecorator < SimpleDelegator
 
   def available_course_groups(addition: [])
     course_groups = curriculum.unit.course_groups.except_for(
-      curriculum.curriculum_course_groups
+      curriculum.course_groups
     )
     addition(course_groups, addition)
   end

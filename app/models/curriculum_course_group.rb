@@ -1,13 +1,12 @@
 # frozen_string_literal: true
 
 class CurriculumCourseGroup < ApplicationRecord
-  include ExceptFor
-
   # relations
   has_many :curriculum_courses, dependent: :destroy
   belongs_to :course_group
   belongs_to :curriculum_semester
 
+  # nested models
   accepts_nested_attributes_for :curriculum_courses
 
   # validations
