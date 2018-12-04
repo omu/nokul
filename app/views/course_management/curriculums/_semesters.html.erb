@@ -17,7 +17,8 @@
                      title: 'Zorunlu Ders',
                      semester: semester,
                      courses: semester.compulsory,
-                     total_ects: semester.compulsory.sum(:ects) %>
+                     total_ects: semester.compulsory.sum(:ects),
+                     action_visible: true %>
 
           <% semester.curriculum_course_groups.each do |curriculum_course_group| %>
             <%= render 'curriculum_courses',
@@ -31,12 +32,12 @@
                       title: "Seçmeli Ders - #{curriculum_course_group.name}",
                       semester: semester,
                       courses: curriculum_course_group.curriculum_courses,
-                      total_ects: curriculum_course_group.ects %>
+                      total_ects: curriculum_course_group.ects,
+                      action_visible: false %>
           <% end %>
         </div>
         <div class="card-footer text-muted">
           <p class="text-right">
-            <strong><%= t('.total_credits') %>: </strong> <%= semester.courses.sum(:credit) %>
             <strong><%= t('.total_ects') %></strong> <%= semester.total_ects %>
           </p>
         </div>
