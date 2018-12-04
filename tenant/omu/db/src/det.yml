@@ -85,9 +85,9 @@
 - name: Bitkisel Ve Hayvansal Üretim Bölüm Başkanlığı
   detsis_id: 63395826
   parent_detsis_id: 50713553
-  related_yoksis_id:
+  related_yoksis_id: 169417
   district_id: Bafra
-  abbreviation: BAFRA-MYO-BİTKİ-BB
+  abbreviation: BAFRA-MYO-BHU-BB
   level: 3
 
 - name: Muhasebe Ve Vergi Bölüm Başkanlığı
@@ -181,7 +181,7 @@
 - name: Turizm İşletmeciliği Bölüm Başkanlığı
   detsis_id: 22017889
   parent_detsis_id: 37195700
-  related_yoksis_id: 319338
+  related_yoksis_id: 214340
   district_id: Bafra
   abbreviation: TURİŞ-BB
   level: 3
@@ -229,7 +229,7 @@
 - name: Adalet Hukuk Bölüm Başkanlığı
   detsis_id: 10190983
   parent_detsis_id: 15086663
-  related_yoksis_id: 174829
+  related_yoksis_id: 174830
   district_id: Çarşamba
   abbreviation: ADALET-MYO-HUKUK-BB
   level: 3
@@ -301,7 +301,7 @@
 - name: Ceza Ve Ceza Muhakemesi Hukuku Anabilim Dalı Başkanlığı
   detsis_id: 33708429
   parent_detsis_id: 32538491
-  related_yoksis_id: 140275
+  related_yoksis_id: 159909
   district_id: Çarşamba
   abbreviation: KAMU-CMH-ADB
   level: 4
@@ -344,6 +344,8 @@
   related_yoksis_id: 159920
   district_id: Çarşamba
   abbreviation: ÖZELHUKUK-MAH-ADB
+  issues:
+    - parent_detsis_id Kamu Hukuku Bölüm Başkanlığını gösteriyor. Akademik tarafta Özel Hukuk Bölümü altında.
   level: 4
 
 - name: Özel Hukuk Bölüm Başkanlığı
@@ -576,6 +578,8 @@
   related_yoksis_id: 204805
   district_id: Çarşamba
   abbreviation: RST-BB
+  issues:
+    - "Radyo, Sinema Ve Televizyon" olarak düzeltilmeli
   level: 3
 
 - name: Yeni Medya Ve İletişim Tasarımı Bölüm Başkanlığı
@@ -879,9 +883,9 @@
 - name: Bilgisayar Teknolojileri Bölüm Başkanlığı
   detsis_id: 31224800
   parent_detsis_id: 30423168
-  related_yoksis_id: 169999
+  related_yoksis_id: 207456
   district_id: Tekkeköy
-  abbreviation: YEŞİLYURT-MYO-BB
+  abbreviation: YEŞİLYURT-MYO-BT-BB
   level: 3
 
 - name: Elektrik Ve Enerji Bölüm Başkanlığı
@@ -983,7 +987,7 @@
 - name: Bilgi İşlem Daire Başkanlığı
   detsis_id: 54165989
   parent_detsis_id: 78633602
-  related_yoksis_id: 122287
+  related_yoksis_id:
   district_id: Atakum
   abbreviation: Bİ-DB
   level: 2
@@ -1109,6 +1113,8 @@
   related_yoksis_id: 122002
   district_id: Atakum
   abbreviation: DİŞ-KLİNİK-PDT-ADB
+  issues:
+    - Mükerrer isimli birim; "SAĞLIK-BİLİM-PDT-ADB"
   level: 4
 
 - name: Restoratif Diş Tedavisi Anabilim Dalı Başkanlığı
@@ -1119,6 +1125,7 @@
   abbreviation: DİŞ-KLİNİK-RDT-ADB
   issues:
   - Bağlı olduğu ABD kapatılmış görünüyor
+  - Mükerrer isimli birim; "SAĞLIK-BİLİM-RDT-ADB"
   level: 4
 
 - name: Diş Hekimliği Fakülte Disiplin Kurulu
@@ -1206,7 +1213,7 @@
   parent_detsis_id: 34359275
   related_yoksis_id: 122155
   district_id: Atakum
-  abbreviation: EĞİTİM-BÖTE-ADB
+  abbreviation: BÖTE-ADB
   level: 4
 
 - name: Eğitim Bilimleri Bölüm Başkanlığı
@@ -1417,6 +1424,8 @@
   related_yoksis_id: 122114
   district_id: Atakum
   abbreviation: TS-TDE-ADB
+  issues:
+    - Anabilim dalı adı farklı; "Türk Dili Ve Edebiyatı Eğitimi Anabilim Dalı"
   level: 4
 
 - name: Türkçe Eğitimi Anabilim Dalı Başkanlığı
@@ -1432,7 +1441,7 @@
   parent_detsis_id: 98725097
   related_yoksis_id: 122088
   district_id: Atakum
-  abbreviation: YDİLE-BB
+  abbreviation: YDİLEĞ-BB
   level: 3
 
 - name: Alman Dili Eğitimi Anabilim Dalı Başkanlığı
@@ -1440,7 +1449,7 @@
   parent_detsis_id: 22561136
   related_yoksis_id: 122089
   district_id: Atakum
-  abbreviation: YDİLE-ALM-ADB
+  abbreviation: YDİLEĞ-ALM-ADB
   level: 4
 
 - name: Fransız Dili Eğitimi Anabilim Dalı Başkanlığı
@@ -1448,7 +1457,7 @@
   parent_detsis_id: 22561136
   related_yoksis_id: 122090
   district_id: Atakum
-  abbreviation: YDİLE-FR-ADB
+  abbreviation: YDİLEĞ-FR-ADB
   level: 4
 
 - name: İngiliz Dili Eğitimi Anabilim Dalı Başkanlığı
@@ -1456,7 +1465,7 @@
   parent_detsis_id: 22561136
   related_yoksis_id: 122091
   district_id: Atakum
-  abbreviation: YDİLE-İNG-ADB
+  abbreviation: YDİLEĞ-İNG-ADB
   level: 4
 
 - name: Eğitim Fakültesi Disiplin Kurulu
@@ -1486,7 +1495,7 @@
 - name: Erasmus Değişim Programı Koordinatörlüğü
   detsis_id: 35105448
   parent_detsis_id: 78633602
-  related_yoksis_id: 122287
+  related_yoksis_id:
   district_id: Atakum
   abbreviation: ERASMUS-KOR
   level: 2
@@ -1494,7 +1503,7 @@
 - name: Farabi Değişim Programı Koordinatörlüğü
   detsis_id: 64639444
   parent_detsis_id: 78633602
-  related_yoksis_id: 122287
+  related_yoksis_id:
   district_id: Atakum
   abbreviation: FARABİ-KOR
   level: 2
@@ -1650,7 +1659,7 @@
   parent_detsis_id: 15094764
   related_yoksis_id: 122013
   district_id: Atakum
-  abbreviation: BEŞERİ-ADB
+  abbreviation: COĞRAFYA-BEŞERİ-ADB
   level: 4
 
 - name: Bölgesel Coğrafya Anabilim Dalı Başkanlığı
@@ -1658,7 +1667,7 @@
   parent_detsis_id: 15094764
   related_yoksis_id: 122014
   district_id: Atakum
-  abbreviation: BÖLGESEL-ADB
+  abbreviation: COĞRAFYA-BÖLGESEL-ADB
   level: 4
 
 - name: Fiziki Coğrafya Anabilim Dalı Başkanlığı
@@ -1666,7 +1675,7 @@
   parent_detsis_id: 15094764
   related_yoksis_id: 122015
   district_id: Atakum
-  abbreviation: FİZİKİ-ADB
+  abbreviation: COĞRAFYA-FİZİKİ-ADB
   level: 4
 
 - name: Türkiye Coğrafyası Anabilim Dalı Başkanlığı
@@ -1674,7 +1683,7 @@
   parent_detsis_id: 15094764
   related_yoksis_id: 122016
   district_id: Atakum
-  abbreviation: TÜRKİYE-ADB
+  abbreviation: COĞRAFYA-TÜRKİYE-ADB
   level: 4
 
 - name: Fen Edebiyat Fakülte Sekreterliği
@@ -1890,7 +1899,7 @@
 - name: Fonksiyonlar Teorisi Ve Fonksiyonel Analiz Anabilim Dalı Başkanlığı
   detsis_id: 41492042
   parent_detsis_id: 32115404
-  related_yoksis_id: 147737
+  related_yoksis_id: 122035
   district_id: Atakum
   abbreviation: MAT-FONK-ADB
   level: 4
@@ -1930,7 +1939,7 @@
 - name: Moleküler Biyoloji Ve Genetik Bölüm Başkanlığı
   detsis_id: 73947134
   parent_detsis_id: 41130367
-  related_yoksis_id: 212950
+  related_yoksis_id: 320926
   district_id: Atakum
   abbreviation: MOLBİYOGEN-BB
   level: 3
@@ -2126,7 +2135,7 @@
   district_id: Atakum
   abbreviation: TDE-ÇTLE-ADB
   issues:
-  - Çağdaş Türk Lehçeleri Ve Edebiyatları Anabilim Dalına bağlı
+  - İsim "Çağdaş Türk Lehçeleri Ve Edebiyatları Anabilim Dalı Başkanlığı" olmalı
   level: 4
 
 - name: Eski Türk Dili Anabilim Dalı Başkanlığı
@@ -2262,7 +2271,7 @@
 - name: Hukuk Müşavirliği
   detsis_id: 42405272
   parent_detsis_id: 78633602
-  related_yoksis_id: 122287
+  related_yoksis_id:
   district_id: Atakum
   abbreviation: HUKUK-MŞ
   level: 2
@@ -2270,7 +2279,7 @@
 - name: İdari Ve Mali İşler Daire Başkanlığı
   detsis_id: 15327320
   parent_detsis_id: 78633602
-  related_yoksis_id: 122287
+  related_yoksis_id:
   district_id: Atakum
   abbreviation: İMİ-DB
   level: 2
@@ -2336,7 +2345,7 @@
   parent_detsis_id: 50848157
   related_yoksis_id: 140383
   district_id: Atakum
-  abbreviation: İŞLETME-MUHASEBE-ADB
+  abbreviation: İŞLETME-B-MUHASEBE-ADB
   level: 4
 
 - name: Sayısal Yöntemler Anabilim Dalı Başkanlığı
@@ -2344,7 +2353,7 @@
   parent_detsis_id: 50848157
   related_yoksis_id: 140384
   district_id: Atakum
-  abbreviation: İŞLETME-SAYISAL-ADB
+  abbreviation: İŞLETME-B-SAYISAL-ADB
   level: 4
 
 - name: Üretim Yönetimi Ve Pazarlama Anabilim Dalı Başkanlığı
@@ -2352,7 +2361,7 @@
   parent_detsis_id: 50848157
   related_yoksis_id: 140243
   district_id: Atakum
-  abbreviation: İŞLETME-ÜYP-ADB
+  abbreviation: İŞLETME-B-ÜYP-ADB
   level: 4
 
 - name: Yönetim Ve Organizasyon Anabilim Dalı Başkanlığı
@@ -2360,7 +2369,7 @@
   parent_detsis_id: 50848157
   related_yoksis_id: 140241
   district_id: Atakum
-  abbreviation: İŞLETME-YO-ADB
+  abbreviation: İŞLETME-B-YO-ADB
   level: 4
 
 - name: Siyaset Bilimi Ve Kamu Yönetimi Bölüm Başkanlığı
@@ -2561,6 +2570,8 @@
   related_yoksis_id: 122179
   district_id: Atakum
   abbreviation: İTS-MUSİKİ-ABD
+  issues:
+    - İsim "Türk Din Musikisi" olarak düzeltilmeli
   level: 4
 
 - name: İslam Tarihi Anabilim Dalı Başkanlığı
@@ -2582,7 +2593,7 @@
 - name: Türk İslam Sanatları Tarihi Anabilim Dalı Başkanlığı
   detsis_id: 87820776
   parent_detsis_id: 54819629
-  related_yoksis_id: 122172
+  related_yoksis_id: 122177
   district_id: Atakum
   abbreviation: İTS-TİST-ADB
   level: 4
@@ -2624,7 +2635,7 @@
   parent_detsis_id: 24155143
   related_yoksis_id: 122163
   district_id: Atakum
-  abbreviation: TİB-İSLAMH-MEZHEP-ADB
+  abbreviation: TİB-MEZHEP-ADB
   level: 4
 
 - name: Kelam Anabilim Dalı Başkanlığı
@@ -2690,6 +2701,8 @@
   related_yoksis_id: 309995
   district_id: Atakum
   abbreviation: İSGMH-AUM-MD
+  issues:
+    - "Meslek Hastalıkları" ayrı yazılmalı
   level: 2
 
 - name: Kadın Ve Toplum Uygulama Ve Araştırma Merkezi Müdürlüğü
@@ -2703,7 +2716,7 @@
 - name: Kalite Koordinatörlüğü
   detsis_id: 83781499
   parent_detsis_id: 78633602
-  related_yoksis_id: 122287
+  related_yoksis_id:
   district_id: Atakum
   abbreviation: KALİTE-KOR
   level: 2
@@ -2719,7 +2732,7 @@
 - name: Kariyer Merkezi Müdürlüğü
   detsis_id: 24802611
   parent_detsis_id: 78633602
-  related_yoksis_id: 122287
+  related_yoksis_id:
   district_id: Atakum
   abbreviation: KM-MD
   level: 2
@@ -2727,17 +2740,17 @@
 - name: Kök Hücre Araştırma Merkezi Müdürlüğü
   detsis_id: 83478762
   parent_detsis_id: 78633602
-  related_yoksis_id: 122287
+  related_yoksis_id:
   district_id: Atakum
   abbreviation: KÖKHÜCRE-MD
   issues:
-  - Bağlı olduğu üst birim pasif (yoksisi rektörlüğe bağlanmış, bakılacak)
+  - İlişkili olduğu Araştırma Merkezi yoksis verilerimiz arasında yok
   level: 2
 
 - name: Kütüphane Ve Dokümantasyon Daire Başkanlığı
   detsis_id: 51831040
   parent_detsis_id: 78633602
-  related_yoksis_id: 122287
+  related_yoksis_id:
   district_id: Atakum
   abbreviation: KD-DB
   level: 2
@@ -2745,7 +2758,7 @@
 - name: Mevlana Değişim Programı Koordinatörlüğü
   detsis_id: 23314928
   parent_detsis_id: 78633602
-  related_yoksis_id: 122287
+  related_yoksis_id:
   district_id: Atakum
   abbreviation: MEVLANA-KOR
   level: 2
@@ -2753,7 +2766,7 @@
 - name: Mühendislik Fakültesi Dekanlığı
   detsis_id: 81181891
   parent_detsis_id: 78633602
-  related_yoksis_id: 269525
+  related_yoksis_id: 122183
   district_id: Atakum
   abbreviation: MÜHENDİSLİK-DEK
   level: 2
@@ -2844,6 +2857,8 @@
   related_yoksis_id: 122232
   district_id: Atakum
   abbreviation: ELEKTRİK-MİKRODALGA-ADB
+  issues:
+    - İlişkili olduğu anabilim dalının ismi farklı
   level: 4
 
 - name: Elektronik Anabilim Dalı Başkanlığı
@@ -2892,6 +2907,8 @@
   related_yoksis_id: 122194
   district_id: Atakum
   abbreviation: ENDÜSTRİ-YÖN-ADB
+  issues:
+    - İlişkili olduğu anabilim dalı; "Yöneylem Araştırma Anabilim Dalı"
   level: 4
 
 - name: Mühendislik Fakülte Sekreterliği
@@ -3044,6 +3061,8 @@
   related_yoksis_id: 122211
   district_id: Atakum
   abbreviation: KİMYA-PROSES-ADB
+  issues:
+    - İlişkili olduğu anabilim dalı; "Proses Ve Reaktör Tasarımı Anabilim Dalı"
   level: 4
 
 - name: Temel İşlemler Anabilim Dalı Başkanlığı
@@ -3057,9 +3076,11 @@
 - name: Termodinamik Ve Enerji Teknolojileri Anabilim Dalı Başkanlığı
   detsis_id: 31208660
   parent_detsis_id: 43198645
-  related_yoksis_id: 122212
+  related_yoksis_id: 122214
   district_id: Atakum
   abbreviation: KİMYA-ENERJİ-ADB
+  issues:
+    - İlişkili olduğu anabilim dalı; "Termodinamik Ve Enerji Teknolojisi Anabilim Dalı"
   level: 4
 
 - name: Makine Mühendisliği Bölüm Başkanlığı
@@ -3124,6 +3145,8 @@
   related_yoksis_id: 122224
   district_id: Atakum
   abbreviation: MALZEME-ADB
+  issues:
+    - İlişkili olduğu anabilim dalı farklı isimde; "Malzeme Bilimi Ve Mühendisliği Anabilim Dalı"
   level: 4
 
 - name: Mühendislik Fakülte Disiplin Kurulu
@@ -3161,7 +3184,7 @@
 - name: Ondokuz Mayıs Üniversitesi Mezunlar Koordinatörlüğü
   detsis_id: 39073269
   parent_detsis_id: 78633602
-  related_yoksis_id: 122287
+  related_yoksis_id:
   district_id: Atakum
   abbreviation: MEZUN-KOR
   level: 2
@@ -3172,12 +3195,14 @@
   related_yoksis_id: 169410
   district_id: Atakum
   abbreviation: OAM-MD
+  issues:
+    - İlişkili olduğu merkez ile farklı isim; "Ornitoloji Araştırma Ve Uygulama Merkezi"
   level: 2
 
 - name: Öğrenci İşleri Daire Başkanlığı
   detsis_id: 36607105
   parent_detsis_id: 78633602
-  related_yoksis_id: 122287
+  related_yoksis_id:
   district_id: Atakum
   abbreviation: Öİ-DB
   level: 2
@@ -3185,7 +3210,7 @@
 - name: Öğretim Üyesi Yetiştirme Programı Koordinatörlüğü
   detsis_id: 62354096
   parent_detsis_id: 78633602
-  related_yoksis_id: 122287
+  related_yoksis_id:
   district_id: Atakum
   abbreviation: ÖÜYP-KOR
   level: 2
@@ -3193,7 +3218,7 @@
 - name: Personel Daire Başkanlığı
   detsis_id: 90212838
   parent_detsis_id: 78633602
-  related_yoksis_id: 122287
+  related_yoksis_id:
   district_id: Atakum
   abbreviation: PER-DB
   level: 2
@@ -3201,7 +3226,7 @@
 - name: Proje Yönetim Ofisi Başkanlığı
   detsis_id: 59712486
   parent_detsis_id: 78633602
-  related_yoksis_id: 122287
+  related_yoksis_id:
   district_id: Atakum
   abbreviation: PYO-B
   level: 2
@@ -3267,7 +3292,7 @@
   parent_detsis_id: 47124861
   related_yoksis_id: 293587
   district_id: Atakum
-  abbreviation: BESLENME-ADB
+  abbreviation: BESLENME-BİLİM-ADB
   level: 4
 
 - name: Diyetetik Anabilim Dalı Başkanlığı
@@ -3529,7 +3554,7 @@
 - name: Sağlık Kültür Ve Spor Daire Başkanlığı
   detsis_id: 53521241
   parent_detsis_id: 78633602
-  related_yoksis_id: 122287
+  related_yoksis_id:
   district_id: Atakum
   abbreviation: SKS-DB
   level: 2
@@ -3633,7 +3658,7 @@
 - name: Strateji Geliştirme Daire Başkanlığı
   detsis_id: 91511444
   parent_detsis_id: 78633602
-  related_yoksis_id: 122287
+  related_yoksis_id:
   district_id: Atakum
   abbreviation: SG-DB
   level: 2
@@ -3692,6 +3717,8 @@
   related_yoksis_id: 169429
   district_id: Atakum
   abbreviation: TE-AUM-MD
+  issues:
+    - İlişkili olduğu merkez adı farklı; "Temiz Enerji Araştırma Ve Uygulama Merkezi"
   level: 2
 
 - name: Tıp Fakültesi Dekanlığı
@@ -3884,6 +3911,8 @@
   related_yoksis_id: 121968
   district_id: Atakum
   abbreviation: TIP-DAHİLİ-FTR-ADB
+  issues:
+    - İlişkili olduğu anabilim dalı ile farklı isim; "Fiziksel Tedavi Ve Rehabilitasyon Anabilim Dalı"
   level: 4
 
 - name: Göğüs Hastalıkları Anabilim Dalı Başkanlığı
@@ -3900,6 +3929,8 @@
   related_yoksis_id: 121969
   district_id: Atakum
   abbreviation: TIP-DAHİLİ-HALK-ADB
+  issues:
+    - Mükerrer isimli birim; "SAĞLIK-BİLİM-HALK-ADB"
   level: 4
 
 - name: Hava Ve Uzay Hekimliği Anabilim Dalı Başkanlığı
@@ -4020,6 +4051,8 @@
   related_yoksis_id: 121994
   district_id: Atakum
   abbreviation: TIP-TEMEL-BTB-ADB
+  issues:
+    - İlişkili olduğu anabilim dalı ile isim farklı; "Biyoistatistik Ve Tıbbi Bilişim Anabilim Dalı"
   level: 4
 
 - name: Fizyoloji Anabilim Dalı Başkanlığı
@@ -4052,6 +4085,8 @@
   related_yoksis_id: 121990
   district_id: Atakum
   abbreviation: TIP-TEMEL-TBİYOLOJİ-ADB
+  issues:
+    - Mükerrer isimli birim; "SAĞLIK-BİLİM-TBİYO-ADB"
   level: 4
 
 - name: Tıbbi Mikrobiyoloji Anabilim Dalı Başkanlığı
@@ -4132,6 +4167,8 @@
   related_yoksis_id: 169431
   district_id: Atakum
   abbreviation: UZEM-MD
+  issues:
+    - İlişkili olduğu merkez ile ismi farklı; "Uzaktan Eğitim Araştırma Ve Uygulama Merkezi"
   level: 2
 
 - name: Veteriner Fakültesi Dekanlığı
@@ -4207,7 +4244,8 @@
   district_id: Atakum
   abbreviation: VETERİNER-KLİNİK-JİNEKOLOJİ-ABD
   issues:
-  - ABD "Klinik Öncesi Bilimler"e bağlı, başkanlık "Klinik Bilimler" altında
+  - Anabilim dalı "Klinik Öncesi Bilimler"e bağlı, başkanlık "Klinik Bilimler" altında
+  - Mükerrer isimli birim; "SAĞLIK-BİLİM-VJİNEKOLOJİ-ADB"
   level: 4
 
 - name: Veterinerlik İç Hastalıkları Anabilim Dalı Başkanlığı
@@ -4240,6 +4278,8 @@
   related_yoksis_id: 122242
   district_id: Atakum
   abbreviation: VETERİNER-KÖB-FARMA-ADB
+  issues:
+    - Mükerrer isimli birim; "SAĞLIK-BİLİM-VFARMA-ADB"
   level: 4
 
 - name: Veterinerlik Mikrobiyolojisi Anabilim Dalı Başkanlığı
@@ -4249,7 +4289,7 @@
   district_id: Atakum
   abbreviation: VETERİNER-KÖB-MİKRO-ADB
   issues:
-  - Anabilim dalı veterinerlikte, başkanlık enstitüde
+    - Mükerrer isimli birim; "SAĞLIK-BİLİM-VMİKRO-ADB"
   level: 4
 
 - name: Veterinerlik Parazitolojisi Anabilim Dalı Başkanlığı
@@ -4258,6 +4298,8 @@
   related_yoksis_id: 122239
   district_id: Atakum
   abbreviation: VETERİNER-KÖB-PARAZİT-ADB
+  issues:
+    - Mükerrer isimli birim; "SAĞLIK-BİLİM-VPARAZİT-ADB"
   level: 4
 
 - name: Veterinerlik Patolojisi Anabilim Dalı Başkanlığı
@@ -4266,6 +4308,8 @@
   related_yoksis_id: 122240
   district_id: Atakum
   abbreviation: VETERİNER-KÖB-PATO-ADB
+  issues:
+    - Mükerrer isimli birim; "SAĞLIK-BİLİM-PATO-ADB"
   level: 4
 
 - name: Veterinerlik Viroloji Anabilim Dalı Başkanlığı
@@ -4274,6 +4318,8 @@
   related_yoksis_id: 122245
   district_id: Atakum
   abbreviation: VETERİNER-KÖB-VİRO-ADB
+  issues:
+    - Mükerrer isimli birim; "SAĞLIK-BİLİM-VİRO-ADB"
   level: 4
 
 - name: Veteriner Hekimliği Temel Bilimler Bölüm Başkanlığı
@@ -4282,6 +4328,8 @@
   related_yoksis_id: 147745
   district_id: Atakum
   abbreviation: VETERİNER-TEMEL-BB
+  issues:
+    - Yoksis tarafında bölüm adı farklı; "Temel Bilimler Bölümü"
   level: 3
 
 - name: Laboratuvar Hayvanları Anabilim Dalı Başkanlığı
@@ -4591,7 +4639,7 @@
 - name: Tarımsal Biyoteknoloji Bölüm Başkanlığı
   detsis_id: 39322077
   parent_detsis_id: 52180288
-  related_yoksis_id: 145755
+  related_yoksis_id: 146101
   district_id: Atakum
   abbreviation: TARIMBİYOTEK-BB
   level: 3
@@ -4655,7 +4703,7 @@
 - name: Genel Sekreterlik
   detsis_id: 90404739
   parent_detsis_id: 78633602
-  related_yoksis_id: 122287
+  related_yoksis_id:
   district_id: Atakum
   abbreviation: GENSEK
   level: 2
@@ -4687,7 +4735,7 @@
 - name: Akademik Değerlendirme Ve Kalite Geliştirme Kurulu
   detsis_id: 51017550
   parent_detsis_id: 78633602
-  related_yoksis_id: 122287
+  related_yoksis_id:
   district_id: Atakum
   abbreviation: ADKG-KUR
   level: 2
@@ -4695,7 +4743,7 @@
 - name: Akademik Teşvik Düzenleme, Denetleme Ve İtiraz Komisyonu
   detsis_id: 52551054
   parent_detsis_id: 78633602
-  related_yoksis_id: 122287
+  related_yoksis_id:
   district_id: Atakum
   abbreviation: ATDDİ-KOM
   level: 2
@@ -4703,7 +4751,7 @@
 - name: Döner Sermaye İşletme Müdürlüğü
   detsis_id: 64153742
   parent_detsis_id: 78633602
-  related_yoksis_id: 122287
+  related_yoksis_id:
   district_id: Atakum
   abbreviation: DSİ-MD
   level: 2
@@ -4711,7 +4759,7 @@
 - name: Hayvan Deneyleri Yerel Etik Kurulu
   detsis_id: 68489742
   parent_detsis_id: 78633602
-  related_yoksis_id: 122287
+  related_yoksis_id:
   district_id: Atakum
   abbreviation: HDY-ETİKUR
   level: 2
@@ -4719,7 +4767,7 @@
 - name: İş Etik Kurulu
   detsis_id: 12203253
   parent_detsis_id: 78633602
-  related_yoksis_id: 122287
+  related_yoksis_id:
   district_id: Atakum
   abbreviation: İŞ-ETİKUR
   level: 2
@@ -4727,7 +4775,7 @@
 - name: Senato
   detsis_id: 99824844
   parent_detsis_id: 78633602
-  related_yoksis_id: 122287
+  related_yoksis_id:
   district_id: Atakum
   abbreviation: SENATO
   level: 2
@@ -4735,7 +4783,7 @@
 - name: Sosyal Ve Beşeri Bilimler Araştırmaları Etik Kurulu
   detsis_id: 45428382
   parent_detsis_id: 78633602
-  related_yoksis_id: 122287
+  related_yoksis_id:
   district_id: Atakum
   abbreviation: SBBA-ETİKUR
   level: 2
@@ -4743,7 +4791,7 @@
 - name: Tasarruf Komisyonu
   detsis_id: 60416774
   parent_detsis_id: 78633602
-  related_yoksis_id: 122287
+  related_yoksis_id:
   district_id: Atakum
   abbreviation: TASARRUF-KOM
   level: 2
@@ -4751,7 +4799,7 @@
 - name: Üniversite Disiplin Kurulu
   detsis_id: 92035111
   parent_detsis_id: 78633602
-  related_yoksis_id: 122287
+  related_yoksis_id:
   district_id: Atakum
   abbreviation: OMÜ-DİSKUR
   level: 2
@@ -4759,7 +4807,7 @@
 - name: Üniversite Yönetim Kurulu
   detsis_id: 46149191
   parent_detsis_id: 78633602
-  related_yoksis_id: 122287
+  related_yoksis_id:
   district_id: Atakum
   abbreviation: OMÜ-YÖNKUR
   level: 2
@@ -4767,7 +4815,7 @@
 - name: Yayın Komisyonu
   detsis_id: 19423957
   parent_detsis_id: 78633602
-  related_yoksis_id: 122287
+  related_yoksis_id:
   district_id: Atakum
   abbreviation: YAYIN-KOM
   level: 2
@@ -4778,6 +4826,8 @@
   related_yoksis_id: 122303
   district_id: İlkadım
   abbreviation: KONSERVATUVAR-MD
+  issues:
+    - "Devlet Konservatuvarı" mı "19 Mayıs Samsun Devlet Konservatuvarı" mı?
   level: 2
 
 - name: Devlet Konservatuvarı Sekreterliği
@@ -5178,6 +5228,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: FEN-BİLİM-ADLİ-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Eczane Birimi
@@ -5202,6 +5254,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: FEN-BİLİM-EEM-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Yapı, Tesis Ve Teknik İşler Birimi
@@ -5242,6 +5296,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: GÜZEL-SANAT-RESİM-ADB
+  issues:
+    - Mükerrer isimli birim
+    - ilişkili olduğu anasanat dalı yok
   level: 3
 
 - name: Özel Kalem Birimi
@@ -5330,6 +5387,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: EĞİTİM-BİLİM-BÖTE-ADB
+  issues:
+    - Mükerrer isimli birim; "BÖTE-ADB"
+    - İlişkili olduğu anabilim dalı yok
   level: 3
 
 - name: Strateji Geliştirme Ve Kalite Birimi
@@ -5355,7 +5415,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-VMİKRO-ADB
   issues:
-  - Anabilim Dalı Veterinerlikte, Başkanlık Enstitüde
+  - Mükerrer isimli birim; "VETERİNER-KÖB-MİKRO-ADB"
   level: 3
 
 - name: Yapı, Tesis Ve Teknik İşler Birimi
@@ -5380,6 +5440,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-MOLTIP-ADB
+  issues:
+    - İlişkili olduğu anabilim dalı yok
   level: 3
 
 - name: Sağlık Araştırma Ve Uygulama Merkezi Müdürlüğü
@@ -5389,7 +5451,7 @@
   district_id:
   abbreviation: SAĞLIK-AUM-MD
   issues:
-  - Bağlı olduğu Sağlık Araştırma Ve Uygulama Merkezi aktif değil
+  - İlişkili olduğu Sağlık Araştırma Ve Uygulama Merkezi aktif değil
   level: 2
 
 - name: Hukuk İşleri Birimi
@@ -5422,6 +5484,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-FİZYO-ADB
+  issues:
+    - Mükerrer isimli birim, "TIP-TEMEL-FİZYO-ADB"
+    - İlişkili olduğu anabilim dalı yok
   level: 3
 
 - name: Basın Yayın Ve Halkla İlişkiler Birimi
@@ -5462,6 +5527,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SOSYAL-BİLİM-FDB-ADB
+  issues:
+    - İlişkili olduğu anabilim dalı yok
   level: 3
 
 - name: Yapı, Tesis Ve Teknik İşler Birimi
@@ -5478,6 +5545,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SOSYAL-BİLİM-KAMUYÖN-ADB
+  issues:
+    - İlişkili olduğu anabilim dalı yok
   level: 3
 
 - name: Yapı,tesis Ve Teknik İşler Birimi
@@ -5536,6 +5605,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SOSYAL-BİLİM-TİB-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Personel İşleri Birimi
@@ -5552,6 +5623,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: FEN-BİLİM-BİTKİKOR-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: İdari Birimi
@@ -5785,7 +5858,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-PATO-ADB
   issues:
-  - Veterinerlik'te aynı adlı ADB var
+  - Mükerrer isimli birim; "VETERİNER-KÖB-PATO-ADB"
   level: 3
 
 - name: Personel İşleri Birimi
@@ -5818,12 +5891,14 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-SU-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Toprak Bilimi Ve Bitki Besleme Anabilim Dalı Başkanlığı
   detsis_id: 23946845
   parent_detsis_id: 43847920
-  related_yoksis_id:
+  related_yoksis_id: 208208
   district_id: Atakum
   abbreviation: FEN-BİLİM-TOPRAKBİL-ADB
   level: 3
@@ -5874,6 +5949,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SOSYAL-BİLİM-AAKT-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Yazı İşleri Dış İlişkiler Birimi
@@ -5954,6 +6031,8 @@
   related_yoksis_id:
   district_id:
   abbreviation: SOSYAL-BİLİM-DDR-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Öğrenci İşleri Birimi
@@ -5978,6 +6057,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-RUH-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Halk Sağlığı Ve Hemşireliği Anabilim Dalı Başkanlığı
@@ -5987,7 +6068,7 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-HSH-ADB
   issues:
-  - Yüksek lisans isminde "ve" yok
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Bütçe Plan Ve Tahakkuk Birimi
@@ -6028,6 +6109,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-EBH-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Strateji Geliştirme Ve Kalite Birimi
@@ -6132,6 +6215,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SOSYAL-BİLİM-EVLİLİK-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Yayın, Kütüphane Ve Dokümantasyon Birimi
@@ -6172,6 +6257,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-EBELİK-ADB
+  issues:
+    - Mükerrer isimli birim; "EBELİK-ADB"
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Mali İşler Birimi
@@ -6316,6 +6404,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: EĞİTİM-BİLİM-DKAB-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Özel Kalem Birimi
@@ -6364,6 +6454,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-ADÇC-ADB
+  issues:
+    - Mükerrer isimli birim; "DİŞ-KLİNİK-ADCC-ADB"
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Strateji Geliştirme Ve Kalite Birimi
@@ -6381,7 +6474,8 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-ZOO-ADB
   issues:
-  - Veterinerlikte aynı isimli anabilim dalı
+  - Mükerrer isimli birim; "VETERİNER-ZOO-ADB"
+  - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Makine Mühendisliği Anabilim Dalı Başkanlığı
@@ -6405,7 +6499,9 @@
   parent_detsis_id: 28913907
   related_yoksis_id:
   district_id: İlkadım
-  abbreviation: GÜZELSANATLAR-GİT-ADB
+  abbreviation: GÜZEL-SANAT-GİT-ADB
+  issues:
+    - Yoksis tarafında anasanat dalı yok
   level: 3
 
 - name: Basın Yayın Ve Halkla İlişkiler Birimi
@@ -6438,6 +6534,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SOSYAL-BİLİM-MÜZİK-ADB
+  issues:
+    - Yoksis tarafında anasanat dalı yok
+    - Mükerrer isimli birim; "GÜZEL-SANAT-MÜZİK-ADB"
   level: 3
 
 - name: Mali İşler Birimi
@@ -6478,6 +6577,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-TBİYOKİMYA-ADB
+  issues:
+    - Mükerrer isimli birim; "TIP-TEMEL-TBİYOKİMYA-ADB"
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: İdari İşler Birimi
@@ -6511,7 +6613,8 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-VANATOMİ-ADB
   issues:
-  - Veterinerlikte aynı isimli anabilim dalı başkanlığı
+  - Mükerrer isimli birim, "VETERİNER-TEMEL-ANATOMİ-ADB"
+  - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Yayın, Kütüphane Ve Dokümantasyon Birimi
@@ -6546,12 +6649,13 @@
   abbreviation: SAĞLIK-BİLİM-HİSTO-ADB
   issues:
   - İsimde yazım hatası
+  - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Mütercim Tercümanlık (arapça) Anabilim Dalı Başkanlığı
   detsis_id: 41323324
   parent_detsis_id: 20346779
-  related_yoksis_id:
+  related_yoksis_id: 207342
   district_id: Atakum
   abbreviation: YDİL-YO-MÜTERCİM-ARAPÇA-ADB
   issues:
@@ -6588,6 +6692,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-PERİO-ADB
+  issues:
+    - Mükerrer isimli birim; "DİŞ-KLİNİK-PERİO-ADB"
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Strateji Geliştirme Ve Kalite Birimi
@@ -6612,6 +6719,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SOSYAL-BİLİM-KAA-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Öğrenci İşleri Birimi
@@ -6644,6 +6753,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: FEN-BİLİM-ÇEVRE-ADB
+  issues:
+    - Mükerrer isimli birim (ÇEVRE-ADB)
+    - Anabilim Dalı Çevre Mühendisliği Bölümü altında
   level: 3
 
 - name: Evrak Ve Arşiv Birimi
@@ -6676,6 +6788,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: GÜZEL-SANAT-ST-ADB
+  issues:
+    - Yoksis tarafında anasanat dalı başkanlığı yok
   level: 3
 
 - name: Personel İşleri Birimi
@@ -6692,6 +6806,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SOSYAL-BİLİM-ARKEO-ADB-DİĞER
+  issues:
+    - Mükerrer birim
   level: 3
 
 - name: Pedodonti Anabilim Dalı Başkanlığı
@@ -6701,7 +6817,8 @@
   district_id:
   abbreviation: SAĞLIK-BİLİM-PEDO-ADB
   issues:
-  - Diş'te aynı isimli anabilim dalı başkanlığı
+  - Mükerrer isimli birim; "DİŞ-KLİNİK-PEDO-ADB"
+  - Yoksis tarafında anabilim dalı DİŞ'e bağlı
   level: 3
 
 - name: Proje Birimi
@@ -6734,6 +6851,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: FEN-BİLİM-NANO-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Döner Sermaye Birimi
@@ -6765,7 +6884,7 @@
   parent_detsis_id: 78415181
   related_yoksis_id:
   district_id: Çarşamba
-  abbreviation: HUKUK-ÖZELHUKUK-MAÖH-ADB
+  abbreviation: ÖZELHUKUK-MAÖH-ADB
   level: 4
 
 - name: Yapı, Tesis Ve Teknik İşler Birimi
@@ -6799,7 +6918,8 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-BTB-ADB
   issues:
-  - Tıp'ta aynı isimli anabilim dalı başkanlığı
+  - Mükerrer isimli birim; "TIP-TEMEL-BTB-ADB"
+  - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Basın Yayın Ve Halkla İlişkiler Birimi
@@ -6877,7 +6997,7 @@
 - name: Ballıca Meslek Yüksekokulu Müdürlüğü
   detsis_id: 46697017
   parent_detsis_id: 78633602
-  related_yoksis_id:
+  related_yoksis_id: 284516
   district_id: 19 Mayıs
   abbreviation: BALLICA-MYO-MD
   level: 2
@@ -6888,6 +7008,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-VFİZYO-ADB
+  issues:
+    - Mükerrer isimli birim; "VETERİNER-TEMEL-FİZYO-ADB"
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Allerji Ve İmmünoloji Anabilim Dalı Başkanlığı
@@ -6896,6 +7019,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-ALERJİ-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
+    - "Alerji" olarak yazılmalı
   level: 3
 
 - name: Matematik Anabilim Dalı Başkanlığı
@@ -6904,6 +7030,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: FEN-BİLİM-MAT-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Yayın, Kütüphane Ve Dokümantasyon Birimi
@@ -6933,7 +7061,7 @@
 - name: İşletme Anabilim Dalı Başkanlığı
   detsis_id: 47913381
   parent_detsis_id: 61232311
-  related_yoksis_id:
+  related_yoksis_id: 207833
   district_id: Atakum
   abbreviation: SOSYAL-BİLİM-İŞLETME-ADB
   level: 3
@@ -6965,9 +7093,9 @@
 - name: İktisat Tarihi Anabilim Dalı Başkanlığı
   detsis_id: 48461320
   parent_detsis_id: 85215827
-  related_yoksis_id:
+  related_yoksis_id: 209992
   district_id: Atakum
-  abbreviation: İKTİSAT-İKTİSATBB-İT-ADB
+  abbreviation: İKTİSAT-TARİH-ADB
   level: 4
 
 - name: Personel İşleri Birimi
@@ -7029,7 +7157,7 @@
 - name: Yenilenebilir Enerji Ve Uygulamaları Anabilim Dalı Başkanlığı
   detsis_id: 49040734
   parent_detsis_id: 43847920
-  related_yoksis_id:
+  related_yoksis_id: 303063
   district_id: Atakum
   abbreviation: FEN-BİLİM-YEU-ADB
   level: 3
@@ -7061,7 +7189,7 @@
 - name: Mütercim Tercümanlık (çince) Anabilim Dalı Başkanlığı
   detsis_id: 49727580
   parent_detsis_id: 20346779
-  related_yoksis_id:
+  related_yoksis_id: 267558
   district_id: Atakum
   abbreviation: YDİL-YO-MÜTERCİM-ÇİNCE-ADB
   level: 4
@@ -7089,7 +7217,8 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-VBESİN-ADB
   issues:
-  - Veterinerlikte aynı isimli anabilim dalı başkanlığı
+  - Mükerrer isimli birim; "VETERİNER-BESİN-ADB"
+  - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Yayın, Kütüphane Ve Dokümantasyon Birimi
@@ -7194,6 +7323,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-ANATOMİ-ADB
+  issues:
+    - Mükerrer isimli birim; "TIP-TEMEL-ANATOMİ-ADB"
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Hukuk İşleri Birimi
@@ -7322,6 +7454,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-BESLENME-ADB
+  issues:
+    - Mükerrer isimli birimi; "BESLENME-BİLİM-ADB"
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Basın Yayın Ve Halkla İlişkiler Birimi
@@ -7362,6 +7497,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-VİÇH-ADB
+  issues:
+    - Mükerrer isimli birim; "VETERİNER-KLİNİK-İÇH-ADB"
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Yapı, Tesis Ve Teknik İşler Birimi
@@ -7386,6 +7524,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-VCERRAHİ-ADB
+  issues:
+    - Mükerrer isimli birim; "VETERİNER-KLİNİK-CERRAHİ-ABD"
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Özel Hukuk Anabilim Dalı Başkanlığı
@@ -7394,6 +7535,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SOSYAL-BİLİM-ÖZELHUKUK-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Yapı, Tesis Ve Teknik İşler Birimi
@@ -7474,6 +7617,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SOSYAL-BİLİM-TDE-ADB
+  issues:
+    - Mükerrer isimli birim; "TS-TDE-ADB"
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Yayın Kütüphane Ve Dokümantasyon Birimi
@@ -7511,7 +7657,7 @@
 - name: İnşaat Mühendisliği Anabilim Dalı Başkanlığı
   detsis_id: 56922128
   parent_detsis_id: 43847920
-  related_yoksis_id:
+  related_yoksis_id: 202003
   district_id: Atakum
   abbreviation: FEN-BİLİM-İNŞAAT-ADB
   level: 3
@@ -7551,9 +7697,11 @@
 - name: Bafra İşletme Fakültesi Dekanlığı
   detsis_id: 57246715
   parent_detsis_id: 78633602
-  related_yoksis_id:
+  related_yoksis_id: 293681
   district_id: Bafra
   abbreviation: İŞLETME-DEK
+  issues:
+    - İlişkili olduğu birim pasif
   level: 2
 
 - name: Ortodonti Anabilim Dalı Başkanlığı
@@ -7562,6 +7710,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-ORTO-ADB
+  issues:
+    - Mükerrer isimli birim; "DİŞ-KLİNİK-ORTO-ADB"
+    - Yoksis tarafında anabilim dalı DİŞ'te
   level: 3
 
 - name: Yayın, Kütüphane Ve Dokümantasyon Birimi
@@ -7594,6 +7745,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-SAĞLIKYÖN-ADB
+  issues:
+    - Mükerrer isimli birim; "SAĞLIKYÖN-ADB"
+    - Yoksis tarafında anabilim dalı diğerine bağlı
   level: 3
 
 - name: Yapı, Tesis Ve Teknik İşler Birimi
@@ -7658,6 +7812,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-TMİKRO-ADB
+  issues:
+    - İlişkili olduğu anabilim dalı yok. "SAĞLIK-BİLİM-MİKTO-AD-DA" ile benzerlik kontrol edilmeli.
   level: 3
 
 - name: Biyoloji Anabilim Dalı Başkanlığı
@@ -7730,6 +7886,9 @@
   related_yoksis_id:
   district_id:
   abbreviation: SAĞLIK-BİLİM-VBİYOKİMYA-ADB
+  issues:
+    - Mükerrer isimli birim; "VETERİNER-TEMEL-BİYOKİMYA-ADB"
+    - Yoksis tarafında anabilim dalı diğerine bağlı
   level: 3
 
 - name: Yayın, Kütüphane Ve Dokümantasyon Birimi
@@ -7754,6 +7913,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-HBH-ADB
+  issues:
+    - Mükerrer isimli birim; "VETERİNER-ZOO-HBH-ADB"
+    - Yoksis tarafında anabilim dalı diğerine bağlı
   level: 3
 
 - name: Yazı İşleri Birimi
@@ -7802,6 +7964,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-TFARMA-ADB
+  issues:
+    - Mükerrer isimli birim; "TIP-DAHİLİ-TFARMA-ADB"
   level: 3
 
 - name: Strateji Geliştirme Ve Kalite Birimi
@@ -7818,6 +7982,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: FEN-BİLİM-TARIMEKO-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Taşınmazlar Birimi
@@ -7879,9 +8045,9 @@
 - name: Eğitim Bilimleri Anabilim Dalı Başkanlığı
   detsis_id: 63629408
   parent_detsis_id: 42301062
-  related_yoksis_id:
+  related_yoksis_id: 207882
   district_id: Atakum
-  abbreviation: EĞİTİM-BİLİM-ADB
+  abbreviation: EĞİTİM-BİLİM-EB-ADB
   level: 3
 
 - name: Müzik Anasanat Dalı Başkanlığı
@@ -7890,6 +8056,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: GÜZEL-SANAT-MÜZİK-ADB
+  issues:
+    - Yoksis tarafında anasanat dalı yok
+    - Mükerrer isimli birim; "SOSYAL-BİLİM-MÜZİK-ADB"
   level: 3
 
 - name: Kardiyopulmoner Fizyoterapi Anabilim Dalı Başkanlığı
@@ -7898,6 +8067,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-KARFİZ-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Sağlık, Kültür Ve Spor İşleri Birimi
@@ -7927,9 +8098,9 @@
 - name: Gastronomi Ve Mutfak Sanatları Bölüm Başkanlığı
   detsis_id: 64554296
   parent_detsis_id: 37195700
-  related_yoksis_id:
+  related_yoksis_id: 214342
   district_id: Bafra
-  abbreviation: TURİZM-GASTRO-BB
+  abbreviation: GASTRONOMİ-BB
   level: 3
 
 - name: Sağlık, Kültür Ve Spor İşleri Birimi
@@ -7970,6 +8141,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-ADÇR-ADB
+  issues:
+    - Mükerrer isimli birim; "DİŞ-KLİNİK-ADÇR-ADB"
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Yayın, Kütüphane Ve Dokümantasyon Birimi
@@ -7986,6 +8160,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-HALK-ADB
+  issues:
+    - Mükerrer isimli birim; "TIP-DAHİLİ-HALK-ADB"
+    - Yoksis tarafında anabilim dalı TIP'ta
   level: 3
 
 - name: Hukuk İşleri Birimi
@@ -8002,6 +8179,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: EĞİTİM-BİLİM-MF-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Bilgi İşlem Birimi
@@ -8066,6 +8245,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-RDT-ADB
+  issues:
+    - Mükerrer isimli birim; "DİŞ-KLİNİK-RDT-ADB"
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Proje Birimi
@@ -8098,6 +8280,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-KBBO-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Basın Yayın Ve Halkla İlişkiler Birimi
@@ -8154,6 +8338,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SOSYAL-BİLİM-TARİH-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Satın Alma Birimi
@@ -8263,9 +8449,9 @@
 - name: Siyaset Ve Sosyal Bilimler Anabilim Dalı Başkanlığı
   detsis_id: 70161257
   parent_detsis_id: 53132832
-  related_yoksis_id:
+  related_yoksis_id: 140253
   district_id: Atakum
-  abbreviation: İKTİSAT-SBKY-SSB-ADB
+  abbreviation: SBKY-SSB-ADB
   level: 4
 
 - name: Basın Yayın Ve Halkla İlişkiler Birimi
@@ -8354,6 +8540,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-VHİSTO-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı VETERİNER'de.
+    - Anabilim dalı ile isim farklı; "Veterinerlik Histoloji Ve Embriyoloji Anabilim Dalı"
   level: 3
 
 - name: Öğrenci İşleri Birimi
@@ -8418,6 +8607,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SOSYAL-BİLİM-İEİ-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Hukuk Tarihi Anabilim Dalı Başkanlığı
@@ -8426,6 +8617,8 @@
   related_yoksis_id:
   district_id: Çarşamba
   abbreviation: KAMU-HT-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 4
 
 - name: Yapı, Tesis Ve Teknik İşler Birimi
@@ -8474,6 +8667,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: FEN-BİLİM-İSTATİSTİK-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Hukuk İşleri Birimi
@@ -8546,6 +8741,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SOSYAL-BİLİM-SANATTARİHİ-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Akıllı Sistemler Mühendisliği Anabilim Dalı Başkanlığı
@@ -8554,6 +8751,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: FEN-BİLİM-ASM-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Psikoloji Anabilim Dalı Başkanlığı
@@ -8562,6 +8761,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SOSYAL-BİLİM-PSİKOLOJİ-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: İstatistik Birimi
@@ -8594,6 +8795,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: FEN-BİLİM-HB-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Yayın, Kütüphane Ve Dokümantasyon Birimi
@@ -8610,6 +8813,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: FEN-BİLİM-GIDA-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Bilgi İşlem Birimi
@@ -8682,6 +8887,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: FEN-BİLİM-KİMYA-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Sağlık, Kültür Ve Spor İşleri Birimi
@@ -8714,6 +8921,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: FEN-BİLİM-TARIMBİYOTEK-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı karşılığı yok
   level: 3
 
 - name: Hukuk İşleri Birimi
@@ -8751,7 +8960,7 @@
 - name: Kimya Anabilim Dalı Başkanlığı
   detsis_id: 77807659
   parent_detsis_id: 43847920
-  related_yoksis_id:
+  related_yoksis_id: 234078
   district_id: Atakum
   abbreviation: FEN-BİLİM-FENKİMYA-ADB
   level: 3
@@ -8786,12 +8995,15 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-ENDO-ADB
+  issues:
+    - Mükerrer isimli birim; "DİŞ-KLİNİK-ENDO-ADB"
+    - Yoksis tarafında anabilim dalı DİŞ'te
   level: 3
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü
   detsis_id: 78633602
   parent_detsis_id: 32625594
-  related_yoksis_id:
+  related_yoksis_id: 122287
   district_id: Atakum
   abbreviation: REKTÖRLÜK-İDARİ
   level: 1
@@ -8842,6 +9054,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: TE-MÜZİK-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 4
 
 - name: Bilgi İşlem Birimi
@@ -8866,6 +9080,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-UDB-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Temel Bilimler Dersleri Koordinatörlüğü
@@ -8887,7 +9103,7 @@
 - name: Klinik Toksikoloji Anabilim Dalı Başkanlığı
   detsis_id: 80397943
   parent_detsis_id: 93771576
-  related_yoksis_id:
+  related_yoksis_id: 297555
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-KTOKSİ-ADB
   level: 3
@@ -8962,6 +9178,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-VFARMA-ADB
+  issues:
+    - Mükerrer isimli birim; "VETERİNER-KÖB-FARMA-ADB"
+    - Yoksis tarafında anabilim dalı VETERİNER'de
   level: 3
 
 - name: Döner Sermaye Birimi
@@ -9151,9 +9370,9 @@
 - name: Yabancı Diller Eğitimi Anabilim Dalı Başkanlığı
   detsis_id: 85156798
   parent_detsis_id: 42301062
-  related_yoksis_id:
+  related_yoksis_id: 211120
   district_id: Atakum
-  abbreviation: EĞİTİM-BİLİM-YDİLE-ADB
+  abbreviation: EĞİTİM-BİLİM-YDİLEĞ-ADB
   level: 3
 
 - name: Basın Yayın Ve Halkla İlişkiler Birimi
@@ -9191,7 +9410,7 @@
 - name: Mütercim Tercümanlık (ingilizce) Anabilim Dalı Başkanlığı
   detsis_id: 86068149
   parent_detsis_id: 20346779
-  related_yoksis_id:
+  related_yoksis_id: 207277
   district_id: Atakum
   abbreviation: YDİL-YO-MÜTERCİM-İNG-ADB
   level: 4
@@ -9199,11 +9418,11 @@
 - name: Ortodonti Anabilim Dalı Başkanlığı
   detsis_id: 86238427
   parent_detsis_id: 38581703
-  related_yoksis_id:
+  related_yoksis_id: 122000
   district_id: Atakum
   abbreviation: DİŞ-KLİNİK-ORTO-ADB
   issues:
-  - Aynı isimli anabilim dalı SAĞLIK-BİLİM'de
+  - Mükerrer isimli birim; "SAĞLIK-BİLİM-ORTO-ADB"
   level: 4
 
 - name: Bilgi İşlem Birimi
@@ -9225,7 +9444,7 @@
 - name: Güzel Sanatlar Eğitimi Anabilim Dalı Başkanlığı
   detsis_id: 86348859
   parent_detsis_id: 42301062
-  related_yoksis_id:
+  related_yoksis_id: 211119
   district_id: Atakum
   abbreviation: EĞİTİM-BİLİM-GÜZELSANATLAR-ADB
   level: 3
@@ -9292,6 +9511,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: EĞİTİM-BİLİM-TS-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: İdari İşler Birimi
@@ -9308,6 +9529,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: FEN-BİLİM-MALZEME-ADB
+  issues:
+    - Benzer isimli birim; "MALZEME-ADB"
+    - Yoksis tarafında anabilim dalı MALZEME'ye bağlı
   level: 3
 
 - name: İslam Tarihi Ve Sanatları Anabilim Dalı Başkanlığı
@@ -9316,6 +9540,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SOSYAL-BİLİM-İTS-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Mali İşler Birimi
@@ -9357,7 +9583,8 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-VPARAZİT-ADB
   issues:
-  - Aynı isimli ABD veterinerlikte
+  - Mükerrer isimli birim; "VETERİNER-KÖB-PARAZİT-ADB"
+  - Yoksis tarafında anabilim dalı diğerine bağlı
   level: 3
 
 - name: Öğrenme Kaynakları Merkezi
@@ -9382,6 +9609,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-KSB-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Yayın, Kütüphane Ve Dokümantasyon Birimi
@@ -9454,6 +9683,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-VJİNEKOLOJİ-ADB
+  issues:
+    - Mükerrer isimli birim; "VETERİNER-KLİNİK-JİNEKOLOJİ-ABD"
+    - Yoksis tarafında anabilim dalı diğerine bağlı
   level: 3
 
 - name: Mali İşler Birimi
@@ -9534,6 +9766,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-HEMŞİRE-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Kamu Hukuku Anabilim Dalı Başkanlığı
@@ -9542,6 +9776,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SOSYAL-BİLİM-KAMU-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Hukuk İşleri Birimi
@@ -9566,6 +9802,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: EĞİTİM-BİLİM-TE-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Mali İşler Birimi
@@ -9635,7 +9873,7 @@
 - name: Sinir Bilimleri Anabilim Dalı Başkanlığı
   detsis_id: 92044395
   parent_detsis_id: 93771576
-  related_yoksis_id:
+  related_yoksis_id: 203748
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-SİNİR-ADB
   level: 3
@@ -9646,6 +9884,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: BEDEN-BB
+  issues:
+    - Yoksis tarafında bölüm yok
   level: 2
 
 - name: Yapı, Tesis Ve Teknik İşler Birimi
@@ -9726,6 +9966,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: FEN-BİLİM-BİLGİSAYAR-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Sağlık, Kültür Ve Spor İşleri Birimi
@@ -9747,7 +9989,7 @@
 - name: Uluslararası Ticaret Anabilim Dalı Başkanlığı
   detsis_id: 94334960
   parent_detsis_id: 26676436
-  related_yoksis_id:
+  related_yoksis_id: 326681
   district_id: Atakum
   abbreviation: UTL-UT-ADB
   level: 4
@@ -9766,12 +10008,15 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-DST-ADB
+  issues:
+    - Mükerrer isimli birim; "VETERİNER-KLİNİK-DST-ADB"
+    - Yoksis tarafında anabilim dalı diğerine bağlı
   level: 3
 
 - name: İletişim Bilimleri Anabilim Dalı Başkanlığı
   detsis_id: 94947571
   parent_detsis_id: 61232311
-  related_yoksis_id:
+  related_yoksis_id: 297535
   district_id: Atakum
   abbreviation: SOSYAL-BİLİM-İLETİŞİM-ADB
   level: 3
@@ -9782,6 +10027,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-RB-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Hukuk İşleri Birimi
@@ -9798,6 +10045,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SOSYAL-BİLİM-ARKEO-ADB
+  issues:
+    - Mükerrer birim
   level: 3
 
 - name: Harita Mühendisliği Anabilim Dalı Başkanlığı
@@ -9806,6 +10055,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: FEN-BİLİM-HARİTA-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Yapı, Tesis Ve Teknik İşler Birimi
@@ -9827,7 +10078,7 @@
 - name: Mütercim Tercümanlık (almanca) Anabilim Dalı Başkanlığı
   detsis_id: 96153689
   parent_detsis_id: 20346779
-  related_yoksis_id:
+  related_yoksis_id: 207340
   district_id: Atakum
   abbreviation: YDİL-YO-MÜTERCİM-ALM-ADB
   level: 4
@@ -9838,6 +10089,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-VİRO-ADB
+  issues:
+    - Mükerrer isimli birim; "VETERİNER-KÖB-VİRO-ADB"
+    - Yoksis tarafında anabilim dalı diğerine bağlı
   level: 3
 
 - name: Coğrafya Anabilim Dalı Başkanlığı
@@ -9846,6 +10100,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SOSYAL-BİLİM-COĞRAFYA-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Yapı, Tesis Ve Teknik İşler Birimi
@@ -9862,6 +10118,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: FEN-BİLİM-ZOO-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Sağlık, Kültür Ve Spor İşleri Birimi
@@ -9887,7 +10145,8 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-DEON-ADB
   issues:
-  - detsis_id 68000003 ile benzerlik, birinin ismi hatalı
+    - Benzer isimli birim; "VETERİNER-TEMEL-DEON-ADB"
+    - Yoksis tarafında anabilim dalı diğerine bağlı
   level: 3
 
 - name: Taşınmaz Geliştirme Anabilim Dalı Başkanlığı
@@ -9896,6 +10155,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: FEN-BİLİM-TAŞINMAZ-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Protetik Diş Tedavisi Anabilim Dalı Başkanlığı
@@ -9905,7 +10166,8 @@
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-PDT-ADB
   issues:
-  - Dişte aynı isimli ADB
+  - Mükerrer isimli birimi; "DİŞ-KLİNİK-PDT-ADB"
+  - Yoksis tarafında anabilim dalı diğerine bağlı
   level: 3
 
 - name: Döner Sermaye Birimi
@@ -9922,6 +10184,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-ACİL-ADB
+  issues:
+    - Yoksis tarafında anabilim dalı yok
   level: 3
 
 - name: Beden Eğitimi Ve Spor Anabilim Dalı Başkanlığı
@@ -9930,6 +10194,8 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-BES-ADB
+  issues:
+    - "BES-AD" anabilim dalı ile ilişkili olabilir, kontrol edilmeli
   level: 3
 
 - name: Basın Yayın Ve Halkla İlişkiler Birimi
@@ -9970,6 +10236,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: SAĞLIK-BİLİM-TBİYO-ADB
+  issues:
+    - Mükerrer isimli birim; "TIP-TEMEL-TBİYOLOJİ-ADB"
+    - Yoksis tarafında anabilim dalı diğerine bağlı
   level: 3
 
 - name: Strateji Geliştirme Ve Kalite Birimi
@@ -9994,6 +10263,9 @@
   related_yoksis_id:
   district_id: Atakum
   abbreviation: DİŞ-KLİNİK-ADÇR-ADB
+  issues:
+    - Mükerrer isimli birim; "SAĞLIK-BİLİM-ADÇR-ADB"
+    - Yoksis tarafında anabilim dalı yok
   level: 4
 
 - name: Ortak Sağlık Ve Güvenlik Birimi
