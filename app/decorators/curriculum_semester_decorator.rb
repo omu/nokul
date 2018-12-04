@@ -1,23 +1,24 @@
 # frozen_string_literal: true
 
 class CurriculumSemesterDecorator < SimpleDelegator
-  def available_courses(addition: [])
+  # TODO: Gelistirilecek
+  def available_courses(appends: [])
     courses = curriculum.unit.courses.active.except_for(curriculum.courses)
-    addition(courses, addition)
+    merge(courses, appends)
   end
 
-  def available_course_groups(addition: [])
+  def available_course_groups(appends: [])
     course_groups = curriculum.unit.course_groups.except_for(
       curriculum.course_groups
     )
-    addition(course_groups, addition)
+    merge(course_groups, appends)
   end
 
   private
 
-  def addition(collection, addition)
-    return collection if addition.blank?
+  def merge(collection, appends)
+    return collection if appends.blank?
 
-    (collection + addition.compact).uniq
+    (collection + appends.compact).uniq
   end
 end
