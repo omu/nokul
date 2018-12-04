@@ -29,7 +29,8 @@ module CourseManagement
         post available_courses_path, params: {
           available_course: {
             academic_term_id: academic_terms(:fall_2017_2018).id,
-            curriculum_id: curriculums(:one).id, course_id: courses(:ydi).id
+            curriculum_id: curriculums(:one).id, course_id: courses(:ydi).id,
+            unit_id: units(:omu).id
           }
         }
       end
@@ -39,6 +40,7 @@ module CourseManagement
       assert_equal academic_terms(:fall_2017_2018), available_course.academic_term
       assert_equal curriculums(:one), available_course.curriculum
       assert_equal courses(:ydi), available_course.course
+      assert_equal units(:omu), available_course.unit
       assert_redirected_to edit_available_course_available_course_group_path(available_course,
                                                                              available_course.groups.first)
     end

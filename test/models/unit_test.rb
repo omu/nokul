@@ -27,6 +27,7 @@ class UnitTest < ActiveSupport::TestCase
     calendar_units
     academic_calendars
     calendar_events
+    available_courses
   ].each do |property|
     test "a unit can communicate with #{property}" do
       assert units(:omu).send(property)

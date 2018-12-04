@@ -8,6 +8,7 @@ class AvailableCourseTest < ActiveSupport::TestCase
     academic_term
     curriculum
     course
+    unit
     groups
   ].each do |property|
     test "a available_course can communicate with #{property}" do
