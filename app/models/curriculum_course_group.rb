@@ -18,8 +18,8 @@ class CurriculumCourseGroup < ApplicationRecord
 
   # TODO: workaround
   def build_curriculum_courses
-    courses = course_group.courses - courses
-    courses.find_each do |course|
+    courses = course_group.courses - self.courses
+    courses.each do |course|
       curriculum_courses.build(
         course_id: course.id, curriculum_semester_id: curriculum_semester_id
       )
