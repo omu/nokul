@@ -3,6 +3,7 @@
 class CurriculumCourseGroup < ApplicationRecord
   # relations
   has_many :curriculum_courses, dependent: :destroy
+  has_many :courses, through: :curriculum_courses
   belongs_to :course_group
   belongs_to :curriculum_semester
 
@@ -17,7 +18,8 @@ class CurriculumCourseGroup < ApplicationRecord
 
   # TODO: workaround
   def build_curriculum_courses
-    course_group.courses.except_for(curriculum_courses.pluck(:course_id)).find_each do |course|
+    courses = course_group.courses - courses
+    courses.find_each do |course|
       curriculum_courses.build(
         course_id: course.id, curriculum_semester_id: curriculum_semester_id
       )

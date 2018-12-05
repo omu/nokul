@@ -9,6 +9,7 @@ class CurriculumCourseGroupTest < ActiveSupport::TestCase
 
   # relations
   %i[
+    courses
     course_group
     curriculum_courses
     curriculum_semester
