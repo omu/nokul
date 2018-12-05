@@ -11,7 +11,7 @@ class CurriculumCourse < ApplicationRecord
   validates :ects, presence: true, numericality: { greater_than: 0 }
 
   # delegates
-  delegate :code, :credit, :name, to: :course
+  delegate :code, :credit, :course_type, :name, to: :course
 
   # enums
   enum type: { compulsory: 0, elective: 1 }

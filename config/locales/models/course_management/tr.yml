@@ -155,7 +155,7 @@ tr:
       create:
         success: Müfredat başarıyla oluşturuldu.
       curriculum_courses:
-        type: Ders Türü
+        type: Türü
         total_ects: Toplam AKTS
         <<: *course_attributes
       destroy:
