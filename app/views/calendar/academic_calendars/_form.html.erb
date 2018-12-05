@@ -22,7 +22,9 @@
               <%= f.association :calendar_type %>
             </div>
             <div class='form-group col-sm-6'>
-              <%= f.input :senate_decision_date, start_year: 1975 %>
+              <%= f.input :senate_decision_date,
+                          as: :date_time_picker,
+                          input_html: { data: { class: 'senate_decision_date'} } %>
             </div>
             <div class='form-group col-sm-6'>
               <%= f.input :senate_decision_no %>
@@ -38,7 +40,7 @@
             </div>
             <hr \>
             <center><h3><%= t('.events') %></h3></center>
-            <div class="col-lg-12">
+            <div class="col-lg-12" id="calendar_events">
               <%= f.simple_fields_for :calendar_events do |event| %>
                 <%= render 'calendar_event_fields', f: event %>
               <% end %>
@@ -58,3 +60,13 @@
 
 <%= javascript_include_tag 'shared/cocoon' %>
 <%= render 'select2' %>
+
+<script>
+  flatpickr("[data-class='senate_decision_date']", { altInput: true })
+  flatpickr("[data-class='event-date']", { enableTime: true, altInput: true })
+
+  $('#calendar_events').on('cocoon:after-insert', function(e, added_event) {
+    $(added_event).find("[data-class='event-date']")
+                  .flatpickr({ enableTime: true, altInput: true })
+  })
+</script>
