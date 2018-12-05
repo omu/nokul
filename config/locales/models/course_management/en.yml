@@ -155,7 +155,7 @@ en:
       create:
         success: Curriculum successfully created.
       curriculum_courses:
-        type: Course Type
+        type: Type
         total_ects: Toplam ECTS
         <<: *course_attributes
       destroy:

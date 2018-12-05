@@ -14,6 +14,7 @@
           <th><%= t('.type') %></th>
           <th><%= t('.name') %></th>
           <th><%= t('.code') %></th>
+          <th><%= t('.course_type') %></th>
           <th><%= t('.credit') %></th>
           <th><%= t('.ects') %></th>
           <% if action_visible %>
@@ -22,11 +23,12 @@
         </tr>
       </thead>
       <tbody>
-        <% courses.includes(:course).each do |curriculum_course| %>
+        <% courses.includes(course: :course_type).each do |curriculum_course| %>
           <tr>
             <td><%= enum_t(curriculum_course, :type) %></td>
             <td><%= curriculum_course.name %></td>
             <td><%= curriculum_course.code %></td>
+            <td><%= curriculum_course.course_type.try(:name) %></td>
             <td><%= curriculum_course.credit %></td>
             <td><%= curriculum_course.ects %></td>
             <% if action_visible %>
