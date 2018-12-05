@@ -50,6 +50,7 @@
                 <%= label_tag(:academic_term_id, t('.academic_term')) %>
                 <%= select_tag(:academic_term_id,
                               options_from_collection_for_select(AcademicTerm.all, :id, lambda { |academic_term| full_name(academic_term) }, params[:academic_term_id]),
+                              include_blank: true,
                               class: 'form-control',
                               style: 'width: 100%') %>
               </div>
