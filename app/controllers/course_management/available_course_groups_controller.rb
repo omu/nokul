@@ -41,7 +41,7 @@ module CourseManagement
 
     def available_course_group_params
       params.require(:available_course_group).permit(
-        :quota, :name, lecturers_attributes: %i[lecturer_id coordinator _destroy]
+        :quota, :name, lecturers_attributes: %i[id lecturer_id coordinator _destroy]
       )
     end
   end
