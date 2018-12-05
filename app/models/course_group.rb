@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class CourseGroup < ApplicationRecord
-  include ExceptFor
   # search
   include PgSearch
   pg_search_scope(

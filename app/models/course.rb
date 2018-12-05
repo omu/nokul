@@ -3,7 +3,6 @@
 class Course < ApplicationRecord
   # search
   include DynamicSearch
-  include ExceptFor
   include PgSearch
 
   pg_search_scope(
