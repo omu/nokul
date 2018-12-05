@@ -141,4 +141,4 @@ def build_curriculum(file)
   courses.each(&:create_curriculum_course)
 end
 
-build_curriculum(Rails.root.join('db', 'static_data', 'courses_for_bote.csv'))
+build_curriculum(Rails.root.join('db', 'seed_data', 'courses_for_bote.csv'))
