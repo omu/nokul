@@ -1,11 +1,11 @@
 <div class='row'>
   <div class='col-lg-12'>
     <div class='alert alert-light'>
-      <%= link_to_back course_unit_groups_path %>
+      <%= link_to_back course_groups_path %>
     </div>
     <div class='card'>
       <div class='card-header'>
-        <%= fa_icon 'calendar', text: @course_unit_group.name %>
+        <%= fa_icon 'calendar', text: @course_group.name %>
       </div>
       <div class='card-body'>
         <table class='table table-responsive-sm table-striped'>
@@ -21,12 +21,12 @@
           </thead>
           <tbody>
             <tr>
-              <td><%= @course_unit_group.name %></td>
-              <td><%= @course_unit_group.total_ects_condition %></td>
-              <td><%= @course_unit_group.unit.name %></td>
-              <td><%= @course_unit_group.course_group_type.try(:name) %></td>
-              <td><%= @course_unit_group.created_at.to_date %></td>
-              <td><%= link_to_edit edit_course_unit_group_path(@course_unit_group) %></td>
+              <td><%= @course_group.name %></td>
+              <td><%= @course_group.total_ects_condition %></td>
+              <td><%= @course_group.unit.name %></td>
+              <td><%= @course_group.course_group_type.try(:name) %></td>
+              <td><%= @course_group.created_at.to_date %></td>
+              <td><%= link_to_edit edit_course_group_path(@course_group) %></td>
             </tr>
           </tbody>
         </table>
