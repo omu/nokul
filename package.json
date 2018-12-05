@@ -4,6 +4,7 @@
   "dependencies": {
     "@coreui/coreui-free-bootstrap-admin-template": "https://github.com/coreui/coreui-free-bootstrap-admin-template.git",
     "chalk": "^2.4.1",
+    "flatpickr": "^4.5.2",
     "jquery.maskedinput": "^1.4.1",
     "select2": "^4.0.6-rc.1",
     "toastr": "^2.1.4"
