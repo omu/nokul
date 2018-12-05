@@ -13,14 +13,8 @@ tr:
         status: Durumu
         theoric: Teorik
         unit: Birim
-        ects: Ects
-      course_group_type: &course_group_type_attributes
-        name: Ders Grup Tür Adı
-      course_type: &course_type_attributes
-        name: Ders Türü
-        code: Kod
-        min_credit: Asgari Kredi
-      course_unit_group: &course_unit_group_attributes
+        ects: AKTS
+      course_group: &course_group_attributes
         course_group_type: Ders Grup Türü
         course_ids: Dersler
         courses: Dersler
@@ -28,6 +22,12 @@ tr:
         search_placeholder: Ders Grup Adı / Birim Adı / Ders Grup Türü Adı
         total_ects_condition: Toplam AKTS Koşulu
         unit: Birim
+      course_group_type: &course_group_type_attributes
+        name: Ders Grup Tür Adı
+      course_type: &course_type_attributes
+        name: Ders Türü
+        code: Kod
+        min_credit: Asgari Kredi
       curriculum: &curriculum_attributes
         name: Müfredat Adı
         semesters_count: Dönem Sayısı
@@ -36,12 +36,15 @@ tr:
         unit: Birim
         number_of_semesters: Oluşturulacak Dönem Sayısı
         type: Dönem Oluşturma Türü
+      curriculum_course: &curriculum_course_attributes
+        course: Ders
+        ects: AKTS
+      curriculum_course_group: &curriculum_course_group_attributes
+        course_group: Ders Grubu
+        ects: AKTS
       curriculum_semester:
         sequence: Dönem Sırası
         year: Yıl
-      curriculum_semester_course: &curriculum_semester_course_attributes
-        course: Ders
-        ects: AKTS
     enums:
       course:
         program_types:
@@ -56,14 +59,66 @@ tr:
         statuses:
           active: Aktif
           passive: Pasif
+      curriculum_course:
+        types:
+          compulsory: Zorunlu
+          elective: Seçmeli
     models:
       course: Ders
+      course_group: Ders Grubu
       course_group_type: Ders Grup Türü
       course_type: Ders Türü
-      course_unit_group: Ders Grubu
       curriculum: Müfreadat
-      curriculum_semester_course: Müfreadat Yarıyıl Ders
+      curriculum_course: Müfreadat Ders
+      curriculum_course_group: Müfreadat Ders Grup
   course_management:
+    courses:
+      create:
+        success: Ders başarıyla oluşturuldu.
+      destroy:
+        error: Ders silinirken bir hata oluştu.
+        success: Ders başarıyla silindi.
+      edit:
+        form_title: Dersi Düzenle
+      index:
+        <<: *course_attributes
+        add_new_course: Yeni Ders Ekle
+        courses: Dersler
+      new:
+        form_title: Ders Oluştur
+      search:
+        course_type: Tüm Ders Tipleri
+        language: Tüm Diller
+        program_type: Tüm Program Türleri
+        smart_search_placeholder: Ders adı veya kodu
+        status: Tüm Durumlar
+        unit: Tüm Birimler
+      show:
+        <<: *course_attributes
+      update:
+        success: Ders başarıyla güncellendi.
+    course_groups:
+      create:
+        success: Ders grubu başarıyla oluşturuldu.
+      destroy:
+        error: Ders grubu silinirken bir hata oluştu.
+        success: Ders grubu başarıyla silindi.
+      edit:
+        form_title: Ders Grup Düzenle
+      index:
+        <<: *course_group_attributes
+        card_header: Ders Grupları
+        new_course_group_link: Yeni Ders Grup Ekle
+      new:
+        form_title: Ders Grup Oluştur
+      show:
+        course_group_type: Ders Grup Türü
+        courses: Dersler
+        name: Ders Grup Adı
+        total_ects_condition: Toplam AKTS Koşulu
+        unit: Birim
+      update:
+        success: Ders grubu başarıyla güncellendi.
     course_group_types:
       create:
         success: Ders grup türü başarıyla oluşturuldu.
@@ -96,56 +151,13 @@ tr:
         form_title: Ders Türü Oluştur
       update:
         success: Ders türü başarıyla güncellendi.
-    course_unit_groups:
-      create:
-        success: Ders grubu başarıyla oluşturuldu.
-      destroy:
-        error: Ders grubu silinirken bir hata oluştu.
-        success: Ders grubu başarıyla silindi.
-      edit:
-        form_title: Ders Grup Düzenle
-      index:
-        <<: *course_unit_group_attributes
-        card_header: Ders Grupları
-        new_course_unit_group_link: Yeni Ders Grup Ekle
-      new:
-        form_title: Ders Grup Oluştur
-      show:
-        course_group_type: Ders Grup Türü
-        courses: Dersler
-        name: Ders Grup Adı
-        total_ects_condition: Toplam AKTS Koşulu
-        unit: Birim
-      update:
-        success: Ders grubu başarıyla güncellendi.
-    courses:
-      create:
-        success: Ders başarıyla oluşturuldu.
-      destroy:
-        error: Ders silinirken bir hata oluştu.
-        success: Ders başarıyla silindi.
-      edit:
-        form_title: Dersi Düzenle
-      index:
-        <<: *course_attributes
-        add_new_course: Yeni Ders Ekle
-        courses: Dersler
-      new:
-        form_title: Ders Oluştur
-      search:
-        course_type: Tüm Ders Tipleri
-        language: Tüm Diller
-        program_type: Tüm Program Türleri
-        smart_search_placeholder: Ders adı veya kodu
-        status: Tüm Durumlar
-        unit: Tüm Birimler
-      show:
-        <<: *course_attributes
-      update:
-        success: Ders başarıyla güncellendi.
     curriculums:
       create:
         success: Müfredat başarıyla oluşturuldu.
+      curriculum_courses:
+        type: Türü
+        total_ects: Toplam AKTS
+        <<: *course_attributes
       destroy:
         error: Müfredat silinirken bir hata oluştu.
         success: Müfredat başarıyla silindi.
@@ -163,31 +175,47 @@ tr:
         smart_search_placeholder: Müfredat Adı
         <<: *curriculum_attributes
       semesters:
-        total_credits: 'Toplam Kredi'
-        total_ects: 'Toplam ECTS'
-        course:
-          <<: *course_attributes
+        add_course: Ders Ekle
+        add_course_group: Ders Grubu Ekle
+        compulsory_courses: Zorunlu Dersler
+        elective_courses: Seçmeli Dersler
+        total_credits: Toplam Kredi
+        total_ects: Toplam AKTS
       show:
         <<: *curriculum_attributes
       update:
         success: Müfredat başarıyla güncellendi.
-    curriculum_semester_courses:
+    curriculum_courses:
       create:
-        success: Müfredat yarıyıl dersi başarıyla oluşturuldu.
+        success: Müfredat dersi başarıyla oluşturuldu.
       destroy:
-        error: Müfredat yarıyıl dersi silinirken bir hata oluştu.
-        success: Müfredat yarıyıl dersi başarıyla silindi.
+        error: Müfredat dersi silinirken bir hata oluştu.
+        success: Müfredat dersi başarıyla silindi.
       edit:
-        form_title: Müfredat Yarıyıl Dersi Düzenle
+        form_title: Müfredat Dersi Düzenle
       new:
-        form_title: Müfredat Yarıyıl Dersi Oluştur
+        form_title: Müfredat Dersi Oluştur
       update:
-        success: Müfredat yarıyıl dersi başarıyla güncellendi.
+        success: Müfredat dersi başarıyla güncellendi.
+    curriculum_course_groups:
+      create:
+        success: Müfredat ders grubu başarıyla oluşturuldu.
+      destroy:
+        error: Müfredat ders grubu silinirken bir hata oluştu.
+        success: Müfredat ders grubu başarıyla silindi.
+      edit:
+        form_title: Müfredat Ders Grubu Düzenle
+      new:
+        form_title: Müfredat Ders Grubu Oluştur
+      update:
+        success: Müfredat ders grubu başarıyla güncellendi.
   simple_form:
     labels:
       course:
         <<: *course_attributes
       curriculum:
         <<: *curriculum_attributes
-      curriculum_semester_course:
-        <<: *curriculum_semester_course_attributes
+      curriculum_course:
+        <<: *curriculum_course_attributes
+      curriculum_course_group:
+        <<: *curriculum_course_group_attributes
