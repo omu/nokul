@@ -3,8 +3,8 @@
 namespace :fetch do
   desc 'fetches all academic staff defined in YOKSIS'
   task academic_staff: :environment do
-    # we simply don't store YOKSISResponse of this action because there is no consistency between responses
-    # of each page - no ordering, no timestamp etc.
+    ActionMailer::Base.perform_deliveries = false # do not send e-mails when seeding
+
     client = Xokul::Yoksis::Staff
 
     # this endpoint uses pagination in a weird way
@@ -45,5 +45,7 @@ namespace :fetch do
       user = User.find_by(id_number: record.first)
       user&.update!(email: record.last)
     end
+
+    ActionMailer::Base.perform_deliveries = true # keep sending e-mails
   end
 end
