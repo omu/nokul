@@ -38,7 +38,7 @@ test:
   status: active
 
 fi_tarihi:
-  name: 'Fi Tarihi'
+  name: Fi Tarihi
   code: FT101
   course_type: compulsory_course
   theoric: 3
@@ -49,3 +49,55 @@ fi_tarihi:
   program_type: undergraduate
   language: turkce
   status: passive
+
+fen_egitiminde_teknolojik_alan_bilgisi:
+  name: Fen Eğitiminde Teknolojik Alan Bilgisi
+  code: FBO214
+  course_type: elective
+  theoric: 2
+  practice: 0
+  credit: 2
+  laboratory: 0
+  unit: fen_bilgisi_ogretmenligi_programi
+  program_type: undergraduate
+  language: turkce
+  status: active
+
+java:
+  name: Java - I
+  code: BİL231
+  course_type: elective
+  theoric: 3
+  practice: 0
+  credit: 3
+  laboratory: 0
+  unit: bilgisayar_muhendisligi
+  program_type: undergraduate
+  language: turkce
+  status: active
+
+mobil_programlama:
+  name: Mobil Programlama
+  code: BİL355
+  course_type: elective
+  theoric: 3
+  practice: 0
+  credit: 3
+  laboratory: 0
+  unit: bilgisayar_muhendisligi
+  program_type: undergraduate
+  language: turkce
+  status: active
+
+programlamaya_giris:
+  name: Programlamaya Giriş
+  code: BİL103
+  course_type: compulsory_course
+  theoric: 3
+  practice: 2
+  credit: 34
+  laboratory: 0
+  unit: bilgisayar_muhendisligi
+  program_type: undergraduate
+  language: turkce
+  status: active

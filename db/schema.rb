@@ -278,23 +278,23 @@ ActiveRecord::Schema.define(version: 2018_12_04_074428) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "course_types", force: :cascade do |t|
-    t.string "name", limit: 255
-    t.string "code", limit: 50
-    t.decimal "min_credit", precision: 5, scale: 2, default: "0.0", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "course_unit_groups", force: :cascade do |t|
+  create_table "course_groups", force: :cascade do |t|
     t.string "name", limit: 255, null: false
     t.integer "total_ects_condition", null: false
     t.bigint "unit_id"
     t.bigint "course_group_type_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["course_group_type_id"], name: "index_course_unit_groups_on_course_group_type_id"
-    t.index ["unit_id"], name: "index_course_unit_groups_on_unit_id"
+    t.index ["course_group_type_id"], name: "index_course_groups_on_course_group_type_id"
+    t.index ["unit_id"], name: "index_course_groups_on_unit_id"
+  end
+
+  create_table "course_types", force: :cascade do |t|
+    t.string "name", limit: 255
+    t.string "code", limit: 50
+    t.decimal "min_credit", precision: 5, scale: 2, default: "0.0", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "courses", force: :cascade do |t|
@@ -316,21 +316,34 @@ ActiveRecord::Schema.define(version: 2018_12_04_074428) do
     t.index ["unit_id"], name: "index_courses_on_unit_id"
   end
 
-  create_table "curriculum_programs", force: :cascade do |t|
-    t.bigint "unit_id"
-    t.bigint "curriculum_id"
-    t.index ["curriculum_id"], name: "index_curriculum_programs_on_curriculum_id"
-    t.index ["unit_id"], name: "index_curriculum_programs_on_unit_id"
+  create_table "curriculum_course_groups", force: :cascade do |t|
+    t.bigint "course_group_id"
+    t.bigint "curriculum_semester_id"
+    t.decimal "ects", precision: 5, scale: 2, default: "0.0", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_group_id"], name: "index_curriculum_course_groups_on_course_group_id"
+    t.index ["curriculum_semester_id"], name: "index_curriculum_course_groups_on_curriculum_semester_id"
   end
 
-  create_table "curriculum_semester_courses", force: :cascade do |t|
+  create_table "curriculum_courses", force: :cascade do |t|
     t.bigint "course_id"
     t.bigint "curriculum_semester_id"
     t.decimal "ects", precision: 5, scale: 2, default: "0.0", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["course_id"], name: "index_curriculum_semester_courses_on_course_id"
-    t.index ["curriculum_semester_id"], name: "index_curriculum_semester_courses_on_curriculum_semester_id"
+    t.bigint "curriculum_course_group_id"
+    t.integer "type"
+    t.index ["course_id"], name: "index_curriculum_courses_on_course_id"
+    t.index ["curriculum_course_group_id"], name: "index_curriculum_courses_on_curriculum_course_group_id"
+    t.index ["curriculum_semester_id"], name: "index_curriculum_courses_on_curriculum_semester_id"
+  end
+
+  create_table "curriculum_programs", force: :cascade do |t|
+    t.bigint "unit_id"
+    t.bigint "curriculum_id"
+    t.index ["curriculum_id"], name: "index_curriculum_programs_on_curriculum_id"
+    t.index ["unit_id"], name: "index_curriculum_programs_on_unit_id"
   end
 
   create_table "curriculum_semesters", force: :cascade do |t|
@@ -401,11 +414,11 @@ ActiveRecord::Schema.define(version: 2018_12_04_074428) do
 
   create_table "group_courses", force: :cascade do |t|
     t.bigint "course_id"
-    t.bigint "course_unit_group_id"
+    t.bigint "course_group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["course_group_id"], name: "index_group_courses_on_course_group_id"
     t.index ["course_id"], name: "index_group_courses_on_course_id"
-    t.index ["course_unit_group_id"], name: "index_group_courses_on_course_unit_group_id"
   end
 
   create_table "high_school_types", force: :cascade do |t|
@@ -697,7 +710,10 @@ ActiveRecord::Schema.define(version: 2018_12_04_074428) do
   add_foreign_key "calendar_units", "units"
   add_foreign_key "courses", "course_types"
   add_foreign_key "courses", "languages"
-  add_foreign_key "curriculum_semester_courses", "courses"
-  add_foreign_key "curriculum_semester_courses", "curriculum_semesters"
+  add_foreign_key "curriculum_course_groups", "course_groups"
+  add_foreign_key "curriculum_course_groups", "curriculum_semesters"
+  add_foreign_key "curriculum_courses", "courses"
+  add_foreign_key "curriculum_courses", "curriculum_course_groups"
+  add_foreign_key "curriculum_courses", "curriculum_semesters"
   add_foreign_key "curriculum_semesters", "curriculums"
 end

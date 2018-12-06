@@ -6,7 +6,7 @@ class CourseGroupType < ApplicationRecord
   pg_search_scope(:search, against: :name, using: { tsearch: { prefix: true } })
 
   # relations
-  has_many :course_unit_groups, dependent: :nullify
+  has_many :course_groups, dependent: :nullify
 
   # validations
   validates :name, presence: true

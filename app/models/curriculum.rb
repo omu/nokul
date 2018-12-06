@@ -29,6 +29,8 @@ class Curriculum < ApplicationRecord
                        inverse_of: :curriculum,
                        dependent: :destroy
   has_many :courses, through: :semesters
+  has_many :curriculum_course_groups, through: :semesters
+  has_many :course_groups, through: :curriculum_course_groups
   has_many :available_courses, dependent: :destroy
 
   # nested models

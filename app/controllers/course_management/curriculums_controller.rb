@@ -15,7 +15,7 @@ module CourseManagement
 
     def show
       @semesters = @curriculum.semesters
-                              .includes(curriculum_semester_courses: :course)
+                              .includes(curriculum_course_groups: :course_group)
                               .order(:year, :sequence)
                               .group_by(&:year)
     end
