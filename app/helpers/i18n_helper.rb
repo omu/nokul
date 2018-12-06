@@ -10,7 +10,7 @@ module I18nHelper
 
   # enum_t(course, :status)
   def enum_t(object, enum)
-    translate(object.class, enum, object.send(enum))
+    translate(object, enum, object.send(enum))
   end
 
   # options_for_select_for_collection([:add, :new])
@@ -23,6 +23,7 @@ module I18nHelper
   private
 
   def translate(klass, enum, value)
+    return '' unless value.nil?
     I18n.t(
       value,
       scope: [:activerecord, :enums, klass.model_name.i18n_key, enum.to_s.pluralize]
