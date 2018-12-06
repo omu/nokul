@@ -1,0 +1,49 @@
+<div class="card <%= klass %>">
+  <div class="card-header">
+    <%= title %>
+    <% if actions %>
+      <div class="float-right">
+       <%= actions %>
+      </div>
+    <% end %>
+  </div>
+  <div class="card-body">
+    <table class="table table-responsive-sm table-striped table-hover">
+      <thead>
+        <tr class="thead-dark">
+          <th><%= t('.type') %></th>
+          <th><%= t('.name') %></th>
+          <th><%= t('.code') %></th>
+          <th><%= t('.course_type') %></th>
+          <th><%= t('.credit') %></th>
+          <th><%= t('.ects') %></th>
+          <% if action_visible %>
+            <th><%= t('actions') %></th>
+          <% end %>
+        </tr>
+      </thead>
+      <tbody>
+        <% courses.includes(course: :course_type).each do |curriculum_course| %>
+          <tr>
+            <td><%= enum_t(curriculum_course, :type) %></td>
+            <td><%= curriculum_course.name %></td>
+            <td><%= curriculum_course.code %></td>
+            <td><%= curriculum_course.course_type.try(:name) %></td>
+            <td><%= curriculum_course.credit %></td>
+            <td><%= curriculum_course.ects %></td>
+            <% if action_visible %>
+              <td>
+                <%= link_to_edit edit_curriculum_semester_curriculum_course_path(semester, curriculum_course) %>
+                <%= link_to_destroy [semester, curriculum_course] %>
+              </td>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <div class="callout callout-info">
+      <small class="text-muted"><%= t('.total_ects') %>: </small><br>
+      <strong class="h4"><%= total_ects %></strong>
+    </div>
+  </div>
+</div>

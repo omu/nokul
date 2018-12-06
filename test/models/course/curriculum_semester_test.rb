@@ -11,7 +11,8 @@ class CurriculumSemesterTest < ActiveSupport::TestCase
   %i[
     courses
     curriculum
-    curriculum_semester_courses
+    curriculum_courses
+    curriculum_course_groups
   ].each do |relation|
     test "curriculum semester can communicate with #{relation}" do
       assert @semester.send(relation)
@@ -38,13 +39,7 @@ class CurriculumSemesterTest < ActiveSupport::TestCase
   end
 
   # custom methods
-  test 'available_courses method return course for curriculum' do
-    courses = @semester.available_courses
-    assert_includes courses, courses(:test)
-    assert_not_includes courses, courses(:ati)
-    assert_not_includes courses, Course.passive.first
-
-    courses = @semester.available_courses(add_courses: [courses(:ati)])
-    assert_includes courses, courses(:ati)
+  test 'total_ects method' do
+    assert_equal @semester.total_ects, 3.0
   end
 end

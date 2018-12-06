@@ -22,8 +22,8 @@
             <% end %>
           </li>
           <li class="nav-item">
-            <%= link_to course_unit_groups_path, class: 'nav-link' do %>
-              <%= fa_icon('cubes', text: t('.course_unit_groups'), class: 'nav-icon') %>
+            <%= link_to course_groups_path, class: 'nav-link' do %>
+              <%= fa_icon('cubes', text: t('.course_groups'), class: 'nav-icon') %>
             <% end %>
           </li>
         </ul>
@@ -121,7 +121,12 @@
           </li>
           <li class="nav-item">
             <%= link_to course_types_path, class: 'nav-link' do %>
-              <%= fa_icon('clone', text: t('.course_types'), class: 'nav-icon') %>
+              <%= fa_icon('pencil', text: t('.course_types'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to studies_path, class: 'nav-link' do %>
+              <%= fa_icon('book', text: t('.studies'), class: 'nav-icon') %>
             <% end %>
           </li>
         </ul>
