@@ -3,6 +3,7 @@
 module CourseManagement
   class AvailableCourseGroupsController < ApplicationController
     before_action :set_available_course
+    before_action :set_lecturers
     before_action :set_available_course_group, only: %i[edit update destroy]
 
     def new
@@ -37,6 +38,11 @@ module CourseManagement
 
     def set_available_course_group
       @available_course_group = @available_course.groups.find(params[:id])
+    end
+
+    def set_lecturers
+      unit_ids = @available_course.unit.descendants.active.ids << @available_course.unit.id
+      @lecturers = Employee.includes(:units, :title, user: :identities).where(units: { id: unit_ids })
     end
 
     def available_course_group_params

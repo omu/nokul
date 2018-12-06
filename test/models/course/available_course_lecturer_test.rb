@@ -28,7 +28,7 @@ class AvailableCourseLecturerTest < ActiveSupport::TestCase
   test 'uniqueness validations for lecturer of a group' do
     fake = @course_lecturer.dup
     assert_not fake.valid?
-    assert_not_empty fake.errors[:lecturer]
+    assert_not_empty fake.errors[:lecturer_id]
     fake.group = available_course_groups(:ati_fall_2017_2018)
     assert fake.valid?
   end
