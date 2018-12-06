@@ -19,11 +19,14 @@ class CurriculumTest < ActiveSupport::TestCase
 
   # relations
   %i[
-    unit
+    available_courses
+    courses
+    course_groups
+    curriculum_course_groups
+    curriculum_programs
     programs
     semesters
-    courses
-    available_courses
+    unit
   ].each do |relation|
     test "curriculum can communicate with #{relation}" do
       assert @curriculum.send(relation)
