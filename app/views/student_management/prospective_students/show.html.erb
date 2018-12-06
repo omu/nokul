@@ -238,24 +238,4 @@
   </div>
 </div>
 
-<% unless @prospective_student.registered %>
-<script type='text/javascript'>
-  $(document).ready(function() {
-    $(".registration-documents").click(function(){
-      table = $(this).parent().parent();
-      if (this.checked == true ) {
-        table.removeClass('table-danger').addClass('table-success');
-      } else {
-        table.removeClass('table-success').addClass('table-danger');
-      }
-    });
-    $(".registration-documents").change(function(){
-      if ($('.registration-documents:checked').length == $('.registration-documents').length) {
-        $('.registration-button').removeClass('disabled');
-      } else {
-        $('.registration-button').addClass('disabled');
-      }
-    });
-  });
-</script>
-<% end %>
+<%= render 'registration_documents' unless @prospective_student.registered %>
