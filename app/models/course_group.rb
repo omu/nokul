@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class CourseUnitGroup < ApplicationRecord
+class CourseGroup < ApplicationRecord
   # search
   include PgSearch
   pg_search_scope(
@@ -15,6 +15,7 @@ class CourseUnitGroup < ApplicationRecord
   belongs_to :course_group_type
   has_many :group_courses, dependent: :destroy
   has_many :courses, through: :group_courses
+  has_many :curriculum_course_groups, dependent: :destroy
 
   # validations
   validates :name, presence: true
