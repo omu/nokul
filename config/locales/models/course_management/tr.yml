@@ -12,6 +12,9 @@ tr:
         lecturer: Öğretim Elemanı
         title: Ünvan
         coordinator: Koordinatör
+      available_course_lecturer:
+        lecturer_id: Öğretim Elemanı
+        coordinator: Koordinatör
       course: &course_attributes
         code: Dersin Kodu
         credit: Kredi
@@ -102,7 +105,6 @@ tr:
       show:
         <<: *available_course_attributes
         <<: *available_course_group_attributes
-        lecturers: Öğretim Elemanları
         create_available_course_group: Açılan Derse Grup Ekle
       update:
         success: Açılan ders başarıyla güncellendi.
@@ -115,7 +117,7 @@ tr:
       edit:
         form_title: Grubu Düzenle
       form:
-        lecturers: Öğretim Elemanları
+        lecturers: Öğretim Elemanlar
       new:
         form_title: Grup Oluştur
       update:
