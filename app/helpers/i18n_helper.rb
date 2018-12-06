@@ -23,7 +23,8 @@ module I18nHelper
   private
 
   def translate(klass, enum, value)
-    return '' unless value.nil?
+    return '' if value.nil?
+
     I18n.t(
       value,
       scope: [:activerecord, :enums, klass.model_name.i18n_key, enum.to_s.pluralize]
