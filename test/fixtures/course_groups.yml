@@ -1,10 +1,10 @@
-one:
+bilgisayar_muhendligi_teknik_secmeli_1:
   name: Teknik Seçmeli Ders 1
   total_ects_condition: 5
   unit: bilgisayar_muhendisligi
   course_group_type: one
 
-two:
+bilgisayar_muhendligi_teknik_secmeli_2:
   name: Teknik Seçmeli Ders 2
   total_ects_condition: 6
   unit: bilgisayar_muhendisligi
