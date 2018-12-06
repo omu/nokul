@@ -10,6 +10,7 @@ tr:
         calendars: Takvimler
         committee_units: Kurul/Komisyon Birimleri
         committees: Kurullar/Komisyonlar
+        course_groups: Ders Grupları
         course_group_types: Ders Grup Türleri
         course_management: Ders İşlemleri
         course_types: Ders Türleri

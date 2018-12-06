@@ -5,7 +5,7 @@ require 'test_helper'
 class CourseGroupTypeTest < ActiveSupport::TestCase
   # relations
   %i[
-    course_unit_groups
+    course_groups
   ].each do |property|
     test "a course group type can communicate with #{property}" do
       assert course_group_types(:one).send(property)
