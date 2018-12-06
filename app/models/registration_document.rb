@@ -8,4 +8,7 @@ class RegistrationDocument < ApplicationRecord
 
   # validations
   validates :unit, uniqueness: { scope: %i[academic_term document] }
+
+  # delegates
+  delegate :name, to: :document
 end
