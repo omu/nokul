@@ -33,6 +33,6 @@ class AcademicCalendar < ApplicationRecord
 
   def proper_event_range?(title)
     event = calendar_events.find_by(calendar_title: CalendarTitle.find_by(identifier: title))
-    !event.nil? && event.proper_range?
+    event.present? && event.proper_range?
   end
 end
