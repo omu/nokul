@@ -12,6 +12,9 @@ en:
         lecturer: Lecturer
         title: Title
         coordinator: Coordinator
+      available_course_lecturer:
+        lecturer_id: Lecturer
+        coordinator: Coordinator
       course: &course_attributes
         code: Code
         credit: Credit
@@ -103,7 +106,6 @@ en:
         <<: *available_course_attributes
         <<: *available_course_group_attributes
         create_available_course_group: Create Available Course Group
-        lecturers: Lecturers
       update:
         success: Available course successfully updated.
     available_course_groups:

@@ -11,4 +11,6 @@ class AvailableCourseLecturer < ApplicationRecord
 
   # scopes
   scope :coordinator, -> { where(coordinator: true) }
+
+  delegate :title, :identities, to: :lecturer
 end

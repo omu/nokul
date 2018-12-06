@@ -20,21 +20,19 @@
             </div>
           </div>
 
-          <h3><%= t('.lecturers') %></h3>
+          <h3 class="text-center"><%= t('.lecturers') %></h3>
           <div id='lecturers' class='mb-2'>
             <%= f.simple_fields_for :lecturers do |semester| %>
               <%= render 'lecturer_fields', f: semester %>
             <% end %>
-            <div class='links'>
+            <div class='links text-center'>
               <%= link_to_add_association f, :lecturers, class: 'btn btn-success btn-sm' %>
             </div>
           </div>
 
-          <div class='row'>
-            <div class='form-group col-sm-12'>
-              <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
-              <%= link_to_back(:back) %>
-            </div>
+          <div class='form-group col-sm-12'>
+            <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
+            <%= link_to_back(:back) %>
           </div>
         <% end %>
       </div>
