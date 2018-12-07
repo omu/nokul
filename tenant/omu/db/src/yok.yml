@@ -12477,7 +12477,7 @@
   issues:
     - Detsis tarafında anabilim dalı başkanlığı SAĞLIK-BİLİM altında; SAĞLIK-BİLİM-BES-ADB
     - Anabilim dalı başkanlığı ile isim farklı; Beden Eğitimi Ve Spor Anabilim Dalı Başkanlığı
-    - Mükerrer isimli birim; SPOR-BESEĞ-AD
+    - Mükerrer isimli birim; BESEĞ-AD
 
 - name: Beden Eğitimi Ve Spor Öğretmenliği Pr.
   yoksis_id: 169401
@@ -12518,7 +12518,7 @@
   unit_type_id: Anabilim Dalı
   parent_yoksis_id: 176337
   osym_id:
-  abbreviation: SPOR-BESEĞ-AD
+  abbreviation: BESEĞ-AD
   issues:
     - Mükerrer isimli birim; BES-AD
 
@@ -12533,7 +12533,7 @@
   unit_type_id: Bölüm
   parent_yoksis_id: 242486
   osym_id:
-  abbreviation: SPOR-REKRASYON
+  abbreviation: REKRASYON
 
 - name: Rekreasyon Anabilim Dalı
   yoksis_id: 322903
@@ -12546,7 +12546,7 @@
   unit_type_id: Anabilim Dalı
   parent_yoksis_id: 214343
   osym_id:
-  abbreviation: SPOR-REKRASYON-AD
+  abbreviation: REKRASYON-AD
   issues:
     - Detsis tarafında anabilim dalı başkanlığı yok
 
@@ -12561,7 +12561,7 @@
   unit_type_id: Önlisans/lisans Programı
   parent_yoksis_id: 214343
   osym_id: 108290162
-  abbreviation: SPOR-REKRASYON-PR
+  abbreviation: REKRASYON-PR
 
 - name: Spor Yöneticiliği Bölümü
   yoksis_id: 122376
