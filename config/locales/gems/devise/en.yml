@@ -20,11 +20,11 @@ en:
       confirmation_instructions:
         subject: Confirmation instructions
       email_changed:
-        body: You have successfully updated your registered e-mail address. You can drop us a line explaining the case at <%= Rails.application.config.tenant.email.support %>, if you think there is a mistake.
+        body: 'You have successfully updated your registered e-mail address. You can drop us a line explaining the case at %{support_mail}, if you think there is a mistake.'
         new_mail: 'Your new e-mail: %{mail}'
         subject: Email Changed
       password_change:
-        body: You have successfully updated your password. You can drop us a line explaining the case at <%= Rails.application.config.tenant.email.support %>, if you think there is a mistake.
+        body: 'You have successfully updated your password. You can drop us a line explaining the case at %{support_mail}, if you think there is a mistake.'
         subject: Password Changed
       reset_password_instructions:
         body: You or someone else made a request to reset your password. Click the link below to reset your password.
