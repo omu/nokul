@@ -1,4 +1,8 @@
 application:
+  - name: temporary_registration
+    title: Geçici Kayıt
+  - name: permanent_registration
+    title: Kesin Kayıt
   - name: advisor_approval
     title: Danışman Onay İşlemleri
   - name: excuse_course

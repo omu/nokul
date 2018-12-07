@@ -20,11 +20,11 @@ tr:
       confirmation_instructions:
         subject: Onaylama talimatları
       email_changed:
-        body: Kayıtlı e-mail adresiniz başarıyla değiştirilmiştir. Bir yanlışlık olduğunu düşünüyorsanız <%= Rails.application.config.tenant.email.support %> adresine durumu anlatan bir e-mail gönderebilirsiniz.
+        body: 'Kayıtlı e-mail adresiniz başarıyla değiştirilmiştir. Bir yanlışlık olduğunu düşünüyorsanız %{support_mail} adresine durumu anlatan bir e-mail gönderebilirsiniz.'
         new_mail: 'Yeni e-mail adresiniz: %{mail}'
         subject: Email Adresiniz Değişti
       password_change:
-        body: Şifreniz başarıyla değiştirilmiştir. Bir yanlışlık olduğunu düşünüyorsanız <%= Rails.application.config.tenant.email.support %> adresine durumu anlatan bir e-mail gönderebilirsiniz.
+        body: 'Şifreniz başarıyla değiştirilmiştir. Bir yanlışlık olduğunu düşünüyorsanız %{support_mail} adresine durumu anlatan bir e-mail gönderebilirsiniz.'
         subject: Şifreniz Değişti
       reset_password_instructions:
         body: Siz veya başka birisi şifrenizi sıfırlama talebinde bulundu. Şifrenizi sıfırlamak istiyorsanız aşağıdaki linke tıklayabilirsiniz.
@@ -33,6 +33,8 @@ tr:
         subject: Parola sıfırlama talimatları
       unlock_instructions:
         subject: Kilit kaldırma talimalatları
+        body: 'Hesabınız çok fazla başarısız giriş denemesinden sonra güvenliğiniz için kilitlendi. Hesabınızı tekrar aktive etmek için lütfen aşağıdaki linke tıklayınız:'
+        unlock_my_account: Hesabımı aktive et
     omniauth_callbacks:
       failure: "\"%{reason}\" olduğu için %{kind}'den doğrulama yapılamıyor."
       success: "%{kind} hesabından başarılı bir şekilde doğrulandı."

@@ -12,3 +12,5 @@
 //= require jquery.maskedinput/src/jquery.maskedinput
 //= require Chart.bundle
 //= require chartkick
+//= require flatpickr/dist/flatpickr.min
+//= require flatpickr/dist/l10n/tr

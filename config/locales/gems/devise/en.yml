@@ -20,11 +20,11 @@ en:
       confirmation_instructions:
         subject: Confirmation instructions
       email_changed:
-        body: You have successfully updated your registered e-mail address. You can drop us a line explaining the case at <%= Rails.application.config.tenant.email.support %>, if you think there is a mistake.
+        body: 'You have successfully updated your registered e-mail address. You can drop us a line explaining the case at %{support_mail}, if you think there is a mistake.'
         new_mail: 'Your new e-mail: %{mail}'
         subject: Email Changed
       password_change:
-        body: You have successfully updated your password. You can drop us a line explaining the case at <%= Rails.application.config.tenant.email.support %>, if you think there is a mistake.
+        body: 'You have successfully updated your password. You can drop us a line explaining the case at %{support_mail}, if you think there is a mistake.'
         subject: Password Changed
       reset_password_instructions:
         body: You or someone else made a request to reset your password. Click the link below to reset your password.
@@ -33,6 +33,8 @@ en:
         subject: Reset password instructions
       unlock_instructions:
         subject: Unlock instructions
+        body: Your account has been locked due to an excessive number of unsuccessful sign in attempts. Click the link below to unlock your account:'
+        unlock_my_account: Unlock my account
     omniauth_callbacks:
       failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
       success: "Successfully authenticated from %{kind} account."
