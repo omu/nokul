@@ -9002,7 +9002,7 @@
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü
   detsis_id: 78633602
-  parent_detsis_id: 32625594
+  parent_detsis_id: 0
   related_yoksis_id: 122287
   district_id: Atakum
   abbreviation: REKTÖRLÜK-İDARİ
