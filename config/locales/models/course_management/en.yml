@@ -156,7 +156,7 @@ en:
         success: Curriculum successfully created.
       curriculum_courses:
         type: Type
-        total_ects: Toplam ECTS
+        total_ects: Total ECTS
         <<: *course_attributes
       destroy:
         error: An error occured when deleting the curriculum.
@@ -179,7 +179,6 @@ en:
         add_course_group: Add Course Group
         compulsory_courses: Compulsory Courses
         elective_courses: Elective Courses
-        total_credits: Total Credits
         total_ects: Total ECTS
       show:
         <<: *curriculum_attributes
@@ -205,6 +204,8 @@ en:
         success: Curriculum course group successfully destroyed.
       edit:
         form_title: Update the Curriculum Course Group
+      form:
+        courses: Courses
       new:
         form_title: Create a Curriculum Course Group
       update:
