@@ -91,5 +91,6 @@ en:
         prospective_student: Prospective Student
         registered_to: 'Already registered to %{program}.'
         temporarily_register: Temporarily Register
+        not_proper_register_event_range: 'There is no registration activity covering the date range today.'
       redirect_with_success:
         success: Student successfully registered

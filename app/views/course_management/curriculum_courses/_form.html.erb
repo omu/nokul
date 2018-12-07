@@ -6,11 +6,11 @@
         <strong><%= form_title %></strong>
       </div>
       <div class='card-body'>
-        <%= simple_form_for([@semester, @semester_course]) do |f| %>
+        <%= simple_form_for([@semester, @curriculum_course]) do |f| %>
           <%= f.error_notification %>
           <div class='row'>
             <div class='form-group col-sm-6'>
-              <%= f.association :course, collection: @semester.available_courses(add_courses: [@semester_course.course]) %>
+              <%= f.association :course, collection: @semester.available_courses(appends: [@curriculum_course.course]) %>
             </div>
             <div class='form-group col-sm-6'>
               <%= f.input :ects %>
