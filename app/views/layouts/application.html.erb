@@ -4,6 +4,9 @@
     <%= render 'layouts/shared/meta' %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <script>
+      flatpickr.localize(flatpickr.l10ns["<%= I18n.locale %>"])
+    </script>
   </head>
   <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
     <header class="app-header navbar">
