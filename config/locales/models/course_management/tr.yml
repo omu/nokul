@@ -179,7 +179,6 @@ tr:
         add_course_group: Ders Grubu Ekle
         compulsory_courses: Zorunlu Dersler
         elective_courses: Seçmeli Dersler
-        total_credits: Toplam Kredi
         total_ects: Toplam AKTS
       show:
         <<: *curriculum_attributes
@@ -205,6 +204,8 @@ tr:
         success: Müfredat ders grubu başarıyla silindi.
       edit:
         form_title: Müfredat Ders Grubu Düzenle
+      form:
+        courses: Dersler
       new:
         form_title: Müfredat Ders Grubu Oluştur
       update:
