@@ -1,6 +1,7 @@
 ---
 name: Hata raporu
 about: Tespit ettiğiniz hataları, beklenen dışında çalışan özelliklerin bildirimi.
+labels: bug
 
 ---
 
