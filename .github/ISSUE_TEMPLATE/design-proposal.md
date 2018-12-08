@@ -1,7 +1,7 @@
 ---
 name: Tasarım önerisi
 about: Uygulamanın varolan UI/UX'i ile ilgili değişiklik önerisi. Varolan sayfalardaki sorunlar için 'hata raporu', varolmayan sayfalar için 'özellik önerisi' template'ini kullanın.
-labels: ux
+labels: ux, product
 
 ---
 
