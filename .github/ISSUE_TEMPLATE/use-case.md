@@ -1,7 +1,7 @@
 ---
 name: Use Case
 about: Product ekibi tarafından hazırlanmış `use case` için iş kaydı.
-labels: feature
+labels: feature, product
 
 ---
 
