@@ -1,5 +1,7 @@
 # How To: Arel Queries
 
+- List of Arel classes:
+
 ```ruby
 Arel::AliasPredication
 Arel::ArelError
@@ -26,7 +28,7 @@ Arel::Visitors
 Arel::WindowPredications
 ```
 
-call them with `.instance_methods` or simply refer to: https://www.rubydoc.info/github/rails/arel/master/Arel/
+call them with `.instance_methods` or simply refer to: https://www.rubydoc.info/github/rails/arel/master/Arel/ for details.
 
 ## References
 
