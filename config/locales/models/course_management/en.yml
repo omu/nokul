@@ -179,6 +179,7 @@ en:
         add_course_group: Add Course Group
         compulsory_courses: Compulsory Courses
         elective_courses: Elective Courses
+        selectable_total_ects: Selectable Total ECTS
         total_ects: Total ECTS
       show:
         <<: *curriculum_attributes

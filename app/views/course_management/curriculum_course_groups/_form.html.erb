@@ -11,7 +11,9 @@
           <div class='row'>
             <div class='col-sm-6'>
               <%= f.association :course_group,
-                                collection: f.object.new_record? ? @semester.available_course_groups : [f.object.course_group]  %>
+                                collection: [f.object.course_group],
+                                include_blank: false,
+                                readonly: true %>
             </div>
             <div class='col-sm-6'>
               <%= f.input :ects %>
@@ -26,7 +28,10 @@
             <%= f.simple_fields_for :curriculum_courses do |p| %>
               <%= p.input :curriculum_semester_id, as: :hidden %>
               <div class='col-sm-6'>
-                <%= p.association :course, collection: f.object.course_group.courses %>
+                <%= p.association :course,
+                                  collection: [ p.object.course ],
+                                  include_blank: false,
+                                  readonly: true %>
               </div>
               <div class='col-sm-6'>
                 <%= p.input :ects %>
