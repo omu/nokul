@@ -13,6 +13,6 @@ class CreateCurriculumCourseGroups < ActiveRecord::Migration[5.2]
       t.timestamps
     end
 
-    add_presence_constraint :curriculum_course_groups, :ects
+    add_null_constraint :curriculum_course_groups, :ects
   end
 end

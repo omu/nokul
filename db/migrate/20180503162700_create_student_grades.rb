@@ -8,7 +8,7 @@ class CreateStudentGrades < ActiveRecord::Migration[5.2]
     end
 
     add_presence_constraint :student_grades, :name
-    add_presence_constraint :student_grades, :code
+    add_null_constraint :student_grades, :code
 
     add_length_constraint :student_grades, :name, less_than_or_equal_to: 255
 

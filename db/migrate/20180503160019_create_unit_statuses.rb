@@ -8,7 +8,7 @@ class CreateUnitStatuses < ActiveRecord::Migration[5.2]
     end
 
     add_presence_constraint :unit_statuses, :name
-    add_presence_constraint :unit_statuses, :code
+    add_null_constraint :unit_statuses, :code
 
     add_length_constraint :unit_statuses, :name,
                                           less_than_or_equal_to: 255

@@ -9,7 +9,7 @@ class CreateUnitTypes < ActiveRecord::Migration[5.2]
     end
 
     add_presence_constraint :unit_types, :name
-    add_presence_constraint :unit_types, :code
+    add_null_constraint :unit_types, :code
 
     add_length_constraint :unit_types, :name, less_than_or_equal_to: 255
 

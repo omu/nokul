@@ -15,9 +15,9 @@ class CreateAddresses < ActiveRecord::Migration[5.1]
       t.datetime :updated_at
     end
 
-    add_presence_constraint :addresses, :type
+    add_null_constraint :addresses, :type
     add_presence_constraint :addresses, :full_address
-    add_presence_constraint :addresses, :updated_at
+    add_null_constraint :addresses, :updated_at
 
     add_length_constraint :addresses, :phone_number, less_than_or_equal_to: 255
     add_length_constraint :addresses, :full_address, less_than_or_equal_to: 255

@@ -9,6 +9,6 @@ class CreateAvailableCourseLecturers < ActiveRecord::Migration[5.2]
       t.timestamps
     end
 
-    add_presence_constraint :available_course_lecturers, :coordinator
+    add_null_constraint :available_course_lecturers, :coordinator
   end
 end

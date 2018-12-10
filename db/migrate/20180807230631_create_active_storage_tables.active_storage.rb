@@ -23,13 +23,11 @@ class CreateActiveStorageTables < ActiveRecord::Migration[5.2]
 
     add_presence_constraint :active_storage_blobs, :key
     add_presence_constraint :active_storage_blobs, :filename
-    add_presence_constraint :active_storage_blobs, :byte_size
+    add_null_constraint :active_storage_blobs, :byte_size
     add_presence_constraint :active_storage_blobs, :checksum
-    add_presence_constraint :active_storage_blobs, :created_at
+    add_null_constraint :active_storage_blobs, :created_at
     add_presence_constraint :active_storage_attachments, :name
-    add_presence_constraint :active_storage_attachments, :record
-    add_presence_constraint :active_storage_attachments, :blob
-    add_presence_constraint :active_storage_attachments, :created_at
+    add_null_constraint :active_storage_attachments, :created_at
 
     add_length_constraint :active_storage_blobs, :key, less_than_or_equal_to: 255
   end

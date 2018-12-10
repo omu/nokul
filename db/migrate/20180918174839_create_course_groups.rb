@@ -15,7 +15,7 @@ class CreateCourseGroups < ActiveRecord::Migration[5.2]
     end
 
     add_presence_constraint :course_groups, :name
-    add_presence_constraint :course_groups, :total_ects_condition
+    add_null_constraint :course_groups, :total_ects_condition
     add_length_constraint :course_groups, :name, less_than_or_equal_to: 255
 
     add_numericality_constraint :course_groups, :total_ects_condition,

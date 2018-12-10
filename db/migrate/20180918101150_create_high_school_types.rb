@@ -8,7 +8,7 @@ class CreateHighSchoolTypes < ActiveRecord::Migration[5.2]
     end
 
     add_presence_constraint :high_school_types, :name
-    add_presence_constraint :high_school_types, :code
+    add_null_constraint :high_school_types, :code
 
     add_length_constraint :high_school_types, :name, less_than_or_equal_to: 255
 

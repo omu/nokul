@@ -8,7 +8,7 @@ class CreateUniversityTypes < ActiveRecord::Migration[5.2]
     end
 
     add_presence_constraint :university_types, :name
-    add_presence_constraint :university_types, :code
+    add_null_constraint :university_types, :code
 
     add_length_constraint :university_types, :name, less_than_or_equal_to: 255
 

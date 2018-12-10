@@ -12,9 +12,9 @@ class CreateCommitteeMeetings < ActiveRecord::Migration[5.2]
       t.timestamps
     end
 
-    add_presence_constraint :committee_meetings, :meeting_no
-    add_presence_constraint :committee_meetings, :meeting_date
-    add_presence_constraint :committee_meetings, :year
+    add_null_constraint :committee_meetings, :meeting_no
+    add_null_constraint :committee_meetings, :meeting_date
+    add_null_constraint :committee_meetings, :year
 
     add_numericality_constraint :committee_meetings, :meeting_no,
                                                      greater_than_or_equal_to: 0

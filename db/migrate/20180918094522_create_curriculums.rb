@@ -11,8 +11,8 @@ class CreateCurriculums < ActiveRecord::Migration[5.2]
                    foreign_key: true
     end
 
-    add_presence_constraint :curriculums, :status
-    add_presence_constraint :curriculums, :semesters_count
+    add_null_constraint :curriculums, :status
+    add_null_constraint :curriculums, :semesters_count
 
     add_length_constraint :curriculums, :name, less_than_or_equal_to: 255
 

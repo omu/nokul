@@ -14,6 +14,6 @@ class CreatePositions < ActiveRecord::Migration[5.2]
       t.timestamps
     end
 
-    add_presence_constraint :positions, :start_date
+    add_null_constraint :positions, :start_date
   end
 end

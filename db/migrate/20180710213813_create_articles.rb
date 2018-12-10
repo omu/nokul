@@ -40,7 +40,7 @@ class CreateArticles < ActiveRecord::Migration[5.2]
       t.timestamps
     end
 
-    add_presence_constraint :articles, :yoksis_id
+    add_null_constraint :articles, :yoksis_id
     add_presence_constraint :articles, :title
     add_presence_constraint :articles, :authors
 

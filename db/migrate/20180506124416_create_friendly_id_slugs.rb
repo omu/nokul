@@ -11,7 +11,7 @@ class CreateFriendlyIdSlugs < ActiveRecord::Migration[5.2]
     end
 
     add_presence_constraint :friendly_id_slugs, :slug
-    add_presence_constraint :friendly_id_slugs, :sluggable_id
+    add_null_constraint :friendly_id_slugs, :sluggable_id
 
     add_length_constraint :friendly_id_slugs, :slug, less_than_or_equal_to: 255
     add_length_constraint :friendly_id_slugs, :sluggable_type, less_than_or_equal_to: 255

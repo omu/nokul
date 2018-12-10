@@ -15,7 +15,7 @@ class CreateDuties < ActiveRecord::Migration[5.2]
       t.timestamps
     end
 
-    add_presence_constraint :duties, :temporary
-    add_presence_constraint :duties, :start_date
+    add_null_constraint :duties, :temporary
+    add_null_constraint :duties, :start_date
   end
 end

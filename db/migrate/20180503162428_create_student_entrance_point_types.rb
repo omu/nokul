@@ -8,7 +8,7 @@ class CreateStudentEntrancePointTypes < ActiveRecord::Migration[5.2]
     end
 
     add_presence_constraint :student_entrance_point_types, :name
-    add_presence_constraint :student_entrance_point_types, :code
+    add_null_constraint :student_entrance_point_types, :code
 
     add_length_constraint :student_entrance_point_types, :name,
                                                          less_than_or_equal_to: 255

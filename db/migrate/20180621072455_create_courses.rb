@@ -25,12 +25,12 @@ class CreateCourses < ActiveRecord::Migration[5.2]
 
     add_presence_constraint :courses, :name
     add_presence_constraint :courses, :code
-    add_presence_constraint :courses, :theoric
-    add_presence_constraint :courses, :practice
-    add_presence_constraint :courses, :laboratory
-    add_presence_constraint :courses, :credit
-    add_presence_constraint :courses, :program_type
-    add_presence_constraint :courses, :status
+    add_null_constraint :courses, :theoric
+    add_null_constraint :courses, :practice
+    add_null_constraint :courses, :laboratory
+    add_null_constraint :courses, :credit
+    add_null_constraint :courses, :program_type
+    add_null_constraint :courses, :status
 
     add_length_constraint :courses, :name, less_than_or_equal_to: 255
     add_length_constraint :courses, :code, less_than_or_equal_to: 255
