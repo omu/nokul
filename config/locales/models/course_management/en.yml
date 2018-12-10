@@ -6,6 +6,7 @@ en:
         curriculum: Curriculum
         course: Course
         unit: Unit
+        coordinator: Coordinator
       available_course_group: &available_course_group_attributes
         name: Group Name
         quota: Quota
@@ -13,7 +14,7 @@ en:
         title: Title
         coordinator: Coordinator
       available_course_lecturer:
-        lecturer_id: Lecturer
+        lecturer: Lecturer
         coordinator: Coordinator
       course: &course_attributes
         code: Code

@@ -6,6 +6,7 @@ tr:
         curriculum: Müfredat
         course: Ders
         unit: Birim
+        coordinator: Koordinatör
       available_course_group: &available_course_group_attributes
         name: Grup Adı
         quota: Kontenjan
@@ -13,7 +14,7 @@ tr:
         title: Ünvan
         coordinator: Koordinatör
       available_course_lecturer:
-        lecturer_id: Öğretim Elemanı
+        lecturer: Öğretim Elemanı
         coordinator: Koordinatör
       course: &course_attributes
         code: Dersin Kodu

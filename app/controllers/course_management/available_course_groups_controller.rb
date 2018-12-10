@@ -41,8 +41,7 @@ module CourseManagement
     end
 
     def set_lecturers
-      unit_ids = @available_course.unit.subtree.active.ids
-      @lecturers = Employee.includes(:units, :title, user: :identities).where(units: { id: unit_ids })
+      @lecturers = Employee.subtree(@available_course.unit)
     end
 
     def available_course_group_params

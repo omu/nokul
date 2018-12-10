@@ -31,7 +31,7 @@
               <%= f.association :course, collection: f.object.curriculum.present? ? f.object.curriculum.courses : [] %>
             </div>
             <div class='form-group col-sm-6'>
-              <%= f.association :coordinator, collection: f.object.unit.present? ? f.object.unit.employees : [] %>
+              <%= f.association :coordinator, collection: f.object.unit.present? ? Employee.subtree(f.object.unit): [], label_method: lambda { |c| full_name(c) } %>
             </div>
             <div class='form-group col-sm-12'>
               <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
