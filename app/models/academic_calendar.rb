@@ -30,4 +30,9 @@ class AcademicCalendar < ApplicationRecord
 
   # scopes
   scope :active, -> { joins(:academic_term).merge(AcademicTerm.where(active: true)) }
+
+  def proper_event_range?(title)
+    event = calendar_events.find_by(calendar_title: CalendarTitle.find_by(identifier: title))
+    event.present? && event.proper_range?
+  end
 end
