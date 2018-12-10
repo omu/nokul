@@ -91,5 +91,6 @@ tr:
         prospective_student: Yerleşen Öğrenci
         registered_to: '%{program} isimli programda kayıtlı.'
         temporarily_register: Geçici Kayıt Yap
+        not_proper_register_event_range: 'Tarih aralığı bugünü kapsayan kayıtlanma aktivitesi bulunmamaktadır.'
       redirect_with_success:
         success: Öğrenci başarıyla kayıt edildi
