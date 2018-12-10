@@ -23,6 +23,8 @@ class CreateCountries < ActiveRecord::Migration[5.1]
     add_length_constraint :countries, :alpha_3_code, equal_to: 3
     add_length_constraint :countries, :numeric_code, equal_to: 3
     add_length_constraint :countries, :mernis_code, equal_to: 4
-    add_length_constraint :countries, :yoksis_code, less_than_or_equal_to: 255
+
+    add_numericality_constraint :countries, :yoksis_code,
+                                greater_than_or_equal_to: 1
   end
 end

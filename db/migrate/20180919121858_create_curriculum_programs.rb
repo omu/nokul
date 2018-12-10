@@ -1,15 +1,14 @@
 # frozen_string_literal: true
 
-class CreateGroupCourses < ActiveRecord::Migration[5.2]
+class CreateCurriculumPrograms < ActiveRecord::Migration[5.2]
   def change
-    create_table :group_courses do |t|
-      t.references :course,
+    create_table :curriculum_programs do |t|
+      t.references :unit,
                    null: false,
                    foreign_key: true
-      t.references :course_group,
+      t.references :curriculum,
                    null: false,
                    foreign_key: true
-      t.timestamps
     end
   end
 end
