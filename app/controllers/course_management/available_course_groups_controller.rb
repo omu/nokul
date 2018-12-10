@@ -41,7 +41,7 @@ module CourseManagement
     end
 
     def set_lecturers
-      unit_ids = @available_course.unit.descendants.active.ids << @available_course.unit.id
+      unit_ids = @available_course.unit.subtree.active.ids
       @lecturers = Employee.includes(:units, :title, user: :identities).where(units: { id: unit_ids })
     end
 

@@ -31,6 +31,10 @@
               <th><%= t('.academic_term') %></th>
               <td><%= full_name(@available_course.academic_term) %></td>
             </tr>
+            <tr>
+              <th><%= t('.coordinator') %></th>
+              <td colspan='3'><%= full_name(@available_course.coordinator) %></td>
+            </tr>
           </tbody>
         </table>
       </div>

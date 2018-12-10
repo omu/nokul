@@ -4,7 +4,7 @@
       <div class='card-body bg-light'>
         <div class="row">
           <div class="col-sm-6">
-            <%= f.input :lecturer_id, collection: @lecturers.reject{ |l| l.identities.blank? }, label_method: lambda { |lecturer| full_name(lecturer) } %>
+            <%= f.association :lecturer, collection: @lecturers.reject{ |l| l.identities.blank? }, label_method: lambda { |lecturer| full_name(lecturer) } %>
           </div>
           <div class="col-sm-6">
             <%= f.input :coordinator, collection: [[t('yes'), true] ,[t('no'), false]] %>

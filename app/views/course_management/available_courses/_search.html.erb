@@ -8,7 +8,7 @@
            id="collapseSearchLink"
            aria-expanded="false"
            aria-controls="Search">
-          <%= t('.list') %>
+          <%= t('search') %>
         </a>
         <div class="float-right">
           <%= link_to t('reset'), available_courses_path, class: 'btn btn-warning btn-sm' %>
@@ -58,7 +58,7 @@
           </div>
           <div class="row">
             <div class="col-sm-12">
-              <%= submit_tag t('.list'), class: 'btn btn-primary' %>
+              <%= submit_tag t('search'), class: 'btn btn-primary' %>
             </div>
           </div>
         <% end %>
@@ -79,7 +79,7 @@
         source: '/units/:unit_id/curriculums/',
         label_attribute: 'name',
         reset_selectors: '#curriculum_id',
-        placeholder: 'Birim Seçiniz'
+        placeholder: 'Müfredat Seçiniz'
       }
     ]
     var dynamic_select = new DynamicSelect(parameters)

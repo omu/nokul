@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_04_074428) do
+ActiveRecord::Schema.define(version: 2018_12_07_062049) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -156,7 +156,9 @@ ActiveRecord::Schema.define(version: 2018_12_04_074428) do
     t.datetime "updated_at", null: false
     t.bigint "unit_id"
     t.integer "groups_count", default: 0
+    t.bigint "coordinator_id"
     t.index ["academic_term_id"], name: "index_available_courses_on_academic_term_id"
+    t.index ["coordinator_id"], name: "index_available_courses_on_coordinator_id"
     t.index ["course_id"], name: "index_available_courses_on_course_id"
     t.index ["curriculum_id"], name: "index_available_courses_on_curriculum_id"
     t.index ["unit_id"], name: "index_available_courses_on_unit_id"
@@ -699,6 +701,7 @@ ActiveRecord::Schema.define(version: 2018_12_04_074428) do
 
   add_foreign_key "available_course_lecturers", "available_course_groups", column: "group_id"
   add_foreign_key "available_course_lecturers", "employees", column: "lecturer_id"
+  add_foreign_key "available_courses", "employees", column: "coordinator_id"
   add_foreign_key "available_courses", "units"
   add_foreign_key "calendar_events", "academic_terms"
   add_foreign_key "calendar_events", "calendar_types"

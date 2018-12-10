@@ -104,32 +104,32 @@ tr:
         group_count: Grup Sayısı
         quota: Kontenjan
       new:
-        form_title: Ders Oluştur
+        form_title: Açılan Ders Oluştur
       search:
         <<: *available_course_attributes
-        list: Listele
       form:
         unit: Birim
       show:
         <<: *available_course_attributes
         <<: *available_course_group_attributes
+        coordinator: Koordinatör
         create_available_course_group: Açılan Derse Grup Ekle
       update:
         success: Açılan ders başarıyla güncellendi.
     available_course_groups:
       create:
-        success: Grup başarıyla oluşturuldu.
+        success: Açılan ders grubu başarıyla oluşturuldu.
       destroy:
-        error: Grup silinirken bir hata oluştu.
-        success: Grup başarıyla silindi.
+        error: Açılan ders grubu silinirken bir hata oluştu.
+        success: Açılan ders grubu başarıyla silindi.
       edit:
-        form_title: Grubu Düzenle
+        form_title: Açılan Ders Grubunu Düzenle
       form:
-        lecturers: Öğretim Elemanlar
+        lecturers: Öğretim Elemanları
       new:
-        form_title: Grup Oluştur
+        form_title: Açılan Ders Grubu Ekle
       update:
-        success: Grup başarıyla güncellendi.
+        success: Açılan ders grubu başarıyla güncellendi.
     courses:
       create:
         success: Ders başarıyla oluşturuldu.
