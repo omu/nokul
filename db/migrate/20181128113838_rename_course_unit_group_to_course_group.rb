@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class RenameCourseUnitGroupToCourseGroup < ActiveRecord::Migration[5.2]
   def change
     rename_table :course_unit_groups, :course_groups
