@@ -18,7 +18,7 @@ class CreateCalendarEvents < ActiveRecord::Migration[5.2]
       t.timestamps
     end
 
-    add_presence_constraint :calendar_events, :start_date
-    add_presence_constraint :calendar_events, :end_date
+    add_null_constraint :calendar_events, :start_date
+    add_null_constraint :calendar_events, :end_date
   end
 end

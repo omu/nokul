@@ -15,7 +15,7 @@ class CreateStudents < ActiveRecord::Migration[5.2]
     end
 
     add_presence_constraint :students, :student_number
-    add_presence_constraint :students, :permanently_registered
+    add_null_constraint :students, :permanently_registered
     add_length_constraint :students, :student_number, less_than_or_equal_to: 255
   end
 end

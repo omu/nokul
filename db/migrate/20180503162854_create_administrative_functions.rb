@@ -8,7 +8,7 @@ class CreateAdministrativeFunctions < ActiveRecord::Migration[5.2]
     end
 
     add_presence_constraint :administrative_functions, :name
-    add_presence_constraint :administrative_functions, :code
+    add_null_constraint :administrative_functions, :code
 
     add_length_constraint :administrative_functions, :name, less_than_or_equal_to: 255
 

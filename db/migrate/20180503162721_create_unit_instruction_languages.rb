@@ -8,7 +8,7 @@ class CreateUnitInstructionLanguages < ActiveRecord::Migration[5.2]
     end
 
     add_presence_constraint :unit_instruction_languages, :name
-    add_presence_constraint :unit_instruction_languages, :code
+    add_null_constraint :unit_instruction_languages, :code
 
     add_length_constraint :unit_instruction_languages, :name, less_than_or_equal_to: 255
 

@@ -53,6 +53,15 @@ class CreateProspectiveStudents < ActiveRecord::Migration[5.2]
       t.timestamps
     end
 
+    add_presence_constraint :prospective_students, :id_number
+    add_presence_constraint :prospective_students, :first_name
+    add_presence_constraint :prospective_students, :last_name
+    add_null_constraint :prospective_students, :top_student
+    add_null_constraint :prospective_students, :meb_status
+    add_null_constraint :prospective_students, :military_status
+    add_null_constraint :prospective_students, :obs_status
+    add_null_constraint :prospective_students, :registered
+
     add_length_constraint :prospective_students, :id_number, equal_to: 11
     add_length_constraint :prospective_students, :first_name, less_than_or_equal_to: 255
     add_length_constraint :prospective_students, :last_name, less_than_or_equal_to: 255
@@ -70,14 +79,6 @@ class CreateProspectiveStudents < ActiveRecord::Migration[5.2]
     add_length_constraint :prospective_students, :placement_score_type, less_than_or_equal_to: 255
     add_length_constraint :prospective_students, :obs_registered_program, less_than_or_equal_to: 255
 
-    add_presence_constraint :prospective_students, :id_number
-    add_presence_constraint :prospective_students, :first_name
-    add_presence_constraint :prospective_students, :last_name
-    add_presence_constraint :prospective_students, :top_student
-    add_presence_constraint :prospective_students, :meb_status
-    add_presence_constraint :prospective_students, :military_status
-    add_presence_constraint :prospective_students, :obs_status
-
     add_numericality_constraint :prospective_students, :gender,
                                                     greater_than_or_equal_to: 0
     add_numericality_constraint :prospective_students, :nationality,
@@ -92,8 +93,6 @@ class CreateProspectiveStudents < ActiveRecord::Migration[5.2]
     add_numericality_constraint :prospective_students, :placement_rank,
                                                        greater_than_or_equal_to: 0
     add_numericality_constraint :prospective_students, :preference_order,
-                                                       greater_than_or_equal_to: 0
-    add_numericality_constraint :prospective_students, :placement_score_type,
                                                        greater_than_or_equal_to: 0
     add_numericality_constraint :prospective_students, :additional_score,
                                                        greater_than_or_equal_to: 0

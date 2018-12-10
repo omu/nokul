@@ -46,13 +46,13 @@ class CreateUsers < ActiveRecord::Migration[5.2]
     add_presence_constraint :users, :id_number
     add_presence_constraint :users, :email
     add_null_constraint :users, :encrypted_password
-    add_presence_constraint :users, :sign_in_count
-    add_presence_constraint :users, :password_changed_at
-    add_presence_constraint :users, :failed_attempts
-    add_presence_constraint :users, :articles_count
-    add_presence_constraint :users, :projects_count
-    add_presence_constraint :users, :created_at
-    add_presence_constraint :users, :updated_at
+    add_null_constraint :users, :sign_in_count
+    add_null_constraint :users, :password_changed_at
+    add_null_constraint :users, :failed_attempts
+    add_null_constraint :users, :articles_count
+    add_null_constraint :users, :projects_count
+    add_null_constraint :users, :created_at
+    add_null_constraint :users, :updated_at
 
     add_length_constraint :users, :id_number, equal_to: 11
     add_length_constraint :users, :email, less_than_or_equal_to: 255

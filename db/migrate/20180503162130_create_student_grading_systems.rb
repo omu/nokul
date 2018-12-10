@@ -8,7 +8,7 @@ class CreateStudentGradingSystems < ActiveRecord::Migration[5.2]
     end
 
     add_presence_constraint :student_grading_systems, :name
-    add_presence_constraint :student_grading_systems, :code
+    add_null_constraint :student_grading_systems, :code
 
     add_length_constraint :student_grading_systems, :name,
                                                     less_than_or_equal_to: 255

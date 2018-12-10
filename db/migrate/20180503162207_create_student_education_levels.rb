@@ -8,7 +8,7 @@ class CreateStudentEducationLevels < ActiveRecord::Migration[5.2]
     end
 
     add_presence_constraint :student_education_levels, :name
-    add_presence_constraint :student_education_levels, :code
+    add_null_constraint :student_education_levels, :code
 
     add_length_constraint :student_education_levels, :name,
                                                      less_than_or_equal_to: 255

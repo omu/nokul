@@ -11,7 +11,7 @@ class CreateCourseTypes < ActiveRecord::Migration[5.2]
 
     add_presence_constraint :course_types, :name
     add_presence_constraint :course_types, :code
-    add_presence_constraint :course_types, :min_credit
+    add_null_constraint :course_types, :min_credit
 
     add_length_constraint :course_types, :name, less_than_or_equal_to: 255
     add_length_constraint :course_types, :code, less_than_or_equal_to: 255

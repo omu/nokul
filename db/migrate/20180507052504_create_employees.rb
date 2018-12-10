@@ -13,6 +13,6 @@ class CreateEmployees < ActiveRecord::Migration[5.2]
       t.timestamps
     end
 
-    add_presence_constraint :employees, :active
+    add_null_constraint :employees, :active
   end
 end

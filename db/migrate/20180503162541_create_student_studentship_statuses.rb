@@ -8,7 +8,7 @@ class CreateStudentStudentshipStatuses < ActiveRecord::Migration[5.2]
     end
 
     add_presence_constraint :student_studentship_statuses, :name
-    add_presence_constraint :student_studentship_statuses, :code
+    add_null_constraint :student_studentship_statuses, :code
 
     add_length_constraint :student_studentship_statuses, :name,
                                                          less_than_or_equal_to: 255

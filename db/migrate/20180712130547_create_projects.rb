@@ -25,7 +25,7 @@ class CreateProjects < ActiveRecord::Migration[5.2]
       t.timestamps
     end
 
-    add_presence_constraint :projects, :yoksis_id
+    add_null_constraint :projects, :yoksis_id
     add_presence_constraint :projects, :name
 
     add_length_constraint :projects, :name, less_than_or_equal_to: 65535

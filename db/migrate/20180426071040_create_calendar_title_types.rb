@@ -13,7 +13,7 @@ class CreateCalendarTitleTypes < ActiveRecord::Migration[5.2]
       t.timestamps
     end
 
-    add_presence_constraint :calendar_title_types, :status
+    add_null_constraint :calendar_title_types, :status
     add_numericality_constraint :calendar_title_types, :status,
                                 greater_than_or_equal_to: 0
   end

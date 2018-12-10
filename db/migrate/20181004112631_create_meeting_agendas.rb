@@ -13,7 +13,7 @@ class CreateMeetingAgendas < ActiveRecord::Migration[5.2]
       t.timestamps
     end
 
-    add_presence_constraint :meeting_agendas, :sequence_no
+    add_null_constraint :meeting_agendas, :sequence_no
     add_numericality_constraint :meeting_agendas, :sequence_no,
                                                   greater_than_or_equal_to: 0
   end

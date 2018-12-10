@@ -17,7 +17,7 @@ class CreateAcademicCalendars < ActiveRecord::Migration[5.2]
     end
 
     add_presence_constraint :academic_calendars, :name
-    add_presence_constraint :academic_calendars, :senate_decision_date
+    add_null_constraint :academic_calendars, :senate_decision_date
     add_presence_constraint :academic_calendars, :senate_decision_no
 
     add_length_constraint :academic_calendars, :name, less_than_or_equal_to: 255

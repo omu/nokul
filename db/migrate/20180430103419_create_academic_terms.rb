@@ -11,7 +11,8 @@ class CreateAcademicTerms < ActiveRecord::Migration[5.2]
     end
 
     add_presence_constraint :academic_terms, :year
-    add_presence_constraint :academic_terms, :term
+    add_null_constraint :academic_terms, :term
+    add_null_constraint :academic_terms, :active
 
     add_length_constraint :academic_terms, :year, less_than_or_equal_to: 255
 
