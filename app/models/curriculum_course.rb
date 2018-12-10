@@ -2,6 +2,7 @@
 
 class CurriculumCourse < ApplicationRecord
   self.inheritance_column = :_type_disabled
+
   # relations
   belongs_to :course
   belongs_to :curriculum_semester

@@ -3,23 +3,46 @@
 class CreateCertifications < ActiveRecord::Migration[5.2]
   def change
     create_table :certifications do |t|
-      t.integer :yoksis_id, null: false
-      t.integer :type, null: false, default: 1
-      t.string :name, limit: 255
-      t.text :content, limit: 65535
-      t.string :location, limit: 255
+      t.integer :yoksis_id
+      t.integer :type, default: 1
+      t.string :name
+      t.string :content
+      t.string :location
       t.integer :scope
-      t.string :duration, limit: 255
+      t.string :duration
       t.date :start_date
       t.date :end_date
-      t.string :title, limit: 255
+      t.string :title
       t.integer :number_of_authors
-      t.string :city_and_country, limit: 255
+      t.string :city_and_country
       t.datetime :last_update
       t.float :incentive_point
       t.integer :status
-      t.references :user
+      t.references :user,
+                   null: false,
+                   foreign_key: true
       t.timestamps
     end
+
+    add_presence_constraint :certifications, :yoksis_id
+    add_presence_constraint :certifications, :type
+
+    add_length_constraint :certifications, :name, less_than_or_equal_to: 255
+    add_length_constraint :certifications, :content, less_than_or_equal_to: 65535
+    add_length_constraint :certifications, :location, less_than_or_equal_to: 255
+    add_length_constraint :certifications, :duration, less_than_or_equal_to: 255
+    add_length_constraint :certifications, :title, less_than_or_equal_to: 255
+    add_length_constraint :certifications, :city_and_country, less_than_or_equal_to: 255
+
+    add_numericality_constraint :certifications, :yoksis_id,
+                                                 greater_than_or_equal_to: 0
+    add_numericality_constraint :certifications, :type,
+                                                 greater_than_or_equal_to: 0
+    add_numericality_constraint :certifications, :scope,
+                                                 greater_than_or_equal_to: 0
+    add_numericality_constraint :certifications, :number_of_authors,
+                                                 greater_than_or_equal_to: 0
+    add_numericality_constraint :certifications, :status,
+                                                 greater_than_or_equal_to: 0
   end
 end

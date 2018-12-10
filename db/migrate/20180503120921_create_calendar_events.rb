@@ -11,9 +11,14 @@ class CreateCalendarEvents < ActiveRecord::Migration[5.2]
       t.references :calendar_title,
                    null: false,
                    foreign_key: true
+      t.references :calendar_type,
+                   foreign_key: true
+      t.references :academic_term,
+                   foreign_key: true
       t.timestamps
     end
 
     add_presence_constraint :calendar_events, :start_date
+    add_presence_constraint :calendar_events, :end_date
   end
 end
