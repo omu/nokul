@@ -10,11 +10,15 @@ end
 
 # core
 gem 'bootsnap', '>= 1.1.0', require: false
-gem 'pg'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.1'
 gem 'redis'
 gem 'sidekiq'
+
+# database
+gem 'pg'
+gem 'pg_search'
+gem 'rein'
 
 # active-record
 gem 'ancestry'
@@ -46,9 +50,6 @@ gem 'bcrypt', '~> 3.1.7'
 
 # validators
 gem 'email_address'
-
-# search
-gem 'pg_search'
 
 # error tracking
 gem 'rollbar'
