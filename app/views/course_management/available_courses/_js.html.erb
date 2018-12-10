@@ -1,6 +1,7 @@
 <script type='text/javascript'>
   $(document).ready(function() {
     $('#available_course_unit_id, #available_course_course_id').select2();
+    $('#available_course_coordinator_id').select2();
 
     var parameters = [
       {
@@ -20,6 +21,15 @@
         label_attribute: 'name',
         reset_selectors: '#available_course_course_id',
         placeholder: 'Ders Seçiniz'
+      },
+      {
+        el: '#available_course_unit_id',
+        target: '#available_course_coordinator_id',
+        params: { 'unit_id': '#available_course_unit_id' },
+        source: '/units/:unit_id/employees/',
+        label_attribute: 'full_name',
+        reset_selectors: '#available_course_coordinator_id',
+        placeholder: 'Koordinatör Seçiniz'
       }
     ]
     var dynamic_select = new DynamicSelect(parameters)

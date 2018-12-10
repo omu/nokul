@@ -21,6 +21,7 @@ Rails.application.routes.draw do
       get :courses, defaults: { format: :json }
       get :programs, defaults: { format: :json }
       get :curriculums, defaults: { format: :json }
+      get :employees, default: { format: :json }
     end
   end
 

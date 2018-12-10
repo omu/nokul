@@ -56,7 +56,7 @@ module CourseManagement
 
     def available_course_params
       params.require(:available_course).permit(
-        :academic_term_id, :curriculum_id, :course_id, :unit_id
+        :academic_term_id, :curriculum_id, :course_id, :unit_id, :coordinator_id
       )
     end
   end

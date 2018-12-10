@@ -30,6 +30,9 @@
             <div class='form-group col-sm-6'>
               <%= f.association :course, collection: f.object.curriculum.present? ? f.object.curriculum.courses : [] %>
             </div>
+            <div class='form-group col-sm-6'>
+              <%= f.association :coordinator, collection: f.object.unit.present? ? f.object.unit.employees : [] %>
+            </div>
             <div class='form-group col-sm-12'>
               <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
               <%= link_to_back(:back) %>

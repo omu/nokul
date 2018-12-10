@@ -107,29 +107,29 @@ en:
         form_title: Create an Available Course
       search:
         <<: *available_course_attributes
-        list: List
       form:
         unit: Unit
       show:
         <<: *available_course_attributes
         <<: *available_course_group_attributes
+        coordinator: Coodinator
         create_available_course_group: Create Available Course Group
       update:
         success: Available course successfully updated.
     available_course_groups:
       create:
-        success: Group course created.
+        success: Available course group created.
       destroy:
-        error: An error occured when deleting the group.
-        success: Group successfully destroyed.
+        error: An error occured when deleting the available course group.
+        success: Available course group successfully destroyed.
       edit:
-        form_title: Update the Group
+        form_title: Update the Available Course Group
       form:
         lecturers: Lecturers
       new:
-        form_title: Create a Group
+        form_title: Create an Available Course Group
       update:
-        success: Group successfully updated.
+        success: Available course group successfully updated.
     courses:
       create:
         success: Course successfully created.
