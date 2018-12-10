@@ -14,7 +14,8 @@
           <%= f.error_notification %>
           <div class='row'>
             <div class='form-group col-sm-6'>
-              <%= f.association :course, collection: @semester.available_courses(appends: [curriculum_course.course]) %>
+              <%= f.association :course,
+                                collection: @semester.available_courses(appends: [curriculum_course.course]).sort_by(&:name) %>
             </div>
             <div class='form-group col-sm-6'>
               <%= f.input :ects %>
@@ -31,3 +32,9 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#curriculum_course_course_id').select2();
+  });
+</script>
