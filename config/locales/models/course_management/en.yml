@@ -91,7 +91,7 @@ en:
   course_management:
     available_courses:
       create:
-        success: Available course created.
+        success: Available course successfully created.
       destroy:
         error: An error occured when deleting the available course.
         success: Available course successfully destroyed.
@@ -119,7 +119,7 @@ en:
         success: Available course successfully updated.
     available_course_groups:
       create:
-        success: Available course group created.
+        success: Available course group successfully created.
       destroy:
         error: An error occured when deleting the available course group.
         success: Available course group successfully destroyed.
@@ -158,7 +158,7 @@ en:
         success: Course successfully updated.
     course_groups:
       create:
-        success: Course group created.
+        success: Course group successfully created.
       destroy:
         error: An error occured when deleting the course group.
         success: Course group successfully destroyed.
@@ -180,7 +180,7 @@ en:
         success: Course group successfully updated.
     course_group_types:
       create:
-        success: Course group type created.
+        success: Course group type successfully created.
       destroy:
         warning: An error occured when deleting the course group type.
         success: Course group type successfully destroyed.
@@ -196,7 +196,7 @@ en:
         success: Course group type successfully updated.
     course_types:
       create:
-        success: Course type created.
+        success: Course type successfully created.
       destroy:
         warning: An error occured when deleting the course type.
         success: Course type successfully destroyed.
