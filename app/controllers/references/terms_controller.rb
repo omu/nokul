@@ -4,7 +4,7 @@ module References
   class TermsController < ApplicationController
     include PagyBackendWithHelpers
 
-    before_action :set_term, only: %i[show edit update destroy]
+    before_action :set_term, only: %i[edit update destroy]
 
     def index
       @terms = pagy_by_search(Term.all.order(:name))
