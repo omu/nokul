@@ -1,18 +1,21 @@
 ## TL;DR
 
-- `foreign_key` türündeki sütunlar için `null: false` kullanın.
-- Diğer tüm türler için `change_column_null` (veya `null: false`) yerine `add_presence_constraint` kullanın.
+- `foreign_key` türündeki sütunlar için, eğer arada `optional: true` bir ilişki yoksa `null: false` kullanın.
+
+- Integer, boolean ve float türleri için `null: false` kullanmayın, `add_null_constraint` kullanın.
+
+- String türü için `null: false` kullanmayın, `add_presence_constraint` kullanın.
 
 ## Not Null Constraint vs. Not Null Check
 
 PostgreSQL'de `NOT NULL` durumu hem `CONSTRAINT` olarak, hem de `CHECK` olarak tanımlanabiliyor. `CONSTRAINT` ile `CHECK` arasında bazı farklar bulunmakta.
 
-- Rails'in `change_column_null` metodu sütun üzerinde `CONSTRAINT` tanımlaması yaparken,
-- [rein](https://github.com/nullobject/rein)'in bir methodu olan`add_presence_constraint` tabloya `CHECK` tanımlaması yapmakta.
+- `change_column_null` (veya `null: false`) metodu sütun üzerinde `CONSTRAINT` tanımlaması yaparken,
+- `add_presence_constraint` tabloya `CHECK` tanımlaması yapar.
 
-### change_column_nil
+### change_column_null (null: false)
 
-- Rails'in `change_column_nil` metodu ilgili sütuna `not null` `CONSTRAINT` ekler:
+- Rails'in `change_column_null` metodu ilgili sütuna `not null` `CONSTRAINT` ekler:
 
 ```ruby
   change_column_null :cities, :country_id, false
@@ -31,12 +34,12 @@ Indexes:
     "index_cities_on_country_id" btree (country_id)
 ```
 
-### add_presence_constraint
+### add_null_constraint
 
-- `add_presence_constraint` metodu tabloya `not_null` `CHECK` ekler:
+- `add_null_constraint` metodu tabloya `not_null` `CHECK` ekler:
 
 ```ruby
-  add_presence_constraint :cities, :country_id
+  add_null_constraint :cities, :country_id
 ```
 
 ```
@@ -58,14 +61,24 @@ Check constraints:
 
 > A not-null constraint is always written as a column constraint. A not-null constraint is functionally equivalent to creating a check constraint CHECK (column_name IS NOT NULL), but in PostgreSQL creating an explicit not-null constraint is more efficient.
 
-Her ne kadar PostgreSQL dokümanı aradaki farkı istatistiki olarak tanımlamıyor. Ancak benchmark gerçekleştirmiş bir [Stackoverflow kullanıcısına](https://dba.stackexchange.com/a/158644) göre ikisi arasında istatistiki olarak anlamlı olmayan %0.5'lik bir fark bulunmakta.
+PostgreSQL dokümanı aradaki farkı istatistiki olarak tanımlamıyor. Ancak benchmark gerçekleştirmiş bir [Stackoverflow kullanıcısına](https://dba.stackexchange.com/a/158644) göre ikisi arasında istatistiki olarak anlamlı olmayan %0.5'lik bir fark bulunmakta.
+
+### add_presence_constraint
+
+`add_presence_constraint` string türündeki verilerin varlığını kontrol etmek için kullanılır. `add_null_constraint`'ten farklı olarak boş string'lerin sütuna yazılmasına engel olur. Yani:
+
+```
+User.create(email: ' ')
+```
+
+`null_constraint` kontrolünen geçmekteyken, `presence_constraint` kontrolünden geçemez.
 
 ## Neden `CONSTRAINT` değil de `CHECK`?
 
 Resmi Postgres dokümanına göre `CONSTRAINT` daha hızlı çalışmaktayken (ne kadar fark olduğu belirtilmese de) `rein` neden `NOT NULL` şartını `CONSTRAINT` değil de `CHECK` olarak ekliyor? Temelde iki sebebi var:
 
-1) `CHECK`'leri revert etmek daha maliyetsiz çünkü bunlar daha kolay revert edilebiliyor veya değiştirilebiliyor, ancak `CONSTRAINT` revert edilirken tüm sütunun tekrar yazılması gerekiyor.
-2) `CONSTRAINT` üzerinde yapılan değişiklikler sütunun tekrar yazılmasını gerektirdiğinden tabloya `AccessExclusiveLock` atılıyor, yani tablo okumaya kapatılıyor. `CHECK` ise `AccessExclusiveLock` atmadığından daha düşük bir down-time sağlıyor.
+1. `CHECK`'leri revert etmek daha maliyetsiz, ancak `CONSTRAINT` revert edilirken tüm sütunun tekrar yazılması gerekiyor.
+1. `CONSTRAINT` üzerinde yapılan değişiklikler sütunun tekrar yazılmasını gerektirdiğinden tabloya `AccessExclusiveLock` atılıyor, yani tablo okumaya kapatılıyor. `CHECK` ise `AccessExclusiveLock` atmadığından daha düşük bir down-time sağlıyor.
 
 ## Kaynaklar
 
