@@ -7,7 +7,7 @@ co-author: M. Serhat Dündar
 ===========
 
 `Sensitive` modülü Rails uygulama köküne göreceli olarak çözülen dosyalarda
-`RAILS_MASTER_KEY` kullanaral şifreleme ve çözme işlemleri yapar.  Şifrelenmiş
+`RAILS_MASTER_KEY` kullanaral şifreleme ve çözme işlemleri yapar. Şifrelenmiş
 dosyalarda daima `.enc` uzantısı kullanıldığı varsayılır.
 
 - Şifrelenmemiş bir dosyayı aynı dizinde `.enc` uzantılı bir dosya olarak şifrele:
@@ -34,6 +34,12 @@ dosyalarda daima `.enc` uzantısı kullanıldığı varsayılır.
 
   `db/enc/prospective_students.csv.enc` şifrelenmiş dosyası satırlar halinde
   okunur.
+
+- Şifrelenmiş olan herhangi bir dosyayı okuduktan sonra içeriğini şifresiz olarak ayrı bir dosyaya kaydet:
+
+  ```ruby
+  File.write('plain-text.md', Sensitive.read('db/encrypted_data/prospective_students.csv'))
+  ```
 
 - Şifrelenmemiş bir dizgi ("string") içeriğini şifreleyerek bir dosyaya kaydet:
 
@@ -75,7 +81,7 @@ Bu modülü kullanmadan önce lütfen aşağıdaki hususları dikkate alın:
   ```
 
 - Dosyanın şifrelenmemiş açık hali Git deposuna zaten ekliyse bu dosyayı silmek
-  yeterli değildir.  Dosyanın özgün haline Git tarihçesinden erişilebilir.
+  yeterli değildir. Dosyanın özgün haline Git tarihçesinden erişilebilir.
   Şifrelenmemiş içeriği tamamen kaldırmak için [şu
   yöntemi](https://help.github.com/articles/removing-sensitive-data-from-a-repository/)
   izleyin.
