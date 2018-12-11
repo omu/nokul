@@ -13,8 +13,8 @@ module FullNameHelper
     when 'Employee'
       if object.identities.formal.present?
         "#{object.title_name}
-        #{object.identities.formal.first.first_name}
-        #{object.identities.formal.first.last_name}"
+         #{object.identities.formal.first.first_name}
+         #{object.identities.formal.first.last_name}"
       end
     end
   end

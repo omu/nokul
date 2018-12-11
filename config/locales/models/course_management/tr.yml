@@ -91,10 +91,10 @@ tr:
   course_management:
     available_courses:
       create:
-        success: Açılan Ders başarıyla oluşturuldu.
+        success: Açılan ders başarıyla oluşturuldu.
       destroy:
-        error: Açılan Ders silinirken bir hata oluştu.
-        success: Açılan Ders başarıyla silindi.
+        error: Açılan ders silinirken bir hata oluştu.
+        success: Açılan ders başarıyla silindi.
       edit:
         form_title: Açılan Dersi Düzenle
       index:
