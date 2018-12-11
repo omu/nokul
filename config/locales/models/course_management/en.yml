@@ -3,10 +3,10 @@ en:
     attributes:
       available_course: &available_course_attributes
         academic_term: Academic Term
-        curriculum: Curriculum
-        course: Course
-        unit: Unit
         coordinator: Coordinator
+        course: Course
+        curriculum: Curriculum
+        unit: Unit
       available_course_group: &available_course_group_attributes
         name: Group Name
         quota: Quota

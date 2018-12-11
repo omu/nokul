@@ -24,10 +24,8 @@ module CourseManagement
 
     def create
       @available_course = AvailableCourse.new(available_course_params)
-      group = @available_course.groups.build(name: 'Grup 1')
-
       if @available_course.save
-        redirect_to edit_available_course_available_course_group_path(@available_course, group)
+        redirect_to new_available_course_available_course_group_path(@available_course)
       else
         render(:new)
       end
@@ -36,7 +34,11 @@ module CourseManagement
     def edit; end
 
     def update
-      @available_course.update(available_course_params) ? redirect_with('success') : render(:edit)
+      if @available_course.update(available_course_params)
+        redirect_to(@available_course, notice: t('.success'))
+      else
+        render(:edit)
+      end
     end
 
     def destroy
