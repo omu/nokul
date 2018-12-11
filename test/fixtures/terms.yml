@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+fall:
+  name: Güz
+  identifier: fall
+spring:
+  name: Bahar
+  identifier: spring
+summer:
+  name: Yaz
+  identifier: summer
