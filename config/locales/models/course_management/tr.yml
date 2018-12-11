@@ -3,10 +3,10 @@ tr:
     attributes:
       available_course: &available_course_attributes
         academic_term: Akademik Dönem
-        curriculum: Müfredat
-        course: Ders
-        unit: Birim
         coordinator: Koordinatör
+        course: Ders
+        curriculum: Müfredat
+        unit: Birim
       available_course_group: &available_course_group_attributes
         name: Grup Adı
         quota: Kontenjan

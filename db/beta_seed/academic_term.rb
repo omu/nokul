@@ -17,7 +17,7 @@ AcademicTerm.create(
 AcademicTerm.create(
   year: '2017 - 2018',
   term: 'fall',
-  start_of_term: '2017-09-017 00:00:00',
+  start_of_term: '2017-09-17 00:00:00',
   end_of_term: '2018-01-31 00:00:00',
   active: false
 )

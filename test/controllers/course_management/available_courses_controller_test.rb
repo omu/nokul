@@ -41,8 +41,7 @@ module CourseManagement
       assert_equal curriculums(:one), available_course.curriculum
       assert_equal courses(:ydi), available_course.course
       assert_equal units(:omu), available_course.unit
-      assert_redirected_to edit_available_course_available_course_group_path(available_course,
-                                                                             available_course.groups.first)
+      assert_redirected_to new_available_course_available_course_group_path(available_course)
     end
 
     test 'should get edit' do
@@ -65,8 +64,8 @@ module CourseManagement
       assert_equal academic_terms(:fall_2017_2018), available_course.academic_term
       assert_equal curriculums(:one), available_course.curriculum
       assert_equal courses(:ydi), available_course.course
-      assert_redirected_to available_courses_path
-      assert_equal translate('.update.success'), flash[:info]
+      assert_redirected_to available_course_path(available_course)
+      assert_equal translate('.update.success'), flash[:notice]
     end
 
     test 'should destroy available course' do
