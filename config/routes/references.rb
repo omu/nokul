@@ -9,4 +9,5 @@ scope module: :references do
     end
   end
   resources :languages, except: :show
+  resources :terms, except: :show
 end
