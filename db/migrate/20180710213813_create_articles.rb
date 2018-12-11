@@ -94,6 +94,8 @@ class CreateArticles < ActiveRecord::Migration[5.2]
                                                  greater_than_or_equal_to: 0
     add_numericality_constraint :articles, :author_id,
                                                  greater_than_or_equal_to: 0
+    add_numericality_constraint :articles, :incentive_point,
+                                           greater_than_or_equal_to: 0
   end
 end
 

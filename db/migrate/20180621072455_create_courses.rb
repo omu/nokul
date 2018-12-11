@@ -41,6 +41,8 @@ class CreateCourses < ActiveRecord::Migration[5.2]
                                             greater_than_or_equal_to: 0
     add_numericality_constraint :courses, :laboratory,
                                             greater_than_or_equal_to: 0
+    add_numericality_constraint :courses, :credit,
+                                            greater_than_or_equal_to: 0
     add_numericality_constraint :courses, :program_type,
                                             greater_than_or_equal_to: 0
     add_numericality_constraint :courses, :status,

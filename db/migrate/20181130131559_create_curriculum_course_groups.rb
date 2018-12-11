@@ -14,5 +14,7 @@ class CreateCurriculumCourseGroups < ActiveRecord::Migration[5.2]
     end
 
     add_null_constraint :curriculum_course_groups, :ects
+    add_numericality_constraint :curriculum_course_groups, :ects,
+                                                           greater_than_or_equal_to: 0
   end
 end

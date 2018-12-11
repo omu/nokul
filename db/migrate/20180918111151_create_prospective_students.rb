@@ -96,5 +96,9 @@ class CreateProspectiveStudents < ActiveRecord::Migration[5.2]
                                                        greater_than_or_equal_to: 0
     add_numericality_constraint :prospective_students, :additional_score,
                                                        greater_than_or_equal_to: 0
+    add_numericality_constraint :prospective_students, :exam_score,
+                                                       greater_than_or_equal_to: 0
+    add_numericality_constraint :prospective_students, :placement_score,
+                                                       greater_than_or_equal_to: 0
   end
 end
