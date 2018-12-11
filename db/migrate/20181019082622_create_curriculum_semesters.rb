@@ -9,9 +9,8 @@ class CreateCurriculumSemesters < ActiveRecord::Migration[5.2]
       t.timestamps
     end
     add_numericality_constraint :curriculum_semesters, :year,
-                                greater_than_or_equal_to: 1950,
-                                less_than_or_equal_to: 2050
+                                greater_than: 0
     add_numericality_constraint :curriculum_semesters, :sequence,
-                                greater_than_or_equal_to: 0
+                                greater_than: 0
   end
 end

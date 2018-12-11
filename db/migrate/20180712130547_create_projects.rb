@@ -44,5 +44,7 @@ class CreateProjects < ActiveRecord::Migration[5.2]
                                            greater_than_or_equal_to: 0
     add_numericality_constraint :projects, :scope,
                                            greater_than_or_equal_to: 0
+    add_numericality_constraint :projects, :incentive_point,
+                                           greater_than_or_equal_to: 0
   end
 end
