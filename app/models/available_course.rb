@@ -5,7 +5,7 @@ class AvailableCourse < ApplicationRecord
   include DynamicSearch
 
   # dynamic_search
-  search_keys :curriculum_id, :academic_term_id
+  search_keys :unit_id, :curriculum_id, :academic_term_id
 
   # relations
   belongs_to :academic_term
