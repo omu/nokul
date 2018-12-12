@@ -3,6 +3,8 @@ en:
     address:
       max_formal: You can have up to %{limit} formal addresses maximum.
       max_informal: You can add up to %{limit} addresses maximum.
+    available_course_lecturer:
+      coordinator: There must be one coordinator of the available course group.
     calendar_event:
       invalid_date_range: Event end date is not selected as a date before the start date.
       invalid_end_date: Event is not selected as a date after the academic term end date.
