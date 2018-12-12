@@ -5,7 +5,6 @@ class CreateCalendarTitles < ActiveRecord::Migration[5.2]
     create_table :calendar_titles do |t|
       t.string :name
       t.string :identifier
-      t.timestamps
     end
 
     add_presence_constraint :calendar_titles, :name
