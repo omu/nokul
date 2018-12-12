@@ -7,6 +7,7 @@ class CalendarTitleType < ApplicationRecord
 
   # validations
   validates :type, uniqueness: { scope: :title }
+  validates :status, inclusion: { in: self.statuses.keys }
 
   # enums
   enum status: { passive: 0, active: 1 }
