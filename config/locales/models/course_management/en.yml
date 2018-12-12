@@ -80,14 +80,14 @@ en:
           elective: Elective
     models:
       available_course: Available Course
-      available_course_group: Group
+      available_course_group: Available Course Group
       course: Course
       course_group_type: Course Group Type
       course_group: Course Group
       course_type: Course Type
       curriculum: Curriculum
       curriculum_course: Curriculum Course
-      curriculum_course_group: Curriculum Course Grup
+      curriculum_course_group: Curriculum Course Group
   course_management:
     available_courses:
       create:

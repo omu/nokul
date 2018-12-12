@@ -80,14 +80,14 @@ tr:
           elective: Seçmeli
     models:
       available_course: Açılan Ders
-      available_course_group: Grup
+      available_course_group: Açılan Ders Grubu
       course: Ders
       course_group: Ders Grubu
       course_group_type: Ders Grup Türü
       course_type: Ders Türü
-      curriculum: Müfreadat
-      curriculum_course: Müfreadat Ders
-      curriculum_course_group: Müfreadat Ders Grup
+      curriculum: Müfredat
+      curriculum_course: Müfredat Ders
+      curriculum_course_group: Müfredat Ders Grubu
   course_management:
     available_courses:
       create:
