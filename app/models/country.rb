@@ -19,14 +19,13 @@ class Country < ApplicationRecord
   has_many :units, through: :districts
 
   # validations
-  validates :name, presence: true, uniqueness: true
+  validates :name, presence: true, uniqueness: true, length: { maximum: 255 }
   validates :alpha_2_code, presence: true, uniqueness: true, length: { is: 2 }
   validates :alpha_3_code, presence: true, uniqueness: true, length: { is: 3 }
-  validates :numeric_code, presence: true, uniqueness: true, numericality: { only_integer: true },
-                           length: { maximum: 3 }
-  validates :mernis_code, uniqueness: true, numericality: { only_integer: true }, allow_blank: true,
-                          length: { maximum: 4 }
-  validates :yoksis_code, uniqueness: true, allow_blank: true
+  validates :numeric_code, presence: true, uniqueness: true, length: { is: 3 }, numericality: { only_integer: true }
+  validates :mernis_code, allow_blank: true, uniqueness: true, length: { is: 4 }, numericality: { only_integer: true }
+  validates :yoksis_code, allow_blank: true, uniqueness: true,
+                          numericality: { only_integer: true, greater_than_or_equal_to: 1 }
 
   # callbacks
   before_save do
