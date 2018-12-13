@@ -97,6 +97,8 @@ tr:
         success: Açılan ders başarıyla silindi.
       edit:
         form_title: Açılan Dersi Düzenle
+      groups:
+        <<: *available_course_group_attributes
       index:
         <<: *available_course_attributes
         add_new_available_course: Yeni Açılan Ders Ekle
@@ -112,7 +114,6 @@ tr:
         unit: Birim
       show:
         <<: *available_course_attributes
-        <<: *available_course_group_attributes
         coordinator: Koordinatör
         create_available_course_group: Açılan Derse Grup Ekle
       update:
