@@ -25,7 +25,6 @@ class Unit < ApplicationRecord
   belongs_to :unit_instruction_type, optional: true
   belongs_to :unit_instruction_language, optional: true
   belongs_to :university_type, optional: true
-  has_many :curriculums, dependent: :destroy
   has_many :duties, dependent: :destroy
   has_many :employees, through: :duties
   has_many :students, dependent: :nullify
@@ -38,6 +37,9 @@ class Unit < ApplicationRecord
   has_many :decisions, through: :meeting_agendas, class_name: 'CommitteeDecision'
   has_many :courses, dependent: :nullify
   has_many :course_groups, dependent: :nullify
+  has_many :curriculum_programs, dependent: :destroy
+  has_many :curriculums, through: :curriculum_programs
+  has_many :managed_curriculums, dependent: :destroy, class_name: 'Curriculum'
   has_many :registration_documents, dependent: :destroy
   has_many :prospective_students, dependent: :destroy
   has_many :calendar_units, dependent: :destroy
