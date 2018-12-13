@@ -22,7 +22,7 @@
               <%= f.association :unit, collection: Unit.active.coursable.order(:name), label_method: :names_depth_cache %>
             </div>
             <div class='form-group col-sm-6'>
-              <%= f.association :curriculum, collection: f.object.unit.present? ? f.object.unit.curriculums : [] %>
+              <%= f.association :curriculum, collection: f.object.unit.present? ? f.object.unit.managed_curriculums : [] %>
             </div>
             <div class='form-group col-sm-6'>
               <%= f.association :academic_term, label_method: lambda { |academic_term| full_name(academic_term) } %>

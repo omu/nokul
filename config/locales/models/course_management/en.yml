@@ -97,6 +97,8 @@ en:
         success: Available course successfully destroyed.
       edit:
         form_title: Update the Available Course
+      groups:
+        <<: *available_course_group_attributes
       index:
         <<: *available_course_attributes
         add_new_available_course: Add a New Available Course
@@ -112,7 +114,6 @@ en:
         unit: Unit
       show:
         <<: *available_course_attributes
-        <<: *available_course_group_attributes
         coordinator: Coodinator
         create_available_course_group: Create Available Course Group
       update:
