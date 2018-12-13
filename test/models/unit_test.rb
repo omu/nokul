@@ -22,6 +22,10 @@ class UnitTest < ActiveSupport::TestCase
     meeting_agendas
     decisions
     courses
+    course_groups
+    curriculum_programs
+    curriculums
+    managed_curriculums
     registration_documents
     prospective_students
     calendar_units
