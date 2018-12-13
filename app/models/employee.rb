@@ -24,10 +24,6 @@ class Employee < ApplicationRecord
   scope :active, -> { where(active: true) }
   scope :passive, -> { where(active: false) }
   scope :academic, -> { joins(:title).where('titles.branch = ?', 'ÖE') }
-  scope :subtree, ->(unit) do
-    includes(:units, :title, user: :identities)
-      .where(units: { id: unit.subtree.active.ids }).reject { |e| e.identities.blank? }
-  end
 
   # custom methods
   def academic?
