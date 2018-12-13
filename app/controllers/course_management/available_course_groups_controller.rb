@@ -41,7 +41,7 @@ module CourseManagement
     end
 
     def set_lecturers
-      @lecturers = Employee.subtree(@available_course.unit)
+      @lecturers = @available_course.unit.subtree_employees
     end
 
     def available_course_group_params
