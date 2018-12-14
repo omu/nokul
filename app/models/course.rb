@@ -14,6 +14,10 @@ class Course < ApplicationRecord
   # dynamic_search
   search_keys :course_type_id, :program_type, :language_id, :unit_id, :status
 
+  # enumerations
+  enum program_type: { associate: 0, undergraduate: 1, master: 2, doctoral: 3 }
+  enum status: { passive: 0, active: 1 }
+
   # relations
   belongs_to :course_type
   belongs_to :unit
@@ -36,10 +40,6 @@ class Course < ApplicationRecord
     self.name = name.capitalize_all if name
     self.credit = calculate_credit
   end
-
-  # enumerations
-  enum program_type: { associate: 0, undergraduate: 1, master: 2, doctoral: 3 }
-  enum status: { passive: 0, active: 1 }
 
   def calculate_credit
     theoric.to_f + ((practice.to_f + laboratory.to_f) / 2)
