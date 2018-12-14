@@ -32,8 +32,8 @@ class Course < ApplicationRecord
   validates :credit, presence: true, numericality: {
     greater_than_or_equal_to: ->(course) { course.course_type.try(:min_credit).to_i }
   }
-  validates :program_type, presence: true, inclusion: { in: self.program_types.keys }
-  validates :status, presence: true, inclusion: { in: self.statuses.keys }
+  validates :program_type, presence: true, inclusion: { in: program_types.keys }
+  validates :status, presence: true, inclusion: { in: statuses.keys }
 
   # callbacks
   before_validation do
