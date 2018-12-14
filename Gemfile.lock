@@ -182,6 +182,8 @@ GEM
       activerecord (>= 4.2)
       activesupport (>= 4.2)
       arel (>= 6)
+    pghero (2.2.0)
+      activerecord
     powerpack (0.1.2)
     pry (0.12.2)
       coderay (~> 1.1.0)
@@ -350,6 +352,7 @@ DEPENDENCIES
   pagy
   pg
   pg_search
+  pghero
   pry-rails
   puma (~> 3.11)
   rack-mini-profiler

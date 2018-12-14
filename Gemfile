@@ -17,6 +17,7 @@ gem 'sidekiq'
 
 # database
 gem 'pg'
+gem 'pghero'
 gem 'pg_search'
 gem 'rein'
 
