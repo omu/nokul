@@ -3,6 +3,9 @@
 class CurriculumCourse < ApplicationRecord
   self.inheritance_column = :_type_disabled
 
+  # enums
+  enum type: { compulsory: 0, elective: 1 }
+
   # relations
   belongs_to :course
   belongs_to :curriculum_semester
@@ -13,9 +16,6 @@ class CurriculumCourse < ApplicationRecord
 
   # delegates
   delegate :code, :credit, :course_type, :name, to: :course
-
-  # enums
-  enum type: { compulsory: 0, elective: 1 }
 
   # callbacks
   before_validation do

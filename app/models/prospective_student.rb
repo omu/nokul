@@ -13,6 +13,12 @@ class ProspectiveStudent < ApplicationRecord
 
   search_keys :meb_status, :military_status, :obs_status, :unit_id, :student_entrance_type_id, :registered
 
+  # enumerations
+  enum gender: { male: 1, female: 2 }
+  enum nationality: { turkish: 1, kktc: 2, foreign: 3 }
+  enum placement_type: { general_score: 1, additional_score: 2 }
+  enum additional_score: { handicapped: 1 }
+
   # relations
   belongs_to :unit
   belongs_to :language, optional: true
@@ -34,12 +40,6 @@ class ProspectiveStudent < ApplicationRecord
     self.registration_city = registration_city.capitalize_all if registration_city
     self.registration_district = registration_district.capitalize_all if registration_district
   end
-
-  # enumerations
-  enum gender: { male: 1, female: 2 }
-  enum nationality: { turkish: 1, kktc: 2, foreign: 3 }
-  enum placement_type: { general_score: 1, additional_score: 2 }
-  enum additional_score: { handicapped: 1 }
 
   # custom methods
   def can_permanently_register?
