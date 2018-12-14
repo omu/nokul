@@ -8,12 +8,16 @@ class Identity < ApplicationRecord
   belongs_to :student, optional: true
 
   # validations
-  validates :type, presence: true
-  validates :first_name, presence: true
-  validates :last_name, presence: true
-  validates :gender, presence: true
-  validates :place_of_birth, presence: true
+  validates :type, presence: true, inclusion: { in: self.types.keys }
+  validates :first_name, presence: true, length: { maximum: 255 }
+  validates :last_name, presence: true, length: { maximum: 255 }
+  validates :mothers_name, allow_blank: true, length: { maximum: 255 }
+  validates :fathers_name, allow_blank: true, length: { maximum: 255 }
+  validates :gender, presence: true, inclusion: { in: self.genders.keys }
+  validates :marital_status, allow_blank: true, inclusion: { in: self.marital_statuses.keys }
+  validates :place_of_birth, presence: true, length: { maximum: 255 }
   validates :date_of_birth, presence: true
+  validates :registered_to, allow_blank: true, length: { maximum: 255 }
   validates :student_id, uniqueness: true, allow_blank: true
   validates_with AddressAndIdentityValidator, on: :create
 
