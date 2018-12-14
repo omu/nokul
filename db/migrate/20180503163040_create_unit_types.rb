@@ -15,5 +15,8 @@ class CreateUnitTypes < ActiveRecord::Migration[5.2]
 
     add_numericality_constraint :unit_types, :code, greater_than_or_equal_to: 0
     add_numericality_constraint :unit_types, :group, greater_than_or_equal_to: 0
+
+    add_unique_constraint :unit_statuses, :name
+    add_unique_constraint :unit_statuses, :code
   end
 end

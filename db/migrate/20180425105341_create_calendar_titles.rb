@@ -9,6 +9,10 @@ class CreateCalendarTitles < ActiveRecord::Migration[5.2]
 
     add_presence_constraint :calendar_titles, :name
     add_presence_constraint :calendar_titles, :identifier
+
+    add_unique_constraint :calendar_titles, :name
+    add_unique_constraint :calendar_titles, :identifier
+
     add_length_constraint :calendar_titles, :name, less_than_or_equal_to: 255
     add_length_constraint :calendar_titles, :identifier, less_than_or_equal_to: 255
   end

@@ -70,6 +70,9 @@ class CreateUsers < ActiveRecord::Migration[5.2]
     add_numericality_constraint :users, :projects_count,
                                         greater_than_or_equal_to: 0
 
+    add_unique_constraint :users, :email
+    add_unique_constraint :users, :id_number
+
     add_index :users, :email,                unique: true
     add_index :users, :id_number,            unique: true
     add_index :users, :reset_password_token, unique: true
