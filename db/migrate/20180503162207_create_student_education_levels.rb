@@ -15,5 +15,8 @@ class CreateStudentEducationLevels < ActiveRecord::Migration[5.2]
 
     add_numericality_constraint :student_education_levels, :code,
                                 greater_than_or_equal_to: 0
+
+    add_unique_constraint :student_education_levels, :name
+    add_unique_constraint :student_education_levels, :code
   end
 end

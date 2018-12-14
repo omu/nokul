@@ -14,5 +14,8 @@ class CreateAdministrativeFunctions < ActiveRecord::Migration[5.2]
 
     add_numericality_constraint :administrative_functions, :code,
                                 greater_than_or_equal_to: 0
+
+    add_unique_constraint :administrative_functions, :name
+    add_unique_constraint :administrative_functions, :code
   end
 end

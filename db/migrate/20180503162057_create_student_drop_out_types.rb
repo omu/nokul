@@ -15,5 +15,8 @@ class CreateStudentDropOutTypes < ActiveRecord::Migration[5.2]
 
     add_numericality_constraint :student_drop_out_types, :code,
                                 greater_than_or_equal_to: 0
+
+    add_unique_constraint :student_drop_out_types, :name
+    add_unique_constraint :student_drop_out_types, :code
   end
 end

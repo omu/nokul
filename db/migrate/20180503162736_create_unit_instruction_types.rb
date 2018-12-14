@@ -14,5 +14,8 @@ class CreateUnitInstructionTypes < ActiveRecord::Migration[5.2]
 
     add_numericality_constraint :unit_instruction_types, :code,
                                 greater_than_or_equal_to: 0
+
+    add_unique_constraint :unit_instruction_types, :name
+    add_unique_constraint :unit_instruction_types, :code
   end
 end

@@ -12,5 +12,8 @@ class CreateLanguages < ActiveRecord::Migration[5.2]
 
     add_length_constraint :languages, :name, less_than_or_equal_to: 255
     add_length_constraint :languages, :iso, less_than_or_equal_to: 255
+
+    add_unique_constraint :languages, :name
+    add_unique_constraint :languages, :iso
   end
 end

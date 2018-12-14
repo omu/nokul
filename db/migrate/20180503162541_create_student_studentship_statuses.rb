@@ -15,5 +15,8 @@ class CreateStudentStudentshipStatuses < ActiveRecord::Migration[5.2]
 
     add_numericality_constraint :student_studentship_statuses, :code,
                                 greater_than_or_equal_to: 0
+
+    add_unique_constraint :student_studentship_statuses, :name
+    add_unique_constraint :student_studentship_statuses, :code
   end
 end

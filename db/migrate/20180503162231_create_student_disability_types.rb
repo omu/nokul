@@ -15,5 +15,8 @@ class CreateStudentDisabilityTypes < ActiveRecord::Migration[5.2]
 
     add_numericality_constraint :student_disability_types, :code,
                                 greater_than_or_equal_to: 0
+
+    add_unique_constraint :student_disability_types, :name
+    add_unique_constraint :student_disability_types, :code
   end
 end
