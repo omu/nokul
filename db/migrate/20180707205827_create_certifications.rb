@@ -26,6 +26,7 @@ class CreateCertifications < ActiveRecord::Migration[5.2]
 
     add_null_constraint :certifications, :yoksis_id
     add_null_constraint :certifications, :type
+    add_null_constraint :certifications, :title
 
     add_length_constraint :certifications, :name, less_than_or_equal_to: 255
     add_length_constraint :certifications, :content, less_than_or_equal_to: 65535
