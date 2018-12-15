@@ -178,7 +178,7 @@ ActiveRecord::Schema.define(version: 2018_12_10_221451) do
   create_table "calendar_title_types", force: :cascade do |t|
     t.bigint "type_id", null: false
     t.bigint "title_id", null: false
-    t.integer "status"
+    t.integer "status", default: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["title_id"], name: "index_calendar_title_types_on_title_id"
