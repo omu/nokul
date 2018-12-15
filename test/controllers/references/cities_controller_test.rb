@@ -58,7 +58,7 @@ module References
 
     test 'should destroy city' do
       assert_difference('City.count', -1) do
-        delete country_city_path(@country, City.last)
+        delete country_city_path(@country, cities(:adana))
       end
 
       assert_redirected_to country_path(@country)
