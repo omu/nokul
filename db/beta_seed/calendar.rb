@@ -6,6 +6,7 @@ event_titles.each do |category, events|
     CalendarTitle.create(name: event['title'], identifier: "#{category}_#{event['name']}")
   end
 end
+
 CalendarType.create(name: 'Lisans - Önlisans')
 CalendarType.create(name: 'Yüksek Lisans')
 CalendarType.create(name: 'Ali Fuat Başgil Hukuk Fakültesi')
@@ -15,9 +16,11 @@ CalendarType.create(name: 'Diş Hekimliği Fakültesi')
 CalendarType.create(name: 'Veteriner Fakültesi')
 CalendarType.create(name: 'Yaz Dönemi')
 CalendarType.create(name: 'Öğrenci')
+
 CalendarTitle.find_each do |title|
   CalendarTitleType.create(type: CalendarType.first, title: title, status: :active)
 end
+
 AcademicCalendar.create(
   name: '2017-2018 Eğitim Öğretim Yılı Akademik Takvimi',
   academic_term: AcademicTerm.first,

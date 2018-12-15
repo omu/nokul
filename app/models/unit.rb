@@ -15,7 +15,7 @@ class Unit < ApplicationRecord
   search_keys :duration, :unit_status_id, :unit_instruction_type_id, :unit_instruction_language_id
 
   # callbacks
-  before_validation :cache_ancestry
+  before_save :cache_ancestry
   before_save { self.name = name.capitalize_all }
 
   # relations
@@ -46,7 +46,6 @@ class Unit < ApplicationRecord
 
   # validations
   validates :name, presence: true, uniqueness: { scope: %i[ancestry unit_status] }, length: { maximum: 255 }
-  validates :names_depth_cache, presence: true, length: { maximum: 255 }
   validates :yoksis_id, uniqueness: true, allow_blank: true, numericality: { only_integer: true }, length: { is: 6 }
   validates :detsis_id, uniqueness: true, allow_blank: true, numericality: { only_integer: true }, length: { is: 8 }
   validates :osym_id, allow_blank: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
