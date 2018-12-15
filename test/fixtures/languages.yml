@@ -5,3 +5,7 @@ turkce:
 ingilizce:
   name: İngilizce
   iso: EN
+
+language_to_delete:
+  name: Language to Delete
+  iso: LD

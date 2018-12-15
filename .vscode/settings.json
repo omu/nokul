@@ -1,6 +1,5 @@
 {
   "editor.tabSize": 2,
-  "editor.renderWhitespace": "boundary",
   "editor.rulerss": [120],
   "files.watcherExclude": {
     "**/.git/objects/**": true,

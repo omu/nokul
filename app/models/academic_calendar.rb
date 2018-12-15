@@ -22,7 +22,7 @@ class AcademicCalendar < ApplicationRecord
   validates :senate_decision_date, presence: true
   validates :senate_decision_no, presence: true, length: { maximum: 255 }
   validates :academic_term, uniqueness: { scope: :calendar_type }
-  validates :description, length: { maximum: 65535 }
+  validates :description, length: { maximum: 65_535 }
   validates :units, presence: true, on: :update
 
   # delegates
