@@ -1,6 +1,7 @@
 # Installation
 
 ## Prerequisites
+
 - [NodeJS (>=10.x)](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions)
 - [Yarn](https://yarnpkg.com/lang/en/docs/install/#debian-stable)
 - [Redis](https://packages.debian.org/search?keywords=redis)
@@ -50,3 +51,9 @@
   ```
 
   `reset` is equivalent of `rake db:drop & rake db:setup`.
+
+## Restoring an Existing PostgreSQL Dump from Dokku
+
+```
+pg_restore -h localhost -p 5432 -U nokul -d nokul_development -v "some_dump.backup"
+```
