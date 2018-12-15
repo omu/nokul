@@ -71,6 +71,8 @@ ActiveRecord::Schema.define(version: 2018_12_10_221451) do
   create_table "administrative_functions", force: :cascade do |t|
     t.string "name"
     t.integer "code"
+    t.index ["code"], name: "administrative_functions_code_unique", unique: true
+    t.index ["name"], name: "administrative_functions_name_unique", unique: true
   end
 
   create_table "agenda_types", force: :cascade do |t|
@@ -186,14 +188,15 @@ ActiveRecord::Schema.define(version: 2018_12_10_221451) do
   create_table "calendar_titles", force: :cascade do |t|
     t.string "name"
     t.string "identifier"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.index ["identifier"], name: "calendar_titles_identifier_unique", unique: true
+    t.index ["name"], name: "calendar_titles_name_unique", unique: true
   end
 
   create_table "calendar_types", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "calendar_types_name_unique", unique: true
   end
 
   create_table "calendar_unit_types", force: :cascade do |t|
@@ -402,7 +405,6 @@ ActiveRecord::Schema.define(version: 2018_12_10_221451) do
     t.string "scope"
     t.datetime "created_at"
     t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
-    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
     t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
@@ -442,6 +444,8 @@ ActiveRecord::Schema.define(version: 2018_12_10_221451) do
   create_table "languages", force: :cascade do |t|
     t.string "name"
     t.string "iso"
+    t.index ["iso"], name: "languages_iso_unique", unique: true
+    t.index ["name"], name: "languages_name_unique", unique: true
   end
 
   create_table "meeting_agendas", force: :cascade do |t|
@@ -552,46 +556,64 @@ ActiveRecord::Schema.define(version: 2018_12_10_221451) do
   create_table "student_disability_types", force: :cascade do |t|
     t.string "name"
     t.integer "code"
+    t.index ["code"], name: "student_disability_types_code_unique", unique: true
+    t.index ["name"], name: "student_disability_types_name_unique", unique: true
   end
 
   create_table "student_drop_out_types", force: :cascade do |t|
     t.string "name"
     t.integer "code"
+    t.index ["code"], name: "student_drop_out_types_code_unique", unique: true
+    t.index ["name"], name: "student_drop_out_types_name_unique", unique: true
   end
 
   create_table "student_education_levels", force: :cascade do |t|
     t.string "name"
     t.integer "code"
+    t.index ["code"], name: "student_education_levels_code_unique", unique: true
+    t.index ["name"], name: "student_education_levels_name_unique", unique: true
   end
 
   create_table "student_entrance_point_types", force: :cascade do |t|
     t.string "name"
     t.integer "code"
+    t.index ["code"], name: "student_entrance_point_types_code_unique", unique: true
+    t.index ["name"], name: "student_entrance_point_types_name_unique", unique: true
   end
 
   create_table "student_entrance_types", force: :cascade do |t|
     t.string "name"
     t.integer "code"
+    t.index ["code"], name: "student_entrance_types_code_unique", unique: true
+    t.index ["name"], name: "student_entrance_types_name_unique", unique: true
   end
 
   create_table "student_grades", force: :cascade do |t|
     t.string "name"
     t.integer "code"
+    t.index ["code"], name: "student_grades_code_unique", unique: true
+    t.index ["name"], name: "student_grades_name_unique", unique: true
   end
 
   create_table "student_grading_systems", force: :cascade do |t|
     t.string "name"
     t.integer "code"
+    t.index ["code"], name: "student_grading_systems_code_unique", unique: true
+    t.index ["name"], name: "student_grading_systems_name_unique", unique: true
   end
 
   create_table "student_punishment_types", force: :cascade do |t|
     t.string "name"
     t.integer "code"
+    t.index ["code"], name: "student_punishment_types_code_unique", unique: true
+    t.index ["name"], name: "student_punishment_types_name_unique", unique: true
   end
 
   create_table "student_studentship_statuses", force: :cascade do |t|
     t.string "name"
     t.integer "code"
+    t.index ["code"], name: "student_studentship_statuses_code_unique", unique: true
+    t.index ["name"], name: "student_studentship_statuses_name_unique", unique: true
   end
 
   create_table "students", force: :cascade do |t|
@@ -614,22 +636,30 @@ ActiveRecord::Schema.define(version: 2018_12_10_221451) do
   create_table "unit_instruction_languages", force: :cascade do |t|
     t.string "name"
     t.integer "code"
+    t.index ["code"], name: "unit_instruction_languages_code_unique", unique: true
+    t.index ["name"], name: "unit_instruction_languages_name_unique", unique: true
   end
 
   create_table "unit_instruction_types", force: :cascade do |t|
     t.string "name"
     t.integer "code"
+    t.index ["code"], name: "unit_instruction_types_code_unique", unique: true
+    t.index ["name"], name: "unit_instruction_types_name_unique", unique: true
   end
 
   create_table "unit_statuses", force: :cascade do |t|
     t.string "name"
     t.integer "code"
+    t.index ["code"], name: "unit_statuses_code_unique", unique: true
+    t.index ["name"], name: "unit_statuses_name_unique", unique: true
   end
 
   create_table "unit_types", force: :cascade do |t|
     t.string "name"
     t.integer "code"
     t.integer "group"
+    t.index ["code"], name: "unit_types_code_unique", unique: true
+    t.index ["name"], name: "unit_types_name_unique", unique: true
   end
 
   create_table "units", force: :cascade do |t|
@@ -688,7 +718,9 @@ ActiveRecord::Schema.define(version: 2018_12_10_221451) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["email"], name: "users_email_unique", unique: true
     t.index ["id_number"], name: "index_users_on_id_number", unique: true
+    t.index ["id_number"], name: "users_id_number_unique", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
