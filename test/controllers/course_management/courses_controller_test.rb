@@ -76,7 +76,7 @@ module CourseManagement
 
     test 'should destroy course' do
       assert_difference('Course.count', -1) do
-        delete course_path(Course.unscope(:order).last)
+        delete course_path(courses(:course_to_delete))
       end
 
       assert_redirected_to courses_path

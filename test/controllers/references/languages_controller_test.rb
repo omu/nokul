@@ -62,7 +62,7 @@ module References
 
     test 'should destroy language' do
       assert_difference('Language.count', -1) do
-        delete language_path(Language.last)
+        delete language_path(languages(:language_to_delete))
       end
 
       assert_redirected_to languages_path

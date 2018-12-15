@@ -87,7 +87,7 @@ class UnitsControllerTest < ActionDispatch::IntegrationTest
 
   test 'should destroy unit' do
     assert_difference('Unit.count', -1) do
-      delete unit_path(Unit.last)
+      delete unit_path(units(:unit_to_delete))
     end
 
     assert_redirected_to units_path

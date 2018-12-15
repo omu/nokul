@@ -30,7 +30,7 @@ class Certification < ApplicationRecord
   validates :title, presence: true, length: { maximum: 255 }
   validates :type, presence: true, inclusion: { in: types.keys }
   validates :name, allow_blank: true, length: { maximum: 255 }
-  validates :content, allow_blank: true, length: { maximum: 65535 }
+  validates :content, allow_blank: true, length: { maximum: 65_535 }
   validates :location, allow_blank: true, length: { maximum: 255 }
   validates :scope, allow_blank: true, inclusion: { in: scopes.keys }
   validates :duration, allow_blank: true, length: { maximum: 255 }
