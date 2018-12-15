@@ -139,8 +139,8 @@ jobs:
       - run:
           name: Deploy Develop to Dokku
           command: |
-            git remote add develop dokku@app.omu.sh:nokul-develop &&
-            git push develop develop:master
+            git remote add beta dokku@app.omu.sh:nokul-develop &&
+            git push develop beta:master
   deploy_master:
     machine:
       enabled: true
@@ -149,8 +149,8 @@ jobs:
       - run:
           name: Deploy Master to Dokku
           command: |
-            git remote add beta dokku@app.omu.sh:nokul &&
-            git push beta master
+            git remote add production dokku@app.omu.sh:nokul &&
+            git push production master
 
 # build flow
 workflows:
