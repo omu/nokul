@@ -3,6 +3,8 @@ tr:
     address:
       max_formal: En fazla %{limit} tane ikamet adresi ekleyebilirsiniz.
       max_informal: En fazla %{limit} tane adres ekleyebilirsiniz.
+    available_course_lecturer:
+      coordinator: Açılan ders grubunun bir koordinatörü olmalı.
     calendar_event:
       invalid_date_range: Etkinlik bitiş tarihi başlangıç tarihinden önceki bir tarih olarak seçilemez.
       invalid_start_date: Etkinlik akademik dönemin başlama tarihinden önce oluşturulamaz.

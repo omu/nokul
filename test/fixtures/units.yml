@@ -21,6 +21,7 @@ omu_rektorluk:
   unit_instruction_type: normal_education
   university_type:
   unit_type: rectorship
+  ancestry: <%= ActiveRecord::FixtureSet.identify(:omu) %>
 
 cbu:
   name: Canik Başarı Üniversitesi
@@ -55,6 +56,7 @@ uzem:
   unit_instruction_language: turkish
   unit_instruction_type: distance_education
   unit_type: research_center
+  ancestry: <%= ActiveRecord::FixtureSet.identify(:omu) %>
 
 baum:
   name: Bilgisayar Araştırmaları Uygulama ve Araştırma Merkezi
@@ -66,6 +68,7 @@ baum:
   unit_instruction_language: turkish
   unit_instruction_type: normal_education
   unit_type: research_center
+  ancestry: <%= ActiveRecord::FixtureSet.identify(:omu) %>
 
 muhendislik_fakultesi_yonetim_kurulu:
   name: Mühendislik Fakültesi Yönetim Kurulu
@@ -89,6 +92,18 @@ egitim_fakultesi:
   unit_instruction_language: turkish
   unit_instruction_type: normal_education
   unit_type: faculty
+  ancestry: <%= ActiveRecord::FixtureSet.identify(:omu) %>
+
+muhendislik_fakultesi:
+  name: Mühendislik Fakültesi
+  yoksis_id: 122082
+  duration:
+  district: atakum
+  unit_status: active
+  unit_instruction_language: turkish
+  unit_instruction_type: normal_education
+  unit_type: faculty
+  ancestry: <%= ActiveRecord::FixtureSet.identify(:omu) %>
 
 bilgisayar_muhendisligi:
   name: Bilgisayar Mühendisliği Bölümü
@@ -99,7 +114,40 @@ bilgisayar_muhendisligi:
   unit_instruction_language: turkish
   unit_instruction_type: normal_education
   unit_type: department
-  ancestry: <%= ActiveRecord::FixtureSet.identify(:omu) %>
+  ancestry: "\
+    <%= ActiveRecord::FixtureSet.identify(:omu) %>/\
+    <%=ActiveRecord::FixtureSet.identify(:muhendislik_fakultesi) %>\
+  "
+
+bilgisayar_muhendisligi_programı:
+  name: Bilgisayar Mühendisliği Pr.
+  yoksis_id: 168861
+  duration: 4
+  district: atakum
+  unit_status: active
+  unit_instruction_language: turkish
+  unit_instruction_type: normal_education
+  unit_type: program
+  osym_id: 108210665
+  ancestry: "\
+    <%= ActiveRecord::FixtureSet.identify(:omu) %>/\
+    <%= ActiveRecord::FixtureSet.identify(:muhendislik_fakultesi) %>/\
+    <%= ActiveRecord::FixtureSet.identify(:bilgisayar_muhendisligi) %>\
+  "
+
+matematik_ve_fen_bilimleri_egitimi_bolumu:
+  name: Matematik Ve Fen Bilimleri Eğitimi Bölümü
+  yoksis_id: 298694
+  duration: 4
+  district: atakum
+  unit_status: active
+  unit_instruction_language: turkish
+  unit_instruction_type: normal_education
+  unit_type: department
+  ancestry: "\
+    <%= ActiveRecord::FixtureSet.identify(:omu) %>/\
+    <%= ActiveRecord::FixtureSet.identify(:egitim_fakultesi) %>\
+  "
 
 fen_bilgisi_ogretmenligi_programi:
   name: Fen Bilgisi Öğretmenliği Pr.
@@ -111,6 +159,57 @@ fen_bilgisi_ogretmenligi_programi:
   unit_instruction_type: normal_education
   unit_type: program
   osym_id: 108210065
+  ancestry: "\
+    <%= ActiveRecord::FixtureSet.identify(:omu) %>/\
+    <%= ActiveRecord::FixtureSet.identify(:egitim_fakultesi) %>/\
+    <%= ActiveRecord::FixtureSet.identify(:matematik_ve_fen_bilimleri_egitimi_bolumu) %>\
+  "
+
+matematik_ogretmenligi_programi:
+  name: Matematik Öğretmenliği Pr.
+  yoksis_id: 168671
+  duration: 4
+  district: atakum
+  unit_status: active
+  unit_instruction_language: turkish
+  unit_instruction_type: normal_education
+  unit_type: program
+  osym_id: 108210135
+  ancestry: "\
+    <%= ActiveRecord::FixtureSet.identify(:omu) %>/\
+    <%= ActiveRecord::FixtureSet.identify(:egitim_fakultesi) %>/\
+    <%= ActiveRecord::FixtureSet.identify(:matematik_ve_fen_bilimleri_egitimi_bolumu) %>\
+  "
+
+ilkogretim_matematik_ogretmenligi:
+  name: İlköğretim Matematik Öğretmenliği Pr.
+  yoksis_id: 168663
+  duration: 4
+  district: atakum
+  unit_status: active
+  unit_instruction_language: turkish
+  unit_instruction_type: normal_education
+  unit_type: program
+  osym_id: 108210092
+  ancestry: "\
+    <%= ActiveRecord::FixtureSet.identify(:omu) %>/\
+    <%= ActiveRecord::FixtureSet.identify(:egitim_fakultesi) %>/\
+    <%= ActiveRecord::FixtureSet.identify(:matematik_ve_fen_bilimleri_egitimi_bolumu) %>\
+  "
+
+bote_bolumu:
+  name: Bilgisayar Ve Öğretim Teknolojileri Eğitimi Bölümü
+  yoksis_id: 122154
+  duration: 4
+  district: atakum
+  unit_status: active
+  unit_instruction_language: turkish
+  unit_instruction_type: normal_education
+  unit_type: department
+  ancestry: "\
+    <%= ActiveRecord::FixtureSet.identify(:omu) %>/\
+    <%= ActiveRecord::FixtureSet.identify(:egitim_fakultesi) %>/\
+  "
 
 bote_anabilim_dali:
   name: Bilgisayar Öğretim Ve Teknolojisi Eğitimi Anabilim Dalı
@@ -121,6 +220,11 @@ bote_anabilim_dali:
   unit_instruction_type: turkish
   unit_instruction_type: normal_education
   unit_type: major
+  ancestry: "\
+    <%= ActiveRecord::FixtureSet.identify(:omu) %>/\
+    <%= ActiveRecord::FixtureSet.identify(:egitim_fakultesi) %>/\
+    <%= ActiveRecord::FixtureSet.identify(:bote_bolumu) %>\
+  "
 
 egitim_bilimleri_enstitusu:
   name: Eğitim Bilimleri Enstitüsü
@@ -131,6 +235,7 @@ egitim_bilimleri_enstitusu:
   unit_instruction_type: turkish
   unit_instruction_type: normal_education
   unit_type: institute
+  ancestry: <%= ActiveRecord::FixtureSet.identify(:omu) %>
 
 alman_dili_egitimi_dr:
   name: Alman Dili Eğitimi (dr)
@@ -141,7 +246,10 @@ alman_dili_egitimi_dr:
   unit_instruction_language: turkish
   unit_instruction_type: normal_education
   unit_type: program
-  ancestry: <%= ActiveRecord::FixtureSet.identify(:egitim_bilimleri_enstitusu) %>
+  ancestry: "\
+    <%= ActiveRecord::FixtureSet.identify(:omu) %>/\
+    <%= ActiveRecord::FixtureSet.identify(:egitim_bilimleri_enstitusu) %>\
+  "
 
 veteriner_fakultesi:
   name: Veteriner Fakültesi
@@ -151,6 +259,7 @@ veteriner_fakultesi:
   unit_instruction_language: turkish
   unit_instruction_type: normal_education
   unit_type: faculty
+  ancestry: <%= ActiveRecord::FixtureSet.identify(:omu) %>
 
 unit_to_delete:
   name: Unit o Delete

@@ -155,9 +155,14 @@ ActiveRecord::Schema.define(version: 2018_12_10_221451) do
     t.bigint "course_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "unit_id"
+    t.bigint "coordinator_id"
+    t.integer "groups_count", default: 0
     t.index ["academic_term_id"], name: "index_available_courses_on_academic_term_id"
+    t.index ["coordinator_id"], name: "index_available_courses_on_coordinator_id"
     t.index ["course_id"], name: "index_available_courses_on_course_id"
     t.index ["curriculum_id"], name: "index_available_courses_on_curriculum_id"
+    t.index ["unit_id"], name: "index_available_courses_on_unit_id"
   end
 
   create_table "calendar_events", force: :cascade do |t|
@@ -627,6 +632,11 @@ ActiveRecord::Schema.define(version: 2018_12_10_221451) do
     t.index ["user_id"], name: "index_students_on_user_id"
   end
 
+  create_table "terms", force: :cascade do |t|
+    t.string "name", limit: 255, null: false
+    t.string "identifier", limit: 50, null: false
+  end
+
   create_table "titles", force: :cascade do |t|
     t.string "name"
     t.string "code"
@@ -738,6 +748,8 @@ ActiveRecord::Schema.define(version: 2018_12_10_221451) do
   add_foreign_key "available_courses", "courses"
   add_foreign_key "available_courses", "curriculums"
   add_foreign_key "calendar_events", "academic_calendars"
+  add_foreign_key "available_courses", "employees", column: "coordinator_id"
+  add_foreign_key "available_courses", "units"
   add_foreign_key "calendar_events", "academic_terms"
   add_foreign_key "calendar_events", "calendar_titles"
   add_foreign_key "calendar_events", "calendar_types"

@@ -3,5 +3,13 @@ one:
   unit: fen_bilgisi_ogretmenligi_programi
 
 two:
-  curriculum: one
-  unit: bilgisayar_muhendisligi
+  curriculum: two
+  unit: matematik_ogretmenligi_programi
+
+three:
+  curriculum: two
+  unit: ilkogretim_matematik_ogretmenligi
+
+four:
+  curriculum: bilgisayar_muhendisligi_mufredati
+  unit: bilgisayar_muhendisligi_programı

@@ -1,0 +1,9 @@
+fall:
+  name: Güz
+  identifier: fall
+spring:
+  name: Bahar
+  identifier: spring
+summer:
+  name: Yaz
+  identifier: summer

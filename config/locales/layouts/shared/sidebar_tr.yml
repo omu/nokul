@@ -16,6 +16,7 @@ tr:
         course_types: Ders Türleri
         course_unit_groups: Ders Grupları
         courses: Dersler
+        available_courses: Açılan Dersler
         curriculums: Müfredatlar
         definitions: Tanımlar
         documents: Gerekli Belgeler

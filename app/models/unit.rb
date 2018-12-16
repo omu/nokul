@@ -38,11 +38,15 @@ class Unit < ApplicationRecord
   has_many :decisions, through: :meeting_agendas, class_name: 'CommitteeDecision'
   has_many :courses, dependent: :nullify
   has_many :course_groups, dependent: :nullify
+  has_many :curriculum_programs, dependent: :destroy
+  has_many :curriculums, through: :curriculum_programs
+  has_many :managed_curriculums, dependent: :destroy, class_name: 'Curriculum'
   has_many :registration_documents, dependent: :destroy
   has_many :prospective_students, dependent: :destroy
   has_many :calendar_units, dependent: :destroy
   has_many :academic_calendars, through: :calendar_units
   has_many :calendar_events, through: :academic_calendars
+  has_many :available_courses, dependent: :destroy
 
   # validations
   validates :name, presence: true, uniqueness: { scope: %i[ancestry unit_status] }, length: { maximum: 255 }
@@ -82,5 +86,10 @@ class Unit < ApplicationRecord
   # custom methods
   def subprograms
     descendants.programs
+  end
+
+  def subtree_employees
+    Employee.includes(:user, :title).joins(:units, user: :identities)
+            .where(units: { id: subtree.active.ids })
   end
 end

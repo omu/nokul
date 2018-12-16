@@ -26,6 +26,11 @@
               <%= fa_icon('cubes', text: t('.course_groups'), class: 'nav-icon') %>
             <% end %>
           </li>
+          <li class="nav-item">
+            <%= link_to available_courses_path, class: 'nav-link' do %>
+              <%= fa_icon('book', text: t('.available_courses'), class: 'nav-icon') %>
+            <% end %>
+          </li>
         </ul>
       </li>
       <li class="nav-item nav-dropdown">
