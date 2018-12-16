@@ -29,8 +29,7 @@ class Course < ApplicationRecord
   validates :theoric, numericality: { greater_than_or_equal_to: 0 }
   validates :practice, numericality: { greater_than_or_equal_to: 0 }
   validates :laboratory, numericality: { greater_than_or_equal_to: 0 }
-  validates :credit, numericality: { greater_than_or_equal_to: ->(course) { course.course_type.try(:min_credit).to_i }
-  }
+  validates :credit, numericality: { greater_than_or_equal_to: ->(course) { course.course_type.try(:min_credit).to_i } }
   validates :program_type, inclusion: { in: program_types.keys }
   validates :status, inclusion: { in: statuses.keys }
 

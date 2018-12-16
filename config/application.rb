@@ -34,6 +34,9 @@ module Nokul
     # image-processor
     config.active_storage.variant_processor = :vips
 
+    # schema dump sformat
+    config.active_record.schema_format = :sql
+
     # tenant configuration
     config.active_tenant = Tenant.active
     config.tenant = Tenant.configuration
