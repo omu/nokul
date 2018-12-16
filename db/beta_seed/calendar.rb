@@ -1,10 +1,12 @@
 # frozen_string_literal: true
 
 event_titles = YAML.load_file(Tenant::Path.db.join('event_titles.yml'))
+progress_bar = ProgressBar.spawn('CalendarTitle', event_titles.count)
 event_titles.each do |category, events|
   events.each do |event|
     CalendarTitle.create(name: event['title'], identifier: "#{category}_#{event['name']}")
   end
+  progress_bar.increment
 end
 
 CalendarType.create(name: 'Lisans - Önlisans')
@@ -18,7 +20,7 @@ CalendarType.create(name: 'Yaz Dönemi')
 CalendarType.create(name: 'Öğrenci')
 
 CalendarTitle.find_each do |title|
-  CalendarTitleType.create(type: CalendarType.first, title: title, status: :active)
+  CalendarTitleType.create(type: CalendarType.first, title: title, active: true)
 end
 
 AcademicCalendar.create(

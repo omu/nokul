@@ -123,7 +123,7 @@ ActiveRecord::Schema.define(version: 2018_12_10_221451) do
     t.datetime "last_update"
     t.integer "status"
     t.integer "type"
-    t.float "incentive_point"
+    t.float "incentive_point", default: 0.0
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -153,11 +153,11 @@ ActiveRecord::Schema.define(version: 2018_12_10_221451) do
     t.bigint "academic_term_id", null: false
     t.bigint "curriculum_id", null: false
     t.bigint "course_id", null: false
+    t.bigint "unit_id", null: false
+    t.bigint "coordinator_id", null: false
+    t.integer "groups_count", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "unit_id"
-    t.bigint "coordinator_id"
-    t.integer "groups_count", default: 0
     t.index ["academic_term_id"], name: "index_available_courses_on_academic_term_id"
     t.index ["coordinator_id"], name: "index_available_courses_on_coordinator_id"
     t.index ["course_id"], name: "index_available_courses_on_course_id"
@@ -220,7 +220,7 @@ ActiveRecord::Schema.define(version: 2018_12_10_221451) do
 
   create_table "certifications", force: :cascade do |t|
     t.integer "yoksis_id"
-    t.integer "type", default: 1
+    t.integer "type"
     t.string "name"
     t.string "content"
     t.string "location"
@@ -232,7 +232,7 @@ ActiveRecord::Schema.define(version: 2018_12_10_221451) do
     t.integer "number_of_authors"
     t.string "city_and_country"
     t.datetime "last_update"
-    t.float "incentive_point"
+    t.float "incentive_point", default: 0.0
     t.integer "status"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
@@ -285,7 +285,7 @@ ActiveRecord::Schema.define(version: 2018_12_10_221451) do
 
   create_table "course_groups", force: :cascade do |t|
     t.string "name"
-    t.integer "total_ects_condition"
+    t.integer "total_ects_condition", default: 0
     t.bigint "unit_id", null: false
     t.bigint "course_group_type_id", null: false
     t.datetime "created_at", null: false
@@ -338,7 +338,7 @@ ActiveRecord::Schema.define(version: 2018_12_10_221451) do
     t.decimal "ects", precision: 5, scale: 2, default: "0.0"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "curriculum_course_group_id"
+    t.bigint "curriculum_course_group_id", null: false
     t.index ["course_id"], name: "index_curriculum_courses_on_course_id"
     t.index ["curriculum_course_group_id"], name: "index_curriculum_courses_on_curriculum_course_group_id"
     t.index ["curriculum_semester_id"], name: "index_curriculum_courses_on_curriculum_semester_id"
@@ -490,7 +490,7 @@ ActiveRecord::Schema.define(version: 2018_12_10_221451) do
     t.integer "scope"
     t.string "title"
     t.integer "unit_id"
-    t.float "incentive_point"
+    t.float "incentive_point", default: 0.0
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -633,8 +633,10 @@ ActiveRecord::Schema.define(version: 2018_12_10_221451) do
   end
 
   create_table "terms", force: :cascade do |t|
-    t.string "name", limit: 255, null: false
-    t.string "identifier", limit: 50, null: false
+    t.string "name"
+    t.string "identifier"
+    t.index ["identifier"], name: "terms_identifier_unique", unique: true
+    t.index ["name"], name: "terms_name_unique", unique: true
   end
 
   create_table "titles", force: :cascade do |t|
@@ -747,9 +749,9 @@ ActiveRecord::Schema.define(version: 2018_12_10_221451) do
   add_foreign_key "available_courses", "academic_terms"
   add_foreign_key "available_courses", "courses"
   add_foreign_key "available_courses", "curriculums"
-  add_foreign_key "calendar_events", "academic_calendars"
   add_foreign_key "available_courses", "employees", column: "coordinator_id"
   add_foreign_key "available_courses", "units"
+  add_foreign_key "calendar_events", "academic_calendars"
   add_foreign_key "calendar_events", "academic_terms"
   add_foreign_key "calendar_events", "calendar_titles"
   add_foreign_key "calendar_events", "calendar_types"
