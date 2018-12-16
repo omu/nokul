@@ -9,12 +9,10 @@ class CreateCalendarTitleTypes < ActiveRecord::Migration[5.2]
       t.references :title,
                    null: false,
                    foreign_key: { to_table: :calendar_titles }
-      t.integer :status, default: 1
+      t.boolean :active, default: true
       t.timestamps
     end
 
-    add_null_constraint :calendar_title_types, :status
-    add_numericality_constraint :calendar_title_types, :status,
-                                greater_than_or_equal_to: 0
+    add_null_constraint :calendar_title_types, :active
   end
 end

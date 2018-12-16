@@ -12,7 +12,7 @@ class Address < ApplicationRecord
 
   # validations
   validates :type, presence: true, uniqueness: { scope: :user }, inclusion: { in: types.keys }
-  validates :phone_number, allow_blank: true, length: { maximum: 255 }
+  validates :phone_number, allow_nil: true, length: { maximum: 255 }
   validates :full_address, presence: true, length: { maximum: 255 }
   validates_with AddressAndIdentityValidator, on: :create
 

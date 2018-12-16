@@ -9,13 +9,6 @@ class Article < ApplicationRecord
   enum access_type: { printed: 1, electronic: 2, printed_and_electronic: 3 }
   enum status: { deleted: 0, active: 1 }
 
-  # relations
-  belongs_to :user, counter_cache: true
-
-  # validations
-  validates :yoksis_id, presence: true, uniqueness: { scope: %i[user_id status] }
-  validates :title, presence: true
-
   enum index: {
     ssci: 5,
     sci_expanded: 6,
@@ -53,6 +46,46 @@ class Article < ApplicationRecord
     review_article: 10,
     short_article: 11
   }
+
+  # relations
+  belongs_to :user, counter_cache: true
+
+  # validations
+  validates :yoksis_id, presence: true, uniqueness: { scope: %i[user_id status] },
+                        numericality: { only_integer: true, greater_than: 0 }
+  validates :title, presence: true, length: { maximum: 65535 }
+  validates :authors, presence: true, length: { maximum: 65535 }
+  validates :city, allow_nil: true, length: { maximum: 255 }
+  validates :journal, allow_nil: true, length: { maximum: 255 }
+  validates :language_of_publication, allow_nil: true, length: { maximum: 255 }
+  validates :volume, allow_nil: true, length: { maximum: 255 }
+  validates :issue, allow_nil: true, length: { maximum: 255 }
+  validates :doi, allow_nil: true, length: { maximum: 255 }
+  validates :issn, allow_nil: true, length: { maximum: 255 }
+  validates :access_link, allow_nil: true, length: { maximum: 65535 }
+  validates :discipline, allow_nil: true, length: { maximum: 65535 }
+  validates :keyword, allow_nil: true, length: { maximum: 255 }
+  validates :sponsored_by, allow_nil: true, length: { maximum: 255 }
+  validates :number_of_authors, allow_nil: true, numericality: { only_integer: true, greater_than: 0 }
+  validates :type, allow_nil: true, inclusion: { in: types.keys }
+  validates :scope, allow_nil: true, inclusion: { in: scopes.keys }
+  validates :status, allow_nil: true, inclusion: { in: statuses.keys }
+  validates :review, allow_nil: true, inclusion: { in: reviews.keys }
+  validates :index, allow_nil: true, inclusion: { in: indices.keys }
+  validates :country, allow_nil: true, numericality: { only_integer: true, greater_than: 0 }
+  validates :month, allow_nil: true,
+                    numericality: { only_integer: true, greater_than: 0, less_than_or_equal_to: 12 }
+  validates :year, allow_nil: true,
+                   numericality: { only_integer: true, greater_than_or_equal_to: 1950, less_than_or_equal_to: 2050 }
+  validates :first_page, allow_nil: true,
+                         numericality: { only_integer: true, greater_than: 0, less_than_or_equal_to: 15_000 }
+  validates :last_page, allow_nil: true,
+                        numericality: { only_integer: true, greater_than: 0, less_than_or_equal_to: 15_000 }
+  validates :access_type, allow_nil: true, inclusion: { in: access_types.keys }
+  validates :special_issue, allow_nil: true, numericality: { only_integer: true, greater_than: 0 }
+  validates :special_issue_name, allow_nil: true, length: { maximum: 255 }
+  validates :author_id, allow_nil: true, numericality: { only_integer: true, greater_than: 0 }
+  validates :incentive_point, allow_nil: true, numericality: { greater_than_or_equal_to: 0 }
 
   def self.unique_count
     active.group_by(&:yoksis_id).count

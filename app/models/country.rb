@@ -22,9 +22,11 @@ class Country < ApplicationRecord
   validates :name, presence: true, uniqueness: true, length: { maximum: 255 }
   validates :alpha_2_code, presence: true, uniqueness: true, length: { is: 2 }
   validates :alpha_3_code, presence: true, uniqueness: true, length: { is: 3 }
-  validates :numeric_code, presence: true, uniqueness: true, length: { is: 3 }, numericality: { only_integer: true }
-  validates :mernis_code, allow_blank: true, uniqueness: true, length: { is: 4 }, numericality: { only_integer: true }
-  validates :yoksis_code, allow_blank: true, numericality: { only_integer: true, greater_than_or_equal_to: 1 }
+  validates :numeric_code, presence: true, uniqueness: true, length: { is: 3 },
+                           numericality: { only_integer: true, greater_than: 0 }
+  validates :mernis_code, allow_nil: true, uniqueness: true, length: { is: 4 },
+                          numericality: { only_integer: true, greater_than: 0 }
+  validates :yoksis_code, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 1 }
 
   # callbacks
   before_save do

@@ -18,7 +18,7 @@ class CreateProjects < ActiveRecord::Migration[5.2]
       t.integer :scope
       t.string :title
       t.integer :unit_id # TODO: Migrate to reference maybe?
-      t.float :incentive_point
+      t.float :incentive_point, default: 0
       t.references :user,
                    null: false,
                    foreign_key: true
@@ -28,8 +28,8 @@ class CreateProjects < ActiveRecord::Migration[5.2]
     add_null_constraint :projects, :yoksis_id
     add_presence_constraint :projects, :name
 
-    add_length_constraint :projects, :name, less_than_or_equal_to: 65535
-    add_length_constraint :projects, :subject, less_than_or_equal_to: 65535
+    add_length_constraint :projects, :name, less_than_or_equal_to: 65_535
+    add_length_constraint :projects, :subject, less_than_or_equal_to: 65_535
     add_length_constraint :projects, :budget, less_than_or_equal_to: 255
     add_length_constraint :projects, :duty, less_than_or_equal_to: 255
     add_length_constraint :projects, :type, less_than_or_equal_to: 255
@@ -37,14 +37,14 @@ class CreateProjects < ActiveRecord::Migration[5.2]
     add_length_constraint :projects, :title, less_than_or_equal_to: 255
 
     add_numericality_constraint :projects, :yoksis_id,
-                                           greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :projects, :status,
-                                           greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :projects, :activity,
-                                           greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :projects, :scope,
-                                           greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :projects, :incentive_point,
-                                           greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
   end
 end
