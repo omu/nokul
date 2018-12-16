@@ -6,5 +6,5 @@ class Document < ApplicationRecord
 
   # validations
   validates :name, presence: true, uniqueness: true, length: { maximum: 255 }
-  validates :statement, allow_nil: true, length: { maximum: 255 }
+  validates :statement, length: { maximum: 255 }
 end

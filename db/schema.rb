@@ -154,7 +154,7 @@ ActiveRecord::Schema.define(version: 2018_12_10_221451) do
     t.bigint "curriculum_id", null: false
     t.bigint "course_id", null: false
     t.bigint "unit_id", null: false
-    t.bigint "coordinator_id", null: false
+    t.bigint "coordinator_id"
     t.integer "groups_count", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -338,7 +338,7 @@ ActiveRecord::Schema.define(version: 2018_12_10_221451) do
     t.decimal "ects", precision: 5, scale: 2, default: "0.0"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "curriculum_course_group_id", null: false
+    t.bigint "curriculum_course_group_id"
     t.index ["course_id"], name: "index_curriculum_courses_on_course_id"
     t.index ["curriculum_course_group_id"], name: "index_curriculum_courses_on_curriculum_course_group_id"
     t.index ["curriculum_semester_id"], name: "index_curriculum_courses_on_curriculum_semester_id"

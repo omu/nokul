@@ -37,7 +37,7 @@ AcademicCalendar.create(
   calendar_type: CalendarType.first,
   senate_decision_date: '12.04.2018',
   senate_decision_no: '2018/112',
-  description: ''
+  description: nil
 )
 CalendarEvent.create(
   academic_calendar: AcademicCalendar.first,

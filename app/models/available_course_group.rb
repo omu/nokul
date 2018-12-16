@@ -11,5 +11,5 @@ class AvailableCourseGroup < ApplicationRecord
 
   # validations
   validates :name, presence: true, uniqueness: { scope: :available_course }, length: { maximum: 255 }
-  validates :quota, numericality: { only_integer: true, greater_than_or_equal_to: 1 }, allow_nil: true
+  validates :quota, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 1 }
 end

@@ -15,5 +15,5 @@ class CourseType < ApplicationRecord
   # validations
   validates :name, presence: true, uniqueness: true, length: { maximum: 255 }
   validates :code, presence: true, uniqueness: true, length: { maximum: 255 }
-  validates :min_credit, presence: true, numericality: { greater_than_or_equal_to: 0 }
+  validates :min_credit, numericality: { greater_than_or_equal_to: 0 }
 end

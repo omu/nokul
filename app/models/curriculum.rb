@@ -41,9 +41,8 @@ class Curriculum < ApplicationRecord
 
   # validations
   validates :name, presence: true, uniqueness: { scope: :unit_id }, length: { maximum: 255 }
-  validates :programs, presence: true
   validates :semesters_count, numericality: { greater_than_or_equal_to: 0 }
-  validates :status, presence: true, inclusion: { in: statuses.keys }
+  validates :status, inclusion: { in: statuses.keys }
 
   # custom methods
   def build_semesters(number_of_semesters: 0, type: :periodic)

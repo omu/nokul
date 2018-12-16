@@ -9,10 +9,10 @@ class CommitteeMeeting < ApplicationRecord
   accepts_nested_attributes_for :meeting_agendas, allow_destroy: true
 
   # validations
-  validates :meeting_no, presence: true, uniqueness: { scope: %i[unit year] },
+  validates :meeting_no, uniqueness: { scope: %i[unit year] },
                          numericality: { only_integer: true, greater_than_or_equal_to: 1 }
   validates :meeting_date, presence: true
-  validates :year, presence: true, numericality: {
+  validates :year, numericality: {
     only_integer: true,
     greater_than_or_equal_to: 1950,
     less_than_or_equal_to: 2050

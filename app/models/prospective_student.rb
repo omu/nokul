@@ -30,15 +30,15 @@ class ProspectiveStudent < ApplicationRecord
   validates :id_number, presence: true, uniqueness: { scope: %i[unit_id exam_score] }, length: { is: 11 }
   validates :first_name, presence: true, length: { maximum: 255 }
   validates :last_name, presence: true, length: { maximum: 255 }
-  validates :fathers_name, allow_nil: true, length: { maximum: 255 }
-  validates :mothers_name, allow_nil: true, length: { maximum: 255 }
-  validates :gender, presence: true, inclusion: { in: genders.keys }
+  validates :fathers_name, length: { maximum: 255 }
+  validates :mothers_name, length: { maximum: 255 }
+  validates :gender, inclusion: { in: genders.keys }
   validates :nationality, allow_nil: true, inclusion: { in: nationalities.keys }
-  validates :place_of_birth, allow_nil: true, length: { maximum: 255 }
-  validates :registration_city, allow_nil: true, length: { maximum: 255 }
-  validates :registration_district, allow_nil: true, length: { maximum: 255 }
-  validates :high_school_code, allow_nil: true, length: { maximum: 255 }
-  validates :high_school_branch, allow_nil: true, length: { maximum: 255 }
+  validates :place_of_birth, length: { maximum: 255 }
+  validates :registration_city, length: { maximum: 255 }
+  validates :registration_district, length: { maximum: 255 }
+  validates :high_school_code, length: { maximum: 255 }
+  validates :high_school_branch, length: { maximum: 255 }
   validates :state_of_education, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :high_school_graduation_year, allow_nil: true,
                                           numericality: {
@@ -47,22 +47,22 @@ class ProspectiveStudent < ApplicationRecord
                                             less_than_or_equal_to: 2050
                                           }
   validates :placement_type, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
-  validates :exam_score, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
-  validates :address, allow_nil: true, length: { maximum: 255 }
-  validates :home_phone, allow_nil: true, length: { maximum: 255 }
-  validates :mobile_phone, allow_nil: true, length: { maximum: 255 }
-  validates :email, allow_nil: true, length: { maximum: 255 }
-  validates :top_student, presence: true, inclusion: { in: [true, false] }
-  validates :placement_score, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :exam_score, allow_nil: true, numericality: { greater_than_or_equal_to: 0 }
+  validates :address, length: { maximum: 255 }
+  validates :home_phone, length: { maximum: 255 }
+  validates :mobile_phone, length: { maximum: 255 }
+  validates :email, length: { maximum: 255 }
+  validates :top_student, inclusion: { in: [true, false] }
+  validates :placement_score, allow_nil: true, numericality: { greater_than_or_equal_to: 0 }
   validates :placement_rank, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
-  validates :placement_order, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
-  validates :placement_score_type, allow_nil: true, length: { maximum: 255 }
+  validates :preference_order, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :placement_score_type, length: { maximum: 255 }
   validates :additional_score, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
-  validates :meb_status, presence: true, inclusion: { in: [true, false] }
-  validates :military_status, presence: true, inclusion: { in: [true, false] }
-  validates :obs_status, presence: true, inclusion: { in: [true, false] }
-  validates :registered, presence: true, inclusion: { in: [true, false] }
-  validates :obs_registered_program, allow_nil: true, length: { maximum: 255 }
+  validates :meb_status, inclusion: { in: [true, false] }
+  validates :military_status, inclusion: { in: [true, false] }
+  validates :obs_status, inclusion: { in: [true, false] }
+  validates :registered, inclusion: { in: [true, false] }
+  validates :obs_registered_program, length: { maximum: 255 }
 
   # callbacks
   before_create do
