@@ -80,25 +80,25 @@ class CreateProspectiveStudents < ActiveRecord::Migration[5.2]
     add_length_constraint :prospective_students, :obs_registered_program, less_than_or_equal_to: 255
 
     add_numericality_constraint :prospective_students, :gender,
-                                                    greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :prospective_students, :nationality,
-                                                    greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :prospective_students, :state_of_education,
-                                                    greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :prospective_students, :high_school_graduation_year,
-                                                       greater_than_or_equal_to: 1910,
-                                                       less_than_or_equal_to: 2050
+                                greater_than_or_equal_to: 1910,
+                                less_than_or_equal_to: 2050
     add_numericality_constraint :prospective_students, :placement_type,
-                                                       greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :prospective_students, :placement_rank,
-                                                       greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :prospective_students, :preference_order,
-                                                       greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :prospective_students, :additional_score,
-                                                       greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :prospective_students, :exam_score,
-                                                       greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :prospective_students, :placement_score,
-                                                       greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
   end
 end

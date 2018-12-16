@@ -62,13 +62,13 @@ class CreateUsers < ActiveRecord::Migration[5.2]
     add_length_constraint :users, :preferred_language, equal_to: 2
 
     add_numericality_constraint :users, :sign_in_count,
-                                        greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :users, :failed_attempts,
-                                        greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :users, :articles_count,
-                                        greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :users, :projects_count,
-                                        greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
 
     add_unique_constraint :users, :email
     add_unique_constraint :users, :id_number

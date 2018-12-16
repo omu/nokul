@@ -22,6 +22,6 @@ class CreateAcademicCalendars < ActiveRecord::Migration[5.2]
 
     add_length_constraint :academic_calendars, :name, less_than_or_equal_to: 255
     add_length_constraint :academic_calendars, :senate_decision_no, less_than_or_equal_to: 255
-    add_length_constraint :academic_calendars, :description, less_than_or_equal_to: 65535
+    add_length_constraint :academic_calendars, :description, less_than_or_equal_to: 65_535
   end
 end

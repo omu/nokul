@@ -17,6 +17,6 @@ class CreateCourseTypes < ActiveRecord::Migration[5.2]
     add_length_constraint :course_types, :code, less_than_or_equal_to: 255
 
     add_numericality_constraint :course_types, :min_credit,
-                                               greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
   end
 end

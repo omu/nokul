@@ -19,7 +19,7 @@ class CreateCourseGroups < ActiveRecord::Migration[5.2]
     add_length_constraint :course_groups, :name, less_than_or_equal_to: 255
 
     add_numericality_constraint :course_groups, :total_ects_condition,
-                                                greater_than_or_equal_to: 0,
-                                                less_than_or_equal_to: 300
+                                greater_than_or_equal_to: 0,
+                                less_than_or_equal_to: 300
   end
 end

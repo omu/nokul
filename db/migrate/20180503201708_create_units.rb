@@ -35,15 +35,15 @@ class CreateUnits < ActiveRecord::Migration[5.1]
     add_length_constraint :units, :names_depth_cache, less_than_or_equal_to: 255
 
     add_numericality_constraint :units, :yoksis_id,
-                                        greater_than_or_equal_to: 1
+                                greater_than_or_equal_to: 1
     add_numericality_constraint :units, :detsis_id,
-                                        greater_than_or_equal_to: 1
+                                greater_than_or_equal_to: 1
     add_numericality_constraint :units, :osym_id,
-                                        greater_than_or_equal_to: 1
+                                greater_than_or_equal_to: 1
     add_numericality_constraint :units, :foet_code,
-                                        greater_than_or_equal_to: 1
+                                greater_than_or_equal_to: 1
     add_numericality_constraint :units, :duration,
-                                        greater_than_or_equal_to: 1,
-                                        less_than_or_equal_to: 8
+                                greater_than_or_equal_to: 1,
+                                less_than_or_equal_to: 8
   end
 end

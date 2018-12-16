@@ -11,7 +11,7 @@ class CreateStudentPunishmentTypes < ActiveRecord::Migration[5.2]
     add_null_constraint :student_punishment_types, :code
 
     add_length_constraint :student_punishment_types, :name,
-                                                     less_than_or_equal_to: 255
+                          less_than_or_equal_to: 255
 
     add_numericality_constraint :student_punishment_types, :code,
                                 greater_than_or_equal_to: 0

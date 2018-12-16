@@ -17,7 +17,7 @@ class CreateCommitteeDecisions < ActiveRecord::Migration[5.2]
     add_null_constraint :committee_decisions, :year
 
     add_length_constraint :committee_decisions, :decision_no, less_than_or_equal_to: 255
-    add_length_constraint :committee_decisions, :description, less_than_or_equal_to: 65535
+    add_length_constraint :committee_decisions, :description, less_than_or_equal_to: 65_535
 
     add_numericality_constraint :committee_decisions, :year,
                                 greater_than_or_equal_to: 1960,

@@ -10,7 +10,7 @@ class CreateActiveStorageTables < ActiveRecord::Migration[5.2]
       t.bigint   :byte_size
       t.string   :checksum
       t.datetime :created_at
-      t.index [ :key ], unique: true
+      t.index [:key], unique: true
     end
 
     create_table :active_storage_attachments do |t|
@@ -18,7 +18,7 @@ class CreateActiveStorageTables < ActiveRecord::Migration[5.2]
       t.references :record, polymorphic: true, index: false
       t.references :blob
       t.datetime :created_at
-      t.index [ :record_type, :record_id, :name, :blob_id ], name: "index_active_storage_attachments_uniqueness", unique: true
+      t.index %i[record_type record_id name blob_id], name: 'index_active_storage_attachments_uniqueness', unique: true
     end
 
     add_presence_constraint :active_storage_blobs, :key

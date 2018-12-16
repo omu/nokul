@@ -53,8 +53,8 @@ class Article < ApplicationRecord
   # validations
   validates :yoksis_id, presence: true, uniqueness: { scope: %i[user_id status] },
                         numericality: { only_integer: true, greater_than: 0 }
-  validates :title, presence: true, length: { maximum: 65535 }
-  validates :authors, presence: true, length: { maximum: 65535 }
+  validates :title, presence: true, length: { maximum: 65_535 }
+  validates :authors, presence: true, length: { maximum: 65_535 }
   validates :city, allow_nil: true, length: { maximum: 255 }
   validates :journal, allow_nil: true, length: { maximum: 255 }
   validates :language_of_publication, allow_nil: true, length: { maximum: 255 }
@@ -62,8 +62,8 @@ class Article < ApplicationRecord
   validates :issue, allow_nil: true, length: { maximum: 255 }
   validates :doi, allow_nil: true, length: { maximum: 255 }
   validates :issn, allow_nil: true, length: { maximum: 255 }
-  validates :access_link, allow_nil: true, length: { maximum: 65535 }
-  validates :discipline, allow_nil: true, length: { maximum: 65535 }
+  validates :access_link, allow_nil: true, length: { maximum: 65_535 }
+  validates :discipline, allow_nil: true, length: { maximum: 65_535 }
   validates :keyword, allow_nil: true, length: { maximum: 255 }
   validates :sponsored_by, allow_nil: true, length: { maximum: 255 }
   validates :number_of_authors, allow_nil: true, numericality: { only_integer: true, greater_than: 0 }

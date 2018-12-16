@@ -11,7 +11,7 @@ class CreateUnitStatuses < ActiveRecord::Migration[5.2]
     add_null_constraint :unit_statuses, :code
 
     add_length_constraint :unit_statuses, :name,
-                                          less_than_or_equal_to: 255
+                          less_than_or_equal_to: 255
     add_numericality_constraint :unit_statuses, :code,
                                 greater_than_or_equal_to: 0
 
