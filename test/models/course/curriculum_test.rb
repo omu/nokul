@@ -54,7 +54,7 @@ class CurriculumTest < ActiveSupport::TestCase
     assert_not_empty fake.errors[:name]
 
     fake.unit_id = units(:cbu).id
-    assert fake.valid?
+    fake.valid?
     assert_empty fake.errors[:name]
   end
 

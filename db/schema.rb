@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_04_074428) do
+ActiveRecord::Schema.define(version: 2018_12_10_120434) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -610,6 +610,11 @@ ActiveRecord::Schema.define(version: 2018_12_04_074428) do
     t.boolean "permanently_registered", default: false, null: false
     t.index ["unit_id"], name: "index_students_on_unit_id"
     t.index ["user_id"], name: "index_students_on_user_id"
+  end
+
+  create_table "terms", force: :cascade do |t|
+    t.string "name", limit: 255, null: false
+    t.string "identifier", limit: 50, null: false
   end
 
   create_table "titles", force: :cascade do |t|

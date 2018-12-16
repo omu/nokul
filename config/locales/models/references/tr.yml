@@ -18,6 +18,9 @@ tr:
       language: &language_attributes
         iso: ISO Kodu
         name: Ad
+      term: &term_attributes
+        name: Dönem Adı
+        identifier: Belirteç
   helpers:
     submit:
       city:
@@ -32,6 +35,9 @@ tr:
       language:
         create: Dil Oluştur
         update: Dil Güncelle
+      term:
+        create: Dönem Oluştur
+        update: Dönem Güncelle
   references:
     cities:
       create:
@@ -100,6 +106,7 @@ tr:
         student_management: Öğrenci Yönetimi
         student_punishment_types: Ceza Türleri
         student_studentship_statuses: Öğrencilik Hakları
+        terms: Dönemler
         unit_instruction_languages: Öğrenim Dilleri
         unit_instruction_types: Öğrenim Türleri
         unit_statuses: Aktiflik Durumları
@@ -123,3 +130,19 @@ tr:
         form_title: Dil Oluştur
       update:
         success: Dil başarıyla güncellendi.
+    terms:
+      create:
+        success: Dönem başarıyla oluşturuldu.
+      destroy:
+        success: Dönem başarıyla silindi!
+        warning: Dönem silinemedi.
+      edit:
+        form_title: Dönem Güncelle
+      index:
+        <<: *term_attributes
+        card_header: Dönemler
+        new_term_link: Yeni Dönem Oluştur
+      new:
+        form_title: Dönem Oluştur
+      update:
+        success: Dönem başarıyla güncellendi.

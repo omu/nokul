@@ -1,1 +1,5 @@
-<%= render 'form', semester_course: @semester_course, form_title: t('.form_title') %>
+<div class="alert alert-light">
+  <%= link_to_back(:back) %>
+</div>
+
+<%= render 'form', curriculum_course_group: @curriculum_course_group, form_title: t('.form_title') %>
