@@ -4,7 +4,7 @@ class CreateCertifications < ActiveRecord::Migration[5.2]
   def change
     create_table :certifications do |t|
       t.integer :yoksis_id
-      t.integer :type, default: 1
+      t.integer :type
       t.string :name
       t.string :content
       t.string :location
@@ -16,7 +16,7 @@ class CreateCertifications < ActiveRecord::Migration[5.2]
       t.integer :number_of_authors
       t.string :city_and_country
       t.datetime :last_update
-      t.float :incentive_point
+      t.float :incentive_point, default: 0
       t.integer :status
       t.references :user,
                    null: false,

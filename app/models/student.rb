@@ -9,6 +9,7 @@ class Student < ApplicationRecord
 
   # validations
   validates :unit_id, uniqueness: { scope: %i[user] }
+  # TODO: Will set equal_to: N, when we decide about student numbers
   validates :student_number, presence: true, uniqueness: true, length: { maximum: 255 }
   validates :permanently_registered, inclusion: { in: [true, false] }
 

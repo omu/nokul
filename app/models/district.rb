@@ -18,7 +18,7 @@ class District < ApplicationRecord
 
   # validations
   validates :name, presence: true, uniqueness: { scope: %i[city_id] }, length: { maximum: 255 }
-  validates :mernis_code, allow_blank: true, uniqueness: true, numericality: { only_integer: true }, length: { is: 4 }
+  validates :mernis_code, allow_nil: true, uniqueness: true, numericality: { only_integer: true }, length: { is: 4 }
   validates :active, inclusion: { in: [true, false] }
 
   # callbacks

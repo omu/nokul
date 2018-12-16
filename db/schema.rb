@@ -117,7 +117,7 @@ ActiveRecord::Schema.define(version: 2018_12_10_221451) do
     t.string "discipline"
     t.string "keyword"
     t.integer "special_issue"
-    t.integer "special_issue_name"
+    t.string "special_issue_name"
     t.string "sponsored_by"
     t.integer "author_id"
     t.datetime "last_update"
@@ -178,7 +178,7 @@ ActiveRecord::Schema.define(version: 2018_12_10_221451) do
   create_table "calendar_title_types", force: :cascade do |t|
     t.bigint "type_id", null: false
     t.bigint "title_id", null: false
-    t.integer "status", default: 1
+    t.boolean "active", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["title_id"], name: "index_calendar_title_types_on_title_id"

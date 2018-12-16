@@ -27,13 +27,13 @@ class CreateArticles < ActiveRecord::Migration[5.2]
       t.string :discipline
       t.string :keyword
       t.integer :special_issue
-      t.integer :special_issue_name # TODO: Seems as a string? Check later.
+      t.string :special_issue_name
       t.string :sponsored_by
       t.integer :author_id
       t.datetime :last_update
       t.integer :status
       t.integer :type
-      t.float :incentive_point
+      t.float :incentive_point, default: 0
       t.references :user,
                    null: false,
                    foreign_key: true
@@ -57,6 +57,7 @@ class CreateArticles < ActiveRecord::Migration[5.2]
     add_length_constraint :articles, :discipline, less_than_or_equal_to: 65535
     add_length_constraint :articles, :keyword, less_than_or_equal_to: 255
     add_length_constraint :articles, :sponsored_by, less_than_or_equal_to: 255
+    add_length_constraint :articles, :special_issue_name, less_than_or_equal_to: 255
 
     add_numericality_constraint :articles, :yoksis_id,
                                                  greater_than_or_equal_to: 0
@@ -90,12 +91,9 @@ class CreateArticles < ActiveRecord::Migration[5.2]
                                                  greater_than_or_equal_to: 0
     add_numericality_constraint :articles, :special_issue,
                                                  greater_than_or_equal_to: 0
-    add_numericality_constraint :articles, :special_issue_name,
-                                                 greater_than_or_equal_to: 0
     add_numericality_constraint :articles, :author_id,
                                                  greater_than_or_equal_to: 0
     add_numericality_constraint :articles, :incentive_point,
                                            greater_than_or_equal_to: 0
   end
 end
-
