@@ -1,0 +1,43 @@
+<div class="col-lg-12">
+  <% @groups.each do |group| %>
+    <div class="card">
+      <div class="card-header bg-secondary">
+        <%= fa_icon 'book' %><strong><%= group.name %></strong>
+      </div>
+      <div class="card-body">
+        <table class='table table-responsive-sm table-striped'>
+          <thead class="thead-dark">
+            <tr>
+              <th><%= t('.title') %></th>
+              <th><%= t('.lecturer') %></th>
+              <th><%= t('.coordinator') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% group.lecturers.each do |lecturer| %>
+            <tr>
+              <td><%= lecturer.title.name %></td>
+              <td><%= full_name(lecturer.identities.formal.first) %></td>
+              <td>
+                <% if lecturer.coordinator %>
+                  <span class="text-success"><%= fa_icon('check-circle-o') %></span>
+                <% else %>
+                  <span class="text-danger"><%= fa_icon('times-circle-o') %></span>
+                <% end %>
+              </td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <div class="callout callout-info">
+         <small class="text-muted"><%= t('.quota')%> </small><br>
+         <strong class="h4"><%= group.quota %></strong>
+       </div>
+      </div>
+      <div class="card-footer">
+        <%= link_to_edit(edit_available_course_available_course_group_path(@available_course, group)) %>
+        <%= link_to_destroy(available_course_available_course_group_path(@available_course, group)) %>
+      </div>
+    </div>
+  <% end %>
+</div>

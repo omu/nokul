@@ -1,6 +1,21 @@
 tr:
   activerecord:
     attributes:
+      available_course: &available_course_attributes
+        academic_term: Akademik Dönem
+        coordinator: Koordinatör
+        course: Ders
+        curriculum: Müfredat
+        unit: Birim
+      available_course_group: &available_course_group_attributes
+        name: Grup Adı
+        quota: Kontenjan
+        lecturer: Öğretim Elemanı
+        title: Ünvan
+        coordinator: Koordinatör
+      available_course_lecturer:
+        lecturer: Öğretim Elemanı
+        coordinator: Koordinatör
       course: &course_attributes
         code: Dersin Kodu
         credit: Kredi
@@ -64,14 +79,59 @@ tr:
           compulsory: Zorunlu
           elective: Seçmeli
     models:
+      available_course: Açılan Ders
+      available_course_group: Açılan Ders Grubu
       course: Ders
       course_group: Ders Grubu
       course_group_type: Ders Grup Türü
       course_type: Ders Türü
-      curriculum: Müfreadat
-      curriculum_course: Müfreadat Ders
-      curriculum_course_group: Müfreadat Ders Grup
+      curriculum: Müfredat
+      curriculum_course: Müfredat Ders
+      curriculum_course_group: Müfredat Ders Grubu
   course_management:
+    available_courses:
+      create:
+        success: Açılan ders başarıyla oluşturuldu.
+      destroy:
+        error: Açılan ders silinirken bir hata oluştu.
+        success: Açılan ders başarıyla silindi.
+      edit:
+        form_title: Açılan Dersi Düzenle
+      groups:
+        <<: *available_course_group_attributes
+      index:
+        <<: *available_course_attributes
+        add_new_available_course: Yeni Açılan Ders Ekle
+        available_courses: Açılan Dersler
+        course_code: Ders Kodu
+        group_count: Grup Sayısı
+        quota: Kontenjan
+      new:
+        form_title: Açılan Ders Oluştur
+      search:
+        <<: *available_course_attributes
+      form:
+        unit: Birim
+      show:
+        <<: *available_course_attributes
+        coordinator: Koordinatör
+        create_available_course_group: Açılan Derse Grup Ekle
+      update:
+        success: Açılan ders başarıyla güncellendi.
+    available_course_groups:
+      create:
+        success: Açılan ders grubu başarıyla oluşturuldu.
+      destroy:
+        error: Açılan ders grubu silinirken bir hata oluştu.
+        success: Açılan ders grubu başarıyla silindi.
+      edit:
+        form_title: Açılan Ders Grubunu Düzenle
+      form:
+        lecturers: Öğretim Elemanları
+      new:
+        form_title: Açılan Ders Grubu Ekle
+      update:
+        success: Açılan ders grubu başarıyla güncellendi.
     courses:
       create:
         success: Ders başarıyla oluşturuldu.
@@ -213,6 +273,10 @@ tr:
         success: Müfredat ders grubu başarıyla güncellendi.
   simple_form:
     labels:
+      available_course:
+        <<: *available_course_attributes
+      available_course_group:
+        <<: *available_course_group_attributes
       course:
         <<: *course_attributes
       curriculum:
