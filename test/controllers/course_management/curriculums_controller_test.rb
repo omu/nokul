@@ -32,7 +32,7 @@ module CourseManagement
         post index_path, params: {
           curriculum: {
             name: 'Test Create Curriculum', unit_id: @unit.id, status: :active,
-            number_of_semesters: 8, type: :periodic
+            number_of_semesters: 8, type: :periodic, program_ids: @unit.subprograms.ids.first(2)
           }
         }
       end

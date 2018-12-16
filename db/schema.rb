@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_03_102515) do
+ActiveRecord::Schema.define(version: 2018_12_10_120434) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -607,6 +607,11 @@ ActiveRecord::Schema.define(version: 2018_12_03_102515) do
     t.index ["user_id"], name: "index_students_on_user_id"
   end
 
+  create_table "terms", force: :cascade do |t|
+    t.string "name", limit: 255, null: false
+    t.string "identifier", limit: 50, null: false
+  end
+
   create_table "titles", force: :cascade do |t|
     t.string "name", limit: 255, null: false
     t.string "code", limit: 255, null: false
@@ -678,7 +683,7 @@ ActiveRecord::Schema.define(version: 2018_12_03_102515) do
     t.datetime "last_sign_in_at"
     t.inet "current_sign_in_ip"
     t.inet "last_sign_in_ip"
-    t.datetime "password_changed_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.datetime "password_changed_at", default: -> { "now()" }, null: false
     t.string "slug", limit: 255
     t.string "preferred_language", limit: 2, default: "tr"
     t.integer "articles_count", default: 0, null: false
