@@ -6,33 +6,41 @@
         <strong><%= form_title %></strong>
       </div>
       <div class='card-body'>
-        <%= simple_form_for([@semester, @curriculum_course_group]) do |f| %>
+        <%= simple_form_for([@semester, curriculum_course_group]) do |f| %>
           <%= f.error_notification %>
           <div class='row'>
             <div class='col-sm-6'>
               <%= f.association :course_group,
-                                collection: f.object.new_record? ? @semester.available_course_groups : [f.object.course_group]  %>
+                                collection: [f.object.course_group],
+                                include_blank: false,
+                                readonly: true %>
             </div>
             <div class='col-sm-6'>
               <%= f.input :ects %>
             </div>
+          </div>
 
+          <div class="row">
+            <div class='col-sm-12'>
+              <h4><%= t('.courses')%></h4>
+              <hr>
+            </div>
             <%= f.simple_fields_for :curriculum_courses do |p| %>
               <%= p.input :curriculum_semester_id, as: :hidden %>
               <div class='col-sm-6'>
-                <%= p.association :course, collection: f.object.course_group.courses %>
+                <%= p.association :course,
+                                  collection: [ p.object.course ],
+                                  include_blank: false,
+                                  readonly: true %>
               </div>
               <div class='col-sm-6'>
                 <%= p.input :ects %>
               </div>
             <% end %>
-
           </div>
-
           <div class='row'>
             <div class='col-sm-12'>
               <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
-              <%= link_to_back(:back) %>
             </div>
           </div>
         <% end %>

@@ -18,6 +18,9 @@ en:
       language: &language_attributes
         iso: ISO Code
         name: Name
+      term: &term_attributes
+        name: Name of Term
+        identifier: Identifier
   helpers:
     submit:
       city:
@@ -32,6 +35,9 @@ en:
       language:
         create: Create Language
         update: Update Language
+      term:
+        create: Create Term
+        update: Update Term
   references:
     cities:
       create:
@@ -100,6 +106,7 @@ en:
         student_management: Student Management
         student_punishment_types: Punishment Types
         student_studentship_statuses: Studentship Statuses
+        terms: Terms
         unit_instruction_languages:  Instruction Languages
         unit_instruction_types: Instruction Types
         unit_statuses: Unit Statuses
@@ -123,3 +130,19 @@ en:
         form_title: Create a Language
       update:
         success: Language successfully updated.
+    terms:
+      create:
+        success: Term successfully created.
+      destroy:
+        success: Term successfully deleted!
+        warning: Term can not be deleted.
+      edit:
+        form_title: Update the Term
+      index:
+        <<: *term_attributes
+        card_header: Terms
+        new_term_link: Create a New Term
+      new:
+        form_title: Create a Term
+      update:
+        success: Term successfully updated.

@@ -1,16 +1,16 @@
 <% unless @prospective_student.registered %>
   <script type='text/javascript'>
     $(document).ready(function() {
-      var $checks  = $(".registration-documents-checks")
-      var $buttons = $(".registration-button")
+      var checks = $('.registration-documents-checks')
+      var buttons = $('.registration-button')
 
-      $buttons.addClass('disabled')
+      if (checks.length > 0) buttons.addClass('disabled')
 
-      $checks.change(function(){
-        if ($('.registration-documents-checks:checked').length == $checks.length) {
-          $buttons.removeClass('disabled')
-        } else {
-          $buttons.addClass('disabled')
+      checks.change(function () {
+        if ($('.registration-documents-checks:checked').length == checks.length){
+          buttons.removeClass('disabled')
+        }else{
+          buttons.addClass('disabled')
         }
       })
     })
