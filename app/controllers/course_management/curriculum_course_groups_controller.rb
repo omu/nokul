@@ -6,12 +6,10 @@ module CourseManagement
     before_action :set_curriculum_course_group, only: %i[edit update destroy]
 
     def new
-      @curriculum_course_group = @semester.curriculum_course_groups.new
+      @curriculum_course_groups = @semester.build_curriculum_course_groups
     end
 
-    def edit
-      @curriculum_course_group.build_curriculum_courses
-    end
+    def edit; end
 
     def create
       @curriculum_course_group = @semester.curriculum_course_groups.new(curriculum_course_params)

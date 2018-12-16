@@ -24,5 +24,6 @@ class CurriculumCourseGroup < ApplicationRecord
         course_id: course.id, curriculum_semester_id: curriculum_semester_id
       )
     end
+    self
   end
 end

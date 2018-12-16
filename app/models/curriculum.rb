@@ -38,6 +38,7 @@ class Curriculum < ApplicationRecord
 
   # validations
   validates :name, presence: true, uniqueness: { scope: :unit_id }
+  validates :programs, presence: true
   validates :semesters_count, numericality: { greater_than_or_equal_to: 0 }
   validates :status, presence: true
 

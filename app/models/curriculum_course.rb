@@ -17,7 +17,7 @@ class CurriculumCourse < ApplicationRecord
   enum type: { compulsory: 0, elective: 1 }
 
   # callbacks
-  before_validation do
-    self.type = curriculum_course_group_id.nil? ? :compulsory : :elective
+  after_create do
+    update(type: (curriculum_course_group_id.nil? ? :compulsory : :elective))
   end
 end
