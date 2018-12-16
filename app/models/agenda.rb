@@ -25,8 +25,8 @@ class Agenda < ApplicationRecord
   has_many :meetings, through: :meeting_agendas, source: :committee_meeting
 
   # validations
-  validates :description, presence: true
-  validates :status, presence: true
+  validates :description, presence: true, length: { maximum: 65_535 }
+  validates :status, presence: true, inclusion: { in: statuses.keys }
 
   # scopes
   scope :active, -> { where(status: %i[recent delayed]) }

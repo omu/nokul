@@ -17,9 +17,9 @@ class CreateAgendas < ActiveRecord::Migration[5.2]
     add_presence_constraint :agendas, :description
     add_null_constraint :agendas, :status
 
-    add_length_constraint :agendas, :description, less_than_or_equal_to: 65535
+    add_length_constraint :agendas, :description, less_than_or_equal_to: 65_535
 
     add_numericality_constraint :agendas, :status,
-                                          greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
   end
 end

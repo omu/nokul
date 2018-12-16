@@ -23,6 +23,6 @@ class CreateAddresses < ActiveRecord::Migration[5.1]
     add_length_constraint :addresses, :full_address, less_than_or_equal_to: 255
 
     add_numericality_constraint :addresses, :type,
-                                            greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
   end
 end

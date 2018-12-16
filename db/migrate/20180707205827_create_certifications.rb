@@ -29,23 +29,23 @@ class CreateCertifications < ActiveRecord::Migration[5.2]
     add_null_constraint :certifications, :title
 
     add_length_constraint :certifications, :name, less_than_or_equal_to: 255
-    add_length_constraint :certifications, :content, less_than_or_equal_to: 65535
+    add_length_constraint :certifications, :content, less_than_or_equal_to: 65_535
     add_length_constraint :certifications, :location, less_than_or_equal_to: 255
     add_length_constraint :certifications, :duration, less_than_or_equal_to: 255
     add_length_constraint :certifications, :title, less_than_or_equal_to: 255
     add_length_constraint :certifications, :city_and_country, less_than_or_equal_to: 255
 
     add_numericality_constraint :certifications, :yoksis_id,
-                                                 greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :certifications, :type,
-                                                 greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :certifications, :scope,
-                                                 greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :certifications, :number_of_authors,
-                                                 greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :certifications, :status,
-                                                 greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :certifications, :incentive_point,
-                                                 greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
   end
 end

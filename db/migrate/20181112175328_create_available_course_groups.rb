@@ -14,6 +14,6 @@ class CreateAvailableCourseGroups < ActiveRecord::Migration[5.2]
     add_presence_constraint :available_course_groups, :name
     add_length_constraint :available_course_groups, :name, less_than_or_equal_to: 255
     add_numericality_constraint :available_course_groups, :quota,
-                                                          greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
   end
 end

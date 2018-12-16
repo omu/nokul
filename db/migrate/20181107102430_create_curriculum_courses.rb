@@ -16,8 +16,8 @@ class CreateCurriculumCourses < ActiveRecord::Migration[5.2]
 
     add_null_constraint :curriculum_courses, :ects
     add_numericality_constraint :curriculum_courses, :type,
-                                                     greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :curriculum_courses, :ects,
-                                                     greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
   end
 end

@@ -17,9 +17,9 @@ class CreateCommitteeMeetings < ActiveRecord::Migration[5.2]
     add_null_constraint :committee_meetings, :year
 
     add_numericality_constraint :committee_meetings, :meeting_no,
-                                                     greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :committee_meetings, :year,
-                                                     greater_than_or_equal_to: 1950,
-                                                     less_than_or_equal_to: 2050
+                                greater_than_or_equal_to: 1950,
+                                less_than_or_equal_to: 2050
   end
 end

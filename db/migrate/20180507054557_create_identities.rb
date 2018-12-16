@@ -37,10 +37,10 @@ class CreateIdentities < ActiveRecord::Migration[5.1]
     add_length_constraint :identities, :registered_to, less_than_or_equal_to: 255
 
     add_numericality_constraint :identities, :type,
-                                             greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :identities, :gender,
-                                             greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :identities, :marital_status,
-                                             greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
   end
 end

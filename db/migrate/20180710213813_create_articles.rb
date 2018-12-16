@@ -44,8 +44,8 @@ class CreateArticles < ActiveRecord::Migration[5.2]
     add_presence_constraint :articles, :title
     add_presence_constraint :articles, :authors
 
-    add_length_constraint :articles, :title, less_than_or_equal_to: 65535
-    add_length_constraint :articles, :authors, less_than_or_equal_to: 65535
+    add_length_constraint :articles, :title, less_than_or_equal_to: 65_535
+    add_length_constraint :articles, :authors, less_than_or_equal_to: 65_535
     add_length_constraint :articles, :city, less_than_or_equal_to: 255
     add_length_constraint :articles, :journal, less_than_or_equal_to: 255
     add_length_constraint :articles, :language_of_publication, less_than_or_equal_to: 255
@@ -53,47 +53,47 @@ class CreateArticles < ActiveRecord::Migration[5.2]
     add_length_constraint :articles, :issue, less_than_or_equal_to: 255
     add_length_constraint :articles, :doi, less_than_or_equal_to: 255
     add_length_constraint :articles, :issn, less_than_or_equal_to: 255
-    add_length_constraint :articles, :access_link, less_than_or_equal_to: 65535
-    add_length_constraint :articles, :discipline, less_than_or_equal_to: 65535
+    add_length_constraint :articles, :access_link, less_than_or_equal_to: 65_535
+    add_length_constraint :articles, :discipline, less_than_or_equal_to: 65_535
     add_length_constraint :articles, :keyword, less_than_or_equal_to: 255
     add_length_constraint :articles, :sponsored_by, less_than_or_equal_to: 255
     add_length_constraint :articles, :special_issue_name, less_than_or_equal_to: 255
 
     add_numericality_constraint :articles, :yoksis_id,
-                                                 greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :articles, :type,
-                                                 greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :articles, :scope,
-                                                 greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :articles, :number_of_authors,
-                                                 greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :articles, :status,
-                                                 greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :articles, :review,
-                                                 greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :articles, :index,
-                                                 greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :articles, :country,
-                                                 greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :articles, :month,
-                                                 greater_than_or_equal_to: 1,
-                                                 less_than_or_equal_to: 12
+                                greater_than_or_equal_to: 1,
+                                less_than_or_equal_to: 12
     add_numericality_constraint :articles, :year,
-                                                 greater_than_or_equal_to: 1950,
-                                                 less_than_or_equal_to: 2050
+                                greater_than_or_equal_to: 1950,
+                                less_than_or_equal_to: 2050
     add_numericality_constraint :articles, :first_page,
-                                                 greater_than_or_equal_to: 0,
-                                                 less_than: 15000
+                                greater_than_or_equal_to: 0,
+                                less_than: 15_000
     add_numericality_constraint :articles, :last_page,
-                                                 greater_than_or_equal_to: 0,
-                                                 less_than: 15000
+                                greater_than_or_equal_to: 0,
+                                less_than: 15_000
     add_numericality_constraint :articles, :access_type,
-                                                 greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :articles, :special_issue,
-                                                 greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :articles, :author_id,
-                                                 greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
     add_numericality_constraint :articles, :incentive_point,
-                                           greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0
   end
 end
