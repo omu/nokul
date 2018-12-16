@@ -22,11 +22,16 @@ class UnitTest < ActiveSupport::TestCase
     meeting_agendas
     decisions
     courses
+    course_groups
+    curriculum_programs
+    curriculums
+    managed_curriculums
     registration_documents
     prospective_students
     calendar_units
     academic_calendars
     calendar_events
+    available_courses
   ].each do |property|
     test "a unit can communicate with #{property}" do
       assert units(:omu).send(property)
@@ -135,8 +140,14 @@ class UnitTest < ActiveSupport::TestCase
     assert_not_includes Unit.curriculumable, units(:uzem)
   end
 
+  # custom methods
   test 'subprograms method returns a unit subprograms' do
     assert_equal units(:omu).subprograms.count, units(:omu).descendants.programs.count
     assert_not_includes units(:omu).subprograms, units(:uzem)
+  end
+
+  test 'subtree_employees returns unit subtree employees' do
+    employees = Employee.joins(:units, user: :identities).where(units: { id: units(:omu).subtree.active.ids })
+    assert_equal employees.count, units(:omu).subtree_employees.count
   end
 end

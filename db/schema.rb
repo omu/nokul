@@ -154,9 +154,14 @@ ActiveRecord::Schema.define(version: 2018_12_10_120434) do
     t.bigint "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "unit_id"
+    t.bigint "coordinator_id"
+    t.integer "groups_count", default: 0
     t.index ["academic_term_id"], name: "index_available_courses_on_academic_term_id"
+    t.index ["coordinator_id"], name: "index_available_courses_on_coordinator_id"
     t.index ["course_id"], name: "index_available_courses_on_course_id"
     t.index ["curriculum_id"], name: "index_available_courses_on_curriculum_id"
+    t.index ["unit_id"], name: "index_available_courses_on_unit_id"
   end
 
   create_table "calendar_events", force: :cascade do |t|
@@ -701,6 +706,8 @@ ActiveRecord::Schema.define(version: 2018_12_10_120434) do
 
   add_foreign_key "available_course_lecturers", "available_course_groups", column: "group_id"
   add_foreign_key "available_course_lecturers", "employees", column: "lecturer_id"
+  add_foreign_key "available_courses", "employees", column: "coordinator_id"
+  add_foreign_key "available_courses", "units"
   add_foreign_key "calendar_events", "academic_terms"
   add_foreign_key "calendar_events", "calendar_types"
   add_foreign_key "calendar_title_types", "calendar_titles", column: "title_id"

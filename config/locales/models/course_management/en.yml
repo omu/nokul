@@ -1,6 +1,21 @@
 en:
   activerecord:
     attributes:
+      available_course: &available_course_attributes
+        academic_term: Academic Term
+        coordinator: Coordinator
+        course: Course
+        curriculum: Curriculum
+        unit: Unit
+      available_course_group: &available_course_group_attributes
+        name: Group Name
+        quota: Quota
+        lecturer: Lecturer
+        title: Title
+        coordinator: Coordinator
+      available_course_lecturer:
+        lecturer: Lecturer
+        coordinator: Coordinator
       course: &course_attributes
         code: Code
         credit: Credit
@@ -64,14 +79,59 @@ en:
           compulsory: Compulsory
           elective: Elective
     models:
+      available_course: Available Course
+      available_course_group: Available Course Group
       course: Course
       course_group_type: Course Group Type
       course_group: Course Group
       course_type: Course Type
       curriculum: Curriculum
       curriculum_course: Curriculum Course
-      curriculum_course_group: Curriculum Course Grup
+      curriculum_course_group: Curriculum Course Group
   course_management:
+    available_courses:
+      create:
+        success: Available course successfully created.
+      destroy:
+        error: An error occured when deleting the available course.
+        success: Available course successfully destroyed.
+      edit:
+        form_title: Update the Available Course
+      groups:
+        <<: *available_course_group_attributes
+      index:
+        <<: *available_course_attributes
+        add_new_available_course: Add a New Available Course
+        available_courses: Available Courses
+        course_code: Course Code
+        group_count: Group Count
+        quota: Quota
+      new:
+        form_title: Create an Available Course
+      search:
+        <<: *available_course_attributes
+      form:
+        unit: Unit
+      show:
+        <<: *available_course_attributes
+        coordinator: Coodinator
+        create_available_course_group: Create Available Course Group
+      update:
+        success: Available course successfully updated.
+    available_course_groups:
+      create:
+        success: Available course group successfully created.
+      destroy:
+        error: An error occured when deleting the available course group.
+        success: Available course group successfully destroyed.
+      edit:
+        form_title: Update the Available Course Group
+      form:
+        lecturers: Lecturers
+      new:
+        form_title: Create an Available Course Group
+      update:
+        success: Available course group successfully updated.
     courses:
       create:
         success: Course successfully created.
@@ -99,7 +159,7 @@ en:
         success: Course successfully updated.
     course_groups:
       create:
-        success: Course group created.
+        success: Course group successfully created.
       destroy:
         error: An error occured when deleting the course group.
         success: Course group successfully destroyed.
@@ -121,7 +181,7 @@ en:
         success: Course group successfully updated.
     course_group_types:
       create:
-        success: Course group type created.
+        success: Course group type successfully created.
       destroy:
         warning: An error occured when deleting the course group type.
         success: Course group type successfully destroyed.
@@ -137,7 +197,7 @@ en:
         success: Course group type successfully updated.
     course_types:
       create:
-        success: Course type created.
+        success: Course type successfully created.
       destroy:
         warning: An error occured when deleting the course type.
         success: Course type successfully destroyed.
@@ -213,6 +273,10 @@ en:
         success: Curriculum course group successfully updated.
   simple_form:
     labels:
+      available_course:
+        <<: *available_course_attributes
+      available_course_group:
+        <<: *available_course_group_attributes
       course:
         <<: *course_attributes
       curriculum:
