@@ -13,6 +13,7 @@ class CurriculumCourse < ApplicationRecord
 
   # validations
   validates :ects, presence: true, numericality: { greater_than: 0 }
+  validates :type, presence: true, inclusion: { in: types.keys }
 
   # delegates
   delegate :code, :credit, :course_type, :name, to: :course

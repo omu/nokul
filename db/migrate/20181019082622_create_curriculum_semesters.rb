@@ -8,6 +8,10 @@ class CreateCurriculumSemesters < ActiveRecord::Migration[5.2]
       t.references :curriculum, foreign_key: true
       t.timestamps
     end
+
+    add_null_constraint :curriculum_semesters, :sequence
+    add_null_constraint :curriculum_semesters, :year
+
     add_numericality_constraint :curriculum_semesters, :year,
                                 greater_than: 0
     add_numericality_constraint :curriculum_semesters, :sequence,

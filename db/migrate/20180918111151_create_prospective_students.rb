@@ -56,6 +56,7 @@ class CreateProspectiveStudents < ActiveRecord::Migration[5.2]
     add_presence_constraint :prospective_students, :id_number
     add_presence_constraint :prospective_students, :first_name
     add_presence_constraint :prospective_students, :last_name
+    add_null_constraint :prospective_students, :gender
     add_null_constraint :prospective_students, :top_student
     add_null_constraint :prospective_students, :meb_status
     add_null_constraint :prospective_students, :military_status
