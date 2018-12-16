@@ -9,7 +9,7 @@ class CourseGroupType < ApplicationRecord
   has_many :course_groups, dependent: :nullify
 
   # validations
-  validates :name, presence: true
+  validates :name, presence: true, length: { maximum: 255 }
 
   # callbacks
   before_save { self.name = name.capitalize_all }
