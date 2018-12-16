@@ -10,7 +10,7 @@ class AcademicTerm < ApplicationRecord
 
   # validations
   validates :year, presence: true, uniqueness: { scope: :term }, length: { maximum: 255 }
-  validates :term, presence: true, inclusion: { in: terms.keys }
+  validates :term, inclusion: { in: terms.keys }
   validates :start_of_term, presence: true
   validates :end_of_term, presence: true
   validates :active, inclusion: { in: [true, false] }

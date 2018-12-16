@@ -12,8 +12,8 @@ class CurriculumCourse < ApplicationRecord
   belongs_to :curriculum_course_group, optional: true
 
   # validations
-  validates :ects, presence: true, numericality: { greater_than: 0 }
-  validates :type, presence: true, inclusion: { in: types.keys }
+  validates :ects, numericality: { greater_than: 0 }
+  validates :type, inclusion: { in: types.keys }
 
   # delegates
   delegate :code, :credit, :course_type, :name, to: :course

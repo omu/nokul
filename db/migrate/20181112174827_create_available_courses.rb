@@ -16,7 +16,6 @@ class CreateAvailableCourses < ActiveRecord::Migration[5.2]
                    null: false,
                    foreign_key: true
       t.references :coordinator,
-                   null: false,
                    foreign_key: { to_table: :employees }
       t.integer :groups_count, default: 0
       t.timestamps

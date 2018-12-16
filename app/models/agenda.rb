@@ -11,11 +11,11 @@ class Agenda < ApplicationRecord
     using: { tsearch: { prefix: true } }
   )
 
-  # enums
-  enum status: { recent: 0, decided: 1, delayed: 2 }
-
   # dynamic_search
   search_keys :status, :agenda_type_id
+
+  # enums
+  enum status: { recent: 0, decided: 1, delayed: 2 }
 
   # relations
   has_one_attached :agenda_file
@@ -26,7 +26,7 @@ class Agenda < ApplicationRecord
 
   # validations
   validates :description, presence: true, length: { maximum: 65_535 }
-  validates :status, presence: true, inclusion: { in: statuses.keys }
+  validates :status, inclusion: { in: statuses.keys }
 
   # scopes
   scope :active, -> { where(status: %i[recent delayed]) }

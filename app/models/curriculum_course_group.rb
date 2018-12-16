@@ -11,7 +11,7 @@ class CurriculumCourseGroup < ApplicationRecord
   accepts_nested_attributes_for :curriculum_courses
 
   # validations
-  validates :ects, presence: true, numericality: { greater_than: 0 }
+  validates :ects, numericality: { greater_than: 0 }
 
   # delegates
   delegate :name, to: :course_group

@@ -25,16 +25,16 @@ class Certification < ApplicationRecord
   belongs_to :user
 
   # validations
-  validates :yoksis_id, presence: true, uniqueness: { scope: %i[user_id status] },
+  validates :yoksis_id, uniqueness: { scope: %i[user_id status] },
                         numericality: { only_integer: true, greater_than: 0 }
   validates :title, presence: true, length: { maximum: 255 }
-  validates :type, presence: true, inclusion: { in: types.keys }
-  validates :name, allow_nil: true, length: { maximum: 255 }
-  validates :content, allow_nil: true, length: { maximum: 65_535 }
-  validates :location, allow_nil: true, length: { maximum: 255 }
+  validates :type, inclusion: { in: types.keys }
+  validates :name, length: { maximum: 255 }
+  validates :content, length: { maximum: 65_535 }
+  validates :location, length: { maximum: 255 }
   validates :scope, allow_nil: true, inclusion: { in: scopes.keys }
-  validates :duration, allow_nil: true, length: { maximum: 255 }
+  validates :duration, length: { maximum: 255 }
   validates :number_of_authors, allow_nil: true, numericality: { only_integer: true, greater_than: 0 }
-  validates :city_and_country, allow_nil: true, length: { maximum: 255 }
+  validates :city_and_country, length: { maximum: 255 }
   validates :status, allow_nil: true, inclusion: { in: statuses.keys }
 end

@@ -26,14 +26,13 @@ class Course < ApplicationRecord
   # validations
   validates :name, presence: true, uniqueness: { scope: :unit_id }, length: { maximum: 255 }
   validates :code, presence: true, uniqueness: true, length: { maximum: 255 }
-  validates :theoric, presence: true, numericality: { greater_than_or_equal_to: 0 }
-  validates :practice, presence: true, numericality: { greater_than_or_equal_to: 0 }
-  validates :laboratory, presence: true, numericality: { greater_than_or_equal_to: 0 }
-  validates :credit, presence: true, numericality: {
-    greater_than_or_equal_to: ->(course) { course.course_type.try(:min_credit).to_i }
+  validates :theoric, numericality: { greater_than_or_equal_to: 0 }
+  validates :practice, numericality: { greater_than_or_equal_to: 0 }
+  validates :laboratory, numericality: { greater_than_or_equal_to: 0 }
+  validates :credit, numericality: { greater_than_or_equal_to: ->(course) { course.course_type.try(:min_credit).to_i }
   }
-  validates :program_type, presence: true, inclusion: { in: program_types.keys }
-  validates :status, presence: true, inclusion: { in: statuses.keys }
+  validates :program_type, inclusion: { in: program_types.keys }
+  validates :status, inclusion: { in: statuses.keys }
 
   # callbacks
   before_validation do

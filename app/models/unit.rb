@@ -50,8 +50,8 @@ class Unit < ApplicationRecord
 
   # validations
   validates :name, presence: true, uniqueness: { scope: %i[ancestry unit_status] }, length: { maximum: 255 }
-  validates :yoksis_id, uniqueness: true, allow_nil: true, numericality: { only_integer: true }, length: { is: 6 }
-  validates :detsis_id, uniqueness: true, allow_nil: true, numericality: { only_integer: true }, length: { is: 8 }
+  validates :yoksis_id, allow_nil: true, uniqueness: true, numericality: { only_integer: true }, length: { is: 6 }
+  validates :detsis_id, allow_nil: true, uniqueness: true, numericality: { only_integer: true }, length: { is: 8 }
   validates :osym_id, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :foet_code, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :duration, allow_nil: true, numericality: { only_integer: true }, inclusion: 1..8

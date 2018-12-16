@@ -51,21 +51,20 @@ class Article < ApplicationRecord
   belongs_to :user, counter_cache: true
 
   # validations
-  validates :yoksis_id, presence: true, uniqueness: { scope: %i[user_id status] },
-                        numericality: { only_integer: true, greater_than: 0 }
+  validates :yoksis_id, uniqueness: { scope: %i[user_id status] }, numericality: { only_integer: true, greater_than: 0 }
   validates :title, presence: true, length: { maximum: 65_535 }
   validates :authors, presence: true, length: { maximum: 65_535 }
-  validates :city, allow_nil: true, length: { maximum: 255 }
-  validates :journal, allow_nil: true, length: { maximum: 255 }
-  validates :language_of_publication, allow_nil: true, length: { maximum: 255 }
-  validates :volume, allow_nil: true, length: { maximum: 255 }
-  validates :issue, allow_nil: true, length: { maximum: 255 }
-  validates :doi, allow_nil: true, length: { maximum: 255 }
-  validates :issn, allow_nil: true, length: { maximum: 255 }
-  validates :access_link, allow_nil: true, length: { maximum: 65_535 }
-  validates :discipline, allow_nil: true, length: { maximum: 65_535 }
-  validates :keyword, allow_nil: true, length: { maximum: 255 }
-  validates :sponsored_by, allow_nil: true, length: { maximum: 255 }
+  validates :city, length: { maximum: 255 }
+  validates :journal, length: { maximum: 255 }
+  validates :language_of_publication, length: { maximum: 255 }
+  validates :volume, length: { maximum: 255 }
+  validates :issue, length: { maximum: 255 }
+  validates :doi, length: { maximum: 255 }
+  validates :issn, length: { maximum: 255 }
+  validates :access_link, length: { maximum: 65_535 }
+  validates :discipline, length: { maximum: 65_535 }
+  validates :keyword, length: { maximum: 255 }
+  validates :sponsored_by, length: { maximum: 255 }
   validates :number_of_authors, allow_nil: true, numericality: { only_integer: true, greater_than: 0 }
   validates :type, allow_nil: true, inclusion: { in: types.keys }
   validates :scope, allow_nil: true, inclusion: { in: scopes.keys }
@@ -83,9 +82,9 @@ class Article < ApplicationRecord
                         numericality: { only_integer: true, greater_than: 0, less_than_or_equal_to: 15_000 }
   validates :access_type, allow_nil: true, inclusion: { in: access_types.keys }
   validates :special_issue, allow_nil: true, numericality: { only_integer: true, greater_than: 0 }
-  validates :special_issue_name, allow_nil: true, length: { maximum: 255 }
-  validates :author_id, allow_nil: true, numericality: { only_integer: true, greater_than: 0 }
-  validates :incentive_point, allow_nil: true, numericality: { greater_than_or_equal_to: 0 }
+  validates :special_issue_name, length: { maximum: 255 }
+  validates :author_id, numericality: { only_integer: true, greater_than: 0 }
+  validates :incentive_point, numericality: { greater_than_or_equal_to: 0 }
 
   def self.unique_count
     active.group_by(&:yoksis_id).count
