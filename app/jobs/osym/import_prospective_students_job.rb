@@ -90,6 +90,7 @@ module Osym
     def find_placement_type(str)
       'general' if str.eql?('Genel')
       'additional_score' if str.eql?('Ek Puanli')
+      nil if str.nil?
     end
 
     def find_language(language)
