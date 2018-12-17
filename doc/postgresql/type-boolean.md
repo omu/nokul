@@ -6,7 +6,7 @@
 
 ## Boolean
 
-Boolean bir alanın `nil` olması yönetilmesi oldukça güç bir durumdur. Örneğin:
+Boolean bir alanın `nil` olması beklenen bir durum değildir. Örneğin:
 
 ```ruby
 Student.where(active: nil).count => 50
@@ -14,4 +14,4 @@ Student.where(active: false).count => 40
 Student.where(active: true).count => 60
 ```
 
-Bu durumda `nil` değerini içeren kayıtların tek tek incelenerek düzeltilmesi gerekmekte.
+Bu durumda `nil` değerini içeren kayıtların tek tek incelenerek düzeltilmesi gerekir.
