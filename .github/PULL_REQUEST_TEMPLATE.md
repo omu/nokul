@@ -2,10 +2,6 @@
 
 [//]: # (Kısa ve net bir şekilde bu PR'e neden ihtiyaç var, ne iş/değişiklik yapıyor açıklanmalıdır.)
 
-**İlgili iş kayıtları:**
-
-[//]: # (Bu PR ile ilişkili iş kayıtlarının ID numaraları, örn. #123456, #123457, #123458, listeleyin.)
-
 **İlgili/kapatılacak iş kayıtları:**
 
 [//]: # (Bu PR merge edildiğinde hangi iş kayıtları kapatılacak ise `Closes`, `Fixes` gibi anahtar kelimeler ile birlikte ID numaralarını listeleyin. Kapatılmayan ancak referans verilecek iş kayıtları için `References` anahtar kelimesini kullanın.)

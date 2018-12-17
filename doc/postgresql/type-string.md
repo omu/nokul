@@ -1,4 +1,4 @@
-## TL;DR
+## Rules
 
 - `string`'ler için `limit: N` kullanmayın. `add_length_constraint` kullanın.
 
@@ -23,6 +23,8 @@
 - Eşşiz olması gereken alanlar için `add_unique_constraint` kullanın:
 
   `add_unique_constraint :users, :email`
+
+- `50`, `70` gibi herhangi bir mantığı olmayan karakter sayısı kontrolleri eklemeyin, yalnızca `255` ve `65535` kullanın.
 
 ## varchar VS varchar(n) VS char VS text
 
