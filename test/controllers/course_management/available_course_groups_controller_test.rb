@@ -19,14 +19,14 @@ module CourseManagement
       assert_difference('AvailableCourseGroup.count') do
         post available_course_available_course_groups_path(@available_course), params: {
           available_course_group: {
-            name: 'Group 3', quota: 10
+            name: 'Group 4', quota: 10
           }
         }
       end
 
       group = AvailableCourseGroup.last
 
-      assert_equal 'Group 3', group.name
+      assert_equal 'Group 4', group.name
       assert_equal 10, group.quota
       assert_redirected_to available_course_path(@available_course)
       assert_equal translate('.create.success'), flash[:info]
@@ -55,13 +55,14 @@ module CourseManagement
     end
 
     test 'should destroy available course group' do
-      group = AvailableCourseGroup.last
+      group = available_course_groups(:course_group_to_delete)
 
       assert_difference('AvailableCourseGroup.count', -1) do
+        AvailableCourse.reset_counters(group.available_course.id, :groups_count)
         delete available_course_available_course_group_path(group.available_course, group)
       end
 
-      assert_redirected_to available_course_path(@available_course)
+      assert_redirected_to available_course_path(available_courses(:ati_fall_2017_2018))
       assert_equal translate('.destroy.success'), flash[:info]
     end
 

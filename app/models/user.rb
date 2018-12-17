@@ -30,8 +30,9 @@ class User < ApplicationRecord
   has_many :projects, dependent: :destroy
 
   # validations
-  validates :email, presence: true, uniqueness: true
-  validates :id_number, presence: true, uniqueness: true, numericality: { only_integer: true }, length: { is: 11 }
+  validates :email, presence: true, uniqueness: true, length: { maximum: 255 }
+  validates :id_number, uniqueness: true, numericality: { only_integer: true }, length: { is: 11 }
+  validates :preferred_language, inclusion: { in: I18n.available_locales.map(&:to_s) }
   validates_with EmailAddress::ActiveRecordValidator, field: :email
   validates_with ImageValidator, field: :avatar, if: proc { |a| a.avatar.attached? }
 

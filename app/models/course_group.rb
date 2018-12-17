@@ -18,8 +18,12 @@ class CourseGroup < ApplicationRecord
   has_many :curriculum_course_groups, dependent: :destroy
 
   # validations
-  validates :name, presence: true
-  validates :total_ects_condition, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :name, presence: true, length: { maximum: 255 }
+  validates :total_ects_condition, numericality: {
+    only_integer: true,
+    greater_than_or_equal_to: 0,
+    less_than_or_equal_to: 300
+  }
   validates :course_ids, presence: true
 
   # callbacks

@@ -4,11 +4,6 @@ class UnitType < ApplicationRecord
   include ReferenceValidations
   include ReferenceCallbacks
 
-  # relations
-  has_many :units, dependent: :nullify
-  has_many :calendar_unit_types, dependent: :destroy
-  has_many :calendar_types, through: :calendar_unit_types
-
   # enums
   enum group: {
     other: 0,
@@ -21,4 +16,11 @@ class UnitType < ApplicationRecord
     institute: 7,
     rectorship: 8
   }
+
+  validates :group, allow_nil: true, inclusion: { in: groups.keys }
+
+  # relations
+  has_many :units, dependent: :nullify
+  has_many :calendar_unit_types, dependent: :destroy
+  has_many :calendar_types, through: :calendar_unit_types
 end

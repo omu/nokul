@@ -3,13 +3,25 @@
 class CreateAcademicCalendars < ActiveRecord::Migration[5.2]
   def change
     create_table :academic_calendars do |t|
-      t.string :name, null: false, limit: 255
-      t.date :senate_decision_date, null: false
-      t.string :senate_decision_no, null: false, limit: 255
-      t.text :description, limit: 65535
-      t.references :academic_term
-      t.references :calendar_type
+      t.string :name
+      t.date :senate_decision_date
+      t.string :senate_decision_no
+      t.string :description
+      t.references :academic_term,
+                   null: false,
+                   foreign_key: true
+      t.references :calendar_type,
+                   null: false,
+                   foreign_key: true
       t.timestamps
     end
+
+    add_presence_constraint :academic_calendars, :name
+    add_null_constraint :academic_calendars, :senate_decision_date
+    add_presence_constraint :academic_calendars, :senate_decision_no
+
+    add_length_constraint :academic_calendars, :name, less_than_or_equal_to: 255
+    add_length_constraint :academic_calendars, :senate_decision_no, less_than_or_equal_to: 255
+    add_length_constraint :academic_calendars, :description, less_than_or_equal_to: 65_535
   end
 end

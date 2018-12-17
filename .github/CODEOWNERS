@@ -18,4 +18,5 @@ Vagrantfile @roktas @huseyin @ecylmz @sinansh
 /lib/ @msdundar @ecmelkytz @dilara @isubas @sinansh
 /test/ @msdundar @ecmelkytz @dilara @isubas @sinansh
 Gemfile @msdundar @ecmelkytz @dilara @isubas @sinansh
+Gemfile.lock @msdundar @ecmelkytz @dilara @isubas @sinansh
 package.json @msdundar @ecmelkytz @dilara @isubas @sinansh

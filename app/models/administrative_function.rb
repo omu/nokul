@@ -7,7 +7,7 @@ class AdministrativeFunction < ApplicationRecord
 
   # validations
   validates :name, presence: true, uniqueness: true
-  validates :code, presence: true, uniqueness: true, numericality: { only_integer: true }
+  validates :code, uniqueness: true, numericality: { only_integer: true, greater_than: 0 }
 
   # callbacks
   before_save { self.name = name.capitalize_all }

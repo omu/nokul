@@ -1,6 +1,8 @@
 ---
 name: Özellik önerisi
 about: Bu projeye eklenmesini istediğiniz veya değiştirilmesini istediğiniz bir özellik.
+labels: product
+assignees: abdagli, begum, ekural
 
 ---
 

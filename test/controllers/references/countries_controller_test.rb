@@ -78,7 +78,7 @@ module References
 
     test 'should destroy country' do
       assert_difference('Country.count', -1) do
-        delete country_path(Country.last)
+        delete country_path(countries(:norway))
       end
 
       assert_redirected_to countries_path

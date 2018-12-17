@@ -14,8 +14,8 @@ class Language < ApplicationRecord
   has_many :prospective_students, dependent: :nullify
 
   # validations
-  validates :name, presence: true, uniqueness: true
-  validates :iso, presence: true, uniqueness: true
+  validates :name, presence: true, uniqueness: true, length: { maximum: 255 }
+  validates :iso, presence: true, uniqueness: true, length: { maximum: 255 }
 
   # callbacks
   before_save do
