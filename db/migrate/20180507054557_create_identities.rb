@@ -13,12 +13,12 @@ class CreateIdentities < ActiveRecord::Migration[5.1]
       t.string :place_of_birth
       t.date :date_of_birth
       t.string :registered_to
-      t.datetime :updated_at
       t.references :user,
                    foreign_key: true,
                    null: false
       t.references :student,
                    foreign_key: true
+      t.timestamps
     end
 
     add_presence_constraint :identities, :first_name
@@ -27,7 +27,6 @@ class CreateIdentities < ActiveRecord::Migration[5.1]
     add_null_constraint :identities, :type
     add_null_constraint :identities, :gender
     add_null_constraint :identities, :date_of_birth
-    add_null_constraint :identities, :updated_at
 
     add_length_constraint :identities, :first_name, less_than_or_equal_to: 255
     add_length_constraint :identities, :last_name, less_than_or_equal_to: 255

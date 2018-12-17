@@ -12,7 +12,7 @@ class CreateAddresses < ActiveRecord::Migration[5.1]
       t.references :user,
                    null: false,
                    foreign_key: true
-      t.datetime :updated_at
+      t.timestamps
     end
 
     add_null_constraint :addresses, :type
