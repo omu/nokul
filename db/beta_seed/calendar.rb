@@ -6,7 +6,7 @@ event_titles.each do |category, events|
   events.each do |event|
     CalendarTitle.create(name: event['title'], identifier: "#{category}_#{event['name']}")
   end
-  progress_bar.increment
+  progress_bar&.increment
 end
 
 CalendarType.create(name: 'Lisans - Önlisans')
