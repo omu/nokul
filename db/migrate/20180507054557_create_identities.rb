@@ -18,7 +18,8 @@ class CreateIdentities < ActiveRecord::Migration[5.1]
                    null: false
       t.references :student,
                    foreign_key: true
-      t.timestamps
+      t.datetime :created_at, default: -> { 'CURRENT_TIMESTAMP' }
+      t.datetime :updated_at, default: -> { 'CURRENT_TIMESTAMP' }
     end
 
     add_presence_constraint :identities, :first_name
@@ -27,6 +28,8 @@ class CreateIdentities < ActiveRecord::Migration[5.1]
     add_null_constraint :identities, :type
     add_null_constraint :identities, :gender
     add_null_constraint :identities, :date_of_birth
+    add_null_constraint :identities, :updated_at
+    add_null_constraint :identities, :created_at
 
     add_length_constraint :identities, :first_name, less_than_or_equal_to: 255
     add_length_constraint :identities, :last_name, less_than_or_equal_to: 255
