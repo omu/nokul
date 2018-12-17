@@ -128,8 +128,9 @@ jobs:
       - restore_cache:
           <<: *restore_yarn
       - run: bundle --path vendor/bundle --without development
+      - run: sudo apt install -y postgresql-client || true
       - run: bin/yarn install
-      - run: bundle exec rake db:create db:migrate
+      - run: bundle exec rake db:create db:structure:load
       - run: bundle exec rake test
   deploy_develop:
     machine:
