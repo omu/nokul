@@ -58,6 +58,7 @@ module CourseManagement
       group = available_course_groups(:course_group_to_delete)
 
       assert_difference('AvailableCourseGroup.count', -1) do
+        AvailableCourse.reset_counters(group.available_course.id, :groups_count)
         delete available_course_available_course_group_path(group.available_course, group)
       end
 
