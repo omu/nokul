@@ -1,4 +1,4 @@
-## TL;DR
+## Rules
 
 - `foreign_key` türündeki sütunlar için, eğer arada `optional: true` bir ilişki yoksa `null: false` kullanın.
 
@@ -26,8 +26,8 @@ PostgreSQL'de `NOT NULL` durumu hem `CONSTRAINT` olarak, hem de `CHECK` olarak t
     Column    |          Type          | Collation | Nullable |              Default
 --------------+------------------------+-----------+----------+------------------------------------
  id           | bigint                 |           | not null | nextval('cities_id_seq'::regclass)
- name         | character varying(255) |           | not null | 
- country_id   | bigint                 |           | not null | 
+ name         | character varying(255) |           | not null |
+ country_id   | bigint                 |           | not null |
 Indexes:
     "cities_pkey" PRIMARY KEY, btree (id)
     "cities_name_unique" UNIQUE CONSTRAINT, btree (name) DEFERRABLE
@@ -47,8 +47,8 @@ Indexes:
     Column    |          Type          | Collation | Nullable |              Default
 --------------+------------------------+-----------+----------+------------------------------------
  id           | bigint                 |           | not null | nextval('cities_id_seq'::regclass)
- name         | character varying(255) |           | not null | 
- country_id   | bigint                 |           |          | 
+ name         | character varying(255) |           | not null |
+ country_id   | bigint                 |           |          |
 Indexes:
     "cities_pkey" PRIMARY KEY, btree (id)
     "cities_name_unique" UNIQUE CONSTRAINT, btree (name) DEFERRABLE

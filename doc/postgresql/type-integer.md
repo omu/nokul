@@ -1,4 +1,4 @@
-## TL;DR
+## Rules
 
 - Integer'lar üzerinde `limit: N` kullanmayın.
 

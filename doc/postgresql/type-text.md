@@ -1,3 +1,3 @@
-## TL;DR
+## Rules
 
 > 'String' türü için hazırlanmış dokümana bakınız.

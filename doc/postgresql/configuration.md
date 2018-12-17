@@ -14,6 +14,8 @@ psql -U postgres
 show config_file;
 ```
 
+ile konumunu görebilirsiniz.
+
 ## Genel Ayarlar
 
 Yerel makinanızda sorgu istatistiklerini takip edebilmek için konfigürasyon dosyasının sonuna aşağıdaki satırları ekleyerek `pg_stat` eklentisini aktive edin:

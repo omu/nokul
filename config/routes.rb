@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   require 'sidekiq/web'
   authenticate :user do
     mount Sidekiq::Web, at: 'sidekiq'
-    mount PgHero::Engine, at: 'pghero'
   end
+
+  mount PgHero::Engine, at: 'postgres'
 
   root to: 'home#index'
 

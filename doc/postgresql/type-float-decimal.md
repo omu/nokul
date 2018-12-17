@@ -1,4 +1,4 @@
-## TL;DR
+## Rules
 
 - `float`: Kesinliğin çok önemli olmadığı, yalnızca virgülden sonraki 3-5 basamak ile ilgilendiğiniz, ve bu rakamlar ile yoğun aritmedik işlem yapacağınız durumlarda kullanın.
 - `decimal`: Kesinliğin çok önemli olduğu (örneğin ödeme işlemleri), hatta performanstan da önemli olduğu durumlarda kullanın.
