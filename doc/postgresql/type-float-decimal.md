@@ -74,7 +74,7 @@ Buradan varılacak sonuçlar:
 - Q: Madem öyle `float` türünü nerede kullanabiliriz? Kim girdiği değerin tutarsız ve girdiğinden farklı bir değer olmasını ister? Hangi veri buna örnek olabilir?
 
 1. `float`'ın kullanışlı olduğu durumlardan biri büyük veriler. Örneğin 10^20 gibi bir rakamı `numeric` olarak tutamazken, `float` olarak tutabiliyoruz.
-1. `float` türü, `decimal`'a göre çok hızlı çalışmakta. Küsüratlı sayılar üzerinde yoğun çarpma, bölme, karekök alma ve benzeri işlemler gerçekleştiriyorsak, `numeric` türü CPU spike'larına yol açabiliyor, `float` bu dezavantajı ortadan kaldırıyor - ancak `exact` değil.
+1. `float` türü, `decimal`'a göre çok hızlı çalışmakta. Küsuratlı sayılar üzerinde yoğun çarpma, bölme, karekök alma ve benzeri işlemler gerçekleştiriyorsak, `numeric` türü CPU spike'larına yol açabiliyor, `float` bu dezavantajı ortadan kaldırıyor - ancak `exact` değil.
 
 ### Referanslar
 
