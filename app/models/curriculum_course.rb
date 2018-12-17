@@ -19,7 +19,7 @@ class CurriculumCourse < ApplicationRecord
   delegate :code, :credit, :course_type, :name, to: :course
 
   # callbacks
-  after_create do
-    update(type: (curriculum_course_group_id.nil? ? :compulsory : :elective))
+  before_validation do
+    self.type = curriculum_course_group_id.nil? ? :compulsory : :elective
   end
 end
