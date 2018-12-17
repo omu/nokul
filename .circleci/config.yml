@@ -141,7 +141,7 @@ jobs:
           name: Deploy Develop to Dokku
           command: |
             git remote add beta dokku@app.omu.sh:nokul-develop &&
-            git push develop beta:master
+            git push beta develop:master
   deploy_master:
     machine:
       enabled: true
