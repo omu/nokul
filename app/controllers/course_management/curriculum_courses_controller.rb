@@ -42,7 +42,7 @@ module CourseManagement
     end
 
     def curriculum_course_params
-      params.require(:curriculum_course).permit(:course_id, :ects)
+      params.require(:curriculum_course).permit(:course_id, :ects, :type)
     end
   end
 end
