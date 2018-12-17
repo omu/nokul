@@ -16,7 +16,7 @@ class MeetingAgendaTest < ActiveSupport::TestCase
 
   # validations: presence
   %i[
-    agenda_id
+    agenda
     sequence_no
   ].each do |property|
     test "presence validations for #{property} of a meeting agenda" do
