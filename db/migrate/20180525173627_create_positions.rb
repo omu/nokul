@@ -3,11 +3,17 @@
 class CreatePositions < ActiveRecord::Migration[5.2]
   def change
     create_table :positions do |t|
-      t.date :start_date, null: false
+      t.date :start_date
       t.date :end_date
-      t.references :duty
-      t.references :administrative_function
+      t.references :duty,
+                   null: false,
+                   foreign_key: true
+      t.references :administrative_function,
+                   null: false,
+                   foreign_key: true
       t.timestamps
     end
+
+    add_null_constraint :positions, :start_date
   end
 end

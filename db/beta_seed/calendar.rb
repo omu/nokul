@@ -1,11 +1,14 @@
 # frozen_string_literal: true
 
 event_titles = YAML.load_file(Tenant::Path.db.join('event_titles.yml'))
+progress_bar = ProgressBar.spawn('CalendarTitle', event_titles.count)
 event_titles.each do |category, events|
   events.each do |event|
     CalendarTitle.create(name: event['title'], identifier: "#{category}_#{event['name']}")
   end
+  progress_bar.increment
 end
+
 CalendarType.create(name: 'Lisans - Önlisans')
 CalendarType.create(name: 'Yüksek Lisans')
 CalendarType.create(name: 'Ali Fuat Başgil Hukuk Fakültesi')
@@ -15,9 +18,11 @@ CalendarType.create(name: 'Diş Hekimliği Fakültesi')
 CalendarType.create(name: 'Veteriner Fakültesi')
 CalendarType.create(name: 'Yaz Dönemi')
 CalendarType.create(name: 'Öğrenci')
+
 CalendarTitle.find_each do |title|
-  CalendarTitleType.create(type: CalendarType.first, title: title, status: :active)
+  CalendarTitleType.create(type: CalendarType.first, title: title, active: true)
 end
+
 AcademicCalendar.create(
   name: '2017-2018 Eğitim Öğretim Yılı Akademik Takvimi',
   academic_term: AcademicTerm.first,
@@ -32,7 +37,7 @@ AcademicCalendar.create(
   calendar_type: CalendarType.first,
   senate_decision_date: '12.04.2018',
   senate_decision_no: '2018/112',
-  description: ''
+  description: nil
 )
 CalendarEvent.create(
   academic_calendar: AcademicCalendar.first,

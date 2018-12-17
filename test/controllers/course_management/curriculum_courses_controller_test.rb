@@ -17,7 +17,7 @@ module CourseManagement
 
     test 'should create curriculum course' do
       parameters = {
-        course_id: @curriculum_semester.available_courses.first.id, ects: 5
+        course_id: @curriculum_semester.available_courses.first.id, ects: 5, type: 'compulsory'
       }
       assert_difference('CurriculumCourse.count') do
         post curriculum_semester_curriculum_courses_path(

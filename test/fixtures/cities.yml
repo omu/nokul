@@ -22,3 +22,7 @@ stockholm:
   name: Stockholm
   alpha_2_code: SE-11
   country: sweden
+adana:
+  name: Adana
+  alpha_2_code: TR-01
+  country: turkey

@@ -20,6 +20,9 @@ class Curriculum < ApplicationRecord
   # dynamic_search
   search_keys :unit_id, :status
 
+  # enumerations
+  enum status: { passive: 0, active: 1 }
+
   # relations
   belongs_to :unit
   has_many :curriculum_programs, dependent: :destroy
@@ -37,13 +40,9 @@ class Curriculum < ApplicationRecord
   accepts_nested_attributes_for :semesters, reject_if: :all_blank, allow_destroy: true
 
   # validations
-  validates :name, presence: true, uniqueness: { scope: :unit_id }
-  validates :programs, presence: true
+  validates :name, presence: true, uniqueness: { scope: :unit_id }, length: { maximum: 255 }
   validates :semesters_count, numericality: { greater_than_or_equal_to: 0 }
-  validates :status, presence: true
-
-  # enumerations
-  enum status: { passive: 0, active: 1 }
+  validates :status, inclusion: { in: statuses.keys }
 
   # custom methods
   def build_semesters(number_of_semesters: 0, type: :periodic)

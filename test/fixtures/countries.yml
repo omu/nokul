@@ -21,7 +21,7 @@ denmark:
   yoksis_code: 8
 norway:
   name: Norveç
-  alpha_2_code: NO
+  alpha_2_code: 'NO'
   alpha_3_code: NOR
   numeric_code: 578
   mernis_code: 9943

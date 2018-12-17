@@ -16,6 +16,7 @@ class Unit < ApplicationRecord
 
   # callbacks
   before_save :cache_ancestry
+  before_save { self.name = name.capitalize_all }
 
   # relations
   has_ancestry
@@ -48,13 +49,12 @@ class Unit < ApplicationRecord
   has_many :available_courses, dependent: :destroy
 
   # validations
-  validates :yoksis_id, uniqueness: true, allow_blank: true, numericality: { only_integer: true }, length: { is: 6 }
-  validates :detsis_id, uniqueness: true, allow_blank: true, numericality: { only_integer: true }, length: { is: 8 }
-  validates :name, presence: true, uniqueness: { scope: %i[ancestry unit_status] }
-  validates :duration, numericality: { only_integer: true }, allow_blank: true, inclusion: 1..8
-
-  # callbacks
-  before_save { self.name = name.capitalize_all }
+  validates :name, presence: true, uniqueness: { scope: %i[ancestry unit_status] }, length: { maximum: 255 }
+  validates :yoksis_id, allow_nil: true, uniqueness: true, numericality: { only_integer: true }, length: { is: 6 }
+  validates :detsis_id, allow_nil: true, uniqueness: true, numericality: { only_integer: true }, length: { is: 8 }
+  validates :osym_id, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :foet_code, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :duration, allow_nil: true, numericality: { only_integer: true }, inclusion: 1..8
 
   # scopes
   scope :active,            -> { where(unit_status: UnitStatus.active) }

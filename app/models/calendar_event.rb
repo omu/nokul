@@ -23,8 +23,10 @@ class CalendarEvent < ApplicationRecord
   scope :active, -> { where(academic_term: AcademicTerm.active) }
 
   def set_calendar_type_and_term
-    update(calendar_type_id: academic_calendar.calendar_type.id,
-           academic_term_id: academic_calendar.academic_term.id)
+    update(
+      calendar_type: academic_calendar.calendar_type,
+      academic_term: academic_calendar.academic_term
+    )
   end
 
   def proper_range?

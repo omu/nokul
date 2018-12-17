@@ -18,10 +18,11 @@ class AcademicCalendar < ApplicationRecord
   accepts_nested_attributes_for :calendar_events, allow_destroy: true
 
   # validations
-  validates :name, presence: true
+  validates :name, presence: true, length: { maximum: 255 }
   validates :senate_decision_date, presence: true
-  validates :senate_decision_no, presence: true
+  validates :senate_decision_no, presence: true, length: { maximum: 255 }
   validates :academic_term, uniqueness: { scope: :calendar_type }
+  validates :description, length: { maximum: 65_535 }
   validates :units, presence: true, on: :update
 
   # delegates
