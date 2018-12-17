@@ -129,7 +129,7 @@ jobs:
           <<: *restore_yarn
       - run: bundle --path vendor/bundle --without development
       - run: bin/yarn install
-      - run: bundle exec rake db:create db:schema:load
+      - run: bundle exec rake db:create db:structure:load
       - run: bundle exec rake test
   deploy_develop:
     machine:
