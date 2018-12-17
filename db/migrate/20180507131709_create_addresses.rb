@@ -12,12 +12,14 @@ class CreateAddresses < ActiveRecord::Migration[5.1]
       t.references :user,
                    null: false,
                    foreign_key: true
-      t.timestamps
+      t.datetime :updated_at, default: -> { 'CURRENT_TIMESTAMP' }
+      t.datetime :created_at, default: -> { 'CURRENT_TIMESTAMP' }
     end
 
     add_null_constraint :addresses, :type
-    add_presence_constraint :addresses, :full_address
     add_null_constraint :addresses, :updated_at
+    add_null_constraint :addresses, :created_at
+    add_presence_constraint :addresses, :full_address
 
     add_length_constraint :addresses, :phone_number, less_than_or_equal_to: 255
     add_length_constraint :addresses, :full_address, less_than_or_equal_to: 255
