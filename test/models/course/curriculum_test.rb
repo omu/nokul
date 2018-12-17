@@ -79,6 +79,7 @@ class CurriculumTest < ActiveSupport::TestCase
 
   # custom methods
   test 'build_semester method' do
+    Curriculum.reset_counters(@curriculum.id, :semesters_count)
     @curriculum.semesters.destroy_all
     @curriculum.build_semesters(number_of_semesters: 8, type: :periodic)
     assert_equal 8, @curriculum.semesters.size
