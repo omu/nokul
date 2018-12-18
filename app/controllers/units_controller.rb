@@ -47,7 +47,7 @@ class UnitsController < ApplicationController
   end
 
   def curriculums
-    @curriculums = @unit.curriculums.active.order(:name)
+    @curriculums = @unit.managed_curriculums.active.order(:name)
     render json: @curriculums
   end
 
