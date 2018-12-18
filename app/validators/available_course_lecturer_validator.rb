@@ -2,8 +2,8 @@
 
 class AvailableCourseLecturerValidator < ActiveModel::Validator
   def validate(record)
-    lecturers = record.group.lecturers.where.not(id: record)
-    return unless record.coordinator && lecturers.pluck(:coordinator).any?
+    lecturers = record.group.lecturers.reject { |lecturer| lecturer.equal?(record) }
+    return unless record.coordinator && lecturers.map(&:coordinator).any?
 
     record.errors[:coordinator] << I18n.t('coordinator', scope: %i[validators available_course_lecturer])
   end
