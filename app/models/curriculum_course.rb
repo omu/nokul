@@ -14,12 +14,13 @@ class CurriculumCourse < ApplicationRecord
   # validations
   validates :ects, numericality: { greater_than: 0 }
   validates :type, inclusion: { in: types.keys }
+  validates_with CurriculumCourseValidator
 
   # delegates
   delegate :code, :credit, :course_type, :name, to: :course
 
   # callbacks
   before_validation do
-    self.type = curriculum_course_group_id.nil? ? :compulsory : :elective
+    self.type = curriculum_course_group.nil? ? :compulsory : :elective
   end
 end

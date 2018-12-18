@@ -32,6 +32,13 @@ class CurriculumCourseGroupTest < ActiveSupport::TestCase
     end
   end
 
+  # validations: uniqueness
+  test 'curriculum course group should be unique by course group' do
+    fake = @curriculum_course_group.dup
+    assert_not fake.valid?
+    assert_not_empty fake.errors[:course_group_id]
+  end
+
   # validations: numericality
   test 'numericality validations for ects of a curriculum course group' do
     @curriculum_course_group.ects = 0
