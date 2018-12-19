@@ -5,26 +5,31 @@
 var DynamicSelect = function (parameters) { // eslint-disable-line no-unused-vars
   function init () {
     $.each(parameters, function (k, parameter) {
-      $(parameter['el']).change(function (event) {
+      $(parameter.el).change(function (event, value = undefined) {
         var path = generateSourcePath(parameter)
         var config = {
-          label_attribute: parameter['label_attribute'],
-          value_attribute: parameter['value_attribute'],
-          placeholder: parameter['placeholder'],
-          target: parameter['target']
+          value: value,
+          label_attribute: parameter.label_attribute,
+          value_attribute: parameter.value_attribute,
+          placeholder: parameter.placeholder,
+          target: parameter.target
         }
-        reset($(parameter['reset_selectors']))
+        reset($(parameter.reset_selectors))
         builder(path, config)
       })
+      if ('after_initialize' in parameter) parameter.after_initialize()
     })
   }
 
   function builder (path, config) {
     $.getJSON(path, function (response) {
       var options = new OptionsBuilder(
-        response, config.placeholder, { 'labelMethod': config.label_attribute, 'valueMethod': config.value_attribute }
+        response, config.placeholder, {
+          labelMethod: config.label_attribute,
+          valueMethod: config.value_attribute
+        }
       )
-      options.setSelectBox($(config.target))
+      options.setSelectBox($(config.target), config.value)
     })
   }
 
@@ -77,10 +82,11 @@ var OptionsBuilder = function (datas, placeholder, config = {}) {
     return `<option value="">${placeholder}</option>`
   }
 
-  function setSelectBox (el) {
+  function setSelectBox (el, value = undefined) {
     var options = build()
     el.html(options.join(' '))
     el.attr('disabled', false)
+    if (value !== undefined) el.val(value)
   }
 
   return {

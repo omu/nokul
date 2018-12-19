@@ -94,12 +94,16 @@ $(document).ready(function() {
 $(document).ready(function() {
   var parameters = [
     {
-      el: '#country_id',
-      target: '#city_id',
-      params: { 'country_id': '#country_id' },
-      source: '/api/locations/countries/:country_id/cities/',
-      reset_selectors: '#city_id, #district_id',
-      placeholder: 'Şehir Seçiniz'
+      el: '#country_id', // Zorunlu
+      target: '#city_id', // Zorunlu
+      params: { 'country_id': '#country_id' }, // Kaynağa parametre geçirilecekse zorunlu
+      source: '/api/locations/countries/:country_id/cities/', // Zorunlu
+      reset_selectors: '#city_id, #district_id', // Opsiyonel
+      placeholder: 'Şehir Seçiniz', // Opsiyonel
+      after_initialize: function(){ // Opsiyonel
+        var el = $(this['el'])
+        if(el.val() !== '') el.trigger('change', "<%= params[:city_id]%>")
+      }
     },
     {
       el: '#city_id',
@@ -133,7 +137,11 @@ DynamicSelect Parametreleri ve Kullanımı
   reset_selectors: '#reset',
   label_attribute: 'name',
   value_attribute: 'id',
-  placeholder: 'Placeholder'
+  placeholder: 'Placeholder',
+  after_initialize: function(){
+    console.log(this.target)
+    console.log(this.source)
+  }
 }
 ```
 
@@ -190,3 +198,9 @@ DynamicSelect Parametreleri ve Kullanımı
 - **placeholder**
   `selectbox`'lara placeholder eklemek için kullanılan parametredir. Bu parametreye
   verieln değer `target` elementi içindir. **Opsiyoneldir.**
+
+- **after_initialize**
+  İlgili elemente `change` event'ı tanımlandıktan sonra yapılmasını istediğiniz
+  işlemleri bir fonksiyon halinde belirtirek çalıştırmanızı sağlar.
+  `after_initialize` değer olarak her aman bir fonksiyon bekler.
+  Foksiyon içerisinde `this` ile parametre değerlerine erişebilirsiniz. **Opsiyoneldir.**
