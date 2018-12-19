@@ -197,7 +197,7 @@ DynamicSelect Parametreleri ve Kullanımı
 
 - **placeholder**
   `selectbox`'lara placeholder eklemek için kullanılan parametredir. Bu parametreye
-  verieln değer `target` elementi içindir. **Opsiyoneldir.**
+  verilen değer `target` elementi içindir. **Opsiyoneldir.**
 
 - **after_initialize**
   İlgili elemente `change` event'ı tanımlandıktan sonra yapılmasını istediğiniz
