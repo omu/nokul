@@ -109,6 +109,7 @@ en:
         form_title: Create an Available Course
       search:
         <<: *available_course_attributes
+        smart_search_placeholder: Course Name / Course Code
       form:
         unit: Unit
       show:
