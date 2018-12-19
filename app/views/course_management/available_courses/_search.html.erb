@@ -22,38 +22,36 @@
          data-parent="#SearchForms">
       <div class="card-body">
         <%= form_tag available_courses_path, method: :get do %>
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="form-group">
+          <div class="row">
+            <div class="form-group col-sm-12">
+              <%= label_tag :term, t('smart_search') %>
+              <%= text_field_tag :term,
+                                  params[:term],
+                                  placeholder: t('.smart_search_placeholder'),
+                                  class: 'form-control' %>
+            </div>
+            <div class="form-group col-sm-12">
               <%= label_tag(:unit_id, t('.unit')) %>
               <%= select_tag(:unit_id,
-                             options_from_collection_for_select(Unit.active.coursable.order(:name), :id, :names_depth_cache, params[:unit_id]),
-                             include_blank: true,
-                             class: 'form-control',
-                             style: 'width: 100%') %>
-          </div>
-          </div>
-        </div>
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="form-group">
-                <%= label_tag(:curriculum_id, t('.curriculum')) %>
-                <%= select_tag(:curriculum_id,
-                              options_from_collection_for_select(Curriculum.all, :id, :name, params[:curriculum_id]),
+                              options_from_collection_for_select(Unit.active.coursable.order(:name), :id, :names_depth_cache, params[:unit_id]),
                               include_blank: true,
                               class: 'form-control',
                               style: 'width: 100%') %>
-              </div>
             </div>
-            <div class="col-sm-6">
-              <div class="form-group">
-                <%= label_tag(:academic_term_id, t('.academic_term')) %>
-                <%= select_tag(:academic_term_id,
-                              options_from_collection_for_select(AcademicTerm.all, :id, lambda { |term| full_name(term) }, params[:academic_term_id]),
-                              include_blank: true,
-                              class: 'form-control',
-                              style: 'width: 100%') %>
-              </div>
+            <div class="form-group col-sm-6">
+              <%= label_tag(:curriculum_id, t('.curriculum')) %>
+              <%= select_tag(:curriculum_id,
+                            include_blank: true,
+                            class: 'form-control',
+                            style: 'width: 100%') %>
+            </div>
+            <div class="form-group col-sm-6">
+              <%= label_tag(:academic_term_id, t('.academic_term')) %>
+              <%= select_tag(:academic_term_id,
+                            options_from_collection_for_select(AcademicTerm.all, :id, lambda { |term| full_name(term) }, params[:academic_term_id]),
+                            include_blank: true,
+                            class: 'form-control',
+                            style: 'width: 100%') %>
             </div>
           </div>
           <div class="row">
@@ -69,7 +67,7 @@
 
 <script type='text/javascript'>
   $(document).ready(function() {
-    $('#unit_id, #curriculum_id').select2();
+    $('#unit_id, #curriculum_id, #academic_term_id').select2();
 
     var parameters = [
       {
@@ -79,7 +77,11 @@
         source: '/units/:unit_id/curriculums/',
         label_attribute: 'name',
         reset_selectors: '#curriculum_id',
-        placeholder: 'Müfredat Seçiniz'
+        placeholder: 'Müfredat Seçiniz',
+        after_initialize: function(){
+          var el = $(this['el'])
+          if(el.val() !== '') el.trigger('change', "<%= params[:curriculum_id]%>")
+        }
       }
     ]
     var dynamic_select = new DynamicSelect(parameters)
