@@ -34,7 +34,6 @@ tr:
         course_ids: Dersler
         courses: Dersler
         name: Ders Grup Adı
-        search_placeholder: Ders Grup Adı / Birim Adı / Ders Grup Türü Adı
         total_ects_condition: Toplam AKTS Koşulu
         unit: Birim
       course_group_type: &course_group_type_attributes
@@ -177,6 +176,9 @@ tr:
         name: Ders Grup Adı
         total_ects_condition: Toplam AKTS Koşulu
         unit: Birim
+      search:
+        <<: *course_group_attributes
+        smart_search_placeholder: Ders Grup adı
       update:
         success: Ders grubu başarıyla güncellendi.
     course_group_types:

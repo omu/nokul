@@ -2,13 +2,17 @@
 
 class CourseGroup < ApplicationRecord
   # search
+  include DynamicSearch
   include PgSearch
+
   pg_search_scope(
     :search,
-    against: %i[name unit_id course_group_type_id],
-    associated_against: { unit: :name, course_group_type: :name },
+    against: %i[name],
     using: { tsearch: { prefix: true } }
   )
+
+  # dynamic_search
+  search_keys :unit_id, :course_group_type_id
 
   # relations
   belongs_to :unit

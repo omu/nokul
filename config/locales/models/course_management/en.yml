@@ -34,7 +34,6 @@ en:
         course_ids: Courses
         courses: Courses
         name: Course Group Name
-        search_placeholder: Course Group Name / Unit Name / Course Group Type Name
         total_ects_condition: Total ECTS Condition
         unit: Unit
       course_group_type: &course_group_type_attributes
@@ -171,6 +170,9 @@ en:
         new_course_group_link: Add a New Course Group
       new:
         form_title: Create a Course Group
+      search:
+        <<: *course_group_attributes
+        smart_search_placeholder: Course Group Name
       show:
         course_group_type: Course Group Type
         courses: Courses
