@@ -10,7 +10,7 @@ two:
   ects: 2
   type: compulsory
 
-three:
+elective_course:
   course: test
   curriculum_semester: bilgisayar_muh_mufredati_birinci_donem
   curriculum_course_group: one

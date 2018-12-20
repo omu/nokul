@@ -2,12 +2,14 @@
 
 module CourseManagement
   class CourseGroupsController < ApplicationController
-    include PagyBackendWithHelpers
+    include Pagy::Backend
 
     before_action :set_course_group, only: %i[show edit update destroy]
 
     def index
-      @course_groups = pagy_by_search(CourseGroup.includes(:unit, :course_group_type))
+      course_groups = CourseGroup.includes(:unit, :course_group_type)
+                                 .dynamic_search(search_params(CourseGroup))
+      @pagy, @course_groups = pagy(course_groups)
     end
 
     def show

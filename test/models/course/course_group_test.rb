@@ -32,4 +32,14 @@ class CourseGroupTest < ActiveSupport::TestCase
       assert_not_empty @course_group.errors[property]
     end
   end
+
+  # validations: uniqueness
+  test 'uniqueness validations for name of a course group' do
+    fake = @course_group.dup
+    assert_not fake.valid?
+    assert_not_empty fake.errors[:name]
+    fake.unit_id = units(:matematik_ve_fen_bilimleri_egitimi_bolumu).id
+    fake.valid?
+    assert_empty fake.errors[:name]
+  end
 end

@@ -34,16 +34,17 @@ class CurriculumTest < ActiveSupport::TestCase
   end
 
   # validations: presence
-  %i[
-    name
-    semesters_count
-    status
-    unit
-  ].each do |property|
+  {
+    name: :name,
+    semesters_count: :semesters_count,
+    status: :status,
+    unit: :unit,
+    program_ids: :programs
+  }.each do |property, error_message_key|
     test "presence validations for #{property} of a curriculum" do
       @curriculum.send("#{property}=", nil)
       assert_not @curriculum.valid?
-      assert_not_empty @curriculum.errors[property]
+      assert_not_empty @curriculum.errors[error_message_key]
     end
   end
 

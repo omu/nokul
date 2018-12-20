@@ -3,6 +3,13 @@
 class AvailableCourse < ApplicationRecord
   # search
   include DynamicSearch
+  include PgSearch
+
+  pg_search_scope(
+    :search,
+    associated_against: { course: %i[name code] },
+    using: { tsearch: { prefix: true } }
+  )
 
   # dynamic_search
   search_keys :unit_id, :curriculum_id, :academic_term_id
