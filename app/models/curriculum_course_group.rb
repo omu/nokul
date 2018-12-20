@@ -12,6 +12,7 @@ class CurriculumCourseGroup < ApplicationRecord
 
   # validations
   validates :ects, numericality: { greater_than: 0 }
+  validates :course_group_id, uniqueness: { scope: :curriculum_semester_id }
 
   # delegates
   delegate :name, to: :course_group

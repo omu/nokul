@@ -19,19 +19,22 @@ class DepartmentCourse
     course_name
     course_type_code
     credit
+    department_yoksis_id
     ects
+    group_name
+    laboratory
     lang
     practice
     program_type
+    program_yoksis_id
     semester
     theoric
     type
     year
-    yoksis_id
   ]
 
   def unit
-    @unit ||= Unit.find_by(yoksis_id: yoksis_id)
+    @unit ||= Unit.find_by(yoksis_id: department_yoksis_id)
   end
 
   def language
@@ -45,7 +48,7 @@ class DepartmentCourse
   def create
     Course.create(
       code: code, course_type_id: course_type.id,
-      credit: credit, laboratory: 0,
+      credit: credit, laboratory: laboratory,
       language_id: language.id, name: course_name,
       practice: practice, program_type: program_type,
       status: :active, theoric: theoric, unit_id: unit.id
@@ -73,7 +76,7 @@ class DepartmentCourse
   end
 
   def course_group
-    GroupCourse.find_by(course_id: course.id).course_group
+    CourseGroup.find_by(name: group_name, unit_id: unit.id)
   end
 
   def find_or_create_curriculum_course_group
@@ -100,10 +103,12 @@ class DepartmentCourses < Simple::Collection
     @unit ||= first.unit
   end
 
+  def programs
+    @programs ||= Unit.where(yoksis_id: first.program_yoksis_id.split(','))
+  end
+
   def elective_courses
-    @elective_courses = select(&:elective?).group_by do |course|
-      "Secmeli Ders Grubu #{course.year}-#{course.semester}"
-    end
+    @elective_courses = select(&:elective?).group_by(&:group_name)
   end
 
   def create_course_groups
@@ -119,26 +124,29 @@ class DepartmentCourses < Simple::Collection
     end
   end
 
-  def create_curriculum
+  def create_curriculum(number_of_semesters, semester_type)
     curriculum = Curriculum.new(
       name: "#{unit.name} Müfredatı",
       status: 'active',
-      unit_id: unit.id
+      unit_id: unit.id,
+      program_ids: programs.pluck(:id)
     )
-    curriculum.build_semesters(number_of_semesters: 8, type: :periodic)
+    curriculum.build_semesters(number_of_semesters: number_of_semesters, type: semester_type)
     curriculum.save
   end
 end
 
-def build_curriculum(file)
+def build_curriculum(source, number_of_semesters: 8, semester_type: :periodic)
   courses = DepartmentCourses.from_hashes(
-    CSV.foreach(file, headers: true, col_sep: '|', header_converters: :symbol).map(&:to_h)
+    CSV.foreach(source, headers: true, col_sep: '|', header_converters: :symbol, skip_blanks: true).map(&:to_h)
   )
 
   courses.each(&:create)
   courses.create_course_groups
-  courses.create_curriculum
+  courses.create_curriculum(number_of_semesters, semester_type)
   courses.each(&:create_curriculum_course)
 end
 
-build_curriculum(Rails.root.join('db', 'seed_data', 'courses_for_bote.csv'))
+%w[courses_for_bote courses_for_tarim_ekonomisi].each do |file_name|
+  build_curriculum(Rails.root.join('db', 'seed_data', "#{file_name}.csv"))
+end

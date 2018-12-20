@@ -1,0 +1,77 @@
+department_yoksis_id|program_yoksis_id|lang|program_type|type|year|semester|group_name|course_type_code|code|course_name|theoric|practice|laboratory|credit|ects
+122264|169295|Türkçe|undergraduate|compulsory|1|1||AE|ATİ101|Atatürk İlkeleri ve İnkılap Tarihi I|2|0|0|2.0|2.0
+122264|169295|Türkçe|undergraduate|compulsory|1|1||AE|İSG101|İş Sağlığı ve Güvenliği I|2|0|0|2.0|2.0
+122264|169295|Türkçe|undergraduate|compulsory|1|1||AE|TBBİO107|Botanik-I|2|2|0|3.0|4.0
+122264|169295|Türkçe|undergraduate|compulsory|1|1||AE|TBBİO109|Zooloji-I|3|0|0|3.0|4.0
+122264|169295|Türkçe|undergraduate|compulsory|1|1||AE|TBFİZ107|Fizik I|3|0|0|3.0|4.0
+122264|169295|Türkçe|undergraduate|compulsory|1|1||AE|TBKİM107|Genel Kimya|2|0|0|2.0|4.0
+122264|169295|Türkçe|undergraduate|compulsory|1|1||AE|TBMAT107|Matematik I|3|0|0|3.0|4.0
+122264|169295|Türkçe|undergraduate|compulsory|1|1||AE|TDİ101|Türk Dili I|2|0|0|2.0|2.0
+122264|169295|Türkçe|undergraduate|compulsory|1|1||AE|YD101|Yabancı Dil I|2|0|0|2.0|2.0
+122264|169295|Türkçe|undergraduate|compulsory|1|1||AE|ZMT109|Tarım Tarihi ve Deontolojisi I|2|0|0|2.0|4.0
+122264|169295|Türkçe|undergraduate|compulsory|1|2||AE|ATİ102|Atatürk İlkeleri ve İnkılap Tarihi II|2|0|0|2.0|1.0
+122264|169295|Türkçe|undergraduate|compulsory|1|2||AE|İSG102|İş Sağlığı ve Güvenliği II|2|0|0|2.0|2.0
+122264|169295|Türkçe|undergraduate|compulsory|1|2||AE|TBMAT108|Matematik II|3|0|0|3.0|4.0
+122264|169295|Türkçe|undergraduate|compulsory|1|2||AE|TDİ102|Türk Dili II|2|0|0|2.0|1.0
+122264|169295|Türkçe|undergraduate|compulsory|1|2||AE|TEB102|Mikro Ekonomi|2|2|0|3.0|5.0
+122264|169295|Türkçe|undergraduate|compulsory|1|2||AE|YD102|Yabancı Dil II|2|0|0|2.0|2.0
+122264|169295|Türkçe|undergraduate|compulsory|1|2||AE|ZMT102|İstatistik|3|0|0|3.0|4.0
+122264|169295|Türkçe|undergraduate|compulsory|1|2||AE|ZMT104|Meteoroloji|2|0|0|2.0|3.0
+122264|169295|Türkçe|undergraduate|compulsory|1|2||AE|ZMT106|Ekoloji|2|0|0|2.0|6.0
+122264|169295|Türkçe|undergraduate|compulsory|2|3||AE|BBB201|Genel Meyvecilik|2|2|0|3.0|5.0
+122264|169295|Türkçe|undergraduate|compulsory|2|3||AE|TEB201|Tarım Ekonomisi|3|0|0|3.0|4.0
+122264|169295|Türkçe|undergraduate|compulsory|2|3||AE|TMB201|Tarım Makinaları|2|2|0|3.0|4.0
+122264|169295|Türkçe|undergraduate|compulsory|2|3||AE|TYS201|Kültürteknik|2|2|0|3.0|4.0
+122264|169295|Türkçe|undergraduate|compulsory|2|3||AE|ZMT201|Gıda Teknolojisi|3|0|0|3.0|4.0
+122264|169295|Türkçe|undergraduate|compulsory|2|3||AE|ZMT213|Tarım Tarihi ve Deontolojisi|2|0|0|2.0|5.0
+122264|169295|Türkçe|undergraduate|compulsory|2|3||AE|ZTB201|Zootekni|2|2|0|3.0|4.0
+122264|169295|Türkçe|undergraduate|compulsory|2|4||AE|BBB202|Bahçe Bitkileri|2|2|0|3.0|5.0
+122264|169295|Türkçe|undergraduate|compulsory|2|4||AE|BKB202|Bitki Koruma|2|2|0|3.0|4.0
+122264|169295|Türkçe|undergraduate|compulsory|2|4||AE|TBB202|Tarla Bitkileri|2|2|0|3.0|4.0
+122264|169295|Türkçe|undergraduate|compulsory|2|4||AE|TBT202|Tarımsal Biyoteknoloji|2|2|0|3.0|4.0
+122264|169295|Türkçe|undergraduate|compulsory|2|4||AE|TOP202|Toprak Bilgisi|2|2|0|3.0|4.0
+122264|169295|Türkçe|undergraduate|compulsory|2|4||AE|ZMT204|Ölçme Bilgisi|2|2|0|3.0|3.0
+122264|169295|Türkçe|undergraduate|compulsory|2|4||AE|ZMT206|Sürdürülebilir Tarım|2|0|0|2.0|3.0
+122264|169295|Türkçe|undergraduate|compulsory|2|4||STG|ZMT214|Staj-I|0|0|0|0.0|4.0
+122264|169295|Türkçe|undergraduate|compulsory|3|5||AE|TEB301|Tarım ve Gıda Politikası I|3|0|0|3.0|5.0
+122264|169295|Türkçe|undergraduate|compulsory|3|5||AE|TEB303|Makro Ekonomi|3|0|0|3.0|5.0
+122264|169295|Türkçe|undergraduate|compulsory|3|5||AE|TEB305|Tarımsal Üretim Ekonomisi|3|0|0|3.0|5.0
+122264|169295|Türkçe|undergraduate|compulsory|3|5||AE|TEB307|Tarımda Üretici Örgütlenmesi|2|0|0|2.0|5.0
+122264|169295|Türkçe|undergraduate|elective|3|5|Seçmeli Ders Grubu 1|AE|TEB309|Tarımsal Pazarlama|2|0|0|2.0|5.0
+122264|169295|Türkçe|undergraduate|elective|3|5|Seçmeli Ders Grubu 1|AE|TEB311|Köy Sosyolojisi|2|0|0|2.0|5.0
+122264|169295|Türkçe|undergraduate|elective|3|5|Seçmeli Ders Grubu 1|AE|TEB313|Arazi Kullanım Planlanması|2|0|0|2.0|5.0
+122264|169295|Türkçe|undergraduate|compulsory|3|6||AE|TEB302|Tarım ve Gıda Politikası II|3|0|0|3.0|4.0
+122264|169295|Türkçe|undergraduate|compulsory|3|6||AE|TEB304|Proje Hazırlama ve Değerlendirme|2|2|0|3.0|4.0
+122264|169295|Türkçe|undergraduate|compulsory|3|6||AE|TEB306|Tarımsal Yayım ve Haberleşme|2|0|0|2.0|3.0
+122264|169295|Türkçe|undergraduate|compulsory|3|6||AE|TEB308|Tarımsal Kıymet Takdiri|3|0|0|3.0|3.0
+122264|169295|Türkçe|undergraduate|compulsory|3|6||STG|ZMT316|Staj II|0|0|0|0.0|8.0
+122264|169295|Türkçe|undergraduate|elective|3|6|Seçmeli Ders Grubu 2|AE|TEB310|Türkiye Ekonomisi|3|0|0|3.0|4.0
+122264|169295|Türkçe|undergraduate|elective|3|6|Seçmeli Ders Grubu 3|AE|TEB312|Faktör Piyasası|2|0|0|2.0|4.0
+122264|169295|Türkçe|undergraduate|elective|3|6|Seçmeli Ders Grubu 3|AE|TEB314|Çevre Ekonomisi|2|0|0|2.0|4.0
+122264|169295|Türkçe|undergraduate|compulsory|4|7||AE|TEB401|Tarım Ekonomisi Matematiği|1|2|0|2.0|4.0
+122264|169295|Türkçe|undergraduate|compulsory|4|7||AE|TEB403|Tarım Ekonomisi İstatistiği|1|2|0|2.0|5.0
+122264|169295|Türkçe|undergraduate|compulsory|4|7||AE|TEB405|Mesleki Uygulama I|0|4|0|2.0|4.0
+122264|169295|Türkçe|undergraduate|compulsory|4|7||AE|TEB409|Tarım Muhasebesi|3|0|0|3.0|4.0
+122264|169295|Türkçe|undergraduate|elective|4|7|Seçmeli Ders Grubu 4|AE|TEB407|Tarımda Fiyat Analizi|3|0|0|3.0|5.0
+122264|169295|Türkçe|undergraduate|elective|4|7|Seçmeli Ders Grubu 4|AE|TEB411|Uluslararası Tarım Ticareti|3|0|0|3.0|5.0
+122264|169295|Türkçe|undergraduate|elective|4|7|Seçmeli Ders Grubu 4|AE|TEB413|Veri Toplama ve Analiz Teknikleri|3|0|0|3.0|5.0
+122264|169295|Türkçe|undergraduate|elective|4|7|Sosyal Seçmeli 1|AE|SKD501|Yüzme|2|2|0|3.0|3.0
+122264|169295|Türkçe|undergraduate|elective|4|7|Sosyal Seçmeli 1|AE|SKD505|Medya ve İletişim|3|0|0|3.0|3.0
+122264|169295|Türkçe|undergraduate|elective|4|7|Sosyal Seçmeli 1|AE|SKD507|İnsan İlişkileri ve İletişim|3|0|0|3.0|3.0
+122264|169295|Türkçe|undergraduate|elective|4|7|Sosyal Seçmeli 1|AE|SKD511|Anlatma Teknikleri: Yazma Eğitimi|2|2|0|3.0|3.0
+122264|169295|Türkçe|undergraduate|elective|4|7|Sosyal Seçmeli 1|AE|SKD515|Yönetim ve Organizasyon|3|0|0|3.0|3.0
+122264|169295|Türkçe|undergraduate|elective|4|7|Sosyal Seçmeli 1|AE|SKD523|Girişimcilik ve Yenilikcilik|2|0|0|2.0|0.0
+122264|169295|Türkçe|undergraduate|compulsory|4|8||AE|TEB402|Ekonometri|2|2|0|3.0|5.0
+122264|169295|Türkçe|undergraduate|compulsory|4|8||AE|TEB404|Tarım İşletmeciliği ve Planlama|2|2|0|3.0|4.0
+122264|169295|Türkçe|undergraduate|compulsory|4|8||AE|TEB406|Mesleki Uygulama II|0|4|0|2.0|4.0
+122264|169295|Türkçe|undergraduate|compulsory|4|8||AE|TEB408|Tarım Hukuku|2|0|0|2.0|4.0
+122264|169295|Türkçe|undergraduate|compulsory|4|8||AE|ZMT402|Tarımda Girişimcilik|2|0|0|2.0|2.0
+122264|169295|Türkçe|undergraduate|elective|4|8|Seçmeli Ders Grubu 5|AE|TEB410|Türkiye Ab Tarımsal İlişkileri|2|0|0|2.0|5.0
+122264|169295|Türkçe|undergraduate|elective|4|8|Seçmeli Ders Grubu 5|AE|TEB412|İşletme Yönetimi|2|0|0|2.0|5.0
+122264|169295|Türkçe|undergraduate|elective|4|8|Seçmeli Ders Grubu 5|AE|TEB414|Kırsal Kalkınma|2|0|0|2.0|5.0
+122264|169295|Türkçe|undergraduate|elective|4|8|Sosyal Seçmeli 2|AE|SKD501|Yüzme|2|2|0|3.0|3.0
+122264|169295|Türkçe|undergraduate|elective|4|8|Sosyal Seçmeli 2|AE|SKD505|Medya ve İletişim|3|0|0|3.0|3.0
+122264|169295|Türkçe|undergraduate|elective|4|8|Sosyal Seçmeli 2|AE|SKD507|İnsan İlişkileri ve İletişim|3|0|0|3.0|3.0
+122264|169295|Türkçe|undergraduate|elective|4|8|Sosyal Seçmeli 2|AE|SKD511|Anlatma Teknikleri: Yazma Eğitimi|2|2|0|3.0|3.0
+122264|169295|Türkçe|undergraduate|elective|4|8|Sosyal Seçmeli 2|AE|SKD515|Yönetim ve Organizasyon|3|0|0|3.0|3.0
+122264|169295|Türkçe|undergraduate|elective|4|8|Sosyal Seçmeli 2|AE|SKD523|Girişimcilik ve Yenilikcilik|2|0|0|2.0|0.0

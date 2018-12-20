@@ -5,19 +5,19 @@ Uygulamanızda `selectbox` türü inputlar kullanarak ilişkisel verileri
 görüntüleme ve seçebilme işlemlerini hızlı ve kolay bir şekilde yapılması
 sağlayan yardımcı bir js modülüdür.
 
-Temel görevi yukarıda belirtilen seçim işlemleri yapabilmek için yazılmasımanız
+Temel görevi yukarıda belirtilen seçim işlemleri yapabilmek için yazmanız
 gereken `change` event'larını ve `ajax` isteklerini parametrik olarak yönetmenizi
 sağlamaktır.
 
 Yukarıda anlatılan görevini örneklememiz gerekirse;
 sayfanızda `Ülkeler`, `Şehirler` ve `İlçeler` adında 3 adet selectbox türünde
-input'unuzun olduğunu varsayalım. Burada sizinde tahmin edebileceğiniz
+input'unuzun olduğunu varsayalım. Burada sizinde tahmin edebileceğiniz gibi
 ülkenin şehirleri, şehirlerin ise ilçeleri var. Bir ülke seçildiğinde ona bağlı
 şehirlerin `Şehirler` selectbox'ın görüntülenmesi gerekiyor, bu arada eğer
-`İlçeler` selectbox'ında veri varsa bununda sıfırlanması gerekmekiyor,
+`İlçeler` selectbox'ında veri varsa bununda sıfırlanması gerekiyor,
 aynı durum il seçimi içinde geçerli.
 
-Sayfamıza bu işlevselliği kazandırmak için aşağıda iki örnek var.
+Sayfamıza bu işlevselliği kazandırmak için aşağıda karşılaştırmalı iki örnek var.
 
 ```erb
 <div class='form-group col-sm-6'>
@@ -94,12 +94,16 @@ $(document).ready(function() {
 $(document).ready(function() {
   var parameters = [
     {
-      el: '#country_id',
-      target: '#city_id',
-      params: { 'country_id': '#country_id' },
-      source: '/api/locations/countries/:country_id/cities/',
-      reset_selectors: '#city_id, #district_id',
-      placeholder: 'Şehir Seçiniz'
+      el: '#country_id', // Zorunlu
+      target: '#city_id', // Zorunlu
+      params: { 'country_id': '#country_id' }, // Kaynağa parametre geçirilecekse zorunlu
+      source: '/api/locations/countries/:country_id/cities/', // Zorunlu
+      reset_selectors: '#city_id, #district_id', // Opsiyonel
+      placeholder: 'Şehir Seçiniz', // Opsiyonel
+      after_initialize: function(){ // Opsiyonel
+        var el = $(this['el'])
+        if(el.val() !== '') el.trigger('change', "<%= params[:city_id]%>")
+      }
     },
     {
       el: '#city_id',
@@ -133,7 +137,11 @@ DynamicSelect Parametreleri ve Kullanımı
   reset_selectors: '#reset',
   label_attribute: 'name',
   value_attribute: 'id',
-  placeholder: 'Placeholder'
+  placeholder: 'Placeholder',
+  after_initialize: function(){
+    console.log(this.target)
+    console.log(this.source)
+  }
 }
 ```
 
@@ -168,7 +176,7 @@ DynamicSelect Parametreleri ve Kullanımı
   `change` event esnasında resetlenmesini istediğiniz elementlerin belirlenebildiği
   parametredir. **Opsiyoneldir.**
 
-  Resetleme işleminde aşağıdaki cod parçacığı çalıştırılır.
+  Resetleme işleminde aşağıdaki kod parçacığı çalıştırılır.
 
   ```js
     elements.html('')
@@ -189,4 +197,10 @@ DynamicSelect Parametreleri ve Kullanımı
 
 - **placeholder**
   `selectbox`'lara placeholder eklemek için kullanılan parametredir. Bu parametreye
-  verieln değer `target` elementi içindir. **Opsiyoneldir.**
+  verilen değer `target` elementi içindir. **Opsiyoneldir.**
+
+- **after_initialize**
+  İlgili elemente `change` event'ı tanımlandıktan sonra yapılmasını istediğiniz
+  işlemleri bir fonksiyon halinde belirterek çalıştırmanızı sağlar.
+  `after_initialize` değer olarak her zaman bir fonksiyon bekler.
+  Fonksiyon içerisinde `this` ile parametre değerlerine erişebilirsiniz. **Opsiyoneldir.**

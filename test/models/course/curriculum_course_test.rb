@@ -38,6 +38,13 @@ class CurriculumCourseTest < ActiveSupport::TestCase
     assert_not_empty @curriculum_course.errors[:ects]
   end
 
+  # validations: uniqueness
+  test 'curriculum course should be unique by curriculum' do
+    fake = @curriculum_course.dup
+    assert_not fake.valid?
+    assert_not_empty fake.errors[:course]
+  end
+
   # enums
   {
     type: { compulsory: 0, elective: 1 }

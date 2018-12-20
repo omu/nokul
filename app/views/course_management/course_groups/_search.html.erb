@@ -11,7 +11,7 @@
           <%= t('search') %>
         </a>
         <div class="float-right">
-          <%= link_to t('reset'), curriculums_path, class: 'btn btn-warning btn-sm' %>
+          <%= link_to t('reset'), course_groups_path, class: 'btn btn-warning btn-sm' %>
         </div>
       </h5>
     </div>
@@ -21,33 +21,35 @@
          aria-labelledby="Search"
          data-parent="#SearchForms">
       <div class="card-body">
-        <%= form_tag curriculums_path, method: :get do %>
+        <%= form_tag course_groups_path, method: :get do %>
           <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-12">
               <div class="form-group">
                 <%= label_tag :term, t('smart_search') %>
                 <%= text_field_tag :term,
-                                   params[:term],
-                                   placeholder: t('.smart_search_placeholder'),
-                                   class: 'form-control' %>
+                                    params[:term],
+                                    placeholder: t('.smart_search_placeholder'),
+                                    class: 'form-control' %>
               </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-6">
               <div class="form-group">
                 <%= label_tag(:unit_id, t('.unit')) %>
                 <%= select_tag(:unit_id,
-                               options_from_collection_for_select(Unit.active.departments.order(:name), :id, :names_depth_cache, params[:unit_id]),
-                               include_blank: true,
-                               class: 'form-control') %>
+                              options_from_collection_for_select(Unit.active.coursable.order(:name), :id, :names_depth_cache, params[:unit_id]),
+                              include_blank: true,
+                              class: 'form-control',
+                              style: 'width: 100%') %>
               </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-6">
               <div class="form-group">
-                <%= label_tag(:status, t('.status')) %>
-                <%= select_tag(:status,
-                               options_for_select(enum_options_for_select(Curriculum, :status), params[:status]),
-                               include_blank: true,
-                               class: 'form-control') %>
+                <%= label_tag(:course_group_type_id, t('.course_group_type')) %>
+                <%= select_tag(:course_group_type_id,
+                              options_from_collection_for_select(CourseGroupType.all, :id, :name, params[:course_group_type_id]),
+                              include_blank: true,
+                              class: 'form-control',
+                              style: 'width: 100%') %>
               </div>
             </div>
           </div>
@@ -64,6 +66,6 @@
 
 <script type='text/javascript'>
   $(document).ready(function() {
-    $('#unit_id, #status').select2();
+    $('#course_type_id, #unit_id, #course_group_type_id').select2();
   });
 </script>
