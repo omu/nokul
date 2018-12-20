@@ -5,19 +5,19 @@ Uygulamanızda `selectbox` türü inputlar kullanarak ilişkisel verileri
 görüntüleme ve seçebilme işlemlerini hızlı ve kolay bir şekilde yapılması
 sağlayan yardımcı bir js modülüdür.
 
-Temel görevi yukarıda belirtilen seçim işlemleri yapabilmek için yazılmasımanız
+Temel görevi yukarıda belirtilen seçim işlemleri yapabilmek için yazmanız
 gereken `change` event'larını ve `ajax` isteklerini parametrik olarak yönetmenizi
 sağlamaktır.
 
 Yukarıda anlatılan görevini örneklememiz gerekirse;
 sayfanızda `Ülkeler`, `Şehirler` ve `İlçeler` adında 3 adet selectbox türünde
-input'unuzun olduğunu varsayalım. Burada sizinde tahmin edebileceğiniz
+input'unuzun olduğunu varsayalım. Burada sizinde tahmin edebileceğiniz gibi
 ülkenin şehirleri, şehirlerin ise ilçeleri var. Bir ülke seçildiğinde ona bağlı
 şehirlerin `Şehirler` selectbox'ın görüntülenmesi gerekiyor, bu arada eğer
-`İlçeler` selectbox'ında veri varsa bununda sıfırlanması gerekmekiyor,
+`İlçeler` selectbox'ında veri varsa bununda sıfırlanması gerekiyor,
 aynı durum il seçimi içinde geçerli.
 
-Sayfamıza bu işlevselliği kazandırmak için aşağıda iki örnek var.
+Sayfamıza bu işlevselliği kazandırmak için aşağıda karşılaştırmalı iki örnek var.
 
 ```erb
 <div class='form-group col-sm-6'>
@@ -176,7 +176,7 @@ DynamicSelect Parametreleri ve Kullanımı
   `change` event esnasında resetlenmesini istediğiniz elementlerin belirlenebildiği
   parametredir. **Opsiyoneldir.**
 
-  Resetleme işleminde aşağıdaki cod parçacığı çalıştırılır.
+  Resetleme işleminde aşağıdaki kod parçacığı çalıştırılır.
 
   ```js
     elements.html('')
@@ -201,6 +201,6 @@ DynamicSelect Parametreleri ve Kullanımı
 
 - **after_initialize**
   İlgili elemente `change` event'ı tanımlandıktan sonra yapılmasını istediğiniz
-  işlemleri bir fonksiyon halinde belirtirek çalıştırmanızı sağlar.
-  `after_initialize` değer olarak her aman bir fonksiyon bekler.
-  Foksiyon içerisinde `this` ile parametre değerlerine erişebilirsiniz. **Opsiyoneldir.**
+  işlemleri bir fonksiyon halinde belirterek çalıştırmanızı sağlar.
+  `after_initialize` değer olarak her zaman bir fonksiyon bekler.
+  Fonksiyon içerisinde `this` ile parametre değerlerine erişebilirsiniz. **Opsiyoneldir.**
