@@ -1,14 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  require 'sidekiq/web'
-  authenticate :user do
-    mount Sidekiq::Web, at: 'sidekiq'
-  end
-
-  mount PgHero::Engine, at: 'postgres'
-
   root to: 'home#index'
+
+  draw :admin
 
   draw :devise
   draw :account

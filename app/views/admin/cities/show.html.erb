@@ -2,10 +2,10 @@
   <div class="col-sm-12">
     <div class="card">
       <div class="card-header">
-        <%= fa_icon 'university' %><strong><%= @city.name %></strong>
+        <%= fa_icon 'street-view' %><strong><%= @city.name %></strong>
         <div class="card-header-actions">
-          <%= link_to_edit([:edit, @country, @city]) %>
-          <%= link_to_destroy([@country, @city]) %>
+          <%= link_to_edit([:admin, @country, @city]) %>
+          <%= link_to_destroy([:admin, @country, @city]) %>
         </div>
       </div>
 
@@ -29,15 +29,15 @@
       <div class='card-header'>
         <%= fa_icon 'street-view', text: t('.card_header') %>
         <div class="card-header-actions">
-          <%= link_to_new [:new, @country, @city, :district], t('.new_district_link') %>
+          <%= link_to_new [:new, :admin, @country, @city, :district], t('.new_district_link') %>
         </div>
       </div>
       <div class='card-body'>
         <%= render 'components/smart_search_form',
-                   path: country_city_path(@country, @city),
+                   path: admin_country_city_path(@country, @city),
                    placeholder: t('.name') %>
         <table class='table table-responsive-sm table-striped'>
-          <thead>
+          <thead class="thead-dark">
             <tr>
               <th><%= t('.name') %></th>
               <th><%= t('.mernis_code') %></th>
@@ -52,8 +52,8 @@
                 <td><%= district.mernis_code %></td>
                 <td><%= district.active ? t('yes') : t('no') %></td>
                 <td>
-                  <%= link_to_edit([:edit, @country, @city, district]) %>
-                  <%= link_to_destroy([@country, @city, district]) %>
+                  <%= link_to_edit([:edit, :admin, @country, @city, district]) %>
+                  <%= link_to_destroy([:admin, @country, @city, district]) %>
                 </td>
               </tr>
             <% end %>

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module References
+module Admin
   class CountriesController < ApplicationController
     include PagyBackendWithHelpers
 
@@ -20,20 +20,20 @@ module References
 
     def create
       @country = Country.new(country_params)
-      @country.save ? redirect_to(@country, notice: t('.success')) : render(:new)
+      @country.save ? redirect_to([:admin, @country], notice: t('.success')) : render(:new)
     end
 
     def edit; end
 
     def update
-      @country.update(country_params) ? redirect_to(@country, notice: t('.success')) : render(:edit)
+      @country.update(country_params) ? redirect_to([:admin, @country], notice: t('.success')) : render(:edit)
     end
 
     def destroy
       if @country.destroy
-        redirect_to(countries_path, notice: t('.success'))
+        redirect_to(admin_countries_path, notice: t('.success'))
       else
-        redirect_to(countries_path, alert: t('.warning'))
+        redirect_to(admin_countries_path, alert: t('.warning'))
       end
     end
 

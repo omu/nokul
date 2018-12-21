@@ -6,16 +6,16 @@
         <strong><%= form_title %></strong>
       </div>
       <div class='card-body'>
-        <%= simple_form_for([@country, city]) do |f| %>
+        <%= simple_form_for([:admin, @city.country, @city, district]) do |f| %>
           <div class='row'>
             <div class='form-group col-sm-12'>
               <%= f.error_notification %>
             </div>
-            <div class='form-group col-sm-12'>
+            <div class='form-group col-sm-6'>
               <%= f.input :name, required: true %>
             </div>
-            <div class='form-group col-sm-12'>
-              <%= f.input :alpha_2_code, required: true %>
+            <div class='form-group col-sm-6'>
+              <%= f.input :mernis_code, required: true %>
             </div>
             <div class='form-group col-sm-12'>
               <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>

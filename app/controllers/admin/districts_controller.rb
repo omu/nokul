@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module References
+module Admin
   class DistrictsController < ApplicationController
     before_action :set_city
     before_action :set_district, only: %i[edit update destroy]
@@ -11,20 +11,24 @@ module References
 
     def create
       @district = @city.districts.new(district_params)
-      @city.save ? redirect_to([@city.country, @city], notice: t('.success')) : render(:new)
+      @city.save ? redirect_to([:admin, @city.country, @city], notice: t('.success')) : render(:new)
     end
 
     def edit; end
 
     def update
-      @district.update(district_params) ? redirect_to([@city.country, @city], notice: t('.success')) : render(:edit)
+      if @district.update(district_params)
+        redirect_to([:admin, @city.country, @city], notice: t('.success'))
+      else
+        render(:edit)
+      end
     end
 
     def destroy
       if @district.destroy
-        redirect_to([@city.country, @city], notice: t('.success'))
+        redirect_to([:admin, @city.country, @city], notice: t('.success'))
       else
-        redirect_to([@city.country, @city], alert: t('.warning'))
+        redirect_to([:admin, @city.country, @city], alert: t('.warning'))
       end
     end
 
