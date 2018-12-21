@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module References
+module Admin
   class CitiesController < ApplicationController
     include PagyBackendWithHelpers
 
@@ -17,20 +17,20 @@ module References
 
     def create
       @city = @country.cities.new(city_params)
-      @city.save ? redirect_to([@country, @city], notice: t('.success')) : render(:new)
+      @city.save ? redirect_to([:admin, @country, @city], notice: t('.success')) : render(:new)
     end
 
     def edit; end
 
     def update
-      @city.update(city_params) ? redirect_to([@country, @city], notice: t('.success')) : render(:edit)
+      @city.update(city_params) ? redirect_to([:admin, @country, @city], notice: t('.success')) : render(:edit)
     end
 
     def destroy
       if @city.destroy
-        redirect_to(@country, notice: t('.success'))
+        redirect_to([:admin, @country], notice: t('.success'))
       else
-        redirect_to(@country, alert: t('.warning'))
+        redirect_to([:admin, @country], alert: t('.warning'))
       end
     end
 

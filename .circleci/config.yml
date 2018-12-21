@@ -131,7 +131,7 @@ jobs:
       - run: sudo apt install -y postgresql-client || true
       - run: bin/yarn install
       - run: bundle exec rake db:create db:structure:load
-      - run: bundle exec rake test
+      - run: bundle exec rake test:all
   deploy_develop:
     machine:
       enabled: true
