@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 require 'test_helper'
+require 'application_system_test_case'
 
-class LoginPageFlowTest < ActionDispatch::IntegrationTest
+class LoginPageFlowTest < ApplicationSystemTestCase
   SUPPORTED_SCREEN_RESOLUTIONS.each do |resolution|
     test "can login with correct credentials with a #{resolution} screen" do
       page.driver.browser.manage.window.resize_to(resolution[0], resolution[1])

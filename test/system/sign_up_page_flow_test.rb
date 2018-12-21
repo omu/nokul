@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 require 'test_helper'
+require 'application_system_test_case'
 
-class SignUpPageFlowTest < ActionDispatch::IntegrationTest
+class SignUpPageFlowTest < ApplicationSystemTestCase
   SUPPORTED_SCREEN_RESOLUTIONS.each do |resolution|
     test "can sign up with a valid identification number under a #{resolution} screen" do
       page.driver.browser.manage.window.resize_to(*resolution)
