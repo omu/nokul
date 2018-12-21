@@ -1,0 +1,19 @@
+en:
+  helpers:
+    submit:
+      district:
+        create: Create District
+        update: Update District
+  admin:
+    districts:
+      new:
+        form_title: Create a District
+      create:
+        success: District successfully created.
+      edit:
+        form_title: Update the District
+      update:
+        success: District successfully updated.
+      destroy:
+        success: District successfully deleted.
+        warning: District can not be deleted.

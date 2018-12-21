@@ -1,20 +1,6 @@
 en:
   activerecord:
     attributes:
-      city: &city_attributes
-        alpha_2_code: Alpha 2 Code
-        name: Name of City
-      country: &country_attributes
-        alpha_2_code: Alpha 2 Code
-        alpha_3_code: Alpha 3 Code
-        mernis_code: MERNIS Code
-        name: Name of Country
-        numeric_code: ISO3166 Numeric
-        yoksis_code: YOKSIS Code
-      district: &district_attributes
-        city_id: City
-        mernis_code: MERNIS Code
-        name: Name of District
       language: &language_attributes
         iso: ISO Code
         name: Name
@@ -23,15 +9,6 @@ en:
         identifier: Identifier
   helpers:
     submit:
-      city:
-        create: Create City
-        update: Update City
-      country:
-        create: Create Country
-        update: Update Country
-      district:
-        create: Create District
-        update: Update District
       language:
         create: Create Language
         update: Update Language
@@ -39,59 +16,8 @@ en:
         create: Create Term
         update: Update Term
   references:
-    cities:
-      create:
-        success: City successfully created.
-      destroy:
-        success: City successfully deleted!
-        warning: City can not be deleted.
-      edit:
-        form_title: Update the City
-      new:
-        form_title: Create a City
-      show:
-        <<: *district_attributes
-        active: Is Active?
-        card_header: Districts
-        new_district_link: Add a New District
-      update:
-        success: City successfully updated.
     common:
       countries: Countries
-    countries:
-      create:
-        success: Country successfully created.
-      destroy:
-        success: Country successfully deleted.
-        warning: Country can not be deleted.
-      edit:
-        form_title: Edit the Country
-      index:
-        <<: *country_attributes
-        card_header: Countries
-        new_country_link: Add a New Country
-      new:
-        form_title: Create Country
-        new_country: New Country
-      show:
-        <<: *country_attributes
-        <<: *city_attributes
-        card_header: Cities
-        new_city_link: Add a New City
-      update:
-        success: Country successfully updated.
-    districts:
-      create:
-        success: District successfully created.
-      destroy:
-        success: District successfully deleted.
-        warning: District can not be deleted.
-      edit:
-        form_title: Update the District
-      new:
-        form_title: Create a District
-      update:
-        success: District successfully updated.
     home:
       card:
         high_school_types: High School Types

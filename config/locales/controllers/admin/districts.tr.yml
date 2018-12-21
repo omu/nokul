@@ -1,0 +1,19 @@
+tr:
+  helpers:
+    submit:
+      district:
+        create: İlçe Oluştur
+        update: İlçeyi Güncelle
+  admin:
+    districts:
+      new:
+        form_title: İlçe Oluştur
+      create:
+        success: İlçe başarıyla oluşturuldu.
+      edit:
+        form_title: İlçeyi Düzenle
+      update:
+        success: İlçe başarıyla güncellendi.
+      destroy:
+        success: İlçe başarıyla silindi!
+        warning: İlçe silinemedi!
