@@ -1,20 +1,6 @@
 tr:
   activerecord:
     attributes:
-      city: &city_attributes
-        alpha_2_code: Alpha 2 Kodu
-        name: Şehir Adı
-      country: &country_attributes
-        alpha_2_code: Alpha 2 Kodu
-        alpha_3_code: Alpha 3 Kodu
-        mernis_code: MERNIS Kodu
-        name: Ülke Adı
-        numeric_code: ISO3166 Rakamsal
-        yoksis_code: YOKSIS Kodu
-      district: &district_attributes
-        city_id: Şehir
-        mernis_code: MERNIS Kodu
-        name: İlçe Adı
       language: &language_attributes
         iso: ISO Kodu
         name: Ad
@@ -23,15 +9,6 @@ tr:
         identifier: Belirteç
   helpers:
     submit:
-      city:
-        create: Şehir Oluştur
-        update: Şehri Güncelle
-      country:
-        create: Ülke Oluştur
-        update: Ülkeyi Güncelle
-      district:
-        create: İlçe Oluştur
-        update: İlçeyi Güncelle
       language:
         create: Dil Oluştur
         update: Dil Güncelle
@@ -39,59 +16,8 @@ tr:
         create: Dönem Oluştur
         update: Dönem Güncelle
   references:
-    cities:
-      create:
-        success: Şehir başarıyla oluşturuldu.
-      destroy:
-        success: Şehir başarıyla silindi!
-        warning: Şehir silinemedi!
-      edit:
-        form_title: Şehri Düzenle
-      new:
-        form_title: Şehir Oluştur
-      show:
-        <<: *district_attributes
-        active: Aktiflik Durumu
-        card_header: İlçeler
-        new_district_link: Yeni Bir İlçe Ekle
-      update:
-        success: Şehir başarıyla güncellendi.
     common:
       countries: Ülkeler
-    countries:
-      create:
-        success: Ülke başarıyla oluşturuldu.
-      destroy:
-        success: Ülke başarıyla silindi!
-        warning: Ülke silinemedi!
-      edit:
-        form_title: Ülkeyi Düzenle
-      index:
-        <<: *country_attributes
-        card_header: Ülkeler
-        new_country_link: Yeni Ülke Ekle
-      new:
-        form_title: Ülke Oluştur
-        new_country: Yeni Ülke
-      show:
-        <<: *country_attributes
-        <<: *city_attributes
-        card_header: Şehirler
-        new_city_link: Yeni Şehir Ekle
-      update:
-        success: Ülke başarıyla güncellendi.
-    districts:
-      create:
-        success: İlçe başarıyla oluşturuldu.
-      destroy:
-        success: İlçe başarıyla silindi!
-        warning: İlçe silinemedi!
-      edit:
-        form_title: İlçeyi Düzenle
-      new:
-        form_title: İlçe Oluştur
-      update:
-        success: İlçe başarıyla güncellendi.
     home:
       card:
         high_school_types: Lise Türleri

@@ -99,6 +99,20 @@
           <%= fa_icon('user', text: t('.users'), class: 'nav-icon') %>
         <% end %>
       </li>
+
+      <li class="nav-item nav-dropdown">
+        <a class="nav-link nav-dropdown-toggle" href="#">
+          <%= fa_icon('superpowers', class: 'nav-icon') %><%= t('.admin') %>
+        </a>
+        <ul class="nav-dropdown-items">
+          <li class="nav-item">
+            <%= link_to admin_countries_path, class: 'nav-link' do %>
+              <%= fa_icon('globe', text: t('.locations'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+        </ul>
+      </li>
+
       <li class="nav-item nav-dropdown">
         <a class="nav-link nav-dropdown-toggle" href="#">
           <%= fa_icon('calendar', class: 'nav-icon') %><%= t('.definitions') %>
@@ -110,7 +124,7 @@
             <% end %>
           </li>
           <li class="nav-item">
-            <%= link_to countries_path, class: 'nav-link' do %>
+            <%= link_to admin_countries_path, class: 'nav-link' do %>
               <%= fa_icon('street-view', text: t('.locations'), class: 'nav-icon') %>
             <% end %>
           </li>
