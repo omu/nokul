@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 require 'test_helper'
+require 'application_system_test_case'
 
-class ProfileSettingFlowTest < ActionDispatch::IntegrationTest
+class ProfileSettingFlowTest < ApplicationSystemTestCase
   setup do
     @user = users(:serhat)
     login_as(@user, scope: :user, run_callbacks: false)
