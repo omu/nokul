@@ -8,6 +8,9 @@
         </div>
       </div>
       <div class='card-body'>
+        <%= render 'components/smart_search_form',
+           path: "#{klass.tableize}",
+           placeholder: t("admin.#{klass.pluralize}.index.name") %>
         <table class='table table-responsive-sm table-striped'>
           <thead class='thead-dark'>
             <tr>
