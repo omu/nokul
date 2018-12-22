@@ -3,4 +3,5 @@
 class StudentDropOutType < ApplicationRecord
   include ReferenceValidations
   include ReferenceCallbacks
+  include ReferenceSearch
 end

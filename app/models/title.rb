@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class Title < ApplicationRecord
+  # search
+  include ReferenceSearch
+
   # relations
   has_many :employees, dependent: :nullify
 

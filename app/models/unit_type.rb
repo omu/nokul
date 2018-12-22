@@ -3,6 +3,7 @@
 class UnitType < ApplicationRecord
   include ReferenceValidations
   include ReferenceCallbacks
+  include ReferenceSearch
 
   # enums
   enum group: {
