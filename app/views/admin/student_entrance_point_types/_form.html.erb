@@ -1,6 +1,6 @@
 <%= render 'admin/concerns/form',
-           klass: [@city.country, @city, @district],
+           klass: @student_entrance_point_type,
            params: [
             ['name', 12, true],
-            ['mernis_code', 12, false]
+            ['code', 12, true]
            ] %>

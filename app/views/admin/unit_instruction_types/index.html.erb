@@ -1,0 +1,6 @@
+<%= render 'admin/concerns/index',
+           klass: 'unit_instruction_type',
+           collection: @unit_instruction_types,
+           pagy: @pagy,
+           card_header: t('.card_header'),
+           params: ['name', 'code'] %>
