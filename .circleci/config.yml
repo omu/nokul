@@ -191,7 +191,7 @@ workflows:
       - test_suite:
           requires:
             - bundle_assets
-      - test_system:
+      - test_selenium:
           requires:
             - bundle_assets
       - deploy_develop:
@@ -199,7 +199,7 @@ workflows:
             - quality
             - security
             - database
-            - test_system
+            - test_selenium
           filters:
             branches:
               only: develop
@@ -208,7 +208,7 @@ workflows:
             - quality
             - security
             - database
-            - test_system
+            - test_selenium
           filters:
             branches:
               only: master
