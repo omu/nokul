@@ -1,0 +1,24 @@
+tr:
+  activerecord:
+    attributes:
+      student_grading_system: &student_grading_system_attributes
+        code: Kodu
+        name: Öğrenci Diploma Not Sistemi
+  helpers:
+    submit:
+      student_grading_system:
+        create: Öğrenci Diploma Not Sistemi Oluştur
+        update: Öğrenci Diploma Not Sistemini Güncelle
+  admin:
+    student_grading_systems:
+      create:
+        success: Öğrenci diploma not sistemi başarıyla oluşturuldu.
+      destroy:
+        success: Öğrenci diploma not sistemi başarıyla silindi.
+        warning: Öğrenci diploma not sistemi silinemedi!
+      index:
+        <<: *student_grading_system_attributes
+        card_header: Öğrenci Diploma Not Sistemleri
+        new_student_grading_system_link: Yeni Öğrenci Diploma Not Sistemi
+      update:
+        success: Öğrenci diploma not sistemi başarıyla güncellendi.

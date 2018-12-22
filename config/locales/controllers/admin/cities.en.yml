@@ -17,10 +17,6 @@ en:
         active: Is Active?
         card_header: Districts
         new_district_link: Add a New District
-      edit:
-        form_title: Update the City
-      new:
-        form_title: Create a City
       create:
         success: City successfully created.
       update:

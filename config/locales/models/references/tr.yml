@@ -20,24 +20,8 @@ tr:
       countries: Ülkeler
     home:
       card:
-        high_school_types: Lise Türleri
         languages: Diller
-        student_disability_types: Engel Türleri
-        student_drop_out_types: Ayrılma Nedenleri
-        student_education_levels: Eğitim Düzeyleri
-        student_entrance_point_types: Giriş Puan Türleri
-        student_entrance_types: Giriş Türleri
-        student_grades: Sınıflar
-        student_grading_systems: Not Sistemleri
-        student_management: Öğrenci Yönetimi
-        student_punishment_types: Ceza Türleri
-        student_studentship_statuses: Öğrencilik Hakları
         terms: Dönemler
-        unit_instruction_languages: Öğrenim Dilleri
-        unit_instruction_types: Öğrenim Türleri
-        unit_statuses: Aktiflik Durumları
-        unit_types: Birim Türleri
-        university_types: Üniversite Türleri
     languages:
       common:
         languages: Diller

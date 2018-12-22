@@ -1,0 +1,24 @@
+en:
+  activerecord:
+    attributes:
+      student_education_level: &student_education_level_attributes
+        code: Code
+        name: Student Education Level
+  helpers:
+    submit:
+      student_education_level:
+        create: Create Student Education Level
+        update: Update Student Education Level
+  admin:
+    student_education_levels:
+      create:
+        success: Student education level type successfully created.
+      destroy:
+        success: Student education level type successfully deleted.
+        warning: Student education level type could not be deleted.
+      index:
+        <<: *student_education_level_attributes
+        card_header: Student Education Level Types
+        new_student_education_level_link: New Student Education Level Type
+      update:
+        success: Student education level type successfully updated.

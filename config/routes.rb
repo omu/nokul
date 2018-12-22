@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   draw :calendar
   draw :course_management
   draw :references
-  draw :yoksis_references
 
   resources :units do
     resources :registration_documents

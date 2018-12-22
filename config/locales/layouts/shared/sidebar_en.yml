@@ -25,7 +25,6 @@ en:
         high_school_types: High School Types
         languages: Languages
         locations: Locations
-        references: References
         student_disability_types: Disability Types
         student_drop_out_types: Drop Out Types
         student_education_levels: Education Levels
@@ -44,3 +43,4 @@ en:
         units: Units
         university_types: University Types
         users: Users
+        yoksis: YOKSIS
