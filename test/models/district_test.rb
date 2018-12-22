@@ -40,29 +40,29 @@ class DistrictTest < ActiveSupport::TestCase
   end
 
   # other validations
-  test "name can not be longer than 255 characters" do
+  test 'name can not be longer than 255 characters' do
     fake = districts(:vezirkopru).dup
     fake.name = (0...256).map { ('a'..'z').to_a[rand(26)] }.join
     assert_not fake.valid?
-    assert fake.errors.details[:name].map{|err| err[:error]}.include?(:too_long)
+    assert fake.errors.details[:name].map { |err| err[:error] }.include?(:too_long)
   end
 
-  test "mernis_code must be an integer with 4 digits" do
+  test 'mernis_code must be an integer with 4 digits' do
     fake = districts(:vezirkopru).dup
     fake.mernis_code = (0...5).map { ('a'..'z').to_a[rand(26)] }.join
     assert_not fake.valid?
 
-    error_codes = fake.errors.details[:mernis_code].map{|err| err[:error]}
+    error_codes = fake.errors.details[:mernis_code].map { |err| err[:error] }
     assert error_codes.include?(:wrong_length)
     assert error_codes.include?(:not_a_number)
   end
 
-  test "active field can not be nil" do
+  test 'active field can not be nil' do
     fake = districts(:vezirkopru).dup
     fake.active = nil
     assert_not fake.valid?
 
-    error_codes = fake.errors.details[:active].map{|err| err[:error]}
+    error_codes = fake.errors.details[:active].map { |err| err[:error] }
     assert error_codes.include?(:inclusion)
   end
 end
