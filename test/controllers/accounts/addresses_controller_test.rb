@@ -7,7 +7,7 @@ module Accounts
     setup do
       @user = users(:serhat)
       @user.addresses.informal.create(
-        phone_number: '03623121919', full_address: 'OMU BAUM', district_id: districts(:gerze).id
+        phone_number: '03623121919', full_address: 'OMÜ BAUM', district_id: districts(:gerze).id
       )
       sign_in @user
     end
@@ -27,7 +27,7 @@ module Accounts
       assert_difference('@user.addresses.count') do
         post user_addresses_path(@user), params: {
           address: {
-            phone_number: '03623121919', full_address: 'OMU BAUM', district_id: districts(:gerze).id
+            phone_number: '03623121919', full_address: 'OMÜ BAUM', district_id: districts(:gerze).id
           }
         }
       end
@@ -35,7 +35,7 @@ module Accounts
       address = @user.addresses.find_by(type: :informal)
 
       assert_equal '03623121919', address.phone_number
-      assert_equal 'Omu Baum', address.full_address
+      assert_equal 'OMÜ BAUM', address.full_address
       assert_equal districts(:gerze), address.district
 
       assert_redirected_to user_addresses_path(@user)
@@ -63,14 +63,14 @@ module Accounts
 
       patch user_address_path(@user, address), params: {
         address: {
-          phone_number: '03623121920', full_address: 'OMU UZEM'
+          phone_number: '03623121920', full_address: 'OMÜ UZEM'
         }
       }
 
       address.reload
 
       assert_equal '03623121920', address.phone_number
-      assert_equal 'Omu Uzem', address.full_address
+      assert_equal 'OMÜ UZEM', address.full_address
 
       assert_redirected_to user_addresses_path(@user)
       assert_equal translate('.update.success'), flash[:notice]

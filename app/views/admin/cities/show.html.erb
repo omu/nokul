@@ -1,0 +1,71 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'street-view' %><strong><%= @city.name %></strong>
+        <div class="card-header-actions">
+          <%= link_to_edit([:admin, @country, @city]) %>
+          <%= link_to_destroy([:admin, @country, @city]) %>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <table class="table table-responsive-sm">
+          <tbody>
+            <tr>
+              <td><%= t('activerecord.attributes.city.name') %></td>
+              <td><%= @city.name %></td>
+            </tr>
+            <tr>
+              <td><%= t('activerecord.attributes.city.alpha_2_code') %></td>
+              <td><%= @city.alpha_2_code %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'street-view', text: t('.card_header') %>
+        <div class="card-header-actions">
+          <%= link_to_new [:new, :admin, @country, @city, :district], t('.new_district_link') %>
+        </div>
+      </div>
+      <div class='card-body'>
+        <%= render 'components/smart_search_form',
+                   path: admin_country_city_path(@country, @city),
+                   placeholder: t('.name') %>
+        <table class='table table-responsive-sm table-striped'>
+          <thead class="thead-dark">
+            <tr>
+              <th><%= t('.name') %></th>
+              <th><%= t('.mernis_code') %></th>
+              <th><%= t('.active') %></th>
+              <th><%= t('actions') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @districts.each do |district| %>
+              <tr>
+                <td><%= district.name %></td>
+                <td><%= district.mernis_code %></td>
+                <td><%= district.active ? t('yes') : t('no') %></td>
+                <td>
+                  <%= link_to_edit([:edit, :admin, @country, @city, district]) %>
+                  <%= link_to_destroy([:admin, @country, @city, district]) %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <nav aria-label="pagination">
+      <ul class="pagination justify-content-center">
+        <%== pagy_bootstrap_nav(@pagy) %>
+      </ul>
+    </nav>
+  </div>
+</div>

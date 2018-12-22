@@ -1,0 +1,26 @@
+tr:
+  activerecord:
+    attributes:
+      district: &district_attributes
+        city_id: Şehir
+        mernis_code: MERNIS Kodu
+        name: İlçe Adı
+  helpers:
+    submit:
+      city:
+        create: Şehir Oluştur
+        update: Şehri Güncelle
+  admin:
+    cities:
+      show:
+        <<: *district_attributes
+        active: Aktiflik Durumu
+        card_header: İlçeler
+        new_district_link: Yeni İlçe Ekle
+      create:
+        success: Şehir başarıyla oluşturuldu.
+      update:
+        success: Şehir başarıyla güncellendi.
+      destroy:
+        success: Şehir başarıyla silindi!
+        warning: Şehir silinemedi!

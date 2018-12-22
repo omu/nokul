@@ -1,0 +1,10 @@
+<%= render 'admin/layouts/form',
+           klass: @country,
+           params: [
+            ['name', 12, true],
+            ['alpha_2_code', 3, true],
+            ['alpha_3_code', 3, true],
+            ['numeric_code', 3, true],
+            ['mernis_code', 3, false],
+            ['yoksis_code', 3, false],
+           ] %>

@@ -19,7 +19,7 @@ module ReferenceResourceTest
     end
 
     test 'should get new' do
-      get send("new_#{@singular_variable}_path")
+      get send("new_admin_#{@singular_variable}_path")
       assert_response :success
     end
 
@@ -39,13 +39,16 @@ module ReferenceResourceTest
     end
 
     test 'should get edit' do
-      get send("edit_#{@singular_variable}_path", @instance)
+      get send("edit_admin_#{@singular_variable}_path", @instance)
       assert_response :success
-      assert_select '.card-header strong', translate('.edit.form_title')
+      assert_select '.simple_form' do
+        assert_select "##{@singular_variable}_name"
+        assert_select "##{@singular_variable}_code"
+      end
     end
 
     test 'should update instance' do
-      patch send("#{@singular_variable}_path", @instance), params: {
+      patch send("admin_#{@singular_variable}_path", @instance), params: {
         @singular_variable => { name: 'Test Update', code: 999_999 }
       }
 
@@ -59,7 +62,7 @@ module ReferenceResourceTest
 
     test 'should destroy instance' do
       assert_difference('@model_name.count', -1) do
-        delete send("#{@singular_variable}_path", @instance)
+        delete send("admin_#{@singular_variable}_path", @instance)
       end
 
       assert_redirected_to controller_index_path
@@ -69,11 +72,11 @@ module ReferenceResourceTest
     private
 
     def controller_index_path
-      send("#{controller_name}_path")
+      send("admin_#{controller_name}_path")
     end
 
     def translate(key)
-      t("yoksis_references.#{controller_name}#{key}")
+      t("admin.#{controller_name}#{key}")
     end
   end
   # rubocop:enable Metrics/BlockLength

@@ -1,0 +1,24 @@
+en:
+  activerecord:
+    attributes:
+      unit_instruction_language: &unit_instruction_language_attributes
+        code: Code
+        name: Unit Instruction Language
+  helpers:
+    submit:
+      unit_instruction_language:
+        create: Create Unit Instruction Language
+        update: Update Unit Instruction Language
+  admin:
+    unit_instruction_languages:
+      create:
+        success: Unit instruction language successfully created.
+      destroy:
+        success: Unit instruction language successfully deleted.
+        warning: Unit instruction language could not be deleted.
+      index:
+        <<: *unit_instruction_language_attributes
+        card_header: Unit Instruction Languages
+        new_unit_instruction_language_link: New Unit Instruction Language
+      update:
+        success: Unit instruction language successfully updated.

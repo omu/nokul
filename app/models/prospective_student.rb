@@ -67,7 +67,7 @@ class ProspectiveStudent < ApplicationRecord
   # callbacks
   before_create do
     self.first_name = first_name.capitalize_all
-    self.last_name  = last_name.upcase_tr
+    self.last_name  = last_name.upcase(:turkic)
     self.fathers_name = fathers_name.capitalize_all if fathers_name
     self.mothers_name = mothers_name.capitalize_all if mothers_name
     self.place_of_birth = place_of_birth.capitalize_all if place_of_birth

@@ -1,0 +1,88 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'globe' %><strong><%= @country.name %></strong>
+        <div class="card-header-actions">
+          <%= link_to_edit(edit_admin_country_path(@country)) %>
+          <%= link_to_destroy(admin_country_path(@country)) %>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <table class="table table-responsive-sm">
+          <tbody>
+            <tr>
+              <td><%= t('activerecord.attributes.country.name') %></td>
+              <td><%= @country.name %></td>
+            </tr>
+            <tr>
+              <td><%= t('.alpha_2_code') %></td>
+              <td><%= @country.alpha_2_code %></td>
+            </tr>
+            <tr>
+              <td><%= t('.alpha_3_code') %></td>
+              <td><%= @country.alpha_3_code %></td>
+            </tr>
+            <tr>
+              <td><%= t('.numeric_code') %></td>
+              <td><%= @country.numeric_code %></td>
+            </tr>
+            <tr>
+              <td><%= t('.mernis_code') %></td>
+              <td><%= @country.mernis_code %></td>
+            </tr>
+            <tr>
+              <td><%= t('.yoksis_code') %></td>
+              <td><%= @country.yoksis_code %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'street-view', text: t('.card_header') %>
+        <div class="card-header-actions">
+          <%= link_to_new new_admin_country_city_path(@country), t('.new_city_link') %>
+        </div>
+      </div>
+      <div class='card-body'>
+        <%= render 'components/smart_search_form',
+                   path: admin_country_path(@country),
+                   placeholder: t('.name') %>
+        <% if @country.cities.any? %>
+          <table class='table table-striped table-responsive-sm'>
+            <thead class="thead-dark">
+              <tr>
+                <th><%= t('.name') %></th>
+                <th><%= t('.alpha_2_code') %></th>
+                <th><%= t('actions') %></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @cities.each do |city| %>
+                <tr>
+                  <td><%= city.name %></td>
+                  <td><%= city.alpha_2_code %></td>
+                  <td>
+                    <%= link_to_show(admin_country_city_path(@country, city)) %>
+                    <%= link_to_edit(edit_admin_country_city_path(@country, city)) %>
+                    <%= link_to_destroy(admin_country_city_path(@country, city)) %>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        <% end %>
+      </div>
+    </div>
+
+    <nav aria-label="pagination">
+      <ul class="pagination justify-content-center">
+        <%== pagy_bootstrap_nav(@pagy) %>
+      </ul>
+    </nav>
+  </div>
+</div>
