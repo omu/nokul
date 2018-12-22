@@ -7,8 +7,14 @@ class LanguageTest < ActiveSupport::TestCase
     @language = languages(:turkce)
   end
 
-  test 'langugage can communicate with courses' do
-    assert @language.courses
+  # relations
+  %i[
+    courses
+    prospective_students
+  ].each do |property|
+    test "language can communicate with #{property}" do
+      assert @language.send(property)
+    end
   end
 
   # validations: presence
@@ -33,5 +39,16 @@ class LanguageTest < ActiveSupport::TestCase
       assert_not fake.valid?
       assert_not_empty fake.errors[property]
     end
+  end
+
+  # other validations
+  test 'name and iso can not be longer than 255 characters' do
+    fake = languages(:turkce).dup
+    random_long_string = (0...256).map { ('a'..'z').to_a[rand(26)] }.join
+    fake.name = random_long_string
+    fake.iso = random_long_string
+    assert_not fake.valid?
+    assert fake.errors.details[:name].map { |err| err[:error] }.include?(:too_long)
+    assert fake.errors.details[:iso].map { |err| err[:error] }.include?(:too_long)
   end
 end

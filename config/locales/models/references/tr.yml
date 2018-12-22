@@ -1,17 +1,11 @@
 tr:
   activerecord:
     attributes:
-      language: &language_attributes
-        iso: ISO Kodu
-        name: Ad
       term: &term_attributes
         name: Dönem Adı
         identifier: Belirteç
   helpers:
     submit:
-      language:
-        create: Dil Oluştur
-        update: Dil Güncelle
       term:
         create: Dönem Oluştur
         update: Dönem Güncelle
@@ -20,26 +14,7 @@ tr:
       countries: Ülkeler
     home:
       card:
-        languages: Diller
         terms: Dönemler
-    languages:
-      common:
-        languages: Diller
-      create:
-        success: Dil başarıyla oluşturuldu.
-      destroy:
-        success: Dil başarıyla silindi!
-        warning: Dil silinemedi.
-      edit:
-        form_title: Dil Güncelle
-      index:
-        <<: *language_attributes
-        card_header: Diller
-        new_language_link: Yeni Dil Oluştur
-      new:
-        form_title: Dil Oluştur
-      update:
-        success: Dil başarıyla güncellendi.
     terms:
       create:
         success: Dönem başarıyla oluşturuldu.
