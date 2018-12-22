@@ -53,50 +53,50 @@ class CountryTest < ActiveSupport::TestCase
   end
 
   # other validations
-  test "name can not be longer than 255 characters" do
+  test 'name can not be longer than 255 characters' do
     fake = countries(:turkey).dup
     fake.name = (0...256).map { ('a'..'z').to_a[rand(26)] }.join
     assert_not fake.valid?
-    assert fake.errors.details[:name].map{|err| err[:error]}.include?(:too_long)
+    assert fake.errors.details[:name].map { |err| err[:error] }.include?(:too_long)
   end
 
-  test "alpha_2_code must be 2 characters" do
+  test 'alpha_2_code must be 2 characters' do
     fake = countries(:turkey).dup
     fake.alpha_2_code = (0...3).map { ('a'..'z').to_a[rand(26)] }.join
     assert_not fake.valid?
-    assert fake.errors.details[:alpha_2_code].map{|err| err[:error]}.include?(:wrong_length)
+    assert fake.errors.details[:alpha_2_code].map { |err| err[:error] }.include?(:wrong_length)
   end
 
-  test "alpha_3_code must be 3 characters" do
+  test 'alpha_3_code must be 3 characters' do
     fake = countries(:turkey).dup
     fake.alpha_3_code = (0...4).map { ('a'..'z').to_a[rand(26)] }.join
     assert_not fake.valid?
-    assert fake.errors.details[:alpha_3_code].map{|err| err[:error]}.include?(:wrong_length)
+    assert fake.errors.details[:alpha_3_code].map { |err| err[:error] }.include?(:wrong_length)
   end
 
-  test "numeric_code must be an integer with 3 digits" do
+  test 'numeric_code must be an integer with 3 digits' do
     fake = countries(:turkey).dup
     fake.numeric_code = (0...4).map { ('a'..'z').to_a[rand(26)] }.join
     assert_not fake.valid?
 
-    error_codes = fake.errors.details[:numeric_code].map{|err| err[:error]}
+    error_codes = fake.errors.details[:numeric_code].map { |err| err[:error] }
     assert error_codes.include?(:wrong_length)
     assert error_codes.include?(:not_a_number)
   end
 
-  test "mernis_code must be an integer with 4 digits" do
+  test 'mernis_code must be an integer with 4 digits' do
     fake = countries(:turkey).dup
     fake.mernis_code = (0...5).map { ('a'..'z').to_a[rand(26)] }.join
     assert_not fake.valid?
 
-    error_codes = fake.errors.details[:mernis_code].map{|err| err[:error]}
+    error_codes = fake.errors.details[:mernis_code].map { |err| err[:error] }
     assert error_codes.include?(:wrong_length)
     assert error_codes.include?(:not_a_number)
   end
 
-  test "yoksis_code must be an integer greater than 1" do
+  test 'yoksis_code must be an integer greater than or equal to 0' do
     def error_codes(fake)
-      fake.errors.details[:yoksis_code].map{|err| err[:error]}
+      fake.errors.details[:yoksis_code].map { |err| err[:error] }
     end
 
     fake = countries(:turkey).dup

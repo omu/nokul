@@ -50,17 +50,17 @@ class CityTest < ActiveSupport::TestCase
   end
 
   # other validations
-  test "name can not be longer than 255 characters" do
+  test 'name can not be longer than 255 characters' do
     fake = cities(:samsun).dup
     fake.name = (0...256).map { ('a'..'z').to_a[rand(26)] }.join
     assert_not fake.valid?
-    assert fake.errors.details[:name].map{|err| err[:error]}.include?(:too_long)
+    assert fake.errors.details[:name].map { |err| err[:error] }.include?(:too_long)
   end
 
-  test "alpha_2_code can not be longer than 255 characters" do
+  test 'alpha_2_code can not be longer than 255 characters' do
     fake = cities(:samsun).dup
     fake.alpha_2_code = (0...256).map { ('a'..'z').to_a[rand(26)] }.join
     assert_not fake.valid?
-    assert fake.errors.details[:alpha_2_code].map{|err| err[:error]}.include?(:too_long)
+    assert fake.errors.details[:alpha_2_code].map { |err| err[:error] }.include?(:too_long)
   end
 end
