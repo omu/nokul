@@ -1,0 +1,37 @@
+en:
+  activerecord:
+    attributes:
+      unit_type: &unit_type_attributes
+        code: Code
+        group: Group
+        name: Unit Type
+    enums:
+      unit_type:
+        groups:
+          committee: Committee
+          department: Department
+          faculty: Faculty
+          institute: Institute
+          major: Major
+          other: Other
+          program: Program
+          rectorship: Rectorship
+          university: University
+  helpers:
+    submit:
+      unit_type:
+        create: Create Unit Type
+        update: Update Unit Type
+  admin:
+    unit_types:
+      create:
+        success: Unit type successfully created.
+      destroy:
+        success: Unit type successfully deleted.
+        warning: Unit type could not be deleted.
+      index:
+        <<: *unit_type_attributes
+        card_header: Unit Types
+        new_unit_type_link: New Unit Type
+      update:
+        success: Unit type successfully updated.

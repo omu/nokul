@@ -49,7 +49,7 @@ module ReferenceResource
     end
 
     def redirect_with(message)
-      redirect_to(send("#{controller_name}_path"), notice: t(".#{message}"))
+      redirect_to(send("admin_#{controller_name}_path"), notice: t(".#{message}"))
     end
   end
   # rubocop:enable Metrics/BlockLength

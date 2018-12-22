@@ -4,6 +4,7 @@ tr:
       sidebar:
         academic_calendars: Akademik Takvimler
         academic_terms: Akademik Dönemler
+        admin: Yönetici Modülü
         agenda_types: Gündem Türleri
         calendar_titles: Takvim Başlıkları
         calendar_types: Takvim Türleri
@@ -24,7 +25,6 @@ tr:
         high_school_types: Lise Türleri
         languages: Diller
         locations: Konumlar
-        references: Referanslar
         student_disability_types: Engel Türleri
         student_drop_out_types: Ayrılma Nedenleri
         student_education_levels: Eğitim Düzeyleri
@@ -36,6 +36,7 @@ tr:
         student_punishment_types: Ceza Türleri
         student_studentship_statuses: Öğrencilik Hakları
         studies: Akademik Çalışmalar
+        titles: Unvanlar
         unit_instruction_languages: Öğrenim Dilleri
         unit_instruction_types: Öğrenim Türleri
         unit_statuses: Aktiflik Durumları
@@ -43,3 +44,4 @@ tr:
         units: Birimler
         university_types: Üniversite Türleri
         users: Kullanıcılar
+        yoksis: YÖKSİS

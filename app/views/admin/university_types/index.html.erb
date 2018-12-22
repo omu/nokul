@@ -1,0 +1,6 @@
+<%= render 'admin/layouts/index',
+           klass: 'university_type',
+           collection: @university_types,
+           pagy: @pagy,
+           card_header: t('.card_header'),
+           params: ['name', 'code'] %>

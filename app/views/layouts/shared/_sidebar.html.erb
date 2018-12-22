@@ -99,6 +99,35 @@
           <%= fa_icon('user', text: t('.users'), class: 'nav-icon') %>
         <% end %>
       </li>
+
+      <li class="nav-item nav-dropdown">
+        <a class="nav-link nav-dropdown-toggle" href="#">
+          <%= fa_icon('superpowers', class: 'nav-icon') %><%= t('.admin') %>
+        </a>
+        <ul class="nav-dropdown-items">
+          <li class="nav-item">
+            <%= link_to admin_languages_path, class: 'nav-link' do %>
+              <%= fa_icon('language', text: t('.languages'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to admin_countries_path, class: 'nav-link' do %>
+              <%= fa_icon('globe', text: t('.locations'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to admin_titles_path, class: 'nav-link' do %>
+              <%= fa_icon('group', text: t('.titles'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to admin_yoksis_path, class: 'nav-link' do %>
+              <%= fa_icon('th', text: t('.yoksis'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+        </ul>
+      </li>
+
       <li class="nav-item nav-dropdown">
         <a class="nav-link nav-dropdown-toggle" href="#">
           <%= fa_icon('calendar', class: 'nav-icon') %><%= t('.definitions') %>
@@ -107,16 +136,6 @@
           <li class="nav-item">
             <%= link_to units_path, class: 'nav-link' do %>
               <%= fa_icon('sitemap', text: t('.units'), class: 'nav-icon') %>
-            <% end %>
-          </li>
-          <li class="nav-item">
-            <%= link_to countries_path, class: 'nav-link' do %>
-              <%= fa_icon('street-view', text: t('.locations'), class: 'nav-icon') %>
-            <% end %>
-          </li>
-          <li class="nav-item">
-            <%= link_to references_path, class: 'nav-link' do %>
-              <%= fa_icon('user-secret', text: t('.references'), class: 'nav-icon') %>
             <% end %>
           </li>
           <li class="nav-item">

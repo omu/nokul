@@ -1,0 +1,24 @@
+en:
+  activerecord:
+    attributes:
+      student_grading_system: &student_grading_system_attributes
+        code: Code
+        name: Student Grading System
+  helpers:
+    submit:
+      student_grading_system:
+        create: Create Student Grading System
+        update: Update Student Grading System
+  admin:
+    student_grading_systems:
+      create:
+        success: Student grading system successfully created.
+      destroy:
+        success: Student grading system successfully deleted.
+        warning: Student grading system could not be deleted.
+      index:
+        <<: *student_grading_system_attributes
+        card_header: Student Grading System Types
+        new_student_grading_system_link: New Student Grading System Type
+      update:
+        success: Student grading system successfully updated.

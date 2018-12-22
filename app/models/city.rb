@@ -24,6 +24,6 @@ class City < ApplicationRecord
   # callbacks
   before_save do
     self.name = name.capitalize_all
-    self.alpha_2_code = alpha_2_code.upcase_tr
+    self.alpha_2_code = alpha_2_code.upcase(:turkic)
   end
 end
