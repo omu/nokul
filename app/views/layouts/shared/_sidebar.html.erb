@@ -110,6 +110,11 @@
               <%= fa_icon('globe', text: t('.locations'), class: 'nav-icon') %>
             <% end %>
           </li>
+          <li class="nav-item">
+            <%= link_to admin_yoksis_path, class: 'nav-link' do %>
+              <%= fa_icon('th', text: t('.yoksis'), class: 'nav-icon') %>
+            <% end %>
+          </li>
         </ul>
       </li>
 
@@ -121,16 +126,6 @@
           <li class="nav-item">
             <%= link_to units_path, class: 'nav-link' do %>
               <%= fa_icon('sitemap', text: t('.units'), class: 'nav-icon') %>
-            <% end %>
-          </li>
-          <li class="nav-item">
-            <%= link_to admin_countries_path, class: 'nav-link' do %>
-              <%= fa_icon('street-view', text: t('.locations'), class: 'nav-icon') %>
-            <% end %>
-          </li>
-          <li class="nav-item">
-            <%= link_to references_path, class: 'nav-link' do %>
-              <%= fa_icon('user-secret', text: t('.references'), class: 'nav-icon') %>
             <% end %>
           </li>
           <li class="nav-item">
