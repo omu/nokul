@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-module References
+module Admin
   class DistrictsControllerTest < ActionDispatch::IntegrationTest
     setup do
       sign_in users(:john)
@@ -38,7 +38,10 @@ module References
     test 'should get edit' do
       get edit_admin_country_city_district_path(@country, @city, @district)
       assert_response :success
-      assert_select '.card-header strong', translate('.edit.form_title')
+      assert_select '.simple_form' do
+        assert_select '#district_name'
+        assert_select '#district_mernis_code'
+      end
     end
 
     test 'should update district' do

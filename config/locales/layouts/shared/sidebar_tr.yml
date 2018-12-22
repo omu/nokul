@@ -25,7 +25,6 @@ tr:
         high_school_types: Lise Türleri
         languages: Diller
         locations: Konumlar
-        references: Referanslar
         student_disability_types: Engel Türleri
         student_drop_out_types: Ayrılma Nedenleri
         student_education_levels: Eğitim Düzeyleri
@@ -44,3 +43,4 @@ tr:
         units: Birimler
         university_types: Üniversite Türleri
         users: Kullanıcılar
+        yoksis: YÖKSİS

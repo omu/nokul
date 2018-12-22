@@ -28,12 +28,9 @@ tr:
         new_country_link: Yeni Ülke Ekle
         card_header: Ülkeler
       new:
-        form_title: Ülke Oluştur
         new_country: Yeni Ülke
       create:
         success: Ülke başarıyla oluşturuldu.
-      edit:
-        form_title: Ülkeyi Düzenle
       update:
         success: Ülke başarıyla güncellendi.
       destroy:

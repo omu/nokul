@@ -17,10 +17,6 @@ tr:
         active: Aktiflik Durumu
         card_header: İlçeler
         new_district_link: Yeni İlçe Ekle
-      edit:
-        form_title: Şehri Düzenle
-      new:
-        form_title: Şehir Oluştur
       create:
         success: Şehir başarıyla oluşturuldu.
       update:

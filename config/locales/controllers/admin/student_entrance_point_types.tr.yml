@@ -1,0 +1,24 @@
+tr:
+  activerecord:
+    attributes:
+      student_entrance_point_type: &student_entrance_point_type_attributes
+        code: Kodu
+        name: Öğrenci Giriş Puan Türü
+  helpers:
+    submit:
+      student_entrance_point_type:
+        create: Öğrenci Giriş Puan Türü Oluştur
+        update: Öğrenci Giriş Puan Türünü Güncelle
+  admin:
+    student_entrance_point_types:
+      create:
+        success: Öğrenci giriş puan türü başarıyla oluşturuldu.
+      destroy:
+        success: Öğrenci giriş puan türü başarıyla silindi.
+        warning: Öğrenci giriş puan türü silinemedi!
+      index:
+        <<: *student_entrance_point_type_attributes
+        card_header: Öğrenci Giriş Türleri
+        new_student_entrance_point_type_link: Yeni Öğrenci Giriş Türü
+      update:
+        success: Öğrenci giriş puan türü başarıyla güncellendi.

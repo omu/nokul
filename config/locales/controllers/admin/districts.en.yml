@@ -6,12 +6,8 @@ en:
         update: Update District
   admin:
     districts:
-      new:
-        form_title: Create a District
       create:
         success: District successfully created.
-      edit:
-        form_title: Update the District
       update:
         success: District successfully updated.
       destroy:

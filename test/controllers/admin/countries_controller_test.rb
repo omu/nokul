@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-module References
+module Admin
   class CountriesControllerTest < ActionDispatch::IntegrationTest
     setup do
       sign_in users(:john)
@@ -51,8 +51,14 @@ module References
     test 'should get edit' do
       get edit_admin_country_path(@country)
       assert_response :success
-
-      assert_select '.card-header strong', translate('.edit.form_title')
+      assert_select '.simple_form' do
+        assert_select '#country_name'
+        assert_select '#country_alpha_2_code'
+        assert_select '#country_alpha_3_code'
+        assert_select '#country_numeric_code'
+        assert_select '#country_mernis_code'
+        assert_select '#country_yoksis_code'
+      end
     end
 
     test 'should update country' do
