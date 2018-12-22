@@ -10,11 +10,10 @@ namespace :test do
   end
 
   desc 'Runs the system tests'
-  task :system do |task|
-    puts "########### #{task.full_comment} ###########"
-    sh 'bundle exec rails test:system', verbose: false
+  task :selenium do |_task|
+    sh 'bundle exec rake test:system'
   end
 
   desc 'Runs all tests'
-  task all: %w[suite system]
+  task all: %w[suite selenium]
 end
