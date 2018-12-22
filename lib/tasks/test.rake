@@ -11,6 +11,7 @@ namespace :test do
 
   desc 'Runs the system tests'
   task :system do |task|
+    puts "########### #{task.full_comment} ###########"
     sh 'bundle exec rails test:system', verbose: false
   end
 
