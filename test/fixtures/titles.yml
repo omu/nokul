@@ -18,3 +18,7 @@ chief:
   name: Şef
   code: 6835
   branch: GİH
+title_to_delete:
+  name: Dummy title
+  code: 9999
+  branch: GİH

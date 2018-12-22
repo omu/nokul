@@ -33,4 +33,8 @@ namespace :admin do
   resources :unit_statuses, except: :show
   resources :unit_types, except: :show
   resources :university_types, except: :show
+
+  # Other References
+  resources :languages, except: :show
+  resources :titles, except: :show
 end

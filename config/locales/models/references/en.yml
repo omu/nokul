@@ -1,17 +1,11 @@
 en:
   activerecord:
     attributes:
-      language: &language_attributes
-        iso: ISO Code
-        name: Name
       term: &term_attributes
         name: Name of Term
         identifier: Identifier
   helpers:
     submit:
-      language:
-        create: Create Language
-        update: Update Language
       term:
         create: Create Term
         update: Update Term
@@ -20,26 +14,7 @@ en:
       countries: Countries
     home:
       card:
-        languages: Languages
         terms: Terms
-    languages:
-      common:
-        languages: Languages
-      create:
-        success: Language successfully created.
-      destroy:
-        success: Language successfully deleted!
-        warning: Language can not be deleted.
-      edit:
-        form_title: Update the Language
-      index:
-        <<: *language_attributes
-        card_header: Languages
-        new_language_link: Create a New Language
-      new:
-        form_title: Create a Language
-      update:
-        success: Language successfully updated.
     terms:
       create:
         success: Term successfully created.

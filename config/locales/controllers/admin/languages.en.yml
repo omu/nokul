@@ -1,0 +1,24 @@
+en:
+  activerecord:
+    attributes:
+      language: &language_attributes
+        iso: ISO Code
+        name: Name of the Language
+  helpers:
+    submit:
+      language:
+        create: Create Language
+        update: Update Language
+  admin:
+    languages:
+      create:
+        success: Language successfully created.
+      destroy:
+        success: Language successfully deleted!
+        warning: Language can not be deleted.
+      index:
+        <<: *language_attributes
+        card_header: Languages
+        new_language_link: Create a New Language
+      update:
+        success: Language successfully updated.

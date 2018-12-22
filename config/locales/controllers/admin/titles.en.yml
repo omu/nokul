@@ -1,0 +1,25 @@
+en:
+  activerecord:
+    attributes:
+      title: &title_attributes
+        name: Name of the Title
+        code: Code
+        branch: Branch
+  helpers:
+    submit:
+      title:
+        create: Create Title
+        update: Update Title
+  admin:
+    titles:
+      create:
+        success: Title successfully created.
+      destroy:
+        success: Title successfully deleted!
+        warning: Title can not be deleted.
+      index:
+        <<: *title_attributes
+        card_header: Titles
+        new_title_link: Create a New Title
+      update:
+        success: Title successfully updated.

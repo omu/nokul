@@ -106,8 +106,18 @@
         </a>
         <ul class="nav-dropdown-items">
           <li class="nav-item">
+            <%= link_to admin_languages_path, class: 'nav-link' do %>
+              <%= fa_icon('language', text: t('.languages'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+          <li class="nav-item">
             <%= link_to admin_countries_path, class: 'nav-link' do %>
               <%= fa_icon('globe', text: t('.locations'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to admin_titles_path, class: 'nav-link' do %>
+              <%= fa_icon('group', text: t('.titles'), class: 'nav-icon') %>
             <% end %>
           </li>
           <li class="nav-item">
