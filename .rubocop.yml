@@ -19,6 +19,7 @@ Metrics/LineLength:
 Metrics/BlockLength:
   Exclude:
     - lib/tasks/**/*.rake # Won't fix
+    - test/models/concerns/reference_validations_test.rb
 Metrics/ClassLength:
   Exclude:
     - test/**/*.rb

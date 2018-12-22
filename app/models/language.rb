@@ -20,6 +20,6 @@ class Language < ApplicationRecord
   # callbacks
   before_save do
     self.name = name.capitalize_all
-    self.iso  = iso.upcase_tr
+    self.iso  = iso.upcase(:turkic)
   end
 end
