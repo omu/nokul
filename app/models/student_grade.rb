@@ -3,4 +3,5 @@
 class StudentGrade < ApplicationRecord
   include ReferenceValidations
   include ReferenceCallbacks
+  include ReferenceSearch
 end
