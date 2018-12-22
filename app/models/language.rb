@@ -2,12 +2,7 @@
 
 class Language < ApplicationRecord
   # search
-  include PgSearch
-  pg_search_scope(
-    :search,
-    against: %i[name iso],
-    using: { tsearch: { prefix: true } }
-  )
+  include ReferenceSearch
 
   # relations
   has_many :courses, dependent: :nullify
