@@ -131,21 +131,7 @@ jobs:
       - run: sudo apt install -y postgresql-client || true
       - run: bin/yarn install
       - run: bundle exec rake db:create db:structure:load
-      - run: bundle exec rake test:suite
-  test_selenium:
-    <<: *ruby_2_5_1
-    steps:
-      - restore_cache:
-          <<: *repository
-      - restore_cache:
-          <<: *restore_bundle
-      - restore_cache:
-          <<: *restore_yarn
-      - run: bundle --path vendor/bundle --without development
-      - run: sudo apt install -y postgresql-client || true
-      - run: bin/yarn install
-      - run: bundle exec rake db:create db:structure:load
-      - run: bundle exec rake test:selenium
+      - run: bundle exec rake test:system test
   deploy_develop:
     machine:
       enabled: true
@@ -191,15 +177,12 @@ workflows:
       - test_suite:
           requires:
             - bundle_assets
-      - test_selenium:
-          requires:
-            - bundle_assets
       - deploy_develop:
           requires:
             - quality
             - security
             - database
-            - test_selenium
+            - test_suite
           filters:
             branches:
               only: develop
@@ -208,7 +191,7 @@ workflows:
             - quality
             - security
             - database
-            - test_selenium
+            - test_suite
           filters:
             branches:
               only: master
