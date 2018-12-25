@@ -6,18 +6,19 @@ tr:
         academic_terms: Akademik Dönemler
         admin: Yönetici Modülü
         agenda_types: Gündem Türleri
+        available_courses: Açılan Dersler
         calendar_titles: Takvim Başlıkları
         calendar_types: Takvim Türleri
         calendars: Takvimler
         committee_units: Kurul/Komisyon Birimleri
         committees: Kurullar/Komisyonlar
+        courses: Dersler
+        course_criterion_types: Ders Kriter Türleri
         course_groups: Ders Grupları
         course_group_types: Ders Grup Türleri
         course_management: Ders İşlemleri
         course_types: Ders Türleri
         course_unit_groups: Ders Grupları
-        courses: Dersler
-        available_courses: Açılan Dersler
         curriculums: Müfredatlar
         definitions: Tanımlar
         documents: Gerekli Belgeler
