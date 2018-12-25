@@ -29,6 +29,9 @@ tr:
         theoric: Teorik
         unit: Birim
         ects: AKTS
+      course_criterion_type: &criterion_type
+        name: Ders Kriter Türü
+        identifier: Belirteç
       course_group: &course_group_attributes
         course_group_type: Ders Grup Türü
         course_ids: Dersler
@@ -81,6 +84,7 @@ tr:
       available_course: Açılan Ders
       available_course_group: Açılan Ders Grubu
       course: Ders
+      course_criterion_type: Ders Kriter Türü
       course_group: Ders Grubu
       course_group_type: Ders Grup Türü
       course_type: Ders Türü
@@ -157,6 +161,22 @@ tr:
         <<: *course_attributes
       update:
         success: Ders başarıyla güncellendi.
+    course_criterion_types:
+      create:
+        success: Ders kriter türü başarıyla oluşturuldu.
+      destroy:
+        error: Ders kriter türü silinirken bir hata oluştu.
+        success: Ders kriter türü başarıyla silindi.
+      edit:
+        form_title: Ders Kriter Türü Düzenle
+      index:
+        <<: *criterion_type
+        card_header: Ders Kriter Türleri
+        new_course_criterion_type_link: Yeni Ders Kriter Türü Ekle
+      new:
+        form_title: Ders Kriter Türü Oluştur
+      update:
+        success: Ders kriter türü başarıyla güncellendi.
     course_groups:
       create:
         success: Ders grubu başarıyla oluşturuldu.
