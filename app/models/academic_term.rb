@@ -5,8 +5,7 @@ class AcademicTerm < ApplicationRecord
   enum term: { fall: 0, spring: 1, summer: 2 }
 
   # relations
-  has_many :academic_calendars, dependent: :nullify
-  has_many :calendar_events, through: :academic_calendars
+
 
   # validations
   validates :year, presence: true, uniqueness: { scope: :term }, length: { maximum: 255 }

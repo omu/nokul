@@ -13,48 +13,6 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: academic_calendars; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.academic_calendars (
-    id bigint NOT NULL,
-    name character varying,
-    senate_decision_date date,
-    senate_decision_no character varying,
-    description character varying,
-    academic_term_id bigint NOT NULL,
-    calendar_type_id bigint NOT NULL,
-    created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL,
-    CONSTRAINT academic_calendars_description_length CHECK ((length((description)::text) <= 65535)),
-    CONSTRAINT academic_calendars_name_length CHECK ((length((name)::text) <= 255)),
-    CONSTRAINT academic_calendars_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text))),
-    CONSTRAINT academic_calendars_senate_decision_date_null CHECK ((senate_decision_date IS NOT NULL)),
-    CONSTRAINT academic_calendars_senate_decision_no_length CHECK ((length((senate_decision_no)::text) <= 255)),
-    CONSTRAINT academic_calendars_senate_decision_no_presence CHECK (((senate_decision_no IS NOT NULL) AND ((senate_decision_no)::text !~ '^\s*$'::text)))
-);
-
-
---
--- Name: academic_calendars_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE public.academic_calendars_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: academic_calendars_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE public.academic_calendars_id_seq OWNED BY public.academic_calendars.id;
-
-
---
 -- Name: academic_terms; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -527,205 +485,6 @@ CREATE SEQUENCE public.available_courses_id_seq
 --
 
 ALTER SEQUENCE public.available_courses_id_seq OWNED BY public.available_courses.id;
-
-
---
--- Name: calendar_events; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.calendar_events (
-    id bigint NOT NULL,
-    start_date timestamp without time zone,
-    end_date timestamp without time zone,
-    academic_calendar_id bigint NOT NULL,
-    calendar_title_id bigint NOT NULL,
-    calendar_type_id bigint,
-    academic_term_id bigint,
-    created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL,
-    CONSTRAINT calendar_events_end_date_null CHECK ((end_date IS NOT NULL)),
-    CONSTRAINT calendar_events_start_date_null CHECK ((start_date IS NOT NULL))
-);
-
-
---
--- Name: calendar_events_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE public.calendar_events_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: calendar_events_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE public.calendar_events_id_seq OWNED BY public.calendar_events.id;
-
-
---
--- Name: calendar_title_types; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.calendar_title_types (
-    id bigint NOT NULL,
-    type_id bigint NOT NULL,
-    title_id bigint NOT NULL,
-    active boolean DEFAULT true,
-    created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL,
-    CONSTRAINT calendar_title_types_active_null CHECK ((active IS NOT NULL))
-);
-
-
---
--- Name: calendar_title_types_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE public.calendar_title_types_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: calendar_title_types_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE public.calendar_title_types_id_seq OWNED BY public.calendar_title_types.id;
-
-
---
--- Name: calendar_titles; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.calendar_titles (
-    id bigint NOT NULL,
-    name character varying,
-    identifier character varying,
-    CONSTRAINT calendar_titles_identifier_length CHECK ((length((identifier)::text) <= 255)),
-    CONSTRAINT calendar_titles_identifier_presence CHECK (((identifier IS NOT NULL) AND ((identifier)::text !~ '^\s*$'::text))),
-    CONSTRAINT calendar_titles_name_length CHECK ((length((name)::text) <= 255)),
-    CONSTRAINT calendar_titles_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
-);
-
-
---
--- Name: calendar_titles_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE public.calendar_titles_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: calendar_titles_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE public.calendar_titles_id_seq OWNED BY public.calendar_titles.id;
-
-
---
--- Name: calendar_types; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.calendar_types (
-    id bigint NOT NULL,
-    name character varying,
-    created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL,
-    CONSTRAINT calendar_types_name_length CHECK ((length((name)::text) <= 255)),
-    CONSTRAINT calendar_types_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
-);
-
-
---
--- Name: calendar_types_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE public.calendar_types_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: calendar_types_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE public.calendar_types_id_seq OWNED BY public.calendar_types.id;
-
-
---
--- Name: calendar_unit_types; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.calendar_unit_types (
-    id bigint NOT NULL,
-    calendar_type_id bigint NOT NULL,
-    unit_type_id bigint NOT NULL
-);
-
-
---
--- Name: calendar_unit_types_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE public.calendar_unit_types_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: calendar_unit_types_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE public.calendar_unit_types_id_seq OWNED BY public.calendar_unit_types.id;
-
-
---
--- Name: calendar_units; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.calendar_units (
-    id bigint NOT NULL,
-    academic_calendar_id bigint NOT NULL,
-    unit_id bigint NOT NULL
-);
-
-
---
--- Name: calendar_units_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE public.calendar_units_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: calendar_units_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE public.calendar_units_id_seq OWNED BY public.calendar_units.id;
 
 
 --
@@ -2617,13 +2376,6 @@ ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
 
 
 --
--- Name: academic_calendars id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.academic_calendars ALTER COLUMN id SET DEFAULT nextval('public.academic_calendars_id_seq'::regclass);
-
-
---
 -- Name: academic_terms id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -2698,48 +2450,6 @@ ALTER TABLE ONLY public.available_course_lecturers ALTER COLUMN id SET DEFAULT n
 --
 
 ALTER TABLE ONLY public.available_courses ALTER COLUMN id SET DEFAULT nextval('public.available_courses_id_seq'::regclass);
-
-
---
--- Name: calendar_events id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.calendar_events ALTER COLUMN id SET DEFAULT nextval('public.calendar_events_id_seq'::regclass);
-
-
---
--- Name: calendar_title_types id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.calendar_title_types ALTER COLUMN id SET DEFAULT nextval('public.calendar_title_types_id_seq'::regclass);
-
-
---
--- Name: calendar_titles id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.calendar_titles ALTER COLUMN id SET DEFAULT nextval('public.calendar_titles_id_seq'::regclass);
-
-
---
--- Name: calendar_types id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.calendar_types ALTER COLUMN id SET DEFAULT nextval('public.calendar_types_id_seq'::regclass);
-
-
---
--- Name: calendar_unit_types id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.calendar_unit_types ALTER COLUMN id SET DEFAULT nextval('public.calendar_unit_types_id_seq'::regclass);
-
-
---
--- Name: calendar_units id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.calendar_units ALTER COLUMN id SET DEFAULT nextval('public.calendar_units_id_seq'::regclass);
 
 
 --
@@ -3072,14 +2782,6 @@ ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_
 
 
 --
--- Name: academic_calendars academic_calendars_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.academic_calendars
-    ADD CONSTRAINT academic_calendars_pkey PRIMARY KEY (id);
-
-
---
 -- Name: academic_terms academic_terms_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -3189,78 +2891,6 @@ ALTER TABLE ONLY public.available_course_lecturers
 
 ALTER TABLE ONLY public.available_courses
     ADD CONSTRAINT available_courses_pkey PRIMARY KEY (id);
-
-
---
--- Name: calendar_events calendar_events_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.calendar_events
-    ADD CONSTRAINT calendar_events_pkey PRIMARY KEY (id);
-
-
---
--- Name: calendar_title_types calendar_title_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.calendar_title_types
-    ADD CONSTRAINT calendar_title_types_pkey PRIMARY KEY (id);
-
-
---
--- Name: calendar_titles calendar_titles_identifier_unique; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.calendar_titles
-    ADD CONSTRAINT calendar_titles_identifier_unique UNIQUE (identifier) DEFERRABLE;
-
-
---
--- Name: calendar_titles calendar_titles_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.calendar_titles
-    ADD CONSTRAINT calendar_titles_name_unique UNIQUE (name) DEFERRABLE;
-
-
---
--- Name: calendar_titles calendar_titles_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.calendar_titles
-    ADD CONSTRAINT calendar_titles_pkey PRIMARY KEY (id);
-
-
---
--- Name: calendar_types calendar_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.calendar_types
-    ADD CONSTRAINT calendar_types_name_unique UNIQUE (name) DEFERRABLE;
-
-
---
--- Name: calendar_types calendar_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.calendar_types
-    ADD CONSTRAINT calendar_types_pkey PRIMARY KEY (id);
-
-
---
--- Name: calendar_unit_types calendar_unit_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.calendar_unit_types
-    ADD CONSTRAINT calendar_unit_types_pkey PRIMARY KEY (id);
-
-
---
--- Name: calendar_units calendar_units_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.calendar_units
-    ADD CONSTRAINT calendar_units_pkey PRIMARY KEY (id);
 
 
 --
@@ -3912,20 +3542,6 @@ ALTER TABLE ONLY public.users
 
 
 --
--- Name: index_academic_calendars_on_academic_term_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX index_academic_calendars_on_academic_term_id ON public.academic_calendars USING btree (academic_term_id);
-
-
---
--- Name: index_academic_calendars_on_calendar_type_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX index_academic_calendars_on_calendar_type_id ON public.academic_calendars USING btree (calendar_type_id);
-
-
---
 -- Name: index_active_storage_attachments_on_blob_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -4035,76 +3651,6 @@ CREATE INDEX index_available_courses_on_curriculum_id ON public.available_course
 --
 
 CREATE INDEX index_available_courses_on_unit_id ON public.available_courses USING btree (unit_id);
-
-
---
--- Name: index_calendar_events_on_academic_calendar_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX index_calendar_events_on_academic_calendar_id ON public.calendar_events USING btree (academic_calendar_id);
-
-
---
--- Name: index_calendar_events_on_academic_term_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX index_calendar_events_on_academic_term_id ON public.calendar_events USING btree (academic_term_id);
-
-
---
--- Name: index_calendar_events_on_calendar_title_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX index_calendar_events_on_calendar_title_id ON public.calendar_events USING btree (calendar_title_id);
-
-
---
--- Name: index_calendar_events_on_calendar_type_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX index_calendar_events_on_calendar_type_id ON public.calendar_events USING btree (calendar_type_id);
-
-
---
--- Name: index_calendar_title_types_on_title_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX index_calendar_title_types_on_title_id ON public.calendar_title_types USING btree (title_id);
-
-
---
--- Name: index_calendar_title_types_on_type_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX index_calendar_title_types_on_type_id ON public.calendar_title_types USING btree (type_id);
-
-
---
--- Name: index_calendar_unit_types_on_calendar_type_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX index_calendar_unit_types_on_calendar_type_id ON public.calendar_unit_types USING btree (calendar_type_id);
-
-
---
--- Name: index_calendar_unit_types_on_unit_type_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX index_calendar_unit_types_on_unit_type_id ON public.calendar_unit_types USING btree (unit_type_id);
-
-
---
--- Name: index_calendar_units_on_academic_calendar_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX index_calendar_units_on_academic_calendar_id ON public.calendar_units USING btree (academic_calendar_id);
-
-
---
--- Name: index_calendar_units_on_unit_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX index_calendar_units_on_unit_id ON public.calendar_units USING btree (unit_id);
 
 
 --
@@ -4517,14 +4063,6 @@ ALTER TABLE ONLY public.curriculum_courses
 
 
 --
--- Name: calendar_units fk_rails_0f243323eb; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.calendar_units
-    ADD CONSTRAINT fk_rails_0f243323eb FOREIGN KEY (academic_calendar_id) REFERENCES public.academic_calendars(id);
-
-
---
 -- Name: agendas fk_rails_11f2fa1aba; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -4717,43 +4255,11 @@ ALTER TABLE ONLY public.curriculum_programs
 
 
 --
--- Name: calendar_unit_types fk_rails_5793092390; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.calendar_unit_types
-    ADD CONSTRAINT fk_rails_5793092390 FOREIGN KEY (calendar_type_id) REFERENCES public.calendar_types(id);
-
-
---
 -- Name: units fk_rails_5951990ba9; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.units
     ADD CONSTRAINT fk_rails_5951990ba9 FOREIGN KEY (district_id) REFERENCES public.districts(id);
-
-
---
--- Name: academic_calendars fk_rails_596bfda5fc; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.academic_calendars
-    ADD CONSTRAINT fk_rails_596bfda5fc FOREIGN KEY (academic_term_id) REFERENCES public.academic_terms(id);
-
-
---
--- Name: academic_calendars fk_rails_5d3f3da6fd; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.academic_calendars
-    ADD CONSTRAINT fk_rails_5d3f3da6fd FOREIGN KEY (calendar_type_id) REFERENCES public.calendar_types(id);
-
-
---
--- Name: calendar_events fk_rails_5f988af870; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.calendar_events
-    ADD CONSTRAINT fk_rails_5f988af870 FOREIGN KEY (academic_calendar_id) REFERENCES public.academic_calendars(id);
 
 
 --
@@ -4765,14 +4271,6 @@ ALTER TABLE ONLY public.meeting_agendas
 
 
 --
--- Name: calendar_events fk_rails_70b58e89a3; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.calendar_events
-    ADD CONSTRAINT fk_rails_70b58e89a3 FOREIGN KEY (calendar_type_id) REFERENCES public.calendar_types(id);
-
-
---
 -- Name: group_courses fk_rails_728bb39a67; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -4781,27 +4279,11 @@ ALTER TABLE ONLY public.group_courses
 
 
 --
--- Name: calendar_unit_types fk_rails_76682f987b; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.calendar_unit_types
-    ADD CONSTRAINT fk_rails_76682f987b FOREIGN KEY (unit_type_id) REFERENCES public.unit_types(id);
-
-
---
 -- Name: positions fk_rails_78999e7b17; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.positions
     ADD CONSTRAINT fk_rails_78999e7b17 FOREIGN KEY (administrative_function_id) REFERENCES public.administrative_functions(id);
-
-
---
--- Name: calendar_events fk_rails_80f733517f; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.calendar_events
-    ADD CONSTRAINT fk_rails_80f733517f FOREIGN KEY (academic_term_id) REFERENCES public.academic_terms(id);
 
 
 --
@@ -4826,14 +4308,6 @@ ALTER TABLE ONLY public.identities
 
 ALTER TABLE ONLY public.available_course_lecturers
     ADD CONSTRAINT fk_rails_86397e28ff FOREIGN KEY (lecturer_id) REFERENCES public.employees(id);
-
-
---
--- Name: calendar_units fk_rails_893a875cd2; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.calendar_units
-    ADD CONSTRAINT fk_rails_893a875cd2 FOREIGN KEY (unit_id) REFERENCES public.units(id);
 
 
 --
@@ -4941,14 +4415,6 @@ ALTER TABLE ONLY public.prospective_students
 
 
 --
--- Name: calendar_title_types fk_rails_b289bb1a64; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.calendar_title_types
-    ADD CONSTRAINT fk_rails_b289bb1a64 FOREIGN KEY (type_id) REFERENCES public.calendar_types(id);
-
-
---
 -- Name: projects fk_rails_b872a6760a; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -4986,14 +4452,6 @@ ALTER TABLE ONLY public.available_courses
 
 ALTER TABLE ONLY public.courses
     ADD CONSTRAINT fk_rails_cb5582d97e FOREIGN KEY (language_id) REFERENCES public.languages(id);
-
-
---
--- Name: calendar_events fk_rails_d56eff1238; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.calendar_events
-    ADD CONSTRAINT fk_rails_d56eff1238 FOREIGN KEY (calendar_title_id) REFERENCES public.calendar_titles(id);
 
 
 --
@@ -5061,14 +4519,6 @@ ALTER TABLE ONLY public.available_courses
 
 
 --
--- Name: calendar_title_types fk_rails_f81afc995c; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.calendar_title_types
-    ADD CONSTRAINT fk_rails_f81afc995c FOREIGN KEY (title_id) REFERENCES public.calendar_titles(id);
-
-
---
 -- Name: committee_meetings fk_rails_f85b219ea4; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -5086,12 +4536,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20180304233108'),
 ('20180305010433'),
 ('20180305142048'),
-('20180425071646'),
-('20180425105341'),
-('20180426071040'),
 ('20180430103419'),
-('20180502081520'),
-('20180503120921'),
 ('20180503160019'),
 ('20180503160241'),
 ('20180503160350'),
@@ -5143,8 +4588,6 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20181112174827'),
 ('20181112175328'),
 ('20181112175343'),
-('20181115113320'),
-('20181115132317'),
 ('20181130131559'),
 ('20181210120434'),
 ('20181210221451');
