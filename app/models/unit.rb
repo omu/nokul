@@ -43,9 +43,6 @@ class Unit < ApplicationRecord
   has_many :managed_curriculums, dependent: :destroy, class_name: 'Curriculum'
   has_many :registration_documents, dependent: :destroy
   has_many :prospective_students, dependent: :destroy
-  has_many :calendar_units, dependent: :destroy
-  has_many :academic_calendars, through: :calendar_units
-  has_many :calendar_events, through: :academic_calendars
   has_many :available_courses, dependent: :destroy
 
   # validations

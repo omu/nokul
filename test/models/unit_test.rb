@@ -28,9 +28,6 @@ class UnitTest < ActiveSupport::TestCase
     managed_curriculums
     registration_documents
     prospective_students
-    calendar_units
-    academic_calendars
-    calendar_events
     available_courses
   ].each do |property|
     test "a unit can communicate with #{property}" do

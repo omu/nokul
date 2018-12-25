@@ -5,7 +5,6 @@ class Student < ApplicationRecord
   belongs_to :user
   belongs_to :unit
   has_one :identity, dependent: :destroy
-  has_many :academic_calendars, -> { AcademicCalendar.active }, through: :unit
 
   # validations
   validates :unit_id, uniqueness: { scope: %i[user] }
@@ -21,12 +20,5 @@ class Student < ApplicationRecord
 
   def build_identity_information
     Kps::IdentitySaveJob.perform_later(user, id)
-  end
-
-  def proper_event_range?(title)
-    event =
-      academic_calendars.last.calendar_events
-                        .find_by(calendar_title: CalendarTitle.find_by(identifier: title))
-    !event.nil? && event.proper_range?
   end
 end
