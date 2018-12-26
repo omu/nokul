@@ -488,6 +488,123 @@ ALTER SEQUENCE public.available_courses_id_seq OWNED BY public.available_courses
 
 
 --
+-- Name: calendar_event_types; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.calendar_event_types (
+    id bigint NOT NULL,
+    name character varying,
+    identifier character varying,
+    CONSTRAINT calendar_event_types_identifier_length CHECK ((length((identifier)::text) <= 255)),
+    CONSTRAINT calendar_event_types_identifier_presence CHECK (((identifier IS NOT NULL) AND ((identifier)::text !~ '^\s*$'::text))),
+    CONSTRAINT calendar_event_types_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT calendar_event_types_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
+);
+
+
+--
+-- Name: calendar_event_types_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.calendar_event_types_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: calendar_event_types_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.calendar_event_types_id_seq OWNED BY public.calendar_event_types.id;
+
+
+--
+-- Name: calendar_events; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.calendar_events (
+    id bigint NOT NULL,
+    calendar_id bigint NOT NULL,
+    calendar_event_type_id bigint NOT NULL,
+    start_time timestamp without time zone,
+    end_time timestamp without time zone,
+    location character varying,
+    timezone character varying DEFAULT 'Istanbul'::character varying,
+    visible boolean DEFAULT true,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL,
+    CONSTRAINT calendar_events_location_length CHECK ((length((location)::text) <= 255)),
+    CONSTRAINT calendar_events_timezone_length CHECK ((length((timezone)::text) <= 255)),
+    CONSTRAINT calendar_events_timezone_presence CHECK (((timezone IS NOT NULL) AND ((timezone)::text !~ '^\s*$'::text))),
+    CONSTRAINT calendar_events_visible_null CHECK ((visible IS NOT NULL))
+);
+
+
+--
+-- Name: calendar_events_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.calendar_events_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: calendar_events_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.calendar_events_id_seq OWNED BY public.calendar_events.id;
+
+
+--
+-- Name: calendars; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.calendars (
+    id bigint NOT NULL,
+    name character varying,
+    senate_decision_date date,
+    senate_decision_no character varying,
+    description character varying,
+    timezone character varying DEFAULT 'Istanbul'::character varying,
+    academic_term_id bigint NOT NULL,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL,
+    CONSTRAINT calendars_description_length CHECK ((length((description)::text) <= 65535)),
+    CONSTRAINT calendars_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT calendars_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text))),
+    CONSTRAINT calendars_senate_decision_no_length CHECK ((length((senate_decision_no)::text) <= 255)),
+    CONSTRAINT calendars_timezone_length CHECK ((length((timezone)::text) <= 255)),
+    CONSTRAINT calendars_timezone_presence CHECK (((timezone IS NOT NULL) AND ((timezone)::text !~ '^\s*$'::text)))
+);
+
+
+--
+-- Name: calendars_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.calendars_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: calendars_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.calendars_id_seq OWNED BY public.calendars.id;
+
+
+--
 -- Name: certifications; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -2453,6 +2570,27 @@ ALTER TABLE ONLY public.available_courses ALTER COLUMN id SET DEFAULT nextval('p
 
 
 --
+-- Name: calendar_event_types id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.calendar_event_types ALTER COLUMN id SET DEFAULT nextval('public.calendar_event_types_id_seq'::regclass);
+
+
+--
+-- Name: calendar_events id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.calendar_events ALTER COLUMN id SET DEFAULT nextval('public.calendar_events_id_seq'::regclass);
+
+
+--
+-- Name: calendars id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.calendars ALTER COLUMN id SET DEFAULT nextval('public.calendars_id_seq'::regclass);
+
+
+--
 -- Name: certifications id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -2891,6 +3029,38 @@ ALTER TABLE ONLY public.available_course_lecturers
 
 ALTER TABLE ONLY public.available_courses
     ADD CONSTRAINT available_courses_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: calendar_event_types calendar_event_types_identifier_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.calendar_event_types
+    ADD CONSTRAINT calendar_event_types_identifier_unique UNIQUE (identifier) DEFERRABLE;
+
+
+--
+-- Name: calendar_event_types calendar_event_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.calendar_event_types
+    ADD CONSTRAINT calendar_event_types_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: calendar_events calendar_events_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.calendar_events
+    ADD CONSTRAINT calendar_events_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: calendars calendars_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.calendars
+    ADD CONSTRAINT calendars_pkey PRIMARY KEY (id);
 
 
 --
@@ -3654,6 +3824,27 @@ CREATE INDEX index_available_courses_on_unit_id ON public.available_courses USIN
 
 
 --
+-- Name: index_calendar_events_on_calendar_event_type_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_calendar_events_on_calendar_event_type_id ON public.calendar_events USING btree (calendar_event_type_id);
+
+
+--
+-- Name: index_calendar_events_on_calendar_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_calendar_events_on_calendar_id ON public.calendar_events USING btree (calendar_id);
+
+
+--
+-- Name: index_calendars_on_academic_term_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_calendars_on_academic_term_id ON public.calendars USING btree (academic_term_id);
+
+
+--
 -- Name: index_certifications_on_user_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -4039,6 +4230,22 @@ CREATE UNIQUE INDEX index_users_on_reset_password_token ON public.users USING bt
 
 
 --
+-- Name: calendar_events fk_rails_0011c39cc3; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.calendar_events
+    ADD CONSTRAINT fk_rails_0011c39cc3 FOREIGN KEY (calendar_id) REFERENCES public.calendars(id);
+
+
+--
+-- Name: calendars fk_rails_02803298e9; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.calendars
+    ADD CONSTRAINT fk_rails_02803298e9 FOREIGN KEY (academic_term_id) REFERENCES public.academic_terms(id);
+
+
+--
 -- Name: courses fk_rails_051656b790; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -4260,6 +4467,14 @@ ALTER TABLE ONLY public.curriculum_programs
 
 ALTER TABLE ONLY public.units
     ADD CONSTRAINT fk_rails_5951990ba9 FOREIGN KEY (district_id) REFERENCES public.districts(id);
+
+
+--
+-- Name: calendar_events fk_rails_64d7b22524; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.calendar_events
+    ADD CONSTRAINT fk_rails_64d7b22524 FOREIGN KEY (calendar_event_type_id) REFERENCES public.calendar_event_types(id);
 
 
 --
@@ -4590,6 +4805,9 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20181112175343'),
 ('20181130131559'),
 ('20181210120434'),
-('20181210221451');
+('20181210221451'),
+('20181225180258'),
+('20181225195123'),
+('20181225201818');
 
 

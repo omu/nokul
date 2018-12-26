@@ -1,0 +1,7 @@
+add_drop_fall_2018_grad:
+  calendar: graduate_calendar
+  calendar_event_type: add_drop_registrations
+  start_time: 2018-12-10 01:15:04 +0300
+  end_time: 2018-12-20 23:15:04 +0300
+  location: Online
+  timezone: Istanbul
