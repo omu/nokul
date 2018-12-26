@@ -13,8 +13,8 @@ class Language < ApplicationRecord
   validates :iso, presence: true, uniqueness: true, length: { maximum: 255 }
 
   # callbacks
-  before_save do
-    self.name = name.capitalize_all
-    self.iso  = iso.upcase(:turkic)
+  before_validation do
+    self.name = name.capitalize_all if name
+    self.iso  = iso.upcase(:turkic) if iso
   end
 end
