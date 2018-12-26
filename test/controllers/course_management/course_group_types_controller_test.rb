@@ -56,7 +56,7 @@ module CourseManagement
 
     test 'should destroy course group type' do
       assert_difference('CourseGroupType.count', -1) do
-        delete course_group_type_path(CourseGroupType.last)
+        delete course_group_type_path(course_group_types(:universite_secmeli))
       end
 
       assert_redirected_to course_group_types_path
