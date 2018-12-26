@@ -10,5 +10,5 @@ class CourseCriterionType < ApplicationRecord
   validates :identifier, presence: true, uniqueness: true, length: { maximum: 255 }
 
   # callbacks
-  before_save { self.name = name.capitalize_all }
+  before_validation { self.name = name.capitalize_all if name }
 end
