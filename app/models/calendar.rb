@@ -11,8 +11,10 @@ class Calendar < ApplicationRecord
 
   # relations
   belongs_to :academic_term
-  has_many :calendar_events
+  has_many :calendar_events, dependent: :destroy
   has_many :calendar_event_types, through: :calendar_events
+  has_many :unit_calendars, dependent: :destroy
+  has_many :units, through: :unit_calendars
 
   # validations
   validates :name, presence: true, uniqueness: { scope: %i[senate_decision_no] }, length: { maximum: 255 }

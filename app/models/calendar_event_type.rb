@@ -10,7 +10,7 @@ class CalendarEventType < ApplicationRecord
   )
 
   # relations
-  has_many :calendar_events
+  has_many :calendar_events, dependent: :destroy
   has_many :calendars, through: :calendar_events
 
   # validations

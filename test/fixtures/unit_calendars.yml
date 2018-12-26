@@ -1,0 +1,6 @@
+uzem_calendar:
+  calendar: uzem_calendar
+  unit: uzem
+egitim_bilimleri_calendar:
+  calendar: graduate_calendar
+  unit: egitim_bilimleri_enstitusu
