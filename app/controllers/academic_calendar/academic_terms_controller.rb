@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Calendar
+module AcademicCalendar
   class AcademicTermsController < ApplicationController
     include PagyBackendWithHelpers
 
