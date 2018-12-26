@@ -2198,6 +2198,36 @@ ALTER SEQUENCE public.titles_id_seq OWNED BY public.titles.id;
 
 
 --
+-- Name: unit_calendars; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.unit_calendars (
+    id bigint NOT NULL,
+    calendar_id bigint NOT NULL,
+    unit_id bigint NOT NULL
+);
+
+
+--
+-- Name: unit_calendars_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.unit_calendars_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: unit_calendars_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.unit_calendars_id_seq OWNED BY public.unit_calendars.id;
+
+
+--
 -- Name: unit_instruction_languages; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -2868,6 +2898,13 @@ ALTER TABLE ONLY public.terms ALTER COLUMN id SET DEFAULT nextval('public.terms_
 --
 
 ALTER TABLE ONLY public.titles ALTER COLUMN id SET DEFAULT nextval('public.titles_id_seq'::regclass);
+
+
+--
+-- Name: unit_calendars id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.unit_calendars ALTER COLUMN id SET DEFAULT nextval('public.unit_calendars_id_seq'::regclass);
 
 
 --
@@ -3576,6 +3613,14 @@ ALTER TABLE ONLY public.titles
 
 
 --
+-- Name: unit_calendars unit_calendars_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.unit_calendars
+    ADD CONSTRAINT unit_calendars_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: unit_instruction_languages unit_instruction_languages_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -4160,6 +4205,20 @@ CREATE INDEX index_students_on_user_id ON public.students USING btree (user_id);
 
 
 --
+-- Name: index_unit_calendars_on_calendar_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_unit_calendars_on_calendar_id ON public.unit_calendars USING btree (calendar_id);
+
+
+--
+-- Name: index_unit_calendars_on_unit_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_unit_calendars_on_unit_id ON public.unit_calendars USING btree (unit_id);
+
+
+--
 -- Name: index_units_on_ancestry; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -4419,6 +4478,14 @@ ALTER TABLE ONLY public.committee_decisions
 
 ALTER TABLE ONLY public.available_courses
     ADD CONSTRAINT fk_rails_4783d78ac5 FOREIGN KEY (course_id) REFERENCES public.courses(id);
+
+
+--
+-- Name: unit_calendars fk_rails_47a7d8ee6a; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.unit_calendars
+    ADD CONSTRAINT fk_rails_47a7d8ee6a FOREIGN KEY (calendar_id) REFERENCES public.calendars(id);
 
 
 --
@@ -4742,6 +4809,14 @@ ALTER TABLE ONLY public.committee_meetings
 
 
 --
+-- Name: unit_calendars fk_rails_faff5aa83d; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.unit_calendars
+    ADD CONSTRAINT fk_rails_faff5aa83d FOREIGN KEY (unit_id) REFERENCES public.units(id);
+
+
+--
 -- PostgreSQL database dump complete
 --
 
@@ -4808,6 +4883,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20181210221451'),
 ('20181225180258'),
 ('20181225195123'),
-('20181225201818');
+('20181225201818'),
+('20181226013104');
 
 

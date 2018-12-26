@@ -44,6 +44,8 @@ class Unit < ApplicationRecord
   has_many :registration_documents, dependent: :destroy
   has_many :prospective_students, dependent: :destroy
   has_many :available_courses, dependent: :destroy
+  has_many :unit_calendars, dependent: :destroy
+  has_many :calendars, through: :unit_calendars
 
   # validations
   validates :name, presence: true, uniqueness: { scope: %i[ancestry unit_status] }, length: { maximum: 255 }
