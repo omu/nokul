@@ -57,7 +57,7 @@ class DistrictTest < ActiveSupport::TestCase
     assert error_codes.include?(:not_a_number)
   end
 
-  test 'active field can not be nil' do
+  test 'active field of district can not be nil' do
     fake = districts(:vezirkopru).dup
     fake.active = nil
     assert_not fake.valid?

@@ -7,6 +7,7 @@ class CourseTest < ActiveSupport::TestCase
     @course = courses(:test)
   end
 
+  # relations
   %i[
     course_type
     unit
