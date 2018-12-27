@@ -6,9 +6,9 @@ en:
         academic_terms: Academic Terms
         admin: Admin Module
         agenda_types: Agenda Types
-        calendar_titles: Calendar Titles
-        calendar_types: Calendar Types
-        calendars: Calendars
+        available_courses: Available Courses
+        calendar_event_types: Event Types
+        calendar_management: Calendar Management
         committee_units: Committee Units
         committees: Committees
         course_groups: Course Unit Group
@@ -17,7 +17,6 @@ en:
         course_types: Course Types
         course_unit_groups: Course Unit Group
         courses: Courses
-        available_courses: Available Courses
         curriculums: Curriculums
         definitions: Definitions
         documents: Required Documents

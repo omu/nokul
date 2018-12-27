@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module AcademicCalendar
+module CalendarManagement
   class CalendarEventTypesController < ApplicationController
     include PagyBackendWithHelpers
 
@@ -14,12 +14,12 @@ module AcademicCalendar
       @calendar_event_type = CalendarEventType.new
     end
 
-    def edit; end
-
     def create
       @calendar_event_type = CalendarEventType.new(calendar_event_type_params)
       @calendar_event_type.save ? redirect_with('success') : render(:new)
     end
+
+    def edit; end
 
     def update
       @calendar_event_type.update(calendar_event_type_params) ? redirect_with('success') : render(:edit)
@@ -32,7 +32,7 @@ module AcademicCalendar
     private
 
     def redirect_with(message)
-      redirect_to(academic_calendar_calendar_event_types_path, notice: t(".#{message}"))
+      redirect_to([:calendar_management, 'calendar_event_types'], notice: t(".#{message}"))
     end
 
     def set_calendar_event_type

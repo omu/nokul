@@ -5,7 +5,7 @@ class CalendarEventType < ApplicationRecord
   include PgSearch
   pg_search_scope(
     :search,
-    against: %i[name],
+    against: %i[name identifier],
     using: { tsearch: { prefix: true } }
   )
 
