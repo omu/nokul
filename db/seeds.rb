@@ -6,9 +6,6 @@ Rake::Task['fetch:references'].invoke
 # import all static data
 Rake::Task['import:all'].invoke
 
-# update names_depth_cache fields of units
-Rake::Task['post_deploy:add_names_depth_cache_to_units'].invoke
-
 # Create a single unit_type for commissions
 UnitType.create(name: 'Kurul / Komisyon', code: 200)
 
