@@ -11,7 +11,7 @@
   parent_yoksis_id: 0
   osym_id: 
 -
-  name: Bal Uygulama Ve Araştırma Merkezi
+  name: Bal Uygulama ve Araştırma Merkezi
   yoksis_id: 247913
   foet_code: 
   founded_at: 11.12.2013
@@ -19,7 +19,7 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 163896
   osym_id: 
 -
@@ -47,7 +47,7 @@
   parent_yoksis_id: 208450
   osym_id: 
 -
-  name: Rehberlik Ve Psikolojik Danışmanlık Anabilim Dalı
+  name: Rehberlik ve Psikolojik Danışmanlık Anabilim Dalı
   yoksis_id: 212952
   foet_code: 142
   founded_at: 25.01.2012
@@ -59,7 +59,7 @@
   parent_yoksis_id: 212951
   osym_id: 
 -
-  name: Rehberlik Ve Psikolojik Danışmanlık Pr. (%25 Burslu)
+  name: Rehberlik ve Psikolojik Danışmanlık Pr. (%25 Burslu)
   yoksis_id: 228483
   foet_code: 142
   founded_at: 
@@ -71,7 +71,7 @@
   parent_yoksis_id: 212951
   osym_id: 206610048
 -
-  name: Rehberlik Ve Psikolojik Danışmanlık Pr. (%50 Burslu)
+  name: Rehberlik ve Psikolojik Danışmanlık Pr. (%50 Burslu)
   yoksis_id: 228482
   foet_code: 142
   founded_at: 
@@ -83,7 +83,7 @@
   parent_yoksis_id: 212951
   osym_id: 206610039
 -
-  name: Rehberlik Ve Psikolojik Danışmanlık Pr. (Tam Burslu)
+  name: Rehberlik ve Psikolojik Danışmanlık Pr. (Tam Burslu)
   yoksis_id: 228460
   foet_code: 142
   founded_at: 
@@ -95,7 +95,7 @@
   parent_yoksis_id: 212951
   osym_id: 206610021
 -
-  name: Rehberlik Ve Psikolojik Danışmanlık Pr. (Ücretli)
+  name: Rehberlik ve Psikolojik Danışmanlık Pr. (Ücretli)
   yoksis_id: 228477
   foet_code: 142
   founded_at: 
@@ -275,7 +275,7 @@
   parent_yoksis_id: 213917
   osym_id: 
 -
-  name: Eğitim Stratejileri Uygulama Ve Araştırma Merkezi
+  name: Eğitim Stratejileri Uygulama ve Araştırma Merkezi
   yoksis_id: 274912
   foet_code: 
   founded_at: 22.04.2015
@@ -283,7 +283,7 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 163896
   osym_id: 
 -
@@ -299,7 +299,7 @@
   parent_yoksis_id: 163896
   osym_id: 
 -
-  name: Moleküler Biyoloji Ve Genetik (Dr)
+  name: Moleküler Biyoloji ve Genetik (Dr)
   yoksis_id: 245382
   foet_code: 421
   founded_at: 15.08.2013
@@ -311,7 +311,7 @@
   parent_yoksis_id: 208454
   osym_id: 
 -
-  name: Moleküler Biyoloji Ve Genetik (Yl) (Tezli)
+  name: Moleküler Biyoloji ve Genetik (Yl) (Tezli)
   yoksis_id: 245381
   foet_code: 421
   founded_at: 15.08.2013
@@ -347,7 +347,7 @@
   parent_yoksis_id: 163896
   osym_id: 
 -
-  name: Moleküler Biyoloji Ve Genetik Bölümü
+  name: Moleküler Biyoloji ve Genetik Bölümü
   yoksis_id: 212950
   foet_code: 421
   founded_at: 25.01.2012
@@ -359,7 +359,7 @@
   parent_yoksis_id: 208452
   osym_id: 
 -
-  name: Moleküler Biyoloji Ve Genetik Pr. (%25 Burslu)
+  name: Moleküler Biyoloji ve Genetik Pr. (%25 Burslu)
   yoksis_id: 228509
   foet_code: 421
   founded_at: 
@@ -371,7 +371,7 @@
   parent_yoksis_id: 212950
   osym_id: 206610109
 -
-  name: Moleküler Biyoloji Ve Genetik Pr. (%50 Burslu)
+  name: Moleküler Biyoloji ve Genetik Pr. (%50 Burslu)
   yoksis_id: 228491
   foet_code: 421
   founded_at: 
@@ -383,7 +383,7 @@
   parent_yoksis_id: 212950
   osym_id: 206610109
 -
-  name: Moleküler Biyoloji Ve Genetik Pr. (%75 Burslu)
+  name: Moleküler Biyoloji ve Genetik Pr. (%75 Burslu)
   yoksis_id: 280161
   foet_code: 421
   founded_at: 01.01.1900
@@ -395,7 +395,7 @@
   parent_yoksis_id: 212950
   osym_id: 206610463
 -
-  name: Moleküler Biyoloji Ve Genetik Pr. (Tam Burslu)
+  name: Moleküler Biyoloji ve Genetik Pr. (Tam Burslu)
   yoksis_id: 228508
   foet_code: 421
   founded_at: 
@@ -467,7 +467,7 @@
   parent_yoksis_id: 233047
   osym_id: 206610321
 -
-  name: Türk Dili Ve Edebiyatı Bölümü
+  name: Türk Dili ve Edebiyatı Bölümü
   yoksis_id: 250098
   foet_code: 223
   founded_at: 29.01.2014
@@ -479,7 +479,7 @@
   parent_yoksis_id: 208452
   osym_id: 
 -
-  name: Türk Dili Ve Edebiyatı Pr. (%25 Burslu)
+  name: Türk Dili ve Edebiyatı Pr. (%25 Burslu)
   yoksis_id: 256261
   foet_code: 223
   founded_at: 05.05.2014
@@ -491,7 +491,7 @@
   parent_yoksis_id: 250098
   osym_id: 206610454
 -
-  name: Türk Dili Ve Edebiyatı Pr. (%50 Burslu)
+  name: Türk Dili ve Edebiyatı Pr. (%50 Burslu)
   yoksis_id: 256260
   foet_code: 223
   founded_at: 05.05.2014
@@ -503,7 +503,7 @@
   parent_yoksis_id: 250098
   osym_id: 206610445
 -
-  name: Türk Dili Ve Edebiyatı Pr. (Tam Burslu)
+  name: Türk Dili ve Edebiyatı Pr. (Tam Burslu)
   yoksis_id: 256259
   foet_code: 223
   founded_at: 05.05.2014
@@ -515,7 +515,7 @@
   parent_yoksis_id: 250098
   osym_id: 206610436
 -
-  name: Medeniyetler İttifakı Uygulama Ve Araştırma Merkezi
+  name: Medeniyetler İttifakı Uygulama ve Araştırma Merkezi
   yoksis_id: 241205
   foet_code: 
   founded_at: 12.06.2013
@@ -523,7 +523,7 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 163896
   osym_id: 
 -
@@ -635,7 +635,7 @@
   parent_yoksis_id: 269525
   osym_id: 
 -
-  name: Mimarlık Ve Mühendislik Fakültesi
+  name: Mimarlık ve Mühendislik Fakültesi
   yoksis_id: 208453
   foet_code: 
   founded_at: 24.04.2010
@@ -899,7 +899,7 @@
   parent_yoksis_id: 163896
   osym_id: 
 -
-  name: Atatürk İlkeleri Ve İnkılap Tarihi Bölümü
+  name: Atatürk İlkeleri ve İnkılap Tarihi Bölümü
   yoksis_id: 214590
   foet_code: 225
   founded_at: 29.03.2012
@@ -971,7 +971,7 @@
   parent_yoksis_id: 208430
   osym_id: 
 -
-  name: Türk Dili Ve Edebiyatı (Yl) (Tezsiz)
+  name: Türk Dili ve Edebiyatı (Yl) (Tezsiz)
   yoksis_id: 262822
   foet_code: 223
   founded_at: 02.12.2014
@@ -983,7 +983,7 @@
   parent_yoksis_id: 208430
   osym_id: 
 -
-  name: Uluslararası Ticaret Ve İşletmecilik (Yl) (Tezli)
+  name: Uluslararası Ticaret ve İşletmecilik (Yl) (Tezli)
   yoksis_id: 257799
   foet_code: 341
   founded_at: 21.05.2014
@@ -995,7 +995,7 @@
   parent_yoksis_id: 208430
   osym_id: 
 -
-  name: Uluslararası Ticaret Ve İşletmecilik (Yl) (Tezsiz)
+  name: Uluslararası Ticaret ve İşletmecilik (Yl) (Tezsiz)
   yoksis_id: 261346
   foet_code: 341
   founded_at: 25.09.2014
@@ -1031,7 +1031,7 @@
   parent_yoksis_id: 208430
   osym_id: 
 -
-  name: Sürekli Eğitim Uygulama Ve Araştırma Merkezi
+  name: Sürekli Eğitim Uygulama ve Araştırma Merkezi
   yoksis_id: 227307
   foet_code: 
   founded_at: 17.10.2012
@@ -1039,11 +1039,11 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 163896
   osym_id: 
 -
-  name: Türkçe Öğretimi Uygulama Ve Araştırma Merkezi
+  name: Türkçe Öğretimi Uygulama ve Araştırma Merkezi
   yoksis_id: 247288
   foet_code: 
   founded_at: 26.11.2013
@@ -1051,11 +1051,11 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 163896
   osym_id: 
 -
-  name: Uzaktan Eğitim Uygulama Ve Araştırma Merkezi
+  name: Uzaktan Eğitim Uygulama ve Araştırma Merkezi
   yoksis_id: 279468
   foet_code: 
   founded_at: 08.07.2015
@@ -1063,7 +1063,7 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 163896
   osym_id: 
 -
@@ -1103,7 +1103,7 @@
   parent_yoksis_id: 237870
   osym_id: 
 -
-  name: Yaratıcı Endüstriler Uygulama Ve Araştırma Merkezi
+  name: Yaratıcı Endüstriler Uygulama ve Araştırma Merkezi
   yoksis_id: 254630
   foet_code: 
   founded_at: 02.04.2014
@@ -1111,11 +1111,11 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 163896
   osym_id: 
 -
-  name: Çocuk Edebiyatı Uygulama Ve Araştırma Merkezi
+  name: Çocuk Edebiyatı Uygulama ve Araştırma Merkezi
   yoksis_id: 247914
   foet_code: 
   founded_at: 11.12.2013
@@ -1123,11 +1123,11 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 163896
   osym_id: 
 -
-  name: İktisadi Ve İdari Bilimler Fakültesi
+  name: İktisadi ve İdari Bilimler Fakültesi
   yoksis_id: 208451
   foet_code: 
   founded_at: 24.04.2010
@@ -1151,7 +1151,7 @@
   parent_yoksis_id: 208451
   osym_id: 
 -
-  name: Siyaset Bilimi Ve Uluslararası İlişkiler Bölümü
+  name: Siyaset Bilimi ve Uluslararası İlişkiler Bölümü
   yoksis_id: 233046
   foet_code: 313
   founded_at: 31.01.2013
@@ -1163,7 +1163,7 @@
   parent_yoksis_id: 208451
   osym_id: 
 -
-  name: Siyaset Bilimi Ve Uluslararası İlişkiler Pr. (%25 Burslu)
+  name: Siyaset Bilimi ve Uluslararası İlişkiler Pr. (%25 Burslu)
   yoksis_id: 238849
   foet_code: 313
   founded_at: 18.04.2013
@@ -1175,7 +1175,7 @@
   parent_yoksis_id: 233046
   osym_id: 206610393
 -
-  name: Siyaset Bilimi Ve Uluslararası İlişkiler Pr. (%50 Burslu)
+  name: Siyaset Bilimi ve Uluslararası İlişkiler Pr. (%50 Burslu)
   yoksis_id: 238848
   foet_code: 313
   founded_at: 18.04.2013
@@ -1187,7 +1187,7 @@
   parent_yoksis_id: 233046
   osym_id: 206610384
 -
-  name: Siyaset Bilimi Ve Uluslararası İlişkiler Pr. (Tam Burslu)
+  name: Siyaset Bilimi ve Uluslararası İlişkiler Pr. (Tam Burslu)
   yoksis_id: 238847
   foet_code: 313
   founded_at: 18.04.2013
@@ -1199,7 +1199,7 @@
   parent_yoksis_id: 233046
   osym_id: 206610375
 -
-  name: Siyaset Bilimi Ve Uluslararası İlişkiler Pr. (Ücretli)
+  name: Siyaset Bilimi ve Uluslararası İlişkiler Pr. (Ücretli)
   yoksis_id: 238850
   foet_code: 313
   founded_at: 18.04.2013
@@ -1211,7 +1211,7 @@
   parent_yoksis_id: 233046
   osym_id: 206610366
 -
-  name: Uluslararası Ticaret Ve İşletmecilik Bölümü
+  name: Uluslararası Ticaret ve İşletmecilik Bölümü
   yoksis_id: 212948
   foet_code: 341
   founded_at: 25.01.2012
@@ -1223,7 +1223,7 @@
   parent_yoksis_id: 208451
   osym_id: 
 -
-  name: Uluslararası Ticaret Ve İşletmecilik Pr. (%25 Burslu)
+  name: Uluslararası Ticaret ve İşletmecilik Pr. (%25 Burslu)
   yoksis_id: 228393
   foet_code: 341
   founded_at: 
@@ -1235,7 +1235,7 @@
   parent_yoksis_id: 212948
   osym_id: 206610199
 -
-  name: Uluslararası Ticaret Ve İşletmecilik Pr. (%50 Burslu)
+  name: Uluslararası Ticaret ve İşletmecilik Pr. (%50 Burslu)
   yoksis_id: 228392
   foet_code: 341
   founded_at: 
@@ -1247,7 +1247,7 @@
   parent_yoksis_id: 212948
   osym_id: 206610181
 -
-  name: Uluslararası Ticaret Ve İşletmecilik Pr. (Tam Burslu)
+  name: Uluslararası Ticaret ve İşletmecilik Pr. (Tam Burslu)
   yoksis_id: 228391
   foet_code: 341
   founded_at: 
@@ -1259,7 +1259,7 @@
   parent_yoksis_id: 212948
   osym_id: 206610172
 -
-  name: Uluslararası Ticaret Ve İşletmecilik Pr. (Ücretli)
+  name: Uluslararası Ticaret ve İşletmecilik Pr. (Ücretli)
   yoksis_id: 228389
   foet_code: 341
   founded_at: 
@@ -1391,7 +1391,7 @@
   parent_yoksis_id: 122317
   osym_id: 
 -
-  name: Kompozisyon Ve Orkestra Şefliği Anasanat Dalı
+  name: Kompozisyon ve Orkestra Şefliği Anasanat Dalı
   yoksis_id: 122321
   foet_code: 212
   founded_at: 26.02.2009
@@ -1427,7 +1427,7 @@
   parent_yoksis_id: 122317
   osym_id: 
 -
-  name: Üflemeli Ve Vurmalı Çalgılar Anasanat Dalı
+  name: Üflemeli ve Vurmalı Çalgılar Anasanat Dalı
   yoksis_id: 122318
   foet_code: 212
   founded_at: 26.02.2009
@@ -1451,7 +1451,7 @@
   parent_yoksis_id: 122316
   osym_id: 
 -
-  name: Etnomüzikoloji Ve Folklor Anasanat Dalı
+  name: Etnomüzikoloji ve Folklor Anasanat Dalı
   yoksis_id: 122324
   foet_code: 212
   founded_at: 26.02.2009
@@ -1463,7 +1463,7 @@
   parent_yoksis_id: 122322
   osym_id: 
 -
-  name: Geleneksel Ve Modal Müzik Anasanat Dalı
+  name: Geleneksel ve Modal Müzik Anasanat Dalı
   yoksis_id: 122325
   foet_code: 212
   founded_at: 26.02.2009
@@ -1607,7 +1607,7 @@
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Büro Hizmetleri Ve Sekreterlik Bölümü
+  name: Büro Hizmetleri ve Sekreterlik Bölümü
   yoksis_id: 242252
   foet_code: 346
   founded_at: 
@@ -1643,7 +1643,7 @@
   parent_yoksis_id: 242252
   osym_id: 108251335
 -
-  name: Toptan Ve Perakende Satış Bölümü
+  name: Toptan ve Perakende Satış Bölümü
   yoksis_id: 317311
   foet_code: 341
   founded_at: 02.03.2017
@@ -1655,7 +1655,7 @@
   parent_yoksis_id: 147730
   osym_id: 
 -
-  name: Emlak Ve Emlak Yönetimi Pr.
+  name: Emlak ve Emlak Yönetimi Pr.
   yoksis_id: 317312
   foet_code: 345
   founded_at: 02.03.2017
@@ -1679,7 +1679,7 @@
   parent_yoksis_id: 147730
   osym_id: 
 -
-  name: Deniz Ve Liman İşletmeciliği Pr.
+  name: Deniz ve Liman İşletmeciliği Pr.
   yoksis_id: 205957
   foet_code: 345
   founded_at: 05.08.2010
@@ -1691,7 +1691,7 @@
   parent_yoksis_id: 205956
   osym_id: 108251168
 -
-  name: Deniz Ve Liman İşletmeciliği Pr. (İö)
+  name: Deniz ve Liman İşletmeciliği Pr. (İö)
   yoksis_id: 276136
   foet_code: 345
   founded_at: 30.04.2015
@@ -1775,7 +1775,7 @@
   parent_yoksis_id: 205956
   osym_id: 
 -
-  name: Yat İşletme Ve Yönetimi Pr.
+  name: Yat İşletme ve Yönetimi Pr.
   yoksis_id: 205959
   foet_code: 345
   founded_at: 05.08.2010
@@ -1787,7 +1787,7 @@
   parent_yoksis_id: 205956
   osym_id: 
 -
-  name: Yönetim Ve Organizasyon Bölümü
+  name: Yönetim ve Organizasyon Bölümü
   yoksis_id: 153820
   foet_code: 345
   founded_at: 10.06.2010
@@ -1955,7 +1955,7 @@
   parent_yoksis_id: 140231
   osym_id: 
 -
-  name: Ceza Ve Ceza Muhakemesi Hukuku Anabilim Dalı
+  name: Ceza ve Ceza Muhakemesi Hukuku Anabilim Dalı
   yoksis_id: 159909
   foet_code: 380
   founded_at: 01.01.1900
@@ -1967,7 +1967,7 @@
   parent_yoksis_id: 140231
   osym_id: 
 -
-  name: Ceza Ve Ceza Usul Hukuku Anabilim Dalı
+  name: Ceza ve Ceza Usul Hukuku Anabilim Dalı
   yoksis_id: 140275
   foet_code: 380
   founded_at: 10.09.2009
@@ -2003,7 +2003,7 @@
   parent_yoksis_id: 140231
   osym_id: 
 -
-  name: Hukuk Felsefesi Ve Sosyolojisi Anabilim Dalı
+  name: Hukuk Felsefesi ve Sosyolojisi Anabilim Dalı
   yoksis_id: 140272
   foet_code: 380
   founded_at: 10.09.2009
@@ -2015,7 +2015,7 @@
   parent_yoksis_id: 140231
   osym_id: 
 -
-  name: Hukuk Felsefesi Ve Sosyolojisi Anabilim Dalı
+  name: Hukuk Felsefesi ve Sosyolojisi Anabilim Dalı
   yoksis_id: 159912
   foet_code: 380
   founded_at: 
@@ -2039,7 +2039,7 @@
   parent_yoksis_id: 140231
   osym_id: 
 -
-  name: Hukuk Tarihi Ve Roma Hukuku Anabilim Dalı
+  name: Hukuk Tarihi ve Roma Hukuku Anabilim Dalı
   yoksis_id: 140273
   foet_code: 380
   founded_at: 10.09.2009
@@ -2159,7 +2159,7 @@
   parent_yoksis_id: 140235
   osym_id: 
 -
-  name: Medeni Usul Ve İcra İflas Hukuku Anabilim Dalı
+  name: Medeni Usul ve İcra İflas Hukuku Anabilim Dalı
   yoksis_id: 140269
   foet_code: 380
   founded_at: 10.09.2009
@@ -2171,7 +2171,7 @@
   parent_yoksis_id: 140235
   osym_id: 
 -
-  name: Medeni Usul Ve İcra İflas Hukuku Anabilim Dalı
+  name: Medeni Usul ve İcra İflas Hukuku Anabilim Dalı
   yoksis_id: 159919
   foet_code: 380
   founded_at: 
@@ -2231,7 +2231,7 @@
   parent_yoksis_id: 140235
   osym_id: 
 -
-  name: İş Ve Sosyal Güvenlik Hukuku Anabilim Dalı
+  name: İş ve Sosyal Güvenlik Hukuku Anabilim Dalı
   yoksis_id: 140270
   foet_code: 380
   founded_at: 10.09.2009
@@ -2243,7 +2243,7 @@
   parent_yoksis_id: 140235
   osym_id: 
 -
-  name: İş Ve Sosyal Güvenlik Hukuku Anabilim Dalı
+  name: İş ve Sosyal Güvenlik Hukuku Anabilim Dalı
   yoksis_id: 159916
   foet_code: 380
   founded_at: 
@@ -2267,7 +2267,7 @@
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Beden Eğitimi Ve Spor Öğretmenliği Pr.
+  name: Beden Eğitimi ve Spor Öğretmenliği Pr.
   yoksis_id: 277320
   foet_code: 146
   founded_at: 27.05.2015
@@ -2435,7 +2435,7 @@
   parent_yoksis_id: 269757
   osym_id: 
 -
-  name: Türk Dili Ve Edebiyatı Öğretmenliği Pr.
+  name: Türk Dili ve Edebiyatı Öğretmenliği Pr.
   yoksis_id: 273575
   foet_code: 145
   founded_at: 
@@ -2531,7 +2531,7 @@
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Büro Yönetimi Ve Sekreterlik Pr.
+  name: Büro Yönetimi ve Sekreterlik Pr.
   yoksis_id: 273580
   foet_code: 346
   founded_at: 
@@ -2543,7 +2543,7 @@
   parent_yoksis_id: 269758
   osym_id: 
 -
-  name: Büro Yönetimi Ve Sekreterlik Pr. (İö)
+  name: Büro Yönetimi ve Sekreterlik Pr. (İö)
   yoksis_id: 273581
   foet_code: 346
   founded_at: 
@@ -2567,7 +2567,7 @@
   parent_yoksis_id: 269758
   osym_id: 
 -
-  name: Bilgisayar Teknolojisi Ve Programlama Pr. (İö) (Bk.320)
+  name: Bilgisayar Teknolojisi ve Programlama Pr. (İö) (Bk.320)
   yoksis_id: 273579
   foet_code: 481
   founded_at: 
@@ -2867,7 +2867,7 @@
   parent_yoksis_id: 269758
   osym_id: 
 -
-  name: Turizm Ve Otel İşletmeciliği Pr.
+  name: Turizm ve Otel İşletmeciliği Pr.
   yoksis_id: 273608
   foet_code: 811
   founded_at: 
@@ -2879,7 +2879,7 @@
   parent_yoksis_id: 269758
   osym_id: 
 -
-  name: Turizm Ve Otel İşletmeciliği Pr. (İö)
+  name: Turizm ve Otel İşletmeciliği Pr. (İö)
   yoksis_id: 273609
   foet_code: 811
   founded_at: 
@@ -2891,7 +2891,7 @@
   parent_yoksis_id: 269758
   osym_id: 
 -
-  name: Turizm Ve Otelcilik Pr.
+  name: Turizm ve Otelcilik Pr.
   yoksis_id: 273610
   foet_code: 811
   founded_at: 
@@ -2903,7 +2903,7 @@
   parent_yoksis_id: 269758
   osym_id: 
 -
-  name: Turizm Ve Otelcilik Pr. (İö)
+  name: Turizm ve Otelcilik Pr. (İö)
   yoksis_id: 273611
   foet_code: 811
   founded_at: 
@@ -2999,7 +2999,7 @@
   parent_yoksis_id: 269760
   osym_id: 
 -
-  name: Arapça Öğretimi Uygulama Ve Araştırma Merkezi
+  name: Arapça Öğretimi Uygulama ve Araştırma Merkezi
   yoksis_id: 378824
   foet_code: 
   founded_at: 15.08.2018
@@ -3007,11 +3007,11 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Atatürk İlkeleri Ve İnkılap Tarihi Uygulama Ve Araştırma Merkezi
+  name: Atatürk İlkeleri ve İnkılap Tarihi Uygulama ve Araştırma Merkezi
   yoksis_id: 122390
   foet_code: 
   founded_at: 10.09.2009
@@ -3019,7 +3019,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -3107,7 +3107,7 @@
   parent_yoksis_id: 169441
   osym_id: 108270456
 -
-  name: Bitkisel Ve Hayvansal Üretim Bölümü
+  name: Bitkisel ve Hayvansal Üretim Bölümü
   yoksis_id: 169417
   foet_code: 621
   founded_at: 
@@ -3179,7 +3179,7 @@
   parent_yoksis_id: 169417
   osym_id: 
 -
-  name: Tıbbi Ve Aromatik Bitkiler Pr.
+  name: Tıbbi ve Aromatik Bitkiler Pr.
   yoksis_id: 169425
   foet_code: 621
   founded_at: 
@@ -3191,7 +3191,7 @@
   parent_yoksis_id: 169417
   osym_id: 108250901
 -
-  name: Tıbbi Ve Aromatik Bitkiler Pr. (İö)
+  name: Tıbbi ve Aromatik Bitkiler Pr. (İö)
   yoksis_id: 169426
   foet_code: 621
   founded_at: 10.09.2009
@@ -3203,7 +3203,7 @@
   parent_yoksis_id: 169417
   osym_id: 108270835
 -
-  name: Tütün Yetiştiriciliği Ve İşlemeciliği Pr.
+  name: Tütün Yetiştiriciliği ve İşlemeciliği Pr.
   yoksis_id: 122358
   foet_code: 541
   founded_at: 10.09.2009
@@ -3215,7 +3215,7 @@
   parent_yoksis_id: 169417
   osym_id: 
 -
-  name: Tütün Yetiştiriciliği Ve İşlemeciliği Pr. (İö)
+  name: Tütün Yetiştiriciliği ve İşlemeciliği Pr. (İö)
   yoksis_id: 145887
   foet_code: 541
   founded_at: 10.09.2009
@@ -3251,7 +3251,7 @@
   parent_yoksis_id: 282777
   osym_id: 
 -
-  name: Finans Bankacılık Ve Sigortacılık Bölümü
+  name: Finans Bankacılık ve Sigortacılık Bölümü
   yoksis_id: 282775
   foet_code: 343
   founded_at: 09.12.2015
@@ -3263,7 +3263,7 @@
   parent_yoksis_id: 122355
   osym_id: 
 -
-  name: Bankacılık Ve Sigortacılık Pr.
+  name: Bankacılık ve Sigortacılık Pr.
   yoksis_id: 282776
   foet_code: 343
   founded_at: 09.12.2015
@@ -3275,7 +3275,7 @@
   parent_yoksis_id: 282775
   osym_id: 
 -
-  name: Muhasebe Ve Vergi Bölümü
+  name: Muhasebe ve Vergi Bölümü
   yoksis_id: 169471
   foet_code: 344
   founded_at: 
@@ -3287,7 +3287,7 @@
   parent_yoksis_id: 122355
   osym_id: 
 -
-  name: Muhasebe Ve Vergi Uygulamaları Pr. (İö) (Bk.605)
+  name: Muhasebe ve Vergi Uygulamaları Pr. (İö) (Bk.605)
   yoksis_id: 145961
   foet_code: 344
   founded_at: 10.09.2009
@@ -3299,7 +3299,7 @@
   parent_yoksis_id: 169471
   osym_id: 108270695
 -
-  name: Mülkiyet Koruma Ve Güvenlik Bölümü
+  name: Mülkiyet Koruma ve Güvenlik Bölümü
   yoksis_id: 282779
   foet_code: 861
   founded_at: 09.12.2015
@@ -3311,7 +3311,7 @@
   parent_yoksis_id: 122355
   osym_id: 
 -
-  name: Özel Güvenlik Ve Koruma Pr.
+  name: Özel Güvenlik ve Koruma Pr.
   yoksis_id: 333586
   foet_code: 861
   founded_at: 28.02.2018
@@ -3323,7 +3323,7 @@
   parent_yoksis_id: 282779
   osym_id: 
 -
-  name: İş Sağlığı Ve Güvenliği Pr.
+  name: İş Sağlığı ve Güvenliği Pr.
   yoksis_id: 282780
   foet_code: 862
   founded_at: 09.12.2015
@@ -3335,7 +3335,7 @@
   parent_yoksis_id: 282779
   osym_id: 
 -
-  name: Otel, Lokanta Ve İkram Hizmetleri Bölümü
+  name: Otel, Lokanta ve İkram Hizmetleri Bölümü
   yoksis_id: 254507
   foet_code: 811
   founded_at: 26.03.2014
@@ -3347,7 +3347,7 @@
   parent_yoksis_id: 122355
   osym_id: 
 -
-  name: Turizm Ve Otel İşletmeciliği Pr.
+  name: Turizm ve Otel İşletmeciliği Pr.
   yoksis_id: 254508
   foet_code: 811
   founded_at: 26.03.2014
@@ -3383,7 +3383,7 @@
   parent_yoksis_id: 122355
   osym_id: 
 -
-  name: Bilgisayar Teknolojisi Ve Programlama Pr.
+  name: Bilgisayar Teknolojisi ve Programlama Pr.
   yoksis_id: 122359
   foet_code: 481
   founded_at: 10.09.2009
@@ -3395,7 +3395,7 @@
   parent_yoksis_id: 122356
   osym_id: 
 -
-  name: Bilgisayar Teknolojisi Ve Programlama Pr. (İö)
+  name: Bilgisayar Teknolojisi ve Programlama Pr. (İö)
   yoksis_id: 145886
   foet_code: 481
   founded_at: 10.09.2009
@@ -3455,7 +3455,7 @@
   parent_yoksis_id: 122356
   osym_id: 
 -
-  name: Tıbbi Ve Aromatik Bitkiler Pr.
+  name: Tıbbi ve Aromatik Bitkiler Pr.
   yoksis_id: 145786
   foet_code: 621
   founded_at: 10.09.2009
@@ -3479,7 +3479,7 @@
   parent_yoksis_id: 122355
   osym_id: 
 -
-  name: Laborant Ve Veteriner Sağlık Pr.
+  name: Laborant ve Veteriner Sağlık Pr.
   yoksis_id: 282774
   foet_code: 640
   founded_at: 09.12.2015
@@ -3491,7 +3491,7 @@
   parent_yoksis_id: 282773
   osym_id: 
 -
-  name: İktisadi Ve İdari Bilimler Bölümü
+  name: İktisadi ve İdari Bilimler Bölümü
   yoksis_id: 128052
   foet_code: 314
   founded_at: 
@@ -3527,7 +3527,7 @@
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Otel Lokanta Ve İkram Hizmetleri Bölümü
+  name: Otel Lokanta ve İkram Hizmetleri Bölümü
   yoksis_id: 279026
   foet_code: 811
   founded_at: 01.07.2015
@@ -3551,7 +3551,7 @@
   parent_yoksis_id: 279026
   osym_id: 
 -
-  name: Turizm Ve Otel İşletmeciliği Pr.
+  name: Turizm ve Otel İşletmeciliği Pr.
   yoksis_id: 279027
   foet_code: 811
   founded_at: 01.07.2015
@@ -3563,7 +3563,7 @@
   parent_yoksis_id: 279026
   osym_id: 
 -
-  name: Seyahat-Turizm Ve Eğlence Hizmetleri Bölümü
+  name: Seyahat-Turizm ve Eğlence Hizmetleri Bölümü
   yoksis_id: 279024
   foet_code: 812
   founded_at: 01.07.2015
@@ -3575,7 +3575,7 @@
   parent_yoksis_id: 265280
   osym_id: 
 -
-  name: Turizm Ve Seyahat Hizmetleri Pr.
+  name: Turizm ve Seyahat Hizmetleri Pr.
   yoksis_id: 279025
   foet_code: 812
   founded_at: 01.07.2015
@@ -3599,7 +3599,7 @@
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Sigortacılık Ve Sosyal Güvenlik Bölümü
+  name: Sigortacılık ve Sosyal Güvenlik Bölümü
   yoksis_id: 334064
   foet_code: 343
   founded_at: 07.03.2018
@@ -3611,7 +3611,7 @@
   parent_yoksis_id: 293681
   osym_id: 
 -
-  name: Sigortacılık Ve Sosyal Güvenlik Anabilim Dalı
+  name: Sigortacılık ve Sosyal Güvenlik Anabilim Dalı
   yoksis_id: 334065
   foet_code: 343
   founded_at: 07.03.2018
@@ -3671,7 +3671,7 @@
   parent_yoksis_id: 296412
   osym_id: 
 -
-  name: Yönetim Ve Organizasyon Bölümü
+  name: Yönetim ve Organizasyon Bölümü
   yoksis_id: 296414
   foet_code: 345
   founded_at: 08.06.2016
@@ -3755,7 +3755,7 @@
   parent_yoksis_id: 269762
   osym_id: 
 -
-  name: Bölgesel Kalkınma Ve Stratejik Araştırmalar Uygulama Ve Araştırma Merkezi
+  name: Bölgesel Kalkınma ve Stratejik Araştırmalar Uygulama ve Araştırma Merkezi
   yoksis_id: 169418
   foet_code: 
   founded_at: 22.06.2010
@@ -3763,11 +3763,11 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Bilgi Ve İletişi Teknolojileri Araştırma Ve Uygulama Merkezi
+  name: Bilgi ve İletişi Teknolojileri Araştırma ve Uygulama Merkezi
   yoksis_id: 169403
   foet_code: 
   founded_at: 
@@ -3775,11 +3775,11 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Bilgisayar Araştırmaları Uygulama Ve Araştırma Merkezi
+  name: Bilgisayar Araştırmaları Uygulama ve Araştırma Merkezi
   yoksis_id: 327269
   foet_code: 
   founded_at: 27.07.2017
@@ -3787,11 +3787,11 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Bilgisayar Bilimleri Uygulama Ve Araştırma Merkezi
+  name: Bilgisayar Bilimleri Uygulama ve Araştırma Merkezi
   yoksis_id: 122393
   foet_code: 
   founded_at: 01.01.1900
@@ -3799,11 +3799,11 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Bilgisayar Öğretim Ve Teknolojisi Eğitimi Anabilim Dalı
+  name: Bilgisayar Öğretim ve Teknolojisi Eğitimi Anabilim Dalı
   yoksis_id: 122115
   foet_code: 146
   founded_at: 10.09.2009
@@ -3815,7 +3815,7 @@
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Biyoteknoloji Araştırma Ve Uygulama Merkezi
+  name: Biyoteknoloji Araştırma ve Uygulama Merkezi
   yoksis_id: 169404
   foet_code: 
   founded_at: 
@@ -3823,11 +3823,11 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Deney Hayvanları Uygulama Ve Araştırma Merkezi
+  name: Deney Hayvanları Uygulama ve Araştırma Merkezi
   yoksis_id: 214121
   foet_code: 
   founded_at: 22.02.2012
@@ -3835,7 +3835,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -3875,7 +3875,7 @@
   parent_yoksis_id: 122304
   osym_id: 108290124
 -
-  name: Kompozisyon Ve Orkestra Şefi Anabilim Dalı
+  name: Kompozisyon ve Orkestra Şefi Anabilim Dalı
   yoksis_id: 122308
   foet_code: 212
   founded_at: 10.09.2009
@@ -3911,7 +3911,7 @@
   parent_yoksis_id: 122304
   osym_id: 
 -
-  name: Üflemeli Ve Vurmalı Çalgılar Anabilim Dalı
+  name: Üflemeli ve Vurmalı Çalgılar Anabilim Dalı
   yoksis_id: 122305
   foet_code: 212
   founded_at: 10.09.2009
@@ -3935,7 +3935,7 @@
   parent_yoksis_id: 122303
   osym_id: 
 -
-  name: Etnomüzikoloji Ve Folklor Anabilim Dalı
+  name: Etnomüzikoloji ve Folklor Anabilim Dalı
   yoksis_id: 122311
   foet_code: 212
   founded_at: 10.09.2009
@@ -3947,7 +3947,7 @@
   parent_yoksis_id: 122309
   osym_id: 
 -
-  name: Geleneksel Ve Modal Müzikler Anabilim Dalı
+  name: Geleneksel ve Modal Müzikler Anabilim Dalı
   yoksis_id: 122312
   foet_code: 212
   founded_at: 10.09.2009
@@ -4067,7 +4067,7 @@
   parent_yoksis_id: 121996
   osym_id: 
 -
-  name: Ağız, Diş Ve Çene Cerrahisi Anabilim Dalı
+  name: Ağız, Diş ve Çene Cerrahisi Anabilim Dalı
   yoksis_id: 121998
   foet_code: 724
   founded_at: 10.09.2009
@@ -4079,7 +4079,7 @@
   parent_yoksis_id: 121997
   osym_id: 
 -
-  name: Diş Hastalıkları Ve Tedavisi Anabilim Dalı
+  name: Diş Hastalıkları ve Tedavisi Anabilim Dalı
   yoksis_id: 121999
   foet_code: 724
   founded_at: 10.09.2009
@@ -4103,7 +4103,7 @@
   parent_yoksis_id: 121997
   osym_id: 
 -
-  name: Oral Diagnoz Ve Radyoloji Anabilim Dalı
+  name: Oral Diagnoz ve Radyoloji Anabilim Dalı
   yoksis_id: 122004
   foet_code: 724
   founded_at: 01.01.1900
@@ -4223,7 +4223,7 @@
   parent_yoksis_id: 174846
   osym_id: 
 -
-  name: Bilgisayar Ve Öğretim Teknolojileri Eğitimi (Yl) (Tezli)
+  name: Bilgisayar ve Öğretim Teknolojileri Eğitimi (Yl) (Tezli)
   yoksis_id: 244883
   foet_code: 146
   founded_at: 15.08.2013
@@ -4283,7 +4283,7 @@
   parent_yoksis_id: 174849
   osym_id: 
 -
-  name: Eğitim Felsefi Sosyal Ve Tarihi Temelleri (Yl) (Tezli)
+  name: Eğitim Felsefi Sosyal ve Tarihi Temelleri (Yl) (Tezli)
   yoksis_id: 327688
   foet_code: 142
   founded_at: 08.08.2017
@@ -4295,7 +4295,7 @@
   parent_yoksis_id: 174846
   osym_id: 
 -
-  name: Eğitim Programları Ve Öğretim (Yl) (Tezli)
+  name: Eğitim Programları ve Öğretim (Yl) (Tezli)
   yoksis_id: 207884
   foet_code: 142
   founded_at: 03.05.2011
@@ -4307,7 +4307,7 @@
   parent_yoksis_id: 174846
   osym_id: 
 -
-  name: Eğitim Programları Ve Öğretim (Yl) (Tezsiz)
+  name: Eğitim Programları ve Öğretim (Yl) (Tezsiz)
   yoksis_id: 339817
   foet_code: 142
   founded_at: 09.05.2018
@@ -4367,7 +4367,7 @@
   parent_yoksis_id: 174846
   osym_id: 
 -
-  name: Eğitim Yönetimi, Teftişi, Planlaması Ve Ekonomisi (Yl) (Tezli)
+  name: Eğitim Yönetimi, Teftişi, Planlaması ve Ekonomisi (Yl) (Tezli)
   yoksis_id: 267767
   foet_code: 345
   founded_at: 07.05.2018
@@ -4379,7 +4379,7 @@
   parent_yoksis_id: 174846
   osym_id: 
 -
-  name: Eğitim Yönetimi, Teftişi, Planlaması Ve Ekonomisi (Yl) (Tezsiz) (Uzaktan Öğretim)
+  name: Eğitim Yönetimi, Teftişi, Planlaması ve Ekonomisi (Yl) (Tezsiz) (Uzaktan Öğretim)
   yoksis_id: 234519
   foet_code: 345
   founded_at: 01.01.1900
@@ -4391,7 +4391,7 @@
   parent_yoksis_id: 174846
   osym_id: 
 -
-  name: Eğitim Yönetimi, Teftişi, Planlaması Ve Ekonomisi (Yl) (Tezsiz) (İö)
+  name: Eğitim Yönetimi, Teftişi, Planlaması ve Ekonomisi (Yl) (Tezsiz) (İö)
   yoksis_id: 267768
   foet_code: 345
   founded_at: 
@@ -4403,7 +4403,7 @@
   parent_yoksis_id: 174846
   osym_id: 
 -
-  name: Eğitimin Felsefi, Sosyal Ve Tarihi Temelleri (Dr)
+  name: Eğitimin Felsefi, Sosyal ve Tarihi Temelleri (Dr)
   yoksis_id: 376129
   foet_code: 142
   founded_at: 27.06.2018
@@ -4415,7 +4415,7 @@
   parent_yoksis_id: 174846
   osym_id: 
 -
-  name: Eğitimin Sosyal Tarihi Ve Temelleri (Yl) (Tezli)
+  name: Eğitimin Sosyal Tarihi ve Temelleri (Yl) (Tezli)
   yoksis_id: 255124
   foet_code: 142
   founded_at: 10.06.2015
@@ -4547,7 +4547,7 @@
   parent_yoksis_id: 174846
   osym_id: 
 -
-  name: Ortaöğretim Fen Ve Matematik Alanları Eğitimi (Dr)
+  name: Ortaöğretim Fen ve Matematik Alanları Eğitimi (Dr)
   yoksis_id: 174856
   foet_code: 145
   founded_at: 26.02.2010
@@ -4571,7 +4571,7 @@
   parent_yoksis_id: 174846
   osym_id: 
 -
-  name: Rehberlik Ve Psikolojik Danışmanlık (Dr)
+  name: Rehberlik ve Psikolojik Danışmanlık (Dr)
   yoksis_id: 267766
   foet_code: 142
   founded_at: 
@@ -4583,7 +4583,7 @@
   parent_yoksis_id: 174846
   osym_id: 
 -
-  name: Rehberlik Ve Psikolojik Danışmanlık (Yl) (Tezli)
+  name: Rehberlik ve Psikolojik Danışmanlık (Yl) (Tezli)
   yoksis_id: 267765
   foet_code: 142
   founded_at: 07.05.2018
@@ -4595,7 +4595,7 @@
   parent_yoksis_id: 174846
   osym_id: 
 -
-  name: Rehberlik Ve Psikolojik Danışmanlık (Yl) (Tezli) (Ordu Üniv. Ortak)
+  name: Rehberlik ve Psikolojik Danışmanlık (Yl) (Tezli) (Ordu Üniv. Ortak)
   yoksis_id: 280865
   foet_code: 142
   founded_at: 09.09.2015
@@ -4883,7 +4883,7 @@
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Beden Eğitimi Ve Spor Öğretmenliği Pr.
+  name: Beden Eğitimi ve Spor Öğretmenliği Pr.
   yoksis_id: 277321
   foet_code: 146
   founded_at: 27.05.2015
@@ -4895,7 +4895,7 @@
   parent_yoksis_id: 122082
   osym_id: 
 -
-  name: Beden Eğitimi Ve Spor Öğretmenliği Pr. (İö)
+  name: Beden Eğitimi ve Spor Öğretmenliği Pr. (İö)
   yoksis_id: 277322
   foet_code: 146
   founded_at: 27.05.2015
@@ -4907,7 +4907,7 @@
   parent_yoksis_id: 122082
   osym_id: 
 -
-  name: Bilgisayar Ve Öğretim Teknolojileri Eğitimi Bölümü
+  name: Bilgisayar ve Öğretim Teknolojileri Eğitimi Bölümü
   yoksis_id: 122154
   foet_code: 146
   founded_at: 10.09.2009
@@ -4919,7 +4919,7 @@
   parent_yoksis_id: 122082
   osym_id: 
 -
-  name: Bilgisayar Ve Öğretim Teknolojileri Eğitimi Anabilim Dalı
+  name: Bilgisayar ve Öğretim Teknolojileri Eğitimi Anabilim Dalı
   yoksis_id: 122155
   foet_code: 146
   founded_at: 10.09.2009
@@ -4931,7 +4931,7 @@
   parent_yoksis_id: 122154
   osym_id: 
 -
-  name: Bilgisayar Ve Öğretim Teknolojileri Öğretmenliği Pr.
+  name: Bilgisayar ve Öğretim Teknolojileri Öğretmenliği Pr.
   yoksis_id: 168652
   foet_code: 146
   founded_at: 10.09.2009
@@ -4943,7 +4943,7 @@
   parent_yoksis_id: 122154
   osym_id: 108210038
 -
-  name: Bilgisayar Ve Öğretim Teknolojileri Öğretmenliği Pr. (İö)
+  name: Bilgisayar ve Öğretim Teknolojileri Öğretmenliği Pr. (İö)
   yoksis_id: 168653
   foet_code: 146
   founded_at: 10.09.2009
@@ -4955,7 +4955,7 @@
   parent_yoksis_id: 122154
   osym_id: 
 -
-  name: Din Kültürü Ve Ahlak Bilgisi Öğretmenliği Pr.
+  name: Din Kültürü ve Ahlak Bilgisi Öğretmenliği Pr.
   yoksis_id: 285292
   foet_code: 145
   founded_at: 01.01.1900
@@ -4967,7 +4967,7 @@
   parent_yoksis_id: 122082
   osym_id: 
 -
-  name: Din Kültürü Ve Ahlak Bilgisi Öğretmenliği Pr. (İö)
+  name: Din Kültürü ve Ahlak Bilgisi Öğretmenliği Pr. (İö)
   yoksis_id: 285283
   foet_code: 145
   founded_at: 01.01.1900
@@ -4991,7 +4991,7 @@
   parent_yoksis_id: 122082
   osym_id: 
 -
-  name: Eğitim Programları Ve Öğretim Anabilim Dalı
+  name: Eğitim Programları ve Öğretim Anabilim Dalı
   yoksis_id: 122085
   foet_code: 142
   founded_at: 10.09.2009
@@ -5015,7 +5015,7 @@
   parent_yoksis_id: 122083
   osym_id: 
 -
-  name: Eğitimde Ölçme Ve Değerlendirme Anabilim Dalı
+  name: Eğitimde Ölçme ve Değerlendirme Anabilim Dalı
   yoksis_id: 122084
   foet_code: 142
   founded_at: 10.09.2009
@@ -5027,7 +5027,7 @@
   parent_yoksis_id: 122083
   osym_id: 
 -
-  name: Eğitimin Felsefi, Sosyal Ve Tarihi Temelleri Anabilim Dalı
+  name: Eğitimin Felsefi, Sosyal ve Tarihi Temelleri Anabilim Dalı
   yoksis_id: 314245
   foet_code: 142
   founded_at: 01.02.2017
@@ -5039,7 +5039,7 @@
   parent_yoksis_id: 122083
   osym_id: 
 -
-  name: Rehberlik Ve Psikolojik Danışmanlık Anabilim Dalı
+  name: Rehberlik ve Psikolojik Danışmanlık Anabilim Dalı
   yoksis_id: 122087
   foet_code: 142
   founded_at: 
@@ -5051,7 +5051,7 @@
   parent_yoksis_id: 122083
   osym_id: 
 -
-  name: Rehberlik Ve Psikolojik Danışmanlık Anabilim Dalı
+  name: Rehberlik ve Psikolojik Danışmanlık Anabilim Dalı
   yoksis_id: 147735
   foet_code: 142
   founded_at: 01.01.1900
@@ -5063,7 +5063,7 @@
   parent_yoksis_id: 122083
   osym_id: 
 -
-  name: Rehberlik Ve Psikolojik Danışmanlık Pr.
+  name: Rehberlik ve Psikolojik Danışmanlık Pr.
   yoksis_id: 168674
   foet_code: 142
   founded_at: 10.09.2009
@@ -5075,7 +5075,7 @@
   parent_yoksis_id: 122083
   osym_id: 108210153
 -
-  name: Rehberlik Ve Psikolojik Danışmanlık Pr. (%25 Burslu)
+  name: Rehberlik ve Psikolojik Danışmanlık Pr. (%25 Burslu)
   yoksis_id: 299025
   foet_code: 142
   founded_at: 02.08.2016
@@ -5087,7 +5087,7 @@
   parent_yoksis_id: 122083
   osym_id: 
 -
-  name: Rehberlik Ve Psikolojik Danışmanlık Pr. (%50 Burslu)
+  name: Rehberlik ve Psikolojik Danışmanlık Pr. (%50 Burslu)
   yoksis_id: 299026
   foet_code: 142
   founded_at: 02.08.2016
@@ -5099,7 +5099,7 @@
   parent_yoksis_id: 122083
   osym_id: 
 -
-  name: Rehberlik Ve Psikolojik Danışmanlık Pr. (Tam Burslu)
+  name: Rehberlik ve Psikolojik Danışmanlık Pr. (Tam Burslu)
   yoksis_id: 299023
   foet_code: 142
   founded_at: 02.08.2016
@@ -5111,7 +5111,7 @@
   parent_yoksis_id: 122083
   osym_id: 
 -
-  name: Rehberlik Ve Psikolojik Danışmanlık Pr. (Ücretli)
+  name: Rehberlik ve Psikolojik Danışmanlık Pr. (Ücretli)
   yoksis_id: 299024
   foet_code: 142
   founded_at: 02.08.2016
@@ -5123,7 +5123,7 @@
   parent_yoksis_id: 122083
   osym_id: 
 -
-  name: Rehberlik Ve Psikolojik Danışmanlık Pr. (İö)
+  name: Rehberlik ve Psikolojik Danışmanlık Pr. (İö)
   yoksis_id: 168675
   foet_code: 142
   founded_at: 10.09.2009
@@ -5219,7 +5219,7 @@
   parent_yoksis_id: 122097
   osym_id: 
 -
-  name: Matematik Ve Fen Bilimleri Eğitimi Bölümü
+  name: Matematik ve Fen Bilimleri Eğitimi Bölümü
   yoksis_id: 298694
   foet_code: 145
   founded_at: 
@@ -5447,7 +5447,7 @@
   parent_yoksis_id: 298694
   osym_id: 
 -
-  name: Ortaöğretim Fen Ve Matematik Alanlar Eğitimi Bölümü
+  name: Ortaöğretim Fen ve Matematik Alanlar Eğitimi Bölümü
   yoksis_id: 122106
   foet_code: 145
   founded_at: 10.09.2009
@@ -5687,7 +5687,7 @@
   parent_yoksis_id: 122095
   osym_id: 
 -
-  name: Türkçe Ve Sosyal Bilimler Eğitimi Bölümü
+  name: Türkçe ve Sosyal Bilimler Eğitimi Bölümü
   yoksis_id: 298815
   foet_code: 145
   founded_at: 
@@ -5819,7 +5819,7 @@
   parent_yoksis_id: 298815
   osym_id: 
 -
-  name: Türk Dili Ve Edebiyatı Eğitimi Anabilim Dalı
+  name: Türk Dili ve Edebiyatı Eğitimi Anabilim Dalı
   yoksis_id: 122114
   foet_code: 145
   founded_at: 10.09.2009
@@ -5831,7 +5831,7 @@
   parent_yoksis_id: 298815
   osym_id: 
 -
-  name: Türk Dili Ve Edebiyatı Öğretmenliği Pr.
+  name: Türk Dili ve Edebiyatı Öğretmenliği Pr.
   yoksis_id: 275948
   foet_code: 145
   founded_at: 08.05.2015
@@ -5843,7 +5843,7 @@
   parent_yoksis_id: 298815
   osym_id: 
 -
-  name: Türk Dili Ve Edebiyatı Öğretmenliği Pr. (İö)
+  name: Türk Dili ve Edebiyatı Öğretmenliği Pr. (İö)
   yoksis_id: 275949
   foet_code: 145
   founded_at: 08.05.2015
@@ -6203,7 +6203,7 @@
   parent_yoksis_id: 122082
   osym_id: 
 -
-  name: İlköğretim Din Kültürü Ve Ahlak Bilgisi Öğretmenliği Pr.
+  name: İlköğretim Din Kültürü ve Ahlak Bilgisi Öğretmenliği Pr.
   yoksis_id: 285293
   foet_code: 145
   founded_at: 01.01.1900
@@ -6215,7 +6215,7 @@
   parent_yoksis_id: 122100
   osym_id: 
 -
-  name: İlköğretim Din Kültürü Ve Ahlak Bilgisi Öğretmenliği Pr. (İö)
+  name: İlköğretim Din Kültürü ve Ahlak Bilgisi Öğretmenliği Pr. (İö)
   yoksis_id: 285294
   foet_code: 145
   founded_at: 01.01.1900
@@ -6695,7 +6695,7 @@
   parent_yoksis_id: 122386
   osym_id: 
 -
-  name: Malzeme Bilimi Ve Mühendisliği (Yl) (Tezli)
+  name: Malzeme Bilimi ve Mühendisliği (Yl) (Tezli)
   yoksis_id: 211288
   foet_code: 521
   founded_at: 07.05.2018
@@ -6779,7 +6779,7 @@
   parent_yoksis_id: 122386
   osym_id: 
 -
-  name: Metalurji Ve Malzeme Mühendisliği (Yl) (Tezli)
+  name: Metalurji ve Malzeme Mühendisliği (Yl) (Tezli)
   yoksis_id: 371245
   foet_code: 521
   founded_at: 23.05.2018
@@ -6791,7 +6791,7 @@
   parent_yoksis_id: 122386
   osym_id: 
 -
-  name: Moleküler Biyoloji Ve Genetik (Dr) (Ücretli)
+  name: Moleküler Biyoloji ve Genetik (Dr) (Ücretli)
   yoksis_id: 299032
   foet_code: 421
   founded_at: 02.08.2016
@@ -6803,7 +6803,7 @@
   parent_yoksis_id: 122386
   osym_id: 
 -
-  name: Moleküler Biyoloji Ve Genetik (Yl) (Tezli) (Ücretli)
+  name: Moleküler Biyoloji ve Genetik (Yl) (Tezli) (Ücretli)
   yoksis_id: 299033
   foet_code: 421
   founded_at: 02.08.2016
@@ -6815,7 +6815,7 @@
   parent_yoksis_id: 122386
   osym_id: 
 -
-  name: Nanobilim Ve Nanoteknoloji (Dr) (İngilizce)
+  name: Nanobilim ve Nanoteknoloji (Dr) (İngilizce)
   yoksis_id: 255370
   foet_code: 520
   founded_at: 26.02.2014
@@ -6827,7 +6827,7 @@
   parent_yoksis_id: 122386
   osym_id: 
 -
-  name: Nanobilim Ve Nanoteknoloji (Yl) (Tezli) (İngilizce)
+  name: Nanobilim ve Nanoteknoloji (Yl) (Tezli) (İngilizce)
   yoksis_id: 255369
   foet_code: 520
   founded_at: 26.02.2014
@@ -6839,7 +6839,7 @@
   parent_yoksis_id: 122386
   osym_id: 
 -
-  name: Sağlık, Gıda Güvenliği Ve İlgili Politikalar (Yl) (Tezli)
+  name: Sağlık, Gıda Güvenliği ve İlgili Politikalar (Yl) (Tezli)
   yoksis_id: 261702
   foet_code: 541
   founded_at: 25.09.2014
@@ -6875,7 +6875,7 @@
   parent_yoksis_id: 122386
   osym_id: 
 -
-  name: Su Ürünleri Avlama Ve İşleme Tekniği (Dr)
+  name: Su Ürünleri Avlama ve İşleme Tekniği (Dr)
   yoksis_id: 321447
   foet_code: 624
   founded_at: 01.01.1999
@@ -6887,7 +6887,7 @@
   parent_yoksis_id: 122386
   osym_id: 
 -
-  name: Su Ürünleri Avlama Ve İşleme Tekniği  (Yl) (Tezli)
+  name: Su Ürünleri Avlama ve İşleme Tekniği  (Yl) (Tezli)
   yoksis_id: 317808
   foet_code: 624
   founded_at: 
@@ -6935,7 +6935,7 @@
   parent_yoksis_id: 122386
   osym_id: 
 -
-  name: Tarım Makinaları Ve Teknoloji Mühendisliği (Dr)
+  name: Tarım Makinaları ve Teknoloji Mühendisliği (Dr)
   yoksis_id: 211260
   foet_code: 525
   founded_at: 15.09.2008
@@ -6947,7 +6947,7 @@
   parent_yoksis_id: 122386
   osym_id: 
 -
-  name: Tarım Makinaları Ve Teknoloji Mühendisliği (Yl) (Tezli)
+  name: Tarım Makinaları ve Teknoloji Mühendisliği (Yl) (Tezli)
   yoksis_id: 211259
   foet_code: 525
   founded_at: 03.06.2015
@@ -6983,7 +6983,7 @@
   parent_yoksis_id: 122386
   osym_id: 
 -
-  name: Tarımsal Yapılar Ve Sulama (Dr)
+  name: Tarımsal Yapılar ve Sulama (Dr)
   yoksis_id: 211250
   foet_code: 621
   founded_at: 
@@ -6995,7 +6995,7 @@
   parent_yoksis_id: 122386
   osym_id: 
 -
-  name: Tarımsal Yapılar Ve Sulama (Yl) (Tezli)
+  name: Tarımsal Yapılar ve Sulama (Yl) (Tezli)
   yoksis_id: 211249
   foet_code: 621
   founded_at: 30.04.2018
@@ -7043,7 +7043,7 @@
   parent_yoksis_id: 122386
   osym_id: 
 -
-  name: Toprak Bilimi Ve Bitki Besleme (Dr)
+  name: Toprak Bilimi ve Bitki Besleme (Dr)
   yoksis_id: 203725
   foet_code: 621
   founded_at: 17.02.2011
@@ -7055,7 +7055,7 @@
   parent_yoksis_id: 122386
   osym_id: 
 -
-  name: Toprak Bilimi Ve Bitki Besleme (Yl) (Tezli)
+  name: Toprak Bilimi ve Bitki Besleme (Yl) (Tezli)
   yoksis_id: 203724
   foet_code: 621
   founded_at: 17.02.2011
@@ -7067,7 +7067,7 @@
   parent_yoksis_id: 122386
   osym_id: 
 -
-  name: Uçak Ve Uzay Bilimleri Mühendisliği (Yl) (Tezli)
+  name: Uçak ve Uzay Bilimleri Mühendisliği (Yl) (Tezli)
   yoksis_id: 339818
   foet_code: 525
   founded_at: 09.05.2018
@@ -7079,7 +7079,7 @@
   parent_yoksis_id: 122386
   osym_id: 
 -
-  name: Yenilenebilir Enerji Ve Uygulamaları Anabilim Dalı (Disiplinlerarası)
+  name: Yenilenebilir Enerji ve Uygulamaları Anabilim Dalı (Disiplinlerarası)
   yoksis_id: 303063
   foet_code: 522
   founded_at: 01.06.2016
@@ -7091,7 +7091,7 @@
   parent_yoksis_id: 122386
   osym_id: 
 -
-  name: Yenilenebilir Enerji Ve Uygulamaları (Yl) (Tezli)
+  name: Yenilenebilir Enerji ve Uygulamaları (Yl) (Tezli)
   yoksis_id: 303045
   foet_code: 522
   founded_at: 01.06.2016
@@ -7271,7 +7271,7 @@
   parent_yoksis_id: 122386
   osym_id: 
 -
-  name: Fen Ve Mühendislik Bilimleri Fakültesi
+  name: Fen ve Mühendislik Bilimleri Fakültesi
   yoksis_id: 269765
   foet_code: 
   founded_at: 
@@ -7295,7 +7295,7 @@
   parent_yoksis_id: 269765
   osym_id: 
 -
-  name: Kimya Lisans Ve Kimyagerlik Pr.
+  name: Kimya Lisans ve Kimyagerlik Pr.
   yoksis_id: 273643
   foet_code: 442
   founded_at: 
@@ -7331,7 +7331,7 @@
   parent_yoksis_id: 269765
   osym_id: 
 -
-  name: İstatistik Ve Yöneylem Araştırması Pr.
+  name: İstatistik ve Yöneylem Araştırması Pr.
   yoksis_id: 273642
   foet_code: 462
   founded_at: 
@@ -7415,7 +7415,7 @@
   parent_yoksis_id: 140229
   osym_id: 
 -
-  name: Protohistorya Ve Önasya Arkeolojisi Anabilim Dalı
+  name: Protohistorya ve Önasya Arkeolojisi Anabilim Dalı
   yoksis_id: 213020
   foet_code: 225
   founded_at: 25.01.2012
@@ -7547,7 +7547,7 @@
   parent_yoksis_id: 122005
   osym_id: 
 -
-  name: Beşeri Ve İktisadi Coğrafya Anabilim Dalı
+  name: Beşeri ve İktisadi Coğrafya Anabilim Dalı
   yoksis_id: 122013
   foet_code: 312
   founded_at: 10.09.2009
@@ -7631,7 +7631,7 @@
   parent_yoksis_id: 122005
   osym_id: 
 -
-  name: Bilim Felsefesi Ve Mantık Anabilim Dalı
+  name: Bilim Felsefesi ve Mantık Anabilim Dalı
   yoksis_id: 319525
   foet_code: 226
   founded_at: 05.04.2017
@@ -7727,7 +7727,7 @@
   parent_yoksis_id: 122005
   osym_id: 
 -
-  name: Atom Ve Molekül Fiziği Anabilim Dalı
+  name: Atom ve Molekül Fiziği Anabilim Dalı
   yoksis_id: 122018
   foet_code: 441
   founded_at: 
@@ -7799,7 +7799,7 @@
   parent_yoksis_id: 122017
   osym_id: 
 -
-  name: Yüksek Enerji Ve Plazma Fiziği Anabilim Dalı
+  name: Yüksek Enerji ve Plazma Fiziği Anabilim Dalı
   yoksis_id: 122022
   foet_code: 441
   founded_at: 
@@ -7931,7 +7931,7 @@
   parent_yoksis_id: 122005
   osym_id: 
 -
-  name: Analiz Ve Fonksiyonlar Teorisi Anabilim Dalı
+  name: Analiz ve Fonksiyonlar Teorisi Anabilim Dalı
   yoksis_id: 147737
   foet_code: 461
   founded_at: 10.09.2009
@@ -7943,7 +7943,7 @@
   parent_yoksis_id: 122033
   osym_id: 
 -
-  name: Cebir Ve Sayılar Teorisi Anabilim Dalı
+  name: Cebir ve Sayılar Teorisi Anabilim Dalı
   yoksis_id: 122034
   foet_code: 461
   founded_at: 
@@ -7955,7 +7955,7 @@
   parent_yoksis_id: 122033
   osym_id: 
 -
-  name: Fonksiyonlar Teorisi Ve Fonksiyonel Analiz Anabilim Dalı
+  name: Fonksiyonlar Teorisi ve Fonksiyonel Analiz Anabilim Dalı
   yoksis_id: 122035
   foet_code: 461
   founded_at: 10.09.2009
@@ -8003,7 +8003,7 @@
   parent_yoksis_id: 122033
   osym_id: 108230184
 -
-  name: Matematiğin Temelleri Ve Matematik Lojik Anabilim Dalı
+  name: Matematiğin Temelleri ve Matematik Lojik Anabilim Dalı
   yoksis_id: 122037
   foet_code: 461
   founded_at: 10.09.2009
@@ -8039,7 +8039,7 @@
   parent_yoksis_id: 122033
   osym_id: 
 -
-  name: Moleküler Biyoloji Ve Genetik Bölümü
+  name: Moleküler Biyoloji ve Genetik Bölümü
   yoksis_id: 299034
   foet_code: 421
   founded_at: 02.08.2016
@@ -8051,7 +8051,7 @@
   parent_yoksis_id: 122005
   osym_id: 
 -
-  name: Moleküler Biyoloji Ve Genetik Pr. (%25 Burslu)
+  name: Moleküler Biyoloji ve Genetik Pr. (%25 Burslu)
   yoksis_id: 299036
   foet_code: 421
   founded_at: 02.08.2016
@@ -8063,7 +8063,7 @@
   parent_yoksis_id: 299034
   osym_id: 
 -
-  name: Moleküler Biyoloji Ve Genetik Pr. (%50 Burslu)
+  name: Moleküler Biyoloji ve Genetik Pr. (%50 Burslu)
   yoksis_id: 299037
   foet_code: 421
   founded_at: 02.08.2016
@@ -8075,7 +8075,7 @@
   parent_yoksis_id: 299034
   osym_id: 
 -
-  name: Moleküler Biyoloji Ve Genetik Pr. (%75 Burslu)
+  name: Moleküler Biyoloji ve Genetik Pr. (%75 Burslu)
   yoksis_id: 309339
   foet_code: 421
   founded_at: 29.09.2016
@@ -8087,7 +8087,7 @@
   parent_yoksis_id: 299034
   osym_id: 
 -
-  name: Moleküler Biyoloji Ve Genetik Pr. (Tam Burslu)
+  name: Moleküler Biyoloji ve Genetik Pr. (Tam Burslu)
   yoksis_id: 299035
   foet_code: 421
   founded_at: 02.08.2016
@@ -8099,7 +8099,7 @@
   parent_yoksis_id: 299034
   osym_id: 
 -
-  name: Moleküler Biyoloji Ve Genetik Pr. (Ücretli)
+  name: Moleküler Biyoloji ve Genetik Pr. (Ücretli)
   yoksis_id: 309084
   foet_code: 421
   founded_at: 10.11.2016
@@ -8111,7 +8111,7 @@
   parent_yoksis_id: 299034
   osym_id: 
 -
-  name: Moleküler Biyoloji Ve Genetik Bölümü
+  name: Moleküler Biyoloji ve Genetik Bölümü
   yoksis_id: 320926
   foet_code: 421
   founded_at: 20.04.2017
@@ -8123,7 +8123,7 @@
   parent_yoksis_id: 122005
   osym_id: 
 -
-  name: Moleküler Biyoloji Ve Genetik Anabilim Dalı
+  name: Moleküler Biyoloji ve Genetik Anabilim Dalı
   yoksis_id: 328410
   foet_code: 421
   founded_at: 14.08.2017
@@ -8135,7 +8135,7 @@
   parent_yoksis_id: 320926
   osym_id: 
 -
-  name: Moleküler Biyoloji Ve Genetik Pr.
+  name: Moleküler Biyoloji ve Genetik Pr.
   yoksis_id: 320927
   foet_code: 421
   founded_at: 20.04.2017
@@ -8363,7 +8363,7 @@
   parent_yoksis_id: 122005
   osym_id: 
 -
-  name: Genel Sosyoloji Ve Metodoloji Anabilim Dalı
+  name: Genel Sosyoloji ve Metodoloji Anabilim Dalı
   yoksis_id: 319344
   foet_code: 312
   founded_at: 05.04.2017
@@ -8567,7 +8567,7 @@
   parent_yoksis_id: 122045
   osym_id: 
 -
-  name: Türk Dili Ve Edebiyatı Bölümü
+  name: Türk Dili ve Edebiyatı Bölümü
   yoksis_id: 122050
   foet_code: 223
   founded_at: 
@@ -8603,7 +8603,7 @@
   parent_yoksis_id: 122050
   osym_id: 
 -
-  name: Türk Dili Ve Edebiyatı Pr.
+  name: Türk Dili ve Edebiyatı Pr.
   yoksis_id: 168721
   foet_code: 223
   founded_at: 
@@ -8615,7 +8615,7 @@
   parent_yoksis_id: 122050
   osym_id: 108210286
 -
-  name: Türk Dili Ve Edebiyatı Pr. (%25 Burslu)
+  name: Türk Dili ve Edebiyatı Pr. (%25 Burslu)
   yoksis_id: 299043
   foet_code: 223
   founded_at: 02.08.2016
@@ -8627,7 +8627,7 @@
   parent_yoksis_id: 122050
   osym_id: 
 -
-  name: Türk Dili Ve Edebiyatı Pr. (%50 Burslu)
+  name: Türk Dili ve Edebiyatı Pr. (%50 Burslu)
   yoksis_id: 299044
   foet_code: 223
   founded_at: 02.08.2016
@@ -8639,7 +8639,7 @@
   parent_yoksis_id: 122050
   osym_id: 
 -
-  name: Türk Dili Ve Edebiyatı Pr. (Tam Burslu)
+  name: Türk Dili ve Edebiyatı Pr. (Tam Burslu)
   yoksis_id: 299042
   foet_code: 223
   founded_at: 02.08.2016
@@ -8651,7 +8651,7 @@
   parent_yoksis_id: 122050
   osym_id: 
 -
-  name: Türk Dili Ve Edebiyatı Pr. (İö)
+  name: Türk Dili ve Edebiyatı Pr. (İö)
   yoksis_id: 168722
   foet_code: 223
   founded_at: 
@@ -8699,7 +8699,7 @@
   parent_yoksis_id: 122050
   osym_id: 
 -
-  name: Çağdaş Türk Lehçeleri Ve Edebiyatları Anabilim Dalı
+  name: Çağdaş Türk Lehçeleri ve Edebiyatları Anabilim Dalı
   yoksis_id: 122056
   foet_code: 223
   founded_at: 26.05.2010
@@ -8747,7 +8747,7 @@
   parent_yoksis_id: 122005
   osym_id: 
 -
-  name: Olasılık Teorisi Ve Süreçleri Anabilim Dalı
+  name: Olasılık Teorisi ve Süreçleri Anabilim Dalı
   yoksis_id: 174937
   foet_code: 462
   founded_at: 21.07.2010
@@ -8843,7 +8843,7 @@
   parent_yoksis_id: 122023
   osym_id: 
 -
-  name: Fındık Ve Diğer Sert Kabuklu Meyveleri Araştırma Ve Uygulama Merkezi
+  name: Fındık ve Diğer Sert Kabuklu Meyveleri Araştırma ve Uygulama Merkezi
   yoksis_id: 122394
   foet_code: 
   founded_at: 10.09.2009
@@ -8851,11 +8851,11 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Gelişimsel Eğitim Uygulama Ve Araştırma Merkezi
+  name: Gelişimsel Eğitim Uygulama ve Araştırma Merkezi
   yoksis_id: 122391
   foet_code: 
   founded_at: 05.01.2011
@@ -8863,11 +8863,11 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Gemi İnşaatı Ve Deniz Bilimleri Fakültesi
+  name: Gemi İnşaatı ve Deniz Bilimleri Fakültesi
   yoksis_id: 227978
   foet_code: 
   founded_at: 25.11.2012
@@ -8927,7 +8927,7 @@
   parent_yoksis_id: 292392
   osym_id: 
 -
-  name: Gemi İnşaatı Ve Gemi Makineleri Mühendisliği Bölümü
+  name: Gemi İnşaatı ve Gemi Makineleri Mühendisliği Bölümü
   yoksis_id: 292393
   foet_code: 525
   founded_at: 30.03.2016
@@ -8939,7 +8939,7 @@
   parent_yoksis_id: 227978
   osym_id: 
 -
-  name: Gemi İnşaatı Ve Gemi Makineleri Mühendisliği Anabilim Dalı
+  name: Gemi İnşaatı ve Gemi Makineleri Mühendisliği Anabilim Dalı
   yoksis_id: 328109
   foet_code: 525
   founded_at: 14.08.2017
@@ -8963,7 +8963,7 @@
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: İktisadi Ve İdari Programlar Bölümü
+  name: İktisadi ve İdari Programlar Bölümü
   yoksis_id: 169534
   foet_code: 314
   founded_at: 
@@ -8999,7 +8999,7 @@
   parent_yoksis_id: 169534
   osym_id: 
 -
-  name: Turizm Ve Otel İşletmeciliği Pr.
+  name: Turizm ve Otel İşletmeciliği Pr.
   yoksis_id: 169537
   foet_code: 811
   founded_at: 
@@ -9071,7 +9071,7 @@
   parent_yoksis_id: 208606
   osym_id: 
 -
-  name: Sanat Ve Tasarım (Sy) (Tezli)
+  name: Sanat ve Tasarım (Sy) (Tezli)
   yoksis_id: 325573
   foet_code: 210
   founded_at: 12.07.2017
@@ -9299,7 +9299,7 @@
   parent_yoksis_id: 232414
   osym_id: 108290115
 -
-  name: Seramik Ve Cam Bölümü
+  name: Seramik ve Cam Bölümü
   yoksis_id: 232413
   foet_code: 215
   founded_at: 15.01.2013
@@ -9311,7 +9311,7 @@
   parent_yoksis_id: 215087
   osym_id: 
 -
-  name: Seramik Ve Cam Anasanat Dalı
+  name: Seramik ve Cam Anasanat Dalı
   yoksis_id: 319229
   foet_code: 215
   founded_at: 05.04.2017
@@ -9335,7 +9335,7 @@
   parent_yoksis_id: 232413
   osym_id: 108290133
 -
-  name: Havacılık Ve Uzay Bilimleri Fakültesi
+  name: Havacılık ve Uzay Bilimleri Fakültesi
   yoksis_id: 204856
   foet_code: 
   founded_at: 26.02.2010
@@ -9431,7 +9431,7 @@
   parent_yoksis_id: 204864
   osym_id: 
 -
-  name: Uçak Bakım Ve Onarım Bölümü
+  name: Uçak Bakım ve Onarım Bölümü
   yoksis_id: 293983
   foet_code: 525
   founded_at: 19.04.2016
@@ -9443,7 +9443,7 @@
   parent_yoksis_id: 204856
   osym_id: 
 -
-  name: Uçak Bakım Ve Onarım Anabilim Dalı
+  name: Uçak Bakım ve Onarım Anabilim Dalı
   yoksis_id: 320788
   foet_code: 525
   founded_at: 02.05.2017
@@ -9455,7 +9455,7 @@
   parent_yoksis_id: 293983
   osym_id: 
 -
-  name: Uçak Ve Uzay Mühendisliği Bölümü
+  name: Uçak ve Uzay Mühendisliği Bölümü
   yoksis_id: 204857
   foet_code: 525
   founded_at: 02.03.2011
@@ -9467,7 +9467,7 @@
   parent_yoksis_id: 204856
   osym_id: 
 -
-  name: Uçak Ve Uzay Mühendisliği Anabilim Dalı
+  name: Uçak ve Uzay Mühendisliği Anabilim Dalı
   yoksis_id: 320787
   foet_code: 525
   founded_at: 02.05.2017
@@ -9479,7 +9479,7 @@
   parent_yoksis_id: 204857
   osym_id: 
 -
-  name: Uçak Ve Uzay Mühendisliği Pr.
+  name: Uçak ve Uzay Mühendisliği Pr.
   yoksis_id: 256686
   foet_code: 525
   founded_at: 17.04.2014
@@ -9491,7 +9491,7 @@
   parent_yoksis_id: 204857
   osym_id: 108210992
 -
-  name: Uçak Ve Uzay Mühendisliği Pr. (Kktc Uyruklu)
+  name: Uçak ve Uzay Mühendisliği Pr. (Kktc Uyruklu)
   yoksis_id: 327589
   foet_code: 525
   founded_at: 04.08.2017
@@ -9503,7 +9503,7 @@
   parent_yoksis_id: 204857
   osym_id: 108211178
 -
-  name: Havacılık Ve Uzay Teknolojileri Uygulama Ve Araştırma Merkezi
+  name: Havacılık ve Uzay Teknolojileri Uygulama ve Araştırma Merkezi
   yoksis_id: 233015
   foet_code: 
   founded_at: 23.11.2011
@@ -9511,7 +9511,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -9527,7 +9527,7 @@
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Büro Hizmetleri Ve Sekreterlik Bölümü
+  name: Büro Hizmetleri ve Sekreterlik Bölümü
   yoksis_id: 169579
   foet_code: 346
   founded_at: 24.06.1993
@@ -9539,7 +9539,7 @@
   parent_yoksis_id: 122379
   osym_id: 
 -
-  name: Büro Yönetimi Ve Sekreterlik Pr.
+  name: Büro Yönetimi ve Sekreterlik Pr.
   yoksis_id: 169581
   foet_code: 346
   founded_at: 
@@ -9551,7 +9551,7 @@
   parent_yoksis_id: 169579
   osym_id: 
 -
-  name: Büro Yönetimi Ve Sekreterlik Pr. (İö)
+  name: Büro Yönetimi ve Sekreterlik Pr. (İö)
   yoksis_id: 169582
   foet_code: 346
   founded_at: 
@@ -9563,7 +9563,7 @@
   parent_yoksis_id: 169579
   osym_id: 
 -
-  name: Büro Yönetimi Ve Yönetici Asistanlığı Pr.
+  name: Büro Yönetimi ve Yönetici Asistanlığı Pr.
   yoksis_id: 175630
   foet_code: 346
   founded_at: 
@@ -9575,7 +9575,7 @@
   parent_yoksis_id: 169579
   osym_id: 108250937
 -
-  name: Büro Yönetimi Ve Yönetici Asistanlığı Pr. (Uzaktan Öğretim)
+  name: Büro Yönetimi ve Yönetici Asistanlığı Pr. (Uzaktan Öğretim)
   yoksis_id: 294856
   foet_code: 346
   founded_at: 27.04.2016
@@ -9587,7 +9587,7 @@
   parent_yoksis_id: 169579
   osym_id: 108251398
 -
-  name: Büro Yönetimi Ve Yönetici Asistanlığı Pr. (İö)
+  name: Büro Yönetimi ve Yönetici Asistanlığı Pr. (İö)
   yoksis_id: 175631
   foet_code: 346
   founded_at: 10.09.2009
@@ -9599,7 +9599,7 @@
   parent_yoksis_id: 169579
   osym_id: 108270853
 -
-  name: Mülkiyet Koruma Ve Güvenlik Bölümü
+  name: Mülkiyet Koruma ve Güvenlik Bölümü
   yoksis_id: 249948
   foet_code: 861
   founded_at: 
@@ -9611,7 +9611,7 @@
   parent_yoksis_id: 122379
   osym_id: 
 -
-  name: Sivil Savunma Ve İtfaiyecilik Pr.
+  name: Sivil Savunma ve İtfaiyecilik Pr.
   yoksis_id: 282781
   foet_code: 861
   founded_at: 09.12.2015
@@ -9623,7 +9623,7 @@
   parent_yoksis_id: 249948
   osym_id: 
 -
-  name: İş Sağlığı Ve Güvenliği Pr.
+  name: İş Sağlığı ve Güvenliği Pr.
   yoksis_id: 249949
   foet_code: 862
   founded_at: 15.01.2014
@@ -9635,7 +9635,7 @@
   parent_yoksis_id: 249948
   osym_id: 108251432
 -
-  name: İş Sağlığı Ve Güvenliği Pr. (Uzaktan Öğretim)
+  name: İş Sağlığı ve Güvenliği Pr. (Uzaktan Öğretim)
   yoksis_id: 320062
   foet_code: 862
   founded_at: 19.04.2017
@@ -9647,7 +9647,7 @@
   parent_yoksis_id: 249948
   osym_id: 108251459
 -
-  name: Otel, Lokanta Ve İkram Hizmetleri Bölümü
+  name: Otel, Lokanta ve İkram Hizmetleri Bölümü
   yoksis_id: 169571
   foet_code: 811
   founded_at: 24.06.1993
@@ -9659,7 +9659,7 @@
   parent_yoksis_id: 122379
   osym_id: 
 -
-  name: Turizm Ve Otel İşletmeciliği Pr.
+  name: Turizm ve Otel İşletmeciliği Pr.
   yoksis_id: 169573
   foet_code: 811
   founded_at: 10.09.2009
@@ -9671,7 +9671,7 @@
   parent_yoksis_id: 169571
   osym_id: 108250497
 -
-  name: Turizm Ve Otel İşletmeciliği Pr. (İö)
+  name: Turizm ve Otel İşletmeciliği Pr. (İö)
   yoksis_id: 169575
   foet_code: 811
   founded_at: 
@@ -9755,7 +9755,7 @@
   parent_yoksis_id: 122380
   osym_id: 
 -
-  name: Terapi Ve Rahabilitasyon Bölümü
+  name: Terapi ve Rahabilitasyon Bölümü
   yoksis_id: 169584
   foet_code: 726
   founded_at: 10.09.2009
@@ -9803,7 +9803,7 @@
   parent_yoksis_id: 169584
   osym_id: 108270844
 -
-  name: Toptan Ve Perakende Satış Bölümü
+  name: Toptan ve Perakende Satış Bölümü
   yoksis_id: 251125
   foet_code: 341
   founded_at: 
@@ -9815,7 +9815,7 @@
   parent_yoksis_id: 122379
   osym_id: 
 -
-  name: Emlak Ve Emlak Yönetimi Pr.
+  name: Emlak ve Emlak Yönetimi Pr.
   yoksis_id: 228124
   foet_code: 345
   founded_at: 
@@ -9827,7 +9827,7 @@
   parent_yoksis_id: 251125
   osym_id: 108251132
 -
-  name: Emlak Ve Emlak Yönetimi Pr. (İö)
+  name: Emlak ve Emlak Yönetimi Pr. (İö)
   yoksis_id: 228555
   foet_code: 345
   founded_at: 
@@ -9839,7 +9839,7 @@
   parent_yoksis_id: 251125
   osym_id: 108270968
 -
-  name: Yönetim Ve Organizasyon Bölümü
+  name: Yönetim ve Organizasyon Bölümü
   yoksis_id: 169598
   foet_code: 345
   founded_at: 
@@ -9887,7 +9887,7 @@
   parent_yoksis_id: 169598
   osym_id: 108270959
 -
-  name: İktisadi Ve İdari Programlar Bölümü
+  name: İktisadi ve İdari Programlar Bölümü
   yoksis_id: 122382
   foet_code: 314
   founded_at: 
@@ -9911,7 +9911,7 @@
   parent_yoksis_id: 122382
   osym_id: 
 -
-  name: Büro Yönetimi Ve Sekreterlik Pr.
+  name: Büro Yönetimi ve Sekreterlik Pr.
   yoksis_id: 122384
   foet_code: 346
   founded_at: 10.09.2009
@@ -9923,7 +9923,7 @@
   parent_yoksis_id: 122382
   osym_id: 
 -
-  name: Büro Yönetimi Ve Sekreterlik Pr. (İö)
+  name: Büro Yönetimi ve Sekreterlik Pr. (İö)
   yoksis_id: 169577
   foet_code: 346
   founded_at: 
@@ -9935,7 +9935,7 @@
   parent_yoksis_id: 122382
   osym_id: 
 -
-  name: Turizm Ve Otel İşletmeciliği Pr.
+  name: Turizm ve Otel İşletmeciliği Pr.
   yoksis_id: 122385
   foet_code: 811
   founded_at: 10.09.2009
@@ -10019,7 +10019,7 @@
   parent_yoksis_id: 269766
   osym_id: 
 -
-  name: Kadın Ve Toplum Uygulama Ve Araştırma Merkezi
+  name: Kadın ve Toplum Uygulama ve Araştırma Merkezi
   yoksis_id: 232499
   foet_code: 
   founded_at: 16.02.2011
@@ -10027,11 +10027,11 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Kafkasya Ve Orta Asya Araştırma Ve Uygulama Merkezi
+  name: Kafkasya ve Orta Asya Araştırma ve Uygulama Merkezi
   yoksis_id: 169407
   foet_code: 
   founded_at: 01.01.1900
@@ -10039,11 +10039,11 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Karadeniz İleri Teknoloji Uygulama Ve Araştırma Merkezi
+  name: Karadeniz İleri Teknoloji Uygulama ve Araştırma Merkezi
   yoksis_id: 311015
   foet_code: 
   founded_at: 21.12.2016
@@ -10051,7 +10051,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -10067,7 +10067,7 @@
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Elektrik Ve Enerji Bölümü
+  name: Elektrik ve Enerji Bölümü
   yoksis_id: 309357
   foet_code: 522
   founded_at: 
@@ -10091,7 +10091,7 @@
   parent_yoksis_id: 309357
   osym_id: 
 -
-  name: Gaz Ve Tesisatı Teknolojisi Pr.
+  name: Gaz ve Tesisatı Teknolojisi Pr.
   yoksis_id: 309359
   foet_code: 522
   founded_at: 01.01.1900
@@ -10103,7 +10103,7 @@
   parent_yoksis_id: 309357
   osym_id: 
 -
-  name: Motorlu Araçlar Ve Ulaştırma Teknolojileri Bölümü
+  name: Motorlu Araçlar ve Ulaştırma Teknolojileri Bölümü
   yoksis_id: 258381
   foet_code: 525
   founded_at: 
@@ -10127,7 +10127,7 @@
   parent_yoksis_id: 258381
   osym_id: 108251468
 -
-  name: Mimarlık Ve Şehir Planlama Bölümü
+  name: Mimarlık ve Şehir Planlama Bölümü
   yoksis_id: 169626
   foet_code: 581
   founded_at: 
@@ -10151,7 +10151,7 @@
   parent_yoksis_id: 169626
   osym_id: 
 -
-  name: Harita Ve Kadastro Pr.
+  name: Harita ve Kadastro Pr.
   yoksis_id: 169629
   foet_code: 581
   founded_at: 10.09.2009
@@ -10163,7 +10163,7 @@
   parent_yoksis_id: 169626
   osym_id: 108250504
 -
-  name: Harita Ve Kadastro Pr. (İö)
+  name: Harita ve Kadastro Pr. (İö)
   yoksis_id: 169633
   foet_code: 581
   founded_at: 10.09.2009
@@ -10235,7 +10235,7 @@
   parent_yoksis_id: 122293
   osym_id: 
 -
-  name: Harita Ve Kadastro Pr.
+  name: Harita ve Kadastro Pr.
   yoksis_id: 122295
   foet_code: 581
   founded_at: 10.09.2009
@@ -10247,7 +10247,7 @@
   parent_yoksis_id: 122293
   osym_id: 108250504
 -
-  name: Harita Ve Kadastro Pr. (İö)
+  name: Harita ve Kadastro Pr. (İö)
   yoksis_id: 169612
   foet_code: 581
   founded_at: 10.09.2009
@@ -10355,7 +10355,7 @@
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Büro Yönetimi Ve Sekreterlik Pr.
+  name: Büro Yönetimi ve Sekreterlik Pr.
   yoksis_id: 273647
   foet_code: 346
   founded_at: 
@@ -10367,7 +10367,7 @@
   parent_yoksis_id: 269767
   osym_id: 
 -
-  name: Büro Yönetimi Ve Sekreterlik Pr. (İö)
+  name: Büro Yönetimi ve Sekreterlik Pr. (İö)
   yoksis_id: 273648
   foet_code: 346
   founded_at: 
@@ -10379,7 +10379,7 @@
   parent_yoksis_id: 269767
   osym_id: 
 -
-  name: Bilgisayar Teknolojisi Ve Programlama Pr.
+  name: Bilgisayar Teknolojisi ve Programlama Pr.
   yoksis_id: 273646
   foet_code: 481
   founded_at: 
@@ -10475,7 +10475,7 @@
   parent_yoksis_id: 269768
   osym_id: 
 -
-  name: Bilgisayar Teknolojisi Ve Programlama Pr.
+  name: Bilgisayar Teknolojisi ve Programlama Pr.
   yoksis_id: 273655
   foet_code: 481
   founded_at: 
@@ -10487,7 +10487,7 @@
   parent_yoksis_id: 269768
   osym_id: 
 -
-  name: Mobilya Ve Dekorasyon Pr.
+  name: Mobilya ve Dekorasyon Pr.
   yoksis_id: 273656
   foet_code: 543
   founded_at: 
@@ -10511,7 +10511,7 @@
   parent_yoksis_id: 269768
   osym_id: 
 -
-  name: Turizm Ve Otel İşletmeciliği Pr.
+  name: Turizm ve Otel İşletmeciliği Pr.
   yoksis_id: 273658
   foet_code: 811
   founded_at: 
@@ -10643,7 +10643,7 @@
   parent_yoksis_id: 122183
   osym_id: 
 -
-  name: Devreler Ve Sistemler Anabilim Dalı
+  name: Devreler ve Sistemler Anabilim Dalı
   yoksis_id: 201436
   foet_code: 522
   founded_at: 
@@ -10655,7 +10655,7 @@
   parent_yoksis_id: 122225
   osym_id: 
 -
-  name: Devreler Ve Sistemler Teorisi Anabilim Dalı
+  name: Devreler ve Sistemler Teorisi Anabilim Dalı
   yoksis_id: 122226
   foet_code: 522
   founded_at: 10.09.2009
@@ -10667,7 +10667,7 @@
   parent_yoksis_id: 122225
   osym_id: 
 -
-  name: Elektro Manyetik Alanlar Ve Mikro Dalga Tekniği Anabilim Dalı
+  name: Elektro Manyetik Alanlar ve Mikro Dalga Tekniği Anabilim Dalı
   yoksis_id: 122232
   foet_code: 523
   founded_at: 10.09.2009
@@ -10799,7 +10799,7 @@
   parent_yoksis_id: 122225
   osym_id: 
 -
-  name: Kontrol Ve Kumanda Sistemleri Anabilim Dalı
+  name: Kontrol ve Kumanda Sistemleri Anabilim Dalı
   yoksis_id: 122230
   foet_code: 523
   founded_at: 
@@ -11051,7 +11051,7 @@
   parent_yoksis_id: 122204
   osym_id: 
 -
-  name: Jeodezi Ve Fotogrametri Mühendisliği Bölümü
+  name: Jeodezi ve Fotogrametri Mühendisliği Bölümü
   yoksis_id: 147731
   foet_code: 443
   founded_at: 10.09.2009
@@ -11087,7 +11087,7 @@
   parent_yoksis_id: 147731
   osym_id: 
 -
-  name: Jeodezi Ve Fotogrametri Mühendisliği Pr.
+  name: Jeodezi ve Fotogrametri Mühendisliği Pr.
   yoksis_id: 275952
   foet_code: 443
   founded_at: 08.05.2015
@@ -11099,7 +11099,7 @@
   parent_yoksis_id: 147731
   osym_id: 
 -
-  name: Jeodezi Ve Fotogrametri Mühendisliği Pr. (İö)
+  name: Jeodezi ve Fotogrametri Mühendisliği Pr. (İö)
   yoksis_id: 275953
   foet_code: 443
   founded_at: 08.05.2015
@@ -11171,7 +11171,7 @@
   parent_yoksis_id: 122209
   osym_id: 
 -
-  name: Proses Ve Reaktör Tasarımı Anabilim Dalı
+  name: Proses ve Reaktör Tasarımı Anabilim Dalı
   yoksis_id: 122211
   foet_code: 524
   founded_at: 10.09.2009
@@ -11207,7 +11207,7 @@
   parent_yoksis_id: 122209
   osym_id: 
 -
-  name: Termodinamik Ve Enerji Teknolojisi Anabilim Dalı
+  name: Termodinamik ve Enerji Teknolojisi Anabilim Dalı
   yoksis_id: 122214
   foet_code: 521
   founded_at: 10.09.2009
@@ -11255,7 +11255,7 @@
   parent_yoksis_id: 122215
   osym_id: 
 -
-  name: Konstrüksiyon Ve İmalat Anabilim Dalı
+  name: Konstrüksiyon ve İmalat Anabilim Dalı
   yoksis_id: 122217
   foet_code: 521
   founded_at: 
@@ -11303,7 +11303,7 @@
   parent_yoksis_id: 122215
   osym_id: 108230333
 -
-  name: Makine Teorisi Ve Dinamiği Anabilim Dalı
+  name: Makine Teorisi ve Dinamiği Anabilim Dalı
   yoksis_id: 122218
   foet_code: 521
   founded_at: 
@@ -11339,7 +11339,7 @@
   parent_yoksis_id: 122215
   osym_id: 
 -
-  name: Metalurji Ve Malzeme Mühendisliği Bölümü
+  name: Metalurji ve Malzeme Mühendisliği Bölümü
   yoksis_id: 122223
   foet_code: 521
   founded_at: 10.09.2009
@@ -11351,7 +11351,7 @@
   parent_yoksis_id: 122183
   osym_id: 
 -
-  name: Malzeme Bilimi Ve Mühendisliği Anabilim Dalı
+  name: Malzeme Bilimi ve Mühendisliği Anabilim Dalı
   yoksis_id: 122224
   foet_code: 521
   founded_at: 10.09.2009
@@ -11363,7 +11363,7 @@
   parent_yoksis_id: 122223
   osym_id: 
 -
-  name: Malzeme Bilimi Ve Mühendisliği Pr.
+  name: Malzeme Bilimi ve Mühendisliği Pr.
   yoksis_id: 168875
   foet_code: 521
   founded_at: 10.09.2009
@@ -11375,7 +11375,7 @@
   parent_yoksis_id: 122223
   osym_id: 108210683
 -
-  name: Metalurji Ve Malzeme Mühendisliği Pr.
+  name: Metalurji ve Malzeme Mühendisliği Pr.
   yoksis_id: 333678
   foet_code: 521
   founded_at: 28.02.2018
@@ -11819,7 +11819,7 @@
   parent_yoksis_id: 247958
   osym_id: 
 -
-  name: Şehir Ve Bölge Planlama Bölümü
+  name: Şehir ve Bölge Planlama Bölümü
   yoksis_id: 251540
   foet_code: 581
   founded_at: 29.01.2014
@@ -11831,7 +11831,7 @@
   parent_yoksis_id: 208604
   osym_id: 
 -
-  name: Şehir Ve Bölge Planlama Anabilim Dalı
+  name: Şehir ve Bölge Planlama Anabilim Dalı
   yoksis_id: 319352
   foet_code: 581
   founded_at: 05.04.2017
@@ -11843,7 +11843,7 @@
   parent_yoksis_id: 251540
   osym_id: 
 -
-  name: Okul Öncesi Eğitimi Uygulama Ve Araştırma Merkezi
+  name: Okul Öncesi Eğitimi Uygulama ve Araştırma Merkezi
   yoksis_id: 232712
   foet_code: 
   founded_at: 17.08.2011
@@ -11851,7 +11851,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -11903,7 +11903,7 @@
   parent_yoksis_id: 269769
   osym_id: 
 -
-  name: Türk Dili Ve Edebiyatı Pr.
+  name: Türk Dili ve Edebiyatı Pr.
   yoksis_id: 273662
   foet_code: 223
   founded_at: 
@@ -11987,7 +11987,7 @@
   parent_yoksis_id: 269771
   osym_id: 
 -
-  name: Ornitoloji Araştırma Ve Uygulama Merkezi
+  name: Ornitoloji Araştırma ve Uygulama Merkezi
   yoksis_id: 169410
   foet_code: 
   founded_at: 30.04.2009
@@ -11995,11 +11995,11 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Psikoloji Uygulama Ve Araştırma Merkezi
+  name: Psikoloji Uygulama ve Araştırma Merkezi
   yoksis_id: 284594
   foet_code: 
   founded_at: 20.01.2016
@@ -12007,7 +12007,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -12023,7 +12023,7 @@
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Atatürk İlkeleri Ve İnkılap Tarihi Bölümü
+  name: Atatürk İlkeleri ve İnkılap Tarihi Bölümü
   yoksis_id: 169437
   foet_code: 225
   founded_at: 
@@ -12035,7 +12035,7 @@
   parent_yoksis_id: 122287
   osym_id: 
 -
-  name: Beden Eğitimi Ve Spor Bölümü
+  name: Beden Eğitimi ve Spor Bölümü
   yoksis_id: 169448
   foet_code: 146
   founded_at: 26.02.2009
@@ -12191,7 +12191,7 @@
   parent_yoksis_id: 169871
   osym_id: 108270402
 -
-  name: Bitkisel Ve Hayvansal Üretim Bölümü
+  name: Bitkisel ve Hayvansal Üretim Bölümü
   yoksis_id: 169860
   foet_code: 621
   founded_at: 
@@ -12251,7 +12251,7 @@
   parent_yoksis_id: 169847
   osym_id: 108270298
 -
-  name: Elektronik Ve Otomasyon Bölümü
+  name: Elektronik ve Otomasyon Bölümü
   yoksis_id: 169899
   foet_code: 523
   founded_at: 
@@ -12287,7 +12287,7 @@
   parent_yoksis_id: 169899
   osym_id: 
 -
-  name: Elektrik Ve Enerji Bölümü
+  name: Elektrik ve Enerji Bölümü
   yoksis_id: 169892
   foet_code: 522
   founded_at: 
@@ -12323,7 +12323,7 @@
   parent_yoksis_id: 169892
   osym_id: 
 -
-  name: Görsel, İşitsel Teknikler Ve Medya Yapımcılığı Bölümü
+  name: Görsel, İşitsel Teknikler ve Medya Yapımcılığı Bölümü
   yoksis_id: 169828
   foet_code: 213
   founded_at: 10.09.2009
@@ -12335,7 +12335,7 @@
   parent_yoksis_id: 122360
   osym_id: 
 -
-  name: Basım Ve Yayın Teknolojileri Pr.
+  name: Basım ve Yayın Teknolojileri Pr.
   yoksis_id: 146267
   foet_code: 213
   founded_at: 10.09.2009
@@ -12347,7 +12347,7 @@
   parent_yoksis_id: 169828
   osym_id: 108250725
 -
-  name: Kimya Ve Kimyasal İşleme Teknolojileri Bölümü
+  name: Kimya ve Kimyasal İşleme Teknolojileri Bölümü
   yoksis_id: 174840
   foet_code: 524
   founded_at: 
@@ -12371,7 +12371,7 @@
   parent_yoksis_id: 174840
   osym_id: 
 -
-  name: Makine Ve Metal Teknolojileri Bölümü
+  name: Makine ve Metal Teknolojileri Bölümü
   yoksis_id: 169866
   foet_code: 521
   founded_at: 10.09.2009
@@ -12395,7 +12395,7 @@
   parent_yoksis_id: 169866
   osym_id: 108250867
 -
-  name: Motorlu Araçlar Ve Ulaştırma Teknolojileri Bölümü
+  name: Motorlu Araçlar ve Ulaştırma Teknolojileri Bölümü
   yoksis_id: 169909
   foet_code: 525
   founded_at: 
@@ -12419,7 +12419,7 @@
   parent_yoksis_id: 169909
   osym_id: 
 -
-  name: Muhasebe Ve Vergi Bölümü
+  name: Muhasebe ve Vergi Bölümü
   yoksis_id: 169802
   foet_code: 344
   founded_at: 
@@ -12431,7 +12431,7 @@
   parent_yoksis_id: 122360
   osym_id: 
 -
-  name: Muhasebe Ve Vergi Uygulamaları Pr.
+  name: Muhasebe ve Vergi Uygulamaları Pr.
   yoksis_id: 145863
   foet_code: 344
   founded_at: 10.09.2009
@@ -12443,7 +12443,7 @@
   parent_yoksis_id: 169802
   osym_id: 108250734
 -
-  name: Muhasebe Ve Vergi Uygulamaları Pr. (İö)
+  name: Muhasebe ve Vergi Uygulamaları Pr. (İö)
   yoksis_id: 169804
   foet_code: 344
   founded_at: 10.09.2009
@@ -12467,7 +12467,7 @@
   parent_yoksis_id: 122360
   osym_id: 
 -
-  name: Otel, Lokanta Ve İkram Hizmetleri Bölümü
+  name: Otel, Lokanta ve İkram Hizmetleri Bölümü
   yoksis_id: 168851
   foet_code: 811
   founded_at: 11.03.1992
@@ -12503,7 +12503,7 @@
   parent_yoksis_id: 168851
   osym_id: 
 -
-  name: Turizm Ve Otel İşletmeciliği Pr.
+  name: Turizm ve Otel İşletmeciliği Pr.
   yoksis_id: 258274
   foet_code: 811
   founded_at: 01.01.1900
@@ -12515,7 +12515,7 @@
   parent_yoksis_id: 168851
   osym_id: 108250301
 -
-  name: Turizm Ve Otel İşletmeciliği Pr. (İö)
+  name: Turizm ve Otel İşletmeciliği Pr. (İö)
   yoksis_id: 320498
   foet_code: 811
   founded_at: 20.04.2017
@@ -12527,7 +12527,7 @@
   parent_yoksis_id: 168851
   osym_id: 108270323
 -
-  name: Park Ve Bahçe Bitkileri Bölümü
+  name: Park ve Bahçe Bitkileri Bölümü
   yoksis_id: 174835
   foet_code: 622
   founded_at: 11.03.1992
@@ -12539,7 +12539,7 @@
   parent_yoksis_id: 122360
   osym_id: 
 -
-  name: Peyzaj Ve Süs Bitkileri Pr.
+  name: Peyzaj ve Süs Bitkileri Pr.
   yoksis_id: 174836
   foet_code: 622
   founded_at: 10.09.2009
@@ -12551,7 +12551,7 @@
   parent_yoksis_id: 174835
   osym_id: 108250964
 -
-  name: Peyzaj Ve Süs Bitkileri Pr. (İö)
+  name: Peyzaj ve Süs Bitkileri Pr. (İö)
   yoksis_id: 174838
   foet_code: 622
   founded_at: 
@@ -12563,7 +12563,7 @@
   parent_yoksis_id: 174835
   osym_id: 108270862
 -
-  name: Pazarlama Ve Reklamcılık Bölümü
+  name: Pazarlama ve Reklamcılık Bölümü
   yoksis_id: 253372
   foet_code: 342
   founded_at: 19.03.2014
@@ -12575,7 +12575,7 @@
   parent_yoksis_id: 122360
   osym_id: 
 -
-  name: Halkla İlişkiler Ve Tanıtım Pr.
+  name: Halkla İlişkiler ve Tanıtım Pr.
   yoksis_id: 213760
   foet_code: 342
   founded_at: 15.02.2012
@@ -12587,7 +12587,7 @@
   parent_yoksis_id: 253372
   osym_id: 108251256
 -
-  name: Medya Ve İletişim Pr. (Uzaktan Öğretim)
+  name: Medya ve İletişim Pr. (Uzaktan Öğretim)
   yoksis_id: 253373
   foet_code: 321
   founded_at: 19.03.2014
@@ -12671,7 +12671,7 @@
   parent_yoksis_id: 122360
   osym_id: 
 -
-  name: Basım Ve Yayın Teknolojileri Pr.
+  name: Basım ve Yayın Teknolojileri Pr.
   yoksis_id: 122369
   foet_code: 213
   founded_at: 10.09.2009
@@ -12683,7 +12683,7 @@
   parent_yoksis_id: 122361
   osym_id: 108250725
 -
-  name: Basım Ve Yayın Teknolojileri Pr. (İö)
+  name: Basım ve Yayın Teknolojileri Pr. (İö)
   yoksis_id: 122363
   foet_code: 213
   founded_at: 10.09.2009
@@ -12695,7 +12695,7 @@
   parent_yoksis_id: 122361
   osym_id: 
 -
-  name: Bilgisayar Teknolojisi Ve Programlama Pr.
+  name: Bilgisayar Teknolojisi ve Programlama Pr.
   yoksis_id: 145810
   foet_code: 481
   founded_at: 10.09.2009
@@ -12707,7 +12707,7 @@
   parent_yoksis_id: 122361
   osym_id: 
 -
-  name: Bilgisayar Teknolojisi Ve Programlama Pr. (İö)
+  name: Bilgisayar Teknolojisi ve Programlama Pr. (İö)
   yoksis_id: 122367
   foet_code: 481
   founded_at: 10.09.2009
@@ -12875,7 +12875,7 @@
   parent_yoksis_id: 122361
   osym_id: 108250276
 -
-  name: Tarım Alet Ve Makineleri Pr.
+  name: Tarım Alet ve Makineleri Pr.
   yoksis_id: 122364
   foet_code: 525
   founded_at: 10.09.2009
@@ -12899,7 +12899,7 @@
   parent_yoksis_id: 122361
   osym_id: 
 -
-  name: Tekstil, Giyim, Ayakkabı Ve Deri Bölümü
+  name: Tekstil, Giyim, Ayakkabı ve Deri Bölümü
   yoksis_id: 282782
   foet_code: 542
   founded_at: 09.12.2015
@@ -12923,7 +12923,7 @@
   parent_yoksis_id: 282782
   osym_id: 
 -
-  name: Çocuk Bakımı Ve Gençlik Hizmetleri Bölümü
+  name: Çocuk Bakımı ve Gençlik Hizmetleri Bölümü
   yoksis_id: 215482
   foet_code: 761
   founded_at: 
@@ -12995,7 +12995,7 @@
   parent_yoksis_id: 215482
   osym_id: 108270253
 -
-  name: İktisadi Ve İdari Programlar Bölümü
+  name: İktisadi ve İdari Programlar Bölümü
   yoksis_id: 122370
   foet_code: 314
   founded_at: 10.09.2009
@@ -13031,7 +13031,7 @@
   parent_yoksis_id: 122370
   osym_id: 
 -
-  name: Muhasebe Ve Vergi Uygulamaları Pr.
+  name: Muhasebe ve Vergi Uygulamaları Pr.
   yoksis_id: 122371
   foet_code: 344
   founded_at: 10.09.2009
@@ -13043,7 +13043,7 @@
   parent_yoksis_id: 122370
   osym_id: 108250734
 -
-  name: Muhasebe Ve Vergi Uygulamaları Pr. (İö)
+  name: Muhasebe ve Vergi Uygulamaları Pr. (İö)
   yoksis_id: 169803
   foet_code: 344
   founded_at: 
@@ -13055,7 +13055,7 @@
   parent_yoksis_id: 122370
   osym_id: 108270686
 -
-  name: Turizm Ve Otel İşletmeciliği Pr.
+  name: Turizm ve Otel İşletmeciliği Pr.
   yoksis_id: 122372
   foet_code: 811
   founded_at: 10.09.2009
@@ -13067,7 +13067,7 @@
   parent_yoksis_id: 122370
   osym_id: 108250301
 -
-  name: Turizm Ve Otel İşletmeciliği Pr. (İö)
+  name: Turizm ve Otel İşletmeciliği Pr. (İö)
   yoksis_id: 169805
   foet_code: 811
   founded_at: 10.09.2009
@@ -13079,7 +13079,7 @@
   parent_yoksis_id: 122370
   osym_id: 108270323
 -
-  name: Turizm Ve Otelcilik Pr.
+  name: Turizm ve Otelcilik Pr.
   yoksis_id: 301948
   foet_code: 811
   founded_at: 01.01.1999
@@ -13091,7 +13091,7 @@
   parent_yoksis_id: 122370
   osym_id: 
 -
-  name: Turizm Ve Otelcilik Pr. (İö)
+  name: Turizm ve Otelcilik Pr. (İö)
   yoksis_id: 301949
   foet_code: 811
   founded_at: 01.01.1999
@@ -13163,7 +13163,7 @@
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Beslenme Ve Diyetetik Bölümü
+  name: Beslenme ve Diyetetik Bölümü
   yoksis_id: 147574
   foet_code: 726
   founded_at: 10.09.2009
@@ -13187,7 +13187,7 @@
   parent_yoksis_id: 147574
   osym_id: 
 -
-  name: Beslenme Ve Diyetetik Pr.
+  name: Beslenme ve Diyetetik Pr.
   yoksis_id: 240429
   foet_code: 726
   founded_at: 01.01.1900
@@ -13199,7 +13199,7 @@
   parent_yoksis_id: 147574
   osym_id: 108210832
 -
-  name: Beslenme Ve Diyetetik Pr. (%25 Burslu)
+  name: Beslenme ve Diyetetik Pr. (%25 Burslu)
   yoksis_id: 308558
   foet_code: 726
   founded_at: 20.10.2016
@@ -13211,7 +13211,7 @@
   parent_yoksis_id: 147574
   osym_id: 
 -
-  name: Beslenme Ve Diyetetik Pr. (%50 Burslu)
+  name: Beslenme ve Diyetetik Pr. (%50 Burslu)
   yoksis_id: 304711
   foet_code: 726
   founded_at: 29.09.2016
@@ -13223,7 +13223,7 @@
   parent_yoksis_id: 147574
   osym_id: 
 -
-  name: Beslenme Ve Diyetetik Pr. (Ücretli)
+  name: Beslenme ve Diyetetik Pr. (Ücretli)
   yoksis_id: 308559
   foet_code: 726
   founded_at: 20.10.2016
@@ -13271,7 +13271,7 @@
   parent_yoksis_id: 147574
   osym_id: 
 -
-  name: Dil Ve Konuşma Terapisi Bölümü
+  name: Dil ve Konuşma Terapisi Bölümü
   yoksis_id: 259860
   foet_code: 726
   founded_at: 01.10.2014
@@ -13355,7 +13355,7 @@
   parent_yoksis_id: 122354
   osym_id: 
 -
-  name: Doğum Ve Kadın Hastalıkları Hemşireliği Anabilim Dalı
+  name: Doğum ve Kadın Hastalıkları Hemşireliği Anabilim Dalı
   yoksis_id: 250154
   foet_code: 723
   founded_at: 29.01.2014
@@ -13475,7 +13475,7 @@
   parent_yoksis_id: 122354
   osym_id: 
 -
-  name: Çocuk Sağlığı Ve Hastalıkları Hemşireliği Anabilim Dalı
+  name: Çocuk Sağlığı ve Hastalıkları Hemşireliği Anabilim Dalı
   yoksis_id: 250155
   foet_code: 723
   founded_at: 29.01.2014
@@ -13715,7 +13715,7 @@
   parent_yoksis_id: 122387
   osym_id: 
 -
-  name: Ağız Çene Ve Diş Hastalıkları Cerrahisi (Dr)
+  name: Ağız Çene ve Diş Hastalıkları Cerrahisi (Dr)
   yoksis_id: 169547
   foet_code: 724
   founded_at: 
@@ -13727,7 +13727,7 @@
   parent_yoksis_id: 122387
   osym_id: 
 -
-  name: Ağız, Diş Ve Çene Radyolojisi (Dr)
+  name: Ağız, Diş ve Çene Radyolojisi (Dr)
   yoksis_id: 267775
   foet_code: 724
   founded_at: 
@@ -13739,7 +13739,7 @@
   parent_yoksis_id: 122387
   osym_id: 
 -
-  name: Beden Eğitimi Ve Spor (Dr)
+  name: Beden Eğitimi ve Spor (Dr)
   yoksis_id: 169551
   foet_code: 146
   founded_at: 
@@ -13751,7 +13751,7 @@
   parent_yoksis_id: 122387
   osym_id: 
 -
-  name: Beden Eğitimi Ve Spor (Yl) (Tezli)
+  name: Beden Eğitimi ve Spor (Yl) (Tezli)
   yoksis_id: 267776
   foet_code: 146
   founded_at: 30.04.2018
@@ -13775,7 +13775,7 @@
   parent_yoksis_id: 122387
   osym_id: 
 -
-  name: Besin Hijyeni Ve Teknolojisi (Dr)
+  name: Besin Hijyeni ve Teknolojisi (Dr)
   yoksis_id: 169576
   foet_code: 541
   founded_at: 
@@ -13787,7 +13787,7 @@
   parent_yoksis_id: 122387
   osym_id: 
 -
-  name: Besin Hijyeni Ve Teknolojisi (Yl) (Tezli)
+  name: Besin Hijyeni ve Teknolojisi (Yl) (Tezli)
   yoksis_id: 169516
   foet_code: 541
   founded_at: 10.09.2009
@@ -13823,7 +13823,7 @@
   parent_yoksis_id: 122387
   osym_id: 
 -
-  name: Biyoistatistik Ve Tıp Bilimi (Dr)
+  name: Biyoistatistik ve Tıp Bilimi (Dr)
   yoksis_id: 211302
   foet_code: 462
   founded_at: 
@@ -13835,7 +13835,7 @@
   parent_yoksis_id: 122387
   osym_id: 
 -
-  name: Biyoistatistik Ve Tıp Bilimi (Yl) (Tezli)
+  name: Biyoistatistik ve Tıp Bilimi (Yl) (Tezli)
   yoksis_id: 211301
   foet_code: 462
   founded_at: 07.05.2018
@@ -13871,7 +13871,7 @@
   parent_yoksis_id: 122387
   osym_id: 
 -
-  name: Doğum Ve Jinekoloji (Dr)
+  name: Doğum ve Jinekoloji (Dr)
   yoksis_id: 169578
   foet_code: 640
   founded_at: 
@@ -13883,7 +13883,7 @@
   parent_yoksis_id: 122387
   osym_id: 
 -
-  name: Doğum Ve Kadın Hastalıkları Hemşireliği (Dr)
+  name: Doğum ve Kadın Hastalıkları Hemşireliği (Dr)
   yoksis_id: 301224
   foet_code: 723
   founded_at: 10.08.2016
@@ -13895,7 +13895,7 @@
   parent_yoksis_id: 122387
   osym_id: 
 -
-  name: Doğum Ve Kadın Hastalıkları Hemşireliği (Yl) (Tezli)
+  name: Doğum ve Kadın Hastalıkları Hemşireliği (Yl) (Tezli)
   yoksis_id: 301216
   foet_code: 723
   founded_at: 10.08.2016
@@ -13907,7 +13907,7 @@
   parent_yoksis_id: 122387
   osym_id: 
 -
-  name: Doğum Ve Kadın Hastalıkları Hemşireliği (Yl) (Tezsiz) (İö)
+  name: Doğum ve Kadın Hastalıkları Hemşireliği (Yl) (Tezsiz) (İö)
   yoksis_id: 301217
   foet_code: 723
   founded_at: 10.08.2016
@@ -13919,7 +13919,7 @@
   parent_yoksis_id: 122387
   osym_id: 
 -
-  name: Doğum Ve Vinekoloji (Veteriner) (Yl) (Tezli)
+  name: Doğum ve Vinekoloji (Veteriner) (Yl) (Tezli)
   yoksis_id: 169535
   foet_code: 640
   founded_at: 
@@ -13931,7 +13931,7 @@
   parent_yoksis_id: 122387
   osym_id: 
 -
-  name: Dölerme Ve Suni Tohumlama (Dr)
+  name: Dölerme ve Suni Tohumlama (Dr)
   yoksis_id: 169574
   foet_code: 640
   founded_at: 
@@ -13943,7 +13943,7 @@
   parent_yoksis_id: 122387
   osym_id: 
 -
-  name: Dölerme Ve Suni Tohumlama (Veteriner) (Yl) (Tezli)
+  name: Dölerme ve Suni Tohumlama (Veteriner) (Yl) (Tezli)
   yoksis_id: 169517
   foet_code: 640
   founded_at: 10.09.2009
@@ -13955,7 +13955,7 @@
   parent_yoksis_id: 122387
   osym_id: 
 -
-  name: Diş Hastalıkları Ve Tedavisi (Dr)
+  name: Diş Hastalıkları ve Tedavisi (Dr)
   yoksis_id: 169553
   foet_code: 724
   founded_at: 
@@ -14039,7 +14039,7 @@
   parent_yoksis_id: 122387
   osym_id: 
 -
-  name: Farmakoloji Ve Toksikoloji (Dr)
+  name: Farmakoloji ve Toksikoloji (Dr)
   yoksis_id: 169572
   foet_code: 421
   founded_at: 10.09.2009
@@ -14051,7 +14051,7 @@
   parent_yoksis_id: 122387
   osym_id: 
 -
-  name: Farmakoloji Ve Toksikoloji Veteriner (Yl) (Tezli)
+  name: Farmakoloji ve Toksikoloji Veteriner (Yl) (Tezli)
   yoksis_id: 283800
   foet_code: 421
   founded_at: 06.01.2016
@@ -14135,7 +14135,7 @@
   parent_yoksis_id: 122387
   osym_id: 
 -
-  name: Hayvan Besleme Ve Beslenme Hastalıkları (Dr)
+  name: Hayvan Besleme ve Beslenme Hastalıkları (Dr)
   yoksis_id: 169580
   foet_code: 640
   founded_at: 
@@ -14147,7 +14147,7 @@
   parent_yoksis_id: 122387
   osym_id: 
 -
-  name: Hayvan Besleme Ve Beslenme Hastalıkları (Yl) (Tezli) (Veteriner)
+  name: Hayvan Besleme ve Beslenme Hastalıkları (Yl) (Tezli) (Veteriner)
   yoksis_id: 169521
   foet_code: 640
   founded_at: 
@@ -14207,7 +14207,7 @@
   parent_yoksis_id: 122387
   osym_id: 
 -
-  name: Histoloji Ve Embriyoloji (Dr)
+  name: Histoloji ve Embriyoloji (Dr)
   yoksis_id: 219168
   foet_code: 721
   founded_at: 
@@ -14219,7 +14219,7 @@
   parent_yoksis_id: 122387
   osym_id: 
 -
-  name: Histoloji Ve Embriyoloji (Yl) (Tezli)
+  name: Histoloji ve Embriyoloji (Yl) (Tezli)
   yoksis_id: 219167
   foet_code: 721
   founded_at: 07.05.2018
@@ -14351,7 +14351,7 @@
   parent_yoksis_id: 122387
   osym_id: 
 -
-  name: Oral Diagnoz Ve Radyoloji (Dr)
+  name: Oral Diagnoz ve Radyoloji (Dr)
   yoksis_id: 169555
   foet_code: 724
   founded_at: 
@@ -14483,7 +14483,7 @@
   parent_yoksis_id: 122387
   osym_id: 
 -
-  name: Ruh Sağlığı Ve Hastalıkları Hemşireliği (Yl) (Tezli)
+  name: Ruh Sağlığı ve Hastalıkları Hemşireliği (Yl) (Tezli)
   yoksis_id: 169527
   foet_code: 723
   founded_at: 
@@ -14747,7 +14747,7 @@
   parent_yoksis_id: 122387
   osym_id: 
 -
-  name: Veteriner Hekimliği Tarihi Ve Deontoloji (Dr)
+  name: Veteriner Hekimliği Tarihi ve Deontoloji (Dr)
   yoksis_id: 255372
   foet_code: 226
   founded_at: 26.02.2014
@@ -14759,7 +14759,7 @@
   parent_yoksis_id: 122387
   osym_id: 
 -
-  name: Veteriner Hekimliği Tarihi Ve Deontoloji (Yl) (Tezli)
+  name: Veteriner Hekimliği Tarihi ve Deontoloji (Yl) (Tezli)
   yoksis_id: 255371
   foet_code: 226
   founded_at: 26.02.2014
@@ -14771,7 +14771,7 @@
   parent_yoksis_id: 122387
   osym_id: 
 -
-  name: Veteriner Histoloji Ve Embriyoloji (Yl) (Tezli)
+  name: Veteriner Histoloji ve Embriyoloji (Yl) (Tezli)
   yoksis_id: 325734
   foet_code: 721
   founded_at: 19.07.2017
@@ -14879,7 +14879,7 @@
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Beslenme Ve Diyetetik Bölümü
+  name: Beslenme ve Diyetetik Bölümü
   yoksis_id: 293578
   foet_code: 726
   founded_at: 08.04.2016
@@ -14903,7 +14903,7 @@
   parent_yoksis_id: 293578
   osym_id: 
 -
-  name: Beslenme Ve Diyetetik Pr.
+  name: Beslenme ve Diyetetik Pr.
   yoksis_id: 293582
   foet_code: 726
   founded_at: 08.04.2016
@@ -14951,7 +14951,7 @@
   parent_yoksis_id: 293578
   osym_id: 
 -
-  name: Dil Ve Konuşma Terapisi Bölümü
+  name: Dil ve Konuşma Terapisi Bölümü
   yoksis_id: 293579
   foet_code: 726
   founded_at: 01.10.2014
@@ -14963,7 +14963,7 @@
   parent_yoksis_id: 293577
   osym_id: 
 -
-  name: Dil Ve Konuşma Terapisi Anabilim Dalı
+  name: Dil ve Konuşma Terapisi Anabilim Dalı
   yoksis_id: 321515
   foet_code: 726
   founded_at: 11.05.2017
@@ -15035,7 +15035,7 @@
   parent_yoksis_id: 293581
   osym_id: 
 -
-  name: Doğum Ve Kadın Hastalıkları Hemşireliği Anabilim Dalı
+  name: Doğum ve Kadın Hastalıkları Hemşireliği Anabilim Dalı
   yoksis_id: 293607
   foet_code: 723
   founded_at: 29.01.2014
@@ -15107,7 +15107,7 @@
   parent_yoksis_id: 293581
   osym_id: 
 -
-  name: Çocuk Sağlığı Ve Hastalıkları Hemşireliği Anabilim Dalı
+  name: Çocuk Sağlığı ve Hastalıkları Hemşireliği Anabilim Dalı
   yoksis_id: 293606
   foet_code: 723
   founded_at: 29.01.2014
@@ -15227,7 +15227,7 @@
   parent_yoksis_id: 122336
   osym_id: 
 -
-  name: Ağız Ve Diş Sağlığı Pr.
+  name: Ağız ve Diş Sağlığı Pr.
   yoksis_id: 228122
   foet_code: 724
   founded_at: 
@@ -15239,7 +15239,7 @@
   parent_yoksis_id: 207663
   osym_id: 108251141
 -
-  name: Ağız Ve Diş Sağlığı Pr. (Ücretli)
+  name: Ağız ve Diş Sağlığı Pr. (Ücretli)
   yoksis_id: 304661
   foet_code: 724
   founded_at: 29.09.2016
@@ -15311,7 +15311,7 @@
   parent_yoksis_id: 122336
   osym_id: 
 -
-  name: Ambulans Ve Acil Bakım Teknikerliği Pr.
+  name: Ambulans ve Acil Bakım Teknikerliği Pr.
   yoksis_id: 122350
   foet_code: 725
   founded_at: 10.09.2009
@@ -15455,7 +15455,7 @@
   parent_yoksis_id: 122337
   osym_id: 108251211
 -
-  name: Protez Ve Ortez Pr.
+  name: Protez ve Ortez Pr.
   yoksis_id: 122341
   foet_code: 725
   founded_at: 10.09.2009
@@ -15479,7 +15479,7 @@
   parent_yoksis_id: 122337
   osym_id: 
 -
-  name: Tıbbi Dokümantasyon Ve Sekreterlik Pr.
+  name: Tıbbi Dokümantasyon ve Sekreterlik Pr.
   yoksis_id: 169788
   foet_code: 346
   founded_at: 
@@ -15491,7 +15491,7 @@
   parent_yoksis_id: 122337
   osym_id: 108250407
 -
-  name: Tıbbi Dokümantasyon Ve Sekreterlik Pr. (İö)
+  name: Tıbbi Dokümantasyon ve Sekreterlik Pr. (İö)
   yoksis_id: 122342
   foet_code: 346
   founded_at: 10.09.2009
@@ -15539,7 +15539,7 @@
   parent_yoksis_id: 122337
   osym_id: 
 -
-  name: Tıbbi Hizmetler Ve Teknikler Bölümü
+  name: Tıbbi Hizmetler ve Teknikler Bölümü
   yoksis_id: 169645
   foet_code: 720
   founded_at: 10.09.2009
@@ -15683,7 +15683,7 @@
   parent_yoksis_id: 169645
   osym_id: 108270889
 -
-  name: Tıbbi Dokümantasyon Ve Sekreterlik Pr.
+  name: Tıbbi Dokümantasyon ve Sekreterlik Pr.
   yoksis_id: 169655
   foet_code: 346
   founded_at: 
@@ -15695,7 +15695,7 @@
   parent_yoksis_id: 169645
   osym_id: 108250407
 -
-  name: Tıbbi Dokümantasyon Ve Sekreterlik Pr. (%50 Burslu)
+  name: Tıbbi Dokümantasyon ve Sekreterlik Pr. (%50 Burslu)
   yoksis_id: 304682
   foet_code: 346
   founded_at: 29.09.2016
@@ -15707,7 +15707,7 @@
   parent_yoksis_id: 169645
   osym_id: 
 -
-  name: Tıbbi Dokümantasyon Ve Sekreterlik Pr. (İö)
+  name: Tıbbi Dokümantasyon ve Sekreterlik Pr. (İö)
   yoksis_id: 169658
   foet_code: 346
   founded_at: 10.09.2009
@@ -15803,7 +15803,7 @@
   parent_yoksis_id: 169645
   osym_id: 
 -
-  name: İlk Ve Acil Yardım Pr.
+  name: İlk ve Acil Yardım Pr.
   yoksis_id: 229073
   foet_code: 725
   founded_at: 
@@ -15815,7 +15815,7 @@
   parent_yoksis_id: 169645
   osym_id: 108250946
 -
-  name: İlk Ve Acil Yardım Pr. (Ücretli)
+  name: İlk ve Acil Yardım Pr. (Ücretli)
   yoksis_id: 304675
   foet_code: 725
   founded_at: 29.09.2016
@@ -15827,7 +15827,7 @@
   parent_yoksis_id: 169645
   osym_id: 
 -
-  name: İlk Ve Acil Yardım Pr. (İö)
+  name: İlk ve Acil Yardım Pr. (İö)
   yoksis_id: 229074
   foet_code: 725
   founded_at: 
@@ -15875,7 +15875,7 @@
   parent_yoksis_id: 122388
   osym_id: 
 -
-  name: Avrupa-Akdeniz Kültürler Ve Turizm (Yl) (Tezli)
+  name: Avrupa-Akdeniz Kültürler ve Turizm (Yl) (Tezli)
   yoksis_id: 261825
   foet_code: 313
   founded_at: 15.10.2014
@@ -15887,7 +15887,7 @@
   parent_yoksis_id: 122388
   osym_id: 
 -
-  name: Beden Eğitimi Ve Spor (Dr)
+  name: Beden Eğitimi ve Spor (Dr)
   yoksis_id: 266388
   foet_code: 146
   founded_at: 18.04.2013
@@ -16055,7 +16055,7 @@
   parent_yoksis_id: 122388
   osym_id: 
 -
-  name: Dini Danışmanlık Ve Rehberlik (Yl) (Tezsiz) (İö)
+  name: Dini Danışmanlık ve Rehberlik (Yl) (Tezsiz) (İö)
   yoksis_id: 225938
   foet_code: 221
   founded_at: 09.08.2012
@@ -16103,7 +16103,7 @@
   parent_yoksis_id: 122388
   osym_id: 
 -
-  name: Evlilik Ve Aile Danışmanlığı (Yl) (Tezsiz) (İö)
+  name: Evlilik ve Aile Danışmanlığı (Yl) (Tezsiz) (İö)
   yoksis_id: 255364
   foet_code: 762
   founded_at: 26.02.2014
@@ -16139,7 +16139,7 @@
   parent_yoksis_id: 122388
   osym_id: 
 -
-  name: Eğitim Yönetimi, Teftişi Ve Planlaması (Yl) (Tezsiz)
+  name: Eğitim Yönetimi, Teftişi ve Planlaması (Yl) (Tezsiz)
   yoksis_id: 176437
   foet_code: 345
   founded_at: 23.09.2010
@@ -16175,7 +16175,7 @@
   parent_yoksis_id: 122388
   osym_id: 
 -
-  name: Felsefe Ve Din Bilimleri (Dr)
+  name: Felsefe ve Din Bilimleri (Dr)
   yoksis_id: 169480
   foet_code: 220
   founded_at: 
@@ -16187,7 +16187,7 @@
   parent_yoksis_id: 122388
   osym_id: 
 -
-  name: Felsefe Ve Din Bilimleri (Yl) (Tezli)
+  name: Felsefe ve Din Bilimleri (Yl) (Tezli)
   yoksis_id: 230721
   foet_code: 220
   founded_at: 
@@ -16235,7 +16235,7 @@
   parent_yoksis_id: 122388
   osym_id: 
 -
-  name: Kadın Ve Aile Araştırmaları (Yl) (Tezli)
+  name: Kadın ve Aile Araştırmaları (Yl) (Tezli)
   yoksis_id: 230643
   foet_code: 312
   founded_at: 23.06.2011
@@ -16367,7 +16367,7 @@
   parent_yoksis_id: 122388
   osym_id: 
 -
-  name: Rehberlik Ve Psikolojik Danışmanlık (Dr)
+  name: Rehberlik ve Psikolojik Danışmanlık (Dr)
   yoksis_id: 324888
   foet_code: 142
   founded_at: 01.01.1999
@@ -16379,7 +16379,7 @@
   parent_yoksis_id: 122388
   osym_id: 
 -
-  name: Rehberlik Ve Psikolojik Danışmanlık (Yl) (Tezli)
+  name: Rehberlik ve Psikolojik Danışmanlık (Yl) (Tezli)
   yoksis_id: 324887
   foet_code: 142
   founded_at: 01.01.1999
@@ -16499,7 +16499,7 @@
   parent_yoksis_id: 122388
   osym_id: 
 -
-  name: Siyaset Bilimi Ve Kamu Yönetimi (Yl) (Tezsiz) (Uzaktan Öğretim)
+  name: Siyaset Bilimi ve Kamu Yönetimi (Yl) (Tezsiz) (Uzaktan Öğretim)
   yoksis_id: 267770
   foet_code: 313
   founded_at: 01.01.1900
@@ -16607,7 +16607,7 @@
   parent_yoksis_id: 122388
   osym_id: 
 -
-  name: Türk Dili Ve Edebiyatı (Dr)
+  name: Türk Dili ve Edebiyatı (Dr)
   yoksis_id: 169487
   foet_code: 223
   founded_at: 
@@ -16619,7 +16619,7 @@
   parent_yoksis_id: 122388
   osym_id: 
 -
-  name: Türk Dili Ve Edebiyatı (Yl) (Tezli)
+  name: Türk Dili ve Edebiyatı (Yl) (Tezli)
   yoksis_id: 230723
   foet_code: 223
   founded_at: 07.05.2018
@@ -16631,7 +16631,7 @@
   parent_yoksis_id: 122388
   osym_id: 
 -
-  name: Türk Dili Ve Edebiyatı (Yl) (Ücretli)
+  name: Türk Dili ve Edebiyatı (Yl) (Ücretli)
   yoksis_id: 311762
   foet_code: 223
   founded_at: 28.09.2016
@@ -16643,7 +16643,7 @@
   parent_yoksis_id: 122388
   osym_id: 
 -
-  name: Türk Dili Ve Edebiyatı Eğitimi (Yl) (Tezsiz)
+  name: Türk Dili ve Edebiyatı Eğitimi (Yl) (Tezsiz)
   yoksis_id: 330611
   foet_code: 145
   founded_at: 01.01.1999
@@ -16703,7 +16703,7 @@
   parent_yoksis_id: 122388
   osym_id: 
 -
-  name: Uluslararası Ticaret Ve İşletmecilik (Yl) (Tezli) (Ücretli)
+  name: Uluslararası Ticaret ve İşletmecilik (Yl) (Tezli) (Ücretli)
   yoksis_id: 299076
   foet_code: 341
   founded_at: 02.08.2016
@@ -16715,7 +16715,7 @@
   parent_yoksis_id: 122388
   osym_id: 
 -
-  name: Uluslararası Ticaret Ve İşletmecilik (Yl) (Tezsiz) (Ücretli)
+  name: Uluslararası Ticaret ve İşletmecilik (Yl) (Tezsiz) (Ücretli)
   yoksis_id: 299077
   foet_code: 341
   founded_at: 02.08.2016
@@ -16811,7 +16811,7 @@
   parent_yoksis_id: 122388
   osym_id: 
 -
-  name: Çağdaş Türk Lehçeleri Ve Edebiyatları (Yl) (Tezli)
+  name: Çağdaş Türk Lehçeleri ve Edebiyatları (Yl) (Tezli)
   yoksis_id: 330615
   foet_code: 223
   founded_at: 01.01.1999
@@ -16883,7 +16883,7 @@
   parent_yoksis_id: 122388
   osym_id: 
 -
-  name: Medya Ve İletişim Bilimleri (Yl) (Tezli)
+  name: Medya ve İletişim Bilimleri (Yl) (Tezli)
   yoksis_id: 297536
   foet_code: 321
   founded_at: 22.06.2016
@@ -16967,7 +16967,7 @@
   parent_yoksis_id: 122388
   osym_id: 
 -
-  name: İslam Tarihi Ve Sanatları (Dr)
+  name: İslam Tarihi ve Sanatları (Dr)
   yoksis_id: 169479
   foet_code: 221
   founded_at: 
@@ -16979,7 +16979,7 @@
   parent_yoksis_id: 122388
   osym_id: 
 -
-  name: İslam Tarihi Ve Sanatları (Yl) (Tezli)
+  name: İslam Tarihi ve Sanatları (Yl) (Tezli)
   yoksis_id: 230799
   foet_code: 221
   founded_at: 
@@ -17063,7 +17063,7 @@
   parent_yoksis_id: 122388
   osym_id: 
 -
-  name: İşletme Ve Endüstri İlişkileri (Yl) (Tezli)
+  name: İşletme ve Endüstri İlişkileri (Yl) (Tezli)
   yoksis_id: 219261
   foet_code: 347
   founded_at: 07.05.2018
@@ -17075,7 +17075,7 @@
   parent_yoksis_id: 122388
   osym_id: 
 -
-  name: Su Ekosistemleri Araştırma Ve Uygulama Merkezi
+  name: Su Ekosistemleri Araştırma ve Uygulama Merkezi
   yoksis_id: 169424
   foet_code: 
   founded_at: 10.09.2009
@@ -17083,7 +17083,7 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -17095,7 +17095,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -17219,7 +17219,7 @@
   parent_yoksis_id: 269775
   osym_id: 
 -
-  name: Bilgisayar Teknolojisi Ve Programlama Pr.
+  name: Bilgisayar Teknolojisi ve Programlama Pr.
   yoksis_id: 273677
   foet_code: 481
   founded_at: 
@@ -17231,7 +17231,7 @@
   parent_yoksis_id: 269775
   osym_id: 
 -
-  name: Bilgisayarlı Muhasebe Ve Vergi Uygulama Pr.
+  name: Bilgisayarlı Muhasebe ve Vergi Uygulama Pr.
   yoksis_id: 273679
   foet_code: 344
   founded_at: 
@@ -17243,7 +17243,7 @@
   parent_yoksis_id: 269775
   osym_id: 
 -
-  name: Bilgisayarlı Muhasebe Ve Vergi Uygulama Pr. (İö) (Bk.613)
+  name: Bilgisayarlı Muhasebe ve Vergi Uygulama Pr. (İö) (Bk.613)
   yoksis_id: 273678
   foet_code: 344
   founded_at: 
@@ -17327,7 +17327,7 @@
   parent_yoksis_id: 269775
   osym_id: 
 -
-  name: Mobilya Ve Dekorasyon Pr. (İö) (Bk.610)
+  name: Mobilya ve Dekorasyon Pr. (İö) (Bk.610)
   yoksis_id: 273686
   foet_code: 543
   founded_at: 
@@ -17639,7 +17639,7 @@
   parent_yoksis_id: 155936
   osym_id: 
 -
-  name: Tarımsal Uygulama Ve Araştırma Merkezi
+  name: Tarımsal Uygulama ve Araştırma Merkezi
   yoksis_id: 249894
   foet_code: 
   founded_at: 15.01.2014
@@ -17647,11 +17647,11 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Temiz Enerji Araştırma Ve Uygulama Merkezi
+  name: Temiz Enerji Araştırma ve Uygulama Merkezi
   yoksis_id: 169429
   foet_code: 
   founded_at: 
@@ -17659,7 +17659,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -17711,7 +17711,7 @@
   parent_yoksis_id: 122330
   osym_id: 
 -
-  name: Gıda Kalite Kontrolü Ve Analizi Pr.
+  name: Gıda Kalite Kontrolü ve Analizi Pr.
   yoksis_id: 236268
   foet_code: 541
   founded_at: 20.03.2013
@@ -17723,7 +17723,7 @@
   parent_yoksis_id: 169952
   osym_id: 108251326
 -
-  name: Gıda Kalite Kontrolü Ve Analizi Pr. (Kktc Uyruklu)
+  name: Gıda Kalite Kontrolü ve Analizi Pr. (Kktc Uyruklu)
   yoksis_id: 327585
   foet_code: 541
   founded_at: 04.08.2017
@@ -17735,7 +17735,7 @@
   parent_yoksis_id: 169952
   osym_id: 108251414
 -
-  name: Gıda Kalite Kontrolü Ve Analizi Pr. (İö)
+  name: Gıda Kalite Kontrolü ve Analizi Pr. (İö)
   yoksis_id: 276137
   foet_code: 541
   founded_at: 30.04.2015
@@ -17759,7 +17759,7 @@
   parent_yoksis_id: 169952
   osym_id: 108250522
 -
-  name: Muhasebe Ve Vergi Bölümü
+  name: Muhasebe ve Vergi Bölümü
   yoksis_id: 169947
   foet_code: 344
   founded_at: 10.09.2009
@@ -17771,7 +17771,7 @@
   parent_yoksis_id: 122330
   osym_id: 
 -
-  name: Muhasebe Ve Vergi Uygulamaları Pr.
+  name: Muhasebe ve Vergi Uygulamaları Pr.
   yoksis_id: 169951
   foet_code: 344
   founded_at: 
@@ -17783,7 +17783,7 @@
   parent_yoksis_id: 169947
   osym_id: 108250752
 -
-  name: Muhasebe Ve Vergi Uygulamaları Pr. (İö)
+  name: Muhasebe ve Vergi Uygulamaları Pr. (İö)
   yoksis_id: 145983
   foet_code: 344
   founded_at: 10.09.2009
@@ -17795,7 +17795,7 @@
   parent_yoksis_id: 169947
   osym_id: 108270711
 -
-  name: Pazarlama Ve Reklamcılık Bölümü
+  name: Pazarlama ve Reklamcılık Bölümü
   yoksis_id: 169960
   foet_code: 342
   founded_at: 10.09.2009
@@ -17855,7 +17855,7 @@
   parent_yoksis_id: 122331
   osym_id: 108250522
 -
-  name: Yönetim Ve Organizasyon Bölümü
+  name: Yönetim ve Organizasyon Bölümü
   yoksis_id: 317332
   foet_code: 345
   founded_at: 02.03.2017
@@ -17879,7 +17879,7 @@
   parent_yoksis_id: 317332
   osym_id: 
 -
-  name: İktisadi Ve İdari Programlar Bölümü
+  name: İktisadi ve İdari Programlar Bölümü
   yoksis_id: 122333
   foet_code: 314
   founded_at: 10.09.2009
@@ -17939,7 +17939,7 @@
   parent_yoksis_id: 121947
   osym_id: 
 -
-  name: Anesteziyoloji Ve Reanimasyon Anabilim Dalı
+  name: Anesteziyoloji ve Reanimasyon Anabilim Dalı
   yoksis_id: 121949
   foet_code: 721
   founded_at: 26.02.2009
@@ -17963,7 +17963,7 @@
   parent_yoksis_id: 121949
   osym_id: 
 -
-  name: Beyin Ve Sinir Cerrahisi Anabilim Dalı
+  name: Beyin ve Sinir Cerrahisi Anabilim Dalı
   yoksis_id: 121955
   foet_code: 721
   founded_at: 26.02.2009
@@ -18011,7 +18011,7 @@
   parent_yoksis_id: 121948
   osym_id: 
 -
-  name: Kadın Hastalıkları Ve Doğum Anabilim Dalı
+  name: Kadın Hastalıkları ve Doğum Anabilim Dalı
   yoksis_id: 121953
   foet_code: 721
   founded_at: 26.02.2009
@@ -18023,7 +18023,7 @@
   parent_yoksis_id: 121948
   osym_id: 
 -
-  name: Kalp Ve Damar Cerrahisi Anabilim Dalı
+  name: Kalp ve Damar Cerrahisi Anabilim Dalı
   yoksis_id: 121961
   foet_code: 721
   founded_at: 26.02.2009
@@ -18035,7 +18035,7 @@
   parent_yoksis_id: 121948
   osym_id: 
 -
-  name: Kulak Burun Ve Boğaz Hastalıkları Anabilim Dalı
+  name: Kulak Burun ve Boğaz Hastalıkları Anabilim Dalı
   yoksis_id: 121954
   foet_code: 721
   founded_at: 26.02.2009
@@ -18071,7 +18071,7 @@
   parent_yoksis_id: 121948
   osym_id: 
 -
-  name: Ortopedi Ve Travmatoloji Anabilim Dalı
+  name: Ortopedi ve Travmatoloji Anabilim Dalı
   yoksis_id: 121956
   foet_code: 721
   founded_at: 26.02.2009
@@ -18107,7 +18107,7 @@
   parent_yoksis_id: 169153
   osym_id: 
 -
-  name: Plastik, Rekonstrüktif Ve Estetik Cerrahi Anabilim Dalı
+  name: Plastik, Rekonstrüktif ve Estetik Cerrahi Anabilim Dalı
   yoksis_id: 121958
   foet_code: 721
   founded_at: 26.02.2009
@@ -18191,7 +18191,7 @@
   parent_yoksis_id: 121959
   osym_id: 
 -
-  name: İlk Ve Acil Yardım Anabilim Dalı
+  name: İlk ve Acil Yardım Anabilim Dalı
   yoksis_id: 121962
   foet_code: 725
   founded_at: 26.02.2009
@@ -18275,7 +18275,7 @@
   parent_yoksis_id: 121963
   osym_id: 
 -
-  name: Deri Ve Zührevi Hastalıklar Anabilim Dalı
+  name: Deri ve Zührevi Hastalıklar Anabilim Dalı
   yoksis_id: 121966
   foet_code: 721
   founded_at: 26.02.2009
@@ -18287,7 +18287,7 @@
   parent_yoksis_id: 121963
   osym_id: 
 -
-  name: Enfeksiyon Hastalıkları Ve Klinik Mikrobiyoloji Anabilim Dalı
+  name: Enfeksiyon Hastalıkları ve Klinik Mikrobiyoloji Anabilim Dalı
   yoksis_id: 121983
   foet_code: 721
   founded_at: 26.02.2009
@@ -18311,7 +18311,7 @@
   parent_yoksis_id: 121963
   osym_id: 
 -
-  name: Fiziksel Tedavi Ve Rehabilitasyon Anabilim Dalı
+  name: Fiziksel Tedavi ve Rehabilitasyon Anabilim Dalı
   yoksis_id: 121968
   foet_code: 726
   founded_at: 26.02.2009
@@ -18347,7 +18347,7 @@
   parent_yoksis_id: 121963
   osym_id: 
 -
-  name: İş Ve Meslek Hastalıkları Bilim Dalı
+  name: İş ve Meslek Hastalıkları Bilim Dalı
   yoksis_id: 262980
   foet_code: 720
   founded_at: 17.12.2014
@@ -18371,7 +18371,7 @@
   parent_yoksis_id: 121963
   osym_id: 
 -
-  name: Hava Ve Uzay Hekimliği Anabilim Dalı
+  name: Hava ve Uzay Hekimliği Anabilim Dalı
   yoksis_id: 121980
   foet_code: 721
   founded_at: 26.02.2009
@@ -18515,7 +18515,7 @@
   parent_yoksis_id: 121979
   osym_id: 
 -
-  name: Ruh Sağlığı Ve Hastalıkları Anabilim Dalı
+  name: Ruh Sağlığı ve Hastalıkları Anabilim Dalı
   yoksis_id: 121973
   foet_code: 721
   founded_at: 26.02.2009
@@ -18539,7 +18539,7 @@
   parent_yoksis_id: 121963
   osym_id: 
 -
-  name: Su Altı Hekimliği Ve Hiperbarik Tıp Anabilim Dalı
+  name: Su Altı Hekimliği ve Hiperbarik Tıp Anabilim Dalı
   yoksis_id: 140281
   foet_code: 721
   founded_at: 26.02.2009
@@ -18551,7 +18551,7 @@
   parent_yoksis_id: 121963
   osym_id: 
 -
-  name: Tıbbi Ekoloji Ve Hidroklimatoloji Anabilim Dalı
+  name: Tıbbi Ekoloji ve Hidroklimatoloji Anabilim Dalı
   yoksis_id: 121974
   foet_code: 721
   founded_at: 26.02.2009
@@ -18599,7 +18599,7 @@
   parent_yoksis_id: 121963
   osym_id: 
 -
-  name: Çocuk Sağlığı Ve Hastalıkları Anabilim Dalı
+  name: Çocuk Sağlığı ve Hastalıkları Anabilim Dalı
   yoksis_id: 121965
   foet_code: 721
   founded_at: 26.02.2009
@@ -18803,7 +18803,7 @@
   parent_yoksis_id: 121965
   osym_id: 
 -
-  name: Çocuk Ve Ergen Ruh Sağlığı Ve Hastalıkları Anabilim Dalı
+  name: Çocuk ve Ergen Ruh Sağlığı ve Hastalıkları Anabilim Dalı
   yoksis_id: 121984
   foet_code: 721
   founded_at: 26.02.2009
@@ -18815,7 +18815,7 @@
   parent_yoksis_id: 121963
   osym_id: 
 -
-  name: İlk Ve Acil Yardım Anabilim Dalı
+  name: İlk ve Acil Yardım Anabilim Dalı
   yoksis_id: 169287
   foet_code: 725
   founded_at: 
@@ -18839,7 +18839,7 @@
   parent_yoksis_id: 121963
   osym_id: 
 -
-  name: Endokrinoloji Ve Metabolizma Hastalıkları Bilim Dalı
+  name: Endokrinoloji ve Metabolizma Hastalıkları Bilim Dalı
   yoksis_id: 169270
   foet_code: 721
   founded_at: 
@@ -18959,7 +18959,7 @@
   parent_yoksis_id: 121985
   osym_id: 
 -
-  name: Anesteziyoloji Ve Reanimasyon Anabilim Dalı
+  name: Anesteziyoloji ve Reanimasyon Anabilim Dalı
   yoksis_id: 243102
   foet_code: 721
   founded_at: 26.06.2013
@@ -18995,7 +18995,7 @@
   parent_yoksis_id: 121985
   osym_id: 
 -
-  name: Biyoistatistik Ve Tıbbi Bilişim Anabilim Dalı
+  name: Biyoistatistik ve Tıbbi Bilişim Anabilim Dalı
   yoksis_id: 121994
   foet_code: 462
   founded_at: 26.02.2009
@@ -19019,7 +19019,7 @@
   parent_yoksis_id: 121985
   osym_id: 
 -
-  name: Histoloji Ve Embriyoloji Anabilim Dalı
+  name: Histoloji ve Embriyoloji Anabilim Dalı
   yoksis_id: 121993
   foet_code: 721
   founded_at: 26.02.2009
@@ -19127,7 +19127,7 @@
   parent_yoksis_id: 121985
   osym_id: 
 -
-  name: Tıp Tarihi Ve Etik Anabilim Dalı
+  name: Tıp Tarihi ve Etik Anabilim Dalı
   yoksis_id: 121987
   foet_code: 226
   founded_at: 26.02.2009
@@ -19139,7 +19139,7 @@
   parent_yoksis_id: 121985
   osym_id: 
 -
-  name: Tıp Tarihi Ve Etik Anabilim Dalı
+  name: Tıp Tarihi ve Etik Anabilim Dalı
   yoksis_id: 169289
   foet_code: 226
   founded_at: 01.01.1900
@@ -19199,7 +19199,7 @@
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Gastronomi Ve Mutfak Sanatları Bölümü
+  name: Gastronomi ve Mutfak Sanatları Bölümü
   yoksis_id: 214342
   foet_code: 811
   founded_at: 14.03.2012
@@ -19211,7 +19211,7 @@
   parent_yoksis_id: 208125
   osym_id: 
 -
-  name: Gastronomi Ve Mutfak Sanatları Anabilim Dalı
+  name: Gastronomi ve Mutfak Sanatları Anabilim Dalı
   yoksis_id: 319340
   foet_code: 811
   founded_at: 05.04.2017
@@ -19319,7 +19319,7 @@
   parent_yoksis_id: 214340
   osym_id: 108210956
 -
-  name: Türkçe Öğretimi Uygulama Ve Araştırma Merkezi
+  name: Türkçe Öğretimi Uygulama ve Araştırma Merkezi
   yoksis_id: 235511
   foet_code: 
   founded_at: 13.03.2013
@@ -19327,11 +19327,11 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Uzaktan Eğitim Araştırma Ve Uygulama Merkezi
+  name: Uzaktan Eğitim Araştırma ve Uygulama Merkezi
   yoksis_id: 169431
   foet_code: 
   founded_at: 
@@ -19339,7 +19339,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -19355,7 +19355,7 @@
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Besin Hijyeni Ve Teknolojisi Bölümü
+  name: Besin Hijyeni ve Teknolojisi Bölümü
   yoksis_id: 140284
   foet_code: 541
   founded_at: 26.02.2009
@@ -19367,7 +19367,7 @@
   parent_yoksis_id: 122233
   osym_id: 
 -
-  name: Veterinerlik Besin Hijyeni Ve Teknolojisi Anabilim Dalı
+  name: Veterinerlik Besin Hijyeni ve Teknolojisi Anabilim Dalı
   yoksis_id: 122235
   foet_code: 541
   founded_at: 26.02.2009
@@ -19379,7 +19379,7 @@
   parent_yoksis_id: 140284
   osym_id: 
 -
-  name: Hastalıklar Ve Klinik Bilimleri Bölümü
+  name: Hastalıklar ve Klinik Bilimleri Bölümü
   yoksis_id: 122234
   foet_code: 640
   founded_at: 26.02.2009
@@ -19391,7 +19391,7 @@
   parent_yoksis_id: 122233
   osym_id: 
 -
-  name: Dölerme Ve Suni Tohumlama Anabilim Dalı
+  name: Dölerme ve Suni Tohumlama Anabilim Dalı
   yoksis_id: 122244
   foet_code: 640
   founded_at: 26.02.2009
@@ -19403,7 +19403,7 @@
   parent_yoksis_id: 122234
   osym_id: 
 -
-  name: Su Ürünleri Ve Hastalıkları Anabilim Dalı
+  name: Su Ürünleri ve Hastalıkları Anabilim Dalı
   yoksis_id: 122241
   foet_code: 624
   founded_at: 26.02.2009
@@ -19415,7 +19415,7 @@
   parent_yoksis_id: 122234
   osym_id: 
 -
-  name: Veterinerlik Besin Hijyeni Ve Teknolojisi Anabilim Dalı
+  name: Veterinerlik Besin Hijyeni ve Teknolojisi Anabilim Dalı
   yoksis_id: 147750
   foet_code: 541
   founded_at: 26.02.2009
@@ -19439,7 +19439,7 @@
   parent_yoksis_id: 122234
   osym_id: 
 -
-  name: Veterinerlik Doğum Ve Jinekolojisi Anabilim Dalı
+  name: Veterinerlik Doğum ve Jinekolojisi Anabilim Dalı
   yoksis_id: 169319
   foet_code: 640
   founded_at: 01.01.1900
@@ -19451,7 +19451,7 @@
   parent_yoksis_id: 122234
   osym_id: 
 -
-  name: Veterinerlik Farmakoloji Ve Toksikoloji Anabilim Dalı
+  name: Veterinerlik Farmakoloji ve Toksikoloji Anabilim Dalı
   yoksis_id: 147752
   foet_code: 421
   founded_at: 26.02.2009
@@ -19535,7 +19535,7 @@
   parent_yoksis_id: 122233
   osym_id: 
 -
-  name: Dölerme Ve Suni Tohumlama Anabilim Dalı
+  name: Dölerme ve Suni Tohumlama Anabilim Dalı
   yoksis_id: 169346
   foet_code: 640
   founded_at: 
@@ -19559,7 +19559,7 @@
   parent_yoksis_id: 169317
   osym_id: 
 -
-  name: Veterinerinerlik Doğum Ve Jinekolojisi Anabilim Dalı
+  name: Veterinerinerlik Doğum ve Jinekolojisi Anabilim Dalı
   yoksis_id: 331656
   foet_code: 640
   founded_at: 26.02.2009
@@ -19583,7 +19583,7 @@
   parent_yoksis_id: 122233
   osym_id: 
 -
-  name: Su Ürünleri Ve Hastalıkları Anabilim Dalı
+  name: Su Ürünleri ve Hastalıkları Anabilim Dalı
   yoksis_id: 174933
   foet_code: 624
   founded_at: 02.06.2010
@@ -19607,7 +19607,7 @@
   parent_yoksis_id: 140285
   osym_id: 
 -
-  name: Veterinerlik Doğum Ve Jinekolojisi Anabilim Dalı
+  name: Veterinerlik Doğum ve Jinekolojisi Anabilim Dalı
   yoksis_id: 122243
   foet_code: 640
   founded_at: 26.02.2009
@@ -19619,7 +19619,7 @@
   parent_yoksis_id: 140285
   osym_id: 
 -
-  name: Veterinerlik Farmakoloji Ve Toksikolojisi Anabilim Dalı
+  name: Veterinerlik Farmakoloji ve Toksikolojisi Anabilim Dalı
   yoksis_id: 122242
   foet_code: 421
   founded_at: 26.02.2009
@@ -19703,7 +19703,7 @@
   parent_yoksis_id: 122246
   osym_id: 
 -
-  name: Veteriner Hekimliği Tarihi Ve Deontoloji Anabilim Dalı
+  name: Veteriner Hekimliği Tarihi ve Deontoloji Anabilim Dalı
   yoksis_id: 122249
   foet_code: 226
   founded_at: 26.02.2009
@@ -19751,7 +19751,7 @@
   parent_yoksis_id: 122246
   osym_id: 
 -
-  name: Veterinerlik Histoloji Ve Embriyoloji Anabilim Dalı
+  name: Veterinerlik Histoloji ve Embriyoloji Anabilim Dalı
   yoksis_id: 122251
   foet_code: 721
   founded_at: 26.02.2009
@@ -19775,7 +19775,7 @@
   parent_yoksis_id: 122233
   osym_id: 
 -
-  name: Veteriner Hekimliği Tarihi Ve Deontoloji Anabilim Dalı
+  name: Veteriner Hekimliği Tarihi ve Deontoloji Anabilim Dalı
   yoksis_id: 147753
   foet_code: 226
   founded_at: 26.02.2009
@@ -19823,7 +19823,7 @@
   parent_yoksis_id: 147745
   osym_id: 
 -
-  name: Veterinerlik Histoloji Ve Embriyoloji Anabilim Dalı
+  name: Veterinerlik Histoloji ve Embriyoloji Anabilim Dalı
   yoksis_id: 147749
   foet_code: 721
   founded_at: 26.02.2009
@@ -19847,7 +19847,7 @@
   parent_yoksis_id: 122233
   osym_id: 108210374
 -
-  name: Zootekni Ve Hayvan Besleme Bölümü
+  name: Zootekni ve Hayvan Besleme Bölümü
   yoksis_id: 122252
   foet_code: 621
   founded_at: 26.02.2009
@@ -19859,7 +19859,7 @@
   parent_yoksis_id: 122233
   osym_id: 
 -
-  name: Hayvan Besleme Ve Beslenme Hastalıkları Anabilim Dalı
+  name: Hayvan Besleme ve Beslenme Hastalıkları Anabilim Dalı
   yoksis_id: 122253
   foet_code: 640
   founded_at: 26.02.2009
@@ -19871,7 +19871,7 @@
   parent_yoksis_id: 122252
   osym_id: 
 -
-  name: Hayvancılık Ekonomisi Ve İşletmeciliği Anabilim Dalı
+  name: Hayvancılık Ekonomisi ve İşletmeciliği Anabilim Dalı
   yoksis_id: 122256
   foet_code: 314
   founded_at: 26.02.2009
@@ -19967,7 +19967,7 @@
   parent_yoksis_id: 169999
   osym_id: 108270792
 -
-  name: Malzeme Ve İşleme Teknolojileri Bölümü
+  name: Malzeme ve İşleme Teknolojileri Bölümü
   yoksis_id: 169985
   foet_code: 520
   founded_at: 
@@ -19979,7 +19979,7 @@
   parent_yoksis_id: 122296
   osym_id: 
 -
-  name: Mobilya Ve Dekorasyon Pr.
+  name: Mobilya ve Dekorasyon Pr.
   yoksis_id: 145801
   foet_code: 543
   founded_at: 26.02.2009
@@ -19991,7 +19991,7 @@
   parent_yoksis_id: 169985
   osym_id: 108250919
 -
-  name: Muhasebe Ve Vergi Bölümü
+  name: Muhasebe ve Vergi Bölümü
   yoksis_id: 170007
   foet_code: 344
   founded_at: 
@@ -20003,7 +20003,7 @@
   parent_yoksis_id: 122296
   osym_id: 
 -
-  name: Muhasebe Ve Vergi Uygulamaları Pr.
+  name: Muhasebe ve Vergi Uygulamaları Pr.
   yoksis_id: 170009
   foet_code: 344
   founded_at: 
@@ -20015,7 +20015,7 @@
   parent_yoksis_id: 170007
   osym_id: 108250761
 -
-  name: Muhasebe Ve Vergi Uygulamaları Pr. (İö)
+  name: Muhasebe ve Vergi Uygulamaları Pr. (İö)
   yoksis_id: 170010
   foet_code: 344
   founded_at: 
@@ -20039,7 +20039,7 @@
   parent_yoksis_id: 122296
   osym_id: 
 -
-  name: Avcılık Ve Yaban Hayatı Pr.
+  name: Avcılık ve Yaban Hayatı Pr.
   yoksis_id: 267532
   foet_code: 623
   founded_at: 18.03.2015
@@ -20051,7 +20051,7 @@
   parent_yoksis_id: 207454
   osym_id: 
 -
-  name: Ormancılık Ve Orman Ürünleri Pr.
+  name: Ormancılık ve Orman Ürünleri Pr.
   yoksis_id: 207429
   foet_code: 623
   founded_at: 21.07.2011
@@ -20063,7 +20063,7 @@
   parent_yoksis_id: 207454
   osym_id: 108251202
 -
-  name: Ormancılık Ve Orman Ürünleri Pr. (İö)
+  name: Ormancılık ve Orman Ürünleri Pr. (İö)
   yoksis_id: 239580
   foet_code: 623
   founded_at: 02.05.2013
@@ -20111,7 +20111,7 @@
   parent_yoksis_id: 122301
   osym_id: 108270659
 -
-  name: Seyahat-Turizm Ve Eğlence Hizmetleri Bölümü
+  name: Seyahat-Turizm ve Eğlence Hizmetleri Bölümü
   yoksis_id: 319442
   foet_code: 812
   founded_at: 05.04.2017
@@ -20123,7 +20123,7 @@
   parent_yoksis_id: 122296
   osym_id: 
 -
-  name: Kültürel Miras Ve Turizm Pr.
+  name: Kültürel Miras ve Turizm Pr.
   yoksis_id: 319443
   foet_code: 220
   founded_at: 05.04.2017
@@ -20147,7 +20147,7 @@
   parent_yoksis_id: 122296
   osym_id: 
 -
-  name: Bilgisayar Teknolojisi Ve Programlama Pr.
+  name: Bilgisayar Teknolojisi ve Programlama Pr.
   yoksis_id: 122298
   foet_code: 481
   founded_at: 26.02.2009
@@ -20159,7 +20159,7 @@
   parent_yoksis_id: 122297
   osym_id: 
 -
-  name: Bilgisayar Teknolojisi Ve Programlama Pr. (İö)
+  name: Bilgisayar Teknolojisi ve Programlama Pr. (İö)
   yoksis_id: 145966
   foet_code: 481
   founded_at: 26.02.2009
@@ -20171,7 +20171,7 @@
   parent_yoksis_id: 122297
   osym_id: 
 -
-  name: Çocuk Bakımı Ve Gençlik Hizmetleri Bölümü
+  name: Çocuk Bakımı ve Gençlik Hizmetleri Bölümü
   yoksis_id: 170004
   foet_code: 761
   founded_at: 
@@ -20207,7 +20207,7 @@
   parent_yoksis_id: 170004
   osym_id: 108270659
 -
-  name: Çocuk Bakımı Ve Gençlik Hizmetleri Bölümü
+  name: Çocuk Bakımı ve Gençlik Hizmetleri Bölümü
   yoksis_id: 298592
   foet_code: 761
   founded_at: 
@@ -20219,7 +20219,7 @@
   parent_yoksis_id: 122296
   osym_id: 
 -
-  name: İktisadi Ve İdari Programlar Bölümü
+  name: İktisadi ve İdari Programlar Bölümü
   yoksis_id: 122299
   foet_code: 314
   founded_at: 26.02.2009
@@ -20255,7 +20255,7 @@
   parent_yoksis_id: 122299
   osym_id: 
 -
-  name: İnternet Ve Ağ Teknolojileri Pr. (Uzaktan Öğretim)
+  name: İnternet ve Ağ Teknolojileri Pr. (Uzaktan Öğretim)
   yoksis_id: 294854
   foet_code: 481
   founded_at: 27.04.2016
@@ -20267,7 +20267,7 @@
   parent_yoksis_id: 122296
   osym_id: 108251371
 -
-  name: Yabancı Diller Eğitimi Uygulama Ve Araştırma Merkezi
+  name: Yabancı Diller Eğitimi Uygulama ve Araştırma Merkezi
   yoksis_id: 169435
   foet_code: 
   founded_at: 
@@ -20275,7 +20275,7 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -20363,7 +20363,7 @@
   parent_yoksis_id: 201921
   osym_id: 
 -
-  name: Yaratıcı Yazarlık Uygulama Ve Araştırma Merkezi
+  name: Yaratıcı Yazarlık Uygulama ve Araştırma Merkezi
   yoksis_id: 212704
   foet_code: 
   founded_at: 21.12.2011
@@ -20371,11 +20371,11 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Yaşar Doğu Beden Eğitimi Ve Spor Yüksekokulu
+  name: Yaşar Doğu Beden Eğitimi ve Spor Yüksekokulu
   yoksis_id: 122373
   foet_code: 
   founded_at: 10.06.1997
@@ -20411,7 +20411,7 @@
   parent_yoksis_id: 122373
   osym_id: 
 -
-  name: Beden Eğitimi Ve Spor Öğretmenliği Pr.
+  name: Beden Eğitimi ve Spor Öğretmenliği Pr.
   yoksis_id: 295467
   foet_code: 146
   founded_at: 01.01.1999
@@ -20423,7 +20423,7 @@
   parent_yoksis_id: 122373
   osym_id: 
 -
-  name: Beden Eğitimi Ve Spor Öğretmenliği Pr. (İö)
+  name: Beden Eğitimi ve Spor Öğretmenliği Pr. (İö)
   yoksis_id: 295468
   foet_code: 146
   founded_at: 01.01.1999
@@ -20531,7 +20531,7 @@
   parent_yoksis_id: 122377
   osym_id: 108290063
 -
-  name: Beden Eğitimi Ve Spor Bölümü
+  name: Beden Eğitimi ve Spor Bölümü
   yoksis_id: 122374
   foet_code: 146
   founded_at: 26.02.2009
@@ -20543,7 +20543,7 @@
   parent_yoksis_id: 242486
   osym_id: 
 -
-  name: Beden Eğitimi Ve Spor Eğitimi Anabilim Dalı
+  name: Beden Eğitimi ve Spor Eğitimi Anabilim Dalı
   yoksis_id: 122375
   foet_code: 146
   founded_at: 26.02.2009
@@ -20555,7 +20555,7 @@
   parent_yoksis_id: 122374
   osym_id: 
 -
-  name: Beden Eğitimi Ve Spor Öğretmenliği Pr.
+  name: Beden Eğitimi ve Spor Öğretmenliği Pr.
   yoksis_id: 169401
   foet_code: 146
   founded_at: 
@@ -20567,7 +20567,7 @@
   parent_yoksis_id: 122374
   osym_id: 108290054
 -
-  name: Beden Eğitimi Ve Spor Öğretmenliği Pr. (İö)
+  name: Beden Eğitimi ve Spor Öğretmenliği Pr. (İö)
   yoksis_id: 277323
   foet_code: 146
   founded_at: 27.05.2015
@@ -20579,7 +20579,7 @@
   parent_yoksis_id: 122374
   osym_id: 
 -
-  name: Beden Eğitimi Ve Spor Eğitimi Bölümü
+  name: Beden Eğitimi ve Spor Eğitimi Bölümü
   yoksis_id: 176337
   foet_code: 146
   founded_at: 02.10.2013
@@ -20591,7 +20591,7 @@
   parent_yoksis_id: 242486
   osym_id: 
 -
-  name: Beden Eğitimi Ve Spor Eğitimi Anabilim Dalı
+  name: Beden Eğitimi ve Spor Eğitimi Anabilim Dalı
   yoksis_id: 327807
   foet_code: 146
   founded_at: 14.08.2017
@@ -20735,7 +20735,7 @@
   parent_yoksis_id: 207456
   osym_id: 
 -
-  name: Elektronik Ve Otomasyon Bölümü
+  name: Elektronik ve Otomasyon Bölümü
   yoksis_id: 215486
   foet_code: 523
   founded_at: 
@@ -20783,7 +20783,7 @@
   parent_yoksis_id: 215486
   osym_id: 108270756
 -
-  name: Elektrik Ve Enerji Bölümü
+  name: Elektrik ve Enerji Bölümü
   yoksis_id: 202398
   foet_code: 522
   founded_at: 19.01.2011
@@ -20819,7 +20819,7 @@
   parent_yoksis_id: 202398
   osym_id: 108270262
 -
-  name: Gaz Ve Tesisatı Teknolojisi Pr.
+  name: Gaz ve Tesisatı Teknolojisi Pr.
   yoksis_id: 202462
   foet_code: 522
   founded_at: 19.01.2011
@@ -20867,7 +20867,7 @@
   parent_yoksis_id: 202460
   osym_id: 108271048
 -
-  name: Kimya Ve Kimyasal İşleme Teknolojileri Bölümü
+  name: Kimya ve Kimyasal İşleme Teknolojileri Bölümü
   yoksis_id: 215488
   foet_code: 524
   founded_at: 
@@ -20903,7 +20903,7 @@
   parent_yoksis_id: 215488
   osym_id: 108270986
 -
-  name: Makine Ve Metal Teknolojileri Bölümü
+  name: Makine ve Metal Teknolojileri Bölümü
   yoksis_id: 202463
   foet_code: 521
   founded_at: 19.01.2011
@@ -20963,7 +20963,7 @@
   parent_yoksis_id: 202463
   osym_id: 
 -
-  name: Motorlu Araçlar Ve Ulaştırma Teknolojileri Bölümü
+  name: Motorlu Araçlar ve Ulaştırma Teknolojileri Bölümü
   yoksis_id: 215492
   foet_code: 525
   founded_at: 
@@ -21059,7 +21059,7 @@
   parent_yoksis_id: 122259
   osym_id: 
 -
-  name: Bağ Yetiştirme Ve Islahı Anabilim Dalı
+  name: Bağ Yetiştirme ve Islahı Anabilim Dalı
   yoksis_id: 206910
   foet_code: 621
   founded_at: 01.06.2011
@@ -21071,7 +21071,7 @@
   parent_yoksis_id: 122259
   osym_id: 
 -
-  name: Meyve Yetiştirme Ve Islahı Anabilim Dalı
+  name: Meyve Yetiştirme ve Islahı Anabilim Dalı
   yoksis_id: 206908
   foet_code: 621
   founded_at: 01.06.2011
@@ -21083,7 +21083,7 @@
   parent_yoksis_id: 122259
   osym_id: 
 -
-  name: Sebze Yetiştirme Ve Islahı Anabilim Dalı
+  name: Sebze Yetiştirme ve Islahı Anabilim Dalı
   yoksis_id: 206909
   foet_code: 621
   founded_at: 01.06.2011
@@ -21095,7 +21095,7 @@
   parent_yoksis_id: 122259
   osym_id: 
 -
-  name: Süs Bitkileri Yetiştirme Ve Islahı Anabilim Dalı
+  name: Süs Bitkileri Yetiştirme ve Islahı Anabilim Dalı
   yoksis_id: 207804
   foet_code: 622
   founded_at: 01.06.2011
@@ -21203,7 +21203,7 @@
   parent_yoksis_id: 122258
   osym_id: 
 -
-  name: Gıda Bilimi Ve Teknolojisi Bölümü
+  name: Gıda Bilimi ve Teknolojisi Bölümü
   yoksis_id: 122275
   foet_code: 541
   founded_at: 26.02.2009
@@ -21215,7 +21215,7 @@
   parent_yoksis_id: 122258
   osym_id: 
 -
-  name: Deri Ve Lif Teknolojisi Anabilim Dalı
+  name: Deri ve Lif Teknolojisi Anabilim Dalı
   yoksis_id: 122278
   foet_code: 542
   founded_at: 26.02.2009
@@ -21227,7 +21227,7 @@
   parent_yoksis_id: 122275
   osym_id: 
 -
-  name: Gıda Bilimi Ve Teknolojisi Anabilim Dalı
+  name: Gıda Bilimi ve Teknolojisi Anabilim Dalı
   yoksis_id: 122276
   foet_code: 541
   founded_at: 26.02.2009
@@ -21239,7 +21239,7 @@
   parent_yoksis_id: 122275
   osym_id: 
 -
-  name: Gıda Bilimi Ve Teknolojisi Pr.
+  name: Gıda Bilimi ve Teknolojisi Pr.
   yoksis_id: 306381
   foet_code: 541
   founded_at: 01.01.1999
@@ -21275,7 +21275,7 @@
   parent_yoksis_id: 122275
   osym_id: 
 -
-  name: Gıda Bilimi Ve Teknolojisi Pr.
+  name: Gıda Bilimi ve Teknolojisi Pr.
   yoksis_id: 321367
   foet_code: 541
   founded_at: 01.01.1999
@@ -21347,7 +21347,7 @@
   parent_yoksis_id: 122264
   osym_id: 108210726
 -
-  name: Tarım Politikası Ve Yayım Anabilim Dalı
+  name: Tarım Politikası ve Yayım Anabilim Dalı
   yoksis_id: 122266
   foet_code: 621
   founded_at: 
@@ -21371,7 +21371,7 @@
   parent_yoksis_id: 122264
   osym_id: 
 -
-  name: Tarım Makineleri Ve Teknolojileri Mühendiliği Bölümü
+  name: Tarım Makineleri ve Teknolojileri Mühendiliği Bölümü
   yoksis_id: 122279
   foet_code: 525
   founded_at: 26.02.2009
@@ -21407,7 +21407,7 @@
   parent_yoksis_id: 122279
   osym_id: 108210735
 -
-  name: Tarım Makineleri Ve Teknolojileri Mühendisliği Pr.
+  name: Tarım Makineleri ve Teknolojileri Mühendisliği Pr.
   yoksis_id: 261783
   foet_code: 525
   founded_at: 25.09.2014
@@ -21491,7 +21491,7 @@
   parent_yoksis_id: 146101
   osym_id: 
 -
-  name: Enzim Ve Mikrobiyel Biyoteknoloji Anabilim Dalı
+  name: Enzim ve Mikrobiyel Biyoteknoloji Anabilim Dalı
   yoksis_id: 161569
   foet_code: 421
   founded_at: 26.02.2009
@@ -21527,7 +21527,7 @@
   parent_yoksis_id: 146101
   osym_id: 108210814
 -
-  name: Tarımsal Yapılar Ve Sulama Bölümü
+  name: Tarımsal Yapılar ve Sulama Bölümü
   yoksis_id: 122281
   foet_code: 621
   founded_at: 26.02.2009
@@ -21539,7 +21539,7 @@
   parent_yoksis_id: 122258
   osym_id: 
 -
-  name: Tarımsal Yapılar Ve Sulama Anabilim Dalı
+  name: Tarımsal Yapılar ve Sulama Anabilim Dalı
   yoksis_id: 122282
   foet_code: 621
   founded_at: 
@@ -21551,7 +21551,7 @@
   parent_yoksis_id: 122281
   osym_id: 
 -
-  name: Tarımsal Yapılar Ve Sulama Pr.
+  name: Tarımsal Yapılar ve Sulama Pr.
   yoksis_id: 169299
   foet_code: 621
   founded_at: 26.02.2009
@@ -21587,7 +21587,7 @@
   parent_yoksis_id: 122267
   osym_id: 
 -
-  name: Tahıllar Ve Yemeklk Baklagiller Anabilim Dalı
+  name: Tahıllar ve Yemeklk Baklagiller Anabilim Dalı
   yoksis_id: 213018
   foet_code: 621
   founded_at: 25.01.2012
@@ -21635,7 +21635,7 @@
   parent_yoksis_id: 122267
   osym_id: 
 -
-  name: Çayır Mera Ve Yem Bitkileri Anabilim Dalı
+  name: Çayır Mera ve Yem Bitkileri Anabilim Dalı
   yoksis_id: 213017
   foet_code: 621
   founded_at: 25.01.2012
@@ -21647,7 +21647,7 @@
   parent_yoksis_id: 122267
   osym_id: 
 -
-  name: Toprak Bilimi Ve Bitki Besleme Bölümü
+  name: Toprak Bilimi ve Bitki Besleme Bölümü
   yoksis_id: 145775
   foet_code: 621
   founded_at: 
@@ -21683,7 +21683,7 @@
   parent_yoksis_id: 145775
   osym_id: 
 -
-  name: Toprak Bilimi Ve Bitki Besleme Anabilim Dalı
+  name: Toprak Bilimi ve Bitki Besleme Anabilim Dalı
   yoksis_id: 208208
   foet_code: 621
   founded_at: 
@@ -21695,7 +21695,7 @@
   parent_yoksis_id: 145775
   osym_id: 
 -
-  name: Toprak Bilimi Ve Bitki Besleme Pr.
+  name: Toprak Bilimi ve Bitki Besleme Pr.
   yoksis_id: 169301
   foet_code: 621
   founded_at: 
@@ -21707,7 +21707,7 @@
   parent_yoksis_id: 145775
   osym_id: 108210762
 -
-  name: Toprak Bilimi Ve Bitki Besleme Pr. (Kktc Uyruklu)
+  name: Toprak Bilimi ve Bitki Besleme Pr. (Kktc Uyruklu)
   yoksis_id: 258806
   foet_code: 621
   founded_at: 11.08.2014
@@ -21743,7 +21743,7 @@
   parent_yoksis_id: 122258
   osym_id: 
 -
-  name: Biyometri Ve Genetik Anabilim Dalı
+  name: Biyometri ve Genetik Anabilim Dalı
   yoksis_id: 122272
   foet_code: 421
   founded_at: 
@@ -21767,7 +21767,7 @@
   parent_yoksis_id: 122271
   osym_id: 
 -
-  name: Yemler Ve Hayvan Besleme Anabilim Dalı
+  name: Yemler ve Hayvan Besleme Anabilim Dalı
   yoksis_id: 122274
   foet_code: 621
   founded_at: 
@@ -21875,7 +21875,7 @@
   parent_yoksis_id: 269763
   osym_id: 
 -
-  name: Bilgisayar Teknolojisi Ve Programlama Pr. (İö) (Bk.601)
+  name: Bilgisayar Teknolojisi ve Programlama Pr. (İö) (Bk.601)
   yoksis_id: 273623
   foet_code: 481
   founded_at: 
@@ -21911,7 +21911,7 @@
   parent_yoksis_id: 269763
   osym_id: 
 -
-  name: Muhasebe Ve Vergi Uygulamaları Pr.
+  name: Muhasebe ve Vergi Uygulamaları Pr.
   yoksis_id: 273626
   foet_code: 344
   founded_at: 
@@ -21923,7 +21923,7 @@
   parent_yoksis_id: 269763
   osym_id: 
 -
-  name: Muhasebe Ve Vergi Uygulamaları Pr. (İö) (Bk.606)
+  name: Muhasebe ve Vergi Uygulamaları Pr. (İö) (Bk.606)
   yoksis_id: 273627
   foet_code: 344
   founded_at: 
@@ -21947,7 +21947,7 @@
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Büro Hizmetleri Ve Sekreterlik Bölümü
+  name: Büro Hizmetleri ve Sekreterlik Bölümü
   yoksis_id: 237237
   foet_code: 346
   founded_at: 02.04.2013
@@ -21959,7 +21959,7 @@
   parent_yoksis_id: 169488
   osym_id: 
 -
-  name: Büro Yönetimi Ve Yönetici Asistanlığı Pr.
+  name: Büro Yönetimi ve Yönetici Asistanlığı Pr.
   yoksis_id: 237238
   foet_code: 346
   founded_at: 02.04.2013
@@ -22067,7 +22067,7 @@
   parent_yoksis_id: 229374
   osym_id: 108270765
 -
-  name: Bilgisayar Teknolojisi Ve Programlama Pr. (İö)
+  name: Bilgisayar Teknolojisi ve Programlama Pr. (İö)
   yoksis_id: 324470
   foet_code: 481
   founded_at: 01.01.1999
@@ -22079,7 +22079,7 @@
   parent_yoksis_id: 169488
   osym_id: 
 -
-  name: Finans Bankacılık Ve Sigortacılık Bölümü
+  name: Finans Bankacılık ve Sigortacılık Bölümü
   yoksis_id: 229371
   foet_code: 343
   founded_at: 
@@ -22091,7 +22091,7 @@
   parent_yoksis_id: 169488
   osym_id: 
 -
-  name: Bankacılık Ve Sigortacılık Pr.
+  name: Bankacılık ve Sigortacılık Pr.
   yoksis_id: 174834
   foet_code: 343
   founded_at: 
@@ -22103,7 +22103,7 @@
   parent_yoksis_id: 229371
   osym_id: 108250982
 -
-  name: Bankacılık Ve Sigortacılık Pr. (İö)
+  name: Bankacılık ve Sigortacılık Pr. (İö)
   yoksis_id: 238469
   foet_code: 343
   founded_at: 01.01.1900
@@ -22127,7 +22127,7 @@
   parent_yoksis_id: 169488
   osym_id: 
 -
-  name: Muhasebe Ve Vergi Bölümü
+  name: Muhasebe ve Vergi Bölümü
   yoksis_id: 229377
   foet_code: 344
   founded_at: 
@@ -22139,7 +22139,7 @@
   parent_yoksis_id: 169488
   osym_id: 
 -
-  name: Muhasebe Ve Vergi Uygulamaları Pr.
+  name: Muhasebe ve Vergi Uygulamaları Pr.
   yoksis_id: 229378
   foet_code: 344
   founded_at: 
@@ -22151,7 +22151,7 @@
   parent_yoksis_id: 229377
   osym_id: 108250743
 -
-  name: Muhasebe Ve Vergi Uygulamaları Pr. (İö)
+  name: Muhasebe ve Vergi Uygulamaları Pr. (İö)
   yoksis_id: 229379
   foet_code: 344
   founded_at: 
@@ -22163,7 +22163,7 @@
   parent_yoksis_id: 229377
   osym_id: 108270702
 -
-  name: Mülkiyet Koruma Ve Güvenlik Bölümü
+  name: Mülkiyet Koruma ve Güvenlik Bölümü
   yoksis_id: 284505
   foet_code: 861
   founded_at: 13.01.2016
@@ -22235,7 +22235,7 @@
   parent_yoksis_id: 128047
   osym_id: 108270765
 -
-  name: Harita Ve Kadastro Pr.
+  name: Harita ve Kadastro Pr.
   yoksis_id: 169524
   foet_code: 581
   founded_at: 10.09.2009
@@ -22247,7 +22247,7 @@
   parent_yoksis_id: 128047
   osym_id: 
 -
-  name: Meyve Ve Sebze İşleme Pr.
+  name: Meyve ve Sebze İşleme Pr.
   yoksis_id: 169525
   foet_code: 541
   founded_at: 10.09.2009
@@ -22259,7 +22259,7 @@
   parent_yoksis_id: 128047
   osym_id: 
 -
-  name: İktisadi Ve İdari Programlar Bölümü
+  name: İktisadi ve İdari Programlar Bölümü
   yoksis_id: 122290
   foet_code: 314
   founded_at: 
@@ -22271,7 +22271,7 @@
   parent_yoksis_id: 169488
   osym_id: 
 -
-  name: Muhasebe Ve Vergi Uygulamaları Pr.
+  name: Muhasebe ve Vergi Uygulamaları Pr.
   yoksis_id: 122291
   foet_code: 344
   founded_at: 10.09.2009
@@ -22283,7 +22283,7 @@
   parent_yoksis_id: 122290
   osym_id: 108250743
 -
-  name: Muhasebe Ve Vergi Uygulamaları Pr. (İö)
+  name: Muhasebe ve Vergi Uygulamaları Pr. (İö)
   yoksis_id: 145987
   foet_code: 344
   founded_at: 10.09.2009
@@ -22295,7 +22295,7 @@
   parent_yoksis_id: 122290
   osym_id: 108270702
 -
-  name: Turizm Ve Otel İşletmeciliği Pr.
+  name: Turizm ve Otel İşletmeciliği Pr.
   yoksis_id: 169522
   foet_code: 811
   founded_at: 
@@ -22307,7 +22307,7 @@
   parent_yoksis_id: 122290
   osym_id: 
 -
-  name: Çarşamba İnsan Ve Toplum Bilimleri Fakültesi
+  name: Çarşamba İnsan ve Toplum Bilimleri Fakültesi
   yoksis_id: 293682
   foet_code: 
   founded_at: 08.04.2016
@@ -22319,7 +22319,7 @@
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Bilgi Ve Belge Yönetimi Bölümü
+  name: Bilgi ve Belge Yönetimi Bölümü
   yoksis_id: 334066
   foet_code: 322
   founded_at: 07.03.2018
@@ -22331,7 +22331,7 @@
   parent_yoksis_id: 293682
   osym_id: 
 -
-  name: Bilgi Ve Belge Yönetimi Anabilim Dalı
+  name: Bilgi ve Belge Yönetimi Anabilim Dalı
   yoksis_id: 334067
   foet_code: 322
   founded_at: 07.03.2018
@@ -22343,7 +22343,7 @@
   parent_yoksis_id: 334066
   osym_id: 
 -
-  name: Çevre Sorunları Uygulama Ve Araştırma Merkezi
+  name: Çevre Sorunları Uygulama ve Araştırma Merkezi
   yoksis_id: 122392
   foet_code: 
   founded_at: 10.09.2009
@@ -22351,11 +22351,11 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Çocuk Eğitimi Uygulama Ve Araştırma Merkezi
+  name: Çocuk Eğitimi Uygulama ve Araştırma Merkezi
   yoksis_id: 205247
   foet_code: 
   founded_at: 16.02.2011
@@ -22363,7 +22363,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -22391,7 +22391,7 @@
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Büro Yönetimi Ve Sekreterlik Pr.
+  name: Büro Yönetimi ve Sekreterlik Pr.
   yoksis_id: 273629
   foet_code: 346
   founded_at: 
@@ -22535,7 +22535,7 @@
   parent_yoksis_id: 269764
   osym_id: 
 -
-  name: Ünye İktisadi Ve İdari Bilimler Fakültesi
+  name: Ünye İktisadi ve İdari Bilimler Fakültesi
   yoksis_id: 269781
   foet_code: 
   founded_at: 
@@ -22571,7 +22571,7 @@
   parent_yoksis_id: 269781
   osym_id: 
 -
-  name: Üniversite-Sanayi-İş Dünyası İşbirliğini Geliştirme Uygulama Ve Araştırma Merkezi
+  name: Üniversite-Sanayi-İş Dünyası İşbirliğini Geliştirme Uygulama ve Araştırma Merkezi
   yoksis_id: 206457
   foet_code: 
   founded_at: 01.01.1900
@@ -22579,11 +22579,11 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: İktisadi Ve İdari Bilimler Fakültesi
+  name: İktisadi ve İdari Bilimler Fakültesi
   yoksis_id: 122181
   foet_code: 
   founded_at: 04.12.1995
@@ -22595,7 +22595,7 @@
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Siyaset Bilimi Ve Kamu Yönetimi Bölümü
+  name: Siyaset Bilimi ve Kamu Yönetimi Bölümü
   yoksis_id: 128036
   foet_code: 313
   founded_at: 26.02.2009
@@ -22619,7 +22619,7 @@
   parent_yoksis_id: 128036
   osym_id: 
 -
-  name: Kentleşme Ve Çevre Sorunları Anabilim Dalı
+  name: Kentleşme ve Çevre Sorunları Anabilim Dalı
   yoksis_id: 140259
   foet_code: 422
   founded_at: 26.02.2009
@@ -22631,7 +22631,7 @@
   parent_yoksis_id: 128036
   osym_id: 
 -
-  name: Siyaset Bilimi Ve Kamu Yönetimi Anabilim Dalı
+  name: Siyaset Bilimi ve Kamu Yönetimi Anabilim Dalı
   yoksis_id: 128038
   foet_code: 313
   founded_at: 
@@ -22643,7 +22643,7 @@
   parent_yoksis_id: 128036
   osym_id: 
 -
-  name: Siyaset Bilimi Ve Kamu Yönetimi Pr.
+  name: Siyaset Bilimi ve Kamu Yönetimi Pr.
   yoksis_id: 169309
   foet_code: 313
   founded_at: 26.02.2009
@@ -22655,7 +22655,7 @@
   parent_yoksis_id: 128036
   osym_id: 108210805
 -
-  name: Siyaset Bilimi Ve Kamu Yönetimi Pr. (%50 Burslu)
+  name: Siyaset Bilimi ve Kamu Yönetimi Pr. (%50 Burslu)
   yoksis_id: 305047
   foet_code: 313
   founded_at: 29.09.2016
@@ -22667,7 +22667,7 @@
   parent_yoksis_id: 128036
   osym_id: 
 -
-  name: Siyaset Bilimi Ve Kamu Yönetimi Pr. (Tam Burslu)
+  name: Siyaset Bilimi ve Kamu Yönetimi Pr. (Tam Burslu)
   yoksis_id: 305046
   foet_code: 313
   founded_at: 29.09.2016
@@ -22679,7 +22679,7 @@
   parent_yoksis_id: 128036
   osym_id: 
 -
-  name: Siyaset Bilimi Ve Kamu Yönetimi Pr. (Ücretli)
+  name: Siyaset Bilimi ve Kamu Yönetimi Pr. (Ücretli)
   yoksis_id: 308554
   foet_code: 313
   founded_at: 20.10.2016
@@ -22691,7 +22691,7 @@
   parent_yoksis_id: 128036
   osym_id: 
 -
-  name: Siyaset Bilimi Ve Kamu Yönetimi Pr. (İö)
+  name: Siyaset Bilimi ve Kamu Yönetimi Pr. (İö)
   yoksis_id: 241628
   foet_code: 313
   founded_at: 01.01.1900
@@ -22703,7 +22703,7 @@
   parent_yoksis_id: 128036
   osym_id: 108230387
 -
-  name: Siyaset Ve Sosyal Bilimler Anabilim Dalı
+  name: Siyaset ve Sosyal Bilimler Anabilim Dalı
   yoksis_id: 140253
   foet_code: 310
   founded_at: 26.02.2009
@@ -22727,7 +22727,7 @@
   parent_yoksis_id: 128036
   osym_id: 
 -
-  name: Siyaset Bilimi Ve Uluslararası İlişkiler Bölümü
+  name: Siyaset Bilimi ve Uluslararası İlişkiler Bölümü
   yoksis_id: 299049
   foet_code: 313
   founded_at: 02.08.2016
@@ -22739,7 +22739,7 @@
   parent_yoksis_id: 122181
   osym_id: 
 -
-  name: Siyaset Bilimi Ve Uluslararası İlişkiler Pr. (%25 Burslu)
+  name: Siyaset Bilimi ve Uluslararası İlişkiler Pr. (%25 Burslu)
   yoksis_id: 299052
   foet_code: 313
   founded_at: 02.08.2016
@@ -22751,7 +22751,7 @@
   parent_yoksis_id: 299049
   osym_id: 
 -
-  name: Siyaset Bilimi Ve Uluslararası İlişkiler Pr. (%50 Burslu)
+  name: Siyaset Bilimi ve Uluslararası İlişkiler Pr. (%50 Burslu)
   yoksis_id: 299053
   foet_code: 313
   founded_at: 02.08.2016
@@ -22763,7 +22763,7 @@
   parent_yoksis_id: 299049
   osym_id: 
 -
-  name: Siyaset Bilimi Ve Uluslararası İlişkiler Pr. (Tam Burslu)
+  name: Siyaset Bilimi ve Uluslararası İlişkiler Pr. (Tam Burslu)
   yoksis_id: 299050
   foet_code: 313
   founded_at: 02.08.2016
@@ -22775,7 +22775,7 @@
   parent_yoksis_id: 299049
   osym_id: 
 -
-  name: Siyaset Bilimi Ve Uluslararası İlişkiler Pr. (Ücretli)
+  name: Siyaset Bilimi ve Uluslararası İlişkiler Pr. (Ücretli)
   yoksis_id: 299051
   foet_code: 313
   founded_at: 02.08.2016
@@ -22787,7 +22787,7 @@
   parent_yoksis_id: 299049
   osym_id: 
 -
-  name: Uluslararası Ticaret Ve Lojistik Bölümü
+  name: Uluslararası Ticaret ve Lojistik Bölümü
   yoksis_id: 235948
   foet_code: 340
   founded_at: 13.03.2013
@@ -22799,7 +22799,7 @@
   parent_yoksis_id: 122181
   osym_id: 
 -
-  name: Lojistik Ve Tedarik Zinciri Yönetimi Anabilim Dalı
+  name: Lojistik ve Tedarik Zinciri Yönetimi Anabilim Dalı
   yoksis_id: 326681
   foet_code: 345
   founded_at: 27.07.2017
@@ -22823,7 +22823,7 @@
   parent_yoksis_id: 235948
   osym_id: 
 -
-  name: Uluslararası Ticaret Ve Lojistik Pr.
+  name: Uluslararası Ticaret ve Lojistik Pr.
   yoksis_id: 252836
   foet_code: 340
   founded_at: 20.02.2014
@@ -22835,7 +22835,7 @@
   parent_yoksis_id: 235948
   osym_id: 108210974
 -
-  name: Uluslararası Ticaret Ve Lojistik Pr. (%25 Burslu)
+  name: Uluslararası Ticaret ve Lojistik Pr. (%25 Burslu)
   yoksis_id: 308556
   foet_code: 340
   founded_at: 20.10.2016
@@ -22847,7 +22847,7 @@
   parent_yoksis_id: 235948
   osym_id: 
 -
-  name: Uluslararası Ticaret Ve Lojistik Pr. (%50 Burslu)
+  name: Uluslararası Ticaret ve Lojistik Pr. (%50 Burslu)
   yoksis_id: 304580
   foet_code: 340
   founded_at: 29.09.2016
@@ -22859,7 +22859,7 @@
   parent_yoksis_id: 235948
   osym_id: 
 -
-  name: Uluslararası Ticaret Ve Lojistik Pr. (Tam Burslu)
+  name: Uluslararası Ticaret ve Lojistik Pr. (Tam Burslu)
   yoksis_id: 304558
   foet_code: 340
   founded_at: 29.09.2016
@@ -22871,7 +22871,7 @@
   parent_yoksis_id: 235948
   osym_id: 
 -
-  name: Uluslararası Ticaret Ve Lojistik Pr. (Ücretli)
+  name: Uluslararası Ticaret ve Lojistik Pr. (Ücretli)
   yoksis_id: 308557
   foet_code: 340
   founded_at: 20.10.2016
@@ -22883,7 +22883,7 @@
   parent_yoksis_id: 235948
   osym_id: 
 -
-  name: Uluslararası Ticaret Ve İşletmecilik Bölümü
+  name: Uluslararası Ticaret ve İşletmecilik Bölümü
   yoksis_id: 299054
   foet_code: 341
   founded_at: 02.08.2016
@@ -22895,7 +22895,7 @@
   parent_yoksis_id: 122181
   osym_id: 
 -
-  name: Uluslararası Ticaret Ve İşletmecilik Pr. (%25 Burslu)
+  name: Uluslararası Ticaret ve İşletmecilik Pr. (%25 Burslu)
   yoksis_id: 299057
   foet_code: 341
   founded_at: 02.08.2016
@@ -22907,7 +22907,7 @@
   parent_yoksis_id: 299054
   osym_id: 
 -
-  name: Uluslararası Ticaret Ve İşletmecilik Pr. (%50 Burslu)
+  name: Uluslararası Ticaret ve İşletmecilik Pr. (%50 Burslu)
   yoksis_id: 299058
   foet_code: 341
   founded_at: 02.08.2016
@@ -22919,7 +22919,7 @@
   parent_yoksis_id: 299054
   osym_id: 
 -
-  name: Uluslararası Ticaret Ve İşletmecilik Pr. (Tam Burslu)
+  name: Uluslararası Ticaret ve İşletmecilik Pr. (Tam Burslu)
   yoksis_id: 299055
   foet_code: 341
   founded_at: 02.08.2016
@@ -22931,7 +22931,7 @@
   parent_yoksis_id: 299054
   osym_id: 
 -
-  name: Uluslararası Ticaret Ve İşletmecilik Pr. (Ücretli)
+  name: Uluslararası Ticaret ve İşletmecilik Pr. (Ücretli)
   yoksis_id: 299056
   foet_code: 341
   founded_at: 02.08.2016
@@ -22979,7 +22979,7 @@
   parent_yoksis_id: 122181
   osym_id: 
 -
-  name: İktisadi Gelişme Ve Uluslararası İktisat Anabilim Dalı
+  name: İktisadi Gelişme ve Uluslararası İktisat Anabilim Dalı
   yoksis_id: 209993
   foet_code: 314
   founded_at: 03.11.2011
@@ -23075,7 +23075,7 @@
   parent_yoksis_id: 122181
   osym_id: 
 -
-  name: Muhasebe Ve Finansman Anabilim Dalı
+  name: Muhasebe ve Finansman Anabilim Dalı
   yoksis_id: 140383
   foet_code: 344
   founded_at: 26.02.2009
@@ -23099,7 +23099,7 @@
   parent_yoksis_id: 128030
   osym_id: 
 -
-  name: Yönetim Ve Organizasyon Anabilim Dalı
+  name: Yönetim ve Organizasyon Anabilim Dalı
   yoksis_id: 140241
   foet_code: 345
   founded_at: 26.02.2009
@@ -23111,7 +23111,7 @@
   parent_yoksis_id: 128030
   osym_id: 
 -
-  name: Üretim Yönetimi Ve Pazarlama Anabilim Dalı
+  name: Üretim Yönetimi ve Pazarlama Anabilim Dalı
   yoksis_id: 140243
   foet_code: 345
   founded_at: 26.02.2009
@@ -23231,7 +23231,7 @@
   parent_yoksis_id: 121946
   osym_id: 
 -
-  name: Felsefe Ve Din Bilimleri Bölümü
+  name: Felsefe ve Din Bilimleri Bölümü
   yoksis_id: 122166
   foet_code: 220
   founded_at: 10.09.2009
@@ -23471,7 +23471,7 @@
   parent_yoksis_id: 122157
   osym_id: 
 -
-  name: Arap Dili Ve Belagatı Anabilim Dalı
+  name: Arap Dili ve Belagatı Anabilim Dalı
   yoksis_id: 122165
   foet_code: 222
   founded_at: 
@@ -23519,7 +23519,7 @@
   parent_yoksis_id: 122159
   osym_id: 
 -
-  name: Hadis Usulü Ve Tarihi Bilim Dalı
+  name: Hadis Usulü ve Tarihi Bilim Dalı
   yoksis_id: 168762
   foet_code: 221
   founded_at: 
@@ -23567,7 +23567,7 @@
   parent_yoksis_id: 122160
   osym_id: 
 -
-  name: 'Kur''An-I Kerim Okuma Ve Kıraat İlmi Anabilim Dalı'
+  name: 'Kur''An-I Kerim Okuma ve Kıraat İlmi Anabilim Dalı'
   yoksis_id: 166016
   foet_code: 221
   founded_at: 10.09.2009
@@ -23651,7 +23651,7 @@
   parent_yoksis_id: 122161
   osym_id: 
 -
-  name: Tefsir Usulü Ve Tarihi Bilim Dalı
+  name: Tefsir Usulü ve Tarihi Bilim Dalı
   yoksis_id: 168725
   foet_code: 221
   founded_at: 
@@ -23699,7 +23699,7 @@
   parent_yoksis_id: 122162
   osym_id: 
 -
-  name: İslam Hukuku Usulü Ve Tarihi Bilim Dalı
+  name: İslam Hukuku Usulü ve Tarihi Bilim Dalı
   yoksis_id: 168766
   foet_code: 380
   founded_at: 
@@ -23807,7 +23807,7 @@
   parent_yoksis_id: 122157
   osym_id: 108230342
 -
-  name: İlköğretim Din Kültürü Ve Ahlak Bilgisi Eğitimi Bölümü
+  name: İlköğretim Din Kültürü ve Ahlak Bilgisi Eğitimi Bölümü
   yoksis_id: 122117
   foet_code: 145
   founded_at: 11.07.1992
@@ -23819,7 +23819,7 @@
   parent_yoksis_id: 122157
   osym_id: 
 -
-  name: İlköğretim Din Kültürü Ve Ahlak Bilgisi Eğitimi Anabilim Dalı
+  name: İlköğretim Din Kültürü ve Ahlak Bilgisi Eğitimi Anabilim Dalı
   yoksis_id: 122156
   foet_code: 145
   founded_at: 10.09.2009
@@ -23831,7 +23831,7 @@
   parent_yoksis_id: 122117
   osym_id: 
 -
-  name: İlköğretim Din Kültürü Ve Ahlak Bilgisi Eğitimi Bölümü
+  name: İlköğretim Din Kültürü ve Ahlak Bilgisi Eğitimi Bölümü
   yoksis_id: 128027
   foet_code: 145
   founded_at: 
@@ -23843,7 +23843,7 @@
   parent_yoksis_id: 122157
   osym_id: 
 -
-  name: İlköğretim Din Kültürü Ve Ahlak Bilgisi Öğretmenliği Pr.
+  name: İlköğretim Din Kültürü ve Ahlak Bilgisi Öğretmenliği Pr.
   yoksis_id: 168655
   foet_code: 145
   founded_at: 
@@ -23855,7 +23855,7 @@
   parent_yoksis_id: 128027
   osym_id: 108210056
 -
-  name: İlköğretim Din Kültürü Ve Ahlak Bilgisi Öğretmenliği Pr. (İö)
+  name: İlköğretim Din Kültürü ve Ahlak Bilgisi Öğretmenliği Pr. (İö)
   yoksis_id: 241629
   foet_code: 145
   founded_at: 01.01.1900
@@ -23867,7 +23867,7 @@
   parent_yoksis_id: 128027
   osym_id: 108230351
 -
-  name: İslam Tarihi Ve Sanatları Bölümü
+  name: İslam Tarihi ve Sanatları Bölümü
   yoksis_id: 122175
   foet_code: 221
   founded_at: 10.09.2009
@@ -23891,7 +23891,7 @@
   parent_yoksis_id: 122175
   osym_id: 
 -
-  name: Türk Ve İslam Sanatları Anabilim Dalı
+  name: Türk ve İslam Sanatları Anabilim Dalı
   yoksis_id: 201435
   foet_code: 221
   founded_at: 
@@ -23927,7 +23927,7 @@
   parent_yoksis_id: 122175
   osym_id: 
 -
-  name: Türk Süsleme Ve Hat Sanatları Bilim Dalı
+  name: Türk Süsleme ve Hat Sanatları Bilim Dalı
   yoksis_id: 168756
   foet_code: 215
   founded_at: 
@@ -23999,7 +23999,7 @@
   parent_yoksis_id: 122176
   osym_id: 
 -
-  name: İleri Teknoloji Uygulama Ve Araştırma Merkezi
+  name: İleri Teknoloji Uygulama ve Araştırma Merkezi
   yoksis_id: 207558
   foet_code: 
   founded_at: 01.01.1900
@@ -24007,7 +24007,7 @@
   unit_status_id: Yarı Pasif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -24083,7 +24083,7 @@
   parent_yoksis_id: 204836
   osym_id: 
 -
-  name: Halkla İlişkiler Ve Tanıtım Bölümü
+  name: Halkla İlişkiler ve Tanıtım Bölümü
   yoksis_id: 204803
   foet_code: 342
   founded_at: 02.03.2011
@@ -24095,7 +24095,7 @@
   parent_yoksis_id: 169371
   osym_id: 
 -
-  name: Halkla İlişkiler Ve Tanıtım Anabilim Dalı
+  name: Halkla İlişkiler ve Tanıtım Anabilim Dalı
   yoksis_id: 229170
   foet_code: 342
   founded_at: 
@@ -24107,7 +24107,7 @@
   parent_yoksis_id: 204803
   osym_id: 
 -
-  name: Halkla İlişkiler Ve Tanıtım Pr.
+  name: Halkla İlişkiler ve Tanıtım Pr.
   yoksis_id: 239110
   foet_code: 342
   founded_at: 18.04.2013
@@ -24119,7 +24119,7 @@
   parent_yoksis_id: 204803
   osym_id: 108210938
 -
-  name: Halkla İlişkiler Ve Tanıtım Pr. (İö)
+  name: Halkla İlişkiler ve Tanıtım Pr. (İö)
   yoksis_id: 291019
   foet_code: 342
   founded_at: 18.02.2016
@@ -24131,7 +24131,7 @@
   parent_yoksis_id: 204803
   osym_id: 108230396
 -
-  name: Radyo, Sinema Ve Televizyon Bölümü
+  name: Radyo, Sinema ve Televizyon Bölümü
   yoksis_id: 204805
   foet_code: 213
   founded_at: 02.03.2011
@@ -24143,7 +24143,7 @@
   parent_yoksis_id: 169371
   osym_id: 
 -
-  name: Radyo Televizyon Ve Sinema Anabilim Dalı
+  name: Radyo Televizyon ve Sinema Anabilim Dalı
   yoksis_id: 214009
   foet_code: 213
   founded_at: 
@@ -24155,7 +24155,7 @@
   parent_yoksis_id: 204805
   osym_id: 
 -
-  name: Radyo, Televizyon Ve Sinema Pr.
+  name: Radyo, Televizyon ve Sinema Pr.
   yoksis_id: 294037
   foet_code: 213
   founded_at: 20.04.2016
@@ -24167,7 +24167,7 @@
   parent_yoksis_id: 204805
   osym_id: 108211081
 -
-  name: Yeni Medya Ve İletişim Tasarımı Bölümü
+  name: Yeni Medya ve İletişim Tasarımı Bölümü
   yoksis_id: 282786
   foet_code: 213
   founded_at: 09.12.2015
@@ -24179,7 +24179,7 @@
   parent_yoksis_id: 169371
   osym_id: 
 -
-  name: Yeni Medya Ve İletişim Tasarımı Anabilim Dalı
+  name: Yeni Medya ve İletişim Tasarımı Anabilim Dalı
   yoksis_id: 323146
   foet_code: 213
   founded_at: 31.05.2017
@@ -24203,7 +24203,7 @@
   parent_yoksis_id: 169371
   osym_id: 
 -
-  name: İş Sağlığı Ve Güvenliği, Meslek Hastalıkları Uygulama Ve Araştırma Merkezi
+  name: İş Sağlığı ve Güvenliği, Meslek Hastalıkları Uygulama ve Araştırma Merkezi
   yoksis_id: 309995
   foet_code: 
   founded_at: 17.04.2013
@@ -24211,6 +24211,6 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Birinci Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
