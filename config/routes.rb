@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   draw :admin
   draw :academic_calendar
 
-
   draw :devise
   draw :account
   draw :course_management
