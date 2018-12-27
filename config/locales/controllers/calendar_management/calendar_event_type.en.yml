@@ -1,0 +1,25 @@
+en:
+  activerecord:
+    attributes:
+      calendar_event_type: &calendar_event_type_attributes
+        name: Event Type
+        category: Category
+        identifier: Type Identifier
+  calendar_management:
+    calendar_event_types:
+      index:
+        <<: *calendar_event_type_attributes
+        card_header: Event Types
+        new_event_type_link: New Event Type
+      create:
+        success: Event type successfully created.
+      update:
+        success: Event type successfully updated.
+      destroy:
+        success: Event type successfully deleted!
+        warning: Event type can not be deleted.
+  helpers:
+    submit:
+      calendar_event_type:
+        create: Create Event Type
+        update: Update Event Type
