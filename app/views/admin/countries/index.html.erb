@@ -4,12 +4,12 @@
       <div class='card-header'>
         <%= fa_icon 'globe', text: t('.card_header') %>
         <div class='card-header-actions'>
-          <%= link_to_new new_admin_country_path, t('.new_country_link') %>
+          <%= link_to_new [:new, :admin, 'country'], t('.new_country_link') %>
         </div>
       </div>
       <div class='card-body'>
         <%= render 'components/smart_search_form',
-           path: admin_countries_path,
+           path: [:admin, 'countries'],
            placeholder: t('.name') %>
         <table class='table table-responsive-sm table-striped'>
           <thead class='thead-dark'>
@@ -33,9 +33,9 @@
                 <td><%= country.mernis_code %></td>
                 <td><%= country.yoksis_code %></td>
                 <td>
-                  <%= link_to_show(admin_country_path(country)) %>
-                  <%= link_to_edit(edit_admin_country_path(country)) %>
-                  <%= link_to_destroy(admin_country_path(country)) %>
+                  <%= link_to_show([:admin, country]) %>
+                  <%= link_to_edit([:edit, :admin, country]) %>
+                  <%= link_to_destroy([:admin, country]) %>
                 </td>
               </tr>
             <% end %>
