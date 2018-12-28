@@ -1,0 +1,46 @@
+<div class='alert alert-light'>
+  <%= link_to_new new_course_evaluation_criterion_type_path, t('.new_course_evaluation_criterion_type_link') %>
+</div>
+
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'street-view', text: t('.card_header') %>
+      </div>
+      <div class='card-body'>
+        <%= render 'components/smart_search_form',
+                   path: course_evaluation_criterion_types_path,
+                   placeholder: t('.name') %>
+        <table class='table table-responsive-sm table-striped table-hover'>
+          <thead class="thead-dark">
+            <tr>
+              <th><%= t('.name') %></th>
+              <th><%= t('.identifier') %></th>
+              <th><%= t('actions') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @criterion_types.each do |criterion_type| %>
+              <tr>
+                <td><%= criterion_type.name %></td>
+                <td><%= criterion_type.identifier %></td>
+                <td>
+                  <%= link_to_edit(edit_course_evaluation_criterion_type_path(criterion_type)) %>
+                  <%= link_to_destroy(criterion_type) %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-footer">
+        <nav aria-label="pagination">
+          <ul class="pagination justify-content-center">
+            <%== pagy_bootstrap_nav(@pagy) %>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>

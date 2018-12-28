@@ -16,7 +16,7 @@ class Unit < ApplicationRecord
 
   # callbacks
   before_save :cache_ancestry
-  before_save { self.name = name.capitalize_all }
+  before_validation { self.name = name.capitalize_all if name }
 
   # relations
   has_ancestry
