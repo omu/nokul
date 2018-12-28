@@ -10,7 +10,14 @@ module CalendarManagement
       @calendars = pagy_by_search(Calendar.includes(:academic_term).order(created_at: :desc))
     end
 
-    def show; end
+    def show
+      respond_to do |format|
+        format.html
+        format.pdf do
+          render pdf: @calendar.name
+        end
+      end
+    end
 
     def new
       @calendar = Calendar.new
