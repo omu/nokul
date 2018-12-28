@@ -5,6 +5,7 @@ class Student < ApplicationRecord
   belongs_to :user
   belongs_to :unit
   has_one :identity, dependent: :destroy
+  has_many :calendars, -> { Calendar.active }, through: :unit
 
   # validations
   validates :unit_id, uniqueness: { scope: %i[user] }

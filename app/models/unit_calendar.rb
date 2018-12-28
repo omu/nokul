@@ -16,7 +16,7 @@ class UnitCalendar < ApplicationRecord
     descendant_ids = unit_calendar.unit.descendants.ids
     calendar_id = unit_calendar.calendar.id
 
-    descendant_ids do |descendant_id|
+    descendant_ids.each do |descendant_id|
       UnitCalendar.where(calendar_id: calendar_id, unit_id: descendant_id).destroy_all
     end
   end

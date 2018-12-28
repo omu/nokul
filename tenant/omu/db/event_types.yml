@@ -11,6 +11,10 @@ applications:
     title: Ek Sınav Başvuruları
   - name: doctoral_proficiency_exam
     title: Doktora Yeterlilik Sınavı Giriş Başvuruları
+  - name: permanent_registration
+    title: Kesin Kayıt Başvuruları
+  - name: temporary_registration_applications
+    title: Geçici Kayıt Başvuruları
 payments:
   - name: tuition_fee
     title:  Öğrenim Ücreti ve Materyal Ücreti Taksitinin Ödenmesi

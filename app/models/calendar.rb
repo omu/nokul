@@ -27,4 +27,10 @@ class Calendar < ApplicationRecord
   validates :senate_decision_date, presence: true, length: { maximum: 255 }
   validates :senate_decision_no, presence: true, length: { maximum: 255 }
   validates :description, length: { maximum: 65_535 }
+
+  # delegations
+  delegate :active?, to: :academic_term
+
+  # scopes
+  scope :active, -> { joins(:academic_term).merge(AcademicTerm.where(active: true)) }
 end
