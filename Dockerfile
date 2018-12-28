@@ -1,5 +1,10 @@
 FROM ondokuz/ruby-stretch:0.10.0
 
+RUN apt-get update && apt-get -y install xfonts-75dpi xfonts-base
+RUN wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.stretch_amd64.deb \
+    && dpkg -i wkhtmlto* \
+    && rm -f wkhtmlto*
+
 ARG RAILS_ENV
 ENV RAILS_ENV=$RAILS_ENV
 
