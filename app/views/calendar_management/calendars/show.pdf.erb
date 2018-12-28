@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <center>
+          <h2><%= @calendar.name %></h2>
+          <p><h3><%= full_name(@calendar.academic_term) %></h3></p>
+        </center>
+      </div>
+
+      <div class="card-body">
+        <table class='table table-responsive-sm table-striped'>
+          <thead class="thead-dark">
+            <tr>
+              <th><center><%= t('activerecord.attributes.calendar_event.start_time') %></center></th>
+              <th><center><%= t('activerecord.attributes.calendar_event.end_time') %></center></th>
+              <th><%= t('activerecord.attributes.calendar_event_type.name') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @calendar.calendar_events.each do |calendar_event| %>
+              <tr>
+                <td width="20%"><center><%= as_date_and_time(calendar_event.start_time) %></center></td>
+                <td width="20%"><center><%= as_date_and_time(calendar_event.end_time) %></center></td>
+                <td width="60%"><%= calendar_event.calendar_event_type.name %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <div class="card">
+          <div class="card-body">
+            <%= @calendar.senate_decision_date %> tarih ve <%= @calendar.senate_decision_no %> sayılı senato kararıyla kabul edilmiştir.
+            <p><%= @calendar.description %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

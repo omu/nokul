@@ -42,6 +42,7 @@ gem 'font-awesome-rails'
 gem 'groupdate' # for chartkick
 gem 'pagy'
 gem 'simple_form'
+gem 'wicked_pdf'
 
 # api
 gem 'jbuilder', '~> 2.5'
