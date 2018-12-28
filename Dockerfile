@@ -1,6 +1,10 @@
 FROM ondokuz/ruby-stretch:0.10.0
 
-RUN apt-get update && apt-get -y install xfonts-75dpi xfonts-base
+RUN apt-get update \
+    && apt-get -y --no-install-recommends install xfonts-75dpi=1:1.0.4+nmu1 xfonts-base=1:1.0.4+nmu1 \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
 RUN wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.stretch_amd64.deb \
     && dpkg -i wkhtmlto* \
     && rm -f wkhtmlto*
