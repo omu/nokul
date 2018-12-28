@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class UnitCalendarTest < ActiveSupport::TestCase
- # relations
+  # relations
   %i[
     unit
     calendar

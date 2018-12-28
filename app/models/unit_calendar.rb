@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UnitCalendar < ApplicationRecord
   belongs_to :calendar
   belongs_to :unit
