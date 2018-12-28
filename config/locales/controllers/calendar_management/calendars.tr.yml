@@ -15,7 +15,7 @@ tr:
         <<: *calendar_attributes
         card_header: Akademik Takvimler
         new_calendar_link: Yeni Akademik Takvim
-        duplicate: Kopyasını Oluştur
+        duplicate: Kopya Oluştur
       show:
         <<: *calendar_attributes
       form:
