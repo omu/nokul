@@ -14,6 +14,11 @@ Vagrant.configure('2') do |config|
       systemctl enable --now postgresql
       systemctl enable --now redis-server
 
+      apt-get update && apt-get -y install xfonts-75dpi xfonts-base fontconfig libxext6 libxrender1
+      wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.stretch_amd64.deb  \
+        && dpkg -i wkhtmlto* \
+        && rm -f wkhtmlto*
+
       gem install bundler foreman
 
       cd /vagrant

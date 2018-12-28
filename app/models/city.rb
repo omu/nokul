@@ -22,8 +22,8 @@ class City < ApplicationRecord
   validates :alpha_2_code, presence: true, uniqueness: true, length: { maximum: 255 }
 
   # callbacks
-  before_save do
-    self.name = name.capitalize_all
-    self.alpha_2_code = alpha_2_code.upcase(:turkic)
+  before_validation do
+    self.name = name.capitalize_all if name
+    self.alpha_2_code = alpha_2_code.upcase(:turkic) if alpha_2_code
   end
 end

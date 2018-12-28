@@ -29,9 +29,9 @@ class Country < ApplicationRecord
   validates :yoksis_code, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 1 }
 
   # callbacks
-  before_save do
-    self.name = name.capitalize_all
-    self.alpha_2_code = alpha_2_code.upcase(:turkic)
-    self.alpha_3_code = alpha_3_code.upcase(:turkic)
+  before_validation do
+    self.name = name.capitalize_all if name
+    self.alpha_2_code = alpha_2_code.upcase(:turkic) if alpha_2_code
+    self.alpha_3_code = alpha_3_code.upcase(:turkic) if alpha_3_code
   end
 end

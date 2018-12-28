@@ -580,6 +580,7 @@ CREATE TABLE public.calendars (
     CONSTRAINT calendars_name_length CHECK ((length((name)::text) <= 255)),
     CONSTRAINT calendars_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text))),
     CONSTRAINT calendars_senate_decision_no_length CHECK ((length((senate_decision_no)::text) <= 255)),
+    CONSTRAINT calendars_senate_decision_no_presence CHECK (((senate_decision_no IS NOT NULL) AND ((senate_decision_no)::text !~ '^\s*$'::text))),
     CONSTRAINT calendars_timezone_length CHECK ((length((timezone)::text) <= 255)),
     CONSTRAINT calendars_timezone_presence CHECK (((timezone IS NOT NULL) AND ((timezone)::text !~ '^\s*$'::text)))
 );
@@ -821,6 +822,40 @@ CREATE SEQUENCE public.countries_id_seq
 --
 
 ALTER SEQUENCE public.countries_id_seq OWNED BY public.countries.id;
+
+
+--
+-- Name: course_evaluation_criterion_types; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.course_evaluation_criterion_types (
+    id bigint NOT NULL,
+    name character varying,
+    identifier character varying,
+    CONSTRAINT course_evaluation_criterion_types_identifier_length CHECK ((length((identifier)::text) <= 255)),
+    CONSTRAINT course_evaluation_criterion_types_identifier_presence CHECK (((identifier IS NOT NULL) AND ((identifier)::text !~ '^\s*$'::text))),
+    CONSTRAINT course_evaluation_criterion_types_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT course_evaluation_criterion_types_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
+);
+
+
+--
+-- Name: course_evaluation_criterion_types_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.course_evaluation_criterion_types_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: course_evaluation_criterion_types_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.course_evaluation_criterion_types_id_seq OWNED BY public.course_evaluation_criterion_types.id;
 
 
 --
@@ -2656,6 +2691,13 @@ ALTER TABLE ONLY public.countries ALTER COLUMN id SET DEFAULT nextval('public.co
 
 
 --
+-- Name: course_evaluation_criterion_types id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.course_evaluation_criterion_types ALTER COLUMN id SET DEFAULT nextval('public.course_evaluation_criterion_types_id_seq'::regclass);
+
+
+--
 -- Name: course_group_types id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -3146,6 +3188,30 @@ ALTER TABLE ONLY public.countries
 
 ALTER TABLE ONLY public.countries
     ADD CONSTRAINT countries_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: course_evaluation_criterion_types course_evaluation_criterion_types_identifier_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.course_evaluation_criterion_types
+    ADD CONSTRAINT course_evaluation_criterion_types_identifier_unique UNIQUE (identifier) DEFERRABLE;
+
+
+--
+-- Name: course_evaluation_criterion_types course_evaluation_criterion_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.course_evaluation_criterion_types
+    ADD CONSTRAINT course_evaluation_criterion_types_name_unique UNIQUE (name) DEFERRABLE;
+
+
+--
+-- Name: course_evaluation_criterion_types course_evaluation_criterion_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.course_evaluation_criterion_types
+    ADD CONSTRAINT course_evaluation_criterion_types_pkey PRIMARY KEY (id);
 
 
 --
@@ -4881,6 +4947,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20181130131559'),
 ('20181210120434'),
 ('20181210221451'),
+('20181225103307'),
 ('20181225180258'),
 ('20181225195123'),
 ('20181225201818'),

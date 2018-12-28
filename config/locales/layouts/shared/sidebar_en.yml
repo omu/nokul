@@ -9,14 +9,16 @@ en:
         available_courses: Available Courses
         calendar_event_types: Event Types
         calendar_management: Calendar Management
+        calendars: Calendars
         committee_units: Committee Units
         committees: Committees
+        courses: Courses
+        course_evaluation_criterion_types: Course Criterion Types
         course_groups: Course Unit Group
         course_group_types: Course Group Types
         course_management: Course Management
         course_types: Course Types
         course_unit_groups: Course Unit Group
-        courses: Courses
         curriculums: Curriculums
         definitions: Definitions
         documents: Required Documents
