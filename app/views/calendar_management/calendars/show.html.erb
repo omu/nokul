@@ -5,6 +5,8 @@
         <%= fa_icon 'street-view' %>
         <strong><%= "[#{full_name(@calendar.academic_term)}] #{@calendar.name}" %></strong>
         <div class="card-header-actions">
+          <%= link_to fa_icon('file-pdf-o'), [:calendar_management, @calendar, format: :pdf],
+                      class: 'btn btn-outline-primary btn-sm' %>
           <%= link_to_edit([:edit, :calendar_management, @calendar]) %>
           <%= link_to_destroy([:calendar_management, @calendar]) %>
         </div>
