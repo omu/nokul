@@ -13,7 +13,7 @@ tr:
         committee_units: Kurul/Komisyon Birimleri
         committees: Kurullar/Komisyonlar
         courses: Dersler
-        course_criterion_types: Ders Kriter Türleri
+        course_evaluation_criterion_types: Ders Kriter Türleri
         course_groups: Ders Grupları
         course_group_types: Ders Grup Türleri
         course_management: Ders İşlemleri
