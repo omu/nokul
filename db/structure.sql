@@ -961,25 +961,25 @@ ALTER SEQUENCE public.countries_id_seq OWNED BY public.countries.id;
 
 
 --
--- Name: course_criterion_types; Type: TABLE; Schema: public; Owner: -
+-- Name: course_evaluation_criterion_types; Type: TABLE; Schema: public; Owner: -
 --
 
-CREATE TABLE public.course_criterion_types (
+CREATE TABLE public.course_evaluation_criterion_types (
     id bigint NOT NULL,
     name character varying,
     identifier character varying,
-    CONSTRAINT course_criterion_types_identifier_length CHECK ((length((identifier)::text) <= 255)),
-    CONSTRAINT course_criterion_types_identifier_presence CHECK (((identifier IS NOT NULL) AND ((identifier)::text !~ '^\s*$'::text))),
-    CONSTRAINT course_criterion_types_name_length CHECK ((length((name)::text) <= 255)),
-    CONSTRAINT course_criterion_types_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
+    CONSTRAINT course_evaluation_criterion_types_identifier_length CHECK ((length((identifier)::text) <= 255)),
+    CONSTRAINT course_evaluation_criterion_types_identifier_presence CHECK (((identifier IS NOT NULL) AND ((identifier)::text !~ '^\s*$'::text))),
+    CONSTRAINT course_evaluation_criterion_types_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT course_evaluation_criterion_types_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
 );
 
 
 --
--- Name: course_criterion_types_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+-- Name: course_evaluation_criterion_types_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
-CREATE SEQUENCE public.course_criterion_types_id_seq
+CREATE SEQUENCE public.course_evaluation_criterion_types_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -988,10 +988,10 @@ CREATE SEQUENCE public.course_criterion_types_id_seq
 
 
 --
--- Name: course_criterion_types_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+-- Name: course_evaluation_criterion_types_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
-ALTER SEQUENCE public.course_criterion_types_id_seq OWNED BY public.course_criterion_types.id;
+ALTER SEQUENCE public.course_evaluation_criterion_types_id_seq OWNED BY public.course_evaluation_criterion_types.id;
 
 
 --
@@ -2828,7 +2828,7 @@ ALTER TABLE ONLY public.countries ALTER COLUMN id SET DEFAULT nextval('public.co
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY public.course_criterion_types ALTER COLUMN id SET DEFAULT nextval('public.course_criterion_types_id_seq'::regclass);
+ALTER TABLE ONLY public.course_evaluation_criterion_types ALTER COLUMN id SET DEFAULT nextval('public.course_evaluation_criterion_types_id_seq'::regclass);
 
 
 --
@@ -3366,27 +3366,27 @@ ALTER TABLE ONLY public.countries
 
 
 --
--- Name: course_criterion_types_identifier_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: course_evaluation_criterion_types_identifier_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY public.course_criterion_types
-    ADD CONSTRAINT course_criterion_types_identifier_unique UNIQUE (identifier) DEFERRABLE;
-
-
---
--- Name: course_criterion_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.course_criterion_types
-    ADD CONSTRAINT course_criterion_types_name_unique UNIQUE (name) DEFERRABLE;
+ALTER TABLE ONLY public.course_evaluation_criterion_types
+    ADD CONSTRAINT course_evaluation_criterion_types_identifier_unique UNIQUE (identifier) DEFERRABLE;
 
 
 --
--- Name: course_criterion_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: course_evaluation_criterion_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY public.course_criterion_types
-    ADD CONSTRAINT course_criterion_types_pkey PRIMARY KEY (id);
+ALTER TABLE ONLY public.course_evaluation_criterion_types
+    ADD CONSTRAINT course_evaluation_criterion_types_name_unique UNIQUE (name) DEFERRABLE;
+
+
+--
+-- Name: course_evaluation_criterion_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.course_evaluation_criterion_types
+    ADD CONSTRAINT course_evaluation_criterion_types_pkey PRIMARY KEY (id);
 
 
 --

@@ -29,8 +29,8 @@ en:
         theoric: Theoric
         unit: Unit
         ects: Ects
-      course_criterion_type: &criterion_type
-        name: Course Criterion Type
+      course_evaluation_criterion_type: &evaluation_criterion_type_attributes
+        name: Course Evaluation Criterion Type
         identifier: İdentifier
       course_group: &course_group_attributes
         course_group_type: Course Group Type
@@ -84,7 +84,7 @@ en:
       available_course: Available Course
       available_course_group: Available Course Group
       course: Course
-      course_criterion_type: Course Criterion Type
+      course_evaluation_criterion_type: Course Criterion Type
       course_group_type: Course Group Type
       course_group: Course Group
       course_type: Course Type
@@ -161,22 +161,22 @@ en:
         <<: *course_attributes
       update:
         success: Course successfully updated.
-    course_criterion_types:
+    course_evaluation_criterion_types:
       create:
-        success: Course criterion type successfully created.
+        success: Course evaluation criterion type successfully created.
       destroy:
-        error: An error occured when deleting the course criterion type.
-        success: Course criterion type successfully destroyed.
+        error: An error occured when deleting the course evaluation criterion type.
+        success: Course evaluation criterion type successfully destroyed.
       edit:
-        form_title: Update the Course Criterion Type
+        form_title: Update the Course Evaluation Criterion Type
       index:
-        <<: *criterion_type
-        card_header: Course Criterion Types
-        new_course_criterion_type_link: Add New Course Criterion Type
+        <<: *evaluation_criterion_type_attributes
+        card_header: Course Evaluation Criterion Types
+        new_course_evaluation_criterion_type_link: Add New Course Evaluation Criterion Type
       new:
-        form_title: Create a Course Criterion Type
+        form_title: Create a Course Evaluation Criterion Type
       update:
-        success: Course  criterion type successfully updated.
+        success: Course evaluation criterion type successfully updated.
     course_groups:
       create:
         success: Course group successfully created.

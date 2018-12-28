@@ -2,9 +2,9 @@
 
 require 'test_helper'
 
-class CourseCriterionTypeTest < ActiveSupport::TestCase
+class CourseEvaluationCriterionTypeTest < ActiveSupport::TestCase
   setup do
-    @criterion_type = course_criterion_types(:exam)
+    @criterion_type = course_evaluation_criterion_types(:exam)
   end
 
   # validations: presence
@@ -33,7 +33,7 @@ class CourseCriterionTypeTest < ActiveSupport::TestCase
 
   # callbacks
   test 'callbacks must titlecase the name of a course criterion type' do
-    criterion_type = CourseCriterionType.create!(name: 'Test criTErion', identifier: 'test')
+    criterion_type = CourseEvaluationCriterionType.create!(name: 'Test criTErion', identifier: 'test')
     assert_equal criterion_type.name, 'Test Criterion'
   end
 end

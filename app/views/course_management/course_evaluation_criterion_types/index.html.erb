@@ -1,5 +1,5 @@
 <div class='alert alert-light'>
-  <%= link_to_new new_course_criterion_type_path, t('.new_course_criterion_type_link') %>
+  <%= link_to_new new_course_evaluation_criterion_type_path, t('.new_course_evaluation_criterion_type_link') %>
 </div>
 
 <div class='row'>
@@ -10,7 +10,7 @@
       </div>
       <div class='card-body'>
         <%= render 'components/smart_search_form',
-                   path: course_criterion_types_path,
+                   path: course_evaluation_criterion_types_path,
                    placeholder: t('.name') %>
         <table class='table table-responsive-sm table-striped table-hover'>
           <thead class="thead-dark">
@@ -26,7 +26,7 @@
                 <td><%= criterion_type.name %></td>
                 <td><%= criterion_type.identifier %></td>
                 <td>
-                  <%= link_to_edit(edit_course_criterion_type_path(criterion_type)) %>
+                  <%= link_to_edit(edit_course_evaluation_criterion_type_path(criterion_type)) %>
                   <%= link_to_destroy(criterion_type) %>
                 </td>
               </tr>
