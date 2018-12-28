@@ -10,6 +10,7 @@ class StudentTest < ActiveSupport::TestCase
     user
     unit
     identity
+    calendars
   ].each do |property|
     test "a student can communicate with #{property}" do
       assert students(:serhat).send(property)

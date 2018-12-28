@@ -20,7 +20,6 @@ class CalendarEventTest < ActiveSupport::TestCase
   # validations: presence
   %i[
     timezone
-    calendar
     calendar_event_type
   ].each do |property|
     test "presence validations for #{property} of a calendar event" do

@@ -10,7 +10,7 @@ class ProspectiveStudentDecoratorTest < ActiveSupport::TestCase
   end
 
   test 'academic_term method' do
-    assert_equal @prospective_student.academic_term, AcademicTerm.active.first
+    assert_equal @prospective_student.academic_term, AcademicTerm.active.last
   end
 
   test 'registration_documents method' do
@@ -19,6 +19,14 @@ class ProspectiveStudentDecoratorTest < ActiveSupport::TestCase
       academic_term: @prospective_student.academic_term
     )
     assert_equal @prospective_student.registration_documents, registration_documents
+  end
+
+  test 'permanent_registrable? method' do
+    assert_not @prospective_student.permanent_registrable?
+  end
+
+  test 'temporary_registrable? method' do
+    assert_not @prospective_student.temporary_registrable?
   end
 
   test 'document_required? method' do

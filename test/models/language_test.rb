@@ -51,4 +51,11 @@ class LanguageTest < ActiveSupport::TestCase
     assert fake.errors.details[:name].map { |err| err[:error] }.include?(:too_long)
     assert fake.errors.details[:iso].map { |err| err[:error] }.include?(:too_long)
   end
+
+  # callbacks
+  test 'callbacks must titlecase the name of a language' do
+    language = Language.create(name: 'jewish', iso: 'jww')
+    assert_equal language.name, 'Jewish'
+    assert_equal language.iso, 'JWW'
+  end
 end
