@@ -13,7 +13,7 @@ en:
           fall: Fall
           spring: Spring
           summer: Summer
-  calendar_management:
+  references:
     academic_terms:
       create:
         success: Academic term successfully created.

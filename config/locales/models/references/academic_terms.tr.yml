@@ -13,7 +13,7 @@ tr:
           fall: Güz
           spring: Bahar
           summer: Yaz
-  calendar_management:
+  references:
     academic_terms:
       create:
         success: Akademik dönem başarıyla oluşturuldu.
