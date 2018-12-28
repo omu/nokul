@@ -1,0 +1,14 @@
+en:
+  activerecord:
+    attributes:
+      calendar_event: &calendar_event_attributes
+        calendar_event_type_id: Calendar Event Type
+        start_time: Starting Day and Time
+        end_time: Ending Day and Time
+        location: Location
+        timezone: Timezone
+        visible: Visible
+  calendar_management:
+    calendars:
+      calendar_event_fields:
+        <<: *calendar_event_attributes

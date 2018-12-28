@@ -1,0 +1,38 @@
+tr:
+  activerecord:
+    attributes:
+      calendar: &calendar_attributes
+        name: Calendar Title
+        senate_decision_date: Senate Decision Date
+        senate_decision_no: Senate Decision No
+        description: Description
+        timezone: Default Timezone
+        academic_term: Academic Term
+        academic_term_id: Academic Term
+  calendar_management:
+    calendars:
+      index:
+        <<: *calendar_attributes
+        card_header: Academic Calendars
+        new_calendar_link: New Academic Calendar
+        duplicate: Clone the Calendar
+      form:
+        calendar_events: Events
+        new_event_link: Add New Event
+      calendar_event_fields:
+        delete_event: Delete Event
+      create:
+        success: Academic calendar successfully created.
+      update:
+        success: Academic calendar successfully updated.
+      destroy:
+        success: Academic calendar successfully deleted!
+        warning: Academic calendar can not be deleted!
+      duplicate:
+        success: Calendar and related events successfully cloned. Make the needed changes here.
+        warning: Can not be cloned! Make sure you didn't clone this calendar before.
+  helpers:
+    submit:
+      calendar:
+        create: Create Academic Calendar
+        update: Update Academic Calendar

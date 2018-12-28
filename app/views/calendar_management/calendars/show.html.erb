@@ -1,0 +1,59 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'street-view' %>
+        <strong><%= "[#{full_name(@calendar.academic_term)}] #{@calendar.name}" %></strong>
+        <div class="card-header-actions">
+          <%= link_to_edit([:edit, :calendar_management, @calendar]) %>
+          <%= link_to_destroy([:calendar_management, @calendar]) %>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <table class="table table-responsive-sm">
+          <tbody>
+            <tr>
+              <td><%= t('.senate_decision_date') %></td>
+              <td><%= @calendar.senate_decision_date %></td>
+            </tr>
+            <tr>
+              <td><%= t('.senate_decision_no') %></td>
+              <td><%= @calendar.senate_decision_no %></td>
+            </tr>
+            <tr>
+              <td><%= t('.timezone') %></td>
+              <td><%= @calendar.timezone %></td>
+            </tr>
+            <tr>
+              <td><%= t('.description') %></td>
+              <td><%= @calendar.description %></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class='table table-responsive-sm table-striped'>
+          <thead class="thead-dark">
+            <tr>
+              <th><%= t('activerecord.attributes.calendar_event_type.name') %></th>
+              <th><%= t('activerecord.attributes.calendar_event.start_time') %></th>
+              <th><%= t('activerecord.attributes.calendar_event.end_time') %></th>
+              <th><%= t('activerecord.attributes.calendar_event.location') %></th>
+              <th><%= t('activerecord.attributes.calendar_event.timezone') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @calendar.calendar_events.each do |calendar_event| %>
+              <tr>
+                <td><%= calendar_event.calendar_event_type.name %></td>
+                <td><%= as_date_and_time(calendar_event.start_time) %></td>
+                <td><%= as_date_and_time(calendar_event.end_time) %></td>
+                <td><%= calendar_event.location %></td>
+                <td><%= calendar_event.timezone %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
