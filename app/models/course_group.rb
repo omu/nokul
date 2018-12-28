@@ -31,5 +31,5 @@ class CourseGroup < ApplicationRecord
   validates :course_ids, presence: true
 
   # callbacks
-  before_save { self.name = name.capitalize_all }
+  before_validation { self.name = name.capitalize_all if name }
 end
