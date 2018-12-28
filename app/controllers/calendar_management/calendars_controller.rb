@@ -52,6 +52,10 @@ module CalendarManagement
       redirect_to([:edit, :calendar_management, clone_calendar], notice: t('.success'))
     end
 
+    def units
+      @calendar = Calendar.find(params[:calendar_id])
+    end
+
     private
 
     def redirect_with(message)
@@ -64,11 +68,10 @@ module CalendarManagement
 
     def calendar_params
       params.require(:calendar).permit(
-        :name, :senate_decision_date, :senate_decision_no, :description, :timezone, :academic_term_id,
+        :name, :senate_decision_date, :senate_decision_no, :description, :timezone, :academic_term_id, unit_ids: [],
         calendar_events_attributes: %i[
           id calendar_event_type_id start_time end_time location timezone visible _destroy
-        ]
-      )
+        ]      )
     end
   end
 end

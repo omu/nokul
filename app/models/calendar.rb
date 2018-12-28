@@ -12,9 +12,11 @@ class Calendar < ApplicationRecord
   # relations
   belongs_to :academic_term
   has_many :calendar_events, dependent: :destroy
-  has_many :calendar_event_types, through: :calendar_events
+  has_many :calendar_event_types, -> { distinct }, through: :calendar_events
   has_many :unit_calendars, dependent: :destroy
-  has_many :units, through: :unit_calendars
+  has_many :units, -> { distinct }, through: :unit_calendars
+
+  accepts_nested_attributes_for :units, allow_destroy: true, reject_if: :all_blank
   accepts_nested_attributes_for :calendar_events, allow_destroy: true, reject_if: :all_blank
 
   # validations
