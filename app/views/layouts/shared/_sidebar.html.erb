@@ -82,11 +82,6 @@
               <%= fa_icon('calendar-check-o', text: t('.academic_calendars'), class: 'nav-icon') %>
             <% end %>
           </li>
-          <li class="nav-item">
-            <%= link_to [:calendar_management, 'academic_terms'], class: 'nav-link' do %>
-              <%= fa_icon('graduation-cap', text: t('.academic_terms'), class: 'nav-icon') %>
-            <% end %>
-          </li>
         </ul>
       </li>
       <li class="nav-item">
@@ -151,6 +146,14 @@
           <li class="nav-item">
             <%= link_to studies_path, class: 'nav-link' do %>
               <%= fa_icon('book', text: t('.studies'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to ['academic_terms'], class: 'nav-link' do %>
+              <%= fa_icon('graduation-cap', text: t('.academic_terms'), class: 'nav-icon') %>
+            <% end %>
+            <%= link_to ['terms'], class: 'nav-link' do %>
+              <%= fa_icon('graduation-cap', text: t('.terms'), class: 'nav-icon') %>
             <% end %>
           </li>
         </ul>

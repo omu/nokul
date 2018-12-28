@@ -6,5 +6,4 @@ namespace :calendar_management do
     get 'duplicate'
     get 'units'
   end
-  resources :academic_terms, except: :show
 end
