@@ -19,7 +19,7 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 163896
   osym_id: 
 -
@@ -283,7 +283,7 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 163896
   osym_id: 
 -
@@ -523,7 +523,7 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 163896
   osym_id: 
 -
@@ -1039,7 +1039,7 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 163896
   osym_id: 
 -
@@ -1051,7 +1051,7 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 163896
   osym_id: 
 -
@@ -1063,7 +1063,7 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 163896
   osym_id: 
 -
@@ -1111,7 +1111,7 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 163896
   osym_id: 
 -
@@ -1123,7 +1123,7 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 163896
   osym_id: 
 -
@@ -3007,7 +3007,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -3019,7 +3019,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -3763,7 +3763,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -3775,7 +3775,7 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -3787,7 +3787,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -3799,7 +3799,7 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -3823,7 +3823,7 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -3835,7 +3835,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -8851,7 +8851,7 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -8863,7 +8863,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -9511,7 +9511,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -10027,7 +10027,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -10039,7 +10039,7 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -10051,7 +10051,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -11851,7 +11851,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -11995,7 +11995,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -12007,7 +12007,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -17083,7 +17083,7 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -17095,7 +17095,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -17647,7 +17647,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -17659,7 +17659,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -19327,7 +19327,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -19339,7 +19339,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -20275,7 +20275,7 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -20371,7 +20371,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -22351,7 +22351,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -22363,7 +22363,7 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -22579,7 +22579,7 @@
   unit_status_id: Kapatılmış
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -24007,7 +24007,7 @@
   unit_status_id: Yarı Pasif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
 -
@@ -24211,6 +24211,6 @@
   unit_status_id: Aktif
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  unit_type_id: Uygulama Ve Araştırma Merkezi
+  unit_type_id: Uygulama ve Araştırma Merkezi
   parent_yoksis_id: 121946
   osym_id: 
