@@ -1,104 +1,104 @@
 applications:
-  - name: single_course_exam
-    title: Tek Ders Sınavı Başvuları
-  - name: program
-    title: Başvuru Tarihleri
-  - name: excused_mid_term
-    title: Ara Sınav Mazeret Başvuruları
-  - name: major_and_minor
-    title: Çift Anadal ve Yandal Başvuruları
-  - name: additional_exam
-    title: Ek Sınav Başvuruları
-  - name: doctoral_proficiency_exam
-    title: Doktora Yeterlilik Sınavı Giriş Başvuruları
-  - name: permanent_registration
-    title: Kesin Kayıt Başvuruları
-  - name: temporary_registration_applications
-    title: Geçici Kayıt Başvuruları
+  - identifier: single_course_exam
+    name: Tek Ders Sınavı Başvuları
+  - identifier: program
+    name: Başvuru Tarihleri
+  - identifier: excused_mid_term
+    name: Ara Sınav Mazeret Başvuruları
+  - identifier: major_and_minor
+    name: Çift Anadal ve Yandal Başvuruları
+  - identifier: additional_exam
+    name: Ek Sınav Başvuruları
+  - identifier: doctoral_proficiency_exam
+    name: Doktora Yeterlilik Sınavı Giriş Başvuruları
+  - identifier: permanent_registration
+    name: Kesin Kayıt Başvuruları
+  - identifier: temporary_registration
+    name: Geçici Kayıt Başvuruları
 payments:
-  - name: tuition_fee
-    title:  Öğrenim Ücreti ve Materyal Ücreti Taksitinin Ödenmesi
-  - name: first_installment_of_tuition_fee
-    title:  Öğrenim Ücreti ve Materyal Ücreti 1. Taksitinin Ödenmesi
-  - name: second_installment_of_tuition_fee
-    title:  Öğrenim Ücreti ve Materyal Ücreti 2. Taksitinin Ödenmesi
-  - name: third_installment_of_tuition_fee
-    title:  Öğrenim Ücreti ve Materyal Ücreti 3. Taksitinin Ödenmesi
+  - identifier: tuition_fee
+    name:  Öğrenim Ücreti ve Materyal Ücreti Taksitinin Ödenmesi
+  - identifier: first_installment_of_tuition_fee
+    name:  Öğrenim Ücreti ve Materyal Ücreti 1. Taksitinin Ödenmesi
+  - identifier: second_installment_of_tuition_fee
+    name:  Öğrenim Ücreti ve Materyal Ücreti 2. Taksitinin Ödenmesi
+  - identifier: third_installment_of_tuition_fee
+    name:  Öğrenim Ücreti ve Materyal Ücreti 3. Taksitinin Ödenmesi
 registrations:
-  - name: excused_course
-    title: Mazeretli Ders Kayıtları
-  - name: online_course
-    title: Çevrimiçi Ders Kayıtları
-  - name: excused_online_course
-    title: Mazeretli Çevrimiçi Ders Kayıtları
-  - name: add_drop
-    title: Ders Ekleme/Bırakma
+  - identifier: excused_course
+    name: Mazeretli Ders Kayıtları
+  - identifier: online_course
+    name: Çevrimiçi Ders Kayıtları
+  - identifier: excused_online_course
+    name: Mazeretli Çevrimiçi Ders Kayıtları
+  - identifier: add_drop
+    name: Ders Ekleme/Bırakma
 advisor:
-  - name: approvals
-    title: Danışman Onay İşlemleri
-  - name: transfer_for_elective_courses
-    title: Açılmayan Seçmeli Bir Dersi Seçen Öğrencilerin Açılan Başka Bir Seçmeli Derse Aktarılması
+  - identifier: approvals
+    name: Danışman Onay İşlemleri
+  - identifier: transfer_for_elective_courses
+    name: Açılmayan Seçmeli Bir Dersi Seçen Öğrencilerin Açılan Başka Bir Seçmeli Derse Aktarılması
 exams:
-  - name: online_mid_term
-    title: Çevrimiçi Ara Sınavlar
-  - name: mid_term
-    title: Ara Sınavlar
-  - name: final
-    title: Yarıyıl Sonu Sınavları
-  - name: retake
-    title: Bütünleme Sınavları
-  - name: single_course
-    title: Tek Ders Sınavları
-  - name: foreign_language_exemption
-    title: Zorunlu Yabancı Dil Dersi Muafiyet Sınavları (5/i Dersleri İçin)
-  - name: foreign_language_proficiency
-    title: Zorunlu Hazırlık Sınıfları Yabancı Dil Yeterlik Sınavı
-  - name: preparatory_class_grading
-    title: Hazırlık Sınıfları için Düzey Belirleme Sınavı
-  - name: preparatory_class_proficiency
-    title: Hazırlık Sınıfları için Yeterlilik Sınavı
-  - name: excused_mid_term
-    title: Mazeretli Ara Sınavlar
-  - name: additional
-    title: Ek Sınavlar
-  - name: doctoral_proficiency
-    title: Doktora Yeterlilik Sınavı
+  - identifier: online_mid_term
+    name: Çevrimiçi Ara Sınavlar
+  - identifier: mid_term
+    name: Ara Sınavlar
+  - identifier: final
+    name: Yarıyıl Sonu Sınavları
+  - identifier: retake
+    name: Bütünleme Sınavları
+  - identifier: single_course
+    name: Tek Ders Sınavları
+  - identifier: foreign_language_exemption
+    name: Zorunlu Yabancı Dil Dersi Muafiyet Sınavları (5/i Dersleri İçin)
+  - identifier: foreign_language_proficiency
+    name: Zorunlu Hazırlık Sınıfları Yabancı Dil Yeterlik Sınavı
+  - identifier: preparatory_class_grading
+    name: Hazırlık Sınıfları için Düzey Belirleme Sınavı
+  - identifier: preparatory_class_proficiency
+    name: Hazırlık Sınıfları için Yeterlilik Sınavı
+  - identifier: excused_mid_term
+    name: Mazeretli Ara Sınavlar
+  - identifier: additional
+    name: Ek Sınavlar
+  - identifier: doctoral_proficiency
+    name: Doktora Yeterlilik Sınavı
 courses:
-  - name: start_of
-    title: Derslerin Başlaması
-  - name: end_of
-    title: Derslerin Bitişi
-  - name: start_of_asynchronous
-    title: Asenkron Derslerin Başlaması
-  - name: start_of_synchronous
-    title: Senkron Derslerin Başlaması
-  - name: start_of_practical
-    title: Uygulama Derslerinin Başlaması
-  - name: end_of_asynchronous
-    title: Asenkron Derslerin Bitişi
-  - name: end_of_synchronous
-    title: Senkron Derslerin Bitişi
-  - name: end_of_practical
-    title: Uygulama Derslerinin Bitişi
+  - identifier: start_of
+    name: Derslerin Başlaması
+  - identifier: end_of
+    name: Derslerin Bitişi
+  - identifier: start_of_asynchronous
+    name: Asenkron Derslerin Başlaması
+  - identifier: end_of_asynchronous
+    name: Asenkron Derslerin Bitişi
+  - identifier: start_of_synchronous
+    name: Senkron Derslerin Başlaması
+  - identifier: end_of_synchronous
+    name: Senkron Derslerin Bitişi
+  - identifier: start_of_practical
+    name: Uygulama Derslerinin Başlaması
+  - identifier: end_of_practical
+    name: Uygulama Derslerinin Bitişi
 submission:
-  - name: final_project
-    title: Dönem Projelerinin Teslimi
-  - name: thesis
-    title: Tezlerin Enstitüye Teslimi
-  - name: project_seminar
-    title: Dönem Projesi/Seminerlerin Enstitüye Teslimi
+  - identifier: final_project
+    name: Dönem Projelerinin Teslimi
+  - identifier: thesis
+    name: Tezlerin Enstitüye Teslimi
+  - identifier: project_seminar
+    name: Dönem Projesi/Seminerlerin Enstitüye Teslimi
 announcement:
-  - name: mid_term_results
-    title: Ara Sınav Sonuçlarının İlanı
-  - name: final_results
-    title: Yarıyıl Sonu Sınav Sonuçlarının İlanı
-  - name: retake_results
-    title: Bütünleme Sınav Sonuçlarının İlanı
-  - name: single_course_results
-    title: Tek Ders Sınav Sonuçlarının İlanı
-  - name: major_and_minor_application_results
-    title: Çift Anadal ve Yandal Başvuru Sonuçlarının İlanı
-  - name: foreign_language_proficiency_results
-    title: Zorunlu Hazırlık Sınıfları Yabancı Dil Yeterlik Sınav Sonuçlarının İlanı
-  - name: additional_exam_results
-    title: Ek Sınav Sonuçlarının İlanı
+  - identifier: mid_term_results
+    name: Ara Sınav Sonuçlarının İlanı
+  - identifier: final_results
+    name: Yarıyıl Sonu Sınav Sonuçlarının İlanı
+  - identifier: retake_results
+    name: Bütünleme Sınav Sonuçlarının İlanı
+  - identifier: single_course_results
+    name: Tek Ders Sınav Sonuçlarının İlanı
+  - identifier: major_and_minor_application_results
+    name: Çift Anadal ve Yandal Başvuru Sonuçlarının İlanı
+  - identifier: foreign_language_proficiency_results
+    name: Zorunlu Hazırlık Sınıfları Yabancı Dil Yeterlik Sınav Sonuçlarının İlanı
+  - identifier: additional_exam_results
+    name: Ek Sınav Sonuçlarının İlanı

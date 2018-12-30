@@ -48,7 +48,7 @@
           <tbody>
             <% @calendar.calendar_events.each do |calendar_event| %>
               <tr>
-                <td><%= calendar_event.calendar_event_type.name %></td>
+                <td><%= calendar_event.type_name %></td>
                 <td><%= as_date_and_time(calendar_event.start_time) %></td>
                 <td><%= as_date_and_time(calendar_event.end_time) %></td>
                 <td><%= calendar_event.location %></td>

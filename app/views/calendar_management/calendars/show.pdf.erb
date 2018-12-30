@@ -22,7 +22,7 @@
               <tr>
                 <td width="20%"><center><%= as_date_and_time(calendar_event.start_time) %></center></td>
                 <td width="20%"><center><%= as_date_and_time(calendar_event.end_time) %></center></td>
-                <td width="60%"><%= calendar_event.calendar_event_type.name %></td>
+                <td width="60%"><%= calendar_event.type_name %></td>
               </tr>
             <% end %>
           </tbody>
