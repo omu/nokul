@@ -1,0 +1,51 @@
+tr:
+  activerecord:
+    attributes:
+      calendar: &calendar_attributes
+        name: Takvim Başlığı
+        senate_decision_date: Senato Karar Tarihi
+        senate_decision_no: Senato Karar Numarası
+        description: Açıklamalar
+        timezone: Varsayılan Zaman Dilimi
+        academic_term: Akademik Dönem
+        academic_term_id: Akademik Dönem
+  calendar_management:
+    calendars:
+      index:
+        <<: *calendar_attributes
+        card_header: Akademik Takvimler
+        new_calendar_link: Yeni Akademik Takvim
+        duplicate: Kopya Oluştur
+        assign_to_units: Birimlere Ata
+      show:
+        <<: *calendar_attributes
+        assign_to_units: Birimlere Ata
+      form:
+        calendar_events: Etkinlikler
+        new_event_link: Yeni Etkinlik Ekle
+      calendar_event_fields:
+        delete_event: Etkinliği Sil
+      create:
+        success: Akademik takvim başarıyla oluşturuldu.
+      update:
+        success: Akademik takvim başarıyla güncellendi.
+      destroy:
+        success: Akademik takvim başarıyla silindi!
+        warning: Akademik takvim silinemedi!
+      duplicate:
+        success: Takvim ve etkinlikler başarıyla çoğaltıldı. Gerekli değişiklikleri yapabilirsiniz.
+        warning: Takvim çoğaltılamadı! Bu takvimi daha önce çoğaltmadığınızdan emin olun.
+      units:
+        faculties: Fakülteler
+        institutes: Enstitüler
+        programs: Programlar
+        alert_text_general: "Akademik takvimi herhangi bir birime atadığınızda, o birim altında bulunan tüm birimlere \
+                            de takvim otomatik olarak atanır. Örneğin 'Eğitim Fakültesi' ataması yaparsanız, fakülte \
+                            altındaki tüm programlar ilgili akademik takvime bağlanır."
+        alert_text_programs: "Takvimi özellikle bazı programlara atamak istiyorsanız, programlar listesinden seçim \
+                             yapınız."
+  helpers:
+    submit:
+      calendar:
+        create: Akademik Takvim Oluştur
+        update: Akademik Takvim Güncelle

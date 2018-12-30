@@ -29,6 +29,7 @@ AllCops:
   Exclude:
     - bin/**/*
     - vendor/bundle/**/*
+    - node_modules/**/*
     - db/schema.rb
     - db/migrate/*.rb
     - config/initializers/simple_form.rb

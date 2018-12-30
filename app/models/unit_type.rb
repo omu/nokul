@@ -18,10 +18,9 @@ class UnitType < ApplicationRecord
     rectorship: 8
   }
 
-  validates :group, allow_nil: true, inclusion: { in: groups.keys }
-
   # relations
   has_many :units, dependent: :nullify
-  has_many :calendar_unit_types, dependent: :destroy
-  has_many :calendar_types, through: :calendar_unit_types
+
+  # validations
+  validates :group, allow_nil: true, inclusion: { in: groups.keys }
 end

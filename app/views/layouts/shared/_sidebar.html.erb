@@ -69,27 +69,17 @@
       </li>
       <li class="nav-item nav-dropdown">
         <a class="nav-link nav-dropdown-toggle" href="#">
-          <%= fa_icon('calendar', class: 'nav-icon') %><%= t('.calendars') %>
+          <%= fa_icon('calendar', class: 'nav-icon') %><%= t('.calendar_management') %>
         </a>
         <ul class="nav-dropdown-items">
           <li class="nav-item">
-            <%= link_to calendar_titles_path, class: 'nav-link' do %>
-              <%= fa_icon('calendar-plus-o', text: t('.calendar_titles'), class: 'nav-icon') %>
+            <%= link_to [:calendar_management, 'calendar_event_types'], class: 'nav-link' do %>
+              <%= fa_icon('calendar-plus-o', text: t('.calendar_event_types'), class: 'nav-icon') %>
             <% end %>
           </li>
           <li class="nav-item">
-            <%= link_to calendar_types_path, class: 'nav-link' do %>
-              <%= fa_icon('calendar-check-o', text: t('.calendar_types'), class: 'nav-icon') %>
-            <% end %>
-          </li>
-          <li class="nav-item">
-            <%= link_to academic_terms_path, class: 'nav-link' do %>
-              <%= fa_icon('graduation-cap', text: t('.academic_terms'), class: 'nav-icon') %>
-            <% end %>
-          </li>
-          <li class="nav-item">
-            <%= link_to academic_calendars_path, class: 'nav-link' do %>
-              <%= fa_icon('calendar', text: t('.academic_calendars'), class: 'nav-icon') %>
+            <%= link_to [:calendar_management, 'calendars'], class: 'nav-link' do %>
+              <%= fa_icon('calendar-check-o', text: t('.academic_calendars'), class: 'nav-icon') %>
             <% end %>
           </li>
         </ul>
@@ -106,22 +96,22 @@
         </a>
         <ul class="nav-dropdown-items">
           <li class="nav-item">
-            <%= link_to admin_languages_path, class: 'nav-link' do %>
+            <%= link_to [:admin, 'languages'], class: 'nav-link' do %>
               <%= fa_icon('language', text: t('.languages'), class: 'nav-icon') %>
             <% end %>
           </li>
           <li class="nav-item">
-            <%= link_to admin_countries_path, class: 'nav-link' do %>
+            <%= link_to [:admin, 'countries'], class: 'nav-link' do %>
               <%= fa_icon('globe', text: t('.locations'), class: 'nav-icon') %>
             <% end %>
           </li>
           <li class="nav-item">
-            <%= link_to admin_titles_path, class: 'nav-link' do %>
+            <%= link_to [:admin, 'titles'], class: 'nav-link' do %>
               <%= fa_icon('group', text: t('.titles'), class: 'nav-icon') %>
             <% end %>
           </li>
           <li class="nav-item">
-            <%= link_to admin_yoksis_path, class: 'nav-link' do %>
+            <%= link_to [:admin, 'yoksis'], class: 'nav-link' do %>
               <%= fa_icon('th', text: t('.yoksis'), class: 'nav-icon') %>
             <% end %>
           </li>
@@ -156,6 +146,14 @@
           <li class="nav-item">
             <%= link_to studies_path, class: 'nav-link' do %>
               <%= fa_icon('book', text: t('.studies'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to ['academic_terms'], class: 'nav-link' do %>
+              <%= fa_icon('graduation-cap', text: t('.academic_terms'), class: 'nav-icon') %>
+            <% end %>
+            <%= link_to ['terms'], class: 'nav-link' do %>
+              <%= fa_icon('graduation-cap', text: t('.terms'), class: 'nav-icon') %>
             <% end %>
           </li>
         </ul>

@@ -1,0 +1,51 @@
+en:
+  activerecord:
+    attributes:
+      calendar: &calendar_attributes
+        name: Calendar Title
+        senate_decision_date: Senate Decision Date
+        senate_decision_no: Senate Decision No
+        description: Description
+        timezone: Default Timezone
+        academic_term: Academic Term
+        academic_term_id: Academic Term
+  calendar_management:
+    calendars:
+      index:
+        <<: *calendar_attributes
+        card_header: Academic Calendars
+        new_calendar_link: New Academic Calendar
+        duplicate: Clone the Calendar
+        assign_to_units: Assign to Units
+      show:
+        <<: *calendar_attributes
+        assign_to_units: Assign to Units
+      form:
+        calendar_events: Events
+        new_event_link: Add New Event
+      calendar_event_fields:
+        delete_event: Delete Event
+      create:
+        success: Academic calendar successfully created.
+      update:
+        success: Academic calendar successfully updated.
+      destroy:
+        success: Academic calendar successfully deleted!
+        warning: Academic calendar can not be deleted!
+      duplicate:
+        success: Calendar and related events successfully cloned. Make the needed changes here.
+        warning: Can not be cloned! Make sure you didn't clone this calendar before.
+      units:
+        faculties: Faculties
+        institutes: Institutes
+        programs: Programs
+        alert_text_general: "Academic calendars will recursively be assigned to the children units of the selected \
+                            units. For example if you assign calendar to a faculty, all sub-departments and programs \
+                            of that faculty will be assigned to the calendar too"
+        alert_text_programs: "Please make a selection between programs, if you specifically want to assign the calendar \
+                             to a program."
+  helpers:
+    submit:
+      calendar:
+        create: Create Academic Calendar
+        update: Update Academic Calendar

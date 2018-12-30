@@ -4,11 +4,11 @@ tr:
       sidebar:
         academic_calendars: Akademik Takvimler
         academic_terms: Akademik Dönemler
-        admin: Yönetici Modülü
+        admin: Yönetici İşlemleri
         agenda_types: Gündem Türleri
         available_courses: Açılan Dersler
-        calendar_titles: Takvim Başlıkları
-        calendar_types: Takvim Türleri
+        calendar_event_types: Olay Türleri
+        calendar_management: Takvim Yönetimi
         calendars: Takvimler
         committee_units: Kurul/Komisyon Birimleri
         committees: Kurullar/Komisyonlar
@@ -37,6 +37,7 @@ tr:
         student_punishment_types: Ceza Türleri
         student_studentship_statuses: Öğrencilik Hakları
         studies: Akademik Çalışmalar
+        terms: Dönemler
         titles: Unvanlar
         unit_instruction_languages: Öğrenim Dilleri
         unit_instruction_types: Öğrenim Türleri

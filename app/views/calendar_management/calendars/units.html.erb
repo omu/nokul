@@ -1,0 +1,57 @@
+<%= simple_form_for([:calendar_management, @calendar]) do |f| %>
+  <div class='row'>
+    <div class='col-sm-12'>
+      <div class='card'>
+        <div class='card-body'>
+          <div class="alert alert-warning" role="alert">
+            <p><%= t('.alert_text_general') %></p>
+            <hr>
+            <p class="mb-0">
+              <%= t('.alert_text_programs') %>
+            </p>
+          </div>
+          <%= f.error_notification %>
+        </div>
+      </div>
+    </div>
+    <div class='col-sm-12'>
+      <div class='card'>
+        <div class='card-body'>
+          <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
+          <%= link_to_back(:back) %>
+        </div>
+      </div>
+    </div>
+    <div class='col-sm-6'>
+      <div class='card'>
+        <div class='card-body'>
+          <%= f.association :units,
+                            collection: Unit.active.faculties.order(:name),
+                            as: :check_boxes,
+                            label: t('.faculties') %>
+        </div>
+      </div>
+    </div>
+    <div class='col-sm-6'>
+      <div class='card'>
+        <div class='card-body'>
+          <%= f.association :units,
+                            collection: Unit.active.institutes.order(:name),
+                            as: :check_boxes,
+                            label: t('.institutes') %>
+        </div>
+      </div>
+    </div>
+    <div class='col-sm-12'>
+      <div class='card'>
+        <div class='card-body'>
+          <%= f.association :units,
+                            collection: Unit.active.programs.order(:name),
+                            as: :check_boxes,
+                            label_method: :names_depth_cache,
+                            label: t('.programs') %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

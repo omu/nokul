@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   draw :admin
+  draw :calendar_management
 
   draw :devise
   draw :account
-  draw :calendar
   draw :course_management
   draw :references
 

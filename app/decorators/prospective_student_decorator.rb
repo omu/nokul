@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
 class ProspectiveStudentDecorator < SimpleDelegator
-  def academic_calendar
-    @academic_calendar ||= unit.academic_calendars.find_by(
+  def calendar
+    @calendar ||= unit.calendars.find_by(
       academic_term: academic_term
     )
   end
 
   def academic_term
-    @academic_term ||= AcademicTerm.active.first
+    @academic_term ||= AcademicTerm.active.last
   end
 
   def registration_documents
@@ -18,14 +18,32 @@ class ProspectiveStudentDecorator < SimpleDelegator
   end
 
   def permanent_registrable?
-    academic_calendar.try(:proper_event_range?, :application_permanent_registration)
+    check_events('permanent_registration_applications')
   end
 
   def temporary_registrable?
-    academic_calendar.try(:proper_event_range?, :application_temporary_registration)
+    check_events('temporary_registration_applications')
   end
 
   def document_required?
     registration_documents.present?
+  end
+
+  private
+
+  def event_type(identifier)
+    CalendarEventType.find_by(identifier: identifier)
+  end
+
+  def calendar_events
+    calendar.calendar_events
+  end
+
+  def check_events(identifier)
+    return unless event_type(identifier) && calendar_events.present?
+
+    calendar_events.find_by(
+      calendar_event_type: event_type(identifier)
+    ).try(:active_now?)
   end
 end
