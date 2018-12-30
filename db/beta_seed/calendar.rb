@@ -4,7 +4,7 @@ event_types = YAML.load_file(Tenant::Path.db.join('event_types.yml'))
 progress_bar = ProgressBar.spawn('EventType', event_types.count)
 event_types.each do |category, event_type|
   event_type.each do |type|
-    CalendarEventType.create(name: type['title'], identifier: "#{type['name']}_#{category}")
+    CalendarEventType.create(name: type['name'], identifier: "#{type['identifier']}_#{category}")
   end
   progress_bar&.increment
 end

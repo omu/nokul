@@ -3119,6 +3119,14 @@ ALTER TABLE ONLY public.calendar_event_types
 
 
 --
+-- Name: calendar_event_types calendar_event_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.calendar_event_types
+    ADD CONSTRAINT calendar_event_types_name_unique UNIQUE (name) DEFERRABLE;
+
+
+--
 -- Name: calendar_event_types calendar_event_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 

@@ -11,7 +11,7 @@ class CalendarEventType < ApplicationRecord
 
   # relations
   has_many :calendar_events, dependent: :destroy
-  has_many :calendars, -> { distinct }, through: :calendar_events
+  has_many :calendars, through: :calendar_events
 
   # validations
   validates :name, presence: true, uniqueness: true, length: { maximum: 255 }

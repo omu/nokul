@@ -7,11 +7,15 @@ class CalendarEvent < ApplicationRecord
 
   # validations
   validates :timezone, presence: true, length: { maximum: 255 }
+  validates :start_time, presence: true
   validates :calendar, uniqueness: { scope: %i[calendar_event_type] }
   validates :visible, inclusion: { in: [true, false] }
   validates_with CalendarEventValidator
 
+  # delegations
+  delegate :name, to: :calendar_event_type, prefix: :type
+
   def active_now?
-    Time.current.between?(start_time, end_time)
+    end_time ? Time.current.between?(start_time, end_time) : start_time.past?
   end
 end

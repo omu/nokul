@@ -12,9 +12,11 @@ class Calendar < ApplicationRecord
   # relations
   belongs_to :academic_term
   has_many :calendar_events, dependent: :destroy
-  has_many :calendar_event_types, -> { distinct }, through: :calendar_events
+  has_many :calendar_event_types, through: :calendar_events
   has_many :unit_calendars, dependent: :destroy
-  has_many :units, -> { distinct }, through: :unit_calendars
+  has_many :units, through: :unit_calendars,
+                   before_add: proc { |calendar, unit| create_sub_calendars(calendar, unit) },
+                   before_remove: proc { |calendar, unit| destroy_sub_calendars(calendar, unit) }
 
   accepts_nested_attributes_for :units, allow_destroy: true, reject_if: :all_blank
   accepts_nested_attributes_for :calendar_events, allow_destroy: true, reject_if: :all_blank
@@ -33,4 +35,17 @@ class Calendar < ApplicationRecord
 
   # scopes
   scope :active, -> { joins(:academic_term).merge(AcademicTerm.where(active: true)) }
+
+  # relational callbacks
+  class << self
+    def create_sub_calendars(calendar, unit)
+      unit.descendants.active.eventable.each do |descendant|
+        UnitCalendar.create(calendar: calendar, unit: descendant)
+      end
+    end
+
+    def destroy_sub_calendars(calendar, unit)
+      UnitCalendar.where(calendar_id: calendar.id, unit_id: unit.descendants.ids).destroy_all
+    end
+  end
 end

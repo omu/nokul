@@ -61,22 +61,5 @@
 </div>
 
 <%= javascript_include_tag 'shared/cocoon' %>
-
-<script>
-  $(document).ready(function() {
-    $("#calendar_events a.add_fields").
-      data("association-insertion-method", 'append').
-      data("association-insertion-node", function(link){
-        return link.closest('.event_card').find('.single_event')
-      });
-  });
-</script>
-
-<script>
-  flatpickr("[data-class='senate_decision_date']", { altInput: true })
-  flatpickr("[data-class='event-date']", { enableTime: true, altInput: true })
-  $('#calendar_events').on('cocoon:after-insert', function(e, added_event) {
-    $(added_event).find("[data-class='event-date']")
-                  .flatpickr({ enableTime: true, altInput: true })
-  })
-</script>
+<%= render 'flatpickr' %>
+<%= render 'cocoon' %>

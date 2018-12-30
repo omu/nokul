@@ -19,7 +19,7 @@ class CalendarEventValidator < ActiveModel::Validator
   end
 
   def date_range_validation
-    @event.errors[:end_time] << message('invalid_date_range') if @event.end_time < @event.start_time
+    @event.errors[:end_time] << message('invalid_time_range') if @event.end_time < @event.start_time
   end
 
   private

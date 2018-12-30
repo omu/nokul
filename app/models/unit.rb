@@ -45,7 +45,7 @@ class Unit < ApplicationRecord
   has_many :prospective_students, dependent: :destroy
   has_many :available_courses, dependent: :destroy
   has_many :unit_calendars, dependent: :destroy
-  has_many :calendars, -> { distinct }, through: :unit_calendars
+  has_many :calendars, through: :unit_calendars
 
   # validations
   validates :name, presence: true, uniqueness: { scope: %i[ancestry unit_status] }, length: { maximum: 255 }
@@ -77,6 +77,12 @@ class Unit < ApplicationRecord
       .or(rectorships)
   }
   scope :curriculumable, -> { coursable }
+
+  scope :eventable, -> {
+    faculties
+      .or(institutes)
+      .or(programs)
+  }
 
   def cache_ancestry
     self.names_depth_cache = path.map(&:name).reverse.join(' / ')

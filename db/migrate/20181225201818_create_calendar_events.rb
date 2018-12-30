@@ -19,6 +19,7 @@ class CreateCalendarEvents < ActiveRecord::Migration[5.2]
 
     add_presence_constraint :calendar_events, :timezone
     add_null_constraint :calendar_events, :visible
+    add_null_constraint :calendar_events, :start_time
 
     add_length_constraint :calendar_events, :location, less_than_or_equal_to: 255
     add_length_constraint :calendar_events, :timezone, less_than_or_equal_to: 255
