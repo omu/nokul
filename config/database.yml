@@ -1,12 +1,4 @@
-<%
-  name = if File.exist?(manifest = Rails.root.join('app.json'))
-           require 'json'
-           JSON.parse(File.read(manifest)).fetch 'name'
-         else
-           Rails.application.class.parent.to_s.underscore
-         end
-  url = "postgresql://#{name}:#{name}@localhost/#{name}_%<environment>s"
-%>
+<% name = Rails.application.appname; url = "postgresql://#{name}:#{name}@localhost/#{name}_%<environment>s" %>
 
 default: &default
   adapter: postgresql

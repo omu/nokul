@@ -40,5 +40,15 @@ module Nokul
     # tenant configuration
     config.active_tenant = Tenant.active
     config.tenant = Tenant.configuration
+
+    # authoritative name of the application
+    def appname
+      @appname ||= if File.exist?(manifest = Rails.root.join('app.json'))
+                     JSON.parse(File.read(manifest)).fetch 'name'
+                   else
+                     # fallback to the module name
+                     self.class.parent.to_s.underscore
+                   end
+    end
   end
 end
