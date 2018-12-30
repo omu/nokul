@@ -40,16 +40,13 @@ module CalendarManagement
 
     def duplicate
       @calendar = Calendar.find(params[:calendar_id])
-      clone_calendar = @calendar.dup
-      clone_calendar.name.prepend('[Kopyası] ')
-      redirect_with('warning') && return unless clone_calendar.save
-      @calendar.calendar_events.each do |event|
-        clone_event = event.dup
-        clone_event.calendar = clone_calendar
-        clone_event.save!
-      end
+      @duplicate_record = DuplicateService.new(@calendar, 'name').duplicate
 
-      redirect_to([:edit, :calendar_management, clone_calendar], notice: t('.success'))
+      redirect_with('warning') && return unless @duplicate_record
+
+      AcademicCalendars::DuplicateEventsService.new(@calendar, @duplicate_record)
+
+      redirect_to([:edit, :calendar_management, @duplicate_record], notice: t('.success'))
     end
 
     def units

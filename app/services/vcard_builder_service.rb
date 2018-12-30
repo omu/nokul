@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-class VcardBuilder
+class VcardBuilderService
   def initialize(identity)
     @identity = identity
   end
 
-  def build_vcard
+  def generate
     <<~VCARD
       BEGIN:VCARD
       VERSION:3.0

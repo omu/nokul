@@ -43,7 +43,7 @@
                 </div>
                 <div class='card-body single_event'>
                   <%= f.simple_fields_for :calendar_events do |event| %>
-                    <%= render 'calendar_event_fields', f: event %>
+                    <%= render 'event_fields', f: event %>
                   <% end %>
                   <br>
                 </div>
