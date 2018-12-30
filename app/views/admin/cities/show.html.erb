@@ -34,7 +34,7 @@
       </div>
       <div class='card-body'>
         <%= render 'components/smart_search_form',
-                   path: admin_country_city_path(@country, @city),
+                   path: [:admin, @country, @city],
                    placeholder: t('.name') %>
         <table class='table table-responsive-sm table-striped'>
           <thead class="thead-dark">

@@ -28,5 +28,7 @@ namespace :import do
       Unit.create(unit.except('parent_yoksis_id'))
       progress_bar&.increment
     end
+
+    Unit.all.each(&:save)
   end
 end

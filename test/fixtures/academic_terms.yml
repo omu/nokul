@@ -31,9 +31,16 @@ spring_2018_2019:
   term: spring
   start_of_term: 2019-01-15 08:00:00
   end_of_term: 2019-06-18 17:00:00
-  active: false
+  active: true
 
 summer_2018_2019:
+  year: 2018 - 2019
+  term: summer
+  start_of_term: 2019-07-05 08:00:00
+  end_of_term: 2019-08-13 17:00:00
+  active: true
+
+term_to_delete:
   year: 2018 - 2019
   term: summer
   start_of_term: 2019-07-05 08:00:00

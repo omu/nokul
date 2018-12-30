@@ -88,8 +88,8 @@
           <% else %>
             <%= link_to(t('.can_not_register'),
                         register_prospective_student_path,
-                        class: 'btn btn-block btn-success registration-button',
-                        disabled: false) %>
+                        class: 'btn btn-block btn-danger registration-button',
+                        disabled: true) %>
           <% end %>
         </div>
       <% end %>

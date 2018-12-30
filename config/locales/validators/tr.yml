@@ -6,9 +6,9 @@ tr:
     available_course_lecturer:
       coordinator: Açılan ders grubunun bir koordinatörü olmalı.
     calendar_event:
-      invalid_date_range: Etkinlik bitiş tarihi başlangıç tarihinden önceki bir tarih olarak seçilemez.
-      invalid_start_date: Etkinlik akademik dönemin başlama tarihinden önce oluşturulamaz.
-      invalid_end_date: Etkinlik akademik dönemin bitiş tarihinden sonra oluşturulamaz.
+      invalid_time_range: Etkinlik bitiş tarihi başlangıç tarihinden önceki bir tarih olarak seçilemez.
+      invalid_start_time: Etkinlik akademik dönemin başlama tarihinden önce oluşturulamaz.
+      invalid_end_time: Etkinlik akademik dönemin bitiş tarihinden sonra oluşturulamaz.
     duty:
       active_and_tenure: Bu personelin zaten aktif ve kadrolu bir görevi var! Yeni kayıt girmek yerine aktif kaydı düzenleyin veya öncelikle aktif kaydı pasifleştirin.
       invalid_end_date: Görev başlangıç tarihi bitiş tarihinden sonraki bir tarih olarak seçilmiş.

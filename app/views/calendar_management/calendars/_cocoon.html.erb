@@ -1,0 +1,9 @@
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#calendar_events a.add_fields").
+      data("association-insertion-method", 'append').
+      data("association-insertion-node", function(link){
+        return link.closest('.event_card').find('.single_event')
+      });
+  });
+</script>

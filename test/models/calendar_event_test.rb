@@ -4,25 +4,23 @@ require 'test_helper'
 
 class CalendarEventTest < ActiveSupport::TestCase
   setup do
-    @calendar_event = calendar_events(:one)
+    @calendar_event = calendar_events(:add_drop_fall_2018_grad)
   end
 
   # relations
   %i[
-    academic_calendar
-    calendar_title
-    calendar_type
-    academic_term
+    calendar
+    calendar_event_type
   ].each do |property|
-    test "a calendar event can communicate with #{property}" do
+    test "calendar_event can communicate with #{property}" do
       assert @calendar_event.send(property)
     end
   end
 
   # validations: presence
   %i[
-    start_date
-    end_date
+    timezone
+    calendar_event_type
   ].each do |property|
     test "presence validations for #{property} of a calendar event" do
       @calendar_event.send("#{property}=", nil)
@@ -32,38 +30,23 @@ class CalendarEventTest < ActiveSupport::TestCase
   end
 
   # validations: uniqueness
-  test 'event should be unique' do
-    fake_event = @calendar_event.dup
-    assert_not fake_event.valid?
-    assert_not_empty fake_event.errors[:academic_calendar]
+  %i[
+    calendar
+  ].each do |property|
+    test "uniqueness validations for #{property} of a calendar event" do
+      fake = @calendar_event.dup
+      assert_not fake.valid?
+      assert_not_empty fake.errors[property]
+    end
   end
 
-  # callbacks
-  test 'callback must set calendar_type_id and academic_term_id' do
-    calendar_event = calendar_events(:twenty)
-    calendar_event.calendar_title = calendar_titles(:two)
-    calendar = calendar_event.academic_calendar
-    event = CalendarEvent.create(
-      academic_calendar: academic_calendars(:lisans_calendar_spring_2017_2018),
-      calendar_title: calendar_titles(:two),
-      start_date: '2018-01-25 08:00:00',
-      end_date: '2018-02-08 17:00:00'
-    )
-    assert_equal event.calendar_type, calendar.calendar_type
-    assert_equal event.academic_term, calendar.academic_term
-  end
+  # other validations
+  test 'visible field of calendar_event can not be nil' do
+    fake = @calendar_event.dup
+    fake.visible = nil
+    assert_not fake.valid?
 
-  # scopes
-  test 'active scope returns active calendar events' do
-    assert_includes CalendarEvent.active, @calendar_event
-    assert_not_includes CalendarEvent.active, calendar_events(:twenty)
-  end
-
-  # custom tests
-  test 'check calendar event whether in proper range or not' do
-    event = calendar_events(:three)
-    event.update(start_date: Time.current, end_date: Time.current + 5.days)
-    assert event.proper_range?
-    assert_not calendar_events(:two).proper_range?
+    error_codes = fake.errors.details[:visible].map { |err| err[:error] }
+    assert error_codes.include?(:inclusion)
   end
 end

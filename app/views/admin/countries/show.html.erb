@@ -4,8 +4,8 @@
       <div class="card-header">
         <%= fa_icon 'globe' %><strong><%= @country.name %></strong>
         <div class="card-header-actions">
-          <%= link_to_edit(edit_admin_country_path(@country)) %>
-          <%= link_to_destroy(admin_country_path(@country)) %>
+          <%= link_to_edit([:edit, :admin, @country]) %>
+          <%= link_to_destroy([:admin, @country]) %>
         </div>
       </div>
 
@@ -45,12 +45,12 @@
       <div class='card-header'>
         <%= fa_icon 'street-view', text: t('.card_header') %>
         <div class="card-header-actions">
-          <%= link_to_new new_admin_country_city_path(@country), t('.new_city_link') %>
+          <%= link_to_new [:new, :admin, @country, 'city'], t('.new_city_link') %>
         </div>
       </div>
       <div class='card-body'>
         <%= render 'components/smart_search_form',
-                   path: admin_country_path(@country),
+                   path: [:admin, @country],
                    placeholder: t('.name') %>
         <% if @country.cities.any? %>
           <table class='table table-striped table-responsive-sm'>
@@ -67,9 +67,9 @@
                   <td><%= city.name %></td>
                   <td><%= city.alpha_2_code %></td>
                   <td>
-                    <%= link_to_show(admin_country_city_path(@country, city)) %>
-                    <%= link_to_edit(edit_admin_country_city_path(@country, city)) %>
-                    <%= link_to_destroy(admin_country_city_path(@country, city)) %>
+                    <%= link_to_show([:admin, @country, city]) %>
+                    <%= link_to_edit([:edit, :admin, @country, city]) %>
+                    <%= link_to_destroy([:admin, @country, city]) %>
                   </td>
                 </tr>
               <% end %>

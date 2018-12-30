@@ -9,8 +9,7 @@ class AcademicTermTest < ActiveSupport::TestCase
 
   # relations
   %i[
-    academic_calendars
-    calendar_events
+    calendars
   ].each do |property|
     test "a academic term can communicate with #{property}" do
       assert @academic_term.send(property)

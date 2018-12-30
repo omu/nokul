@@ -1,0 +1,14 @@
+tr:
+  activerecord:
+    attributes:
+      calendar_event: &calendar_event_attributes
+        calendar_event_type_id: Olay Türü
+        start_time: Başlangıç Gün ve Saati
+        end_time: Bitiş Gün ve Saati
+        location: Konumu
+        timezone: Zaman Dilimi
+        visible: Görünür
+  calendar_management:
+    calendars:
+      calendar_event_fields:
+        <<: *calendar_event_attributes

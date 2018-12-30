@@ -13,8 +13,6 @@ class UnitTypeTest < ActiveSupport::TestCase
   # relations
   %i[
     units
-    calendar_unit_types
-    calendar_types
   ].each do |property|
     test "a unit_type can communicate with #{property}" do
       assert @object.send(property)
