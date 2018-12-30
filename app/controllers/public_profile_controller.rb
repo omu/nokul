@@ -15,7 +15,8 @@ class PublicProfileController < ApplicationController
   end
 
   def vcard
-    send_data VcardBuilder.new(@identity), type: 'text/vcard; charset=utf-8; header=present', filename: 'contact.vcf'
+    send_data VcardBuilderService.new(@identity).generate, type: 'text/vcard; charset=utf-8; header=present',
+                                                           filename: 'contact.vcf'
   end
 
   private
