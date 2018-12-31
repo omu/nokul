@@ -537,6 +537,7 @@ CREATE TABLE public.calendar_events (
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     CONSTRAINT calendar_events_location_length CHECK ((length((location)::text) <= 255)),
+    CONSTRAINT calendar_events_start_time_null CHECK ((start_time IS NOT NULL)),
     CONSTRAINT calendar_events_timezone_length CHECK ((length((timezone)::text) <= 255)),
     CONSTRAINT calendar_events_timezone_presence CHECK (((timezone IS NOT NULL) AND ((timezone)::text !~ '^\s*$'::text))),
     CONSTRAINT calendar_events_visible_null CHECK ((visible IS NOT NULL))
