@@ -2,7 +2,7 @@ tr:
   activerecord:
     attributes:
       title: &title_attributes
-        name: Dilin Adı
+        name: Unvan
         code: Kodu
         branch: Dalı
   helpers:
