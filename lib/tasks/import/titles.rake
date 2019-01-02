@@ -3,6 +3,6 @@
 namespace :import do
   desc 'Imports titles from yaml'
   task titles: :environment do
-    Support.create_entities_from_yaml('Title')
+    Nokul::Support.create_entities_from_yaml('Title')
   end
 end
