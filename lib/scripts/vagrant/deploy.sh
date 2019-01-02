@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+
+set -euo pipefail; [[ -z ${TRACE:-} ]] || set -x
+
+export DEBIAN_FRONTEND=noninteractive
+
+die() {
+	echo "$@"
+	exit 1
+}
+
+pushd /vagrant &>/dev/null || die "Can't chdir to vagrant shared directory: /vagrant"
+
+manifest=app.json
+[[ -f $manifest ]] || die "Application manifest not found: $manifest"
+[[ -f Procfile  ]] || die 'No Procfile found'
+
+environment=/etc/vagrant/environment
+if [[ -f $environment ]]; then
+	# shellcheck disable=1090
+	set -a && . "$environment" && set +a
+else
+	environment=
+fi
+
+application=${application:-$(jq -r '.name' "$manifest")}
+operator=${operator:-$(id -rnu 1000 2>/dev/null)}
+
+command -v bundle &>/dev/null || gem install bundler
+
+systemctl enable --now postgresql
+systemctl enable --now redis-server
+
+sudo -EH -u postgres psql <<-EOF
+	CREATE USER $application WITH ENCRYPTED PASSWORD '$application';
+	ALTER ROLE $application LOGIN CREATEDB SUPERUSER;
+EOF
+
+sudo -EH -u "$operator" sh -xs <<-'EOF'
+	bundle install -j4 --path "${BUNDLE_PATH:-vendor/bundle}"
+	yarn install --modules-folder "${NODE_MODULES_FOLDER:-vendor/node_modules}"
+
+	bin/rails db:create
+	bin/rails db:migrate
+	bin/rails db:seed
+EOF
+
+gem install foreman
+
+foreman export -p3000 --app "$application" --user "$operator" \
+	${environment:+--env "$environment"} systemd /etc/systemd/system/
+systemctl enable --now "$application".target
