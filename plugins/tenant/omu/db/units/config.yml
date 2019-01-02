@@ -1,0 +1,59 @@
+fetching:
+  yok:
+    root_id: '121946'
+  det:
+    root_id: '78633602'
+
+coding:
+  pools:
+    - owner: distance_education_program
+      # skip '000-009'
+      begins: '010'
+      ends: '099'
+      weight: 600
+    - owner: undergraduate_program
+      begins: '100'
+      ends: '199'
+      weight: 500
+      reserved: true
+    - owner: undergraduate_program
+      # skip '200'
+      begins: '201'
+      ends: '599'
+      weight: 500
+    - owner: graduate_program
+      # skip '600'
+      begins: '601'
+      ends: '999'
+      weight: 400
+    - owner: academic
+      begins: 'A00'
+      ends: 'FF0'
+      weight: 300
+    - owner: administrative
+      begins: 'G00'
+      ends: 'HZZ'
+      weight: 200
+      # skip problematic characters
+      deny: '[ILOQWX]'
+    - owner: special
+      begins: 'Z00'
+      ends: 'ZZZ'
+      weight: 100
+      # skip problematic characters
+      deny: '[ILOQWX]'
+  reservations:
+    # Bilgisayar
+    - key: yoksis_id
+      value: '168861'
+      reservation: '203'
+    - key: yoksis_id
+      value: '211296'
+      reservation: '603'
+    # BÖTE
+    - key: yoksis_id
+      value: 168652
+      reservation: 307
+    - key: yoksis_id
+      value: 244883
+      reservation: 607

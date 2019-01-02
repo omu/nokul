@@ -89,3 +89,21 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0' # call <%= console %> anywhere in the code.
 end
+
+# application (won't be listed at Rails.groups)
+group :nokul do
+  # core plugins
+  gem 'nokul-support', path: 'plugins/support'
+  gem 'nokul-tenant',  path: 'plugins/tenant/common'
+
+  gem 'nokul', path: '.'
+end
+
+# tenants (won't be listed at Rails.groups)
+group :tenants do
+  Dir['plugins/tenant/**/*.gemspec'].each do |gemspec|
+    next if (name = File.basename(gemspec, '.gemspec')) == 'nokul-tenant'
+
+    gem name, path: File.dirname(gemspec)
+  end
+end

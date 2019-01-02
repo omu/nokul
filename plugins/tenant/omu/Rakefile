@@ -1,0 +1,42 @@
+# frozen_string_literal: true
+
+require 'bundler/setup'
+
+# Rdoc tasks
+require 'rdoc/task'
+RDoc::Task.new(:rdoc) do |rdoc|
+  if (gemspec = Dir['*.gemspec'].first)
+    title = File.basename(gemspec, '.gemspec').tr('-', ' ').capitalize
+  end
+
+  rdoc.rdoc_dir = 'rdoc'
+  rdoc.title    = title
+  rdoc.options << '--line-numbers'
+  rdoc.rdoc_files.include('README.md')
+  rdoc.rdoc_files.include('lib/**/*.rb')
+end
+
+# Engine tasks
+if File.exist? 'test/dummy/Rakefile'
+  APP_RAKEFILE = File.expand_path('test/dummy/Rakefile', __dir__)
+  load 'rails/tasks/engine.rake'
+end
+
+# Code statistics
+load 'rails/tasks/statistics.rake'
+
+# Gem tasks
+require 'bundler/gem_tasks'
+
+# Test tasks
+require 'rake/testtask'
+Rake::TestTask.new(:test) do |t|
+  t.libs << 'test'
+  t.pattern = 'test/**/*_test.rb'
+  t.verbose = false
+end
+
+# Custom tasks
+FileList['lib/tasks/**/*.rake'].each { |rake| load rake }
+
+task default: :test
