@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-event_types = YAML.load_file(Tenant::Path.db.join('event_types.yml'))
+event_types = YAML.load_file(Rails.root.join('db/static_data/event_types.yml'))
 progress_bar = ProgressBar.spawn('EventType', event_types.count)
 event_types.each do |category, event_type|
   event_type.each do |type|
