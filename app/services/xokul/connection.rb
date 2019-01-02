@@ -11,7 +11,7 @@ module Xokul
     def self.request(path, params: {}, **http_options)
       http_options[:open_timeout] ||= http_options[:read_timeout] ||= 10 if Rails.env.test?
 
-      response = RestClient.get(
+      response = Nokul::Support::RestClient.get(
         URI.join(BASE_URL, path).to_s,
         headers: {
           'Authorization' => "Bearer #{BEARER_TOKEN}",
