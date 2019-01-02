@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 Vagrant.configure('2') do |config|
+  env = {
+    'HOSTPATH': ENV['HOSTPATH']
+  }
+
   config.vm.define 'dev', primary: true do |dev|
     dev.vm.box = 'omu/debian-stable-server'
 
@@ -10,39 +14,19 @@ Vagrant.configure('2') do |config|
       lxc.customize 'cgroup.memory.limit_in_bytes', '2048M'
     end
 
-    dev.vm.provision 'shell', inline: <<~SHELL
-      systemctl enable --now postgresql
-      systemctl enable --now redis-server
-
-      apt-get update && apt-get -y install xfonts-75dpi xfonts-base fontconfig libxext6 libxrender1
-      wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.stretch_amd64.deb  \
-        && dpkg -i wkhtmlto* \
-        && rm -f wkhtmlto*
-
-      gem install bundler foreman
-
-      cd /vagrant
-
-      sudo -u postgres psql <<-EOF
-        CREATE USER nokul WITH ENCRYPTED PASSWORD 'nokul';
-        ALTER ROLE nokul LOGIN CREATEDB SUPERUSER;
-      EOF
-
-      sudo -u op sh -xs <<-EOF
-        bundle install -j4 --deployment
-        yarn install
-
-        bin/rails db:create
-        bin/rails db:migrate
-        bin/rails db:seed
-      EOF
-
-      foreman export -p3000 --app nokul --user op systemd /etc/systemd/system/
-      systemctl enable --now nokul.target
-    SHELL
+    dev.vm.provision 'shell', name: 'environment', env: env, path: 'lib/scripts/vagrant/depends.sh'
+    dev.vm.provision 'shell', name: 'environment', env: env, path: 'lib/scripts/vagrant/environment.sh'
+    dev.vm.provision 'shell', name: 'deploy',      env: env, path: 'lib/scripts/vagrant/deploy.sh'
   end
 
   config.vm.define 'paas', autostart: false do |paas|
     paas.vm.box = 'omu/debian-stable-paas'
+
+    paas.trigger.after :provision do |trigger|
+      Dir.chdir __dir__
+
+      trigger.info = 'Provisioning paas...'
+      trigger.run = { inline: 'bash lib/scripts/vagrant/paas.sh' }
+    end
   end
 end
