@@ -22,7 +22,7 @@ class String
     gsub(RE) { |char| CHARS[char] }
   end
 
-  def capitalize_all
+  def capitalize_turkish
     split.map { |word| word.capitalize(:turkic) }.join(' ')
   end
 

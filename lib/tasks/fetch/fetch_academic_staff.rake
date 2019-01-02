@@ -33,7 +33,7 @@ namespace :fetch do
 
         progress_bar&.increment
 
-        title = Title.find_by(name: academic_staff[:title].capitalize_all)
+        title = Title.find_by(name: academic_staff[:title].capitalize_turkish)
         unit = Unit.find_by(yoksis_id: academic_staff[:unit_id])
 
         employee = Employee.create(title: title, user: user)

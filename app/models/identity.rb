@@ -32,10 +32,10 @@ class Identity < ApplicationRecord
   # callbacks
   before_save do
     self.type = 'informal' if type.blank?
-    self.first_name = first_name.capitalize_all
+    self.first_name = first_name.capitalize_turkish
     self.last_name = last_name.upcase(:turkic)
-    self.mothers_name = mothers_name.capitalize_all if mothers_name
-    self.fathers_name = fathers_name.capitalize_all if fathers_name
-    self.place_of_birth = place_of_birth.capitalize_all if place_of_birth
+    self.mothers_name = mothers_name.capitalize_turkish if mothers_name
+    self.fathers_name = fathers_name.capitalize_turkish if fathers_name
+    self.place_of_birth = place_of_birth.capitalize_turkish if place_of_birth
   end
 end

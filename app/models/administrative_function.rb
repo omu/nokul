@@ -10,5 +10,5 @@ class AdministrativeFunction < ApplicationRecord
   validates :code, uniqueness: true, numericality: { only_integer: true, greater_than: 0 }
 
   # callbacks
-  before_validation { self.name = name.capitalize_all if name }
+  before_validation { self.name = name.capitalize_turkish if name }
 end
