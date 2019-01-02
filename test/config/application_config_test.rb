@@ -23,17 +23,4 @@ class ApplicationConfigTest < ActiveSupport::TestCase
   test 'Default locale should be Turkish' do
     assert_equal @config.i18n.default_locale, :tr
   end
-
-  test 'Configuration can read tenant settings' do
-    assert_not_nil @config.tenant.abbreviation
-    assert_not_nil @config.tenant.host
-  end
-
-  test 'Tenant configuration includes keys for various environments' do
-    config = YAML.load_file(Tenant.config_file)
-    assert config.key?('production')
-    assert config.key?('beta')
-    assert config.key?('test')
-    assert config.key?('development')
-  end
 end
