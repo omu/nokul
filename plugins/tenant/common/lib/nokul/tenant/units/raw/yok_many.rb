@@ -17,17 +17,17 @@ module Nokul
 
           # rubocop:disable Layout/AlignHash
           class_attribute :mapping, default: {
-            name:                         proc { |raw| raw.long_name.split('/').last&.titleize },
+            name:                         proc { |raw| raw.long_name.split('/').last&.capitalize_and_fix },
 
             yoksis_id:                    proc { |raw| raw.unit_code&.to_s },
             parent_yoksis_id:             proc { |raw| raw.parent_unit_id&.to_s },
-            district_id:                  proc { |raw| raw.district_name&.titleize },
+            district_id:                  proc { |raw| raw.district_name&.capitalize_and_fix },
 
             osym:                         proc { |raw| raw.osym_id&.to_s },
-            unit_type_id:                 proc { |raw| raw.unit_type_name&.titleize },
-            unit_status_id:               proc { |raw| raw.status_name&.titleize },
-            unit_instruction_language_id: proc { |raw| raw.instruction_language_name&.titleize },
-            unit_instruction_type_id:     proc { |raw| raw.instruction_type_name&.titleize },
+            unit_type_id:                 proc { |raw| raw.unit_type_name&.capitalize_and_fix },
+            unit_status_id:               proc { |raw| raw.status_name&.capitalize_and_fix },
+            unit_instruction_language_id: proc { |raw| raw.instruction_language_name&.capitalize_and_fix },
+            unit_instruction_type_id:     proc { |raw| raw.instruction_type_name&.capitalize_and_fix },
             duration:                     proc { |raw| raw.period_of_study }
           }.freeze
           # rubocop:enable Layout/AlignHash

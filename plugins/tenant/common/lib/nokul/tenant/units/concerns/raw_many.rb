@@ -41,39 +41,21 @@ module Nokul
         end
 
         module Refinery
-          # rubocop:disable Layout/AlignHash
-          CONJUNCTIONS = %w[
-            ama ancak dahi fakat ile lakin ve veya yani
-          ].freeze
-
-          PHRASE = {
-            '(uzaktan Öğretim)' => '(Uzaktan Öğretim)',
-            '(uzaktan Eğitim)'  => '(Uzaktan Eğitim)'
-          }.freeze
-
-          WORD = {
-            'kktc' => 'KKTC',
+          FIX_AFTER_CAPITALIZE = {
             '(iö)' => '(İÖ)',
             '(yl)' => '(YL)',
             '(dr)' => '(DR)',
-            'pr.'  => 'Programı'
+            'Pr.' => 'Programı',
+            '(uzaktan Öğretim)' => '(Uzaktan Öğretim)',
+            '(uzaktan Eğitim)' => '(Uzaktan Eğitim)'
           }.freeze
-          # rubocop:enable Layout/AlignHash
 
           refine String do
-            def titleize
-              result = downcase(:turkic).split.map do |word|
-                next word if CONJUNCTIONS.include?(word)
-                next WORD[word] if WORD.include? word
-
-                word.capitalize :turkic
-              end.join ' '
-
-              PHRASE.each do |find, replace|
-                result.gsub! find, replace
+            def capitalize_and_fix
+              capitalized = capitalize_turkish
+              FIX_AFTER_CAPITALIZE.each do |find, replace|
+                capitalized.gsub!(/(?<!\w)#{Regexp.escape(find)}(?!\w)/, replace)
               end
-
-              result
             end
           end
         end

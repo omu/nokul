@@ -17,7 +17,7 @@ module Nokul
 
           # rubocop:disable Layout/AlignHash
           class_attribute :mapping, default: {
-            name:                         proc { |raw| raw.name.split('>').last&.titleize },
+            name:                         proc { |raw| raw.name.split('>').last&.capitalize_and_fix },
             detsis_id:                    proc { |raw| raw.detsis_id&.to_s },
             parent_detsis_id:             proc { |raw| raw.parent_detsis_id&.to_s },
 
