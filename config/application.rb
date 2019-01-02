@@ -11,9 +11,7 @@ Bundler.require(:nokul)
 
 module Nokul
   class Application < Rails::Application
-    # support libraries are used for tenant configuration and Rakefile,
-    # therefore they have to required in the first place.
-    require Rails.root.join('lib', 'support')
+    Nokul::Tenant.load fallback: Nokul::TENANT_DEFAULT
 
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
@@ -48,7 +46,5 @@ module Nokul
     end
 
     config.load_defaults 5.2
-
-    Nokul::Tenant.load fallback: Nokul::TENANT_DEFAULT
   end
 end
