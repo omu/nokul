@@ -1,3 +1,29 @@
+PATH
+  remote: .
+  specs:
+    nokul (0.4.7)
+      nokul-support
+      nokul-tenant
+
+PATH
+  remote: plugins/support
+  specs:
+    nokul-support (0.1.0)
+      activesupport (~> 5.2.2)
+
+PATH
+  remote: plugins/tenant/common
+  specs:
+    nokul-tenant (0.1.0)
+      nokul-support
+
+PATH
+  remote: plugins/tenant/omu
+  specs:
+    nokul-tenant-omu (0.1.0)
+      nokul-tenant
+      rails (~> 5.2.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -350,6 +376,10 @@ DEPENDENCIES
   letter_opener
   listen (>= 3.0.5, < 3.2)
   lol_dba
+  nokul!
+  nokul-support!
+  nokul-tenant!
+  nokul-tenant-omu!
   pagy
   pg
   pg_search
