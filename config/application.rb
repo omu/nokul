@@ -7,6 +7,8 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+Bundler.require(:nokul)
+
 module Nokul
   class Application < Rails::Application
     # support libraries are used for tenant configuration and Rakefile,
@@ -37,8 +39,16 @@ module Nokul
     # schema dump sformat
     config.active_record.schema_format = :sql
 
-    # tenant configuration
-    config.active_tenant = Tenant.active
-    config.tenant = Tenant.configuration
+    def appname
+      @appname ||= if File.exist?(manifest = Rails.root.join('app.json'))
+                     JSON.parse(File.read(manifest)).fetch 'name'
+                   else
+                     self.class.parent.to_s.underscore
+                   end
+    end
+
+    config.load_defaults 5.2
+
+    Nokul::Tenant.load fallback: Nokul::TENANT_DEFAULT
   end
 end
