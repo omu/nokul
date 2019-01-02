@@ -31,7 +31,7 @@ module Nokul
         Nokul::Tenant.initialize self
 
         # Fill-in Rails.configuration.tenant
-        initializer 'tenant.main' do
+        initializer 'tenant.main', before: :bootstrap_hook do
           configure do
             config.tenant = deep_config_for(:tenant)
           end
