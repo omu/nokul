@@ -137,7 +137,7 @@ class DepartmentCourses < Nokul::Support::Collection
 end
 
 def build_curriculum(source, number_of_semesters: 8, semester_type: :periodic)
-  courses = DepartmentCourses.from_hashes(
+  courses = DepartmentCourses.create(
     CSV.foreach(source, headers: true, col_sep: '|', header_converters: :symbol, skip_blanks: true).map(&:to_h)
   )
 
