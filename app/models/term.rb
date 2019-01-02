@@ -13,5 +13,5 @@ class Term < ApplicationRecord
   validates :identifier, presence: true, uniqueness: true, length: { maximum: 255 }
 
   # callbacks
-  before_validation { self.name = name.capitalize_all if name }
+  before_validation { self.name = name.capitalize_turkish if name }
 end
