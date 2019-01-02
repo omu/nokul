@@ -1,14 +1,7 @@
 # frozen_string_literal: true
 
-require 'active_support/all'
-require 'json'
-require 'net/http'
-require 'openssl'
-require 'uri'
-
 module Nokul
   module Support
-    # RestClient
     module RestClient
       SUPPORTED_HTTP_METHODS = %i[
         delete
@@ -18,31 +11,17 @@ module Nokul
         put
       ].freeze
 
+      private_constant :SUPPORTED_HTTP_METHODS
+
       class Error < StandardError; end
 
       class HTTPMethodError < Error; end
 
-      class HTTPOptionError < Error; end
+      class UnmarshalJSONError < Error; end
 
-      # Request
+      class UnsupportedHTTPOptionError < Error; end
+
       class Request
-        def initialize(method, url, header = {}, **http_options)
-          @method = method
-          @url    = url
-          @header = header
-
-          SUPPORTED_HTTP_METHODS.include?(method) || raise(HTTPMethodError, "Unsupported HTTP method: :#{method}")
-
-          build_http_object(http_options)
-        end
-
-        def execute(payload = nil)
-          klass = "Net::HTTP::#{method.capitalize}".constantize
-          request = klass.new(url, header)
-
-          Response.new(@http.request(request, payload))
-        end
-
         SUPPORTED_HTTP_OPTIONS = {
           open_timeout: 60,
           read_timeout: 60,
@@ -52,22 +31,42 @@ module Nokul
 
         private_constant :SUPPORTED_HTTP_OPTIONS
 
+        # rubocop:disable Style/IfUnlessModifier
+        def initialize(method, url, headers = {}, **http_options)
+          @method  = method
+          @url     = url
+          @headers = headers
+
+          unless method.in?(SUPPORTED_HTTP_METHODS)
+            raise HTTPMethodError, "unsupported HTTP method: #{method}"
+          end
+
+          build_http_object http_options
+        end
+        # rubocop:enable Style/IfUnlessModifier
+
+        def execute(payload = nil)
+          klass = "Net::HTTP::#{method.capitalize}".constantize
+          request = klass.new url, headers
+          Response.new @http.request(request, payload)
+        end
+
         protected
 
-        attr_reader :method, :url, :header
+        attr_reader :method, :url, :headers
 
         private
 
         def build_http_object(http_options)
           uri   = URI.parse(url)
-          @http = Net::HTTP.new(uri.host, uri.port)
+          @http = Net::HTTP.new uri.host, uri.port
 
-          unsupported_opts = http_options.keys - SUPPORTED_HTTP_OPTIONS.keys
-          unsupported_opts.empty? || raise(HTTPOptionError, "Unsupported HTTP options: #{unsupported_opts}")
-
-          http_options.each do |option, value|
-            @http.send("#{option}=", value)
+          unsupported_options = http_options.keys - SUPPORTED_HTTP_OPTIONS.keys
+          unless unsupported_options.empty?
+            raise UnsupportedHTTPOptionError, "unsupported HTTP options: #{unsupported_options}"
           end
+
+          http_options.each { |option, value| @http.send "#{option}=", value }
         end
       end
 
@@ -80,16 +79,14 @@ module Nokul
           http_response.code.to_i
         end
 
-        def decode
-          JSON.parse(body)
-        end
-
         def error!
-          http_response.error! unless [200, 204].include?(code)
+          http_response.error! unless code.eql? 200
         end
 
-        def ok?
-          code.eql?(200)
+        def unmarshal_json
+          JSON.parse(body || '')
+        rescue JSON::ParserError
+          raise UnmarshalJSONError, 'response body is not parseable'
         end
       end
 
@@ -98,8 +95,8 @@ module Nokul
       module_function
 
       SUPPORTED_HTTP_METHODS.each do |method|
-        define_method(method) do |url, header: {}, payload: nil, **http_options|
-          Request.new(method, url, header, **http_options).execute(payload)
+        define_method(method) do |url, headers: {}, payload: nil, **http_options|
+          Request.new(method, url, headers, **http_options).execute(payload)
         end
       end
     end
