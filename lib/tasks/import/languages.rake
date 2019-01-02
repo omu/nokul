@@ -3,6 +3,6 @@
 namespace :import do
   desc 'Imports languages from yaml'
   task languages: :environment do
-    Support.create_entities_from_yaml('Language')
+    Nokul::Support.create_entities_from_yaml('Language')
   end
 end
