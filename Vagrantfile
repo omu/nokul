@@ -14,9 +14,9 @@ Vagrant.configure('2') do |config|
       lxc.customize 'cgroup.memory.limit_in_bytes', '2048M'
     end
 
-    dev.vm.provision 'shell', name: 'environment', env: env, path: 'lib/scripts/vagrant/depends.sh'
-    dev.vm.provision 'shell', name: 'environment', env: env, path: 'lib/scripts/vagrant/environment.sh'
-    dev.vm.provision 'shell', name: 'deploy',      env: env, path: 'lib/scripts/vagrant/deploy.sh'
+    dev.vm.provision 'shell', name: 'environment', env: env, path: 'lib/scripts/preinst.sh'
+    dev.vm.provision 'shell', name: 'environment', env: env, path: 'lib/scripts/environment.sh'
+    dev.vm.provision 'shell', name: 'deploy',      env: env, path: 'lib/scripts/deploy.sh'
   end
 
   config.vm.define 'paas', autostart: false do |paas|
@@ -26,7 +26,7 @@ Vagrant.configure('2') do |config|
       Dir.chdir __dir__
 
       trigger.info = 'Provisioning paas...'
-      trigger.run = { inline: 'bash lib/scripts/vagrant/paas.sh' }
+      trigger.run = { inline: 'bash lib/scripts/paas.sh' }
     end
   end
 end

@@ -9,7 +9,7 @@ die() {
 	exit 1
 }
 
-pushd /vagrant &>/dev/null || die "Can't chdir to vagrant shared directory: /vagrant"
+pushd /app &>/dev/null || die "Can't chdir to app directory: /app"
 
 manifest=app.json
 [[ -f $manifest ]] || die "Application manifest not found: $manifest"
@@ -17,8 +17,8 @@ manifest=app.json
 application=${application:-$(jq -r '.name' "$manifest")}
 operator=${operator:-$(id -rnu 1000 2>/dev/null)}
 
-environment=/etc/vagrant/environment
-mkdir -p "$(dirname "$environment")" && touch "$environment"
+environment=/etc/environment
+touch "$environment"
 
 if [[ -d ${HOSTPATH:-} ]]; then
 	hostdir=$(readlink -f "$HOSTPATH")
@@ -37,7 +37,3 @@ fi
 if [[ -f .env ]]; then
 	cat .env >>"$environment"
 fi
-
-su - "$operator" -c 'cat >>.zshrc'<<-EOF
-	cd /vagrant && set -a && . "$environment" && set +a
-EOF

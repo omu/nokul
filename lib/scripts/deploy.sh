@@ -9,13 +9,13 @@ die() {
 	exit 1
 }
 
-pushd /vagrant &>/dev/null || die "Can't chdir to vagrant shared directory: /vagrant"
+pushd /app &>/dev/null || die "Can't chdir to app directory: /app"
 
 manifest=app.json
 [[ -f $manifest ]] || die "Application manifest not found: $manifest"
 [[ -f Procfile  ]] || die 'No Procfile found'
 
-environment=/etc/vagrant/environment
+environment=/etc/environment
 if [[ -f $environment ]]; then
 	# shellcheck disable=1090
 	set -a && . "$environment" && set +a
