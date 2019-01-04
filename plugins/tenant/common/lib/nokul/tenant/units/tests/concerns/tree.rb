@@ -19,7 +19,6 @@ module Nokul
               end
 
               test "each unit's parent must exist except root" do
-                skip
                 missing_parents = units.select { |unit| units.get(unit.parent_id).nil? }
                 missing_parents -= [units.root]
 
@@ -27,7 +26,6 @@ module Nokul
               end
 
               test 'all children and parent units must be placed at tree' do
-                skip
                 seen = (units.tree.values.flatten.map(&:id) + units.tree.keys).uniq.size
                 assert_equal units.size, seen - 1
               end

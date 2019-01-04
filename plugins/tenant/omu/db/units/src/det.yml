@@ -4718,7 +4718,7 @@
 
 - name: Veteriner Hekimliği Temel Bilimler Bölüm Başkanlığı
   abbreviation: VETERİNER-TEMEL-BB
-  parent_yoksis_id: '147745'
+  parent_yoksis_id: '122246'
   detsis_id: '17638934'
   parent_detsis_id: '32319693'
   unit_type_id: Bölüm Başkanlığı
@@ -5288,7 +5288,7 @@
 
 - name: Müzikoloji Bölüm Başkanlığı
   abbreviation: KONSERVATUVAR-MÜZİKO-BB
-  parent_yoksis_id: '122309'
+  parent_yoksis_id: '122322'
   detsis_id: '22937161'
   parent_detsis_id: '95441125'
   unit_type_id: Bölüm Başkanlığı
@@ -5299,7 +5299,7 @@
 
 - name: Sahne Sanatları Bölüm Başkanlığı
   abbreviation: KONSERVATUVAR-SAHNE-BB
-  parent_yoksis_id: '122313'
+  parent_yoksis_id: '122326'
   detsis_id: '50929935'
   parent_detsis_id: '95441125'
   unit_type_id: Bölüm Başkanlığı
@@ -5697,6 +5697,8 @@
   parent_detsis_id: '52235156'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
   abbreviation: KONSERVATUVAR-SKS-BR
@@ -5704,6 +5706,8 @@
   parent_detsis_id: '95441125'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Elektrik-elektronik Mühendisliği Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-EEM-ADB
@@ -5907,6 +5911,8 @@
   parent_detsis_id: '78633602'
   unit_type_id: Merkez Müdürlüğü
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   issues:
     - İlişkili olduğu Sağlık Araştırma Ve Uygulama Merkezi aktif değil
 
@@ -6193,6 +6199,8 @@
   parent_detsis_id: '52235156'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Resmi Kurumlar Faturalama Birimi
   abbreviation: SAĞLIK-AUM-MALİ-FATURA-BR
@@ -6200,6 +6208,8 @@
   parent_detsis_id: '90252080'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Bilgi İşlem Birimi
   abbreviation: GÜZELSANATLAR-BİLGİ-BR
@@ -6223,6 +6233,8 @@
   parent_detsis_id: '52235156'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Erişkin Hastanesi Başhekimliği
   abbreviation: SAĞLIK-AUM-ERİŞKİN-BAŞHEK
@@ -6230,6 +6242,8 @@
   parent_detsis_id: '15374210'
   unit_type_id: Başhekimlik
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: İdari İşler Birimi
   abbreviation: SAĞLIK-BİLİM-İDARİ-BR
@@ -6253,6 +6267,8 @@
   parent_detsis_id: '15374210'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
   abbreviation: EĞİTİM-BİLİM-YAPI-BR
@@ -6377,6 +6393,8 @@
   parent_detsis_id: '52235156'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Fizik Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-FİZİK-ADB
@@ -6392,6 +6410,8 @@
   parent_detsis_id: '52235156'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Avrupa-akdeniz Kültürler ve Turizm Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-AAKT-ADB
@@ -6457,6 +6477,8 @@
   parent_detsis_id: '46010950'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: İdari İşler Birimi
   abbreviation: VETERİNER-İDARİ-BR
@@ -6480,6 +6502,8 @@
   parent_detsis_id: '61232311'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   issues:
     - Yoksis tarafında anabilim dalı yok
 
@@ -6497,6 +6521,8 @@
   parent_detsis_id: '52235156'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Ruh Sağlığı ve Hastalıkları Hemşireliği Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-RUH-ADB
@@ -6548,6 +6574,8 @@
   parent_detsis_id: '15374210'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Evde Bakım Hemşireliği Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-EBH-ADB
@@ -6613,6 +6641,8 @@
   parent_detsis_id: '97668190'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Hukuk İşleri Birimi
   abbreviation: SAMSUN-MYO-HUKUK-BR
@@ -7149,6 +7179,8 @@
   parent_detsis_id: '15374210'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Yabancı Uyruklu Öğrenciler Birimi
   abbreviation: Öİ-DB-YU-BR
@@ -7261,6 +7293,8 @@
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   issues:
     - Mükerrer isimli birim; DİŞ-KLİNİK-PEDO-ADB
     - Yoksis tarafında anabilim dalı DİŞ'e bağlı
@@ -7412,6 +7446,8 @@
   parent_detsis_id: '15374210'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Öğrenci İşleri Birimi
   abbreviation: MİMARLIK-ÖĞRENCİ-BR
@@ -7427,6 +7463,8 @@
   parent_detsis_id: '15374210'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
   abbreviation: GÜZEL-SANAT-YAPI-BR
@@ -7499,6 +7537,8 @@
   parent_detsis_id: '97668190'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: İşletme Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-İŞLETME-ADB
@@ -7621,6 +7661,8 @@
   parent_detsis_id: '52235156'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Personel İşleri Birimi
   abbreviation: SAĞLIK-MYO-PERSONEL-BR
@@ -7803,6 +7845,8 @@
   parent_detsis_id: '15374210'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Turizm İşletmeciliği Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-TURİŞ-ADB
@@ -7882,6 +7926,8 @@
   parent_detsis_id: '15374210'
   unit_type_id: Başmüdürlük
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: SOSYAL-BİLİM-YAYIN-BR
@@ -7951,6 +7997,8 @@
   parent_detsis_id: '15374210'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Enfeksiyon Kontrol Komitesi
   abbreviation: SAĞLIK-AUM-ENFEKSİYON-MR
@@ -7958,6 +8006,8 @@
   parent_detsis_id: '15374210'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Veterinerlik Cerrahisi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-VCERRAHİ-ADB
@@ -8026,6 +8076,8 @@
   parent_detsis_id: '15374210'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Hukuk İşleri Birimi
   abbreviation: SAĞLIK-AUM-HUKUK-BR
@@ -8033,6 +8085,8 @@
   parent_detsis_id: '15374210'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Bilgi İşlem Birimi
   abbreviation: SPOR-BİLGİ-BR
@@ -8327,6 +8381,8 @@
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   issues:
     - Mükerrer isimli birim; VETERİNER-TEMEL-BİYOKİMYA-ADB
     - Yoksis tarafında anabilim dalı diğerine bağlı
@@ -8457,6 +8513,8 @@
   parent_detsis_id: '50713553'
   unit_type_id: Meslek Yüksekokulu Sekreterliği
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Personel İşleri Birimi
   abbreviation: BAFRA-MYO-PERSONEL-BR
@@ -8639,6 +8697,8 @@
   parent_detsis_id: '46010950'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Öğrenci İşleri Birimi
   abbreviation: ADALET-MYO-ÖĞRENCİ-BR
@@ -8958,6 +9018,8 @@
   parent_detsis_id: '52235156'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
   abbreviation: ZİRAAT-SKS-BR
@@ -9000,6 +9062,8 @@
   parent_detsis_id: '15374210'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Bilgi İşlem Birimi
   abbreviation: VETERİNER-BİLGİ-BR
@@ -9075,6 +9139,8 @@
   parent_detsis_id: '52235156'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Web ve Yazılım Birimi
   abbreviation: Bİ-DB-WEB-BR
@@ -9156,6 +9222,8 @@
   parent_detsis_id: '90252080'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: FEN-BASIN-BR
@@ -9171,6 +9239,8 @@
   parent_detsis_id: '22124406'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Sanat Tarihi Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-SANATTARİHİ-ADB
@@ -9208,6 +9278,8 @@
   parent_detsis_id: '22124406'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Bilgi İşlem Birimi
   abbreviation: SAMSUN-MYO-BİLGİ-BR
@@ -9781,6 +9853,8 @@
   parent_detsis_id: '52235156'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Personel İşleri Birimi
   abbreviation: FEN-BİLİM-PERSONEL-BR
@@ -9837,6 +9911,8 @@
   parent_detsis_id: '46010950'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Beslenme ve Destek Hizmetleri Birimi
   abbreviation: SKS-DB-BESLENME-BR
@@ -10192,6 +10268,8 @@
   parent_detsis_id: '15374210'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Bilgi İşlem Birimi
   abbreviation: Öİ-DB-BİLGİ-BR
@@ -10392,6 +10470,8 @@
   parent_detsis_id: '15374210'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Proje Birimi
   abbreviation: VETERİNER-PROJE-BR
@@ -10425,6 +10505,8 @@
   parent_detsis_id: '15374210'
   unit_type_id: Başhekimlik
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Uluslararası Ticaret Anabilim Dalı Başkanlığı
   abbreviation: UTL-UT-ADB
@@ -10619,6 +10701,8 @@
   parent_detsis_id: '15374210'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Acil Hemşireliği Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-ACİL-ADB
@@ -10748,6 +10832,8 @@
   parent_detsis_id: '15374210'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Mali İşler Birimi
   abbreviation: ADALET-MYO-MALİ-BR
@@ -10762,1041 +10848,1395 @@
   parent_detsis_id: '10190983'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kurullar
   detsis_id: '98757038'
   parent_detsis_id: '15086663'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Meslek Yüksekokulu Yönetici ve Sekreterliği
   detsis_id: '51151371'
   parent_detsis_id: '15086663'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kurullar
   detsis_id: '81808434'
   parent_detsis_id: '68459231'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Meslek Yüksekokulu Yönetici ve Sekreterliği
   detsis_id: '59474723'
   parent_detsis_id: '68459231'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Deniz ve Liman İşletmeciliği Programı
   detsis_id: '98417912'
   parent_detsis_id: '72286599'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Otobüs Kaptanlığı Programı
   detsis_id: '76183982'
   parent_detsis_id: '72286599'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Posta Hizmetleri Programı
   detsis_id: '37864824'
   parent_detsis_id: '72286599'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Yat İşletme ve Yönetimi Programı
   detsis_id: '34900084'
   parent_detsis_id: '72286599'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Lojistik Programı
   detsis_id: '79419485'
   parent_detsis_id: '37588931'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Dekanlık Yönetici ve Sekreterliği
   detsis_id: '83193703'
   parent_detsis_id: '80803429'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kurullar
   detsis_id: '86076031'
   parent_detsis_id: '80803429'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Bilgisayar Programcılığı Programı
   detsis_id: '60080269'
   parent_detsis_id: '85835274'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Organik Tarım Programı
   detsis_id: '59052867'
   parent_detsis_id: '63395826'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Seracılık Programı
   detsis_id: '89793708'
   parent_detsis_id: '63395826'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Tütün Yetiştiriciliği ve İşletmeciliği Programı
   detsis_id: '62041861'
   parent_detsis_id: '63395826'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Tıbbi Aromatik Bitkiler Programı
   detsis_id: '47055033'
   parent_detsis_id: '63395826'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kurullar
   detsis_id: '86887458'
   parent_detsis_id: '50713553'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Meslek Yüksekokulu Yönetici ve Sekreterliği
   detsis_id: '95546792'
   parent_detsis_id: '50713553'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Muhasebe Vergi Programı
   detsis_id: '28569474'
   parent_detsis_id: '52857079'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Basın Yayın ve Halkla İlişkiler
   detsis_id: '34197392'
   parent_detsis_id: '78633602'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Biyoteknoloji Araştırma ve Uygulama Merkezi Müdürlüğü
   detsis_id: '78303599'
   parent_detsis_id: '78633602'
   unit_type_id: Merkez Müdürlüğü
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Geleneksel Türk Müzikleri Anasanat Dalı Başkanlığı
   detsis_id: '65374718'
   parent_detsis_id: '95441125'
   unit_type_id: Anasanat Dalı Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Dekanlık Yönetici ve Sekreterliği
   detsis_id: '47737437'
   parent_detsis_id: '45458912'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kurullar
   detsis_id: '45806593'
   parent_detsis_id: '45458912'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Enformatik Bölüm Başkanlığı
   detsis_id: '62265988'
   parent_detsis_id: '78633602'
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Müzik Eğitimi Bilim Dalı
   detsis_id: '12649192'
   parent_detsis_id: '86348859'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Resim-iş Eğitimi Bilim Dalı
   detsis_id: '60676885'
   parent_detsis_id: '86348859'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kurullar ve Komisyonlar
   detsis_id: '79816970'
   parent_detsis_id: '42301062'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Ortaöğretim Sosyal Alanlar Eğitimi Anabilim Dalı Başkanlığı
   detsis_id: '26406082'
   parent_detsis_id: '42301062'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Dekanlık Yönetici ve Sekreterliği
   detsis_id: '30421360'
   parent_detsis_id: '98725097'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Din Kültürü ve Ahlak Bilgisi Eğitimi Bölüm Başkanlığı
   detsis_id: '26454860'
   parent_detsis_id: '98725097'
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kurullar
   detsis_id: '46620797'
   parent_detsis_id: '98725097'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: İlköğretim Matematik Eğitimi Anabilim Dalı Başkanlığı
   detsis_id: '60399474'
   parent_detsis_id: '11211358'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Türkçe Eğitimi Bölüm Başkanlığı
   detsis_id: '65694890'
   parent_detsis_id: '98725097'
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Türkçe Eğitimi Anabilim Dalı Başkanlığı
   detsis_id: '92793357'
   parent_detsis_id: '63688363'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Türkçe Eğitimi Anabilim Dalı Başkanlığı
   detsis_id: '45521777'
   parent_detsis_id: '63688363'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Türkçe Eğitimi Anabilim Dalı Başkanlığı
   detsis_id: '97189975'
   parent_detsis_id: '63688363'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kurullar ve Komisyonlar
   detsis_id: '98778265'
   parent_detsis_id: '43847920'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Moleküler Biyoloji ve Genetik Anabilim Dalı Başkanlığı
+  abbreviation: MOLBİYOGEN-ADB
   detsis_id: '69748915'
   parent_detsis_id: '43847920'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Alaçam
+  issues:
+    - Enstitüye bağlı Anabilim Dalı Başkanlığı
 
 - name: Dekanlık Yönetici ve Sekreterliği
   detsis_id: '64244243'
   parent_detsis_id: '41130367'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kurullar
   detsis_id: '53454237'
   parent_detsis_id: '41130367'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Moleküler Biyoloji ve Genetik Bölüm Başkanlığı
   detsis_id: '19368111'
   parent_detsis_id: '41130367'
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Moleküler Biyoloji ve Genetik Bölüm Başkanlığı
   detsis_id: '21881917'
   parent_detsis_id: '41130367'
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Fındık ve Diğer Sert Kabuklu Meyveler Araştırma ve Uygulama Merkezi Müdürlüğü
   detsis_id: '21921988'
   parent_detsis_id: '78633602'
   unit_type_id: Merkez Müdürlüğü
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Genel Sekreter
   detsis_id: '95200414'
   parent_detsis_id: '90404739'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kurullar ve Komisyonlar
   detsis_id: '59886304'
   parent_detsis_id: '28913907'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Tıbbi Resimleme Anabilim Dalı Başkanlığı
   detsis_id: '84762792'
   parent_detsis_id: '28913907'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Dekanlık Yönetici ve Sekreterliği
   detsis_id: '43708688'
   parent_detsis_id: '32859882'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kurullar
   detsis_id: '73602586'
   parent_detsis_id: '32859882'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Büro Yönetimi ve Yönetici Asistanlığı Programı
   detsis_id: '61942811'
   parent_detsis_id: '58495702'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kurullar
   detsis_id: '52504684'
   parent_detsis_id: '78645283'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Meslek Yüksekokulu Yönetici ve Sekreterliği
   detsis_id: '64727628'
   parent_detsis_id: '78645283'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Turizm ve Otel İşletmeciliği Programı
   detsis_id: '73311120'
   parent_detsis_id: '29817164'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Fizyoterapi Programı
   detsis_id: '30741492'
   parent_detsis_id: '83115249'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: İşletme Yönetimi Programı
   detsis_id: '26687295'
   parent_detsis_id: '44735465'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: İnşaat Teknolojisi Programı
   detsis_id: '24784243'
   parent_detsis_id: '50612754'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kalite Geliştirme ve İzleme Koordinatörlüğü
   detsis_id: '10668649'
   parent_detsis_id: '78633602'
   unit_type_id: Koordinatörlük
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Koordinatörlükler
   detsis_id: '64774613'
   parent_detsis_id: '78633602'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kök Hücre Araştırma Merkezi Müdürlüğü
   detsis_id: '26951990'
   parent_detsis_id: '78633602'
   unit_type_id: Merkez Müdürlüğü
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Dekanlık Yönetici ve Sekreterliği
   detsis_id: '14147295'
   parent_detsis_id: '85074962'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kurullar
   detsis_id: '36097121'
   parent_detsis_id: '85074962'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Dekanlık Yönetici ve Sekreterliği
   detsis_id: '74785455'
   parent_detsis_id: '81181891'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kurullar
   detsis_id: '89813843'
   parent_detsis_id: '81181891'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Ortak Dersler Bölüm Başkanlığı
   detsis_id: '65449837'
   parent_detsis_id: '78633602'
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Bilgisayar Programcılığı Programı
   detsis_id: '59657637'
   parent_detsis_id: '27974305'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Seracılık Programı
   detsis_id: '12842960'
   parent_detsis_id: '86912044'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Mimari Dekoratif Sanatlar Programı
   detsis_id: '50703996'
   parent_detsis_id: '73668257'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Basım ve Yayım Teknolojileri Programı
   detsis_id: '35677951'
   parent_detsis_id: '91097286'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Grafik Programı Programı
   detsis_id: '36347037'
   parent_detsis_id: '91097286'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kurullar
   detsis_id: '88041650'
   parent_detsis_id: '56591305'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Tarım Makineleri Programı
   detsis_id: '29719674'
   parent_detsis_id: '55177162'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Meslek Yüksekokulu Yönetici ve Sekreterliği
   detsis_id: '29842280'
   parent_detsis_id: '56591305'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Muhasebe ve Vergi Uygulama Programı
   detsis_id: '22745731'
   parent_detsis_id: '59424017'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Otel Lokanta ve İkram Hizmetleri Programı
   detsis_id: '39769416'
   parent_detsis_id: '21272681'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Peyzaj ve Süs Bitkileri Programı
   detsis_id: '27842579'
   parent_detsis_id: '74699895'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Halkla İlişkiler ve Tanıtım Programı
   detsis_id: '47832947'
   parent_detsis_id: '62196293'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Çocuk Gelişimi Programı
   detsis_id: '18140189'
   parent_detsis_id: '37500600'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kan Merkezi
   detsis_id: '42787486'
   parent_detsis_id: '15374210'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Fizyoloji Anabilim Dalı Başkanlığı
   detsis_id: '40251114'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kurullar ve Komisyonlar
   detsis_id: '67596551'
   parent_detsis_id: '93771576'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Moleküler Tıp Anabilim Dalı Başkanlığı
   detsis_id: '10452758'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Moleküler Tıp Anabilim Dalı Başkanlığı
   detsis_id: '10871381'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Moleküler Tıp Anabilim Dalı Başkanlığı
   detsis_id: '18343948'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Moleküler Tıp Anabilim Dalı Başkanlığı
   detsis_id: '39523680'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Moleküler Tıp Anabilim Dalı Başkanlığı
   detsis_id: '40719178'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Moleküler Tıp Anabilim Dalı Başkanlığı
   detsis_id: '41656271'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Moleküler Tıp Anabilim Dalı Başkanlığı
   detsis_id: '44621071'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Moleküler Tıp Anabilim Dalı Başkanlığı
   detsis_id: '68632300'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Moleküler Tıp Anabilim Dalı Başkanlığı
   detsis_id: '77510536'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Su Ürünleri Hastalıkları Anabilim Dalı Başkanlığı
   detsis_id: '72063408'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kurullar
   detsis_id: '82093248'
   parent_detsis_id: '28050591'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Yüksekokul Yönetici ve Sekreterliği
   detsis_id: '68060458'
   parent_detsis_id: '28050591'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Ebelik Anabilim Dalı Başkanlığı
   detsis_id: '12198431'
   parent_detsis_id: '72517064'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Ağız ve Diş Sağlığı Programı
   detsis_id: '84907794'
   parent_detsis_id: '33810830'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Diş Protez Teknolojisi Programı
   detsis_id: '25851407'
   parent_detsis_id: '33810830'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Meslek Yüksekokulu Yönetici ve Sekreterliği
   detsis_id: '63599770'
   parent_detsis_id: '45664456'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Yaşlı Bakım Programı
   detsis_id: '58130219'
   parent_detsis_id: '76762600'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Anestezi Programı
   detsis_id: '44832520'
   parent_detsis_id: '75296948'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Diyaliz Programı
   detsis_id: '69747318'
   parent_detsis_id: '75296948'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Optisyenlik Programı
   detsis_id: '14725835'
   parent_detsis_id: '75296948'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Patoloji Laboratuvar Teknikleri Programı
   detsis_id: '91554575'
   parent_detsis_id: '75296948'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Tıbbi Dokümantasyon ve Sekreterlik Programı
   detsis_id: '91883414'
   parent_detsis_id: '75296948'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Tıbbi Görüntüleme Teknikleri Programı
   detsis_id: '72379774'
   parent_detsis_id: '75296948'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Tıbbi Laboratuvar Teknikleri Programı
   detsis_id: '88476718'
   parent_detsis_id: '75296948'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: İlk ve Acil Yardım Programı
   detsis_id: '28947035'
   parent_detsis_id: '75296948'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kurullar ve Komisyonlar
   detsis_id: '35773261'
   parent_detsis_id: '61232311'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Psikoloji Anabilim Dalı Başkanlığı
   detsis_id: '47526414'
   parent_detsis_id: '61232311'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Sosyal Tesisler İşletme Müdürlüğü
   detsis_id: '27220789'
   parent_detsis_id: '78633602'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Su Ekosistemleri Araştırma ve Uygulama Merkezi Müdürlüğü
   detsis_id: '45534268'
   parent_detsis_id: '78633602'
   unit_type_id: Merkez Müdürlüğü
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Gıda Teknolojisi Programı
   detsis_id: '65422634'
   parent_detsis_id: '67358542'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kurullar
   detsis_id: '93497300'
   parent_detsis_id: '36024139'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Meslek Yüksekokulu Yönetici ve Sekreterliği
   detsis_id: '17912811'
   parent_detsis_id: '36024139'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Muhasebe ve Vergi Programı
   detsis_id: '85217269'
   parent_detsis_id: '44502530'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Pazarlama Programı
   detsis_id: '86285770'
   parent_detsis_id: '45447142'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Dekanlık Yönetici ve Sekreterliği
   detsis_id: '81566753'
   parent_detsis_id: '37195700'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Turizm Rehberliği Bölüm Başkanlığı
   detsis_id: '26422170'
   parent_detsis_id: '37195700'
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Dekanlık Yönetici ve Sekreterliği
   detsis_id: '33834875'
   parent_detsis_id: '45829229'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kurullar
   detsis_id: '82076268'
   parent_detsis_id: '45829229'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Dekanlık Yönetici ve Sekreterliği
   detsis_id: '41831945'
   parent_detsis_id: '32319693'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kurullar
   detsis_id: '82730282'
   parent_detsis_id: '32319693'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Labarotuvar Hayvanları Anabilim Dalı Başkanlığı
   detsis_id: '55002783'
   parent_detsis_id: '32319693'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Laboratuvar Hayvanları Anabilim Dalı Başkanlığı
   detsis_id: '30847570'
   parent_detsis_id: '32319693'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Bilgisyara Programcılığı Programı
   detsis_id: '51949592'
   parent_detsis_id: '65262987'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kurullar
   detsis_id: '31069169'
   parent_detsis_id: '61206311'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Mobilya ve Dekarasyon Programı
   detsis_id: '98876400'
   parent_detsis_id: '82300649'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Meslek Yüksekokulu Yönetici ve Sekreterliği
   detsis_id: '25560144'
   parent_detsis_id: '61206311'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Muhasebe ve Vergi Uygulamaları Programı
   detsis_id: '45458474'
   parent_detsis_id: '88418293'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Ormancılık Programı
   detsis_id: '51177681'
   parent_detsis_id: '99534530'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Çocuk Gelişimi Programı
   detsis_id: '96733840'
   parent_detsis_id: '89587065'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kurullar
   detsis_id: '62078218'
   parent_detsis_id: '19676956'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Yüksekokul Yönetici ve Sekreterliği
   detsis_id: '77222506'
   parent_detsis_id: '19676956'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Atölyeler ve Küçük Onarım Şube Müdürlüğü
   detsis_id: '50527038'
   parent_detsis_id: '68380559'
   unit_type_id: Şube Müdürlüğü
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Orman ve Çevre Şube Müdürlüğü
   detsis_id: '87406384'
   parent_detsis_id: '68380559'
   unit_type_id: Şube Müdürlüğü
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Proje Planlama ve Yatırım Şube Müdürlüğü
   detsis_id: '69375446'
   parent_detsis_id: '68380559'
   unit_type_id: Şube Müdürlüğü
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Yapım Şube Müdürlüğü
   detsis_id: '71518159'
   parent_detsis_id: '68380559'
   unit_type_id: Şube Müdürlüğü
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: İdari ve Mali Hizmetler Şube Müdürlüğü
   detsis_id: '22789797'
   parent_detsis_id: '68380559'
   unit_type_id: Şube Müdürlüğü
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: İşletmeler ve Altyapı Şube Müdürlüğü
   detsis_id: '87019363'
   parent_detsis_id: '68380559'
   unit_type_id: Şube Müdürlüğü
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Dekanlık Yönetici ve Sekreterliği
   detsis_id: '41790169'
   parent_detsis_id: '80270232'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kurullar
   detsis_id: '66422082'
   parent_detsis_id: '80270232'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Bilgisayar Teknolojileri Programı
   detsis_id: '16498975'
   parent_detsis_id: '31224800'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Elektrik Programı
   detsis_id: '57144315'
   parent_detsis_id: '56441771'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Elektronik Teknolojileri Programı
   detsis_id: '41294360'
   parent_detsis_id: '26650433'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Gıda Teknolojisi Programı
   detsis_id: '10141846'
   parent_detsis_id: '61279147'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kimya Teknoloji Programı
   detsis_id: '14569959'
   parent_detsis_id: '36423302'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kurullar
   detsis_id: '95056941'
   parent_detsis_id: '30423168'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Endüstriyel Kalıpçılık Programı
   detsis_id: '53421119'
   parent_detsis_id: '56066727'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Meslek Yüksekokulu Yönetici ve Sekreterliği
   detsis_id: '69794627'
   parent_detsis_id: '30423168'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Otomotiv Teknoloji Programı
   detsis_id: '60403169'
   parent_detsis_id: '91760724'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Dekanlık Yönetici ve Sekreterliği
   detsis_id: '12985439'
   parent_detsis_id: '52180288'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kurullar
   detsis_id: '88140941'
   parent_detsis_id: '52180288'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Zorunlu Ortak Servis Dersleri Koordinatörlüğü
   detsis_id: '64641733'
   parent_detsis_id: '78633602'
   unit_type_id: Koordinatörlük
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Bilgisayar Programcılığı Programı
   detsis_id: '57535651'
   parent_detsis_id: '42092164'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Bankacılık ve Sigortacılık Programı
   detsis_id: '48618300'
   parent_detsis_id: '75851438'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Sosyal Güvenlik Programı
   detsis_id: '94568095'
   parent_detsis_id: '80462939'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kurullar
   detsis_id: '72590161'
   parent_detsis_id: '21071378'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Meslek Yüksekokulu Yönetici ve Sekreterliği
   detsis_id: '94995844'
   parent_detsis_id: '21071378'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Muhasebe ve Vergi Uygulamaları Programı
   detsis_id: '35890219'
   parent_detsis_id: '84899036'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Çarşamba İnsan ve Toplum Bilimleri Fakültesi
   detsis_id: '39177929'
   parent_detsis_id: '78633602'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Personel İşleri Birimi
   detsis_id: '94886247'
   parent_detsis_id: '93417155'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Öğrenci İşleri Birimi
   detsis_id: '10869084'
   parent_detsis_id: '93417155'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: İdari İşler Birimi
   detsis_id: '13857087'
   parent_detsis_id: '93417155'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Üniversite-sanayi-iş Dünyası İşbirliğini Geliştirme Uygulama ve Araştırma Merkezi Müdürlüğü
   detsis_id: '42508530'
   parent_detsis_id: '78633602'
   unit_type_id: Merkez Müdürlüğü
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Dekanlık Yönetici ve Sekreterliği
   detsis_id: '57817607'
   parent_detsis_id: '50569681'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kurullar
   detsis_id: '42737519'
   parent_detsis_id: '50569681'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Dekanlık Yönetici ve Sekreterliği
   detsis_id: '92034738'
   parent_detsis_id: '79586685'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Kurullar
   detsis_id: '45930228'
   parent_detsis_id: '79586685'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Dekanlık Yönetici ve Sekreterliği
   detsis_id: '61426982'
   parent_detsis_id: '34806956'
   unit_type_id: Diğer İdari Birim
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Fakülte Kurulları
   detsis_id: '33978764'
   parent_detsis_id: '34806956'
   unit_type_id: Diğer Kurul
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Gazetecilik Anabilim Dalı Başkanlığı
+  abbreviation: GAZETE-ADB
   detsis_id: '17502719'
   parent_detsis_id: '27633393'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Halkla İlişkiler ve Tanıtım Anabilim Dalı Başkanlığı
+  abbreviation: HİT-ADB
   detsis_id: '30257221'
   parent_detsis_id: '23260498'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Radyo, Televizyon ve Sinema Anabilim Dalı Başkanlığı
+  abbreviation: RST-ADB
   detsis_id: '97353408'
   parent_detsis_id: '10326855'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Yeni Medya ve İletişim Tasarımı Anabilim Dalı Başkanlığı
+  abbreviation: YMİT-ADB
   detsis_id: '78136083'
   parent_detsis_id: '47463258'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: İletişim Tasarımı Bölüm Başkanlığı
   detsis_id: '17458197'
   parent_detsis_id: '34806956'
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Pasif
+  district_id: Atakum
+  district_id_: Atakum

@@ -710,9 +710,13 @@
   parent_yoksis_id: '121946'
   unit_type_id: Uygulama ve Araştırma Merkezi
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 15.08.2018
+  issues:
+    - Yerleşke eksik
 
 - name: Atatürk İlkeleri ve İnkılap Tarihi Uygulama ve Araştırma Merkezi
   abbreviation: ATİ-AUM
@@ -1025,6 +1029,8 @@
   parent_yoksis_id: '293681'
   unit_type_id: Bölüm
   unit_status_id: Aktif
+  district_id: Bafra
+  district_id_: Bafra
   foet_code: '343'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -1032,6 +1038,7 @@
   founded_at: 07.03.2018
   issues:
     - Üst birim Bafra İşletme Fakültesi pasif görünüyor
+    - Yerleşke eksik
 
 - name: Sigortacılık ve Sosyal Güvenlik Anabilim Dalı
   abbreviation: SSG-AD
@@ -1039,11 +1046,15 @@
   parent_yoksis_id: '334064'
   unit_type_id: Anabilim Dalı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   foet_code: '343'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
   founded_at: 07.03.2018
+  issues:
+    - Yerleşke eksik
 
 - name: Ballıca Meslek Yüksekokulu
   abbreviation: BALLICA-MYO
@@ -1062,12 +1073,15 @@
   parent_yoksis_id: '284516'
   unit_type_id: Bölüm
   unit_status_id: Aktif
+  district_id: 19 Mayıs
+  district_id_: 19 Mayıs
   foet_code: '840'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: '08.06.2016'
   issues:
     - Detsis tarafında bölüm başkanlığı yok
+    - Yerleşke eksik
 
 - name: Yönetim ve Organizasyon Bölümü
   abbreviation: BALLICA-MYO-YO
@@ -1075,12 +1089,15 @@
   parent_yoksis_id: '284516'
   unit_type_id: Bölüm
   unit_status_id: Aktif
+  district_id: 19 Mayıs
+  district_id_: 19 Mayıs
   foet_code: '345'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: '08.06.2016'
   issues:
     - Detsis tarafında bölüm başkanlığı yok
+    - Yerleşke eksik
 
 - name: Bölgesel Kalkınma ve Stratejik Araştırmalar Uygulama ve Araştırma Merkezi
   abbreviation: BKS-AUM
@@ -3965,7 +3982,7 @@
   unit_instruction_type_id: Normal Öğretim
   founded_at: 14.08.2017
   issues:
-    - Detsis tarafında anabilim dalı başkanlığı yok
+    - Detsis tarafında anabilim dalı başkanlığı enstitü altında
 
 - name: Moleküler Biyoloji ve Genetik Programı
   abbreviation: MOLBİYOGEN-PR
@@ -5148,9 +5165,13 @@
   parent_yoksis_id: '121946'
   unit_type_id: Uygulama ve Araştırma Merkezi
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 21.12.2016
+  issues:
+    - Yerleşke eksik
 
 - name: Mühendislik Fakültesi
   abbreviation: MÜHENDİSLİK
@@ -6162,9 +6183,13 @@
   parent_yoksis_id: '121946'
   unit_type_id: Uygulama ve Araştırma Merkezi
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 20.01.2016
+  issues:
+    - Yerleşke eksik
 
 - name: Rektörlük
   abbreviation: REKTÖRLÜK
@@ -13069,6 +13094,8 @@
   parent_yoksis_id: '293682'
   unit_type_id: Bölüm
   unit_status_id: Kapatılmış
+  district_id: Çarşamba
+  district_id_: Çarşamba
   foet_code: '322'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -13084,6 +13111,8 @@
   parent_yoksis_id: '334066'
   unit_type_id: Anabilim Dalı
   unit_status_id: Kapatılmış
+  district_id: Çarşamba
+  district_id_: Çarşamba
   foet_code: '322'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -14385,9 +14414,13 @@
   parent_yoksis_id: '121946'
   unit_type_id: Uygulama ve Araştırma Merkezi
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 17.04.2013
+  issues:
+    - Yerleşke eksik
 
 - name: Adalet Programı (%25 Burslu)
   yoksis_id: '304523'
@@ -15627,6 +15660,7 @@
   duration: 5
 
 - name: Restoratif Diş Tedavisi Anabilim Dalı
+  abbreviation: DİŞ-KLİNİK-RDT-AD
   yoksis_id: '176332'
   parent_yoksis_id: '121997'
   unit_type_id: Anabilim Dalı
@@ -16561,13 +16595,18 @@
   duration: 4
 
 - name: Moleküler Biyoloji ve Genetik (Yl) (Tezli)
+  abbreviation: MOLBİYOGEN-YL
   yoksis_id: '381852'
   parent_yoksis_id: '122386'
   unit_type_id: Yüksek Lisans Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - Yerleşke eksik
 
 - name: Moleküler Biyoloji ve Genetik (Yl) (Tezli) (Ücretli)
   yoksis_id: '299033'
@@ -16703,6 +16742,7 @@
   duration: 4
 
 - name: Antropoloji Bölümü
+  abbreviation: ANTRO
   yoksis_id: '168685'
   parent_yoksis_id: '122005'
   unit_type_id: Bölüm
@@ -16745,6 +16785,7 @@
   duration: 4
 
 - name: Fizik Programı
+  abbreviation: FİZİK-PR
   yoksis_id: '168699'
   parent_yoksis_id: '122017'
   unit_type_id: Önlisans/lisans Programı
@@ -19335,8 +19376,12 @@
   parent_yoksis_id: '293577'
   unit_type_id: Bölüm
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - Yerleşke eksik
 
 - name: Fizyoterapi ve Rehabilitasyon Anabilim Dalı
   abbreviation: FTR-AD
@@ -19344,8 +19389,12 @@
   parent_yoksis_id: '379526'
   unit_type_id: Anabilim Dalı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - Yerleşke eksik
 
 - name: Ağız ve Diş Sağlığı Programı (Ücretli)
   yoksis_id: '304661'
@@ -20716,8 +20765,12 @@
   parent_yoksis_id: '121951'
   unit_type_id: Bilim Dalı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - Yerleşke eksik
 
 - name: Gastroenteroloji Cerrahisi Bilim Dalı
   abbreviation: TIP-CERRAHİ-GENEL-GASTRO-BD
@@ -20725,8 +20778,12 @@
   parent_yoksis_id: '121951'
   unit_type_id: Bilim Dalı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - Yerleşke eksik
 
 - name: Çocuk Gögüs Hastalıkları Bilim Dalı
   yoksis_id: '208758'
@@ -20983,6 +21040,8 @@
   district_id_: Vezirköprü
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - Yerleşke eksik
 
 - name: İç Mekan Tasarımı Programı
   yoksis_id: '382240'
@@ -21558,6 +21617,7 @@
   unit_instruction_type_id: Normal Öğretim
   issues:
     - Üst birimi olan Çarşamba İnsan Ve Toplum Bilimleri Fakültesi pasif, parent değiştirildi
+    - Yerleşke eksik
 
 - name: Mütercim Tercümanlık (İngilizce) Anabilim Dalı
   abbreviation: İNSAN-MÜTERCİM-İNG-AD
@@ -21565,9 +21625,13 @@
   parent_yoksis_id: '381669'
   unit_type_id: Anabilim Dalı
   unit_status_id: Aktif
+  district_id: Çarşamba
+  district_id_: Çarşamba
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - Yerleşke eksik
 
 - name: Tarih Bölümü
   abbreviation: İNSAN-TARİH
@@ -21579,6 +21643,8 @@
   district_id_: Çarşamba
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - Yerleşke eksik
 
 - name: Çorum Meslek Yüksekokulu
   yoksis_id: '269764'
@@ -22077,9 +22143,13 @@
   parent_yoksis_id: '122386'
   unit_type_id: Yüksek Lisans Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: İngilizce
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - Yerleşke eksik
 
 - name: Silah Sanayi Teknikerliği Programı
   yoksis_id: '383467'
