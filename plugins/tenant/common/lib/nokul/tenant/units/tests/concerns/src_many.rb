@@ -9,9 +9,8 @@ module Nokul
             extend ActiveSupport::Concern
 
             included do
-              test 'each unit must have an district_id' do
-                skip # FIXME
-                assert_empty(units.select { |unit| unit.district_id.blank? })
+              test 'all active units must have an district_id' do
+                assert_empty(units.select { |unit| unit.active? && unit.district_id.blank? })
               end
 
               test 'each unit must have an status_id' do
