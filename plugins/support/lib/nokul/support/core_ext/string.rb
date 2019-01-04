@@ -22,35 +22,79 @@ class String
     gsub(RE) { |char| CHARS[char] }
   end
 
-  def capitalize_turkish
-    split.map { |word| word.capitalize(:turkic) }.join(' ')
-  end
-
-  def upcase_tr
-    upcase(:turkic)
-  end
-
   def abbreviation
     split.map(&:first).join.upcase(:turkic)
   end
 
-  TURKISH_CONJUNCTIONS = %w[
-    ama ancak dahi fakat ile lakin ve veya yani
+  TURKISH_ABBREVIATIONS = %w[
+    ab
+    abd
+    abitur
+    act
+    aihm
+    ales
+    aselsan
+    baum
+    cmk
+    cmuk
+    dgs
+    gata
+    gce
+    khk
+    kktc
+    kpds
+    kpss
+    les
+    meb
+    myo
+    omü
+    ömss
+    öss
+    ösym
+    ösys
+    öyp
+    sat
+    tbmm
+    tck
+    todaie
+    toefl
+    trt
+    tsk
+    tübitak
+    uzem
+    üds
+    yds
+    ydus
+    ygs
+    yök
+    yös
   ].freeze
-  private_constant :TURKISH_CONJUNCTIONS
 
-  def titleize_turkish(mappings = {})
+  TURKISH_CONJUNCTIONS = %w[
+    ama
+    çünkü
+    fakat
+    hele
+    hem
+    ile
+    ise
+    ki
+    oysa
+    oysaki
+    ve
+    veya
+    veyahut
+  ].freeze
+
+  def capitalize_turkish
     downcase(:turkic).split.map do |word|
-      next word if TURKISH_CONJUNCTIONS.include?(word)
-      next mappings[word] if mappings.key?(word)
-
-      naked_word = word.sub(/(^[[:punct:]]+|[[:punct:]]+$)/, '')
-
-      if mappings.key?(naked_word)
-        word.sub(naked_word, mappings[naked_word])
+      if TURKISH_ABBREVIATIONS.include? word
+        word.upcase(:turkic)
+      elsif TURKISH_CONJUNCTIONS.include? word
+        word
       else
         word.capitalize(:turkic)
       end
-    end.join ' '
+    end.join(' ')
   end
 end
