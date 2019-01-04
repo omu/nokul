@@ -8,7 +8,7 @@ module Osym
     # rubocop:disable Metrics/MethodLength
     # rubocop:disable Metrics/BlockLength
     def perform(file_path)
-      content = Nokul::Support::Sensitive.readlines(file_path)
+      content = Support::Sensitive.readlines(file_path)
 
       progress_bar = ProgressBar.spawn('Prospective Students', content.count)
 
