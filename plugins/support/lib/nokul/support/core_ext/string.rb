@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/ClassLength
 class String
   CHARS = {
     'ı' => 'i',
@@ -97,4 +98,25 @@ class String
       end
     end.join(' ')
   end
+
+  # rubocop:disable Metrics/MethodLength
+  def capitalize_turkish_with_paranthesised
+    # Regex stolen from https://stackoverflow.com/a/6331667
+    re = /
+      (?<re>
+        \(
+          (?:
+            (?> [^()]+ )
+            |
+            \g<re>
+          )*
+        \)
+      )
+    /x
+    capitalize_turkish.gsub re do |match|
+      '(' + match[1..-2].capitalize_turkish + ')'
+    end
+  end
+  # rubocop:enable Metrics/MethodLength
 end
+# rubocop:enable Metrics/ClassLength
