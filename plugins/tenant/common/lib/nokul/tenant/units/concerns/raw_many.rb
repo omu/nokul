@@ -45,6 +45,8 @@ module Nokul
             '(iö)' => '(İÖ)',
             '(yl)' => '(YL)',
             '(dr)' => '(DR)',
+            '(tezli)' => '(Tezli)',
+            '(kktc' => '(KKTC',
             'Pr.' => 'Programı',
             '(uzaktan Öğretim)' => '(Uzaktan Öğretim)',
             '(uzaktan Eğitim)' => '(Uzaktan Eğitim)'
@@ -56,6 +58,7 @@ module Nokul
               FIX_AFTER_CAPITALIZE.each do |find, replace|
                 capitalized.gsub!(/(?<!\w)#{Regexp.escape(find)}(?!\w)/, replace)
               end
+              capitalized
             end
           end
         end
