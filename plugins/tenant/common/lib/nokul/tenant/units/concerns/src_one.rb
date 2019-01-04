@@ -30,6 +30,7 @@ module Nokul
             unit_type_id
             unit_status_id
             district_id
+            district_id_
 
             osym
             foet_code
