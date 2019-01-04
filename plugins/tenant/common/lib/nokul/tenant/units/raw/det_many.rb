@@ -20,15 +20,71 @@ module Nokul
             name:                         proc { |raw| raw.name.split('>').last&.capitalize_and_fix },
             detsis_id:                    proc { |raw| raw.detsis_id&.to_s },
             parent_detsis_id:             proc { |raw| raw.parent_detsis_id&.to_s },
-
             unit_status_id:               proc do |raw|
               next 'Aktif'      if raw.active &&  raw.activity
               next 'Yarı Pasif' if raw.active && !raw.activity
 
               'Pasif'
             end
+          }
+
+          TYPES = {
+            'Rektörlük'                           => /Rektörlüğü/,
+            'Senato'                              => /Senato/,
+            'Genel Sekreterlik'                   => /Genel Sekreterlik/,
+            # -
+            'Merkez Müdürlüğü'                    => /Merkezi? Müdürlüğü/,
+            # -
+            'Enstitü Müdürlüğü'                   => /Enstitü\S* Müdürlüğü/,
+            'Enstitü Kurulu'                      => /Enstitü\S* Kurulu/,
+            'Enstitü Yönetim Kurulu'              => /Enstitü\S* Yönetim Kurulu/,
+            'Enstitü Disiplin Kurulu'             => /Enstitü\S* Disiplin Kurulu/,
+            'Enstitü Sekreterliği'                => /Enstitü\S* Sekreterliği/,
+            # -
+            'Meslek Yüksekokulu Müdürlüğü'        => /Meslek Yüksekokulu Müdürlüğü/,
+            'Meslek Yüksekokulu Kurulu'           => /Meslek Yüksekokulu Kurulu/,
+            'Meslek Yüksekokulu Yönetim Kurulu'   => /Meslek Yüksekokulu Yönetim Kurulu/,
+            'Meslek Yüksekokulu Disiplin Kurulu'  => /Meslek Yüksekokulu Disiplin Kurulu/,
+            'Meslek Yüksekokulu Sekreterliği'     => /Meslek Yüksekokulu Sekreterliği/,
+            # -
+            'Fakülte Dekanlığı'                   => /Fakülte\S* Dekanlığı/,
+            'Fakülte Kurulu'                      => /Fakülte\S* Kurulu/,
+            'Fakülte Yönetim Kurulu'              => /Fakülte\S* Yönetim Kurulu/,
+            'Fakülte Disiplin Kurulu'             => /Fakülte\S* Disiplin Kurulu/,
+            'Fakülte Sekreterliği'                => /Fakülte\S* Sekreterliği/,
+            # -
+            'Konservatuvar Müdürlüğü'             => /Konservatuvar\S* Müdürlüğü/,
+            'Konservatuvar Kurulu'                => /Konservatuvar\S* Kurulu/,
+            'Konservatuvar Yönetim Kurulu'        => /Konservatuvar\S* Yönetim Kurulu/,
+            'Konservatuvar Disiplin Kurulu'       => /Konservatuvar\S* Disiplin Kurulu/,
+            'Konservatuvar Sekreterliği'          => /Konservatuvar\S* Sekreterliği/,
+            # -
+            'Bölüm Başkanlığı'                    => /Bölüm\S* Başkanlığı/,
+            'Anabilim Dalı Başkanlığı'            => /Anabilim Dalı Başkanlığı/,
+            'Anasanat Dalı Başkanlığı'            => /Anasanat Dalı Başkanlığı/,
+            # -
+            'Başmüdürlük'                         => /Başmüdürlü\S*/,
+            'Başhekimlik'                         => /Başhekimli\S*/,
+            # -
+            'Şube Müdürlüğü'                      => /Şube\S* Müdürlüğü/,
+            'Daire Başkanlığı'                    => /Daire\S* Başkanlığı/,
+            # -
+            'Etik Kurul'                          => /Etik Kurul/,
+            'Koordinatörlük'                      => /Koordinatörlüğü/,
+            'Diğer Kurul'                         => /Kurul/,
+            'Diğer Komisyon'                      => /Komisyon/
           }.freeze
           # rubocop:enable Layout/AlignHash
+
+          mapping[:unit_type_id] = proc do |raw|
+            name = mapping[:name].call(raw)
+
+            TYPES.keys.find do |type|
+              name =~ TYPES[type]
+            end || 'Diğer İdari Birim'
+          end
+
+          mapping.freeze
 
           END_POINT = 'https://api.omu.sh/detsis/units'
 
