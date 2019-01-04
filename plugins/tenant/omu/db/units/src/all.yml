@@ -22111,6 +22111,8 @@
   parent_yoksis_id: '122296'
   unit_type_id: Bölüm
   unit_status_id: Aktif
+  district_id: Vezirköprü
+  district_id_: Vezirköprü
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
@@ -22683,6 +22685,8 @@
   parent_yoksis_id_: '121946'
   unit_type_id: Bölüm
   unit_status_id: Aktif
+  district_id: Çarşamba
+  district_id_: Çarşamba
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   issues:
@@ -22706,6 +22710,8 @@
   parent_yoksis_id: '293682'
   unit_type_id: Bölüm
   unit_status_id: Aktif
+  district_id: Çarşamba
+  district_id_: Çarşamba
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
