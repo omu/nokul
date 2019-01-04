@@ -42,19 +42,13 @@ module Nokul
 
         module Refinery
           FIX_AFTER_CAPITALIZE = {
-            '(iö)' => '(İÖ)',
-            '(yl)' => '(YL)',
-            '(dr)' => '(DR)',
-            '(tezli)' => '(Tezli)',
-            '(kktc' => '(KKTC',
             'Pr.' => 'Programı',
-            '(uzaktan Öğretim)' => '(Uzaktan Öğretim)',
-            '(uzaktan Eğitim)' => '(Uzaktan Eğitim)'
+            'Üniv.' => 'Üniversitesi'
           }.freeze
 
           refine String do
             def capitalize_and_fix
-              capitalized = capitalize_turkish
+              capitalized = capitalize_turkish_with_paranthesised
               FIX_AFTER_CAPITALIZE.each do |find, replace|
                 capitalized.gsub!(/(?<!\w)#{Regexp.escape(find)}(?!\w)/, replace)
               end
