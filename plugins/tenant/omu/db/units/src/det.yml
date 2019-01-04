@@ -6285,7 +6285,7 @@
     - İsimde yazım hatası
     - Yoksis tarafında anabilim dalı yok
 
-- name: Mütercim Tercümanlık (arapça) Anabilim Dalı Başkanlığı
+- name: Mütercim Tercümanlık (Arapça) Anabilim Dalı Başkanlığı
   abbreviation: YDİL-YO-MÜTERCİM-ARAPÇA-ADB
   parent_yoksis_id: '207342'
   detsis_id: '41323324'
@@ -6755,7 +6755,7 @@
   unit_status_id: Aktif
   district_id: Atakum
 
-- name: Mütercim Tercümanlık (çince) Anabilim Dalı Başkanlığı
+- name: Mütercim Tercümanlık (Çince) Anabilim Dalı Başkanlığı
   abbreviation: YDİL-YO-MÜTERCİM-ÇİNCE-ADB
   parent_yoksis_id: '267558'
   detsis_id: '49727580'
@@ -8705,7 +8705,7 @@
   unit_status_id: Aktif
   district_id: Atakum
 
-- name: Mütercim Tercümanlık (ingilizce) Anabilim Dalı Başkanlığı
+- name: Mütercim Tercümanlık (İngilizce) Anabilim Dalı Başkanlığı
   abbreviation: YDİL-YO-MÜTERCİM-İNG-ADB
   parent_yoksis_id: '207277'
   detsis_id: '86068149'
@@ -9297,7 +9297,7 @@
   unit_status_id: Aktif
   district_id: Atakum
 
-- name: Mütercim Tercümanlık (almanca) Anabilim Dalı Başkanlığı
+- name: Mütercim Tercümanlık (Almanca) Anabilim Dalı Başkanlığı
   abbreviation: YDİL-YO-MÜTERCİM-ALM-ADB
   parent_yoksis_id: '207340'
   detsis_id: '96153689'
