@@ -15,14 +15,6 @@ manifest=app.json
 [[ -f $manifest ]] || die "Application manifest not found: $manifest"
 [[ -f Procfile  ]] || die 'No Procfile found'
 
-environment=/etc/environment
-if [[ -f $environment ]]; then
-	# shellcheck disable=1090
-	set -a && . "$environment" && set +a
-else
-	environment=
-fi
-
 application=${application:-$(jq -r '.name' "$manifest")}
 operator=${operator:-$(id -rnu 1000 2>/dev/null)}
 
@@ -47,6 +39,5 @@ EOF
 
 gem install foreman
 
-foreman export -p3000 --app "$application" --user "$operator" \
-	${environment:+--env "$environment"} systemd /etc/systemd/system/
+foreman export -p3000 --app "$application" --user "$operator" --env /etc/environment systemd /etc/systemd/system/
 systemctl enable --now "$application".target
