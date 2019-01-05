@@ -44,7 +44,5 @@ module Nokul
                      self.class.parent.to_s.underscore
                    end
     end
-
-    config.load_defaults 5.2
   end
 end
