@@ -29,7 +29,7 @@ module Nokul
                     unit = units.get(unit.parent_id)
                     break unless unit
 
-                    offensive_units << unit unless unit.abbreviation.present?
+                    offensive_units << unit if unit.abbreviation.blank?
                   end
                 end
 
