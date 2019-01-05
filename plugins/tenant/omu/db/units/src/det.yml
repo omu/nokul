@@ -1,5 +1,5 @@
 # REFER DOCUMENTATION TO EDIT THIS FILE.  PLEASE NOTE THAT:
-#
+# 
 # - EXISTING RAW ATTRIBUTES WILL NORMALLY BE OVERWRITTEN ON NEXT UPDATE.
 # - COMMENTS AND EXTRA BLANK LINES WILL NOT BE PRESERVED.
 ---
@@ -2017,8 +2017,8 @@
   district_id: Atakum
 
 - name: Atom ve Molekül Fiziği Anabilim Dalı Başkanlığı
-  parent_yoksis_id: '122018'
   abbreviation: FİZİK-ATOM-ADB-DİĞER
+  parent_yoksis_id: '122018'
   detsis_id: '70813888'
   parent_detsis_id: '71950693'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -5136,7 +5136,7 @@
   abbreviation: GENSEK
   detsis_id: '90404739'
   parent_detsis_id: '78633602'
-  unit_type_id: Genel Sekreterlik
+  unit_type_id: Üniversite Sekreterliği
   unit_status_id: Aktif
   district_id: Atakum
 
@@ -5232,7 +5232,7 @@
   abbreviation: OMÜ-DİSKUR
   detsis_id: '92035111'
   parent_detsis_id: '78633602'
-  unit_type_id: Diğer Kurul
+  unit_type_id: Üniversite Yönetim Kurulu
   unit_status_id: Aktif
   district_id: Atakum
 
