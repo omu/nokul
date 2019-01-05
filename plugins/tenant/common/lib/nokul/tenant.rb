@@ -10,7 +10,8 @@ require_relative 'tenant/units'
 
 module Nokul
   module Tenant
-    GEM_PREFIX = 'nokul-tenant-'
+    DEFAULT_TENANT = 'omu'
+    GEM_PREFIX     = 'nokul-tenant-'
 
     mattr_accessor :name
 
@@ -20,7 +21,7 @@ module Nokul
       "#{GEM_PREFIX}#{name}"
     end
 
-    def load(fallback: nil)
+    def load(fallback: DEFAULT_TENANT)
       tenant = self.name = (ENV['NOKUL_TENANT'] || fallback)&.downcase
       raise Error::LoadError, 'No tenant defined through NOKUL_TENANT environment' if tenant.blank?
       raise Error::LoadError, 'Tenant "common" is not a concrete tenant' if tenant == 'common'
