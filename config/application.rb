@@ -7,8 +7,6 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-Bundler.require(:nokul)
-
 module Nokul
   class Application < Rails::Application
     Nokul::Tenant.load fallback: Nokul::DEFAULT_TENANT
