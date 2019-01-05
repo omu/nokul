@@ -55,12 +55,14 @@ module Committee
 
     test 'should update committee meeting' do
       committee_meeting = @committee.meetings.last
+      date = Time.zone.today - 5.months
+
       patch committee_meeting_path(@committee, committee_meeting),
             params: {
               committee_meeting: {
                 meeting_no: 8,
-                meeting_date: Time.zone.today - 5.months,
-                year: Time.zone.today.year,
+                meeting_date: date,
+                year: date.year,
                 unit: @committee
               }
             }
@@ -68,8 +70,8 @@ module Committee
       committee_meeting.reload
 
       assert_equal 8, committee_meeting.meeting_no
-      assert_equal Time.zone.today - 5.months, committee_meeting.meeting_date
-      assert_equal Time.zone.today.year, committee_meeting.year
+      assert_equal date, committee_meeting.meeting_date
+      assert_equal date.year, committee_meeting.year
       assert_redirected_to committee_meetings_path(@committee)
       assert_equal translate('.update.success'), flash[:notice]
     end
