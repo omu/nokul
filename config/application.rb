@@ -9,7 +9,7 @@ Bundler.require(*Rails.groups)
 
 module Nokul
   class Application < Rails::Application
-    Nokul::Tenant.load fallback: Nokul::DEFAULT_TENANT
+    Nokul::Tenant.load
 
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
