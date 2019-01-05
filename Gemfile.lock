@@ -1,11 +1,4 @@
 PATH
-  remote: .
-  specs:
-    nokul (0.4.7)
-      nokul-support
-      nokul-tenant
-
-PATH
   remote: plugins/support
   specs:
     nokul-support (0.1.0)
@@ -376,7 +369,6 @@ DEPENDENCIES
   letter_opener
   listen (>= 3.0.5, < 3.2)
   lol_dba
-  nokul!
   nokul-support!
   nokul-tenant!
   nokul-tenant-omu!

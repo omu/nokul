@@ -94,8 +94,6 @@ end
 gem 'nokul-support', path: 'plugins/support'
 gem 'nokul-tenant',  path: 'plugins/tenant/common'
 
-gem 'nokul', path: '.'
-
 # tenants (won't be listed at Rails.groups)
 group :tenants do
   Dir['plugins/tenant/**/*.gemspec'].each do |gemspec|
