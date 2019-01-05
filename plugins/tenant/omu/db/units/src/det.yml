@@ -4790,7 +4790,7 @@
 
 - name: Zootekni ve Hayvan Besleme Bölüm Başkanlığı
   abbreviation: VETERİNER-ZOO-BB
-  parent_yoksis_id: 122252'
+  parent_yoksis_id: '122252'
   detsis_id: '68432838'
   parent_detsis_id: '32319693'
   unit_type_id: Bölüm Başkanlığı
