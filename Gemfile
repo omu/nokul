@@ -90,14 +90,11 @@ group :development do
   gem 'web-console', '>= 3.3.0' # call <%= console %> anywhere in the code.
 end
 
-# application (won't be listed at Rails.groups)
-group :nokul do
-  # core plugins
-  gem 'nokul-support', path: 'plugins/support'
-  gem 'nokul-tenant',  path: 'plugins/tenant/common'
+# core plugins
+gem 'nokul-support', path: 'plugins/support'
+gem 'nokul-tenant',  path: 'plugins/tenant/common'
 
-  gem 'nokul', path: '.'
-end
+gem 'nokul', path: '.'
 
 # tenants (won't be listed at Rails.groups)
 group :tenants do
