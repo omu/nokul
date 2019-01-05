@@ -27,9 +27,7 @@ module Nokul
             other.eql? id
           end
 
-          def hash
-            id.hash
-          end
+          delegate :hash, to: :id
 
           def to_s
             "\e[1m#{id}\e[0m  #{name}"
