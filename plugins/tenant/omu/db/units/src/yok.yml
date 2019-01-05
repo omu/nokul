@@ -1,5 +1,5 @@
 # REFER DOCUMENTATION TO EDIT THIS FILE.  PLEASE NOTE THAT:
-# 
+#
 # - EXISTING RAW ATTRIBUTES WILL NORMALLY BE OVERWRITTEN ON NEXT UPDATE.
 # - COMMENTS AND EXTRA BLANK LINES WILL NOT BE PRESERVED.
 ---
@@ -42,7 +42,7 @@
   founded_at: 26.02.2009
 
 - name: Geleneksel Türk Müzikleri Anabilim Dalı
-  abbreviation: MÜZİK-GT-AD
+  abbreviation: MÜZİK-GTM-AD
   yoksis_id: '254783'
   parent_yoksis_id: '122317'
   unit_type_id: Anabilim Dalı
@@ -172,6 +172,8 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 26.02.2009
+  issues:
+    - Detsis tarafında anasanat dalı başkanlığı yok
 
 - name: Opera Anasanat Dalı
   abbreviation: SAHNE-O-AD
@@ -184,6 +186,8 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 26.02.2009
+  issues:
+    - Detsis tarafında anasanat dalı başkanlığı yok
 
 - name: Tiyatro Anasanat Dalı
   abbreviation: SAHNE-T-AD
@@ -196,6 +200,8 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 26.02.2009
+  issues:
+    - Detsis tarafında anasanat dalı başkanlığı yok
 
 - name: Adalet Meslek Yüksekokulu
   abbreviation: ADALET-MYO
@@ -1066,6 +1072,8 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 15.01.2016
+  issues:
+    - Detsis tarafındaki müdürlük yarı pasif
 
 - name: Ulaştırma Hizmetleri Bölümü
   abbreviation: BALLICA-MYO-UH
@@ -1100,7 +1108,7 @@
     - Yerleşke eksik
 
 - name: Bölgesel Kalkınma ve Stratejik Araştırmalar Uygulama ve Araştırma Merkezi
-  abbreviation: BKS-AUM
+  abbreviation: BKSAUM
   yoksis_id: '169418'
   parent_yoksis_id: '121946'
   unit_type_id: Uygulama ve Araştırma Merkezi
@@ -1367,6 +1375,7 @@
   abbreviation: EĞİTİM-BİLİM-EB-AD
   yoksis_id: '207882'
   parent_yoksis_id: '174849'
+  parent_yoksis_id_: '174846'
   unit_type_id: Anabilim Dalı
   unit_status_id: Aktif
   district_id: Atakum
@@ -1375,7 +1384,7 @@
   unit_instruction_type_id: Normal Öğretim
   founded_at: 03.05.2011
   issues:
-    - üst birim olan Eğitim Bilimleri (Dr) arşiv olarak görünüyor
+    - üst birim olan Eğitim Bilimleri (Dr) arşiv olarak görünüyor (parent enstitü olarak güncellendi)
     - Detsis tarafında anabilim dalı başkanlığı enstitüye bağlı
 
 - name: Eğitimin Felsefi, Sosyal ve Tarihi Temelleri (Yl)
@@ -2072,7 +2081,7 @@
     - Öğretim dili tanımlanmamış (eklendi)
 
 - name: Biyoloji Eğitimi Anabilim Dalı
-  abbreviation: MF-BIYO-AD
+  abbreviation: MF-BİYO-AD
   yoksis_id: '122107'
   parent_yoksis_id: '298694'
   unit_type_id: Anabilim Dalı
@@ -2121,7 +2130,7 @@
   duration: 4
 
 - name: Fizik Eğitimi Anabilim Dalı
-  abbreviation: MF-FIZIK-AD
+  abbreviation: MF-FİZİK-AD
   yoksis_id: '122108'
   parent_yoksis_id: '298694'
   unit_type_id: Anabilim Dalı
@@ -2312,7 +2321,7 @@
   founded_at: 10.09.2009
 
 - name: Tarih Eğitimi Anabilim Dalı
-  abbreviation: TS-TARIH-AD
+  abbreviation: TS-TARİH-AD
   yoksis_id: '122113'
   parent_yoksis_id: '298815'
   unit_type_id: Anabilim Dalı
@@ -5147,6 +5156,8 @@
   foet_code: '582'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - Kuruluş tarihi yok
 
 - name: Kadın ve Toplum Uygulama ve Araştırma Merkezi
   abbreviation: OKTAM
@@ -5258,6 +5269,7 @@
   unit_instruction_type_id: Normal Öğretim
   issues:
     - Bu ABD'nin Bilgisayar bölümünde ne işi var?
+    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Elektrik-elektronik Mühendisliği Bölümü
   abbreviation: ELEKTRİK
@@ -5907,6 +5919,8 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 10.09.2009
+  issues:
+    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Çevre Mühendisliği Anabilim Dalı
   abbreviation: ÇEVRE-AD
@@ -8145,6 +8159,8 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 29.01.2014
+  issues:
+    - s/Hastalıklar/Hastalıkları
 
 - name: Doğum ve Kadın Hastalıkları Hemşireliği Anabilim Dalı
   abbreviation: HEMŞİRELİK-DOĞUM-AD
@@ -9640,6 +9656,7 @@
   unit_instruction_type_id: Normal Öğretim
   issues:
     - Detsis tarafında anabilim dalı başkanlığı yok
+    - TIP-CERRAHİ-TP-AD ile benzer
 
 - name: Klinik Sitoloji Bilim Dalı
   abbreviation: TIP-CERRAHİ-PATOLOJİ-KS-BD
@@ -10745,6 +10762,8 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 14.03.2012
+  issues:
+    - Detsis tarafında bölüm başkanlığı yarı pasif
 
 - name: Gastronomi ve Mutfak Sanatları Anabilim Dalı
   abbreviation: GASTRONOMİ-AD
@@ -11027,7 +11046,8 @@
   unit_instruction_type_id: Normal Öğretim
   founded_at: 26.02.2009
   issues:
-    - Anabilim dalı Klinik Öncesi Bilimlere bağlı, başkanlık Klinik Bilimler altında
+    - Detsis tarafında anabilim dalı başkanlığı yok
+    - VETERİNER-KLİNİK-JİNEKOLOJİ-AD ile benzer isimli, jinekoloji klinikte mi köb'de mi olmalı?
 
 - name: Veterinerlik Farmakoloji ve Toksikolojisi Anabilim Dalı
   abbreviation: VETERİNER-KÖB-FARMA-AD
@@ -11523,6 +11543,8 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 21.07.2011
+  issues:
+    - Detsis tarafındaki anabilim dalı başkanlığı yarı pasif
 
 - name: Mütercim Tercümanlık (Çince) Anabilim Dalı
   abbreviation: YDİL-YO-MÜTERCİM-ÇİN-AD
@@ -13239,6 +13261,8 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 26.02.2009
+  issues:
+    - Detsis tarafında anabilim dalı başkanlığı yarı pasif
 
 - name: Yönetim Bilimleri Anabilim Dalı
   abbreviation: SBKY-YÖNBİL-AD
@@ -16751,6 +16775,8 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - Aktifken kısaltma verdiğimiz bu birim kapatılmış
 
 - name: Biyoloji Programı (İö)
   yoksis_id: '168688'
@@ -19284,7 +19310,7 @@
   duration: 4
 
 - name: Ağız, Diş ve Çene Radyolojisi (Dr)
-  abbreviation: ADÇCR-DR
+  abbreviation: ADÇR-DR
   yoksis_id: '267775'
   parent_yoksis_id: '122387'
   unit_type_id: Doktora Programı

@@ -1,5 +1,5 @@
 # REFER DOCUMENTATION TO EDIT THIS FILE.  PLEASE NOTE THAT:
-# 
+#
 # - EXISTING RAW ATTRIBUTES WILL NORMALLY BE OVERWRITTEN ON NEXT UPDATE.
 # - COMMENTS AND EXTRA BLANK LINES WILL NOT BE PRESERVED.
 ---
@@ -453,6 +453,8 @@
   unit_type_id: Fakülte Dekanlığı
   unit_status_id: Aktif
   district_id: Çarşamba
+  issues:
+    - Akademik tarafta bağlı olduğu fakülte pasif
 
 - name: Fakülte Sekreterliği
   abbreviation: İNSAN-SEK
@@ -1069,7 +1071,7 @@
   district_id: Atakum
 
 - name: Bilgisayar Araştırmaları Uygulama ve Araştırma Merkezi Müdürlüğü
-  abbreviation: B-AUM-MD
+  abbreviation: BAUM-MD
   parent_yoksis_id: '327269'
   detsis_id: '38418139'
   parent_detsis_id: '78633602'
@@ -1086,7 +1088,7 @@
   district_id: Atakum
 
 - name: Bölgesel Kalkınma ve Stratejik Araştırmalar Uygulama ve Araştırma Merkezi Müdürlüğü
-  abbreviation: BKS-AUM-MD
+  abbreviation: BKSAUM-MD
   parent_yoksis_id: '169418'
   detsis_id: '65401134'
   parent_detsis_id: '78633602'
@@ -1095,7 +1097,7 @@
   district_id: Atakum
 
 - name: Çevre Sorunları Araştırma ve Uygulama Merkezi Müdürlüğü
-  abbreviation: ÇS-AUM-MD
+  abbreviation: ÇSAUM-MD
   parent_yoksis_id: '122392'
   detsis_id: '37181009'
   parent_detsis_id: '78633602'
@@ -1318,7 +1320,7 @@
   district_id: Atakum
 
 - name: Eğitim Programları ve Öğretim Anabilim Dalı Başkanlığı
-  abbreviation: EĞİTİMB-EPO-ADB
+  abbreviation: EĞİTİMB-EPÖ-ADB
   parent_yoksis_id: '122085'
   detsis_id: '47824572'
   parent_detsis_id: '53279789'
@@ -1336,7 +1338,7 @@
   district_id: Atakum
 
 - name: Eğitimde Ölçme ve Değerlendirme Anabilim Dalı Başkanlığı
-  abbreviation: EĞİTİMB-EOD-ADB
+  abbreviation: EĞİTİMB-EÖD-ADB
   parent_yoksis_id: '122084'
   detsis_id: '54052542'
   parent_detsis_id: '53279789'
@@ -1400,7 +1402,7 @@
   district_id: Atakum
 
 - name: Biyoloji Eğitimi Anabilim Dalı Başkanlığı
-  abbreviation: MF-BIYO-ADB
+  abbreviation: MF-BİYO-ADB
   parent_yoksis_id: '122107'
   detsis_id: '97162243'
   parent_detsis_id: '51747921'
@@ -1418,7 +1420,7 @@
   district_id: Atakum
 
 - name: Fizik Eğitimi Anabilim Dalı Başkanlığı
-  abbreviation: MF-FIZIK-ADB
+  abbreviation: MF-FİZİK-ADB
   parent_yoksis_id: '122108'
   detsis_id: '19744892'
   parent_detsis_id: '51747921'
@@ -1463,7 +1465,7 @@
   district_id: Atakum
 
 - name: Zihin Engelliler Eğitimi Anabilim Dalı Başkanlığı
-  abbreviation: ÖZELB-ZIHIN-ADB
+  abbreviation: ÖZELB-ZİHİN-ADB
   parent_yoksis_id: '122094'
   detsis_id: '64658489'
   parent_detsis_id: '81004858'
@@ -1490,7 +1492,7 @@
   district_id: Atakum
 
 - name: Sınıf Eğitimi Anabilim Dalı Başkanlığı
-  abbreviation: TE-SINIF-ABD
+  abbreviation: TE-SINIF-ADB
   parent_yoksis_id: '122105'
   detsis_id: '75639555'
   parent_detsis_id: '11211358'
@@ -1526,7 +1528,7 @@
   district_id: Atakum
 
 - name: Tarih Eğitimi Anabilim Dalı Başkanlığı
-  abbreviation: TS-TARIH-ADB
+  abbreviation: TS-TARİH-ADB
   parent_yoksis_id: '122113'
   detsis_id: '82160726'
   parent_detsis_id: '63688363'
@@ -1681,7 +1683,7 @@
   district_id: Atakum
 
 - name: Antropoloji Bölüm Başkanlığı
-  abbreviation: SOSYOLOJİ-ANTRO-BB
+  abbreviation: ANTRO-BB
   parent_yoksis_id: '168685'
   detsis_id: '72070008'
   parent_detsis_id: '41130367'
@@ -1689,7 +1691,7 @@
   unit_status_id: Pasif
   district_id: Atakum
   issues:
-    - Bağlı olduğu Antropoloji Bölümü pasif
+    - Önceden kısaltma verdiğimiz bu birim pasife alınmış, parent yoksis aktif iken kapatılmış
 
 - name: Arkeoloji Bölüm Başkanlığı
   abbreviation: ARKEO-BB
@@ -2015,6 +2017,7 @@
   district_id: Atakum
 
 - name: Atom ve Molekül Fiziği Anabilim Dalı Başkanlığı
+  parent_yoksis_id: '122018'
   abbreviation: FİZİK-ATOM-ADB-DİĞER
   detsis_id: '70813888'
   parent_detsis_id: '71950693'
@@ -2541,7 +2544,7 @@
   district_id: Atakum
 
 - name: İşletme Bölüm Başkanlığı
-  abbreviation: İŞLETME-BB
+  abbreviation: İŞLETMEB-BB
   parent_yoksis_id: '128030'
   detsis_id: '50848157'
   parent_detsis_id: '50569681'
@@ -2550,7 +2553,7 @@
   district_id: Atakum
 
 - name: Muhasebe ve Finansman Anabilim Dalı Başkanlığı
-  abbreviation: İŞLETME-B-MUHASEBE-ADB
+  abbreviation: İŞLETMEB-MUHASEBE-ADB
   parent_yoksis_id: '140383'
   detsis_id: '77148849'
   parent_detsis_id: '50848157'
@@ -2559,7 +2562,7 @@
   district_id: Atakum
 
 - name: Sayısal Yöntemler Anabilim Dalı Başkanlığı
-  abbreviation: İŞLETME-B-SAYISAL-ADB
+  abbreviation: İŞLETMEB-SAYISAL-ADB
   parent_yoksis_id: '140384'
   detsis_id: '54568174'
   parent_detsis_id: '50848157'
@@ -2568,7 +2571,7 @@
   district_id: Atakum
 
 - name: Üretim Yönetimi ve Pazarlama Anabilim Dalı Başkanlığı
-  abbreviation: İŞLETME-B-ÜYP-ADB
+  abbreviation: İŞLETMEB-ÜYP-ADB
   parent_yoksis_id: '140243'
   detsis_id: '69958571'
   parent_detsis_id: '50848157'
@@ -2577,7 +2580,7 @@
   district_id: Atakum
 
 - name: Yönetim ve Organizasyon Anabilim Dalı Başkanlığı
-  abbreviation: İŞLETME-B-YO-ADB
+  abbreviation: İŞLETMEB-YO-ADB
   parent_yoksis_id: '140241'
   detsis_id: '41808829'
   parent_detsis_id: '50848157'
@@ -2699,7 +2702,7 @@
   district_id: Atakum
 
 - name: Din Eğitimi Anabilim Dalı Başkanlığı
-  abbreviation: FDB-DİNE-ADB
+  abbreviation: FDB-DİNEĞ-ADB
   parent_yoksis_id: '122167'
   detsis_id: '78917437'
   parent_detsis_id: '17646606'
@@ -2772,12 +2775,14 @@
 
 - name: İlköğretim Din Kültürü ve Ahlak Bilgisi Eğitimi Bölüm Başkanlığı
   abbreviation: İDKABE-BB
-  parent_yoksis_id: '128027'
+  parent_yoksis_id: '122117'
   detsis_id: '19880815'
   parent_detsis_id: '79586685'
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
+  issues:
+    - Akademik tarafta üst birimde mükerrerlik var, İDKABE ve İDKABE-DİĞER
 
 - name: İlköğretim Din Kültürü ve Ahlak Bilgisi Eğitimi Anabilim Dalı Başkanlığı
   abbreviation: İDKABE-ADB
@@ -2969,7 +2974,7 @@
   district_id: Atakum
 
 - name: Karadeniz İleri Teknoloji Araştırma ve Uygulama Merkezi Müdürlüğü
-  abbreviation: KİT-AM-MD
+  abbreviation: KİTAM-MD
   parent_yoksis_id: '311015'
   detsis_id: '38701709'
   parent_detsis_id: '78633602'
@@ -2984,6 +2989,8 @@
   unit_type_id: Merkez Müdürlüğü
   unit_status_id: Aktif
   district_id: Atakum
+  issues:
+    - İlişkili olduğu merkez yöksis verilerimiz arasında yok
 
 - name: Kök Hücre Araştırma Merkezi Müdürlüğü
   abbreviation: KÖKHÜCRE-MD
@@ -3468,7 +3475,7 @@
   district_id: Atakum
 
 - name: Okul Öncesi Eğitimi Uygulama ve Araştırma Merkezi Müdürlüğü
-  abbreviation: OÖE-AUM-MD
+  abbreviation: OÖEAUM-MD
   parent_yoksis_id: '232712'
   detsis_id: '83716618'
   parent_detsis_id: '78633602'
@@ -3504,7 +3511,7 @@
   district_id: Atakum
 
 - name: Öğretim Üyesi Yetiştirme Programı Koordinatörlüğü
-  abbreviation: ÖÜYP-KOR
+  abbreviation: ÖYP-KOR
   detsis_id: '62354096'
   parent_detsis_id: '78633602'
   unit_type_id: Koordinatörlük
@@ -3588,7 +3595,7 @@
   district_id: Atakum
 
 - name: Beslenme Bilimleri Anabilim Dalı Başkanlığı
-  abbreviation: BESLENME-BİLİM-ADB
+  abbreviation: BESLENME-BİL-ADB
   parent_yoksis_id: '293587'
   detsis_id: '29071444'
   parent_detsis_id: '47124861'
@@ -4040,7 +4047,7 @@
   district_id: Atakum
 
 - name: Temiz Enerji Teknolojileri Uygulama ve Araştırma Merkezi Müdürlüğü
-  abbreviation: TE-AUM-MD
+  abbreviation: TEAUM-MD
   parent_yoksis_id: '169429'
   detsis_id: '75539574'
   parent_detsis_id: '78633602'
@@ -4531,7 +4538,7 @@
   district_id: Atakum
 
 - name: Türkçe Öğretimi Uygulama ve Araştırma Merkezi Müdürlüğü
-  abbreviation: TÖ-AUM-MD
+  abbreviation: TÖAUM-MD
   parent_yoksis_id: '235511'
   detsis_id: '74429815'
   parent_detsis_id: '78633602'
@@ -4631,7 +4638,7 @@
   unit_status_id: Aktif
   district_id: Atakum
   issues:
-    - Anabilim dalı Klinik Öncesi Bilimlere bağlı, başkanlık Klinik Bilimler altında
+    - Parent anabilim dalı ismi; klinik ve köb altında benzerlik gösteriyor
     - Mükerrer isimli birim; SAĞLIK-BİLİM-VJİNEKOLOJİ-ADB
 
 - name: Veterinerlik İç Hastalıkları Anabilim Dalı Başkanlığı
@@ -4783,7 +4790,7 @@
 
 - name: Zootekni ve Hayvan Besleme Bölüm Başkanlığı
   abbreviation: VETERİNER-ZOO-BB
-  parent_yoksis_id: '122271'
+  parent_yoksis_id: 122252'
   detsis_id: '68432838'
   parent_detsis_id: '32319693'
   unit_type_id: Bölüm Başkanlığı
@@ -4962,7 +4969,7 @@
   district_id: Atakum
 
 - name: Rekreasyon Bölüm Başkanlığı
-  abbreviation: SPOR-REKRASYON-BB
+  abbreviation: REKRASYON-BB
   parent_yoksis_id: '214343'
   detsis_id: '56933569'
   parent_detsis_id: '80270232'
@@ -5048,7 +5055,7 @@
   district_id: Atakum
 
 - name: Tarım Makineleri ve Teknolojileri Mühendisliği Bölüm Başkanlığı
-  abbreviation: TARIMAK-BB
+  abbreviation: TARIMAKTEK-BB
   parent_yoksis_id: '122279'
   detsis_id: '38298812'
   parent_detsis_id: '52180288'
@@ -5246,7 +5253,7 @@
   district_id: Atakum
 
 - name: Devlet Konservatuvarı Müdürlüğü
-  abbreviation: KONSERVATUVAR-MD
+  abbreviation: KONSERVATUVAR-DİĞER-MD
   parent_yoksis_id: '122303'
   detsis_id: '95441125'
   parent_detsis_id: '78633602'
@@ -5257,7 +5264,7 @@
     - Devlet Konservatuvarı mı 19 Mayıs Samsun Devlet Konservatuvarı mı?
 
 - name: Konservatuvar Sekreterliği
-  abbreviation: KONSERVATUVAR-SEK
+  abbreviation: KONSERVATUVAR-DİĞER-SEK
   detsis_id: '52718513'
   parent_detsis_id: '95441125'
   unit_type_id: Konservatuvar Sekreterliği
@@ -5265,7 +5272,7 @@
   district_id: İlkadım
 
 - name: Müzik Bölüm Başkanlığı
-  abbreviation: KONSERVATUVAR-MÜZİK-BB
+  abbreviation: KONSERVATUVAR-DİĞER-MÜZİK-BB
   parent_yoksis_id: '122304'
   detsis_id: '55870850'
   parent_detsis_id: '95441125'
@@ -5276,7 +5283,7 @@
     - Hangi konservatuvar'a bağlı?
 
 - name: Geleneksel Türk Müzikleri Anasanat Dalı Başkanlığı
-  abbreviation: KONSERVATUVAR-GT-ADB
+  abbreviation: KONSERVATUVAR-DİĞER-GTM-ADB
   parent_yoksis_id: '254783'
   detsis_id: '40140864'
   parent_detsis_id: '55870850'
@@ -5287,7 +5294,7 @@
     - Hangi konservatuvar'a bağlı?
 
 - name: Müzikoloji Bölüm Başkanlığı
-  abbreviation: KONSERVATUVAR-MÜZİKO-BB
+  abbreviation: KONSERVATUVAR-DİĞER-MÜZİKO-BB
   parent_yoksis_id: '122322'
   detsis_id: '22937161'
   parent_detsis_id: '95441125'
@@ -5298,7 +5305,7 @@
     - Hangi konservatuvar'a bağlı?
 
 - name: Sahne Sanatları Bölüm Başkanlığı
-  abbreviation: KONSERVATUVAR-SAHNE-BB
+  abbreviation: KONSERVATUVAR-DİĞER-SAHNE-BB
   parent_yoksis_id: '122326'
   detsis_id: '50929935'
   parent_detsis_id: '95441125'
@@ -5466,7 +5473,7 @@
   district_id: İlkadım
 
 - name: Mimarlık Bölüm Başkanlığı
-  abbreviation: MİMARLIK-BB
+  abbreviation: MİMARLIKB-BB
   parent_yoksis_id: '214339'
   detsis_id: '34690896'
   parent_detsis_id: '85074962'
@@ -5787,7 +5794,7 @@
   district_id: Çarşamba
 
 - name: Satın Alma Birimi
-  abbreviation: T-AUM-SATINALMA-BR
+  abbreviation: TUAM-SATINALMA-BR
   detsis_id: '13247393'
   parent_detsis_id: '60422539'
   unit_type_id: Diğer İdari Birim
@@ -7128,7 +7135,7 @@
     - Yoksis tarafında anabilim dalı yok
 
 - name: Mütercim Tercümanlık (Arapça) Anabilim Dalı Başkanlığı
-  abbreviation: YDİL-YO-MÜTERCİM-ARAPÇA-ADB
+  abbreviation: YDİL-YO-MÜTERCİM-ARAP-ADB
   parent_yoksis_id: '207342'
   detsis_id: '41323324'
   parent_detsis_id: '20346779'
@@ -7334,7 +7341,7 @@
     - Yoksis tarafında anabilim dalı yok
 
 - name: Döner Sermaye Birimi
-  abbreviation: T-AUM-DÖNER-BR
+  abbreviation: TUAM-DÖNER-BR
   detsis_id: '44454667'
   parent_detsis_id: '60422539'
   unit_type_id: Diğer İdari Birim
@@ -7621,6 +7628,8 @@
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
+  issues:
+    - Yöksis tarafında anabilim dalı FEN/SOSYOLOJİ bölümü altında
 
 - name: Strateji Geliştirme ve Kalite Birimi
   abbreviation: ADALET-MYO-SGK-BR
@@ -7673,7 +7682,7 @@
   district_id: Atakum
 
 - name: Mütercim Tercümanlık (Çince) Anabilim Dalı Başkanlığı
-  abbreviation: YDİL-YO-MÜTERCİM-ÇİNCE-ADB
+  abbreviation: YDİL-YO-MÜTERCİM-ÇİN-ADB
   parent_yoksis_id: '267558'
   detsis_id: '49727580'
   parent_detsis_id: '20346779'
@@ -7682,7 +7691,7 @@
   district_id: Atakum
 
 - name: Mali İşler Birimi
-  abbreviation: T-AUM-MALİ-BR
+  abbreviation: TUAM-MALİ-BR
   detsis_id: '49761014'
   parent_detsis_id: '60422539'
   unit_type_id: Diğer İdari Birim
@@ -7855,6 +7864,8 @@
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
+  issues:
+    - Yöksis tarafında anabilim dalı TURİZM/TURİŞ altında
 
 - name: İdari İşler Birimi
   abbreviation: HAVZA-MYO-İDARİ-BR
@@ -8318,6 +8329,8 @@
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
+  issues:
+    - İlişkili olduğu anabilim dalı yok
 
 - name: Mali İşler Birimi
   abbreviation: MİMARLIK-MALİ-BR
@@ -8431,7 +8444,7 @@
   district_id: Atakum
 
 - name: Yaratıcı Yazarlık Uygulama ve Araştırma Merkezi Müdürlüğü
-  abbreviation: YY-AUM-MD
+  abbreviation: YYAUM-MD
   parent_yoksis_id: '212704'
   detsis_id: '61890576'
   parent_detsis_id: '78633602'
@@ -8818,7 +8831,7 @@
   district_id: Tekkeköy
 
 - name: Yazı İşleri Birimi
-  abbreviation: T-AUM-YAZI-BR
+  abbreviation: TUAM-YAZI-BR
   detsis_id: '66992432'
   parent_detsis_id: '60422539'
   unit_type_id: Diğer İdari Birim
@@ -9296,6 +9309,8 @@
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
+  issues:
+    - Yöksis tarafında anabilim dalı SPOR/SPORYÖN altında
 
 - name: Hesaplamalı Bilimler Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-HB-ADB
@@ -9611,7 +9626,7 @@
   district_id: İlkadım
 
 - name: Klinik Toksikoloji Anabilim Dalı Başkanlığı
-  abbreviation: SAĞLIK-BİLİM-KTOKSİ-ADB
+  abbreviation: SAĞLIK-BİLİM-TOKSİK-ADB
   parent_yoksis_id: '297555'
   detsis_id: '80397943'
   parent_detsis_id: '93771576'
@@ -11157,6 +11172,7 @@
 
 - name: Moleküler Biyoloji ve Genetik Anabilim Dalı Başkanlığı
   abbreviation: MOLBİYOGEN-ADB
+  parent_yoksis_id: '328410'
   detsis_id: '69748915'
   parent_detsis_id: '43847920'
   unit_type_id: Anabilim Dalı Başkanlığı
