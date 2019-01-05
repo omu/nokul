@@ -4,7 +4,7 @@ require 'nokul-support'
 require 'nokul-tenant'
 
 module Nokul
-  TENANT_DEFAULT = 'omu'
+  DEFAULT_TENANT = 'omu'
 end
 
 # Shortcut for convenience
