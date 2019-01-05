@@ -167,7 +167,7 @@
   unit_status_id: Aktif
   district_id: Bafra
 
-- name: Seyahat-turizm ve Eğlence Hizmetleri Bölüm Başkanlığı
+- name: Seyahat-Turizm ve Eğlence Hizmetleri Bölüm Başkanlığı
   abbreviation: TURİZM-MYO-STEH-BB
   parent_yoksis_id: '279024'
   detsis_id: '92124673'
@@ -515,7 +515,7 @@
   unit_status_id: Aktif
   district_id: Çarşamba
 
-- name: Finans-bankacılık ve Sigortacılık Bölüm Başkanlığı
+- name: Finans-Bankacılık ve Sigortacılık Bölüm Başkanlığı
   abbreviation: TİCARET-MYO-FİNANS-BB
   parent_yoksis_id: '229371'
   detsis_id: '75851438'
@@ -3081,7 +3081,7 @@
   unit_status_id: Aktif
   district_id: Atakum
 
-- name: Elektrik-elektronik Mühendisliği Bölüm Başkanlığı
+- name: Elektrik-Elektronik Mühendisliği Bölüm Başkanlığı
   abbreviation: ELEKTRİK-BB
   parent_yoksis_id: '122225'
   detsis_id: '86351342'
@@ -5577,7 +5577,7 @@
   unit_status_id: Aktif
   district_id: İlkadım
 
-- name: Görsel-işitsel Teknikler ve Medya Yapımcılığı Bölüm Başkanlığı
+- name: Görsel-İşitsel Teknikler ve Medya Yapımcılığı Bölüm Başkanlığı
   abbreviation: SAMSUN-MYO-GÖRSEL-BB
   parent_yoksis_id: '169828'
   detsis_id: '91097286'
@@ -5716,7 +5716,7 @@
   district_id: Atakum
   district_id_: Atakum
 
-- name: Elektrik-elektronik Mühendisliği Anabilim Dalı Başkanlığı
+- name: Elektrik-Elektronik Mühendisliği Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-EEM-ADB
   detsis_id: '11818910'
   parent_detsis_id: '43847920'
@@ -6420,7 +6420,7 @@
   district_id: Atakum
   district_id_: Atakum
 
-- name: Avrupa-akdeniz Kültürler ve Turizm Anabilim Dalı Başkanlığı
+- name: Avrupa-Akdeniz Kültürler ve Turizm Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-AAKT-ADB
   detsis_id: '24894277'
   parent_detsis_id: '61232311'
@@ -7123,7 +7123,7 @@
   unit_status_id: Aktif
   district_id: Terme
 
-- name: Histoloji-embriyoloji Anabilim Dalı Başkanlığı
+- name: Histoloji-Embriyoloji Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-HİSTO-ADB
   detsis_id: '41039653'
   parent_detsis_id: '93771576'
@@ -11074,7 +11074,7 @@
   district_id: Atakum
   district_id_: Atakum
 
-- name: Resim-iş Eğitimi Bilim Dalı
+- name: Resim-İş Eğitimi Bilim Dalı
   detsis_id: '60676885'
   parent_detsis_id: '86348859'
   unit_type_id: Diğer İdari Birim
@@ -12157,7 +12157,7 @@
   district_id: Atakum
   district_id_: Atakum
 
-- name: Üniversite-sanayi-iş Dünyası İşbirliğini Geliştirme Uygulama ve Araştırma Merkezi Müdürlüğü
+- name: Üniversite-Sanayi-İş Dünyası İşbirliğini Geliştirme Uygulama ve Araştırma Merkezi Müdürlüğü
   detsis_id: '42508530'
   parent_detsis_id: '78633602'
   unit_type_id: Merkez Müdürlüğü

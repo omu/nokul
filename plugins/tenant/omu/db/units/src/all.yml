@@ -1062,7 +1062,7 @@
   unit_instruction_type_id: Normal Öğretim
   founded_at: 01.07.2015
 
-- name: Seyahat-turizm ve Eğlence Hizmetleri Bölümü
+- name: Seyahat-Turizm ve Eğlence Hizmetleri Bölümü
   abbreviation: TURİZM-MYO-STEH
   code: A3A
   yoksis_id: '279024'
@@ -1752,7 +1752,7 @@
   duration: 2
   founded_at: '09.09.2015'
 
-- name: Resim-iş Eğitimi (Dr)
+- name: Resim-İş Eğitimi (Dr)
   abbreviation: RESİMİŞ-DR
   code: '620'
   yoksis_id: '230808'
@@ -1766,7 +1766,7 @@
   duration: 4
   founded_at: 19.02.2003
 
-- name: Resim-iş Eğitimi (Yl) (Tezli)
+- name: Resim-İş Eğitimi (Yl) (Tezli)
   abbreviation: RESİMİŞ-YL
   code: '621'
   yoksis_id: '230810'
@@ -2189,7 +2189,7 @@
   issues:
     - Kuruluş tarihi hatalı
 
-- name: Resim-iş Eğitimi Anasanat Dalı
+- name: Resim-İş Eğitimi Anasanat Dalı
   abbreviation: GÜZELSANATLARB-RESİM-AD
   code: A5E
   yoksis_id: '122098'
@@ -2202,7 +2202,7 @@
   unit_instruction_type_id: Normal Öğretim
   founded_at: 10.09.2009
 
-- name: Resim-iş Öğretmenliği Programı
+- name: Resim-İş Öğretmenliği Programı
   abbreviation: RESİMİŞ-PR
   code: '221'
   yoksis_id: '169387'
@@ -2876,7 +2876,7 @@
   duration: 2
   founded_at: 29.04.2012
 
-- name: Elektrik-elektronik Mühendisliği (Dr)
+- name: Elektrik-Elektronik Mühendisliği (Dr)
   abbreviation: ELEKTRİK-DR
   code: '643'
   yoksis_id: '211254'
@@ -2889,7 +2889,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Elektrik-elektronik Mühendisliği (Yl) (Tezli)
+- name: Elektrik-Elektronik Mühendisliği (Yl) (Tezli)
   abbreviation: ELEKTRİK-YL
   code: '644'
   yoksis_id: '211253'
@@ -3646,7 +3646,7 @@
   duration: 2
   founded_at: 07.05.2018
 
-- name: Fen-edebiyat Fakültesi
+- name: Fen-Edebiyat Fakültesi
   abbreviation: FEN
   code: A7C
   yoksis_id: '122005'
@@ -5236,7 +5236,7 @@
   unit_instruction_type_id: Normal Öğretim
   founded_at: 05.04.2017
 
-- name: Seramik-cam Programı
+- name: Seramik-Cam Programı
   abbreviation: SERAMİK-PR
   code: '251'
   yoksis_id: '270024'
@@ -5679,7 +5679,7 @@
     - Bu ABD'nin Bilgisayar bölümünde ne işi var?
     - Detsis tarafında anabilim dalı başkanlığı yok
 
-- name: Elektrik-elektronik Mühendisliği Bölümü
+- name: Elektrik-Elektronik Mühendisliği Bölümü
   abbreviation: ELEKTRİK
   code: AF1
   yoksis_id: '122225'
@@ -5768,7 +5768,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
-- name: Elektrik-elektronik Mühendisliği Programı
+- name: Elektrik-Elektronik Mühendisliği Programı
   abbreviation: ELEKTRİK-PR
   code: '260'
   yoksis_id: '168865'
@@ -7335,7 +7335,7 @@
   duration: 2
   founded_at: 22.02.2017
 
-- name: Alerji-immünoloji (Yl) (Tezli)
+- name: Alerji-İmmünoloji (Yl) (Tezli)
   abbreviation: ALERJİ-YL
   code: '699'
   yoksis_id: '219171'
@@ -9302,7 +9302,7 @@
   duration: 2
   founded_at: 19.06.2014
 
-- name: Avrupa-akdeniz Kültürler ve Turizm (Yl) (Tezli)
+- name: Avrupa-Akdeniz Kültürler ve Turizm (Yl) (Tezli)
   abbreviation: AAKT-YL
   code: '788'
   yoksis_id: '261825'
@@ -9555,7 +9555,7 @@
   duration: 2
   founded_at: 26.06.2012
 
-- name: Muhasebe-finansman (Yl) (Tezli)
+- name: Muhasebe-Finansman (Yl) (Tezli)
   abbreviation: MUHASEBE-YL
   code: '805'
   yoksis_id: '264822'
@@ -9569,7 +9569,7 @@
   duration: 2
   founded_at: 20.01.2015
 
-- name: Muhasebe-finansman (Yl) (Tezsiz)
+- name: Muhasebe-Finansman (Yl) (Tezsiz)
   abbreviation: MUHASEBE-YZ
   code: '806'
   yoksis_id: '264823'
@@ -12325,7 +12325,7 @@
   duration: 2
   founded_at: 02.05.2013
 
-- name: Seyahat-turizm ve Eğlence Hizmetleri Bölümü
+- name: Seyahat-Turizm ve Eğlence Hizmetleri Bölümü
   abbreviation: VEZİRKÖPRÜ-MYO-STEH
   code: C0B
   yoksis_id: '319442'
@@ -17101,7 +17101,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
-- name: Resim-iş Öğretmenliği Programı (İö)
+- name: Resim-İş Öğretmenliği Programı (İö)
   abbreviation: RESİMİŞ-PR-2
   yoksis_id: '169388'
   parent_yoksis_id: '122097'
@@ -19192,7 +19192,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Elektrik-elektronik Mühendisliği Programı (%25 Burslu)
+- name: Elektrik-Elektronik Mühendisliği Programı (%25 Burslu)
   yoksis_id: '308531'
   parent_yoksis_id: '122225'
   unit_type_id: Önlisans/lisans Programı
@@ -19202,7 +19202,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Elektrik-elektronik Mühendisliği Programı (%50 Burslu)
+- name: Elektrik-Elektronik Mühendisliği Programı (%50 Burslu)
   abbreviation: ELEKTRİK-PR-ELLİ
   yoksis_id: '304617'
   parent_yoksis_id: '122225'
@@ -19213,7 +19213,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Elektrik-elektronik Mühendisliği Programı (İngilizce) (%50 Burslu)
+- name: Elektrik-Elektronik Mühendisliği Programı (İngilizce) (%50 Burslu)
   yoksis_id: '299060'
   parent_yoksis_id: '122225'
   unit_type_id: Önlisans/lisans Programı
@@ -19223,7 +19223,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Elektrik-elektronik Mühendisliği Programı (İngilizce) (Tam Burslu)
+- name: Elektrik-Elektronik Mühendisliği Programı (İngilizce) (Tam Burslu)
   yoksis_id: '299059'
   parent_yoksis_id: '122225'
   unit_type_id: Önlisans/lisans Programı
@@ -19233,7 +19233,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Elektrik-elektronik Mühendisliği Programı (Tam Burslu)
+- name: Elektrik-Elektronik Mühendisliği Programı (Tam Burslu)
   abbreviation: ELEKTRİK-PR-YÜZ
   yoksis_id: '304600'
   parent_yoksis_id: '122225'
@@ -19244,7 +19244,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Elektrik-elektronik Mühendisliği Programı (Ücretli)
+- name: Elektrik-Elektronik Mühendisliği Programı (Ücretli)
   abbreviation: ELEKTRİK-PR-ÜCRETLİ
   yoksis_id: '308532'
   parent_yoksis_id: '122225'
@@ -19413,7 +19413,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
 
-- name: Ordu Fen-edebiyat Fakültesi
+- name: Ordu Fen-Edebiyat Fakültesi
   yoksis_id: '269769'
   parent_yoksis_id: '121946'
   unit_type_id: Fakülte
@@ -20927,7 +20927,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Sinop Fen-edebiyat Fakültesi
+- name: Sinop Fen-Edebiyat Fakültesi
   yoksis_id: '269774'
   parent_yoksis_id: '121946'
   unit_type_id: Fakülte
@@ -21006,7 +21006,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
 
-- name: Cam-seramik Programı
+- name: Cam-Seramik Programı
   yoksis_id: '273680'
   parent_yoksis_id: '269775'
   unit_type_id: Önlisans/lisans Programı
@@ -21199,7 +21199,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
-- name: Havacılık Elektrik-elektroniği Bölümü
+- name: Havacılık Elektrik-Elektroniği Bölümü
   abbreviation: SİVİL-YO-HEE
   yoksis_id: '174927'
   parent_yoksis_id: '121946'
@@ -21286,7 +21286,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
-- name: Uçak Gövde-motor Bakımı Bölümü
+- name: Uçak Gövde-Motor Bakımı Bölümü
   abbreviation: SİVİL-YO-UÇAK
   yoksis_id: '174928'
   parent_yoksis_id: '121946'
@@ -21538,7 +21538,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Resim-iş Eğitimi (Dr)
+- name: Resim-İş Eğitimi (Dr)
   yoksis_id: '324893'
   parent_yoksis_id: '122388'
   unit_type_id: Doktora Programı
@@ -21548,7 +21548,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Resim-iş Eğitimi (Yl) (Tezli)
+- name: Resim-İş Eğitimi (Yl) (Tezli)
   yoksis_id: '324892'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -22923,7 +22923,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Üniversite-sanayi-iş Dünyası İşbirliğini Geliştirme Uygulama ve Araştırma Merkezi
+- name: Üniversite-Sanayi-İş Dünyası İşbirliğini Geliştirme Uygulama ve Araştırma Merkezi
   yoksis_id: '206457'
   parent_yoksis_id: '121946'
   unit_type_id: Uygulama ve Araştırma Merkezi
@@ -23505,7 +23505,7 @@
   unit_status_id: Aktif
   district_id: Bafra
 
-- name: Seyahat-turizm ve Eğlence Hizmetleri Bölüm Başkanlığı
+- name: Seyahat-Turizm ve Eğlence Hizmetleri Bölüm Başkanlığı
   abbreviation: TURİZM-MYO-STEH-BB
   code: G0K
   parent_yoksis_id: '279024'
@@ -23893,7 +23893,7 @@
   unit_status_id: Aktif
   district_id: Çarşamba
 
-- name: Finans-bankacılık ve Sigortacılık Bölüm Başkanlığı
+- name: Finans-Bankacılık ve Sigortacılık Bölüm Başkanlığı
   abbreviation: TİCARET-MYO-FİNANS-BB
   code: G1Z
   parent_yoksis_id: '229371'
@@ -26746,7 +26746,7 @@
   unit_status_id: Aktif
   district_id: Atakum
 
-- name: Elektrik-elektronik Mühendisliği Bölüm Başkanlığı
+- name: Elektrik-Elektronik Mühendisliği Bölüm Başkanlığı
   abbreviation: ELEKTRİK-BB
   code: GBG
   parent_yoksis_id: '122225'
@@ -29523,7 +29523,7 @@
   unit_status_id: Aktif
   district_id: İlkadım
 
-- name: Görsel-işitsel Teknikler ve Medya Yapımcılığı Bölüm Başkanlığı
+- name: Görsel-İşitsel Teknikler ve Medya Yapımcılığı Bölüm Başkanlığı
   abbreviation: SAMSUN-MYO-GÖRSEL-BB
   code: GMV
   parent_yoksis_id: '169828'
@@ -29678,7 +29678,7 @@
   district_id: Atakum
   district_id_: Atakum
 
-- name: Elektrik-elektronik Mühendisliği Anabilim Dalı Başkanlığı
+- name: Elektrik-Elektronik Mühendisliği Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-EEM-ADB
   code: GND
   detsis_id: '11818910'
@@ -30465,7 +30465,7 @@
   district_id: Atakum
   district_id_: Atakum
 
-- name: Avrupa-akdeniz Kültürler ve Turizm Anabilim Dalı Başkanlığı
+- name: Avrupa-Akdeniz Kültürler ve Turizm Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-AAKT-ADB
   code: GS6
   detsis_id: '24894277'
@@ -31250,7 +31250,7 @@
   unit_status_id: Aktif
   district_id: Terme
 
-- name: Histoloji-embriyoloji Anabilim Dalı Başkanlığı
+- name: Histoloji-Embriyoloji Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-HİSTO-ADB
   code: GUY
   detsis_id: '41039653'
@@ -35628,7 +35628,7 @@
   district_id: Atakum
   district_id_: Atakum
 
-- name: Resim-iş Eğitimi Bilim Dalı
+- name: Resim-İş Eğitimi Bilim Dalı
   detsis_id: '60676885'
   parent_detsis_id: '86348859'
   unit_type_id: Diğer İdari Birim
@@ -36712,7 +36712,7 @@
   district_id: Atakum
   district_id_: Atakum
 
-- name: Üniversite-sanayi-iş Dünyası İşbirliğini Geliştirme Uygulama ve Araştırma Merkezi Müdürlüğü
+- name: Üniversite-Sanayi-İş Dünyası İşbirliğini Geliştirme Uygulama ve Araştırma Merkezi Müdürlüğü
   detsis_id: '42508530'
   parent_detsis_id: '78633602'
   unit_type_id: Merkez Müdürlüğü
