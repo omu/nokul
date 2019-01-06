@@ -31,7 +31,7 @@ module Nokul
           TYPES = {
             'Rektörlük'                           => /Rektörlüğü/,
             'Senato'                              => /Senato/,
-            'Üniversite Yönetim Kurulu'           => /Üniversite Disiplin Kurulu/,
+            'Üniversite Yönetim Kurulu'           => /Üniversite Yönetim Kurulu/,
             'Üniversite Disiplin Kurulu'          => /Üniversite Disiplin Kurulu/,
             'Üniversite Sekreterliği'             => /Genel Sekreterlik/,
             # -
