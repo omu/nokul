@@ -31,8 +31,7 @@
   abbreviation: MÜZİK
   code: A02
   yoksis_id: '122317'
-  parent_yoksis_id: '121946'
-  parent_yoksis_id_: '121946'
+  parent_yoksis_id: '122316'
   unit_type_id: Bölüm
   unit_status_id: Aktif
   district_id: İlkadım
@@ -11084,7 +11083,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
-- name: Çocuk Metabolizma Hast. Bilim Dalı
+- name: Çocuk Metabolizma Hastalıkları Bilim Dalı
   abbreviation: TIP-DAHİLİ-ÇSH-META-BD
   code: BBA
   yoksis_id: '232764'
@@ -29140,7 +29139,7 @@
   code: GKJ
   detsis_id: '92035111'
   parent_detsis_id: '78633602'
-  unit_type_id: Üniversite Yönetim Kurulu
+  unit_type_id: Üniversite Disiplin Kurulu
   unit_status_id: Aktif
   district_id: Atakum
 
@@ -29149,7 +29148,7 @@
   code: GKK
   detsis_id: '46149191'
   parent_detsis_id: '78633602'
-  unit_type_id: Diğer Kurul
+  unit_type_id: Üniversite Yönetim Kurulu
   unit_status_id: Aktif
   district_id: Atakum
 

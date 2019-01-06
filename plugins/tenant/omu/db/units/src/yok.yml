@@ -31,8 +31,7 @@
 - name: Müzik Bölümü
   abbreviation: MÜZİK
   yoksis_id: '122317'
-  parent_yoksis_id: '121946'
-  parent_yoksis_id_: '121946'
+  parent_yoksis_id: '122316'
   unit_type_id: Bölüm
   unit_status_id: Aktif
   district_id: İlkadım
@@ -10281,7 +10280,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
-- name: Çocuk Metabolizma Hast. Bilim Dalı
+- name: Çocuk Metabolizma Hastalıkları Bilim Dalı
   abbreviation: TIP-DAHİLİ-ÇSH-META-BD
   yoksis_id: '232764'
   parent_yoksis_id: '121965'
