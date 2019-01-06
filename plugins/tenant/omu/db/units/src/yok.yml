@@ -1,5 +1,5 @@
 # REFER DOCUMENTATION TO EDIT THIS FILE.  PLEASE NOTE THAT:
-# 
+#
 # - EXISTING RAW ATTRIBUTES WILL NORMALLY BE OVERWRITTEN ON NEXT UPDATE.
 # - COMMENTS AND EXTRA BLANK LINES WILL NOT BE PRESERVED.
 ---
@@ -1374,7 +1374,6 @@
   abbreviation: EĞİTİM-BİLİM-EB-AD
   yoksis_id: '207882'
   parent_yoksis_id: '174846'
-  parent_yoksis_id_: '174846'
   unit_type_id: Anabilim Dalı
   unit_status_id: Aktif
   district_id: Atakum
@@ -1383,7 +1382,7 @@
   unit_instruction_type_id: Normal Öğretim
   founded_at: 03.05.2011
   issues:
-    - üst birim olan Eğitim Bilimleri (Dr) arşiv olarak görünüyor (parent enstitü olarak güncellendi)
+    - üst birim olan Eğitim Bilimleri (Dr) arşiv olarak görünüyor
     - Detsis tarafında anabilim dalı başkanlığı enstitüye bağlı
 
 - name: Eğitimin Felsefi, Sosyal ve Tarihi Temelleri (Yl)
@@ -20073,14 +20072,13 @@
   abbreviation: SİVİL-YO-HEE
   yoksis_id: '174927'
   parent_yoksis_id: '121946'
-  parent_yoksis_id_: '121946'
   unit_type_id: Bölüm
   unit_status_id: Yarı Pasif
   district_id: 19 Mayıs
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   issues:
-    - Üst birim olan Sivil Havacılık YO kapatılmış, parent üniversite verildi
+    - Üst birim olan Sivil Havacılık YO kapatılmış
 
 - name: Havacılık Yönetimi Bölümü
   yoksis_id: '281324'
@@ -20160,14 +20158,13 @@
   abbreviation: SİVİL-YO-UÇAK
   yoksis_id: '174928'
   parent_yoksis_id: '121946'
-  parent_yoksis_id_: '121946'
   unit_type_id: Bölüm
   unit_status_id: Yarı Pasif
   district_id: 19 Mayıs
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   issues:
-    - Üst birim olan Sivil Havacılık YO kapatılmış, parent üniversite verildi
+    - Üst birim olan Sivil Havacılık YO kapatılmış
 
 - name: Alman Dili Eğitimi (Yl) (Tezli)
   yoksis_id: '324897'
@@ -21633,7 +21630,6 @@
   abbreviation: İNSAN-MÜTERCİM
   yoksis_id: '381669'
   parent_yoksis_id: '121946'
-  parent_yoksis_id_: '121946'
   unit_type_id: Bölüm
   unit_status_id: Aktif
   district_id: Çarşamba
@@ -21641,7 +21637,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   issues:
-    - Üst birimi olan Çarşamba İnsan Ve Toplum Bilimleri Fakültesi pasif, parent değiştirildi
+    - Üst birimi olan Çarşamba İnsan Ve Toplum Bilimleri Fakültesi pasif
     - Yerleşke eksik
 
 - name: Mütercim Tercümanlık (İngilizce) Anabilim Dalı
