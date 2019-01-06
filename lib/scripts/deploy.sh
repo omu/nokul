@@ -30,7 +30,9 @@ EOF
 
 sudo -EH -u "$operator" sh -xs <<-'EOF'
 	bundle install -j4 --path "${BUNDLE_PATH:-vendor/bundle}"
-	yarn install --modules-folder "${NODE_MODULES_FOLDER:-vendor/node_modules}"
+
+	[ -z $NODE_MODULES_FOLDER ] || yarn config set -- --modules-folder "$NODE_MODULES_FOLDER"
+	yarn install
 
 	bin/rails db:create
 	bin/rails db:migrate
