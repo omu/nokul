@@ -5232,7 +5232,7 @@
   abbreviation: OMÜ-DİSKUR
   detsis_id: '92035111'
   parent_detsis_id: '78633602'
-  unit_type_id: Üniversite Yönetim Kurulu
+  unit_type_id: Üniversite Disiplin Kurulu
   unit_status_id: Aktif
   district_id: Atakum
 
@@ -5240,7 +5240,7 @@
   abbreviation: OMÜ-YÖNKUR
   detsis_id: '46149191'
   parent_detsis_id: '78633602'
-  unit_type_id: Diğer Kurul
+  unit_type_id: Üniversite Yönetim Kurulu
   unit_status_id: Aktif
   district_id: Atakum
 
