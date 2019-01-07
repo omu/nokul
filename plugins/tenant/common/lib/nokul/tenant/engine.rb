@@ -27,10 +27,8 @@ module Nokul
       end
 
       included do
-        included do
-          # Initialize engine (once)
-          Nokul::Tenant.initialize self
-        end
+        # Initialize engine (once)
+        Nokul::Tenant.initialize self
       end
     end
   end
