@@ -2,7 +2,7 @@
 
 module Xokul
   module Connection
-    BASE_URL     = Rails.application.config.tenant.api_host
+    BASE_URL     = Tenant.configuration.api_host
     BEARER_TOKEN = Rails.application.credentials.xokul[:bearer_token]
 
     private_constant :BASE_URL, :BEARER_TOKEN
