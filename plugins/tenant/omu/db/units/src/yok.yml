@@ -20043,6 +20043,7 @@
   duration: 4
 
 - name: Sivil Havacılık Yüksekokulu
+  abbreviation: SİVİL-YO
   yoksis_id: '155936'
   parent_yoksis_id: '121946'
   unit_type_id: Yüksekokul
@@ -20071,7 +20072,7 @@
 - name: Havacılık Elektrik-Elektroniği Bölümü
   abbreviation: SİVİL-YO-HEE
   yoksis_id: '174927'
-  parent_yoksis_id: '121946'
+  parent_yoksis_id: '155936'
   unit_type_id: Bölüm
   unit_status_id: Yarı Pasif
   district_id: 19 Mayıs
@@ -20157,7 +20158,7 @@
 - name: Uçak Gövde-Motor Bakımı Bölümü
   abbreviation: SİVİL-YO-UÇAK
   yoksis_id: '174928'
-  parent_yoksis_id: '121946'
+  parent_yoksis_id: '155936'
   unit_type_id: Bölüm
   unit_status_id: Yarı Pasif
   district_id: 19 Mayıs
