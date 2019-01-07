@@ -27,14 +27,9 @@ module Nokul
       end
 
       included do
-        # Initialize engine (once)
-        Nokul::Tenant.initialize self
-
-        # Fill-in Rails.configuration.tenant
-        initializer 'tenant.main', before: :bootstrap_hook do
-          configure do
-            config.tenant = deep_config_for(:tenant)
-          end
+        included do
+          # Initialize engine (once)
+          Nokul::Tenant.initialize self
         end
       end
     end

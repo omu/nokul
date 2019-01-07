@@ -23,7 +23,7 @@ namespace :import do
         yoksis_id: unit['parent_yoksis_id']
       )
       unit['district_id'] = District.find_by(
-        name: Rails.configuration.tenant.contact.main_district
+        name: Tenant.configuration.contact.main_district
       ).id
       Unit.create(unit.except('parent_yoksis_id'))
       progress_bar&.increment
