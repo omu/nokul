@@ -38,6 +38,7 @@ COPY plugins/tenant/common/nokul-tenant.gemspec        ./plugins/tenant/common/n
 COPY plugins/tenant/$NOKUL_TENANT/lib/nokul/tenant/$NOKUL_TENANT/version.rb ./plugins/tenant/$NOKUL_TENANT/lib/nokul/tenant/$NOKUL_TENANT/version.rb
 COPY plugins/tenant/$NOKUL_TENANT/nokul-tenant-$NOKUL_TENANT.gemspec        ./plugins/tenant/$NOKUL_TENANT/nokul-tenant-$NOKUL_TENANT.gemspec
 
+RUN bundle config --global silence_root_warning true
 RUN bundle install --without development:test:plugins -j4 --deployment
 RUN yarn install
 
