@@ -1,5 +1,5 @@
 # REFER DOCUMENTATION TO EDIT THIS FILE.  PLEASE NOTE THAT:
-#
+# 
 # - EXISTING RAW ATTRIBUTES WILL NORMALLY BE OVERWRITTEN ON NEXT UPDATE.
 # - COMMENTS AND EXTRA BLANK LINES WILL NOT BE PRESERVED.
 ---
@@ -1373,7 +1373,7 @@
 - name: Eğitim Bilimleri Anabilim Dalı
   abbreviation: EĞİTİM-BİLİM-EB-AD
   yoksis_id: '207882'
-  parent_yoksis_id: '174846'
+  parent_yoksis_id: '174849'
   unit_type_id: Anabilim Dalı
   unit_status_id: Aktif
   district_id: Atakum
@@ -21630,7 +21630,7 @@
 - name: Mütercim Tercümanlık Bölümü
   abbreviation: İNSAN-MÜTERCİM
   yoksis_id: '381669'
-  parent_yoksis_id: '121946'
+  parent_yoksis_id: '293682'
   unit_type_id: Bölüm
   unit_status_id: Aktif
   district_id: Çarşamba
