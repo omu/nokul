@@ -26,7 +26,7 @@ module Nokul
           using Refinery
 
           def invalid_units_due_to_abbreviation_missing
-            select { |unit| unit.active? && unit.abbreviation.blank? }
+            select { |unit| unit.live? && unit.abbreviation.blank? }
           end
 
           VALID_PATTERN = /^[ABCÇDEFGĞHIİJKLMNOÖPQRSŞTUÜVWYZ0-9-]+$/.freeze
