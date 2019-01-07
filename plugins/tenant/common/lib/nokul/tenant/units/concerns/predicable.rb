@@ -39,8 +39,12 @@ module Nokul
             unit_status_id.blank? || unit_status_id =~ /[Pp]asif/
           end
 
+          def semi_passive?
+            unit_status_id.blank? || unit_status_id =~ /[Yy]arı +[Pp]asif/
+          end
+
           def live?
-            active? || passive?
+            active? || semi_passive?
           end
 
           def undergraduate_registrable?

@@ -26,7 +26,7 @@ module Nokul
         end
 
         def code(units)
-          active_units = units.select(&:active?)
+          active_units = units.select(&:live?)
 
           fulfill_reservations(active_units)
           code_by_selected_pool(active_units)
