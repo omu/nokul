@@ -148,7 +148,7 @@ GEM
     groupdate (4.1.1)
       activesupport (>= 4.2)
     hashdiff (0.3.8)
-    i18n (1.4.0)
+    i18n (1.5.1)
       concurrent-ruby (~> 1.0)
     image_processing (1.7.1)
       mini_magick (~> 4.0)
