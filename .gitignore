@@ -28,3 +28,6 @@
 
 # never remove!
 config/master.key
+
+# Ignore misc.
+/bin/dokku
