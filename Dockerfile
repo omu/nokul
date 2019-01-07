@@ -1,5 +1,7 @@
 FROM ondokuz/ruby-stretch:0.10.0
 
+ENV PATH="/app/bin:${PATH}"
+
 RUN apt-get update \
     && apt-get -y --no-install-recommends install xfonts-75dpi=1:1.0.4+nmu1 xfonts-base=1:1.0.4+nmu1 \
     && apt-get clean \
