@@ -36,7 +36,6 @@ COPY plugins/tenant/omu/nokul-tenant-omu.gemspec ./plugins/tenant/omu/nokul-tena
 RUN bundle install --without development:test:plugins -j4 --deployment
 RUN yarn install
 
-RUN ls -al
 COPY . ./
 
 RUN bundle install --with plugins -j4 --deployment
