@@ -24,6 +24,10 @@ COPY .ruby-version ./
 COPY Gemfile Gemfile.lock ./
 COPY package.json yarn.lock ./
 
+COPY plugins/support/nokul-support.gemspec ./plugins/support/nokul-support.gemspec
+COPY plugins/tenant/common/nokul-tenant.gemspec ./plugins/tenant/common/nokul-tenant.gemspec
+COPY plugins/tenant/omu/nokul-tenant-omu.gemspec ./plugins/tenant/omu/nokul-tenant-omu.gemspec
+
 RUN bundle install --without development:test:plugins -j4 --deployment
 RUN yarn install
 
