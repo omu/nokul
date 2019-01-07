@@ -16607,6 +16607,7 @@
   duration: 2
 
 - name: Moleküler Biyoloji ve Genetik (Dr) (Ücretli)
+  abbreviation: MOLBİYOGEN-DR-ÜCRETLİ
   yoksis_id: '299032'
   parent_yoksis_id: '122386'
   unit_type_id: Doktora Programı
@@ -16631,6 +16632,7 @@
     - Yerleşke eksik
 
 - name: Moleküler Biyoloji ve Genetik (Yl) (Tezli) (Ücretli)
+  abbreviation: MOLBİYOGEN-YL-ÜCRETLİ
   yoksis_id: '299033'
   parent_yoksis_id: '122386'
   unit_type_id: Yüksek Lisans Programı
@@ -16701,6 +16703,7 @@
   duration: 2
 
 - name: İnşaat Mühendisliği (Yl) (Tezli) (Ücretli)
+  abbreviation: İNŞAAT-YL-ÜCRETLİ
   yoksis_id: '299031'
   parent_yoksis_id: '122386'
   unit_type_id: Yüksek Lisans Programı
@@ -16777,6 +16780,7 @@
     - Aktifken kısaltma verdiğimiz bu birim kapatılmış
 
 - name: Biyoloji Programı (İö)
+  abbreviation: BİYOLOJİ-PR-2
   yoksis_id: '168688'
   parent_yoksis_id: '122006'
   unit_type_id: Önlisans/lisans Programı
@@ -16787,6 +16791,7 @@
   duration: 4
 
 - name: Coğrafya Programı (İö)
+  abbreviation: COĞRAFYA-PR-2
   yoksis_id: '168694'
   parent_yoksis_id: '122012'
   unit_type_id: Önlisans/lisans Programı
@@ -16798,6 +16803,7 @@
   duration: 4
 
 - name: Felsefe Programı (İö)
+  abbreviation: FELSEFE-PR-2
   yoksis_id: '241626'
   parent_yoksis_id: '128020'
   unit_type_id: Önlisans/lisans Programı
@@ -16821,6 +16827,7 @@
   duration: 4
 
 - name: Fizik Programı (İö)
+  abbreviation: FİZİK-PR-2
   yoksis_id: '168705'
   parent_yoksis_id: '122017'
   unit_type_id: Önlisans/lisans Programı
@@ -16831,6 +16838,7 @@
   duration: 4
 
 - name: Kimya Programı (%50 Burslu)
+  abbreviation: KİMYA-PR-ELLİ
   yoksis_id: '304539'
   parent_yoksis_id: '122027'
   unit_type_id: Önlisans/lisans Programı
@@ -16841,6 +16849,7 @@
   duration: 4
 
 - name: Kimya Programı (İö)
+  abbreviation: KİMYA-PR-2
   yoksis_id: '168709'
   parent_yoksis_id: '122027'
   unit_type_id: Önlisans/lisans Programı
@@ -16852,6 +16861,7 @@
   duration: 4
 
 - name: Matematik Programı (İö)
+  abbreviation: MATEMATİK-PR-2
   yoksis_id: '168713'
   parent_yoksis_id: '122033'
   unit_type_id: Önlisans/lisans Programı
@@ -22084,6 +22094,7 @@
   duration: 4
 
 - name: İlahiyat Programı (Uzaktan Öğretim)
+  abbreviation: İLAHİYAT-PR-UZ
   yoksis_id: '215478'
   parent_yoksis_id: '122157'
   unit_type_id: Önlisans/lisans Programı

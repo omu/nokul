@@ -355,6 +355,7 @@
 
 - name: Deniz ve Liman İşletmeciliği Programı (İö)
   abbreviation: ALAÇAM-MYO-UH-DLİ-PR-2
+  code: '205'
   yoksis_id: '276136'
   parent_yoksis_id: '205956'
   unit_type_id: Önlisans/lisans Programı
@@ -369,7 +370,7 @@
 
 - name: Posta Hizmetleri Programı
   abbreviation: ALAÇAM-MYO-UH-PH-PR
-  code: '205'
+  code: '206'
   yoksis_id: '153810'
   parent_yoksis_id: '205956'
   unit_type_id: Önlisans/lisans Programı
@@ -384,7 +385,7 @@
 
 - name: Posta Hizmetleri Programı (KKTC Uyruklu)
   abbreviation: ALAÇAM-MYO-UH-PH-PR-KKTC
-  code: '206'
+  code: '207'
   yoksis_id: '327588'
   parent_yoksis_id: '205956'
   unit_type_id: Önlisans/lisans Programı
@@ -416,7 +417,7 @@
 
 - name: Posta Hizmetleri Programı (İö)
   abbreviation: ALAÇAM-MYO-UH-PH-PR-2
-  code: '207'
+  code: '208'
   yoksis_id: '240435'
   parent_yoksis_id: '205956'
   unit_type_id: Önlisans/lisans Programı
@@ -446,7 +447,7 @@
 
 - name: Lojistik Programı
   abbreviation: ALAÇAM-MYO-YO-L-PR
-  code: '208'
+  code: '209'
   yoksis_id: '153811'
   parent_yoksis_id: '153820'
   unit_type_id: Önlisans/lisans Programı
@@ -461,7 +462,7 @@
 
 - name: Lojistik Programı (İö)
   abbreviation: ALAÇAM-MYO-YO-L-PR-2
-  code: '209'
+  code: '210'
   yoksis_id: '240433'
   parent_yoksis_id: '153820'
   unit_type_id: Önlisans/lisans Programı
@@ -490,7 +491,7 @@
 
 - name: Ali Fuad Başgil Hukuk Programı
   abbreviation: HUKUK-PR
-  code: '210'
+  code: '211'
   yoksis_id: '228131'
   parent_yoksis_id: '128074'
   unit_type_id: Önlisans/lisans Programı
@@ -813,7 +814,7 @@
 
 - name: Bilgisayar Programcılığı Programı
   abbreviation: BAFRA-MYO-BT-BP-PR
-  code: '211'
+  code: '212'
   yoksis_id: '169446'
   parent_yoksis_id: '169441'
   unit_type_id: Önlisans/lisans Programı
@@ -828,6 +829,7 @@
 
 - name: Bilgisayar Programcılığı Programı (İö)
   abbreviation: BAFRA-MYO-BT-BP-PR-2
+  code: '213'
   yoksis_id: '169447'
   parent_yoksis_id: '169441'
   unit_type_id: Önlisans/lisans Programı
@@ -853,7 +855,7 @@
 
 - name: Bitki Koruma Programı
   abbreviation: BAFRA-MYO-BHU-BK-PR
-  code: '212'
+  code: '214'
   yoksis_id: '254936'
   parent_yoksis_id: '169417'
   unit_type_id: Önlisans/lisans Programı
@@ -868,7 +870,7 @@
 
 - name: Organik Tarım Programı
   abbreviation: BAFRA-MYO-BHU-OT-PR
-  code: '213'
+  code: '215'
   yoksis_id: '169419'
   parent_yoksis_id: '169417'
   unit_type_id: Önlisans/lisans Programı
@@ -882,7 +884,7 @@
 
 - name: Tıbbi ve Aromatik Bitkiler Programı
   abbreviation: BAFRA-MYO-BHU-TAB-PR
-  code: '214'
+  code: '216'
   yoksis_id: '169425'
   parent_yoksis_id: '169417'
   unit_type_id: Önlisans/lisans Programı
@@ -896,6 +898,7 @@
 
 - name: Tıbbi ve Aromatik Bitkiler Programı (İö)
   abbreviation: BAFRA-MYO-BHU-TAB-PR-2
+  code: '217'
   yoksis_id: '169426'
   parent_yoksis_id: '169417'
   unit_type_id: Önlisans/lisans Programı
@@ -952,6 +955,7 @@
 
 - name: Muhasebe ve Vergi Uygulamaları Programı (İö) (Bk.605)
   abbreviation: BAFRA-MYO-MV-PR-2-605
+  code: '218'
   yoksis_id: '145961'
   parent_yoksis_id: '169471'
   unit_type_id: Önlisans/lisans Programı
@@ -1076,7 +1080,7 @@
 
 - name: Turizm ve Seyahat Hizmetleri Programı
   abbreviation: TURİZM-MYO-STEH-TSH-PR
-  code: '215'
+  code: '219'
   yoksis_id: '279025'
   parent_yoksis_id: '279024'
   unit_type_id: Önlisans/lisans Programı
@@ -1246,7 +1250,7 @@
 
 - name: Geleneksel Türk Müzikleri Programı
   abbreviation: KONSERVATUVAR-DİĞER-GTM-PR
-  code: '216'
+  code: '220'
   yoksis_id: '256111'
   parent_yoksis_id: '122304'
   unit_type_id: Önlisans/lisans Programı
@@ -1273,7 +1277,7 @@
 
 - name: Diş Hekimliği Programı
   abbreviation: DİŞ-PR
-  code: '217'
+  code: '221'
   yoksis_id: '228143'
   parent_yoksis_id: '121996'
   unit_type_id: Önlisans/lisans Programı
@@ -2040,7 +2044,7 @@
 
 - name: Bilgisayar ve Öğretim Teknolojileri Öğretmenliği Programı
   abbreviation: BÖTE-PR
-  code: '218'
+  code: '222'
   yoksis_id: '168652'
   parent_yoksis_id: '122154'
   unit_type_id: Önlisans/lisans Programı
@@ -2131,7 +2135,7 @@
 
 - name: Rehberlik ve Psikolojik Danışmanlık Programı
   abbreviation: PDR-PR
-  code: '219'
+  code: '223'
   yoksis_id: '168674'
   parent_yoksis_id: '122083'
   unit_type_id: Önlisans/lisans Programı
@@ -2158,7 +2162,7 @@
 
 - name: Müzik Öğretmenliği Programı
   abbreviation: MÜZİK-PR
-  code: '220'
+  code: '224'
   yoksis_id: '169386'
   parent_yoksis_id: '122097'
   unit_type_id: Önlisans/lisans Programı
@@ -2173,6 +2177,7 @@
 
 - name: Müzik Öğretmenliği Programı (KKTC Uyruklu)
   abbreviation: MÜZİK-PR-KKTC
+  code: '225'
   yoksis_id: '279641'
   parent_yoksis_id: '122097'
   unit_type_id: Önlisans/lisans Programı
@@ -2202,7 +2207,7 @@
 
 - name: Resim-İş Öğretmenliği Programı
   abbreviation: RESİMİŞ-PR
-  code: '221'
+  code: '226'
   yoksis_id: '169387'
   parent_yoksis_id: '122097'
   unit_type_id: Önlisans/lisans Programı
@@ -2245,7 +2250,7 @@
 
 - name: Biyoloji Öğretmenliği Programı
   abbreviation: MF-BİYO-PR
-  code: '222'
+  code: '227'
   yoksis_id: '168654'
   parent_yoksis_id: '298694'
   unit_type_id: Önlisans/lisans Programı
@@ -2271,7 +2276,7 @@
 
 - name: Fen Bilgisi Öğretmenliği Programı
   abbreviation: MF-FEN-PR
-  code: '223'
+  code: '228'
   yoksis_id: '168656'
   parent_yoksis_id: '298694'
   unit_type_id: Önlisans/lisans Programı
@@ -2324,7 +2329,7 @@
 
 - name: Matematik Öğretmenliği Programı
   abbreviation: MF-MAT-PR
-  code: '224'
+  code: '229'
   yoksis_id: '168671'
   parent_yoksis_id: '298694'
   unit_type_id: Önlisans/lisans Programı
@@ -2338,7 +2343,7 @@
 
 - name: İlköğretim Matematik Öğretmenliği Programı
   abbreviation: MF-İLKMAT-PR
-  code: '225'
+  code: '230'
   yoksis_id: '168663'
   parent_yoksis_id: '298694'
   unit_type_id: Önlisans/lisans Programı
@@ -2380,7 +2385,7 @@
 
 - name: Okul Öncesi Öğretmenliği Programı
   abbreviation: TE-OÖE-PR
-  code: '226'
+  code: '231'
   yoksis_id: '168672'
   parent_yoksis_id: '298632'
   unit_type_id: Önlisans/lisans Programı
@@ -2406,7 +2411,7 @@
 
 - name: Sınıf Öğretmenliği Programı
   abbreviation: TE-SINIF-PR
-  code: '227'
+  code: '232'
   yoksis_id: '168676'
   parent_yoksis_id: '298632'
   unit_type_id: Önlisans/lisans Programı
@@ -2476,7 +2481,7 @@
 
 - name: Sosyal Bilgiler Öğretmenliği Programı
   abbreviation: TS-SOSYAL-PR
-  code: '228'
+  code: '233'
   yoksis_id: '168678'
   parent_yoksis_id: '298815'
   unit_type_id: Önlisans/lisans Programı
@@ -2529,7 +2534,7 @@
 
 - name: Türkçe Öğretmenliği Programı
   abbreviation: TS-TÜRKÇE-PR
-  code: '229'
+  code: '234'
   yoksis_id: '168680'
   parent_yoksis_id: '298815'
   unit_type_id: Önlisans/lisans Programı
@@ -2567,7 +2572,7 @@
 
 - name: Almanca Öğretmenliği Programı
   abbreviation: YDİLEĞ-ALM-PR
-  code: '230'
+  code: '235'
   yoksis_id: '168650'
   parent_yoksis_id: '122088'
   unit_type_id: Önlisans/lisans Programı
@@ -2609,7 +2614,7 @@
 
 - name: Fransızca Öğretmenliği Programı
   abbreviation: YDİLEĞ-FR-PR
-  code: '231'
+  code: '236'
   yoksis_id: '168658'
   parent_yoksis_id: '122088'
   unit_type_id: Önlisans/lisans Programı
@@ -2651,7 +2656,7 @@
 
 - name: İngilizce Öğretmenliği Programı
   abbreviation: YDİLEĞ-İNG-PR
-  code: '232'
+  code: '237'
   yoksis_id: '168665'
   parent_yoksis_id: '122088'
   unit_type_id: Önlisans/lisans Programı
@@ -2689,7 +2694,7 @@
 
 - name: Özel Eğitim Öğretmenliği Programı
   abbreviation: ÖZELB-PR
-  code: '233'
+  code: '238'
   yoksis_id: '283503'
   parent_yoksis_id: '122092'
   unit_type_id: Önlisans/lisans Programı
@@ -3686,7 +3691,7 @@
 
 - name: Arkeoloji Programı
   abbreviation: ARKEO-PR
-  code: '234'
+  code: '239'
   yoksis_id: '228891'
   parent_yoksis_id: '140229'
   unit_type_id: Önlisans/lisans Programı
@@ -3763,7 +3768,7 @@
 
 - name: Biyoloji Programı
   abbreviation: BİYO-PR
-  code: '235'
+  code: '240'
   yoksis_id: '168686'
   parent_yoksis_id: '122006'
   unit_type_id: Önlisans/lisans Programı
@@ -3862,7 +3867,7 @@
 
 - name: Coğrafya Programı
   abbreviation: COĞRAFYA-PR
-  code: '236'
+  code: '241'
   yoksis_id: '168692'
   parent_yoksis_id: '122012'
   unit_type_id: Önlisans/lisans Programı
@@ -3941,7 +3946,7 @@
 
 - name: Felsefe Programı
   abbreviation: FELSEFE-PR
-  code: '237'
+  code: '242'
   yoksis_id: '168695'
   parent_yoksis_id: '128020'
   unit_type_id: Önlisans/lisans Programı
@@ -4129,7 +4134,7 @@
 
 - name: Kimya Programı
   abbreviation: FEN-KİMYA-PR
-  code: '238'
+  code: '243'
   yoksis_id: '168708'
   parent_yoksis_id: '122027'
   unit_type_id: Önlisans/lisans Programı
@@ -4221,7 +4226,7 @@
 
 - name: Matematik Programı
   abbreviation: MAT-PR
-  code: '239'
+  code: '244'
   yoksis_id: '168710'
   parent_yoksis_id: '122033'
   unit_type_id: Önlisans/lisans Programı
@@ -4300,7 +4305,7 @@
 
 - name: Moleküler Biyoloji ve Genetik Programı
   abbreviation: MOLBİYOGEN-PR
-  code: '240'
+  code: '245'
   yoksis_id: '320927'
   parent_yoksis_id: '320926'
   unit_type_id: Önlisans/lisans Programı
@@ -4354,7 +4359,7 @@
 
 - name: Psikoloji Programı
   abbreviation: PSİKOLOJİ-PR
-  code: '241'
+  code: '246'
   yoksis_id: '168714'
   parent_yoksis_id: '122040'
   unit_type_id: Önlisans/lisans Programı
@@ -4444,7 +4449,7 @@
 
 - name: Sanat Tarihi Programı
   abbreviation: SANATTARİHİ-PR
-  code: '242'
+  code: '247'
   yoksis_id: '231278'
   parent_yoksis_id: '166108'
   unit_type_id: Önlisans/lisans Programı
@@ -4551,7 +4556,7 @@
 
 - name: Sosyoloji Programı
   abbreviation: SOSYOLOJİ-PR
-  code: '243'
+  code: '248'
   yoksis_id: '203698'
   parent_yoksis_id: '122077'
   unit_type_id: Önlisans/lisans Programı
@@ -4629,7 +4634,7 @@
 
 - name: Tarih Programı
   abbreviation: TARİH-PR
-  code: '244'
+  code: '249'
   yoksis_id: '168716'
   parent_yoksis_id: '122045'
   unit_type_id: Önlisans/lisans Programı
@@ -4715,7 +4720,7 @@
 
 - name: Türk Dili ve Edebiyatı Programı
   abbreviation: TDE-PR
-  code: '245'
+  code: '250'
   yoksis_id: '168721'
   parent_yoksis_id: '122050'
   unit_type_id: Önlisans/lisans Programı
@@ -4855,7 +4860,7 @@
 
 - name: İstatistik Programı
   abbreviation: İSTATİSTİK-PR
-  code: '246'
+  code: '251'
   yoksis_id: '168706'
   parent_yoksis_id: '122023'
   unit_type_id: Önlisans/lisans Programı
@@ -5040,7 +5045,7 @@
 
 - name: Endüstri Ürünleri Tasarımı Programı
   abbreviation: ENTAS-PR
-  code: '247'
+  code: '252'
   yoksis_id: '337269'
   parent_yoksis_id: '232411'
   unit_type_id: Önlisans/lisans Programı
@@ -5070,7 +5075,7 @@
 
 - name: Grafik Programı
   abbreviation: GRAFİK-PR
-  code: '248'
+  code: '253'
   yoksis_id: '337400'
   parent_yoksis_id: '232412'
   unit_type_id: Önlisans/lisans Programı
@@ -5124,7 +5129,7 @@
 
 - name: Görsel İletişim Tasarımı Programı
   abbreviation: GİT-PR
-  code: '249'
+  code: '254'
   yoksis_id: '245360'
   parent_yoksis_id: '232412'
   unit_type_id: Önlisans/lisans Programı
@@ -5195,7 +5200,7 @@
 
 - name: Resim Programı
   abbreviation: RESİM-PR
-  code: '250'
+  code: '255'
   yoksis_id: '252835'
   parent_yoksis_id: '232414'
   unit_type_id: Önlisans/lisans Programı
@@ -5236,7 +5241,7 @@
 
 - name: Seramik-Cam Programı
   abbreviation: SERAMİK-PR
-  code: '251'
+  code: '256'
   yoksis_id: '270024'
   parent_yoksis_id: '232413'
   unit_type_id: Önlisans/lisans Programı
@@ -5290,7 +5295,7 @@
 
 - name: Büro Yönetimi ve Yönetici Asistanlığı Programı
   abbreviation: HAVZA-MYO-BHS-BYYA-PR
-  code: '252'
+  code: '257'
   yoksis_id: '175630'
   parent_yoksis_id: '169579'
   unit_type_id: Önlisans/lisans Programı
@@ -5319,7 +5324,7 @@
 
 - name: Büro Yönetimi ve Yönetici Asistanlığı Programı (İö)
   abbreviation: HAVZA-MYO-BHS-BYYA-PR-2
-  code: '253'
+  code: '258'
   yoksis_id: '175631'
   parent_yoksis_id: '169579'
   unit_type_id: Önlisans/lisans Programı
@@ -5346,7 +5351,7 @@
 
 - name: İş Sağlığı ve Güvenliği Programı
   abbreviation: HAVZA-MYO-MKG-İSG-PR
-  code: '254'
+  code: '259'
   yoksis_id: '249949'
   parent_yoksis_id: '249948'
   unit_type_id: Önlisans/lisans Programı
@@ -5389,7 +5394,7 @@
 
 - name: Turizm ve Otel İşletmeciliği Programı
   abbreviation: HAVZA-MYO-OTEL-TOİ-PR
-  code: '255'
+  code: '260'
   yoksis_id: '169573'
   parent_yoksis_id: '169571'
   unit_type_id: Önlisans/lisans Programı
@@ -5404,6 +5409,7 @@
 
 - name: Turizm ve Otel İşletmeciliği Programı (İö)
   abbreviation: HAVZA-MYO-OTEL-TOİ-PR-2
+  code: '261'
   yoksis_id: '169575'
   parent_yoksis_id: '169571'
   unit_type_id: Önlisans/lisans Programı
@@ -5430,7 +5436,7 @@
 
 - name: Fizyoterapi Programı
   abbreviation: HAVZA-MYO-TERAPİ-FİZYO-PR
-  code: '256'
+  code: '262'
   yoksis_id: '169586'
   parent_yoksis_id: '169584'
   unit_type_id: Önlisans/lisans Programı
@@ -5445,7 +5451,7 @@
 
 - name: Fizyoterapi Programı (İö)
   abbreviation: HAVZA-MYO-TERAPİ-FİZYO-PR-2
-  code: '257'
+  code: '263'
   yoksis_id: '169588'
   parent_yoksis_id: '169584'
   unit_type_id: Önlisans/lisans Programı
@@ -5472,7 +5478,7 @@
 
 - name: Emlak ve Emlak Yönetimi Programı
   abbreviation: HAVZA-MYO-TPS-EMLAK-PR
-  code: '258'
+  code: '264'
   yoksis_id: '228124'
   parent_yoksis_id: '251125'
   unit_type_id: Önlisans/lisans Programı
@@ -5498,7 +5504,7 @@
 
 - name: İşletme Yönetimi Programı
   abbreviation: HAVZA-MYO-YO-İY-PR
-  code: '259'
+  code: '265'
   yoksis_id: '145893'
   parent_yoksis_id: '169598'
   unit_type_id: Önlisans/lisans Programı
@@ -5528,6 +5534,7 @@
 
 - name: İşletme Yönetimi Programı (İö)
   abbreviation: HAVZA-MYO-YO-İY-PR-2
+  code: '266'
   yoksis_id: '240432'
   parent_yoksis_id: '169598'
   unit_type_id: Önlisans/lisans Programı
@@ -5768,7 +5775,7 @@
 
 - name: Elektrik-Elektronik Mühendisliği Programı
   abbreviation: ELEKTRİK-PR
-  code: '260'
+  code: '267'
   yoksis_id: '168865'
   parent_yoksis_id: '122225'
   unit_type_id: Önlisans/lisans Programı
@@ -5833,7 +5840,7 @@
 
 - name: Endüstri Mühendisliği Programı
   abbreviation: ENDÜSTRİ-PR
-  code: '261'
+  code: '268'
   yoksis_id: '168866'
   parent_yoksis_id: '122192'
   unit_type_id: Önlisans/lisans Programı
@@ -5887,7 +5894,7 @@
 
 - name: Gıda Mühendisliği Programı
   abbreviation: GIDA-PR
-  code: '262'
+  code: '269'
   yoksis_id: '168867'
   parent_yoksis_id: '122195'
   unit_type_id: Önlisans/lisans Programı
@@ -5938,7 +5945,7 @@
 
 - name: Harita Mühendisliği Programı
   abbreviation: HARİTA-PR
-  code: '263'
+  code: '270'
   yoksis_id: '168869'
   parent_yoksis_id: '122204'
   unit_type_id: Önlisans/lisans Programı
@@ -5952,6 +5959,7 @@
 
 - name: Harita Mühendisliği Programı (KKTC Uyruklu)
   abbreviation: HARİTA-PR-KKTC
+  code: '271'
   yoksis_id: '279642'
   parent_yoksis_id: '122204'
   unit_type_id: Önlisans/lisans Programı
@@ -6109,7 +6117,7 @@
 
 - name: Kimya Mühendisliği Programı
   abbreviation: KİMYA-PR
-  code: '264'
+  code: '272'
   yoksis_id: '230641'
   parent_yoksis_id: '122209'
   unit_type_id: Önlisans/lisans Programı
@@ -6259,7 +6267,7 @@
 
 - name: Makine Mühendisliği Programı
   abbreviation: MAKİNE-PR
-  code: '265'
+  code: '273'
   yoksis_id: '168873'
   parent_yoksis_id: '122215'
   unit_type_id: Önlisans/lisans Programı
@@ -6338,7 +6346,7 @@
 
 - name: Metalurji ve Malzeme Mühendisliği Programı
   abbreviation: MALZEME-PR
-  code: '266'
+  code: '274'
   yoksis_id: '333678'
   parent_yoksis_id: '122223'
   unit_type_id: Önlisans/lisans Programı
@@ -6393,7 +6401,7 @@
 
 - name: Çevre Mühendisliği Programı
   abbreviation: ÇEVRE-PR
-  code: '267'
+  code: '275'
   yoksis_id: '168862'
   parent_yoksis_id: '122188'
   unit_type_id: Önlisans/lisans Programı
@@ -6496,7 +6504,7 @@
 
 - name: İnşaat Mühendisliği Programı
   abbreviation: İNŞAAT-PR
-  code: '268'
+  code: '276'
   yoksis_id: '168871'
   parent_yoksis_id: '122198'
   unit_type_id: Önlisans/lisans Programı
@@ -6548,7 +6556,7 @@
 
 - name: Mimarlık Programı
   abbreviation: MİMARLIK-PR
-  code: '269'
+  code: '277'
   yoksis_id: '245567'
   parent_yoksis_id: '214339'
   unit_type_id: Önlisans/lisans Programı
@@ -6797,7 +6805,7 @@
 
 - name: Bilgisayar Programcılığı Programı
   abbreviation: SAMSUN-MYO-BT-BP-PR
-  code: '270'
+  code: '278'
   yoksis_id: '169874'
   parent_yoksis_id: '169871'
   unit_type_id: Önlisans/lisans Programı
@@ -6826,7 +6834,7 @@
 
 - name: Bilgisayar Programcılığı Programı (İö)
   abbreviation: SAMSUN-MYO-BT-BP-PR-2
-  code: '271'
+  code: '279'
   yoksis_id: '169876'
   parent_yoksis_id: '169871'
   unit_type_id: Önlisans/lisans Programı
@@ -6852,7 +6860,7 @@
 
 - name: Seracılık Programı
   abbreviation: SAMSUN-MYO-BİTKİ-SERA-PR
-  code: '272'
+  code: '280'
   yoksis_id: '169861'
   parent_yoksis_id: '169860'
   unit_type_id: Önlisans/lisans Programı
@@ -6879,7 +6887,7 @@
 
 - name: Mimari Dekoratif Sanatlar Programı
   abbreviation: SAMSUN-MYO-EL-MDS-PR
-  code: '273'
+  code: '281'
   yoksis_id: '169851'
   parent_yoksis_id: '169847'
   unit_type_id: Önlisans/lisans Programı
@@ -6894,7 +6902,7 @@
 
 - name: Mimari Dekoratif Sanatlar Programı (İö)
   abbreviation: SAMSUN-MYO-EL-MDS-PR-2
-  code: '274'
+  code: '282'
   yoksis_id: '169850'
   parent_yoksis_id: '169847'
   unit_type_id: Önlisans/lisans Programı
@@ -6949,7 +6957,7 @@
 
 - name: Basım ve Yayın Teknolojileri Programı
   abbreviation: SAMSUN-MYO-GÖRSEL-BASIM-PR
-  code: '275'
+  code: '283'
   yoksis_id: '146267'
   parent_yoksis_id: '169828'
   unit_type_id: Önlisans/lisans Programı
@@ -6991,7 +6999,7 @@
 
 - name: Tarım Makineleri Programı
   abbreviation: SAMSUN-MYO-METAL-TARIM-PR
-  code: '276'
+  code: '284'
   yoksis_id: '146268'
   parent_yoksis_id: '169866'
   unit_type_id: Önlisans/lisans Programı
@@ -7032,7 +7040,7 @@
 
 - name: Muhasebe ve Vergi Uygulamaları Programı
   abbreviation: SAMSUN-MYO-MV-PR
-  code: '277'
+  code: '285'
   yoksis_id: '145863'
   parent_yoksis_id: '169802'
   unit_type_id: Önlisans/lisans Programı
@@ -7047,7 +7055,7 @@
 
 - name: Muhasebe ve Vergi Uygulamaları Programı (İö)
   abbreviation: SAMSUN-MYO-MV-PR-2
-  code: '278'
+  code: '286'
   yoksis_id: '169804'
   parent_yoksis_id: '169802'
   unit_type_id: Önlisans/lisans Programı
@@ -7075,7 +7083,7 @@
 
 - name: Turizm ve Otel İşletmeciliği Programı
   abbreviation: SAMSUN-MYO-OTEL-TOİ-PR
-  code: '279'
+  code: '287'
   yoksis_id: '258274'
   parent_yoksis_id: '168851'
   unit_type_id: Önlisans/lisans Programı
@@ -7092,7 +7100,7 @@
 
 - name: Turizm ve Otel İşletmeciliği Programı (İö)
   abbreviation: SAMSUN-MYO-OTEL-TOİ-PR-2
-  code: '280'
+  code: '288'
   yoksis_id: '320498'
   parent_yoksis_id: '168851'
   unit_type_id: Önlisans/lisans Programı
@@ -7120,7 +7128,7 @@
 
 - name: Peyzaj ve Süs Bitkileri Programı
   abbreviation: SAMSUN-MYO-PARK-PEYZAJ-PR
-  code: '281'
+  code: '289'
   yoksis_id: '174836'
   parent_yoksis_id: '174835'
   unit_type_id: Önlisans/lisans Programı
@@ -7148,7 +7156,7 @@
 
 - name: Halkla İlişkiler ve Tanıtım Programı
   abbreviation: SAMSUN-MYO-PAZARLAMA-HİT-PR
-  code: '282'
+  code: '290'
   yoksis_id: '213760'
   parent_yoksis_id: '253372'
   unit_type_id: Önlisans/lisans Programı
@@ -7191,7 +7199,7 @@
 
 - name: Grafik Tasarımı Programı
   abbreviation: SAMSUN-MYO-TASARIM-GRAFİK-PR
-  code: '283'
+  code: '291'
   yoksis_id: '240430'
   parent_yoksis_id: '169841'
   unit_type_id: Önlisans/lisans Programı
@@ -7250,7 +7258,7 @@
 
 - name: Çocuk Gelişimi Programı
   abbreviation: SAMSUN-MYO-ÇBGH-ÇG-PR
-  code: '284'
+  code: '292'
   yoksis_id: '215483'
   parent_yoksis_id: '215482'
   unit_type_id: Önlisans/lisans Programı
@@ -8649,7 +8657,7 @@
 
 - name: Beslenme ve Diyetetik Programı
   abbreviation: BESLENME-PR
-  code: '285'
+  code: '293'
   yoksis_id: '293582'
   parent_yoksis_id: '293578'
   unit_type_id: Önlisans/lisans Programı
@@ -8755,7 +8763,7 @@
 
 - name: Ebelik Programı
   abbreviation: EBELİK-PR
-  code: '286'
+  code: '294'
   yoksis_id: '293594'
   parent_yoksis_id: '293580'
   unit_type_id: Önlisans/lisans Programı
@@ -8837,7 +8845,7 @@
 
 - name: Hemşirelik Programı
   abbreviation: HEMŞİRELİK-PR
-  code: '287'
+  code: '295'
   yoksis_id: '293597'
   parent_yoksis_id: '293581'
   unit_type_id: Önlisans/lisans Programı
@@ -8930,7 +8938,7 @@
 
 - name: Sağlık Yönetimi Programı
   abbreviation: SAĞLIKYÖN-PR
-  code: '288'
+  code: '296'
   yoksis_id: '293610'
   parent_yoksis_id: '293524'
   unit_type_id: Önlisans/lisans Programı
@@ -8971,7 +8979,7 @@
 
 - name: Sosyal Hizmet Programı
   abbreviation: SOSYALHİZMET-PR
-  code: '289'
+  code: '297'
   yoksis_id: '293611'
   parent_yoksis_id: '293525'
   unit_type_id: Önlisans/lisans Programı
@@ -9010,7 +9018,7 @@
 
 - name: Ağız ve Diş Sağlığı Programı
   abbreviation: SAĞLIK-MYO-DİŞ-AĞIZ-PR
-  code: '290'
+  code: '298'
   yoksis_id: '228122'
   parent_yoksis_id: '207663'
   unit_type_id: Önlisans/lisans Programı
@@ -9036,7 +9044,7 @@
 
 - name: Yaşlı Bakımı Programı
   abbreviation: SAĞLIK-MYO-SBH-YAŞLI-PR
-  code: '291'
+  code: '299'
   yoksis_id: '240438'
   parent_yoksis_id: '240437'
   unit_type_id: Önlisans/lisans Programı
@@ -9053,7 +9061,7 @@
 
 - name: Yaşlı Bakımı Programı (İö)
   abbreviation: SAĞLIK-MYO-SBH-YAŞLI-PR-2
-  code: '292'
+  code: '300'
   yoksis_id: '240439'
   parent_yoksis_id: '240437'
   unit_type_id: Önlisans/lisans Programı
@@ -9083,7 +9091,7 @@
 
 - name: Anestezi Programı
   abbreviation: SAĞLIK-MYO-THT-ANESTEZİ-PR
-  code: '293'
+  code: '301'
   yoksis_id: '169647'
   parent_yoksis_id: '169645'
   unit_type_id: Önlisans/lisans Programı
@@ -9098,7 +9106,7 @@
 
 - name: Diyaliz Programı
   abbreviation: SAĞLIK-MYO-THT-DİYALİZ-PR
-  code: '294'
+  code: '302'
   yoksis_id: '215479'
   parent_yoksis_id: '169645'
   unit_type_id: Önlisans/lisans Programı
@@ -9112,7 +9120,7 @@
 
 - name: Odyometri Programı
   abbreviation: SAĞLIK-MYO-THT-ODYO-PR
-  code: '295'
+  code: '303'
   yoksis_id: '254937'
   parent_yoksis_id: '169645'
   unit_type_id: Önlisans/lisans Programı
@@ -9127,7 +9135,7 @@
 
 - name: Optisyenlik Programı
   abbreviation: SAĞLIK-MYO-THT-OPT-PR
-  code: '296'
+  code: '304'
   yoksis_id: '169649'
   parent_yoksis_id: '169645'
   unit_type_id: Önlisans/lisans Programı
@@ -9142,7 +9150,7 @@
 
 - name: Patoloji Laboratuvar Teknikleri Programı
   abbreviation: SAĞLIK-MYO-THT-PLT-PR
-  code: '297'
+  code: '305'
   yoksis_id: '215480'
   parent_yoksis_id: '169645'
   unit_type_id: Önlisans/lisans Programı
@@ -9156,7 +9164,7 @@
 
 - name: Patoloji Laboratuvar Teknikleri Programı (İö)
   abbreviation: SAĞLIK-MYO-THT-PLT-PR-2
-  code: '298'
+  code: '306'
   yoksis_id: '215481'
   parent_yoksis_id: '169645'
   unit_type_id: Önlisans/lisans Programı
@@ -9170,7 +9178,7 @@
 
 - name: Tıbbi Dokümantasyon ve Sekreterlik Programı
   abbreviation: SAĞLIK-MYO-THT-TDS-PR
-  code: '299'
+  code: '307'
   yoksis_id: '169655'
   parent_yoksis_id: '169645'
   unit_type_id: Önlisans/lisans Programı
@@ -9184,7 +9192,7 @@
 
 - name: Tıbbi Dokümantasyon ve Sekreterlik Programı (İö)
   abbreviation: SAĞLIK-MYO-THT-TDS-PR-2
-  code: '300'
+  code: '308'
   yoksis_id: '169658'
   parent_yoksis_id: '169645'
   unit_type_id: Önlisans/lisans Programı
@@ -9199,7 +9207,7 @@
 
 - name: Tıbbi Görüntüleme Teknikleri Programı
   abbreviation: SAĞLIK-MYO-THT-TGT-PR
-  code: '301'
+  code: '309'
   yoksis_id: '145869'
   parent_yoksis_id: '169645'
   unit_type_id: Önlisans/lisans Programı
@@ -9214,7 +9222,7 @@
 
 - name: Tıbbi Görüntüleme Teknikleri Programı (İö)
   abbreviation: SAĞLIK-MYO-THT-TGT-PR-2
-  code: '302'
+  code: '310'
   yoksis_id: '243775'
   parent_yoksis_id: '169645'
   unit_type_id: Önlisans/lisans Programı
@@ -9231,7 +9239,7 @@
 
 - name: Tıbbi Laboratuvar Teknikleri Programı
   abbreviation: SAĞLIK-MYO-THT-TLT-PR
-  code: '303'
+  code: '311'
   yoksis_id: '244308'
   parent_yoksis_id: '169645'
   unit_type_id: Önlisans/lisans Programı
@@ -9248,7 +9256,7 @@
 
 - name: İlk ve Acil Yardım Programı
   abbreviation: SAĞLIK-MYO-THT-İAY-PR
-  code: '304'
+  code: '312'
   yoksis_id: '229073'
   parent_yoksis_id: '169645'
   unit_type_id: Önlisans/lisans Programı
@@ -9262,7 +9270,7 @@
 
 - name: İlk ve Acil Yardım Programı (İö)
   abbreviation: SAĞLIK-MYO-THT-İAY-PR-2
-  code: '305'
+  code: '313'
   yoksis_id: '229074'
   parent_yoksis_id: '169645'
   unit_type_id: Önlisans/lisans Programı
@@ -10056,7 +10064,7 @@
 
 - name: Dış Ticaret Programı
   abbreviation: TERME-MYO-DIŞ-PR
-  code: '306'
+  code: '314'
   yoksis_id: '236266'
   parent_yoksis_id: '236265'
   unit_type_id: Önlisans/lisans Programı
@@ -10084,7 +10092,7 @@
 
 - name: Gıda Kalite Kontrolü ve Analizi Programı
   abbreviation: TERME-MYO-GIDA-KKA-PR
-  code: '307'
+  code: '315'
   yoksis_id: '236268'
   parent_yoksis_id: '169952'
   unit_type_id: Önlisans/lisans Programı
@@ -10099,7 +10107,7 @@
 
 - name: Gıda Kalite Kontrolü ve Analizi Programı (KKTC Uyruklu)
   abbreviation: TERME-MYO-GIDA-KKA-PR-KKTC
-  code: '308'
+  code: '316'
   yoksis_id: '327585'
   parent_yoksis_id: '169952'
   unit_type_id: Önlisans/lisans Programı
@@ -10114,6 +10122,7 @@
 
 - name: Gıda Kalite Kontrolü ve Analizi Programı (İö)
   abbreviation: TERME-MYO-GIDA-KKA-PR-2
+  code: '317'
   yoksis_id: '276137'
   parent_yoksis_id: '169952'
   unit_type_id: Önlisans/lisans Programı
@@ -10128,7 +10137,7 @@
 
 - name: Gıda Teknolojisi Programı
   abbreviation: TERME-MYO-GIDA-TEKNO-PR
-  code: '309'
+  code: '318'
   yoksis_id: '169956'
   parent_yoksis_id: '169952'
   unit_type_id: Önlisans/lisans Programı
@@ -10156,7 +10165,7 @@
 
 - name: Muhasebe ve Vergi Uygulamaları Programı
   abbreviation: TERME-MYO-MV-PR
-  code: '310'
+  code: '319'
   yoksis_id: '169951'
   parent_yoksis_id: '169947'
   unit_type_id: Önlisans/lisans Programı
@@ -10183,7 +10192,7 @@
 
 - name: Pazarlama Programı
   abbreviation: TERME-MYO-PAZARLAMA-PR
-  code: '311'
+  code: '320'
   yoksis_id: '169968'
   parent_yoksis_id: '169960'
   unit_type_id: Önlisans/lisans Programı
@@ -11553,7 +11562,7 @@
 
 - name: Tıp Programı
   abbreviation: TIP-PR
-  code: '312'
+  code: '321'
   yoksis_id: '228132'
   parent_yoksis_id: '121947'
   unit_type_id: Önlisans/lisans Programı
@@ -11567,7 +11576,7 @@
 
 - name: Tıp Programı (İngilizce)
   abbreviation: TIP-PR-İNG
-  code: '313'
+  code: '322'
   yoksis_id: '215484'
   parent_yoksis_id: '121947'
   unit_type_id: Önlisans/lisans Programı
@@ -11681,7 +11690,7 @@
 
 - name: Turizm Rehberliği Programı
   abbreviation: REHBERLİK-PR
-  code: '314'
+  code: '323'
   yoksis_id: '320344'
   parent_yoksis_id: '214321'
   unit_type_id: Önlisans/lisans Programı
@@ -11724,7 +11733,7 @@
 
 - name: Turizm İşletmeciliği Programı
   abbreviation: TURİŞ-PR
-  code: '315'
+  code: '324'
   yoksis_id: '245361'
   parent_yoksis_id: '214340'
   unit_type_id: Önlisans/lisans Programı
@@ -12084,7 +12093,7 @@
 
 - name: Veteriner Programı
   abbreviation: VETERİNER-PR
-  code: '316'
+  code: '325'
   yoksis_id: '170029'
   parent_yoksis_id: '122233'
   unit_type_id: Önlisans/lisans Programı
@@ -12202,7 +12211,7 @@
 
 - name: Bilgisayar Programcılığı Programı
   abbreviation: VEZİRKÖPRÜ-MYO-BT-BP-PR
-  code: '317'
+  code: '326'
   yoksis_id: '170002'
   parent_yoksis_id: '169999'
   unit_type_id: Önlisans/lisans Programı
@@ -12217,6 +12226,7 @@
 
 - name: Bilgisayar Programcılığı Programı (İö)
   abbreviation: VEZİRKÖPRÜ-MYO-BT-BP-PR-2
+  code: '327'
   yoksis_id: '170003'
   parent_yoksis_id: '169999'
   unit_type_id: Önlisans/lisans Programı
@@ -12243,6 +12253,7 @@
 
 - name: Mobilya ve Dekorasyon Programı
   abbreviation: VEZİRKÖPRÜ-MYO-MALZEME-MD-PR
+  code: '328'
   yoksis_id: '145801'
   parent_yoksis_id: '169985'
   unit_type_id: Önlisans/lisans Programı
@@ -12269,7 +12280,7 @@
 
 - name: Muhasebe ve Vergi Uygulamaları Programı
   abbreviation: VEZİRKÖPRÜ-MYO-MV-PR
-  code: '318'
+  code: '329'
   yoksis_id: '170009'
   parent_yoksis_id: '170007'
   unit_type_id: Önlisans/lisans Programı
@@ -12295,7 +12306,7 @@
 
 - name: Ormancılık ve Orman Ürünleri Programı
   abbreviation: VEZİRKÖPRÜ-MYO-ORMAN-PR
-  code: '319'
+  code: '330'
   yoksis_id: '207429'
   parent_yoksis_id: '207454'
   unit_type_id: Önlisans/lisans Programı
@@ -12310,7 +12321,7 @@
 
 - name: Ormancılık ve Orman Ürünleri Programı (İö)
   abbreviation: VEZİRKÖPRÜ-MYO-ORMAN-PR-2
-  code: '320'
+  code: '331'
   yoksis_id: '239580'
   parent_yoksis_id: '207454'
   unit_type_id: Önlisans/lisans Programı
@@ -12352,7 +12363,7 @@
 
 - name: Çocuk Gelişimi Programı
   abbreviation: VEZİRKÖPRÜ-MYO-ÇBGH-ÇG-PR
-  code: '321'
+  code: '332'
   yoksis_id: '170005'
   parent_yoksis_id: '170004'
   unit_type_id: Önlisans/lisans Programı
@@ -12366,7 +12377,7 @@
 
 - name: Çocuk Gelişimi Programı (İö)
   abbreviation: VEZİRKÖPRÜ-MYO-ÇBGH-ÇG-PR-2
-  code: '322'
+  code: '333'
   yoksis_id: '170006'
   parent_yoksis_id: '170004'
   unit_type_id: Önlisans/lisans Programı
@@ -12539,7 +12550,7 @@
 
 - name: Antrenörlük Eğitimi Programı
   abbreviation: ANTRENÖR-PR
-  code: '323'
+  code: '334'
   yoksis_id: '169399'
   parent_yoksis_id: '122377'
   unit_type_id: Önlisans/lisans Programı
@@ -12553,7 +12564,7 @@
 
 - name: Antrenörlük Eğitimi Programı (İö)
   abbreviation: ANTRENÖR-PR-2
-  code: '324'
+  code: '335'
   yoksis_id: '319847'
   parent_yoksis_id: '122377'
   unit_type_id: Önlisans/lisans Programı
@@ -12567,7 +12578,7 @@
 
 - name: Antrenörlük Eğitimi Programı (İö) (Bk.2)
   abbreviation: ANTRENÖR-PR-2-2
-  code: '325'
+  code: '336'
   yoksis_id: '169400'
   parent_yoksis_id: '122377'
   unit_type_id: Önlisans/lisans Programı
@@ -12612,7 +12623,7 @@
 
 - name: Beden Eğitimi ve Spor Öğretmenliği Programı
   abbreviation: BESÖĞ-PR
-  code: '326'
+  code: '337'
   yoksis_id: '169401'
   parent_yoksis_id: '122374'
   unit_type_id: Önlisans/lisans Programı
@@ -12684,7 +12695,7 @@
 
 - name: Rekreasyon Programı
   abbreviation: REKRASYON-PR
-  code: '327'
+  code: '338'
   yoksis_id: '375331'
   parent_yoksis_id: '214343'
   unit_type_id: Önlisans/lisans Programı
@@ -12727,7 +12738,7 @@
 
 - name: Spor Yöneticiliği Programı
   abbreviation: SPORYÖN-PR
-  code: '328'
+  code: '339'
   yoksis_id: '169402'
   parent_yoksis_id: '122376'
   unit_type_id: Önlisans/lisans Programı
@@ -12741,7 +12752,7 @@
 
 - name: Spor Yöneticiliği Programı (İö)
   abbreviation: SPORYÖN-PR-2
-  code: '329'
+  code: '340'
   yoksis_id: '320347'
   parent_yoksis_id: '122376'
   unit_type_id: Önlisans/lisans Programı
@@ -12755,7 +12766,7 @@
 
 - name: Spor Yöneticiliği Programı (İö) (Bk.2)
   abbreviation: SPORYÖN-PR-2-2
-  code: '330'
+  code: '341'
   yoksis_id: '169406'
   parent_yoksis_id: '122376'
   unit_type_id: Önlisans/lisans Programı
@@ -12806,7 +12817,7 @@
 
 - name: Biyomedikal Cihaz Teknolojisi Programı
   abbreviation: YEŞİLYURT-MYO-ELEKTRO-BİYO-PR
-  code: '331'
+  code: '342'
   yoksis_id: '216376'
   parent_yoksis_id: '215486'
   unit_type_id: Önlisans/lisans Programı
@@ -12821,7 +12832,7 @@
 
 - name: Elektronik Teknolojisi Programı
   abbreviation: YEŞİLYURT-MYO-ELEKTRO-ET-PR
-  code: '332'
+  code: '343'
   yoksis_id: '215487'
   parent_yoksis_id: '215486'
   unit_type_id: Önlisans/lisans Programı
@@ -12835,6 +12846,7 @@
 
 - name: Elektronik Teknolojisi Programı (İö)
   abbreviation: YEŞİLYURT-MYO-ELEKTRO-ET-PR-2
+  code: '344'
   yoksis_id: '215491'
   parent_yoksis_id: '215486'
   unit_type_id: Önlisans/lisans Programı
@@ -12861,7 +12873,7 @@
 
 - name: Elektrik Programı
   abbreviation: YEŞİLYURT-MYO-ELEKTRİK-PR
-  code: '333'
+  code: '345'
   yoksis_id: '215485'
   parent_yoksis_id: '202398'
   unit_type_id: Önlisans/lisans Programı
@@ -12875,6 +12887,7 @@
 
 - name: Elektrik Programı (İö)
   abbreviation: YEŞİLYURT-MYO-ELEKTRİK-PR-2
+  code: '346'
   yoksis_id: '215490'
   parent_yoksis_id: '202398'
   unit_type_id: Önlisans/lisans Programı
@@ -12901,7 +12914,7 @@
 
 - name: Gıda Teknolojisi Programı
   abbreviation: YEŞİLYURT-MYO-GIDA-TEKNO-PR
-  code: '334'
+  code: '347'
   yoksis_id: '202461'
   parent_yoksis_id: '202460'
   unit_type_id: Önlisans/lisans Programı
@@ -12916,6 +12929,7 @@
 
 - name: Gıda Teknolojisi Programı (İö)
   abbreviation: YEŞİLYURT-MYO-GIDA-TEKNO-PR-2
+  code: '348'
   yoksis_id: '267990'
   parent_yoksis_id: '202460'
   unit_type_id: Önlisans/lisans Programı
@@ -12942,7 +12956,7 @@
 
 - name: Kimya Teknolojisi Programı
   abbreviation: YEŞİLYURT-MYO-KİMYA-TEKNO-PR
-  code: '335'
+  code: '349'
   yoksis_id: '215489'
   parent_yoksis_id: '215488'
   unit_type_id: Önlisans/lisans Programı
@@ -12957,6 +12971,7 @@
 
 - name: Kimya Teknolojisi Programı (İö)
   abbreviation: YEŞİLYURT-MYO-KİMYA-TEKNO-PR-2
+  code: '350'
   yoksis_id: '238468'
   parent_yoksis_id: '215488'
   unit_type_id: Önlisans/lisans Programı
@@ -12986,7 +13001,7 @@
 
 - name: Endüstriyel Kalıpçılık Programı
   abbreviation: YEŞİLYURT-MYO-METAL-EK-PR
-  code: '336'
+  code: '351'
   yoksis_id: '202464'
   parent_yoksis_id: '202463'
   unit_type_id: Önlisans/lisans Programı
@@ -13001,6 +13016,7 @@
 
 - name: Endüstriyel Kalıpçılık Programı (İö)
   abbreviation: YEŞİLYURT-MYO-METAL-EK-PR-2
+  code: '352'
   yoksis_id: '257436'
   parent_yoksis_id: '202463'
   unit_type_id: Önlisans/lisans Programı
@@ -13027,7 +13043,7 @@
 
 - name: Otomotiv Teknolojisi Programı
   abbreviation: YEŞİLYURT-MYO-MOTOR-OTO-PR
-  code: '337'
+  code: '353'
   yoksis_id: '215493'
   parent_yoksis_id: '215492'
   unit_type_id: Önlisans/lisans Programı
@@ -13041,6 +13057,7 @@
 
 - name: Otomotiv Teknolojisi Programı (İö)
   abbreviation: YEŞİLYURT-MYO-MOTOR-OTO-PR-2
+  code: '354'
   yoksis_id: '240434'
   parent_yoksis_id: '215492'
   unit_type_id: Önlisans/lisans Programı
@@ -13096,7 +13113,7 @@
 
 - name: Bahçe Bitkileri Programı
   abbreviation: BAHÇE-PR
-  code: '338'
+  code: '355'
   yoksis_id: '169293'
   parent_yoksis_id: '122259'
   unit_type_id: Önlisans/lisans Programı
@@ -13184,7 +13201,7 @@
 
 - name: Bitki Koruma Programı
   abbreviation: BİTKİKOR-PR
-  code: '339'
+  code: '356'
   yoksis_id: '169294'
   parent_yoksis_id: '122261'
   unit_type_id: Önlisans/lisans Programı
@@ -13360,7 +13377,7 @@
 
 - name: Tarım Ekonomisi Programı
   abbreviation: TARIMEKO-PR
-  code: '340'
+  code: '357'
   yoksis_id: '169295'
   parent_yoksis_id: '122264'
   unit_type_id: Önlisans/lisans Programı
@@ -13432,7 +13449,7 @@
 
 - name: Tarım Makineleri ve Teknolojileri Mühendisliği Programı
   abbreviation: TARIMAKTEK-PR
-  code: '341'
+  code: '358'
   yoksis_id: '261783'
   parent_yoksis_id: '122279'
   unit_type_id: Önlisans/lisans Programı
@@ -13533,7 +13550,7 @@
 
 - name: Tarımsal Biyoteknoloji Programı
   abbreviation: TARIMBİYOTEK-PR
-  code: '342'
+  code: '359'
   yoksis_id: '169297'
   parent_yoksis_id: '146101'
   unit_type_id: Önlisans/lisans Programı
@@ -13633,7 +13650,7 @@
 
 - name: Tarla Bitkileri Programı
   abbreviation: TARLABİTKİ-PR
-  code: '343'
+  code: '360'
   yoksis_id: '169300'
   parent_yoksis_id: '122267'
   unit_type_id: Önlisans/lisans Programı
@@ -13718,7 +13735,7 @@
 
 - name: Toprak Bilimi ve Bitki Besleme Programı
   abbreviation: TOPRAKBİL-PR
-  code: '344'
+  code: '361'
   yoksis_id: '169301'
   parent_yoksis_id: '145775'
   unit_type_id: Önlisans/lisans Programı
@@ -13787,7 +13804,7 @@
 
 - name: Zootekni Programı
   abbreviation: ZOOTEKNİ-PR
-  code: '345'
+  code: '362'
   yoksis_id: '169302'
   parent_yoksis_id: '122271'
   unit_type_id: Önlisans/lisans Programı
@@ -13857,7 +13874,7 @@
 
 - name: Çağrı Merkezi Hizmetleri Programı
   abbreviation: TİCARET-MYO-BHS-ÇMH-PR
-  code: '346'
+  code: '363'
   yoksis_id: '238470'
   parent_yoksis_id: '237237'
   unit_type_id: Önlisans/lisans Programı
@@ -13874,7 +13891,7 @@
 
 - name: Çağrı Merkezi Hizmetleri Programı (İö)
   abbreviation: TİCARET-MYO-BHS-ÇMH-PR-2
-  code: '347'
+  code: '364'
   yoksis_id: '294078'
   parent_yoksis_id: '237237'
   unit_type_id: Önlisans/lisans Programı
@@ -13901,7 +13918,7 @@
 
 - name: Bilgi Güvenliği Teknolojisi Programı
   abbreviation: TİCARET-MYO-BT-BGT-PR
-  code: '348'
+  code: '365'
   yoksis_id: '267067'
   parent_yoksis_id: '229374'
   unit_type_id: Önlisans/lisans Programı
@@ -13916,6 +13933,7 @@
 
 - name: Bilgi Güvenliği Teknolojisi Programı (KKTC Uyruklu)
   abbreviation: TİCARET-MYO-BT-BGT-PR-KKTC
+  code: '366'
   yoksis_id: '327583'
   parent_yoksis_id: '229374'
   unit_type_id: Önlisans/lisans Programı
@@ -13930,6 +13948,7 @@
 
 - name: Bilgi Güvenliği Teknolojisi Programı (İö)
   abbreviation: TİCARET-MYO-BT-BGT-PR-2
+  code: '367'
   yoksis_id: '267068'
   parent_yoksis_id: '229374'
   unit_type_id: Önlisans/lisans Programı
@@ -13944,7 +13963,7 @@
 
 - name: Bilgisayar Programcılığı Programı
   abbreviation: TİCARET-MYO-BT-BP-PR
-  code: '349'
+  code: '368'
   yoksis_id: '229375'
   parent_yoksis_id: '229374'
   unit_type_id: Önlisans/lisans Programı
@@ -13958,6 +13977,7 @@
 
 - name: Bilgisayar Programcılığı Programı (İö)
   abbreviation: TİCARET-MYO-BT-BP-PR-2
+  code: '369'
   yoksis_id: '229376'
   parent_yoksis_id: '229374'
   unit_type_id: Önlisans/lisans Programı
@@ -13983,7 +14003,7 @@
 
 - name: Bankacılık ve Sigortacılık Programı
   abbreviation: TİCARET-MYO-FİNANS-BANKA-PR
-  code: '350'
+  code: '370'
   yoksis_id: '174834'
   parent_yoksis_id: '229371'
   unit_type_id: Önlisans/lisans Programı
@@ -13997,7 +14017,7 @@
 
 - name: Bankacılık ve Sigortacılık Programı (İö)
   abbreviation: TİCARET-MYO-FİNANS-BANKA-PR-2
-  code: '351'
+  code: '371'
   yoksis_id: '238469'
   parent_yoksis_id: '229371'
   unit_type_id: Önlisans/lisans Programı
@@ -14039,7 +14059,7 @@
 
 - name: Muhasebe ve Vergi Uygulamaları Programı
   abbreviation: TİCARET-MYO-MV-PR
-  code: '352'
+  code: '372'
   yoksis_id: '229378'
   parent_yoksis_id: '229377'
   unit_type_id: Önlisans/lisans Programı
@@ -14053,6 +14073,7 @@
 
 - name: Muhasebe ve Vergi Uygulamaları Programı (İö)
   abbreviation: TİCARET-MYO-MV-PR-2
+  code: '373'
   yoksis_id: '229379'
   parent_yoksis_id: '229377'
   unit_type_id: Önlisans/lisans Programı
@@ -14079,7 +14100,7 @@
 
 - name: Sosyal Güvenlik Programı
   abbreviation: TİCARET-MYO-MKG-SG-PR
-  code: '353'
+  code: '374'
   yoksis_id: '257434'
   parent_yoksis_id: '284505'
   unit_type_id: Önlisans/lisans Programı
@@ -14094,7 +14115,7 @@
 
 - name: Sosyal Güvenlik Programı (İö)
   abbreviation: TİCARET-MYO-MKG-SG-PR-2
-  code: '354'
+  code: '375'
   yoksis_id: '257435'
   parent_yoksis_id: '284505'
   unit_type_id: Önlisans/lisans Programı
@@ -14254,7 +14275,7 @@
 
 - name: Siyaset Bilimi ve Kamu Yönetimi Programı
   abbreviation: SBKY-PR
-  code: '355'
+  code: '376'
   yoksis_id: '169309'
   parent_yoksis_id: '128036'
   unit_type_id: Önlisans/lisans Programı
@@ -14336,7 +14357,7 @@
 
 - name: Uluslararası Ticaret ve Lojistik Programı
   abbreviation: UTL-PR
-  code: '356'
+  code: '377'
   yoksis_id: '252836'
   parent_yoksis_id: '235948'
   unit_type_id: Önlisans/lisans Programı
@@ -14430,7 +14451,7 @@
 
 - name: İktisat Programı
   abbreviation: İKTİSAT-PR
-  code: '357'
+  code: '378'
   yoksis_id: '169307'
   parent_yoksis_id: '122182'
   unit_type_id: Önlisans/lisans Programı
@@ -14445,7 +14466,7 @@
 
 - name: İktisat Programı (İngilizce)
   abbreviation: İKTİSAT-PR-İNG
-  code: '358'
+  code: '379'
   yoksis_id: '275765'
   parent_yoksis_id: '122182'
   unit_type_id: Önlisans/lisans Programı
@@ -14564,7 +14585,7 @@
 
 - name: İşletme Programı
   abbreviation: İŞLETMEB-PR
-  code: '359'
+  code: '380'
   yoksis_id: '169308'
   parent_yoksis_id: '128030'
   unit_type_id: Önlisans/lisans Programı
@@ -15130,7 +15151,7 @@
 
 - name: İlahiyat Programı
   abbreviation: İLAHİYAT-PR
-  code: '360'
+  code: '381'
   yoksis_id: '168773'
   parent_yoksis_id: '122157'
   unit_type_id: Önlisans/lisans Programı
@@ -15145,7 +15166,7 @@
 
 - name: İlahiyat Programı (İö)
   abbreviation: İLAHİYAT-PR-2
-  code: '361'
+  code: '382'
   yoksis_id: '168774'
   parent_yoksis_id: '122157'
   unit_type_id: Önlisans/lisans Programı
@@ -15374,7 +15395,7 @@
 
 - name: Gazetecilik Programı
   abbreviation: GAZETE-PR
-  code: '362'
+  code: '383'
   yoksis_id: '239111'
   parent_yoksis_id: '204804'
   unit_type_id: Önlisans/lisans Programı
@@ -15445,7 +15466,7 @@
 
 - name: Halkla İlişkiler ve Tanıtım Programı
   abbreviation: HİT-PR
-  code: '363'
+  code: '384'
   yoksis_id: '239110'
   parent_yoksis_id: '204803'
   unit_type_id: Önlisans/lisans Programı
@@ -15460,7 +15481,7 @@
 
 - name: Halkla İlişkiler ve Tanıtım Programı (İö)
   abbreviation: HİT-PR-2
-  code: '364'
+  code: '385'
   yoksis_id: '291019'
   parent_yoksis_id: '204803'
   unit_type_id: Önlisans/lisans Programı
@@ -15503,7 +15524,7 @@
 
 - name: Radyo, Televizyon ve Sinema Programı
   abbreviation: RST-PR
-  code: '365'
+  code: '386'
   yoksis_id: '294037'
   parent_yoksis_id: '204805'
   unit_type_id: Önlisans/lisans Programı
@@ -15573,6 +15594,7 @@
 
 - name: Adalet Programı (Ücretli)
   abbreviation: ADALET-MYO-HUKUK-A-PR-ÜCRETLİ
+  code: '387'
   yoksis_id: '304522'
   parent_yoksis_id: '174830'
   unit_type_id: Önlisans/lisans Programı
@@ -15634,6 +15656,7 @@
 
 - name: Hukuk Programı (%50 Burslu)
   abbreviation: HUKUK-PR-ELLİ
+  code: '388'
   yoksis_id: '304513'
   parent_yoksis_id: '176334'
   unit_type_id: Önlisans/lisans Programı
@@ -15655,6 +15678,7 @@
 
 - name: Hukuk Programı (Ücretli)
   abbreviation: HUKUK-PR-ÜCRETLİ
+  code: '389'
   yoksis_id: '309085'
   parent_yoksis_id: '176334'
   unit_type_id: Önlisans/lisans Programı
@@ -16356,6 +16380,7 @@
 
 - name: Organik Tarım Programı (İö)
   abbreviation: BAFRA-MYO-BHU-OT-PR-2
+  code: '390'
   yoksis_id: '169421'
   parent_yoksis_id: '169417'
   unit_type_id: Önlisans/lisans Programı
@@ -16368,6 +16393,7 @@
 
 - name: Seracılık Programı
   abbreviation: BAFRA-MYO-BHU-SERA-PR
+  code: '391'
   yoksis_id: '169478'
   parent_yoksis_id: '169417'
   unit_type_id: Önlisans/lisans Programı
@@ -16379,6 +16405,7 @@
 
 - name: Tütün Yetiştiriciliği ve İşlemeciliği Programı
   abbreviation: BAFRA-MYO-BHU-TÜTÜN-PR
+  code: '392'
   yoksis_id: '122358'
   parent_yoksis_id: '169417'
   unit_type_id: Önlisans/lisans Programı
@@ -16390,6 +16417,7 @@
 
 - name: Tütün Yetiştiriciliği ve İşlemeciliği Programı (İö)
   abbreviation: BAFRA-MYO-BHU-TÜTÜN-PR-2
+  code: '393'
   yoksis_id: '145887'
   parent_yoksis_id: '169417'
   unit_type_id: Önlisans/lisans Programı
@@ -16552,6 +16580,7 @@
 
 - name: Aşçılık Programı
   abbreviation: TURİZM-MYO-OTEL-AŞÇI-PR
+  code: '394'
   yoksis_id: '333837'
   parent_yoksis_id: '279026'
   unit_type_id: Önlisans/lisans Programı
@@ -16563,6 +16592,7 @@
 
 - name: Turizm ve Otel İşletmeciliği Programı
   abbreviation: TURİZM-MYO-OTEL-TOİ-PR
+  code: '395'
   yoksis_id: '279027'
   parent_yoksis_id: '279026'
   unit_type_id: Önlisans/lisans Programı
@@ -16810,6 +16840,7 @@
 
 - name: Alman Dili Eğitimi (Dr)
   abbreviation: EĞİTİM-BİLİM-ADE-DR
+  code: '833'
   yoksis_id: '267762'
   parent_yoksis_id: '174846'
   unit_type_id: Doktora Programı
@@ -16821,6 +16852,7 @@
 
 - name: Alman Dili Eğitimi (Yl) (Tezli)
   abbreviation: EĞİTİM-BİLİM-ADE-YL
+  code: '834'
   yoksis_id: '267761'
   parent_yoksis_id: '174846'
   unit_type_id: Yüksek Lisans Programı
@@ -16832,6 +16864,7 @@
 
 - name: Coğrafya Eğitimi (Yl) (Tezli)
   abbreviation: EĞİTİM-BİLİM-COĞEĞ-YL
+  code: '835'
   yoksis_id: '267769'
   parent_yoksis_id: '174846'
   unit_type_id: Yüksek Lisans Programı
@@ -16843,6 +16876,7 @@
 
 - name: Eğitim Yönetimi, Teftişi, Planlaması ve Ekonomisi (Yl) (Tezli)
   abbreviation: EĞİTİM-BİLİM-EYTPE-YL
+  code: '836'
   yoksis_id: '267767'
   parent_yoksis_id: '174846'
   unit_type_id: Yüksek Lisans Programı
@@ -16854,6 +16888,7 @@
 
 - name: Eğitim Yönetimi, Teftişi, Planlaması ve Ekonomisi (Yl) (Tezsiz) (Uzaktan Öğretim)
   abbreviation: EĞİTİM-BİLİM-EYTPE-YZ-UZ
+  code: '032'
   yoksis_id: '234519'
   parent_yoksis_id: '174846'
   unit_type_id: Yüksek Lisans Programı
@@ -16865,6 +16900,7 @@
 
 - name: Eğitim Yönetimi, Teftişi, Planlaması ve Ekonomisi (Yl) (Tezsiz) (İö)
   abbreviation: EĞİTİM-BİLİM-EYTPE-YZ-2
+  code: '837'
   yoksis_id: '267768'
   parent_yoksis_id: '174846'
   unit_type_id: Yüksek Lisans Programı
@@ -16876,6 +16912,7 @@
 
 - name: Eğitimin Sosyal Tarihi ve Temelleri (Yl) (Tezli)
   abbreviation: EĞİTİM-BİLİM-ESTT-YL
+  code: '838'
   yoksis_id: '255124'
   parent_yoksis_id: '174846'
   unit_type_id: Yüksek Lisans Programı
@@ -16887,6 +16924,7 @@
 
 - name: Fransız Dili Eğitimi (Yl) (Tezli)
   abbreviation: EĞİTİM-BİLİM-FDE-YL
+  code: '839'
   yoksis_id: '267763'
   parent_yoksis_id: '174846'
   unit_type_id: Yüksek Lisans Programı
@@ -16898,6 +16936,7 @@
 
 - name: Müzik Eğitimi (Dr)
   abbreviation: MÜZİK-DR
+  code: '840'
   yoksis_id: '267755'
   parent_yoksis_id: '174846'
   unit_type_id: Doktora Programı
@@ -16909,6 +16948,7 @@
 
 - name: Rehberlik ve Psikolojik Danışmanlık (Dr)
   abbreviation: EĞİTİM-BİLİM-PDR-DR
+  code: '841'
   yoksis_id: '267766'
   parent_yoksis_id: '174846'
   unit_type_id: Doktora Programı
@@ -16920,6 +16960,7 @@
 
 - name: Rehberlik ve Psikolojik Danışmanlık (Yl) (Tezli)
   abbreviation: EĞİTİM-BİLİM-PDR-YL
+  code: '842'
   yoksis_id: '267765'
   parent_yoksis_id: '174846'
   unit_type_id: Yüksek Lisans Programı
@@ -16931,6 +16972,7 @@
 
 - name: Sosyal Bilimler Eğitimi (Dr)
   abbreviation: EĞİTİM-BİLİM-SBE-DR
+  code: '843'
   yoksis_id: '169483'
   parent_yoksis_id: '174846'
   unit_type_id: Doktora Programı
@@ -16942,6 +16984,7 @@
 
 - name: Sosyal Bilimler Eğitimi (Yl) (Tezli)
   abbreviation: EĞİTİM-BİLİM-SBE-YL
+  code: '844'
   yoksis_id: '267756'
   parent_yoksis_id: '174846'
   unit_type_id: Yüksek Lisans Programı
@@ -16953,6 +16996,7 @@
 
 - name: İngiliz Dili Eğitimi (Yl) (Tezli)
   abbreviation: EĞİTİM-BİLİM-İDE-YL
+  code: '845'
   yoksis_id: '267764'
   parent_yoksis_id: '174846'
   unit_type_id: Yüksek Lisans Programı
@@ -16964,6 +17008,7 @@
 
 - name: İngiliz Dili Eğitimi (Yl) (Tezli) (Gazi Üniversitesi Ortak)
   abbreviation: EĞİTİM-BİLİM-İDE-YL-GAZİ
+  code: '846'
   yoksis_id: '235313'
   parent_yoksis_id: '174846'
   unit_type_id: Yüksek Lisans Programı
@@ -16995,6 +17040,7 @@
 
 - name: Bilgisayar ve Öğretim Teknolojileri Öğretmenliği Programı (İö)
   abbreviation: BÖTE-PR-2
+  code: '396'
   yoksis_id: '168653'
   parent_yoksis_id: '122154'
   unit_type_id: Önlisans/lisans Programı
@@ -17006,6 +17052,7 @@
 
 - name: Din Kültürü ve Ahlak Bilgisi Öğretmenliği Programı
   abbreviation: DKABÖ-PR
+  code: '397'
   yoksis_id: '285292'
   parent_yoksis_id: '122082'
   unit_type_id: Önlisans/lisans Programı
@@ -17036,6 +17083,7 @@
 
 - name: Rehberlik ve Psikolojik Danışmanlık Programı (%25 Burslu)
   abbreviation: PDR-PR-YİRMİBEŞ
+  code: '398'
   yoksis_id: '299025'
   parent_yoksis_id: '122083'
   unit_type_id: Önlisans/lisans Programı
@@ -17047,6 +17095,7 @@
 
 - name: Rehberlik ve Psikolojik Danışmanlık Programı (%50 Burslu)
   abbreviation: PDR-PR-ELLİ
+  code: '399'
   yoksis_id: '299026'
   parent_yoksis_id: '122083'
   unit_type_id: Önlisans/lisans Programı
@@ -17058,6 +17107,7 @@
 
 - name: Rehberlik ve Psikolojik Danışmanlık Programı (Tam Burslu)
   abbreviation: PDR-PR-YÜZ
+  code: '400'
   yoksis_id: '299023'
   parent_yoksis_id: '122083'
   unit_type_id: Önlisans/lisans Programı
@@ -17069,6 +17119,7 @@
 
 - name: Rehberlik ve Psikolojik Danışmanlık Programı (Ücretli)
   abbreviation: PDR-PR-ÜCRETLİ
+  code: '401'
   yoksis_id: '299024'
   parent_yoksis_id: '122083'
   unit_type_id: Önlisans/lisans Programı
@@ -17080,6 +17131,7 @@
 
 - name: Rehberlik ve Psikolojik Danışmanlık Programı (İö)
   abbreviation: PDR-PR-2
+  code: '402'
   yoksis_id: '168675'
   parent_yoksis_id: '122083'
   unit_type_id: Önlisans/lisans Programı
@@ -17101,6 +17153,7 @@
 
 - name: Resim-İş Öğretmenliği Programı (İö)
   abbreviation: RESİMİŞ-PR-2
+  code: '403'
   yoksis_id: '169388'
   parent_yoksis_id: '122097'
   unit_type_id: Önlisans/lisans Programı
@@ -17122,6 +17175,7 @@
 
 - name: Fen Bilgisi Öğretmenliği Programı (İö)
   abbreviation: MF-FEN-PR-2
+  code: '404'
   yoksis_id: '168657'
   parent_yoksis_id: '298694'
   unit_type_id: Önlisans/lisans Programı
@@ -17133,6 +17187,7 @@
 
 - name: Fizik Öğretmenliği Programı
   abbreviation: MF-FİZİK-PR
+  code: '405'
   yoksis_id: '168660'
   parent_yoksis_id: '298694'
   unit_type_id: Önlisans/lisans Programı
@@ -17155,6 +17210,7 @@
 
 - name: Kimya Öğretmenliği Programı
   abbreviation: MF-KİMYA-PR
+  code: '406'
   yoksis_id: '168670'
   parent_yoksis_id: '298694'
   unit_type_id: Önlisans/lisans Programı
@@ -17186,6 +17242,7 @@
 
 - name: İlköğretim Matematik Öğretmenliği Programı (%50 Burslu)
   abbreviation: MF-İLKMAT-PR-ELLİ
+  code: '407'
   yoksis_id: '308562'
   parent_yoksis_id: '298694'
   unit_type_id: Önlisans/lisans Programı
@@ -17197,6 +17254,7 @@
 
 - name: İlköğretim Matematik Öğretmenliği Programı (İö)
   abbreviation: MF-İLKMAT-PR-2
+  code: '408'
   yoksis_id: '168664'
   parent_yoksis_id: '298694'
   unit_type_id: Önlisans/lisans Programı
@@ -17208,6 +17266,7 @@
 
 - name: Ortaöğretim Fen ve Matematik Alanlar Eğitimi Bölümü
   abbreviation: ORTAFENMAT
+  code: CBD
   yoksis_id: '122106'
   parent_yoksis_id: '122082'
   unit_type_id: Bölüm
@@ -17218,6 +17277,7 @@
 
 - name: Biyoloji Öğretmenliği Programı (5 Yıllık)
   abbreviation: ORTAFENMAT-BİYO-PR-BEŞYIL
+  code: '409'
   yoksis_id: '323968'
   parent_yoksis_id: '122106'
   unit_type_id: Önlisans/lisans Programı
@@ -17229,6 +17289,7 @@
 
 - name: Fizik Öğretmenliği Programı (5 Yıllık)
   abbreviation: ORTAFENMAT-FİZİK-PR-BEŞYIL
+  code: '410'
   yoksis_id: '323969'
   parent_yoksis_id: '122106'
   unit_type_id: Önlisans/lisans Programı
@@ -17240,6 +17301,7 @@
 
 - name: Kimya Öğretmenliği Programı (5 Yıllık)
   abbreviation: ORTAFENMAT-KİMYA-PR-BEŞYIL
+  code: '411'
   yoksis_id: '323970'
   parent_yoksis_id: '122106'
   unit_type_id: Önlisans/lisans Programı
@@ -17251,6 +17313,7 @@
 
 - name: Matematik Öğretmenliği Programı (5 Yıllık)
   abbreviation: ORTAFENMAT-MAT-PR-BEŞYIL
+  code: '412'
   yoksis_id: '323971'
   parent_yoksis_id: '122106'
   unit_type_id: Önlisans/lisans Programı
@@ -17271,6 +17334,7 @@
 
 - name: Okul Öncesi Öğretmenliği Programı (%25 Burslu)
   abbreviation: TE-OÖE-PR-YİRMİBEŞ
+  code: '413'
   yoksis_id: '308561'
   parent_yoksis_id: '298632'
   unit_type_id: Önlisans/lisans Programı
@@ -17282,6 +17346,7 @@
 
 - name: Okul Öncesi Öğretmenliği Programı (Tam Burslu)
   abbreviation: TE-OÖE-PR-YÜZ
+  code: '414'
   yoksis_id: '304532'
   parent_yoksis_id: '298632'
   unit_type_id: Önlisans/lisans Programı
@@ -17293,6 +17358,7 @@
 
 - name: Okul Öncesi Öğretmenliği Programı (İö)
   abbreviation: TE-OÖE-PR-2
+  code: '415'
   yoksis_id: '168673'
   parent_yoksis_id: '298632'
   unit_type_id: Önlisans/lisans Programı
@@ -17305,6 +17371,7 @@
 
 - name: Sınıf Öğretmenliği Programı (İö)
   abbreviation: TE-SINIF-PR-2
+  code: '416'
   yoksis_id: '168677'
   parent_yoksis_id: '298632'
   unit_type_id: Önlisans/lisans Programı
@@ -17316,6 +17383,7 @@
 
 - name: Türkçe Eğitimi Bölümü
   abbreviation: TÜRKÇEĞ
+  code: CBE
   yoksis_id: '122095'
   parent_yoksis_id: '122082'
   unit_type_id: Bölüm
@@ -17326,6 +17394,7 @@
 
 - name: Türkçe Öğretmenliği Programı (%25 Burslu)
   abbreviation: TÜRKÇEĞ-PR-YİRMİBEŞ
+  code: '417'
   yoksis_id: '299029'
   parent_yoksis_id: '122095'
   unit_type_id: Önlisans/lisans Programı
@@ -17337,6 +17406,7 @@
 
 - name: Türkçe Öğretmenliği Programı (%50 Burslu)
   abbreviation: TÜRKÇEĞ-PR-ELLİ
+  code: '418'
   yoksis_id: '299030'
   parent_yoksis_id: '122095'
   unit_type_id: Önlisans/lisans Programı
@@ -17348,6 +17418,7 @@
 
 - name: Türkçe Öğretmenliği Programı (Tam Burslu)
   abbreviation: TÜRKÇEĞ-PR-YÜZ
+  code: '419'
   yoksis_id: '299027'
   parent_yoksis_id: '122095'
   unit_type_id: Önlisans/lisans Programı
@@ -17359,6 +17430,7 @@
 
 - name: Türkçe Öğretmenliği Programı (Ücretli)
   abbreviation: TÜRKÇEĞ-PR-ÜCRETLİ
+  code: '420'
   yoksis_id: '299028'
   parent_yoksis_id: '122095'
   unit_type_id: Önlisans/lisans Programı
@@ -17390,6 +17462,7 @@
 
 - name: Sosyal Bilgiler Öğretmenliği Programı (İö)
   abbreviation: TS-SOSYAL-PR-2
+  code: '421'
   yoksis_id: '168679'
   parent_yoksis_id: '298815'
   unit_type_id: Önlisans/lisans Programı
@@ -17401,6 +17474,7 @@
 
 - name: Tarih Öğretmenliği Programı
   abbreviation: TS-TARİH-PR
+  code: '422'
   yoksis_id: '268110'
   parent_yoksis_id: '298815'
   unit_type_id: Önlisans/lisans Programı
@@ -17442,6 +17516,7 @@
 
 - name: Türkçe Öğretmenliği Programı (İö)
   abbreviation: TS-TÜRKÇE-PR-2
+  code: '423'
   yoksis_id: '168681'
   parent_yoksis_id: '298815'
   unit_type_id: Önlisans/lisans Programı
@@ -17453,6 +17528,7 @@
 
 - name: Almanca Öğretmenliği Programı (İö)
   abbreviation: YDİLEĞ-ALM-PR-2
+  code: '424'
   yoksis_id: '168651'
   parent_yoksis_id: '122088'
   unit_type_id: Önlisans/lisans Programı
@@ -17464,6 +17540,7 @@
 
 - name: Fransızca Öğretmenliği Programı (İö)
   abbreviation: YDİLEĞ-FR-PR-2
+  code: '425'
   yoksis_id: '168662'
   parent_yoksis_id: '122088'
   unit_type_id: Önlisans/lisans Programı
@@ -17475,6 +17552,7 @@
 
 - name: İngilizce Öğretmenliği Programı (%25 Burslu)
   abbreviation: YDİLEĞ-İNG-PR-YİRMİBEŞ
+  code: '426'
   yoksis_id: '299021'
   parent_yoksis_id: '122088'
   unit_type_id: Önlisans/lisans Programı
@@ -17486,6 +17564,7 @@
 
 - name: İngilizce Öğretmenliği Programı (%50 Burslu)
   abbreviation: YDİLEĞ-İNG-PR-ELLİ
+  code: '427'
   yoksis_id: '299022'
   parent_yoksis_id: '122088'
   unit_type_id: Önlisans/lisans Programı
@@ -17497,6 +17576,7 @@
 
 - name: İngilizce Öğretmenliği Programı (Tam Burslu)
   abbreviation: YDİLEĞ-İNG-PR-YÜZ
+  code: '428'
   yoksis_id: '299019'
   parent_yoksis_id: '122088'
   unit_type_id: Önlisans/lisans Programı
@@ -17508,6 +17588,7 @@
 
 - name: İngilizce Öğretmenliği Programı (Ücretli)
   abbreviation: YDİLEĞ-İNG-PR-ÜCRETLİ
+  code: '429'
   yoksis_id: '299020'
   parent_yoksis_id: '122088'
   unit_type_id: Önlisans/lisans Programı
@@ -17519,6 +17600,7 @@
 
 - name: İngilizce Öğretmenliği Programı (İö)
   abbreviation: YDİLEĞ-İNG-PR-2
+  code: '430'
   yoksis_id: '168667'
   parent_yoksis_id: '122088'
   unit_type_id: Önlisans/lisans Programı
@@ -17530,6 +17612,7 @@
 
 - name: Zihin Engelliler Öğretmenliği Programı
   abbreviation: ÖZELB-ZİHİN-PR
+  code: '431'
   yoksis_id: '168682'
   parent_yoksis_id: '122092'
   unit_type_id: Önlisans/lisans Programı
@@ -17553,6 +17636,7 @@
 
 - name: Zihin Engelliler Öğretmenliği Programı (İö)
   abbreviation: ÖZELB-ZİHİN-PR-2
+  code: '432'
   yoksis_id: '168683'
   parent_yoksis_id: '122092'
   unit_type_id: Önlisans/lisans Programı
@@ -17565,6 +17649,7 @@
 
 - name: İşitme Engelliler Öğretmenliği Programı
   abbreviation: ÖZELB-İŞİTME-PR
+  code: '433'
   yoksis_id: '168668'
   parent_yoksis_id: '122092'
   unit_type_id: Önlisans/lisans Programı
@@ -17577,6 +17662,7 @@
 
 - name: İşitme Engelliler Öğretmenliği Programı (İö)
   abbreviation: ÖZELB-İŞİTME-PR-2
+  code: '434'
   yoksis_id: '168669'
   parent_yoksis_id: '122092'
   unit_type_id: Önlisans/lisans Programı
@@ -17589,6 +17675,7 @@
 
 - name: İlköğretim Bölümü
   abbreviation: İLK-B
+  code: CBF
   yoksis_id: '122100'
   parent_yoksis_id: '122082'
   unit_type_id: Bölüm
@@ -17599,6 +17686,7 @@
 
 - name: İlköğretim Din Kültürü ve Ahlak Bilgisi Öğretmenliği Programı
   abbreviation: İDKABE-PR
+  code: '435'
   yoksis_id: '285293'
   parent_yoksis_id: '122100'
   unit_type_id: Önlisans/lisans Programı
@@ -17610,6 +17698,7 @@
 
 - name: İlköğretim Din Kültürü ve Ahlak Bilgisi Öğretmenliği Programı (İö)
   abbreviation: İDKABE-PR-2
+  code: '436'
   yoksis_id: '285294'
   parent_yoksis_id: '122100'
   unit_type_id: Önlisans/lisans Programı
@@ -17661,6 +17750,7 @@
 
 - name: Harita Mühendisliği (Dr) (Karadeniz Teknik Üniversitesi Ortak)
   abbreviation: HARİTA-DR-KTÜ
+  code: '847'
   yoksis_id: '215657'
   parent_yoksis_id: '122386'
   unit_type_id: Doktora Programı
@@ -17692,6 +17782,7 @@
 
 - name: Malzeme Bilimi ve Mühendisliği (Yl) (Tezli)
   abbreviation: MALZEME-YL-DİĞER
+  code: '848'
   yoksis_id: '211288'
   parent_yoksis_id: '122386'
   unit_type_id: Yüksek Lisans Programı
@@ -17724,6 +17815,8 @@
   duration: 2
 
 - name: Moleküler Biyoloji ve Genetik (Dr) (Ücretli)
+  abbreviation: MOLBİYOGEN-DR-ÜCRETLİ
+  code: '849'
   yoksis_id: '299032'
   parent_yoksis_id: '122386'
   unit_type_id: Doktora Programı
@@ -17735,7 +17828,7 @@
 
 - name: Moleküler Biyoloji ve Genetik (Yl) (Tezli)
   abbreviation: MOLBİYOGEN-YL
-  code: '833'
+  code: '850'
   yoksis_id: '381852'
   parent_yoksis_id: '122386'
   unit_type_id: Yüksek Lisans Programı
@@ -17749,6 +17842,8 @@
     - Yerleşke eksik
 
 - name: Moleküler Biyoloji ve Genetik (Yl) (Tezli) (Ücretli)
+  abbreviation: MOLBİYOGEN-YL-ÜCRETLİ
+  code: '851'
   yoksis_id: '299033'
   parent_yoksis_id: '122386'
   unit_type_id: Yüksek Lisans Programı
@@ -17819,6 +17914,8 @@
   duration: 2
 
 - name: İnşaat Mühendisliği (Yl) (Tezli) (Ücretli)
+  abbreviation: İNŞAAT-YL-ÜCRETLİ
+  code: '852'
   yoksis_id: '299031'
   parent_yoksis_id: '122386'
   unit_type_id: Yüksek Lisans Programı
@@ -17895,6 +17992,8 @@
     - Aktifken kısaltma verdiğimiz bu birim kapatılmış
 
 - name: Biyoloji Programı (İö)
+  abbreviation: BİYOLOJİ-PR-2
+  code: '437'
   yoksis_id: '168688'
   parent_yoksis_id: '122006'
   unit_type_id: Önlisans/lisans Programı
@@ -17905,6 +18004,8 @@
   duration: 4
 
 - name: Coğrafya Programı (İö)
+  abbreviation: COĞRAFYA-PR-2
+  code: '438'
   yoksis_id: '168694'
   parent_yoksis_id: '122012'
   unit_type_id: Önlisans/lisans Programı
@@ -17916,6 +18017,8 @@
   duration: 4
 
 - name: Felsefe Programı (İö)
+  abbreviation: FELSEFE-PR-2
+  code: '439'
   yoksis_id: '241626'
   parent_yoksis_id: '128020'
   unit_type_id: Önlisans/lisans Programı
@@ -17928,7 +18031,7 @@
 
 - name: Fizik Programı
   abbreviation: FİZİK-PR
-  code: '366'
+  code: '440'
   yoksis_id: '168699'
   parent_yoksis_id: '122017'
   unit_type_id: Önlisans/lisans Programı
@@ -17940,6 +18043,8 @@
   duration: 4
 
 - name: Fizik Programı (İö)
+  abbreviation: FİZİK-PR-2
+  code: '441'
   yoksis_id: '168705'
   parent_yoksis_id: '122017'
   unit_type_id: Önlisans/lisans Programı
@@ -17950,6 +18055,8 @@
   duration: 4
 
 - name: Kimya Programı (%50 Burslu)
+  abbreviation: KİMYA-PR-ELLİ
+  code: '442'
   yoksis_id: '304539'
   parent_yoksis_id: '122027'
   unit_type_id: Önlisans/lisans Programı
@@ -17960,6 +18067,8 @@
   duration: 4
 
 - name: Kimya Programı (İö)
+  abbreviation: KİMYA-PR-2
+  code: '443'
   yoksis_id: '168709'
   parent_yoksis_id: '122027'
   unit_type_id: Önlisans/lisans Programı
@@ -17971,6 +18080,8 @@
   duration: 4
 
 - name: Matematik Programı (İö)
+  abbreviation: MATEMATİK-PR-2
+  code: '444'
   yoksis_id: '168713'
   parent_yoksis_id: '122033'
   unit_type_id: Önlisans/lisans Programı
@@ -17983,6 +18094,7 @@
 
 - name: Moleküler Biyoloji ve Genetik Bölümü
   abbreviation: MOLBİYOGEN-DİĞER
+  code: CC0
   yoksis_id: '299034'
   parent_yoksis_id: '122005'
   unit_type_id: Bölüm
@@ -17995,6 +18107,7 @@
 
 - name: Moleküler Biyoloji ve Genetik Programı (%25 Burslu)
   abbreviation: MOLBİYOGEN-PR-YİRMİBEŞ
+  code: '445'
   yoksis_id: '299036'
   parent_yoksis_id: '299034'
   unit_type_id: Önlisans/lisans Programı
@@ -18006,6 +18119,7 @@
 
 - name: Moleküler Biyoloji ve Genetik Programı (%50 Burslu)
   abbreviation: MOLBİYOGEN-PR-ELLİ
+  code: '446'
   yoksis_id: '299037'
   parent_yoksis_id: '299034'
   unit_type_id: Önlisans/lisans Programı
@@ -18017,6 +18131,7 @@
 
 - name: Moleküler Biyoloji ve Genetik Programı (%75 Burslu)
   abbreviation: MOLBİYOGEN-PR-YETMİŞBEŞ
+  code: '447'
   yoksis_id: '309339'
   parent_yoksis_id: '299034'
   unit_type_id: Önlisans/lisans Programı
@@ -18028,6 +18143,7 @@
 
 - name: Moleküler Biyoloji ve Genetik Programı (Tam Burslu)
   abbreviation: MOLBİYOGEN-PR-YÜZ
+  code: '448'
   yoksis_id: '299035'
   parent_yoksis_id: '299034'
   unit_type_id: Önlisans/lisans Programı
@@ -18039,6 +18155,7 @@
 
 - name: Moleküler Biyoloji ve Genetik Programı (Ücretli)
   abbreviation: MOLBİYOGEN-PR-ÜCRETLİ
+  code: '449'
   yoksis_id: '309084'
   parent_yoksis_id: '299034'
   unit_type_id: Önlisans/lisans Programı
@@ -18050,6 +18167,7 @@
 
 - name: Psikoloji Programı (%25 Burslu)
   abbreviation: PSİKOLOJİ-PR-YİRMİBEŞ
+  code: '450'
   yoksis_id: '299040'
   parent_yoksis_id: '122040'
   unit_type_id: Önlisans/lisans Programı
@@ -18061,6 +18179,7 @@
 
 - name: Psikoloji Programı (%50 Burslu)
   abbreviation: PSİKOLOJİ-PR-ELLİ
+  code: '451'
   yoksis_id: '299039'
   parent_yoksis_id: '122040'
   unit_type_id: Önlisans/lisans Programı
@@ -18072,6 +18191,7 @@
 
 - name: Psikoloji Programı (Tam Burslu)
   abbreviation: PSİKOLOJİ-PR-YÜZ
+  code: '452'
   yoksis_id: '299038'
   parent_yoksis_id: '122040'
   unit_type_id: Önlisans/lisans Programı
@@ -18083,6 +18203,7 @@
 
 - name: Psikoloji Programı (Ücretli)
   abbreviation: PSİKOLOJİ-PR-ÜCRETLİ
+  code: '453'
   yoksis_id: '299041'
   parent_yoksis_id: '122040'
   unit_type_id: Önlisans/lisans Programı
@@ -18094,6 +18215,7 @@
 
 - name: Sosyoloji Programı (%50 Burslu)
   abbreviation: SOSYOLOJİ-PR-ELLİ
+  code: '454'
   yoksis_id: '308529'
   parent_yoksis_id: '122077'
   unit_type_id: Önlisans/lisans Programı
@@ -18105,6 +18227,7 @@
 
 - name: Sosyoloji Programı (Tam Burslu)
   abbreviation: SOSYOLOJİ-PR-YÜZ
+  code: '455'
   yoksis_id: '308530'
   parent_yoksis_id: '122077'
   unit_type_id: Önlisans/lisans Programı
@@ -18116,6 +18239,7 @@
 
 - name: Tarih Programı (İö)
   abbreviation: TARİH-PR-2
+  code: '456'
   yoksis_id: '168718'
   parent_yoksis_id: '122045'
   unit_type_id: Önlisans/lisans Programı
@@ -18128,6 +18252,7 @@
 
 - name: Türk Dili ve Edebiyatı Programı (%25 Burslu)
   abbreviation: TDE-PR-YİRMİBEŞ
+  code: '457'
   yoksis_id: '299043'
   parent_yoksis_id: '122050'
   unit_type_id: Önlisans/lisans Programı
@@ -18139,6 +18264,7 @@
 
 - name: Türk Dili ve Edebiyatı Programı (%50 Burslu)
   abbreviation: TDE-PR-ELLİ
+  code: '458'
   yoksis_id: '299044'
   parent_yoksis_id: '122050'
   unit_type_id: Önlisans/lisans Programı
@@ -18150,6 +18276,7 @@
 
 - name: Türk Dili ve Edebiyatı Programı (Tam Burslu)
   abbreviation: TDE-PR-YÜZ
+  code: '459'
   yoksis_id: '299042'
   parent_yoksis_id: '122050'
   unit_type_id: Önlisans/lisans Programı
@@ -18161,6 +18288,7 @@
 
 - name: Türk Dili ve Edebiyatı Programı (İö)
   abbreviation: TDE-PR-2
+  code: '460'
   yoksis_id: '168722'
   parent_yoksis_id: '122050'
   unit_type_id: Önlisans/lisans Programı
@@ -18192,6 +18320,7 @@
 
 - name: İstatistik Programı (İö)
   abbreviation: İSTATİSTİK-PR-2
+  code: '461'
   yoksis_id: '168707'
   parent_yoksis_id: '122023'
   unit_type_id: Önlisans/lisans Programı
@@ -18321,6 +18450,7 @@
 
 - name: Görsel İletişim Tasarımı Programı (Tam Burslu)
   abbreviation: GİT-PR-YÜZ
+  code: '462'
   yoksis_id: '304543'
   parent_yoksis_id: '232412'
   unit_type_id: Önlisans/lisans Programı
@@ -18554,6 +18684,7 @@
 
 - name: Fizyoterapi Programı (Ücretli)
   abbreviation: HAVZA-MYO-TERAPİ-FİZYO-PR-ÜCRETLİ
+  code: '463'
   yoksis_id: '304552'
   parent_yoksis_id: '169584'
   unit_type_id: Önlisans/lisans Programı
@@ -18565,6 +18696,7 @@
 
 - name: Emlak ve Emlak Yönetimi Programı (İö)
   abbreviation: HAVZA-MYO-TPS-EMLAK-PR-2
+  code: '464'
   yoksis_id: '228555'
   parent_yoksis_id: '251125'
   unit_type_id: Önlisans/lisans Programı
@@ -18637,6 +18769,7 @@
 
 - name: İnşaat Teknolojisi Programı
   abbreviation: HAVZA-MYO-İNŞAAT-PR
+  code: '465'
   yoksis_id: '169597'
   parent_yoksis_id: '169596'
   unit_type_id: Önlisans/lisans Programı
@@ -18649,6 +18782,7 @@
 
 - name: İnşaat Teknolojisi Programı (İö)
   abbreviation: HAVZA-MYO-İNŞAAT-PR-2
+  code: '466'
   yoksis_id: '145888'
   parent_yoksis_id: '169596'
   unit_type_id: Önlisans/lisans Programı
@@ -19072,6 +19206,7 @@
 
 - name: Mimarlık Programı (%25 Burslu)
   abbreviation: MİMARLIK-PR-YİRMİBEŞ
+  code: '467'
   yoksis_id: '299071'
   parent_yoksis_id: '214339'
   unit_type_id: Önlisans/lisans Programı
@@ -19083,6 +19218,7 @@
 
 - name: Mimarlık Programı (%50 Burslu)
   abbreviation: MİMARLIK-PR-ELLİ
+  code: '468'
   yoksis_id: '299072'
   parent_yoksis_id: '214339'
   unit_type_id: Önlisans/lisans Programı
@@ -19094,6 +19230,7 @@
 
 - name: Mimarlık Programı (%75 Burslu)
   abbreviation: MİMARLIK-PR-YETMİŞBEŞ
+  code: '469'
   yoksis_id: '310648'
   parent_yoksis_id: '214339'
   unit_type_id: Önlisans/lisans Programı
@@ -19105,6 +19242,7 @@
 
 - name: Mimarlık Programı (Tam Burslu)
   abbreviation: MİMARLIK-PR-YÜZ
+  code: '470'
   yoksis_id: '299069'
   parent_yoksis_id: '214339'
   unit_type_id: Önlisans/lisans Programı
@@ -19116,6 +19254,7 @@
 
 - name: Mimarlık Programı (Ücretli)
   abbreviation: MİMARLIK-PR-ÜCRETLİ
+  code: '471'
   yoksis_id: '299070'
   parent_yoksis_id: '214339'
   unit_type_id: Önlisans/lisans Programı
@@ -19127,6 +19266,7 @@
 
 - name: İç Mimarlık Programı (%25 Burslu)
   abbreviation: İÇMİMAR-PR-YİRMİBEŞ
+  code: '472'
   yoksis_id: '299063'
   parent_yoksis_id: '247958'
   unit_type_id: Önlisans/lisans Programı
@@ -19138,6 +19278,7 @@
 
 - name: İç Mimarlık Programı (%50 Burslu)
   abbreviation: İÇMİMAR-PR-ELLİ
+  code: '473'
   yoksis_id: '299064'
   parent_yoksis_id: '247958'
   unit_type_id: Önlisans/lisans Programı
@@ -19149,6 +19290,7 @@
 
 - name: İç Mimarlık Programı (Tam Burslu)
   abbreviation: İÇMİMAR-PR-YÜZ
+  code: '474'
   yoksis_id: '299061'
   parent_yoksis_id: '247958'
   unit_type_id: Önlisans/lisans Programı
@@ -19160,6 +19302,7 @@
 
 - name: İç Mimarlık Programı (Ücretli)
   abbreviation: İÇMİMAR-PR-ÜCRETLİ
+  code: '475'
   yoksis_id: '299062'
   parent_yoksis_id: '247958'
   unit_type_id: Önlisans/lisans Programı
@@ -19171,6 +19314,7 @@
 
 - name: Bilgisayar Mühendisliği Programı (%25 Burslu)
   abbreviation: BİLGİSAYAR-PR-YİRMİBEŞ
+  code: '476'
   yoksis_id: '308509'
   parent_yoksis_id: '122184'
   unit_type_id: Önlisans/lisans Programı
@@ -19202,6 +19346,7 @@
 
 - name: Elektrik-Elektronik Mühendisliği Programı (%50 Burslu)
   abbreviation: ELEKTRİK-PR-ELLİ
+  code: '477'
   yoksis_id: '304617'
   parent_yoksis_id: '122225'
   unit_type_id: Önlisans/lisans Programı
@@ -19233,6 +19378,7 @@
 
 - name: Elektrik-Elektronik Mühendisliği Programı (Tam Burslu)
   abbreviation: ELEKTRİK-PR-YÜZ
+  code: '478'
   yoksis_id: '304600'
   parent_yoksis_id: '122225'
   unit_type_id: Önlisans/lisans Programı
@@ -19244,6 +19390,7 @@
 
 - name: Elektrik-Elektronik Mühendisliği Programı (Ücretli)
   abbreviation: ELEKTRİK-PR-ÜCRETLİ
+  code: '479'
   yoksis_id: '308532'
   parent_yoksis_id: '122225'
   unit_type_id: Önlisans/lisans Programı
@@ -19255,6 +19402,7 @@
 
 - name: Endüstri Mühendisliği Programı (Ücretli)
   abbreviation: ENDÜSTRİ-PR-ÜCRETLİ
+  code: '480'
   yoksis_id: '304641'
   parent_yoksis_id: '122192'
   unit_type_id: Önlisans/lisans Programı
@@ -19266,6 +19414,7 @@
 
 - name: Gıda Mühendisliği Programı (İö)
   abbreviation: GIDA-PR-2
+  code: '481'
   yoksis_id: '168868'
   parent_yoksis_id: '122195'
   unit_type_id: Önlisans/lisans Programı
@@ -19278,6 +19427,7 @@
 
 - name: Harita Mühendisliği Programı (İö)
   abbreviation: HARİTA-PR-2
+  code: '482'
   yoksis_id: '168870'
   parent_yoksis_id: '122204'
   unit_type_id: Önlisans/lisans Programı
@@ -19310,6 +19460,7 @@
 
 - name: Makine Mühendisliği Programı (İö)
   abbreviation: MAKİNE-PR-2
+  code: '483'
   yoksis_id: '168874'
   parent_yoksis_id: '122215'
   unit_type_id: Önlisans/lisans Programı
@@ -19322,6 +19473,7 @@
 
 - name: Malzeme Bilimi ve Mühendisliği Programı
   abbreviation: MALZEME-PR-DİĞER
+  code: '484'
   yoksis_id: '168875'
   parent_yoksis_id: '122223'
   unit_type_id: Önlisans/lisans Programı
@@ -19345,6 +19497,7 @@
 
 - name: Çevre Mühendisliği Programı (İö)
   abbreviation: ÇEVRE-PR-2
+  code: '485'
   yoksis_id: '168863'
   parent_yoksis_id: '122188'
   unit_type_id: Önlisans/lisans Programı
@@ -19357,6 +19510,7 @@
 
 - name: İnşaat Mühendisliği Programı (%25 Burslu)
   abbreviation: İNŞAAT-PR-YİRMİBEŞ
+  code: '486'
   yoksis_id: '299067'
   parent_yoksis_id: '122198'
   unit_type_id: Önlisans/lisans Programı
@@ -19368,6 +19522,7 @@
 
 - name: İnşaat Mühendisliği Programı (%50 Burslu)
   abbreviation: İNŞAAT-PR-ELLİ
+  code: '487'
   yoksis_id: '299068'
   parent_yoksis_id: '122198'
   unit_type_id: Önlisans/lisans Programı
@@ -19379,6 +19534,7 @@
 
 - name: İnşaat Mühendisliği Programı (Tam Burslu)
   abbreviation: İNŞAAT-PR-YÜZ
+  code: '488'
   yoksis_id: '299065'
   parent_yoksis_id: '122198'
   unit_type_id: Önlisans/lisans Programı
@@ -19390,6 +19546,7 @@
 
 - name: İnşaat Mühendisliği Programı (Ücretli)
   abbreviation: İNŞAAT-PR-ÜCRETLİ
+  code: '489'
   yoksis_id: '299066'
   parent_yoksis_id: '122198'
   unit_type_id: Önlisans/lisans Programı
@@ -19401,6 +19558,7 @@
 
 - name: İnşaat Mühendisliği Programı (İö)
   abbreviation: İNŞAAT-PR-2
+  code: '490'
   yoksis_id: '168872'
   parent_yoksis_id: '122198'
   unit_type_id: Önlisans/lisans Programı
@@ -19625,6 +19783,7 @@
 
 - name: Peyzaj ve Süs Bitkileri Programı (İö)
   abbreviation: SAMSUN-MYO-PARK-PEYZAJ-PR-2
+  code: '491'
   yoksis_id: '174838'
   parent_yoksis_id: '174835'
   unit_type_id: Önlisans/lisans Programı
@@ -19778,6 +19937,7 @@
 
 - name: Grafik Tasarımı Programı (İö)
   abbreviation: SAMSUN-MYO-TEKNİK-GRAFİK-PR-2
+  code: '492'
   yoksis_id: '128059'
   parent_yoksis_id: '122361'
   unit_type_id: Önlisans/lisans Programı
@@ -19853,6 +20013,7 @@
 
 - name: Tekstil Programı
   abbreviation: SAMSUN-MYO-TEKNİK-TEKSTİL-PR
+  code: '493'
   yoksis_id: '128069'
   parent_yoksis_id: '122361'
   unit_type_id: Önlisans/lisans Programı
@@ -19874,6 +20035,7 @@
 
 - name: Çocuk Gelişimi Programı (Uzaktan Öğretim) (%25 Burslu)
   abbreviation: SAMSUN-MYO-ÇBGH-ÇG-PR-UZ-YETMİŞBEŞ
+  code: '033'
   yoksis_id: '304693'
   parent_yoksis_id: '215482'
   unit_type_id: Önlisans/lisans Programı
@@ -19895,6 +20057,7 @@
 
 - name: Çocuk Gelişimi Programı (İö)
   abbreviation: SAMSUN-MYO-ÇBGH-ÇG-PR-2
+  code: '494'
   yoksis_id: '169885'
   parent_yoksis_id: '215482'
   unit_type_id: Önlisans/lisans Programı
@@ -19949,6 +20112,7 @@
 
 - name: Turizm ve Otel İşletmeciliği Programı
   abbreviation: SAMSUN-MYO-İKTİSAT-TOİ-PR
+  code: '495'
   yoksis_id: '122372'
   parent_yoksis_id: '122370'
   unit_type_id: Önlisans/lisans Programı
@@ -19961,6 +20125,7 @@
 
 - name: Turizm ve Otel İşletmeciliği Programı (İö)
   abbreviation: SAMSUN-MYO-İKTİSAT-TOİ-PR-2
+  code: '496'
   yoksis_id: '169805'
   parent_yoksis_id: '122370'
   unit_type_id: Önlisans/lisans Programı
@@ -20028,6 +20193,7 @@
 
 - name: Samsun Sağlık Yüksekokulu
   abbreviation: SAĞLIK-YO
+  code: CC1
   yoksis_id: '122352'
   parent_yoksis_id: '121946'
   unit_type_id: Yüksekokul
@@ -20038,6 +20204,7 @@
 
 - name: Beslenme ve Diyetetik Bölümü
   abbreviation: SAĞLIK-YO-BESLENME
+  code: CC2
   yoksis_id: '147574'
   parent_yoksis_id: '122352'
   unit_type_id: Bölüm
@@ -20057,6 +20224,7 @@
 
 - name: Beslenme ve Diyetetik Programı
   abbreviation: SAĞLIK-YO-BESLENME-PR
+  code: '497'
   yoksis_id: '240429'
   parent_yoksis_id: '147574'
   unit_type_id: Önlisans/lisans Programı
@@ -20069,6 +20237,7 @@
 
 - name: Beslenme ve Diyetetik Programı (%25 Burslu)
   abbreviation: SAĞLIK-YO-BESLENME-PR-YİRMİBEŞ
+  code: '498'
   yoksis_id: '308558'
   parent_yoksis_id: '147574'
   unit_type_id: Önlisans/lisans Programı
@@ -20080,6 +20249,7 @@
 
 - name: Beslenme ve Diyetetik Programı (%50 Burslu)
   abbreviation: SAĞLIK-YO-BESLENME-PR-ELLİ
+  code: '499'
   yoksis_id: '304711'
   parent_yoksis_id: '147574'
   unit_type_id: Önlisans/lisans Programı
@@ -20091,6 +20261,7 @@
 
 - name: Beslenme ve Diyetetik Programı (Ücretli)
   abbreviation: SAĞLIK-YO-BESLENME-PR-ÜCRETLİ
+  code: '500'
   yoksis_id: '308559'
   parent_yoksis_id: '147574'
   unit_type_id: Önlisans/lisans Programı
@@ -20129,6 +20300,7 @@
 
 - name: Dil ve Konuşma Terapisi Bölümü
   abbreviation: SAĞLIK-YO-DİLKOT
+  code: CC3
   yoksis_id: '259860'
   parent_yoksis_id: '122352'
   unit_type_id: Bölüm
@@ -20139,6 +20311,7 @@
 
 - name: Ebelik Bölümü
   abbreviation: SAĞLIK-YO-EBELİK
+  code: CC4
   yoksis_id: '122353'
   parent_yoksis_id: '122352'
   unit_type_id: Bölüm
@@ -20149,6 +20322,7 @@
 
 - name: Ebelik Programı
   abbreviation: SAĞLIK-YO-EBELİK-PR
+  code: '501'
   yoksis_id: '169395'
   parent_yoksis_id: '122353'
   unit_type_id: Önlisans/lisans Programı
@@ -20161,6 +20335,7 @@
 
 - name: Ebelik Bölümü (Lisans Tamamlama)
   abbreviation: SAĞLIK-YO-EBELİK-LT
+  code: '034'
   yoksis_id: '147596'
   parent_yoksis_id: '122352'
   unit_type_id: Bölüm
@@ -20171,6 +20346,7 @@
 
 - name: Ebelik Programı (Lisans Tamamlama)
   abbreviation: SAĞLIK-YO-EBELİK-PR-LT
+  code: '035'
   yoksis_id: '245410'
   parent_yoksis_id: '147596'
   unit_type_id: Önlisans/lisans Programı
@@ -20182,6 +20358,7 @@
 
 - name: Hemşirelik Bölümü
   abbreviation: SAĞLIK-YO-HEMŞİRELİK
+  code: CC5
   yoksis_id: '122354'
   parent_yoksis_id: '122352'
   unit_type_id: Bölüm
@@ -20228,6 +20405,7 @@
 
 - name: Hemşirelik Programı
   abbreviation: SAĞLIK-YO-HEMŞİRELİK-PR
+  code: '502'
   yoksis_id: '169397'
   parent_yoksis_id: '122354'
   unit_type_id: Önlisans/lisans Programı
@@ -20240,6 +20418,7 @@
 
 - name: Hemşirelik Programı (%25 Burslu)
   abbreviation: SAĞLIK-YO-HEMŞİRELİK-PR-YİRMİBEŞ
+  code: '503'
   yoksis_id: '308534'
   parent_yoksis_id: '122354'
   unit_type_id: Önlisans/lisans Programı
@@ -20251,6 +20430,7 @@
 
 - name: Hemşirelik Programı (%50 Burslu)
   abbreviation: SAĞLIK-YO-HEMŞİRELİK-PR-ELLİ
+  code: '504'
   yoksis_id: '304714'
   parent_yoksis_id: '122354'
   unit_type_id: Önlisans/lisans Programı
@@ -20262,6 +20442,7 @@
 
 - name: Hemşirelik Programı (Tam Burslu)
   abbreviation: SAĞLIK-YO-HEMŞİRELİK-PR-YÜZ
+  code: '505'
   yoksis_id: '304713'
   parent_yoksis_id: '122354'
   unit_type_id: Önlisans/lisans Programı
@@ -20273,6 +20454,7 @@
 
 - name: Hemşirelik Programı (Ücretli)
   abbreviation: SAĞLIK-YO-HEMŞİRELİK-PR-ÜCRETLİ
+  code: '506'
   yoksis_id: '308553'
   parent_yoksis_id: '122354'
   unit_type_id: Önlisans/lisans Programı
@@ -20320,6 +20502,7 @@
 
 - name: Sağlık Yönetimi Bölümü
   abbreviation: SAĞLIK-YO-SAĞLIKYÖN
+  code: CC6
   yoksis_id: '220472'
   parent_yoksis_id: '122352'
   unit_type_id: Bölüm
@@ -20330,6 +20513,7 @@
 
 - name: Sağlık Yönetimi Programı
   abbreviation: SAĞLIK-YO-SAĞLIKYÖN-PR
+  code: '507'
   yoksis_id: '267871'
   parent_yoksis_id: '220472'
   unit_type_id: Önlisans/lisans Programı
@@ -20342,6 +20526,7 @@
 
 - name: Sosyal Hizmetler Bölümü
   abbreviation: SAĞLIK-YO-SH
+  code: CC7
   yoksis_id: '201577'
   parent_yoksis_id: '122352'
   unit_type_id: Bölüm
@@ -20352,6 +20537,7 @@
 
 - name: Sosyal Hizmet Programı
   abbreviation: SAĞLIK-YO-SH-PR
+  code: '508'
   yoksis_id: '256685'
   parent_yoksis_id: '201577'
   unit_type_id: Önlisans/lisans Programı
@@ -20364,6 +20550,7 @@
 
 - name: Sosyal Hizmet Programı (Tam Burslu)
   abbreviation: SAĞLIK-YO-SH-PR-YÜZ
+  code: '509'
   yoksis_id: '304722'
   parent_yoksis_id: '201577'
   unit_type_id: Önlisans/lisans Programı
@@ -20375,6 +20562,7 @@
 
 - name: Sosyal Hizmet Programı (Ücretli)
   abbreviation: SAĞLIK-YO-SH-PR-ÜCRETLİ
+  code: '510'
   yoksis_id: '308560'
   parent_yoksis_id: '201577'
   unit_type_id: Önlisans/lisans Programı
@@ -20406,7 +20594,7 @@
 
 - name: Anatomi (Yl) (Tezli)
   abbreviation: ANATOMİ-YL
-  code: '834'
+  code: '853'
   yoksis_id: '267774'
   parent_yoksis_id: '122387'
   unit_type_id: Yüksek Lisans Programı
@@ -20418,6 +20606,7 @@
 
 - name: Anatomi (Veteriner) (Dr)
   abbreviation: VETERİNER-ANATOMİ-DR
+  code: '854'
   yoksis_id: '267772'
   parent_yoksis_id: '122387'
   unit_type_id: Doktora Programı
@@ -20429,7 +20618,7 @@
 
 - name: Ağız, Diş ve Çene Radyolojisi (Dr)
   abbreviation: ADÇR-DR
-  code: '835'
+  code: '855'
   yoksis_id: '267775'
   parent_yoksis_id: '122387'
   unit_type_id: Doktora Programı
@@ -20441,7 +20630,7 @@
 
 - name: Beden Eğitimi ve Spor (Yl) (Tezli)
   abbreviation: SAĞLIK-BİLİM-BES-YL
-  code: '836'
+  code: '856'
   yoksis_id: '267776'
   parent_yoksis_id: '122387'
   unit_type_id: Yüksek Lisans Programı
@@ -20453,7 +20642,7 @@
 
 - name: Evde Bakım Hemşireliği (Yl) (Tezli)
   abbreviation: EBH-YL
-  code: '837'
+  code: '857'
   yoksis_id: '267777'
   parent_yoksis_id: '122387'
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -20465,7 +20654,7 @@
 
 - name: Evde Bakım Hemşireliği (Yl) (Tezsiz) (Uzaktan Öğretim)
   abbreviation: EBH-YZ-UZ
-  code: '032'
+  code: '036'
   yoksis_id: '267778'
   parent_yoksis_id: '122387'
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -20477,7 +20666,7 @@
 
 - name: Fizyoloji (Yl) (Tezli)
   abbreviation: FİZYOLOJİ-YL
-  code: '838'
+  code: '858'
   yoksis_id: '267779'
   parent_yoksis_id: '122387'
   unit_type_id: Yüksek Lisans Programı
@@ -20499,7 +20688,7 @@
 
 - name: Tıbbi Biyokimya (Yl) (Tezli)
   abbreviation: TBİYOKİMYA-YL
-  code: '839'
+  code: '859'
   yoksis_id: '267781'
   parent_yoksis_id: '122387'
   unit_type_id: Yüksek Lisans Programı
@@ -20511,7 +20700,7 @@
 
 - name: Tıbbi Mikrobiyoloji (Yl) (Tezli)
   abbreviation: TMİKRO-YL
-  code: '840'
+  code: '860'
   yoksis_id: '267780'
   parent_yoksis_id: '122387'
   unit_type_id: Yüksek Lisans Programı
@@ -20523,7 +20712,7 @@
 
 - name: Fizyoterapi ve Rehabilitasyon Bölümü
   abbreviation: FTR
-  code: CBD
+  code: CC8
   yoksis_id: '379526'
   parent_yoksis_id: '293577'
   unit_type_id: Bölüm
@@ -20537,7 +20726,7 @@
 
 - name: Fizyoterapi ve Rehabilitasyon Anabilim Dalı
   abbreviation: FTR-AD
-  code: CBE
+  code: CC9
   yoksis_id: '379534'
   parent_yoksis_id: '379526'
   unit_type_id: Anabilim Dalı
@@ -20571,6 +20760,7 @@
 
 - name: Sağlık Programları Bölümü
   abbreviation: SAĞLIK-MYO-SP
+  code: CCA
   yoksis_id: '122337'
   parent_yoksis_id: '122336'
   unit_type_id: Bölüm
@@ -20612,6 +20802,7 @@
 
 - name: Diş Teknik Sekreterliği Programı
   abbreviation: SAĞLIK-MYO-SP-DTS-PR
+  code: '511'
   yoksis_id: '122351'
   parent_yoksis_id: '122337'
   unit_type_id: Önlisans/lisans Programı
@@ -20683,6 +20874,7 @@
 
 - name: Odyometri Programı
   abbreviation: SAĞLIK-MYO-SP-ODYO
+  code: '512'
   yoksis_id: '122340'
   parent_yoksis_id: '122337'
   unit_type_id: Önlisans/lisans Programı
@@ -20778,6 +20970,7 @@
 
 - name: Diyaliz Programı (Ücretli)
   abbreviation: SAĞLIK-MYO-THT-DİYALİZ-PR-ÜCRETLİ
+  code: '513'
   yoksis_id: '304672'
   parent_yoksis_id: '169645'
   unit_type_id: Önlisans/lisans Programı
@@ -20850,6 +21043,7 @@
 
 - name: Tıbbi Görüntüleme Teknikleri Programı (Ücretli)
   abbreviation: SAĞLIK-MYO-THT-TGT-PR-ÜCRETLİ
+  code: '514'
   yoksis_id: '304658'
   parent_yoksis_id: '169645'
   unit_type_id: Önlisans/lisans Programı
@@ -20861,6 +21055,7 @@
 
 - name: Tıbbi Görüntüleme Teknikleri Programı (İö) (Ücretli)
   abbreviation: SAĞLIK-MYO-THT-TGT-PR-2-ÜCRETLİ
+  code: '515'
   yoksis_id: '304701'
   parent_yoksis_id: '169645'
   unit_type_id: Önlisans/lisans Programı
@@ -21200,6 +21395,7 @@
 
 - name: Havacılık Elektrik-Elektroniği Bölümü
   abbreviation: SİVİL-YO-HEE
+  code: CCB
   yoksis_id: '174927'
   parent_yoksis_id: '155936'
   unit_type_id: Bölüm
@@ -21286,6 +21482,7 @@
 
 - name: Uçak Gövde-Motor Bakımı Bölümü
   abbreviation: SİVİL-YO-UÇAK
+  code: CCC
   yoksis_id: '174928'
   parent_yoksis_id: '155936'
   unit_type_id: Bölüm
@@ -21597,6 +21794,7 @@
 
 - name: Türk Dili ve Edebiyatı (Yl) (Ücretli)
   abbreviation: TDE-YL-ÜCRETLİ
+  code: '861'
   yoksis_id: '311762'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21628,6 +21826,7 @@
 
 - name: Türkiye Cumhuriyeti Tarihi (Dr)
   abbreviation: SOSYAL-BİLİM-TC-DR
+  code: '862'
   yoksis_id: '267771'
   parent_yoksis_id: '122388'
   unit_type_id: Doktora Programı
@@ -21659,6 +21858,7 @@
 
 - name: Uluslararası Ticaret ve İşletmecilik (Yl) (Tezli) (Ücretli)
   abbreviation: UTİ-YL-ÜCRETLİ
+  code: '863'
   yoksis_id: '299076'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21670,6 +21870,7 @@
 
 - name: Uluslararası Ticaret ve İşletmecilik (Yl) (Tezsiz) (Ücretli)
   abbreviation: UTİ-YZ-ÜCRETLİ
+  code: '864'
   yoksis_id: '299077'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21711,6 +21912,7 @@
 
 - name: Yeni Türk Edebiyatı (Yl) (Tezli) (Ücretli)
   abbreviation: SOSYAL-BİLİM-YENİTE-YL-ÜCRETLİ
+  code: '865'
   yoksis_id: '299078'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21831,6 +22033,7 @@
 
 - name: Muhasebe ve Vergi Uygulamaları Programı (İö)
   abbreviation: TERME-MYO-MV-PR-2
+  code: '516'
   yoksis_id: '145983'
   parent_yoksis_id: '169947'
   unit_type_id: Önlisans/lisans Programı
@@ -21913,7 +22116,7 @@
 
 - name: Cerrahi Onkoloji Bilim Dalı
   abbreviation: TIP-CERRAHİ-GENEL-ONKO-BD
-  code: CBF
+  code: CCD
   yoksis_id: '380943'
   parent_yoksis_id: '121951'
   unit_type_id: Bilim Dalı
@@ -21927,7 +22130,7 @@
 
 - name: Gastroenteroloji Cerrahisi Bilim Dalı
   abbreviation: TIP-CERRAHİ-GENEL-GASTRO-BD
-  code: CC0
+  code: CCE
   yoksis_id: '380942'
   parent_yoksis_id: '121951'
   unit_type_id: Bilim Dalı
@@ -21950,6 +22153,7 @@
 
 - name: Tıp Programı (Ücretli)
   abbreviation: TIP-PR-ÜCRETLİ
+  code: '517'
   yoksis_id: '308528'
   parent_yoksis_id: '121947'
   unit_type_id: Önlisans/lisans Programı
@@ -22123,6 +22327,7 @@
 
 - name: Muhasebe ve Vergi Uygulamaları Programı (İö)
   abbreviation: VEZİRKÖPRÜ-MYO-MV-PR-2
+  code: '518'
   yoksis_id: '170010'
   parent_yoksis_id: '170007'
   unit_type_id: Önlisans/lisans Programı
@@ -22186,7 +22391,7 @@
 
 - name: Tasarım Bölümü
   abbreviation: VEZİRKÖPRÜ-MYO-TASARIM
-  code: CC1
+  code: CCF
   yoksis_id: '382185'
   parent_yoksis_id: '122296'
   unit_type_id: Bölüm
@@ -22286,6 +22491,7 @@
 
 - name: Yaşar Doğu Beden Eğitimi ve Spor Yüksekokulu
   abbreviation: BESYO
+  code: CD0
   yoksis_id: '122373'
   parent_yoksis_id: '121946'
   unit_type_id: Yüksekokul
@@ -22296,6 +22502,7 @@
 
 - name: Antrenörlük Eğitimi Programı
   abbreviation: BESYO-ANTRENÖR-PR
+  code: '519'
   yoksis_id: '295465'
   parent_yoksis_id: '122373'
   unit_type_id: Önlisans/lisans Programı
@@ -22307,6 +22514,7 @@
 
 - name: Antrenörlük Eğitimi Programı (İö) (Bk.2)
   abbreviation: BESYO-ANTRENÖR-PR-2-2
+  code: '520'
   yoksis_id: '295466'
   parent_yoksis_id: '122373'
   unit_type_id: Önlisans/lisans Programı
@@ -22318,6 +22526,7 @@
 
 - name: Beden Eğitimi ve Spor Öğretmenliği Programı
   abbreviation: BESYO-BESÖĞ-PR
+  code: '521'
   yoksis_id: '295467'
   parent_yoksis_id: '122373'
   unit_type_id: Önlisans/lisans Programı
@@ -22339,6 +22548,7 @@
 
 - name: Spor Yöneticiliği Programı
   abbreviation: BESYO-SPORYÖN-PR
+  code: '522'
   yoksis_id: '295469'
   parent_yoksis_id: '122373'
   unit_type_id: Önlisans/lisans Programı
@@ -22350,6 +22560,7 @@
 
 - name: Spor Yöneticiliği Programı (İö) (Bk.2)
   abbreviation: BESYO-SPORYÖN-PR-2-2
+  code: '523'
   yoksis_id: '295470'
   parent_yoksis_id: '122373'
   unit_type_id: Önlisans/lisans Programı
@@ -22421,6 +22632,7 @@
 
 - name: Bitkisel Üretim Programı
   abbreviation: BİTKİÜR-PR
+  code: '524'
   yoksis_id: '268124'
   parent_yoksis_id: '122284'
   unit_type_id: Önlisans/lisans Programı
@@ -22492,6 +22704,7 @@
 
 - name: Tarım Makineleri Programı
   abbreviation: TARIMAK-PR
+  code: '525'
   yoksis_id: '169296'
   parent_yoksis_id: '122279'
   unit_type_id: Önlisans/lisans Programı
@@ -22524,6 +22737,7 @@
 
 - name: Tarımsal Yapılar ve Sulama Programı
   abbreviation: TARIMYAP-PR
+  code: '526'
   yoksis_id: '169299'
   parent_yoksis_id: '122281'
   unit_type_id: Önlisans/lisans Programı
@@ -22557,6 +22771,7 @@
 
 - name: Ziraat Mühendisliği Programı
   abbreviation: ZİRAAT-PR
+  code: '527'
   yoksis_id: '319790'
   parent_yoksis_id: '122283'
   unit_type_id: Önlisans/lisans Programı
@@ -22761,7 +22976,7 @@
 
 - name: Mütercim Tercümanlık Bölümü
   abbreviation: İNSAN-MÜTERCİM
-  code: CC2
+  code: CD1
   yoksis_id: '381669'
   parent_yoksis_id: '293682'
   unit_type_id: Bölüm
@@ -22776,7 +22991,7 @@
 
 - name: Mütercim Tercümanlık (İngilizce) Anabilim Dalı
   abbreviation: İNSAN-MÜTERCİM-İNG-AD
-  code: CC3
+  code: CD2
   yoksis_id: '381678'
   parent_yoksis_id: '381669'
   unit_type_id: Anabilim Dalı
@@ -22791,7 +23006,7 @@
 
 - name: Tarih Bölümü
   abbreviation: İNSAN-TARİH
-  code: CC4
+  code: CD3
   yoksis_id: '381679'
   parent_yoksis_id: '293682'
   unit_type_id: Bölüm
@@ -22956,6 +23171,7 @@
 
 - name: Siyaset Bilimi ve Kamu Yönetimi Programı (%50 Burslu)
   abbreviation: SBKY-PR-ELLİ
+  code: '528'
   yoksis_id: '305047'
   parent_yoksis_id: '128036'
   unit_type_id: Önlisans/lisans Programı
@@ -22967,6 +23183,7 @@
 
 - name: Siyaset Bilimi ve Kamu Yönetimi Programı (Tam Burslu)
   abbreviation: SBKY-PR-YÜZ
+  code: '529'
   yoksis_id: '305046'
   parent_yoksis_id: '128036'
   unit_type_id: Önlisans/lisans Programı
@@ -22978,6 +23195,7 @@
 
 - name: Siyaset Bilimi ve Kamu Yönetimi Programı (Ücretli)
   abbreviation: SBKY-PR-ÜCRETLİ
+  code: '530'
   yoksis_id: '308554'
   parent_yoksis_id: '128036'
   unit_type_id: Önlisans/lisans Programı
@@ -22989,6 +23207,7 @@
 
 - name: Siyaset Bilimi ve Kamu Yönetimi Programı (İö)
   abbreviation: SBKY-PR-2
+  code: '531'
   yoksis_id: '241628'
   parent_yoksis_id: '128036'
   unit_type_id: Önlisans/lisans Programı
@@ -23001,6 +23220,7 @@
 
 - name: Siyaset Bilimi ve Uluslararası İlişkiler Bölümü
   abbreviation: SBUİ
+  code: CD4
   yoksis_id: '299049'
   parent_yoksis_id: '122181'
   unit_type_id: Bölüm
@@ -23011,6 +23231,7 @@
 
 - name: Siyaset Bilimi ve Uluslararası İlişkiler Programı (%25 Burslu)
   abbreviation: SBUİ-PR-YİRMİBEŞ
+  code: '532'
   yoksis_id: '299052'
   parent_yoksis_id: '299049'
   unit_type_id: Önlisans/lisans Programı
@@ -23022,6 +23243,7 @@
 
 - name: Siyaset Bilimi ve Uluslararası İlişkiler Programı (%50 Burslu)
   abbreviation: SBUİ-PR-ELLİ
+  code: '533'
   yoksis_id: '299053'
   parent_yoksis_id: '299049'
   unit_type_id: Önlisans/lisans Programı
@@ -23033,6 +23255,7 @@
 
 - name: Siyaset Bilimi ve Uluslararası İlişkiler Programı (Tam Burslu)
   abbreviation: SBUİ-PR-YÜZ
+  code: '534'
   yoksis_id: '299050'
   parent_yoksis_id: '299049'
   unit_type_id: Önlisans/lisans Programı
@@ -23044,6 +23267,7 @@
 
 - name: Siyaset Bilimi ve Uluslararası İlişkiler Programı (Ücretli)
   abbreviation: SBUİ-PR-ÜCRETLİ
+  code: '535'
   yoksis_id: '299051'
   parent_yoksis_id: '299049'
   unit_type_id: Önlisans/lisans Programı
@@ -23055,6 +23279,7 @@
 
 - name: Uluslararası Ticaret ve Lojistik Programı (%25 Burslu)
   abbreviation: UTL-PR-YİRMİBEŞ
+  code: '536'
   yoksis_id: '308556'
   parent_yoksis_id: '235948'
   unit_type_id: Önlisans/lisans Programı
@@ -23066,6 +23291,7 @@
 
 - name: Uluslararası Ticaret ve Lojistik Programı (%50 Burslu)
   abbreviation: UTL-PR-ELLİ
+  code: '537'
   yoksis_id: '304580'
   parent_yoksis_id: '235948'
   unit_type_id: Önlisans/lisans Programı
@@ -23077,6 +23303,7 @@
 
 - name: Uluslararası Ticaret ve Lojistik Programı (Tam Burslu)
   abbreviation: UTL-PR-YÜZ
+  code: '538'
   yoksis_id: '304558'
   parent_yoksis_id: '235948'
   unit_type_id: Önlisans/lisans Programı
@@ -23088,6 +23315,7 @@
 
 - name: Uluslararası Ticaret ve Lojistik Programı (Ücretli)
   abbreviation: UTL-PR-ÜCRETLİ
+  code: '539'
   yoksis_id: '308557'
   parent_yoksis_id: '235948'
   unit_type_id: Önlisans/lisans Programı
@@ -23099,6 +23327,7 @@
 
 - name: Uluslararası Ticaret ve İşletmecilik Bölümü
   abbreviation: UTİ
+  code: CD5
   yoksis_id: '299054'
   parent_yoksis_id: '122181'
   unit_type_id: Bölüm
@@ -23109,6 +23338,7 @@
 
 - name: Uluslararası Ticaret ve İşletmecilik Programı (%25 Burslu)
   abbreviation: UTİ-PR-YİRMİBEŞ
+  code: '540'
   yoksis_id: '299057'
   parent_yoksis_id: '299054'
   unit_type_id: Önlisans/lisans Programı
@@ -23120,6 +23350,7 @@
 
 - name: Uluslararası Ticaret ve İşletmecilik Programı (%50 Burslu)
   abbreviation: UTİ-PR-ELLİ
+  code: '541'
   yoksis_id: '299058'
   parent_yoksis_id: '299054'
   unit_type_id: Önlisans/lisans Programı
@@ -23131,6 +23362,7 @@
 
 - name: Uluslararası Ticaret ve İşletmecilik Programı (Tam Burslu)
   abbreviation: UTİ-PR-YÜZ
+  code: '542'
   yoksis_id: '299055'
   parent_yoksis_id: '299054'
   unit_type_id: Önlisans/lisans Programı
@@ -23142,6 +23374,7 @@
 
 - name: Uluslararası Ticaret ve İşletmecilik Programı (Ücretli)
   abbreviation: UTİ-PR-ÜCRETLİ
+  code: '543'
   yoksis_id: '299056'
   parent_yoksis_id: '299054'
   unit_type_id: Önlisans/lisans Programı
@@ -23153,6 +23386,7 @@
 
 - name: İşletme Programı (%25 Burslu)
   abbreviation: İŞLETMEB-PR-YİRMİBEŞ
+  code: '544'
   yoksis_id: '299047'
   parent_yoksis_id: '128030'
   unit_type_id: Önlisans/lisans Programı
@@ -23164,6 +23398,7 @@
 
 - name: İşletme Programı (%50 Burslu)
   abbreviation: İŞLETMEB-PR-ELLİ
+  code: '545'
   yoksis_id: '299048'
   parent_yoksis_id: '128030'
   unit_type_id: Önlisans/lisans Programı
@@ -23175,6 +23410,7 @@
 
 - name: İşletme Programı (%75 Burslu)
   abbreviation: İŞLETMEB-PR-YETMİŞBEŞ
+  code: '546'
   yoksis_id: '304555'
   parent_yoksis_id: '128030'
   unit_type_id: Önlisans/lisans Programı
@@ -23186,6 +23422,7 @@
 
 - name: İşletme Programı (Tam Burslu)
   abbreviation: İŞLETMEB-PR-YÜZ
+  code: '547'
   yoksis_id: '299045'
   parent_yoksis_id: '128030'
   unit_type_id: Önlisans/lisans Programı
@@ -23197,6 +23434,7 @@
 
 - name: İşletme Programı (Ücretli)
   abbreviation: İŞLETMEB-PR-ÜCRETLİ
+  code: '548'
   yoksis_id: '299046'
   parent_yoksis_id: '128030'
   unit_type_id: Önlisans/lisans Programı
@@ -23208,6 +23446,7 @@
 
 - name: İşletme Programı (İö)
   abbreviation: İŞLETMEB-PR-2
+  code: '549'
   yoksis_id: '241627'
   parent_yoksis_id: '128030'
   unit_type_id: Önlisans/lisans Programı
@@ -23219,6 +23458,8 @@
   duration: 4
 
 - name: İlahiyat Programı (Uzaktan Öğretim)
+  abbreviation: İLAHİYAT-PR-UZ
+  code: '037'
   yoksis_id: '215478'
   parent_yoksis_id: '122157'
   unit_type_id: Önlisans/lisans Programı
@@ -23241,6 +23482,7 @@
 
 - name: İlköğretim Din Kültürü ve Ahlak Bilgisi Öğretmenliği Programı
   abbreviation: İDKABE-PR-DİĞER
+  code: '550'
   yoksis_id: '168655'
   parent_yoksis_id: '128027'
   unit_type_id: Önlisans/lisans Programı
@@ -23253,6 +23495,7 @@
 
 - name: İlköğretim Din Kültürü ve Ahlak Bilgisi Öğretmenliği Programı (İö)
   abbreviation: İDKABE-PR-2-DİĞER
+  code: '551'
   yoksis_id: '241629'
   parent_yoksis_id: '128027'
   unit_type_id: Önlisans/lisans Programı
@@ -23265,6 +23508,7 @@
 
 - name: İleri Teknoloji Uygulama ve Araştırma Merkezi
   abbreviation: İTAM
+  code: CD6
   yoksis_id: '207558'
   parent_yoksis_id: '121946'
   unit_type_id: Uygulama ve Araştırma Merkezi
@@ -23296,7 +23540,7 @@
 
 - name: İstatistik (Yl) (İngilizce) (Tezli)
   abbreviation: İSTATİSTİK-YL-İNG
-  code: '841'
+  code: '866'
   yoksis_id: '383211'
   parent_yoksis_id: '122386'
   unit_type_id: Yüksek Lisans Programı
@@ -31085,6 +31329,7 @@
 
 - name: Görsel İletişim Tasarımı Anasanat Dalı Başkanlığı
   abbreviation: GÜZEL-SANAT-GİT-ADB
+  code: GUC
   detsis_id: '38121557'
   parent_detsis_id: '28913907'
   unit_type_id: Anasanat Dalı Başkanlığı
@@ -31095,7 +31340,7 @@
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: TİCARET-MYO-BASIN-BR
-  code: GUC
+  code: GUD
   detsis_id: '38217538'
   parent_detsis_id: '21071378'
   unit_type_id: Diğer İdari Birim
@@ -31104,7 +31349,7 @@
 
 - name: Mali İşler Birimi
   abbreviation: GÜZELSANATLAR-MALİ-BR
-  code: GUD
+  code: GUE
   detsis_id: '38323141'
   parent_detsis_id: '32859882'
   unit_type_id: Diğer İdari Birim
@@ -31113,7 +31358,7 @@
 
 - name: Mali İşler Birimi
   abbreviation: GÜZEL-SANAT-MALİ-BR
-  code: GUE
+  code: GUF
   detsis_id: '38796049'
   parent_detsis_id: '28913907'
   unit_type_id: Diğer İdari Birim
@@ -31122,7 +31367,7 @@
 
 - name: Müzik Anasanat Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-MÜZİK-ADB
-  code: GUF
+  code: GUG
   detsis_id: '38908278'
   parent_detsis_id: '61232311'
   unit_type_id: Anasanat Dalı Başkanlığı
@@ -31134,7 +31379,7 @@
 
 - name: Mali İşler Birimi
   abbreviation: YDİL-YO-MALİ-BR
-  code: GUG
+  code: GUH
   detsis_id: '39262868'
   parent_detsis_id: '19676956'
   unit_type_id: Diğer İdari Birim
@@ -31143,7 +31388,7 @@
 
 - name: Öğrenci İşleri Birimi
   abbreviation: SOSYAL-BİLİM-ÖĞRENCİ-BR
-  code: GUH
+  code: GUJ
   detsis_id: '39549029'
   parent_detsis_id: '61232311'
   unit_type_id: Diğer İdari Birim
@@ -31152,7 +31397,7 @@
 
 - name: Bilgi İşlem Birimi
   abbreviation: YDİL-YO-BİLGİ-BR
-  code: GUJ
+  code: GUK
   detsis_id: '39658854'
   parent_detsis_id: '19676956'
   unit_type_id: Diğer İdari Birim
@@ -31161,7 +31406,7 @@
 
 - name: İdari İşler Birimi
   abbreviation: GÜZELSANATLAR-İDARİ-BR
-  code: GUK
+  code: GUM
   detsis_id: '40146710'
   parent_detsis_id: '32859882'
   unit_type_id: Diğer İdari Birim
@@ -31170,7 +31415,7 @@
 
 - name: Tıbbi Biyokimya Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-TBİYOKİMYA-ADB
-  code: GUM
+  code: GUN
   detsis_id: '40148669'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -31182,7 +31427,7 @@
 
 - name: İdari İşler Birimi
   abbreviation: YDİL-YO-İDARİ-BR
-  code: GUN
+  code: GUP
   detsis_id: '40218752'
   parent_detsis_id: '19676956'
   unit_type_id: Diğer İdari Birim
@@ -31191,7 +31436,7 @@
 
 - name: İdari İşler Birimi
   abbreviation: BAFRA-MYO-İDARİ-BR
-  code: GUP
+  code: GUR
   detsis_id: '40230084'
   parent_detsis_id: '50713553'
   unit_type_id: Diğer İdari Birim
@@ -31200,7 +31445,7 @@
 
 - name: Strateji Geliştirme ve Kalite Birimi
   abbreviation: İKTİSAT-SGK-BR
-  code: GUR
+  code: GUS
   detsis_id: '40356527'
   parent_detsis_id: '50569681'
   unit_type_id: Diğer İdari Birim
@@ -31209,7 +31454,7 @@
 
 - name: Veterinerlik Anatomisi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-VANATOMİ-ADB
-  code: GUS
+  code: GUT
   detsis_id: '40369060'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -31221,7 +31466,7 @@
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: İLAHİYAT-YAYIN-BR
-  code: GUT
+  code: GUU
   detsis_id: '40524698'
   parent_detsis_id: '79586685'
   unit_type_id: Diğer İdari Birim
@@ -31230,7 +31475,7 @@
 
 - name: Öğrenci İşleri Birimi
   abbreviation: HUKUK-ÖĞRENCİ-BR
-  code: GUU
+  code: GUV
   detsis_id: '40749980'
   parent_detsis_id: '80803429'
   unit_type_id: Diğer İdari Birim
@@ -31239,7 +31484,7 @@
 
 - name: Öğrenci İşleri Birimi
   abbreviation: TERME-MYO-ÖĞRENCİ-BR
-  code: GUV
+  code: GUY
   detsis_id: '40935542'
   parent_detsis_id: '36024139'
   unit_type_id: Diğer İdari Birim
@@ -31248,7 +31493,7 @@
 
 - name: Histoloji-Embriyoloji Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-HİSTO-ADB
-  code: GUY
+  code: GUZ
   detsis_id: '41039653'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -31260,6 +31505,7 @@
 
 - name: Mütercim Tercümanlık (Arapça) Anabilim Dalı Başkanlığı
   abbreviation: YDİL-YO-MÜTERCİM-ARAP-ADB
+  code: GV0
   parent_yoksis_id: '207342'
   detsis_id: '41323324'
   parent_detsis_id: '20346779'
@@ -31271,7 +31517,7 @@
 
 - name: Bilgi İşlem Birimi
   abbreviation: ZİRAAT-BİLGİ-BR
-  code: GUZ
+  code: GV1
   detsis_id: '41483687'
   parent_detsis_id: '52180288'
   unit_type_id: Diğer İdari Birim
@@ -31280,7 +31526,7 @@
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
   abbreviation: GÜZELSANATLAR-SKS-BR
-  code: GV0
+  code: GV2
   detsis_id: '41519418'
   parent_detsis_id: '32859882'
   unit_type_id: Diğer İdari Birim
@@ -31289,7 +31535,7 @@
 
 - name: Öğrenci İşleri Birimi
   abbreviation: ZİRAAT-ÖĞRENCİ-BR
-  code: GV1
+  code: GV3
   detsis_id: '41615429'
   parent_detsis_id: '52180288'
   unit_type_id: Diğer İdari Birim
@@ -31298,7 +31544,7 @@
 
 - name: Periodontoloji Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-PERİO-ADB
-  code: GV2
+  code: GV4
   detsis_id: '41685452'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -31310,7 +31556,7 @@
 
 - name: Strateji Geliştirme ve Kalite Birimi
   abbreviation: SAĞLIK-AUM-SGK-BR
-  code: GV3
+  code: GV5
   detsis_id: '41792977'
   parent_detsis_id: '15374210'
   unit_type_id: Diğer İdari Birim
@@ -31320,7 +31566,7 @@
 
 - name: Yabancı Uyruklu Öğrenciler Birimi
   abbreviation: Öİ-DB-YU-BR
-  code: GV4
+  code: GV6
   detsis_id: '41936339'
   parent_detsis_id: '36607105'
   unit_type_id: Diğer İdari Birim
@@ -31329,7 +31575,7 @@
 
 - name: Kadın ve Aile Araştırmaları Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-KAA-ADB
-  code: GV5
+  code: GV7
   detsis_id: '42036856'
   parent_detsis_id: '61232311'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -31340,7 +31586,7 @@
 
 - name: Öğrenci İşleri Birimi
   abbreviation: SAĞLIK-MYO-ÖĞRENCİ-BR
-  code: GV6
+  code: GV8
   detsis_id: '42044931'
   parent_detsis_id: '45664456'
   unit_type_id: Diğer İdari Birim
@@ -31349,7 +31595,7 @@
 
 - name: Mali İşler Birimi
   abbreviation: TERME-MYO-MALİ-BR
-  code: GV7
+  code: GV9
   detsis_id: '42169587'
   parent_detsis_id: '36024139'
   unit_type_id: Diğer İdari Birim
@@ -31358,7 +31604,7 @@
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: VETERİNER-YAYIN-BR
-  code: GV8
+  code: GVA
   detsis_id: '42555819'
   parent_detsis_id: '32319693'
   unit_type_id: Diğer İdari Birim
@@ -31367,7 +31613,7 @@
 
 - name: Çevre Mühendisliği Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-ÇEVRE-ADB
-  code: GV9
+  code: GVB
   detsis_id: '42599812'
   parent_detsis_id: '43847920'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -31379,7 +31625,7 @@
 
 - name: Evrak ve Arşiv Birimi
   abbreviation: GENSEK-EVRAK-BR
-  code: GVA
+  code: GVC
   detsis_id: '43006749'
   parent_detsis_id: '90404739'
   unit_type_id: Diğer İdari Birim
@@ -31388,7 +31634,7 @@
 
 - name: Strateji Geliştirme ve Kalite Birimi
   abbreviation: TURİZM-SGK-BR
-  code: GVB
+  code: GVD
   detsis_id: '43093435'
   parent_detsis_id: '37195700'
   unit_type_id: Diğer İdari Birim
@@ -31397,7 +31643,7 @@
 
 - name: Bilgi İşlem Birimi
   abbreviation: MÜHENDİSLİK-BİLGİ-BR
-  code: GVC
+  code: GVE
   detsis_id: '43113160'
   parent_detsis_id: '81181891'
   unit_type_id: Diğer İdari Birim
@@ -31406,7 +31652,7 @@
 
 - name: Sanat ve Tasarım Anasanat Dalı Başkanlığı
   abbreviation: GÜZEL-SANAT-ST-ADB
-  code: GVD
+  code: GVF
   detsis_id: '43408176'
   parent_detsis_id: '28913907'
   unit_type_id: Anasanat Dalı Başkanlığı
@@ -31417,7 +31663,7 @@
 
 - name: Personel İşleri Birimi
   abbreviation: TİCARET-MYO-PERSONEL-BR
-  code: GVE
+  code: GVG
   detsis_id: '43456380'
   parent_detsis_id: '21071378'
   unit_type_id: Diğer İdari Birim
@@ -31426,7 +31672,7 @@
 
 - name: Arkeoloji Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-ARKEO-ADB-DİĞER
-  code: GVF
+  code: GVH
   detsis_id: '43470589'
   parent_detsis_id: '61232311'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -31437,7 +31683,7 @@
 
 - name: Pedodonti Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-PEDO-ADB
-  code: GVG
+  code: GVJ
   detsis_id: '43479317'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -31450,7 +31696,7 @@
 
 - name: Proje Birimi
   abbreviation: MİMARLIK-PROJE-BR
-  code: GVH
+  code: GVK
   detsis_id: '43783759'
   parent_detsis_id: '85074962'
   unit_type_id: Diğer İdari Birim
@@ -31459,7 +31705,7 @@
 
 - name: Öğrenci İşleri Birimi
   abbreviation: KONSERVATUVAR-ÖĞRENCİ-BR
-  code: GVJ
+  code: GVM
   detsis_id: '43936691'
   parent_detsis_id: '95441125'
   unit_type_id: Diğer İdari Birim
@@ -31468,7 +31714,7 @@
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: GÜZELSANATLAR-YAYIN-BR
-  code: GVK
+  code: GVN
   detsis_id: '43959666'
   parent_detsis_id: '32859882'
   unit_type_id: Diğer İdari Birim
@@ -31477,7 +31723,7 @@
 
 - name: Nanobilim ve Nanoteknoloji Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-NANO-ADB
-  code: GVM
+  code: GVP
   detsis_id: '44220146'
   parent_detsis_id: '43847920'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -31488,7 +31734,7 @@
 
 - name: Döner Sermaye Birimi
   abbreviation: TUAM-DÖNER-BR
-  code: GVN
+  code: GVR
   detsis_id: '44454667'
   parent_detsis_id: '60422539'
   unit_type_id: Diğer İdari Birim
@@ -31497,7 +31743,7 @@
 
 - name: Akademik Personel Servisi
   abbreviation: TIP-PERSONEL-AKADEMİK-BR
-  code: GVP
+  code: GVS
   detsis_id: '44469976'
   parent_detsis_id: '19117457'
   unit_type_id: Diğer İdari Birim
@@ -31506,7 +31752,7 @@
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: SAĞLIK-MYO-BASIN-BR
-  code: GVR
+  code: GVT
   detsis_id: '44567857'
   parent_detsis_id: '45664456'
   unit_type_id: Diğer İdari Birim
@@ -31515,7 +31761,7 @@
 
 - name: Milletlerarası Özel Hukuk Anabilim Dalı Başkanlığı
   abbreviation: ÖZELHUKUK-MAÖH-ADB
-  code: GVS
+  code: GVU
   detsis_id: '44570411'
   parent_detsis_id: '78415181'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -31524,7 +31770,7 @@
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
   abbreviation: İLETİŞİM-YAPI-BR
-  code: GVT
+  code: GVV
   detsis_id: '44655375'
   parent_detsis_id: '34806956'
   unit_type_id: Diğer İdari Birim
@@ -31533,7 +31779,7 @@
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
   abbreviation: VETERİNER-YAPI-BR
-  code: GVU
+  code: GVY
   detsis_id: '45220908'
   parent_detsis_id: '32319693'
   unit_type_id: Diğer İdari Birim
@@ -31542,7 +31788,7 @@
 
 - name: Hukuk İşleri Birimi
   abbreviation: VETERİNER-HUKUK-BR
-  code: GVV
+  code: GVZ
   detsis_id: '45328360'
   parent_detsis_id: '32319693'
   unit_type_id: Diğer İdari Birim
@@ -31551,7 +31797,7 @@
 
 - name: Biyoistatistik ve Tıp Bilişimi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-BTB-ADB
-  code: GVY
+  code: GY0
   detsis_id: '45437333'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -31563,7 +31809,7 @@
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: SAĞLIK-BASIN-BR
-  code: GVZ
+  code: GY1
   detsis_id: '45563598'
   parent_detsis_id: '28050591'
   unit_type_id: Diğer İdari Birim
@@ -31572,7 +31818,7 @@
 
 - name: Taşınır Kayıt ve Kontrol Birimi
   abbreviation: İMİ-DB-TAŞINIR-BR
-  code: GY0
+  code: GY2
   detsis_id: '45567009'
   parent_detsis_id: '15327320'
   unit_type_id: Diğer İdari Birim
@@ -31581,7 +31827,7 @@
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: MİMARLIK-BASIN-BR
-  code: GY1
+  code: GY3
   detsis_id: '45641765'
   parent_detsis_id: '85074962'
   unit_type_id: Diğer İdari Birim
@@ -31590,7 +31836,7 @@
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
   abbreviation: MÜHENDİSLİK-SKS-BR
-  code: GY2
+  code: GY4
   detsis_id: '45729445'
   parent_detsis_id: '81181891'
   unit_type_id: Diğer İdari Birim
@@ -31599,7 +31845,7 @@
 
 - name: Personel İşleri Birimi
   abbreviation: GÜZELSANATLAR-PERSONEL-BR
-  code: GY3
+  code: GY5
   detsis_id: '45894329'
   parent_detsis_id: '32859882'
   unit_type_id: Diğer İdari Birim
@@ -31608,7 +31854,7 @@
 
 - name: Personel İşleri Birimi
   abbreviation: SAĞLIK-AUM-PERSONEL-BR
-  code: GY4
+  code: GY6
   detsis_id: '46010950'
   parent_detsis_id: '15374210'
   unit_type_id: Diğer İdari Birim
@@ -31618,7 +31864,7 @@
 
 - name: Öğrenci İşleri Birimi
   abbreviation: MİMARLIK-ÖĞRENCİ-BR
-  code: GY5
+  code: GY7
   detsis_id: '46199360'
   parent_detsis_id: '85074962'
   unit_type_id: Diğer İdari Birim
@@ -31627,7 +31873,7 @@
 
 - name: Tüp Bebek Merkezi
   abbreviation: SAĞLIK-AUM-TÜPBEBEK-MR
-  code: GY6
+  code: GY8
   detsis_id: '46418573'
   parent_detsis_id: '15374210'
   unit_type_id: Diğer İdari Birim
@@ -31637,7 +31883,7 @@
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
   abbreviation: GÜZEL-SANAT-YAPI-BR
-  code: GY7
+  code: GY9
   detsis_id: '46576151'
   parent_detsis_id: '28913907'
   unit_type_id: Diğer İdari Birim
@@ -31646,6 +31892,7 @@
 
 - name: Ballıca Meslek Yüksekokulu Müdürlüğü
   abbreviation: BALLICA-MYO-MD
+  code: GYA
   parent_yoksis_id: '284516'
   detsis_id: '46697017'
   parent_detsis_id: '78633602'
@@ -31655,7 +31902,7 @@
 
 - name: Veterinerlik Fizyolojisi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-VFİZYO-ADB
-  code: GY8
+  code: GYB
   detsis_id: '46857964'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -31667,7 +31914,7 @@
 
 - name: Allerji ve İmmünoloji Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-ALERJİ-ADB
-  code: GY9
+  code: GYC
   detsis_id: '47024253'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -31679,7 +31926,7 @@
 
 - name: Matematik Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-MAT-ADB
-  code: GYA
+  code: GYD
   detsis_id: '47259451'
   parent_detsis_id: '43847920'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -31690,7 +31937,7 @@
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: ADALET-MYO-YAYIN-BR
-  code: GYB
+  code: GYE
   detsis_id: '47657711'
   parent_detsis_id: '15086663'
   unit_type_id: Diğer İdari Birim
@@ -31699,7 +31946,7 @@
 
 - name: Personel İşleri Birimi
   abbreviation: TERME-MYO-PERSONEL-BR
-  code: GYC
+  code: GYF
   detsis_id: '47710876'
   parent_detsis_id: '36024139'
   unit_type_id: Diğer İdari Birim
@@ -31708,7 +31955,7 @@
 
 - name: Döner Sermaye Satın Alma Birimi
   abbreviation: SAĞLIK-AUM-DÖNER-SATINALMA-BR
-  code: GYD
+  code: GYG
   detsis_id: '47717140'
   parent_detsis_id: '97668190'
   unit_type_id: Diğer İdari Birim
@@ -31718,7 +31965,7 @@
 
 - name: İşletme Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-İŞLETME-ADB
-  code: GYE
+  code: GYH
   parent_yoksis_id: '207833'
   detsis_id: '47913381'
   parent_detsis_id: '61232311'
@@ -31728,7 +31975,7 @@
 
 - name: Öğrenci İşleri Birimi
   abbreviation: DİŞ-ÖĞRENCİ-BR
-  code: GYF
+  code: GYJ
   detsis_id: '47920817'
   parent_detsis_id: '45458912'
   unit_type_id: Diğer İdari Birim
@@ -31737,7 +31984,7 @@
 
 - name: Bilgi İşlem Birimi
   abbreviation: KONSERVATUVAR-BİLGİ-BR
-  code: GYG
+  code: GYK
   detsis_id: '48088959'
   parent_detsis_id: '95441125'
   unit_type_id: Diğer İdari Birim
@@ -31746,7 +31993,7 @@
 
 - name: Bilgi İşlem Birimi
   abbreviation: SOSYAL-BİLİM-BİLGİ-BR
-  code: GYH
+  code: GYM
   detsis_id: '48408972'
   parent_detsis_id: '61232311'
   unit_type_id: Diğer İdari Birim
@@ -31755,7 +32002,7 @@
 
 - name: İktisat Tarihi Anabilim Dalı Başkanlığı
   abbreviation: İKTİSAT-TARİH-ADB
-  code: GYJ
+  code: GYN
   parent_yoksis_id: '209992'
   detsis_id: '48461320'
   parent_detsis_id: '85215827'
@@ -31765,7 +32012,7 @@
 
 - name: Personel İşleri Birimi
   abbreviation: SOSYAL-BİLİM-PERSONEL
-  code: GYK
+  code: GYP
   detsis_id: '48550214'
   parent_detsis_id: '61232311'
   unit_type_id: Diğer İdari Birim
@@ -31774,7 +32021,7 @@
 
 - name: Teknik Destek Birimi
   abbreviation: Bİ-DB-TEKNİK-BR
-  code: GYM
+  code: GYR
   detsis_id: '48622703'
   parent_detsis_id: '54165989'
   unit_type_id: Diğer İdari Birim
@@ -31783,7 +32030,7 @@
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: DİŞ-YAYIN-BR
-  code: GYN
+  code: GYS
   detsis_id: '48773927'
   parent_detsis_id: '45458912'
   unit_type_id: Diğer İdari Birim
@@ -31792,7 +32039,7 @@
 
 - name: Proje Birimi
   abbreviation: EĞİTİM-PROJE-BR
-  code: GYP
+  code: GYT
   detsis_id: '48791427'
   parent_detsis_id: '98725097'
   unit_type_id: Diğer İdari Birim
@@ -31801,7 +32048,7 @@
 
 - name: Sosyoloji Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-SOSYOLOJİ-ADB
-  code: GYR
+  code: GYU
   detsis_id: '48851387'
   parent_detsis_id: '61232311'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -31812,7 +32059,7 @@
 
 - name: Strateji Geliştirme ve Kalite Birimi
   abbreviation: ADALET-MYO-SGK-BR
-  code: GYS
+  code: GYV
   detsis_id: '48932718'
   parent_detsis_id: '15086663'
   unit_type_id: Diğer İdari Birim
@@ -31821,7 +32068,7 @@
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
   abbreviation: SPOR-YAPI-BR
-  code: GYT
+  code: GYY
   detsis_id: '49039706'
   parent_detsis_id: '80270232'
   unit_type_id: Diğer İdari Birim
@@ -31830,7 +32077,7 @@
 
 - name: Yenilenebilir Enerji ve Uygulamaları Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-YEU-ADB
-  code: GYU
+  code: GYZ
   parent_yoksis_id: '303063'
   detsis_id: '49040734'
   parent_detsis_id: '43847920'
@@ -31840,7 +32087,7 @@
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: İLETİŞİM-BASIN-BR
-  code: GYV
+  code: GZ0
   detsis_id: '49259279'
   parent_detsis_id: '34806956'
   unit_type_id: Diğer İdari Birim
@@ -31849,7 +32096,7 @@
 
 - name: Şehir Sağlık Merkezi Birimi
   abbreviation: SAĞLIK-AUM-İDARİ-ŞSM-BR
-  code: GYY
+  code: GZ1
   detsis_id: '49308908'
   parent_detsis_id: '52235156'
   unit_type_id: Diğer İdari Birim
@@ -31859,7 +32106,7 @@
 
 - name: Personel İşleri Birimi
   abbreviation: SAĞLIK-MYO-PERSONEL-BR
-  code: GYZ
+  code: GZ2
   detsis_id: '49483900'
   parent_detsis_id: '45664456'
   unit_type_id: Diğer İdari Birim
@@ -31868,6 +32115,7 @@
 
 - name: Mütercim Tercümanlık (Çince) Anabilim Dalı Başkanlığı
   abbreviation: YDİL-YO-MÜTERCİM-ÇİN-ADB
+  code: GZ3
   parent_yoksis_id: '267558'
   detsis_id: '49727580'
   parent_detsis_id: '20346779'
@@ -31877,7 +32125,7 @@
 
 - name: Mali İşler Birimi
   abbreviation: TUAM-MALİ-BR
-  code: GZ0
+  code: GZ4
   detsis_id: '49761014'
   parent_detsis_id: '60422539'
   unit_type_id: Diğer İdari Birim
@@ -31886,7 +32134,7 @@
 
 - name: Kurumsal İletişim Birimi
   abbreviation: GENSEK-KURUMSAL-BR
-  code: GZ1
+  code: GZ5
   detsis_id: '49933177'
   parent_detsis_id: '90404739'
   unit_type_id: Diğer İdari Birim
@@ -31895,7 +32143,7 @@
 
 - name: Veterinerlik Besin Hijyeni ve Teknolojisi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-VBESİN-ADB
-  code: GZ2
+  code: GZ6
   detsis_id: '49971342'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -31907,7 +32155,7 @@
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: FEN-BİLİM-YAYIN-BR
-  code: GZ3
+  code: GZ7
   detsis_id: '49972110'
   parent_detsis_id: '43847920'
   unit_type_id: Diğer İdari Birim
@@ -31916,7 +32164,7 @@
 
 - name: Personel İşleri Birimi
   abbreviation: FEN-PERSONEL-BR
-  code: GZ4
+  code: GZ8
   detsis_id: '50201747'
   parent_detsis_id: '41130367'
   unit_type_id: Diğer İdari Birim
@@ -31925,7 +32173,7 @@
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
   abbreviation: SOSYAL-BİLİM-YAPI-BR
-  code: GZ5
+  code: GZ9
   detsis_id: '50417741'
   parent_detsis_id: '61232311'
   unit_type_id: Diğer İdari Birim
@@ -31934,7 +32182,7 @@
 
 - name: İdari İşler Birimi
   abbreviation: MÜHENDİSLİK-İDARİ-BR
-  code: GZ6
+  code: GZA
   detsis_id: '50451855'
   parent_detsis_id: '81181891'
   unit_type_id: Diğer İdari Birim
@@ -31943,7 +32191,7 @@
 
 - name: Strateji Geliştirme ve Kalite Birimi
   abbreviation: İLETİŞİM-SGK-BR
-  code: GZ7
+  code: GZB
   detsis_id: '50551703'
   parent_detsis_id: '34806956'
   unit_type_id: Diğer İdari Birim
@@ -31952,7 +32200,7 @@
 
 - name: Personel İşleri Birimi
   abbreviation: SAĞLIK-BİLİM-PERSONEL-BR
-  code: GZ8
+  code: GZC
   detsis_id: '50722385'
   parent_detsis_id: '93771576'
   unit_type_id: Diğer İdari Birim
@@ -31961,7 +32209,7 @@
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
   abbreviation: BAFRA-MYO-SKS-BR
-  code: GZ9
+  code: GZD
   detsis_id: '50975563'
   parent_detsis_id: '50713553'
   unit_type_id: Diğer İdari Birim
@@ -31970,7 +32218,7 @@
 
 - name: Strateji Geliştirme ve Kalite Birimi
   abbreviation: YDİL-YO-SGK-BR
-  code: GZA
+  code: GZE
   detsis_id: '51279679'
   parent_detsis_id: '19676956'
   unit_type_id: Diğer İdari Birim
@@ -31979,7 +32227,7 @@
 
 - name: Enstitü Sekreterliği
   abbreviation: SAĞLIK-BİLİM-SEK
-  code: GZB
+  code: GZF
   detsis_id: '51409053'
   parent_detsis_id: '93771576'
   unit_type_id: Enstitü Sekreterliği
@@ -31988,7 +32236,7 @@
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
   abbreviation: SAMSUN-MYO-YAPI-BR
-  code: GZC
+  code: GZG
   detsis_id: '51482131'
   parent_detsis_id: '56591305'
   unit_type_id: Diğer İdari Birim
@@ -31997,7 +32245,7 @@
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: SAMSUN-MYO-YAYIN-BR
-  code: GZD
+  code: GZH
   detsis_id: '51576161'
   parent_detsis_id: '56591305'
   unit_type_id: Diğer İdari Birim
@@ -32006,7 +32254,7 @@
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: TERME-MYO-BASIN-BR
-  code: GZE
+  code: GZJ
   detsis_id: '51856935'
   parent_detsis_id: '36024139'
   unit_type_id: Diğer İdari Birim
@@ -32015,7 +32263,7 @@
 
 - name: Anatomi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-ANATOMİ-ADB
-  code: GZF
+  code: GZK
   detsis_id: '51903356'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -32027,7 +32275,7 @@
 
 - name: Hukuk İşleri Birimi
   abbreviation: BAFRA-MYO-HUKUK-BR
-  code: GZG
+  code: GZM
   detsis_id: '51993802'
   parent_detsis_id: '50713553'
   unit_type_id: Diğer İdari Birim
@@ -32036,7 +32284,7 @@
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
   abbreviation: YDİL-YO-YAPI-BR
-  code: GZH
+  code: GZN
   detsis_id: '52009832'
   parent_detsis_id: '19676956'
   unit_type_id: Diğer İdari Birim
@@ -32045,7 +32293,7 @@
 
 - name: Akademik Birimi
   abbreviation: PER-DB-AKADEMİK-BR
-  code: GZJ
+  code: GZP
   detsis_id: '52167378'
   parent_detsis_id: '90212838'
   unit_type_id: Diğer İdari Birim
@@ -32054,7 +32302,7 @@
 
 - name: İdari İşler Birimi
   abbreviation: SAĞLIK-AUM-İDARİ-BR
-  code: GZK
+  code: GZR
   detsis_id: '52235156'
   parent_detsis_id: '15374210'
   unit_type_id: Diğer İdari Birim
@@ -32064,7 +32312,7 @@
 
 - name: Turizm İşletmeciliği Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-TURİŞ-ADB
-  code: GZM
+  code: GZS
   detsis_id: '52308424'
   parent_detsis_id: '61232311'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -32075,7 +32323,7 @@
 
 - name: İdari İşler Birimi
   abbreviation: HAVZA-MYO-İDARİ-BR
-  code: GZN
+  code: GZT
   detsis_id: '52376962'
   parent_detsis_id: '78645283'
   unit_type_id: Diğer İdari Birim
@@ -32084,7 +32332,7 @@
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: SPOR-BASIN-BR
-  code: GZP
+  code: GZU
   detsis_id: '52551826'
   parent_detsis_id: '80270232'
   unit_type_id: Diğer İdari Birim
@@ -32093,7 +32341,7 @@
 
 - name: Bilgi İşlem Birimi
   abbreviation: SAĞLIK-MYO-BİLGİ-BR
-  code: GZR
+  code: GZV
   detsis_id: '52636207'
   parent_detsis_id: '45664456'
   unit_type_id: Diğer İdari Birim
@@ -32102,7 +32350,7 @@
 
 - name: İdari Personel Servisi
   abbreviation: TIP-PERSONEL-İDARİ-BR
-  code: GZS
+  code: GZY
   detsis_id: '52670918'
   parent_detsis_id: '19117457'
   unit_type_id: Diğer İdari Birim
@@ -32111,7 +32359,7 @@
 
 - name: Öğrenci İşleri Birimi
   abbreviation: TİCARET-MYO-ÖĞRENCİ-BR
-  code: GZT
+  code: GZZ
   detsis_id: '52823044'
   parent_detsis_id: '21071378'
   unit_type_id: Diğer İdari Birim
@@ -32120,7 +32368,7 @@
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: VETERİNER-BASIN-BR
-  code: GZU
+  code: H00
   detsis_id: '52983530'
   parent_detsis_id: '32319693'
   unit_type_id: Diğer İdari Birim
@@ -32129,7 +32377,7 @@
 
 - name: Strateji Geliştirme ve Kalite Birimi
   abbreviation: GÜZEL-SANAT-SGK-BR
-  code: GZV
+  code: H01
   detsis_id: '53197681'
   parent_detsis_id: '28913907'
   unit_type_id: Diğer İdari Birim
@@ -32138,7 +32386,7 @@
 
 - name: İdari İşler Birimi
   abbreviation: ALAÇAM-MYO-İDARİ-BR
-  code: GZY
+  code: H02
   detsis_id: '53478021'
   parent_detsis_id: '68459231'
   unit_type_id: Diğer İdari Birim
@@ -32147,7 +32395,7 @@
 
 - name: Hastane Başmüdürlüğü
   abbreviation: SAĞLIK-AUM-HASTANE-BAŞMD
-  code: GZZ
+  code: H03
   detsis_id: '53501917'
   parent_detsis_id: '15374210'
   unit_type_id: Başmüdürlük
@@ -32157,7 +32405,7 @@
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: SOSYAL-BİLİM-YAYIN-BR
-  code: H00
+  code: H04
   detsis_id: '53581522'
   parent_detsis_id: '61232311'
   unit_type_id: Diğer İdari Birim
@@ -32166,7 +32414,7 @@
 
 - name: Beslenme Bilimleri Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-BESLENME-ADB
-  code: H01
+  code: H05
   detsis_id: '53706045'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -32178,7 +32426,7 @@
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: BAFRA-MYO-BASIN-BR
-  code: H02
+  code: H06
   detsis_id: '53713000'
   parent_detsis_id: '50713553'
   unit_type_id: Diğer İdari Birim
@@ -32187,7 +32435,7 @@
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
   abbreviation: SAĞLIK-MYO-SKS-BR
-  code: H03
+  code: H07
   detsis_id: '53804380'
   parent_detsis_id: '45664456'
   unit_type_id: Diğer İdari Birim
@@ -32196,7 +32444,7 @@
 
 - name: Mali İşler Birimi
   abbreviation: VEZİRKÖPRÜ-MYO-MALİ-BR
-  code: H04
+  code: H08
   detsis_id: '53819878'
   parent_detsis_id: '61206311'
   unit_type_id: Diğer İdari Birim
@@ -32205,7 +32453,7 @@
 
 - name: Hukuk İşleri Birimi
   abbreviation: SAĞLIK-HUKUK-BR
-  code: H05
+  code: H09
   detsis_id: '53886478'
   parent_detsis_id: '28050591'
   unit_type_id: Diğer İdari Birim
@@ -32214,7 +32462,7 @@
 
 - name: Veterinerlik İç Hastalıkları Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-VİÇH-ADB
-  code: H06
+  code: H0A
   detsis_id: '53936112'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -32226,7 +32474,7 @@
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
   abbreviation: SAĞLIK-AUM-YAPI-BR
-  code: H07
+  code: H0B
   detsis_id: '53940459'
   parent_detsis_id: '15374210'
   unit_type_id: Diğer İdari Birim
@@ -32236,7 +32484,7 @@
 
 - name: Enfeksiyon Kontrol Komitesi
   abbreviation: SAĞLIK-AUM-ENFEKSİYON-MR
-  code: H08
+  code: H0C
   detsis_id: '54348033'
   parent_detsis_id: '15374210'
   unit_type_id: Diğer İdari Birim
@@ -32246,7 +32494,7 @@
 
 - name: Veterinerlik Cerrahisi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-VCERRAHİ-ADB
-  code: H09
+  code: H0D
   detsis_id: '54380477'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -32258,7 +32506,7 @@
 
 - name: Özel Hukuk Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-ÖZELHUKUK-ADB
-  code: H0A
+  code: H0E
   detsis_id: '54539635'
   parent_detsis_id: '61232311'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -32269,7 +32517,7 @@
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
   abbreviation: EĞİTİM-YAPI-BR
-  code: H0B
+  code: H0F
   detsis_id: '54857243'
   parent_detsis_id: '98725097'
   unit_type_id: Diğer İdari Birim
@@ -32278,7 +32526,7 @@
 
 - name: Öğrenci İşleri Birimi
   abbreviation: EĞİTİM-ÖĞRENCİ-BR
-  code: H0C
+  code: H0G
   detsis_id: '55237367'
   parent_detsis_id: '98725097'
   unit_type_id: Diğer İdari Birim
@@ -32287,7 +32535,7 @@
 
 - name: Hukuk İşleri Birimi
   abbreviation: TERME-MYO-HUKUK-BR
-  code: H0D
+  code: H0H
   detsis_id: '55456615'
   parent_detsis_id: '36024139'
   unit_type_id: Diğer İdari Birim
@@ -32296,7 +32544,7 @@
 
 - name: Mali İşler Birimi
   abbreviation: ZİRAAT-MALİ-BR
-  code: H0E
+  code: H0J
   detsis_id: '55525574'
   parent_detsis_id: '52180288'
   unit_type_id: Diğer İdari Birim
@@ -32305,7 +32553,7 @@
 
 - name: Hukuk İşleri Birimi
   abbreviation: GÜZELSANATLAR-HUKUK-BR
-  code: H0F
+  code: H0K
   detsis_id: '55682796'
   parent_detsis_id: '32859882'
   unit_type_id: Diğer İdari Birim
@@ -32314,7 +32562,7 @@
 
 - name: Tıbbi Mikrobiyoloji Laboratuvarı
   abbreviation: SAĞLIK-AUM-TMİKRO-LAB
-  code: H0G
+  code: H0M
   detsis_id: '55934046'
   parent_detsis_id: '15374210'
   unit_type_id: Diğer İdari Birim
@@ -32324,7 +32572,7 @@
 
 - name: Hukuk İşleri Birimi
   abbreviation: SAĞLIK-AUM-HUKUK-BR
-  code: H0H
+  code: H0N
   detsis_id: '56103032'
   parent_detsis_id: '15374210'
   unit_type_id: Diğer İdari Birim
@@ -32334,7 +32582,7 @@
 
 - name: Bilgi İşlem Birimi
   abbreviation: SPOR-BİLGİ-BR
-  code: H0J
+  code: H0P
   detsis_id: '56112270'
   parent_detsis_id: '80270232'
   unit_type_id: Diğer İdari Birim
@@ -32343,7 +32591,7 @@
 
 - name: Personel İşleri Birimi
   abbreviation: KONSERVATUVAR-PERSONEL-BR
-  code: H0K
+  code: H0R
   detsis_id: '56218344'
   parent_detsis_id: '95441125'
   unit_type_id: Diğer İdari Birim
@@ -32352,7 +32600,7 @@
 
 - name: Türk Dili ve Edebiyatı Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-TDE-ADB
-  code: H0M
+  code: H0S
   detsis_id: '56330438'
   parent_detsis_id: '61232311'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -32364,7 +32612,7 @@
 
 - name: Yayın Kütüphane ve Dokümantasyon Birimi
   abbreviation: KONSERVATUVAR-YAYIN-BR
-  code: H0N
+  code: H0T
   detsis_id: '56334960'
   parent_detsis_id: '95441125'
   unit_type_id: Diğer İdari Birim
@@ -32373,7 +32621,7 @@
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
   abbreviation: SAĞLIK-MYO-YAPI-BR
-  code: H0P
+  code: H0U
   detsis_id: '56560986'
   parent_detsis_id: '45664456'
   unit_type_id: Diğer İdari Birim
@@ -32382,7 +32630,7 @@
 
 - name: Döner Sermaye Birimi
   abbreviation: SAMSUN-MYO-DÖNER-BR
-  code: H0R
+  code: H0V
   detsis_id: '56639895'
   parent_detsis_id: '56591305'
   unit_type_id: Diğer İdari Birim
@@ -32391,7 +32639,7 @@
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: SOSYAL-BİLİM-BASIN-BR
-  code: H0S
+  code: H0Y
   detsis_id: '56821914'
   parent_detsis_id: '61232311'
   unit_type_id: Diğer İdari Birim
@@ -32400,7 +32648,7 @@
 
 - name: İnşaat Mühendisliği Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-İNŞAAT-ADB
-  code: H0T
+  code: H0Z
   parent_yoksis_id: '202003'
   detsis_id: '56922128'
   parent_detsis_id: '43847920'
@@ -32410,7 +32658,7 @@
 
 - name: Öğrenci İşleri Birimi
   abbreviation: FEN-BİLİM-ÖĞRENCİ-BR
-  code: H0U
+  code: H10
   detsis_id: '57086410'
   parent_detsis_id: '43847920'
   unit_type_id: Diğer İdari Birim
@@ -32419,7 +32667,7 @@
 
 - name: Bilgi İşlem Birimi
   abbreviation: EĞİTİM-BİLİM-BİLGİ-BR
-  code: H0V
+  code: H11
   detsis_id: '57140256'
   parent_detsis_id: '42301062'
   unit_type_id: Diğer İdari Birim
@@ -32428,7 +32676,7 @@
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: GÜZEL-SANAT-YAYIN-BR
-  code: H0Y
+  code: H12
   detsis_id: '57220800'
   parent_detsis_id: '28913907'
   unit_type_id: Diğer İdari Birim
@@ -32437,7 +32685,7 @@
 
 - name: Strateji Geliştirme ve Kalite Birimi
   abbreviation: HAVZA-MYO-SGK-BR
-  code: H0Z
+  code: H13
   detsis_id: '57225290'
   parent_detsis_id: '78645283'
   unit_type_id: Diğer İdari Birim
@@ -32446,6 +32694,7 @@
 
 - name: Bafra İşletme Fakültesi Dekanlığı
   abbreviation: İŞLETME-DEK
+  code: H14
   parent_yoksis_id: '293681'
   detsis_id: '57246715'
   parent_detsis_id: '78633602'
@@ -32457,7 +32706,7 @@
 
 - name: Ortodonti Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-ORTO-ADB
-  code: H10
+  code: H15
   detsis_id: '57307857'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -32469,7 +32718,7 @@
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: SAĞLIK-BİLİM-YAYIN-BR
-  code: H11
+  code: H16
   detsis_id: '57786613'
   parent_detsis_id: '93771576'
   unit_type_id: Diğer İdari Birim
@@ -32478,7 +32727,7 @@
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: SAĞLIK-MYO-YAYIN-BR
-  code: H12
+  code: H17
   detsis_id: '57868705'
   parent_detsis_id: '45664456'
   unit_type_id: Diğer İdari Birim
@@ -32487,7 +32736,7 @@
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: YDİL-YO-BASIN-BR
-  code: H13
+  code: H18
   detsis_id: '58002005'
   parent_detsis_id: '19676956'
   unit_type_id: Diğer İdari Birim
@@ -32496,7 +32745,7 @@
 
 - name: Sağlık Yönetimi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-SAĞLIKYÖN-ADB
-  code: H14
+  code: H19
   detsis_id: '58144189'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -32508,7 +32757,7 @@
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
   abbreviation: FEN-BİLİM-YAPI-BR
-  code: H15
+  code: H1A
   detsis_id: '58398455'
   parent_detsis_id: '43847920'
   unit_type_id: Diğer İdari Birim
@@ -32517,7 +32766,7 @@
 
 - name: Proje Birimi
   abbreviation: İLETİŞİM-PROJE-BR
-  code: H16
+  code: H1B
   detsis_id: '58509585'
   parent_detsis_id: '34806956'
   unit_type_id: Diğer İdari Birim
@@ -32526,7 +32775,7 @@
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: İLAHİYAT-BASIN-BR
-  code: H17
+  code: H1C
   detsis_id: '58782367'
   parent_detsis_id: '79586685'
   unit_type_id: Diğer İdari Birim
@@ -32535,7 +32784,7 @@
 
 - name: Bilgi İşlem Birimi
   abbreviation: GÜZEL-SANAT-BİLGİ-BR
-  code: H18
+  code: H1D
   detsis_id: '58871806'
   parent_detsis_id: '28913907'
   unit_type_id: Diğer İdari Birim
@@ -32544,7 +32793,7 @@
 
 - name: İdari İşler Birimi
   abbreviation: EĞİTİM-BİLİM-İDARİ-BR
-  code: H19
+  code: H1E
   detsis_id: '58937905'
   parent_detsis_id: '42301062'
   unit_type_id: Diğer İdari Birim
@@ -32553,7 +32802,7 @@
 
 - name: Öğrenci İşleri Birimi
   abbreviation: TIP-ÖĞRENCİ-BR
-  code: H1A
+  code: H1F
   detsis_id: '58942102'
   parent_detsis_id: '45829229'
   unit_type_id: Diğer İdari Birim
@@ -32562,7 +32811,7 @@
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: İLETİŞİM-YAYIN-BR
-  code: H1B
+  code: H1G
   detsis_id: '59217167'
   parent_detsis_id: '34806956'
   unit_type_id: Diğer İdari Birim
@@ -32571,7 +32820,7 @@
 
 - name: Tıbbi Mikrobiyoloji Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-TMİKRO-ADB
-  code: H1C
+  code: H1H
   detsis_id: '59268728'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -32582,7 +32831,7 @@
 
 - name: Biyoloji Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-BİYO-ADB
-  code: H1D
+  code: H1J
   detsis_id: '59515608'
   parent_detsis_id: '43847920'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -32593,7 +32842,7 @@
 
 - name: Mali İşler Birimi
   abbreviation: MİMARLIK-MALİ-BR
-  code: H1E
+  code: H1K
   detsis_id: '59542970'
   parent_detsis_id: '85074962'
   unit_type_id: Diğer İdari Birim
@@ -32602,7 +32851,7 @@
 
 - name: Strateji Geliştirme ve Kalite Birimi
   abbreviation: VEZİRKÖPRÜ-MYO-SGK-BR
-  code: H1F
+  code: H1M
   detsis_id: '59933025'
   parent_detsis_id: '61206311'
   unit_type_id: Diğer İdari Birim
@@ -32611,7 +32860,7 @@
 
 - name: Öğrenci İşleri Birimi
   abbreviation: YEŞİLYURT-MYO-ÖĞRENCİ-BR
-  code: H1G
+  code: H1N
   detsis_id: '60042186'
   parent_detsis_id: '30423168'
   unit_type_id: Diğer İdari Birim
@@ -32620,7 +32869,7 @@
 
 - name: Personel İşleri Birimi
   abbreviation: EĞİTİM-BİLİM-PERSONEL-BR
-  code: H1H
+  code: H1P
   detsis_id: '60075630'
   parent_detsis_id: '42301062'
   unit_type_id: Diğer İdari Birim
@@ -32629,7 +32878,7 @@
 
 - name: Hukuk İşleri Birimi
   abbreviation: ALAÇAM-MYO-HUKUK-BR
-  code: H1J
+  code: H1R
   detsis_id: '60382135'
   parent_detsis_id: '68459231'
   unit_type_id: Diğer İdari Birim
@@ -32638,7 +32887,7 @@
 
 - name: Öğrenci İşleri Birimi
   abbreviation: SAĞLIK-ÖĞRENCİ-BR
-  code: H1K
+  code: H1S
   detsis_id: '60417121'
   parent_detsis_id: '28050591'
   unit_type_id: Diğer İdari Birim
@@ -32647,7 +32896,7 @@
 
 - name: Öğrenci İşleri Birimi
   abbreviation: GÜZEL-SANAT-ÖĞRENCİ-BR
-  code: H1M
+  code: H1T
   detsis_id: '60465650'
   parent_detsis_id: '28913907'
   unit_type_id: Diğer İdari Birim
@@ -32656,7 +32905,7 @@
 
 - name: Veterinerlik Biyokimyası Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-VBİYOKİMYA-ADB
-  code: H1N
+  code: H1U
   detsis_id: '60669633'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -32669,7 +32918,7 @@
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: EĞİTİM-YAYIN-BR
-  code: H1P
+  code: H1V
   detsis_id: '60705665'
   parent_detsis_id: '98725097'
   unit_type_id: Diğer İdari Birim
@@ -32678,7 +32927,7 @@
 
 - name: Bilgi İşlem Birimi
   abbreviation: DİŞ-BİLGİ-BR
-  code: H1R
+  code: H1Y
   detsis_id: '60827358'
   parent_detsis_id: '45458912'
   unit_type_id: Diğer İdari Birim
@@ -32687,7 +32936,7 @@
 
 - name: Hayvan Besleme ve Beslenme Hastalıkları Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-HBH-ADB
-  code: H1S
+  code: H1Z
   detsis_id: '61110688'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -32699,7 +32948,7 @@
 
 - name: Yazı İşleri Birimi
   abbreviation: GENSEK-YAZI-BR
-  code: H1T
+  code: H20
   detsis_id: '61127492'
   parent_detsis_id: '90404739'
   unit_type_id: Diğer İdari Birim
@@ -32708,7 +32957,7 @@
 
 - name: Hukuk İşleri Birimi
   abbreviation: İLAHİYAT-HUKUK-BR
-  code: H1U
+  code: H21
   detsis_id: '61342690'
   parent_detsis_id: '79586685'
   unit_type_id: Diğer İdari Birim
@@ -32717,7 +32966,7 @@
 
 - name: Yaratıcı Yazarlık Uygulama ve Araştırma Merkezi Müdürlüğü
   abbreviation: YYAUM-MD
-  code: H1V
+  code: H22
   parent_yoksis_id: '212704'
   detsis_id: '61890576'
   parent_detsis_id: '78633602'
@@ -32727,7 +32976,7 @@
 
 - name: Hukuk İşleri Birimi
   abbreviation: TİCARET-MYO-HUKUK-BR
-  code: H1Y
+  code: H23
   detsis_id: '61932828'
   parent_detsis_id: '21071378'
   unit_type_id: Diğer İdari Birim
@@ -32736,7 +32985,7 @@
 
 - name: Strateji Geliştirme ve Kalite Birimi
   abbreviation: ZİRAAT-SGK-BR
-  code: H1Z
+  code: H24
   detsis_id: '62146076'
   parent_detsis_id: '52180288'
   unit_type_id: Diğer İdari Birim
@@ -32745,7 +32994,7 @@
 
 - name: Tıbbi Farmakoloji Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-TFARMA-ADB
-  code: H20
+  code: H25
   detsis_id: '62257320'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -32756,7 +33005,7 @@
 
 - name: Strateji Geliştirme ve Kalite Birimi
   abbreviation: KONSERVATUVAR-SGK-BR
-  code: H21
+  code: H26
   detsis_id: '62414269'
   parent_detsis_id: '95441125'
   unit_type_id: Diğer İdari Birim
@@ -32765,7 +33014,7 @@
 
 - name: Tarım Ekonomisi Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-TARIMEKO-ADB
-  code: H22
+  code: H27
   detsis_id: '62564542'
   parent_detsis_id: '43847920'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -32776,7 +33025,7 @@
 
 - name: Taşınmazlar Birimi
   abbreviation: İMİ-DB-TAŞINMAZ-BR
-  code: H23
+  code: H28
   detsis_id: '62719314'
   parent_detsis_id: '15327320'
   unit_type_id: Diğer İdari Birim
@@ -32785,7 +33034,7 @@
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
   abbreviation: HUKUK-YAPI-BR
-  code: H24
+  code: H29
   detsis_id: '62812713'
   parent_detsis_id: '80803429'
   unit_type_id: Diğer İdari Birim
@@ -32794,7 +33043,7 @@
 
 - name: Personel İşleri Birimi
   abbreviation: GÜZEL-SANAT-PERSONEL-BR
-  code: H25
+  code: H2A
   detsis_id: '62894656'
   parent_detsis_id: '28913907'
   unit_type_id: Diğer İdari Birim
@@ -32803,7 +33052,7 @@
 
 - name: Meslek Yüksekokulu Sekreterliği
   abbreviation: BAFRA-MYO-SEK
-  code: H26
+  code: H2B
   detsis_id: '63048626'
   parent_detsis_id: '50713553'
   unit_type_id: Meslek Yüksekokulu Sekreterliği
@@ -32813,7 +33062,7 @@
 
 - name: Personel İşleri Birimi
   abbreviation: BAFRA-MYO-PERSONEL-BR
-  code: H27
+  code: H2C
   detsis_id: '63263995'
   parent_detsis_id: '50713553'
   unit_type_id: Diğer İdari Birim
@@ -32822,7 +33071,7 @@
 
 - name: Strateji Geliştirme ve Kalite Birimi
   abbreviation: İLAHİYAT-SGK-BR
-  code: H28
+  code: H2D
   detsis_id: '63433461'
   parent_detsis_id: '79586685'
   unit_type_id: Diğer İdari Birim
@@ -32831,7 +33080,7 @@
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: EĞİTİM-BİLİM-YAYIN-BR
-  code: H29
+  code: H2E
   detsis_id: '63472177'
   parent_detsis_id: '42301062'
   unit_type_id: Diğer İdari Birim
@@ -32840,7 +33089,7 @@
 
 - name: Eğitim Bilimleri Anabilim Dalı Başkanlığı
   abbreviation: EĞİTİM-BİLİM-EB-ADB
-  code: H2A
+  code: H2F
   parent_yoksis_id: '207882'
   detsis_id: '63629408'
   parent_detsis_id: '42301062'
@@ -32850,7 +33099,7 @@
 
 - name: Müzik Anasanat Dalı Başkanlığı
   abbreviation: GÜZEL-SANAT-MÜZİK-ADB
-  code: H2B
+  code: H2G
   detsis_id: '63701311'
   parent_detsis_id: '28913907'
   unit_type_id: Anasanat Dalı Başkanlığı
@@ -32862,7 +33111,7 @@
 
 - name: Kardiyopulmoner Fizyoterapi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-KARFİZ-ADB
-  code: H2C
+  code: H2H
   detsis_id: '63950292'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -32873,7 +33122,7 @@
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
   abbreviation: SAĞLIK-SKS-BR
-  code: H2D
+  code: H2J
   detsis_id: '64087569'
   parent_detsis_id: '28050591'
   unit_type_id: Diğer İdari Birim
@@ -32882,7 +33131,7 @@
 
 - name: Personel İşleri Birimi
   abbreviation: MÜHENDİSLİK-PERSONEL-BR
-  code: H2E
+  code: H2K
   detsis_id: '64121585'
   parent_detsis_id: '81181891'
   unit_type_id: Diğer İdari Birim
@@ -32891,7 +33140,7 @@
 
 - name: Mali İşler Birimi
   abbreviation: TIP-MALİ-BR
-  code: H2F
+  code: H2M
   detsis_id: '64430265'
   parent_detsis_id: '45829229'
   unit_type_id: Diğer İdari Birim
@@ -32900,6 +33149,7 @@
 
 - name: Gastronomi ve Mutfak Sanatları Bölüm Başkanlığı
   abbreviation: GASTRONOMİ-BB
+  code: H2N
   parent_yoksis_id: '214342'
   detsis_id: '64554296'
   parent_detsis_id: '37195700'
@@ -32909,7 +33159,7 @@
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
   abbreviation: HUKUK-SKS-BR
-  code: H2G
+  code: H2P
   detsis_id: '64652475'
   parent_detsis_id: '80803429'
   unit_type_id: Diğer İdari Birim
@@ -32918,7 +33168,7 @@
 
 - name: Özel Kalem Birimi
   abbreviation: SAĞLIK-BİLİM-ÖZELKALEM-BR
-  code: H2H
+  code: H2R
   detsis_id: '64708084'
   parent_detsis_id: '93771576'
   unit_type_id: Diğer İdari Birim
@@ -32927,7 +33177,7 @@
 
 - name: İdari İşler Birimi
   abbreviation: KONSERVATUVAR-İDARİ-BR
-  code: H2J
+  code: H2S
   detsis_id: '64805873'
   parent_detsis_id: '95441125'
   unit_type_id: Diğer İdari Birim
@@ -32936,7 +33186,7 @@
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: MÜHENDİSLİK-YAYIN-BR
-  code: H2K
+  code: H2T
   detsis_id: '64933686'
   parent_detsis_id: '81181891'
   unit_type_id: Diğer İdari Birim
@@ -32945,7 +33195,7 @@
 
 - name: Ağız, Diş ve Çene Radyolojisi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-ADÇR-ADB
-  code: H2M
+  code: H2U
   detsis_id: '65037691'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -32957,7 +33207,7 @@
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: YDİL-YO-YAYIN-BR
-  code: H2N
+  code: H2V
   detsis_id: '65061610'
   parent_detsis_id: '19676956'
   unit_type_id: Diğer İdari Birim
@@ -32966,7 +33216,7 @@
 
 - name: Halk Sağlığı Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-HALK-ADB
-  code: H2P
+  code: H2Y
   detsis_id: '65133038'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -32978,7 +33228,7 @@
 
 - name: Hukuk İşleri Birimi
   abbreviation: MİMARLIK-HUKUK-BR
-  code: H2R
+  code: H2Z
   detsis_id: '65391354'
   parent_detsis_id: '85074962'
   unit_type_id: Diğer İdari Birim
@@ -32987,7 +33237,7 @@
 
 - name: Matematik ve Fen Bilimleri Eğitimi Anabilim Dalı Başkanlığı
   abbreviation: EĞİTİM-BİLİM-MF-ADB
-  code: H2S
+  code: H30
   detsis_id: '65400135'
   parent_detsis_id: '42301062'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -32998,7 +33248,7 @@
 
 - name: Bilgi İşlem Birimi
   abbreviation: FEN-BİLİM-BİLGİ-BR
-  code: H2T
+  code: H31
   detsis_id: '65427923'
   parent_detsis_id: '43847920'
   unit_type_id: Diğer İdari Birim
@@ -33007,7 +33257,7 @@
 
 - name: Personel Bürosu
   abbreviation: SAĞLIK-AUM-PERSONEL-BÜRO
-  code: H2U
+  code: H32
   detsis_id: '65521412'
   parent_detsis_id: '46010950'
   unit_type_id: Diğer İdari Birim
@@ -33017,7 +33267,7 @@
 
 - name: Öğrenci İşleri Birimi
   abbreviation: ADALET-MYO-ÖĞRENCİ-BR
-  code: H2V
+  code: H33
   detsis_id: '65749933'
   parent_detsis_id: '15086663'
   unit_type_id: Diğer İdari Birim
@@ -33026,7 +33276,7 @@
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: FEN-YAYIN-BR
-  code: H2Y
+  code: H34
   detsis_id: '66014920'
   parent_detsis_id: '41130367'
   unit_type_id: Diğer İdari Birim
@@ -33035,7 +33285,7 @@
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
   abbreviation: DİŞ-YAPI-BR
-  code: H2Z
+  code: H35
   detsis_id: '66028926'
   parent_detsis_id: '45458912'
   unit_type_id: Diğer İdari Birim
@@ -33044,7 +33294,7 @@
 
 - name: Öğrenci İşleri Birimi
   abbreviation: İLETİŞİM-ÖĞRENCİ-BR
-  code: H30
+  code: H36
   detsis_id: '66049040'
   parent_detsis_id: '34806956'
   unit_type_id: Diğer İdari Birim
@@ -33053,7 +33303,7 @@
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
   abbreviation: TURİZM-YAPI-BR
-  code: H31
+  code: H37
   detsis_id: '66178504'
   parent_detsis_id: '37195700'
   unit_type_id: Diğer İdari Birim
@@ -33062,7 +33312,7 @@
 
 - name: Restoratif Diş Tedavisi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-RDT-ADB
-  code: H32
+  code: H38
   detsis_id: '66182499'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -33074,7 +33324,7 @@
 
 - name: Proje Birimi
   abbreviation: GÜZELSANATLAR-PROJE-BR
-  code: H33
+  code: H39
   detsis_id: '66358053'
   parent_detsis_id: '32859882'
   unit_type_id: Diğer İdari Birim
@@ -33083,7 +33333,7 @@
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: HAVZA-MYO-YAYIN-BR
-  code: H34
+  code: H3A
   detsis_id: '66467660'
   parent_detsis_id: '78645283'
   unit_type_id: Diğer İdari Birim
@@ -33092,7 +33342,7 @@
 
 - name: Personel İşleri Birimi
   abbreviation: SAĞLIK-PERSONEL-BR
-  code: H35
+  code: H3B
   detsis_id: '66469556'
   parent_detsis_id: '28050591'
   unit_type_id: Diğer İdari Birim
@@ -33101,7 +33351,7 @@
 
 - name: Kulak Burun Boğaz Odyoloji Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-KBBO-ADB
-  code: H36
+  code: H3C
   detsis_id: '66588869'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -33112,7 +33362,7 @@
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: SAMSUN-MYO-BASIN-BR
-  code: H37
+  code: H3D
   detsis_id: '66620995'
   parent_detsis_id: '56591305'
   unit_type_id: Diğer İdari Birim
@@ -33121,7 +33371,7 @@
 
 - name: Hukuk İşleri Birimi
   abbreviation: SOSYAL-BİLİM-HUKUK-BR
-  code: H38
+  code: H3E
   detsis_id: '66639319'
   parent_detsis_id: '61232311'
   unit_type_id: Diğer İdari Birim
@@ -33130,7 +33380,7 @@
 
 - name: Bilgi İşlem Birimi
   abbreviation: TERME-MYO-BİLGİ-BR
-  code: H39
+  code: H3F
   detsis_id: '66659674'
   parent_detsis_id: '36024139'
   unit_type_id: Diğer İdari Birim
@@ -33139,7 +33389,7 @@
 
 - name: Strateji Geliştirme ve Kalite Birimi
   abbreviation: YEŞİLYURT-MYO-SGK-BR
-  code: H3A
+  code: H3G
   detsis_id: '66893091'
   parent_detsis_id: '30423168'
   unit_type_id: Diğer İdari Birim
@@ -33148,7 +33398,7 @@
 
 - name: Yazı İşleri Birimi
   abbreviation: TUAM-YAZI-BR
-  code: H3B
+  code: H3H
   detsis_id: '66992432'
   parent_detsis_id: '60422539'
   unit_type_id: Diğer İdari Birim
@@ -33157,7 +33407,7 @@
 
 - name: Hukuk İşleri Birimi
   abbreviation: SAĞLIK-MYO-HUKUK-BR
-  code: H3C
+  code: H3J
   detsis_id: '67524273'
   parent_detsis_id: '45664456'
   unit_type_id: Diğer İdari Birim
@@ -33166,7 +33416,7 @@
 
 - name: Tarih Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-TARİH-ADB
-  code: H3D
+  code: H3K
   detsis_id: '67624396'
   parent_detsis_id: '61232311'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -33177,7 +33427,7 @@
 
 - name: Satın Alma Birimi
   abbreviation: İMİ-DB-SATINALMA-BR
-  code: H3E
+  code: H3M
   detsis_id: '67933798'
   parent_detsis_id: '15327320'
   unit_type_id: Diğer İdari Birim
@@ -33186,7 +33436,7 @@
 
 - name: Hukuk İşleri Birimi
   abbreviation: SPOR-HUKUK-BR
-  code: H3F
+  code: H3N
   detsis_id: '68321790'
   parent_detsis_id: '80270232'
   unit_type_id: Diğer İdari Birim
@@ -33195,7 +33445,7 @@
 
 - name: Mali İşler Birimi
   abbreviation: VETERİNER-MALİ-BR
-  code: H3G
+  code: H3P
   detsis_id: '68588331'
   parent_detsis_id: '32319693'
   unit_type_id: Diğer İdari Birim
@@ -33204,7 +33454,7 @@
 
 - name: Hukuk İşleri Birimi
   abbreviation: TIP-HUKUK-BR
-  code: H3H
+  code: H3R
   detsis_id: '68652546'
   parent_detsis_id: '45829229'
   unit_type_id: Diğer İdari Birim
@@ -33213,7 +33463,7 @@
 
 - name: İdari İşler Birimi
   abbreviation: HUKUK-İDARİ-BR
-  code: H3J
+  code: H3S
   detsis_id: '68767630'
   parent_detsis_id: '80803429'
   unit_type_id: Diğer İdari Birim
@@ -33222,7 +33472,7 @@
 
 - name: Mali İşler Birimi
   abbreviation: YEŞİLYURT-MYO-MALİ-BR
-  code: H3K
+  code: H3T
   detsis_id: '68785888'
   parent_detsis_id: '30423168'
   unit_type_id: Diğer İdari Birim
@@ -33231,7 +33481,7 @@
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
   abbreviation: SAMSUN-MYO-SKS-BR
-  code: H3M
+  code: H3U
   detsis_id: '68843996'
   parent_detsis_id: '56591305'
   unit_type_id: Diğer İdari Birim
@@ -33240,7 +33490,7 @@
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: BAFRA-MYO-YAYIN-BR
-  code: H3N
+  code: H3V
   detsis_id: '68849888'
   parent_detsis_id: '50713553'
   unit_type_id: Diğer İdari Birim
@@ -33249,7 +33499,7 @@
 
 - name: Bilgi İşlem Birimi
   abbreviation: İKTİSAT-BİLGİ-BR
-  code: H3P
+  code: H3Y
   detsis_id: '68866461'
   parent_detsis_id: '50569681'
   unit_type_id: Diğer İdari Birim
@@ -33258,7 +33508,7 @@
 
 - name: Personel İşleri Birimi
   abbreviation: HAVZA-MYO-PERSONEL-BR
-  code: H3R
+  code: H3Z
   detsis_id: '68975631'
   parent_detsis_id: '78645283'
   unit_type_id: Diğer İdari Birim
@@ -33267,7 +33517,7 @@
 
 - name: İdari İşler Birimi
   abbreviation: İLETİŞİM-İDARİ-BR
-  code: H3S
+  code: H40
   detsis_id: '68997570'
   parent_detsis_id: '34806956'
   unit_type_id: Diğer İdari Birim
@@ -33276,7 +33526,7 @@
 
 - name: Strateji Geliştirme ve Kalite Birimi
   abbreviation: SAĞLIK-MYO-SGK-BR
-  code: H3T
+  code: H41
   detsis_id: '69708779'
   parent_detsis_id: '45664456'
   unit_type_id: Diğer İdari Birim
@@ -33285,7 +33535,7 @@
 
 - name: Mezuniyet Birimi
   abbreviation: Öİ-DB-MEZUN-BR
-  code: H3U
+  code: H42
   detsis_id: '69940340'
   parent_detsis_id: '36607105'
   unit_type_id: Diğer İdari Birim
@@ -33294,6 +33544,7 @@
 
 - name: Siyaset ve Sosyal Bilimler Anabilim Dalı Başkanlığı
   abbreviation: SBKY-SSB-ADB
+  code: H43
   parent_yoksis_id: '140253'
   detsis_id: '70161257'
   parent_detsis_id: '53132832'
@@ -33303,7 +33554,7 @@
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: FEN-BİLİM-BASIN-BR
-  code: H3V
+  code: H44
   detsis_id: '70234795'
   parent_detsis_id: '43847920'
   unit_type_id: Diğer İdari Birim
@@ -33312,7 +33563,7 @@
 
 - name: Personel İşleri Birimi
   abbreviation: İLETİŞİM-PERSONEL-BR
-  code: H3Y
+  code: H45
   detsis_id: '70239811'
   parent_detsis_id: '34806956'
   unit_type_id: Diğer İdari Birim
@@ -33321,7 +33572,7 @@
 
 - name: Mali İşler Birimi
   abbreviation: SPOR-MALİ-BR
-  code: H3Z
+  code: H46
   detsis_id: '70489414'
   parent_detsis_id: '80270232'
   unit_type_id: Diğer İdari Birim
@@ -33330,7 +33581,7 @@
 
 - name: İdari İşler Birimi
   abbreviation: GÜZEL-SANAT-İDARİ-BR
-  code: H40
+  code: H47
   detsis_id: '70597765'
   parent_detsis_id: '28913907'
   unit_type_id: Diğer İdari Birim
@@ -33339,7 +33590,7 @@
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: İKTİSAT-YAYIN-BR
-  code: H41
+  code: H48
   detsis_id: '70610974'
   parent_detsis_id: '50569681'
   unit_type_id: Diğer İdari Birim
@@ -33348,7 +33599,7 @@
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
   abbreviation: HAVZA-MYO-SKS-BR
-  code: H42
+  code: H49
   detsis_id: '70708968'
   parent_detsis_id: '78645283'
   unit_type_id: Diğer İdari Birim
@@ -33357,7 +33608,7 @@
 
 - name: İdari İşler Birimi
   abbreviation: SOSYAL-BİLİM-İDARİ-BR
-  code: H43
+  code: H4A
   detsis_id: '70982221'
   parent_detsis_id: '61232311'
   unit_type_id: Diğer İdari Birim
@@ -33366,7 +33617,7 @@
 
 - name: Hasta Kabul Birimi
   abbreviation: SAĞLIK-AUM-İDARİ-KABUL-BR
-  code: H44
+  code: H4B
   detsis_id: '71114267'
   parent_detsis_id: '52235156'
   unit_type_id: Diğer İdari Birim
@@ -33376,7 +33627,7 @@
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
   abbreviation: ZİRAAT-SKS-BR
-  code: H45
+  code: H4C
   detsis_id: '71324769'
   parent_detsis_id: '52180288'
   unit_type_id: Diğer İdari Birim
@@ -33385,7 +33636,7 @@
 
 - name: Uzaktan Eğitim Birimi
   abbreviation: SAĞLIK-BİLİM-UZEM-BR
-  code: H46
+  code: H4D
   detsis_id: '71365721'
   parent_detsis_id: '28050591'
   unit_type_id: Diğer İdari Birim
@@ -33394,7 +33645,7 @@
 
 - name: Veteriner Histoloji ve Embriyoloji Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-VHİSTO-ADB
-  code: H47
+  code: H4E
   detsis_id: '71464078'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -33406,7 +33657,7 @@
 
 - name: Öğrenci İşleri Birimi
   abbreviation: SPOR-ÖĞRENCİ-BR
-  code: H48
+  code: H4F
   detsis_id: '71570835'
   parent_detsis_id: '80270232'
   unit_type_id: Diğer İdari Birim
@@ -33415,7 +33666,7 @@
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: SAĞLIK-AUM-YAYIN-BR
-  code: H49
+  code: H4G
   detsis_id: '71680496'
   parent_detsis_id: '15374210'
   unit_type_id: Diğer İdari Birim
@@ -33425,7 +33676,7 @@
 
 - name: Bilgi İşlem Birimi
   abbreviation: VETERİNER-BİLGİ-BR
-  code: H4A
+  code: H4H
   detsis_id: '71688296'
   parent_detsis_id: '32319693'
   unit_type_id: Diğer İdari Birim
@@ -33434,7 +33685,7 @@
 
 - name: İdari İşler Birimi
   abbreviation: VEZİRKÖPRÜ-MYO-İDARİ-BR
-  code: H4B
+  code: H4J
   detsis_id: '71705977'
   parent_detsis_id: '61206311'
   unit_type_id: Diğer İdari Birim
@@ -33443,7 +33694,7 @@
 
 - name: Strateji Geliştirme ve Kalite Birimi
   abbreviation: SOSYAL-BİLİM-SGK-BR
-  code: H4C
+  code: H4K
   detsis_id: '71737007'
   parent_detsis_id: '61232311'
   unit_type_id: Diğer İdari Birim
@@ -33452,7 +33703,7 @@
 
 - name: İdari İşler Birimi
   abbreviation: TİCARET-MYO-İDARİ-BR
-  code: H4D
+  code: H4M
   detsis_id: '71798371'
   parent_detsis_id: '21071378'
   unit_type_id: Diğer İdari Birim
@@ -33461,7 +33712,7 @@
 
 - name: Mali İşler Birimi
   abbreviation: TURİZM-MALİ-BR
-  code: H4E
+  code: H4N
   detsis_id: '72107561'
   parent_detsis_id: '37195700'
   unit_type_id: Diğer İdari Birim
@@ -33470,7 +33721,7 @@
 
 - name: İşletme ve Endüstri İlişkileri Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-İEİ-ADB
-  code: H4F
+  code: H4P
   detsis_id: '72752876'
   parent_detsis_id: '61232311'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -33481,7 +33732,7 @@
 
 - name: Hukuk Tarihi Anabilim Dalı Başkanlığı
   abbreviation: KAMU-HT-ADB
-  code: H4G
+  code: H4R
   detsis_id: '73081107'
   parent_detsis_id: '32538491'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -33492,7 +33743,7 @@
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
   abbreviation: İKTİSAT-YAPI-BR
-  code: H4H
+  code: H4S
   detsis_id: '73246125'
   parent_detsis_id: '50569681'
   unit_type_id: Diğer İdari Birim
@@ -33501,7 +33752,7 @@
 
 - name: Adli Vaka Birimi
   abbreviation: SAĞLIK-AUM-İDARİ-ADLİ-BR
-  code: H4J
+  code: H4T
   detsis_id: '73256190'
   parent_detsis_id: '52235156'
   unit_type_id: Diğer İdari Birim
@@ -33511,7 +33762,7 @@
 
 - name: Web ve Yazılım Birimi
   abbreviation: Bİ-DB-WEB-BR
-  code: H4K
+  code: H4U
   detsis_id: '73643273'
   parent_detsis_id: '54165989'
   unit_type_id: Diğer İdari Birim
@@ -33520,7 +33771,7 @@
 
 - name: Güvenlik Birimi
   abbreviation: İMİ-DB-GÜVENLİK-BR
-  code: H4M
+  code: H4V
   detsis_id: '73806159'
   parent_detsis_id: '15327320'
   unit_type_id: Diğer İdari Birim
@@ -33529,7 +33780,7 @@
 
 - name: Bilgi İşlem Birimi
   abbreviation: TİCARET-MYO-BİLGİ-BR
-  code: H4N
+  code: H4Y
   detsis_id: '73838620'
   parent_detsis_id: '21071378'
   unit_type_id: Diğer İdari Birim
@@ -33538,7 +33789,7 @@
 
 - name: İstatistik Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-İSTATİSTİK-ADB
-  code: H4P
+  code: H4Z
   detsis_id: '73864038'
   parent_detsis_id: '43847920'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -33549,7 +33800,7 @@
 
 - name: Hukuk İşleri Birimi
   abbreviation: FEN-BİLİM-HUKUK-BR
-  code: H4R
+  code: H50
   detsis_id: '74057431'
   parent_detsis_id: '43847920'
   unit_type_id: Diğer İdari Birim
@@ -33558,7 +33809,7 @@
 
 - name: Öğrenci İşleri Birimi
   abbreviation: İKTİSAT-ÖĞRENCİ-BR
-  code: H4S
+  code: H51
   detsis_id: '74098770'
   parent_detsis_id: '50569681'
   unit_type_id: Diğer İdari Birim
@@ -33567,7 +33818,7 @@
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
   abbreviation: TURİZM-SKS-BR
-  code: H4T
+  code: H52
   detsis_id: '74277843'
   parent_detsis_id: '37195700'
   unit_type_id: Diğer İdari Birim
@@ -33576,7 +33827,7 @@
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
   abbreviation: BAFRA-MYO-YAPI-BR
-  code: H4U
+  code: H53
   detsis_id: '74366062'
   parent_detsis_id: '50713553'
   unit_type_id: Diğer İdari Birim
@@ -33585,7 +33836,7 @@
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
   abbreviation: TERME-MYO-SKS-BR
-  code: H4V
+  code: H54
   detsis_id: '74427707'
   parent_detsis_id: '36024139'
   unit_type_id: Diğer İdari Birim
@@ -33594,7 +33845,7 @@
 
 - name: Maaş Tahakkuk Birimi
   abbreviation: SAĞLIK-AUM-MALİ-MAAŞ-BR
-  code: H4Y
+  code: H55
   detsis_id: '74435653'
   parent_detsis_id: '90252080'
   unit_type_id: Diğer İdari Birim
@@ -33604,7 +33855,7 @@
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: FEN-BASIN-BR
-  code: H4Z
+  code: H56
   detsis_id: '74577528'
   parent_detsis_id: '41130367'
   unit_type_id: Diğer İdari Birim
@@ -33613,7 +33864,7 @@
 
 - name: Bilgisayar Teknik Bakım Onarım Birimi
   abbreviation: SAĞLIK-AUM-BİLGİ-BTBO-BR
-  code: H50
+  code: H57
   detsis_id: '74729732'
   parent_detsis_id: '22124406'
   unit_type_id: Diğer İdari Birim
@@ -33623,7 +33874,7 @@
 
 - name: Sanat Tarihi Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-SANATTARİHİ-ADB
-  code: H51
+  code: H58
   detsis_id: '74742106'
   parent_detsis_id: '61232311'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -33634,7 +33885,7 @@
 
 - name: Akıllı Sistemler Mühendisliği Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-ASM-ADB
-  code: H52
+  code: H59
   detsis_id: '74912346'
   parent_detsis_id: '43847920'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -33645,7 +33896,7 @@
 
 - name: Psikoloji Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-PSİKOLOJİ-ADB
-  code: H53
+  code: H5A
   detsis_id: '75091500'
   parent_detsis_id: '61232311'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -33656,7 +33907,7 @@
 
 - name: İstatistik Birimi
   abbreviation: SAĞLIK-AUM-BİLGİ-İSTATİSTİK-BR
-  code: H54
+  code: H5B
   detsis_id: '75288347'
   parent_detsis_id: '22124406'
   unit_type_id: Diğer İdari Birim
@@ -33666,7 +33917,7 @@
 
 - name: Bilgi İşlem Birimi
   abbreviation: SAMSUN-MYO-BİLGİ-BR
-  code: H55
+  code: H5C
   detsis_id: '75369420'
   parent_detsis_id: '56591305'
   unit_type_id: Diğer İdari Birim
@@ -33675,7 +33926,7 @@
 
 - name: Spor Yöneticiliği Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-SPORYÖN-ADB
-  code: H56
+  code: H5D
   detsis_id: '75401631'
   parent_detsis_id: '61232311'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -33686,7 +33937,7 @@
 
 - name: Hesaplamalı Bilimler Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-HB-ADB
-  code: H57
+  code: H5E
   detsis_id: '75477090'
   parent_detsis_id: '43847920'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -33697,7 +33948,7 @@
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: SPOR-YAYIN-BR
-  code: H58
+  code: H5F
   detsis_id: '75646377'
   parent_detsis_id: '80270232'
   unit_type_id: Diğer İdari Birim
@@ -33706,7 +33957,7 @@
 
 - name: Gıda Mühendisliği Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-GIDA-ADB
-  code: H59
+  code: H5G
   detsis_id: '75687508'
   parent_detsis_id: '43847920'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -33717,7 +33968,7 @@
 
 - name: Bilgi İşlem Birimi
   abbreviation: FEN-BİLGİ-BR
-  code: H5A
+  code: H5H
   detsis_id: '75780938'
   parent_detsis_id: '41130367'
   unit_type_id: Diğer İdari Birim
@@ -33726,7 +33977,7 @@
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: SAĞLIK-YAYIN-BR
-  code: H5B
+  code: H5J
   detsis_id: '75802247'
   parent_detsis_id: '28050591'
   unit_type_id: Diğer İdari Birim
@@ -33735,7 +33986,7 @@
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
   abbreviation: VEZİRKÖPRÜ-MYO-SKS-BR
-  code: H5C
+  code: H5K
   detsis_id: '75938479'
   parent_detsis_id: '61206311'
   unit_type_id: Diğer İdari Birim
@@ -33744,7 +33995,7 @@
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: TURİZM-YAYIN-BR
-  code: H5D
+  code: H5M
   detsis_id: '76042586'
   parent_detsis_id: '37195700'
   unit_type_id: Diğer İdari Birim
@@ -33753,7 +34004,7 @@
 
 - name: Proje Birimi
   abbreviation: MÜHENDİSLİK-PROJE-BR
-  code: H5E
+  code: H5N
   detsis_id: '76076211'
   parent_detsis_id: '81181891'
   unit_type_id: Diğer İdari Birim
@@ -33762,7 +34013,7 @@
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
   abbreviation: TİCARET-MYO-SKS-BR
-  code: H5F
+  code: H5P
   detsis_id: '76531601'
   parent_detsis_id: '21071378'
   unit_type_id: Diğer İdari Birim
@@ -33771,7 +34022,7 @@
 
 - name: Tarımsal Yapılar ve Sulama Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-TARIMYAP-ADB
-  code: H5G
+  code: H5R
   detsis_id: '76614186'
   parent_detsis_id: '43847920'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -33780,7 +34031,7 @@
 
 - name: Öğrenci İşleri Birimi
   abbreviation: İLAHİYAT-ÖĞRENCİ-BR
-  code: H5H
+  code: H5S
   detsis_id: '76773132'
   parent_detsis_id: '79586685'
   unit_type_id: Diğer İdari Birim
@@ -33789,7 +34040,7 @@
 
 - name: Kimya Mühendisliği Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-KİMYA-ADB
-  code: H5J
+  code: H5T
   detsis_id: '76778231'
   parent_detsis_id: '43847920'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -33800,7 +34051,7 @@
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
   abbreviation: EĞİTİM-BİLİM-SKS-BR
-  code: H5K
+  code: H5U
   detsis_id: '76934253'
   parent_detsis_id: '42301062'
   unit_type_id: Diğer İdari Birim
@@ -33809,7 +34060,7 @@
 
 - name: Personel İşleri Birimi
   abbreviation: VEZİRKÖPRÜ-MYO-PERSONEL-BR
-  code: H5M
+  code: H5V
   detsis_id: '76944289'
   parent_detsis_id: '61206311'
   unit_type_id: Diğer İdari Birim
@@ -33818,7 +34069,7 @@
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
   abbreviation: FEN-SKS-BR
-  code: H5N
+  code: H5Y
   detsis_id: '77030254'
   parent_detsis_id: '41130367'
   unit_type_id: Diğer İdari Birim
@@ -33827,7 +34078,7 @@
 
 - name: Tarımsal Biyoteknoloji Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-TARIMBİYOTEK-ADB
-  code: H5P
+  code: H5Z
   detsis_id: '77136444'
   parent_detsis_id: '43847920'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -33838,7 +34089,7 @@
 
 - name: Hukuk İşleri Birimi
   abbreviation: İLETİŞİM-HUKUK-BR
-  code: H5R
+  code: H60
   detsis_id: '77278573'
   parent_detsis_id: '34806956'
   unit_type_id: Diğer İdari Birim
@@ -33847,7 +34098,7 @@
 
 - name: Tıp Eğitim Birimi
   abbreviation: TIP-EĞİTİM-BR
-  code: H5S
+  code: H61
   detsis_id: '77460201'
   parent_detsis_id: '58942102'
   unit_type_id: Diğer İdari Birim
@@ -33856,7 +34107,7 @@
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
   abbreviation: MÜHENDİSLİK-YAPI-BR
-  code: H5T
+  code: H62
   detsis_id: '77488550'
   parent_detsis_id: '81181891'
   unit_type_id: Diğer İdari Birim
@@ -33865,7 +34116,7 @@
 
 - name: Mali İşler Birimi
   abbreviation: ALAÇAM-MYO-MALİ-BR
-  code: H5U
+  code: H63
   detsis_id: '77649308'
   parent_detsis_id: '68459231'
   unit_type_id: Diğer İdari Birim
@@ -33874,7 +34125,7 @@
 
 - name: Kimya Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-FENKİMYA-ADB
-  code: H5V
+  code: H64
   parent_yoksis_id: '234078'
   detsis_id: '77807659'
   parent_detsis_id: '43847920'
@@ -33884,7 +34135,7 @@
 
 - name: Öğrenci İşleri Birimi
   abbreviation: BAFRA-MYO-ÖĞRENCİ-BR
-  code: H5Y
+  code: H65
   detsis_id: '77961790'
   parent_detsis_id: '50713553'
   unit_type_id: Diğer İdari Birim
@@ -33893,7 +34144,7 @@
 
 - name: Uluslararası İlişkiler Birimi
   abbreviation: Uİ-BR
-  code: H5Z
+  code: H66
   detsis_id: '78015647'
   parent_detsis_id: '78633602'
   unit_type_id: Diğer İdari Birim
@@ -33902,7 +34153,7 @@
 
 - name: Bilgi İşlem Birimi
   abbreviation: HUKUK-BİLGİ-BR
-  code: H60
+  code: H67
   detsis_id: '78075943'
   parent_detsis_id: '80803429'
   unit_type_id: Diğer İdari Birim
@@ -33911,7 +34162,7 @@
 
 - name: Endodonti Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-ENDO-ADB
-  code: H61
+  code: H68
   detsis_id: '78479583'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -33923,7 +34174,7 @@
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü
   abbreviation: REKTÖRLÜK-İDARİ
-  code: H62
+  code: H69
   parent_yoksis_id: '122287'
   detsis_id: '78633602'
   parent_detsis_id: '0'
@@ -33933,7 +34184,7 @@
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
   abbreviation: HAVZA-MYO-YAPI-BR
-  code: H63
+  code: H6A
   detsis_id: '78800005'
   parent_detsis_id: '78645283'
   unit_type_id: Diğer İdari Birim
@@ -33942,7 +34193,7 @@
 
 - name: Personel İşleri Birimi
   abbreviation: ADALET-MYO-PERSONEL-BR
-  code: H64
+  code: H6B
   detsis_id: '78861189'
   parent_detsis_id: '15086663'
   unit_type_id: Diğer İdari Birim
@@ -33951,7 +34202,7 @@
 
 - name: İdari İşler Birimi
   abbreviation: SPOR-İDARİ-BR
-  code: H65
+  code: H6C
   detsis_id: '79063895'
   parent_detsis_id: '80270232'
   unit_type_id: Diğer İdari Birim
@@ -33960,7 +34211,7 @@
 
 - name: Personel İşleri Birimi
   abbreviation: VETERİNER-PERSONEL-BR
-  code: H66
+  code: H6D
   detsis_id: '79390029'
   parent_detsis_id: '32319693'
   unit_type_id: Diğer İdari Birim
@@ -33969,7 +34220,7 @@
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: ADALET-MYO-BASIN-BR
-  code: H67
+  code: H6E
   detsis_id: '79671156'
   parent_detsis_id: '15086663'
   unit_type_id: Diğer İdari Birim
@@ -33978,7 +34229,7 @@
 
 - name: Müzik Eğitimi Anabilim Dalı Başkanlığı
   abbreviation: TE-MÜZİK-ADB
-  code: H68
+  code: H6F
   detsis_id: '79710256'
   parent_detsis_id: '11211358'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -33989,7 +34240,7 @@
 
 - name: Bilgi İşlem Birimi
   abbreviation: TIP-BİLGİ-BR
-  code: H69
+  code: H6G
   detsis_id: '79731170'
   parent_detsis_id: '45829229'
   unit_type_id: Diğer İdari Birim
@@ -33998,7 +34249,7 @@
 
 - name: İdari İşler Birimi
   abbreviation: İMİ-DB-İDARİ-BR
-  code: H6A
+  code: H6H
   detsis_id: '79795582'
   parent_detsis_id: '15327320'
   unit_type_id: Diğer İdari Birim
@@ -34007,7 +34258,7 @@
 
 - name: Uluslararası Düzenleyici Bilim Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-UDB-ADB
-  code: H6B
+  code: H6J
   detsis_id: '80144548'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -34018,7 +34269,7 @@
 
 - name: Temel Bilimler Dersleri Koordinatörlüğü
   abbreviation: TBD-KOOR
-  code: H6C
+  code: H6K
   detsis_id: '80202586'
   parent_detsis_id: '78633602'
   unit_type_id: Koordinatörlük
@@ -34027,7 +34278,7 @@
 
 - name: Personel İşleri Birimi
   abbreviation: SAMSUN-MYO-PERSONEL-BR
-  code: H6D
+  code: H6M
   detsis_id: '80335113'
   parent_detsis_id: '56591305'
   unit_type_id: Diğer İdari Birim
@@ -34036,7 +34287,7 @@
 
 - name: Klinik Toksikoloji Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-TOKSİK-ADB
-  code: H6E
+  code: H6N
   parent_yoksis_id: '297555'
   detsis_id: '80397943'
   parent_detsis_id: '93771576'
@@ -34046,7 +34297,7 @@
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
   abbreviation: DİŞ-SKS-BR
-  code: H6F
+  code: H6P
   detsis_id: '80508322'
   parent_detsis_id: '45458912'
   unit_type_id: Diğer İdari Birim
@@ -34055,7 +34306,7 @@
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
   abbreviation: SAĞLIK-BİLİM-SKS-BR
-  code: H6G
+  code: H6R
   detsis_id: '80706538'
   parent_detsis_id: '93771576'
   unit_type_id: Diğer İdari Birim
@@ -34064,7 +34315,7 @@
 
 - name: Hukuk İşleri Birimi
   abbreviation: KONSERVATUVAR-HUKUK-BR
-  code: H6H
+  code: H6S
   detsis_id: '80967270'
   parent_detsis_id: '95441125'
   unit_type_id: Diğer İdari Birim
@@ -34073,7 +34324,7 @@
 
 - name: Proje Birimi
   abbreviation: FEN-PROJE-BR
-  code: H6J
+  code: H6T
   detsis_id: '81083879'
   parent_detsis_id: '41130367'
   unit_type_id: Diğer İdari Birim
@@ -34082,7 +34333,7 @@
 
 - name: Personel İşleri Birimi
   abbreviation: YEŞİLYURT-MYO-PERSONEL-BR
-  code: H6K
+  code: H6U
   detsis_id: '81180358'
   parent_detsis_id: '30423168'
   unit_type_id: Diğer İdari Birim
@@ -34091,7 +34342,7 @@
 
 - name: İdari İşler Birimi
   abbreviation: YEŞİLYURT-MYO-İDARİ-BR
-  code: H6M
+  code: H6V
   detsis_id: '81205999'
   parent_detsis_id: '30423168'
   unit_type_id: Diğer İdari Birim
@@ -34100,7 +34351,7 @@
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: HAVZA-MYO-BASIN-BR
-  code: H6N
+  code: H6Y
   detsis_id: '81223517'
   parent_detsis_id: '78645283'
   unit_type_id: Diğer İdari Birim
@@ -34109,7 +34360,7 @@
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: TURİZM-BASIN-BR
-  code: H6P
+  code: H6Z
   detsis_id: '81864131'
   parent_detsis_id: '37195700'
   unit_type_id: Diğer İdari Birim
@@ -34118,7 +34369,7 @@
 
 - name: Veterinerlik Farmakoloji ve Toksikoloji Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-VFARMA-ADB
-  code: H6R
+  code: H70
   detsis_id: '81888224'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -34130,7 +34381,7 @@
 
 - name: Döner Sermaye Birimi
   abbreviation: ZİRAAT-DÖNER-BR
-  code: H6S
+  code: H71
   detsis_id: '81971099'
   parent_detsis_id: '52180288'
   unit_type_id: Diğer İdari Birim
@@ -34139,7 +34390,7 @@
 
 - name: İktisat Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-İKTİSAT-ADB
-  code: H6T
+  code: H72
   detsis_id: '82051364'
   parent_detsis_id: '61232311'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -34148,7 +34399,7 @@
 
 - name: Öğrenci İşleri Birimi
   abbreviation: SAMSUN-MYO-ÖĞRENCİ-BR
-  code: H6U
+  code: H73
   detsis_id: '82307670'
   parent_detsis_id: '56591305'
   unit_type_id: Diğer İdari Birim
@@ -34157,7 +34408,7 @@
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: YEŞİLYURT-MYO-YAYIN-BR
-  code: H6V
+  code: H74
   detsis_id: '82473006'
   parent_detsis_id: '30423168'
   unit_type_id: Diğer İdari Birim
@@ -34166,7 +34417,7 @@
 
 - name: Bahçe Bitkileri Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-BAHÇE-ADB
-  code: H6Y
+  code: H75
   detsis_id: '82473301'
   parent_detsis_id: '43847920'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -34175,7 +34426,7 @@
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: HUKUK-YAYIN-BR
-  code: H6Z
+  code: H76
   detsis_id: '82550010'
   parent_detsis_id: '80803429'
   unit_type_id: Diğer İdari Birim
@@ -34184,7 +34435,7 @@
 
 - name: Planetaryum Birimi
   abbreviation: HUT-AUM-PLANET-BR
-  code: H70
+  code: H77
   detsis_id: '82796604'
   parent_detsis_id: '17854746'
   unit_type_id: Diğer İdari Birim
@@ -34193,7 +34444,7 @@
 
 - name: Burs Transfer Birimi
   abbreviation: Öİ-DB-BURS-BR
-  code: H71
+  code: H78
   detsis_id: '82859765'
   parent_detsis_id: '36607105'
   unit_type_id: Diğer İdari Birim
@@ -34202,7 +34453,7 @@
 
 - name: Öğrenci İşleri Birimi
   abbreviation: YDİL-YO-ÖĞRENCİ-BR
-  code: H72
+  code: H79
   detsis_id: '83117495'
   parent_detsis_id: '19676956'
   unit_type_id: Diğer İdari Birim
@@ -34211,7 +34462,7 @@
 
 - name: Arapça Öğretimi Uygulama ve Araştırma Merkezi Müdürlüğü
   abbreviation: ADİM-MD
-  code: H73
+  code: H7A
   parent_yoksis_id: '378824'
   detsis_id: '83296456'
   parent_detsis_id: '78633602'
@@ -34221,7 +34472,7 @@
 
 - name: Özel Kalem Birimi
   abbreviation: EĞİTİM-BİLİM-ÖZELKALEM-BR
-  code: H74
+  code: H7B
   detsis_id: '83342748'
   parent_detsis_id: '42301062'
   unit_type_id: Diğer İdari Birim
@@ -34230,7 +34481,7 @@
 
 - name: Hukuk İşleri Birimi
   abbreviation: EĞİTİM-BİLİM-HUKUK-BR
-  code: H75
+  code: H7C
   detsis_id: '83377352'
   parent_detsis_id: '42301062'
   unit_type_id: Diğer İdari Birim
@@ -34239,7 +34490,7 @@
 
 - name: Araç İşletme Birimi
   abbreviation: İMİ-DB-ARAÇ-BR
-  code: H76
+  code: H7D
   detsis_id: '83383188'
   parent_detsis_id: '15327320'
   unit_type_id: Diğer İdari Birim
@@ -34248,7 +34499,7 @@
 
 - name: İdari İşler Birimi
   abbreviation: FEN-İDARİ-BR
-  code: H77
+  code: H7E
   detsis_id: '83577932'
   parent_detsis_id: '41130367'
   unit_type_id: Diğer İdari Birim
@@ -34257,7 +34508,7 @@
 
 - name: Öğrenci İşleri Birimi
   abbreviation: VETERİNER-ÖĞRENCİ-BR
-  code: H78
+  code: H7F
   detsis_id: '83733902'
   parent_detsis_id: '32319693'
   unit_type_id: Diğer İdari Birim
@@ -34266,7 +34517,7 @@
 
 - name: Hukuk İşleri Birimi
   abbreviation: TURİZM-HUKUK-BR
-  code: H79
+  code: H7G
   detsis_id: '83812155'
   parent_detsis_id: '37195700'
   unit_type_id: Diğer İdari Birim
@@ -34275,7 +34526,7 @@
 
 - name: Proje Birimi
   abbreviation: İKTİSAT-PROJE-BR
-  code: H7A
+  code: H7H
   detsis_id: '83924679'
   parent_detsis_id: '50569681'
   unit_type_id: Diğer İdari Birim
@@ -34284,7 +34535,7 @@
 
 - name: Mali İşler Birimi
   abbreviation: İLETİŞİM-MALİ-BR
-  code: H7B
+  code: H7J
   detsis_id: '84013821'
   parent_detsis_id: '34806956'
   unit_type_id: Diğer İdari Birim
@@ -34293,7 +34544,7 @@
 
 - name: Personel İşleri Birimi
   abbreviation: YDİL-YO-PERSONEL-BR
-  code: H7C
+  code: H7K
   detsis_id: '84120144'
   parent_detsis_id: '19676956'
   unit_type_id: Diğer İdari Birim
@@ -34302,7 +34553,7 @@
 
 - name: Tıp Laboratuvarları Birimi
   abbreviation: SAĞLIK-AUM-İDARİ-TLAB-BR
-  code: H7D
+  code: H7M
   detsis_id: '84517127'
   parent_detsis_id: '52235156'
   unit_type_id: Diğer İdari Birim
@@ -34312,7 +34563,7 @@
 
 - name: Personel İşleri Birimi
   abbreviation: FEN-BİLİM-PERSONEL-BR
-  code: H7E
+  code: H7N
   detsis_id: '84742778'
   parent_detsis_id: '43847920'
   unit_type_id: Diğer İdari Birim
@@ -34321,7 +34572,7 @@
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: DİŞ-BASIN-BR
-  code: H7F
+  code: H7P
   detsis_id: '84861484'
   parent_detsis_id: '45458912'
   unit_type_id: Diğer İdari Birim
@@ -34330,7 +34581,7 @@
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
   abbreviation: YDİL-YO-SKS-BR
-  code: H7G
+  code: H7R
   detsis_id: '84870644'
   parent_detsis_id: '19676956'
   unit_type_id: Diğer İdari Birim
@@ -34339,7 +34590,7 @@
 
 - name: Yabancı Diller Eğitimi Anabilim Dalı Başkanlığı
   abbreviation: EĞİTİM-BİLİM-YDİLEĞ-ADB
-  code: H7H
+  code: H7S
   parent_yoksis_id: '211120'
   detsis_id: '85156798'
   parent_detsis_id: '42301062'
@@ -34349,7 +34600,7 @@
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: ALAÇAM-MYO-BASIN-BR
-  code: H7J
+  code: H7T
   detsis_id: '85644593'
   parent_detsis_id: '68459231'
   unit_type_id: Diğer İdari Birim
@@ -34358,7 +34609,7 @@
 
 - name: Mali İşler Birimi
   abbreviation: MÜHENDİSLİK-MALİ-BR
-  code: H7K
+  code: H7U
   detsis_id: '85646024'
   parent_detsis_id: '81181891'
   unit_type_id: Diğer İdari Birim
@@ -34367,7 +34618,7 @@
 
 - name: Hemşire Hizmetleri Birimi
   abbreviation: SAĞLIK-AUM-PERSONEL-HH-BR
-  code: H7M
+  code: H7V
   detsis_id: '85794369'
   parent_detsis_id: '46010950'
   unit_type_id: Diğer İdari Birim
@@ -34377,7 +34628,7 @@
 
 - name: Beslenme ve Destek Hizmetleri Birimi
   abbreviation: SKS-DB-BESLENME-BR
-  code: H7N
+  code: H7Y
   detsis_id: '85795726'
   parent_detsis_id: '53521241'
   unit_type_id: Diğer İdari Birim
@@ -34386,6 +34637,7 @@
 
 - name: Mütercim Tercümanlık (İngilizce) Anabilim Dalı Başkanlığı
   abbreviation: YDİL-YO-MÜTERCİM-İNG-ADB
+  code: H7Z
   parent_yoksis_id: '207277'
   detsis_id: '86068149'
   parent_detsis_id: '20346779'
@@ -34395,7 +34647,7 @@
 
 - name: Ortodonti Anabilim Dalı Başkanlığı
   abbreviation: DİŞ-KLİNİK-ORTO-ADB
-  code: H7P
+  code: H80
   parent_yoksis_id: '122000'
   detsis_id: '86238427'
   parent_detsis_id: '38581703'
@@ -34407,7 +34659,7 @@
 
 - name: Bilgi İşlem Birimi
   abbreviation: SAĞLIK-BİLİM-BİLGİ-BR
-  code: H7R
+  code: H81
   detsis_id: '86248111'
   parent_detsis_id: '93771576'
   unit_type_id: Diğer İdari Birim
@@ -34416,7 +34668,7 @@
 
 - name: Bilgi İşlem Birimi
   abbreviation: ADALET-MYO-BİLGİ-BR
-  code: H7S
+  code: H82
   detsis_id: '86275729'
   parent_detsis_id: '15086663'
   unit_type_id: Diğer İdari Birim
@@ -34425,7 +34677,7 @@
 
 - name: Güzel Sanatlar Eğitimi Anabilim Dalı Başkanlığı
   abbreviation: EĞİTİM-BİLİM-GÜZELSANATLAR-ADB
-  code: H7T
+  code: H83
   parent_yoksis_id: '211119'
   detsis_id: '86348859'
   parent_detsis_id: '42301062'
@@ -34435,7 +34687,7 @@
 
 - name: Öğrenci İşleri Birimi
   abbreviation: TURİZM-ÖĞRENCİ-BR
-  code: H7U
+  code: H84
   detsis_id: '86397158'
   parent_detsis_id: '37195700'
   unit_type_id: Diğer İdari Birim
@@ -34444,7 +34696,7 @@
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: TIP-BASIN-BR
-  code: H7V
+  code: H85
   detsis_id: '86436978'
   parent_detsis_id: '45829229'
   unit_type_id: Diğer İdari Birim
@@ -34453,7 +34705,7 @@
 
 - name: Öğrenci İşleri Birimi
   abbreviation: FEN-ÖĞRENCİ-BR
-  code: H7Y
+  code: H86
   detsis_id: '86534507'
   parent_detsis_id: '41130367'
   unit_type_id: Diğer İdari Birim
@@ -34462,7 +34714,7 @@
 
 - name: Mali İşler Birimi
   abbreviation: BAFRA-MYO-MALİ-BR
-  code: H7Z
+  code: H87
   detsis_id: '86729237'
   parent_detsis_id: '50713553'
   unit_type_id: Diğer İdari Birim
@@ -34471,7 +34723,7 @@
 
 - name: Mali İşler Birimi
   abbreviation: FEN-MALİ-BR
-  code: H80
+  code: H88
   detsis_id: '86811603'
   parent_detsis_id: '41130367'
   unit_type_id: Diğer İdari Birim
@@ -34480,7 +34732,7 @@
 
 - name: Bilgi İşlem Birimi
   abbreviation: İLAHİYAT-BİLGİ-BR
-  code: H81
+  code: H89
   detsis_id: '86919629'
   parent_detsis_id: '79586685'
   unit_type_id: Diğer İdari Birim
@@ -34489,7 +34741,7 @@
 
 - name: Felsefe Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-FELSEFE-ADB
-  code: H82
+  code: H8A
   detsis_id: '86933361'
   parent_detsis_id: '61232311'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -34498,7 +34750,7 @@
 
 - name: Türkçe ve Sosyal Bilimler Eğitimi Anabilim Dalı Başkanlığı
   abbreviation: EĞİTİM-BİLİM-TS-ADB
-  code: H83
+  code: H8B
   detsis_id: '87032861'
   parent_detsis_id: '42301062'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -34509,7 +34761,7 @@
 
 - name: İdari İşler Birimi
   abbreviation: SAĞLIK-MYO-İDARİ-BR
-  code: H84
+  code: H8C
   detsis_id: '87238907'
   parent_detsis_id: '45664456'
   unit_type_id: Diğer İdari Birim
@@ -34518,7 +34770,7 @@
 
 - name: Malzeme Bilimi ve Mühendisliği Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-MALZEME-ADB
-  code: H85
+  code: H8D
   detsis_id: '87307245'
   parent_detsis_id: '43847920'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -34530,7 +34782,7 @@
 
 - name: İslam Tarihi ve Sanatları Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-İTS-ADB
-  code: H86
+  code: H8E
   detsis_id: '87312513'
   parent_detsis_id: '61232311'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -34541,7 +34793,7 @@
 
 - name: Mali İşler Birimi
   abbreviation: HAVZA-MYO-MALİ-BR
-  code: H87
+  code: H8F
   detsis_id: '87379923'
   parent_detsis_id: '78645283'
   unit_type_id: Diğer İdari Birim
@@ -34550,7 +34802,7 @@
 
 - name: Öğrenci İşleri Birimi
   abbreviation: ALAÇAM-MYO-ÖĞRENCİ-BR
-  code: H88
+  code: H8G
   detsis_id: '87469327'
   parent_detsis_id: '68459231'
   unit_type_id: Diğer İdari Birim
@@ -34559,7 +34811,7 @@
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: ZİRAAT-BASIN-BR
-  code: H89
+  code: H8H
   detsis_id: '87518066'
   parent_detsis_id: '52180288'
   unit_type_id: Diğer İdari Birim
@@ -34568,7 +34820,7 @@
 
 - name: Mali İşler Birimi
   abbreviation: SAMSUN-MYO-MALİ-BR
-  code: H8A
+  code: H8J
   detsis_id: '87548900'
   parent_detsis_id: '56591305'
   unit_type_id: Diğer İdari Birim
@@ -34577,7 +34829,7 @@
 
 - name: Veterinerlik Parazitolojisi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-VPARAZİT-ADB
-  code: H8B
+  code: H8K
   detsis_id: '87661185'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -34589,7 +34841,7 @@
 
 - name: Öğrenme Kaynakları Merkezi
   abbreviation: TIP-ÖK-MR
-  code: H8C
+  code: H8M
   detsis_id: '87729969'
   parent_detsis_id: '58942102'
   unit_type_id: Diğer İdari Birim
@@ -34598,7 +34850,7 @@
 
 - name: Strateji Geliştirme ve Kalite Birimi
   abbreviation: FEN-SGK-BR
-  code: H8D
+  code: H8N
   detsis_id: '87802999'
   parent_detsis_id: '41130367'
   unit_type_id: Diğer İdari Birim
@@ -34607,7 +34859,7 @@
 
 - name: Klinik Sinir Bilimleri Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-KSB-ADB
-  code: H8E
+  code: H8P
   detsis_id: '87899366'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -34618,7 +34870,7 @@
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: MİMARLIK-YAYIN-BR
-  code: H8F
+  code: H8R
   detsis_id: '87924751'
   parent_detsis_id: '85074962'
   unit_type_id: Diğer İdari Birim
@@ -34627,7 +34879,7 @@
 
 - name: Araştırma Planlama İstatistik Birimi
   abbreviation: Öİ-DB-APİ-BR
-  code: H8G
+  code: H8S
   detsis_id: '88086278'
   parent_detsis_id: '36607105'
   unit_type_id: Diğer İdari Birim
@@ -34636,7 +34888,7 @@
 
 - name: Hukuk İşleri Birimi
   abbreviation: HAVZA-MYO-HUKUK-BR
-  code: H8H
+  code: H8T
   detsis_id: '88112531'
   parent_detsis_id: '78645283'
   unit_type_id: Diğer İdari Birim
@@ -34645,7 +34897,7 @@
 
 - name: Strateji Geliştirme ve Kalite Birimi
   abbreviation: SPOR-SGK-BR
-  code: H8J
+  code: H8U
   detsis_id: '88239890'
   parent_detsis_id: '80270232'
   unit_type_id: Diğer İdari Birim
@@ -34654,7 +34906,7 @@
 
 - name: Hizmet İçi Eğitimi Birimi
   abbreviation: PER-DB-HİE-BR
-  code: H8K
+  code: H8V
   detsis_id: '88297226'
   parent_detsis_id: '90212838'
   unit_type_id: Diğer İdari Birim
@@ -34663,7 +34915,7 @@
 
 - name: İdari İşler Birimi
   abbreviation: FEN-BİLİM-İDARİ-BR
-  code: H8M
+  code: H8Y
   detsis_id: '88360635'
   parent_detsis_id: '43847920'
   unit_type_id: Diğer İdari Birim
@@ -34672,7 +34924,7 @@
 
 - name: Hukuk İşleri Birimi
   abbreviation: İKTİSAT-HUKUK-BR
-  code: H8N
+  code: H8Z
   detsis_id: '88370914'
   parent_detsis_id: '50569681'
   unit_type_id: Diğer İdari Birim
@@ -34681,7 +34933,7 @@
 
 - name: İdari İşler Birimi
   abbreviation: MİMARLIK-İDARİ-BR
-  code: H8P
+  code: H90
   detsis_id: '88436665'
   parent_detsis_id: '85074962'
   unit_type_id: Diğer İdari Birim
@@ -34690,7 +34942,7 @@
 
 - name: Veterinerlik Doğum ve Jinekolojisi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-VJİNEKOLOJİ-ADB
-  code: H8R
+  code: H91
   detsis_id: '88515739'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -34702,7 +34954,7 @@
 
 - name: Mali İşler Birimi
   abbreviation: HUKUK-MALİ-BR
-  code: H8S
+  code: H92
   detsis_id: '88590700'
   parent_detsis_id: '80803429'
   unit_type_id: Diğer İdari Birim
@@ -34711,7 +34963,7 @@
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
   abbreviation: SOSYAL-BİLİM-SKS-BR
-  code: H8T
+  code: H93
   detsis_id: '88729056'
   parent_detsis_id: '61232311'
   unit_type_id: Diğer İdari Birim
@@ -34720,7 +34972,7 @@
 
 - name: Döner Sermaye Birimi
   abbreviation: SAĞLIK-MYO-DÖNER-BR
-  code: H8U
+  code: H94
   detsis_id: '88932347'
   parent_detsis_id: '45664456'
   unit_type_id: Diğer İdari Birim
@@ -34729,7 +34981,7 @@
 
 - name: Strateji Geliştirme ve Kalite Birimi
   abbreviation: ALAÇAM-MYO-SGK-BR
-  code: H8V
+  code: H95
   detsis_id: '88976433'
   parent_detsis_id: '68459231'
   unit_type_id: Diğer İdari Birim
@@ -34738,7 +34990,7 @@
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
   abbreviation: ALAÇAM-MYO-SKS-BR
-  code: H8Y
+  code: H96
   detsis_id: '89073261'
   parent_detsis_id: '68459231'
   unit_type_id: Diğer İdari Birim
@@ -34747,7 +34999,7 @@
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
   abbreviation: TİCARET-MYO-YAPI-BR
-  code: H8Z
+  code: H97
   detsis_id: '89758144'
   parent_detsis_id: '21071378'
   unit_type_id: Diğer İdari Birim
@@ -34756,7 +35008,7 @@
 
 - name: Strateji Geliştirme ve Kalite Birimi
   abbreviation: HUKUK-SGK-BR
-  code: H90
+  code: H98
   detsis_id: '89788287'
   parent_detsis_id: '80803429'
   unit_type_id: Diğer İdari Birim
@@ -34765,7 +35017,7 @@
 
 - name: Mali İşler Birimi
   abbreviation: SAĞLIK-AUM-MALİ-BR
-  code: H91
+  code: H99
   detsis_id: '90252080'
   parent_detsis_id: '15374210'
   unit_type_id: Diğer İdari Birim
@@ -34775,7 +35027,7 @@
 
 - name: Bilgi İşlem Birimi
   abbreviation: Öİ-DB-BİLGİ-BR
-  code: H92
+  code: H9A
   detsis_id: '90263641'
   parent_detsis_id: '36607105'
   unit_type_id: Diğer İdari Birim
@@ -34784,7 +35036,7 @@
 
 - name: Hemşirelik Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-HEMŞİRE-ADB
-  code: H93
+  code: H9B
   detsis_id: '90487276'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -34795,7 +35047,7 @@
 
 - name: Kamu Hukuku Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-KAMU-ADB
-  code: H94
+  code: H9C
   detsis_id: '90583074'
   parent_detsis_id: '61232311'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -34806,7 +35058,7 @@
 
 - name: Hukuk İşleri Birimi
   abbreviation: YDİL-YO-HUKUK-BR
-  code: H95
+  code: H9D
   detsis_id: '90819036'
   parent_detsis_id: '19676956'
   unit_type_id: Diğer İdari Birim
@@ -34815,7 +35067,7 @@
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
   abbreviation: ALAÇAM-MYO-YAPI-BR
-  code: H96
+  code: H9E
   detsis_id: '90876549'
   parent_detsis_id: '68459231'
   unit_type_id: Diğer İdari Birim
@@ -34824,7 +35076,7 @@
 
 - name: Temel Eğitim Anabilim Dalı Başkanlığı
   abbreviation: EĞİTİM-BİLİM-TE-ADB
-  code: H97
+  code: H9F
   detsis_id: '91121353'
   parent_detsis_id: '42301062'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -34835,7 +35087,7 @@
 
 - name: Mali İşler Birimi
   abbreviation: SAĞLIK-MALİ-BR
-  code: H98
+  code: H9G
   detsis_id: '91214222'
   parent_detsis_id: '28050591'
   unit_type_id: Diğer İdari Birim
@@ -34844,7 +35096,7 @@
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
   abbreviation: YEŞİLYURT-MYO-YAPI-BR
-  code: H99
+  code: H9H
   detsis_id: '91254001'
   parent_detsis_id: '30423168'
   unit_type_id: Diğer İdari Birim
@@ -34853,7 +35105,7 @@
 
 - name: Strateji Geliştirme ve Kalite Birimi
   abbreviation: SAĞLIK-BİLİM-SGK-BR
-  code: H9A
+  code: H9J
   detsis_id: '91268476'
   parent_detsis_id: '93771576'
   unit_type_id: Diğer İdari Birim
@@ -34862,7 +35114,7 @@
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: ZİRAAT-YAYIN-BR
-  code: H9B
+  code: H9K
   detsis_id: '91587910'
   parent_detsis_id: '52180288'
   unit_type_id: Diğer İdari Birim
@@ -34871,7 +35123,7 @@
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: KONSERVATUVAR-BASIN-BR
-  code: H9C
+  code: H9M
   detsis_id: '91656992'
   parent_detsis_id: '95441125'
   unit_type_id: Diğer İdari Birim
@@ -34880,7 +35132,7 @@
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
   abbreviation: GÜZELSANATLAR-YAPI-BR
-  code: H9D
+  code: H9N
   detsis_id: '91797645'
   parent_detsis_id: '32859882'
   unit_type_id: Diğer İdari Birim
@@ -34889,7 +35141,7 @@
 
 - name: Antrenörlük Eğitimi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-ANTRENÖR-ADB
-  code: H9E
+  code: H9P
   detsis_id: '91908821'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -34898,7 +35150,7 @@
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: EĞİTİM-BASIN-BR
-  code: H9F
+  code: H9R
   detsis_id: '92019927'
   parent_detsis_id: '98725097'
   unit_type_id: Diğer İdari Birim
@@ -34907,7 +35159,7 @@
 
 - name: Sinir Bilimleri Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-SİNİR-ADB
-  code: H9G
+  code: H9S
   parent_yoksis_id: '203748'
   detsis_id: '92044395'
   parent_detsis_id: '93771576'
@@ -34917,7 +35169,7 @@
 
 - name: Beden Eğitimi Bölüm Başkanlığı
   abbreviation: BEDEN-BB
-  code: H9H
+  code: H9T
   detsis_id: '92050340'
   parent_detsis_id: '78633602'
   unit_type_id: Bölüm Başkanlığı
@@ -34928,7 +35180,7 @@
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
   abbreviation: MİMARLIK-YAPI-BR
-  code: H9J
+  code: H9U
   detsis_id: '92084266'
   parent_detsis_id: '85074962'
   unit_type_id: Diğer İdari Birim
@@ -34937,7 +35189,7 @@
 
 - name: Bilgi İşlem Birimi
   abbreviation: TURİZM-BİLGİ-BR
-  code: H9K
+  code: H9V
   detsis_id: '92129449'
   parent_detsis_id: '37195700'
   unit_type_id: Diğer İdari Birim
@@ -34946,7 +35198,7 @@
 
 - name: Strateji Geliştirme ve Kalite Birimi
   abbreviation: MÜHENDİSLİK-SGK-BR
-  code: H9M
+  code: H9Y
   detsis_id: '92358107'
   parent_detsis_id: '81181891'
   unit_type_id: Diğer İdari Birim
@@ -34955,7 +35207,7 @@
 
 - name: Mali İşler Birimi
   abbreviation: EĞİTİM-MALİ-BR
-  code: H9N
+  code: H9Z
   detsis_id: '92375019'
   parent_detsis_id: '98725097'
   unit_type_id: Diğer İdari Birim
@@ -34964,7 +35216,7 @@
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: SAĞLIK-BİLİM-BASIN-BR
-  code: H9P
+  code: HA0
   detsis_id: '92460850'
   parent_detsis_id: '93771576'
   unit_type_id: Diğer İdari Birim
@@ -34973,7 +35225,7 @@
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: MÜHENDİSLİK-BASIN-BR
-  code: H9R
+  code: HA1
   detsis_id: '92829117'
   parent_detsis_id: '81181891'
   unit_type_id: Diğer İdari Birim
@@ -34982,7 +35234,7 @@
 
 - name: Hukuk İşleri Birimi
   abbreviation: FEN-HUKUK-BR
-  code: H9S
+  code: HA2
   detsis_id: '93214089'
   parent_detsis_id: '41130367'
   unit_type_id: Diğer İdari Birim
@@ -34991,7 +35243,7 @@
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
   abbreviation: SAĞLIK-AUM-SKS-BR
-  code: H9T
+  code: HA3
   detsis_id: '93303480'
   parent_detsis_id: '15374210'
   unit_type_id: Diğer İdari Birim
@@ -35001,7 +35253,7 @@
 
 - name: Proje Birimi
   abbreviation: VETERİNER-PROJE-BR
-  code: H9U
+  code: HA4
   detsis_id: '93642837'
   parent_detsis_id: '32319693'
   unit_type_id: Diğer İdari Birim
@@ -35010,7 +35262,7 @@
 
 - name: Bilgisayar Mühendisliği Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-BİLGİSAYAR-ADB
-  code: H9V
+  code: HA5
   detsis_id: '93656557'
   parent_detsis_id: '43847920'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -35021,7 +35273,7 @@
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
   abbreviation: EĞİTİM-SKS-BR
-  code: H9Y
+  code: HA6
   detsis_id: '94065117'
   parent_detsis_id: '98725097'
   unit_type_id: Diğer İdari Birim
@@ -35030,7 +35282,7 @@
 
 - name: Çocuk Hastanesi Başhekimliği
   abbreviation: SAĞLIK-AUM-ÇH-BAŞHEK
-  code: H9Z
+  code: HA7
   detsis_id: '94254893'
   parent_detsis_id: '15374210'
   unit_type_id: Başhekimlik
@@ -35040,6 +35292,7 @@
 
 - name: Uluslararası Ticaret Anabilim Dalı Başkanlığı
   abbreviation: UTL-UT-ADB
+  code: HA8
   parent_yoksis_id: '326681'
   detsis_id: '94334960'
   parent_detsis_id: '26676436'
@@ -35049,7 +35302,7 @@
 
 - name: Öğrenci İşleri Birimi
   abbreviation: GÜZELSANATLAR-ÖĞRENCİ-BR
-  code: HA0
+  code: HA9
   detsis_id: '94358433'
   parent_detsis_id: '32859882'
   unit_type_id: Diğer İdari Birim
@@ -35058,7 +35311,7 @@
 
 - name: Dölerme ve Suni Tohumlama Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-DST-ADB
-  code: HA1
+  code: HAA
   detsis_id: '94836752'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -35070,7 +35323,7 @@
 
 - name: İletişim Bilimleri Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-İLETİŞİM-ADB
-  code: HA2
+  code: HAB
   parent_yoksis_id: '297535'
   detsis_id: '94947571'
   parent_detsis_id: '61232311'
@@ -35080,7 +35333,7 @@
 
 - name: Radyolojik Bilimler Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-RB-ADB
-  code: HA3
+  code: HAC
   detsis_id: '94999386'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -35091,7 +35344,7 @@
 
 - name: Hukuk İşleri Birimi
   abbreviation: YEŞİLYURT-MYO-HUKUK-BR
-  code: HA4
+  code: HAD
   detsis_id: '95230158'
   parent_detsis_id: '30423168'
   unit_type_id: Diğer İdari Birim
@@ -35100,7 +35353,7 @@
 
 - name: Arkeoloji Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-ARKEO-ADB
-  code: HA5
+  code: HAE
   detsis_id: '95273792'
   parent_detsis_id: '61232311'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -35111,7 +35364,7 @@
 
 - name: Harita Mühendisliği Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-HARİTA-ADB
-  code: HA6
+  code: HAF
   detsis_id: '95633724'
   parent_detsis_id: '43847920'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -35122,7 +35375,7 @@
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
   abbreviation: TIP-YAPI-BR
-  code: HA7
+  code: HAG
   detsis_id: '95703871'
   parent_detsis_id: '45829229'
   unit_type_id: Diğer İdari Birim
@@ -35131,7 +35384,7 @@
 
 - name: Döner Sermaye Birimi
   abbreviation: SAĞLIK-DÖNER-BR
-  code: HA8
+  code: HAH
   detsis_id: '96130492'
   parent_detsis_id: '28050591'
   unit_type_id: Diğer İdari Birim
@@ -35140,6 +35393,7 @@
 
 - name: Mütercim Tercümanlık (Almanca) Anabilim Dalı Başkanlığı
   abbreviation: YDİL-YO-MÜTERCİM-ALM-ADB
+  code: HAJ
   parent_yoksis_id: '207340'
   detsis_id: '96153689'
   parent_detsis_id: '20346779'
@@ -35149,7 +35403,7 @@
 
 - name: Veterinerlik Viroloji Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-VİRO-ADB
-  code: HA9
+  code: HAK
   detsis_id: '96350930'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -35161,7 +35415,7 @@
 
 - name: Coğrafya Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-COĞRAFYA-ADB
-  code: HAA
+  code: HAM
   detsis_id: '96600690'
   parent_detsis_id: '61232311'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -35172,7 +35426,7 @@
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
   abbreviation: İLAHİYAT-YAPI-BR
-  code: HAB
+  code: HAN
   detsis_id: '96705545'
   parent_detsis_id: '79586685'
   unit_type_id: Diğer İdari Birim
@@ -35181,7 +35435,7 @@
 
 - name: Zootekni Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-ZOO-ADB
-  code: HAC
+  code: HAP
   detsis_id: '96900798'
   parent_detsis_id: '43847920'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -35192,7 +35446,7 @@
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
   abbreviation: ADALET-MYO-SKS-BR
-  code: HAD
+  code: HAR
   detsis_id: '97029003'
   parent_detsis_id: '15086663'
   unit_type_id: Diğer İdari Birim
@@ -35201,7 +35455,7 @@
 
 - name: Bilgi İşlem Birimi
   abbreviation: BAFRA-MYO-BİLGİ-BR
-  code: HAE
+  code: HAS
   detsis_id: '97040519'
   parent_detsis_id: '50713553'
   unit_type_id: Diğer İdari Birim
@@ -35210,7 +35464,7 @@
 
 - name: Veteriner Hekimliği Tarihi ve Deontoloji Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-DEON-ADB
-  code: HAF
+  code: HAT
   detsis_id: '97192299'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -35222,7 +35476,7 @@
 
 - name: Taşınmaz Geliştirme Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-TAŞINMAZ-ADB
-  code: HAG
+  code: HAU
   detsis_id: '97593580'
   parent_detsis_id: '43847920'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -35233,7 +35487,7 @@
 
 - name: Protetik Diş Tedavisi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-PDT-ADB
-  code: HAH
+  code: HAV
   detsis_id: '97650724'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -35245,7 +35499,7 @@
 
 - name: Döner Sermaye Birimi
   abbreviation: SAĞLIK-AUM-DÖNER-BR
-  code: HAJ
+  code: HAY
   detsis_id: '97668190'
   parent_detsis_id: '15374210'
   unit_type_id: Diğer İdari Birim
@@ -35255,7 +35509,7 @@
 
 - name: Acil Hemşireliği Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-ACİL-ADB
-  code: HAK
+  code: HAZ
   detsis_id: '97853903'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -35266,7 +35520,7 @@
 
 - name: Beden Eğitimi ve Spor Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-BES-ADB
-  code: HAM
+  code: HB0
   detsis_id: '97936532'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -35277,7 +35531,7 @@
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: VEZİRKÖPRÜ-MYO-BASIN-BR
-  code: HAN
+  code: HB1
   detsis_id: '97976296'
   parent_detsis_id: '61206311'
   unit_type_id: Diğer İdari Birim
@@ -35286,7 +35540,7 @@
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
   abbreviation: İLETİŞİM-SKS-BR
-  code: HAP
+  code: HB2
   detsis_id: '98202887'
   parent_detsis_id: '34806956'
   unit_type_id: Diğer İdari Birim
@@ -35295,7 +35549,7 @@
 
 - name: Mali İşler Birimi
   abbreviation: TİCARET-MYO-MALİ-BR
-  code: HAR
+  code: HB3
   detsis_id: '98844747'
   parent_detsis_id: '21071378'
   unit_type_id: Diğer İdari Birim
@@ -35304,7 +35558,7 @@
 
 - name: Özel Kalem Birimi
   abbreviation: SOSYAL-BİLİM-ÖZELKALEM-BR
-  code: HAS
+  code: HB4
   detsis_id: '98977299'
   parent_detsis_id: '61232311'
   unit_type_id: Diğer İdari Birim
@@ -35313,7 +35567,7 @@
 
 - name: Tıbbi Biyoloji Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-TBİYO-ADB
-  code: HAT
+  code: HB5
   detsis_id: '99046086'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -35325,7 +35579,7 @@
 
 - name: Strateji Geliştirme ve Kalite Birimi
   abbreviation: SAMSUN-MYO-SGK-BR
-  code: HAU
+  code: HB6
   detsis_id: '99116856'
   parent_detsis_id: '56591305'
   unit_type_id: Diğer İdari Birim
@@ -35334,7 +35588,7 @@
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: TİCARET-MYO-YAYIN-BR
-  code: HAV
+  code: HB7
   detsis_id: '99123467'
   parent_detsis_id: '21071378'
   unit_type_id: Diğer İdari Birim
@@ -35343,7 +35597,7 @@
 
 - name: Ağız, Diş ve Çene Radyolojisi Anabilim Dalı Başkanlığı
   abbreviation: DİŞ-KLİNİK-ADÇR-ADB
-  code: HAY
+  code: HB8
   detsis_id: '99203158'
   parent_detsis_id: '38581703'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -35355,7 +35609,7 @@
 
 - name: Ortak Sağlık ve Güvenlik Birimi
   abbreviation: GENSEK-İSG-OSG-BR
-  code: HAZ
+  code: HB9
   detsis_id: '99407671'
   parent_detsis_id: '82259522'
   unit_type_id: Diğer İdari Birim
@@ -35364,7 +35618,7 @@
 
 - name: Hukuk İşleri Birimi
   abbreviation: ADALET-MYO-HUKUK-BR
-  code: HB0
+  code: HBA
   detsis_id: '99496638'
   parent_detsis_id: '15086663'
   unit_type_id: Diğer İdari Birim
@@ -35373,7 +35627,7 @@
 
 - name: Personel İşleri Birimi
   abbreviation: ALAÇAM-MYO-PERSONEL-BR
-  code: HB1
+  code: HBB
   detsis_id: '99604858'
   parent_detsis_id: '68459231'
   unit_type_id: Diğer İdari Birim
@@ -35382,7 +35636,7 @@
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: İKTİSAT-BASIN-BR
-  code: HB2
+  code: HBC
   detsis_id: '99779997'
   parent_detsis_id: '50569681'
   unit_type_id: Diğer İdari Birim
@@ -35391,7 +35645,7 @@
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   abbreviation: SAĞLIK-AUM-BASIN-BR
-  code: HB3
+  code: HBD
   detsis_id: '99936778'
   parent_detsis_id: '15374210'
   unit_type_id: Diğer İdari Birim
@@ -35401,7 +35655,7 @@
 
 - name: Mali İşler Birimi
   abbreviation: ADALET-MYO-MALİ-BR
-  code: HB4
+  code: HBE
   detsis_id: '99977547'
   parent_detsis_id: '15086663'
   unit_type_id: Diğer İdari Birim
@@ -35722,7 +35976,7 @@
 
 - name: Moleküler Biyoloji ve Genetik Anabilim Dalı Başkanlığı
   abbreviation: MOLBİYOGEN-ADB
-  code: HB5
+  code: HBF
   parent_yoksis_id: '328410'
   detsis_id: '69748915'
   parent_detsis_id: '43847920'
@@ -36766,7 +37020,7 @@
 
 - name: Gazetecilik Anabilim Dalı Başkanlığı
   abbreviation: GAZETE-ADB
-  code: HB6
+  code: HBG
   detsis_id: '17502719'
   parent_detsis_id: '27633393'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -36776,7 +37030,7 @@
 
 - name: Halkla İlişkiler ve Tanıtım Anabilim Dalı Başkanlığı
   abbreviation: HİT-ADB
-  code: HB7
+  code: HBH
   detsis_id: '30257221'
   parent_detsis_id: '23260498'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -36786,7 +37040,7 @@
 
 - name: Radyo, Televizyon ve Sinema Anabilim Dalı Başkanlığı
   abbreviation: RST-ADB
-  code: HB8
+  code: HBJ
   detsis_id: '97353408'
   parent_detsis_id: '10326855'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -36796,7 +37050,7 @@
 
 - name: Yeni Medya ve İletişim Tasarımı Anabilim Dalı Başkanlığı
   abbreviation: YMİT-ADB
-  code: HB9
+  code: HBK
   detsis_id: '78136083'
   parent_detsis_id: '47463258'
   unit_type_id: Anabilim Dalı Başkanlığı
