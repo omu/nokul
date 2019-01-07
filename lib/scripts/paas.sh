@@ -16,7 +16,7 @@ application=${application:-$(jq -r '.name' "$manifest")}
 operator=${operator:-$(id -rnu 1000 2>/dev/null)}
 domain=local.omu.sh
 remote=dokku
-paas_environment=${paas_environment:-development}
+paas_environment=${paas_environment:-beta}
 
 vagrant status --machine-readable | grep -q ',metadata,provider,virtualbox' || die 'Only virtualbox supported'
 command -v direnv &>/dev/null || die 'Please install and setup direnv(1).'
