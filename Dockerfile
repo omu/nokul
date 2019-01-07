@@ -9,7 +9,7 @@ RUN wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkh
     && dpkg -i wkhtmlto* \
     && rm -f wkhtmlto*
 
-ARG RAILS_ENV
+ARG RAILS_ENV=beta
 ENV RAILS_ENV=$RAILS_ENV
 
 ARG RAILS_MASTER_KEY
@@ -23,6 +23,7 @@ WORKDIR /app
 COPY .ruby-version ./
 COPY Gemfile Gemfile.lock ./
 COPY package.json yarn.lock ./
+COPY plugins ./plugins
 
 RUN bundle install --without development:test -j4 --deployment
 RUN yarn install
