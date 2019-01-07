@@ -23,12 +23,13 @@ WORKDIR /app
 COPY .ruby-version ./
 COPY Gemfile Gemfile.lock ./
 COPY package.json yarn.lock ./
-COPY plugins ./plugins
 
-RUN bundle install --without development:test -j4 --deployment
+RUN bundle install --without development:test:plugins -j4 --deployment
 RUN yarn install
 
 COPY . ./
+
+RUN bundle install --with plugins -j4 --deployment
 
 RUN bundle exec rake assets:precompile
 
