@@ -39,12 +39,10 @@ COPY plugins/tenant/$NOKUL_TENANT/lib/nokul/tenant/$NOKUL_TENANT/version.rb ./pl
 COPY plugins/tenant/$NOKUL_TENANT/nokul-tenant-$NOKUL_TENANT.gemspec        ./plugins/tenant/$NOKUL_TENANT/nokul-tenant-$NOKUL_TENANT.gemspec
 
 RUN bundle config --global silence_root_warning true
-RUN bundle install --without development:test:plugins -j4 --deployment
+RUN bundle install --without development:test -j4 --deployment
 RUN yarn install
 
 COPY . ./
-
-RUN bundle install --with plugins -j4 --deployment
 
 RUN bundle exec rake assets:precompile
 
