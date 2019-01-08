@@ -43,7 +43,7 @@ vagrant ssh paas -- 'sudo -E bash -s' <<-SCRIPT
 
 	dokku docker-options:add $application build '--build-arg RAILS_ENV=$paas_environment'
 	dokku docker-options:add $application build '--build-arg RAILS_MASTER_KEY=$RAILS_MASTER_KEY'
-	dokku config:set $application RAILS_ENV=$paas_environment RAILS_MASTER_KEY=$RAILS_MASTER_KEY
+	dokku config:set $application RAILS_ENV=$paas_environment RAILS_MASTER_KEY=$RAILS_MASTER_KEY DISABLE_SSL=true
 
 	dokku ssh-keys:remove $operator &>/dev/null || true
 SCRIPT
