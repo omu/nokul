@@ -6,7 +6,7 @@ namespace :quality do
   desc 'Runs static code analyzer and style checker'
   task :rubocop do |task|
     puts "########### #{task.full_comment} ###########"
-    sh 'bundle exec rubocop -f fu -R -D --safe-auto-correct', verbose: false
+    sh 'bundle exec rubocop -f fu -R -D', verbose: false
   end
 
   desc 'Checks for suspicious executables'
