@@ -21,7 +21,4 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'nokul-tenant'
   spec.add_dependency 'rails', '~> 5.2.2'
-
-  spec.add_development_dependency 'minitest-focus'
-  spec.add_development_dependency 'sqlite3'
 end
