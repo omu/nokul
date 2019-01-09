@@ -11,12 +11,12 @@ namespace :fetch do
     number_of_pages = client.total_pages
 
     # id_number:email pairs for academics
-    mail_list = Sensitive.readlines('db/encrypted_data/academics.csv').map { |line| line.split('|') }
+    mail_list = Support::Sensitive.readlines('db/encrypted_data/academics.csv').map { |line| line.split('|') }
 
     # fetch academic staff from each page
     (1..number_of_pages).each do |page_number|
       response = client.pages(page: page_number)
-      progress_bar = ProgressBar.spawn("Academic Staff - Page #{page_number}", response.size)
+      progress_bar = ProgressBar.spawn("Academic Staff - Page #{page_number}/#{number_of_pages}", response.size)
 
       response.each do |academic_staff|
         password = SecureRandom.uuid
@@ -33,7 +33,7 @@ namespace :fetch do
 
         progress_bar&.increment
 
-        title = Title.find_by(name: academic_staff[:title].capitalize_all)
+        title = Title.find_by(name: academic_staff[:title].capitalize_turkish)
         unit = Unit.find_by(yoksis_id: academic_staff[:unit_id])
 
         employee = Employee.create(title: title, user: user)

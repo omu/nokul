@@ -67,7 +67,7 @@ class User < ApplicationRecord
 
   def permalink
     username, domain = email.split('@') if email
-    username if domain.eql?(Rails.application.config.tenant.email.domain)
+    username if domain.eql?(Tenant.configuration.email.domain)
   end
 
   # custom methods

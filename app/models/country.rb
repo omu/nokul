@@ -30,7 +30,7 @@ class Country < ApplicationRecord
 
   # callbacks
   before_validation do
-    self.name = name.capitalize_all if name
+    self.name = name.capitalize_turkish if name
     self.alpha_2_code = alpha_2_code.upcase(:turkic) if alpha_2_code
     self.alpha_3_code = alpha_3_code.upcase(:turkic) if alpha_3_code
   end

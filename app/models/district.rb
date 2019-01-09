@@ -22,5 +22,5 @@ class District < ApplicationRecord
   validates :active, inclusion: { in: [true, false] }
 
   # callbacks
-  before_validation { self.name = name.capitalize_all if name }
+  before_validation { self.name = name.capitalize_turkish if name }
 end

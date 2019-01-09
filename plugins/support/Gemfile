@@ -1,0 +1,14 @@
+# frozen_string_literal: true
+
+require 'pathname'
+
+PLUGINS_DIR = Pathname.new File.expand_path('..', __dir__)
+
+source 'https://rubygems.org'
+
+gemspec
+
+group :test do
+  gem 'minitest-focus'
+  gem 'rails'
+end

@@ -4,7 +4,5 @@
 # for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
 
 require_relative 'config/application'
-require_relative 'lib/support/utils/rake_utils'
-require_relative 'lib/support/ext/progress_bar'
 
 Rails.application.load_tasks

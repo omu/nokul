@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 Rollbar.configure do |config|
+  # Exit early if explicitly said so
+  next unless (config.enabled = ENV['NOKUL_DISABLE_ROLLBAR'].blank?)
+
   # Exit early in development and test environments
   next unless (config.enabled = !Rails.env.test? && !Rails.env.development?)
 

@@ -14,7 +14,7 @@ CourseType.create(
 CourseGroupType.create(name: 'Seçmeli Ders')
 
 class DepartmentCourse
-  include Simple::Container.of %i[
+  include Support::Structure.of %i[
     code
     course_name
     course_type_code
@@ -98,7 +98,7 @@ class DepartmentCourse
   end
 end
 
-class DepartmentCourses < Simple::Collection
+class DepartmentCourses < Support::Collection
   def unit
     @unit ||= first.unit
   end
@@ -137,7 +137,7 @@ class DepartmentCourses < Simple::Collection
 end
 
 def build_curriculum(source, number_of_semesters: 8, semester_type: :periodic)
-  courses = DepartmentCourses.from_hashes(
+  courses = DepartmentCourses.create(
     CSV.foreach(source, headers: true, col_sep: '|', header_converters: :symbol, skip_blanks: true).map(&:to_h)
   )
 

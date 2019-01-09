@@ -9,9 +9,7 @@ Bundler.require(*Rails.groups)
 
 module Nokul
   class Application < Rails::Application
-    # support libraries are used for tenant configuration and Rakefile,
-    # therefore they have to required in the first place.
-    require Rails.root.join('lib', 'support')
+    Nokul::Tenant.load
 
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
@@ -37,8 +35,12 @@ module Nokul
     # schema dump sformat
     config.active_record.schema_format = :sql
 
-    # tenant configuration
-    config.active_tenant = Tenant.active
-    config.tenant = Tenant.configuration
+    def appname
+      @appname ||= if File.exist?(manifest = Rails.root.join('app.json'))
+                     JSON.parse(File.read(manifest)).fetch 'name'
+                   else
+                     self.class.parent.to_s.underscore
+                   end
+    end
   end
 end

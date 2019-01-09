@@ -1,6 +1,4 @@
 Style/AsciiComments:
-  Description: 'Use only ascii symbols in comments.'
-  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#english-comments'
   Enabled: false
 Style/Lambda:
   Enabled: false
@@ -36,6 +34,4 @@ AllCops:
     - config/initializers/simple_form_bootstrap.rb
     - config/environments/*.rb
     - config/routes.rb
-    - app/services/kps/omu/adres.rb # WIP
-    - app/services/kps/omu/kimlik.rb # WIP
     - Vagrantfile

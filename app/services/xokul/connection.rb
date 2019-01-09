@@ -2,7 +2,7 @@
 
 module Xokul
   module Connection
-    BASE_URL     = Rails.application.config.tenant.api_host
+    BASE_URL     = Tenant.configuration.api_host
     BEARER_TOKEN = Rails.application.credentials.xokul[:bearer_token]
 
     private_constant :BASE_URL, :BEARER_TOKEN
@@ -11,7 +11,7 @@ module Xokul
     def self.request(path, params: {}, **http_options)
       http_options[:open_timeout] ||= http_options[:read_timeout] ||= 10 if Rails.env.test?
 
-      response = RestClient.get(
+      response = Support::RestClient.get(
         URI.join(BASE_URL, path).to_s,
         headers: {
           'Authorization' => "Bearer #{BEARER_TOKEN}",

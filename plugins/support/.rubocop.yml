@@ -1,0 +1,13 @@
+Style/AsciiComments:
+  Enabled: false
+Style/Lambda:
+  Enabled: false
+Documentation:
+  Enabled: false
+Metrics/LineLength:
+  Max: 120
+Naming/FileName:
+  Exclude:
+    - lib/nokul-support.rb
+AllCops:
+  TargetRubyVersion: 2.5.1
