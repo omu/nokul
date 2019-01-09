@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# Run given command inside all plugin directories.  Examples:
+#
+#	plugdo bundle install --path "$(readlink -m vendor/bundle)"
+#	plugdo bin/rails test
+
+set -euo pipefail
+
+cd "$(dirname "$0")/.."
+
+main() {
+	local -a dirs
+	mapfile -t dirs < <(
+		shopt -s nullglob
+		for gemspec in plugins/**/*.gemspec plugins/**/**/*.gemspec; do
+			echo "${gemspec%/*}"
+		done
+	)
+
+	local dir
+	for dir in "${dirs[@]}"; do
+		pushd "$dir" &>/dev/null && "$@" && popd &>/dev/null
+	done
+}
+
+main "$@"
