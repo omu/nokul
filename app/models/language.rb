@@ -14,7 +14,7 @@ class Language < ApplicationRecord
 
   # callbacks
   before_validation do
-    self.name = name.capitalize_all if name
+    self.name = name.capitalize_turkish if name
     self.iso  = iso.upcase(:turkic) if iso
   end
 end

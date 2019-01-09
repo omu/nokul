@@ -35,7 +35,7 @@ class Course < ApplicationRecord
 
   # callbacks
   before_validation do
-    self.name = name.capitalize_all if name
+    self.name = name.capitalize_turkish if name
     self.credit = calculate_credit
   end
 

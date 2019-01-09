@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+# Detect if any of the given paths has changes on last CI build.  Examples:
+#
+#	bin/cichanged plugins/common plugins/tenant/common
+
+set -euo pipefail; [[ -z ${TRACE:-} ]] || set -x
+
+die() {
+	echo "$@"
+	exit 1
+}
+
+[[ -n ${CIRCLE_COMPARE_URL:-} ]] || die 'Only in CircleCI'
+
+cd "$(dirname "$0")/.." || die
+
+commit_range=$(echo "${CIRCLE_COMPARE_URL}" | cut -d/ -f7)
+
+[[ $commit_range = *"..."* ]] || commit_range="${commit_range}...${commit_range}"
+
+path_changed() {
+	git diff --name-only --diff-filter=AMDR --cached "$commit_range" --quiet --exit-code -- "$1"
+}
+
+main() {
+	local path
+	for path; do
+		if path_changed "$path"; then
+			return  0
+		fi
+	done
+
+	return 1
+}
+
+main "$@"

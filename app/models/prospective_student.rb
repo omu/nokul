@@ -66,13 +66,13 @@ class ProspectiveStudent < ApplicationRecord
 
   # callbacks
   before_create do
-    self.first_name = first_name.capitalize_all
+    self.first_name = first_name.capitalize_turkish
     self.last_name  = last_name.upcase(:turkic)
-    self.fathers_name = fathers_name.capitalize_all if fathers_name
-    self.mothers_name = mothers_name.capitalize_all if mothers_name
-    self.place_of_birth = place_of_birth.capitalize_all if place_of_birth
-    self.registration_city = registration_city.capitalize_all if registration_city
-    self.registration_district = registration_district.capitalize_all if registration_district
+    self.fathers_name = fathers_name.capitalize_turkish if fathers_name
+    self.mothers_name = mothers_name.capitalize_turkish if mothers_name
+    self.place_of_birth = place_of_birth.capitalize_turkish if place_of_birth
+    self.registration_city = registration_city.capitalize_turkish if registration_city
+    self.registration_district = registration_district.capitalize_turkish if registration_district
   end
 
   # custom methods
