@@ -55,7 +55,7 @@ jobs:
       - restore_cache:
           <<: *restore_bundle
       - run: bundle install --path vendor/bundle --without development
-      - run: bin/plugdo bundle install --path "$(readlink -m vendor/bundle)" --without development
+      - run: bin/plugdo bundle install --path "$(readlink -m vendor/bundle)" --with development
       - save_cache:
           key: nokul-bundle-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
           paths:
@@ -129,7 +129,7 @@ jobs:
       - restore_cache:
           <<: *restore_yarn
       - run: bundle --path vendor/bundle --without development
-      - run: bin/plugdo bundle install --path "$(readlink -m vendor/bundle)" --without development
+      - run: bin/plugdo bundle install --path "$(readlink -m vendor/bundle)" --with development
       - run: sudo apt install -y postgresql-client || true
       - run: bin/yarn install
       - run: bundle exec rake db:create db:structure:load
