@@ -9,6 +9,6 @@ source 'https://rubygems.org'
 gemspec
 
 group :test do
-  gem 'rails'
   gem 'minitest-focus'
+  gem 'rails'
 end

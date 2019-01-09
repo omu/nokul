@@ -16,21 +16,17 @@ manifest=app.json
 
 application=${application:-$(jq -r '.name' "$manifest")}
 operator=${operator:-$(id -rnu 1000 2>/dev/null)}
-
 environment=/etc/environment
-touch "$environment"
 
-if [[ -d ${HOSTPATH:-} ]]; then
-	hostdir=$(readlink -f "$HOSTPATH")
-
+if [[ -d ${LOCAL_CACHE_DIR:-} ]]; then
 	cat >"$environment" <<-EOF
-		BUNDLE_PATH='$hostdir/bundle'
-		BUNDLE_APP_CONFIG='$hostdir/bundle'
+		BUNDLE_PATH='$LOCAL_CACHE_DIR/bundle'
+		BUNDLE_APP_CONFIG='$LOCAL_CACHE_DIR/bundle'
 
-		BOOTSNAP_CACHE_DIR='$hostdir/bootsnap'
+		BOOTSNAP_CACHE_DIR='$LOCAL_CACHE_DIR/bootsnap'
 
-		YARN_CACHE_FOLDER='$hostdir/yarn/cache'
-		NODE_MODULES_FOLDER='$hostdir/yarn/node_modules'
+		YARN_CACHE_FOLDER='$LOCAL_CACHE_DIR/yarn/cache'
+		NODE_MODULES_FOLDER='$LOCAL_CACHE_DIR/yarn/node_modules'
 	EOF
 fi
 

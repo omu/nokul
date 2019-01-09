@@ -17,6 +17,16 @@ manifest=app.json
 
 application=${application:-$(jq -r '.name' "$manifest")}
 operator=${operator:-$(id -rnu 1000 2>/dev/null)}
+environment=/etc/environment
+
+if [[ -f $environment ]]; then
+	set -a
+	# shellcheck disable=1090
+	. "$environment"
+	set +a
+else
+	touch "$environment"
+fi
 
 command -v bundle &>/dev/null || gem install bundler
 
@@ -41,5 +51,5 @@ EOF
 
 gem install foreman
 
-foreman export -p3000 --app "$application" --user "$operator" --env /etc/environment systemd /etc/systemd/system/
+foreman export -p3000 --app "$application" --user "$operator" --env "$environment" systemd /etc/systemd/system/
 systemctl enable --now "$application".target
