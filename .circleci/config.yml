@@ -133,8 +133,7 @@ jobs:
       - run: sudo apt install -y postgresql-client || true
       - run: bin/yarn install
       - run: bundle exec rake db:create db:structure:load
-      - run: bundle exec rake test:system test
-      - run: bin/plugdo bin/rails test
+      - run: bundle exec rails test:system test
   deploy_develop:
     machine:
       enabled: true
