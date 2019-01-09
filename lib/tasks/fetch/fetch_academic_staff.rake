@@ -16,7 +16,7 @@ namespace :fetch do
     # fetch academic staff from each page
     (1..number_of_pages).each do |page_number|
       response = client.pages(page: page_number)
-      progress_bar = ProgressBar.spawn("Academic Staff - Page #{page_number}", response.size)
+      progress_bar = ProgressBar.spawn("Academic Staff - Page #{page_number}/#{number_of_pages}", response.size)
 
       response.each do |academic_staff|
         password = SecureRandom.uuid
