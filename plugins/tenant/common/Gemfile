@@ -9,3 +9,8 @@ source 'https://rubygems.org'
 gemspec
 
 gem 'nokul-support', path: PLUGINS_DIR.join('support')
+
+group :test do
+  gem 'rails'
+  gem 'minitest-focus'
+end

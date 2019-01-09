@@ -20,7 +20,4 @@ Gem::Specification.new do |spec|
   }
 
   spec.add_dependency 'nokul-support'
-
-  spec.add_development_dependency 'minitest-focus'
-  spec.add_development_dependency 'rails', '~> 5.2.2'
 end

@@ -61,7 +61,7 @@ GEM
     erubi (1.8.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
-    i18n (1.4.0)
+    i18n (1.5.1)
       concurrent-ruby (~> 1.0)
     loofah (2.2.3)
       crass (~> 1.0.2)
@@ -78,7 +78,7 @@ GEM
     minitest-focus (1.1.2)
       minitest (>= 4, < 6)
     nio4r (2.3.1)
-    nokogiri (1.9.1)
+    nokogiri (1.10.0)
       mini_portile2 (~> 2.4.0)
     rack (2.0.6)
     rack-test (1.1.0)
@@ -130,7 +130,7 @@ DEPENDENCIES
   minitest-focus
   nokul-support!
   nokul-tenant!
-  rails (~> 5.2.2)
+  rails
 
 BUNDLED WITH
    1.17.3

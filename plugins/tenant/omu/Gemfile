@@ -10,3 +10,8 @@ gemspec
 
 gem 'nokul-support', path: PLUGINS_DIR.join('support')
 gem 'nokul-tenant', path: PLUGINS_DIR.join('tenant', 'common')
+
+group :test do
+  gem 'sqlite3'
+  gem 'minitest-focus'
+end
