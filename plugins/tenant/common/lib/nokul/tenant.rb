@@ -49,9 +49,11 @@ module Nokul
       engine.deep_config_for(*args)
     end
 
+    # rubocop:disable Rails/Delegate
     def root
       engine.root
     end
+    # rubocop:enable Rails/Delegate
 
     alias instance engine
   end
