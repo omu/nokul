@@ -48,8 +48,11 @@ class Curriculum < ApplicationRecord
   # custom methods
   def build_semesters(number_of_semesters: 0, type: :periodic)
     divisor = (type.to_sym == :periodic ? 2 : 1)
+    terms = %i[spring fall]
     (1..number_of_semesters.to_i).each do |sequence|
-      semesters.build(sequence: sequence, year: (sequence.to_f / divisor).round)
+      semesters.build(sequence: sequence,
+                      year: (sequence.to_f / divisor).round,
+                      term: terms[sequence % 2])
     end
   end
 end

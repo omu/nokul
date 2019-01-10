@@ -62,6 +62,7 @@ tr:
       curriculum_semester:
         sequence: Dönem Sırası
         year: Yıl
+        term: Dönem
     enums:
       course:
         program_types:
@@ -80,6 +81,11 @@ tr:
         types:
           compulsory: Zorunlu
           elective: Seçmeli
+      curriculum_semester:
+        terms:
+          fall: Güz
+          spring: Bahar
+          summer: Yaz
     models:
       available_course: Açılan Ders
       available_course_group: Açılan Ders Grubu

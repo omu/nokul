@@ -3,7 +3,7 @@
     <div class="col-lg-<%=semesters.size > 1 ? 6 : 12 %> col-md-12">
       <div class="card">
         <div class="card-header">
-          <%= fa_icon 'book' %><strong><%= "#{semester.sequence}. #{t('semester')}" %></strong>
+          <%= fa_icon 'book' %><strong><%= "#{semester.sequence}. #{t('semester')} (#{enum_t(semester, :term)})" %></strong>
           <div class="float-right">
             <%= link_to_new new_curriculum_semester_curriculum_course_path(semester), t('.add_course') %>
             <%= link_to_new new_curriculum_semester_curriculum_course_group_path(semester), t('.add_course_group') %>
