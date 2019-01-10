@@ -8,6 +8,20 @@ SET check_function_bodies = false;
 SET client_min_messages = warning;
 SET row_security = off;
 
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: -
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: -
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
 SET default_tablespace = '';
 
 SET default_with_oids = false;
@@ -137,8 +151,8 @@ CREATE TABLE public.addresses (
     full_address character varying,
     district_id bigint NOT NULL,
     user_id bigint NOT NULL,
-    updated_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
-    created_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
+    updated_at timestamp without time zone DEFAULT now(),
+    created_at timestamp without time zone DEFAULT now(),
     CONSTRAINT addresses_created_at_null CHECK ((created_at IS NOT NULL)),
     CONSTRAINT addresses_full_address_length CHECK ((length((full_address)::text) <= 255)),
     CONSTRAINT addresses_full_address_presence CHECK (((full_address IS NOT NULL) AND ((full_address)::text !~ '^\s*$'::text))),
@@ -1466,8 +1480,8 @@ CREATE TABLE public.identities (
     registered_to character varying,
     user_id bigint NOT NULL,
     student_id bigint,
-    created_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
-    updated_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
+    created_at timestamp without time zone DEFAULT now(),
+    updated_at timestamp without time zone DEFAULT now(),
     CONSTRAINT identities_created_at_null CHECK ((created_at IS NOT NULL)),
     CONSTRAINT identities_date_of_birth_null CHECK ((date_of_birth IS NOT NULL)),
     CONSTRAINT identities_fathers_name_length CHECK ((length((fathers_name)::text) <= 255)),
@@ -2163,40 +2177,6 @@ ALTER SEQUENCE public.students_id_seq OWNED BY public.students.id;
 
 
 --
--- Name: terms; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.terms (
-    id bigint NOT NULL,
-    name character varying,
-    identifier character varying,
-    CONSTRAINT terms_identifier_length CHECK ((length((identifier)::text) <= 255)),
-    CONSTRAINT terms_identifier_presence CHECK (((identifier IS NOT NULL) AND ((identifier)::text !~ '^\s*$'::text))),
-    CONSTRAINT terms_name_length CHECK ((length((name)::text) <= 255)),
-    CONSTRAINT terms_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
-);
-
-
---
--- Name: terms_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE public.terms_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: terms_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE public.terms_id_seq OWNED BY public.terms.id;
-
-
---
 -- Name: titles; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -2505,7 +2485,7 @@ CREATE TABLE public.users (
     last_sign_in_at timestamp without time zone,
     current_sign_in_ip inet,
     last_sign_in_ip inet,
-    password_changed_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
+    password_changed_at timestamp without time zone DEFAULT now(),
     failed_attempts integer DEFAULT 0,
     unlock_token character varying,
     locked_at timestamp without time zone,
@@ -2927,13 +2907,6 @@ ALTER TABLE ONLY public.student_studentship_statuses ALTER COLUMN id SET DEFAULT
 --
 
 ALTER TABLE ONLY public.students ALTER COLUMN id SET DEFAULT nextval('public.students_id_seq'::regclass);
-
-
---
--- Name: terms id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.terms ALTER COLUMN id SET DEFAULT nextval('public.terms_id_seq'::regclass);
 
 
 --
@@ -3653,30 +3626,6 @@ ALTER TABLE ONLY public.student_studentship_statuses
 
 ALTER TABLE ONLY public.students
     ADD CONSTRAINT students_pkey PRIMARY KEY (id);
-
-
---
--- Name: terms terms_identifier_unique; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.terms
-    ADD CONSTRAINT terms_identifier_unique UNIQUE (identifier) DEFERRABLE;
-
-
---
--- Name: terms terms_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.terms
-    ADD CONSTRAINT terms_name_unique UNIQUE (name) DEFERRABLE;
-
-
---
--- Name: terms terms_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.terms
-    ADD CONSTRAINT terms_pkey PRIMARY KEY (id);
 
 
 --
@@ -4954,7 +4903,6 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20181112175328'),
 ('20181112175343'),
 ('20181130131559'),
-('20181210120434'),
 ('20181210221451'),
 ('20181225103307'),
 ('20181225180258'),
