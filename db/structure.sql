@@ -2408,6 +2408,8 @@ ALTER SEQUENCE public.unit_types_id_seq OWNED BY public.unit_types.id;
 CREATE TABLE public.units (
     id bigint NOT NULL,
     name character varying,
+    abbreviation character varying,
+    code character varying,
     yoksis_id integer,
     detsis_id integer,
     osym_id integer,
@@ -2424,6 +2426,8 @@ CREATE TABLE public.units (
     unit_type_id bigint,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
+    CONSTRAINT units_abbreviation_length CHECK ((length((abbreviation)::text) <= 255)),
+    CONSTRAINT units_code_length CHECK ((length((code)::text) <= 255)),
     CONSTRAINT units_detsis_id_numericality CHECK ((detsis_id >= 1)),
     CONSTRAINT units_duration_numericality CHECK (((duration >= 1) AND (duration <= 8))),
     CONSTRAINT units_foet_code_numericality CHECK ((foet_code >= 1)),

@@ -56,26 +56,29 @@ class Unit < ApplicationRecord
   validates :duration, allow_nil: true, numericality: { only_integer: true }, inclusion: 1..8
 
   # scopes
-  scope :active,            -> { where(unit_status: UnitStatus.active) }
-  scope :partially_passive, -> { where(unit_status: UnitStatus.partially_passive) }
-  scope :committees,        -> { where(unit_type: UnitType.committee) }
-  scope :departments,       -> { where(unit_type: UnitType.department) }
-  scope :faculties,         -> { where(unit_type: UnitType.faculty) }
-  scope :programs,          -> { where(unit_type: UnitType.program) }
-  scope :universities,      -> { where(unit_type: UnitType.university) }
-  scope :majors,            -> { where(unit_type: UnitType.major) }
-  scope :institutes,        -> { where(unit_type: UnitType.institute) }
-  scope :rectorships,       -> { where(unit_type: UnitType.rectorship) }
-  scope :without_programs,  -> { where.not(unit_type: UnitType.program) }
+  scope :active,                 -> { where(unit_status: UnitStatus.active) }
+  scope :partially_passive,      -> { where(unit_status: UnitStatus.partially_passive) }
+  scope :others,                 -> { where(unit_type: UnitType.other) }
+  scope :faculties,              -> { where(unit_type: UnitType.faculty) }
+  scope :departments,            -> { where(unit_type: UnitType.department) }
+  scope :majors,                 -> { where(unit_type: UnitType.major) }
+  scope :undergraduate_programs, -> { where(unit_type: UnitType.undergraduate_program) }
+  scope :graduate_programs,      -> { where(unit_type: UnitType.graduate_program) }
+  scope :institutes,             -> { where(unit_type: UnitType.institute) }
+  scope :research_centers,       -> { where(unit_type: UnitType.research_center) }
+  scope :committees,             -> { where(unit_type: UnitType.committee) }
+  scope :administratives,        -> { where(unit_type: UnitType.administrative) }
+  scope :programs,               -> { where(unit_type: UnitType.program) }
+  scope :without_programs,       -> { where.not(unit_type: UnitType.program) }
 
   scope :coursable, -> {
     departments
       .or(faculties)
-      .or(universities)
       .or(majors)
       .or(institutes)
-      .or(rectorships)
+      .or(others)
   }
+
   scope :curriculumable, -> { coursable }
 
   scope :eventable, -> {
