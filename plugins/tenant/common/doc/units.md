@@ -43,7 +43,7 @@ gerçekleştirir.
 - Varsa bazı eksik bilgileri, örneğin `district_id` bilgilerini girer.
 
 Düzenlemeler tamamlandıktan sonra bu iki dosyadan nihai olarak veritabanına
-"seed" edilecek "birleştirilmiş" birim verileri `src/all.yml` dosyasında
+"seed" edilecek "birleştirilmiş birim verileri" `src/all.yml` dosyasında
 oluşturulur.  Birleştirme sırasında aşağıda listelenen işlemler
 gerçekleştirilir:
 
@@ -89,3 +89,27 @@ puts units.get('123456').unit_type_id
 
 Benzer işlem DETSİS birimleri için de DETSİS numaraları üzerinden
 gerçekleştirilebilir.
+
+Birim Düzenlemeleri
+-------------------
+
+Aşağıda listelenen durumlar birleştirilmiş birim verilerinde doğrudan veya
+dolaylı olarak değişikliğe yol açar.
+
+1. `plugins` altındaki eklentilerde gerçekleşen her türlü kod değişikliği (birim
+   verilerinde dolaylı olarak değişikliğe yol açabilir)
+
+2. `Src` dosyalarda, örneğin `plugins/tenant/omu/db/units/src` dizini altındaki
+    dosyalarda yapılan değişiklikler (birim verilerinde doğrudan değişikliğe yol
+    açabilir)
+
+Bu iki durumdan en az bir tanesi gerçekleşmişse birleştirilmiş birim verilerini
+yeniden üretmeniz ve sonucu test etmeniz gerekir.  Bu amaçla aşağıdaki yol
+izlenmelidir.
+
+```sh
+$ cd plugins/tenant/omu
+$ bundle install # henüz yapılmamışsa
+$ bin/rails tenant:units:produce
+$ bin/rails test
+```
