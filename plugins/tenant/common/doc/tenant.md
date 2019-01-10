@@ -11,7 +11,7 @@ Tüm kiracılarda ortak olarak kullanılan lojiği barındıran modül.
 -------
 
 Aktif kiracı aşağıdaki olay sırasıyla yüklenir.  Örneklendirme
-`Nokul::Tenant::OMU` kiracısı üzerinden ypılmıştır.
+`Nokul::Tenant::OMU` kiracısı üzerinden yapılmıştır.
 
 - `NOKUL_TENANT` ortam değişkeni ayarlanır.  Geçerli değer `plugins/tenant`
   dizini altındaki bir dizin adı (`common` dışında) olmalıdır.  Örneğin
