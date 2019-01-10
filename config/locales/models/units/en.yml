@@ -2,7 +2,7 @@ en:
   activerecord:
     attributes:
       unit: &unit_attributes
-        abbrevation: Abbrevation
+        abbreviation: Abbreviation
         code: Code
         ancestry: Parent/Children Unit
         detsis_id: DETSIS ID
