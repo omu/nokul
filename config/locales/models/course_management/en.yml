@@ -62,6 +62,7 @@ en:
       curriculum_semester:
         sequence: Semester
         year: Year
+        term: Term
     enums:
       course:
         program_types:
@@ -80,6 +81,11 @@ en:
         types:
           compulsory: Compulsory
           elective: Elective
+      curriculum_semester:
+        terms:
+          fall: Fall
+          spring: Spring
+          summer: Summer
     models:
       available_course: Available Course
       available_course_group: Available Course Group

@@ -1155,8 +1155,11 @@ CREATE TABLE public.curriculum_semesters (
     curriculum_id bigint,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
+    term integer,
     CONSTRAINT curriculum_semesters_sequence_null CHECK ((sequence IS NOT NULL)),
     CONSTRAINT curriculum_semesters_sequence_numericality CHECK ((sequence > 0)),
+    CONSTRAINT curriculum_semesters_term_null CHECK ((term IS NOT NULL)),
+    CONSTRAINT curriculum_semesters_term_numericality CHECK ((term >= 0)),
     CONSTRAINT curriculum_semesters_year_null CHECK ((year IS NOT NULL)),
     CONSTRAINT curriculum_semesters_year_numericality CHECK ((year > 0))
 );
@@ -4908,6 +4911,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20181225180258'),
 ('20181225195123'),
 ('20181225201818'),
-('20181226013104');
+('20181226013104'),
+('20190110113630');
 
 

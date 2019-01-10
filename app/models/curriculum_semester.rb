@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CurriculumSemester < ApplicationRecord
+  include EnumForTerm
+
   # relations
   has_many :curriculum_courses, dependent: :destroy
   has_many :curriculum_course_groups, dependent: :destroy
@@ -12,6 +14,7 @@ class CurriculumSemester < ApplicationRecord
                        uniqueness: { scope: :curriculum_id }
   validates :year, numericality: { greater_than: 0 },
                    uniqueness: { scope: %i[sequence curriculum_id] }
+  validates :term, uniqueness: { scope: %i[year curriculum_id] }
 
   # custom methods
   def total_ects
