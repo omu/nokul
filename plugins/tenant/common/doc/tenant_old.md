@@ -2,68 +2,100 @@
 author: Recai Oktaş
 ---
 
-`Tenant`
-========
+Kiracılar
+=========
 
-Kiracı özgünlüklerini barındıran `/tenant` dizinini yöneten ve genel olarak
-kiracılarla ilgili yapılan tüm işlemleri destekleyen modül.
+Nokul uygulamasının müşterilerine, örneğin "Ondokuz Mayıs Üniversitesi",
+"kiracı" ("tenant") diyoruz.  Her kiracı (Türkçe karakter ve boşluk içermeyen)
+kısa bir tanımlayıcıyla temsil ediliyor, ör. Ondokuz Mayıs Üniversitesi için
+`omu`.
 
-Kovansiyon
-----------
+Uygulamayı belirli bir kiracıya özgü kılmamak için uygulama kökünde `tenant`
+adında bir dizin ayrılmıştır.  "Kiracı özgünlüklerini" bu kök dizin altındaki
+"kiracı dizinleri"nde yönetiyoruz.  Örneğin `omu` kiracısına ait tüm özgünlükler
+`/tenant/omu` dizininde barınıyor.  Özel olarak tüm kiracılar için ortak olan
+(ve bu yönüyle özgün olmayan), ama yine de uygulamanın içinde "hard coded"
+olarak tutulması uygun görülmeyen kiracı bilgilerini de `/tenant/common`
+dizininde tutuyoruz.
 
-Uygulama kökünde yeni bir dizin olarak kiracı dizini Rails konvansiyonlarına
-yaptığımız bir ekleme.  Bu yeni konvansiyonu `/lib/support/tenant/convention.rb`
-ile kodifiye ediyoruz.  Konvansiyon şu metodları barındırıyor:
+Kiracı dizinlerini Rails uygulama kökünü izleyen biçimde alt dizinler halinde
+düzenlemeyi tercih ediyoruz.   Örneğin `omu` kiracısına ait yapılandırma
+bilgileri `/tenant/omu/config` dizininde.
 
-- `Tenant.active`: `RAILS_TENANT` ortam değişkenine başvurarak etkin kiracıyı
-  döner.
+Uygulama hangi kiracı için konuşlandırılmışsa o kiracıya "etkin kiracı"
+(`Tenant.active`) diyoruz.  Etkin kiracı tanımlayıcısı uygulama
+konuşlandırılırken `RAILS_TENANT` ortam değişkeniyle uygulamaya iletiliyor.
 
-  ```ruby
-  Tenant.active #=> "omu"
-  ```
+Kiracı özgünlükleri
+-------------------
 
-- `Tenant.root`: Kiracı kök dizinini `Pathname` nesnesi olarak döner.
+Kiracıya özgü "şeyler" genel olarak YAML gibi bir veri biçimiyle deklaratif
+halde temsil edilen pasif bilgiler oluyor, ör. kiracı yapılandırmaları.  Fakat
+kiracı özgünlüklerini bununla sınırlayamıyoruz.  Özgünlükleri kabaca aşağıdaki
+gibi kategorize edebiliriz:
 
-  ```ruby
-  Tenant.root.to_s #=> "Rails/kök/dizini/tenant"
-  ```
+- `config`: Uygulamanın sunduğu bir "servis"in çalışma biçimini kiracıya özgü
+  kılan deklaratif yapılandırmalar.  YAML biçiminde temsil edilen bu bilgiler
+  genel olarak etkin kiracıya ait `config` dizininde kayıtlı olan bir dizi
+  yapılandırma dosyasından oluşuyor.
 
-- `Tenant.path`: Verilen göreceli yolu etkin kiracı dizininde çözer.
+  Bu yapılandırmaların sadece tipik Rails yapılandırmaları ile sınırlı
+  olmadığını unutmayalım.  Örneğin geliştirilen genel bir modül ile kiracıya
+  özgü bir numaralandırma (ör. birim numaralandırması) yapılacaksa,
+  numaralandırma lojiği yine `config` dizinindeki dosyalarla şekillendiriliyor.
 
-  ```ruby
-  Tenant.path('app/foo') #=> "Rails/kök/dizini/tenant/omu/app/foo"
-  ```
+  Önerilen alt dizin `config`.
 
-- `Tenant.config_file`: Etkin kiracıya ait ana yapılandırma dosyasını döner.
+- `db`: Uygulamanın kiracı modellerinin kiracıya özgü şekilde kurulması
+  sürecinde kullanılan ilk veriler.  Örneğin kiracının YÖKSİS ve DETSİS
+  üzerinden çekilen organizasyon ağacı (birimler) bilgilerinin "kanonik formda"
+  temsili.
 
-  ```ruby
-  Tenant.config_file #=> "Rails/kök/dizini/tenant/omu/config/config.yml"
-  ```
+  Önerilen alt dizin `db`.
 
-- `Tenant.configuration`: `Rails.configuration`'a benzer şekilde etkin kiracıya
-  ait yapılandırmanın etkin Rails ortamına karşı düşen bölümünü `OpenStruct`
-  nesnesi olarak döner.
+- `assets`: Uygulamanın müşteri markalandırmasında kullanılan kiracıya özgü tüm
+  dijital varlıklar, ör. görseller, CSS ve Javascript dosyaları.
 
-- `Tenant.load_rules`: Ön tanımlı olarak ortak (`common`) ve etkin kiracı
-  dizinlerinde `app/rules` altında bulunan tüm kuralları yükler.  Sadece belirli
-  bir alt yolu yüklemek için aşağıdaki formu kullanın:
+  Önerilen alt dizin `app/assets`.
 
-  ```ruby
-  Tenant.load_rules 'unit' # Sadece app/rules/unit yolundaki kuralları yükle
-  ```
+- `test`: Kiracı özgünlüklerinin doğru yönetilip yönetilmediğini sınayan test
+  kodları.
 
-- `Tenant::Path`: Ortak ve etkin kiracı dizinlerinde konvansiyonla eklenen
-  `app`, `config`, `db` ve `test` alt dizin yollarını `Pathname` nesnesi olarak
-  döner.  Ortak kiracı dizinleri `common_` ile ön eklidir.
+  Önerilen alt dizin `test`.
 
-  ```ruby
-  Tenant::Path.app           #=> "Rails/kök/dizini/tenant/omu/app"
-  Tenant::Path.config        #=> "Rails/kök/dizini/tenant/omu/config"
-  Tenant::Path.db            #=> "Rails/kök/dizini/tenant/omu/db"
-  Tenant::Path.test          #=> "Rails/kök/dizini/tenant/omu/test"
+- `app`: Kiracıya özgü lojik farklılıklarını gerçekleyen ve daima uygulama
+  tarafından sunulan bir API'yi tüketen Ruby kodları.
 
-  Tenant::Path.common_app    #=> "Rails/kök/dizini/tenant/common/app"
-  Tenant::Path.common_config #=> "Rails/kök/dizini/tenant/common/config"
-  Tenant::Path.common_db     #=> "Rails/kök/dizini/tenant/common/db"
-  Tenant::Path.common_test   #=> "Rails/kök/dizini/tenant/common/test"
-  ```
+  Kiracı özgünlükleri anlamında belki de temsil edilmesi en zor bilgi türü bu
+  oluyor.  Genel olarak bunu yapmaktan yani kiracı dizinlerinde aktif kod
+  barındırmaktan kaçınıyoruz.  Ama bu kaçınılmaz ise ucu açık kodlar yerine
+  tercihen `/lib/support` veya `/app/services` altındaki modüllerde gerçeklenen
+  API'leri tüketen kodlar yazarak kiracı dizinine koyuyoruz.
+
+  Önerilen alt dizin: `app`.
+
+Kiracı ilk konuşlandırma prosedürü
+----------------------------------
+
+Yeni bir kiracı geldiğinde sırayla aşağıdaki prosedürü uyguluyoruz.
+
+1. Kiracı için bir tanımlayıcı oluştur ve bu tanımlayıcıyla yeni bir kiracı
+   dizini ekle.
+
+2. Kiracı yapılandırmasını `config/config.yml` dosyasında ilkle.
+
+3. Kiracının YÖKSİS ve DETSİS ağaçlarını Xokul ile çekerek kanonik formda
+   sırasıyla `db/src/yok.yml` ve `db/src/det.yml` dosyalarında kayıtla.
+
+4. Her iki kaynak dosyada birim kısaltmalarını ("abbreviations") elle oluştur.
+
+5. DETSİS kaynağında (`db/src/det.yml`) ilgili birimleri YÖKSİS ağacındaki üst
+   birimle elle ilişkilendir.
+
+   Ör. Bir idari birim olarak "Mühendislik Fakültesi Dekanlığı"nı YÖKSİS'teki
+   "Mühendislik Fakültesi" akademik birimini üst birim kabul edecek şekilde
+   ilişkilendir.  Bu işlemin tüm idari birimler için yapılmadığını not edelim.
+   Ör. üst birimi de bir idari birim olan bir birimi bir YÖKSİS birimiyle
+   ilişkilendirmek gerekmiyor.
+
+6. Tüm kaynak dosyalardan `db/units.yml` dosyasını üret.
