@@ -15,6 +15,7 @@
           <thead class="thead-dark">
             <tr>
               <th><%= t('.name') %></th>
+              <th><%= t('.category') %></th>
               <th><%= t('.identifier') %></th>
               <th><%= t('actions') %></th>
             </tr>
@@ -23,6 +24,7 @@
             <% @calendar_event_types.each do |calendar_event_type| %>
               <tr>
                 <td><%= calendar_event_type.name %></td>
+                <td><%= enum_t(calendar_event_type, :category) %></td>
                 <td><%= calendar_event_type.identifier %></td>
                 <td>
                   <%= link_to_edit([:edit, :calendar_management, calendar_event_type]) %>
