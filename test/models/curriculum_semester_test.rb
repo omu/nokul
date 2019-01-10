@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
 require 'test_helper'
+require_relative './concerns/enum_for_term_test'
 
 class CurriculumSemesterTest < ActiveSupport::TestCase
+  include EnumForTermTest
+
   setup do
     @semester = curriculum_semesters(:one)
   end
@@ -37,6 +40,9 @@ class CurriculumSemesterTest < ActiveSupport::TestCase
     assert_not @semester.valid?
     assert_not_empty @semester.errors[:sequence]
   end
+
+  # enums
+  test_term_enum(CurriculumSemester)
 
   # custom methods
   test 'total_ects method' do
