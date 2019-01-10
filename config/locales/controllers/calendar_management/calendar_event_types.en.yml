@@ -5,6 +5,17 @@ en:
         name: Event Type
         category: Category
         identifier: Type Identifier
+    enums:
+      calendar_event_type:
+        categories:
+          applications: Applications
+          payments: Payments
+          registrations: Registrations
+          advisor: Advisor Operations
+          exams: Exams
+          courses: Courses
+          submission: Submission
+          announcement: Announcement
   calendar_management:
     calendar_event_types:
       index:
