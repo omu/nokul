@@ -24,9 +24,9 @@ module Nokul
 
     def units(predication = nil)
       units = Nokul::Tenant::Units.load_source 'src/all'
-      return units unless predication
+      return units if predication.nil? || units.blank?
 
-      unless Nokul::Tenant::Units::Concerns::Predicable.method_defined?(predicator = "#{predication}?".to_sym)
+      unless units.first.respond_to?(predicator = "#{predication}?".to_sym)
         raise "Unsupported unit predication: #{predication}"
       end
 
