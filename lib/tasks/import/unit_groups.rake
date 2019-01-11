@@ -89,8 +89,7 @@ namespace :import do
       ]
     }
 
-    types_and_groups.each do |type_and_group|
-      group, type = type_and_group
+    types_and_groups.each do |group, type|
       UnitType.where(name: type).update(group: group)
     end
   end
