@@ -62,9 +62,9 @@ Birleştirilmiş birim verilerine erişmek için aşağıdaki örnek kod kullan�
 units = Nokul::Tenant::Units.load_source 'src/all'
 ```
 
-Bu şekilde elde edilen `units` aslında bir Ruby `Set` nesnesidir.  Birimlerde
-tekrarlı veri bulunmaz ve `Set` sınıfındaki tüm metodlar kullanılabilir.
-Örneğin birimleri birim tipine göre sınıflayalım.
+Bu şekilde elde edilen `units` temelde bir Ruby `Set` nesnesidir.  Birimlerde
+tekrarlı veri bulunmaz ve `Set` sınıfındaki metodlar kullanılabilir.  Örneğin
+birimleri birim tipine göre sınıflayalım.
 
 ```ruby
 units.classify(&:unit_type_id).each do |type, classified_units|
@@ -81,7 +81,7 @@ end
 ```
 
 YÖKSİS numarasını bildiğiniz bir birimi `units` kolleksiyonundan çekmek için
-`get` metodunu kullanabilirsiniz (`Set` sınıfına bizim eklediğimiz bir metod).
+`get` metodunu kullanabilirsiniz (bizim eklediğimiz özel bir metod).
 
 ```ruby
 puts units.get('123456').unit_type_id
