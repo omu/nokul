@@ -60,12 +60,12 @@ namespace :import do
         'Konservatuvar Disiplin Kurulu',
         'Konservatuvar Kurulu',
         'Konservatuvar Yönetim Kurulu',
-        'Meslek Yüksekokulu Disiplin Kurulu',
-        'Meslek Yüksekokulu Kurulu',
-        'Meslek Yüksekokulu Yönetim Kurulu',
         'Senato',
         'Üniversite Disiplin Kurulu',
-        'Üniversite Yönetim Kurulu'
+        'Üniversite Yönetim Kurulu',
+        'Yüksekokul Disiplin Kurulu',
+        'Yüksekokul Kurulu',
+        'Yüksekokul Yönetim Kurulu'
       ],
       administrative: [
         'Anabilim Dalı Başkanlığı',
@@ -82,10 +82,10 @@ namespace :import do
         'Konservatuvar Sekreterliği',
         'Koordinatörlük',
         'Merkez Müdürlüğü',
-        'Meslek Yüksekokulu Müdürlüğü',
-        'Meslek Yüksekokulu Sekreterliği',
         'Şube Müdürlüğü',
-        'Üniversite Sekreterliği'
+        'Üniversite Sekreterliği',
+        'Yüksekokul Müdürlüğü',
+        'Yüksekokul Sekreterliği'
       ]
     }
 
