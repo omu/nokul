@@ -63,6 +63,10 @@ Aktif kiracı aşağıdaki olay sırasıyla yüklenir.  Örneklendirme
 API
 ---
 
+Tüm Nokul::Tenant API metodlarını aşağıdaki dosyada bulabilirsiniz.
+
+        plugins/tenant/common/lib/nokul/tenant/api.rb
+
 - `Nokul::Tenant.name`:  Aktif Tenant adını döner.
 
   Örnek:
@@ -120,4 +124,34 @@ API
 
   ```ruby
   Nokul::Tenant.load
+  ```
+
+- `Nokul::Tenant.units(predication = nil)`: Birleştirilmiş birimler
+  kolleksiyonunu (`src/all` kaynağından yükleyerek) döner.  İsteğe bağlı olarak
+  verilen `predication` argümanıyla dönülen kolleksiyonda filtreleme yapar.
+
+  Örnek:
+
+  ```ruby
+  Nokul::Tenant.units                 #=> Tüm birleştirilmiş birimler
+  Nokul::Tenant.units :administrative #=> Sadece idari birimler
+  Nokul::Tenant.units :academic       #=> Sadece akademik birimler
+  ```
+
+  Kullanılabilecek `predication` seçenekleri için aşağıdaki dosyaya başvurun
+  (method adlarındaki `?` karakterini kaldırmayı unutmayın).
+
+        plugins/tenant/common/lib/nokul/tenant/units/concerns/predicable.rb
+
+- `Nokul::Tenant.unit_types(category = nil)`: Birleştirilmiş birimler bağlamında
+  tüm tekil birim tiplerini döner.  İsteğe bağlı olarak verilen `category`
+  argümanıyla sadece ilgili kategorideki birim tiplerini döner.  `category`
+  argümanı `adminisitrative` ve `academic` değerlerini alabilir.
+
+  Örnek:
+
+  ```ruby
+  Nokul::Tenant.unit_types                 #=> Tüm birim tipleri
+  Nokul::Tenant.unit_types :administrative #=> Sadece idari birim tipleri
+  Nokul::Tenant.unit_types :academic       #=> Sadece akademik birim tipleri
   ```
