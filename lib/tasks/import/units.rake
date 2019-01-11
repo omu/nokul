@@ -3,7 +3,7 @@
 namespace :import do
   desc 'Imports units from tenant unit data'
   task units: :environment do
-    units = Nokul::Tenant::Units.load_source 'src/all'
+    units = Tenant.units
     progress_bar = ProgressBar.spawn('Units', units.count)
 
     units.each do |unit|
