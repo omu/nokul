@@ -64,22 +64,14 @@ exams:
   - identifier: doctoral_proficiency
     name: Doktora Yeterlilik Sınavı
 courses:
-  - identifier: start_of
-    name: Derslerin Başlaması
-  - identifier: end_of
-    name: Derslerin Bitişi
-  - identifier: start_of_asynchronous
-    name: Asenkron Derslerin Başlaması
-  - identifier: end_of_asynchronous
-    name: Asenkron Derslerin Bitişi
-  - identifier: start_of_synchronous
-    name: Senkron Derslerin Başlaması
-  - identifier: end_of_synchronous
-    name: Senkron Derslerin Bitişi
-  - identifier: start_of_practical
-    name: Uygulama Derslerinin Başlaması
-  - identifier: end_of_practical
-    name: Uygulama Derslerinin Bitişi
+  - identifier: start_and_end_of
+    name: Derslerin Başlaması-Bitişi
+  - identifier: start_and_end_of_asynchronous
+    name: Asenkron Derslerin Başlaması-Bitişi
+  - identifier: start_and_end_of_synchronous
+    name: Senkron Derslerin Başlaması-Bitişi
+  - identifier: start_and_end_of_practical
+    name: Uygulama Derslerinin Başlaması-Bitişi
 submission:
   - identifier: final_project
     name: Dönem Projelerinin Teslimi

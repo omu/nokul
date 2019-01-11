@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateCourseEvaluationCriterionTypes < ActiveRecord::Migration[5.2]
   def change
     create_table :course_evaluation_criterion_types do |t|
