@@ -2,6 +2,8 @@ tr:
   activerecord:
     attributes:
       unit: &unit_attributes
+        abbreviation: Kısaltma
+        code: Kodu
         ancestry: Üst/Alt Birim
         detsis_id: DETSIS ID
         district: Bulunduğu İlçe
@@ -39,7 +41,7 @@ tr:
       form_title: Birim Oluştur
     search:
       duration: Öğretim Süresi
-      smart_search_placeholder: Birim adı, YOKSIS veya DETSIS numarası
+      smart_search_placeholder: Birim adı, kısaltması, YOKSIS veya DETSIS numarası
       unit_instruction_language: Öğretim Dili
       unit_instruction_type: Öğretim Türü
       unit_status: Birim Durumu

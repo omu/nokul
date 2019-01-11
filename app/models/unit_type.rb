@@ -8,15 +8,19 @@ class UnitType < ApplicationRecord
   # enums
   enum group: {
     other: 0,
-    university: 1,
-    faculty: 2,
-    department: 3,
-    program: 4,
-    committee: 5,
-    major: 6,
-    institute: 7,
-    rectorship: 8
+    faculty: 1,
+    department: 2,
+    major: 3,
+    undergraduate_program: 4,
+    graduate_program: 5,
+    institute: 6,
+    research_center: 7,
+    committee: 8,
+    administrative: 9
   }
+
+  # scopes
+  scope :program, -> { where(group: %w[undergraduate_program graduate_program]) }
 
   # relations
   has_many :units, dependent: :nullify
