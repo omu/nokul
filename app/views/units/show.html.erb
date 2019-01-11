@@ -14,6 +14,14 @@
         <table class="table table-responsive-sm">
           <tbody>
             <tr>
+              <td><%= t('.abbreviation') %></td>
+              <td><%= @unit.abbreviation %></td>
+            </tr>
+            <tr>
+              <td><%= t('.code') %></td>
+              <td><%= @unit.code %></td>
+            </tr>
+            <tr>
               <td><%= t('.parent') %></td>
               <td><%= @unit.parent.try(:name) %></td>
             </tr>

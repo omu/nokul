@@ -245,7 +245,7 @@ alman_dili_egitimi_dr:
   unit_status: active
   unit_instruction_language: turkish
   unit_instruction_type: normal_education
-  unit_type: program
+  unit_type: phd
   ancestry: "\
     <%= ActiveRecord::FixtureSet.identify(:omu) %>/\
     <%= ActiveRecord::FixtureSet.identify(:egitim_bilimleri_enstitusu) %>\
@@ -262,7 +262,7 @@ veteriner_fakultesi:
   ancestry: <%= ActiveRecord::FixtureSet.identify(:omu) %>
 
 unit_to_delete:
-  name: Unit o Delete
+  name: Unit to Delete
   yoksis_id: 123456
   duration: 4
   district: atakum

@@ -2,6 +2,8 @@ en:
   activerecord:
     attributes:
       unit: &unit_attributes
+        abbreviation: Abbreviation
+        code: Code
         ancestry: Parent/Children Unit
         detsis_id: DETSIS ID
         district: Location
@@ -39,7 +41,7 @@ en:
       form_title: Create a Unit
     search:
       duration: Duration of Instruction
-      smart_search_placeholder: Unit name, YOKSIS ID or DETSIS ID
+      smart_search_placeholder: Unit name, abbreviation, YOKSIS ID or DETSIS ID
       unit_instruction_language: Language of Instruction
       unit_instruction_type: Instruction Type
       unit_status: Unit Status

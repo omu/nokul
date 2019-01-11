@@ -23569,7 +23569,7 @@
   parent_yoksis_id: '147730'
   detsis_id: '68459231'
   parent_detsis_id: '78633602'
-  unit_type_id: Meslek Yüksekokulu Müdürlüğü
+  unit_type_id: Yüksekokul Müdürlüğü
   unit_status_id: Aktif
   district_id: Alaçam
 
@@ -23588,7 +23588,7 @@
   code: G02
   detsis_id: '80234327'
   parent_detsis_id: '68459231'
-  unit_type_id: Meslek Yüksekokulu Sekreterliği
+  unit_type_id: Yüksekokul Sekreterliği
   unit_status_id: Aktif
   district_id: Alaçam
 
@@ -23617,7 +23617,7 @@
   code: G05
   detsis_id: '67787986'
   parent_detsis_id: '68459231'
-  unit_type_id: Meslek Yüksekokulu Disiplin Kurulu
+  unit_type_id: Yüksekokul Disiplin Kurulu
   unit_status_id: Aktif
   district_id: Alaçam
 
@@ -23626,7 +23626,7 @@
   code: G06
   detsis_id: '63300708'
   parent_detsis_id: '68459231'
-  unit_type_id: Meslek Yüksekokulu Kurulu
+  unit_type_id: Yüksekokul Kurulu
   unit_status_id: Aktif
   district_id: Alaçam
 
@@ -23635,7 +23635,7 @@
   code: G07
   detsis_id: '49709020'
   parent_detsis_id: '68459231'
-  unit_type_id: Meslek Yüksekokulu Yönetim Kurulu
+  unit_type_id: Yüksekokul Yönetim Kurulu
   unit_status_id: Aktif
   district_id: Alaçam
 
@@ -23645,7 +23645,7 @@
   parent_yoksis_id: '122355'
   detsis_id: '50713553'
   parent_detsis_id: '78633602'
-  unit_type_id: Meslek Yüksekokulu Müdürlüğü
+  unit_type_id: Yüksekokul Müdürlüğü
   unit_status_id: Aktif
   district_id: Bafra
 
@@ -23694,7 +23694,7 @@
   code: G0D
   detsis_id: '65871243'
   parent_detsis_id: '50713553'
-  unit_type_id: Meslek Yüksekokulu Disiplin Kurulu
+  unit_type_id: Yüksekokul Disiplin Kurulu
   unit_status_id: Aktif
   district_id: Bafra
 
@@ -23703,7 +23703,7 @@
   code: G0E
   detsis_id: '14895932'
   parent_detsis_id: '50713553'
-  unit_type_id: Meslek Yüksekokulu Kurulu
+  unit_type_id: Yüksekokul Kurulu
   unit_status_id: Aktif
   district_id: Bafra
 
@@ -23712,7 +23712,7 @@
   code: G0F
   detsis_id: '58151099'
   parent_detsis_id: '50713553'
-  unit_type_id: Meslek Yüksekokulu Yönetim Kurulu
+  unit_type_id: Yüksekokul Yönetim Kurulu
   unit_status_id: Aktif
   district_id: Bafra
 
@@ -23722,7 +23722,7 @@
   parent_yoksis_id: '265280'
   detsis_id: '27516806'
   parent_detsis_id: '78633602'
-  unit_type_id: Meslek Yüksekokulu Müdürlüğü
+  unit_type_id: Yüksekokul Müdürlüğü
   unit_status_id: Aktif
   district_id: Bafra
 
@@ -23731,7 +23731,7 @@
   code: G0H
   detsis_id: '94861059'
   parent_detsis_id: '27516806'
-  unit_type_id: Meslek Yüksekokulu Sekreterliği
+  unit_type_id: Yüksekokul Sekreterliği
   unit_status_id: Aktif
   district_id: Bafra
 
@@ -23827,7 +23827,7 @@
   parent_yoksis_id: '174829'
   detsis_id: '15086663'
   parent_detsis_id: '78633602'
-  unit_type_id: Meslek Yüksekokulu Müdürlüğü
+  unit_type_id: Yüksekokul Müdürlüğü
   unit_status_id: Aktif
   district_id: Çarşamba
 
@@ -23846,7 +23846,7 @@
   code: G0Z
   detsis_id: '26903244'
   parent_detsis_id: '15086663'
-  unit_type_id: Meslek Yüksekokulu Sekreterliği
+  unit_type_id: Yüksekokul Sekreterliği
   unit_status_id: Aktif
   district_id: Çarşamba
 
@@ -23855,7 +23855,7 @@
   code: G10
   detsis_id: '70808284'
   parent_detsis_id: '15086663'
-  unit_type_id: Meslek Yüksekokulu Disiplin Kurulu
+  unit_type_id: Yüksekokul Disiplin Kurulu
   unit_status_id: Aktif
   district_id: Çarşamba
 
@@ -23864,7 +23864,7 @@
   code: G11
   detsis_id: '25420189'
   parent_detsis_id: '15086663'
-  unit_type_id: Meslek Yüksekokulu Kurulu
+  unit_type_id: Yüksekokul Kurulu
   unit_status_id: Aktif
   district_id: Çarşamba
 
@@ -23873,7 +23873,7 @@
   code: G12
   detsis_id: '37724678'
   parent_detsis_id: '15086663'
-  unit_type_id: Meslek Yüksekokulu Yönetim Kurulu
+  unit_type_id: Yüksekokul Yönetim Kurulu
   unit_status_id: Aktif
   district_id: Çarşamba
 
@@ -24109,7 +24109,7 @@
   parent_yoksis_id: '169488'
   detsis_id: '21071378'
   parent_detsis_id: '78633602'
-  unit_type_id: Meslek Yüksekokulu Müdürlüğü
+  unit_type_id: Yüksekokul Müdürlüğü
   unit_status_id: Aktif
   district_id: Çarşamba
 
@@ -24158,7 +24158,7 @@
   code: G21
   detsis_id: '87953753'
   parent_detsis_id: '21071378'
-  unit_type_id: Meslek Yüksekokulu Sekreterliği
+  unit_type_id: Yüksekokul Sekreterliği
   unit_status_id: Aktif
   district_id: Çarşamba
 
@@ -24187,7 +24187,7 @@
   code: G24
   detsis_id: '35949938'
   parent_detsis_id: '21071378'
-  unit_type_id: Meslek Yüksekokulu Disiplin Kurulu
+  unit_type_id: Yüksekokul Disiplin Kurulu
   unit_status_id: Aktif
   district_id: Çarşamba
 
@@ -24196,7 +24196,7 @@
   code: G25
   detsis_id: '65993268'
   parent_detsis_id: '21071378'
-  unit_type_id: Meslek Yüksekokulu Kurulu
+  unit_type_id: Yüksekokul Kurulu
   unit_status_id: Aktif
   district_id: Çarşamba
 
@@ -24205,7 +24205,7 @@
   code: G26
   detsis_id: '32165550'
   parent_detsis_id: '21071378'
-  unit_type_id: Meslek Yüksekokulu Yönetim Kurulu
+  unit_type_id: Yüksekokul Yönetim Kurulu
   unit_status_id: Aktif
   district_id: Çarşamba
 
@@ -24303,7 +24303,7 @@
   parent_yoksis_id: '122379'
   detsis_id: '78645283'
   parent_detsis_id: '78633602'
-  unit_type_id: Meslek Yüksekokulu Müdürlüğü
+  unit_type_id: Yüksekokul Müdürlüğü
   unit_status_id: Aktif
   district_id: Havza
 
@@ -24332,7 +24332,7 @@
   code: G2K
   detsis_id: '43413601'
   parent_detsis_id: '78645283'
-  unit_type_id: Meslek Yüksekokulu Sekreterliği
+  unit_type_id: Yüksekokul Sekreterliği
   unit_status_id: Aktif
   district_id: Havza
 
@@ -24391,7 +24391,7 @@
   code: G2T
   detsis_id: '12896414'
   parent_detsis_id: '78645283'
-  unit_type_id: Meslek Yüksekokulu Disiplin Kurulu
+  unit_type_id: Yüksekokul Disiplin Kurulu
   unit_status_id: Aktif
   district_id: Havza
 
@@ -24400,7 +24400,7 @@
   code: G2U
   detsis_id: '28348975'
   parent_detsis_id: '78645283'
-  unit_type_id: Meslek Yüksekokulu Kurulu
+  unit_type_id: Yüksekokul Kurulu
   unit_status_id: Aktif
   district_id: Havza
 
@@ -24409,7 +24409,7 @@
   code: G2V
   detsis_id: '45728884'
   parent_detsis_id: '78645283'
-  unit_type_id: Meslek Yüksekokulu Yönetim Kurulu
+  unit_type_id: Yüksekokul Yönetim Kurulu
   unit_status_id: Aktif
   district_id: Havza
 
@@ -24419,7 +24419,7 @@
   parent_yoksis_id: '122330'
   detsis_id: '36024139'
   parent_detsis_id: '78633602'
-  unit_type_id: Meslek Yüksekokulu Müdürlüğü
+  unit_type_id: Yüksekokul Müdürlüğü
   unit_status_id: Aktif
   district_id: Terme
 
@@ -24448,7 +24448,7 @@
   code: G31
   detsis_id: '89716816'
   parent_detsis_id: '36024139'
-  unit_type_id: Meslek Yüksekokulu Sekreterliği
+  unit_type_id: Yüksekokul Sekreterliği
   unit_status_id: Aktif
   district_id: Terme
 
@@ -24477,7 +24477,7 @@
   code: G34
   detsis_id: '37225687'
   parent_detsis_id: '36024139'
-  unit_type_id: Meslek Yüksekokulu Disiplin Kurulu
+  unit_type_id: Yüksekokul Disiplin Kurulu
   unit_status_id: Aktif
   district_id: Terme
 
@@ -24486,7 +24486,7 @@
   code: G35
   detsis_id: '86846638'
   parent_detsis_id: '36024139'
-  unit_type_id: Meslek Yüksekokulu Kurulu
+  unit_type_id: Yüksekokul Kurulu
   unit_status_id: Aktif
   district_id: Terme
 
@@ -24495,7 +24495,7 @@
   code: G36
   detsis_id: '28679253'
   parent_detsis_id: '36024139'
-  unit_type_id: Meslek Yüksekokulu Yönetim Kurulu
+  unit_type_id: Yüksekokul Yönetim Kurulu
   unit_status_id: Aktif
   district_id: Terme
 
@@ -24505,7 +24505,7 @@
   parent_yoksis_id: '122296'
   detsis_id: '61206311'
   parent_detsis_id: '78633602'
-  unit_type_id: Meslek Yüksekokulu Müdürlüğü
+  unit_type_id: Yüksekokul Müdürlüğü
   unit_status_id: Aktif
   district_id: Vezirköprü
 
@@ -24546,7 +24546,7 @@
   code: G3B
   detsis_id: '48974914'
   parent_detsis_id: '61206311'
-  unit_type_id: Meslek Yüksekokulu Sekreterliği
+  unit_type_id: Yüksekokul Sekreterliği
   unit_status_id: Aktif
   district_id: Vezirköprü
 
@@ -24575,7 +24575,7 @@
   code: G3E
   detsis_id: '19993096'
   parent_detsis_id: '61206311'
-  unit_type_id: Meslek Yüksekokulu Kurulu
+  unit_type_id: Yüksekokul Kurulu
   unit_status_id: Aktif
   district_id: Vezirköprü
 
@@ -24584,7 +24584,7 @@
   code: G3F
   detsis_id: '46275906'
   parent_detsis_id: '61206311'
-  unit_type_id: Meslek Yüksekokulu Disiplin Kurulu
+  unit_type_id: Yüksekokul Disiplin Kurulu
   unit_status_id: Aktif
   district_id: Vezirköprü
 
@@ -24593,7 +24593,7 @@
   code: G3G
   detsis_id: '43583466'
   parent_detsis_id: '61206311'
-  unit_type_id: Meslek Yüksekokulu Yönetim Kurulu
+  unit_type_id: Yüksekokul Yönetim Kurulu
   unit_status_id: Aktif
   district_id: Vezirköprü
 
@@ -24613,7 +24613,7 @@
   parent_yoksis_id: '201881'
   detsis_id: '30423168'
   parent_detsis_id: '78633602'
-  unit_type_id: Meslek Yüksekokulu Müdürlüğü
+  unit_type_id: Yüksekokul Müdürlüğü
   unit_status_id: Aktif
   district_id: Tekkeköy
 
@@ -24682,7 +24682,7 @@
   code: G3T
   detsis_id: '37077418'
   parent_detsis_id: '30423168'
-  unit_type_id: Meslek Yüksekokulu Sekreterliği
+  unit_type_id: Yüksekokul Sekreterliği
   unit_status_id: Aktif
   district_id: Tekkeköy
 
@@ -24701,7 +24701,7 @@
   code: G3V
   detsis_id: '55101226'
   parent_detsis_id: '30423168'
-  unit_type_id: Meslek Yüksekokulu Disiplin Kurulu
+  unit_type_id: Yüksekokul Disiplin Kurulu
   unit_status_id: Aktif
   district_id: Tekkeköy
 
@@ -24710,7 +24710,7 @@
   code: G3Y
   detsis_id: '75674136'
   parent_detsis_id: '30423168'
-  unit_type_id: Meslek Yüksekokulu Kurulu
+  unit_type_id: Yüksekokul Kurulu
   unit_status_id: Aktif
   district_id: Tekkeköy
 
@@ -24719,7 +24719,7 @@
   code: G3Z
   detsis_id: '66604919'
   parent_detsis_id: '30423168'
-  unit_type_id: Meslek Yüksekokulu Yönetim Kurulu
+  unit_type_id: Yüksekokul Yönetim Kurulu
   unit_status_id: Aktif
   district_id: Tekkeköy
 
@@ -27808,7 +27808,7 @@
   parent_yoksis_id: '122336'
   detsis_id: '45664456'
   parent_detsis_id: '78633602'
-  unit_type_id: Meslek Yüksekokulu Müdürlüğü
+  unit_type_id: Yüksekokul Müdürlüğü
   unit_status_id: Aktif
   district_id: Atakum
 
@@ -27827,7 +27827,7 @@
   code: GEA
   detsis_id: '90501840'
   parent_detsis_id: '45664456'
-  unit_type_id: Meslek Yüksekokulu Sekreterliği
+  unit_type_id: Yüksekokul Sekreterliği
   unit_status_id: Aktif
   district_id: Atakum
 
@@ -27856,7 +27856,7 @@
   code: GED
   detsis_id: '81688174'
   parent_detsis_id: '45664456'
-  unit_type_id: Meslek Yüksekokulu Disiplin Kurulu
+  unit_type_id: Yüksekokul Disiplin Kurulu
   unit_status_id: Aktif
   district_id: Atakum
 
@@ -27865,7 +27865,7 @@
   code: GEE
   detsis_id: '69429532'
   parent_detsis_id: '45664456'
-  unit_type_id: Meslek Yüksekokulu Kurulu
+  unit_type_id: Yüksekokul Kurulu
   unit_status_id: Aktif
   district_id: Atakum
 
@@ -27874,7 +27874,7 @@
   code: GEF
   detsis_id: '60577894'
   parent_detsis_id: '45664456'
-  unit_type_id: Meslek Yüksekokulu Yönetim Kurulu
+  unit_type_id: Yüksekokul Yönetim Kurulu
   unit_status_id: Aktif
   district_id: Atakum
 
@@ -28986,7 +28986,7 @@
   parent_yoksis_id: '201921'
   detsis_id: '19676956'
   parent_detsis_id: '78633602'
-  unit_type_id: Diğer İdari Birim
+  unit_type_id: Yüksekokul Müdürlüğü
   unit_status_id: Aktif
   district_id: Atakum
 
@@ -29005,7 +29005,7 @@
   code: GJ8
   detsis_id: '94040670'
   parent_detsis_id: '19676956'
-  unit_type_id: Diğer İdari Birim
+  unit_type_id: Yüksekokul Sekreterliği
   unit_status_id: Aktif
   district_id: Atakum
 
@@ -29014,7 +29014,7 @@
   code: GJ9
   detsis_id: '56360828'
   parent_detsis_id: '19676956'
-  unit_type_id: Diğer Kurul
+  unit_type_id: Yüksekokul Disiplin Kurulu
   unit_status_id: Aktif
   district_id: Atakum
 
@@ -29023,7 +29023,7 @@
   code: GJA
   detsis_id: '43044129'
   parent_detsis_id: '19676956'
-  unit_type_id: Diğer Kurul
+  unit_type_id: Yüksekokul Kurulu
   unit_status_id: Aktif
   district_id: Atakum
 
@@ -29032,7 +29032,7 @@
   code: GJB
   detsis_id: '98617224'
   parent_detsis_id: '19676956'
-  unit_type_id: Diğer Kurul
+  unit_type_id: Yüksekokul Yönetim Kurulu
   unit_status_id: Aktif
   district_id: Atakum
 
@@ -29719,7 +29719,7 @@
   parent_yoksis_id: '122360'
   detsis_id: '56591305'
   parent_detsis_id: '78633602'
-  unit_type_id: Meslek Yüksekokulu Müdürlüğü
+  unit_type_id: Yüksekokul Müdürlüğü
   unit_status_id: Aktif
   district_id: İlkadım
 
@@ -29788,7 +29788,7 @@
   code: GMZ
   detsis_id: '88496548'
   parent_detsis_id: '56591305'
-  unit_type_id: Meslek Yüksekokulu Sekreterliği
+  unit_type_id: Yüksekokul Sekreterliği
   unit_status_id: Aktif
   district_id: İlkadım
 
@@ -29847,7 +29847,7 @@
   code: GN5
   detsis_id: '19817726'
   parent_detsis_id: '56591305'
-  unit_type_id: Meslek Yüksekokulu Disiplin Kurulu
+  unit_type_id: Yüksekokul Disiplin Kurulu
   unit_status_id: Aktif
   district_id: İlkadım
 
@@ -29856,7 +29856,7 @@
   code: GN6
   detsis_id: '25664880'
   parent_detsis_id: '56591305'
-  unit_type_id: Meslek Yüksekokulu Kurulu
+  unit_type_id: Yüksekokul Kurulu
   unit_status_id: Aktif
   district_id: İlkadım
 
@@ -29865,7 +29865,7 @@
   code: GN7
   detsis_id: '10123157'
   parent_detsis_id: '56591305'
-  unit_type_id: Meslek Yüksekokulu Yönetim Kurulu
+  unit_type_id: Yüksekokul Yönetim Kurulu
   unit_status_id: Aktif
   district_id: İlkadım
 
@@ -31896,7 +31896,7 @@
   parent_yoksis_id: '284516'
   detsis_id: '46697017'
   parent_detsis_id: '78633602'
-  unit_type_id: Meslek Yüksekokulu Müdürlüğü
+  unit_type_id: Yüksekokul Müdürlüğü
   unit_status_id: Yarı Pasif
   district_id: 19 Mayıs
 
@@ -33055,7 +33055,7 @@
   code: H2B
   detsis_id: '63048626'
   parent_detsis_id: '50713553'
-  unit_type_id: Meslek Yüksekokulu Sekreterliği
+  unit_type_id: Yüksekokul Sekreterliği
   unit_status_id: Aktif
   district_id: Atakum
   district_id_: Atakum

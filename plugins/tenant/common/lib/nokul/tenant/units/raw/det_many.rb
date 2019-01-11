@@ -29,52 +29,52 @@ module Nokul
           }
 
           TYPES = {
-            'Rektörlük'                           => /Rektörlüğü/,
-            'Senato'                              => /Senato/,
-            'Üniversite Yönetim Kurulu'           => /Üniversite Yönetim Kurulu/,
-            'Üniversite Disiplin Kurulu'          => /Üniversite Disiplin Kurulu/,
-            'Üniversite Sekreterliği'             => /Genel Sekreterlik/,
+            'Rektörlük'                     => /Rektörlüğü/,
+            'Senato'                        => /Senato/,
+            'Üniversite Yönetim Kurulu'     => /Üniversite Yönetim Kurulu/,
+            'Üniversite Disiplin Kurulu'    => /Üniversite Disiplin Kurulu/,
+            'Üniversite Sekreterliği'       => /Genel Sekreterlik/,
             # -
-            'Merkez Müdürlüğü'                    => /Merkez\S* Müdürlüğü/,
+            'Merkez Müdürlüğü'              => /Merkez\S* Müdürlüğü/,
             # -
-            'Enstitü Müdürlüğü'                   => /Enstitü\S* Müdürlüğü/,
-            'Enstitü Kurulu'                      => /Enstitü\S* Kurulu/,
-            'Enstitü Yönetim Kurulu'              => /Enstitü\S* Yönetim Kurulu/,
-            'Enstitü Disiplin Kurulu'             => /Enstitü\S* Disiplin Kurulu/,
-            'Enstitü Sekreterliği'                => /Enstitü\S* Sekreterliği/,
+            'Enstitü Müdürlüğü'             => /Enstitü\S* Müdürlüğü/,
+            'Enstitü Kurulu'                => /Enstitü\S* Kurulu/,
+            'Enstitü Yönetim Kurulu'        => /Enstitü\S* Yönetim Kurulu/,
+            'Enstitü Disiplin Kurulu'       => /Enstitü\S* Disiplin Kurulu/,
+            'Enstitü Sekreterliği'          => /Enstitü\S* Sekreterliği/,
             # -
-            'Meslek Yüksekokulu Müdürlüğü'        => /Meslek Yüksekokulu Müdürlüğü/,
-            'Meslek Yüksekokulu Kurulu'           => /Meslek Yüksekokulu Kurulu/,
-            'Meslek Yüksekokulu Yönetim Kurulu'   => /Meslek Yüksekokulu Yönetim Kurulu/,
-            'Meslek Yüksekokulu Disiplin Kurulu'  => /Meslek Yüksekokulu Disiplin Kurulu/,
-            'Meslek Yüksekokulu Sekreterliği'     => /Meslek Yüksekokulu Sekreterliği/,
+            'Yüksekokul Müdürlüğü'          => /Yüksekokul\S* Müdürlüğü/,
+            'Yüksekokul Kurulu'             => /Yüksekokul\S* Kurulu/,
+            'Yüksekokul Yönetim Kurulu'     => /Yüksekokul\S* Yönetim Kurulu/,
+            'Yüksekokul Disiplin Kurulu'    => /Yüksekokul\S* Disiplin Kurulu/,
+            'Yüksekokul Sekreterliği'       => /Yüksekokul\S* Sekreterliği/,
             # -
-            'Fakülte Dekanlığı'                   => /Fakülte\S* Dekanlığı/,
-            'Fakülte Kurulu'                      => /Fakülte\S* Kurulu/,
-            'Fakülte Yönetim Kurulu'              => /Fakülte\S* Yönetim Kurulu/,
-            'Fakülte Disiplin Kurulu'             => /Fakülte\S* Disiplin Kurulu/,
-            'Fakülte Sekreterliği'                => /Fakülte\S* Sekreterliği/,
+            'Fakülte Dekanlığı'             => /Fakülte\S* Dekanlığı/,
+            'Fakülte Kurulu'                => /Fakülte\S* Kurulu/,
+            'Fakülte Yönetim Kurulu'        => /Fakülte\S* Yönetim Kurulu/,
+            'Fakülte Disiplin Kurulu'       => /Fakülte\S* Disiplin Kurulu/,
+            'Fakülte Sekreterliği'          => /Fakülte\S* Sekreterliği/,
             # -
-            'Konservatuvar Müdürlüğü'             => /Konservatuvar\S* Müdürlüğü/,
-            'Konservatuvar Kurulu'                => /Konservatuvar\S* Kurulu/,
-            'Konservatuvar Yönetim Kurulu'        => /Konservatuvar\S* Yönetim Kurulu/,
-            'Konservatuvar Disiplin Kurulu'       => /Konservatuvar\S* Disiplin Kurulu/,
-            'Konservatuvar Sekreterliği'          => /Konservatuvar\S* Sekreterliği/,
+            'Konservatuvar Müdürlüğü'       => /Konservatuvar\S* Müdürlüğü/,
+            'Konservatuvar Kurulu'          => /Konservatuvar\S* Kurulu/,
+            'Konservatuvar Yönetim Kurulu'  => /Konservatuvar\S* Yönetim Kurulu/,
+            'Konservatuvar Disiplin Kurulu' => /Konservatuvar\S* Disiplin Kurulu/,
+            'Konservatuvar Sekreterliği'    => /Konservatuvar\S* Sekreterliği/,
             # -
-            'Bölüm Başkanlığı'                    => /Bölüm\S* Başkanlığı/,
-            'Anabilim Dalı Başkanlığı'            => /Anabilim Dalı Başkanlığı/,
-            'Anasanat Dalı Başkanlığı'            => /Anasanat Dalı Başkanlığı/,
+            'Bölüm Başkanlığı'              => /Bölüm\S* Başkanlığı/,
+            'Anabilim Dalı Başkanlığı'      => /Anabilim Dalı Başkanlığı/,
+            'Anasanat Dalı Başkanlığı'      => /Anasanat Dalı Başkanlığı/,
             # -
-            'Başmüdürlük'                         => /Başmüdürlü\S*/,
-            'Başhekimlik'                         => /Başhekimli\S*/,
+            'Başmüdürlük'                   => /Başmüdürlü\S*/,
+            'Başhekimlik'                   => /Başhekimli\S*/,
             # -
-            'Şube Müdürlüğü'                      => /Şube\S* Müdürlüğü/,
-            'Daire Başkanlığı'                    => /Daire\S* Başkanlığı/,
+            'Şube Müdürlüğü'                => /Şube\S* Müdürlüğü/,
+            'Daire Başkanlığı'              => /Daire\S* Başkanlığı/,
             # -
-            'Etik Kurul'                          => /Etik Kurul/,
-            'Koordinatörlük'                      => /Koordinatörlüğü/,
-            'Diğer Kurul'                         => /Kurul/,
-            'Diğer Komisyon'                      => /Komisyon/
+            'Etik Kurul'                    => /Etik Kurul/,
+            'Koordinatörlük'                => /Koordinatörlüğü/,
+            'Diğer Kurul'                   => /Kurul/,
+            'Diğer Komisyon'                => /Komisyon/
           }.freeze
           # rubocop:enable Layout/AlignHash
 
