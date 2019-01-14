@@ -24,6 +24,7 @@ class AvailableCourse < ApplicationRecord
 
   # validations
   validates :course, uniqueness: { scope: %i[academic_term curriculum] }
+  validates :assessments_approved, inclusion: { in: [true, false] }
 
   # delegates
   delegate :code, :name, :theoric, :practice, :laboratory, :credit, :program_type, to: :course
