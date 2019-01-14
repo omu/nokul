@@ -1,5 +1,5 @@
 # REFER DOCUMENTATION TO EDIT THIS FILE.  PLEASE NOTE THAT:
-# 
+#
 # - EXISTING RAW ATTRIBUTES WILL NORMALLY BE OVERWRITTEN ON NEXT UPDATE.
 # - COMMENTS AND EXTRA BLANK LINES WILL NOT BE PRESERVED.
 ---
@@ -4703,7 +4703,7 @@
     - Detsis tarafında bölüm başkanlığı yok
 
 - name: Grafik Programı
-  abbreviation: GRAFİK-PR
+  abbreviation: GİT-GRAFİK-PR
   yoksis_id: '337400'
   parent_yoksis_id: '232412'
   unit_type_id: Önlisans/lisans Programı
@@ -4715,6 +4715,8 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
   founded_at: 12.04.2018
+  issues:
+    - Üst birimi Grafik Bölümü değil, Görsel İletişim Tasarımı Bölümü
 
 - name: Görsel İletişim Tasarımı Bölümü
   abbreviation: GİT
@@ -4741,7 +4743,7 @@
   founded_at: 05.04.2017
 
 - name: Grafik Anasanat Dalı
-  abbreviation: GİT-GRAFİK
+  abbreviation: GİT-GRAFİK-AD
   yoksis_id: '319347'
   parent_yoksis_id: '232412'
   unit_type_id: Anasanat Dalı
