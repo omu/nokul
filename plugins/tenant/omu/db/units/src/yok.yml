@@ -482,7 +482,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Milletlerarası Hukuk Anabilim Dalı
-  abbreviation: HUKUKB-MH-AD
+  abbreviation: HUKUKB-MAH-AD
   yoksis_id: '201356'
   parent_yoksis_id: '176334'
   unit_type_id: Anabilim Dalı
@@ -583,7 +583,7 @@
     - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Mali Hukuk Anabilim Dalı
-  abbreviation: KAMU-MH-AD
+  abbreviation: KAMU-MALİ-AD
   yoksis_id: '159917'
   parent_yoksis_id: '140231'
   unit_type_id: Anabilim Dalı
@@ -647,7 +647,7 @@
   founded_at: 10.09.2009
 
 - name: Medeni Hukuk Anabilim Dalı
-  abbreviation: ÖZELHUKUK-MH-AD
+  abbreviation: ÖZELHUKUK-MEDENİ-AD
   yoksis_id: '140236'
   parent_yoksis_id: '140235'
   unit_type_id: Anabilim Dalı
@@ -784,7 +784,7 @@
   duration: 2
 
 - name: Bitkisel ve Hayvansal Üretim Bölümü
-  abbreviation: BAFRA-MYO-BHU
+  abbreviation: BAFRA-MYO-BHÜ
   yoksis_id: '169417'
   parent_yoksis_id: '122355'
   unit_type_id: Bölüm
@@ -795,7 +795,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Bitki Koruma Programı
-  abbreviation: BAFRA-MYO-BHU-BK-PR
+  abbreviation: BAFRA-MYO-BHÜ-BK-PR
   yoksis_id: '254936'
   parent_yoksis_id: '169417'
   unit_type_id: Önlisans/lisans Programı
@@ -809,7 +809,7 @@
   founded_at: 16.04.2014
 
 - name: Organik Tarım Programı
-  abbreviation: BAFRA-MYO-BHU-OT-PR
+  abbreviation: BAFRA-MYO-BHÜ-OT-PR
   yoksis_id: '169419'
   parent_yoksis_id: '169417'
   unit_type_id: Önlisans/lisans Programı
@@ -822,7 +822,7 @@
   duration: 2
 
 - name: Tıbbi ve Aromatik Bitkiler Programı
-  abbreviation: BAFRA-MYO-BHU-TAB-PR
+  abbreviation: BAFRA-MYO-BHÜ-TAB-PR
   yoksis_id: '169425'
   parent_yoksis_id: '169417'
   unit_type_id: Önlisans/lisans Programı
@@ -835,7 +835,7 @@
   duration: 2
 
 - name: Tıbbi ve Aromatik Bitkiler Programı (İö)
-  abbreviation: BAFRA-MYO-BHU-TAB-PR-2
+  abbreviation: BAFRA-MYO-BHÜ-TAB-PR-2
   yoksis_id: '169426'
   parent_yoksis_id: '169417'
   unit_type_id: Önlisans/lisans Programı
@@ -1345,7 +1345,7 @@
   founded_at: 15.08.2013
 
 - name: Biyoloji Eğitimi (Yl) (Tezli)
-  abbreviation: BİYO-EĞ-YL
+  abbreviation: BİYOEĞ-YL
   yoksis_id: '301215'
   parent_yoksis_id: '174846'
   unit_type_id: Yüksek Lisans Programı
@@ -1544,7 +1544,7 @@
   founded_at: 01.03.2013
 
 - name: Fizik Eğitimi (Yl) (Tezli)
-  abbreviation: FİZİK-EĞ-YL
+  abbreviation: FİZİKEĞ-YL
   yoksis_id: '245968'
   parent_yoksis_id: '174846'
   unit_type_id: Yüksek Lisans Programı
@@ -2480,7 +2480,7 @@
   duration: 4
 
 - name: Özel Eğitim Bölümü
-  abbreviation: ÖZELB
+  abbreviation: ÖZELEĞİTİM
   yoksis_id: '122092'
   parent_yoksis_id: '122082'
   unit_type_id: Bölüm
@@ -2491,7 +2491,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Zihin Engelliler Eğitimi Anabilim Dalı
-  abbreviation: ÖZELB-ZİHİN-AD
+  abbreviation: ÖZELEĞİTİM-ZİHİN-AD
   yoksis_id: '122094'
   parent_yoksis_id: '122092'
   unit_type_id: Anabilim Dalı
@@ -2502,7 +2502,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Özel Eğitim Öğretmenliği Programı
-  abbreviation: ÖZELB-PR
+  abbreviation: ÖZELEĞİTİM-PR
   yoksis_id: '283503'
   parent_yoksis_id: '122092'
   unit_type_id: Önlisans/lisans Programı
@@ -2516,7 +2516,7 @@
   founded_at: 30.12.2015
 
 - name: İşitme Engelliler Eğitimi Anabilim Dalı
-  abbreviation: ÖZELB-İŞİTME-AD
+  abbreviation: ÖZELEĞİTİM-İŞİTME-AD
   yoksis_id: '122093'
   parent_yoksis_id: '122092'
   unit_type_id: Anabilim Dalı
@@ -2600,7 +2600,7 @@
   duration: 2
 
 - name: Bitki Koruma (Dr)
-  abbreviation: BİTKİ-DR
+  abbreviation: BİTKİKOR-DR
   yoksis_id: '211294'
   parent_yoksis_id: '122386'
   unit_type_id: Doktora Programı
@@ -2612,7 +2612,7 @@
   duration: 4
 
 - name: Bitki Koruma (Yl) (Tezli)
-  abbreviation: BİTKİ-YL
+  abbreviation: BİTKİKOR-YL
   yoksis_id: '211293'
   parent_yoksis_id: '122386'
   unit_type_id: Yüksek Lisans Programı
@@ -4675,7 +4675,7 @@
   founded_at: 05.04.2017
 
 - name: Endüstri Ürünleri Tasarımı Programı
-  abbreviation: ENTAS-PR
+  abbreviation: ENTAS-EÜT-PR
   yoksis_id: '337269'
   parent_yoksis_id: '232411'
   unit_type_id: Önlisans/lisans Programı
@@ -5208,7 +5208,7 @@
   founded_at: 10.09.2009
 
 - name: Bilgisayar Bilimleri Anabilim Dalı
-  abbreviation: BİLGİSAYAR-BİL-AD
+  abbreviation: BİLGİSAYAR-BİLİM-AD
   yoksis_id: '122185'
   parent_yoksis_id: '122184'
   unit_type_id: Anabilim Dalı
@@ -6347,7 +6347,7 @@
   duration: 2
 
 - name: Bitkisel ve Hayvansal Üretim Bölümü
-  abbreviation: SAMSUN-MYO-BİTKİ
+  abbreviation: SAMSUN-MYO-BHÜ
   yoksis_id: '169860'
   parent_yoksis_id: '122360'
   unit_type_id: Bölüm
@@ -6358,7 +6358,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Seracılık Programı
-  abbreviation: SAMSUN-MYO-BİTKİ-SERA-PR
+  abbreviation: SAMSUN-MYO-BHÜ-SERA-PR
   yoksis_id: '169861'
   parent_yoksis_id: '169860'
   unit_type_id: Önlisans/lisans Programı
@@ -7252,7 +7252,7 @@
   duration: 4
 
 - name: Hayvan Besleme ve Beslenme Hastalıkları (Dr)
-  abbreviation: VETERİNER-HAYVAN-DR
+  abbreviation: VETERİNER-HBH-DR
   yoksis_id: '169580'
   parent_yoksis_id: '122387'
   unit_type_id: Doktora Programı
@@ -7264,7 +7264,7 @@
   duration: 4
 
 - name: Hayvan Besleme ve Beslenme Hastalıkları (Yl) (Tezli) (Veteriner)
-  abbreviation: VETERİNER-HAYVAN-YL
+  abbreviation: VETERİNER-HBH-YL
   yoksis_id: '169521'
   parent_yoksis_id: '122387'
   unit_type_id: Yüksek Lisans Programı
@@ -8709,7 +8709,7 @@
   unit_instruction_type_id: Normal Öğretim
   founded_at: 21.07.2011
   issues:
-    - Detsis tarafında anabilim dalı başkanlığı yok. SOSYAL-BİLİM-İEİ-ADB ile benzerlik kontrol edilmeli.
+    - Detsis tarafında anabilim dalı başkanlığı yok. SOSYAL-BİLİM-İŞLENİ-ADB ile benzerlik kontrol edilmeli.
 
 - name: Evlilik ve Aile Danışmanlığı (Yl) (Tezsiz) (İö)
   abbreviation: EVLİLİK-YZ-2
@@ -10956,7 +10956,7 @@
   founded_at: 10.09.2009
 
 - name: Dölerme ve Suni Tohumlama Anabilim Dalı
-  abbreviation: VETERİNER-KLİNİK-DST-AD
+  abbreviation: VETERİNER-KLİNİK-DÖLERME-AD
   yoksis_id: '169346'
   parent_yoksis_id: '169317'
   unit_type_id: Anabilim Dalı
@@ -15694,7 +15694,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Alman Dili Eğitimi (Dr)
-  abbreviation: EĞİTİM-BİLİM-ADE-DR
+  abbreviation: EĞİTİM-BİLİM-ALM-DR
   yoksis_id: '267762'
   parent_yoksis_id: '174846'
   unit_type_id: Doktora Programı
@@ -15705,7 +15705,7 @@
   duration: 4
 
 - name: Alman Dili Eğitimi (Yl) (Tezli)
-  abbreviation: EĞİTİM-BİLİM-ADE-YL
+  abbreviation: EĞİTİM-BİLİM-ALM-YL
   yoksis_id: '267761'
   parent_yoksis_id: '174846'
   unit_type_id: Yüksek Lisans Programı
@@ -15716,7 +15716,7 @@
   duration: 2
 
 - name: Coğrafya Eğitimi (Yl) (Tezli)
-  abbreviation: EĞİTİM-BİLİM-COĞEĞ-YL
+  abbreviation: EĞİTİM-BİLİM-COĞ-YL
   yoksis_id: '267769'
   parent_yoksis_id: '174846'
   unit_type_id: Yüksek Lisans Programı
@@ -15771,7 +15771,7 @@
   duration: 2
 
 - name: Fransız Dili Eğitimi (Yl) (Tezli)
-  abbreviation: EĞİTİM-BİLİM-FDE-YL
+  abbreviation: EĞİTİM-BİLİM-FR-YL
   yoksis_id: '267763'
   parent_yoksis_id: '174846'
   unit_type_id: Yüksek Lisans Programı
@@ -15837,7 +15837,7 @@
   duration: 2
 
 - name: İngiliz Dili Eğitimi (Yl) (Tezli)
-  abbreviation: EĞİTİM-BİLİM-İDE-YL
+  abbreviation: EĞİTİM-BİLİM-İNG-YL
   yoksis_id: '267764'
   parent_yoksis_id: '174846'
   unit_type_id: Yüksek Lisans Programı
@@ -15848,7 +15848,7 @@
   duration: 2
 
 - name: İngiliz Dili Eğitimi (Yl) (Tezli) (Gazi Üniversitesi Ortak)
-  abbreviation: EĞİTİM-BİLİM-İDE-YL-GAZİ
+  abbreviation: EĞİTİM-BİLİM-İNG-YL-GAZİ
   yoksis_id: '235313'
   parent_yoksis_id: '174846'
   unit_type_id: Yüksek Lisans Programı
@@ -16414,7 +16414,7 @@
   duration: 4
 
 - name: Zihin Engelliler Öğretmenliği Programı
-  abbreviation: ÖZELB-ZİHİN-PR
+  abbreviation: ÖZELEĞİTİM-ZİHİN-PR
   yoksis_id: '168682'
   parent_yoksis_id: '122092'
   unit_type_id: Önlisans/lisans Programı
@@ -16437,7 +16437,7 @@
   duration: 4
 
 - name: Zihin Engelliler Öğretmenliği Programı (İö)
-  abbreviation: ÖZELB-ZİHİN-PR-2
+  abbreviation: ÖZELEĞİTİM-ZİHİN-PR-2
   yoksis_id: '168683'
   parent_yoksis_id: '122092'
   unit_type_id: Önlisans/lisans Programı
@@ -16449,7 +16449,7 @@
   duration: 4
 
 - name: İşitme Engelliler Öğretmenliği Programı
-  abbreviation: ÖZELB-İŞİTME-PR
+  abbreviation: ÖZELEĞİTİM-İŞİTME-PR
   yoksis_id: '168668'
   parent_yoksis_id: '122092'
   unit_type_id: Önlisans/lisans Programı
@@ -16461,7 +16461,7 @@
   duration: 4
 
 - name: İşitme Engelliler Öğretmenliği Programı (İö)
-  abbreviation: ÖZELB-İŞİTME-PR-2
+  abbreviation: ÖZELEĞİTİM-İŞİTME-PR-2
   yoksis_id: '168669'
   parent_yoksis_id: '122092'
   unit_type_id: Önlisans/lisans Programı
@@ -16782,7 +16782,7 @@
     - Aktifken kısaltma verdiğimiz bu birim kapatılmış
 
 - name: Biyoloji Programı (İö)
-  abbreviation: BİYOLOJİ-PR-2
+  abbreviation: BİYO-PR-2
   yoksis_id: '168688'
   parent_yoksis_id: '122006'
   unit_type_id: Önlisans/lisans Programı
@@ -16863,7 +16863,7 @@
   duration: 4
 
 - name: Matematik Programı (İö)
-  abbreviation: MATEMATİK-PR-2
+  abbreviation: MAT-PR-2
   yoksis_id: '168713'
   parent_yoksis_id: '122033'
   unit_type_id: Önlisans/lisans Programı
@@ -18766,7 +18766,7 @@
   duration: 2
 
 - name: Çocuk Gelişimi Programı (Uzaktan Öğretim) (%25 Burslu)
-  abbreviation: SAMSUN-MYO-ÇBGH-ÇG-PR-UZ-YETMİŞBEŞ
+  abbreviation: SAMSUN-MYO-ÇBGH-ÇG-PR-UZ-YİRMİBEŞ
   yoksis_id: '304693'
   parent_yoksis_id: '215482'
   unit_type_id: Önlisans/lisans Programı
