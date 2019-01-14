@@ -7,27 +7,37 @@ module Admin
     setup do
       sign_in users(:serhat)
       @language = languages(:turkce)
+      @form_params = %w[name iso]
     end
 
     test 'should get index' do
       get admin_languages_path
+      assert_equal 'index', @controller.action_name
       assert_response :success
       assert_select '#add-button', translate('.index.new_language_link')
     end
 
     test 'should get new' do
       get new_admin_language_path
+      assert_equal 'new', @controller.action_name
       assert_response :success
+      assert_select '.simple_form' do
+        @form_params.each do |param|
+          assert_select "#language_#{param}"
+        end
+      end
     end
 
     test 'should create language' do
       assert_difference('Language.count') do
-        post admin_languages_path params: {
+        post admin_languages_path, params: {
           language: {
             name: 'Test language', iso: 'TLC'
           }
         }
       end
+
+      assert_equal 'create', @controller.action_name
 
       language = Language.last
 
@@ -39,7 +49,14 @@ module Admin
 
     test 'should get edit' do
       get edit_admin_language_path(@language)
+
+      assert_equal 'edit', @controller.action_name
       assert_response :success
+      assert_select '.simple_form' do
+        @form_params.each do |param|
+          assert_select "#language_#{param}"
+        end
+      end
     end
 
     test 'should update language' do
@@ -49,6 +66,8 @@ module Admin
           name: 'Test language Update', iso: 'TLU'
         }
       }
+
+      assert_equal 'update', @controller.action_name
 
       language.reload
 
@@ -63,6 +82,7 @@ module Admin
         delete admin_language_path(languages(:language_to_delete))
       end
 
+      assert_equal 'destroy', @controller.action_name
       assert_redirected_to admin_languages_path
       assert_equal translate('.destroy.success'), flash[:notice]
     end

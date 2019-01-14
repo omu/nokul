@@ -138,15 +138,25 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'curriculumable scope returns curriculumable units' do
-    assert_equal Unit.curriculumable.count.to_i, Unit.coursable.count
+    assert_equal Unit.curriculumable.count, Unit.coursable.count
     assert_not_includes Unit.curriculumable, units(:uzem)
   end
 
   test 'eventable scope returns eventable units' do
-    assert_equal Unit.eventable.count.to_i,
+    assert_equal Unit.eventable.count,
                  Unit.faculties.count +
                  Unit.institutes.count +
                  Unit.programs.count
+    assert_not_includes Unit.eventable, units(:uzem)
+  end
+
+  test 'academic scope returns academic units' do
+    assert_equal Unit.academic.count,
+                 Unit.faculties.count +
+                 Unit.departments.count +
+                 Unit.majors.count +
+                 Unit.programs.count +
+                 Unit.institutes.count
     assert_not_includes Unit.eventable, units(:uzem)
   end
 

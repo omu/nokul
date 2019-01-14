@@ -27,9 +27,9 @@ module Admin
 
     def destroy
       if @title.destroy
-        redirect_to(admin_titles_path, notice: t('.success'))
+        redirect_to([:admin, 'titles'], notice: t('.success'))
       else
-        redirect_to(admin_titles_path, alert: t('.warning'))
+        redirect_to([:admin, 'titles'], alert: t('.warning'))
       end
     end
 

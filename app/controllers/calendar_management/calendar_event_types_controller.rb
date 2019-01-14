@@ -40,7 +40,7 @@ module CalendarManagement
     end
 
     def calendar_event_type_params
-      params.require(:calendar_event_type).permit(:name, :identifier)
+      params.require(:calendar_event_type).permit(:name, :identifier, :category)
     end
   end
 end

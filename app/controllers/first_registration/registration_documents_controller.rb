@@ -10,7 +10,8 @@ module FirstRegistration
       @registration_documents = pagy_by_search(
         RegistrationDocument.includes(
           :academic_term, :document_type, :unit
-        ).order(created_at: :desc))
+        ).order(created_at: :desc)
+      )
     end
 
     def new
@@ -20,7 +21,7 @@ module FirstRegistration
     def create
       @registration_document = RegistrationDocument.new(registration_document_params)
       if @registration_document.save
-        redirect_to([:first_registration, 'registration_documents'], notice: t('.success'))
+        redirect_to(index_path, notice: t('.success'))
       else
         render(:new)
       end
@@ -30,7 +31,7 @@ module FirstRegistration
 
     def update
       if @registration_document.update(registration_document_params)
-        redirect_to(@unit, notice: t('.success'))
+        redirect_to(index_path, notice: t('.success'))
       else
         render(:edit)
       end
@@ -38,20 +39,24 @@ module FirstRegistration
 
     def destroy
       if @registration_document.destroy
-        redirect_to([:first_registration, 'registration_documents'], notice: t('.success'))
+        redirect_to(index_path, notice: t('.success'))
       else
-        redirect_to([:first_registration, 'registration_documents'], alert: t('.warning'))
+        redirect_to(index_path, alert: t('.warning'))
       end
     end
 
     private
+
+    def index_path
+      [:first_registration, 'registration_documents']
+    end
 
     def set_registration_document
       @registration_document = RegistrationDocument.find(params[:id])
     end
 
     def registration_document_params
-      params.require(:registration_document).permit(:unit_id, :academic_term_id, :document_type_id)
+      params.require(:registration_document).permit(:unit_id, :academic_term_id, :document_type_id, :description)
     end
   end
 end

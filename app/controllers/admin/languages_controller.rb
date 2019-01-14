@@ -27,9 +27,9 @@ module Admin
 
     def destroy
       if @language.destroy
-        redirect_to(admin_languages_path, notice: t('.success'))
+        redirect_to([:admin, 'languages'], notice: t('.success'))
       else
-        redirect_to(admin_languages_path, alert: t('.warning'))
+        redirect_to([:admin, 'languages'], alert: t('.warning'))
       end
     end
 

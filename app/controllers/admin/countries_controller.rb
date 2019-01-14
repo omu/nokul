@@ -31,9 +31,9 @@ module Admin
 
     def destroy
       if @country.destroy
-        redirect_to(admin_countries_path, notice: t('.success'))
+        redirect_to([:admin, 'countries'], notice: t('.success'))
       else
-        redirect_to(admin_countries_path, alert: t('.warning'))
+        redirect_to([:admin, 'countries'], alert: t('.warning'))
       end
     end
 

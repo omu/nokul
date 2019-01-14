@@ -2,3 +2,7 @@ omu_health_report:
   unit: fen_bilgisi_ogretmenligi_programi
   academic_term: fall_2017_2018
   document_type: health_report
+registration_document_to_delete:
+  unit: fen_bilgisi_ogretmenligi_programi
+  academic_term: fall_2017_2018
+  document_type: ales
