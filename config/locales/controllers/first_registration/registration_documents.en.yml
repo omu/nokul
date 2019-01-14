@@ -1,0 +1,26 @@
+en:
+  activerecord:
+    attributes:
+      registration_document: &registration_document_attributes
+        academic_term_id: Academic Term
+        document_type_id: Document Type
+        unit_id: Unit
+        description: Description
+  helpers:
+    submit:
+      registration_document:
+        create: Create Document
+        update: Update Document
+  first_registration:
+    registration_documents:
+      create:
+        success: Document successfully created.
+      destroy:
+        success: Document successfully deleted!
+        warning: Document can not be deleted.
+      index:
+        <<: *registration_document_attributes
+        card_header: Required Registration Documents
+        new_registration_document_link: Create a New Document
+      update:
+        success: Document successfully updated.

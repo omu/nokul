@@ -1,0 +1,29 @@
+tr:
+  activerecord:
+    attributes:
+      document_type: &document_type_attributes
+        name: Belge Adı
+        active: Aktif mi?
+    enums:
+      document_type:
+        actives:
+          'true': Evet
+          'false': Hayır
+  helpers:
+    submit:
+      document_type:
+        create: Belge Türü Oluştur
+        update: Belge Türünü Güncelle
+  admin:
+    document_types:
+      create:
+        success: Belge başarıyla oluşturuldu.
+      destroy:
+        success: Belge başarıyla silindi!
+        warning: Belge silinemedi!
+      index:
+        <<: *document_type_attributes
+        card_header: Belgeler
+        new_document_type_link: Yeni Belge Oluştur
+      update:
+        success: Belge başarıyla güncellendi.

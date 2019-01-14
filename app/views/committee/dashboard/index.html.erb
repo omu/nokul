@@ -9,7 +9,7 @@
         <%= fa_icon 'cubes', text: t('.card_header') %>
       </div>
       <div class='card-body'>
-        <%= render 'components/smart_search_form',
+        <%= render 'layouts/shared/smart_search_form',
                    path: committees_path,
                    placeholder: t('.name') %>
         <table class='table table-responsive-sm table-striped'>
@@ -27,7 +27,7 @@
           <tbody>
             <% @committees.each do |committee| %>
               <tr>
-                <td><%= link_to(committee.name, unit_path(committee)) %></td>
+                <td><%= link_to(committee.names_depth_cache, unit_path(committee)) %></td>
                 <td><%= committee.yoksis_id %></td>
                 <td><%= committee.detsis_id %></td>
                 <td><%= committee.unit_status.name %></td>

@@ -1,0 +1,40 @@
+<div class='row'>
+  <div class='col-sm-12'>
+    <div class='card'>
+      <div class='card-body'>
+        <%= simple_form_for([namespace.to_sym, klass].flatten) do |f| %>
+          <div class='row'>
+            <div class='form-group col-sm-12'>
+              <%= f.error_notification %>
+              <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+            </div>
+            <% params.each do |parameter| %>
+              <%= content_tag :div, class: "form-group col-sm-#{parameter[:width]}" do %>
+                <%= f.input parameter[:field].to_sym,
+                            as: parameter[:as].try(:to_sym),
+                            required: parameter[:required] || false,
+                            collection: parameter[:collection],
+                            label: parameter[:label],
+                            inline_label: parameter[:inline_label],
+                            hint: parameter[:hint],
+                            placeholder: parameter[:placeholder],
+                            prompt: parameter[:promt],
+                            disabled: parameter[:disabled] || false,
+                            start_year: parameter[:start_year] || 1965,
+                            end_year: parameter[:end_year] || (Time.zone.now.year + 10.years),
+                            discard_day: parameter[:discard_day],
+                            label_method: parameter[:label_method].try(:to_sym),
+                            value_method: parameter[:value_method].try(:to_sym),
+                            group_method: parameter[:group_method].try(:to_sym) %>
+              <% end %>
+            <% end %>
+            <div class='form-group col-sm-12'>
+              <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
+              <%= link_to_back(:back) %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

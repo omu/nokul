@@ -74,6 +74,14 @@ class Unit < ApplicationRecord
   scope :programs,               -> { where(unit_type: UnitType.program) }
   scope :without_programs,       -> { where.not(unit_type: UnitType.program) }
 
+  scope :academic, -> {
+    faculties
+      .or(departments)
+      .or(majors)
+      .or(programs)
+      .or(institutes)
+  }
+
   scope :coursable, -> {
     departments
       .or(faculties)

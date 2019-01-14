@@ -1,6 +1,14 @@
-<%= render 'admin/layouts/form',
+<%= render 'layouts/builders/form',
+           namespace: 'admin',
            klass: [@city.country, @city, @district],
            params: [
-            ['name', 12, true],
-            ['mernis_code', 12, false]
+            {
+              field: 'name',
+              width: 12,
+              required: true
+            },
+            {
+              field: 'mernis_code',
+              width: 12
+            }
            ] %>

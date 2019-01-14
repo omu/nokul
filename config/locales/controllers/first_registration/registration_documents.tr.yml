@@ -1,0 +1,26 @@
+tr:
+  activerecord:
+    attributes:
+      registration_document: &registration_document_attributes
+        academic_term_id: Akademik Dönem
+        document_type_id: Belge Türü
+        unit_id: Birim
+        description: Açıklama
+  helpers:
+    submit:
+      registration_document:
+        create: Belge Oluştur
+        update: Belgeyi Güncelle
+  first_registration:
+    registration_documents:
+      create:
+        success: Belge başarıyla oluşturuldu.
+      destroy:
+        success: Belge başarıyla silindi!
+        warning: Belge silinemedi!
+      index:
+        <<: *registration_document_attributes
+        card_header: İstenen Belgeler
+        new_registration_document_link: Yeni Belge Oluştur
+      update:
+        success: Belge başarıyla güncellendi.
