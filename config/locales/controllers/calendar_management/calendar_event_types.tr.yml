@@ -21,7 +21,7 @@ tr:
       index:
         <<: *calendar_event_type_attributes
         card_header: Olay Türleri
-        new_event_type_link: Yeni Olay Türü
+        new_calendar_event_type_link: Yeni Olay Türü
       create:
         success: Olay türü başarıyla oluşturuldu.
       update:

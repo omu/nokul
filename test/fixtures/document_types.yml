@@ -1,0 +1,9 @@
+health_report:
+  name: Sağlık Raporu
+  active: true
+ales:
+  name: ALES Belgesi
+  active: true
+military_status:
+  name: Askerlik Durum Belgesi
+  active: false

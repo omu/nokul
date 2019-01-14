@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   draw :admin
   draw :calendar_management
+  draw :first_registration
 
   draw :devise
   draw :account
@@ -12,20 +13,11 @@ Rails.application.routes.draw do
   draw :references
 
   resources :units do
-    resources :registration_documents
     member do
       get :courses, defaults: { format: :json }
       get :programs, defaults: { format: :json }
       get :curriculums, defaults: { format: :json }
       get :employees, default: { format: :json }
-    end
-  end
-
-  resources :documents
-
-  scope module: :student_management do
-    resources :prospective_students, only: %i[index show] do
-      get 'register', on: :member
     end
   end
 
