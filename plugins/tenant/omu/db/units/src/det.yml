@@ -1,5 +1,5 @@
 # REFER DOCUMENTATION TO EDIT THIS FILE.  PLEASE NOTE THAT:
-# 
+#
 # - EXISTING RAW ATTRIBUTES WILL NORMALLY BE OVERWRITTEN ON NEXT UPDATE.
 # - COMMENTS AND EXTRA BLANK LINES WILL NOT BE PRESERVED.
 ---
@@ -91,7 +91,7 @@
   district_id: Bafra
 
 - name: Bitkisel ve Hayvansal Üretim Bölüm Başkanlığı
-  abbreviation: BAFRA-MYO-BHU-BB
+  abbreviation: BAFRA-MYO-BHÜ-BB
   parent_yoksis_id: '169417'
   detsis_id: '63395826'
   parent_detsis_id: '50713553'
@@ -357,7 +357,7 @@
   district_id: Çarşamba
 
 - name: Mali Hukuk Anabilim Dalı Başkanlığı
-  abbreviation: KAMU-MH-ADB
+  abbreviation: KAMU-MALİ-ADB
   parent_yoksis_id: '159917'
   detsis_id: '92359565'
   parent_detsis_id: '32538491'
@@ -395,7 +395,7 @@
   district_id: Çarşamba
 
 - name: Medeni Hukuk Anabilim Dalı Başkanlığı
-  abbreviation: ÖZELHUKUK-MH-ADB
+  abbreviation: ÖZELHUKUK-MEDENİ-ADB
   parent_yoksis_id: '140236'
   detsis_id: '26684789'
   parent_detsis_id: '78415181'
@@ -1447,7 +1447,7 @@
   district_id: Atakum
 
 - name: Özel Eğitim Bölüm Başkanlığı
-  abbreviation: ÖZELB-BB
+  abbreviation: ÖZELEĞİTİM-BB
   parent_yoksis_id: '122092'
   detsis_id: '81004858'
   parent_detsis_id: '98725097'
@@ -1456,7 +1456,7 @@
   district_id: Atakum
 
 - name: İşitme Engelliler Eğitimi Anabilim Dalı Başkanlığı
-  abbreviation: ÖZELB-İŞİTME-ADB
+  abbreviation: ÖZELEĞİTİM-İŞİTME-ADB
   parent_yoksis_id: '122093'
   detsis_id: '88219318'
   parent_detsis_id: '81004858'
@@ -1465,7 +1465,7 @@
   district_id: Atakum
 
 - name: Zihin Engelliler Eğitimi Anabilim Dalı Başkanlığı
-  abbreviation: ÖZELB-ZİHİN-ADB
+  abbreviation: ÖZELEĞİTİM-ZİHİN-ADB
   parent_yoksis_id: '122094'
   detsis_id: '64658489'
   parent_detsis_id: '81004858'
@@ -3037,7 +3037,7 @@
   district_id: Atakum
 
 - name: Bilgisayar Bilimleri Anabilim Dalı Başkanlığı
-  abbreviation: BİLGİSAYAR-BİL-ADB
+  abbreviation: BİLGİSAYAR-BİLİM-ADB
   parent_yoksis_id: '122185'
   detsis_id: '52799688'
   parent_detsis_id: '25705727'
@@ -4610,7 +4610,7 @@
   district_id: Atakum
 
 - name: Dölerme ve Suni Tohumlama Anabilim Dalı Başkanlığı
-  abbreviation: VETERİNER-KLİNİK-DST-ADB
+  abbreviation: VETERİNER-KLİNİK-DÖLERME-ADB
   parent_yoksis_id: '169346'
   detsis_id: '18686594'
   parent_detsis_id: '39766743'
@@ -5369,7 +5369,7 @@
   district_id: İlkadım
 
 - name: Grafik Anasanat Dalı Başkanlığı
-  abbreviation: GİT-GRAFİK-BB
+  abbreviation: GİT-GRAFİK-ADB
   parent_yoksis_id: '319347'
   detsis_id: '65075573'
   parent_detsis_id: '78239466'
@@ -9119,7 +9119,7 @@
   district_id: Bafra
 
 - name: İşletme ve Endüstri İlişkileri Anabilim Dalı Başkanlığı
-  abbreviation: SOSYAL-BİLİM-İEİ-ADB
+  abbreviation: SOSYAL-BİLİM-İŞLENİ-ADB
   detsis_id: '72752876'
   parent_detsis_id: '61232311'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -10541,14 +10541,14 @@
   district_id: İlkadım
 
 - name: Dölerme ve Suni Tohumlama Anabilim Dalı Başkanlığı
-  abbreviation: SAĞLIK-BİLİM-DST-ADB
+  abbreviation: SAĞLIK-BİLİM-DÖLERME-ADB
   detsis_id: '94836752'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
   issues:
-    - Mükerrer isimli birim; VETERİNER-KLİNİK-DST-ADB
+    - Mükerrer isimli birim; VETERİNER-KLİNİK-DÖLERME-ADB
     - Yoksis tarafında anabilim dalı diğerine bağlı
 
 - name: İletişim Bilimleri Anabilim Dalı Başkanlığı
