@@ -6,6 +6,7 @@ require 'application_system_test_case'
 class SignUpPageFlowTest < ApplicationSystemTestCase
   SUPPORTED_SCREEN_RESOLUTIONS.each do |resolution|
     test "can sign up with a valid identification number under a #{resolution} screen" do
+      skip 'this block on CircleCI since it makes requests to Xokul' if ENV['CI']
       page.driver.browser.manage.window.resize_to(*resolution)
       visit(new_user_registration_path)
       {
@@ -21,6 +22,7 @@ class SignUpPageFlowTest < ApplicationSystemTestCase
     end
 
     test "can not sign up with missing credentials with a #{resolution} screen" do
+      skip 'this block on CircleCI since it makes requests to Xokul' if ENV['CI']
       page.driver.browser.manage.window.resize_to(*resolution)
       visit(new_user_registration_path)
       {
