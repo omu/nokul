@@ -9,7 +9,7 @@ academic_terms = [
     year: '2018 - 2019',
     term: 'fall',
     start_of_term: '2018-09-01 00:00:00',
-    end_of_term: '2019-01-15 00:00:00',
+    end_of_term: '2019-01-30 00:00:00',
     active: true
   },
   {

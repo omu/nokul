@@ -15,8 +15,6 @@
             <tr>
               <th><%= t('.name') %></th>
               <th><%= t('.abbreviation') %></th>
-              <th><%= t('.code') %></th>
-              <th><%= t('.parent_id') %></th>
               <th><%= t('.unit_type') %></th>
               <th><%= t('.unit_status') %></th>
               <th><%= t('.unit_instruction_type') %></th>
@@ -26,15 +24,12 @@
           <tbody>
             <% @units.each do |unit| %>
               <tr>
-                <td><%= unit.name %></td>
+                <td><%= link_to(unit.names_depth_cache, unit_path(unit)) %></td>
                 <td><%= unit.abbreviation %></td>
-                <td><%= unit.code %></td>
-                <td><%= unit.try(:parent).try(:name) %></td>
                 <td><%= unit.unit_type.try(:name) %></td>
                 <td><%= unit.unit_status.try(:name) %></td>
                 <td><%= unit.unit_instruction_type.try(:name) %></td>
                 <td>
-                  <%= link_to_show(unit_path(unit)) %>
                   <%= link_to_edit(edit_unit_path(unit)) %>
                   <%= link_to_destroy(unit) %>
                 </td>

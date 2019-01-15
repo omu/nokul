@@ -10,6 +10,7 @@ module Admin
 
     test 'should get index' do
       get admin_yoksis_path
+      assert_equal 'index', @controller.action_name
       assert_response :success
     end
   end

@@ -35,17 +35,17 @@
       </li>
       <li class="nav-item nav-dropdown">
         <a class="nav-link nav-dropdown-toggle" href="#">
-          <%= fa_icon('graduation-cap', class: 'nav-icon') %><%= t('.student_management') %>
+          <%= fa_icon('user-plus', class: 'nav-icon') %><%= t('.first_registration') %>
         </a>
         <ul class="nav-dropdown-items">
           <li class="nav-item">
-            <%= link_to prospective_students_path, class: 'nav-link' do %>
-              <%= fa_icon('user-plus', text: t('.first_registration'), class: 'nav-icon') %>
+            <%= link_to [:first_registration, 'prospective_students'], class: 'nav-link' do %>
+              <%= fa_icon('users', text: t('.prospective_students'), class: 'nav-icon') %>
             <% end %>
           </li>
           <li class="nav-item">
-            <%= link_to documents_path, class: 'nav-link' do %>
-              <%= fa_icon('file-text-o', text: t('.documents'), class: 'nav-icon') %>
+            <%= link_to [:first_registration, 'registration_documents'], class: 'nav-link' do %>
+              <%= fa_icon('file-text', text: t('.registration_documents'), class: 'nav-icon') %>
             <% end %>
           </li>
         </ul>
@@ -95,6 +95,11 @@
           <%= fa_icon('superpowers', class: 'nav-icon') %><%= t('.admin') %>
         </a>
         <ul class="nav-dropdown-items">
+          <li class="nav-item">
+            <%= link_to [:admin, 'document_types'], class: 'nav-link' do %>
+              <%= fa_icon('file-text-o', text: t('.document_types'), class: 'nav-icon') %>
+            <% end %>
+          </li>
           <li class="nav-item">
             <%= link_to [:admin, 'languages'], class: 'nav-link' do %>
               <%= fa_icon('language', text: t('.languages'), class: 'nav-icon') %>

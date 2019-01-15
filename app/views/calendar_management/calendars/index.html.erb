@@ -1,5 +1,5 @@
 <div class='row'>
-  <div class='col-lg-12'>
+  <div class='col-sm-12'>
     <div class='card'>
       <div class='card-header'>
         <%= fa_icon 'street-view', text: t('.card_header') %>
@@ -8,8 +8,8 @@
         </div>
       </div>
       <div class='card-body'>
-        <%= render 'components/smart_search_form',
-                   path: [:calendar_management, 'calendars'],
+        <%= render 'layouts/shared/smart_search_form',
+                   path: [:calendar_management, :calendars],
                    placeholder: t('.name') %>
         <table class='table table-responsive-sm table-striped table-hover'>
           <thead class="thead-dark">

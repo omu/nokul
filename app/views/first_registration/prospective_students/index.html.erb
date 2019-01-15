@@ -1,0 +1,49 @@
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'align-justify', text: t('.prospective_students') %>
+      </div>
+      <div class='card-body'>
+        <%= render 'search' %>
+        <table class='table table-responsive-sm table-striped'>
+          <thead class="thead-dark">
+            <tr>
+              <th><%= t('.id_number') %></th>
+              <th><%= t('.first_name') %></th>
+              <th><%= t('.last_name') %></th>
+              <th><%= t('.unit') %></th>
+              <th><%= t('.meb_status') %></th>
+              <th><%= t('.military_status') %></th>
+              <th><%= t('.obs_status') %></th>
+              <th><%= t('.student_entrance_type') %></th>
+              <th><%= t('actions') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @prospective_students.each do |prospective_student| %>
+              <tr>
+                <td><%= prospective_student.id_number %></td>
+                <td><%= prospective_student.first_name %></td>
+                <td><%= prospective_student.last_name %></td>
+                <td><%= prospective_student.unit.name %></td>
+                <td><%= prospective_student.meb_status ? t('.graduated') : t('.not_graduated_or_unknown') %></td>
+                <td><%= prospective_student.military_status ? t('.unproblematic') : t('.must_see_recruiting_office') %></td>
+                <td><%= prospective_student.obs_status ? t('.unproblematic') : t('.student_in_a_different_unit') %></td>
+                <td><%= prospective_student.student_entrance_type.try(:name) %></td>
+                <td>
+                  <%= link_to_show([:first_registration, prospective_student]) %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <nav aria-label='pagination'>
+      <ul class='pagination justify-content-center'>
+        <%== pagy_bootstrap_nav(@pagy) %>
+      </ul>
+    </nav>
+  </div>
+</div>

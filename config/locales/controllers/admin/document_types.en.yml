@@ -1,0 +1,29 @@
+en:
+  activerecord:
+    attributes:
+      document_type: &document_type_attributes
+        name: Document Type
+        active: Active?
+    enums:
+      document_type:
+        actives:
+          'true': 'Yes'
+          'false': 'No'
+  helpers:
+    submit:
+      document_type:
+        create: Create Document Type
+        update: Update Document Type
+  admin:
+    document_types:
+      create:
+        success: Document type successfully created.
+      destroy:
+        success: Document type successfully deleted!
+        warning: Document type can not be deleted.
+      index:
+        <<: *document_type_attributes
+        card_header: Document Types
+        new_document_type_link: Create a New Document Type
+      update:
+        success: Document type successfully updated.

@@ -74,6 +74,14 @@ class Unit < ApplicationRecord
   scope :programs,               -> { where(unit_type: UnitType.program) }
   scope :without_programs,       -> { where.not(unit_type: UnitType.program) }
 
+  scope :academic, -> {
+    faculties
+      .or(departments)
+      .or(majors)
+      .or(programs)
+      .or(institutes)
+  }
+
   scope :coursable, -> {
     departments
       .or(faculties)
@@ -91,7 +99,12 @@ class Unit < ApplicationRecord
   }
 
   def cache_ancestry
-    self.names_depth_cache = path.map(&:name).reverse.join(' / ')
+    parent_names = path.map(&:name)
+    self.names_depth_cache = if path.count > 1
+                               parent_names.drop(1).reverse.join(' / ')
+                             else
+                               parent_names.reverse.join(' / ')
+                             end
   end
 
   # custom methods
