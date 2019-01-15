@@ -8,12 +8,10 @@ module FirstRegistration
       @prospective_student = ProspectiveStudentService.new(prospective_students(:jane))
     end
 
-    test 'create_user method initializes a user' do
-      assert @prospective_student.create_user.is_a?(User)
-    end
-
-    test 'create_student method initializes a student' do
-      assert @prospective_student.create_student.is_a?(Student)
+    test 'register can create a user and a student record' do
+      assert_difference ['User.count', 'Student.count'], 1 do
+        @prospective_student.register
+      end
     end
   end
 end
