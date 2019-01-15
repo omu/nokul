@@ -25,13 +25,10 @@
               <%= f.association :curriculum, collection: f.object.unit.present? ? f.object.unit.managed_curriculums : [] %>
             </div>
             <div class='form-group col-sm-6'>
-              <%= f.association :academic_term, label_method: lambda { |academic_term| full_name(academic_term) } %>
+              <%= f.association :coordinator, collection: f.object.unit.present? ? f.object.unit.subtree_employees : [], label_method: lambda { |c| full_name(c) } %>
             </div>
             <div class='form-group col-sm-6'>
               <%= f.association :course, collection: f.object.curriculum.present? ? f.object.curriculum.courses : [] %>
-            </div>
-            <div class='form-group col-sm-6'>
-              <%= f.association :coordinator, collection: f.object.unit.present? ? f.object.unit.subtree_employees : [], label_method: lambda { |c| full_name(c) } %>
             </div>
             <div class='form-group col-sm-12'>
               <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
