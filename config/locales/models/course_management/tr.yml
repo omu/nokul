@@ -99,9 +99,11 @@ tr:
         error: Açılan ders silinirken bir hata oluştu.
         success: Açılan ders başarıyla silindi.
       edit:
-        form_title: Açılan Dersi Düzenle
+        form_title: '%{course} Açılan Dersi Düzenle'
       groups:
         <<: *available_course_group_attributes
+        available_course_groups: Açılan Ders Grupları
+        create_available_course_group: Açılan Derse Grup Ekle
       index:
         <<: *available_course_attributes
         add_new_available_course: Yeni Açılan Ders Ekle
@@ -110,7 +112,7 @@ tr:
         group_count: Grup Sayısı
         quota: Kontenjan
       new:
-        form_title: Açılan Ders Oluştur
+        form_title: Ders Aç
       search:
         <<: *available_course_attributes
         smart_search_placeholder: Ders Adı / Ders Kodu
@@ -119,7 +121,6 @@ tr:
       show:
         <<: *available_course_attributes
         coordinator: Koordinatör
-        create_available_course_group: Açılan Derse Grup Ekle
       update:
         success: Açılan ders başarıyla güncellendi.
     available_course_groups:
@@ -129,11 +130,11 @@ tr:
         error: Açılan ders grubu silinirken bir hata oluştu.
         success: Açılan ders grubu başarıyla silindi.
       edit:
-        form_title: Açılan Ders Grubunu Düzenle
+        form_title: '%{course} Açılan Ders Grubunu Düzenle'
       form:
         lecturers: Öğretim Elemanları
       new:
-        form_title: Açılan Ders Grubu Ekle
+        form_title: '%{course} Dersine Grup Ekle'
       update:
         success: Açılan ders grubu başarıyla güncellendi.
     courses:
