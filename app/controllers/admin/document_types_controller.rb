@@ -16,14 +16,14 @@ module Admin
 
     def create
       @document_type = DocumentType.new(document_type_params)
-      @document_type.save ? redirect_to([:admin, 'document_types'], notice: t('.success')) : render(:new)
+      @document_type.save ? redirect_to(index_path, notice: t('.success')) : render(:new)
     end
 
     def edit; end
 
     def update
       if @document_type.update(document_type_params)
-        redirect_to([:admin, 'document_types'], notice: t('.success'))
+        redirect_to(index_path, notice: t('.success'))
       else
         render(:edit)
       end
@@ -31,13 +31,17 @@ module Admin
 
     def destroy
       if @document_type.destroy
-        redirect_to([:admin, 'document_types'], notice: t('.success'))
+        redirect_to(index_path, notice: t('.success'))
       else
-        redirect_to([:admin, 'document_types'], notice: t('.warning'))
+        redirect_to(index_path, notice: t('.warning'))
       end
     end
 
     private
+
+    def index_path
+      %i[admin document_types]
+    end
 
     def set_document_type
       @document_type = DocumentType.find(params[:id])

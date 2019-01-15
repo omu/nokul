@@ -22,5 +22,6 @@ en:
         <<: *registration_document_attributes
         card_header: Required Registration Documents
         new_registration_document_link: Create a New Document
+        placeholder: Unit name or document type
       update:
         success: Document successfully updated.

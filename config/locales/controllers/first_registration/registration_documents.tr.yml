@@ -22,5 +22,6 @@ tr:
         <<: *registration_document_attributes
         card_header: İstenen Belgeler
         new_registration_document_link: Yeni Belge Oluştur
+        placeholder: Birimin veya doküman türünün ismi
       update:
         success: Belge başarıyla güncellendi.

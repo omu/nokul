@@ -16,24 +16,28 @@ module Admin
 
     def create
       @title = Title.new(title_params)
-      @title.save ? redirect_to([:admin, 'titles'], notice: t('.success')) : render(:new)
+      @title.save ? redirect_to(index_path, notice: t('.success')) : render(:new)
     end
 
     def edit; end
 
     def update
-      @title.update(title_params) ? redirect_to([:admin, 'titles'], notice: t('.success')) : render(:edit)
+      @title.update(title_params) ? redirect_to(index_path, notice: t('.success')) : render(:edit)
     end
 
     def destroy
       if @title.destroy
-        redirect_to([:admin, 'titles'], notice: t('.success'))
+        redirect_to(index_path, notice: t('.success'))
       else
-        redirect_to([:admin, 'titles'], alert: t('.warning'))
+        redirect_to(index_path, alert: t('.warning'))
       end
     end
 
     private
+
+    def index_path
+      %i[admin titles]
+    end
 
     def set_title
       @title = Title.find(params[:id])

@@ -19,19 +19,20 @@ module FirstRegistration
 
     def register
       prospective_student = FirstRegistration::ProspectiveStudentService.new(@prospective_student)
-      user = prospective_student.create_user
 
-      if user.save
-        student = prospective_student.create_student
-        student.save ? redirect_with_success : redirect_with_warning('.warning')
+      if prospective_student.register
+        @prospective_student.update(registered: true)
+        redirect_to(index_path, notice: t('.success'))
       else
-        redirect_with_warning('.warning')
+        redirect_to(index_path, alert: t('.warning'))
       end
-
-      @prospective_student.update(registered: true)
     end
 
     private
+
+    def index_path
+      %i[first_registration prospective_students]
+    end
 
     def set_prospective_student
       @prospective_student = ProspectiveStudent.find(params[:id])
@@ -39,14 +40,6 @@ module FirstRegistration
 
     def can_register?
       redirect_with_warning('.can_not_register') unless @prospective_student.can_temporarily_register?
-    end
-
-    def redirect_with_success
-      redirect_to([:first_registration, 'prospective_students'], flash: { notice: t('.success') })
-    end
-
-    def redirect_with_warning(message)
-      redirect_to([:first_registration, 'prospective_students'], flash: { alert: t(".#{message}") })
     end
   end
 end

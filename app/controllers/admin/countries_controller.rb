@@ -31,13 +31,17 @@ module Admin
 
     def destroy
       if @country.destroy
-        redirect_to([:admin, 'countries'], notice: t('.success'))
+        redirect_to(index_path, notice: t('.success'))
       else
-        redirect_to([:admin, 'countries'], alert: t('.warning'))
+        redirect_to(index_path, alert: t('.warning'))
       end
     end
 
     private
+
+    def index_path
+      %i[admin countries]
+    end
 
     def set_country
       @country = Country.find(params[:id])
