@@ -1329,6 +1329,37 @@ ALTER SEQUENCE public.employees_id_seq OWNED BY public.employees.id;
 
 
 --
+-- Name: evaluation_types; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.evaluation_types (
+    id bigint NOT NULL,
+    name character varying,
+    CONSTRAINT evaluation_types_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT evaluation_types_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
+);
+
+
+--
+-- Name: evaluation_types_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.evaluation_types_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: evaluation_types_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.evaluation_types_id_seq OWNED BY public.evaluation_types.id;
+
+
+--
 -- Name: friendly_id_slugs; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -2774,6 +2805,13 @@ ALTER TABLE ONLY public.employees ALTER COLUMN id SET DEFAULT nextval('public.em
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY public.evaluation_types ALTER COLUMN id SET DEFAULT nextval('public.evaluation_types_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY public.friendly_id_slugs ALTER COLUMN id SET DEFAULT nextval('public.friendly_id_slugs_id_seq'::regclass);
 
 
@@ -3282,6 +3320,22 @@ ALTER TABLE ONLY public.duties
 
 ALTER TABLE ONLY public.employees
     ADD CONSTRAINT employees_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: evaluation_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.evaluation_types
+    ADD CONSTRAINT evaluation_types_name_unique UNIQUE (name) DEFERRABLE;
+
+
+--
+-- Name: evaluation_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.evaluation_types
+    ADD CONSTRAINT evaluation_types_pkey PRIMARY KEY (id);
 
 
 --
@@ -4916,6 +4970,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20181225180258'),
 ('20181225195123'),
 ('20181225201818'),
-('20181226013104');
+('20181226013104'),
+('20190115062149');
 
 

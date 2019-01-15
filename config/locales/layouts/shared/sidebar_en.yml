@@ -13,7 +13,6 @@ en:
         committee_units: Committee Units
         committees: Committees
         courses: Courses
-        course_evaluation_criterion_types: Course Criterion Types
         course_groups: Course Unit Group
         course_group_types: Course Group Types
         course_management: Course Management
@@ -22,6 +21,7 @@ en:
         curriculums: Curriculums
         definitions: Definitions
         documents: Required Documents
+        evaluation_types: Evaluation Types
         first_registration: Prospective Students
         high_school_types: High School Types
         languages: Languages
