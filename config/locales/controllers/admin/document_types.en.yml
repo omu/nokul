@@ -2,7 +2,7 @@ en:
   activerecord:
     attributes:
       document_type: &document_type_attributes
-        name: Document Name
+        name: Document Type
         active: Active?
     enums:
       document_type:
@@ -17,13 +17,13 @@ en:
   admin:
     document_types:
       create:
-        success: Document successfully created.
+        success: Document type successfully created.
       destroy:
-        success: Document successfully deleted!
-        warning: Document can not be deleted.
+        success: Document type successfully deleted!
+        warning: Document type can not be deleted.
       index:
         <<: *document_type_attributes
-        card_header: Documents
-        new_document_type_link: Create a New Document
+        card_header: Document Types
+        new_document_type_link: Create a New Document Type
       update:
-        success: Document successfully updated.
+        success: Document type successfully updated.
