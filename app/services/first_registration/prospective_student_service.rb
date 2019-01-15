@@ -6,8 +6,20 @@ module FirstRegistration
       @prospective_student = prospective_student
     end
 
-    def create_user
-      User.new(
+    def register
+      initialize_user
+      initialize_student
+
+      return unless (@user.valid? && @student.valid?)
+
+      @user.save
+      @student.save
+    end
+
+    private
+
+    def initialize_user
+      @user = User.new(
         id_number: @prospective_student.id_number,
         email: @prospective_student.email,
         password: @prospective_student.id_number,
@@ -15,11 +27,11 @@ module FirstRegistration
       )
     end
 
-    def create_student
-      Student.new(
+    def initialize_student
+      @student = Student.new(
         user: User.find_by(id_number: @prospective_student.id_number),
         unit: @prospective_student.unit,
-        permanently_registered: @prospective_student.can_permanently_register? ? true : false,
+        permanently_registered: @prospective_student.can_permanently_register?,
         student_number: @prospective_student.id_number # TODO: must be generated
       )
     end

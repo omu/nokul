@@ -1,6 +1,17 @@
 # frozen_string_literal: true
 
 class RegistrationDocument < ApplicationRecord
+  # search
+  include PgSearch
+  pg_search_scope(
+    :search,
+    associated_against: {
+      unit: :name,
+      document_type: :name
+    },
+    using: { tsearch: { prefix: true } }
+  )
+
   # relations
   belongs_to :unit
   belongs_to :academic_term

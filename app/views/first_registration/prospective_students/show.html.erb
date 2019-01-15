@@ -64,7 +64,7 @@
           <% if @prospective_student.can_permanently_register? %>
             <% if @prospective_student.permanent_registrable? %>
               <%= link_to(t('.permanently_register'),
-                          register_prospective_student_path,
+                          register_first_registration_prospective_student_path,
                           class: 'btn btn-block btn-success registration-button',
                           disabled: @prospective_student.registration_documents.present?) %>
             <% else %>
@@ -76,7 +76,7 @@
           <% elsif @prospective_student.can_temporarily_register? %>
             <% if @prospective_student.temporary_registrable? %>
               <%= link_to(t('.temporarily_register'),
-                          register_prospective_student_path,
+                          register_first_registration_prospective_student_path,
                           class: "btn btn-block btn-success registration-button",
                           disabled: @prospective_student.registration_documents.present?) %>
             <% else %>
@@ -87,7 +87,7 @@
             <% end %>
           <% else %>
             <%= link_to(t('.can_not_register'),
-                        register_prospective_student_path,
+                        register_first_registration_prospective_student_path,
                         class: 'btn btn-block btn-danger registration-button',
                         disabled: true) %>
           <% end %>
