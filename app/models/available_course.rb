@@ -21,6 +21,7 @@ class AvailableCourse < ApplicationRecord
   belongs_to :unit
   belongs_to :coordinator, class_name: 'Employee', optional: true
   has_many :groups, class_name: 'AvailableCourseGroup', dependent: :destroy
+  has_many :evaluation_types, class_name: 'CourseEvaluationType', dependent: :destroy
 
   # validations
   validates :course, uniqueness: { scope: %i[academic_term curriculum] }

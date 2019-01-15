@@ -1,0 +1,14 @@
+ati_midterm_evaluation_type:
+  available_course: ati_fall_2018_2019
+  evaluation_type: undergraduate_midterm
+  percentage: 40
+
+ati_final_evaluation_type:
+  available_course: ati_fall_2018_2019
+  evaluation_type: undergraduate_final
+  percentage: 60
+
+ati_retake_evaluation_type:
+  available_course: ati_fall_2018_2019
+  evaluation_type: undergraduate_retake
+  percentage: 60
