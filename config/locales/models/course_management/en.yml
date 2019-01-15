@@ -99,9 +99,11 @@ en:
         error: An error occured when deleting the available course.
         success: Available course successfully destroyed.
       edit:
-        form_title: Update the Available Course
+        form_title: 'Update the %{course} Available Course'
       groups:
         <<: *available_course_group_attributes
+        available_course_groups: Available Course Groups
+        create_available_course_group: Create Available Course Group
       index:
         <<: *available_course_attributes
         add_new_available_course: Add a New Available Course
@@ -119,7 +121,6 @@ en:
       show:
         <<: *available_course_attributes
         coordinator: Coodinator
-        create_available_course_group: Create Available Course Group
       update:
         success: Available course successfully updated.
     available_course_groups:
@@ -129,11 +130,11 @@ en:
         error: An error occured when deleting the available course group.
         success: Available course group successfully destroyed.
       edit:
-        form_title: Update the Available Course Group
+        form_title: 'Update the %{course} Course Group'
       form:
         lecturers: Lecturers
       new:
-        form_title: Create an Available Course Group
+        form_title:  'Create a Group for %{course} Course'
       update:
         success: Available course group successfully updated.
     courses:
