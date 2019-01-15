@@ -10,7 +10,7 @@ module FirstRegistration
       initialize_user
       initialize_student
 
-      return unless (@user.valid? && @student.valid?)
+      return unless @user.valid? && @student.valid?
 
       @user.save
       @student.save
@@ -29,7 +29,7 @@ module FirstRegistration
 
     def initialize_student
       @student = Student.new(
-        user: User.find_by(id_number: @prospective_student.id_number),
+        user: @user,
         unit: @prospective_student.unit,
         permanently_registered: @prospective_student.can_permanently_register?,
         student_number: @prospective_student.id_number # TODO: must be generated
