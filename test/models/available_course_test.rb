@@ -14,6 +14,7 @@ class AvailableCourseTest < ActiveSupport::TestCase
     course
     unit
     groups
+    evaluation_types
   ].each do |property|
     test "a available_course can communicate with #{property}" do
       assert @available_course.send(property)

@@ -844,6 +844,41 @@ ALTER SEQUENCE public.countries_id_seq OWNED BY public.countries.id;
 
 
 --
+-- Name: course_evaluation_types; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.course_evaluation_types (
+    id bigint NOT NULL,
+    available_course_id bigint NOT NULL,
+    evaluation_type_id bigint NOT NULL,
+    percentage integer,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL,
+    CONSTRAINT course_evaluation_types_percentage_null CHECK ((percentage IS NOT NULL)),
+    CONSTRAINT course_evaluation_types_percentage_numericality CHECK ((percentage >= 0))
+);
+
+
+--
+-- Name: course_evaluation_types_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.course_evaluation_types_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: course_evaluation_types_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.course_evaluation_types_id_seq OWNED BY public.course_evaluation_types.id;
+
+
+--
 -- Name: course_group_types; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -2714,6 +2749,13 @@ ALTER TABLE ONLY public.countries ALTER COLUMN id SET DEFAULT nextval('public.co
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY public.course_evaluation_types ALTER COLUMN id SET DEFAULT nextval('public.course_evaluation_types_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY public.course_group_types ALTER COLUMN id SET DEFAULT nextval('public.course_group_types_id_seq'::regclass);
 
 
@@ -3216,6 +3258,14 @@ ALTER TABLE ONLY public.countries
 
 ALTER TABLE ONLY public.countries
     ADD CONSTRAINT countries_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: course_evaluation_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.course_evaluation_types
+    ADD CONSTRAINT course_evaluation_types_pkey PRIMARY KEY (id);
 
 
 --
@@ -4004,6 +4054,20 @@ CREATE INDEX index_committee_meetings_on_unit_id ON public.committee_meetings US
 
 
 --
+-- Name: index_course_evaluation_types_on_available_course_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_course_evaluation_types_on_available_course_id ON public.course_evaluation_types USING btree (available_course_id);
+
+
+--
+-- Name: index_course_evaluation_types_on_evaluation_type_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_course_evaluation_types_on_evaluation_type_id ON public.course_evaluation_types USING btree (evaluation_type_id);
+
+
+--
 -- Name: index_course_groups_on_course_group_type_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -4783,6 +4847,14 @@ ALTER TABLE ONLY public.prospective_students
 
 
 --
+-- Name: fk_rails_b25d062eb5; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.course_evaluation_types
+    ADD CONSTRAINT fk_rails_b25d062eb5 FOREIGN KEY (evaluation_type_id) REFERENCES public.evaluation_types(id);
+
+
+--
 -- Name: fk_rails_b872a6760a; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -4796,6 +4868,14 @@ ALTER TABLE ONLY public.projects
 
 ALTER TABLE ONLY public.agendas
     ADD CONSTRAINT fk_rails_b92b5eaf98 FOREIGN KEY (agenda_type_id) REFERENCES public.agenda_types(id);
+
+
+--
+-- Name: fk_rails_bb4be290e9; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.course_evaluation_types
+    ADD CONSTRAINT fk_rails_bb4be290e9 FOREIGN KEY (available_course_id) REFERENCES public.available_courses(id);
 
 
 --
@@ -4971,6 +5051,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20181225195123'),
 ('20181225201818'),
 ('20181226013104'),
-('20190115062149');
+('20190115062149'),
+('20190115100844');
 
 
