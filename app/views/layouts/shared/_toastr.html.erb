@@ -1,5 +1,5 @@
 <%= content_tag(:script) do %>
-  <% flash.each do |type, message| %>
+  <% flash.select{|record| record[1].is_a?(String)}.each do |type, message| %>
     <%= toastr_flash_class("#{type}") %>('<%= message %>')
   <% end %>
 <% end %>
