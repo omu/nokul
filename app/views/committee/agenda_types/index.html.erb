@@ -9,7 +9,7 @@
         <%= fa_icon 'tags', text: t('.card_header') %>
       </div>
       <div class='card-body'>
-        <%= render 'components/smart_search_form',
+        <%= render 'layouts/shared/smart_search_form',
                    path: agenda_types_path,
                    placeholder: t('.name') %>
         <table class='table table-responsive-sm table-striped'>

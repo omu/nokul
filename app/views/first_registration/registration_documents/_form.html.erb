@@ -1,0 +1,37 @@
+<%= render 'layouts/builders/form',
+           namespace: 'first_registration',
+           klass: @registration_document,
+           params: [
+            {
+              field: 'unit_id',
+              width: 12,
+              required: true,
+              collection: Unit.active.academic.order(:name),
+              label_method: 'names_depth_cache'
+            },
+            {
+              field: 'document_type_id',
+              width: 12,
+              required: true,
+              collection: DocumentType.order(:name)
+            },
+            {
+              field: 'academic_term_id',
+              collection: AcademicTerm.select(
+                :id, :year, :term
+                ).map{|record| [record.year + ' ' + enum_t(record, :term), record.id]},
+              width: 12,
+              required: true
+            },
+            {
+              as: 'text',
+              field: 'description',
+              width: 12
+            },
+           ] %>
+
+<script type='text/javascript'>
+  $(document).ready(function() {
+    $('#registration_document_unit_id').select2();
+  });
+</script>

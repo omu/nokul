@@ -3,6 +3,10 @@
 require 'test_helper'
 
 class TenantConfigTest < ActiveSupport::TestCase
+  test 'App must be booted with a default tenant' do
+    assert_not_nil Tenant.name
+  end
+
   test 'Configuration can read tenant settings' do
     assert_not_nil Tenant.configuration.abbreviation
     assert_not_nil Tenant.configuration.host

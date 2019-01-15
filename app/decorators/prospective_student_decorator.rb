@@ -36,7 +36,7 @@ class ProspectiveStudentDecorator < SimpleDelegator
   end
 
   def calendar_events
-    calendar.calendar_events
+    calendar&.calendar_events
   end
 
   def check_events(identifier)

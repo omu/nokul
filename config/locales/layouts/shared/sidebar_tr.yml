@@ -10,7 +10,7 @@ tr:
         calendar_event_types: Olay Türleri
         calendar_management: Takvim Yönetimi
         calendars: Takvimler
-        committee_units: Kurul/Komisyon Birimleri
+        committee_units: Kurul ve Komisyonlar
         committees: Kurullar/Komisyonlar
         courses: Dersler
         course_evaluation_criterion_types: Ders Kriter Türleri
@@ -21,11 +21,13 @@ tr:
         course_unit_groups: Ders Grupları
         curriculums: Müfredatlar
         definitions: Tanımlar
-        documents: Gerekli Belgeler
+        document_types: Belge Türleri
         first_registration: İlk Kayıt
         high_school_types: Lise Türleri
         languages: Diller
         locations: Konumlar
+        prospective_students: Yerleşen Öğrenciler
+        registration_documents: İstenen Belgeler
         student_disability_types: Engel Türleri
         student_drop_out_types: Ayrılma Nedenleri
         student_education_levels: Eğitim Düzeyleri
@@ -33,7 +35,6 @@ tr:
         student_entrance_types: Giriş Türleri
         student_grades: Sınıflar
         student_grading_systems: Not Sistemleri
-        student_management: Öğrenci Yönetimi
         student_punishment_types: Ceza Türleri
         student_studentship_statuses: Öğrencilik Hakları
         studies: Akademik Çalışmalar

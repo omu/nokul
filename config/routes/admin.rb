@@ -35,6 +35,7 @@ namespace :admin do
   resources :university_types, except: :show
 
   # Other References
+  resources :document_types, except: :show
   resources :languages, except: :show
   resources :titles, except: :show
 end
