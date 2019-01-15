@@ -13,7 +13,6 @@ tr:
         committee_units: Kurul/Komisyon Birimleri
         committees: Kurullar/Komisyonlar
         courses: Dersler
-        course_evaluation_criterion_types: Ders Kriter Türleri
         course_groups: Ders Grupları
         course_group_types: Ders Grup Türleri
         course_management: Ders İşlemleri
@@ -22,6 +21,7 @@ tr:
         curriculums: Müfredatlar
         definitions: Tanımlar
         documents: Gerekli Belgeler
+        evaluation_types: Değerlendirme Türleri
         first_registration: İlk Kayıt
         high_school_types: Lise Türleri
         languages: Diller

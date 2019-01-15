@@ -1,0 +1,27 @@
+en:
+  activerecord:
+    attributes:
+      evaluation_type: &evaluation_type_attributes
+        name: Name of Evaluation Type
+  helpers:
+    submit:
+      evaluation_type:
+        create: Create Evaluation Type
+        update: Update Evaluation Type
+  references:
+    evaluation_types:
+      create:
+        success: Evaluation type successfully created.
+      destroy:
+        success: Evaluation type successfully deleted.
+        warning: Evaluation type can not be deleted!
+      edit:
+        form_title: Update the Evaluation Type
+      index:
+        <<: *evaluation_type_attributes
+        card_header: Evaluation Types
+        new_evaluation_type_link: Create a New Evaluation Type
+      new:
+        form_title: Create a Evaluation Type
+      update:
+        success: Evaluation type successfully updated.
