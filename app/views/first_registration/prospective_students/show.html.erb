@@ -43,7 +43,7 @@
               </td>
             </tr>
             <% unless @prospective_student.registered %>
-              <% @prospective_student.registration_documents.each do |registration_document| %>
+              <% @prospective_student.unit.registration_documents.each do |registration_document| %>
                 <tr>
                   <th><%= registration_document.name %></th>
                   <td>
@@ -66,7 +66,7 @@
               <%= link_to(t('.permanently_register'),
                           register_first_registration_prospective_student_path,
                           class: 'btn btn-block btn-success registration-button',
-                          disabled: @prospective_student.registration_documents.present?) %>
+                          disabled: @prospective_student.unit.registration_documents.present?) %>
             <% else %>
               <div class="alert alert-danger" role="alert">
                 <%= fa_icon 'exclamation-triangle', class: 'fa-2x' %>
@@ -78,7 +78,7 @@
               <%= link_to(t('.temporarily_register'),
                           register_first_registration_prospective_student_path,
                           class: "btn btn-block btn-success registration-button",
-                          disabled: @prospective_student.registration_documents.present?) %>
+                          disabled: @prospective_student.unit.registration_documents.present?) %>
             <% else %>
               <div class="alert alert-danger" role="alert">
                 <%= fa_icon 'exclamation-triangle', class: 'fa-2x' %>

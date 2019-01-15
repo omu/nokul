@@ -2,7 +2,7 @@ tr:
   activerecord:
     attributes:
       document_type: &document_type_attributes
-        name: Belge Adı
+        name: Belge Türü
         active: Aktif mi?
     enums:
       document_type:
@@ -17,13 +17,13 @@ tr:
   admin:
     document_types:
       create:
-        success: Belge başarıyla oluşturuldu.
+        success: Belge türü başarıyla oluşturuldu.
       destroy:
-        success: Belge başarıyla silindi!
-        warning: Belge silinemedi!
+        success: Belge türü başarıyla silindi!
+        warning: Belge türü silinemedi!
       index:
         <<: *document_type_attributes
-        card_header: Belgeler
-        new_document_type_link: Yeni Belge Oluştur
+        card_header: Belge Türleri
+        new_document_type_link: Yeni Belge Türü Oluştur
       update:
-        success: Belge başarıyla güncellendi.
+        success: Belge türü başarıyla güncellendi.

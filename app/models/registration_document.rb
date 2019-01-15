@@ -22,6 +22,5 @@ class RegistrationDocument < ApplicationRecord
   validates :description, length: { maximum: 65_535 }
 
   # delegates
-  delegate :name, to: :document_type
-  delegate :active, to: :document_type
+  delegate :name, :active, to: :document_type
 end
