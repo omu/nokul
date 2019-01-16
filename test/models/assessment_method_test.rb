@@ -7,6 +7,15 @@ class AssessmentMethodTest < ActiveSupport::TestCase
     @assessment_method = assessment_methods(:exam)
   end
 
+  # relations
+  %i[
+    course_assessment_methods
+  ].each do |property|
+    test "a assessment method can communicate with #{property}" do
+      assert @assessment_method.send(property)
+    end
+  end
+
   # validations: presence
   test 'presence validations for name of a assessment method' do
     @assessment_method.name = nil

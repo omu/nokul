@@ -12,6 +12,7 @@ class CreateCourseEvaluationTypes < ActiveRecord::Migration[5.2]
     add_null_constraint :course_evaluation_types, :percentage
 
     add_numericality_constraint :course_evaluation_types, :percentage,
-                                greater_than_or_equal_to: 0
+                                greater_than_or_equal_to: 0,
+                                less_than_or_equal_to: 100
   end
 end
