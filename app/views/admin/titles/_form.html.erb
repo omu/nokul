@@ -1,7 +1,20 @@
-<%= render 'admin/layouts/form',
+<%= render 'layouts/builders/form',
+           namespace: 'admin',
            klass: @title,
            params: [
-             ['name', 12, true],
-             ['code', 12, true],
-             ['branch', 12, true]
+            {
+              field: 'name',
+              width: 12,
+              required: true
+            },
+            {
+              field: 'code',
+              width: 6,
+              required: true
+            },
+            {
+              field: 'branch',
+              width: 6,
+              required: true
+            }
            ] %>

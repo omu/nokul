@@ -76,9 +76,7 @@ tr:
         meetings: Toplantılar
         name: Kurul / Komisyon Adı
         new_committee_link: Yeni Bir Kurul/Komisyon Oluştur
-        unit_status: Birim Durumu
         unit_type: Birim Türü
-        yoksis_id: YOKSIS ID
     decisions:
       create:
         success: Kurul kararı başarıyla oluşturuldu.

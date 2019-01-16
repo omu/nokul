@@ -11,14 +11,14 @@ module Admin
 
     def create
       @district = @city.districts.new(district_params)
-      @city.save ? redirect_to([:admin, @city.country, @city], notice: t('.success')) : render(:new)
+      @city.save ? redirect_to(index_path, notice: t('.success')) : render(:new)
     end
 
     def edit; end
 
     def update
       if @district.update(district_params)
-        redirect_to([:admin, @city.country, @city], notice: t('.success'))
+        redirect_to(index_path, notice: t('.success'))
       else
         render(:edit)
       end
@@ -26,13 +26,17 @@ module Admin
 
     def destroy
       if @district.destroy
-        redirect_to([:admin, @city.country, @city], notice: t('.success'))
+        redirect_to(index_path, notice: t('.success'))
       else
-        redirect_to([:admin, @city.country, @city], alert: t('.warning'))
+        redirect_to(index_path, alert: t('.warning'))
       end
     end
 
     private
+
+    def index_path
+      [:admin, @city.country, @city]
+    end
 
     def set_city
       @city = City.find(params[:city_id])

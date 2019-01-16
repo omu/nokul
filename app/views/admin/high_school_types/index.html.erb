@@ -1,6 +1,8 @@
-<%= render 'admin/layouts/index',
+<%= render 'layouts/builders/index',
+           namespace: 'admin',
            klass: 'high_school_type',
            collection: @high_school_types,
            pagy: @pagy,
            card_header: t('.card_header'),
-           params: ['name', 'code'] %>
+           params: ['name', 'code'],
+           actions: ['edit', 'destroy'] %>
