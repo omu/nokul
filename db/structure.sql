@@ -2825,7 +2825,7 @@ ALTER TABLE ONLY public.districts ALTER COLUMN id SET DEFAULT nextval('public.di
 
 
 --
--- Name: document_types id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.document_types ALTER COLUMN id SET DEFAULT nextval('public.document_types_id_seq'::regclass);
@@ -3351,7 +3351,7 @@ ALTER TABLE ONLY public.districts
 
 
 --
--- Name: document_types document_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: document_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.document_types
@@ -4873,7 +4873,15 @@ ALTER TABLE ONLY public.agendas
 
 
 --
--- Name: available_courses fk_rails_c4a7c8b06e; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: fk_rails_bb4be290e9; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.course_evaluation_types
+    ADD CONSTRAINT fk_rails_bb4be290e9 FOREIGN KEY (available_course_id) REFERENCES public.available_courses(id);
+
+
+--
+-- Name: fk_rails_c4a7c8b06e; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.available_courses
@@ -4889,7 +4897,7 @@ ALTER TABLE ONLY public.courses
 
 
 --
--- Name: registration_documents fk_rails_cb709e42ad; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: fk_rails_cb709e42ad; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.registration_documents
@@ -4897,7 +4905,7 @@ ALTER TABLE ONLY public.registration_documents
 
 
 --
--- Name: units fk_rails_db99877142; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: fk_rails_db99877142; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.units
@@ -5047,3 +5055,5 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20181226013104'),
 ('20190115062149'),
 ('20190115100844');
+
+
