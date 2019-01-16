@@ -1,0 +1,15 @@
+<%= render 'layouts/builders/form',
+           namespace: 'admin',
+           klass: @document_type,
+           params: [
+            {
+              field: 'name',
+              width: 12,
+              required: true
+            },
+            {
+              field: 'active',
+              width: 12,
+              required: true
+            }
+           ] %>

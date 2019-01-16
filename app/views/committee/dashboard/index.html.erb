@@ -9,16 +9,14 @@
         <%= fa_icon 'cubes', text: t('.card_header') %>
       </div>
       <div class='card-body'>
-        <%= render 'components/smart_search_form',
+        <%= render 'layouts/shared/smart_search_form',
                    path: committees_path,
                    placeholder: t('.name') %>
         <table class='table table-responsive-sm table-striped'>
           <thead>
             <tr>
               <th><%= t('.name') %></th>
-              <th><%= t('.yoksis_id') %></th>
               <th><%= t('.detsis_id') %></th>
-              <th><%= t('.unit_status') %></th>
               <th><%= t('.unit_type') %></th>
               <th><%= t('.district') %></th>
               <th><%= t('actions') %></th>
@@ -27,10 +25,8 @@
           <tbody>
             <% @committees.each do |committee| %>
               <tr>
-                <td><%= link_to(committee.name, unit_path(committee)) %></td>
-                <td><%= committee.yoksis_id %></td>
+                <td><%= link_to(committee.names_depth_cache, unit_path(committee)) %></td>
                 <td><%= committee.detsis_id %></td>
-                <td><%= committee.unit_status.name %></td>
                 <td><%= committee.unit_type.try(:name) %></td>
                 <td><%= committee.district.name %> / <%= committee.district.city.name %></td>
                 <td>
