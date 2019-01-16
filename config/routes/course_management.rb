@@ -7,7 +7,6 @@ scope module: :course_management do
   end
 
   resources :courses
-  resources :course_evaluation_criterion_types, except: :show
   resources :course_groups
   resources :course_group_types, except: :show
   resources :course_types,       except: :show

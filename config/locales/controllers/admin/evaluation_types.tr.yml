@@ -8,7 +8,7 @@ tr:
       evaluation_type:
         create: Değerlendirme Türü Oluştur
         update: Değerlendirme Türü Güncelle
-  references:
+  admin:
     evaluation_types:
       create:
         success: Değerlendirme türü başarıyla oluşturuldu.

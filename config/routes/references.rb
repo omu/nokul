@@ -2,6 +2,5 @@
 
 scope module: :references do
   resources :academic_terms, except: :show
-  resources :evaluation_types, except: :show
   resources :terms, except: :show
 end
