@@ -5,7 +5,7 @@ module References
     before_action :set_evaluation_type, only: %i[edit update destroy]
 
     def index
-      @evaluation_types = EvaluationType.all
+      @evaluation_types = EvaluationType.order(:name)
     end
 
     def new

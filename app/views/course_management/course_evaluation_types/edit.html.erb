@@ -1,0 +1,3 @@
+<%= render 'form', evaluation_type: @evaluation_type, form_title: t('.form_title'),
+                   url: available_course_evaluation_type_path(@available_course, @evaluation_type),
+                   method: :patch %>

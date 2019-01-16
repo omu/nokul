@@ -16,6 +16,7 @@ module CourseManagement
 
     def show
       @groups = @available_course.groups.includes(lecturers: [lecturer: %i[title user]])
+      @evaluation_types = @available_course.evaluation_types.includes(:evaluation_type)
     end
 
     def new
