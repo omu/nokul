@@ -7,6 +7,7 @@ module CourseManagement
 
     def new
       @evaluation_type = @available_course.evaluation_types.new
+      @evaluation_type.course_assessment_methods.build
     end
 
     def create
@@ -40,7 +41,9 @@ module CourseManagement
     end
 
     def course_evaluation_type_params
-      params.require(:course_evaluation_type).permit(:evaluation_type_id, :percentage)
+      params.require(:course_evaluation_type)
+            .permit(:evaluation_type_id, :percentage,
+                    course_assessment_methods_attributes: %i[id assessment_method_id percentage _destroy])
     end
   end
 end

@@ -29,6 +29,9 @@ en:
         theoric: Theoric
         unit: Unit
         ects: Ects
+      course_assessment_method: &course_assessment_method
+        assessment_method: Assessment Method
+        percentage: Percentage
       course_evaluation_type: &evaluation_type_attributes
         evaluation_type: Evaluation Type
         percentage: Percentage
@@ -174,6 +177,9 @@ en:
         success: Course evaluation type successfully destroyed.
       edit:
         form_title: Update the Course Evaluation Type
+      form:
+        <<: *course_assessment_method
+        create_assessment_method: Create Assessment Method
       index:
         <<: *evaluation_type_attributes
         card_header: Course Evaluation Types
