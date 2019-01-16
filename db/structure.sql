@@ -394,6 +394,37 @@ ALTER SEQUENCE public.articles_id_seq OWNED BY public.articles.id;
 
 
 --
+-- Name: assessment_methods; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.assessment_methods (
+    id bigint NOT NULL,
+    name character varying,
+    CONSTRAINT assessment_methods_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT assessment_methods_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
+);
+
+
+--
+-- Name: assessment_methods_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.assessment_methods_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: assessment_methods_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.assessment_methods_id_seq OWNED BY public.assessment_methods.id;
+
+
+--
 -- Name: available_course_groups; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -2674,6 +2705,13 @@ ALTER TABLE ONLY public.articles ALTER COLUMN id SET DEFAULT nextval('public.art
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY public.assessment_methods ALTER COLUMN id SET DEFAULT nextval('public.assessment_methods_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY public.available_course_groups ALTER COLUMN id SET DEFAULT nextval('public.available_course_groups_id_seq'::regclass);
 
 
@@ -3148,6 +3186,22 @@ ALTER TABLE ONLY public.ar_internal_metadata
 
 ALTER TABLE ONLY public.articles
     ADD CONSTRAINT articles_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: assessment_methods_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.assessment_methods
+    ADD CONSTRAINT assessment_methods_name_unique UNIQUE (name) DEFERRABLE;
+
+
+--
+-- Name: assessment_methods_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.assessment_methods
+    ADD CONSTRAINT assessment_methods_pkey PRIMARY KEY (id);
 
 
 --
@@ -5054,6 +5108,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20181225201818'),
 ('20181226013104'),
 ('20190115062149'),
-('20190115100844');
+('20190115100844'),
+('20190116104001');
 
 
