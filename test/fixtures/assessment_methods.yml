@@ -1,0 +1,14 @@
+application:
+  name: Uygulama
+
+exam:
+  name: Sınav
+
+homework:
+  name: Ödev
+
+lab:
+  name: laboratuvar
+
+project:
+  name: Proje
