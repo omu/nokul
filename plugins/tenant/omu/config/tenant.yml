@@ -10,6 +10,8 @@ default: &default
     domain: 'omu.edu.tr'
     default_from: 'noreply@baum.omu.edu.tr'
     support: 'hotline@baum.omu.edu.tr'
+  network:
+    subnet: '5.6.7.0/24'
 
 production:
   <<: *default
