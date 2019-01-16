@@ -6,3 +6,6 @@ undergraduate_final:
 
 undergraduate_retake:
   name: Bütünleme Değerlendirme
+
+evaluation_type_to_delete:
+  name: This evaluation type will be deleted

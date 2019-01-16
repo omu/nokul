@@ -875,6 +875,41 @@ ALTER SEQUENCE public.countries_id_seq OWNED BY public.countries.id;
 
 
 --
+-- Name: course_assessment_methods; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.course_assessment_methods (
+    id bigint NOT NULL,
+    course_evaluation_type_id bigint NOT NULL,
+    assessment_method_id bigint NOT NULL,
+    percentage integer,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL,
+    CONSTRAINT course_assessment_methods_percentage_null CHECK ((percentage IS NOT NULL)),
+    CONSTRAINT course_assessment_methods_percentage_numericality CHECK (((percentage >= 0) AND (percentage <= 100)))
+);
+
+
+--
+-- Name: course_assessment_methods_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.course_assessment_methods_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: course_assessment_methods_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.course_assessment_methods_id_seq OWNED BY public.course_assessment_methods.id;
+
+
+--
 -- Name: course_evaluation_types; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -886,7 +921,7 @@ CREATE TABLE public.course_evaluation_types (
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     CONSTRAINT course_evaluation_types_percentage_null CHECK ((percentage IS NOT NULL)),
-    CONSTRAINT course_evaluation_types_percentage_numericality CHECK ((percentage >= 0))
+    CONSTRAINT course_evaluation_types_percentage_numericality CHECK (((percentage >= 0) AND (percentage <= 100)))
 );
 
 
@@ -2789,6 +2824,13 @@ ALTER TABLE ONLY public.countries ALTER COLUMN id SET DEFAULT nextval('public.co
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY public.course_assessment_methods ALTER COLUMN id SET DEFAULT nextval('public.course_assessment_methods_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY public.course_evaluation_types ALTER COLUMN id SET DEFAULT nextval('public.course_evaluation_types_id_seq'::regclass);
 
 
@@ -3314,6 +3356,14 @@ ALTER TABLE ONLY public.countries
 
 ALTER TABLE ONLY public.countries
     ADD CONSTRAINT countries_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: course_assessment_methods_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.course_assessment_methods
+    ADD CONSTRAINT course_assessment_methods_pkey PRIMARY KEY (id);
 
 
 --
@@ -4110,6 +4160,20 @@ CREATE INDEX index_committee_meetings_on_unit_id ON public.committee_meetings US
 
 
 --
+-- Name: index_course_assessment_methods_on_assessment_method_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_course_assessment_methods_on_assessment_method_id ON public.course_assessment_methods USING btree (assessment_method_id);
+
+
+--
+-- Name: index_course_assessment_methods_on_course_evaluation_type_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_course_assessment_methods_on_course_evaluation_type_id ON public.course_assessment_methods USING btree (course_evaluation_type_id);
+
+
+--
 -- Name: index_course_evaluation_types_on_available_course_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -4599,6 +4663,14 @@ ALTER TABLE ONLY public.curriculum_programs
 
 
 --
+-- Name: fk_rails_3351011c48; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.course_assessment_methods
+    ADD CONSTRAINT fk_rails_3351011c48 FOREIGN KEY (course_evaluation_type_id) REFERENCES public.course_evaluation_types(id);
+
+
+--
 -- Name: fk_rails_356137da91; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -5015,6 +5087,14 @@ ALTER TABLE ONLY public.curriculum_course_groups
 
 
 --
+-- Name: fk_rails_f2b5f80e2c; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.course_assessment_methods
+    ADD CONSTRAINT fk_rails_f2b5f80e2c FOREIGN KEY (assessment_method_id) REFERENCES public.assessment_methods(id);
+
+
+--
 -- Name: fk_rails_f75b60bc6a; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -5109,6 +5189,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20181226013104'),
 ('20190115062149'),
 ('20190115100844'),
-('20190116104001');
+('20190116104001'),
+('20190116115745');
 
 

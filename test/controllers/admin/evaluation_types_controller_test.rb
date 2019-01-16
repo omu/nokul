@@ -65,7 +65,7 @@ module Admin
 
     test 'should destroy evaluation type' do
       assert_difference('EvaluationType.count', -1) do
-        delete admin_evaluation_type_path(EvaluationType.last)
+        delete admin_evaluation_type_path(evaluation_types(:evaluation_type_to_delete))
       end
 
       assert_equal 'destroy', @controller.action_name

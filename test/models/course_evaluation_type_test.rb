@@ -11,6 +11,7 @@ class CourseEvaluationTypeTest < ActiveSupport::TestCase
   %i[
     available_course
     evaluation_type
+    course_assessment_methods
   ].each do |property|
     test "a course evaluation type can communicate with #{property}" do
       assert @course_evaluation_type.send(property)
@@ -31,6 +32,8 @@ class CourseEvaluationTypeTest < ActiveSupport::TestCase
   # validations: numericality
   test 'numericality validations for percentage of a course evaluation type' do
     @course_evaluation_type.percentage = -1
+    assert_not @course_evaluation_type.valid?
+    @course_evaluation_type.percentage = 101
     assert_not @course_evaluation_type.valid?
     assert_not_empty @course_evaluation_type.errors[:percentage]
   end
