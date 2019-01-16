@@ -1,6 +1,15 @@
-<%= render 'admin/layouts/form',
+<%= render 'layouts/builders/form',
+           namespace: 'admin',
            klass: @unit_instruction_language,
            params: [
-            ['name', 12, true],
-            ['code', 12, true]
+            {
+              field: 'name',
+              width: 12,
+              required: true
+            },
+            {
+              field: 'code',
+              width: 12,
+              required: true
+            }
            ] %>

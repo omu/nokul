@@ -21,7 +21,7 @@ en:
       index:
         <<: *calendar_event_type_attributes
         card_header: Event Types
-        new_event_type_link: New Event Type
+        new_calendar_event_type_link: New Event Type
       create:
         success: Event type successfully created.
       update:

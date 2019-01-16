@@ -48,6 +48,5 @@ en:
     show:
       <<: *unit_attributes
       parent: Parent Unit
-      registration_documents: Registration Documents
     update:
       success: Unit successfully updated.

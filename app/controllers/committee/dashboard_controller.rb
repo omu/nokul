@@ -6,7 +6,7 @@ module Committee
 
     def index
       @committees = pagy_by_search(
-        Unit.committees.includes(:unit_type, :unit_status, district: :city)
+        Unit.includes(:unit_type, district: :city).committees.active.order(:name)
       )
     end
   end

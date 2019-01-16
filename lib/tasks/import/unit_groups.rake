@@ -74,6 +74,7 @@ namespace :import do
         'Başmüdürlük',
         'Bölüm Başkanlığı',
         'Daire Başkanlığı',
+        'Diğer İdari Birim',
         'Enstitü Müdürlüğü',
         'Enstitü Sekreterliği',
         'Fakülte Dekanlığı',

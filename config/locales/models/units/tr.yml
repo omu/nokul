@@ -48,6 +48,5 @@ tr:
     show:
       <<: *unit_attributes
       parent: Üst Birim
-      registration_documents: Gerekli Belgeler
     update:
       success: Birim başarıyla güncellendi.
