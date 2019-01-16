@@ -8,7 +8,7 @@ en:
       evaluation_type:
         create: Create Evaluation Type
         update: Update Evaluation Type
-  references:
+  admin:
     evaluation_types:
       create:
         success: Evaluation type successfully created.

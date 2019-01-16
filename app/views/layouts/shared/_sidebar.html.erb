@@ -101,6 +101,11 @@
             <% end %>
           </li>
           <li class="nav-item">
+            <%= link_to [:admin, 'evaluation_types'], class: 'nav-link' do %>
+              <%= fa_icon('th-list', text: t('.evaluation_types'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+          <li class="nav-item">
             <%= link_to [:admin, 'languages'], class: 'nav-link' do %>
               <%= fa_icon('language', text: t('.languages'), class: 'nav-icon') %>
             <% end %>
@@ -141,11 +146,6 @@
           <li class="nav-item">
             <%= link_to course_types_path, class: 'nav-link' do %>
               <%= fa_icon('pencil', text: t('.course_types'), class: 'nav-icon') %>
-            <% end %>
-          </li>
-          <li class="nav-item">
-            <%= link_to evaluation_types_path, class: 'nav-link' do %>
-              <%= fa_icon('th-list', text: t('.evaluation_types'), class: 'nav-icon') %>
             <% end %>
           </li>
           <li class="nav-item">

@@ -1,11 +1,13 @@
 # frozen_string_literal: true
 
-module References
+module Admin
   class EvaluationTypesController < ApplicationController
+    include PagyBackendWithHelpers
+
     before_action :set_evaluation_type, only: %i[edit update destroy]
 
     def index
-      @evaluation_types = EvaluationType.order(:name)
+      @evaluation_types = pagy_by_search(EvaluationType.order(:name))
     end
 
     def new
@@ -16,21 +18,21 @@ module References
 
     def create
       @evaluation_type = EvaluationType.new(evaluation_type_params)
-      @evaluation_type.save ? redirect_with('success') : render(:new)
+      @evaluation_type.save ? index_path('success') : render(:new)
     end
 
     def update
-      @evaluation_type.update(evaluation_type_params) ? redirect_with('success') : render(:edit)
+      @evaluation_type.update(evaluation_type_params) ? index_path('success') : render(:edit)
     end
 
     def destroy
-      @evaluation_type.destroy ? redirect_with('success') : redirect_with('warning')
+      @evaluation_type.destroy ? index_path('success') : index_path('warning')
     end
 
     private
 
-    def redirect_with(message)
-      redirect_to(:evaluation_types, notice: t(".#{message}"))
+    def index_path(message)
+      redirect_to(%i[admin evaluation_types], notice: t(".#{message}"))
     end
 
     def set_evaluation_type
