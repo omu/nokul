@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-module AcademicCalendar
+module References
   class AcademicTermsControllerTest < ActionDispatch::IntegrationTest
     setup do
       sign_in users(:serhat)

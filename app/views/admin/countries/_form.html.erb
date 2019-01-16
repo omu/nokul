@@ -1,10 +1,33 @@
-<%= render 'admin/layouts/form',
+<%= render 'layouts/builders/form',
+           namespace: 'admin',
            klass: @country,
            params: [
-            ['name', 12, true],
-            ['alpha_2_code', 3, true],
-            ['alpha_3_code', 3, true],
-            ['numeric_code', 3, true],
-            ['mernis_code', 3, false],
-            ['yoksis_code', 3, false],
+            {
+              field: 'name',
+              width: 12,
+              required: true
+            },
+            {
+              field: 'alpha_2_code',
+              width: 3,
+              required: true
+            },
+            {
+              field: 'alpha_3_code',
+              width: 3,
+              required: true
+            },
+            {
+              field: 'numeric_code',
+              width: 3,
+              required: true
+            },
+            {
+              field: 'mernis_code',
+              width: 3
+            },
+            {
+              field: 'yoksis_code',
+              width: 3
+            }
            ] %>

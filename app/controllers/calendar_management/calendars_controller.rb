@@ -25,24 +25,28 @@ module CalendarManagement
 
     def create
       @calendar = Calendar.new(calendar_params)
-      @calendar.save ? redirect_with('success') : render(:new)
+      @calendar.save ? redirect_to(index_path, notice: t('.success')) : render(:new)
     end
 
     def edit; end
 
     def update
-      @calendar.update(calendar_params) ? redirect_with('success') : render(:edit)
+      @calendar.update(calendar_params) ? redirect_to(index_path, notice: t('.success')) : render(:edit)
     end
 
     def destroy
-      @calendar.destroy ? redirect_with('success') : redirect_with('warning')
+      if @calendar.destroy
+        redirect_to(index_path, notice: t('.success'))
+      else
+        redirect_to(index_path, alert: t('.warning'))
+      end
     end
 
     def duplicate
       @calendar = Calendar.find(params[:calendar_id])
       @duplicate_record = DuplicateService.new(@calendar, 'name').duplicate
 
-      redirect_with('warning') && return unless @duplicate_record
+      redirect_to(index_path, alert: t('.warning')) && return unless @duplicate_record
 
       AcademicCalendars::DuplicateEventsService.new(@calendar, @duplicate_record)
 
@@ -55,8 +59,8 @@ module CalendarManagement
 
     private
 
-    def redirect_with(message)
-      redirect_to([:calendar_management, 'calendars'], notice: t(".#{message}"))
+    def index_path
+      %i[calendar_management calendars]
     end
 
     def set_calendar

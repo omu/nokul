@@ -1,7 +1,21 @@
-<%= render 'admin/layouts/form',
+<%= render 'layouts/builders/form',
+           namespace: 'admin',
            klass: @unit_type,
            params: [
-            ['name', 12, true],
-            ['code', 12, true],
-            ['group', 12, true]
+            {
+              field: 'name',
+              width: 12,
+              required: true
+            },
+            {
+              field: 'code',
+              width: 12,
+              required: true
+            },
+            {
+              field: 'group',
+              width: 12,
+              required: true,
+              collection: UnitType.groups.keys.sort
+            }
            ] %>

@@ -8,17 +8,25 @@ module Admin
       sign_in users(:john)
       @country = countries(:turkey)
       @city = cities(:samsun)
+      @form_params = %w[name alpha_2_code]
     end
 
     test 'should get show' do
       get admin_country_city_path(@country, @city)
+      assert_equal 'show', @controller.action_name
       assert_response :success
       assert_select '#add-button', translate('.show.new_district_link')
     end
 
     test 'should get new' do
       get new_admin_country_city_path(@country)
+      assert_equal 'new', @controller.action_name
       assert_response :success
+      assert_select '.simple_form' do
+        @form_params.each do |param|
+          assert_select "#city_#{param}"
+        end
+      end
     end
 
     test 'should create city' do
@@ -27,6 +35,8 @@ module Admin
           city: { name: 'Test City', alpha_2_code: 'TR-90' }
         }
       end
+
+      assert_equal 'create', @controller.action_name
 
       city = City.last
 
@@ -38,10 +48,12 @@ module Admin
 
     test 'should get edit' do
       get edit_admin_country_city_path(@country, @city)
+      assert_equal 'edit', @controller.action_name
       assert_response :success
       assert_select '.simple_form' do
-        assert_select '#city_name'
-        assert_select '#city_alpha_2_code'
+        @form_params.each do |param|
+          assert_select "#city_#{param}"
+        end
       end
     end
 
@@ -50,6 +62,8 @@ module Admin
       patch admin_country_city_path(@country, city), params: {
         city: { name: 'Test City Update', alpha_2_code: 'TR-91' }
       }
+
+      assert_equal 'update', @controller.action_name
 
       city.reload
 
@@ -64,6 +78,7 @@ module Admin
         delete admin_country_city_path(@country, cities(:adana))
       end
 
+      assert_equal 'destroy', @controller.action_name
       assert_redirected_to admin_country_path(@country)
       assert_equal translate('.destroy.success'), flash[:notice]
     end
