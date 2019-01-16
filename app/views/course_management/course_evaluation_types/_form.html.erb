@@ -21,6 +21,12 @@
             <div class='col-sm-12'>
               <%= f.input :percentage, required: true %>
             </div>
+            <%= f.simple_fields_for :course_assessment_methods do |course_assessment| %>
+              <%= render 'course_assessment_method_fields', f: course_assessment %>
+            <% end %>
+            <div class='form-group col-sm-12'>
+              <%= link_to_add_association t('.create_assessment_method'), f, :course_assessment_methods, class: 'btn btn-outline-primary btn-sm' %>
+            </div>
             <div class='form-group col-sm-12'>
               <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
             </div>
@@ -30,3 +36,5 @@
     </div>
   </div>
 </div>
+
+<%= javascript_include_tag 'shared/cocoon' %>

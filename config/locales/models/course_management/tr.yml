@@ -29,6 +29,9 @@ tr:
         theoric: Teorik
         unit: Birim
         ects: AKTS
+      course_assessment_method: &course_assessment_method
+        assessment_method: Ölçme Kriteri
+        percentage: Yüzde
       course_evaluation_type: &evaluation_type_attributes
         evaluation_type: Değerlendirme Türü
         percentage: Yüzde
@@ -174,6 +177,8 @@ tr:
         success: Ders değerlendirme türü başarıyla silindi.
       edit:
         form_title: Ders Değerlendirme Türü Düzenle
+      form:
+        create_assessment_method: Ölçme Kriteri Ekle
       index:
         <<: *evaluation_type_attributes
         card_header: Ders Değerlendirme Türleri
