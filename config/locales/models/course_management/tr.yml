@@ -29,9 +29,9 @@ tr:
         theoric: Teorik
         unit: Birim
         ects: AKTS
-      course_evaluation_criterion_type: &evaluation_criterion_type_attributes
-        name: Ders Değerlendirme Kriter Türü
-        identifier: Belirteç
+      course_evaluation_type: &evaluation_type_attributes
+        evaluation_type: Değerlendirme Türü
+        percentage: Yüzde
       course_group: &course_group_attributes
         course_group_type: Ders Grup Türü
         course_ids: Dersler
@@ -84,7 +84,7 @@ tr:
       available_course: Açılan Ders
       available_course_group: Açılan Ders Grubu
       course: Ders
-      course_evaluation_criterion_type: Ders Değerlendirme Kriter Türü
+      course_evaluation_type: Ders Değerlendirme Türü
       course_group: Ders Grubu
       course_group_type: Ders Grup Türü
       course_type: Ders Türü
@@ -100,6 +100,10 @@ tr:
         success: Açılan ders başarıyla silindi.
       edit:
         form_title: '%{course} Açılan Dersi Düzenle'
+      evaluation_types:
+        assessment_method: Ölçme Kriteri
+        card_header: Değerlendirme Türleri
+        create_evaluation_type: Değerlendirme Türü Ekle
       groups:
         <<: *available_course_group_attributes
         available_course_groups: Açılan Ders Grupları
@@ -162,22 +166,22 @@ tr:
         <<: *course_attributes
       update:
         success: Ders başarıyla güncellendi.
-    course_evaluation_criterion_types:
+    course_evaluation_types:
       create:
-        success: Ders değerlendirme kriter türü başarıyla oluşturuldu.
+        success: Ders değerlendirme türü başarıyla oluşturuldu.
       destroy:
-        error: Ders değerlendirme kriter türü silinirken bir hata oluştu.
-        success: Ders değerlendirme kriter türü başarıyla silindi.
+        error: Ders değerlendirme türü silinirken bir hata oluştu.
+        success: Ders değerlendirme türü başarıyla silindi.
       edit:
-        form_title: Ders Değerlendirme Kriter Türü Düzenle
+        form_title: Ders Değerlendirme Türü Düzenle
       index:
-        <<: *evaluation_criterion_type_attributes
-        card_header: Ders Değerlendirme Kriter Türleri
-        new_course_evaluation_criterion_type_link: Yeni Ders Değerlendirme Kriter Türü Ekle
+        <<: *evaluation_type_attributes
+        card_header: Ders Değerlendirme Türleri
+        new_course_evaluation_type_link: Yeni Ders Değerlendirme Türü Ekle
       new:
-        form_title: Ders Değerlendirme Kriter Türü Oluştur
+        form_title: '%{course} Dersine Değerlendirme Türü Ekle'
       update:
-        success: Ders değerlendirme kriter türü başarıyla güncellendi.
+        success: Ders değerlendirme türü başarıyla güncellendi.
     course_groups:
       create:
         success: Ders grubu başarıyla oluşturuldu.

@@ -1,25 +1,25 @@
-<div class="alert alert-light">
-  <%= link_to_back(course_evaluation_criterion_types_path) %>
+<div class='alert alert-light'>
+  <%= link_to_back(available_course_path(@available_course)) %>
 </div>
 
 <div class='row'>
   <div class='col-sm-12'>
     <div class='card'>
       <div class='card-header'>
-        <%= fa_icon 'calendar' %>
+        <%= fa_icon 'list-alt' %>
         <strong><%= form_title %></strong>
       </div>
       <div class='card-body'>
-        <%= simple_form_for(criterion_type) do |f| %>
+        <%= simple_form_for([:available_course, evaluation_type], url: url, method: method) do |f| %>
           <div class='row'>
             <div class='col-sm-12'>
               <%= f.error_notification %>
             </div>
             <div class='col-sm-12'>
-              <%= f.input :name, required: true %>
+              <%= f.association :evaluation_type %>
             </div>
             <div class='col-sm-12'>
-              <%= f.input :identifier, required: true %>
+              <%= f.input :percentage, required: true %>
             </div>
             <div class='form-group col-sm-12'>
               <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
