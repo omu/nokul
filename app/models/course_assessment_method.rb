@@ -11,4 +11,7 @@ class CourseAssessmentMethod < ApplicationRecord
     greater_than_or_equal_to: 0,
     less_than_or_equal_to: 100
   }
+
+  # delegates
+  delegate :name, to: :assessment_method
 end

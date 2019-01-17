@@ -1,7 +1,3 @@
-<div class='alert alert-light'>
-  <%= link_to_back(available_course_path(@available_course)) %>
-</div>
-
 <div class='row'>
   <div class='col-sm-12'>
     <div class='card'>
@@ -21,6 +17,9 @@
             <div class='col-sm-12'>
               <%= f.input :percentage, required: true %>
             </div>
+            <div class='col-sm-12'>
+              <center><h3><%= t('.assessment_methods') %></h3></center>
+            </div>
             <%= f.simple_fields_for :course_assessment_methods do |course_assessment| %>
               <%= render 'course_assessment_method_fields', f: course_assessment %>
             <% end %>
@@ -29,6 +28,7 @@
             </div>
             <div class='form-group col-sm-12'>
               <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
+              <%= link_to_back(available_course_path(@available_course)) %>
             </div>
           </div>
         <% end %>

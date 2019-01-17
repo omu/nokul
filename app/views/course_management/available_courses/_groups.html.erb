@@ -1,7 +1,7 @@
 <div class='col-lg-12'>
   <div class='card'>
     <div class='card-header'>
-      <%= fa_icon 'cubes' %><strong><%= t('.available_course_groups') %></strong>
+      <%= fa_icon 'cubes' %><b><%= t('.available_course_groups') %></b>
       <span class='pull-right'>
         <%= link_to_new(new_available_course_available_course_group_path(@available_course), t('.create_available_course_group')) %>
       </span>
@@ -9,7 +9,7 @@
     <div class='card-body'>
       <% @groups.each do |group| %>
         <div class='card-header'>
-          <%= fa_icon 'cube' %><strong><%= group.name %></strong>
+          <%= fa_icon 'cube' %><b><%= group.name %></b>
           <span class='pull-right'>
             <%= link_to_edit(edit_available_course_available_course_group_path(@available_course, group)) %>
             <%= link_to_destroy(available_course_available_course_group_path(@available_course, group)) %>
@@ -35,7 +35,7 @@
         </table>
         <div class='callout callout-info'>
          <small class='text-muted'><%= t('.quota')%> </small><br>
-         <strong class='h4'><%= group.quota %></strong>
+         <b class='h4'><%= group.quota %></b>
        </div>
      <% end %>
     </div>
