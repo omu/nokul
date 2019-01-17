@@ -32,4 +32,8 @@ class ApplicationConfigTest < ActiveSupport::TestCase
   test 'appname can be read either from app.json or application class' do
     assert_not_nil Rails.application.appname
   end
+
+  test 'rack::attack is up and running as middleware' do
+    assert Rails.application.config.middleware.middlewares.include?(Rack::Attack)
+  end
 end

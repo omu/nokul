@@ -38,7 +38,9 @@ tr:
       units:
         faculties: Fakülteler
         institutes: Enstitüler
+        others: Diğer Birimler
         programs: Programlar
+        research_centers: Uygulama ve Araştırma Merkezleri
         alert_text_general: "Akademik takvimi herhangi bir birime atadığınızda, o birim altında bulunan tüm birimlere \
                             de takvim otomatik olarak atanır. Örneğin 'Eğitim Fakültesi' ataması yaparsanız, fakülte \
                             altındaki tüm programlar ilgili akademik takvime bağlanır."
