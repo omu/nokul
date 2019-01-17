@@ -96,6 +96,8 @@ class Unit < ApplicationRecord
     faculties
       .or(institutes)
       .or(programs)
+      .or(research_centers)
+      .or(others)
   }
 
   def cache_ancestry
