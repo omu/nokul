@@ -75,7 +75,6 @@ en:
         district: Location
         meetings: Meetings
         name: Committee / Commission Name
-        new_committee_link: Create a New Committee/Commission
         unit_type: Unit Type
     decisions:
       create:
