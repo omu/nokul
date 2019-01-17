@@ -75,7 +75,6 @@ tr:
         district: Bulunduğu İlçe
         meetings: Toplantılar
         name: Kurul / Komisyon Adı
-        new_committee_link: Yeni Bir Kurul/Komisyon Oluştur
         unit_type: Birim Türü
     decisions:
       create:
