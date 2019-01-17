@@ -8,6 +8,7 @@
       <div class='card-body'>
         <%= simple_form_for(@available_course) do |f| %>
           <%= f.error_notification %>
+          <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
           <% if f.object.errors.any? %>
             <ul class="list-group list-group-accent">
               <% f.object.errors.full_messages.each do |message| %>

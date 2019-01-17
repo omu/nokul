@@ -14,6 +14,9 @@ class CourseEvaluationType < ApplicationRecord
     less_than_or_equal_to: 100
   }
 
+  validates :evaluation_type, uniqueness: { scope: :available_course }
+  validates_with CourseEvaluationTypeValidator
+
   # delegate
   delegate :name, to: :evaluation_type
 end

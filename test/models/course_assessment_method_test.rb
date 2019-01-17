@@ -36,4 +36,11 @@ class CourseAssessmentMethodTest < ActiveSupport::TestCase
     assert_not @course_assessment_method.valid?
     assert_not_empty @course_assessment_method.errors[:percentage]
   end
+
+  # validations: uniqueness
+  test 'uniqueness validations for assessment method scoped with course evaluation type' do
+    fake = @course_assessment_method.dup
+    assert_not fake.valid?
+    assert_not_empty fake.errors[:assessment_method]
+  end
 end
