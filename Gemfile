@@ -49,6 +49,7 @@ gem 'jbuilder', '~> 2.5'
 
 # security
 gem 'bcrypt', '~> 3.1.7'
+gem 'rack-attack'
 
 # validators
 gem 'email_address'

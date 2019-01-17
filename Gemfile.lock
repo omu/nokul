@@ -212,6 +212,8 @@ GEM
     public_suffix (3.0.3)
     puma (3.12.0)
     rack (2.0.6)
+    rack-attack (5.4.2)
+      rack (>= 1.0, < 3)
     rack-mini-profiler (1.0.1)
       rack (>= 1.2.0)
     rack-protection (2.0.5)
@@ -379,6 +381,7 @@ DEPENDENCIES
   pghero
   pry-rails
   puma (~> 3.11)
+  rack-attack
   rack-mini-profiler
   rails (~> 5.2.1)
   redis

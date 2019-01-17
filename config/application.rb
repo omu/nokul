@@ -35,6 +35,9 @@ module Nokul
     # schema dump sformat
     config.active_record.schema_format = :sql
 
+    # use rack-attack as middleware
+    config.middleware.use Rack::Attack
+
     def appname
       @appname ||= if File.exist?(manifest = Rails.root.join('app.json'))
                      JSON.parse(File.read(manifest)).fetch 'name'
