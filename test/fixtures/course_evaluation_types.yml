@@ -12,3 +12,8 @@ ati_retake_evaluation_type:
   available_course: ati_fall_2018_2019
   evaluation_type: undergraduate_retake
   percentage: 60
+
+evaluation_type_to_delete:
+  available_course: ati_fall_2018_2019
+  evaluation_type: evaluation_type_to_delete
+  percentage: 20
