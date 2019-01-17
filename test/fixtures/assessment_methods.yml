@@ -12,3 +12,6 @@ lab:
 
 project:
   name: Proje
+
+assessment_method_to_delete:
+  name: This assessment method will be deleted
