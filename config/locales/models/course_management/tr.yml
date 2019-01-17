@@ -29,7 +29,7 @@ tr:
         theoric: Teorik
         unit: Birim
         ects: AKTS
-      course_assessment_method: &course_assessment_method
+      course_assessment_method: &course_assessment_method_attributes
         assessment_method: Ölçme Kriteri
         percentage: Yüzde
       course_evaluation_type: &evaluation_type_attributes
@@ -104,7 +104,7 @@ tr:
       edit:
         form_title: '%{course} Açılan Dersi Düzenle'
       evaluation_types:
-        assessment_method: Ölçme Kriteri
+        <<: *course_assessment_method_attributes
         card_header: Değerlendirme Türleri
         create_evaluation_type: Değerlendirme Türü Ekle
       groups:
@@ -176,8 +176,9 @@ tr:
         error: Ders değerlendirme türü silinirken bir hata oluştu.
         success: Ders değerlendirme türü başarıyla silindi.
       edit:
-        form_title: Ders Değerlendirme Türü Düzenle
+        form_title: '%{course} Dersi Değerlendirme Türünü Düzenle'
       form:
+        assessment_methods: Ölçme Kriterleri
         create_assessment_method: Ölçme Kriteri Ekle
       index:
         <<: *evaluation_type_attributes
