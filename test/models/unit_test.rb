@@ -146,8 +146,10 @@ class UnitTest < ActiveSupport::TestCase
     assert_equal Unit.eventable.count,
                  Unit.faculties.count +
                  Unit.institutes.count +
-                 Unit.programs.count
-    assert_not_includes Unit.eventable, units(:uzem)
+                 Unit.programs.count +
+                 Unit.research_centers.count +
+                 Unit.others.count
+    assert_not_includes Unit.eventable, units(:muhendislik_fakultesi_yonetim_kurulu)
   end
 
   test 'academic scope returns academic units' do
@@ -157,7 +159,7 @@ class UnitTest < ActiveSupport::TestCase
                  Unit.majors.count +
                  Unit.programs.count +
                  Unit.institutes.count
-    assert_not_includes Unit.eventable, units(:uzem)
+    assert_not_includes Unit.academic, units(:uzem)
   end
 
   # custom methods
