@@ -38,7 +38,9 @@ en:
       units:
         faculties: Faculties
         institutes: Institutes
+        others: Other Units
         programs: Programs
+        research_centers: Research Centers
         alert_text_general: "Academic calendars will recursively be assigned to the children units of the selected \
                             units. For example if you assign calendar to a faculty, all sub-departments and programs \
                             of that faculty will be assigned to the calendar too"
