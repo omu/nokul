@@ -8,7 +8,7 @@ module Rack
     # Run rails dev:cache to toggle caching.
     cache.store = ActiveSupport::Cache::MemoryStore.new
 
-    # SPAM: a single IP can make 60 requests per minute
+    # SPAM: a single IP can make 300 reqs/5 minutes
     throttle('req/ip', limit: 300, period: 5.minutes) do |req|
       req.ip unless req.path.start_with?('/assets')
     end
