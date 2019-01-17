@@ -23,6 +23,7 @@
 .byebug_history
 .vagrant*/
 .env
+.envrc
 /storage/*
 /.local/
 
