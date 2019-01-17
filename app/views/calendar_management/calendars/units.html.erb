@@ -3,7 +3,7 @@
     <div class='col-sm-12'>
       <div class='card'>
         <div class='card-header'>
-          <%= fa_icon 'street-view', text: "#{@calendar.name} - #{full_name(@calendar.academic_term)}" %>
+          <%= fa_icon 'street-view' %><%= "#{@calendar.name} - #{full_name(@calendar.academic_term)}" %>
           <div class='card-header-actions'>
             <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
             <%= link_to_back(:back) %>
