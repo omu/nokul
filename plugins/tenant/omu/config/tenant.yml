@@ -11,7 +11,7 @@ default: &default
     default_from: 'noreply@baum.omu.edu.tr'
     support: 'hotline@baum.omu.edu.tr'
   network:
-    subnet: '5.6.7.0/24'
+    subnet: '10.0.0.0/8'
 
 production:
   <<: *default
