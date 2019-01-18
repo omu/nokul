@@ -1,0 +1,6 @@
+en:
+  activerecord:
+    attributes:
+      curriculum_semester:
+        sequence: Semester
+        year: Year

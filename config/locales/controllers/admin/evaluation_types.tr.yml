@@ -2,7 +2,7 @@ tr:
   activerecord:
     attributes:
       evaluation_type: &evaluation_type_attributes
-        name: Değerlendirme Tür Adı
+        name: Değerlendirme Türü
   helpers:
     submit:
       evaluation_type:

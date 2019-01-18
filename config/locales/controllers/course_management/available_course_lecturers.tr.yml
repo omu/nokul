@@ -1,0 +1,6 @@
+tr:
+  activerecord:
+    attributes:
+      available_course_lecturer:
+        lecturer: Öğretim Elemanı
+        coordinator: Koordinatör

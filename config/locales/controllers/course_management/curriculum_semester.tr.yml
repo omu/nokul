@@ -1,0 +1,6 @@
+tr:
+  activerecord:
+    attributes:
+      curriculum_semester:
+        sequence: Dönem Sırası
+        year: Yıl
