@@ -2,7 +2,7 @@
   <div class='col-sm-12'>
     <div class='card'>
       <div class='card-body'>
-        <%= simple_form_for([namespace.to_sym, klass].flatten) do |f| %>
+        <%= simple_form_for([namespace.try(:to_sym), klass].flatten) do |f| %>
           <div class='row'>
             <div class='form-group col-sm-12'>
               <%= f.error_notification %>
@@ -20,12 +20,13 @@
                             placeholder: parameter[:placeholder],
                             prompt: parameter[:promt],
                             disabled: parameter[:disabled] || false,
-                            start_year: parameter[:start_year] || 1965,
-                            end_year: parameter[:end_year] || (Time.zone.now.year + 10.years),
+                            start_year: parameter[:start_year],
+                            end_year: parameter[:end_year],
                             discard_day: parameter[:discard_day],
                             label_method: parameter[:label_method].try(:to_sym),
                             value_method: parameter[:value_method].try(:to_sym),
-                            group_method: parameter[:group_method].try(:to_sym) %>
+                            group_method: parameter[:group_method].try(:to_sym),
+                            group_label_method: parameter[:group_label_method].try(:to_sym) %>
               <% end %>
             <% end %>
             <div class='form-group col-sm-12'>
