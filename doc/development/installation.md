@@ -6,6 +6,7 @@
 - [Yarn](https://yarnpkg.com/lang/en/docs/install/#debian-stable)
 - [Redis](https://packages.debian.org/search?keywords=redis)
 - [libvips](https://github.com/jcupitt/libvips/wiki/Build-for-Ubuntu)
+- [wkhtmltopdf](https://github.com/mileszs/wicked_pdf#installation)
 
 ## Installation
 

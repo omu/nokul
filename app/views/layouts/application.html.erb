@@ -13,7 +13,7 @@
       <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <%= link_to root_path, class: 'navbar-brand' do %>
+      <%= link_to :root, class: 'navbar-brand' do %>
         <%= image_tag 'baum-logo.svg', height: '36', width: '134', alt: 'BAUM Logo', class: 'navbar-brand-full' %>
       <% end %>
       </a>
@@ -29,22 +29,22 @@
             <div class="dropdown-header text-center">
               <strong class='<%= t(".my_account") %>'><%= t('.my_account') %></strong>
             </div>
-            <%= link_to user_identities_path(current_user), class: 'dropdown-item' do %>
+            <%= link_to [:user, :identities, { user_id: current_user.id }], class: 'dropdown-item' do %>
               <%= fa_icon('id-card', text: t('.identities')) %>
             <% end %>
-            <%= link_to user_addresses_path(current_user), class: 'dropdown-item' do %>
+            <%= link_to [:user, :addresses, { user_id: current_user.id }], class: 'dropdown-item' do %>
               <%= fa_icon('home', text: t('.addresses')) %>
             <% end %>
-            <%= link_to user_profile_path(current_user), class: 'dropdown-item' do %>
+            <%= link_to [:user, :profile, {user_id: current_user.id }], class: 'dropdown-item' do %>
               <%= fa_icon('user', text: t('.profile_settings')) %>
             <% end %>
             <div class="dropdown-header text-center">
               <strong><%= t('.settings') %></strong>
             </div>
-            <%= link_to edit_user_registration_path, class: 'dropdown-item' do %>
+            <%= link_to %i[edit user registration], class: 'dropdown-item' do %>
               <%= fa_icon('shield', text: t('.account_settings')) %>
             <% end %>
-            <%= link_to destroy_user_session_path, class: "dropdown-item", method: :delete do %>
+            <%= link_to %i[destroy user session], class: "dropdown-item", method: :delete do %>
               <%= fa_icon('lock', text: t('.logout')) %>
             <% end %>
           </div>
