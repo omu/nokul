@@ -509,6 +509,9 @@ CREATE TABLE public.calendar_event_types (
     id bigint NOT NULL,
     name character varying,
     identifier character varying,
+    category integer,
+    CONSTRAINT calendar_event_types_category_null CHECK ((category IS NOT NULL)),
+    CONSTRAINT calendar_event_types_category_numericality CHECK ((category >= 0)),
     CONSTRAINT calendar_event_types_identifier_length CHECK ((length((identifier)::text) <= 255)),
     CONSTRAINT calendar_event_types_identifier_presence CHECK (((identifier IS NOT NULL) AND ((identifier)::text !~ '^\s*$'::text))),
     CONSTRAINT calendar_event_types_name_length CHECK ((length((name)::text) <= 255)),
@@ -1258,24 +1261,24 @@ ALTER SEQUENCE public.districts_id_seq OWNED BY public.districts.id;
 
 
 --
--- Name: documents; Type: TABLE; Schema: public; Owner: -
+-- Name: document_types; Type: TABLE; Schema: public; Owner: -
 --
 
-CREATE TABLE public.documents (
+CREATE TABLE public.document_types (
     id bigint NOT NULL,
     name character varying,
-    statement character varying,
-    CONSTRAINT documents_name_length CHECK ((length((name)::text) <= 255)),
-    CONSTRAINT documents_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text))),
-    CONSTRAINT documents_statement_length CHECK ((length((statement)::text) <= 255))
+    active boolean DEFAULT true,
+    CONSTRAINT document_types_active_null CHECK ((active IS NOT NULL)),
+    CONSTRAINT document_types_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT document_types_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
 );
 
 
 --
--- Name: documents_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+-- Name: document_types_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
-CREATE SEQUENCE public.documents_id_seq
+CREATE SEQUENCE public.document_types_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -1284,10 +1287,10 @@ CREATE SEQUENCE public.documents_id_seq
 
 
 --
--- Name: documents_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+-- Name: document_types_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
-ALTER SEQUENCE public.documents_id_seq OWNED BY public.documents.id;
+ALTER SEQUENCE public.document_types_id_seq OWNED BY public.document_types.id;
 
 
 --
@@ -1801,10 +1804,12 @@ ALTER SEQUENCE public.prospective_students_id_seq OWNED BY public.prospective_st
 CREATE TABLE public.registration_documents (
     id bigint NOT NULL,
     unit_id bigint NOT NULL,
-    document_id bigint NOT NULL,
+    document_type_id bigint NOT NULL,
     academic_term_id bigint NOT NULL,
+    description character varying,
     created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL
+    updated_at timestamp without time zone NOT NULL,
+    CONSTRAINT registration_documents_description_length CHECK ((length((description)::text) <= 65535))
 );
 
 
@@ -2391,6 +2396,8 @@ ALTER SEQUENCE public.unit_types_id_seq OWNED BY public.unit_types.id;
 CREATE TABLE public.units (
     id bigint NOT NULL,
     name character varying,
+    abbreviation character varying,
+    code character varying,
     yoksis_id integer,
     detsis_id integer,
     osym_id integer,
@@ -2407,6 +2414,8 @@ CREATE TABLE public.units (
     unit_type_id bigint,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
+    CONSTRAINT units_abbreviation_length CHECK ((length((abbreviation)::text) <= 255)),
+    CONSTRAINT units_code_length CHECK ((length((code)::text) <= 255)),
     CONSTRAINT units_detsis_id_numericality CHECK ((detsis_id >= 1)),
     CONSTRAINT units_duration_numericality CHECK (((duration >= 1) AND (duration <= 8))),
     CONSTRAINT units_foet_code_numericality CHECK ((foet_code >= 1)),
@@ -2752,10 +2761,10 @@ ALTER TABLE ONLY public.districts ALTER COLUMN id SET DEFAULT nextval('public.di
 
 
 --
--- Name: documents id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: document_types id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY public.documents ALTER COLUMN id SET DEFAULT nextval('public.documents_id_seq'::regclass);
+ALTER TABLE ONLY public.document_types ALTER COLUMN id SET DEFAULT nextval('public.document_types_id_seq'::regclass);
 
 
 --
@@ -3280,11 +3289,11 @@ ALTER TABLE ONLY public.districts
 
 
 --
--- Name: documents documents_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: document_types document_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY public.documents
-    ADD CONSTRAINT documents_pkey PRIMARY KEY (id);
+ALTER TABLE ONLY public.document_types
+    ADD CONSTRAINT document_types_pkey PRIMARY KEY (id);
 
 
 --
@@ -4204,10 +4213,10 @@ CREATE INDEX index_registration_documents_on_academic_term_id ON public.registra
 
 
 --
--- Name: index_registration_documents_on_document_id; Type: INDEX; Schema: public; Owner: -
+-- Name: index_registration_documents_on_document_type_id; Type: INDEX; Schema: public; Owner: -
 --
 
-CREATE INDEX index_registration_documents_on_document_id ON public.registration_documents USING btree (document_id);
+CREATE INDEX index_registration_documents_on_document_type_id ON public.registration_documents USING btree (document_type_id);
 
 
 --
@@ -4740,14 +4749,6 @@ ALTER TABLE ONLY public.agendas
 
 
 --
--- Name: registration_documents fk_rails_c3de792619; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.registration_documents
-    ADD CONSTRAINT fk_rails_c3de792619 FOREIGN KEY (document_id) REFERENCES public.documents(id);
-
-
---
 -- Name: available_courses fk_rails_c4a7c8b06e; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -4761,6 +4762,14 @@ ALTER TABLE ONLY public.available_courses
 
 ALTER TABLE ONLY public.courses
     ADD CONSTRAINT fk_rails_cb5582d97e FOREIGN KEY (language_id) REFERENCES public.languages(id);
+
+
+--
+-- Name: registration_documents fk_rails_cb709e42ad; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.registration_documents
+    ADD CONSTRAINT fk_rails_cb709e42ad FOREIGN KEY (document_type_id) REFERENCES public.document_types(id);
 
 
 --

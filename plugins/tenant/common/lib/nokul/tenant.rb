@@ -4,17 +4,13 @@ require 'nokul-support'
 
 require_relative 'tenant/version'
 require_relative 'tenant/errors'
-require_relative 'tenant/engine'
 require_relative 'tenant/units'
+require_relative 'tenant/api'
+require_relative 'tenant/engine'
 
 module Nokul
   module Tenant
-    DEFAULT_TENANT = 'omu'
     PLUGIN_PATTERN = 'nokul-tenant-%<name>s'
-
-    mattr_accessor :name
-    mattr_accessor :engine
-    mattr_accessor :configuration
 
     module_function
 
@@ -44,15 +40,5 @@ module Nokul
       # Fill-in Tenant.configuration
       self.configuration = engine.deep_config_for :tenant
     end
-
-    def deep_config_for(*args)
-      engine.deep_config_for(*args)
-    end
-
-    def root
-      engine.root
-    end
-
-    alias instance engine
   end
 end

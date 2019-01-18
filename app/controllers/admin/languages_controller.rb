@@ -16,24 +16,28 @@ module Admin
 
     def create
       @language = Language.new(language_params)
-      @language.save ? redirect_to(admin_languages_path, notice: t('.success')) : render(:new)
+      @language.save ? redirect_to(index_path, notice: t('.success')) : render(:new)
     end
 
     def edit; end
 
     def update
-      @language.update(language_params) ? redirect_to(admin_languages_path, notice: t('.success')) : render(:edit)
+      @language.update(language_params) ? redirect_to(index_path, notice: t('.success')) : render(:edit)
     end
 
     def destroy
       if @language.destroy
-        redirect_to(admin_languages_path, notice: t('.success'))
+        redirect_to(index_path, notice: t('.success'))
       else
-        redirect_to(admin_languages_path, alert: t('.warning'))
+        redirect_to(index_path, alert: t('.warning'))
       end
     end
 
     private
+
+    def index_path
+      %i[admin languages]
+    end
 
     def set_language
       @language = Language.find(params[:id])

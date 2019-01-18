@@ -21,7 +21,18 @@ class UnitTypeTest < ActiveSupport::TestCase
 
   # enums
   {
-    group: { other: 0, university: 1, faculty: 2, department: 3, program: 4, committee: 5 }
+    group: {
+      other: 0,
+      faculty: 1,
+      department: 2,
+      major: 3,
+      undergraduate_program: 4,
+      graduate_program: 5,
+      institute: 6,
+      research_center: 7,
+      committee: 8,
+      administrative: 9
+    }
   }.each do |property, hash|
     hash.each do |key, value|
       test "have a #{key} value of #{property} enum" do

@@ -16,6 +16,22 @@ module Nokul
               test 'each unit must have an status_id' do
                 assert_empty(units.select { |unit| unit.unit_status_id.blank? })
               end
+
+              test 'active siblings must have uniq names' do
+                skip
+
+                offensive_units = []
+                units.tree.values.each do |siblings|
+                  seen = {}
+                  siblings.each do |unit|
+                    next unless unit.active?
+
+                    offensive_units << unit if seen[unit.name]
+                    seen[unit.name] = unit
+                  end
+                end
+                assert_empty offensive_units
+              end
             end
           end
         end

@@ -1,6 +1,15 @@
-<%= render 'admin/layouts/form',
+<%= render 'layouts/builders/form',
+           namespace: 'admin',
            klass: [@country, @city],
            params: [
-            ['name', 12, true],
-            ['alpha_2_code', 12, true]
+            {
+              field: 'name',
+              width: 12,
+              required: true
+            },
+            {
+              field: 'alpha_2_code',
+              width: 12,
+              required: true
+            }
            ] %>

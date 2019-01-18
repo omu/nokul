@@ -5,12 +5,23 @@ tr:
         name: Olay Türü
         category: Kategori
         identifier: Tür Tanımlayıcısı
+    enums:
+      calendar_event_type:
+        categories:
+          applications: Başvurular
+          payments: Ödemeler
+          registrations: Kayıtlar
+          advisor: Danışman İşlemleri
+          exams: Sınavlar
+          courses: Dersler
+          submission: Teslim İşlemleri
+          announcement: Duyurular
   calendar_management:
     calendar_event_types:
       index:
         <<: *calendar_event_type_attributes
         card_header: Olay Türleri
-        new_event_type_link: Yeni Olay Türü
+        new_calendar_event_type_link: Yeni Olay Türü
       create:
         success: Olay türü başarıyla oluşturuldu.
       update:

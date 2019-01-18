@@ -1,10 +1,15 @@
 # frozen_string_literal: true
 
-event_types = YAML.load_file Rails.root.join('db', 'static_data', 'event_types.yml')
+event_types = YAML.load_file Tenant.root.join('db', 'static', 'event_types.yml')
+
 progress_bar = ProgressBar.spawn('EventType', event_types.count)
 event_types.each do |category, event_type|
   event_type.each do |type|
-    CalendarEventType.create(name: type['name'], identifier: "#{type['identifier']}_#{category}")
+    CalendarEventType.create(
+      name: type['name'],
+      identifier: "#{type['identifier']}_#{category}",
+      category: category.to_s
+    )
   end
   progress_bar&.increment
 end
@@ -98,8 +103,9 @@ calendar_events = [
     visible: true
   },
   {
-    calendar_event_type: CalendarEventType.find_by(identifier: 'start_of_courses'),
+    calendar_event_type: CalendarEventType.find_by(identifier: 'start_and_end_of_courses'),
     start_time: '2018-09-24 08:00:00',
+    end_time: '2018-11-28 08:00:00',
     timezone: 'Istanbul',
     visible: true
   },
@@ -127,12 +133,6 @@ calendar_events = [
     calendar_event_type: CalendarEventType.find_by(identifier: 'mid_term_exams'),
     start_time: '2018-11-17 08:00:00',
     end_time: '2018-11-25 17:00:00',
-    timezone: 'Istanbul',
-    visible: true
-  },
-  {
-    calendar_event_type: CalendarEventType.find_by(identifier: 'end_of_courses'),
-    start_time: '2018-11-28 08:00:00',
     timezone: 'Istanbul',
     visible: true
   },
