@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'test_helper'
-require 'pry'
 require_relative './concerns/enum_for_term_test'
 
 class AcademicTermTest < ActiveSupport::TestCase

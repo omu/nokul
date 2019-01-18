@@ -4,7 +4,7 @@ class AcademicTerm < ApplicationRecord
   include EnumForTerm
 
   # callbacks
-  after_save -> { AcademicTerm.where.not(id: id).update_all(active: false) }, if: :active?
+  after_save -> { AcademicTerm.where.not(id: id).update(active: false) }, if: :active?
 
   # relations
   has_many :calendars, dependent: :nullify
