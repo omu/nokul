@@ -28,6 +28,7 @@ class Identity < ApplicationRecord
 
   # scopes
   scope :user_identity, -> { formal.find_by(student_id: nil) }
+  scope :student_identity, -> { formal.where.not(student_id: nil).first }
 
   # callbacks
   before_save do

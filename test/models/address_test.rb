@@ -45,11 +45,6 @@ class AddressTest < ActiveSupport::TestCase
     assert addresses(:informal).informal?
   end
 
-  # delegations
-  test 'address delegates id_number for activejob objects' do
-    assert addresses(:formal).id_number
-  end
-
   # callbacks
   test 'callbacks must titlecase the full_address of an address' do
     addresses(:formal).update!(full_address: 'ABC SOKAK', type: 'informal')
@@ -69,5 +64,20 @@ class AddressTest < ActiveSupport::TestCase
     assert_not informal.valid?
     assert_not_empty informal.errors[:base]
     assert informal.errors[:base].include?(t('validators.address.max_informal', limit: 1))
+  end
+
+  # other validations
+  long_string = (0...256).map { ('a'..'z').to_a[rand(26)] }.join
+
+  %i[
+    phone_number
+    full_address
+  ].each do |property|
+    test "#{property} can not be longer than 255 characters" do
+      fake = addresses(:formal).dup
+      fake.send("#{property}=", long_string)
+      assert_not fake.valid?
+      assert fake.errors.details[property].map { |err| err[:error] }.include?(:too_long)
+    end
   end
 end

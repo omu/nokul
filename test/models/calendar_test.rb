@@ -45,6 +45,8 @@ class CalendarTest < ActiveSupport::TestCase
   end
 
   # other validations
+  long_string = (0...256).map { ('a'..'z').to_a[rand(26)] }.join
+
   %i[
     name
     timezone
@@ -52,7 +54,7 @@ class CalendarTest < ActiveSupport::TestCase
   ].each do |property|
     test "#{property} of calendar can not be longer than 255 characters" do
       fake = @calendar.dup
-      fake.send("#{property}=", (0...256).map { ('a'..'z').to_a[rand(26)] }.join)
+      fake.send("#{property}=", long_string)
       assert_not fake.valid?
       assert fake.errors.details[property].map { |err| err[:error] }.include?(:too_long)
     end
