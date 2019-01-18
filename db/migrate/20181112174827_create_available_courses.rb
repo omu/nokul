@@ -18,8 +18,11 @@ class CreateAvailableCourses < ActiveRecord::Migration[5.2]
       t.references :coordinator,
                    foreign_key: { to_table: :employees }
       t.integer :groups_count, default: 0
+      t.boolean :assessments_approved, default: false
       t.timestamps
     end
+
+    add_null_constraint :available_courses, :assessments_approved
 
     add_numericality_constraint :available_courses, :groups_count, greater_than_or_equal_to: 0
   end

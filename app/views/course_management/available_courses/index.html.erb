@@ -1,7 +1,3 @@
-<div class="alert alert-light">
-  <%= link_to_new new_available_course_path, t('.add_new_available_course') %>
-</div>
-
 <%= render 'search' %>
 
 <div class='row'>
@@ -9,6 +5,9 @@
     <div class="card">
       <div class="card-header">
         <%= fa_icon 'align-justify', text: t('.available_courses') %>
+        <span class='pull-right'>
+          <%= link_to_new new_available_course_path, t('.add_new_available_course') %>
+        </span>
       </div>
       <div class="card-body">
         <table class='table table-responsive-sm table-striped table-hover'>

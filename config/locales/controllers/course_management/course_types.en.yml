@@ -1,0 +1,29 @@
+en:
+  activerecord:
+    attributes:
+      course_type: &course_type_attributes
+        name: Course Type
+        code: Code
+        min_credit: Minimum Credit
+  course_management:
+    course_types:
+      create:
+        success: Course type successfully created.
+      destroy:
+        warning: An error occured when deleting the course type.
+        success: Course type successfully destroyed.
+      edit:
+        form_title: Update the Course Type
+      index:
+        <<: *course_type_attributes
+        card_header: Course Types
+        new_course_type_link: Add a New Course Type
+      new:
+        form_title: Create a Course Type
+      update:
+        success: Course type successfully updated.
+  helpers:
+    submit:
+      course_type:
+        create: Create Course Type
+        update: Update Course Type

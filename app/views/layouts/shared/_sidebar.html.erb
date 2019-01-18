@@ -101,6 +101,16 @@
             <% end %>
           </li>
           <li class="nav-item">
+            <%= link_to %i[admin evaluation_types], class: 'nav-link' do %>
+            <%= fa_icon('th-list', text: t('.evaluation_types'), class: 'nav-icon') %>
+          <% end %>
+          </li>
+          <li class="nav-item">
+            <%= link_to %i[admin assessment_methods], class: 'nav-link' do %>
+              <%= fa_icon('pencil-square', text: t('.assessment_methods'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+          <li class="nav-item">
             <%= link_to %i[admin languages], class: 'nav-link' do %>
               <%= fa_icon('language', text: t('.languages'), class: 'nav-icon') %>
             <% end %>
@@ -141,11 +151,6 @@
           <li class="nav-item">
             <%= link_to :course_types, class: 'nav-link' do %>
               <%= fa_icon('pencil', text: t('.course_types'), class: 'nav-icon') %>
-            <% end %>
-          </li>
-          <li class="nav-item">
-            <%= link_to :course_evaluation_criterion_types, class: 'nav-link' do %>
-              <%= fa_icon('pencil', text: t('.course_evaluation_criterion_types'), class: 'nav-icon') %>
             <% end %>
           </li>
           <li class="nav-item">

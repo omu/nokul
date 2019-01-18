@@ -10,3 +10,7 @@ chief_john:
   user: john
   title: chief
   active: true
+employee_to_delete:
+  user: john
+  title: research_assistant
+  active: false
