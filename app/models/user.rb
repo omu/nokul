@@ -76,11 +76,15 @@ class User < ApplicationRecord
     (students + employees).flatten
   end
 
-  def self.most_publishing
-    where.not(articles_count: nil).order('articles_count desc').limit(10)
-  end
-
   def title
     employees.active.first.try(:title).try(:name)
+  end
+
+  def self.with_most_articles
+    where.not(articles_count: 0).order('articles_count desc').limit(10)
+  end
+
+  def self.with_most_projects
+    where.not(projects_count: 0).order('projects_count desc').limit(10)
   end
 end

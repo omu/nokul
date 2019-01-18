@@ -40,6 +40,25 @@ class IdentityTest < ActiveSupport::TestCase
     assert_not_empty student_identity.errors[:student_id]
   end
 
+  # other validations
+  long_string = (0...256).map { ('a'..'z').to_a[rand(26)] }.join
+
+  %i[
+    first_name
+    last_name
+    mothers_name
+    fathers_name
+    place_of_birth
+    registered_to
+  ].each do |property|
+    test "#{property} can not be longer than 255 characters" do
+      fake = identities(:formal_user).dup
+      fake.send("#{property}=", long_string)
+      assert_not fake.valid?
+      assert fake.errors.details[property].map { |err| err[:error] }.include?(:too_long)
+    end
+  end
+
   # enumerations
   %i[
     formal?
