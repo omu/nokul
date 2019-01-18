@@ -8,14 +8,18 @@ tr:
     enums:
       unit_type:
         groups:
+          administrative: İdari Birim
           committee: Kurul
           department: Bölüm
           faculty: Fakülte
+          graduate_program: Lisansüstü Program
           institute: Enstitü
           major: Anabilim Dalı
           other: Diğer
           program: Program
           rectorship: Rektörlük
+          research_center: Uygulama ve Araştırma Merkezi
+          undergraduate_program: Lisans Programı
           university: Üniversite
   helpers:
     submit:
