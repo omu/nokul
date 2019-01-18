@@ -45,7 +45,7 @@
       <div class='card-header'>
         <%= fa_icon 'street-view', text: t('.card_header') %>
         <div class="card-header-actions">
-          <%= link_to_new [:new, :admin, @country, 'city'], t('.new_city_link') %>
+          <%= link_to_new t('.new_city_link'), [:new, :admin, @country, 'city'] %>
         </div>
       </div>
       <div class='card-body'>
