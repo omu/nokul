@@ -1,0 +1,31 @@
+en:
+  activerecord:
+    attributes:
+      course_evaluation_type: &evaluation_type_attributes
+        evaluation_type: Evaluation Type
+        percentage: Percentage
+  course_management:
+    course_evaluation_types:
+      create:
+        success: Course evaluation type successfully created.
+      destroy:
+        error: An error occured when deleting the course evaluation type.
+        success: Course evaluation type successfully destroyed.
+      edit:
+        form_title: 'Update the %{course} Course Evaluation Type'
+      form:
+        assessment_methods: Assessment Methods
+        create_assessment_method: Create Assessment Method
+      index:
+        <<: *evaluation_type_attributes
+        card_header: Course Evaluation Types
+        new_course_evaluation_type_link: Add New Course Evaluation Type
+      new:
+        form_title: 'Create a Course Evaluation Type for %{course} Course'
+      update:
+        success: Course evaluation type successfully updated.
+  helpers:
+    submit:
+      course_evaluation_type:
+        create: Create Course Evaluation Type
+        update: Update Course Evaluation Type

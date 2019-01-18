@@ -1,0 +1,31 @@
+tr:
+  activerecord:
+    attributes:
+      course_evaluation_type: &evaluation_type_attributes
+        evaluation_type: Değerlendirme Türü
+        percentage: Yüzde
+  course_management:
+    course_evaluation_types:
+      create:
+        success: Ders değerlendirme türü başarıyla oluşturuldu.
+      destroy:
+        error: Ders değerlendirme türü silinirken bir hata oluştu.
+        success: Ders değerlendirme türü başarıyla silindi.
+      edit:
+        form_title: '%{course} Dersi Değerlendirme Türünü Düzenle'
+      form:
+        assessment_methods: Ölçme Kriterleri
+        create_assessment_method: Ölçme Kriteri Ekle
+      index:
+        <<: *evaluation_type_attributes
+        card_header: Ders Değerlendirme Türleri
+        new_course_evaluation_type_link: Yeni Ders Değerlendirme Türü Ekle
+      new:
+        form_title: '%{course} Dersine Değerlendirme Türü Ekle'
+      update:
+        success: Ders değerlendirme türü başarıyla güncellendi.
+  helpers:
+    submit:
+      course_evaluation_type:
+        create: Değerlendirme Türü Ekle
+        update: Değerlendirme Türü Güncelle

@@ -1,0 +1,11 @@
+tr:
+  activerecord:
+    attributes:
+      curriculum_course_group:
+        course_group: Ders Grubu
+        ects: AKTS
+  helpers:
+    submit:
+      curriculum_course_group:
+        create: Müfredat Ders Grubu Ekle
+        update: Müfredat Ders Grubu Güncelle

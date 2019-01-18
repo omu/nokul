@@ -1,0 +1,67 @@
+tr:
+  activerecord:
+    attributes:
+      curriculum: &curriculum_attributes
+        name: Müfredat Adı
+        semesters_count: Dönem Sayısı
+        programs: Programlar
+        status: Durumu
+        unit: Birim
+        number_of_semesters: Oluşturulacak Dönem Sayısı
+        type: Dönem Oluşturma Türü
+    enums:
+      curriculum:
+        statuses:
+          active: Aktif
+          passive: Pasif
+  course_management:
+    curriculums:
+      create:
+        success: Müfredat başarıyla oluşturuldu.
+      curriculum_courses:
+        code: Dersin Kodu
+        credit: Kredi
+        course_type: Ders Türü
+        laboratory: Laboratuvar
+        language: Dil
+        name: Dersin Adı
+        practice: Uygulama
+        program_type: Program Türü
+        status: Durumu
+        theoric: Teorik
+        total_ects: Toplam AKTS
+        type: Türü
+        unit: Birim
+        ects: AKTS
+      destroy:
+        error: Müfredat silinirken bir hata oluştu.
+        success: Müfredat başarıyla silindi.
+      edit:
+        form_title: Müfredatı Düzenle
+      form:
+        semesters: 'Yarıyıllar'
+      index:
+        <<: *curriculum_attributes
+        add_new_curriculum: Yeni Müfredat Ekle
+        curriculums: Müfredatlar
+      new:
+        form_title: Müfredat Oluştur
+      search:
+        smart_search_placeholder: Müfredat Adı
+        <<: *curriculum_attributes
+      semesters:
+        add_course: Ders Ekle
+        add_course_group: Ders Grubu Ekle
+        compulsory_courses: Zorunlu Dersler
+        elective_courses: Seçmeli Dersler
+        selectable_total_ects: Seçilebilir Toplam AKTS
+        total_ects: Toplam AKTS
+      show:
+        <<: *curriculum_attributes
+      update:
+        success: Müfredat başarıyla güncellendi.
+  helpers:
+    submit:
+      curriculum:
+        create: Müfredat Ekle
+        update: Müfredat Güncelle

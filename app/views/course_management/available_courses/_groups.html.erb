@@ -1,12 +1,22 @@
-<div class="col-lg-12">
-  <% @groups.each do |group| %>
-    <div class="card">
-      <div class="card-header bg-secondary">
-        <%= fa_icon 'book' %><strong><%= group.name %></strong>
-      </div>
-      <div class="card-body">
-        <table class='table table-responsive-sm table-striped'>
-          <thead class="thead-dark">
+<div class='col-lg-12'>
+  <div class='card'>
+    <div class='card-header'>
+      <%= fa_icon 'cubes' %><b><%= t('.available_course_groups') %></b>
+      <span class='pull-right'>
+        <%= link_to_new(new_available_course_available_course_group_path(@available_course), t('.create_available_course_group')) %>
+      </span>
+    </div>
+    <div class='card-body'>
+      <% @groups.each do |group| %>
+        <div class='card-header'>
+          <%= fa_icon 'cube' %><b><%= group.name %></b>
+          <span class='pull-right'>
+            <%= link_to_edit(edit_available_course_available_course_group_path(@available_course, group)) %>
+            <%= link_to_destroy(available_course_available_course_group_path(@available_course, group)) %>
+          </span>
+        </div>
+        <table class='table table-sm table-striped'>
+          <thead class='thead'>
             <tr>
               <th><%= t('.title') %></th>
               <th><%= t('.lecturer') %></th>
@@ -18,26 +28,16 @@
             <tr>
               <td><%= lecturer.title.name %></td>
               <td><%= full_name(lecturer.identities.formal.first) %></td>
-              <td>
-                <% if lecturer.coordinator %>
-                  <span class="text-success"><%= fa_icon('check-circle-o') %></span>
-                <% else %>
-                  <span class="text-danger"><%= fa_icon('times-circle-o') %></span>
-                <% end %>
-              </td>
+              <td><%= icon_for_check(lecturer.coordinator) %></td>
             </tr>
             <% end %>
           </tbody>
         </table>
-        <div class="callout callout-info">
-         <small class="text-muted"><%= t('.quota')%> </small><br>
-         <strong class="h4"><%= group.quota %></strong>
+        <div class='callout callout-info'>
+         <small class='text-muted'><%= t('.quota')%> </small><br>
+         <b class='h4'><%= group.quota %></b>
        </div>
-      </div>
-      <div class="card-footer">
-        <%= link_to_edit(edit_available_course_available_course_group_path(@available_course, group)) %>
-        <%= link_to_destroy(available_course_available_course_group_path(@available_course, group)) %>
-      </div>
+     <% end %>
     </div>
-  <% end %>
+  </div>
 </div>

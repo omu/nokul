@@ -1,0 +1,29 @@
+tr:
+  activerecord:
+    attributes:
+      course_type: &course_type_attributes
+        name: Ders Türü
+        code: Kod
+        min_credit: Asgari Kredi
+  course_management:
+    course_types:
+      create:
+        success: Ders türü başarıyla oluşturuldu.
+      destroy:
+        warning: Ders türü silinirken bir hata oluştu.
+        success: Ders türü başarıyla silindi.
+      edit:
+        form_title: Ders Türü Düzenle
+      index:
+        <<: *course_type_attributes
+        card_header: Ders Türleri
+        new_course_type_link: Yeni Ders Türü Ekle
+      new:
+        form_title: Ders Türü Oluştur
+      update:
+        success: Ders türü başarıyla güncellendi.
+  helpers:
+    submit:
+      course_type:
+        create: Ders Türü Ekle
+        update: Ders Türü Güncelle
