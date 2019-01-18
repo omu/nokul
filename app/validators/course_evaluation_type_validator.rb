@@ -3,9 +3,7 @@
 class CourseEvaluationTypeValidator < ActiveModel::Validator
   def validate(record)
     @evaluation_type = record
-    @assessment_methods = @evaluation_type.course_assessment_methods
-
-    check_percentage(@assessment_methods.map(&:percentage))
+    check_percentage(@evaluation_type.course_assessment_methods.map(&:percentage))
   end
 
   def check_percentage(percentages)

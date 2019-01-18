@@ -5,6 +5,7 @@ class CourseEvaluationType < ApplicationRecord
   belongs_to :available_course
   belongs_to :evaluation_type
   has_many :course_assessment_methods, dependent: :destroy
+  has_many :assessment_methods, through: :course_assessment_methods
   accepts_nested_attributes_for :course_assessment_methods, allow_destroy: true, reject_if: :all_blank
 
   # validations

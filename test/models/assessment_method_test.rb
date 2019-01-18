@@ -10,6 +10,8 @@ class AssessmentMethodTest < ActiveSupport::TestCase
   # relations
   %i[
     course_assessment_methods
+    course_evaluation_types
+    available_courses
   ].each do |property|
     test "a assessment method can communicate with #{property}" do
       assert @assessment_method.send(property)
@@ -21,6 +23,14 @@ class AssessmentMethodTest < ActiveSupport::TestCase
     @assessment_method.name = nil
     assert_not @assessment_method.valid?
     assert_not_empty @assessment_method.errors[:name]
+  end
+
+  # other validations
+  test 'name can not be longer than 255 characters' do
+    fake = @assessment_method.dup
+    fake.name = (0...256).map { ('a'..'z').to_a[rand(26)] }.join
+    assert_not fake.valid?
+    assert fake.errors.details[:name].map { |err| err[:error] }.include?(:too_long)
   end
 
   # callbacks

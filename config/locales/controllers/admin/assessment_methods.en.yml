@@ -15,13 +15,9 @@ en:
       destroy:
         success: Assessment method successfully deleted.
         warning: Assessment method can not be deleted!
-      edit:
-        form_title: Update the Assessment Method
       index:
         <<: *assessment_method_attributes
         card_header: Assessment Methods
         new_assessment_method_link: Create a New Assessment Method
-      new:
-        form_title: Create a Assessment Method
       update:
         success: Assessment method successfully updated.

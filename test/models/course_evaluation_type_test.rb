@@ -12,6 +12,7 @@ class CourseEvaluationTypeTest < ActiveSupport::TestCase
     available_course
     evaluation_type
     course_assessment_methods
+    assessment_methods
   ].each do |property|
     test "a course evaluation type can communicate with #{property}" do
       assert @course_evaluation_type.send(property)

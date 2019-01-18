@@ -15,13 +15,9 @@ tr:
       destroy:
         success: Ölçme kriteri başarıyla silindi.
         warning: Ölçme kriteri silinemedi!
-      edit:
-        form_title: Ölçme Kriteri Güncelle
       index:
         <<: *assessment_method_attributes
         card_header: Ölçme Kriterleri
         new_assessment_method_link: Yeni Ölçme Kriteri Oluştur
-      new:
-        form_title: Ölçme Kriteri Oluştur
       update:
         success: Ölçme kriteri başarıyla güncellendi.
