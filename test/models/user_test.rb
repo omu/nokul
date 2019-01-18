@@ -7,13 +7,18 @@ class UserTest < ActiveSupport::TestCase
 
   # relations
   %i[
+    avatar
     employees
     students
     identities
     addresses
+    duties
+    units
     positions
     administrative_functions
-    avatar
+    certifications
+    projects
+    articles
   ].each do |property|
     test "a user can communicate with #{property}" do
       assert users(:serhat).send(property)

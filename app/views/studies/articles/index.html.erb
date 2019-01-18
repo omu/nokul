@@ -20,7 +20,7 @@
       </div>
       <div class="card-body">
         <ul class="list-group">
-          <% User.most_publishing.each do |user| %>
+          <% User.with_most_articles.each do |user| %>
             <li class="list-group-item">
               <%= link_to user_path(user) do %>
                 <%= "#{user.identities.first.try(:first_name)} #{user.identities.first.try(:last_name)}" %>

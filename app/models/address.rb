@@ -16,9 +16,6 @@ class Address < ApplicationRecord
   validates :full_address, presence: true, length: { maximum: 255 }
   validates_with AddressAndIdentityValidator, on: :create
 
-  # delegations
-  delegate :id_number, to: :user
-
   # callbacks
   before_save { self.full_address = full_address.capitalize_turkish }
 end
