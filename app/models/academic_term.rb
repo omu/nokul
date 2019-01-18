@@ -3,13 +3,12 @@
 class AcademicTerm < ApplicationRecord
   include EnumForTerm
 
+  # callbacks
+  after_save -> { AcademicTerm.where.not(id: id).update_all(active: false) }, if: :active?
+
   # relations
   has_many :calendars, dependent: :nullify
   has_many :registration_documents, dependent: :nullify
-
-  # callbacks
-
-  after_save -> { AcademicTerm.where.not(id: id).update_all(active: false) }, if: :active?
 
   # validations
   validates :year, presence: true, uniqueness: { scope: :term }, length: { maximum: 255 }
