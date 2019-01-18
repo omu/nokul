@@ -8,14 +8,18 @@ en:
     enums:
       unit_type:
         groups:
+          administrative: Administrative
           committee: Committee
           department: Department
           faculty: Faculty
+          graduate_program: Graduate Program
           institute: Institute
           major: Major
           other: Other
           program: Program
           rectorship: Rectorship
+          research_center: Research Center
+          undergraduate_program: Undergraduate Program
           university: University
   helpers:
     submit:
