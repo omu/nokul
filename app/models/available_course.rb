@@ -19,7 +19,7 @@ class AvailableCourse < ApplicationRecord
   belongs_to :curriculum
   belongs_to :course
   belongs_to :unit
-  belongs_to :coordinator, class_name: 'Employee', optional: true
+  belongs_to :coordinator, class_name: 'Employee'
   has_many :groups, class_name: 'AvailableCourseGroup', dependent: :destroy
   has_many :evaluation_types, class_name: 'CourseEvaluationType', dependent: :destroy
 
