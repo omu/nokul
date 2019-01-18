@@ -4,7 +4,6 @@
       <div class="card-header">
         <%= fa_icon 'university' %><strong><%= @unit.name %></strong>
         <div class="card-header-actions">
-          <%= link_to_show(unit_registration_documents_path(@unit), t('.registration_documents'))  if @unit.unit_type.try(:program?) %>
           <%= link_to_edit(edit_unit_path(@unit)) %>
           <%= link_to_destroy(@unit) %>
         </div>
@@ -13,6 +12,14 @@
       <div class="card-body">
         <table class="table table-responsive-sm">
           <tbody>
+            <tr>
+              <td><%= t('.abbreviation') %></td>
+              <td><%= @unit.abbreviation %></td>
+            </tr>
+            <tr>
+              <td><%= t('.code') %></td>
+              <td><%= @unit.code %></td>
+            </tr>
             <tr>
               <td><%= t('.parent') %></td>
               <td><%= @unit.parent.try(:name) %></td>

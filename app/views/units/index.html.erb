@@ -14,15 +14,9 @@
           <thead>
             <tr>
               <th><%= t('.name') %></th>
-              <th><%= t('.yoksis_id') %></th>
-              <th><%= t('.detsis_id') %></th>
-              <th><%= t('.foet_code') %></th>
-              <th><%= t('.founded_at') %></th>
-              <th><%= t('.duration') %></th>
+              <th><%= t('.abbreviation') %></th>
               <th><%= t('.unit_type') %></th>
-              <th><%= t('.district') %></th>
               <th><%= t('.unit_status') %></th>
-              <th><%= t('.unit_instruction_language') %></th>
               <th><%= t('.unit_instruction_type') %></th>
               <th><%= t('actions') %></th>
             </tr>
@@ -30,19 +24,12 @@
           <tbody>
             <% @units.each do |unit| %>
               <tr>
-                <td><%= unit.name %></td>
-                <td><%= unit.yoksis_id %></td>
-                <td><%= unit.detsis_id %></td>
-                <td><%= unit.foet_code %></td>
-                <td><%= unit.founded_at %></td>
-                <td><%= unit.duration %></td>
+                <td><%= link_to(unit.names_depth_cache, unit_path(unit)) %></td>
+                <td><%= unit.abbreviation %></td>
                 <td><%= unit.unit_type.try(:name) %></td>
-                <td><%= unit.district.name %> / <%= unit.district.city.name %></td>
                 <td><%= unit.unit_status.try(:name) %></td>
-                <td><%= unit.unit_instruction_language.try(:name) %></td>
                 <td><%= unit.unit_instruction_type.try(:name) %></td>
                 <td>
-                  <%= link_to_show(unit_path(unit)) %>
                   <%= link_to_edit(edit_unit_path(unit)) %>
                   <%= link_to_destroy(unit) %>
                 </td>

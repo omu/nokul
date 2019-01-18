@@ -9,7 +9,7 @@
   parent_yoksis_id: '147730'
   detsis_id: '68459231'
   parent_detsis_id: '78633602'
-  unit_type_id: Meslek Yüksekokulu Müdürlüğü
+  unit_type_id: Yüksekokul Müdürlüğü
   unit_status_id: Aktif
   district_id: Alaçam
 
@@ -26,7 +26,7 @@
   abbreviation: ALAÇAM-MYO-SEK
   detsis_id: '80234327'
   parent_detsis_id: '68459231'
-  unit_type_id: Meslek Yüksekokulu Sekreterliği
+  unit_type_id: Yüksekokul Sekreterliği
   unit_status_id: Aktif
   district_id: Alaçam
 
@@ -52,7 +52,7 @@
   abbreviation: ALAÇAM-MYO-DİSKUR
   detsis_id: '67787986'
   parent_detsis_id: '68459231'
-  unit_type_id: Meslek Yüksekokulu Disiplin Kurulu
+  unit_type_id: Yüksekokul Disiplin Kurulu
   unit_status_id: Aktif
   district_id: Alaçam
 
@@ -60,7 +60,7 @@
   abbreviation: ALAÇAM-MYO-KUR
   detsis_id: '63300708'
   parent_detsis_id: '68459231'
-  unit_type_id: Meslek Yüksekokulu Kurulu
+  unit_type_id: Yüksekokul Kurulu
   unit_status_id: Aktif
   district_id: Alaçam
 
@@ -68,7 +68,7 @@
   abbreviation: ALAÇAM-MYO-YÖNKUR
   detsis_id: '49709020'
   parent_detsis_id: '68459231'
-  unit_type_id: Meslek Yüksekokulu Yönetim Kurulu
+  unit_type_id: Yüksekokul Yönetim Kurulu
   unit_status_id: Aktif
   district_id: Alaçam
 
@@ -77,7 +77,7 @@
   parent_yoksis_id: '122355'
   detsis_id: '50713553'
   parent_detsis_id: '78633602'
-  unit_type_id: Meslek Yüksekokulu Müdürlüğü
+  unit_type_id: Yüksekokul Müdürlüğü
   unit_status_id: Aktif
   district_id: Bafra
 
@@ -91,7 +91,7 @@
   district_id: Bafra
 
 - name: Bitkisel ve Hayvansal Üretim Bölüm Başkanlığı
-  abbreviation: BAFRA-MYO-BHU-BB
+  abbreviation: BAFRA-MYO-BHÜ-BB
   parent_yoksis_id: '169417'
   detsis_id: '63395826'
   parent_detsis_id: '50713553'
@@ -121,7 +121,7 @@
   abbreviation: BAFRA-MYO-DİSKUR
   detsis_id: '65871243'
   parent_detsis_id: '50713553'
-  unit_type_id: Meslek Yüksekokulu Disiplin Kurulu
+  unit_type_id: Yüksekokul Disiplin Kurulu
   unit_status_id: Aktif
   district_id: Bafra
 
@@ -129,7 +129,7 @@
   abbreviation: BAFRA-MYO-KUR
   detsis_id: '14895932'
   parent_detsis_id: '50713553'
-  unit_type_id: Meslek Yüksekokulu Kurulu
+  unit_type_id: Yüksekokul Kurulu
   unit_status_id: Aktif
   district_id: Bafra
 
@@ -137,7 +137,7 @@
   abbreviation: BAFRA-MYO-YÖNKUR
   detsis_id: '58151099'
   parent_detsis_id: '50713553'
-  unit_type_id: Meslek Yüksekokulu Yönetim Kurulu
+  unit_type_id: Yüksekokul Yönetim Kurulu
   unit_status_id: Aktif
   district_id: Bafra
 
@@ -146,7 +146,7 @@
   parent_yoksis_id: '265280'
   detsis_id: '27516806'
   parent_detsis_id: '78633602'
-  unit_type_id: Meslek Yüksekokulu Müdürlüğü
+  unit_type_id: Yüksekokul Müdürlüğü
   unit_status_id: Aktif
   district_id: Bafra
 
@@ -154,7 +154,7 @@
   abbreviation: TURİZM-MYO-SEK
   detsis_id: '94861059'
   parent_detsis_id: '27516806'
-  unit_type_id: Meslek Yüksekokulu Sekreterliği
+  unit_type_id: Yüksekokul Sekreterliği
   unit_status_id: Aktif
   district_id: Bafra
 
@@ -240,7 +240,7 @@
   parent_yoksis_id: '174829'
   detsis_id: '15086663'
   parent_detsis_id: '78633602'
-  unit_type_id: Meslek Yüksekokulu Müdürlüğü
+  unit_type_id: Yüksekokul Müdürlüğü
   unit_status_id: Aktif
   district_id: Çarşamba
 
@@ -257,7 +257,7 @@
   abbreviation: ADALET-MYO-SEK
   detsis_id: '26903244'
   parent_detsis_id: '15086663'
-  unit_type_id: Meslek Yüksekokulu Sekreterliği
+  unit_type_id: Yüksekokul Sekreterliği
   unit_status_id: Aktif
   district_id: Çarşamba
 
@@ -265,7 +265,7 @@
   abbreviation: ADALET-MYO-DİSKUR
   detsis_id: '70808284'
   parent_detsis_id: '15086663'
-  unit_type_id: Meslek Yüksekokulu Disiplin Kurulu
+  unit_type_id: Yüksekokul Disiplin Kurulu
   unit_status_id: Aktif
   district_id: Çarşamba
 
@@ -273,7 +273,7 @@
   abbreviation: ADALET-MYO-KUR
   detsis_id: '25420189'
   parent_detsis_id: '15086663'
-  unit_type_id: Meslek Yüksekokulu Kurulu
+  unit_type_id: Yüksekokul Kurulu
   unit_status_id: Aktif
   district_id: Çarşamba
 
@@ -281,7 +281,7 @@
   abbreviation: ADALET-MYO-YÖNKUR
   detsis_id: '37724678'
   parent_detsis_id: '15086663'
-  unit_type_id: Meslek Yüksekokulu Yönetim Kurulu
+  unit_type_id: Yüksekokul Yönetim Kurulu
   unit_status_id: Aktif
   district_id: Çarşamba
 
@@ -357,7 +357,7 @@
   district_id: Çarşamba
 
 - name: Mali Hukuk Anabilim Dalı Başkanlığı
-  abbreviation: KAMU-MH-ADB
+  abbreviation: KAMU-MALİ-ADB
   parent_yoksis_id: '159917'
   detsis_id: '92359565'
   parent_detsis_id: '32538491'
@@ -395,7 +395,7 @@
   district_id: Çarşamba
 
 - name: Medeni Hukuk Anabilim Dalı Başkanlığı
-  abbreviation: ÖZELHUKUK-MH-ADB
+  abbreviation: ÖZELHUKUK-MEDENİ-ADB
   parent_yoksis_id: '140236'
   detsis_id: '26684789'
   parent_detsis_id: '78415181'
@@ -493,7 +493,7 @@
   parent_yoksis_id: '169488'
   detsis_id: '21071378'
   parent_detsis_id: '78633602'
-  unit_type_id: Meslek Yüksekokulu Müdürlüğü
+  unit_type_id: Yüksekokul Müdürlüğü
   unit_status_id: Aktif
   district_id: Çarşamba
 
@@ -537,7 +537,7 @@
   abbreviation: TİCARET-MYO-SEK
   detsis_id: '87953753'
   parent_detsis_id: '21071378'
-  unit_type_id: Meslek Yüksekokulu Sekreterliği
+  unit_type_id: Yüksekokul Sekreterliği
   unit_status_id: Aktif
   district_id: Çarşamba
 
@@ -563,7 +563,7 @@
   abbreviation: TİCARET-MYO-DİSKUR
   detsis_id: '35949938'
   parent_detsis_id: '21071378'
-  unit_type_id: Meslek Yüksekokulu Disiplin Kurulu
+  unit_type_id: Yüksekokul Disiplin Kurulu
   unit_status_id: Aktif
   district_id: Çarşamba
 
@@ -571,7 +571,7 @@
   abbreviation: TİCARET-MYO-KUR
   detsis_id: '65993268'
   parent_detsis_id: '21071378'
-  unit_type_id: Meslek Yüksekokulu Kurulu
+  unit_type_id: Yüksekokul Kurulu
   unit_status_id: Aktif
   district_id: Çarşamba
 
@@ -579,7 +579,7 @@
   abbreviation: TİCARET-MYO-YÖNKUR
   detsis_id: '32165550'
   parent_detsis_id: '21071378'
-  unit_type_id: Meslek Yüksekokulu Yönetim Kurulu
+  unit_type_id: Yüksekokul Yönetim Kurulu
   unit_status_id: Aktif
   district_id: Çarşamba
 
@@ -667,7 +667,7 @@
   parent_yoksis_id: '122379'
   detsis_id: '78645283'
   parent_detsis_id: '78633602'
-  unit_type_id: Meslek Yüksekokulu Müdürlüğü
+  unit_type_id: Yüksekokul Müdürlüğü
   unit_status_id: Aktif
   district_id: Havza
 
@@ -693,7 +693,7 @@
   abbreviation: HAVZA-MYO-SEK
   detsis_id: '43413601'
   parent_detsis_id: '78645283'
-  unit_type_id: Meslek Yüksekokulu Sekreterliği
+  unit_type_id: Yüksekokul Sekreterliği
   unit_status_id: Aktif
   district_id: Havza
 
@@ -746,7 +746,7 @@
   abbreviation: HAVZA-MYO-DİSKUR
   detsis_id: '12896414'
   parent_detsis_id: '78645283'
-  unit_type_id: Meslek Yüksekokulu Disiplin Kurulu
+  unit_type_id: Yüksekokul Disiplin Kurulu
   unit_status_id: Aktif
   district_id: Havza
 
@@ -754,7 +754,7 @@
   abbreviation: HAVZA-MYO-KUR
   detsis_id: '28348975'
   parent_detsis_id: '78645283'
-  unit_type_id: Meslek Yüksekokulu Kurulu
+  unit_type_id: Yüksekokul Kurulu
   unit_status_id: Aktif
   district_id: Havza
 
@@ -762,7 +762,7 @@
   abbreviation: HAVZA-MYO-YÖNKUR
   detsis_id: '45728884'
   parent_detsis_id: '78645283'
-  unit_type_id: Meslek Yüksekokulu Yönetim Kurulu
+  unit_type_id: Yüksekokul Yönetim Kurulu
   unit_status_id: Aktif
   district_id: Havza
 
@@ -771,7 +771,7 @@
   parent_yoksis_id: '122330'
   detsis_id: '36024139'
   parent_detsis_id: '78633602'
-  unit_type_id: Meslek Yüksekokulu Müdürlüğü
+  unit_type_id: Yüksekokul Müdürlüğü
   unit_status_id: Aktif
   district_id: Terme
 
@@ -797,7 +797,7 @@
   abbreviation: TERME-MYO-GIDA-SEK
   detsis_id: '89716816'
   parent_detsis_id: '36024139'
-  unit_type_id: Meslek Yüksekokulu Sekreterliği
+  unit_type_id: Yüksekokul Sekreterliği
   unit_status_id: Aktif
   district_id: Terme
 
@@ -823,7 +823,7 @@
   abbreviation: TERME-MYO-DİSKUR
   detsis_id: '37225687'
   parent_detsis_id: '36024139'
-  unit_type_id: Meslek Yüksekokulu Disiplin Kurulu
+  unit_type_id: Yüksekokul Disiplin Kurulu
   unit_status_id: Aktif
   district_id: Terme
 
@@ -831,7 +831,7 @@
   abbreviation: TERME-MYO-KUR
   detsis_id: '86846638'
   parent_detsis_id: '36024139'
-  unit_type_id: Meslek Yüksekokulu Kurulu
+  unit_type_id: Yüksekokul Kurulu
   unit_status_id: Aktif
   district_id: Terme
 
@@ -839,7 +839,7 @@
   abbreviation: TERME-MYO-YÖNKUR
   detsis_id: '28679253'
   parent_detsis_id: '36024139'
-  unit_type_id: Meslek Yüksekokulu Yönetim Kurulu
+  unit_type_id: Yüksekokul Yönetim Kurulu
   unit_status_id: Aktif
   district_id: Terme
 
@@ -848,7 +848,7 @@
   parent_yoksis_id: '122296'
   detsis_id: '61206311'
   parent_detsis_id: '78633602'
-  unit_type_id: Meslek Yüksekokulu Müdürlüğü
+  unit_type_id: Yüksekokul Müdürlüğü
   unit_status_id: Aktif
   district_id: Vezirköprü
 
@@ -885,7 +885,7 @@
   abbreviation: VEZİRKÖPRÜ-MYO-SEK
   detsis_id: '48974914'
   parent_detsis_id: '61206311'
-  unit_type_id: Meslek Yüksekokulu Sekreterliği
+  unit_type_id: Yüksekokul Sekreterliği
   unit_status_id: Aktif
   district_id: Vezirköprü
 
@@ -911,7 +911,7 @@
   abbreviation: VEZİRKÖPRÜ-MYO-KUR
   detsis_id: '19993096'
   parent_detsis_id: '61206311'
-  unit_type_id: Meslek Yüksekokulu Kurulu
+  unit_type_id: Yüksekokul Kurulu
   unit_status_id: Aktif
   district_id: Vezirköprü
 
@@ -919,7 +919,7 @@
   abbreviation: VEZİRKÖPRÜ-MYO-DİSKUR
   detsis_id: '46275906'
   parent_detsis_id: '61206311'
-  unit_type_id: Meslek Yüksekokulu Disiplin Kurulu
+  unit_type_id: Yüksekokul Disiplin Kurulu
   unit_status_id: Aktif
   district_id: Vezirköprü
 
@@ -927,7 +927,7 @@
   abbreviation: VEZİRKÖPRÜ-MYO-YÖNKUR
   detsis_id: '43583466'
   parent_detsis_id: '61206311'
-  unit_type_id: Meslek Yüksekokulu Yönetim Kurulu
+  unit_type_id: Yüksekokul Yönetim Kurulu
   unit_status_id: Aktif
   district_id: Vezirköprü
 
@@ -945,7 +945,7 @@
   parent_yoksis_id: '201881'
   detsis_id: '30423168'
   parent_detsis_id: '78633602'
-  unit_type_id: Meslek Yüksekokulu Müdürlüğü
+  unit_type_id: Yüksekokul Müdürlüğü
   unit_status_id: Aktif
   district_id: Tekkeköy
 
@@ -1007,7 +1007,7 @@
   abbreviation: YEŞİLYURT-MYO-SEK
   detsis_id: '37077418'
   parent_detsis_id: '30423168'
-  unit_type_id: Meslek Yüksekokulu Sekreterliği
+  unit_type_id: Yüksekokul Sekreterliği
   unit_status_id: Aktif
   district_id: Tekkeköy
 
@@ -1024,7 +1024,7 @@
   abbreviation: YEŞİLYURT-MYO-DİSKUR
   detsis_id: '55101226'
   parent_detsis_id: '30423168'
-  unit_type_id: Meslek Yüksekokulu Disiplin Kurulu
+  unit_type_id: Yüksekokul Disiplin Kurulu
   unit_status_id: Aktif
   district_id: Tekkeköy
 
@@ -1032,7 +1032,7 @@
   abbreviation: YEŞİLYURT-MYO-KUR
   detsis_id: '75674136'
   parent_detsis_id: '30423168'
-  unit_type_id: Meslek Yüksekokulu Kurulu
+  unit_type_id: Yüksekokul Kurulu
   unit_status_id: Aktif
   district_id: Tekkeköy
 
@@ -1040,7 +1040,7 @@
   abbreviation: YEŞİLYURT-MYO-YÖNKUR
   detsis_id: '66604919'
   parent_detsis_id: '30423168'
-  unit_type_id: Meslek Yüksekokulu Yönetim Kurulu
+  unit_type_id: Yüksekokul Yönetim Kurulu
   unit_status_id: Aktif
   district_id: Tekkeköy
 
@@ -1447,7 +1447,7 @@
   district_id: Atakum
 
 - name: Özel Eğitim Bölüm Başkanlığı
-  abbreviation: ÖZELB-BB
+  abbreviation: ÖZELEĞİTİM-BB
   parent_yoksis_id: '122092'
   detsis_id: '81004858'
   parent_detsis_id: '98725097'
@@ -1456,7 +1456,7 @@
   district_id: Atakum
 
 - name: İşitme Engelliler Eğitimi Anabilim Dalı Başkanlığı
-  abbreviation: ÖZELB-İŞİTME-ADB
+  abbreviation: ÖZELEĞİTİM-İŞİTME-ADB
   parent_yoksis_id: '122093'
   detsis_id: '88219318'
   parent_detsis_id: '81004858'
@@ -1465,7 +1465,7 @@
   district_id: Atakum
 
 - name: Zihin Engelliler Eğitimi Anabilim Dalı Başkanlığı
-  abbreviation: ÖZELB-ZİHİN-ADB
+  abbreviation: ÖZELEĞİTİM-ZİHİN-ADB
   parent_yoksis_id: '122094'
   detsis_id: '64658489'
   parent_detsis_id: '81004858'
@@ -3037,7 +3037,7 @@
   district_id: Atakum
 
 - name: Bilgisayar Bilimleri Anabilim Dalı Başkanlığı
-  abbreviation: BİLGİSAYAR-BİL-ADB
+  abbreviation: BİLGİSAYAR-BİLİM-ADB
   parent_yoksis_id: '122185'
   detsis_id: '52799688'
   parent_detsis_id: '25705727'
@@ -3820,7 +3820,7 @@
   parent_yoksis_id: '122336'
   detsis_id: '45664456'
   parent_detsis_id: '78633602'
-  unit_type_id: Meslek Yüksekokulu Müdürlüğü
+  unit_type_id: Yüksekokul Müdürlüğü
   unit_status_id: Aktif
   district_id: Atakum
 
@@ -3837,7 +3837,7 @@
   abbreviation: SAĞLIK-MYO-SEK
   detsis_id: '90501840'
   parent_detsis_id: '45664456'
-  unit_type_id: Meslek Yüksekokulu Sekreterliği
+  unit_type_id: Yüksekokul Sekreterliği
   unit_status_id: Aktif
   district_id: Atakum
 
@@ -3863,7 +3863,7 @@
   abbreviation: SAĞLIK-MYO-DİSKUR
   detsis_id: '81688174'
   parent_detsis_id: '45664456'
-  unit_type_id: Meslek Yüksekokulu Disiplin Kurulu
+  unit_type_id: Yüksekokul Disiplin Kurulu
   unit_status_id: Aktif
   district_id: Atakum
 
@@ -3871,7 +3871,7 @@
   abbreviation: SAĞLIK-MYO-KUR
   detsis_id: '69429532'
   parent_detsis_id: '45664456'
-  unit_type_id: Meslek Yüksekokulu Kurulu
+  unit_type_id: Yüksekokul Kurulu
   unit_status_id: Aktif
   district_id: Atakum
 
@@ -3879,7 +3879,7 @@
   abbreviation: SAĞLIK-MYO-YÖNKUR
   detsis_id: '60577894'
   parent_detsis_id: '45664456'
-  unit_type_id: Meslek Yüksekokulu Yönetim Kurulu
+  unit_type_id: Yüksekokul Yönetim Kurulu
   unit_status_id: Aktif
   district_id: Atakum
 
@@ -4610,7 +4610,7 @@
   district_id: Atakum
 
 - name: Dölerme ve Suni Tohumlama Anabilim Dalı Başkanlığı
-  abbreviation: VETERİNER-KLİNİK-DST-ADB
+  abbreviation: VETERİNER-KLİNİK-DÖLERME-ADB
   parent_yoksis_id: '169346'
   detsis_id: '18686594'
   parent_detsis_id: '39766743'
@@ -4880,7 +4880,7 @@
   parent_yoksis_id: '201921'
   detsis_id: '19676956'
   parent_detsis_id: '78633602'
-  unit_type_id: Diğer İdari Birim
+  unit_type_id: Yüksekokul Müdürlüğü
   unit_status_id: Aktif
   district_id: Atakum
 
@@ -4897,7 +4897,7 @@
   abbreviation: YDİL-YO-SEK
   detsis_id: '94040670'
   parent_detsis_id: '19676956'
-  unit_type_id: Diğer İdari Birim
+  unit_type_id: Yüksekokul Sekreterliği
   unit_status_id: Aktif
   district_id: Atakum
 
@@ -4905,7 +4905,7 @@
   abbreviation: YDİL-YO-DİSKUR
   detsis_id: '56360828'
   parent_detsis_id: '19676956'
-  unit_type_id: Diğer Kurul
+  unit_type_id: Yüksekokul Disiplin Kurulu
   unit_status_id: Aktif
   district_id: Atakum
 
@@ -4913,7 +4913,7 @@
   abbreviation: YDİL-YO-KUR
   detsis_id: '43044129'
   parent_detsis_id: '19676956'
-  unit_type_id: Diğer Kurul
+  unit_type_id: Yüksekokul Kurulu
   unit_status_id: Aktif
   district_id: Atakum
 
@@ -4921,7 +4921,7 @@
   abbreviation: YDİL-YO-YÖNKUR
   detsis_id: '98617224'
   parent_detsis_id: '19676956'
-  unit_type_id: Diğer Kurul
+  unit_type_id: Yüksekokul Yönetim Kurulu
   unit_status_id: Aktif
   district_id: Atakum
 
@@ -5369,7 +5369,7 @@
   district_id: İlkadım
 
 - name: Grafik Anasanat Dalı Başkanlığı
-  abbreviation: GİT-GRAFİK-BB
+  abbreviation: GİT-GRAFİK-ADB
   parent_yoksis_id: '319347'
   detsis_id: '65075573'
   parent_detsis_id: '78239466'
@@ -5537,7 +5537,7 @@
   parent_yoksis_id: '122360'
   detsis_id: '56591305'
   parent_detsis_id: '78633602'
-  unit_type_id: Meslek Yüksekokulu Müdürlüğü
+  unit_type_id: Yüksekokul Müdürlüğü
   unit_status_id: Aktif
   district_id: İlkadım
 
@@ -5599,7 +5599,7 @@
   abbreviation: SAMSUN-MYO-SEK
   detsis_id: '88496548'
   parent_detsis_id: '56591305'
-  unit_type_id: Meslek Yüksekokulu Sekreterliği
+  unit_type_id: Yüksekokul Sekreterliği
   unit_status_id: Aktif
   district_id: İlkadım
 
@@ -5652,7 +5652,7 @@
   abbreviation: SAMSUN-MYO-DİSKUR
   detsis_id: '19817726'
   parent_detsis_id: '56591305'
-  unit_type_id: Meslek Yüksekokulu Disiplin Kurulu
+  unit_type_id: Yüksekokul Disiplin Kurulu
   unit_status_id: Aktif
   district_id: İlkadım
 
@@ -5660,7 +5660,7 @@
   abbreviation: SAMSUN-MYO-KUR
   detsis_id: '25664880'
   parent_detsis_id: '56591305'
-  unit_type_id: Meslek Yüksekokulu Kurulu
+  unit_type_id: Yüksekokul Kurulu
   unit_status_id: Aktif
   district_id: İlkadım
 
@@ -5668,7 +5668,7 @@
   abbreviation: SAMSUN-MYO-YÖNKUR
   detsis_id: '10123157'
   parent_detsis_id: '56591305'
-  unit_type_id: Meslek Yüksekokulu Yönetim Kurulu
+  unit_type_id: Yüksekokul Yönetim Kurulu
   unit_status_id: Aktif
   district_id: İlkadım
 
@@ -7486,7 +7486,7 @@
   parent_yoksis_id: '284516'
   detsis_id: '46697017'
   parent_detsis_id: '78633602'
-  unit_type_id: Meslek Yüksekokulu Müdürlüğü
+  unit_type_id: Yüksekokul Müdürlüğü
   unit_status_id: Yarı Pasif
   district_id: 19 Mayıs
 
@@ -8524,7 +8524,7 @@
   abbreviation: BAFRA-MYO-SEK
   detsis_id: '63048626'
   parent_detsis_id: '50713553'
-  unit_type_id: Meslek Yüksekokulu Sekreterliği
+  unit_type_id: Yüksekokul Sekreterliği
   unit_status_id: Aktif
   district_id: Atakum
   district_id_: Atakum
@@ -9119,7 +9119,7 @@
   district_id: Bafra
 
 - name: İşletme ve Endüstri İlişkileri Anabilim Dalı Başkanlığı
-  abbreviation: SOSYAL-BİLİM-İEİ-ADB
+  abbreviation: SOSYAL-BİLİM-İŞLENİ-ADB
   detsis_id: '72752876'
   parent_detsis_id: '61232311'
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -10541,14 +10541,14 @@
   district_id: İlkadım
 
 - name: Dölerme ve Suni Tohumlama Anabilim Dalı Başkanlığı
-  abbreviation: SAĞLIK-BİLİM-DST-ADB
+  abbreviation: SAĞLIK-BİLİM-DÖLERME-ADB
   detsis_id: '94836752'
   parent_detsis_id: '93771576'
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
   issues:
-    - Mükerrer isimli birim; VETERİNER-KLİNİK-DST-ADB
+    - Mükerrer isimli birim; VETERİNER-KLİNİK-DÖLERME-ADB
     - Yoksis tarafında anabilim dalı diğerine bağlı
 
 - name: İletişim Bilimleri Anabilim Dalı Başkanlığı

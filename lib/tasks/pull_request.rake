@@ -5,5 +5,5 @@ task :pull_request do
   Rake::Task['quality:all'].invoke
   Rake::Task['security:all'].invoke
   Rake::Task['database:all'].invoke
-  Rake::Task['test:all'].invoke
+  sh 'bundle exec rails test:system test'
 end

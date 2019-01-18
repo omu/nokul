@@ -1,7 +1,7 @@
 university:
   name: Üniversite
   code: 1
-  group: university
+  group: other
 faculty:
   name: Fakülte
   code: 2
@@ -13,11 +13,11 @@ institute:
 research_center:
   name: Uygulama ve Araştırma Merkezi
   code: 8
-  group: other
+  group: research_center
 rectorship:
   name: Rektörlük
   code: 9
-  group: rectorship
+  group: other
 department:
   name: Bölüm
   code: 10
@@ -29,15 +29,19 @@ major:
 undergraduate:
   name: Önlisans/lisans Programı
   code: 13
-  group: program
+  group: undergraduate_program
 master:
   name: Yüksek Lisans Programı
   code: 16
-  group: program
+  group: graduate_program
+phd:
+  name: Doktora Programı
+  code: 17
+  group: graduate_program
 program:
   name: Önlisans Programı
   code: 20
-  group: program
+  group: undergraduate_program
 committee:
   name: Kurul
   code: 200

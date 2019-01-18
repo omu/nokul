@@ -23,4 +23,17 @@ class ApplicationConfigTest < ActiveSupport::TestCase
   test 'Default locale should be Turkish' do
     assert_equal @config.i18n.default_locale, :tr
   end
+
+  test 'Turkish and English must be in available locales' do
+    assert I18n.available_locales.include?(:tr)
+    assert I18n.available_locales.include?(:en)
+  end
+
+  test 'appname can be read either from app.json or application class' do
+    assert_not_nil Rails.application.appname
+  end
+
+  test 'rack::attack is up and running as middleware' do
+    assert Rails.application.config.middleware.middlewares.include?(Rack::Attack)
+  end
 end

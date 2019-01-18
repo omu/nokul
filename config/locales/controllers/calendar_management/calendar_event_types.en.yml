@@ -5,12 +5,23 @@ en:
         name: Event Type
         category: Category
         identifier: Type Identifier
+    enums:
+      calendar_event_type:
+        categories:
+          applications: Applications
+          payments: Payments
+          registrations: Registrations
+          advisor: Advisor Operations
+          exams: Exams
+          courses: Courses
+          submission: Submission
+          announcement: Announcement
   calendar_management:
     calendar_event_types:
       index:
         <<: *calendar_event_type_attributes
         card_header: Event Types
-        new_event_type_link: New Event Type
+        new_calendar_event_type_link: New Event Type
       create:
         success: Event type successfully created.
       update:

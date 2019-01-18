@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-if Rails.env.beta?
+if Rails.env.beta? || Rails.env.production?
   Sidekiq.configure_server do |config|
     config.redis = { url: ENV['REDIS_URL'] }
   end

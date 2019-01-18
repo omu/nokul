@@ -7,7 +7,7 @@ class Unit < ApplicationRecord
 
   pg_search_scope(
     :search,
-    against: %i[name yoksis_id detsis_id],
+    against: %i[name yoksis_id detsis_id abbreviation],
     using: { tsearch: { prefix: true } }
   )
 
@@ -48,7 +48,10 @@ class Unit < ApplicationRecord
   has_many :calendars, through: :unit_calendars
 
   # validations
-  validates :name, presence: true, uniqueness: { scope: %i[ancestry unit_status] }, length: { maximum: 255 }
+  validates :name, presence: true,
+                   uniqueness: { scope: %i[yoksis_id detsis_id unit_status] }, length: { maximum: 255 }
+  validates :abbreviation, length: { maximum: 255 }
+  validates :code, length: { maximum: 255 }
   validates :yoksis_id, allow_nil: true, uniqueness: true, numericality: { only_integer: true }, length: { is: 6 }
   validates :detsis_id, allow_nil: true, uniqueness: true, numericality: { only_integer: true }, length: { is: 8 }
   validates :osym_id, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
@@ -56,36 +59,54 @@ class Unit < ApplicationRecord
   validates :duration, allow_nil: true, numericality: { only_integer: true }, inclusion: 1..8
 
   # scopes
-  scope :active,            -> { where(unit_status: UnitStatus.active) }
-  scope :partially_passive, -> { where(unit_status: UnitStatus.partially_passive) }
-  scope :committees,        -> { where(unit_type: UnitType.committee) }
-  scope :departments,       -> { where(unit_type: UnitType.department) }
-  scope :faculties,         -> { where(unit_type: UnitType.faculty) }
-  scope :programs,          -> { where(unit_type: UnitType.program) }
-  scope :universities,      -> { where(unit_type: UnitType.university) }
-  scope :majors,            -> { where(unit_type: UnitType.major) }
-  scope :institutes,        -> { where(unit_type: UnitType.institute) }
-  scope :rectorships,       -> { where(unit_type: UnitType.rectorship) }
-  scope :without_programs,  -> { where.not(unit_type: UnitType.program) }
+  scope :active,                 -> { where(unit_status: UnitStatus.active) }
+  scope :partially_passive,      -> { where(unit_status: UnitStatus.partially_passive) }
+  scope :others,                 -> { where(unit_type: UnitType.other) }
+  scope :faculties,              -> { where(unit_type: UnitType.faculty) }
+  scope :departments,            -> { where(unit_type: UnitType.department) }
+  scope :majors,                 -> { where(unit_type: UnitType.major) }
+  scope :undergraduate_programs, -> { where(unit_type: UnitType.undergraduate_program) }
+  scope :graduate_programs,      -> { where(unit_type: UnitType.graduate_program) }
+  scope :institutes,             -> { where(unit_type: UnitType.institute) }
+  scope :research_centers,       -> { where(unit_type: UnitType.research_center) }
+  scope :committees,             -> { where(unit_type: UnitType.committee) }
+  scope :administratives,        -> { where(unit_type: UnitType.administrative) }
+  scope :programs,               -> { where(unit_type: UnitType.program) }
+  scope :without_programs,       -> { where.not(unit_type: UnitType.program) }
+
+  scope :academic, -> {
+    faculties
+      .or(departments)
+      .or(majors)
+      .or(programs)
+      .or(institutes)
+  }
 
   scope :coursable, -> {
     departments
       .or(faculties)
-      .or(universities)
       .or(majors)
       .or(institutes)
-      .or(rectorships)
+      .or(others)
   }
+
   scope :curriculumable, -> { coursable }
 
   scope :eventable, -> {
     faculties
       .or(institutes)
       .or(programs)
+      .or(research_centers)
+      .or(others)
   }
 
   def cache_ancestry
-    self.names_depth_cache = path.map(&:name).reverse.join(' / ')
+    parent_names = path.map(&:name)
+    self.names_depth_cache = if path.count > 1
+                               parent_names.drop(1).reverse.join(' / ')
+                             else
+                               parent_names.reverse.join(' / ')
+                             end
   end
 
   # custom methods
