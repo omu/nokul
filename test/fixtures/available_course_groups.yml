@@ -1,12 +1,12 @@
 ati_group_1:
-  available_course: ati_fall_2017_2018
+  available_course: ati_fall_2018_2019
   name: Group 1
   quota: 10
-ati_fall_2017_2018:
-  available_course: ati_fall_2017_2018
+ati_group_2:
+  available_course: ati_fall_2018_2019
   name: Group 2
   quota: 10
 course_group_to_delete:
-  available_course: ati_fall_2017_2018
+  available_course: ati_fall_2018_2019
   name: Group 3
   quota: 100
