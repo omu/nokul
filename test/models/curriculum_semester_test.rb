@@ -46,6 +46,6 @@ class CurriculumSemesterTest < ActiveSupport::TestCase
 
   # custom methods
   test 'total_ects method' do
-    assert_equal @semester.total_ects, 3.0
+    assert_equal @semester.total_ects, 6.0
   end
 end
