@@ -1,0 +1,41 @@
+en:
+  activerecord:
+    attributes:
+      course_group: &course_group_attributes
+        course_group_type: Course Group Type
+        course_ids: Courses
+        courses: Courses
+        name: Course Group Name
+        total_ects_condition: Total ECTS Condition
+        unit: Unit
+  course_management:
+    course_groups:
+      create:
+        success: Course group successfully created.
+      destroy:
+        error: An error occured when deleting the course group.
+        success: Course group successfully destroyed.
+      edit:
+        form_title: Update the Course Group
+      index:
+        <<: *course_group_attributes
+        card_header: Course Groups
+        new_course_group_link: Add a New Course Group
+      new:
+        form_title: Create a Course Group
+      search:
+        <<: *course_group_attributes
+        smart_search_placeholder: Course Group Name
+      show:
+        course_group_type: Course Group Type
+        courses: Courses
+        name: Course Group Name
+        total_ects_condition: Total ECTS Condition
+        unit: Unit
+      update:
+        success: Course group successfully updated.
+  helpers:
+    submit:
+      course_group:
+        create: Create Course Group
+        update: Update Course Group

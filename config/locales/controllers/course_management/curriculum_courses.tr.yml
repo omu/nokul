@@ -1,0 +1,43 @@
+tr:
+  activerecord:
+    attributes:
+      curriculum_course:
+        course: Ders
+        ects: AKTS
+    enums:
+      curriculum_course:
+        types:
+          compulsory: Zorunlu
+          elective: Seçmeli
+  course_management:
+    curriculum_courses:
+      create:
+        success: Müfredat dersi başarıyla oluşturuldu.
+      destroy:
+        error: Müfredat dersi silinirken bir hata oluştu.
+        success: Müfredat dersi başarıyla silindi.
+      edit:
+        form_title: Müfredat Dersi Düzenle
+      new:
+        form_title: Müfredat Dersi Oluştur
+      update:
+        success: Müfredat dersi başarıyla güncellendi.
+    curriculum_course_groups:
+      create:
+        success: Müfredat ders grubu başarıyla oluşturuldu.
+      destroy:
+        error: Müfredat ders grubu silinirken bir hata oluştu.
+        success: Müfredat ders grubu başarıyla silindi.
+      edit:
+        form_title: Müfredat Ders Grubu Düzenle
+      form:
+        courses: Dersler
+      new:
+        form_title: Müfredat Ders Grubu Oluştur
+      update:
+        success: Müfredat ders grubu başarıyla güncellendi.
+  helpers:
+    submit:
+      curriculum_course:
+        create: Müfredat Dersi Ekle
+        update: Müfredat Dersini Güncelle

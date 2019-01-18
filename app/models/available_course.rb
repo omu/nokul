@@ -19,11 +19,18 @@ class AvailableCourse < ApplicationRecord
   belongs_to :curriculum
   belongs_to :course
   belongs_to :unit
-  belongs_to :coordinator, class_name: 'Employee', optional: true
+  belongs_to :coordinator, class_name: 'Employee'
   has_many :groups, class_name: 'AvailableCourseGroup', dependent: :destroy
+  has_many :evaluation_types, class_name: 'CourseEvaluationType', dependent: :destroy
 
   # validations
   validates :course, uniqueness: { scope: %i[academic_term curriculum] }
+  validates :assessments_approved, inclusion: { in: [true, false] }
+
+  # callbacks
+  before_validation(on: :create) do
+    self.academic_term = AcademicTerm.active.last
+  end
 
   # delegates
   delegate :code, :name, :theoric, :practice, :laboratory, :credit, :program_type, to: :course

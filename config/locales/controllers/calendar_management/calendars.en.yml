@@ -20,6 +20,7 @@ en:
       show:
         <<: *calendar_attributes
         assign_to_units: Assign to Units
+        senate_decision: 'Accepted with decision of the senate with the number %{decision_no} on %{date}.'
       form:
         calendar_events: Events
         new_event_link: Add New Event

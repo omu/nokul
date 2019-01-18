@@ -1,0 +1,23 @@
+tr:
+  activerecord:
+    attributes:
+      evaluation_type: &evaluation_type_attributes
+        name: Değerlendirme Türü
+  helpers:
+    submit:
+      evaluation_type:
+        create: Değerlendirme Türü Oluştur
+        update: Değerlendirme Türü Güncelle
+  admin:
+    evaluation_types:
+      create:
+        success: Değerlendirme türü başarıyla oluşturuldu.
+      destroy:
+        success: Değerlendirme türü başarıyla silindi.
+        warning: Değerlendirme türü silinemedi!
+      index:
+        <<: *evaluation_type_attributes
+        card_header: Değerlendirme Türleri
+        new_evaluation_type_link: Yeni Değerlendirme Türü Oluştur
+      update:
+        success: Değerlendirme türü başarıyla güncellendi.

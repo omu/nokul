@@ -4,6 +4,6 @@ module ReferenceCallbacks
   extend ActiveSupport::Concern
 
   included do
-    before_save { self.name = name.capitalize_turkish }
+    before_validation { self.name = name.capitalize_turkish if name }
   end
 end
