@@ -1,0 +1,29 @@
+en:
+  activerecord:
+    attributes:
+      available_course_group:
+        name: Group Name
+        quota: Quota
+        lecturer: Lecturer
+        title: Title
+        coordinator: Coordinator
+  course_management:
+    available_course_groups:
+      create:
+        success: Available course group successfully created.
+      destroy:
+        error: An error occured when deleting the available course group.
+        success: Available course group successfully destroyed.
+      edit:
+        form_title: 'Update the %{course} Course Group'
+      form:
+        lecturers: Lecturers
+      new:
+        form_title: 'Create a Group for %{course} Course'
+      update:
+        success: Available course group successfully updated.
+  helpers:
+    submit:
+      available_course_group:
+        create: Create Available Course Group
+        update: Update Available Course Group
