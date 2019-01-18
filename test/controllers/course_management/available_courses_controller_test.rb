@@ -25,22 +25,23 @@ module CourseManagement
     end
 
     test 'should create available course' do
-      term = academic_terms(:fall_2018_2019)
+      parameters = {
+        academic_term: academic_terms(:fall_2018_2019),
+        curriculum_id: curriculums(:one).id,
+        course_id: courses(:ydi).id,
+        coordinator_id: employees(:chief_john).id,
+        unit_id: units(:omu).id
+      }
+
       assert_difference('AvailableCourse.count') do
-        post available_courses_path, params: {
-          available_course: {
-            academic_term: term, curriculum_id: curriculums(:one).id,
-            course_id: courses(:ydi).id, unit_id: units(:omu).id
-          }
-        }
+        post available_courses_path, params: { available_course: parameters }
       end
 
       available_course = AvailableCourse.last
 
-      assert_equal term, available_course.academic_term
-      assert_equal curriculums(:one), available_course.curriculum
-      assert_equal courses(:ydi), available_course.course
-      assert_equal units(:omu), available_course.unit
+      parameters.each do |attribute, value|
+        assert_equal value, available_course.send(attribute)
+      end
       assert_redirected_to new_available_course_available_course_group_path(available_course)
     end
 
