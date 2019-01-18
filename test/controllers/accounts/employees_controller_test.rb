@@ -52,11 +52,12 @@ module Accounts
     end
 
     test 'should destroy employee' do
-      assert_difference('@user.employees.count', -1) do
-        delete user_employee_path(@user, @user.employees.last)
+      user = users(:john)
+      assert_difference('user.employees.count', -1) do
+        delete user_employee_path(user, employees(:employee_to_delete))
       end
 
-      assert_redirected_to user_path(@user)
+      assert_redirected_to user_path(user)
       assert_equal translate('.destroy.success'), flash[:notice]
     end
 

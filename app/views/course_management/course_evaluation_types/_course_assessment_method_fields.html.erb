@@ -1,0 +1,17 @@
+<div class='nested-fields col-sm-6'>
+  <div class='card card-default'>
+    <div class='card-body bg-light'>
+      <div class='row'>
+        <div class='col-sm-6'>
+          <%= f.association :assessment_method %>
+        </div>
+        <div class='col-sm-6'>
+          <%= f.input :percentage, required: true %>
+        </div>
+      </div>
+    </div>
+    <div class='card-footer'>
+      <%= link_to_remove_association f, class: 'btn btn-danger btn-sm' %>
+    </div>
+  </div>
+</div>

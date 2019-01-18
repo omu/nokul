@@ -1,0 +1,6 @@
+en:
+  activerecord:
+    attributes:
+      course_assessment_method:
+        assessment_method: Assessment Method
+        percentage: Percentage

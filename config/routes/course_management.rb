@@ -3,10 +3,10 @@
 scope module: :course_management do
   resources :available_courses do
     resources :available_course_groups, except: :index
+    resources :evaluation_types, except: %i[index show], controller: :course_evaluation_types
   end
 
   resources :courses
-  resources :course_evaluation_criterion_types, except: :show
   resources :course_groups
   resources :course_group_types, except: :show
   resources :course_types,       except: :show

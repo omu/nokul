@@ -1,0 +1,67 @@
+en:
+  activerecord:
+    attributes:
+      curriculum: &curriculum_attributes
+        name: Curriculum Name
+        semesters_count: Number of Semesters
+        programs: Programs
+        status: Status
+        unit: Unit
+        number_of_semesters: Number of Semester to Create
+        type: Semester Creation Type
+    enums:
+      curriculum:
+        statuses:
+          active: Active
+          passive: Passive
+  course_management:
+    curriculums:
+      create:
+        success: Curriculum successfully created.
+      curriculum_courses:
+        code: Code
+        credit: Credit
+        course_type: Course Type
+        laboratory: Laboratory
+        language: Language
+        name: Name
+        practice: Practice
+        program_type: Program Type
+        status: Status
+        theoric: Theoric
+        total_ects: Total ECTS
+        type: Type
+        unit: Unit
+        ects: Ects
+      destroy:
+        error: An error occured when deleting the curriculum.
+        success: Curriculum successfully destroyed.
+      edit:
+        form_title: Update the Curriculum
+      form:
+        semesters: 'Semesters'
+      index:
+        <<: *curriculum_attributes
+        add_new_curriculum: Add a New Curriculum
+        curriculums: Curriculums
+      new:
+        form_title: Create a Curriculum
+      search:
+        smart_search_placeholder: Curriculum Name
+        <<: *curriculum_attributes
+      semesters:
+        add_course: Add Course
+        add_course_group: Add Course Group
+        compulsory_courses: Compulsory Courses
+        elective_courses: Elective Courses
+        selectable_total_ects: Selectable Total ECTS
+        total_ects: Total ECTS
+      show:
+        <<: *curriculum_attributes
+      update:
+        success: Curriculum successfully updated.
+  helpers:
+    submit:
+      course:
+        create: Create Curriculum
+        update: Update Curriculum
