@@ -4,3 +4,10 @@ tr:
       curriculum_semester:
         sequence: Dönem Sırası
         year: Yıl
+        term: Dönem
+    enums:
+      curriculum_semester:
+        terms:
+          fall: Güz
+          spring: Bahar
+          summer: Yaz
