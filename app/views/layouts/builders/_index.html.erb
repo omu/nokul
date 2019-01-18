@@ -4,9 +4,9 @@
       <div class='card-header'>
         <%= fa_icon 'align-justify', text: card_header %>
         <div class='card-header-actions'>
-          <%= link_to_new([
-            :new, namespace.to_sym, klass],
-            t("#{namespace}.#{klass.pluralize}.index.new_#{klass}_link")
+          <%= link_to_new(
+            t("#{namespace}.#{klass.pluralize}.index.new_#{klass}_link"),
+            [:new, namespace.to_sym, klass]
           ) %>
         </div>
       </div>
