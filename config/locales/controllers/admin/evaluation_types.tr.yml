@@ -15,13 +15,9 @@ tr:
       destroy:
         success: Değerlendirme türü başarıyla silindi.
         warning: Değerlendirme türü silinemedi!
-      edit:
-        form_title: Değerlendirme Türü Güncelle
       index:
         <<: *evaluation_type_attributes
         card_header: Değerlendirme Türleri
         new_evaluation_type_link: Yeni Değerlendirme Türü Oluştur
-      new:
-        form_title: Değerlendirme Türü Oluştur
       update:
         success: Değerlendirme türü başarıyla güncellendi.

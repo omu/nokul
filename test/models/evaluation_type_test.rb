@@ -24,6 +24,14 @@ class EvaluationTypeTest < ActiveSupport::TestCase
     assert_not_empty @evaluation_type.errors[:name]
   end
 
+  # other validations
+  test 'name can not be longer than 255 characters' do
+    fake = @evaluation_type.dup
+    fake.name = (0...256).map { ('a'..'z').to_a[rand(26)] }.join
+    assert_not fake.valid?
+    assert fake.errors.details[:name].map { |err| err[:error] }.include?(:too_long)
+  end
+
   # callbacks
   test 'callbacks must titlecase the name of a evaluation type' do
     evaluation_type = EvaluationType.create!(name: 'test evaluation type')

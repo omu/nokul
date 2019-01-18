@@ -15,13 +15,9 @@ en:
       destroy:
         success: Evaluation type successfully deleted.
         warning: Evaluation type can not be deleted!
-      edit:
-        form_title: Update the Evaluation Type
       index:
         <<: *evaluation_type_attributes
         card_header: Evaluation Types
         new_evaluation_type_link: Create a New Evaluation Type
-      new:
-        form_title: Create a Evaluation Type
       update:
         success: Evaluation type successfully updated.

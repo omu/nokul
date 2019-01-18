@@ -7,7 +7,6 @@ authenticate :user do
   mount PgHero::Engine, at: 'postgres'
 end
 
-# rubocop:disable Metrics/BlockLength
 namespace :admin do
   # Location Management
   resources :countries do
@@ -41,5 +40,4 @@ namespace :admin do
   resources :evaluation_types, except: :show
   resources :languages, except: :show
   resources :titles, except: :show
-  # rubocop:enable Metrics/BlockLength
 end
