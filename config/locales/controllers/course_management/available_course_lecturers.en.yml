@@ -1,0 +1,6 @@
+en:
+  activerecord:
+    attributes:
+      available_course_lecturer:
+        lecturer: Lecturer
+        coordinator: Coordinator

@@ -20,6 +20,7 @@ tr:
       show:
         <<: *calendar_attributes
         assign_to_units: Birimlere Ata
+        senate_decision: '%{date} tarih ve %{decision_no} sayılı senato kararıyla kabul edilmiştir.'
       form:
         calendar_events: Etkinlikler
         new_event_link: Yeni Etkinlik Ekle

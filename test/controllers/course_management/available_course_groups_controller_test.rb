@@ -3,7 +3,7 @@
 require 'test_helper'
 
 module CourseManagement
-  class GroupsControllerTest < ActionDispatch::IntegrationTest
+  class AvailableCourseGroupsControllerTest < ActionDispatch::IntegrationTest
     setup do
       sign_in users(:serhat)
       @group = available_course_groups(:ati_group_1)
@@ -62,14 +62,14 @@ module CourseManagement
         delete available_course_available_course_group_path(group.available_course, group)
       end
 
-      assert_redirected_to available_course_path(available_courses(:ati_fall_2017_2018))
+      assert_redirected_to available_course_path(@available_course)
       assert_equal translate('.destroy.success'), flash[:info]
     end
 
     private
 
     def translate(key)
-      t("course_management.available_course_groups#{key}")
+      t("course_management.available_course_groups#{key}", course: @available_course.name)
     end
   end
 end

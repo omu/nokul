@@ -29,7 +29,7 @@
         </table>
         <div class="card">
           <div class="card-body">
-            <%= @calendar.senate_decision_date %> tarih ve <%= @calendar.senate_decision_no %> sayılı senato kararıyla kabul edilmiştir.
+            <%= t('.senate_decision', date: @calendar.senate_decision_date, decision_no: @calendar.senate_decision_no) %>
             <p><%= @calendar.description %></p>
           </div>
         </div>

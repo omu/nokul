@@ -395,6 +395,37 @@ ALTER SEQUENCE public.articles_id_seq OWNED BY public.articles.id;
 
 
 --
+-- Name: assessment_methods; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.assessment_methods (
+    id bigint NOT NULL,
+    name character varying,
+    CONSTRAINT assessment_methods_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT assessment_methods_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
+);
+
+
+--
+-- Name: assessment_methods_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.assessment_methods_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: assessment_methods_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.assessment_methods_id_seq OWNED BY public.assessment_methods.id;
+
+
+--
 -- Name: available_course_groups; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -476,8 +507,10 @@ CREATE TABLE public.available_courses (
     unit_id bigint NOT NULL,
     coordinator_id bigint,
     groups_count integer DEFAULT 0,
+    assessments_approved boolean DEFAULT false,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
+    CONSTRAINT available_courses_assessments_approved_null CHECK ((assessments_approved IS NOT NULL)),
     CONSTRAINT available_courses_groups_count_numericality CHECK ((groups_count >= 0))
 );
 
@@ -843,25 +876,26 @@ ALTER SEQUENCE public.countries_id_seq OWNED BY public.countries.id;
 
 
 --
--- Name: course_evaluation_criterion_types; Type: TABLE; Schema: public; Owner: -
+-- Name: course_assessment_methods; Type: TABLE; Schema: public; Owner: -
 --
 
-CREATE TABLE public.course_evaluation_criterion_types (
+CREATE TABLE public.course_assessment_methods (
     id bigint NOT NULL,
-    name character varying,
-    identifier character varying,
-    CONSTRAINT course_evaluation_criterion_types_identifier_length CHECK ((length((identifier)::text) <= 255)),
-    CONSTRAINT course_evaluation_criterion_types_identifier_presence CHECK (((identifier IS NOT NULL) AND ((identifier)::text !~ '^\s*$'::text))),
-    CONSTRAINT course_evaluation_criterion_types_name_length CHECK ((length((name)::text) <= 255)),
-    CONSTRAINT course_evaluation_criterion_types_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
+    course_evaluation_type_id bigint NOT NULL,
+    assessment_method_id bigint NOT NULL,
+    percentage integer,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL,
+    CONSTRAINT course_assessment_methods_percentage_null CHECK ((percentage IS NOT NULL)),
+    CONSTRAINT course_assessment_methods_percentage_numericality CHECK (((percentage >= 0) AND (percentage <= 100)))
 );
 
 
 --
--- Name: course_evaluation_criterion_types_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+-- Name: course_assessment_methods_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
-CREATE SEQUENCE public.course_evaluation_criterion_types_id_seq
+CREATE SEQUENCE public.course_assessment_methods_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -870,10 +904,45 @@ CREATE SEQUENCE public.course_evaluation_criterion_types_id_seq
 
 
 --
--- Name: course_evaluation_criterion_types_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+-- Name: course_assessment_methods_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
-ALTER SEQUENCE public.course_evaluation_criterion_types_id_seq OWNED BY public.course_evaluation_criterion_types.id;
+ALTER SEQUENCE public.course_assessment_methods_id_seq OWNED BY public.course_assessment_methods.id;
+
+
+--
+-- Name: course_evaluation_types; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.course_evaluation_types (
+    id bigint NOT NULL,
+    available_course_id bigint NOT NULL,
+    evaluation_type_id bigint NOT NULL,
+    percentage integer,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL,
+    CONSTRAINT course_evaluation_types_percentage_null CHECK ((percentage IS NOT NULL)),
+    CONSTRAINT course_evaluation_types_percentage_numericality CHECK (((percentage >= 0) AND (percentage <= 100)))
+);
+
+
+--
+-- Name: course_evaluation_types_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.course_evaluation_types_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: course_evaluation_types_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.course_evaluation_types_id_seq OWNED BY public.course_evaluation_types.id;
 
 
 --
@@ -1362,6 +1431,37 @@ CREATE SEQUENCE public.employees_id_seq
 --
 
 ALTER SEQUENCE public.employees_id_seq OWNED BY public.employees.id;
+
+
+--
+-- Name: evaluation_types; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.evaluation_types (
+    id bigint NOT NULL,
+    name character varying,
+    CONSTRAINT evaluation_types_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT evaluation_types_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
+);
+
+
+--
+-- Name: evaluation_types_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.evaluation_types_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: evaluation_types_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.evaluation_types_id_seq OWNED BY public.evaluation_types.id;
 
 
 --
@@ -2607,6 +2707,13 @@ ALTER TABLE ONLY public.articles ALTER COLUMN id SET DEFAULT nextval('public.art
 
 
 --
+-- Name: assessment_methods id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.assessment_methods ALTER COLUMN id SET DEFAULT nextval('public.assessment_methods_id_seq'::regclass);
+
+
+--
 -- Name: available_course_groups id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -2684,10 +2791,17 @@ ALTER TABLE ONLY public.countries ALTER COLUMN id SET DEFAULT nextval('public.co
 
 
 --
--- Name: course_evaluation_criterion_types id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: course_assessment_methods id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY public.course_evaluation_criterion_types ALTER COLUMN id SET DEFAULT nextval('public.course_evaluation_criterion_types_id_seq'::regclass);
+ALTER TABLE ONLY public.course_assessment_methods ALTER COLUMN id SET DEFAULT nextval('public.course_assessment_methods_id_seq'::regclass);
+
+
+--
+-- Name: course_evaluation_types id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.course_evaluation_types ALTER COLUMN id SET DEFAULT nextval('public.course_evaluation_types_id_seq'::regclass);
 
 
 --
@@ -2779,6 +2893,13 @@ ALTER TABLE ONLY public.duties ALTER COLUMN id SET DEFAULT nextval('public.dutie
 --
 
 ALTER TABLE ONLY public.employees ALTER COLUMN id SET DEFAULT nextval('public.employees_id_seq'::regclass);
+
+
+--
+-- Name: evaluation_types id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.evaluation_types ALTER COLUMN id SET DEFAULT nextval('public.evaluation_types_id_seq'::regclass);
 
 
 --
@@ -3073,6 +3194,22 @@ ALTER TABLE ONLY public.articles
 
 
 --
+-- Name: assessment_methods assessment_methods_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.assessment_methods
+    ADD CONSTRAINT assessment_methods_name_unique UNIQUE (name) DEFERRABLE;
+
+
+--
+-- Name: assessment_methods assessment_methods_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.assessment_methods
+    ADD CONSTRAINT assessment_methods_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: available_course_groups available_course_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -3185,27 +3322,19 @@ ALTER TABLE ONLY public.countries
 
 
 --
--- Name: course_evaluation_criterion_types course_evaluation_criterion_types_identifier_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: course_assessment_methods course_assessment_methods_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY public.course_evaluation_criterion_types
-    ADD CONSTRAINT course_evaluation_criterion_types_identifier_unique UNIQUE (identifier) DEFERRABLE;
-
-
---
--- Name: course_evaluation_criterion_types course_evaluation_criterion_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.course_evaluation_criterion_types
-    ADD CONSTRAINT course_evaluation_criterion_types_name_unique UNIQUE (name) DEFERRABLE;
+ALTER TABLE ONLY public.course_assessment_methods
+    ADD CONSTRAINT course_assessment_methods_pkey PRIMARY KEY (id);
 
 
 --
--- Name: course_evaluation_criterion_types course_evaluation_criterion_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: course_evaluation_types course_evaluation_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY public.course_evaluation_criterion_types
-    ADD CONSTRAINT course_evaluation_criterion_types_pkey PRIMARY KEY (id);
+ALTER TABLE ONLY public.course_evaluation_types
+    ADD CONSTRAINT course_evaluation_types_pkey PRIMARY KEY (id);
 
 
 --
@@ -3310,6 +3439,22 @@ ALTER TABLE ONLY public.duties
 
 ALTER TABLE ONLY public.employees
     ADD CONSTRAINT employees_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: evaluation_types evaluation_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.evaluation_types
+    ADD CONSTRAINT evaluation_types_name_unique UNIQUE (name) DEFERRABLE;
+
+
+--
+-- Name: evaluation_types evaluation_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.evaluation_types
+    ADD CONSTRAINT evaluation_types_pkey PRIMARY KEY (id);
 
 
 --
@@ -3954,6 +4099,34 @@ CREATE INDEX index_committee_meetings_on_unit_id ON public.committee_meetings US
 
 
 --
+-- Name: index_course_assessment_methods_on_assessment_method_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_course_assessment_methods_on_assessment_method_id ON public.course_assessment_methods USING btree (assessment_method_id);
+
+
+--
+-- Name: index_course_assessment_methods_on_course_evaluation_type_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_course_assessment_methods_on_course_evaluation_type_id ON public.course_assessment_methods USING btree (course_evaluation_type_id);
+
+
+--
+-- Name: index_course_evaluation_types_on_available_course_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_course_evaluation_types_on_available_course_id ON public.course_evaluation_types USING btree (available_course_id);
+
+
+--
+-- Name: index_course_evaluation_types_on_evaluation_type_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_course_evaluation_types_on_evaluation_type_id ON public.course_evaluation_types USING btree (evaluation_type_id);
+
+
+--
 -- Name: index_course_groups_on_course_group_type_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -4429,6 +4602,14 @@ ALTER TABLE ONLY public.curriculum_programs
 
 
 --
+-- Name: course_assessment_methods fk_rails_3351011c48; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.course_assessment_methods
+    ADD CONSTRAINT fk_rails_3351011c48 FOREIGN KEY (course_evaluation_type_id) REFERENCES public.course_evaluation_types(id);
+
+
+--
 -- Name: available_courses fk_rails_356137da91; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -4733,6 +4914,14 @@ ALTER TABLE ONLY public.prospective_students
 
 
 --
+-- Name: course_evaluation_types fk_rails_b25d062eb5; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.course_evaluation_types
+    ADD CONSTRAINT fk_rails_b25d062eb5 FOREIGN KEY (evaluation_type_id) REFERENCES public.evaluation_types(id);
+
+
+--
 -- Name: projects fk_rails_b872a6760a; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -4746,6 +4935,14 @@ ALTER TABLE ONLY public.projects
 
 ALTER TABLE ONLY public.agendas
     ADD CONSTRAINT fk_rails_b92b5eaf98 FOREIGN KEY (agenda_type_id) REFERENCES public.agenda_types(id);
+
+
+--
+-- Name: course_evaluation_types fk_rails_bb4be290e9; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.course_evaluation_types
+    ADD CONSTRAINT fk_rails_bb4be290e9 FOREIGN KEY (available_course_id) REFERENCES public.available_courses(id);
 
 
 --
@@ -4826,6 +5023,14 @@ ALTER TABLE ONLY public.available_course_groups
 
 ALTER TABLE ONLY public.curriculum_course_groups
     ADD CONSTRAINT fk_rails_f0035661f5 FOREIGN KEY (course_group_id) REFERENCES public.course_groups(id);
+
+
+--
+-- Name: course_assessment_methods fk_rails_f2b5f80e2c; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.course_assessment_methods
+    ADD CONSTRAINT fk_rails_f2b5f80e2c FOREIGN KEY (assessment_method_id) REFERENCES public.assessment_methods(id);
 
 
 --
@@ -4916,11 +5121,14 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20181112175343'),
 ('20181130131559'),
 ('20181210221451'),
-('20181225103307'),
 ('20181225180258'),
 ('20181225195123'),
 ('20181225201818'),
 ('20181226013104'),
-('20190110113630');
+('20190110113630'),
+('20190115062149'),
+('20190115100844'),
+('20190116104001'),
+('20190116115745');
 
 

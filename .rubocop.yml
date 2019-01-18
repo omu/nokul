@@ -16,6 +16,7 @@ Metrics/LineLength:
     - app/validators/employee_validator.rb # Won't fix
 Metrics/BlockLength:
   Exclude:
+    - config/routes/**/*
     - lib/tasks/**/*.rake # Won't fix
     - test/models/concerns/reference_validations_test.rb
 Metrics/ClassLength:
