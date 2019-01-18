@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-Term.create(
-  YAML.load_file(Rails.root.join('db', 'static_data', 'terms.yml'))
-)
-
 academic_terms = [
   {
     year: '2018 - 2019',

@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
 require 'test_helper'
+require_relative './concerns/enum_for_term_test'
 
 class AcademicTermTest < ActiveSupport::TestCase
+  include EnumForTermTest
+
   setup do
     @academic_term = academic_terms(:fall_2017_2018)
   end
@@ -39,16 +42,7 @@ class AcademicTermTest < ActiveSupport::TestCase
   end
 
   # enums
-  {
-    term: { fall: 0, spring: 1, summer: 2 }
-  }.each do |property, hash|
-    hash.each do |key, value|
-      test "have a #{key} value of #{property} enum" do
-        enums = AcademicTerm.defined_enums.with_indifferent_access
-        assert_equal enums.dig(property, key), value
-      end
-    end
-  end
+  test_term_enum(AcademicTerm)
 
   # scopes
   test 'active scope returns active academic terms' do
