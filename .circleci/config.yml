@@ -44,7 +44,7 @@ jobs:
     <<: *ruby_2_6_0
     steps:
       - checkout
-      - run: gem install bundler
+      - run: gem install bundler:2.0.1
       - save_cache:
           <<: *repository
           paths:
