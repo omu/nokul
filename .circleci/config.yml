@@ -15,6 +15,7 @@ rails_environment: &rails_environment
     RDS_PASSWORD: nokul
     RDS_HOSTNAME: localhost
     RDS_PORT: 5432
+    BUNDLER_VERSION: 2.0.1
 
 # cache keys
 restore_bundle: &restore_bundle
@@ -43,12 +44,7 @@ jobs:
     <<: *ruby_2_6_0
     steps:
       - checkout
-      - run:
-          name: Setup Bundler
-          command: |
-            echo 'export BUNDLER_VERSION=$(tail -1 Gemfile.lock | tr -d " ")' >>$BASH_ENV
-            source $BASH_ENV
-            gem install bundler
+      - run: gem update bundler
       - save_cache:
           <<: *repository
           paths:
