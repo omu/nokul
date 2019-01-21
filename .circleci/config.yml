@@ -54,6 +54,7 @@ jobs:
           <<: *repository
       - restore_cache:
           <<: *restore_bundle
+      - run: gem update --system
       - run: bundle install --path vendor/bundle --without development
       - run: bin/plugdo bundle install --path "$(readlink -m vendor/bundle)" --without development
       - save_cache:
@@ -128,6 +129,7 @@ jobs:
           <<: *restore_bundle
       - restore_cache:
           <<: *restore_yarn
+      - run: gem update --system
       - run: bundle --path vendor/bundle --without development
       - run: bin/plugdo bundle install --path "$(readlink -m vendor/bundle)" --without development
       - run: sudo apt install -y postgresql-client || true
