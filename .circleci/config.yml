@@ -54,8 +54,10 @@ jobs:
           <<: *repository
       - restore_cache:
           <<: *restore_bundle
-      - run: gem update --system
-      - run: bundle update --bundler
+      - run: |
+        echo 'export BUNDLER_VERSION=$(tail -1 Gemfile.lock | tr -d " ")' >>$BASH_ENV
+        source $BASH_ENV
+        gem install bundler
       - run: bundle install --path vendor/bundle --without development
       - run: bin/plugdo bundle install --path "$(readlink -m vendor/bundle)" --without development
       - save_cache:
