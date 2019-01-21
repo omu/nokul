@@ -13,7 +13,7 @@ scope module: :course_management do
   resources :course_unit_groups
   resources :curriculums do
     member do
-      get :courses, defaults: { format: :json }
+      get :openable_courses, defaults: { format: :json }
     end
   end
 
