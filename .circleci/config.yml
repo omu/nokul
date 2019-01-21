@@ -15,6 +15,7 @@ rails_environment: &rails_environment
     RDS_PASSWORD: nokul
     RDS_HOSTNAME: localhost
     RDS_PORT: 5432
+    BUNDLER_VERSION: 2.0.1
 
 # cache keys
 restore_bundle: &restore_bundle
@@ -75,6 +76,8 @@ jobs:
           <<: *restore_bundle
       - restore_cache:
           <<: *restore_yarn
+      - run: gem uninstall bundler
+      - run: gem install bundler
       - run: bin/yarn install
       - save_cache:
           key: nokul-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
@@ -93,8 +96,10 @@ jobs:
           <<: *restore_bundle
       - restore_cache:
           <<: *restore_yarn
-      - run: bundle --path vendor/bundle --without development
+      - run: gem uninstall bundler
+      - run: gem install bundler
       - run: bin/yarn install
+      - run: bundle --path vendor/bundle --without development
       - run: bundle exec rake quality:all
       - run: bin/yarn run lint
   security:
@@ -106,8 +111,10 @@ jobs:
           <<: *restore_bundle
       - restore_cache:
           <<: *restore_yarn
-      - run: bundle --path vendor/bundle --without development
+      - run: gem uninstall bundler
+      - run: gem install bundler
       - run: bin/yarn install
+      - run: bundle --path vendor/bundle --without development
       - run: bundle exec rake security:all
   database:
     <<: *ruby_2_6_0
@@ -118,8 +125,10 @@ jobs:
           <<: *restore_bundle
       - restore_cache:
           <<: *restore_yarn
-      - run: bundle --path vendor/bundle --without development
+      - run: gem uninstall bundler
+      - run: gem install bundler
       - run: bin/yarn install
+      - run: bundle --path vendor/bundle --without development
       - run: bundle exec rake database:all
   test_suite:
     <<: *ruby_2_6_0
@@ -130,10 +139,12 @@ jobs:
           <<: *restore_bundle
       - restore_cache:
           <<: *restore_yarn
+      - run: gem uninstall bundler
+      - run: gem install bundler
+      - run: bin/yarn install
+      - run: sudo apt install -y postgresql-client || true
       - run: bundle --path vendor/bundle --without development
       - run: bin/plugdo bundle install --path "$(readlink -m vendor/bundle)" --without development
-      - run: sudo apt install -y postgresql-client || true
-      - run: bin/yarn install
       - run: bundle exec rake db:create db:structure:load
       - run: bundle exec rails test:system test
   deploy_develop:
