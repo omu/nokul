@@ -15,6 +15,7 @@ rails_environment: &rails_environment
     RDS_PASSWORD: nokul
     RDS_HOSTNAME: localhost
     RDS_PORT: 5432
+    BUNDLER_VERSION: 2.0.1
 
 # cache keys
 restore_bundle: &restore_bundle
@@ -29,18 +30,18 @@ repository: &repository
   key: nokul-repo-{{ .Environment.CIRCLE_SHA1 }}
 
 # build image
-ruby_2_5_1: &ruby_2_5_1
+ruby_2_6_0: &ruby_2_6_0
   docker:
-    - image: circleci/ruby:2.5.1-node-browsers
+    - image: circleci/ruby:2.6.0-node-browsers
       <<: *rails_environment
-    - image: circleci/postgres:10.5-alpine
+    - image: circleci/postgres:11.1-alpine
       <<: *postgres_environment
 
 # build jobs
 version: 2
 jobs:
-  checkout_code:
-    <<: *ruby_2_5_1
+  prepare_project:
+    <<: *ruby_2_6_0
     steps:
       - checkout
       - save_cache:
@@ -48,12 +49,14 @@ jobs:
           paths:
             - ~/project
   bundle_dependencies:
-    <<: *ruby_2_5_1
+    <<: *ruby_2_6_0
     steps:
       - restore_cache:
           <<: *repository
       - restore_cache:
           <<: *restore_bundle
+      - run: gem uninstall bundler
+      - run: gem install bundler
       - run: bundle install --path vendor/bundle --without development
       - run: bin/plugdo bundle install --path "$(readlink -m vendor/bundle)" --without development
       - save_cache:
@@ -65,7 +68,7 @@ jobs:
           paths:
             - vendor/bundle
   bundle_assets:
-    <<: *ruby_2_5_1
+    <<: *ruby_2_6_0
     steps:
       - restore_cache:
           <<: *repository
@@ -73,6 +76,8 @@ jobs:
           <<: *restore_bundle
       - restore_cache:
           <<: *restore_yarn
+      - run: gem uninstall bundler
+      - run: gem install bundler
       - run: bin/yarn install
       - save_cache:
           key: nokul-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
@@ -83,7 +88,7 @@ jobs:
           paths:
             - node_modules/
   quality:
-    <<: *ruby_2_5_1
+    <<: *ruby_2_6_0
     steps:
       - restore_cache:
           <<: *repository
@@ -91,12 +96,14 @@ jobs:
           <<: *restore_bundle
       - restore_cache:
           <<: *restore_yarn
-      - run: bundle --path vendor/bundle --without development
+      - run: gem uninstall bundler
+      - run: gem install bundler
       - run: bin/yarn install
+      - run: bundle --path vendor/bundle --without development
       - run: bundle exec rake quality:all
       - run: bin/yarn run lint
   security:
-    <<: *ruby_2_5_1
+    <<: *ruby_2_6_0
     steps:
       - restore_cache:
           <<: *repository
@@ -104,11 +111,13 @@ jobs:
           <<: *restore_bundle
       - restore_cache:
           <<: *restore_yarn
-      - run: bundle --path vendor/bundle --without development
+      - run: gem uninstall bundler
+      - run: gem install bundler
       - run: bin/yarn install
+      - run: bundle --path vendor/bundle --without development
       - run: bundle exec rake security:all
   database:
-    <<: *ruby_2_5_1
+    <<: *ruby_2_6_0
     steps:
       - restore_cache:
           <<: *repository
@@ -116,11 +125,13 @@ jobs:
           <<: *restore_bundle
       - restore_cache:
           <<: *restore_yarn
-      - run: bundle --path vendor/bundle --without development
+      - run: gem uninstall bundler
+      - run: gem install bundler
       - run: bin/yarn install
+      - run: bundle --path vendor/bundle --without development
       - run: bundle exec rake database:all
   test_suite:
-    <<: *ruby_2_5_1
+    <<: *ruby_2_6_0
     steps:
       - restore_cache:
           <<: *repository
@@ -128,10 +139,12 @@ jobs:
           <<: *restore_bundle
       - restore_cache:
           <<: *restore_yarn
+      - run: gem uninstall bundler
+      - run: gem install bundler
+      - run: bin/yarn install
+      - run: sudo apt install -y postgresql-client || true
       - run: bundle --path vendor/bundle --without development
       - run: bin/plugdo bundle install --path "$(readlink -m vendor/bundle)" --without development
-      - run: sudo apt install -y postgresql-client || true
-      - run: bin/yarn install
       - run: bundle exec rake db:create db:structure:load
       - run: bundle exec rails test:system test
   deploy_develop:
@@ -160,10 +173,10 @@ workflows:
   version: 2
   build-test-and-deploy:
     jobs:
-      - checkout_code
+      - prepare_project
       - bundle_dependencies:
           requires:
-            - checkout_code
+            - prepare_project
       - bundle_assets:
           requires:
             - bundle_dependencies
