@@ -54,6 +54,7 @@ jobs:
           <<: *repository
       - restore_cache:
           <<: *restore_bundle
+      - run: bundle update --bundler
       - run: bundle install --path vendor/bundle --without development
       - run: bin/plugdo bundle install --path "$(readlink -m vendor/bundle)" --without development
       - save_cache:
