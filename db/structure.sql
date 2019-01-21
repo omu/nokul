@@ -8,20 +8,6 @@ SET check_function_bodies = false;
 SET client_min_messages = warning;
 SET row_security = off;
 
---
--- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: -
---
-
-CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
-
-
---
--- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: -
---
-
-COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
-
-
 SET default_tablespace = '';
 
 SET default_with_oids = false;
@@ -151,8 +137,8 @@ CREATE TABLE public.addresses (
     full_address character varying,
     district_id bigint NOT NULL,
     user_id bigint NOT NULL,
-    updated_at timestamp without time zone DEFAULT now(),
-    created_at timestamp without time zone DEFAULT now(),
+    updated_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
+    created_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT addresses_created_at_null CHECK ((created_at IS NOT NULL)),
     CONSTRAINT addresses_full_address_length CHECK ((length((full_address)::text) <= 255)),
     CONSTRAINT addresses_full_address_presence CHECK (((full_address IS NOT NULL) AND ((full_address)::text !~ '^\s*$'::text))),
@@ -1586,8 +1572,8 @@ CREATE TABLE public.identities (
     registered_to character varying,
     user_id bigint NOT NULL,
     student_id bigint,
-    created_at timestamp without time zone DEFAULT now(),
-    updated_at timestamp without time zone DEFAULT now(),
+    created_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
+    updated_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT identities_created_at_null CHECK ((created_at IS NOT NULL)),
     CONSTRAINT identities_date_of_birth_null CHECK ((date_of_birth IS NOT NULL)),
     CONSTRAINT identities_fathers_name_length CHECK ((length((fathers_name)::text) <= 255)),
@@ -2597,7 +2583,7 @@ CREATE TABLE public.users (
     last_sign_in_at timestamp without time zone,
     current_sign_in_ip inet,
     last_sign_in_ip inet,
-    password_changed_at timestamp without time zone DEFAULT now(),
+    password_changed_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
     failed_attempts integer DEFAULT 0,
     unlock_token character varying,
     locked_at timestamp without time zone,
