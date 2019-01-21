@@ -19,7 +19,6 @@ Vagrant.configure('2') do |config|
       lxc.customize 'cgroup.memory.limit_in_bytes', '2048M'
     end
 
-    dev.vm.provision 'shell', name: 'preinst',     env: env, path: 'lib/scripts/preinst.sh'
     dev.vm.provision 'shell', name: 'environment', env: env, path: 'lib/scripts/environment.sh'
     dev.vm.provision 'shell', name: 'deploy',      env: env, path: 'lib/scripts/deploy.sh'
   end
