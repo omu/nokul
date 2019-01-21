@@ -15,6 +15,7 @@ rails_environment: &rails_environment
     RDS_PASSWORD: nokul
     RDS_HOSTNAME: localhost
     RDS_PORT: 5432
+    BUNDLER_VERSION: 2.0.1
 
 # cache keys
 restore_bundle: &restore_bundle
@@ -43,8 +44,7 @@ jobs:
     <<: *ruby_2_6_0
     steps:
       - checkout
-      - run: gem install bundler:1.17.3
-      - run: bundle update --bundler
+      - run: gem install bundler
       - run: gem install bundler:2.0.1
       - save_cache:
           <<: *repository
