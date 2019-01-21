@@ -39,10 +39,16 @@ ruby_2_6_0: &ruby_2_6_0
 # build jobs
 version: 2
 jobs:
-  checkout_code:
+  prepare_project:
     <<: *ruby_2_6_0
     steps:
       - checkout
+      - run:
+          name: Setup Bundler
+          command: |
+            echo 'export BUNDLER_VERSION=$(tail -1 Gemfile.lock | tr -d " ")' >>$BASH_ENV
+            source $BASH_ENV
+            gem install bundler
       - save_cache:
           <<: *repository
           paths:
@@ -54,11 +60,6 @@ jobs:
           <<: *repository
       - restore_cache:
           <<: *restore_bundle
-      - run:
-          command: |
-            echo 'export BUNDLER_VERSION=$(tail -1 Gemfile.lock | tr -d " ")' >>$BASH_ENV
-            source $BASH_ENV
-            gem install bundler
       - run: bundle install --path vendor/bundle --without development
       - run: bin/plugdo bundle install --path "$(readlink -m vendor/bundle)" --without development
       - save_cache:
@@ -165,10 +166,10 @@ workflows:
   version: 2
   build-test-and-deploy:
     jobs:
-      - checkout_code
+      - prepare_project
       - bundle_dependencies:
           requires:
-            - checkout_code
+            - prepare_project
       - bundle_assets:
           requires:
             - bundle_dependencies
