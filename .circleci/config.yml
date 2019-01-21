@@ -51,12 +51,11 @@ jobs:
   bundle_dependencies:
     <<: *ruby_2_6_0
     steps:
-      - run: gem uninstall bundler
-      - run: gem install bundler
       - restore_cache:
           <<: *repository
       - restore_cache:
           <<: *restore_bundle
+      - run: gem update bundler
       - run: bundle install --path vendor/bundle --without development
       - run: bin/plugdo bundle install --path "$(readlink -m vendor/bundle)" --without development
       - save_cache:
