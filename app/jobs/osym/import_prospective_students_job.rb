@@ -8,7 +8,7 @@ module Osym
     # rubocop:disable Metrics/MethodLength
     # rubocop:disable Metrics/BlockLength
     def perform(file_path)
-      content = Sensitive.readlines(file_path)
+      content = Support::Sensitive.readlines(file_path)
 
       progress_bar = ProgressBar.spawn('Prospective Students', content.count)
 
@@ -90,10 +90,11 @@ module Osym
     def find_placement_type(str)
       'general' if str.eql?('Genel')
       'additional_score' if str.eql?('Ek Puanli')
+      nil if str.nil?
     end
 
     def find_language(language)
-      Language.find_by(name: language.capitalize_all) unless language.eql?('null')
+      Language.find_by(name: language.capitalize_turkish) unless language.eql?('null')
     end
 
     def find_obs_registered_program(program)

@@ -1,0 +1,11 @@
+en:
+  activerecord:
+    attributes:
+      curriculum_course_group:
+        course_group: Course Group
+        ects: ECTS
+  helpers:
+    submit:
+      curriculum_course_group:
+        create: Create Curriculum Course Group
+        update: Update Curriculum Course Group

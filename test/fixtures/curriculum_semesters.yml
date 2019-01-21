@@ -1,19 +1,23 @@
 one:
   sequence: 1
   year: 1
+  term: fall
   curriculum: one
 
 two:
   sequence: 2
   year: 2
+  term: spring
   curriculum: one
 
 three:
   sequence: 1
   year: 1
+  term: fall
   curriculum: two
 
 bilgisayar_muh_mufredati_birinci_donem:
   sequence: 1
   year: 1
+  term: fall
   curriculum: bilgisayar_muhendisligi_mufredati

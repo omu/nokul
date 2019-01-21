@@ -1,0 +1,17 @@
+# frozen_string_literal: true
+
+require 'pathname'
+
+PLUGINS_DIR = Pathname.new File.expand_path('../..', __dir__)
+
+source 'https://rubygems.org'
+
+gemspec
+
+gem 'nokul-support', path: PLUGINS_DIR.join('support')
+gem 'nokul-tenant', path: PLUGINS_DIR.join('tenant', 'common')
+
+group :test do
+  gem 'minitest-focus'
+  gem 'sqlite3'
+end

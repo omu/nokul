@@ -1,0 +1,133 @@
+<div id="SearchForms" role="tablist">
+  <div class="card">
+    <div class="card-header" role="tab" id="Search">
+      <h5 class="mb-0">
+        <a class="collapsed"
+           data-toggle="collapse"
+           href="#collapseSearch"
+           id="collapseSearchLink"
+           aria-expanded="false"
+           aria-controls="Search">
+          <%= t('search') %>
+        </a>
+        <div class="float-right">
+          <%= link_to t('reset'), %i[first_registration prospective_students], class: 'btn btn-warning btn-sm' %>
+        </div>
+      </h5>
+    </div>
+    <div id="collapseSearch"
+         class="collapse show"
+         role="tabpanel"
+         aria-labelledby="Search"
+         data-parent="#SearchForms">
+      <div class="card-body">
+        <%= form_tag %i[first_registration prospective_students], method: :get do %>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <%= label_tag :term, t('smart_search') %>
+                <%= text_field_tag :term,
+                                   params[:term],
+                                   placeholder: t('.smart_search_placeholder'),
+                                   class: 'form-control' %>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <%= label_tag :registered, t('.registration_status') %>
+                <%= select_tag(:registered,
+                               options_for_select([[t('.registered'), true], [t('.not_registered'), false]], params[:registered]),
+                               include_blank: true,
+                               class: 'form-control') %>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <%= label_tag :meb_status, t('.meb_status') %>
+                <%= select_tag(:meb_status,
+                               options_for_select([[t('.graduated'), true], [t('.not_graduated_or_unknown'), false]], params[:meb_status]),
+                               include_blank: true,
+                               class: 'form-control') %>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <%= label_tag :military_status, t('.military_status') %>
+                <%= select_tag(:military_status,
+                               options_for_select([[t('.unproblematic'), true], [t('.must_see_recruiting_office'), false]], params[:military_status]),
+                               include_blank: true,
+                               class: 'form-control') %>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <%= label_tag :obs_status, t('.obs_status') %>
+                <%= select_tag(:obs_status,
+                               options_for_select([[t('.unproblematic'), true], [t('.student_in_a_different_unit'), false]], params[:obs_status]),
+                               include_blank: true,
+                               class: 'form-control') %>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <%= label_tag :student_entrance_type_id, t('.student_entrance_type') %>
+                <%= select_tag(:student_entrance_type_id,
+                               options_from_collection_for_select(StudentEntranceType.order(:name), :id, :name),
+                               include_blank: true,
+                               class: 'form-control') %>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <%= label_tag :root_unit_id, t('.root_unit') %>
+                <%= select_tag(:root_unit_id,
+                               options_from_collection_for_select(Unit.active.academic.without_programs.order(:name), :id, :name, params[:root_unit_id]),
+                               include_blank: true,
+                               class: 'form-control',
+                               style: 'width: 100%') %>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <%= label_tag :unit_id, t('.unit') %>
+                <%= select_tag(:unit_id,
+                               options_from_collection_for_select(
+                                 (params[:root_unit_id].present? ? Unit.find(params[:root_unit_id]).subprograms.active.order(:name) : []), :id, :name, params[:unit_id]
+                               ),
+                               include_blank: true,
+                               class: 'form-control', style: 'width: 100%') %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <%= submit_tag t('search'), class: 'btn btn-primary' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type='text/javascript'>
+  $(document).ready(function() {
+    $('#root_unit_id').select2();
+    $('#unit_id').select2();
+    $('#student_entrance_type_id').select2();
+
+    var parameters = [
+      {
+        el: '#root_unit_id',
+        target: '#unit_id',
+        params: { 'unit_id': '#root_unit_id' },
+        source: '/units/:unit_id/programs/',
+        label_attribute: 'name',
+        reset_selectors: '#unit_id'
+      }
+    ]
+    var dynamic_select = new DynamicSelect(parameters)
+    dynamic_select.init()
+  });
+</script>
+

@@ -2,13 +2,17 @@
 
 class CourseGroup < ApplicationRecord
   # search
+  include DynamicSearch
   include PgSearch
+
   pg_search_scope(
     :search,
-    against: %i[name unit_id course_group_type_id],
-    associated_against: { unit: :name, course_group_type: :name },
+    against: %i[name],
     using: { tsearch: { prefix: true } }
   )
+
+  # dynamic_search
+  search_keys :unit_id, :course_group_type_id
 
   # relations
   belongs_to :unit
@@ -18,10 +22,14 @@ class CourseGroup < ApplicationRecord
   has_many :curriculum_course_groups, dependent: :destroy
 
   # validations
-  validates :name, presence: true
-  validates :total_ects_condition, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :name, presence: true, uniqueness: { scope: :unit_id }, length: { maximum: 255 }
+  validates :total_ects_condition, numericality: {
+    only_integer: true,
+    greater_than_or_equal_to: 0,
+    less_than_or_equal_to: 300
+  }
   validates :course_ids, presence: true
 
   # callbacks
-  before_save { self.name = name.capitalize_all }
+  before_validation { self.name = name.capitalize_turkish if name }
 end

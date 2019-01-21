@@ -79,15 +79,16 @@ class UnitsControllerTest < ActionDispatch::IntegrationTest
 
     assert_equal 'Test Unit Update', unit.name
     assert_equal 300_000, unit.yoksis_id
-    assert_equal 'Uygulama Ve Araştırma Merkezi', unit.unit_type.try(:name)
+    assert_equal 'Uygulama ve Araştırma Merkezi', unit.unit_type.try(:name)
     assert_equal units(:cbu), unit.parent
     assert_redirected_to unit_path(unit)
     assert_equal translate('units.update.success'), flash[:notice]
   end
 
   test 'should destroy unit' do
-    assert_difference('Unit.count', -1) do
-      delete unit_path(Unit.last)
+    @unit = units(:unit_to_delete)
+    assert_difference('Unit.count', -@unit.subtree.count) do
+      delete unit_path(@unit)
     end
 
     assert_redirected_to units_path

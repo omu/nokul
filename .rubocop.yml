@@ -1,6 +1,4 @@
 Style/AsciiComments:
-  Description: 'Use only ascii symbols in comments.'
-  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#english-comments'
   Enabled: false
 Style/Lambda:
   Enabled: false
@@ -18,7 +16,9 @@ Metrics/LineLength:
     - app/validators/employee_validator.rb # Won't fix
 Metrics/BlockLength:
   Exclude:
+    - config/routes/**/*
     - lib/tasks/**/*.rake # Won't fix
+    - test/models/concerns/reference_validations_test.rb
 Metrics/ClassLength:
   Exclude:
     - test/**/*.rb
@@ -28,12 +28,11 @@ AllCops:
   Exclude:
     - bin/**/*
     - vendor/bundle/**/*
+    - node_modules/**/*
     - db/schema.rb
     - db/migrate/*.rb
     - config/initializers/simple_form.rb
     - config/initializers/simple_form_bootstrap.rb
     - config/environments/*.rb
     - config/routes.rb
-    - app/services/kps/omu/adres.rb # WIP
-    - app/services/kps/omu/kimlik.rb # WIP
     - Vagrantfile

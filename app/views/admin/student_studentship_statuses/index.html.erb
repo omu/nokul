@@ -1,0 +1,8 @@
+<%= render 'layouts/builders/index',
+           namespace: 'admin',
+           klass: 'student_studentship_status',
+           collection: @student_studentship_statuses,
+           pagy: @pagy,
+           card_header: t('.card_header'),
+           params: ['name', 'code'],
+           actions: ['edit', 'destroy'] %>

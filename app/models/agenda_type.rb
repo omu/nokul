@@ -9,8 +9,8 @@ class AgendaType < ApplicationRecord
   has_many :agendas, dependent: :nullify
 
   # validations
-  validates :name, presence: true
+  validates :name, presence: true, length: { maximum: 255 }
 
   # callbacks
-  before_save { self.name = name.capitalize_all }
+  before_save { self.name = name.capitalize_turkish }
 end

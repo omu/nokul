@@ -1,31 +1,37 @@
 # frozen_string_literal: true
 
 namespace :import do
-  desc 'Imports units from db/static_data'
+  desc 'Imports units from tenant unit data'
   task units: :environment do
-    file = YAML.load_file(Rails.root.join('db', 'static_data', 'units.yml'))
-    progress_bar = ProgressBar.spawn('Units', file.count)
+    units = Tenant.units
+    progress_bar = ProgressBar.spawn('Units', units.count)
 
-    file.each do |unit|
-      unit['unit_status_id'] = UnitStatus.find_by(
-        name: unit['unit_status_id']
-      ).id
-      unit['unit_instruction_language_id'] = UnitInstructionLanguage.find_by(
-        name: unit['unit_instruction_language_id']
-      ).id
-      unit['unit_instruction_type_id'] = UnitInstructionType.find_by(
-        name: unit['unit_instruction_type_id']
-      ).id
-      unit['unit_type_id'] = UnitType.find_by(
-        name: unit['unit_type_id']
-      ).id
-      unit['parent'] = Unit.find_by(
-        yoksis_id: unit['parent_yoksis_id']
-      )
-      unit['district_id'] = District.find_by(
-        name: 'Atakum'
-      ).id
-      Unit.create(unit.except('parent_yoksis_id'))
+    units.each do |unit|
+      default_district = District.find_by(name: Tenant.configuration.contact.main_district)
+      parent_unit = if unit.parent_yoksis_id
+                      Unit.find_by(yoksis_id: unit.parent_yoksis_id)
+                    elsif unit.parent_detsis_id
+                      Unit.find_by(detsis_id: unit.parent_detsis_id)
+                    end
+
+      params = {
+        abbreviation: unit.abbreviation,
+        code: unit.code,
+        founded_at: unit.founded_at,
+        name: unit.name,
+        yoksis_id: unit.yoksis_id,
+        detsis_id: unit.detsis_id,
+        osym_id: unit.osym,
+        foet_code: unit.foet_code,
+        duration: unit.duration,
+        district: District.find_by(name: unit.district_id) || default_district,
+        parent: parent_unit || nil,
+        unit_instruction_language_id: UnitInstructionLanguage.find_by(name: unit.unit_instruction_language_id).try(:id),
+        unit_instruction_type_id: UnitInstructionType.find_by(name: unit.unit_instruction_type_id).try(:id),
+        unit_status_id: UnitStatus.find_by(name: unit.unit_status_id).try(:id),
+        unit_type_id: UnitType.find_by(name: unit.unit_type_id).try(:id)
+      }
+      Unit.create(params)
       progress_bar&.increment
     end
   end

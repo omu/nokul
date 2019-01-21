@@ -1,6 +1,8 @@
 <div class='alert alert-light'>
-  <%= link_to_new new_course_group_path, t('.new_course_group_link') %>
+  <%= link_to_new t('.new_course_group_link'), new_course_group_path %>
 </div>
+
+<%= render 'search' %>
 
 <div class='row'>
   <div class='col-lg-12'>
@@ -9,9 +11,6 @@
         <%= fa_icon 'tags', text: t('.card_header') %>
       </div>
       <div class='card-body'>
-        <%= render 'components/smart_search_form',
-                   path: course_groups_path,
-                   placeholder: t('.search_placeholder') %>
         <table class='table table-responsive-sm table-striped'>
           <thead>
             <tr>

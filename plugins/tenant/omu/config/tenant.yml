@@ -1,0 +1,27 @@
+default: &default
+  name: 'Ondokuz Mayıs Üniversitesi'
+  abbreviation: 'omu'
+  api_host: 'https://api.omu.sh'
+  contact:
+    address: 'Ondokuz Mayıs Üniversitesi, Kurupelit Kampüsü, Atakum/SAMSUN'
+    phone: '+9 0362 312 1919'
+    main_district: 'Atakum'
+  email:
+    domain: 'omu.edu.tr'
+    default_from: 'noreply@baum.omu.edu.tr'
+    support: 'hotline@baum.omu.edu.tr'
+  network:
+    subnet: '10.0.0.0/8'
+
+production:
+  <<: *default
+  host: 'https://nokul.omu.sh'
+beta:
+  <<: *default
+  host: 'https://dev.nokul.omu.sh'
+development:
+  <<: *default
+  host: 'localhost:3000'
+test:
+  <<: *default
+  host: 'localhost:3000'

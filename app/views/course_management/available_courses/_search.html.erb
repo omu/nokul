@@ -1,0 +1,90 @@
+<div id="SearchForms" role="tablist">
+  <div class="card">
+    <div class="card-header" role="tab" id="Search">
+      <h5 class="mb-0">
+        <a class="collapsed"
+           data-toggle="collapse"
+           href="#collapseSearch"
+           id="collapseSearchLink"
+           aria-expanded="false"
+           aria-controls="Search">
+          <%= t('search') %>
+        </a>
+        <div class="float-right">
+          <%= link_to t('reset'), available_courses_path, class: 'btn btn-warning btn-sm' %>
+        </div>
+      </h5>
+    </div>
+    <div id="collapseSearch"
+         class="collapse show"
+         role="tabpanel"
+         aria-labelledby="Search"
+         data-parent="#SearchForms">
+      <div class="card-body">
+        <%= form_tag available_courses_path, method: :get do %>
+          <div class="row">
+            <div class="form-group col-sm-12">
+              <%= label_tag :term, t('smart_search') %>
+              <%= text_field_tag :term,
+                                  params[:term],
+                                  placeholder: t('.smart_search_placeholder'),
+                                  class: 'form-control' %>
+            </div>
+            <div class="form-group col-sm-12">
+              <%= label_tag(:unit_id, t('.unit')) %>
+              <%= select_tag(:unit_id,
+                              options_from_collection_for_select(Unit.active.coursable.order(:name), :id, :names_depth_cache, params[:unit_id]),
+                              include_blank: true,
+                              class: 'form-control',
+                              style: 'width: 100%') %>
+            </div>
+            <div class="form-group col-sm-6">
+              <%= label_tag(:curriculum_id, t('.curriculum')) %>
+              <%= select_tag(:curriculum_id,
+                            include_blank: true,
+                            class: 'form-control',
+                            style: 'width: 100%') %>
+            </div>
+            <div class="form-group col-sm-6">
+              <%= label_tag(:academic_term_id, t('.academic_term')) %>
+              <%= select_tag(:academic_term_id,
+                            options_from_collection_for_select(AcademicTerm.all, :id, lambda { |term| full_name(term) }, params[:academic_term_id]),
+                            include_blank: true,
+                            class: 'form-control',
+                            style: 'width: 100%') %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <%= submit_tag t('search'), class: 'btn btn-primary' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type='text/javascript'>
+  $(document).ready(function() {
+    $('#unit_id, #curriculum_id, #academic_term_id').select2();
+
+    var parameters = [
+      {
+        el: '#unit_id',
+        target: '#curriculum_id',
+        params: { 'unit_id': '#unit_id' },
+        source: '/units/:unit_id/curriculums/',
+        label_attribute: 'name',
+        reset_selectors: '#curriculum_id',
+        placeholder: 'Müfredat Seçiniz',
+        after_initialize: function(){
+          var el = $(this['el'])
+          if(el.val() !== '') el.trigger('change', "<%= params[:curriculum_id]%>")
+        }
+      }
+    ]
+    var dynamic_select = new DynamicSelect(parameters)
+    dynamic_select.init()
+  });
+</script>

@@ -1,0 +1,20 @@
+add_drop_registrations:
+  name: Ders Ekleme/Bırakma
+  identifier: add_drop_registrations
+  category: courses
+approvals_advisor:
+  name: Danışman Onay İşlemleri
+  identifier: approvals_advisor
+  category: advisor
+online_course_registrations:
+  name: Çevrimiçi Ders Kayıtları
+  identifier: online_course_registrations
+  category: registrations
+excused_mid_term_applications:
+  name: Ara Sınav Mazeret Başvuruları
+  identifier: excused_mid_term_applications
+  category: applications
+calendar_event_type_to_delete:
+  name: This event type will be deleted in tests
+  identifier: some_event_type_to_delete
+  category: exams

@@ -1,0 +1,65 @@
+<div class='row'>
+  <div class='col-sm-12'>
+    <div class='card'>
+      <div class='card-body'>
+        <%= simple_form_for([:calendar_management, calendar]) do |f| %>
+          <div class='row'>
+            <div class='form-group col-sm-12'>
+              <%= f.error_notification %>
+              <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+            </div>
+            <div class='col-sm-12'>
+              <%= f.input :name, required: true %>
+            </div>
+            <div class='col-sm-6'>
+              <%= f.input :senate_decision_date,
+                          as: :date_time_picker,
+                          input_html: { data: { class: 'senate_decision_date'} } %>
+            </div>
+            <div class='col-sm-6'>
+              <%= f.input :senate_decision_no, required: true %>
+            </div>
+            <div class='col-sm-12'>
+              <%= f.input :timezone, required: true,
+                                     collection: timezone_list_with_offset,
+                                     label_method: :first,
+                                     value_method: :second %>
+            </div>
+            <div class='col-sm-12'>
+              <%= f.association :academic_term,
+                                label_method: lambda { |academic_term| full_name(academic_term) }, value_method: :id %>
+            </div>
+            <div class='col-sm-12'>
+              <%= f.input :description, as: :text %>
+            </div>
+            <hr \>
+            <div class='col-sm-12' id='calendar_events'>
+              <div class='card event_card'>
+                <div class='card-header'>
+                  <%= fa_icon 'align-justify', text: t('.calendar_events') %>
+                  <div class='card-header-actions'>
+                    <%= link_to_add_association t('.new_event_link'), f, :calendar_events, class: 'btn btn-outline-primary btn-sm' %>
+                  </div>
+                </div>
+                <div class='card-body single_event'>
+                  <%= f.simple_fields_for :calendar_events do |event| %>
+                    <%= render 'calendar_event_fields', f: event %>
+                  <% end %>
+                  <br>
+                </div>
+              </div>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
+              <%= link_to_back(:back) %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= javascript_include_tag 'shared/cocoon' %>
+<%= render 'flatpickr' %>
+<%= render 'cocoon' %>

@@ -1,0 +1,8 @@
+<%= render 'layouts/builders/index',
+           namespace: 'admin',
+           klass: 'country',
+           collection: @countries,
+           pagy: @pagy,
+           card_header: t('.card_header'),
+           params: ['name', 'alpha_2_code', 'alpha_3_code', 'numeric_code', 'mernis_code', 'yoksis_code'],
+           actions: ['show', 'edit', 'destroy'] %>

@@ -1,0 +1,24 @@
+en:
+  activerecord:
+    attributes:
+      student_studentship_status: &student_studentship_status_attributes
+        code: Code
+        name: Student Studentship Status
+  helpers:
+    submit:
+      student_studentship_status:
+        create: Create Student Studentship Status
+        update: Update Student Studentship Status
+  admin:
+    student_studentship_statuses:
+      create:
+        success: Student studentship status successfully created.
+      destroy:
+        success: Student studentship status successfully deleted.
+        warning: Student studentship status could not be deleted.
+      index:
+        <<: *student_studentship_status_attributes
+        card_header: Student Studentship Statuses
+        new_student_studentship_status_link: New Student Studentship Status
+      update:
+        success: Student studentship status successfully updated.

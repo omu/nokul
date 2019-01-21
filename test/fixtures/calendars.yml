@@ -1,0 +1,21 @@
+uzem_calendar:
+  name: UZEM Takvimi
+  senate_decision_no: 123456-TR-123
+  senate_decision_date: 01.01.2019
+  description: UZEM için özel takvim
+  academic_term: spring_2018_2019
+  timezone: Istanbul
+graduate_calendar:
+  name: Lisansüstü Takvimi
+  senate_decision_no: 987654s-TR-123
+  senate_decision_date: 15.10.2019
+  description: Lisansüstü etkinlikleri
+  academic_term: summer_2018_2019
+  timezone: Istanbul
+calendar_to_delete:
+  name: Some calendar to delete in tests
+  senate_decision_no: 987654s-SWEDEN-123
+  senate_decision_date: 15.10.2019
+  description: Nothing to describe.
+  academic_term: fall_2018_2019
+  timezone: Istanbul

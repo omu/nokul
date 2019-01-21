@@ -1,0 +1,8 @@
+<%= render 'layouts/builders/index',
+           namespace: 'admin',
+           klass: 'student_grading_system',
+           collection: @student_grading_systems,
+           pagy: @pagy,
+           card_header: t('.card_header'),
+           params: ['name', 'code'],
+           actions: ['edit', 'destroy'] %>

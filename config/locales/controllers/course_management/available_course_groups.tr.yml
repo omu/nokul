@@ -1,0 +1,29 @@
+tr:
+  activerecord:
+    attributes:
+      available_course_group:
+        name: Grup Adı
+        quota: Kontenjan
+        lecturer: Öğretim Elemanı
+        title: Ünvan
+        coordinator: Koordinatör
+  course_management:
+    available_course_groups:
+      create:
+        success: Açılan ders grubu başarıyla oluşturuldu.
+      destroy:
+        error: Açılan ders grubu silinirken bir hata oluştu.
+        success: Açılan ders grubu başarıyla silindi.
+      edit:
+        form_title: '%{course} Açılan Ders Grubunu Düzenle'
+      form:
+        lecturers: Öğretim Elemanları
+      new:
+        form_title: '%{course} Dersine Grup Ekle'
+      update:
+        success: Açılan ders grubu başarıyla güncellendi.
+  helpers:
+    submit:
+      available_course_group:
+        create: Açılan Ders Grubu Ekle
+        update: Açılan Ders Grubunu Güncelle

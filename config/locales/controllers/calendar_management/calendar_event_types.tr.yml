@@ -1,0 +1,36 @@
+tr:
+  activerecord:
+    attributes:
+      calendar_event_type: &calendar_event_type_attributes
+        name: Olay Türü
+        category: Kategori
+        identifier: Tür Tanımlayıcısı
+    enums:
+      calendar_event_type:
+        categories:
+          applications: Başvurular
+          payments: Ödemeler
+          registrations: Kayıtlar
+          advisor: Danışman İşlemleri
+          exams: Sınavlar
+          courses: Dersler
+          submission: Teslim İşlemleri
+          announcement: Duyurular
+  calendar_management:
+    calendar_event_types:
+      index:
+        <<: *calendar_event_type_attributes
+        card_header: Olay Türleri
+        new_calendar_event_type_link: Yeni Olay Türü
+      create:
+        success: Olay türü başarıyla oluşturuldu.
+      update:
+        success: Olay türü başarıyla güncellendi.
+      destroy:
+        success: Olay türü başarıyla silindi!
+        warning: Olay türü silinemedi!
+  helpers:
+    submit:
+      calendar_event_type:
+        create: Olay Türü Oluştur
+        update: Olay Türünü Güncelle

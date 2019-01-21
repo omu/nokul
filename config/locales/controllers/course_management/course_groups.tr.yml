@@ -1,0 +1,41 @@
+tr:
+  activerecord:
+    attributes:
+      course_group: &course_group_attributes
+        course_group_type: Ders Grup Türü
+        course_ids: Dersler
+        courses: Dersler
+        name: Ders Grup Adı
+        total_ects_condition: Toplam AKTS Koşulu
+        unit: Birim
+  course_management:
+    course_groups:
+      create:
+        success: Ders grubu başarıyla oluşturuldu.
+      destroy:
+        error: Ders grubu silinirken bir hata oluştu.
+        success: Ders grubu başarıyla silindi.
+      edit:
+        form_title: Ders Grup Düzenle
+      index:
+        <<: *course_group_attributes
+        card_header: Ders Grupları
+        new_course_group_link: Yeni Ders Grup Ekle
+      new:
+        form_title: Ders Grup Oluştur
+      show:
+        course_group_type: Ders Grup Türü
+        courses: Dersler
+        name: Ders Grup Adı
+        total_ects_condition: Toplam AKTS Koşulu
+        unit: Birim
+      search:
+        <<: *course_group_attributes
+        smart_search_placeholder: Ders Grup adı
+      update:
+        success: Ders grubu başarıyla güncellendi.
+  helpers:
+    submit:
+      course_group:
+        create: Ders Grubu Ekle
+        update: Ders Grubu Güncelle

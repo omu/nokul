@@ -1,33 +1,23 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  require 'sidekiq/web'
-  authenticate :user do
-    mount Sidekiq::Web => '/sidekiq'
-  end
-
   root to: 'home#index'
+
+  draw :admin
+  draw :calendar_management
+  draw :first_registration
 
   draw :devise
   draw :account
-  draw :calendar
   draw :course_management
   draw :references
-  draw :yoksis_references
 
   resources :units do
-    resources :registration_documents
     member do
       get :courses, defaults: { format: :json }
       get :programs, defaults: { format: :json }
-    end
-  end
-
-  resources :documents
-
-  scope module: :student_management do
-    resources :prospective_students, only: %i[index show] do
-      get 'register', on: :member
+      get :curriculums, defaults: { format: :json }
+      get :employees, default: { format: :json }
     end
   end
 

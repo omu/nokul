@@ -33,7 +33,7 @@
               <div class='col-sm-6'>
                 <%= f.input :number_of_semesters,
                             collection: (1..Curriculum::MAX_NUMBER_OF_SEMESTERS),
-                            selected: 12,
+                            selected: 8,
                             include_blank: false %>
               </div>
               <div class='col-sm-6'>
@@ -42,24 +42,25 @@
                             selected: :periodic,
                             include_blank: false %>
               </div>
-            <% end %>
-          </div>
-          <% unless curriculum.new_record? %>
-            <h3><%= t('.semesters') %></h3>
-            <div id='semesters' class='mb-2'>
+            <% else %>
+              <div class="col-sm-12">
+                <div class="alert alert-secondary">
+                  <h3 class='text-center'><%= t('.semesters') %></h3>
+                </div>
+              </div>
+
               <%= f.simple_fields_for :semesters do |semester| %>
                 <%= render 'semester_fields', f: semester %>
               <% end %>
-              <div class='links'>
-                <%= link_to_add_association f, :semesters, class: 'btn btn-success btn-sm' %>
+
+              <div class='links col-sm-12'>
+                <%= link_to_add_association f, :semesters, class: 'btn btn-primary btn-sm pull-right' %>
               </div>
+            <% end %>
+
+            <div class='form-group col-sm-12 mt-2'>
+              <%= f.button :submit, class: 'btn btn-outline-success' %>
             </div>
-          <% end %>
-          <div class='row'>
-            <div class='form-group col-sm-12 '>
-              <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
-            </div>
-          </div>
         <% end %>
       </div>
     </div>

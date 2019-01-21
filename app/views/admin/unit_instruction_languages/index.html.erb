@@ -1,0 +1,8 @@
+<%= render 'layouts/builders/index',
+           namespace: 'admin',
+           klass: 'unit_instruction_language',
+           collection: @unit_instruction_languages,
+           pagy: @pagy,
+           card_header: t('.card_header'),
+           params: ['name', 'code'],
+           actions: ['edit', 'destroy'] %>

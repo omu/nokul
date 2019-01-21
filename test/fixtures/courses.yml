@@ -101,3 +101,16 @@ programlamaya_giris:
   program_type: undergraduate
   language: turkce
   status: active
+
+course_to_delete:
+  name: Course to Delete
+  code: CTD101
+  course_type: compulsory_course
+  theoric: 3s
+  practice: 2
+  credit: 34
+  laboratory: 0
+  unit: bilgisayar_muhendisligi
+  program_type: undergraduate
+  language: turkce
+  status: active

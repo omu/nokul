@@ -1,0 +1,24 @@
+en:
+  activerecord:
+    attributes:
+      student_disability_type: &student_disability_type_attributes
+        code: Code
+        name: Student Disability Type
+  helpers:
+    submit:
+      student_disability_type:
+        create: Create Student Disability Type
+        update: Update Student Disability Type
+  admin:
+    student_disability_types:
+      create:
+        success: Student disability type successfully created.
+      destroy:
+        success: Student disability type successfully deleted.
+        warning: Student disability type could not be deleted.
+      index:
+        <<: *student_disability_type_attributes
+        card_header: Student Disability Types
+        new_student_disability_type_link: New Student Disability Type
+      update:
+        success: Student disability type successfully updated.

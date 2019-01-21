@@ -1,0 +1,15 @@
+<%= render 'layouts/builders/form',
+           namespace: 'admin',
+           klass: @unit_instruction_type,
+           params: [
+            {
+              field: 'name',
+              width: 12,
+              required: true
+            },
+            {
+              field: 'code',
+              width: 12,
+              required: true
+            }
+           ] %>

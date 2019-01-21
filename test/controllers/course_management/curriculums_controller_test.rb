@@ -32,7 +32,7 @@ module CourseManagement
         post index_path, params: {
           curriculum: {
             name: 'Test Create Curriculum', unit_id: @unit.id, status: :active,
-            number_of_semesters: 8, type: :periodic
+            number_of_semesters: 8, type: :periodic, program_ids: @unit.subprograms.ids.first(2)
           }
         }
       end
@@ -75,6 +75,17 @@ module CourseManagement
 
       assert_redirected_to index_path
       assert_equal translate('.destroy.success'), flash[:notice]
+    end
+
+    test 'should get openable_course' do
+      @curriculum = CurriculumDecorator.new(@curriculum)
+
+      get openable_courses_curriculum_path(@curriculum)
+
+      assert_response :success
+      assert_equal 'application/json', response.content_type
+      assert_equal @curriculum.openable_courses_for_active_term.count,
+                   JSON.parse(response.body).count
     end
 
     private

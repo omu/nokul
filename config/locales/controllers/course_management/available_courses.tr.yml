@@ -1,0 +1,55 @@
+tr:
+  activerecord:
+    attributes:
+      available_course: &available_course_attributes
+        academic_term: Akademik Dönem
+        coordinator: Koordinatör
+        course: Ders
+        curriculum: Müfredat
+        unit: Birim
+  course_management:
+    available_courses:
+      create:
+        success: Açılan ders başarıyla oluşturuldu.
+      destroy:
+        error: Açılan ders silinirken bir hata oluştu.
+        success: Açılan ders başarıyla silindi.
+      edit:
+        form_title: '%{course} Açılan Dersi Düzenle'
+      evaluation_types:
+        assessment_method: Ölçme Kriteri
+        card_header: Değerlendirme Türleri
+        create_evaluation_type: Değerlendirme Türü Ekle
+        percentage: Yüzde
+      groups:
+        available_course_groups: Açılan Ders Grupları
+        coordinator: Koordinatör
+        create_available_course_group: Açılan Derse Grup Ekle
+        lecturer: Öğretim Elemanı
+        name: Grup Adı
+        quota: Kontenjan
+        title: Ünvan
+      index:
+        <<: *available_course_attributes
+        add_new_available_course: Yeni Açılan Ders Ekle
+        available_courses: Açılan Dersler
+        course_code: Ders Kodu
+        group_count: Grup Sayısı
+        quota: Kontenjan
+      new:
+        form_title: Ders Aç
+      search:
+        <<: *available_course_attributes
+        smart_search_placeholder: Ders Adı / Ders Kodu
+      form:
+        unit: Birim
+      show:
+        <<: *available_course_attributes
+        coordinator: Koordinatör
+      update:
+        success: Açılan ders başarıyla güncellendi.
+  helpers:
+    submit:
+      available_course:
+        create: Açılan Ders Ekle
+        update: Açılan Dersi Güncelle

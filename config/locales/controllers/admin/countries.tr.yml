@@ -1,0 +1,38 @@
+tr:
+  activerecord:
+    attributes:
+      country: &country_attributes
+        alpha_2_code: Alpha 2 Kodu
+        alpha_3_code: Alpha 3 Kodu
+        mernis_code: MERNiS Kodu
+        name: Ülke Adı
+        numeric_code: ISO3166 Rakamsal
+        yoksis_code: YÖKSİS Kodu
+      city: &city_attributes
+        alpha_2_code: Alpha 2 Kodu
+        name: Şehir Adı
+  helpers:
+    submit:
+      country:
+        create: Ülke Oluştur
+        update: Ülkeyi Güncelle
+  admin:
+    countries:
+      show:
+        <<: *country_attributes
+        <<: *city_attributes
+        card_header: Şehirler
+        new_city_link: Yeni Şehir Ekle
+      index:
+        <<: *country_attributes
+        new_country_link: Yeni Ülke Ekle
+        card_header: Ülkeler
+      new:
+        new_country: Yeni Ülke
+      create:
+        success: Ülke başarıyla oluşturuldu.
+      update:
+        success: Ülke başarıyla güncellendi.
+      destroy:
+        success: Ülke başarıyla silindi!
+        warning: Ülke silinemedi!

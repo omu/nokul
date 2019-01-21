@@ -75,10 +75,7 @@ en:
         district: Location
         meetings: Meetings
         name: Committee / Commission Name
-        new_committee_link: Create a New Committee/Commission
-        unit_status: Unit Status
         unit_type: Unit Type
-        yoksis_id: YOKSIS ID
     decisions:
       create:
         success: Committee decision successfully created.

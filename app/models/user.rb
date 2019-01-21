@@ -11,7 +11,8 @@ class User < ApplicationRecord
   )
 
   # authentication
-  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable, :lockable
+  devise :database_authenticatable, :registerable, :recoverable, :rememberable,
+         :trackable, :validatable, :lockable, :timeoutable
 
   # relations
   has_one_attached :avatar
@@ -30,8 +31,9 @@ class User < ApplicationRecord
   has_many :projects, dependent: :destroy
 
   # validations
-  validates :email, presence: true, uniqueness: true
-  validates :id_number, presence: true, uniqueness: true, numericality: { only_integer: true }, length: { is: 11 }
+  validates :email, presence: true, uniqueness: true, length: { maximum: 255 }
+  validates :id_number, uniqueness: true, numericality: { only_integer: true }, length: { is: 11 }
+  validates :preferred_language, inclusion: { in: I18n.available_locales.map(&:to_s) }
   validates_with EmailAddress::ActiveRecordValidator, field: :email
   validates_with ImageValidator, field: :avatar, if: proc { |a| a.avatar.attached? }
 
@@ -66,7 +68,7 @@ class User < ApplicationRecord
 
   def permalink
     username, domain = email.split('@') if email
-    username if domain.eql?(Rails.application.config.tenant.email.domain)
+    username if domain.eql?(Tenant.configuration.email.domain)
   end
 
   # custom methods
@@ -74,11 +76,15 @@ class User < ApplicationRecord
     (students + employees).flatten
   end
 
-  def self.most_publishing
-    where.not(articles_count: nil).order('articles_count desc').limit(10)
-  end
-
   def title
     employees.active.first.try(:title).try(:name)
+  end
+
+  def self.with_most_articles
+    where.not(articles_count: 0).order('articles_count desc').limit(10)
+  end
+
+  def self.with_most_projects
+    where.not(projects_count: 0).order('projects_count desc').limit(10)
   end
 end

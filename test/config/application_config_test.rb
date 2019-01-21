@@ -24,16 +24,16 @@ class ApplicationConfigTest < ActiveSupport::TestCase
     assert_equal @config.i18n.default_locale, :tr
   end
 
-  test 'Configuration can read tenant settings' do
-    assert_not_nil @config.tenant.abbreviation
-    assert_not_nil @config.tenant.host
+  test 'Turkish and English must be in available locales' do
+    assert I18n.available_locales.include?(:tr)
+    assert I18n.available_locales.include?(:en)
   end
 
-  test 'Tenant configuration includes keys for various environments' do
-    config = YAML.load_file(Tenant.config_file)
-    assert config.key?('production')
-    assert config.key?('beta')
-    assert config.key?('test')
-    assert config.key?('development')
+  test 'appname can be read either from app.json or application class' do
+    assert_not_nil Rails.application.appname
+  end
+
+  test 'rack::attack is up and running as middleware' do
+    assert Rails.application.config.middleware.middlewares.include?(Rack::Attack)
   end
 end

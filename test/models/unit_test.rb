@@ -22,11 +22,15 @@ class UnitTest < ActiveSupport::TestCase
     meeting_agendas
     decisions
     courses
+    course_groups
+    curriculum_programs
+    curriculums
+    managed_curriculums
     registration_documents
     prospective_students
-    calendar_units
-    academic_calendars
-    calendar_events
+    available_courses
+    unit_calendars
+    calendars
   ].each do |property|
     test "a unit can communicate with #{property}" do
       assert units(:omu).send(property)
@@ -74,18 +78,13 @@ class UnitTest < ActiveSupport::TestCase
 
   # scopes
   test 'active scope returns active units' do
-    assert_includes Unit.active, units(:omu)
+    assert_includes Unit.active, units(:uzem)
     assert_not_includes Unit.active, units(:cbu)
   end
 
-  test 'committees scope returns committees type units' do
-    assert_includes Unit.committees, units(:muhendislik_fakultesi_yonetim_kurulu)
-    assert_not_includes Unit.committees, units(:omu)
-  end
-
-  test 'departments scope returns departments type units' do
-    assert_includes Unit.departments, units(:bilgisayar_muhendisligi)
-    assert_not_includes Unit.departments, units(:omu)
+  test 'others scope returns other units' do
+    assert_includes Unit.others, units(:omu)
+    assert_not_includes Unit.others, units(:uzem)
   end
 
   test 'faculties scope returns faculties type units' do
@@ -93,14 +92,9 @@ class UnitTest < ActiveSupport::TestCase
     assert_not_includes Unit.faculties, units(:omu)
   end
 
-  test 'programs scope returns programs type units' do
-    assert_includes Unit.programs, units(:fen_bilgisi_ogretmenligi_programi)
-    assert_not_includes Unit.programs, units(:egitim_fakultesi)
-  end
-
-  test 'universities scope returns universities type units' do
-    assert_includes Unit.universities, units(:omu)
-    assert_not_includes Unit.universities, units(:egitim_fakultesi)
+  test 'departments scope returns departments type units' do
+    assert_includes Unit.departments, units(:bilgisayar_muhendisligi)
+    assert_not_includes Unit.departments, units(:omu)
   end
 
   test 'majors scope returns majors type units' do
@@ -108,35 +102,74 @@ class UnitTest < ActiveSupport::TestCase
     assert_not_includes Unit.majors, units(:egitim_fakultesi)
   end
 
+  test 'undergraduate_programs scope returns undergraduate_program type units' do
+    assert_includes Unit.undergraduate_programs, units(:fen_bilgisi_ogretmenligi_programi)
+    assert_not_includes Unit.undergraduate_programs, units(:egitim_fakultesi)
+  end
+
+  test 'graduate_programs scope returns graduate_program type units' do
+    assert_includes Unit.graduate_programs, units(:alman_dili_egitimi_dr)
+    assert_not_includes Unit.graduate_programs, units(:egitim_fakultesi)
+  end
+
   test 'institutes scope returns institutes type units' do
     assert_includes Unit.institutes, units(:egitim_bilimleri_enstitusu)
     assert_not_includes Unit.institutes, units(:egitim_fakultesi)
+  end
+
+  test 'research_centers scope returns research_centers type units' do
+    assert_includes Unit.research_centers, units(:uzem)
+    assert_not_includes Unit.research_centers, units(:egitim_fakultesi)
+  end
+
+  test 'committees scope returns committees type units' do
+    assert_includes Unit.committees, units(:muhendislik_fakultesi_yonetim_kurulu)
+    assert_not_includes Unit.committees, units(:omu)
   end
 
   test 'coursable scope returns coursable units' do
     assert_equal Unit.coursable.count,
                  Unit.departments.count +
                  Unit.faculties.count +
-                 Unit.universities.count +
                  Unit.majors.count +
                  Unit.institutes.count +
-                 Unit.rectorships.count
+                 Unit.others.count
     assert_not_includes Unit.coursable, units(:uzem)
   end
 
   test 'curriculumable scope returns curriculumable units' do
-    assert_equal Unit.curriculumable.count.to_i,
-                 Unit.departments.count +
-                 Unit.faculties.count +
-                 Unit.universities.count +
-                 Unit.majors.count +
-                 Unit.institutes.count +
-                 Unit.rectorships.count
+    assert_equal Unit.curriculumable.count, Unit.coursable.count
     assert_not_includes Unit.curriculumable, units(:uzem)
   end
 
+  test 'eventable scope returns eventable units' do
+    assert_equal Unit.eventable.count,
+                 Unit.faculties.count +
+                 Unit.institutes.count +
+                 Unit.programs.count +
+                 Unit.research_centers.count +
+                 Unit.others.count
+    assert_not_includes Unit.eventable, units(:muhendislik_fakultesi_yonetim_kurulu)
+  end
+
+  test 'academic scope returns academic units' do
+    assert_equal Unit.academic.count,
+                 Unit.faculties.count +
+                 Unit.departments.count +
+                 Unit.majors.count +
+                 Unit.programs.count +
+                 Unit.institutes.count
+    assert_not_includes Unit.academic, units(:uzem)
+  end
+
+  # custom methods
   test 'subprograms method returns a unit subprograms' do
     assert_equal units(:omu).subprograms.count, units(:omu).descendants.programs.count
     assert_not_includes units(:omu).subprograms, units(:uzem)
+  end
+
+  test 'subtree_employees returns unit subtree employees' do
+    employees = Employee.joins(:units, user: :identities).where(units: { id: units(:omu).subtree.active.ids })
+    assert_equal employees.count, units(:omu).subtree_employees.count
   end
 end

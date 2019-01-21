@@ -18,12 +18,12 @@ class City < ApplicationRecord
   has_many :units, through: :districts
 
   # validations
-  validates :name, presence: true, uniqueness: { scope: %i[country_id] }
-  validates :alpha_2_code, presence: true, uniqueness: true
+  validates :name, presence: true, uniqueness: { scope: %i[country_id] }, length: { maximum: 255 }
+  validates :alpha_2_code, presence: true, uniqueness: true, length: { maximum: 255 }
 
   # callbacks
-  before_save do
-    self.name = name.capitalize_all
-    self.alpha_2_code = alpha_2_code.upcase_tr
+  before_validation do
+    self.name = name.capitalize_turkish if name
+    self.alpha_2_code = alpha_2_code.upcase(:turkic) if alpha_2_code
   end
 end

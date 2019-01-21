@@ -1,0 +1,55 @@
+<div class='row'>
+  <div class='col-sm-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'book' %>
+        <strong><%= form_title %></strong>
+      </div>
+      <div class='card-body'>
+        <%= simple_form_for(@available_course) do |f| %>
+          <%= f.error_notification %>
+          <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+          <% if f.object.errors.any? %>
+            <ul class="list-group list-group-accent">
+              <% f.object.errors.full_messages.each do |message| %>
+                <li class="list-group-item list-group-item-accent-danger list-group-item-danger">
+                  <%= message %>
+                </li>
+              <% end %>
+            </ul>
+          <% end %>
+          <div class='row mt-3'>
+            <div class='form-group col-sm-6'>
+              <%= f.association :unit,
+                                collection: Unit.active.coursable.order(:name),
+                                label_method: :names_depth_cache %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.association :curriculum,
+                                collection: [*f.object.unit.try(:managed_curriculums)] %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.association :coordinator,
+                                collection: [*f.object.unit.try(:subtree_employees)],
+                                label_method: lambda { |c| full_name(c) } %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <% if f.object.curriculum %>
+                <% courses = CurriculumDecorator.new(f.object.curriculum)
+                                                .openable_courses_for_active_term(appends: f.object.course) %>
+              <% end %>
+              <%= f.association :course,
+                                collection: [*courses] %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
+              <%= link_to_back(:back) %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'js' %>

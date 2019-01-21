@@ -1,0 +1,8 @@
+<%= render 'layouts/builders/index',
+           namespace: 'admin',
+           klass: 'title',
+           collection: @titles,
+           pagy: @pagy,
+           card_header: t('.card_header'),
+           params: ['name', 'code', 'branch'],
+           actions: ['edit', 'destroy'] %>

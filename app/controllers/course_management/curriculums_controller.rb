@@ -3,7 +3,7 @@
 module CourseManagement
   class CurriculumsController < ApplicationController
     include PagyBackendWithHelpers
-    before_action :set_curriculum, only: %i[show edit update destroy]
+    before_action :set_curriculum, only: %i[show edit update destroy openable_courses]
 
     def index
       curriculums = Curriculum.includes(:unit)
@@ -42,6 +42,11 @@ module CourseManagement
     def destroy
       message = @curriculum.destroy ? 'success' : 'error'
       redirect_with(message)
+    end
+
+    def openable_courses
+      @curriculum = CurriculumDecorator.new(@curriculum)
+      render json: @curriculum.openable_courses_for_active_term
     end
 
     private

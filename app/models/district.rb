@@ -17,9 +17,10 @@ class District < ApplicationRecord
   has_many :addresses, dependent: :nullify
 
   # validations
-  validates :name, presence: true, uniqueness: { scope: %i[city_id] }
-  validates :mernis_code, uniqueness: true, numericality: { only_integer: true }, allow_blank: true
+  validates :name, presence: true, uniqueness: { scope: %i[city_id] }, length: { maximum: 255 }
+  validates :mernis_code, allow_nil: true, uniqueness: true, numericality: { only_integer: true }, length: { is: 4 }
+  validates :active, inclusion: { in: [true, false] }
 
   # callbacks
-  before_save { self.name = name.capitalize_all }
+  before_validation { self.name = name.capitalize_turkish if name }
 end

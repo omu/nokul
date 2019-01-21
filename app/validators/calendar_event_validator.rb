@@ -3,23 +3,23 @@
 class CalendarEventValidator < ActiveModel::Validator
   def validate(record)
     @event = record
-    @term = record.academic_calendar.academic_term
+    @academic_term = record.calendar.academic_term
 
-    term_start_date_validation if @event.start_date?
-    term_end_date_validation if @event.end_date?
-    date_range_validation if @event.start_date? && @event.end_date?
+    term_start_time_validation if @event.start_time?
+    term_end_time_validation if @event.end_time?
+    date_range_validation if @event.start_time? && @event.end_time?
   end
 
-  def term_start_date_validation
-    @event.errors[:start_date] << message('invalid_start_date') if @event.start_date <= @term.start_of_term
+  def term_start_time_validation
+    @event.errors[:start_time] << message('invalid_start_time') if @event.start_time <= @academic_term.start_of_term
   end
 
-  def term_end_date_validation
-    @event.errors[:end_date] << message('invalid_end_date') if @event.end_date >= @term.end_of_term
+  def term_end_time_validation
+    @event.errors[:end_time] << message('invalid_end_time') if @event.end_time >= @academic_term.end_of_term
   end
 
   def date_range_validation
-    @event.errors[:end_date] << message('invalid_date_range') if @event.end_date < @event.start_date
+    @event.errors[:end_time] << message('invalid_time_range') if @event.end_time < @event.start_time
   end
 
   private

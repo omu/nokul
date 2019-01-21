@@ -7,3 +7,6 @@ active:
 archived:
   name: Arşiv
   code: 4
+undefined:
+  name: Kılavuz Kodu Yok
+  code: 5

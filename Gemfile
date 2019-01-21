@@ -10,11 +10,16 @@ end
 
 # core
 gem 'bootsnap', '>= 1.1.0', require: false
-gem 'pg'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 5.2.1'
 gem 'redis'
 gem 'sidekiq'
+
+# database
+gem 'pg'
+gem 'pg_search'
+gem 'pghero'
+gem 'rein'
 
 # active-record
 gem 'ancestry'
@@ -37,18 +42,17 @@ gem 'font-awesome-rails'
 gem 'groupdate' # for chartkick
 gem 'pagy'
 gem 'simple_form'
+gem 'wicked_pdf'
 
 # api
 gem 'jbuilder', '~> 2.5'
 
 # security
 gem 'bcrypt', '~> 3.1.7'
+gem 'rack-attack'
 
 # validators
 gem 'email_address'
-
-# search
-gem 'pg_search'
 
 # error tracking
 gem 'rollbar'
@@ -85,4 +89,15 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'web-console', '>= 3.3.0' # call <%= console %> anywhere in the code.
+end
+
+# core plugins
+gem 'nokul-support', path: 'plugins/support'
+gem 'nokul-tenant',  path: 'plugins/tenant/common'
+
+# tenants (won't be listed at Rails.groups)
+Dir['plugins/tenant/**/*.gemspec'].each do |gemspec|
+  next if (name = File.basename(gemspec, '.gemspec')) == 'nokul-tenant'
+
+  gem name, path: File.dirname(gemspec), require: false
 end

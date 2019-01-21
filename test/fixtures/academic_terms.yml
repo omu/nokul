@@ -3,7 +3,7 @@ fall_2017_2018:
   term: fall
   start_of_term: 2017-08-09 08:00:00
   end_of_term: 2017-12-18 17:00:00
-  active: true
+  active: false
 
 spring_2017_2018:
   year: 2017 - 2018
@@ -35,6 +35,13 @@ spring_2018_2019:
 
 summer_2018_2019:
   year: 2018 - 2019
+  term: summer
+  start_of_term: 2019-07-05 08:00:00
+  end_of_term: 2019-08-13 17:00:00
+  active: false
+
+term_to_delete:
+  year: 2015 - 2016
   term: summer
   start_of_term: 2019-07-05 08:00:00
   end_of_term: 2019-08-13 17:00:00

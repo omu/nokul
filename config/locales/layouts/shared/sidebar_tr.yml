@@ -4,26 +4,31 @@ tr:
       sidebar:
         academic_calendars: Akademik Takvimler
         academic_terms: Akademik Dönemler
+        admin: Yönetici İşlemleri
         agenda_types: Gündem Türleri
-        calendar_titles: Takvim Başlıkları
-        calendar_types: Takvim Türleri
+        assessment_methods: Ölçme Kriterleri
+        available_courses: Açılan Dersler
+        calendar_event_types: Olay Türleri
+        calendar_management: Takvim Yönetimi
         calendars: Takvimler
-        committee_units: Kurul/Komisyon Birimleri
+        committee_units: Kurul ve Komisyonlar
         committees: Kurullar/Komisyonlar
+        courses: Dersler
         course_groups: Ders Grupları
         course_group_types: Ders Grup Türleri
         course_management: Ders İşlemleri
         course_types: Ders Türleri
         course_unit_groups: Ders Grupları
-        courses: Dersler
         curriculums: Müfredatlar
         definitions: Tanımlar
-        documents: Gerekli Belgeler
+        document_types: Belge Türleri
+        evaluation_types: Değerlendirme Türleri
         first_registration: İlk Kayıt
         high_school_types: Lise Türleri
         languages: Diller
         locations: Konumlar
-        references: Referanslar
+        prospective_students: Yerleşen Öğrenciler
+        registration_documents: İstenen Belgeler
         student_disability_types: Engel Türleri
         student_drop_out_types: Ayrılma Nedenleri
         student_education_levels: Eğitim Düzeyleri
@@ -31,10 +36,10 @@ tr:
         student_entrance_types: Giriş Türleri
         student_grades: Sınıflar
         student_grading_systems: Not Sistemleri
-        student_management: Öğrenci Yönetimi
         student_punishment_types: Ceza Türleri
         student_studentship_statuses: Öğrencilik Hakları
         studies: Akademik Çalışmalar
+        titles: Unvanlar
         unit_instruction_languages: Öğrenim Dilleri
         unit_instruction_types: Öğrenim Türleri
         unit_statuses: Aktiflik Durumları
@@ -42,3 +47,4 @@ tr:
         units: Birimler
         university_types: Üniversite Türleri
         users: Kullanıcılar
+        yoksis: YÖKSİS

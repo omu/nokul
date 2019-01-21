@@ -1,0 +1,13 @@
+en:
+  activerecord:
+    attributes:
+      curriculum_semester:
+        sequence: Semester
+        year: Year
+        term: Term
+    enums:
+      curriculum_semester:
+        terms:
+          fall: Fall
+          spring: Spring
+          summer: Summer

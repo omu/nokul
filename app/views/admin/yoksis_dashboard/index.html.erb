@@ -1,0 +1,26 @@
+<div class="row">
+  <% yoksis_klasses = %w[
+    HighSchoolType
+    StudentDisabilityType
+    StudentDropOutType
+    StudentEducationLevel
+    StudentEntrancePointType
+    StudentEntranceType
+    StudentGrade
+    StudentGradingSystem
+    StudentPunishmentType
+    StudentStudentshipStatus
+    UnitInstructionLanguage
+    UnitInstructionType
+    UnitStatus
+    UnitType
+    UniversityType
+  ] %>
+
+  <% yoksis_klasses.each do |klass| %>
+    <%= render 'card',
+               content: klass.constantize.count,
+               title: ".#{klass.tableize}",
+               path: send("admin_#{klass.tableize}_path") %>
+  <% end %>
+</div>

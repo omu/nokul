@@ -4,26 +4,31 @@ en:
       sidebar:
         academic_calendars: Academic Calendars
         academic_terms: Academic Terms
+        admin: Admin Module
         agenda_types: Agenda Types
-        calendar_titles: Calendar Titles
-        calendar_types: Calendar Types
+        assessment_methods: Assessment Methods
+        available_courses: Available Courses
+        calendar_event_types: Event Types
+        calendar_management: Calendar Management
         calendars: Calendars
         committee_units: Committee Units
         committees: Committees
+        courses: Courses
         course_groups: Course Unit Group
         course_group_types: Course Group Types
         course_management: Course Management
         course_types: Course Types
         course_unit_groups: Course Unit Group
-        courses: Courses
         curriculums: Curriculums
         definitions: Definitions
-        documents: Required Documents
-        first_registration: Prospective Students
+        document_types: Document Types
+        evaluation_types: Evaluation Types
+        first_registration: First Registration
         high_school_types: High School Types
         languages: Languages
         locations: Locations
-        references: References
+        prospective_students: Prospective Students
+        registration_documents: Registration Documents
         student_disability_types: Disability Types
         student_drop_out_types: Drop Out Types
         student_education_levels: Education Levels
@@ -31,10 +36,10 @@ en:
         student_entrance_types: Entrance Types
         student_grades: Grades
         student_grading_systems: Grading Systems
-        student_management: Student Management
         student_punishment_types: Punishment Types
         student_studentship_statuses: Studentship Statuses
         studies: Academic Studies
+        titles: Titles
         unit_instruction_languages:  Instruction Languages
         unit_instruction_types: Instruction Types
         unit_statuses: Unit Statuses
@@ -42,3 +47,4 @@ en:
         units: Units
         university_types: University Types
         users: Users
+        yoksis: YOKSIS

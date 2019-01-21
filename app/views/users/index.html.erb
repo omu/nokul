@@ -1,5 +1,5 @@
 <div class='alert alert-light'>
-  <%= link_to_new(new_user_path, t('.new_user_link')) %>
+  <%= link_to_new(t('.new_user_link'), new_user_path) %>
 </div>
 
 <div class='row'>
@@ -9,7 +9,7 @@
         <%= fa_icon 'align-justify', text: t('.card_header') %>
       </div>
       <div class='card-body'>
-        <%= render 'components/smart_search_form',
+        <%= render 'layouts/shared/smart_search_form',
                    path: users_path,
                    placeholder: t('.smart_search_placeholder') %>
         <table class='table table-responsive-sm'>

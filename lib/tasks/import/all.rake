@@ -10,7 +10,9 @@ namespace :import do
     languages
     titles
     high_school_types
+    detsis_unit_types
+    unit_groups
     units
-    administrative_units
+    update_names_depth_cache
   ]
 end

@@ -2,32 +2,20 @@
 
 class CalendarEvent < ApplicationRecord
   # relations
-  belongs_to :academic_calendar
-  belongs_to :calendar_title
-  belongs_to :calendar_type, optional: true
-  belongs_to :academic_term, optional: true
+  belongs_to :calendar
+  belongs_to :calendar_event_type
 
   # validations
-  validates :start_date, presence: true
-  validates :end_date, presence: true
-  validates :academic_calendar, uniqueness: { scope: :calendar_title }
+  validates :timezone, presence: true, length: { maximum: 255 }
+  validates :start_time, presence: true
+  validates :calendar, uniqueness: { scope: %i[calendar_event_type] }
+  validates :visible, inclusion: { in: [true, false] }
   validates_with CalendarEventValidator
 
-  # callbacks
-  after_create :set_calendar_type_and_term
+  # delegations
+  delegate :name, to: :calendar_event_type, prefix: :type
 
-  # delegates
-  delegate :name, to: :calendar_title, prefix: :calendar_title
-
-  # scopes
-  scope :active, -> { where(academic_term: AcademicTerm.active) }
-
-  def set_calendar_type_and_term
-    update(calendar_type_id: academic_calendar.calendar_type.id,
-           academic_term_id: academic_calendar.academic_term.id)
-  end
-
-  def proper_range?
-    Time.current.between?(start_date, end_date)
+  def active_now?
+    end_time ? Time.current.between?(start_time, end_time) : start_time.past?
   end
 end

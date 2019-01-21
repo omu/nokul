@@ -2,11 +2,11 @@
 
 class UnitsController < ApplicationController
   include PagyBackendWithHelpers
-  before_action :set_unit, only: %i[edit update destroy show courses programs]
+  before_action :set_unit, only: %i[edit update destroy show courses programs curriculums employees]
 
   def index
     units = Unit.includes(
-      :unit_status, :unit_instruction_language, :unit_instruction_type, :unit_type, district: [:city]
+      :unit_status, :unit_instruction_type, :unit_type
     ).order(:name)
 
     @pagy, @units = pagy(units.dynamic_search(search_params(Unit)))
@@ -46,6 +46,16 @@ class UnitsController < ApplicationController
     render json: @units
   end
 
+  def curriculums
+    @curriculums = @unit.managed_curriculums.active.order(:name)
+    render json: @curriculums
+  end
+
+  def employees
+    @employees = Employee.includes(:units, :title, user: :identities)
+                         .where(units: { id: @unit.subtree.active.ids })
+  end
+
   private
 
   def set_unit
@@ -55,7 +65,8 @@ class UnitsController < ApplicationController
   def unit_params
     params.require(:unit).permit(
       :name, :yoksis_id, :detsis_id, :foet_code, :founded_at, :duration, :district_id, :parent_id, :unit_status_id,
-      :unit_instruction_language_id, :unit_instruction_type_id, :unit_type_id, :university_type_id
+      :unit_instruction_language_id, :unit_instruction_type_id, :unit_type_id, :university_type_id, :abbreviation,
+      :code
     )
   end
 end
