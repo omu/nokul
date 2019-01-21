@@ -30,6 +30,10 @@ fi
 
 command -v bundle &>/dev/null || gem install bundler
 
+gem install foreman
+foreman export -p3000 --app "$application" --user "$operator" --env "$environment" systemd /etc/systemd/system/
+systemctl enable "$application".target
+
 systemctl enable --now postgresql
 systemctl enable --now redis-server
 
@@ -49,7 +53,4 @@ sudo -EH -u "$operator" sh -xs <<-'EOF'
 	bin/rails db:seed
 EOF
 
-gem install foreman
-
-foreman export -p3000 --app "$application" --user "$operator" --env "$environment" systemd /etc/systemd/system/
-systemctl enable --now "$application".target
+systemctl start "$application".target
