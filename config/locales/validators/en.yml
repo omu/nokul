@@ -1,5 +1,7 @@
 en:
   validators:
+    academic_term:
+      active_check: One of the academic terms must be active.
     address:
       max_formal: You can have up to %{limit} formal addresses maximum.
       max_informal: You can add up to %{limit} addresses maximum.

@@ -56,10 +56,10 @@
               <td><%= agenda.decision.try(:decision_no) %></td>
               <td>
                 <% if agenda.decision.present? %>
-                  <%= link_to_show(committee_meeting_agenda_decision_path(@committee, agenda, agenda.decision), t('.show_decision')) %>
-                  <%= link_to_edit(edit_committee_meeting_agenda_decision_path(@committee, agenda), t('.update_decision')) %>
+                  <%= link_to_show(t('.show_decision'), committee_meeting_agenda_decision_path(@committee, agenda, agenda.decision)) %>
+                  <%= link_to_edit(t('.update_decision'), edit_committee_meeting_agenda_decision_path(@committee, agenda)) %>
                 <% else %>
-                  <%= link_to_new(new_committee_meeting_agenda_decision_path(@committee, agenda), t('.create_decision')) %>
+                  <%= link_to_new(t('.create_decision'), new_committee_meeting_agenda_decision_path(@committee, agenda)) %>
                 <% end %>
               </td>
             </tr>

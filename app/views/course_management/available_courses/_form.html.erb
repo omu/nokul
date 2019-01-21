@@ -20,16 +20,26 @@
           <% end %>
           <div class='row mt-3'>
             <div class='form-group col-sm-6'>
-              <%= f.association :unit, collection: Unit.active.coursable.order(:name), label_method: :names_depth_cache %>
+              <%= f.association :unit,
+                                collection: Unit.active.coursable.order(:name),
+                                label_method: :names_depth_cache %>
             </div>
             <div class='form-group col-sm-6'>
-              <%= f.association :curriculum, collection: f.object.unit.present? ? f.object.unit.managed_curriculums : [] %>
+              <%= f.association :curriculum,
+                                collection: [*f.object.unit.try(:managed_curriculums)] %>
             </div>
             <div class='form-group col-sm-6'>
-              <%= f.association :coordinator, collection: f.object.unit.present? ? f.object.unit.subtree_employees : [], label_method: lambda { |c| full_name(c) } %>
+              <%= f.association :coordinator,
+                                collection: [*f.object.unit.try(:subtree_employees)],
+                                label_method: lambda { |c| full_name(c) } %>
             </div>
             <div class='form-group col-sm-6'>
-              <%= f.association :course, collection: f.object.curriculum.present? ? f.object.curriculum.courses : [] %>
+              <% if f.object.curriculum %>
+                <% courses = CurriculumDecorator.new(f.object.curriculum)
+                                                .openable_courses_for_active_term(appends: f.object.course) %>
+              <% end %>
+              <%= f.association :course,
+                                collection: [*courses] %>
             </div>
             <div class='form-group col-sm-12'>
               <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
