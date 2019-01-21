@@ -16,3 +16,9 @@ elective_course:
   curriculum_course_group: one
   ects: 2
   type: elective
+
+ydi:
+  course: ydi
+  curriculum_semester: one
+  ects: 3
+  type: compulsory

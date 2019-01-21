@@ -1,5 +1,7 @@
 tr:
   validators:
+    academic_term:
+      active_check: Akademik dönemlerden birinin aktif olması zorunludur.
     address:
       max_formal: En fazla %{limit} tane ikamet adresi ekleyebilirsiniz.
       max_informal: En fazla %{limit} tane adres ekleyebilirsiniz.
