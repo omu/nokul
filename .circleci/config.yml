@@ -58,7 +58,7 @@ jobs:
           <<: *repository
       - restore_cache:
           <<: *restore_bundle
-      <<: bundler_2
+      <<: *bundler_2
       - run: bundle install --path vendor/bundle --without development
       - run: bin/plugdo bundle install --path "$(readlink -m vendor/bundle)" --without development
       - save_cache:
@@ -78,7 +78,7 @@ jobs:
           <<: *restore_bundle
       - restore_cache:
           <<: *restore_yarn
-      <<: bundler_2
+      <<: *bundler_2
       - run: bin/yarn install
       - save_cache:
           key: nokul-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
@@ -111,7 +111,7 @@ jobs:
           <<: *restore_bundle
       - restore_cache:
           <<: *restore_yarn
-      <<: bundler_2
+      <<: *bundler_2
       - run: bundle --path vendor/bundle --without development
       - run: bin/yarn install
       - run: bundle exec rake security:all
@@ -124,7 +124,7 @@ jobs:
           <<: *restore_bundle
       - restore_cache:
           <<: *restore_yarn
-      <<: bundler_2
+      <<: *bundler_2
       - run: bundle --path vendor/bundle --without development
       - run: bin/yarn install
       - run: bundle exec rake database:all
@@ -137,7 +137,7 @@ jobs:
           <<: *restore_bundle
       - restore_cache:
           <<: *restore_yarn
-      <<: bundler_2
+      <<: *bundler_2
       - run: bundle --path vendor/bundle --without development
       - run: bin/plugdo bundle install --path "$(readlink -m vendor/bundle)" --without development
       - run: sudo apt install -y postgresql-client || true
