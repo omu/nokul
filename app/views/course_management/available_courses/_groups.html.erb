@@ -3,7 +3,7 @@
     <div class='card-header'>
       <%= fa_icon 'cubes' %><b><%= t('.available_course_groups') %></b>
       <span class='pull-right'>
-        <%= link_to_new(new_available_course_available_course_group_path(@available_course), t('.create_available_course_group')) %>
+        <%= link_to_new(t('.create_available_course_group'), new_available_course_available_course_group_path(@available_course)) %>
       </span>
     </div>
     <div class='card-body'>

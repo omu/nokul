@@ -41,6 +41,14 @@ class AcademicTermTest < ActiveSupport::TestCase
     assert_not_empty fake_term.errors[:year]
   end
 
+  # validations: AcademicTermValidator
+  test 'one of the academic terms must be active' do
+    active_term = AcademicTerm.active.last
+    active_term.update(active: false)
+    assert_not active_term.valid?
+    assert_not_empty active_term.errors[:active]
+  end
+
   # enums
   test_term_enum(AcademicTerm)
 
@@ -48,5 +56,17 @@ class AcademicTermTest < ActiveSupport::TestCase
   test 'active scope returns active academic terms' do
     assert_includes AcademicTerm.active, academic_terms(:fall_2018_2019)
     assert_not_includes AcademicTerm.active, academic_terms(:spring_2017_2018)
+  end
+
+  # callbacks
+  test 'callbacks only one academic term must be active' do
+    active_term = AcademicTerm.active.last
+    passive_term = academic_terms(:fall_2017_2018)
+
+    passive_term.update!(active: true)
+    active_term.reload
+
+    assert passive_term.active?
+    assert_not active_term.active?
   end
 end
