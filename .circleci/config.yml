@@ -36,9 +36,6 @@ ruby_2_6_0: &ruby_2_6_0
       <<: *rails_environment
     - image: circleci/postgres:11.1-alpine
       <<: *postgres_environment
-bundler_2: &bundler_2
-  - run: gem uninstall bundler
-  - run: gem install bundler
 
 # build jobs
 version: 2
@@ -58,7 +55,8 @@ jobs:
           <<: *repository
       - restore_cache:
           <<: *restore_bundle
-      <<: *bundler_2
+      - run: gem uninstall bundler
+      - run: gem install bundler
       - run: bundle install --path vendor/bundle --without development
       - run: bin/plugdo bundle install --path "$(readlink -m vendor/bundle)" --without development
       - save_cache:
@@ -78,7 +76,8 @@ jobs:
           <<: *restore_bundle
       - restore_cache:
           <<: *restore_yarn
-      <<: *bundler_2
+      - run: gem uninstall bundler
+      - run: gem install bundler
       - run: bin/yarn install
       - save_cache:
           key: nokul-yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
@@ -97,9 +96,10 @@ jobs:
           <<: *restore_bundle
       - restore_cache:
           <<: *restore_yarn
-      <<: bundler_2
-      - run: bundle --path vendor/bundle --without development
+      - run: gem uninstall bundler
+      - run: gem install bundler
       - run: bin/yarn install
+      - run: bundle --path vendor/bundle --without development
       - run: bundle exec rake quality:all
       - run: bin/yarn run lint
   security:
@@ -111,9 +111,10 @@ jobs:
           <<: *restore_bundle
       - restore_cache:
           <<: *restore_yarn
-      <<: *bundler_2
-      - run: bundle --path vendor/bundle --without development
+      - run: gem uninstall bundler
+      - run: gem install bundler
       - run: bin/yarn install
+      - run: bundle --path vendor/bundle --without development
       - run: bundle exec rake security:all
   database:
     <<: *ruby_2_6_0
@@ -124,9 +125,10 @@ jobs:
           <<: *restore_bundle
       - restore_cache:
           <<: *restore_yarn
-      <<: *bundler_2
-      - run: bundle --path vendor/bundle --without development
+      - run: gem uninstall bundler
+      - run: gem install bundler
       - run: bin/yarn install
+      - run: bundle --path vendor/bundle --without development
       - run: bundle exec rake database:all
   test_suite:
     <<: *ruby_2_6_0
@@ -137,11 +139,12 @@ jobs:
           <<: *restore_bundle
       - restore_cache:
           <<: *restore_yarn
-      <<: *bundler_2
+      - run: gem uninstall bundler
+      - run: gem install bundler
+      - run: bin/yarn install
+      - run: sudo apt install -y postgresql-client || true
       - run: bundle --path vendor/bundle --without development
       - run: bin/plugdo bundle install --path "$(readlink -m vendor/bundle)" --without development
-      - run: sudo apt install -y postgresql-client || true
-      - run: bin/yarn install
       - run: bundle exec rake db:create db:structure:load
       - run: bundle exec rails test:system test
   deploy_develop:
