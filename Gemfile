@@ -77,7 +77,8 @@ group :test do
 end
 
 group :development do
-  gem 'bullet'
+  # TODO: Will re-enable after upgrading bullet.
+  # gem 'bullet'
   gem 'fit-commit'
   gem 'letter_opener'
   gem 'listen', '>= 3.0.5', '< 3.2'
