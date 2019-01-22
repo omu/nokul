@@ -10,5 +10,5 @@ gemspec
 
 group :test do
   gem 'minitest-focus'
-  gem 'rails'
+  gem 'rails', github: 'rails/rails'
 end
