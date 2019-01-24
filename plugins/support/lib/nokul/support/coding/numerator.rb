@@ -7,11 +7,13 @@ module Nokul
 
       class AbstractNumerator
         MINIMUM_SEQUENCE_LENGTH = 3
+        DEFAULT_OPTIONS = {}.freeze
 
-        class_attribute :length, default: 8
+        class_attribute :length
 
-        def initialize(starting_sequence, **setup)
-          setup(starting_sequence, **setup)
+        def initialize(starting_sequence, **option)
+          @option = ActiveSupport::InheritableOptions.new DEFAULT_OPTIONS.merge(**option)
+          setup(starting_sequence)
 
           initial = starting_sequence.blank? ? first_sequence : starting_sequence
           @generator = Generator.new initial
@@ -33,61 +35,65 @@ module Nokul
 
         protected
 
-        attr_reader :generator
+        attr_reader :generator, :option
 
-        def setup(*, **)
+        def setup(*)
           raise NotImplementedError
         end
       end
 
       class PrefixedNumerator < AbstractNumerator
-        NUMBER_FORMAT = '%<leading_prefix>s%<trailing_prefix>s%<sequence>s'
+        self.length = 8
+
+        DEFAULT_OPTIONS = {
+          leading_prefix: '',
+          trailing_prefix: ''
+        }.freeze
+
+        NUMBER_FORMAT = '%<prefix>s%<sequence>s'
 
         def number
-          format(NUMBER_FORMAT, leading_prefix: leading_prefix,
-                                trailing_prefix: trailing_prefix,
-                                sequence: generator.generate)
+          format(NUMBER_FORMAT, prefix: prefix, sequence: generator.generate)
         end
 
         def first_sequence
-          '0' * (effective_sequence_length(leading_prefix: leading_prefix, trailing_prefix: trailing_prefix) - 1) + '1'
+          '0' * (effective_sequence_length - 1) + '1'
         end
 
         protected
 
-        attr_accessor :starting_sequence, :length, :leading_prefix, :trailing_prefix
-
-        def setup(starting_sequence, **setup)
-          sanitize(starting_sequence, **setup)
-
-          self.leading_prefix = setup[:leading_prefix]&.to_s || ''
-          self.trailing_prefix = setup[:trailing_prefix]&.to_s || ''
+        def prefix
+          option.leading_prefix + option.trailing_prefix
         end
 
-        def sanitize(starting_sequence, **setup)
-          numerator_length_must_be_sane starting_sequence, **setup
-          effective_sequence_length_must_be_sane starting_sequence, **setup
-          starting_sequence_must_be_sane starting_sequence, **setup
+        def effective_sequence_length
+          self.class.length - prefix.length
         end
 
-        def effective_sequence_length(**setup)
-          self.class.length - (setup[:leading_prefix] || '').length - (setup[:trailing_prefix] || '').length
+        def setup(starting_sequence)
+          sanitize starting_sequence
         end
 
-        def numerator_length_must_be_sane(*, **)
+        def sanitize(starting_sequence)
+          numerator_length_must_be_sane starting_sequence
+          effective_sequence_length_must_be_sane starting_sequence
+          starting_sequence_must_be_sane starting_sequence
+        end
+
+        def numerator_length_must_be_sane(*)
           length = self.class.length
           raise NumeratorError, 'Numerator length undefined' unless self.class.length
           raise NumeratorError, "Numerator length is too short: #{length}" if length < MINIMUM_SEQUENCE_LENGTH
         end
 
-        def effective_sequence_length_must_be_sane(*, **setup)
-          return if effective_sequence_length(**setup) >= MINIMUM_SEQUENCE_LENGTH
+        def effective_sequence_length_must_be_sane(*)
+          return if effective_sequence_length >= MINIMUM_SEQUENCE_LENGTH
 
           raise NumeratorError, 'Effective sequence length is too short'
         end
 
-        def starting_sequence_must_be_sane(starting_sequence, **setup)
-          return if !starting_sequence || starting_sequence.length == effective_sequence_length(**setup)
+        def starting_sequence_must_be_sane(starting_sequence)
+          return if !starting_sequence || starting_sequence.length == effective_sequence_length
 
           raise NumeratorError, "Incorrect length for starting sequence: #{starting_sequence}"
         end
