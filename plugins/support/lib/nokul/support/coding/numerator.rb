@@ -37,9 +37,7 @@ module Nokul
 
         attr_reader :generator, :option
 
-        def setup(*)
-          raise NotImplementedError
-        end
+        def setup(*); end
       end
 
       class PrefixedNumerator < AbstractNumerator
