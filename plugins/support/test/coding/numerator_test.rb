@@ -28,6 +28,13 @@ module Nokul
         assert_equal '20319123', numerator.number
       end
 
+      test 'giving a nil starting sequence should work' do
+        numerator = Coding::PrefixedNumerator.new nil, leading_prefix: '203', trailing_prefix: '19'
+        assert_equal '20319001', numerator.number
+        assert_equal '20319002', numerator.number
+        assert_equal '003', numerator.next_sequence
+      end
+
       test 'lack of a trailing prefix should produce long sequences' do
         numerator = Coding::PrefixedNumerator.new '00123', leading_prefix: '203'
         assert_equal '00001', numerator.first_sequence
@@ -47,6 +54,26 @@ module Nokul
           Coding::PrefixedNumerator.new '123', leading_prefix: '203', trailing_prefix: ''
         end
         assert_equal 'Incorrect length for starting sequence: 123', exception.message
+      end
+
+      class FlatNumerator < Coding::AbstractNumerator
+        self.length = 12
+
+        def number
+          generator.generate
+        end
+
+        def first_sequence
+          '0' * (self.class.length - 1) + '1'
+        end
+      end
+
+      test 'custom numerators should work' do
+        numerator = FlatNumerator.new nil
+        assert_equal '000000000001', numerator.first_sequence
+        assert_equal '000000000001', numerator.number
+        assert_equal '000000000002', numerator.number
+        assert_equal '000000000003', numerator.next_sequence
       end
 
       class CustomNumerator < Coding::PrefixedNumerator
