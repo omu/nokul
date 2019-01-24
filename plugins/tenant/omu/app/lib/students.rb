@@ -16,6 +16,6 @@ module Students
   end
 
   def long_numerator(unit_code, starting_seqeuence)
-    Numerator.new starting_seqeuence, leading_prefix: unit_code, trailing_prefix: ''
+    Numerator.new starting_seqeuence, leading_prefix: unit_code
   end
 end
