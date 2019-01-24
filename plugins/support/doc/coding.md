@@ -170,3 +170,65 @@ class DatabaseMemory < Coding::Memory
   end
 end
 ```
+
+Numara üretimi
+--------------
+
+Kod üretiminin özel bir hali olarak `Numerator` sınıfları kullanılabilir.
+Bunların en yaygını `PrefixedNumerator` sınıfıdır.
+
+
+```ruby
+numerator = PrefixedNumerator.new '001', leading_prefix: '203', trailing_prefix: '19'
+numerator.number #=> 20319001
+numerator.number #=> 20319002
+
+numerator.next_sequence  #=> 003 (numerator çekirdeğini değiştirmez)
+numerator.first_sequence #=> 001
+
+numerator = numerator('203', '078')
+
+numerator.number #=> 20319078
+numerator.number #=> 20319079
+```
+
+Örnekte de görüldüğü gibi `PrefixedNumerator` sayacı `leading_prefix
+trailing_prefix sequence` biçiminde sayılar üretir.  Üretilen sayı öntanımlı
+olarak 8 hanedir.  Ön eklerin varlığından dolayı ardışımın uzunluğu 8 değerinden
+çok daha küçüktür (yukarıdaki örnekte 3 hane).  Ardışım için daha fazla sayıda
+haneye ihtiyacınız varsa `trailing_prefix` değerini girmeyebilirsiniz.
+
+```ruby
+long_numerator = PrefixedNumerator.new '001', leading_prefix: '203'
+
+long_numerator.number #=> 20300001
+long_numerator.number #=> 20300002
+
+long_numerator.next_sequence  #=> 00003
+long_numerator.first_sequence #=> 00001
+
+long_numerator = long_numerator('203', '078')
+
+long_numerator.number #=> 20300078
+long_numerator.number #=> 20300079
+```
+
+`PrefixedNumerator` sınıfı `AbstractNumerator` sınıfından miras almaktadır.
+Kendi özel numeratörünüzü bu soyut sınıftan miras alarak tanımlayabilirsiniz.
+
+```ruby
+class FlatNumerator < AbstractNumerator
+  self.length = 12
+
+  def number
+    generator.generate
+  end
+
+  def first_sequence
+    '0' * (self.class.length - 1) + '1'
+  end
+end
+```
+
+Örnekte görüldüğü gibi yapmanız gereken asgari olarak `number` ve
+`first_sequence` metodlarını somut sınıfta gerçeklemektir.
