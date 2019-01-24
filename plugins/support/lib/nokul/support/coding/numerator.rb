@@ -17,6 +17,12 @@ module Nokul
           @generator = Generator.new initial
         end
 
+        # API
+
+        def number
+          raise NotImplementedError
+        end
+
         def next_sequence
           generator.peek
         end
@@ -71,13 +77,13 @@ module Nokul
         def numerator_length_must_be_sane(*, **)
           length = self.class.length
           raise NumeratorError, 'Numerator length undefined' unless self.class.length
-          raise NumeratorError, "Incorrect sequence length: #{length}" if length < MINIMUM_SEQUENCE_LENGTH
+          raise NumeratorError, "Numerator length is too short: #{length}" if length < MINIMUM_SEQUENCE_LENGTH
         end
 
         def effective_sequence_length_must_be_sane(*, **setup)
           return if effective_sequence_length(**setup) >= MINIMUM_SEQUENCE_LENGTH
 
-          raise NumeratorError, 'Wrong length for sequence'
+          raise NumeratorError, 'Effective sequence length is too short'
         end
 
         def starting_sequence_must_be_sane(starting_sequence, **setup)
