@@ -7,12 +7,12 @@ module Nokul
 
       class AbstractNumerator
         MINIMUM_SEQUENCE_LENGTH = 3
-        DEFAULT_OPTIONS = {}.freeze
 
         class_attribute :length
+        class_attribute :default_options, default: {}.freeze
 
         def initialize(starting_sequence, **option)
-          @option = ActiveSupport::InheritableOptions.new DEFAULT_OPTIONS.merge(**option)
+          @option = ActiveSupport::InheritableOptions.new self.class.default_options.merge(**option)
           setup(starting_sequence)
 
           initial = starting_sequence.blank? ? first_sequence : starting_sequence
@@ -44,11 +44,7 @@ module Nokul
 
       class PrefixedNumerator < AbstractNumerator
         self.length = 8
-
-        DEFAULT_OPTIONS = {
-          leading_prefix: '',
-          trailing_prefix: ''
-        }.freeze
+        self.default_options = { leading_prefix: '', trailing_prefix: '' }.freeze
 
         NUMBER_FORMAT = '%<prefix>s%<sequence>s'
 
