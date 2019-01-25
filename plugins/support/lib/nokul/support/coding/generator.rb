@@ -25,6 +25,10 @@ module Nokul
           code_string
         end
 
+        def peek
+          dup.generate
+        end
+
         def pool
           pool = range.to_a.map(&:to_s)
           return pool if no_restriction? # fast code path
