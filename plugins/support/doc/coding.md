@@ -179,7 +179,7 @@ Bunların en yaygını `PrefixedNumerator` sınıfıdır.
 
 
 ```ruby
-numerator = PrefixedNumerator.new '001', leading_prefix: '203', trailing_prefix: '19'
+numerator = PrefixedNumerator.new '001', prefix: '20319' # prefix: ['203', '19']
 numerator.number #=> 20319001
 numerator.number #=> 20319002
 
@@ -192,14 +192,15 @@ numerator.number #=> 20319078
 numerator.number #=> 20319079
 ```
 
-Örnekte de görüldüğü gibi `PrefixedNumerator` sayacı `leading_prefix
-trailing_prefix sequence` biçiminde sayılar üretir.  Üretilen sayı öntanımlı
+Örnekte de görüldüğü gibi `PrefixedNumerator` sayacı `prefix
+sequence` biçiminde sayılar üretir.  Üretilen sayı öntanımlı
 olarak 8 hanedir.  Ön eklerin varlığından dolayı ardışımın uzunluğu 8 değerinden
 çok daha küçüktür (yukarıdaki örnekte 3 hane).  Ardışım için daha fazla sayıda
-haneye ihtiyacınız varsa `trailing_prefix` değerini girmeyebilirsiniz.
+haneye ihtiyacınız varsa `prefix` değerini ihtiyaç duyulan hane sayısına göre
+tekrardan belirleyebilirsiniz.
 
 ```ruby
-long_numerator = PrefixedNumerator.new '001', leading_prefix: '203'
+long_numerator = PrefixedNumerator.new '001', prefix: '203'
 
 long_numerator.number #=> 20300001
 long_numerator.number #=> 20300002
@@ -225,7 +226,7 @@ class FlatNumerator < AbstractNumerator
   end
 
   def first_sequence
-    '0' * (self.class.length - 1) + '1'
+    '0' * (length - 1) + '1'
   end
 end
 ```

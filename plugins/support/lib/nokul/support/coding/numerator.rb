@@ -41,7 +41,7 @@ module Nokul
 
       class PrefixedNumerator < AbstractNumerator
         self.length = 8
-        self.default_options = { leading_prefix: '', trailing_prefix: '' }.freeze
+        self.default_options = { prefix: '' }.freeze
 
         NUMBER_FORMAT = '%<prefix>s%<sequence>s'
 
@@ -56,7 +56,7 @@ module Nokul
         protected
 
         def prefix
-          option.leading_prefix + option.trailing_prefix
+          [*option.prefix].join
         end
 
         def effective_sequence_length
