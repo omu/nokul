@@ -15,8 +15,7 @@ module Nokul
           @option = ActiveSupport::InheritableOptions.new self.class.default_options.merge(**option)
           setup(starting_sequence)
 
-          initial = starting_sequence.presence || first_sequence
-          @generator = Generator.new initial
+          @generator = Generator.new starting_sequence.presence || first_sequence
         end
 
         # API
