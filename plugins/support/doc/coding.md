@@ -179,7 +179,7 @@ Bunların en yaygını `PrefixedNumerator` sınıfıdır.
 
 
 ```ruby
-numerator = PrefixedNumerator.new '001', prefix: '20319' # prefix: ['203', '19']
+numerator = PrefixedNumerator.new '001', prefix: ['203', '19'] # veya prefix: '20319'
 numerator.number #=> 20319001
 numerator.number #=> 20319002
 
