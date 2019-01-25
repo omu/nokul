@@ -60,7 +60,7 @@ module Nokul
         end
 
         def effective_sequence_length
-          self.class.length - prefix.length
+          length - prefix.length
         end
 
         def setup(starting_sequence)
@@ -74,8 +74,7 @@ module Nokul
         end
 
         def numerator_length_must_be_sane(*)
-          length = self.class.length
-          raise NumeratorError, 'Numerator length undefined' unless self.class.length
+          raise NumeratorError, 'Numerator length undefined' unless length
           raise NumeratorError, "Numerator length is too short: #{length}" if length < MINIMUM_SEQUENCE_LENGTH
         end
 
