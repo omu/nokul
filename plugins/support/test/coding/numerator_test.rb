@@ -42,20 +42,6 @@ module Nokul
         assert_equal '00124', numerator.next_sequence
       end
 
-      test 'too long starting sequences should raise exception' do
-        exception = assert_raise(Coding::NumeratorError) do
-          Coding::PrefixedNumerator.new '1234567', leading_prefix: '203', trailing_prefix: '19'
-        end
-        assert_equal 'Incorrect length for starting sequence: 1234567', exception.message
-      end
-
-      test 'too short starting sequences should raise exception' do
-        exception = assert_raise(Coding::NumeratorError) do
-          Coding::PrefixedNumerator.new '123', leading_prefix: '203', trailing_prefix: ''
-        end
-        assert_equal 'Incorrect length for starting sequence: 123', exception.message
-      end
-
       class FlatNumerator < Coding::AbstractNumerator
         self.length = 12
 
@@ -74,6 +60,20 @@ module Nokul
         assert_equal '000000000001', numerator.number
         assert_equal '000000000002', numerator.number
         assert_equal '000000000003', numerator.next_sequence
+      end
+
+      test 'too long starting sequences should raise exception' do
+        exception = assert_raise(Coding::NumeratorError) do
+          Coding::PrefixedNumerator.new '1234567', leading_prefix: '203', trailing_prefix: '19'
+        end
+        assert_equal 'Incorrect length for starting sequence: 1234567', exception.message
+      end
+
+      test 'too short starting sequences should raise exception' do
+        exception = assert_raise(Coding::NumeratorError) do
+          Coding::PrefixedNumerator.new '123', leading_prefix: '203', trailing_prefix: ''
+        end
+        assert_equal 'Incorrect length for starting sequence: 123', exception.message
       end
 
       class CustomNumerator < Coding::PrefixedNumerator
