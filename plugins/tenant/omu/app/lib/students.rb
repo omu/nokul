@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'nokul-support'
-
 module Students
   Numerator = Support::Coding::PrefixedNumerator # Length is 8 by default
 
