@@ -6,7 +6,7 @@ module Nokul
   module Support
     class CodingNumeratorTest < ActiveSupport::TestCase
       test 'basic use case should just work' do
-        numerator = Coding::PrefixedNumerator.new '123', prefix: '20319'
+        numerator = Coding::PrefixedNumerator.new '123', prefix: %w[203 19]
         number = numerator.number
         assert_equal Coding::PrefixedNumerator.length, number.length
         assert_equal '20319123', number
@@ -15,7 +15,7 @@ module Nokul
       end
 
       test 'getting next sequence should not affect numerator seed' do
-        numerator = Coding::PrefixedNumerator.new '123', prefix: '20319'
+        numerator = Coding::PrefixedNumerator.new '123', prefix: %w[203 19]
         assert_equal '20319123', numerator.number
         assert_equal '20319124', numerator.number
         assert_equal '125', numerator.next_sequence
@@ -64,7 +64,7 @@ module Nokul
 
       test 'too long starting sequences should raise exception' do
         exception = assert_raise(Coding::NumeratorError) do
-          Coding::PrefixedNumerator.new '1234567', prefix: '20319'
+          Coding::PrefixedNumerator.new '1234567', prefix: %w[203 19]
         end
         assert_equal 'Incorrect length for starting sequence: 1234567', exception.message
       end
@@ -82,7 +82,7 @@ module Nokul
 
       test 'numerator length can not set too short' do
         exception = assert_raise(Coding::NumeratorError) do
-          CustomNumerator.new '123', prefix: '20319'
+          CustomNumerator.new '123', prefix: %w[203 19]
         end
         assert_equal 'Numerator length is too short: 2', exception.message
       end
