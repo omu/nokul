@@ -29,6 +29,8 @@ gem 'image_processing', '~> 1.2'
 gem 'devise'
 
 # assets: core asset dependencies
+# TODO: Edge versions require coffee-rails https://github.com/rails/rails/issues/28965
+gem 'coffee-rails', '~> 4.2'
 gem 'sassc-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'webpacker', github: 'rails/webpacker'
