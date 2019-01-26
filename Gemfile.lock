@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: db4b77aca147ec3c7376d803fc6ccb14c9195352
+  revision: de0c705516cf8f15f70b47e35e4117bb9d4d537c
   specs:
     actioncable (6.0.0.beta1)
       actionpack (= 6.0.0.beta1)
@@ -89,9 +89,9 @@ GIT
 
 GIT
   remote: https://github.com/rails/webpacker.git
-  revision: 69a6fc102bcab1aac55523a2653919e8fe2f48cf
+  revision: 3dce69e7fd2c865a593ffabf75c0c10a5a5a1157
   specs:
-    webpacker (4.0.0.rc.5)
+    webpacker (4.0.0.rc.7)
       activesupport (>= 4.2)
       rack-proxy (>= 0.6.1)
       railties (>= 4.2)
@@ -127,7 +127,7 @@ GEM
     arel (9.0.0)
     ast (2.4.0)
     aws-eventstream (1.0.1)
-    aws-partitions (1.133.0)
+    aws-partitions (1.136.0)
     aws-sdk-core (3.46.0)
       aws-eventstream (~> 1.0)
       aws-partitions (~> 1.0)
@@ -151,7 +151,7 @@ GEM
       bundler (>= 1.2.0, < 3)
       thor (~> 0.18)
     byebug (10.0.2)
-    capybara (3.12.0)
+    capybara (3.13.2)
       addressable
       mini_mime (>= 0.1.3)
       nokogiri (~> 1.8)
@@ -246,7 +246,7 @@ GEM
     nokogiri (1.10.1)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
-    pagy (1.3.1)
+    pagy (1.3.2)
     parallel (1.13.0)
     parser (2.6.0.0)
       ast (~> 2.4.0)
