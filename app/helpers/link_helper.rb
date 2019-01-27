@@ -62,6 +62,21 @@ module LinkHelper
     end
   end
 
+  # Usage:
+  # link_to_actions(@cities,
+  #                 scope: :admin,
+  #                 except: :show,
+  #                 edit: { text: 'Edit Text' })
+  def link_to_actions(path, options = {})
+    actions = (%i[show edit destroy] - [*options[:except]].map(&:to_sym)).inquiry
+    path = [*options[:scope], *path]
+    links = []
+    links << link_to_show(options.dig(:show, :text), [*path])        if actions.show?
+    links << link_to_edit(options.dig(:edit, :text), [:edit, *path]) if actions.edit?
+    links << link_to_destroy(options.dig(:destroy, :text), [*path])  if actions.destroy?
+    safe_join(links, ' ')
+  end
+
   private
 
   def link_builder(args, configuration)
