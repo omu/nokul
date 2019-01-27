@@ -27,6 +27,9 @@ module ActiveSupport
     include AbstractController::Translation
     include Devise::Test::IntegrationHelpers
 
+    # Run tests in parallel with specified workers
+    parallelize(workers: :number_of_processors)
+
     fixtures :all
 
     # required for controller concerns
