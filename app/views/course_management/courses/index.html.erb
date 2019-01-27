@@ -46,11 +46,7 @@
                 <td><%= enum_t(course, :program_type) %></td>
                 <td><%= course.language.try(:name) %></td>
                 <td><%= enum_t(course, :status) %></td>
-                <td>
-                  <%= link_to_show course %>
-                  <%= link_to_edit [:edit, course] %>
-                  <%= link_to_destroy course %>
-                </td>
+                <td><%= link_to_actions(course, except: :show, edit: { text: 'Foo' }) %></td>
               </tr>
             <% end %>
           </tbody>

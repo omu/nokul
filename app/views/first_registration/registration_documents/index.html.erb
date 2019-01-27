@@ -28,10 +28,7 @@
                 <td><%= registration_document.unit.name %></td>
                 <td><%= registration_document.document_type.name %></td>
                 <td><%= registration_document.description %></td>
-                <td>
-                  <%= link_to_edit([:edit, :first_registration, registration_document]) %>
-                  <%= link_to_destroy([:first_registration, registration_document]) %>
-                </td>
+                <td><%= link_to_actions(registration_document, scope: :first_registration, except: :show) %></td>
               </tr>
             <% end %>
           </tbody>
