@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Students
-  Numerator = Support::Coding::PrefixedNumerator # Length is 8 by default
+  NumberGenerator = Support::Coding::PrefixedGenerator # Length is 8 by default
 
   module_function
 
@@ -9,11 +9,15 @@ module Students
     Date.current.strftime '%y' # TODO: placeholder
   end
 
-  def numerator(unit_code, starting_seqeuence)
-    Numerator.new starting_seqeuence, prefix: [unit_code, start_of_active_academic_year]
+  def number_generator(unit)
+    # TODO: dispatch short or long number generator by looking into to the unit
   end
 
-  def long_numerator(unit_code, starting_seqeuence)
-    Numerator.new starting_seqeuence, prefix: unit_code
+  def short_number_generator(unit_code, starting_sequence)
+    NumberGenerator.new starting_sequence, prefix: [unit_code, start_of_active_academic_year]
+  end
+
+  def long_number_generator(unit_code, starting_sequence)
+    NumberGenerator.new starting_sequence, prefix: unit_code
   end
 end
