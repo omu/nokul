@@ -59,9 +59,7 @@ module Nokul
       class FlatGenerator < Coding::PrefixedGenerator
         self.length = 12
 
-        def generate
-          generator.generate
-        end
+        delegate :generate, to: :generator
 
         def initial_sequence
           '0' * (length - 1) + '1'

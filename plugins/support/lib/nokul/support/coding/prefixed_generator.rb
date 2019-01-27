@@ -60,7 +60,7 @@ module Nokul
         end
 
         def starting_sequence_must_be_sane
-          return if !starting_sequence.present? || starting_sequence.length == effective_sequence_length
+          return if starting_sequence.blank? || starting_sequence.length == effective_sequence_length
 
           raise Error, "Incorrect length for starting sequence: #{starting_sequence}"
         end
