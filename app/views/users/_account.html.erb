@@ -1,8 +1,7 @@
 <div class="card">
   <div class="card-header">
     <div class="card-header-actions">
-      <%= link_to_edit(edit_user_path(@user)) %>
-      <%= link_to_destroy(@user) %>
+      <%= link_to_actions(@user, except: :show) %>
     </div>
   </div>
 

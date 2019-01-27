@@ -28,11 +28,7 @@
                 <td><%= course_group.total_ects_condition %></td>
                 <td><%= course_group.unit.try(:name) %></td>
                 <td><%= course_group.course_group_type.try(:name) %></td>
-                <td>
-                  <%= link_to_show(course_group_path(course_group)) %>
-                  <%= link_to_edit(edit_course_group_path(course_group)) %>
-                  <%= link_to_destroy(course_group) %>
-                </td>
+                <td><%= link_to_actions(course_group) %></td>
               </tr>
             <% end %>
           </tbody>

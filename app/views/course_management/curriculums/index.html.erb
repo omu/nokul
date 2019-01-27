@@ -27,9 +27,7 @@
                 <td><%= curriculum.semesters_count %></td>
                 <td><%= enum_t(curriculum, :status) %></td>
                 <td>
-                  <%= link_to_show curriculum %>
-                  <%= link_to_edit [:edit, curriculum] %>
-                  <%= link_to_destroy curriculum %>
+                  <%= link_to_actions(curriculum) %>
                 </td>
               </tr>
             <% end %>
