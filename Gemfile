@@ -81,7 +81,7 @@ end
 group :development do
   # TODO: Will re-enable after upgrading bullet.
   # gem 'bullet'
-  gem 'danger'
+  gem 'danger-gitlab'
   gem 'fit-commit'
   gem 'letter_opener'
   gem 'listen', '>= 3.0.5', '< 3.2'
