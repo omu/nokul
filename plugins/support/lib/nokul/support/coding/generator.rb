@@ -9,7 +9,7 @@ module Nokul
       class Generator
         using Refinery
 
-        class Consumed < StandardError; end
+        Consumed = Class.new ::StandardError
 
         def initialize(begins, ends: nil, deny: nil, memory: nil)
           @begins = @current = Code.new begins
