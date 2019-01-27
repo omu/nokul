@@ -16,19 +16,30 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+
+# Ignore uploaded files in development.
+/storage/*
+!/storage/.keep
+
+/public/assets
+.byebug_history
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+/public/packs
+/public/packs-test
 /node_modules
 /yarn-error.log
-/vendor/*
-/coverage
-.byebug_history
-.vagrant*/
-.env
-.envrc
-/storage/*
-/.local/
+yarn-debug.log*
+.yarn-integrity
 
-# never remove!
-config/master.key
+# Ignore local bundler directory
+/vendor/*
 
 # Ignore misc.
 /bin/dokku
+/coverage
+.vagrant*/
+.env
+.envrc
+/.local/
