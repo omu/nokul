@@ -25,11 +25,11 @@ class DatabaseConfigTest < ActiveSupport::TestCase
     end
   end
 
-  test "development environment database name must be nokul_development" do
+  test 'development environment database name must be nokul_development' do
     assert_equal ActiveRecord::Base.configurations['development']['database'], 'nokul_development'
   end
 
-  test "test environment database name must start with nokul_test" do
+  test 'test environment database name must start with nokul_test' do
     assert ActiveRecord::Base.configurations['test']['database'].starts_with?('nokul_test')
   end
 end
