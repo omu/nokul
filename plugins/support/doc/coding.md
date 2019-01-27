@@ -186,11 +186,11 @@ generator.next_sequence    #=> "080" (generator çekirdeğini değiştirmez)
 generator.initial_sequence #=> "001"
 ```
 
-Örnekte de görüldüğü gibi `PrefixedGenerator` sayacı `prefix sequence` biçiminde
-kodlar üretir.  Ön ekin tanımlandığı `prefix` seçeneği farklı kaynaklardan gelen
-ön ekleri vurgulamak amacıyla dizi olarak verilebilir.
+Örnekte de görüldüğü gibi `PrefixedGenerator` üreteci `prefix sequence`
+biçiminde kodlar üretir.  Ön ekin tanımlandığı `prefix` seçeneği farklı
+kaynaklardan gelen ön ekleri vurgulamak amacıyla dizi olarak verilebilir.
 
-Başlangıç ardışımı `nil` verilirse başlangıç ardışımı, ön ekler ve üreteç
+Başlangıç ardışımı argümanı `nil` verilirse ilk ardışım, ön ekler ve üreteç
 uzunluğu dikkate alınarak otomatik hesaplanır.  Önerilen kullanım şekli de
 böyledir.  Örneğin veritabanı gibi bir kaynaktan başlangıç ardışımını okurken bu
 değeri `nil` olarak ayarlamanız üretecin sıfırlanması için yeterlidir.
