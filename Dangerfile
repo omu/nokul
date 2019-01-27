@@ -1,14 +1,5 @@
-puts "OK"
-puts "Lines"
-puts lines_of_code
-puts "Added"
-puts files_added
-puts "modified"
-puts files_modified
+# frozen_string_literal: true
 
-puts ""
-puts pr_body
-puts ""
-puts pr_title
+warn 'Bu PR deneysel!' if github.pr_title.include? '[WIP]'
 
-warn("Some random warning")
+# vim: ft=ruby
