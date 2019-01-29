@@ -17,7 +17,7 @@ class DatabaseConfigTest < ActiveSupport::TestCase
     end
   end
 
-  name = Rails.application.class.parent.to_s.underscore
+  name = Rails.application.class.module_parent.to_s.underscore
 
   test "Development and test environment database users must be #{name}" do
     %w[development test].each do |environment|
