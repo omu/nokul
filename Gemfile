@@ -55,7 +55,7 @@ gem 'rack-attack'
 gem 'email_address'
 
 # error tracking
-gem 'rollbar'
+gem 'rollbar', github: 'rollbar/rollbar-gem'
 
 # permalinks
 gem 'friendly_id', '~> 5.2.0'
