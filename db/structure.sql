@@ -51,6 +51,40 @@ ALTER SEQUENCE public.academic_terms_id_seq OWNED BY public.academic_terms.id;
 
 
 --
+-- Name: action_text_rich_texts; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.action_text_rich_texts (
+    id bigint NOT NULL,
+    name character varying NOT NULL,
+    body text,
+    record_type character varying NOT NULL,
+    record_id bigint NOT NULL,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+--
+-- Name: action_text_rich_texts_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.action_text_rich_texts_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: action_text_rich_texts_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.action_text_rich_texts_id_seq OWNED BY public.action_text_rich_texts.id;
+
+
+--
 -- Name: active_storage_attachments; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -280,8 +314,8 @@ ALTER SEQUENCE public.agendas_id_seq OWNED BY public.agendas.id;
 CREATE TABLE public.ar_internal_metadata (
     key character varying NOT NULL,
     value character varying,
-    created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL
 );
 
 
@@ -1010,7 +1044,7 @@ CREATE TABLE public.course_types (
     id bigint NOT NULL,
     name character varying,
     code character varying,
-    min_credit numeric(5,2) DEFAULT 0,
+    min_credit numeric(5,2) DEFAULT 0.0,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     CONSTRAINT course_types_code_length CHECK ((length((code)::text) <= 255)),
@@ -1052,7 +1086,7 @@ CREATE TABLE public.courses (
     theoric integer DEFAULT 0,
     practice integer DEFAULT 0,
     laboratory integer DEFAULT 0,
-    credit numeric(5,2) DEFAULT 0,
+    credit numeric(5,2) DEFAULT 0.0,
     program_type integer,
     status integer,
     unit_id bigint NOT NULL,
@@ -1106,7 +1140,7 @@ CREATE TABLE public.curriculum_course_groups (
     id bigint NOT NULL,
     course_group_id bigint NOT NULL,
     curriculum_semester_id bigint NOT NULL,
-    ects numeric(5,2) DEFAULT 0,
+    ects numeric(5,2) DEFAULT 0.0,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     CONSTRAINT curriculum_course_groups_ects_null CHECK ((ects IS NOT NULL)),
@@ -1142,7 +1176,7 @@ CREATE TABLE public.curriculum_courses (
     type integer,
     course_id bigint NOT NULL,
     curriculum_semester_id bigint NOT NULL,
-    ects numeric(5,2) DEFAULT 0,
+    ects numeric(5,2) DEFAULT 0.0,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     curriculum_course_group_id bigint,
@@ -2644,6 +2678,13 @@ ALTER TABLE ONLY public.academic_terms ALTER COLUMN id SET DEFAULT nextval('publ
 
 
 --
+-- Name: action_text_rich_texts id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.action_text_rich_texts ALTER COLUMN id SET DEFAULT nextval('public.action_text_rich_texts_id_seq'::regclass);
+
+
+--
 -- Name: active_storage_attachments id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -3097,6 +3138,14 @@ ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_
 
 ALTER TABLE ONLY public.academic_terms
     ADD CONSTRAINT academic_terms_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: action_text_rich_texts action_text_rich_texts_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.action_text_rich_texts
+    ADD CONSTRAINT action_text_rich_texts_pkey PRIMARY KEY (id);
 
 
 --
@@ -3921,6 +3970,13 @@ ALTER TABLE ONLY public.users
 
 ALTER TABLE ONLY public.users
     ADD CONSTRAINT users_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: index_action_text_rich_texts_uniqueness; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE UNIQUE INDEX index_action_text_rich_texts_uniqueness ON public.action_text_rich_texts USING btree (record_type, record_id, name);
 
 
 --
@@ -5114,6 +5170,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20190115062149'),
 ('20190115100844'),
 ('20190116104001'),
-('20190116115745');
+('20190116115745'),
+('20190122203727');
 
 
