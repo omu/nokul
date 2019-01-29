@@ -6,11 +6,13 @@ PLUGINS_DIR = Pathname.new File.expand_path('../..', __dir__)
 
 source 'https://rubygems.org'
 
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
 gemspec
 
 gem 'nokul-support', path: PLUGINS_DIR.join('support')
 
 group :test do
   gem 'minitest-focus'
-  gem 'rails'
+  gem 'rails', github: 'rails/rails'
 end
