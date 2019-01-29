@@ -1,13 +1,15 @@
 # frozen_string_literal: true
 
 Vagrant.configure('2') do |config|
+  env = {}
+
   if ENV['LOCAL_CACHE_DIR']
     FileUtils.mkdir_p ENV['LOCAL_CACHE_DIR'] unless Dir.exist?(ENV['LOCAL_CACHE_DIR'])
     app_cache_dir = '/var/cache/app'
 
     config.vm.synced_folder ENV['LOCAL_CACHE_DIR'], app_cache_dir
 
-    env = { 'LOCAL_CACHE_DIR': app_cache_dir }
+    env.merge('LOCAL_CACHE_DIR': app_cache_dir)
   end
 
   config.vm.define 'dev', primary: true do |dev|
