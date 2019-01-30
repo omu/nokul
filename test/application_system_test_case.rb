@@ -18,6 +18,4 @@ class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
     [768, 1024], # tablet
     [360, 640] # small mobile device
   ].freeze
-
-  # parallelize(workers: 0)
 end
