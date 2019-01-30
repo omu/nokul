@@ -26,9 +26,7 @@
                 <td><%= curriculum.unit.try(:name) %></td>
                 <td><%= curriculum.semesters_count %></td>
                 <td><%= enum_t(curriculum, :status) %></td>
-                <td>
-                  <%= link_to_actions(curriculum) %>
-                </td>
+                <td><%= link_to_actions(curriculum) %></td>
               </tr>
             <% end %>
           </tbody>
