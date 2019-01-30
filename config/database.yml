@@ -17,10 +17,10 @@ test:
 
 production: &production
   <<: *default
-  database: nokul_database
+  # database: nokul_database
   url: <%= ENV['DATABASE_URL'] %>
   pool: <%= ENV.fetch('RAILS_MAX_THREADS', 40) %>
 
 beta:
   <<: *production
-  database: nokul-develop-database
+  # database: nokul-develop-database

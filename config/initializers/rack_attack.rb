@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-unless Rails.env.test?
-  module Rack
-    class Attack
-      # Rack::Attack stores blocked requests in configured cache store.
-      # However, caching is often disabled in development environment.
-      # If you want to experiment with Rack::Attack, you can temporarily enable caching in development environment:
-      # Run rails dev:cache to toggle caching.
-      cache.store = ActiveSupport::Cache::MemoryStore.new
+module Rack
+  class Attack
+    # Rack::Attack stores blocked requests in configured cache store.
+    # However, caching is often disabled in development environment.
+    # If you want to experiment with Rack::Attack, you can temporarily enable caching in development environment:
+    # Run rails dev:cache to toggle caching.
+    cache.store = ActiveSupport::Cache::MemoryStore.new
 
+    unless Rails.env.test?
       # SPAM: a single IP can make 300 reqs/5 minutes
       throttle('req/ip', limit: 300, period: 5.minutes) do |req|
         req.ip unless req.path.start_with?('/assets')
@@ -28,14 +28,14 @@ unless Rails.env.test?
       blocklist('bad-robots') do |req|
         req.ip if /\S+\.php/.match?(req.path)
       end
-
-      # allow requests from localhost
-      safelist('allow from localhost') do |req|
-        req.ip == '127.0.0.1' || req.ip == '::1'
-      end
-
-      # allow requests from Tenant subnet
-      safelist_ip(Tenant.configuration.network.subnet)
     end
+
+    # allow requests from localhost
+    safelist('allow from localhost') do |req|
+      req.ip == '127.0.0.1' || req.ip == '::1'
+    end
+
+    # allow requests from Tenant subnet
+    safelist_ip(Tenant.configuration.network.subnet)
   end
 end
