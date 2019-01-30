@@ -170,3 +170,72 @@ class DatabaseMemory < Coding::Memory
   end
 end
 ```
+
+Ön ekli kod üretimi
+-------------------
+
+Kod üretiminin özel bir hali olarak ön ekli kod üretmek için `PrefixedGenerator`
+sınıfı kullanılır.
+
+```ruby
+generator = PrefixedGenerator.new '078', prefix: ['203', '19'] # veya prefix: '20319'
+generator.generate #=> "20319078"
+generator.generate #=> "20319079"
+
+generator.next_sequence    #=> "080" (generator çekirdeğini değiştirmez)
+generator.initial_sequence #=> "001"
+```
+
+Örnekte de görüldüğü gibi `PrefixedGenerator` üreteci `prefix sequence`
+biçiminde kodlar üretir.  Ön ekin tanımlandığı `prefix` seçeneği farklı
+kaynaklardan gelen ön ekleri vurgulamak amacıyla dizi olarak verilebilir.
+
+Başlangıç ardışımı argümanı `nil` verilirse ilk ardışım, ön ekler ve üreteç
+uzunluğu dikkate alınarak otomatik hesaplanır.  Önerilen kullanım şekli de
+böyledir.  Örneğin veritabanı gibi bir kaynaktan başlangıç ardışımını okurken bu
+değeri `nil` olarak ayarlamanız üretecin sıfırlanması için yeterlidir.
+
+```ruby
+generator = PrefixedGenerator.new nil, prefix: ['203', '19'] # veya prefix: '20319'
+generator.generate #=> "20319001"
+generator.generate #=> "20319002"
+
+generator.next_sequence    #=> "003"
+generator.initial_sequence #=> "001"
+```
+
+Üretilen kod öntanımlı olarak 8 hanedir.  Ön eklerin varlığı nedeniyle ardışımın
+uzunluğu 8 değerinden çok daha küçüktür (yukarıdaki örnekte 3 hane).  Ardışım
+için daha fazla sayıda haneye ihtiyacınız varsa `prefix` değerini ihtiyaç
+duyulan hane sayısına göre daraltabilirsiniz.
+
+```ruby
+long_generator = PrefixedGenerator.new '001', prefix: '203'
+
+long_generator.generate #=> "20300001"
+long_generator.generate #=> "20300002"
+
+long_generator.next_sequence    #=> "00003"
+long_generator.initial_sequence #=> "00001"
+```
+
+Daha uzun kodlar üretmek için miras alma yoluyla yeni bir sınıf
+oluşturabilirsiniz.
+
+
+```ruby
+class CustomGenerator < PrefixedGenerator
+  self.length = 12
+end
+```
+
+Üretecin davranışını inşa zamanında vereceğiniz seçeneklerle değiştirerek çok
+daha özel bir üreteç de gerçekleyebilirsiniz.  Örneğin aşağıdaki üreteç `0`
+rakamı içermeyen kodlar üretmektedir.  Kullanılabilecek geçerli seçenekler için
+`Generator` sınıfını inceleyin.
+
+
+```ruby
+never_zero_generator = PrefixedGenerator.new nil, prefix: '203', deny: /0/
+never_zero_generator.generate #=> "20311111"
+```

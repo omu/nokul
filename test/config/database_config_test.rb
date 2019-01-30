@@ -6,18 +6,20 @@ require 'test_helper'
 
 class DatabaseConfigTest < ActiveSupport::TestCase
   test 'All environments must use PostgreSQL as database' do
-    %w[development test production beta].each do |environment|
-      assert_equal ActiveRecord::Base.configurations[environment]['adapter'], 'postgresql'
+    %w[development test beta production].each do |environment|
+      config = ActiveRecord::Base.configurations.configs_for(env_name: environment).first.config
+      assert_equal config['adapter'], 'postgresql'
     end
   end
 
   test 'All environments must use unicode coding schema for databases' do
-    %w[development test production beta].each do |environment|
-      assert_equal ActiveRecord::Base.configurations[environment]['encoding'], 'unicode'
+    %w[development test beta production].each do |environment|
+      config = ActiveRecord::Base.configurations.configs_for(env_name: environment).first.config
+      assert_equal config['encoding'], 'unicode'
     end
   end
 
-  name = Rails.application.class.parent.to_s.underscore
+  name = Rails.application.class.module_parent.to_s.underscore
 
   test "Development and test environment database users must be #{name}" do
     %w[development test].each do |environment|
@@ -25,9 +27,11 @@ class DatabaseConfigTest < ActiveSupport::TestCase
     end
   end
 
-  %w[development test].each do |environment|
-    test "#{environment.capitalize} environment database name must be #{name}_#{environment}" do
-      assert_equal ActiveRecord::Base.configurations[environment]['database'], "#{name}_#{environment}"
-    end
+  test 'development environment database name must be nokul_development' do
+    assert_equal ActiveRecord::Base.configurations['development']['database'], 'nokul_development'
+  end
+
+  test 'test environment database name must start with nokul_test' do
+    assert ActiveRecord::Base.configurations['test']['database'].starts_with?('nokul_test')
   end
 end

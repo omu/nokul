@@ -9,7 +9,7 @@ module Nokul
       class Generator
         using Refinery
 
-        class Consumed < StandardError; end
+        Consumed = Class.new ::StandardError
 
         def initialize(begins, ends: nil, deny: nil, memory: nil)
           @begins = @current = Code.new begins
@@ -23,6 +23,10 @@ module Nokul
           code_string = try_generate
           memory&.remember code_string
           code_string
+        end
+
+        def peek
+          dup.generate
         end
 
         def pool

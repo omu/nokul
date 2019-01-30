@@ -12,7 +12,7 @@ module Nokul
     Nokul::Tenant.load
 
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 5.2
+    config.load_defaults 6.0
 
     # time-zone. ActiveSupport::TimeZone.all for all possible values
     config.time_zone = 'Istanbul'
@@ -42,7 +42,7 @@ module Nokul
       @appname ||= if File.exist?(manifest = Rails.root.join('app.json'))
                      JSON.parse(File.read(manifest)).fetch 'name'
                    else
-                     self.class.parent.to_s.underscore
+                     self.class.module_parent.to_s.underscore
                    end
     end
   end
