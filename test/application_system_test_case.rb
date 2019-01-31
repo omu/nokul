@@ -3,7 +3,13 @@
 require 'test_helper'
 
 class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
-  driven_by :selenium, using: :headless_chrome, screen_size: [1920, 1080]
+  driven_by :selenium, using: :headless_chrome, screen_size: [1920, 1080], options: {
+    desired_capabilities: {
+      chromeOptions: {
+        args: %w[headless disable-gpu disable-dev-shm-usage]
+      }
+    }
+  }
   Capybara.server = :puma, { Silent: true }
 
   SUPPORTED_SCREEN_RESOLUTIONS = [
