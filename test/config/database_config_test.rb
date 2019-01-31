@@ -6,18 +6,20 @@ require 'test_helper'
 
 class DatabaseConfigTest < ActiveSupport::TestCase
   test 'All environments must use PostgreSQL as database' do
-    %w[development test].each do |environment|
-      assert_equal ActiveRecord::Base.configurations[environment]['adapter'], 'postgresql'
+    %w[development test beta production].each do |environment|
+      config = ActiveRecord::Base.configurations.configs_for(env_name: environment).first.config
+      assert_equal config['adapter'], 'postgresql'
     end
   end
 
   test 'All environments must use unicode coding schema for databases' do
-    %w[development test].each do |environment|
-      assert_equal ActiveRecord::Base.configurations[environment]['encoding'], 'unicode'
+    %w[development test beta production].each do |environment|
+      config = ActiveRecord::Base.configurations.configs_for(env_name: environment).first.config
+      assert_equal config['encoding'], 'unicode'
     end
   end
 
-  name = Rails.application.class.parent.to_s.underscore
+  name = Rails.application.class.module_parent.to_s.underscore
 
   test "Development and test environment database users must be #{name}" do
     %w[development test].each do |environment|
