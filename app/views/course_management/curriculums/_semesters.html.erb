@@ -27,12 +27,7 @@
           <% semester.curriculum_course_groups.each do |curriculum_course_group| %>
             <%= render 'curriculum_courses',
                       klass: 'border-warning',
-                      actions: safe_join([
-                          link_to_edit(edit_curriculum_semester_curriculum_course_group_path(semester, curriculum_course_group)),
-                          link_to_destroy([semester, curriculum_course_group])
-                        ],
-                        ' '
-                      ),
+                      actions: link_to_actions([semester, curriculum_course_group], except: :show),
                       title: "#{t('.elective_courses')} - #{curriculum_course_group.name}",
                       semester: semester,
                       courses: curriculum_course_group.curriculum_courses.order('courses.name'),

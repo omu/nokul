@@ -2,8 +2,7 @@
   <div class='col-lg-12'>
     <div class="alert alert-light">
       <%= link_to_back available_courses_path %>
-      <%= link_to_edit edit_available_course_path(@available_course) %>
-      <%= link_to_destroy available_course_path(@available_course) %>
+      <%= link_to_actions(@available_course, except: :show) %>
     </div>
 
     <div class="card">

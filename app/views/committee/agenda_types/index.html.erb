@@ -24,8 +24,7 @@
               <tr>
                 <td><%= agenda_type.name %></td>
                 <td>
-                  <%= link_to_edit(edit_agenda_type_path(agenda_type)) %>
-                  <%= link_to_destroy(agenda_type) %>
+                  <%= link_to_actions(agenda_type, except: :show) %>
                 </td>
               </tr>
             <% end %>

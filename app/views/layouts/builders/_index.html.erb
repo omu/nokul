@@ -36,11 +36,7 @@
                     <%= (boolean || enum) ? enum_t(item, parameter.to_sym) : value %>
                   <% end %>
                 <% end %>
-                <td>
-                  <%= link_to_show([namespace.to_sym, item]) if actions.include? 'show' %>
-                  <%= link_to_edit([:edit, namespace.to_sym, item]) if actions.include? 'edit' %>
-                  <%= link_to_destroy([namespace.to_sym, item]) if actions.include? 'destroy' %>
-                </td>
+                <td><%= link_to_actions([namespace.to_sym, item], except: (%w[show edit destroy] - actions)) %></td>
               </tr>
             <% end %>
           </tbody>

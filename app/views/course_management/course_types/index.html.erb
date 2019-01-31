@@ -27,10 +27,7 @@
                 <td><%= course_type.name %></td>
                 <td><%= course_type.code %></td>
                 <td><%= course_type.min_credit %></td>
-                <td>
-                  <%= link_to_edit([:edit, course_type]) %>
-                  <%= link_to_destroy(course_type) %>
-                </td>
+                <td><%= link_to_actions(course_type, except: :show) %></td>
               </tr>
             <% end %>
           </tbody>
