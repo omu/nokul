@@ -28,10 +28,7 @@
                 <td><%= academic_term.start_of_term.try(:strftime, '%F %T') %></td>
                 <td><%= academic_term.end_of_term.try(:strftime, '%F %T') %></td>
                 <td><%= academic_term.active? ? t('active') : t('passive') %></td>
-                <td>
-                  <%= link_to_edit(edit_academic_term_path(academic_term)) %>
-                  <%= link_to_destroy(academic_term) %>
-                </td>
+                <td><%= link_to_actions(academic_term, except: :show) %></td>
               </tr>
             <% end %>
           </tbody>

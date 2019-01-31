@@ -5,51 +5,86 @@ require 'test_helper'
 class LinkHelperTest < ActionView::TestCase
   include FontAwesome::Rails::IconHelper
 
-  test 'link_to_back method' do
-    link = <<-HTML.squish
-      <a class="btn btn-secondary btn-sm" href="#"><i class="fa fa-arrow-left"></i> Back</a>
-    HTML
-    assert_equal link_to_back('Back', '#'), link
+  LINK = <<-HTML
+    <a class="%<klass>s" %<options>s href="%<path>s"><i class="%<icon>s"></i> %<text>s</a>
+  HTML
+
+  LINKS = {
+    back: {
+      klass: 'btn btn-secondary btn-sm',
+      options: '',
+      icon: 'fa fa-arrow-left',
+      path: '/path',
+      text: I18n.t('action_group.back')
+    },
+    destroy: {
+      klass: 'btn btn-outline-danger btn-sm',
+      options: "data-confirm='#{I18n.t('are_you_sure')}' rel='nofollow' data-method='delete'",
+      icon: 'fa fa-trash',
+      path: '/path',
+      text: I18n.t('action_group.destroy')
+    },
+    edit: {
+      klass: 'btn btn-outline-success btn-sm',
+      options: '',
+      icon: 'fa fa-pencil',
+      path: '/path',
+      text: I18n.t('action_group.edit')
+    },
+    file: {
+      klass: 'btn btn-secondary btn-sm',
+      options: '',
+      icon: 'fa fa-file-word-o',
+      path: '/path',
+      text: I18n.t('action_group.file')
+    },
+    new: {
+      klass: 'btn btn-outline-primary btn-sm',
+      options: 'id="add-button"',
+      icon: 'fa fa-plus',
+      path: '/path',
+      text: I18n.t('action_group.add')
+    },
+    show: {
+      klass: 'btn btn-outline-info btn-sm',
+      options: '',
+      icon: 'fa fa-eye',
+      path: '/path',
+      text: I18n.t('action_group.show')
+    },
+    update: {
+      klass: 'btn btn-outline-info btn-sm',
+      options: '',
+      icon: 'fa fa-pencil-square-o',
+      path: '/path',
+      text: I18n.t('action_group.update')
+    }
+  }.freeze
+
+  LINKS.each do |key, options|
+    test "link_to_#{key} method" do
+      link = format(LINK, options).squish.tr("'", '"')
+      assert_equal send("link_to_#{key}", options[:path]), link
+      assert_equal send("link_to_#{key}", options[:text], options[:path]), link
+    end
   end
 
-  test 'link_to_destroy method' do
-    link = <<-HTML.squish
-      <a class="btn btn-outline-danger btn-sm"
-         data-confirm="#{t('are_you_sure')}"
-         rel="nofollow" data-method="delete" href="#"><i class="fa fa-trash"></i> Test Destroy</a>
-    HTML
-    assert_equal link_to_destroy('Test Destroy', '#'), link
-  end
+  test 'link_to_actions method' do
+    course = Course.last
 
-  test 'link_to_edit method' do
-    link = <<-HTML.squish
-      <a class="btn btn-outline-success btn-sm"
-         href="#"><i class="fa fa-pencil"></i> Test Edit</a>
-    HTML
-    assert_equal link_to_edit('Test Edit', '#'), link
-  end
+    links = {
+      show: link_to_show(course_path(course)),
+      edit: link_to_edit(edit_course_path(course)),
+      destroy: link_to_destroy(course_path(course))
+    }
 
-  test 'link_to_new method' do
-    link = <<-HTML.squish
-      <a class="btn btn-outline-primary btn-sm" id="add-button"
-         href="#"><i class="fa fa-plus"></i> Test New</a>
-    HTML
-    assert_equal link_to_new('Test New', '#'), link
-  end
-
-  test 'link_to_show' do
-    link = <<-HTML.squish
-      <a class="btn btn-outline-info btn-sm"
-         href="#"><i class="fa fa-eye"></i> Test Show</a>
-    HTML
-    assert_equal link_to_show('Test Show', '#'), link
-  end
-
-  test '#link_to_update' do
-    link = <<-HTML.squish
-      <a class="btn btn-outline-info btn-sm"
-        href="#"><i class="fa fa-pencil-square-o"></i> Test Update</a>
-    HTML
-    assert_equal link_to_update('Test Update', '#'), link
+    assert_equal link_to_actions(course), links.values.join(' ')
+    assert_equal link_to_actions(course, except: :show), links.values_at(:edit, :destroy).join(' ')
+    assert_equal link_to_actions(course, except: %i[show edit]), links.values_at(:destroy).join(' ')
+    assert_equal link_to_actions(course, except: %i[edit destroy],
+                                         show: {
+                                           text: 'Show', options: { class: 'btn btn-primary' }
+                                         }),
+                 link_to_show('Show', course_path(course), class: 'btn btn-primary')
   end
 end

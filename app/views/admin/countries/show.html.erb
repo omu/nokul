@@ -4,8 +4,7 @@
       <div class="card-header">
         <%= fa_icon 'globe' %><strong><%= @country.name %></strong>
         <div class="card-header-actions">
-          <%= link_to_edit([:edit, :admin, @country]) %>
-          <%= link_to_destroy([:admin, @country]) %>
+          <%= link_to_actions(@country, scope: :admin, except: :show) %>
         </div>
       </div>
 
@@ -66,11 +65,7 @@
                 <tr>
                   <td><%= city.name %></td>
                   <td><%= city.alpha_2_code %></td>
-                  <td>
-                    <%= link_to_show([:admin, @country, city]) %>
-                    <%= link_to_edit([:edit, :admin, @country, city]) %>
-                    <%= link_to_destroy([:admin, @country, city]) %>
-                  </td>
+                  <td><%= link_to_actions([@country, city], scope: :admin) %></td>
                 </tr>
               <% end %>
             </tbody>
