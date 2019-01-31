@@ -25,6 +25,13 @@ module LinkHelper
         class: 'btn btn-outline-success btn-sm'
       }
     },
+    file: {
+      icon: 'file-word-o',
+      text: I18n.t('action_group.file'),
+      options: {
+        class: 'btn btn-secondary btn-sm'
+      }
+    },
     new: {
       icon: 'plus',
       text: I18n.t('action_group.add'),
@@ -45,13 +52,6 @@ module LinkHelper
       text: I18n.t('action_group.update'),
       options: {
         class: 'btn btn-outline-info btn-sm'
-      }
-    },
-    file: {
-      icon: 'file-word-o',
-      text: I18n.t('action_group.file'),
-      options: {
-        class: 'btn btn-secondary btn-sm'
       }
     }
   }.freeze
