@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 3d22069c6355dc60be65e01958cf32917bc53142
+  revision: 535a8b995700a5875a898691b19b88969c22d264
   specs:
     actioncable (6.0.0.beta1)
       actionpack (= 6.0.0.beta1)
@@ -98,7 +98,7 @@ GIT
 
 GIT
   remote: https://github.com/rollbar/rollbar-gem.git
-  revision: ce19357f2349d6d56426cc98341805ce8251a0dd
+  revision: 14110689214edf693758b66211cdedd73458b4e1
   specs:
     rollbar (2.18.2)
       multi_json
