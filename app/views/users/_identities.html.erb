@@ -17,8 +17,7 @@
           <% else %>
             <strong><%= t('.informal_identity') %></strong>
             <div class="card-header-actions">
-              <%= link_to_edit(edit_user_identity_path(@user, identity)) %>
-              <%= link_to_destroy(user_identity_path(@user, identity)) %>
+              <%= link_to_actions([@user, identity], except: :show) %>
             </div>
           <% end %>
         </div>

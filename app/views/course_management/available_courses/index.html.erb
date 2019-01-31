@@ -33,11 +33,7 @@
                 <td><%= available_course.course.name %></td>
                 <td><%= available_course.groups_count %></td>
                 <td><%= available_course.groups.sum(:quota) %></td>
-                <td>
-                  <%= link_to_show available_course %>
-                  <%= link_to_edit [:edit, available_course] %>
-                  <%= link_to_destroy available_course %>
-                </td>
+                <td><%= link_to_actions(available_course) %></td>
               </tr>
             <% end %>
           </tbody>

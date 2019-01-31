@@ -9,8 +9,7 @@
                       class: 'btn btn-outline-primary btn-sm' %>
           <%= link_to fa_icon('university', text: t('.assign_to_units')), [:calendar_management, @calendar, :units],
               class: 'btn btn-outline-primary btn-sm' %>
-          <%= link_to_edit([:edit, :calendar_management, @calendar]) %>
-          <%= link_to_destroy([:calendar_management, @calendar]) %>
+          <%= link_to_actions(@calendar, scope: :calendar_management, except: :show) %>
         </div>
       </div>
 
