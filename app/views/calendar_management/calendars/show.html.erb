@@ -17,14 +17,12 @@
       <div class="card-body">
         <table class="table table-responsive-sm">
           <tbody>
-            <tr>
-              <td><%= t('.senate_decision_date') %></td>
-              <td><%= @calendar.senate_decision_date %></td>
-            </tr>
-            <tr>
-              <td><%= t('.senate_decision_no') %></td>
-              <td><%= @calendar.senate_decision_no %></td>
-            </tr>
+            <% @calendar.committee_decisions.each do |decision| %>
+              <tr>
+                <td><%= t('.senate_decision_no') %></td>
+                <td><%= decision.decision_no %></td>
+              </tr>
+            <% end %>
             <tr>
               <td><%= t('.timezone') %></td>
               <td><%= @calendar.timezone %></td>
