@@ -12,14 +12,10 @@
               <%= f.input :name, required: true %>
             </div>
             <div class='col-sm-6'>
-              <%= f.input :senate_decision_date,
-                          as: :date_time_picker,
-                          input_html: { data: { class: 'senate_decision_date'} } %>
+              <%= f.association :committee_decisions,
+                                collection: CommitteeDecision.all, label_method: :decision_no %>
             </div>
             <div class='col-sm-6'>
-              <%= f.input :senate_decision_no, required: true %>
-            </div>
-            <div class='col-sm-12'>
               <%= f.input :timezone, required: true,
                                      collection: timezone_list_with_offset,
                                      label_method: :first,
@@ -63,3 +59,9 @@
 <%= javascript_include_tag 'shared/cocoon' %>
 <%= render 'flatpickr' %>
 <%= render 'cocoon' %>
+
+<script type='text/javascript'>
+  $(document).ready(function() {
+    $('#calendar_committee_decision_ids').select2();
+  });
+</script>

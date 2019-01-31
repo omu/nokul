@@ -15,8 +15,6 @@
           <thead class="thead-dark">
             <tr>
               <th><%= t('.name') %></th>
-              <th><%= t('.senate_decision_date') %></th>
-              <th><%= t('.senate_decision_no') %></th>
               <th><%= t('.timezone') %></th>
               <th><%= t('.academic_term') %></th>
               <th><%= t('actions') %></th>
@@ -26,8 +24,6 @@
             <% @calendars.each do |calendar| %>
               <tr>
                 <td><%= link_to("[#{full_name(calendar.academic_term)}] - #{calendar.name}", [:calendar_management, calendar]) %></td>
-                <td><%= calendar.senate_decision_date %></td>
-                <td><%= calendar.senate_decision_no %></td>
                 <td><%= calendar.timezone %></td>
                 <td><%= full_name(calendar.academic_term) %></td>
                 <td>
