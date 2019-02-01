@@ -8,7 +8,7 @@
     "@rails/activestorage": "^6.0.0-alpha",
     "@rails/ujs": "^6.0.0-alpha",
     "@rails/webpacker": "https://github.com/rails/webpacker",
-    "chalk": "^2.4.1",
+    "chalk": "^2.4.2",
     "flatpickr": "^4.5.2",
     "jquery.maskedinput": "^1.4.1",
     "select2": "^4.0.6-rc.1",
