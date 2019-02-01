@@ -54,8 +54,9 @@ gem 'rack-attack'
 # validators
 gem 'email_address'
 
-# error tracking
+# error tracking & monitoring
 gem 'rollbar', github: 'rollbar/rollbar-gem'
+gem 'skylight'
 
 # permalinks
 gem 'friendly_id', '~> 5.2.0'
