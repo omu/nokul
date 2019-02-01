@@ -31,11 +31,7 @@
                 <td><%= user.preferred_language %></td>
                 <td><%= user.addresses.count %></td>
                 <td><%= user.identities.count %></td>
-                <td>
-                  <%= link_to_show(user) %>
-                  <%= link_to_edit(edit_user_path(user)) %>
-                  <%= link_to_destroy(user) %>
-                </td>
+                <td><%= link_to_actions(user) %></td>
               </tr>
             <% end %>
           </tbody>

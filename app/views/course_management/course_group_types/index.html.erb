@@ -23,10 +23,7 @@
             <% @course_group_types.each do |course_group_type| %>
               <tr>
                 <td><%= course_group_type.name %></td>
-                <td>
-                  <%= link_to_edit(edit_course_group_type_path(course_group_type)) %>
-                  <%= link_to_destroy(course_group_type) %>
-                </td>
+                <td><%= link_to_actions(course_group_type, except: :show) %></td>
               </tr>
             <% end %>
           </tbody>
