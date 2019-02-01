@@ -4,8 +4,7 @@
       <div class="card-header">
         <%= fa_icon 'street-view' %><strong><%= @city.name %></strong>
         <div class="card-header-actions">
-          <%= link_to_edit([:admin, @country, @city]) %>
-          <%= link_to_destroy([:admin, @country, @city]) %>
+          <%= link_to_actions([@country, @city], scope: :admin, except: :show) %>
         </div>
       </div>
 
@@ -51,10 +50,7 @@
                 <td><%= district.name %></td>
                 <td><%= district.mernis_code %></td>
                 <td><%= district.active ? t('yes') : t('no') %></td>
-                <td>
-                  <%= link_to_edit([:edit, :admin, @country, @city, district]) %>
-                  <%= link_to_destroy([:admin, @country, @city, district]) %>
-                </td>
+                <td><%= link_to_actions([@country, @city, district], scope: :admin, except: :show) %></td>
               </tr>
             <% end %>
           </tbody>

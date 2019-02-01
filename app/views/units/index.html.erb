@@ -29,10 +29,7 @@
                 <td><%= unit.unit_type.try(:name) %></td>
                 <td><%= unit.unit_status.try(:name) %></td>
                 <td><%= unit.unit_instruction_type.try(:name) %></td>
-                <td>
-                  <%= link_to_edit(edit_unit_path(unit)) %>
-                  <%= link_to_destroy(unit) %>
-                </td>
+                <td><%= link_to_actions(unit, except: :show) %></td>
               </tr>
             <% end %>
           </tbody>
