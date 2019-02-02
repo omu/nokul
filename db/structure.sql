@@ -1873,7 +1873,7 @@ CREATE TABLE public.prospective_students (
     CONSTRAINT prospective_students_high_school_code_length CHECK ((length((high_school_code)::text) <= 255)),
     CONSTRAINT prospective_students_high_school_graduation_year_numericality CHECK (((high_school_graduation_year >= 1910) AND (high_school_graduation_year <= 2050))),
     CONSTRAINT prospective_students_home_phone_length CHECK ((length((home_phone)::text) <= 255)),
-    CONSTRAINT prospective_students_id_number_length CHECK ((length((id_number)::text) = 11)),
+    CONSTRAINT prospective_students_id_number_length CHECK (((length((id_number)::text) >= 5) AND (length((id_number)::text) <= 11))),
     CONSTRAINT prospective_students_id_number_presence CHECK (((id_number IS NOT NULL) AND ((id_number)::text !~ '^\s*$'::text))),
     CONSTRAINT prospective_students_last_name_length CHECK ((length((last_name)::text) <= 255)),
     CONSTRAINT prospective_students_last_name_presence CHECK (((last_name IS NOT NULL) AND ((last_name)::text !~ '^\s*$'::text))),
@@ -5171,6 +5171,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20190115100844'),
 ('20190116104001'),
 ('20190116115745'),
-('20190122203727');
+('20190122203727'),
+('20190202002720');
 
 

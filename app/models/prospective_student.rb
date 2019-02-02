@@ -27,7 +27,8 @@ class ProspectiveStudent < ApplicationRecord
   belongs_to :student_entrance_type
 
   # validations
-  validates :id_number, presence: true, uniqueness: { scope: %i[unit_id exam_score] }, length: { is: 11 }
+  validates :id_number, presence: true, uniqueness: { scope: %i[unit_id exam_score] },
+                                        numericality: { greater_than_or_equal_to: 5, less_than_or_equal_to: 11 }
   validates :first_name, presence: true, length: { maximum: 255 }
   validates :last_name, presence: true, length: { maximum: 255 }
   validates :fathers_name, length: { maximum: 255 }
