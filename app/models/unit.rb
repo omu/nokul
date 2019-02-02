@@ -73,6 +73,7 @@ class Unit < ApplicationRecord
   scope :administratives,        -> { where(unit_type: UnitType.administrative) }
   scope :programs,               -> { where(unit_type: UnitType.program) }
   scope :without_programs,       -> { where.not(unit_type: UnitType.program) }
+  scope :senates,                -> { where(name: 'Senato') }
 
   scope :academic, -> {
     faculties
