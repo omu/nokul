@@ -11,14 +11,14 @@ module CalendarManagement
     end
 
     test 'should get index' do
-      get calendar_management_calendars_path
+      get calendars_path
       assert_equal 'index', @controller.action_name
       assert_response :success
       assert_select '#add-button', translate('.index.new_calendar_link')
     end
 
     test 'should get new' do
-      get new_calendar_management_calendar_path
+      get new_calendar_path
       assert_equal 'new', @controller.action_name
       assert_response :success
       assert_select '.simple_form' do
@@ -30,7 +30,7 @@ module CalendarManagement
 
     test 'should create document' do
       assert_difference('Calendar.count') do
-        post calendar_management_calendars_path, params: {
+        post calendars_path, params: {
           calendar: {
             name: 'Sample Calendar',
             senate_decision_date: Time.zone.now.to_date,
@@ -51,12 +51,12 @@ module CalendarManagement
       assert_equal 'top_secret_meeting', calendar.senate_decision_no
       assert_equal 'lorem and ipsum', calendar.description
       assert_equal 'Istanbul', calendar.timezone
-      assert_redirected_to calendar_management_calendars_path
+      assert_redirected_to calendars_path
       assert_equal translate('.create.success'), flash[:notice]
     end
 
     test 'should get edit' do
-      get edit_calendar_management_calendar_path(@calendar)
+      get edit_calendar_path(@calendar)
 
       assert_equal 'edit', @controller.action_name
       assert_response :success
@@ -69,7 +69,7 @@ module CalendarManagement
 
     test 'should update document' do
       calendar = Calendar.last
-      patch calendar_management_calendar_path(calendar), params: {
+      patch calendar_path(calendar), params: {
         calendar: { name: 'Another Calendar' }
       }
 
@@ -77,17 +77,17 @@ module CalendarManagement
 
       assert_equal 'update', @controller.action_name
       assert_equal 'Another Calendar', calendar.name
-      assert_redirected_to calendar_management_calendars_path
+      assert_redirected_to calendars_path
       assert_equal translate('.update.success'), flash[:notice]
     end
 
     test 'should destroy document' do
       assert_difference('Calendar.count', -1) do
-        delete calendar_management_calendar_path(calendars(:calendar_to_delete))
+        delete calendar_path(calendars(:calendar_to_delete))
       end
 
       assert_equal 'destroy', @controller.action_name
-      assert_redirected_to calendar_management_calendars_path
+      assert_redirected_to calendars_path
       assert_equal translate('.destroy.success'), flash[:notice]
     end
 

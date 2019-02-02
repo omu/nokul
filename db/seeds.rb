@@ -11,7 +11,7 @@ if Rails.env.beta? || Rails.env.development?
 end
 
 # Fetch Academic Staff from YOKSIS
-Rake::Task['fetch:academic_staff'].invoke
+Rake::Task['fetch:academic_staff'].invoke unless Rails.env.development?
 
 # Import prospective students of 2018
 Osym::ImportProspectiveStudentsJob.perform_later('db/encrypted_data/prospective_students.csv')

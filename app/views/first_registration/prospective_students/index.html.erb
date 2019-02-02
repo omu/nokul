@@ -32,7 +32,7 @@
                 <td><%= prospective_student.obs_status ? t('.unproblematic') : t('.student_in_a_different_unit') %></td>
                 <td><%= prospective_student.student_entrance_type.try(:name) %></td>
                 <td>
-                  <%= link_to_show([:first_registration, prospective_student]) %>
+                  <%= link_to_show(prospective_student) %>
                 </td>
               </tr>
             <% end %>

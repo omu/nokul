@@ -4,12 +4,12 @@
       <div class='card-header'>
         <%= fa_icon 'street-view', text: t('.card_header') %>
         <div class='card-header-actions'>
-          <%= link_to_new t('.new_calendar_link'), [:new, :calendar_management, :calendar] %>
+          <%= link_to_new t('.new_calendar_link'), [:new, :calendar] %>
         </div>
       </div>
       <div class='card-body'>
         <%= render 'layouts/shared/smart_search_form',
-                   path: [:calendar_management, :calendars],
+                   path: :calendars,
                    placeholder: t('.name') %>
         <table class='table table-responsive-sm table-striped table-hover'>
           <thead class="thead-dark">
@@ -25,21 +25,21 @@
           <tbody>
             <% @calendars.each do |calendar| %>
               <tr>
-                <td><%= link_to("[#{full_name(calendar.academic_term)}] - #{calendar.name}", [:calendar_management, calendar]) %></td>
+                <td><%= link_to("[#{full_name(calendar.academic_term)}] - #{calendar.name}", calendar) %></td>
                 <td><%= calendar.senate_decision_date %></td>
                 <td><%= calendar.senate_decision_no %></td>
                 <td><%= calendar.timezone %></td>
                 <td><%= full_name(calendar.academic_term) %></td>
                 <td>
                   <%= link_to fa_icon('file-pdf-o'),
-                              [:calendar_management, calendar, format: :pdf],
+                              [calendar, format: :pdf],
                               class: 'btn btn-outline-primary btn-sm' %>
-                  <%= link_to_actions(calendar, scope: :calendar_management, except: :show) %>
+                  <%= link_to_actions(calendar, except: :show) %>
                   <%= link_to fa_icon('university', text: t('.assign_to_units')),
-                              [:calendar_management, calendar, :units],
+                              [calendar, :units],
                               class: 'btn btn-outline-primary btn-sm' %>
                   <%= link_to fa_icon('copy', text: t('.duplicate')),
-                              [:calendar_management, calendar, :duplicate],
+                              [calendar, :duplicate],
                               class: 'btn btn-outline-primary btn-sm' %>
                 </td>
               </tr>

@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   draw :admin
   draw :calendar_management
   draw :first_registration
-
   draw :devise
+
   draw :account
   draw :course_management
   draw :references

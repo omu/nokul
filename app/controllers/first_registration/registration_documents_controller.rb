@@ -21,7 +21,7 @@ module FirstRegistration
     def create
       @registration_document = RegistrationDocument.new(registration_document_params)
       if @registration_document.save
-        redirect_to(index_path, notice: t('.success'))
+        redirect_to(:registration_documents, notice: t('.success'))
       else
         render(:new)
       end
@@ -31,7 +31,7 @@ module FirstRegistration
 
     def update
       if @registration_document.update(registration_document_params)
-        redirect_to(index_path, notice: t('.success'))
+        redirect_to(:registration_documents, notice: t('.success'))
       else
         render(:edit)
       end
@@ -39,17 +39,13 @@ module FirstRegistration
 
     def destroy
       if @registration_document.destroy
-        redirect_to(index_path, notice: t('.success'))
+        redirect_to(:registration_documents, notice: t('.success'))
       else
-        redirect_to(index_path, alert: t('.warning'))
+        redirect_to(:registration_documents, alert: t('.warning'))
       end
     end
 
     private
-
-    def index_path
-      [:first_registration, 'registration_documents']
-    end
 
     def set_registration_document
       @registration_document = RegistrationDocument.find(params[:id])

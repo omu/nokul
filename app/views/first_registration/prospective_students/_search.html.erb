@@ -11,7 +11,7 @@
           <%= t('search') %>
         </a>
         <div class="float-right">
-          <%= link_to t('reset'), %i[first_registration prospective_students], class: 'btn btn-warning btn-sm' %>
+          <%= link_to t('reset'), :prospective_students, class: 'btn btn-warning btn-sm' %>
         </div>
       </h5>
     </div>
@@ -21,7 +21,7 @@
          aria-labelledby="Search"
          data-parent="#SearchForms">
       <div class="card-body">
-        <%= form_tag %i[first_registration prospective_students], method: :get do %>
+        <%= form_tag :prospective_students, method: :get do %>
           <div class="row">
             <div class="col-sm-12">
               <div class="form-group">

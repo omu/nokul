@@ -22,17 +22,13 @@ module FirstRegistration
 
       if prospective_student.register
         @prospective_student.update(registered: true)
-        redirect_to(index_path, notice: t('.success'))
+        redirect_to(:prospective_students, notice: t('.success'))
       else
-        redirect_to(index_path, alert: t('.warning'))
+        redirect_to(:prospective_students, alert: t('.warning'))
       end
     end
 
     private
-
-    def index_path
-      %i[first_registration prospective_students]
-    end
 
     def set_prospective_student
       @prospective_student = ProspectiveStudent.find(params[:id])

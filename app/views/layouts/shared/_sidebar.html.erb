@@ -39,12 +39,12 @@
         </a>
         <ul class="nav-dropdown-items">
           <li class="nav-item">
-            <%= link_to %i[first_registration prospective_students], class: 'nav-link' do %>
+            <%= link_to :prospective_students, class: 'nav-link' do %>
               <%= fa_icon('users', text: t('.prospective_students'), class: 'nav-icon') %>
             <% end %>
           </li>
           <li class="nav-item">
-            <%= link_to %i[first_registration registration_documents], class: 'nav-link' do %>
+            <%= link_to :registration_documents, class: 'nav-link' do %>
               <%= fa_icon('file-text', text: t('.registration_documents'), class: 'nav-icon') %>
             <% end %>
           </li>
@@ -73,12 +73,12 @@
         </a>
         <ul class="nav-dropdown-items">
           <li class="nav-item">
-            <%= link_to %i[calendar_management calendar_event_types], class: 'nav-link' do %>
+            <%= link_to :calendar_event_types, class: 'nav-link' do %>
               <%= fa_icon('calendar-plus-o', text: t('.calendar_event_types'), class: 'nav-icon') %>
             <% end %>
           </li>
           <li class="nav-item">
-            <%= link_to %i[calendar_management calendars], class: 'nav-link' do %>
+            <%= link_to :calendars, class: 'nav-link' do %>
               <%= fa_icon('calendar-check-o', text: t('.academic_calendars'), class: 'nav-icon') %>
             <% end %>
           </li>
