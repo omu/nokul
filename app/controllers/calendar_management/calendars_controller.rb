@@ -70,7 +70,7 @@ module CalendarManagement
     def calendar_params
       params.require(:calendar)
             .permit(
-              :name, :senate_decision_date, :senate_decision_no, :description, :timezone, :academic_term_id,
+              :name, :description, :timezone, :academic_term_id,
               unit_ids: [], committee_decision_ids: [], calendar_events_attributes: %i[
                 id calendar_event_type_id start_time end_time location timezone visible _destroy
               ]
