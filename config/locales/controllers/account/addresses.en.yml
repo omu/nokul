@@ -20,7 +20,6 @@ en:
         warning: Address can not be deleted!
       index:
         <<: *address_attributes
-        card_header: Address Information
         create_from_mernis: Create from MERNIS
         district_and_city: District / City
         formal_address: Formal Address

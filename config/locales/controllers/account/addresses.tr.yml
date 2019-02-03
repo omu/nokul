@@ -20,7 +20,6 @@ tr:
         warning: Adres silinemedi!
       index:
         <<: *address_attributes
-        card_header: Adres Bilgileri
         create_from_mernis: MERNİS'ten Oluştur
         district_and_city: İlçe / İl
         formal_address: Resmi Adresiniz

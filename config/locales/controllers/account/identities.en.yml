@@ -33,9 +33,6 @@ en:
       destroy:
         success: Identity successfully deleted!
         warning: Identity can not be deleted!
-      edit:
-        form_title: Edit Identity
-        warning: You can not edit your formal identity!
       index:
         <<: *identity_attributes
         create_from_mernis: Create from MERNIS
@@ -45,8 +42,6 @@ en:
         student_identity: Student Identity
         update_from_mernis: Update from MERNIS
         user_identity: User Identity
-      new:
-        form_title: Create Identity
       save_from_mernis:
         wait: You recently created or updated your identity. You can only update your identity once a week from MERNIS.
         will_update: We have received your identity create or update request. Your identity will be updated in a couple of seconds/minutes.

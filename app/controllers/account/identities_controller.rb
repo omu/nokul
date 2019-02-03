@@ -12,8 +12,11 @@ module Account
     end
 
     def new
-      redirect_to identities_path if current_user.identities.formal.present?
-      @identity = current_user.identities.informal.new
+      if current_user.identities.formal.present?
+        redirect_to identities_path
+      else
+        @identity = current_user.identities.informal.new
+      end
     end
 
     def edit; end
