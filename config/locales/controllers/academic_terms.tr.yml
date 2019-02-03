@@ -1,0 +1,36 @@
+tr:
+  activerecord:
+    attributes:
+      academic_term: &academic_term_attributes
+        active: Aktiflik Durumu
+        end_of_term: Dönem Sonu
+        start_of_term: Dönem Başlangıcı
+        term: Akademik Dönem
+        year: Akademik Yıl
+    enums:
+      academic_term:
+        terms:
+          fall: Güz
+          spring: Bahar
+          summer: Yaz
+  academic_terms:
+    create:
+      success: Akademik dönem başarıyla oluşturuldu.
+    destroy:
+      success: Akademik dönem başarıyla silindi.
+      warning: Akademik dönem silinemedi!
+    edit:
+      form_title: Akademik Dönemi Güncelle
+    index:
+      <<: *academic_term_attributes
+      card_header: Akademik Dönemler
+      new_academic_term_link: Yeni Akademik Dönem
+    new:
+      form_title: Akademik Dönem Oluştur
+    update:
+      success: Akademik dönem başarıyla güncellendi.
+  helpers:
+    submit:
+      academic_term:
+        create: Akademik Dönem Oluştur
+        update: Akademik Dönemi Güncelle

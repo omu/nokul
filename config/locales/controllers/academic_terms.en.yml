@@ -1,0 +1,36 @@
+en:
+  activerecord:
+    attributes:
+      academic_term: &academic_term_attributes
+        active: Active Status
+        end_of_term: End of Term
+        start_of_term: Start of Term
+        term: Term
+        year: Year
+    enums:
+      academic_term:
+        terms:
+          fall: Fall
+          spring: Spring
+          summer: Summer
+  academic_terms:
+    create:
+      success: Academic term successfully created.
+    destroy:
+      success: Academic term successfully deleted.
+      warning: Academic term could not be deleted.
+    edit:
+      form_title: Update the Academic Term
+    index:
+      <<: *academic_term_attributes
+      card_header: Academic Terms
+      new_academic_term_link: New Academic Term
+    new:
+      form_title: Create a New Academic Term
+    update:
+      success: Academic term successfully updated.
+  helpers:
+    submit:
+      academic_term:
+        create: Create Academic Term
+        update: Update Academic Term

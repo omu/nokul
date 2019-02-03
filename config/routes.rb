@@ -9,10 +9,8 @@ Rails.application.routes.draw do
   draw :first_registration
 
 
-  draw :course_management
-  scope module: :references do
-    resources :academic_terms, except: :show
-  end
+  draw :course_management  
+  resources :academic_terms, except: :show
 
 # resources :users, only: [] do
 #   scope module: :account do
