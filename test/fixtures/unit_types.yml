@@ -46,3 +46,7 @@ committee:
   name: Kurul
   code: 200
   group: committee
+senate:
+  name: Senato
+  code: 100
+  group: committee
