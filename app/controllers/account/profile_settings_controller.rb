@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Account
-  class ProfileController < ApplicationController
+  class ProfileSettingsController < ApplicationController
     def edit; end
 
     def update

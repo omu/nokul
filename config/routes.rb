@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   draw :calendar_management
   draw :first_registration
 
-
   draw :course_management  
   resources :academic_terms, except: :show
 
@@ -27,6 +26,11 @@ Rails.application.routes.draw do
 #   end
 # end
 
+# resources :users do
+#   get 'save_address_from_mernis', on: :member
+#   get 'save_identity_from_mernis', on: :member
+# end
+
   resources :units do
     member do
       get :courses, defaults: { format: :json }
@@ -35,16 +39,6 @@ Rails.application.routes.draw do
       get :employees, default: { format: :json }
     end
   end
-
-  resources :users do
-    get 'save_address_from_mernis', on: :member
-    get 'save_identity_from_mernis', on: :member
-  end
-
-  # public profiles
-  get '/profiles', to: 'public_profile#index'
-  get '/profiles/:id', to: 'public_profile#show', as: :profiles_show
-  get '/profiles/:id/vcard',  to: 'public_profile#vcard', as: :profile_vcard
 
   scope module: :studies do
     get '/studies', to: 'dashboard#index'
