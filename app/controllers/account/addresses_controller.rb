@@ -49,7 +49,7 @@ module Account
     end
 
     def redirect_with(message)
-      redirect_to(addresses_path(current_user), notice: t(".#{message}"))
+      redirect_to(addresses_path, notice: t(".#{message}"))
     end
 
     def address_params

@@ -5,39 +5,34 @@
 
 <div class="row">
   <% @addresses.each do |address| %>
-    <div class="col-sm-6">
+    <div class="col-sm-12">
       <div class="card">
         <div class="card-header">
+          <%= fa_icon('address-book-o') %>
           <% if address.formal? %>
             <strong><%= t('.formal_address') %></strong>
           <% else %>
             <strong><%= t('.informal_address') %></strong>
             <div class="card-header-actions">
-              <%= link_to_actions([current_user, address], except: :show) %>
+              <%= link_to_edit(edit_address_path(address)) %>
+              <%= link_to_destroy(address_path(address)) %>
             </div>
           <% end %>
         </div>
         <div class="card-body">
           <table class='table table-responsive-sm'>
+            <% unless address.formal? %>
+              <tr>
+                <th width="15%"><%= t('.phone_number') %></td>
+                <td><%= address.phone_number %></td>
+              </tr>
+            <% end %>
             <tr>
-              <td><%= t('.type') %></td>
-              <td>
-                <span class="badge badge-secondary">
-                  <%= fa_icon('gavel', text: t('activerecord.enums.address.types.formal')) if address.formal? %>
-                  <%= fa_icon('home', text: t('activerecord.enums.address.types.informal')) if address.informal? %>
-                </span>
-              </td>
-            </tr>
-            <tr>
-              <td><%= t('.phone_number') %></td>
-              <td><%= address.phone_number %></td>
-            </tr>
-            <tr>
-              <td><%= t('.full_address') %></td>
+              <th width="15%"><%= t('.full_address') %></td>
               <td><%= address.full_address %></td>
             </tr>
             <tr>
-              <td><%= t('.district_and_city') %></td>
+              <th width="15%"><%= t('.district_and_city') %></td>
               <td><%= address.district.name %> / <%= address.district.city.name %></td>
             </tr>
           </table>
