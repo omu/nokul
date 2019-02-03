@@ -2,7 +2,7 @@ en:
   activerecord:
     attributes:
       address: &address_attributes
-        district: District
+        district_id: District
         full_address: Full Address
         phone_number: Phone Number
         type: Address Type
@@ -18,9 +18,6 @@ en:
       destroy:
         success: Address successfully deleted!
         warning: Address can not be deleted!
-      edit:
-        form_title: Edit Address
-        warning: You can not edit your formal address!
       index:
         <<: *address_attributes
         card_header: Address Information
@@ -30,8 +27,6 @@ en:
         informal_address: Informal Address
         new_address: Add a New Address
         update_from_mernis: Update from MERNİS
-      new:
-        form_title: Create Address
       save_from_mernis:
         wait: You recently created or updated your address. You can update your address once every week.
         will_update: We got your address create or update request. In a couple of seconds/minutes you will be able to see your new address.

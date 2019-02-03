@@ -27,7 +27,11 @@ module Account
     end
 
     def destroy
-      @address.destroy ? redirect_with('success') : redirect_with('warning')
+      if @address.destroy
+        redirect_with('success')
+      else
+        redirect_to(addresses_path, alert: t('.warning'))
+      end
     end
 
     def save_from_mernis

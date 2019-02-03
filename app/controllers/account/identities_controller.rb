@@ -12,6 +12,7 @@ module Account
     end
 
     def new
+      redirect_to identities_path if current_user.identities.formal.present?
       @identity = current_user.identities.informal.new
     end
 
@@ -27,7 +28,11 @@ module Account
     end
 
     def destroy
-      @identity.destroy ? redirect_with('success') : redirect_with('warning')
+      if @identity.destroy
+        redirect_with('success')
+      else
+        redirect_to(identities_path, alert: t('.warning'))
+      end
     end
 
     def save_from_mernis
@@ -49,7 +54,7 @@ module Account
     end
 
     def redirect_with(message)
-      redirect_to(user_identities_path(current_user), notice: t(".#{message}"))
+      redirect_to(identities_path, notice: t(".#{message}"))
     end
 
     def identity_params

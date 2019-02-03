@@ -1,0 +1,17 @@
+en:
+  account:
+    profile:
+      edit:
+        extension_number: Extension Number
+        linkedin: Linkedin Username
+        orcid: ORCID
+        phone_number: Phone Number
+        profile_settings: Profile Settings
+        public_photo: Show picture on my profile
+        public_studies: Show academic studies on my profile
+        skype: Skype Username
+        twitter: Twitter Username
+        visiblity_settings: Visiblity Settings
+        website: Website
+      update:
+        success: Profile successfully updated.

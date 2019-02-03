@@ -2,7 +2,7 @@ tr:
   activerecord:
     attributes:
       address: &address_attributes
-        district: İlçe
+        district_id: İlçe
         full_address: Açık Adres
         phone_number: Cep Telefonu Numarası
         type: Adres Türü
@@ -18,9 +18,6 @@ tr:
       destroy:
         success: Adres başarıyla silindi!
         warning: Adres silinemedi!
-      edit:
-        form_title: Adresi Düzenle
-        warning: Yasal ikamet adresinizi düzenleyemezsiniz!
       index:
         <<: *address_attributes
         card_header: Adres Bilgileri
@@ -30,8 +27,6 @@ tr:
         informal_address: Diğer Adresiniz
         new_address: Yeni Adres Ekle
         update_from_mernis: MERNİS'ten Güncelle
-      new:
-        form_title: Adres Oluştur
       save_from_mernis:
         wait: Adresinizi yakın bir zamanda oluşturdunuz veya güncellediniz. Adresinizi haftada bir güncelleyebilirsiniz.
         will_update: Adres oluşturma veya güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde adresiniz güncellenecek.
