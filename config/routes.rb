@@ -7,29 +7,10 @@ Rails.application.routes.draw do
   draw :admin
   draw :calendar_management
   draw :first_registration
+  draw :user_management
 
-  draw :course_management  
+  draw :course_management
   resources :academic_terms, except: :show
-
-# resources :users, only: [] do
-#   scope module: :account do
-#     resources :identities, except: [:show] do
-#       get 'save_from_mernis', on: :collection
-#     end
-#     resources :addresses, except: :show do
-#       get 'save_from_mernis', on: :collection
-#     end
-
-#     resources :employees, except: %i[index show]
-#     resources :duties, except: %i[index show]
-#     resources :positions, except: %i[index show]
-#   end
-# end
-
-# resources :users do
-#   get 'save_address_from_mernis', on: :member
-#   get 'save_identity_from_mernis', on: :member
-# end
 
   resources :units do
     member do

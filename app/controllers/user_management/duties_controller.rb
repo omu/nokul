@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Account
+module UserManagement
   class DutiesController < ApplicationController
     before_action :set_user
     before_action :set_duty, only: %i[edit update destroy]

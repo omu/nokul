@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Account
+module UserManagement
   class EmployeesController < ApplicationController
     before_action :set_user
     before_action :set_employee, only: %i[edit update destroy]
