@@ -3,14 +3,31 @@
 Rails.application.routes.draw do
   root to: 'home#index'
 
+  draw :account
   draw :admin
   draw :calendar_management
   draw :first_registration
-  draw :devise
 
-  draw :account
+
   draw :course_management
-  draw :references
+  scope module: :references do
+    resources :academic_terms, except: :show
+  end
+
+# resources :users, only: [] do
+#   scope module: :account do
+#     resources :identities, except: [:show] do
+#       get 'save_from_mernis', on: :collection
+#     end
+#     resources :addresses, except: :show do
+#       get 'save_from_mernis', on: :collection
+#     end
+
+#     resources :employees, except: %i[index show]
+#     resources :duties, except: %i[index show]
+#     resources :positions, except: %i[index show]
+#   end
+# end
 
   resources :units do
     member do

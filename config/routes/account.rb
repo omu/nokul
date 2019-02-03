@@ -1,19 +1,28 @@
 # frozen_string_literal: true
 
-resources :users, only: [] do
-  scope module: :account do
-    resources :identities, except: [:show] do
-      get 'save_from_mernis', on: :collection
-    end
-    resources :addresses, except: :show do
-      get 'save_from_mernis', on: :collection
-    end
+devise_for :users, controllers: {
+  registrations: 'account/registrations',
+  passwords: 'account/passwords',
+  sessions: 'account/sessions',
+  unlocks: 'account/unlocks'
+}
 
-    resources :employees, except: %i[index show]
-    resources :duties, except: %i[index show]
-    resources :positions, except: %i[index show]
+devise_scope :user do
+  get 'account', to: 'account/registrations#edit'
+  get 'login', to: 'account/sessions#new'
+  get 'register', to: 'account/registrations#new'
+  get 'recover', to: 'account/passwords#new'
+  delete 'logout', to: 'account/sessions#destroy'
+end
 
-    get '/profile', to: 'profile#edit'
-    post '/profile', to: 'profile#update'
+scope module: :account do
+  get '/profile', to: 'profile#edit'
+  post '/profile', to: 'profile#update'
+
+  resources :identities, except: :show do
+    get 'save_from_mernis', on: :collection
+  end
+  resources :addresses, except: :show do
+    get 'save_from_mernis', on: :collection
   end
 end

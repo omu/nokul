@@ -1,13 +1,13 @@
-<div class="row">
-  <div class="col-sm-12">
-    <div class="card">
-      <div class="card-header">
-        <%= fa_icon 'password' %>
+<div class='row'>
+  <div class='col-sm-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'key' %>
         <strong><%= t('.account_settings') %></strong>
       </div>
-      <div class="card-body">
+      <div class='card-body'>
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-          <div class="row">
+          <div class='row'>
             <div class='form-group col-sm-12'>
               <%= f.error_notification %>
             </div>
@@ -15,13 +15,13 @@
               <%= f.input :email, autofocus: true %>
             </div>
             <div class='form-group col-sm-6'>
-              <%= f.input :password, autocomplete: 'off', hint: t('.leave_blank'), required: false %>
+              <%= f.input :password, autocomplete: 'off', hint: t('.leave_blank'), required: false, placeholder: false %>
             </div>
             <div class='form-group col-sm-6'>
-              <%= f.input :password_confirmation, required: false %>
+              <%= f.input :password_confirmation, required: false, placeholder: false %>
             </div>
             <div class='form-group col-sm-12'>
-              <%= f.input :current_password, hint: t('.current_password'), required: true %>
+              <%= f.input :current_password, hint: t('.current_password'), required: true, placeholder: false %>
             </div>
             <div class='form-group col-sm-12'>
               <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>

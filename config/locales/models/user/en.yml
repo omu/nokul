@@ -30,32 +30,6 @@ en:
         preferred_language: Preferred Language
         profile: Profile Settings
         projects_count: Projects Count
-  devise:
-    common:
-      login: Login
-      register: Register
-      reset_password: Reset Password
-    passwords:
-      edit:
-        reset_my_password: Reset my Password
-      new:
-        hint: You can request password reset instruction by typing your e-mail.
-        send_instructions: Send Reset Password Instructions
-    registrations:
-      edit:
-        account_settings: Account Settings
-        current_password: you must enter your current password for changing your e-mail address
-        leave_blank: leave blank if you don't want to change
-      new:
-        create_your_account: Create Your Account
-        did_you_forget: Forgot Your Password?
-    sessions:
-      new:
-        create_account: Create Account
-        did_you_forget: Forgot your password?
-        login_to_your_account: Login to your account
-        registration_description: Students and staff joining to our university need to create an account by registering.
-        remember_login: Remember Login
   helpers:
     submit:
       user:

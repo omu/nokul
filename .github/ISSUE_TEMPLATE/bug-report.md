@@ -49,7 +49,7 @@ labels: bug
 
 * [ ] İş kaydınızın başlığı kurallara (sadece ilk harf büyük, emir kipinde problem cümlesi vb.) uygun mu?
 * [ ] [Katkı sağlama dokümanını](https://github.com/omu/nokul/CONTRIBUTING.md) okudunuz mu?
-* [ ] Öneriniz ile alakalı açık olarak bekleyen bir [issue](https://github.com/omu/nokul/issues) veya [pull request](https://github.com/omu/nokul/pulls) emin misiniz?
+* [ ] Öneriniz ile alakalı açık olarak bekleyen bir [issue](https://github.com/omu/nokul/issues) veya [pull request](https://github.com/omu/nokul/pulls) olmadığına emin misiniz?
 
 **Ek içerik:**
 

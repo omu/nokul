@@ -1,0 +1,16 @@
+tr:
+  devise:
+    sessions:
+      already_signed_out: Zaten çıkış yapmış durumdasınız!
+      signed_in: Hoşgeldiniz!
+      signed_out: Oturumunuz kapatıldı.
+  account:
+    sessions:
+      new:
+        create_account: Hesap Oluştur
+        did_you_forget: Şifreni mi unuttun?
+        login: Giriş Yap
+        login_to_your_account: Hesabınıza giriş yapın
+        registration_description: Üniversitemize katılan öğrenci ve personellerin, kayıt olarak kendi hesaplarını oluşturmaları gerekmektedir.
+        register: Kayıt Ol
+        remember_login: Girişi hatırla

@@ -20,46 +20,20 @@ tr:
         start_date: Başlangıç Tarihi
       user: &user_attributes
         articles_count: Makale Sayısı
-        current_password: Mevcut Şifre
+        current_password: Mevcut Parola
         email: E-mail Adresi
         id_number: Kimlik Numarası
         password: Parola
-        password_changed_at: Son Şifre Değişikliği
+        password_changed_at: Son Parola Değişikliği
         password_confirmation: Parola (Tekrar)
         preferences: Görünürlük Ayarları
         preferred_language: Tercih Edilen Dil
         profile: Profil Ayarları
         projects_count: Proje Sayısı
-  devise:
-    common:
-      login: Giriş Yap
-      register: Kayıt Ol
-      reset_password: Şifre Sıfırlama
-    passwords:
-      edit:
-        reset_my_password: Şifremi Sıfırla
-      new:
-        hint: Hesabınızda kullandığınız e-mail adresini girerek şifre sıfırlama talimatlarını alabilirsiniz.
-        send_instructions: Şifre Sıfırlama Talimatlarını Gönder
-    registrations:
-      edit:
-        account_settings: Hesap Ayarları
-        current_password: e-mail adresinizi değiştirebilmek için mevcut şifrenizi girmeniz gerekmektedir
-        leave_blank: değiştirmek istemiyorsanız boş bırakın
-      new:
-        create_your_account: Hesabınızı oluşturun
-        did_you_forget: Şifreni mi Unuttun?
-    sessions:
-      new:
-        create_account: Hesap Oluştur
-        did_you_forget: Şifreni mi Unuttun?
-        login_to_your_account: Hesabınıza giriş yapın
-        registration_description: Üniversitemize katılan öğrenci ve personellerin, kayıt olarak kendi hesaplarını oluşturmaları gerekmektedir.
-        remember_login: Girişi Hatırla
   helpers:
     submit:
       user:
-        update: Şifremi Değiştir
+        update: Parolamı Değiştir
   simple_form:
     placeholders:
       user:

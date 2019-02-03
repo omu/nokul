@@ -1,0 +1,16 @@
+en:
+  devise:
+    sessions:
+      already_signed_out: Already signed out.
+      signed_in: Signed in successfully.
+      signed_out: Signed out successfully.
+  account:
+    sessions:
+      new:
+        create_account: Create Account
+        did_you_forget: Forgot your password?
+        login: Login
+        login_to_your_account: Login to your account
+        registration_description: Students and staff joining to our university need to create an account by registering.
+        register: Register
+        remember_login: Remember Login

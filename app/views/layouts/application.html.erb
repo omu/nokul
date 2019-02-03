@@ -29,22 +29,22 @@
             <div class="dropdown-header text-center">
               <strong class='<%= t(".my_account") %>'><%= t('.my_account') %></strong>
             </div>
-            <%= link_to [:user, :identities, { user_id: current_user.id }], class: 'dropdown-item' do %>
+            <%= link_to :identities, class: 'dropdown-item' do %>
               <%= fa_icon('id-card', text: t('.identities')) %>
             <% end %>
-            <%= link_to [:user, :addresses, { user_id: current_user.id }], class: 'dropdown-item' do %>
+            <%= link_to :addresses, class: 'dropdown-item' do %>
               <%= fa_icon('home', text: t('.addresses')) %>
             <% end %>
-            <%= link_to [:user, :profile, {user_id: current_user.id }], class: 'dropdown-item' do %>
+            <%= link_to :profile, class: 'dropdown-item' do %>
               <%= fa_icon('user', text: t('.profile_settings')) %>
             <% end %>
             <div class="dropdown-header text-center">
               <strong><%= t('.settings') %></strong>
             </div>
-            <%= link_to %i[edit user registration], class: 'dropdown-item' do %>
+            <%= link_to :account, class: 'dropdown-item' do %>
               <%= fa_icon('shield', text: t('.account_settings')) %>
             <% end %>
-            <%= link_to %i[destroy user session], class: "dropdown-item", method: :delete do %>
+            <%= link_to :logout, class: "dropdown-item", method: :delete do %>
               <%= fa_icon('lock', text: t('.logout')) %>
             <% end %>
           </div>

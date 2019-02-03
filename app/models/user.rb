@@ -71,6 +71,11 @@ class User < ApplicationRecord
     username if domain.eql?(Tenant.configuration.email.domain)
   end
 
+  # send devise e-mails through active job
+  def send_devise_notification(notification, *args)
+    devise_mailer.send(notification, self, *args).deliver_later
+  end
+
   # custom methods
   def accounts
     (students + employees).flatten
