@@ -1,6 +1,6 @@
 en:
   account:
-    profile:
+    profile_settings:
       edit:
         extension_number: Extension Number
         linkedin: Linkedin Username
