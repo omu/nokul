@@ -8,20 +8,6 @@ SET check_function_bodies = false;
 SET client_min_messages = warning;
 SET row_security = off;
 
---
--- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: -
---
-
-CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
-
-
---
--- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: -
---
-
-COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
-
-
 SET default_tablespace = '';
 
 SET default_with_oids = false;
@@ -328,8 +314,8 @@ ALTER SEQUENCE public.agendas_id_seq OWNED BY public.agendas.id;
 CREATE TABLE public.ar_internal_metadata (
     key character varying NOT NULL,
     value character varying,
-    created_at timestamp(6) without time zone NOT NULL,
-    updated_at timestamp(6) without time zone NOT NULL
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
 );
 
 
@@ -1086,7 +1072,7 @@ CREATE TABLE public.course_types (
     id bigint NOT NULL,
     name character varying,
     code character varying,
-    min_credit numeric(5,2) DEFAULT 0.0,
+    min_credit numeric(5,2) DEFAULT 0,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     CONSTRAINT course_types_code_length CHECK ((length((code)::text) <= 255)),
@@ -1128,7 +1114,7 @@ CREATE TABLE public.courses (
     theoric integer DEFAULT 0,
     practice integer DEFAULT 0,
     laboratory integer DEFAULT 0,
-    credit numeric(5,2) DEFAULT 0.0,
+    credit numeric(5,2) DEFAULT 0,
     program_type integer,
     status integer,
     unit_id bigint NOT NULL,
@@ -1182,7 +1168,7 @@ CREATE TABLE public.curriculum_course_groups (
     id bigint NOT NULL,
     course_group_id bigint NOT NULL,
     curriculum_semester_id bigint NOT NULL,
-    ects numeric(5,2) DEFAULT 0.0,
+    ects numeric(5,2) DEFAULT 0,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     CONSTRAINT curriculum_course_groups_ects_null CHECK ((ects IS NOT NULL)),
@@ -1218,7 +1204,7 @@ CREATE TABLE public.curriculum_courses (
     type integer,
     course_id bigint NOT NULL,
     curriculum_semester_id bigint NOT NULL,
-    ects numeric(5,2) DEFAULT 0.0,
+    ects numeric(5,2) DEFAULT 0,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     curriculum_course_group_id bigint,
