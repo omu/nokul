@@ -263,6 +263,7 @@ veteriner_fakultesi:
 
 senate:
   name: Senato
+  detsis_id: 999999
   district: atakum
   unit_status: active
   unit_type: senate
