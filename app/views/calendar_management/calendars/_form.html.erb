@@ -13,7 +13,8 @@
             </div>
             <div class='col-sm-6'>
               <%= f.association :committee_decisions,
-                                collection: Unit.senates.first.try(:decisions), label_method: :decision_no %>
+                                collection: Unit.senates.map(&:decisions).flatten,
+                                label_method: :decision_no %>
             </div>
             <div class='col-sm-6'>
               <%= f.input :timezone, required: true,
