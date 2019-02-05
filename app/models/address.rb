@@ -3,6 +3,9 @@
 class Address < ApplicationRecord
   self.inheritance_column = nil
 
+  # virtual attributes
+  attr_accessor :country
+
   # enums
   enum type: { formal: 1, informal: 2 }
 
@@ -13,7 +16,7 @@ class Address < ApplicationRecord
   # validations
   validates :type, uniqueness: { scope: :user }, inclusion: { in: types.keys }
   validates :phone_number, length: { maximum: 255 }
-  validates :phone_number, telephone_number: { country: proc{|record| record.country}, types: [:fixed_line, :mobile, etc] }
+  validates :phone_number, telephone_number: { country: proc{ |record| record.country }, types: [:fixed_line, :mobile] }
   validates :full_address, presence: true, length: { maximum: 255 }
   validates_with AddressAndIdentityValidator, on: :create
 

@@ -3,6 +3,7 @@ tr:
     attributes:
       address: &address_attributes
         district_id: İlçe
+        country: Ülke
         full_address: Açık Adres
         phone_number: Cep Telefonu Numarası
         type: Adres Türü

@@ -4,7 +4,7 @@
            params: [
             {
               field: 'district_id',
-              width: 6,
+              width: 12,
               required: true,
               collection: City.includes(:districts).order(:name),
               as: 'grouped_select',
@@ -12,8 +12,17 @@
               group_label_method: 'name'
             },
             {
+              field: 'country',
+              as: 'select',
+              collection: Country.order(:name).pluck(:name, :alpha_2_code),
+              label_method: :first,
+              value_method: :second,
+              selected: 'TR',
+              width: 4
+            },
+            {
               field: 'phone_number',
-              width: 6
+              width: 8
             },
             {
               field: 'full_address',

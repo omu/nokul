@@ -3,6 +3,7 @@ en:
     attributes:
       address: &address_attributes
         district_id: District
+        country: Country
         full_address: Full Address
         phone_number: Phone Number
         type: Address Type
