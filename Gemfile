@@ -53,6 +53,7 @@ gem 'rack-attack'
 
 # validators
 gem 'email_address'
+gem 'telephone_number'
 
 # error tracking
 gem 'rollbar', github: 'rollbar/rollbar-gem'
