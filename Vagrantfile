@@ -9,7 +9,7 @@ Vagrant.configure('2') do |config|
 
     config.vm.synced_folder ENV['LOCAL_CACHE_DIR'], app_cache_dir
 
-    env.merge('LOCAL_CACHE_DIR': app_cache_dir)
+    env['LOCAL_CACHE_DIR'] = app_cache_dir
   end
 
   config.vm.define 'dev', primary: true do |dev|
