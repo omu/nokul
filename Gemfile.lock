@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: eb1fc14d15c53de1c17534c958ddd588c913e203
+  revision: 00f7dbab7590c6ffd188da186067eb269e11580f
   specs:
     actioncable (6.0.0.beta1)
       actionpack (= 6.0.0.beta1)
@@ -98,7 +98,7 @@ GIT
 
 GIT
   remote: https://github.com/rollbar/rollbar-gem.git
-  revision: 14110689214edf693758b66211cdedd73458b4e1
+  revision: bb56b6faedf53e865c494a5267a710ba0b886bc4
   specs:
     rollbar (2.18.2)
       multi_json
@@ -441,7 +441,7 @@ DEPENDENCIES
   wicked_pdf
 
 RUBY VERSION
-   ruby 2.6.0p0
+   ruby 2.6.1p33
 
 BUNDLED WITH
    2.0.1
