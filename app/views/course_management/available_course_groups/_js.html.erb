@@ -1,0 +1,17 @@
+<script type='text/javascript'>
+  $(document).ready(function() {
+    configure_link_to_remove()
+
+    function configure_link_to_remove() {
+      if ($('.nested-fields:visible').length == 1) {
+        $('.card-footer:visible').hide();
+      } else {
+        $('.card-footer:hidden').show();
+      }
+    }
+
+    $('#lecturers').on('cocoon:after-insert cocoon:after-remove', function() {
+      configure_link_to_remove()
+    });
+  })
+</script>
