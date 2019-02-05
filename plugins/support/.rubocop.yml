@@ -9,5 +9,3 @@ Metrics/LineLength:
 Naming/FileName:
   Exclude:
     - lib/nokul-support.rb
-AllCops:
-  TargetRubyVersion: 2.5.1
