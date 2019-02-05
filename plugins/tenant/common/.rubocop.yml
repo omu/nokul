@@ -15,5 +15,3 @@ Rails/Delegate:
 Rails/Output:
   Exclude:
     - lib/**/*.rb
-AllCops:
-  TargetRubyVersion: 2.5.1

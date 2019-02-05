@@ -15,5 +15,3 @@ Rails/Output:
 Style/MixinUsage:
   Exclude:
     - test/dummy/**/*
-AllCops:
-  TargetRubyVersion: 2.5.1
