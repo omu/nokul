@@ -12,6 +12,7 @@ class CalendarTest < ActiveSupport::TestCase
     academic_term
     calendar_events
     calendar_event_types
+    calendar_committee_decisions
     unit_calendars
     units
   ].each do |property|
@@ -21,15 +22,15 @@ class CalendarTest < ActiveSupport::TestCase
   end
 
   # validations: presence
-  %i[
-    name
-    timezone
-    senate_decision_no
-  ].each do |property|
+  {
+    committee_decision_ids: :committee_decisions,
+    name: :name,
+    timezone: :timezone
+  }.each do |property, error_message_key|
     test "presence validations for #{property} of a calendar" do
       @calendar.send("#{property}=", nil)
       assert_not @calendar.valid?
-      assert_not_empty @calendar.errors[property]
+      assert_not_empty @calendar.errors[error_message_key]
     end
   end
 
@@ -50,7 +51,6 @@ class CalendarTest < ActiveSupport::TestCase
   %i[
     name
     timezone
-    senate_decision_no
   ].each do |property|
     test "#{property} of calendar can not be longer than 255 characters" do
       fake = @calendar.dup
