@@ -314,8 +314,8 @@ ALTER SEQUENCE public.agendas_id_seq OWNED BY public.agendas.id;
 CREATE TABLE public.ar_internal_metadata (
     key character varying NOT NULL,
     value character varying,
-    created_at timestamp(6) without time zone NOT NULL,
-    updated_at timestamp(6) without time zone NOT NULL
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
 );
 
 
@@ -555,6 +555,38 @@ ALTER SEQUENCE public.available_courses_id_seq OWNED BY public.available_courses
 
 
 --
+-- Name: calendar_committee_decisions; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.calendar_committee_decisions (
+    id bigint NOT NULL,
+    calendar_id bigint NOT NULL,
+    committee_decision_id bigint NOT NULL,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL
+);
+
+
+--
+-- Name: calendar_committee_decisions_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.calendar_committee_decisions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: calendar_committee_decisions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.calendar_committee_decisions_id_seq OWNED BY public.calendar_committee_decisions.id;
+
+
+--
 -- Name: calendar_event_types; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -640,8 +672,6 @@ ALTER SEQUENCE public.calendar_events_id_seq OWNED BY public.calendar_events.id;
 CREATE TABLE public.calendars (
     id bigint NOT NULL,
     name character varying,
-    senate_decision_date date,
-    senate_decision_no character varying,
     description character varying,
     timezone character varying DEFAULT 'Istanbul'::character varying,
     academic_term_id bigint NOT NULL,
@@ -650,8 +680,6 @@ CREATE TABLE public.calendars (
     CONSTRAINT calendars_description_length CHECK ((length((description)::text) <= 65535)),
     CONSTRAINT calendars_name_length CHECK ((length((name)::text) <= 255)),
     CONSTRAINT calendars_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text))),
-    CONSTRAINT calendars_senate_decision_no_length CHECK ((length((senate_decision_no)::text) <= 255)),
-    CONSTRAINT calendars_senate_decision_no_presence CHECK (((senate_decision_no IS NOT NULL) AND ((senate_decision_no)::text !~ '^\s*$'::text))),
     CONSTRAINT calendars_timezone_length CHECK ((length((timezone)::text) <= 255)),
     CONSTRAINT calendars_timezone_presence CHECK (((timezone IS NOT NULL) AND ((timezone)::text !~ '^\s*$'::text)))
 );
@@ -1044,7 +1072,7 @@ CREATE TABLE public.course_types (
     id bigint NOT NULL,
     name character varying,
     code character varying,
-    min_credit numeric(5,2) DEFAULT 0.0,
+    min_credit numeric(5,2) DEFAULT 0,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     CONSTRAINT course_types_code_length CHECK ((length((code)::text) <= 255)),
@@ -1086,7 +1114,7 @@ CREATE TABLE public.courses (
     theoric integer DEFAULT 0,
     practice integer DEFAULT 0,
     laboratory integer DEFAULT 0,
-    credit numeric(5,2) DEFAULT 0.0,
+    credit numeric(5,2) DEFAULT 0,
     program_type integer,
     status integer,
     unit_id bigint NOT NULL,
@@ -1140,7 +1168,7 @@ CREATE TABLE public.curriculum_course_groups (
     id bigint NOT NULL,
     course_group_id bigint NOT NULL,
     curriculum_semester_id bigint NOT NULL,
-    ects numeric(5,2) DEFAULT 0.0,
+    ects numeric(5,2) DEFAULT 0,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     CONSTRAINT curriculum_course_groups_ects_null CHECK ((ects IS NOT NULL)),
@@ -1176,7 +1204,7 @@ CREATE TABLE public.curriculum_courses (
     type integer,
     course_id bigint NOT NULL,
     curriculum_semester_id bigint NOT NULL,
-    ects numeric(5,2) DEFAULT 0.0,
+    ects numeric(5,2) DEFAULT 0,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     curriculum_course_group_id bigint,
@@ -2762,6 +2790,13 @@ ALTER TABLE ONLY public.available_courses ALTER COLUMN id SET DEFAULT nextval('p
 
 
 --
+-- Name: calendar_committee_decisions id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.calendar_committee_decisions ALTER COLUMN id SET DEFAULT nextval('public.calendar_committee_decisions_id_seq'::regclass);
+
+
+--
 -- Name: calendar_event_types id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -3266,6 +3301,14 @@ ALTER TABLE ONLY public.available_course_lecturers
 
 ALTER TABLE ONLY public.available_courses
     ADD CONSTRAINT available_courses_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: calendar_committee_decisions calendar_committee_decisions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.calendar_committee_decisions
+    ADD CONSTRAINT calendar_committee_decisions_pkey PRIMARY KEY (id);
 
 
 --
@@ -4092,6 +4135,20 @@ CREATE INDEX index_available_courses_on_unit_id ON public.available_courses USIN
 
 
 --
+-- Name: index_calendar_committee_decisions_on_calendar_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_calendar_committee_decisions_on_calendar_id ON public.calendar_committee_decisions USING btree (calendar_id);
+
+
+--
+-- Name: index_calendar_committee_decisions_on_committee_decision_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_calendar_committee_decisions_on_committee_decision_id ON public.calendar_committee_decisions USING btree (committee_decision_id);
+
+
+--
 -- Name: index_calendar_events_on_calendar_event_type_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -4764,6 +4821,14 @@ ALTER TABLE ONLY public.course_groups
 
 
 --
+-- Name: calendar_committee_decisions fk_rails_4f3eb3da94; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.calendar_committee_decisions
+    ADD CONSTRAINT fk_rails_4f3eb3da94 FOREIGN KEY (calendar_id) REFERENCES public.calendars(id);
+
+
+--
 -- Name: identities fk_rails_5373344100; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -4793,6 +4858,14 @@ ALTER TABLE ONLY public.curriculum_programs
 
 ALTER TABLE ONLY public.units
     ADD CONSTRAINT fk_rails_5951990ba9 FOREIGN KEY (district_id) REFERENCES public.districts(id);
+
+
+--
+-- Name: calendar_committee_decisions fk_rails_5d6264c4f2; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.calendar_committee_decisions
+    ADD CONSTRAINT fk_rails_5d6264c4f2 FOREIGN KEY (committee_decision_id) REFERENCES public.committee_decisions(id);
 
 
 --
@@ -5171,6 +5244,8 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20190115100844'),
 ('20190116104001'),
 ('20190116115745'),
-('20190122203727');
+('20190122203727'),
+('20190130105509'),
+('20190130114547');
 
 

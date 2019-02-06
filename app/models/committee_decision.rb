@@ -4,6 +4,7 @@ class CommitteeDecision < ApplicationRecord
   # relations
   belongs_to :meeting_agenda
   has_one :agenda, through: :meeting_agenda
+  has_many :calendar_committee_decisions, dependent: :destroy
 
   # validations
   validates :description, presence: true, length: { maximum: 65_535 }

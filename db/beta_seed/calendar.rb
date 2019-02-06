@@ -14,48 +14,61 @@ event_types.each do |category, event_type|
   progress_bar&.increment
 end
 
+agenda_type = AgendaType.create(name: 'Gündem Türü')
+senate = Unit.senates.first
+
+agenda = Agenda.create(
+  unit: senate,
+  agenda_type: agenda_type,
+  description: 'Gündem İçeriği'
+)
+
+committee_meeting = CommitteeMeeting.create(
+  unit: senate,
+  meeting_no: 1,
+  meeting_date: '21.06.2018',
+  year: 2018
+)
+
+meeting_agenda = committee_meeting.meeting_agendas.create(agenda: agenda, sequence_no: 1)
+decision = meeting_agenda.create_decision(description: 'Akademik takvim oluşturulmasına karar verildi.')
+
 calendars = [
   {
     name: 'Lisans-Önlisans Akademik Takvimi',
-    senate_decision_date: '21.06.2018',
-    senate_decision_no: '2018/191',
     timezone: 'Istanbul',
-    academic_term: AcademicTerm.first
+    academic_term: AcademicTerm.first,
+    committee_decisions: [decision]
   },
   {
     name: 'Lisansüstü Akademik Takvimi',
-    senate_decision_date: '21.06.2018',
-    senate_decision_no: '2018/191',
     timezone: 'Istanbul',
-    academic_term: AcademicTerm.first
+    academic_term: AcademicTerm.first,
+    committee_decisions: [decision]
   },
   {
     name: 'Diş Hekimliği Fakültesi Akademik Takvimi',
-    senate_decision_date: '21.06.2018',
-    senate_decision_no: '2018/191',
     timezone: 'Istanbul',
-    academic_term: AcademicTerm.first
+    academic_term: AcademicTerm.first,
+    committee_decisions: [decision]
   },
   {
     name: ' Ali Fuat Başgil Hukuk Fakültesi Akademik Takvimi',
-    senate_decision_date: '21.06.2018',
-    senate_decision_no: '2018/191',
     timezone: 'Istanbul',
-    academic_term: AcademicTerm.first
+    academic_term: AcademicTerm.first,
+    committee_decisions: [decision]
   },
   {
     name: 'Yabancı Diller Yüksekokulu Akademik Takvimi',
-    senate_decision_date: '21.06.2018',
-    senate_decision_no: '2018/191',
     timezone: 'Istanbul',
-    academic_term: AcademicTerm.first
+    academic_term: AcademicTerm.first,
+    committee_decisions: [decision]
   },
   {
     name: 'UZEM Lisansüstü Akademik Takvimi',
-    senate_decision_date: '21.06.2018',
-    senate_decision_no: '2018/191',
     timezone: 'Istanbul',
-    academic_term: AcademicTerm.first
+    academic_term: AcademicTerm.first,
+    committee_decisions: [decision]
   }
 ]
 
