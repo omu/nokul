@@ -3,7 +3,7 @@ en:
     attributes:
       calendar: &calendar_attributes
         name: Calendar Title
-        senate_decision_date: Senate Decision Date
+        committee_decisions: Senate Decisions
         senate_decision_no: Senate Decision No
         description: Description
         timezone: Default Timezone

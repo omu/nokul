@@ -13,6 +13,8 @@ class Calendar < ApplicationRecord
   belongs_to :academic_term
   has_many :calendar_events, dependent: :destroy
   has_many :calendar_event_types, through: :calendar_events
+  has_many :calendar_committee_decisions, dependent: :destroy
+  has_many :committee_decisions, through: :calendar_committee_decisions
   has_many :unit_calendars, dependent: :destroy
   has_many :units, through: :unit_calendars,
                    before_add: proc { |calendar, unit| create_sub_calendars(calendar, unit) },
@@ -23,11 +25,10 @@ class Calendar < ApplicationRecord
 
   # validations
   validates :name, presence: true,
-                   uniqueness: { scope: %i[senate_decision_no academic_term_id] },
+                   uniqueness: { scope: :academic_term_id },
                    length: { maximum: 255 }
+  validates :committee_decisions, presence: true
   validates :timezone, presence: true, length: { maximum: 255 }
-  validates :senate_decision_date, presence: true, length: { maximum: 255 }
-  validates :senate_decision_no, presence: true, length: { maximum: 255 }
   validates :description, length: { maximum: 65_535 }
 
   # delegations
