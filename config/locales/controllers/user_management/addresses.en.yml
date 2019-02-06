@@ -1,0 +1,31 @@
+en:
+  activerecord:
+    attributes:
+      address: &address_attributes
+        district_id: District
+        country: Country
+        full_address: Full Address
+        phone_number: Phone Number
+        type: Address Type
+  user_management:
+    addresses:
+      index:
+        <<: *address_attributes
+        create_from_mernis: Create from MERNIS
+        formal_address: Formal Address
+        informal_address: Informal Address
+        new_address: Create New Address
+        update_from_mernis: Update from MERNIS
+        district_and_city: District / City
+      new:
+        already_have_informal_address: You can not add more addresses.
+      create:
+        success: Address successfully created.
+      update:
+        success: Address successfully updated.
+      destroy:
+        success: Address successfully deleted!
+        warning: Address can not be deleted.
+      save_from_mernis:
+        wait: You recently created or updated your address. You can update your address once every week.
+        will_update: We got your address create or update request. In a couple of seconds/minutes you will be able to see your new address.

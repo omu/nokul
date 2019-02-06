@@ -6,17 +6,14 @@ module Account
 
     before_action :set_identity, only: %i[edit update destroy]
     before_action :set_elapsed_time, only: %i[save_from_mernis]
+    before_action :check_existing_identities, only: %i[new create]
 
     def index
       @identities = current_user.identities
     end
 
     def new
-      if current_user.identities.formal.present?
-        redirect_to identities_path
-      else
-        @identity = current_user.identities.informal.new
-      end
+      @identity = current_user.identities.informal.new
     end
 
     def edit; end
@@ -54,6 +51,13 @@ module Account
       return if formal_identity.blank?
 
       elapsed_time(formal_identity)
+    end
+
+    def check_existing_identities
+      identities = current_user.identities
+      if identities.formal.present? || identities.informal.present?
+        redirect_to :identities, notice: t('.already_have_identity')
+      end
     end
 
     def redirect_with(message)

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-scope module: :user_management do
+namespace :user_management do
   resources :users do
     resources :identities, except: [:show] do
       get 'save_from_mernis', on: :collection

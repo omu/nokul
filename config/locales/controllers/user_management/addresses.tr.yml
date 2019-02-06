@@ -1,0 +1,31 @@
+tr:
+  activerecord:
+    attributes:
+      address: &address_attributes
+        district_id: İlçe
+        country: Ülke
+        full_address: Açık Adres
+        phone_number: Cep Telefonu Numarası
+        type: Adres Türü
+  user_management:
+    addresses:
+      index:
+        <<: *address_attributes
+        create_from_mernis: MERNİS'ten Oluştur
+        formal_address: Resmi Adres
+        informal_address: Diğer Adres
+        new_address: Yeni Adres Ekle
+        update_from_mernis: MERNİS'ten Güncelle
+        district_and_city: İlçe / İl
+      new:
+        already_have_informal_address: Daha fazla adres oluşturamazsınız.
+      create:
+        success: Adres başarıyla oluşturuldu.
+      update:
+        success: Adres başarıyla güncellendi.
+      destroy:
+        success: Adres başarıyla silindi!
+        warning: Adres silinemedi!
+      save_from_mernis:
+        wait: Adresinizi yakın bir zamanda oluşturdunuz veya güncellediniz. Adresinizi haftada bir güncelleyebilirsiniz.
+        will_update: Adres oluşturma veya güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde adresiniz güncellenecek.

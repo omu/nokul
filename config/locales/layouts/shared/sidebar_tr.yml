@@ -45,5 +45,6 @@ tr:
         unit_types: Birim Türleri
         units: Birimler
         university_types: Üniversite Türleri
-        users: Kullanıcılar
+        user_management: Kullanıcı İşlemleri
+        users: Tüm Kullanıcılar
         yoksis: YÖKSİS

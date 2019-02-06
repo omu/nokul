@@ -7,95 +7,117 @@ module Accounts
     setup do
       @user = users(:serhat)
       @user.addresses.informal.create(
-        phone_number: '03623121919', full_address: 'OMÜ BAUM', district_id: districts(:gerze).id
+        phone_number: '05554443322',
+        full_address: 'OMÜ BAUM',
+        district_id: districts(:gerze).id,
+        country: 'tr'
       )
+      @form_params = %w[phone_number full_address district_id country]
       sign_in @user
     end
 
-    test 'should get index' do
-      get user_addresses_path(@user)
+    test 'should be able to get index path' do
+      get addresses_path
       assert_response :success
     end
 
-    test 'should get new' do
-      get new_user_address_path(@user)
-      assert_response :success
-    end
-
-    test 'should create address' do
+    test 'should be able to get /new when there is no informal address' do
       @user.addresses.informal.destroy_all
-      assert_difference('@user.addresses.count') do
-        post user_addresses_path(@user), params: {
+      get new_address_path
+      assert_response :success
+      assert_select '.simple_form' do
+        @form_params.each do |param|
+          assert_select "#address_#{param}"
+        end
+      end
+    end
+
+    test 'should be able to create an informal address' do
+      @user.addresses.informal.destroy_all
+      assert_difference('@user.addresses.informal.count') do
+        post addresses_path, params: {
           address: {
-            phone_number: '03623121919', full_address: 'OMÜ BAUM', district_id: districts(:gerze).id
+            phone_number: '05554443322',
+            full_address: 'OMÜ BAUM',
+            district_id: districts(:gerze).id,
+            country: 'tr'
           }
         }
       end
 
       address = @user.addresses.find_by(type: :informal)
 
-      assert_equal '03623121919', address.phone_number
+      assert_equal '05554443322', address.phone_number
       assert_equal 'OMÜ BAUM', address.full_address
       assert_equal districts(:gerze), address.district
 
-      assert_redirected_to user_addresses_path(@user)
+      assert_redirected_to addresses_path
       assert_equal translate('.create.success'), flash[:notice]
     end
 
-    test 'should not get edit for formal address' do
+    test 'should not be able to get /new when there is an informal address' do
+      get new_address_path
+      assert_response :redirect
+      assert_redirected_to addresses_path
+    end
+
+    test 'should not be able to get /edit for a formal address' do
       formal_address = @user.addresses.find_by(type: :formal)
 
-      get edit_user_address_path(@user, formal_address)
+      get edit_address_path(formal_address)
       assert_response :redirect
       assert_redirected_to root_path
     end
 
-    test 'should get edit for any address except formal' do
+    test 'should be able to get /edit for an informal addresses' do
       address = @user.addresses.where(type: :informal).first
 
-      get edit_user_address_path(@user, address)
+      get edit_address_path(address)
       assert_response :success
-      assert_select '.card-header strong', translate('.edit.form_title')
+      assert_select '.simple_form' do
+        @form_params.each do |param|
+          assert_select "#address_#{param}"
+        end
+      end
     end
 
-    test 'should update address' do
+    test 'should be able to update an informal address' do
       address = @user.addresses.informal.first
 
-      patch user_address_path(@user, address), params: {
+      patch address_path(address), params: {
         address: {
-          phone_number: '03623121920', full_address: 'OMÜ UZEM'
+          phone_number: '05554443322', full_address: 'OMÜ UZEM', country: 'tr'
         }
       }
 
       address.reload
 
-      assert_equal '03623121920', address.phone_number
+      assert_equal '05554443322', address.phone_number
       assert_equal 'OMÜ UZEM', address.full_address
 
-      assert_redirected_to user_addresses_path(@user)
+      assert_redirected_to addresses_path
       assert_equal translate('.update.success'), flash[:notice]
     end
 
-    test 'should be able to fetch address from mernis' do
-      get save_from_mernis_user_addresses_path(@user)
-      assert_redirected_to user_path(@user)
+    test 'should be able to create/update a formal address from mernis' do
+      get save_from_mernis_addresses_path
+      assert_redirected_to addresses_path
     end
 
-    test 'should not destroy for formal address' do
-      assert_difference('@user.addresses.count', 0) do
-        delete user_address_path(@user, @user.addresses.formal)
+    test 'should be able to destroy an informal address' do
+      assert_difference('@user.addresses.informal.count', -1) do
+        delete address_path(@user.addresses.informal.first)
+      end
+
+      assert_redirected_to addresses_path
+    end
+
+    test 'should not be able to destroy a formal address' do
+      assert_difference('@user.addresses.informal.count', 0) do
+        delete address_path(@user.addresses.formal)
       end
 
       assert_redirected_to root_path
-    end
-
-    test 'should destroy for any address except formal' do
-      assert_difference('@user.addresses.count', -1) do
-        delete user_address_path(@user, @user.addresses.where.not(type: :formal).first)
-      end
-
-      assert_redirected_to user_addresses_path(@user)
-      assert_equal translate('.destroy.success'), flash[:notice]
     end
 
     private

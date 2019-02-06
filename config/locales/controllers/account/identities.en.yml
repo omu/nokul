@@ -28,6 +28,8 @@ en:
           informal: Informal Identity
   account:
     identities:
+      new:
+        already_have_identity: You can not add more identities.
       create:
         success: Identity successfully created!
       destroy:

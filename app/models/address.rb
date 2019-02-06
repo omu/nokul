@@ -15,8 +15,10 @@ class Address < ApplicationRecord
 
   # validations
   validates :type, uniqueness: { scope: :user }, inclusion: { in: types.keys }
-  validates :phone_number, length: { maximum: 255 }
-  validates :phone_number, telephone_number: { country: proc{ |record| record.country }, types: [:fixed_line, :mobile] }
+  validates :phone_number, length: { maximum: 255 },
+                           allow_nil: true,
+                           allow_blank: true,
+                           telephone_number: { country: proc{ |record| record.country }, types: [:mobile] }
   validates :full_address, presence: true, length: { maximum: 255 }
   validates_with AddressAndIdentityValidator, on: :create
 

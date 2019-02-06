@@ -25,11 +25,3 @@ formal_student_omu:
   date_of_birth: <%= Time.zone.now - 20.years %>
   user: serhat
   student: serhat_omu
-informal:
-  type: informal
-  first_name: john
-  last_name: doe
-  gender: male
-  place_of_birth: london
-  date_of_birth: <%= Time.zone.now - 20.years %>
-  user: serhat

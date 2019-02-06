@@ -12,12 +12,12 @@
       <hr>
       <% unless current_user.addresses.any? %>
         <div class="alert alert-warning" role="alert">
-          <small class="text-muted"><%= link_to t('.address_information'), user_addresses_path(current_user) %> <%= t('.seems_missing') %></small>
+          <small class="text-muted"><%= link_to t('.address_information'), addresses_path %> <%= t('.seems_missing') %></small>
         </div>
       <% end %>
       <% unless current_user.identities.any? %>
         <div class="alert alert-warning" role="alert">
-          <small class="text-muted"><%= link_to t('.identity_information'), user_identities_path(current_user) %> <%= t('.seems_missing') %></small>
+          <small class="text-muted"><%= link_to t('.identity_information'), identities_path %> <%= t('.seems_missing') %></small>
         </div>
       <% end %>
     </div>
@@ -35,7 +35,7 @@
       <% if last_password_change(current_user) > 1 %>
         <hr \>
         <div class="alert alert-danger" role="alert">
-          <small class="text-muted"><%= link_to t('.change_password'), edit_user_registration_path %></small>
+          <small class="text-muted"><%= link_to t('.change_password'), account_path %></small>
         </div>
       <% end %>
     </div>

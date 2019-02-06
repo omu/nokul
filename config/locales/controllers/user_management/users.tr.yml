@@ -1,0 +1,47 @@
+tr:
+  activerecord:
+    attributes:
+      user: &user_attributes
+        email: E-mail Adresi
+        id_number: Kimlik Numarası
+        password: Parola
+        password_confirmation: Parola (Tekrar)
+        sign_in_count: Giriş Sayısı
+        password_changed_at: Şifre Değişme Tarihi
+        locked_at: Kilitlenme Tarihi
+        current_sign_in_at: Mevcut Oturum Giriş Tarihi
+        last_sign_in_at: Son Giriş Tarihi
+  simple_form:
+    placeholders:
+      user:
+        <<: *user_attributes
+  user_management:
+    users:
+      index:
+        <<: *user_attributes
+        card_header: Kullanıcı Hesapları
+        new_user_link: Yeni Kullanıcı Oluştur
+        name: TC/YU numarası, e-mail adresi, ad veya soyad
+        first_name: Adı
+        last_name: Soyadı
+      update:
+        success: Kullanıcı başarıyla güncellendi.
+      edit:
+        leave_blank: Değiştirmek istemiyorsanız boş bırakın
+      create:
+        success: Kullanıcı başarıyla oluşturuldu.
+      destroy:
+        success: Kullanıcı başarıyla silindi!
+        warning: Kullanıcı silinemedi!
+      show:
+        <<: *user_attributes
+        card_header: Kullanıcı Bilgileri
+        account: Hesap Bilgileri
+        addresses: Adres Bilgileri
+        employees: Personel İşlemleri
+        identities: Kimlik Bilgileri
+  helpers:
+    submit:
+      user:
+        create: Hesap Oluştur
+        update: Hesabı Güncelle

@@ -1,25 +1,23 @@
-<div class='alert alert-light'>
-  <%= link_to_new(t('.new_user_link'), new_user_path) %>
-</div>
-
 <div class='row'>
   <div class='col-lg-12'>
     <div class='card'>
       <div class='card-header'>
         <%= fa_icon 'align-justify', text: t('.card_header') %>
+        <div class='card-header-actions'>
+          <%= link_to_new(t('.new_user_link'), [:new, :user_management, :user]) %>
+        </div>
       </div>
       <div class='card-body'>
         <%= render 'layouts/shared/smart_search_form',
-                   path: users_path,
-                   placeholder: t('.smart_search_placeholder') %>
+                   path: [:user_management, :users],
+                   placeholder: t('.name') %>
         <table class='table table-responsive-sm'>
-          <thead>
+          <thead class='thead-dark'>
             <tr>
               <th><%= t('.id_number') %></th>
               <th><%= t('.email') %></th>
-              <th><%= t('.preferred_language') %></th>
-              <th><%= t('.addresses') %></th>
-              <th><%= t('.identities') %></th>
+              <th><%= t('.first_name') %></th>
+              <th><%= t('.last_name') %></th>
               <th><%= t('actions') %></th>
             </tr>
           </thead>
@@ -28,10 +26,9 @@
               <tr>
                 <td><%= user.id_number %></td>
                 <td><%= user.email %></td>
-                <td><%= user.preferred_language %></td>
-                <td><%= user.addresses.count %></td>
-                <td><%= user.identities.count %></td>
-                <td><%= link_to_actions(user) %></td>
+                <td><%= user.identities.user_identity.try(:first_name) %></td>
+                <td><%= user.identities.user_identity.try(:last_name) %></td>
+                <td><%= link_to_actions([:user_management, user]) %></td>
               </tr>
             <% end %>
           </tbody>

@@ -1,0 +1,27 @@
+<%= render 'layouts/builders/form',
+           namespace: 'user_management',
+           klass: @user,
+           params: [
+            {
+              field: 'id_number',
+              width: 12,
+              required: true
+            },
+            {
+              field: 'email',
+              width: 12,
+              required: true
+            },
+            {
+              field: 'password',
+              width: 6,
+              required: false,
+              hint: t('.leave_blank')
+            },
+            {
+              field: 'password_confirmation',
+              width: 6,
+              required: false,
+              hint: t('.leave_blank')
+            }
+           ] %>

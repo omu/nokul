@@ -9,10 +9,10 @@ informal:
   phone_number: 12345678
   full_address: 'Cumhuriyet mahallesi'
   district: atakum
-  user: serhat
-informal:
-  type: informal
+  user: john
+john_formal:
+  type: formal
   phone_number: 12345678
-  full_address: 'Cumhuriyet mahallesi'
+  full_address: 'Lorem ipsum street'
   district: atakum
   user: john

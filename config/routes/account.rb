@@ -17,7 +17,7 @@ end
 
 scope module: :account do
   get '/profile', to: 'profile_settings#edit'
-  post '/profile', to: 'profile_settings#update'
+  patch '/profile', to: 'profile_settings#update'
 
   resources :identities, except: :show do
     get 'save_from_mernis', on: :collection

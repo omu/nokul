@@ -6,6 +6,7 @@ module Account
 
     before_action :set_address, only: %i[edit update destroy]
     before_action :set_elapsed_time, only: %i[save_from_mernis]
+    before_action :check_existing_addresses, only: %i[new create]
 
     def index
       @addresses = current_user.addresses.includes(district: [:city])
@@ -52,12 +53,18 @@ module Account
       elapsed_time(formal_address.first)
     end
 
+    def check_existing_addresses
+      if current_user.addresses.informal.present?
+        redirect_to :addresses, notice: t('.already_have_informal_address')
+      end
+    end
+
     def redirect_with(message)
       redirect_to(addresses_path, notice: t(".#{message}"))
     end
 
     def address_params
-      params.require(:address).permit(:phone_number, :full_address, :district_id)
+      params.require(:address).permit(:phone_number, :full_address, :district_id, :country)
     end
   end
 end

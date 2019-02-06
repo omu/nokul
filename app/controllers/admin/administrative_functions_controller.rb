@@ -7,7 +7,7 @@ module Admin
     private
 
     def secure_params
-      params.require(:document_type).permit(:name, :code)
+      params.require(:administrative_function).permit(:name, :code)
     end
   end
 end

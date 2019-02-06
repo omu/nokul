@@ -49,4 +49,8 @@ class CalendarEventTest < ActiveSupport::TestCase
     error_codes = fake.errors.details[:visible].map { |err| err[:error] }
     assert error_codes.include?(:inclusion)
   end
+
+  test 'active_now can detect if an event is active at the moment' do
+    assert calendar_events(:active_calendar_event).active_now?
+  end
 end

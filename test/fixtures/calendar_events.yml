@@ -5,3 +5,10 @@ add_drop_fall_2018_grad:
   end_time: 2018-12-20 23:15:04 +0300
   location: Online
   timezone: Istanbul
+active_calendar_event:
+  calendar: graduate_calendar
+  calendar_event_type: add_drop_registrations
+  start_time: <%= Time.now - 6.months %>
+  end_time: <%= Time.now + 6.months %>
+  location: Online
+  timezone: Berlin

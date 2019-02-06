@@ -34,6 +34,7 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true, length: { maximum: 255 }
   validates :id_number, uniqueness: true, numericality: { only_integer: true }, length: { is: 11 }
   validates :preferred_language, inclusion: { in: I18n.available_locales.map(&:to_s) }
+  validates :phone_number, allow_nil: true, telephone_number: { country: 'TR', types: [:fixed_line] }
   validates_with EmailAddress::ActiveRecordValidator, field: :email
   validates_with ImageValidator, field: :avatar, if: proc { |a| a.avatar.attached? }
 

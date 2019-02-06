@@ -7,3 +7,6 @@ rector:
 yok_member:
   name: Yök Üyesi
   code: 18
+administrative_function_to_delete:
+  name: Some function
+  code: 99

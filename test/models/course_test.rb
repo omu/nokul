@@ -86,4 +86,8 @@ class CourseTest < ActiveSupport::TestCase
     course.laboratory = 4
     assert_equal course.calculate_credit, 11.5
   end
+
+  test 'name_with_code returns name and code together' do
+    assert_equal courses(:ati).name_with_code, 'ATI101 - Atatürk İlke ve Inkılapları Tarihi'
+  end
 end

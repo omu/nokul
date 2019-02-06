@@ -2,7 +2,7 @@
   <div class='col-sm-12'>
     <div class='card'>
       <div class='card-body'>
-        <%= simple_form_for([namespace.try(:to_sym), klass].compact.flatten) do |f| %>
+        <%= simple_form_for([namespace, klass].compact.flatten) do |f| %>
           <div class='row'>
             <div class='form-group col-sm-12'>
               <%= f.error_notification %>

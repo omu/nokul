@@ -11,10 +11,9 @@ module FullNameHelper
     when 'Identity'
       "#{object.first_name} #{object.last_name}"
     when 'Employee'
-      if object.identities.formal.present?
-        "#{object.title_name}
-         #{object.identities.formal.first.first_name}
-         #{object.identities.formal.first.last_name}"
+      formal_identity = object.identities.formal
+      if formal_identity.present?
+        "#{object.title_name} #{formal_identity.first.first_name} #{formal_identity.first.last_name}"
       end
     end
   end

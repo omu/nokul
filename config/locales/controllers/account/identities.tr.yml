@@ -28,6 +28,8 @@ tr:
           informal: Diğer Kimlik
   account:
     identities:
+      new:
+        already_have_identity: Daha fazla kimlik oluşturamazsınız.
       create:
         success: Kimlik başarıyla oluşturuldu!
       destroy:

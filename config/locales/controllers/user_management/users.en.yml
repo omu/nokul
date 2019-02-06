@@ -1,0 +1,47 @@
+en:
+  activerecord:
+    attributes:
+      user: &user_attributes
+        email: E-mail
+        id_number: ID Number
+        password: Password
+        password_confirmation: Password Confirmation
+        sign_in_count: SignIn Count
+        password_changed_at: Password Changed At
+        locked_at: Locked At
+        current_sign_in_at: Current SignIn At
+        last_sign_in_at: Last SignIn At
+  simple_form:
+    placeholders:
+      user:
+        <<: *user_attributes
+  user_management:
+    users:
+      index:
+        <<: *user_attributes
+        card_header: User Accounts
+        new_user_link: Create a New User
+        name: TC/YU number, e-mail address, first of last name
+        first_name: First Name
+        last_name: Last Name
+      update:
+        success: User successfully updated.
+      edit:
+        leave_blank: Leave blank if you don't want to change password of the user
+      create:
+        success: User successfully created.
+      destroy:
+        success: User successfully deleted!
+        warning: User can not be deleted.
+      show:
+        <<: *user_attributes
+        card_header: Account Information
+        account: Account
+        addresses: Addresses
+        employees: Employee Actions
+        identities: Identities
+  helpers:
+    submit:
+      user:
+        create: Create Account
+        update: Update Account
