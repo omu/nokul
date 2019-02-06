@@ -4,7 +4,7 @@ class AvailableCourseLecturerValidator < ActiveModel::Validator
   def validate(record)
     lecturers(record.group.lecturers.reject { |lecturer| lecturer.equal?(record) })
 
-    return if not_exist_coordinator?(record, @lecturers) || any_coordinator?(record, @lecturers)
+    return if none_coordinator?(record, @lecturers) || any_coordinator?(record, @lecturers)
 
     record.errors[:coordinator] << I18n.t('coordinator', scope: %i[validators available_course_lecturer])
   end
@@ -20,7 +20,7 @@ class AvailableCourseLecturerValidator < ActiveModel::Validator
     !record.coordinator && lecturers.map(&:coordinator).any?
   end
 
-  def not_exist_coordinator?(record, lecturers)
+  def none_coordinator?(record, lecturers)
     record.coordinator && lecturers.map(&:coordinator).none?
   end
 end
