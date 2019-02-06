@@ -127,6 +127,11 @@ class UnitTest < ActiveSupport::TestCase
     assert_not_includes Unit.committees, units(:omu)
   end
 
+  test 'senates scope returns senato type units' do
+    assert_includes Unit.senates, units(:senate)
+    assert_not_includes Unit.senates, units(:omu)
+  end
+
   test 'coursable scope returns coursable units' do
     assert_equal Unit.coursable.count,
                  Unit.departments.count +

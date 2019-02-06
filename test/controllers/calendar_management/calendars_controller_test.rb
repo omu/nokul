@@ -7,7 +7,7 @@ module CalendarManagement
     setup do
       sign_in users(:john)
       @calendar = calendars(:uzem_calendar)
-      @form_params = %w[name senate_decision_date senate_decision_no description timezone academic_term_id]
+      @form_params = %w[name description timezone academic_term_id]
     end
 
     test 'should get index' do
@@ -33,11 +33,10 @@ module CalendarManagement
         post calendars_path, params: {
           calendar: {
             name: 'Sample Calendar',
-            senate_decision_date: Time.zone.now.to_date,
-            senate_decision_no: 'top_secret_meeting',
             description: 'lorem and ipsum',
             timezone: 'Istanbul',
-            academic_term_id: AcademicTerm.first.id
+            academic_term_id: AcademicTerm.first.id,
+            committee_decision_ids: [committee_decisions(:one).id]
           }
         }
       end
@@ -47,8 +46,6 @@ module CalendarManagement
       calendar = Calendar.last
 
       assert_equal 'Sample Calendar', calendar.name
-      assert_equal Time.zone.now.to_date, calendar.senate_decision_date
-      assert_equal 'top_secret_meeting', calendar.senate_decision_no
       assert_equal 'lorem and ipsum', calendar.description
       assert_equal 'Istanbul', calendar.timezone
       assert_redirected_to calendars_path
