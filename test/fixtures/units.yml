@@ -261,6 +261,13 @@ veteriner_fakultesi:
   unit_type: faculty
   ancestry: <%= ActiveRecord::FixtureSet.identify(:omu) %>
 
+senate:
+  name: Senato
+  detsis_id: 999999
+  district: atakum
+  unit_status: active
+  unit_type: senate
+
 unit_to_delete:
   name: Unit to Delete
   yoksis_id: 123456

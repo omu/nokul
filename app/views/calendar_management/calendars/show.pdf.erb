@@ -29,7 +29,9 @@
         </table>
         <div class="card">
           <div class="card-body">
-            <%= t('.senate_decision', date: @calendar.senate_decision_date, decision_no: @calendar.senate_decision_no) %>
+            <% @calendar.committee_decisions.each do |decision| %>
+              <%= t('.senate_decision', date: decision.meeting_agenda.committee_meeting.meeting_date, decision_no: decision.decision_no) %>
+            <% end %>
             <p><%= @calendar.description %></p>
           </div>
         </div>

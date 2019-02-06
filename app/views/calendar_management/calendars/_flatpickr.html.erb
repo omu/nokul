@@ -1,5 +1,4 @@
 <script type="text/javascript">
-  flatpickr("[data-class='senate_decision_date']", { altInput: true })
   flatpickr("[data-class='event-date']", { enableTime: true, altInput: true })
   $('#calendar_events').on('cocoon:after-insert', function(e, added_event) {
     $(added_event).find("[data-class='event-date']")
