@@ -3,7 +3,7 @@ tr:
     attributes:
       calendar: &calendar_attributes
         name: Takvim Başlığı
-        senate_decision_date: Senato Karar Tarihi
+        committee_decisions: Senato Kararları
         senate_decision_no: Senato Karar Numarası
         description: Açıklamalar
         timezone: Varsayılan Zaman Dilimi
