@@ -17,3 +17,8 @@ bilgisayar_muhendisligi_mufredati:
   name: Bilgisayar Mühendiliği Müfredatı
   unit: bilgisayar_muhendisligi
   status: active
+
+curriculum_to_delete:
+  name: Test Müfredat
+  unit: cbu
+  status: passive
