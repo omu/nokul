@@ -28,12 +28,6 @@ else
 	touch "$environment"
 fi
 
-command -v bundle &>/dev/null || gem install bundler
-
-gem install foreman
-foreman export -p3000 --app "$application" --user "$operator" --env "$environment" systemd /etc/systemd/system/
-systemctl enable "$application".target
-
 systemctl enable --now postgresql
 systemctl enable --now redis-server
 
@@ -52,5 +46,3 @@ sudo -EH -u "$operator" sh -xs <<-'EOF'
 	bin/rails db:migrate
 	bin/rails db:seed
 EOF
-
-systemctl start "$application".target

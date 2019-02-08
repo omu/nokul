@@ -23,6 +23,16 @@ Vagrant.configure('2') do |config|
 
     dev.vm.provision 'shell', name: 'environment', env: env, path: 'lib/scripts/environment.sh'
     dev.vm.provision 'shell', name: 'deploy',      env: env, path: 'lib/scripts/deploy.sh'
+
+    paas.trigger.after :up do |trigger|
+      trigger.info = 'Starting app...'
+      trigger.run = { inline: 'app start' }
+    end
+
+    paas.trigger.before :halt do |trigger|
+      trigger.info = 'Stopping app...'
+      trigger.run = { inline: 'app stop' }
+    end
   end
 
   config.vm.define 'paas', autostart: false do |paas|
