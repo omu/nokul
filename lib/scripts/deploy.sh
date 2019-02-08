@@ -39,7 +39,17 @@ EOF
 sudo -EH -u "$operator" sh -xs <<-'EOF'
 	bundle install -j4 --path "${BUNDLE_PATH:-vendor/bundle}"
 
-	[ -z $NODE_MODULES_FOLDER ] || yarn config set -- --modules-folder "$NODE_MODULES_FOLDER"
+	# XXX: ./node_modules seems to be an almost constant location. The ugly
+	# kludge below applies a brute force solution for using a different
+	# node_modules path (via NODE_MODULES_FOLDER environment variable)
+	# without playing with (buggy or unsupported) configuration settings.
+
+	# Overwrite existing node_modules if it's a symlink
+	[[ -z $NODE_MODULES_FOLDER ]] || [[ ! -L node_modules ]] || ln -sf "$NODE_MODULES_FOLDER" node_modules
+
+	# Avoid creating a node_modules symlink if a node_module file/directory already exists
+	[[ -z $NODE_MODULES_FOLDER ]] || [[ -e node_modules   ]] || ln -s  "$NODE_MODULES_FOLDER" node_modules
+
 	yarn install
 
 	bin/rails db:create
