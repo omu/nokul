@@ -36,7 +36,7 @@ sudo -EH -u postgres psql <<-EOF
 	ALTER ROLE $application LOGIN CREATEDB SUPERUSER;
 EOF
 
-sudo -EH -u "$operator" sh -xs <<-'EOF'
+sudo -EH -u "$operator" bash -xs <<-'EOF'
 	bundle install -j4 --path "${BUNDLE_PATH:-vendor/bundle}"
 
 	# XXX: ./node_modules seems to be an almost constant location. The ugly
