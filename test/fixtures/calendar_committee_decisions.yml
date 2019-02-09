@@ -1,0 +1,9 @@
+one:
+  calendar: uzem_calendar
+  committee_decision: one
+two:
+  calendar: graduate_calendar
+  committee_decision: one
+three:
+  calendar: calendar_to_delete
+  committee_decision: one
