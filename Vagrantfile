@@ -24,7 +24,7 @@ Vagrant.configure('2') do |config| # rubocop:disable Metrics/BlockLength
     dev.vm.provision 'shell', name: 'environment', env: env, path: 'lib/scripts/environment.sh'
     dev.vm.provision 'shell', name: 'deploy',      env: env, path: 'lib/scripts/deploy.sh'
 
-    dev.trigger.after :up do |trigger|
+    dev.trigger.after [:up, :reload] do |trigger|
       trigger.info = 'Starting app...'
       trigger.run_remote = { inline: 'app start' }
     end
