@@ -1,15 +1,17 @@
 # frozen_string_literal: true
 
 Vagrant.configure('2') do |config| # rubocop:disable Metrics/BlockLength
-  env = {}
+  env = {
+    'deploy_skip_seed' => ENV['DEPLOY_SKIP_SEED']
+  }
 
   if ENV['LOCAL_CACHE_DIR']
     FileUtils.mkdir_p ENV['LOCAL_CACHE_DIR'] unless Dir.exist?(ENV['LOCAL_CACHE_DIR'])
-    app_cache_dir = '/var/cache/app'
+    deploy_cache_dir = '/var/cache/app'
 
-    config.vm.synced_folder ENV['LOCAL_CACHE_DIR'], app_cache_dir
+    config.vm.synced_folder ENV['LOCAL_CACHE_DIR'], deploy_cache_dir
 
-    env['LOCAL_CACHE_DIR'] = app_cache_dir
+    env['deploy_cache_dir'] = deploy_cache_dir
   end
 
   config.vm.define 'dev', primary: true do |dev|
