@@ -44,11 +44,16 @@ sudo -EH -u "$operator" bash -xs <<-'EOF'
 	# node_modules path (via NODE_MODULES_FOLDER environment variable)
 	# without playing with (buggy or unsupported) configuration settings.
 
-	# Overwrite existing node_modules if it's a symlink
-	[[ -z $NODE_MODULES_FOLDER ]] || [[ ! -L node_modules ]] || ln -sf "$NODE_MODULES_FOLDER" node_modules
+	if [[ -n ${NODE_MODULES_FOLDER:-} ]]; then
+		# Create the real node_modules folder if not exist
+		mkdir -p "$NODE_MODULES_FOLDER"
 
-	# Avoid creating a node_modules symlink if a node_module file/directory already exists
-	[[ -z $NODE_MODULES_FOLDER ]] || [[ -e node_modules   ]] || ln -s  "$NODE_MODULES_FOLDER" node_modules
+		# Remove an existing node_modules symlink
+		[[ ! -L node_modules ]] || rm -f node_modules
+
+		# Create node_modules symlink unless a node_module file/directory already exists
+		[[ -e node_modules   ]] || ln -s  "$NODE_MODULES_FOLDER" node_modules
+	fi
 
 	yarn install
 
