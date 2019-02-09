@@ -28,12 +28,6 @@ else
 	touch "$environment"
 fi
 
-command -v bundle &>/dev/null || gem install bundler
-
-gem install foreman
-foreman export -p3000 --app "$application" --user "$operator" --env "$environment" systemd /etc/systemd/system/
-systemctl enable "$application".target
-
 systemctl enable --now postgresql
 systemctl enable --now redis-server
 
@@ -42,15 +36,29 @@ sudo -EH -u postgres psql <<-EOF
 	ALTER ROLE $application LOGIN CREATEDB SUPERUSER;
 EOF
 
-sudo -EH -u "$operator" sh -xs <<-'EOF'
+sudo -EH -u "$operator" bash -xs <<-'EOF'
 	bundle install -j4 --path "${BUNDLE_PATH:-vendor/bundle}"
 
-	[ -z $NODE_MODULES_FOLDER ] || yarn config set -- --modules-folder "$NODE_MODULES_FOLDER"
+	# XXX: ./node_modules seems to be an almost constant location. The ugly
+	# kludge below applies a brute force solution for using a different
+	# node_modules path (via NODE_MODULES_FOLDER environment variable)
+	# without playing with (buggy or unsupported) configuration settings.
+
+	if [[ -n ${NODE_MODULES_FOLDER:-} ]]; then
+		# Create the real node_modules folder if not exist
+		mkdir -p "$NODE_MODULES_FOLDER"
+
+		# Remove an existing node_modules symlink
+		[[ ! -L node_modules ]] || rm -f node_modules
+
+		# Create node_modules symlink unless a node_module file/directory already exists
+		[[ -e node_modules   ]] || ln -s  "$NODE_MODULES_FOLDER" node_modules
+	fi
+
 	yarn install
 
 	bin/rails db:create
 	bin/rails db:migrate
-	bin/rails db:seed
-EOF
 
-systemctl start "$application".target
+	[[ -n ${deploy_skip_seed:-} ]] || bin/rails db:seed
+EOF
