@@ -18,15 +18,23 @@ application=${application:-$(jq -r '.name' "$manifest")}
 operator=${operator:-$(id -rnu 1000 2>/dev/null)}
 environment=/etc/environment
 
-if [[ -d ${LOCAL_CACHE_DIR:-} ]]; then
+if [[ -d ${deploy_cache_dir:-} ]]; then
+	LOCAL_CACHE_DIR_BUNDLE=$deploy_cache_dir/bundle
+	LOCAL_CACHE_DIR_BOOTSNAP=$deploy_cache_dir/bootsnap
+	LOCAL_CACHE_DIR_YARN=$deploy_cache_dir/yarn
+
 	cat >"$environment" <<-EOF
-		BUNDLE_PATH='$LOCAL_CACHE_DIR/bundle'
-		BUNDLE_APP_CONFIG='$LOCAL_CACHE_DIR/bundle'
+		LOCAL_CACHE_DIR_BUNDLE=$LOCAL_CACHE_DIR_BUNDLE
+		LOCAL_CACHE_DIR_BOOTSNAP=$LOCAL_CACHE_DIR_BOOTSNAP
+		LOCAL_CACHE_DIR_YARN=$LOCAL_CACHE_DIR_YARN
 
-		BOOTSNAP_CACHE_DIR='$LOCAL_CACHE_DIR/bootsnap'
+		BUNDLE_PATH=$LOCAL_CACHE_DIR_BUNDLE
+		BUNDLE_APP_CONFIG=$LOCAL_CACHE_DIR_BUNDLE
 
-		YARN_CACHE_FOLDER='$LOCAL_CACHE_DIR/yarn/cache'
-		NODE_MODULES_FOLDER='$LOCAL_CACHE_DIR/yarn/node_modules'
+		BOOTSNAP_CACHE_DIR=$LOCAL_CACHE_DIR_BOOTSNAP
+
+		YARN_CACHE_FOLDER=$LOCAL_CACHE_DIR_YARN/cache
+		NODE_MODULES_FOLDER=$LOCAL_CACHE_DIR_YARN/node_modules
 	EOF
 fi
 

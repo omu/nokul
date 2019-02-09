@@ -21,6 +21,7 @@ class UnitType < ApplicationRecord
 
   # scopes
   scope :program, -> { where(group: %w[undergraduate_program graduate_program]) }
+  scope :senate, -> { where(name: 'Senato') }
 
   # relations
   has_many :units, dependent: :nullify

@@ -41,4 +41,9 @@ class UnitTypeTest < ActiveSupport::TestCase
       end
     end
   end
+
+  test 'senate scope returns types of senato' do
+    assert_includes UnitType.senate, unit_types(:senate)
+    assert_not_includes UnitType.senate, unit_types(:university)
+  end
 end

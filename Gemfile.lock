@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 2ccbddb48c96b0cda9641961541d7266591a3db7
+  revision: 9483cdee0a3ed9c686e338f079b0e369597b1211
   specs:
     actioncable (6.0.0.beta1)
       actionpack (= 6.0.0.beta1)
@@ -98,7 +98,7 @@ GIT
 
 GIT
   remote: https://github.com/rollbar/rollbar-gem.git
-  revision: 4a86624c0e654d3baff06e0ed6c890af44ff0e34
+  revision: 8b49f438730876c21cdafe0d2f1db0d7ef4003ff
   specs:
     rollbar (2.18.2)
       multi_json
@@ -259,7 +259,7 @@ GEM
     nokogiri (1.10.1)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
-    pagy (1.3.2)
+    pagy (1.3.3)
     parallel (1.13.0)
     parser (2.6.0.0)
       ast (~> 2.4.0)
@@ -441,7 +441,7 @@ DEPENDENCIES
   wicked_pdf
 
 RUBY VERSION
-   ruby 2.6.0p0
+   ruby 2.6.1p33
 
 BUNDLED WITH
    2.0.1
