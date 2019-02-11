@@ -8,6 +8,7 @@ module CourseManagement
 
     def new
       @available_course_group = @available_course.groups.new
+      @available_course_group.lecturers.build
     end
 
     def create
