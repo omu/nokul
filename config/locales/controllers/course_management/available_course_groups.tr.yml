@@ -7,6 +7,12 @@ tr:
         lecturer: Öğretim Elemanı
         title: Ünvan
         coordinator: Koordinatör
+    errors:
+      models:
+        available_course_group:
+          attributes:
+            lecturers:
+              cannot_empty: Öğretim elemanı alanı boş geçilemez.
   course_management:
     available_course_groups:
       create:
