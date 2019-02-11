@@ -15,8 +15,9 @@ module Xokul
             day_of_birth: option.fetch(:day_of_birth),
             month_of_birth: option.fetch(:month_of_birth),
             year_of_birth: option.fetch(:year_of_birth),
-            card_serial: option[:card_serial],
-            card_number: option[:card_number]
+            serial: option[:serial],
+            number: option[:number],
+            document_number: option[:document_number]
           }
         )[:status]
       end
