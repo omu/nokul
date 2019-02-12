@@ -7,6 +7,12 @@ en:
         lecturer: Lecturer
         title: Title
         coordinator: Coordinator
+    errors:
+      models:
+        available_course_group:
+          attributes:
+            lecturers:
+              cannot_empty: Lecturer field cannot pass empty.
   course_management:
     available_course_groups:
       create:

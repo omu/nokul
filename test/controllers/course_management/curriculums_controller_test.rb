@@ -70,7 +70,7 @@ module CourseManagement
 
     test 'should destroy curriculum' do
       assert_difference('Curriculum.count', -1) do
-        delete curriculum_path(Curriculum.last)
+        delete curriculum_path(curriculums(:curriculum_to_delete))
       end
 
       assert_redirected_to index_path
