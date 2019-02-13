@@ -19,7 +19,7 @@
               <th><%= t('.meb_status') %></th>
               <td>
                 <p><%= @prospective_student.meb_status ? t('.graduated') : t('.not_graduated_or_unknown') %></p>
-                <p><small><%= t('.last_update') %>: <%= as_date_and_time(@prospective_student.meb_status_date) %></p>
+                <p><small><%= t('.last_update') %>: <%= as_date_and_time(@prospective_student.meb_status_date) %></small></p>
               </td>
             </tr>
             <tr class="<%= boolean_to_class_for_table(@prospective_student.military_status) %>">
