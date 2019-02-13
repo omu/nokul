@@ -1,0 +1,4 @@
+dn: olcOverlay=dynlist,olcDatabase={1}mdb,cn=config
+objectClass: olcOverlayConfig
+objectClass: olcDynamicList
+olcOverlay: dynlist
