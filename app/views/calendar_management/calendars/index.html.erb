@@ -4,12 +4,12 @@
       <div class='card-header'>
         <%= fa_icon 'street-view', text: t('.card_header') %>
         <div class='card-header-actions'>
-          <%= link_to_new t('.new_calendar_link'), [:new, :calendar_management, :calendar] %>
+          <%= link_to_new t('.new_calendar_link'), %i[new calendar_management calendar] %>
         </div>
       </div>
       <div class='card-body'>
         <%= render 'layouts/shared/smart_search_form',
-                   path: [:calendar_management, :calendars],
+                   path: %i[calendar_management calendars],
                    placeholder: t('.name') %>
         <table class='table table-responsive-sm table-striped table-hover'>
           <thead class="thead-dark">

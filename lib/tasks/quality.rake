@@ -39,6 +39,18 @@ namespace :quality do
     abort
   end
 
+  desc 'Runs ERB linter'
+  task :erb_linter do |task|
+    puts "########### #{task.full_comment} ###########"
+    sh 'bundle exec erblint --autocorrect app/views', verbose: false
+  end
+
+  desc 'Runs HTML linter'
+  task :html_linter do |task|
+    puts "########### #{task.full_comment} ###########"
+    sh "yarn exec htmlhint --config .htmlhintrc 'app/views/**/*.html.erb'", verbose: false
+  end
+
   desc 'Runs all quality tasks'
-  task all: %w[rubocop executables]
+  task all: %w[rubocop executables erb_linter html_linter]
 end

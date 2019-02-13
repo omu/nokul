@@ -21,7 +21,7 @@
   <div class="tab-content mt-2" id="nav-tabContent">
     <% @curriculum_course_groups.each_with_index do |curriculum_course_group, index| %>
       <div class="tab-pane fade <%= 'show active' if index.zero? %>"
-          id="nav-<%= index%>"
+          id="nav-<%= index %>"
           role="tabpanel"
           aria-labelledby="nav-<%= index %>-tab">
         <%= render 'form', curriculum_course_group: curriculum_course_group, form_title: t('.form_title') %>
