@@ -48,10 +48,7 @@ namespace :quality do
   desc 'Runs HTML linter'
   task :html_linter do |task|
     puts "########### #{task.full_comment} ###########"
-
-    path = Rails.root.join('node_modules', '.bin', 'htmlhint').to_s
-
-    sh "#{path} --config .htmlhintrc app/views/**/**/**/*.html.erb", verbose: false
+    sh "yarn exec htmlhint --config .htmlhintrc 'app/views/**/*.html.erb'", verbose: false
   end
 
   desc 'Runs all quality tasks'
