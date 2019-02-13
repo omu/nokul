@@ -9,7 +9,7 @@
       <div class="progress progress-xs mt-3 mb-0">
         <div class="progress-bar bg-success" role="progressbar" style="width: <%= profile_completion_rate(current_user) %>%" aria-valuenow="<%= profile_completion_rate(current_user) %>" aria-valuemin="0" aria-valuemax="100"></div>
       </div>
-      <hr>
+      <hr />
       <% unless current_user.addresses.any? %>
         <div class="alert alert-warning" role="alert">
           <small class="text-muted"><%= link_to t('.address_information'), user_addresses_path(current_user) %> <%= t('.seems_missing') %></small>
@@ -33,7 +33,7 @@
         <div class="progress-bar bg-danger" role="progressbar" style="width: <%= password_change_progress_bar(current_user) %>%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
       </div>
       <% if last_password_change(current_user) > 1 %>
-        <hr \>
+        <hr />
         <div class="alert alert-danger" role="alert">
           <small class="text-muted"><%= link_to t('.change_password'), edit_user_registration_path %></small>
         </div>
