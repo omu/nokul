@@ -47,4 +47,16 @@ Vagrant.configure('2') do |config| # rubocop:disable Metrics/BlockLength
       trigger.run = { inline: 'bash lib/scripts/paas.sh' }
     end
   end
+
+  config.vm.define 'ldap', autostart: true do |ldap|
+    ldap.vm.box = 'omu/debian-stable-server'
+
+    ldap.vm.network :forwarded_port, guest: 389, host: 1389
+
+    ldap.vm.provider :lxc do |lxc|
+      lxc.customize 'cgroup.memory.limit_in_bytes', '2048M'
+    end
+
+    ldap.vm.provision 'shell', path: 'lib/scripts/ldap.sh'
+  end
 end
