@@ -36,7 +36,7 @@ module Admin
 
       assert_equal 'create', @controller.action_name
       assert_equal 'Test Assessment Method', administrative_function.name
-      assert_redirected_to [:admin, :administrative_functions]
+      assert_redirected_to %i[admin administrative_functions]
       assert_equal translate('.create.success'), flash[:notice]
     end
 
@@ -59,7 +59,7 @@ module Admin
 
       assert_equal 'update', @controller.action_name
       assert_equal 'Test Assessment Method Update', administrative_function.name
-      assert_redirected_to [:admin, :administrative_functions]
+      assert_redirected_to %i[admin administrative_functions]
       assert_equal translate('.update.success'), flash[:notice]
     end
 
@@ -69,7 +69,7 @@ module Admin
       end
 
       assert_equal 'destroy', @controller.action_name
-      assert_redirected_to [:admin, :administrative_functions]
+      assert_redirected_to %i[admin administrative_functions]
       assert_equal translate('.destroy.success'), flash[:notice]
     end
 

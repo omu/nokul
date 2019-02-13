@@ -1,0 +1,29 @@
+<div class="card">
+  <div class="card-body">
+    <center>
+      <% if @user.avatar.attached? && @user.avatar.variable? %>
+        <%= image_tag @user.avatar.variant(resize: '150x150') %>
+      <% else %>
+        <%= image_tag 'profile/avatar_placeholder.svg', width: '150px' %>
+      <% end %>
+    </center>
+    <hr />
+    <div class="list-group">
+      <div class="list-group-item">
+        <%= link_to [:user_management, @user, :addresses] do %>
+         <%= fa_icon('home') %> <%= t('.addresses') %>
+        <% end %>
+      </div>
+      <div class="list-group-item" href="#">
+        <%= link_to [:user_management, @user, :identities] do %>
+          <%= fa_icon('user') %> <%= t('.identities') %>
+        <% end %>
+      </div>
+      <div class="list-group-item" href="#">
+        <%= link_to [:user_management, @user, :employees] do %>
+          <%= fa_icon('superpowers') %> <%= t('.employees') %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

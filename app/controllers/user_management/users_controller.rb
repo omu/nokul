@@ -37,7 +37,7 @@ module UserManagement
       if @user.destroy
         redirect_with('.success')
       else
-        redirect_to([:user_management, :users], alert: t('.warning'))
+        redirect_to(%i[user_management users], alert: t('.warning'))
       end
     end
 
@@ -57,7 +57,7 @@ module UserManagement
     end
 
     def redirect_with(message)
-      redirect_to([:user_management, :users], notice: t(".#{message}"))
+      redirect_to(%i[user_management users], notice: t(".#{message}"))
     end
   end
 end

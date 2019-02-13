@@ -54,9 +54,7 @@ module Account
     end
 
     def check_existing_addresses
-      if current_user.addresses.informal.present?
-        redirect_to :addresses, notice: t('.already_have_informal_address')
-      end
+      redirect_to :addresses, notice: t('.already_have_informal_address') if current_user.addresses.informal.present?
     end
 
     def redirect_with(message)

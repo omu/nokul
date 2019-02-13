@@ -14,7 +14,7 @@ module Kps
     after_perform do |job|
       model_data = @response.model_data.merge!(type: 'formal')
 
-      model_data.merge!(student_id: @student_id) if @student_id.present?
+      model_data[:student_id] = @student_id if @student_id.present?
 
       user = job.arguments.first
       user_identity = user.identities.user_identity

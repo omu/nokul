@@ -18,7 +18,7 @@ class Address < ApplicationRecord
   validates :phone_number, length: { maximum: 255 },
                            allow_nil: true,
                            allow_blank: true,
-                           telephone_number: { country: proc{ |record| record.country }, types: [:mobile] }
+                           telephone_number: { country: proc { |record| record.country }, types: [:mobile] }
   validates :full_address, presence: true, length: { maximum: 255 }
   validates_with AddressAndIdentityValidator, on: :create
 

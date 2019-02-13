@@ -8,7 +8,7 @@ module LastUpdateFromMernis
     return unless elapsed_time.blank? || elapsed_time < 7
 
     namespace, controller = request.controller_class.to_s.split('::')
-    controller, _ = controller.split('Controller')
+    controller, = controller.split('Controller')
 
     if namespace.eql?('Account')
       redirect_to([controller.downcase], alert: t('.wait'))

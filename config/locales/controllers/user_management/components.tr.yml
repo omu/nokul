@@ -1,0 +1,7 @@
+tr:
+  user_management:
+    components:
+      sidebar:
+        addresses: Adres Bilgileri
+        identities: Kimlik Bilgileri
+        employees: Personel Bilgileri

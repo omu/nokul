@@ -1,0 +1,7 @@
+en:
+  user_management:
+    components:
+      sidebar:
+        addresses: Addresses
+        identities: Identities
+        employees: Employee Operations

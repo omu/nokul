@@ -1,0 +1,19 @@
+en:
+  user_management:
+    identities:
+      index:
+        update_from_mernis: Update from MERNIS
+        user_identity: User Identity
+        date_of_birth: Date of Birth
+        fathers_name: Fathers Name
+        first_name: First Name
+        gender: Gender
+        last_name: Last Name
+        marital_status: Marital Status
+        mothers_name: Mothers Name
+        place_of_birth: Place of Birth
+        registered_to: Registration
+        type: Identity Type
+      save_from_mernis:
+        wait: You recently created or updated your identity. You can only update your identity once a week from MERNIS.
+        will_update: We have received your identity create or update request. Your identity will be updated in a couple of seconds/minutes.
