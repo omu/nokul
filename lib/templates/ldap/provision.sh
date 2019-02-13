@@ -1,3 +1,5 @@
+#!/bin/bash
+
 DEBIAN_FRONTEND=noninteractive apt-get -y update
 DEBIAN_FRONTEND=noninteractive apt-get install -y slapd ldap-utils
 gem install bcrypt
