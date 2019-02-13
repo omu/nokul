@@ -22,17 +22,6 @@ module Xokul
         )[:status]
       end
       # rubocop:enable Metrics/MethodLength
-
-      def id_number(**option)
-        Connection.request(
-          '/kps/verifications/id_numbers', params: {
-            id_number: option.fetch(:id_number),
-            first_name: option.fetch(:first_name),
-            last_name: option.fetch(:last_name),
-            year_of_birth: option.fetch(:year_of_birth)
-          }
-        )[:status]
-      end
     end
   end
 end
