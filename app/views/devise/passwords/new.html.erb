@@ -2,7 +2,7 @@
   <div class="card mx-4">
     <div class="card-body p-4">
       <h1><%= t('devise.common.reset_password') %></h1>
-      <p class="text-muted"><%= t('.hint') %><p>
+      <p class="text-muted"><%= t('.hint') %></p>
       <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
         <%= f.error_notification %>
         <div class="input-group mb-3">
