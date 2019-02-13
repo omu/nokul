@@ -22,9 +22,9 @@
       <%= form_tag path, method: :get do %>
         <div class="form-group">
           <%= text_field_tag :term,
-                              params[:term],
-                              placeholder: placeholder,
-                              class: 'form-control' %>
+                             params[:term],
+                             placeholder: placeholder,
+                             class: 'form-control' %>
         </div>
         <%= submit_tag t('search'), class: 'btn btn-primary' %>
       <% end %>

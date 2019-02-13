@@ -1,0 +1,40 @@
+linters:
+  Rubocop:
+    enabled: true
+    rubocop_config:
+      inherit_from:
+        - .rubocop.yml
+      Style/FrozenStringLiteralComment:
+        Enabled: false
+      Layout/InitialIndentation:
+        Enabled: false
+      Layout/TrailingBlankLines:
+        Enabled: false
+      Naming/FileName:
+        Enabled: false
+      Style/FrozenStringLiteralComment:
+        Enabled: false
+      Metrics/LineLength:
+        Enabled: false
+      Lint/UselessAssignment:
+        Enabled: false
+      Rails/OutputSafety:
+        Enabled: false
+  SpaceAroundErbTag:
+    enabled: true
+  FinalNewline:
+    enabled: true
+  ErbSafety:
+    enabled: true
+  RightTrim:
+    enabled: false
+  SelfClosingTag:
+    enabled: true
+  AllowedScriptType:
+    enabled: true
+    allowed_types:
+      - 'application/json'
+      - 'text/javascript'
+      - 'text/html'
+    allow_blank: false
+    disallow_inline_scripts: false

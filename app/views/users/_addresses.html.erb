@@ -3,7 +3,7 @@
     <div class="card">
       <div class="card-body">
         <%= link_to_new(t('.new_address'), new_user_address_path(@user)) unless @user.addresses.informal.present? %>
-        <%= link_to (@user.addresses.formal.present? ? t('.update_from_mernis') : t('.create_from_mernis') ), save_address_from_mernis_user_path, class: "btn btn-outline-primary btn-sm"  %>
+        <%= link_to (@user.addresses.formal.present? ? t('.update_from_mernis') : t('.create_from_mernis')), save_address_from_mernis_user_path, class: 'btn btn-outline-primary btn-sm' %>
       </div>
     </div>
   </div>
