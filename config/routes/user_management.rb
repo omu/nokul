@@ -10,6 +10,7 @@ namespace :user_management do
     end
 
     resources :employees, except: %i[index show]
+    resources :students, except: %i[index show]
     resources :duties, except: %i[index show]
     resources :positions, except: %i[index show]
 

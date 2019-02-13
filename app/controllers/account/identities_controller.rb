@@ -9,7 +9,7 @@ module Account
     before_action :check_existing_identities, only: %i[new create]
 
     def index
-      @identities = current_user.identities
+      @identities = current_user.identities.order(:type)
     end
 
     def new
@@ -55,9 +55,7 @@ module Account
 
     def check_existing_identities
       identities = current_user.identities
-      if identities.formal.present? || identities.informal.present?
-        redirect_to :identities, notice: t('.already_have_identity')
-      end
+      redirect_to :identities, notice: t('.already_have_identity') if identities.present?
     end
 
     def redirect_with(message)

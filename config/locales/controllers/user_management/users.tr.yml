@@ -35,11 +35,7 @@ tr:
         warning: Kullanıcı silinemedi!
       show:
         <<: *user_attributes
-        card_header: Kullanıcı Bilgileri
-        account: Hesap Bilgileri
-        addresses: Adres Bilgileri
-        employees: Personel İşlemleri
-        identities: Kimlik Bilgileri
+        user_information: Kullanıcı Bilgileri
   helpers:
     submit:
       user:

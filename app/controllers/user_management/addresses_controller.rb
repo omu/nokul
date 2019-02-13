@@ -10,7 +10,7 @@ module UserManagement
     before_action :check_existing_addresses, only: %i[new create]
 
     def index
-      @addresses = @user.addresses
+      @addresses = @user.addresses.order(:type)
     end
 
     def new

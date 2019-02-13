@@ -9,7 +9,7 @@ module Account
     before_action :check_existing_addresses, only: %i[new create]
 
     def index
-      @addresses = current_user.addresses.includes(district: [:city])
+      @addresses = current_user.addresses.order(:type).includes(district: :city)
     end
 
     def new

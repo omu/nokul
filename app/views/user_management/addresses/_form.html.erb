@@ -1,34 +1,41 @@
-<%= render 'layouts/builders/form',
-           namespace: ['user_management'],
-           klass: [@user, @address],
-           params: [
-            {
-              field: 'district_id',
-              width: 12,
-              required: true,
-              collection: City.includes(:districts).order(:name),
-              as: 'grouped_select',
-              group_method: 'districts',
-              group_label_method: 'name'
-            },
-            {
-              field: 'country',
-              as: 'select',
-              collection: Country.order(:name).pluck(:name, :alpha_2_code),
-              label_method: :first,
-              value_method: :second,
-              selected: 'TR',
-              width: 4
-            },
-            {
-              field: 'phone_number',
-              width: 8
-            },
-            {
-              field: 'full_address',
-              width: 12,
-              as: 'text'
-            }
-           ] %>
+<div class='row'>
+  <div class='col-lg-2'>
+    <%= render 'user_management/components/sidebar' %>
+  </div>
+  <div class='col-lg-10'>
+    <%= render 'layouts/builders/form',
+               namespace: ['user_management'],
+               klass: [@user, @address],
+               params: [
+                {
+                  field: 'district_id',
+                  width: 12,
+                  required: true,
+                  collection: City.includes(:districts).order(:name),
+                  as: 'grouped_select',
+                  group_method: 'districts',
+                  group_label_method: 'name'
+                },
+                {
+                  field: 'country',
+                  as: 'select',
+                  collection: Country.order(:name).pluck(:name, :alpha_2_code),
+                  label_method: :first,
+                  value_method: :second,
+                  selected: 'TR',
+                  width: 4
+                },
+                {
+                  field: 'phone_number',
+                  width: 8
+                },
+                {
+                  field: 'full_address',
+                  width: 12,
+                  as: 'text'
+                }
+               ] %>
 
-<%= render 'select2' %>
+    <%= render 'select2' %>
+  </div>
+</div>

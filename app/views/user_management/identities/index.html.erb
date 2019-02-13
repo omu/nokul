@@ -1,44 +1,72 @@
-<div class="alert alert-light">
-  <%= link_to_new(t('.new_address'), [:new, :user_management, :user, :address]) unless @user.addresses.informal.present? %>
-  <%= link_to (@addresses.formal.present? ? t('.update_from_mernis') :  t('.create_from_mernis') ),
-              [:save_from_mernis, :user_management, @user, :addresses], class: "btn btn-outline-primary btn-sm"  %>
-</div>
-
-<div class="row">
-  <% @addresses.each do |address| %>
-    <div class="col-sm-12">
-      <div class="card">
-        <div class="card-header">
-          <%= fa_icon('address-book-o') %>
-          <% if address.formal? %>
-            <strong><%= t('.formal_address') %></strong>
+<div class='row'>
+  <div class='col-lg-2'>
+    <%= render 'user_management/components/sidebar' %>
+  </div>
+  <div class='col-lg-10'>
+    <div class='alert alert-light'>
+      <%= link_to_new(t('.new_identity'), [:new, :user_management, :user, :identity]) unless @user.identities.formal.present? %>
+      <%= link_to (@identities.formal.present? ? t('.update_from_mernis') :  t('.create_from_mernis') ),
+                  [:save_from_mernis, :user_management, @user, :identities], class: "btn btn-outline-primary btn-sm"  %>
+    </div>
+    <% @identities.each do |identity| %>
+      <div class='card'>
+        <div class='card-header'>
+          <%= fa_icon 'id-card' %>
+          <% if identity.formal? %>
+            <% if identity.student_id.present? %>
+              <strong><%= t('.student_identity') %> (<%= identity.student.unit.name %> / <%= identity.student.student_number %>)</strong>
+            <% else %>
+              <strong><%= t('.user_identity') %></strong>
+            <% end %>
           <% else %>
-            <strong><%= t('.informal_address') %></strong>
+            <strong><%= t('.informal_identity') %></strong>
             <div class="card-header-actions">
-              <%= link_to_edit([:edit, :user_management, address.user, address]) %>
-              <%= link_to_destroy([:user_management, address.user, address]) %>
+              <%= link_to_edit(edit_identity_path(identity)) %>
+              <%= link_to_destroy(identity_path(identity)) %>
             </div>
           <% end %>
         </div>
-        <div class="card-body">
-          <table class='table table-responsive-sm'>
-            <% unless address.formal? %>
-              <tr>
-                <th width="15%"><%= t('.phone_number') %></td>
-                <td><%= address.phone_number %></td>
-              </tr>
-            <% end %>
+        <div class='card-body'>
+          <table class='table table-borderless table-sm'>
             <tr>
-              <th width="15%"><%= t('.full_address') %></td>
-              <td><%= address.full_address %></td>
+              <th width="15%"><%= t('.first_name') %></th>
+              <td><%= identity.first_name %></td>
             </tr>
             <tr>
-              <th width="15%"><%= t('.district_and_city') %></td>
-              <td><%= address.district.name %> / <%= address.district.city.name %></td>
+              <th width="15%"><%= t('.last_name') %></th>
+              <td><%= identity.last_name %></td>
+            </tr>
+            <tr>
+              <th width="15%"><%= t('.gender') %></th>
+              <td><%= enum_t(identity, :gender) %></td>
+            </tr>
+            <tr>
+              <th width="15%"><%= t('.marital_status') %></th>
+              <td><%= enum_t(identity, :marital_status) %></td>
+            </tr>
+            <tr>
+              <th width="15%"><%= t('.place_of_birth') %></th>
+              <td><%= identity.place_of_birth %></td>
+            </tr>
+            <tr>
+              <th width="15%"><%= t('.date_of_birth') %></th>
+              <td><%= identity.date_of_birth %></td>
+            </tr>
+            <tr>
+              <th width="15%"><%= t('.mothers_name') %></th>
+              <td><%= identity.mothers_name %></td>
+            </tr>
+            <tr>
+              <th width="15%"><%= t('.fathers_name') %></th>
+              <td><%= identity.fathers_name %></td>
+            </tr>
+            <tr>
+              <th width="15%"><%= t('.registered_to') %></th>
+              <td colspan="3"><%= identity.registered_to %></td>
             </tr>
           </table>
         </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>

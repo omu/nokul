@@ -13,7 +13,8 @@ en:
     registrations:
       edit:
         account_settings: Account Settings
-        current_password: you must enter your current password for changing your e-mail address
+        current_password: Current Password
+        current_password_hint: you must enter your current password for changing your e-mail address
         leave_blank: leave blank if you don't want to change
       new:
         create_your_account: Create Your Account

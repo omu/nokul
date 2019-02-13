@@ -6,24 +6,26 @@ module Kps
 
     # slow operation
     def perform(user, student_id = nil)
-      @user = user
       @student_id = student_id
-      @response = Xokul::Kps::Identity.new(@user.id_number)
+      @response = Xokul::Kps::Identity.new(user.id_number)
     end
 
     # callbacks
-    after_perform do
+    after_perform do |job|
       model_data = @response.model_data.merge!(type: 'formal')
-      user_identity = @user.identities.user_identity
-      student_identity = @user.identities.where(student_id: @student_id)
+
+      model_data.merge!(student_id: @student_id) if @student_id.present?
+
+      user = job.arguments.first
+      user_identity = user.identities.user_identity
 
       if @student_id.present?
-        model_data = model_data.merge(student_id: @student_id)
-        return if student_identity.present?
+        return if user.identities.where(student_id: @student_id).present?
 
-        @user.identities.create(model_data)
+        user.identities.create(model_data)
       else
-        user_identity.present? ? user_identity.update(model_data) : @user.identities.create(model_data)
+        user_identity.touch && user_identity.update(model_data) if user_identity.present?
+        user.identities.create(model_data) unless user_identity.present?
       end
     end
   end

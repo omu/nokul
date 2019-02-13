@@ -1,54 +1,61 @@
-<%= render 'layouts/builders/form',
-           namespace: ['user_management'],
-           klass: [@user, @identity],
-           params: [
-            {
-              field: 'first_name',
-              width: 12,
-              required: true
-            },
-            {
-              field: 'last_name',
-              width: 12,
-              required: true
-            },
-            {
-              field: 'mothers_name',
-              width: 6
-            },
-            {
-              field: 'fathers_name',
-              width: 6
-            },
-            {
-              field: 'gender',
-              width: 6,
-              required: true,
-              collection: enum_options_for_select(Identity, :gender)
-            },
-            {
-              field: 'marital_status',
-              width: 6,
-              collection: enum_options_for_select(Identity, :marital_status)
-            },
-            {
-              field: 'place_of_birth',
-              width: 6,
-              required: true,
-              collection: City.all,
-              value_method: :name
-            },
-            {
-              field: 'date_of_birth',
-              width: 6,
-              required: true,
-              start_year: 1965,
-              end_year: Date.today.year - 10
-            },
-            {
-              field: 'registered_to',
-              as: 'text',
-              width: 12,
-              required: false
-            },
-           ] %>
+<div class='row'>
+  <div class='col-lg-2'>
+    <%= render 'user_management/components/sidebar' %>
+  </div>
+  <div class='col-lg-10'>
+    <%= render 'layouts/builders/form',
+               namespace: ['user_management'],
+               klass: [@user, @identity],
+               params: [
+                {
+                  field: 'first_name',
+                  width: 12,
+                  required: true
+                },
+                {
+                  field: 'last_name',
+                  width: 12,
+                  required: true
+                },
+                {
+                  field: 'mothers_name',
+                  width: 6
+                },
+                {
+                  field: 'fathers_name',
+                  width: 6
+                },
+                {
+                  field: 'gender',
+                  width: 6,
+                  required: true,
+                  collection: enum_options_for_select(Identity, :gender)
+                },
+                {
+                  field: 'marital_status',
+                  width: 6,
+                  collection: enum_options_for_select(Identity, :marital_status)
+                },
+                {
+                  field: 'place_of_birth',
+                  width: 6,
+                  required: true,
+                  collection: City.all,
+                  value_method: :name
+                },
+                {
+                  field: 'date_of_birth',
+                  width: 6,
+                  required: true,
+                  start_year: 1965,
+                  end_year: Date.today.year - 10
+                },
+                {
+                  field: 'registered_to',
+                  as: 'text',
+                  width: 12,
+                  required: false
+                },
+               ] %>
+  </div>
+</div>

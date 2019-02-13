@@ -21,7 +21,10 @@
               <%= f.input :password_confirmation, required: false, placeholder: false %>
             </div>
             <div class='form-group col-sm-12'>
-              <%= f.input :current_password, hint: t('.current_password'), required: true, placeholder: false %>
+              <%= f.input :current_password, label: t('.current_password'),
+                          hint: t('.current_password_hint'),
+                          required: true,
+                          placeholder: false %>
             </div>
             <div class='form-group col-sm-12'>
               <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>

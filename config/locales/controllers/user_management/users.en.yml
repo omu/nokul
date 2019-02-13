@@ -35,11 +35,7 @@ en:
         warning: User can not be deleted.
       show:
         <<: *user_attributes
-        card_header: Account Information
-        account: Account
-        addresses: Addresses
-        employees: Employee Actions
-        identities: Identities
+        user_information: Account Information
   helpers:
     submit:
       user:

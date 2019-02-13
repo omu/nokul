@@ -13,7 +13,9 @@ module Kps
     after_perform do |job|
       model_data = @response.model_data
       address = job.arguments.first.addresses.formal
-      address.present? ? address.update(model_data) : address.create(model_data)
+
+      address.touch && address.update(model_data) if address.present?
+      address.create(model_data) unless address.present?
     end
   end
 end

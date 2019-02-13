@@ -1,76 +1,58 @@
-<div class="card">
-  <div class="card-header">
-    <%= t('.card_header') %>
-    <div class="card-header-actions">
-      <%= link_to_actions([:user_management, @user], except: :show) %>
-    </div>
+<div class='row'>
+  <div class='col-lg-2'>
+    <%= render 'user_management/components/sidebar' %>
   </div>
+  <div class='col-lg-10'>
+    <div class="card">
+      <div class="card-header">
+        <%= t('.user_information') %>
+        <div class="card-header-actions">
+          <%= link_to_actions([:user_management, @user], except: :show) %>
+        </div>
+      </div>
 
-  <div class="card-body">
-    <table class="table table-responsive-sm">
-      <tbody>
-        <tr>
-          <td><%= t('.id_number') %></td>
-          <td><%= @user.id_number %></td>
-        </tr>
-        <tr>
-          <td><%= t('.email') %></td>
-          <td><%= @user.email %></td>
-        </tr>
-        <tr>
-          <td><%= t('.sign_in_count') %></td>
-          <td><%= @user.sign_in_count %></td>
-        </tr>
-        <tr>
-          <td><%= t('.current_sign_in_at') %></td>
-          <td><%= @user.current_sign_in_at %></td>
-        </tr>
-        <tr>
-          <td><%= t('.last_sign_in_at') %></td>
-          <td><%= @user.last_sign_in_at %></td>
-        </tr>
-        <tr>
-          <td><%= t('created_at') %></td>
-          <td><%= @user.created_at %></td>
-        </tr>
-        <tr>
-          <td><%= t('updated_at') %></td>
-          <td><%= @user.updated_at %></td>
-        </tr>
-        <tr>
-          <td><%= t('.password_changed_at') %></td>
-          <td><%= @user.password_changed_at %></td>
-        </tr>
-        <tr>
-          <td><%= t('.locked_at') %></td>
-          <td><%= @user.locked_at %></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="card">
-  <div class="card-body">
-    <div class="list-group">
-      <div class="list-group-item">
-        <%= link_to [:user_management, @user, :addresses] do %>
-         <%= fa_icon('home') %> <%= t('.addresses') %>
-        <% end %>
-      </a>
-    </div>
-    <div class="list-group">
-      <div class="list-group-item" href="#">
-        <%= link_to [:user_management, @user, :identities] do %>
-         <%= fa_icon('user') %> <%= t('.identities') %>
-        <% end %>
-      </a>
-    </div>
-    <div class="list-group">
-      <div class="list-group-item" href="#">
-        <%= link_to [:user_management, @user, :employees] do %>
-         <%= fa_icon('superpowers') %> <%= t('.employees') %>
-        <% end %>
-      </a>
+      <div class="card-body">
+        <table class="table table-responsive-sm">
+          <tbody>
+            <tr>
+              <td><%= t('.id_number') %></td>
+              <td><%= @user.id_number %></td>
+            </tr>
+            <tr>
+              <td><%= t('.email') %></td>
+              <td><%= @user.email %></td>
+            </tr>
+            <tr>
+              <td><%= t('.sign_in_count') %></td>
+              <td><%= @user.sign_in_count %></td>
+            </tr>
+            <tr>
+              <td><%= t('.current_sign_in_at') %></td>
+              <td><%= @user.current_sign_in_at %></td>
+            </tr>
+            <tr>
+              <td><%= t('.last_sign_in_at') %></td>
+              <td><%= @user.last_sign_in_at %></td>
+            </tr>
+            <tr>
+              <td><%= t('created_at') %></td>
+              <td><%= @user.created_at %></td>
+            </tr>
+            <tr>
+              <td><%= t('updated_at') %></td>
+              <td><%= @user.updated_at %></td>
+            </tr>
+            <tr>
+              <td><%= t('.password_changed_at') %></td>
+              <td><%= @user.password_changed_at %></td>
+            </tr>
+            <tr>
+              <td><%= t('.locked_at') %></td>
+              <td><%= @user.locked_at %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>

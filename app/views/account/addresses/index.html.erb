@@ -20,19 +20,19 @@
           <% end %>
         </div>
         <div class="card-body">
-          <table class='table table-responsive-sm'>
+          <table class='table table-borderless table-sm'>
             <% unless address.formal? %>
               <tr>
-                <th width="15%"><%= t('.phone_number') %></td>
+                <th width="15%"><%= t('.phone_number') %></th>
                 <td><%= address.phone_number %></td>
               </tr>
             <% end %>
             <tr>
-              <th width="15%"><%= t('.full_address') %></td>
+              <th width="15%"><%= t('.full_address') %></th>
               <td><%= address.full_address %></td>
             </tr>
             <tr>
-              <th width="15%"><%= t('.district_and_city') %></td>
+              <th width="15%"><%= t('.district_and_city') %></th>
               <td><%= address.district.name %> / <%= address.district.city.name %></td>
             </tr>
           </table>

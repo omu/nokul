@@ -24,33 +24,41 @@
           <% end %>
         </div>
         <div class="card-body">
-          <table class='table table-responsive-sm'>
+          <table class='table table-borderless table-sm'>
             <tr>
-              <th width="15%"><%= t('.first_name') %></td>
+              <th width="15%"><%= t('.first_name') %></th>
               <td><%= identity.first_name %></td>
-              <th width="15%"><%= t('.gender') %></td>
+            </tr>
+            <tr>
+              <th width="15%"><%= t('.last_name') %></th>
+              <td><%= identity.last_name %></td>
+            </tr>
+            <tr>
+              <th width="15%"><%= t('.gender') %></th>
               <td><%= enum_t(identity, :gender) %></td>
             </tr>
             <tr>
-              <th width="15%"><%= t('.last_name') %></td>
-              <td><%= identity.last_name %></td>
-              <th width="15%"><%= t('.marital_status') %></td>
+              <th width="15%"><%= t('.marital_status') %></th>
               <td><%= enum_t(identity, :marital_status) %></td>
             </tr>
             <tr>
-              <th width="15%"><%= t('.place_of_birth') %></td>
+              <th width="15%"><%= t('.place_of_birth') %></th>
               <td><%= identity.place_of_birth %></td>
-              <th width="15%"><%= t('.mothers_name') %></td>
+            </tr>
+            <tr>
+              <th width="15%"><%= t('.date_of_birth') %></th>
+              <td><%= identity.date_of_birth %></td>
+            </tr>
+            <tr>
+              <th width="15%"><%= t('.mothers_name') %></th>
               <td><%= identity.mothers_name %></td>
             </tr>
             <tr>
-              <th width="15%"><%= t('.date_of_birth') %></td>
-              <td><%= identity.date_of_birth %></td>
-              <th width="15%"><%= t('.fathers_name') %></td>
+              <th width="15%"><%= t('.fathers_name') %></th>
               <td><%= identity.fathers_name %></td>
             </tr>
             <tr>
-              <th width="15%"><%= t('.registered_to') %></td>
+              <th width="15%"><%= t('.registered_to') %></th>
               <td colspan="3"><%= identity.registered_to %></td>
             </tr>
           </table>

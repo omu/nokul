@@ -13,7 +13,8 @@ tr:
     registrations:
       edit:
         account_settings: Hesap Ayarları
-        current_password: e-mail adresinizi değiştirebilmek için mevcut şifrenizi girmeniz gerekmektedir
+        current_password: Mevcut Şifreniz
+        current_password_hint: e-mail adresinizi değiştirebilmek için mevcut şifrenizi girmeniz gerekmektedir
         leave_blank: değiştirmek istemiyorsanız boş bırakın
       new:
         create_your_account: Hesabınızı oluşturun
