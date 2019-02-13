@@ -64,8 +64,8 @@ group :development, :test do
   gem 'brakeman', require: false
   gem 'bundler-audit'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'erb_lint', require: false
   gem 'dotenv-rails'
+  gem 'erb_lint', require: false
   gem 'lol_dba'
   gem 'rubocop'
   gem 'simplecov', require: false
