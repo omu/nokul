@@ -4,5 +4,5 @@
            collection: @titles,
            pagy: @pagy,
            card_header: t('.card_header'),
-           params: ['name', 'code', 'branch'],
-           actions: ['edit', 'destroy'] %>
+           params: %w[name code branch],
+           actions: %w[edit destroy] %>

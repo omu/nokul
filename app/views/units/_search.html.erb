@@ -37,7 +37,7 @@
                 <%= label_tag :duration, t('.duration') %>
                 <%= text_field_tag :duration,
                                    params[:duration],
-                                   placeholder: "Öğretim Süresi (Yıl)",
+                                   placeholder: 'Öğretim Süresi (Yıl)',
                                    class: 'form-control' %>
               </div>
             </div>
@@ -63,7 +63,7 @@
               <div class="form-group">
                 <%= label_tag :unit_instruction_type_id, t('.unit_instruction_type') %>
                 <%= select_tag(:unit_instruction_type_id,
-                               options_from_collection_for_select(UnitInstructionType.all, :id, :name,  params[:unit_instruction_type_id]),
+                               options_from_collection_for_select(UnitInstructionType.all, :id, :name, params[:unit_instruction_type_id]),
                                include_blank: true,
                                class: 'form-control') %>
               </div>

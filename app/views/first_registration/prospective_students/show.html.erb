@@ -19,7 +19,7 @@
               <th><%= t('.meb_status') %></th>
               <td>
                 <p><%= @prospective_student.meb_status ? t('.graduated') : t('.not_graduated_or_unknown') %></p>
-                <p><small><%= t('.last_update') %>: <%= as_date_and_time(@prospective_student.meb_status_date) %></p>
+                <p><small><%= t('.last_update') %>: <%= as_date_and_time(@prospective_student.meb_status_date) %></small></p>
               </td>
             </tr>
             <tr class="<%= boolean_to_class_for_table(@prospective_student.military_status) %>">
@@ -48,7 +48,7 @@
                   <th><%= registration_document.name %></th>
                   <td>
                     <label class="switch switch-label switch-pill switch-success">
-                      <input type="checkbox" class="registration-documents-checks switch-input">
+                      <input type="checkbox" class="registration-documents-checks switch-input" />
                       <span class="switch-slider" data-checked="&#x2713;" data-unchecked="&#x2715;"></span>
                     </label>
                   </td>

@@ -31,9 +31,9 @@
                 <% params.each do |parameter| %>
                   <% value = item.send(parameter) %>
                   <%= content_tag :td do %>
-                    <% enum = item.class.defined_enums.has_key?(parameter) %>
+                    <% enum = item.class.defined_enums.key?(parameter) %>
                     <% boolean = [true, false].include?(value) %>
-                    <%= (boolean || enum) ? enum_t(item, parameter.to_sym) : value %>
+                    <%= boolean || enum ? enum_t(item, parameter.to_sym) : value %>
                   <% end %>
                 <% end %>
                 <td>

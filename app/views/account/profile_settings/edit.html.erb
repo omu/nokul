@@ -19,7 +19,7 @@
                 <%= image_tag 'profile/avatar_placeholder.svg', width: '150px' %>
               <% end %>
               <p><%= f.input :avatar, label: false, as: :file %></p>
-              <hr \>
+              <hr />
             </div>
 
             <div class='form-group col-sm-8'>
@@ -94,7 +94,7 @@
 
             <% unless current_user.employees.active.any? %>
               <div class='form-group col-sm-12'>
-                <hr \>
+                <hr />
                 <%= f.button :submit, t('save'), class: 'btn btn-outline-success btn-sm' %>
                 <%= link_to_back(:back) %>
               </div>
@@ -115,7 +115,7 @@
             <div class='form-group col-sm-6'>
               <%= f.input :public_studies, label: t('.public_studies'), as: :boolean, class: 'form-check-input' %>
             </div>
-            <hr \>
+            <hr />
             <div class='form-group col-sm-12'>
               <%= f.button :submit, t('save'), class: 'btn btn-outline-success btn-sm' %>
               <%= link_to_back(:back) %>

@@ -17,7 +17,6 @@
     UnitType
     UniversityType
   ] %>
-
   <% yoksis_klasses.each do |klass| %>
     <%= render 'card',
                content: klass.constantize.count,

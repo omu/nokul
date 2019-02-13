@@ -4,7 +4,7 @@
     <%= render 'layouts/shared/meta' %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-    <script>
+    <script type="text/javascript">
       flatpickr.localize(flatpickr.l10ns["<%= I18n.locale %>"])
     </script>
   </head>
@@ -16,7 +16,6 @@
       <%= link_to :root, class: 'navbar-brand' do %>
         <%= image_tag 'baum-logo.svg', height: '36', width: '134', alt: 'BAUM Logo', class: 'navbar-brand-full' %>
       <% end %>
-      </a>
       <button class="navbar-toggler sidebar-toggler d-none d-md-block d-lg-none" type="button" data-toggle="sidebar-lg-show">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -27,7 +26,7 @@
           </a>
           <div class="dropdown-menu dropdown-menu-right">
             <div class="dropdown-header text-center">
-              <strong class='<%= t(".my_account") %>'><%= t('.my_account') %></strong>
+              <strong><%= t('.my_account') %></strong>
             </div>
             <%= link_to :identities, class: 'dropdown-item' do %>
               <%= fa_icon('id-card', text: t('.identities')) %>
@@ -60,7 +59,7 @@
     <div class="app-body">
       <%= render 'layouts/shared/sidebar' %>
       <main class="main">
-        <p>
+        <p></p>
         <div class="container-fluid">
           <div class="animated fadeIn">
             <%= yield %>
