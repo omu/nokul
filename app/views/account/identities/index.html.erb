@@ -1,7 +1,7 @@
 <div class="alert alert-light">
   <%= link_to_back user_path(@user) %>
   <%= link_to_new(t('.new_identity'), new_user_identity_path(@user)) unless @user.identities.informal.present? %>
-  <%= link_to (@identities.formal.present? ? t('.update_from_mernis') :  t('.create_from_mernis') ), save_from_mernis_user_identities_path, class: "btn btn-outline-primary btn-sm"  %>
+  <%= link_to (@identities.formal.present? ? t('.update_from_mernis') : t('.create_from_mernis')), save_from_mernis_user_identities_path, class: 'btn btn-outline-primary btn-sm' %>
 </div>
 
 <div class="row">

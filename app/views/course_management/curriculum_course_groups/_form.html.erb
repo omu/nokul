@@ -22,14 +22,14 @@
 
           <div class="row">
             <div class='col-sm-12'>
-              <h4><%= t('.courses')%></h4>
-              <hr>
+              <h4><%= t('.courses') %></h4>
+              <hr />
             </div>
             <%= f.simple_fields_for :curriculum_courses do |p| %>
               <%= p.input :curriculum_semester_id, as: :hidden %>
               <div class='col-sm-6'>
                 <%= p.association :course,
-                                  collection: [ p.object.course ],
+                                  collection: [p.object.course],
                                   include_blank: false,
                                   readonly: true %>
               </div>
