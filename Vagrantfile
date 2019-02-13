@@ -57,6 +57,6 @@ Vagrant.configure('2') do |config| # rubocop:disable Metrics/BlockLength
       lxc.customize 'cgroup.memory.limit_in_bytes', '2048M'
     end
 
-    ldap.vm.provision 'shell', path: 'lib/templates/ldap/provision.sh'
+    ldap.vm.provision 'shell', path: 'lib/scripts/ldap.sh'
   end
 end
