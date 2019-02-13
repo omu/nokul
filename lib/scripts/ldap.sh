@@ -15,8 +15,6 @@ gem install bcrypt
 
 [[  ! -e /var/lib/ldap/bootstrapped   ]] || { echo >&2 "Found already configured slapd"; exit 0;  }
 
-echo "configuring slapd for first run"
-
 pushd /vagrant/lib/templates/ldap &>/dev/null
 
 debconf-set-selections <<-EOF
