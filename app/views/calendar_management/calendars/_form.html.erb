@@ -29,7 +29,7 @@
             <div class='col-sm-12'>
               <%= f.input :description, as: :text %>
             </div>
-            <hr \>
+            <hr />
             <div class='col-sm-12' id='calendar_events'>
               <div class='card event_card'>
                 <div class='card-header'>
@@ -42,7 +42,7 @@
                   <%= f.simple_fields_for :calendar_events do |event| %>
                     <%= render 'calendar_event_fields', f: event %>
                   <% end %>
-                  <br>
+                  <br />
                 </div>
               </div>
             </div>
