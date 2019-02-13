@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 2edeb438e6d5289cd0227fb73ab731839177fed6
+  revision: af6ade0cfd09e3d3d9ebd304a2afae4d60a044dc
   specs:
     actioncable (6.0.0.beta1)
       actionpack (= 6.0.0.beta1)
@@ -98,7 +98,7 @@ GIT
 
 GIT
   remote: https://github.com/rollbar/rollbar-gem.git
-  revision: 8b49f438730876c21cdafe0d2f1db0d7ef4003ff
+  revision: e3a35525d1b14fab587e317548ed4f5c1052240d
   specs:
     rollbar (2.18.2)
       multi_json
@@ -133,8 +133,8 @@ GEM
       io-like (~> 0.3.0)
     ast (2.4.0)
     aws-eventstream (1.0.1)
-    aws-partitions (1.136.0)
-    aws-sdk-core (3.46.0)
+    aws-partitions (1.137.0)
+    aws-sdk-core (3.46.1)
       aws-eventstream (~> 1.0)
       aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.0)
