@@ -1,0 +1,51 @@
+#----------------------------------------------------------------------
+#
+# trEduPerson v1.0.pre1
+# August 2018
+#
+# Schema for Turkish Educational Persons
+# Published by the Computer Research and Application Center
+#                  Ondokuz Mayis University of Turkey
+#
+# This file is in Public Domain
+#----------------------------------------------------------------------
+#
+# Changelog
+#
+# v1.0.pre1 - August 2018
+# Pre release
+
+objectIdentifier OMU 1.3.6.1.4.1.52548
+objectIdentifier trEduPerson OMU:1
+objectIdentifier trEduPersonObjectClass trEduPerson:1
+objectIdentifier trEduPersonAttributeType trEduPerson:2
+
+#----------------------------------------------------------------------
+# Attributes
+#----------------------------------------------------------------------
+
+# trEduPersonAffiliatedUnit
+attributetype ( trEduPersonAttributeType:1
+	NAME 'trEduPersonAffiliatedUnit'
+	DESC 'Affiliated YOKSIS unit id of person'
+	EQUALITY caseIgnoreMatch
+	SUBSTR caseIgnoreSubstringsMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
+
+# trEduPersonPrimaryAffiliatedUnit
+attributetype ( trEduPersonAttributeType:2
+	NAME 'trEduPersonPrimaryAffiliatedUnit'
+	DESC 'Primary affiliated YOKSIS unit id of person'
+	EQUALITY caseIgnoreMatch
+	SUBSTR caseIgnoreSubstringsMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+	SINGLE-VALUE )
+
+#----------------------------------------------------------------------
+# ObjectClasses
+#----------------------------------------------------------------------
+
+objectClass ( trEduPersonObjectClass:1
+    NAME 'trEduPerson'
+    AUXILIARY
+    MAY ( trEduPersonAffiliatedUnit $ trEduPersonPrimaryAffiliatedUnit ) )
