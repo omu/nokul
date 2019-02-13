@@ -6,7 +6,7 @@
           <%= f.association :lecturer, collection: @lecturers, label_method: lambda { |lecturer| full_name(lecturer) } %>
         </div>
         <div class='col-sm-6'>
-          <%= f.input :coordinator, collection: [[t('yes'), true] ,[t('no'), false]], required: true %>
+          <%= f.input :coordinator, collection: [[t('yes'), true], [t('no'), false]], required: true %>
         </div>
       </div>
     </div>

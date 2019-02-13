@@ -4,7 +4,7 @@
     <%= render 'layouts/shared/meta' %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-    <script>
+    <script type="text/javascript">
       flatpickr.localize(flatpickr.l10ns["<%= I18n.locale %>"])
     </script>
   </head>
@@ -27,7 +27,7 @@
           </a>
           <div class="dropdown-menu dropdown-menu-right">
             <div class="dropdown-header text-center">
-              <strong class='<%= t(".my_account") %>'><%= t('.my_account') %></strong>
+              <strong class='<%= t('.my_account') %>'><%= t('.my_account') %></strong>
             </div>
             <%= link_to [:user, :identities, { user_id: current_user.id }], class: 'dropdown-item' do %>
               <%= fa_icon('id-card', text: t('.identities')) %>
@@ -35,7 +35,7 @@
             <%= link_to [:user, :addresses, { user_id: current_user.id }], class: 'dropdown-item' do %>
               <%= fa_icon('home', text: t('.addresses')) %>
             <% end %>
-            <%= link_to [:user, :profile, {user_id: current_user.id }], class: 'dropdown-item' do %>
+            <%= link_to [:user, :profile, { user_id: current_user.id }], class: 'dropdown-item' do %>
               <%= fa_icon('user', text: t('.profile_settings')) %>
             <% end %>
             <div class="dropdown-header text-center">
@@ -44,7 +44,7 @@
             <%= link_to %i[edit user registration], class: 'dropdown-item' do %>
               <%= fa_icon('shield', text: t('.account_settings')) %>
             <% end %>
-            <%= link_to %i[destroy user session], class: "dropdown-item", method: :delete do %>
+            <%= link_to %i[destroy user session], class: 'dropdown-item', method: :delete do %>
               <%= fa_icon('lock', text: t('.logout')) %>
             <% end %>
           </div>
