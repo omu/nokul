@@ -1,7 +1,7 @@
 <div id="certAccordion" data-children=".item">
   <% locals[:certifications].each do |cert| %>
   <div class="item">
-    <a data-toggle="collapse" data-parent="#certAccordion" href="#cert<%= cert.id %>" aria-expanded="false" aria-controls="certAccordion" >
+    <a data-toggle="collapse" data-parent="#certAccordion" href="#cert<%= cert.id %>" aria-expanded="false" aria-controls="certAccordion">
       <i class="fa fa-caret-right"></i>
       <%= cert.name %>
     </a>

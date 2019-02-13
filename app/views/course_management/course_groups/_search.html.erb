@@ -27,29 +27,29 @@
               <div class="form-group">
                 <%= label_tag :term, t('smart_search') %>
                 <%= text_field_tag :term,
-                                    params[:term],
-                                    placeholder: t('.smart_search_placeholder'),
-                                    class: 'form-control' %>
+                                   params[:term],
+                                   placeholder: t('.smart_search_placeholder'),
+                                   class: 'form-control' %>
               </div>
             </div>
             <div class="col-sm-6">
               <div class="form-group">
                 <%= label_tag(:unit_id, t('.unit')) %>
                 <%= select_tag(:unit_id,
-                              options_from_collection_for_select(Unit.active.coursable.order(:name), :id, :names_depth_cache, params[:unit_id]),
-                              include_blank: true,
-                              class: 'form-control',
-                              style: 'width: 100%') %>
+                               options_from_collection_for_select(Unit.active.coursable.order(:name), :id, :names_depth_cache, params[:unit_id]),
+                               include_blank: true,
+                               class: 'form-control',
+                               style: 'width: 100%') %>
               </div>
             </div>
             <div class="col-sm-6">
               <div class="form-group">
                 <%= label_tag(:course_group_type_id, t('.course_group_type')) %>
                 <%= select_tag(:course_group_type_id,
-                              options_from_collection_for_select(CourseGroupType.all, :id, :name, params[:course_group_type_id]),
-                              include_blank: true,
-                              class: 'form-control',
-                              style: 'width: 100%') %>
+                               options_from_collection_for_select(CourseGroupType.all, :id, :name, params[:course_group_type_id]),
+                               include_blank: true,
+                               class: 'form-control',
+                               style: 'width: 100%') %>
               </div>
             </div>
           </div>

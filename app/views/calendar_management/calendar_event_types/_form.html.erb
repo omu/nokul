@@ -2,20 +2,20 @@
            namespace: 'calendar_management',
            klass: @calendar_event_type,
            params: [
-            {
-              field: 'name',
-              width: 12,
-              required: true
-            },
-            {
-              field: 'category',
-              width: 12,
-              required: true,
-              collection: CalendarEventType.categories.keys.sort
-            },
-            {
-              field: 'identifier',
-              width: 12,
-              required: true
-            }
+             {
+               field: 'name',
+               width: 12,
+               required: true
+             },
+             {
+               field: 'category',
+               width: 12,
+               required: true,
+               collection: CalendarEventType.categories.keys.sort
+             },
+             {
+               field: 'identifier',
+               width: 12,
+               required: true
+             }
            ] %>
