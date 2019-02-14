@@ -19,7 +19,7 @@ ENV NODE_ENV=$NODE_ENV
 
 RUN case $RAILS_ENV in \
     test) apt-get -y update && apt-get -y install --no-install-recommends chromedriver && \
-	  apt-get clean && rm -rf /var/lib/apt/lists/* ;; \
+          apt-get clean && rm -rf /var/lib/apt/lists/* ;; \
     esac
 
 WORKDIR /app
