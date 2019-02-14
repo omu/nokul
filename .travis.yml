@@ -6,11 +6,6 @@ cache:
     - "$HOME/.bundle_config"
     - "$HOME/node_modules"
 
-before_install:
-  - curl -fsSL https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m) >docker-compose
-  - chmod +x docker-compose
-  - sudo mv -f docker-compose /usr/local/bin
-
 install:
   - docker-compose build test
   - docker-compose run test bin/plugdo bundle install -j4 --path /app/vendor/bundle --without development
