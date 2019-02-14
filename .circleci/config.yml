@@ -192,21 +192,21 @@ workflows:
       - test_suite:
           requires:
             - bundle_assets
-      - deploy_develop:
-          requires:
-            - quality
-            - security
-            - database
-            - test_suite
-          filters:
-            branches:
-              only: develop
-      - deploy_master:
-          requires:
-            - quality
-            - security
-            - database
-            - test_suite
-          filters:
-            branches:
-              only: master
+      # - deploy_develop:
+      #     requires:
+      #       - quality
+      #       - security
+      #       - database
+      #       - test_suite
+      #     filters:
+      #       branches:
+      #         only: develop
+      # - deploy_master:
+      #     requires:
+      #       - quality
+      #       - security
+      #       - database
+      #       - test_suite
+      #     filters:
+      #       branches:
+      #         only: master
