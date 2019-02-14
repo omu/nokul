@@ -41,6 +41,17 @@ vagrant ssh paas -- 'sudo -E bash -s' <<-SCRIPT
 	dokku redis:create $application-redis &>/dev/null || true
 	dokku redis:link $application-redis $application
 
+        mkdir -p /var/lib/dokku/data/storage/$application/{log,storage,bundle,bundle_config,node_modules,assets,packs,tmp}
+        chown -R dokku:dokku /var/lib/dokku/data/storage/$application
+        dokku storage:mount $application /var/lib/dokku/data/storage/$application/log:/app/log
+        dokku storage:mount $application /var/lib/dokku/data/storage/$application/storage:/app/storage
+        dokku storage:mount $application /var/lib/dokku/data/storage/$application/bundle:/app/vendor/bundle
+        dokku storage:mount $application /var/lib/dokku/data/storage/$application/bundle_config:/app/.bundle
+        dokku storage:mount $application /var/lib/dokku/data/storage/$application/node_modules:/app/node_modules
+        dokku storage:mount $application /var/lib/dokku/data/storage/$application/assets:/app/public/assets
+        dokku storage:mount $application /var/lib/dokku/data/storage/$application/packs:/app/public/packs
+        dokku storage:mount $application /var/lib/dokku/data/storage/$application/tmp:/app/tmp
+
 	dokku docker-options:add $application build '--build-arg RAILS_ENV=$paas_environment'
 	dokku docker-options:add $application build '--build-arg RAILS_MASTER_KEY=$RAILS_MASTER_KEY'
 	dokku config:set $application RAILS_ENV=$paas_environment RAILS_MASTER_KEY=$RAILS_MASTER_KEY NOKUL_DISABLE_SSL=true NOKUL_DISABLE_ROLLBAR=true
