@@ -17,10 +17,10 @@ ENV RAILS_LOG_TO_STDOUT=enabled
 ENV NODE_ENV=production
 ENV NODE_ENV=$NODE_ENV
 
-RUN test $RAILS_ENV = test && \
-    apt-get -y update && \
-    apt-get -y install --no-install-recommends chromedriver && \
-    apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN case $RAILS_ENV in \
+    test) apt-get -y update && apt-get -y install --no-install-recommends chromedriver && \
+	  apt-get clean && rm -rf /var/lib/apt/lists/* ;; \
+    esac
 
 WORKDIR /app
 
