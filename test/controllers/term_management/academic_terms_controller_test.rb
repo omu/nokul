@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-module References
+module TermManagement
   class AcademicTermsControllerTest < ActionDispatch::IntegrationTest
     setup do
       sign_in users(:serhat)
@@ -73,7 +73,7 @@ module References
     private
 
     def translate(key)
-      t("references.academic_terms#{key}")
+      t("academic_terms#{key}")
     end
   end
 end

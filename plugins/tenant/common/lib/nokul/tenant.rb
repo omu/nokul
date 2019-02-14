@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'nokul-support'
 
 require_relative 'tenant/version'

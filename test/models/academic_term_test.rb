@@ -15,7 +15,7 @@ class AcademicTermTest < ActiveSupport::TestCase
     calendars
     registration_documents
   ].each do |property|
-    test "a academic term can communicate with #{property}" do
+    test "an academic term can communicate with #{property}" do
       assert @academic_term.send(property)
     end
   end
@@ -26,8 +26,9 @@ class AcademicTermTest < ActiveSupport::TestCase
     term
     start_of_term
     end_of_term
+    active
   ].each do |property|
-    test "presence validations for #{property} of a academic term" do
+    test "presence validations for #{property} of an academic term" do
       @academic_term.send("#{property}=", nil)
       assert_not @academic_term.valid?
       assert_not_empty @academic_term.errors[property]
@@ -35,7 +36,7 @@ class AcademicTermTest < ActiveSupport::TestCase
   end
 
   # validations: uniqueness
-  test 'academic term should be unique based on year' do
+  test 'year of the academic term should be unique based on term' do
     fake_term = @academic_term.dup
     assert_not fake_term.valid?
     assert_not_empty fake_term.errors[:year]
@@ -59,7 +60,7 @@ class AcademicTermTest < ActiveSupport::TestCase
   end
 
   # callbacks
-  test 'callbacks only one academic term must be active' do
+  test 'only one academic term must be active' do
     active_term = AcademicTerm.active.last
     passive_term = academic_terms(:fall_2017_2018)
 

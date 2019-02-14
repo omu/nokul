@@ -8,9 +8,9 @@ Rails.application.routes.draw do
   draw :calendar_management
   draw :first_registration
   draw :user_management
+  draw :term_management
 
   draw :course_management
-  resources :academic_terms, except: :show
 
   resources :units do
     member do

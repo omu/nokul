@@ -14,7 +14,11 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <%= link_to :root, class: 'navbar-brand' do %>
-        <%= image_tag 'baum-logo.svg', height: '36', width: '134', alt: 'BAUM Logo', class: 'navbar-brand-full' %>
+        <%= image_tag Tenant.configuration.branding.logo.file,
+                      height: '36',
+                      width: '134',
+                      alt: Tenant.configuration.branding.logo.alt_text,
+                      class: 'navbar-brand-full' %>
       <% end %>
       <button class="navbar-toggler sidebar-toggler d-none d-md-block d-lg-none" type="button" data-toggle="sidebar-lg-show">
         <span class="navbar-toggler-icon"></span>
