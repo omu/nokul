@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: af6ade0cfd09e3d3d9ebd304a2afae4d60a044dc
+  revision: 6183483fa13bb1cac7e32f64df568fc2f9fb9a6b
   specs:
     actioncable (6.0.0.beta1)
       actionpack (= 6.0.0.beta1)
@@ -55,6 +55,7 @@ GIT
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+      zeitwerk (~> 1.0)
     rails (6.0.0.beta1)
       actioncable (= 6.0.0.beta1)
       actionmailbox (= 6.0.0.beta1)
@@ -133,7 +134,7 @@ GEM
       io-like (~> 0.3.0)
     ast (2.4.0)
     aws-eventstream (1.0.1)
-    aws-partitions (1.137.0)
+    aws-partitions (1.138.0)
     aws-sdk-core (3.46.1)
       aws-eventstream (~> 1.0)
       aws-partitions (~> 1.0)
@@ -296,6 +297,8 @@ GEM
     rack (2.0.6)
     rack-attack (5.4.2)
       rack (>= 1.0, < 3)
+    rack-mini-profiler (1.0.2)
+      rack (>= 1.2.0)
     rack-protection (2.0.5)
       rack
     rack-proxy (0.6.5)
@@ -399,6 +402,7 @@ GEM
     wicked_pdf (1.1.0)
     xpath (3.2.0)
       nokogiri (~> 1.8)
+    zeitwerk (1.0.0)
 
 PLATFORMS
   ruby
@@ -407,7 +411,7 @@ DEPENDENCIES
   ancestry
   aws-sdk-s3
   bcrypt (~> 3.1.7)
-  bootsnap (>= 1.1.0)
+  bootsnap (>= 1.4.0)
   brakeman
   bundler-audit
   byebug
@@ -440,6 +444,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 3.11)
   rack-attack
+  rack-mini-profiler
   rails!
   redis (~> 4.0)
   rein
