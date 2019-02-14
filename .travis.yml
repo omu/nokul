@@ -1,13 +1,5 @@
 language: minimal
 
-addons:
-  apt:
-    packages:
-      - docker-ce
-
-env:
-  - DOCKER_COMPOSE_VERSION=1.23.2
-
 cache:
   directories:
     - "$HOME/bundle"
