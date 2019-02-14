@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/flyerhzm/bullet.git
+  revision: 2ada165a7262daa4ab4eeb2f0a11c84afe285e72
+  specs:
+    bullet (5.9.0)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.11)
+
+GIT
   remote: https://github.com/rails/rails.git
   revision: 6183483fa13bb1cac7e32f64df568fc2f9fb9a6b
   specs:
@@ -390,6 +398,7 @@ GEM
       unf_ext
     unf_ext (0.0.7.5)
     unicode-display_width (1.4.1)
+    uniform_notifier (1.12.1)
     warden (1.2.8)
       rack (>= 2.0.6)
     webmock (3.5.1)
@@ -413,6 +422,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.0)
   brakeman
+  bullet!
   bundler-audit
   byebug
   capybara (>= 2.15)

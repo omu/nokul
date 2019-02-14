@@ -63,6 +63,7 @@ gem 'friendly_id', '~> 5.2.0'
 
 group :development, :test do
   gem 'brakeman', require: false
+  gem 'bullet', github: 'flyerhzm/bullet'
   gem 'bundler-audit'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'dotenv-rails'
