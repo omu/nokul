@@ -5,8 +5,8 @@ services:
     build:
       context: .
       args:
-        - RAILS_MASTER_KEY=${RAILS_MASTER_KEY}
-        - RAILS_ENV=${RAILS_ENV}
+        - RAILS_MASTER_KEY=$RAILS_MASTER_KEY
+        - RAILS_ENV=$RAILS_ENV
     environment:
       TEST_DATABASE_URL: postgresql://nokul:nokul@db/nokul_test
       DEVELOPMENT_DATABASE_URL: postgresql://nokul:nokul@db/nokul_development
@@ -27,13 +27,13 @@ services:
     build:
       context: .
       args:
-        - RAILS_MASTER_KEY=${RAILS_MASTER_KEY}
-        - RAILS_ENV=${RAILS_ENV}
+        - RAILS_MASTER_KEY=$RAILS_MASTER_KEY
+        - RAILS_ENV=$RAILS_ENV
     environment:
       TEST_DATABASE_URL: postgresql://nokul:nokul@db/nokul_test
       DEVELOPMENT_DATABASE_URL: postgresql://nokul:nokul@db/nokul_development
       REDIS_URL: redis://redis:6379
-    command: bash -c "bundle exec sidekiq -q high -q low"
+    command: sh -c "bundle exec sidekiq -q high -q low"
     depends_on:
       - db
       - redis
@@ -41,17 +41,17 @@ services:
     build:
       context: .
       args:
-        - RAILS_MASTER_KEY=${RAILS_MASTER_KEY}
-        - RAILS_ENV=${RAILS_ENV}
-        - NODE_ENV=${NODE_ENV}
+        - RAILS_MASTER_KEY=$RAILS_MASTER_KEY
+        - RAILS_ENV=$RAILS_ENV
+        - NODE_ENV=$NODE_ENV
     environment:
       TEST_DATABASE_URL: postgresql://nokul:nokul@db/nokul_test
       REDIS_URL: redis://redis:6379
-      RAILS_MASTER_KEY: ${RAILS_MASTER_KEY}
-      CODACY_PROJECT_TOKEN: ${CODACY_PROJECT_TOKEN}
-      RAILS_ENV: ${RAILS_ENV}
-      NODE_ENV: ${NODE_ENV}
-      CI: ${CI}
+      RAILS_MASTER_KEY: $RAILS_MASTER_KEY
+      CODACY_PROJECT_TOKEN: $CODACY_PROJECT_TOKEN
+      RAILS_ENV: $RAILS_ENV
+      NODE_ENV: $NODE_ENV
+      CI: $CI
     depends_on:
       - db
       - redis
