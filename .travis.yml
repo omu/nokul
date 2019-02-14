@@ -1,0 +1,73 @@
+language: minimal
+
+addons:
+  apt:
+    packages:
+      - docker-ce
+
+env:
+  - DOCKER_COMPOSE_VERSION=1.23.2
+
+cache:
+  directories:
+    - "$HOME/bundle"
+    - "$HOME/.bundle_config"
+    - "$HOME/node_modules"
+
+before_install:
+  - curl -fsSL https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m) >docker-compose
+  - chmod +x docker-compose
+  - sudo mv -f docker-compose /usr/local/bin
+
+install:
+  - docker-compose build test
+  - docker-compose run test bin/plugdo bundle install -j4 --path /app/vendor/bundle --without development
+  - docker-compose run test yarn install
+  - docker-compose run test bin/rails db:create db:structure:load
+
+after_success:
+  - openssl aes-256-cbc -K $encrypted_3f8c4ca1dcec_key -iv $encrypted_3f8c4ca1dcec_iv -in config/deploy_key.enc -out config/deploy_key -d
+  - chmod 600 config/deploy_key
+  - eval "$(ssh-agent -s)" && ssh-add config/deploy_key
+  - echo -e "Host app.omu.sh\n\tStrictHostKeyChecking no\n" >>~/.ssh/config
+
+jobs:
+  include:
+    - stage: test
+      # first job at this stage
+      name: "Quality Tests"
+      after_success: skip
+      script: docker-compose run test bundle exec rake quality:all
+
+      # second job at this stage
+    - name: "Security and Database Tests"
+      after_success: skip
+      script: docker-compose run test bundle exec rake security:all database:all
+
+      # third job at this stage
+    - name: "Integration Tests"
+      after_success: skip
+      script: docker-compose run test bundle exec rails test:system test
+
+    - stage: deploy
+      # first job at this stage
+      name: "Deploy to dokku#beta"
+      if: branch = develop AND type = push AND fork = false
+      cache: skip
+      install: skip
+      script: git remote add beta dokku@app.omu.sh:nokul-develop && git push beta develop:master
+
+      # second job at this stage
+    - name: "Deploy to dokku#production"
+      if: branch = master AND type = push AND fork = false
+      cache: skip
+      install: skip
+      script: git remote add production dokku@app.omu.sh:nokul && git push production master
+
+notifications:
+  email: false
+  slack:
+    on_success: change
+    on_failure: change
+    rooms:
+      - secure: ljbXmcdLA/wv+j3+RCE0qF/mZd/3PbHI0VOSBkeyJDXWcHHMduIyZlodzliuXL/8mfLbmcJ8MZT5tV9l0OGSgiFI/Ngz1fadsf+0Pim4MtREkp4yKRzfDbQqj8iQwzAAcIAxbIQhenVZtaadwBAM8Jawcjs0m2+iWXaiREU1IlRaK1NzGtkDx8gy5PnVgJhtWmhV7/l6a0Sg94shr53bchkuGwH/ugqgq9L+ec1gGKVpSOHhS0W5WjojMU+3K5/HCP/r9V2J2jYUjtzDSbEDFd18rH0qJjNq1hoaVeaW1uJzidSH7f7B6xXxJfUt4e2CiY+2CkR5LUbFx5V+6fNscEAA9u+zGh6Rn9rxciWkFfzKck6Eomoq5G+d+q/ItVagAMSIUELYCOup2+H/KtRNFTBWBqwECsvXZn7WwaZOdMXDfiTnI9eSWxJqaiwFMtC1A+bnKM7DX2qoZoGCNJAzzQ93EuXdxA1w1oYVs7lfh70qLx5OraXtcTUtfrv4tzms35S9JNNnEQyWN7neuPCS0Yh4QIFf4NX7aaYbwFD66uS25Iq2ochJ4oicFd8s+DxnaXc925GYXFVHk7wZWK/mFlGnZTuTbk4ElByqzRUN2sI5r7xYijv9cBcUM/1RqzXI3B/91Ft/kyCaYDrg3W1j79zLo+G5uIHU2/F1AQBIYlI=
