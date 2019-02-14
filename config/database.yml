@@ -9,11 +9,11 @@ default: &default
 
 development:
   <<: *default
-  url: <%= format url, environment: 'development' %>
+  url: <%= ENV.fetch('DEVELOPMENT_DATABASE_URL', format(url, environment: 'development')) %>
 
 test:
   <<: *default
-  url: <%= format url, environment: 'test' %>
+  url: <%= ENV.fetch('TEST_DATABASE_URL', format(url, environment: 'test')) %>
 
 production: &production
   <<: *default
