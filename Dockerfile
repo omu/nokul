@@ -29,3 +29,5 @@ RUN bundle config --global silence_root_warning true
 COPY . ./
 
 EXPOSE 3000
+
+CMD bundle exec puma -C config/puma.rb
