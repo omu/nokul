@@ -24,6 +24,7 @@ WebMock.allow_net_connect!
 
 # Test Modules
 require_relative 'models/concerns/association_test_module'
+require_relative 'models/concerns/validation_test_module'
 
 module ActiveSupport
   class TestCase
