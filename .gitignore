@@ -44,5 +44,8 @@ yarn-debug.log*
 .envrc
 /.local/
 
+# Ignore dokku deploy key
+config/deploy_key
+
 # Ignore auto-generated PDFs of markdown files
 .pdf
