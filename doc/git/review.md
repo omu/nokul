@@ -1,3 +1,7 @@
+---
+author: M. Serhat Dundar
+---
+
 # Review Süreci
 
 - Açtığınız pull request'in merge edilebilmesi için en az 2 kişi tarafından review edilmesi ve onaylanması gerekir.

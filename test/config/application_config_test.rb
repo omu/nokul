@@ -36,4 +36,8 @@ class ApplicationConfigTest < ActiveSupport::TestCase
   test 'rack::attack is up and running as middleware' do
     assert Rails.application.config.middleware.middlewares.include?(Rack::Attack)
   end
+
+  test 'autoloader is set to :classic until Rails 6 stable' do
+    assert_equal Rails.application.config.autoloader, :classic
+  end
 end

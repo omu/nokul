@@ -1,3 +1,7 @@
+---
+author: M. Serhat Dundar
+---
+
 ## Rules
 
 - `foreign_key` türündeki sütunlar için, eğer arada `optional: true` bir ilişki yoksa `null: false` kullanın.

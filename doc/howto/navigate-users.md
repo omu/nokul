@@ -1,3 +1,7 @@
+---
+author: M. Serhat Dundar
+---
+
 # How To: Navigate and Assign Users
 
 **Some variables to use later:**
