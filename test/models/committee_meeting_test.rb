@@ -2,18 +2,14 @@
 
 require 'test_helper'
 
-class MeetingTest < ActiveSupport::TestCase
+class CommitteeMeetingTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   # relations
-  %i[
-    unit
-    meeting_agendas
-    agendas
-    decisions
-  ].each do |property|
-    test "a meeting can communicate with #{property}" do
-      assert committee_meetings(:one).send(property)
-    end
-  end
+  belongs_to :unit
+  has_many :meeting_agendas
+  has_many :agendas
+  has_many :decisions
 
   # validations: presence
   %i[

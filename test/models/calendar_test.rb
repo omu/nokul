@@ -3,23 +3,19 @@
 require 'test_helper'
 
 class CalendarTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   setup do
     @calendar = calendars(:uzem_calendar)
   end
 
   # relations
-  %i[
-    academic_term
-    calendar_events
-    calendar_event_types
-    calendar_committee_decisions
-    unit_calendars
-    units
-  ].each do |property|
-    test "calendar can communicate with #{property}" do
-      assert @calendar.send(property)
-    end
-  end
+  belongs_to :academic_term
+  has_many :calendar_events
+  has_many :calendar_event_types
+  has_many :calendar_committee_decisions
+  has_many :unit_calendars
+  has_many :units
 
   # validations: presence
   {

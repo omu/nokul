@@ -3,13 +3,9 @@
 require 'test_helper'
 
 class CalendarCommitteeDecisionTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   # relations
-  %i[
-    calendar
-    committee_decision
-  ].each do |property|
-    test "a calendar committee decision can communicate with #{property}" do
-      assert calendar_committee_decisions(:one).send(property)
-    end
-  end
+  belongs_to :calendar
+  belongs_to :committee_decision
 end

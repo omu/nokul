@@ -3,19 +3,15 @@
 require 'test_helper'
 
 class AddressTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   test 'type column does not refer to STI' do
     assert_empty Identity.inheritance_column
   end
 
   # relations
-  %i[
-    user
-    district
-  ].each do |property|
-    test "an address can communicate with #{property}" do
-      assert addresses(:formal).send(property)
-    end
-  end
+  belongs_to :district
+  belongs_to :user
 
   # validations: presence
   %i[

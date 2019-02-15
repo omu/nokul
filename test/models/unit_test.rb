@@ -3,39 +3,35 @@
 require 'test_helper'
 
 class UnitTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   # relations
-  %i[
-    district
-    unit_status
-    unit_type
-    unit_instruction_type
-    unit_instruction_language
-    university_type
-    duties
-    employees
-    students
-    users
-    positions
-    administrative_functions
-    agendas
-    meetings
-    meeting_agendas
-    decisions
-    courses
-    course_groups
-    curriculum_programs
-    curriculums
-    managed_curriculums
-    registration_documents
-    prospective_students
-    available_courses
-    unit_calendars
-    calendars
-  ].each do |property|
-    test "a unit can communicate with #{property}" do
-      assert units(:omu).send(property)
-    end
-  end
+  belongs_to :district
+  belongs_to :unit_status
+  belongs_to :unit_type
+  belongs_to :unit_instruction_type
+  belongs_to :unit_instruction_language
+  belongs_to :university_type
+  has_many :duties
+  has_many :employees
+  has_many :students
+  has_many :users
+  has_many :positions
+  has_many :administrative_functions
+  has_many :agendas
+  has_many :meetings
+  has_many :meeting_agendas
+  has_many :decisions
+  has_many :courses
+  has_many :course_groups
+  has_many :curriculum_programs
+  has_many :curriculums
+  has_many :managed_curriculums
+  has_many :registration_documents
+  has_many :prospective_students
+  has_many :available_courses
+  has_many :unit_calendars
+  has_many :calendars
 
   # validations: presence
   %i[

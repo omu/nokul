@@ -3,6 +3,8 @@
 require 'test_helper'
 
 class CurriculumTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   setup do
     @curriculum = curriculums(:one)
   end
@@ -18,20 +20,14 @@ class CurriculumTest < ActiveSupport::TestCase
   end
 
   # relations
-  %i[
-    available_courses
-    courses
-    course_groups
-    curriculum_course_groups
-    curriculum_programs
-    programs
-    semesters
-    unit
-  ].each do |relation|
-    test "curriculum can communicate with #{relation}" do
-      assert @curriculum.send(relation)
-    end
-  end
+  belongs_to :unit
+  has_many :curriculum_programs
+  has_many :programs
+  has_many :semesters
+  has_many :courses
+  has_many :curriculum_course_groups
+  has_many :course_groups
+  has_many :available_courses
 
   # validations: presence
   {

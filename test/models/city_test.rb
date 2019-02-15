@@ -3,16 +3,13 @@
 require 'test_helper'
 
 class CityTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   # relations
-  %i[
-    districts
-    addresses
-    units
-  ].each do |property|
-    test "a city can communicate with #{property}" do
-      assert cities(:samsun).send(property)
-    end
-  end
+  belongs_to :country
+  has_many :addresses
+  has_many :districts
+  has_many :units
 
   # validations: presence
   %i[

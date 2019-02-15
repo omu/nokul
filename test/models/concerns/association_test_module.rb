@@ -7,7 +7,7 @@ module AssociationTestModule
     def has_many(object = nil, associations)
       object ||= self.to_s.delete_suffix('Test')
 
-      associations.each do |association|
+      [associations].compact.flatten.each do |association|
         test "#{object} has_many #{association}" do
           assert object.constantize.take.send(association)
         end

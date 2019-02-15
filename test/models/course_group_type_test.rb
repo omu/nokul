@@ -3,18 +3,14 @@
 require 'test_helper'
 
 class CourseGroupTypeTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   setup do
     @course_group_type = course_group_types(:one)
   end
 
   # relations
-  %i[
-    course_groups
-  ].each do |property|
-    test "a course group type can communicate with #{property}" do
-      assert @course_group_type.send(property)
-    end
-  end
+  has_many :course_groups
 
   # validations: presence
   test 'should not save course group type without name' do

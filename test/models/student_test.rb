@@ -3,19 +3,14 @@
 require 'test_helper'
 
 class StudentTest < ActiveSupport::TestCase
+  include AssociationTestModule
   include ActiveJob::TestHelper
 
   # relations
-  %i[
-    user
-    unit
-    identity
-    calendars
-  ].each do |property|
-    test "a student can communicate with #{property}" do
-      assert students(:serhat).send(property)
-    end
-  end
+  belongs_to :user
+  belongs_to :unit
+  has_one :identity
+  has_many :calendars
 
   # validations: presence
   test 'presence validations for student_number of a student' do

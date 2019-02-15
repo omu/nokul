@@ -3,6 +3,7 @@
 require 'test_helper'
 
 class UnitInstructionLanguageTest < ActiveSupport::TestCase
+  include AssociationTestModule
   include ReferenceCallbacksTest
   include ReferenceValidationsTest
 
@@ -11,7 +12,5 @@ class UnitInstructionLanguageTest < ActiveSupport::TestCase
   end
 
   # relations
-  test 'unit_instruction_language can communicate with units' do
-    assert @object.units
-  end
+  has_many :units
 end

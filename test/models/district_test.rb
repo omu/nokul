@@ -3,16 +3,12 @@
 require 'test_helper'
 
 class DistrictTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   # relations
-  %i[
-    city
-    units
-    addresses
-  ].each do |property|
-    test "a district can communicate with #{property}" do
-      assert districts(:atakum).send(property)
-    end
-  end
+  belongs_to :city
+  has_many :units
+  has_many :addresses
 
   %i[
     name

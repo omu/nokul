@@ -3,15 +3,11 @@
 require 'test_helper'
 
 class ProspectiveStudentTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   # relations
-  %i[
-    unit
-    student_entrance_type
-  ].each do |property|
-    test "a prospective_student can communicate with #{property}" do
-      assert prospective_students(:serhat).send(property)
-    end
-  end
+  belongs_to :unit
+  belongs_to :student_entrance_type
 
   # validations: presence
   %i[

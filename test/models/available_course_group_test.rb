@@ -3,19 +3,15 @@
 require 'test_helper'
 
 class AvailableCourseGroupTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   setup do
     @course_group = available_course_groups(:ati_group_1)
   end
 
   # relations
-  %i[
-    available_course
-    lecturers
-  ].each do |property|
-    test "a available_course_group can communicate with #{property}" do
-      assert @course_group.send(property)
-    end
-  end
+  belongs_to :available_course
+  has_many :lecturers
 
   # validations: presence
   test 'should not save available_course_group without name' do

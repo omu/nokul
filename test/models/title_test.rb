@@ -3,10 +3,10 @@
 require 'test_helper'
 
 class TitleTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   # relations
-  test 'a title has_many employees' do
-    assert titles(:research_assistant).employees
-  end
+  has_many :employees
 
   # validations: presence
   %i[

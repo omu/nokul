@@ -3,27 +3,21 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
+  include AssociationTestModule
   include ActiveJob::TestHelper
 
   # relations
-  %i[
-    avatar
-    employees
-    students
-    identities
-    addresses
-    duties
-    units
-    positions
-    administrative_functions
-    certifications
-    projects
-    articles
-  ].each do |property|
-    test "a user can communicate with #{property}" do
-      assert users(:serhat).send(property)
-    end
-  end
+  has_many :employees
+  has_many :students
+  has_many :identities
+  has_many :addresses
+  has_many :duties
+  has_many :units
+  has_many :positions
+  has_many :administrative_functions
+  has_many :certifications
+  has_many :articles
+  has_many :projects
 
   %i[
     email

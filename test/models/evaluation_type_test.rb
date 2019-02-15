@@ -3,19 +3,15 @@
 require 'test_helper'
 
 class EvaluationTypeTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   setup do
     @evaluation_type = evaluation_types(:undergraduate_midterm)
   end
 
   # relations
-  %i[
-    course_evaluation_types
-    available_courses
-  ].each do |property|
-    test "a evaluation type can communicate with #{property}" do
-      assert @evaluation_type.send(property)
-    end
-  end
+  has_many :course_evaluation_types
+  has_many :available_courses
 
   # validations: presence
   test 'presence validations for name of a evaluation type' do

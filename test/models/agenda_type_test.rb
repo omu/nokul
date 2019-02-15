@@ -3,6 +3,11 @@
 require 'test_helper'
 
 class AgendaTypeTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
+  # relations
+  has_many :agendas
+
   # validations: presence
   test 'should not save agenda_type without name' do
     agenda_types(:one).name = nil

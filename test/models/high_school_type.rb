@@ -3,6 +3,8 @@
 require 'test_helper'
 
 class HighSchoolTypeTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   include ReferenceCallbacksTest
   include ReferenceValidationsTest
 
@@ -11,7 +13,5 @@ class HighSchoolTypeTest < ActiveSupport::TestCase
   end
 
   # relations
-  test 'high_school_type can communicate with prospective students' do
-    assert high_schools_types(:aksam_lisesi).prospective_students
-  end
+  has_many :prospective_students
 end

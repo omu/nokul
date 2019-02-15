@@ -5,20 +5,15 @@ require_relative './concerns/enum_for_term_test'
 
 class AcademicTermTest < ActiveSupport::TestCase
   include EnumForTermTest
+  include AssociationTestModule
 
   setup do
     @academic_term = academic_terms(:fall_2017_2018)
   end
 
   # relations
-  %i[
-    calendars
-    registration_documents
-  ].each do |property|
-    test "a academic term can communicate with #{property}" do
-      assert @academic_term.send(property)
-    end
-  end
+  has_many :calendars
+  has_many :registration_documents
 
   # validations: presence
   %i[

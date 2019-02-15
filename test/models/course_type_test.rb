@@ -3,14 +3,14 @@
 require 'test_helper'
 
 class CourseTypeTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   setup do
     @course_type = course_types(:internship)
   end
 
   # relations
-  test 'a course type can communicate with courses' do
-    assert @course_type.courses
-  end
+  has_many :courses
 
   # validations: presence
   %i[

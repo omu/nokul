@@ -3,15 +3,11 @@
 require 'test_helper'
 
 class AdministrativeFunctionTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   # relations
-  %i[
-    positions
-    duties
-  ].each do |property|
-    test "an administrative function can communicate with #{property}" do
-      assert administrative_functions(:rector).send(property)
-    end
-  end
+  has_many :positions
+  has_many :duties
 
   # validations: presence
   %i[

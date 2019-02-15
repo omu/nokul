@@ -3,23 +3,21 @@
 require 'test_helper'
 
 class AvailableCourseTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   setup do
     @available_course = available_courses(:ati_fall_2018_2019)
   end
 
   # relations
-  %i[
-    academic_term
-    curriculum
-    course
-    unit
-    groups
-    evaluation_types
-  ].each do |property|
-    test "a available_course can communicate with #{property}" do
-      assert @available_course.send(property)
-    end
-  end
+  belongs_to :academic_term
+  belongs_to :curriculum
+  belongs_to :course
+  belongs_to :coordinator
+  belongs_to :unit
+
+  has_many :evaluation_types
+  has_many :groups
 
   # validations: uniqueness
   test 'uniqueness validations for course of a academic term and curriculum' do

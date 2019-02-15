@@ -3,21 +3,17 @@
 require 'test_helper'
 
 class DutyTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   setup do
     @duties = employees(:serhat_active).duties
   end
 
   # relations
-  %i[
-    employee
-    unit
-    positions
-    administrative_functions
-  ].each do |property|
-    test "a duty can communicate with #{property}" do
-      assert duties(:baum).send(property)
-    end
-  end
+  belongs_to :employee
+  belongs_to :unit
+  has_many :positions
+  has_many :administrative_functions
 
   # validations: presence
   %i[

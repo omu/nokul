@@ -3,6 +3,8 @@
 require 'test_helper'
 
 class StudentEntranceTypeTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   include ReferenceCallbacksTest
   include ReferenceValidationsTest
 
@@ -11,7 +13,5 @@ class StudentEntranceTypeTest < ActiveSupport::TestCase
   end
 
   # relations
-  test 'student_entrance_types can communicate with prospective students' do
-    assert student_entrance_types(:dgs).prospective_students
-  end
+  has_many :prospective_students
 end

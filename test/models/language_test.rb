@@ -3,19 +3,15 @@
 require 'test_helper'
 
 class LanguageTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   setup do
     @language = languages(:turkce)
   end
 
   # relations
-  %i[
-    courses
-    prospective_students
-  ].each do |property|
-    test "language can communicate with #{property}" do
-      assert @language.send(property)
-    end
-  end
+  has_many :courses
+  has_many :prospective_students
 
   # validations: presence
   %i[

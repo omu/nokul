@@ -3,22 +3,18 @@
 require 'test_helper'
 
 class CourseGroupTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   setup do
     @course_group = course_groups(:bilgisayar_muhendligi_teknik_secmeli_1)
   end
 
   # relations
-  %i[
-    unit
-    course_group_type
-    group_courses
-    courses
-    curriculum_course_groups
-  ].each do |property|
-    test "a course group can communicate with #{property}" do
-      assert @course_group.send(property)
-    end
-  end
+  belongs_to :course_group_type
+  belongs_to :unit
+  has_many :courses
+  has_many :curriculum_course_groups
+  has_many :group_courses
 
   # validations: presence
   %i[

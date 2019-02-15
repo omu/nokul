@@ -3,17 +3,13 @@
 require 'test_helper'
 
 class CountryTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   # relations
-  %i[
-    cities
-    districts
-    addresses
-    units
-  ].each do |property|
-    test "a country can communicate with #{property}" do
-      assert countries(:turkey).send(property)
-    end
-  end
+  has_many :addresses
+  has_many :cities
+  has_many :districts
+  has_many :units
 
   # validations: presence
   %i[

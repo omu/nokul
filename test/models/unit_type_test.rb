@@ -3,6 +3,8 @@
 require 'test_helper'
 
 class UnitTypeTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   include ReferenceCallbacksTest
   include ReferenceValidationsTest
 
@@ -11,13 +13,7 @@ class UnitTypeTest < ActiveSupport::TestCase
   end
 
   # relations
-  %i[
-    units
-  ].each do |property|
-    test "a unit_type can communicate with #{property}" do
-      assert @object.send(property)
-    end
-  end
+  has_many :units
 
   # enums
   {

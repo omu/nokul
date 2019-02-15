@@ -3,15 +3,11 @@
 require 'test_helper'
 
 class PositionTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   # relations
-  %i[
-    duty
-    administrative_function
-  ].each do |property|
-    test "an identity can communicate with #{property}" do
-      assert positions(:baum_dean).send(property)
-    end
-  end
+  belongs_to :duty
+  belongs_to :administrative_function
 
   # validations: presence
   %i[

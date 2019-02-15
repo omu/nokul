@@ -3,19 +3,15 @@
 require 'test_helper'
 
 class CalendarEventTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   setup do
     @calendar_event = calendar_events(:add_drop_fall_2018_grad)
   end
 
   # relations
-  %i[
-    calendar
-    calendar_event_type
-  ].each do |property|
-    test "calendar_event can communicate with #{property}" do
-      assert @calendar_event.send(property)
-    end
-  end
+  belongs_to :calendar
+  belongs_to :calendar_event_type
 
   # validations: presence
   %i[

@@ -3,20 +3,16 @@
 require 'test_helper'
 
 class CourseTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   setup do
     @course = courses(:test)
   end
 
   # relations
-  %i[
-    course_type
-    unit
-    language
-  ].each do |property|
-    test "course can communicate with #{property}" do
-      assert @course.send(property)
-    end
-  end
+  belongs_to :course_type
+  belongs_to :unit
+  belongs_to :language
 
   # validations: presence
   %i[

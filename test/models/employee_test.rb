@@ -3,20 +3,16 @@
 require 'test_helper'
 
 class EmployeeTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   # relations
-  %i[
-    user
-    title
-    duties
-    units
-    positions
-    administrative_functions
-    available_course_lecturers
-  ].each do |property|
-    test "an employee can communicate with #{property}" do
-      assert employees(:serhat_active).send(property)
-    end
-  end
+  belongs_to :user
+  belongs_to :title
+  has_many :duties
+  has_many :units
+  has_many :positions
+  has_many :administrative_functions
+  has_many :available_course_lecturers
 
   # validations: presence
   %i[

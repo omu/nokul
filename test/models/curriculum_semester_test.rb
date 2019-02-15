@@ -4,6 +4,7 @@ require 'test_helper'
 require_relative './concerns/enum_for_term_test'
 
 class CurriculumSemesterTest < ActiveSupport::TestCase
+  include AssociationTestModule
   include EnumForTermTest
 
   setup do
@@ -11,16 +12,10 @@ class CurriculumSemesterTest < ActiveSupport::TestCase
   end
 
   # relations
-  %i[
-    courses
-    curriculum
-    curriculum_courses
-    curriculum_course_groups
-  ].each do |relation|
-    test "curriculum semester can communicate with #{relation}" do
-      assert @semester.send(relation)
-    end
-  end
+  has_many :curriculum_courses
+  has_many :curriculum_course_groups
+  has_many :courses
+  belongs_to :curriculum
 
   # validations: presence
   %i[

@@ -3,18 +3,14 @@
 require 'test_helper'
 
 class DocumentTypeTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   setup do
     @document = document_types(:health_report)
   end
 
   # relations
-  %i[
-    registration_documents
-  ].each do |property|
-    test "a document type can communicate with #{property}" do
-      assert @document.send(property)
-    end
-  end
+  has_many :registration_documents
 
   # validations: presence
   test 'presence validations for name of a document type' do

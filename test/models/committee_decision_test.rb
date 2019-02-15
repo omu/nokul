@@ -2,20 +2,17 @@
 
 require 'test_helper'
 
-class DecisionTest < ActiveSupport::TestCase
+class CommitteeDecisionTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   setup do
     @decision = committee_decisions(:one)
   end
 
   # relations
-  %i[
-    meeting_agenda
-    agenda
-  ].each do |property|
-    test "decision can communicate with #{property}" do
-      assert @decision.send(property)
-    end
-  end
+  belongs_to :meeting_agenda
+  has_one :agenda
+  has_many :calendar_committee_decisions
 
   # validations: presence
   %i[

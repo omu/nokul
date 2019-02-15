@@ -3,17 +3,13 @@
 require 'test_helper'
 
 class AgendaTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   # relations
-  %i[
-    unit
-    agenda_type
-    meeting_agendas
-    meetings
-  ].each do |property|
-    test "a agenda can communicate with #{property}" do
-      assert agendas(:one).send(property)
-    end
-  end
+  belongs_to :agenda_type
+  belongs_to :unit
+  has_many :meetings
+  has_many :meeting_agendas
 
   # validations: presence
   %i[

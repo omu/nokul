@@ -3,20 +3,16 @@
 require 'test_helper'
 
 class AssessmentMethodTest < ActiveSupport::TestCase
+  include AssociationTestModule
+
   setup do
     @assessment_method = assessment_methods(:exam)
   end
 
   # relations
-  %i[
-    course_assessment_methods
-    course_evaluation_types
-    available_courses
-  ].each do |property|
-    test "a assessment method can communicate with #{property}" do
-      assert @assessment_method.send(property)
-    end
-  end
+  has_many :available_courses
+  has_many :course_assessment_methods
+  has_many :course_evaluation_types
 
   # validations: presence
   test 'presence validations for name of a assessment method' do
