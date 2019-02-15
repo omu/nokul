@@ -85,7 +85,7 @@ PATH
       nokul-support
 
 PATH
-  remote: /home/msdundar/projects/nokul/plugins/support
+  remote: /vagrant/plugins/support
   specs:
     nokul-support (0.1.0)
       activesupport (~> 6.0.0.beta1)
