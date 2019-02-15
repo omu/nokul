@@ -11,6 +11,10 @@ module Nokul
   class Application < Rails::Application
     Nokul::Tenant.load
 
+    # TODO: Disable zeitwerk until they publish something stable.
+    # See: https://github.com/rails/rails/issues/35259 and https://github.com/rails/rails/issues/35278
+    config.autoloader = :classic
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
