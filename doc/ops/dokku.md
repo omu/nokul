@@ -1,3 +1,7 @@
+---
+author: M. Serhat Dundar
+---
+
 # Dokku
 
 Nadiren dahi olsa uygulamanın deploy edildiği makinaya operatör olarak erişmeniz gerekebilir. Makinaya erişim sağlamadan önce **geçerli bir sebebiniz** olduğundan emin olun. Ne yaptığınızdan emin değilseniz [sistem grubu](https://github.com/orgs/omu/teams/ops) ile iletişime geçin. Dokku instance'ına erişmenin sıkça kullanılan iki yolu vardır.

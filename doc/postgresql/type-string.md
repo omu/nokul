@@ -1,3 +1,7 @@
+---
+author: M. Serhat Dundar
+---
+
 ## Rules
 
 - `string`'ler için `limit: N` kullanmayın. `add_length_constraint` kullanın.
