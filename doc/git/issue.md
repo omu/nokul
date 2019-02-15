@@ -1,3 +1,7 @@
+---
+author: M. Serhat Dundar
+---
+
 # Issue
 
 Bu projenin tüm geliştirme süreçleri Github Issues ile yönetilmektedir. Issue bir sorun/hata bildirimi olabileceği gibi, bir özellik önerisi, değişiklik talebi de olabilir. Issue listesi kişisel/kurumsal bir to-do list değildir. Issue'lar oluşturulurken bir takım kurallara uyulmalıdır.

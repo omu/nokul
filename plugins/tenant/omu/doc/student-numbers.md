@@ -1,3 +1,7 @@
+---
+author: Recai Oktaş
+---
+
 Öğrencilerin Numaralandırılması
 ===============================
 

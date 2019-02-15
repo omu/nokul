@@ -1,3 +1,7 @@
+---
+author: M. Serhat Dundar
+---
+
 ## Rules
 
 - Integer'lar üzerinde `limit: N` kullanmayın.
