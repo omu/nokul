@@ -6,6 +6,7 @@ require_relative './concerns/enum_for_term_test'
 class AcademicTermTest < ActiveSupport::TestCase
   include EnumForTermTest
   include AssociationTestModule
+  include ValidationTestModule
 
   setup do
     @academic_term = academic_terms(:fall_2017_2018)
@@ -16,18 +17,11 @@ class AcademicTermTest < ActiveSupport::TestCase
   has_many :registration_documents
 
   # validations: presence
-  %i[
-    year
-    term
-    start_of_term
-    end_of_term
-  ].each do |property|
-    test "presence validations for #{property} of a academic term" do
-      @academic_term.send("#{property}=", nil)
-      assert_not @academic_term.valid?
-      assert_not_empty @academic_term.errors[property]
-    end
-  end
+  validates_presence_of :year
+  validates_presence_of :term
+  validates_presence_of :start_of_term
+  validates_presence_of :end_of_term
+  validates_presence_of :active
 
   # validations: uniqueness
   test 'academic term should be unique based on year' do

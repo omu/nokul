@@ -4,6 +4,7 @@ require 'test_helper'
 
 class EvaluationTypeTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include ValidationTestModule
 
   setup do
     @evaluation_type = evaluation_types(:undergraduate_midterm)

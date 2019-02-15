@@ -4,6 +4,7 @@ require 'test_helper'
 
 class TitleTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include ValidationTestModule
 
   # relations
   has_many :employees

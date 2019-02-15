@@ -4,6 +4,7 @@ require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include ValidationTestModule
   include ActiveJob::TestHelper
 
   # relations

@@ -4,6 +4,7 @@ require 'test_helper'
 
 class ProspectiveStudentTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include ValidationTestModule
 
   # relations
   belongs_to :unit

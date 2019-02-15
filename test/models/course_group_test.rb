@@ -4,6 +4,7 @@ require 'test_helper'
 
 class CourseGroupTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include ValidationTestModule
 
   setup do
     @course_group = course_groups(:bilgisayar_muhendligi_teknik_secmeli_1)

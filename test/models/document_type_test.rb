@@ -4,6 +4,7 @@ require 'test_helper'
 
 class DocumentTypeTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include ValidationTestModule
 
   setup do
     @document = document_types(:health_report)

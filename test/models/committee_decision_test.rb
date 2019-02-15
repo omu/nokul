@@ -4,6 +4,7 @@ require 'test_helper'
 
 class CommitteeDecisionTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include ValidationTestModule
 
   setup do
     @decision = committee_decisions(:one)

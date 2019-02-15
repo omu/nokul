@@ -4,6 +4,7 @@ require 'test_helper'
 
 class UnitTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include ValidationTestModule
 
   # relations
   belongs_to :district

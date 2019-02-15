@@ -4,6 +4,7 @@ require 'test_helper'
 
 class CalendarTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include ValidationTestModule
 
   setup do
     @calendar = calendars(:uzem_calendar)

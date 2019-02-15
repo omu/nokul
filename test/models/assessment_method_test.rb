@@ -4,6 +4,7 @@ require 'test_helper'
 
 class AssessmentMethodTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include ValidationTestModule
 
   setup do
     @assessment_method = assessment_methods(:exam)

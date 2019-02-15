@@ -4,6 +4,7 @@ require 'test_helper'
 
 class DutyTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include ValidationTestModule
 
   setup do
     @duties = employees(:serhat_active).duties

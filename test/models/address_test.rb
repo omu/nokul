@@ -4,6 +4,7 @@ require 'test_helper'
 
 class AddressTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include ValidationTestModule
 
   test 'type column does not refer to STI' do
     assert_empty Identity.inheritance_column
@@ -14,16 +15,8 @@ class AddressTest < ActiveSupport::TestCase
   belongs_to :user
 
   # validations: presence
-  %i[
-    type
-    full_address
-  ].each do |property|
-    test "presence validations for #{property} of an address user" do
-      addresses(:informal).send("#{property}=", nil)
-      assert_not addresses(:informal).valid?
-      assert_not_empty addresses(:informal).errors[property]
-    end
-  end
+  validates_presence_of :type
+  validates_presence_of :full_address
 
   # validations: uniqueness
   test 'a user can only have one formal and one informal address' do

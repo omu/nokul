@@ -4,6 +4,7 @@ require 'test_helper'
 
 class PositionTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include ValidationTestModule
 
   # relations
   belongs_to :duty

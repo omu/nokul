@@ -4,6 +4,7 @@ require 'test_helper'
 
 class IdentityTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include ValidationTestModule
 
   test 'type column does not refer to STI' do
     assert_empty Identity.inheritance_column

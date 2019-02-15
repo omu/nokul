@@ -4,6 +4,7 @@ require 'test_helper'
 
 class LanguageTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include ValidationTestModule
 
   setup do
     @language = languages(:turkce)

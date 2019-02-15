@@ -4,6 +4,7 @@ require 'test_helper'
 
 class CourseEvaluationTypeTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include ValidationTestModule
 
   setup do
     @course_evaluation_type = course_evaluation_types(:ati_midterm_evaluation_type)

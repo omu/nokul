@@ -4,6 +4,7 @@ require 'test_helper'
 
 class CurriculumCourseGroupTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include ValidationTestModule
 
   setup do
     @curriculum_course_group = curriculum_course_groups(:one)

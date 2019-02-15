@@ -4,6 +4,7 @@ require 'test_helper'
 
 class CountryTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include ValidationTestModule
 
   # relations
   has_many :addresses

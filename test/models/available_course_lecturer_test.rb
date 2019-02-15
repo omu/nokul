@@ -4,6 +4,7 @@ require 'test_helper'
 
 class AvailableCourseLecturerTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include ValidationTestModule
 
   setup do
     @course_lecturer = available_course_lecturers(:ati_group_1_lecturer_john)

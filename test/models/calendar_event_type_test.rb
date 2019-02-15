@@ -4,6 +4,7 @@ require 'test_helper'
 
 class CalendarEventTypeTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include ValidationTestModule
 
   setup do
     @calendar_event_type = calendar_event_types(:add_drop_registrations)

@@ -4,6 +4,7 @@ require 'test_helper'
 
 class CourseAssessmentMethodTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include ValidationTestModule
 
   setup do
     @course_assessment_method = course_assessment_methods(:ati_midterm_exam_assessment)

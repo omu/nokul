@@ -5,6 +5,7 @@ require_relative './concerns/enum_for_term_test'
 
 class CurriculumSemesterTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include ValidationTestModule
   include EnumForTermTest
 
   setup do

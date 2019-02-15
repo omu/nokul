@@ -4,6 +4,7 @@ require 'test_helper'
 
 class CalendarEventTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include ValidationTestModule
 
   setup do
     @calendar_event = calendar_events(:add_drop_fall_2018_grad)

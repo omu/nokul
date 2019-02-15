@@ -4,22 +4,15 @@ require 'test_helper'
 
 class AdministrativeFunctionTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include ValidationTestModule
 
   # relations
   has_many :positions
   has_many :duties
 
   # validations: presence
-  %i[
-    name
-    code
-  ].each do |property|
-    test "presence validations for #{property} of an employee" do
-      administrative_functions(:rector).send("#{property}=", nil)
-      assert_not administrative_functions(:rector).valid?
-      assert_not_empty administrative_functions(:rector).errors[property]
-    end
-  end
+  validates_presence_of :name
+  validates_presence_of :code
 
   # validations: uniqueness
   test 'name and code of administrative_functions must be unique' do
