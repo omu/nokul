@@ -28,5 +28,24 @@ module ValidationTestModule
         end
       end
     end
+
+    def validates_length_of(attributes, type = 'string', object = nil)
+      object ||= to_s.delete_suffix('Test')
+
+      long_string = if type = 'string'
+                      (0...256).map { ('a'..'z').to_a[rand(26)] }.join
+                    elsif 'text'
+                      (0...65535).map { ('a'..'z').to_a[rand(26)] }.join
+                    end
+
+      [attributes].compact.flatten.each do |attribute|
+        test "#{attribute} can not be longer than character limits for #{object}" do
+          random_object = object.constantize.take
+          random_object.send("#{attribute}=", long_string)
+          assert_not random_object.valid?
+          assert random_object.errors.details[attribute].map { |err| err[:error] }.include?(:too_long)
+        end
+      end
+    end
   end
 end
