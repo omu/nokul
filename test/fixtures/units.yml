@@ -19,7 +19,7 @@ omu_rektorluk:
   unit_status: active
   unit_instruction_language: turkish
   unit_instruction_type: normal_education
-  university_type:
+  university_type: government
   unit_type: rectorship
   ancestry: <%= ActiveRecord::FixtureSet.identify(:omu) %>
 

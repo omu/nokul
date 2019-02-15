@@ -24,14 +24,16 @@ class CalendarEventTypeTest < ActiveSupport::TestCase
   validates_length_of :identifier
 
   # enums
-  has_enum({
-    applications: 1,
-    payments: 2,
-    registrations: 3,
-    advisor: 4,
-    exams: 5,
-    courses: 6,
-    submission: 7,
-    announcement: 8
-  }, 'category')
+  has_enum(
+    {
+      applications: 1,
+      payments: 2,
+      registrations: 3,
+      advisor: 4,
+      exams: 5,
+      courses: 6,
+      submission: 7,
+      announcement: 8
+    }, 'category'
+  )
 end
