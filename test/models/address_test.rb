@@ -66,6 +66,17 @@ class AddressTest < ActiveSupport::TestCase
     assert informal.errors[:base].include?(t('validators.address.max_informal', limit: 1))
   end
 
+  # phone number validations
+  test 'Only a valid mobile phone number can be added to address' do
+    formal = addresses(:formal).dup
+
+    %w(3623121919 554484377 1234567 55448437700).each do |number|
+      formal.phone_number = TelephoneNumber.parse(number, :tr)
+      assert_not formal.valid?
+      assert_not_empty formal.errors.messages[:phone_number]
+    end
+  end
+
   # other validations
   long_string = (0...256).map { ('a'..'z').to_a[rand(26)] }.join
 

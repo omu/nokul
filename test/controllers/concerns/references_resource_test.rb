@@ -28,7 +28,7 @@ module ReferenceResourceTest
     test 'should create instance' do
       assert_difference('@model_name.count') do
         post controller_index_path, params: {
-          @singular_variable => { name: 'Test Create', code: 999_998 }
+          @singular_variable => @variables
         }
       end
 
@@ -36,8 +36,9 @@ module ReferenceResourceTest
 
       instance = @model_name.last
 
-      assert_equal 'Test Create', instance.name
-      assert_equal 999_998, instance.code
+      @variables.each do |key, value|
+        assert_equal value, instance.send(key)
+      end
       assert_redirected_to controller_index_path
       assert_equal translate('.create.success'), flash[:notice]
     end
@@ -47,23 +48,27 @@ module ReferenceResourceTest
 
       assert_equal 'edit', @controller.action_name
       assert_response :success
-      assert_select '.simple_form' do
-        assert_select "##{@singular_variable}_name"
-        assert_select "##{@singular_variable}_code"
+
+      @variables.each do |key, value|
+        assert_select '.simple_form' do
+          assert_select "##{@singular_variable}_#{key}"
+        end
       end
     end
 
     test 'should update instance' do
       patch send("admin_#{@singular_variable}_path", @instance), params: {
-        @singular_variable => { name: 'Test Update', code: 999_999 }
+        @singular_variable => @variables
       }
 
       assert_equal 'update', @controller.action_name
 
       @instance.reload
 
-      assert_equal 'Test Update', @instance.name
-      assert_equal 999_999, @instance.code
+      @variables.each do |key, value|
+        assert_equal value, @instance.send(key)
+      end
+
       assert_redirected_to controller_index_path
       assert_equal translate('.update.success'), flash[:notice]
     end

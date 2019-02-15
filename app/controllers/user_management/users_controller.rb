@@ -2,8 +2,8 @@
 
 module UserManagement
   class UsersController < ApplicationController
-    include PagyBackendWithHelpers
-    include LastUpdateFromMernis
+    include SearchableModule
+    include UpdateableFromMernis
 
     before_action :set_user, only: %i[edit update destroy show]
     before_action :nullify_slug, only: :update

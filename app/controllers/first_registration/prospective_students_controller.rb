@@ -2,7 +2,7 @@
 
 module FirstRegistration
   class ProspectiveStudentsController < ApplicationController
-    include PagyBackendWithHelpers
+    include SearchableModule
 
     before_action :set_prospective_student, only: %i[show register]
     before_action :can_register?, only: :register

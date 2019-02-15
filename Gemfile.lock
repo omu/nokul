@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 6183483fa13bb1cac7e32f64df568fc2f9fb9a6b
+  revision: c43c83984792ac546e7610c898cf9099cc1a2ee6
   specs:
     actioncable (6.0.0.beta1)
       actionpack (= 6.0.0.beta1)
@@ -411,7 +411,7 @@ GEM
     wicked_pdf (1.1.0)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (1.0.0)
+    zeitwerk (1.1.0)
 
 PLATFORMS
   ruby

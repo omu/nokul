@@ -2,7 +2,7 @@
 
 module CourseManagement
   class CourseGroupTypesController < ApplicationController
-    include PagyBackendWithHelpers
+    include SearchableModule
 
     before_action :set_course_group_type, only: %i[edit update destroy]
 

@@ -21,7 +21,7 @@ default: &default
       alt_text: 'BAUM Beta Badge'
       visible: true
     background:
-      file: 'guest/background-4.jpg'
+      file: 'guest/background-3.jpg'
       alt_text: 'Background image'
 
 production:

@@ -20,4 +20,6 @@ Rails.application.config.assets.precompile += %w[
   guest.scss
   guest.js
   shared/cocoon.js
+  badges/baum-beta.svg
+  logos/baum-logo.svg
 ]

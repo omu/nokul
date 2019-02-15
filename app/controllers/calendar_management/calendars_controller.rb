@@ -2,7 +2,7 @@
 
 module CalendarManagement
   class CalendarsController < ApplicationController
-    include PagyBackendWithHelpers
+    include SearchableModule
 
     before_action :set_calendar, only: %i[show edit update destroy]
 

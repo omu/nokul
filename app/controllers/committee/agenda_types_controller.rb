@@ -2,7 +2,7 @@
 
 module Committee
   class AgendaTypesController < ApplicationController
-    include PagyBackendWithHelpers
+    include SearchableModule
 
     before_action :set_agenda_type, only: %i[edit update destroy]
 

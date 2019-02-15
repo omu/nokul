@@ -2,7 +2,7 @@
 
 module TermManagement
   class AcademicTermsController < ApplicationController
-    include PagyBackendWithHelpers
+    include SearchableModule
 
     before_action :set_academic_term, only: %i[edit update destroy]
 

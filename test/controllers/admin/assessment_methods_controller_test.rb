@@ -3,9 +3,9 @@
 require 'test_helper'
 require_relative '../concerns/references_resource_test'
 
-class StudentGradingSystemsControllerTest < ActionDispatch::IntegrationTest
+class AssessmentMethodsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @variables = { name: 'Test Create', code: 999_998 }
+    @variables = { name: 'Test Create' }
   end
 
   include ReferenceResourceTest

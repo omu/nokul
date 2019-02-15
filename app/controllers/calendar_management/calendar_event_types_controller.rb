@@ -2,7 +2,7 @@
 
 module CalendarManagement
   class CalendarEventTypesController < ApplicationController
-    include PagyBackendWithHelpers
+    include SearchableModule
 
     before_action :set_calendar_event_type, only: %i[edit update destroy]
 

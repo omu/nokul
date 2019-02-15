@@ -7,17 +7,25 @@ module TermManagement
     setup do
       sign_in users(:serhat)
       @academic_term = academic_terms(:fall_2017_2018)
+      @form_params = %w[year term start_of_term end_of_term active]
     end
 
     test 'should get index' do
       get academic_terms_path
+      assert_equal 'index', @controller.action_name
       assert_response :success
       assert_select '#add-button', translate('.index.new_academic_term_link')
     end
 
     test 'should get new' do
       get new_academic_term_path
+      assert_equal 'new', @controller.action_name
       assert_response :success
+      assert_select '.simple_form' do
+        @form_params.each do |param|
+          assert_select "#academic_term_#{param}"
+        end
+      end
     end
 
     test 'should create academic term' do
@@ -31,6 +39,8 @@ module TermManagement
 
       academic_term = AcademicTerm.last
 
+      assert_equal 'create', @controller.action_name
+
       assert_equal '2019 - 2020', academic_term.year
       assert_equal 'spring', academic_term.term
       assert_equal '2019-01-15 08:00:00'.in_time_zone, academic_term.start_of_term
@@ -43,7 +53,13 @@ module TermManagement
     test 'should get edit' do
       get edit_academic_term_path(@academic_term)
       assert_response :success
-      assert_select '.card-header strong', translate('.edit.form_title')
+      assert_equal 'edit', @controller.action_name
+
+      assert_select '.simple_form' do
+        @form_params.each do |param|
+          assert_select "#academic_term_#{param}"
+        end
+      end
     end
 
     test 'should update academic term' do
@@ -54,6 +70,7 @@ module TermManagement
             }
 
       academic_term.reload
+      assert_equal 'update', @controller.action_name
 
       assert_equal '2020 - 2021', academic_term.year
       assert_equal 'summer', academic_term.term
@@ -66,6 +83,7 @@ module TermManagement
         delete academic_term_path(academic_terms(:term_to_delete))
       end
 
+      assert_equal 'destroy', @controller.action_name
       assert_redirected_to academic_terms_path
       assert_equal translate('.destroy.success'), flash[:notice]
     end
@@ -73,7 +91,7 @@ module TermManagement
     private
 
     def translate(key)
-      t("academic_terms#{key}")
+      t("term_management.academic_terms#{key}")
     end
   end
 end
