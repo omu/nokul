@@ -7,13 +7,13 @@ class EmployeeTest < ActiveSupport::TestCase
   include ValidationTestModule
 
   # relations
-  belongs_to :user
   belongs_to :title
+  belongs_to :user
+  has_many :administrative_functions
+  has_many :available_course_lecturers
   has_many :duties
   has_many :units
   has_many :positions
-  has_many :administrative_functions
-  has_many :available_course_lecturers
 
   # validations: presence
   validates_presence_of :active

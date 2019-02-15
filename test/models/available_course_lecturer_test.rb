@@ -17,7 +17,6 @@ class AvailableCourseLecturerTest < ActiveSupport::TestCase
   # validations: presence
   validates_presence_of :coordinator
 
-  # validations: uniqueness
   test 'uniqueness validations for lecturer of a group' do
     fake = @course_lecturer.dup
     assert_not fake.valid?

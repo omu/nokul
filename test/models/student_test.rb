@@ -15,6 +15,7 @@ class StudentTest < ActiveSupport::TestCase
 
   # validations: presence
   validates_presence_of :student_number
+  validates_presence_of :permanently_registered
 
   # validations: uniqueness
   validates_uniqueness_of :student_number

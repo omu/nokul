@@ -11,23 +11,15 @@ class CurriculumCourseGroupTest < ActiveSupport::TestCase
   end
 
   # relations
-  has_many :curriculum_courses
-  has_many :courses
   belongs_to :course_group
   belongs_to :curriculum_semester
+  has_many :courses
+  has_many :curriculum_courses
 
   # validations: presence
-  {
-    course_group_id: :course_group,
-    curriculum_semester_id: :curriculum_semester,
-    ects: :ects
-  }.each do |property, error_message_key|
-    test "presence validations for #{property} of a curriculum course group" do
-      @curriculum_course_group.send("#{property}=", nil)
-      assert_not @curriculum_course_group.valid?
-      assert_not_empty @curriculum_course_group.errors[error_message_key]
-    end
-  end
+  validates_presence_of :course_group
+  validates_presence_of :curriculum_semester
+  validates_presence_of :ects
 
   # validations: uniqueness
   validates_uniqueness_of :course_group_id

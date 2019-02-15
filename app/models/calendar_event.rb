@@ -6,9 +6,9 @@ class CalendarEvent < ApplicationRecord
   belongs_to :calendar_event_type
 
   # validations
-  validates :timezone, presence: true, length: { maximum: 255 }
-  validates :start_time, presence: true
   validates :calendar, uniqueness: { scope: %i[calendar_event_type] }
+  validates :start_time, presence: true
+  validates :timezone, presence: true, length: { maximum: 255 }
   validates :visible, inclusion: { in: [true, false] }
   validates_with CalendarEventValidator
 

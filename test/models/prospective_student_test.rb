@@ -5,34 +5,43 @@ require 'test_helper'
 class ProspectiveStudentTest < ActiveSupport::TestCase
   include AssociationTestModule
   include ValidationTestModule
+  include EnumerationTestModule
 
   # relations
-  belongs_to :unit
   belongs_to :student_entrance_type
+  belongs_to :unit
 
   # validations: presence
-  validates_presence_of :id_number
   validates_presence_of :gender
+  validates_presence_of :id_number
+  validates_presence_of :first_name
+  validates_presence_of :last_name
 
   # validations: uniqueness
   validates_uniqueness_of :id_number
 
   # validations: length
-  validates_length_of :first_name
-  validates_length_of :last_name
+  validates_length_of :address
+  validates_length_of :email
   validates_length_of :fathers_name
-  validates_length_of :mothers_name
-  validates_length_of :place_of_birth
-  validates_length_of :registration_city
-  validates_length_of :registration_district
+  validates_length_of :first_name
   validates_length_of :high_school_code
   validates_length_of :high_school_branch
-  validates_length_of :address
   validates_length_of :home_phone
+  validates_length_of :last_name
   validates_length_of :mobile_phone
-  validates_length_of :email
-  validates_length_of :placement_score_type
+  validates_length_of :mothers_name
   validates_length_of :obs_registered_program
+  validates_length_of :place_of_birth
+  validates_length_of :placement_score_type
+  validates_length_of :registration_city
+  validates_length_of :registration_district
+
+  # enums
+  has_enum({ handicapped: 1 }, 'additional_score')
+  has_enum({ male: 1, female: 2 }, 'gender')
+  has_enum({ turkish: 1, kktc: 2, foreign: 3 }, 'nationality')
+  has_enum({ general_score: 1, additional_score: 2 }, 'placement_type')
 
   # callbacks
   test 'callbacks must titlecase the name for a prospective_student' do

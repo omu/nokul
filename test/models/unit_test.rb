@@ -35,7 +35,6 @@ class UnitTest < ActiveSupport::TestCase
   has_many :calendars
 
   # validations: presence
-  validates_presence_of :district
   validates_presence_of :name
   validates_presence_of :unit_status
 
@@ -44,9 +43,9 @@ class UnitTest < ActiveSupport::TestCase
   validates_uniqueness_of :yoksis_id
 
   # validations: length
-  validates_length_of :name
   validates_length_of :abbreviation
   validates_length_of :code
+  validates_length_of :name
 
   # callbacks
   test 'callbacks must titlecase the name for a unit' do

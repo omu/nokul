@@ -25,6 +25,7 @@ class Curriculum < ApplicationRecord
 
   # relations
   belongs_to :unit
+  has_many :available_courses, dependent: :destroy
   has_many :curriculum_programs, dependent: :destroy
   has_many :programs, through: :curriculum_programs,
                       source: :unit
@@ -34,7 +35,6 @@ class Curriculum < ApplicationRecord
   has_many :courses, through: :semesters
   has_many :curriculum_course_groups, through: :semesters
   has_many :course_groups, through: :curriculum_course_groups
-  has_many :available_courses, dependent: :destroy
 
   # nested models
   accepts_nested_attributes_for :semesters, reject_if: :all_blank, allow_destroy: true

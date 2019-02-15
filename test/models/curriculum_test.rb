@@ -5,6 +5,7 @@ require 'test_helper'
 class CurriculumTest < ActiveSupport::TestCase
   include AssociationTestModule
   include ValidationTestModule
+  include EnumerationTestModule
 
   setup do
     @curriculum = curriculums(:one)
@@ -36,18 +37,11 @@ class CurriculumTest < ActiveSupport::TestCase
   validates_presence_of :status
   validates_presence_of :unit
 
+  # validations: nested models
+  validates_presence_of_nested_model :programs
+
   # validations: length
   validates_length_of :name
-
-  {
-    program_ids: :programs
-  }.each do |property, error_message_key|
-    test "presence validations for #{property} of a curriculum" do
-      @curriculum.send("#{property}=", nil)
-      assert_not @curriculum.valid?
-      assert_not_empty @curriculum.errors[error_message_key]
-    end
-  end
 
   # validations: uniqueness
   validates_uniqueness_of :name
@@ -60,16 +54,7 @@ class CurriculumTest < ActiveSupport::TestCase
   end
 
   # enums
-  {
-    status: { passive: 0, active: 1 }
-  }.each do |property, hash|
-    hash.each do |key, value|
-      test "have a #{key} value of #{property} enum" do
-        enums = Curriculum.defined_enums.with_indifferent_access
-        assert_equal enums.dig(property, key), value
-      end
-    end
-  end
+  has_enum({ passive: 0, active: 1 }, 'status')
 
   # custom methods
   test 'build_semester method' do

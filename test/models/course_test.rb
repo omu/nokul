@@ -5,6 +5,7 @@ require 'test_helper'
 class CourseTest < ActiveSupport::TestCase
   include AssociationTestModule
   include ValidationTestModule
+  include EnumerationTestModule
 
   setup do
     @course = courses(:test)
@@ -12,20 +13,17 @@ class CourseTest < ActiveSupport::TestCase
 
   # relations
   belongs_to :course_type
-  belongs_to :unit
   belongs_to :language
+  belongs_to :unit
 
   # validations: presence
   validates_presence_of :code
-  validates_presence_of :course_type
-  validates_presence_of :program_type
   validates_presence_of :laboratory
-  validates_presence_of :language
   validates_presence_of :name
   validates_presence_of :practice
+  validates_presence_of :program_type
   validates_presence_of :status
   validates_presence_of :theoric
-  validates_presence_of :unit
 
   # validations: uniqueness
   validates_uniqueness_of :name
@@ -34,6 +32,10 @@ class CourseTest < ActiveSupport::TestCase
   # validations: length
   validates_length_of :name
   validates_length_of :code
+
+  # enums
+  has_enum({ passive: 0, active: 1 }, 'status')
+  has_enum({ associate: 0, undergraduate: 1, master: 2, doctoral: 3 }, 'program_type')
 
   # callbacks
   test 'callbacks must titlecase the name for a course' do
@@ -46,19 +48,6 @@ class CourseTest < ActiveSupport::TestCase
     course = @course.dup
     course.update(code: 'DD101', theoric: 10, practice: 3)
     assert_equal course.credit, 11.5
-  end
-
-  # enums
-  {
-    status: { passive: 0, active: 1 },
-    program_type: { associate: 0, undergraduate: 1, master: 2, doctoral: 3 }
-  }.each do |property, hash|
-    hash.each do |key, value|
-      test "have a #{key} value of #{property} enum" do
-        enums = Course.defined_enums.with_indifferent_access
-        assert_equal enums.dig(property, key), value
-      end
-    end
   end
 
   # actions

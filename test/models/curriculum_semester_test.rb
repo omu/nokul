@@ -1,22 +1,21 @@
 # frozen_string_literal: true
 
 require 'test_helper'
-require_relative './concerns/enum_for_term_test'
 
 class CurriculumSemesterTest < ActiveSupport::TestCase
   include AssociationTestModule
   include ValidationTestModule
-  include EnumForTermTest
+  include EnumerationTestModule
 
   setup do
     @semester = curriculum_semesters(:one)
   end
 
   # relations
-  has_many :curriculum_courses
-  has_many :curriculum_course_groups
-  has_many :courses
   belongs_to :curriculum
+  has_many :courses
+  has_many :curriculum_course_groups
+  has_many :curriculum_courses
 
   # validations: presence
   validates_presence_of :year
@@ -30,7 +29,7 @@ class CurriculumSemesterTest < ActiveSupport::TestCase
   end
 
   # enums
-  test_term_enum(CurriculumSemester)
+  has_enum({ fall: 0, spring: 1, summer: 2 }, 'term')
 
   # custom methods
   test 'total_ects method' do

@@ -2,10 +2,10 @@
 
 class CurriculumCourseGroup < ApplicationRecord
   # relations
-  has_many :curriculum_courses, dependent: :destroy
-  has_many :courses, through: :curriculum_courses
   belongs_to :course_group
   belongs_to :curriculum_semester
+  has_many :curriculum_courses, dependent: :destroy
+  has_many :courses, through: :curriculum_courses
 
   # nested models
   accepts_nested_attributes_for :curriculum_courses

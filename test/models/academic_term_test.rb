@@ -1,12 +1,11 @@
 # frozen_string_literal: true
 
 require 'test_helper'
-require_relative './concerns/enum_for_term_test'
 
 class AcademicTermTest < ActiveSupport::TestCase
-  include EnumForTermTest
   include AssociationTestModule
   include ValidationTestModule
+  include EnumerationTestModule
 
   # relations
   has_many :calendars
@@ -25,6 +24,9 @@ class AcademicTermTest < ActiveSupport::TestCase
   # validations: length
   validates_length_of :year
 
+  # enums
+  has_enum({ fall: 0, spring: 1, summer: 2 }, 'term')
+
   # validations: AcademicTermValidator
   test 'one of the academic terms must be active' do
     active_term = AcademicTerm.active.last
@@ -32,9 +34,6 @@ class AcademicTermTest < ActiveSupport::TestCase
     assert_not active_term.valid?
     assert_not_empty active_term.errors[:active]
   end
-
-  # enums
-  test_term_enum(AcademicTerm)
 
   # scopes
   test 'active scope returns active academic terms' do

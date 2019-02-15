@@ -5,6 +5,7 @@ require 'test_helper'
 class CurriculumCourseTest < ActiveSupport::TestCase
   include AssociationTestModule
   include ValidationTestModule
+  include EnumerationTestModule
 
   setup do
     @curriculum_course = curriculum_courses(:one)
@@ -15,17 +16,9 @@ class CurriculumCourseTest < ActiveSupport::TestCase
   belongs_to :curriculum_semester
 
   # validations: presence
-  {
-    course_id: :course,
-    curriculum_semester_id: :curriculum_semester,
-    ects: :ects
-  }.each do |property, error_message_key|
-    test "presence validations for #{property} of a curriculum course" do
-      @curriculum_course.send("#{property}=", nil)
-      assert_not @curriculum_course.valid?
-      assert_not_empty @curriculum_course.errors[error_message_key]
-    end
-  end
+  validates_presence_of :course
+  validates_presence_of :curriculum_semester
+  validates_presence_of :ects
 
   # validations: numericality
   test 'numericality validations for ects of a curriculum course' do
@@ -38,16 +31,7 @@ class CurriculumCourseTest < ActiveSupport::TestCase
   validates_uniqueness_of :course
 
   # enums
-  {
-    type: { compulsory: 0, elective: 1 }
-  }.each do |property, hash|
-    hash.each do |key, value|
-      test "have a #{key} value of #{property} enum" do
-        enums = CurriculumCourse.defined_enums.with_indifferent_access
-        assert_equal enums.dig(property, key), value
-      end
-    end
-  end
+  has_enum({ compulsory: 0, elective: 1 }, 'type')
 
   # callbacks
   test 'callbacks must set value the type for a curriculum course' do

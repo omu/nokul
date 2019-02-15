@@ -11,9 +11,9 @@ class Calendar < ApplicationRecord
 
   # relations
   belongs_to :academic_term
+  has_many :calendar_committee_decisions, dependent: :destroy
   has_many :calendar_events, dependent: :destroy
   has_many :calendar_event_types, through: :calendar_events
-  has_many :calendar_committee_decisions, dependent: :destroy
   has_many :committee_decisions, through: :calendar_committee_decisions
   has_many :unit_calendars, dependent: :destroy
   has_many :units, through: :unit_calendars,

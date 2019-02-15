@@ -5,10 +5,7 @@ require 'test_helper'
 class CalendarEventTypeTest < ActiveSupport::TestCase
   include AssociationTestModule
   include ValidationTestModule
-
-  setup do
-    @calendar_event_type = calendar_event_types(:add_drop_registrations)
-  end
+  include EnumerationTestModule
 
   # relations
   has_many :calendars
@@ -25,4 +22,16 @@ class CalendarEventTypeTest < ActiveSupport::TestCase
   # validations: length
   validates_length_of :name
   validates_length_of :identifier
+
+  # enums
+  has_enum({
+    applications: 1,
+    payments: 2,
+    registrations: 3,
+    advisor: 4,
+    exams: 5,
+    courses: 6,
+    submission: 7,
+    announcement: 8
+  }, 'category')
 end

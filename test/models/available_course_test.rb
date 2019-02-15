@@ -4,6 +4,7 @@ require 'test_helper'
 
 class AvailableCourseTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include ValidationTestModule
 
   setup do
     @available_course = available_courses(:ati_fall_2018_2019)
@@ -11,11 +12,10 @@ class AvailableCourseTest < ActiveSupport::TestCase
 
   # relations
   belongs_to :academic_term
-  belongs_to :curriculum
-  belongs_to :course
   belongs_to :coordinator
+  belongs_to :course
+  belongs_to :curriculum
   belongs_to :unit
-
   has_many :evaluation_types
   has_many :groups
 

@@ -12,8 +12,10 @@ class MeetingAgendaTest < ActiveSupport::TestCase
   has_one :decision
 
   # validations: presence
-  validates_presence_of :agenda
   validates_presence_of :sequence_no
+
+  # validations: uniqueness
+  validates_uniqueness_of :agenda_id
 
   # delegates
   %i[

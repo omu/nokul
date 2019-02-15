@@ -15,8 +15,8 @@ class AdministrativeFunctionTest < ActiveSupport::TestCase
   validates_presence_of :name
 
   # validations: uniqueness
-  validates_uniqueness_of :name
   validates_uniqueness_of :code
+  validates_uniqueness_of :name
 
   # validations: length
   validates_length_of :name

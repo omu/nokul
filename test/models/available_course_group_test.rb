@@ -6,10 +6,6 @@ class AvailableCourseGroupTest < ActiveSupport::TestCase
   include AssociationTestModule
   include ValidationTestModule
 
-  setup do
-    @course_group = available_course_groups(:ati_group_1)
-  end
-
   # relations
   belongs_to :available_course
   has_many :lecturers
@@ -22,4 +18,7 @@ class AvailableCourseGroupTest < ActiveSupport::TestCase
 
   # validations: length
   validates_length_of :name
+
+  # validations: nested models
+  validates_presence_of_nested_model :lecturers
 end

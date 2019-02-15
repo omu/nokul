@@ -11,9 +11,9 @@ class RegistrationDocumentTest < ActiveSupport::TestCase
   end
 
   # relations
-  belongs_to :unit
   belongs_to :academic_term
   belongs_to :document_type
+  belongs_to :unit
 
   # validations: uniqueness
   validates_uniqueness_of :unit_id

@@ -7,8 +7,8 @@ class PositionTest < ActiveSupport::TestCase
   include ValidationTestModule
 
   # relations
-  belongs_to :duty
   belongs_to :administrative_function
+  belongs_to :duty
 
   # validations: presence
   validates_presence_of :start_date

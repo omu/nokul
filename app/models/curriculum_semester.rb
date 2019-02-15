@@ -4,10 +4,10 @@ class CurriculumSemester < ApplicationRecord
   include EnumForTerm
 
   # relations
+  belongs_to :curriculum, counter_cache: :semesters_count, inverse_of: :semesters
   has_many :curriculum_courses, dependent: :destroy
   has_many :curriculum_course_groups, dependent: :destroy
   has_many :courses, through: :curriculum_courses
-  belongs_to :curriculum, counter_cache: :semesters_count, inverse_of: :semesters
 
   # validations
   validates :sequence, numericality: { greater_than: 0 },

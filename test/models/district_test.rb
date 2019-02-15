@@ -8,12 +8,12 @@ class DistrictTest < ActiveSupport::TestCase
 
   # relations
   belongs_to :city
-  has_many :units
   has_many :addresses
+  has_many :units
 
   # validations: presence
   validates_presence_of :name
-  validates_presence_of :city
+  validates_presence_of :active
 
   # validations: uniqueness
   validates_uniqueness_of :name
@@ -36,14 +36,5 @@ class DistrictTest < ActiveSupport::TestCase
     error_codes = fake.errors.details[:mernis_code].map { |err| err[:error] }
     assert error_codes.include?(:wrong_length)
     assert error_codes.include?(:not_a_number)
-  end
-
-  test 'active field of district can not be nil' do
-    fake = districts(:vezirkopru).dup
-    fake.active = nil
-    assert_not fake.valid?
-
-    error_codes = fake.errors.details[:active].map { |err| err[:error] }
-    assert error_codes.include?(:inclusion)
   end
 end

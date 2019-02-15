@@ -8,10 +8,10 @@ class UserTest < ActiveSupport::TestCase
   include ActiveJob::TestHelper
 
   # relations
+  has_many :addresses
+  has_many :identities
   has_many :employees
   has_many :students
-  has_many :identities
-  has_many :addresses
   has_many :duties
   has_many :units
   has_many :positions
@@ -23,25 +23,28 @@ class UserTest < ActiveSupport::TestCase
   # validations: presence
   validates_presence_of :email
   validates_presence_of :id_number
+  validates_presence_of :preferred_language
 
   # validations: uniqueness
   validates_uniqueness_of :email
   validates_uniqueness_of :id_number
 
-  # validations: numerically
-  test 'id_number must be numeric' do
+  # validations: length
+  validates_length_of :email
+
+  test 'id_number must be 11 characters' do
     fake = users(:serhat).dup
-    ['abc', '.,', '1,24', '10.25'].each do |value|
+    ['123456789121', '123', '123456789,5', '14254455.77'].each do |value|
       fake.id_number = value
       assert_not fake.valid?
       assert_not_empty fake.errors[:id_number]
     end
   end
 
-  # validations: length
-  test 'id_number must be 11 characters' do
+  # validations: numerically
+  test 'id_number must be numeric' do
     fake = users(:serhat).dup
-    ['123456789121', '123', '123456789,5', '14254455.77'].each do |value|
+    ['abc', '.,', '1,24', '10.25'].each do |value|
       fake.id_number = value
       assert_not fake.valid?
       assert_not_empty fake.errors[:id_number]

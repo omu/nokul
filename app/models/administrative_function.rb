@@ -6,8 +6,8 @@ class AdministrativeFunction < ApplicationRecord
   has_many :duties, through: :positions
 
   # validations
-  validates :name, presence: true, uniqueness: true, length: { maximum: 255 }
   validates :code, uniqueness: true, numericality: { only_integer: true, greater_than: 0 }
+  validates :name, presence: true, uniqueness: true, length: { maximum: 255 }
 
   # callbacks
   before_validation { self.name = name.capitalize_turkish if name }

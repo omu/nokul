@@ -13,12 +13,12 @@ class DutyTest < ActiveSupport::TestCase
   # relations
   belongs_to :employee
   belongs_to :unit
-  has_many :positions
   has_many :administrative_functions
+  has_many :positions
 
   # validations: presence
-  validates_presence_of :temporary
   validates_presence_of :start_date
+  validates_presence_of :temporary
 
   # validations: uniqueness
   validates_uniqueness_of :unit_id

@@ -5,6 +5,7 @@ require 'test_helper'
 class AddressTest < ActiveSupport::TestCase
   include AssociationTestModule
   include ValidationTestModule
+  include EnumerationTestModule
 
   test 'type column does not refer to STI' do
     assert_empty Identity.inheritance_column
@@ -22,14 +23,11 @@ class AddressTest < ActiveSupport::TestCase
   validates_uniqueness_of :type
 
   # validations: length
-  validates_length_of :phone_number
   validates_length_of :full_address
+  validates_length_of :phone_number
 
   # enumerations
-  test 'addresses can respond to enumerators' do
-    assert addresses(:formal).formal?
-    assert addresses(:informal).informal?
-  end
+  has_enum({ formal: 1, informal: 2 }, 'type')
 
   # callbacks
   test 'callbacks must titlecase the full_address of an address' do

@@ -18,11 +18,12 @@ class Agenda < ApplicationRecord
   enum status: { recent: 0, decided: 1, delayed: 2 }
 
   # relations
-  has_one_attached :agenda_file
-  belongs_to :unit
   belongs_to :agenda_type
+  belongs_to :unit
   has_many :meeting_agendas, dependent: :destroy
   has_many :meetings, through: :meeting_agendas, source: :committee_meeting
+
+  has_one_attached :agenda_file
 
   # validations
   validates :description, presence: true, length: { maximum: 65_535 }

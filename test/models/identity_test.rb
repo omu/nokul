@@ -5,6 +5,7 @@ require 'test_helper'
 class IdentityTest < ActiveSupport::TestCase
   include AssociationTestModule
   include ValidationTestModule
+  include EnumerationTestModule
 
   test 'type column does not refer to STI' do
     assert_empty Identity.inheritance_column
@@ -14,18 +15,18 @@ class IdentityTest < ActiveSupport::TestCase
   belongs_to :user
 
   # validations: presence
-  validates_presence_of :type
-  validates_presence_of :first_name
-  validates_presence_of :last_name
-  validates_presence_of :gender
-  validates_presence_of :place_of_birth
   validates_presence_of :date_of_birth
+  validates_presence_of :first_name
+  validates_presence_of :gender
+  validates_presence_of :last_name
+  validates_presence_of :place_of_birth
+  validates_presence_of :type
 
   # validations: length
+  validates_length_of :fathers_name
   validates_length_of :first_name
   validates_length_of :last_name
   validates_length_of :mothers_name
-  validates_length_of :fathers_name
   validates_length_of :place_of_birth
   validates_length_of :registered_to
 
@@ -36,16 +37,10 @@ class IdentityTest < ActiveSupport::TestCase
     assert_not_empty student_identity.errors[:student_id]
   end
 
-   # enumerations
-  %i[
-    formal?
-    male?
-    married?
-  ].each do |property|
-    test "identities can respond to #{property} enum" do
-      assert identities(:formal_user).send(property)
-    end
-  end
+  # enums
+  has_enum({ formal: 1, informal: 2 }, 'type')
+  has_enum({ male: 1, female: 2, other: 3 }, 'gender')
+  has_enum({ single: 1, married: 2, divorced: 3, unknown: 4 }, 'marital_status')
 
   # scopes
   test 'user_identity can return formal identities which does not belongs_to students' do

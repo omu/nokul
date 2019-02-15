@@ -17,6 +17,9 @@ class CourseAssessmentMethodTest < ActiveSupport::TestCase
   # validations: presence
   validates_presence_of :percentage
 
+  # validations: uniqueness
+  validates_uniqueness_of :assessment_method
+
   # validations: numericality
   test 'numericality validations for percentage of a course assessment method' do
     @course_assessment_method.percentage = -1
@@ -24,12 +27,5 @@ class CourseAssessmentMethodTest < ActiveSupport::TestCase
     @course_assessment_method.percentage = 101
     assert_not @course_assessment_method.valid?
     assert_not_empty @course_assessment_method.errors[:percentage]
-  end
-
-  # validations: uniqueness
-  test 'uniqueness validations for assessment method scoped with course evaluation type' do
-    fake = @course_assessment_method.dup
-    assert_not fake.valid?
-    assert_not_empty fake.errors[:assessment_method]
   end
 end

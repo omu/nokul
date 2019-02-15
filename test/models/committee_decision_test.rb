@@ -17,6 +17,7 @@ class CommitteeDecisionTest < ActiveSupport::TestCase
 
   # validations: presence
   validates_presence_of :description
+  validates_presence_of :decision_no
 
   # validations: length
   validates_length_of :decision_no

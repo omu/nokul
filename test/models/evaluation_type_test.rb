@@ -6,12 +6,15 @@ class EvaluationTypeTest < ActiveSupport::TestCase
   include AssociationTestModule
   include ValidationTestModule
 
-   # relations
-  has_many :course_evaluation_types
+  # relations
   has_many :available_courses
+  has_many :course_evaluation_types
 
   # validations: presence
   validates_presence_of :name
+
+  # validations: uniqueness
+  validates_uniqueness_of :name
 
   # validations: length
   validates_length_of :name

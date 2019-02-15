@@ -18,6 +18,6 @@ class CourseEvaluationType < ApplicationRecord
   validates :evaluation_type, uniqueness: { scope: :available_course }
   validates_with CourseEvaluationTypeValidator
 
-  # delegate
+  # delegations
   delegate :name, to: :evaluation_type
 end
