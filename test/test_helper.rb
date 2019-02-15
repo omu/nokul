@@ -22,6 +22,9 @@ require 'rails/test_help'
 require 'webmock/minitest'
 WebMock.allow_net_connect!
 
+# Test Modules
+require_relative 'models/concerns/association_test_module'
+
 module ActiveSupport
   class TestCase
     include AbstractController::Translation
