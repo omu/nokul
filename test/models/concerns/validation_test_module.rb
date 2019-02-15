@@ -94,7 +94,7 @@ module ValidationTestModule
       when :greater_than, :less_than
         number = number
       when :greater_than_or_equal_to
-        number -= 1     
+        number -= 1
       when :less_than_or_equal_to
         number += 1
       end
