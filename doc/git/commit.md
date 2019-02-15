@@ -1,3 +1,7 @@
+---
+author: M. Serhat Dundar
+---
+
 # Commit
 
 - Projeyi `bundle` ettikten sonra `fit-commit` git hook'larını kurun: `fit-commit install`

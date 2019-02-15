@@ -1,3 +1,7 @@
+---
+author: M. Serhat Dundar
+---
+
 ## Rules
 
 - `float`: Kesinliğin çok önemli olmadığı, yalnızca virgülden sonraki 3-5 basamak ile ilgilendiğiniz, ve bu rakamlar ile yoğun aritmedik işlem yapacağınız durumlarda kullanın.

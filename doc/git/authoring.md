@@ -1,3 +1,7 @@
+---
+author: M. Serhat Dundar
+---
+
 # Authoring
 
 ## Bir Başkasının Çalışmasını Commit'lemek

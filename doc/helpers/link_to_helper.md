@@ -1,3 +1,7 @@
+---
+author: İrfan Subaş
+---
+
 Link Yardımcıları
 =================
 
