@@ -14,28 +14,19 @@ ENV RAILS_MASTER_KEY=$RAILS_MASTER_KEY
 ENV RAILS_SERVE_STATIC_FILES=enabled
 ENV RAILS_LOG_TO_STDOUT=enabled
 
+ENV NODE_ENV=production
+ENV NODE_ENV=$NODE_ENV
+
+RUN case $RAILS_ENV in \
+    test) apt-get -y update && apt-get -y install --no-install-recommends chromedriver && \
+          apt-get clean && rm -rf /var/lib/apt/lists/* ;; \
+    esac
+
 WORKDIR /app
 
-COPY .ruby-version ./
-COPY Gemfile Gemfile.lock ./
-COPY package.json yarn.lock ./
-
-COPY plugins/support/lib/nokul/support/version.rb      ./plugins/support/lib/nokul/support/version.rb
-COPY plugins/support/nokul-support.gemspec             ./plugins/support/nokul-support.gemspec
-
-COPY plugins/tenant/common/lib/nokul/tenant/version.rb ./plugins/tenant/common/lib/nokul/tenant/version.rb
-COPY plugins/tenant/common/nokul-tenant.gemspec        ./plugins/tenant/common/nokul-tenant.gemspec
-
-COPY plugins/tenant/$NOKUL_TENANT/lib/nokul/tenant/$NOKUL_TENANT/version.rb ./plugins/tenant/$NOKUL_TENANT/lib/nokul/tenant/$NOKUL_TENANT/version.rb
-COPY plugins/tenant/$NOKUL_TENANT/nokul-tenant-$NOKUL_TENANT.gemspec        ./plugins/tenant/$NOKUL_TENANT/nokul-tenant-$NOKUL_TENANT.gemspec
-
 RUN bundle config --global silence_root_warning true
-RUN bundle install --without development:test -j4 --deployment
-RUN yarn install
 
 COPY . ./
-
-RUN bundle exec rake assets:precompile
 
 EXPOSE 3000
 

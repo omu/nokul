@@ -3,10 +3,10 @@
 require 'test_helper'
 
 class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
-  driven_by :selenium, using: :headless_chrome, screen_size: [1920, 1080], options: {
+  driven_by :selenium, using: :chrome, screen_size: [1920, 1080], options: {
     desired_capabilities: {
       chromeOptions: {
-        args: %w[headless disable-gpu disable-dev-shm-usage]
+        args: %w[no-sandbox headless disable-gpu disable-dev-shm-usage]
       }
     }
   }
