@@ -5,7 +5,7 @@ require 'test_helper'
 class DistrictTest < ActiveSupport::TestCase
   include AssociationTestModule
   include ValidationTestModule
-  
+
   # relations
   belongs_to :city
   has_many :units

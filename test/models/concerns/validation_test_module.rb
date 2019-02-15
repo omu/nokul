@@ -4,8 +4,8 @@ module ValidationTestModule
   extend ActiveSupport::Concern
 
   class_methods do
-    def validates_presence_of(object = nil, attributes)
-      object ||= self.to_s.delete_suffix('Test')
+    def validates_presence_of(attributes, object = nil)
+      object ||= to_s.delete_suffix('Test')
 
       [attributes].compact.flatten.each do |attribute|
         test "#{attribute} must be present (presence: true) for #{object}" do

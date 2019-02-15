@@ -4,8 +4,9 @@ module AssociationTestModule
   extend ActiveSupport::Concern
 
   class_methods do
-    def has_many(object = nil, associations)
-      object ||= self.to_s.delete_suffix('Test')
+    # rubocop:disable Naming/PredicateName
+    def has_many(associations, object = nil)
+      object ||= to_s.delete_suffix('Test')
 
       [associations].compact.flatten.each do |association|
         test "#{object} has_many #{association}" do
@@ -13,6 +14,7 @@ module AssociationTestModule
         end
       end
     end
+    # rubocop:enable Naming/PredicateName
 
     alias_method :has_one, :has_many
     alias_method :belongs_to, :has_many
