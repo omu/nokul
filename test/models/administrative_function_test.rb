@@ -18,6 +18,9 @@ class AdministrativeFunctionTest < ActiveSupport::TestCase
   validates_uniqueness_of :name
   validates_uniqueness_of :code
 
+  # validations: length
+  validates_length_of :name
+
   # callbacks
   test 'callbacks must titlecase the full_address of an address' do
     administrative_functions(:rector).update!(name: 'REKTÖR')

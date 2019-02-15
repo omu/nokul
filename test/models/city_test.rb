@@ -20,6 +20,10 @@ class CityTest < ActiveSupport::TestCase
   validates_uniqueness_of :name
   validates_uniqueness_of :alpha_2_code
 
+  # validations: length
+  validates_length_of :name
+  validates_length_of :alpha_2_code
+
   # callbacks
   test 'callbacks must titlecase the name and must upcase the alpha_2_code of a city' do
     city = City.create(
@@ -29,20 +33,5 @@ class CityTest < ActiveSupport::TestCase
     )
     assert_equal city.name, 'Wonderland'
     assert_equal city.alpha_2_code, 'WL-11'
-  end
-
-  # other validations
-  long_string = (0...256).map { ('a'..'z').to_a[rand(26)] }.join
-
-  %i[
-    name
-    alpha_2_code
-  ].each do |property|
-    test "#{property} can not be longer than 255 characters" do
-      fake = cities(:samsun).dup
-      fake.send("#{property}=", long_string)
-      assert_not fake.valid?
-      assert fake.errors.details[property].map { |err| err[:error] }.include?(:too_long)
-    end
   end
 end

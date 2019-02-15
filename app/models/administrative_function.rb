@@ -6,7 +6,7 @@ class AdministrativeFunction < ApplicationRecord
   has_many :duties, through: :positions
 
   # validations
-  validates :name, presence: true, uniqueness: true
+  validates :name, presence: true, uniqueness: true, length: { maximum: 255 }
   validates :code, uniqueness: true, numericality: { only_integer: true, greater_than: 0 }
 
   # callbacks

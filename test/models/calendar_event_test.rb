@@ -21,6 +21,9 @@ class CalendarEventTest < ActiveSupport::TestCase
   # validations: uniqueness
   validates_uniqueness_of :calendar
 
+  # validations: length
+  validates_length_of :timezone
+
   # other validations
   test 'visible field of calendar_event can not be nil' do
     fake = @calendar_event.dup

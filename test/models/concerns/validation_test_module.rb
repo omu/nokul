@@ -32,10 +32,10 @@ module ValidationTestModule
     def validates_length_of(attributes, type = 'string', object = nil)
       object ||= to_s.delete_suffix('Test')
 
-      long_string = if type = 'string'
-                      (0...256).map { ('a'..'z').to_a[rand(26)] }.join
-                    elsif 'text'
-                      (0...65535).map { ('a'..'z').to_a[rand(26)] }.join
+      long_string = if type == 'string'
+                      (0..256).map { ('a'..'z').to_a[rand(26)] }.join
+                    elsif type == 'text'
+                      (0..65536).map { ('a'..'z').to_a[rand(26)] }.join
                     end
 
       [attributes].compact.flatten.each do |attribute|

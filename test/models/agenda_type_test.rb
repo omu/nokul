@@ -11,4 +11,7 @@ class AgendaTypeTest < ActiveSupport::TestCase
 
   # validations: presence
   validates_presence_of :name
+
+  # validations: length
+  validates_length_of :name
 end

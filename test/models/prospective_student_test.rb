@@ -17,6 +17,23 @@ class ProspectiveStudentTest < ActiveSupport::TestCase
   # validations: uniqueness
   validates_uniqueness_of :id_number
 
+  # validations: length
+  validates_length_of :first_name
+  validates_length_of :last_name
+  validates_length_of :fathers_name
+  validates_length_of :mothers_name
+  validates_length_of :place_of_birth
+  validates_length_of :registration_city
+  validates_length_of :registration_district
+  validates_length_of :high_school_code
+  validates_length_of :high_school_branch
+  validates_length_of :address
+  validates_length_of :home_phone
+  validates_length_of :mobile_phone
+  validates_length_of :email
+  validates_length_of :placement_score_type
+  validates_length_of :obs_registered_program
+
   # callbacks
   test 'callbacks must titlecase the name for a prospective_student' do
     prospective_student = prospective_students(:serhat).dup

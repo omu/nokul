@@ -6,10 +6,6 @@ class AssessmentMethodTest < ActiveSupport::TestCase
   include AssociationTestModule
   include ValidationTestModule
 
-  setup do
-    @assessment_method = assessment_methods(:exam)
-  end
-
   # relations
   has_many :available_courses
   has_many :course_assessment_methods
@@ -18,13 +14,11 @@ class AssessmentMethodTest < ActiveSupport::TestCase
   # validations: presence
   validates_presence_of :name
 
-  # other validations
-  test 'name can not be longer than 255 characters' do
-    fake = @assessment_method.dup
-    fake.name = (0...256).map { ('a'..'z').to_a[rand(26)] }.join
-    assert_not fake.valid?
-    assert fake.errors.details[:name].map { |err| err[:error] }.include?(:too_long)
-  end
+  # validations: uniqueness
+  validates_uniqueness_of :name
+
+  # validations: length
+  validates_length_of :name
 
   # callbacks
   test 'callbacks must titlecase the name of a assessment method' do

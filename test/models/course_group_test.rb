@@ -22,6 +22,9 @@ class CourseGroupTest < ActiveSupport::TestCase
   validates_presence_of :total_ects_condition
   validates_presence_of :course_ids
 
+  # validations: length
+  validates_length_of :name
+
   # validations: uniqueness
   test 'uniqueness validations for name of a course group' do
     fake = @course_group.dup

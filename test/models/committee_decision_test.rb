@@ -18,6 +18,10 @@ class CommitteeDecisionTest < ActiveSupport::TestCase
   # validations: presence
   validates_presence_of :description
 
+  # validations: length
+  validates_length_of :decision_no
+  validates_length_of :description, 'text'
+
   # delegates
   %i[
     meeting_agenda_meeting_no

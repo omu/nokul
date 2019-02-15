@@ -43,6 +43,11 @@ class UnitTest < ActiveSupport::TestCase
   validates_uniqueness_of :name
   validates_uniqueness_of :yoksis_id
 
+  # validations: length
+  validates_length_of :name
+  validates_length_of :abbreviation
+  validates_length_of :code
+
   # callbacks
   test 'callbacks must titlecase the name for a unit' do
     unit = units(:omu).dup

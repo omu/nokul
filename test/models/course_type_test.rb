@@ -22,6 +22,10 @@ class CourseTypeTest < ActiveSupport::TestCase
   validates_uniqueness_of :name
   validates_uniqueness_of :code
 
+  # validations: length
+  validates_length_of :name
+  validates_length_of :code
+
   # validations: numericality
   test 'presence numericality for min_credit of a course type' do
     @course_type.min_credit = -1

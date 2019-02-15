@@ -31,6 +31,10 @@ class CourseTest < ActiveSupport::TestCase
   validates_uniqueness_of :name
   validates_uniqueness_of :code
 
+  # validations: length
+  validates_length_of :name
+  validates_length_of :code
+
   # callbacks
   test 'callbacks must titlecase the name for a course' do
     course = @course.dup

@@ -36,6 +36,9 @@ class CurriculumTest < ActiveSupport::TestCase
   validates_presence_of :status
   validates_presence_of :unit
 
+  # validations: length
+  validates_length_of :name
+
   {
     program_ids: :programs
   }.each do |property, error_message_key|

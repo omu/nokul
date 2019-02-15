@@ -6,10 +6,6 @@ class LanguageTest < ActiveSupport::TestCase
   include AssociationTestModule
   include ValidationTestModule
 
-  setup do
-    @language = languages(:turkce)
-  end
-
   # relations
   has_many :courses
   has_many :prospective_students
@@ -22,16 +18,9 @@ class LanguageTest < ActiveSupport::TestCase
   validates_uniqueness_of :name
   validates_uniqueness_of :iso
 
-  # other validations
-  test 'name and iso can not be longer than 255 characters' do
-    fake = languages(:turkce).dup
-    random_long_string = (0...256).map { ('a'..'z').to_a[rand(26)] }.join
-    fake.name = random_long_string
-    fake.iso = random_long_string
-    assert_not fake.valid?
-    assert fake.errors.details[:name].map { |err| err[:error] }.include?(:too_long)
-    assert fake.errors.details[:iso].map { |err| err[:error] }.include?(:too_long)
-  end
+  # validations: length
+  validates_length_of :name
+  validates_length_of :iso
 
   # callbacks
   test 'callbacks must titlecase the name of a language' do

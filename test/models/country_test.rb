@@ -25,6 +25,9 @@ class CountryTest < ActiveSupport::TestCase
   validates_uniqueness_of :numeric_code
   validates_uniqueness_of :mernis_code
 
+  # validations: length
+  validates_length_of :name
+
   # callbacks
   test 'callbacks must titlecase the name and must upcase the iso codes of a country' do
     country = Country.create(name: 'wonderland of alice', alpha_2_code: 'wl', alpha_3_code: 'wlx', numeric_code: 123)
@@ -34,13 +37,6 @@ class CountryTest < ActiveSupport::TestCase
   end
 
   # other validations
-  test 'name can not be longer than 255 characters' do
-    fake = countries(:turkey).dup
-    fake.name = (0...256).map { ('a'..'z').to_a[rand(26)] }.join
-    assert_not fake.valid?
-    assert fake.errors.details[:name].map { |err| err[:error] }.include?(:too_long)
-  end
-
   test 'alpha_2_code must be 2 characters' do
     fake = countries(:turkey).dup
     fake.alpha_2_code = (0...3).map { ('a'..'z').to_a[rand(26)] }.join

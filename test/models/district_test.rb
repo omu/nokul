@@ -19,18 +19,13 @@ class DistrictTest < ActiveSupport::TestCase
   validates_uniqueness_of :name
   validates_uniqueness_of :mernis_code
 
+  # validations: length
+  validates_length_of :name
+
   # callbacks
   test 'callbacks must titlecase the name of a district' do
     district = District.create!(name: 'wonderland of samsun', city: cities(:samsun), active: true)
     assert_equal district.name, 'Wonderland Of Samsun'
-  end
-
-  # other validations
-  test 'name can not be longer than 255 characters' do
-    fake = districts(:vezirkopru).dup
-    fake.name = (0...256).map { ('a'..'z').to_a[rand(26)] }.join
-    assert_not fake.valid?
-    assert fake.errors.details[:name].map { |err| err[:error] }.include?(:too_long)
   end
 
   test 'mernis_code must be an integer with 4 digits' do

@@ -19,4 +19,7 @@ class AvailableCourseGroupTest < ActiveSupport::TestCase
 
   # validations: uniqueness
   validates_uniqueness_of :name
+
+  # validations: length
+  validates_length_of :name
 end

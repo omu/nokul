@@ -16,6 +16,9 @@ class AgendaTest < ActiveSupport::TestCase
   validates_presence_of :description
   validates_presence_of :status
 
+  # validations: length
+  validates_length_of :description, 'text'
+
   # scopes
   test 'active scope returns recent and delayed agendas' do
     assert_equal Agenda.active.count, Agenda.recent.count + Agenda.delayed.count

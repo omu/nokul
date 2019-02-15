@@ -21,6 +21,10 @@ class AddressTest < ActiveSupport::TestCase
   # validations: uniqueness
   validates_uniqueness_of :type
 
+  # validations: length
+  validates_length_of :phone_number
+  validates_length_of :full_address
+
   # enumerations
   test 'addresses can respond to enumerators' do
     assert addresses(:formal).formal?
@@ -46,20 +50,5 @@ class AddressTest < ActiveSupport::TestCase
     assert_not informal.valid?
     assert_not_empty informal.errors[:base]
     assert informal.errors[:base].include?(t('validators.address.max_informal', limit: 1))
-  end
-
-  # other validations
-  long_string = (0...256).map { ('a'..'z').to_a[rand(26)] }.join
-
-  %i[
-    phone_number
-    full_address
-  ].each do |property|
-    test "#{property} can not be longer than 255 characters" do
-      fake = addresses(:formal).dup
-      fake.send("#{property}=", long_string)
-      assert_not fake.valid?
-      assert fake.errors.details[property].map { |err| err[:error] }.include?(:too_long)
-    end
   end
 end

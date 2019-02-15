@@ -8,10 +8,6 @@ class AcademicTermTest < ActiveSupport::TestCase
   include AssociationTestModule
   include ValidationTestModule
 
-  setup do
-    @academic_term = academic_terms(:fall_2017_2018)
-  end
-
   # relations
   has_many :calendars
   has_many :registration_documents
@@ -25,6 +21,9 @@ class AcademicTermTest < ActiveSupport::TestCase
 
   # validations: uniqueness
   validates_uniqueness_of :year
+
+  # validations: length
+  validates_length_of :year
 
   # validations: AcademicTermValidator
   test 'one of the academic terms must be active' do

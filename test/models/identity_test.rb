@@ -21,6 +21,14 @@ class IdentityTest < ActiveSupport::TestCase
   validates_presence_of :place_of_birth
   validates_presence_of :date_of_birth
 
+  # validations: length
+  validates_length_of :first_name
+  validates_length_of :last_name
+  validates_length_of :mothers_name
+  validates_length_of :fathers_name
+  validates_length_of :place_of_birth
+  validates_length_of :registered_to
+
   # validations: uniqueness
   test 'an identity can not belong to multiple students' do
     student_identity = identities(:formal_student).dup
@@ -28,26 +36,7 @@ class IdentityTest < ActiveSupport::TestCase
     assert_not_empty student_identity.errors[:student_id]
   end
 
-  # other validations
-  long_string = (0...256).map { ('a'..'z').to_a[rand(26)] }.join
-
-  %i[
-    first_name
-    last_name
-    mothers_name
-    fathers_name
-    place_of_birth
-    registered_to
-  ].each do |property|
-    test "#{property} can not be longer than 255 characters" do
-      fake = identities(:formal_user).dup
-      fake.send("#{property}=", long_string)
-      assert_not fake.valid?
-      assert fake.errors.details[property].map { |err| err[:error] }.include?(:too_long)
-    end
-  end
-
-  # enumerations
+   # enumerations
   %i[
     formal?
     male?
