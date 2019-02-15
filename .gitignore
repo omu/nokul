@@ -43,3 +43,6 @@ yarn-debug.log*
 .env
 .envrc
 /.local/
+
+# Ignore auto-generated PDFs of markdown files
+.pdf
