@@ -7,7 +7,7 @@ author: Recai Oktaş
 
 Bu **modülümsü** sınıf `Struct` sınıfına uygulanan ve pek çok olağan senaryoda
 fazladan kod yazmadan sonuç almanızı sağlayan basit bir sarmalayıcıdır.  Sınıfın
-kendisi `Module`'den miras aldığından katıştırma ("mixin) yaparak kullanılıyor.
+kendisi `Module`'den miras aldığından katıştırma (mixin) yaparak kullanılıyor.
 Olağan kullanım senaryosu da zaten bu: hafif bir DSL üzerinden katıştırma
 yapmak.
 
