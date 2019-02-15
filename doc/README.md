@@ -12,7 +12,6 @@ Bu klasör Nokul ve ilişkili araçları hakkında dokümanları barındırır.
 - [DevOps ve Operatör Geliştirici](/ops)
 - [PostgreSQL](/postgresql)
 - [Geliştirme Kural ve Stilleri](/rule)
-- [Support Kütüphaneleri](/support)
 - [ERD Diagramları](/diagrams)
 - [Diğer Herşey](/howto)
 
