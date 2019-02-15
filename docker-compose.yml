@@ -16,6 +16,11 @@ services:
     depends_on:
       - db
       - redis
+      - sidekiq
+    volumes:
+      - ./bundle:/app/vendor/bundle
+      - ./.bundle:/app/.bundle
+      - ./node_modules:/app/node_modules
   redis:
     image: "redis:alpine"
   db:
