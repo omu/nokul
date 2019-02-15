@@ -1,3 +1,7 @@
+---
+author: M. Serhat Dundar
+---
+
 ## Rules
 
 - Sadece gerçekten `unique` olduğundan emin olduğunuz alanlara unique constraint ekleyin. Örneğin şehir/ilçe isimleri unique değildir.

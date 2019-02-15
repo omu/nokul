@@ -1,3 +1,7 @@
+---
+author: M. Serhat Dundar
+---
+
 # Konfigürasyon
 
 PostgreSQL'i donanım özelliklerinize göre konfigüre ettiğinizde yoğun yazma-güncelleme işlemi yapan `seed`, `import`, `fetch` gibi task'ler ciddi oranda hızlanacaktır.
