@@ -4,8 +4,8 @@ require 'test_helper'
 
 class CurriculumTest < ActiveSupport::TestCase
   include AssociationTestModule
-  include ValidationTestModule
   include EnumerationTestModule
+  include ValidationTestModule
 
   setup do
     @curriculum = curriculums(:one)
@@ -47,11 +47,8 @@ class CurriculumTest < ActiveSupport::TestCase
   validates_uniqueness_of :name
 
   # validations: numericality
-  test 'numericality validations for semesters_count of a curriculum' do
-    @curriculum.semesters_count = -1
-    assert_not @curriculum.valid?
-    assert_not_empty @curriculum.errors[:semesters_count]
-  end
+  validates_numericality_of(:semesters_count)
+  validates_numerical_range(:semesters_count, :greater_than_or_equal_to, 0)
 
   # enums
   has_enum({ passive: 0, active: 1 }, 'status')

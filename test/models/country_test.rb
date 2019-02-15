@@ -28,6 +28,10 @@ class CountryTest < ActiveSupport::TestCase
   # validations: length
   validates_length_of :name
 
+  # validations: numericality
+  validates_numericality_of(:yoksis_code)
+  validates_numerical_range(:yoksis_code, :greater_than_or_equal_to, 1)
+
   # callbacks
   test 'callbacks must titlecase the name and must upcase the iso codes of a country' do
     country = Country.create(name: 'wonderland of alice', alpha_2_code: 'wl', alpha_3_code: 'wlx', numeric_code: 123)
@@ -69,20 +73,5 @@ class CountryTest < ActiveSupport::TestCase
     error_codes = fake.errors.details[:mernis_code].map { |err| err[:error] }
     assert error_codes.include?(:wrong_length)
     assert error_codes.include?(:not_a_number)
-  end
-
-  test 'yoksis_code must be an integer greater than or equal to 0' do
-    def error_codes(fake)
-      fake.errors.details[:yoksis_code].map { |err| err[:error] }
-    end
-
-    fake = countries(:turkey).dup
-    fake.yoksis_code = -1
-    assert_not fake.valid?
-    assert error_codes(fake).include?(:greater_than_or_equal_to)
-
-    fake.yoksis_code = 'hello there!'
-    assert_not fake.valid?
-    assert error_codes(fake).include?(:not_a_number)
   end
 end

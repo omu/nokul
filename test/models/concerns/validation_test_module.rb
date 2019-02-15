@@ -71,5 +71,38 @@ module ValidationTestModule
         end
       end
     end
+
+    # Examples
+    # validates_numericality_of :year
+    def validates_numericality_of(attribute, object = nil)
+      object ||= to_s.delete_suffix('Test').constantize.take
+
+      test "#{attribute} attribute of #{object} must be a number" do
+        object.send("#{attribute}=", 'some string')
+        assert_not object.valid?
+        assert object.errors.details[attribute].map { |err| err[:error] }.include?(:not_a_number)
+      end
+    end
+
+    # Examples
+    # validates_numerical_range(:year, :greater_than_or_equal_to, 100)
+    # validates_numerical_range(:year, :less_than_or_equal_to, 100)
+    def validates_numerical_range(attribute, range_identifier, number, object = nil)
+      object ||= to_s.delete_suffix('Test').constantize.take
+
+      case range_identifier
+      when :greater_than, :less_than
+        number = number
+      when :greater_than_or_equal_to
+        number -= 1     
+      when :less_than_or_equal_to
+        number += 1
+      end
+      test "#{attribute} attribute of #{object} must be #{range_identifier} #{number}" do
+        object.send("#{attribute}=", number)
+        assert_not object.valid?
+        assert object.errors.details[attribute].map { |err| err[:error] }.include?(range_identifier)
+      end
+    end
   end
 end

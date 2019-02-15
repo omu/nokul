@@ -41,15 +41,8 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  # validations: numerically
-  test 'id_number must be numeric' do
-    fake = users(:serhat).dup
-    ['abc', '.,', '1,24', '10.25'].each do |value|
-      fake.id_number = value
-      assert_not fake.valid?
-      assert_not_empty fake.errors[:id_number]
-    end
-  end
+  # validations: numericality
+  validates_numericality_of(:id_number)
 
   # validations: email
   test 'email addresses validated against RFC' do

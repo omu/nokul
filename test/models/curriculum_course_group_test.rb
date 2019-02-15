@@ -25,11 +25,8 @@ class CurriculumCourseGroupTest < ActiveSupport::TestCase
   validates_uniqueness_of :course_group_id
 
   # validations: numericality
-  test 'numericality validations for ects of a curriculum course group' do
-    @curriculum_course_group.ects = 0
-    assert_not @curriculum_course_group.valid?
-    assert_not_empty @curriculum_course_group.errors[:ects]
-  end
+  validates_numericality_of(:ects)
+  validates_numerical_range(:ects, :greater_than, 0)
 
   # delegates
   test 'must have a name method' do

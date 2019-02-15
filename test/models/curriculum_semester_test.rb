@@ -4,8 +4,8 @@ require 'test_helper'
 
 class CurriculumSemesterTest < ActiveSupport::TestCase
   include AssociationTestModule
-  include ValidationTestModule
   include EnumerationTestModule
+  include ValidationTestModule
 
   setup do
     @semester = curriculum_semesters(:one)
@@ -22,11 +22,8 @@ class CurriculumSemesterTest < ActiveSupport::TestCase
   validates_presence_of :sequence
 
   # validations: numericality
-  test 'numericality validations for sequence of a curriculum semester' do
-    @semester.sequence = 0
-    assert_not @semester.valid?
-    assert_not_empty @semester.errors[:sequence]
-  end
+  validates_numericality_of(:sequence)
+  validates_numerical_range(:sequence, :greater_than, 0)
 
   # enums
   has_enum({ fall: 0, spring: 1, summer: 2 }, 'term')

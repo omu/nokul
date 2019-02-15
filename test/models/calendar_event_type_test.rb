@@ -4,8 +4,8 @@ require 'test_helper'
 
 class CalendarEventTypeTest < ActiveSupport::TestCase
   include AssociationTestModule
-  include ValidationTestModule
   include EnumerationTestModule
+  include ValidationTestModule
 
   # relations
   has_many :calendars

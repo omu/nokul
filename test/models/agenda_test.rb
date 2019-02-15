@@ -4,8 +4,8 @@ require 'test_helper'
 
 class AgendaTest < ActiveSupport::TestCase
   include AssociationTestModule
-  include ValidationTestModule
   include EnumerationTestModule
+  include ValidationTestModule
 
   # relations
   belongs_to :agenda_type

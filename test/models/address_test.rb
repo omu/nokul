@@ -4,8 +4,8 @@ require 'test_helper'
 
 class AddressTest < ActiveSupport::TestCase
   include AssociationTestModule
-  include ValidationTestModule
   include EnumerationTestModule
+  include ValidationTestModule
 
   test 'type column does not refer to STI' do
     assert_empty Identity.inheritance_column

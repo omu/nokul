@@ -4,8 +4,8 @@ require 'test_helper'
 
 class CurriculumCourseTest < ActiveSupport::TestCase
   include AssociationTestModule
-  include ValidationTestModule
   include EnumerationTestModule
+  include ValidationTestModule
 
   setup do
     @curriculum_course = curriculum_courses(:one)
@@ -21,11 +21,8 @@ class CurriculumCourseTest < ActiveSupport::TestCase
   validates_presence_of :ects
 
   # validations: numericality
-  test 'numericality validations for ects of a curriculum course' do
-    @curriculum_course.ects = 0
-    assert_not @curriculum_course.valid?
-    assert_not_empty @curriculum_course.errors[:ects]
-  end
+  validates_numericality_of(:ects)
+  validates_numerical_range(:ects, :greater_than, 0)
 
   # validations: uniqueness
   validates_uniqueness_of :course
