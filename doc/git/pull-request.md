@@ -1,3 +1,7 @@
+---
+author: M. Serhat Dundar
+---
+
 # Pull Request
 
 - Değişiklikleri küçük parçalar halinde pull request açarak gönderin. Devasa bir pull request review edilmesinin uzun süreceğini ve hataya daha açık olduğunu unutmayın.
