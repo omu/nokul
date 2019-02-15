@@ -11,16 +11,9 @@ class DistrictTest < ActiveSupport::TestCase
   has_many :units
   has_many :addresses
 
-  %i[
-    name
-    city
-  ].each do |property|
-    test "presence validations for #{property} of a district" do
-      districts(:vezirkopru).send("#{property}=", nil)
-      assert_not districts(:vezirkopru).valid?
-      assert_not_empty districts(:vezirkopru).errors[property]
-    end
-  end
+  # validations: presence
+  validates_presence_of :name
+  validates_presence_of :city
 
   # validations: uniqueness
   test 'uniqueness validations for name field of a district, scoped with city' do

@@ -10,18 +10,9 @@ class TitleTest < ActiveSupport::TestCase
   has_many :employees
 
   # validations: presence
-  %i[
-    name
-    code
-    branch
-  ].each do |property|
-    # validations: presence
-    test "presence validations for #{property} of a title" do
-      titles(:research_assistant).send("#{property}=", nil)
-      assert_not titles(:research_assistant).valid?
-      assert_not_empty titles(:research_assistant).errors[property]
-    end
-  end
+  validates_presence_of :name
+  validates_presence_of :code
+  validates_presence_of :branch
 
   # validations: uniqueness
   test 'uniqueness validations for name and code fields of a title' do

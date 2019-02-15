@@ -15,11 +15,7 @@ class EvaluationTypeTest < ActiveSupport::TestCase
   has_many :available_courses
 
   # validations: presence
-  test 'presence validations for name of a evaluation type' do
-    @evaluation_type.name = nil
-    assert_not @evaluation_type.valid?
-    assert_not_empty @evaluation_type.errors[:name]
-  end
+  validates_presence_of :name
 
   # other validations
   test 'name can not be longer than 255 characters' do

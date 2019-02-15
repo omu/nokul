@@ -14,11 +14,7 @@ class StudentTest < ActiveSupport::TestCase
   has_many :calendars
 
   # validations: presence
-  test 'presence validations for student_number of a student' do
-    students(:serhat).update(student_number: nil)
-    assert_not students(:serhat).valid?
-    assert_not_empty students(:serhat).errors[:student_number]
-  end
+  validates_presence_of :student_number
 
   # validations: uniqueness
   test 'a student can not have a duplicate unit and a duplicate student number' do

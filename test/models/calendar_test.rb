@@ -19,10 +19,11 @@ class CalendarTest < ActiveSupport::TestCase
   has_many :units
 
   # validations: presence
+  validates_presence_of :name
+  validates_presence_of :timezone
+
   {
-    committee_decision_ids: :committee_decisions,
-    name: :name,
-    timezone: :timezone
+    committee_decision_ids: :committee_decisions
   }.each do |property, error_message_key|
     test "presence validations for #{property} of a calendar" do
       @calendar.send("#{property}=", nil)

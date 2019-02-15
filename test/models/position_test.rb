@@ -11,15 +11,7 @@ class PositionTest < ActiveSupport::TestCase
   belongs_to :administrative_function
 
   # validations: presence
-  %i[
-    start_date
-  ].each do |property|
-    test "presence validations for #{property} of a position" do
-      positions(:baum_dean).send("#{property}=", nil)
-      assert_not positions(:baum_dean).valid?
-      assert_not_empty positions(:baum_dean).errors[property]
-    end
-  end
+  validates_presence_of :start_date
 
   # validations: uniqueness
   test 'a user can not have duplicate positions in a department' do

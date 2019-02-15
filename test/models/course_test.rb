@@ -16,24 +16,16 @@ class CourseTest < ActiveSupport::TestCase
   belongs_to :language
 
   # validations: presence
-  %i[
-    code
-    course_type
-    program_type
-    laboratory
-    language
-    name
-    practice
-    status
-    theoric
-    unit
-  ].each do |property|
-    test "presence validations for #{property} of a course" do
-      @course.send("#{property}=", nil)
-      assert_not @course.valid?
-      assert_not_empty @course.errors[property]
-    end
-  end
+  validates_presence_of :code
+  validates_presence_of :course_type
+  validates_presence_of :program_type
+  validates_presence_of :laboratory
+  validates_presence_of :language
+  validates_presence_of :name
+  validates_presence_of :practice
+  validates_presence_of :status
+  validates_presence_of :theoric
+  validates_presence_of :unit
 
   # validations: uniqueness
   test 'uniqueness validations for code of a course' do

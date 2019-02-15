@@ -13,18 +13,10 @@ class CountryTest < ActiveSupport::TestCase
   has_many :units
 
   # validations: presence
-  %i[
-    name
-    alpha_2_code
-    alpha_3_code
-    numeric_code
-  ].each do |property|
-    test "presence validations for #{property} of a country" do
-      countries(:turkey).send("#{property}=", nil)
-      assert_not countries(:turkey).valid?
-      assert_not_empty countries(:turkey).errors[property]
-    end
-  end
+  validates_presence_of :name
+  validates_presence_of :alpha_2_code
+  validates_presence_of :alpha_3_code
+  validates_presence_of :numeric_code
 
   # validations: uniqueness
   %i[

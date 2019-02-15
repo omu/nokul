@@ -16,11 +16,7 @@ class AssessmentMethodTest < ActiveSupport::TestCase
   has_many :course_evaluation_types
 
   # validations: presence
-  test 'presence validations for name of a assessment method' do
-    @assessment_method.name = nil
-    assert_not @assessment_method.valid?
-    assert_not_empty @assessment_method.errors[:name]
-  end
+  validates_presence_of :name
 
   # other validations
   test 'name can not be longer than 255 characters' do

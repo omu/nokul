@@ -14,11 +14,7 @@ class DocumentTypeTest < ActiveSupport::TestCase
   has_many :registration_documents
 
   # validations: presence
-  test 'presence validations for name of a document type' do
-    @document.update(name: nil)
-    assert_not @document.valid?
-    assert_not_empty @document.errors[:name]
-  end
+  validates_presence_of :name
 
   # validations: uniqueness
   test 'uniqueness validations for name of a document type' do

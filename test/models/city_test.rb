@@ -13,16 +13,8 @@ class CityTest < ActiveSupport::TestCase
   has_many :units
 
   # validations: presence
-  %i[
-    name
-    alpha_2_code
-  ].each do |property|
-    test "presence validations for #{property} of a city" do
-      cities(:samsun).send("#{property}=", nil)
-      assert_not cities(:samsun).valid?
-      assert_not_empty cities(:samsun).errors[property]
-    end
-  end
+  validates_presence_of :name
+  validates_presence_of :alpha_2_code
 
   # validations: uniqueness
   %i[

@@ -13,16 +13,8 @@ class CommitteeMeetingTest < ActiveSupport::TestCase
   has_many :decisions
 
   # validations: presence
-  %i[
-    meeting_no
-    meeting_date
-  ].each do |property|
-    test "presence validations for #{property} of a committee meeting" do
-      committee_meetings(:one).send("#{property}=", nil)
-      assert_not committee_meetings(:one).valid?
-      assert_not_empty committee_meetings(:one).errors[property]
-    end
-  end
+  validates_presence_of :meeting_no
+  validates_presence_of :meeting_date
 
   # validations: uniqueness
   test 'uniqueness validations for meeting_no of a committee meeting' do

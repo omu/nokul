@@ -14,20 +14,12 @@ class IdentityTest < ActiveSupport::TestCase
   belongs_to :user
 
   # validations: presence
-  %i[
-    type
-    first_name
-    last_name
-    gender
-    place_of_birth
-    date_of_birth
-  ].each do |property|
-    test "presence validations for #{property} of a user" do
-      identities(:formal_user).send("#{property}=", nil)
-      assert_not identities(:formal_user).valid?
-      assert_not_empty identities(:formal_user).errors[property]
-    end
-  end
+  validates_presence_of :type
+  validates_presence_of :first_name
+  validates_presence_of :last_name
+  validates_presence_of :gender
+  validates_presence_of :place_of_birth
+  validates_presence_of :date_of_birth
 
   # validations: uniqueness
   test 'an identity can not belong to multiple students' do

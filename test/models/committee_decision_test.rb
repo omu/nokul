@@ -16,15 +16,7 @@ class CommitteeDecisionTest < ActiveSupport::TestCase
   has_many :calendar_committee_decisions
 
   # validations: presence
-  %i[
-    description
-  ].each do |property|
-    test "presence validations for #{property} of a decision" do
-      @decision.send("#{property}=", nil)
-      assert_not @decision.valid?
-      assert_not_empty @decision.errors[property]
-    end
-  end
+  validates_presence_of :description
 
   # delegates
   %i[

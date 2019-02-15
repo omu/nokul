@@ -15,11 +15,7 @@ class AvailableCourseLecturerTest < ActiveSupport::TestCase
   belongs_to :lecturer
 
   # validations: presence
-  test 'should not save available_course_group without coordinator info' do
-    @course_lecturer.coordinator = nil
-    assert_not @course_lecturer.valid?
-    assert_not_empty @course_lecturer.errors[:coordinator]
-  end
+  validates_presence_of :coordinator
 
   # validations: uniqueness
   test 'uniqueness validations for lecturer of a group' do

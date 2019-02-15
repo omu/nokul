@@ -15,16 +15,8 @@ class CalendarEventTest < ActiveSupport::TestCase
   belongs_to :calendar_event_type
 
   # validations: presence
-  %i[
-    timezone
-    calendar_event_type
-  ].each do |property|
-    test "presence validations for #{property} of a calendar event" do
-      @calendar_event.send("#{property}=", nil)
-      assert_not @calendar_event.valid?
-      assert_not_empty @calendar_event.errors[property]
-    end
-  end
+  validates_presence_of :timezone
+  validates_presence_of :calendar_event_type
 
   # validations: uniqueness
   %i[

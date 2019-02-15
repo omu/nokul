@@ -13,16 +13,8 @@ class AgendaTest < ActiveSupport::TestCase
   has_many :meeting_agendas
 
   # validations: presence
-  %i[
-    description
-    status
-  ].each do |property|
-    test "presence validations for #{property} of a agenda" do
-      agendas(:one).send("#{property}=", nil)
-      assert_not agendas(:one).valid?
-      assert_not_empty agendas(:one).errors[property]
-    end
-  end
+  validates_presence_of :description
+  validates_presence_of :status
 
   # scopes
   test 'active scope returns recent and delayed agendas' do

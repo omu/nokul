@@ -20,17 +20,14 @@ class UserTest < ActiveSupport::TestCase
   has_many :articles
   has_many :projects
 
+  # validations: presence
+  validates_presence_of :email
+  validates_presence_of :id_number
+
   %i[
     email
     id_number
   ].each do |property|
-    # validations: presence
-    test "presence validations for #{property} of a user" do
-      users(:serhat).send("#{property}=", nil)
-      assert_not users(:serhat).valid?
-      assert_not_empty users(:serhat).errors[property]
-    end
-
     # validations: uniqueness
     test "uniqueness validations for #{property} of a user" do
       fake = users(:serhat).dup

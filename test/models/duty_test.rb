@@ -17,16 +17,8 @@ class DutyTest < ActiveSupport::TestCase
   has_many :administrative_functions
 
   # validations: presence
-  %i[
-    temporary
-    start_date
-  ].each do |property|
-    test "presence validations for #{property} of a duty" do
-      duties(:baum).send("#{property}=", nil)
-      assert_not duties(:baum).valid?
-      assert_not_empty duties(:baum).errors[property]
-    end
-  end
+  validates_presence_of :temporary
+  validates_presence_of :start_date
 
   # validations: uniqueness
   test 'duplication validations for unit' do

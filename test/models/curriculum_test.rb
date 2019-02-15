@@ -31,11 +31,12 @@ class CurriculumTest < ActiveSupport::TestCase
   has_many :available_courses
 
   # validations: presence
+  validates_presence_of :name
+  validates_presence_of :semesters_count
+  validates_presence_of :status
+  validates_presence_of :unit
+
   {
-    name: :name,
-    semesters_count: :semesters_count,
-    status: :status,
-    unit: :unit,
     program_ids: :programs
   }.each do |property, error_message_key|
     test "presence validations for #{property} of a curriculum" do

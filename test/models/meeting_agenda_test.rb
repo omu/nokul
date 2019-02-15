@@ -12,16 +12,8 @@ class MeetingAgendaTest < ActiveSupport::TestCase
   has_one :decision
 
   # validations: presence
-  %i[
-    agenda
-    sequence_no
-  ].each do |property|
-    test "presence validations for #{property} of a meeting agenda" do
-      meeting_agendas(:one).send("#{property}=", nil)
-      assert_not meeting_agendas(:one).valid?
-      assert_not_empty meeting_agendas(:one).errors[property]
-    end
-  end
+  validates_presence_of :agenda
+  validates_presence_of :sequence_no
 
   # delegates
   %i[

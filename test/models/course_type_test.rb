@@ -14,17 +14,9 @@ class CourseTypeTest < ActiveSupport::TestCase
   has_many :courses
 
   # validations: presence
-  %i[
-    name
-    code
-    min_credit
-  ].each do |property|
-    test "presence validations for #{property} of a course type" do
-      @course_type.send("#{property}=", nil)
-      assert_not @course_type.valid?
-      assert_not_empty @course_type.errors[property]
-    end
-  end
+  validates_presence_of :name
+  validates_presence_of :code
+  validates_presence_of :min_credit
 
   # validations: uniqueness
   %i[

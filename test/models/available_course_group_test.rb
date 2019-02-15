@@ -15,11 +15,7 @@ class AvailableCourseGroupTest < ActiveSupport::TestCase
   has_many :lecturers
 
   # validations: presence
-  test 'should not save available_course_group without name' do
-    @course_group.name = nil
-    assert_not @course_group.valid?
-    assert_not_empty @course_group.errors[:name]
-  end
+  validates_presence_of :name
 
   # validations: uniqueness
   test 'name should be unique' do

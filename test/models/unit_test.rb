@@ -35,17 +35,9 @@ class UnitTest < ActiveSupport::TestCase
   has_many :calendars
 
   # validations: presence
-  %i[
-    district
-    name
-    unit_status
-  ].each do |property|
-    test "presence validations for #{property} of a unit" do
-      units(:omu).send("#{property}=", nil)
-      assert_not units(:omu).valid?
-      assert_not_empty units(:omu).errors[property]
-    end
-  end
+  validates_presence_of :district
+  validates_presence_of :name
+  validates_presence_of :unit_status
 
   # validations: uniqueness
   %i[

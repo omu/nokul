@@ -11,16 +11,8 @@ class ProspectiveStudentTest < ActiveSupport::TestCase
   belongs_to :student_entrance_type
 
   # validations: presence
-  %i[
-    id_number
-    gender
-  ].each do |property|
-    test "presence validations for #{property} of a prospective_student" do
-      prospective_students(:serhat).send("#{property}=", nil)
-      assert_not prospective_students(:serhat).valid?
-      assert_not_empty prospective_students(:serhat).errors[property]
-    end
-  end
+  validates_presence_of :id_number
+  validates_presence_of :gender
 
   # validations: uniqueness
   %i[

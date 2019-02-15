@@ -15,16 +15,8 @@ class LanguageTest < ActiveSupport::TestCase
   has_many :prospective_students
 
   # validations: presence
-  %i[
-    name
-    iso
-  ].each do |property|
-    test "presence validations for #{property} of a language" do
-      @language.send("#{property}=", nil)
-      assert_not @language.valid?
-      assert_not_empty @language.errors[property]
-    end
-  end
+  validates_presence_of :name
+  validates_presence_of :iso
 
   # validations: uniqueness
   %i[

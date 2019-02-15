@@ -18,17 +18,9 @@ class CourseGroupTest < ActiveSupport::TestCase
   has_many :group_courses
 
   # validations: presence
-  %i[
-    name
-    total_ects_condition
-    course_ids
-  ].each do |property|
-    test "presence validations for #{property} of a course group" do
-      @course_group.send("#{property}=", nil)
-      assert_not @course_group.valid?
-      assert_not_empty @course_group.errors[property]
-    end
-  end
+  validates_presence_of :name
+  validates_presence_of :total_ects_condition
+  validates_presence_of :course_ids
 
   # validations: uniqueness
   test 'uniqueness validations for name of a course group' do

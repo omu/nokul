@@ -15,16 +15,8 @@ class CalendarEventTypeTest < ActiveSupport::TestCase
   has_many :calendar_events
 
   # validations: presence
-  %i[
-    name
-    identifier
-  ].each do |property|
-    test "presence validations for #{property} of a calendar event type" do
-      @calendar_event_type.send("#{property}=", nil)
-      assert_not @calendar_event_type.valid?
-      assert_not_empty @calendar_event_type.errors[property]
-    end
-  end
+  validates_presence_of :name
+  validates_presence_of :identifier
 
   # validations: uniqueness
   %i[

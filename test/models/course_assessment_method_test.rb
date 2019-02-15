@@ -15,15 +15,7 @@ class CourseAssessmentMethodTest < ActiveSupport::TestCase
   belongs_to :course_evaluation_type
 
   # validations: presence
-  %i[
-    percentage
-  ].each do |property|
-    test "presence validations for #{property} of a course assessment method" do
-      @course_assessment_method.send("#{property}=", nil)
-      assert_not @course_assessment_method.valid?
-      assert_not_empty @course_assessment_method.errors[property]
-    end
-  end
+  validates_presence_of :percentage
 
   # validations: numericality
   test 'numericality validations for percentage of a course assessment method' do
