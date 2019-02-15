@@ -28,18 +28,8 @@ class CourseTest < ActiveSupport::TestCase
   validates_presence_of :unit
 
   # validations: uniqueness
-  test 'uniqueness validations for code of a course' do
-    fake = @course.dup
-    assert_not fake.valid?
-    assert_not_empty fake.errors[:code]
-  end
-
-  test 'uniqueness validations for name of a course' do
-    fake = @course.dup
-    fake.code = 'TB01'
-    assert_not fake.valid?
-    assert_not_empty fake.errors[:name]
-  end
+  validates_uniqueness_of :name
+  validates_uniqueness_of :code
 
   # callbacks
   test 'callbacks must titlecase the name for a course' do

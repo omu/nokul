@@ -17,12 +17,8 @@ class StudentTest < ActiveSupport::TestCase
   validates_presence_of :student_number
 
   # validations: uniqueness
-  test 'a student can not have a duplicate unit and a duplicate student number' do
-    fake = students(:serhat).dup
-    assert_not fake.valid?
-    assert_not_empty fake.errors[:student_number]
-    assert_not_empty fake.errors[:unit_id]
-  end
+  validates_uniqueness_of :student_number
+  validates_uniqueness_of :unit_id
 
   # delegations
   test 'a student can communicate with addresses over the user' do

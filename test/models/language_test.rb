@@ -19,16 +19,8 @@ class LanguageTest < ActiveSupport::TestCase
   validates_presence_of :iso
 
   # validations: uniqueness
-  %i[
-    name
-    iso
-  ].each do |property|
-    test "uniqueness validations for #{property} of a language" do
-      fake = @language.dup
-      assert_not fake.valid?
-      assert_not_empty fake.errors[property]
-    end
-  end
+  validates_uniqueness_of :name
+  validates_uniqueness_of :iso
 
   # other validations
   test 'name and iso can not be longer than 255 characters' do

@@ -17,10 +17,7 @@ class CommitteeMeetingTest < ActiveSupport::TestCase
   validates_presence_of :meeting_date
 
   # validations: uniqueness
-  test 'uniqueness validations for meeting_no of a committee meeting' do
-    fake_meeting = committee_meetings(:one).dup
-    assert_not fake_meeting.valid?
-  end
+  validates_uniqueness_of :meeting_no
 
   # callbacks
   test 'before initialize callback must run for year attribute' do

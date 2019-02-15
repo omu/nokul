@@ -17,16 +17,8 @@ class CityTest < ActiveSupport::TestCase
   validates_presence_of :alpha_2_code
 
   # validations: uniqueness
-  %i[
-    name
-    alpha_2_code
-  ].each do |property|
-    test "uniqueness validations for #{property} of a city" do
-      fake = cities(:samsun).dup
-      assert_not fake.valid?
-      assert_not_empty fake.errors[property]
-    end
-  end
+  validates_uniqueness_of :name
+  validates_uniqueness_of :alpha_2_code
 
   # callbacks
   test 'callbacks must titlecase the name and must upcase the alpha_2_code of a city' do

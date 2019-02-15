@@ -17,9 +17,5 @@ class CourseGroupTypeTest < ActiveSupport::TestCase
   validates_presence_of :name
 
   # validations: uniqueness
-  test 'uniqueness validations for name of a course group type' do
-    fake = @course_group_type.dup
-    assert_not fake.valid?
-    assert_not_empty fake.errors[:name]
-  end
+  validates_uniqueness_of :name
 end

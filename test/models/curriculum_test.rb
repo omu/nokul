@@ -47,15 +47,7 @@ class CurriculumTest < ActiveSupport::TestCase
   end
 
   # validations: uniqueness
-  test 'uniqueness validations for name of a curriculum' do
-    fake = @curriculum.dup
-    assert_not fake.valid?
-    assert_not_empty fake.errors[:name]
-
-    fake.unit_id = units(:cbu).id
-    fake.valid?
-    assert_empty fake.errors[:name]
-  end
+  validates_uniqueness_of :name
 
   # validations: numericality
   test 'numericality validations for semesters_count of a curriculum' do

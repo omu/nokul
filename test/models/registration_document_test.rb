@@ -4,6 +4,7 @@ require 'test_helper'
 
 class RegistrationDocumentTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include ValidationTestModule
 
   setup do
     @document = registration_documents(:omu_health_report)
@@ -15,11 +16,7 @@ class RegistrationDocumentTest < ActiveSupport::TestCase
   belongs_to :document_type
 
   # validations: uniqueness
-  test 'duplication validations for unit' do
-    fake = @document.dup
-    assert_not fake.valid?
-    assert_not_empty fake.errors[:unit_id]
-  end
+  validates_uniqueness_of :unit_id
 
   # delegations
   test 'a registration document can refer to the name field of related document_type' do

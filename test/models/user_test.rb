@@ -24,17 +24,9 @@ class UserTest < ActiveSupport::TestCase
   validates_presence_of :email
   validates_presence_of :id_number
 
-  %i[
-    email
-    id_number
-  ].each do |property|
-    # validations: uniqueness
-    test "uniqueness validations for #{property} of a user" do
-      fake = users(:serhat).dup
-      assert_not fake.valid?
-      assert_not_empty fake.errors[property]
-    end
-  end
+  # validations: uniqueness
+  validates_uniqueness_of :email
+  validates_uniqueness_of :id_number
 
   # validations: numerically
   test 'id_number must be numeric' do

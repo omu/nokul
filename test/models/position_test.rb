@@ -14,11 +14,7 @@ class PositionTest < ActiveSupport::TestCase
   validates_presence_of :start_date
 
   # validations: uniqueness
-  test 'a user can not have duplicate positions in a department' do
-    fake = positions(:baum_dean).dup
-    assert_not fake.valid?
-    assert_not_empty fake.errors[:duty]
-  end
+  validates_uniqueness_of :duty
 
   # position validator
   test 'start date must be before end date' do

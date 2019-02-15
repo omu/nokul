@@ -19,15 +19,7 @@ class CalendarEventTest < ActiveSupport::TestCase
   validates_presence_of :calendar_event_type
 
   # validations: uniqueness
-  %i[
-    calendar
-  ].each do |property|
-    test "uniqueness validations for #{property} of a calendar event" do
-      fake = @calendar_event.dup
-      assert_not fake.valid?
-      assert_not_empty fake.errors[property]
-    end
-  end
+  validates_uniqueness_of :calendar
 
   # other validations
   test 'visible field of calendar_event can not be nil' do

@@ -15,18 +15,11 @@ class AddressTest < ActiveSupport::TestCase
   belongs_to :user
 
   # validations: presence
-  validates_presence_of :type
   validates_presence_of :full_address
+  validates_presence_of :type
 
   # validations: uniqueness
-  test 'a user can only have one formal and one informal address' do
-    formal = addresses(:formal).dup
-    informal = addresses(:informal).dup
-    assert_not formal.valid?
-    assert_not informal.valid?
-    assert_not_empty formal.errors[:type]
-    assert_not_empty informal.errors[:type]
-  end
+  validates_uniqueness_of :type
 
   # enumerations
   test 'addresses can respond to enumerators' do

@@ -33,15 +33,7 @@ class CalendarTest < ActiveSupport::TestCase
   end
 
   # validations: uniqueness
-  %i[
-    name
-  ].each do |property|
-    test "uniqueness validations for #{property} of a calendar" do
-      fake = @calendar.dup
-      assert_not fake.valid?
-      assert_not_empty fake.errors[property]
-    end
-  end
+  validates_uniqueness_of :name
 
   # other validations
   long_string = (0...256).map { ('a'..'z').to_a[rand(26)] }.join

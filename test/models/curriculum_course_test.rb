@@ -35,11 +35,7 @@ class CurriculumCourseTest < ActiveSupport::TestCase
   end
 
   # validations: uniqueness
-  test 'curriculum course should be unique by curriculum' do
-    fake = @curriculum_course.dup
-    assert_not fake.valid?
-    assert_not_empty fake.errors[:course]
-  end
+  validates_uniqueness_of :course
 
   # enums
   {

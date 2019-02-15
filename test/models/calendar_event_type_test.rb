@@ -19,16 +19,8 @@ class CalendarEventTypeTest < ActiveSupport::TestCase
   validates_presence_of :identifier
 
   # validations: uniqueness
-  %i[
-    name
-    identifier
-  ].each do |property|
-    test "uniqueness validations for #{property} of a calendar event type" do
-      fake = @calendar_event_type.dup
-      assert_not fake.valid?
-      assert_not_empty fake.errors[property]
-    end
-  end
+  validates_uniqueness_of :name
+  validates_uniqueness_of :identifier
 
   # other validations
   long_string = (0...256).map { ('a'..'z').to_a[rand(26)] }.join

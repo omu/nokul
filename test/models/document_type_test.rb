@@ -17,11 +17,7 @@ class DocumentTypeTest < ActiveSupport::TestCase
   validates_presence_of :name
 
   # validations: uniqueness
-  test 'uniqueness validations for name of a document type' do
-    fake = @document.dup
-    assert_not fake.valid?
-    assert_not_empty fake.errors[:name]
-  end
+  validates_uniqueness_of :name
 
   # other validations
   test 'name of a document_type can not be longer than 255 characters' do

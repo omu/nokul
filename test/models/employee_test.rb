@@ -19,11 +19,7 @@ class EmployeeTest < ActiveSupport::TestCase
   validates_presence_of :active
 
   # validations: uniqueness
-  test 'an employee can not have duplicate titles' do
-    fake = employees(:serhat_active).dup
-    assert_not fake.valid?
-    assert_not_empty fake.errors[:title_id]
-  end
+  validates_uniqueness_of :title_id
 
   # delegations
   test 'an employee can reach addresses and identities over user' do

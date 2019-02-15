@@ -16,12 +16,8 @@ class DistrictTest < ActiveSupport::TestCase
   validates_presence_of :city
 
   # validations: uniqueness
-  test 'uniqueness validations for name field of a district, scoped with city' do
-    fake = districts(:vezirkopru).dup
-    assert_not fake.valid?
-    assert_not_empty fake.errors[:name]
-    assert_not_empty fake.errors[:mernis_code]
-  end
+  validates_uniqueness_of :name
+  validates_uniqueness_of :mernis_code
 
   # callbacks
   test 'callbacks must titlecase the name of a district' do

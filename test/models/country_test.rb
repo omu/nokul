@@ -19,19 +19,11 @@ class CountryTest < ActiveSupport::TestCase
   validates_presence_of :numeric_code
 
   # validations: uniqueness
-  %i[
-    name
-    alpha_2_code
-    alpha_3_code
-    numeric_code
-    mernis_code
-  ].each do |property|
-    test "uniqueness validations for #{property} of a country" do
-      fake = countries(:turkey).dup
-      assert_not fake.valid?
-      assert_not_empty fake.errors[property]
-    end
-  end
+  validates_uniqueness_of :name
+  validates_uniqueness_of :alpha_2_code
+  validates_uniqueness_of :alpha_3_code
+  validates_uniqueness_of :numeric_code
+  validates_uniqueness_of :mernis_code
 
   # callbacks
   test 'callbacks must titlecase the name and must upcase the iso codes of a country' do

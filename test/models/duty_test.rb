@@ -21,11 +21,7 @@ class DutyTest < ActiveSupport::TestCase
   validates_presence_of :start_date
 
   # validations: uniqueness
-  test 'duplication validations for unit' do
-    fake = duties(:baum).dup
-    assert_not fake.valid?
-    assert_not_empty fake.errors[:unit_id]
-  end
+  validates_uniqueness_of :unit_id
 
   # duty validator
   test 'start date can not be after end date' do

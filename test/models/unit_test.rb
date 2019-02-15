@@ -40,16 +40,8 @@ class UnitTest < ActiveSupport::TestCase
   validates_presence_of :unit_status
 
   # validations: uniqueness
-  %i[
-    name
-    yoksis_id
-    detsis_id
-  ].each do |property|
-    test "uniqueness validations for #{property} of a unit" do
-      fake = units(:omu).dup
-      assert_not fake.valid?
-    end
-  end
+  validates_uniqueness_of :name
+  validates_uniqueness_of :yoksis_id
 
   # callbacks
   test 'callbacks must titlecase the name for a unit' do

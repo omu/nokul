@@ -15,16 +15,7 @@ class ProspectiveStudentTest < ActiveSupport::TestCase
   validates_presence_of :gender
 
   # validations: uniqueness
-  %i[
-    id_number
-    unit_id
-    exam_score
-  ].each do |property|
-    test "uniqueness validations for #{property} of a prospective_student" do
-      fake = prospective_students(:serhat).dup
-      assert_not fake.valid?
-    end
-  end
+  validates_uniqueness_of :id_number
 
   # callbacks
   test 'callbacks must titlecase the name for a prospective_student' do

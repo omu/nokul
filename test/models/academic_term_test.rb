@@ -17,18 +17,14 @@ class AcademicTermTest < ActiveSupport::TestCase
   has_many :registration_documents
 
   # validations: presence
-  validates_presence_of :year
-  validates_presence_of :term
-  validates_presence_of :start_of_term
-  validates_presence_of :end_of_term
   validates_presence_of :active
+  validates_presence_of :end_of_term
+  validates_presence_of :start_of_term
+  validates_presence_of :term
+  validates_presence_of :year
 
   # validations: uniqueness
-  test 'academic term should be unique based on year' do
-    fake_term = @academic_term.dup
-    assert_not fake_term.valid?
-    assert_not_empty fake_term.errors[:year]
-  end
+  validates_uniqueness_of :year
 
   # validations: AcademicTermValidator
   test 'one of the academic terms must be active' do

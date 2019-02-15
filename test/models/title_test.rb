@@ -15,11 +15,7 @@ class TitleTest < ActiveSupport::TestCase
   validates_presence_of :branch
 
   # validations: uniqueness
-  test 'uniqueness validations for name and code fields of a title' do
-    fake = titles(:research_assistant).dup
-    assert_not fake.valid?
-    assert_not_empty fake.errors[:name]
-  end
+  validates_uniqueness_of :name
 
   # other validations
   test 'name, code and branch can not be longer than 255 characters' do

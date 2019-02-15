@@ -18,9 +18,5 @@ class AvailableCourseGroupTest < ActiveSupport::TestCase
   validates_presence_of :name
 
   # validations: uniqueness
-  test 'name should be unique' do
-    fake = @course_group.dup
-    assert_not fake.valid?
-    assert_not_empty fake.errors[:name]
-  end
+  validates_uniqueness_of :name
 end
