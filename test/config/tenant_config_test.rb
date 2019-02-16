@@ -19,4 +19,12 @@ class TenantConfigTest < ActiveSupport::TestCase
     assert config.key?('test')
     assert config.key?('development')
   end
+
+  test 'Tenant has a valid branding data' do
+    config = YAML.load_file(Tenant.engine.config_file_for(:tenant))
+    branding_data = config['production']['branding']
+    assert branding_data['logo'].key?('file')
+    assert branding_data['badge'].key?('file')
+    assert branding_data['background'].key?('file')
+  end
 end

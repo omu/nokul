@@ -12,6 +12,17 @@ default: &default
     support: 'hotline@baum.omu.edu.tr'
   network:
     subnet: '10.0.0.0/8'
+  branding:
+    logo:
+      file: 'logos/baum-logo.svg'
+      alt_text: 'Ondokuz Mayıs Üniversitesi Logosu'
+    badge:
+      file: 'badges/baum-beta.svg'
+      alt_text: 'BAUM Beta Badge'
+      visible: true
+    background:
+      file: 'backgrounds/background.jpg'
+      alt_text: 'Background image'
 
 production:
   <<: *default

@@ -16,8 +16,10 @@ Rails.application.config.assets.paths += [
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
-Rails.application.config.assets.precompile += %w[
-  guest.scss
-  guest.js
-  shared/cocoon.js
-]
+Rails.application.config.assets.precompile += [
+  'guest.scss',
+  'guest.js',
+  'shared/cocoon.js',
+  Tenant.configuration.branding.logo.file,
+  Tenant.configuration.branding.badge.file
+].compact
