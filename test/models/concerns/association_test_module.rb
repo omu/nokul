@@ -13,7 +13,7 @@ module AssociationTestModule
     # has_many(:addresses, addresses(:formal))
 
     def has_many(associations, object = nil)
-      object ||= to_s.delete_suffix('Test').constantize.first
+      object ||= to_s.delete_suffix('Test').constantize.take
 
       [associations].compact.flatten.each do |association|
         test "#{object} has_many #{association}" do

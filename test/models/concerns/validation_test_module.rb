@@ -9,7 +9,7 @@ module ValidationTestModule
     # validates_presence_of(:name, units(:omu))
     # validates_presence_of(%i[name code year])
     def validates_presence_of(attributes, object = nil)
-      object ||= to_s.delete_suffix('Test').constantize.first
+      object ||= to_s.delete_suffix('Test').constantize.take
 
       [attributes].compact.flatten.each do |attribute|
         test "#{attribute} must be present (presence: true) for #{object}" do
@@ -24,7 +24,7 @@ module ValidationTestModule
     # validates_presence_of_nested_model :lecturers
     # validates_presence_of_nested_model(:lecturers, 'employee_ids')
     def validates_presence_of_nested_model(attribute, ids = nil, object = nil)
-      object ||= to_s.delete_suffix('Test').constantize.first
+      object ||= to_s.delete_suffix('Test').constantize.take
       ids ||= "#{attribute.to_s.singularize}_ids"
 
       test "nested model (#{attribute}) must be present for #{object}" do
@@ -38,7 +38,7 @@ module ValidationTestModule
     # validates_uniqueness_of :name
     # validates_uniqueness_of(%i[name code year])
     def validates_uniqueness_of(attributes, object = nil)
-      object ||= to_s.delete_suffix('Test').constantize.first
+      object ||= to_s.delete_suffix('Test').constantize.take
 
       [attributes].compact.flatten.each do |attribute|
         test "#{attribute} must be unique (uniqueness: true) for #{object}" do
