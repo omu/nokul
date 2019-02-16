@@ -27,59 +27,59 @@
               <div class="form-group">
                 <%= label_tag :term, t('smart_search') %>
                 <%= text_field_tag :term,
-                                    params[:term],
-                                    placeholder: t('.smart_search_placeholder'),
-                                    class: 'form-control' %>
+                                   params[:term],
+                                   placeholder: t('.smart_search_placeholder'),
+                                   class: 'form-control' %>
               </div>
             </div>
             <div class="col-sm-4">
               <div class="form-group">
                 <%= label_tag(:unit_id, t('.unit')) %>
                 <%= select_tag(:unit_id,
-                              options_from_collection_for_select(Unit.active.coursable.order(:name), :id, :names_depth_cache, params[:unit_id]),
-                              include_blank: true,
-                              class: 'form-control',
-                              style: 'width: 100%') %>
+                               options_from_collection_for_select(Unit.active.coursable.order(:name), :id, :names_depth_cache, params[:unit_id]),
+                               include_blank: true,
+                               class: 'form-control',
+                               style: 'width: 100%') %>
               </div>
             </div>
             <div class="col-sm-4">
               <div class="form-group">
                 <%= label_tag(:program_type, t('.program_type')) %>
                 <%= select_tag(:program_type,
-                              options_for_select(enum_options_for_select(Course, :program_type), params[:program_type]),
-                              include_blank: true,
-                              class: 'form-control',
-                              style: 'width: 100%') %>
+                               options_for_select(enum_options_for_select(Course, :program_type), params[:program_type]),
+                               include_blank: true,
+                               class: 'form-control',
+                               style: 'width: 100%') %>
               </div>
             </div>
             <div class="col-sm-4">
               <div class="form-group">
                 <%= label_tag(:language_id, t('.language')) %>
                 <%= select_tag(:language_id,
-                              options_from_collection_for_select(Language.all, :id, :name, params[:language_id]),
-                              include_blank: true,
-                              class: 'form-control',
-                              style: 'width: 100%') %>
+                               options_from_collection_for_select(Language.all, :id, :name, params[:language_id]),
+                               include_blank: true,
+                               class: 'form-control',
+                               style: 'width: 100%') %>
               </div>
             </div>
             <div class="col-sm-4">
               <div class="form-group">
                 <%= label_tag(:course_type_id, t('.course_type')) %>
                 <%= select_tag(:course_type_id,
-                              options_from_collection_for_select(CourseType.all, :id, :name, params[:course_type_id]),
-                              include_blank: true,
-                              class: 'form-control',
-                              style: 'width: 100%') %>
+                               options_from_collection_for_select(CourseType.all, :id, :name, params[:course_type_id]),
+                               include_blank: true,
+                               class: 'form-control',
+                               style: 'width: 100%') %>
               </div>
             </div>
             <div class="col-sm-4">
               <div class="form-group">
                 <%= label_tag(:status, t('.status')) %>
                 <%= select_tag(:status,
-                              options_for_select(enum_options_for_select(Course, :status), params[:status]),
-                              include_blank: true,
-                              class: 'form-control',
-                              style: 'width: 100%') %>
+                               options_for_select(enum_options_for_select(Course, :status), params[:status]),
+                               include_blank: true,
+                               class: 'form-control',
+                               style: 'width: 100%') %>
               </div>
             </div>
           </div>

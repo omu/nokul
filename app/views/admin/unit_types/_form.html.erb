@@ -2,20 +2,20 @@
            namespace: 'admin',
            klass: @unit_type,
            params: [
-            {
-              field: 'name',
-              width: 12,
-              required: true
-            },
-            {
-              field: 'code',
-              width: 12,
-              required: true
-            },
-            {
-              field: 'group',
-              width: 12,
-              required: true,
-              collection: UnitType.groups.keys.sort
-            }
+             {
+               field: 'name',
+               width: 12,
+               required: true
+             },
+             {
+               field: 'code',
+               width: 12,
+               required: true
+             },
+             {
+               field: 'group',
+               width: 12,
+               required: true,
+               collection: UnitType.groups.keys.sort
+             }
            ] %>

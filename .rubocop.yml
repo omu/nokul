@@ -18,10 +18,20 @@ Metrics/BlockLength:
   Exclude:
     - config/routes/**/*
     - lib/tasks/**/*.rake # Won't fix
-    - test/models/concerns/reference_validations_test.rb
+    - test/models/concerns/validation_test_module.rb # Won't fix
+Metrics/MethodLength:
+  Exclude:
+    - test/models/concerns/validation_test_module.rb # Won't fix
+Metrics/AbcSize:
+  Exclude:
+    - test/models/concerns/validation_test_module.rb # Won't fix
 Metrics/ClassLength:
   Exclude:
     - test/**/*.rb
+Naming/PredicateName:
+  Exclude:
+    - test/models/concerns/association_test_module.rb # Won't fix
+    - test/models/concerns/enumeration_test_module.rb # Won't fix
 
 # Do not exclude files from ALL COPS unless it's really necessary!
 AllCops:

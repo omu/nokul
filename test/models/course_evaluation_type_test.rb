@@ -3,41 +3,26 @@
 require 'test_helper'
 
 class CourseEvaluationTypeTest < ActiveSupport::TestCase
+  include AssociationTestModule
+  include ValidationTestModule
+
   setup do
     @course_evaluation_type = course_evaluation_types(:ati_midterm_evaluation_type)
   end
 
   # relations
-  %i[
-    available_course
-    evaluation_type
-    course_assessment_methods
-    assessment_methods
-  ].each do |property|
-    test "a course evaluation type can communicate with #{property}" do
-      assert @course_evaluation_type.send(property)
-    end
-  end
+  belongs_to :available_course
+  belongs_to :evaluation_type
+  has_many :assessment_methods
+  has_many :course_assessment_methods
 
   # validations: presence
-  %i[
-    percentage
-  ].each do |property|
-    test "presence validations for #{property} of a course evaluation type" do
-      @course_evaluation_type.send("#{property}=", nil)
-      assert_not @course_evaluation_type.valid?
-      assert_not_empty @course_evaluation_type.errors[property]
-    end
-  end
+  validates_presence_of :percentage
 
   # validations: numericality
-  test 'numericality validations for percentage of a course evaluation type' do
-    @course_evaluation_type.percentage = -1
-    assert_not @course_evaluation_type.valid?
-    @course_evaluation_type.percentage = 101
-    assert_not @course_evaluation_type.valid?
-    assert_not_empty @course_evaluation_type.errors[:percentage]
-  end
+  validates_numericality_of(:percentage)
+  validates_numerical_range(:percentage, :greater_than_or_equal_to, 0)
+  validates_numerical_range(:percentage, :less_than_or_equal_to, 100)
 
   # validations: uniqueness
   test 'uniqueness validations for evaluation type scoped with available course' do

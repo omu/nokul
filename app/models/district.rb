@@ -13,8 +13,8 @@ class District < ApplicationRecord
 
   # relations
   belongs_to :city
-  has_many :units, dependent: :nullify
   has_many :addresses, dependent: :nullify
+  has_many :units, dependent: :nullify
 
   # validations
   validates :name, presence: true, uniqueness: { scope: %i[city_id] }, length: { maximum: 255 }

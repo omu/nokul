@@ -10,6 +10,7 @@
           <div class='row'>
             <div class='col-sm-12'>
               <%= f.error_notification %>
+              <%= f.error_notification message: f.object.errors[:lecturers].to_sentence if f.object.errors[:lecturers].present? %>
             </div>
             <div class='col-sm-12'>
               <%= f.input :name, required: true %>
@@ -19,12 +20,14 @@
             </div>
           </div>
 
-          <h3 class="text-center"><%= t('.lecturers') %></h3>
-          <%= f.simple_fields_for :lecturers do |lecturer| %>
-            <%= render 'lecturer_fields', f: lecturer %>
-          <% end %>
-          <div class='links text-center'>
-            <%= link_to_add_association f, :lecturers, class: 'btn btn-success btn-sm' %>
+          <h3 class='text-center'><%= t('.lecturers') %></h3>
+          <div class='col-sm-12' id='lecturers'>
+            <%= f.simple_fields_for :lecturers do |lecturer| %>
+              <%= render 'lecturer_fields', f: lecturer %>
+            <% end %>
+            <div class='links text-center'>
+              <%= link_to_add_association f, :lecturers, class: 'btn btn-success btn-sm' %>
+            </div>
           </div>
 
           <div class='col-sm-12'>
@@ -38,3 +41,4 @@
 </div>
 
 <%= javascript_include_tag 'shared/cocoon' %>
+<%= render 'js' %>

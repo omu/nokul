@@ -3,15 +3,14 @@
 require 'test_helper'
 
 class UniversityTypeTest < ActiveSupport::TestCase
-  include ReferenceCallbacksTest
-  include ReferenceValidationsTest
+  include AssociationTestModule
+  include ValidationTestModule
+  include ReferenceTestModule
 
   setup do
     @object = university_types(:foundation)
   end
 
   # relations
-  test 'university_type can communicate with units' do
-    assert @object.units
-  end
+  has_many :units
 end

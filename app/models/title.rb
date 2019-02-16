@@ -8,7 +8,7 @@ class Title < ApplicationRecord
   has_many :employees, dependent: :nullify
 
   # validations
-  validates :name, presence: true, uniqueness: { scope: %i[code branch] }, length: { maximum: 255 }
-  validates :code, presence: true, length: { maximum: 255 }
   validates :branch, presence: true, length: { maximum: 255 }
+  validates :code, presence: true, length: { maximum: 255 }
+  validates :name, presence: true, uniqueness: { scope: %i[code branch] }, length: { maximum: 255 }
 end

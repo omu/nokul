@@ -2,8 +2,8 @@
 
 class Position < ApplicationRecord
   # relations
-  belongs_to :duty
   belongs_to :administrative_function
+  belongs_to :duty
 
   # validations
   validates :start_date, presence: true

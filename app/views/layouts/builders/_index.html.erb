@@ -5,15 +5,15 @@
         <%= fa_icon 'align-justify', text: card_header %>
         <div class='card-header-actions'>
           <%= link_to_new(
-            t("#{namespace}.#{klass.pluralize}.index.new_#{klass}_link"),
-            [:new, namespace.to_sym, klass]
-          ) %>
+                t("#{namespace}.#{klass.pluralize}.index.new_#{klass}_link"),
+                [:new, namespace.to_sym, klass]
+              ) %>
         </div>
       </div>
       <div class='card-body'>
         <%= render 'layouts/shared/smart_search_form',
-           path: "#{klass.tableize}",
-           placeholder: t("#{namespace}.#{klass.pluralize}.index.name") %>
+                   path: klass.tableize.to_s,
+                   placeholder: t("#{namespace}.#{klass.pluralize}.index.name") %>
         <table class='table table-responsive-sm table-striped'>
           <thead class='thead-dark'>
             <tr>
@@ -31,16 +31,12 @@
                 <% params.each do |parameter| %>
                   <% value = item.send(parameter) %>
                   <%= content_tag :td do %>
-                    <% enum = item.class.defined_enums.has_key?(parameter) %>
+                    <% enum = item.class.defined_enums.key?(parameter) %>
                     <% boolean = [true, false].include?(value) %>
-                    <%= (boolean || enum) ? enum_t(item, parameter.to_sym) : value %>
+                    <%= boolean || enum ? enum_t(item, parameter.to_sym) : value %>
                   <% end %>
                 <% end %>
-                <td>
-                  <%= link_to_show([namespace.to_sym, item]) if actions.include? 'show' %>
-                  <%= link_to_edit([:edit, namespace.to_sym, item]) if actions.include? 'edit' %>
-                  <%= link_to_destroy([namespace.to_sym, item]) if actions.include? 'destroy' %>
-                </td>
+                <td><%= link_to_actions([namespace.to_sym, item], except: (%w[show edit destroy] - actions)) %></td>
               </tr>
             <% end %>
           </tbody>

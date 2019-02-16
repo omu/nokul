@@ -45,9 +45,9 @@
               <div class="form-group">
                 <%= label_tag(:agenda_type_id, t('.agenda_type_id')) %>
                 <%= select_tag(:agenda_type_id,
-                              options_from_collection_for_select(AgendaType.all, :id, :name, params[:agenda_type_id]),
-                              include_blank: true,
-                              class: 'form-control') %>
+                               options_from_collection_for_select(AgendaType.all, :id, :name, params[:agenda_type_id]),
+                               include_blank: true,
+                               class: 'form-control') %>
               </div>
             </div>
           </div>

@@ -12,14 +12,11 @@
               <%= f.input :name, required: true %>
             </div>
             <div class='col-sm-6'>
-              <%= f.input :senate_decision_date,
-                          as: :date_time_picker,
-                          input_html: { data: { class: 'senate_decision_date'} } %>
+              <%= f.association :committee_decisions,
+                                collection: Unit.senates.map(&:decisions).flatten,
+                                label_method: :decision_no %>
             </div>
             <div class='col-sm-6'>
-              <%= f.input :senate_decision_no, required: true %>
-            </div>
-            <div class='col-sm-12'>
               <%= f.input :timezone, required: true,
                                      collection: timezone_list_with_offset,
                                      label_method: :first,
@@ -32,7 +29,7 @@
             <div class='col-sm-12'>
               <%= f.input :description, as: :text %>
             </div>
-            <hr \>
+            <hr />
             <div class='col-sm-12' id='calendar_events'>
               <div class='card event_card'>
                 <div class='card-header'>
@@ -45,7 +42,7 @@
                   <%= f.simple_fields_for :calendar_events do |event| %>
                     <%= render 'calendar_event_fields', f: event %>
                   <% end %>
-                  <br>
+                  <br />
                 </div>
               </div>
             </div>
@@ -63,3 +60,9 @@
 <%= javascript_include_tag 'shared/cocoon' %>
 <%= render 'flatpickr' %>
 <%= render 'cocoon' %>
+
+<script type='text/javascript'>
+  $(document).ready(function() {
+    $('#calendar_committee_decision_ids').select2();
+  });
+</script>

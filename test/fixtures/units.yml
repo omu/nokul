@@ -19,7 +19,7 @@ omu_rektorluk:
   unit_status: active
   unit_instruction_language: turkish
   unit_instruction_type: normal_education
-  university_type:
+  university_type: government
   unit_type: rectorship
   ancestry: <%= ActiveRecord::FixtureSet.identify(:omu) %>
 
@@ -260,6 +260,13 @@ veteriner_fakultesi:
   unit_instruction_type: normal_education
   unit_type: faculty
   ancestry: <%= ActiveRecord::FixtureSet.identify(:omu) %>
+
+senate:
+  name: Senato
+  detsis_id: 999999
+  district: atakum
+  unit_status: active
+  unit_type: senate
 
 unit_to_delete:
   name: Unit to Delete

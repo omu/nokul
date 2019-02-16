@@ -3,8 +3,8 @@
 require 'test_helper'
 
 class StudentStudentshipStatusTest < ActiveSupport::TestCase
-  include ReferenceCallbacksTest
-  include ReferenceValidationsTest
+  include ValidationTestModule
+  include ReferenceTestModule
 
   setup do
     @object = student_studentship_statuses(:can_be_a_student)

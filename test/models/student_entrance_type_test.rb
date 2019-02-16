@@ -3,15 +3,14 @@
 require 'test_helper'
 
 class StudentEntranceTypeTest < ActiveSupport::TestCase
-  include ReferenceCallbacksTest
-  include ReferenceValidationsTest
+  include AssociationTestModule
+  include ValidationTestModule
+  include ReferenceTestModule
 
   setup do
     @object = student_entrance_types(:dgs)
   end
 
   # relations
-  test 'student_entrance_types can communicate with prospective students' do
-    assert student_entrance_types(:dgs).prospective_students
-  end
+  has_many :prospective_students
 end

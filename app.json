@@ -7,6 +7,7 @@
   ],
   "scripts": {
     "dokku": {
+      "predeploy":  "bin/plugdo bundle install -j4 --path /app/vendor/bundle --without development:test && bundle exec rails assets:precompile",
       "postdeploy": "bundle exec rails db:migrate"
     }
   }

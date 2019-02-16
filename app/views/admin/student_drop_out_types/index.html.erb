@@ -4,5 +4,5 @@
            collection: @student_drop_out_types,
            pagy: @pagy,
            card_header: t('.card_header'),
-           params: ['name', 'code'],
-           actions: ['edit', 'destroy'] %>
+           params: %w[name code],
+           actions: %w[edit destroy] %>

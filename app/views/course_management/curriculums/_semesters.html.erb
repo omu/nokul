@@ -1,6 +1,6 @@
 <div class="row">
   <% semesters.each do |semester| %>
-    <div class="col-lg-<%=semesters.size > 1 ? 6 : 12 %> col-md-12">
+    <div class="col-lg-<%= semesters.size > 1 ? 6 : 12 %> col-md-12">
       <div class="card">
         <div class="card-header">
           <%= fa_icon 'book' %><strong><%= "#{semester.sequence}. #{t('semester')} (#{enum_t(semester, :term)})" %></strong>
@@ -21,26 +21,20 @@
                      additional_info: "<div class='callout callout-info'>
                                          <small class='text-muted'> #{t('.total_ects')} </small><br>
                                          <strong class='h4'> #{semester.curriculum_courses.compulsory.sum(:ects)}</strong>
-                                       </div>".html_safe
-                    %>
+                                       </div>".html_safe %>
 
           <% semester.curriculum_course_groups.each do |curriculum_course_group| %>
             <%= render 'curriculum_courses',
-                      klass: 'border-warning',
-                      actions: safe_join([
-                          link_to_edit(edit_curriculum_semester_curriculum_course_group_path(semester, curriculum_course_group)),
-                          link_to_destroy([semester, curriculum_course_group])
-                        ],
-                        ' '
-                      ),
-                      title: "#{t('.elective_courses')} - #{curriculum_course_group.name}",
-                      semester: semester,
-                      courses: curriculum_course_group.curriculum_courses.order('courses.name'),
-                      action_visible: false,
-                      additional_info: "<div class='callout callout-warning'>
-                                          <small class='text-muted'> #{t('.selectable_total_ects')} </small><br>
-                                          <strong class='h4'> #{curriculum_course_group.ects}</strong>
-                                        </div>".html_safe %>
+                       klass: 'border-warning',
+                       actions: link_to_actions([semester, curriculum_course_group], except: :show),
+                       title: "#{t('.elective_courses')} - #{curriculum_course_group.name}",
+                       semester: semester,
+                       courses: curriculum_course_group.curriculum_courses.order('courses.name'),
+                       action_visible: false,
+                       additional_info: "<div class='callout callout-warning'>
+                                           <small class='text-muted'> #{t('.selectable_total_ects')} </small><br>
+                                           <strong class='h4'> #{curriculum_course_group.ects}</strong>
+                                         </div>".html_safe %>
           <% end %>
         </div>
         <div class="card-footer text-muted">

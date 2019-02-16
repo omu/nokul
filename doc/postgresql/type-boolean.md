@@ -1,3 +1,7 @@
+---
+author: M. Serhat Dundar
+---
+
 ## Rules
 
 - `boolean` alanlar için **mutlaka** `null_constraint` eklenmelidir.

@@ -3,28 +3,19 @@
 require 'test_helper'
 
 class MeetingAgendaTest < ActiveSupport::TestCase
+  include AssociationTestModule
+  include ValidationTestModule
+
   # relations
-  %i[
-    agenda
-    committee_meeting
-    decision
-  ].each do |property|
-    test "a meeting agenda can communicate with #{property}" do
-      assert meeting_agendas(:one).send(property)
-    end
-  end
+  belongs_to :agenda
+  belongs_to :committee_meeting
+  has_one :decision
 
   # validations: presence
-  %i[
-    agenda
-    sequence_no
-  ].each do |property|
-    test "presence validations for #{property} of a meeting agenda" do
-      meeting_agendas(:one).send("#{property}=", nil)
-      assert_not meeting_agendas(:one).valid?
-      assert_not_empty meeting_agendas(:one).errors[property]
-    end
-  end
+  validates_presence_of :sequence_no
+
+  # validations: uniqueness
+  validates_uniqueness_of :agenda_id
 
   # delegates
   %i[

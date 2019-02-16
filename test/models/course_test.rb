@@ -3,54 +3,39 @@
 require 'test_helper'
 
 class CourseTest < ActiveSupport::TestCase
+  include AssociationTestModule
+  include EnumerationTestModule
+  include ValidationTestModule
+
   setup do
     @course = courses(:test)
   end
 
   # relations
-  %i[
-    course_type
-    unit
-    language
-  ].each do |property|
-    test "course can communicate with #{property}" do
-      assert @course.send(property)
-    end
-  end
+  belongs_to :course_type
+  belongs_to :language
+  belongs_to :unit
 
   # validations: presence
-  %i[
-    code
-    course_type
-    program_type
-    laboratory
-    language
-    name
-    practice
-    status
-    theoric
-    unit
-  ].each do |property|
-    test "presence validations for #{property} of a course" do
-      @course.send("#{property}=", nil)
-      assert_not @course.valid?
-      assert_not_empty @course.errors[property]
-    end
-  end
+  validates_presence_of :code
+  validates_presence_of :laboratory
+  validates_presence_of :name
+  validates_presence_of :practice
+  validates_presence_of :program_type
+  validates_presence_of :status
+  validates_presence_of :theoric
 
   # validations: uniqueness
-  test 'uniqueness validations for code of a course' do
-    fake = @course.dup
-    assert_not fake.valid?
-    assert_not_empty fake.errors[:code]
-  end
+  validates_uniqueness_of :name
+  validates_uniqueness_of :code
 
-  test 'uniqueness validations for name of a course' do
-    fake = @course.dup
-    fake.code = 'TB01'
-    assert_not fake.valid?
-    assert_not_empty fake.errors[:name]
-  end
+  # validations: length
+  validates_length_of :name
+  validates_length_of :code
+
+  # enums
+  has_enum :status, values: { passive: 0, active: 1 }
+  has_enum :program_type, values: { associate: 0, undergraduate: 1, master: 2, doctoral: 3 }
 
   # callbacks
   test 'callbacks must titlecase the name for a course' do
@@ -63,19 +48,6 @@ class CourseTest < ActiveSupport::TestCase
     course = @course.dup
     course.update(code: 'DD101', theoric: 10, practice: 3)
     assert_equal course.credit, 11.5
-  end
-
-  # enums
-  {
-    status: { passive: 0, active: 1 },
-    program_type: { associate: 0, undergraduate: 1, master: 2, doctoral: 3 }
-  }.each do |property, hash|
-    hash.each do |key, value|
-      test "have a #{key} value of #{property} enum" do
-        enums = Course.defined_enums.with_indifferent_access
-        assert_equal enums.dig(property, key), value
-      end
-    end
   end
 
   # actions

@@ -3,58 +3,35 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
+  include AssociationTestModule
+  include ValidationTestModule
   include ActiveJob::TestHelper
 
   # relations
-  %i[
-    avatar
-    employees
-    students
-    identities
-    addresses
-    duties
-    units
-    positions
-    administrative_functions
-    certifications
-    projects
-    articles
-  ].each do |property|
-    test "a user can communicate with #{property}" do
-      assert users(:serhat).send(property)
-    end
-  end
+  has_many :addresses
+  has_many :identities
+  has_many :employees
+  has_many :students
+  has_many :duties
+  has_many :units
+  has_many :positions
+  has_many :administrative_functions
+  has_many :certifications
+  has_many :articles
+  has_many :projects
 
-  %i[
-    email
-    id_number
-  ].each do |property|
-    # validations: presence
-    test "presence validations for #{property} of a user" do
-      users(:serhat).send("#{property}=", nil)
-      assert_not users(:serhat).valid?
-      assert_not_empty users(:serhat).errors[property]
-    end
+  # validations: presence
+  validates_presence_of :email
+  validates_presence_of :id_number
+  validates_presence_of :preferred_language
 
-    # validations: uniqueness
-    test "uniqueness validations for #{property} of a user" do
-      fake = users(:serhat).dup
-      assert_not fake.valid?
-      assert_not_empty fake.errors[property]
-    end
-  end
-
-  # validations: numerically
-  test 'id_number must be numeric' do
-    fake = users(:serhat).dup
-    ['abc', '.,', '1,24', '10.25'].each do |value|
-      fake.id_number = value
-      assert_not fake.valid?
-      assert_not_empty fake.errors[:id_number]
-    end
-  end
+  # validations: uniqueness
+  validates_uniqueness_of :email
+  validates_uniqueness_of :id_number
 
   # validations: length
+  validates_length_of :email
+
   test 'id_number must be 11 characters' do
     fake = users(:serhat).dup
     ['123456789121', '123', '123456789,5', '14254455.77'].each do |value|
@@ -63,6 +40,9 @@ class UserTest < ActiveSupport::TestCase
       assert_not_empty fake.errors[:id_number]
     end
   end
+
+  # validations: numericality
+  validates_numericality_of(:id_number)
 
   # validations: email
   test 'email addresses validated against RFC' do

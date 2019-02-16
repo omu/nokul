@@ -3,8 +3,8 @@
 require 'test_helper'
 
 class StudentGradeTest < ActiveSupport::TestCase
-  include ReferenceCallbacksTest
-  include ReferenceValidationsTest
+  include ValidationTestModule
+  include ReferenceTestModule
 
   setup do
     @object = student_grades(:scientific_preparation)

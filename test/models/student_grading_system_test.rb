@@ -3,8 +3,8 @@
 require 'test_helper'
 
 class StudentGradingSystemTest < ActiveSupport::TestCase
-  include ReferenceCallbacksTest
-  include ReferenceValidationsTest
+  include ValidationTestModule
+  include ReferenceTestModule
 
   setup do
     @object = student_grading_systems(:four_point_grading_system)

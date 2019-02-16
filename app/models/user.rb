@@ -16,19 +16,17 @@ class User < ApplicationRecord
 
   # relations
   has_one_attached :avatar
-  has_many :employees, dependent: :destroy
-  has_many :students, dependent: :destroy
-  has_many :identities, dependent: :destroy
   has_many :addresses, dependent: :destroy
+  has_many :articles, dependent: :destroy
+  has_many :certifications, dependent: :destroy
+  has_many :identities, dependent: :destroy
+  has_many :employees, dependent: :destroy
+  has_many :projects, dependent: :destroy
+  has_many :students, dependent: :destroy
   has_many :duties, through: :employees
   has_many :units, through: :employees
   has_many :positions, through: :duties
   has_many :administrative_functions, through: :duties
-
-  # academic studies
-  has_many :certifications, dependent: :destroy
-  has_many :articles, dependent: :destroy
-  has_many :projects, dependent: :destroy
 
   # validations
   validates :email, presence: true, uniqueness: true, length: { maximum: 255 }

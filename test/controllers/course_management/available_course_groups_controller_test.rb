@@ -19,7 +19,13 @@ module CourseManagement
       assert_difference('AvailableCourseGroup.count') do
         post available_course_available_course_groups_path(@available_course), params: {
           available_course_group: {
-            name: 'Group 4', quota: 10
+            name: 'Group 4', quota: 10,
+            lecturers_attributes: {
+              '0' => {
+                lecturer_id: employees(:serhat_active).id,
+                coordinator: true
+              }
+            }
           }
         }
       end
@@ -42,7 +48,13 @@ module CourseManagement
       group = AvailableCourseGroup.last
       patch available_course_available_course_group_path(group.available_course, group), params: {
         available_course_group: {
-          name: 'Group 5', quota: 15
+          name: 'Group 5', quota: 15,
+          lecturers_attributes: {
+            '0' => {
+              lecturer_id: employees(:chief_john).id,
+              coordinator: true
+            }
+          }
         }
       }
 

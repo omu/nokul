@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 8309cd2c68f548987b8447475c7735a19714baaa
+  revision: 16e235126ef0187a93b81ee959a8127097e2f394
   specs:
     actioncable (6.0.0.beta1)
       actionpack (= 6.0.0.beta1)
@@ -55,6 +55,7 @@ GIT
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+      zeitwerk (~> 1.0)
     rails (6.0.0.beta1)
       actioncable (= 6.0.0.beta1)
       actionmailbox (= 6.0.0.beta1)
@@ -134,6 +135,7 @@ GEM
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
+    zeitwerk (1.1.0)
 
 PLATFORMS
   ruby
@@ -142,6 +144,9 @@ DEPENDENCIES
   minitest-focus
   nokul-support!
   rails!
+
+RUBY VERSION
+   ruby 2.6.1p33
 
 BUNDLED WITH
    2.0.1

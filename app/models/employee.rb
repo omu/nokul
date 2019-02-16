@@ -2,8 +2,8 @@
 
 class Employee < ApplicationRecord
   # relations
-  belongs_to :user
   belongs_to :title
+  belongs_to :user
   has_many :duties, dependent: :destroy
   has_many :units, through: :duties
   has_many :positions, through: :duties

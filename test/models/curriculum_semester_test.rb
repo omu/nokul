@@ -1,48 +1,32 @@
 # frozen_string_literal: true
 
 require 'test_helper'
-require_relative './concerns/enum_for_term_test'
 
 class CurriculumSemesterTest < ActiveSupport::TestCase
-  include EnumForTermTest
+  include AssociationTestModule
+  include EnumerationTestModule
+  include ValidationTestModule
 
   setup do
     @semester = curriculum_semesters(:one)
   end
 
   # relations
-  %i[
-    courses
-    curriculum
-    curriculum_courses
-    curriculum_course_groups
-  ].each do |relation|
-    test "curriculum semester can communicate with #{relation}" do
-      assert @semester.send(relation)
-    end
-  end
+  belongs_to :curriculum
+  has_many :courses
+  has_many :curriculum_course_groups
+  has_many :curriculum_courses
 
   # validations: presence
-  %i[
-    year
-    sequence
-  ].each do |property|
-    test "presence validations for #{property} of a curriculum semester" do
-      @semester.send("#{property}=", nil)
-      assert_not @semester.valid?
-      assert_not_empty @semester.errors[property]
-    end
-  end
+  validates_presence_of :year
+  validates_presence_of :sequence
 
   # validations: numericality
-  test 'numericality validations for sequence of a curriculum semester' do
-    @semester.sequence = 0
-    assert_not @semester.valid?
-    assert_not_empty @semester.errors[:sequence]
-  end
+  validates_numericality_of(:sequence)
+  validates_numerical_range(:sequence, :greater_than, 0)
 
   # enums
-  test_term_enum(CurriculumSemester)
+  has_enum :term, values: { fall: 0, spring: 1, summer: 2 }
 
   # custom methods
   test 'total_ects method' do

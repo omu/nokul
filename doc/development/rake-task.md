@@ -1,3 +1,7 @@
+---
+author: M. Serhat Dundar
+---
+
 # Rake Tasks
 
 - [OPTIONAL]. `setup` or `seed` already does it, but if you want to externally create YOKSIS references, departments, country codes etc. inside your app, run the specific tasks alone:

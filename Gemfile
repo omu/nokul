@@ -6,7 +6,7 @@ ruby File.read('.ruby-version')
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # core
-gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootsnap', '>= 1.4.0', require: false
 gem 'puma', '~> 3.11'
 gem 'rails', github: 'rails/rails'
 gem 'redis', '~> 4.0'
@@ -53,6 +53,7 @@ gem 'rack-attack'
 
 # validators
 gem 'email_address'
+gem 'telephone_number'
 
 # error tracking
 gem 'rollbar', github: 'rollbar/rollbar-gem'
@@ -62,9 +63,11 @@ gem 'friendly_id', '~> 5.2.0'
 
 group :development, :test do
   gem 'brakeman', require: false
+  gem 'bullet', github: 'flyerhzm/bullet'
   gem 'bundler-audit'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'dotenv-rails'
+  gem 'erb_lint', require: false
   gem 'lol_dba'
   gem 'rubocop'
   gem 'simplecov', require: false
@@ -79,14 +82,11 @@ group :test do
 end
 
 group :development do
-  # TODO: Will re-enable after upgrading bullet.
-  # gem 'bullet'
   gem 'fit-commit'
   gem 'letter_opener'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'pry-rails'
-  # TODO: Will re-enable after upgrading rack-mini-profiler
-  # gem 'rack-mini-profiler'
+  gem 'rack-mini-profiler'
   gem 'ruby-progressbar'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'

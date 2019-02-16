@@ -30,9 +30,9 @@ repository: &repository
   key: nokul-repo-{{ .Environment.CIRCLE_SHA1 }}
 
 # build image
-ruby_2_6_0: &ruby_2_6_0
+ruby_2_6: &ruby_2_6
   docker:
-    - image: circleci/ruby:2.6.0-node-browsers
+    - image: circleci/ruby:2.6.1-node-browsers
       <<: *rails_environment
     - image: circleci/postgres:11.1-alpine
       <<: *postgres_environment
@@ -41,7 +41,7 @@ ruby_2_6_0: &ruby_2_6_0
 version: 2
 jobs:
   prepare_project:
-    <<: *ruby_2_6_0
+    <<: *ruby_2_6
     steps:
       - checkout
       - save_cache:
@@ -49,7 +49,7 @@ jobs:
           paths:
             - ~/project
   bundle_dependencies:
-    <<: *ruby_2_6_0
+    <<: *ruby_2_6
     steps:
       - restore_cache:
           <<: *repository
@@ -68,7 +68,7 @@ jobs:
           paths:
             - vendor/bundle
   bundle_assets:
-    <<: *ruby_2_6_0
+    <<: *ruby_2_6
     steps:
       - restore_cache:
           <<: *repository
@@ -88,7 +88,7 @@ jobs:
           paths:
             - node_modules/
   quality:
-    <<: *ruby_2_6_0
+    <<: *ruby_2_6
     steps:
       - restore_cache:
           <<: *repository
@@ -103,7 +103,7 @@ jobs:
       - run: bundle exec rake quality:all
       - run: bin/yarn run lint
   security:
-    <<: *ruby_2_6_0
+    <<: *ruby_2_6
     steps:
       - restore_cache:
           <<: *repository
@@ -117,7 +117,7 @@ jobs:
       - run: bundle --path vendor/bundle --without development
       - run: bundle exec rake security:all
   database:
-    <<: *ruby_2_6_0
+    <<: *ruby_2_6
     steps:
       - restore_cache:
           <<: *repository
@@ -131,7 +131,7 @@ jobs:
       - run: bundle --path vendor/bundle --without development
       - run: bundle exec rake database:all
   test_suite:
-    <<: *ruby_2_6_0
+    <<: *ruby_2_6
     steps:
       - restore_cache:
           <<: *repository
@@ -192,21 +192,21 @@ workflows:
       - test_suite:
           requires:
             - bundle_assets
-      - deploy_develop:
-          requires:
-            - quality
-            - security
-            - database
-            - test_suite
-          filters:
-            branches:
-              only: develop
-      - deploy_master:
-          requires:
-            - quality
-            - security
-            - database
-            - test_suite
-          filters:
-            branches:
-              only: master
+      # - deploy_develop:
+      #     requires:
+      #       - quality
+      #       - security
+      #       - database
+      #       - test_suite
+      #     filters:
+      #       branches:
+      #         only: develop
+      # - deploy_master:
+      #     requires:
+      #       - quality
+      #       - security
+      #       - database
+      #       - test_suite
+      #     filters:
+      #       branches:
+      #         only: master

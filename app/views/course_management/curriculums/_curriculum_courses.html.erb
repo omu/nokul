@@ -32,15 +32,12 @@
             <td><%= curriculum_course.credit %></td>
             <td><%= curriculum_course.ects %></td>
             <% if action_visible %>
-              <td>
-                <%= link_to_edit edit_curriculum_semester_curriculum_course_path(semester, curriculum_course) %>
-                <%= link_to_destroy [semester, curriculum_course] %>
-              </td>
+              <td><%= link_to_actions([semester, curriculum_course], except: :show) %></td>
             <% end %>
           </tr>
         <% end %>
       </tbody>
     </table>
-    <%= additional_info  %>
+    <%= additional_info %>
   </div>
 </div>

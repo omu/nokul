@@ -1,3 +1,7 @@
+---
+author: M. Serhat Dundar
+---
+
 # How To: Arel Queries
 
 - List of Arel classes:

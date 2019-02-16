@@ -1,7 +1,7 @@
 <div class="alert alert-light">
   <%= link_to_back user_path(@user) %>
   <%= link_to_new(t('.new_address'), new_user_address_path(@user)) unless @user.addresses.informal.present? %>
-  <%= link_to (@addresses.formal.present? ? t('.update_from_mernis') :  t('.create_from_mernis') ), save_from_mernis_user_addresses_path, class: "btn btn-outline-primary btn-sm"  %>
+  <%= link_to (@addresses.formal.present? ? t('.update_from_mernis') : t('.create_from_mernis')), save_from_mernis_user_addresses_path, class: 'btn btn-outline-primary btn-sm' %>
 </div>
 
 <div class="row">
@@ -14,8 +14,7 @@
           <% else %>
             <strong><%= t('.informal_address') %></strong>
             <div class="card-header-actions">
-              <%= link_to_edit(edit_user_address_path(@user, address)) %>
-              <%= link_to_destroy(user_address_path(@user, address)) %>
+              <%= link_to_actions([@user, address], except: :show) %>
             </div>
           <% end %>
         </div>

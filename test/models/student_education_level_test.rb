@@ -3,8 +3,8 @@
 require 'test_helper'
 
 class StudentEducationLevelTest < ActiveSupport::TestCase
-  include ReferenceCallbacksTest
-  include ReferenceValidationsTest
+  include ValidationTestModule
+  include ReferenceTestModule
 
   setup do
     @object = student_education_levels(:phd)

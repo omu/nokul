@@ -3,39 +3,45 @@
 require 'test_helper'
 
 class ProspectiveStudentTest < ActiveSupport::TestCase
+  include AssociationTestModule
+  include EnumerationTestModule
+  include ValidationTestModule
+
   # relations
-  %i[
-    unit
-    student_entrance_type
-  ].each do |property|
-    test "a prospective_student can communicate with #{property}" do
-      assert prospective_students(:serhat).send(property)
-    end
-  end
+  belongs_to :student_entrance_type
+  belongs_to :unit
 
   # validations: presence
-  %i[
-    id_number
-    gender
-  ].each do |property|
-    test "presence validations for #{property} of a prospective_student" do
-      prospective_students(:serhat).send("#{property}=", nil)
-      assert_not prospective_students(:serhat).valid?
-      assert_not_empty prospective_students(:serhat).errors[property]
-    end
-  end
+  validates_presence_of :gender
+  validates_presence_of :id_number
+  validates_presence_of :first_name
+  validates_presence_of :last_name
 
   # validations: uniqueness
-  %i[
-    id_number
-    unit_id
-    exam_score
-  ].each do |property|
-    test "uniqueness validations for #{property} of a prospective_student" do
-      fake = prospective_students(:serhat).dup
-      assert_not fake.valid?
-    end
-  end
+  validates_uniqueness_of :id_number
+
+  # validations: length
+  validates_length_of :address
+  validates_length_of :email
+  validates_length_of :fathers_name
+  validates_length_of :first_name
+  validates_length_of :high_school_code
+  validates_length_of :high_school_branch
+  validates_length_of :home_phone
+  validates_length_of :last_name
+  validates_length_of :mobile_phone
+  validates_length_of :mothers_name
+  validates_length_of :obs_registered_program
+  validates_length_of :place_of_birth
+  validates_length_of :placement_score_type
+  validates_length_of :registration_city
+  validates_length_of :registration_district
+
+  # enums
+  has_enum :additional_score, values: { handicapped: 1 }
+  has_enum :gender, values: { male: 1, female: 2 }
+  has_enum :nationality, values: { turkish: 1, kktc: 2, foreign: 3 }
+  has_enum :placement_type, values: { general_score: 1, additional_score: 2 }
 
   # callbacks
   test 'callbacks must titlecase the name for a prospective_student' do

@@ -3,34 +3,21 @@
 require 'test_helper'
 
 class EvaluationTypeTest < ActiveSupport::TestCase
-  setup do
-    @evaluation_type = evaluation_types(:undergraduate_midterm)
-  end
+  include AssociationTestModule
+  include ValidationTestModule
 
   # relations
-  %i[
-    course_evaluation_types
-    available_courses
-  ].each do |property|
-    test "a evaluation type can communicate with #{property}" do
-      assert @evaluation_type.send(property)
-    end
-  end
+  has_many :available_courses
+  has_many :course_evaluation_types
 
   # validations: presence
-  test 'presence validations for name of a evaluation type' do
-    @evaluation_type.name = nil
-    assert_not @evaluation_type.valid?
-    assert_not_empty @evaluation_type.errors[:name]
-  end
+  validates_presence_of :name
 
-  # other validations
-  test 'name can not be longer than 255 characters' do
-    fake = @evaluation_type.dup
-    fake.name = (0...256).map { ('a'..'z').to_a[rand(26)] }.join
-    assert_not fake.valid?
-    assert fake.errors.details[:name].map { |err| err[:error] }.include?(:too_long)
-  end
+  # validations: uniqueness
+  validates_uniqueness_of :name
+
+  # validations: length
+  validates_length_of :name
 
   # callbacks
   test 'callbacks must titlecase the name of a evaluation type' do

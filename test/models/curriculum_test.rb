@@ -3,6 +3,10 @@
 require 'test_helper'
 
 class CurriculumTest < ActiveSupport::TestCase
+  include AssociationTestModule
+  include EnumerationTestModule
+  include ValidationTestModule
+
   setup do
     @curriculum = curriculums(:one)
   end
@@ -18,65 +22,36 @@ class CurriculumTest < ActiveSupport::TestCase
   end
 
   # relations
-  %i[
-    available_courses
-    courses
-    course_groups
-    curriculum_course_groups
-    curriculum_programs
-    programs
-    semesters
-    unit
-  ].each do |relation|
-    test "curriculum can communicate with #{relation}" do
-      assert @curriculum.send(relation)
-    end
-  end
+  belongs_to :unit
+  has_many :curriculum_programs
+  has_many :programs
+  has_many :semesters
+  has_many :courses
+  has_many :curriculum_course_groups
+  has_many :course_groups
+  has_many :available_courses
 
   # validations: presence
-  {
-    name: :name,
-    semesters_count: :semesters_count,
-    status: :status,
-    unit: :unit,
-    program_ids: :programs
-  }.each do |property, error_message_key|
-    test "presence validations for #{property} of a curriculum" do
-      @curriculum.send("#{property}=", nil)
-      assert_not @curriculum.valid?
-      assert_not_empty @curriculum.errors[error_message_key]
-    end
-  end
+  validates_presence_of :name
+  validates_presence_of :semesters_count
+  validates_presence_of :status
+  validates_presence_of :unit
+
+  # validations: nested models
+  validates_presence_of_nested_model :programs
+
+  # validations: length
+  validates_length_of :name
 
   # validations: uniqueness
-  test 'uniqueness validations for name of a curriculum' do
-    fake = @curriculum.dup
-    assert_not fake.valid?
-    assert_not_empty fake.errors[:name]
-
-    fake.unit_id = units(:cbu).id
-    fake.valid?
-    assert_empty fake.errors[:name]
-  end
+  validates_uniqueness_of :name
 
   # validations: numericality
-  test 'numericality validations for semesters_count of a curriculum' do
-    @curriculum.semesters_count = -1
-    assert_not @curriculum.valid?
-    assert_not_empty @curriculum.errors[:semesters_count]
-  end
+  validates_numericality_of(:semesters_count)
+  validates_numerical_range(:semesters_count, :greater_than_or_equal_to, 0)
 
   # enums
-  {
-    status: { passive: 0, active: 1 }
-  }.each do |property, hash|
-    hash.each do |key, value|
-      test "have a #{key} value of #{property} enum" do
-        enums = Curriculum.defined_enums.with_indifferent_access
-        assert_equal enums.dig(property, key), value
-      end
-    end
-  end
+  has_enum :status, values: { passive: 0, active: 1 }
 
   # custom methods
   test 'build_semester method' do

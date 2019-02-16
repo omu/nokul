@@ -3,13 +3,16 @@
 require 'test_helper'
 
 class UnitCalendarTest < ActiveSupport::TestCase
+  include AssociationTestModule
+  include ValidationTestModule
+
   # relations
-  %i[
-    unit
-    calendar
-  ].each do |property|
-    test "unit calendar can communicate with #{property}" do
-      assert unit_calendars(:uzem_calendar).send(property)
-    end
-  end
+  belongs_to :calendar
+  belongs_to :unit
+
+  # validations: presence
+  validates_presence_of :calendar
+
+  # validations: uniqueness
+  validates_uniqueness_of :calendar
 end
