@@ -34,8 +34,8 @@ class CourseTest < ActiveSupport::TestCase
   validates_length_of :code
 
   # enums
-  has_enum({ passive: 0, active: 1 }, 'status')
-  has_enum({ associate: 0, undergraduate: 1, master: 2, doctoral: 3 }, 'program_type')
+  has_enum :status, values: { passive: 0, active: 1 }
+  has_enum :program_type, values: { associate: 0, undergraduate: 1, master: 2, doctoral: 3 }
 
   # callbacks
   test 'callbacks must titlecase the name for a course' do

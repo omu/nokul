@@ -51,7 +51,7 @@ class CurriculumTest < ActiveSupport::TestCase
   validates_numerical_range(:semesters_count, :greater_than_or_equal_to, 0)
 
   # enums
-  has_enum({ passive: 0, active: 1 }, 'status')
+  has_enum :status, values: { passive: 0, active: 1 }
 
   # custom methods
   test 'build_semester method' do

@@ -38,9 +38,9 @@ class IdentityTest < ActiveSupport::TestCase
   end
 
   # enums
-  has_enum({ formal: 1, informal: 2 }, 'type')
-  has_enum({ male: 1, female: 2, other: 3 }, 'gender')
-  has_enum({ single: 1, married: 2, divorced: 3, unknown: 4 }, 'marital_status')
+  has_enum :type, values: { formal: 1, informal: 2 }
+  has_enum :gender, values: { male: 1, female: 2, other: 3 }
+  has_enum :marital_status, values: { single: 1, married: 2, divorced: 3, unknown: 4 }
 
   # scopes
   test 'user_identity can return formal identities which does not belongs_to students' do

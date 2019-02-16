@@ -38,10 +38,10 @@ class ProspectiveStudentTest < ActiveSupport::TestCase
   validates_length_of :registration_district
 
   # enums
-  has_enum({ handicapped: 1 }, 'additional_score')
-  has_enum({ male: 1, female: 2 }, 'gender')
-  has_enum({ turkish: 1, kktc: 2, foreign: 3 }, 'nationality')
-  has_enum({ general_score: 1, additional_score: 2 }, 'placement_type')
+  has_enum :additional_score, values: { handicapped: 1 }
+  has_enum :gender, values: { male: 1, female: 2 }
+  has_enum :nationality, values: { turkish: 1, kktc: 2, foreign: 3 }
+  has_enum :placement_type, values: { general_score: 1, additional_score: 2 }
 
   # callbacks
   test 'callbacks must titlecase the name for a prospective_student' do

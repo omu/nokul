@@ -25,7 +25,7 @@ class CalendarTest < ActiveSupport::TestCase
   # validations: length
   validates_length_of :name
   validates_length_of :timezone
-  validates_length_of :description, 'text'
+  validates_length_of :description, type: :text
 
   # validations: nested models
   validates_presence_of_nested_model :committee_decisions

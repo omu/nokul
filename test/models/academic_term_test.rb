@@ -25,7 +25,7 @@ class AcademicTermTest < ActiveSupport::TestCase
   validates_length_of :year
 
   # enums
-  has_enum({ fall: 0, spring: 1, summer: 2 }, 'term')
+  has_enum :term, values: { fall: 0, spring: 1, summer: 2 }
 
   # validations: AcademicTermValidator
   test 'one of the academic terms must be active' do

@@ -28,7 +28,7 @@ class CurriculumCourseTest < ActiveSupport::TestCase
   validates_uniqueness_of :course
 
   # enums
-  has_enum({ compulsory: 0, elective: 1 }, 'type')
+  has_enum :type, values: { compulsory: 0, elective: 1 }
 
   # callbacks
   test 'callbacks must set value the type for a curriculum course' do

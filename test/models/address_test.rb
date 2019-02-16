@@ -27,7 +27,7 @@ class AddressTest < ActiveSupport::TestCase
   validates_length_of :phone_number
 
   # enumerations
-  has_enum({ formal: 1, informal: 2 }, 'type')
+  has_enum :type, values: { formal: 1, informal: 2 }
 
   # callbacks
   test 'callbacks must titlecase the full_address of an address' do

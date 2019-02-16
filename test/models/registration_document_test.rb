@@ -19,7 +19,7 @@ class RegistrationDocumentTest < ActiveSupport::TestCase
   validates_uniqueness_of :unit_id
 
   # validations: length
-  validates_length_of :description, 'text'
+  validates_length_of :description, type: :text
 
   # delegations
   test 'a registration document can refer to the name field of related document_type' do
