@@ -4,6 +4,7 @@ require 'test_helper'
 
 class AdministrativeFunctionTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include CallbackTestModule
   include ValidationTestModule
 
   # relations
@@ -22,8 +23,5 @@ class AdministrativeFunctionTest < ActiveSupport::TestCase
   validates_length_of :name
 
   # callbacks
-  test 'callbacks must titlecase the full_address of an address' do
-    administrative_functions(:rector).update!(name: 'REKTÖR')
-    assert_equal administrative_functions(:rector).name, 'Rektör'
-  end
+  has_validation_callback :capitalize_attributes, :before
 end

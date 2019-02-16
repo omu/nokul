@@ -14,6 +14,9 @@ class CourseGroup < ApplicationRecord
   # dynamic_search
   search_keys :unit_id, :course_group_type_id
 
+  # callbacks
+  before_validation :capitalize_attributes
+
   # relations
   belongs_to :course_group_type
   belongs_to :unit
@@ -30,6 +33,9 @@ class CourseGroup < ApplicationRecord
     less_than_or_equal_to: 300
   }
 
-  # callbacks
-  before_validation { self.name = name.capitalize_turkish if name }
+  private
+
+  def capitalize_attributes
+    self.name = name.capitalize_turkish if name
+  end
 end

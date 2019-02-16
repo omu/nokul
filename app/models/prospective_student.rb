@@ -13,6 +13,9 @@ class ProspectiveStudent < ApplicationRecord
 
   search_keys :meb_status, :military_status, :obs_status, :unit_id, :student_entrance_type_id, :registered
 
+  # callbacks
+  before_create :capitalize_attributes
+
   # enumerations
   enum additional_score: { handicapped: 1 }
   enum gender: { male: 1, female: 2 }
@@ -64,17 +67,6 @@ class ProspectiveStudent < ApplicationRecord
   validates :state_of_education, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :top_student, inclusion: { in: [true, false] }
 
-  # callbacks
-  before_create do
-    self.first_name = first_name.capitalize_turkish
-    self.last_name  = last_name.upcase(:turkic)
-    self.fathers_name = fathers_name.capitalize_turkish if fathers_name
-    self.mothers_name = mothers_name.capitalize_turkish if mothers_name
-    self.place_of_birth = place_of_birth.capitalize_turkish if place_of_birth
-    self.registration_city = registration_city.capitalize_turkish if registration_city
-    self.registration_district = registration_district.capitalize_turkish if registration_district
-  end
-
   # custom methods
   def can_permanently_register?
     military_status && obs_status && meb_status
@@ -82,5 +74,17 @@ class ProspectiveStudent < ApplicationRecord
 
   def can_temporarily_register?
     military_status
+  end
+
+  private
+
+  def capitalize_attributes
+    self.first_name = first_name.capitalize_turkish
+    self.last_name  = last_name.upcase(:turkic)
+    self.fathers_name = fathers_name.capitalize_turkish if fathers_name
+    self.mothers_name = mothers_name.capitalize_turkish if mothers_name
+    self.place_of_birth = place_of_birth.capitalize_turkish if place_of_birth
+    self.registration_city = registration_city.capitalize_turkish if registration_city
+    self.registration_district = registration_district.capitalize_turkish if registration_district
   end
 end

@@ -4,6 +4,7 @@ require 'test_helper'
 
 class CountryTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include CallbackTestModule
   include ValidationTestModule
 
   # relations
@@ -33,12 +34,7 @@ class CountryTest < ActiveSupport::TestCase
   validates_numerical_range(:yoksis_code, :greater_than_or_equal_to, 1)
 
   # callbacks
-  test 'callbacks must titlecase the name and must upcase the iso codes of a country' do
-    country = Country.create(name: 'wonderland of alice', alpha_2_code: 'wl', alpha_3_code: 'wlx', numeric_code: 123)
-    assert_equal country.name, 'Wonderland Of Alice'
-    assert_equal country.alpha_2_code, 'WL'
-    assert_equal country.alpha_3_code, 'WLX'
-  end
+  has_validation_callback :capitalize_attributes, :before
 
   # other validations
   test 'alpha_2_code must be 2 characters' do

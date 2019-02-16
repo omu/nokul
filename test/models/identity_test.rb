@@ -4,6 +4,7 @@ require 'test_helper'
 
 class IdentityTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include CallbackTestModule
   include EnumerationTestModule
   include ValidationTestModule
 
@@ -48,21 +49,7 @@ class IdentityTest < ActiveSupport::TestCase
   end
 
   # callbacks
-  test 'callbacks must titlecase first_name, mothers_name, fathers_name and place_of_birth of an identity' do
-    identity = identities(:formal_user)
-    identity.update(
-      first_name: 'ışık',
-      last_name: 'ılık',
-      mothers_name: 'süt',
-      fathers_name: 'iç',
-      place_of_birth: 'ıişüğ'
-    )
-    assert_equal identity.first_name, 'Işık'
-    assert_equal identity.last_name, 'ILIK'
-    assert_equal identity.mothers_name, 'Süt'
-    assert_equal identity.fathers_name, 'İç'
-    assert_equal identity.place_of_birth, 'Iişüğ'
-  end
+  has_save_callback :capitalize_attributes, :before
 
   # identity validator
   test 'a user can only have one formal user identity' do

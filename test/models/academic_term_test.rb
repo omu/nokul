@@ -4,6 +4,7 @@ require 'test_helper'
 
 class AcademicTermTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include CallbackTestModule
   include EnumerationTestModule
   include ValidationTestModule
 
@@ -42,6 +43,8 @@ class AcademicTermTest < ActiveSupport::TestCase
   end
 
   # callbacks
+  has_save_callback :deactivate_academic_terms, :after
+
   test 'callbacks only one academic term must be active' do
     active_term = AcademicTerm.active.last
     passive_term = academic_terms(:fall_2017_2018)

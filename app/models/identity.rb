@@ -3,6 +3,9 @@
 class Identity < ApplicationRecord
   self.inheritance_column = nil
 
+  # callbacks
+  before_save :capitalize_attributes
+
   # enums
   enum type: { formal: 1, informal: 2 }
   enum gender: { male: 1, female: 2, other: 3 }
@@ -31,7 +34,7 @@ class Identity < ApplicationRecord
   scope :user_identity, -> { formal.find_by(student_id: nil) }
 
   # callbacks
-  before_save do
+  def capitalize_attributes
     self.fathers_name = fathers_name.capitalize_turkish if fathers_name
     self.first_name = first_name.capitalize_turkish
     self.last_name = last_name.upcase(:turkic)

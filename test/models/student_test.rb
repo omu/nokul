@@ -4,6 +4,7 @@ require 'test_helper'
 
 class StudentTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include CallbackTestModule
   include ValidationTestModule
   include ActiveJob::TestHelper
 
@@ -27,7 +28,10 @@ class StudentTest < ActiveSupport::TestCase
   end
 
   # callback tests
-  test 'student runs Kps::IdentitySaveJob after being created' do
+  has_commit_callback :build_identity_information, :after
+
+  # job tests
+  test 'student enqueues Kps::IdentitySaveJob after being created' do
     users(:serhat).students.destroy_all
     assert_enqueued_with(job: Kps::IdentitySaveJob) do
       Student.create(student_number: '1234', user: users(:serhat), unit: units(:omu))

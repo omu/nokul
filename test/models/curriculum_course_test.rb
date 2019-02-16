@@ -4,6 +4,7 @@ require 'test_helper'
 
 class CurriculumCourseTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include CallbackTestModule
   include EnumerationTestModule
   include ValidationTestModule
 
@@ -31,6 +32,8 @@ class CurriculumCourseTest < ActiveSupport::TestCase
   has_enum :type, values: { compulsory: 0, elective: 1 }
 
   # callbacks
+  has_validation_callback :assign_type, :before
+
   test 'callbacks must set value the type for a curriculum course' do
     curriculum_course = @curriculum_course.dup
     curriculum_course.course = courses(:test)

@@ -14,6 +14,10 @@ class Course < ApplicationRecord
   # dynamic_search
   search_keys :course_type_id, :program_type, :language_id, :unit_id, :status
 
+  # callbacks
+  before_validation :capitalize_attributes
+  before_validation :assign_credit
+
   # enumerations
   enum program_type: { associate: 0, undergraduate: 1, master: 2, doctoral: 3 }
   enum status: { passive: 0, active: 1 }
@@ -33,17 +37,21 @@ class Course < ApplicationRecord
   validates :status, inclusion: { in: statuses.keys }
   validates :theoric, numericality: { greater_than_or_equal_to: 0 }
 
-  # callbacks
-  before_validation do
-    self.name = name.capitalize_turkish if name
-    self.credit = calculate_credit
+  def name_with_code
+    "#{code} - #{name}"
   end
 
   def calculate_credit
     theoric.to_f + ((practice.to_f + laboratory.to_f) / 2)
   end
 
-  def name_with_code
-    "#{code} - #{name}"
+  private
+
+  def capitalize_attributes
+    self.name = name.capitalize_turkish if name
+  end
+
+  def assign_credit
+    self.credit = theoric.to_f + ((practice.to_f + laboratory.to_f) / 2)
   end
 end

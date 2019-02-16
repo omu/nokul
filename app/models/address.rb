@@ -3,6 +3,9 @@
 class Address < ApplicationRecord
   self.inheritance_column = nil
 
+  # callbacks
+  before_save :capitalize_attributes
+
   # enums
   enum type: { formal: 1, informal: 2 }
 
@@ -16,6 +19,9 @@ class Address < ApplicationRecord
   validates :type, uniqueness: { scope: :user }, inclusion: { in: types.keys }
   validates_with AddressAndIdentityValidator, on: :create
 
-  # callbacks
-  before_save { self.full_address = full_address.capitalize_turkish }
+  private
+
+  def capitalize_attributes
+    self.full_address = full_address.capitalize_turkish
+  end
 end

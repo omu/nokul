@@ -4,6 +4,7 @@ require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include CallbackTestModule
   include ValidationTestModule
   include ActiveJob::TestHelper
 
@@ -100,7 +101,11 @@ class UserTest < ActiveSupport::TestCase
   end
 
   # callback tests
-  test 'user runs Kps::AddressSaveJob after being created' do
+  has_commit_callback :build_address_information, :after
+  has_commit_callback :build_identity_information, :after
+
+  # job tests
+  test 'user enqueues Kps::AddressSaveJob after being created' do
     assert_enqueued_with(job: Kps::AddressSaveJob) do
       User.create(
         id_number: '12345678912',

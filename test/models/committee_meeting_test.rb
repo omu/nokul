@@ -4,6 +4,7 @@ require 'test_helper'
 
 class CommitteeMeetingTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include CallbackTestModule
   include ValidationTestModule
 
   # relations
@@ -20,10 +21,5 @@ class CommitteeMeetingTest < ActiveSupport::TestCase
   validates_uniqueness_of :meeting_no
 
   # callbacks
-  test 'before initialize callback must run for year attribute' do
-    meeting = CommitteeMeeting.create(
-      meeting_no: 1, meeting_date: Time.current, unit: units(:muhendislik_fakultesi_yonetim_kurulu)
-    )
-    assert_equal meeting.year, Time.current.year
-  end
+  has_validation_callback :assign_year, :before
 end

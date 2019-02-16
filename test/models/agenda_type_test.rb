@@ -4,6 +4,7 @@ require 'test_helper'
 
 class AgendaTypeTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include CallbackTestModule
   include ValidationTestModule
 
   # relations
@@ -14,4 +15,7 @@ class AgendaTypeTest < ActiveSupport::TestCase
 
   # validations: length
   validates_length_of :name
+
+  # callbacks
+  has_save_callback :capitalize_attributes, :before
 end
