@@ -37,17 +37,6 @@ Vagrant.configure('2') do |config| # rubocop:disable Metrics/BlockLength
     end
   end
 
-  config.vm.define 'paas', autostart: false do |paas|
-    paas.vm.box = 'omu/debian-stable-paas'
-
-    paas.trigger.after :provision do |trigger|
-      Dir.chdir __dir__
-
-      trigger.info = 'Provisioning paas...'
-      trigger.run = { inline: 'bash lib/scripts/paas.sh' }
-    end
-  end
-
   config.vm.define 'ldap', autostart: false do |ldap|
     ldap.vm.box = 'omu/debian-stable-server'
 
@@ -58,5 +47,16 @@ Vagrant.configure('2') do |config| # rubocop:disable Metrics/BlockLength
     end
 
     ldap.vm.provision 'shell', path: 'lib/scripts/ldap.sh'
+  end
+
+  config.vm.define 'paas', autostart: false do |paas|
+    paas.vm.box = 'omu/debian-stable-paas'
+
+    paas.trigger.after :provision do |trigger|
+      Dir.chdir __dir__
+
+      trigger.info = 'Provisioning paas...'
+      trigger.run = { inline: 'bash lib/scripts/paas.sh' }
+    end
   end
 end
