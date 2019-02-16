@@ -19,3 +19,10 @@ bundle update
 cd plugins/support && bundle update
 cd plugins/tenant/common && bundle update
 cd plugins/tenant/omu && bundle update
+```
+
+# Version Bump
+
+```ruby
+rails release:bump
+```
