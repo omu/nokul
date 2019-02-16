@@ -3,47 +3,31 @@
 require 'test_helper'
 
 class AddressTest < ActiveSupport::TestCase
+  include AssociationTestModule
+  include EnumerationTestModule
+  include ValidationTestModule
+
   test 'type column does not refer to STI' do
     assert_empty Identity.inheritance_column
   end
 
   # relations
-  %i[
-    user
-    district
-  ].each do |property|
-    test "an address can communicate with #{property}" do
-      assert addresses(:formal).send(property)
-    end
-  end
+  belongs_to :district
+  belongs_to :user
 
   # validations: presence
-  %i[
-    type
-    full_address
-  ].each do |property|
-    test "presence validations for #{property} of an address user" do
-      addresses(:informal).send("#{property}=", nil)
-      assert_not addresses(:informal).valid?
-      assert_not_empty addresses(:informal).errors[property]
-    end
-  end
+  validates_presence_of :full_address
+  validates_presence_of :type
 
   # validations: uniqueness
-  test 'a user can only have one formal and one informal address' do
-    formal = addresses(:formal).dup
-    informal = addresses(:informal).dup
-    assert_not formal.valid?
-    assert_not informal.valid?
-    assert_not_empty formal.errors[:type]
-    assert_not_empty informal.errors[:type]
-  end
+  validates_uniqueness_of :type
+
+  # validations: length
+  validates_length_of :full_address
+  validates_length_of :phone_number
 
   # enumerations
-  test 'addresses can respond to enumerators' do
-    assert addresses(:formal).formal?
-    assert addresses(:informal).informal?
-  end
+  has_enum :type, values: { formal: 1, informal: 2 }
 
   # callbacks
   test 'callbacks must titlecase the full_address of an address' do
@@ -64,20 +48,5 @@ class AddressTest < ActiveSupport::TestCase
     assert_not informal.valid?
     assert_not_empty informal.errors[:base]
     assert informal.errors[:base].include?(t('validators.address.max_informal', limit: 1))
-  end
-
-  # other validations
-  long_string = (0...256).map { ('a'..'z').to_a[rand(26)] }.join
-
-  %i[
-    phone_number
-    full_address
-  ].each do |property|
-    test "#{property} can not be longer than 255 characters" do
-      fake = addresses(:formal).dup
-      fake.send("#{property}=", long_string)
-      assert_not fake.valid?
-      assert fake.errors.details[property].map { |err| err[:error] }.include?(:too_long)
-    end
   end
 end

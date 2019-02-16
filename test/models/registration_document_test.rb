@@ -3,27 +3,23 @@
 require 'test_helper'
 
 class RegistrationDocumentTest < ActiveSupport::TestCase
+  include AssociationTestModule
+  include ValidationTestModule
+
   setup do
     @document = registration_documents(:omu_health_report)
   end
 
   # relations
-  %i[
-    unit
-    academic_term
-    document_type
-  ].each do |property|
-    test "a registration document can communicate with #{property}" do
-      assert @document.send(property)
-    end
-  end
+  belongs_to :academic_term
+  belongs_to :document_type
+  belongs_to :unit
 
   # validations: uniqueness
-  test 'duplication validations for unit' do
-    fake = @document.dup
-    assert_not fake.valid?
-    assert_not_empty fake.errors[:unit_id]
-  end
+  validates_uniqueness_of :unit_id
+
+  # validations: length
+  validates_length_of :description, type: :text
 
   # delegations
   test 'a registration document can refer to the name field of related document_type' do

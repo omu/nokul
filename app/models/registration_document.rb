@@ -13,13 +13,13 @@ class RegistrationDocument < ApplicationRecord
   )
 
   # relations
-  belongs_to :unit
   belongs_to :academic_term
   belongs_to :document_type
+  belongs_to :unit
 
   # validations
-  validates :unit_id, uniqueness: { scope: %i[academic_term document_type] }
   validates :description, length: { maximum: 65_535 }
+  validates :unit_id, uniqueness: { scope: %i[academic_term document_type] }
 
   # delegates
   delegate :name, :active, to: :document_type

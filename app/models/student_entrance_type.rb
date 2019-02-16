@@ -5,5 +5,6 @@ class StudentEntranceType < ApplicationRecord
   include ReferenceCallbacks
   include ReferenceSearch
 
-  has_many :prospective_students, dependent: :destroy
+  # relations
+  has_many :prospective_students, dependent: :nullify
 end

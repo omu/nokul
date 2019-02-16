@@ -16,16 +16,16 @@ class AvailableCourse < ApplicationRecord
 
   # relations
   belongs_to :academic_term
-  belongs_to :curriculum
-  belongs_to :course
-  belongs_to :unit
   belongs_to :coordinator, class_name: 'Employee'
-  has_many :groups, class_name: 'AvailableCourseGroup', dependent: :destroy
+  belongs_to :course
+  belongs_to :curriculum
+  belongs_to :unit
   has_many :evaluation_types, class_name: 'CourseEvaluationType', dependent: :destroy
+  has_many :groups, class_name: 'AvailableCourseGroup', dependent: :destroy
 
   # validations
-  validates :course, uniqueness: { scope: %i[academic_term curriculum] }
   validates :assessments_approved, inclusion: { in: [true, false] }
+  validates :course, uniqueness: { scope: %i[academic_term curriculum] }
 
   # callbacks
   before_validation(on: :create) do

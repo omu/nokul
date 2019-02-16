@@ -3,59 +3,32 @@
 require 'test_helper'
 
 class CurriculumCourseTest < ActiveSupport::TestCase
+  include AssociationTestModule
+  include EnumerationTestModule
+  include ValidationTestModule
+
   setup do
     @curriculum_course = curriculum_courses(:one)
   end
 
   # relations
-  %i[
-    course
-    curriculum_semester
-    curriculum_course_group
-  ].each do |relation|
-    test "curriculum course can communicate with #{relation}" do
-      assert @curriculum_course.respond_to? relation
-    end
-  end
+  belongs_to :course
+  belongs_to :curriculum_semester
 
   # validations: presence
-  {
-    course_id: :course,
-    curriculum_semester_id: :curriculum_semester,
-    ects: :ects
-  }.each do |property, error_message_key|
-    test "presence validations for #{property} of a curriculum course" do
-      @curriculum_course.send("#{property}=", nil)
-      assert_not @curriculum_course.valid?
-      assert_not_empty @curriculum_course.errors[error_message_key]
-    end
-  end
+  validates_presence_of :course
+  validates_presence_of :curriculum_semester
+  validates_presence_of :ects
 
   # validations: numericality
-  test 'numericality validations for ects of a curriculum course' do
-    @curriculum_course.ects = 0
-    assert_not @curriculum_course.valid?
-    assert_not_empty @curriculum_course.errors[:ects]
-  end
+  validates_numericality_of(:ects)
+  validates_numerical_range(:ects, :greater_than, 0)
 
   # validations: uniqueness
-  test 'curriculum course should be unique by curriculum' do
-    fake = @curriculum_course.dup
-    assert_not fake.valid?
-    assert_not_empty fake.errors[:course]
-  end
+  validates_uniqueness_of :course
 
   # enums
-  {
-    type: { compulsory: 0, elective: 1 }
-  }.each do |property, hash|
-    hash.each do |key, value|
-      test "have a #{key} value of #{property} enum" do
-        enums = CurriculumCourse.defined_enums.with_indifferent_access
-        assert_equal enums.dig(property, key), value
-      end
-    end
-  end
+  has_enum :type, values: { compulsory: 0, elective: 1 }
 
   # callbacks
   test 'callbacks must set value the type for a curriculum course' do

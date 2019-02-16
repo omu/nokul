@@ -1,12 +1,12 @@
 osys:
-  name: Ösys
+  name: ÖSYS
   code: 1
 dgs:
-  name: Dgs
+  name: DGS
   code: 5
 aselsan:
-  name: Aselsan Protokolü Ile Yerleşen Öğrenci
+  name: Aselsan Protokolü
   code: 103
 oyp:
-  name: Öyp
+  name: ÖYP
   code: 62

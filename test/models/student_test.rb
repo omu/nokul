@@ -3,34 +3,23 @@
 require 'test_helper'
 
 class StudentTest < ActiveSupport::TestCase
+  include AssociationTestModule
+  include ValidationTestModule
   include ActiveJob::TestHelper
 
   # relations
-  %i[
-    user
-    unit
-    identity
-    calendars
-  ].each do |property|
-    test "a student can communicate with #{property}" do
-      assert students(:serhat).send(property)
-    end
-  end
+  belongs_to :user
+  belongs_to :unit
+  has_one :identity
+  has_many :calendars
 
   # validations: presence
-  test 'presence validations for student_number of a student' do
-    students(:serhat).update(student_number: nil)
-    assert_not students(:serhat).valid?
-    assert_not_empty students(:serhat).errors[:student_number]
-  end
+  validates_presence_of :student_number
+  validates_presence_of :permanently_registered
 
   # validations: uniqueness
-  test 'a student can not have a duplicate unit and a duplicate student number' do
-    fake = students(:serhat).dup
-    assert_not fake.valid?
-    assert_not_empty fake.errors[:student_number]
-    assert_not_empty fake.errors[:unit_id]
-  end
+  validates_uniqueness_of :student_number
+  validates_uniqueness_of :unit_id
 
   # delegations
   test 'a student can communicate with addresses over the user' do

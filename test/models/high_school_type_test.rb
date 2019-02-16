@@ -2,15 +2,15 @@
 
 require 'test_helper'
 
-class UniversityTypeTest < ActiveSupport::TestCase
+class HighSchoolTypeTest < ActiveSupport::TestCase
   include AssociationTestModule
   include ValidationTestModule
   include ReferenceTestModule
 
   setup do
-    @object = university_types(:foundation)
+    @object = high_school_types(:aksam_lisesi)
   end
 
   # relations
-  has_many :units
+  has_many :prospective_students
 end

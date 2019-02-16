@@ -3,35 +3,32 @@
 require 'test_helper'
 
 class IdentityTest < ActiveSupport::TestCase
+  include AssociationTestModule
+  include EnumerationTestModule
+  include ValidationTestModule
+
   test 'type column does not refer to STI' do
     assert_empty Identity.inheritance_column
   end
 
   # relations
-  %i[
-    user
-    student
-  ].each do |property|
-    test "an identity can communicate with #{property}" do
-      assert identities(:formal_student).send(property)
-    end
-  end
+  belongs_to :user
 
   # validations: presence
-  %i[
-    type
-    first_name
-    last_name
-    gender
-    place_of_birth
-    date_of_birth
-  ].each do |property|
-    test "presence validations for #{property} of a user" do
-      identities(:formal_user).send("#{property}=", nil)
-      assert_not identities(:formal_user).valid?
-      assert_not_empty identities(:formal_user).errors[property]
-    end
-  end
+  validates_presence_of :date_of_birth
+  validates_presence_of :first_name
+  validates_presence_of :gender
+  validates_presence_of :last_name
+  validates_presence_of :place_of_birth
+  validates_presence_of :type
+
+  # validations: length
+  validates_length_of :fathers_name
+  validates_length_of :first_name
+  validates_length_of :last_name
+  validates_length_of :mothers_name
+  validates_length_of :place_of_birth
+  validates_length_of :registered_to
 
   # validations: uniqueness
   test 'an identity can not belong to multiple students' do
@@ -40,35 +37,10 @@ class IdentityTest < ActiveSupport::TestCase
     assert_not_empty student_identity.errors[:student_id]
   end
 
-  # other validations
-  long_string = (0...256).map { ('a'..'z').to_a[rand(26)] }.join
-
-  %i[
-    first_name
-    last_name
-    mothers_name
-    fathers_name
-    place_of_birth
-    registered_to
-  ].each do |property|
-    test "#{property} can not be longer than 255 characters" do
-      fake = identities(:formal_user).dup
-      fake.send("#{property}=", long_string)
-      assert_not fake.valid?
-      assert fake.errors.details[property].map { |err| err[:error] }.include?(:too_long)
-    end
-  end
-
-  # enumerations
-  %i[
-    formal?
-    male?
-    married?
-  ].each do |property|
-    test "identities can respond to #{property} enum" do
-      assert identities(:formal_user).send(property)
-    end
-  end
+  # enums
+  has_enum :type, values: { formal: 1, informal: 2 }
+  has_enum :gender, values: { male: 1, female: 2, other: 3 }
+  has_enum :marital_status, values: { single: 1, married: 2, divorced: 3, unknown: 4 }
 
   # scopes
   test 'user_identity can return formal identities which does not belongs_to students' do

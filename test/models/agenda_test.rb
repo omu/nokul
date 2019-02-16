@@ -3,29 +3,25 @@
 require 'test_helper'
 
 class AgendaTest < ActiveSupport::TestCase
+  include AssociationTestModule
+  include EnumerationTestModule
+  include ValidationTestModule
+
   # relations
-  %i[
-    unit
-    agenda_type
-    meeting_agendas
-    meetings
-  ].each do |property|
-    test "a agenda can communicate with #{property}" do
-      assert agendas(:one).send(property)
-    end
-  end
+  belongs_to :agenda_type
+  belongs_to :unit
+  has_many :meeting_agendas
+  has_many :meetings
 
   # validations: presence
-  %i[
-    description
-    status
-  ].each do |property|
-    test "presence validations for #{property} of a agenda" do
-      agendas(:one).send("#{property}=", nil)
-      assert_not agendas(:one).valid?
-      assert_not_empty agendas(:one).errors[property]
-    end
-  end
+  validates_presence_of :description
+  validates_presence_of :status
+
+  # validations: length
+  validates_length_of :description, type: :text
+
+  # enums
+  has_enum :status, values: { recent: 0, decided: 1, delayed: 2 }
 
   # scopes
   test 'active scope returns recent and delayed agendas' do

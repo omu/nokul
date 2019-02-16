@@ -8,8 +8,8 @@ class CurriculumCourse < ApplicationRecord
 
   # relations
   belongs_to :course
-  belongs_to :curriculum_semester
   belongs_to :curriculum_course_group, optional: true
+  belongs_to :curriculum_semester
 
   # validations
   validates :ects, numericality: { greater_than: 0 }

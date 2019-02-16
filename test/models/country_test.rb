@@ -3,46 +3,34 @@
 require 'test_helper'
 
 class CountryTest < ActiveSupport::TestCase
+  include AssociationTestModule
+  include ValidationTestModule
+
   # relations
-  %i[
-    cities
-    districts
-    addresses
-    units
-  ].each do |property|
-    test "a country can communicate with #{property}" do
-      assert countries(:turkey).send(property)
-    end
-  end
+  has_many :addresses
+  has_many :cities
+  has_many :districts
+  has_many :units
 
   # validations: presence
-  %i[
-    name
-    alpha_2_code
-    alpha_3_code
-    numeric_code
-  ].each do |property|
-    test "presence validations for #{property} of a country" do
-      countries(:turkey).send("#{property}=", nil)
-      assert_not countries(:turkey).valid?
-      assert_not_empty countries(:turkey).errors[property]
-    end
-  end
+  validates_presence_of :name
+  validates_presence_of :alpha_2_code
+  validates_presence_of :alpha_3_code
+  validates_presence_of :numeric_code
 
   # validations: uniqueness
-  %i[
-    name
-    alpha_2_code
-    alpha_3_code
-    numeric_code
-    mernis_code
-  ].each do |property|
-    test "uniqueness validations for #{property} of a country" do
-      fake = countries(:turkey).dup
-      assert_not fake.valid?
-      assert_not_empty fake.errors[property]
-    end
-  end
+  validates_uniqueness_of :name
+  validates_uniqueness_of :alpha_2_code
+  validates_uniqueness_of :alpha_3_code
+  validates_uniqueness_of :numeric_code
+  validates_uniqueness_of :mernis_code
+
+  # validations: length
+  validates_length_of :name
+
+  # validations: numericality
+  validates_numericality_of(:yoksis_code)
+  validates_numerical_range(:yoksis_code, :greater_than_or_equal_to, 1)
 
   # callbacks
   test 'callbacks must titlecase the name and must upcase the iso codes of a country' do
@@ -53,13 +41,6 @@ class CountryTest < ActiveSupport::TestCase
   end
 
   # other validations
-  test 'name can not be longer than 255 characters' do
-    fake = countries(:turkey).dup
-    fake.name = (0...256).map { ('a'..'z').to_a[rand(26)] }.join
-    assert_not fake.valid?
-    assert fake.errors.details[:name].map { |err| err[:error] }.include?(:too_long)
-  end
-
   test 'alpha_2_code must be 2 characters' do
     fake = countries(:turkey).dup
     fake.alpha_2_code = (0...3).map { ('a'..'z').to_a[rand(26)] }.join
@@ -92,20 +73,5 @@ class CountryTest < ActiveSupport::TestCase
     error_codes = fake.errors.details[:mernis_code].map { |err| err[:error] }
     assert error_codes.include?(:wrong_length)
     assert error_codes.include?(:not_a_number)
-  end
-
-  test 'yoksis_code must be an integer greater than or equal to 0' do
-    def error_codes(fake)
-      fake.errors.details[:yoksis_code].map { |err| err[:error] }
-    end
-
-    fake = countries(:turkey).dup
-    fake.yoksis_code = -1
-    assert_not fake.valid?
-    assert error_codes(fake).include?(:greater_than_or_equal_to)
-
-    fake.yoksis_code = 'hello there!'
-    assert_not fake.valid?
-    assert error_codes(fake).include?(:not_a_number)
   end
 end

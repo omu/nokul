@@ -20,18 +20,18 @@ class Course < ApplicationRecord
 
   # relations
   belongs_to :course_type
-  belongs_to :unit
   belongs_to :language
+  belongs_to :unit
 
   # validations
-  validates :name, presence: true, uniqueness: { scope: :unit_id }, length: { maximum: 255 }
   validates :code, presence: true, uniqueness: true, length: { maximum: 255 }
-  validates :theoric, numericality: { greater_than_or_equal_to: 0 }
-  validates :practice, numericality: { greater_than_or_equal_to: 0 }
-  validates :laboratory, numericality: { greater_than_or_equal_to: 0 }
   validates :credit, numericality: { greater_than_or_equal_to: ->(course) { course.course_type.try(:min_credit).to_i } }
+  validates :laboratory, numericality: { greater_than_or_equal_to: 0 }
+  validates :name, presence: true, uniqueness: { scope: :unit_id }, length: { maximum: 255 }
+  validates :practice, numericality: { greater_than_or_equal_to: 0 }
   validates :program_type, inclusion: { in: program_types.keys }
   validates :status, inclusion: { in: statuses.keys }
+  validates :theoric, numericality: { greater_than_or_equal_to: 0 }
 
   # callbacks
   before_validation do

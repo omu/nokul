@@ -2,8 +2,8 @@
 
 class CourseAssessmentMethod < ApplicationRecord
   # relations
-  belongs_to :course_evaluation_type
   belongs_to :assessment_method
+  belongs_to :course_evaluation_type
 
   # validations
   validates :percentage, numericality: {

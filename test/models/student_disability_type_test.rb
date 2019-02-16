@@ -3,10 +3,14 @@
 require 'test_helper'
 
 class StudentDisabilityTypeTest < ActiveSupport::TestCase
-  include ReferenceCallbacksTest
-  include ReferenceValidationsTest
+  include AssociationTestModule
+  include ValidationTestModule
+  include ReferenceTestModule
 
   setup do
     @object = student_disability_types(:autism)
   end
+
+  # relations
+  has_many :prospective_students
 end

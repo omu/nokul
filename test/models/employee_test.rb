@@ -3,38 +3,23 @@
 require 'test_helper'
 
 class EmployeeTest < ActiveSupport::TestCase
+  include AssociationTestModule
+  include ValidationTestModule
+
   # relations
-  %i[
-    user
-    title
-    duties
-    units
-    positions
-    administrative_functions
-    available_course_lecturers
-  ].each do |property|
-    test "an employee can communicate with #{property}" do
-      assert employees(:serhat_active).send(property)
-    end
-  end
+  belongs_to :title
+  belongs_to :user
+  has_many :administrative_functions
+  has_many :available_course_lecturers
+  has_many :duties
+  has_many :units
+  has_many :positions
 
   # validations: presence
-  %i[
-    active
-  ].each do |property|
-    test "presence validations for #{property} of an employee" do
-      employees(:serhat_active).send("#{property}=", nil)
-      assert_not employees(:serhat_active).valid?
-      assert_not_empty employees(:serhat_active).errors[property]
-    end
-  end
+  validates_presence_of :active
 
   # validations: uniqueness
-  test 'an employee can not have duplicate titles' do
-    fake = employees(:serhat_active).dup
-    assert_not fake.valid?
-    assert_not_empty fake.errors[:title_id]
-  end
+  validates_uniqueness_of :title_id
 
   # delegations
   test 'an employee can reach addresses and identities over user' do
