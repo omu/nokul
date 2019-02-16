@@ -48,7 +48,7 @@ Vagrant.configure('2') do |config| # rubocop:disable Metrics/BlockLength
     end
   end
 
-  config.vm.define 'ldap', autostart: true do |ldap|
+  config.vm.define 'ldap', autostart: false do |ldap|
     ldap.vm.box = 'omu/debian-stable-server'
 
     ldap.vm.network :forwarded_port, guest: 389, host: 1389
