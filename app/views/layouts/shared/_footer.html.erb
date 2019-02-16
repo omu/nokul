@@ -14,9 +14,14 @@
     <span>© 2018 BAUM</span>
   </div>
 
-  <div class="ml-auto d-none d-md-block">
-    <%= link_to 'https://omu.sh' do %>
-      <%= image_tag 'baum-beta.svg', height: '20', width: '110', alt: 'BAUM Logo' %>
-    <% end %>
-  </div>
+  <% if Tenant.configuration.branding.badge.visible %>
+    <div class="ml-auto d-none d-md-block">
+      <%= link_to 'https://omu.sh' do %>
+        <%= image_tag Tenant.configuration.branding.badge.file,
+                      height: '20',
+                      width: '110',
+                      alt: Tenant.configuration.branding.badge.alt_text %>
+      <% end %>
+    </div>
+  <% end %>
 </footer>
