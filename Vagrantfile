@@ -42,10 +42,6 @@ Vagrant.configure('2') do |config| # rubocop:disable Metrics/BlockLength
 
     ldap.vm.network :forwarded_port, guest: 389, host: 1389
 
-    ldap.vm.provider :lxc do |lxc|
-      lxc.customize 'cgroup.memory.limit_in_bytes', '2048M'
-    end
-
     ldap.vm.provision 'shell', path: 'lib/scripts/ldap.sh'
   end
 
