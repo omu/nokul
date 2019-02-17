@@ -4,6 +4,7 @@ require 'test_helper'
 
 class AssessmentMethodTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include CallbackTestModule
   include ValidationTestModule
 
   # relations
@@ -21,8 +22,5 @@ class AssessmentMethodTest < ActiveSupport::TestCase
   validates_length_of :name
 
   # callbacks
-  test 'callbacks must titlecase the name of a assessment method' do
-    assessment_method = AssessmentMethod.create!(name: 'test assessment method')
-    assert_equal assessment_method.name, 'Test Assessment Method'
-  end
+  has_validation_callback :capitalize_attributes, :before
 end

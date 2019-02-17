@@ -3,27 +3,5 @@
 require 'test_helper'
 
 class AdministrativeFunctionTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include ValidationTestModule
-
-  # relations
-  has_many :duties
-  has_many :positions
-
-  # validations: presence
-  validates_presence_of :code
-  validates_presence_of :name
-
-  # validations: uniqueness
-  validates_uniqueness_of :code
-  validates_uniqueness_of :name
-
-  # validations: length
-  validates_length_of :name
-
-  # callbacks
-  test 'callbacks must titlecase the full_address of an address' do
-    administrative_functions(:rector).update!(name: 'REKTÖR')
-    assert_equal administrative_functions(:rector).name, 'Rektör'
-  end
+  include ReferenceTestModule
 end

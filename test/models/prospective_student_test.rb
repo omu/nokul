@@ -4,6 +4,7 @@ require 'test_helper'
 
 class ProspectiveStudentTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include CallbackTestModule
   include EnumerationTestModule
   include ValidationTestModule
 
@@ -38,32 +39,13 @@ class ProspectiveStudentTest < ActiveSupport::TestCase
   validates_length_of :registration_district
 
   # enums
-  has_enum :additional_score, values: { handicapped: 1 }
-  has_enum :gender, values: { male: 1, female: 2 }
-  has_enum :nationality, values: { turkish: 1, kktc: 2, foreign: 3 }
-  has_enum :placement_type, values: { general_score: 1, additional_score: 2 }
+  has_enum :additional_score, handicapped: 1
+  has_enum :gender, male: 1, female: 2
+  has_enum :nationality, turkish: 1, kktc: 2, foreign: 3
+  has_enum :placement_type, general_score: 1, additional_score: 2
 
   # callbacks
-  test 'callbacks must titlecase the name for a prospective_student' do
-    prospective_student = prospective_students(:serhat).dup
-    prospective_student.update!(
-      id_number: '10114899148',
-      first_name: 'first name',
-      last_name: 'last name',
-      fathers_name: 'fathers name',
-      mothers_name: 'mothers name',
-      place_of_birth: 'place of birth',
-      registration_city: 'registration city',
-      registration_district: 'registration district'
-    )
-    assert_equal prospective_student.first_name, 'First Name'
-    assert_equal prospective_student.last_name, 'LAST NAME'
-    assert_equal prospective_student.fathers_name, 'Fathers Name'
-    assert_equal prospective_student.mothers_name, 'Mothers Name'
-    assert_equal prospective_student.place_of_birth, 'Place Of Birth'
-    assert_equal prospective_student.registration_city, 'Registration City'
-    assert_equal prospective_student.registration_district, 'Registration District'
-  end
+  has_create_callback :capitalize_attributes, :before
 
   # search
   test 'prospective_student is a searchable model' do

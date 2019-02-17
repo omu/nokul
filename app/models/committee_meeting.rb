@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class CommitteeMeeting < ApplicationRecord
+  # callbacks
+  before_validation :assign_year
+
   # relations
   belongs_to :unit
   has_many :meeting_agendas, dependent: :destroy
@@ -18,6 +21,9 @@ class CommitteeMeeting < ApplicationRecord
     less_than_or_equal_to: 2050
   }
 
-  # callbacks
-  before_validation { self.year = meeting_date.try(:year) }
+  private
+
+  def assign_year
+    self.year = meeting_date.try(:year)
+  end
 end

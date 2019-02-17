@@ -4,6 +4,7 @@ require 'test_helper'
 
 class CityTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include CallbackTestModule
   include ValidationTestModule
 
   # relations
@@ -25,13 +26,5 @@ class CityTest < ActiveSupport::TestCase
   validates_length_of :alpha_2_code
 
   # callbacks
-  test 'callbacks must titlecase the name and must upcase the alpha_2_code of a city' do
-    city = City.create(
-      name: 'wonderland',
-      alpha_2_code: 'wl-11',
-      country: countries(:turkey)
-    )
-    assert_equal city.name, 'Wonderland'
-    assert_equal city.alpha_2_code, 'WL-11'
-  end
+  has_validation_callback :capitalize_attributes, :before
 end

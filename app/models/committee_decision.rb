@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 class CommitteeDecision < ApplicationRecord
+  # callbacks
+  before_validation :assign_year_and_decision_no, on: :create
+  after_create :change_status_to_decided
+
   # relations
   belongs_to :meeting_agenda
   has_one :agenda, through: :meeting_agenda
@@ -15,10 +19,6 @@ class CommitteeDecision < ApplicationRecord
     less_than_or_equal_to: 2050
   }
 
-  # callbacks
-  before_validation :set_year_and_decision_no, on: :create
-  after_create { agenda.update(status: :decided) }
-
   # delegates
   delegate :meeting_no, :meeting_date, :year, :unit, to: :meeting_agenda, prefix: true
 
@@ -28,8 +28,12 @@ class CommitteeDecision < ApplicationRecord
 
   private
 
-  def set_year_and_decision_no
+  def assign_year_and_decision_no
     self.year = meeting_agenda_year
     self.decision_no = "#{year}/#{count_of_decisions_by_year(year) + 1}"
+  end
+
+  def change_status_to_decided
+    agenda.update(status: :decided)
   end
 end

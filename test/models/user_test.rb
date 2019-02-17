@@ -4,6 +4,7 @@ require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include CallbackTestModule
   include ValidationTestModule
   include ActiveJob::TestHelper
 
@@ -32,18 +33,14 @@ class UserTest < ActiveSupport::TestCase
   # validations: length
   validates_length_of :email
   validates_length_of :phone_number
-
-  test 'id_number must be 11 characters' do
-    fake = users(:serhat).dup
-    ['123456789121', '123', '123456789,5', '14254455.77'].each do |value|
-      fake.id_number = value
-      assert_not fake.valid?
-      assert_not_empty fake.errors[:id_number]
-    end
-  end
+  validates_length_of :id_number, is: 11
 
   # validations: numericality
-  validates_numericality_of(:id_number)
+  validates_numericality_of :id_number
+
+  # callback tests
+  has_commit_callback :build_address_information, :after
+  has_commit_callback :build_identity_information, :after
 
   # validations: email
   test 'email addresses validated against RFC' do
@@ -100,8 +97,8 @@ class UserTest < ActiveSupport::TestCase
     assert users(:serhat).accounts
   end
 
-  # callback tests
-  test 'user runs Kps::AddressSaveJob after being created' do
+  # job tests
+  test 'user enqueues Kps::AddressSaveJob after being created' do
     assert_enqueued_with(job: Kps::AddressSaveJob) do
       User.create(
         id_number: '12345678912',

@@ -46,14 +46,6 @@ class User < ApplicationRecord
   after_create_commit :build_address_information, if: proc { addresses.formal.empty? }
   after_create_commit :build_identity_information, if: proc { identities.formal.empty? }
 
-  def build_address_information
-    Kps::AddressSaveJob.perform_later(self)
-  end
-
-  def build_identity_information
-    Kps::IdentitySaveJob.perform_later(self)
-  end
-
   # store accessors
   store :profile_preferences, accessors: %i[
     phone_number
@@ -91,5 +83,15 @@ class User < ApplicationRecord
 
   def self.with_most_projects
     where.not(projects_count: 0).order('projects_count desc').limit(10)
+  end
+
+  private
+
+  def build_address_information
+    Kps::AddressSaveJob.perform_later(self)
+  end
+
+  def build_identity_information
+    Kps::IdentitySaveJob.perform_later(self)
   end
 end

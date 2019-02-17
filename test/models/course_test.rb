@@ -4,12 +4,9 @@ require 'test_helper'
 
 class CourseTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include CallbackTestModule
   include EnumerationTestModule
   include ValidationTestModule
-
-  setup do
-    @course = courses(:test)
-  end
 
   # relations
   belongs_to :course_type
@@ -34,18 +31,15 @@ class CourseTest < ActiveSupport::TestCase
   validates_length_of :code
 
   # enums
-  has_enum :status, values: { passive: 0, active: 1 }
-  has_enum :program_type, values: { associate: 0, undergraduate: 1, master: 2, doctoral: 3 }
+  has_enum :status, passive: 0, active: 1
+  has_enum :program_type, associate: 0, undergraduate: 1, master: 2, doctoral: 3
 
   # callbacks
-  test 'callbacks must titlecase the name for a course' do
-    course = @course.dup
-    course.update(code: 'DD101', name: 'deNEme dErSi')
-    assert_equal course.name, 'Deneme Dersi'
-  end
+  has_validation_callback :capitalize_attributes, :before
+  has_validation_callback :assign_credit, :before
 
   test 'callbacks must set value the credit for a course' do
-    course = @course.dup
+    course = courses(:test).dup
     course.update(code: 'DD101', theoric: 10, practice: 3)
     assert_equal course.credit, 11.5
   end

@@ -4,12 +4,7 @@ require 'test_helper'
 
 class UnitStatusTest < ActiveSupport::TestCase
   include AssociationTestModule
-  include ValidationTestModule
   include ReferenceTestModule
-
-  setup do
-    @object = unit_statuses(:passive)
-  end
 
   # relations
   has_many :units

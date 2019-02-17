@@ -4,6 +4,9 @@ class Language < ApplicationRecord
   # search
   include ReferenceSearch
 
+  # callbacks
+  before_validation :capitalize_attributes
+
   # relations
   has_many :courses, dependent: :nullify
   has_many :prospective_students, dependent: :nullify
@@ -12,8 +15,9 @@ class Language < ApplicationRecord
   validates :name, presence: true, uniqueness: true, length: { maximum: 255 }
   validates :iso, presence: true, uniqueness: true, length: { maximum: 255 }
 
-  # callbacks
-  before_validation do
+  private
+
+  def capitalize_attributes
     self.name = name.capitalize_turkish if name
     self.iso  = iso.upcase(:turkic) if iso
   end

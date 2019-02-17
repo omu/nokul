@@ -7,10 +7,6 @@ class CurriculumSemesterTest < ActiveSupport::TestCase
   include EnumerationTestModule
   include ValidationTestModule
 
-  setup do
-    @semester = curriculum_semesters(:one)
-  end
-
   # relations
   belongs_to :curriculum
   has_many :courses
@@ -22,14 +18,14 @@ class CurriculumSemesterTest < ActiveSupport::TestCase
   validates_presence_of :sequence
 
   # validations: numericality
-  validates_numericality_of(:sequence)
-  validates_numerical_range(:sequence, :greater_than, 0)
+  validates_numericality_of :sequence
+  validates_numerical_range :sequence, greater_than: 0
 
   # enums
-  has_enum :term, values: { fall: 0, spring: 1, summer: 2 }
+  has_enum :term, fall: 0, spring: 1, summer: 2
 
   # custom methods
   test 'total_ects method' do
-    assert_equal @semester.total_ects, 6.0
+    assert_equal curriculum_semesters(:one).total_ects, 6.0
   end
 end

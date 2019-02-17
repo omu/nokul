@@ -4,6 +4,7 @@ require 'test_helper'
 
 class AddressTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include CallbackTestModule
   include EnumerationTestModule
   include ValidationTestModule
 
@@ -27,13 +28,10 @@ class AddressTest < ActiveSupport::TestCase
   validates_length_of :phone_number
 
   # enumerations
-  has_enum :type, values: { formal: 1, informal: 2 }
+  has_enum :type, formal: 1, informal: 2
 
   # callbacks
-  test 'callbacks must titlecase the full_address of an address' do
-    addresses(:formal).update!(full_address: 'ABC SOKAK', type: 'informal')
-    assert_equal addresses(:formal).full_address, 'Abc Sokak'
-  end
+  has_save_callback :capitalize_attributes, :before
 
   # address_validator
   test 'a user can only have one formal address' do

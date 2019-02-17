@@ -4,6 +4,7 @@ require 'test_helper'
 
 class IdentityTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include CallbackTestModule
   include EnumerationTestModule
   include ValidationTestModule
 
@@ -30,38 +31,17 @@ class IdentityTest < ActiveSupport::TestCase
   validates_length_of :place_of_birth
   validates_length_of :registered_to
 
-  # validations: uniqueness
-  test 'an identity can not belong to multiple students' do
-    student_identity = identities(:formal_student).dup
-    assert_not student_identity.valid?
-    assert_not_empty student_identity.errors[:student_id]
-  end
+  # callbacks
+  has_save_callback :capitalize_attributes, :before
 
   # enums
-  has_enum :type, values: { formal: 1, informal: 2 }
-  has_enum :gender, values: { male: 1, female: 2, other: 3 }
-  has_enum :marital_status, values: { single: 1, married: 2, divorced: 3, unknown: 4 }
+  has_enum :type, formal: 1, informal: 2
+  has_enum :gender, male: 1, female: 2, other: 3
+  has_enum :marital_status, single: 1, married: 2, divorced: 3, unknown: 4
 
   # scopes
   test 'user_identity can return formal identities which does not belongs_to students' do
     assert_equal identities(:formal_user), users(:serhat).identities.user_identity
-  end
-
-  # callbacks
-  test 'callbacks must titlecase first_name, mothers_name, fathers_name and place_of_birth of an identity' do
-    identity = identities(:formal_user)
-    identity.update(
-      first_name: 'ışık',
-      last_name: 'ılık',
-      mothers_name: 'süt',
-      fathers_name: 'iç',
-      place_of_birth: 'ıişüğ'
-    )
-    assert_equal identity.first_name, 'Işık'
-    assert_equal identity.last_name, 'ILIK'
-    assert_equal identity.mothers_name, 'Süt'
-    assert_equal identity.fathers_name, 'İç'
-    assert_equal identity.place_of_birth, 'Iişüğ'
   end
 
   # identity validator

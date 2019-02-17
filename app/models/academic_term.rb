@@ -4,7 +4,7 @@ class AcademicTerm < ApplicationRecord
   include EnumForTerm
 
   # callbacks
-  after_save -> { AcademicTerm.where.not(id: id).update(active: false) }, if: :active?
+  after_save :deactivate_academic_terms
 
   # relations
   has_many :calendars, dependent: :nullify
@@ -19,4 +19,10 @@ class AcademicTerm < ApplicationRecord
 
   # scopes
   scope :active, -> { where(active: true) }
+
+  private
+
+  def deactivate_academic_terms
+    AcademicTerm.where.not(id: id).update(active: false) if active?
+  end
 end

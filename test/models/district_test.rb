@@ -4,6 +4,7 @@ require 'test_helper'
 
 class DistrictTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include CallbackTestModule
   include ValidationTestModule
 
   # relations
@@ -21,20 +22,11 @@ class DistrictTest < ActiveSupport::TestCase
 
   # validations: length
   validates_length_of :name
+  validates_length_of :mernis_code, is: 4
+
+  # validations: numericality
+  validates_numericality_of :mernis_code
 
   # callbacks
-  test 'callbacks must titlecase the name of a district' do
-    district = District.create!(name: 'wonderland of samsun', city: cities(:samsun), active: true)
-    assert_equal district.name, 'Wonderland Of Samsun'
-  end
-
-  test 'mernis_code must be an integer with 4 digits' do
-    fake = districts(:vezirkopru).dup
-    fake.mernis_code = (0...5).map { ('a'..'z').to_a[rand(26)] }.join
-    assert_not fake.valid?
-
-    error_codes = fake.errors.details[:mernis_code].map { |err| err[:error] }
-    assert error_codes.include?(:wrong_length)
-    assert error_codes.include?(:not_a_number)
-  end
+  has_validation_callback :capitalize_attributes, :before
 end

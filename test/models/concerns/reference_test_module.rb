@@ -7,6 +7,9 @@ module ReferenceTestModule
 
   # callbacks
   included do
+    include CallbackTestModule
+    include ValidationTestModule
+
     # validations: presence
     validates_presence_of :name
     validates_presence_of :code
@@ -19,13 +22,10 @@ module ReferenceTestModule
     validates_length_of :name
 
     # validations: numericality
-    validates_numericality_of(:code)
-    validates_numerical_range(:code, :greater_than_or_equal_to, 0)
+    validates_numericality_of :code
+    validates_numerical_range :code, greater_than_or_equal_to: 0
 
     # callbacks
-    test 'callbacks must titlecase the name for reference objects' do
-      @object.update(name: 'ışık ılık süt iç')
-      assert_equal @object.name, 'Işık Ilık Süt İç'
-    end
+    has_validation_callback :capitalize_attributes, :before
   end
 end

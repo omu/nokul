@@ -4,6 +4,7 @@ require 'test_helper'
 
 class LanguageTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include CallbackTestModule
   include ValidationTestModule
 
   # relations
@@ -23,9 +24,5 @@ class LanguageTest < ActiveSupport::TestCase
   validates_length_of :iso
 
   # callbacks
-  test 'callbacks must titlecase the name of a language' do
-    language = Language.create(name: 'jewish', iso: 'jww')
-    assert_equal language.name, 'Jewish'
-    assert_equal language.iso, 'JWW'
-  end
+  has_validation_callback :capitalize_attributes, :before
 end

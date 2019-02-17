@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class City < ApplicationRecord
-  # alpha_2_code field follows the ISO3166-2 standard
-
   # search
   include PgSearch
   pg_search_scope(
@@ -10,6 +8,9 @@ class City < ApplicationRecord
     against: %i[name alpha_2_code],
     using: { tsearch: { prefix: true } }
   )
+
+  # callbacks
+  before_validation :capitalize_attributes
 
   # relations
   belongs_to :country
@@ -22,7 +23,7 @@ class City < ApplicationRecord
   validates :name, presence: true, uniqueness: { scope: %i[country_id] }, length: { maximum: 255 }
 
   # callbacks
-  before_validation do
+  def capitalize_attributes
     self.alpha_2_code = alpha_2_code.upcase(:turkic) if alpha_2_code
     self.name = name.capitalize_turkish if name
   end

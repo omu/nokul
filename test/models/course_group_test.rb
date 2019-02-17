@@ -4,11 +4,8 @@ require 'test_helper'
 
 class CourseGroupTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include CallbackTestModule
   include ValidationTestModule
-
-  setup do
-    @course_group = course_groups(:bilgisayar_muhendligi_teknik_secmeli_1)
-  end
 
   # relations
   belongs_to :course_group_type
@@ -27,4 +24,7 @@ class CourseGroupTest < ActiveSupport::TestCase
 
   # validations: uniqueness
   validates_uniqueness_of :name
+
+  # callbacks
+  has_validation_callback :capitalize_attributes, :before
 end
