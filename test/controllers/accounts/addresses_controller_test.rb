@@ -7,7 +7,7 @@ module Accounts
     setup do
       @user = users(:serhat)
       @user.addresses.informal.create(
-        phone_number: '03623121919', full_address: 'OMÜ BAUM', district_id: districts(:gerze).id
+        phone_number: '03623121919', full_address: 'OMÜ BAUM', district_id: districts(:gerze).id, country: 'tr'
       )
       sign_in @user
     end
@@ -27,7 +27,7 @@ module Accounts
       assert_difference('@user.addresses.count') do
         post user_addresses_path(@user), params: {
           address: {
-            phone_number: '03623121919', full_address: 'OMÜ BAUM', district_id: districts(:gerze).id
+            phone_number: '03623121919', full_address: 'OMÜ BAUM', district_id: districts(:gerze).id, country: 'tr'
           }
         }
       end
@@ -63,7 +63,7 @@ module Accounts
 
       patch user_address_path(@user, address), params: {
         address: {
-          phone_number: '03623121920', full_address: 'OMÜ UZEM'
+          phone_number: '03623121920', full_address: 'OMÜ UZEM', country: 'tr'
         }
       }
 
