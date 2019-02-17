@@ -3,6 +3,9 @@
 class CurriculumCourse < ApplicationRecord
   self.inheritance_column = :_type_disabled
 
+  # callbacks
+  before_validation :assign_type
+
   # enums
   enum type: { compulsory: 0, elective: 1 }
 
@@ -20,7 +23,7 @@ class CurriculumCourse < ApplicationRecord
   delegate :code, :credit, :course_type, :name, to: :course
 
   # callbacks
-  before_validation do
+  def assign_type
     self.type = curriculum_course_group.nil? ? :compulsory : :elective
   end
 end

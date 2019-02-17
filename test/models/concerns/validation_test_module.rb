@@ -4,10 +4,6 @@ module ValidationTestModule
   extend ActiveSupport::Concern
 
   class_methods do
-    # Examples
-    # validates_presence_of :name
-    # validates_presence_of :name, object: Unit.first
-    # validates_presence_of :name, :code :year
     def validates_presence_of(*attributes, object: nil)
       attributes.each do |attribute|
         test "#{attribute} must be present (presence: true) for #{object}" do
@@ -19,11 +15,8 @@ module ValidationTestModule
       end
     end
 
-    # Examples
-    # validates_presence_of_nested_model :lecturers
-    # validates_presence_of_nested_model :lecturers, ids: 'employee_ids'
     def validates_presence_of_nested_model(attribute, ids: nil, object: nil)
-      test "nested model (#{attribute}) must be present for #{object}" do
+      test "nested model (#{attribute}) must be present" do
         ids ||= "#{attribute.to_s.singularize}_ids"
         object ||= class_name.delete_suffix('Test').constantize.take
         object.send("#{ids}=", nil)
@@ -32,12 +25,9 @@ module ValidationTestModule
       end
     end
 
-    # Examples
-    # validates_uniqueness_of :name
-    # validates_uniqueness_of :name, :code, :year
     def validates_uniqueness_of(*attributes, object: nil)
       attributes.each do |attribute|
-        test "#{attribute} must be unique (uniqueness: true) for #{object}" do
+        test "#{attribute} must be unique (uniqueness: true)" do
           object ||= class_name.delete_suffix('Test').constantize.take
           duplicate_object = object.dup
           assert_not duplicate_object.valid?
@@ -46,32 +36,29 @@ module ValidationTestModule
       end
     end
 
-    # Examples
-    # validates_length_of :name
-    # validates_length_of :description, type: :text
-    # validates_length_of :name, :code, :year
-    # validates_length_of :description, :summary, type: :text)
-    def validates_length_of(*attributes, type: :string, object: nil)
-      long_string = if type == :string
-                      (0..256).map { ('a'..'z').to_a[rand(26)] }.join
-                    elsif type == :text
-                      (0..65_536).map { ('a'..'z').to_a[rand(26)] }.join
-                    end
+    def validates_length_of(attribute, object: nil, **args)
+      args = { maximum: 255 } if args.blank?
+      key = args.keys.first
+      value = args.values.first
 
-      attributes.each do |attribute|
-        test "#{attribute} can not be longer than character limits for #{object}" do
-          object ||= class_name.delete_suffix('Test').constantize.take
-          object.send("#{attribute}=", long_string)
-          assert_not object.valid?
-          assert object.errors.details[attribute].map { |err| err[:error] }.include?(:too_long)
-        end
+      value, error_key = if key.eql?(:is)
+                           [value += 1, :wrong_length]
+                         elsif key.eql?(:minimum)
+                           [value -= 1, :too_short]
+                         elsif key.eql?(:maximum)
+                           [value += 1, :too_long]
+                         end
+
+      test "#{attribute} length must be #{args}" do
+        object ||= class_name.delete_suffix('Test').constantize.take
+        object.send("#{attribute}=", (0..value).map { ('a'..'z').to_a[rand(26)] }.join)
+        assert_not object.valid?
+        assert object.errors.details[attribute].map { |err| err[:error] }.include?(error_key)
       end
     end
 
-    # Examples
-    # validates_numericality_of :year
     def validates_numericality_of(attribute, object: nil)
-      test "#{attribute} attribute of #{object} must be a number" do
+      test "#{attribute} must be a number" do
         object ||= class_name.delete_suffix('Test').constantize.take
         object.send("#{attribute}=", 'some string')
         assert_not object.valid?
@@ -79,23 +66,23 @@ module ValidationTestModule
       end
     end
 
-    # Examples
-    # validates_numerical_range(:year, :greater_than_or_equal_to, 100)
-    # validates_numerical_range(:year, :less_than_or_equal_to, 100)
-    def validates_numerical_range(attribute, range_identifier, number, object: nil)
-      case range_identifier
-      when :greater_than, :less_than
-        number = number
-      when :greater_than_or_equal_to
-        number -= 1
-      when :less_than_or_equal_to
-        number += 1
-      end
-      test "#{attribute} attribute of #{object} must be #{range_identifier} #{number}" do
+    def validates_numerical_range(attribute, object: nil, **args)
+      key = args.keys.first
+      value = args.values.first
+
+      value = if key.eql?(:greater_than) || key.eql?(:less_than)
+                value
+              elsif key.eql?(:greater_than_or_equal_to)
+                value -= 1
+              elsif key.eql?(:less_than_or_equal_to)
+                value += 1
+              end
+
+      test "#{attribute} must be #{key} #{value}" do
         object ||= class_name.delete_suffix('Test').constantize.take
-        object.send("#{attribute}=", number)
+        object.send("#{attribute}=", value)
         assert_not object.valid?
-        assert object.errors.details[attribute].map { |err| err[:error] }.include?(range_identifier)
+        assert object.errors.details[attribute].map { |err| err[:error] }.include?(key)
       end
     end
   end

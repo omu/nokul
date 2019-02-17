@@ -4,6 +4,7 @@ require 'test_helper'
 
 class AvailableCourseTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include CallbackTestModule
   include ValidationTestModule
 
   setup do
@@ -18,6 +19,9 @@ class AvailableCourseTest < ActiveSupport::TestCase
   belongs_to :unit
   has_many :evaluation_types
   has_many :groups
+
+  # callbacks
+  has_validation_callback :assign_academic_term, :before
 
   # validations: uniqueness
   test 'uniqueness validations for course of a academic term and curriculum' do

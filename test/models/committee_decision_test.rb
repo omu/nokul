@@ -4,6 +4,7 @@ require 'test_helper'
 
 class CommitteeDecisionTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include CallbackTestModule
   include ValidationTestModule
 
   setup do
@@ -21,7 +22,7 @@ class CommitteeDecisionTest < ActiveSupport::TestCase
 
   # validations: length
   validates_length_of :decision_no
-  validates_length_of :description, type: :text
+  validates_length_of :description, maximum: 65_535
 
   # delegates
   %i[
@@ -36,6 +37,9 @@ class CommitteeDecisionTest < ActiveSupport::TestCase
   end
 
   # callbacks
+  has_validation_callback :assign_year_and_decision_no, :before
+  has_create_callback :change_status_to_decided, :after
+
   test 'before initialize callback must run for year and decision_no attribute' do
     decision = CommitteeDecision.create(description: 'Test Karar', meeting_agenda: meeting_agendas(:one))
     assert_equal 2018, decision.year

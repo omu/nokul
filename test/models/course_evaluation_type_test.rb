@@ -20,9 +20,9 @@ class CourseEvaluationTypeTest < ActiveSupport::TestCase
   validates_presence_of :percentage
 
   # validations: numericality
-  validates_numericality_of(:percentage)
-  validates_numerical_range(:percentage, :greater_than_or_equal_to, 0)
-  validates_numerical_range(:percentage, :less_than_or_equal_to, 100)
+  validates_numericality_of :percentage
+  validates_numerical_range :percentage, greater_than_or_equal_to: 0
+  validates_numerical_range :percentage, less_than_or_equal_to: 100
 
   # validations: uniqueness
   test 'uniqueness validations for evaluation type scoped with available course' do

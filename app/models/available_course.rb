@@ -14,6 +14,9 @@ class AvailableCourse < ApplicationRecord
   # dynamic_search
   search_keys :unit_id, :curriculum_id, :academic_term_id
 
+  # validations
+  before_validation :assign_academic_term, on: :create
+
   # relations
   belongs_to :academic_term
   belongs_to :coordinator, class_name: 'Employee'
@@ -27,13 +30,14 @@ class AvailableCourse < ApplicationRecord
   validates :assessments_approved, inclusion: { in: [true, false] }
   validates :course, uniqueness: { scope: %i[academic_term curriculum] }
 
-  # callbacks
-  before_validation(on: :create) do
-    self.academic_term = AcademicTerm.active.last
-  end
-
   # delegates
   delegate :code, :name, :theoric, :practice, :laboratory, :credit, :program_type, to: :course
   delegate :name, to: :curriculum, prefix: true
   delegate :name, to: :unit, prefix: true
+
+  private
+
+  def assign_academic_term
+    self.academic_term = AcademicTerm.active.last
+  end
 end

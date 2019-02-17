@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class District < ApplicationRecord
-  # mernis_code field obtained from MERNIS
-
   # search
   include PgSearch
   pg_search_scope(
@@ -10,6 +8,9 @@ class District < ApplicationRecord
     against: %i[name mernis_code],
     using: { tsearch: { prefix: true } }
   )
+
+  # callbacks
+  before_validation :capitalize_attributes
 
   # relations
   belongs_to :city
@@ -22,5 +23,7 @@ class District < ApplicationRecord
   validates :active, inclusion: { in: [true, false] }
 
   # callbacks
-  before_validation { self.name = name.capitalize_turkish if name }
+  def capitalize_attributes
+    self.name = name.capitalize_turkish if name
+  end
 end

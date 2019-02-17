@@ -47,11 +47,11 @@ class CurriculumTest < ActiveSupport::TestCase
   validates_uniqueness_of :name
 
   # validations: numericality
-  validates_numericality_of(:semesters_count)
-  validates_numerical_range(:semesters_count, :greater_than_or_equal_to, 0)
+  validates_numericality_of :semesters_count
+  validates_numerical_range :semesters_count, greater_than_or_equal_to: 0
 
   # enums
-  has_enum :status, values: { passive: 0, active: 1 }
+  has_enum :status, passive: 0, active: 1
 
   # custom methods
   test 'build_semester method' do
