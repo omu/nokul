@@ -1,18 +1,18 @@
 formal:
   type: formal
-  phone_number: 12345678
+  phone_number: 5554443322
   full_address: 'Lorem ipsum street'
   district: atakum
   user: serhat
 informal:
   type: informal
-  phone_number: 12345678
+  phone_number: 5554443322
   full_address: 'Cumhuriyet mahallesi'
   district: atakum
   user: serhat
 informal:
   type: informal
-  phone_number: 12345678
+  phone_number: 5554443322
   full_address: 'Cumhuriyet mahallesi'
   district: atakum
   user: john
