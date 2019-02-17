@@ -31,9 +31,6 @@ class IdentityTest < ActiveSupport::TestCase
   validates_length_of :place_of_birth
   validates_length_of :registered_to
 
-  # validations: uniqueness
-  validates_uniqueness_of :student_id, object: Identity.where.not(student_id: nil).first
-
   # callbacks
   has_save_callback :capitalize_attributes, :before
 
