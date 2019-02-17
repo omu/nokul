@@ -15,7 +15,7 @@ class AgendaType < ApplicationRecord
   validates :name, presence: true, length: { maximum: 255 }
 
   private
-  
+
   def capitalize_attributes
     self.name = name.capitalize_turkish
   end

@@ -28,7 +28,7 @@ class AddressTest < ActiveSupport::TestCase
   validates_length_of :phone_number
 
   # enumerations
-  has_enum :type, values: { formal: 1, informal: 2 }
+  has_enum :type, formal: 1, informal: 2
 
   # callbacks
   has_save_callback :capitalize_attributes, :before

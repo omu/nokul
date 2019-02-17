@@ -35,8 +35,8 @@ class CourseTest < ActiveSupport::TestCase
   validates_length_of :code
 
   # enums
-  has_enum :status, values: { passive: 0, active: 1 }
-  has_enum :program_type, values: { associate: 0, undergraduate: 1, master: 2, doctoral: 3 }
+  has_enum :status, passive: 0, active: 1
+  has_enum :program_type, associate: 0, undergraduate: 1, master: 2, doctoral: 3
 
   # callbacks
   has_validation_callback :capitalize_attributes, :before

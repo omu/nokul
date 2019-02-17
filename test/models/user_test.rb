@@ -32,18 +32,10 @@ class UserTest < ActiveSupport::TestCase
 
   # validations: length
   validates_length_of :email
-
-  test 'id_number must be 11 characters' do
-    fake = users(:serhat).dup
-    ['123456789121', '123', '123456789,5', '14254455.77'].each do |value|
-      fake.id_number = value
-      assert_not fake.valid?
-      assert_not_empty fake.errors[:id_number]
-    end
-  end
+  validates_length_of :id_number, is: 11
 
   # validations: numericality
-  validates_numericality_of(:id_number)
+  validates_numericality_of :id_number
 
   # validations: email
   test 'email addresses validated against RFC' do

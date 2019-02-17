@@ -22,7 +22,7 @@ class CommitteeDecisionTest < ActiveSupport::TestCase
 
   # validations: length
   validates_length_of :decision_no
-  validates_length_of :description, type: :text
+  validates_length_of :description, maximum: 65_535
 
   # delegates
   %i[

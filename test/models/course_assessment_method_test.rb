@@ -21,7 +21,7 @@ class CourseAssessmentMethodTest < ActiveSupport::TestCase
   validates_uniqueness_of :assessment_method
 
   # validations: numericality
-  validates_numericality_of(:percentage)
-  validates_numerical_range(:percentage, :greater_than_or_equal_to, 0)
-  validates_numerical_range(:percentage, :less_than_or_equal_to, 100)
+  validates_numericality_of :percentage
+  validates_numerical_range :percentage, greater_than_or_equal_to: 0
+  validates_numerical_range :percentage, less_than_or_equal_to: 100
 end

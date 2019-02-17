@@ -78,6 +78,7 @@ class ProspectiveStudent < ApplicationRecord
 
   private
 
+  # rubocop:disable Metrics/AbcSize
   def capitalize_attributes
     self.first_name = first_name.capitalize_turkish
     self.last_name  = last_name.upcase(:turkic)
@@ -87,4 +88,5 @@ class ProspectiveStudent < ApplicationRecord
     self.registration_city = registration_city.capitalize_turkish if registration_city
     self.registration_district = registration_district.capitalize_turkish if registration_district
   end
+  # rubocop:enable Metrics/AbcSize
 end

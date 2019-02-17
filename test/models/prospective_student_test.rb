@@ -39,10 +39,10 @@ class ProspectiveStudentTest < ActiveSupport::TestCase
   validates_length_of :registration_district
 
   # enums
-  has_enum :additional_score, values: { handicapped: 1 }
-  has_enum :gender, values: { male: 1, female: 2 }
-  has_enum :nationality, values: { turkish: 1, kktc: 2, foreign: 3 }
-  has_enum :placement_type, values: { general_score: 1, additional_score: 2 }
+  has_enum :additional_score, handicapped: 1
+  has_enum :gender, male: 1, female: 2
+  has_enum :nationality, turkish: 1, kktc: 2, foreign: 3
+  has_enum :placement_type, general_score: 1, additional_score: 2
 
   # callbacks
   has_create_callback :capitalize_attributes, :before

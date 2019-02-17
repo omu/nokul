@@ -22,14 +22,14 @@ class CurriculumCourseTest < ActiveSupport::TestCase
   validates_presence_of :ects
 
   # validations: numericality
-  validates_numericality_of(:ects)
-  validates_numerical_range(:ects, :greater_than, 0)
+  validates_numericality_of :ects
+  validates_numerical_range :ects, greater_than: 0
 
   # validations: uniqueness
   validates_uniqueness_of :course
 
   # enums
-  has_enum :type, values: { compulsory: 0, elective: 1 }
+  has_enum :type, compulsory: 0, elective: 1
 
   # callbacks
   has_validation_callback :assign_type, :before

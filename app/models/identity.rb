@@ -34,6 +34,7 @@ class Identity < ApplicationRecord
   scope :user_identity, -> { formal.find_by(student_id: nil) }
 
   # callbacks
+  # rubocop:disable Metrics/AbcSize
   def capitalize_attributes
     self.fathers_name = fathers_name.capitalize_turkish if fathers_name
     self.first_name = first_name.capitalize_turkish
@@ -42,4 +43,5 @@ class Identity < ApplicationRecord
     self.place_of_birth = place_of_birth.capitalize_turkish if place_of_birth
     self.type = 'informal' if type.blank?
   end
+  # rubocop:enable Metrics/AbcSize
 end

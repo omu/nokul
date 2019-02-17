@@ -38,18 +38,18 @@ class IdentityTest < ActiveSupport::TestCase
     assert_not_empty student_identity.errors[:student_id]
   end
 
+  # callbacks
+  has_save_callback :capitalize_attributes, :before
+
   # enums
-  has_enum :type, values: { formal: 1, informal: 2 }
-  has_enum :gender, values: { male: 1, female: 2, other: 3 }
-  has_enum :marital_status, values: { single: 1, married: 2, divorced: 3, unknown: 4 }
+  has_enum :type, formal: 1, informal: 2
+  has_enum :gender, male: 1, female: 2, other: 3
+  has_enum :marital_status, single: 1, married: 2, divorced: 3, unknown: 4
 
   # scopes
   test 'user_identity can return formal identities which does not belongs_to students' do
     assert_equal identities(:formal_user), users(:serhat).identities.user_identity
   end
-
-  # callbacks
-  has_save_callback :capitalize_attributes, :before
 
   # identity validator
   test 'a user can only have one formal user identity' do
