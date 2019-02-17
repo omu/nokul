@@ -5,12 +5,7 @@ require 'test_helper'
 class UnitTypeTest < ActiveSupport::TestCase
   include AssociationTestModule
   include EnumerationTestModule
-  include ValidationTestModule
   include ReferenceTestModule
-
-  setup do
-    @object = unit_types(:university)
-  end
 
   # relations
   has_many :units
@@ -27,9 +22,4 @@ class UnitTypeTest < ActiveSupport::TestCase
            research_center: 7,
            committee: 8,
            administrative: 9
-
-  test 'senate scope returns types of senato' do
-    assert_includes UnitType.senate, unit_types(:senate)
-    assert_not_includes UnitType.senate, unit_types(:university)
-  end
 end

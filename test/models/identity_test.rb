@@ -31,13 +31,6 @@ class IdentityTest < ActiveSupport::TestCase
   validates_length_of :place_of_birth
   validates_length_of :registered_to
 
-  # validations: uniqueness
-  test 'an identity can not belong to multiple students' do
-    student_identity = identities(:formal_student).dup
-    assert_not student_identity.valid?
-    assert_not_empty student_identity.errors[:student_id]
-  end
-
   # callbacks
   has_save_callback :capitalize_attributes, :before
 

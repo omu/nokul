@@ -7,10 +7,6 @@ class CurriculumSemesterTest < ActiveSupport::TestCase
   include EnumerationTestModule
   include ValidationTestModule
 
-  setup do
-    @semester = curriculum_semesters(:one)
-  end
-
   # relations
   belongs_to :curriculum
   has_many :courses
@@ -30,6 +26,6 @@ class CurriculumSemesterTest < ActiveSupport::TestCase
 
   # custom methods
   test 'total_ects method' do
-    assert_equal @semester.total_ects, 6.0
+    assert_equal curriculum_semesters(:one).total_ects, 6.0
   end
 end

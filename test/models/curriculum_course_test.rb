@@ -8,10 +8,6 @@ class CurriculumCourseTest < ActiveSupport::TestCase
   include EnumerationTestModule
   include ValidationTestModule
 
-  setup do
-    @curriculum_course = curriculum_courses(:one)
-  end
-
   # relations
   belongs_to :course
   belongs_to :curriculum_semester
@@ -35,7 +31,7 @@ class CurriculumCourseTest < ActiveSupport::TestCase
   has_validation_callback :assign_type, :before
 
   test 'callbacks must set value the type for a curriculum course' do
-    curriculum_course = @curriculum_course.dup
+    curriculum_course = curriculum_courses(:one).dup
     curriculum_course.course = courses(:test)
     curriculum_course.save
     assert_equal 'compulsory', curriculum_course.type

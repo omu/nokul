@@ -2,6 +2,7 @@ en:
   admin:
     yoksis_dashboard:
       card:
+        administrative_functions: Administrative Functions
         high_school_types: High School Types
         student_disability_types: Disability Types
         student_drop_out_types: Drop Out Types

@@ -8,10 +8,6 @@ class CourseTest < ActiveSupport::TestCase
   include EnumerationTestModule
   include ValidationTestModule
 
-  setup do
-    @course = courses(:test)
-  end
-
   # relations
   belongs_to :course_type
   belongs_to :language
@@ -43,7 +39,7 @@ class CourseTest < ActiveSupport::TestCase
   has_validation_callback :assign_credit, :before
 
   test 'callbacks must set value the credit for a course' do
-    course = @course.dup
+    course = courses(:test).dup
     course.update(code: 'DD101', theoric: 10, practice: 3)
     assert_equal course.credit, 11.5
   end

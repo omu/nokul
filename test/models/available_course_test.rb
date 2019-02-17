@@ -5,11 +5,6 @@ require 'test_helper'
 class AvailableCourseTest < ActiveSupport::TestCase
   include AssociationTestModule
   include CallbackTestModule
-  include ValidationTestModule
-
-  setup do
-    @available_course = available_courses(:ati_fall_2018_2019)
-  end
 
   # relations
   belongs_to :academic_term
@@ -25,7 +20,7 @@ class AvailableCourseTest < ActiveSupport::TestCase
 
   # validations: uniqueness
   test 'uniqueness validations for course of a academic term and curriculum' do
-    fake = @available_course.dup
+    fake = available_courses(:ati_fall_2018_2019).dup
     assert_not fake.valid?
     assert_not_empty fake.errors[:course]
     fake.course = courses(:ydi)

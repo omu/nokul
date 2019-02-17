@@ -6,10 +6,6 @@ class CourseTypeTest < ActiveSupport::TestCase
   include AssociationTestModule
   include ValidationTestModule
 
-  setup do
-    @course_type = course_types(:internship)
-  end
-
   # relations
   has_many :courses
 
@@ -27,9 +23,5 @@ class CourseTypeTest < ActiveSupport::TestCase
   validates_length_of :code
 
   # validations: numericality
-  test 'presence numericality for min_credit of a course type' do
-    @course_type.min_credit = -1
-    assert_not @course_type.valid?
-    assert_not_empty @course_type.errors[:min_credit]
-  end
+  validates_numerical_range :min_credit, greater_than_or_equal_to: 0
 end

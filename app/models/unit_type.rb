@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 class UnitType < ApplicationRecord
-  include ReferenceValidations
   include ReferenceCallbacks
   include ReferenceSearch
+  include ReferenceValidations
 
   # enums
   enum group: {
