@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
+  # virtual attributes
+  attr_accessor :country
+
   # search
   include PgSearch
   pg_search_scope(
@@ -31,6 +34,10 @@ class User < ApplicationRecord
   # validations
   validates :email, presence: true, uniqueness: true, length: { maximum: 255 }
   validates :id_number, uniqueness: true, numericality: { only_integer: true }, length: { is: 11 }
+  validates :phone_number, length: { maximum: 255 },
+                           allow_nil: true,
+                           allow_blank: true,
+                           telephone_number: { country: proc { |record| record.country }, types: [:fixed_line] }
   validates :preferred_language, inclusion: { in: I18n.available_locales.map(&:to_s) }
   validates_with EmailAddress::ActiveRecordValidator, field: :email
   validates_with ImageValidator, field: :avatar, if: proc { |a| a.avatar.attached? }

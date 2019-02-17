@@ -31,6 +31,7 @@ class UserTest < ActiveSupport::TestCase
 
   # validations: length
   validates_length_of :email
+  validates_length_of :phone_number
 
   test 'id_number must be 11 characters' do
     fake = users(:serhat).dup
