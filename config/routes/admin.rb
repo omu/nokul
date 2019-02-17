@@ -18,6 +18,7 @@ namespace :admin do
 
   # YOKSIS References
   get 'yoksis', to: 'yoksis_dashboard#index'
+  resources :administrative_functions, except: :show
   resources :high_school_types, except: :show
   resources :student_disability_types, except: :show
   resources :student_drop_out_types, except: :show
