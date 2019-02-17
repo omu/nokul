@@ -6,10 +6,6 @@ class AvailableCourseLecturerTest < ActiveSupport::TestCase
   include AssociationTestModule
   include ValidationTestModule
 
-  setup do
-    @course_lecturer = available_course_lecturers(:ati_group_1_lecturer_john)
-  end
-
   # relations
   belongs_to :group
   belongs_to :lecturer
@@ -18,7 +14,7 @@ class AvailableCourseLecturerTest < ActiveSupport::TestCase
   validates_presence_of :coordinator
 
   test 'uniqueness validations for lecturer of a group' do
-    fake = @course_lecturer.dup
+    fake = available_course_lecturers(:ati_group_1_lecturer_john).dup
     assert_not fake.valid?
     assert_not_empty fake.errors[:lecturer]
     fake.group = available_course_groups(:ati_group_2)
@@ -27,7 +23,7 @@ class AvailableCourseLecturerTest < ActiveSupport::TestCase
 
   # scopes
   test 'coordinator scope returns coordinator lecturers' do
-    assert_includes AvailableCourseLecturer.coordinator, @course_lecturer
+    assert_includes AvailableCourseLecturer.coordinator, available_course_lecturers(:ati_group_1_lecturer_john)
     assert_not_includes AvailableCourseLecturer.coordinator, available_course_lecturers(:ati_group_1_lecturer_serhat)
   end
 end

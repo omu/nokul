@@ -3,7 +3,9 @@
 class EvaluationType < ApplicationRecord
   # search
   include ReferenceSearch
-  include ReferenceCallbacks
+
+  # callbacks
+  before_validation :capitalize_attributes
 
   # relations
   has_many :course_evaluation_types, dependent: :destroy
@@ -11,4 +13,10 @@ class EvaluationType < ApplicationRecord
 
   # validations
   validates :name, presence: true, uniqueness: true, length: { maximum: 255 }
+
+  private
+
+  def capitalize_attributes
+    self.name = name.capitalize_turkish if name
+  end
 end

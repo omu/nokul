@@ -6,10 +6,6 @@ class CurriculumCourseGroupTest < ActiveSupport::TestCase
   include AssociationTestModule
   include ValidationTestModule
 
-  setup do
-    @curriculum_course_group = curriculum_course_groups(:one)
-  end
-
   # relations
   belongs_to :course_group
   belongs_to :curriculum_semester
@@ -30,6 +26,6 @@ class CurriculumCourseGroupTest < ActiveSupport::TestCase
 
   # delegates
   test 'must have a name method' do
-    assert_equal @curriculum_course_group.name, @curriculum_course_group.course_group.name
+    assert_equal curriculum_course_groups(:one).name, curriculum_course_groups(:one).course_group.name
   end
 end

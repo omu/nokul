@@ -5,6 +5,7 @@ require 'test_helper'
 class EvaluationTypeTest < ActiveSupport::TestCase
   include AssociationTestModule
   include ValidationTestModule
+  include CallbackTestModule
 
   # relations
   has_many :available_courses
@@ -20,8 +21,5 @@ class EvaluationTypeTest < ActiveSupport::TestCase
   validates_length_of :name
 
   # callbacks
-  test 'callbacks must titlecase the name of a evaluation type' do
-    evaluation_type = EvaluationType.create!(name: 'test evaluation type')
-    assert_equal evaluation_type.name, 'Test Evaluation Type'
-  end
+  has_validation_callback :capitalize_attributes, :before
 end

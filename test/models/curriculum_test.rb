@@ -7,10 +7,6 @@ class CurriculumTest < ActiveSupport::TestCase
   include EnumerationTestModule
   include ValidationTestModule
 
-  setup do
-    @curriculum = curriculums(:one)
-  end
-
   # constants
   {
     MAX_NUMBER_OF_SEMESTERS: 12,
@@ -55,15 +51,15 @@ class CurriculumTest < ActiveSupport::TestCase
 
   # custom methods
   test 'build_semester method' do
-    Curriculum.reset_counters(@curriculum.id, :semesters_count)
-    @curriculum.semesters.destroy_all
-    @curriculum.build_semesters(number_of_semesters: 8, type: :periodic)
-    assert_equal 8, @curriculum.semesters.size
-    assert_equal [1, 2, 3, 4], @curriculum.semesters.pluck(:year).uniq
+    Curriculum.reset_counters(curriculums(:one).id, :semesters_count)
+    curriculums(:one).semesters.destroy_all
+    curriculums(:one).build_semesters(number_of_semesters: 8, type: :periodic)
+    assert_equal 8, curriculums(:one).semesters.size
+    assert_equal [1, 2, 3, 4], curriculums(:one).semesters.pluck(:year).uniq
 
-    @curriculum.semesters = []
-    @curriculum.build_semesters(number_of_semesters: 2, type: :yearly)
-    assert_equal 2, @curriculum.semesters.size
-    assert_equal [1, 2], @curriculum.semesters.pluck(:year).uniq
+    curriculums(:one).semesters = []
+    curriculums(:one).build_semesters(number_of_semesters: 2, type: :yearly)
+    assert_equal 2, curriculums(:one).semesters.size
+    assert_equal [1, 2], curriculums(:one).semesters.pluck(:year).uniq
   end
 end

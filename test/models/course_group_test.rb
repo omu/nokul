@@ -7,10 +7,6 @@ class CourseGroupTest < ActiveSupport::TestCase
   include CallbackTestModule
   include ValidationTestModule
 
-  setup do
-    @course_group = course_groups(:bilgisayar_muhendligi_teknik_secmeli_1)
-  end
-
   # relations
   belongs_to :course_group_type
   belongs_to :unit

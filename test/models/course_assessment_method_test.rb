@@ -6,10 +6,6 @@ class CourseAssessmentMethodTest < ActiveSupport::TestCase
   include AssociationTestModule
   include ValidationTestModule
 
-  setup do
-    @course_assessment_method = course_assessment_methods(:ati_midterm_exam_assessment)
-  end
-
   # relations
   belongs_to :assessment_method
   belongs_to :course_evaluation_type

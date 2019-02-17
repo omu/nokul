@@ -37,6 +37,10 @@ class UserTest < ActiveSupport::TestCase
   # validations: numericality
   validates_numericality_of :id_number
 
+  # callback tests
+  has_commit_callback :build_address_information, :after
+  has_commit_callback :build_identity_information, :after
+
   # validations: email
   test 'email addresses validated against RFC' do
     fake = users(:serhat).dup
@@ -91,10 +95,6 @@ class UserTest < ActiveSupport::TestCase
   test 'user can respond to account method' do
     assert users(:serhat).accounts
   end
-
-  # callback tests
-  has_commit_callback :build_address_information, :after
-  has_commit_callback :build_identity_information, :after
 
   # job tests
   test 'user enqueues Kps::AddressSaveJob after being created' do

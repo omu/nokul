@@ -1,9 +1,6 @@
 # frozen_string_literal: true
 
 class Country < ApplicationRecord
-  # alpha_2_code, alpha_3_code and and numeric code fields follow the ISO3166-1 standard.
-  # mernis_code obtained from YOKSIS
-
   # search
   include PgSearch
   pg_search_scope(

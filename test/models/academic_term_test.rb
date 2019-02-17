@@ -45,7 +45,7 @@ class AcademicTermTest < ActiveSupport::TestCase
   # callbacks
   has_save_callback :deactivate_academic_terms, :after
 
-  test 'callbacks only one academic term must be active' do
+  test 'callback ensures that only one academic term must be active' do
     active_term = AcademicTerm.active.last
     passive_term = academic_terms(:fall_2017_2018)
 

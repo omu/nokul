@@ -22,13 +22,13 @@ class StudentTest < ActiveSupport::TestCase
   validates_uniqueness_of :student_number
   validates_uniqueness_of :unit_id
 
+  # callback tests
+  has_commit_callback :build_identity_information, :after
+
   # delegations
   test 'a student can communicate with addresses over the user' do
     assert students(:serhat).addresses
   end
-
-  # callback tests
-  has_commit_callback :build_identity_information, :after
 
   # job tests
   test 'student enqueues Kps::IdentitySaveJob after being created' do
