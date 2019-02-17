@@ -32,10 +32,17 @@ class UserTest < ActiveSupport::TestCase
 
   # validations: length
   validates_length_of :email
+  validates_length_of :extension_number, maximum: 8
   validates_length_of :id_number, is: 11
+  validates_length_of :linkedin, maximum: 50
+  validates_length_of :phone_number
+  validates_length_of :skype, maximum: 50
+  validates_length_of :twitter, maximum: 50
+  validates_length_of :website, maximum: 50
 
   # validations: numericality
   validates_numericality_of :id_number
+  validates_numericality_of :extension_number
 
   # callback tests
   has_commit_callback :build_address_information, :after

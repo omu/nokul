@@ -20,16 +20,26 @@ en:
         start_date: Start Date
       user: &user_attributes
         articles_count: Articles Count
+        country: Country
         current_password: Current Password
         email: E-mail
+        extension_number: Extension Number
         id_number: ID Number
+        linkedin: Linkedin Username
+        orcid: ORCID
         password: Password
         password_changed_at: Last Password Change
         password_confirmation: Password Confirmation
+        phone_number: Fixed Phone Number
         preferences: Visibility Settings
         preferred_language: Preferred Language
         profile: Profile Settings
         projects_count: Projects Count
+        public_photo: Show picture on my profile
+        public_studies: Show academic studies on my profile
+        skype: Skype Username
+        twitter: Twitter Username
+        website: Website
   devise:
     common:
       login: Login

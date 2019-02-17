@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
+  # virtual attributes
+  attr_accessor :country
+
   # search
   include PgSearch
   pg_search_scope(
@@ -30,8 +33,19 @@ class User < ApplicationRecord
 
   # validations
   validates :email, presence: true, uniqueness: true, length: { maximum: 255 }
+  validates :extension_number, allow_blank: true,
+                               allow_nil: true,
+                               length: { maximum: 8 },
+                               numericality: { only_integer: true }
   validates :id_number, uniqueness: true, numericality: { only_integer: true }, length: { is: 11 }
+  validates :linkedin, allow_blank: true, length: { maximum: 50 }
+  validates :phone_number, length: { maximum: 255 },
+                           allow_blank: true,
+                           telephone_number: { country: proc { |record| record.country }, types: [:fixed_line] }
   validates :preferred_language, inclusion: { in: I18n.available_locales.map(&:to_s) }
+  validates :skype, allow_blank: true, length: { maximum: 50 }
+  validates :twitter, allow_blank: true, length: { maximum: 50 }
+  validates :website, allow_blank: true, length: { maximum: 50 }
   validates_with EmailAddress::ActiveRecordValidator, field: :email
   validates_with ImageValidator, field: :avatar, if: proc { |a| a.avatar.attached? }
 
@@ -41,15 +55,15 @@ class User < ApplicationRecord
 
   # store accessors
   store :profile_preferences, accessors: %i[
-    phone_number
     extension_number
-    website
-    twitter
     linkedin
-    skype
     orcid
+    phone_number
     public_photo
     public_studies
+    skype
+    twitter
+    website
   ], coder: JSON
 
   # permalinks

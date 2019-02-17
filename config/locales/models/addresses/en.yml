@@ -2,6 +2,7 @@ en:
   activerecord:
     attributes:
       address: &address_attributes
+        country: Country
         district: District
         full_address: Full Address
         phone_number: Phone Number

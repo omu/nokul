@@ -39,10 +39,11 @@ tr:
         success: İdari görev başarıyla güncellendi.
     profile:
       edit:
-        extension_number: Dahili numaranız
+        country: Ülke
+        extension_number: Dahili Numaranız
         linkedin: Linkedin Kullanıcı Adı
         orcid: ORCID
-        phone_number: Telefon numaranız
+        phone_number: Sabit Telefon Numaranız
         profile_settings: Profil Ayarları
         public_photo: Profilimde Fotoğrafımı Göster
         public_studies: Profilimde Akademik Çalışmalarımı Göster
