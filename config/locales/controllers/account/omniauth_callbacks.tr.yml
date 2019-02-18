@@ -1,0 +1,5 @@
+tr:
+  devise:
+    omniauth_callbacks:
+      failure: "\"%{reason}\" olduğu için %{kind}'den doğrulama yapılamıyor."
+      success: "%{kind} hesabından başarılı bir şekilde doğrulandı."

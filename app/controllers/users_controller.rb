@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   include PagyBackendWithHelpers
   include LastUpdateFromMernis
 
-  before_action :set_user, except: %i[index new create]
+  before_action :set_user, except: :index
   before_action :set_address_elapsed_time, only: %i[save_address_from_mernis]
   before_action :set_identity_elapsed_time, only: %i[save_identity_from_mernis]
   before_action :nullify_slug, only: :update
@@ -19,15 +19,6 @@ class UsersController < ApplicationController
     @employees = @user.employees.includes(:title).order(active: :desc)
     @duties = @user.duties.includes(:unit)
     @positions = @user.positions.includes(:administrative_function, :duty)
-  end
-
-  def new
-    @user = User.new
-  end
-
-  def create
-    @user = User.new(user_params)
-    @user.save ? redirect_with('.success') : render(:new)
   end
 
   def edit; end

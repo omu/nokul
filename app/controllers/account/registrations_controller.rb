@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class User
+module Account
   class RegistrationsController < Devise::RegistrationsController
     layout 'guest', except: %i[edit update]
 
@@ -64,6 +64,8 @@ class User
     # def after_inactive_sign_up_path_for(resource)
     #   super(resource)
     # end
+
+    private
 
     def update_password_change_time
       current_user.update!(password_changed_at: Time.zone.now)

@@ -3,9 +3,9 @@ tr:
     components:
       membership_notifications:
         address_information: Adres bilgileriniz
-        change_password: Şifrenizi değiştirin.
+        change_password: Parolanızı değiştirin.
         identity_information: Kimlik bilgileriniz
-        last_password_change: Son şifre değişikliği
+        last_password_change: Son parola değişikliği
         profile_completion_rate: Profil tamamlama oranı
         seems_missing: eksik görünüyor.
         upcoming_events: Yaklaşan akademik takvim olayları

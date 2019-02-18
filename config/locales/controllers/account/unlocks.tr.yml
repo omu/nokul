@@ -1,0 +1,6 @@
+tr:
+  devise:
+    unlocks:
+      send_instructions: "Birkaç dakika içerisinde hesabınızın kilidini nasıl kaldıracağınız hakkında bir eposta alacaksınız."
+      send_paranoid_instructions: "Eğer hesabınız varsa birkaç dakika içerisinde hesabınızın kilidini nasıl kaldırıcağınız hakkında bir eposta alacaksınız."
+      unlocked: "Başarılı bir şekilde hesabınızın kilidi kaldırıldı. Devam etmek için lütfen giriş yapın."

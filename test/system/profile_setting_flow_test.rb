@@ -12,7 +12,7 @@ class ProfileSettingFlowTest < ApplicationSystemTestCase
   SUPPORTED_SCREEN_RESOLUTIONS.each do |resolution|
     test "can profile setting with correct credentials with a #{resolution} screen" do
       page.driver.browser.manage.window.resize_to(*resolution)
-      visit(user_profile_path(@user))
+      visit(profile_path)
       attach_file('user[avatar]', File.absolute_path('test/fixtures/files/valid_jpg_picture.jpg'))
       {
         phone_number: '362 312 1919',
@@ -26,7 +26,7 @@ class ProfileSettingFlowTest < ApplicationSystemTestCase
         fill_in("user[#{key}]", with: value)
       end
       click_button(t('save'))
-      assert_equal t('account.profile.update.success'), page.find('div', class: 'toast-message').text
+      assert_equal t('account.profile_settings.update.success'), page.find('div', class: 'toast-message').text
     end
   end
 end

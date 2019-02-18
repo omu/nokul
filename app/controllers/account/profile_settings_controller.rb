@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
 module Account
-  class ProfileController < ApplicationController
-    before_action :purge_avatar, only: :update
+  class ProfileSettingsController < ApplicationController
+    # before_action :purge_avatar, only: :update
 
     def edit; end
 
     def update
       if current_user.update_without_password(profile_params)
-        redirect_to user_profile_path(current_user), notice: t('.success')
+        redirect_to profile_path, notice: t('.success')
       else
         render(:edit)
       end
@@ -16,9 +16,9 @@ module Account
 
     private
 
-    def purge_avatar
-      current_user.avatar.purge
-    end
+    # def purge_avatar
+    #   current_user.avatar.purge
+    # end
 
     def profile_params
       params.require(:user).permit(
