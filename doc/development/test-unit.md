@@ -34,6 +34,12 @@ author: M. Serhat Dundar
   belongs_to :user, optional: true
 ```
 
+### accepts_nested_attributes_for
+
+```ruby
+  accepts_nested_attributes_for :units, allow_destroy: true
+```
+
 --------------------------------------------------
 
 ## Callbacks
