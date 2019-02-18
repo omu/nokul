@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module LastUpdateFromMernis
+module UpdateableFromMernis
   extend ActiveSupport::Concern
 
   def elapsed_time(resource)

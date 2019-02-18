@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module PagyBackendWithHelpers
+module SearchableModule
   extend ActiveSupport::Concern
   include Pagy::Backend
 

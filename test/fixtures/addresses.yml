@@ -1,18 +1,18 @@
 formal:
   type: formal
-  phone_number: 5554443322
+  phone_number: <% TelephoneNumber.parse('5554443322', :tr) %>
   full_address: 'Lorem ipsum street'
   district: atakum
   user: serhat
 informal:
   type: informal
-  phone_number: 5554443322
+  phone_number: <% TelephoneNumber.parse('5554443322', :tr) %>
   full_address: 'Cumhuriyet mahallesi'
   district: atakum
   user: serhat
 informal:
   type: informal
-  phone_number: 5554443322
+  phone_number: <% TelephoneNumber.parse('5554443322', :tr) %>
   full_address: 'Cumhuriyet mahallesi'
   district: atakum
   user: john

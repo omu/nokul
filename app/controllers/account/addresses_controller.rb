@@ -2,7 +2,7 @@
 
 module Account
   class AddressesController < ApplicationController
-    include LastUpdateFromMernis
+    include UpdateableFromMernis
 
     before_action :set_user
     before_action :set_address, only: %i[edit update destroy]
