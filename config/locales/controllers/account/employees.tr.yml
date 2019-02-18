@@ -1,0 +1,14 @@
+tr:
+  account:
+    employees:
+      create:
+        success: Personel kaydı başarıyla oluşturuldu.
+      destroy:
+        success: Personel kaydı başarıyla silindi.
+        warning: Personel kaydı silinemedi!
+      edit:
+        form_title: Personel Kaydını Güncelle
+      new:
+        form_title: Personel Kaydı Oluştur
+      update:
+        success: Personel kaydı başarıyla güncellendi.

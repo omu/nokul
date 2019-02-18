@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class PublicProfileController < ApplicationController
-  include PagyBackendWithHelpers
+  include SearchableModule
 
   skip_before_action :authenticate_user!
   before_action :set_user, only: %i[show vcard]

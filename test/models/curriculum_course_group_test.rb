@@ -6,10 +6,6 @@ class CurriculumCourseGroupTest < ActiveSupport::TestCase
   include AssociationTestModule
   include ValidationTestModule
 
-  setup do
-    @curriculum_course_group = curriculum_course_groups(:one)
-  end
-
   # relations
   belongs_to :course_group
   belongs_to :curriculum_semester
@@ -25,11 +21,11 @@ class CurriculumCourseGroupTest < ActiveSupport::TestCase
   validates_uniqueness_of :course_group_id
 
   # validations: numericality
-  validates_numericality_of(:ects)
-  validates_numerical_range(:ects, :greater_than, 0)
+  validates_numericality_of :ects
+  validates_numerical_range :ects, greater_than: 0
 
   # delegates
   test 'must have a name method' do
-    assert_equal @curriculum_course_group.name, @curriculum_course_group.course_group.name
+    assert_equal curriculum_course_groups(:one).name, curriculum_course_groups(:one).course_group.name
   end
 end

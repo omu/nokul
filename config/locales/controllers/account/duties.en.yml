@@ -1,0 +1,14 @@
+en:
+  account:
+    duties:
+      create:
+        success: Duty successfully created.
+      destroy:
+        success: Duty successfully deleted.
+        warning: Duty could not be deleted.
+      edit:
+        form_title: Update the Duty
+      new:
+        form_title: Create a Duty
+      update:
+        success: Duty successfully updated.

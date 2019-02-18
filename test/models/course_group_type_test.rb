@@ -4,6 +4,7 @@ require 'test_helper'
 
 class CourseGroupTypeTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include CallbackTestModule
   include ValidationTestModule
 
   # relations
@@ -17,4 +18,7 @@ class CourseGroupTypeTest < ActiveSupport::TestCase
 
   # validations: length
   validates_length_of :name
+
+  # callbacks
+  has_validation_callback :capitalize_attributes, :before
 end

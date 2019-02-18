@@ -18,10 +18,10 @@ class AgendaTest < ActiveSupport::TestCase
   validates_presence_of :status
 
   # validations: length
-  validates_length_of :description, type: :text
+  validates_length_of :description, maximum: 65_535
 
   # enums
-  has_enum :status, values: { recent: 0, decided: 1, delayed: 2 }
+  has_enum :status, recent: 0, decided: 1, delayed: 2
 
   # scopes
   test 'active scope returns recent and delayed agendas' do

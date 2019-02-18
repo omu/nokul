@@ -1,0 +1,31 @@
+<div class='col-md-6'>
+  <div class='card mx-4'>
+    <div class='card-body p-4'>
+      <h1><%= t('.reset_password') %></h1>
+      <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+        <%= f.error_notification %>
+        <%= f.input :reset_password_token, as: :hidden %>
+        <%= f.full_error :reset_password_token %>
+        <div class='input-group mb-3'>
+          <div class='input-group-prepend'>
+            <span class='input-group-text'>
+              <%= fa_icon('lock') %>
+            </span>
+          </div>
+          <%= f.input :password, required: true, label: false, wrapper: false %>
+        </div>
+
+        <div class='input-group mb-4'>
+          <div class='input-group-prepend'>
+            <span class='input-group-text'>
+              <%= fa_icon('lock') %>
+            </span>
+          </div>
+          <%= f.input :password_confirmation, required: true, label: false, wrapper: false %>
+        </div>
+
+        <%= f.button :submit, t('.reset_password'), class: 'btn btn-block btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>

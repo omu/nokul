@@ -3,7 +3,9 @@
 class AssessmentMethod < ApplicationRecord
   # search
   include ReferenceSearch
-  include ReferenceCallbacks
+
+  # callbacks
+  before_validation :capitalize_attributes
 
   # relations
   has_many :course_assessment_methods, dependent: :destroy
@@ -12,4 +14,10 @@ class AssessmentMethod < ApplicationRecord
 
   # validations
   validates :name, presence: true, uniqueness: true, length: { maximum: 255 }
+
+  private
+
+  def capitalize_attributes
+    self.name = name.capitalize_turkish if name
+  end
 end

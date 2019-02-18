@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class StudentPunishmentType < ApplicationRecord
-  include ReferenceValidations
   include ReferenceCallbacks
   include ReferenceSearch
+  include ReferenceValidations
 end

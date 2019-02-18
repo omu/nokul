@@ -2,7 +2,8 @@
 
 module CourseManagement
   class CurriculumsController < ApplicationController
-    include PagyBackendWithHelpers
+    include SearchableModule
+
     before_action :set_curriculum, only: %i[show edit update destroy openable_courses]
 
     def index

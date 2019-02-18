@@ -1,9 +1,6 @@
 # frozen_string_literal: true
 
 class Country < ApplicationRecord
-  # alpha_2_code, alpha_3_code and and numeric code fields follow the ISO3166-1 standard.
-  # mernis_code obtained from YOKSIS
-
   # search
   include PgSearch
   pg_search_scope(
@@ -11,6 +8,9 @@ class Country < ApplicationRecord
     against: %i[name alpha_2_code],
     using: { tsearch: { prefix: true } }
   )
+
+  # callbacks
+  before_validation :capitalize_attributes
 
   # relations
   has_many :cities, dependent: :destroy
@@ -28,8 +28,9 @@ class Country < ApplicationRecord
                           numericality: { only_integer: true, greater_than: 0 }
   validates :yoksis_code, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 1 }
 
-  # callbacks
-  before_validation do
+  private
+
+  def capitalize_attributes
     self.name = name.capitalize_turkish if name
     self.alpha_2_code = alpha_2_code.upcase(:turkic) if alpha_2_code
     self.alpha_3_code = alpha_3_code.upcase(:turkic) if alpha_3_code

@@ -2,6 +2,7 @@ tr:
   admin:
     yoksis_dashboard:
       card:
+        administrative_functions: İdari Görevler
         high_school_types: Lise Türleri
         student_disability_types: Engel Türleri
         student_drop_out_types: Ayrılma Nedenleri

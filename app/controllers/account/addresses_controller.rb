@@ -2,7 +2,7 @@
 
 module Account
   class AddressesController < ApplicationController
-    include LastUpdateFromMernis
+    include UpdateableFromMernis
 
     before_action :set_user
     before_action :set_address, only: %i[edit update destroy]
@@ -58,7 +58,7 @@ module Account
     end
 
     def address_params
-      params.require(:address).permit(:phone_number, :full_address, :district_id)
+      params.require(:address).permit(:country, :phone_number, :full_address, :district_id)
     end
   end
 end

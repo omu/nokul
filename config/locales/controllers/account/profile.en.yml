@@ -1,0 +1,24 @@
+en:
+  account:
+    profile_settings:
+      edit:
+        country: Country
+        extension_number: Extension Number
+        linkedin: Linkedin Username
+        orcid: ORCID
+        phone_number: Fixed Phone Number
+        profile_settings: Profile Settings
+        public_photo: Show picture on my profile
+        public_studies: Show academic studies on my profile
+        skype: Skype Username
+        twitter: Twitter Username
+        visiblity_settings: Visiblity Settings
+        website: Website
+      update:
+        success: Profile successfully updated.
+  simple_form:
+    placeholders:
+      user:
+        linkedin: linkedin.com/
+        twitter: twitter.com/
+        phone_number: 'I.e. 3623121919'

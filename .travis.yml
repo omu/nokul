@@ -58,3 +58,6 @@ notifications:
     on_failure: change
     rooms:
       - secure: ljbXmcdLA/wv+j3+RCE0qF/mZd/3PbHI0VOSBkeyJDXWcHHMduIyZlodzliuXL/8mfLbmcJ8MZT5tV9l0OGSgiFI/Ngz1fadsf+0Pim4MtREkp4yKRzfDbQqj8iQwzAAcIAxbIQhenVZtaadwBAM8Jawcjs0m2+iWXaiREU1IlRaK1NzGtkDx8gy5PnVgJhtWmhV7/l6a0Sg94shr53bchkuGwH/ugqgq9L+ec1gGKVpSOHhS0W5WjojMU+3K5/HCP/r9V2J2jYUjtzDSbEDFd18rH0qJjNq1hoaVeaW1uJzidSH7f7B6xXxJfUt4e2CiY+2CkR5LUbFx5V+6fNscEAA9u+zGh6Rn9rxciWkFfzKck6Eomoq5G+d+q/ItVagAMSIUELYCOup2+H/KtRNFTBWBqwECsvXZn7WwaZOdMXDfiTnI9eSWxJqaiwFMtC1A+bnKM7DX2qoZoGCNJAzzQ93EuXdxA1w1oYVs7lfh70qLx5OraXtcTUtfrv4tzms35S9JNNnEQyWN7neuPCS0Yh4QIFf4NX7aaYbwFD66uS25Iq2ochJ4oicFd8s+DxnaXc925GYXFVHk7wZWK/mFlGnZTuTbk4ElByqzRUN2sI5r7xYijv9cBcUM/1RqzXI3B/91Ft/kyCaYDrg3W1j79zLo+G5uIHU2/F1AQBIYlI=
+    template:
+      - "Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository_slug}@%{branch}"
+      - "by %{author} %{result} in %{elapsed_time}"

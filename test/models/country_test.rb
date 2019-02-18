@@ -4,6 +4,7 @@ require 'test_helper'
 
 class CountryTest < ActiveSupport::TestCase
   include AssociationTestModule
+  include CallbackTestModule
   include ValidationTestModule
 
   # relations
@@ -27,51 +28,16 @@ class CountryTest < ActiveSupport::TestCase
 
   # validations: length
   validates_length_of :name
+  validates_length_of :alpha_2_code, is: 2
+  validates_length_of :alpha_3_code, is: 3
+  validates_length_of :numeric_code, is: 3
+  validates_length_of :mernis_code, is: 4
 
   # validations: numericality
-  validates_numericality_of(:yoksis_code)
-  validates_numerical_range(:yoksis_code, :greater_than_or_equal_to, 1)
+  validates_numericality_of :numeric_code
+  validates_numericality_of :yoksis_code
+  validates_numerical_range :yoksis_code, greater_than_or_equal_to: 1
 
   # callbacks
-  test 'callbacks must titlecase the name and must upcase the iso codes of a country' do
-    country = Country.create(name: 'wonderland of alice', alpha_2_code: 'wl', alpha_3_code: 'wlx', numeric_code: 123)
-    assert_equal country.name, 'Wonderland Of Alice'
-    assert_equal country.alpha_2_code, 'WL'
-    assert_equal country.alpha_3_code, 'WLX'
-  end
-
-  # other validations
-  test 'alpha_2_code must be 2 characters' do
-    fake = countries(:turkey).dup
-    fake.alpha_2_code = (0...3).map { ('a'..'z').to_a[rand(26)] }.join
-    assert_not fake.valid?
-    assert fake.errors.details[:alpha_2_code].map { |err| err[:error] }.include?(:wrong_length)
-  end
-
-  test 'alpha_3_code must be 3 characters' do
-    fake = countries(:turkey).dup
-    fake.alpha_3_code = (0...4).map { ('a'..'z').to_a[rand(26)] }.join
-    assert_not fake.valid?
-    assert fake.errors.details[:alpha_3_code].map { |err| err[:error] }.include?(:wrong_length)
-  end
-
-  test 'numeric_code must be an integer with 3 digits' do
-    fake = countries(:turkey).dup
-    fake.numeric_code = (0...4).map { ('a'..'z').to_a[rand(26)] }.join
-    assert_not fake.valid?
-
-    error_codes = fake.errors.details[:numeric_code].map { |err| err[:error] }
-    assert error_codes.include?(:wrong_length)
-    assert error_codes.include?(:not_a_number)
-  end
-
-  test 'mernis_code must be an integer with 4 digits' do
-    fake = countries(:turkey).dup
-    fake.mernis_code = (0...5).map { ('a'..'z').to_a[rand(26)] }.join
-    assert_not fake.valid?
-
-    error_codes = fake.errors.details[:mernis_code].map { |err| err[:error] }
-    assert error_codes.include?(:wrong_length)
-    assert error_codes.include?(:not_a_number)
-  end
+  has_validation_callback :capitalize_attributes, :before
 end

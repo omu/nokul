@@ -6,13 +6,13 @@ PATH
       rails (~> 6.0.0.beta1)
 
 PATH
-  remote: /vagrant/plugins/support
+  remote: /home/msdundar/projects/nokul/plugins/support
   specs:
     nokul-support (0.1.0)
       activesupport (~> 6.0.0.beta1)
 
 PATH
-  remote: /vagrant/plugins/tenant/common
+  remote: /home/msdundar/projects/nokul/plugins/tenant/common
   specs:
     nokul-tenant (0.1.0)
       nokul-support

@@ -1,57 +1,5 @@
 ---
 tr:
-  account:
-    duties:
-      create:
-        success: Görevlendirme başarıyla oluşturuldu.
-      destroy:
-        success: Görevlendirme başarıyla silindi.
-        warning: Görevlendirme silinemedi!
-      edit:
-        form_title: Görevlendirmeyi Güncelle
-      new:
-        form_title: Görevlendirme Oluştur
-      update:
-        success: Görevlendirme başarıyla güncellendi.
-    employees:
-      create:
-        success: Personel kaydı başarıyla oluşturuldu.
-      destroy:
-        success: Personel kaydı başarıyla silindi.
-        warning: Personel kaydı silinemedi!
-      edit:
-        form_title: Personel Kaydını Güncelle
-      new:
-        form_title: Personel Kaydı Oluştur
-      update:
-        success: Personel kaydı başarıyla güncellendi.
-    positions:
-      create:
-        success: İdari görev başarıyla oluşturuldu.
-      destroy:
-        success: İdari görev başarıyla silindi.
-        warning: İdari görev silinemedi!
-      edit:
-        form_title: İdari Görevi Güncelle
-      new:
-        form_title: İdari Görev Oluştur
-      update:
-        success: İdari görev başarıyla güncellendi.
-    profile:
-      edit:
-        extension_number: Dahili numaranız
-        linkedin: Linkedin Kullanıcı Adı
-        orcid: ORCID
-        phone_number: Telefon numaranız
-        profile_settings: Profil Ayarları
-        public_photo: Profilimde Fotoğrafımı Göster
-        public_studies: Profilimde Akademik Çalışmalarımı Göster
-        skype: Skype Kullanıcı Adı
-        twitter: Twitter Kullanıcı Adı
-        visiblity_settings: Görünürlük Ayarları
-        website: Web Sayfanız
-      update:
-        success: Profiliniz başarıyla güncellendi
   activerecord:
     attributes:
       duty:
@@ -83,8 +31,3 @@ tr:
       position:
         create: İdari Görev Oluştur
         update: İdari Görevi Güncelle
-  simple_form:
-    placeholders:
-      user:
-        linkedin: linkedin.com/
-        twitter: twitter.com/

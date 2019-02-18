@@ -19,6 +19,8 @@ class Student < ApplicationRecord
   # background jobs
   after_create_commit :build_identity_information, if: proc { identity.nil? }
 
+  private
+
   def build_identity_information
     Kps::IdentitySaveJob.perform_later(user, id)
   end

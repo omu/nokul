@@ -1,0 +1,14 @@
+en:
+  account:
+    employees:
+      create:
+        success: Employee successfully created.
+      destroy:
+        success: Employee successfully deleted.
+        warning: Employee could not be deleted.
+      edit:
+        form_title: Update the Employee
+      new:
+        form_title: Create a Employee
+      update:
+        success: Employee successfully updated.
