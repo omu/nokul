@@ -30,7 +30,7 @@ author: M. Serhat Dundar
 
 ```ruby
   belongs_to :user
-  belongs_to :user, :unit,
+  belongs_to :user, :unit
   belongs_to :user, optional: true
 ```
 
