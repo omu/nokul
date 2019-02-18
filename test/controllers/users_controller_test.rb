@@ -18,31 +18,6 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test 'should get new' do
-    get new_user_path
-    assert_response :success
-  end
-
-  test 'should create user' do
-    skip 'this block on CircleCI since it needs IP permissions to run.' if ENV['CI']
-    assert_difference('User.count') do
-      post users_path params: {
-        user: {
-          id_number: '70336212330',
-          email: 'new_user@gmail.com',
-          password: '123456',
-          password_confirmation: '123456'
-        }
-      }
-    end
-
-    user = User.last
-
-    assert_equal '70336212330', user.id_number
-    assert_redirected_to users_path
-    assert_equal t('users.create.success'), flash[:notice]
-  end
-
   test 'should get edit' do
     get edit_user_path(@user)
     assert_response :success

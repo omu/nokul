@@ -1,5 +1,25 @@
 # frozen_string_literal: true
 
+devise_for :users, controllers: {
+  registrations: 'account/registrations',
+  passwords: 'account/passwords',
+  sessions: 'account/sessions',
+  unlocks: 'account/unlocks'
+}
+
+devise_scope :user do
+  get 'account', to: 'account/registrations#edit'
+  get 'login', to: 'account/sessions#new'
+  get 'register', to: 'account/registrations#new'
+  get 'recover', to: 'account/passwords#new'
+  delete 'logout', to: 'account/sessions#destroy'
+end
+
+scope module: :account do
+  get '/profile', to: 'profile_settings#edit'
+  patch '/profile', to: 'profile_settings#update'
+end
+
 resources :users, only: [] do
   scope module: :account do
     resources :identities, except: [:show] do
@@ -12,8 +32,5 @@ resources :users, only: [] do
     resources :employees, except: %i[index show]
     resources :duties, except: %i[index show]
     resources :positions, except: %i[index show]
-
-    get '/profile', to: 'profile#edit'
-    post '/profile', to: 'profile#update'
   end
 end

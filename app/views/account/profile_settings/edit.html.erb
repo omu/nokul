@@ -1,6 +1,6 @@
 <div class='row'>
   <div class='col-sm-12'>
-    <%= simple_form_for current_user, url: user_profile_path(current_user), method: :post do |f| %>
+    <%= simple_form_for current_user, url: profile_path, method: :patch do |f| %>
       <div class='card'>
         <div class='card-header'>
           <%= t('.profile_settings') %>
@@ -26,7 +26,7 @@
               <label><%= t('.country') %></label>
               <div class="input-group">
                 <div class="input-group-prepend">
-                  <span class="input-group-text"><%= fa_icon('phone') %></span>
+                  <span class="input-group-text"><%= fa_icon('globe') %></span>
                 </div>
                 <%= f.input :country,
                             as: :select,
@@ -63,7 +63,7 @@
               <label><%= t('.website') %></label>
               <div class="input-group">
                 <div class="input-group-prepend">
-                  <span class="input-group-text"><%= fa_icon('globe') %></span>
+                  <span class="input-group-text"><%= fa_icon('home') %></span>
                 </div>
                 <%= f.input :website, wrapper: false, label: false %>
               </div>

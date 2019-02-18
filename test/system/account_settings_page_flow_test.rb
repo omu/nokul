@@ -12,7 +12,7 @@ class AccountSettingsFlowTest < ApplicationSystemTestCase
   SUPPORTED_SCREEN_RESOLUTIONS.each do |resolution|
     test "can update account password with a valid password under a #{resolution} screen" do
       page.driver.browser.manage.window.resize_to(*resolution)
-      visit(edit_user_registration_path)
+      visit(account_path)
       {
         password: 'password',
         password_confirmation: 'password',
@@ -21,12 +21,12 @@ class AccountSettingsFlowTest < ApplicationSystemTestCase
         fill_in("user[#{key}]", with: value)
       end
       click_button(t('helpers.submit.user.update'))
-      assert_equal t('devise.registrations.updated'), page.find('div', class: 'toast-message').text
+      assert_equal t('devise.registrations.user.updated'), page.find('div', class: 'toast-message').text
     end
 
     test "can not update account password with a missing password under a #{resolution} screen" do
       page.driver.browser.manage.window.resize_to(*resolution)
-      visit(edit_user_registration_path)
+      visit(account_path)
       {
         password: 'password',
         password_confirmation: 'password'

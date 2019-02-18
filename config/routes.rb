@@ -3,12 +3,11 @@
 Rails.application.routes.draw do
   root to: 'home#index'
 
+  draw :account
   draw :admin
   draw :calendar_management
   draw :first_registration
 
-  draw :devise
-  draw :account
   draw :course_management
   draw :references
 
@@ -21,7 +20,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :users do
+  resources :users, except: [:new, :create] do
     get 'save_address_from_mernis', on: :member
     get 'save_identity_from_mernis', on: :member
   end
