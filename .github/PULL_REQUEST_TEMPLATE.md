@@ -12,7 +12,7 @@
 
 **Sistem/Ops etkileri:**
 
-[//]: # (Bu PR merge edildiğinde sunucular üzerinde bir değişiklik - paket kurulması, buildpack eklenmesi vb. - yapılması gerekecekmi, açıklayın.)
+[//]: # (Bu PR merge edildiğinde sunucular üzerinde bir değişiklik - paket kurulması, buildpack eklenmesi vb. - yapılması gerekecek mi, açıklayın.)
 
 **Kontrol listesi:**
 
