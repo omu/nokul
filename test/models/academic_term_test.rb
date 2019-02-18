@@ -9,8 +9,8 @@ class AcademicTermTest < ActiveSupport::TestCase
   include ValidationTestModule
 
   # relations
-  has_many :calendars
-  has_many :registration_documents
+  has_many :calendars, dependent: :nullify
+  has_many :registration_documents, dependent: :nullify
 
   # validations: presence
   validates_presence_of :active

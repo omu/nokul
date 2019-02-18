@@ -8,9 +8,9 @@ class AssessmentMethodTest < ActiveSupport::TestCase
   include ValidationTestModule
 
   # relations
-  has_many :available_courses
-  has_many :course_assessment_methods
-  has_many :course_evaluation_types
+  has_many :course_assessment_methods, dependent: :destroy
+  has_many :course_evaluation_types, through: :course_assessment_methods
+  has_many :available_courses, through: :course_evaluation_types
 
   # validations: presence
   validates_presence_of :name

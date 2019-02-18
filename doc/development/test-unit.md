@@ -23,6 +23,7 @@ author: M. Serhat Dundar
 ```ruby
   has_many :addresses
   has_many :addresses, :identities
+  has_many :addresses, through: :foo, dependent: :destroy
 ```
 
 ### belongs_to
@@ -30,6 +31,13 @@ author: M. Serhat Dundar
 ```ruby
   belongs_to :user
   belongs_to :user, :unit
+  belongs_to :user, optional: true
+```
+
+### accepts_nested_attributes_for
+
+```ruby
+  accepts_nested_attributes_for :units, allow_destroy: true
 ```
 
 --------------------------------------------------

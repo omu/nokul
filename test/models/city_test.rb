@@ -9,9 +9,9 @@ class CityTest < ActiveSupport::TestCase
 
   # relations
   belongs_to :country
-  has_many :addresses
-  has_many :districts
-  has_many :units
+  has_many :addresses, through: :districts
+  has_many :districts, dependent: :destroy
+  has_many :units, through: :districts
 
   # validations: presence
   validates_presence_of :name

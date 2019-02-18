@@ -9,8 +9,8 @@ class CurriculumCourseGroupTest < ActiveSupport::TestCase
   # relations
   belongs_to :course_group
   belongs_to :curriculum_semester
-  has_many :courses
-  has_many :curriculum_courses
+  has_many :curriculum_courses, dependent: :destroy
+  has_many :courses, through: :curriculum_courses
 
   # validations: presence
   validates_presence_of :course_group

@@ -9,8 +9,8 @@ class CommitteeDecisionTest < ActiveSupport::TestCase
 
   # relations
   belongs_to :meeting_agenda
-  has_one :agenda
-  has_many :calendar_committee_decisions
+  has_one :agenda, through: :meeting_agenda
+  has_many :calendar_committee_decisions, dependent: :destroy
 
   # validations: presence
   validates_presence_of :description

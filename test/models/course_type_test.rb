@@ -7,7 +7,7 @@ class CourseTypeTest < ActiveSupport::TestCase
   include ValidationTestModule
 
   # relations
-  has_many :courses
+  has_many :courses, dependent: :nullify
 
   # validations: presence
   validates_presence_of :name

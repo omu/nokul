@@ -7,8 +7,8 @@ class AvailableCourseLecturerTest < ActiveSupport::TestCase
   include ValidationTestModule
 
   # relations
-  belongs_to :group
-  belongs_to :lecturer
+  belongs_to :group, class_name: 'AvailableCourseGroup'
+  belongs_to :lecturer, class_name: 'Employee'
 
   # validations: presence
   validates_presence_of :coordinator

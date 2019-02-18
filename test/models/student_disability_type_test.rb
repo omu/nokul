@@ -7,5 +7,5 @@ class StudentDisabilityTypeTest < ActiveSupport::TestCase
   include ReferenceTestModule
 
   # relations
-  has_many :prospective_students
+  has_many :prospective_students, dependent: :nullify
 end

@@ -7,8 +7,11 @@ class AvailableCourseGroupTest < ActiveSupport::TestCase
   include ValidationTestModule
 
   # relations
-  belongs_to :available_course
-  has_many :lecturers
+  belongs_to :available_course, counter_cache: :groups_count
+  has_many :lecturers, class_name: 'AvailableCourseLecturer',
+                       foreign_key: :group_id,
+                       inverse_of: :group,
+                       dependent: :destroy
 
   # validations: presence
   validates_presence_of :name

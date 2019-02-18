@@ -13,6 +13,7 @@ class IdentityTest < ActiveSupport::TestCase
   end
 
   # relations
+  belongs_to :student, optional: true
   belongs_to :user
 
   # validations: presence
