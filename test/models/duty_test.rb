@@ -13,8 +13,8 @@ class DutyTest < ActiveSupport::TestCase
   # relations
   belongs_to :employee
   belongs_to :unit
-  has_many :administrative_functions
-  has_many :positions
+  has_many :positions, dependent: :destroy
+  has_many :administrative_functions, through: :positions
 
   # validations: presence
   validates_presence_of :start_date

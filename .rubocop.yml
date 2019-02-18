@@ -18,6 +18,7 @@ Metrics/BlockLength:
   Exclude:
     - config/routes/**/*
     - lib/tasks/**/*.rake # Won't fix
+    - test/models/concerns/association_test_module.rb # Won't fix
     - test/models/concerns/validation_test_module.rb # Won't fix
 Metrics/MethodLength:
   Exclude:

@@ -8,7 +8,7 @@ class CourseGroupTypeTest < ActiveSupport::TestCase
   include ValidationTestModule
 
   # relations
-  has_many :course_groups
+  has_many :course_groups, dependent: :nullify
 
   # validations: presence
   validates_presence_of :name

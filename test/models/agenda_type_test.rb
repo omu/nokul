@@ -8,7 +8,7 @@ class AgendaTypeTest < ActiveSupport::TestCase
   include ValidationTestModule
 
   # relations
-  has_many :agendas
+  has_many :agendas, dependent: :nullify
 
   # validations: presence
   validates_presence_of :name

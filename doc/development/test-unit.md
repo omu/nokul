@@ -23,13 +23,15 @@ author: M. Serhat Dundar
 ```ruby
   has_many :addresses
   has_many :addresses, :identities
+  has_many :addresses, through: :foo, dependent: :destroy
 ```
 
 ### belongs_to
 
 ```ruby
   belongs_to :user
-  belongs_to :user, :unit
+  belongs_to :user, :unit,
+  belongs_to :user, optional: true
 ```
 
 --------------------------------------------------

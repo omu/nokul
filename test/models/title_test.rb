@@ -7,7 +7,7 @@ class TitleTest < ActiveSupport::TestCase
   include ValidationTestModule
 
   # relations
-  has_many :employees
+  has_many :employees, dependent: :nullify
 
   # validations: presence
   validates_presence_of :branch

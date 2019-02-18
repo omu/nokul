@@ -9,7 +9,10 @@ class ProspectiveStudentTest < ActiveSupport::TestCase
   include ValidationTestModule
 
   # relations
+  belongs_to :high_school_type, optional: true
+  belongs_to :language, optional: true
   belongs_to :student_entrance_type
+  belongs_to :student_disability_type, optional: true
   belongs_to :unit
 
   # validations: presence

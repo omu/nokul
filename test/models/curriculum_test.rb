@@ -19,13 +19,17 @@ class CurriculumTest < ActiveSupport::TestCase
 
   # relations
   belongs_to :unit
-  has_many :curriculum_programs
-  has_many :programs
-  has_many :semesters
-  has_many :courses
-  has_many :curriculum_course_groups
-  has_many :course_groups
-  has_many :available_courses
+  has_many :available_courses, dependent: :destroy
+  has_many :curriculum_programs, dependent: :destroy
+  has_many :programs, through: :curriculum_programs,
+                      source: :unit
+  has_many :semesters, class_name: 'CurriculumSemester',
+                       inverse_of: :curriculum,
+                       dependent: :destroy
+  has_many :courses, through: :semesters
+  has_many :curriculum_course_groups, through: :semesters
+  has_many :course_groups, through: :curriculum_course_groups
+  accepts_nested_attributes_for :semesters, allow_destroy: true
 
   # validations: presence
   validates_presence_of :name

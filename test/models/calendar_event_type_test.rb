@@ -8,8 +8,8 @@ class CalendarEventTypeTest < ActiveSupport::TestCase
   include ValidationTestModule
 
   # relations
-  has_many :calendars
-  has_many :calendar_events
+  has_many :calendar_events, dependent: :destroy
+  has_many :calendars, through: :calendar_events
 
   # validations: presence
   validates_presence_of :name

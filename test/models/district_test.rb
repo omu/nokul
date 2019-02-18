@@ -9,8 +9,8 @@ class DistrictTest < ActiveSupport::TestCase
 
   # relations
   belongs_to :city
-  has_many :addresses
-  has_many :units
+  has_many :addresses, dependent: :nullify
+  has_many :units, dependent: :nullify
 
   # validations: presence
   validates_presence_of :name

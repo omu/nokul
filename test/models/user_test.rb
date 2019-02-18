@@ -9,17 +9,17 @@ class UserTest < ActiveSupport::TestCase
   include ActiveJob::TestHelper
 
   # relations
-  has_many :addresses
-  has_many :identities
-  has_many :employees
-  has_many :students
-  has_many :duties
-  has_many :units
-  has_many :positions
-  has_many :administrative_functions
-  has_many :certifications
-  has_many :articles
-  has_many :projects
+  has_many :addresses, dependent: :destroy
+  has_many :articles, dependent: :destroy
+  has_many :certifications, dependent: :destroy
+  has_many :identities, dependent: :destroy
+  has_many :employees, dependent: :destroy
+  has_many :projects, dependent: :destroy
+  has_many :students, dependent: :destroy
+  has_many :duties, through: :employees
+  has_many :units, through: :employees
+  has_many :positions, through: :duties
+  has_many :administrative_functions, through: :duties
 
   # validations: presence
   validates_presence_of :email

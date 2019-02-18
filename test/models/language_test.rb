@@ -8,8 +8,8 @@ class LanguageTest < ActiveSupport::TestCase
   include ValidationTestModule
 
   # relations
-  has_many :courses
-  has_many :prospective_students
+  has_many :courses, dependent: :nullify
+  has_many :prospective_students, dependent: :nullify
 
   # validations: presence
   validates_presence_of :name

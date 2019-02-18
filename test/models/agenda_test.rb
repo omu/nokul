@@ -10,8 +10,8 @@ class AgendaTest < ActiveSupport::TestCase
   # relations
   belongs_to :agenda_type
   belongs_to :unit
-  has_many :meeting_agendas
-  has_many :meetings
+  has_many :meeting_agendas, dependent: :destroy
+  has_many :meetings, through: :meeting_agendas, source: :committee_meeting
 
   # validations: presence
   validates_presence_of :description

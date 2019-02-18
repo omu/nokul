@@ -8,8 +8,8 @@ class EvaluationTypeTest < ActiveSupport::TestCase
   include CallbackTestModule
 
   # relations
-  has_many :available_courses
-  has_many :course_evaluation_types
+  has_many :course_evaluation_types, dependent: :destroy
+  has_many :available_courses, through: :course_evaluation_types
 
   # validations: presence
   validates_presence_of :name

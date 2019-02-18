@@ -8,10 +8,10 @@ class CurriculumSemesterTest < ActiveSupport::TestCase
   include ValidationTestModule
 
   # relations
-  belongs_to :curriculum
-  has_many :courses
-  has_many :curriculum_course_groups
-  has_many :curriculum_courses
+  belongs_to :curriculum, counter_cache: :semesters_count, inverse_of: :semesters
+  has_many :curriculum_courses, dependent: :destroy
+  has_many :curriculum_course_groups, dependent: :destroy
+  has_many :courses, through: :curriculum_courses
 
   # validations: presence
   validates_presence_of :year

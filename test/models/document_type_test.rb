@@ -7,7 +7,7 @@ class DocumentTypeTest < ActiveSupport::TestCase
   include ValidationTestModule
 
   # relations
-  has_many :registration_documents
+  has_many :registration_documents, dependent: :destroy
 
   # validations: presence
   validates_presence_of :name

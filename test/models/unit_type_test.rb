@@ -8,7 +8,7 @@ class UnitTypeTest < ActiveSupport::TestCase
   include ReferenceTestModule
 
   # relations
-  has_many :units
+  has_many :units, dependent: :nullify
 
   # enums
   has_enum :group,

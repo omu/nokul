@@ -11,8 +11,8 @@ class StudentTest < ActiveSupport::TestCase
   # relations
   belongs_to :user
   belongs_to :unit
-  has_one :identity
-  has_many :calendars
+  has_one :identity, dependent: :destroy
+  has_many :calendars, through: :unit
 
   # validations: presence
   validates_presence_of :student_number

@@ -10,6 +10,7 @@ class CurriculumCourseTest < ActiveSupport::TestCase
 
   # relations
   belongs_to :course
+  belongs_to :curriculum_course_group, optional: true
   belongs_to :curriculum_semester
 
   # validations: presence
