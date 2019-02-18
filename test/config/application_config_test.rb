@@ -40,4 +40,12 @@ class ApplicationConfigTest < ActiveSupport::TestCase
   test 'autoloader is set to :classic until Rails 6 stable' do
     assert_equal Rails.application.config.autoloader, :classic
   end
+
+  test 'image_processor is set to :vips' do
+    assert_equal Rails.application.config.active_storage.variant_processor, :vips
+  end
+
+  test 'schema format is set to :sql' do
+    assert_equal Rails.application.config.active_record.schema_format, :sql
+  end
 end

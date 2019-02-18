@@ -2,7 +2,7 @@
 
 module Committee
   class DashboardController < ApplicationController
-    include PagyBackendWithHelpers
+    include SearchableModule
 
     def index
       @committees = pagy_by_search(

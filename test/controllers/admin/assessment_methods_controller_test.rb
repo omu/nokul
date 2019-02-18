@@ -3,7 +3,7 @@
 require 'test_helper'
 
 module Admin
-  class AssessmentMethodControllerTest < ActionDispatch::IntegrationTest
+  class AssessmentMethodsControllerTest < ActionDispatch::IntegrationTest
     setup do
       sign_in users(:serhat)
       @assessment_method = assessment_methods(:exam)

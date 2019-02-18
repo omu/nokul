@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class UnitsController < ApplicationController
-  include PagyBackendWithHelpers
+  include SearchableModule
+
   before_action :set_unit, only: %i[edit update destroy show courses programs curriculums employees]
 
   def index

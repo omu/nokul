@@ -2,7 +2,7 @@
 
 module Admin
   class CountriesController < ApplicationController
-    include PagyBackendWithHelpers
+    include SearchableModule
 
     before_action :set_country, only: %i[show edit update destroy]
 

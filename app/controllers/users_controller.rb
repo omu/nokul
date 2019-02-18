@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-  include PagyBackendWithHelpers
-  include LastUpdateFromMernis
+  include SearchableModule
+  include UpdateableFromMernis
 
   before_action :set_user, except: :index
   before_action :set_address_elapsed_time, only: %i[save_address_from_mernis]

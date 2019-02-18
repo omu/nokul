@@ -2,7 +2,7 @@
 
 module ReferenceResource
   extend ActiveSupport::Concern
-  include PagyBackendWithHelpers
+  include SearchableModule
 
   # rubocop:disable Metrics/BlockLength
   # rubocop:disable Rails/LexicallyScopedActionFilter

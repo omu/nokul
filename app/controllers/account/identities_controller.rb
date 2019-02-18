@@ -2,7 +2,7 @@
 
 module Account
   class IdentitiesController < ApplicationController
-    include LastUpdateFromMernis
+    include UpdateableFromMernis
 
     before_action :set_user
     before_action :set_identity, only: %i[edit update destroy]

@@ -2,7 +2,7 @@
 
 module FirstRegistration
   class RegistrationDocumentsController < ApplicationController
-    include PagyBackendWithHelpers
+    include SearchableModule
 
     before_action :set_registration_document, only: %i[edit update destroy]
 

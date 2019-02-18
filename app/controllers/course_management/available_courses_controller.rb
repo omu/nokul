@@ -2,7 +2,7 @@
 
 module CourseManagement
   class AvailableCoursesController < ApplicationController
-    include PagyBackendWithHelpers
+    include SearchableModule
 
     before_action :set_available_course, only: %i[show edit update destroy]
 
