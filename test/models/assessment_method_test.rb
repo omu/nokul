@@ -3,9 +3,9 @@
 require 'test_helper'
 
 class AssessmentMethodTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include CallbackTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::CallbackHelper
+  extend Support::Minitest::ValidationHelper
 
   # relations
   has_many :course_assessment_methods, dependent: :destroy
@@ -22,5 +22,5 @@ class AssessmentMethodTest < ActiveSupport::TestCase
   validates_length_of :name
 
   # callbacks
-  has_validation_callback :capitalize_attributes, :before
+  before_validation :capitalize_attributes
 end

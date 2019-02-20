@@ -3,9 +3,9 @@
 require 'test_helper'
 
 class CurriculumTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include EnumerationTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::EnumerationHelper
+  extend Support::Minitest::ValidationHelper
 
   # constants
   {
@@ -51,7 +51,7 @@ class CurriculumTest < ActiveSupport::TestCase
   validates_numerical_range :semesters_count, greater_than_or_equal_to: 0
 
   # enums
-  has_enum :status, passive: 0, active: 1
+  enum status: { passive: 0, active: 1 }
 
   # custom methods
   test 'build_semester method' do

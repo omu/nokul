@@ -3,9 +3,9 @@
 require 'test_helper'
 
 class CalendarEventTypeTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include EnumerationTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::EnumerationHelper
+  extend Support::Minitest::ValidationHelper
 
   # relations
   has_many :calendar_events, dependent: :destroy
@@ -24,13 +24,14 @@ class CalendarEventTypeTest < ActiveSupport::TestCase
   validates_length_of :identifier
 
   # enums
-  has_enum :category,
-           applications: 1,
-           payments: 2,
-           registrations: 3,
-           advisor: 4,
-           exams: 5,
-           courses: 6,
-           submission: 7,
-           announcement: 8
+  enum category: {
+    applications: 1,
+    payments: 2,
+    registrations: 3,
+    advisor: 4,
+    exams: 5,
+    courses: 6,
+    submission: 7,
+    announcement: 8
+  }
 end

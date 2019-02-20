@@ -3,8 +3,8 @@
 require 'test_helper'
 
 class TitleTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::ValidationHelper
 
   # relations
   has_many :employees, dependent: :nullify

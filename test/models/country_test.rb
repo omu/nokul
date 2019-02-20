@@ -3,9 +3,9 @@
 require 'test_helper'
 
 class CountryTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include CallbackTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::CallbackHelper
+  extend Support::Minitest::ValidationHelper
 
   # relations
   has_many :addresses, through: :districts
@@ -39,5 +39,5 @@ class CountryTest < ActiveSupport::TestCase
   validates_numerical_range :yoksis_code, greater_than_or_equal_to: 1
 
   # callbacks
-  has_validation_callback :capitalize_attributes, :before
+  before_validation :capitalize_attributes
 end

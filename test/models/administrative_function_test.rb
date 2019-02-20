@@ -3,7 +3,7 @@
 require 'test_helper'
 
 class AdministrativeFunctionTest < ActiveSupport::TestCase
-  include AssociationTestModule
+  extend Support::Minitest::AssociationHelper
   include ReferenceTestModule
 
   # relations

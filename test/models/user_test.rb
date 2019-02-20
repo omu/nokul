@@ -3,9 +3,9 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include CallbackTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::CallbackHelper
+  extend Support::Minitest::ValidationHelper
   include ActiveJob::TestHelper
 
   # relations
@@ -45,8 +45,8 @@ class UserTest < ActiveSupport::TestCase
   validates_numericality_of :extension_number
 
   # callback tests
-  has_commit_callback :build_address_information, :after
-  has_commit_callback :build_identity_information, :after
+  after_commit :build_address_information
+  after_commit :build_identity_information
 
   # validations: email
   test 'email addresses validated against RFC' do
