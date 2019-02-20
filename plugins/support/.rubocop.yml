@@ -9,3 +9,9 @@ Metrics/LineLength:
 Naming/FileName:
   Exclude:
     - lib/nokul-support.rb
+Metrics/MethodLength:
+  Exclude:
+    - lib/nokul/support/minitest/validation_helper.rb # Won't fix
+Metrics/AbcSize:
+  Exclude:
+    - lib/nokul/support/minitest/validation_helper.rb # Won't fix
