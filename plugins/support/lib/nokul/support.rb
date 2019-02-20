@@ -13,3 +13,5 @@ require_relative 'support/uniq_collection'
 require_relative 'support/coding'
 require_relative 'support/sensitive'
 require_relative 'support/rest_client'
+
+require_relative 'support/minitest'
