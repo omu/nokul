@@ -3,10 +3,10 @@
 require 'test_helper'
 
 class CurriculumCourseTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include CallbackTestModule
-  include EnumerationTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::CallbackHelper
+  extend Support::Minitest::EnumerationHelper
+  extend Support::Minitest::ValidationHelper
 
   # relations
   belongs_to :course
@@ -26,10 +26,10 @@ class CurriculumCourseTest < ActiveSupport::TestCase
   validates_uniqueness_of :course
 
   # enums
-  has_enum :type, compulsory: 0, elective: 1
+  enum type: { compulsory: 0, elective: 1 }
 
   # callbacks
-  has_validation_callback :assign_type, :before
+  before_validation :assign_type
 
   test 'callbacks must set value the type for a curriculum course' do
     curriculum_course = curriculum_courses(:one).dup

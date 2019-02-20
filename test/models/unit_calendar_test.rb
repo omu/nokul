@@ -3,8 +3,8 @@
 require 'test_helper'
 
 class UnitCalendarTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::ValidationHelper
 
   # relations
   belongs_to :calendar

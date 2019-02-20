@@ -3,8 +3,8 @@
 require 'test_helper'
 
 class DutyTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::ValidationHelper
 
   setup do
     @duties = employees(:serhat_active).duties

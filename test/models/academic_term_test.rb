@@ -3,10 +3,10 @@
 require 'test_helper'
 
 class AcademicTermTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include CallbackTestModule
-  include EnumerationTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::CallbackHelper
+  extend Support::Minitest::EnumerationHelper
+  extend Support::Minitest::ValidationHelper
 
   # relations
   has_many :calendars, dependent: :nullify
@@ -26,7 +26,7 @@ class AcademicTermTest < ActiveSupport::TestCase
   validates_length_of :year
 
   # enums
-  has_enum :term, fall: 0, spring: 1, summer: 2
+  enum term: { fall: 0, spring: 1, summer: 2 }
 
   # validations: AcademicTermValidator
   test 'one of the academic terms must be active' do
@@ -43,7 +43,7 @@ class AcademicTermTest < ActiveSupport::TestCase
   end
 
   # callbacks
-  has_save_callback :deactivate_academic_terms, :after
+  after_save :deactivate_academic_terms
 
   test 'callback ensures that only one academic term must be active' do
     active_term = AcademicTerm.active.last

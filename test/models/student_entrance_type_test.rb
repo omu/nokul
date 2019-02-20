@@ -3,7 +3,7 @@
 require 'test_helper'
 
 class StudentEntranceTypeTest < ActiveSupport::TestCase
-  include AssociationTestModule
+  extend Support::Minitest::AssociationHelper
   include ReferenceTestModule
 
   # relations

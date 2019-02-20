@@ -3,9 +3,9 @@
 require 'test_helper'
 
 class CurriculumSemesterTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include EnumerationTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::EnumerationHelper
+  extend Support::Minitest::ValidationHelper
 
   # relations
   belongs_to :curriculum, counter_cache: :semesters_count, inverse_of: :semesters
@@ -22,7 +22,7 @@ class CurriculumSemesterTest < ActiveSupport::TestCase
   validates_numerical_range :sequence, greater_than: 0
 
   # enums
-  has_enum :term, fall: 0, spring: 1, summer: 2
+  enum term: { fall: 0, spring: 1, summer: 2 }
 
   # custom methods
   test 'total_ects method' do

@@ -3,9 +3,9 @@
 require 'test_helper'
 
 class CommitteeMeetingTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include CallbackTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::CallbackHelper
+  extend Support::Minitest::ValidationHelper
 
   # relations
   belongs_to :unit
@@ -22,5 +22,5 @@ class CommitteeMeetingTest < ActiveSupport::TestCase
   validates_uniqueness_of :meeting_no
 
   # callbacks
-  has_validation_callback :assign_year, :before
+  before_validation :assign_year
 end

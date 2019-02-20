@@ -23,11 +23,7 @@ require 'webmock/minitest'
 WebMock.allow_net_connect!
 
 # Test Modules
-require_relative 'models/concerns/association_test_module'
-require_relative 'models/concerns/callback_test_module'
-require_relative 'models/concerns/enumeration_test_module'
 require_relative 'models/concerns/reference_test_module'
-require_relative 'models/concerns/validation_test_module'
 
 module ActiveSupport
   class TestCase

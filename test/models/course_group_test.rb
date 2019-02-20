@@ -3,9 +3,9 @@
 require 'test_helper'
 
 class CourseGroupTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include CallbackTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::CallbackHelper
+  extend Support::Minitest::ValidationHelper
 
   # relations
   belongs_to :course_group_type
@@ -26,5 +26,5 @@ class CourseGroupTest < ActiveSupport::TestCase
   validates_uniqueness_of :name
 
   # callbacks
-  has_validation_callback :capitalize_attributes, :before
+  before_validation :capitalize_attributes
 end

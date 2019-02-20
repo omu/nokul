@@ -3,9 +3,9 @@
 require 'test_helper'
 
 class DistrictTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include CallbackTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::CallbackHelper
+  extend Support::Minitest::ValidationHelper
 
   # relations
   belongs_to :city
@@ -28,5 +28,5 @@ class DistrictTest < ActiveSupport::TestCase
   validates_numericality_of :mernis_code
 
   # callbacks
-  has_validation_callback :capitalize_attributes, :before
+  before_validation :capitalize_attributes
 end
