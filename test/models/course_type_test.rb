@@ -3,11 +3,11 @@
 require 'test_helper'
 
 class CourseTypeTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::ValidationHelper
 
   # relations
-  has_many :courses
+  has_many :courses, dependent: :nullify
 
   # validations: presence
   validates_presence_of :name

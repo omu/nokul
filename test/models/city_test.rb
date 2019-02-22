@@ -3,15 +3,15 @@
 require 'test_helper'
 
 class CityTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include CallbackTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::CallbackHelper
+  extend Support::Minitest::ValidationHelper
 
   # relations
   belongs_to :country
-  has_many :addresses
-  has_many :districts
-  has_many :units
+  has_many :addresses, through: :districts
+  has_many :districts, dependent: :destroy
+  has_many :units, through: :districts
 
   # validations: presence
   validates_presence_of :name
@@ -26,5 +26,5 @@ class CityTest < ActiveSupport::TestCase
   validates_length_of :alpha_2_code
 
   # callbacks
-  has_validation_callback :capitalize_attributes, :before
+  before_validation :capitalize_attributes
 end

@@ -3,13 +3,16 @@
 require 'test_helper'
 
 class ProspectiveStudentTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include CallbackTestModule
-  include EnumerationTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::CallbackHelper
+  extend Support::Minitest::EnumerationHelper
+  extend Support::Minitest::ValidationHelper
 
   # relations
+  belongs_to :high_school_type, optional: true
+  belongs_to :language, optional: true
   belongs_to :student_entrance_type
+  belongs_to :student_disability_type, optional: true
   belongs_to :unit
 
   # validations: presence
@@ -39,13 +42,13 @@ class ProspectiveStudentTest < ActiveSupport::TestCase
   validates_length_of :registration_district
 
   # enums
-  has_enum :additional_score, handicapped: 1
-  has_enum :gender, male: 1, female: 2
-  has_enum :nationality, turkish: 1, kktc: 2, foreign: 3
-  has_enum :placement_type, general_score: 1, additional_score: 2
+  enum additional_score: { handicapped: 1 }
+  enum gender: { male: 1, female: 2 }
+  enum nationality: { turkish: 1, kktc: 2, foreign: 3 }
+  enum placement_type: { general_score: 1, additional_score: 2 }
 
   # callbacks
-  has_create_callback :capitalize_attributes, :before
+  before_create :capitalize_attributes
 
   # search
   test 'prospective_student is a searchable model' do

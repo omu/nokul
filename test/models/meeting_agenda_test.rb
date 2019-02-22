@@ -3,13 +3,13 @@
 require 'test_helper'
 
 class MeetingAgendaTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::ValidationHelper
 
   # relations
   belongs_to :agenda
   belongs_to :committee_meeting
-  has_one :decision
+  has_one :decision, dependent: :destroy, class_name: 'CommitteeDecision'
 
   # validations: presence
   validates_presence_of :sequence_no

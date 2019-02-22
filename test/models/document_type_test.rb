@@ -3,11 +3,11 @@
 require 'test_helper'
 
 class DocumentTypeTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::ValidationHelper
 
   # relations
-  has_many :registration_documents
+  has_many :registration_documents, dependent: :destroy
 
   # validations: presence
   validates_presence_of :name

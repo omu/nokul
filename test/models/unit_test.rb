@@ -3,36 +3,36 @@
 require 'test_helper'
 
 class UnitTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::ValidationHelper
 
   # relations
   belongs_to :district
   belongs_to :unit_status
-  belongs_to :unit_type
-  belongs_to :unit_instruction_type
-  belongs_to :unit_instruction_language
-  belongs_to :university_type
-  has_many :duties
-  has_many :employees
-  has_many :students
-  has_many :users
-  has_many :positions
-  has_many :administrative_functions
-  has_many :agendas
-  has_many :meetings
-  has_many :meeting_agendas
-  has_many :decisions
-  has_many :courses
-  has_many :course_groups
-  has_many :curriculum_programs
-  has_many :curriculums
-  has_many :managed_curriculums
-  has_many :registration_documents
-  has_many :prospective_students
-  has_many :available_courses
-  has_many :unit_calendars
-  has_many :calendars
+  belongs_to :unit_type, optional: true
+  belongs_to :unit_instruction_type, optional: true
+  belongs_to :unit_instruction_language, optional: true
+  belongs_to :university_type, optional: true
+  has_many :duties, dependent: :destroy
+  has_many :employees, through: :duties
+  has_many :students, dependent: :nullify
+  has_many :users, through: :employees
+  has_many :positions, through: :duties
+  has_many :administrative_functions, through: :duties
+  has_many :agendas, dependent: :nullify
+  has_many :meetings, dependent: :nullify, class_name: 'CommitteeMeeting'
+  has_many :meeting_agendas, through: :meetings
+  has_many :decisions, through: :meeting_agendas, class_name: 'CommitteeDecision'
+  has_many :courses, dependent: :nullify
+  has_many :course_groups, dependent: :nullify
+  has_many :curriculum_programs, dependent: :destroy
+  has_many :curriculums, through: :curriculum_programs
+  has_many :managed_curriculums, dependent: :destroy, class_name: 'Curriculum'
+  has_many :registration_documents, dependent: :destroy
+  has_many :prospective_students, dependent: :destroy
+  has_many :available_courses, dependent: :destroy
+  has_many :unit_calendars, dependent: :destroy
+  has_many :calendars, through: :unit_calendars
 
   # validations: presence
   validates_presence_of :name

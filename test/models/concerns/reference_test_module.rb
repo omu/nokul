@@ -7,8 +7,8 @@ module ReferenceTestModule
 
   # callbacks
   included do
-    include CallbackTestModule
-    include ValidationTestModule
+    extend Support::Minitest::CallbackHelper
+    extend Support::Minitest::ValidationHelper
 
     # validations: presence
     validates_presence_of :name
@@ -26,6 +26,6 @@ module ReferenceTestModule
     validates_numerical_range :code, greater_than_or_equal_to: 0
 
     # callbacks
-    has_validation_callback :capitalize_attributes, :before
+    before_validation :capitalize_attributes
   end
 end

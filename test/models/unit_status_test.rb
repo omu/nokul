@@ -3,9 +3,9 @@
 require 'test_helper'
 
 class UnitStatusTest < ActiveSupport::TestCase
-  include AssociationTestModule
+  extend Support::Minitest::AssociationHelper
   include ReferenceTestModule
 
   # relations
-  has_many :units
+  has_many :units, dependent: :nullify
 end

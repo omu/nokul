@@ -3,20 +3,20 @@
 require 'test_helper'
 
 class AvailableCourseTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include CallbackTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::CallbackHelper
 
   # relations
   belongs_to :academic_term
-  belongs_to :coordinator
+  belongs_to :coordinator, class_name: 'Employee'
   belongs_to :course
   belongs_to :curriculum
   belongs_to :unit
-  has_many :evaluation_types
-  has_many :groups
+  has_many :evaluation_types, class_name: 'CourseEvaluationType', dependent: :destroy
+  has_many :groups, class_name: 'AvailableCourseGroup', dependent: :destroy
 
   # callbacks
-  has_validation_callback :assign_academic_term, :before
+  before_validation :assign_academic_term
 
   # validations: uniqueness
   test 'uniqueness validations for course of a academic term and curriculum' do

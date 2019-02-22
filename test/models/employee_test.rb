@@ -3,17 +3,17 @@
 require 'test_helper'
 
 class EmployeeTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::ValidationHelper
 
   # relations
   belongs_to :title
   belongs_to :user
-  has_many :administrative_functions
-  has_many :available_course_lecturers
-  has_many :duties
-  has_many :units
-  has_many :positions
+  has_many :administrative_functions, through: :duties
+  has_many :available_course_lecturers, foreign_key: :lecturer_id, inverse_of: :lecturer, dependent: :destroy
+  has_many :duties, dependent: :destroy
+  has_many :units, through: :duties
+  has_many :positions, through: :duties
 
   # validations: presence
   validates_presence_of :active

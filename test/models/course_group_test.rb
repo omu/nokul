@@ -3,16 +3,16 @@
 require 'test_helper'
 
 class CourseGroupTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include CallbackTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::CallbackHelper
+  extend Support::Minitest::ValidationHelper
 
   # relations
   belongs_to :course_group_type
   belongs_to :unit
-  has_many :group_courses
-  has_many :courses
-  has_many :curriculum_course_groups
+  has_many :group_courses, dependent: :destroy
+  has_many :courses, through: :group_courses
+  has_many :curriculum_course_groups, dependent: :destroy
 
   # validations: presence
   validates_presence_of :course_ids
@@ -26,5 +26,5 @@ class CourseGroupTest < ActiveSupport::TestCase
   validates_uniqueness_of :name
 
   # callbacks
-  has_validation_callback :capitalize_attributes, :before
+  before_validation :capitalize_attributes
 end

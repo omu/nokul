@@ -3,23 +3,23 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include CallbackTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::CallbackHelper
+  extend Support::Minitest::ValidationHelper
   include ActiveJob::TestHelper
 
   # relations
-  has_many :addresses
-  has_many :identities
-  has_many :employees
-  has_many :students
-  has_many :duties
-  has_many :units
-  has_many :positions
-  has_many :administrative_functions
-  has_many :certifications
-  has_many :articles
-  has_many :projects
+  has_many :addresses, dependent: :destroy
+  has_many :articles, dependent: :destroy
+  has_many :certifications, dependent: :destroy
+  has_many :identities, dependent: :destroy
+  has_many :employees, dependent: :destroy
+  has_many :projects, dependent: :destroy
+  has_many :students, dependent: :destroy
+  has_many :duties, through: :employees
+  has_many :units, through: :employees
+  has_many :positions, through: :duties
+  has_many :administrative_functions, through: :duties
 
   # validations: presence
   validates_presence_of :email
@@ -45,8 +45,8 @@ class UserTest < ActiveSupport::TestCase
   validates_numericality_of :extension_number
 
   # callback tests
-  has_commit_callback :build_address_information, :after
-  has_commit_callback :build_identity_information, :after
+  after_commit :build_address_information
+  after_commit :build_identity_information
 
   # validations: email
   test 'email addresses validated against RFC' do

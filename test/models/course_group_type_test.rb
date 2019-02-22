@@ -3,12 +3,12 @@
 require 'test_helper'
 
 class CourseGroupTypeTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include CallbackTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::CallbackHelper
+  extend Support::Minitest::ValidationHelper
 
   # relations
-  has_many :course_groups
+  has_many :course_groups, dependent: :nullify
 
   # validations: presence
   validates_presence_of :name
@@ -20,5 +20,5 @@ class CourseGroupTypeTest < ActiveSupport::TestCase
   validates_length_of :name
 
   # callbacks
-  has_validation_callback :capitalize_attributes, :before
+  before_validation :capitalize_attributes
 end

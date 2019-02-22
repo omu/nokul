@@ -3,8 +3,8 @@
 require 'test_helper'
 
 class RegistrationDocumentTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::ValidationHelper
 
   setup do
     @document = registration_documents(:omu_health_report)

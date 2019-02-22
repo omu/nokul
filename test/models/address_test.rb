@@ -3,10 +3,10 @@
 require 'test_helper'
 
 class AddressTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include CallbackTestModule
-  include EnumerationTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::CallbackHelper
+  extend Support::Minitest::EnumerationHelper
+  extend Support::Minitest::ValidationHelper
 
   test 'type column does not refer to STI' do
     assert_empty Identity.inheritance_column
@@ -28,10 +28,10 @@ class AddressTest < ActiveSupport::TestCase
   validates_length_of :phone_number
 
   # enumerations
-  has_enum :type, formal: 1, informal: 2
+  enum type: { formal: 1, informal: 2 }
 
   # callbacks
-  has_save_callback :capitalize_attributes, :before
+  before_save :capitalize_attributes
 
   # address_validator
   test 'a user can only have one formal address' do

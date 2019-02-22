@@ -3,15 +3,16 @@
 require 'test_helper'
 
 class CommitteeMeetingTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include CallbackTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::CallbackHelper
+  extend Support::Minitest::ValidationHelper
 
   # relations
   belongs_to :unit
-  has_many :agendas
-  has_many :decisions
-  has_many :meeting_agendas
+  has_many :meeting_agendas, dependent: :destroy
+  has_many :agendas, through: :meeting_agendas
+  has_many :decisions, through: :meeting_agendas, class_name: 'CommitteeDecision'
+  accepts_nested_attributes_for :meeting_agendas, allow_destroy: true
 
   # validations: presence
   validates_presence_of :meeting_date
@@ -21,5 +22,5 @@ class CommitteeMeetingTest < ActiveSupport::TestCase
   validates_uniqueness_of :meeting_no
 
   # callbacks
-  has_validation_callback :assign_year, :before
+  before_validation :assign_year
 end

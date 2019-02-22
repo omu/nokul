@@ -3,8 +3,8 @@
 require 'test_helper'
 
 class DutyTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::ValidationHelper
 
   setup do
     @duties = employees(:serhat_active).duties
@@ -13,8 +13,8 @@ class DutyTest < ActiveSupport::TestCase
   # relations
   belongs_to :employee
   belongs_to :unit
-  has_many :administrative_functions
-  has_many :positions
+  has_many :positions, dependent: :destroy
+  has_many :administrative_functions, through: :positions
 
   # validations: presence
   validates_presence_of :start_date

@@ -3,14 +3,15 @@
 require 'test_helper'
 
 class CourseEvaluationTypeTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::ValidationHelper
 
   # relations
   belongs_to :available_course
   belongs_to :evaluation_type
-  has_many :assessment_methods
-  has_many :course_assessment_methods
+  has_many :course_assessment_methods, dependent: :destroy
+  has_many :assessment_methods, through: :course_assessment_methods
+  accepts_nested_attributes_for :course_assessment_methods, allow_destroy: true
 
   # validations: presence
   validates_presence_of :percentage

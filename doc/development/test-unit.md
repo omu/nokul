@@ -4,12 +4,14 @@ author: M. Serhat Dundar
 
 # Unit Tests
 
-- Unit Test yazarken ilgili modülleri testinize include ederek aşağıda örneklenen test yardımcılarını kullanabilirsiniz.
+- Unit Test yazarken ilgili modülleri testinize `extend` ederek aşağıda örneklenen test yardımcılarını kullanabilirsiniz.
 - Nokul'da kullanılan stil, her satırda bir attribute'ün test edilmesidir!
 
 --------------------------------------------------
 
 ## Associations
+
+- Support::Minitest::AssociationHelper
 
 ### has_one
 
@@ -23,6 +25,7 @@ author: M. Serhat Dundar
 ```ruby
   has_many :addresses
   has_many :addresses, :identities
+  has_many :addresses, through: :foo, dependent: :destroy
 ```
 
 ### belongs_to
@@ -30,30 +33,48 @@ author: M. Serhat Dundar
 ```ruby
   belongs_to :user
   belongs_to :user, :unit
+  belongs_to :user, optional: true
+```
+
+### accepts_nested_attributes_for
+
+```ruby
+  accepts_nested_attributes_for :units, allow_destroy: true
 ```
 
 --------------------------------------------------
 
 ## Callbacks
 
-- Mümkün olan key değerleri `:before`, `:after` ve `:around`'tur.
+- Support::Minitest::CallbackHelper
 
 ```ruby
-  has_initialize_callback :method_name, :key
-  has_find_callback :method_name, :key
-  has_touch_callback :method_name, :key
-  has_validation_callback :method_name, :key
-  has_save_callback :method_name, :key
-  has_create_callback :method_name, :key
-  has_update_callback :method_name, :key
-  has_destroy_callback :method_name, :key
-  has_commit_callback :method_name, :key
-  has_rollback_callback :method_name, :key
+  after_commit :method_name
+  after_create :method_name
+  after_destroy :method_name
+  after_find :method_name
+  after_initialize :method_name
+  after_rollback :method_name
+  after_save :method_name
+  after_touch :method_name
+  after_update :method_name
+  after_validation :method_name
+  around_create :method_name
+  around_destroy :method_name
+  around_save :method_name
+  around_update :method_name
+  before_create :method_name
+  before_destroy :method_name
+  before_save :method_name
+  before_update :method_name
+  before_validation :method_name
 ```
 
 --------------------------------------------------
 
 ## Validations
+
+- Support::Minitest::ValidationHelper
 
 ### Presence
 
@@ -105,6 +126,42 @@ validates_numerical_range :yoksis_code, less_than_or_equal_to: 2000
 
 ## Enums
 
+- Support::Minitest::EnumerationHelper
+
 ```ruby
-has_enum :term, fall: 0, spring: 1, summer: 2
+enum term: { fall: 0, spring: 1, summer: 2 }
+```
+
+## Example
+
+```ruby
+class AcademicTermTest < ActiveSupport::TestCase
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::CallbackHelper
+  extend Support::Minitest::EnumerationHelper
+  extend Support::Minitest::ValidationHelper
+
+  # relations
+  has_many :calendars, dependent: :nullify
+  has_many :registration_documents, dependent: :nullify
+
+  # validations: presence
+  validates_presence_of :active
+  validates_presence_of :end_of_term
+  validates_presence_of :start_of_term
+  validates_presence_of :term
+  validates_presence_of :year
+
+  # validations: uniqueness
+  validates_uniqueness_of :year
+
+  # validations: length
+  validates_length_of :year
+
+  # enums
+  enum term: { fall: 0, spring: 1, summer: 2 }
+
+  # callbacks
+  after_save :deactivate_academic_terms
+end
 ```

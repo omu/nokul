@@ -3,16 +3,17 @@
 require 'test_helper'
 
 class IdentityTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include CallbackTestModule
-  include EnumerationTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::CallbackHelper
+  extend Support::Minitest::EnumerationHelper
+  extend Support::Minitest::ValidationHelper
 
   test 'type column does not refer to STI' do
     assert_empty Identity.inheritance_column
   end
 
   # relations
+  belongs_to :student, optional: true
   belongs_to :user
 
   # validations: presence
@@ -32,12 +33,12 @@ class IdentityTest < ActiveSupport::TestCase
   validates_length_of :registered_to
 
   # callbacks
-  has_save_callback :capitalize_attributes, :before
+  before_save :capitalize_attributes
 
   # enums
-  has_enum :type, formal: 1, informal: 2
-  has_enum :gender, male: 1, female: 2, other: 3
-  has_enum :marital_status, single: 1, married: 2, divorced: 3, unknown: 4
+  enum type: { formal: 1, informal: 2 }
+  enum gender: { male: 1, female: 2, other: 3 }
+  enum marital_status: { single: 1, married: 2, divorced: 3, unknown: 4 }
 
   # scopes
   test 'user_identity can return formal identities which does not belongs_to students' do

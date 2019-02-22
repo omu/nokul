@@ -3,14 +3,14 @@
 require 'test_helper'
 
 class CurriculumCourseGroupTest < ActiveSupport::TestCase
-  include AssociationTestModule
-  include ValidationTestModule
+  extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::ValidationHelper
 
   # relations
   belongs_to :course_group
   belongs_to :curriculum_semester
-  has_many :courses
-  has_many :curriculum_courses
+  has_many :curriculum_courses, dependent: :destroy
+  has_many :courses, through: :curriculum_courses
 
   # validations: presence
   validates_presence_of :course_group

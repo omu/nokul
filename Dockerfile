@@ -18,7 +18,7 @@ ENV NODE_ENV=production
 ENV NODE_ENV=$NODE_ENV
 
 RUN case $RAILS_ENV in \
-    test) apt-get -y update && apt-get -y install --no-install-recommends chromedriver && \
+    test) scripts runtime/chrome chrome_install_upstream=true && \
           apt-get clean && rm -rf /var/lib/apt/lists/* ;; \
     esac
 
