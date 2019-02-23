@@ -1,0 +1,5 @@
+tr:
+  errors:
+    messages:
+      not_pwned: seçiminiz güvensizdir, lütfen başka bir parola belirleyin
+      pwned_error: seçmiş olduğunuz şifre güvensiz olabilir

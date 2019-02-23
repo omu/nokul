@@ -42,6 +42,7 @@ class User < ApplicationRecord
   validates :phone_number, length: { maximum: 255 },
                            allow_blank: true,
                            telephone_number: { country: proc { |record| record.country }, types: [:fixed_line] }
+  validates :password, not_pwned: true
   validates :preferred_language, inclusion: { in: I18n.available_locales.map(&:to_s) }
   validates :skype, allow_blank: true, length: { maximum: 50 }
   validates :twitter, allow_blank: true, length: { maximum: 50 }
