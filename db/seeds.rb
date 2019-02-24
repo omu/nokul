@@ -31,4 +31,3 @@ if ENV['SAMPLE_DATA'].eql?('true')
     end
   end
 end
-
