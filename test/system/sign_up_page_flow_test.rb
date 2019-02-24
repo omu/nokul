@@ -10,7 +10,8 @@ class SignUpPageFlowTest < ApplicationSystemTestCase
       page.driver.browser.manage.window.resize_to(*resolution)
       visit(register_path)
       {
-        id_number: '70336212330', email: 'new_user@gmail.com', password: '123456', password_confirmation: '123456'
+        id_number: '70336212330', email: 'new_user@gmail.com',
+        password: RANDOM_PASSWORD, password_confirmation: RANDOM_PASSWORD
       }.each do |key, value|
         fill_in("user[#{key}]", with: value)
       end

@@ -12,7 +12,7 @@ class LoginPageFlowTest < ApplicationSystemTestCase
       assert find_link(t('account.sessions.new.did_you_forget'), visible: true).visible?
       assert find_link(t('account.sessions.new.create_account'), visible: true).visible?
       fill_in('user[id_number]', with: users(:serhat).id_number)
-      fill_in('user[password]', with: '123456')
+      fill_in('user[password]', with: RANDOM_PASSWORD)
       check(t('account.sessions.new.remember_login'))
       click_button(t('account.sessions.new.login'))
       assert_equal t('devise.sessions.signed_in'), page.find('div', class: 'toast-message').text
