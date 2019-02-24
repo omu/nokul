@@ -24,9 +24,7 @@ class SignUpPageFlowTest < ApplicationSystemTestCase
       skip 'this block on CircleCI since it makes requests to Xokul' if ENV['CI']
       page.driver.browser.manage.window.resize_to(*resolution)
       visit(register_path)
-      {
-        email: 'new_user@gmail.com'
-      }.each do |key, value|
+      { email: 'new_user@gmail.com' }.each do |key, value|
         fill_in("user[#{key}]", with: value)
       end
       click_button(t('account.registrations.new.register'))
