@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/flyerhzm/bullet.git
-  revision: 2ada165a7262daa4ab4eeb2f0a11c84afe285e72
+  revision: 11ef24fd486d34af70b631843c349965b65323cb
   specs:
     bullet (5.9.0)
       activesupport (>= 3.0.0)
@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 907280ddfd78c53e2eb5af6f12512dc38df38bd8
+  revision: be442ccd8342baf39e73b01a6fdd38e1a3b15c2c
   specs:
     actioncable (6.0.0.beta1)
       actionpack (= 6.0.0.beta1)
@@ -63,7 +63,7 @@ GIT
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-      zeitwerk (~> 1.2)
+      zeitwerk (~> 1.3)
     rails (6.0.0.beta1)
       actioncable (= 6.0.0.beta1)
       actionmailbox (= 6.0.0.beta1)
@@ -107,7 +107,7 @@ GIT
 
 GIT
   remote: https://github.com/rollbar/rollbar-gem.git
-  revision: ada82d619e848ad6b64a33acd10b03730b4c3d41
+  revision: 015c1b8036238d644c280a5aba087f21d39afb6d
   specs:
     rollbar (2.18.2)
       multi_json
@@ -142,8 +142,8 @@ GEM
       io-like (~> 0.3.0)
     ast (2.4.0)
     aws-eventstream (1.0.1)
-    aws-partitions (1.139.0)
-    aws-sdk-core (3.46.1)
+    aws-partitions (1.140.0)
+    aws-sdk-core (3.46.2)
       aws-eventstream (~> 1.0)
       aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.0)
@@ -211,10 +211,10 @@ GEM
       responders
       warden (~> 1.2.3)
     docile (1.3.1)
-    dotenv (2.6.0)
-    dotenv-rails (2.6.0)
-      dotenv (= 2.6.0)
-      railties (>= 3.2, < 6.0)
+    dotenv (2.7.0)
+    dotenv-rails (2.7.0)
+      dotenv (= 2.7.0)
+      railties (>= 3.2, < 6.1)
     email_address (0.1.11)
       netaddr (~> 2.0)
       simpleidn
@@ -251,7 +251,7 @@ GEM
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
     jmespath (1.4.0)
-    json (2.1.0)
+    json (2.2.0)
     launchy (2.4.3)
       addressable (~> 2.3)
     letter_opener (1.7.0)
@@ -284,7 +284,7 @@ GEM
     nokogiri (1.10.1)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
-    pagy (1.3.3)
+    pagy (2.0.0)
     parallel (1.13.0)
     parser (2.6.0.0)
       ast (~> 2.4.0)
@@ -300,8 +300,10 @@ GEM
       method_source (~> 0.9.0)
     pry-rails (0.3.9)
       pry (>= 0.10.4)
+    psych (3.1.0)
     public_suffix (3.0.3)
     puma (3.12.0)
+    pwned (1.2.1)
     rack (2.0.6)
     rack-attack (5.4.2)
       rack (>= 1.0, < 3)
@@ -331,11 +333,12 @@ GEM
     responders (2.4.1)
       actionpack (>= 4.2.0, < 6.0)
       railties (>= 4.2.0, < 6.0)
-    rubocop (0.64.0)
+    rubocop (0.65.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.5, != 2.5.1.1)
       powerpack (~> 0.1)
+      psych (>= 3.1.0)
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.4.0)
@@ -344,7 +347,7 @@ GEM
       ffi (~> 1.9)
     ruby_dep (1.5.0)
     rubyzip (1.2.2)
-    safe_yaml (1.0.4)
+    safe_yaml (1.0.5)
     sassc (2.0.0)
       ffi (~> 1.9.6)
       rake
@@ -411,7 +414,7 @@ GEM
     wicked_pdf (1.1.0)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (1.2.0)
+    zeitwerk (1.3.1)
 
 PLATFORMS
   ruby
@@ -453,6 +456,7 @@ DEPENDENCIES
   pghero
   pry-rails
   puma (~> 3.11)
+  pwned
   rack-attack
   rack-mini-profiler
   rails!

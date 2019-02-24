@@ -1,17 +1,33 @@
 # frozen_string_literal: true
 
-Rake::Task['fetch:references'].invoke # fetch YOKSIS references
-Rake::Task['import:all'].invoke # import common static data
+config = ActiveRecord::Base.configurations[Rails.env]
 
-# Produced data for beta environment
-if Rails.env.beta? || Rails.env.development?
-  Dir[Rails.root.join('db', 'beta_seed', '*.rb')].sort.each do |seed|
-    load seed
-  end
+if ENV['SYNC'].eql?('true')
+  Rake::Task['fetch:references'].invoke
+  Rake::Task['import:all'].invoke
+else
+  connection = "PGPASSWORD=#{config['password']} psql \
+               -h #{config['host']} \
+               -d #{config['database']} \
+               -U #{config['username']} "
+
+  `tar xvzf #{Rails.root.join('db', 'encrypted_data', 'static_data.tar.gz').to_s} -C tmp/`
+  File.write('tmp/static_data.sql', Support::Sensitive.read('tmp/tmp/static_data.sql.enc'))
+  `#{connection + "-f #{Rails.root.join('tmp', 'static_data.sql')}"}`
 end
 
-# Fetch Academic Staff from YOKSIS
-Rake::Task['fetch:academic_staff'].invoke
+if ENV['SAMPLE_DATA'].eql?('true')
+  if ENV['SYNC'].eql?('true')
+    Rake::Task['fetch:academic_staff'].invoke
+    Osym::ImportProspectiveStudentsJob.perform_later('db/encrypted_data/prospective_students.csv')
+  else
+    `tar xvzf #{Rails.root.join('db', 'encrypted_data', 'sample_data.tar.gz').to_s} -C tmp/`
+    File.write('tmp/sample_data.sql', Support::Sensitive.read('tmp/tmp/sample_data.sql.enc'))
 
-# Import prospective students of 2018
-Osym::ImportProspectiveStudentsJob.perform_later('db/encrypted_data/prospective_students.csv')
+    `#{connection + "-f #{Rails.root.join('tmp', 'sample_data.sql')}"}`
+
+    Dir[Rails.root.join('db', 'beta_seed', '*.rb')].sort.each do |seed|
+      load seed
+    end
+  end
+end

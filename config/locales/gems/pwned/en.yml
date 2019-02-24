@@ -1,0 +1,5 @@
+en:
+  errors:
+    messages:
+      not_pwned: you entered is insecure, please choose a stronger one
+      pwned_error: you entered might be insecure
