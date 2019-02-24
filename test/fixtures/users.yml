@@ -1,10 +1,10 @@
-# random password: DGr+Na+0euXRCxbQ5E2mpeDl0u++egOlI4qwjQCIFah+Ae7Rku5woA==
+# random password: d61c16acabedeab84f1ad062d7ad948ef3
 
 serhat:
   email: msdundars@gmail.com
   id_number: 10570898198 # Sample ID number provided by KPS
-  encrypted_password: $2a$11$qNf5f4eoGW5PFdJ.Yfj55.ILyox31dfU3y/Yzi4/vuNKGvLHk0zrq
+  encrypted_password: $2a$11$C/GxMBY.clyScJElgoplBuIJALvy3kYlOFAPAVfARUuiJfTEpMv2q # d61c16acabedeab84f1ad062d7ad948ef3
 john:
   email: john@gmail.com
   id_number: 99001255472 # Sample ID number provided by KPS
-  encrypted_password: $2a$11$qNf5f4eoGW5PFdJ.Yfj55.ILyox31dfU3y/Yzi4/vuNKGvLHk0zrq
+  encrypted_password: $2a$11$C/GxMBY.clyScJElgoplBuIJALvy3kYlOFAPAVfARUuiJfTEpMv2q # d61c16acabedeab84f1ad062d7ad948ef3

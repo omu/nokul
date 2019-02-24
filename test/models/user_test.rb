@@ -106,7 +106,7 @@ class UserTest < ActiveSupport::TestCase
   # job tests
   test 'user enqueues Kps::AddressSaveJob after being created' do
     assert_enqueued_with(job: Kps::AddressSaveJob) do
-      password = SecureRandom.base64(40)
+      password = SecureRandom.hex(20).freeze
       User.create(
         id_number: '12345678912',
         email: 'fakeuser@fakemail.com',
@@ -118,7 +118,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'user runs Kps::IdentitySaveJob after being created' do
     assert_enqueued_with(job: Kps::IdentitySaveJob) do
-      password = SecureRandom.base64(40)
+      password = SecureRandom.hex(20).freeze
       User.create(
         id_number: '98765432198',
         email: 'anotherfakeuser@fakemail.com',

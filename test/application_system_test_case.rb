@@ -18,6 +18,4 @@ class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
     [768, 1024], # tablet
     [360, 640] # small mobile device
   ].freeze
-
-  RANDOM_PASSWORD = 'DGr+Na+0euXRCxbQ5E2mpeDl0u++egOlI4qwjQCIFah+Ae7Rku5woA=='
 end
