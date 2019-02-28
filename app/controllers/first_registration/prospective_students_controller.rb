@@ -39,7 +39,7 @@ module FirstRegistration
     end
 
     def can_register?
-      redirect_with_warning('.can_not_register') unless @prospective_student.can_temporarily_register?
+      redirect_to(index_path, alert: t('.can_not_register')) unless @prospective_student.can_temporarily_register?
     end
   end
 end
