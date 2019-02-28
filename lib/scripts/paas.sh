@@ -16,7 +16,7 @@ application=${application:-$(jq -r '.name' "$manifest")}
 operator=${operator:-$(id -rnu 1000 2>/dev/null)}
 domain=local.omu.sh
 remote=dokku
-paas_environment=${paas_environment:-beta}
+paas_environment=${paas_environment:-development}
 
 vagrant status --machine-readable | grep -q ',metadata,provider,virtualbox' || die 'Only virtualbox supported'
 command -v direnv &>/dev/null || die 'Please install and setup direnv(1).'
@@ -57,6 +57,8 @@ vagrant ssh paas -- 'sudo -E bash -s' <<-SCRIPT
 	dokku config:set $application RAILS_ENV=$paas_environment RAILS_MASTER_KEY=$RAILS_MASTER_KEY NOKUL_DISABLE_SSL=true NOKUL_DISABLE_ROLLBAR=true
 
 	dokku ssh-keys:remove $operator &>/dev/null || true
+
+	! command -v git-lfs &>/dev/null || git lfs install --system --skip-smudge --force
 SCRIPT
 vagrant ssh paas -- "sudo dokku ssh-keys:add $operator" <~/.ssh/id_rsa.pub &>/dev/null
 
@@ -76,7 +78,7 @@ cat >&2 <<-DOCUMENT
 	PaaS setup completed.
 
 	    Browse          http://${application}.${domain}
-	    Push            git push $remote $refspec
+	    Push            git push --no-verify $remote $refspec
 	    Manage          dokku
 	    Environment     $paas_environment
 DOCUMENT
