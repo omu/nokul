@@ -42,7 +42,7 @@ jobs:
       if: branch = develop AND type = push AND fork = false
       cache: skip
       install: skip
-      script: git lfs install &&
+      script: git lfs uninstall &&
               git config lfs.https://app.omu.sh/nokul-develop.git/info/lfs.locksverify false &&
               git remote add beta dokku@app.omu.sh:nokul-develop && git push beta develop:master
 
@@ -51,7 +51,7 @@ jobs:
       if: branch = master AND type = push AND fork = false
       cache: skip
       install: skip
-      script: git lfs install &&
+      script: git lfs uninstall &&
               git config lfs.https://app.omu.sh/nokul.git/info/lfs.locksverify false &&
               git remote add production dokku@app.omu.sh:nokul && git push production master
 
