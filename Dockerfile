@@ -1,4 +1,4 @@
-FROM ondokuz/ruby-stretch:1.15.1
+FROM ondokuz/ruby-stretch:1.16.1
 
 ENV PATH=/app/bin:$PATH
 

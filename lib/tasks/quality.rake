@@ -4,13 +4,13 @@ namespace :quality do
   Rake::TaskManager.record_task_metadata = true
 
   desc 'Runs static code analyzer and style checker'
-  task :rubocop do |task|
+  task rubocop: :environment do |task|
     puts "########### #{task.full_comment} ###########"
     sh 'bundle exec rubocop -f fu -R -D', verbose: false
   end
 
   desc 'Checks for suspicious executables'
-  task :executables do |task|
+  task executables: :environment do |task|
     puts "########### #{task.full_comment} ###########"
     suspicious_executables =
       `find . -type f -executable -print | grep -Ev '^[.]/([.]git|vendor|node_modules|tmp|log|bin|sbin|scripts)'`
@@ -40,13 +40,13 @@ namespace :quality do
   end
 
   desc 'Runs ERB linter'
-  task :erb_linter do |task|
+  task erb_linter: :environment do |task|
     puts "########### #{task.full_comment} ###########"
     sh 'bundle exec erblint --autocorrect app/views', verbose: false
   end
 
   desc 'Runs HTML linter'
-  task :html_linter do |task|
+  task html_linter: :environment do |task|
     puts "########### #{task.full_comment} ###########"
     sh "yarn exec htmlhint --config .htmlhintrc 'app/views/**/*.html.erb'", verbose: false
   end

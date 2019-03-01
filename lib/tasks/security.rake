@@ -12,14 +12,14 @@ namespace :security do
   ].freeze
 
   desc 'Runs brakeman for security vulnerabilities'
-  task :brakeman do |task|
+  task brakeman: :environment do |task|
     puts "########### #{task.full_comment} ###########"
     sh "bundle exec brakeman -5 --no-pager --no-summary --no-progress --skip-files #{FILES_TO_SKIP.join(',')}",
        verbose: false
   end
 
   desc 'Checks dependencies and vulnerabilities'
-  task :audit do |task|
+  task audit: :environment do |task|
     puts "########### #{task.full_comment} ###########"
     sh 'bundle audit check --update', verbose: false
   end

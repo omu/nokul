@@ -6,6 +6,7 @@ require 'application_system_test_case'
 class AccountSettingsFlowTest < ApplicationSystemTestCase
   setup do
     @user = users(:serhat)
+    @password = SecureRandom.hex(20).freeze
     login_as(@user, scope: :user, run_callbacks: false)
   end
 
@@ -14,9 +15,9 @@ class AccountSettingsFlowTest < ApplicationSystemTestCase
       page.driver.browser.manage.window.resize_to(*resolution)
       visit(account_path)
       {
-        password: 'password',
-        password_confirmation: 'password',
-        current_password: '123456'
+        password: @password,
+        password_confirmation: @password,
+        current_password: 'd61c16acabedeab84f1ad062d7ad948ef3'
       }.each do |key, value|
         fill_in("user[#{key}]", with: value)
       end
@@ -28,8 +29,8 @@ class AccountSettingsFlowTest < ApplicationSystemTestCase
       page.driver.browser.manage.window.resize_to(*resolution)
       visit(account_path)
       {
-        password: 'password',
-        password_confirmation: 'password'
+        password: @password,
+        password_confirmation: @password
       }.each do |key, value|
         fill_in("user[#{key}]", with: value)
       end

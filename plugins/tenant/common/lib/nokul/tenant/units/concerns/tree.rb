@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-# Concern multiple units at any form
-
 module Nokul
   module Tenant
     module Units
