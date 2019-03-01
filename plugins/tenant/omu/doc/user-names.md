@@ -2,8 +2,8 @@
 author: Recai Oktaş
 ---
 
-Kullanıcıların İsimlendirmesi
-=============================
+Kullanıcıların İsimlendirilmesi
+===============================
 
 Kullanıcı ismi tam adın ilk harfleri ve soyadın tamamının kişinin TC kimlik
 numarasından türetilen ve nokta ile başlayan 4 haneli bir son ekle
