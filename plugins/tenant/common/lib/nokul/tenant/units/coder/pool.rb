@@ -17,7 +17,7 @@ module Nokul
           attr_reader :generator
 
           def after_initialize
-            @generator = Support::Coding::Generator.new(begins, ends: ends, deny: deny, memory: Memory.instance)
+            @generator = Support::Codifications::Generator.new(begins, ends: ends, deny: deny, memory: Memory.instance)
           end
 
           def score_of(unit)

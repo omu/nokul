@@ -2,7 +2,7 @@
 
 module Nokul
   module Support
-    module Coding
+    module Codifications
       module Refinery
         refine String do
           def to_number(base)

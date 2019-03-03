@@ -2,7 +2,7 @@
 
 module Nokul
   module Support
-    module Coding
+    module Codifications
       class Memory
         def remember(_string, **)
           raise NotImplementedError

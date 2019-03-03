@@ -2,13 +2,13 @@
 author: Recai Oktaş
 ---
 
-`Coding`
-========
+`Codifications`
+===============
 
-`Coding` modülü entitelere kod ataması yapmakta kullanılan sınıflardan
-oluşmaktadır.  `Coding::Generator` kod üreten jeneratör sınıfı, `Coding::Code`
-kodu temsil eden tip sınıfı, `Coding::Memory` ise tekil kodlar üretmek için
-gerekli hafızayı modelleyen sınıftır.
+`Codifications` modülü entitelere kod ataması yapmakta kullanılan sınıflardan
+oluşmaktadır.  `Codifications::Generator` kod üreten jeneratör sınıfı,
+`Codifications::Code` kodu temsil eden tip sınıfı, `Codifications::Memory` ise
+tekil kodlar üretmek için gerekli hafızayı modelleyen sınıftır.
 
 Kod nesneleri
 -------------
@@ -24,12 +24,12 @@ Bir dizgi ("string") ile ilklendirilen `Code` nesnesi bir aralık içinde sonrak
 tipini temsil etmektedir.
 
 ```ruby
-code = Coding::Code.new '009'
+code = Codifications::Code.new '009'
 code.succ.to_s #=> '010'
 
-Coding::Code.new '013' < Coding::Code.new '020' #=> true
+Codifications::Code.new '013' < Codifications::Code.new '020' #=> true
 
-range = Coding::Code.new('033')..Coding::Code.new('035')
+range = Codifications::Code.new('033')..Codifications::Code.new('035')
 range.last.to_s #=> '035'
 range.to_a(&:to_s) #=> ['033', '034', '035']
 ```
@@ -43,7 +43,7 @@ ilklendiğinde verilen dizgi argümanıyla belirlenir.
   korunmak kaydıyla onlu tabandaki artışa göre belirlenir.
 
   ```ruby
-  Coding::Code.new('009').succ.to_s #=> '010'
+  Codifications::Code.new('009').succ.to_s #=> '010'
   ```
 
 - İlk değerde `ABCDEF` harflerinden en az birisi görülmüş ve başka bir harf
@@ -51,7 +51,7 @@ ilklendiğinde verilen dizgi argümanıyla belirlenir.
   tabandaki artışa göre belirlenir.
 
   ```ruby
-  Coding::Code.new('00A').succ.to_s #=> '00B'
+  Codifications::Code.new('00A').succ.to_s #=> '00B'
   ```
 
 - İlk değerde `ABCDEF` dışındaki diğer harflerinden en az birisi görülmüşse
@@ -59,7 +59,7 @@ ilklendiğinde verilen dizgi argümanıyla belirlenir.
   göre belirlenir.
 
   ```ruby
-  Coding::Code.new('00G').succ.to_s #=> '00H'
+  Codifications::Code.new('00G').succ.to_s #=> '00H'
   ```
 
 Görüldüğü gibi kodlarda değer artışlarında sadece on, onaltı ve otuzaltı
@@ -68,7 +68,7 @@ belirlenmektedir.  Otomatik seçim kullanılmadan tabanı açıkça vermek
 isteyebilirsiniz.
 
 ```ruby
-Coding::Code.new('0AF', 36).succ.to_s #=> '0AG`, `0B0` değil!
+Codifications::Code.new('0AF', 36).succ.to_s #=> '0AG`, `0B0` değil!
 ```
 
 Kod üretimi
@@ -77,7 +77,7 @@ Kod üretimi
 Kod üretimi `Code` nesneleriyle iklendirilen `Generator` nesnesiyle yapılır.
 
 ```ruby
-generator = Coding::Generator.new '000'
+generator = Codifications::Generator.new '000'
 generator.generate #=> '000'
 generator.generate #=> '001'
 ```
@@ -86,7 +86,7 @@ generator.generate #=> '001'
 isteyebilirsiniz.
 
 ```ruby
-generator = Coding::Generator.new '000', deny: /0$/
+generator = Codifications::Generator.new '000', deny: /0$/
 generator.generate #=> '001'
 generator.generate #=> '002'
 ```
@@ -98,23 +98,24 @@ Kod üretiminin başlangıcı ilk argümanla verilirken, isteğe bağlı olarak,
 `ends` argümanıyla belirtilir.
 
 ```ruby
-generator = Coding::Generator.new '000', ends: '003'
+generator = Codifications::Generator.new '000', ends: '003'
 generator.generate #=> '000'
 generator.generate #=> '001'
 generator.generate #=> '002'
 generator.generate #=> '003'
-generator.generate #=> Coding::Generator::Consumed exception
+generator.generate #=> Codifications::Generator::Consumed exception
 ```
 
-Görüldüğü gibi sona ulaşıldığında üreteç nesnesi `Coding::Generator::Consumed`
-istisnası üretir.  Bu istisnayı yakalayarak süreci kontrol edebilirsiniz.
+Görüldüğü gibi sona ulaşıldığında üreteç nesnesi
+`Codifications::Generator::Consumed` istisnası üretir.  Bu istisnayı yakalayarak
+süreci kontrol edebilirsiniz.
 
 Kod üreteçleri sadece tek kodlar üretmek yerine bir kod havuzu da (dizi)
 üretebilir.
 
 
 ```ruby
-generator = Coding::Generator.new '000', ends: '003'
+generator = Codifications::Generator.new '000', ends: '003'
 
 pool  = generator.pool   #=> ['000', '001', '002', '003']
 ```
@@ -124,8 +125,8 @@ Geçmişe bağlı kod üretimi
 
 Pek çok kullanım senaryosunda kod üretecinin geçmişte kullanılmayan tekil kodlar
 üretmesi istenir.  Bu amaçla üretece `memory` isimlendirilmiş argümanıyla
-verilen `Coding::Memory` nesnesinden yararlanacaksınız.  Ön tanımlı davranışta
-kod üreteci `Coding::NilMemory` nesnesiyle hafızasız davranır.
+verilen `Codifications::Memory` nesnesinden yararlanacaksınız.  Ön tanımlı
+davranışta kod üreteci `Codifications::NilMemory` nesnesiyle hafızasız davranır.
 
 ```ruby
 class Generator
@@ -136,11 +137,11 @@ end
 ```
 
 Geçmişi kaydeden basit sözlük türünde bir hafıza kullanabilirsiniz.  Bu amaçla
-hazır `Coding::SimpleMemory` nesnesini kullanabilirsiniz.
+hazır `Codifications::SimpleMemory` nesnesini kullanabilirsiniz.
 
 ```ruby
-memory = Coding::SimpleMemory.new { '002' => true }
-generator = Coding::Generator.new '000', memory: memory
+memory = Codifications::SimpleMemory.new { '002' => true }
+generator = Codifications::Generator.new '000', memory: memory
 generator.generate #=> '000'
 generator.generate #=> '001'
 generator.generate #=> '003', '002' hatırlandı
@@ -156,7 +157,7 @@ bir kod dizgisinin hafızada olup olmadığını döner.
 aşağıdaki sınıf tanımını yapabilirsiniz.
 
 ```ruby
-class DatabaseMemory < Coding::Memory
+class DatabaseMemory < Codifications::Memory
   def initialize
     # Veritabanından ilkle
   end

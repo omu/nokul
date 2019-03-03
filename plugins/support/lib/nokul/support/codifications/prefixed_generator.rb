@@ -2,7 +2,7 @@
 
 module Nokul
   module Support
-    module Coding
+    module Codifications
       class PrefixedGenerator
         Error = Class.new ::StandardError
 

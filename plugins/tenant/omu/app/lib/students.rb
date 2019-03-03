@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Students
-  NumberGenerator = Support::Coding::PrefixedGenerator # Length is 8 by default
+  NumberGenerator = Support::Codifications::PrefixedGenerator # Length is 8 by default
 
   module_function
 

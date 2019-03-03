@@ -4,7 +4,7 @@ require_relative 'refinery'
 
 module Nokul
   module Support
-    module Coding
+    module Codifications
       # :reek:TooManyInstanceVariables { max_variables: 5 }
       class Generator
         using Refinery
