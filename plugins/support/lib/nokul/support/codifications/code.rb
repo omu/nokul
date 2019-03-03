@@ -4,7 +4,7 @@ require_relative 'refinery'
 
 module Nokul
   module Support
-    module Coding
+    module Codifications
       class Code
         include Comparable
 

@@ -4,9 +4,9 @@ require 'test_helper'
 
 module Nokul
   module Support
-    using Coding::Refinery
+    using Codifications::Refinery
 
-    class CodingRefineryTest < ActiveSupport::TestCase
+    class CodificationsRefineryTest < ActiveSupport::TestCase
       test 'to_number refinement' do
         assert_equal 1, '01'.to_number(10)
         assert_equal 10, '0A'.to_number(16)

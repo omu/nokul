@@ -2,8 +2,8 @@
 
 module Nokul
   module Support
-    module Coding
-      class PrefixedGenerator
+    module Codifications
+      class PrefixedCoder
         Error = Class.new ::StandardError
 
         MINIMUM_SEQUENCE_LENGTH = 3
@@ -11,14 +11,14 @@ module Nokul
 
         class_attribute :length, default: DEFAULT_NUMBER_LENGTH
 
-        def initialize(starting_sequence, prefix: '', **generator_options)
+        def initialize(starting_sequence, prefix: '', **coder_options)
           @starting_sequence = starting_sequence
           @prefix            = [*prefix].join
-          @generator         = build_generator(**generator_options)
+          @coder             = build_coder(**coder_options)
         end
 
-        def generate
-          prefix + generator.generate
+        def run
+          prefix + coder.run
         end
 
         def initial_sequence
@@ -26,16 +26,16 @@ module Nokul
         end
 
         def next_sequence
-          generator.peek
+          coder.peek
         end
 
         protected
 
-        attr_reader :starting_sequence, :prefix, :generator
+        attr_reader :starting_sequence, :prefix, :coder
 
-        def build_generator(**generator_options)
-          sanitize_setup(**generator_options)
-          Generator.new starting_sequence.presence || initial_sequence, **generator_options
+        def build_coder(**coder_options)
+          sanitize_setup(**coder_options)
+          Coder.new starting_sequence.presence || initial_sequence, **coder_options
         end
 
         def effective_sequence_length
@@ -49,8 +49,8 @@ module Nokul
         end
 
         def numerator_length_must_be_sane
-          raise Error, 'Generator length undefined' unless length
-          raise Error, "Generator length is too short: #{length}" if length < MINIMUM_SEQUENCE_LENGTH
+          raise Error, 'Coder length undefined' unless length
+          raise Error, "Coder length is too short: #{length}" if length < MINIMUM_SEQUENCE_LENGTH
         end
 
         def effective_sequence_length_must_be_sane
