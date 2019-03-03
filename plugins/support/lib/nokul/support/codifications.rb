@@ -2,5 +2,5 @@
 
 require_relative 'codifications/code'
 require_relative 'codifications/memory'
-require_relative 'codifications/generator'
-require_relative 'codifications/prefixed_generator'
+require_relative 'codifications/coder'
+require_relative 'codifications/prefixed_coder'

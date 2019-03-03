@@ -14,10 +14,10 @@ module Nokul
             reserved
           ].freeze
 
-          attr_reader :generator
+          attr_reader :coder
 
           def after_initialize
-            @generator = Support::Codifications::Generator.new(begins, ends: ends, deny: deny, memory: Memory.instance)
+            @coder = Support::Codifications::Coder.new(begins, ends: ends, deny: deny, memory: Memory.instance)
           end
 
           def score_of(unit)
@@ -26,7 +26,7 @@ module Nokul
           end
 
           def code
-            generator.generate
+            coder.generate
           end
         end
 

@@ -6,7 +6,7 @@ module Nokul
   module Support
     module Codifications
       # :reek:TooManyInstanceVariables { max_variables: 5 }
-      class Generator
+      class Coder
         using Refinery
 
         Consumed = Class.new ::StandardError
@@ -55,7 +55,7 @@ module Nokul
 
         def try_generate
           loop do
-            raise(Consumed, "Generator has been consumed at #{current}") if current > ends
+            raise(Consumed, "Coder has been consumed at #{current}") if current > ends
 
             code_string = current.to_s
             self.current = current.succ

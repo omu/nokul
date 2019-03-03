@@ -3,7 +3,7 @@
 module Nokul
   module Support
     module Codifications
-      class PrefixedGenerator
+      class PrefixedCoder
         Error = Class.new ::StandardError
 
         MINIMUM_SEQUENCE_LENGTH = 3
@@ -35,7 +35,7 @@ module Nokul
 
         def build_generator(**generator_options)
           sanitize_setup(**generator_options)
-          Generator.new starting_sequence.presence || initial_sequence, **generator_options
+          Coder.new starting_sequence.presence || initial_sequence, **generator_options
         end
 
         def effective_sequence_length
@@ -49,8 +49,8 @@ module Nokul
         end
 
         def numerator_length_must_be_sane
-          raise Error, 'Generator length undefined' unless length
-          raise Error, "Generator length is too short: #{length}" if length < MINIMUM_SEQUENCE_LENGTH
+          raise Error, 'Coder length undefined' unless length
+          raise Error, "Coder length is too short: #{length}" if length < MINIMUM_SEQUENCE_LENGTH
         end
 
         def effective_sequence_length_must_be_sane

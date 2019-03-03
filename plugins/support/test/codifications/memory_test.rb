@@ -14,8 +14,8 @@ module Nokul
       end
 
       test 'custom memory should work' do
-        generator = Codifications::Generator.new '000', ends: '002', memory: RefusingMemory.new
-        assert_raises(Codifications::Generator::Consumed) { generator.generate }
+        coder = Codifications::Coder.new '000', ends: '002', memory: RefusingMemory.new
+        assert_raises(Codifications::Coder::Consumed) { coder.generate }
       end
     end
   end
