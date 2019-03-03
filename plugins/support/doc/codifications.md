@@ -78,8 +78,8 @@ Kod üretimi `Code` nesneleriyle iklendirilen `Coder` nesnesiyle yapılır.
 
 ```ruby
 coder = Codifications::Coder.new '000'
-coder.generate #=> '000'
-coder.generate #=> '001'
+coder.run #=> '000'
+coder.run #=> '001'
 ```
 
 Üretilen kodun bir hanesinde sadece belirli karakterler kullanılmasını
@@ -87,8 +87,8 @@ isteyebilirsiniz.
 
 ```ruby
 coder = Codifications::Coder.new '000', deny: /0$/
-coder.generate #=> '001'
-coder.generate #=> '002'
+coder.run #=> '001'
+coder.run #=> '002'
 ```
 
 Örnekte görüldüğü gibi `deny` isimlendirilmiş argümanında tanımlayacağımız bir
@@ -99,11 +99,11 @@ Kod üretiminin başlangıcı ilk argümanla verilirken, isteğe bağlı olarak,
 
 ```ruby
 coder = Codifications::Coder.new '000', ends: '003'
-coder.generate #=> '000'
-coder.generate #=> '001'
-coder.generate #=> '002'
-coder.generate #=> '003'
-coder.generate #=> Codifications::Coder::Consumed exception
+coder.run #=> '000'
+coder.run #=> '001'
+coder.run #=> '002'
+coder.run #=> '003'
+coder.run #=> Codifications::Coder::Consumed exception
 ```
 
 Görüldüğü gibi sona ulaşıldığında üreteç nesnesi
@@ -142,9 +142,9 @@ hazır `Codifications::SimpleMemory` nesnesini kullanabilirsiniz.
 ```ruby
 memory = Codifications::SimpleMemory.new { '002' => true }
 coder = Codifications::Coder.new '000', memory: memory
-coder.generate #=> '000'
-coder.generate #=> '001'
-coder.generate #=> '003', '002' hatırlandı
+coder.run #=> '000'
+coder.run #=> '001'
+coder.run #=> '003', '002' hatırlandı
 ```
 
 `SimpleMemory` nesnesinin yeterli gelmediği durumlarda kendi hafıza nesnenizi
@@ -180,8 +180,8 @@ sınıfı kullanılır.
 
 ```ruby
 coder = PrefixedCoder.new '078', prefix: ['203', '19'] # veya prefix: '20319'
-coder.generate #=> "20319078"
-coder.generate #=> "20319079"
+coder.run #=> "20319078"
+coder.run #=> "20319079"
 
 coder.next_sequence    #=> "080" (coder çekirdeğini değiştirmez)
 coder.initial_sequence #=> "001"
@@ -198,8 +198,8 @@ değeri `nil` olarak ayarlamanız üretecin sıfırlanması için yeterlidir.
 
 ```ruby
 coder = PrefixedCoder.new nil, prefix: ['203', '19'] # veya prefix: '20319'
-coder.generate #=> "20319001"
-coder.generate #=> "20319002"
+coder.run #=> "20319001"
+coder.run #=> "20319002"
 
 coder.next_sequence    #=> "003"
 coder.initial_sequence #=> "001"
@@ -213,8 +213,8 @@ duyulan hane sayısına göre daraltabilirsiniz.
 ```ruby
 long_coder = PrefixedCoder.new '001', prefix: '203'
 
-long_coder.generate #=> "20300001"
-long_coder.generate #=> "20300002"
+long_coder.run #=> "20300001"
+long_coder.run #=> "20300002"
 
 long_coder.next_sequence    #=> "00003"
 long_coder.initial_sequence #=> "00001"
@@ -238,5 +238,5 @@ rakamı içermeyen kodlar üretmektedir.  Kullanılabilecek geçerli seçenekler
 
 ```ruby
 never_zero_coder = PrefixedCoder.new nil, prefix: '203', deny: /0/
-never_zero_coder.generate #=> "20311111"
+never_zero_coder.run #=> "20311111"
 ```

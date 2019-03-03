@@ -19,14 +19,14 @@ module Nokul
           @memory = memory
         end
 
-        def generate
-          code_string = try_generate
+        def run
+          code_string = try_run
           memory&.remember code_string
           code_string
         end
 
         def peek
-          dup.generate
+          dup.run
         end
 
         def pool
@@ -53,7 +53,7 @@ module Nokul
           end
         end
 
-        def try_generate
+        def try_run
           loop do
             raise(Consumed, "Coder has been consumed at #{current}") if current > ends
 

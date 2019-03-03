@@ -7,22 +7,22 @@ module Nokul
     class CodificationsCoderTest < ActiveSupport::TestCase
       test 'basic use case should just work' do
         coder = Codifications::Coder.new '000'
-        assert_equal '000', coder.generate
-        assert_equal '001', coder.generate
+        assert_equal '000', coder.run
+        assert_equal '001', coder.run
       end
 
       test 'can specify the end of range' do
         coder = Codifications::Coder.new '000', ends: '003'
 
-        assert_equal '000', coder.generate
-        assert_equal '001', coder.generate
-        assert_equal '002', coder.generate
-        assert_equal '003', coder.generate
+        assert_equal '000', coder.run
+        assert_equal '001', coder.run
+        assert_equal '002', coder.run
+        assert_equal '003', coder.run
 
-        assert_raises(Codifications::Coder::Consumed) { coder.generate }
+        assert_raises(Codifications::Coder::Consumed) { coder.run }
       end
 
-      test 'can generate pools' do
+      test 'can run pools' do
         coder = Codifications::Coder.new '000', ends: '002'
         assert(pool = coder.pool).is_a? Array
         assert_equal 3, pool.size
@@ -32,8 +32,8 @@ module Nokul
       test 'can deny certain symbols based on a regex pattern' do
         # simple case
         coder = Codifications::Coder.new '000', deny: /[0]$/
-        assert_equal '001', coder.generate
-        assert_equal '002', coder.generate
+        assert_equal '001', coder.run
+        assert_equal '002', coder.run
 
         # complex case
         coder = Codifications::Coder.new '000', ends: '999', deny: /(?<digit>)\g<digit>\g<digit>/
@@ -46,9 +46,9 @@ module Nokul
         memory = Codifications::SimpleMemory.new '002' => true
         coder = Codifications::Coder.new '000', memory: memory
 
-        assert_equal '000', coder.generate
-        assert_equal '001', coder.generate
-        assert_equal '003', coder.generate
+        assert_equal '000', coder.run
+        assert_equal '001', coder.run
+        assert_equal '003', coder.run
       end
     end
   end

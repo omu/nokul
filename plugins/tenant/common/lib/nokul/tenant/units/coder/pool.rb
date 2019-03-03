@@ -26,7 +26,7 @@ module Nokul
           end
 
           def code
-            coder.generate
+            coder.run
           end
         end
 
