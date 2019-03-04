@@ -1,6 +1,12 @@
 # İşbirliği
-
-<!-- TOC -->autoauto- [İşbirliği](#i̇şbirliği)auto    - [İsimlendirmeler](#i̇simlendirmeler)auto        - [Asset isimlendirme](#asset-isimlendirme)auto            - [Asset isimlendirme kuralı](#asset-isimlendirme-kuralı)autoauto<!-- /TOC -->
+- [İşbirliği](#i̇şbirliği)
+    - [İsimlendirmeler](#i̇simlendirmeler)
+        - [Asset isimlendirme](#asset-isimlendirme)
+            - [Asset isimlendirme kuralı](#asset-isimlendirme-kuralı)
+                - [Prefix](#prefix)
+                - [Sort number](#sort-number)
+                - [Name](#name)
+                - [Extension](#extension)
 
 ## İsimlendirmeler
 ### Asset isimlendirme
