@@ -23,6 +23,7 @@ class ProspectiveStudent < ApplicationRecord
   enum placement_type: { general_score: 1, additional_score: 2 }
 
   # relations
+  belongs_to :academic_term
   belongs_to :high_school_type, optional: true
   belongs_to :language, optional: true
   belongs_to :student_entrance_type
@@ -34,6 +35,7 @@ class ProspectiveStudent < ApplicationRecord
   validates :address, length: { maximum: 255 }
   validates :email, length: { maximum: 255 }
   validates :exam_score, allow_nil: true, numericality: { greater_than_or_equal_to: 0 }
+  validates :expiry_date, presence: true
   validates :fathers_name, length: { maximum: 255 }
   validates :first_name, presence: true, length: { maximum: 255 }
   validates :gender, inclusion: { in: genders.keys }

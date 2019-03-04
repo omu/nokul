@@ -9,6 +9,7 @@ class ProspectiveStudentTest < ActiveSupport::TestCase
   extend Support::Minitest::ValidationHelper
 
   # relations
+  belongs_to :academic_term
   belongs_to :high_school_type, optional: true
   belongs_to :language, optional: true
   belongs_to :student_entrance_type
@@ -16,9 +17,10 @@ class ProspectiveStudentTest < ActiveSupport::TestCase
   belongs_to :unit
 
   # validations: presence
+  validates_presence_of :expiry_date
+  validates_presence_of :first_name
   validates_presence_of :gender
   validates_presence_of :id_number
-  validates_presence_of :first_name
   validates_presence_of :last_name
 
   # validations: uniqueness
