@@ -17,7 +17,7 @@ Dokumanlarda kullanılan medyaları (assets) genel olarak 4 grupta sınıflandı
 1. Mockup / Wireframe görseli
 1. Gruplandırılmamış
 
-Dokumanlar geliştirildikçe yeni asset grupları ortaya çıkabiliyor. Bazı asset gruplarına çok az ihtiyacımız olurken, bazıları sürekli kullandığımız gruplar olabiliyor. Bu yüzden her asset grubu için ayrı ayrı dizinler oluşturmaktansa, [tek asset dizini](/doc/assets) içerisinde anlaşılır ve sabit bir isimlendirme kuralıyla (naming convention) asset'leri isimlendiriyoruz.
+Dokumanlar geliştirildikçe yeni asset grupları ortaya çıkabiliyor. Bazı asset gruplarına çok az ihtiyacımız olurken, bazıları sürekli kullandığımız gruplar olabiliyor. Bu yüzden her asset grubu için ayrı ayrı dizinler oluşturmaktansa, [tek asset dizini](../../assets) içerisinde anlaşılır ve sabit bir isimlendirme kuralıyla (naming convention) asset'leri isimlendiriyoruz.
 
 #### Asset isimlendirme kuralı
 
@@ -33,7 +33,7 @@ Asset isimlendirmesi 4 temel değişkenden oluşuyor. Doküman yazarken oldukça
 
 
 ##### Prefix
-Tüm asset'lerimiz [aynı dizinde](/doc/assets) tutuluyor. Asset'lerin yönetimini kolaylaştırması için her asset grubuna bir prefix atadık. Örneğin diagramlar için DG prefix'ini kullanıyoruz.
+Tüm asset'lerimiz [aynı dizinde](../../assets) tutuluyor. Asset'lerin yönetimini kolaylaştırması için her asset grubuna bir prefix atadık. Örneğin diagramlar için DG prefix'ini kullanıyoruz.
 
 Asset Grubu | Prefix
 |---|---|
