@@ -2,11 +2,13 @@ en:
   activerecord:
     attributes:
       prospective_student: &prospective_student_attributes
+        academic_term: Academic Term
         additional_score: Additional Score
         address: Address
         date_of_birth: Date of Birth
         email: Email
         exam_score: Exam Score
+        expiry_date: Expiry Date
         fathers_name: Father's Name
         first_name: First Name
         gender: Gender
@@ -44,7 +46,7 @@ en:
         registration_district: Registration District
         smart_search_placeholder: Prospective student id number, first name or last name.
         state_of_education: State of Education
-        student_disability_type_id: Student Disability Type ID
+        student_disability_type: Student Disability Type
         student_entrance_type: Entrance Type
         student_in_a_different_unit: Student in a different university/unit
         top_student: Top Student
@@ -59,7 +61,7 @@ en:
         genders:
           female: Female
           male: Male
-        nationality:
+        nationalities:
           foreign: Foreign Citizen
           kktc: Northern Cyprus Citizen
           turkish: Turkish Citizen
@@ -72,9 +74,21 @@ en:
         <<: *prospective_student_attributes
   first_registration:
     prospective_students:
+      create:
+        success: Prospective student successfully created.
+      edit:
+        form_title: Prospective Student Edit Form
+      form:
+        address_and_contact_informations: Address/Contact Informations
+        exam_informations: Exam Informations
+        high_school_informations: High School Informations
+        other_informations: Other Informations
+        personel_informations: Personel Informations
       index:
         <<: *prospective_student_attributes
         prospective_students: Prospective Students
+      new:
+        form_title: Prospective Student Registration Form
       register:
         can_not_register: Can Not Register
         success: Student successfully registered
@@ -94,3 +108,5 @@ en:
         not_proper_register_event_range: 'There is no registration activity covering the date range today.'
       redirect_with_success:
         success: Student successfully registered
+      update:
+        success: Prospective Student successfully updated.
