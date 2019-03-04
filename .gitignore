@@ -49,3 +49,6 @@ config/deploy_key
 
 # Ignore auto-generated PDFs of markdown files
 .pdf
+
+# Ignore macOS file-system files
+.DS_Store
