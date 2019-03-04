@@ -2,13 +2,13 @@
 author: Recai Oktaş
 ---
 
-`Coding`
-========
+`Codifications`
+===============
 
-`Coding` modülü entitelere kod ataması yapmakta kullanılan sınıflardan
-oluşmaktadır.  `Coding::Generator` kod üreten jeneratör sınıfı, `Coding::Code`
-kodu temsil eden tip sınıfı, `Coding::Memory` ise tekil kodlar üretmek için
-gerekli hafızayı modelleyen sınıftır.
+`Codifications` modülü entitelere kod ataması yapmakta kullanılan sınıflardan
+oluşmaktadır.  `Codifications::Coder` kod üreten jeneratör sınıfı,
+`Codifications::Code` kodu temsil eden tip sınıfı, `Codifications::Memory` ise
+tekil kodlar üretmek için gerekli hafızayı modelleyen sınıftır.
 
 Kod nesneleri
 -------------
@@ -24,12 +24,12 @@ Bir dizgi ("string") ile ilklendirilen `Code` nesnesi bir aralık içinde sonrak
 tipini temsil etmektedir.
 
 ```ruby
-code = Coding::Code.new '009'
+code = Codifications::Code.new '009'
 code.succ.to_s #=> '010'
 
-Coding::Code.new '013' < Coding::Code.new '020' #=> true
+Codifications::Code.new '013' < Codifications::Code.new '020' #=> true
 
-range = Coding::Code.new('033')..Coding::Code.new('035')
+range = Codifications::Code.new('033')..Codifications::Code.new('035')
 range.last.to_s #=> '035'
 range.to_a(&:to_s) #=> ['033', '034', '035']
 ```
@@ -43,7 +43,7 @@ ilklendiğinde verilen dizgi argümanıyla belirlenir.
   korunmak kaydıyla onlu tabandaki artışa göre belirlenir.
 
   ```ruby
-  Coding::Code.new('009').succ.to_s #=> '010'
+  Codifications::Code.new('009').succ.to_s #=> '010'
   ```
 
 - İlk değerde `ABCDEF` harflerinden en az birisi görülmüş ve başka bir harf
@@ -51,7 +51,7 @@ ilklendiğinde verilen dizgi argümanıyla belirlenir.
   tabandaki artışa göre belirlenir.
 
   ```ruby
-  Coding::Code.new('00A').succ.to_s #=> '00B'
+  Codifications::Code.new('00A').succ.to_s #=> '00B'
   ```
 
 - İlk değerde `ABCDEF` dışındaki diğer harflerinden en az birisi görülmüşse
@@ -59,7 +59,7 @@ ilklendiğinde verilen dizgi argümanıyla belirlenir.
   göre belirlenir.
 
   ```ruby
-  Coding::Code.new('00G').succ.to_s #=> '00H'
+  Codifications::Code.new('00G').succ.to_s #=> '00H'
   ```
 
 Görüldüğü gibi kodlarda değer artışlarında sadece on, onaltı ve otuzaltı
@@ -68,27 +68,27 @@ belirlenmektedir.  Otomatik seçim kullanılmadan tabanı açıkça vermek
 isteyebilirsiniz.
 
 ```ruby
-Coding::Code.new('0AF', 36).succ.to_s #=> '0AG`, `0B0` değil!
+Codifications::Code.new('0AF', 36).succ.to_s #=> '0AG`, `0B0` değil!
 ```
 
 Kod üretimi
 -----------
 
-Kod üretimi `Code` nesneleriyle iklendirilen `Generator` nesnesiyle yapılır.
+Kod üretimi `Code` nesneleriyle iklendirilen `Coder` nesnesiyle yapılır.
 
 ```ruby
-generator = Coding::Generator.new '000'
-generator.generate #=> '000'
-generator.generate #=> '001'
+coder = Codifications::Coder.new '000'
+coder.run #=> '000'
+coder.run #=> '001'
 ```
 
 Üretilen kodun bir hanesinde sadece belirli karakterler kullanılmasını
 isteyebilirsiniz.
 
 ```ruby
-generator = Coding::Generator.new '000', deny: /0$/
-generator.generate #=> '001'
-generator.generate #=> '002'
+coder = Codifications::Coder.new '000', deny: /0$/
+coder.run #=> '001'
+coder.run #=> '002'
 ```
 
 Örnekte görüldüğü gibi `deny` isimlendirilmiş argümanında tanımlayacağımız bir
@@ -98,25 +98,26 @@ Kod üretiminin başlangıcı ilk argümanla verilirken, isteğe bağlı olarak,
 `ends` argümanıyla belirtilir.
 
 ```ruby
-generator = Coding::Generator.new '000', ends: '003'
-generator.generate #=> '000'
-generator.generate #=> '001'
-generator.generate #=> '002'
-generator.generate #=> '003'
-generator.generate #=> Coding::Generator::Consumed exception
+coder = Codifications::Coder.new '000', ends: '003'
+coder.run #=> '000'
+coder.run #=> '001'
+coder.run #=> '002'
+coder.run #=> '003'
+coder.run #=> Codifications::Coder::Consumed exception
 ```
 
-Görüldüğü gibi sona ulaşıldığında üreteç nesnesi `Coding::Generator::Consumed`
-istisnası üretir.  Bu istisnayı yakalayarak süreci kontrol edebilirsiniz.
+Görüldüğü gibi sona ulaşıldığında üreteç nesnesi
+`Codifications::Coder::Consumed` istisnası üretir.  Bu istisnayı yakalayarak
+süreci kontrol edebilirsiniz.
 
 Kod üreteçleri sadece tek kodlar üretmek yerine bir kod havuzu da (dizi)
 üretebilir.
 
 
 ```ruby
-generator = Coding::Generator.new '000', ends: '003'
+coder = Codifications::Coder.new '000', ends: '003'
 
-pool  = generator.pool   #=> ['000', '001', '002', '003']
+pool  = coder.pool   #=> ['000', '001', '002', '003']
 ```
 
 Geçmişe bağlı kod üretimi
@@ -124,11 +125,11 @@ Geçmişe bağlı kod üretimi
 
 Pek çok kullanım senaryosunda kod üretecinin geçmişte kullanılmayan tekil kodlar
 üretmesi istenir.  Bu amaçla üretece `memory` isimlendirilmiş argümanıyla
-verilen `Coding::Memory` nesnesinden yararlanacaksınız.  Ön tanımlı davranışta
-kod üreteci `Coding::NilMemory` nesnesiyle hafızasız davranır.
+verilen `Codifications::Memory` nesnesinden yararlanacaksınız.  Ön tanımlı
+davranışta kod üreteci `Codifications::NilMemory` nesnesiyle hafızasız davranır.
 
 ```ruby
-class Generator
+class Coder
   def initialize(seed, ends: nil, allowed: nil, memory: NilMemory.new)
     ...
   end
@@ -136,14 +137,14 @@ end
 ```
 
 Geçmişi kaydeden basit sözlük türünde bir hafıza kullanabilirsiniz.  Bu amaçla
-hazır `Coding::SimpleMemory` nesnesini kullanabilirsiniz.
+hazır `Codifications::SimpleMemory` nesnesini kullanabilirsiniz.
 
 ```ruby
-memory = Coding::SimpleMemory.new { '002' => true }
-generator = Coding::Generator.new '000', memory: memory
-generator.generate #=> '000'
-generator.generate #=> '001'
-generator.generate #=> '003', '002' hatırlandı
+memory = Codifications::SimpleMemory.new { '002' => true }
+coder = Codifications::Coder.new '000', memory: memory
+coder.run #=> '000'
+coder.run #=> '001'
+coder.run #=> '003', '002' hatırlandı
 ```
 
 `SimpleMemory` nesnesinin yeterli gelmediği durumlarda kendi hafıza nesnenizi
@@ -156,7 +157,7 @@ bir kod dizgisinin hafızada olup olmadığını döner.
 aşağıdaki sınıf tanımını yapabilirsiniz.
 
 ```ruby
-class DatabaseMemory < Coding::Memory
+class DatabaseMemory < Codifications::Memory
   def initialize
     # Veritabanından ilkle
   end
@@ -174,19 +175,19 @@ end
 Ön ekli kod üretimi
 -------------------
 
-Kod üretiminin özel bir hali olarak ön ekli kod üretmek için `PrefixedGenerator`
+Kod üretiminin özel bir hali olarak ön ekli kod üretmek için `PrefixedCoder`
 sınıfı kullanılır.
 
 ```ruby
-generator = PrefixedGenerator.new '078', prefix: ['203', '19'] # veya prefix: '20319'
-generator.generate #=> "20319078"
-generator.generate #=> "20319079"
+coder = PrefixedCoder.new '078', prefix: ['203', '19'] # veya prefix: '20319'
+coder.run #=> "20319078"
+coder.run #=> "20319079"
 
-generator.next_sequence    #=> "080" (generator çekirdeğini değiştirmez)
-generator.initial_sequence #=> "001"
+coder.next_sequence    #=> "080" (coder çekirdeğini değiştirmez)
+coder.initial_sequence #=> "001"
 ```
 
-Örnekte de görüldüğü gibi `PrefixedGenerator` üreteci `prefix sequence`
+Örnekte de görüldüğü gibi `PrefixedCoder` üreteci `prefix sequence`
 biçiminde kodlar üretir.  Ön ekin tanımlandığı `prefix` seçeneği farklı
 kaynaklardan gelen ön ekleri vurgulamak amacıyla dizi olarak verilebilir.
 
@@ -196,12 +197,12 @@ böyledir.  Örneğin veritabanı gibi bir kaynaktan başlangıç ardışımın�
 değeri `nil` olarak ayarlamanız üretecin sıfırlanması için yeterlidir.
 
 ```ruby
-generator = PrefixedGenerator.new nil, prefix: ['203', '19'] # veya prefix: '20319'
-generator.generate #=> "20319001"
-generator.generate #=> "20319002"
+coder = PrefixedCoder.new nil, prefix: ['203', '19'] # veya prefix: '20319'
+coder.run #=> "20319001"
+coder.run #=> "20319002"
 
-generator.next_sequence    #=> "003"
-generator.initial_sequence #=> "001"
+coder.next_sequence    #=> "003"
+coder.initial_sequence #=> "001"
 ```
 
 Üretilen kod öntanımlı olarak 8 hanedir.  Ön eklerin varlığı nedeniyle ardışımın
@@ -210,13 +211,13 @@ için daha fazla sayıda haneye ihtiyacınız varsa `prefix` değerini ihtiyaç
 duyulan hane sayısına göre daraltabilirsiniz.
 
 ```ruby
-long_generator = PrefixedGenerator.new '001', prefix: '203'
+long_coder = PrefixedCoder.new '001', prefix: '203'
 
-long_generator.generate #=> "20300001"
-long_generator.generate #=> "20300002"
+long_coder.run #=> "20300001"
+long_coder.run #=> "20300002"
 
-long_generator.next_sequence    #=> "00003"
-long_generator.initial_sequence #=> "00001"
+long_coder.next_sequence    #=> "00003"
+long_coder.initial_sequence #=> "00001"
 ```
 
 Daha uzun kodlar üretmek için miras alma yoluyla yeni bir sınıf
@@ -224,7 +225,7 @@ oluşturabilirsiniz.
 
 
 ```ruby
-class CustomGenerator < PrefixedGenerator
+class CustomCoder < PrefixedCoder
   self.length = 12
 end
 ```
@@ -232,10 +233,10 @@ end
 Üretecin davranışını inşa zamanında vereceğiniz seçeneklerle değiştirerek çok
 daha özel bir üreteç de gerçekleyebilirsiniz.  Örneğin aşağıdaki üreteç `0`
 rakamı içermeyen kodlar üretmektedir.  Kullanılabilecek geçerli seçenekler için
-`Generator` sınıfını inceleyin.
+`Coder` sınıfını inceleyin.
 
 
 ```ruby
-never_zero_generator = PrefixedGenerator.new nil, prefix: '203', deny: /0/
-never_zero_generator.generate #=> "20311111"
+never_zero_coder = PrefixedCoder.new nil, prefix: '203', deny: /0/
+never_zero_coder.run #=> "20311111"
 ```

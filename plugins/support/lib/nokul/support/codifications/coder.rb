@@ -4,9 +4,9 @@ require_relative 'refinery'
 
 module Nokul
   module Support
-    module Coding
+    module Codifications
       # :reek:TooManyInstanceVariables { max_variables: 5 }
-      class Generator
+      class Coder
         using Refinery
 
         Consumed = Class.new ::StandardError
@@ -19,14 +19,14 @@ module Nokul
           @memory = memory
         end
 
-        def generate
-          code_string = try_generate
+        def run
+          code_string = try_run
           memory&.remember code_string
           code_string
         end
 
         def peek
-          dup.generate
+          dup.run
         end
 
         def pool
@@ -53,9 +53,9 @@ module Nokul
           end
         end
 
-        def try_generate
+        def try_run
           loop do
-            raise(Consumed, "Generator has been consumed at #{current}") if current > ends
+            raise(Consumed, "Coder has been consumed at #{current}") if current > ends
 
             code_string = current.to_s
             self.current = current.succ

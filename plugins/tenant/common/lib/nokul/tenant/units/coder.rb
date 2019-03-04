@@ -9,7 +9,7 @@ module Nokul
   module Tenant
     module Units
       class Coder
-        class Memory < Support::Coding::SimpleMemory
+        class Memory < Support::Codifications::SimpleMemory
           include Singleton
         end
 
