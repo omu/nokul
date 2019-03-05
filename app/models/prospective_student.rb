@@ -21,6 +21,7 @@ class ProspectiveStudent < ApplicationRecord
   enum gender: { male: 1, female: 2 }
   enum nationality: { turkish: 1, kktc: 2, foreign: 3 }
   enum placement_type: { general_score: 1, additional_score: 2 }
+  enum system_register_type: { manuel: 0, bulk: 1 }
 
   # relations
   belongs_to :academic_term
@@ -31,7 +32,7 @@ class ProspectiveStudent < ApplicationRecord
   belongs_to :unit
 
   # validations
-  validates :additional_score, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :additional_score, allow_nil: true, inclusion: { in: additional_scores.keys }
   validates :address, length: { maximum: 255 }
   validates :email, length: { maximum: 255 }
   validates :exam_score, allow_nil: true, numericality: { greater_than_or_equal_to: 0 }
@@ -67,6 +68,7 @@ class ProspectiveStudent < ApplicationRecord
   validates :registered, inclusion: { in: [true, false] }
   validates :registration_district, length: { maximum: 255 }
   validates :state_of_education, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :system_register_type, inclusion: { in: system_register_types.keys }
   validates :top_student, inclusion: { in: [true, false] }
 
   # custom methods

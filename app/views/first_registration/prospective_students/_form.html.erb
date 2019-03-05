@@ -111,7 +111,7 @@
               <div class='card-body'>
                 <div class='row'>
                   <div class='form-group col-sm-4'>
-                    <%= f.input :placement_type %>
+                    <%= f.input :placement_type, collection: enum_options_for_select(f.object.class, :placement_type) %>
                   </div>
                   <div class='form-group col-sm-4'>
                     <%= f.input :exam_score %>
@@ -129,7 +129,7 @@
                     <%= f.input :placement_score_type %>
                   </div>
                   <div class='form-group col-sm-4'>
-                    <%= f.input :additional_score %>
+                    <%= f.input :additional_score, collection: enum_options_for_select(f.object.class, :additional_score) %>
                   </div>
                 </div>
               </div>

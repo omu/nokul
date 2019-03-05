@@ -56,7 +56,7 @@ tr:
         year: Yıl
     enums:
       prospective_student:
-        additional_score:
+        additional_scores:
           handicapped: Engelli Ek Puanı
         genders:
           female: Kadın

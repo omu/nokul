@@ -1903,6 +1903,8 @@ CREATE TABLE public.prospective_students (
     updated_at timestamp without time zone NOT NULL,
     academic_term_id bigint,
     expiry_date timestamp without time zone,
+    system_register_type integer DEFAULT 0,
+    archived boolean DEFAULT false,
     CONSTRAINT prospective_students_additional_score_numericality CHECK ((additional_score >= 0)),
     CONSTRAINT prospective_students_address_length CHECK ((length((address)::text) <= 255)),
     CONSTRAINT prospective_students_email_length CHECK ((length((email)::text) <= 255)),
@@ -1937,6 +1939,7 @@ CREATE TABLE public.prospective_students (
     CONSTRAINT prospective_students_registration_city_length CHECK ((length((registration_city)::text) <= 255)),
     CONSTRAINT prospective_students_registration_district_length CHECK ((length((registration_district)::text) <= 255)),
     CONSTRAINT prospective_students_state_of_education_numericality CHECK ((state_of_education >= 0)),
+    CONSTRAINT prospective_students_system_register_type_numericality CHECK ((system_register_type >= 0)),
     CONSTRAINT prospective_students_top_student_null CHECK ((top_student IS NOT NULL))
 );
 

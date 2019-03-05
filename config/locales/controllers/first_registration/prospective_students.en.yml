@@ -56,7 +56,7 @@ en:
         year: Year
     enums:
       prospective_student:
-        additional_score:
+        additional_scores:
           handicapped: Handicapped Additional Score
         genders:
           female: Female

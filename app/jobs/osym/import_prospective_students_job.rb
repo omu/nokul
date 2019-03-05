@@ -73,7 +73,8 @@ module Osym
           obs_registered_program: obs_registered_program,
           student_entrance_type: StudentEntranceType.find_by(code: 1), # TODO: will be dynamic in the future
           academic_term: academic_term,
-          expiry_date: academic_term.end_of_term
+          expiry_date: academic_term.end_of_term,
+          system_register_type: :bulk
         )
         progress_bar&.increment
       end
