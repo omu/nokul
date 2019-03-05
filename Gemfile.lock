@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/flyerhzm/bullet.git
-  revision: 11ef24fd486d34af70b631843c349965b65323cb
+  revision: 58f8f4f148f7fa52863dce61f2ad19fe339a7689
   specs:
     bullet (5.9.0)
       activesupport (>= 3.0.0)
@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 0c5486aa4d789bafe36b200e9c9d4507b3c20c89
+  revision: a8c0ebccbdbf4e2ccbacbf94cba6cf24699af190
   specs:
     actioncable (6.0.0.beta2)
       actionpack (= 6.0.0.beta2)
@@ -88,19 +88,19 @@ GIT
 
 GIT
   remote: https://github.com/rails/web-console.git
-  revision: a3c5dc58d8f1ba319d6de4b6185052d2a9d656b0
+  revision: 3b0e6d6521f46d347bb42252865c3c87b8a84b65
   specs:
     web-console (3.7.0)
-      actionview (>= 5.0)
-      activemodel (>= 5.0)
+      actionview (>= 5.2)
+      activemodel (>= 5.2)
       bindex (>= 0.4.0)
-      railties (>= 5.0)
+      railties (>= 5.2)
 
 GIT
   remote: https://github.com/rails/webpacker.git
-  revision: e5deb13706f66a693204b8f0ff8f3da103ebd417
+  revision: 2da0ccd00517f789e94679d3f8b1a7d18d802b3a
   specs:
-    webpacker (4.0.0.rc.7)
+    webpacker (4.0.1)
       activesupport (>= 4.2)
       rack-proxy (>= 0.6.1)
       railties (>= 4.2)
@@ -138,7 +138,7 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     ancestry (3.0.5)
       activerecord (>= 3.2.0)
-    archive-zip (0.11.0)
+    archive-zip (0.12.0)
       io-like (~> 0.3.0)
     ast (2.4.0)
     aws-eventstream (1.0.1)
@@ -240,7 +240,7 @@ GEM
       activesupport (>= 4.2)
     hashdiff (0.3.8)
     html_tokenizer (0.0.7)
-    i18n (1.5.3)
+    i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     image_processing (1.8.0)
       mini_magick (>= 4.9.3, < 5)
@@ -277,7 +277,7 @@ GEM
     mini_mime (1.0.1)
     mini_portile2 (2.4.0)
     minitest (5.11.3)
-    msgpack (1.2.6)
+    msgpack (1.2.7)
     multi_json (1.13.1)
     netaddr (2.0.3)
     nio4r (2.3.1)
