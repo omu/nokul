@@ -86,6 +86,7 @@ en:
         personel_informations: Personel Informations
       index:
         <<: *prospective_student_attributes
+        new_prospective_student: Create a New Prospective Student
         prospective_students: Prospective Students
       new:
         form_title: Prospective Student Registration Form

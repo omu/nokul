@@ -87,6 +87,7 @@ tr:
       index:
         <<: *prospective_student_attributes
         prospective_students: Yerleşen Öğrenciler
+        new_prospective_student: Aday Öğrenci Oluştur
       new:
         form_title: Aday Öğrenci Kayıt Formu
       register:

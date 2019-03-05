@@ -3,6 +3,9 @@
     <div class='card'>
       <div class='card-header'>
         <%= fa_icon 'align-justify', text: t('.prospective_students') %>
+        <div class='card-header-actions'>
+          <%= link_to_new(t('.new_prospective_student'), %i[new first_registration prospective_student]) %>
+        </div>
       </div>
       <div class='card-body'>
         <%= render 'search' %>
@@ -32,7 +35,7 @@
                 <td><%= prospective_student.obs_status ? t('.unproblematic') : t('.student_in_a_different_unit') %></td>
                 <td><%= prospective_student.student_entrance_type.try(:name) %></td>
                 <td>
-                  <%= link_to_show([:first_registration, prospective_student]) %>
+                  <%= link_to_actions([:first_registration, prospective_student], except: :destroy) %>
                 </td>
               </tr>
             <% end %>
