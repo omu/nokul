@@ -97,15 +97,6 @@ GIT
       railties (>= 5.2)
 
 GIT
-  remote: https://github.com/rails/webpacker.git
-  revision: 2da0ccd00517f789e94679d3f8b1a7d18d802b3a
-  specs:
-    webpacker (4.0.1)
-      activesupport (>= 4.2)
-      rack-proxy (>= 0.6.1)
-      railties (>= 4.2)
-
-GIT
   remote: https://github.com/rollbar/rollbar-gem.git
   revision: 437b171efbb03e63cea1a403c21fc19a57cca37e
   specs:
@@ -408,6 +399,10 @@ GEM
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
+    webpacker (4.0.1)
+      activesupport (>= 4.2)
+      rack-proxy (>= 0.6.1)
+      railties (>= 4.2)
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
@@ -476,7 +471,7 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   web-console!
   webmock
-  webpacker!
+  webpacker
   wicked_pdf
 
 RUBY VERSION
