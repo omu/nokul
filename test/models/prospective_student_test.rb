@@ -48,7 +48,7 @@ class ProspectiveStudentTest < ActiveSupport::TestCase
   enum gender: { male: 1, female: 2 }
   enum nationality: { turkish: 1, kktc: 2, foreign: 3 }
   enum placement_type: { general_score: 1, additional_score: 2 }
-  enum system_register_type: { manuel: 0, bulk: 1 }
+  enum system_register_type: { manual: 0, bulk: 1 }
 
   # callbacks
   before_create :capitalize_attributes

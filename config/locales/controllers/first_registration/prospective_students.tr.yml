@@ -5,6 +5,7 @@ tr:
         academic_term: Akademik Dönem
         additional_score: Ek Puan
         address: Adres
+        archived: Arşivlenmiş
         date_of_birth: Doğum Tarihi
         email: E-posta
         exam_score: Sınav Puanı
@@ -29,6 +30,7 @@ tr:
         mothers_name: Anne Adı
         must_see_recruiting_office: Askerlik Şubesiyle Görüşmeli
         nationality: Uyruk
+        not_archived: Arşivlenmemiş
         not_graduated_or_unknown: Mezun Değil/Bilinmiyor
         not_registered: Kayıtlanmamış
         obs_registered_program: Öğrenci Olarak Kayıtlı Olduğu Program

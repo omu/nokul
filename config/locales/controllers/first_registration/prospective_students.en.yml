@@ -5,6 +5,7 @@ en:
         academic_term: Academic Term
         additional_score: Additional Score
         address: Address
+        archived: Archived
         date_of_birth: Date of Birth
         email: Email
         exam_score: Exam Score
@@ -29,6 +30,7 @@ en:
         mothers_name: Mother's Name
         must_see_recruiting_office: Must See Recruiting Office
         nationality: Nationality
+        not_archived: Not Archived
         not_graduated_or_unknown: Not Graduated/Unknown
         not_registered: Not Registered
         obs_registered_program: Registered To
