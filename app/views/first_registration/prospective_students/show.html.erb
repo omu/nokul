@@ -34,7 +34,7 @@
               <td>
                 <p><%= @prospective_student.obs_status ? t('.unproblematic') : t('.student_in_a_different_unit') %></p>
                 <p><small><%= t('.last_update') %>: <%= as_date_and_time(@prospective_student.obs_status_date) %></small></p>
-                <% if @prospective_student.obs_registered_program %>
+                <% if @prospective_student.obs_registered_program.present? %>
                   <p>
                     <%= fa_icon 'exclamation-triangle' %>
                     <strong><%= t('.registered_to', program: @prospective_student.obs_registered_program) %></strong>
@@ -43,7 +43,7 @@
               </td>
             </tr>
             <% unless @prospective_student.registered %>
-              <% @prospective_student.unit.registration_documents.each do |registration_document| %>
+              <% @prospective_student.registration_documents.each do |registration_document| %>
                 <tr>
                   <th><%= registration_document.name %></th>
                   <td>

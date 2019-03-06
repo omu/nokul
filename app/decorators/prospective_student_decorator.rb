@@ -7,13 +7,9 @@ class ProspectiveStudentDecorator < SimpleDelegator
     )
   end
 
-  def academic_term
-    @academic_term ||= AcademicTerm.active.last
-  end
-
   def registration_documents
     @registration_documents ||= unit.registration_documents
-                                    .includes(:document)
+                                    .includes(:document_type)
                                     .where(academic_term: academic_term)
   end
 

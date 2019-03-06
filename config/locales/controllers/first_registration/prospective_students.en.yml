@@ -49,6 +49,7 @@ en:
         student_disability_type: Student Disability Type
         student_entrance_type: Entrance Type
         student_in_a_different_unit: Student in a different university/unit
+        system_register_type: System Register Type
         top_student: Top Student
         root_unit: Unit
         unit: Placement Program
@@ -68,6 +69,9 @@ en:
         placement_types:
           additional_score: Additional Scored
           general_score: General
+        system_register_types:
+          bulk: Bulk
+          manual: Manual
   simple_form:
     labels:
       prospective_student:

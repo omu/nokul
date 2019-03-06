@@ -66,10 +66,10 @@
                     <%= f.input :home_phone %>
                   </div>
                   <div class='form-group col-sm-4'>
-                    <%= f.input :mobile_phone %>
+                    <%= f.input :mobile_phone, required: true %>
                   </div>
                   <div class='form-group col-sm-4'>
-                    <%= f.input :email %>
+                    <%= f.input :email, required: true %>
                   </div>
                 </div>
               </div>
@@ -169,7 +169,7 @@
                   </div>
                   <div class='form-group col-sm-4'>
                     <%= f.association :academic_term,
-                                      label_method: lambda { |academic_term| full_name(academic_term) }, value_method: :id %>
+                                      label_method: lambda { |academic_term| full_name(academic_term) } %>
                   </div>
                   <div class='form-group col-sm-4'>
                     <%= f.input :expiry_date, as: :date_time_picker %>

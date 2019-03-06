@@ -49,6 +49,7 @@ tr:
         student_disability_type: Öğrenci Engel Türü
         student_entrance_type: Giriş Türü
         student_in_a_different_unit: Başka Bir Üniversite/Birimde Öğrenci
+        system_register_type: Sisteme Kayıtlanma Türü
         top_student: Okul Birincisi
         root_unit: Birim
         unit: Yerleştiği Program
@@ -68,6 +69,9 @@ tr:
         placement_types:
           additional_score: Ek Puanlı
           general_score: Genel
+        system_register_types:
+          bulk: Bulk
+          manual: Manuel
   simple_form:
     labels:
       prospective_student:
