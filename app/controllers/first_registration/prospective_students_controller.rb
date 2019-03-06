@@ -40,7 +40,7 @@ module FirstRegistration
       prospective_student = FirstRegistration::ProspectiveStudentService.new(@prospective_student)
 
       if prospective_student.register
-        @prospective_student.update(registered: true)
+        @prospective_student.update(registered: true, archived: true)
         redirect_to(index_path, notice: t('.success'))
       else
         redirect_to(index_path, alert: t('.warning'))
