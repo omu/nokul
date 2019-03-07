@@ -1,0 +1,206 @@
+<div class='row'>
+  <div class='col-sm-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'users' %>
+        <strong><%= form_title %></strong>
+      </div>
+      <div class='card-body'>
+        <%= simple_form_for([:first_registration, prospective_student]) do |f| %>
+          <div class='row'>
+            <div class='form-group col-sm-12'>
+              <%= f.error_notification %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <div class='card-header'>
+                <%= t('.personel_informations') %>
+              </div>
+              <div class='card-body'>
+                <div class='row'>
+                  <div class='col-sm-4'>
+                    <%= f.input :id_number, required: true %>
+                  </div>
+                  <div class='col-sm-4'>
+                    <%= f.input :first_name, required: true %>
+                  </div>
+                  <div class='col-sm-4'>
+                    <%= f.input :last_name, required: true %>
+                  </div>
+                  <div class='col-sm-4'>
+                    <%= f.input :fathers_name %>
+                  </div>
+                  <div class='col-sm-4'>
+                    <%= f.input :mothers_name %>
+                  </div>
+                  <div class='col-sm-4'>
+                    <%= f.input :date_of_birth, as: :date_time_picker %>
+                  </div>
+                  <div class='col-sm-4'>
+                    <%= f.input :gender, collection: enum_options_for_select(f.object.class, :gender), required: true %>
+                  </div>
+                  <div class='col-sm-4'>
+                    <%= f.input :place_of_birth %>
+                  </div>
+                  <div class='col-sm-4'>
+                    <%= f.input :nationality, collection: enum_options_for_select(f.object.class, :nationality) %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class='col-sm-12'>
+              <div class='card-header'>
+                <%= t('.address_and_contact_informations') %>
+              </div>
+              <div class='card-body'>
+                <div class='row'>
+                  <div class='form-group col-sm-4'>
+                    <%= f.input :registration_city %>
+                  </div>
+                  <div class='form-group col-sm-4'>
+                    <%= f.input :registration_district %>
+                  </div>
+                  <div class='form-group col-sm-4'>
+                    <%= f.input :address %>
+                  </div>
+                  <div class='form-group col-sm-4'>
+                    <%= f.input :home_phone %>
+                  </div>
+                  <div class='form-group col-sm-4'>
+                    <%= f.input :mobile_phone, required: true %>
+                  </div>
+                  <div class='form-group col-sm-4'>
+                    <%= f.input :email, required: true %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class='col-sm-12'>
+              <div class='card-header'>
+                <%= t('.high_school_informations') %>
+              </div>
+              <div class='card-body'>
+                <div class='row'>
+                  <div class='form-group col-sm-4'>
+                    <%= f.input :high_school_code %>
+                  </div>
+                  <div class='form-group col-sm-4'>
+                    <%= f.input :high_school_branch %>
+                  </div>
+                  <div class='form-group col-sm-4'>
+                    <%= f.input :high_school_graduation_year %>
+                  </div>
+                  <div class='form-group col-sm-4'>
+                    <%= f.input :high_school_type, collection: HighSchoolType.all %>
+                  </div>
+                  <div class='form-group col-sm-4'>
+                    <%= f.input :top_student %>
+                  </div>
+                  <div class='form-group col-sm-4'>
+                    <%= f.input :meb_status %>
+                  </div>
+                  <div class='form-group col-sm-4'>
+                    <%= f.input :meb_status_date, as: :date_time_picker %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class='col-sm-12'>
+              <div class='card-header'>
+                <%= t('.exam_informations') %>
+              </div>
+              <div class='card-body'>
+                <div class='row'>
+                  <div class='form-group col-sm-4'>
+                    <%= f.input :placement_type, collection: enum_options_for_select(f.object.class, :placement_type) %>
+                  </div>
+                  <div class='form-group col-sm-4'>
+                    <%= f.input :exam_score %>
+                  </div>
+                  <div class='form-group col-sm-4'>
+                    <%= f.input :placement_score %>
+                  </div>
+                  <div class='form-group col-sm-4'>
+                    <%= f.input :placement_rank %>
+                  </div>
+                  <div class='form-group col-sm-4'>
+                    <%= f.input :preference_order %>
+                  </div>
+                  <div class='form-group col-sm-4'>
+                    <%= f.input :placement_score_type %>
+                  </div>
+                  <div class='form-group col-sm-4'>
+                    <%= f.input :additional_score, collection: enum_options_for_select(f.object.class, :additional_score) %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class='col-sm-12'>
+              <div class='card-header'>
+                <%= t('.other_informations') %>
+              </div>
+              <div class='card-body'>
+                <div class='row'>
+                  <div class='form-group col-sm-6'>
+                    <%= f.input :military_status %>
+                  </div>
+                  <div class='form-group col-sm-6'>
+                    <%= f.input :military_status_date, as: :date_time_picker %>
+                  </div>
+                  <div class='form-group col-sm-6'>
+                    <%= f.input :obs_status %>
+                  </div>
+                  <div class='form-group col-sm-6'>
+                    <%= f.input :obs_status_date, as: :date_time_picker %>
+                  </div>
+                  <div class='form-group col-sm-4'>
+                    <%= f.input :obs_registered_program %>
+                  </div>
+                  <div class='form-group col-sm-4'>
+                    <%= f.association :unit, collection: Unit.programs %>
+                  </div>
+                  <div class='form-group col-sm-4'>
+                    <%= f.input :language_id, collection: Language.all %>
+                  </div>
+                  <div class='form-group col-sm-4'>
+                    <%= f.association :student_disability_type, collection: StudentDisabilityType.all %>
+                  </div>
+                  <div class='form-group col-sm-4'>
+                    <%= f.association :student_entrance_type, collection: StudentEntranceType.all %>
+                  </div>
+                  <div class='form-group col-sm-4'>
+                    <%= f.association :academic_term,
+                                      label_method: lambda { |academic_term| full_name(academic_term) } %>
+                  </div>
+                  <div class='form-group col-sm-4'>
+                    <%= f.input :expiry_date, as: :date_time_picker %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.button :submit, t('save'), class: 'btn btn-outline-success btn-sm' %>
+              <%= link_to_back(:back) %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type='text/javascript'>
+  flatpickr('.datetimepicker', { enableTime: true, altInput: true })
+
+  $(document).ready(function() {
+    elements = [
+      '#prospective_student_high_school_type',
+      '#prospective_student_unit_id',
+      '#prospective_student_student_disability_type_id',
+      '#prospective_student_student_entrance_type_id',
+      '#prospective_student_language_id',
+      '#prospective_student_academic_term_id'
+    ]
+
+    $(elements.join(',')).select2();
+  });
+</script>
