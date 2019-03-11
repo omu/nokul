@@ -62,9 +62,6 @@ gem 'rollbar', github: 'rollbar/rollbar-gem'
 # permalinks
 gem 'friendly_id', '~> 5.2.0'
 
-# cron jobs
-gem 'whenever', require: false
-
 group :development, :test do
   gem 'brakeman', require: false
   gem 'bullet', github: 'flyerhzm/bullet'
