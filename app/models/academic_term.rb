@@ -8,6 +8,7 @@ class AcademicTerm < ApplicationRecord
 
   # relations
   has_many :calendars, dependent: :nullify
+  has_many :prospective_students, dependent: :nullify
   has_many :registration_documents, dependent: :nullify
 
   # validations
