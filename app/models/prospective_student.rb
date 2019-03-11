@@ -72,6 +72,10 @@ class ProspectiveStudent < ApplicationRecord
   validates :system_register_type, inclusion: { in: system_register_types.keys }
   validates :top_student, inclusion: { in: [true, false] }
 
+  # scopes
+  scope :archived, -> { where(archived: true) }
+  scope :not_archived, -> { where(archived: false) }
+
   # custom methods
   def can_permanently_register?
     military_status && obs_status && meb_status
