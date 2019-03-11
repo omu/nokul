@@ -8,8 +8,7 @@ services:
         - RAILS_MASTER_KEY=$RAILS_MASTER_KEY
         - RAILS_ENV=$RAILS_ENV
     environment:
-      TEST_DATABASE_URL: postgresql://nokul:nokul@db/nokul_test
-      DEVELOPMENT_DATABASE_URL: postgresql://nokul:nokul@db/nokul_development
+      DB_HOST: db
       REDIS_URL: redis://redis:6379
     ports:
       - "80:3000"
@@ -35,8 +34,7 @@ services:
         - RAILS_MASTER_KEY=$RAILS_MASTER_KEY
         - RAILS_ENV=$RAILS_ENV
     environment:
-      TEST_DATABASE_URL: postgresql://nokul:nokul@db/nokul_test
-      DEVELOPMENT_DATABASE_URL: postgresql://nokul:nokul@db/nokul_development
+      DB_HOST: db
       REDIS_URL: redis://redis:6379
     command: sh -c "bundle exec sidekiq -q high -q low"
     depends_on:
@@ -50,7 +48,7 @@ services:
         - RAILS_ENV=$RAILS_ENV
         - NODE_ENV=$NODE_ENV
     environment:
-      TEST_DATABASE_URL: postgresql://nokul:nokul@db/nokul_test
+      DB_HOST: db
       REDIS_URL: redis://redis:6379
       RAILS_MASTER_KEY: $RAILS_MASTER_KEY
       CODACY_PROJECT_TOKEN: $CODACY_PROJECT_TOKEN

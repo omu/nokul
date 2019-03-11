@@ -1,6 +1,3 @@
-<% name = Rails.application.appname
-   url = "postgresql://#{name}:#{name}@localhost/#{name}_%{environment}" %>
-
 default: &default
   adapter: postgresql
   pool: 5
@@ -9,11 +6,11 @@ default: &default
 
 development:
   <<: *default
-  url: <%= ENV.fetch('DEVELOPMENT_DATABASE_URL', format(url, environment: 'development')) %>
+  url: <%= Rails.application.database_url_for('development') %>
 
 test:
   <<: *default
-  url: <%= ENV.fetch('TEST_DATABASE_URL', format(url, environment: 'test')) %>
+  url: <%= Rails.application.database_url_for('test') %>
 
 production: &production
   <<: *default
