@@ -90,7 +90,8 @@
                     <%= f.input :high_school_graduation_year %>
                   </div>
                   <div class='form-group col-sm-4'>
-                    <%= f.input :high_school_type, collection: HighSchoolType.all %>
+                    <%= f.association :high_school_type %>
+                    
                   </div>
                   <div class='form-group col-sm-4'>
                     <%= f.input :top_student %>
