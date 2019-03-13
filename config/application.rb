@@ -49,5 +49,11 @@ module Nokul
                      self.class.module_parent.to_s.underscore
                    end
     end
+
+    def database_url_for(env)
+      host = ENV.fetch('DB_HOST', 'localhost')
+
+      "postgresql://#{appname}:#{appname}@#{host}/#{appname}_#{env}"
+    end
   end
 end
