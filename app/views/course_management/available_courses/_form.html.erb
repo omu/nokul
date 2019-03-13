@@ -18,7 +18,7 @@
               <% end %>
             </ul>
           <% end %>
-          <div class='row mt-3'>
+          <div class='row'>
             <div class='form-group col-sm-6'>
               <%= f.association :unit,
                                 collection: Unit.active.coursable.order(:name),
@@ -41,10 +41,20 @@
               <%= f.association :course,
                                 collection: [*courses] %>
             </div>
-            <div class='form-group col-sm-12'>
-              <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
-              <%= link_to_back(:back) %>
+          </div>
+
+          <h3 class='text-center'><%= t('.groups') %></h3>
+          <div class='col-sm-12' id='groups'>
+            <%= f.simple_fields_for :groups do |group| %>
+              <%= render 'group_fields', f: group, dene: f %>
+            <% end %>
+            <div class='links text-center'>
+              <%= link_to_add_association t('.add_group'), f, :groups, class: 'btn btn-success btn-sm' %>
             </div>
+          </div>
+          <div class='form-group col-sm-12'>
+            <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
+            <%= link_to_back(:back) %>
           </div>
         <% end %>
       </div>
@@ -53,3 +63,4 @@
 </div>
 
 <%= render 'js' %>
+<%= javascript_include_tag 'shared/cocoon' %>

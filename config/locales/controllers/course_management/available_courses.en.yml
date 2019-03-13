@@ -6,6 +6,7 @@ en:
         coordinator: Coordinator
         course: Course
         curriculum: Curriculum
+        groups: Groups
         unit: Unit
   course_management:
     available_courses:
@@ -29,6 +30,8 @@ en:
         name: Group Name
         quota: Quota
         title: Title
+      group_fields:
+        add_lecturer: Add Lecturer
       index:
         <<: *available_course_attributes
         add_new_available_course: Add a New Available Course
@@ -42,6 +45,8 @@ en:
         <<: *available_course_attributes
         smart_search_placeholder: Course Name / Course Code
       form:
+        add_group: Add Group
+        groups: Groups
         unit: Unit
       show:
         <<: *available_course_attributes

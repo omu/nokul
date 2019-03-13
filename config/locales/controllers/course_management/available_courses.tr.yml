@@ -6,6 +6,7 @@ tr:
         coordinator: Koordinatör
         course: Ders
         curriculum: Müfredat
+        groups: Gruplar
         unit: Birim
   course_management:
     available_courses:
@@ -29,6 +30,8 @@ tr:
         name: Grup Adı
         quota: Kontenjan
         title: Ünvan
+      group_fields:
+        add_lecturer: Öğretim Elemanı Ekle
       index:
         <<: *available_course_attributes
         add_new_available_course: Yeni Açılan Ders Ekle
@@ -42,6 +45,8 @@ tr:
         <<: *available_course_attributes
         smart_search_placeholder: Ders Adı / Ders Kodu
       form:
+        add_group: Grup Ekle
+        groups: Gruplar
         unit: Birim
       show:
         <<: *available_course_attributes

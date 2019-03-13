@@ -7,7 +7,7 @@ class CurriculumDecorator < SimpleDelegator
     return [] unless term
 
     courses = semesters.where(term: term)
-                       .includes(:courses)
+                       .includes(:courses, :curriculum_courses)
                        .where.not(courses: { id: available_courses.pluck(:course_id) })
                        .order('courses.name')
                        .map(&:courses)

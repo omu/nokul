@@ -1,0 +1,19 @@
+<div class='nested-fields' id='lecturers' style="display: <%= f.object.marked_for_destruction? ? 'none' : 'block' %>">
+  <div class='card card-default'>
+    <div class='card-body bg-light'>
+      <div class='row'>
+        <div class='col-sm-6'>
+          <%= f.association :lecturer, collection: [*f.object&.group&.available_course&.unit&.subtree_employees],
+                                       label_method: lambda { |c| full_name(c) },
+                                       input_html:{ id: 'group_lecturer_id' }%>
+        </div>
+        <div class='col-sm-6'>
+          <%= f.input :coordinator, collection: [[t('yes'), true], [t('no'), false]], required: true %>
+        </div>
+      </div>
+    </div>
+    <div class='card-footer' id='lecturers'>
+      <%= link_to_remove_association f, class: 'btn btn-danger btn-sm' %>
+    </div>
+  </div>
+</div>

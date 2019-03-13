@@ -19,6 +19,15 @@
         placeholder: 'Müfredat Seçiniz'
       },
       {
+        el: '#available_course_unit_id',
+        target: '#group_lecturer_id',
+        params: { 'unit_id': '#available_course_unit_id' },
+        source: '/units/:unit_id/employees/',
+        label_attribute: 'full_name',
+        reset_selectors: '#group_lecturer_id',
+        placeholder: 'Öğretim Elemanını Seçiniz'
+      },
+      {
         el: '#available_course_curriculum_id',
         target: '#available_course_course_id',
         params: { 'curriculum_id': '#available_course_curriculum_id' },
@@ -38,5 +47,19 @@
     ]
     var dynamic_select = new DynamicSelect(parameters)
     dynamic_select.init()
+
+    configure_link_to_remove()
+
+    function configure_link_to_remove() {
+      if ($('#groups.nested-fields:visible').length == 1) {
+        $('#groups.card-footer:visible').hide();
+      } else {
+        $('#groups.card-footer:hidden').show();
+      }
+    }
+
+    $('#groups').on('cocoon:after-insert cocoon:after-remove', function() {
+      configure_link_to_remove()
+    });
   });
 </script>
