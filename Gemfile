@@ -33,7 +33,7 @@ gem 'devise'
 gem 'coffee-rails', '~> 4.2'
 gem 'sassc-rails'
 gem 'uglifier', '>= 1.3.0'
-gem 'webpacker', github: 'rails/webpacker'
+gem 'webpacker'
 
 # view helpers: tools for forms, views, etc.
 gem 'chartkick'
