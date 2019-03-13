@@ -159,7 +159,7 @@
                     <%= f.association :unit, collection: Unit.programs %>
                   </div>
                   <div class='form-group col-sm-4'>
-                    <%= f.input :language_id, collection: Language.all %>
+                    <%= f.association :language %>
                   </div>
                   <div class='form-group col-sm-4'>
                     <%= f.association :student_disability_type, collection: StudentDisabilityType.all %>
