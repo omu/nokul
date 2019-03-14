@@ -6,15 +6,28 @@ NODEJS_TARGET_VERSION = 10
 POSTGRESQL_TARGET_VERSION = 11
 
 namespace :developer do
-  desc 'Checks if master_key is available'
-  task :master_key do |task|
+  desc 'Checks if RAILS_MASTER_KEY is available'
+  task :rails_master_key do |task|
     puts "########### #{task.full_comment} ###########"
     if ENV['RAILS_MASTER_KEY'] || File.file?('config/master.key')
       puts "OK \u2713"
     else
       abort(
         "FAIL \u2717 "\
-        'Can not reach master key! Either define a RAILS_MASTER_KEY in environment or store it in config/master.key'
+        'Can not reach RAILS_MASTER_KEY key! Either define it as environment variable or store in config/master.key'
+      )
+    end
+  end
+
+  desc 'Checks if TENANT_MASTER_KEY is available'
+  task :tenant_master_key do |task|
+    puts "########### #{task.full_comment} ###########"
+    if ENV['TENANT_MASTER_KEY'] || File.file?(Tenant.root.join('config', 'master.key'))
+      puts "OK \u2713"
+    else
+      abort(
+        "FAIL \u2717 "\
+        'Can not reach TENANT_MASTER_KEY! Either define it as environment variable or store in config/master.key'
       )
     end
   end
@@ -77,7 +90,7 @@ namespace :developer do
   end
 
   desc 'Runs all development machine tasks'
-  task all: %w[master_key fit_commit nodejs postgresql]
+  task all: %w[rails_master_key tenant_master_key fit_commit nodejs postgresql]
 
   private
 
