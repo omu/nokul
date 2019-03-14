@@ -61,16 +61,52 @@ module FirstRegistration
       redirect_to(index_path, alert: t('.can_not_register')) unless @prospective_student.can_temporarily_register?
     end
 
+    # rubocop:disable Metrics/MethodLength
     def prospective_student_params
-      params.require(:prospective_student)
-            .permit(:id_number, :first_name, :last_name, :fathers_name, :mothers_name, :date_of_birth, :gender,
-                    :nationality, :place_of_birth, :registration_city, :registration_district, :address, :home_phone,
-                    :mobile_phone, :email, :top_student, :high_school_code, :high_school_branch,
-                    :high_school_graduation_year, :high_school_type_id, :state_of_education, :placement_type,
-                    :exam_score, :placement_score, :placement_rank, :preference_order, :placement_score_type,
-                    :additional_score, :meb_status, :meb_status_date, :military_status, :military_status_date,
-                    :obs_status, :obs_status_date, :obs_registered_program, :language_id, :unit_id,
-                    :student_disability_type_id, :student_entrance_type_id, :academic_term_id, :expiry_date)
+      params.require(:prospective_student).permit(
+        :academic_term_id,
+        :additional_score,
+        :address,
+        :date_of_birth,
+        :email,
+        :exam_score,
+        :expiry_date,
+        :fathers_name,
+        :first_name,
+        :gender,
+        :high_school_branch,
+        :high_school_code,
+        :high_school_graduation_year,
+        :high_school_type_id,
+        :home_phone,
+        :id_number,
+        :language_id,
+        :last_name,
+        :meb_status,
+        :meb_status_date,
+        :military_status,
+        :military_status_date,
+        :mobile_phone,
+        :mothers_name,
+        :nationality,
+        :obs_registered_program,
+        :obs_status,
+        :obs_status_date,
+        :place_of_birth,
+        :placement_rank,
+        :placement_score,
+        :placement_score_type,
+        :placement_type,
+        :preference_order,
+        :registration_city,
+        :registration_district,
+        :state_of_education,
+        :student_disability_type_id,
+        :student_entrance_type_id,
+        :top_student,
+        :unit_id
+      )
     end
+    # rubocop:enable Metrics/MethodLength
   end
 end
