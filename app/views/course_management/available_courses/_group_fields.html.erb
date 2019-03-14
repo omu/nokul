@@ -9,9 +9,9 @@
           <%= f.input :quota, required: true %>
         </div>
       </div>
-      <div class='col-sm-12', id='lecturers'>
+      <div class='col-sm-12' id='lecturers'>
         <%= f.simple_fields_for :lecturers do |lecturer| %>
-          <%= render 'lecturer_fields', f: lecturer, dene: f  %>
+          <%= render 'lecturer_fields', f: lecturer %>
         <% end %>
         <div class='links text-center'>
           <%= link_to_add_association f, :lecturers, class: 'btn btn-success btn-sm' %>

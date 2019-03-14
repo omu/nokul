@@ -62,7 +62,7 @@
       configure_link_to_remove()
     });
 
-    $('#lecturers').on('cocoon:before-remove', function(event, insertedItem) {
+    $('form').on('cocoon:before-remove', function(event) {
       var confirmation = confirm("<%= t('are_you_sure') %>");
       if( confirmation === false ){
         event.preventDefault();
