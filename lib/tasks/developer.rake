@@ -18,15 +18,15 @@ namespace :developer do
   task :fit_commit do |task|
     puts "########### #{task.full_comment} ###########"
     Bundler.with_clean_env do
-      unless command?('fit-commit')
+      if command?('fit-commit')
+        puts "OK \u2713"
+      else
         abort(
           "FAIL \u2717 "\
           'You must install fit-commit in development environment! '\
           "Run 'gem install fit-commit' first. "\
           "Then run 'fit-commit install' in the root directory of repository."
         )
-      else
-        puts "OK \u2713"
       end
     end
   end
