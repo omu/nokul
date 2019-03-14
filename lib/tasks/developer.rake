@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'open3'
+
 namespace :developer do
   desc 'Checks if master_key is available'
   task :master_key do |task|
@@ -28,6 +30,24 @@ namespace :developer do
           "Then run 'fit-commit install' in the root directory of repository."
         )
       end
+    end
+  end
+
+  desc 'Checks NodeJS and node version'
+  task :nodejs do |task|
+    puts "########### #{task.full_comment} ###########"
+
+    target_version = 10
+
+    begin
+      stdout, _stderr, _status = Open3.capture3('node -v')
+      version = stdout.split('.').first.tr('v', '').to_i
+      abort(
+        "FAIL \u2717 "\
+        "You must install NodeJS! (>= v#{target_version}) "\
+      ) if version < target_version
+    rescue Errno::ENOENT => e
+      puts "You must install NodeJS! (>= v#{target_version})"
     end
   end
 
