@@ -12,11 +12,9 @@ module Nokul
 
     module_function
 
-    # rubocop:disable Rails/Delegate
     def root
       engine.root
     end
-    # rubocop:enable Rails/Delegate
 
     def deep_config_for(*args)
       engine.deep_config_for(*args)

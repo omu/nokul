@@ -30,6 +30,7 @@ module Osym
         additional_score = find_additional_score(additional_score)
         obs_registered_program = find_obs_registered_program(obs_registered_program)
         high_school_type = find_high_school_type(high_school_type)
+        academic_term = AcademicTerm.find_by(year: '2017 - 2018', term: 'fall')
 
         ProspectiveStudent.create(
           id_number: id_number,
@@ -70,7 +71,10 @@ module Osym
           obs_status: obs_status.eql?('0') ? true : false,
           obs_status_date: parse_date(obs_status_date),
           obs_registered_program: obs_registered_program,
-          student_entrance_type: StudentEntranceType.find_by(code: 1) # TODO: will be dynamic in the future
+          student_entrance_type: StudentEntranceType.find_by(code: 1), # TODO: will be dynamic in the future
+          academic_term: academic_term,
+          expiry_date: academic_term.end_of_term,
+          system_register_type: :bulk
         )
         progress_bar&.increment
       end
