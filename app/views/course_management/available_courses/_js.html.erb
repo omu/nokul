@@ -51,10 +51,10 @@
     configure_link_to_remove()
 
     function configure_link_to_remove() {
-      if ($('#groups.nested-fields:visible').length == 1) {
-        $('#groups.card-footer:visible').hide();
+      if ($('#groups.nested-fields').length == 1) {
+        $('#groups.card-footer').hide();
       } else {
-        $('#groups.card-footer:hidden').show();
+        $('#groups.card-footer').show();
       }
     }
 
