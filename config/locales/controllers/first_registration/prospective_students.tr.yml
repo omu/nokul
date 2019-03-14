@@ -2,11 +2,14 @@ tr:
   activerecord:
     attributes:
       prospective_student: &prospective_student_attributes
+        academic_term: Akademik Dönem
         additional_score: Ek Puan
         address: Adres
+        archived: Arşivlenmiş
         date_of_birth: Doğum Tarihi
         email: E-posta
         exam_score: Sınav Puanı
+        expiry_date: Son Geçerlilik Tarihi
         fathers_name: Baba Adı
         first_name: Ad
         gender: Cinsiyet
@@ -18,19 +21,21 @@ tr:
         home_phone: Ev Telefonu
         id_number: Kimlik Numarası
         language_id: Dil ID
+        language: Dil
         last_name: Soyad
-        meb_status: Lise Mezuniyet Durumu
+        meb_status: Liseden Mezun
         meb_status_date: Lise Mezuniyet Kontrol Tarihi
-        military_status: Askerlik Durumu
+        military_status: Askerlik Durumu Sorunsuz
         military_status_date: Askerlik Durum Kontrol Tarihi
         mobile_phone: Cep Telefonu
         mothers_name: Anne Adı
         must_see_recruiting_office: Askerlik Şubesiyle Görüşmeli
         nationality: Uyruk
+        not_archived: Arşivlenmemiş
         not_graduated_or_unknown: Mezun Değil/Bilinmiyor
         not_registered: Kayıtlanmamış
         obs_registered_program: Öğrenci Olarak Kayıtlı Olduğu Program
-        obs_status: Öğrencilik Durumu
+        obs_status: Başka Öğrenciliği Var
         obs_status_date: Öğrencilik Durum Kontrol Tarihi
         place_of_birth: Doğum Yeri
         placement_rank: Yerleşme Sırası
@@ -44,9 +49,10 @@ tr:
         registration_district: Nüfusa Kayıtlı Olduğu İlçe
         smart_search_placeholder: Yerleşen öğrenci kimlik numarası, adı veya soyadı
         state_of_education: Öğrenim Durumu
-        student_disability_type_id: Öğrenci Engel Türü
+        student_disability_type: Öğrenci Engel Türü
         student_entrance_type: Giriş Türü
         student_in_a_different_unit: Başka Bir Üniversite/Birimde Öğrenci
+        system_register_type: Sisteme Kayıtlanma Türü
         top_student: Okul Birincisi
         root_unit: Birim
         unit: Yerleştiği Program
@@ -54,27 +60,43 @@ tr:
         year: Yıl
     enums:
       prospective_student:
-        additional_score:
+        additional_scores:
           handicapped: Engelli Ek Puanı
         genders:
           female: Kadın
           male: Erkek
-        nationality:
+        nationalities:
           foreign: Yabancı Uyruklu
           kktc: Kuzey Kıbrıs Türk Vatandaşı
           turkish: Türk Vatandaşı
         placement_types:
           additional_score: Ek Puanlı
           general_score: Genel
+        system_register_types:
+          bulk: Bulk
+          manual: Manuel
   simple_form:
     labels:
       prospective_student:
         <<: *prospective_student_attributes
   first_registration:
     prospective_students:
+      create:
+        success: Aday öğrenci başarılı bir şekilde oluşturuldu.
+      edit:
+        form_title: Aday Öğrenci Düzenleme Formu
+      form:
+        address_and_contact_informations: Adres/İletişim Bilgileri
+        exam_informations: Sınav Bilgileri
+        high_school_informations: Lise Bilgileri
+        other_informations: Diğer Bilgiler
+        personel_informations: Kişisel Bilgiler
       index:
         <<: *prospective_student_attributes
         prospective_students: Yerleşen Öğrenciler
+        new_prospective_student: Aday Öğrenci Oluştur
+      new:
+        form_title: Aday Öğrenci Kayıt Formu
       register:
         can_not_register: Kayıt Yapılamaz
         success: Öğrenci başarıyla kaydedildi
@@ -94,3 +116,5 @@ tr:
         not_proper_register_event_range: 'Tarih aralığı bugünü kapsayan kayıtlanma aktivitesi bulunmamaktadır.'
       redirect_with_success:
         success: Öğrenci başarıyla kayıt edildi
+      update:
+        success: Aday öğrenci başarıyla güncellendi.

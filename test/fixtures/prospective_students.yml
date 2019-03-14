@@ -4,10 +4,12 @@ serhat:
   unit: bilgisayar_muhendisligi
   student_entrance_type: dgs
   id_number: 10570898198 # Sample ID number provided by KPS
-  gender: 1
+  gender: male
   military_status: true
   obs_status: true
   meb_status: true
+  academic_term: fall_2018_2019
+  expiry_date: 2019-01-15 08:00:00
 john:
   email: johndoe@gmail.com
   first_name: John
@@ -15,7 +17,9 @@ john:
   unit: bilgisayar_muhendisligi
   student_entrance_type: dgs
   id_number: 10026078778 # Sample ID number provided by KPS
-  gender: 1
+  gender: male
+  academic_term: fall_2018_2019
+  expiry_date: 2019-01-15 08:00:00
 jane:
   email: janedoe@gmail.com
   first_name: Jane
@@ -23,7 +27,9 @@ jane:
   unit: bilgisayar_muhendisligi
   student_entrance_type: dgs
   id_number: 99007254028 # Sample ID number provided by KPS
-  gender: 0
+  gender: female
   military_status: true
   obs_status: true
   meb_status: true
+  academic_term: fall_2018_2019
+  expiry_date: 2019-01-15 08:00:00
