@@ -49,7 +49,7 @@
               <%= render 'group_fields', f: group, dene: f %>
             <% end %>
             <div class='links text-center'>
-              <%= link_to_add_association t('.add_group'), f, :groups, class: 'btn btn-success btn-sm' %>
+              <%= link_to_add_association f, :groups, class: 'btn btn-success btn-sm' %>
             </div>
           </div>
           <div class='form-group col-sm-12'>

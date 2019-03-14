@@ -16,7 +16,7 @@
         params: { 'unit_id': '#available_course_unit_id' },
         source: '/units/:unit_id/curriculums/',
         reset_selectors: '#available_course_curriculum_id, #available_course_course_id',
-        placeholder: 'Müfredat Seçiniz'
+        placeholder: "<%= t('.curriculum_placeholder') %>"
       },
       {
         el: '#available_course_unit_id',
@@ -25,7 +25,7 @@
         source: '/units/:unit_id/employees/',
         label_attribute: 'full_name',
         reset_selectors: '#group_lecturer_id',
-        placeholder: 'Öğretim Elemanını Seçiniz'
+        placeholder: "<%= t('.lecturer_placeholder') %>"
       },
       {
         el: '#available_course_curriculum_id',
@@ -33,7 +33,7 @@
         params: { 'curriculum_id': '#available_course_curriculum_id' },
         source: '/curriculums/:curriculum_id/openable_courses',
         reset_selectors: '#available_course_course_id',
-        placeholder: 'Ders Seçiniz'
+        placeholder: "<%= t('.course_placeholder') %>"
       },
       {
         el: '#available_course_unit_id',
@@ -42,7 +42,7 @@
         source: '/units/:unit_id/employees/',
         label_attribute: 'full_name',
         reset_selectors: '#available_course_coordinator_id',
-        placeholder: 'Koordinatör Seçiniz'
+        placeholder: "<%= t('.coordinator_placeholder') %>"
       }
     ]
     var dynamic_select = new DynamicSelect(parameters)

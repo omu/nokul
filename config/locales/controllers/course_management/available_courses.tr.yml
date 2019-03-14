@@ -8,6 +8,11 @@ tr:
         curriculum: Müfredat
         groups: Gruplar
         unit: Birim
+  cocoon:
+    groups:
+      add: Grup Ekle
+    lecturers:
+      add: Öğretim Elemanı Ekle
   course_management:
     available_courses:
       create:
@@ -30,8 +35,6 @@ tr:
         name: Grup Adı
         quota: Kontenjan
         title: Ünvan
-      group_fields:
-        add_lecturer: Öğretim Elemanı Ekle
       index:
         <<: *available_course_attributes
         add_new_available_course: Yeni Açılan Ders Ekle
@@ -39,13 +42,17 @@ tr:
         course_code: Ders Kodu
         group_count: Grup Sayısı
         quota: Kontenjan
+      js:
+        coordinator_placeholder: Koordinatör Seçiniz
+        course_placeholder: Ders Seçiniz
+        curriculum_placeholder: Müfredat Seçiniz
+        lecturer_placeholder: Öğretim Elemanı Seçiniz
       new:
         form_title: Ders Aç
       search:
         <<: *available_course_attributes
         smart_search_placeholder: Ders Adı / Ders Kodu
       form:
-        add_group: Grup Ekle
         groups: Gruplar
         unit: Birim
       show:
