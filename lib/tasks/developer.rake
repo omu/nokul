@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'open3'
-
 namespace :developer do
   desc 'Checks if master_key is available'
   task :master_key do |task|
@@ -20,9 +18,7 @@ namespace :developer do
   task :fit_commit do |task|
     puts "########### #{task.full_comment} ###########"
     Bundler.with_clean_env do
-      _stdout, stderr, _status = Open3.capture3('fit-commit')
-
-      if stderr.include?('command not found')
+      unless command?('fit-commit')
         abort(
           "FAIL \u2717 "\
           'You must install fit-commit in development environment! '\
@@ -37,4 +33,10 @@ namespace :developer do
 
   desc 'Runs all development machine tasks'
   task all: %w[master_key fit_commit]
+
+  private
+
+  def command?(command)
+    system("which #{command} >/dev/null 2>&1")
+  end
 end
