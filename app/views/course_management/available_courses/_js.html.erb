@@ -61,5 +61,12 @@
     $('#groups').on('cocoon:after-insert cocoon:after-remove', function() {
       configure_link_to_remove()
     });
+
+    $('#lecturers').on('cocoon:before-remove', function(event, insertedItem) {
+      var confirmation = confirm("<%= t('are_you_sure') %>");
+      if( confirmation === false ){
+        event.preventDefault();
+      }
+    });
   });
 </script>
