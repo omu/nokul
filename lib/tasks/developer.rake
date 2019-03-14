@@ -2,6 +2,9 @@
 
 require 'open3'
 
+NODEJS_TARGET_VERSION = 10
+POSTGRESQL_TARGET_VERSION = 11
+
 namespace :developer do
   desc 'Checks if master_key is available'
   task :master_key do |task|
@@ -37,22 +40,44 @@ namespace :developer do
   task :nodejs do |task|
     puts "########### #{task.full_comment} ###########"
 
-    target_version = 10
-
     begin
       stdout, _stderr, _status = Open3.capture3('node -v')
       version = stdout.split('.').first.tr('v', '').to_i
-      abort(
-        "FAIL \u2717 "\
-        "You must install NodeJS! (>= v#{target_version}) "\
-      ) if version < target_version
+      if version < NODEJS_TARGET_VERSION
+        abort(
+          "FAIL \u2717 "\
+          "You must install NodeJS! (>= v#{NODEJS_TARGET_VERSION}) "\
+        )
+      else
+        puts "OK \u2713"
+      end
     rescue Errno::ENOENT => e
-      puts "You must install NodeJS! (>= v#{target_version})"
+      puts "You must install NodeJS! (>= v#{NODEJS_TARGET_VERSION})"
+    end
+  end
+
+  desc 'Checks PostgreSQL version'
+  task :postgresql do |task|
+    puts "########### #{task.full_comment} ###########"
+
+    begin
+      stdout, stderr, status = Open3.capture3("psql --version | egrep -o '[0-9]{1,}\.[0-9]{1,}'")
+      version = stdout.split('.').first.to_i
+      if version < POSTGRESQL_TARGET_VERSION
+        abort(
+          "FAIL \u2717 "\
+          "You must install PostgreSQL! (>= v#{POSTGRESQL_TARGET_VERSION}) "\
+        )
+      else
+        puts "OK \u2713"
+      end
+    rescue Errno::ENOENT => e
+      puts "You must install PostgreSQL! (>= v#{POSTGRESQL_TARGET_VERSION})"
     end
   end
 
   desc 'Runs all development machine tasks'
-  task all: %w[master_key fit_commit]
+  task all: %w[master_key fit_commit nodejs postgresql]
 
   private
 
