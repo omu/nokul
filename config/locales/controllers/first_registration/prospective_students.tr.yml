@@ -21,10 +21,11 @@ tr:
         home_phone: Ev Telefonu
         id_number: Kimlik Numarası
         language_id: Dil ID
+        language: Dil
         last_name: Soyad
-        meb_status: Lise Mezuniyet Durumu
+        meb_status: Liseden Mezun
         meb_status_date: Lise Mezuniyet Kontrol Tarihi
-        military_status: Askerlik Durumu
+        military_status: Askerlik Durumu Sorunsuz
         military_status_date: Askerlik Durum Kontrol Tarihi
         mobile_phone: Cep Telefonu
         mothers_name: Anne Adı
@@ -34,7 +35,7 @@ tr:
         not_graduated_or_unknown: Mezun Değil/Bilinmiyor
         not_registered: Kayıtlanmamış
         obs_registered_program: Öğrenci Olarak Kayıtlı Olduğu Program
-        obs_status: Öğrencilik Durumu
+        obs_status: Başka Öğrenciliği Var
         obs_status_date: Öğrencilik Durum Kontrol Tarihi
         place_of_birth: Doğum Yeri
         placement_rank: Yerleşme Sırası

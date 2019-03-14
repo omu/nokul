@@ -21,6 +21,7 @@ en:
         home_phone: Home Phone
         id_number: ID Number
         language_id: Language ID
+        language: Language
         last_name: Last Name
         meb_status: MEB Status
         meb_status_date: MEB Status Check Date
