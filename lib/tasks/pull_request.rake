@@ -2,6 +2,7 @@
 
 desc 'Runs all necessary checks before a pull request'
 task :pull_request do
+  Rake::Task['developer:all'].invoke
   Rake::Task['quality:all'].invoke
   Rake::Task['security:all'].invoke
   Rake::Task['database:all'].invoke

@@ -34,7 +34,7 @@
               <%= f.input :place_of_birth, collection: City.all, value_method: :name %>
             </div>
             <div class='form-group col-sm-6'>
-              <%= f.input :date_of_birth, start_year: Date.today.year - 90, end_year: Date.today.year - 10 %>
+              <%= f.input :date_of_birth, start_year: Time.zone.today.year - 90, end_year: Time.zone.today.year - 10 %>
             </div>
             <div class='form-group col-sm-12'>
               <%= f.input :registered_to %>

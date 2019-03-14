@@ -1,3 +1,5 @@
+Rails:
+  Enabled: true
 Style/AsciiComments:
   Enabled: false
 Style/Lambda:
@@ -21,9 +23,11 @@ Metrics/BlockLength:
 Metrics/ClassLength:
   Exclude:
     - test/**/*.rb
-# Do not exclude files from ALL COPS unless it's really necessary!
 AllCops:
+  TargetRubyVersion: 2.6
+  # Do not exclude files from ALL COPS unless it's really necessary!
   Exclude:
+    - app/controllers/concerns/reference_resource.rb
     - bin/**/*
     - vendor/bundle/**/*
     - node_modules/**/*

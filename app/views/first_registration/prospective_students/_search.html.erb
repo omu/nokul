@@ -68,7 +68,7 @@
                                class: 'form-control') %>
               </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <div class="form-group">
                 <%= label_tag :student_entrance_type_id, t('.student_entrance_type') %>
                 <%= select_tag(:student_entrance_type_id,
@@ -77,7 +77,7 @@
                                class: 'form-control') %>
               </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <div class="form-group">
                 <%= label_tag :root_unit_id, t('.root_unit') %>
                 <%= select_tag(:root_unit_id,
@@ -87,7 +87,7 @@
                                style: 'width: 100%') %>
               </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
               <div class="form-group">
                 <%= label_tag :unit_id, t('.unit') %>
                 <%= select_tag(:unit_id,
@@ -96,6 +96,33 @@
                                ),
                                include_blank: true,
                                class: 'form-control', style: 'width: 100%') %>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <%= label_tag :academic_term_id, t('.academic_term') %>
+                <%= select_tag(:academic_term_id,
+                               options_from_collection_for_select(AcademicTerm.order(year: :desc), :id, lambda { |term| full_name(term) }),
+                               include_blank: true,
+                               class: 'form-control') %>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <%= label_tag :system_register_type, t('.system_register_type') %>
+                <%= select_tag(:system_register_type,
+                               options_for_select(enum_options_for_select(ProspectiveStudent, :system_register_type), params[:system_register_type]),
+                               include_blank: true,
+                               class: 'form-control') %>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <%= label_tag :archived, t('.archived') %>
+                <%= select_tag(:archived,
+                               options_for_select([[t('.archived'), true], [t('.not_archived'), false]], params[:archived]),
+                               include_blank: true,
+                               class: 'form-control') %>
               </div>
             </div>
           </div>
@@ -112,9 +139,14 @@
 
 <script type='text/javascript'>
   $(document).ready(function() {
-    $('#root_unit_id').select2();
-    $('#unit_id').select2();
-    $('#student_entrance_type_id').select2();
+    elements = [
+      '#root_unit_id',
+      '#unit_id',
+      '#student_entrance_type_id',
+      '#academic_term_id'
+    ]
+
+    $(elements.join(',')).select2();
 
     var parameters = [
       {
