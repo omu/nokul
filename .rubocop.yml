@@ -27,6 +27,7 @@ AllCops:
   TargetRubyVersion: 2.6
   # Do not exclude files from ALL COPS unless it's really necessary!
   Exclude:
+    - app/controllers/concerns/reference_resource.rb
     - bin/**/*
     - vendor/bundle/**/*
     - node_modules/**/*

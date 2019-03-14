@@ -51,7 +51,7 @@ namespace :developer do
       else
         puts "OK \u2713"
       end
-    rescue Errno::ENOENT => e
+    rescue Errno::ENOENT
       puts "You must install NodeJS! (>= v#{NODEJS_TARGET_VERSION})"
     end
   end
@@ -61,7 +61,7 @@ namespace :developer do
     puts "########### #{task.full_comment} ###########"
 
     begin
-      stdout, stderr, status = Open3.capture3("psql --version | egrep -o '[0-9]{1,}\.[0-9]{1,}'")
+      stdout, _stderr, _status = Open3.capture3("psql --version | egrep -o '[0-9]{1,}\.[0-9]{1,}'")
       version = stdout.split('.').first.to_i
       if version < POSTGRESQL_TARGET_VERSION
         abort(
@@ -71,7 +71,7 @@ namespace :developer do
       else
         puts "OK \u2713"
       end
-    rescue Errno::ENOENT => e
+    rescue Errno::ENOENT
       puts "You must install PostgreSQL! (>= v#{POSTGRESQL_TARGET_VERSION})"
     end
   end
