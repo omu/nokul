@@ -12,7 +12,7 @@ else
                -U #{config['username']} "
 
   `tar xvzf #{Rails.root.join('db', 'encrypted_data', 'static_data.tar.gz').to_s} -C tmp/`
-  File.write('tmp/static_data.sql', Support::Sensitive.read('tmp/tmp/static_data.sql.enc'))
+  File.write('tmp/static_data.sql', Support::Sensitive.read('tmp/static_data.sql.enc'))
   `#{connection + "-f #{Rails.root.join('tmp', 'static_data.sql')}"}`
 end
 
@@ -22,7 +22,7 @@ if ENV['SAMPLE_DATA'].eql?('true')
     Osym::ImportProspectiveStudentsJob.perform_later('db/encrypted_data/prospective_students.csv')
   else
     `tar xvzf #{Rails.root.join('db', 'encrypted_data', 'sample_data.tar.gz').to_s} -C tmp/`
-    File.write('tmp/sample_data.sql', Support::Sensitive.read('tmp/tmp/sample_data.sql.enc'))
+    File.write('tmp/sample_data.sql', Support::Sensitive.read('tmp/sample_data.sql.enc'))
 
     `#{connection + "-f #{Rails.root.join('tmp', 'sample_data.sql')}"}`
 
