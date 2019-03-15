@@ -9,9 +9,9 @@
 
   <div class="d-none d-sm-block">
     <%= link_to 'https://github.com/omu/nokul' do %>
-      Nokul <%= Nokul::VERSION %>
+      Nokul <%#= Nokul::VERSION %>
     <% end %>
-    <span>© 2018 BAUM</span>
+    <span>© <%= Time.zone.now.year %> BAUM</span>
   </div>
 
   <% if Tenant.configuration.branding.badge.visible %>
