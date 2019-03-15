@@ -14,10 +14,6 @@ module Nokul
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
-    # TODO: Disable zeitwerk until they publish something stable.
-    # See: https://github.com/rails/rails/issues/35259 and https://github.com/rails/rails/issues/35278
-    config.autoloader = :classic
-
     # time-zone. ActiveSupport::TimeZone.all for all possible values
     config.time_zone = 'Istanbul'
 
