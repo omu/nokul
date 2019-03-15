@@ -77,10 +77,10 @@
         source: '/units/:unit_id/curriculums/',
         label_attribute: 'name',
         reset_selectors: '#curriculum_id',
-        placeholder: 'Müfredat Seçiniz',
+        placeholder: <%== t('.curriculum_placeholder').to_json %>,
         after_initialize: function(){
           var el = $(this['el'])
-          if(el.val() !== '') el.trigger('change', "<%= params[:curriculum_id] %>")
+          if(el.val() !== '') el.trigger('change', <%== params[:curriculum_id].to_json %>)
         }
       }
     ]

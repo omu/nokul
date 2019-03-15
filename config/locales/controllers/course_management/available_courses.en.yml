@@ -51,6 +51,7 @@ en:
         form_title: Create an Available Course
       search:
         <<: *available_course_attributes
+        curriculum_placeholder: Select a Curriculum
         smart_search_placeholder: Course Name / Course Code
       form:
         groups: Groups

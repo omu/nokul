@@ -51,6 +51,7 @@ tr:
         form_title: Ders Aç
       search:
         <<: *available_course_attributes
+        curriculum_placeholder: Müfredat Seçiniz
         smart_search_placeholder: Ders Adı / Ders Kodu
       form:
         groups: Gruplar

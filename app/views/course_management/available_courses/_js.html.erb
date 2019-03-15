@@ -16,7 +16,7 @@
         params: { 'unit_id': '#available_course_unit_id' },
         source: '/units/:unit_id/curriculums/',
         reset_selectors: '#available_course_curriculum_id, #available_course_course_id',
-        placeholder: "<%= t('.curriculum_placeholder') %>"
+        placeholder: <%== t('.curriculum_placeholder').to_json %>
       },
       {
         el: '#available_course_unit_id',
@@ -25,7 +25,7 @@
         source: '/units/:unit_id/employees/',
         label_attribute: 'full_name',
         reset_selectors: '#group_lecturer_id',
-        placeholder: "<%= t('.lecturer_placeholder') %>"
+        placeholder: <%== t('.lecturer_placeholder').to_json %>
       },
       {
         el: '#available_course_curriculum_id',
@@ -33,7 +33,7 @@
         params: { 'curriculum_id': '#available_course_curriculum_id' },
         source: '/curriculums/:curriculum_id/openable_courses',
         reset_selectors: '#available_course_course_id',
-        placeholder: "<%= t('.course_placeholder') %>"
+        placeholder: <%== t('.course_placeholder').to_json %>
       },
       {
         el: '#available_course_unit_id',
@@ -42,7 +42,7 @@
         source: '/units/:unit_id/employees/',
         label_attribute: 'full_name',
         reset_selectors: '#available_course_coordinator_id',
-        placeholder: "<%= t('.coordinator_placeholder') %>"
+        placeholder: <%== t('.coordinator_placeholder').to_json %>
       }
     ]
     var dynamic_select = new DynamicSelect(parameters)
@@ -63,7 +63,7 @@
     });
 
     $('form').on('cocoon:before-remove', function(event) {
-      var confirmation = confirm("<%= t('are_you_sure') %>");
+      var confirmation = confirm(<%== t('are_you_sure').to_json %>);
       if( confirmation === false ){
         event.preventDefault();
       }
