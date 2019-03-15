@@ -4,6 +4,8 @@ Style/AsciiComments:
   Enabled: false
 Style/Lambda:
   Enabled: false
+Style/FormatStringToken:
+  EnforcedStyle: template
 Documentation:
   Enabled: false
 Rails/UnknownEnv:

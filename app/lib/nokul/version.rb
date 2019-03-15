@@ -9,16 +9,16 @@ module Nokul
     end
 
     def self.current
-      if File.exist?(manifest = Rails.root.join('app.json'))
-        current_version = JSON.parse(File.read(manifest)).fetch('version')
-        Version.new(*current_version.split('.')).to_s
-      else
-        '0.0.0'
-      end
+      @current ||= if File.exist?(manifest = Rails.root.join('app.json'))
+                     current_version = JSON.parse(File.read(manifest)).fetch('version')
+                     Version.new(*current_version.split('.')).to_s
+                   else
+                     '0.0.0'
+                   end
     end
 
     def to_s
-      "%d.%d.%d" % [@major, @minor, @patch]
+      format('%{major}.%{minor}.%{patch}', major: @major, minor: @minor, patch: @patch)
     end
   end
 end
