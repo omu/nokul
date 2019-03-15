@@ -6,6 +6,7 @@ author: M. Serhat Dundar
 
 ## Prerequisites
 
+- [PostgreSQL (>=11.x)](https://www.postgresql.org/download/)
 - [NodeJS (>=10.x)](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions)
 - [Yarn](https://yarnpkg.com/lang/en/docs/install/#debian-stable)
 - [Redis](https://packages.debian.org/search?keywords=redis)
