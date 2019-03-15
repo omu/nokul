@@ -19,11 +19,9 @@ class DatabaseConfigTest < ActiveSupport::TestCase
     end
   end
 
-  name = Rails.application.class.module_parent.to_s.underscore
-
-  test "Development and test environment database users must be #{name}" do
+  test "Development and test environment database users must be #{Nokul::Name.application}" do
     %w[development test].each do |environment|
-      assert_equal ActiveRecord::Base.configurations[environment]['username'], name
+      assert_equal ActiveRecord::Base.configurations[environment]['username'], Nokul::Name.application
     end
   end
 
