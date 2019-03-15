@@ -37,19 +37,5 @@ module Nokul
 
     # use rack-attack as middleware
     config.middleware.use Rack::Attack
-
-    def appname
-      @appname ||= if File.exist?(manifest = Rails.root.join('app.json'))
-                     JSON.parse(File.read(manifest)).fetch 'name'
-                   else
-                     self.class.module_parent.to_s.underscore
-                   end
-    end
-
-    def database_url_for(env)
-      host = ENV.fetch('DB_HOST', 'localhost')
-
-      "postgresql://#{appname}:#{appname}@#{host}/#{appname}_#{env}"
-    end
   end
 end
