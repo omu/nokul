@@ -35,7 +35,7 @@ tr:
         not_graduated_or_unknown: Mezun Değil/Bilinmiyor
         not_registered: Kayıtlanmamış
         obs_registered_program: Öğrenci Olarak Kayıtlı Olduğu Program
-        obs_status: Başka Öğrenciliği Var
+        obs_status: Başka Öğrenciliği Yok
         obs_status_date: Öğrencilik Durum Kontrol Tarihi
         place_of_birth: Doğum Yeri
         placement_rank: Yerleşme Sırası

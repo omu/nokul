@@ -133,7 +133,7 @@
             </tr>
             <tr>
               <th><%= t('.nationality') %></th>
-              <td><%= @prospective_student.nationality %></td>
+              <td><%= enum_t(@prospective_student, :nationality) %></td>
             </tr>
             <tr>
               <th><%= t('.place_of_birth') %></th>
