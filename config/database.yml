@@ -6,11 +6,11 @@ default: &default
 
 development:
   <<: *default
-  url: <%= Rails.application.database_url_for('development') %>
+  url: <%= Nokul::DatabaseUrl.development %>
 
 test:
   <<: *default
-  url: <%= Rails.application.database_url_for('test') %>
+  url: <%= Nokul::DatabaseUrl.test %>
 
 production: &production
   <<: *default

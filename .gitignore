@@ -4,8 +4,9 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
-# Ignore bundler config.
+# Ignore bundler config and vendor directory
 /.bundle
+/vendor/*
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
@@ -16,25 +17,20 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+.byebug_history
 
 # Ignore uploaded files in development.
 /storage/*
 !/storage/.keep
 
-/public/assets
-.byebug_history
-
-# Ignore master key for decrypting credentials and more.
-/config/master.key
+# Ignore yarn dependencies and assets
 /public/packs
 /public/packs-test
 /node_modules
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
-
-# Ignore local bundler directory
-/vendor/*
+/public/assets
 
 # Ignore misc.
 /bin/dokku
@@ -44,8 +40,9 @@ yarn-debug.log*
 .envrc
 /.local/
 
-# Ignore dokku deploy key
+# Ignore sensitives
 config/deploy_key
+/config/master.key
 
 # Ignore auto-generated PDFs of markdown files
 .pdf

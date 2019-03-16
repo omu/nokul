@@ -98,7 +98,7 @@ GIT
 
 GIT
   remote: https://github.com/rollbar/rollbar-gem.git
-  revision: a026a7b0fb942e52a892e99a574cc796b7cbd52e
+  revision: 3c66a47be634fb56a32a390ec3b8e32e2b6c49ed
   specs:
     rollbar (2.19.2)
       multi_json
@@ -278,7 +278,7 @@ GEM
     nokogiri (1.10.1)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
-    pagy (2.1.1)
+    pagy (2.1.2)
     parallel (1.14.0)
     parser (2.6.0.0)
       ast (~> 2.4.0)

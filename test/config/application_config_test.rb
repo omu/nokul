@@ -8,6 +8,7 @@ class ApplicationConfigTest < ActiveSupport::TestCase
   setup do
     @config = Rails.application.config
   end
+
   test 'Configuration defaults should match with Rails version' do
     assert_equal @config.loaded_config_version, Rails.version.to_f
   end
@@ -29,23 +30,15 @@ class ApplicationConfigTest < ActiveSupport::TestCase
     assert I18n.available_locales.include?(:en)
   end
 
-  test 'appname can be read either from app.json or application class' do
-    assert_not_nil Rails.application.appname
-  end
-
-  test 'rack::attack is up and running as middleware' do
-    assert Rails.application.config.middleware.middlewares.include?(Rack::Attack)
-  end
-
-  test 'autoloader is set to :classic until Rails 6 stable' do
-    assert_equal Rails.application.config.autoloader, :classic
-  end
-
   test 'image_processor is set to :vips' do
     assert_equal Rails.application.config.active_storage.variant_processor, :vips
   end
 
   test 'schema format is set to :sql' do
     assert_equal Rails.application.config.active_record.schema_format, :sql
+  end
+
+  test 'rack::attack is up and running as middleware' do
+    assert Rails.application.config.middleware.middlewares.include?(Rack::Attack)
   end
 end
