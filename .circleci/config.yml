@@ -32,7 +32,7 @@ repository: &repository
 # build image
 ruby_2_6: &ruby_2_6
   docker:
-    - image: circleci/ruby:2.6.1-node-browsers
+    - image: circleci/ruby:2.6.2-node-browsers
       <<: *rails_environment
     - image: circleci/postgres:11.1-alpine
       <<: *postgres_environment
