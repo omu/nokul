@@ -10,7 +10,6 @@ Documentation:
   Enabled: false
 Rails/UnknownEnv:
   Environments:
-    - beta
     - development
     - production
     - test
