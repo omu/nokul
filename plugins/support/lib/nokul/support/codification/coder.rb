@@ -33,7 +33,7 @@ module Nokul
 
             raise Error, "Too many tries: #{n}" if (n += 1) >= LOOP_GUARD
 
-            attempt = try(amnesic: amnesic, try: n)
+            attempt = try(amnesic: amnesic)
 
             break (result = attempt) if attempt
 
@@ -79,8 +79,8 @@ module Nokul
 
         def over_loop!(*); end
 
-        def try(amnesic:, try:)
-          return unless (result = processor.process(self, code.to_s, try))
+        def try(amnesic:)
+          return unless (result = processor.process(self, code.to_s, **options))
 
           memory.learn(result, amnesic: amnesic)
         rescue Skip
