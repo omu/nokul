@@ -10,3 +10,6 @@ english:
 turkish:
   name: Türkçe
   code: 1
+unit_instruction_language_to_delete:
+  name: Will be Deleted
+  code: 99

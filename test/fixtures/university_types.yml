@@ -4,3 +4,6 @@ government:
 foundation:
   name: Vakıf Üniversiteleri
   code: 2
+university_type_to_delete:
+  name: Will be Deleted
+  code: 99

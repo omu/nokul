@@ -1,0 +1,23 @@
+tr:
+  activerecord:
+    attributes:
+      assessment_method: &assessment_method_attributes
+        name: Ölçme Kriteri
+  helpers:
+    submit:
+      assessment_method:
+        create: Ölçme Kriteri Oluştur
+        update: Ölçme Kriteri Güncelle
+  reference:
+    assessment_methods:
+      create:
+        success: Ölçme kriteri başarıyla oluşturuldu.
+      destroy:
+        success: Ölçme kriteri başarıyla silindi.
+        warning: Ölçme kriteri silinemedi!
+      index:
+        <<: *assessment_method_attributes
+        card_header: Ölçme Kriterleri
+        new_assessment_method_link: Yeni Ölçme Kriteri Oluştur
+      update:
+        success: Ölçme kriteri başarıyla güncellendi.

@@ -4,12 +4,12 @@
       <div class='card-header'>
         <%= fa_icon 'align-justify', text: t('.card_header') %>
         <div class='card-header-actions'>
-          <%= link_to_new t('.new_registration_document_link'), %i[new first_registration registration_document] %>
+          <%= link_to_new t('.new_registration_document_link'), %i[new registration_document] %>
         </div>
       </div>
       <div class='card-body'>
         <%= render 'layouts/shared/smart_search_form',
-                   path: %i[first_registration registration_documents],
+                   path: :registration_documents,
                    placeholder: t('.placeholder') %>
         <table class='table table-responsive-sm table-striped table-hover'>
           <thead class="thead-dark">
@@ -28,7 +28,7 @@
                 <td><%= registration_document.unit.name %></td>
                 <td><%= registration_document.document_type.name %></td>
                 <td><%= registration_document.description %></td>
-                <td><%= link_to_actions(registration_document, scope: :first_registration, except: :show) %></td>
+                <td><%= link_to_actions(registration_document, except: :show) %></td>
               </tr>
             <% end %>
           </tbody>

@@ -23,14 +23,14 @@ module FirstRegistration
 
     def create
       @prospective_student = ProspectiveStudent.new(prospective_student_params)
-      @prospective_student.save ? redirect_to(index_path, notice: t('.success')) : render(:new)
+      @prospective_student.save ? redirect_to(:prospective_students, notice: t('.success')) : render(:new)
     end
 
     def edit; end
 
     def update
       if @prospective_student.update(prospective_student_params)
-        redirect_to([:first_registration, @prospective_student], notice: t('.success'))
+        redirect_to(@prospective_student, notice: t('.success'))
       else
         render(:edit)
       end
@@ -41,24 +41,21 @@ module FirstRegistration
 
       if prospective_student.register
         @prospective_student.update(registered: true, archived: true)
-        redirect_to(index_path, notice: t('.success'))
+        redirect_to(:prospective_students, notice: t('.success'))
       else
-        redirect_to(index_path, alert: t('.warning'))
+        redirect_to(:prospective_students, alert: t('.warning'))
       end
     end
 
     private
-
-    def index_path
-      %i[first_registration prospective_students]
-    end
 
     def set_prospective_student
       @prospective_student = ProspectiveStudent.find(params[:id])
     end
 
     def can_register?
-      redirect_to(index_path, alert: t('.can_not_register')) unless @prospective_student.can_temporarily_register?
+      alert = '.can_not_register'
+      redirect_to(:prospective_students, alert: t(alert)) unless @prospective_student.can_temporarily_register?
     end
 
     # rubocop:disable Metrics/MethodLength

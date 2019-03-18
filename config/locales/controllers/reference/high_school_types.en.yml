@@ -1,0 +1,24 @@
+en:
+  activerecord:
+    attributes:
+      high_school_type: &high_school_type_attributes
+        code: Code
+        name: High School Type
+  helpers:
+    submit:
+      high_school_type:
+        create: Create High School Type
+        update: Update High School Type
+  reference:
+    high_school_types:
+      create:
+        success: High school type successfully created.
+      destroy:
+        success: High school type successfully deleted.
+        warning: High school type could not be deleted.
+      index:
+        <<: *high_school_type_attributes
+        card_header: High School Types
+        new_high_school_type_link: New High School Type
+      update:
+        success: High school type successfully updated.

@@ -1,0 +1,24 @@
+tr:
+  activerecord:
+    attributes:
+      student_disability_type: &student_disability_type_attributes
+        code: Kodu
+        name: Öğrenci Engel Türü
+  helpers:
+    submit:
+      student_disability_type:
+        create: Öğrenci Engel Türü Oluştur
+        update: Öğrenci Engel Türünü Güncelle
+  yoksis:
+    student_disability_types:
+      create:
+        success: Öğrenci engel türü başarıyla oluşturuldu.
+      destroy:
+        success: Öğrenci engel türü başarıyla silindi.
+        warning: Öğrenci engel türü silinemedi!
+      index:
+        <<: *student_disability_type_attributes
+        card_header: Öğrenci Engel Türleri
+        new_student_disability_type_link: Yeni Öğrenci Engel Türü
+      update:
+        success: Öğrenci engel türü başarıyla güncellendi.

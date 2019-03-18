@@ -1,0 +1,24 @@
+tr:
+  activerecord:
+    attributes:
+      unit_instruction_type: &unit_instruction_type_attributes
+        code: Kodu
+        name: Öğrenim Türü
+  helpers:
+    submit:
+      unit_instruction_type:
+        create: Öğrenim Türü Oluştur
+        update: Öğrenim Türünü Güncelle
+  yoksis:
+    unit_instruction_types:
+      create:
+        success: Öğrenim türü başarıyla oluşturuldu.
+      destroy:
+        success: Öğrenim türü başarıyla silindi.
+        warning: Öğrenim türü silinemedi!
+      index:
+        <<: *unit_instruction_type_attributes
+        card_header: Öğrenim Türleri
+        new_unit_instruction_type_link: Yeni Öğrenim Türü
+      update:
+        success: Öğrenim türü başarıyla güncellendi.

@@ -7,3 +7,6 @@ mf2:
 mf3:
   name: mf3
   code: 15
+student_entrance_point_type_to_delete:
+  name: Foo
+  code: 97

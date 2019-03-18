@@ -1,0 +1,24 @@
+en:
+  activerecord:
+    attributes:
+      university_type: &university_type_attributes
+        code: Code
+        name: University Type
+  helpers:
+    submit:
+      university_type:
+        create: Create University Type
+        update: Update University Type
+  yoksis:
+    university_types:
+      create:
+        success: University type successfully created.
+      destroy:
+        success: University type successfully deleted.
+        warning: University type could not be deleted.
+      index:
+        <<: *university_type_attributes
+        card_header: University Types
+        new_university_type_link: New University Type
+      update:
+        success: University type successfully updated.

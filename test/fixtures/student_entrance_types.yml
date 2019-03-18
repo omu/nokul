@@ -5,8 +5,11 @@ dgs:
   name: DGS
   code: 5
 aselsan:
-  name: Aselsan Protokolü
+  name: ASELSAN Protokolü
   code: 103
 oyp:
   name: ÖYP
   code: 62
+student_entrance_type_to_delete:
+  name: Will be Deleted
+  code: 99

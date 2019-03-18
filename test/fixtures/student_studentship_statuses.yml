@@ -4,3 +4,6 @@ can_be_a_student:
 can_not_be_a_student:
   name: Yok
   code: 2
+student_studentship_status_to_delete:
+  name: Will be Deleted
+  code: 99

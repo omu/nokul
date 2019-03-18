@@ -1,3 +1,6 @@
 autism:
   name: Asperger veya Yüksek Fonksiyonlu Otistik Bireyler
   code: 10
+student_disability_type_to_delete:
+  name: Will be Deleted
+  code: 99
