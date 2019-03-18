@@ -1,5 +1,6 @@
 <%= render 'layouts/builders/index',
-           namespace: 'admin',
+           namespace: nil,
+           scope_module: 'location',
            klass: 'country',
            collection: @countries,
            pagy: @pagy,

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Admin
+module Location
   class DistrictsController < ApplicationController
     before_action :set_city
     before_action :set_district, only: %i[edit update destroy]
@@ -35,7 +35,7 @@ module Admin
     private
 
     def index_path
-      [:admin, @city.country, @city]
+      [@city.country, @city]
     end
 
     def set_city

@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-module Admin
+module Location
   class CitiesControllerTest < ActionDispatch::IntegrationTest
     setup do
       sign_in users(:john)
@@ -12,14 +12,14 @@ module Admin
     end
 
     test 'should get show' do
-      get admin_country_city_path(@country, @city)
+      get country_city_path(@country, @city)
       assert_equal 'show', @controller.action_name
       assert_response :success
       assert_select '#add-button', translate('.show.new_district_link')
     end
 
     test 'should get new' do
-      get new_admin_country_city_path(@country)
+      get new_country_city_path(@country)
       assert_equal 'new', @controller.action_name
       assert_response :success
       assert_select '.simple_form' do
@@ -31,7 +31,7 @@ module Admin
 
     test 'should create city' do
       assert_difference('City.count') do
-        post admin_country_cities_path(@country), params: {
+        post country_cities_path(@country), params: {
           city: { name: 'Test City', alpha_2_code: 'TR-90' }
         }
       end
@@ -42,12 +42,12 @@ module Admin
 
       assert_equal 'Test City', city.name
       assert_equal 'TR-90', city.alpha_2_code
-      assert_redirected_to admin_country_city_path(@country, city)
+      assert_redirected_to country_city_path(@country, city)
       assert_equal translate('.create.success'), flash[:notice]
     end
 
     test 'should get edit' do
-      get edit_admin_country_city_path(@country, @city)
+      get edit_country_city_path(@country, @city)
       assert_equal 'edit', @controller.action_name
       assert_response :success
       assert_select '.simple_form' do
@@ -59,7 +59,7 @@ module Admin
 
     test 'should update city' do
       city = City.last
-      patch admin_country_city_path(@country, city), params: {
+      patch country_city_path(@country, city), params: {
         city: { name: 'Test City Update', alpha_2_code: 'TR-91' }
       }
 
@@ -69,24 +69,24 @@ module Admin
 
       assert_equal 'Test City Update', city.name
       assert_equal 'TR-91', city.alpha_2_code
-      assert_redirected_to admin_country_city_path(@country, city)
+      assert_redirected_to country_city_path(@country, city)
       assert_equal translate('.update.success'), flash[:notice]
     end
 
     test 'should destroy city' do
       assert_difference('City.count', -1) do
-        delete admin_country_city_path(@country, cities(:adana))
+        delete country_city_path(@country, cities(:adana))
       end
 
       assert_equal 'destroy', @controller.action_name
-      assert_redirected_to admin_country_path(@country)
+      assert_redirected_to country_path(@country)
       assert_equal translate('.destroy.success'), flash[:notice]
     end
 
     private
 
     def translate(key)
-      t("admin.cities#{key}")
+      t("location.cities#{key}")
     end
   end
 end

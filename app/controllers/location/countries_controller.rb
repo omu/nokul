@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Admin
+module Location
   class CountriesController < ApplicationController
     include SearchableModule
 
@@ -20,28 +20,20 @@ module Admin
 
     def create
       @country = Country.new(country_params)
-      @country.save ? redirect_to([:admin, @country], notice: t('.success')) : render(:new)
+      @country.save ? redirect_to(@country, notice: t('.success')) : render(:new)
     end
 
     def edit; end
 
     def update
-      @country.update(country_params) ? redirect_to([:admin, @country], notice: t('.success')) : render(:edit)
+      @country.update(country_params) ? redirect_to(@country, notice: t('.success')) : render(:edit)
     end
 
     def destroy
-      if @country.destroy
-        redirect_to(index_path, notice: t('.success'))
-      else
-        redirect_to(index_path, alert: t('.warning'))
-      end
+      @country.destroy ? redirect_to(:countries, notice: t('.success')) : redirect_to(:countries, alert: t('.warning'))
     end
 
     private
-
-    def index_path
-      %i[admin countries]
-    end
 
     def set_country
       @country = Country.find(params[:id])

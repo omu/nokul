@@ -10,7 +10,7 @@ en:
       city:
         create: Create City
         update: Update City
-  admin:
+  location:
     cities:
       show:
         <<: *district_attributes

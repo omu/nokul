@@ -4,7 +4,7 @@
       <div class="card-header">
         <%= fa_icon 'street-view' %><strong><%= @city.name %></strong>
         <div class="card-header-actions">
-          <%= link_to_actions([@country, @city], scope: :admin, except: :show) %>
+          <%= link_to_actions([@country, @city], except: :show) %>
         </div>
       </div>
 
@@ -28,12 +28,12 @@
       <div class='card-header'>
         <%= fa_icon 'street-view', text: t('.card_header') %>
         <div class="card-header-actions">
-          <%= link_to_new t('.new_district_link'), [:new, :admin, @country, @city, :district] %>
+          <%= link_to_new t('.new_district_link'), [:new, @country, @city, :district] %>
         </div>
       </div>
       <div class='card-body'>
         <%= render 'layouts/shared/smart_search_form',
-                   path: [:admin, @country, @city],
+                   path: [@country, @city],
                    placeholder: t('.name') %>
         <table class='table table-responsive-sm table-striped'>
           <thead class="thead-dark">
@@ -50,7 +50,7 @@
                 <td><%= district.name %></td>
                 <td><%= district.mernis_code %></td>
                 <td><%= district.active ? t('yes') : t('no') %></td>
-                <td><%= link_to_actions([@country, @city, district], scope: :admin, except: :show) %></td>
+                <td><%= link_to_actions([@country, @city, district], except: :show) %></td>
               </tr>
             <% end %>
           </tbody>

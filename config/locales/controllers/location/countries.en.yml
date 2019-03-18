@@ -16,7 +16,7 @@ en:
       country:
         create: Create Country
         update: Update Country
-  admin:
+  location:
     countries:
       show:
         <<: *country_attributes

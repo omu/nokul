@@ -4,7 +4,7 @@ tr:
       district:
         create: İlçe Oluştur
         update: İlçeyi Güncelle
-  admin:
+  location:
     districts:
       create:
         success: İlçe başarıyla oluşturuldu.

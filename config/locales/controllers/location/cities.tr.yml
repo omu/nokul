@@ -10,7 +10,7 @@ tr:
       city:
         create: Şehir Oluştur
         update: Şehri Güncelle
-  admin:
+  location:
     cities:
       show:
         <<: *district_attributes

@@ -5,21 +5,21 @@
         <%= fa_icon 'align-justify', text: card_header %>
         <div class='card-header-actions'>
           <%= link_to_new(
-                t("#{namespace}.#{klass.pluralize}.index.new_#{klass}_link"),
-                [:new, namespace.to_sym, klass]
+                t([namespace || scope_module, klass.pluralize, 'index', "new_#{klass}_link"].compact.join('.')),
+                [:new, namespace.try(:to_sym), klass]
               ) %>
         </div>
       </div>
       <div class='card-body'>
         <%= render 'layouts/shared/smart_search_form',
                    path: klass.tableize.to_s,
-                   placeholder: t("#{namespace}.#{klass.pluralize}.index.name") %>
+                   placeholder: t([namespace || scope_module, klass.pluralize, 'index', 'name'].compact.join('.')) %>
         <table class='table table-responsive-sm table-striped'>
           <thead class='thead-dark'>
             <tr>
               <% params.each do |parameter| %>
                 <%= content_tag :th do %>
-                  <%= t("#{namespace}.#{klass.pluralize}.index.#{parameter}") %>
+                <%= t([namespace || scope_module, klass.pluralize, 'index', parameter].compact.join('.')) %>
                 <% end %>
               <% end %>
               <th><%= t('actions') %></th>
@@ -36,7 +36,9 @@
                     <%= boolean || enum ? enum_t(item, parameter.to_sym) : value %>
                   <% end %>
                 <% end %>
-                <td><%= link_to_actions([namespace.to_sym, item], except: (%w[show edit destroy] - actions)) %></td>
+                <td>
+                  <%= link_to_actions([namespace.try(:to_sym), item].compact, except: (%w[show edit destroy] - actions)) %>
+                </td>
               </tr>
             <% end %>
           </tbody>
