@@ -1,14 +1,4 @@
-<div class="col-md-3 col-xs-4">
-  <div class="card">
-    <div class="card-body text-center">
-      <div class="text-muted text-uppercase font-weight-bold">
-        <%= t(title) %>
-      </div>
-      <div class="text-value-lg py-3"><%= content %></div>
-      <%= link_to path, class: 'btn btn-block btn-secondary' do %>
-        <span class="small font-weight-bold"><%= t('action_group.show') %></span>
-        <i class="fa fa-angle-right"></i>
-      <% end %>
-    </div>
-  </div>
-</div>
+<%= link_to path, class: 'list-group-item d-flex list-group-item-action justify-content-between align-items-center' do %>
+  <%= t(title) %>
+  <span class="badge badge-primary badge-pill"><%= count %></span>
+<% end %>

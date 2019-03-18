@@ -1,9 +1,12 @@
 en:
   yoksis:
     dashboard:
+      index:
+        employee_yoksis_references: Employee YOKSIS References
+        student_yoksis_references: Student YOKSIS References
+        unit_yoksis_references: Unit YOKSIS References
       card:
         administrative_functions: Administrative Functions
-        high_school_types: High School Types
         student_disability_types: Disability Types
         student_drop_out_types: Drop Out Types
         student_education_levels: Education Levels

@@ -1,0 +1,62 @@
+<div class="row">
+  <div class="col-sm-12">
+    <% item_class = 'list-group-item list-group-item-action justify-content-between align-items-center' %>
+    <div class="card">
+      <div class="card-header">
+        <i class="fa fa-align-justify"></i> <%= t('.course_references') %>
+      </div>
+      <div class="card-body">
+        <div class="list-group list-group-sm">
+          <%= link_to :course_types, class: item_class do %>
+            <%= t('.course_types') %>
+          <% end %>
+          <%= link_to :course_group_types, class: item_class do %>
+            <%= t('.course_group_types') %>
+          <% end %>
+          <%= link_to %i[reference assessment_methods], class: item_class do %>
+            <%= t('.assessment_methods') %>
+          <% end %>
+          <%= link_to %i[reference evaluation_types], class: item_class do %>
+            <%= t('.evaluation_types') %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <i class="fa fa-align-justify"></i> <%= t('.term_references') %>
+      </div>
+      <div class="card-body">
+        <div class="list-group list-group-sm">
+          <%= link_to %i[reference academic_terms], class: item_class do %>
+            <%= t('.academic_terms') %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <i class="fa fa-align-justify"></i> <%= t('.other_references') %>
+      </div>
+      <div class="card-body">
+        <div class="list-group list-group-sm">
+          <%= link_to %i[reference document_types], class: item_class do %>
+            <%= t('.document_types') %>
+          <% end %>
+          <%= link_to %i[reference languages], class: item_class do %>
+            <%= t('.languages') %>
+          <% end %>
+          <%= link_to :countries, class: item_class do %>
+            <%= t('.locations') %>
+          <% end %>
+          <%= link_to %i[reference high_school_types], class: item_class do %>
+            <%= t('.high_school_types') %>
+          <% end %>
+          <%= link_to %i[reference titles], class: item_class do %>
+            <%= t('.titles') %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
