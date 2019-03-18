@@ -1,0 +1,19 @@
+{
+  "default": true,
+  "MD003": {
+    "style": "setext_with_atx"
+  },
+  "MD004": {
+    "style": "sublist"
+  },
+  "MD013": {
+    "code_blocks": false,
+    "tables": false,
+  },
+  "MD024": {
+    "allow_different_nesting": true
+  },
+  "MD029": {
+    "style": "ordered"
+  }
+}
