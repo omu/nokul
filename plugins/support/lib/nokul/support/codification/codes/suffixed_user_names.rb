@@ -15,10 +15,8 @@ module Nokul
 
           protected
 
-          attr_reader :list
-
           def setup
-            @list = Lists::UserNames.new(source, **options)
+            self.list = Lists::UserNames.new(source, **options)
           end
 
           private

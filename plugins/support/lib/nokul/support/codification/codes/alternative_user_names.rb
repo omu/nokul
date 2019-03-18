@@ -30,11 +30,8 @@ module Nokul
 
           protected
 
-          attr_reader :list, :preferred
-
           def setup
-            @list = Lists::UserNames.new(source, **options)
-            @preferred = list.first.affixed(**options)
+            self.list = Lists::UserNames.new(source, **options)
           end
 
           def sanitize(source)
