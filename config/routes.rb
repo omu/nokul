@@ -33,11 +33,6 @@ Rails.application.routes.draw do
     get 'save_identity_from_mernis', on: :member
   end
 
-  # public profiles
-  get '/profiles', to: 'public_profile#index'
-  get '/profiles/:id', to: 'public_profile#show', as: :profiles_show
-  get '/profiles/:id/vcard',  to: 'public_profile#vcard', as: :profile_vcard
-
   scope module: :studies do
     get '/studies', to: 'dashboard#index'
     get '/studies/articles', to: 'articles#index'
