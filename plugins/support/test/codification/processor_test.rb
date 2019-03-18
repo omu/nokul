@@ -23,7 +23,7 @@ module Nokul
           end
 
           processor = Processor.new post_process: %i[non_offensive? non_reserved? random_suffix]
-          assert_match(/^foo.\d{6}$/, processor.process(Dummy.new(random_ceiling: 999_999), 'foo'))
+          assert_match(/^foo.\d{3}$/, processor.process(Dummy.new, 'foo'))
           assert_raise(Skip) { processor.process(Dummy.new, 'salak') }
           assert_raise(Skip) { processor.process(Dummy.new, 'if') }
         end

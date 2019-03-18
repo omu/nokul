@@ -16,37 +16,36 @@ module Nokul
           processors[name] = block
         end
 
-        define :non_offensive? do |string, *|
+        define :non_offensive? do |string|
           !string.inside_offensives?
         end
 
-        define :non_reserved? do |string, *|
+        define :non_reserved? do |string|
           !string.inside_reserved?
         end
 
-        define :safe? do |string, *|
+        define :safe? do |string|
           !string.inside_offensives? && !string.inside_reserved?
         end
 
-        RANDOM_CEILING = 999
-        RANDOM_TRY     = RANDOM_CEILING / 100
+        DEFAULT_RANDOM_RANGE = (0..999).freeze
+        DEFAULT_RANDOM_SEP   = '.'
 
-        define :random_suffix do |string, *|
-          @_random_suffix_memory ||= SimpleMemory.new
-          @_random_ceiling       ||= (respond_to?(:options) && options[:random_ceiling]) || RANDOM_CEILING
+        define :random_suffix do |string, **options|
+          @_random_coder ||= options[:random] || Codification.random_numeric_codes(DEFAULT_RANDOM_RANGE)
+          @_random_sep   ||= options[:random_sep] || DEFAULT_RANDOM_SEP
 
-          RANDOM_TRY.times do
-            suffix = secure_random_number_extension(@_random_ceiling)
-            break string + suffix if @_random_suffix_memory.learn suffix
-          end
+          string + @_random_sep + @_random_coder.run
+        rescue Consumed
+          raise Skip, string
         end
 
         def initialize(**options)
           @processors = build options.dup.extract!(:builtin_post_process, :post_process).values.flatten
         end
 
-        def process(instance, string, *args)
-          processors.inject(string) { |result, processor| instance.instance_exec(result, *args, &processor) }
+        def process(instance, string, **options)
+          processors.inject(string) { |result, processor| instance.instance_exec(result, **options, &processor) }
         end
 
         def skip(string, expr)
