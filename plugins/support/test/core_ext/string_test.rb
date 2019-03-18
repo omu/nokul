@@ -3,6 +3,16 @@
 require 'test_helper'
 
 class StringTest < ActiveSupport::TestCase
+  test 'capitalize_turkish method can capitalize words in Turkish' do
+    word = 'ışık ılık süt iç'
+    assert_equal word.capitalize_turkish, 'Işık Ilık Süt İç'
+  end
+
+  test 'abbreviation method can generate abbreviations for words in Turkish' do
+    word = 'istanbul ışık üniversitesi'
+    assert_equal word.abbreviation, 'İIÜ'
+  end
+
   test 'affixed works' do
     assert_equal 'aaa.foo bar baz quux_zzz', 'foo bar baz quux'.affixed(prefix: 'aaa.', interfix: '-', suffix: '_zzz')
   end
