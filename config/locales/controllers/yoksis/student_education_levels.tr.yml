@@ -1,0 +1,24 @@
+tr:
+  activerecord:
+    attributes:
+      student_education_level: &student_education_level_attributes
+        code: Kodu
+        name: Öğrenci Eğitim Düzeyi
+  helpers:
+    submit:
+      student_education_level:
+        create: Öğrenci Eğitim Düzeyi Oluştur
+        update: Öğrenci Eğitim Düzeyini Güncelle
+  yoksis:
+    student_education_levels:
+      create:
+        success: Öğrenci eğitim düzeyi başarıyla oluşturuldu.
+      destroy:
+        success: Öğrenci eğitim düzeyi başarıyla silindi.
+        warning: Öğrenci eğitim düzeyi silinemedi!
+      index:
+        <<: *student_education_level_attributes
+        card_header: Öğrenci Eğitim Düzeyi
+        new_student_education_level_link: Yeni Öğrenci Eğitim Düzeyi
+      update:
+        success: Öğrenci eğitim düzeyi başarıyla güncellendi.

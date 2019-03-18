@@ -1,0 +1,24 @@
+tr:
+  activerecord:
+    attributes:
+      student_entrance_type: &student_entrance_type_attributes
+        code: Kodu
+        name: Öğrenci Giriş Türü
+  helpers:
+    submit:
+      student_entrance_type:
+        create: Öğrenci Giriş Türü Oluştur
+        update: Öğrenci Giriş Türünü Güncelle
+  yoksis:
+    student_entrance_types:
+      create:
+        success: Öğrenci giriş türü başarıyla oluşturuldu.
+      destroy:
+        success: Öğrenci giriş türü başarıyla silindi.
+        warning: Öğrenci giriş türü silinemedi!
+      index:
+        <<: *student_entrance_type_attributes
+        card_header: Öğrenci Giriş Türleri
+        new_student_entrance_type_link: Yeni Öğrenci Giriş Türü
+      update:
+        success: Öğrenci giriş türü başarıyla güncellendi.

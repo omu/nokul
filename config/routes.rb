@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   draw :account
   draw :admin
+  draw :yoksis
   draw :calendar_management
   draw :first_registration
 
