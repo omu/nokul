@@ -16,6 +16,31 @@ module Nokul
           end
         end
 
+        test 'can consume a common random coder' do
+          # Common random coder with 10 unique random number
+          random = Codification.random_numeric_codes(0..9)
+
+          # Consume half of the randoms
+          coder = Codification.suffixed_user_names %w[gabriel garcia marquez], random: random
+          5.times do
+            name = coder.run
+            assert_match(/ggmarquez[.]\d+/, name)
+            assert name.start_with? 'ggmarquez.'
+          end
+
+          # Consume other half of the randoms by another coder
+          other = Codification.suffixed_user_names %w[gabriel garcia marquez], random: random
+          5.times do
+            name = coder.run
+            assert_match(/ggmarquez[.]\d+/, name)
+            assert name.start_with? 'ggmarquez.'
+          end
+
+          # Now both of the coders should be consumed
+          assert_raise(Consumed) { coder.run }
+          assert_raise(Consumed) { other.run }
+        end
+
         test 'simple use case with memory works' do
           memory = SimpleMemory.new
 
