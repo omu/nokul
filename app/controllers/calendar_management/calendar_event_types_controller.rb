@@ -16,14 +16,14 @@ module CalendarManagement
 
     def create
       @calendar_event_type = CalendarEventType.new(calendar_event_type_params)
-      @calendar_event_type.save ? redirect_to(index_path, notice: t('.success')) : render(:new)
+      @calendar_event_type.save ? redirect_to(:calendar_event_types, notice: t('.success')) : render(:new)
     end
 
     def edit; end
 
     def update
       if @calendar_event_type.update(calendar_event_type_params)
-        redirect_to(index_path, notice: t('.success'))
+        redirect_to(:calendar_event_types, notice: t('.success'))
       else
         render(:edit)
       end
@@ -31,17 +31,13 @@ module CalendarManagement
 
     def destroy
       if @calendar_event_type.destroy
-        redirect_to(index_path, notice: t('.success'))
+        redirect_to(:calendar_event_types, notice: t('.success'))
       else
-        redirect_to(index_path, alert: t('.warning'))
+        redirect_to(:calendar_event_types, alert: t('.warning'))
       end
     end
 
     private
-
-    def index_path
-      %i[calendar_management calendar_event_types]
-    end
 
     def set_calendar_event_type
       @calendar_event_type = CalendarEventType.find(params[:id])

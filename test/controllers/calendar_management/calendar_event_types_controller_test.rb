@@ -11,14 +11,14 @@ module CalendarManagement
     end
 
     test 'should get index' do
-      get calendar_management_calendar_event_types_path
+      get calendar_event_types_path
       assert_equal 'index', @controller.action_name
       assert_response :success
       assert_select '#add-button', translate('.index.new_calendar_event_type_link')
     end
 
     test 'should get new' do
-      get new_calendar_management_calendar_event_type_path
+      get new_calendar_event_type_path
       assert_equal 'new', @controller.action_name
       assert_response :success
       assert_select '.simple_form' do
@@ -30,7 +30,7 @@ module CalendarManagement
 
     test 'should create document' do
       assert_difference('CalendarEventType.count') do
-        post calendar_management_calendar_event_types_path, params: {
+        post calendar_event_types_path, params: {
           calendar_event_type: {
             name: 'Sample Event Type',
             category: 'exams',
@@ -46,12 +46,12 @@ module CalendarManagement
       assert_equal 'Sample Event Type', calendar_event_type.name
       assert_equal 'exams', calendar_event_type.category
       assert_equal 'sample_event_type_exams', calendar_event_type.identifier
-      assert_redirected_to calendar_management_calendar_event_types_path
+      assert_redirected_to calendar_event_types_path
       assert_equal translate('.create.success'), flash[:notice]
     end
 
     test 'should get edit' do
-      get edit_calendar_management_calendar_event_type_path(@calendar_event_type)
+      get edit_calendar_event_type_path(@calendar_event_type)
 
       assert_equal 'edit', @controller.action_name
       assert_response :success
@@ -64,7 +64,7 @@ module CalendarManagement
 
     test 'should update document' do
       calendar_event_type = CalendarEventType.last
-      patch calendar_management_calendar_event_type_path(calendar_event_type), params: {
+      patch calendar_event_type_path(calendar_event_type), params: {
         calendar_event_type: { name: 'Another Event Type' }
       }
 
@@ -72,17 +72,17 @@ module CalendarManagement
       calendar_event_type.reload
 
       assert_equal 'Another Event Type', calendar_event_type.name
-      assert_redirected_to calendar_management_calendar_event_types_path
+      assert_redirected_to calendar_event_types_path
       assert_equal translate('.update.success'), flash[:notice]
     end
 
     test 'should destroy document' do
       assert_difference('CalendarEventType.count', -1) do
-        delete calendar_management_calendar_event_type_path(calendar_event_types(:calendar_event_type_to_delete))
+        delete calendar_event_type_path(calendar_event_types(:calendar_event_type_to_delete))
       end
 
       assert_equal 'destroy', @controller.action_name
-      assert_redirected_to calendar_management_calendar_event_types_path
+      assert_redirected_to calendar_event_types_path
       assert_equal translate('.destroy.success'), flash[:notice]
     end
 

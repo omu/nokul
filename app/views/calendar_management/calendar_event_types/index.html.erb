@@ -1,5 +1,6 @@
 <%= render 'layouts/builders/index',
-           namespace: 'calendar_management',
+           namespace: nil,
+           scope_module: 'calendar_management',
            klass: 'calendar_event_type',
            collection: @calendar_event_types,
            pagy: @pagy,

@@ -13,7 +13,12 @@ en:
           fall: Fall
           spring: Spring
           summer: Summer
-  references:
+  helpers:
+    submit:
+      academic_term:
+        create: Create Academic Term
+        update: Update Academic Term
+  reference:
     academic_terms:
       create:
         success: Academic term successfully created.
@@ -30,8 +35,3 @@ en:
         form_title: Create a New Academic Term
       update:
         success: Academic term successfully updated.
-  helpers:
-    submit:
-      academic_term:
-        create: Create Academic Term
-        update: Update Academic Term

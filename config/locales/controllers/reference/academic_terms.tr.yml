@@ -13,7 +13,12 @@ tr:
           fall: Güz
           spring: Bahar
           summer: Yaz
-  references:
+  helpers:
+    submit:
+      academic_term:
+        create: Akademik Dönem Oluştur
+        update: Akademik Dönemi Güncelle
+  reference:
     academic_terms:
       create:
         success: Akademik dönem başarıyla oluşturuldu.
@@ -30,8 +35,3 @@ tr:
         form_title: Akademik Dönem Oluştur
       update:
         success: Akademik dönem başarıyla güncellendi.
-  helpers:
-    submit:
-      academic_term:
-        create: Akademik Dönem Oluştur
-        update: Akademik Dönemi Güncelle

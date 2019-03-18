@@ -1,12 +1,12 @@
 mf1:
-  name: MF1
+  name: Mf 1
   code: 13
 mf2:
-  name: MF2
+  name: Mf 2
   code: 14
 mf3:
-  name: MF3
+  name: mf3
   code: 15
 student_entrance_point_type_to_delete:
   name: Foo
-  code: 99
+  code: 97
