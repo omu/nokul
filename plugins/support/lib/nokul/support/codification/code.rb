@@ -88,6 +88,10 @@ module Nokul
           def strings
             list[kernel]
           end
+
+          protected
+
+          attr_accessor :list
         end
       end
     end
