@@ -17,7 +17,8 @@ module Nokul
           attr_reader :coder
 
           def after_initialize
-            @coder = Support::Codifications::Coder.new(begins, ends: ends, deny: deny, memory: Memory.instance)
+            # FIXME: handle ends, deny
+            @coder = Support::Codification.sequential_numeric_codes begins, memory: Memory.instance
           end
 
           def score_of(unit)
