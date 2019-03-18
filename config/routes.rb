@@ -6,11 +6,11 @@ Rails.application.routes.draw do
   draw :account
   draw :admin
   draw :yoksis
+  draw :reference
   draw :calendar_management
   draw :first_registration
 
   draw :course_management
-  draw :references
 
   resources :units do
     member do

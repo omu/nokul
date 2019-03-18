@@ -10,3 +10,6 @@ archived:
 undefined:
   name: Kılavuz Kodu Yok
   code: 5
+unit_status_to_delete:
+  name: Will be Deleted
+  code: 99

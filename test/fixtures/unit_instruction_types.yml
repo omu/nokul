@@ -10,3 +10,6 @@ distance_education:
 normal_education:
   name: Normal Öğretim
   code: 1
+unit_instruction_type_to_delete:
+  name: Will be Deleted
+  code: 99

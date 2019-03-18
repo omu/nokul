@@ -8,8 +8,9 @@ module ReferenceResourceTest
   def self.included(base)
     base.class_eval do
       include YoksisResourceTest
+
       setup do
-        @target_path = 'admin'
+        @target_path = 'reference'
       end
     end
   end
