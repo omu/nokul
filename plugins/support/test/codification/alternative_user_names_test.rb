@@ -15,6 +15,7 @@ module Nokul
           assert_equal'ggarciamarquez', coder.run
           assert_equal'gabrielgmarquez', coder.run
           assert_equal'gabrielgarciam', coder.run
+          assert_equal'gabrielgarciamarquez', coder.run
 
           assert_raise(Consumed) { coder.run }
         end
@@ -43,6 +44,7 @@ module Nokul
           assert_equal'ggarciam', coder.run
           assert_equal'ggarciamarquez', coder.run
           assert_equal'gabrielgarciam', coder.run
+          assert_equal'gabrielgarciamarquez', coder.run
 
           assert_raise(Consumed) { coder.run }
         end
@@ -62,6 +64,7 @@ module Nokul
           assert_equal 'yalirak', coder.run
           assert_equal 'yilmazarak', coder.run
           assert_equal 'yilmazalir', coder.run
+          assert_equal 'yilmazalirak', coder.run
 
           assert_raise(Consumed) { coder.run }
         end
@@ -70,13 +73,14 @@ module Nokul
           coder = Codification.alternative_user_names %w[william hile]
 
           assert_equal 'williamh', coder.run
+          assert_equal 'williamhile', coder.run
 
           assert_raise(Consumed) { coder.run }
         end
 
         test 'can produce available names' do
           available = Codification.alternative_user_names(%w[suat alak]).available(3)
-          assert_equal %w[suata], available
+          assert_equal %w[suata suatalak], available
         end
       end
     end

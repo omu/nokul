@@ -57,6 +57,13 @@ module Nokul
           assert_raise(Error) { Baz.new %w[foo] }
         end
 
+        test 'last item should always be the source itself' do
+          source = %w[gabriel garcia marquez]
+          %i[abbreviated non_abbreviated].each do |alternative|
+            assert_equal source, Lists::UserNames.new(source, alternative: alternative).last
+          end
+        end
+
         test 'abbreviated names work' do
           assert_equal [
             %w[g g marquez],
@@ -64,7 +71,8 @@ module Nokul
             %w[gabriel g m],
             %w[g garcia marquez],
             %w[gabriel g marquez],
-            %w[gabriel garcia m]
+            %w[gabriel garcia m],
+            %w[gabriel garcia marquez]
           ], Lists::UserNames.new(%w[gabriel garcia marquez], alternative: :abbreviated)
         end
 

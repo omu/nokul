@@ -63,7 +63,7 @@ module Nokul
           end
 
           def generate(**options)
-            send Supported.supported(options[:alternative])
+            [*send(Supported.supported(options[:alternative])), source].uniq
           end
         end
       end
