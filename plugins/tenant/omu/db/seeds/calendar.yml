@@ -1,4 +1,3 @@
-calendars:
 -
   name: Lisans-Önlisans Akademik Takvimi
   timezone: Istanbul
@@ -112,7 +111,7 @@ calendars:
       timezone: Istanbul
       visible: true
 -
-  name: 'Lisans-Önlisans Akademik Takvimi'
+  name: Lisans-Önlisans Akademik Takvimi
   timezone: Istanbul
   academic_term:
     year: 2018 - 2019
