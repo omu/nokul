@@ -1,0 +1,209 @@
+calendars:
+-
+  name: Lisans-Önlisans Akademik Takvimi
+  timezone: Istanbul
+  academic_term:
+    year: 2018 - 2019
+    term: fall
+  calendar_events:
+    -
+      calendar_event_type: major_and_minor_applications
+      start_time: 2018-09-10 08:00:00
+      end_time: 2018-09-14 17:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: major_and_minor_application_results_announcement
+      start_time: 2018-09-17 08:00:00
+      end_time: 2018-09-19 17:00:00
+      timezone: Istanbul
+      visible: true
+    - 
+      calendar_event_type: foreign_language_proficiency_exams
+      start_time: 2018-09-18 08:00:00
+      end_time: 2018-09-19 17:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: foreign_language_proficiency_results_announcement
+      start_time: 2018-09-21 08:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: preparatory_class_grading_exams
+      start_time: 2018-09-24 08:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: online_course_registrations
+      start_time: 2018-09-17 08:00:00
+      end_time: 2018-09-26 17:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: start_and_end_of_courses
+      start_time: 2018-09-24 08:00:00
+      end_time: 2018-11-28 08:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: foreign_language_exemption_exams
+      start_time: 2018-09-26 08:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: transfer_for_elective_courses_advisor
+      start_time: 2018-09-24 08:00:00
+      end_time: 2018-10-01 17:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: excused_course_registrations
+      start_time: 2018-09-24 08:00:00
+      end_time: 2018-10-19 17:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: mid_term_exams
+      start_time: 2018-11-17 08:00:00
+      end_time: 2018-11-25 17:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: final_exams
+      start_time: 2018-12-31 08:00:00
+      end_time: 2019-01-11 17:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: final_results_announcement
+      start_time: 2018-12-31 08:00:00
+      end_time: 2019-01-16 17:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: retake_exams
+      start_time: 2019-01-19 08:00:00
+      end_time: 2019-01-27 17:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: retake_results_announcement
+      start_time: 2019-01-19 08:00:00
+      end_time: 2019-01-30 17:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: single_course_exam_applications
+      start_time: 2018-01-31 08:00:00
+      end_time: 2019-02-01 17:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: single_course_exams
+      start_time: 2019-02-04 08:00:00
+      end_time: 2019-02-05 17:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: single_course_results_announcement
+      start_time: 2019-02-04 08:00:00
+      end_time: 2019-02-08 17:00:00
+      timezone: Istanbul
+      visible: true
+-
+  name: 'Lisans-Önlisans Akademik Takvimi'
+  timezone: Istanbul
+  academic_term:
+    year: 2018 - 2019
+    term: spring
+  calendar_events:
+    -
+      calendar_event_type: online_course_registrations
+      start_time: 2019-02-02 08:00:00
+      end_time: 2019-02-13 17:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: start_and_end_of_courses
+      start_time: 2019-02-11 08:00:00
+      end_time: 2019-05-17 08:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: transfer_for_elective_courses_advisor
+      start_time: 2019-02-11 08:00:00
+      end_time: 2019-02-18 17:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: excused_course_registrations
+      start_time: 2019-02-11 08:00:00
+      end_time: 2019-03-08 17:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: mid_term_exams
+      start_time: 2019-04-06 08:00:00
+      end_time: 2019-04-14 17:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: final_exams
+      start_time: 2019-05-20 08:00:00
+      end_time: 2019-06-02 17:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: final_results_announcement
+      start_time: 2019-05-20 08:00:00
+      end_time: 2019-06-10 17:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: retake_exams
+      start_time: 2019-06-12 08:00:00
+      end_time: 2019-06-21 17:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: retake_results_announcement
+      start_time: 2019-06-12 08:00:00
+      end_time: 2019-06-25 17:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: single_course_exam_applications
+      start_time: 2019-06-26 08:00:00
+      end_time: 2019-06-27 17:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: single_course_exams
+      start_time: 2019-06-28 08:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: single_course_results_announcement
+      start_time: 2019-06-28 08:00:00
+      end_time: 2019-07-02 17:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: additional_exam
+      start_time: 2019-08-27 08:00:00
+      end_time: 2019-08-27 17:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: additional
+      start_time: 2019-09-02 08:00:00
+      end_time: 2019-09-13 17:00:00
+      timezone: Istanbul
+      visible: true
+    -
+      calendar_event_type: additional_exam_results
+      start_time: 2019-09-02 08:00:00
+      end_time: 2019-09-20 17:00:00
+      timezone: Istanbul
+      visible: true
