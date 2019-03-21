@@ -2,9 +2,9 @@
 
 # Generates sequential numeric codes.
 #
-#   Source: "00003", prefix: "203"
+#   Source: "00003..00099", prefix: "203"
 #
-#   Output: "20300003", "20300004", ...
+#   Output: "20300003", "20300004", ..., "20300099"
 
 module Nokul
   module Support

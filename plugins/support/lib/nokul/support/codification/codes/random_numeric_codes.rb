@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
-# Generates random numbers unique in a range.
+# Generates unique random numbers in a range.
+#
+#   Source: "00003..00099", prefix: "203"
+#
+#   Output: "20300023", "20300089", ... (random)
 
 module Nokul
   module Support
