@@ -5,6 +5,10 @@ turkey:
   numeric_code: 792
   mernis_code: 9980
   yoksis_code: 52
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 sweden:
   name: İsveç
   alpha_2_code: SE
@@ -12,6 +16,10 @@ sweden:
   numeric_code: 752
   mernis_code: 9973
   yoksis_code: 30
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 denmark:
   name: Danimarka
   alpha_2_code: DK
@@ -19,6 +27,10 @@ denmark:
   numeric_code: 208
   mernis_code: 9879
   yoksis_code: 8
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 norway:
   name: Norveç
   alpha_2_code: 'NO'
@@ -26,3 +38,7 @@ norway:
   numeric_code: 578
   mernis_code: 9943
   yoksis_code: 28
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false

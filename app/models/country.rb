@@ -26,6 +26,10 @@ class Country < ApplicationRecord
                            numericality: { only_integer: true, greater_than: 0 }
   validates :mernis_code, allow_nil: true, uniqueness: true, length: { is: 4 },
                           numericality: { only_integer: true, greater_than: 0 }
+  validates :sms_delivery_report, inclusion: { in: [true, false] }
+  validates :sms_alpha_sender_id, inclusion: { in: [true, false] }
+  validates :sms_unicode, inclusion: { in: [true, false] }
+  validates :sms_concatenation, inclusion: { in: [true, false] }
   validates :yoksis_code, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 1 }
 
   private

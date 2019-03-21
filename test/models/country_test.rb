@@ -18,6 +18,10 @@ class CountryTest < ActiveSupport::TestCase
   validates_presence_of :alpha_2_code
   validates_presence_of :alpha_3_code
   validates_presence_of :numeric_code
+  validates_presence_of :sms_delivery_report
+  validates_presence_of :sms_alpha_sender_id
+  validates_presence_of :sms_unicode
+  validates_presence_of :sms_concatenation
 
   # validations: uniqueness
   validates_uniqueness_of :name

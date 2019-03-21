@@ -1,25 +1,12 @@
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
 SET client_min_messages = warning;
 SET row_security = off;
-
---
--- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: -
---
-
-CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
-
-
---
--- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: -
---
-
-COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
-
 
 SET default_tablespace = '';
 
@@ -184,8 +171,8 @@ CREATE TABLE public.addresses (
     full_address character varying,
     district_id bigint NOT NULL,
     user_id bigint NOT NULL,
-    updated_at timestamp without time zone DEFAULT now(),
-    created_at timestamp without time zone DEFAULT now(),
+    updated_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
+    created_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT addresses_created_at_null CHECK ((created_at IS NOT NULL)),
     CONSTRAINT addresses_full_address_length CHECK ((length((full_address)::text) <= 255)),
     CONSTRAINT addresses_full_address_presence CHECK (((full_address IS NOT NULL) AND ((full_address)::text !~ '^\s*$'::text))),
@@ -904,6 +891,10 @@ CREATE TABLE public.countries (
     numeric_code character varying,
     mernis_code character varying,
     yoksis_code integer,
+    sms_delivery_report boolean DEFAULT false,
+    sms_alpha_sender_id boolean DEFAULT false,
+    sms_unicode boolean DEFAULT false,
+    sms_concatenation boolean DEFAULT false,
     CONSTRAINT countries_alpha_2_code_length CHECK ((length((alpha_2_code)::text) = 2)),
     CONSTRAINT countries_alpha_2_code_presence CHECK (((alpha_2_code IS NOT NULL) AND ((alpha_2_code)::text !~ '^\s*$'::text))),
     CONSTRAINT countries_alpha_3_code_length CHECK ((length((alpha_3_code)::text) = 3)),
@@ -913,6 +904,10 @@ CREATE TABLE public.countries (
     CONSTRAINT countries_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text))),
     CONSTRAINT countries_numeric_code_length CHECK ((length((numeric_code)::text) = 3)),
     CONSTRAINT countries_numeric_code_presence CHECK (((numeric_code IS NOT NULL) AND ((numeric_code)::text !~ '^\s*$'::text))),
+    CONSTRAINT countries_sms_alpha_sender_id_null CHECK ((sms_alpha_sender_id IS NOT NULL)),
+    CONSTRAINT countries_sms_concatenation_null CHECK ((sms_concatenation IS NOT NULL)),
+    CONSTRAINT countries_sms_delivery_report_null CHECK ((sms_delivery_report IS NOT NULL)),
+    CONSTRAINT countries_sms_unicode_null CHECK ((sms_unicode IS NOT NULL)),
     CONSTRAINT countries_yoksis_code_numericality CHECK ((yoksis_code >= 1))
 );
 
@@ -1647,8 +1642,8 @@ CREATE TABLE public.identities (
     registered_to character varying,
     user_id bigint NOT NULL,
     student_id bigint,
-    created_at timestamp without time zone DEFAULT now(),
-    updated_at timestamp without time zone DEFAULT now(),
+    created_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
+    updated_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT identities_created_at_null CHECK ((created_at IS NOT NULL)),
     CONSTRAINT identities_date_of_birth_null CHECK ((date_of_birth IS NOT NULL)),
     CONSTRAINT identities_fathers_name_length CHECK ((length((fathers_name)::text) <= 255)),
@@ -2663,7 +2658,7 @@ CREATE TABLE public.users (
     last_sign_in_at timestamp without time zone,
     current_sign_in_ip inet,
     last_sign_in_ip inet,
-    password_changed_at timestamp without time zone DEFAULT now(),
+    password_changed_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
     failed_attempts integer DEFAULT 0,
     unlock_token character varying,
     locked_at timestamp without time zone,
@@ -2717,476 +2712,476 @@ ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: academic_terms id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.academic_terms ALTER COLUMN id SET DEFAULT nextval('public.academic_terms_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: action_text_rich_texts id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.action_text_rich_texts ALTER COLUMN id SET DEFAULT nextval('public.action_text_rich_texts_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: active_storage_attachments id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.active_storage_attachments ALTER COLUMN id SET DEFAULT nextval('public.active_storage_attachments_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: active_storage_blobs id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.active_storage_blobs ALTER COLUMN id SET DEFAULT nextval('public.active_storage_blobs_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: addresses id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.addresses ALTER COLUMN id SET DEFAULT nextval('public.addresses_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: administrative_functions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.administrative_functions ALTER COLUMN id SET DEFAULT nextval('public.administrative_functions_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: agenda_types id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.agenda_types ALTER COLUMN id SET DEFAULT nextval('public.agenda_types_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: agendas id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.agendas ALTER COLUMN id SET DEFAULT nextval('public.agendas_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: articles id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.articles ALTER COLUMN id SET DEFAULT nextval('public.articles_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: assessment_methods id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.assessment_methods ALTER COLUMN id SET DEFAULT nextval('public.assessment_methods_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: available_course_groups id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.available_course_groups ALTER COLUMN id SET DEFAULT nextval('public.available_course_groups_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: available_course_lecturers id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.available_course_lecturers ALTER COLUMN id SET DEFAULT nextval('public.available_course_lecturers_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: available_courses id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.available_courses ALTER COLUMN id SET DEFAULT nextval('public.available_courses_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: calendar_committee_decisions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.calendar_committee_decisions ALTER COLUMN id SET DEFAULT nextval('public.calendar_committee_decisions_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: calendar_event_types id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.calendar_event_types ALTER COLUMN id SET DEFAULT nextval('public.calendar_event_types_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: calendar_events id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.calendar_events ALTER COLUMN id SET DEFAULT nextval('public.calendar_events_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: calendars id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.calendars ALTER COLUMN id SET DEFAULT nextval('public.calendars_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: certifications id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.certifications ALTER COLUMN id SET DEFAULT nextval('public.certifications_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: cities id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.cities ALTER COLUMN id SET DEFAULT nextval('public.cities_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: committee_decisions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.committee_decisions ALTER COLUMN id SET DEFAULT nextval('public.committee_decisions_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: committee_meetings id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.committee_meetings ALTER COLUMN id SET DEFAULT nextval('public.committee_meetings_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: countries id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.countries ALTER COLUMN id SET DEFAULT nextval('public.countries_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: course_assessment_methods id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.course_assessment_methods ALTER COLUMN id SET DEFAULT nextval('public.course_assessment_methods_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: course_evaluation_types id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.course_evaluation_types ALTER COLUMN id SET DEFAULT nextval('public.course_evaluation_types_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: course_group_types id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.course_group_types ALTER COLUMN id SET DEFAULT nextval('public.course_group_types_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: course_groups id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.course_groups ALTER COLUMN id SET DEFAULT nextval('public.course_groups_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: course_types id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.course_types ALTER COLUMN id SET DEFAULT nextval('public.course_types_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: courses id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.courses ALTER COLUMN id SET DEFAULT nextval('public.courses_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: curriculum_course_groups id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.curriculum_course_groups ALTER COLUMN id SET DEFAULT nextval('public.curriculum_course_groups_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: curriculum_courses id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.curriculum_courses ALTER COLUMN id SET DEFAULT nextval('public.curriculum_courses_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: curriculum_programs id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.curriculum_programs ALTER COLUMN id SET DEFAULT nextval('public.curriculum_programs_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: curriculum_semesters id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.curriculum_semesters ALTER COLUMN id SET DEFAULT nextval('public.curriculum_semesters_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: curriculums id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.curriculums ALTER COLUMN id SET DEFAULT nextval('public.curriculums_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: districts id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.districts ALTER COLUMN id SET DEFAULT nextval('public.districts_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: document_types id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.document_types ALTER COLUMN id SET DEFAULT nextval('public.document_types_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: duties id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.duties ALTER COLUMN id SET DEFAULT nextval('public.duties_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: employees id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.employees ALTER COLUMN id SET DEFAULT nextval('public.employees_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: evaluation_types id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.evaluation_types ALTER COLUMN id SET DEFAULT nextval('public.evaluation_types_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: friendly_id_slugs id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.friendly_id_slugs ALTER COLUMN id SET DEFAULT nextval('public.friendly_id_slugs_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: group_courses id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.group_courses ALTER COLUMN id SET DEFAULT nextval('public.group_courses_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: high_school_types id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.high_school_types ALTER COLUMN id SET DEFAULT nextval('public.high_school_types_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: identities id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.identities ALTER COLUMN id SET DEFAULT nextval('public.identities_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: languages id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.languages ALTER COLUMN id SET DEFAULT nextval('public.languages_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: meeting_agendas id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.meeting_agendas ALTER COLUMN id SET DEFAULT nextval('public.meeting_agendas_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: positions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.positions ALTER COLUMN id SET DEFAULT nextval('public.positions_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: projects id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.projects ALTER COLUMN id SET DEFAULT nextval('public.projects_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: prospective_students id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.prospective_students ALTER COLUMN id SET DEFAULT nextval('public.prospective_students_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: registration_documents id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.registration_documents ALTER COLUMN id SET DEFAULT nextval('public.registration_documents_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: student_disability_types id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_disability_types ALTER COLUMN id SET DEFAULT nextval('public.student_disability_types_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: student_drop_out_types id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_drop_out_types ALTER COLUMN id SET DEFAULT nextval('public.student_drop_out_types_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: student_education_levels id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_education_levels ALTER COLUMN id SET DEFAULT nextval('public.student_education_levels_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: student_entrance_point_types id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_entrance_point_types ALTER COLUMN id SET DEFAULT nextval('public.student_entrance_point_types_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: student_entrance_types id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_entrance_types ALTER COLUMN id SET DEFAULT nextval('public.student_entrance_types_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: student_grades id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_grades ALTER COLUMN id SET DEFAULT nextval('public.student_grades_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: student_grading_systems id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_grading_systems ALTER COLUMN id SET DEFAULT nextval('public.student_grading_systems_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: student_punishment_types id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_punishment_types ALTER COLUMN id SET DEFAULT nextval('public.student_punishment_types_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: student_studentship_statuses id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_studentship_statuses ALTER COLUMN id SET DEFAULT nextval('public.student_studentship_statuses_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: students id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.students ALTER COLUMN id SET DEFAULT nextval('public.students_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: titles id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.titles ALTER COLUMN id SET DEFAULT nextval('public.titles_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: unit_calendars id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.unit_calendars ALTER COLUMN id SET DEFAULT nextval('public.unit_calendars_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: unit_instruction_languages id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.unit_instruction_languages ALTER COLUMN id SET DEFAULT nextval('public.unit_instruction_languages_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: unit_instruction_types id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.unit_instruction_types ALTER COLUMN id SET DEFAULT nextval('public.unit_instruction_types_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: unit_statuses id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.unit_statuses ALTER COLUMN id SET DEFAULT nextval('public.unit_statuses_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: unit_types id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.unit_types ALTER COLUMN id SET DEFAULT nextval('public.unit_types_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: units id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.units ALTER COLUMN id SET DEFAULT nextval('public.units_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: university_types id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.university_types ALTER COLUMN id SET DEFAULT nextval('public.university_types_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: users id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_id_seq'::regclass);
 
 
 --
--- Name: academic_terms_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: academic_terms academic_terms_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.academic_terms
@@ -3194,7 +3189,7 @@ ALTER TABLE ONLY public.academic_terms
 
 
 --
--- Name: action_text_rich_texts_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: action_text_rich_texts action_text_rich_texts_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.action_text_rich_texts
@@ -3202,7 +3197,7 @@ ALTER TABLE ONLY public.action_text_rich_texts
 
 
 --
--- Name: active_storage_attachments_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: active_storage_attachments active_storage_attachments_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.active_storage_attachments
@@ -3210,7 +3205,7 @@ ALTER TABLE ONLY public.active_storage_attachments
 
 
 --
--- Name: active_storage_blobs_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: active_storage_blobs active_storage_blobs_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.active_storage_blobs
@@ -3218,7 +3213,7 @@ ALTER TABLE ONLY public.active_storage_blobs
 
 
 --
--- Name: addresses_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: addresses addresses_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.addresses
@@ -3226,7 +3221,7 @@ ALTER TABLE ONLY public.addresses
 
 
 --
--- Name: administrative_functions_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: administrative_functions administrative_functions_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.administrative_functions
@@ -3234,7 +3229,7 @@ ALTER TABLE ONLY public.administrative_functions
 
 
 --
--- Name: administrative_functions_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: administrative_functions administrative_functions_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.administrative_functions
@@ -3242,7 +3237,7 @@ ALTER TABLE ONLY public.administrative_functions
 
 
 --
--- Name: administrative_functions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: administrative_functions administrative_functions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.administrative_functions
@@ -3250,7 +3245,7 @@ ALTER TABLE ONLY public.administrative_functions
 
 
 --
--- Name: agenda_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: agenda_types agenda_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.agenda_types
@@ -3258,7 +3253,7 @@ ALTER TABLE ONLY public.agenda_types
 
 
 --
--- Name: agendas_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: agendas agendas_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.agendas
@@ -3266,7 +3261,7 @@ ALTER TABLE ONLY public.agendas
 
 
 --
--- Name: ar_internal_metadata_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: ar_internal_metadata ar_internal_metadata_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.ar_internal_metadata
@@ -3274,7 +3269,7 @@ ALTER TABLE ONLY public.ar_internal_metadata
 
 
 --
--- Name: articles_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: articles articles_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.articles
@@ -3282,7 +3277,7 @@ ALTER TABLE ONLY public.articles
 
 
 --
--- Name: assessment_methods_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: assessment_methods assessment_methods_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.assessment_methods
@@ -3290,7 +3285,7 @@ ALTER TABLE ONLY public.assessment_methods
 
 
 --
--- Name: assessment_methods_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: assessment_methods assessment_methods_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.assessment_methods
@@ -3298,7 +3293,7 @@ ALTER TABLE ONLY public.assessment_methods
 
 
 --
--- Name: available_course_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: available_course_groups available_course_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.available_course_groups
@@ -3306,7 +3301,7 @@ ALTER TABLE ONLY public.available_course_groups
 
 
 --
--- Name: available_course_lecturers_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: available_course_lecturers available_course_lecturers_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.available_course_lecturers
@@ -3314,7 +3309,7 @@ ALTER TABLE ONLY public.available_course_lecturers
 
 
 --
--- Name: available_courses_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: available_courses available_courses_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.available_courses
@@ -3322,7 +3317,7 @@ ALTER TABLE ONLY public.available_courses
 
 
 --
--- Name: calendar_committee_decisions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: calendar_committee_decisions calendar_committee_decisions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.calendar_committee_decisions
@@ -3330,7 +3325,7 @@ ALTER TABLE ONLY public.calendar_committee_decisions
 
 
 --
--- Name: calendar_event_types_identifier_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: calendar_event_types calendar_event_types_identifier_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.calendar_event_types
@@ -3338,7 +3333,7 @@ ALTER TABLE ONLY public.calendar_event_types
 
 
 --
--- Name: calendar_event_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: calendar_event_types calendar_event_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.calendar_event_types
@@ -3346,7 +3341,7 @@ ALTER TABLE ONLY public.calendar_event_types
 
 
 --
--- Name: calendar_event_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: calendar_event_types calendar_event_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.calendar_event_types
@@ -3354,7 +3349,7 @@ ALTER TABLE ONLY public.calendar_event_types
 
 
 --
--- Name: calendar_events_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: calendar_events calendar_events_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.calendar_events
@@ -3362,7 +3357,7 @@ ALTER TABLE ONLY public.calendar_events
 
 
 --
--- Name: calendars_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: calendars calendars_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.calendars
@@ -3370,7 +3365,7 @@ ALTER TABLE ONLY public.calendars
 
 
 --
--- Name: certifications_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: certifications certifications_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.certifications
@@ -3378,7 +3373,7 @@ ALTER TABLE ONLY public.certifications
 
 
 --
--- Name: cities_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: cities cities_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.cities
@@ -3386,7 +3381,7 @@ ALTER TABLE ONLY public.cities
 
 
 --
--- Name: committee_decisions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: committee_decisions committee_decisions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.committee_decisions
@@ -3394,7 +3389,7 @@ ALTER TABLE ONLY public.committee_decisions
 
 
 --
--- Name: committee_meetings_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: committee_meetings committee_meetings_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.committee_meetings
@@ -3402,7 +3397,7 @@ ALTER TABLE ONLY public.committee_meetings
 
 
 --
--- Name: countries_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: countries countries_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.countries
@@ -3410,7 +3405,7 @@ ALTER TABLE ONLY public.countries
 
 
 --
--- Name: countries_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: countries countries_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.countries
@@ -3418,7 +3413,7 @@ ALTER TABLE ONLY public.countries
 
 
 --
--- Name: course_assessment_methods_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: course_assessment_methods course_assessment_methods_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.course_assessment_methods
@@ -3426,7 +3421,7 @@ ALTER TABLE ONLY public.course_assessment_methods
 
 
 --
--- Name: course_evaluation_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: course_evaluation_types course_evaluation_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.course_evaluation_types
@@ -3434,7 +3429,7 @@ ALTER TABLE ONLY public.course_evaluation_types
 
 
 --
--- Name: course_group_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: course_group_types course_group_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.course_group_types
@@ -3442,7 +3437,7 @@ ALTER TABLE ONLY public.course_group_types
 
 
 --
--- Name: course_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: course_groups course_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.course_groups
@@ -3450,7 +3445,7 @@ ALTER TABLE ONLY public.course_groups
 
 
 --
--- Name: course_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: course_types course_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.course_types
@@ -3458,7 +3453,7 @@ ALTER TABLE ONLY public.course_types
 
 
 --
--- Name: courses_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: courses courses_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.courses
@@ -3466,7 +3461,7 @@ ALTER TABLE ONLY public.courses
 
 
 --
--- Name: curriculum_course_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: curriculum_course_groups curriculum_course_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.curriculum_course_groups
@@ -3474,7 +3469,7 @@ ALTER TABLE ONLY public.curriculum_course_groups
 
 
 --
--- Name: curriculum_courses_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: curriculum_courses curriculum_courses_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.curriculum_courses
@@ -3482,7 +3477,7 @@ ALTER TABLE ONLY public.curriculum_courses
 
 
 --
--- Name: curriculum_programs_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: curriculum_programs curriculum_programs_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.curriculum_programs
@@ -3490,7 +3485,7 @@ ALTER TABLE ONLY public.curriculum_programs
 
 
 --
--- Name: curriculum_semesters_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: curriculum_semesters curriculum_semesters_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.curriculum_semesters
@@ -3498,7 +3493,7 @@ ALTER TABLE ONLY public.curriculum_semesters
 
 
 --
--- Name: curriculums_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: curriculums curriculums_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.curriculums
@@ -3506,7 +3501,7 @@ ALTER TABLE ONLY public.curriculums
 
 
 --
--- Name: districts_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: districts districts_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.districts
@@ -3514,7 +3509,7 @@ ALTER TABLE ONLY public.districts
 
 
 --
--- Name: document_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: document_types document_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.document_types
@@ -3522,7 +3517,7 @@ ALTER TABLE ONLY public.document_types
 
 
 --
--- Name: duties_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: duties duties_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.duties
@@ -3530,7 +3525,7 @@ ALTER TABLE ONLY public.duties
 
 
 --
--- Name: employees_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: employees employees_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.employees
@@ -3538,7 +3533,7 @@ ALTER TABLE ONLY public.employees
 
 
 --
--- Name: evaluation_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: evaluation_types evaluation_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.evaluation_types
@@ -3546,7 +3541,7 @@ ALTER TABLE ONLY public.evaluation_types
 
 
 --
--- Name: evaluation_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: evaluation_types evaluation_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.evaluation_types
@@ -3554,7 +3549,7 @@ ALTER TABLE ONLY public.evaluation_types
 
 
 --
--- Name: friendly_id_slugs_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: friendly_id_slugs friendly_id_slugs_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.friendly_id_slugs
@@ -3562,7 +3557,7 @@ ALTER TABLE ONLY public.friendly_id_slugs
 
 
 --
--- Name: group_courses_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: group_courses group_courses_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.group_courses
@@ -3570,7 +3565,7 @@ ALTER TABLE ONLY public.group_courses
 
 
 --
--- Name: high_school_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: high_school_types high_school_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.high_school_types
@@ -3578,7 +3573,7 @@ ALTER TABLE ONLY public.high_school_types
 
 
 --
--- Name: identities_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: identities identities_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.identities
@@ -3586,7 +3581,7 @@ ALTER TABLE ONLY public.identities
 
 
 --
--- Name: languages_iso_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: languages languages_iso_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.languages
@@ -3594,7 +3589,7 @@ ALTER TABLE ONLY public.languages
 
 
 --
--- Name: languages_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: languages languages_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.languages
@@ -3602,7 +3597,7 @@ ALTER TABLE ONLY public.languages
 
 
 --
--- Name: languages_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: languages languages_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.languages
@@ -3610,7 +3605,7 @@ ALTER TABLE ONLY public.languages
 
 
 --
--- Name: meeting_agendas_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: meeting_agendas meeting_agendas_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.meeting_agendas
@@ -3618,7 +3613,7 @@ ALTER TABLE ONLY public.meeting_agendas
 
 
 --
--- Name: positions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: positions positions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.positions
@@ -3626,7 +3621,7 @@ ALTER TABLE ONLY public.positions
 
 
 --
--- Name: projects_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: projects projects_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.projects
@@ -3634,7 +3629,7 @@ ALTER TABLE ONLY public.projects
 
 
 --
--- Name: prospective_students_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: prospective_students prospective_students_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.prospective_students
@@ -3642,7 +3637,7 @@ ALTER TABLE ONLY public.prospective_students
 
 
 --
--- Name: registration_documents_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: registration_documents registration_documents_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.registration_documents
@@ -3650,7 +3645,7 @@ ALTER TABLE ONLY public.registration_documents
 
 
 --
--- Name: schema_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: schema_migrations schema_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.schema_migrations
@@ -3658,7 +3653,7 @@ ALTER TABLE ONLY public.schema_migrations
 
 
 --
--- Name: student_disability_types_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: student_disability_types student_disability_types_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_disability_types
@@ -3666,7 +3661,7 @@ ALTER TABLE ONLY public.student_disability_types
 
 
 --
--- Name: student_disability_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: student_disability_types student_disability_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_disability_types
@@ -3674,7 +3669,7 @@ ALTER TABLE ONLY public.student_disability_types
 
 
 --
--- Name: student_disability_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: student_disability_types student_disability_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_disability_types
@@ -3682,7 +3677,7 @@ ALTER TABLE ONLY public.student_disability_types
 
 
 --
--- Name: student_drop_out_types_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: student_drop_out_types student_drop_out_types_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_drop_out_types
@@ -3690,7 +3685,7 @@ ALTER TABLE ONLY public.student_drop_out_types
 
 
 --
--- Name: student_drop_out_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: student_drop_out_types student_drop_out_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_drop_out_types
@@ -3698,7 +3693,7 @@ ALTER TABLE ONLY public.student_drop_out_types
 
 
 --
--- Name: student_drop_out_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: student_drop_out_types student_drop_out_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_drop_out_types
@@ -3706,7 +3701,7 @@ ALTER TABLE ONLY public.student_drop_out_types
 
 
 --
--- Name: student_education_levels_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: student_education_levels student_education_levels_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_education_levels
@@ -3714,7 +3709,7 @@ ALTER TABLE ONLY public.student_education_levels
 
 
 --
--- Name: student_education_levels_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: student_education_levels student_education_levels_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_education_levels
@@ -3722,7 +3717,7 @@ ALTER TABLE ONLY public.student_education_levels
 
 
 --
--- Name: student_education_levels_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: student_education_levels student_education_levels_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_education_levels
@@ -3730,7 +3725,7 @@ ALTER TABLE ONLY public.student_education_levels
 
 
 --
--- Name: student_entrance_point_types_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: student_entrance_point_types student_entrance_point_types_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_entrance_point_types
@@ -3738,7 +3733,7 @@ ALTER TABLE ONLY public.student_entrance_point_types
 
 
 --
--- Name: student_entrance_point_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: student_entrance_point_types student_entrance_point_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_entrance_point_types
@@ -3746,7 +3741,7 @@ ALTER TABLE ONLY public.student_entrance_point_types
 
 
 --
--- Name: student_entrance_point_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: student_entrance_point_types student_entrance_point_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_entrance_point_types
@@ -3754,7 +3749,7 @@ ALTER TABLE ONLY public.student_entrance_point_types
 
 
 --
--- Name: student_entrance_types_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: student_entrance_types student_entrance_types_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_entrance_types
@@ -3762,7 +3757,7 @@ ALTER TABLE ONLY public.student_entrance_types
 
 
 --
--- Name: student_entrance_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: student_entrance_types student_entrance_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_entrance_types
@@ -3770,7 +3765,7 @@ ALTER TABLE ONLY public.student_entrance_types
 
 
 --
--- Name: student_entrance_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: student_entrance_types student_entrance_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_entrance_types
@@ -3778,7 +3773,7 @@ ALTER TABLE ONLY public.student_entrance_types
 
 
 --
--- Name: student_grades_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: student_grades student_grades_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_grades
@@ -3786,7 +3781,7 @@ ALTER TABLE ONLY public.student_grades
 
 
 --
--- Name: student_grades_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: student_grades student_grades_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_grades
@@ -3794,7 +3789,7 @@ ALTER TABLE ONLY public.student_grades
 
 
 --
--- Name: student_grades_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: student_grades student_grades_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_grades
@@ -3802,7 +3797,7 @@ ALTER TABLE ONLY public.student_grades
 
 
 --
--- Name: student_grading_systems_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: student_grading_systems student_grading_systems_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_grading_systems
@@ -3810,7 +3805,7 @@ ALTER TABLE ONLY public.student_grading_systems
 
 
 --
--- Name: student_grading_systems_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: student_grading_systems student_grading_systems_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_grading_systems
@@ -3818,7 +3813,7 @@ ALTER TABLE ONLY public.student_grading_systems
 
 
 --
--- Name: student_grading_systems_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: student_grading_systems student_grading_systems_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_grading_systems
@@ -3826,7 +3821,7 @@ ALTER TABLE ONLY public.student_grading_systems
 
 
 --
--- Name: student_punishment_types_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: student_punishment_types student_punishment_types_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_punishment_types
@@ -3834,7 +3829,7 @@ ALTER TABLE ONLY public.student_punishment_types
 
 
 --
--- Name: student_punishment_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: student_punishment_types student_punishment_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_punishment_types
@@ -3842,7 +3837,7 @@ ALTER TABLE ONLY public.student_punishment_types
 
 
 --
--- Name: student_punishment_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: student_punishment_types student_punishment_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_punishment_types
@@ -3850,7 +3845,7 @@ ALTER TABLE ONLY public.student_punishment_types
 
 
 --
--- Name: student_studentship_statuses_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: student_studentship_statuses student_studentship_statuses_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_studentship_statuses
@@ -3858,7 +3853,7 @@ ALTER TABLE ONLY public.student_studentship_statuses
 
 
 --
--- Name: student_studentship_statuses_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: student_studentship_statuses student_studentship_statuses_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_studentship_statuses
@@ -3866,7 +3861,7 @@ ALTER TABLE ONLY public.student_studentship_statuses
 
 
 --
--- Name: student_studentship_statuses_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: student_studentship_statuses student_studentship_statuses_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.student_studentship_statuses
@@ -3874,7 +3869,7 @@ ALTER TABLE ONLY public.student_studentship_statuses
 
 
 --
--- Name: students_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: students students_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.students
@@ -3882,7 +3877,7 @@ ALTER TABLE ONLY public.students
 
 
 --
--- Name: titles_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: titles titles_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.titles
@@ -3890,7 +3885,7 @@ ALTER TABLE ONLY public.titles
 
 
 --
--- Name: unit_calendars_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: unit_calendars unit_calendars_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.unit_calendars
@@ -3898,7 +3893,7 @@ ALTER TABLE ONLY public.unit_calendars
 
 
 --
--- Name: unit_instruction_languages_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: unit_instruction_languages unit_instruction_languages_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.unit_instruction_languages
@@ -3906,7 +3901,7 @@ ALTER TABLE ONLY public.unit_instruction_languages
 
 
 --
--- Name: unit_instruction_languages_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: unit_instruction_languages unit_instruction_languages_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.unit_instruction_languages
@@ -3914,7 +3909,7 @@ ALTER TABLE ONLY public.unit_instruction_languages
 
 
 --
--- Name: unit_instruction_languages_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: unit_instruction_languages unit_instruction_languages_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.unit_instruction_languages
@@ -3922,7 +3917,7 @@ ALTER TABLE ONLY public.unit_instruction_languages
 
 
 --
--- Name: unit_instruction_types_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: unit_instruction_types unit_instruction_types_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.unit_instruction_types
@@ -3930,7 +3925,7 @@ ALTER TABLE ONLY public.unit_instruction_types
 
 
 --
--- Name: unit_instruction_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: unit_instruction_types unit_instruction_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.unit_instruction_types
@@ -3938,7 +3933,7 @@ ALTER TABLE ONLY public.unit_instruction_types
 
 
 --
--- Name: unit_instruction_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: unit_instruction_types unit_instruction_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.unit_instruction_types
@@ -3946,7 +3941,7 @@ ALTER TABLE ONLY public.unit_instruction_types
 
 
 --
--- Name: unit_statuses_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: unit_statuses unit_statuses_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.unit_statuses
@@ -3954,7 +3949,7 @@ ALTER TABLE ONLY public.unit_statuses
 
 
 --
--- Name: unit_statuses_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: unit_statuses unit_statuses_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.unit_statuses
@@ -3962,7 +3957,7 @@ ALTER TABLE ONLY public.unit_statuses
 
 
 --
--- Name: unit_statuses_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: unit_statuses unit_statuses_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.unit_statuses
@@ -3970,7 +3965,7 @@ ALTER TABLE ONLY public.unit_statuses
 
 
 --
--- Name: unit_types_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: unit_types unit_types_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.unit_types
@@ -3978,7 +3973,7 @@ ALTER TABLE ONLY public.unit_types
 
 
 --
--- Name: unit_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: unit_types unit_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.unit_types
@@ -3986,7 +3981,7 @@ ALTER TABLE ONLY public.unit_types
 
 
 --
--- Name: unit_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: unit_types unit_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.unit_types
@@ -3994,7 +3989,7 @@ ALTER TABLE ONLY public.unit_types
 
 
 --
--- Name: units_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: units units_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.units
@@ -4002,7 +3997,7 @@ ALTER TABLE ONLY public.units
 
 
 --
--- Name: university_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: university_types university_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.university_types
@@ -4010,7 +4005,7 @@ ALTER TABLE ONLY public.university_types
 
 
 --
--- Name: users_email_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: users users_email_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.users
@@ -4018,7 +4013,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- Name: users_id_number_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: users users_id_number_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.users
@@ -4026,7 +4021,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- Name: users_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.users
@@ -4622,7 +4617,7 @@ CREATE UNIQUE INDEX index_users_on_reset_password_token ON public.users USING bt
 
 
 --
--- Name: fk_rails_0011c39cc3; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: calendar_events fk_rails_0011c39cc3; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.calendar_events
@@ -4630,7 +4625,7 @@ ALTER TABLE ONLY public.calendar_events
 
 
 --
--- Name: fk_rails_02803298e9; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: calendars fk_rails_02803298e9; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.calendars
@@ -4638,7 +4633,7 @@ ALTER TABLE ONLY public.calendars
 
 
 --
--- Name: fk_rails_051656b790; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: courses fk_rails_051656b790; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.courses
@@ -4646,7 +4641,7 @@ ALTER TABLE ONLY public.courses
 
 
 --
--- Name: fk_rails_05369f2b5b; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: meeting_agendas fk_rails_05369f2b5b; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.meeting_agendas
@@ -4654,7 +4649,7 @@ ALTER TABLE ONLY public.meeting_agendas
 
 
 --
--- Name: fk_rails_085e487ff3; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: curriculum_courses fk_rails_085e487ff3; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.curriculum_courses
@@ -4662,7 +4657,7 @@ ALTER TABLE ONLY public.curriculum_courses
 
 
 --
--- Name: fk_rails_11f2fa1aba; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: agendas fk_rails_11f2fa1aba; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.agendas
@@ -4670,7 +4665,7 @@ ALTER TABLE ONLY public.agendas
 
 
 --
--- Name: fk_rails_148c9e88f4; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: students fk_rails_148c9e88f4; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.students
@@ -4678,7 +4673,7 @@ ALTER TABLE ONLY public.students
 
 
 --
--- Name: fk_rails_1b35a03564; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: duties fk_rails_1b35a03564; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.duties
@@ -4686,7 +4681,7 @@ ALTER TABLE ONLY public.duties
 
 
 --
--- Name: fk_rails_1b98d66e19; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: addresses fk_rails_1b98d66e19; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.addresses
@@ -4694,7 +4689,7 @@ ALTER TABLE ONLY public.addresses
 
 
 --
--- Name: fk_rails_2f3d74d701; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: registration_documents fk_rails_2f3d74d701; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.registration_documents
@@ -4702,7 +4697,7 @@ ALTER TABLE ONLY public.registration_documents
 
 
 --
--- Name: fk_rails_3154ddd827; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: students fk_rails_3154ddd827; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.students
@@ -4710,7 +4705,7 @@ ALTER TABLE ONLY public.students
 
 
 --
--- Name: fk_rails_32e14f7893; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: curriculum_semesters fk_rails_32e14f7893; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.curriculum_semesters
@@ -4718,7 +4713,7 @@ ALTER TABLE ONLY public.curriculum_semesters
 
 
 --
--- Name: fk_rails_33195b0adb; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: curriculum_programs fk_rails_33195b0adb; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.curriculum_programs
@@ -4726,7 +4721,7 @@ ALTER TABLE ONLY public.curriculum_programs
 
 
 --
--- Name: fk_rails_3351011c48; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: course_assessment_methods fk_rails_3351011c48; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.course_assessment_methods
@@ -4734,7 +4729,7 @@ ALTER TABLE ONLY public.course_assessment_methods
 
 
 --
--- Name: fk_rails_356137da91; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: available_courses fk_rails_356137da91; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.available_courses
@@ -4742,7 +4737,7 @@ ALTER TABLE ONLY public.available_courses
 
 
 --
--- Name: fk_rails_3b3edaa11b; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: group_courses fk_rails_3b3edaa11b; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.group_courses
@@ -4750,7 +4745,7 @@ ALTER TABLE ONLY public.group_courses
 
 
 --
--- Name: fk_rails_3befe032e9; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: curriculums fk_rails_3befe032e9; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.curriculums
@@ -4758,7 +4753,7 @@ ALTER TABLE ONLY public.curriculums
 
 
 --
--- Name: fk_rails_3d31dad1cc; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: articles fk_rails_3d31dad1cc; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.articles
@@ -4766,7 +4761,7 @@ ALTER TABLE ONLY public.articles
 
 
 --
--- Name: fk_rails_3f1a2d48dd; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: duties fk_rails_3f1a2d48dd; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.duties
@@ -4774,7 +4769,7 @@ ALTER TABLE ONLY public.duties
 
 
 --
--- Name: fk_rails_40d03200ff; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: course_groups fk_rails_40d03200ff; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.course_groups
@@ -4782,7 +4777,7 @@ ALTER TABLE ONLY public.course_groups
 
 
 --
--- Name: fk_rails_410eb899ca; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: units fk_rails_410eb899ca; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.units
@@ -4790,7 +4785,7 @@ ALTER TABLE ONLY public.units
 
 
 --
--- Name: fk_rails_4126944f82; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: employees fk_rails_4126944f82; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.employees
@@ -4798,7 +4793,7 @@ ALTER TABLE ONLY public.employees
 
 
 --
--- Name: fk_rails_4181a1584a; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: curriculum_courses fk_rails_4181a1584a; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.curriculum_courses
@@ -4806,7 +4801,7 @@ ALTER TABLE ONLY public.curriculum_courses
 
 
 --
--- Name: fk_rails_44d9592deb; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: committee_decisions fk_rails_44d9592deb; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.committee_decisions
@@ -4814,7 +4809,7 @@ ALTER TABLE ONLY public.committee_decisions
 
 
 --
--- Name: fk_rails_4783d78ac5; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: available_courses fk_rails_4783d78ac5; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.available_courses
@@ -4822,7 +4817,7 @@ ALTER TABLE ONLY public.available_courses
 
 
 --
--- Name: fk_rails_47a7d8ee6a; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: unit_calendars fk_rails_47a7d8ee6a; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.unit_calendars
@@ -4830,7 +4825,7 @@ ALTER TABLE ONLY public.unit_calendars
 
 
 --
--- Name: fk_rails_48c9e0c5a2; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: addresses fk_rails_48c9e0c5a2; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.addresses
@@ -4838,7 +4833,7 @@ ALTER TABLE ONLY public.addresses
 
 
 --
--- Name: fk_rails_4af2ef6ebe; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: course_groups fk_rails_4af2ef6ebe; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.course_groups
@@ -4846,7 +4841,7 @@ ALTER TABLE ONLY public.course_groups
 
 
 --
--- Name: fk_rails_4f3eb3da94; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: calendar_committee_decisions fk_rails_4f3eb3da94; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.calendar_committee_decisions
@@ -4854,7 +4849,7 @@ ALTER TABLE ONLY public.calendar_committee_decisions
 
 
 --
--- Name: fk_rails_5373344100; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: identities fk_rails_5373344100; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.identities
@@ -4862,7 +4857,7 @@ ALTER TABLE ONLY public.identities
 
 
 --
--- Name: fk_rails_54b90f3e1c; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: prospective_students fk_rails_54b90f3e1c; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.prospective_students
@@ -4870,7 +4865,7 @@ ALTER TABLE ONLY public.prospective_students
 
 
 --
--- Name: fk_rails_5503b9bced; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: curriculum_programs fk_rails_5503b9bced; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.curriculum_programs
@@ -4878,7 +4873,7 @@ ALTER TABLE ONLY public.curriculum_programs
 
 
 --
--- Name: fk_rails_5951990ba9; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: units fk_rails_5951990ba9; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.units
@@ -4886,7 +4881,7 @@ ALTER TABLE ONLY public.units
 
 
 --
--- Name: fk_rails_5d6264c4f2; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: calendar_committee_decisions fk_rails_5d6264c4f2; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.calendar_committee_decisions
@@ -4894,7 +4889,7 @@ ALTER TABLE ONLY public.calendar_committee_decisions
 
 
 --
--- Name: fk_rails_64d7b22524; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: calendar_events fk_rails_64d7b22524; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.calendar_events
@@ -4902,7 +4897,7 @@ ALTER TABLE ONLY public.calendar_events
 
 
 --
--- Name: fk_rails_694b3fc610; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: meeting_agendas fk_rails_694b3fc610; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.meeting_agendas
@@ -4910,7 +4905,7 @@ ALTER TABLE ONLY public.meeting_agendas
 
 
 --
--- Name: fk_rails_728bb39a67; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: group_courses fk_rails_728bb39a67; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.group_courses
@@ -4918,7 +4913,7 @@ ALTER TABLE ONLY public.group_courses
 
 
 --
--- Name: fk_rails_78999e7b17; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: positions fk_rails_78999e7b17; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.positions
@@ -4926,7 +4921,7 @@ ALTER TABLE ONLY public.positions
 
 
 --
--- Name: fk_rails_83a021318e; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: units fk_rails_83a021318e; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.units
@@ -4934,7 +4929,7 @@ ALTER TABLE ONLY public.units
 
 
 --
--- Name: fk_rails_8540afbff7; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: identities fk_rails_8540afbff7; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.identities
@@ -4942,7 +4937,7 @@ ALTER TABLE ONLY public.identities
 
 
 --
--- Name: fk_rails_86397e28ff; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: available_course_lecturers fk_rails_86397e28ff; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.available_course_lecturers
@@ -4950,7 +4945,7 @@ ALTER TABLE ONLY public.available_course_lecturers
 
 
 --
--- Name: fk_rails_89bfbfdd76; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: curriculum_course_groups fk_rails_89bfbfdd76; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.curriculum_course_groups
@@ -4958,7 +4953,7 @@ ALTER TABLE ONLY public.curriculum_course_groups
 
 
 --
--- Name: fk_rails_8ab0da65e4; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: units fk_rails_8ab0da65e4; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.units
@@ -4966,7 +4961,7 @@ ALTER TABLE ONLY public.units
 
 
 --
--- Name: fk_rails_8d264a5cbc; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: positions fk_rails_8d264a5cbc; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.positions
@@ -4974,7 +4969,7 @@ ALTER TABLE ONLY public.positions
 
 
 --
--- Name: fk_rails_917e7d3603; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: available_course_lecturers fk_rails_917e7d3603; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.available_course_lecturers
@@ -4982,7 +4977,7 @@ ALTER TABLE ONLY public.available_course_lecturers
 
 
 --
--- Name: fk_rails_92c48f7cf2; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: districts fk_rails_92c48f7cf2; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.districts
@@ -4990,7 +4985,7 @@ ALTER TABLE ONLY public.districts
 
 
 --
--- Name: fk_rails_93498b6370; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: prospective_students fk_rails_93498b6370; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.prospective_students
@@ -4998,7 +4993,7 @@ ALTER TABLE ONLY public.prospective_students
 
 
 --
--- Name: fk_rails_996e05be41; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: cities fk_rails_996e05be41; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.cities
@@ -5006,7 +5001,7 @@ ALTER TABLE ONLY public.cities
 
 
 --
--- Name: fk_rails_99ad041748; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: certifications fk_rails_99ad041748; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.certifications
@@ -5014,7 +5009,7 @@ ALTER TABLE ONLY public.certifications
 
 
 --
--- Name: fk_rails_a6111d55a4; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: prospective_students fk_rails_a6111d55a4; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.prospective_students
@@ -5022,7 +5017,7 @@ ALTER TABLE ONLY public.prospective_students
 
 
 --
--- Name: fk_rails_a72394c071; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: courses fk_rails_a72394c071; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.courses
@@ -5030,7 +5025,7 @@ ALTER TABLE ONLY public.courses
 
 
 --
--- Name: fk_rails_a7647dd384; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: registration_documents fk_rails_a7647dd384; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.registration_documents
@@ -5038,7 +5033,7 @@ ALTER TABLE ONLY public.registration_documents
 
 
 --
--- Name: fk_rails_a9099f01f5; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: available_courses fk_rails_a9099f01f5; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.available_courses
@@ -5046,7 +5041,7 @@ ALTER TABLE ONLY public.available_courses
 
 
 --
--- Name: fk_rails_b1c146f76e; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: prospective_students fk_rails_b1c146f76e; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.prospective_students
@@ -5054,7 +5049,7 @@ ALTER TABLE ONLY public.prospective_students
 
 
 --
--- Name: fk_rails_b25d062eb5; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: course_evaluation_types fk_rails_b25d062eb5; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.course_evaluation_types
@@ -5062,7 +5057,7 @@ ALTER TABLE ONLY public.course_evaluation_types
 
 
 --
--- Name: fk_rails_b872a6760a; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: projects fk_rails_b872a6760a; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.projects
@@ -5070,7 +5065,7 @@ ALTER TABLE ONLY public.projects
 
 
 --
--- Name: fk_rails_b92b5eaf98; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: agendas fk_rails_b92b5eaf98; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.agendas
@@ -5078,7 +5073,7 @@ ALTER TABLE ONLY public.agendas
 
 
 --
--- Name: fk_rails_bb4be290e9; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: course_evaluation_types fk_rails_bb4be290e9; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.course_evaluation_types
@@ -5086,7 +5081,7 @@ ALTER TABLE ONLY public.course_evaluation_types
 
 
 --
--- Name: fk_rails_c4a7c8b06e; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: available_courses fk_rails_c4a7c8b06e; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.available_courses
@@ -5094,7 +5089,7 @@ ALTER TABLE ONLY public.available_courses
 
 
 --
--- Name: fk_rails_cb5582d97e; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: courses fk_rails_cb5582d97e; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.courses
@@ -5102,7 +5097,7 @@ ALTER TABLE ONLY public.courses
 
 
 --
--- Name: fk_rails_cb709e42ad; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: registration_documents fk_rails_cb709e42ad; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.registration_documents
@@ -5110,7 +5105,7 @@ ALTER TABLE ONLY public.registration_documents
 
 
 --
--- Name: fk_rails_d94afad69b; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: prospective_students fk_rails_d94afad69b; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.prospective_students
@@ -5118,7 +5113,7 @@ ALTER TABLE ONLY public.prospective_students
 
 
 --
--- Name: fk_rails_db99877142; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: units fk_rails_db99877142; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.units
@@ -5126,7 +5121,7 @@ ALTER TABLE ONLY public.units
 
 
 --
--- Name: fk_rails_dcfd3d4fc3; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: employees fk_rails_dcfd3d4fc3; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.employees
@@ -5134,7 +5129,7 @@ ALTER TABLE ONLY public.employees
 
 
 --
--- Name: fk_rails_e756d4597e; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: curriculum_courses fk_rails_e756d4597e; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.curriculum_courses
@@ -5142,7 +5137,7 @@ ALTER TABLE ONLY public.curriculum_courses
 
 
 --
--- Name: fk_rails_ea494f8318; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: units fk_rails_ea494f8318; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.units
@@ -5150,7 +5145,7 @@ ALTER TABLE ONLY public.units
 
 
 --
--- Name: fk_rails_ea9bbc92e2; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: prospective_students fk_rails_ea9bbc92e2; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.prospective_students
@@ -5158,7 +5153,7 @@ ALTER TABLE ONLY public.prospective_students
 
 
 --
--- Name: fk_rails_edbeba9693; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: available_course_groups fk_rails_edbeba9693; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.available_course_groups
@@ -5166,7 +5161,7 @@ ALTER TABLE ONLY public.available_course_groups
 
 
 --
--- Name: fk_rails_f0035661f5; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: curriculum_course_groups fk_rails_f0035661f5; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.curriculum_course_groups
@@ -5174,7 +5169,7 @@ ALTER TABLE ONLY public.curriculum_course_groups
 
 
 --
--- Name: fk_rails_f2b5f80e2c; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: course_assessment_methods fk_rails_f2b5f80e2c; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.course_assessment_methods
@@ -5182,7 +5177,7 @@ ALTER TABLE ONLY public.course_assessment_methods
 
 
 --
--- Name: fk_rails_f75b60bc6a; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: available_courses fk_rails_f75b60bc6a; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.available_courses
@@ -5190,7 +5185,7 @@ ALTER TABLE ONLY public.available_courses
 
 
 --
--- Name: fk_rails_f85b219ea4; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: committee_meetings fk_rails_f85b219ea4; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.committee_meetings
@@ -5198,7 +5193,7 @@ ALTER TABLE ONLY public.committee_meetings
 
 
 --
--- Name: fk_rails_faff5aa83d; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: unit_calendars fk_rails_faff5aa83d; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.unit_calendars
@@ -5280,6 +5275,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20190122203727'),
 ('20190130105509'),
 ('20190130114547'),
-('20190304052823');
+('20190304052823'),
+('20190321163816');
 
 
