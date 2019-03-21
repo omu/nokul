@@ -3,9 +3,8 @@
 module Nokul
   module Support
     module Codification
-      Error    = Class.new ::StandardError
-      Consumed = Class.new ::StandardError
-      Skip     = Class.new ::StopIteration
+      Error = Class.new ::StandardError
+      Skip  = Class.new ::StandardError
     end
   end
 end
