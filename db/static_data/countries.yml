@@ -1,1500 +1,5000 @@
 -
-  name: Afganistan
-  alpha_2_code: AF
-  alpha_3_code: AFG
+  name: 'Afganistan'
+  alpha_2_code: 'AF'
+  alpha_3_code: 'AFG'
   numeric_code: '004'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Güney Asya'
+  world_region: 'APAC'
+  phone_code: '93'
+  currency_code: 'AFN'
+  start_of_week: 'Pazartesi'
+  latitude: '33.861630'
+  longitude: '63.212693'
+  un_locode: 'AF'
   mernis_code: '9840'
+  sms_delivery_report: 
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Aland Adaları
-  alpha_2_code: AX
-  alpha_3_code: ALA
-  numeric_code: '248'
-  mernis_code: 
--
-  name: Almanya
-  alpha_2_code: DE
-  alpha_3_code: DEU
+  name: 'Almanya'
+  alpha_2_code: 'DE'
+  alpha_3_code: 'DEU'
   numeric_code: '276'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Batı Avrupa'
+  world_region: 'EMEA'
+  phone_code: '49'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '51.165691'
+  longitude: '10.451526'
+  un_locode: 'DE'
   mernis_code: '9893'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Amerika Birleşik Devletleri
-  alpha_2_code: US
-  alpha_3_code: USA
-  numeric_code: '840'
-  mernis_code: '9988'
--
-  name: Amerika Birleşik Devletleri Küçük Dış Adaları
-  alpha_2_code: UM
-  alpha_3_code: UMI
-  numeric_code: '581'
-  mernis_code: 
--
-  name: Amerika Birleşik Devletleri Virgin Adaları
-  alpha_2_code: VI
-  alpha_3_code: VIR
-  numeric_code: '850'
-  mernis_code: 
--
-  name: Amerikan Samoası
-  alpha_2_code: AS
-  alpha_3_code: ASM
+  name: 'Amerikan Samoası'
+  alpha_2_code: 'AS'
+  alpha_3_code: 'ASM'
   numeric_code: '016'
+  continent: 'Avusturalya'
+  region: 'Okyanusya'
+  subregion: 'Polinezya'
+  world_region: 'APAC'
+  phone_code: '1'
+  currency_code: 'USD'
+  start_of_week: 'Pazartesi'
+  latitude: '-14.3060204'
+  longitude: '-170.6961815'
+  un_locode: 'AS'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Andorra
-  alpha_2_code: AD
-  alpha_3_code: AND
+  name: 'Amerikan Virgin Adaları'
+  alpha_2_code: 'VI'
+  alpha_3_code: 'VIR'
+  numeric_code: '850'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Karayipler'
+  world_region: 'AMER'
+  phone_code: '1'
+  currency_code: 'USD'
+  start_of_week: 'Pazartesi'
+  latitude: '18.335765'
+  longitude: '-64.896335'
+  un_locode: 'VI'
+  mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Andorra'
+  alpha_2_code: 'AD'
+  alpha_3_code: 'AND'
   numeric_code: '020'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Güney Avrupa'
+  world_region: 'EMEA'
+  phone_code: '376'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '42.506285'
+  longitude: '1.521801'
+  un_locode: 'AD'
   mernis_code: '9795'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Angola
-  alpha_2_code: AO
-  alpha_3_code: AGO
+  name: 'Angola'
+  alpha_2_code: 'AO'
+  alpha_3_code: 'AGO'
   numeric_code: '024'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Orta Afrika'
+  world_region: 'EMEA'
+  phone_code: '244'
+  currency_code: 'AOA'
+  start_of_week: 'Pazartesi'
+  latitude: '47.516231'
+  longitude: '14.550072'
+  un_locode: 'AO'
   mernis_code: '9843'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Anguilla
-  alpha_2_code: AI
-  alpha_3_code: AIA
+  name: 'Anguila'
+  alpha_2_code: 'AI'
+  alpha_3_code: 'AIA'
   numeric_code: '660'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Karayipler'
+  world_region: 'AMER'
+  phone_code: '1'
+  currency_code: 'XCD'
+  start_of_week: 'Pazartesi'
+  latitude: '18.220554'
+  longitude: '-63.068614'
+  un_locode: 'AI'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Antarktika
-  alpha_2_code: AQ
-  alpha_3_code: ATA
+  name: 'Antarktika'
+  alpha_2_code: 'AQ'
+  alpha_3_code: 'ATA'
   numeric_code: '010'
+  continent: 'Antarktika'
+  region: 
+  subregion: 
+  world_region: 'AMER'
+  phone_code: '672'
+  currency_code: 'USD'
+  start_of_week: 'Pazartesi'
+  latitude: '-75.250973'
+  longitude: '-0.071389'
+  un_locode: 'AQ'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Antigua ve Barbuda
-  alpha_2_code: AG
-  alpha_3_code: ATG
+  name: 'Antigua-Barbuda'
+  alpha_2_code: 'AG'
+  alpha_3_code: 'ATG'
   numeric_code: '028'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Karayipler'
+  world_region: 'AMER'
+  phone_code: '1'
+  currency_code: 'XCD'
+  start_of_week: 'Pazartesi'
+  latitude: '17.060816'
+  longitude: '-61.796428'
+  un_locode: 'AG'
   mernis_code: '9844'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Arjantin
-  alpha_2_code: AR
-  alpha_3_code: ARG
+  name: 'Arjantin'
+  alpha_2_code: 'AR'
+  alpha_3_code: 'ARG'
   numeric_code: '032'
+  continent: 'Güney Amerika'
+  region: 'Amerika'
+  subregion: 'Güney Amerika'
+  world_region: 'AMER'
+  phone_code: '54'
+  currency_code: 'ARS'
+  start_of_week: 'Pazartesi'
+  latitude: '-37.026588'
+  longitude: '-81.595109'
+  un_locode: 'AR'
   mernis_code: '9845'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Arnavutluk
-  alpha_2_code: AL
-  alpha_3_code: ALB
+  name: 'Arnavutluk'
+  alpha_2_code: 'AL'
+  alpha_3_code: 'ALB'
   numeric_code: '008'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Güney Avrupa'
+  world_region: 'EMEA'
+  phone_code: '355'
+  currency_code: 'ALL'
+  start_of_week: 'Pazartesi'
+  latitude: '41.153332'
+  longitude: '20.168331'
+  un_locode: 'AL'
   mernis_code: '9841'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Aruba
-  alpha_2_code: AW
-  alpha_3_code: ABW
+  name: 'Aruba'
+  alpha_2_code: 'AW'
+  alpha_3_code: 'ABW'
   numeric_code: '533'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Karayipler'
+  world_region: 'AMER'
+  phone_code: '297'
+  currency_code: 'AWG'
+  start_of_week: 'Pazartesi'
+  latitude: '12.52111'
+  longitude: '-69.968338'
+  un_locode: 'AW'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Avustralya
-  alpha_2_code: AU
-  alpha_3_code: AUS
+  name: 'Avustralya'
+  alpha_2_code: 'AU'
+  alpha_3_code: 'AUS'
   numeric_code: '036'
+  continent: 'Avusturalya'
+  region: 'Okyanusya'
+  subregion: 'Avusturalya ve Yeni Zellanda'
+  world_region: 'APAC'
+  phone_code: '61'
+  currency_code: 'AUD'
+  start_of_week: 'Pazartesi'
+  latitude: '-25.274398'
+  longitude: '133.775136'
+  un_locode: 'AU'
   mernis_code: '9846'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Avusturya
-  alpha_2_code: AT
-  alpha_3_code: AUT
+  name: 'Avusturya'
+  alpha_2_code: 'AT'
+  alpha_3_code: 'AUT'
   numeric_code: '040'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Batı Avrupa'
+  world_region: 'EMEA'
+  phone_code: '43'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '47.516231'
+  longitude: '14.550072'
+  un_locode: 'AT'
   mernis_code: '9847'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Azerbaycan
-  alpha_2_code: AZ
-  alpha_3_code: AZE
+  name: 'Azerbaycan'
+  alpha_2_code: 'AZ'
+  alpha_3_code: 'AZE'
   numeric_code: '031'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Batı Asya'
+  world_region: 'EMEA'
+  phone_code: '994'
+  currency_code: 'AZN'
+  start_of_week: 'Pazartesi'
+  latitude: '40.143105'
+  longitude: '47.576927'
+  un_locode: 'AZ'
   mernis_code: '9814'
+  sms_delivery_report: true
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Bahamalar
-  alpha_2_code: BS
-  alpha_3_code: BHS
+  name: 'Bahamalar'
+  alpha_2_code: 'BS'
+  alpha_3_code: 'BHS'
   numeric_code: '044'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Karayipler'
+  world_region: 'AMER'
+  phone_code: '1'
+  currency_code: 'BSD'
+  start_of_week: 'Pazartesi'
+  latitude: '25.03428'
+  longitude: '-77.396279'
+  un_locode: 'BS'
   mernis_code: '9848'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Bahreyn
-  alpha_2_code: BH
-  alpha_3_code: BHR
+  name: 'Bahreyn'
+  alpha_2_code: 'BH'
+  alpha_3_code: 'BHR'
   numeric_code: '048'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Batı Asya'
+  world_region: 'EMEA'
+  phone_code: '973'
+  currency_code: 'BHD'
+  start_of_week: 'Pazartesi'
+  latitude: '26.0667'
+  longitude: '50.5577'
+  un_locode: 'BH'
   mernis_code: '9849'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Bangladeş
-  alpha_2_code: BD
-  alpha_3_code: BGD
+  name: 'Bangladeş'
+  alpha_2_code: 'BD'
+  alpha_3_code: 'BGD'
   numeric_code: '050'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Güney Asya'
+  world_region: 'APAC'
+  phone_code: '880'
+  currency_code: 'BDT'
+  start_of_week: 'Pazar'
+  latitude: '23.684994'
+  longitude: '90.356331'
+  un_locode: 'BD'
   mernis_code: '9850'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Barbados
-  alpha_2_code: BB
-  alpha_3_code: BRB
+  name: 'Barbados'
+  alpha_2_code: 'BB'
+  alpha_3_code: 'BRB'
   numeric_code: '052'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Karayipler'
+  world_region: 'AMER'
+  phone_code: '1'
+  currency_code: 'BBD'
+  start_of_week: 'Pazartesi'
+  latitude: '13.193887'
+  longitude: '-59.543198'
+  un_locode: 'BB'
   mernis_code: '9851'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Batı Sahra
-  alpha_2_code: EH
-  alpha_3_code: ESH
+  name: 'Batı Sahra'
+  alpha_2_code: 'EH'
+  alpha_3_code: 'ESH'
   numeric_code: '732'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Kuzey Afrika'
+  world_region: 'EMEA'
+  phone_code: '212'
+  currency_code: 'MAD'
+  start_of_week: 'Pazartesi'
+  latitude: '24.215527'
+  longitude: '-12.885834'
+  un_locode: 'EH'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Belarus
-  alpha_2_code: BY
-  alpha_3_code: BLR
-  numeric_code: '112'
-  mernis_code: '9815'
--
-  name: Belçika
-  alpha_2_code: BE
-  alpha_3_code: BEL
-  numeric_code: '056'
-  mernis_code: '9852'
--
-  name: Belize
-  alpha_2_code: BZ
-  alpha_3_code: BLZ
+  name: 'Belize'
+  alpha_2_code: 'BZ'
+  alpha_3_code: 'BLZ'
   numeric_code: '084'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Orta Amerika'
+  world_region: 'AMER'
+  phone_code: '501'
+  currency_code: 'BZD'
+  start_of_week: 'Pazartesi'
+  latitude: '17.189877'
+  longitude: '-88.49765'
+  un_locode: 'BZ'
   mernis_code: '9853'
+  sms_delivery_report: 
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Benin
-  alpha_2_code: BJ
-  alpha_3_code: BEN
+  name: 'Belçika'
+  alpha_2_code: 'BE'
+  alpha_3_code: 'BEL'
+  numeric_code: '056'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Batı Avrupa'
+  world_region: 'EMEA'
+  phone_code: '32'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '50.503887'
+  longitude: '4.469936'
+  un_locode: 'BE'
+  mernis_code: '9852'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: false
+  sms_concatenation: true
+-
+  name: 'Benin'
+  alpha_2_code: 'BJ'
+  alpha_3_code: 'BEN'
   numeric_code: '204'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Batı Afrika'
+  world_region: 'EMEA'
+  phone_code: '229'
+  currency_code: 'XOF'
+  start_of_week: 'Pazartesi'
+  latitude: '9.30769'
+  longitude: '2.315834'
+  un_locode: 'BJ'
   mernis_code: '9854'
+  sms_delivery_report: 
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Bermuda
-  alpha_2_code: BM
-  alpha_3_code: BMU
+  name: 'Bermuda'
+  alpha_2_code: 'BM'
+  alpha_3_code: 'BMU'
   numeric_code: '060'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Kuzey Amerika'
+  world_region: 'AMER'
+  phone_code: '1'
+  currency_code: 'BMD'
+  start_of_week: 'Pazartesi'
+  latitude: '32.3078'
+  longitude: '-64.7505'
+  un_locode: 'BM'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Birleşik Arap Emirlikleri
-  alpha_2_code: AE
-  alpha_3_code: ARE
+  name: 'Beyaz Rusya'
+  alpha_2_code: 'BY'
+  alpha_3_code: 'BLR'
+  numeric_code: '112'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Doğu Avrupa'
+  world_region: 'EMEA'
+  phone_code: '375'
+  currency_code: 'BYN'
+  start_of_week: 'Pazartesi'
+  latitude: '53.709807'
+  longitude: '27.953389'
+  un_locode: 'BY'
+  mernis_code: '9815'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Birleşik Arap Emirlikleri'
+  alpha_2_code: 'AE'
+  alpha_3_code: 'ARE'
   numeric_code: '784'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Batı Asya'
+  world_region: 'EMEA'
+  phone_code: '971'
+  currency_code: 'AED'
+  start_of_week: 'Pazar'
+  latitude: '23.424076'
+  longitude: '53.847818'
+  un_locode: 'AE'
   mernis_code: '9984'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Birleşik Krallık
-  alpha_2_code: GB
-  alpha_3_code: GBR
+  name: 'Birleşik Devletler'
+  alpha_2_code: 'US'
+  alpha_3_code: 'USA'
+  numeric_code: '840'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Kuzey Amerika'
+  world_region: 'AMER'
+  phone_code: '1'
+  currency_code: 'USD'
+  start_of_week: 'Pazar'
+  latitude: '37.09024'
+  longitude: '-95.712891'
+  un_locode: 'US'
+  mernis_code: '9988'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Birleşik Krallık'
+  alpha_2_code: 'GB'
+  alpha_3_code: 'GBR'
   numeric_code: '826'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Kuzey Avrupa'
+  world_region: 'EMEA'
+  phone_code: '44'
+  currency_code: 'GBP'
+  start_of_week: 'Pazartesi'
+  latitude: '55.378051'
+  longitude: '-3.435973'
+  un_locode: 'GB'
   mernis_code: '9985'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Bolivya
-  alpha_2_code: BO
-  alpha_3_code: BOL
+  name: 'Bolivya Çokuluslu Devleti'
+  alpha_2_code: 'BO'
+  alpha_3_code: 'BOL'
   numeric_code: '068'
+  continent: 'Güney Amerika'
+  region: 'Amerika'
+  subregion: 'Güney Amerika'
+  world_region: 'AMER'
+  phone_code: '591'
+  currency_code: 'BOB'
+  start_of_week: 'Pazartesi'
+  latitude: '-16.290154'
+  longitude: '-63.588652'
+  un_locode: 'BO'
   mernis_code: '9856'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Bonaire, Sint Eustatius ve Saba
-  alpha_2_code: BQ
-  alpha_3_code: BES
+  name: 'Bonaire, Sint Eustatius ve Saba'
+  alpha_2_code: 'BQ'
+  alpha_3_code: 'BES'
   numeric_code: '535'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Karayipler'
+  world_region: 'APAC'
+  phone_code: '599'
+  currency_code: 'USD'
+  start_of_week: 'Pazartesi'
+  latitude: '12.1783611'
+  longitude: '-68.2385339'
+  un_locode: 'BQ'
   mernis_code: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Bosna Hersek
-  alpha_2_code: BA
-  alpha_3_code: BIH
+  name: 'Bosna-Hersek'
+  alpha_2_code: 'BA'
+  alpha_3_code: 'BIH'
   numeric_code: '070'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Güney Avrupa'
+  world_region: 'EMEA'
+  phone_code: '387'
+  currency_code: 'BAM'
+  start_of_week: 'Pazartesi'
+  latitude: '43.915886'
+  longitude: '17.679076'
+  un_locode: 'BA'
   mernis_code: '9816'
+  sms_delivery_report: 
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Botsvana
-  alpha_2_code: BW
-  alpha_3_code: BWA
+  name: 'Botsvana'
+  alpha_2_code: 'BW'
+  alpha_3_code: 'BWA'
   numeric_code: '072'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Güney Afrika'
+  world_region: 'EMEA'
+  phone_code: '267'
+  currency_code: 'BWP'
+  start_of_week: 'Pazartesi'
+  latitude: '-22.328474'
+  longitude: '24.684866'
+  un_locode: 'BW'
   mernis_code: '9857'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Bouvet Adası
-  alpha_2_code: BV
-  alpha_3_code: BVT
+  name: 'Bouvet Adası'
+  alpha_2_code: 'BV'
+  alpha_3_code: 'BVT'
   numeric_code: '074'
+  continent: 'Antarktika'
+  region: 
+  subregion: 
+  world_region: 'APAC'
+  phone_code: '47'
+  currency_code: 'NOK'
+  start_of_week: 'Pazartesi'
+  latitude: '-54.423199'
+  longitude: '3.413194'
+  un_locode: 'BV'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Brezilya
-  alpha_2_code: BR
-  alpha_3_code: BRA
+  name: 'Brezilya'
+  alpha_2_code: 'BR'
+  alpha_3_code: 'BRA'
   numeric_code: '076'
+  continent: 'Güney Amerika'
+  region: 'Amerika'
+  subregion: 'Güney Amerika'
+  world_region: 'AMER'
+  phone_code: '55'
+  currency_code: 'BRL'
+  start_of_week: 'Pazartesi'
+  latitude: '-14.235004'
+  longitude: '-51.92528'
+  un_locode: 'BR'
   mernis_code: '9858'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: true
 -
-  name: Britanya Hint Okyanusu Toprakları
-  alpha_2_code: IO
-  alpha_3_code: IOT
+  name: 'Britanya Hint Okyanusu Toprakları'
+  alpha_2_code: 'IO'
+  alpha_3_code: 'IOT'
   numeric_code: '086'
+  continent: 'Asya'
+  region: 'Afrika'
+  subregion: 'Doğu Afrika'
+  world_region: 'APAC'
+  phone_code: '246'
+  currency_code: 'USD'
+  start_of_week: 'Pazartesi'
+  latitude: '-7.3346232'
+  longitude: '72.4242508'
+  un_locode: 'IO'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Britanya Virjin Adaları
-  alpha_2_code: VG
-  alpha_3_code: VGB
-  numeric_code: '092'
-  mernis_code: 
--
-  name: Brunei
-  alpha_2_code: BN
-  alpha_3_code: BRN
+  name: 'Brunei Krallığı'
+  alpha_2_code: 'BN'
+  alpha_3_code: 'BRN'
   numeric_code: '096'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Güneydoğu Asya'
+  world_region: 'APAC'
+  phone_code: '673'
+  currency_code: 'BND'
+  start_of_week: 'Pazartesi'
+  latitude: '4.535277'
+  longitude: '114.727669'
+  un_locode: 'BN'
   mernis_code: '9796'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Bulgaristan
-  alpha_2_code: BG
-  alpha_3_code: BGR
+  name: 'Bulgaristan'
+  alpha_2_code: 'BG'
+  alpha_3_code: 'BGR'
   numeric_code: '100'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Doğu Avrupa'
+  world_region: 'EMEA'
+  phone_code: '359'
+  currency_code: 'BGN'
+  start_of_week: 'Pazartesi'
+  latitude: '42.733883'
+  longitude: '25.48583'
+  un_locode: 'BG'
   mernis_code: '9859'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: true
 -
-  name: Burkina Faso
-  alpha_2_code: BF
-  alpha_3_code: BFA
+  name: 'Burkina Faso'
+  alpha_2_code: 'BF'
+  alpha_3_code: 'BFA'
   numeric_code: '854'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Batı Afrika'
+  world_region: 'EMEA'
+  phone_code: '226'
+  currency_code: 'XOF'
+  start_of_week: 'Pazartesi'
+  latitude: '12.238333'
+  longitude: '-1.561593'
+  un_locode: 'BF'
   mernis_code: '9797'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Burundi
-  alpha_2_code: BI
-  alpha_3_code: BDI
+  name: 'Burundi'
+  alpha_2_code: 'BI'
+  alpha_3_code: 'BDI'
   numeric_code: '108'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Doğu Afrika'
+  world_region: 'EMEA'
+  phone_code: '257'
+  currency_code: 'BIF'
+  start_of_week: 'Pazartesi'
+  latitude: '-3.373056'
+  longitude: '29.918886'
+  un_locode: 'BI'
   mernis_code: '9861'
+  sms_delivery_report: false
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Butan
-  alpha_2_code: BT
-  alpha_3_code: BTN
+  name: 'Butan'
+  alpha_2_code: 'BT'
+  alpha_3_code: 'BTN'
   numeric_code: '064'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Güney Asya'
+  world_region: 'APAC'
+  phone_code: '975'
+  currency_code: 'BTN'
+  start_of_week: 'Pazartesi'
+  latitude: '27.514162'
+  longitude: '90.433601'
+  un_locode: 'BT'
   mernis_code: '9855'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Çad
-  alpha_2_code: TD
-  alpha_3_code: TCD
-  numeric_code: '148'
-  mernis_code: '9866'
--
-  name: Cayman Adaları
-  alpha_2_code: KY
-  alpha_3_code: CYM
-  numeric_code: '136'
-  mernis_code: 
--
-  name: Cebelitarık
-  alpha_2_code: GI
-  alpha_3_code: GIB
+  name: 'Cebelitarık'
+  alpha_2_code: 'GI'
+  alpha_3_code: 'GIB'
   numeric_code: '292'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Güney Avrupa'
+  world_region: 'EMEA'
+  phone_code: '350'
+  currency_code: 'GIP'
+  start_of_week: 'Pazartesi'
+  latitude: '36.140751'
+  longitude: '-5.353585'
+  un_locode: 'GI'
   mernis_code: 
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Çekya
-  alpha_2_code: CZ
-  alpha_3_code: CZE
-  numeric_code: '203'
-  mernis_code: '9817'
--
-  name: Cezayir
-  alpha_2_code: DZ
-  alpha_3_code: DZA
+  name: 'Cezayir'
+  alpha_2_code: 'DZ'
+  alpha_3_code: 'DZA'
   numeric_code: '012'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Kuzey Afrika'
+  world_region: 'EMEA'
+  phone_code: '213'
+  currency_code: 'DZD'
+  start_of_week: 'Pazar'
+  latitude: '28.033886'
+  longitude: '1.659626'
+  un_locode: 'DZ'
   mernis_code: '9842'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Christmas Adası
-  alpha_2_code: CX
-  alpha_3_code: CXR
+  name: 'Christmas Adası'
+  alpha_2_code: 'CX'
+  alpha_3_code: 'CXR'
   numeric_code: '162'
+  continent: 'Asya'
+  region: 'Okyanusya'
+  subregion: 'Avusturalya ve Yeni Zellanda'
+  world_region: 'APAC'
+  phone_code: '61'
+  currency_code: 'AUD'
+  start_of_week: 'Pazartesi'
+  latitude: '-10.447525'
+  longitude: '105.690449'
+  un_locode: 'CX'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Cibuti
-  alpha_2_code: DJ
-  alpha_3_code: DJI
+  name: 'Cibuti'
+  alpha_2_code: 'DJ'
+  alpha_3_code: 'DJI'
   numeric_code: '262'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Doğu Afrika'
+  world_region: 'EMEA'
+  phone_code: '253'
+  currency_code: 'DJF'
+  start_of_week: 'Pazartesi'
+  latitude: '11.825138'
+  longitude: '42.590275'
+  un_locode: 'DJ'
   mernis_code: '9880'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Çin
-  alpha_2_code: CN
-  alpha_3_code: CHN
-  numeric_code: '156'
-  mernis_code: '9868'
--
-  name: Cocos Adaları
-  alpha_2_code: CC
-  alpha_3_code: CCK
+  name: 'Cocos (Keeling) Adaları'
+  alpha_2_code: 'CC'
+  alpha_3_code: 'CCK'
   numeric_code: '166'
+  continent: 'Asya'
+  region: 'Okyanusya'
+  subregion: 'Avusturalya ve Yeni Zellanda'
+  world_region: 'APAC'
+  phone_code: '61'
+  currency_code: 'AUD'
+  start_of_week: 'Pazartesi'
+  latitude: '-12.1706919'
+  longitude: '96.841748'
+  un_locode: 'CC'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Cook Adaları
-  alpha_2_code: CK
-  alpha_3_code: COK
+  name: 'Cook Adaları'
+  alpha_2_code: 'CK'
+  alpha_3_code: 'COK'
   numeric_code: '184'
+  continent: 'Avusturalya'
+  region: 'Okyanusya'
+  subregion: 'Polinezya'
+  world_region: 'APAC'
+  phone_code: '682'
+  currency_code: 'NZD'
+  start_of_week: 'Pazartesi'
+  latitude: '-21.236736'
+  longitude: '-159.777671'
+  un_locode: 'CK'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Curaçao
-  alpha_2_code: CW
-  alpha_3_code: CUW
+  name: 'Curaçao'
+  alpha_2_code: 'CW'
+  alpha_3_code: 'CUW'
   numeric_code: '531'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Karayipler'
+  world_region: 'AMER'
+  phone_code: '599'
+  currency_code: 'ANG'
+  start_of_week: 'Pazartesi'
+  latitude: '12.16957'
+  longitude: '-68.99002'
+  un_locode: 'CW'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Danimarka
-  alpha_2_code: DK
-  alpha_3_code: DNK
+  name: 'Danimarka'
+  alpha_2_code: 'DK'
+  alpha_3_code: 'DNK'
   numeric_code: '208'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Kuzey Avrupa'
+  world_region: 'EMEA'
+  phone_code: '45'
+  currency_code: 'DKK'
+  start_of_week: 'Pazartesi'
+  latitude: '56.26392'
+  longitude: '9.501785'
+  un_locode: 'DK'
   mernis_code: '9879'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Demokratik Kongo Cumhuriyeti
-  alpha_2_code: CD
-  alpha_3_code: COD
-  numeric_code: '180'
-  mernis_code: 
--
-  name: Doğu Timor
-  alpha_2_code: TL
-  alpha_3_code: TLS
-  numeric_code: '626'
-  mernis_code: 
--
-  name: Dominik Cumhuriyeti
-  alpha_2_code: DO
-  alpha_3_code: DOM
-  numeric_code: '214'
-  mernis_code: '9882'
--
-  name: Dominika
-  alpha_2_code: DM
-  alpha_3_code: DMA
+  name: 'Dominik'
+  alpha_2_code: 'DM'
+  alpha_3_code: 'DMA'
   numeric_code: '212'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Karayipler'
+  world_region: 'AMER'
+  phone_code: '1'
+  currency_code: 'XCD'
+  start_of_week: 'Pazartesi'
+  latitude: '15.414999'
+  longitude: '-61.370976'
+  un_locode: 'DM'
   mernis_code: '9881'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Ekvador
-  alpha_2_code: EC
-  alpha_3_code: ECU
+  name: 'Dominik Cumhuriyeti'
+  alpha_2_code: 'DO'
+  alpha_3_code: 'DOM'
+  numeric_code: '214'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Karayipler'
+  world_region: 'AMER'
+  phone_code: '1'
+  currency_code: 'DOP'
+  start_of_week: 'Pazartesi'
+  latitude: '18.735693'
+  longitude: '-70.162651'
+  un_locode: 'DO'
+  mernis_code: '9882'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Ekvator'
+  alpha_2_code: 'EC'
+  alpha_3_code: 'ECU'
   numeric_code: '218'
+  continent: 'Güney Amerika'
+  region: 'Amerika'
+  subregion: 'Güney Amerika'
+  world_region: 'AMER'
+  phone_code: '593'
+  currency_code: 'USD'
+  start_of_week: 'Pazartesi'
+  latitude: '-1.831239'
+  longitude: '-78.183405'
+  un_locode: 'EC'
   mernis_code: '9883'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
-  name: Ekvator Ginesi
-  alpha_2_code: GQ
-  alpha_3_code: GNQ
+  name: 'Ekvator Ginesi'
+  alpha_2_code: 'GQ'
+  alpha_3_code: 'GNQ'
   numeric_code: '226'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Orta Afrika'
+  world_region: 'EMEA'
+  phone_code: '240'
+  currency_code: 'XAF'
+  start_of_week: 'Pazartesi'
+  latitude: '1.650801'
+  longitude: '10.267895'
+  un_locode: 'GQ'
   mernis_code: '9886'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: El Salvador
-  alpha_2_code: SV
-  alpha_3_code: SLV
+  name: 'El Salvador'
+  alpha_2_code: 'SV'
+  alpha_3_code: 'SLV'
   numeric_code: '222'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Orta Amerika'
+  world_region: 'AMER'
+  phone_code: '503'
+  currency_code: 'USD'
+  start_of_week: 'Pazartesi'
+  latitude: '13.794185'
+  longitude: '-88.89653'
+  un_locode: 'SV'
   mernis_code: '9885'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Endonezya
-  alpha_2_code: ID
-  alpha_3_code: IDN
+  name: 'Endonezya'
+  alpha_2_code: 'ID'
+  alpha_3_code: 'IDN'
   numeric_code: '360'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Güneydoğu Asya'
+  world_region: 'APAC'
+  phone_code: '62'
+  currency_code: 'IDR'
+  start_of_week: 'Pazartesi'
+  latitude: '-0.789275'
+  longitude: '113.921327'
+  un_locode: 'ID'
   mernis_code: '9906'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: false
+  sms_concatenation: false
 -
-  name: Eritre
-  alpha_2_code: ER
-  alpha_3_code: ERI
+  name: 'Eritre'
+  alpha_2_code: 'ER'
+  alpha_3_code: 'ERI'
   numeric_code: '232'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Doğu Afrika'
+  world_region: 'EMEA'
+  phone_code: '291'
+  currency_code: 'ETB'
+  start_of_week: 'Pazartesi'
+  latitude: '15.179384'
+  longitude: '39.782334'
+  un_locode: 'ER'
   mernis_code: '9818'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Ermenistan
-  alpha_2_code: AM
-  alpha_3_code: ARM
+  name: 'Ermenistan'
+  alpha_2_code: 'AM'
+  alpha_3_code: 'ARM'
   numeric_code: '051'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Batı Asya'
+  world_region: 'EMEA'
+  phone_code: '374'
+  currency_code: 'AMD'
+  start_of_week: 'Pazartesi'
+  latitude: '40.069099'
+  longitude: '45.038189'
+  un_locode: 'AM'
   mernis_code: '9819'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Estonya
-  alpha_2_code: EE
-  alpha_3_code: EST
+  name: 'Estonya'
+  alpha_2_code: 'EE'
+  alpha_3_code: 'EST'
   numeric_code: '233'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Kuzey Avrupa'
+  world_region: 'EMEA'
+  phone_code: '372'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '58.595272'
+  longitude: '25.013607'
+  un_locode: 'EE'
   mernis_code: '9820'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Etiyopya
-  alpha_2_code: ET
-  alpha_3_code: ETH
+  name: 'Etiyopya'
+  alpha_2_code: 'ET'
+  alpha_3_code: 'ETH'
   numeric_code: '231'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Doğu Afrika'
+  world_region: 'EMEA'
+  phone_code: '251'
+  currency_code: 'ETB'
+  start_of_week: 'Pazartesi'
+  latitude: '9.145000'
+  longitude: '40.489673'
+  un_locode: 'ET'
   mernis_code: '9887'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: false
 -
-  name: Falkland Adaları
-  alpha_2_code: FK
-  alpha_3_code: FLK
+  name: 'Falkland Adaları (Malvinas)'
+  alpha_2_code: 'FK'
+  alpha_3_code: 'FLK'
   numeric_code: '238'
+  continent: 'Güney Amerika'
+  region: 'Amerika'
+  subregion: 'Güney Amerika'
+  world_region: 'AMER'
+  phone_code: '500'
+  currency_code: 'FKP'
+  start_of_week: 'Pazartesi'
+  latitude: '-51.796253'
+  longitude: '-59.523613'
+  un_locode: 'FK'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Faroe Adaları
-  alpha_2_code: FO
-  alpha_3_code: FRO
+  name: 'Faroe Adaları'
+  alpha_2_code: 'FO'
+  alpha_3_code: 'FRO'
   numeric_code: '234'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Kuzey Avrupa'
+  world_region: 'EMEA'
+  phone_code: '298'
+  currency_code: 'DKK'
+  start_of_week: 'Pazartesi'
+  latitude: '61.892635'
+  longitude: '-6.911805'
+  un_locode: 'FO'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Fas
-  alpha_2_code: MA
-  alpha_3_code: MAR
+  name: 'Fas'
+  alpha_2_code: 'MA'
+  alpha_3_code: 'MAR'
   numeric_code: '504'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Kuzey Afrika'
+  world_region: 'EMEA'
+  phone_code: '212'
+  currency_code: 'MAD'
+  start_of_week: 'Pazartesi'
+  latitude: '31.791702'
+  longitude: '-7.092619'
+  un_locode: 'MA'
   mernis_code: '9935'
+  sms_delivery_report: true
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Fiji
-  alpha_2_code: FJ
-  alpha_3_code: FJI
+  name: 'Fiji'
+  alpha_2_code: 'FJ'
+  alpha_3_code: 'FJI'
   numeric_code: '242'
+  continent: 'Avusturalya'
+  region: 'Okyanusya'
+  subregion: 'Melanezya'
+  world_region: 'APAC'
+  phone_code: '679'
+  currency_code: 'FJD'
+  start_of_week: 'Pazartesi'
+  latitude: '-17.713371'
+  longitude: '178.065032'
+  un_locode: 'FJ'
   mernis_code: '9888'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Fildişi Sahili
-  alpha_2_code: CI
-  alpha_3_code: CIV
+  name: 'Fildişi Sahili'
+  alpha_2_code: 'CI'
+  alpha_3_code: 'CIV'
   numeric_code: '384'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Batı Afrika'
+  world_region: 'EMEA'
+  phone_code: '225'
+  currency_code: 'XOF'
+  start_of_week: 'Pazartesi'
+  latitude: '7.539999'
+  longitude: '-5.547079'
+  un_locode: 'CI'
   mernis_code: '9912'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Filipinler
-  alpha_2_code: PH
-  alpha_3_code: PHL
+  name: 'Filipinler'
+  alpha_2_code: 'PH'
+  alpha_3_code: 'PHL'
   numeric_code: '608'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Güneydoğu Asya'
+  world_region: 'APAC'
+  phone_code: '63'
+  currency_code: 'PHP'
+  start_of_week: 'Pazartesi'
+  latitude: '12.879721'
+  longitude: '121.774017'
+  un_locode: 'PH'
   mernis_code: '9950'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: false
+  sms_concatenation: true
 -
-  name: Filistin
-  alpha_2_code: PS
-  alpha_3_code: PSE
+  name: 'Filistin Devleti'
+  alpha_2_code: 'PS'
+  alpha_3_code: 'PSE'
   numeric_code: '275'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Batı Asya'
+  world_region: 'EMEA'
+  phone_code: '970'
+  currency_code: 'ILS'
+  start_of_week: 'Pazar'
+  latitude: '31.952162'
+  longitude: '35.233154'
+  un_locode: 'PS'
   mernis_code: '9812'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: true
 -
-  name: Finlandiya
-  alpha_2_code: FI
-  alpha_3_code: FIN
+  name: 'Finlandiya'
+  alpha_2_code: 'FI'
+  alpha_3_code: 'FIN'
   numeric_code: '246'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Kuzey Avrupa'
+  world_region: 'EMEA'
+  phone_code: '358'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '61.924109'
+  longitude: '25.748151'
+  un_locode: 'FI'
   mernis_code: '9889'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Fransa
-  alpha_2_code: FR
-  alpha_3_code: FRA
+  name: 'Fransa'
+  alpha_2_code: 'FR'
+  alpha_3_code: 'FRA'
   numeric_code: '250'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Batı Avrupa'
+  world_region: 'EMEA'
+  phone_code: '33'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '46.227638'
+  longitude: '2.213749'
+  un_locode: 'FR'
   mernis_code: '9890'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Fransız Güney ve Antarktika Toprakları
-  alpha_2_code: TF
-  alpha_3_code: ATF
-  numeric_code: '260'
-  mernis_code: 
--
-  name: Fransız Guyanası
-  alpha_2_code: GF
-  alpha_3_code: GUF
+  name: 'Fransız Guyanası'
+  alpha_2_code: 'GF'
+  alpha_3_code: 'GUF'
   numeric_code: '254'
+  continent: 'Güney Amerika'
+  region: 'Amerika'
+  subregion: 'Güney Amerika'
+  world_region: 'AMER'
+  phone_code: '594'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '3.933889'
+  longitude: '-53.125782'
+  un_locode: 'GF'
   mernis_code: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Fransız Polinezyası
-  alpha_2_code: PF
-  alpha_3_code: PYF
+  name: 'Fransız Güney Bölgeleri'
+  alpha_2_code: 'TF'
+  alpha_3_code: 'ATF'
+  numeric_code: '260'
+  continent: 'Antarktika'
+  region: 
+  subregion: 
+  world_region: 'APAC'
+  phone_code: '262'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '-49.280366'
+  longitude: '69.348557'
+  un_locode: 'TF'
+  mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Fransız Polinezyası'
+  alpha_2_code: 'PF'
+  alpha_3_code: 'PYF'
   numeric_code: '258'
+  continent: 'Avusturalya'
+  region: 'Okyanusya'
+  subregion: 'Polinezya'
+  world_region: 'APAC'
+  phone_code: '689'
+  currency_code: 'XPF'
+  start_of_week: 'Pazartesi'
+  latitude: '-17.679742'
+  longitude: '-149.406843'
+  un_locode: 'PF'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Gabon
-  alpha_2_code: GA
-  alpha_3_code: GAB
+  name: 'Gabon'
+  alpha_2_code: 'GA'
+  alpha_3_code: 'GAB'
   numeric_code: '266'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Orta Afrika'
+  world_region: 'EMEA'
+  phone_code: '241'
+  currency_code: 'XAF'
+  start_of_week: 'Pazartesi'
+  latitude: '-0.803689'
+  longitude: '11.609444'
+  un_locode: 'GA'
   mernis_code: '9891'
+  sms_delivery_report: 
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Gambiya
-  alpha_2_code: GM
-  alpha_3_code: GMB
+  name: 'Gambiya'
+  alpha_2_code: 'GM'
+  alpha_3_code: 'GMB'
   numeric_code: '270'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Batı Afrika'
+  world_region: 'EMEA'
+  phone_code: '220'
+  currency_code: 'GMD'
+  start_of_week: 'Pazartesi'
+  latitude: '13.443182'
+  longitude: '-15.310139'
+  un_locode: 'GM'
   mernis_code: '9798'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Gana
-  alpha_2_code: GH
-  alpha_3_code: GHA
+  name: 'Gana'
+  alpha_2_code: 'GH'
+  alpha_3_code: 'GHA'
   numeric_code: '288'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Batı Afrika'
+  world_region: 'EMEA'
+  phone_code: '233'
+  currency_code: 'GHS'
+  start_of_week: 'Pazartesi'
+  latitude: '7.946527'
+  longitude: '-1.023194'
+  un_locode: 'GH'
   mernis_code: '9894'
+  sms_delivery_report: true
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Gine
-  alpha_2_code: GN
-  alpha_3_code: GIN
+  name: 'Gine'
+  alpha_2_code: 'GN'
+  alpha_3_code: 'GIN'
   numeric_code: '324'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Batı Afrika'
+  world_region: 'EMEA'
+  phone_code: '224'
+  currency_code: 'GNF'
+  start_of_week: 'Pazartesi'
+  latitude: '9.945587'
+  longitude: '-9.696645'
+  un_locode: 'GN'
   mernis_code: '9898'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Gine-Bissau
-  alpha_2_code: GW
-  alpha_3_code: GNB
+  name: 'Gine-Bissau'
+  alpha_2_code: 'GW'
+  alpha_3_code: 'GNB'
   numeric_code: '624'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Batı Afrika'
+  world_region: 'EMEA'
+  phone_code: '245'
+  currency_code: 'XOF'
+  start_of_week: 'Pazartesi'
+  latitude: '11.803749'
+  longitude: '-15.180413'
+  un_locode: 'GW'
   mernis_code: '9899'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Grenada
-  alpha_2_code: GD
-  alpha_3_code: GRD
+  name: 'Granada'
+  alpha_2_code: 'GD'
+  alpha_3_code: 'GRD'
   numeric_code: '308'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Karayipler'
+  world_region: 'AMER'
+  phone_code: '1'
+  currency_code: 'XCD'
+  start_of_week: 'Pazartesi'
+  latitude: '12.1165'
+  longitude: '-61.678999'
+  un_locode: 'GD'
   mernis_code: '9896'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Grönland
-  alpha_2_code: GL
-  alpha_3_code: GRL
+  name: 'Grönland'
+  alpha_2_code: 'GL'
+  alpha_3_code: 'GRL'
   numeric_code: '304'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Kuzey Amerika'
+  world_region: 'EMEA'
+  phone_code: '299'
+  currency_code: 'DKK'
+  start_of_week: 'Pazartesi'
+  latitude: '71.706936'
+  longitude: '-42.604303'
+  un_locode: 'GL'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Guadeloupe
-  alpha_2_code: GP
-  alpha_3_code: GLP
+  name: 'Guadalup'
+  alpha_2_code: 'GP'
+  alpha_3_code: 'GLP'
   numeric_code: '312'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Karayipler'
+  world_region: 'AMER'
+  phone_code: '590'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '16.265'
+  longitude: '-61.550999'
+  un_locode: 'GP'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Guam
-  alpha_2_code: GU
-  alpha_3_code: GUM
+  name: 'Guam'
+  alpha_2_code: 'GU'
+  alpha_3_code: 'GUM'
   numeric_code: '316'
+  continent: 'Avusturalya'
+  region: 'Okyanusya'
+  subregion: 'Mikronezya'
+  world_region: 'APAC'
+  phone_code: '1'
+  currency_code: 'USD'
+  start_of_week: 'Pazartesi'
+  latitude: '13.444304'
+  longitude: '144.793731'
+  un_locode: 'GU'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Guatemala
-  alpha_2_code: GT
-  alpha_3_code: GTM
+  name: 'Guatemala'
+  alpha_2_code: 'GT'
+  alpha_3_code: 'GTM'
   numeric_code: '320'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Orta Amerika'
+  world_region: 'AMER'
+  phone_code: '502'
+  currency_code: 'GTQ'
+  start_of_week: 'Pazartesi'
+  latitude: '15.783471'
+  longitude: '-90.230758'
+  un_locode: 'GT'
   mernis_code: '9897'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Guernsey
-  alpha_2_code: GG
-  alpha_3_code: GGY
+  name: 'Guernsey'
+  alpha_2_code: 'GG'
+  alpha_3_code: 'GGY'
   numeric_code: '831'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Kuzey Avrupa'
+  world_region: 'EMEA'
+  phone_code: '44'
+  currency_code: 'GBP'
+  start_of_week: 'Pazartesi'
+  latitude: '49.465691'
+  longitude: '-2.585278'
+  un_locode: 'GG'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Güney Afrika
-  alpha_2_code: ZA
-  alpha_3_code: ZAF
-  numeric_code: '710'
-  mernis_code: '9967'
--
-  name: Güney Georgia ve Güney Sandwich Adaları
-  alpha_2_code: GS
-  alpha_3_code: SGS
-  numeric_code: '239'
-  mernis_code: 
--
-  name: Güney Kore
-  alpha_2_code: KR
-  alpha_3_code: KOR
-  numeric_code: '410'
-  mernis_code: '9809'
--
-  name: Güney Sudan
-  alpha_2_code: SS
-  alpha_3_code: SSD
-  numeric_code: '728'
-  mernis_code: '9759'
--
-  name: Gürcistan
-  alpha_2_code: GE
-  alpha_3_code: GEO
-  numeric_code: '268'
-  mernis_code: '9821'
--
-  name: Guyana
-  alpha_2_code: GY
-  alpha_3_code: GUY
+  name: 'Guyana'
+  alpha_2_code: 'GY'
+  alpha_3_code: 'GUY'
   numeric_code: '328'
+  continent: 'Güney Amerika'
+  region: 'Amerika'
+  subregion: 'Güney Amerika'
+  world_region: 'AMER'
+  phone_code: '592'
+  currency_code: 'GYD'
+  start_of_week: 'Pazartesi'
+  latitude: '4.860416'
+  longitude: '-58.93018'
+  un_locode: 'GY'
   mernis_code: '9900'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Haiti
-  alpha_2_code: HT
-  alpha_3_code: HTI
+  name: 'Güney Afrika'
+  alpha_2_code: 'ZA'
+  alpha_3_code: 'ZAF'
+  numeric_code: '710'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Güney Afrika'
+  world_region: 'EMEA'
+  phone_code: '27'
+  currency_code: 'ZAR'
+  start_of_week: 'Pazartesi'
+  latitude: '-30.559482'
+  longitude: '22.937506'
+  un_locode: 'ZA'
+  mernis_code: '9967'
+  sms_delivery_report: true
+  sms_alpha_sender_id: false
+  sms_unicode: true
+  sms_concatenation: true
+-
+  name: 'Güney Gürcistan ve Güney Sandöviç Adası'
+  alpha_2_code: 'GS'
+  alpha_3_code: 'SGS'
+  numeric_code: '239'
+  continent: 'Antarktika'
+  region: 'Amerika'
+  subregion: 'Güney Amerika'
+  world_region: 'AMER'
+  phone_code: '500'
+  currency_code: 'GBP'
+  start_of_week: 'Pazartesi'
+  latitude: '-54.429579'
+  longitude: '-36.587909'
+  un_locode: 'GS'
+  mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Güney Sudan'
+  alpha_2_code: 'SS'
+  alpha_3_code: 'SSD'
+  numeric_code: '728'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Kuzey Afrika'
+  world_region: 'EMEA'
+  phone_code: '211'
+  currency_code: 'SSP'
+  start_of_week: 'Pazar'
+  latitude: '6.876991'
+  longitude: '31.3069788'
+  un_locode: 'SS'
+  mernis_code: '9759'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Gürcistan'
+  alpha_2_code: 'GE'
+  alpha_3_code: 'GEO'
+  numeric_code: '268'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Batı Asya'
+  world_region: 'EMEA'
+  phone_code: '995'
+  currency_code: 'GEL'
+  start_of_week: 'Pazartesi'
+  latitude: '42.315407'
+  longitude: '43.356891'
+  un_locode: 'GE'
+  mernis_code: '9821'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
+-
+  name: 'Haiti'
+  alpha_2_code: 'HT'
+  alpha_3_code: 'HTI'
   numeric_code: '332'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Karayipler'
+  world_region: 'AMER'
+  phone_code: '509'
+  currency_code: 'HTG'
+  start_of_week: 'Pazartesi'
+  latitude: '18.971187'
+  longitude: '-72.285215'
+  un_locode: 'HT'
   mernis_code: '9901'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Heard Adası ve McDonald Adaları
-  alpha_2_code: HM
-  alpha_3_code: HMD
+  name: 'Heard Adası ve McDonald Adaları'
+  alpha_2_code: 'HM'
+  alpha_3_code: 'HMD'
   numeric_code: '334'
+  continent: 'Antarktika'
+  region: 
+  subregion: 
+  world_region: 'APAC'
+  phone_code: 
+  currency_code: 'AUD'
+  start_of_week: 'Pazartesi'
+  latitude: '-53.08181'
+  longitude: '73.504157'
+  un_locode: 'HM'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Hindistan
-  alpha_2_code: IN
-  alpha_3_code: IND
+  name: 'Hindistan'
+  alpha_2_code: 'IN'
+  alpha_3_code: 'IND'
   numeric_code: '356'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Güney Asya'
+  world_region: 'APAC'
+  phone_code: '91'
+  currency_code: 'INR'
+  start_of_week: 'Pazartesi'
+  latitude: '20.593684'
+  longitude: '78.96288'
+  un_locode: 'IN'
   mernis_code: '9905'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Hırvatistan
-  alpha_2_code: HR
-  alpha_3_code: HRV
-  numeric_code: '191'
-  mernis_code: '9810'
--
-  name: Hollanda
-  alpha_2_code: NL
-  alpha_3_code: NLD
+  name: 'Hollanda'
+  alpha_2_code: 'NL'
+  alpha_3_code: 'NLD'
   numeric_code: '528'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Batı Avrupa'
+  world_region: 'EMEA'
+  phone_code: '31'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '52.132633'
+  longitude: '5.291265'
+  un_locode: 'NL'
   mernis_code: '9938'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Honduras
-  alpha_2_code: HN
-  alpha_3_code: HND
+  name: 'Honduras'
+  alpha_2_code: 'HN'
+  alpha_3_code: 'HND'
   numeric_code: '340'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Orta Amerika'
+  world_region: 'AMER'
+  phone_code: '504'
+  currency_code: 'HNL'
+  start_of_week: 'Pazartesi'
+  latitude: '15.199999'
+  longitude: '-86.241905'
+  un_locode: 'HN'
   mernis_code: '9902'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Hong Kong
-  alpha_2_code: HK
-  alpha_3_code: HKG
+  name: 'Hong Kong'
+  alpha_2_code: 'HK'
+  alpha_3_code: 'HKG'
   numeric_code: '344'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Doğu Asya'
+  world_region: 'APAC'
+  phone_code: '852'
+  currency_code: 'HKD'
+  start_of_week: 'Pazartesi'
+  latitude: '22.396428'
+  longitude: '114.109497'
+  un_locode: 'HK'
   mernis_code: 
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Irak
-  alpha_2_code: IQ
-  alpha_3_code: IRQ
+  name: 'Hırvatistan'
+  alpha_2_code: 'HR'
+  alpha_3_code: 'HRV'
+  numeric_code: '191'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Güney Avrupa'
+  world_region: 'EMEA'
+  phone_code: '385'
+  currency_code: 'HRK'
+  start_of_week: 'Pazartesi'
+  latitude: '45.1'
+  longitude: '15.2'
+  un_locode: 'HR'
+  mernis_code: '9810'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: true
+  sms_concatenation: true
+-
+  name: 'Irak'
+  alpha_2_code: 'IQ'
+  alpha_3_code: 'IRQ'
   numeric_code: '368'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Batı Asya'
+  world_region: 'EMEA'
+  phone_code: '964'
+  currency_code: 'IQD'
+  start_of_week: 'Pazar'
+  latitude: '33.223191'
+  longitude: '43.679291'
+  un_locode: 'IQ'
   mernis_code: '9908'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: İran
-  alpha_2_code: IR
-  alpha_3_code: IRN
-  numeric_code: '364'
-  mernis_code: '9907'
--
-  name: İrlanda
-  alpha_2_code: IE
-  alpha_3_code: IRL
-  numeric_code: '372'
-  mernis_code: '9909'
--
-  name: İspanya
-  alpha_2_code: ES
-  alpha_3_code: ESP
-  numeric_code: '724'
-  mernis_code: '9968'
--
-  name: İsrail
-  alpha_2_code: IL
-  alpha_3_code: ISR
-  numeric_code: '376'
-  mernis_code: '9910'
--
-  name: İsveç
-  alpha_2_code: SE
-  alpha_3_code: SWE
-  numeric_code: '752'
-  mernis_code: '9973'
--
-  name: İsviçre
-  alpha_2_code: CH
-  alpha_3_code: CHE
-  numeric_code: '756'
-  mernis_code: '9974'
--
-  name: Italya
-  alpha_2_code: IT
-  alpha_3_code: ITA
-  numeric_code: '380'
-  mernis_code: '9911'
--
-  name: İzlanda
-  alpha_2_code: IS
-  alpha_3_code: ISL
-  numeric_code: '352'
-  mernis_code: '9904'
--
-  name: Jamaika
-  alpha_2_code: JM
-  alpha_3_code: JAM
+  name: 'Jamaika'
+  alpha_2_code: 'JM'
+  alpha_3_code: 'JAM'
   numeric_code: '388'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Karayipler'
+  world_region: 'AMER'
+  phone_code: '1'
+  currency_code: 'JMD'
+  start_of_week: 'Pazartesi'
+  latitude: '18.109581'
+  longitude: '-77.297508'
+  un_locode: 'JM'
   mernis_code: '9913'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Japonya
-  alpha_2_code: JP
-  alpha_3_code: JPN
+  name: 'Japonya'
+  alpha_2_code: 'JP'
+  alpha_3_code: 'JPN'
   numeric_code: '392'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Doğu Asya'
+  world_region: 'APAC'
+  phone_code: '81'
+  currency_code: 'JPY'
+  start_of_week: 'Pazartesi'
+  latitude: '36.204824'
+  longitude: '138.252924'
+  un_locode: 'JP'
   mernis_code: '9914'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: false
 -
-  name: Jersey
-  alpha_2_code: JE
-  alpha_3_code: JEY
+  name: 'Jersey'
+  alpha_2_code: 'JE'
+  alpha_3_code: 'JEY'
   numeric_code: '832'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Kuzey Avrupa'
+  world_region: 'EMEA'
+  phone_code: '44'
+  currency_code: 'JEP'
+  start_of_week: 'Pazartesi'
+  latitude: '49.214439'
+  longitude: '-2.13125'
+  un_locode: 'JE'
   mernis_code: 
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Kamboçya
-  alpha_2_code: KH
-  alpha_3_code: KHM
+  name: 'Kamboçya'
+  alpha_2_code: 'KH'
+  alpha_3_code: 'KHM'
   numeric_code: '116'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Güneydoğu Asya'
+  world_region: 'APAC'
+  phone_code: '855'
+  currency_code: 'KHR'
+  start_of_week: 'Pazartesi'
+  latitude: '12.565679'
+  longitude: '104.990963'
+  un_locode: 'KH'
   mernis_code: '9877'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Kamerun
-  alpha_2_code: CM
-  alpha_3_code: CMR
+  name: 'Kamerun'
+  alpha_2_code: 'CM'
+  alpha_3_code: 'CMR'
   numeric_code: '120'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Orta Afrika'
+  world_region: 'EMEA'
+  phone_code: '237'
+  currency_code: 'XAF'
+  start_of_week: 'Pazartesi'
+  latitude: '7.369721'
+  longitude: '12.354722'
+  un_locode: 'CM'
   mernis_code: '9986'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Kanada
-  alpha_2_code: CA
-  alpha_3_code: CAN
+  name: 'Kanada'
+  alpha_2_code: 'CA'
+  alpha_3_code: 'CAN'
   numeric_code: '124'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Kuzey Amerika'
+  world_region: 'AMER'
+  phone_code: '1'
+  currency_code: 'CAD'
+  start_of_week: 'Pazar'
+  latitude: '56.130366'
+  longitude: '-106.346771'
+  un_locode: 'CA'
   mernis_code: '9863'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: true
 -
-  name: Karadağ
-  alpha_2_code: ME
-  alpha_3_code: MNE
+  name: 'Karadağ'
+  alpha_2_code: 'ME'
+  alpha_3_code: 'MNE'
   numeric_code: '499'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Güney Avrupa'
+  world_region: 'EMEA'
+  phone_code: '382'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '42.708678'
+  longitude: '19.37439'
+  un_locode: 'ME'
   mernis_code: '9770'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Katar
-  alpha_2_code: QA
-  alpha_3_code: QAT
+  name: 'Katar'
+  alpha_2_code: 'QA'
+  alpha_3_code: 'QAT'
   numeric_code: '634'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Batı Asya'
+  world_region: 'EMEA'
+  phone_code: '974'
+  currency_code: 'QAR'
+  start_of_week: 'Pazar'
+  latitude: '25.354826'
+  longitude: '51.183884'
+  un_locode: 'QA'
   mernis_code: '9953'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Kazakistan
-  alpha_2_code: KZ
-  alpha_3_code: KAZ
+  name: 'Kazakistan'
+  alpha_2_code: 'KZ'
+  alpha_3_code: 'KAZ'
   numeric_code: '398'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Orta Asya'
+  world_region: 'EMEA'
+  phone_code: '7'
+  currency_code: 'KZT'
+  start_of_week: 'Pazartesi'
+  latitude: '48.019573'
+  longitude: '66.923684'
+  un_locode: 'KZ'
   mernis_code: '9822'
+  sms_delivery_report: 
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Kenya
-  alpha_2_code: KE
-  alpha_3_code: KEN
+  name: 'Kenya'
+  alpha_2_code: 'KE'
+  alpha_3_code: 'KEN'
   numeric_code: '404'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Doğu Afrika'
+  world_region: 'EMEA'
+  phone_code: '254'
+  currency_code: 'KES'
+  start_of_week: 'Pazartesi'
+  latitude: '-0.023559'
+  longitude: '37.906193'
+  un_locode: 'KE'
   mernis_code: '9916'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Kiribati
-  alpha_2_code: KI
-  alpha_3_code: KIR
+  name: 'Kiribati'
+  alpha_2_code: 'KI'
+  alpha_3_code: 'KIR'
   numeric_code: '296'
+  continent: 'Avusturalya'
+  region: 'Okyanusya'
+  subregion: 'Mikronezya'
+  world_region: 'APAC'
+  phone_code: '686'
+  currency_code: 'AUD'
+  start_of_week: 'Pazartesi'
+  latitude: '1.8708833'
+  longitude: '-157.3630262'
+  un_locode: 'KI'
   mernis_code: '9800'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Kıbrıs
-  alpha_2_code: CY
-  alpha_3_code: CYP
-  numeric_code: '196'
-  mernis_code: '9875'
--
-  name: Kırgızistan
-  alpha_2_code: KG
-  alpha_3_code: KGZ
-  numeric_code: '417'
-  mernis_code: '9823'
--
-  name: Kolombiya
-  alpha_2_code: CO
-  alpha_3_code: COL
+  name: 'Kolombiya'
+  alpha_2_code: 'CO'
+  alpha_3_code: 'COL'
   numeric_code: '170'
+  continent: 'Güney Amerika'
+  region: 'Amerika'
+  subregion: 'Güney Amerika'
+  world_region: 'AMER'
+  phone_code: '57'
+  currency_code: 'COP'
+  start_of_week: 'Pazartesi'
+  latitude: '4.570868'
+  longitude: '-74.297333'
+  un_locode: 'CO'
   mernis_code: '9869'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Komorlar
-  alpha_2_code: KM
-  alpha_3_code: COM
+  name: 'Komorlar'
+  alpha_2_code: 'KM'
+  alpha_3_code: 'COM'
   numeric_code: '174'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Doğu Afrika'
+  world_region: 'EMEA'
+  phone_code: '269'
+  currency_code: 'KMF'
+  start_of_week: 'Pazartesi'
+  latitude: '-11.6455'
+  longitude: '43.3333'
+  un_locode: 'KM'
   mernis_code: '9870'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Kongo Cumhuriyeti
-  alpha_2_code: CG
-  alpha_3_code: COG
+  name: 'Kongo'
+  alpha_2_code: 'CG'
+  alpha_3_code: 'COG'
   numeric_code: '178'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Orta Afrika'
+  world_region: 'EMEA'
+  phone_code: '242'
+  currency_code: 'XAF'
+  start_of_week: 'Pazartesi'
+  latitude: '-0.228021'
+  longitude: '15.827659'
+  un_locode: 'CG'
   mernis_code: '9871'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Kosova
-  alpha_2_code: XK
-  alpha_3_code: XKX
-  numeric_code: '383'
-  mernis_code: '9773'
+  name: 'Kongo Demokratik Cumhuriyeti'
+  alpha_2_code: 'CD'
+  alpha_3_code: 'COD'
+  numeric_code: '180'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Orta Afrika'
+  world_region: 'EMEA'
+  phone_code: '243'
+  currency_code: 'CDF'
+  start_of_week: 'Pazartesi'
+  latitude: '-4.038333'
+  longitude: '21.758664'
+  un_locode: 'CD'
+  mernis_code: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Kosta Rika
-  alpha_2_code: CR
-  alpha_3_code: CRI
-  numeric_code: '188'
-  mernis_code: '9872'
+  name: 'Kore Cumhuriyeti'
+  alpha_2_code: 'KR'
+  alpha_3_code: 'KOR'
+  numeric_code: '410'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Doğu Asya'
+  world_region: 'APAC'
+  phone_code: '82'
+  currency_code: 'KRW'
+  start_of_week: 'Pazartesi'
+  latitude: '35.907757'
+  longitude: '127.766922'
+  un_locode: 'KR'
+  mernis_code: '9809'
+  sms_delivery_report: true
+  sms_alpha_sender_id: false
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Küba
-  alpha_2_code: CU
-  alpha_3_code: CUB
-  numeric_code: '192'
-  mernis_code: '9873'
--
-  name: Kuveyt
-  alpha_2_code: KW
-  alpha_3_code: KWT
-  numeric_code: '414'
-  mernis_code: '9917'
--
-  name: Kuzey Kore
-  alpha_2_code: KP
-  alpha_3_code: PRK
+  name: 'Kore Demokratik Halk Cumhuriyeti'
+  alpha_2_code: 'KP'
+  alpha_3_code: 'PRK'
   numeric_code: '408'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Doğu Asya'
+  world_region: 'APAC'
+  phone_code: '850'
+  currency_code: 'KPW'
+  start_of_week: 'Pazartesi'
+  latitude: '40.339852'
+  longitude: '127.510093'
+  un_locode: 'KP'
   mernis_code: '9775'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Kuzey Mariana Adaları
-  alpha_2_code: MP
-  alpha_3_code: MNP
+  name: 'Kosta Rika'
+  alpha_2_code: 'CR'
+  alpha_3_code: 'CRI'
+  numeric_code: '188'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Orta Amerika'
+  world_region: 'AMER'
+  phone_code: '506'
+  currency_code: 'CRC'
+  start_of_week: 'Pazartesi'
+  latitude: '9.748916'
+  longitude: '-83.753428'
+  un_locode: 'CR'
+  mernis_code: '9872'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Kuveyt'
+  alpha_2_code: 'KW'
+  alpha_3_code: 'KWT'
+  numeric_code: '414'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Batı Asya'
+  world_region: 'EMEA'
+  phone_code: '965'
+  currency_code: 'KWD'
+  start_of_week: 'Pazar'
+  latitude: '29.31166'
+  longitude: '47.481766'
+  un_locode: 'KW'
+  mernis_code: '9917'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Kuzey Meryem Adaları'
+  alpha_2_code: 'MP'
+  alpha_3_code: 'MNP'
   numeric_code: '580'
+  continent: 'Avusturalya'
+  region: 'Okyanusya'
+  subregion: 'Mikronezya'
+  world_region: 'APAC'
+  phone_code: '1'
+  currency_code: 'USD'
+  start_of_week: 'Pazartesi'
+  latitude: '15.0979'
+  longitude: '145.6739'
+  un_locode: 'MP'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Laos
-  alpha_2_code: LA
-  alpha_3_code: LAO
+  name: 'Küba'
+  alpha_2_code: 'CU'
+  alpha_3_code: 'CUB'
+  numeric_code: '192'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Karayipler'
+  world_region: 'AMER'
+  phone_code: '53'
+  currency_code: 'CUP'
+  start_of_week: 'Pazartesi'
+  latitude: '21.521757'
+  longitude: '-77.781167'
+  un_locode: 'CU'
+  mernis_code: '9873'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Kuzey Kıbrıs Türk Cumhuriyeti'
+  alpha_2_code: 'CY'
+  alpha_3_code: 'CYP'
+  numeric_code: '196'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Batı Asya'
+  world_region: 'EMEA'
+  phone_code: '90'
+  currency_code: 'TRY'
+  start_of_week: 'Pazartesi'
+  latitude: '35.358330'
+  longitude: '33.376685'
+  un_locode: 'CY'
+  mernis_code: '9875'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Kırgızistan'
+  alpha_2_code: 'KG'
+  alpha_3_code: 'KGZ'
+  numeric_code: '417'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Orta Asya'
+  world_region: 'EMEA'
+  phone_code: '996'
+  currency_code: 'KGS'
+  start_of_week: 'Pazartesi'
+  latitude: '41.20438'
+  longitude: '74.766098'
+  un_locode: 'KG'
+  mernis_code: '9823'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Lao Demokratik Halk Cumhuriyeti'
+  alpha_2_code: 'LA'
+  alpha_3_code: 'LAO'
   numeric_code: '418'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Güneydoğu Asya'
+  world_region: 'APAC'
+  phone_code: '856'
+  currency_code: 'LAK'
+  start_of_week: 'Pazartesi'
+  latitude: '19.85627'
+  longitude: '102.495496'
+  un_locode: 'LA'
   mernis_code: '9918'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Lesotho
-  alpha_2_code: LS
-  alpha_3_code: LSO
-  numeric_code: '426'
-  mernis_code: '9920'
--
-  name: Letonya
-  alpha_2_code: LV
-  alpha_3_code: LVA
+  name: 'Letonya'
+  alpha_2_code: 'LV'
+  alpha_3_code: 'LVA'
   numeric_code: '428'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Kuzey Avrupa'
+  world_region: 'EMEA'
+  phone_code: '371'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '56.879635'
+  longitude: '24.603189'
+  un_locode: 'LV'
   mernis_code: '9824'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Liberya
-  alpha_2_code: LR
-  alpha_3_code: LBR
+  name: 'Lesoto'
+  alpha_2_code: 'LS'
+  alpha_3_code: 'LSO'
+  numeric_code: '426'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Güney Afrika'
+  world_region: 'EMEA'
+  phone_code: '266'
+  currency_code: 'LSL'
+  start_of_week: 'Pazartesi'
+  latitude: '-29.609988'
+  longitude: '28.233608'
+  un_locode: 'LS'
+  mernis_code: '9920'
+  sms_delivery_report: 
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Liberya'
+  alpha_2_code: 'LR'
+  alpha_3_code: 'LBR'
   numeric_code: '430'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Batı Afrika'
+  world_region: 'EMEA'
+  phone_code: '231'
+  currency_code: 'LRD'
+  start_of_week: 'Pazartesi'
+  latitude: '6.428055'
+  longitude: '-9.429499'
+  un_locode: 'LR'
   mernis_code: '9921'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Libya
-  alpha_2_code: LY
-  alpha_3_code: LBY
+  name: 'Libya'
+  alpha_2_code: 'LY'
+  alpha_3_code: 'LBY'
   numeric_code: '434'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Kuzey Afrika'
+  world_region: 'EMEA'
+  phone_code: '218'
+  currency_code: 'LYD'
+  start_of_week: 'Pazar'
+  latitude: '26.3351'
+  longitude: '17.228331'
+  un_locode: 'LY'
   mernis_code: '9922'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Lihtenştayn
-  alpha_2_code: LI
-  alpha_3_code: LIE
+  name: 'Lihtenştayn'
+  alpha_2_code: 'LI'
+  alpha_3_code: 'LIE'
   numeric_code: '438'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Batı Avrupa'
+  world_region: 'EMEA'
+  phone_code: '423'
+  currency_code: 'CHF'
+  start_of_week: 'Pazartesi'
+  latitude: '47.166'
+  longitude: '9.555373'
+  un_locode: 'LI'
   mernis_code: '9923'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Litvanya
-  alpha_2_code: LT
-  alpha_3_code: LTU
+  name: 'Litvanya'
+  alpha_2_code: 'LT'
+  alpha_3_code: 'LTU'
   numeric_code: '440'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Kuzey Avrupa'
+  world_region: 'EMEA'
+  phone_code: '370'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '55.169438'
+  longitude: '23.881275'
+  un_locode: 'LT'
   mernis_code: '9825'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Lübnan
-  alpha_2_code: LB
-  alpha_3_code: LBN
+  name: 'Lübnan'
+  alpha_2_code: 'LB'
+  alpha_3_code: 'LBN'
   numeric_code: '422'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Batı Asya'
+  world_region: 'EMEA'
+  phone_code: '961'
+  currency_code: 'LBP'
+  start_of_week: 'Pazartesi'
+  latitude: '33.854721'
+  longitude: '35.862285'
+  un_locode: 'LB'
   mernis_code: '9919'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Lüksemburg
-  alpha_2_code: LU
-  alpha_3_code: LUX
+  name: 'Lüksemburg'
+  alpha_2_code: 'LU'
+  alpha_3_code: 'LUX'
   numeric_code: '442'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Batı Avrupa'
+  world_region: 'EMEA'
+  phone_code: '352'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '49.815273'
+  longitude: '6.129582'
+  un_locode: 'LU'
   mernis_code: '9924'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Macaristan
-  alpha_2_code: HU
-  alpha_3_code: HUN
+  name: 'Macaristan'
+  alpha_2_code: 'HU'
+  alpha_3_code: 'HUN'
   numeric_code: '348'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Doğu Avrupa'
+  world_region: 'EMEA'
+  phone_code: '36'
+  currency_code: 'HUF'
+  start_of_week: 'Pazartesi'
+  latitude: '47.162494'
+  longitude: '19.503304'
+  un_locode: 'HU'
   mernis_code: '9903'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Madagaskar
-  alpha_2_code: MG
-  alpha_3_code: MDG
+  name: 'Madagaskar'
+  alpha_2_code: 'MG'
+  alpha_3_code: 'MDG'
   numeric_code: '450'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Doğu Afrika'
+  world_region: 'EMEA'
+  phone_code: '261'
+  currency_code: 'MGA'
+  start_of_week: 'Pazartesi'
+  latitude: '-18.766947'
+  longitude: '46.869107'
+  un_locode: 'MG'
   mernis_code: '9925'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Makao
-  alpha_2_code: MO
-  alpha_3_code: MAC
+  name: 'Makao'
+  alpha_2_code: 'MO'
+  alpha_3_code: 'MAC'
   numeric_code: '446'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Doğu Asya'
+  world_region: 'APAC'
+  phone_code: '853'
+  currency_code: 'MOP'
+  start_of_week: 'Pazartesi'
+  latitude: '22.198745'
+  longitude: '113.543873'
+  un_locode: 'MO'
   mernis_code: 
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Makedonya
-  alpha_2_code: MK
-  alpha_3_code: MKD
+  name: 'Makedonya Cumhuriyeti'
+  alpha_2_code: 'MK'
+  alpha_3_code: 'MKD'
   numeric_code: '807'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Güney Avrupa'
+  world_region: 'EMEA'
+  phone_code: '389'
+  currency_code: 'MKD'
+  start_of_week: 'Pazartesi'
+  latitude: '41.608635'
+  longitude: '21.745275'
+  un_locode: 'MK'
   mernis_code: '9826'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Malavi
-  alpha_2_code: MW
-  alpha_3_code: MWI
+  name: 'Malavi'
+  alpha_2_code: 'MW'
+  alpha_3_code: 'MWI'
   numeric_code: '454'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Doğu Afrika'
+  world_region: 'EMEA'
+  phone_code: '265'
+  currency_code: 'MWK'
+  start_of_week: 'Pazartesi'
+  latitude: '-13.254308'
+  longitude: '34.301525'
+  un_locode: 'MW'
   mernis_code: '9926'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Maldivler
-  alpha_2_code: MV
-  alpha_3_code: MDV
+  name: 'Maldivler'
+  alpha_2_code: 'MV'
+  alpha_3_code: 'MDV'
   numeric_code: '462'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Güney Asya'
+  world_region: 'APAC'
+  phone_code: '960'
+  currency_code: 'MVR'
+  start_of_week: 'Pazar'
+  latitude: '1.977247'
+  longitude: '73.5361035'
+  un_locode: 'MV'
   mernis_code: '9928'
+  sms_delivery_report: 
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Malezya
-  alpha_2_code: MY
-  alpha_3_code: MYS
+  name: 'Malezya'
+  alpha_2_code: 'MY'
+  alpha_3_code: 'MYS'
   numeric_code: '458'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Güneydoğu Asya'
+  world_region: 'APAC'
+  phone_code: '60'
+  currency_code: 'MYR'
+  start_of_week: 'Pazar'
+  latitude: '4.210484'
+  longitude: '101.975766'
+  un_locode: 'MY'
   mernis_code: '9927'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Mali
-  alpha_2_code: ML
-  alpha_3_code: MLI
+  name: 'Mali'
+  alpha_2_code: 'ML'
+  alpha_3_code: 'MLI'
   numeric_code: '466'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Batı Afrika'
+  world_region: 'EMEA'
+  phone_code: '223'
+  currency_code: 'XOF'
+  start_of_week: 'Pazartesi'
+  latitude: '17.570692'
+  longitude: '-3.996166'
+  un_locode: 'ML'
   mernis_code: '9929'
+  sms_delivery_report: 
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Malta
-  alpha_2_code: MT
-  alpha_3_code: MLT
+  name: 'Malta'
+  alpha_2_code: 'MT'
+  alpha_3_code: 'MLT'
   numeric_code: '470'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Güney Avrupa'
+  world_region: 'EMEA'
+  phone_code: '356'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '35.937496'
+  longitude: '14.375416'
+  un_locode: 'MT'
   mernis_code: '9930'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Man Adası
-  alpha_2_code: IM
-  alpha_3_code: IMN
+  name: 'Man Adası'
+  alpha_2_code: 'IM'
+  alpha_3_code: 'IMN'
   numeric_code: '833'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Kuzey Avrupa'
+  world_region: 'EMEA'
+  phone_code: '44'
+  currency_code: 'IMP'
+  start_of_week: 'Pazartesi'
+  latitude: '54.236107'
+  longitude: '-4.548056'
+  un_locode: 'IM'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Marshall Adaları
-  alpha_2_code: MH
-  alpha_3_code: MHL
-  numeric_code: '584'
-  mernis_code: '9827'
--
-  name: Martinik
-  alpha_2_code: MQ
-  alpha_3_code: MTQ
+  name: 'Martinik'
+  alpha_2_code: 'MQ'
+  alpha_3_code: 'MTQ'
   numeric_code: '474'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Karayipler'
+  world_region: 'AMER'
+  phone_code: '596'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '14.641528'
+  longitude: '-61.024174'
+  un_locode: 'MQ'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Mauritius
-  alpha_2_code: MU
-  alpha_3_code: MUS
+  name: 'Marşal Adaları'
+  alpha_2_code: 'MH'
+  alpha_3_code: 'MHL'
+  numeric_code: '584'
+  continent: 'Avusturalya'
+  region: 'Okyanusya'
+  subregion: 'Mikronezya'
+  world_region: 'APAC'
+  phone_code: '692'
+  currency_code: 'USD'
+  start_of_week: 'Pazartesi'
+  latitude: '6.0683017'
+  longitude: '171.9425583'
+  un_locode: 'MH'
+  mernis_code: '9827'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Mauritius'
+  alpha_2_code: 'MU'
+  alpha_3_code: 'MUS'
   numeric_code: '480'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Doğu Afrika'
+  world_region: 'EMEA'
+  phone_code: '230'
+  currency_code: 'MUR'
+  start_of_week: 'Pazartesi'
+  latitude: '-20.348404'
+  longitude: '57.552152'
+  un_locode: 'MU'
   mernis_code: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Mayotte
-  alpha_2_code: YT
-  alpha_3_code: MYT
+  name: 'Mayotte'
+  alpha_2_code: 'YT'
+  alpha_3_code: 'MYT'
   numeric_code: '175'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Doğu Afrika'
+  world_region: 'EMEA'
+  phone_code: '262'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '-12.8275'
+  longitude: '45.166244'
+  un_locode: 'YT'
   mernis_code: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Meksika
-  alpha_2_code: MX
-  alpha_3_code: MEX
+  name: 'Meksika'
+  alpha_2_code: 'MX'
+  alpha_3_code: 'MEX'
   numeric_code: '484'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Orta Amerika'
+  world_region: 'AMER'
+  phone_code: '52'
+  currency_code: 'MXN'
+  start_of_week: 'Pazartesi'
+  latitude: '23.634501'
+  longitude: '-102.552784'
+  un_locode: 'MX'
   mernis_code: '9933'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: false
 -
-  name: Mikronezya Federal Devletleri
-  alpha_2_code: FM
-  alpha_3_code: FSM
+  name: 'Mikronezya Federe Devletleri'
+  alpha_2_code: 'FM'
+  alpha_3_code: 'FSM'
   numeric_code: '583'
+  continent: 'Avusturalya'
+  region: 'Okyanusya'
+  subregion: 'Mikronezya'
+  world_region: 'APAC'
+  phone_code: '691'
+  currency_code: 'USD'
+  start_of_week: 'Pazartesi'
+  latitude: '6.8874813'
+  longitude: '158.2150717'
+  un_locode: 'FM'
   mernis_code: '9828'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Mısır
-  alpha_2_code: EG
-  alpha_3_code: EGY
-  numeric_code: '818'
-  mernis_code: '9884'
--
-  name: Moğolistan
-  alpha_2_code: MN
-  alpha_3_code: MNG
-  numeric_code: '496'
-  mernis_code: '9934'
--
-  name: Moldova
-  alpha_2_code: MD
-  alpha_3_code: MDA
-  numeric_code: '498'
-  mernis_code: '9829'
--
-  name: Monako
-  alpha_2_code: MC
-  alpha_3_code: MCO
-  numeric_code: '492'
-  mernis_code: '9801'
--
-  name: Montserrat
-  alpha_2_code: MS
-  alpha_3_code: MSR
-  numeric_code: '500'
+  name: 'Minor Outlying Adaları Birleşik Devletleri'
+  alpha_2_code: 'UM'
+  alpha_3_code: 'UMI'
+  numeric_code: '581'
+  continent: 'Avusturalya'
+  region: 'Amerika'
+  subregion: 'Kuzey Amerika'
+  world_region: 'AMER'
+  phone_code: '1'
+  currency_code: 'USD'
+  start_of_week: 'Pazartesi'
+  latitude: '19.2823192'
+  longitude: '166.647047'
+  un_locode: 'UM'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Moritanya
-  alpha_2_code: MR
-  alpha_3_code: MRT
-  numeric_code: '478'
-  mernis_code: '9931'
--
-  name: Mozambik
-  alpha_2_code: MZ
-  alpha_3_code: MOZ
-  numeric_code: '508'
-  mernis_code: '9936'
--
-  name: Myanmar
-  alpha_2_code: MM
-  alpha_3_code: MMR
+  name: 'Miyanmar'
+  alpha_2_code: 'MM'
+  alpha_3_code: 'MMR'
   numeric_code: '104'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Güneydoğu Asya'
+  world_region: 'APAC'
+  phone_code: '95'
+  currency_code: 'MMK'
+  start_of_week: 'Pazartesi'
+  latitude: '21.916221'
+  longitude: '95.955974'
+  un_locode: 'MM'
   mernis_code: '9802'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Namibya
-  alpha_2_code: NA
-  alpha_3_code: NAM
+  name: 'Moldova Cumhuriyeti'
+  alpha_2_code: 'MD'
+  alpha_3_code: 'MDA'
+  numeric_code: '498'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Doğu Avrupa'
+  world_region: 'EMEA'
+  phone_code: '373'
+  currency_code: 'MDL'
+  start_of_week: 'Pazartesi'
+  latitude: '47.411631'
+  longitude: '28.369885'
+  un_locode: 'MD'
+  mernis_code: '9829'
+  sms_delivery_report: false
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Monako'
+  alpha_2_code: 'MC'
+  alpha_3_code: 'MCO'
+  numeric_code: '492'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Batı Avrupa'
+  world_region: 'EMEA'
+  phone_code: '377'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '43.738417'
+  longitude: '7.424615'
+  un_locode: 'MC'
+  mernis_code: '9801'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
+-
+  name: 'Monserat'
+  alpha_2_code: 'MS'
+  alpha_3_code: 'MSR'
+  numeric_code: '500'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Karayipler'
+  world_region: 'EMEA'
+  phone_code: '1'
+  currency_code: 'XCD'
+  start_of_week: 'Pazartesi'
+  latitude: '16.742498'
+  longitude: '-62.187366'
+  un_locode: 'MS'
+  mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Moritanya'
+  alpha_2_code: 'MR'
+  alpha_3_code: 'MRT'
+  numeric_code: '478'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Batı Afrika'
+  world_region: 'EMEA'
+  phone_code: '222'
+  currency_code: 'MRO'
+  start_of_week: 'Pazartesi'
+  latitude: '21.00789'
+  longitude: '-10.940835'
+  un_locode: 'MR'
+  mernis_code: '9931'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Mozambik'
+  alpha_2_code: 'MZ'
+  alpha_3_code: 'MOZ'
+  numeric_code: '508'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Doğu Afrika'
+  world_region: 'EMEA'
+  phone_code: '258'
+  currency_code: 'MZN'
+  start_of_week: 'Pazartesi'
+  latitude: '-18.665695'
+  longitude: '35.529562'
+  un_locode: 'MZ'
+  mernis_code: '9936'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Moğolistan'
+  alpha_2_code: 'MN'
+  alpha_3_code: 'MNG'
+  numeric_code: '496'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Doğu Asya'
+  world_region: 'APAC'
+  phone_code: '976'
+  currency_code: 'MNT'
+  start_of_week: 'Pazartesi'
+  latitude: '46.862496'
+  longitude: '103.846656'
+  un_locode: 'MN'
+  mernis_code: '9934'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
+-
+  name: 'Mısır'
+  alpha_2_code: 'EG'
+  alpha_3_code: 'EGY'
+  numeric_code: '818'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Kuzey Afrika'
+  world_region: 'EMEA'
+  phone_code: '20'
+  currency_code: 'EGP'
+  start_of_week: 'Pazar'
+  latitude: '26.820553'
+  longitude: '30.802498'
+  un_locode: 'EG'
+  mernis_code: '9884'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Namibya'
+  alpha_2_code: 'NA'
+  alpha_3_code: 'NAM'
   numeric_code: '516'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Güney Afrika'
+  world_region: 'EMEA'
+  phone_code: '264'
+  currency_code: 'NAD'
+  start_of_week: 'Pazartesi'
+  latitude: '-22.95764'
+  longitude: '18.49041'
+  un_locode: 'NA'
   mernis_code: '9830'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Nauru
-  alpha_2_code: NR
-  alpha_3_code: NRU
+  name: 'Nauru'
+  alpha_2_code: 'NR'
+  alpha_3_code: 'NRU'
   numeric_code: '520'
+  continent: 'Avusturalya'
+  region: 'Okyanusya'
+  subregion: 'Mikronezya'
+  world_region: 'APAC'
+  phone_code: '674'
+  currency_code: 'AUD'
+  start_of_week: 'Pazartesi'
+  latitude: '-0.522778'
+  longitude: '166.931503'
+  un_locode: 'NR'
   mernis_code: '9803'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Nepal
-  alpha_2_code: NP
-  alpha_3_code: NPL
+  name: 'Nepal'
+  alpha_2_code: 'NP'
+  alpha_3_code: 'NPL'
   numeric_code: '524'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Güney Asya'
+  world_region: 'APAC'
+  phone_code: '977'
+  currency_code: 'NPR'
+  start_of_week: 'Pazar'
+  latitude: '28.394857'
+  longitude: '84.124007'
+  un_locode: 'NP'
   mernis_code: '9937'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Nijer
-  alpha_2_code: NE
-  alpha_3_code: NER
-  numeric_code: '562'
-  mernis_code: '9941'
--
-  name: Nijerya
-  alpha_2_code: NG
-  alpha_3_code: NGA
-  numeric_code: '566'
-  mernis_code: '9942'
--
-  name: Nikaragua
-  alpha_2_code: NI
-  alpha_3_code: NIC
-  numeric_code: '558'
-  mernis_code: '9940'
--
-  name: Niue
-  alpha_2_code: NU
-  alpha_3_code: NIU
+  name: 'Nie'
+  alpha_2_code: 'NU'
+  alpha_3_code: 'NIU'
   numeric_code: '570'
+  continent: 'Avusturalya'
+  region: 'Okyanusya'
+  subregion: 'Polinezya'
+  world_region: 'APAC'
+  phone_code: '683'
+  currency_code: 'NZD'
+  start_of_week: 'Pazartesi'
+  latitude: '-19.054445'
+  longitude: '-169.867233'
+  un_locode: 'NU'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Norfolk Adası
-  alpha_2_code: NF
-  alpha_3_code: NFK
+  name: 'Nijer'
+  alpha_2_code: 'NE'
+  alpha_3_code: 'NER'
+  numeric_code: '562'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Batı Afrika'
+  world_region: 'EMEA'
+  phone_code: '227'
+  currency_code: 'XOF'
+  start_of_week: 'Pazartesi'
+  latitude: '17.607789'
+  longitude: '8.081666'
+  un_locode: 'NE'
+  mernis_code: '9941'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
+-
+  name: 'Nijerya'
+  alpha_2_code: 'NG'
+  alpha_3_code: 'NGA'
+  numeric_code: '566'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Batı Afrika'
+  world_region: 'EMEA'
+  phone_code: '234'
+  currency_code: 'NGN'
+  start_of_week: 'Pazartesi'
+  latitude: '9.081999'
+  longitude: '8.675277'
+  un_locode: 'NG'
+  mernis_code: '9942'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Nikaragua'
+  alpha_2_code: 'NI'
+  alpha_3_code: 'NIC'
+  numeric_code: '558'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Orta Amerika'
+  world_region: 'AMER'
+  phone_code: '505'
+  currency_code: 'NIO'
+  start_of_week: 'Pazartesi'
+  latitude: '12.865416'
+  longitude: '-85.207229'
+  un_locode: 'NI'
+  mernis_code: '9940'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Norfolk Adası'
+  alpha_2_code: 'NF'
+  alpha_3_code: 'NFK'
   numeric_code: '574'
+  continent: 'Avusturalya'
+  region: 'Okyanusya'
+  subregion: 'Avusturalya ve Yeni Zellanda'
+  world_region: 'APAC'
+  phone_code: '672'
+  currency_code: 'AUD'
+  start_of_week: 'Pazartesi'
+  latitude: '-29.040835'
+  longitude: '167.954712'
+  un_locode: 'NF'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Norveç
-  alpha_2_code: NO
-  alpha_3_code: NOR
+  name: 'Norveç'
+  alpha_2_code: 'NO'
+  alpha_3_code: 'NOR'
   numeric_code: '578'
-  mernis_code: '9943'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Kuzey Avrupa'
+  world_region: 'EMEA'
+  phone_code: '47'
+  currency_code: 'NOK'
+  start_of_week: 'Pazartesi'
+  latitude: '60.472023'
+  longitude: '8.468945'
+  un_locode: 'NO'
+  mernis_code: 
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Orta Afrika Cumhuriyeti
-  alpha_2_code: CF
-  alpha_3_code: CAF
+  name: 'Orta Afrika Cumhuriyeti'
+  alpha_2_code: 'CF'
+  alpha_3_code: 'CAF'
   numeric_code: '140'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Orta Afrika'
+  world_region: 'EMEA'
+  phone_code: '236'
+  currency_code: 'XAF'
+  start_of_week: 'Pazartesi'
+  latitude: '6.611110'
+  longitude: '20.939444'
+  un_locode: 'CF'
   mernis_code: '9865'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Özbekistan
-  alpha_2_code: UZ
-  alpha_3_code: UZB
-  numeric_code: '860'
-  mernis_code: '9836'
--
-  name: Pakistan
-  alpha_2_code: PK
-  alpha_3_code: PAK
+  name: 'Pakistan'
+  alpha_2_code: 'PK'
+  alpha_3_code: 'PAK'
   numeric_code: '586'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Güney Asya'
+  world_region: 'APAC'
+  phone_code: '92'
+  currency_code: 'PKR'
+  start_of_week: 'Pazartesi'
+  latitude: '30.375321'
+  longitude: '69.345115'
+  un_locode: 'PK'
   mernis_code: '9945'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Palau
-  alpha_2_code: PW
-  alpha_3_code: PLW
+  name: 'Palau'
+  alpha_2_code: 'PW'
+  alpha_3_code: 'PLW'
   numeric_code: '585'
+  continent: 'Avusturalya'
+  region: 'Okyanusya'
+  subregion: 'Mikronezya'
+  world_region: 'APAC'
+  phone_code: '680'
+  currency_code: 'USD'
+  start_of_week: 'Pazartesi'
+  latitude: '7.514979'
+  longitude: '134.58252'
+  un_locode: 'PW'
   mernis_code: '9804'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Panama
-  alpha_2_code: PA
-  alpha_3_code: PAN
+  name: 'Panama'
+  alpha_2_code: 'PA'
+  alpha_3_code: 'PAN'
   numeric_code: '591'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Orta Amerika'
+  world_region: 'AMER'
+  phone_code: '507'
+  currency_code: 'PAB'
+  start_of_week: 'Pazartesi'
+  latitude: '8.537981'
+  longitude: '-80.782127'
+  un_locode: 'PA'
   mernis_code: '9946'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Papua Yeni Gine
-  alpha_2_code: PG
-  alpha_3_code: PNG
+  name: 'Papua Yeni Gine'
+  alpha_2_code: 'PG'
+  alpha_3_code: 'PNG'
   numeric_code: '598'
+  continent: 'Avusturalya'
+  region: 'Okyanusya'
+  subregion: 'Melanezya'
+  world_region: 'APAC'
+  phone_code: '675'
+  currency_code: 'PGK'
+  start_of_week: 'Pazartesi'
+  latitude: '-6.314992'
+  longitude: '143.95555'
+  un_locode: 'PG'
   mernis_code: '9947'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Paraguay
-  alpha_2_code: PY
-  alpha_3_code: PRY
+  name: 'Paraguay'
+  alpha_2_code: 'PY'
+  alpha_3_code: 'PRY'
   numeric_code: '600'
+  continent: 'Güney Amerika'
+  region: 'Amerika'
+  subregion: 'Güney Amerika'
+  world_region: 'AMER'
+  phone_code: '595'
+  currency_code: 'PYG'
+  start_of_week: 'Pazartesi'
+  latitude: '-23.442503'
+  longitude: '-58.443832'
+  un_locode: 'PY'
   mernis_code: '9948'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Peru
-  alpha_2_code: PE
-  alpha_3_code: PER
+  name: 'Peru'
+  alpha_2_code: 'PE'
+  alpha_3_code: 'PER'
   numeric_code: '604'
+  continent: 'Güney Amerika'
+  region: 'Amerika'
+  subregion: 'Güney Amerika'
+  world_region: 'AMER'
+  phone_code: '51'
+  currency_code: 'PEN'
+  start_of_week: 'Pazartesi'
+  latitude: '-9.189967'
+  longitude: '-75.015152'
+  un_locode: 'PE'
   mernis_code: '9949'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Pitcairn Adaları
-  alpha_2_code: PN
-  alpha_3_code: PCN
+  name: 'Pitcairn'
+  alpha_2_code: 'PN'
+  alpha_3_code: 'PCN'
   numeric_code: '612'
+  continent: 'Avusturalya'
+  region: 'Okyanusya'
+  subregion: 'Polinezya'
+  world_region: 'APAC'
+  phone_code: '64'
+  currency_code: 'NZD'
+  start_of_week: 'Pazartesi'
+  latitude: '-24.3767537'
+  longitude: '-128.3242376'
+  un_locode: 'PN'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Polonya
-  alpha_2_code: PL
-  alpha_3_code: POL
+  name: 'Polonya'
+  alpha_2_code: 'PL'
+  alpha_3_code: 'POL'
   numeric_code: '616'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Doğu Avrupa'
+  world_region: 'EMEA'
+  phone_code: '48'
+  currency_code: 'PLN'
+  start_of_week: 'Pazartesi'
+  latitude: '51.919438'
+  longitude: '19.145136'
+  un_locode: 'PL'
   mernis_code: '9951'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Portekiz
-  alpha_2_code: PT
-  alpha_3_code: PRT
+  name: 'Portekiz'
+  alpha_2_code: 'PT'
+  alpha_3_code: 'PRT'
   numeric_code: '620'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Güney Avrupa'
+  world_region: 'EMEA'
+  phone_code: '351'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '39.399871'
+  longitude: '-8.224454'
+  un_locode: 'PT'
   mernis_code: '9952'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Porto Riko
-  alpha_2_code: PR
-  alpha_3_code: PRI
+  name: 'Porto Riko'
+  alpha_2_code: 'PR'
+  alpha_3_code: 'PRI'
   numeric_code: '630'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Karayipler'
+  world_region: 'AMER'
+  phone_code: '1'
+  currency_code: 'USD'
+  start_of_week: 'Pazartesi'
+  latitude: '18.220833'
+  longitude: '-66.590149'
+  un_locode: 'PR'
   mernis_code: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Reunion
-  alpha_2_code: RE
-  alpha_3_code: REU
-  numeric_code: '638'
-  mernis_code: 
--
-  name: Romanya
-  alpha_2_code: RO
-  alpha_3_code: ROU
+  name: 'Romanya'
+  alpha_2_code: 'RO'
+  alpha_3_code: 'ROU'
   numeric_code: '642'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Doğu Avrupa'
+  world_region: 'EMEA'
+  phone_code: '40'
+  currency_code: 'RON'
+  start_of_week: 'Pazartesi'
+  latitude: '45.943161'
+  longitude: '24.96676'
+  un_locode: 'RO'
   mernis_code: '9954'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: true
 -
-  name: Ruanda
-  alpha_2_code: RW
-  alpha_3_code: RWA
+  name: 'Ruanda'
+  alpha_2_code: 'RW'
+  alpha_3_code: 'RWA'
   numeric_code: '646'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Doğu Afrika'
+  world_region: 'EMEA'
+  phone_code: '250'
+  currency_code: 'RWF'
+  start_of_week: 'Pazartesi'
+  latitude: '-1.940278'
+  longitude: '29.873888'
+  un_locode: 'RW'
   mernis_code: '9955'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Rusya
-  alpha_2_code: RU
-  alpha_3_code: RUS
+  name: 'Rusya Federasyonu'
+  alpha_2_code: 'RU'
+  alpha_3_code: 'RUS'
   numeric_code: '643'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Doğu Avrupa'
+  world_region: 'EMEA'
+  phone_code: '7'
+  currency_code: 'RUB'
+  start_of_week: 'Pazartesi'
+  latitude: '61.52401'
+  longitude: '105.318756'
+  un_locode: 'RU'
   mernis_code: '9831'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Saint Barthelemy
-  alpha_2_code: BL
-  alpha_3_code: BLM
-  numeric_code: '652'
+  name: 'Réunion'
+  alpha_2_code: 'RE'
+  alpha_3_code: 'REU'
+  numeric_code: '638'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Doğu Afrika'
+  world_region: 'EMEA'
+  phone_code: '262'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '-21.115141'
+  longitude: '55.536384'
+  un_locode: 'RE'
   mernis_code: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Saint Helena, Ascension ve Tristan da Cunha
-  alpha_2_code: SH
-  alpha_3_code: SHN
-  numeric_code: '654'
-  mernis_code: 
--
-  name: Saint Kitts ve Nevi
-  alpha_2_code: KN
-  alpha_3_code: KNA
-  numeric_code: '659'
-  mernis_code: '9806'
--
-  name: Saint Lucia
-  alpha_2_code: LC
-  alpha_3_code: LCA
-  numeric_code: '662'
-  mernis_code: '9956'
--
-  name: Saint Martin
-  alpha_2_code: MF
-  alpha_3_code: MAF
-  numeric_code: '663'
-  mernis_code: 
--
-  name: Saint Pierre ve Miquelon
-  alpha_2_code: PM
-  alpha_3_code: SPM
-  numeric_code: '666'
-  mernis_code: 
--
-  name: Saint Vincent ve Grenadinler
-  alpha_2_code: VC
-  alpha_3_code: VCT
-  numeric_code: '670'
-  mernis_code: '9957'
--
-  name: Samoa
-  alpha_2_code: WS
-  alpha_3_code: WSM
+  name: 'Samoa'
+  alpha_2_code: 'WS'
+  alpha_3_code: 'WSM'
   numeric_code: '882'
+  continent: 'Avusturalya'
+  region: 'Okyanusya'
+  subregion: 'Polinezya'
+  world_region: 'APAC'
+  phone_code: '685'
+  currency_code: 'USD'
+  start_of_week: 'Pazartesi'
+  latitude: '-13.759029'
+  longitude: '-172.104629'
+  un_locode: 'WS'
   mernis_code: '9958'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: San Marino
-  alpha_2_code: SM
-  alpha_3_code: SMR
+  name: 'San Marino'
+  alpha_2_code: 'SM'
+  alpha_3_code: 'SMR'
   numeric_code: '674'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Güney Avrupa'
+  world_region: 'EMEA'
+  phone_code: '378'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '43.94236'
+  longitude: '12.457777'
+  un_locode: 'SM'
   mernis_code: '9805'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Sao Tome ve Príncipe
-  alpha_2_code: ST
-  alpha_3_code: STP
+  name: 'Sao Tome ve Principe'
+  alpha_2_code: 'ST'
+  alpha_3_code: 'STP'
   numeric_code: '678'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Orta Afrika'
+  world_region: 'EMEA'
+  phone_code: '239'
+  currency_code: 'STD'
+  start_of_week: 'Pazartesi'
+  latitude: '0.18636'
+  longitude: '6.613080'
+  un_locode: 'ST'
   mernis_code: '9959'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Senegal
-  alpha_2_code: SN
-  alpha_3_code: SEN
-  numeric_code: '686'
-  mernis_code: '9961'
+  name: 'Sen Barthélemy'
+  alpha_2_code: 'BL'
+  alpha_3_code: 'BLM'
+  numeric_code: '652'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Karayipler'
+  world_region: 'APAC'
+  phone_code: '590'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '17.9'
+  longitude: '-62.833333'
+  un_locode: 'BL'
+  mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Seyşel Adaları
-  alpha_2_code: SC
-  alpha_3_code: SYC
-  numeric_code: '690'
-  mernis_code: '9962'
+  name: 'Sen Helen, Ascension and Tristan da Cunha'
+  alpha_2_code: 'SH'
+  alpha_3_code: 'SHN'
+  numeric_code: '654'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Batı Afrika'
+  world_region: 'APAC'
+  phone_code: '290'
+  currency_code: 'SHP'
+  start_of_week: 'Pazartesi'
+  latitude: '-15.9656004'
+  longitude: '-5.7115281'
+  un_locode: 'SH'
+  mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Sierra Leone
-  alpha_2_code: SL
-  alpha_3_code: SLE
-  numeric_code: '694'
-  mernis_code: '9963'
+  name: 'Sen Kitts ve Nevis'
+  alpha_2_code: 'KN'
+  alpha_3_code: 'KNA'
+  numeric_code: '659'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Karayipler'
+  world_region: 'AMER'
+  phone_code: '1'
+  currency_code: 'XCD'
+  start_of_week: 'Pazartesi'
+  latitude: '17.357822'
+  longitude: '-62.782998'
+  un_locode: 'KN'
+  mernis_code: '9806'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Şili
-  alpha_2_code: CL
-  alpha_3_code: CHL
-  numeric_code: '152'
-  mernis_code: '9867'
+  name: 'Sen Lucia'
+  alpha_2_code: 'LC'
+  alpha_3_code: 'LCA'
+  numeric_code: '662'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Karayipler'
+  world_region: 'AMER'
+  phone_code: '1'
+  currency_code: 'XCD'
+  start_of_week: 'Pazartesi'
+  latitude: '13.909444'
+  longitude: '-60.978893'
+  un_locode: 'LC'
+  mernis_code: '9956'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Singapur
-  alpha_2_code: SG
-  alpha_3_code: SGP
-  numeric_code: '702'
-  mernis_code: '9964'
+  name: 'Sen Martin (Fransız kısmı)'
+  alpha_2_code: 'MF'
+  alpha_3_code: 'MAF'
+  numeric_code: '663'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Karayipler'
+  world_region: 'AMER'
+  phone_code: '590'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '18.08255'
+  longitude: '-63.052251'
+  un_locode: 'MF'
+  mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Sint Maarten
-  alpha_2_code: SX
-  alpha_3_code: SXM
+  name: 'Sen Martin (Hollanda kısmı)'
+  alpha_2_code: 'SX'
+  alpha_3_code: 'SXM'
   numeric_code: '534'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Karayipler'
+  world_region: 'AMER'
+  phone_code: '1'
+  currency_code: 'ANG'
+  start_of_week: 'Pazartesi'
+  latitude: '18.04248'
+  longitude: '-63.05483'
+  un_locode: 'SX'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Sırbistan
-  alpha_2_code: RS
-  alpha_3_code: SRB
-  numeric_code: '688'
-  mernis_code: '9771'
+  name: 'Sen Piyer ve Miquelon'
+  alpha_2_code: 'PM'
+  alpha_3_code: 'SPM'
+  numeric_code: '666'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Kuzey Amerika'
+  world_region: 'AMER'
+  phone_code: '508'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '46.8852'
+  longitude: '-56.3159'
+  un_locode: 'PM'
+  mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Slovakya
-  alpha_2_code: SK
-  alpha_3_code: SVK
+  name: 'Sen Vinsınt ve Granadalar'
+  alpha_2_code: 'VC'
+  alpha_3_code: 'VCT'
+  numeric_code: '670'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Karayipler'
+  world_region: 'AMER'
+  phone_code: '1'
+  currency_code: 'XCD'
+  start_of_week: 'Pazartesi'
+  latitude: '13.2528179'
+  longitude: '-61.197162'
+  un_locode: 'VC'
+  mernis_code: '9957'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Senegal'
+  alpha_2_code: 'SN'
+  alpha_3_code: 'SEN'
+  numeric_code: '686'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Batı Afrika'
+  world_region: 'EMEA'
+  phone_code: '221'
+  currency_code: 'XOF'
+  start_of_week: 'Pazartesi'
+  latitude: '14.497401'
+  longitude: '-14.452362'
+  un_locode: 'SN'
+  mernis_code: '9961'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
+-
+  name: 'Seyman Adaları'
+  alpha_2_code: 'KY'
+  alpha_3_code: 'CYM'
+  numeric_code: '136'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Karayipler'
+  world_region: 'AMER'
+  phone_code: '1'
+  currency_code: 'KYD'
+  start_of_week: 'Pazartesi'
+  latitude: '19.3133'
+  longitude: '-81.2546'
+  un_locode: 'KY'
+  mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Seyşeller'
+  alpha_2_code: 'SC'
+  alpha_3_code: 'SYC'
+  numeric_code: '690'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Doğu Afrika'
+  world_region: 'EMEA'
+  phone_code: '248'
+  currency_code: 'SCR'
+  start_of_week: 'Pazartesi'
+  latitude: '-4.679574'
+  longitude: '55.491977'
+  un_locode: 'SC'
+  mernis_code: '9962'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Sierra Leone'
+  alpha_2_code: 'SL'
+  alpha_3_code: 'SLE'
+  numeric_code: '694'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Batı Afrika'
+  world_region: 'EMEA'
+  phone_code: '232'
+  currency_code: 'SLL'
+  start_of_week: 'Pazartesi'
+  latitude: '8.460555'
+  longitude: '-11.779889'
+  un_locode: 'SL'
+  mernis_code: '9963'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Singapur'
+  alpha_2_code: 'SG'
+  alpha_3_code: 'SGP'
+  numeric_code: '702'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Güneydoğu Asya'
+  world_region: 'APAC'
+  phone_code: '65'
+  currency_code: 'SGD'
+  start_of_week: 'Pazartesi'
+  latitude: '1.352083'
+  longitude: '103.819836'
+  un_locode: 'SG'
+  mernis_code: '9964'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
+-
+  name: 'Slovakya'
+  alpha_2_code: 'SK'
+  alpha_3_code: 'SVK'
   numeric_code: '703'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Doğu Avrupa'
+  world_region: 'EMEA'
+  phone_code: '421'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '48.669026'
+  longitude: '19.699024'
+  un_locode: 'SK'
   mernis_code: '9832'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Slovenya
-  alpha_2_code: SI
-  alpha_3_code: SVN
+  name: 'Slovenya'
+  alpha_2_code: 'SI'
+  alpha_3_code: 'SVN'
   numeric_code: '705'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Güney Avrupa'
+  world_region: 'EMEA'
+  phone_code: '386'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '46.151241'
+  longitude: '14.995463'
+  un_locode: 'SI'
   mernis_code: '9833'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Solomon Adaları
-  alpha_2_code: SB
-  alpha_3_code: SLB
+  name: 'Solomon Adaları'
+  alpha_2_code: 'SB'
+  alpha_3_code: 'SLB'
   numeric_code: '090'
+  continent: 'Avusturalya'
+  region: 'Okyanusya'
+  subregion: 'Melanezya'
+  world_region: 'APAC'
+  phone_code: '677'
+  currency_code: 'SBD'
+  start_of_week: 'Pazartesi'
+  latitude: '-9.64571'
+  longitude: '160.156194'
+  un_locode: 'SB'
   mernis_code: '9965'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Somali
-  alpha_2_code: SO
-  alpha_3_code: SOM
+  name: 'Somali'
+  alpha_2_code: 'SO'
+  alpha_3_code: 'SOM'
   numeric_code: '706'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Doğu Afrika'
+  world_region: 'EMEA'
+  phone_code: '252'
+  currency_code: 'SOS'
+  start_of_week: 'Pazartesi'
+  latitude: '5.152149'
+  longitude: '46.199616'
+  un_locode: 'SO'
   mernis_code: '9966'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Sri Lanka
-  alpha_2_code: LK
-  alpha_3_code: LKA
+  name: 'Sri Lanka'
+  alpha_2_code: 'LK'
+  alpha_3_code: 'LKA'
   numeric_code: '144'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Güney Asya'
+  world_region: 'APAC'
+  phone_code: '94'
+  currency_code: 'LKR'
+  start_of_week: 'Pazartesi'
+  latitude: '7.873053'
+  longitude: '80.771796'
+  un_locode: 'LK'
   mernis_code: '9969'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Sudan
-  alpha_2_code: SD
-  alpha_3_code: SDN
+  name: 'Sudan'
+  alpha_2_code: 'SD'
+  alpha_3_code: 'SDN'
   numeric_code: '729'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Kuzey Afrika'
+  world_region: 'EMEA'
+  phone_code: '249'
+  currency_code: 'SDG'
+  start_of_week: 'Pazartesi'
+  latitude: '12.862807'
+  longitude: '30.217636'
+  un_locode: 'SD'
   mernis_code: '9970'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Surinam
-  alpha_2_code: SR
-  alpha_3_code: SUR
+  name: 'Surinam'
+  alpha_2_code: 'SR'
+  alpha_3_code: 'SUR'
   numeric_code: '740'
+  continent: 'Güney Amerika'
+  region: 'Amerika'
+  subregion: 'Güney Amerika'
+  world_region: 'AMER'
+  phone_code: '597'
+  currency_code: 'SRD'
+  start_of_week: 'Pazartesi'
+  latitude: '3.919305'
+  longitude: '-56.027783'
+  un_locode: 'SR'
   mernis_code: '9971'
+  sms_delivery_report: 
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Suriye
-  alpha_2_code: SY
-  alpha_3_code: SYR
+  name: 'Suriye Arap Cumhuriyeti'
+  alpha_2_code: 'SY'
+  alpha_3_code: 'SYR'
   numeric_code: '760'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Batı Asya'
+  world_region: 'EMEA'
+  phone_code: '963'
+  currency_code: 'SYP'
+  start_of_week: 'Pazartesi'
+  latitude: '34.802074'
+  longitude: '38.996815'
+  un_locode: 'SY'
   mernis_code: '9975'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Suudi Arabistan
-  alpha_2_code: SA
-  alpha_3_code: SAU
+  name: 'Suudi Arabistan'
+  alpha_2_code: 'SA'
+  alpha_3_code: 'SAU'
   numeric_code: '682'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Batı Asya'
+  world_region: 'EMEA'
+  phone_code: '966'
+  currency_code: 'SAR'
+  start_of_week: 'Pazar'
+  latitude: '23.885942'
+  longitude: '45.079162'
+  un_locode: 'SA'
   mernis_code: '9960'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: false
 -
-  name: Svalbard ve Jan Mayen
-  alpha_2_code: SJ
-  alpha_3_code: SJM
+  name: 'Svalbard ve Jan Mayen Adaları'
+  alpha_2_code: 'SJ'
+  alpha_3_code: 'SJM'
   numeric_code: '744'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Kuzey Avrupa'
+  world_region: 'EMEA'
+  phone_code: '47'
+  currency_code: 'NOK'
+  start_of_week: 'Pazartesi'
+  latitude: '77.553603'
+  longitude: '23.670272'
+  un_locode: 'SJ'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Svaziland
-  alpha_2_code: SZ
-  alpha_3_code: SWZ
+  name: 'Svaziland'
+  alpha_2_code: 'SZ'
+  alpha_3_code: 'SWZ'
   numeric_code: '748'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Güney Afrika'
+  world_region: 'EMEA'
+  phone_code: '268'
+  currency_code: 'SZL'
+  start_of_week: 'Pazartesi'
+  latitude: '-26.522503'
+  longitude: '31.465866'
+  un_locode: 'SZ'
   mernis_code: '9972'
+  sms_delivery_report: 
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Tacikistan
-  alpha_2_code: TJ
-  alpha_3_code: TJK
+  name: 'Sırbistan'
+  alpha_2_code: 'RS'
+  alpha_3_code: 'SRB'
+  numeric_code: '688'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Güney Avrupa'
+  world_region: 'EMEA'
+  phone_code: '381'
+  currency_code: 'RSD'
+  start_of_week: 'Pazartesi'
+  latitude: '44.016521'
+  longitude: '21.005859'
+  un_locode: 'RS'
+  mernis_code: '9771'
+  sms_delivery_report: true
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Tacikistan'
+  alpha_2_code: 'TJ'
+  alpha_3_code: 'TJK'
   numeric_code: '762'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Orta Asya'
+  world_region: 'EMEA'
+  phone_code: '992'
+  currency_code: 'TJS'
+  start_of_week: 'Pazartesi'
+  latitude: '38.861034'
+  longitude: '71.276093'
+  un_locode: 'TJ'
   mernis_code: '9834'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Tanzanya
-  alpha_2_code: TZ
-  alpha_3_code: TZA
+  name: 'Tanzanya Birleşik Cumhuriyeti'
+  alpha_2_code: 'TZ'
+  alpha_3_code: 'TZA'
   numeric_code: '834'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Doğu Afrika'
+  world_region: 'EMEA'
+  phone_code: '255'
+  currency_code: 'TZS'
+  start_of_week: 'Pazartesi'
+  latitude: '-6.369028'
+  longitude: '34.888822'
+  un_locode: 'TZ'
   mernis_code: '9987'
+  sms_delivery_report: true
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Tayland
-  alpha_2_code: TH
-  alpha_3_code: THA
+  name: 'Tayland'
+  alpha_2_code: 'TH'
+  alpha_3_code: 'THA'
   numeric_code: '764'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Güneydoğu Asya'
+  world_region: 'APAC'
+  phone_code: '66'
+  currency_code: 'THB'
+  start_of_week: 'Pazartesi'
+  latitude: '15.870032'
+  longitude: '100.992541'
+  un_locode: 'TH'
   mernis_code: '9976'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Tayvan
-  alpha_2_code: TW
-  alpha_3_code: TWN
+  name: 'Tayvan'
+  alpha_2_code: 'TW'
+  alpha_3_code: 'TWN'
   numeric_code: '158'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Doğu Asya'
+  world_region: 'APAC'
+  phone_code: '886'
+  currency_code: 'TWD'
+  start_of_week: 'Pazartesi'
+  latitude: '23.69781'
+  longitude: '120.960515'
+  un_locode: 'TW'
   mernis_code: '9772'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Togo
-  alpha_2_code: TG
-  alpha_3_code: TGO
+  name: 'Timor-Leste'
+  alpha_2_code: 'TL'
+  alpha_3_code: 'TLS'
+  numeric_code: '626'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Güneydoğu Asya'
+  world_region: 'APAC'
+  phone_code: '670'
+  currency_code: 'IDR'
+  start_of_week: 'Pazartesi'
+  latitude: '-8.874217'
+  longitude: '125.727539'
+  un_locode: 'TL'
+  mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Togo'
+  alpha_2_code: 'TG'
+  alpha_3_code: 'TGO'
   numeric_code: '768'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Batı Afrika'
+  world_region: 'EMEA'
+  phone_code: '228'
+  currency_code: 'XOF'
+  start_of_week: 'Pazartesi'
+  latitude: '8.619543'
+  longitude: '0.824782'
+  un_locode: 'TG'
   mernis_code: '9977'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Tokelau
-  alpha_2_code: TK
-  alpha_3_code: TKL
+  name: 'Tokelau'
+  alpha_2_code: 'TK'
+  alpha_3_code: 'TKL'
   numeric_code: '772'
+  continent: 'Avusturalya'
+  region: 'Okyanusya'
+  subregion: 'Polinezya'
+  world_region: 'APAC'
+  phone_code: '690'
+  currency_code: 'NZD'
+  start_of_week: 'Pazartesi'
+  latitude: '-9.200199'
+  longitude: '-171.8484'
+  un_locode: 'TK'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Tonga
-  alpha_2_code: TO
-  alpha_3_code: TON
+  name: 'Tonga'
+  alpha_2_code: 'TO'
+  alpha_3_code: 'TON'
   numeric_code: '776'
+  continent: 'Avusturalya'
+  region: 'Okyanusya'
+  subregion: 'Polinezya'
+  world_region: 'APAC'
+  phone_code: '676'
+  currency_code: 'TOP'
+  start_of_week: 'Pazartesi'
+  latitude: '-21.178986'
+  longitude: '-175.198242'
+  un_locode: 'TO'
   mernis_code: '9807'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Trinidad ve Tobago
-  alpha_2_code: TT
-  alpha_3_code: TTO
+  name: 'Trinidad ve Tobago'
+  alpha_2_code: 'TT'
+  alpha_3_code: 'TTO'
   numeric_code: '780'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Karayipler'
+  world_region: 'AMER'
+  phone_code: '1'
+  currency_code: 'TTD'
+  start_of_week: 'Pazartesi'
+  latitude: '10.691803'
+  longitude: '-61.222503'
+  un_locode: 'TT'
   mernis_code: '9978'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Tunus
-  alpha_2_code: TN
-  alpha_3_code: TUN
+  name: 'Tunus'
+  alpha_2_code: 'TN'
+  alpha_3_code: 'TUN'
   numeric_code: '788'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Kuzey Afrika'
+  world_region: 'EMEA'
+  phone_code: '216'
+  currency_code: 'TND'
+  start_of_week: 'Pazartesi'
+  latitude: '33.886917'
+  longitude: '9.537499'
+  un_locode: 'TN'
   mernis_code: '9979'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Türkiye
-  alpha_2_code: TR
-  alpha_3_code: TUR
-  numeric_code: '792'
-  mernis_code: '9980'
--
-  name: Türkmenistan
-  alpha_2_code: TM
-  alpha_3_code: TKM
-  numeric_code: '795'
-  mernis_code: '9835'
--
-  name: Turks ve Caicos Adaları
-  alpha_2_code: TC
-  alpha_3_code: TCA
-  numeric_code: '796'
-  mernis_code: 
--
-  name: Tuvalu
-  alpha_2_code: TV
-  alpha_3_code: TUV
+  name: 'Tuvalu'
+  alpha_2_code: 'TV'
+  alpha_3_code: 'TUV'
   numeric_code: '798'
+  continent: 'Avusturalya'
+  region: 'Okyanusya'
+  subregion: 'Polinezya'
+  world_region: 'APAC'
+  phone_code: '688'
+  currency_code: 'TVD'
+  start_of_week: 'Pazartesi'
+  latitude: '-7.4784205'
+  longitude: '178.679924'
+  un_locode: 'TV'
   mernis_code: '9808'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Uganda
-  alpha_2_code: UG
-  alpha_3_code: UGA
+  name: 'Türk ve Kaykos Adaları'
+  alpha_2_code: 'TC'
+  alpha_3_code: 'TCA'
+  numeric_code: '796'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Karayipler'
+  world_region: 'APAC'
+  phone_code: '1'
+  currency_code: 'USD'
+  start_of_week: 'Pazartesi'
+  latitude: '21.694025'
+  longitude: '-71.797928'
+  un_locode: 'TC'
+  mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Türkiye'
+  alpha_2_code: 'TR'
+  alpha_3_code: 'TUR'
+  numeric_code: '792'
+  continent: 'Avrupa'
+  region: 'Asya'
+  subregion: 'Batı Asya'
+  world_region: 'EMEA'
+  phone_code: '90'
+  currency_code: 'TRY'
+  start_of_week: 'Pazartesi'
+  latitude: '38.963745'
+  longitude: '35.243322'
+  un_locode: 'TR'
+  mernis_code: '9980'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
+-
+  name: 'Türkmenistan'
+  alpha_2_code: 'TM'
+  alpha_3_code: 'TKM'
+  numeric_code: '795'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Orta Asya'
+  world_region: 'EMEA'
+  phone_code: '993'
+  currency_code: 'TMT'
+  start_of_week: 'Pazartesi'
+  latitude: '38.969719'
+  longitude: '59.556278'
+  un_locode: 'TM'
+  mernis_code: '9835'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Uganda'
+  alpha_2_code: 'UG'
+  alpha_3_code: 'UGA'
   numeric_code: '800'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Doğu Afrika'
+  world_region: 'EMEA'
+  phone_code: '256'
+  currency_code: 'UGX'
+  start_of_week: 'Pazartesi'
+  latitude: '1.373333'
+  longitude: '32.290275'
+  un_locode: 'UG'
   mernis_code: '9981'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Ukrayna
-  alpha_2_code: UA
-  alpha_3_code: UKR
+  name: 'Ukrayna'
+  alpha_2_code: 'UA'
+  alpha_3_code: 'UKR'
   numeric_code: '804'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Doğu Avrupa'
+  world_region: 'EMEA'
+  phone_code: '380'
+  currency_code: 'UAH'
+  start_of_week: 'Pazartesi'
+  latitude: '48.379433'
+  longitude: '31.16558'
+  un_locode: 'UA'
   mernis_code: '9837'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Umman
-  alpha_2_code: OM
-  alpha_3_code: OMN
+  name: 'Umman'
+  alpha_2_code: 'OM'
+  alpha_3_code: 'OMN'
   numeric_code: '512'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Batı Asya'
+  world_region: 'EMEA'
+  phone_code: '968'
+  currency_code: 'OMR'
+  start_of_week: 'Pazar'
+  latitude: '21.4735329'
+  longitude: '55.975413'
+  un_locode: 'OM'
   mernis_code: '9944'
+  sms_delivery_report: 
+  sms_alpha_sender_id: true
+  sms_unicode: false
+  sms_concatenation: true
 -
-  name: Ürdün
-  alpha_2_code: JO
-  alpha_3_code: JOR
-  numeric_code: '400'
-  mernis_code: '9915'
--
-  name: Uruguay
-  alpha_2_code: UY
-  alpha_3_code: URY
+  name: 'Uruguay'
+  alpha_2_code: 'UY'
+  alpha_3_code: 'URY'
   numeric_code: '858'
+  continent: 'Güney Amerika'
+  region: 'Amerika'
+  subregion: 'Güney Amerika'
+  world_region: 'AMER'
+  phone_code: '598'
+  currency_code: 'UYU'
+  start_of_week: 'Pazartesi'
+  latitude: '-32.522779'
+  longitude: '-55.765835'
+  un_locode: 'UY'
   mernis_code: '9990'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Vanuatu
-  alpha_2_code: VU
-  alpha_3_code: VUT
+  name: 'Vanuatu'
+  alpha_2_code: 'VU'
+  alpha_3_code: 'VUT'
   numeric_code: '548'
+  continent: 'Avusturalya'
+  region: 'Okyanusya'
+  subregion: 'Melanezya'
+  world_region: 'APAC'
+  phone_code: '678'
+  currency_code: 'VUV'
+  start_of_week: 'Pazartesi'
+  latitude: '-15.376706'
+  longitude: '166.959158'
+  un_locode: 'VU'
   mernis_code: '9991'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Vatikan
-  alpha_2_code: VA
-  alpha_3_code: VAT
+  name: 'Vatikan'
+  alpha_2_code: 'VA'
+  alpha_3_code: 'VAT'
   numeric_code: '336'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Güney Avrupa'
+  world_region: 'EMEA'
+  phone_code: '39'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '41.902916'
+  longitude: '12.453389'
+  un_locode: 'VA'
   mernis_code: '9799'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Venezuela
-  alpha_2_code: VE
-  alpha_3_code: VEN
+  name: 'Venezuella Bolivya Cumhuriyeti'
+  alpha_2_code: 'VE'
+  alpha_3_code: 'VEN'
   numeric_code: '862'
+  continent: 'Güney Amerika'
+  region: 'Amerika'
+  subregion: 'Güney Amerika'
+  world_region: 'AMER'
+  phone_code: '58'
+  currency_code: 'VES'
+  start_of_week: 'Pazartesi'
+  latitude: '6.42375'
+  longitude: '-66.58973'
+  un_locode: 'VE'
   mernis_code: '9992'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
-  name: Vietnam
-  alpha_2_code: VN
-  alpha_3_code: VNM
-  numeric_code: '704'
-  mernis_code: '9993'
--
-  name: Wallis ve Futuna
-  alpha_2_code: WF
-  alpha_3_code: WLF
-  numeric_code: '876'
-  mernis_code: 
--
-  name: Yemen
-  alpha_2_code: YE
-  alpha_3_code: YEM
-  numeric_code: '887'
-  mernis_code: '9994'
--
-  name: Yeni Kaledonya
-  alpha_2_code: NC
-  alpha_3_code: NCL
-  numeric_code: '540'
-  mernis_code: 
--
-  name: Yeni Zelanda
-  alpha_2_code: NZ
-  alpha_3_code: NZL
-  numeric_code: '554'
-  mernis_code: '9939'
--
-  name: Yeşil Burun Adaları
-  alpha_2_code: CV
-  alpha_3_code: CPV
+  name: 'Verde Burnu'
+  alpha_2_code: 'CV'
+  alpha_3_code: 'CPV'
   numeric_code: '132'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Batı Afrika'
+  world_region: 'EMEA'
+  phone_code: '238'
+  currency_code: 'CVE'
+  start_of_week: 'Pazartesi'
+  latitude: '15.120142'
+  longitude: '-23.6051868'
+  un_locode: 'CV'
   mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Yunanistan
-  alpha_2_code: GR
-  alpha_3_code: GRC
+  name: 'Vietnam'
+  alpha_2_code: 'VN'
+  alpha_3_code: 'VNM'
+  numeric_code: '704'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Güneydoğu Asya'
+  world_region: 'APAC'
+  phone_code: '84'
+  currency_code: 'VND'
+  start_of_week: 'Pazartesi'
+  latitude: '14.058324'
+  longitude: '108.277199'
+  un_locode: 'VN'
+  mernis_code: '9993'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
+-
+  name: 'Wallis ve Futuna'
+  alpha_2_code: 'WF'
+  alpha_3_code: 'WLF'
+  numeric_code: '876'
+  continent: 'Avusturalya'
+  region: 'Okyanusya'
+  subregion: 'Polinezya'
+  world_region: 'APAC'
+  phone_code: '681'
+  currency_code: 'XPF'
+  start_of_week: 'Pazartesi'
+  latitude: '-14.2938'
+  longitude: '-178.1165'
+  un_locode: 'WF'
+  mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Yemen'
+  alpha_2_code: 'YE'
+  alpha_3_code: 'YEM'
+  numeric_code: '887'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Batı Asya'
+  world_region: 'EMEA'
+  phone_code: '967'
+  currency_code: 'YER'
+  start_of_week: 'Pazar'
+  latitude: '15.552727'
+  longitude: '48.516388'
+  un_locode: 'YE'
+  mernis_code: '9994'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Yeni Kaledonya'
+  alpha_2_code: 'NC'
+  alpha_3_code: 'NCL'
+  numeric_code: '540'
+  continent: 'Avusturalya'
+  region: 'Okyanusya'
+  subregion: 'Melanezya'
+  world_region: 'APAC'
+  phone_code: '687'
+  currency_code: 'XPF'
+  start_of_week: 'Pazartesi'
+  latitude: '-20.904305'
+  longitude: '165.618042'
+  un_locode: 'NC'
+  mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Yeni Zelanda'
+  alpha_2_code: 'NZ'
+  alpha_3_code: 'NZL'
+  numeric_code: '554'
+  continent: 'Avusturalya'
+  region: 'Okyanusya'
+  subregion: 'Avusturalya ve Yeni Zellanda'
+  world_region: 'APAC'
+  phone_code: '64'
+  currency_code: 'NZD'
+  start_of_week: 'Pazartesi'
+  latitude: '-40.900557'
+  longitude: '174.885971'
+  un_locode: 'NZ'
+  mernis_code: '9939'
+  sms_delivery_report: true
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: true
+-
+  name: 'Yunanistan'
+  alpha_2_code: 'GR'
+  alpha_3_code: 'GRC'
   numeric_code: '300'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Güney Avrupa'
+  world_region: 'EMEA'
+  phone_code: '30'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '39.074208'
+  longitude: '21.824312'
+  un_locode: 'GR'
   mernis_code: '9895'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 -
-  name: Zambiya
-  alpha_2_code: ZM
-  alpha_3_code: ZMB
+  name: 'Zambiya'
+  alpha_2_code: 'ZM'
+  alpha_3_code: 'ZMB'
   numeric_code: '894'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Doğu Afrika'
+  world_region: 'EMEA'
+  phone_code: '260'
+  currency_code: 'ZMW'
+  start_of_week: 'Pazartesi'
+  latitude: '-13.133897'
+  longitude: '27.849332'
+  un_locode: 'ZM'
   mernis_code: '9997'
+  sms_delivery_report: 
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
 -
-  name: Zimbabve
-  alpha_2_code: ZW
-  alpha_3_code: ZWE
+  name: 'Zimbabve'
+  alpha_2_code: 'ZW'
+  alpha_3_code: 'ZWE'
   numeric_code: '716'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Doğu Afrika'
+  world_region: 'EMEA'
+  phone_code: '263'
+  currency_code: 'USD'
+  start_of_week: 'Pazartesi'
+  latitude: '-19.015438'
+  longitude: '29.154857'
+  un_locode: 'ZW'
   mernis_code: '9998'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: false
+-
+  name: 'Åland Adaları'
+  alpha_2_code: 'AX'
+  alpha_3_code: 'ALA'
+  numeric_code: '248'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Kuzey Avrupa'
+  world_region: 'EMEA'
+  phone_code: '358'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '60.1785247'
+  longitude: '19.9156105'
+  un_locode: 'AX'
+  mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Çad'
+  alpha_2_code: 'TD'
+  alpha_3_code: 'TCD'
+  numeric_code: '148'
+  continent: 'Afrika'
+  region: 'Afrika'
+  subregion: 'Orta Afrika'
+  world_region: 'EMEA'
+  phone_code: '235'
+  currency_code: 'XAF'
+  start_of_week: 'Pazartesi'
+  latitude: '15.454166'
+  longitude: '18.732207'
+  un_locode: 'TD'
+  mernis_code: '9866'
+  sms_delivery_report: 
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Çek Cumhuriyeti'
+  alpha_2_code: 'CZ'
+  alpha_3_code: 'CZE'
+  numeric_code: '203'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Doğu Avrupa'
+  world_region: 'EMEA'
+  phone_code: '420'
+  currency_code: 'CZK'
+  start_of_week: 'Pazartesi'
+  latitude: '49.817491'
+  longitude: '15.472962'
+  un_locode: 'CZ'
+  mernis_code: '9817'
+  sms_delivery_report: true
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Çin'
+  alpha_2_code: 'CN'
+  alpha_3_code: 'CHN'
+  numeric_code: '156'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Doğu Asya'
+  world_region: 'APAC'
+  phone_code: '86'
+  currency_code: 'CNY'
+  start_of_week: 'Pazartesi'
+  latitude: '35.86166'
+  longitude: '104.195397'
+  un_locode: 'CN'
+  mernis_code: '9868'
+  sms_delivery_report: true
+  sms_alpha_sender_id: false
+  sms_unicode: true
+  sms_concatenation: 
+-
+  name: 'Özbekistan'
+  alpha_2_code: 'UZ'
+  alpha_3_code: 'UZB'
+  numeric_code: '860'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Orta Asya'
+  world_region: 'EMEA'
+  phone_code: '998'
+  currency_code: 'UZS'
+  start_of_week: 'Pazartesi'
+  latitude: '41.377491'
+  longitude: '64.585262'
+  un_locode: 'UZ'
+  mernis_code: '9836'
+  sms_delivery_report: 
+  sms_alpha_sender_id: false
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Ürdün'
+  alpha_2_code: 'JO'
+  alpha_3_code: 'JOR'
+  numeric_code: '400'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Batı Asya'
+  world_region: 'EMEA'
+  phone_code: '962'
+  currency_code: 'JOD'
+  start_of_week: 'Pazar'
+  latitude: '30.585164'
+  longitude: '36.238414'
+  un_locode: 'JO'
+  mernis_code: '9915'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'İngiliz Virgin Adaları'
+  alpha_2_code: 'VG'
+  alpha_3_code: 'VGB'
+  numeric_code: '092'
+  continent: 'Kuzey Amerika'
+  region: 'Amerika'
+  subregion: 'Karayipler'
+  world_region: 'AMER'
+  phone_code: '1'
+  currency_code: 'USD'
+  start_of_week: 'Pazartesi'
+  latitude: '18.420695'
+  longitude: '-64.639968'
+  un_locode: 'VG'
+  mernis_code: 
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'İran İslam Cumhuriyeti'
+  alpha_2_code: 'IR'
+  alpha_3_code: 'IRN'
+  numeric_code: '364'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Güney Asya'
+  world_region: 'EMEA'
+  phone_code: '98'
+  currency_code: 'IRR'
+  start_of_week: 'Cumartesi'
+  latitude: '32.427908'
+  longitude: '53.688046'
+  un_locode: 'IR'
+  mernis_code: '9907'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: true
+  sms_concatenation: true
+-
+  name: 'İsviçre'
+  alpha_2_code: 'CH'
+  alpha_3_code: 'CHE'
+  numeric_code: '756'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Batı Avrupa'
+  world_region: 'EMEA'
+  phone_code: '41'
+  currency_code: 'CHF'
+  start_of_week: 'Pazartesi'
+  latitude: '46.818188'
+  longitude: '8.227511'
+  un_locode: 'CH'
+  mernis_code: '9974'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: true
+-
+  name: 'İzlanda'
+  alpha_2_code: 'IS'
+  alpha_3_code: 'ISL'
+  numeric_code: '352'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Kuzey Avrupa'
+  world_region: 'EMEA'
+  phone_code: '354'
+  currency_code: 'ISK'
+  start_of_week: 'Pazartesi'
+  latitude: '64.963051'
+  longitude: '-19.020835'
+  un_locode: 'IS'
+  mernis_code: '9904'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: 
+-
+  name: 'Şili'
+  alpha_2_code: 'CL'
+  alpha_3_code: 'CHL'
+  numeric_code: '152'
+  continent: 'Güney Amerika'
+  region: 'Amerika'
+  subregion: 'Güney Amerika'
+  world_region: 'AMER'
+  phone_code: '56'
+  currency_code: 'CLP'
+  start_of_week: 'Pazartesi'
+  latitude: '-35.675147'
+  longitude: '-71.542969'
+  un_locode: 'CL'
+  mernis_code: '9867'
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: 
+-
+  name: 'İsrail'
+  alpha_2_code: 'IL'
+  alpha_3_code: 'ISR'
+  numeric_code: '376'
+  continent: 'Asya'
+  region: 'Asya'
+  subregion: 'Batı Asya'
+  world_region: 'EMEA'
+  phone_code: '972'
+  currency_code: 'ILS'
+  start_of_week: 'Pazar'
+  latitude: '31.046051'
+  longitude: '34.851612'
+  un_locode: 'IL'
+  mernis_code: '9910'
+  sms_delivery_report: false
+  sms_alpha_sender_id: true
+  sms_unicode: 
+  sms_concatenation: true
+-
+  name: 'İspanya'
+  alpha_2_code: 'ES'
+  alpha_3_code: 'ESP'
+  numeric_code: '724'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Güney Avrupa'
+  world_region: 'EMEA'
+  phone_code: '34'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '40.4636670'
+  longitude: '-3.550692'
+  un_locode: 'ES'
+  mernis_code: '9968'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
+-
+  name: 'İsveç'
+  alpha_2_code: 'SE'
+  alpha_3_code: 'SWE'
+  numeric_code: '752'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Kuzey Avrupa'
+  world_region: 'EMEA'
+  phone_code: '46'
+  currency_code: 'SEK'
+  start_of_week: 'Pazartesi'
+  latitude: '60.128161'
+  longitude: '16.798059'
+  un_locode: 'SE'
+  mernis_code: '9973'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
+-
+  name: 'İrlanda'
+  alpha_2_code: 'IE'
+  alpha_3_code: 'IRL'
+  numeric_code: '372'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Kuzey Avrupa'
+  world_region: 'EMEA'
+  phone_code: '353'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '53.41291'
+  longitude: '-8.24389'
+  un_locode: 'IE'
+  mernis_code: '9909'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
+-
+  name: 'İtalya'
+  alpha_2_code: 'IT'
+  alpha_3_code: 'ITA'
+  numeric_code: '380'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Güney Avrupa'
+  world_region: 'EMEA'
+  phone_code: '39'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '41.87194'
+  longitude: '12.56738'
+  un_locode: 'IT'
+  mernis_code: '9911'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
+-
+  name: 'Kosova'
+  alpha_2_code: 'XK'
+  alpha_3_code: 'XKX'
+  numeric_code: '383'
+  continent: 'Avrupa'
+  region: 'Avrupa'
+  subregion: 'Güney Avrupa'
+  world_region: 'EMEA'
+  phone_code: '383'
+  currency_code: 'EUR'
+  start_of_week: 'Pazartesi'
+  latitude: '42.562309'
+  longitude: '20.341662'
+  un_locode: 'XK'
+  mernis_code: '9773'
+  sms_delivery_report: 
+  sms_alpha_sender_id: 
+  sms_unicode: 
+  sms_concatenation: 
