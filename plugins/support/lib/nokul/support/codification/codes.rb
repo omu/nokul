@@ -2,7 +2,7 @@
 
 require_relative 'codes/sequential_numeric_codes'
 require_relative 'codes/random_numeric_codes'
-require_relative 'codes/alternative_user_names'
+require_relative 'codes/unsuffixed_user_names'
 require_relative 'codes/suffixed_user_names'
 
 module Nokul
@@ -13,7 +13,7 @@ module Nokul
       mattr_accessor :codifications, default: [
         SequentialNumericCodes, # sequential_numeric_codes(source, **options)
         RandomNumericCodes,     # random_numeric_codes(source, **options)
-        AlternativeUserNames,   # alternative_user_names(source, **options)
+        UnsuffixedUserNames,    # unsuffixed_user_names(source, **options)
         SuffixedUserNames       # suffixed_user_names(source, **options)
       ]
 

@@ -50,6 +50,17 @@ class Object
       nil
     end
 
+    def ensure_range(object, type)
+      sanitize_arguments(starting_type = type.first)
+      sanitize_arguments(ending_type = type.first)
+
+      if (error = type_error(object.first, starting_type))
+        return error
+      end
+
+      type_error(object.last, ending_type)
+    end
+
     def ensure_scalar(object, type)
       type_error(object, type)
     end
@@ -58,6 +69,7 @@ class Object
       case type
       when Array then ensure_array(object, type)
       when Hash  then ensure_hash(object, type)
+      when Range then ensure_range(object, type)
       else            ensure_scalar(object, type)
       end
     end

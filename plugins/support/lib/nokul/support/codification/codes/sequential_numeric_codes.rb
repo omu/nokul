@@ -2,7 +2,7 @@
 
 # Generates sequential numeric codes.
 #
-#   Source: 3, prefix: "203", length: 8
+#   Source: "00003", prefix: "203"
 #
 #   Output: "20300003", "20300004", ...
 
@@ -11,38 +11,33 @@ module Nokul
     module Codification
       module SequentialNumericCodes
         class Code < Codification::Code
-          DEFAULT_BASE = 10
-          DEFAULT_LEN  = 4
+          def strings
+            [peek].map { |number| number.to_string(length, base) }
+          end
 
           protected
 
-          attr_reader :base, :length
+          def setup(source)
+            source.must_be_any_of! String..String
 
-          def setup
-            @base   = options[:base]   || DEFAULT_BASE
-            @length = options[:length] || DEFAULT_LEN
+            starting, ending = source.first, source.last # rubocop:disable Style/ParallelAssignment
+
+            self.base   = options[:base]   || base_from_string(ending)
+            self.length = options[:length] || ending.length
+
+            (starting.to_i(base)..ending.to_i(base))
           end
 
-          def initial_kernel
-            source
-          end
-
-          def next_kernel
-            kernel.succ
-          end
-
-          def last_kernel
-            @last_kernel ||= base**length - 1
-          end
-
-          def strings
-            kernel.to_string(length, base)
-          end
+          attr_accessor :base, :length
 
           private
 
-          def sanitize(source)
-            source.must_be_any_of! Integer
+          def base_from_string(string)
+            case string
+            when /[g-zG-Z]/ then 36
+            when /[a-fA-F]/ then 16
+            else                 10
+            end
           end
         end
 

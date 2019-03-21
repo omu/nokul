@@ -2,7 +2,6 @@
 
 require_relative 'codification/errors'
 require_relative 'codification/memory'
-require_relative 'codification/lists'
 require_relative 'codification/processor'
 
 require_relative 'codification/code'

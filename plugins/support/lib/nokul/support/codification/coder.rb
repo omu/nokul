@@ -26,21 +26,19 @@ module Nokul
         end
 
         def run_verbose(amnesic: false)
-          result, n = nil, 0 # rubocop:disable Style/ParallelAssignment
+          n = 0
 
-          loop do
+          while (n += 1) < LOOP_GUARD
             over_loop!(n)
-
-            raise Error, "Too many tries: #{n}" if (n += 1) >= LOOP_GUARD
 
             attempt = try(amnesic: amnesic)
 
-            break (result = attempt) if attempt
+            return [attempt, n] if attempt
 
-            code.next!
+            code.next
           end
 
-          [result, n]
+          raise Error, "Too many tries: #{n}"
         end
 
         def run(**flags)
@@ -51,6 +49,10 @@ module Nokul
           clone.run(amnesic: true)
         end
 
+        def reset
+          code.rewind
+        end
+
         DEFAULT_AVAILABLE_MAX = 10
 
         def available(number_of_available = DEFAULT_AVAILABLE_MAX)
@@ -59,7 +61,7 @@ module Nokul
 
           number_of_available.times do
             result << instance.run
-          rescue Codification::Consumed
+          rescue StopIteration
             break
           end
 
@@ -68,8 +70,7 @@ module Nokul
 
         protected
 
-        attr_accessor :code
-        attr_reader   :options, :processor
+        attr_reader :code, :options, :processor
 
         def setup; end
 

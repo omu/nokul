@@ -12,6 +12,10 @@ module Nokul
           super
         end
 
+        def self.skip(string, expr = false)
+          expr ? string : raise(Skip, string)
+        end
+
         def self.define(name, &block)
           processors[name] = block
         end
@@ -28,16 +32,16 @@ module Nokul
           !string.inside_offensives? && !string.inside_reserved?
         end
 
-        DEFAULT_RANDOM_RANGE = (0..999).freeze
+        DEFAULT_RANDOM_RANGE = ('000'..'999').freeze
         DEFAULT_RANDOM_SEP   = '.'
 
         define :random_suffix do |string, **options|
-          @_random_coder ||= options[:random] || Codification.random_numeric_codes(DEFAULT_RANDOM_RANGE)
+          @_random_coder ||= options[:random]     || Codification.random_numeric_codes(DEFAULT_RANDOM_RANGE)
           @_random_sep   ||= options[:random_sep] || DEFAULT_RANDOM_SEP
 
           string + @_random_sep + @_random_coder.run
-        rescue Consumed
-          raise Skip, string
+        rescue StopIteration
+          Processor.skip string
         end
 
         def initialize(**options)
@@ -46,10 +50,6 @@ module Nokul
 
         def process(instance, string, **options)
           processors.inject(string) { |result, processor| instance.instance_exec(result, **options, &processor) }
-        end
-
-        def skip(string, expr)
-          expr ? string : raise(Skip, string)
         end
 
         protected
@@ -69,10 +69,7 @@ module Nokul
         end
 
         def processor_predicate
-          processor = self
-          proc do |string, *args|
-            processor.skip string, yield(string, *args)
-          end
+          proc { |string, *args| Processor.skip string, yield(string, *args) }
         end
 
         def processor_regexp(pattern)

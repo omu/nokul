@@ -18,7 +18,7 @@ module Nokul
 
         test 'can consume a common random coder' do
           # Common random coder with 10 unique random number
-          random = Codification.random_numeric_codes(0..9)
+          random = Codification.random_numeric_codes('0'..'9')
 
           # Consume half of the randoms
           coder = Codification.suffixed_user_names %w[gabriel garcia marquez], random: random
@@ -37,8 +37,8 @@ module Nokul
           end
 
           # Now both of the coders should be consumed
-          assert_raise(Consumed) { coder.run }
-          assert_raise(Consumed) { other.run }
+          assert_raise(StopIteration) { coder.run }
+          assert_raise(StopIteration) { other.run }
         end
 
         test 'simple use case with memory works' do

@@ -27,24 +27,12 @@ module Nokul
 
         test 'loop guard works' do
           class Bogus < Code
-            def initial_kernel
-              'a'
-            end
-
-            def next_kernel
-              'a'
-            end
-
-            def last_kernel
-              'z'
-            end
-
-            def strings
-              'a'
+            def to_s
+              'same'
             end
           end
 
-          coder = Coder.new Bogus.new
+          coder = Coder.new Bogus.new(0..Float::INFINITY)
 
           coder.run
           err = assert_raise(Error) { coder.run }
@@ -52,7 +40,7 @@ module Nokul
         end
 
         test 'dry run should work' do
-          coder = Codification.sequential_numeric_codes 13
+          coder = Codification.sequential_numeric_codes '0013'..'9999'
           assert_equal '0013', coder.run
           assert_equal '0014', coder.dry
           assert_equal '0014', coder.run

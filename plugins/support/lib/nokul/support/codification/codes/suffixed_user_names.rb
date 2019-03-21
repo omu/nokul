@@ -10,24 +10,10 @@ module Nokul
   module Support
     module Codification
       module SuffixedUserNames
-        class Code < Codification::Code
-          include List
+        Code = UnsuffixedUserNames::Code
 
-          protected
-
-          def setup
-            self.list = Lists::UserNames.new(source, **options)
-          end
-
-          private
-
-          def sanitize(source)
-            source.must_be_any_of! Array
-          end
-        end
-
-        class Coder < Codification::Coder
-          setup builtin_post_process: %i[safe? random_suffix]
+        class Coder < UnsuffixedUserNames::Coder
+          setup builtin_post_process: superclass.default_options[:builtin_post_process] + %i[random_suffix]
         end
       end
     end

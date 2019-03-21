@@ -8,9 +8,9 @@ module Nokul
       class CodificationTest < ActiveSupport::TestCase
         test 'API works' do
           %i[
-            alternative_user_names
-            random_numeric_codes
             sequential_numeric_codes
+            random_numeric_codes
+            unsuffixed_user_names
             suffixed_user_names
           ].all? { |method| assert Codification.respond_to?(method) }
         end
