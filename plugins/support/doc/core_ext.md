@@ -10,8 +10,8 @@ author: Recai Oktaş
 
 TODO
 
-`Kernel`
---------
+`Class`
+-------
 
 TODO
 
