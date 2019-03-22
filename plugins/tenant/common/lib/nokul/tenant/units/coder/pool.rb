@@ -10,15 +10,16 @@ module Nokul
             ends
             owner
             weight
-            deny
+            pattern
             reserved
           ].freeze
 
           attr_reader :coder
 
           def after_initialize
-            # FIXME: handle ends, deny
-            @coder = Support::Codification.sequential_numeric_codes begins, memory: Memory.instance
+            @coder = Support::Codification.sequential_numeric_codes Range.new(begins.to_s, ends.to_s),
+                                                                    memory: Memory.instance,
+                                                                    post_process: Regexp.new(pattern)
           end
 
           def score_of(unit)
