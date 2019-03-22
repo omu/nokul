@@ -8,11 +8,7 @@ module Nokul
 
         class_attribute :default_options, instance_writer: false, default: {}
 
-        def self.inherited(base)
-          dup = default_options.dup
-          base.default_options = dup.each { |k, v| dup[k] = v.dup }
-          super
-        end
+        convey_to_child_on_inheritance :default_options
 
         def self.setup(**options)
           default_options.merge!(**options)

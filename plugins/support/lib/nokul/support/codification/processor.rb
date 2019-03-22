@@ -6,11 +6,7 @@ module Nokul
       class Processor
         class_attribute :processors, instance_writer: false, default: {}
 
-        def self.inherited(base)
-          dup = processors.dup
-          base.processors = dup.each { |k, v| dup[k] = v.dup }
-          super
-        end
+        convey_to_child_on_inheritance :processors
 
         def self.skip(string, expr = false)
           expr ? string : raise(Skip, string)
