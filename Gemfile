@@ -58,6 +58,7 @@ gem 'telephone_number'
 
 # error tracking
 gem 'rollbar', github: 'rollbar/rollbar-gem'
+gem 'slack-notifier'
 
 # permalinks
 gem 'friendly_id', '~> 5.2.0'

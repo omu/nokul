@@ -69,7 +69,7 @@ module Sms
           text: @message
         ).messages.first
 
-        log_and_notify_admin(response)
+        log_or_notify_admin(response)
       end
     end
   end

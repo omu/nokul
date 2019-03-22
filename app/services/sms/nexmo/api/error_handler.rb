@@ -28,18 +28,14 @@ module Sms
           '32' => 'Signature And API Secret Disallowed'
         }.freeze
 
-        def notify_admin(response)
+        def log_or_notify_admin(response)
           status = response.status
-          message_id = response.message_id
+          notifier = Slack::Notifier.new Tenant.credentials.slack[:panik_hook]
 
           if status == '0'
-            Rails.logger.info "Sent message id=#{message_id}"
-          elsif SOFT_FAIL_CODES.key?(status)
-            # TODO: What to do? Notify developer? How?
-            Rails.logger.error "An error occured: id=#{message_id} error_code=#{status}"
-          elsif HARD_FAIL_CODES.key?(status)
-            # TODO: What to do? Notify admin? How?
-            Rails.logger.fatal "An error occured: id=#{message_id} error_code=#{status}"
+            Rails.logger.info "Sent message id=#{response.message_id}"
+          elsif SOFT_FAIL_CODES.key?(status) || HARD_FAIL_CODES.key?(status)
+            notifier.ping "An error occured: error_code=#{status} error_text=#{response.error_text}"
           end
         end
       end
