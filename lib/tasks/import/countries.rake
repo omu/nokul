@@ -3,6 +3,13 @@
 namespace :import do
   desc 'Imports countries from yaml'
   task countries: :environment do
-    Support.create_entities_from_yaml('Country')
+    countries = YAML.load_file(Rails.root.join('db', 'static_data', 'countries.yml'))
+    progress_bar = ProgressBar.spawn('Countries', countries.count)
+
+    countries.each do |country|
+      existing_country = Country.find_by(name: country['name'])
+      existing_country ? existing_country.update(country) : Country.create(country)
+      progress_bar&.increment
+    end
   end
 end

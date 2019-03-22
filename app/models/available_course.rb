@@ -25,10 +25,13 @@ class AvailableCourse < ApplicationRecord
   belongs_to :unit
   has_many :evaluation_types, class_name: 'CourseEvaluationType', dependent: :destroy
   has_many :groups, class_name: 'AvailableCourseGroup', dependent: :destroy
+  has_many :lecturers, through: :groups
+  accepts_nested_attributes_for :groups, reject_if: :all_blank, allow_destroy: true
 
   # validations
   validates :assessments_approved, inclusion: { in: [true, false] }
   validates :course, uniqueness: { scope: %i[academic_term curriculum] }
+  validates :groups, presence: true
 
   # delegates
   delegate :code, :name, :theoric, :practice, :laboratory, :credit, :program_type, to: :course

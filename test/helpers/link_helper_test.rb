@@ -6,7 +6,7 @@ class LinkHelperTest < ActionView::TestCase
   include FontAwesome::Rails::IconHelper
 
   LINK = <<-HTML
-    <a class="%<klass>s" %<options>s href="%<path>s"><i class="%<icon>s"></i> %<text>s</a>
+    <a class="%{klass}" %{options} href="%{path}"><i class="%{icon}"></i> %{text}</a>
   HTML
 
   LINKS = {

@@ -25,6 +25,10 @@ class CityTest < ActiveSupport::TestCase
   validates_length_of :name
   validates_length_of :alpha_2_code
 
+  # validations: numericality
+  validates_numericality_of :latitude
+  validates_numericality_of :longitude
+
   # callbacks
   before_validation :capitalize_attributes
 end

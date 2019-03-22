@@ -7,7 +7,7 @@ co-author: M. Serhat Dündar
 ===========
 
 `Sensitive` modülü Rails uygulama köküne göreceli olarak çözülen dosyalarda
-`RAILS_MASTER_KEY` kullanaral şifreleme ve çözme işlemleri yapar. Şifrelenmiş
+`RAILS_MASTER_KEY` kullanarak şifreleme ve çözme işlemleri yapar. Şifrelenmiş
 dosyalarda daima `.enc` uzantısı kullanıldığı varsayılır.
 
 - Şifrelenmemiş bir dosyayı aynı dizinde `.enc` uzantılı bir dosya olarak şifrele:

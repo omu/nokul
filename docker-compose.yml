@@ -6,6 +6,7 @@ services:
       context: .
       args:
         - RAILS_MASTER_KEY=$RAILS_MASTER_KEY
+        - TENANT_MASTER_KEY=$TENANT_MASTER_KEY
         - RAILS_ENV=$RAILS_ENV
     environment:
       DB_HOST: db
@@ -17,7 +18,8 @@ services:
       - redis
       - sidekiq
     volumes:
-      - ./bundle:/app/vendor/bundle
+      - .:/app
+      - ./vendor/bundle:/app/vendor/bundle
       - ./.bundle:/app/.bundle
       - ./node_modules:/app/node_modules
   redis:
@@ -32,6 +34,7 @@ services:
       context: .
       args:
         - RAILS_MASTER_KEY=$RAILS_MASTER_KEY
+        - TENANT_MASTER_KEY=$TENANT_MASTER_KEY
         - RAILS_ENV=$RAILS_ENV
     environment:
       DB_HOST: db
@@ -45,6 +48,7 @@ services:
       context: .
       args:
         - RAILS_MASTER_KEY=$RAILS_MASTER_KEY
+        - TENANT_MASTER_KEY=$TENANT_MASTER_KEY
         - RAILS_ENV=$RAILS_ENV
         - NODE_ENV=$NODE_ENV
     environment:

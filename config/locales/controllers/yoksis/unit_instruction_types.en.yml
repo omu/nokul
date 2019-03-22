@@ -1,0 +1,24 @@
+en:
+  activerecord:
+    attributes:
+      unit_instruction_type: &unit_instruction_type_attributes
+        code: Code
+        name: Unit Instruction Type
+  helpers:
+    submit:
+      unit_instruction_type:
+        create: Create Unit Instruction Type
+        update: Update Unit Instruction Type
+  yoksis:
+    unit_instruction_types:
+      create:
+        success: Unit instruction type successfully created.
+      destroy:
+        success: Unit instruction type successfully deleted.
+        warning: Unit instruction type could not be deleted.
+      index:
+        <<: *unit_instruction_type_attributes
+        card_header: Unit Instruction Types
+        new_unit_instruction_type_link: New Unit Instruction Type
+      update:
+        success: Unit instruction type successfully updated.

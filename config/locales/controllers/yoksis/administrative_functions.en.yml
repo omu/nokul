@@ -1,0 +1,24 @@
+en:
+  activerecord:
+    attributes:
+      administrative_function: &administrative_function_attributes
+        name: Administrative Function
+        code: Code
+  helpers:
+    submit:
+      administrative_function:
+        create: Create Administrative Function
+        update: Update Administrative Function
+  yoksis:
+    administrative_functions:
+      create:
+        success: Administrative function successfully created.
+      destroy:
+        success: Administrative function successfully deleted.
+        warning: Administrative function can not be deleted!
+      index:
+        <<: *administrative_function_attributes
+        card_header: Administrative Functions
+        new_administrative_function_link: Create a New Administrative Function
+      update:
+        success: Administrative function successfully updated.

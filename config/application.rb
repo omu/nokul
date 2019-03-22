@@ -14,10 +14,6 @@ module Nokul
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
-    # TODO: Disable zeitwerk until they publish something stable.
-    # See: https://github.com/rails/rails/issues/35259 and https://github.com/rails/rails/issues/35278
-    config.autoloader = :classic
-
     # time-zone. ActiveSupport::TimeZone.all for all possible values
     config.time_zone = 'Istanbul'
 
@@ -41,19 +37,5 @@ module Nokul
 
     # use rack-attack as middleware
     config.middleware.use Rack::Attack
-
-    def appname
-      @appname ||= if File.exist?(manifest = Rails.root.join('app.json'))
-                     JSON.parse(File.read(manifest)).fetch 'name'
-                   else
-                     self.class.module_parent.to_s.underscore
-                   end
-    end
-
-    def database_url_for(env)
-      host = ENV.fetch('DB_HOST', 'localhost')
-
-      "postgresql://#{appname}:#{appname}@#{host}/#{appname}_#{env}"
-    end
   end
 end

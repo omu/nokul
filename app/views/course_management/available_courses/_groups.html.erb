@@ -11,7 +11,8 @@
         <div class='card-header'>
           <%= fa_icon 'cube' %><b><%= group.name %></b>
           <span class='pull-right'>
-            <%= link_to_actions([@available_course, group], except: :show) %>
+            <% except = %i[show] << (:destroy if @groups.count == 1) %>
+            <%= link_to_actions([@available_course, group], except: except.compact) %>
           </span>
         </div>
         <table class='table table-sm table-striped'>

@@ -7,3 +7,6 @@ ten_point_grading_system:
 hundred_point_grading_system:
   name: 100 Lük Not Sistemi
   code: 100
+student_grading_system_to_delete:
+  name: Will be Deleted
+  code: 99

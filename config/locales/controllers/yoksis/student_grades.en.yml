@@ -1,0 +1,24 @@
+en:
+  activerecord:
+    attributes:
+      student_grade: &student_grade_attributes
+        code: Code
+        name: Student Grade
+  helpers:
+    submit:
+      student_grade:
+        create: Create Student Grade
+        update: Update Student Grade
+  yoksis:
+    student_grades:
+      create:
+        success: Student grade successfully created.
+      destroy:
+        success: Student grade successfully deleted.
+        warning: Student grade could not be deleted.
+      index:
+        <<: *student_grade_attributes
+        card_header: Student Grades
+        new_student_grade_link: New Student Grade
+      update:
+        success: Student grade successfully updated.

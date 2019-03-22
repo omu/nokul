@@ -1,0 +1,24 @@
+en:
+  activerecord:
+    attributes:
+      student_entrance_point_type: &student_entrance_point_type_attributes
+        code: Code
+        name: Student Entrance Point Type
+  helpers:
+    submit:
+      student_entrance_point_type:
+        create: Create Student Entrance Point Type
+        update: Update Student Entrance Point Type
+  yoksis:
+    student_entrance_point_types:
+      create:
+        success: Student entrance point type successfully created.
+      destroy:
+        success: Student entrance point type successfully deleted.
+        warning: Student entrance point type could not be deleted.
+      index:
+        <<: *student_entrance_point_type_attributes
+        card_header: Student Entrance Point Types
+        new_student_entrance_point_type_link: New Student Entrance Point Type
+      update:
+        success: Student entrance point type successfully updated.

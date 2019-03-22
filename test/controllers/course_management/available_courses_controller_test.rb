@@ -25,24 +25,33 @@ module CourseManagement
     end
 
     test 'should create available course' do
-      parameters = {
-        academic_term: academic_terms(:fall_2018_2019),
-        curriculum_id: curriculums(:one).id,
-        course_id: courses(:ydi).id,
-        coordinator_id: employees(:chief_john).id,
-        unit_id: units(:omu).id
-      }
-
       assert_difference('AvailableCourse.count') do
-        post available_courses_path, params: { available_course: parameters }
+        post available_courses_path, params: {
+          available_course: {
+            curriculum_id: curriculums(:one).id, course_id: courses(:ydi).id,
+            coordinator_id: employees(:chief_john).id, unit_id: units(:omu).id,
+            groups_attributes: {
+              '0' => {
+                name: 'Group 1', quota: 20,
+                lecturers_attributes: {
+                  '0' => {
+                    lecturer_id: employees(:serhat_active).id,
+                    coordinator: true
+                  }
+                }
+              }
+            }
+          }
+        }
       end
 
       available_course = AvailableCourse.last
 
-      parameters.each do |attribute, value|
-        assert_equal value, available_course.send(attribute)
-      end
-      assert_redirected_to new_available_course_available_course_group_path(available_course)
+      assert_equal 'Group 1', available_course.groups.first.name
+      assert_equal 20, available_course.groups.first.quota
+      assert_equal employees(:serhat_active), available_course.lecturers.first.lecturer
+      assert available_course.lecturers.first.coordinator
+      assert_redirected_to available_course_path(available_course)
     end
 
     test 'should get edit' do
@@ -55,7 +64,18 @@ module CourseManagement
       available_course = AvailableCourse.last
       patch available_course_path(available_course), params: {
         available_course: {
-          curriculum_id: curriculums(:one).id, course_id: courses(:ydi).id
+          curriculum_id: curriculums(:one).id, course_id: courses(:ydi).id,
+          groups_attributes: {
+            '0' => {
+              name: 'Group 1', quota: 10,
+              lecturers_attributes: {
+                '0' => {
+                  lecturer_id: employees(:serhat_active).id,
+                  coordinator: true
+                }
+              }
+            }
+          }
         }
       }
 

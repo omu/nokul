@@ -16,6 +16,12 @@ module Nokul
       engine.root
     end
 
+    def credentials
+      Rails.application.encrypted(
+        Tenant.root.join('test', 'dummy', 'config', 'credentials.yml.enc'), env_key: 'TENANT_MASTER_KEY'
+      )
+    end
+
     def deep_config_for(*args)
       engine.deep_config_for(*args)
     end

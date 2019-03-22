@@ -6,7 +6,13 @@ en:
         coordinator: Coordinator
         course: Course
         curriculum: Curriculum
+        groups: Groups
         unit: Unit
+  cocoon:
+    groups:
+      add: Add Group
+    lecturers:
+      add: Add Lecturer
   course_management:
     available_courses:
       create:
@@ -36,12 +42,19 @@ en:
         course_code: Course Code
         group_count: Group Count
         quota: Quota
+      js:
+        coordinator_placeholder: Select a Coordinator
+        course_placeholder: Select a Course
+        curriculum_placeholder: Select a Curriculum
+        lecturer_placeholder: Select a Lecturer
       new:
         form_title: Create an Available Course
       search:
         <<: *available_course_attributes
+        curriculum_placeholder: Select a Curriculum
         smart_search_placeholder: Course Name / Course Code
       form:
+        groups: Groups
         unit: Unit
       show:
         <<: *available_course_attributes

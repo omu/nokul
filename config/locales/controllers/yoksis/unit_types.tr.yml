@@ -1,0 +1,41 @@
+tr:
+  activerecord:
+    attributes:
+      unit_type: &unit_type_attributes
+        code: Kodu
+        group: Grup
+        name: Birim Türü
+    enums:
+      unit_type:
+        groups:
+          administrative: İdari Birim
+          committee: Kurul
+          department: Bölüm
+          faculty: Fakülte
+          graduate_program: Lisansüstü Program
+          institute: Enstitü
+          major: Anabilim Dalı
+          other: Diğer
+          program: Program
+          rectorship: Rektörlük
+          research_center: Uygulama ve Araştırma Merkezi
+          undergraduate_program: Lisans Programı
+          university: Üniversite
+  helpers:
+    submit:
+      unit_type:
+        create: Birim Türü Oluştur
+        update: Birim Türünü Güncelle
+  yoksis:
+    unit_types:
+      create:
+        success: Birim türü başarıyla oluşturuldu.
+      destroy:
+        success: Birim türü başarıyla silindi.
+        warning: Birim türü silinemedi!
+      index:
+        <<: *unit_type_attributes
+        card_header: Birim Türleri
+        new_unit_type_link: Yeni Birim Türü
+      update:
+        success: Birim türü başarıyla güncellendi.

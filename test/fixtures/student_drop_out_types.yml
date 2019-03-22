@@ -7,3 +7,6 @@ farabi:
 discipline_penalty:
   name: Disiplin Cezası
   code: 4
+student_drop_out_type_to_delete:
+  name: Will be Deleted
+  code: 99

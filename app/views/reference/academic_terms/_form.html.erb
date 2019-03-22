@@ -1,0 +1,33 @@
+<%= render 'layouts/builders/form',
+           namespace: 'reference',
+           klass: @academic_term,
+           params: [
+             {
+               field: 'year',
+               width: 6,
+               collection: selectible_year_range(1975)
+             },
+             {
+               field: 'term',
+               width: 6,
+               collection: enum_options_for_select(AcademicTerm, :term)
+             },
+             {
+               field: 'start_of_term',
+               width: 6,
+               as: :date_time_picker
+             },
+             {
+               field: 'end_of_term',
+               width: 6,
+               as: :date_time_picker
+             },
+             {
+               field: 'active',
+               width: 6
+             }
+           ] %>
+
+<script type="text/javascript">
+  flatpickr(".datetimepicker", { enableTime: true, altInput: true })
+</script>

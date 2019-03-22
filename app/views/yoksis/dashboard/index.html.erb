@@ -1,0 +1,75 @@
+<% unit_klasses = %w[
+     UnitInstructionLanguage
+     UnitInstructionType
+     UnitStatus
+     UnitType
+     UniversityType
+   ] %>
+
+<% student_klasses = %w[
+     StudentDisabilityType
+     StudentDropOutType
+     StudentEducationLevel
+     StudentEntrancePointType
+     StudentEntranceType
+     StudentGrade
+     StudentGradingSystem
+     StudentPunishmentType
+     StudentStudentshipStatus
+   ] %>
+
+<% employee_klasses = %w[
+     AdministrativeFunction
+   ] %>
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <i class="fa fa-align-justify"></i> <%= t('.unit_yoksis_references') %>
+      </div>
+      <div class="card-body">
+        <div class="list-group list-group-sm">
+          <% unit_klasses.each do |klass| %>
+            <%= render 'card',
+                       count: klass.constantize.count,
+                       title: ".#{klass.tableize}",
+                       path: send("yoksis_#{klass.tableize}_path") %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <i class="fa fa-align-justify"></i> <%= t('.student_yoksis_references') %>
+      </div>
+      <div class="card-body">
+        <div class="list-group">
+          <% student_klasses.each do |klass| %>
+            <%= render 'card',
+                       count: klass.constantize.count,
+                       title: ".#{klass.tableize}",
+                       path: send("yoksis_#{klass.tableize}_path") %>
+          <% end %>        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <i class="fa fa-align-justify"></i> <%= t('.employee_yoksis_references') %>
+      </div>
+      <div class="card-body">
+        <div class="list-group">
+          <% employee_klasses.each do |klass| %>
+            <%= render 'card',
+                       count: klass.constantize.count,
+                       title: ".#{klass.tableize}",
+                       path: send("yoksis_#{klass.tableize}_path") %>
+          <% end %>        </div>
+      </div>
+    </div>
+  </div>
+</div>

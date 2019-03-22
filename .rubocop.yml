@@ -4,14 +4,15 @@ Style/AsciiComments:
   Enabled: false
 Style/Lambda:
   Enabled: false
+Style/FormatStringToken:
+  EnforcedStyle: template
 Documentation:
   Enabled: false
 Rails/UnknownEnv:
   Environments:
-    - production
     - development
+    - production
     - test
-    - beta
 Metrics/LineLength:
   Max: 120
   Exclude:
@@ -19,7 +20,7 @@ Metrics/LineLength:
 Metrics/BlockLength:
   Exclude:
     - config/routes/**/*
-    - lib/tasks/**/*.rake # Won't fix
+    - lib/tasks/**/*.rake
 Metrics/ClassLength:
   Exclude:
     - test/**/*.rb
@@ -27,14 +28,14 @@ AllCops:
   TargetRubyVersion: 2.6
   # Do not exclude files from ALL COPS unless it's really necessary!
   Exclude:
-    - app/controllers/concerns/reference_resource.rb
+    - app/controllers/concerns/yoksis_resource.rb
     - bin/**/*
-    - vendor/bundle/**/*
-    - node_modules/**/*
     - db/schema.rb
     - db/migrate/*.rb
     - config/initializers/simple_form.rb
     - config/initializers/simple_form_bootstrap.rb
     - config/environments/*.rb
     - config/routes.rb
+    - node_modules/**/*
     - Vagrantfile
+    - vendor/bundle/**/*

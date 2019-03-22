@@ -25,7 +25,7 @@ en:
         last_name: Last Name
         meb_status: MEB Status
         meb_status_date: MEB Status Check Date
-        military_status: Military Status
+        military_status: Unproblematic Military Status
         military_status_date: Military Status Check Date
         mobile_phone: Mobile phone
         mothers_name: Mother's Name
@@ -35,7 +35,7 @@ en:
         not_graduated_or_unknown: Not Graduated/Unknown
         not_registered: Not Registered
         obs_registered_program: Registered To
-        obs_status: Studentship Status
+        obs_status: There Is No Other Studentship
         obs_status_date: Studentship Status Check Date
         place_of_birth: Place of Birth
         placement_rank: Placement Rank

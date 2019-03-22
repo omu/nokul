@@ -7,3 +7,6 @@ undergraduate:
 master:
   name: Yüksek Lisans
   code: 5
+student_education_level_to_delete:
+  name: Will be Deleted
+  code: 99

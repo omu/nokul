@@ -5,11 +5,11 @@
         <%= fa_icon 'street-view' %>
         <strong><%= "[#{full_name(@calendar.academic_term)}] #{@calendar.name}" %></strong>
         <div class="card-header-actions">
-          <%= link_to fa_icon('file-pdf-o'), [:calendar_management, @calendar, format: :pdf],
+          <%= link_to fa_icon('file-pdf-o'), [@calendar, format: :pdf],
                       class: 'btn btn-outline-primary btn-sm' %>
-          <%= link_to fa_icon('university', text: t('.assign_to_units')), [:calendar_management, @calendar, :units],
+          <%= link_to fa_icon('university', text: t('.assign_to_units')), [@calendar, :units],
                       class: 'btn btn-outline-primary btn-sm' %>
-          <%= link_to_actions(@calendar, scope: :calendar_management, except: :show) %>
+          <%= link_to_actions(@calendar, except: :show) %>
         </div>
       </div>
 

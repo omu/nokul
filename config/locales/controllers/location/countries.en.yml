@@ -1,0 +1,50 @@
+en:
+  activerecord:
+    attributes:
+      country: &country_attributes
+        alpha_2_code: Alpha 2 Code
+        alpha_3_code: Alpha 3 Code
+        mernis_code: MERNIS Code
+        name: Name of Country
+        numeric_code: ISO3166 Numeric
+        yoksis_code: YOKSIS Code
+        continent: Continent
+        region: Region
+        subregion: Subregion
+        currency_code: Currency Code
+        phone_code: Phone Code
+        latitude: Latitude
+        longitude: Longitude
+        start_of_week: Start of Week
+        un_locode: United Nations Code
+        world_region: World Region
+      city: &city_attributes
+        alpha_2_code: Alpha 2 Code
+        name: Name of City
+        latitude: Latitude
+        longitude: Longitude
+  helpers:
+    submit:
+      country:
+        create: Create Country
+        update: Update Country
+  location:
+    countries:
+      show:
+        <<: *country_attributes
+        <<: *city_attributes
+        card_header: Cities
+        new_city_link: Add a New City
+      index:
+        <<: *country_attributes
+        new_country_link: Add a New Country
+        card_header: Countries
+      new:
+        new_country: New Country
+      create:
+        success: Country successfully created.
+      update:
+        success: Country successfully updated.
+      destroy:
+        success: Country successfully deleted.
+        warning: Country can not be deleted.

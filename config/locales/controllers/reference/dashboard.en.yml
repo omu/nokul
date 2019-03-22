@@ -1,0 +1,17 @@
+en:
+  reference:
+    dashboard:
+      index:
+        academic_terms: Academic Terms
+        assessment_methods: Assessment Methods
+        course_references: Course References
+        course_group_types: Course Group Types
+        course_types: Course Types
+        document_types: Document Types
+        evaluation_types: Evaluation Types
+        high_school_types: High School Types
+        languages: Languages
+        locations: Locations
+        other_references: Other References
+        term_references: Term References
+        titles: Titles

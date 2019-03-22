@@ -1,0 +1,24 @@
+tr:
+  activerecord:
+    attributes:
+      high_school_type: &high_school_type_attributes
+        code: Kodu
+        name: Lise Türü
+  helpers:
+    submit:
+      high_school_type:
+        create: Lise Türü Oluştur
+        update: Lise Türünü Güncelle
+  reference:
+    high_school_types:
+      create:
+        success: Lise türü başarıyla oluşturuldu.
+      destroy:
+        success: Lise türü başarıyla silindi.
+        warning: Lise türü silinemedi!
+      index:
+        <<: *high_school_type_attributes
+        card_header: Lise Türleri
+        new_high_school_type_link: Yeni Lise Türü
+      update:
+        success: Lise türü başarıyla güncellendi.

@@ -39,7 +39,7 @@ gem 'webpacker'
 gem 'chartkick'
 gem 'cocoon'
 gem 'font-awesome-rails'
-gem 'groupdate' # for chartkick
+gem 'groupdate'
 gem 'pagy'
 gem 'simple_form'
 gem 'wicked_pdf'

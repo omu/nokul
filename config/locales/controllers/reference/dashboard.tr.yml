@@ -1,0 +1,17 @@
+tr:
+  reference:
+    dashboard:
+      index:
+        academic_terms: Akademik Dönemler
+        assessment_methods: Ölçme Kriterleri
+        course_references: Ders Tanımları
+        course_group_types: Ders Grup Türleri
+        course_types: Ders Türleri
+        document_types: Belge Türleri
+        evaluation_types: Değerlendirme Türleri
+        high_school_types: Lise Türleri
+        languages: Diller
+        locations: Konumlar
+        other_references: Diğer Tanımlar
+        term_references: Dönem Tanımları
+        titles: Unvanlar

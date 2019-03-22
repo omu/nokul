@@ -4,3 +4,6 @@ aksam_lisesi:
 anadolu_lisesi:
   name: Anadolu Lisesi (yabancı Dille Öğretim Yapan Resmi Liseler)
   code: 11033
+high_school_type_to_delete:
+  name: Will be Deleted
+  code: 99999

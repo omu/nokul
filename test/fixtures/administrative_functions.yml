@@ -5,5 +5,8 @@ rector:
   name: Rektör
   code: 15
 yok_member:
-  name: Yök Üyesi
+  name: YÖK Üyesi
   code: 18
+administrative_function_to_delete:
+  name: Will be Delete
+  code: 99

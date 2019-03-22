@@ -6,16 +6,13 @@ default: &default
 
 development:
   <<: *default
-  url: <%= Rails.application.database_url_for('development') %>
+  url: <%= Nokul::DatabaseUrl.development %>
 
 test:
   <<: *default
-  url: <%= Rails.application.database_url_for('test') %>
+  url: <%= Nokul::DatabaseUrl.test %>
 
-production: &production
+production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
   pool: <%= ENV.fetch('RAILS_MAX_THREADS', 40) %>
-
-beta:
-  <<: *production

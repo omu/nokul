@@ -22,15 +22,12 @@ module CourseManagement
 
     def new
       @available_course = AvailableCourse.new
+      @available_course.groups.build.lecturers.build
     end
 
     def create
       @available_course = AvailableCourse.new(available_course_params)
-      if @available_course.save
-        redirect_to new_available_course_available_course_group_path(@available_course)
-      else
-        render(:new)
-      end
+      @available_course.save ? redirect_to(@available_course, notice: t('.success')) : render(:new)
     end
 
     def edit; end
@@ -60,7 +57,9 @@ module CourseManagement
 
     def available_course_params
       params.require(:available_course).permit(
-        :curriculum_id, :course_id, :unit_id, :coordinator_id
+        :curriculum_id, :course_id, :unit_id, :coordinator_id,
+        groups_attributes: [:id, :name, :quota, :_destroy,
+                            lecturers_attributes: %i[id lecturer_id coordinator _destroy]]
       )
     end
   end

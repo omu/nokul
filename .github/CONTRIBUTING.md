@@ -40,7 +40,7 @@ Organizasyon sırları kurumsal bir `keepass` hesabında tutulmaktadır. Bu sır
 
 - Master.key ve API Anahtarları
 
-Proje sırları `credentials.yml.enc` dosyasında tutulmaktadır. Bu dosyaya erişim bilgilerini [sistem grubu](https://github.com/orgs/omu/teams/ops)'ndan veya `keepass` üzerinden edindikten sonra RAILS_MASTER_KEY isimli bir ortam değişkeni ile anahtarı sisteminize tanımlayın.
+Proje sırları `credentials.yml.enc` dosyasında tutulmaktadır. Bu dosyaya erişim bilgilerini [sistem grubu](https://github.com/orgs/omu/teams/ops)'ndan veya `keepass` üzerinden edindikten sonra RAILS_MASTER_KEY ve TENANT_MASTER_KEY ortam değişkenlerini sisteminize tanımlayın.
 
 - VPN
 
