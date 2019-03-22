@@ -8,11 +8,7 @@ namespace :import do
 
     countries.each do |country|
       existing_country = Country.find_by(name: country['name'])
-      if existing_country
-        existing_country.update(country)
-      else
-        Country.create(country)
-      end
+      existing_country ? existing_country.update(country) : Country.create(country)
       progress_bar&.increment
     end
   end
