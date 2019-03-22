@@ -8,9 +8,21 @@ en:
         name: Name of Country
         numeric_code: ISO3166 Numeric
         yoksis_code: YOKSIS Code
+        continent: Continent
+        region: Region
+        subregion: Subregion
+        currency_code: Currency Code
+        phone_code: Phone Code
+        latitude: Latitude
+        longitude: Longitude
+        start_of_week: Start of Week
+        un_locode: United Nations Code
+        world_region: World Region
       city: &city_attributes
         alpha_2_code: Alpha 2 Code
         name: Name of City
+        latitude: Latitude
+        longitude: Longitude
   helpers:
     submit:
       country:

@@ -40,8 +40,9 @@ module Location
       assert_difference('Country.count') do
         post countries_path, params: {
           country: {
-            name: 'Test Country', alpha_2_code: 'TC', alpha_3_code: 'TCC',
-            numeric_code: '999', mernis_code: '9999', yoksis_code: '30001'
+            name: 'Test Country', alpha_2_code: 'WW', alpha_3_code: 'WWW', numeric_code: '999',
+            mernis_code: '9999', yoksis_code: '30001', continent: 'Avrupa', currency_code: 'XYZ',
+            world_region: 'EMEA', latitude: 0, longitude: 0
           }
         }
       end
@@ -51,11 +52,14 @@ module Location
       country = Country.last
 
       assert_equal 'Test Country', country.name
-      assert_equal 'TC', country.alpha_2_code
-      assert_equal 'TCC', country.alpha_3_code
+      assert_equal 'WW', country.alpha_2_code
+      assert_equal 'WWW', country.alpha_3_code
       assert_equal '999', country.numeric_code
       assert_equal '9999', country.mernis_code
       assert_equal 30_001, country.yoksis_code
+      assert_equal 'Avrupa', country.continent
+      assert_equal 'XYZ', country.currency_code
+      assert_equal 'EMEA', country.world_region
       assert_redirected_to country_path(country)
       assert_equal translate('.create.success'), flash[:notice]
     end

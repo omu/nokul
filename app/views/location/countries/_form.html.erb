@@ -9,25 +9,79 @@
              },
              {
                field: 'alpha_2_code',
-               width: 3,
+               width: 4,
                required: true
              },
              {
                field: 'alpha_3_code',
-               width: 3,
+               width: 4,
                required: true
              },
              {
                field: 'numeric_code',
-               width: 3,
+               width: 4,
                required: true
              },
              {
                field: 'mernis_code',
-               width: 3
+               width: 4
              },
              {
                field: 'yoksis_code',
-               width: 3
+               width: 4
+             },
+             {
+              field: 'un_locode',
+              width: 4
+             },
+             {
+              field: 'continent',
+              width: 6,
+              collection: continents,
+              required: true,
+              selected: @country.continent
+             },
+             {
+              field: 'region',
+              width: 6,
+              collection: regions,
+              selected: @country.region
+             },
+             {
+              field: 'subregion',
+              width: 6,
+              collection: subregions,
+              selected: @country.subregion
+             },
+             {
+              field: 'world_region',
+              width: 6,
+              collection: %w[APAC EMEA AMER],
+              selected: @country.world_region
+             },
+             {
+              field: 'currency_code',
+              width: 6,
+              required: true
+             },
+             {
+              field: 'phone_code',
+              width: 6
+             },
+             {
+              field: 'latitude',
+              width: 4,
+              required: true
+             },
+             {
+              field: 'longitude',
+              width: 4,
+              required: true
+             },
+             {
+              field: 'start_of_week',
+              width: 4,
+              collection: %w[Cumartesi Pazar Pazartesi],
+              selected: @country.start_of_week
              }
            ] %>
