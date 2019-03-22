@@ -18,14 +18,9 @@ module Nokul
           protected
 
           def convert(source)
-            source.must_be_any_of! String..String
+            source.must_be_any_of! String..String, String
 
-            starting, ending = source.first, source.last # rubocop:disable Style/ParallelAssignment
-
-            self.base   = options[:base]   || base_from_string(ending)
-            self.length = options[:length] || ending.length
-
-            (starting.to_i(base)..ending.to_i(base))
+            source.is_a?(String) ? convert_from_string(source) : convert_from_range(source)
           end
 
           attr_accessor :base, :length
@@ -38,6 +33,29 @@ module Nokul
             when /[a-fA-F]/ then 16
             else                 10
             end
+          end
+
+          def convert_from_range(source)
+            starting, ending = source.first, source.last # rubocop:disable Style/ParallelAssignment
+
+            self.base, self.length = base_and_length_from_sample(ending)
+
+            (starting.to_i(base)..ending.to_i(base))
+          end
+
+          def convert_from_string(source)
+            self.base, self.length = base_and_length_from_sample(source)
+
+            starting, ending = source, (base**length - 1).to_s # rubocop:disable Style/ParallelAssignment
+
+            (starting.to_i(base)..ending.to_i(base))
+          end
+
+          def base_and_length_from_sample(sample)
+            [
+              options[:base]   || base_from_string(sample),
+              options[:length] || sample.length
+            ]
           end
         end
 
