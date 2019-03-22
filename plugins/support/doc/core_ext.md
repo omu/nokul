@@ -8,29 +8,52 @@ author: Recai Oktaş
 `Object`
 --------
 
+`to_yaml_pretty`
+
+`must_be_any_of!(*type_specifications)`
+
 TODO
 
 `Class`
 -------
+
+`inherited_by_conveying_attributes(*attributes, &block)`
 
 TODO
 
 `String`
 --------
 
+`asciified`
+
+`abbreviation`
+
+`capitalize_turkish`
+
+`capitalize_turkish_with_parenthesized`
+
+`inside_offensives?`
+
+`inside_reserved?`
+
+`inside_abbreviations?`
+
+`inside_conjunctions?`
+
 TODO
 
 `Integer`
 ---------
+
+`to_string(length, base = 10)`
 
 TODO
 
 `Array`
 -------
 
-TODO
+`clip(number_of_last_elements = 1)`
 
-`Hash`
-------
+`affixed(**options)
 
 TODO
