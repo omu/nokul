@@ -35,7 +35,7 @@ module Sms
           if status == '0'
             Rails.logger.info "Sent message id=#{response.message_id}"
           elsif SOFT_FAIL_CODES.key?(status) || HARD_FAIL_CODES.key?(status)
-            notifier.ping "An error occured: error_code=#{status} error_text=#{response.error_text}"
+            notifier.ping "Nexmo SMS Error (code: #{status}, text: #{response.error_text})"
           end
         end
       end
