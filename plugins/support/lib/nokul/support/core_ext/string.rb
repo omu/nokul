@@ -41,7 +41,7 @@ class String
   end
 
   # rubocop:disable Metrics/MethodLength
-  def capitalize_turkish_with_paranthesised
+  def capitalize_turkish_with_parenthesized
     # Regex stolen from https://stackoverflow.com/a/6331667
     re = /
       (?<re>
