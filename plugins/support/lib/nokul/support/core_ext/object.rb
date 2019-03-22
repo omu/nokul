@@ -9,7 +9,7 @@ class Object
     yaml << "\n"
   end
 
-  module Type__ # rubocop:disable Naming/ClassAndModuleCamelCase
+  module Type_ # rubocop:disable Naming/ClassAndModuleCamelCase
     module_function
 
     def sanitize_arguments(*args)
@@ -89,7 +89,7 @@ class Object
 
   private_constant :Type__
 
-  def must_be_any_of!(*args)
-    Type__.must_be_any_of(self, *args)
+  def must_be_any_of!(*type_specifications)
+    Type_.must_be_any_of(self, *type_specifications)
   end
 end

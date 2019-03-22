@@ -6,7 +6,7 @@ class Array
   end
 
   def affixed(**options)
-    raise ArgumentError, 'must be a string array' unless all? { |string| string.is_a? String }
+    must_be_any_of! [String]
 
     "#{[*options[:prefix]].join}#{join options[:interfix]}#{[*options[:suffix]].join}"
   end
