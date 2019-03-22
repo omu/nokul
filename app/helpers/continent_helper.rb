@@ -9,8 +9,9 @@ module ContinentHelper
     %w[Afrika Amerika Asya Avrupa Okyanusya]
   end
 
+  # rubocop:disable Metrics/MethodLength
   def subregions
-    x = %w[
+    %w[
       Avusturalya\ ve\ Yeni\ Zellanda
       Batı\ Afrika
       Batı\ Asya
@@ -35,4 +36,5 @@ module ContinentHelper
       Polinezya
     ]
   end
+  # rubocop:enable Metrics/MethodLength
 end
