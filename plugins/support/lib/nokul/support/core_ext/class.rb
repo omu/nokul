@@ -14,10 +14,11 @@ class Class
     end
   end
 
-  def convey_to_child_on_inheritance(*attributes)
+  def inherited_by_conveying_attributes(*attributes, &block)
     define_singleton_method :inherited do |child|
       convey_attributes_to_child(child, *attributes)
       super(child)
+      block&.call(child)
     end
   end
 end
