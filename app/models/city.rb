@@ -20,6 +20,8 @@ class City < ApplicationRecord
 
   # validations
   validates :alpha_2_code, presence: true, uniqueness: true, length: { maximum: 255 }
+  validates :latitude, numericality: true
+  validates :longitude, numericality: true
   validates :name, presence: true, uniqueness: { scope: %i[country_id] }, length: { maximum: 255 }
 
   # callbacks
