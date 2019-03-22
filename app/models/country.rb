@@ -38,7 +38,7 @@ class Country < ApplicationRecord
   validates :sms_alpha_sender_id, inclusion: { in: [true, false] }
   validates :sms_unicode, inclusion: { in: [true, false] }
   validates :sms_concatenation, inclusion: { in: [true, false] }
-  validates :un_locode, length: { is: 2 }
+  validates :un_locode, allow_nil: true, length: { is: 2 }
   validates :yoksis_code, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 1 }
   validates :world_region, presence: true, length: { maximum: 255 }
 

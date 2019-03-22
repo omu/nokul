@@ -5,10 +5,20 @@ turkey:
   numeric_code: 792
   mernis_code: 9980
   yoksis_code: 52
-  sms_delivery_report: false
-  sms_alpha_sender_id: false
-  sms_unicode: false
-  sms_concatenation: false
+  continent: Europe
+  region: Asia
+  subregion: Western Asia
+  world_region: EMEA
+  phone_code: 90
+  latitude: 38.963745
+  longitude: 35.243322
+  currency_code: TRY
+  start_of_week: monday
+  un_locode: TR
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 sweden:
   name: İsveç
   alpha_2_code: SE
@@ -16,10 +26,20 @@ sweden:
   numeric_code: 752
   mernis_code: 9973
   yoksis_code: 30
-  sms_delivery_report: false
-  sms_alpha_sender_id: false
-  sms_unicode: false
-  sms_concatenation: false
+  continent: Europe
+  region: Europe
+  subregion: Northern Europe
+  world_region: EMEA
+  phone_code: 46
+  latitude: 60.128161
+  longitude: 16.798059
+  currency_code: SEK
+  start_of_week: monday
+  un_locode: SE
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 denmark:
   name: Danimarka
   alpha_2_code: DK
@@ -27,10 +47,20 @@ denmark:
   numeric_code: 208
   mernis_code: 9879
   yoksis_code: 8
+  continent: Europe
+  region: Europe
+  subregion: Northern Europe
+  world_region: EMEA
+  phone_code: 45
+  latitude: 56.26392
+  longitude: 9.501785
+  currency_code: DKK
+  start_of_week: monday
+  un_locode: DK
   sms_delivery_report: false
-  sms_alpha_sender_id: false
-  sms_unicode: false
-  sms_concatenation: false
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true
 norway:
   name: Norveç
   alpha_2_code: 'NO'
@@ -38,7 +68,17 @@ norway:
   numeric_code: 578
   mernis_code: 9943
   yoksis_code: 28
-  sms_delivery_report: false
-  sms_alpha_sender_id: false
-  sms_unicode: false
-  sms_concatenation: false
+  continent: Europe
+  region: Europe
+  subregion: Northern Europe
+  world_region: EMEA
+  phone_code: 47
+  latitude: 60.472024
+  longitude: 8.468946
+  currency_code: NOK
+  start_of_week: monday
+  un_locode: 'NO'
+  sms_delivery_report: true
+  sms_alpha_sender_id: true
+  sms_unicode: true
+  sms_concatenation: true

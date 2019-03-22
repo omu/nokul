@@ -45,7 +45,7 @@ module Location
     end
 
     def city_params
-      params.require(:city).permit(:name, :alpha_2_code)
+      params.require(:city).permit(:name, :alpha_2_code, :latitude, :longitude)
     end
   end
 end
