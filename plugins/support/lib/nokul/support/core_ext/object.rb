@@ -87,7 +87,7 @@ class Object
     end
   end
 
-  private_constant :Type__
+  private_constant :Type_
 
   def must_be_any_of!(*type_specifications)
     Type_.must_be_any_of(self, *type_specifications)
