@@ -16,7 +16,7 @@ module Nokul
           end
 
           assert_equal 13, Foo.default_options[:foo]
-          assert_nil Foo.default_options[:bar]
+          assert_nil       Foo.default_options[:bar]
           assert_equal 19, Bar.default_options[:foo]
           assert_equal 23, Bar.default_options[:bar]
         end
@@ -27,8 +27,12 @@ module Nokul
 
         test 'loop guard works' do
           class Bogus < Code
-            def to_s
-              'same'
+            def emit
+              %w[same]
+            end
+
+            def convert(source)
+              source
             end
           end
 

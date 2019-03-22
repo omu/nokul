@@ -8,27 +8,37 @@ module Nokul
       class Code
         extend Forwardable
 
-        delegate %i[cycle next peek rewind +] => :@kernel
+        delegate %i[cycle next peek rewind +] => :@enum
 
         def initialize(source, **options)
           @options = options
-          @kernel  = setup(source).to_enum
-        end
-
-        def strings
-          raise NotImplementedError
+          @enum    = convert(source).to_enum
         end
 
         def to_s
-          strings.affixed(**options)
+          emit.affixed(**options)
         end
 
         protected
 
-        attr_reader :kernel, :options
+        attr_reader :enum, :options
 
-        def setup(source)
-          source
+        def convert(_source)
+          raise NotImplementedError
+        end
+
+        def emit
+          raise NotImplementedError
+        end
+      end
+
+      class SimpleCode < Code
+        def convert(source)
+          source.must_be_any_of! [String]
+        end
+
+        def emit
+          peek
         end
       end
     end

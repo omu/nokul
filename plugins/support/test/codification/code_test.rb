@@ -8,9 +8,10 @@ module Nokul
       class CodeTest < ActiveSupport::TestCase
         test 'concrete code class should implement required methods' do
           %i[
-            strings
+            convert
+            emit
           ].each do |method|
-            assert_raise(NotImplementedError) { Class.new(Code).new(nil).send method }
+            assert_raise(NotImplementedError) { Class.new(Code).new([]).send method }
           end
         end
       end

@@ -11,13 +11,13 @@ module Nokul
     module Codification
       module SequentialNumericCodes
         class Code < Codification::Code
-          def strings
+          def emit
             [peek].map { |number| number.to_string(length, base) }
           end
 
           protected
 
-          def setup(source)
+          def convert(source)
             source.must_be_any_of! String..String
 
             starting, ending = source.first, source.last # rubocop:disable Style/ParallelAssignment

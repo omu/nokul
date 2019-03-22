@@ -55,13 +55,13 @@ module Nokul
         class Code < Codification::Code
           using Alternatives
 
-          def strings
+          def emit
             peek
           end
 
           protected
 
-          def setup(source)
+          def convert(source)
             source.must_be_any_of! [String]
 
             [*source.send(alternative), source].uniq
