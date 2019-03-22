@@ -14,10 +14,10 @@
   longitude: '63.212693'
   un_locode: 'AF'
   mernis_code: '9840'
-  sms_delivery_report: 
+  sms_delivery_report: false
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Almanya'
   alpha_2_code: 'DE'
@@ -54,10 +54,10 @@
   longitude: '-170.6961815'
   un_locode: 'AS'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Amerikan Virgin Adaları'
   alpha_2_code: 'VI'
@@ -74,10 +74,10 @@
   longitude: '-64.896335'
   un_locode: 'VI'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Andorra'
   alpha_2_code: 'AD'
@@ -94,10 +94,10 @@
   longitude: '1.521801'
   un_locode: 'AD'
   mernis_code: '9795'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Angola'
   alpha_2_code: 'AO'
@@ -134,10 +134,10 @@
   longitude: '-63.068614'
   un_locode: 'AI'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Antarktika'
   alpha_2_code: 'AQ'
@@ -154,10 +154,10 @@
   longitude: '-0.071389'
   un_locode: 'AQ'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Antigua-Barbuda'
   alpha_2_code: 'AG'
@@ -174,10 +174,10 @@
   longitude: '-61.796428'
   un_locode: 'AG'
   mernis_code: '9844'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Arjantin'
   alpha_2_code: 'AR'
@@ -196,8 +196,8 @@
   mernis_code: '9845'
   sms_delivery_report: false
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Arnavutluk'
   alpha_2_code: 'AL'
@@ -234,10 +234,10 @@
   longitude: '-69.968338'
   un_locode: 'AW'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Avustralya'
   alpha_2_code: 'AU'
@@ -296,8 +296,8 @@
   mernis_code: '9814'
   sms_delivery_report: true
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Bahamalar'
   alpha_2_code: 'BS'
@@ -314,10 +314,10 @@
   longitude: '-77.396279'
   un_locode: 'BS'
   mernis_code: '9848'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Bahreyn'
   alpha_2_code: 'BH'
@@ -356,8 +356,8 @@
   mernis_code: '9850'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Barbados'
   alpha_2_code: 'BB'
@@ -374,10 +374,10 @@
   longitude: '-59.543198'
   un_locode: 'BB'
   mernis_code: '9851'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Batı Sahra'
   alpha_2_code: 'EH'
@@ -394,10 +394,10 @@
   longitude: '-12.885834'
   un_locode: 'EH'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Belize'
   alpha_2_code: 'BZ'
@@ -414,10 +414,10 @@
   longitude: '-88.49765'
   un_locode: 'BZ'
   mernis_code: '9853'
-  sms_delivery_report: 
+  sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Belçika'
   alpha_2_code: 'BE'
@@ -454,10 +454,10 @@
   longitude: '2.315834'
   un_locode: 'BJ'
   mernis_code: '9854'
-  sms_delivery_report: 
+  sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Bermuda'
   alpha_2_code: 'BM'
@@ -474,10 +474,10 @@
   longitude: '-64.7505'
   un_locode: 'BM'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Beyaz Rusya'
   alpha_2_code: 'BY'
@@ -496,8 +496,8 @@
   mernis_code: '9815'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Birleşik Arap Emirlikleri'
   alpha_2_code: 'AE'
@@ -536,8 +536,8 @@
   mernis_code: '9988'
   sms_delivery_report: false
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Birleşik Krallık'
   alpha_2_code: 'GB'
@@ -576,8 +576,8 @@
   mernis_code: '9856'
   sms_delivery_report: false
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Bonaire, Sint Eustatius ve Saba'
   alpha_2_code: 'BQ'
@@ -596,8 +596,8 @@
   mernis_code: 
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Bosna-Hersek'
   alpha_2_code: 'BA'
@@ -614,10 +614,10 @@
   longitude: '17.679076'
   un_locode: 'BA'
   mernis_code: '9816'
-  sms_delivery_report: 
+  sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Botsvana'
   alpha_2_code: 'BW'
@@ -636,8 +636,8 @@
   mernis_code: '9857'
   sms_delivery_report: false
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Bouvet Adası'
   alpha_2_code: 'BV'
@@ -654,10 +654,10 @@
   longitude: '3.413194'
   un_locode: 'BV'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Brezilya'
   alpha_2_code: 'BR'
@@ -694,10 +694,10 @@
   longitude: '72.4242508'
   un_locode: 'IO'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Brunei Krallığı'
   alpha_2_code: 'BN'
@@ -736,7 +736,7 @@
   mernis_code: '9859'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
+  sms_unicode: false
   sms_concatenation: true
 -
   name: 'Burkina Faso'
@@ -756,8 +756,8 @@
   mernis_code: '9797'
   sms_delivery_report: false
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Burundi'
   alpha_2_code: 'BI'
@@ -775,9 +775,9 @@
   un_locode: 'BI'
   mernis_code: '9861'
   sms_delivery_report: false
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Butan'
   alpha_2_code: 'BT'
@@ -794,10 +794,10 @@
   longitude: '90.433601'
   un_locode: 'BT'
   mernis_code: '9855'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Cebelitarık'
   alpha_2_code: 'GI'
@@ -816,8 +816,8 @@
   mernis_code: 
   sms_delivery_report: true
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Cezayir'
   alpha_2_code: 'DZ'
@@ -836,8 +836,8 @@
   mernis_code: '9842'
   sms_delivery_report: false
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Christmas Adası'
   alpha_2_code: 'CX'
@@ -854,10 +854,10 @@
   longitude: '105.690449'
   un_locode: 'CX'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Cibuti'
   alpha_2_code: 'DJ'
@@ -874,10 +874,10 @@
   longitude: '42.590275'
   un_locode: 'DJ'
   mernis_code: '9880'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Cocos (Keeling) Adaları'
   alpha_2_code: 'CC'
@@ -894,10 +894,10 @@
   longitude: '96.841748'
   un_locode: 'CC'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Cook Adaları'
   alpha_2_code: 'CK'
@@ -914,10 +914,10 @@
   longitude: '-159.777671'
   un_locode: 'CK'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Curaçao'
   alpha_2_code: 'CW'
@@ -934,10 +934,10 @@
   longitude: '-68.99002'
   un_locode: 'CW'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Danimarka'
   alpha_2_code: 'DK'
@@ -974,10 +974,10 @@
   longitude: '-61.370976'
   un_locode: 'DM'
   mernis_code: '9881'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Dominik Cumhuriyeti'
   alpha_2_code: 'DO'
@@ -996,8 +996,8 @@
   mernis_code: '9882'
   sms_delivery_report: false
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Ekvator'
   alpha_2_code: 'EC'
@@ -1034,10 +1034,10 @@
   longitude: '10.267895'
   un_locode: 'GQ'
   mernis_code: '9886'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'El Salvador'
   alpha_2_code: 'SV'
@@ -1094,10 +1094,10 @@
   longitude: '39.782334'
   un_locode: 'ER'
   mernis_code: '9818'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Ermenistan'
   alpha_2_code: 'AM'
@@ -1116,8 +1116,8 @@
   mernis_code: '9819'
   sms_delivery_report: true
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Estonya'
   alpha_2_code: 'EE'
@@ -1156,7 +1156,7 @@
   mernis_code: '9887'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
+  sms_unicode: false
   sms_concatenation: false
 -
   name: 'Falkland Adaları (Malvinas)'
@@ -1174,10 +1174,10 @@
   longitude: '-59.523613'
   un_locode: 'FK'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Faroe Adaları'
   alpha_2_code: 'FO'
@@ -1194,10 +1194,10 @@
   longitude: '-6.911805'
   un_locode: 'FO'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Fas'
   alpha_2_code: 'MA'
@@ -1216,8 +1216,8 @@
   mernis_code: '9935'
   sms_delivery_report: true
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Fiji'
   alpha_2_code: 'FJ'
@@ -1234,10 +1234,10 @@
   longitude: '178.065032'
   un_locode: 'FJ'
   mernis_code: '9888'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Fildişi Sahili'
   alpha_2_code: 'CI'
@@ -1296,7 +1296,7 @@
   mernis_code: '9812'
   sms_delivery_report: true
   sms_alpha_sender_id: true
-  sms_unicode: 
+  sms_unicode: false
   sms_concatenation: true
 -
   name: 'Finlandiya'
@@ -1356,8 +1356,8 @@
   mernis_code: 
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Fransız Güney Bölgeleri'
   alpha_2_code: 'TF'
@@ -1374,10 +1374,10 @@
   longitude: '69.348557'
   un_locode: 'TF'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Fransız Polinezyası'
   alpha_2_code: 'PF'
@@ -1394,10 +1394,10 @@
   longitude: '-149.406843'
   un_locode: 'PF'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Gabon'
   alpha_2_code: 'GA'
@@ -1414,10 +1414,10 @@
   longitude: '11.609444'
   un_locode: 'GA'
   mernis_code: '9891'
-  sms_delivery_report: 
+  sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Gambiya'
   alpha_2_code: 'GM'
@@ -1434,10 +1434,10 @@
   longitude: '-15.310139'
   un_locode: 'GM'
   mernis_code: '9798'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Gana'
   alpha_2_code: 'GH'
@@ -1456,8 +1456,8 @@
   mernis_code: '9894'
   sms_delivery_report: true
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Gine'
   alpha_2_code: 'GN'
@@ -1476,8 +1476,8 @@
   mernis_code: '9898'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Gine-Bissau'
   alpha_2_code: 'GW'
@@ -1494,10 +1494,10 @@
   longitude: '-15.180413'
   un_locode: 'GW'
   mernis_code: '9899'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Granada'
   alpha_2_code: 'GD'
@@ -1514,10 +1514,10 @@
   longitude: '-61.678999'
   un_locode: 'GD'
   mernis_code: '9896'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Grönland'
   alpha_2_code: 'GL'
@@ -1534,10 +1534,10 @@
   longitude: '-42.604303'
   un_locode: 'GL'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Guadalup'
   alpha_2_code: 'GP'
@@ -1554,10 +1554,10 @@
   longitude: '-61.550999'
   un_locode: 'GP'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Guam'
   alpha_2_code: 'GU'
@@ -1574,10 +1574,10 @@
   longitude: '144.793731'
   un_locode: 'GU'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Guatemala'
   alpha_2_code: 'GT'
@@ -1596,8 +1596,8 @@
   mernis_code: '9897'
   sms_delivery_report: false
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Guernsey'
   alpha_2_code: 'GG'
@@ -1614,10 +1614,10 @@
   longitude: '-2.585278'
   un_locode: 'GG'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Guyana'
   alpha_2_code: 'GY'
@@ -1636,8 +1636,8 @@
   mernis_code: '9900'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Güney Afrika'
   alpha_2_code: 'ZA'
@@ -1674,10 +1674,10 @@
   longitude: '-36.587909'
   un_locode: 'GS'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Güney Sudan'
   alpha_2_code: 'SS'
@@ -1696,8 +1696,8 @@
   mernis_code: '9759'
   sms_delivery_report: false
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Gürcistan'
   alpha_2_code: 'GE'
@@ -1734,10 +1734,10 @@
   longitude: '-72.285215'
   un_locode: 'HT'
   mernis_code: '9901'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Heard Adası ve McDonald Adaları'
   alpha_2_code: 'HM'
@@ -1754,10 +1754,10 @@
   longitude: '73.504157'
   un_locode: 'HM'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Hindistan'
   alpha_2_code: 'IN'
@@ -1816,8 +1816,8 @@
   mernis_code: '9902'
   sms_delivery_report: false
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Hong Kong'
   alpha_2_code: 'HK'
@@ -1894,10 +1894,10 @@
   longitude: '-77.297508'
   un_locode: 'JM'
   mernis_code: '9913'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Japonya'
   alpha_2_code: 'JP'
@@ -2014,10 +2014,10 @@
   longitude: '19.37439'
   un_locode: 'ME'
   mernis_code: '9770'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Katar'
   alpha_2_code: 'QA'
@@ -2036,8 +2036,8 @@
   mernis_code: '9953'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Kazakistan'
   alpha_2_code: 'KZ'
@@ -2054,10 +2054,10 @@
   longitude: '66.923684'
   un_locode: 'KZ'
   mernis_code: '9822'
-  sms_delivery_report: 
+  sms_delivery_report: false
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Kenya'
   alpha_2_code: 'KE'
@@ -2076,8 +2076,8 @@
   mernis_code: '9916'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Kiribati'
   alpha_2_code: 'KI'
@@ -2096,8 +2096,8 @@
   mernis_code: '9800'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Kolombiya'
   alpha_2_code: 'CO'
@@ -2134,10 +2134,10 @@
   longitude: '43.3333'
   un_locode: 'KM'
   mernis_code: '9870'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Kongo'
   alpha_2_code: 'CG'
@@ -2156,8 +2156,8 @@
   mernis_code: '9871'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Kongo Demokratik Cumhuriyeti'
   alpha_2_code: 'CD'
@@ -2214,10 +2214,10 @@
   longitude: '127.510093'
   un_locode: 'KP'
   mernis_code: '9775'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Kosta Rika'
   alpha_2_code: 'CR'
@@ -2236,8 +2236,8 @@
   mernis_code: '9872'
   sms_delivery_report: false
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Kuveyt'
   alpha_2_code: 'KW'
@@ -2256,8 +2256,8 @@
   mernis_code: '9917'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Kuzey Meryem Adaları'
   alpha_2_code: 'MP'
@@ -2274,10 +2274,10 @@
   longitude: '145.6739'
   un_locode: 'MP'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Küba'
   alpha_2_code: 'CU'
@@ -2296,8 +2296,8 @@
   mernis_code: '9873'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Kuzey Kıbrıs Türk Cumhuriyeti'
   alpha_2_code: 'CY'
@@ -2316,8 +2316,8 @@
   mernis_code: '9875'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Kırgızistan'
   alpha_2_code: 'KG'
@@ -2336,8 +2336,8 @@
   mernis_code: '9823'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Lao Demokratik Halk Cumhuriyeti'
   alpha_2_code: 'LA'
@@ -2394,10 +2394,10 @@
   longitude: '28.233608'
   un_locode: 'LS'
   mernis_code: '9920'
-  sms_delivery_report: 
+  sms_delivery_report: false
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Liberya'
   alpha_2_code: 'LR'
@@ -2414,10 +2414,10 @@
   longitude: '-9.429499'
   un_locode: 'LR'
   mernis_code: '9921'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Libya'
   alpha_2_code: 'LY'
@@ -2436,8 +2436,8 @@
   mernis_code: '9922'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Lihtenştayn'
   alpha_2_code: 'LI'
@@ -2454,10 +2454,10 @@
   longitude: '9.555373'
   un_locode: 'LI'
   mernis_code: '9923'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Litvanya'
   alpha_2_code: 'LT'
@@ -2496,8 +2496,8 @@
   mernis_code: '9919'
   sms_delivery_report: true
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Lüksemburg'
   alpha_2_code: 'LU'
@@ -2536,8 +2536,8 @@
   mernis_code: '9903'
   sms_delivery_report: true
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Madagaskar'
   alpha_2_code: 'MG'
@@ -2556,8 +2556,8 @@
   mernis_code: '9925'
   sms_delivery_report: false
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Makao'
   alpha_2_code: 'MO'
@@ -2616,8 +2616,8 @@
   mernis_code: '9926'
   sms_delivery_report: false
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Maldivler'
   alpha_2_code: 'MV'
@@ -2634,10 +2634,10 @@
   longitude: '73.5361035'
   un_locode: 'MV'
   mernis_code: '9928'
-  sms_delivery_report: 
+  sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Malezya'
   alpha_2_code: 'MY'
@@ -2674,10 +2674,10 @@
   longitude: '-3.996166'
   un_locode: 'ML'
   mernis_code: '9929'
-  sms_delivery_report: 
+  sms_delivery_report: false
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Malta'
   alpha_2_code: 'MT'
@@ -2714,10 +2714,10 @@
   longitude: '-4.548056'
   un_locode: 'IM'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Martinik'
   alpha_2_code: 'MQ'
@@ -2734,10 +2734,10 @@
   longitude: '-61.024174'
   un_locode: 'MQ'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Marşal Adaları'
   alpha_2_code: 'MH'
@@ -2756,8 +2756,8 @@
   mernis_code: '9827'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Mauritius'
   alpha_2_code: 'MU'
@@ -2776,8 +2776,8 @@
   mernis_code: 
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Mayotte'
   alpha_2_code: 'YT'
@@ -2796,8 +2796,8 @@
   mernis_code: 
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Meksika'
   alpha_2_code: 'MX'
@@ -2816,7 +2816,7 @@
   mernis_code: '9933'
   sms_delivery_report: false
   sms_alpha_sender_id: false
-  sms_unicode: 
+  sms_unicode: false
   sms_concatenation: false
 -
   name: 'Mikronezya Federe Devletleri'
@@ -2836,8 +2836,8 @@
   mernis_code: '9828'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Minor Outlying Adaları Birleşik Devletleri'
   alpha_2_code: 'UM'
@@ -2854,10 +2854,10 @@
   longitude: '166.647047'
   un_locode: 'UM'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Miyanmar'
   alpha_2_code: 'MM'
@@ -2895,9 +2895,9 @@
   un_locode: 'MD'
   mernis_code: '9829'
   sms_delivery_report: false
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Monako'
   alpha_2_code: 'MC'
@@ -2934,10 +2934,10 @@
   longitude: '-62.187366'
   un_locode: 'MS'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Moritanya'
   alpha_2_code: 'MR'
@@ -2954,10 +2954,10 @@
   longitude: '-10.940835'
   un_locode: 'MR'
   mernis_code: '9931'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Mozambik'
   alpha_2_code: 'MZ'
@@ -2976,8 +2976,8 @@
   mernis_code: '9936'
   sms_delivery_report: false
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Moğolistan'
   alpha_2_code: 'MN'
@@ -3016,8 +3016,8 @@
   mernis_code: '9884'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Namibya'
   alpha_2_code: 'NA'
@@ -3036,8 +3036,8 @@
   mernis_code: '9830'
   sms_delivery_report: false
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Nauru'
   alpha_2_code: 'NR'
@@ -3054,10 +3054,10 @@
   longitude: '166.931503'
   un_locode: 'NR'
   mernis_code: '9803'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Nepal'
   alpha_2_code: 'NP'
@@ -3076,8 +3076,8 @@
   mernis_code: '9937'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Nie'
   alpha_2_code: 'NU'
@@ -3094,10 +3094,10 @@
   longitude: '-169.867233'
   un_locode: 'NU'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Nijer'
   alpha_2_code: 'NE'
@@ -3136,8 +3136,8 @@
   mernis_code: '9942'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Nikaragua'
   alpha_2_code: 'NI'
@@ -3156,8 +3156,8 @@
   mernis_code: '9940'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Norfolk Adası'
   alpha_2_code: 'NF'
@@ -3174,10 +3174,10 @@
   longitude: '167.954712'
   un_locode: 'NF'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Norveç'
   alpha_2_code: 'NO'
@@ -3214,10 +3214,10 @@
   longitude: '20.939444'
   un_locode: 'CF'
   mernis_code: '9865'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Pakistan'
   alpha_2_code: 'PK'
@@ -3254,10 +3254,10 @@
   longitude: '134.58252'
   un_locode: 'PW'
   mernis_code: '9804'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Panama'
   alpha_2_code: 'PA'
@@ -3276,8 +3276,8 @@
   mernis_code: '9946'
   sms_delivery_report: false
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Papua Yeni Gine'
   alpha_2_code: 'PG'
@@ -3296,8 +3296,8 @@
   mernis_code: '9947'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Paraguay'
   alpha_2_code: 'PY'
@@ -3316,8 +3316,8 @@
   mernis_code: '9948'
   sms_delivery_report: false
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Peru'
   alpha_2_code: 'PE'
@@ -3336,8 +3336,8 @@
   mernis_code: '9949'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Pitcairn'
   alpha_2_code: 'PN'
@@ -3354,10 +3354,10 @@
   longitude: '-128.3242376'
   un_locode: 'PN'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Polonya'
   alpha_2_code: 'PL'
@@ -3416,8 +3416,8 @@
   mernis_code: 
   sms_delivery_report: false
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Romanya'
   alpha_2_code: 'RO'
@@ -3436,7 +3436,7 @@
   mernis_code: '9954'
   sms_delivery_report: true
   sms_alpha_sender_id: true
-  sms_unicode: 
+  sms_unicode: false
   sms_concatenation: true
 -
   name: 'Ruanda'
@@ -3496,8 +3496,8 @@
   mernis_code: 
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Samoa'
   alpha_2_code: 'WS'
@@ -3514,10 +3514,10 @@
   longitude: '-172.104629'
   un_locode: 'WS'
   mernis_code: '9958'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'San Marino'
   alpha_2_code: 'SM'
@@ -3534,10 +3534,10 @@
   longitude: '12.457777'
   un_locode: 'SM'
   mernis_code: '9805'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Sao Tome ve Principe'
   alpha_2_code: 'ST'
@@ -3556,8 +3556,8 @@
   mernis_code: '9959'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Sen Barthélemy'
   alpha_2_code: 'BL'
@@ -3574,10 +3574,10 @@
   longitude: '-62.833333'
   un_locode: 'BL'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Sen Helen, Ascension and Tristan da Cunha'
   alpha_2_code: 'SH'
@@ -3594,10 +3594,10 @@
   longitude: '-5.7115281'
   un_locode: 'SH'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Sen Kitts ve Nevis'
   alpha_2_code: 'KN'
@@ -3614,10 +3614,10 @@
   longitude: '-62.782998'
   un_locode: 'KN'
   mernis_code: '9806'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Sen Lucia'
   alpha_2_code: 'LC'
@@ -3634,10 +3634,10 @@
   longitude: '-60.978893'
   un_locode: 'LC'
   mernis_code: '9956'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Sen Martin (Fransız kısmı)'
   alpha_2_code: 'MF'
@@ -3654,10 +3654,10 @@
   longitude: '-63.052251'
   un_locode: 'MF'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Sen Martin (Hollanda kısmı)'
   alpha_2_code: 'SX'
@@ -3674,10 +3674,10 @@
   longitude: '-63.05483'
   un_locode: 'SX'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Sen Piyer ve Miquelon'
   alpha_2_code: 'PM'
@@ -3694,10 +3694,10 @@
   longitude: '-56.3159'
   un_locode: 'PM'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Sen Vinsınt ve Granadalar'
   alpha_2_code: 'VC'
@@ -3714,10 +3714,10 @@
   longitude: '-61.197162'
   un_locode: 'VC'
   mernis_code: '9957'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Senegal'
   alpha_2_code: 'SN'
@@ -3754,10 +3754,10 @@
   longitude: '-81.2546'
   un_locode: 'KY'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Seyşeller'
   alpha_2_code: 'SC'
@@ -3776,8 +3776,8 @@
   mernis_code: '9962'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Sierra Leone'
   alpha_2_code: 'SL'
@@ -3796,8 +3796,8 @@
   mernis_code: '9963'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Singapur'
   alpha_2_code: 'SG'
@@ -3836,8 +3836,8 @@
   mernis_code: '9832'
   sms_delivery_report: true
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Slovenya'
   alpha_2_code: 'SI'
@@ -3856,8 +3856,8 @@
   mernis_code: '9833'
   sms_delivery_report: true
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Solomon Adaları'
   alpha_2_code: 'SB'
@@ -3876,8 +3876,8 @@
   mernis_code: '9965'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Somali'
   alpha_2_code: 'SO'
@@ -3896,8 +3896,8 @@
   mernis_code: '9966'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Sri Lanka'
   alpha_2_code: 'LK'
@@ -3916,8 +3916,8 @@
   mernis_code: '9969'
   sms_delivery_report: true
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Sudan'
   alpha_2_code: 'SD'
@@ -3936,8 +3936,8 @@
   mernis_code: '9970'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Surinam'
   alpha_2_code: 'SR'
@@ -3954,10 +3954,10 @@
   longitude: '-56.027783'
   un_locode: 'SR'
   mernis_code: '9971'
-  sms_delivery_report: 
+  sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Suriye Arap Cumhuriyeti'
   alpha_2_code: 'SY'
@@ -3976,8 +3976,8 @@
   mernis_code: '9975'
   sms_delivery_report: false
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Suudi Arabistan'
   alpha_2_code: 'SA'
@@ -4014,10 +4014,10 @@
   longitude: '23.670272'
   un_locode: 'SJ'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Svaziland'
   alpha_2_code: 'SZ'
@@ -4034,10 +4034,10 @@
   longitude: '31.465866'
   un_locode: 'SZ'
   mernis_code: '9972'
-  sms_delivery_report: 
+  sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Sırbistan'
   alpha_2_code: 'RS'
@@ -4056,8 +4056,8 @@
   mernis_code: '9771'
   sms_delivery_report: true
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Tacikistan'
   alpha_2_code: 'TJ'
@@ -4076,8 +4076,8 @@
   mernis_code: '9834'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Tanzanya Birleşik Cumhuriyeti'
   alpha_2_code: 'TZ'
@@ -4096,8 +4096,8 @@
   mernis_code: '9987'
   sms_delivery_report: true
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Tayland'
   alpha_2_code: 'TH'
@@ -4154,10 +4154,10 @@
   longitude: '125.727539'
   un_locode: 'TL'
   mernis_code: 
-  sms_delivery_report: 
+  sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Togo'
   alpha_2_code: 'TG'
@@ -4176,8 +4176,8 @@
   mernis_code: '9977'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Tokelau'
   alpha_2_code: 'TK'
@@ -4194,10 +4194,10 @@
   longitude: '-171.8484'
   un_locode: 'TK'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Tonga'
   alpha_2_code: 'TO'
@@ -4214,10 +4214,10 @@
   longitude: '-175.198242'
   un_locode: 'TO'
   mernis_code: '9807'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Trinidad ve Tobago'
   alpha_2_code: 'TT'
@@ -4234,10 +4234,10 @@
   longitude: '-61.222503'
   un_locode: 'TT'
   mernis_code: '9978'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Tunus'
   alpha_2_code: 'TN'
@@ -4256,8 +4256,8 @@
   mernis_code: '9979'
   sms_delivery_report: false
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Tuvalu'
   alpha_2_code: 'TV'
@@ -4274,10 +4274,10 @@
   longitude: '178.679924'
   un_locode: 'TV'
   mernis_code: '9808'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Türk ve Kaykos Adaları'
   alpha_2_code: 'TC'
@@ -4294,10 +4294,10 @@
   longitude: '-71.797928'
   un_locode: 'TC'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Türkiye'
   alpha_2_code: 'TR'
@@ -4336,8 +4336,8 @@
   mernis_code: '9835'
   sms_delivery_report: false
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Uganda'
   alpha_2_code: 'UG'
@@ -4356,8 +4356,8 @@
   mernis_code: '9981'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Ukrayna'
   alpha_2_code: 'UA'
@@ -4394,7 +4394,7 @@
   longitude: '55.975413'
   un_locode: 'OM'
   mernis_code: '9944'
-  sms_delivery_report: 
+  sms_delivery_report: false
   sms_alpha_sender_id: true
   sms_unicode: false
   sms_concatenation: true
@@ -4416,8 +4416,8 @@
   mernis_code: '9990'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Vanuatu'
   alpha_2_code: 'VU'
@@ -4434,10 +4434,10 @@
   longitude: '166.959158'
   un_locode: 'VU'
   mernis_code: '9991'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Vatikan'
   alpha_2_code: 'VA'
@@ -4454,10 +4454,10 @@
   longitude: '12.453389'
   un_locode: 'VA'
   mernis_code: '9799'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Venezuella Bolivya Cumhuriyeti'
   alpha_2_code: 'VE'
@@ -4494,10 +4494,10 @@
   longitude: '-23.6051868'
   un_locode: 'CV'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Vietnam'
   alpha_2_code: 'VN'
@@ -4534,10 +4534,10 @@
   longitude: '-178.1165'
   un_locode: 'WF'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Yemen'
   alpha_2_code: 'YE'
@@ -4556,8 +4556,8 @@
   mernis_code: '9994'
   sms_delivery_report: false
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Yeni Kaledonya'
   alpha_2_code: 'NC'
@@ -4574,10 +4574,10 @@
   longitude: '165.618042'
   un_locode: 'NC'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Yeni Zelanda'
   alpha_2_code: 'NZ'
@@ -4596,7 +4596,7 @@
   mernis_code: '9939'
   sms_delivery_report: true
   sms_alpha_sender_id: false
-  sms_unicode: 
+  sms_unicode: false
   sms_concatenation: true
 -
   name: 'Yunanistan'
@@ -4634,10 +4634,10 @@
   longitude: '27.849332'
   un_locode: 'ZM'
   mernis_code: '9997'
-  sms_delivery_report: 
+  sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Zimbabve'
   alpha_2_code: 'ZW'
@@ -4674,10 +4674,10 @@
   longitude: '19.9156105'
   un_locode: 'AX'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Çad'
   alpha_2_code: 'TD'
@@ -4694,10 +4694,10 @@
   longitude: '18.732207'
   un_locode: 'TD'
   mernis_code: '9866'
-  sms_delivery_report: 
+  sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Çek Cumhuriyeti'
   alpha_2_code: 'CZ'
@@ -4716,8 +4716,8 @@
   mernis_code: '9817'
   sms_delivery_report: true
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Çin'
   alpha_2_code: 'CN'
@@ -4737,7 +4737,7 @@
   sms_delivery_report: true
   sms_alpha_sender_id: false
   sms_unicode: true
-  sms_concatenation: 
+  sms_concatenation: false
 -
   name: 'Özbekistan'
   alpha_2_code: 'UZ'
@@ -4754,10 +4754,10 @@
   longitude: '64.585262'
   un_locode: 'UZ'
   mernis_code: '9836'
-  sms_delivery_report: 
+  sms_delivery_report: false
   sms_alpha_sender_id: false
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Ürdün'
   alpha_2_code: 'JO'
@@ -4776,8 +4776,8 @@
   mernis_code: '9915'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'İngiliz Virgin Adaları'
   alpha_2_code: 'VG'
@@ -4794,10 +4794,10 @@
   longitude: '-64.639968'
   un_locode: 'VG'
   mernis_code: 
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'İran İslam Cumhuriyeti'
   alpha_2_code: 'IR'
@@ -4836,7 +4836,7 @@
   mernis_code: '9974'
   sms_delivery_report: true
   sms_alpha_sender_id: true
-  sms_unicode: 
+  sms_unicode: false
   sms_concatenation: true
 -
   name: 'İzlanda'
@@ -4856,8 +4856,8 @@
   mernis_code: '9904'
   sms_delivery_report: true
   sms_alpha_sender_id: true
-  sms_unicode: 
-  sms_concatenation: 
+  sms_unicode: false
+  sms_concatenation: false
 -
   name: 'Şili'
   alpha_2_code: 'CL'
@@ -4877,7 +4877,7 @@
   sms_delivery_report: false
   sms_alpha_sender_id: false
   sms_unicode: false
-  sms_concatenation: 
+  sms_concatenation: false
 -
   name: 'İsrail'
   alpha_2_code: 'IL'
@@ -4896,7 +4896,7 @@
   mernis_code: '9910'
   sms_delivery_report: false
   sms_alpha_sender_id: true
-  sms_unicode: 
+  sms_unicode: false
   sms_concatenation: true
 -
   name: 'İspanya'
@@ -4994,7 +4994,7 @@
   longitude: '20.341662'
   un_locode: 'XK'
   mernis_code: '9773'
-  sms_delivery_report: 
-  sms_alpha_sender_id: 
-  sms_unicode: 
-  sms_concatenation: 
+  sms_delivery_report: false
+  sms_alpha_sender_id: false
+  sms_unicode: false
+  sms_concatenation: false
