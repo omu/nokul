@@ -62,6 +62,10 @@ gem 'rollbar', github: 'rollbar/rollbar-gem'
 # permalinks
 gem 'friendly_id', '~> 5.2.0'
 
+# sms
+gem 'nexmo'
+gem 'smstools'
+
 group :development, :test do
   gem 'brakeman', require: false
   gem 'bullet', github: 'flyerhzm/bullet'

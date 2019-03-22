@@ -1,3 +1,6 @@
 tr:
   errors:
-    invalid_id: Geçersiz T.C. Kimlik Numarası
+    invalid_phone_number: Geçerli bir telefon numarası değil!
+    can_not_be_concatenated: Bu mesaj tek bir SMS için fazla uzun veya alıcı ülke mesaj birleştirmeyi desteklemiyor!
+    encoding_mismatch: Mesaj metin kodlaması talep edilen kodlama ile eşleşmiyor!
+    unicode_not_supported: Alıcı numara unicode desteklemiyor!
