@@ -9,7 +9,7 @@ class Object
     yaml << "\n"
   end
 
-  module TypeCop
+  module Type__ # rubocop:disable Naming/ClassAndModuleCamelCase
     module_function
 
     def sanitize_arguments(*args)
@@ -22,7 +22,7 @@ class Object
       "#{type} expected where found: #{object.class}" unless object.is_a? type
     end
 
-    def ensure_array(object, type)
+    def must_be_array(object, type)
       sanitize_arguments(sample_type = type.first)
 
       object.each do |element|
@@ -34,7 +34,7 @@ class Object
       nil
     end
 
-    def ensure_hash(object, type)
+    def must_be_hash(object, type)
       sanitize_arguments(*(key_type, value_type = type.first))
 
       object.each do |key, value|
@@ -50,7 +50,7 @@ class Object
       nil
     end
 
-    def ensure_range(object, type)
+    def must_be_range(object, type)
       sanitize_arguments(starting_type = type.first)
       sanitize_arguments(ending_type = type.first)
 
@@ -61,35 +61,35 @@ class Object
       type_error(object.last, ending_type)
     end
 
-    def ensure_scalar(object, type)
+    def must_be_other(object, type)
       type_error(object, type)
     end
 
-    def ensure_one(object, type)
+    def must_be(object, type)
       case type
-      when Array then ensure_array(object, type)
-      when Hash  then ensure_hash(object, type)
-      when Range then ensure_range(object, type)
-      else            ensure_scalar(object, type)
+      when Array then must_be_array(object, type)
+      when Hash  then must_be_hash(object, type)
+      when Range then must_be_range(object, type)
+      else            must_be_other(object, type)
       end
     end
 
-    def ensure!(object, *args)
+    def must_be_any_of(object, *args)
       return object if args.empty?
       return object unless (first = (types = args.dup).shift)
-      return object unless (error = ensure_one(object, first))
+      return object unless (error = must_be(object, first))
 
       raise(TypeError, error) if types.empty?
 
-      return object if types.any? { |type| ensure_one(object, type).nil? }
+      return object if types.any? { |type| must_be(object, type).nil? }
 
       raise TypeError, "One of #{args} expected where found: #{object.class}"
     end
   end
 
-  private_constant :TypeCop
+  private_constant :Type__
 
   def must_be_any_of!(*args)
-    TypeCop.ensure!(self, *args)
+    Type__.must_be_any_of(self, *args)
   end
 end
