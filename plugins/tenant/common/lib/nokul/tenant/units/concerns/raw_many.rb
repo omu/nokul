@@ -49,7 +49,7 @@ module Nokul
 
           refine String do
             def capitalize_and_fix
-              capitalized = capitalize_turkish_with_dashed_and_paranthesised
+              capitalized = capitalize_turkish_with_dashed_and_parenthesized
               FIX_AFTER_CAPITALIZE.each do |find, replace|
                 capitalized.gsub!(/(?<!\w)#{Regexp.escape(find)}(?!\w)/, replace)
               end
@@ -57,8 +57,8 @@ module Nokul
             end
 
             # FIXME: This will eventually be replaced with a better implementation
-            def capitalize_turkish_with_dashed_and_paranthesised
-              capitalize_turkish_with_paranthesised.split.map do |word|
+            def capitalize_turkish_with_dashed_and_parenthesized
+              capitalize_turkish_with_parenthesized.split.map do |word|
                 next word unless word =~ /-/
 
                 word.split('-').map do |dashed|
