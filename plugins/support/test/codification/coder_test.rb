@@ -4,9 +4,9 @@ require 'test_helper'
 
 module Nokul
   module Support
-    module  Codification
+    module Codification
       class CoderTest < ActiveSupport::TestCase
-        test 'default options should be duplicated' do
+        module TestOne
           class Foo < Coder
             setup foo: 13
           end
@@ -14,18 +14,20 @@ module Nokul
           class Bar < Foo
             setup foo: 19, bar: 23
           end
+        end
 
-          assert_equal 13, Foo.default_options[:foo]
-          assert_nil       Foo.default_options[:bar]
-          assert_equal 19, Bar.default_options[:foo]
-          assert_equal 23, Bar.default_options[:bar]
+        test 'default options should be duplicated' do
+          assert_equal 13, TestOne::Foo.default_options[:foo]
+          assert_nil       TestOne::Foo.default_options[:bar]
+          assert_equal 19, TestOne::Bar.default_options[:foo]
+          assert_equal 23, TestOne::Bar.default_options[:bar]
         end
 
         test 'only codes should be accepted' do
           assert_raise(TypeError) { Coder.new 13 }
         end
 
-        test 'loop guard works' do
+        module TestTwo
           class Bogus < Code
             def emit
               %w[same]
@@ -35,8 +37,10 @@ module Nokul
               source
             end
           end
+        end
 
-          coder = Coder.new Bogus.new(0..Float::INFINITY)
+        test 'loop guard works' do
+          coder = Coder.new TestTwo::Bogus.new(0..Float::INFINITY)
 
           coder.run
           err = assert_raise(Error) { coder.run }

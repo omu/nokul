@@ -14,18 +14,20 @@ module Nokul
           assert_equal 'FOO', Processor.new(post_process: proc { |s| s.upcase }).process(Object.new, 'foo')
         end
 
-        test 'builtins work' do
+        module TestOne
           class Dummy
             attr_reader :options
             def initialize(**options)
               @options = options.dup
             end
           end
+        end
 
+        test 'builtins work' do
           processor = Processor.new post_process: %i[non_offensive? non_reserved? random_suffix]
-          assert_match(/^foo.\d{3}$/, processor.process(Dummy.new, 'foo'))
-          assert_raise(Skip) { processor.process(Dummy.new, 'salak') }
-          assert_raise(Skip) { processor.process(Dummy.new, 'if') }
+          assert_match(/^foo.\d{3}$/, processor.process(TestOne::Dummy.new, 'foo'))
+          assert_raise(Skip) { processor.process(TestOne::Dummy.new, 'salak') }
+          assert_raise(Skip) { processor.process(TestOne::Dummy.new, 'if') }
         end
 
         test 'should accept a builtin_post_process option' do
@@ -55,14 +57,17 @@ module Nokul
           assert_raise(Skip) { Processor.new(post_process: :xxx?).process(Object.new, 'foo') }
         end
 
-        test 'processes should be able to access instance' do
+        module TestTwo
           class Dummy
             def internal
               'bar'
             end
           end
+        end
 
-          assert_equal 'barfoo', Processor.new(post_process: proc { |s| internal + s }).process(Dummy.new, 'foo')
+        test 'processes should be able to access instance' do
+          assert_equal 'barfoo', Processor.new(post_process: proc { |s| internal + s }).process(TestTwo::Dummy.new,
+                                                                                                'foo')
         end
       end
     end
