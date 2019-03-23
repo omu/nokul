@@ -26,7 +26,7 @@
               <tr>
                 <td><%= course_group.name %></td>
                 <td><%= course_group.total_ects_condition %></td>
-                <td><%= course_group.unit.try(:name) %></td>
+                <td><%= course_group.unit.try(:names_depth_cache) %></td>
                 <td><%= course_group.course_group_type.try(:name) %></td>
                 <td><%= link_to_actions(course_group) %></td>
               </tr>

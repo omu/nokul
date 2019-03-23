@@ -35,7 +35,7 @@
               <tr class="<%= course.active? ? '' : 'table-warning' %>">
                 <td><%= course.name %></td>
                 <td><%= course.code %></td>
-                <td><%= course.unit.try(:name) %></td>
+                <td><%= course.unit.try(:names_depth_cache) %></td>
                 <td><%= course.course_type.try(:name) %></td>
                 <td>
                   <span class="badge badge-primary">T: <%= course.theoric %></span>

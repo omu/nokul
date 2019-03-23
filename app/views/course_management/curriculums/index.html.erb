@@ -23,7 +23,7 @@
             <% @curriculums.each do |curriculum| %>
               <tr class="<%= curriculum.active? ? '' : 'table-warning' %>">
                 <td><%= link_to curriculum.name, curriculum %></td>
-                <td><%= curriculum.unit.try(:name) %></td>
+                <td><%= curriculum.unit.try(:names_depth_cache) %></td>
                 <td><%= curriculum.semesters_count %></td>
                 <td><%= enum_t(curriculum, :status) %></td>
                 <td><%= link_to_actions(curriculum) %></td>
