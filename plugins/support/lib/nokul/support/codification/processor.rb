@@ -41,7 +41,7 @@ module Nokul
         end
 
         def initialize(**options)
-          @processors = build options.dup.extract!(:builtin_post_process, :post_process).values.flatten
+          @processors = build options.dup.extract!(:builtin_post_process, :post_process).values.flatten.compact
         end
 
         def process(instance, string, **options)
