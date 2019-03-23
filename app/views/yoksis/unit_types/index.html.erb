@@ -1,0 +1,8 @@
+<%= render 'layouts/builders/index',
+           namespace: 'yoksis',
+           klass: 'unit_type',
+           collection: @unit_types,
+           pagy: @pagy,
+           card_header: t('.card_header'),
+           params: %w[name code group],
+           actions: %w[edit destroy] %>

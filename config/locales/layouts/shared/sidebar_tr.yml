@@ -3,10 +3,8 @@ tr:
     shared:
       sidebar:
         academic_calendars: Akademik Takvimler
-        academic_terms: Akademik Dönemler
-        admin: Yönetici İşlemleri
+        administration: Yönetim
         agenda_types: Gündem Türleri
-        assessment_methods: Ölçme Kriterleri
         available_courses: Açılan Dersler
         calendar_event_types: Olay Türleri
         calendar_management: Takvim Yönetimi
@@ -15,36 +13,15 @@ tr:
         committees: Kurullar/Komisyonlar
         courses: Dersler
         course_groups: Ders Grupları
-        course_group_types: Ders Grup Türleri
         course_management: Ders İşlemleri
-        course_types: Ders Türleri
         course_unit_groups: Ders Grupları
         curriculums: Müfredatlar
-        definitions: Tanımlar
-        document_types: Belge Türleri
-        evaluation_types: Değerlendirme Türleri
         first_registration: İlk Kayıt
         high_school_types: Lise Türleri
-        languages: Diller
-        locations: Konumlar
         prospective_students: Yerleşen Öğrenciler
+        references: Tanımlar
         registration_documents: İstenen Belgeler
-        student_disability_types: Engel Türleri
-        student_drop_out_types: Ayrılma Nedenleri
-        student_education_levels: Eğitim Düzeyleri
-        student_entrance_point_types: Giriş Puan Türleri
-        student_entrance_types: Giriş Türleri
-        student_grades: Sınıflar
-        student_grading_systems: Not Sistemleri
-        student_punishment_types: Ceza Türleri
-        student_studentship_statuses: Öğrencilik Hakları
         studies: Akademik Çalışmalar
-        titles: Unvanlar
-        unit_instruction_languages: Öğrenim Dilleri
-        unit_instruction_types: Öğrenim Türleri
-        unit_statuses: Aktiflik Durumları
-        unit_types: Birim Türleri
         units: Birimler
-        university_types: Üniversite Türleri
         users: Kullanıcılar
         yoksis: YÖKSİS

@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 1cdc6c6576afe9a9fa67a6b313080a7dc62188d9
+  revision: efb706daad0e2e1039c6abb4879c837ef8bf4d10
   specs:
     actioncable (6.0.0.beta3)
       actionpack (= 6.0.0.beta3)
@@ -63,7 +63,7 @@ GIT
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-      zeitwerk (~> 1.3, >= 1.3.4)
+      zeitwerk (~> 1.4)
     rails (6.0.0.beta3)
       actioncable (= 6.0.0.beta3)
       actionmailbox (= 6.0.0.beta3)
@@ -98,9 +98,9 @@ GIT
 
 GIT
   remote: https://github.com/rollbar/rollbar-gem.git
-  revision: 3c66a47be634fb56a32a390ec3b8e32e2b6c49ed
+  revision: 83ef1acca2b0b1d1b74ff8ef29435ca82e8ca1d6
   specs:
-    rollbar (2.19.2)
+    rollbar (2.19.3)
       multi_json
 
 PATH
@@ -133,18 +133,17 @@ GEM
       io-like (~> 0.3.0)
     ast (2.4.0)
     aws-eventstream (1.0.2)
-    aws-partitions (1.144.0)
-    aws-sdk-core (3.47.0)
+    aws-partitions (1.145.0)
+    aws-sdk-core (3.48.2)
       aws-eventstream (~> 1.0, >= 1.0.2)
       aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.1)
-      http-2 (~> 0.10)
       jmespath (~> 1.0)
-    aws-sdk-kms (1.14.0)
-      aws-sdk-core (~> 3, >= 3.47.0)
+    aws-sdk-kms (1.16.0)
+      aws-sdk-core (~> 3, >= 3.48.2)
       aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.32.0)
-      aws-sdk-core (~> 3, >= 3.47.0)
+    aws-sdk-s3 (1.34.0)
+      aws-sdk-core (~> 3, >= 3.48.2)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.0)
     aws-sigv4 (1.1.0)
@@ -161,13 +160,13 @@ GEM
     bindex (0.5.0)
     bootsnap (1.4.1)
       msgpack (~> 1.0)
-    brakeman (4.4.0)
+    brakeman (4.5.0)
     builder (3.2.3)
     bundler-audit (0.6.1)
       bundler (>= 1.2.0, < 3)
       thor (~> 0.18)
-    byebug (11.0.0)
-    capybara (3.14.0)
+    byebug (11.0.1)
+    capybara (3.15.0)
       addressable
       mini_mime (>= 0.1.3)
       nokogiri (~> 1.8)
@@ -233,7 +232,6 @@ GEM
       activesupport (>= 4.2)
     hashdiff (0.3.8)
     html_tokenizer (0.0.7)
-    http-2 (0.10.1)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     image_processing (1.8.0)
@@ -278,9 +276,9 @@ GEM
     nokogiri (1.10.1)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
-    pagy (2.1.2)
+    pagy (2.1.3)
     parallel (1.14.0)
-    parser (2.6.0.0)
+    parser (2.6.2.0)
       ast (~> 2.4.0)
     pg (1.1.4)
     pg_search (2.1.4)
@@ -288,7 +286,6 @@ GEM
       activesupport (>= 4.2)
     pghero (2.2.0)
       activerecord
-    powerpack (0.1.2)
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -296,7 +293,7 @@ GEM
       pry (>= 0.10.4)
     psych (3.1.0)
     public_suffix (3.0.3)
-    puma (3.12.0)
+    puma (3.12.1)
     pwned (1.2.1)
     rack (2.0.6)
     rack-attack (5.4.2)
@@ -327,15 +324,14 @@ GEM
     responders (2.4.1)
       actionpack (>= 4.2.0, < 6.0)
       railties (>= 4.2.0, < 6.0)
-    rubocop (0.65.0)
+    rubocop (0.66.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.5, != 2.5.1.1)
-      powerpack (~> 0.1)
       psych (>= 3.1.0)
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
-      unicode-display_width (~> 1.4.0)
+      unicode-display_width (>= 1.4.0, < 1.6)
     ruby-progressbar (1.10.0)
     ruby-vips (2.0.13)
       ffi (~> 1.9)
@@ -394,7 +390,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.5)
-    unicode-display_width (1.4.1)
+    unicode-display_width (1.5.0)
     uniform_notifier (1.12.1)
     warden (1.2.8)
       rack (>= 2.0.6)
@@ -409,10 +405,11 @@ GEM
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
-    wicked_pdf (1.1.0)
+    wicked_pdf (1.2.1)
+      activesupport
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (1.3.4)
+    zeitwerk (1.4.0)
 
 PLATFORMS
   ruby

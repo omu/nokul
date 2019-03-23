@@ -1,0 +1,24 @@
+tr:
+  activerecord:
+    attributes:
+      language: &language_attributes
+        iso: ISO Kodu
+        name: Dilin Adı
+  helpers:
+    submit:
+      language:
+        create: Dil Oluştur
+        update: Dil Güncelle
+  reference:
+    languages:
+      create:
+        success: Dil başarıyla oluşturuldu.
+      destroy:
+        success: Dil başarıyla silindi!
+        warning: Dil silinemedi.
+      index:
+        <<: *language_attributes
+        card_header: Diller
+        new_language_link: Yeni Dil Oluştur
+      update:
+        success: Dil başarıyla güncellendi.

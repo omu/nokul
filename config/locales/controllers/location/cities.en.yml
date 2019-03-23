@@ -1,0 +1,26 @@
+en:
+  activerecord:
+    attributes:
+      district: &district_attributes
+        city_id: City
+        mernis_code: MERNIS Code
+        name: Name of District
+  helpers:
+    submit:
+      city:
+        create: Create City
+        update: Update City
+  location:
+    cities:
+      show:
+        <<: *district_attributes
+        active: Is Active?
+        card_header: Districts
+        new_district_link: Add a New District
+      create:
+        success: City successfully created.
+      update:
+        success: City successfully updated.
+      destroy:
+        success: City successfully deleted!
+        warning: City can not be deleted.

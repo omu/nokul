@@ -1,0 +1,24 @@
+tr:
+  activerecord:
+    attributes:
+      student_drop_out_type: &student_drop_out_type_attributes
+        code: Kodu
+        name: Öğrenci Ayrılma Nedeni
+  helpers:
+    submit:
+      student_drop_out_type:
+        create: Öğrenci Ayrılma Nedeni Oluştur
+        update: Öğrenci Ayrılma Nedenini Güncelle
+  yoksis:
+    student_drop_out_types:
+      create:
+        success: Öğrenci ayrılma nedeni başarıyla oluşturuldu.
+      destroy:
+        success: Öğrenci ayrılma nedeni başarıyla silindi.
+        warning: Öğrenci ayrılma nedeni silinemedi!
+      index:
+        <<: *student_drop_out_type_attributes
+        card_header: Öğrenci Ayrılma Nedenleri
+        new_student_drop_out_type_link: Yeni Öğrenci Ayrılma Nedeni
+      update:
+        success: Öğrenci ayrılma nedeni başarıyla güncellendi.

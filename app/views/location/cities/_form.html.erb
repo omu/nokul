@@ -1,0 +1,25 @@
+<%= render 'layouts/builders/form',
+           namespace: nil,
+           klass: [@country, @city],
+           params: [
+             {
+               field: 'name',
+               width: 12,
+               required: true
+             },
+             {
+               field: 'alpha_2_code',
+               width: 12,
+               required: true
+             },
+             {
+               field: 'latitude',
+               width: 6,
+               required: true
+             },
+             {
+               field: 'longitude',
+               width: 6,
+               required: true
+             }
+           ] %>

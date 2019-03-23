@@ -50,3 +50,6 @@ senate:
   name: Senato
   code: 100
   group: committee
+unit_type_to_delete:
+  name: Will be Deleted
+  code: 99

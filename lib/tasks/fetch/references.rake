@@ -11,11 +11,6 @@ namespace :fetch do
     progress_bar = ProgressBar.spawn('YOKSIS Referanslar', 15)
 
     %w[
-      UnitType
-      UnitInstructionLanguage
-      UnitInstructionType
-      UnitStatus
-      UniversityType
       AdministrativeFunction
       StudentDisabilityType
       StudentDropOutType
@@ -26,6 +21,11 @@ namespace :fetch do
       StudentGradingSystem
       StudentPunishmentType
       StudentStudentshipStatus
+      UnitType
+      UnitInstructionLanguage
+      UnitInstructionType
+      UnitStatus
+      UniversityType
     ].each do |klass|
       Rake::Task['fetch:reference'].invoke(klass.tableize, klass)
       # https://stackoverflow.com/questions/4822020/why-does-a-rake-task-in-a-loop-execute-only-once

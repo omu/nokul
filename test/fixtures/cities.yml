@@ -2,27 +2,41 @@ samsun:
   name: Samsun
   alpha_2_code: TR-55
   country: turkey
+  latitude: 41.2915327
+  longitude: 36.2786791
 sinop:
   name: Sinop
   alpha_2_code: TR-57
   country: turkey
+  latitude: 41.6523344
+  longitude: 34.5632358
 tokat:
   name: Tokat
   alpha_2_code: TR-50
   country: turkey
+  latitude: 40.3982703
+  longitude: 35.9683269
 rize:
   name: Rize
   alpha_2_code: TR-53
   country: turkey
+  latitude: 41.0315234
+  longitude: 40.5115901
 ordu:
   name: Trabzon
   alpha_2_code: TR-61
   country: turkey
+  latitude: 40.9930009
+  longitude: 39.6962406
 stockholm:
   name: Stockholm
   alpha_2_code: SE-11
   country: sweden
+  latitude: 59.326242
+  longitude: 17.9748958
 adana:
   name: Adana
   alpha_2_code: TR-01
   country: turkey
+  latitude: 36.9975315
+  longitude: 35.2180273

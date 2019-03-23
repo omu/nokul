@@ -10,19 +10,19 @@ module FirstRegistration
     end
 
     test 'should get index' do
-      get first_registration_prospective_students_path
+      get prospective_students_path
       assert_equal 'index', @controller.action_name
       assert_response :success
     end
 
     test 'should get show' do
-      get first_registration_prospective_student_path(@prospective_student)
+      get prospective_student_path(@prospective_student)
       assert_equal 'show', @controller.action_name
       assert_response :success
     end
 
     test 'should get new' do
-      get new_first_registration_prospective_student_path
+      get new_prospective_student_path
       assert_equal 'new', @controller.action_name
       assert_response :success
     end
@@ -41,7 +41,7 @@ module FirstRegistration
       }
 
       assert_difference('ProspectiveStudent.count') do
-        post first_registration_prospective_students_path, params: { prospective_student: parameters }
+        post prospective_students_path, params: { prospective_student: parameters }
       end
 
       assert_equal 'create', @controller.action_name
@@ -52,12 +52,12 @@ module FirstRegistration
         assert_equal value, prospective_student.send(attribute)
       end
 
-      assert_redirected_to [:first_registration, 'prospective_students']
+      assert_redirected_to :prospective_students
       assert_equal translate('.create.success'), flash[:notice]
     end
 
     test 'should get edit' do
-      get edit_first_registration_prospective_student_path(@prospective_student)
+      get edit_prospective_student_path(@prospective_student)
       assert_equal 'edit', @controller.action_name
       assert_response :success
       assert_select '.card-header strong', translate('.edit.form_title')
@@ -65,7 +65,7 @@ module FirstRegistration
 
     test 'should update prospective_student' do
       prospective_student = ProspectiveStudent.last
-      patch first_registration_prospective_student_path(prospective_student), params: {
+      patch prospective_student_path(prospective_student), params: {
         prospective_student: {
           nationality: 'turkish'
         }
@@ -74,7 +74,7 @@ module FirstRegistration
 
       prospective_student.reload
       assert_equal 'turkish', prospective_student.nationality
-      assert_redirected_to first_registration_prospective_student_path(prospective_student)
+      assert_redirected_to prospective_student_path(prospective_student)
       assert_equal translate('.update.success'), flash[:notice]
     end
 
@@ -82,7 +82,7 @@ module FirstRegistration
       skip 'this block on CircleCI since it needs IP permissions to run.' if ENV['CI']
       assert_difference('User.count') do
         assert_difference('Student.count') do
-          get register_first_registration_prospective_student_path(@prospective_student.id)
+          get register_prospective_student_path(@prospective_student.id)
         end
       end
 
@@ -93,7 +93,7 @@ module FirstRegistration
       assert_equal @prospective_student.email, user.email
       assert_equal user, student.user
       assert_equal true, student.permanently_registered
-      assert_redirected_to [:first_registration, 'prospective_students']
+      assert_redirected_to :prospective_students
       assert_equal translate('.register.success'), flash[:notice]
     end
 
@@ -104,7 +104,7 @@ module FirstRegistration
 
       assert_difference('User.count') do
         assert_difference('Student.count') do
-          get register_first_registration_prospective_student_path(john)
+          get register_prospective_student_path(john)
         end
       end
 
@@ -115,19 +115,19 @@ module FirstRegistration
       assert_equal john.email, user.email
       assert_equal user, student.user
       assert_equal false, student.permanently_registered
-      assert_redirected_to [:first_registration, 'prospective_students']
+      assert_redirected_to :prospective_students
       assert_equal translate('.register.success'), flash[:notice]
     end
 
     test 'should not register prospective_student without e-mail' do
       assert_no_difference('User.count') do
         assert_no_difference('Student.count') do
-          get register_first_registration_prospective_student_path(prospective_students(:serhat))
+          get register_prospective_student_path(prospective_students(:serhat))
         end
       end
 
       assert_equal 'register', @controller.action_name
-      assert_redirected_to [:first_registration, 'prospective_students']
+      assert_redirected_to :prospective_students
       assert_equal translate('.register.warning'), flash[:alert]
     end
 

@@ -1,0 +1,24 @@
+tr:
+  activerecord:
+    attributes:
+      administrative_function: &administrative_function_attributes
+        name: İdari Görev
+        code: Kodu
+  helpers:
+    submit:
+      administrative_function:
+        create: İdari Görev Oluştur
+        update: İdari Görevi Güncelle
+  yoksis:
+    administrative_functions:
+      create:
+        success: İdari görev başarıyla oluşturuldu.
+      destroy:
+        success: İdari görev başarıyla silindi!
+        warning: İdari görev silinemedi!
+      index:
+        <<: *administrative_function_attributes
+        card_header: İdari Görevler
+        new_administrative_function_link: Yeni İdari Görev Oluştur
+      update:
+        success: İdari görev başarıyla güncellendi.

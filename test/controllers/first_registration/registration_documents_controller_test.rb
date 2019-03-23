@@ -12,14 +12,14 @@ module FirstRegistration
     end
 
     test 'should get index' do
-      get first_registration_registration_documents_path
+      get registration_documents_path
       assert_equal 'index', @controller.action_name
       assert_response :success
       assert_select '#add-button', translate('.index.new_registration_document_link')
     end
 
     test 'should get new' do
-      get new_first_registration_registration_document_path
+      get new_registration_document_path
 
       assert_equal 'new', @controller.action_name
       assert_response :success
@@ -32,7 +32,7 @@ module FirstRegistration
 
     test 'should create registration_document' do
       assert_difference('RegistrationDocument.count') do
-        post first_registration_registration_documents_path, params: {
+        post registration_documents_path, params: {
           registration_document: {
             unit_id: units(:uzem).id,
             document_type_id: document_types(:ales).id,
@@ -50,12 +50,12 @@ module FirstRegistration
       assert_equal document_types(:ales).name, registration_document.document_type.name
       assert_equal 'Lorem ipsum!', registration_document.description
 
-      assert_redirected_to [:first_registration, 'registration_documents']
+      assert_redirected_to :registration_documents
       assert_equal translate('.create.success'), flash[:notice]
     end
 
     test 'should get edit' do
-      get edit_first_registration_registration_document_path(@registration_document)
+      get edit_registration_document_path(@registration_document)
 
       assert_equal 'edit', @controller.action_name
       assert_response :success
@@ -67,7 +67,7 @@ module FirstRegistration
     end
 
     test 'should update registration_document' do
-      patch first_registration_registration_document_path(@registration_document), params: {
+      patch registration_document_path(@registration_document), params: {
         registration_document: {
           description: 'halo!'
         }
@@ -78,17 +78,17 @@ module FirstRegistration
       assert_equal 'update', @controller.action_name
       assert_equal 'halo!', @registration_document.description
 
-      assert_redirected_to [:first_registration, 'registration_documents']
+      assert_redirected_to :registration_documents
       assert_equal translate('.update.success'), flash[:notice]
     end
 
     test 'should destroy registration_document' do
       assert_difference('RegistrationDocument.count', -1) do
-        delete first_registration_registration_document_path(registration_documents(:registration_document_to_delete))
+        delete registration_document_path(registration_documents(:registration_document_to_delete))
       end
 
       assert_equal 'destroy', @controller.action_name
-      assert_redirected_to [:first_registration, 'registration_documents']
+      assert_redirected_to :registration_documents
       assert_equal translate('.destroy.success'), flash[:notice]
     end
 

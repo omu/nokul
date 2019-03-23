@@ -1,0 +1,24 @@
+tr:
+  activerecord:
+    attributes:
+      student_punishment_type: &student_punishment_type_attributes
+        code: Kodu
+        name: Öğrenci Ceza Türü
+  helpers:
+    submit:
+      student_punishment_type:
+        create: Öğrenci Ceza Türü Oluştur
+        update: Öğrenci Ceza Türünü Güncelle
+  yoksis:
+    student_punishment_types:
+      create:
+        success: Öğrenci ceza türü başarıyla oluşturuldu.
+      destroy:
+        success: Öğrenci ceza türü başarıyla silindi.
+        warning: Öğrenci ceza türü silinemedi!
+      index:
+        <<: *student_punishment_type_attributes
+        card_header: Öğrenci Ceza Türleri
+        new_student_punishment_type_link: Yeni Öğrenci Ceza Türü
+      update:
+        success: Öğrenci ceza türü başarıyla güncellendi.
