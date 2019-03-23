@@ -6,7 +6,7 @@ module Nokul
       class Processor
         class_attribute :processors, instance_writer: false, default: {}
 
-        convey_to_child_on_inheritance :processors
+        inherited_by_conveying_attributes :processors
 
         def self.skip(string, expr = false)
           expr ? string : raise(Skip, string)

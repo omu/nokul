@@ -8,7 +8,7 @@ module Nokul
 
         class_attribute :default_options, instance_writer: false, default: {}
 
-        convey_to_child_on_inheritance :default_options
+        inherited_by_conveying_attributes :default_options
 
         def self.setup(**options)
           default_options.merge!(**options)
