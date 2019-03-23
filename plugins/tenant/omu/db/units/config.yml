@@ -1,3 +1,4 @@
+---
 fetching:
   yok:
     root_id: '121946'
@@ -35,13 +36,13 @@ coding:
       ends: 'HZZ'
       weight: 200
       # skip problematic characters
-      pattern: '[^ILOQWX]'
+      pattern: '^[^ILOQWX]+$'
     - owner: special
       begins: 'Z00'
       ends: 'ZZZ'
       weight: 100
       # skip problematic characters
-      pattern: '[^ILOQWX]'
+      pattern: '^[^ILOQWX]+$'
   reservations:
     # Bilgisayar
     - key: yoksis_id
