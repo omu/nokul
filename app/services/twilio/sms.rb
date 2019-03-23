@@ -1,0 +1,15 @@
+# frozen_string_literal: true
+
+module Twilio
+  class SMS
+    def initialize(to, body)
+      response = TWILIO_CLIENT.messages.create(
+        from: Tenant.credentials.twilio[:sender],
+        to: to,
+        body: body
+      )
+
+      response.sid
+    end
+  end
+end
