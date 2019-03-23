@@ -21,6 +21,8 @@ module Sms
         process_message
       end
 
+      private
+
       def process_message
         check_country
         check_destination_number
@@ -28,8 +30,6 @@ module Sms
         check_encoding
         send_message
       end
-
-      private
 
       def check_country
         @country = Country.find_by(alpha_2_code: @country.upcase)
@@ -62,7 +62,7 @@ module Sms
       end
 
       def send_message
-        response = NEXMO_CLIENT.send(
+        response = NEXMO_CLIENT.sms.send(
           from: Tenant.credentials.dig(:nexmo, :from),
           to: @to_number,
           type: @type,
