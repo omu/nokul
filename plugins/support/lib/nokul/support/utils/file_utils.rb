@@ -19,17 +19,14 @@ module Nokul
       FileUtils.mv(old_file, new_file) unless success
     end
 
-    def with_backup_and_notification(new_file, &block)
+    def with_backup_and_notification(new_file, **options, &block)
       new_file_exist_before = File.exist? new_file
-      return unless with_backup(new_file, &block)
+      return if !with_backup(new_file, &block) || options[:quiet]
 
       old_file_exist = File.exist? old_file = "#{new_file}.old"
-
       return warn 'No change.' if old_file_exist && FileUtils.identical?(new_file, old_file)
 
       warn new_file_exist_before ? "#{new_file} updated due to the changes." : "#{new_file} created."
-
-      warn "\nCompare with #{old_file}." if old_file_exist
     end
 
     def with_status(new_file)
@@ -42,10 +39,12 @@ module Nokul
       old_checksum != new_checksum
     end
 
-    def with_status_and_notification(new_file, &block)
+    def with_status_and_notification(new_file, **options, &block)
       new_file_exist_before = File.exist? new_file
 
-      if (status = with_status(new_file, &block))
+      return (status = with_status(new_file, &block)) if options[:quiet]
+
+      if status
         warn new_file_exist_before ? "#{new_file} updated due to the changes." : "#{new_file} created."
       else
         warn 'No change.'

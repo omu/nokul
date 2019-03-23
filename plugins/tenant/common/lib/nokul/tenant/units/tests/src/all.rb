@@ -31,6 +31,17 @@ module Nokul
               end
               assert_empty offensive_units
             end
+
+            test 'all source files must be in clean state' do
+              assert Tenant::Units.reproduce(quiet: true), <<~MSG
+
+                Modified source files encountered when reproducing source files.
+                This means that you have edited some file but forgotten to
+                reproduce and commit.
+
+                Please run "bin/rails tenant:units:reproduce" and commit changes.
+              MSG
+            end
           end
         end
       end
