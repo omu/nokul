@@ -2,7 +2,7 @@
 
 require 'pathname'
 
-PLUGINS_DIR = Pathname.new File.expand_path('..', __dir__)
+PLUGINS_DIR = Pathname.new '..'
 
 source 'https://rubygems.org'
 ruby File.read('.ruby-version')
