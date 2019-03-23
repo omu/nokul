@@ -26,6 +26,7 @@ gem 'aws-sdk-s3', require: false
 gem 'image_processing', '~> 1.2'
 
 # authentication
+gem 'authy'
 gem 'devise'
 
 # assets: core asset dependencies
@@ -66,6 +67,7 @@ gem 'friendly_id', '~> 5.2.0'
 # sms
 gem 'nexmo'
 gem 'smstools'
+gem 'twilio-ruby', '~> 5.21.2'
 
 group :development, :test do
   gem 'brakeman', require: false

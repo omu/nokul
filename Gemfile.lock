@@ -132,6 +132,8 @@ GEM
     archive-zip (0.12.0)
       io-like (~> 0.3.0)
     ast (2.4.0)
+    authy (2.7.5)
+      httpclient (>= 2.5.3.3)
     aws-eventstream (1.0.2)
     aws-partitions (1.146.0)
     aws-sdk-core (3.48.2)
@@ -219,6 +221,8 @@ GEM
       smart_properties
     erubi (1.8.0)
     execjs (2.7.0)
+    faraday (0.15.4)
+      multipart-post (>= 1.2, < 3)
     ffi (1.10.0)
     fit-commit (3.8.1)
       swearjar (~> 1.3)
@@ -232,6 +236,7 @@ GEM
       activesupport (>= 4.2)
     hashdiff (0.3.8)
     html_tokenizer (0.0.7)
+    httpclient (2.8.3)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     image_processing (1.8.0)
@@ -272,6 +277,7 @@ GEM
     minitest (5.11.3)
     msgpack (1.2.9)
     multi_json (1.13.1)
+    multipart-post (2.0.0)
     netaddr (2.0.3)
     nexmo (5.6.0)
       jwt (~> 2)
@@ -388,6 +394,10 @@ GEM
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
+    twilio-ruby (5.21.2)
+      faraday (~> 0.9)
+      jwt (>= 1.5, <= 2.5)
+      nokogiri (>= 1.6, < 2.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uglifier (4.1.20)
@@ -421,6 +431,7 @@ PLATFORMS
 
 DEPENDENCIES
   ancestry
+  authy
   aws-sdk-s3
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.0)
@@ -476,6 +487,7 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   telephone_number
+  twilio-ruby (~> 5.21.2)
   uglifier (>= 1.3.0)
   web-console!
   webmock
