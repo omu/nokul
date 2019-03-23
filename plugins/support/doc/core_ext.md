@@ -21,6 +21,27 @@ TODO
 
 TODO
 
+`Array`
+-------
+
+`clip(number_of_last_elements = 1)`
+
+`affixed(**options)`
+
+TODO
+
+`Hash`
+------
+
+`to_deep_ostruct`
+
+`Integer`
+---------
+
+`to_string(length, base = 10)`
+
+TODO
+
 `String`
 --------
 
@@ -39,21 +60,5 @@ TODO
 `inside_abbreviations?`
 
 `inside_conjunctions?`
-
-TODO
-
-`Integer`
----------
-
-`to_string(length, base = 10)`
-
-TODO
-
-`Array`
--------
-
-`clip(number_of_last_elements = 1)`
-
-`affixed(**options)
 
 TODO
