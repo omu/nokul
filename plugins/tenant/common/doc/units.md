@@ -110,6 +110,6 @@ izlenmelidir.
 ```sh
 $ cd plugins/tenant/omu
 $ bundle install # henüz yapılmamışsa
-$ bin/rails tenant:units:produce
+$ bin/rails tenant:units:reproduce
 $ bin/rails test
 ```
