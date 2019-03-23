@@ -81,7 +81,7 @@
               <div class="form-group">
                 <%= label_tag :root_unit_id, t('.root_unit') %>
                 <%= select_tag(:root_unit_id,
-                               options_from_collection_for_select(Unit.active.academic.without_programs.order(:name), :id, :name, params[:root_unit_id]),
+                               options_from_collection_for_select(Unit.active.academic.without_programs.order(:name), :id, :names_depth_cache, params[:root_unit_id]),
                                include_blank: true,
                                class: 'form-control',
                                style: 'width: 100%') %>

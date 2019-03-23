@@ -2,7 +2,8 @@
   <div class='col-lg-6'>
     <div class="card">
       <div class="card-header">
-        <%= fa_icon 'university' %><strong><%= t('.prospective_student') %></strong>
+        <%= fa_icon 'university' %>
+        <strong><%= t('.prospective_student') %></strong>
       </div>
       <div class="card-body">
         <table class="table table-responsive-sm">
@@ -61,35 +62,35 @@
 
       <% unless @prospective_student.registered %>
         <div class="card-footer">
-          <% if @prospective_student.can_permanently_register? %>
-            <% if @prospective_student.permanent_registrable? %>
+          <% if @prospective_student.permanent_registrable? %>
+            <% if @prospective_student.can_permanently_register? %>
               <%= link_to(t('.permanently_register'),
                           %i[register prospective_student],
                           class: 'btn btn-block btn-success registration-button',
                           disabled: @prospective_student.unit.registration_documents.present?) %>
             <% else %>
-              <div class="alert alert-danger" role="alert">
-                <%= fa_icon 'exclamation-triangle', class: 'fa-2x' %>
-                <strong><%= t('.not_proper_register_event_range') %></strong>
-              </div>
+              <%= link_to(t('.can_not_register'),
+                          %i[register prospective_student],
+                          class: 'btn btn-block btn-danger registration-button',
+                          disabled: true) %>
             <% end %>
-          <% elsif @prospective_student.can_temporarily_register? %>
-            <% if @prospective_student.temporary_registrable? %>
+          <% elsif @prospective_student.temporary_registrable? %>
+            <% if @prospective_student.can_temporarily_register? %>
               <%= link_to(t('.temporarily_register'),
                           %i[register prospective_student],
                           class: 'btn btn-block btn-success registration-button',
                           disabled: @prospective_student.unit.registration_documents.present?) %>
             <% else %>
-              <div class="alert alert-danger" role="alert">
-                <%= fa_icon 'exclamation-triangle', class: 'fa-2x' %>
-                <strong><%= t('.not_proper_register_event_range') %></strong>
-              </div>
+              <%= link_to(t('.can_not_register'),
+                          %i[register prospective_student],
+                          class: 'btn btn-block btn-danger registration-button',
+                          disabled: true) %>
             <% end %>
           <% else %>
-            <%= link_to(t('.can_not_register'),
-                        %i[register prospective_student],
-                        class: 'btn btn-block btn-danger registration-button',
-                        disabled: true) %>
+            <div class="alert alert-danger" role="alert">
+              <%= fa_icon 'exclamation-triangle', class: 'fa-2x' %>
+              <strong><%= t('.not_proper_register_event_range') %></strong>
+            </div>
           <% end %>
         </div>
       <% end %>
