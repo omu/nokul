@@ -77,9 +77,9 @@
           <% elsif @prospective_student.temporary_registrable? %>
             <% if @prospective_student.can_temporarily_register? %>
               <%= link_to(t('.temporarily_register'),
-                %i[register prospective_student],
-                class: 'btn btn-block btn-success registration-button',
-                disabled: @prospective_student.unit.registration_documents.present?) %>
+                          %i[register prospective_student],
+                          class: 'btn btn-block btn-success registration-button',
+                          disabled: @prospective_student.unit.registration_documents.present?) %>
             <% else %>
               <%= link_to(t('.can_not_register'),
                           %i[register prospective_student],
