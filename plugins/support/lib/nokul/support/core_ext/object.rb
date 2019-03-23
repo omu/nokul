@@ -26,9 +26,7 @@ class Object
       sanitize_arguments(sample_type = type.first)
 
       object.each do |element|
-        if (error = type_error(element, sample_type))
-          return error
-        end
+        (error = type_error(element, sample_type)) && (return error)
       end
 
       nil
@@ -38,13 +36,8 @@ class Object
       sanitize_arguments(*(key_type, value_type = type.first))
 
       object.each do |key, value|
-        if (error = type_error(key, key_type))
-          return error
-        end
-
-        if (error = type_error(value, value_type))
-          return error
-        end
+        (error = type_error(key, key_type)) && (return error)
+        (error = type_error(value, value_type)) && (return error)
       end
 
       nil
@@ -54,9 +47,7 @@ class Object
       sanitize_arguments(starting_type = type.first)
       sanitize_arguments(ending_type = type.first)
 
-      if (error = type_error(object.first, starting_type))
-        return error
-      end
+      (error = type_error(object.first, starting_type)) && (return error)
 
       type_error(object.last, ending_type)
     end
@@ -75,9 +66,7 @@ class Object
     end
 
     def must_be_any_of(object, *args)
-      return object if args.empty?
-      return object unless (first = (types = args.dup).shift)
-      return object unless (error = must_be(object, first))
+      return object unless (error = must_be(object, (types = args.dup).shift))
 
       raise(TypeError, error) if types.empty?
 

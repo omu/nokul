@@ -44,11 +44,8 @@ module Nokul
           end
 
           def convert_from_string(source)
-            self.base, self.length = base_and_length_from_sample(source)
-
-            starting, ending = source, (base**length - 1).to_s # rubocop:disable Style/ParallelAssignment
-
-            (starting.to_i(base)..ending.to_i(base))
+            base, length = base_and_length_from_sample(source)
+            convert_from_range(source..(base**length - 1).to_s)
           end
 
           def base_and_length_from_sample(sample)

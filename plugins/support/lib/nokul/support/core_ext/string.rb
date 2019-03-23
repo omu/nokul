@@ -40,25 +40,24 @@ class String
     end.join(' ')
   end
 
-  # rubocop:disable Metrics/MethodLength
+  # Regex stolen from https://stackoverflow.com/a/6331667
+  RE_PARANTHESIZED = /
+    (?<re>
+      \(
+        (?:
+          (?> [^()]+ )
+          |
+          \g<re>
+        )*
+      \)
+    )
+    /x.freeze
+
   def capitalize_turkish_with_parenthesized
-    # Regex stolen from https://stackoverflow.com/a/6331667
-    re = /
-      (?<re>
-        \(
-          (?:
-            (?> [^()]+ )
-            |
-            \g<re>
-          )*
-        \)
-      )
-    /x
-    capitalize_turkish.gsub re do |match|
+    capitalize_turkish.gsub RE_PARANTHESIZED do |match|
       '(' + match[1..-2].capitalize_turkish + ')'
     end
   end
-  # rubocop:enable Metrics/MethodLength
 
   module Matchable
     require 'yaml'
@@ -70,21 +69,16 @@ class String
         @data = {}
       end
 
-      def run(languages:, category:, word:, **options)
+      def run(languages:, category:, word:)
         (languages.empty? ? %w[en tr] : languages.uniq).each do |language|
-          return true if match(language: language, category: category, word: word, **options)
+          return true if match(language: language, category: category, word: word)
         end
 
         false
       end
 
-      def match(language:, category:, word:, **options)
-        if options[:partial]
-          # XXX: Note the poor performance
-          words(language, category).any? { |string| word.include? string }
-        else
-          words(language, category).include? word
-        end
+      def match(language:, category:, word:)
+        words(language, category).include? word
       end
 
       private
@@ -122,8 +116,8 @@ class String
       offensives
       reserved
     ].each do |category|
-      define_method "inside_#{category}?" do |*languages, **options|
-        matcher.run(languages: languages, category: category, word: self, **options)
+      define_method "inside_#{category}?" do |*languages|
+        matcher.run(languages: languages, category: category, word: self)
       end
     end
   end

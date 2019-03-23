@@ -15,39 +15,26 @@ module Nokul
         module Alternatives
           refine Array do
             def abbreviated
-              result = []
-              index_combinations_of_source.each do |indexes|
+              index_combinations_of_source.map do |indexes|
                 alternative = clone
                 indexes.each { |i| alternative[i] = alternative[i].first }
-                result << alternative
+                alternative
               end
-
-              result
             end
 
             def non_abbreviated
-              surname = last
-              forenames = clip
+              surname, forenames = last, clip # rubocop:disable ParallelAssignment
 
-              result = []
-              forenames.size.downto(1).each do |n|
-                result.concat forenames.combination(n).to_a
-              end
-
-              result.map { |alternative| [*alternative, surname] }.sort_by(&:length)
+              forenames.send(:index_combinations_of_source).map do |alternative|
+                [*alternative, surname]
+              end.sort_by(&:length)
             end
 
             private
 
             def index_combinations_of_source
-              original = map.with_index.map { |*, i| i }.to_a
-
-              indexes = []
-              (size - 1).downto(1).each do |n|
-                indexes.concat original.combination(n).to_a
-              end
-
-              indexes
+              original = each_index.to_a
+              [].concat(*(size - 1).downto(1).map { |n| original.combination(n).to_a })
             end
           end
         end

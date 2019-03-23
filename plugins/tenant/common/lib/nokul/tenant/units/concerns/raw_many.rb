@@ -56,17 +56,16 @@ module Nokul
               capitalized
             end
 
-            # FIXME: This will eventually be replaced with a better implementation
             def capitalize_turkish_with_dashed_and_parenthesized
               capitalize_turkish_with_parenthesized.split.map do |word|
-                next word unless word =~ /-/
-
-                word.split('-').map do |dashed|
-                  next dashed unless dashed.size > 1
-
-                  dashed.capitalize_turkish
-                end.join '-'
+                word.include?('-') ? word.capitalize_dashed_words : word
               end.join ' '
+            end
+
+            def capitalize_dashed_words
+              split('-').map do |word|
+                word.size > 1 ? word.capitalize_turkish : word
+              end.join '-'
             end
           end
         end
