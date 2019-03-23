@@ -33,7 +33,7 @@ module Nokul
             end
 
             test 'all source files must be in clean state' do
-              assert Tenant::Units.reproduce(quiet: true), <<~MSG
+              refute Tenant::Units.reproduce(quiet: true), <<~MSG
 
                 Modified source files encountered when reproducing source files.
                 This means that you have edited some file but forgotten to
