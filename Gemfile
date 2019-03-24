@@ -83,9 +83,8 @@ end
 
 group :test do
   gem 'capybara', '>= 2.15'
-  gem 'chromedriver-helper'
   gem 'codacy-coverage', require: false
-  gem 'selenium-webdriver'
+  gem 'webdrivers', '~> 3.0'
   gem 'webmock'
 end
 
