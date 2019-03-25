@@ -199,5 +199,5 @@ koşulunu sağlar.)
 
 ```ruby
 SecureRandom.random_number_string(5) #=> 00023
-SecureRandom.random_number_string(5) #=> 99123
+SecureRandom.random_number_string(5, 16) #=> 0AB1F
 ```
