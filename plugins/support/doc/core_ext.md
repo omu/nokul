@@ -62,3 +62,10 @@ TODO
 `inside_conjunctions?`
 
 TODO
+
+`SecureRandom`
+--------------
+
+`random_number_string(length)`
+
+TODO
