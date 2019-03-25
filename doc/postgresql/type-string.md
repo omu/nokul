@@ -2,7 +2,8 @@
 author: M. Serhat Dundar
 ---
 
-## Rules
+Rules
+=====
 
 - `string`'ler için `limit: N` kullanmayın. `add_length_constraint` kullanın.
 
@@ -30,15 +31,19 @@ author: M. Serhat Dundar
 
 - `50`, `70` gibi herhangi bir mantığı olmayan karakter sayısı kontrolleri eklemeyin, yalnızca `255` ve `65535` kullanın.
 
-## varchar VS varchar(n) VS char VS text
+varchar VS varchar(n) VS char VS text
+-------------------------------------
 
-- Postgres `limit` tanımlamadığınız sürece tüm metin alanları için her bir satıra sınırsız (1 GB~) veri girebilmenize izin verir.
+- Postgres `limit` tanımlamadığınız sürece tüm metin alanları için her bir satıra sınırsız (1 GB~) veri girebilmenize
+  izin verir.
 - Postgres'te `varchar (n)` ve `text` arasında performans ve boyut yönünden herhangi bir fark bulunmamaktadır.
-- `varchar(n)` olası bir limit değişikliği durumunda tabloya LOCK atarak down-time yarattığı için limit tanımlamaları sütuna değil, `CHECK` olarak eklenmelidir.
+- `varchar(n)` olası bir limit değişikliği durumunda tabloya LOCK atarak down-time yarattığı için limit tanımlamaları
+  sütuna değil, `CHECK` olarak eklenmelidir.
 
-## Referanslar
+Referanslar
+-----------
 
-- https://www.depesz.com/2010/03/02/charx-vs-varcharx-vs-varchar-vs-text/
-- https://stackoverflow.com/questions/4848964/postgresql-difference-between-text-and-varchar-character-varying
-- https://dba.stackexchange.com/questions/125499/what-is-the-overhead-for-varcharn/125526#125526
-- https://dba.stackexchange.com/questions/89429/would-index-lookup-be-noticeably-faster-with-char-vs-varchar-when-all-values-are/89433#89433
+- <https://www.depesz.com/2010/03/02/charx-vs-varcharx-vs-varchar-vs-text/>
+- <https://stackoverflow.com/questions/4848964/postgresql-difference-between-text-and-varchar-character-varying>
+- <https://dba.stackexchange.com/questions/125499/what-is-the-overhead-for-varcharn/125526#125526>
+- <https://dba.stackexchange.com/questions/89429/would-index-lookup-be-noticeably-faster-with-char-vs-varchar-when-all-values-are/89433#89433>

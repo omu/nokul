@@ -2,21 +2,26 @@
 author: M. Serhat Dundar
 ---
 
-# Authoring
+Authoring
+=========
 
-## Bir Başkasının Çalışmasını Commit'lemek
+Bir Başkasının Çalışmasını Commit'lemek
+---------------------------------------
 
-Bir başkasının çalışmasını herhangi bir sebeple siz commit'liyorsanız, çalışmayı gerçekleştiren kişi ilgili commit'lerde author olarak atanmalıdır:
+Bir başkasının çalışmasını herhangi bir sebeple siz commit'liyorsanız, çalışmayı gerçekleştiren kişi ilgili commit'lerde
+author olarak atanmalıdır:
 
-```
+```bash
 git commit --author="John Doe <john@doe.org>"
 ```
 
-## Ortaklaşa Yazılan Dokümanlar
+Ortaklaşa Yazılan Dokümanlar
+----------------------------
 
-Ortaklaşa yazılan herhangi bir dokümanı commit'lerken markdown dosyasına meta veri olarak author ve co-author bilgisi girilmelidir. Örneğin:
+Ortaklaşa yazılan herhangi bir dokümanı commit'lerken markdown dosyasına meta veri olarak author ve co-author bilgisi
+girilmelidir. Örneğin:
 
-```
+```yaml
 ---
 author: Recai Oktaş
 co-author: M. Serhat Dündar

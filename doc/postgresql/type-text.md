@@ -2,6 +2,7 @@
 author: M. Serhat Dundar
 ---
 
-## Rules
+Rules
+=====
 
 > 'String' türü için hazırlanmış dokümana bakınız.

@@ -2,7 +2,8 @@
 author: M. Serhat Dundar
 ---
 
-# App Upgrade
+App Upgrade
+===========
 
 Bu işlem yalnızca repository yöneticileri tarafından gerçekleştirilebilir:
 
@@ -10,7 +11,8 @@ Bu işlem yalnızca repository yöneticileri tarafından gerçekleştirilebilir:
 bin/rails app:update
 ```
 
-# Dependency Upgrade
+Dependency Upgrade
+------------------
 
 Bağımlılıklar güncellenirken hem nokul uygulamasının, hem de içerdiği plug-in ve engine'lerin bağımlılıkları güncellenmelidir.
 
@@ -21,7 +23,8 @@ cd plugins/tenant/common && bundle update
 cd plugins/tenant/omu && bundle update
 ```
 
-# Version Bump
+Version Bump
+------------
 
 ```ruby
 rails release:bump
