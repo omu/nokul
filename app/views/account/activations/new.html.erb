@@ -1,0 +1,98 @@
+<div class='col-md-8'>
+  <div class='card mx-4'>
+    <div class='card-body p-4'>
+      <h1 class='text-center'><%= t('.activation') %></h1>
+      <p class='text-muted text-center'><%= t('.account_activation') %></p>
+      <%= simple_form_for(:activation, url: activation_path, html: { method: 'patch' }) do |f| %>
+        <%= f.error_notification %>
+        <% if @activation.errors.any? %>
+          <ul class='list-group list-group-accent'>
+            <% @activation.errors.full_messages.each do |message| %>
+              <li class='list-group-item list-group-item-accent-danger list-group-item-danger'>
+                <%= message %>
+              </li>
+            <% end %>
+          </ul>
+        <% end %>
+        <fieldset class='border p-3'>
+          <legend class='w-auto'><%= t('.identity_verification') %></legend>
+          <div class='form-group row'>
+            <label for='activation_id_number' class='col-sm-3 col-form-label text-right'><%= t('.id_number') %></label>
+            <div class='col-sm-9'>
+              <%= f.input :id_number, required: true, label: false, autofocus: true, wrapper: false, input_html: { class: @activation.errors[:id_number].any? ? 'is-invalid' : '' } %>
+              <div class="invalid-feedback">
+                <%= @activation.errors[:id_number].first %>
+              </div>
+            </div>
+          </div>
+          <div class='form-group row'>
+            <label for='activation_first_name' class='col-sm-3 col-form-label text-right'><%= t('.first_name') %></label>
+            <div class='col-sm-9'>
+              <%= f.input :first_name, required: true, label: false, wrapper: false %>
+            </div>
+          </div>
+          <div class='form-group row'>
+            <label for='activation_last_name' class='col-sm-3 col-form-label text-right'><%= t('.last_name') %></label>
+            <div class='col-sm-9'>
+              <%= f.input :last_name, required: true, label: false, wrapper: false %>
+            </div>
+          </div>
+          <div class='form-group row'>
+            <label for='activation_date_of_birth' class='col-sm-3 col-form-label text-right'><%= t('.date_of_birth') %></label>
+            <div class='col-sm-9'>
+              <%= f.input :date_of_birth, as: :date_time_picker, required: true, label: false, wrapper: false %>
+            </div>
+          </div>
+          <div class='form-group row'>
+            <label for='activation_serial' class='col-sm-3 col-form-label text-right'><%= t('.serial') %></label>
+            <div class='col-sm-3'>
+              <%= f.input :serial, required: false, label: false, wrapper: false %>
+              <small class='text-danger' id='span_serial'><%= t('.for_old_id_cards') %></small>
+            </div>
+            <label for='activation_serial_no' class='col-sm-2 col-form-label text-right'><%= t('.serial_no') %></label>
+            <div class='col-sm-3'>
+              <%= f.input :serial_no, required: false, label: false, wrapper: false %>
+              <small class='text-danger' id='span_serial_no'><%= t('.for_old_id_cards') %></small>
+            </div>
+          </div>
+          <div class='form-group row'>
+            <label for='activation_document_no' class='col-sm-3 col-form-label text-right'><%= t('.document_no') %></label>
+            <div class='col-sm-9'>
+              <%= f.input :document_no, required: false, label: false, wrapper: false, input_html: { class: @activation.errors[:document_no].any? ? 'is-invalid' : '' } %>
+              <div class="invalid-feedback">
+                <%= @activation.errors[:document_no].first %>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class='border p-3'>
+          <legend class='w-auto'><%= t('.phone_verification') %></legend>
+          <div class='form-group row'>
+            <label for='activation_serial_mobile_phone' class='col-sm-3 col-form-label text-right'><%= t('.mobile_phone') %></label>
+            <div class='col-sm-9'>
+              <%= f.input :mobile_phone, label: false, wrapper: false, input_html: { class: @activation.errors[:mobile_phone].any? ? 'is-invalid' : '' } %>
+              <small class='text-muted'><%= number_to_phone(1_235_551_234, area_code: true) %></small>
+            </div>
+          </div>
+          <div class='form-group row'>
+            <label for='activation_country' class='col-sm-3 col-form-label text-right'><%= t('.country') %></label>
+            <div class='col-sm-9'>
+              <%= f.input :country, collection: Country.all, value_method: :alpha_2_code, label: false, wrapper: false %>
+            </div>
+          </div>
+        </fieldset>
+        <hr />
+        <%= f.button :submit, t('.verify'), class: 'btn btn-block btn-success' %>
+      <% end %>
+    </div>
+    <div class='card-footer p-4'>
+      <div class='row'>
+        <div class='col'>
+          <%= link_to t('.login'), login_path, class: 'btn btn-secondary btn-block', role: 'button' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'js' %>

@@ -3,6 +3,7 @@
   <head>
     <%= render 'layouts/shared/meta' %>
     <%= stylesheet_link_tag 'guest', media: 'all' %>
+    <%= javascript_include_tag 'guest' %>
   </head>
   <body>
     <div class="app flex-row align-items-center">
@@ -12,7 +13,6 @@
         </div>
       </div>
     </div>
-    <%= javascript_include_tag 'guest' %>
     <%= render 'layouts/shared/toastr' %>
   </body>
   <%= render 'layouts/shared/footer' %>

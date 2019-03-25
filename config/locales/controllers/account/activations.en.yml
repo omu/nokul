@@ -1,0 +1,22 @@
+en:
+  account:
+    activations:
+      identity_not_verified: Your identity not verified. Make sure that the data you entered is correct.
+      record_not_found: There is no record in the system to activate your account.
+      new:
+        activation: Activation
+        account_activation: Activate your account
+        country: Country
+        date_of_birth: Date of Birth
+        document_no: Document No
+        first_name: First Name
+        for_old_id_cards: For old identity cards
+        identity_verification: Identity Verification
+        id_number: Identity Number
+        last_name: Last Name
+        login: Login
+        mobile_phone: Mobile Phone
+        phone_verification: Phone Verification
+        serial: Serial
+        serial_no: Serial No
+        verify: Verify

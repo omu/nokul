@@ -1,0 +1,22 @@
+tr:
+  account:
+    activations:
+      identity_not_verified: Kimlik bilgileriniz doğrulanamadı. Girmiş olduğunuz verilerin doğruluğundan emin olunuz.
+      record_not_found: Sistemde hesabınızı aktifleştirecek bir kayıt bulunamamıştır.
+      new:
+        activation: Aktivasyon
+        account_activation: Hesabınızı aktifleştirin
+        country: Ülke
+        date_of_birth: Doğum Tarihi
+        document_no: Doküman No
+        first_name: Ad
+        for_old_id_cards: Eski kimlik kartları için
+        identity_verification: Kimlik Doğrulama
+        id_number: TC/YU Numarası
+        last_name: Soyad
+        login: Giriş Yap
+        mobile_phone: Cep Telefonu
+        phone_verification: Telefon Doğrulama
+        serial: Seri
+        serial_no: Seri No
+        verify: Onayla
