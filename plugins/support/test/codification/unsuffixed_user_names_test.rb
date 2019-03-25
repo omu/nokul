@@ -20,6 +20,10 @@ module Nokul
           assert_raise(StopIteration) { coder.run }
         end
 
+        test 'API with singular name works' do
+          assert_equal 'ggmarquez', Codification.unsuffixed_user_name(%w[gabriel garcia marquez])
+        end
+
         test 'simple use case with memory works' do
           memory = SimpleMemory.new
 

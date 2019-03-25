@@ -17,6 +17,10 @@ module Nokul
           assert_raise(StopIteration) { coder.run }
         end
 
+        test 'API with singular name works' do
+          assert_match(/^[5-9]$/, Codification.random_numeric_code('5'..'9'))
+        end
+
         test 'memory works' do
           memory = SimpleMemory.new
 

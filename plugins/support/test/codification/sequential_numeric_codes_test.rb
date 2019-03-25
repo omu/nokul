@@ -27,6 +27,10 @@ module Nokul
           assert_raise(StopIteration) { coder.run }
         end
 
+        test 'API with singular name works' do
+          assert_equal '0001', Codification.sequential_numeric_code('0001')
+        end
+
         test 'simple use case with memory works' do
           memory = SimpleMemory.new
 

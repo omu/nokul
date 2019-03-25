@@ -16,29 +16,33 @@ module Nokul
           end
         end
 
-        test 'can consume a common random coder' do
-          # Common random coder with 10 unique random number
-          random = Codification.random_numeric_codes('0'..'9')
+        test 'API with singular name works' do
+          name = Codification.suffixed_user_name %w[gabriel garcia marquez]
 
-          # Consume half of the randoms
-          coder = Codification.suffixed_user_names %w[gabriel garcia marquez], random: random
-          5.times do
-            name = coder.run
-            assert_match(/ggmarquez[.]\d+/, name)
-            assert name.start_with? 'ggmarquez.'
-          end
+          assert_match(/ggmarquez[.]\d+/, name)
+          assert name.start_with? 'ggmarquez.'
+        end
 
-          # Consume other half of the randoms by another coder
-          other = Codification.suffixed_user_names %w[gabriel garcia marquez], random: random
-          5.times do
-            name = coder.run
-            assert_match(/ggmarquez[.]\d+/, name)
-            assert name.start_with? 'ggmarquez.'
-          end
+        test 'can specify random suffix length' do
+          coder = Codification.suffixed_user_names %w[gabriel garcia marquez], random_suffix_length: 1
 
-          # Now both of the coders should be consumed
-          assert_raise(StopIteration) { coder.run }
-          assert_raise(StopIteration) { other.run }
+          name = coder.run
+          assert_match(/ggmarquez[.]\d{1}$/, name)
+          assert name.start_with? 'ggmarquez.'
+
+          coder = Codification.suffixed_user_names %w[gabriel garcia marquez], random_suffix_length: 5
+
+          name = coder.run
+          assert_match(/ggmarquez[.]\d{5}$/, name)
+          assert name.start_with? 'ggmarquez.'
+        end
+
+        test 'can specify random suffix separator' do
+          coder = Codification.suffixed_user_names %w[gabriel garcia marquez], random_suffix_separator: '-'
+
+          name = coder.run
+          assert_match(/ggmarquez[-]\d+$/, name)
+          assert name.start_with? 'ggmarquez-'
         end
 
         test 'simple use case with memory works' do
