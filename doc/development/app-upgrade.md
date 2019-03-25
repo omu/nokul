@@ -18,14 +18,12 @@ Bağımlılıklar güncellenirken hem nokul uygulamasının, hem de içerdiği p
 
 ```bash
 bundle update
-cd plugins/support && bundle update
-cd plugins/tenant/common && bundle update
-cd plugins/tenant/omu && bundle update
+cd plugins/support && bundle update && cd -
+cd plugins/tenant/common && bundle update && cd -
+cd plugins/tenant/omu && bundle update && cd -
 ```
 
 Version Bump
 ------------
 
-```ruby
-rails release:bump
-```
+`app.json` dosyasından uygulama sürümünü güncelleyin.
