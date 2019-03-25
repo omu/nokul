@@ -16,7 +16,7 @@ module Nokul
         end
 
         def to_s
-          emit.affixed(**options)
+          emit.join_affixed(**options)
         end
 
         protected

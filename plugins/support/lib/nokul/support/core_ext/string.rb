@@ -21,7 +21,7 @@ class String
   end
 
   def affixed(**options)
-    [self].affixed(**options)
+    [self].join_affixed(**options)
   end
 
   def abbreviation

@@ -7,7 +7,8 @@ class ArrayTest < ActiveSupport::TestCase
     assert_equal %w[foo bar], %w[foo bar baz quux].clip(2)
   end
 
-  test 'affixed works' do
-    assert_equal 'aaa.foo-bar-baz-quux_zzz', %w[foo bar baz quux].affixed(prefix: 'aaa.', interfix: '-', suffix: '_zzz')
+  test 'join_affixed works' do
+    assert_equal 'aaa.foo-bar-baz-quux_zzz',
+                 %w[foo bar baz quux].join_affixed(prefix: 'aaa.', interfix: '-', suffix: '_zzz')
   end
 end

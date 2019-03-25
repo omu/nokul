@@ -80,15 +80,15 @@ a.clip #=> ['foo', 'bar']
 a #=> ['foo', 'bar', 'baz']
 ```
 
-**`affixed(**options)`**
+**`join_affixed(**options)`**
 
 Dizgi dizisindeki her elemanı (varsa) `options[:interfix]` ile birleştirerek
 başına ve sonuna (varsa) `options[:prefix]` ve `options[:suffix]` ekleyerek
 döner.
 
 ```ruby
-%w[foo bar baz].affixed prefix: 'aaa-', interfix: '-', 'suffix: -zzz' #=> 'aaa-foo-bar-baz-zzz'
-%w[foo bar baz].affixed prefix: 'aaa-' #=> 'aaa-foobarbaz'
+%w[foo bar baz].join_affixed prefix: 'aaa-', interfix: '-', 'suffix: -zzz' #=> 'aaa-foo-bar-baz-zzz'
+%w[foo bar baz].join_affixed prefix: 'aaa-' #=> 'aaa-foobarbaz'
 ```
 
 `Hash`

@@ -5,7 +5,7 @@ class Array
     take size - number_of_last_elements
   end
 
-  def affixed(**options)
+  def join_affixed(**options)
     must_be_any_of! [String]
 
     "#{[*options[:prefix]].join}#{join options[:interfix]}#{[*options[:suffix]].join}"
