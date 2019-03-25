@@ -14,26 +14,44 @@
             <tr>
               <td><%= t('activerecord.attributes.country.name') %></td>
               <td><%= @country.name %></td>
+              <td><%= t('.continent') %> / <%= t('.world_region') %></td>
+              <td><%= @country.continent %> / <%= @country.world_region %></td>
+            </tr>
+            <tr>
+              <td><%= t('.region') %> / <%= t('.subregion') %></td>
+              <td><%= @country.region %> / <%= @country.subregion %></td>
+              <td><%= t('.start_of_week') %></td>
+              <td><%= @country.start_of_week %></td>
             </tr>
             <tr>
               <td><%= t('.alpha_2_code') %></td>
               <td><%= @country.alpha_2_code %></td>
-            </tr>
-            <tr>
               <td><%= t('.alpha_3_code') %></td>
               <td><%= @country.alpha_3_code %></td>
             </tr>
             <tr>
               <td><%= t('.numeric_code') %></td>
               <td><%= @country.numeric_code %></td>
-            </tr>
-            <tr>
               <td><%= t('.mernis_code') %></td>
               <td><%= @country.mernis_code %></td>
             </tr>
             <tr>
               <td><%= t('.yoksis_code') %></td>
               <td><%= @country.yoksis_code %></td>
+              <td><%= t('.currency_code') %></td>
+              <td><%= @country.currency_code %></td>
+            </tr>
+            <tr>
+              <td><%= t('.phone_code') %></td>
+              <td><%= @country.phone_code %></td>
+              <td><%= t('.un_locode') %></td>
+              <td><%= @country.un_locode %></td>
+            </tr>
+            <tr>
+              <td><%= t('.latitude') %></td>
+              <td><%= @country.latitude %></td>
+              <td><%= t('.longitude') %></td>
+              <td><%= @country.longitude %></td>
             </tr>
           </tbody>
         </table>

@@ -8,9 +8,21 @@ tr:
         name: Ülke Adı
         numeric_code: ISO3166 Rakamsal
         yoksis_code: YÖKSİS Kodu
+        continent: Kıta
+        region: Bölge
+        subregion: Alt Bölge
+        currency_code: Para Birimi
+        phone_code: Telefon Kodu
+        latitude: Enlem
+        longitude: Boylam
+        start_of_week: Hafta Başlangıcı
+        un_locode: Birleşmiş Milletler Kodu
+        world_region: Dünya Bölgesi
       city: &city_attributes
         alpha_2_code: Alpha 2 Kodu
         name: Şehir Adı
+        latitude: Enlem
+        longitude: Boylam
   helpers:
     submit:
       country:

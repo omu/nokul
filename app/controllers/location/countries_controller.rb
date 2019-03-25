@@ -40,7 +40,10 @@ module Location
     end
 
     def country_params
-      params.require(:country).permit(:name, :alpha_2_code, :alpha_3_code, :numeric_code, :mernis_code, :yoksis_code)
+      params.require(:country).permit(
+        :name, :alpha_2_code, :alpha_3_code, :numeric_code, :mernis_code, :yoksis_code, :continent, :currency_code,
+        :latitude, :longitude, :phone_code, :region, :start_of_week, :subregion, :un_locode, :world_region
+      )
     end
   end
 end

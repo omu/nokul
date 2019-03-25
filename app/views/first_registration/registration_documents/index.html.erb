@@ -25,7 +25,7 @@
             <% @registration_documents.each do |registration_document| %>
               <tr>
                 <td><%= full_name(registration_document.academic_term) %></td>
-                <td><%= registration_document.unit.name %></td>
+                <td><%= registration_document.unit.names_depth_cache %></td>
                 <td><%= registration_document.document_type.name %></td>
                 <td><%= registration_document.description %></td>
                 <td><%= link_to_actions(registration_document, except: :show) %></td>
