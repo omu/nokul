@@ -35,7 +35,7 @@ module Nokul
         end
 
         test 'prefix and length options work' do
-          coder = Codification.random_numeric_codes '0'..'999', prefix: 'xyz-', length: 12
+          coder = Codification.random_numeric_codes '0'..'999', prefix: 'xyz-', net_length: 12
           assert_match(/^xyz-\d{12}$/, coder.run)
         end
 

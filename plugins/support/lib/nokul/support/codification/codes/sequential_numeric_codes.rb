@@ -12,7 +12,7 @@ module Nokul
       module SequentialNumericCodes
         class Code < Codification::Code
           def emit
-            [peek].map { |number| number.to_string(length, base) }
+            [peek].map { |number| number.to_string(net_length, base) }
           end
 
           protected
@@ -23,7 +23,7 @@ module Nokul
             source.is_a?(String) ? convert_from_string(source) : convert_from_range(source)
           end
 
-          attr_accessor :base, :length
+          attr_accessor :base, :net_length
 
           private
 
@@ -38,20 +38,20 @@ module Nokul
           def convert_from_range(source)
             starting, ending = source.first, source.last # rubocop:disable Style/ParallelAssignment
 
-            self.base, self.length = base_and_length_from_sample(ending)
+            self.base, self.net_length = base_and_length_from_sample(ending)
 
             (starting.to_i(base)..ending.to_i(base))
           end
 
           def convert_from_string(source)
-            base, length = base_and_length_from_sample(source)
-            convert_from_range(source..(base**length - 1).to_s)
+            base, net_length = base_and_length_from_sample(source)
+            convert_from_range(source..(base**net_length - 1).to_s)
           end
 
           def base_and_length_from_sample(sample)
             [
-              options[:base]   || base_from_string(sample),
-              options[:length] || sample.length
+              options[:base]       || base_from_string(sample),
+              options[:net_length] || sample.length
             ]
           end
         end

@@ -51,8 +51,8 @@ module Nokul
           assert_equal 'xyz-0002', coder.run
         end
 
-        test 'length options works' do
-          coder = Codification.sequential_numeric_codes '0001', prefix: 'xyz-', length: 12
+        test 'net_length option works' do
+          coder = Codification.sequential_numeric_codes '0001', prefix: 'xyz-', net_length: 12
           assert_equal 'xyz-000000000001', coder.run
           assert_equal 'xyz-000000000002', coder.run
         end

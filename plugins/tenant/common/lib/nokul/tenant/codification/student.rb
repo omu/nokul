@@ -19,7 +19,7 @@ module Nokul
           starting   = Sanitized.starting(starting, *(prefix = [unit_code, year]))
           net_length = Sanitized.net_length(*prefix)
 
-          Support::Codification.sequential_numeric_codes starting, prefix: prefix, length: net_length, base: 10
+          Support::Codification.sequential_numeric_codes starting, prefix: prefix, net_length: net_length, base: 10
         end
 
         def long_number_generator(unit_code:, starting:)
@@ -27,7 +27,7 @@ module Nokul
           starting   = Sanitized.starting(starting, *(prefix = [unit_code]))
           net_length = Sanitized.net_length(*prefix)
 
-          Support::Codification.sequential_numeric_codes starting, prefix: prefix, length: net_length, base: 10
+          Support::Codification.sequential_numeric_codes starting, prefix: prefix, net_length: net_length, base: 10
         end
 
         module Sanitized
