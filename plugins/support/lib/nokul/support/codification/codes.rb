@@ -20,9 +20,17 @@ module Nokul
       module_function
 
       codifications.each do |codification|
-        method = codification.to_s.demodulize.underscore.downcase
-        define_method method do |*args, **options, &block|
+        name            = codification.to_s.demodulize.underscore
+
+        plural_method   = name.pluralize
+        singular_method = name.singularize
+
+        define_method plural_method do |*args, **options, &block|
           codification::Coder.new(codification::Code.new(*args, **options), **options, &block)
+        end
+
+        define_method singular_method do |*args, **options, &block|
+          send(plural_method, *args, **options, &block).run
         end
       end
     end

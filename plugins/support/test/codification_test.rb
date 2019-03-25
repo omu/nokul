@@ -7,12 +7,15 @@ module Nokul
     module  Codification
       class CodificationTest < ActiveSupport::TestCase
         test 'API works' do
-          %i[
+          %w[
             sequential_numeric_codes
             random_numeric_codes
             unsuffixed_user_names
             suffixed_user_names
-          ].all? { |method| assert Codification.respond_to?(method) }
+          ].all? do |method|
+            assert Codification.respond_to?(method.pluralize)
+            assert Codification.respond_to?(method.singularize)
+          end
         end
       end
     end
