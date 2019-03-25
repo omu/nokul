@@ -6,7 +6,7 @@ module Nokul
   module Tenant
     module Codification
       class UserTest < ActiveSupport::TestCase
-        test 'user_name_generate works' do
+        test 'name_generate works' do
           user_name = User.name_generate(first_name: 'Mustafa Kemal',
                                          last_name:  'Atatürk',
                                          memory:     Support::Codification::SimpleMemory.new)
@@ -16,7 +16,7 @@ module Nokul
           assert_match(/^mkataturk#{sep}\d{#{len}}$/, user_name)
         end
 
-        test 'user_name_suggest works' do
+        test 'name_suggest works' do
           actual = User.name_suggest(first_name: 'Mustafa Kemal',
                                      last_name:  'Atatürk',
                                      memory:     Support::Codification::SimpleMemory.new)

@@ -6,7 +6,7 @@ module Nokul
   module Tenant
     module Codification
       class UnitTest < ActiveSupport::TestCase
-        test 'unit_code_generator works' do
+        test 'code_generator works' do
           coder = Unit.code_generator(starting: '023', ending: '025', memory: nil)
           assert_equal '023', coder.run
           assert_equal '024', coder.run
@@ -15,7 +15,7 @@ module Nokul
           assert_raise(StopIteration) { coder.run }
         end
 
-        test 'unit_code_generator works as hexadecimal sequences automagically' do
+        test 'code_generator works as hexadecimal sequences automagically' do
           coder = Unit.code_generator(starting: '009', ending: '00C', memory: nil)
           assert_equal '009', coder.run
           assert_equal '00A', coder.run
@@ -25,7 +25,7 @@ module Nokul
           assert_raise(StopIteration) { coder.run }
         end
 
-        test 'unit_code_generator works as alphabetical sequences automagically' do
+        test 'code_generator works as alphabetical sequences automagically' do
           coder = Unit.code_generator(starting: '009', ending: '00H', memory: nil)
           assert_equal '009', coder.run
           assert_equal '00A', coder.run
@@ -40,7 +40,7 @@ module Nokul
           assert_raise(StopIteration) { coder.run }
         end
 
-        test 'unit_code_generator works with patterns' do
+        test 'code_generator works with patterns' do
           coder = Unit.code_generator(starting: '001', ending: '009', pattern: '^[^3-7]+$', memory: nil)
           assert_equal '001', coder.run
           assert_equal '002', coder.run
