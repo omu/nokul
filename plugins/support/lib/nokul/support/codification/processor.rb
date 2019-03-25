@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'securerandom'
+
 module Nokul
   module Support
     module Codification
@@ -28,14 +30,13 @@ module Nokul
           !string.inside_offensives? && !string.inside_reserved?
         end
 
-        DEFAULT_RANDOM_RANGE = ('000'..'999').freeze
-        DEFAULT_RANDOM_SEP   = '.'
+        DEFAULT_RANDOM_SEP = '.'
+        DEFAULT_RANDOM_LEN = 3
 
         define :random_suffix do |string, **options|
-          @_random_coder ||= options[:random]     || Codification.random_numeric_codes(DEFAULT_RANDOM_RANGE)
-          @_random_sep   ||= options[:random_sep] || DEFAULT_RANDOM_SEP
+          random_suffix = SecureRandom.random_number_string options.fetch(:random_suffix_length, DEFAULT_RANDOM_LEN)
 
-          string + @_random_sep + @_random_coder.run
+          string + options.fetch(:random_suffix_separator, DEFAULT_RANDOM_SEP) + random_suffix
         rescue StopIteration
           Processor.skip string
         end
