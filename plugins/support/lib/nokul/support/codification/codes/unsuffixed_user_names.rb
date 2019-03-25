@@ -51,7 +51,11 @@ module Nokul
           def convert(source)
             source.must_be_any_of! [String]
 
-            [*source.send(alternative), source].uniq
+            names = source.map(&:split).flatten.map do |name|
+              name.downcase(:turkic).asciified.gsub(/[^a-zA-Z]/, '')
+            end
+
+            [*names.send(alternative), names].uniq
           end
 
           private
