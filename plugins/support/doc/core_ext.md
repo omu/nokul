@@ -8,7 +8,7 @@ author: Recai Oktaş
 `Object`
 --------
 
-### `to_yaml_pretty`
+**`to_yaml_pretty`**
 
 Nesnenin (göreceli olarak daha) güzel biçimli YAML temsilini üretir.
 
@@ -29,7 +29,7 @@ $ ruby -e 'puts %w[foo bar baz].to_yaml_pretty'
 
 ```
 
-### `must_be_any_of!(*type_specifications)`
+**`must_be_any_of!(*type_specifications)`**
 
 Nesnenin tipinin verilen argümanlardan en az bir tanesiyle uyumluluğunu
 denetleyerek nesnenin yine kendisi döner; eşleştirme yoksa `TypeError`
@@ -45,7 +45,7 @@ istisnası üretir.
 `Class`
 -------
 
-### `inherited_by_conveying_attributes(*attributes, &block)`
+**`inherited_by_conveying_attributes(*attributes, &block)`**
 
 Miras alma sırasında ata sınıf niteliklerinin çocuk sınıfa kopyalanarak
 aktarılmasını sağlar.  İsteğe bağlı olarak verilen bloğu da `inherited` hook'ta
@@ -69,7 +69,7 @@ Child.options[:length] #=> 13
 `Array`
 -------
 
-### `clip(number_of_last_elements = 1)`
+**`clip(number_of_last_elements = 1)`**
 
 Diziyi sondan `number_of_last_elements` sayıda elemanı çıkarılmış olarak döner.
 
@@ -80,7 +80,7 @@ a.clip #=> ['foo', 'bar']
 a #=> ['foo', 'bar', 'baz']
 ```
 
-### `affixed(**options)`
+**`affixed(**options)`**
 
 Dizgi dizisindeki her elemanı (varsa) `options[:interfix]` ile birleştirerek
 başına ve sonuna (varsa) `options[:prefix]` ve `options[:suffix]` ekleyerek
@@ -94,7 +94,7 @@ döner.
 `Hash`
 ------
 
-### `to_deep_ostruct`
+**`to_deep_ostruct`**
 
 Hash'ten derin `OpenStruct` nesnesi döner.
 
@@ -107,7 +107,7 @@ config.other.y #=> 19
 `Integer`
 ---------
 
-### `to_string(length, base = 10)`
+**`to_string(length, base = 10)`**
 
 Tamsayıdan soldan gerektiği kadar sıfırla doldurarak verilen uzunlukta bir dizgi
 döner.
@@ -120,7 +120,7 @@ döner.
 `String`
 --------
 
-### `asciified`
+**`asciified`**
 
 Türkçe karakterleri ASCII yakınlarıyla değiştirir.
 
@@ -128,7 +128,7 @@ Türkçe karakterleri ASCII yakınlarıyla değiştirir.
 'ışğüöçİ'.asciified #=> 'isguocI'
 ```
 
-### `abbreviation`
+**`abbreviation`**
 
 Dizgiden kısaltma üretir.
 
@@ -136,7 +136,7 @@ Dizgiden kısaltma üretir.
 'fener bahçe'.abbreviation #=> 'FB'
 ```
 
-### `capitalize_turkish`
+**`capitalize_turkish`**
 
 Türkçe kurallarına uygun olarak ilk harfleri büyütür.
 
@@ -145,7 +145,7 @@ Türkçe kurallarına uygun olarak ilk harfleri büyütür.
 
 ```
 
-### `capitalize_turkish_with_parenthesized`
+**`capitalize_turkish_with_parenthesized`**
 
 Türkçe kurallarına uygun olarak, parantez içini de dikkate alarak ilk harfleri büyütür.
 
@@ -153,7 +153,7 @@ Türkçe kurallarına uygun olarak, parantez içini de dikkate alarak ilk harfle
 'fener bahçe (istanbul)'.capitalize_turkish_with_parenthesized #=> 'Fener Bahçe (İstanbul)'
 ```
 
-### `inside_offensives?`
+**`inside_offensives?`**
 
 Dizginin nahoş olup olmadığını döner. (Kelime listesi için `data` dizinine bakın.)
 
@@ -161,7 +161,7 @@ Dizginin nahoş olup olmadığını döner. (Kelime listesi için `data` dizinin
 'salak'.inside_offensives? #=> true
 ```
 
-### `inside_reserved?`
+**`inside_reserved?`**
 
 Dizginin rezerve edilmiş bir kelime olup olmadığını döner. (Kelime listesi için
 `data` dizinine bakın.)
@@ -170,7 +170,7 @@ Dizginin rezerve edilmiş bir kelime olup olmadığını döner. (Kelime listesi
 'day'.inside_reserved? #=> true
 ```
 
-### `inside_abbreviations?`
+**`inside_abbreviations?`**
 
 Dizginin bir kısaltma olup olmadığını döner. (Kelime listesi için `data`
 dizinine bakın.)
@@ -179,7 +179,7 @@ dizinine bakın.)
 'KKTC'.inside_abbreviations? #=> true
 ```
 
-### `inside_conjunctions?`
+**`inside_conjunctions?`**
 
 Dizginin bir bağlaç olup olmadığını döner. (Kelime listesi için `data` dizinine
 bakın.)
@@ -191,7 +191,7 @@ bakın.)
 `SecureRandom`
 --------------
 
-### `random_number_string(length, base = 10)`
+**`random_number_string(length, base = 10)`**
 
 Verilen uzunluğa karşı düşen sayı aralığında rastgele bir tamsayı üretip aynı
 uzunlukta bir dizgi döner. (Üretilen tamsayı `0 <= rastgele < base**length`
