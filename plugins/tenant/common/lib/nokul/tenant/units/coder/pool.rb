@@ -6,8 +6,8 @@ module Nokul
       class Coder
         class Pool
           include Support::Structure.of %i[
-            begins
-            ends
+            starting
+            ending
             owner
             weight
             pattern
@@ -17,10 +17,10 @@ module Nokul
           attr_reader :coder
 
           def after_initialize
-            post_process = Regexp.new(pattern) if pattern
-            @coder = Support::Codification.sequential_numeric_codes Range.new(begins.to_s, ends.to_s),
-                                                                    memory: Memory.instance,
-                                                                    post_process: post_process
+            @coder = Codification::Unit.code_generator(starting: starting,
+                                                       ending:   ending,
+                                                       pattern:  pattern,
+                                                       memory:   Memory.instance)
           end
 
           def score_of(unit)
