@@ -5,11 +5,11 @@ author: İrfan Subaş
 Link Yardımcıları
 =================
 
-Uygulama içerisinde aynı işleve sahip linklerin aynı görünüme sahip olmasını
-sağlamak amacıyla geliştirilmişlerdir. Kullanımın bakımından `link_to` metodu ile
-benzerlik göstermektedir.
+Uygulama içerisinde aynı işleve sahip linklerin aynı görünüme sahip olmasını sağlamak amacıyla geliştirilmişlerdir.
+Kullanımın bakımından `link_to` metodu ile benzerlik göstermektedir.
 
-### Yardımcı Metodlar
+Yardımcı Metodlar
+-----------------
 
 - link_to_back
 - link_to_destroy
@@ -20,7 +20,7 @@ benzerlik göstermektedir.
 - link_to_update
 - **link_to_actions**
 
-#### Temel Kullanım Örnekleri
+### Temel Kullanım Örnekleri
 
 **Not:** Bu örnekler, `link_to_actions` haricindeki diğer yardımcılar için geçerlidir.
 
@@ -29,7 +29,7 @@ benzerlik göstermektedir.
   <%= link_to_edit('A Dersini Güncelle', edit_course_path(course)) %>
 ```
 
-#### İleri Seviye Kullanım Örnekleri
+### İleri Seviye Kullanım Örnekleri
 
 ```erb
   <%= link_to_destroy('Dersi Sil'
@@ -42,15 +42,15 @@ benzerlik göstermektedir.
                       data: { object_id: 1 } ) %>
 ```
 
-### link_to_actions
+### `link_to_actions`
 
-Görüntüleme, düzenleme ve silme işlevleri için gerekli linkleri tek bir metod ile
-oluşturmanızı sağlayan yardımcı bir metoddur.
+Görüntüleme, düzenleme ve silme işlevleri için gerekli linkleri tek bir metod ile oluşturmanızı sağlayan yardımcı bir
+metoddur.
 
-### Temel Kullanım Örnekleri
+#### Temel Kullanım Örnekleri
 
-Metoda, yalnızca **path** parametresi gönderilirse, 3 action içinde link üretecektir.
-**except** parametresini kullanarak dilediğiniz actionların hariç tutabilirsiniz. Ek olarak **scope** parametresini kullanarak linklerin hangi
+Metoda, yalnızca **path** parametresi gönderilirse, 3 action içinde link üretecektir. **except** parametresini
+kullanarak dilediğiniz actionların hariç tutabilirsiniz. Ek olarak **scope** parametresini kullanarak linklerin hangi
 kapsam için oluşturulacağını belirleyebilirsiniz.
 
 ```erb

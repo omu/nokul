@@ -2,13 +2,15 @@
 author: M. Serhat Dundar
 ---
 
-## Rules
+Rules
+=====
 
 - `boolean` alanlar için **mutlaka** `null_constraint` eklenmelidir.
 
 - `boolean` alanlara **mutlaka** `default` bir değer tanımlanmalıdır. Örn: `default: false` gibi.
 
-## Boolean
+Boolean
+-------
 
 Boolean bir alanın `nil` olması beklenen bir durum değildir. Örneğin:
 

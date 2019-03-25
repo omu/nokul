@@ -2,9 +2,11 @@
 author: M. Serhat Dundar
 ---
 
-# Installation
+Installation
+============
 
-## Prerequisites
+Prerequisites
+-------------
 
 - [PostgreSQL (>=11.x)](https://www.postgresql.org/download/)
 - [NodeJS (>=10.x)](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions)
@@ -13,9 +15,11 @@ author: M. Serhat Dundar
 - [libvips](https://github.com/jcupitt/libvips/wiki/Build-for-Ubuntu)
 - [wkhtmltopdf](https://github.com/mileszs/wicked_pdf#installation)
 
-## Installation
+Installation
+------------
 
-- Create a separate PostgreSQL user for the development and test environments. As per our policy, PostgreSQL user name must be the same as the application name: `nokul`.
+- Create a separate PostgreSQL user for the development and test environments. As per our policy, PostgreSQL user name
+  must be the same as the application name: `nokul`.
 
   ```bash
   sudo -u postgres psql <<-EOF
@@ -24,7 +28,10 @@ author: M. Serhat Dundar
   EOF
   ```
 
-  In order to communicate with third parties, you also need to setup some credentials which are stored in `credentials.yml.enc`. For obtaining credentials you can either download a copy of `master.key` into config/ or you can define the key value as `RAILS_MASTER_KEY` environment variable. For adding new secrets run the command show, below after you obtain the key:
+  In order to communicate with third parties, you also need to setup some credentials which are stored in
+  `credentials.yml.enc`. For obtaining credentials you can either download a copy of `master.key` into config/ or you
+  can define the key value as `RAILS_MASTER_KEY` environment variable. For adding new secrets run the command show,
+  below after you obtain the key:
 
   ```ruby
   bin/rails credentials:edit
@@ -58,8 +65,9 @@ author: M. Serhat Dundar
 
   `reset` is equivalent of `rake db:drop & rake db:setup`.
 
-## Restoring an Existing PostgreSQL Dump from Dokku
+Restoring an Existing PostgreSQL Dump from Dokku
+------------------------------------------------
 
-```
+```bash
 pg_restore -h localhost -p 5432 -U nokul -d nokul_development -v "some_dump.backup"
 ```

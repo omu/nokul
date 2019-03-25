@@ -2,7 +2,8 @@
 author: M. Serhat Dundar
 ---
 
-# How To: Arel Queries
+How To: Arel Queries
+====================
 
 - List of Arel classes:
 
@@ -32,9 +33,10 @@ Arel::Visitors
 Arel::WindowPredications
 ```
 
-call them with `.instance_methods` or simply refer to: https://www.rubydoc.info/github/rails/arel/master/Arel/ for details.
+call them with `.instance_methods` or simply refer to: <https://www.rubydoc.info/github/rails/arel/master/Arel/> for details.
 
-## References
+References
+----------
 
-- https://jacopretorius.net/2016/09/the-mimimum-arel-every-rails-developer-should-know.html
-- https://www.calebwoods.com/2015/08/11/advanced-arel-cheat-sheet/
+- <https://jacopretorius.net/2016/09/the-mimimum-arel-every-rails-developer-should-know.html>
+- <https://www.calebwoods.com/2015/08/11/advanced-arel-cheat-sheet/>
