@@ -9,6 +9,7 @@ Bundler.require(*Rails.groups)
 
 module Nokul
   class Application < Rails::Application
+    # multi-tenancy
     Nokul::Tenant.load
 
     # Initialize configuration defaults for originally generated Rails version.

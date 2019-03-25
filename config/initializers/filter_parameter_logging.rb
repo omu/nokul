@@ -2,6 +2,9 @@
 
 Rails.application.config.filter_parameters += %i[
   access_token
+  account_sid
+  api_secret
+  auth_token
   bearer_token
   client_id
   credit_card

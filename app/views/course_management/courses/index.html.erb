@@ -1,18 +1,16 @@
-<div class="alert alert-light">
-  <%= link_to_new t('.add_new_course'), new_course_path %>
-</div>
-
-<%= render 'search' %>
-
 <div class='row'>
   <div class='col-lg-12'>
-    <div class="card">
-      <div class="card-header">
+    <div class='card'>
+      <div class='card-header'>
         <%= fa_icon 'align-justify', text: t('.courses') %>
+        <div class='card-header-actions'>
+          <%= link_to_new t('.add_new_course'), new_course_path %>
+        </div>
       </div>
-      <div class="card-body">
+      <div class='card-body'>
+        <%= render 'search' %>
         <table class='table table-responsive-sm table-striped table-hover'>
-          <thead class="thead-dark">
+          <thead class='thead-dark'>
             <tr>
               <th><%= t('.name') %></th>
               <th><%= t('.code') %></th>
@@ -35,13 +33,13 @@
               <tr class="<%= course.active? ? '' : 'table-warning' %>">
                 <td><%= course.name %></td>
                 <td><%= course.code %></td>
-                <td><%= course.unit.try(:name) %></td>
+                <td><%= course.unit.try(:names_depth_cache) %></td>
                 <td><%= course.course_type.try(:name) %></td>
                 <td>
-                  <span class="badge badge-primary">T: <%= course.theoric %></span>
-                  <span class="badge badge-warning">P: <%= course.practice %></span>
-                  <span class="badge badge-info">L: <%= course.laboratory %></span>
-                  <span class="badge badge-success">K: <%= course.credit %></span>
+                  <span class='badge badge-primary'>T: <%= course.theoric %></span>
+                  <span class='badge badge-warning'>P: <%= course.practice %></span>
+                  <span class='badge badge-info'>L: <%= course.laboratory %></span>
+                  <span class='badge badge-success'>K: <%= course.credit %></span>
                 </td>
                 <td><%= enum_t(course, :program_type) %></td>
                 <td><%= course.language.try(:name) %></td>
@@ -52,9 +50,9 @@
           </tbody>
         </table>
       </div>
-      <div class="card-footer">
-        <nav aria-label="pagination">
-          <ul class="pagination justify-content-center">
+      <div class='card-footer'>
+        <nav aria-label='pagination'>
+          <ul class='pagination justify-content-center'>
             <%== pagy_bootstrap_nav(@pagy) %>
           </ul>
         </nav>
