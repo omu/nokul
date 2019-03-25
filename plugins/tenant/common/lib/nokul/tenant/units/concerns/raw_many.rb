@@ -43,7 +43,7 @@ module Nokul
         module Refinery
           FIX_AFTER_CAPITALIZE = {
             'Hast.' => 'Hastalıkları',
-            'Pr.' => 'Programı',
+            'Pr.'   => 'Programı',
             'Üniv.' => 'Üniversitesi'
           }.freeze
 
