@@ -5,7 +5,7 @@ require 'securerandom'
 module SecureRandom
   module_function
 
-  def random_number_string(length)
-    random_number(10**length).to_string(length, 10)
+  def random_number_string(length, base = 10)
+    random_number(base**length).to_string(length, base)
   end
 end
