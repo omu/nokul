@@ -14,8 +14,10 @@ oluşan bir kelime öbeğidir.  Ör.
 Kısaltmalarda izin verilen karakter aralığı:
 
 - Başta: `ABCÇDEFGHIİJKLMNOÖPRSŞTUÜVYZ` (Türkçe harfler)
+
 - Ortada: `ABCÇDEFGHIİJKLMNOÖPRSŞTUÜVYZ0123456789-` (Türkçe harfler + rakamlar +
   tire)
+
 - Sonda: `ABCÇDEFGHIİJKLMNOÖPRSŞTUÜVYZ0123456789` (Türkçe harfler + rakamlar)
 
 (Özel olarak tire dışında `.,;:_` gibi noktalama işaretlerine izin verilmediğine

@@ -108,8 +108,8 @@ yeniden üretmeniz ve sonucu test etmeniz gerekir.  Bu amaçla aşağıdaki yol
 izlenmelidir.
 
 ```sh
-$ cd plugins/tenant/omu
-$ bundle install # henüz yapılmamışsa
-$ bin/rails tenant:units:reproduce
-$ bin/rails test
+cd plugins/tenant/omu
+bundle install # henüz yapılmamışsa
+bin/rails tenant:units:reproduce
+bin/rails test
 ```
