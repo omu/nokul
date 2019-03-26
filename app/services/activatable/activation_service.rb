@@ -15,6 +15,7 @@ module Activatable
     validates :serial_no, allow_blank: true, numericality: { only_integer: true }, length: { is: 6 }
     validates :document_no, allow_blank: true, length: { is: 9 }
     validates :mobile_phone, telephone_number: { country: proc { |record| record.country }, types: [:mobile] }
+    validates_with ActivationServiceValidator
     validate :must_be_prospective
     validate :check_identity, if: :prospective?
 

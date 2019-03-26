@@ -2,6 +2,8 @@ en:
   validators:
     academic_term:
       active_check: One of the academic terms must be active.
+    activation_service:
+      cannot_be_blank: If you have the old identity card, you must fill in the 'Serial' and 'Serial No' fields, the 'Document Number' field if you have a chip identity card.
     address:
       max_formal: You can have up to %{limit} formal addresses maximum.
       max_informal: You can add up to %{limit} addresses maximum.

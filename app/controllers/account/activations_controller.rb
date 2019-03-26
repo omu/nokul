@@ -12,6 +12,7 @@ module Account
 
     def update
       @activation = Activatable::ActivationService.new(params[:activation])
+
       if @activation.valid?
         @activation.prospective.update(archived: true)
         @activation.user.update(activated: true, activated_at: Time.zone.now)
