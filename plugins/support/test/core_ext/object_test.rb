@@ -12,7 +12,9 @@ class ObjectTest < ActiveSupport::TestCase
     assert_equal [13, 19], [13, 19].must_be_any_of!([Integer])
     assert_equal({ x: 13, y: 19 }, { x: 13, y: 19 }.must_be_any_of!(Symbol => Integer))
 
+    assert_raise(TypeError) { 13.must_be_any_of!([Integer]) }
     assert_raise(TypeError) { [13, '19'].must_be_any_of!([Integer]) }
+    assert_raise(TypeError) { 13.must_be_any_of!(Symbol => Integer) }
     assert_raise(TypeError) { { x: 13, y: '19' }.must_be_any_of!(Symbol => Integer) }
   end
 end

@@ -3,7 +3,7 @@
 require 'test_helper'
 
 class ClassTest < ActiveSupport::TestCase
-  module TestOne
+  module TestClassesOne
     class NonConveyedBase
       class_attribute :array_attr, default: %w[foo bar]
       class_attribute :hash_attr, default: { x: 'foo', y: 'bar' }
@@ -28,18 +28,18 @@ class ClassTest < ActiveSupport::TestCase
   end
 
   test 'inherited_by_conveying_attributes works' do
-    assert_equal %w[foo bar child_addition], TestOne::NonConveyedBase.array_attr
-    assert_equal %w[foo bar],                TestOne::ConveyedBase.array_attr
-    assert_equal %w[foo bar child_addition], TestOne::ChildFromNonConveyedBase.array_attr
-    assert_equal %w[foo bar child_addition], TestOne::ChildFromConveyedBase.array_attr
+    assert_equal %w[foo bar child_addition], TestClassesOne::NonConveyedBase.array_attr
+    assert_equal %w[foo bar],                TestClassesOne::ConveyedBase.array_attr
+    assert_equal %w[foo bar child_addition], TestClassesOne::ChildFromNonConveyedBase.array_attr
+    assert_equal %w[foo bar child_addition], TestClassesOne::ChildFromConveyedBase.array_attr
 
-    assert_equal Hash[x: 'foo', y: 'bar', z: 'child_addition'], TestOne::NonConveyedBase.hash_attr
-    assert_equal Hash[x: 'foo', y: 'bar'],                      TestOne::ConveyedBase.hash_attr
-    assert_equal Hash[x: 'foo', y: 'bar', z: 'child_addition'], TestOne::ChildFromNonConveyedBase.hash_attr
-    assert_equal Hash[x: 'foo', y: 'bar', z: 'child_addition'], TestOne::ChildFromConveyedBase.hash_attr
+    assert_equal Hash[x: 'foo', y: 'bar', z: 'child_addition'], TestClassesOne::NonConveyedBase.hash_attr
+    assert_equal Hash[x: 'foo', y: 'bar'],                      TestClassesOne::ConveyedBase.hash_attr
+    assert_equal Hash[x: 'foo', y: 'bar', z: 'child_addition'], TestClassesOne::ChildFromNonConveyedBase.hash_attr
+    assert_equal Hash[x: 'foo', y: 'bar', z: 'child_addition'], TestClassesOne::ChildFromConveyedBase.hash_attr
   end
 
-  module TestTwo
+  module TestClassesTwo
     class ConveyedBase
       class_attribute :array_attr, default: %w[foo bar]
 
@@ -54,10 +54,10 @@ class ClassTest < ActiveSupport::TestCase
   end
 
   test 'inherited_by_conveying_attributes with block works' do
-    assert_equal %w[foo bar],                TestTwo::ConveyedBase.array_attr
-    assert_equal %w[foo bar child_addition], TestTwo::ChildFromConveyedBase.array_attr
+    assert_equal %w[foo bar],                TestClassesTwo::ConveyedBase.array_attr
+    assert_equal %w[foo bar child_addition], TestClassesTwo::ChildFromConveyedBase.array_attr
 
-    refute TestTwo::ConveyedBase.respond_to? :other
-    assert_equal 'ok', TestTwo::ChildFromConveyedBase.other
+    refute TestClassesTwo::ConveyedBase.respond_to? :other
+    assert_equal 'ok', TestClassesTwo::ChildFromConveyedBase.other
   end
 end

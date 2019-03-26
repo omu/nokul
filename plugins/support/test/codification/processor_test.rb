@@ -14,7 +14,7 @@ module Nokul
           assert_equal 'FOO', Processor.new(post_process: proc { |s| s.upcase }).process(Object.new, 'foo')
         end
 
-        module TestOne
+        module TestDummy
           class Dummy
             attr_reader :options
             def initialize(**options)
@@ -25,9 +25,9 @@ module Nokul
 
         test 'builtins work' do
           processor = Processor.new post_process: %i[non_offensive? non_reserved? random_suffix]
-          assert_match(/^foo.\d{3}$/, processor.process(TestOne::Dummy.new, 'foo'))
-          assert_raise(Skip) { processor.process(TestOne::Dummy.new, 'salak') }
-          assert_raise(Skip) { processor.process(TestOne::Dummy.new, 'if') }
+          assert_match(/^foo.\d{3}$/, processor.process(TestDummy::Dummy.new, 'foo'))
+          assert_raise(Skip) { processor.process(TestDummy::Dummy.new, 'salak') }
+          assert_raise(Skip) { processor.process(TestDummy::Dummy.new, 'if') }
         end
 
         test 'should accept a builtin_post_process option' do

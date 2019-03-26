@@ -6,7 +6,7 @@ module Nokul
   module Support
     module  Codification
       class MemoryTest < ActiveSupport::TestCase
-        module TestOne
+        module TestRefusingMemory
           class RefusingMemory < Memory
             def remember(*); end
 
@@ -17,7 +17,7 @@ module Nokul
         end
 
         test 'sub classing should work as expected' do
-          memory = TestOne::RefusingMemory.new
+          memory = TestRefusingMemory::RefusingMemory.new
           assert memory.remember? 19
         end
 
