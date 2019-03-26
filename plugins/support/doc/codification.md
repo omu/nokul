@@ -295,7 +295,7 @@ module Nokul
           # custom code
         end
 
-        class Coder < Codifiaction::Coder
+        class Coder < Codification::Coder
           # custom coder
         end
       end
