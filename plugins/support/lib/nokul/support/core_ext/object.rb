@@ -23,6 +23,8 @@ class Object
     end
 
     def must_be_array(object, type)
+      (error = type_error(object, Array)) && (return error)
+
       sanitize_arguments(sample_type = type.first)
 
       object.each do |element|
@@ -33,6 +35,8 @@ class Object
     end
 
     def must_be_hash(object, type)
+      (error = type_error(object, Hash)) && (return error)
+
       sanitize_arguments(*(key_type, value_type = type.first))
 
       object.each do |key, value|
@@ -44,6 +48,8 @@ class Object
     end
 
     def must_be_range(object, type)
+      (error = type_error(object, Range)) && (return error)
+
       sanitize_arguments(starting_type = type.first)
       sanitize_arguments(ending_type = type.first)
 

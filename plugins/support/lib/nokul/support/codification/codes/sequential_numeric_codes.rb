@@ -11,16 +11,16 @@ module Nokul
     module Codification
       module SequentialNumericCodes
         class Code < Codification::Code
-          def emit
-            [peek].map { |number| number.to_string(net_length, base) }
-          end
-
           protected
 
-          def convert(source)
+          def take_in(source)
             source.must_be_any_of! String..String, String
 
             source.is_a?(String) ? convert_from_string(source) : convert_from_range(source)
+          end
+
+          def take_out(value)
+            value.to_string(net_length, base)
           end
 
           attr_accessor :base, :net_length

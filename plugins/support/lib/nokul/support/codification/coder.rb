@@ -77,7 +77,7 @@ module Nokul
         def over_loop!(*); end
 
         def try(amnesic:)
-          return unless (result = processor.process(self, code.to_s, **options))
+          return unless (result = processor.process(self, code.peek, **options))
 
           memory.learn(result, amnesic: amnesic)
         rescue Skip

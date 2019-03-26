@@ -13,7 +13,7 @@ module Nokul
         class Code < SequentialNumericCodes::Code
           protected
 
-          def convert(source)
+          def take_in(source)
             super.to_a.shuffle!
           end
         end

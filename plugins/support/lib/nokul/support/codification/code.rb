@@ -1,44 +1,42 @@
 # frozen_string_literal: true
 
-require 'forwardable'
-
 module Nokul
   module Support
     module Codification
       class Code
-        extend Forwardable
-
-        delegate %i[cycle next peek rewind +] => :@enum
-
         def initialize(source, **options)
           @options = options
-          @enum    = convert(source).to_enum
+          @enum    = take_in(source).to_enum
         end
 
-        def to_s
-          emit.join_affixed(**options)
+        def next
+          emit { take_out enum.next }
+        end
+
+        def rewind
+          tap { enum.rewind }
+        end
+
+        def peek
+          emit { take_out enum.peek }
         end
 
         protected
 
         attr_reader :enum, :options
 
-        def convert(_source)
+        def take_in(_source)
           raise NotImplementedError
         end
 
-        def emit
+        def take_out(_value)
           raise NotImplementedError
         end
-      end
 
-      class SimpleCode < Code
-        def convert(source)
-          source.must_be_any_of! [String]
-        end
+        private
 
         def emit
-          peek
+          [*yield].join_affixed(**options)
         end
       end
     end

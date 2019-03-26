@@ -42,13 +42,9 @@ module Nokul
         class Code < Codification::Code
           using Alternatives
 
-          def emit
-            peek
-          end
-
           protected
 
-          def convert(source)
+          def take_in(source)
             source.must_be_any_of! [String]
 
             names = source.map(&:split).flatten.map do |name|
@@ -56,6 +52,10 @@ module Nokul
             end
 
             [*names.send(alternative), names].uniq
+          end
+
+          def take_out(value)
+            value
           end
 
           private
