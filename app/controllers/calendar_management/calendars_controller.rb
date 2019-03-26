@@ -43,14 +43,13 @@ module CalendarManagement
     end
 
     def duplicate
-      @calendar = Calendar.find(params[:calendar_id])
-      @duplicate_record = DuplicateService.new(@calendar, 'name').duplicate
+      calendar = Calendar.find(params[:calendar_id])
 
-      redirect_to(:calendars, alert: t('.warning')) && return unless @duplicate_record
+      duplicate_record = AcademicCalendars::DuplicateCalendarService.new(calendar, 'name').duplicate
+      redirect_to(:calendars, alert: t('.warning')) && return unless duplicate_record
 
-      AcademicCalendars::DuplicateEventsService.new(@calendar, @duplicate_record)
-
-      redirect_to([:edit, @duplicate_record], notice: t('.success'))
+      AcademicCalendars::DuplicateEventsService.new(calendar, duplicate_record)
+      redirect_to([:edit, duplicate_record], notice: t('.success'))
     end
 
     def units

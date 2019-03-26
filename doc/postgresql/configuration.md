@@ -2,44 +2,52 @@
 author: M. Serhat Dundar
 ---
 
-# Konfigürasyon
+Konfigürasyon
+=============
 
-PostgreSQL'i donanım özelliklerinize göre konfigüre ettiğinizde yoğun yazma-güncelleme işlemi yapan `seed`, `import`, `fetch` gibi task'ler ciddi oranda hızlanacaktır.
+PostgreSQL'i donanım özelliklerinize göre konfigüre ettiğinizde yoğun yazma-güncelleme işlemi yapan `seed`, `import`,
+`fetch` gibi task'ler ciddi oranda hızlanacaktır.
 
-1. Başlıklarda tanımlanan RAM miktarı makinanızın toplam RAM'i değil, PostgreSQL'in kullanabileceği maximum RAM kapasitesidir. Aynı durum CPU core sayısı için de geçerlidir.
-1. İlgili konfigürasyonlar PostgreSQL >= 10 sürümü gerektir. Daha eski sürümler için `max_parallel_workers` satırını kaldırın.
+1. Başlıklarda tanımlanan RAM miktarı makinanızın toplam RAM'i değil, PostgreSQL'in kullanabileceği maximum RAM
+   kapasitesidir. Aynı durum CPU core sayısı için de geçerlidir.
+2. İlgili konfigürasyonlar PostgreSQL >= 10 sürümü gerektir. Daha eski sürümler için `max_parallel_workers` satırını
+   kaldırın.
 
-## Konfigürasyon Dosyası
+Konfigürasyon Dosyası
+---------------------
 
 Ubuntu'da genellikle `/etc/postgresql/$VERSION/main/postgresql.conf` altında. Burada yoksa:
 
-```
+```bash
 psql -U postgres
 show config_file;
 ```
 
 ile konumunu görebilirsiniz.
 
-## Genel Ayarlar
+Genel Ayarlar
+-------------
 
-Yerel makinanızda sorgu istatistiklerini takip edebilmek için konfigürasyon dosyasının sonuna aşağıdaki satırları ekleyerek `pg_stat` eklentisini aktive edin:
+Yerel makinanızda sorgu istatistiklerini takip edebilmek için konfigürasyon dosyasının sonuna aşağıdaki satırları
+ekleyerek `pg_stat` eklentisini aktive edin:
 
-```
+```bash
 shared_preload_libraries = 'pg_stat_statements'
 pg_stat_statements.track = all
 ```
 
 Postgres'i restart edin:
 
-```
+```bash
 service postgresql restart
 ```
 
-## Tuning
+Tuning
+------
 
-### 8GB RAM + 2 Core + SSD
+8GB RAM + 2 Core + SSD
 
-```
+```conf
 # Postgresql Version: 10 || 11
 # OS Type: linux
 # Total Memory (RAM): 8 GB
@@ -64,6 +72,7 @@ max_parallel_workers_per_gather = 1
 max_parallel_workers = 2
 ```
 
-### Referanslar
+Referanslar
+-----------
 
-- https://pgtune.leopard.in.ua/#/
+- <https://pgtune.leopard.in.ua/#/>

@@ -2,18 +2,22 @@
 author: M. Serhat Dundar
 ---
 
-# Secrets
+Secrets
+=======
 
-## Setup
+Setup
+-----
 
-- Uygulamayı ayağa kaldırabilmek için `RAILS_MASTER_KEY` ve `TENANT_MASTER_KEY` ortam değişkenlerini sisteminize tanımlamanız gerekir. `bashrc`, `zshrc`, `bash_profile` vb. dosyanıza ortam değişenlerini ekleyin:
+- Uygulamayı ayağa kaldırabilmek için `RAILS_MASTER_KEY` ve `TENANT_MASTER_KEY` ortam değişkenlerini sisteminize
+  tanımlamanız gerekir. `bashrc`, `zshrc`, `bash_profile` vb. dosyanıza ortam değişenlerini ekleyin:
 
-  ```
+  ```bash
   export RAILS_MASTER_KEY=XXX
   export TENANT_MASTER_KEY=XXX
   ```
 
-## Uygulama Sırları
+Uygulama Sırları
+----------------
 
 - Uygulama sırlarını görüntüle:
 
@@ -33,7 +37,8 @@ author: M. Serhat Dundar
   Rails.application.credentials.dig(:foo, :bar, :baz)
   ```
 
-## Tenant Sırları
+Tenant Sırları
+--------------
 
 - Hangi tenant için işlem yapacaksanız ilgili engine'in bulunduğu dizine düşün:
 

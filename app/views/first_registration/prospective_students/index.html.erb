@@ -29,7 +29,7 @@
                 <td><%= prospective_student.id_number %></td>
                 <td><%= prospective_student.first_name %></td>
                 <td><%= prospective_student.last_name %></td>
-                <td><%= prospective_student.unit.name %></td>
+                <td><%= prospective_student.unit.names_depth_cache %></td>
                 <td><%= prospective_student.meb_status ? t('.graduated') : t('.not_graduated_or_unknown') %></td>
                 <td><%= prospective_student.military_status ? t('.unproblematic') : t('.must_see_recruiting_office') %></td>
                 <td><%= prospective_student.obs_status ? t('.unproblematic') : t('.student_in_a_different_unit') %></td>

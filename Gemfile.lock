@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/rails/rails.git
-  revision: efb706daad0e2e1039c6abb4879c837ef8bf4d10
+  revision: 4ec486145290efb4059b64e84a2bfd9e157bf787
   specs:
     actioncable (6.0.0.beta3)
       actionpack (= 6.0.0.beta3)
@@ -63,7 +63,7 @@ GIT
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-      zeitwerk (~> 1.4)
+      zeitwerk (~> 1.4, >= 1.4.2)
     rails (6.0.0.beta3)
       actioncable (= 6.0.0.beta3)
       actionmailbox (= 6.0.0.beta3)
@@ -129,11 +129,11 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     ancestry (3.0.5)
       activerecord (>= 3.2.0)
-    archive-zip (0.12.0)
-      io-like (~> 0.3.0)
     ast (2.4.0)
+    authy (2.7.5)
+      httpclient (>= 2.5.3.3)
     aws-eventstream (1.0.2)
-    aws-partitions (1.145.0)
+    aws-partitions (1.146.0)
     aws-sdk-core (3.48.2)
       aws-eventstream (~> 1.0, >= 1.0.2)
       aws-partitions (~> 1.0)
@@ -142,7 +142,7 @@ GEM
     aws-sdk-kms (1.16.0)
       aws-sdk-core (~> 3, >= 3.48.2)
       aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.34.0)
+    aws-sdk-s3 (1.35.0)
       aws-sdk-core (~> 3, >= 3.48.2)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.0)
@@ -177,9 +177,6 @@ GEM
     chartkick (3.0.2)
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
-    chromedriver-helper (2.1.0)
-      archive-zip (~> 0.10)
-      nokogiri (~> 1.8)
     cocoon (1.2.12)
     codacy-coverage (2.1.0)
       simplecov
@@ -219,6 +216,8 @@ GEM
       smart_properties
     erubi (1.8.0)
     execjs (2.7.0)
+    faraday (0.15.4)
+      multipart-post (>= 1.2, < 3)
     ffi (1.10.0)
     fit-commit (3.8.1)
       swearjar (~> 1.3)
@@ -232,18 +231,19 @@ GEM
       activesupport (>= 4.2)
     hashdiff (0.3.8)
     html_tokenizer (0.0.7)
+    httpclient (2.8.3)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     image_processing (1.8.0)
       mini_magick (>= 4.9.3, < 5)
       ruby-vips (>= 2.0.13, < 3)
-    io-like (0.3.0)
     jaro_winkler (1.5.2)
     jbuilder (2.8.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
     jmespath (1.4.0)
     json (2.2.0)
+    jwt (2.1.0)
     launchy (2.4.3)
       addressable (~> 2.3)
     letter_opener (1.7.0)
@@ -271,7 +271,11 @@ GEM
     minitest (5.11.3)
     msgpack (1.2.9)
     multi_json (1.13.1)
+    multipart-post (2.0.0)
+    net_http_ssl_fix (0.0.10)
     netaddr (2.0.3)
+    nexmo (5.6.0)
+      jwt (~> 2)
     nio4r (2.3.1)
     nokogiri (1.10.1)
       mini_portile2 (~> 2.4.0)
@@ -365,7 +369,9 @@ GEM
     simplecov-html (0.10.2)
     simpleidn (0.1.1)
       unf (~> 0.1.4)
+    slack-notifier (2.3.2)
     smart_properties (1.13.1)
+    smstools (0.2.0)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -383,6 +389,10 @@ GEM
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
+    twilio-ruby (5.21.2)
+      faraday (~> 0.9)
+      jwt (>= 1.5, <= 2.5)
+      nokogiri (>= 1.6, < 2.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uglifier (4.1.20)
@@ -394,6 +404,11 @@ GEM
     uniform_notifier (1.12.1)
     warden (1.2.8)
       rack (>= 2.0.6)
+    webdrivers (3.7.0)
+      net_http_ssl_fix
+      nokogiri (~> 1.6)
+      rubyzip (~> 1.0)
+      selenium-webdriver (~> 3.0)
     webmock (3.5.1)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
@@ -409,13 +424,14 @@ GEM
       activesupport
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (1.4.0)
+    zeitwerk (1.4.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   ancestry
+  authy
   aws-sdk-s3
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.0)
@@ -425,7 +441,6 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   chartkick
-  chromedriver-helper
   cocoon
   codacy-coverage
   coffee-rails (~> 4.2)
@@ -442,6 +457,7 @@ DEPENDENCIES
   letter_opener
   listen (>= 3.0.5, < 3.2)
   lol_dba
+  nexmo
   nokul-support!
   nokul-tenant!
   nokul-tenant-omu!
@@ -461,15 +477,18 @@ DEPENDENCIES
   rubocop
   ruby-progressbar
   sassc-rails
-  selenium-webdriver
   sidekiq
   simple_form
   simplecov
+  slack-notifier
+  smstools
   spring
   spring-watcher-listen (~> 2.0.0)
   telephone_number
+  twilio-ruby (~> 5.21.2)
   uglifier (>= 1.3.0)
   web-console!
+  webdrivers (~> 3.0)
   webmock
   webpacker
   wicked_pdf

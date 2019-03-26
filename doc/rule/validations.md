@@ -2,9 +2,11 @@
 author: M. Serhat Dundar
 ---
 
-# Validations
+Validations
+===========
 
-## Rule
+Rule
+----
 
 ### String
 
@@ -12,13 +14,16 @@ author: M. Serhat Dundar
 
 - Daha uzun `string` alanlar için `length: { maximum: 65_535 }` kullanın.
 
-- `length` validasyonu `presence` kontrolü yapmaz. Yani `nil` bir değer `length` validasyonunu geçebilir. Dolayısıyla varlık kontrolü yapmak istiyorsanız `presence: true` kullanın. İstemiyorsanız boş bırakın - `allow_nil` veya `allow_blank` kullanmanıza gerek yok.
+- `length` validasyonu `presence` kontrolü yapmaz. Yani `nil` bir değer `length` validasyonunu geçebilir. Dolayısıyla
+  varlık kontrolü yapmak istiyorsanız `presence: true` kullanın. İstemiyorsanız boş bırakın - `allow_nil` veya
+  `allow_blank` kullanmanıza gerek yok.
 
 - `allow_blank` veritabanında boş string'lerin oluşmasına sebep olduğu için genel olarak hiç kullanmayın.
 
 ### Integer || Decimal || Float
 
-- `numericality` validasyonu varsayılan olarak attribute'e `presence` kontrolü yapar. Dolayısıyla `numericality` kullandığınız yerde `presence` kullanmayın.
+- `numericality` validasyonu varsayılan olarak attribute'e `presence` kontrolü yapar. Dolayısıyla `numericality`
+  kullandığınız yerde `presence` kullanmayın.
 
 - Nümerik alanların negatif bir sayı olmasını istemiyorsanız `greater_than_or_equal_to: 0` gibi validasyonlar kullanın.
 
@@ -42,29 +47,34 @@ author: M. Serhat Dundar
 
 - Enum olarak tasarladığınız `integer` alanlara `inclusion` validasyonu ekleyin.
 
-- `inclusion` validasyonuna değer kümesi olarak tanımladığınız enum'un anahtarlarını verin:
-  ```
+- `inclusion` validasyonuna değer kümesi olarak tanımladığınız enum'un anahtarlarını verin:  
+
+  ```ruby
   enum marital_status: { single: 1, married: 2, divorced: 3, unknown: 4 }
   validates :marital_status, inclusion: { in: marital_statuses.keys }
   ```
 
-- `inclusion` validasyonu `presence` kontrolü yapmaktadır. Eğer alanın `nil` olmasını istemiyorsanız `presence` eklemenize gerek yok. Eğer alan `nil`'de olabilsin istiyorsanız `allow_nil: true` ekleyin.
+- `inclusion` validasyonu `presence` kontrolü yapmaktadır. Eğer alanın `nil` olmasını istemiyorsanız `presence`
+  eklemenize gerek yok. Eğer alan `nil`'de olabilsin istiyorsanız `allow_nil: true` ekleyin.
 
 - Yazdığınız enum yalnızca 2 değerden oluşuyorsa onu `boolean`'a çevirmeyi düşünün.
 
+Style
+-----
 
-## Style
-
-Her bir `attribute` için ayrı bir validates satırı ve aynı satırda validasyonlar. Eğer satır 120 satırı geçiyorsa, sığmayan validasyon hizalı şekilde alt satıra.
+Her bir `attribute` için ayrı bir validates satırı ve aynı satırda validasyonlar. Eğer satır 120 satırı geçiyorsa,
+sığmayan validasyon hizalı şekilde alt satıra.
 
 Öncelik sırası:
 
 1. presence || allow_nil || allow_blank
-1. uniqueness
-1. numericality || length
-1. diğerleri
+2. uniqueness
+3. numericality || length
+4. diğerleri
 
-**DOĞRU:**
+### Durumlar
+
+#### Doğru
 
 ```ruby
 validates :type, presence: true
@@ -76,7 +86,7 @@ validates :name, presence: true, uniqueness: { scope: %i[ancestry unit_status_id
 validates :duration, numericality: { only_integer: true }, allow_nil: true
 ```
 
-**YANLIŞ: [compact]**
+#### YANLIŞ [compact]
 
 ```ruby
 validates :email, :id_number, :date_of_birth
@@ -85,7 +95,7 @@ validates :id_number,
           numericality: { only_integer: true }
 ```
 
-**YANLIŞ: [compact + her bir validasyon ayrı satırda]**
+#### YANLIŞ [compact + her bir validasyon ayrı satırda]
 
 ```ruby
 validates :email, :id_number, :date_of_birth
@@ -95,7 +105,7 @@ validates :id_number,
           numericality: { only_integer: true }
 ```
 
-**YANLIŞ: [her bir validasyon türü için ayrı bir validates satırı, validasyonlar ayrı satırda]**
+#### YANLIŞ [her bir validasyon türü için ayrı bir validates satırı, validasyonlar ayrı satırda]
 
 ```ruby
 validates :email, :id_number, :date_of_birth
@@ -106,7 +116,7 @@ validates :id_number,
           numericality: { only_integer: true }
 ```
 
-**YANLIŞ: [her bir attribute için ayrı bir validates satırı, validasyonlar ayrı satırda]**
+#### YANLIŞ [her bir attribute için ayrı bir validates satırı, validasyonlar ayrı satırda]
 
 ```ruby
 validates :email,
@@ -117,7 +127,7 @@ validates :date_of_birth,
           presence: true, uniqueness: true
 ```
 
-**YANLIŞ: [her bir attribute için ayrı bir validates satırı, her bir validasyon ayrı satırda]**
+#### YANLIŞ [her bir attribute için ayrı bir validates satırı, her bir validasyon ayrı satırda]
 
 ```ruby
 validates :email,
@@ -132,7 +142,7 @@ validates :date_of_birth,
           uniqueness: true
 ```
 
-**YANLIŞ: [her bir attribute ve validasyon türü için ayrı bir validates satırı]**
+#### YANLIŞ [her bir attribute ve validasyon türü için ayrı bir validates satırı]
 
 ```ruby
 validates :email, presence: true

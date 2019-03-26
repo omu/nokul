@@ -26,6 +26,7 @@ gem 'aws-sdk-s3', require: false
 gem 'image_processing', '~> 1.2'
 
 # authentication
+gem 'authy'
 gem 'devise'
 
 # assets: core asset dependencies
@@ -58,9 +59,15 @@ gem 'telephone_number'
 
 # error tracking
 gem 'rollbar', github: 'rollbar/rollbar-gem'
+gem 'slack-notifier'
 
 # permalinks
 gem 'friendly_id', '~> 5.2.0'
+
+# sms
+gem 'nexmo'
+gem 'smstools'
+gem 'twilio-ruby', '~> 5.21.2'
 
 group :development, :test do
   gem 'brakeman', require: false
@@ -76,9 +83,8 @@ end
 
 group :test do
   gem 'capybara', '>= 2.15'
-  gem 'chromedriver-helper'
   gem 'codacy-coverage', require: false
-  gem 'selenium-webdriver'
+  gem 'webdrivers', '~> 3.0'
   gem 'webmock'
 end
 
