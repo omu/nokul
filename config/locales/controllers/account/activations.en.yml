@@ -24,3 +24,5 @@ en:
         login: Login
         phone_verification: Phone Verification
         verify: Verify
+      update:
+        success: Your account has been activated.

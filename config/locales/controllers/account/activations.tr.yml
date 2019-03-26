@@ -24,3 +24,5 @@ tr:
         login: Giriş Yap
         phone_verification: Telefon Doğrulama
         verify: Onayla
+      update:
+        success: Hesabınız aktifleştirildi.

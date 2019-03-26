@@ -4,14 +4,15 @@ module Activatable
   class ActivationService
     include ActiveModel::Validations
 
-    attr_accessor :id_number, :first_name, :last_name, :date_of_birth,
-                  :serial, :serial_no, :document_no, :mobile_phone,
+    attr_accessor :id_number, :first_name, :last_name, :date_of_birth, :serial, :serial_no, :document_no, :mobile_phone,
                   :prospective, :user, :country
 
     validates :id_number, presence: true, numericality: { only_integer: true }, length: { is: 11 }
     validates :first_name, presence: true
     validates :last_name, presence: true
     validates :date_of_birth, presence: true
+    validates :serial, allow_blank: true, length: { is: 3 }
+    validates :serial_no, allow_blank: true, numericality: { only_integer: true }, length: { is: 6 }
     validates :document_no, allow_blank: true, length: { is: 9 }
     validates :mobile_phone, telephone_number: { country: proc { |record| record.country }, types: [:mobile] }
     validate :must_be_prospective
@@ -51,11 +52,11 @@ module Activatable
     end
 
     def check_identity
+      return if errors.any?
+
       if verified_identity?
         find_prospective
       else
-        return if errors.any?
-
         errors.add(:base, I18n.t('.account.activations.identity_not_verified'))
       end
     end

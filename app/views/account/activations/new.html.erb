@@ -40,7 +40,7 @@
           <div class='form-group row'>
             <label for='activation_date_of_birth' class='col-sm-3 col-form-label text-right'><%= t('.date_of_birth') %></label>
             <div class='col-sm-9'>
-              <%= f.input :date_of_birth, as: :date_time_picker, required: true, label: false, wrapper: false %>
+              <%= f.input :date_of_birth, as: :date_time_picker, label: false, wrapper: false, input_html: { required: true } %>
             </div>
           </div>
           <div class='form-group row'>
@@ -71,6 +71,9 @@
             <label for='activation_serial_mobile_phone' class='col-sm-3 col-form-label text-right'><%= t('.mobile_phone') %></label>
             <div class='col-sm-9'>
               <%= f.input :mobile_phone, label: false, wrapper: false, input_html: { class: @activation.errors[:mobile_phone].any? ? 'is-invalid' : '' } %>
+              <div class="invalid-feedback">
+                <%= @activation.errors[:mobile_phone].first %>
+              </div>
               <small class='text-muted'><%= number_to_phone(1_235_551_234, area_code: true) %></small>
             </div>
           </div>
