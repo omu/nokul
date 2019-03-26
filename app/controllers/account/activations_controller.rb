@@ -16,7 +16,7 @@ module Account
       if @activation.valid?
         @activation.prospective.update(archived: true)
         @activation.user.update(activated: true, activated_at: Time.zone.now)
-        redirect_to login_path, notice: 'Hesabınız aktifleştirildi.'
+        redirect_to login_path, notice: t('.success')
       else
         render :new
       end
