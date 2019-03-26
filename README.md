@@ -8,7 +8,6 @@
 [![Security](https://hakiri.io/projects/cf546402fb7117/stacks/622121c74c17f4/622121c74c17f4.svg?repo_token=xo-yGdqDKXvCf-jypXd-)](https://hakiri.io/projects/cf546402fb7117/stacks/622121c74c17f4/shield)
  [![Known Vulnerabilities](https://snyk.io/test/github/omu/nokul/badge.svg)](https://snyk.io/test/github/omu/nokul)
 
-
 [Nokul](https://github.com/omu/nokul) aims to become a complete solution for universities that face many challanges while trying to manage all the complex procedures of a university online.
 
 Dealing with ill-structured processes of a university is hard, especially when they backed with complex legal procedures. Many universities facing similar issues when it comes to automating things, and moving face-to-face operations to online. Nokul aims to remediate these wounds by taking a Turkish university with more than 70 web services, 50K students and 4K employees as a case.

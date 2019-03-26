@@ -2,25 +2,26 @@
 author: M. Serhat Dundar
 ---
 
-# Unit Tests
+Unit Tests
+==========
 
-- Unit Test yazarken ilgili modülleri testinize `extend` ederek aşağıda örneklenen test yardımcılarını kullanabilirsiniz.
+- Unit Test yazarken ilgili modülleri testinize `extend` ederek aşağıda örneklenen test yardımcılarını
+  kullanabilirsiniz.
 - Nokul'da kullanılan stil, her satırda bir attribute'ün test edilmesidir!
 
---------------------------------------------------
-
-## Associations
+Associations
+------------
 
 - Support::Minitest::AssociationHelper
 
-### has_one
+### `has_one`
 
 ```ruby
   has_one :address
   has_one :address, :identity
 ```
 
-### has_many
+### `has_many`
 
 ```ruby
   has_many :addresses
@@ -28,7 +29,7 @@ author: M. Serhat Dundar
   has_many :addresses, through: :foo, dependent: :destroy
 ```
 
-### belongs_to
+### `belongs_to`
 
 ```ruby
   belongs_to :user
@@ -36,15 +37,14 @@ author: M. Serhat Dundar
   belongs_to :user, optional: true
 ```
 
-### accepts_nested_attributes_for
+### `accepts_nested_attributes_for`
 
 ```ruby
   accepts_nested_attributes_for :units, allow_destroy: true
 ```
 
---------------------------------------------------
-
-## Callbacks
+Callbacks
+---------
 
 - Support::Minitest::CallbackHelper
 
@@ -70,9 +70,8 @@ author: M. Serhat Dundar
   before_validation :method_name
 ```
 
---------------------------------------------------
-
-## Validations
+Validations
+-----------
 
 - Support::Minitest::ValidationHelper
 
@@ -122,9 +121,7 @@ validates_numerical_range :yoksis_code, less_than_or_equal_to: 2000
 
 ```
 
---------------------------------------------------
-
-## Enums
+### Enums
 
 - Support::Minitest::EnumerationHelper
 
@@ -132,7 +129,7 @@ validates_numerical_range :yoksis_code, less_than_or_equal_to: 2000
 enum term: { fall: 0, spring: 1, summer: 2 }
 ```
 
-## Example
+#### Example
 
 ```ruby
 class AcademicTermTest < ActiveSupport::TestCase
