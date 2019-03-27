@@ -263,7 +263,7 @@ modüllerini kullanabilirsiniz.
   kullanıcı adları üretir.
 
   ```ruby
-  coder = Codification.suffixed_user_names %w[mustafa kemal atatürk]
+  coder = Codification.suffixed_user_names %w[Mustafa Kemal Atatürk]
   coder.run #=> 'mkataturk.123' (son ek rastgele)
   ```
 
@@ -271,7 +271,7 @@ modüllerini kullanabilirsiniz.
   adları üretir.
 
   ```ruby
-  coder = Codification.unsuffixed_user_names %w[mustafa kemal atatürk]
+  coder = Codification.unsuffixed_user_names %w[Mustafa Kemal Atatürk]
   coder.run #=> 'mkataturk'
   coder.run #=> 'mkemala'
   coder.run #=> 'mustafaka'
@@ -304,5 +304,5 @@ module Nokul
 end
 ```
 
-Bu noktadan sonra kodlamayı jeneratör olarak (çoğul formda) `simple_codes`
+Bu noktadan sonra kodlamayı üreteç olarak (çoğul formda) `simple_codes`
 adıyla, tek üretim için (tekil formda) `simple_code` adıyla kullanabilirsiniz.
