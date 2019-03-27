@@ -58,8 +58,6 @@ module Nokul
             raise ArgumentError, "Starting sequence length must be #{net_length}: #{starting}"
           end
         end
-
-        private_constant :Sanitized
       end
     end
   end
