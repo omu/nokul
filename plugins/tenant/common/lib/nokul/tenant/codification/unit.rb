@@ -14,7 +14,7 @@ module Nokul
               raise("Code length must be #{const.gross_length}: #{code}")
           end
 
-          range        = Range.new(starting.to_s, ending.to_s)
+          range        = Range.new(starting, ending)
           post_process = Regexp.new(pattern) if pattern
 
           Support::Codification.sequential_numeric_codes range, memory: memory, post_process: post_process
