@@ -6,17 +6,24 @@ abbreviations:
   - act
   - aihm
   - ales
+  - aöf
   - aselsan
   - baum
+  - bd
+  - btk
   - cmk
   - cmuk
   - dgs
+  - doç
+  - dr
+  - fak
   - gata
   - gce
   - khk
   - kktc
   - kpds
   - kpss
+  - hz
   - les
   - meb
   - myo
@@ -26,11 +33,15 @@ abbreviations:
   - ösym
   - ösys
   - öyp
+  - prof
   - sat
   - tbmm
+  - tc
   - tck
+  - tl
   - todaie
   - toefl
+  - tömer
   - trt
   - tsk
   - tübitak
@@ -40,7 +51,9 @@ abbreviations:
   - ydus
   - ygs
   - yök
+  - yökdil
   - yös
+  - yurtkur
 
 conjunctions:
   - ama
@@ -51,6 +64,7 @@ conjunctions:
   - ile
   - ise
   - ki
+  - lakin
   - oysa
   - oysaki
   - ve
@@ -442,6 +456,7 @@ offensives:
   - monakkoluyum
   - motherfucker
   - mudik
+  - nazi
   - oc
   - ocuu
   - ocuun
