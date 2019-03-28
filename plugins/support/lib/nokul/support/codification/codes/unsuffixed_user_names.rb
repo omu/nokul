@@ -10,6 +10,12 @@ module Nokul
   module Support
     module Codification
       module UnsuffixedUserNames
+        mattr_reader :default_options, default: {
+          alternative: :non_abbreviated,
+          interfix: '.',
+          builtin_post_process: %i[safe?]
+        }
+
         SUPPORTED_ALTERNATIVES = Set.new %i[abbreviated non_abbreviated]
 
         module Alternatives
@@ -68,9 +74,7 @@ module Nokul
           end
         end
 
-        class Coder < Codification::Coder
-          setup builtin_post_process: %i[safe?]
-        end
+        Coder = Codification::Coder
       end
     end
   end

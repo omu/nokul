@@ -26,11 +26,13 @@ module Nokul
         singular_method = name.singularize
 
         define_method plural_method do |*args, **options, &block|
+          options = codification.default_options.merge options if codification.respond_to? :default_options
           codification::Coder.new(codification::Code.new(*args, **options), **options, &block)
         end
 
         define_method singular_method do |*args, **options, &block|
-          send(plural_method, *args, **options, &block).run
+          options = codification.default_options.merge options if codification.respond_to? :default_options
+          codification::Coder.new(codification::Code.new(*args, **options), **options, &block).run
         end
       end
     end

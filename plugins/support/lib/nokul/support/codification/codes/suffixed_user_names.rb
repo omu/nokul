@@ -10,11 +10,14 @@ module Nokul
   module Support
     module Codification
       module SuffixedUserNames
-        Code = UnsuffixedUserNames::Code
+        mattr_reader :default_options, default: {
+          alternative: :abbreviated,
+          interfix: '',
+          builtin_post_process: %i[safe? random_suffix]
+        }
 
-        class Coder < UnsuffixedUserNames::Coder
-          setup builtin_post_process: superclass.default_options[:builtin_post_process] + %i[random_suffix]
-        end
+        Code  = UnsuffixedUserNames::Code
+        Coder = Codification::Coder
       end
     end
   end
