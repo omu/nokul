@@ -19,7 +19,7 @@ class Object
     end
 
     def type_error(object, type)
-      "#{type} expected where found: #{object.class}" unless object.is_a? type
+      "#{type} expected where found: #{object}" unless object.is_a? type
     end
 
     def must_be_array(object, type)
