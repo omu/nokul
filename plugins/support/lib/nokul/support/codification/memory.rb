@@ -19,21 +19,7 @@ module Nokul
         def learn(string, **options)
           return nil if remember?(string, **options)
 
-          remember(string, **options) unless options[:amnesic]
-          string
-        end
-      end
-
-      class AmnesicMemory < Memory
-        def remember(string, **)
-          string
-        end
-
-        def remember?(_string, **)
-          false
-        end
-
-        def forget(string, **)
+          remember(string, **options)
           string
         end
       end

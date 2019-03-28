@@ -17,13 +17,13 @@ module Nokul
           setup if defined? setup
         end
 
-        def run_verbose(amnesic: false)
+        def run_verbose
           n = 0
 
           while (n += 1) < LOOP_GUARD
             over_loop!(n)
 
-            attempt = try(amnesic: amnesic)
+            attempt = try
 
             return [attempt, n] if attempt
 
@@ -33,26 +33,27 @@ module Nokul
           raise Error, "Too many tries: #{n}"
         end
 
-        def run(**flags)
-          run_verbose(**flags).first
-        end
-
-        def dry
-          clone.run(amnesic: true)
+        def run
+          run_verbose.first
         end
 
         def reset
           code.rewind
         end
 
-        DEFAULT_AVAILABLE_MAX = 10
+        def available!(limit = nil)
+          self.class.available(code, limit: limit, **options)
+        end
 
-        def available(number_of_available = DEFAULT_AVAILABLE_MAX)
-          instance = clone
+        DEFAULT_AVAILABLE_LIMIT = 10
+
+        def self.available(code, limit: nil, **options)
+          coder = new(code, **options).extend Dry # extend object to avoid mutating memory
+
           result = []
 
-          number_of_available.times do
-            result << instance.run
+          (limit || DEFAULT_AVAILABLE_LIMIT).times do
+            result << coder.run
           rescue StopIteration
             break
           end
@@ -72,13 +73,35 @@ module Nokul
 
         def over_loop!(*); end
 
-        def try(amnesic:)
+        def try
           return unless (result = processor.process(self, code.peek, **options))
 
-          memory.learn(result, amnesic: amnesic)
+          learn result
         rescue Skip
           nil
         end
+
+        private
+
+        def learn(string)
+          memory.learn string
+        end
+
+        # Patch module to generate codes without mutating memory
+        module Dry
+          def learn(string)
+            internal_memory.remember(string) if memory.remember?(string)
+            internal_memory.learn(string)
+          end
+
+          private
+
+          def internal_memory
+            @internal_memory ||= SimpleMemory.new
+          end
+        end
+
+        private_constant :Dry
       end
     end
   end
