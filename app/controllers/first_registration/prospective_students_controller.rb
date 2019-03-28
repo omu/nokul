@@ -41,6 +41,9 @@ module FirstRegistration
 
       if prospective_student.register
         @prospective_student.update(registered: true)
+        if User.exists?(id_number: @prospective_student.id_number, activated: true)
+          @prospective_student.update(archived: true)
+        end
         redirect_to(:prospective_students, notice: t('.success'))
       else
         redirect_to(:prospective_students, alert: t('.warning'))

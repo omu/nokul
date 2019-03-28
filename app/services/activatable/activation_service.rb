@@ -65,7 +65,7 @@ module Activatable
 
       process
     rescue StandardError
-      errors.add(:base, T18n.t('.account.activations.system_error')) && false
+      errors.add(:base, I18n.t('.account.activations.system_error')) && false
     end
 
     private
