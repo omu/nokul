@@ -1,6 +1,6 @@
 applications:
   - identifier: single_course_exam
-    name: Tek Ders Sınavı Başvuruları
+    name: Tek Ders Sınav Başvuruları
   - identifier: program
     name: Başvuru Tarihleri
   - identifier: excused_mid_term
