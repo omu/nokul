@@ -8,7 +8,7 @@ author: Recai Oktaş
 `Codification` modülü entitelere kod ataması yapmakta kullanılan sınıflardan
 oluşmaktadır.  Temelde bir
 [`Enumerator`](https://ruby-doc.org/core-2.6.2/Enumerator.html) nesnesi olan
-`Code` verilen bir "kaynağı" bir `Enumerator"e çevirir ("take_in") ve her
+`Code` verilen bir "kaynağı" bir `Enumerator`e çevirir ("take_in") ve her
 ardışımda bir String dizisi yayımlar ("take_out").  Yayımlanan String dizisi
 seçenek olarak verilen ön ek, son ek ve ara ekler dikkate alınarak nihai "kod"
 olan String'e çevrilir.
