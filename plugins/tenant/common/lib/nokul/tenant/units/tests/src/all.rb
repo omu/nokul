@@ -36,8 +36,8 @@ module Nokul
               refute Tenant::Units.reproduce(quiet: true), <<~MSG
 
                 Modified source files encountered when reproducing source files.
-                This means that you have edited some file but forgotten to
-                reproduce and commit.
+                This means that you have modified some file, or the reproduce logic
+                has changed but you have forgotten to reproduce and commit.
 
                 Please run "bin/rails tenant:units:reproduce" and commit changes.
               MSG
