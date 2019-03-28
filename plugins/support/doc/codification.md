@@ -144,7 +144,7 @@ produced #=> ['foo']
 Bu örnekte `bar` değeri tekil olmadığından, `baz` değeri ise son işlemede
 filtrelendiğinden atlanmış ve sadece `foo` değeri üretilmiştir.  Örnekte olduğu
 gibi son işlemede kodu reddetmek için `Processor.skip` metodu kullanılır.
-İkinci argümanda verilen ifade (`string != 'baz')  doğru ise kod kabul edilmekte
+İkinci argümanda verilen ifade (`string != 'baz'`)  doğru ise kod kabul edilmekte
 aksi halde reddedilmektedir.
 
 Son işlemede tanımlanan `Proc` bloğunun ürettiği değer üretilen kod olarak kabul
