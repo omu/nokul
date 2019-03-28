@@ -54,9 +54,9 @@ module Nokul
           end
 
           ANSI_COLOR_CODE = {
-            cyan: 14,
+            cyan:   14,
             orange: 214,
-            red: 197,
+            red:    197,
             yellow: 11
           }.freeze
 

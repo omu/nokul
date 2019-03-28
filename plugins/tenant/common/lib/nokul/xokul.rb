@@ -12,9 +12,9 @@ module Nokul
     def request(endpoint, params = {})
       response = Support::RestClient.get(
         endpoint,
-        header: {
+        header:  {
           'Authorization': "Bearer #{BEARER_TOKEN}",
-          'Content-Type': 'application/json'
+          'Content-Type':  'application/json'
         },
         payload: params.to_json,
         use_ssl: true

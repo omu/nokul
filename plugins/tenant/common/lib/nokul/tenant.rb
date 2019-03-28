@@ -5,6 +5,7 @@ require 'nokul-support'
 require_relative 'tenant/version'
 require_relative 'tenant/errors'
 require_relative 'tenant/units'
+require_relative 'tenant/codification'
 require_relative 'tenant/api'
 require_relative 'tenant/engine'
 

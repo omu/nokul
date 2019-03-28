@@ -1,21 +1,21 @@
 PATH
-  remote: .
-  specs:
-    nokul-tenant-omu (0.1.0)
-      nokul-tenant
-      rails (~> 6.0.0.beta1)
-
-PATH
-  remote: /home/msdundar/projects/nokul/plugins/support
+  remote: ../../support
   specs:
     nokul-support (0.1.0)
       activesupport (~> 6.0.0.beta1)
 
 PATH
-  remote: /home/msdundar/projects/nokul/plugins/tenant/common
+  remote: ../common
   specs:
     nokul-tenant (0.1.0)
       nokul-support
+
+PATH
+  remote: .
+  specs:
+    nokul-tenant-omu (0.1.0)
+      nokul-tenant
+      rails (~> 6.0.0.beta1)
 
 GEM
   remote: https://rubygems.org/

@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: efb706daad0e2e1039c6abb4879c837ef8bf4d10
+  revision: 5851ac69e11fadcd3b4bf052f1d963a5803a2449
   specs:
     actioncable (6.0.0.beta3)
       actionpack (= 6.0.0.beta3)
@@ -79,16 +79,16 @@ GIT
       thor (>= 0.20.3, < 2.0)
 
 PATH
+  remote: ../../support
+  specs:
+    nokul-support (0.1.0)
+      activesupport (~> 6.0.0.beta1)
+
+PATH
   remote: .
   specs:
     nokul-tenant (0.1.0)
       nokul-support
-
-PATH
-  remote: /home/msdundar/projects/nokul/plugins/support
-  specs:
-    nokul-support (0.1.0)
-      activesupport (~> 6.0.0.beta1)
 
 GEM
   remote: https://rubygems.org/
