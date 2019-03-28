@@ -21,10 +21,13 @@ tr:
         <<: *activation_attributes
         activation: Aktivasyon
         account_activation: Hesabınızı aktifleştirin
+        agreements: Hesabınızı aktifleştirerek, %{user_agreements_link} ve %{privacy_policies_link} kabul etmiş olursunuz.
         for_old_id_cards: Eski kimlik kartları için
         identity_verification: Kimlik Doğrulama
         login: Giriş Yap
         phone_verification: Telefon Doğrulama
+        privacy_policy: Gizlilik Politikalarımızı
+        user_agreement: Kurallarımızı
         verify: Onayla
       update:
         success: Hesabınız aktifleştirildi.

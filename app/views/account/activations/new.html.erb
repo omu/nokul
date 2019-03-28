@@ -85,6 +85,13 @@
           </div>
         </fieldset>
         <hr />
+        <div class='col-sm-12'>
+          <p class="mb-2 text-muted text-center">
+            <small>
+              <%= t('.agreements', user_agreements_link: link_to(t('.user_agreement'), '#'), privacy_policies_link: link_to(t('.privacy_policy'), '#')).html_safe %>
+            </small>
+          </p>
+        </div>
         <%= f.button :submit, t('.verify'), class: 'btn btn-block btn-success' %>
       <% end %>
     </div>

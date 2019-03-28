@@ -21,10 +21,13 @@ en:
         <<: *activation_attributes
         activation: Activation
         account_activation: Activate your account
+        agreements: By activating your account, you agree to our %{user_agreements_link} and %{privacy_policies_link}.
         for_old_id_cards: For old identity cards
         identity_verification: Identity Verification
         login: Login
         phone_verification: Phone Verification
+        privacy_policy: Privacy Policy
+        user_agreement: User Agreement
         verify: Verify
       update:
         success: Your account has been activated.
