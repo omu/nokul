@@ -20,7 +20,7 @@ module Nokul
         def name_suggest(first_name:, last_name:, memory:, **options)
           Support::Codification.unsuffixed_user_names([first_name, last_name],
                                                       **options,
-                                                      memory: memory).available
+                                                      memory: memory).available!
         end
       end
     end
