@@ -76,7 +76,7 @@ module Nokul
 
         test 'can produce available numbers' do
           coder = Codification.sequential_numeric_codes '0002'..'9999'
-          assert_equal %w[0002 0003 0004], coder.available(3)
+          assert_equal %w[0002 0003 0004], coder.available!(3)
         end
       end
     end

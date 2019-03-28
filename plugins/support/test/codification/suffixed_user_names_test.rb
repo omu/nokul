@@ -100,7 +100,7 @@ module Nokul
         end
 
         test 'can produce available names' do
-          available = Codification.suffixed_user_names(%w[suat alak]).available(3)
+          available = Codification.suffixed_user_names(%w[suat alak]).available!(3)
           assert_equal 3, available.size
           assert available.all? do |name|
             name.start_with?('suata.')

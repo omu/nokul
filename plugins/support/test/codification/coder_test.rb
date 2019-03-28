@@ -43,6 +43,28 @@ module Nokul
           assert_raise(StopIteration) { coder.run }
         end
 
+        test 'run_verbose should work' do
+          memory = SimpleMemory.new
+          memory.remember 'foo'
+
+          coder = Coder.new TestSimpleCode::SimpleCode.new(%w[foo bar baz]), memory: memory
+          result, n = coder.run_verbose
+
+          assert_equal 'bar', result
+          assert_equal 2, n
+        end
+
+        test 'available should work' do
+          memory = SimpleMemory.new
+          memory.remember 'bar'
+
+          result = Coder.available TestSimpleCode::SimpleCode.new(%w[foo bar baz quux]), memory: memory
+          assert_equal %w[foo baz quux], result
+
+          result = Coder.available TestSimpleCode::SimpleCode.new(%w[foo bar baz quux]), memory: memory, limit: 2
+          assert_equal %w[foo baz], result
+        end
+
         test 'post processes should work as predicator' do
           memory = SimpleMemory.new
           memory.remember 'bar'
@@ -163,13 +185,6 @@ module Nokul
           coder.run
           err = assert_raise(Error) { coder.run }
           assert err.message.include? 'many tries'
-        end
-
-        test 'dry run should work' do
-          coder = Codification.sequential_numeric_codes '0013'..'9999'
-          assert_equal '0013', coder.run
-          assert_equal '0014', coder.dry
-          assert_equal '0014', coder.run
         end
       end
     end

@@ -52,7 +52,7 @@ module Nokul
 
         test 'can produce available numbers' do
           coder = Codification.random_numeric_codes('777'..'779')
-          assert_equal %w[777 778 779], coder.available(3).sort
+          assert_equal %w[777 778 779], coder.available!(3).sort
         end
       end
     end

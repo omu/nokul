@@ -107,13 +107,13 @@ module Nokul
         end
 
         test 'can produce (non abbreviated) available names' do
-          available = Codification.unsuffixed_user_names(%w[suat alak]).available(3)
+          available = Codification.unsuffixed_user_names(%w[suat alak]).available!(3)
           assert_equal %w[suat.alak], available
         end
 
         test 'can produce abbreviated available names' do
           options = { alternative: :abbreviated, interfix: nil }
-          available = Codification.unsuffixed_user_names(%w[suat alak], **options).available(3)
+          available = Codification.unsuffixed_user_names(%w[suat alak], **options).available!(3)
           assert_equal %w[suata suatalak], available
         end
       end
