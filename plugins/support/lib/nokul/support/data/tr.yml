@@ -760,57 +760,155 @@ offensives:
   - zviyetini
 
 reserved:
+  # Akademik
+  - akademi
+  - akademik
+  - akademisyen
+  - alim
+  - ana
+  - arastirma
   - araştırma
+  - atama
+  - baskan
+  - başkan
+  - bilgin
+  - bilim
+  - bilimsel
+  - bolum
+  - bölüm
   - bulut
+  - burs
+  - calisan
+  - çalışan
+  - daire
+  - dal
+  - deger
+  - degerlendirme
+  - değerlendirme
   - dekan
+  - dekanlık
+  - ders
+  - dersler
+  - diploma
+  - diplomalar
+  - docent
   - doçent
   - doktor
-  - eğitim
-  - enstitü
-  - fakülte
-  - geliştirme
-  - görevli
-  - görevlisi
-  - güvenlik
-  - hoca
-  - konservatuvar
-  - kullanıcı
-  - merkez
-  - müdür
-  - nokul
-  - okul
-  - okutman
-  - öğretim
-  - öğretmen
-  - parola
-  - profesör
-  - rektör
-  - sekreter
-  - servis
-  - sistem
-  - şifre
-  - takvim
-  - uygulama
-  - üye
-  - yönetici
-  - zaman
-
-  # ASCIIfied
-  - arastirma
-  - docent
+  - doktora
+  - egitici
   - egitim
+  - eğitici
+  - eğitim
   - enstitu
+  - enstitü
+  - entellektuel
+  - entellektüel
+  - etik
   - fakulte
+  - fakülte
   - gelistirme
+  - geliştirme
   - gorevli
   - gorevlisi
+  - görevli
+  - görevlisi
   - guvenlik
+  - güvenlik
+  - hoca
+  - ilim
+  - imtihan
+  - isci
+  - işçi
+  - kabul
+  - kampus
+  - kampüs
+  - karar
+  - kolej
+  - kolejler
+  - komisyon
+  - komite
+  - konservatuvar
+  - kullanıcı
   - kullanici
+  - kurul
+  - kurum
+  - laboratuvar
+  - lisans
+  - memur
+  - merkez
+  - merkezi
+  - meslek
+  - mesleki
+  - mezun
+  - mezunlar
   - mudur
+  - mudurluk
+  - mufredat
+  - müdür
+  - müdürlük
+  - müfredat
+  - nokul
+  - odev
+  - odevler
+  - ofis
+  - ogrenci
   - ogretim
   - ogretmen
+  - ogretmenler
+  - okul
+  - okullar
+  - okutman
+  - ödev
+  - ögrenme
+  - öğrenci
+  - öğrenme
+  - öğretim
+  - öğretmen
+  - öğretmenler
+  - parola
+  - pedagojik
+  - pratik
   - profesor
+  - profesorler
+  - profesör
+  - profesörler
+  - proje
   - rektor
+  - rektör
+  - rektörlük
+  - sanat
+  - secim
+  - seçim
+  - sekreter
+  - sekreterlik
+  - servis
+  - sınav
+  - sınıf
   - sifre
+  - sinav
+  - sinif
+  - sistem
+  - skolastik
+  - sube
+  - şifre
+  - şube
+  - takvim
+  - teori
+  - teorik
+  - tez
+  - tezler
+  - universite
+  - universiteler
   - uye
+  - uygulama
+  - üniversite
+  - üniversiteler
+  - üye
+  - yardımcı
+  - yardimci
   - yonetici
+  - yönetici
+  - yuksek
+  - yüksek
+  - yüksekokul
+  - zaman
