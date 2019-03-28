@@ -10,10 +10,6 @@ module Nokul
 
         inherited_by_conveying_attributes :default_options
 
-        def self.setup(**options)
-          default_options.merge!(**options)
-        end
-
         def initialize(code, **options)
           @code      = code.must_be_any_of! Code
           @processor = Processor.new @options = default_options.merge(options)

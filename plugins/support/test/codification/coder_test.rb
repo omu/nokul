@@ -123,11 +123,12 @@ module Nokul
 
         module TestDummy
           class Foo < Coder
-            setup foo: 13
+            default_options[:foo] = 13
           end
 
           class Bar < Foo
-            setup foo: 19, bar: 23
+            default_options[:foo] = 19
+            default_options[:bar] = 23
           end
         end
 
