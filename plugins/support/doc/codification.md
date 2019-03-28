@@ -86,8 +86,10 @@ sergiler.
 -------
 
 Kodlama, inşa zamanında bir `Code` nesnesi alan `Coder` nesneleriyle yürütülür.
-Kodlama sürecinde üretilen kodun her seferinde tekillik ve uygunluk denetimi
-yapılır.
+Kodlama `run` metoduyla gerçekleşir.  Bu süreçte üretilen kodun her seferinde
+tekillik ve uygunluk denetimi yapılır ve üretilen ara kod bu koşulları
+sağlamıyorsa bir sonraki değer üretilerek koşul sağlanancaya kadar devam
+edilir.  İçteki `Code` nesnesi tükendiğinde `StopIteration` istisnası üretilir.
 
 ```ruby
 memory = SimpleMemory.new
@@ -114,6 +116,56 @@ loop do
 end
 
 produced #=> ['foo', 'baz']
+```
+
+Her çalıştırmada (`run`) uygun kodun kaç denemede bulunduğunu öğrenmek
+isterseniz `run_verbose` metodunu kullanabilirsiniz.
+
+```ruby
+memory = SimpleMemory.new
+memory.remember 'foo'
+
+coder = Codification::Coder.new SimpleCode.new(%w[foo bar baz]), memory: memory
+
+result, n = coder.run_verbose #=> 'bar', 2
+```
+
+Kodlayıcıyı adım adım çalıştırmak yerine mevcut durumda üretilebilecek tüm
+kodları öğrenmek isterseniz `available!` metodunu kullanabilirsiniz.
+
+```ruby
+memory = SimpleMemory.new
+memory.remember 'foo'
+
+coder = Codification::Coder.new SimpleCode.new(%w[foo bar baz quux]), memory: memory
+
+coder.available! #=> ['bar', 'baz', 'quux']
+```
+
+`available!` metodu üretilen kodların sayısını öntanımlı olarak `10` ile
+sınırlamaktadır.  Metoda geçirilecek bir limit değeriyle bu sınırlamayı
+ayarlayabilirsiniz.
+
+```ruby
+memory = SimpleMemory.new
+memory.remember 'foo'
+
+coder = Codification::Coder.new SimpleCode.new(%w[foo bar baz quux]), memory: memory
+
+coder.available! 2 #=> ['bar', 'baz']
+```
+
+Metod içteki `Code` nesnesini mutasyona uğrattığından "bang" notasyonuyla (sonda
+`!) adlandırılmıştır.  Dilerseniz aynı isimli (fakat "bang" notasyonu
+kullanılmayan) sınıf metodunu da kullanabilirsiniz.
+
+```ruby
+memory = SimpleMemory.new
+memory.remember 'foo'
+
+available = Codification::Coder.(SimpleCode.new(%w[foo bar baz quux]), memory: memory, limit: 2).available
+
+available #=> ['bar', 'baz']
 ```
 
 `Processor`
@@ -244,13 +296,6 @@ Yerleşik kodlamalar
 Özel bir kodlama hazırlamak yerine `codes` altında tanımlı yerleşik kodlama
 modüllerini kullanabilirsiniz.
 
-- `random_numeric_codes`: Verilen aralıkta rastgele numerik kodlar üretir.
-
-  ```ruby
-  coder = Codification.random_numeric_codes '00003'..'00099', prefix: '203'
-  coder.run #=> '20300023' (ilgili aralıkta rastgele)
-  ```
-
 - `sequential_numeric_codes`: Verilen aralıkta ardışık numerik kodlar üretir.
 
   ```ruby
@@ -258,6 +303,23 @@ modüllerini kullanabilirsiniz.
   coder.run #=> '20300003'
   coder.run #=> '20300004'
   ```
+
+  Seçenekler:
+
+  + `prefix`: Üretilen koda eklenecek ilk ek. Öntanımlı: boş.
+  + `suffix`: Üretilen koda eklenecek son ek. Öntanımlı: boş.
+  + `base`: Ardışımda dikkate alınacak sayı tabanı. Öntanımlı: 10.
+  + `net_length`: Ardışımın (ekler çıkarıldığında kalan kısım) net uzunluğu.
+    Öntanımlı: verilen dizginin uzunluğu.
+
+- `random_numeric_codes`: Verilen aralıkta rastgele numerik kodlar üretir.
+
+  ```ruby
+  coder = Codification.random_numeric_codes '00003'..'00099', prefix: '203'
+  coder.run #=> '20300023' (ilgili aralıkta rastgele)
+  ```
+
+  Seçenekler: `sequential_numeric_codes` ile aynı seçenekler.
 
 - `suffixed_user_names`: Verilen isimlerden rastgele son ekli ve güvenli
   kullanıcı adları üretir.
@@ -267,11 +329,38 @@ modüllerini kullanabilirsiniz.
   coder.run #=> 'mkataturk.123' (son ek rastgele)
   ```
 
+  Seçenekler:
+
+  + `prefix`: Üretilen isme eklenecek ilk ek. Öntanımlı: boş.
+  + `suffix`: Üretilen isme eklenecek son ek. Öntanımlı: boş.
+  + `interfix`: İsim sözcükleri arasındaki ayırıcı. Öntanımlı: boş.
+  + `alternative`: İsimlerin hangi formda üretileceği.  Öntanımlı: `:abbreviated`
+    Geçerli seçenekler: `:abbreviated` (kısaltılmış), `:non_abbreviated`
+    (kısaltılmamış).
+  + `random_suffix_length`: Rastgele son ekin uzunluğu.  Öntanımlı: 3.
+  + `random_suffix_separator`: Rastgele son ekte kullanılacak ayırıcı.  Öntanımlı: `.`
+
 - `unsuffixed_user_names`: Verilen isimlerden son eksiz ve güvenli kullanıcı
   adları üretir.
 
   ```ruby
   coder = Codification.unsuffixed_user_names %w[Mustafa Kemal Atatürk]
+  coder.run #=> 'mustafa.ataturk'
+  coder.run #=> 'kemal.ataturk'
+  coder.run #=> 'mustafa.kemal.ataturk'
+  ```
+
+  Seçenekler:
+
+  + `prefix`: Üretilen isme eklenecek ilk ek. Öntanımlı: boş.
+  + `suffix`: Üretilen isme eklenecek son ek. Öntanımlı: boş.
+  + `interfix`: İsim sözcükleri arasındaki ayırıcı. Öntanımlı: `.`.
+  + `alternative`: İsimlerin hangi formda üretileceği.  Öntanımlı: `:non_abbreviated`
+    Geçerli seçenekler: `:abbreviated` (kısaltılmış), `:non_abbreviated`
+    (kısaltılmamış).
+
+  ```ruby
+  coder = Codification.unsuffixed_user_names(%w[Mustafa Kemal Atatürk], alternative: :abbreviated)
   coder.run #=> 'mkataturk'
   coder.run #=> 'mkemala'
   coder.run #=> 'mustafaka'
