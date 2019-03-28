@@ -54,6 +54,9 @@ class User < ApplicationRecord
   after_create_commit :build_address_information, if: proc { addresses.formal.empty? }
   after_create_commit :build_identity_information, if: proc { identities.formal.empty? }
 
+  # scopes
+  scope :activated, -> { where(activated: true) }
+
   # store accessors
   store :profile_preferences, accessors: %i[
     extension_number

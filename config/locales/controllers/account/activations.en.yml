@@ -13,8 +13,10 @@ en:
         serial_no: Serial No
   account:
     activations:
+      already_activated: Your account is already activated.
       identity_not_verified: Your identity not verified. Make sure that the data you entered is correct.
       record_not_found: There is no record in the system to activate your account.
+      system_error: The system error has occurred. Please try later.
       new:
         <<: *activation_attributes
         activation: Activation
