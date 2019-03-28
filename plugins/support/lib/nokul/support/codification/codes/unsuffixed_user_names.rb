@@ -31,8 +31,8 @@ module Nokul
             def non_abbreviated
               surname, forenames = last, clip # rubocop:disable ParallelAssignment
 
-              forenames.send(:index_combinations_of_source).map do |alternative|
-                [*alternative, surname]
+              forenames.send(:index_combinations_of_source).map do |indexes|
+                [*forenames.values_at(*indexes), surname]
               end.sort_by(&:length)
             end
 
