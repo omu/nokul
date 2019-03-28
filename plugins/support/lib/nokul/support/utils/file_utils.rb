@@ -42,7 +42,9 @@ module Nokul
     def with_status_and_notification(new_file, **options, &block)
       new_file_exist_before = File.exist? new_file
 
-      return (status = with_status(new_file, &block)) if options[:quiet]
+      status = with_status(new_file, &block)
+
+      return status if options[:quiet]
 
       if status
         warn new_file_exist_before ? "#{new_file} updated due to the changes." : "#{new_file} created."
