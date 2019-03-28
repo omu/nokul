@@ -8,7 +8,7 @@ author: Recai Oktaş
 `Codification` modülü entitelere kod ataması yapmakta kullanılan sınıflardan
 oluşmaktadır.  Temelde bir
 [`Enumerator`](https://ruby-doc.org/core-2.6.2/Enumerator.html) nesnesi olan
-`Code` verilen bir "kaynağı" bir `Enumerator"e çevirir ("take_in") ve her
+`Code` verilen bir "kaynağı" bir `Enumerator`e çevirir ("take_in") ve her
 ardışımda bir String dizisi yayımlar ("take_out").  Yayımlanan String dizisi
 seçenek olarak verilen ön ek, son ek ve ara ekler dikkate alınarak nihai "kod"
 olan String'e çevrilir.
@@ -102,7 +102,7 @@ coder.run #=> StopIteration
 ```
 
 `Code` nesnesi ardışımlar tükendiğinde `StopIteration` istisnası ürettiğinden
-yukarıda örneklenen işlemi `loop` döngüsüyle de gerçekleyebilirsiniz
+yukarıda örneklenen işlemi `loop` döngüsüyle de gerçekleyebilirsiniz.
 
 ```ruby
 memory = SimpleMemory.new
@@ -196,7 +196,7 @@ produced #=> ['foo']
 Bu örnekte `bar` değeri tekil olmadığından, `baz` değeri ise son işlemede
 filtrelendiğinden atlanmış ve sadece `foo` değeri üretilmiştir.  Örnekte olduğu
 gibi son işlemede kodu reddetmek için `Processor.skip` metodu kullanılır.
-İkinci argümanda verilen ifade (`string != 'baz')  doğru ise kod kabul edilmekte
+İkinci argümanda verilen ifade (`string != 'baz'`)  doğru ise kod kabul edilmekte
 aksi halde reddedilmektedir.
 
 Son işlemede tanımlanan `Proc` bloğunun ürettiği değer üretilen kod olarak kabul
