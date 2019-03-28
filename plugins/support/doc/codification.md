@@ -100,7 +100,7 @@ coder.run #=> StopIteration
 ```
 
 `Code` nesnesi ardışımlar tükendiğinde `StopIteration` istisnası ürettiğinden
-yukarıda örneklenen işlemi `loop` döngüsüyle de gerçekleyebilirsiniz
+yukarıda örneklenen işlemi `loop` döngüsüyle de gerçekleyebilirsiniz.
 
 ```ruby
 memory = SimpleMemory.new
