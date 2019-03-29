@@ -14,8 +14,6 @@ module Nokul
           collection.label    = 'YÖKSİS ham birimler'
           collection.collects = YOKOne
           collection.produces = Src::YOKMany
-
-          # rubocop:disable Layout/AlignHash
           class_attribute :mapping, default: {
             name:                         proc { |raw| raw.long_name.split('/').last&.capitalize_and_fix },
 
@@ -30,7 +28,6 @@ module Nokul
             unit_instruction_type_id:     proc { |raw| raw.instruction_type_name&.capitalize_and_fix },
             duration:                     proc { |raw| raw.period_of_study }
           }.freeze
-          # rubocop:enable Layout/AlignHash
 
           END_POINT = 'https://api.omu.sh/yoksis/units/%s'
 
