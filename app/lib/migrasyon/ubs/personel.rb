@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+ # frozen_string_literal: true
 
 require_relative 'personel/connection'
 
@@ -39,7 +39,8 @@ module Migrasyon
         connection = Connection.new
 
         result = connection.client.execute(
-          "SELECT PersonelID, KimlikNo, PersonelTip, Aktif FROM Personel"
+          "SELECT p.*, a.Email FROM Personel AS p \
+          JOIN Adres AS a ON p.PersonelID = a.Personel"
         )
 
         result.each do |personel|
@@ -50,48 +51,27 @@ module Migrasyon
         end
 
         result.each do |personel|
-          adres_result = connection.client.execute(
-            "SELECT EMail FROM Adres WHERE Personel = #{personel['PersonelID']}"
+          email = if personel["Email"].present? && personel["Email"].split('@').last.eql?('omu.edu.tr')
+                    personel["Email"]
+                  else
+                    "#{personel["KimlikNo"]}@omu.edu.tr"
+                  end
+
+          password = personel["KimlikNo"] + personel["Soyadi"][0..2]
+
+          user = User.new(
+            id_number: personel["KimlikNo"],
+            email: email,
+            password: password,
+            password_confirmation: password
           )
 
-          if adres_result.count == 0
-            email = "#{personel["KimlikNo"]}@omu.edu.tr"
-          elsif adres_result.count == 1 && adres_result["EMail"].present?
-            email = adres_result["EMail"]
-          elsif adres_result.count == 1 && adres_result["EMail"].blank?
-            email = "#{personel["KimlikNo"]}@omu.edu.tr"
-          elsif adres_result.count == 2
-            
-          end
+          File.write(
+            Rails.root.join('errors.txt'),
+            "#{user.id_number} : #{email} => #{user.errors.messages} \n",
+            mode: 'a'
+          ) unless user.save
         end
-
-        # result = connection.client.execute(
-        #   "SELECT p.*, a.Email FROM Personel AS p \
-        #   JOIN Adres AS a ON p.PersonelID = a.Personel WHERE p.KimlikNo = '14041515584'"
-        # )
-
-        # result.each do |personel|
-        #   email = if personel["Email"].present?
-        #             personel["Email"]
-        #           else
-        #             "#{personel["KimlikNo"]}@omu.edu.tr"
-        #           end
-
-        #   password = personel["KimlikNo"] + personel["Soyadi"][0..2]
-
-        #   user = User.new(
-        #     id_number: personel["KimlikNo"],
-        #     email: email,
-        #     password: password,
-        #     password_confirmation: password
-        #   )
-
-        #   File.write(
-        #     Rails.root.join('errors.txt'),
-        #     "#{user.id_number} : #{email} => #{user.errors.messages} \n",
-        #     mode: 'a'
-        #   ) unless user.save
-        # end
 
         connection.close
       end
