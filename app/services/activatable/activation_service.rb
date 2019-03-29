@@ -23,7 +23,7 @@ module Activatable
     validates :document_no, allow_blank: true, length: { is: 9 }
     validates :mobile_phone, telephone_number: { country: proc { |record| record.country }, types: [:mobile] }
     validates_with ActivationServiceValidator
-    validate :must_be_not_activated
+    validate :must_not_be_activated
     validate :must_be_prospective, unless: :activated?
     validate :must_be_verified_identity, if: :prospective?
 
@@ -80,7 +80,7 @@ module Activatable
       end
     end
 
-    def must_be_not_activated
+    def must_not_be_activated
       return if errors.any?
 
       errors.add(:base, I18n.t('.account.activations.already_activated')) if activated?
