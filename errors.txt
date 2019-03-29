@@ -1,0 +1,37 @@
+10280940880 : 10280940880@omu.edu.tr => {:id_number=>["hali hazırda kullanılmakta"]} 
+11132952396 : 11132952396@omu.edu.tr => {:id_number=>["hali hazırda kullanılmakta"]} 
+11621927560 : 11621927560@omu.edu.tr => {:email=>["hali hazırda kullanılmakta"], :id_number=>["hali hazırda kullanılmakta"]} 
+11948911464 : yilmaz.yurtseven@omu.edu.tr => {:id_number=>["hali hazırda kullanılmakta"]} 
+12725898428 : 12725898428@omu.edu.tr => {:id_number=>["hali hazırda kullanılmakta"]} 
+13043369874 : selim.ceylan@omu.edu.tr => {:id_number=>["hali hazırda kullanılmakta"]} 
+13394561620 : ismail.balkabak@omu.edu.tr => {:email=>["hali hazırda kullanılmakta"], :id_number=>["hali hazırda kullanılmakta"]} 
+13442874542 : 13442874542@omu.edu.tr => {:id_number=>["hali hazırda kullanılmakta"]} 
+14041515584 : neslihan.beden@omu.edu.tr => {:email=>["hali hazırda kullanılmakta"], :id_number=>["hali hazırda kullanılmakta"]} 
+14218852832 : 14218852832@omu.edu.tr => {:id_number=>["hali hazırda kullanılmakta"]} 
+15383249724 : 15383249724@omu.edu.tr => {:id_number=>["hali hazırda kullanılmakta"]} 
+15700577226 : 15700577226@omu.edu.tr => {:id_number=>["hali hazırda kullanılmakta"]} 
+16898756202 : akyol@omu.edu.tr => {:email=>["hali hazırda kullanılmakta"], :id_number=>["hali hazırda kullanılmakta"]} 
+17048741888 : cemal.sen@omu.edu.tr => {:email=>["hali hazırda kullanılmakta"], :id_number=>["hali hazırda kullanılmakta"]} 
+17665065398 : syuksel@omu.edu.tr => {:email=>["hali hazırda kullanılmakta"]} 
+18055082896 : 18055082896@omu.edu.tr => {:id_number=>["hali hazırda kullanılmakta"]} 
+19577738568 : syazici@omu.edu.tr => {:email=>["hali hazırda kullanılmakta"], :id_number=>["hali hazırda kullanılmakta"]} 
+20072615834 : msaksu@omu.edu.tr => {:email=>["hali hazırda kullanılmakta"], :id_number=>["hali hazırda kullanılmakta"]} 
+20656559356 : ozge.yucel@omu.edu.tr => {:id_number=>["hali hazırda kullanılmakta"]} 
+21011606906 : ebuyukkeskin@omu.edu.tr => {:email=>["hali hazırda kullanılmakta"], :id_number=>["hali hazırda kullanılmakta"]} 
+21145236352 : eyilmaz@omu.edu.tr => {:email=>["hali hazırda kullanılmakta"], :id_number=>["hali hazırda kullanılmakta"]} 
+21223277994 : 21223277994@omu.edu.tr => {:email=>["hali hazırda kullanılmakta"], :id_number=>["hali hazırda kullanılmakta"]} 
+21302773140 : arsahin@omu.edu.tr => {:email=>["hali hazırda kullanılmakta"]} 
+21364264020 : ybulut@omu.edu.tr => {:email=>["hali hazırda kullanılmakta"], :id_number=>["hali hazırda kullanılmakta"]} 
+21803539900 : skement@omu.edu.tr => {:email=>["hali hazırda kullanılmakta"], :id_number=>["hali hazırda kullanılmakta"]} 
+23293296264 : engin.demir@omu.edu.tr => {:email=>["hali hazırda kullanılmakta"], :id_number=>["hali hazırda kullanılmakta"]} 
+23675622902 : 23675622902@omu.edu.tr => {:id_number=>["hali hazırda kullanılmakta"]} 
+23770274372 : cem@omu.edu.tr => {:email=>["hali hazırda kullanılmakta"], :id_number=>["hali hazırda kullanılmakta"]} 
+24464506922 : ertan.kurnaz@omu.edu.tr => {:email=>["hali hazırda kullanılmakta"], :id_number=>["hali hazırda kullanılmakta"]} 
+28196388184 : 28196388184@omu.edu.tr => {:id_number=>["hali hazırda kullanılmakta"]} 
+28244054368 : 28244054368@omu.edu.tr => {:id_number=>["hali hazırda kullanılmakta"]} 
+28484378576 : 28484378576@omu.edu.tr => {:id_number=>["hali hazırda kullanılmakta"]} 
+30467044514 : kamuran.soylu@omu.edu.tr => {:email=>["hali hazırda kullanılmakta"], :id_number=>["hali hazırda kullanılmakta"]} 
+31165502160 : 31165502160@omu.edu.tr => {:id_number=>["hali hazırda kullanılmakta"]} 
+31610268894 : hamza.kucuk@omu.edu.tr => {:email=>["hali hazırda kullanılmakta"], :id_number=>["hali hazırda kullanılmakta"]} 
+31664267904 : 31664267904@omu.edu.tr => {:email=>["hali hazırda kullanılmakta"], :id_number=>["hali hazırda kullanılmakta"]} 
+32744228068 : ugur.okay@omu.edu.tr => {:email=>["hali hazırda kullanılmakta"], :id_number=>["hali hazırda kullanılmakta"]} 
