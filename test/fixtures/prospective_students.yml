@@ -8,6 +8,7 @@ serhat:
   military_status: true
   obs_status: true
   meb_status: true
+  registered: true
   academic_term: fall_2018_2019
   expiry_date: 2019-01-15 08:00:00
 john:

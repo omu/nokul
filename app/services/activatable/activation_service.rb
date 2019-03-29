@@ -12,12 +12,15 @@ module Activatable
                   :serial_no,
                   :document_no,
                   :mobile_phone,
-                  :country
+                  :country,
+                  :prospective,
+                  :user
 
     validates :id_number, presence: true, numericality: { only_integer: true }, length: { is: 11 }
     validates :first_name, presence: true
     validates :last_name, presence: true
     validates :date_of_birth, presence: true
+    validates :country, presence: true
     validates :serial, allow_blank: true, length: { is: 3 }
     validates :serial_no, allow_blank: true, numericality: { only_integer: true }
     validates :document_no, allow_blank: true, length: { is: 9 }
@@ -71,8 +74,8 @@ module Activatable
     private
 
     def process
-      prospective = ProspectiveStudent.find_by(id_number: id_number)
-      user        = User.find_by(id_number: id_number)
+      @prospective = ProspectiveStudent.find_by(id_number: id_number)
+      @user = User.find_by(id_number: id_number)
 
       ProspectiveStudent.transaction do
         prospective.update(archived: true)

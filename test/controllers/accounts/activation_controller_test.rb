@@ -5,7 +5,6 @@ require 'test_helper'
 module Accounts
   class ActivationControllerTest < ActionDispatch::IntegrationTest
     setup do
-      @prospective = prospective_students(:mine)
       @form_params = %w[id_number first_name last_name date_of_birth serial serial_no document_no mobile_phone country]
     end
 
@@ -21,18 +20,20 @@ module Accounts
     end
 
     test 'should update activation' do
-      parameters = {
-        id_number: '56593662552',
-        first_name: 'Mine',
-        last_name: 'Uraslı',
-        date_of_birth: '1984-11-16',
-        serial: 'J10',
-        serial_no: '94646',
-        mobile_phone: '5551111111',
-        country: 'TR'
-      }
+      prospective = prospective_students(:mine)
 
-      patch activation_path, params: { activation: parameters }
+      patch activation_path, params: {
+        activation: {
+          id_number: prospective.id_number,
+          first_name: prospective.first_name,
+          last_name: prospective.last_name,
+          date_of_birth: '1984-11-16',
+          serial: 'J10',
+          serial_no: '94646',
+          mobile_phone: '5551111111',
+          country: 'TR'
+        }
+      }
       assert_redirected_to login_path(locale: I18n.locale)
     end
   end
