@@ -389,6 +389,8 @@ GEM
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
+    tiny_tds (2.0.0)
+      mini_portile2 (~> 2.0)
     twilio-ruby (5.21.2)
       faraday (~> 0.9)
       jwt (>= 1.5, <= 2.5)
@@ -485,6 +487,7 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   telephone_number
+  tiny_tds (~> 2.0.0)
   twilio-ruby (~> 5.21.2)
   uglifier (>= 1.3.0)
   web-console!

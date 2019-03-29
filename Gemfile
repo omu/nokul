@@ -17,6 +17,7 @@ gem 'pg'
 gem 'pg_search'
 gem 'pghero'
 gem 'rein'
+gem 'tiny_tds', '~>2.0.0'
 
 # active-record
 gem 'ancestry'

@@ -1,0 +1,108 @@
+-
+  name: AileBirey
+-
+  name: AskerlikSevki
+-
+  name: AskerlikTehir
+-
+  name: AtanmasiSakincaliPersonel
+-
+  name: BirimYetki
+-
+  name: BirimYetkiOrganizasyon
+-
+  name: BirimYetkiTipi
+-
+  name: BirimYetkiUygulama
+-
+  name: Cetvel1Rapor1
+-
+  name: Cetvel1Rapor1Print
+-
+  name: Cetvel1Rapor2
+-
+  name: Cetvel1Rapor2Print
+-
+  name: Cetvel1Rapor3
+-
+  name: Cetvel1Rapor3Print
+-
+  name: Cetvel2Rapor1
+-
+  name: Cetvel2Rapor1Print
+-
+  name: Cetvel2Rapor2
+-
+  name: Cetvel2Rapor2Print
+-
+  name: Cetvel2Rapor3
+-
+  name: Cetvel2Rapor3Print
+-
+  name: Cetvel3Rapor1
+-
+  name: Cetvel3Rapor1Print
+-
+  name: Cetvel3Rapor2
+-
+  name: Cetvel3Rapor2Print
+-
+  name: Cetvel3Rapor3
+-
+  name: Cetvel3Rapor3Print
+-
+  name: DersGorevlendirmeDersi
+-
+  name: DersGorevlendirmeyleGelenOgretimEleman
+-
+  name: EbysBelgeAlan
+-
+  name: EbysLog
+-
+  name: EbysLogDetay
+-
+  name: Egitim
+-
+  name: EgitimGrup
+-
+  name: EgitimKonu
+-
+  name: EgitimPersonel
+-
+  name: EgitimProgram
+-
+  name: FotoImport
+-
+  name: GeciciGorevlendirmeDinamikMaddesi
+-
+  name: GorevSuresiUzatma
+-
+  name: GorevYukselmeEgitim
+-
+  name: GorevlendirmeYapilanDersler
+-
+  name: Imzalar
+-
+  name: Intibak
+-
+  name: Isci
+-
+  name: KararnameLog
+-
+  name: KimlikKarti
+-
+  name: MemurKadro
+-
+  name: OrganizasyonImage
+-
+  name: PasaportSablonu
+-
+  name: PersonelBelgeTanim
+-
+  name: Sicil
+-
+  name: SinavSonuc
+-
+  name: SozlesmeSuresi
+-
+  name: TakibeAlinanPersonel
