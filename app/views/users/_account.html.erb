@@ -24,6 +24,14 @@
           <td><%= t('updated_at') %></td>
           <td><%= @user.updated_at %></td>
         </tr>
+        <tr>
+          <td><%= t('.activated') %></td>
+          <td><%= icon_for_check(@user.activated) %></td>
+        </tr>
+        <tr>
+          <td><%= t('.activated_at') %></td>
+          <td><%= @user.activated_at %></td>
+        </tr>
       </tbody>
     </table>
   </div>

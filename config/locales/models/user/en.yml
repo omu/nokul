@@ -19,6 +19,8 @@ en:
         end_date: End Date
         start_date: Start Date
       user: &user_attributes
+        activated: Account Activation
+        activated_at: Account Activation Date
         articles_count: Articles Count
         current_password: Current Password
         email: E-mail
@@ -70,6 +72,7 @@ en:
       informal_identity: Informal Identity
       new_identity: Create New Identity
       update_from_mernis: Update from MERNIS
+      student_identity: Student Identity
       user_identity: User Identity
     index:
       <<: *user_attributes

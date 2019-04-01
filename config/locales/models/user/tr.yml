@@ -19,6 +19,8 @@ tr:
         end_date: Bitiş Tarihi
         start_date: Başlangıç Tarihi
       user: &user_attributes
+        activated: Hesap Aktifleştirme
+        activated_at: Hesap Aktifleştirme Tarihi
         articles_count: Makale Sayısı
         current_password: Mevcut Parola
         email: E-mail Adresi
@@ -70,6 +72,7 @@ tr:
       informal_identity: Diğer Kimliğiniz
       new_identity: Yeni Kimlik Ekle
       update_from_mernis: MERNİS'ten Güncelle
+      student_identity: Öğrenci Kimliğiniz
       user_identity: Kullanıcı Kimliğiniz
     index:
       <<: *user_attributes
