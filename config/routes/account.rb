@@ -17,7 +17,7 @@ end
 
 scope module: :account do
   get 'activation', to: 'activations#new'
-  patch 'activation', to: 'activations#update'
+  post 'activation', to: 'activations#create'
   get '/profile', to: 'profile_settings#edit'
   patch '/profile', to: 'profile_settings#update'
 end

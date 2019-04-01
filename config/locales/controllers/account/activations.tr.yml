@@ -14,6 +14,8 @@ tr:
   account:
     activations:
       already_activated: Hesabınız zaten aktif durumda.
+      create:
+        success: Hesabınız aktifleştirildi.
       identity_not_verified: Kimlik bilgileriniz doğrulanamadı. Girmiş olduğunuz verilerin doğruluğundan emin olunuz.
       record_not_found: Sistemde hesabınızı aktifleştirecek bir kayıt bulunamamıştır.
       system_error: Sistemsel bir hata oluştu. Lütfen daha sonra tekrar deneyin.
@@ -29,5 +31,3 @@ tr:
         privacy_policy: Gizlilik Politikalarımızı
         user_agreement: Kurallarımızı
         verify: Onayla
-      update:
-        success: Hesabınız aktifleştirildi.

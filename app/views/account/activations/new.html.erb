@@ -3,7 +3,7 @@
     <div class='card-body p-4'>
       <h1 class='text-center'><%= t('.activation') %></h1>
       <p class='text-muted text-center'><%= t('.account_activation') %></p>
-      <%= simple_form_for(:activation, url: activation_path, html: { method: 'patch' }) do |f| %>
+      <%= simple_form_for(:activation, url: activation_path) do |f| %>
         <%= f.error_notification %>
         <% if @activation.errors.any? %>
           <ul class='list-group list-group-accent'>
@@ -17,7 +17,7 @@
         <fieldset class='border p-3'>
           <legend class='w-auto'><%= t('.identity_verification') %></legend>
           <div class='form-group row'>
-            <label for='activation_id_number' class='col-sm-3 col-form-label text-right'><%= t('.id_number') %></label>
+            <label class='col-sm-3 col-form-label text-right'><%= t('.id_number') %></label>
             <div class='col-sm-9'>
               <%= f.input :id_number, required: true, label: false, autofocus: true, wrapper: false, input_html: { class: @activation.errors[:id_number].any? ? 'is-invalid' : '' } %>
               <div class="invalid-feedback">
@@ -26,19 +26,19 @@
             </div>
           </div>
           <div class='form-group row'>
-            <label for='activation_first_name' class='col-sm-3 col-form-label text-right'><%= t('.first_name') %></label>
+            <label class='col-sm-3 col-form-label text-right'><%= t('.first_name') %></label>
             <div class='col-sm-9'>
               <%= f.input :first_name, required: true, label: false, wrapper: false %>
             </div>
           </div>
           <div class='form-group row'>
-            <label for='activation_last_name' class='col-sm-3 col-form-label text-right'><%= t('.last_name') %></label>
+            <label class='col-sm-3 col-form-label text-right'><%= t('.last_name') %></label>
             <div class='col-sm-9'>
               <%= f.input :last_name, required: true, label: false, wrapper: false %>
             </div>
           </div>
           <div class='form-group row'>
-            <label for='activation_date_of_birth' class='col-sm-3 col-form-label text-right'><%= t('.date_of_birth') %></label>
+            <label class='col-sm-3 col-form-label text-right'><%= t('.date_of_birth') %></label>
             <div class='col-sm-9'>
               <%= f.input :date_of_birth, as: :date_time_picker, label: false, wrapper: false, input_html: { required: true } %>
             </div>
@@ -68,7 +68,7 @@
         <fieldset class='border p-3'>
           <legend class='w-auto'><%= t('.phone_verification') %></legend>
           <div class='form-group row'>
-            <label for='activation_serial_mobile_phone' class='col-sm-3 col-form-label text-right'><%= t('.mobile_phone') %></label>
+            <label class='col-sm-3 col-form-label text-right'><%= t('.mobile_phone') %></label>
             <div class='col-sm-9'>
               <%= f.input :mobile_phone, label: false, wrapper: false, input_html: { class: @activation.errors[:mobile_phone].any? ? 'is-invalid' : '' } %>
               <div class="invalid-feedback">
@@ -78,9 +78,9 @@
             </div>
           </div>
           <div class='form-group row'>
-            <label for='activation_country' class='col-sm-3 col-form-label text-right'><%= t('.country') %></label>
+            <label class='col-sm-3 col-form-label text-right'><%= t('.country') %></label>
             <div class='col-sm-9'>
-              <%= f.input :country, collection: Country.all, value_method: :alpha_2_code, label: false, wrapper: false %>
+              <%= f.input :country, collection: Country.order(:name), value_method: :alpha_2_code, label: false, wrapper: false %>
             </div>
           </div>
         </fieldset>

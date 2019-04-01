@@ -19,10 +19,10 @@ module Accounts
       end
     end
 
-    test 'should update activation' do
+    test 'should create activation' do
       prospective = prospective_students(:mine)
 
-      patch activation_path, params: {
+      post activation_path, params: {
         activation: {
           id_number: prospective.id_number,
           first_name: prospective.first_name,

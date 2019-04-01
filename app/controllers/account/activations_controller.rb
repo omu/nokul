@@ -10,7 +10,7 @@ module Account
       @activation = Activatable::ActivationService.new
     end
 
-    def update
+    def create
       @activation = Activatable::ActivationService.new(params[:activation])
 
       if @activation.active
