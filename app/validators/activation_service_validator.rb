@@ -11,7 +11,7 @@ class ActivationServiceValidator < ActiveModel::Validator
     if blank_all_identity_serial_numbers?
       @record.errors[:base] << I18n.t('.cannot_be_blank', scope: %i[validators activation_service])
     elsif @record.document_no.blank?
-      check_old_identity_serial_numbers?
+      check_old_identity_serial_numbers
     end
   end
 
@@ -19,7 +19,7 @@ class ActivationServiceValidator < ActiveModel::Validator
     @record.serial.blank? && @record.serial_no.blank? && @record.document_no.blank?
   end
 
-  def check_old_identity_serial_numbers?
+  def check_old_identity_serial_numbers
     if @record.serial.present? && @record.serial_no.blank?
       @record.errors.add(:serial_no, :blank)
     elsif @record.serial.blank? && @record.serial_no.present?
