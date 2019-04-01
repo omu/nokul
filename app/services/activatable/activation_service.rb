@@ -4,27 +4,27 @@ module Activatable
   class ActivationService
     include ActiveModel::Validations
 
-    attr_accessor :id_number,
-                  :first_name,
-                  :last_name,
+    attr_accessor :country,
                   :date_of_birth,
+                  :document_no,
+                  :first_name,
+                  :id_number,
+                  :last_name,
+                  :mobile_phone,
+                  :prospective,
                   :serial,
                   :serial_no,
-                  :document_no,
-                  :mobile_phone,
-                  :country,
-                  :prospective,
                   :user
 
-    validates :id_number, presence: true, numericality: { only_integer: true }, length: { is: 11 }
-    validates :first_name, presence: true
-    validates :last_name, presence: true
-    validates :date_of_birth, presence: true
     validates :country, presence: true
+    validates :date_of_birth, presence: true
+    validates :document_no, allow_blank: true, length: { is: 9 }
+    validates :first_name, presence: true
+    validates :id_number, presence: true, numericality: { only_integer: true }, length: { is: 11 }
+    validates :last_name, presence: true
+    validates :mobile_phone, telephone_number: { country: proc { |record| record.country }, types: [:mobile] }
     validates :serial, allow_blank: true, length: { is: 3 }
     validates :serial_no, allow_blank: true, numericality: { only_integer: true }
-    validates :document_no, allow_blank: true, length: { is: 9 }
-    validates :mobile_phone, telephone_number: { country: proc { |record| record.country }, types: [:mobile] }
     validates_with ActivationServiceValidator
     validate :must_not_be_activated
     validate :must_be_prospective, unless: :activated?
