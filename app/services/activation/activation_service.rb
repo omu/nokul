@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Activatable
+module Activation
   class ActivationService
     include ActiveModel::Validations
 
@@ -67,8 +67,10 @@ module Activatable
       return unless valid?
 
       process
-    rescue StandardError
-      errors.add(:base, I18n.t('.account.activations.system_error')) && false
+    rescue StandardError => err
+      Rails.logger.error err.message
+      errors.add(:base, I18n.t('.account.activations.system_error'))
+      false
     end
 
     private

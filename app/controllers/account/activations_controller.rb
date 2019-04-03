@@ -7,11 +7,11 @@ module Account
     layout 'guest'
 
     def new
-      @activation = Activatable::ActivationService.new
+      @activation = Activation::ActivationService.new
     end
 
     def create
-      @activation = Activatable::ActivationService.new(params[:activation])
+      @activation = Activation::ActivationService.new(params[:activation])
 
       if @activation.active
         redirect_to login_path, notice: t('.success')

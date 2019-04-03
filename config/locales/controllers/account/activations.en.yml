@@ -1,7 +1,7 @@
 en:
   activemodel:
     attributes:
-      activatable/activation_service: &activation_attributes
+      activation/activation_service: &activation_attributes
         country: Country
         date_of_birth: Date of Birth
         document_no: Document No
