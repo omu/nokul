@@ -8,7 +8,7 @@
     configure_disabled_params()
 
     function configure_disabled_params() {
-      if($('#activation_serial').val().length || $('#activation_serial_no').val().length) {
+      if ($('#activation_serial').val().length || $('#activation_serial_no').val().length) {
         $('#activation_document_no').prop('disabled', true)
         $("label[for='activation_document_no']").addClass('text-muted')
       }
