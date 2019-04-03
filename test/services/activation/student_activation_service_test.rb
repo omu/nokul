@@ -3,12 +3,12 @@
 require 'test_helper'
 
 module Activation
-  class ActivationServiceTest < ActiveSupport::TestCase
+  class StudentActivationServiceTest < ActiveSupport::TestCase
     setup do
       prospective = prospective_students(:mine)
 
       @activation =
-        Activation::ActivationService.new(
+        Activation::StudentActivationService.new(
           id_number: prospective.id_number,
           first_name: prospective.first_name,
           last_name: prospective.last_name,

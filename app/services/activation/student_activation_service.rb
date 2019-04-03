@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Activation
-  class ActivationService
+  class StudentActivationService
     include ActiveModel::Validations
 
     attr_accessor :country,
