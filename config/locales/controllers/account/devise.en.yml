@@ -1,6 +1,7 @@
 en:
   devise:
     failure:
+      account_not_activated: Your account is not activated. Firstly activate your account please.
       already_authenticated: You are already signed in.
       inactive: Your account is not activated yet.
       invalid: "Invalid %{authentication_keys} or password."

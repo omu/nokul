@@ -101,6 +101,14 @@ class User < ApplicationRecord
     where.not(projects_count: 0).order('projects_count desc').limit(10)
   end
 
+  def active_for_authentication?
+    super && activated?
+  end
+
+  def inactive_message
+    activated? ? super : :account_not_activated
+  end
+
   private
 
   def build_address_information
