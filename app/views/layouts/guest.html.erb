@@ -4,6 +4,9 @@
     <%= render 'layouts/shared/meta' %>
     <%= stylesheet_link_tag 'guest', media: 'all' %>
     <%= javascript_include_tag 'guest' %>
+    <script type="text/javascript">
+      flatpickr.localize(flatpickr.l10ns["<%= I18n.locale %>"])
+    </script>
   </head>
   <body>
     <div class="app flex-row align-items-center">
