@@ -16,6 +16,8 @@ devise_scope :user do
 end
 
 scope module: :account do
+  get 'activation', to: 'activations#new'
+  post 'activation', to: 'activations#create'
   get '/profile', to: 'profile_settings#edit'
   patch '/profile', to: 'profile_settings#update'
 end

@@ -75,6 +75,7 @@ class ProspectiveStudent < ApplicationRecord
   # scopes
   scope :archived, -> { where(archived: true) }
   scope :not_archived, -> { where(archived: false) }
+  scope :registered, -> { where(registered: true) }
 
   # custom methods
   def can_permanently_register?

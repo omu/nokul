@@ -127,4 +127,9 @@ class UserTest < ActiveSupport::TestCase
       )
     end
   end
+
+  test 'check user activation status' do
+    assert users(:john).active_for_authentication? # activated user
+    assert_not users(:mine).active_for_authentication? # not activated user
+  end
 end

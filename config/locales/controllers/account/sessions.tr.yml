@@ -7,7 +7,7 @@ tr:
   account:
     sessions:
       new:
-        create_account: Hesap Oluştur
+        account_activation: Hesap Aktifleştirme (İlk Giriş)
         did_you_forget: Parolanı mı Unuttun?
         login: Giriş Yap
         login_to_your_account: Hesabınıza giriş yapın

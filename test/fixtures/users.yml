@@ -4,7 +4,14 @@ serhat:
   email: msdundars@gmail.com
   id_number: 10570898198 # Sample ID number provided by KPS
   encrypted_password: $2a$11$C/GxMBY.clyScJElgoplBuIJALvy3kYlOFAPAVfARUuiJfTEpMv2q # d61c16acabedeab84f1ad062d7ad948ef3
+  activated: true
 john:
   email: john@gmail.com
   id_number: 99001255472 # Sample ID number provided by KPS
   encrypted_password: $2a$11$C/GxMBY.clyScJElgoplBuIJALvy3kYlOFAPAVfARUuiJfTEpMv2q # d61c16acabedeab84f1ad062d7ad948ef3
+  activated: true
+mine:
+  email: mineurasli@gmail.com
+  id_number: 56593662552 # Sample ID number provided by KPS
+  encrypted_password: $2a$11$C/GxMBY.clyScJElgoplBuIJALvy3kYlOFAPAVfARUuiJfTEpMv2q # d61c16acabedeab84f1ad062d7ad948ef3
+  activated: false

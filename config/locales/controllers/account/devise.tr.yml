@@ -1,6 +1,7 @@
 tr:
   devise:
     failure:
+      account_not_activated: Hesabınız aktif değil. Lütfen önce hesabınızı aktifleştirin.
       already_authenticated: Zaten giriş yaptınız.
       inactive: Hesabınız henüz aktif edilmedi.
       invalid: "Geçersiz %{authentication_keys} veya parola."

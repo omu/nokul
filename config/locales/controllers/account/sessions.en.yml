@@ -7,7 +7,7 @@ en:
   account:
     sessions:
       new:
-        create_account: Create Account
+        account_activation: Account Activation (First Registration)
         did_you_forget: Forgot your password?
         login: Login
         login_to_your_account: Login to your account

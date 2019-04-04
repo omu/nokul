@@ -1,0 +1,33 @@
+tr:
+  activemodel:
+    attributes:
+      activation/activation_service: &activation_attributes
+        country: Ülke
+        date_of_birth: Doğum Tarihi
+        document_no: Doküman No
+        first_name: Ad
+        id_number: TC Numarası
+        last_name: Soyad
+        mobile_phone: Cep Telefonu
+        serial: Seri
+        serial_no: Seri No
+  account:
+    activations:
+      already_activated: Hesabınız zaten aktif durumda.
+      create:
+        success: Hesabınız aktifleştirildi.
+      identity_not_verified: Kimlik bilgileriniz doğrulanamadı. Girmiş olduğunuz verilerin doğruluğundan emin olunuz.
+      record_not_found: Sistemde hesabınızı aktifleştirecek bir kayıt bulunamamıştır.
+      system_error: Sistemsel bir hata oluştu. Lütfen daha sonra tekrar deneyin.
+      new:
+        <<: *activation_attributes
+        activation: Aktivasyon
+        account_activation: Hesabınızı aktifleştirin
+        agreements: Hesabınızı aktifleştirerek, %{user_agreements_link} ve %{privacy_policies_link} kabul etmiş olursunuz.
+        for_old_id_cards: Eski kimlik kartları için
+        identity_verification: Kimlik Doğrulama
+        login: Giriş Yap
+        phone_verification: Telefon Doğrulama
+        privacy_policy: Gizlilik Politikalarımızı
+        user_agreement: Kurallarımızı
+        verify: Onayla

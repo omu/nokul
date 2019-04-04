@@ -54,6 +54,9 @@ class User < ApplicationRecord
   after_create_commit :build_address_information, if: proc { addresses.formal.empty? }
   after_create_commit :build_identity_information, if: proc { identities.formal.empty? }
 
+  # scopes
+  scope :activated, -> { where(activated: true) }
+
   # store accessors
   store :profile_preferences, accessors: %i[
     extension_number
@@ -96,6 +99,14 @@ class User < ApplicationRecord
 
   def self.with_most_projects
     where.not(projects_count: 0).order('projects_count desc').limit(10)
+  end
+
+  def active_for_authentication?
+    super && activated?
+  end
+
+  def inactive_message
+    activated? ? super : :account_not_activated
   end
 
   private
