@@ -12,7 +12,7 @@ module Nokul
 
     module_function
 
-    def root # rubocop:disable Lint/UnneededCopDisableDirective,Rails/Delegate
+    def root
       engine.root
     end
 

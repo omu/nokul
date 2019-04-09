@@ -15,7 +15,7 @@ Naming/FileName:
     - lib/nokul-tenant.rb
 Rails/Delegate:
   Exclude:
-    - lib/nokul/tenant/initialize.rb
+    - lib/nokul/tenant/api.rb
 Rails/Output:
   Exclude:
     - lib/**/*.rb
