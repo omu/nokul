@@ -27,8 +27,8 @@ module Nokul
       return if engine
 
       raise Error::LoadError, "Tenant seems to be uninitialized after loading from plugin #{plugin}"
-    rescue LoadError => err
-      raise Error::LoadError, "Couldn't load Tenant #{tenant} from plugin #{plugin}: #{err.message}"
+    rescue LoadError => e
+      raise Error::LoadError, "Couldn't load Tenant #{tenant} from plugin #{plugin}: #{e.message}"
     end
 
     def initialize(engine_class)

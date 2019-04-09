@@ -34,7 +34,6 @@ class User < ApplicationRecord
   # validations
   validates :email, presence: true, uniqueness: true, length: { maximum: 255 }
   validates :extension_number, allow_blank: true,
-                               allow_nil: true,
                                length: { maximum: 8 },
                                numericality: { only_integer: true }
   validates :id_number, uniqueness: true, numericality: { only_integer: true }, length: { is: 11 }

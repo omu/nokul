@@ -57,7 +57,7 @@ class ClassTest < ActiveSupport::TestCase
     assert_equal %w[foo bar],                TestClassesTwo::ConveyedBase.array_attr
     assert_equal %w[foo bar child_addition], TestClassesTwo::ChildFromConveyedBase.array_attr
 
-    refute TestClassesTwo::ConveyedBase.respond_to? :other
+    assert_not TestClassesTwo::ConveyedBase.respond_to? :other
     assert_equal 'ok', TestClassesTwo::ChildFromConveyedBase.other
   end
 end
