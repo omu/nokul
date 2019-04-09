@@ -5,6 +5,15 @@ author: M. Serhat Dundar
 Commit
 ======
 
+- Çalışmalarınız süresince proje deposuna hassas nitelikte verilerin kazayla
+  eklenmesini önlemek için `git-secrets`'i kurun ve yapılandırın.
+
+  ```bash
+  sudo curl -fsSL -o /usr/local/bin/scripts https://raw.githubusercontent.com/omu/debian/master/bin/scripts
+  sudo chmod +x /usr/local/bin/scripts
+  sudo scripts operator/git
+  ```
+
 - Projeyi `bundle` ettikten sonra `fit-commit` git hook'larını kurun: `fit-commit install`
 
 - Her bir commit'in kendi içerisinde anlamsal bir bütünlüğe sahip olması için özen gösterin. Yaptığınız tüm
