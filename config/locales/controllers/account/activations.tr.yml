@@ -1,7 +1,7 @@
 tr:
   activemodel:
     attributes:
-      activation/activation_service: &activation_attributes
+      activation/student_activation_service: &activation_attributes
         country: Ülke
         date_of_birth: Doğum Tarihi
         document_no: Doküman No
