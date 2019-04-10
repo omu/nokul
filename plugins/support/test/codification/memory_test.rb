@@ -24,7 +24,7 @@ module Nokul
         test 'simple memory should work as expected' do
           memory = SimpleMemory.new
 
-          refute memory.remember? 19
+          assert_not memory.remember? 19
 
           assert_equal 23, memory.remember(23)
           assert memory.remember? 23

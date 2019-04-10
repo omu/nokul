@@ -67,8 +67,8 @@ module Activation
       return unless valid?
 
       process
-    rescue StandardError => err
-      Rails.logger.error err.message
+    rescue StandardError => e
+      Rails.logger.error e.message
       errors.add(:base, I18n.t('.account.activations.system_error'))
       false
     end

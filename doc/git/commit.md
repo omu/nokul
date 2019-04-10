@@ -5,6 +5,25 @@ author: M. Serhat Dundar
 Commit
 ======
 
+- Çalışmalarınız süresince proje deposuna hassas nitelikte verilerin kazayla
+  eklenmesini önlemek için `git-secrets`'i kurun ve yapılandırın.  Kurulumu elle
+  yapmak istiyorsanız ilgili betiği
+  [inceleyin](https://github.com/omu/debian/blob/master/lib/scripts/operator/git.sh).
+
+  ```bash
+  sudo curl -fsSL -o /usr/local/bin/scripts https://raw.githubusercontent.com/omu/debian/master/bin/scripts
+  sudo chmod +x /usr/local/bin/scripts
+  sudo scripts operator/git
+  ```
+
+  Bu sayede her committe git-secrets ile değişiklikleri inceleyen bir Git
+  kancası sisteminize kurulacak ve değişiklikler hassas veri içeriyorsa commit
+  engellenecektir.  Böyle bir durumla karşılaştığınızda uyarının hatalı olduğunu
+  düşünüyorsanız ("false positive") depo kökündeki [.gitallowed](/.gitallowed)
+  dosyasında elle veya [git-secrets
+  ile](https://github.com/awslabs/git-secrets#ignoring-false-positives) ekleme
+  yapın.
+
 - Projeyi `bundle` ettikten sonra `fit-commit` git hook'larını kurun: `fit-commit install`
 
 - Her bir commit'in kendi içerisinde anlamsal bir bütünlüğe sahip olması için özen gösterin. Yaptığınız tüm
