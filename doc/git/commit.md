@@ -14,6 +14,9 @@ Commit
   sudo scripts operator/git
   ```
 
+  Kurulumu elle yapmak istiyorsanız ilgili betiği
+  [inceleyin](https://github.com/omu/debian/blob/master/lib/scripts/operator/git.sh).
+
 - Projeyi `bundle` ettikten sonra `fit-commit` git hook'larını kurun: `fit-commit install`
 
 - Her bir commit'in kendi içerisinde anlamsal bir bütünlüğe sahip olması için özen gösterin. Yaptığınız tüm
