@@ -1,66 +1,61 @@
 # frozen_string_literal: true
 
-def load_seed_data
-  Dir[Rails.root.join('db', 'beta_seed', '*.rb')].sort.each do |seed|
-    load seed
-  end
-end
+module PgExec
 
-class RestoreEncryptedSql
-  ENCRYTED_DATA_DIR = 'db/encrypted_data'
-  COMPRESS_EXT      = '.tar.gz'
+  module_function
 
-  def self.call(file_name)
-    new(file_name).restore
-  end
-
-  attr_reader :file_name
-
-  def initialize(file_name)
-    @file_name = file_name
-    @dir       = Dir.tmpdir
-  end
-
-  def restore
-    file = prepare_file_for_restored
-
-    `#{db_connection + " -f #{file.path}"}`
-
-    file.close
-  end
-
-  private
-
-  attr_reader :dir
-
-  def db_connection
-    config     = ActiveRecord::Base.configurations[Rails.env]
-
-    "PGPASSWORD=#{config['password']} psql \
-    -h #{config['host']} \
-    -U #{config['username']} \
-    -d #{config['database']}"
-  end
-
-  def extract
-    path = Rails.root.join(ENCRYTED_DATA_DIR, "#{file_name}#{COMPRESS_EXT}")
-
-    `tar xvzf "#{path}" -C #{dir}`.strip
-  end
-
-  def prepare_file_for_restored
-    extracted_file = extract.delete_suffix('.enc')
-
-    tmp = Tempfile.new("#{file_name}-#{Time.now.to_i}.sql")
-
+  def call(sql)
+    db = PG.connect(**args)
     # https://www.endpoint.com/blog/2015/01/28/postgres-sessionreplication-role
-    tmp << <<-SQL
+    db.exec <<~SQL
       SET session_replication_role = replica;
-      #{Support::Sensitive.read("#{dir}/#{extracted_file}")}
+      #{sql}
       SET session_replication_role = origin;
     SQL
-    tmp
+  ensure
+    db.close
   end
+
+  def args
+    config = ActiveRecord::Base.configurations[Rails.env]
+    {
+      host: config['host'],
+      dbname: config['database'],
+      user: config['username'],
+      password: config['password']
+    }
+  end
+
+  private :args
+end
+
+
+ENCRYTED_DATA_DIR   = 'db/encrypted_data'
+COMPRESSED_FILE_EXT = '.sql.enc.gz'
+
+def restore_seed_data(encrypted_data_name)
+  if Rails.env.production? && !ENV['ALLOW_FOR_PRODUCTION'].eql?('true')
+    abort(
+      "You are attempting to run a restore against your production database
+      If you are sure you want to continue, run the same command with the environment variable:
+      ALLOW_FOR_PRODUCTION=true"
+    )
+  end
+
+  path = Rails.root.join(
+    ENCRYTED_DATA_DIR,
+    "#{encrypted_data_name}#{COMPRESSED_FILE_EXT}"
+  )
+
+  abort("File not found in: #{path}") unless path.exist?
+
+  PgExec.call(
+    Support::Sensitive.content_decrypt(
+      ActiveSupport::Gzip.decompress(File.read(path))
+    )
+  )
+rescue Pg::Error => e
+  abort("SQL error during exec: #{e.message}")
 end
 
 # Seed logic goes below
@@ -74,10 +69,13 @@ if ENV['SYNC'].eql?('true')
     Osym::ImportProspectiveStudentsJob.perform_later('db/encrypted_data/prospective_students.csv')
   end
 else
-  RestoreEncryptedSql.call('static_data')
+  restore_seed_data('static_data')
 
   if ENV['SAMPLE_DATA'].eql?('true')
-    RestoreEncryptedSql.call('sample_data')
-    load_seed_data
+    restore_seed_data('sample_data')
+
+    Dir[Rails.root.join('db', 'beta_seed', '*.rb')].sort.each do |seed|
+      load seed
+    end
   end
 end
