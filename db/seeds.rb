@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 module PgExec
-
   module_function
 
   def call(sql)
@@ -25,34 +24,18 @@ module PgExec
       password: config['password']
     }
   end
-
-  private :args
 end
-
 
 ENCRYTED_DATA_DIR   = 'db/encrypted_data'
 COMPRESSED_FILE_EXT = '.sql.enc.gz'
 
 def restore_seed_data(encrypted_data_name)
-  if Rails.env.production? && !ENV['ALLOW_FOR_PRODUCTION'].eql?('true')
-    abort(
-      "You are attempting to run a restore against your production database
-      If you are sure you want to continue, run the same command with the environment variable:
-      ALLOW_FOR_PRODUCTION=true"
-    )
-  end
-
-  path = Rails.root.join(
-    ENCRYTED_DATA_DIR,
-    "#{encrypted_data_name}#{COMPRESSED_FILE_EXT}"
-  )
+  path = Rails.root.join(ENCRYTED_DATA_DIR, "#{encrypted_data_name}#{COMPRESSED_FILE_EXT}")
 
   abort("File not found in: #{path}") unless path.exist?
 
   PgExec.call(
-    Support::Sensitive.content_decrypt(
-      ActiveSupport::Gzip.decompress(File.read(path))
-    )
+    Support::Sensitive.content_decrypt(ActiveSupport::Gzip.decompress(File.read(path)))
   )
 rescue Pg::Error => e
   abort("SQL error during exec: #{e.message}")
