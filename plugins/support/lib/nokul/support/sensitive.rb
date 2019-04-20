@@ -31,6 +31,10 @@ module Nokul
         write(path, File.read(path))
       end
 
+      def content_decrypt(content)
+        encryptor('').send(:decrypt, content)
+      end
+
       EXT = '.enc'
 
       def expand_path(path)
