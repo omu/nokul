@@ -86,6 +86,12 @@ module LinkHelper
     )
   end
 
+  def action_bar
+    tag.div class: 'shadow p-3 mb-5 bg-white rounded' do
+      yield
+    end
+  end
+
   private
 
   def create_links_for(path, actions, options = {})
