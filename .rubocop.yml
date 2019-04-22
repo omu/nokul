@@ -8,6 +8,8 @@ Style/FormatStringToken:
   EnforcedStyle: template
 Documentation:
   Enabled: false
+Naming/MemoizedInstanceVariableName:
+  EnforcedStyleForLeadingUnderscores: optional
 Rails/UnknownEnv:
   Environments:
     - development
