@@ -1,0 +1,9 @@
+unit_management:
+  name: Birim Yöneti
+  identifier: unit_management
+  description: Description
+
+course_management:
+  name: Ders Yönetimi
+  identifier: course_management
+  description: Description

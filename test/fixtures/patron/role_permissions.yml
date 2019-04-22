@@ -1,0 +1,7 @@
+one:
+  role: admin
+  permission: unit_management
+
+two:
+  role: admin
+  permission: course_management

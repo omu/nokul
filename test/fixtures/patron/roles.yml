@@ -1,0 +1,14 @@
+admin:
+  name: Admin
+  identifier: admin
+  locked: true
+
+student:
+  name: Student
+  identifier: student
+  locked: true
+
+custom:
+  name: Custom
+  identifier: custom
+  locked: false
