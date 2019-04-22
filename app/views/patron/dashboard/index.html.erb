@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card mb-1 mr-1">
+      <div class="card-body">
+        <h4 class="card-title">Roller</h4>
+        <hr>
+        <h5 class="card-text">
+          Role Atamaları Yapılan Menü <span class="badge badge-primary"><%= @counter[:roles] %></span>
+        </h5>
+        <%= link_to 'Rol Yönetimi', patron_roles_path, class: 'btn btn-primary btn-xs' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card mb-1 mr-1">
+      <div class="card-body">
+        <h4 class="card-title">İzinler</h4>
+        <hr>
+        <h5 class="card-text">
+          İzin Atamaları Yapılan Menü <span class="badge badge-primary"><%= @counter[:permissions] %></span>
+        </h5>
+        <%= link_to 'İzin Yönetimi', patron_permissions_path, class: 'btn btn-primary btn-xs' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card mb-1 mr-1">
+      <div class="card-body">
+        <h4 class="card-title">Kapsamlar</h4>
+        <hr>
+        <h5 class="card-text">
+          Kapsam Oluşturma Menüsü <span class="badge badge-primary"><%= @counter[:query_stores] %></span>
+        </h5>
+        <%= link_to 'Kapsam Yönetimi', patron_query_stores_path, class: 'btn btn-primary btn-xs' %>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,50 @@
+<%= action_bar do %>
+  <%= link_to_back patron_query_stores_path %>
+  <%= link_to_edit [:edit, @query_store] %>
+<% end %>
+
+<h4 class='text-center'><%= @query_store.name %></h4>
+
+<hr>
+
+<div class="row">
+  <% @query_store.scope_klass.filters.each do |attribute, option| %>
+    <div class="col-sm-6">
+      <div class="card mb-3">
+        <div class="card-header">
+          <%= Patron::Utils::I18n.translate_filter(option.i18n_key, class_name: @query_store.scope_klass.model) %>
+          <strong>( <%= attribute %> ) </strong>
+        </div>
+
+        <div class="card-body">
+          <table class="table table-striped">
+            <tr class="table-success">
+              <th width="40%">
+                <%= Patron::Utils::I18n.translate_suffix('value') %>
+              </th>
+              <td>
+                <%= @query_store.public_send("#{attribute}_value") %>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <th>
+                <%= Patron::Utils::I18n.translate_suffix('query_type') %>
+              </th>
+              <td>
+                <%= Patron::Utils::I18n.translate_query_type(@query_store.public_send("#{attribute}_query_type")) %>
+              </td>
+            </tr>
+            <tr class="table-secondary">
+              <th>
+                <%= Patron::Utils::I18n.translate_suffix('skip_empty') %>
+              </th>
+              <td>
+                <%= Patron::Utils::I18n.translate_skip_empty(@query_store.public_send("#{attribute}_skip_empty")) %>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

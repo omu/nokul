@@ -1,0 +1,31 @@
+<%= action_bar do %>
+  <%= link_to_back :back %>
+  <%= link_to_edit [:edit, @query_store] %>
+<% end %>
+
+<div class="alert alert-info" role="alert">
+  <p>Gösterilecek Toplam Kayıt Sayısı: <strong><%= @collection.size %></strong></p>
+  <p>Es Geçme Durumu: <strong><%= @scope.bypass? %></strong></p>
+</div>
+
+<div class="card">
+  <div class="card-body">
+    <table class="table table-bordered">
+      <thead class="thead-dark">
+        <% @attributes.keys.each do |attribute| %>
+          <th><%= attribute %></th>
+        <% end %>
+      </thead>
+
+      <tbody>
+        <% @collection.each do |item| %>
+          <tr>
+            <% @attributes.values.each do |attribute| %>
+              <td><%= item.public_send(attribute) %></td>
+            <% end %>
+          <tr>
+        <% end %>
+      <tbody>
+    </table>
+  </div>
+</div>

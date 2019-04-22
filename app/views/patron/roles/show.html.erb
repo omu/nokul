@@ -1,0 +1,38 @@
+
+
+<div class='row'>
+  <div class='col-sm-12'>
+    <%= action_bar do %>
+      <%= link_to_back patron_roles_path %>
+      <%= link_to_edit [:edit, @role] %>
+    <% end %>
+
+    <h3 class="text-center"><%= @role.name %></h3>
+
+    <div class="card mb-4">
+      <h5 class="card-header">Permissions</h5>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+          <% @role.permissions.each do |permission| %>
+            <li class="list-group-item">
+              <%= permission.name %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h5 class="card-header">Users</h5>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+          <% [].each do |user| %>
+            <li class="list-group-item">
+              <%= user.email %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<div class='row'>
+  <div class='col-sm-12'>
+    <%= action_bar do %>
+      <%= link_to_back(:back) %>
+    <% end %>
+
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'user-tag' %>
+        <strong><%= 'Query Store' %></strong>
+      </div>
+      <div class='card-body'>
+        <%= simple_form_for query_store do |f| %>
+          <div class="col-sm-12">
+            <%= f.input :name %>
+          </div>
+
+          <div class="col-sm-12">
+            <%= f.input :scope_name, as: :hidden %>
+          </div>
+
+          <div class="row">
+            <% query_store.scope_klass.fields_for_form.each do |field_group| %>
+              <div class="col-sm-6">
+                <div class="card mb-2 px-3 py-3">
+                  <div class="row">
+                    <% field_group.each do |field| %>
+                      <div class="col-sm-12">
+                        <%= f.label field.name, field.label %>
+                        <%= f.input field.name,
+                                    as: field.as,
+                                    collection: field.collection,
+                                    required: field.required,
+                                    label: false,
+                                    input_html: { multiple: field.multiple } %>
+                      </div>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+
+          <div class="col-sm-12">
+            <%= f.button :submit, class: 'btn btn-success' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
