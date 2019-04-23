@@ -27,6 +27,9 @@ en:
         smart_search_placeholder: Scope Query Name or Scope Name
       new:
         form_title: Create a Scope Query
+      preview:
+        smart_search_placeholder: Search with Model-Specific Keyword
+        total_number_of_records: Total Number of Records
       show:
         <<: *query_stores_attributes
       update:

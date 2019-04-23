@@ -21,5 +21,10 @@ module Patron
     # validations: length
     validates_length_of :name
     validates_length_of :scope_name
+
+    test 'scope_klass method' do
+      query_store = patron_query_stores(:unit_scope_muhendislik)
+      assert_equal query_store.scope_klass, UnitScope
+    end
   end
 end

@@ -38,10 +38,13 @@
           <tbody>
             <% @query_stores.each do |query_store| %>
               <tr>
-                <td><%= query_store.name %></td>
+                <td><%= link_to(query_store.name, query_store) %></td>
                 <td><%= query_store.scope_name %></td>
                 <td>
                   <%= link_to_actions(query_store) %>
+                  <%= link_to fa_icon('search', text: t('preview')),
+                              [:preview, query_store],
+                              class: 'btn btn-outline-info btn-sm' %>
                 </td>
               </tr>
             <% end %>

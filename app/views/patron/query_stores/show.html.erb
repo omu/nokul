@@ -1,6 +1,9 @@
 <%= action_bar do %>
   <%= link_to_back patron_query_stores_path %>
   <%= link_to_edit [:edit, @query_store] %>
+  <%= link_to fa_icon('search', text: t('preview')),
+              [:preview, @query_store],
+              class: 'btn btn-outline-info btn-sm' %>
 <% end %>
 
 <h4 class='text-center'><%= @query_store.name %></h4>
