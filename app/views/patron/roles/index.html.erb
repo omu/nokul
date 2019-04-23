@@ -2,21 +2,21 @@
   <div class='col-lg-12'>
     <div class='card'>
       <div class='card-header'>
-        <%= fa_icon 'tags', text: "t('.card_header')" %>
+        <%= fa_icon 'tags', text: t('.card_header') %>
 
         <div class='card-header-actions'>
-          <%= link_to_new "t('.new_role_link')", new_patron_role_path %>
+          <%= link_to_new t('.new_role_link'), new_patron_role_path %>
         </div>
       </div>
       <div class='card-body'>
         <%= render 'layouts/shared/smart_search_form',
                    path: patron_roles_path,
-                   placeholder: "t('.name')" %>
+                   placeholder: t('.smart_search_placeholder') %>
         <table class='table table-responsive-sm table-striped table-hover'>
           <thead class="thead-dark">
             <tr>
-              <th><%= "t('.name')" %></th>
-              <th><%= "t('.identifier')" %></th>
+              <th><%= t('.name') %></th>
+              <th><%= t('.identifier') %></th>
               <th><%= t('actions') %></th>
             </tr>
           </thead>

@@ -1,0 +1,33 @@
+tr:
+  activerecord:
+    attributes:
+      patron/role: &role_attributes
+        identifier: Rol Tanımlayıcı
+        locked: Kilitli
+        name: Rol Adı
+        permissions: İzinler
+  helpers:
+    submit:
+      patron_role:
+        create: Rol Oluştur
+        update: Rol Güncelle
+  patron:
+    roles:
+      create:
+        success: Rol başarıyla oluşturuldu.
+      destroy:
+        error: Rol silinirken bir hata oluştu.
+        success: Rol başarıyla silindi.
+      edit:
+        form_title: Rolü Güncelle
+      index:
+        <<: *role_attributes
+        card_header: Roller
+        new_role_link: Yeni Rol Ekle
+        smart_search_placeholder: Rol Adı veya Tanımlayıcısı
+      new:
+        form_title: Yeni Rol Oluştur
+      show:
+        <<: *role_attributes
+      update:
+        success: Rol başarıyla güncellendi.
