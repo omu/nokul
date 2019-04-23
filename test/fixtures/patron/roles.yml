@@ -12,3 +12,13 @@ custom:
   name: Custom
   identifier: custom
   locked: false
+
+role_to_update:
+  name: Role for Update
+  identifier: role_for_update
+  locked: false
+
+role_to_delete:
+  name: Role for Destroy
+  identifier: role_for_destroy
+  locked: false
