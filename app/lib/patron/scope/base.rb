@@ -6,8 +6,16 @@ module Patron
       extend DSL
       extend View::Form
 
-      def self.model
-        to_s.delete_suffix('Scope').safe_constantize
+      class << self
+        def model
+          to_s.delete_suffix('Scope').safe_constantize
+        end
+
+        def preview_for_records(*records)
+          query = Query::Builder.build_for_preview(new(nil), records)
+
+          query.present? ? model.where(query) : model.none
+        end
       end
 
       attr_reader :user

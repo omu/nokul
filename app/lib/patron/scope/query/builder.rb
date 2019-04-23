@@ -13,6 +13,12 @@ module Patron
           new(instance).send(:build)
         end
 
+        def self.build_for_preview(instance, records)
+          builder = new(instance)
+          builder.instance_variable_set(:@records, records)
+          builder.send(:build)
+        end
+
         private_class_method :new
 
         private
