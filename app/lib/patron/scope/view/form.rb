@@ -16,11 +16,11 @@ module Patron
 
         def fields_for_form
           @_fields_for_form ||= begin
-            filters.map do |filter, option|
-              [
+            filters.each_with_object({}) do |(filter, option), hash|
+              hash[translate_filter(option.i18n_key)] = [
                 generate_field_for_value(filter, option),
                 generate_field_for_query_type(filter, option),
-                generate_field_for_skip_empty(filter, option)
+                generate_field_for_skip_empty(filter)
               ]
             end
           end
@@ -34,7 +34,7 @@ module Patron
             as: option.field_type,
             collection: option.collection,
             multiple: option.multiple,
-            label: label_for(option.i18n_key, 'value')
+            label: Utils::I18n.translate_suffix('value')
           )
         end
 
@@ -46,18 +46,18 @@ module Patron
               arel_predicates_for(option.type)
             ),
             required: true,
-            label: label_for(option.i18n_key, 'query_type')
+            label: Utils::I18n.translate_suffix('query_type')
           )
         end
 
-        def generate_field_for_skip_empty(filter, option)
+        def generate_field_for_skip_empty(filter)
           Field.new(
             name: "#{filter}_skip_empty",
             collection: Utils::I18n.translate_collection_for_boolean(
               %w[true false]
             ),
             as: :select,
-            label: label_for(option.i18n_key, 'skip_empty')
+            label: Utils::I18n.translate_suffix('skip_empty')
           )
         end
 
@@ -69,11 +69,8 @@ module Patron
           end
         end
 
-        def label_for(filter, suffix)
-          [
-            Utils::I18n.translate_filter(filter, class_name: model),
-            Utils::I18n.translate_suffix(suffix)
-          ].join(' - ')
+        def translate_filter(key)
+          Utils::I18n.translate_filter(key, class_name: model)
         end
       end
     end

@@ -14,7 +14,7 @@ module Patron
     )
 
     # relations
-    has_many :scope_assignmets, dependent: :destroy
+    has_many :scope_assignmets, class_name: 'Patron::ScopeAssignment', dependent: :destroy
     has_many :users, through: :scope_assignmets
 
     # stores

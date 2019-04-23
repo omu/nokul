@@ -1,0 +1,33 @@
+tr:
+  activerecord:
+    attributes:
+      patron/query_store: &query_stores_attributes
+        name: Kapsam Sorgu Adı
+        scope_name: Kapsam Adı
+        parameters: Parametreler
+  helpers:
+    submit:
+      patron_query_store:
+        create: Kapsam Sorgusu Oluştur
+        update: Kapsam Sorgusunu Güncelle
+  patron:
+    query_stores:
+      create:
+        success: Kapsam sorgusu başarıyla oluşturuldu.
+      destroy:
+        error: Kapsam sorgusu silinirken bir hata oluştu.
+        success: Kapsam sorgusu başarıyla silindi.
+      edit:
+        form_title: Kapsam Sorgusunu Güncelle
+      index:
+        <<: *query_stores_attributes
+        card_header: Kapsam Sorguları
+        new_query_store_link: Yeni Kapsam Sorgusu Ekle
+        new_query_store_link_for_scope: "%{scope_name} için Ekle"
+        smart_search_placeholder: Kapsam Sorgu Adı veya Kapsam Adı
+      new:
+        form_title: Kapsam Sorgusu Oluştur
+      show:
+        <<: *query_stores_attributes
+      update:
+        success: Kapsam sorgusu başarıyla güncellendi.
