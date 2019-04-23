@@ -1,0 +1,22 @@
+<table class='table table-striped table-hover'>
+  <thead class="thead-dark">
+    <tr>
+      <th><%= t('.name') %></th>
+      <th><%= t('.identifier') %></th>
+      <% if actions_visible %>
+        <th><%= t('actions') %></th>
+      <% end %>
+    </tr>
+  </thead>
+  <tbody>
+    <% roles.each do |role| %>
+      <tr>
+        <td><%= link_to(role.name, role) %></td>
+        <td><%= role.identifier %></td>
+        <% if actions_visible %>
+          <td><%= link_to_actions(role) %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

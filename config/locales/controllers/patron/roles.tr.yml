@@ -21,13 +21,15 @@ tr:
       edit:
         form_title: Rolü Güncelle
       index:
-        <<: *role_attributes
         card_header: Roller
         new_role_link: Yeni Rol Ekle
         smart_search_placeholder: Rol Adı veya Tanımlayıcısı
       new:
         form_title: Yeni Rol Oluştur
+      roles:
+        <<: *role_attributes
       show:
         <<: *role_attributes
+        smart_search_placeholder: İzin Adı veya Tanımlayıcısı
       update:
         success: Rol başarıyla güncellendi.

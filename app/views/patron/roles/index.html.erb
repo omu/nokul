@@ -12,24 +12,9 @@
         <%= render 'layouts/shared/smart_search_form',
                    path: patron_roles_path,
                    placeholder: t('.smart_search_placeholder') %>
-        <table class='table table-responsive-sm table-striped table-hover'>
-          <thead class="thead-dark">
-            <tr>
-              <th><%= t('.name') %></th>
-              <th><%= t('.identifier') %></th>
-              <th><%= t('actions') %></th>
-            </tr>
-          </thead>
-          <tbody>
-            <% @roles.each do |role| %>
-              <tr>
-                <td><%= role.name %></td>
-                <td><%= role.identifier %></td>
-                <td><%= link_to_actions(role) %></td>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
+        <%= render 'roles',
+                   roles: @roles,
+                   actions_visible: true %>
       </div>
     </div>
     <nav aria-label='pagination'>

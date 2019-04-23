@@ -1,0 +1,22 @@
+<table class='table table-striped table-hover'>
+  <thead class="thead-dark">
+    <tr>
+      <th><%= t('.name') %></th>
+      <th><%= t('.identifier') %></th>
+      <% if actions_visible %>
+        <th><%= t('actions') %></th>
+      <% end %>
+    </tr>
+  </thead>
+  <tbody>
+    <% permissions.each do |permission| %>
+      <tr>
+        <td><%= link_to(permission.name, permission) %></td>
+        <td><%= permission.identifier %></td>
+        <% if actions_visible %>
+          <td><%= link_to_show(permission) %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

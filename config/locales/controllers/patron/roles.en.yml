@@ -21,13 +21,15 @@ en:
       edit:
         form_title: Update the Role
       index:
-        <<: *role_attributes
         card_header: Roles
         new_role_link: Add a New Role
         smart_search_placeholder: Role Name or Identifier
       new:
         form_title: Create a Role
+      roles:
+        <<: *role_attributes
       show:
         <<: *role_attributes
+        smart_search_placeholder: Permission Name or Identifier
       update:
         success: Role successfully updated.

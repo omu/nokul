@@ -1,11 +1,38 @@
-<% action_bar do %>
-  <%= link_to_back 'Back', permissions_path %>
+<%= action_bar do %>
+  <%= link_to_back :back %>
 <% end %>
 
 <div class="card">
-  <h5 class="card-header"><%= @permission.name %></h5>
+  <h5 class="card-header">
+    <%= @permission.name %>
+  </h5>
   <div class="card-body">
-    <p><strong>Identifier:</strong> <%= @permission.identifier %></p>
-    <p><strong>Description:</strong> <%= @permission.description %></p>
+    <p>
+      <strong><%= t('.identifier') %>:</strong> <%= @permission.identifier %>
+    </p>
+    <p>
+      <strong><%= t('.description') %>:</strong> <%= @permission.description %>
+    </p>
   </div>
+</div>
+
+<div class="card">
+  <h5 class="card-header">
+    <%= t('.roles') %>
+  </h5>
+
+  <div class="card-body">
+    <%= render 'layouts/shared/smart_search_form',
+                path: patron_permission_path(@permission),
+                placeholder: t('.smart_search_placeholder') %>
+    <%= render 'patron/roles/roles',
+               roles: @roles,
+               actions_visible: false %>
+  </div>
+
+  <nav aria-label='pagination'>
+    <ul class='pagination justify-content-center'>
+      <%== pagy_bootstrap_nav(@pagy) %>
+    </ul>
+  </nav>
 </div>

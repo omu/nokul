@@ -1,0 +1,18 @@
+tr:
+  activerecord:
+    attributes:
+      patron/permission: &permission_attributes
+        identifier: İzin Tanımlayıcı
+        name: İzin Adı
+        description: İzin Açıklaması
+  patron:
+    permissions:
+      index:
+        card_header: İzinler
+        smart_search_placeholder: İzin Adı veya Tanımlayıcısı
+      permissions:
+        <<: *permission_attributes
+      show:
+        <<: *permission_attributes
+        roles: Roller
+        smart_search_placeholder: Rol Adı veya Tanımlayıcısı

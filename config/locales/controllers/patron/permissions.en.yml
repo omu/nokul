@@ -1,0 +1,18 @@
+en:
+  activerecord:
+    attributes:
+      patron/permission: &permission_attributes
+        identifier: Permission Identifier
+        name: Permission Name
+        description: Permission Description
+  patron:
+    permissions:
+      index:
+        card_header: Permissions
+        smart_search_placeholder: Permission Name or Identifier
+      permissions:
+        <<: *permission_attributes
+      show:
+        <<: *permission_attributes
+        roles: Roles
+        smart_search_placeholder: Role Name or Identifier

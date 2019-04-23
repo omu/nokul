@@ -2,12 +2,15 @@
 
 module Patron
   class PermissionsController < ApplicationController
+    include SearchableModule
+
     def index
-      @permissions = Permission.all
+      @permissions = pagy_by_search(Patron::Permission.order(:name))
     end
 
     def show
-      @permission = Permission.find(params[:id])
+      @permission = Patron::Permission.find(params[:id])
+      @roles      = pagy_by_search(@permission.roles)
     end
   end
 end

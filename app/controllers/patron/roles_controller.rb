@@ -10,7 +10,9 @@ module Patron
       @roles = pagy_by_search(Patron::Role.order(:name))
     end
 
-    def show; end
+    def show
+      @permissions = pagy_by_search(@role.permissions)
+    end
 
     def new
       @role = Patron::Role.new
