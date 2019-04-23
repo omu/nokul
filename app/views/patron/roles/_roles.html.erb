@@ -3,6 +3,7 @@
     <tr>
       <th><%= t('.name') %></th>
       <th><%= t('.identifier') %></th>
+      <th><%= t('.locked') %></th>
       <% if actions_visible %>
         <th><%= t('actions') %></th>
       <% end %>
@@ -13,6 +14,7 @@
       <tr>
         <td><%= link_to(role.name, role) %></td>
         <td><%= role.identifier %></td>
+        <td><%= icon_for_check(role.locked) %></td>
         <% if actions_visible %>
           <td><%= link_to_actions(role) %></td>
         <% end %>
