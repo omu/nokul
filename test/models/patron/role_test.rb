@@ -6,7 +6,7 @@ module Patron
   class RoleTest < ActiveSupport::TestCase
     extend Support::Minitest::AssociationHelper
     extend Support::Minitest::ValidationHelper
-    
+
     # relations
     has_many :role_assignments, dependent: :destroy
     has_many :users, through: :role_assignments

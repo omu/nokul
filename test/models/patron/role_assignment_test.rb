@@ -6,7 +6,7 @@ module Patron
   class RoleAssignmentTest < ActiveSupport::TestCase
     extend Support::Minitest::AssociationHelper
     extend Support::Minitest::ValidationHelper
-    
+
     # relations
     belongs_to :role
     belongs_to :user
