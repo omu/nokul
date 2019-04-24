@@ -6,5 +6,9 @@ class UnitScope < Patron::Scope::Base
                         multiple: true,
                         i18n_key: :unit_type
 
-  preview_attributes :name, :names_depth_cache
+  filter :unit_status_id, collection: -> { UnitStatus.all },
+                          multiple: true,
+                          i18n_key: :unit_status
+
+  preview_attributes :name, :names_depth_cache, :code
 end
