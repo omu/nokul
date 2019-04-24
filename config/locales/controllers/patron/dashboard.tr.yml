@@ -1,0 +1,13 @@
+tr:
+  patron:
+    dashboard:
+      index:
+        permission_management: İzin Yönetimi
+        permissions: İzinler
+        role_management: Rol Yönetimi
+        roles: Roller
+        scope_queries: Kapsam Sorguları
+        scope_query_management: Kapsam Sorgu Yönetimi
+        total_number_of_permissions: Toplam İzin Sayısı
+        total_number_of_roles: Toplam Rol Sayısı
+        total_number_of_scope_queries: Toplam Kapsam Sorgu Sayısı

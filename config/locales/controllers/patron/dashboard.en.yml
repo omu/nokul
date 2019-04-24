@@ -1,0 +1,13 @@
+en:
+  patron:
+    dashboard:
+      index:
+        permission_management: Permission Management
+        permissions: Permissions
+        role_management: Role Management
+        roles: Roles
+        scope_queries: Scope Queries
+        scope_query_management: Scope Query Management
+        total_number_of_permissions: Total Number of Permissions
+        total_number_of_roles: Total Number of Roles
+        total_number_of_scope_queries: Total Number of Scope Queries
