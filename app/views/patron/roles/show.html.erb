@@ -11,11 +11,11 @@
   </h5>
   <div class="card-body">
     <%= render 'layouts/shared/smart_search_form',
-                path: patron_role_path(@role),
-                placeholder: t('.smart_search_placeholder') %>
+               path: patron_role_path(@role),
+               placeholder: t('.smart_search_placeholder') %>
     <%= render 'patron/permissions/permissions',
-                permissions: @permissions,
-                actions_visible: false %>
+               permissions: @permissions,
+               actions_visible: false %>
   </div>
   <nav aria-label='pagination'>
     <ul class='pagination justify-content-center'>
