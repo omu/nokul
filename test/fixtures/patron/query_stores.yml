@@ -1,9 +1,14 @@
 unit_scope_muhendislik:
   name: Mühendislik Bölümleri
-  scope_name: "UnitScope"
+  scope_name: UnitScope
   parameters: "{}"
 
 unit_scope_egitim:
   name: Eğitim Bölümleri
-  scope_name: "UnitScope"
+  scope_name: UnitScope
+  parameters: "{}"
+
+query_store_to_delete:
+  name: Delete Scope
+  scope_name: UnitScope
   parameters: "{}"

@@ -25,7 +25,7 @@ module Patron
 
     # validations
     validates :name, uniqueness: true, presence: true, length: { maximum: 255 }
-    validates :scope_name, length: { maximum: 255 }, inclusion: { in: Patron.scope_names }
+    validates :scope_name, length: { maximum: 255 }, inclusion: { in: ->(_) { Patron.scope_names } }
     validates :parameters, presence: true
 
     def scope_klass

@@ -13,9 +13,12 @@ module Patron
   module_function
 
   def scope_names
-    return Patron::Scope::Base.descendants if Rails.env.production?
+    return Patron::Scope::Base.descendants.map(&:to_s) if Rails.env.production?
 
-    Dir.glob(Rails.root.join('app', 'scopes', '*.rb'))
-       .map { |f| File.basename(f, '.rb').classify }
+    scope_names =
+      Dir.glob(Rails.root.join('app', 'scopes', '*.rb'))
+         .map { |f| File.basename(f, '.rb').classify }
+
+    [*scope_names, *Patron::Scope::Base.descendants.map(&:to_s)].uniq
   end
 end
