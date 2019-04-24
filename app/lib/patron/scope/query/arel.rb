@@ -43,6 +43,10 @@ module Patron
           end
         end
 
+        def self.not(queries)
+          ::Arel::Nodes::Not.new(queries)
+        end
+
         def self.format_and_sanitize_value(predicate, value, suffix, prefix)
           case predicate
           when :in, :not_in then [*value].map { |item| ActiveRecord::Base.sanitize_sql(item) }

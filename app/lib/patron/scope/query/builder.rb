@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'pry'
 
 module Patron
   module Scope
@@ -26,7 +27,19 @@ module Patron
         attr_reader :instance, :klass
 
         def build
-          queries = records.map do |record|
+          queries = []
+
+          included = prepare(records(type: :include))
+          excluded = prepare(records(type: :exclude))
+
+          queries << included                  if included.present?
+          queries << Query::Arel.not(excluded) if excluded.present?
+
+          queries.count > 1 ? Query::Arel.merge(queries, with: :and) : queries.first
+        end
+
+        def prepare(datas)
+          queries = datas.map do |record|
             parameters = build_parameters(record)
             nodes      = parameters.map { |parameter| parameter.to_arel_for(klass) }
 
@@ -46,10 +59,14 @@ module Patron
           end
         end
 
-        def records
+        def records(type: nil)
           @records ||= begin
             instance.user.query_stores.where(scope_name: klass.to_s)
           end
+
+          return @records if type.nil?
+
+          @records.select { |record| record.type == type.to_s }
         end
       end
     end

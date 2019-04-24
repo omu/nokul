@@ -2032,12 +2032,14 @@ CREATE TABLE public.query_stores (
     name character varying,
     scope_name character varying,
     parameters jsonb,
+    type integer,
     created_at timestamp(6) without time zone NOT NULL,
     updated_at timestamp(6) without time zone NOT NULL,
     CONSTRAINT query_stores_name_length CHECK ((length((name)::text) <= 255)),
     CONSTRAINT query_stores_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text))),
     CONSTRAINT query_stores_scope_name_length CHECK ((length((scope_name)::text) <= 255)),
-    CONSTRAINT query_stores_scope_name_presence CHECK (((scope_name IS NOT NULL) AND ((scope_name)::text !~ '^\s*$'::text)))
+    CONSTRAINT query_stores_scope_name_presence CHECK (((scope_name IS NOT NULL) AND ((scope_name)::text !~ '^\s*$'::text))),
+    CONSTRAINT query_stores_type_numericality CHECK ((type >= 0))
 );
 
 
