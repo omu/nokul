@@ -3,6 +3,12 @@
   <%= link_to_edit [:edit, @query_store] %>
 <% end %>
 
+<div class="alert alert-info">
+  <h5><strong>SQL</strong></h5>
+  <hr />
+  <pre><code><%= @results.to_sql %></code></pre>
+</div>
+
 <div class="card">
   <div class='card-header'>
     <%= t('.total_number_of_records') %> <span class="badge badge-success"><%= @results.size %></span>

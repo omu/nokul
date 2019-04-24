@@ -6,9 +6,20 @@
               class: 'btn btn-outline-info btn-sm' %>
 <% end %>
 
-<h4 class='text-center'><%= @query_store.name %></h4>
-
-<hr />
+<div class="alert alert-light" role="alert">
+  <h3 class='text-center'>
+    <%= @query_store.name %>
+  </h3>
+  <hr />
+  <h5 class='text-center'>
+    <p><%= t('.type') %>: </p>
+    <% if @query_store.include? %>
+      <%= fa_icon('plus', text: enum_t(@query_store, :type), class: 'text-success') %>
+    <% else %>
+      <%= fa_icon('minus', text: enum_t(@query_store, :type), class: 'text-danger') %>
+    <% end %>
+  </h5>
+</div>
 
 <div class="row">
   <% @query_store.scope_klass.filters.each do |attribute, option| %>

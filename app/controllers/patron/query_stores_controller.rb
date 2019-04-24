@@ -7,7 +7,7 @@ module Patron
     before_action :set_query_store, only: %i[show edit update destroy preview]
 
     def index
-      @query_stores = pagy_by_search(Patron::QueryStore)
+      @query_stores = pagy_by_search(Patron::QueryStore.order(:name, :scope_name))
     end
 
     def show; end
@@ -57,7 +57,7 @@ module Patron
       @query_store ||= init_query_scope(params[:patron_query_store][:scope_name])
 
       params.require(:patron_query_store).permit(
-        :name, :scope_name, *@query_store.permitted_attributes.to_a
+        :name, :scope_name, :type, *@query_store.permitted_attributes.to_a
       )
     end
   end

@@ -15,6 +15,10 @@
             <%= f.input :name %>
           </div>
 
+          <div class='col-sm-12'>
+            <%= f.input :type, collection: enum_options_for_select(f.object.class, :type) %>
+          </div>
+
           <div class="col-sm-12">
             <%= f.input :scope_name, as: :hidden %>
           </div>

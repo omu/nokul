@@ -3,8 +3,14 @@ en:
     attributes:
       patron/query_store: &query_stores_attributes
         name: Scope Query Name
-        scope_name: Scope Name
         parameters: Parameters
+        scope_name: Scope Name
+        type: Scope Query Type
+    enums:
+      patron/query_store:
+        types:
+          exclude: Exclude
+          include: Include
   helpers:
     submit:
       patron_query_store:
