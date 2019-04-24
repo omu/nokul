@@ -28,6 +28,10 @@ module Patron
         filters.keys
       end
 
+      def filter?(name)
+        filters.key?(name.to_s.to_sym)
+      end
+
       private
 
       def exist!(attribute)

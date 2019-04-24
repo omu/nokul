@@ -13,8 +13,10 @@ module Patron
           @value      = args[:value]
         end
 
-        def to_arel_for(model)
-          Query::Arel.public_send(query_type, model, name, value) if assignable?
+        def to_arel_for(scope_klass)
+          return unless assignable? && scope_klass.filter?(name)
+
+          Query::Arel.public_send(query_type, scope_klass.model, name, value)
         end
 
         private

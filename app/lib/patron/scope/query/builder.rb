@@ -28,7 +28,7 @@ module Patron
         def build
           queries = records.map do |record|
             parameters = build_parameters(record)
-            nodes      = parameters.map { |parameter| parameter.to_arel_for(klass.model) }
+            nodes      = parameters.map { |parameter| parameter.to_arel_for(klass) }
 
             Query::Arel.merge(nodes.compact, with: :and)
           end
@@ -48,7 +48,7 @@ module Patron
 
         def records
           @records ||= begin
-            instance.user.query_stores_by(klass.to_s)
+            instance.user.query_stores.where(scope_name: klass.to_s)
           end
         end
       end

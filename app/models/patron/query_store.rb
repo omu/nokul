@@ -5,6 +5,9 @@ module Patron
     include Patron::Scope::Store::Accessor
     include Patron::Scope::Store::Validation
 
+    # callbacks
+    after_update { self.parameters = nil }
+
     # search
     include PgSearch
     pg_search_scope(
