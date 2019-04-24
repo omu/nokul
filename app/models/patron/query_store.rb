@@ -20,6 +20,10 @@ module Patron
     has_many :scope_assignmets, class_name: 'Patron::ScopeAssignment', dependent: :destroy
     has_many :users, through: :scope_assignmets
 
+    # scopes
+
+    default_scope { where(scope_name: Patron.scope_names) }
+
     # stores
     store :parameters, coder: JSON
 
