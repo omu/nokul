@@ -8,7 +8,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 # core
 gem 'bootsnap', '>= 1.4.0', require: false
 gem 'puma', '~> 3.11'
-gem 'rails', github: 'rails/rails'
+gem 'rails', github: 'rails/rails', tag: 'v6.0.0.rc1'
 gem 'redis', '~> 4.0'
 gem 'sidekiq'
 
@@ -78,6 +78,7 @@ group :development, :test do
   gem 'erb_lint', require: false
   gem 'lol_dba'
   gem 'rubocop'
+  gem 'rubocop-performance'
   gem 'simplecov', require: false
 end
 

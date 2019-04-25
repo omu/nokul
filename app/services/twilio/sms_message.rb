@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Twilio
-  class SMS
+  class SmsMessage
     def initialize(to, body)
       response = TWILIO_CLIENT.messages.create(
         from: Tenant.credentials.twilio[:sender],
