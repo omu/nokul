@@ -3,7 +3,7 @@
 module Patron
   module Scope
     class Base
-      extend DSL
+      extend Dsl
       extend View::Form
 
       class << self

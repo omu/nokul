@@ -2,7 +2,7 @@
 
 module Patron
   module Scope
-    module DSL
+    module Dsl
       def preview_attributes(*attributes)
         @preview_attributes ||= begin
           (attributes.presence || filter_attributes).each_with_object({}) do |item, hash|
