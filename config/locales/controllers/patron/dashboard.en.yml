@@ -2,6 +2,9 @@ en:
   patron:
     dashboard:
       index:
+        assignment_description: Bu menü üzerinden rol ve kapsam sorgu atamalarını yapabilirsiniz
+        assignment_management: Assignment Management
+        assignments: Assignments
         permission_management: Permission Management
         permissions: Permissions
         role_management: Role Management

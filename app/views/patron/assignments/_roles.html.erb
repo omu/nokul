@@ -1,0 +1,25 @@
+<table class='table table-striped table-hover'>
+  <thead class="thead-dark">
+    <tr>
+      <th><%= "t('.name')" %></th>
+      <th><%= "t('.locked')" %></th>
+      <th><%= "t('.number_of_users')" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @roles.each do |role| %>
+      <tr>
+        <td><%= link_to(role.name, role) %></td>
+        <td><%= icon_for_check(role.locked) %></td>
+        <td><%= role.users.count %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<nav aria-label='pagination'>
+  <ul class='pagination justify-content-center'>
+    <%== pagy_bootstrap_nav(@pagy_for_roles) %>
+  </ul>
+</nav>
+

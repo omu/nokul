@@ -1,0 +1,30 @@
+<div class='row'>
+  <div class='col-sm-12'>
+    <%= render 'layouts/shared/smart_search_form',
+              path: patron_assignments_path,
+              placeholder: "t('.smart_search_placeholder')" %>
+  </div>
+  <div class='col-sm-6'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'tags', text: "t('.roles')" %>
+      </div>
+
+      <div class='card-body'>
+        <%= render 'roles' %>
+      </div>
+    </div>
+  </div>
+
+  <div class='col-sm-6'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'tags', text: "t('.query_stores')" %>
+      </div>
+
+      <div class='card-body'>
+        <%= render 'query_stores' %>
+      </div>
+    </div>
+  </div>
+</div>

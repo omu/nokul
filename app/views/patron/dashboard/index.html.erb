@@ -43,4 +43,17 @@
       </div>
     </div>
   </div>
+
+  <div class="col-sm-6">
+    <div class="card mb-1 mr-1">
+      <div class="card-header"><%= t('.assignments') %></div>
+      <div class="card-body">
+        <%= t('.assignment_description') %>
+        <hr />
+        <%= link_to t('.assignment_management'),
+                    patron_assignments_path,
+                    class: 'btn btn-outline-dark' %>
+      </div>
+    </div>
+  </div>
 </div>

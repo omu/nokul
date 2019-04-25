@@ -17,13 +17,13 @@ module Patron
     # search
     pg_search_scope(
       :search,
-      against: %i[name scope],
+      against: %i[name scope_name],
       using: { tsearch: { prefix: true } }
     )
 
     # relations
-    has_many :scope_assignmets, class_name: 'Patron::ScopeAssignment', dependent: :destroy
-    has_many :users, through: :scope_assignmets
+    has_many :scope_assignments, class_name: 'Patron::ScopeAssignment', dependent: :destroy
+    has_many :users, through: :scope_assignments
 
     # scopes
     # default_scope { where(scope_name: Patron.scope_names) }

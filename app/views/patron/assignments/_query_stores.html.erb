@@ -1,0 +1,33 @@
+<table class='table table-responsive-sm table-striped table-hover'>
+  <thead class="thead-dark">
+    <tr>
+      <th><%= "t('.name')" %></th>
+      <th><%= "t('.scope_name')" %></th>
+      <th><%= "t('.number_of_users')" %></th>
+      <th><%= "t('.type')" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @query_stores.each do |query_store| %>
+      <tr>
+        <td><%= link_to(query_store.name, query_store) %></td>
+        <td><%= query_store.scope_name %></td>
+        <td><%= query_store.users.count %></td>
+        <td>
+          <% if query_store.include? %>
+            <%= fa_icon('plus', text: enum_t(query_store, :type), class: 'text-success') %>
+          <% else %>
+            <%= fa_icon('minus', text: enum_t(query_store, :type), class: 'text-danger') %>
+          <% end %>
+        </td>
+        <td></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<nav aria-label='pagination'>
+  <ul class='pagination justify-content-center'>
+    <%== pagy_bootstrap_nav(@pagy_for_query_stores) %>
+  </ul>
+</nav>
