@@ -11,7 +11,6 @@ tr:
         types:
           exclude: Hariç Tut
           include: Dahil Et
-
   helpers:
     submit:
       patron_query_store:
