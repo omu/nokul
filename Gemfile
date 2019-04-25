@@ -78,6 +78,7 @@ group :development, :test do
   gem 'erb_lint', require: false
   gem 'lol_dba'
   gem 'rubocop'
+  gem 'rubocop-performance'
   gem 'simplecov', require: false
 end
 
