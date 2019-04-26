@@ -29,6 +29,9 @@ gem 'image_processing', '~> 1.2'
 gem 'authy'
 gem 'devise'
 
+# authorization
+gem 'pundit'
+
 # assets: core asset dependencies
 # TODO: Edge versions require coffee-rails https://github.com/rails/rails/issues/28965
 gem 'coffee-rails', '~> 4.2'
