@@ -3,6 +3,6 @@
 require 'test_helper'
 
 module Patron
-  class RolesPolicyTest < ActiveSupport::TestCase
+  class PermissionPolicyTest < ActiveSupport::TestCase
   end
 end
