@@ -1,0 +1,45 @@
+tr:
+  activerecord:
+    attributes:
+      prospective_employee: &prospective_employee_attributes
+        archived: Arşivlenmiş
+        date_of_birth: Doğum Tarihi
+        email: E-posta
+        first_name: Ad
+        gender: Cinsiyet
+        id_number: Kimlik Numarası
+        last_name: Soyad
+        mobile_phone: Cep Telefonu
+        not_archived: Arşivlenmemiş
+        smart_search_placeholder: Personel kimlik numarası, sicil numarası, adı veya soyadı
+        staff_number: Sicil No
+        title: Ünvan
+        unit: Atandığı Birim
+    enums:
+      prospective_employee:
+        genders:
+          female: Kadın
+          male: Erkek
+  first_registration:
+    prospective_employees:
+      create:
+        success: Aday personel başarılı bir şekilde oluşturuldu.
+        warning: Aday personel kaydedilemedi.
+      destroy:
+        success: Aday personel başarılı bir şekilde silindi.
+      edit:
+        form_title: Aday Personel Düzenleme Formu
+      form:
+        contact_informations: İletişim Bilgileri
+        personal_informations: Kişisel Bilgiler
+        staff_informations: Personel Bilgileri
+      index:
+        <<: *prospective_employee_attributes
+        new_prospective_employee: Aday Personel Oluştur
+        prospective_employees: Aday Personeller
+      new:
+        form_title: Aday Personel Kayıt Formu
+      search:
+        <<: *prospective_employee_attributes
+      update:
+        success: Aday personel başarıyla güncellendi.
