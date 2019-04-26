@@ -4,6 +4,8 @@ module Patron
   class AssignmentsController < ApplicationController
     include Pagy::Backend
 
+    before_action :authorized?
+
     def index
       @pagy_for_roles, @roles = pagy_by_search(
         Patron::Role.order(:name),
@@ -17,6 +19,10 @@ module Patron
     end
 
     private
+
+    def authorized?
+      authorize %i[patron assignment]
+    end
 
     def pagy_by_search(collection, page_param:)
       records = (term = params[:term]).present? ? collection.search(term) : collection

@@ -5,6 +5,7 @@ module Patron
     include SearchableModule
 
     before_action :set_query_store, only: %i[show edit update destroy preview]
+    before_action :authorized?
 
     def index
       @query_stores = pagy_by_search(Patron::QueryStore.order(:name, :scope_name))
@@ -44,6 +45,10 @@ module Patron
     end
 
     private
+
+    def authorized?
+      authorize(@role || Patron::QueryStore)
+    end
 
     def init_query_scope(scope_name)
       Patron::QueryStore.new(scope_name: scope_name)

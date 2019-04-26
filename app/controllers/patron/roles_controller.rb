@@ -5,6 +5,7 @@ module Patron
     include SearchableModule
 
     before_action :set_role, only: %i[show edit update destroy]
+    before_action :authorized?
 
     def index
       @roles = pagy_by_search(Patron::Role.order(:name))
@@ -38,6 +39,10 @@ module Patron
     end
 
     private
+
+    def authorized?
+      authorize(@role || Patron::Role)
+    end
 
     def set_role
       @role = Patron::Role.find(params[:id])

@@ -8,6 +8,8 @@ module Patron
         permissions: Patron::Permission.count,
         query_stores: Patron::QueryStore.count
       }
+
+      authorize %i[patron dashboard]
     end
   end
 end
