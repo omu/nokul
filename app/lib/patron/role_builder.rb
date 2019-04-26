@@ -2,16 +2,20 @@
 
 module Patron
   module RoleBuilder
+    mattr_accessor :all, default: {}
+
     def roles
       @roles ||= {}
     end
 
     def role(identifier, name:, permissions:)
-      roles[identifier] = Role.new(
+      role = Role.new(
         name: name,
         identifier: identifier,
         permissions: permissions
       )
+      roles[identifier]           = role
+      RoleBuilder.all[identifier] = role
     end
 
     class Role

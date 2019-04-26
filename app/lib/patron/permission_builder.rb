@@ -17,8 +17,8 @@ module Patron
         description: description
       )
 
-      permissions[identifier] = generated_permission
-      all[identifier] = generated_permission
+      permissions[identifier]           = generated_permission
+      PermissionBuilder.all[identifier] = generated_permission
     end
 
     Permission = Struct.new(:name, :identifier, :description, keyword_init: true)
