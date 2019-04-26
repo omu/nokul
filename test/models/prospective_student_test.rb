@@ -51,7 +51,7 @@ class ProspectiveStudentTest < ActiveSupport::TestCase
   enum system_register_type: { manual: 0, bulk: 1 }
 
   # callbacks
-  before_create :capitalize_attributes
+  before_create :standardization
 
   # search
   test 'prospective_student is a searchable model' do

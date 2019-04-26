@@ -44,7 +44,7 @@ class EmployeeTest < ActiveSupport::TestCase
 
   test 'a user can have more than one passive employees' do
     fake = employees(:serhat_passive).dup
-    fake.update(title: titles(:chief))
+    fake.update(title: titles(:chief), staff_number: 'B1500')
     assert fake.valid?
     assert_empty fake.errors[:base]
   end

@@ -19,7 +19,7 @@ module Accounts
       assert_difference('@user.employees.count') do
         post user_employees_path(@user), params: {
           employee: {
-            title_id: @title.id, active: false
+            title_id: @title.id, staff_number: 'A1000', active: false
           }
         }
       end
@@ -27,7 +27,8 @@ module Accounts
       employee = @user.employees.last
 
       assert_equal @title, employee.title
-      assert_equal false, employee.active
+      assert_equal 'A1000', employee.staff_number
+      assert_not employee.active
 
       assert_redirected_to user_path(@user)
       assert_equal translate('.create.success'), flash[:notice]
@@ -45,7 +46,7 @@ module Accounts
       employee.reload
 
       assert_equal @title, employee.title
-      assert_equal false, employee.active
+      assert_not employee.active
 
       assert_redirected_to user_path(@user)
       assert_equal translate('.update.success'), flash[:notice]
