@@ -2,5 +2,7 @@
 
 require 'test_helper'
 
-class Patron::RolesPolicyTest < ActiveSupport::TestCase
+module Patron
+  class RolesPolicyTest < ActiveSupport::TestCase
+  end
 end

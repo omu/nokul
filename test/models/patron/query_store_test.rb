@@ -8,8 +8,8 @@ module Patron
     extend Support::Minitest::ValidationHelper
 
     # relations
-    has_many :scope_assignmets, dependent: :destroy
-    has_many :users, through: :scope_assignmets
+    has_many :scope_assignments, dependent: :destroy
+    has_many :users, through: :scope_assignments
 
     # validations: presence
     validates_presence_of :name

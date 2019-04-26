@@ -10,7 +10,7 @@ namespace :patron do
     end
 
     Patron::Permission.where.not(identifier: Patron::PermissionBuilder.all.keys)
-                            .destroy_all
+                      .destroy_all
   end
 
   desc 'Upsert roles'
