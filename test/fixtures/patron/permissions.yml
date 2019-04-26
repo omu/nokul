@@ -2,8 +2,23 @@ unit_management:
   name: Birim Yöneti
   identifier: unit_management
   description: Description
-
 course_management:
   name: Ders Yönetimi
   identifier: course_management
   description: Description
+role_management:
+  name: Rol Yönetimi
+  identifier: role_management
+  description: Rol Yönetim Yetkisi
+permission_management:
+  name: İzin Yönetimi
+  identifier: permission_management
+  description: İzin Yönetim Yetkisi
+scope_query_management:
+  name: Kampam Sorgu Yönetimi
+  identifier: scope_query_management
+  description: Kampam Sorgu Yönetim Yetkisi
+authorization_management:
+  name: Yetkilendirme Yönetimi
+  identifier: authorization_management
+  description: Yetkilendirme Yönetimi Yetkisi

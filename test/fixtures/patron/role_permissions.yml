@@ -1,7 +1,18 @@
 one:
   role: admin
   permission: unit_management
-
 two:
   role: admin
   permission: course_management
+three:
+  role: authorization_manager
+  permission: role_management
+four:
+  role: authorization_manager
+  permission: permission_management
+five:
+  role: authorization_manager
+  permission: scope_query_management
+six:
+  role: authorization_manager
+  permission: authorization_management

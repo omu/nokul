@@ -51,7 +51,7 @@ module Patron
     end
 
     test 'should get edit' do
-      get edit_patron_role_path(@role)
+      get edit_patron_role_path(patron_roles(:role_to_update))
       action_check('edit')
       assert_response :success
       assert_select '.card-header strong', translate('.edit.form_title')
