@@ -12,8 +12,8 @@ class RoleManagement
              name: 'İzin Yönetimi',
              description: 'İzin Yönetim Yetkisi'
   permission :scope_query_management,
-             name: 'Kampam Sorgu Yönetimi',
-             description: 'Kampam Sorgu Yönetim Yetkisi'
+             name: 'Kapsam Sorgu Yönetimi',
+             description: 'Kapsam Sorgu Yönetim Yetkisi'
   permission :authorization_management,
              name: 'Yetkilendirme Yönetimi',
              description: 'Yetkilendirme Yönetimi Yetkisi'
