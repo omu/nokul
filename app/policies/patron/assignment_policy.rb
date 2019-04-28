@@ -6,6 +6,22 @@ module Patron
       permitted?
     end
 
+    def show?
+      permitted?
+    end
+
+    def update?
+      permitted?
+    end
+
+    def edit?
+      update?
+    end
+
+    def preview_scope?
+      permitted?
+    end
+
     private
 
     def permitted?
