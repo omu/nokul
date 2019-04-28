@@ -6,6 +6,7 @@ namespace :patron do
       get :roles
       get :query_stores
     end
+    get :preview_scope, on: :member
   end
   resources :permissions, only: %i[index show]
   resources :query_stores do

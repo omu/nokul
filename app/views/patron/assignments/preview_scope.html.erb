@@ -1,0 +1,6 @@
+<%= action_bar do %>
+  <%= link_to_back :back %>
+<% end %>
+
+<%= render 'patron/query_stores/preview',
+           search_path: preview_scope_patron_assignment_path(@user) %>

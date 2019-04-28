@@ -1,4 +1,8 @@
 <%= action_bar do %>
+  <%= link_to fa_icon('home', text: t('layouts.shared.sidebar.authorizations')),
+              :patron,
+              class: 'btn btn-outline-primary' %>
+  <hr />
   <div class="dropdown">
     <button class="btn btn-secondary dropdown-toggle"
             type="button"
@@ -27,37 +31,9 @@
         <%= render 'layouts/shared/smart_search_form',
                    path: patron_query_stores_path,
                    placeholder: t('.smart_search_placeholder') %>
-        <table class='table table-responsive-sm table-striped table-hover'>
-          <thead class="thead-dark">
-            <tr>
-              <th><%= t('.name') %></th>
-              <th><%= t('.scope_name') %></th>
-              <th><%= t('.type') %></th>
-              <th><%= t('actions') %></th>
-            </tr>
-          </thead>
-          <tbody>
-            <% @query_stores.each do |query_store| %>
-              <tr>
-                <td><%= link_to(query_store.name, query_store) %></td>
-                <td><%= query_store.scope_name %></td>
-                <td>
-                  <% if query_store.include? %>
-                    <%= fa_icon('plus', text: enum_t(query_store, :type), class: 'text-success') %>
-                  <% else %>
-                    <%= fa_icon('minus', text: enum_t(query_store, :type), class: 'text-danger') %>
-                  <% end %>
-                </td>
-                <td>
-                  <%= link_to_actions(query_store) %>
-                  <%= link_to fa_icon('search', text: t('preview')),
-                              [:preview, query_store],
-                              class: 'btn btn-outline-info btn-sm' %>
-                </td>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
+        <%= render 'query_stores',
+                   query_stores: @query_stores,
+                   actions_visible: true %>
       </div>
     </div>
     <nav aria-label='pagination'>

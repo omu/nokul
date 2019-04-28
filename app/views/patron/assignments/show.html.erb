@@ -1,0 +1,105 @@
+<%= action_bar do %>
+  <%= link_to_back :back %>
+  <%= link_to_edit [:edit, :patron_assignment, id: @user.id] %>
+<% end %>
+
+<div class="card">
+  <h5 class="card-header">
+    <%= t('.user_informations') %>
+  </h5>
+  <div class="card-body">
+    <p>
+      <strong><%= t('.id_number') %>:</strong>
+      <%= @user.id_number %>
+    </p>
+    <p>
+      <strong><%= t('.first_name') %>:</strong>
+      <%= @user.identities.user_identity.try(:first_name) %>
+    </p>
+    <p>
+      <strong><%= t('.last_name') %>:</strong>
+      <%= @user.identities.user_identity.try(:last_name) %>
+    </p>
+    <p>
+      <strong><%= t('.email') %>:</strong>
+      <%= @user.email %>
+    </p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <h5 class="card-header">
+        <%= t('.roles') %>
+      </h5>
+
+      <div class="card-body">
+        <%= render 'patron/roles/roles',
+                  roles: @roles,
+                  actions_visible: false %>
+      </div>
+      <nav aria-label='pagination'>
+        <ul class='pagination justify-content-center'>
+          <%== pagy_bootstrap_nav(@pagy_roles) %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card">
+      <h5 class="card-header">
+        <%= t('.permissions') %>
+      </h5>
+      <div class="card-body">
+        <%= render 'patron/permissions/permissions',
+                  permissions: @permissions,
+                  actions_visible: false %>
+      </div>
+      <nav aria-label='pagination'>
+        <ul class='pagination justify-content-center'>
+          <%== pagy_bootstrap_nav(@pagy_permissions) %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card">
+      <h5 class="card-header">
+        <%= t('.query_stores') %>
+      </h5>
+      <div class="card-body">
+
+      <%= action_bar do %>
+        <div class="dropdown">
+          <button class="btn btn-outline-info btn-sm dropdown-toggle"
+                  type="button"
+                  id="scopeListButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"><%= fa_icon('search', text: t('preview')) %>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="scopeListButton">
+            <% @query_stores.map(&:scope_name).uniq.each do |scope| %>
+              <%= link_to_new fa_icon('search', text: scope),
+                              preview_scope_patron_assignment_path(@user, scope: scope),
+                              class: 'dropdown-item' %>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+
+        <%= render 'patron/query_stores/query_stores',
+                  query_stores: @query_stores,
+                  actions_visible: false %>
+      </div>
+      <nav aria-label='pagination'>
+        <ul class='pagination justify-content-center'>
+          <%== pagy_bootstrap_nav(@pagy_query_stores) %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

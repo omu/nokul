@@ -33,6 +33,8 @@ en:
         projects_count: Projects Count
         public_photo: Show picture on my profile
         public_studies: Show academic studies on my profile
+        roles: Roles
+        query_stores: Scope Queries
   helpers:
     submit:
       user:

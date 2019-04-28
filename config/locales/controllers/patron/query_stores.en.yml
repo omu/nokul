@@ -18,6 +18,8 @@ en:
         update: Update Scope Query
   patron:
     query_stores:
+      query_stores:
+         <<: *query_stores_attributes
       create:
         success: Scope query successfully created.
       destroy:

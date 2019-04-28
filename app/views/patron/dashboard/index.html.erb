@@ -48,7 +48,9 @@
     <div class="card mb-1 mr-1">
       <div class="card-header"><%= t('.assignments') %></div>
       <div class="card-body">
-        <%= t('.assignment_description') %>
+        <h5 class="card-text">
+          <%= t('.assignment_description') %>
+        </h5>
         <hr />
         <%= link_to t('.assignment_management'),
                     patron_assignments_path,

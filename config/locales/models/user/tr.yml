@@ -33,6 +33,8 @@ tr:
         projects_count: Proje Sayısı
         public_photo: Profilimde Fotoğrafımı Göster
         public_studies: Profilimde Akademik Çalışmalarımı Göster
+        roles: Roller
+        query_stores: Kapsam Sorguları
   helpers:
     submit:
       user:

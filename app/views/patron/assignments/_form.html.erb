@@ -1,0 +1,32 @@
+<div class='row'>
+  <div class='col-sm-12'>
+    <%= action_bar do %>
+      <%= link_to_back(:back) %>
+    <% end %>
+
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'user' %>
+        <strong><%= form_title %></strong>
+      </div>
+      <div class='card-body'>
+        <%= simple_form_for(@user, url: patron_assignment_path) do |f| %>
+          <div class='row'>
+            <div class='col-sm-12'>
+              <%= f.error_notification %>
+            </div>
+            <div class='col-sm-12'>
+              <%= f.association :roles %>
+            </div>
+            <div class='col-sm-12'>
+              <%= f.association :query_stores %>
+            </div>
+            <div class='col-sm-12'>
+              <%= f.button :submit, t('save'), class: 'btn btn-outline-success btn-sm' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

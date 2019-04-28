@@ -40,7 +40,6 @@ module Patron
     def preview
       @scope      = @query_store.scope_klass
       @results    = @scope.preview_for_records(@query_store)
-      @attributes = @query_store.scope_klass.preview_attributes
       @collection = pagy_by_search(@results)
     end
 

@@ -2,7 +2,7 @@ en:
   patron:
     dashboard:
       index:
-        assignment_description: Bu menü üzerinden rol ve kapsam sorgu atamalarını yapabilirsiniz
+        assignment_description: You can make role and scope query assignments via this menu.
         assignment_management: Assignment Management
         assignments: Assignments
         permission_management: Permission Management

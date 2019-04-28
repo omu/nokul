@@ -18,6 +18,8 @@ tr:
         update: Kapsam Sorgusunu Güncelle
   patron:
     query_stores:
+      query_stores:
+         <<: *query_stores_attributes
       create:
         success: Kapsam sorgusu başarıyla oluşturuldu.
       destroy:

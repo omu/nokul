@@ -1,0 +1,25 @@
+en:
+  patron:
+    assignments:
+      user: &user_attributes
+        assignment: Assign Role and Scope
+        email: E-mail
+        first_name: First Name
+        id_number: ID Number
+        last_name: Last Name
+      edit:
+        form_title: Update the Assignment
+      index:
+        <<: *user_attributes
+        card_header: Users
+        smart_search_placeholder: TC/YU number, e-mail address, first of last name
+      preview_scope:
+        error: An error occurred when preview the scope.
+      show:
+        <<: *user_attributes
+        permissions: Permissions
+        query_stores: Scope Queries
+        roles: Roles
+        user_informations: User Informations
+      update:
+        success: Assignment successfully updated.
