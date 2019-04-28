@@ -26,7 +26,7 @@ module Patron
     has_many :users, through: :scope_assignments
 
     # scopes
-    # default_scope { where(scope_name: Patron.scope_names) }
+    default_scope { where(scope_name: Patron.scope_names) }
 
     # stores
     store :parameters, coder: JSON
