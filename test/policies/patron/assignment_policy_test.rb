@@ -1,8 +1,12 @@
 # frozen_string_literal: true
 
-require 'test_helper'
+require 'pundit_test_case'
 
 module Patron
-  class AssignmentPolicyTest < ActiveSupport::TestCase
+  class AssignmentPolicyTest < PunditTestCase
+    test 'index?' do
+      assert_permit     users(:serhat)
+      assert_not_permit users(:mine)
+    end
   end
 end
