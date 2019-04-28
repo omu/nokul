@@ -4,14 +4,14 @@ module LinkHelper
   LINKS = {
     back: {
       icon: 'arrow-left',
-      text: I18n.t('action_group.back'),
+      text: 'action_group.back',
       options: {
         class: 'btn btn-secondary btn-sm'
       }
     },
     destroy: {
       icon: 'trash',
-      text: I18n.t('action_group.destroy'),
+      text: 'action_group.destroy',
       options: {
         class: 'btn btn-outline-danger btn-sm',
         method: :delete,
@@ -20,21 +20,21 @@ module LinkHelper
     },
     edit: {
       icon: 'pencil',
-      text: I18n.t('action_group.edit'),
+      text: 'action_group.edit',
       options: {
         class: 'btn btn-outline-success btn-sm'
       }
     },
     file: {
       icon: 'file-word-o',
-      text: I18n.t('action_group.file'),
+      text: 'action_group.file',
       options: {
         class: 'btn btn-secondary btn-sm'
       }
     },
     new: {
       icon: 'plus',
-      text: I18n.t('action_group.add'),
+      text: 'action_group.add',
       options: {
         class: 'btn btn-outline-primary btn-sm',
         id: 'add-button'
@@ -42,14 +42,14 @@ module LinkHelper
     },
     show: {
       icon: 'eye',
-      text: I18n.t('action_group.show'),
+      text: 'action_group.show',
       options: {
         class: 'btn btn-outline-info btn-sm'
       }
     },
     update: {
       icon: 'pencil-square-o',
-      text: I18n.t('action_group.update'),
+      text: 'action_group.update',
       options: {
         class: 'btn btn-outline-info btn-sm'
       }
@@ -113,7 +113,7 @@ module LinkHelper
     options = options.merge(custom_options) if custom_options.is_a?(Hash)
 
     link_to(
-      fa_icon(configuration[:icon], text: text || configuration[:text]),
+      fa_icon(configuration[:icon], text: text || t(configuration[:text])),
       path,
       options
     )
