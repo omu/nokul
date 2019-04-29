@@ -45,7 +45,7 @@ module Patron
             collection: Utils::I18n.translate_collection_for_query_types(
               arel_predicates_for(option.type)
             ),
-            required: true,
+            required: false,
             label: Utils::I18n.translate_suffix('query_type')
           )
         end

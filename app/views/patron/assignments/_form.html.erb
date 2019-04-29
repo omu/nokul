@@ -19,7 +19,7 @@
               <%= f.association :roles %>
             </div>
             <div class='col-sm-12'>
-              <%= f.association :query_stores %>
+              <%= f.association :query_stores, label_method: :full_name %>
             </div>
             <div class='col-sm-12'>
               <%= f.button :submit, t('save'), class: 'btn btn-outline-success btn-sm' %>
@@ -30,3 +30,9 @@
     </div>
   </div>
 </div>
+
+<script>
+  $(document).ready(function() {
+    $('#user_role_ids, #user_query_store_ids').select2();
+  });
+</script>
