@@ -51,7 +51,7 @@
                     <%= f.input :staff_number %>
                   </div>
                   <div class='col-sm-4'>
-                    <%= f.association :title, collection: Title.all %>
+                    <%= f.association :title %>
                   </div>
                   <div class='col-sm-4'>
                     <%= f.association :unit, collection: Unit.active.order(:name) %>
