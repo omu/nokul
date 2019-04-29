@@ -26,10 +26,8 @@ en:
         smart_search_placeholder: Role Name or Identifier
       new:
         form_title: Create a Role
-      roles:
-        <<: *role_attributes
       show:
-        <<: *role_attributes
+        permissions: Permissions
         smart_search_placeholder: Permission Name or Identifier
       update:
         success: Role successfully updated.

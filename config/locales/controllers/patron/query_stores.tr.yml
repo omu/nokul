@@ -18,8 +18,6 @@ tr:
         update: Kapsam Sorgusunu Güncelle
   patron:
     query_stores:
-      query_stores:
-         <<: *query_stores_attributes
       create:
         success: Kapsam sorgusu başarıyla oluşturuldu.
       destroy:
@@ -28,16 +26,12 @@ tr:
       edit:
         form_title: Kapsam Sorgusunu Güncelle
       index:
-        <<: *query_stores_attributes
         card_header: Kapsam Sorguları
         new_query_store_link: Yeni Kapsam Sorgusu Ekle
         new_query_store_link_for_scope: "%{scope_name} için Ekle"
         smart_search_placeholder: Kapsam Sorgu Adı veya Kapsam Adı
       new:
         form_title: Kapsam Sorgusu Oluştur
-      preview:
-        smart_search_placeholder: Modele Özel Anahtar Kelime ile Arama
-        total_number_of_records: Toplam Kayıt Sayısı
       show:
         <<: *query_stores_attributes
       update:

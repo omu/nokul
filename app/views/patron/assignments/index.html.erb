@@ -13,31 +13,8 @@
         <%= render 'layouts/shared/smart_search_form',
                    path: patron_assignments_path,
                    placeholder: t('.smart_search_placeholder') %>
-        <table class='table table-responsive-sm'>
-          <thead>
-            <tr>
-              <th><%= t('.id_number') %></th>
-              <th><%= t('.email') %></th>
-              <th><%= t('.first_name') %></th>
-              <th><%= t('.last_name') %></th>
-              <th><%= t('actions') %></th>
-            </tr>
-          </thead>
-          <tbody>
-            <% @users.each do |user| %>
-              <tr>
-                <td><%= user.id_number %></td>
-                <td><%= user.email %></td>
-                <td><%= user.identities.user_identity.try(:first_name) %></td>
-                <td><%= user.identities.user_identity.try(:last_name) %></td>
-                <td>
-                  <%= link_to_show patron_assignment_path(user) %>
-                  <%= link_to_edit t('.assignment'), edit_patron_assignment_path(user) %>
-                </td>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
+        <%= render 'patron/components/users',
+                   actions_visible: true %>
       </div>
     </div>
     <nav aria-label='pagination'>

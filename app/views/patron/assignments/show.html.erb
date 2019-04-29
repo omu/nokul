@@ -9,19 +9,19 @@
   </h5>
   <div class="card-body">
     <p>
-      <strong><%= t('.id_number') %>:</strong>
+      <strong><%= t('id_number', scope: %i[activerecord attributes user]) %>:</strong>
       <%= @user.id_number %>
     </p>
     <p>
-      <strong><%= t('.first_name') %>:</strong>
+      <strong><%= t('first_name', scope: %i[activerecord attributes identity]) %>:</strong>
       <%= @user.identities.user_identity.try(:first_name) %>
     </p>
     <p>
-      <strong><%= t('.last_name') %>:</strong>
+      <strong><%= t('last_name', scope: %i[activerecord attributes identity]) %>:</strong>
       <%= @user.identities.user_identity.try(:last_name) %>
     </p>
     <p>
-      <strong><%= t('.email') %>:</strong>
+      <strong><%= t('email', scope: %i[activerecord attributes user]) %>:</strong>
       <%= @user.email %>
     </p>
   </div>
@@ -35,7 +35,7 @@
       </h5>
 
       <div class="card-body">
-        <%= render 'patron/roles/roles',
+        <%= render 'patron/components/roles',
                    roles: @roles,
                    actions_visible: false %>
       </div>
@@ -53,7 +53,7 @@
         <%= t('.permissions') %>
       </h5>
       <div class="card-body">
-        <%= render 'patron/permissions/permissions',
+        <%= render 'patron/components/permissions',
                    permissions: @permissions,
                    actions_visible: false %>
       </div>
@@ -91,7 +91,7 @@
         </div>
       <% end %>
 
-        <%= render 'patron/query_stores/query_stores',
+        <%= render 'patron/components/query_stores',
                    query_stores: @query_stores,
                    actions_visible: false %>
       </div>

@@ -1,9 +1,9 @@
 <table class='table table-responsive-sm table-striped table-hover'>
   <thead class="thead-dark">
     <tr>
-      <th><%= t('.name') %></th>
-      <th><%= t('.scope_name') %></th>
-      <th><%= t('.type') %></th>
+      <th><%= t('name', scope: %i[activerecord attributes patron/query_store]) %></th>
+      <th><%= t('scope_name', scope: %i[activerecord attributes patron/query_store]) %></th>
+      <th><%= t('type', scope: %i[activerecord attributes patron/query_store]) %></th>
       <% if actions_visible %>
         <th><%= t('actions') %></th>
       <% end %>

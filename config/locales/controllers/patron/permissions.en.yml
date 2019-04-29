@@ -10,8 +10,6 @@ en:
       index:
         card_header: Permissions
         smart_search_placeholder: Permission Name or Identifier
-      permissions:
-        <<: *permission_attributes
       show:
         <<: *permission_attributes
         roles: Roles

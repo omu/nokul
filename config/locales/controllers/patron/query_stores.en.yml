@@ -18,8 +18,6 @@ en:
         update: Update Scope Query
   patron:
     query_stores:
-      query_stores:
-         <<: *query_stores_attributes
       create:
         success: Scope query successfully created.
       destroy:
@@ -28,16 +26,12 @@ en:
       edit:
         form_title: Update the Scope Query
       index:
-        <<: *query_stores_attributes
         card_header:  Scope Queries
         new_query_store_link: Add a New Scope Query
         new_query_store_link_for_scope: Add for %{scope_name}
         smart_search_placeholder: Scope Query Name or Scope Name
       new:
         form_title: Create a Scope Query
-      preview:
-        smart_search_placeholder: Search with Model-Specific Keyword
-        total_number_of_records: Total Number of Records
       show:
         <<: *query_stores_attributes
       update:

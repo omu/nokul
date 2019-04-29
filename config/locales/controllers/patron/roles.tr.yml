@@ -26,10 +26,8 @@ tr:
         smart_search_placeholder: Rol Adı veya Tanımlayıcısı
       new:
         form_title: Yeni Rol Oluştur
-      roles:
-        <<: *role_attributes
       show:
-        <<: *role_attributes
+        permissions: İzinler
         smart_search_placeholder: İzin Adı veya Tanımlayıcısı
       update:
         success: Rol başarıyla güncellendi.

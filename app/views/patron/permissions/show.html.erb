@@ -25,7 +25,7 @@
     <%= render 'layouts/shared/smart_search_form',
                path: patron_permission_path(@permission),
                placeholder: t('.smart_search_placeholder') %>
-    <%= render 'patron/roles/roles',
+    <%= render 'patron/components/roles',
                roles: @roles,
                actions_visible: false %>
   </div>

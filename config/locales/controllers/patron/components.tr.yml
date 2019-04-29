@@ -1,0 +1,8 @@
+tr:
+  patron:
+    components:
+      preview:
+        smart_search_placeholder: Modele Özel Anahtar Kelime ile Arama
+        total_number_of_records: Toplam Kayıt Sayısı
+      users:
+        assignment: Rol ve Kapsam Ata

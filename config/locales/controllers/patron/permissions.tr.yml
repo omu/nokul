@@ -10,8 +10,6 @@ tr:
       index:
         card_header: İzinler
         smart_search_placeholder: İzin Adı veya Tanımlayıcısı
-      permissions:
-        <<: *permission_attributes
       show:
         <<: *permission_attributes
         roles: Roller

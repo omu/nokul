@@ -1,22 +1,14 @@
 tr:
   patron:
     assignments:
-      user: &user_attributes
-        assignment: Rol ve Kapsam Ata
-        email: E-mail Adresi
-        first_name: Adı
-        id_number: Kimlik Numarası
-        last_name: Soyadı
       edit:
         form_title: Atamayı Güncelle
       index:
-        <<: *user_attributes
         card_header: Kullanıcılar
         smart_search_placeholder: TC/YU numarası, e-mail adresi, ad veya soyad
       preview_scope:
         error: Kapsam ön izlemesi sırasında bir hata oluştu.
       show:
-        <<: *user_attributes
         permissions: İzinler
         query_stores: Kapsam Sorguları
         roles: Roller
