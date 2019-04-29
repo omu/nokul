@@ -2,9 +2,18 @@
 
 module Patron
   class Permission < ApplicationRecord
+    # search
+    include PgSearch
+    pg_search_scope(
+      :search,
+      against: %i[name identifier],
+      using: { tsearch: { prefix: true } }
+    )
+
     # relations
     has_many :role_permissions, dependent: :destroy
     has_many :roles, through: :role_permissions
+    has_many :users, through: :roles
 
     # validations
     validates :name, uniqueness: true, presence: true, length: { maximum: 255 }

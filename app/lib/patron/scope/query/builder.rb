@@ -60,7 +60,7 @@ module Patron
 
         def records(type: nil)
           @records ||= begin
-            instance.user.query_stores.where(scope_name: klass.to_s)
+            instance.user.query_stores.active.where(scope_name: klass.to_s)
           end
 
           return @records if type.nil?

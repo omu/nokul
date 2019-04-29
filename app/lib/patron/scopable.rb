@@ -6,7 +6,7 @@ module Patron
 
     included do
       has_many :scope_assignments, class_name: 'Patron::ScopeAssignment', dependent: :destroy
-      has_many :query_stores,      class_name: 'Patron::QueryStore',      through: :scope_assignments
+      has_many :query_stores, -> { active }, class_name: 'Patron::QueryStore', through: :scope_assignments
     end
   end
 end
