@@ -20,6 +20,12 @@ class UserTest < ActiveSupport::TestCase
   has_many :units, through: :employees
   has_many :positions, through: :duties
   has_many :administrative_functions, through: :duties
+  # relations with patron
+  has_many :scope_assignments, class_name: 'Patron::ScopeAssignment', dependent: :destroy
+  has_many :query_stores, class_name: 'Patron::QueryStore', through: :scope_assignments
+  has_many :role_assignments, class_name: 'Patron::RoleAssignment', dependent: :destroy
+  has_many :roles, class_name: 'Patron::Role', through: :role_assignments
+  has_many :permissions, class_name: 'Patron::Permission', through: :roles
 
   # validations: presence
   validates_presence_of :email
@@ -131,5 +137,36 @@ class UserTest < ActiveSupport::TestCase
   test 'check user activation status' do
     assert users(:john).active_for_authentication? # activated user
     assert_not users(:mine).active_for_authentication? # not activated user
+  end
+
+  # patron-rolable tests
+  test 'roles? method' do
+    assert users(:serhat).roles?(:admin)
+    assert_not users(:serhat).roles?(:admin, :foo)
+  end
+
+  test 'role? method' do
+    assert users(:serhat).role?(:admin)
+    assert_not users(:serhat).role?(:foo)
+  end
+
+  test 'any_roles? method' do
+    assert users(:serhat).any_roles?(:admin, :foo)
+    assert_not users(:serhat).any_roles?(:bar, :foo)
+  end
+
+  test 'permissions? method' do
+    assert users(:serhat).permission?(:course_management)
+    assert_not users(:serhat).permission?(:course_management, :foo)
+  end
+
+  test 'permission? method' do
+    assert users(:serhat).permission?(:course_management)
+    assert_not users(:serhat).permission?(:foo)
+  end
+
+  test 'any_permissions? method' do
+    assert users(:serhat).any_permissions?(:course_management, :foo)
+    assert_not users(:serhat).any_permissions?(:bar, :foo)
   end
 end

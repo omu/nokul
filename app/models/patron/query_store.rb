@@ -37,6 +37,10 @@ module Patron
     validates :parameters, presence: true
     validates :type, inclusion: { in: types.keys }
 
+    def full_name
+      "#{name} - #{scope_name}"
+    end
+
     def scope_klass
       scope_name.to_s.safe_constantize
     end

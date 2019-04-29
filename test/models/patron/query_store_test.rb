@@ -8,7 +8,7 @@ module Patron
     extend Support::Minitest::ValidationHelper
 
     # relations
-    has_many :scope_assignments, dependent: :destroy
+    has_many :scope_assignments, class_name: 'Patron::ScopeAssignment', dependent: :destroy
     has_many :users, through: :scope_assignments
 
     # validations: presence
@@ -25,6 +25,11 @@ module Patron
     test 'scope_klass method' do
       query_store = patron_query_stores(:unit_scope_muhendislik)
       assert_equal query_store.scope_klass, UnitScope
+    end
+
+    test 'full_name method' do
+      query_store = patron_query_stores(:unit_scope_muhendislik)
+      assert_equal query_store.full_name, "#{query_store.name} - #{query_store.scope_name}"
     end
   end
 end

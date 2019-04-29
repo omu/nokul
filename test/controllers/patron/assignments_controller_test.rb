@@ -45,6 +45,14 @@ module Patron
       assert_equal translate('.update.success'), flash[:notice]
     end
 
+    test 'should get preview_scope' do
+      get preview_scope_patron_assignment_path(
+        users(:serhat), scope: users(:serhat).query_stores.first&.scope_name
+      )
+      action_check('preview_scope')
+      assert_response :success
+    end
+
     private
 
     def action_check(action)
