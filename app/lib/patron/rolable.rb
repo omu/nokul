@@ -6,8 +6,8 @@ module Patron
 
     included do
       has_many :role_assignments, class_name: 'Patron::RoleAssignment', dependent: :destroy
-      has_many :roles,            class_name: 'Patron::Role',           through: :role_assignments
-      has_many :permissions,      class_name: 'Patron::Permission',     through: :roles
+      has_many :roles, -> { distinct }, class_name: 'Patron::Role', through: :role_assignments
+      has_many :permissions, -> { distinct }, class_name: 'Patron::Permission', through: :roles
     end
 
     def roles?(*identifiers)

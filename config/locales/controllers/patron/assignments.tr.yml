@@ -12,6 +12,7 @@ tr:
         permissions: İzinler
         query_stores: Kapsam Sorguları
         roles: Roller
+        smart_search_placeholder: Modele Özel Anahtar Kelime ile Arama
         user_informations: Kullanıcı Bilgileri
       update:
         success: Atama başarıyla güncellendi.

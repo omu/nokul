@@ -28,6 +28,7 @@ tr:
         form_title: Yeni Rol Oluştur
       show:
         permissions: İzinler
-        smart_search_placeholder: İzin Adı veya Tanımlayıcısı
+        smart_search_placeholder: Modele Özel Anahtar Kelime ile Arama
+        users: Kullanıcılar
       update:
         success: Rol başarıyla güncellendi.

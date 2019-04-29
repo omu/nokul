@@ -13,4 +13,6 @@ tr:
       show:
         <<: *permission_attributes
         roles: Roller
-        smart_search_placeholder: Rol Adı veya Tanımlayıcısı
+        smart_search_placeholder: Modele Özel Anahtar Kelime ile Arama
+        users: Kullanıcılar
+

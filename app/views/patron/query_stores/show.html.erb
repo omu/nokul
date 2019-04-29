@@ -62,3 +62,26 @@
     </div>
   <% end %>
 </div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <h5 class="card-header">
+        <%= t('.users') %>
+      </h5>
+      <div class="card-body">
+        <%= render 'layouts/shared/smart_search_form',
+                   path: patron_query_store_path(@query_store),
+                   placeholder: t('.smart_search_placeholder') %>
+        <%= render 'patron/components/users',
+                   users: @users,
+                   actions_visible: false %>
+      </div>
+      <nav aria-label='pagination'>
+        <ul class='pagination justify-content-center'>
+          <%== pagy_bootstrap_nav(@pagy) %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

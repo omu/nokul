@@ -12,6 +12,7 @@ en:
         permissions: Permissions
         query_stores: Scope Queries
         roles: Roles
+        smart_search_placeholder: Search with Model-Specific Keyword
         user_informations: User Informations
       update:
         success: Assignment successfully updated.

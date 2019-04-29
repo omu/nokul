@@ -27,6 +27,10 @@
   </div>
 </div>
 
+<%= render 'layouts/shared/smart_search_form',
+           path: patron_assignment_path(@user),
+           placeholder: t('.smart_search_placeholder') %>
+
 <div class="row">
   <div class="col-sm-6">
     <div class="card">

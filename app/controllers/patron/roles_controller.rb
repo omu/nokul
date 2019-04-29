@@ -2,7 +2,7 @@
 
 module Patron
   class RolesController < ApplicationController
-    include SearchableModule
+    include Patron::SearchableModule
 
     before_action :set_role, only: %i[show edit update destroy]
     before_action :authorized?
@@ -12,7 +12,12 @@ module Patron
     end
 
     def show
-      @permissions = pagy_by_search(@role.permissions)
+      @permissions = pagy_by_search(
+        @role.permissions.order(:name), page_param: 'page_permission', pagy_name: :pagy_permissions
+      )
+      @users = pagy_by_search(
+        @role.users, page_param: 'page_users', pagy_name: :pagy_users
+      )
     end
 
     def new

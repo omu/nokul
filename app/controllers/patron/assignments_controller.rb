@@ -2,7 +2,7 @@
 
 module Patron
   class AssignmentsController < ApplicationController
-    include SearchableModule
+    include Patron::SearchableModule
 
     before_action :set_user, only: %i[edit show update preview_scope]
     before_action :authorized?
@@ -12,14 +12,14 @@ module Patron
     end
 
     def show
-      @pagy_roles, @roles = pagy(
-        @user.roles.order(:name), page_param: 'page_role'
-      )
-      @pagy_permissions, @permissions = pagy(
-        @user.permissions.order(:name), page_param: 'page_permission'
-      )
-      @pagy_query_stores, @query_stores = pagy(
-        @user.query_stores.order(:name, :scope_name), page_param: 'page_query_store'
+      @roles = pagy_by_search(
+        @user.roles, page_param: 'page_role', pagy_name: 'pagy_roles'
+      ).uniq
+      @permissions = pagy_by_search(
+        @user.permissions, page_param: 'page_permission', pagy_name: 'pagy_permissions'
+      ).uniq
+      @query_stores = pagy_by_search(
+        @user.query_stores, page_param: 'page_query_store', pagy_name: 'pagy_query_stores'
       )
     end
 
@@ -38,8 +38,8 @@ module Patron
 
       if query_stores.present?
         @scope      = query_stores.first.scope_klass
-        @results    = @scope.preview_for_records(query_stores)
-        @collection = pagy_by_search(@results)
+        @records    = @scope.preview_for_records(query_stores)
+        @collection = pagy_by_search(@records)
       else
         redirect_to([:patron, :assignment, id: @user], alert: t('.error'))
       end

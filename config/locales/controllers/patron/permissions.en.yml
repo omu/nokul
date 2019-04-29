@@ -13,4 +13,6 @@ en:
       show:
         <<: *permission_attributes
         roles: Roles
-        smart_search_placeholder: Role Name or Identifier
+        smart_search_placeholder: Search with Model-Specific Keyword
+        users: Users
+

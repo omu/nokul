@@ -28,6 +28,7 @@ en:
         form_title: Create a Role
       show:
         permissions: Permissions
-        smart_search_placeholder: Permission Name or Identifier
+        smart_search_placeholder: Search with Model-Specific Keyword
+        users: Kullanıcılar
       update:
         success: Role successfully updated.

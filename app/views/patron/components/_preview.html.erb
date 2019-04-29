@@ -1,16 +1,16 @@
 <div class="alert alert-info">
   <h5><strong>SQL</strong></h5>
   <hr />
-  <p class="text-justify"><code><%= @results.to_sql %></code></p>
+  <p class="text-justify"><code><%= @records.to_sql %></code></p>
 </div>
 
 <div class="card">
   <div class='card-header'>
-    <%= t('.total_number_of_records') %> <span class="badge badge-success"><%= @results.size %></span>
+    <%= t('.total_number_of_records') %> <span class="badge badge-success"><%= @records.size %></span>
   </div>
 
   <div class="card-body">
-    <% if @results.size > 0 && @results.first.class.respond_to?(:search) %>
+    <% if @records.size > 0 && @records.first.class.respond_to?(:search) %>
       <%= render 'layouts/shared/smart_search_form',
                  path: search_path,
                  placeholder: t('.smart_search_placeholder') %>
