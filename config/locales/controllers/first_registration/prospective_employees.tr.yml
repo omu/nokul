@@ -12,7 +12,7 @@ tr:
         mobile_phone: Cep Telefonu
         not_archived: Arşivlenmemiş
         smart_search_placeholder: Personel kimlik numarası, sicil numarası, adı veya soyadı
-        staff_number: Sicil No
+        staff_number: Personel Sicil No
         title: Ünvan
         unit: Atandığı Birim
     enums:

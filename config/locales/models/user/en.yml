@@ -12,6 +12,7 @@ en:
       employee: &employee_attributes
         id_number: ID Number
         is_active: Is Active?
+        staff_number: Staff Number
         title_id: Title
         user_id: User
       position: &position_attributes
