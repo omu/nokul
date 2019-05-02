@@ -9,11 +9,11 @@ module FirstRegistration
       extending
     end
 
+    private
+
     def extending
       extend "FirstRegistration::#{@prospective.class.name}Service".safe_constantize
     end
-
-    private
 
     def user
       @user ||= begin
