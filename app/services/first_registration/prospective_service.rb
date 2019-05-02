@@ -25,7 +25,7 @@ module FirstRegistration
     end
 
     def set_error_messages
-      user.errors.messages.each do |key, message|
+      error_messages.each do |key, message|
         prospective.errors.add(key, message.join(''))
       end
       false

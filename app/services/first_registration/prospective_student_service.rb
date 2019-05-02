@@ -12,7 +12,7 @@ module FirstRegistration
     end
 
     def valid?
-      student.valid? && user.valid? && prospective.valid?
+      [prospective, student, user].all?(&:valid?)
     end
 
     def register
@@ -20,6 +20,10 @@ module FirstRegistration
 
       user.save
       student.save
+    end
+
+    def error_messages
+      student.errors.messages.merge(user.errors.messages)
     end
   end
 end

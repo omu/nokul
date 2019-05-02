@@ -11,7 +11,7 @@ module FirstRegistration
     end
 
     def valid?
-      employee.valid? && user.valid? && prospective.valid?
+      [prospective, employee, user].all?(&:valid?)
     end
 
     def register
@@ -19,6 +19,10 @@ module FirstRegistration
 
       user.save
       employee.save
+    end
+
+    def error_messages
+      employee.errors.messages.merge(user.errors.messages)
     end
   end
 end
