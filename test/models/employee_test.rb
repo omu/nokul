@@ -17,9 +17,11 @@ class EmployeeTest < ActiveSupport::TestCase
 
   # validations: presence
   validates_presence_of :active
+  validates_presence_of :staff_number
 
   # validations: uniqueness
   validates_uniqueness_of :title_id
+  validates_uniqueness_of :staff_number
 
   # delegations
   test 'an employee can reach addresses and identities over user' do
