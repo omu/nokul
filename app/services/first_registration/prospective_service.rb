@@ -6,6 +6,10 @@ module FirstRegistration
 
     def initialize(prospective)
       @prospective = prospective
+      extending
+    end
+
+    def extending
       extend "FirstRegistration::#{@prospective.class.name}Service".safe_constantize
     end
 
