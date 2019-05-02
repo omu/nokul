@@ -23,7 +23,7 @@ module FirstRegistration
 
     test 'should create prospective employee' do
       parameters = {
-        id_number: '56593662552',
+        id_number: '56593662552', # Sample ID number provided by KPS
         first_name: 'Mine',
         last_name: 'URASLI',
         date_of_birth: '1984-11-16'.to_date,
