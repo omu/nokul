@@ -1,39 +1,25 @@
 # frozen_string_literal: true
 
 module FirstRegistration
-  class ProspectiveStudentService
-    def initialize(prospective_student)
-      @prospective_student = prospective_student
+  module ProspectiveStudentService
+    def student
+      @student ||= Student.new(
+        user: user,
+        unit: prospective.unit,
+        permanently_registered: prospective.can_permanently_register?,
+        student_number: prospective.id_number # TODO: must be generated
+      )
+    end
+
+    def valid?
+      student.valid? && user.valid? && prospective.valid?
     end
 
     def register
-      initialize_user
-      initialize_student
+      return set_error_messages unless valid?
 
-      return unless @user.valid? && @student.valid?
-
-      @user.save
-      @student.save
-    end
-
-    private
-
-    def initialize_user
-      @user = User.new(
-        id_number: @prospective_student.id_number,
-        email: @prospective_student.email,
-        password: @prospective_student.id_number,
-        password_confirmation: @prospective_student.id_number
-      )
-    end
-
-    def initialize_student
-      @student = Student.new(
-        user: @user,
-        unit: @prospective_student.unit,
-        permanently_registered: @prospective_student.can_permanently_register?,
-        student_number: @prospective_student.id_number # TODO: must be generated
-      )
+      user.save
+      student.save
     end
   end
 end
