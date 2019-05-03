@@ -2,18 +2,31 @@
 
 module FirstRegistration
   class ProspectiveService
-    attr_reader :prospective
-
     def initialize(prospective)
       @prospective = prospective
-      extending
+      @concrete    = prospective.build_concrete_user(user)
     end
+
+    def valid?
+      [prospective, concrete, user].all?(&:valid?)
+    end
+
+    def register
+      return set_error_messages unless valid?
+
+      user.save
+      concrete.save
+    end
+
+    def error_messages
+      concrete.errors.messages.merge(user.errors.messages)
+    end
+
+    protected
+
+    attr_reader :prospective, :concrete
 
     private
-
-    def extending
-      extend "FirstRegistration::#{@prospective.class.name}Service".safe_constantize
-    end
 
     def user
       @user ||= begin

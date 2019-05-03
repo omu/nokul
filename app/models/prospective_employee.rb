@@ -32,6 +32,12 @@ class ProspectiveEmployee < ApplicationRecord
   # delegates
   delegate :name, to: :title, prefix: true
 
+  def build_concrete_user(user)
+    Employee.new(user: user, title_id: title_id, staff_number: staff_number)
+  end
+
+  private
+
   def standardization
     self.first_name = first_name.capitalize_turkish
     self.last_name  = last_name.upcase(:turkic)

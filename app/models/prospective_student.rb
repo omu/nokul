@@ -80,6 +80,15 @@ class ProspectiveStudent < ApplicationRecord
     military_status
   end
 
+  def build_concrete_user(user)
+    Student.new(
+      user: user,
+      unit: unit,
+      permanently_registered: can_permanently_register?,
+      student_number: id_number # TODO: must be generated
+    )
+  end
+
   private
 
   # rubocop:disable Metrics/AbcSize
