@@ -14,7 +14,7 @@ class ProspectiveEmployee < ApplicationRecord
   search_keys :unit_id, :title_id, :archived
 
   # callbacks
-  before_create :standardization
+  before_create :normalize_string_attributes
 
   # relations
   belongs_to :unit
@@ -32,13 +32,13 @@ class ProspectiveEmployee < ApplicationRecord
   # delegates
   delegate :name, to: :title, prefix: true
 
-  def build_concrete_user(user)
+  def registered_user(user)
     Employee.new(user: user, title_id: title_id, staff_number: staff_number)
   end
 
   private
 
-  def standardization
+  def normalize_string_attributes
     self.first_name = first_name.capitalize_turkish
     self.last_name  = last_name.upcase(:turkic)
   end

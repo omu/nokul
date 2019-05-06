@@ -4,27 +4,27 @@ module FirstRegistration
   class ProspectiveService
     def initialize(prospective)
       @prospective = prospective
-      @concrete    = prospective.build_concrete_user(user)
+      @registered  = prospective.registered_user(user)
     end
 
     def valid?
-      [prospective, concrete, user].all?(&:valid?)
+      [prospective, registered, user].all?(&:valid?)
     end
 
     def register
       return set_error_messages unless valid?
 
       user.save
-      concrete.save
+      registered.save
     end
 
     def error_messages
-      concrete.errors.messages.merge(user.errors.messages)
+      registered.errors.messages.merge(user.errors.messages)
     end
 
     protected
 
-    attr_reader :prospective, :concrete
+    attr_reader :prospective, :registered
 
     private
 

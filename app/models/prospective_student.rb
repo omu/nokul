@@ -16,7 +16,7 @@ class ProspectiveStudent < ApplicationRecord
               :registered, :academic_term_id, :system_register_type, :archived
 
   # callbacks
-  before_create :standardization
+  before_create :normalize_string_attributes
 
   # enumerations
   enum additional_score: { handicapped: 1 }
@@ -80,7 +80,7 @@ class ProspectiveStudent < ApplicationRecord
     military_status
   end
 
-  def build_concrete_user(user)
+  def registered_user(user)
     Student.new(
       user: user,
       unit: unit,
@@ -92,7 +92,7 @@ class ProspectiveStudent < ApplicationRecord
   private
 
   # rubocop:disable Metrics/AbcSize
-  def standardization
+  def normalize_string_attributes
     self.first_name = first_name.capitalize_turkish
     self.last_name  = last_name.upcase(:turkic)
     self.fathers_name = fathers_name.capitalize_turkish if fathers_name
