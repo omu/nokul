@@ -90,7 +90,7 @@ en:
         exam_informations: Exam Informations
         high_school_informations: High School Informations
         other_informations: Other Informations
-        personel_informations: Personel Informations
+        personal_informations: Personal Informations
       index:
         <<: *prospective_student_attributes
         new_prospective_student: Create a New Prospective Student
@@ -117,4 +117,4 @@ en:
       redirect_with_success:
         success: Student successfully registered
       update:
-        success: Prospective Student successfully updated.
+        success: Prospective student successfully updated.

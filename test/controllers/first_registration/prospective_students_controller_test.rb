@@ -122,7 +122,7 @@ module FirstRegistration
     test 'should not register prospective_student without e-mail' do
       assert_no_difference('User.count') do
         assert_no_difference('Student.count') do
-          get register_prospective_student_path(prospective_students(:serhat))
+          get register_prospective_student_path(prospective_students(:hira))
         end
       end
 

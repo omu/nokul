@@ -1,0 +1,22 @@
+hira:
+  date_of_birth: 2013-09-18
+  email: hirakar@gmail.com
+  first_name: Hira Nur
+  gender: female
+  id_number: 52249815310 # Sample ID number provided by KPS
+  last_name: Karpuz
+  mobile_phone: 5551111111
+  staff_number: A12345
+  title: research_assistant
+  unit: bilgisayar_muhendisligi
+prospective_employee_to_delete:
+  date_of_birth: 2017-06-08
+  email: ilkimada@gmail.com
+  first_name: İlkim Ada
+  gender: female
+  id_number: 63235448634 # Sample ID number provided by KPS
+  last_name: Marangoz
+  mobile_phone: 5552111111
+  staff_number: A12346
+  title: research_assistant
+  unit: bilgisayar_muhendisligi

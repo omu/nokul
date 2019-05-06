@@ -4,6 +4,7 @@ class ProspectiveStudent < ApplicationRecord
   # search
   include PgSearch
   include DynamicSearch
+  include Prospective
 
   pg_search_scope(
     :search,
@@ -15,11 +16,10 @@ class ProspectiveStudent < ApplicationRecord
               :registered, :academic_term_id, :system_register_type, :archived
 
   # callbacks
-  before_create :capitalize_attributes
+  before_create :normalize_string_attributes
 
   # enumerations
   enum additional_score: { handicapped: 1 }
-  enum gender: { male: 1, female: 2 }
   enum nationality: { turkish: 1, kktc: 2, foreign: 3 }
   enum placement_type: { general_score: 1, additional_score: 2 }
   enum system_register_type: { manual: 0, bulk: 1 }
@@ -39,8 +39,6 @@ class ProspectiveStudent < ApplicationRecord
   validates :exam_score, allow_nil: true, numericality: { greater_than_or_equal_to: 0 }
   validates :expiry_date, presence: true
   validates :fathers_name, length: { maximum: 255 }
-  validates :first_name, presence: true, length: { maximum: 255 }
-  validates :gender, inclusion: { in: genders.keys }
   validates :high_school_code, length: { maximum: 255 }
   validates :high_school_branch, length: { maximum: 255 }
   validates :high_school_graduation_year, allow_nil: true,
@@ -51,10 +49,8 @@ class ProspectiveStudent < ApplicationRecord
                                           }
   validates :home_phone, length: { maximum: 255 }
   validates :id_number, presence: true, uniqueness: { scope: %i[unit_id exam_score] }, length: { is: 11 }
-  validates :last_name, presence: true, length: { maximum: 255 }
   validates :meb_status, inclusion: { in: [true, false] }
   validates :military_status, inclusion: { in: [true, false] }
-  validates :mobile_phone, length: { maximum: 255 }
   validates :mothers_name, length: { maximum: 255 }
   validates :nationality, allow_nil: true, inclusion: { in: nationalities.keys }
   validates :obs_registered_program, length: { maximum: 255 }
@@ -73,8 +69,6 @@ class ProspectiveStudent < ApplicationRecord
   validates :top_student, inclusion: { in: [true, false] }
 
   # scopes
-  scope :archived, -> { where(archived: true) }
-  scope :not_archived, -> { where(archived: false) }
   scope :registered, -> { where(registered: true) }
 
   # custom methods
@@ -86,10 +80,19 @@ class ProspectiveStudent < ApplicationRecord
     military_status
   end
 
+  def registered_user(user)
+    Student.new(
+      user: user,
+      unit: unit,
+      permanently_registered: can_permanently_register?,
+      student_number: id_number # TODO: must be generated
+    )
+  end
+
   private
 
   # rubocop:disable Metrics/AbcSize
-  def capitalize_attributes
+  def normalize_string_attributes
     self.first_name = first_name.capitalize_turkish
     self.last_name  = last_name.upcase(:turkic)
     self.fathers_name = fathers_name.capitalize_turkish if fathers_name

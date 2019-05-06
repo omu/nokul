@@ -41,7 +41,7 @@ module Account
     end
 
     def employee_params
-      params.require(:employee).permit(:active, :title_id)
+      params.require(:employee).permit(:active, :title_id, :staff_number)
     end
   end
 end
