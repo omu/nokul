@@ -15,6 +15,9 @@ class ApplicationController < ActionController::Base
     if user_signed_in?
       current_user.update(preferred_language: language) if language
       I18n.locale = current_user.preferred_language
+
+      # set locale for pagy gem
+      @pagy_locale = current_user.preferred_language || 'tr'
     else
       I18n.locale = language || I18n.default_locale
     end
