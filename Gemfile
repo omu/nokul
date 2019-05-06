@@ -31,7 +31,7 @@ gem 'devise'
 
 # assets: core asset dependencies
 # TODO: Edge versions require coffee-rails https://github.com/rails/rails/issues/28965
-gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails', '~> 5.0'
 gem 'sassc-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'webpacker'
@@ -58,7 +58,7 @@ gem 'email_address'
 gem 'telephone_number'
 
 # error tracking
-gem 'rollbar', github: 'rollbar/rollbar-gem'
+gem 'rollbar'
 gem 'slack-notifier'
 
 # permalinks
@@ -67,7 +67,7 @@ gem 'friendly_id', '~> 5.2.0'
 # sms
 gem 'nexmo'
 gem 'smstools'
-gem 'twilio-ruby', '~> 5.21.2'
+gem 'twilio-ruby', '~> 5.22.3'
 
 group :development, :test do
   gem 'brakeman', require: false
