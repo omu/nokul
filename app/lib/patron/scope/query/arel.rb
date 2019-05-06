@@ -7,15 +7,12 @@ module Patron
         mattr_accessor :predicates, default: Set.new
 
         def self.define_predicate(name, **options)
-          predicate = options.fetch(:equivalent_to, name)
-          suffix    = options.fetch(:suffix, '')
-          prefix    = options.fetch(:prefix, '')
-
           predicates << name
+          predicate = options.fetch(:equivalent_to, name)
 
           define_method(name) do |model, attribute, value|
             model.arel_table[attribute].public_send(
-              predicate, format_and_sanitize_value(predicate, value, suffix, prefix)
+              predicate, format_and_sanitize_value(predicate, value, options)
             )
           end
 
@@ -47,12 +44,24 @@ module Patron
           ::Arel::Nodes::Not.new(queries)
         end
 
-        def self.format_and_sanitize_value(predicate, value, suffix, prefix)
+        def self.format_and_sanitize_value(predicate, value, **options)
           case predicate
-          when :in, :not_in then [*value].map { |item| ActiveRecord::Base.sanitize_sql(item) }
-          when /match/      then [prefix, ActiveRecord::Base.sanitize_sql_like(value), suffix].join
-          else                   ActiveRecord::Base.sanitize_sql(value)
+          when :in, :not_in then sanitize_sql_array(value)
+          when /match/      then [options[:prefix], sanitize_sql_like(value), options[:suffix]].join
+          else                   sanitize_sql(value)
           end
+        end
+
+        def self.sanitize_sql_array(value)
+          [*value].map { |item| sanitize_sql(item) }
+        end
+
+        def self.sanitize_sql_like(value)
+          ActiveRecord::Base.sanitize_sql_like(value)
+        end
+
+        def self.sanitize_sql(value)
+          ActiveRecord::Base.sanitize_sql(value)
         end
       end
     end

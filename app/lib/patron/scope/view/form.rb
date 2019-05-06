@@ -15,14 +15,12 @@ module Patron
         )
 
         def fields_for_form
-          @_fields_for_form ||= begin
-            filters.each_with_object({}) do |(filter, option), hash|
-              hash[translate_filter(option.i18n_key)] = [
-                generate_field_for_value(filter, option),
-                generate_field_for_query_type(filter, option),
-                generate_field_for_skip_empty(filter)
-              ]
-            end
+          @fields_for_form ||= filters.each_with_object({}) do |(filter, option), hash|
+            hash[translate_filter(option.i18n_key)] = [
+              generate_field_for_value(filter, option),
+              generate_field_for_query_type(filter, option),
+              generate_field_for_skip_empty(filter)
+            ]
           end
         end
 
@@ -42,9 +40,7 @@ module Patron
           Field.new(
             name: "#{filter}_query_type",
             as: :select,
-            collection: Utils::I18n.translate_collection_for_query_types(
-              arel_predicates_for(option.type)
-            ),
+            collection: Utils::I18n.translate_collection_for_query_types(arel_predicates_for(option.type)),
             required: false,
             label: Utils::I18n.translate_suffix('query_type')
           )
@@ -53,9 +49,7 @@ module Patron
         def generate_field_for_skip_empty(filter)
           Field.new(
             name: "#{filter}_skip_empty",
-            collection: Utils::I18n.translate_collection_for_boolean(
-              %w[true false]
-            ),
+            collection: Utils::I18n.translate_collection_for_boolean(%w[true false]),
             as: :select,
             label: Utils::I18n.translate_suffix('skip_empty')
           )
