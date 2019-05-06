@@ -37,7 +37,7 @@ module Patron
       def exist!(attribute)
         return if model.attribute_names.include?(attribute.to_s)
 
-        raise ArgumentError, attribute
+        raise ArgumentError, "Unrecognized attribute: #{attribute}"
       end
 
       class Option

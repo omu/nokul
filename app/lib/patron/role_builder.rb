@@ -31,10 +31,10 @@ module Patron
       private
 
       def check!
-        raise ArgumentError, 'Not empty permissions' if permissions.blank?
+        raise ArgumentError, 'Permissions must not be empty' if permissions.blank?
 
         permissions.each do |permission|
-          raise ArgumentError, "Not found permission, #{permission}" unless PermissionBuilder.all.key?(permission)
+          raise ArgumentError, "Permission not found: #{permission}" unless PermissionBuilder.all.key?(permission)
         end
       end
     end

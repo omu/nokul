@@ -18,11 +18,13 @@ module Patron
         end
       end
 
+      attr_internal :model
       attr_reader :user
 
       def initialize(user, current_scope: nil)
         @user          = user
         @current_scope = current_scope
+        @_model        = self.class.model
       end
 
       def scope(bypass: nil)
@@ -41,10 +43,6 @@ module Patron
 
       def current_scope
         @current_scope || scope || model
-      end
-
-      def model
-        @_model ||= self.class.model
       end
     end
   end
