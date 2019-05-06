@@ -5004,6 +5004,13 @@ CREATE INDEX index_units_on_university_type_id ON public.units USING btree (univ
 
 
 --
+-- Name: index_user_id_and_role_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE UNIQUE INDEX index_user_id_and_role_id ON public.role_assignments USING btree (user_id, role_id);
+
+
+--
 -- Name: index_users_on_email; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -5022,13 +5029,6 @@ CREATE UNIQUE INDEX index_users_on_id_number ON public.users USING btree (id_num
 --
 
 CREATE UNIQUE INDEX index_users_on_reset_password_token ON public.users USING btree (reset_password_token);
-
-
---
--- Name: role_assignments_rolable_role; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE UNIQUE INDEX role_assignments_rolable_role ON public.role_assignments USING btree (user_id, role_id);
 
 
 --

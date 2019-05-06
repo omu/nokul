@@ -2,7 +2,7 @@
 
 class User < ApplicationRecord
   # authorizations
-  include Patron::Rolable
+  include Patron::Roleable
   include Patron::Scopable
 
   # virtual attributes

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Patron
-  module Rolable
+  module Roleable
     extend ActiveSupport::Concern
 
     included do

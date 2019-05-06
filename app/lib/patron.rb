@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative 'patron/rolable'
+require_relative 'patron/roleable'
 require_relative 'patron/scopable'
 require_relative 'patron/utils/i18n.rb'
 require_relative 'patron/scope'

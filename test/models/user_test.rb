@@ -139,7 +139,7 @@ class UserTest < ActiveSupport::TestCase
     assert_not users(:mine).active_for_authentication? # not activated user
   end
 
-  # patron-rolable tests
+  # patron-roleable tests
   test 'roles? method' do
     assert users(:serhat).roles?(:admin)
     assert_not users(:serhat).roles?(:admin, :foo)

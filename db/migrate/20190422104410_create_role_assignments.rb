@@ -10,6 +10,6 @@ class CreateRoleAssignments < ActiveRecord::Migration[6.0]
     add_index :role_assignments,
               %i[user_id role_id],
               unique: true,
-              name: 'role_assignments_rolable_role'
+              name: 'index_user_id_and_role_id'
   end
 end
