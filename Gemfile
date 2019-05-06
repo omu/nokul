@@ -71,7 +71,7 @@ gem 'twilio-ruby', '~> 5.21.2'
 
 group :development, :test do
   gem 'brakeman', require: false
-  gem 'bullet', github: 'flyerhzm/bullet'
+  gem 'bullet'
   gem 'bundler-audit'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'dotenv-rails'
@@ -98,7 +98,7 @@ group :development do
   gem 'ruby-progressbar'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'web-console', github: 'rails/web-console'
+  gem 'web-console'
 end
 
 # core plugins
