@@ -5,7 +5,7 @@ en:
         form_title: Update the Assignment
       index:
         card_header: Users
-        smart_search_placeholder: TC/YU number, e-mail address, first of last name
+        smart_search_placeholder: TC/YU number, e-mail address, first or last name
       preview_scope:
         error: An error occurred when preview the scope.
       show:

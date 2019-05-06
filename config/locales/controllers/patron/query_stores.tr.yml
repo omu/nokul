@@ -34,7 +34,7 @@ tr:
         form_title: Kapsam Sorgusu Oluştur
       show:
         <<: *query_stores_attributes
-        smart_search_placeholder: Modele Özel Anahtar Kelime ile Arama
+        smart_search_placeholder: Modele Özgü Anahtar Kelime ile Arama
         users: Kullanıcılar
       update:
         success: Kapsam sorgusu başarıyla güncellendi.
