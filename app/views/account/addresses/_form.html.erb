@@ -13,7 +13,10 @@
               <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
             </div>
             <div class='form-group col-sm-12'>
-              <%= f.association :district, collection: City.includes(:districts).order(:name), as: :grouped_select, group_method: :districts, group_label_method: :name %>
+              <%= f.association :district, collection: Country.find_by(
+                                  alpha_2_code: Tenant.configuration.contact.country
+                                ).cities.includes(:districts).order(:name),
+                                as: :grouped_select, group_method: :districts, group_label_method: :name %>
             </div>
             <div class='form-group col-sm-2'>
               <%= f.input :country,
