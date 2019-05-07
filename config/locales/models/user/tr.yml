@@ -12,6 +12,7 @@ tr:
       employee: &employee_attributes
         id_number: Kimlik Numarası
         is_active: Aktif mi?
+        staff_number: Personel Sicil No
         title_id: Ünvan
         user_id: Kullanıcı
       position: &position_attributes

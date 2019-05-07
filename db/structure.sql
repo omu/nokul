@@ -1493,7 +1493,9 @@ CREATE TABLE public.employees (
     user_id bigint NOT NULL,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
-    CONSTRAINT employees_active_null CHECK ((active IS NOT NULL))
+    staff_number character varying,
+    CONSTRAINT employees_active_null CHECK ((active IS NOT NULL)),
+    CONSTRAINT employees_staff_number_length CHECK ((length((staff_number)::text) <= 255))
 );
 
 
@@ -1911,6 +1913,62 @@ CREATE SEQUENCE public.projects_id_seq
 --
 
 ALTER SEQUENCE public.projects_id_seq OWNED BY public.projects.id;
+
+
+--
+-- Name: prospective_employees; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.prospective_employees (
+    id bigint NOT NULL,
+    id_number character varying,
+    first_name character varying,
+    last_name character varying,
+    date_of_birth date,
+    gender integer,
+    email character varying,
+    mobile_phone character varying,
+    staff_number character varying,
+    unit_id bigint,
+    title_id bigint,
+    archived boolean DEFAULT false,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT prospective_employees_archived_null CHECK ((archived IS NOT NULL)),
+    CONSTRAINT prospective_employees_date_of_birth_null CHECK ((date_of_birth IS NOT NULL)),
+    CONSTRAINT prospective_employees_email_length CHECK ((length((email)::text) <= 255)),
+    CONSTRAINT prospective_employees_email_presence CHECK (((email IS NOT NULL) AND ((email)::text !~ '^\s*$'::text))),
+    CONSTRAINT prospective_employees_first_name_length CHECK ((length((first_name)::text) <= 255)),
+    CONSTRAINT prospective_employees_first_name_presence CHECK (((first_name IS NOT NULL) AND ((first_name)::text !~ '^\s*$'::text))),
+    CONSTRAINT prospective_employees_gender_null CHECK ((gender IS NOT NULL)),
+    CONSTRAINT prospective_employees_gender_numericality CHECK ((gender >= 0)),
+    CONSTRAINT prospective_employees_id_number_length CHECK ((length((id_number)::text) = 11)),
+    CONSTRAINT prospective_employees_id_number_presence CHECK (((id_number IS NOT NULL) AND ((id_number)::text !~ '^\s*$'::text))),
+    CONSTRAINT prospective_employees_last_name_length CHECK ((length((last_name)::text) <= 255)),
+    CONSTRAINT prospective_employees_last_name_presence CHECK (((last_name IS NOT NULL) AND ((last_name)::text !~ '^\s*$'::text))),
+    CONSTRAINT prospective_employees_mobile_phone_length CHECK ((length((mobile_phone)::text) <= 255)),
+    CONSTRAINT prospective_employees_staff_number_length CHECK ((length((staff_number)::text) <= 255)),
+    CONSTRAINT prospective_employees_staff_number_presence CHECK (((staff_number IS NOT NULL) AND ((staff_number)::text !~ '^\s*$'::text)))
+);
+
+
+--
+-- Name: prospective_employees_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.prospective_employees_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: prospective_employees_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.prospective_employees_id_seq OWNED BY public.prospective_employees.id;
 
 
 --
@@ -3282,6 +3340,13 @@ ALTER TABLE ONLY public.projects ALTER COLUMN id SET DEFAULT nextval('public.pro
 
 
 --
+-- Name: prospective_employees id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.prospective_employees ALTER COLUMN id SET DEFAULT nextval('public.prospective_employees_id_seq'::regclass);
+
+
+--
 -- Name: prospective_students id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -3917,6 +3982,14 @@ ALTER TABLE ONLY public.positions
 
 ALTER TABLE ONLY public.projects
     ADD CONSTRAINT projects_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: prospective_employees prospective_employees_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.prospective_employees
+    ADD CONSTRAINT prospective_employees_pkey PRIMARY KEY (id);
 
 
 --
@@ -4794,6 +4867,20 @@ CREATE INDEX index_projects_on_user_id ON public.projects USING btree (user_id);
 
 
 --
+-- Name: index_prospective_employees_on_title_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_prospective_employees_on_title_id ON public.prospective_employees USING btree (title_id);
+
+
+--
+-- Name: index_prospective_employees_on_unit_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_prospective_employees_on_unit_id ON public.prospective_employees USING btree (unit_id);
+
+
+--
 -- Name: index_prospective_students_on_academic_term_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -5360,6 +5447,14 @@ ALTER TABLE ONLY public.scope_assignments
 
 
 --
+-- Name: prospective_employees fk_rails_7e3da1fde7; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.prospective_employees
+    ADD CONSTRAINT fk_rails_7e3da1fde7 FOREIGN KEY (title_id) REFERENCES public.titles(id);
+
+
+--
 -- Name: units fk_rails_83a021318e; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -5560,6 +5655,14 @@ ALTER TABLE ONLY public.registration_documents
 
 
 --
+-- Name: prospective_employees fk_rails_cfef503ec1; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.prospective_employees
+    ADD CONSTRAINT fk_rails_cfef503ec1 FOREIGN KEY (unit_id) REFERENCES public.units(id);
+
+
+--
 -- Name: prospective_students fk_rails_d94afad69b; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -5743,11 +5846,13 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20190321213030'),
 ('20190321213059'),
 ('20190325051222'),
+('20190419113152'),
 ('20190422103239'),
 ('20190422103754'),
 ('20190422104033'),
 ('20190422104410'),
 ('20190422104613'),
-('20190422141252');
+('20190422141252'),
+('20190425065306');
 
 

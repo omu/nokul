@@ -13,6 +13,7 @@ tr:
       employee:
         id_number: Kimlik Numarası
         is_active: Aktif mi?
+        staff_number: Personel Sicil No
         title_id: Ünvan
         user_id: Kullanıcı
       position:

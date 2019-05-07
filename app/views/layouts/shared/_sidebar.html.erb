@@ -54,6 +54,11 @@
             <% end %>
           </li>
           <li class="nav-item">
+            <%= link_to :prospective_employees, class: 'nav-link' do %>
+              <%= fa_icon('users', text: t('.prospective_employees'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+          <li class="nav-item">
             <%= link_to :registration_documents, class: 'nav-link' do %>
               <%= fa_icon('file-text', text: t('.registration_documents'), class: 'nav-icon') %>
             <% end %>
