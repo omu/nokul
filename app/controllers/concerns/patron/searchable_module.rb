@@ -13,5 +13,15 @@ module Patron
       instance_variable_set("@#{pagy_name}", pagination.first)
       pagination.last
     end
+
+    def pagy_multi_by_search(collection, page_param: :page)
+      term       = params[:term]
+      collection = term.present? && collection.respond_to?(:search) ? collection.search(term) : collection
+      result     = pagy(collection, page_param: page_param)
+      {
+        collection: result.last,
+        pagy: result.first
+      }
+    end
   end
 end

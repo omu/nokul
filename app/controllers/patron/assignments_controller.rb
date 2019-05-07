@@ -12,15 +12,11 @@ module Patron
     end
 
     def show
-      @roles = pagy_by_search(
-        @user.roles, page_param: 'page_role', pagy_name: 'pagy_roles'
-      ).uniq
-      @permissions = pagy_by_search(
-        @user.permissions, page_param: 'page_permission', pagy_name: 'pagy_permissions'
-      ).uniq
-      @query_stores = pagy_by_search(
-        @user.query_stores, page_param: 'page_query_store', pagy_name: 'pagy_query_stores'
-      )
+      @collections = {
+        roles: pagy_multi_by_search(@user.roles, page_param: 'page_role'),
+        permissions: pagy_multi_by_search(@user.permissions, page_param: 'page_permission'),
+        query_stores: pagy_multi_by_search(@user.query_stores, page_param: 'page_query_store')
+      }
     end
 
     def edit; end

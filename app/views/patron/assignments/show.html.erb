@@ -40,12 +40,12 @@
 
       <div class="card-body">
         <%= render 'patron/components/roles',
-                   roles: @roles,
+                   roles: @collections[:roles][:collection],
                    actions_visible: false %>
       </div>
       <nav aria-label='pagination'>
         <ul class='pagination justify-content-center'>
-          <%== pagy_bootstrap_nav(@pagy_roles) %>
+          <%== pagy_bootstrap_nav(@collections[:roles][:pagy]) %>
         </ul>
       </nav>
     </div>
@@ -58,12 +58,12 @@
       </h5>
       <div class="card-body">
         <%= render 'patron/components/permissions',
-                   permissions: @permissions,
+                   permissions: @collections[:permissions][:collection].uniq,
                    actions_visible: false %>
       </div>
       <nav aria-label='pagination'>
         <ul class='pagination justify-content-center'>
-          <%== pagy_bootstrap_nav(@pagy_permissions) %>
+          <%== pagy_bootstrap_nav(@collections[:permissions][:pagy]) %>
         </ul>
       </nav>
     </div>
@@ -86,7 +86,7 @@
                   aria-expanded="false"><%= fa_icon('search', text: t('preview')) %>
           </button>
           <div class="dropdown-menu" aria-labelledby="scopeListButton">
-            <% @query_stores.map(&:scope_name).uniq.each do |scope| %>
+            <% Patron.scope_names.each do |scope| %>
               <%= link_to_new fa_icon('search', text: scope),
                               preview_scope_patron_assignment_path(@user, scope: scope),
                               class: 'dropdown-item' %>
@@ -96,12 +96,12 @@
       <% end %>
 
         <%= render 'patron/components/query_stores',
-                   query_stores: @query_stores,
+                   query_stores: @collections[:query_stores][:collection],
                    actions_visible: false %>
       </div>
       <nav aria-label='pagination'>
         <ul class='pagination justify-content-center'>
-          <%== pagy_bootstrap_nav(@pagy_query_stores) %>
+          <%== pagy_bootstrap_nav(@collections[:query_stores][:pagy]) %>
         </ul>
       </nav>
     </div>
