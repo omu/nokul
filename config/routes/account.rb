@@ -10,7 +10,6 @@ devise_for :users, controllers: {
 devise_scope :user do
   get 'account', to: 'account/registrations#edit'
   get 'login', to: 'account/sessions#new'
-  get 'register', to: 'account/registrations#new'
   get 'recover', to: 'account/passwords#new'
   delete 'logout', to: 'account/sessions#destroy'
 end

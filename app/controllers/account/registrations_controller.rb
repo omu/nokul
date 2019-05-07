@@ -10,14 +10,14 @@ module Account
     after_action :update_password_change_time, only: :update
 
     # GET /resource/sign_up
-    # def new
-    #   super
-    # end
+    def new
+      not_found
+    end
 
     # POST /resource
-    # def create
-    #   super
-    # end
+    def create
+      not_found
+    end
 
     # GET /resource/edit
     # def edit
@@ -30,9 +30,9 @@ module Account
     end
 
     # DELETE /resource
-    # def destroy
-    #   super
-    # end
+    def destroy
+      not_found
+    end
 
     # GET /resource/cancel
     # Forces the session data which is usually expired after sign

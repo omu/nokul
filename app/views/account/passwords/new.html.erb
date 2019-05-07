@@ -12,18 +12,15 @@
           <%= f.input :email, required: true, autofocus: true, label: false, wrapper: false %>
         </div>
 
-        <%= f.button :submit, t('.send_instructions'), class: 'btn btn-block btn-primary' %>
+        <div class='row'>
+          <div class='col-6'>
+            <%= f.button :submit, t('.reset_password'), class: 'btn btn-block btn-primary' %>
+          </div>
+          <div class='col-6'>
+            <%= link_to t('.login'), login_path, class: 'btn btn-secondary btn-block', role: 'button' %>
+          </div>
+        </div>
       <% end %>
-    </div>
-    <div class='card-footer p-4'>
-      <div class='row'>
-        <div class='col-6'>
-          <%= link_to t('.login'), login_path, class: 'btn btn-secondary btn-block', role: 'button' %>
-        </div>
-        <div class='col-6'>
-          <%= link_to t('.register'), register_path, class: 'btn btn-secondary btn-block', role: 'button' %>
-        </div>
-      </div>
     </div>
   </div>
 </div>
