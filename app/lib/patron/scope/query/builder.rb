@@ -28,13 +28,10 @@ module Patron
         def build
           queries = []
 
-          included = prepare(records(type: :include))
-          excluded = prepare(records(type: :exclude))
+          queries << prepare(records(type: :include))
+          queries << Query::Arel.not(prepare(records(type: :exclude)))
 
-          queries << included                  if included.present?
-          queries << Query::Arel.not(excluded) if excluded.present?
-
-          queries.count > 1 ? Query::Arel.merge(queries, with: :and) : queries.first
+          Query::Arel.merge(queries.compact, with: :and)
         end
 
         def prepare(datas)
@@ -59,11 +56,9 @@ module Patron
         end
 
         def records(type: nil)
-          @records ||= begin
-            instance.user.query_stores.active.where(scope_name: klass.to_s)
-          end
+          @records ||= instance.user.query_stores.active.where(scope_name: klass.to_s)
 
-          return @records if type.nil?
+          return @records unless type
 
           @records.select { |record| record.type == type.to_s }
         end

@@ -41,7 +41,7 @@ module Patron
         end
 
         def self.not(queries)
-          ::Arel::Nodes::Not.new(queries)
+          ::Arel::Nodes::Not.new(queries) if queries.present?
         end
 
         def self.format_and_sanitize_value(predicate, value, **options)
