@@ -18,6 +18,7 @@ tr:
         unit_type: Birim Türü
         university_type: Üniversite Türü
         yoksis_id: YOKSIS ID
+        effective_yoksis_id: Yöneten Birim
   helpers:
     submit:
       unit:

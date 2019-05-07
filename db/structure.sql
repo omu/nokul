@@ -171,8 +171,8 @@ CREATE TABLE public.addresses (
     full_address character varying,
     district_id bigint NOT NULL,
     user_id bigint NOT NULL,
-    updated_at timestamp without time zone DEFAULT now(),
-    created_at timestamp without time zone DEFAULT now(),
+    updated_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
+    created_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT addresses_created_at_null CHECK ((created_at IS NOT NULL)),
     CONSTRAINT addresses_full_address_length CHECK ((length((full_address)::text) <= 255)),
     CONSTRAINT addresses_full_address_presence CHECK (((full_address IS NOT NULL) AND ((full_address)::text !~ '^\s*$'::text))),
@@ -1671,8 +1671,8 @@ CREATE TABLE public.identities (
     registered_to character varying,
     user_id bigint NOT NULL,
     student_id bigint,
-    created_at timestamp without time zone DEFAULT now(),
-    updated_at timestamp without time zone DEFAULT now(),
+    created_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
+    updated_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT identities_created_at_null CHECK ((created_at IS NOT NULL)),
     CONSTRAINT identities_date_of_birth_null CHECK ((date_of_birth IS NOT NULL)),
     CONSTRAINT identities_fathers_name_length CHECK ((length((fathers_name)::text) <= 255)),
@@ -2660,6 +2660,7 @@ CREATE TABLE public.units (
     unit_type_id bigint,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
+    effective_yoksis_id character varying,
     CONSTRAINT units_abbreviation_length CHECK ((length((abbreviation)::text) <= 255)),
     CONSTRAINT units_code_length CHECK ((length((code)::text) <= 255)),
     CONSTRAINT units_detsis_id_numericality CHECK ((detsis_id >= 1)),
@@ -2671,6 +2672,13 @@ CREATE TABLE public.units (
     CONSTRAINT units_osym_id_numericality CHECK ((osym_id >= 1)),
     CONSTRAINT units_yoksis_id_numericality CHECK ((yoksis_id >= 1))
 );
+
+
+--
+-- Name: COLUMN units.effective_yoksis_id; Type: COMMENT; Schema: public; Owner: -
+--
+
+COMMENT ON COLUMN public.units.effective_yoksis_id IS 'Bir birimin birlikte yonetildigi ust birimi ifade eder';
 
 
 --
@@ -2743,7 +2751,7 @@ CREATE TABLE public.users (
     last_sign_in_at timestamp without time zone,
     current_sign_in_ip inet,
     last_sign_in_ip inet,
-    password_changed_at timestamp without time zone DEFAULT now(),
+    password_changed_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
     failed_attempts integer DEFAULT 0,
     unlock_token character varying,
     locked_at timestamp without time zone,
@@ -5414,6 +5422,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20190321213059'),
 ('20190325051222'),
 ('20190419113152'),
-('20190425065306');
+('20190425065306'),
+('20190507195222');
 
 
