@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-Vagrant.configure('2') do |config| # rubocop:disable Metrics/BlockLength
+Vagrant.configure('2') do |config|
   env = {
     'deploy_skip_seed' => ENV['DEPLOY_SKIP_SEED']
   }
