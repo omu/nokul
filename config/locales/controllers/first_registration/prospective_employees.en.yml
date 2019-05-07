@@ -1,0 +1,45 @@
+en:
+  activerecord:
+    attributes:
+      prospective_employee: &prospective_employee_attributes
+        archived: Archived
+        date_of_birth: Date of Birth
+        email: Email
+        first_name: First Name
+        gender: Gender
+        id_number: ID Number
+        last_name: Last Name
+        mobile_phone: Mobile Phone
+        not_archived: Not Archived
+        smart_search_placeholder: Employee id number, staff number, first name or last name.
+        staff_number: Staff Number
+        title: Title
+        unit: Assignment Unit
+    enums:
+      prospective_employee:
+        genders:
+          female: Female
+          male: Male
+  first_registration:
+    prospective_employees:
+      create:
+        success: Prospective employee successfully created.
+        warning: Prospective student could not be registered.
+      destroy:
+        success: Prospective employee successfully removed.
+      edit:
+        form_title: Prospective Employee Edit Form
+      form:
+        contact_informations: Contact Informations
+        personal_informations: Personal Informations
+        staff_informations: Staff Informations
+      index:
+        <<: *prospective_employee_attributes
+        new_prospective_employee: Create a New Prospective Employee
+        prospective_employees: Prospective Employees
+      new:
+        form_title: Prospective Employee Registration Form
+      search:
+        <<: *prospective_employee_attributes
+      update:
+        success: Prospective employee successfully updated.

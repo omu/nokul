@@ -17,9 +17,11 @@ class EmployeeTest < ActiveSupport::TestCase
 
   # validations: presence
   validates_presence_of :active
+  validates_presence_of :staff_number
 
   # validations: uniqueness
   validates_uniqueness_of :title_id
+  validates_uniqueness_of :staff_number
 
   # delegations
   test 'an employee can reach addresses and identities over user' do
@@ -44,7 +46,7 @@ class EmployeeTest < ActiveSupport::TestCase
 
   test 'a user can have more than one passive employees' do
     fake = employees(:serhat_passive).dup
-    fake.update(title: titles(:chief))
+    fake.update(title: titles(:chief), staff_number: 'B1500')
     assert fake.valid?
     assert_empty fake.errors[:base]
   end

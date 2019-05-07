@@ -37,7 +37,7 @@ module FirstRegistration
     end
 
     def register
-      prospective_student = FirstRegistration::ProspectiveStudentService.new(@prospective_student)
+      prospective_student = FirstRegistration::ProspectiveService.new(@prospective_student)
 
       if prospective_student.register
         @prospective_student.update(registered: true)
