@@ -7,7 +7,7 @@ namespace :import do
     progress_bar = ProgressBar.spawn('Units', units.count)
 
     units.each do |unit|
-      default_district = District.find_by(name: Tenant.configuration.contact.main_district)
+      default_district = District.find_by(name: Tenant.configuration.contact.district)
       parent_unit = if unit.parent_yoksis_id
                       Unit.find_by(yoksis_id: unit.parent_yoksis_id)
                     elsif unit.parent_detsis_id

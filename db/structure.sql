@@ -2871,6 +2871,7 @@ CREATE TABLE public.units (
     unit_type_id bigint,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
+    effective_yoksis_id character varying,
     CONSTRAINT units_abbreviation_length CHECK ((length((abbreviation)::text) <= 255)),
     CONSTRAINT units_code_length CHECK ((length((code)::text) <= 255)),
     CONSTRAINT units_detsis_id_numericality CHECK ((detsis_id >= 1)),
@@ -2882,6 +2883,13 @@ CREATE TABLE public.units (
     CONSTRAINT units_osym_id_numericality CHECK ((osym_id >= 1)),
     CONSTRAINT units_yoksis_id_numericality CHECK ((yoksis_id >= 1))
 );
+
+
+--
+-- Name: COLUMN units.effective_yoksis_id; Type: COMMENT; Schema: public; Owner: -
+--
+
+COMMENT ON COLUMN public.units.effective_yoksis_id IS 'Bir birimin birlikte yonetildigi ust birimi ifade eder';
 
 
 --
@@ -5853,6 +5861,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20190422104410'),
 ('20190422104613'),
 ('20190422141252'),
-('20190425065306');
+('20190425065306'),
+('20190507195222');
 
 

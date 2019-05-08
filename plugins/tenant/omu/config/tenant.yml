@@ -5,7 +5,8 @@ default: &default
   contact:
     address: 'Ondokuz Mayıs Üniversitesi, Kurupelit Kampüsü, Atakum/SAMSUN'
     phone: '+9 0362 312 1919'
-    main_district: 'Atakum'
+    country: 'TR'
+    district: 'Atakum'
   email:
     domain: 'omu.edu.tr'
     default_from: 'noreply@baum.omu.edu.tr'
