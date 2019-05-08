@@ -47,8 +47,9 @@ jobs:
       install: skip
       script: git remote add beta dokku@app.omu.sh:nokul-develop && git push --no-verify beta develop:master
 
-      # second job at this stage
-    - name: "Deploy to dokku#production"
+    - stage: deploy
+      # first job at this stage
+      name: "Deploy to dokku#production"
       if: branch = master AND type = push AND fork = false
       cache: skip
       install: skip
