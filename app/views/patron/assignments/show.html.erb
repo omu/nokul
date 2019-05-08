@@ -1,0 +1,109 @@
+<%= action_bar do %>
+  <%= link_to_back :back %>
+  <%= link_to_edit [:edit, :patron_assignment, id: @user.id] %>
+<% end %>
+
+<div class="card">
+  <h5 class="card-header">
+    <%= t('.user_informations') %>
+  </h5>
+  <div class="card-body">
+    <p>
+      <strong><%= t('id_number', scope: %i[activerecord attributes user]) %>:</strong>
+      <%= @user.id_number %>
+    </p>
+    <p>
+      <strong><%= t('first_name', scope: %i[activerecord attributes identity]) %>:</strong>
+      <%= @user.identities.user_identity.try(:first_name) %>
+    </p>
+    <p>
+      <strong><%= t('last_name', scope: %i[activerecord attributes identity]) %>:</strong>
+      <%= @user.identities.user_identity.try(:last_name) %>
+    </p>
+    <p>
+      <strong><%= t('email', scope: %i[activerecord attributes user]) %>:</strong>
+      <%= @user.email %>
+    </p>
+  </div>
+</div>
+
+<%= render 'layouts/shared/smart_search_form',
+           path: patron_assignment_path(@user),
+           placeholder: t('.smart_search_placeholder') %>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <h5 class="card-header">
+        <%= t('.roles') %>
+      </h5>
+
+      <div class="card-body">
+        <%= render 'patron/components/roles',
+                   roles: @collections[:roles][:collection],
+                   actions_visible: false %>
+      </div>
+      <nav aria-label='pagination'>
+        <ul class='pagination justify-content-center'>
+          <%== pagy_bootstrap_nav(@collections[:roles][:pagy]) %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card">
+      <h5 class="card-header">
+        <%= t('.permissions') %>
+      </h5>
+      <div class="card-body">
+        <%= render 'patron/components/permissions',
+                   permissions: @collections[:permissions][:collection].uniq,
+                   actions_visible: false %>
+      </div>
+      <nav aria-label='pagination'>
+        <ul class='pagination justify-content-center'>
+          <%== pagy_bootstrap_nav(@collections[:permissions][:pagy]) %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card">
+      <h5 class="card-header">
+        <%= t('.query_stores') %>
+      </h5>
+      <div class="card-body">
+
+      <%= action_bar do %>
+        <div class="dropdown">
+          <button class="btn btn-outline-info btn-sm dropdown-toggle"
+                  type="button"
+                  id="scopeListButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"><%= fa_icon('search', text: t('preview')) %>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="scopeListButton">
+            <% Patron.scope_names.each do |scope| %>
+              <%= link_to_new fa_icon('search', text: scope),
+                              preview_scope_patron_assignment_path(@user, scope: scope),
+                              class: 'dropdown-item' %>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+
+        <%= render 'patron/components/query_stores',
+                   query_stores: @collections[:query_stores][:collection],
+                   actions_visible: false %>
+      </div>
+      <nav aria-label='pagination'>
+        <ul class='pagination justify-content-center'>
+          <%== pagy_bootstrap_nav(@collections[:query_stores][:pagy]) %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

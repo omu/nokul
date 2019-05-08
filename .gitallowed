@@ -3,7 +3,7 @@
 \bGemfile\.lock
 ^app/lib/nokul/database_url\.rb
 ^README.md:[6-7]:
-^lib/templates/ldap/config/.*
+^lib/templates/ldap/.*
 ^test/fixtures/users.yml:(1|6|11|16):
 ^test/system/account_settings_page_flow_test.rb:20:
 ^test/system/login_page_flow_test.rb:15:

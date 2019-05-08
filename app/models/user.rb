@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
+  # authorizations
+  include Patron::Roleable
+  include Patron::Scopable
+
   # virtual attributes
   attr_accessor :country
 

@@ -1,0 +1,51 @@
+<%= action_bar do %>
+  <%= link_to_back :back %>
+  <%= link_to_edit [:edit, @role] %>
+<% end %>
+
+<div class="alert alert-light" role="alert">
+  <h3 class="text-center"><%= @role.name %></h3>
+</div>
+
+<%= render 'layouts/shared/smart_search_form',
+           path: patron_role_path(@role),
+           placeholder: t('.smart_search_placeholder') %>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <h5 class="card-header">
+        <%= t('.permissions') %>
+      </h5>
+      <div class="card-body">
+        <%= render 'patron/components/permissions',
+                   permissions: @collections[:permissions][:collection],
+                   actions_visible: false %>
+      </div>
+
+      <nav aria-label='pagination'>
+        <ul class='pagination justify-content-center'>
+          <%== pagy_bootstrap_nav(@collections[:permissions][:pagy]) %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card">
+      <h5 class="card-header">
+        <%= t('.users') %>
+      </h5>
+      <div class="card-body">
+        <%= render 'patron/components/users',
+                   users: @collections[:users][:collection],
+                   actions_visible: false %>
+      </div>
+      <nav aria-label='pagination'>
+        <ul class='pagination justify-content-center'>
+          <%== pagy_bootstrap_nav(@collections[:users][:pagy]) %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

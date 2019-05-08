@@ -1,0 +1,61 @@
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card mb-1 mr-1">
+      <div class="card-header"><%= t('.roles') %></div>
+      <div class="card-body">
+        <h5 class="card-text">
+          <%= t('.total_number_of_roles') %>: <span class="badge badge-success"><%= @counter[:roles] %></span>
+        </h5>
+        <hr />
+        <%= link_to t('.role_management'),
+                    patron_roles_path,
+                    class: 'btn btn-outline-success' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card mb-1 mr-1">
+      <div class="card-header"><%= t('.permissions') %></div>
+      <div class="card-body">
+        <h5 class="card-text">
+          <%= t('.total_number_of_permissions') %>: <span class="badge badge-warning"><%= @counter[:permissions] %></span>
+        </h5>
+        <hr />
+        <%= link_to t('.permission_management'),
+                    patron_permissions_path,
+                    class: 'btn btn-outline-warning' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card mb-1 mr-1">
+      <div class="card-header"><%= t('.scope_queries') %></div>
+      <div class="card-body">
+        <h5 class="card-text">
+          <%= t('.total_number_of_scope_queries') %>: <span class="badge badge-primary"><%= @counter[:query_stores] %></span>
+        </h5>
+        <hr />
+        <%= link_to t('.scope_query_management'),
+                    patron_query_stores_path,
+                    class: 'btn btn-outline-primary' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card mb-1 mr-1">
+      <div class="card-header"><%= t('.assignments') %></div>
+      <div class="card-body">
+        <h5 class="card-text">
+          <%= t('.assignment_description') %>
+        </h5>
+        <hr />
+        <%= link_to t('.assignment_management'),
+                    patron_assignments_path,
+                    class: 'btn btn-outline-dark' %>
+      </div>
+    </div>
+  </div>
+</div>

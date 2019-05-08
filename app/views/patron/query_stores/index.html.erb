@@ -1,0 +1,45 @@
+<%= action_bar do %>
+  <%= link_to fa_icon('home', text: t('layouts.shared.sidebar.authorizations')),
+              :patron,
+              class: 'btn btn-outline-primary' %>
+  <hr />
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="scopeListButton"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"><%= t('.new_query_store_link') %>
+    </button>
+    <div class="dropdown-menu" aria-labelledby="scopeListButton">
+      <% Patron.scope_names.each do |scope| %>
+        <%= link_to_new t('.new_query_store_link_for_scope', scope_name: scope),
+                        new_patron_query_store_path(scope: scope),
+                        class: 'dropdown-item' %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'tags', text: t('.card_header') %>
+      </div>
+      <div class='card-body'>
+        <%= render 'layouts/shared/smart_search_form',
+                   path: patron_query_stores_path,
+                   placeholder: t('.smart_search_placeholder') %>
+        <%= render 'patron/components/query_stores',
+                   query_stores: @query_stores,
+                   actions_visible: true %>
+      </div>
+    </div>
+    <nav aria-label='pagination'>
+      <ul class='pagination justify-content-center'>
+        <%== pagy_bootstrap_nav(@pagy) %>
+      </ul>
+    </nav>
+  </div>
+</div>

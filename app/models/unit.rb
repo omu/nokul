@@ -4,6 +4,7 @@ class Unit < ApplicationRecord
   # search
   include PgSearch
   include DynamicSearch
+  include Patron::Scope::Model
 
   pg_search_scope(
     :search,

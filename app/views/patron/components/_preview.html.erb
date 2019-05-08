@@ -1,0 +1,44 @@
+<div class="alert alert-info">
+  <h5><strong>SQL</strong></h5>
+  <hr />
+  <p class="text-justify"><code><%= @records.to_sql %></code></p>
+</div>
+
+<div class="card">
+  <div class='card-header'>
+    <%= t('.total_number_of_records') %> <span class="badge badge-success"><%= @records.size %></span>
+  </div>
+
+  <div class="card-body">
+    <% if @records.size > 0 && @records.first.class.respond_to?(:search) %>
+      <%= render 'layouts/shared/smart_search_form',
+                 path: search_path,
+                 placeholder: t('.smart_search_placeholder') %>
+    <% end %>
+    <table class="table table-bordered">
+      <thead class="thead-dark">
+        <% @scope.preview_attributes.keys.each do |attribute| %>
+          <th><%= t(attribute,
+                    scope: [:activerecord, :attributes, @scope.model.to_s.underscore],
+                    default: attribute.to_s) %></th>
+        <% end %>
+      </thead>
+
+      <tbody>
+        <% @collection.each do |item| %>
+          <tr>
+            <% @scope.preview_attributes.values.each do |attribute| %>
+              <td><%= item.public_send(attribute) %></td>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <nav aria-label='pagination'>
+    <ul class='pagination justify-content-center'>
+      <%== pagy_bootstrap_nav(@pagy) %>
+    </ul>
+  </nav>
+</div>

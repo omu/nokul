@@ -171,8 +171,8 @@ CREATE TABLE public.addresses (
     full_address character varying,
     district_id bigint NOT NULL,
     user_id bigint NOT NULL,
-    updated_at timestamp without time zone DEFAULT now(),
-    created_at timestamp without time zone DEFAULT now(),
+    updated_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
+    created_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT addresses_created_at_null CHECK ((created_at IS NOT NULL)),
     CONSTRAINT addresses_full_address_length CHECK ((length((full_address)::text) <= 255)),
     CONSTRAINT addresses_full_address_presence CHECK (((full_address IS NOT NULL) AND ((full_address)::text !~ '^\s*$'::text))),
@@ -1671,8 +1671,8 @@ CREATE TABLE public.identities (
     registered_to character varying,
     user_id bigint NOT NULL,
     student_id bigint,
-    created_at timestamp without time zone DEFAULT now(),
-    updated_at timestamp without time zone DEFAULT now(),
+    created_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
+    updated_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT identities_created_at_null CHECK ((created_at IS NOT NULL)),
     CONSTRAINT identities_date_of_birth_null CHECK ((date_of_birth IS NOT NULL)),
     CONSTRAINT identities_fathers_name_length CHECK ((length((fathers_name)::text) <= 255)),
@@ -1779,6 +1779,44 @@ CREATE SEQUENCE public.meeting_agendas_id_seq
 --
 
 ALTER SEQUENCE public.meeting_agendas_id_seq OWNED BY public.meeting_agendas.id;
+
+
+--
+-- Name: permissions; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.permissions (
+    id bigint NOT NULL,
+    name character varying,
+    identifier character varying,
+    description text,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT permissions_description_length CHECK ((length(description) <= 65535)),
+    CONSTRAINT permissions_identifier_length CHECK ((length((identifier)::text) <= 255)),
+    CONSTRAINT permissions_identifier_presence CHECK (((identifier IS NOT NULL) AND ((identifier)::text !~ '^\s*$'::text))),
+    CONSTRAINT permissions_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT permissions_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
+);
+
+
+--
+-- Name: permissions_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.permissions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: permissions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.permissions_id_seq OWNED BY public.permissions.id;
 
 
 --
@@ -2044,6 +2082,45 @@ ALTER SEQUENCE public.prospective_students_id_seq OWNED BY public.prospective_st
 
 
 --
+-- Name: query_stores; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.query_stores (
+    id bigint NOT NULL,
+    name character varying,
+    scope_name character varying,
+    parameters jsonb,
+    type integer,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT query_stores_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT query_stores_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text))),
+    CONSTRAINT query_stores_scope_name_length CHECK ((length((scope_name)::text) <= 255)),
+    CONSTRAINT query_stores_scope_name_presence CHECK (((scope_name IS NOT NULL) AND ((scope_name)::text !~ '^\s*$'::text))),
+    CONSTRAINT query_stores_type_numericality CHECK ((type >= 0))
+);
+
+
+--
+-- Name: query_stores_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.query_stores_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: query_stores_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.query_stores_id_seq OWNED BY public.query_stores.id;
+
+
+--
 -- Name: registration_documents; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -2079,12 +2156,146 @@ ALTER SEQUENCE public.registration_documents_id_seq OWNED BY public.registration
 
 
 --
+-- Name: role_assignments; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.role_assignments (
+    id bigint NOT NULL,
+    role_id bigint NOT NULL,
+    user_id bigint NOT NULL,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL
+);
+
+
+--
+-- Name: role_assignments_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.role_assignments_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: role_assignments_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.role_assignments_id_seq OWNED BY public.role_assignments.id;
+
+
+--
+-- Name: role_permissions; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.role_permissions (
+    id bigint NOT NULL,
+    role_id bigint NOT NULL,
+    permission_id bigint NOT NULL,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL
+);
+
+
+--
+-- Name: role_permissions_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.role_permissions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: role_permissions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.role_permissions_id_seq OWNED BY public.role_permissions.id;
+
+
+--
+-- Name: roles; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.roles (
+    id bigint NOT NULL,
+    name character varying,
+    identifier character varying,
+    locked boolean DEFAULT false,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT roles_identifier_length CHECK ((length((identifier)::text) <= 255)),
+    CONSTRAINT roles_identifier_presence CHECK (((identifier IS NOT NULL) AND ((identifier)::text !~ '^\s*$'::text))),
+    CONSTRAINT roles_locked_null CHECK ((locked IS NOT NULL)),
+    CONSTRAINT roles_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT roles_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
+);
+
+
+--
+-- Name: roles_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.roles_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: roles_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.roles_id_seq OWNED BY public.roles.id;
+
+
+--
 -- Name: schema_migrations; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.schema_migrations (
     version character varying NOT NULL
 );
+
+
+--
+-- Name: scope_assignments; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.scope_assignments (
+    id bigint NOT NULL,
+    query_store_id bigint NOT NULL,
+    user_id bigint NOT NULL,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL
+);
+
+
+--
+-- Name: scope_assignments_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.scope_assignments_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: scope_assignments_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.scope_assignments_id_seq OWNED BY public.scope_assignments.id;
 
 
 --
@@ -2743,7 +2954,7 @@ CREATE TABLE public.users (
     last_sign_in_at timestamp without time zone,
     current_sign_in_ip inet,
     last_sign_in_ip inet,
-    password_changed_at timestamp without time zone DEFAULT now(),
+    password_changed_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
     failed_attempts integer DEFAULT 0,
     unlock_token character varying,
     locked_at timestamp without time zone,
@@ -3108,6 +3319,13 @@ ALTER TABLE ONLY public.meeting_agendas ALTER COLUMN id SET DEFAULT nextval('pub
 
 
 --
+-- Name: permissions id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.permissions ALTER COLUMN id SET DEFAULT nextval('public.permissions_id_seq'::regclass);
+
+
+--
 -- Name: positions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -3136,10 +3354,45 @@ ALTER TABLE ONLY public.prospective_students ALTER COLUMN id SET DEFAULT nextval
 
 
 --
+-- Name: query_stores id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.query_stores ALTER COLUMN id SET DEFAULT nextval('public.query_stores_id_seq'::regclass);
+
+
+--
 -- Name: registration_documents id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.registration_documents ALTER COLUMN id SET DEFAULT nextval('public.registration_documents_id_seq'::regclass);
+
+
+--
+-- Name: role_assignments id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.role_assignments ALTER COLUMN id SET DEFAULT nextval('public.role_assignments_id_seq'::regclass);
+
+
+--
+-- Name: role_permissions id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.role_permissions ALTER COLUMN id SET DEFAULT nextval('public.role_permissions_id_seq'::regclass);
+
+
+--
+-- Name: roles id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.roles ALTER COLUMN id SET DEFAULT nextval('public.roles_id_seq'::regclass);
+
+
+--
+-- Name: scope_assignments id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.scope_assignments ALTER COLUMN id SET DEFAULT nextval('public.scope_assignments_id_seq'::regclass);
 
 
 --
@@ -3708,6 +3961,14 @@ ALTER TABLE ONLY public.meeting_agendas
 
 
 --
+-- Name: permissions permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.permissions
+    ADD CONSTRAINT permissions_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: positions positions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -3740,6 +4001,14 @@ ALTER TABLE ONLY public.prospective_students
 
 
 --
+-- Name: query_stores query_stores_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.query_stores
+    ADD CONSTRAINT query_stores_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: registration_documents registration_documents_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -3748,11 +4017,43 @@ ALTER TABLE ONLY public.registration_documents
 
 
 --
+-- Name: role_assignments role_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.role_assignments
+    ADD CONSTRAINT role_assignments_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: role_permissions role_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.role_permissions
+    ADD CONSTRAINT role_permissions_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: roles roles_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.roles
+    ADD CONSTRAINT roles_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: schema_migrations schema_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.schema_migrations
     ADD CONSTRAINT schema_migrations_pkey PRIMARY KEY (version);
+
+
+--
+-- Name: scope_assignments scope_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.scope_assignments
+    ADD CONSTRAINT scope_assignments_pkey PRIMARY KEY (id);
 
 
 --
@@ -4538,6 +4839,13 @@ CREATE INDEX index_meeting_agendas_on_committee_meeting_id ON public.meeting_age
 
 
 --
+-- Name: index_permissions_on_name; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE UNIQUE INDEX index_permissions_on_name ON public.permissions USING btree (name);
+
+
+--
 -- Name: index_positions_on_administrative_function_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -4615,6 +4923,13 @@ CREATE INDEX index_prospective_students_on_unit_id ON public.prospective_student
 
 
 --
+-- Name: index_query_stores_on_scope_name; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_query_stores_on_scope_name ON public.query_stores USING btree (scope_name);
+
+
+--
 -- Name: index_registration_documents_on_academic_term_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -4633,6 +4948,69 @@ CREATE INDEX index_registration_documents_on_document_type_id ON public.registra
 --
 
 CREATE INDEX index_registration_documents_on_unit_id ON public.registration_documents USING btree (unit_id);
+
+
+--
+-- Name: index_role_assignments_on_role_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_role_assignments_on_role_id ON public.role_assignments USING btree (role_id);
+
+
+--
+-- Name: index_role_assignments_on_user_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_role_assignments_on_user_id ON public.role_assignments USING btree (user_id);
+
+
+--
+-- Name: index_role_permissions_on_permission_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_role_permissions_on_permission_id ON public.role_permissions USING btree (permission_id);
+
+
+--
+-- Name: index_role_permissions_on_role_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_role_permissions_on_role_id ON public.role_permissions USING btree (role_id);
+
+
+--
+-- Name: index_role_permissions_on_role_id_and_permission_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE UNIQUE INDEX index_role_permissions_on_role_id_and_permission_id ON public.role_permissions USING btree (role_id, permission_id);
+
+
+--
+-- Name: index_roles_on_identifier; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE UNIQUE INDEX index_roles_on_identifier ON public.roles USING btree (identifier);
+
+
+--
+-- Name: index_roles_on_name; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE UNIQUE INDEX index_roles_on_name ON public.roles USING btree (name);
+
+
+--
+-- Name: index_scope_assignments_on_query_store_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_scope_assignments_on_query_store_id ON public.scope_assignments USING btree (query_store_id);
+
+
+--
+-- Name: index_scope_assignments_on_user_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_scope_assignments_on_user_id ON public.scope_assignments USING btree (user_id);
 
 
 --
@@ -4710,6 +5088,13 @@ CREATE INDEX index_units_on_unit_type_id ON public.units USING btree (unit_type_
 --
 
 CREATE INDEX index_units_on_university_type_id ON public.units USING btree (university_type_id);
+
+
+--
+-- Name: index_user_id_and_role_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE UNIQUE INDEX index_user_id_and_role_id ON public.role_assignments USING btree (user_id, role_id);
 
 
 --
@@ -4918,6 +5303,14 @@ ALTER TABLE ONLY public.curriculum_courses
 
 
 --
+-- Name: role_permissions fk_rails_439e640a3f; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.role_permissions
+    ADD CONSTRAINT fk_rails_439e640a3f FOREIGN KEY (permission_id) REFERENCES public.permissions(id);
+
+
+--
 -- Name: committee_decisions fk_rails_44d9592deb; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -5006,6 +5399,14 @@ ALTER TABLE ONLY public.calendar_committee_decisions
 
 
 --
+-- Name: role_permissions fk_rails_60126080bd; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.role_permissions
+    ADD CONSTRAINT fk_rails_60126080bd FOREIGN KEY (role_id) REFERENCES public.roles(id);
+
+
+--
 -- Name: calendar_events fk_rails_64d7b22524; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -5035,6 +5436,14 @@ ALTER TABLE ONLY public.group_courses
 
 ALTER TABLE ONLY public.positions
     ADD CONSTRAINT fk_rails_78999e7b17 FOREIGN KEY (administrative_function_id) REFERENCES public.administrative_functions(id);
+
+
+--
+-- Name: scope_assignments fk_rails_796253dfbd; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.scope_assignments
+    ADD CONSTRAINT fk_rails_796253dfbd FOREIGN KEY (query_store_id) REFERENCES public.query_stores(id);
 
 
 --
@@ -5094,6 +5503,14 @@ ALTER TABLE ONLY public.positions
 
 
 --
+-- Name: role_assignments fk_rails_8ddd873ee0; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.role_assignments
+    ADD CONSTRAINT fk_rails_8ddd873ee0 FOREIGN KEY (user_id) REFERENCES public.users(id);
+
+
+--
 -- Name: available_course_lecturers fk_rails_917e7d3603; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -5131,6 +5548,14 @@ ALTER TABLE ONLY public.cities
 
 ALTER TABLE ONLY public.certifications
     ADD CONSTRAINT fk_rails_99ad041748 FOREIGN KEY (user_id) REFERENCES public.users(id);
+
+
+--
+-- Name: scope_assignments fk_rails_9d2d00a9ee; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.scope_assignments
+    ADD CONSTRAINT fk_rails_9d2d00a9ee FOREIGN KEY (user_id) REFERENCES public.users(id);
 
 
 --
@@ -5259,6 +5684,14 @@ ALTER TABLE ONLY public.units
 
 ALTER TABLE ONLY public.employees
     ADD CONSTRAINT fk_rails_dcfd3d4fc3 FOREIGN KEY (user_id) REFERENCES public.users(id);
+
+
+--
+-- Name: role_assignments fk_rails_e4bfc1cd2c; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.role_assignments
+    ADD CONSTRAINT fk_rails_e4bfc1cd2c FOREIGN KEY (role_id) REFERENCES public.roles(id);
 
 
 --
@@ -5414,6 +5847,12 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20190321213059'),
 ('20190325051222'),
 ('20190419113152'),
+('20190422103239'),
+('20190422103754'),
+('20190422104033'),
+('20190422104410'),
+('20190422104613'),
+('20190422141252'),
 ('20190425065306');
 
 

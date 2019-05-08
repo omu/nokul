@@ -110,6 +110,11 @@
         </a>
         <ul class="nav-dropdown-items">
           <li class="nav-item">
+            <%= link_to :patron, class: 'nav-link' do %>
+              <%= fa_icon('cogs', text: t('.authorizations'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+          <li class="nav-item">
             <%= link_to :reference, class: 'nav-link' do %>
               <%= fa_icon('th-list', text: t('.references'), class: 'nav-icon') %>
             <% end %>

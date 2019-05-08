@@ -5,16 +5,17 @@ tr:
         academic_calendars: Akademik Takvimler
         administration: Yönetim
         agenda_types: Gündem Türleri
+        authorizations: Yetkilendirmeler
         available_courses: Açılan Dersler
         calendar_event_types: Olay Türleri
         calendar_management: Takvim Yönetimi
         calendars: Takvimler
         committee_units: Kurul ve Komisyonlar
         committees: Kurullar/Komisyonlar
-        courses: Dersler
         course_groups: Ders Grupları
         course_management: Ders İşlemleri
         course_unit_groups: Ders Grupları
+        courses: Dersler
         curriculums: Müfredatlar
         first_registration: İlk Kayıt
         high_school_types: Lise Türleri

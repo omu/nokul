@@ -1,0 +1,24 @@
+tr:
+  patron:
+    boolean:
+      'true': 'Evet'
+      'false': 'Hayır'
+    suffixes:
+      value: Değeri
+      query_type: Sorgulama Türü
+      skip_empty: Değeri Boşsa Yoksay
+    query_types:
+      in: Seçilenler
+      not_in: Seçilenler Dışında Kalanlar
+      equal: Eşit
+      not_equal: Eşit Değil
+      greater_than: Büyük
+      greater_than_to_equal: Büyük Eşit
+      less_than: Küçük
+      less_than_to_equal: Küçük Eşit
+      start_with: İle Başlayan
+      end_with: İle Sonlanan
+      contain: İçeren
+      not_start_with: İle Başlamayan
+      not_end_with: İle Sonlanmayan
+      not_contain: İçermeyen
