@@ -8,14 +8,14 @@ TOC
 
 ### Geliştirici
 
-- [Geliştirici Dokümanları](/development)
-- [Git ve Github İpuçları](/diagrams)
-- [Helper Dokümanları](/helpers)
-- [DevOps ve Operatör Geliştirici](/ops)
-- [PostgreSQL](/postgresql)
-- [Geliştirme Kural ve Stilleri](/rule)
-- [ERD Diagramları](/diagrams)
-- [Diğer Herşey](/howto)
+- [Geliştirici Dokümanları](./development)
+- [Git ve Github İpuçları](./diagrams)
+- [Helper Dokümanları](./helpers)
+- [DevOps ve Operatör Geliştirici](./ops)
+- [PostgreSQL](./postgresql)
+- [Geliştirme Kural ve Stilleri](./rule)
+- [ERD Diagramları](./diagrams)
+- [Diğer Herşey](./howto)
 
 ### Eklentiler
 
@@ -23,7 +23,7 @@ TOC
 
 Uygulama genelinde ortak olarak kullanılan kütüphaneleri barındıran plug-in'i temsil eder.
 
-- [Kod Üretimi](../plugins/support/doc/coding.md)
+- [Kodlamalar](../plugins/support/doc/codification.md)
 - [Collection](../plugins/support/doc/collection.md)
 - [RestClient ve API İstekleri](../plugins/support/doc/rest_client.md)
 - [Hassas Verilerin Şifrelenmesi-Çözülmesi](../plugins/support/doc/sensitive.md)
@@ -34,16 +34,14 @@ Uygulama genelinde ortak olarak kullanılan kütüphaneleri barındıran plug-in
 
 Tüm tenant'lar için geçerli olan ortak davranışları barındıran plug-in'i temsil eder.
 
-- [Kiracı Yönetimi](../plugins/tenant/common/doc/tenant.md)
-- [Kiracılar için Birim Yönetimi](../plugins/tenant/common/doc/units.md)
+- [Kiracı Yönetimi](../plugins/tenant/common/doc/development/tenant.md)
+- [Kiracılar için Birim Yönetimi](../plugins/tenant/common/doc/development/units.md)
+- [Kiracı kodlamaları](../plugins/tenant/common/doc/development/codification.md)
 
-### Tenant::OMU
-
-Ondokuz Mayıs Üniversitesi kiracı dokümanlarını içerir.
-
-- [Öğrenci Numaraları](../plugins/tenant/omu/doc/student-numbers.md)
-- [Birim Kısaltmaları](../plugins/tenant/omu/doc/unit-abbreviations.md)
-- [Birim Kodları](../plugins/tenant/omu/doc/unit-codes.md)
+- [Öğrenci Numaraları](../plugins/tenant/omu/doc/specifications/student-numbers.md)
+- [Kullanıcı Adları](../plugins/tenant/omu/doc/specifications/user-names.md)
+- [Birim Kısaltmaları](../plugins/tenant/omu/doc/specifications/unit-abbreviations.md)
+- [Birim Kodları](../plugins/tenant/omu/doc/specifications/unit-codes.md)
 
 ### LDAP
 
