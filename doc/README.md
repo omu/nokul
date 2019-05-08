@@ -38,10 +38,10 @@ Tüm tenant'lar için geçerli olan ortak davranışları barındıran plug-in'i
 - [Kiracılar için Birim Yönetimi](../plugins/tenant/common/doc/development/units.md)
 - [Kiracı kodlamaları](../plugins/tenant/common/doc/development/codification.md)
 
-- [Öğrenci Numaraları](../plugins/tenant/common/doc/specifications/student-numbers.md)
-- [Kullanıcı Adları](../plugins/tenant/common/doc/specifications/user-names.md)
-- [Birim Kısaltmaları](../plugins/tenant/common/doc/specifications/unit-abbreviations.md)
-- [Birim Kodları](../plugins/tenant/common/doc/specifications/unit-codes.md)
+- [Öğrenci Numaraları](../plugins/tenant/common/doc/specification/student-numbers.md)
+- [Kullanıcı Adları](../plugins/tenant/common/doc/specification/user-names.md)
+- [Birim Kısaltmaları](../plugins/tenant/common/doc/specification/unit-abbreviations.md)
+- [Birim Kodları](../plugins/tenant/common/doc/specification/unit-codes.md)
 
 ### LDAP
 
