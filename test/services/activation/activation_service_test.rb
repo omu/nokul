@@ -73,7 +73,7 @@ module Activation
 
     test 'activation is must be active' do
       assert @activation.active
-      assert @activation.prospective.flatten.map(&:archived).all?
+      assert @activation.prospective.map(&:archived).all?
       assert @activation.user.activated?
     end
   end
