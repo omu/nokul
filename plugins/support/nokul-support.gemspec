@@ -19,5 +19,5 @@ Gem::Specification.new do |spec|
     'changelog_uri' => 'https://github.com/omu/nokul/tree/master/plugins/tenant/support/CHANGELOG.md'
   }
 
-  spec.add_dependency 'activesupport', '~> 6.0.0.beta1'
+  spec.add_dependency 'activesupport', '~> 6.0.0.rc1'
 end

@@ -2,7 +2,7 @@
 
 require 'pathname'
 
-PLUGINS_DIR = Pathname.new File.expand_path('..', __dir__)
+PLUGINS_DIR = Pathname.new '..'
 
 source 'https://rubygems.org'
 ruby File.read('.ruby-version')
@@ -13,5 +13,5 @@ gemspec
 
 group :test do
   gem 'minitest-focus'
-  gem 'rails', github: 'rails/rails'
+  gem 'rails', github: 'rails/rails', tag: 'v6.0.0.rc1'
 end

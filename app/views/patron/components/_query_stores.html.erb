@@ -1,0 +1,35 @@
+<table class='table table-responsive-sm table-striped table-hover'>
+  <thead class="thead-dark">
+    <tr>
+      <th><%= t('name', scope: %i[activerecord attributes patron/query_store]) %></th>
+      <th><%= t('scope_name', scope: %i[activerecord attributes patron/query_store]) %></th>
+      <th><%= t('type', scope: %i[activerecord attributes patron/query_store]) %></th>
+      <% if actions_visible %>
+        <th><%= t('actions') %></th>
+      <% end %>
+    </tr>
+  </thead>
+  <tbody>
+    <% query_stores.each do |query_store| %>
+      <tr>
+        <td><%= link_to(query_store.name, query_store) %></td>
+        <td><%= query_store.scope_name %></td>
+        <td>
+          <% if query_store.include? %>
+            <%= fa_icon('plus', text: enum_t(query_store, :type), class: 'text-success') %>
+          <% else %>
+            <%= fa_icon('minus', text: enum_t(query_store, :type), class: 'text-danger') %>
+          <% end %>
+        </td>
+        <% if actions_visible %>
+          <td>
+            <%= link_to_actions(query_store) %>
+            <%= link_to fa_icon('search', text: t('preview')),
+                        [:preview, query_store],
+                        class: 'btn btn-outline-info btn-sm' %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

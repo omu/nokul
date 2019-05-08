@@ -5,6 +5,7 @@ en:
         academic_calendars: Academic Calendars
         administration: Administration
         agenda_types: Agenda Types
+        authorizations: Authorizations
         available_courses: Available Courses
         calendar_event_types: Event Types
         calendar_management: Calendar Management
@@ -18,6 +19,7 @@ en:
         curriculums: Curriculums
         first_registration: First Registration
         high_school_types: High School Types
+        prospective_employees: Prospective Employees
         prospective_students: Prospective Students
         references: References
         registration_documents: Registration Documents

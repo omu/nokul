@@ -1,3 +1,4 @@
+---
 Style/AsciiComments:
   Enabled: false
 Style/Lambda:
@@ -6,12 +7,15 @@ Documentation:
   Enabled: false
 Metrics/LineLength:
   Max: 120
+Layout/AlignHash:
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
 Naming/FileName:
   Exclude:
     - lib/nokul-tenant.rb
 Rails/Delegate:
   Exclude:
-    - lib/nokul/tenant/initialize.rb
+    - lib/nokul/tenant/api.rb
 Rails/Output:
   Exclude:
     - lib/**/*.rb

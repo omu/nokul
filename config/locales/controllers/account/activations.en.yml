@@ -1,0 +1,33 @@
+en:
+  activemodel:
+    attributes:
+      activation/student_activation_service: &activation_attributes
+        country: Country
+        date_of_birth: Date of Birth
+        document_no: Document No
+        first_name: First Name
+        id_number: Identity Number
+        last_name: Last Name
+        mobile_phone: Mobile Phone
+        serial: Serial
+        serial_no: Serial No
+  account:
+    activations:
+      already_activated: Your account is already activated.
+      create:
+        success: Your account has been activated.
+      identity_not_verified: Your identity not verified. Make sure that the data you entered is correct.
+      record_not_found: There is no record in the system to activate your account.
+      system_error: The system error has occurred. Please try later.
+      new:
+        <<: *activation_attributes
+        activation: Activation
+        account_activation: Activate your account
+        agreements: By activating your account, you agree to our %{user_agreements_link} and %{privacy_policies_link}.
+        for_old_id_cards: For old identity cards
+        identity_verification: Identity Verification
+        login: Login
+        phone_verification: Phone Verification
+        privacy_policy: Privacy Policy
+        user_agreement: User Agreement
+        verify: Verify

@@ -12,6 +12,7 @@ en:
       employee: &employee_attributes
         id_number: ID Number
         is_active: Is Active?
+        staff_number: Staff Number
         title_id: Title
         user_id: User
       position: &position_attributes
@@ -19,6 +20,8 @@ en:
         end_date: End Date
         start_date: Start Date
       user: &user_attributes
+        activated: Account Activation
+        activated_at: Account Activation Date
         articles_count: Articles Count
         current_password: Current Password
         email: E-mail
@@ -27,10 +30,13 @@ en:
         password_changed_at: Last Password Change
         password_confirmation: Password Confirmation
         preferences: Visibility Settings
+        preferred_language: Preferred Language
         profile: Profile Settings
         projects_count: Projects Count
         public_photo: Show picture on my profile
         public_studies: Show academic studies on my profile
+        roles: Roles
+        query_stores: Scope Queries
   helpers:
     submit:
       user:
@@ -70,6 +76,7 @@ en:
       informal_identity: Informal Identity
       new_identity: Create New Identity
       update_from_mernis: Update from MERNIS
+      student_identity: Student Identity
       user_identity: User Identity
     index:
       <<: *user_attributes

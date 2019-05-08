@@ -12,6 +12,7 @@ tr:
       employee: &employee_attributes
         id_number: Kimlik Numarası
         is_active: Aktif mi?
+        staff_number: Personel Sicil No
         title_id: Ünvan
         user_id: Kullanıcı
       position: &position_attributes
@@ -19,6 +20,8 @@ tr:
         end_date: Bitiş Tarihi
         start_date: Başlangıç Tarihi
       user: &user_attributes
+        activated: Hesap Aktifleştirme
+        activated_at: Hesap Aktifleştirme Tarihi
         articles_count: Makale Sayısı
         current_password: Mevcut Parola
         email: E-mail Adresi
@@ -27,10 +30,13 @@ tr:
         password_changed_at: Son Parola Değişikliği
         password_confirmation: Parola (Tekrar)
         preferences: Görünürlük Ayarları
+        preferred_language: Sistem Dili
         profile: Profil Ayarları
         projects_count: Proje Sayısı
         public_photo: Profilimde Fotoğrafımı Göster
         public_studies: Profilimde Akademik Çalışmalarımı Göster
+        roles: Roller
+        query_stores: Kapsam Sorguları
   helpers:
     submit:
       user:
@@ -70,6 +76,7 @@ tr:
       informal_identity: Diğer Kimliğiniz
       new_identity: Yeni Kimlik Ekle
       update_from_mernis: MERNİS'ten Güncelle
+      student_identity: Öğrenci Kimliğiniz
       user_identity: Kullanıcı Kimliğiniz
     index:
       <<: *user_attributes

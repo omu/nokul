@@ -36,7 +36,7 @@ namespace :dump do
 
     Support::Sensitive.read_write 'tmp/static_data.sql'
 
-    sh 'tar -cvzf db/encrypted_data/static_data.tar.gz tmp/static_data.sql.enc.enc'
+    sh 'gzip -c tmp/static_data.sql.enc > db/encrypted_data/static_data.sql.enc.gz'
     sh 'rm tmp/static_data.*'
   end
 
@@ -60,7 +60,7 @@ namespace :dump do
 
     Support::Sensitive.read_write 'tmp/sample_data.sql'
 
-    sh 'tar -cvzf db/encrypted_data/sample_data.tar.gz tmp/sample_data.sql.enc.enc'
+    sh 'gzip -c tmp/sample_data.sql.enc > db/encrypted_data/sample_data.sql.enc.gz'
     sh 'rm tmp/sample_data.*'
   end
 

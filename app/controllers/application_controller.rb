@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
+  include Pundit
+
   protect_from_forgery with: :exception
 
   before_action :configure_permitted_parameters, if: :devise_controller?
@@ -8,6 +10,7 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
 
   rescue_from ActiveRecord::RecordNotFound, with: :not_found
+  rescue_from Pundit::NotAuthorizedError,   with: :user_not_authorized
 
   def set_locale
     language = locale_params
@@ -15,6 +18,9 @@ class ApplicationController < ActionController::Base
     if user_signed_in?
       current_user.update(preferred_language: language) if language
       I18n.locale = current_user.preferred_language
+
+      # set locale for pagy gem
+      @pagy_locale = current_user.preferred_language || 'tr'
     else
       I18n.locale = language || I18n.default_locale
     end
@@ -41,7 +47,17 @@ class ApplicationController < ActionController::Base
   end
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: %i[id_number email])
     devise_parameter_sanitizer.permit(:account_update, keys: %i[email])
+  end
+
+  private
+
+  def user_not_authorized(exception)
+    flash[:alert] = t(
+      "#{exception.policy.class.name.underscore}.#{exception.query}",
+      scope: 'pundit',
+      default: :default
+    )
+    redirect_back(fallback_location: root_path)
   end
 end

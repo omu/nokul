@@ -5,6 +5,7 @@ require 'nokul-support'
 require_relative 'tenant/version'
 require_relative 'tenant/errors'
 require_relative 'tenant/units'
+require_relative 'tenant/codification'
 require_relative 'tenant/api'
 require_relative 'tenant/engine'
 
@@ -26,8 +27,8 @@ module Nokul
       return if engine
 
       raise Error::LoadError, "Tenant seems to be uninitialized after loading from plugin #{plugin}"
-    rescue LoadError => err
-      raise Error::LoadError, "Couldn't load Tenant #{tenant} from plugin #{plugin}: #{err.message}"
+    rescue LoadError => e
+      raise Error::LoadError, "Couldn't load Tenant #{tenant} from plugin #{plugin}: #{e.message}"
     end
 
     def initialize(engine_class)

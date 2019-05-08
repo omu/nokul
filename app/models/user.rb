@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
+  # authorizations
+  include Patron::Roleable
+  include Patron::Scopable
+
   # virtual attributes
   attr_accessor :country
 
@@ -34,7 +38,6 @@ class User < ApplicationRecord
   # validations
   validates :email, presence: true, uniqueness: true, length: { maximum: 255 }
   validates :extension_number, allow_blank: true,
-                               allow_nil: true,
                                length: { maximum: 8 },
                                numericality: { only_integer: true }
   validates :id_number, uniqueness: true, numericality: { only_integer: true }, length: { is: 11 }
@@ -53,6 +56,9 @@ class User < ApplicationRecord
   # callbacks
   after_create_commit :build_address_information, if: proc { addresses.formal.empty? }
   after_create_commit :build_identity_information, if: proc { identities.formal.empty? }
+
+  # scopes
+  scope :activated, -> { where(activated: true) }
 
   # store accessors
   store :profile_preferences, accessors: %i[
@@ -96,6 +102,14 @@ class User < ApplicationRecord
 
   def self.with_most_projects
     where.not(projects_count: 0).order('projects_count desc').limit(10)
+  end
+
+  def active_for_authentication?
+    super && activated?
+  end
+
+  def inactive_message
+    activated? ? super : :account_not_activated
   end
 
   private

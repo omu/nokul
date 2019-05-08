@@ -8,6 +8,7 @@ serhat:
   military_status: true
   obs_status: true
   meb_status: true
+  registered: true
   academic_term: fall_2018_2019
   expiry_date: 2019-01-15 08:00:00
 john:
@@ -33,3 +34,30 @@ jane:
   meb_status: true
   academic_term: fall_2018_2019
   expiry_date: 2019-01-15 08:00:00
+mine:
+  email: mineurasli@gmail.com
+  first_name: Mine
+  last_name: Uraslı
+  unit: bilgisayar_muhendisligi
+  student_entrance_type: osys
+  id_number: 56593662552 # Sample ID number provided by KPS
+  gender: female
+  military_status: true
+  obs_status: true
+  meb_status: true
+  registered: true
+  academic_term: fall_2018_2019
+  expiry_date: 2019-05-15 08:00:00
+hira:
+  first_name: Hira Nur
+  last_name: Karpuz
+  unit: bilgisayar_muhendisligi
+  student_entrance_type: osys
+  id_number: 52249815310 # Sample ID number provided by KPS
+  gender: female
+  military_status: true
+  obs_status: true
+  meb_status: true
+  registered: true
+  academic_term: fall_2018_2019
+  expiry_date: 2019-05-15 08:00:00

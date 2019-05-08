@@ -90,7 +90,7 @@ tr:
         exam_informations: Sınav Bilgileri
         high_school_informations: Lise Bilgileri
         other_informations: Diğer Bilgiler
-        personel_informations: Kişisel Bilgiler
+        personal_informations: Kişisel Bilgiler
       index:
         <<: *prospective_student_attributes
         prospective_students: Yerleşen Öğrenciler

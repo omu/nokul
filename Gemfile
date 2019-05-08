@@ -8,7 +8,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 # core
 gem 'bootsnap', '>= 1.4.0', require: false
 gem 'puma', '~> 3.11'
-gem 'rails', github: 'rails/rails'
+gem 'rails', github: 'rails/rails', tag: 'v6.0.0.rc1'
 gem 'redis', '~> 4.0'
 gem 'sidekiq'
 
@@ -29,9 +29,12 @@ gem 'image_processing', '~> 1.2'
 gem 'authy'
 gem 'devise'
 
+# authorization
+gem 'pundit'
+
 # assets: core asset dependencies
 # TODO: Edge versions require coffee-rails https://github.com/rails/rails/issues/28965
-gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails', '~> 5.0'
 gem 'sassc-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'webpacker'
@@ -58,7 +61,7 @@ gem 'email_address'
 gem 'telephone_number'
 
 # error tracking
-gem 'rollbar', github: 'rollbar/rollbar-gem'
+gem 'rollbar'
 gem 'slack-notifier'
 
 # permalinks
@@ -67,17 +70,18 @@ gem 'friendly_id', '~> 5.2.0'
 # sms
 gem 'nexmo'
 gem 'smstools'
-gem 'twilio-ruby', '~> 5.21.2'
+gem 'twilio-ruby', '~> 5.22.3'
 
 group :development, :test do
   gem 'brakeman', require: false
-  gem 'bullet', github: 'flyerhzm/bullet'
+  gem 'bullet'
   gem 'bundler-audit'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'dotenv-rails'
   gem 'erb_lint', require: false
   gem 'lol_dba'
   gem 'rubocop'
+  gem 'rubocop-performance'
   gem 'simplecov', require: false
 end
 
@@ -97,7 +101,7 @@ group :development do
   gem 'ruby-progressbar'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'web-console', github: 'rails/web-console'
+  gem 'web-console'
 end
 
 # core plugins

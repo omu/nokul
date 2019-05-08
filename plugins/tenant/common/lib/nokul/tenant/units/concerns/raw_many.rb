@@ -43,30 +43,29 @@ module Nokul
         module Refinery
           FIX_AFTER_CAPITALIZE = {
             'Hast.' => 'Hastalıkları',
-            'Pr.' => 'Programı',
+            'Pr.'   => 'Programı',
             'Üniv.' => 'Üniversitesi'
           }.freeze
 
           refine String do
             def capitalize_and_fix
-              capitalized = capitalize_turkish_with_dashed_and_paranthesised
+              capitalized = capitalize_turkish_with_dashed_and_parenthesized
               FIX_AFTER_CAPITALIZE.each do |find, replace|
                 capitalized.gsub!(/(?<!\w)#{Regexp.escape(find)}(?!\w)/, replace)
               end
               capitalized
             end
 
-            # FIXME: This will eventually be replaced with a better implementation
-            def capitalize_turkish_with_dashed_and_paranthesised
-              capitalize_turkish_with_paranthesised.split.map do |word|
-                next word unless word =~ /-/
-
-                word.split('-').map do |dashed|
-                  next dashed unless dashed.size > 1
-
-                  dashed.capitalize_turkish
-                end.join '-'
+            def capitalize_turkish_with_dashed_and_parenthesized
+              capitalize_turkish_with_parenthesized.split.map do |word|
+                word.include?('-') ? word.capitalize_dashed_words : word
               end.join ' '
+            end
+
+            def capitalize_dashed_words
+              split('-').map do |word|
+                word.size > 1 ? word.capitalize_turkish : word
+              end.join '-'
             end
           end
         end

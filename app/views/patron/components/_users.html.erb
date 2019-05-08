@@ -1,0 +1,29 @@
+<table class='table table-striped table-hover'>
+  <thead class="thead-dark">
+    <tr>
+      <th><%= t('id_number', scope: %i[activerecord attributes user]) %></th>
+      <th><%= t('email', scope: %i[activerecord attributes user]) %></th>
+      <th><%= t('first_name', scope: %i[activerecord attributes identity]) %></th>
+      <th><%= t('last_name', scope: %i[activerecord attributes identity]) %></th>
+      <% if actions_visible %>
+        <th><%= t('actions') %></th>
+      <% end %>
+    </tr>
+  </thead>
+  <tbody>
+    <% users.each do |user| %>
+      <tr>
+        <td><%= user.id_number %></td>
+        <td><%= user.email %></td>
+        <td><%= user.identities.user_identity.try(:first_name) %></td>
+        <td><%= user.identities.user_identity.try(:last_name) %></td>
+        <% if actions_visible %>
+          <td>
+            <%= link_to_show patron_assignment_path(user) %>
+            <%= link_to_edit t('.assignment'), edit_patron_assignment_path(user) %>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

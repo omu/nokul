@@ -16,10 +16,10 @@ module Nokul
 
         config = (YAML.safe_load(ERB.new(yaml.read).result, [], [], true) || {})[env] || {}
         config.to_deep_ostruct
-      rescue Psych::SyntaxError => err
+      rescue Psych::SyntaxError => e
         raise "YAML syntax error occurred while parsing #{yaml}. " \
           'Please note that YAML must be consistently indented using spaces. Tabs are not allowed. ' \
-          "Error: #{err.message}"
+          "Error: #{e.message}"
       end
 
       def config_file_for(name)

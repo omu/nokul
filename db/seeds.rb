@@ -1,41 +1,44 @@
 # frozen_string_literal: true
 
-def load_seed_data
-  Dir[Rails.root.join('db', 'beta_seed', '*.rb')].sort.each do |seed|
-    load seed
+module PgExec
+  module_function
+
+  def call(sql)
+    db = PG.connect(**args)
+    # https://www.endpoint.com/blog/2015/01/28/postgres-sessionreplication-role
+    db.exec <<~SQL
+      SET session_replication_role = replica;
+      #{sql}
+      SET session_replication_role = origin;
+    SQL
+  ensure
+    db.close
+  end
+
+  def args
+    config = ActiveRecord::Base.configurations[Rails.env]
+    {
+      host: config['host'],
+      dbname: config['database'],
+      user: config['username'],
+      password: config['password']
+    }
   end
 end
 
-def extract_file(file_name)
-  extraction_path = Rails.root.join('db', 'encrypted_data', "#{file_name}.tar.gz").to_s
-  `tar xvzf "#{extraction_path}" -C tmp/`
-end
+ENCRYTED_DATA_DIR   = 'db/encrypted_data'
+COMPRESSED_FILE_EXT = '.sql.enc.gz'
 
-def decrypt_and_write_to_file(file_name)
-  file_to_decrypt = "tmp/#{file_name}.sql.enc"
-  file_to_write = "tmp/#{file_name}.sql"
-  File.write(
-    file_to_write,
-    Support::Sensitive.read(file_to_decrypt)
+def restore_seed_data(encrypted_data_name)
+  path = Rails.root.join(ENCRYTED_DATA_DIR, "#{encrypted_data_name}#{COMPRESSED_FILE_EXT}")
+
+  abort("File not found in: #{path}") unless path.exist?
+
+  PgExec.call(
+    Support::Sensitive.content_decrypt(ActiveSupport::Gzip.decompress(File.read(path)))
   )
-end
-
-def restore_sql_dump(file_name)
-  config = ActiveRecord::Base.configurations[Rails.env]
-  dump_file = Rails.root.join('tmp', "#{file_name}.sql")
-
-  connection = "PGPASSWORD=#{config['password']} psql \
-               -h #{config['host']} \
-               -d #{config['database']} \
-               -U #{config['username']} "
-
-  `#{connection + "-f #{dump_file}"}`
-end
-
-def restore_from_backup(file_name)
-  extract_file(file_name)
-  decrypt_and_write_to_file(file_name)
-  restore_sql_dump(file_name)
+rescue Pg::Error => e
+  abort("SQL error during exec: #{e.message}")
 end
 
 # Seed logic goes below
@@ -49,10 +52,13 @@ if ENV['SYNC'].eql?('true')
     Osym::ImportProspectiveStudentsJob.perform_later('db/encrypted_data/prospective_students.csv')
   end
 else
-  restore_from_backup('static_data')
+  restore_seed_data('static_data')
 
   if ENV['SAMPLE_DATA'].eql?('true')
-    restore_from_backup('sample_data') if ENV['SAMPLE_DATA'].eql?('true')
-    load_seed_data
+    restore_seed_data('sample_data')
+
+    Dir[Rails.root.join('db', 'beta_seed', '*.rb')].sort.each do |seed|
+      load seed
+    end
   end
 end

@@ -1,6 +1,6 @@
 tr:
   devise:
     confirmations:
-      confirmed: "Eposta adresiniz başırılı bir şekilde onaylandı."
-      send_instructions: "Bir kaç dakika içerisinde eposta adresinizi nasıl onaylayacağınız hakkında bir eposta alacaksınız."
-      send_paranoid_instructions: "Eğer eposta adresinizi veritabanımızda kayıtlı ise bir kaç dakika içerisinde eposta adresinizi nasıl onaylayacağınız hakkında bir eposta alacaksınız."
+      confirmed: "E-posta adresiniz başarılı bir şekilde onaylandı."
+      send_instructions: "Birkaç dakika içerisinde e-posta adresinizi nasıl onaylayacağınız hakkında bir e-posta alacaksınız."
+      send_paranoid_instructions: "E-posta adresiniz veritabanımızda kayıtlı ise birkaç dakika içerisinde e-posta adresinizi nasıl onaylayacağınız hakkında bir e-posta alacaksınız."

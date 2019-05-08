@@ -6,18 +6,21 @@ module Nokul
       class Coder
         class Pool
           include Support::Structure.of %i[
-            begins
-            ends
+            starting
+            ending
             owner
             weight
-            deny
+            pattern
             reserved
           ].freeze
 
           attr_reader :coder
 
           def after_initialize
-            @coder = Support::Codifications::Coder.new(begins, ends: ends, deny: deny, memory: Memory.instance)
+            @coder = Codification::Unit.code_generator(starting: starting,
+                                                       ending:   ending,
+                                                       pattern:  pattern,
+                                                       memory:   Memory.instance)
           end
 
           def score_of(unit)

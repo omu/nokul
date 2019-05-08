@@ -1,0 +1,34 @@
+en:
+  activerecord:
+    attributes:
+      patron/role: &role_attributes
+        identifier: Role Identifier
+        locked: Locked
+        name: Role Name
+        permissions: Permissions
+  helpers:
+    submit:
+      patron_role:
+        create: Create Role
+        update: Update Role
+  patron:
+    roles:
+      create:
+        success: Role successfully created.
+      destroy:
+        error: An error occured when deleting the role.
+        success: Role successfully deleted!
+      edit:
+        form_title: Update the Role
+      index:
+        card_header: Roles
+        new_role_link: Add a New Role
+        smart_search_placeholder: Role Name or Identifier
+      new:
+        form_title: Create a Role
+      show:
+        permissions: Permissions
+        smart_search_placeholder: Search with Model-Specific Keyword
+        users: Kullanıcılar
+      update:
+        success: Role successfully updated.

@@ -353,7 +353,7 @@
   duration: 2
   founded_at: 05.08.2010
 
-- name: Deniz ve Liman İşletmeciliği Programı (İö)
+- name: Deniz ve Liman İşletmeciliği Programı (İÖ)
   abbreviation: ALAÇAM-MYO-UH-DLİ-PR-2
   code: '205'
   yoksis_id: '276136'
@@ -415,7 +415,7 @@
   issues:
     - Kuruluş tarihi hatalı
 
-- name: Posta Hizmetleri Programı (İö)
+- name: Posta Hizmetleri Programı (İÖ)
   abbreviation: ALAÇAM-MYO-UH-PH-PR-2
   code: '208'
   yoksis_id: '240435'
@@ -460,7 +460,7 @@
   duration: 2
   founded_at: 10.06.2010
 
-- name: Lojistik Programı (İö)
+- name: Lojistik Programı (İÖ)
   abbreviation: ALAÇAM-MYO-YO-L-PR-2
   code: '210'
   yoksis_id: '240433'
@@ -827,7 +827,7 @@
   duration: 2
   founded_at: 10.09.2009
 
-- name: Bilgisayar Programcılığı Programı (İö)
+- name: Bilgisayar Programcılığı Programı (İÖ)
   abbreviation: BAFRA-MYO-BT-BP-PR-2
   code: '213'
   yoksis_id: '169447'
@@ -896,7 +896,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Tıbbi ve Aromatik Bitkiler Programı (İö)
+- name: Tıbbi ve Aromatik Bitkiler Programı (İÖ)
   abbreviation: BAFRA-MYO-BHÜ-TAB-PR-2
   code: '217'
   yoksis_id: '169426'
@@ -953,7 +953,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
-- name: Muhasebe ve Vergi Uygulamaları Programı (İö) (Bk.605)
+- name: Muhasebe ve Vergi Uygulamaları Programı (İÖ) (Bk.605)
   abbreviation: BAFRA-MYO-MV-PR-2-605
   code: '218'
   yoksis_id: '145961'
@@ -1431,7 +1431,7 @@
   unit_instruction_type_id: Normal Öğretim
   founded_at: 26.02.2010
 
-- name: Bilgisayar ve Öğretim Teknolojileri Eğitimi (Yl) (Tezli)
+- name: Bilgisayar ve Öğretim Teknolojileri Eğitimi (YL) (Tezli)
   abbreviation: BÖTE-YL
   code: '601'
   yoksis_id: '244883'
@@ -1445,7 +1445,7 @@
   duration: 2
   founded_at: 15.08.2013
 
-- name: Biyoloji Eğitimi (Yl) (Tezli)
+- name: Biyoloji Eğitimi (YL) (Tezli)
   abbreviation: BİYOEĞ-YL
   code: '602'
   yoksis_id: '301215'
@@ -1459,7 +1459,7 @@
   duration: 2
   founded_at: 10.08.2016
 
-- name: Eğitim Bilimleri (Dr)
+- name: Eğitim Bilimleri (DR)
   abbreviation: EĞİTİM-BİLİM-EB-DR
   yoksis_id: '174849'
   parent_yoksis_id: '174846'
@@ -1488,7 +1488,7 @@
     - üst birim olan Eğitim Bilimleri (Dr) arşiv olarak görünüyor
     - Detsis tarafında anabilim dalı başkanlığı enstitüye bağlı
 
-- name: Eğitimin Felsefi, Sosyal ve Tarihi Temelleri (Yl)
+- name: Eğitimin Felsefi, Sosyal ve Tarihi Temelleri (YL)
   abbreviation: EFST-YL
   code: '604'
   yoksis_id: '327688'
@@ -1502,7 +1502,7 @@
   duration: 2
   founded_at: '08.08.2017'
 
-- name: Eğitim Programları ve Öğretim (Yl) (Tezli)
+- name: Eğitim Programları ve Öğretim (YL) (Tezli)
   abbreviation: EPO-YL
   code: '605'
   yoksis_id: '207884'
@@ -1516,7 +1516,7 @@
   duration: 2
   founded_at: 03.05.2011
 
-- name: Eğitim Programları ve Öğretim (Yl) (Tezsiz)
+- name: Eğitim Programları ve Öğretim (YL) (Tezsiz)
   abbreviation: EPO-YZ
   code: '606'
   yoksis_id: '339817'
@@ -1530,7 +1530,7 @@
   duration: 2
   founded_at: '09.05.2018'
 
-- name: Eğitim Yönetimi (Dr)
+- name: Eğitim Yönetimi (DR)
   abbreviation: EY-DR
   code: '607'
   yoksis_id: '327630'
@@ -1544,7 +1544,7 @@
   duration: 4
   founded_at: '08.08.2017'
 
-- name: Eğitim Yönetimi (Yl) (Tezli)
+- name: Eğitim Yönetimi (YL) (Tezli)
   abbreviation: EY-YL
   code: '608'
   yoksis_id: '327629'
@@ -1558,7 +1558,7 @@
   duration: 2
   founded_at: '08.08.2017'
 
-- name: Eğitim Yönetimi (Yl) (Tezsiz) (Uzaktan Öğretim)
+- name: Eğitim Yönetimi (YL) (Tezsiz) (Uzaktan Öğretim)
   abbreviation: EY-YZ-UZ
   code: '012'
   yoksis_id: '327678'
@@ -1572,7 +1572,7 @@
   duration: 2
   founded_at: '08.08.2017'
 
-- name: Eğitim Yönetimi (Yl) (Tezsiz) (İö)
+- name: Eğitim Yönetimi (YL) (Tezsiz) (İÖ)
   abbreviation: EY-YZ-2
   code: '609'
   yoksis_id: '327631'
@@ -1586,7 +1586,7 @@
   duration: 2
   founded_at: '08.08.2017'
 
-- name: Eğitimin Felsefi, Sosyal ve Tarihi Temelleri (Dr)
+- name: Eğitimin Felsefi, Sosyal ve Tarihi Temelleri (DR)
   abbreviation: EFST-DR
   code: '610'
   yoksis_id: '376129'
@@ -1600,7 +1600,7 @@
   duration: 4
   founded_at: 27.06.2018
 
-- name: Fen Bilgisi Eğitim (Dr)
+- name: Fen Bilgisi Eğitim (DR)
   abbreviation: FENBİL-DR
   code: '611'
   yoksis_id: '267754'
@@ -1614,7 +1614,7 @@
   duration: 4
   founded_at: '08.08.2017'
 
-- name: Fen Bilgisi Eğitim (Yl) (Tezli)
+- name: Fen Bilgisi Eğitim (YL) (Tezli)
   abbreviation: FENBİL-YL
   code: '612'
   yoksis_id: '267753'
@@ -1630,7 +1630,7 @@
   issues:
     - Kuruluş tarihi hatalı
 
-- name: Fen Bilgisi Eğitim (Yl) (Tezsiz) (Uzaktan Öğretim)
+- name: Fen Bilgisi Eğitim (YL) (Tezsiz) (Uzaktan Öğretim)
   abbreviation: FENBİL-YZ-UZ
   code: '013'
   yoksis_id: '244484'
@@ -1644,7 +1644,7 @@
   duration: 2
   founded_at: 06.06.2013
 
-- name: Fen Bilgisi Eğitimi (Yl) (Tezsiz) (İö)
+- name: Fen Bilgisi Eğitimi (YL) (Tezsiz) (İÖ)
   abbreviation: FENBİL-YZ-2
   code: '613'
   yoksis_id: '235189'
@@ -1658,7 +1658,7 @@
   duration: 2
   founded_at: 01.03.2013
 
-- name: Fizik Eğitimi (Yl) (Tezli)
+- name: Fizik Eğitimi (YL) (Tezli)
   abbreviation: FİZİKEĞ-YL
   code: '614'
   yoksis_id: '245968'
@@ -1684,7 +1684,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
-- name: Müzik Eğitimi (Yl) (Tezli)
+- name: Müzik Eğitimi (YL) (Tezli)
   abbreviation: MÜZİK-YL
   code: '615'
   yoksis_id: '230796'
@@ -1698,7 +1698,7 @@
   duration: 2
   founded_at: 29.01.2004
 
-- name: Müzik Eğitimi (Yl) (Tezsiz) (İö)
+- name: Müzik Eğitimi (YL) (Tezsiz) (İÖ)
   abbreviation: MÜZİK-YZ-2
   code: '616'
   yoksis_id: '244884'
@@ -1712,7 +1712,7 @@
   duration: 2
   founded_at: 15.08.2013
 
-- name: Ortaöğretim Fen ve Matematik Alanları Eğitimi (Dr)
+- name: Ortaöğretim Fen ve Matematik Alanları Eğitimi (DR)
   abbreviation: ORTAFENMAT-DR
   code: '617'
   yoksis_id: '174856'
@@ -1726,7 +1726,7 @@
   duration: 4
   founded_at: 26.02.2010
 
-- name: Ortaöğretim Sosyal Alanlar Eğitimi (Dr)
+- name: Ortaöğretim Sosyal Alanlar Eğitimi (DR)
   abbreviation: ORTASOSYAL-DR
   code: '618'
   yoksis_id: '174850'
@@ -1740,7 +1740,7 @@
   duration: 4
   founded_at: 26.02.2010
 
-- name: Rehberlik ve Psikolojik Danışmanlık (Yl) (Tezli) (Ordu Üniversitesi Ortak)
+- name: Rehberlik ve Psikolojik Danışmanlık (YL) (Tezli) (Ordu Üniversitesi Ortak)
   abbreviation: PDR-YL-ORDU
   code: '619'
   yoksis_id: '280865'
@@ -1754,7 +1754,7 @@
   duration: 2
   founded_at: '09.09.2015'
 
-- name: Resim-İş Eğitimi (Dr)
+- name: Resim-İş Eğitimi (DR)
   abbreviation: RESİMİŞ-DR
   code: '620'
   yoksis_id: '230808'
@@ -1768,7 +1768,7 @@
   duration: 4
   founded_at: 19.02.2003
 
-- name: Resim-İş Eğitimi (Yl) (Tezli)
+- name: Resim-İş Eğitimi (YL) (Tezli)
   abbreviation: RESİMİŞ-YL
   code: '621'
   yoksis_id: '230810'
@@ -1782,7 +1782,7 @@
   duration: 2
   founded_at: 13.07.2001
 
-- name: Sınıf Eğitimi (Dr)
+- name: Sınıf Eğitimi (DR)
   abbreviation: SINIF-DR
   code: '622'
   yoksis_id: '267760'
@@ -1796,7 +1796,7 @@
   duration: 4
   founded_at: 02.08.2017
 
-- name: Sınıf Eğitimi (Yl) (Tezli)
+- name: Sınıf Eğitimi (YL) (Tezli)
   abbreviation: SINIF-YL
   code: '623'
   yoksis_id: '267759'
@@ -1810,7 +1810,7 @@
   duration: 2
   founded_at: 02.08.2017
 
-- name: Sınıf Eğitimi (Yl) (Tezsiz) (Uzaktan Öğretim)
+- name: Sınıf Eğitimi (YL) (Tezsiz) (Uzaktan Öğretim)
   abbreviation: SINIF-YZ-UZ
   code: '014'
   yoksis_id: '244486'
@@ -1824,7 +1824,7 @@
   duration: 2
   founded_at: 06.06.2013
 
-- name: Sınıf Eğitimi (Yl) (Tezsiz) (İö)
+- name: Sınıf Eğitimi (YL) (Tezsiz) (İÖ)
   abbreviation: SINIF-YZ-2
   code: '624'
   yoksis_id: '327682'
@@ -1838,7 +1838,7 @@
   duration: 2
   founded_at: '08.08.2017'
 
-- name: Sosyal Bilgiler Eğitimi (Dr)
+- name: Sosyal Bilgiler Eğitimi (DR)
   abbreviation: SOSYALBİL-DR
   code: '625'
   yoksis_id: '327681'
@@ -1852,7 +1852,7 @@
   duration: 4
   founded_at: '08.08.2017'
 
-- name: Sosyal Bilgiler Eğitimi (Yl) (Tezli)
+- name: Sosyal Bilgiler Eğitimi (YL) (Tezli)
   abbreviation: SOSYALBİL-YL
   code: '626'
   yoksis_id: '327632'
@@ -1866,7 +1866,7 @@
   duration: 2
   founded_at: '08.08.2017'
 
-- name: Sosyal Bilgiler Eğitimi (Yl) (Tezsiz) (Uzaktan Öğretim)
+- name: Sosyal Bilgiler Eğitimi (YL) (Tezsiz) (Uzaktan Öğretim)
   abbreviation: SOSYALBİL-YZ-UZ
   code: '015'
   yoksis_id: '244485'
@@ -1880,7 +1880,7 @@
   duration: 2
   founded_at: 06.06.2013
 
-- name: Sosyal Bilgiler Eğitimi (Yl) (Tezsiz) (İö)
+- name: Sosyal Bilgiler Eğitimi (YL) (Tezsiz) (İÖ)
   abbreviation: SOSYALBİL-YZ-2
   code: '627'
   yoksis_id: '327680'
@@ -1894,7 +1894,7 @@
   duration: 2
   founded_at: '08.08.2017'
 
-- name: Tarih Eğitimi (Yl) (Tezli)
+- name: Tarih Eğitimi (YL) (Tezli)
   abbreviation: TARİHEĞ-YL
   code: '628'
   yoksis_id: '213373'
@@ -1908,7 +1908,7 @@
   duration: 2
   founded_at: 02.02.2012
 
-- name: Tarih Eğitimi (Yl) (Tezsiz) (Uzaktan Öğretim)
+- name: Tarih Eğitimi (YL) (Tezsiz) (Uzaktan Öğretim)
   abbreviation: TARİHEĞ-YZ-UZ
   code: '016'
   yoksis_id: '244483'
@@ -1922,7 +1922,7 @@
   duration: 2
   founded_at: 06.06.2013
 
-- name: Türkçe Eğitimi (Dr)
+- name: Türkçe Eğitimi (DR)
   abbreviation: TÜRKÇE-DR
   code: '629'
   yoksis_id: '174852'
@@ -1936,7 +1936,7 @@
   duration: 4
   founded_at: 26.02.2010
 
-- name: Türkçe Eğitimi (Yl) (Tezli)
+- name: Türkçe Eğitimi (YL) (Tezli)
   abbreviation: TÜRKÇE-YL
   code: '630'
   yoksis_id: '267757'
@@ -1962,7 +1962,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
-- name: İlköğretim (Dr)
+- name: İlköğretim (DR)
   abbreviation: İLK-DR
   code: '631'
   yoksis_id: '174851'
@@ -1976,7 +1976,7 @@
   duration: 4
   founded_at: 26.02.2010
 
-- name: İlköğretim Matematik Eğitimi (Yl) (Tezli)
+- name: İlköğretim Matematik Eğitimi (YL) (Tezli)
   abbreviation: İLKMAT-YL
   code: '632'
   yoksis_id: '267758'
@@ -1990,7 +1990,7 @@
   duration: 2
   founded_at: '08.02.2010'
 
-- name: İlköğretim Sınıf Öğretmenliği (Yl) (Tezsiz) (İö)
+- name: İlköğretim Sınıf Öğretmenliği (YL) (Tezsiz) (İÖ)
   abbreviation: İLKSINIF-YZ-2
   code: '633'
   yoksis_id: '235186'
@@ -2731,7 +2731,7 @@
   unit_instruction_type_id: Normal Öğretim
   founded_at: 20.07.1982
 
-- name: Adli Bilimler (Yl) (Tezli)
+- name: Adli Bilimler (YL) (Tezli)
   abbreviation: ADLİ-YL
   code: '634'
   yoksis_id: '255365'
@@ -2745,7 +2745,7 @@
   duration: 2
   founded_at: 26.02.2014
 
-- name: Akıllı Sistemler Mühendisliği (Yl) (Tezli)
+- name: Akıllı Sistemler Mühendisliği (YL) (Tezli)
   abbreviation: ASM-YL
   code: '635'
   yoksis_id: '255366'
@@ -2759,7 +2759,7 @@
   duration: 2
   founded_at: 26.02.2014
 
-- name: Bahçe Bitkileri (Dr)
+- name: Bahçe Bitkileri (DR)
   abbreviation: BAHÇE-DR
   code: '636'
   yoksis_id: '211283'
@@ -2772,7 +2772,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Bahçe Bitkileri (Yl) (Tezli)
+- name: Bahçe Bitkileri (YL) (Tezli)
   abbreviation: BAHÇE-YL
   code: '637'
   yoksis_id: '211284'
@@ -2785,7 +2785,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Bilgisayar Mühendisliği (Yl) (Tezli)
+- name: Bilgisayar Mühendisliği (YL) (Tezli)
   abbreviation: BİLGİSAYAR-YL
   code: '603'
   yoksis_id: '211296'
@@ -2798,7 +2798,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Bitki Koruma (Dr)
+- name: Bitki Koruma (DR)
   abbreviation: BİTKİKOR-DR
   code: '638'
   yoksis_id: '211294'
@@ -2811,7 +2811,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Bitki Koruma (Yl) (Tezli)
+- name: Bitki Koruma (YL) (Tezli)
   abbreviation: BİTKİKOR-YL
   code: '639'
   yoksis_id: '211293'
@@ -2825,7 +2825,7 @@
   duration: 2
   founded_at: 07.05.2018
 
-- name: Biyoloji (Dr)
+- name: Biyoloji (DR)
   abbreviation: BİYO-DR
   code: '640'
   yoksis_id: '211282'
@@ -2838,7 +2838,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Biyoloji (Yl) (Tezli)
+- name: Biyoloji (YL) (Tezli)
   abbreviation: BİYO-YL
   code: '641'
   yoksis_id: '211261'
@@ -2852,7 +2852,7 @@
   duration: 2
   founded_at: 07.05.2018
 
-- name: Biyoloji (Yl) (Tezsiz)
+- name: Biyoloji (YL) (Tezsiz)
   abbreviation: BİYO-YZ
   code: '642'
   yoksis_id: '234077'
@@ -2865,7 +2865,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Biyoloji (Yl) (Tezsiz) (Uzaktan Öğretim)
+- name: Biyoloji (YL) (Tezsiz) (Uzaktan Öğretim)
   abbreviation: BİYO-YZ-UZ
   code: '017'
   yoksis_id: '317402'
@@ -2879,7 +2879,7 @@
   duration: 2
   founded_at: 29.04.2012
 
-- name: Elektrik-Elektronik Mühendisliği (Dr)
+- name: Elektrik-Elektronik Mühendisliği (DR)
   abbreviation: ELEKTRİK-DR
   code: '643'
   yoksis_id: '211254'
@@ -2892,7 +2892,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Elektrik-Elektronik Mühendisliği (Yl) (Tezli)
+- name: Elektrik-Elektronik Mühendisliği (YL) (Tezli)
   abbreviation: ELEKTRİK-YL
   code: '644'
   yoksis_id: '211253'
@@ -2905,7 +2905,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Fizik (Dr)
+- name: Fizik (DR)
   abbreviation: FİZİK-DR
   code: '645'
   yoksis_id: '211257'
@@ -2918,7 +2918,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Fizik (Yl) (Tezli)
+- name: Fizik (YL) (Tezli)
   abbreviation: FİZİK-YL
   code: '646'
   yoksis_id: '211258'
@@ -2934,7 +2934,7 @@
   issues:
     - Kuruluş tarihi hatalı
 
-- name: Fizik (Yl) (Tezsiz)
+- name: Fizik (YL) (Tezsiz)
   abbreviation: FİZİK-YZ
   code: '647'
   yoksis_id: '234095'
@@ -2947,7 +2947,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Fizik (Yl) (Tezsiz) (Uzaktan Öğretim)
+- name: Fizik (YL) (Tezsiz) (Uzaktan Öğretim)
   abbreviation: FİZİK-YZ-UZ
   code: '018'
   yoksis_id: '317401'
@@ -2961,7 +2961,7 @@
   duration: 2
   founded_at: 29.04.2012
 
-- name: Gıda Mühendisliği (Dr)
+- name: Gıda Mühendisliği (DR)
   abbreviation: GIDA-DR
   code: '648'
   yoksis_id: '211298'
@@ -2974,7 +2974,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Gıda Mühendisliği (Dr) (Ordu Üniversitesi Ortak)
+- name: Gıda Mühendisliği (DR) (Ordu Üniversitesi Ortak)
   abbreviation: GIDA-DR-ORDU
   code: '649'
   yoksis_id: '279463'
@@ -2988,7 +2988,7 @@
   duration: 4
   founded_at: '08.07.2015'
 
-- name: Gıda Mühendisliği (Yl) (Tezli)
+- name: Gıda Mühendisliği (YL) (Tezli)
   abbreviation: GIDA-YL
   code: '650'
   yoksis_id: '211297'
@@ -3002,7 +3002,7 @@
   duration: 2
   founded_at: 30.04.2018
 
-- name: Gıda Mühendisliği (Yl) (Tezli) (Ordu Üniversitesi Ortak)
+- name: Gıda Mühendisliği (YL) (Tezli) (Ordu Üniversitesi Ortak)
   abbreviation: GIDA-YL-ORDU
   code: '651'
   yoksis_id: '226065'
@@ -3016,7 +3016,7 @@
   duration: 2
   founded_at: 13.09.2012
 
-- name: Harita Mühendisliği (Dr)
+- name: Harita Mühendisliği (DR)
   abbreviation: HARİTA-DR
   code: '652'
   yoksis_id: '211266'
@@ -3029,7 +3029,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Harita Mühendisliği (Yl) (Tezli)
+- name: Harita Mühendisliği (YL) (Tezli)
   abbreviation: HARİTA-YL
   code: '653'
   yoksis_id: '211265'
@@ -3045,7 +3045,7 @@
   issues:
     - Kuruluş tarihi hatalı
 
-- name: Hesaplamalı Bilimler (Dr)
+- name: Hesaplamalı Bilimler (DR)
   abbreviation: HESAP-DR
   code: '654'
   yoksis_id: '255368'
@@ -3059,7 +3059,7 @@
   duration: 4
   founded_at: 26.02.2014
 
-- name: Kimya (Dr)
+- name: Kimya (DR)
   abbreviation: FEN-KİMYA-DR
   code: '655'
   yoksis_id: '211290'
@@ -3072,7 +3072,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Kimya (Yl) (Tezli)
+- name: Kimya (YL) (Tezli)
   abbreviation: FEN-KİMYA-YL
   code: '656'
   yoksis_id: '211289'
@@ -3086,7 +3086,7 @@
   duration: 2
   founded_at: 07.05.2018
 
-- name: Kimya (Yl) (Tezsiz) (Uzaktan Öğretim)
+- name: Kimya (YL) (Tezsiz) (Uzaktan Öğretim)
   abbreviation: FEN-KİMYA-YL-UZ
   code: '019'
   yoksis_id: '317403'
@@ -3112,7 +3112,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
-- name: Kimya Mühendisliği (Yl) (Tezli)
+- name: Kimya Mühendisliği (YL) (Tezli)
   abbreviation: KİMYA-YL
   code: '657'
   yoksis_id: '225905'
@@ -3126,7 +3126,7 @@
   duration: 2
   founded_at: '09.08.2012'
 
-- name: Makine Mühendisliği (Dr)
+- name: Makine Mühendisliği (DR)
   abbreviation: MAKİNE-DR
   code: '658'
   yoksis_id: '209678'
@@ -3140,7 +3140,7 @@
   duration: 4
   founded_at: 23.08.2011
 
-- name: Makine Mühendisliği (Yl) (Tezli)
+- name: Makine Mühendisliği (YL) (Tezli)
   abbreviation: MAKİNE-YL
   code: '659'
   yoksis_id: '169494'
@@ -3154,7 +3154,7 @@
   duration: 2
   founded_at: 10.09.2009
 
-- name: Matematik (Dr)
+- name: Matematik (DR)
   abbreviation: MAT-DR
   code: '660'
   yoksis_id: '211256'
@@ -3167,7 +3167,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Matematik (Dr) (Ordu Üniversitesi Ortak)
+- name: Matematik (DR) (Ordu Üniversitesi Ortak)
   abbreviation: MAT-DR-ORDU
   code: '661'
   yoksis_id: '242518'
@@ -3181,7 +3181,7 @@
   duration: 4
   founded_at: 27.06.2013
 
-- name: Matematik (Yl) (Tezli)
+- name: Matematik (YL) (Tezli)
   abbreviation: MAT-YL
   code: '662'
   yoksis_id: '211255'
@@ -3195,7 +3195,7 @@
   duration: 2
   founded_at: 07.05.2018
 
-- name: Matematik (Yl) (Tezsiz) (Uzaktan Öğretim)
+- name: Matematik (YL) (Tezsiz) (Uzaktan Öğretim)
   abbreviation: MAT-YL-UZ
   code: '020'
   yoksis_id: '317399'
@@ -3209,7 +3209,7 @@
   duration: 2
   founded_at: 29.04.2012
 
-- name: Metalurji ve Malzeme Mühendisliği (Yl) (Tezli)
+- name: Metalurji ve Malzeme Mühendisliği (YL) (Tezli)
   abbreviation: MALZEME-YL
   code: '663'
   yoksis_id: '371245'
@@ -3223,7 +3223,7 @@
   duration: 2
   founded_at: 23.05.2018
 
-- name: Nanobilim ve Nanoteknoloji (Dr) (İngilizce)
+- name: Nanobilim ve Nanoteknoloji (DR) (İngilizce)
   abbreviation: NANO-DR-İNG
   code: '664'
   yoksis_id: '255370'
@@ -3237,7 +3237,7 @@
   duration: 4
   founded_at: 26.02.2014
 
-- name: Nanobilim ve Nanoteknoloji (Yl) (Tezli) (İngilizce)
+- name: Nanobilim ve Nanoteknoloji (YL) (Tezli) (İngilizce)
   abbreviation: NANO-YL-İNG
   code: '665'
   yoksis_id: '255369'
@@ -3251,7 +3251,7 @@
   duration: 2
   founded_at: 26.02.2014
 
-- name: Sağlık, Gıda Güvenliği ve İlgili Politikalar (Yl) (Tezli)
+- name: Sağlık, Gıda Güvenliği ve İlgili Politikalar (YL) (Tezli)
   abbreviation: SGGİP-YL
   code: '666'
   yoksis_id: '261702'
@@ -3265,7 +3265,7 @@
   duration: 2
   founded_at: 25.09.2014
 
-- name: Tarım Ekonomisi (Dr)
+- name: Tarım Ekonomisi (DR)
   abbreviation: TARIM-DR
   code: '667'
   yoksis_id: '176121'
@@ -3279,7 +3279,7 @@
   duration: 4
   founded_at: 26.08.2010
 
-- name: Tarım Ekonomisi (Yl) (Tezli)
+- name: Tarım Ekonomisi (YL) (Tezli)
   abbreviation: TARIM-YL
   code: '668'
   yoksis_id: '230597'
@@ -3293,7 +3293,7 @@
   duration: 2
   founded_at: 07.05.2018
 
-- name: Tarım Makinaları ve Teknoloji Mühendisliği (Dr)
+- name: Tarım Makinaları ve Teknoloji Mühendisliği (DR)
   abbreviation: TMT-DR
   code: '669'
   yoksis_id: '211260'
@@ -3307,7 +3307,7 @@
   duration: 4
   founded_at: 15.09.2008
 
-- name: Tarım Makinaları ve Teknoloji Mühendisliği (Yl) (Tezli)
+- name: Tarım Makinaları ve Teknoloji Mühendisliği (YL) (Tezli)
   abbreviation: TMT-YL
   code: '670'
   yoksis_id: '211259'
@@ -3321,7 +3321,7 @@
   duration: 2
   founded_at: 03.06.2015
 
-- name: Tarımsal Biyoteknoloji (Dr)
+- name: Tarımsal Biyoteknoloji (DR)
   abbreviation: TBT-DR
   code: '671'
   yoksis_id: '255701'
@@ -3335,7 +3335,7 @@
   duration: 4
   founded_at: 20.02.2014
 
-- name: Tarımsal Biyoteknoloji (Yl) (Tezli)
+- name: Tarımsal Biyoteknoloji (YL) (Tezli)
   abbreviation: TBT-YL
   code: '672'
   yoksis_id: '211287'
@@ -3349,7 +3349,7 @@
   duration: 2
   founded_at: 07.05.2018
 
-- name: Tarımsal Yapılar ve Sulama (Dr)
+- name: Tarımsal Yapılar ve Sulama (DR)
   abbreviation: TYS-DR
   code: '673'
   yoksis_id: '211250'
@@ -3362,7 +3362,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Tarımsal Yapılar ve Sulama (Yl) (Tezli)
+- name: Tarımsal Yapılar ve Sulama (YL) (Tezli)
   abbreviation: TYS-YL
   code: '674'
   yoksis_id: '211249'
@@ -3376,7 +3376,7 @@
   duration: 2
   founded_at: 30.04.2018
 
-- name: Tarla Bitkileri (Dr)
+- name: Tarla Bitkileri (DR)
   abbreviation: TARLA-DR
   code: '675'
   yoksis_id: '211286'
@@ -3389,7 +3389,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Tarla Bitkileri (Yl) (Tezli)
+- name: Tarla Bitkileri (YL) (Tezli)
   abbreviation: TARLA-YL
   code: '676'
   yoksis_id: '211285'
@@ -3403,7 +3403,7 @@
   duration: 2
   founded_at: 30.04.2018
 
-- name: Taşınmaz Değerleme ve Geliştirme (Yl) (Tezsiz) (Uzaktan Öğretim)
+- name: Taşınmaz Değerleme ve Geliştirme (YL) (Tezsiz) (Uzaktan Öğretim)
   abbreviation: TAŞINMAZ-YZ-UZ
   code: '021'
   yoksis_id: '215852'
@@ -3417,7 +3417,7 @@
   duration: 2
   founded_at: 19.04.2012
 
-- name: Toprak Bilimi ve Bitki Besleme (Dr)
+- name: Toprak Bilimi ve Bitki Besleme (DR)
   abbreviation: TOPRAK-DR
   code: '677'
   yoksis_id: '203725'
@@ -3431,7 +3431,7 @@
   duration: 4
   founded_at: 17.02.2011
 
-- name: Toprak Bilimi ve Bitki Besleme (Yl) (Tezli)
+- name: Toprak Bilimi ve Bitki Besleme (YL) (Tezli)
   abbreviation: TOPRAK-YL
   code: '678'
   yoksis_id: '203724'
@@ -3445,7 +3445,7 @@
   duration: 2
   founded_at: 17.02.2011
 
-- name: Uçak ve Uzay Bilimleri Mühendisliği (Yl) (Tezli)
+- name: Uçak ve Uzay Bilimleri Mühendisliği (YL) (Tezli)
   abbreviation: UÇAK-YL
   code: '679'
   yoksis_id: '339818'
@@ -3472,7 +3472,7 @@
   unit_instruction_type_id: Normal Öğretim
   founded_at: 01.06.2016
 
-- name: Yenilenebilir Enerji ve Uygulamaları (Yl) (Tezli)
+- name: Yenilenebilir Enerji ve Uygulamaları (YL) (Tezli)
   abbreviation: FEN-BİLİM-YEU-YL
   code: '680'
   yoksis_id: '303045'
@@ -3486,7 +3486,7 @@
   duration: 2
   founded_at: 01.06.2016
 
-- name: Zootekni (Dr)
+- name: Zootekni (DR)
   abbreviation: ZOO-DR
   code: '681'
   yoksis_id: '211291'
@@ -3499,7 +3499,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Zootekni (Yl) (Tezli)
+- name: Zootekni (YL) (Tezli)
   abbreviation: ZOO-YL
   code: '682'
   yoksis_id: '211292'
@@ -3513,7 +3513,7 @@
   duration: 2
   founded_at: 07.05.2018
 
-- name: Zootekni (Yl) (Tezli) (Ordu Üniversitesi Ortak)
+- name: Zootekni (YL) (Tezli) (Ordu Üniversitesi Ortak)
   abbreviation: ZOO-YL-ORDU
   code: '683'
   yoksis_id: '226064'
@@ -3527,7 +3527,7 @@
   duration: 2
   founded_at: 13.09.2012
 
-- name: Çevre Mühendisliği (Dr)
+- name: Çevre Mühendisliği (DR)
   abbreviation: ÇEVRE-DR
   code: '684'
   yoksis_id: '211248'
@@ -3540,7 +3540,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Çevre Mühendisliği (Yl) (Tezli)
+- name: Çevre Mühendisliği (YL) (Tezli)
   abbreviation: ÇEVRE-YL
   code: '685'
   yoksis_id: '211247'
@@ -3554,7 +3554,7 @@
   duration: 2
   founded_at: 07.05.2018
 
-- name: Çevre Mühendisliği (Yl) (Tezli) (İngilizce)
+- name: Çevre Mühendisliği (YL) (Tezli) (İngilizce)
   abbreviation: ÇEVRE-YL-İNG
   code: '686'
   yoksis_id: '244882'
@@ -3568,7 +3568,7 @@
   duration: 2
   founded_at: 15.08.2013
 
-- name: İnşaat Mühendisliği (Dr)
+- name: İnşaat Mühendisliği (DR)
   abbreviation: İNŞAAT-DR
   code: '687'
   yoksis_id: '213374'
@@ -3582,7 +3582,7 @@
   duration: 4
   founded_at: 02.02.2012
 
-- name: İnşaat Mühendisliği (Yl) (Tezli)
+- name: İnşaat Mühendisliği (YL) (Tezli)
   abbreviation: İNŞAAT-YL
   code: '688'
   yoksis_id: '231330'
@@ -3608,7 +3608,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
-- name: İstatistik (Dr)
+- name: İstatistik (DR)
   abbreviation: İSTATİSTİK-DR
   code: '689'
   yoksis_id: '211251'
@@ -3621,7 +3621,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: İstatistik (Dr) (Karadeniz Teknik Üniversitesi Ortak)
+- name: İstatistik (DR) (Karadeniz Teknik Üniversitesi Ortak)
   abbreviation: İSTATİSTİK-DR-KTÜ
   code: '690'
   yoksis_id: '213389'
@@ -3635,7 +3635,7 @@
   duration: 4
   founded_at: 02.02.2012
 
-- name: İstatistik (Yl) (Tezli)
+- name: İstatistik (YL) (Tezli)
   abbreviation: İSTATİSTİK-YL
   code: '691'
   yoksis_id: '211252'
@@ -4908,7 +4908,7 @@
   unit_instruction_type_id: Normal Öğretim
   founded_at: 20.07.1982
 
-- name: Görsel İletişim Tasarımı (Yl) (Tezli)
+- name: Görsel İletişim Tasarımı (YL) (Tezli)
   abbreviation: GİT-YL
   code: '692'
   yoksis_id: '255316'
@@ -4922,7 +4922,7 @@
   duration: 2
   founded_at: 20.02.2014
 
-- name: Müzikte Yorumculuk (Yl) (Tezli)
+- name: Müzikte Yorumculuk (YL) (Tezli)
   abbreviation: MY-YL
   code: '693'
   yoksis_id: '258248'
@@ -4936,7 +4936,7 @@
   duration: 2
   founded_at: 19.06.2014
 
-- name: Müzikte Yorumculuk (Yl) (Tezsiz)
+- name: Müzikte Yorumculuk (YL) (Tezsiz)
   abbreviation: MY-YZ
   code: '694'
   yoksis_id: '258249'
@@ -4950,7 +4950,7 @@
   duration: 2
   founded_at: 19.06.2014
 
-- name: Resim (Yl) (Tezli)
+- name: Resim (YL) (Tezli)
   abbreviation: RESİM-YL
   code: '695'
   yoksis_id: '281828'
@@ -4978,7 +4978,7 @@
   duration: 4
   founded_at: 12.07.2017
 
-- name: Tıbbi Resimleme (Yl) (Tezli)
+- name: Tıbbi Resimleme (YL) (Tezli)
   abbreviation: TIBBİRESİM-YL
   code: '696'
   yoksis_id: '278819'
@@ -5324,7 +5324,7 @@
   duration: 2
   founded_at: 27.04.2016
 
-- name: Büro Yönetimi ve Yönetici Asistanlığı Programı (İö)
+- name: Büro Yönetimi ve Yönetici Asistanlığı Programı (İÖ)
   abbreviation: HAVZA-MYO-BHS-BYYA-PR-2
   code: '258'
   yoksis_id: '175631'
@@ -5409,7 +5409,7 @@
   duration: 2
   founded_at: 10.09.2009
 
-- name: Turizm ve Otel İşletmeciliği Programı (İö)
+- name: Turizm ve Otel İşletmeciliği Programı (İÖ)
   abbreviation: HAVZA-MYO-OTEL-TOİ-PR-2
   code: '261'
   yoksis_id: '169575'
@@ -5451,7 +5451,7 @@
   duration: 2
   founded_at: 10.09.2009
 
-- name: Fizyoterapi Programı (İö)
+- name: Fizyoterapi Programı (İÖ)
   abbreviation: HAVZA-MYO-TERAPİ-FİZYO-PR-2
   code: '263'
   yoksis_id: '169588'
@@ -5534,7 +5534,7 @@
   duration: 2
   founded_at: 27.04.2016
 
-- name: İşletme Yönetimi Programı (İö)
+- name: İşletme Yönetimi Programı (İÖ)
   abbreviation: HAVZA-MYO-YO-İY-PR-2
   code: '266'
   yoksis_id: '240432'
@@ -6834,7 +6834,7 @@
   duration: 2
   founded_at: 19.03.2014
 
-- name: Bilgisayar Programcılığı Programı (İö)
+- name: Bilgisayar Programcılığı Programı (İÖ)
   abbreviation: SAMSUN-MYO-BT-BP-PR-2
   code: '279'
   yoksis_id: '169876'
@@ -6902,7 +6902,7 @@
   duration: 2
   founded_at: 10.09.2009
 
-- name: Mimari Dekoratif Sanatlar Programı (İö)
+- name: Mimari Dekoratif Sanatlar Programı (İÖ)
   abbreviation: SAMSUN-MYO-EL-MDS-PR-2
   code: '282'
   yoksis_id: '169850'
@@ -7055,7 +7055,7 @@
   duration: 2
   founded_at: 10.09.2009
 
-- name: Muhasebe ve Vergi Uygulamaları Programı (İö)
+- name: Muhasebe ve Vergi Uygulamaları Programı (İÖ)
   abbreviation: SAMSUN-MYO-MV-PR-2
   code: '286'
   yoksis_id: '169804'
@@ -7100,7 +7100,7 @@
   issues:
     - Kuruluş tarihi hatalı
 
-- name: Turizm ve Otel İşletmeciliği Programı (İö)
+- name: Turizm ve Otel İşletmeciliği Programı (İÖ)
   abbreviation: SAMSUN-MYO-OTEL-TOİ-PR-2
   code: '288'
   yoksis_id: '320498'
@@ -7315,7 +7315,7 @@
   unit_instruction_type_id: Normal Öğretim
   founded_at: 20.07.1982
 
-- name: Acil Hemşireliği (Dr)
+- name: Acil Hemşireliği (DR)
   abbreviation: ACİL-DR
   code: '697'
   yoksis_id: '329992'
@@ -7329,7 +7329,7 @@
   duration: 4
   founded_at: 22.02.2017
 
-- name: Acil Hemşireliği (Yl) (Tezli)
+- name: Acil Hemşireliği (YL) (Tezli)
   abbreviation: ACİL-YL
   code: '698'
   yoksis_id: '329991'
@@ -7343,7 +7343,7 @@
   duration: 2
   founded_at: 22.02.2017
 
-- name: Alerji-İmmünoloji (Yl) (Tezli)
+- name: Alerji-İmmünoloji (YL) (Tezli)
   abbreviation: ALERJİ-YL
   code: '699'
   yoksis_id: '219171'
@@ -7356,7 +7356,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Anatomi (Dr)
+- name: Anatomi (DR)
   abbreviation: ANATOMİ-DR
   code: '700'
   yoksis_id: '169540'
@@ -7369,7 +7369,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Veterinerlik Anatomisi (Yl) (Tezli)
+- name: Veterinerlik Anatomisi (YL) (Tezli)
   abbreviation: VETERİNER-ANATOMİ-YL
   code: '701'
   yoksis_id: '169511'
@@ -7383,7 +7383,7 @@
   duration: 2
   founded_at: 10.09.2009
 
-- name: Antrenörlük Eğitimi (Dr)
+- name: Antrenörlük Eğitimi (DR)
   abbreviation: ANTRENÖR-DR
   code: '702'
   yoksis_id: '267669'
@@ -7397,7 +7397,7 @@
   duration: 4
   founded_at: 25.03.2015
 
-- name: Antrenörlük Eğitimi (Yl) (Tezli)
+- name: Antrenörlük Eğitimi (YL) (Tezli)
   abbreviation: ANTRENÖR-YL
   code: '703'
   yoksis_id: '267668'
@@ -7411,7 +7411,7 @@
   duration: 2
   founded_at: 25.03.2015
 
-- name: Ağız, Diş ve Çene Cerrahisi (Dr)
+- name: Ağız, Diş ve Çene Cerrahisi (DR)
   abbreviation: ADÇC-DR
   code: '704'
   yoksis_id: '169547'
@@ -7424,7 +7424,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Beden Eğitimi ve Spor (Dr)
+- name: Beden Eğitimi ve Spor (DR)
   abbreviation: SAĞLIK-BİLİM-BES-DR
   code: '705'
   yoksis_id: '169551'
@@ -7439,7 +7439,7 @@
   issues:
     - SAĞLIK-BİLİM VE SOSYAL-BİLİM altında aynı isimli Doktora
 
-- name: Beslenme Bilimleri (Yl) (Tezli)
+- name: Beslenme Bilimleri (YL) (Tezli)
   abbreviation: BESLENME-YL
   code: '706'
   yoksis_id: '225937'
@@ -7453,7 +7453,7 @@
   duration: 2
   founded_at: '09.08.2012'
 
-- name: Veterinerlik Besin Hijyeni ve Teknolojisi (Dr)
+- name: Veterinerlik Besin Hijyeni ve Teknolojisi (DR)
   abbreviation: VETERİNER-BESİN-DR
   code: '707'
   yoksis_id: '169576'
@@ -7466,7 +7466,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Veterinerlik Besin Hijyeni ve Teknolojisi (Yl) (Tezli)
+- name: Veterinerlik Besin Hijyeni ve Teknolojisi (YL) (Tezli)
   abbreviation: VETERİNER-BESİN-YL
   code: '708'
   yoksis_id: '169516'
@@ -7480,7 +7480,7 @@
   duration: 2
   founded_at: 10.09.2009
 
-- name: Veterinerlik Biyokimyası (Dr)
+- name: Veterinerlik Biyokimyası (DR)
   abbreviation: VETERİNER-BİYOKİMYA-DR
   code: '709'
   yoksis_id: '213250'
@@ -7494,7 +7494,7 @@
   duration: 4
   founded_at: 30.11.2011
 
-- name: Veterinerlik Biyokimyası (Yl) (Tezli)
+- name: Veterinerlik Biyokimyası (YL) (Tezli)
   abbreviation: VETERİNER-BİYOKİMYA-YL
   code: '710'
   yoksis_id: '213249'
@@ -7508,7 +7508,7 @@
   duration: 2
   founded_at: 30.11.2011
 
-- name: Biyoistatistik ve Tıp Bilişimi (Dr)
+- name: Biyoistatistik ve Tıp Bilişimi (DR)
   abbreviation: BİYOİSTATİSTİK-DR
   code: '711'
   yoksis_id: '211302'
@@ -7521,7 +7521,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Biyoistatistik ve Tıp Bilişimi (Yl) (Tezli)
+- name: Biyoistatistik ve Tıp Bilişimi (YL) (Tezli)
   abbreviation: BİYOİSTATİSTİK-YL
   code: '712'
   yoksis_id: '211301'
@@ -7535,7 +7535,7 @@
   duration: 2
   founded_at: 07.05.2018
 
-- name: Veterinerlik Cerrahisi (Dr)
+- name: Veterinerlik Cerrahisi (DR)
   abbreviation: VETERİNER-CERRAHİ-DR
   code: '713'
   yoksis_id: '255317'
@@ -7549,7 +7549,7 @@
   duration: 4
   founded_at: 20.02.2014
 
-- name: Veterinerlik Cerrahisi (Yl) (Tezli)
+- name: Veterinerlik Cerrahisi (YL) (Tezli)
   abbreviation: VETERİNER-CERRAHİ-YL
   code: '714'
   yoksis_id: '244886'
@@ -7563,7 +7563,7 @@
   duration: 2
   founded_at: 15.08.2013
 
-- name: Veterinerlik Doğum ve Jinekolojisi (Dr)
+- name: Veterinerlik Doğum ve Jinekolojisi (DR)
   abbreviation: VETERİNER-JİNEKOLOJİ-DR
   code: '715'
   yoksis_id: '169578'
@@ -7576,7 +7576,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Doğum ve Kadın Hastalıkları Hemşireliği (Dr)
+- name: Doğum ve Kadın Hastalıkları Hemşireliği (DR)
   abbreviation: DOĞUMHEM-DR
   code: '716'
   yoksis_id: '301224'
@@ -7590,7 +7590,7 @@
   duration: 4
   founded_at: 10.08.2016
 
-- name: Doğum ve Kadın Hastalıkları Hemşireliği (Yl) (Tezli)
+- name: Doğum ve Kadın Hastalıkları Hemşireliği (YL) (Tezli)
   abbreviation: DOĞUMHEM-YL
   code: '717'
   yoksis_id: '301216'
@@ -7604,7 +7604,7 @@
   duration: 2
   founded_at: 10.08.2016
 
-- name: Doğum ve Kadın Hastalıkları Hemşireliği (Yl) (Tezsiz) (İö)
+- name: Doğum ve Kadın Hastalıkları Hemşireliği (YL) (Tezsiz) (İÖ)
   abbreviation: DOĞUMHEM-YZ-2
   code: '718'
   yoksis_id: '301217'
@@ -7618,7 +7618,7 @@
   duration: 2
   founded_at: 10.08.2016
 
-- name: Veterinerlik Doğum ve Jinekolojisi (Veteriner) (Yl) (Tezli)
+- name: Veterinerlik Doğum ve Jinekolojisi (Veteriner) (YL) (Tezli)
   abbreviation: VETERİNER-JİNEKOLOJİ-YL
   code: '719'
   yoksis_id: '169535'
@@ -7633,7 +7633,7 @@
   issues:
     - s/Vinekoloji/Jinekoloji
 
-- name: Dölerme ve Suni Tohumlama (Dr)
+- name: Dölerme ve Suni Tohumlama (DR)
   abbreviation: DÖLERME-DR
   code: '720'
   yoksis_id: '169574'
@@ -7646,7 +7646,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Dölerme ve Suni Tohumlama (Veteriner) (Yl) (Tezli)
+- name: Dölerme ve Suni Tohumlama (Veteriner) (YL) (Tezli)
   abbreviation: VETERİNER-DÖLERME-YL
   code: '721'
   yoksis_id: '169517'
@@ -7660,7 +7660,7 @@
   duration: 2
   founded_at: 10.09.2009
 
-- name: Restoratif Diş Tedavisi (Dr)
+- name: Restoratif Diş Tedavisi (DR)
   abbreviation: RDT-DR
   code: '722'
   yoksis_id: '169553'
@@ -7673,7 +7673,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Ebelik (Yl) (Tezli)
+- name: Ebelik (YL) (Tezli)
   abbreviation: EBELİK-YL
   code: '723'
   yoksis_id: '323921'
@@ -7687,7 +7687,7 @@
   duration: 2
   founded_at: 07.06.2017
 
-- name: Endodonti (Dr)
+- name: Endodonti (DR)
   abbreviation: ENDO-DR
   code: '724'
   yoksis_id: '209677'
@@ -7701,7 +7701,7 @@
   duration: 4
   founded_at: 23.08.2011
 
-- name: Evde Bakım Hemşireliği (Yl) (Tezsiz) (İö)
+- name: Evde Bakım Hemşireliği (YL) (Tezsiz) (İÖ)
   abbreviation: EBH-YZ-2
   code: '725'
   yoksis_id: '220719'
@@ -7715,7 +7715,7 @@
   duration: 2
   founded_at: 05.06.2012
 
-- name: Farmakoloji (Dr)
+- name: Farmakoloji (DR)
   abbreviation: FARMAKOLOJİ-DR
   code: '726'
   yoksis_id: '169567'
@@ -7728,7 +7728,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Veterinerlik Farmakoloji ve Toksikoloji (Dr)
+- name: Veterinerlik Farmakoloji ve Toksikoloji (DR)
   abbreviation: VETERİNER-FARMATOK-DR
   code: '727'
   yoksis_id: '169572'
@@ -7742,7 +7742,7 @@
   duration: 4
   founded_at: 10.09.2009
 
-- name: Veterinerlik Farmakoloji ve Toksikoloji (Yl) (Tezli)
+- name: Veterinerlik Farmakoloji ve Toksikoloji (YL) (Tezli)
   abbreviation: VETERİNER-FARMATOK-YL
   code: '728'
   yoksis_id: '283800'
@@ -7756,7 +7756,7 @@
   duration: 2
   founded_at: 06.01.2016
 
-- name: Fizyoloji (Dr)
+- name: Fizyoloji (DR)
   abbreviation: FİZYOLOJİ-DR
   code: '729'
   yoksis_id: '169541'
@@ -7769,7 +7769,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Veterinerlik Fizyolojsi (Yl) (Tezli)
+- name: Veterinerlik Fizyolojsi (YL) (Tezli)
   abbreviation: VETERİNER-FİZYOLOJİ-YL
   code: '730'
   yoksis_id: '257559'
@@ -7783,7 +7783,7 @@
   duration: 2
   founded_at: 17.04.2014
 
-- name: Halk Sağlığı (Dr)
+- name: Halk Sağlığı (DR)
   abbreviation: HALK-DR
   code: '731'
   yoksis_id: '169558'
@@ -7796,7 +7796,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Halk Sağlığı Hemşireliği (Yl) (Tezli)
+- name: Halk Sağlığı Hemşireliği (YL) (Tezli)
   abbreviation: HSH-YL
   code: '732'
   yoksis_id: '169518'
@@ -7810,7 +7810,7 @@
   duration: 2
   founded_at: 10.09.2009
 
-- name: Hastalıklar (Dr) (Veteriner)
+- name: Hastalıklar (DR) (Veteriner)
   abbreviation: VETERİNER-HASTA-DR
   code: '733'
   yoksis_id: '219170'
@@ -7823,7 +7823,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Hayvan Besleme ve Beslenme Hastalıkları (Dr)
+- name: Hayvan Besleme ve Beslenme Hastalıkları (DR)
   abbreviation: VETERİNER-HBH-DR
   code: '734'
   yoksis_id: '169580'
@@ -7836,7 +7836,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Hayvan Besleme ve Beslenme Hastalıkları (Yl) (Tezli) (Veteriner)
+- name: Hayvan Besleme ve Beslenme Hastalıkları (YL) (Tezli) (Veteriner)
   abbreviation: VETERİNER-HBH-YL
   code: '735'
   yoksis_id: '169521'
@@ -7849,7 +7849,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Hemşirelik (Dr)
+- name: Hemşirelik (DR)
   abbreviation: HEMŞİRE-DR
   code: '736'
   yoksis_id: '285232'
@@ -7863,7 +7863,7 @@
   duration: 4
   founded_at: 22.06.2015
 
-- name: Hemşirelik (Yl) (Tezli)
+- name: Hemşirelik (YL) (Tezli)
   abbreviation: HEMŞİRE-YL
   code: '737'
   yoksis_id: '285233'
@@ -7877,7 +7877,7 @@
   duration: 2
   founded_at: 22.06.2015
 
-- name: Hemşirelik (Yl) (Tezli) (Hitit Üniversitesi Ortak)
+- name: Hemşirelik (YL) (Tezli) (Hitit Üniversitesi Ortak)
   abbreviation: HEMŞİRE-YL-HİTİT
   code: '738'
   yoksis_id: '284464'
@@ -7891,7 +7891,7 @@
   duration: 2
   founded_at: 13.01.2016
 
-- name: Hemşirelik (Yl) (Tezsiz)
+- name: Hemşirelik (YL) (Tezsiz)
   abbreviation: HEMŞİRE-YZ
   code: '739'
   yoksis_id: '290926'
@@ -7905,7 +7905,7 @@
   duration: 2
   founded_at: 10.06.2015
 
-- name: Histoloji ve Embriyoloji (Dr)
+- name: Histoloji ve Embriyoloji (DR)
   abbreviation: HİSTO-DR
   code: '740'
   yoksis_id: '219168'
@@ -7918,7 +7918,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Histoloji ve Embriyoloji (Yl) (Tezli)
+- name: Histoloji ve Embriyoloji (YL) (Tezli)
   abbreviation: HİSTO-YL
   code: '741'
   yoksis_id: '219167'
@@ -7932,7 +7932,7 @@
   duration: 2
   founded_at: 07.05.2018
 
-- name: Kardiyopulmoner Fizyoterapi (Yl) (Tezli)
+- name: Kardiyopulmoner Fizyoterapi (YL) (Tezli)
   abbreviation: KPF-YL
   code: '742'
   yoksis_id: '230172'
@@ -7946,7 +7946,7 @@
   duration: 2
   founded_at: 25.08.2011
 
-- name: Klinik Sinir Bilimleri (Dr)
+- name: Klinik Sinir Bilimleri (DR)
   abbreviation: KLİNİKSİNİR-DR
   code: '743'
   yoksis_id: '236919'
@@ -7973,7 +7973,7 @@
   unit_instruction_type_id: Normal Öğretim
   founded_at: 22.06.2016
 
-- name: Klinik Toksikoloji (Dr)
+- name: Klinik Toksikoloji (DR)
   abbreviation: SAĞLIK-BİLİM-TOKSİK-DR-DA
   code: '744'
   yoksis_id: '297556'
@@ -7987,7 +7987,7 @@
   duration: 4
   founded_at: 22.06.2016
 
-- name: Moleküler Tıp (Dr)
+- name: Moleküler Tıp (DR)
   abbreviation: MOLTIP-DR
   code: '745'
   yoksis_id: '257542'
@@ -8001,7 +8001,7 @@
   duration: 4
   founded_at: 17.04.2014
 
-- name: Moleküler Tıp (Yl) (Tezli)
+- name: Moleküler Tıp (YL) (Tezli)
   abbreviation: MOL-TIP-YL
   code: '746'
   yoksis_id: '257541'
@@ -8015,7 +8015,7 @@
   duration: 2
   founded_at: 17.04.2014
 
-- name: Veterinerlik Mikrobiyolojisi (Yl) (Tezli)
+- name: Veterinerlik Mikrobiyolojisi (YL) (Tezli)
   abbreviation: VETERİNER-MİKRO-YL
   code: '747'
   yoksis_id: '225902'
@@ -8044,7 +8044,7 @@
   issues:
     - Detsis tarafında anabilim dalı başkanlığı yok. SAĞLIK-BİLİM-TMİKRO-ADB ile benzerlik kontrol edilmeli.
 
-- name: Veterinerlik Mikrobiyolojisi (Dr)
+- name: Veterinerlik Mikrobiyolojisi (DR)
   abbreviation: VETERİNER-MİKRO-DR
   code: '748'
   yoksis_id: '280441'
@@ -8058,7 +8058,7 @@
   duration: 4
   founded_at: 05.08.2015
 
-- name: Odyoloji (Yl) (Tezli)
+- name: Odyoloji (YL) (Tezli)
   abbreviation: ODYO-TL
   code: '749'
   yoksis_id: '169523'
@@ -8071,7 +8071,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Oral Diagnoz ve Radyoloji (Dr)
+- name: Oral Diagnoz ve Radyoloji (DR)
   abbreviation: ODR-DR
   code: '750'
   yoksis_id: '169555'
@@ -8084,7 +8084,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Ortodonti (Dr)
+- name: Ortodonti (DR)
   abbreviation: ORTO-DR
   code: '751'
   yoksis_id: '169543'
@@ -8097,7 +8097,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Parazitoloji (Dr)
+- name: Parazitoloji (DR)
   abbreviation: PARAZİT-DR
   code: '752'
   yoksis_id: '169560'
@@ -8110,7 +8110,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Veterinerlik Parazitolojisi (Yl) (Tezli)
+- name: Veterinerlik Parazitolojisi (YL) (Tezli)
   abbreviation: VETERİNER-PARAZİT-YL
   code: '753'
   yoksis_id: '225901'
@@ -8124,7 +8124,7 @@
   duration: 2
   founded_at: '09.08.2012'
 
-- name: Patoloji (Dr)
+- name: Patoloji (DR)
   abbreviation: PATO-DR
   code: '754'
   yoksis_id: '169561'
@@ -8137,7 +8137,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Veterinerlik Patolojisi (Dr)
+- name: Veterinerlik Patolojisi (DR)
   abbreviation: VETERİNER-PATO-DR
   code: '755'
   yoksis_id: '219169'
@@ -8150,7 +8150,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Pedodonti (Dr)
+- name: Pedodonti (DR)
   abbreviation: PEDO-DR
   code: '756'
   yoksis_id: '169570'
@@ -8163,7 +8163,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Periodontoloji (Dr)
+- name: Periodontoloji (DR)
   abbreviation: PERİO-DR
   code: '757'
   yoksis_id: '169546'
@@ -8176,7 +8176,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Protetik Diş Tedavisi (Dr)
+- name: Protetik Diş Tedavisi (DR)
   abbreviation: PDT-DR
   code: '758'
   yoksis_id: '169556'
@@ -8189,7 +8189,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Radyolojik Bilimler (Dr)
+- name: Radyolojik Bilimler (DR)
   abbreviation: RADYOB-DR
   code: '759'
   yoksis_id: '309657'
@@ -8203,7 +8203,7 @@
   duration: 4
   founded_at: 28.03.2013
 
-- name: Radyolojik Bilimler (Yl) (Tezli)
+- name: Radyolojik Bilimler (YL) (Tezli)
   abbreviation: RADYOB-YL
   code: '760'
   yoksis_id: '219260'
@@ -8217,7 +8217,7 @@
   duration: 2
   founded_at: 03.03.2011
 
-- name: Ruh Sağlığı ve Hastalıkları Hemşireliği (Yl) (Tezli)
+- name: Ruh Sağlığı ve Hastalıkları Hemşireliği (YL) (Tezli)
   abbreviation: RUH-YL
   code: '761'
   yoksis_id: '169527'
@@ -8230,7 +8230,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Sağlık Yönetimi (Dr)
+- name: Sağlık Yönetimi (DR)
   abbreviation: SAĞLIKYÖN-DR
   code: '762'
   yoksis_id: '278605'
@@ -8244,7 +8244,7 @@
   duration: 4
   founded_at: 16.06.2015
 
-- name: Sağlık Yönetimi (Yl) (Tezli)
+- name: Sağlık Yönetimi (YL) (Tezli)
   abbreviation: SAĞLIKYÖN-YL
   code: '763'
   yoksis_id: '213229'
@@ -8258,7 +8258,7 @@
   duration: 2
   founded_at: 30.11.2011
 
-- name: Sağlık Yönetimi (Yl) (Tezsiz) (Uzaktan Öğretim)
+- name: Sağlık Yönetimi (YL) (Tezsiz) (Uzaktan Öğretim)
   abbreviation: SAĞLIKYÖN-TZ-UZ
   code: '028'
   yoksis_id: '215871'
@@ -8272,7 +8272,7 @@
   duration: 2
   founded_at: 19.04.2012
 
-- name: Sağlık Yönetimi (Yl) (Tezsiz) (İö)
+- name: Sağlık Yönetimi (YL) (Tezsiz) (İÖ)
   abbreviation: SAĞLIKYÖN-YZ-2
   code: '764'
   yoksis_id: '225903'
@@ -8286,7 +8286,7 @@
   duration: 2
   founded_at: '09.08.2012'
 
-- name: Su Ürünleri Hastalıkları (Yl) (Tezli)
+- name: Su Ürünleri Hastalıkları (YL) (Tezli)
   abbreviation: SU-YL
   code: '765'
   yoksis_id: '261143'
@@ -8300,7 +8300,7 @@
   duration: 2
   founded_at: 25.09.2014
 
-- name: Sucul Hayvan Hastalıkları (Dr)
+- name: Sucul Hayvan Hastalıkları (DR)
   abbreviation: SUCUL-DR
   code: '766'
   yoksis_id: '334300'
@@ -8327,7 +8327,7 @@
   unit_instruction_type_id: Normal Öğretim
   founded_at: 03.03.2011
 
-- name: Sinir Bilimleri (Dr)
+- name: Sinir Bilimleri (DR)
   abbreviation: SİNİR-DR
   code: '767'
   yoksis_id: '203750'
@@ -8341,7 +8341,7 @@
   duration: 4
   founded_at: 03.03.2011
 
-- name: Sinir Bilimleri (Yl) (Tezli)
+- name: Sinir Bilimleri (YL) (Tezli)
   abbreviation: SİNİR-YL
   code: '768'
   yoksis_id: '203749'
@@ -8355,7 +8355,7 @@
   duration: 2
   founded_at: 03.03.2011
 
-- name: Tıbbi Biyokimya (Dr)
+- name: Tıbbi Biyokimya (DR)
   abbreviation: TBİYOKİMYA-DR
   code: '769'
   yoksis_id: '169539'
@@ -8369,7 +8369,7 @@
   duration: 4
   founded_at: 01.01.2009
 
-- name: Tıbbi Biyoloji (Dr)
+- name: Tıbbi Biyoloji (DR)
   abbreviation: TBİYOLOJİ-DR
   code: '770'
   yoksis_id: '211304'
@@ -8382,7 +8382,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Tıbbi Biyoloji (Yl) (Tezli)
+- name: Tıbbi Biyoloji (YL) (Tezli)
   abbreviation: TBİYOLOJİ-YL
   code: '771'
   yoksis_id: '211303'
@@ -8396,7 +8396,7 @@
   duration: 2
   founded_at: 07.05.2018
 
-- name: Tıbbi Farmakoloji (Dr)
+- name: Tıbbi Farmakoloji (DR)
   abbreviation: TFARMA-DR
   code: '772'
   yoksis_id: '211300'
@@ -8409,7 +8409,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Tıbbi Farmakoloji (Yl) (Tezli)
+- name: Tıbbi Farmakoloji (YL) (Tezli)
   abbreviation: TFARMA-YL
   code: '773'
   yoksis_id: '211299'
@@ -8423,7 +8423,7 @@
   duration: 2
   founded_at: 07.05.2018
 
-- name: Tıbbi Mikrobiyoloji (Dr)
+- name: Tıbbi Mikrobiyoloji (DR)
   abbreviation: TMİKRO-DR
   code: '774'
   yoksis_id: '169549'
@@ -8452,7 +8452,7 @@
   issues:
     - Detsis tarafında anabilim dalı başkanlığı yok
 
-- name: Tıp Hukuku (Yl) (Tezli)
+- name: Tıp Hukuku (YL) (Tezli)
   abbreviation: SAĞLIK-BİLİM-TIPH-YL
   code: '775'
   yoksis_id: '301226'
@@ -8466,7 +8466,7 @@
   duration: 2
   founded_at: 10.08.2016
 
-- name: Uluslararası Düzenleyici Bilim (Yl) (Tezli)
+- name: Uluslararası Düzenleyici Bilim (YL) (Tezli)
   abbreviation: UDB-YL
   code: '776'
   yoksis_id: '261826'
@@ -8480,7 +8480,7 @@
   duration: 2
   founded_at: 15.10.2014
 
-- name: Veteriner Hekimliği Tarihi ve Deontoloji (Dr)
+- name: Veteriner Hekimliği Tarihi ve Deontoloji (DR)
   abbreviation: VETERİNER-DEON-DR
   code: '777'
   yoksis_id: '255372'
@@ -8494,7 +8494,7 @@
   duration: 4
   founded_at: 26.02.2014
 
-- name: Veteriner Hekimliği Tarihi ve Deontoloji (Yl) (Tezli)
+- name: Veteriner Hekimliği Tarihi ve Deontoloji (YL) (Tezli)
   abbreviation: VETERİNER-DEON-YL
   code: '778'
   yoksis_id: '255371'
@@ -8508,7 +8508,7 @@
   duration: 2
   founded_at: 26.02.2014
 
-- name: Veteriner Histoloji ve Embriyoloji (Yl) (Tezli)
+- name: Veteriner Histoloji ve Embriyoloji (YL) (Tezli)
   abbreviation: VETERİNER-HİSTO-YL
   code: '779'
   yoksis_id: '325734'
@@ -8522,7 +8522,7 @@
   duration: 2
   founded_at: 19.07.2017
 
-- name: Viroloji (Dr)
+- name: Viroloji (DR)
   abbreviation: VİROLOJİ-DR
   code: '780'
   yoksis_id: '169563'
@@ -8535,7 +8535,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Viroloji (Veteriner) (Dr)
+- name: Viroloji (Veteriner) (DR)
   abbreviation: VETERİNER-VİROLOJİ-DR
   code: '781'
   yoksis_id: '244885'
@@ -8549,7 +8549,7 @@
   duration: 4
   founded_at: 15.08.2013
 
-- name: Viroloji (Veteriner) (Yl) (Tezli)
+- name: Viroloji (Veteriner) (YL) (Tezli)
   abbreviation: VETERİNER-VİROLOJİ-YL
   code: '782'
   yoksis_id: '169533'
@@ -8563,7 +8563,7 @@
   duration: 2
   founded_at: 07.05.2018
 
-- name: Zootekni (Veteriner) (Dr)
+- name: Zootekni (Veteriner) (DR)
   abbreviation: VETERİNER-ZOO-DR
   code: '783'
   yoksis_id: '169565'
@@ -8577,7 +8577,7 @@
   duration: 4
   founded_at: 07.05.2018
 
-- name: Zootekni (Veteriner) (Yl) (Tezli)
+- name: Zootekni (Veteriner) (YL) (Tezli)
   abbreviation: VETERİNER-ZOO-YL
   code: '784'
   yoksis_id: '278856'
@@ -8591,7 +8591,7 @@
   duration: 2
   founded_at: 24.06.2015
 
-- name: İç Hastalıkları (Veteriner) (Dr)
+- name: İç Hastalıkları (Veteriner) (DR)
   abbreviation: VETERİNER-İÇH-DR
   code: '785'
   yoksis_id: '169569'
@@ -8605,7 +8605,7 @@
   duration: 4
   founded_at: 07.05.2018
 
-- name: İç Hastalıkları (Yl) (Veteriner) (Tezli)
+- name: İç Hastalıkları (YL) (Veteriner) (Tezli)
   abbreviation: VETERİNER-İÇH-YL
   code: '786'
   yoksis_id: '281621'
@@ -9061,7 +9061,7 @@
   issues:
     - Kuruluş tarihi hatalı
 
-- name: Yaşlı Bakımı Programı (İö)
+- name: Yaşlı Bakımı Programı (İÖ)
   abbreviation: SAĞLIK-MYO-SBH-YAŞLI-PR-2
   code: '300'
   yoksis_id: '240439'
@@ -9164,7 +9164,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Patoloji Laboratuvar Teknikleri Programı (İö)
+- name: Patoloji Laboratuvar Teknikleri Programı (İÖ)
   abbreviation: SAĞLIK-MYO-THT-PLT-PR-2
   code: '306'
   yoksis_id: '215481'
@@ -9192,7 +9192,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Tıbbi Dokümantasyon ve Sekreterlik Programı (İö)
+- name: Tıbbi Dokümantasyon ve Sekreterlik Programı (İÖ)
   abbreviation: SAĞLIK-MYO-THT-TDS-PR-2
   code: '308'
   yoksis_id: '169658'
@@ -9222,7 +9222,7 @@
   duration: 2
   founded_at: 10.09.2009
 
-- name: Tıbbi Görüntüleme Teknikleri Programı (İö)
+- name: Tıbbi Görüntüleme Teknikleri Programı (İÖ)
   abbreviation: SAĞLIK-MYO-THT-TGT-PR-2
   code: '310'
   yoksis_id: '243775'
@@ -9270,7 +9270,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: İlk ve Acil Yardım Programı (İö)
+- name: İlk ve Acil Yardım Programı (İÖ)
   abbreviation: SAĞLIK-MYO-THT-İAY-PR-2
   code: '313'
   yoksis_id: '229074'
@@ -9296,7 +9296,7 @@
   unit_instruction_type_id: Normal Öğretim
   founded_at: 20.07.1982
 
-- name: Arkeoloji (Yl) (Tezli)
+- name: Arkeoloji (YL) (Tezli)
   abbreviation: ARKEO-YL
   code: '787'
   yoksis_id: '258247'
@@ -9310,7 +9310,7 @@
   duration: 2
   founded_at: 19.06.2014
 
-- name: Avrupa-Akdeniz Kültürler ve Turizm (Yl) (Tezli)
+- name: Avrupa-Akdeniz Kültürler ve Turizm (YL) (Tezli)
   abbreviation: AAKT-YL
   code: '788'
   yoksis_id: '261825'
@@ -9324,7 +9324,7 @@
   duration: 2
   founded_at: 15.10.2014
 
-- name: Beden Eğitimi ve Spor (Dr)
+- name: Beden Eğitimi ve Spor (DR)
   abbreviation: SOSYAL-BİLİM-BES-DR
   code: '789'
   yoksis_id: '266388'
@@ -9340,7 +9340,7 @@
   issues:
     - SAĞLIK-BİLİM VE SOSYAL-BİLİM altında aynı isimli Doktora
 
-- name: Coğrafya (Dr)
+- name: Coğrafya (DR)
   abbreviation: COĞRAFYA-DR
   code: '790'
   yoksis_id: '175687'
@@ -9354,7 +9354,7 @@
   duration: 4
   founded_at: 01.07.2010
 
-- name: Coğrafya (Yl) (Tezli)
+- name: Coğrafya (YL) (Tezli)
   abbreviation: COĞRAFYA-YL
   code: '791'
   yoksis_id: '230727'
@@ -9368,7 +9368,7 @@
   duration: 2
   founded_at: 07.05.2018
 
-- name: Dini Danışmanlık ve Rehberlik (Yl) (Tezsiz) (İö)
+- name: Dini Danışmanlık ve Rehberlik (YL) (Tezsiz) (İÖ)
   abbreviation: DDR-YZ-2
   code: '792'
   yoksis_id: '225938'
@@ -9397,7 +9397,7 @@
   issues:
     - Detsis tarafında anabilim dalı başkanlığı yok. SOSYAL-BİLİM-İŞLENİ-ADB ile benzerlik kontrol edilmeli.
 
-- name: Evlilik ve Aile Danışmanlığı (Yl) (Tezsiz) (İö)
+- name: Evlilik ve Aile Danışmanlığı (YL) (Tezsiz) (İÖ)
   abbreviation: EVLİLİK-YZ-2
   code: '793'
   yoksis_id: '255364'
@@ -9411,7 +9411,7 @@
   duration: 2
   founded_at: 26.02.2014
 
-- name: Felsefe (Dr)
+- name: Felsefe (DR)
   abbreviation: FELSEFE-DR
   code: '794'
   yoksis_id: '301218'
@@ -9425,7 +9425,7 @@
   duration: 4
   founded_at: 10.08.2016
 
-- name: Felsefe (Yl) (Tezli)
+- name: Felsefe (YL) (Tezli)
   abbreviation: FELSEFE-YL
   code: '795'
   yoksis_id: '219791'
@@ -9439,7 +9439,7 @@
   duration: 2
   founded_at: 26.06.2012
 
-- name: Felsefe ve Din Bilimleri (Dr)
+- name: Felsefe ve Din Bilimleri (DR)
   abbreviation: FELSEFEDİN-DR
   code: '796'
   yoksis_id: '169480'
@@ -9452,7 +9452,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Felsefe ve Din Bilimleri (Yl) (Tezli)
+- name: Felsefe ve Din Bilimleri (YL) (Tezli)
   abbreviation: FELSEFEDİN-YL
   code: '797'
   yoksis_id: '230721'
@@ -9465,7 +9465,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Geleneksel Türk Müziği (Yl) (Tezli)
+- name: Geleneksel Türk Müziği (YL) (Tezli)
   abbreviation: GTM-YL
   code: '798'
   yoksis_id: '297036'
@@ -9479,7 +9479,7 @@
   duration: 2
   founded_at: 15.06.2016
 
-- name: Kadın ve Aile Araştırmaları (Yl) (Tezli)
+- name: Kadın ve Aile Araştırmaları (YL) (Tezli)
   abbreviation: KAA-YL
   code: '799'
   yoksis_id: '230643'
@@ -9493,7 +9493,7 @@
   duration: 2
   founded_at: 23.06.2011
 
-- name: Kamu Hukuku (Dr) (Karadeniz Teknik Üniversitesi Ortak)
+- name: Kamu Hukuku (DR) (Karadeniz Teknik Üniversitesi Ortak)
   abbreviation: KAMU-DR-KTÜ
   code: '800'
   yoksis_id: '225763'
@@ -9507,7 +9507,7 @@
   duration: 4
   founded_at: 12.07.2012
 
-- name: Kamu Hukuku (Yl) (Tezli)
+- name: Kamu Hukuku (YL) (Tezli)
   abbreviation: KAMU-YL
   code: '801'
   yoksis_id: '176119'
@@ -9521,7 +9521,7 @@
   duration: 2
   founded_at: 26.08.2010
 
-- name: Kamu Hukuku (Yl) (Tezsiz) (İö)
+- name: Kamu Hukuku (YL) (Tezsiz) (İÖ)
   abbreviation: KAMU-YZ-2
   code: '802'
   yoksis_id: '230164'
@@ -9535,7 +9535,7 @@
   duration: 2
   founded_at: 07.07.2011
 
-- name: Kamu Yönetimi (Dr)
+- name: Kamu Yönetimi (DR)
   abbreviation: KAMUYÖN-DR
   code: '803'
   yoksis_id: '235191'
@@ -9549,7 +9549,7 @@
   duration: 4
   founded_at: 01.03.2013
 
-- name: Kamu Yönetimi (Yl) (Tezli)
+- name: Kamu Yönetimi (YL) (Tezli)
   abbreviation: KAMUYÖN-YL
   code: '804'
   yoksis_id: '219792'
@@ -9563,7 +9563,7 @@
   duration: 2
   founded_at: 26.06.2012
 
-- name: Muhasebe-Finansman (Yl) (Tezli)
+- name: Muhasebe-Finansman (YL) (Tezli)
   abbreviation: MUHASEBE-YL
   code: '805'
   yoksis_id: '264822'
@@ -9577,7 +9577,7 @@
   duration: 2
   founded_at: 20.01.2015
 
-- name: Muhasebe-Finansman (Yl) (Tezsiz)
+- name: Muhasebe-Finansman (YL) (Tezsiz)
   abbreviation: MUHASEBE-YZ
   code: '806'
   yoksis_id: '264823'
@@ -9591,7 +9591,7 @@
   duration: 2
   founded_at: 20.01.2015
 
-- name: Psikoloji (Yl) (Tezli)
+- name: Psikoloji (YL) (Tezli)
   abbreviation: PSİKOLOJİ-YL
   code: '807'
   yoksis_id: '258246'
@@ -9605,7 +9605,7 @@
   duration: 2
   founded_at: 19.06.2014
 
-- name: Sanat Tarihi (Yl) (Tezli)
+- name: Sanat Tarihi (YL) (Tezli)
   abbreviation: SANATTARİHİ-YL
   code: '808'
   yoksis_id: '283048'
@@ -9619,7 +9619,7 @@
   duration: 2
   founded_at: 16.12.2015
 
-- name: Sosyoloji (Dr)
+- name: Sosyoloji (DR)
   abbreviation: SOSYOLOJİ-DR
   code: '809'
   yoksis_id: '323943'
@@ -9633,7 +9633,7 @@
   duration: 4
   founded_at: 07.06.2017
 
-- name: Sosyoloji (Yl) (Tezli)
+- name: Sosyoloji (YL) (Tezli)
   abbreviation: SOSYOLOJİ-YL
   code: '810'
   yoksis_id: '219789'
@@ -9647,7 +9647,7 @@
   duration: 2
   founded_at: 26.06.2012
 
-- name: Spor Yöneticiliği (Dr)
+- name: Spor Yöneticiliği (DR)
   abbreviation: SPORYÖN-DR
   code: '811'
   yoksis_id: '280862'
@@ -9661,7 +9661,7 @@
   duration: 4
   founded_at: '09.09.2015'
 
-- name: Spor Yöneticiliği (Yl) (Tezli)
+- name: Spor Yöneticiliği (YL) (Tezli)
   abbreviation: SPORYÖN-YL
   code: '812'
   yoksis_id: '281995'
@@ -9675,7 +9675,7 @@
   duration: 2
   founded_at: '09.09.2015'
 
-- name: Siyaset Bilimi ve Kamu Yönetimi (Yl) (Tezsiz) (Uzaktan Öğretim)
+- name: Siyaset Bilimi ve Kamu Yönetimi (YL) (Tezsiz) (Uzaktan Öğretim)
   abbreviation: SBKY-YZ-UZ
   code: '029'
   yoksis_id: '267770'
@@ -9691,7 +9691,7 @@
   issues:
     - Kuruluş tarihi hatalı
 
-- name: Tarih (Dr)
+- name: Tarih (DR)
   abbreviation: TARİH-DR
   code: '813'
   yoksis_id: '169484'
@@ -9704,7 +9704,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Tarih (Yl) (Tezli)
+- name: Tarih (YL) (Tezli)
   abbreviation: TARİH-YL
   code: '814'
   yoksis_id: '230726'
@@ -9718,7 +9718,7 @@
   duration: 2
   founded_at: 07.05.2018
 
-- name: Temel İslam Bilimleri (Dr)
+- name: Temel İslam Bilimleri (DR)
   abbreviation: TİB-DR
   code: '815'
   yoksis_id: '169474'
@@ -9731,7 +9731,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Temel İslam Bilimleri (Yl) (Tezli)
+- name: Temel İslam Bilimleri (YL) (Tezli)
   abbreviation: TİB-YL
   code: '816'
   yoksis_id: '230720'
@@ -9744,7 +9744,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Turizm İşletmeciliği (Yl) (Tezli)
+- name: Turizm İşletmeciliği (YL) (Tezli)
   abbreviation: TURİZMİŞ-YL
   code: '817'
   yoksis_id: '323944'
@@ -9758,7 +9758,7 @@
   duration: 2
   founded_at: 07.06.2017
 
-- name: Turizm İşletmeciliği (Yl) (Tezsiz)
+- name: Turizm İşletmeciliği (YL) (Tezsiz)
   abbreviation: TURİZMİŞ-YZ
   code: '818'
   yoksis_id: '301219'
@@ -9772,7 +9772,7 @@
   duration: 2
   founded_at: 10.08.2016
 
-- name: Türk Dili ve Edebiyatı (Dr)
+- name: Türk Dili ve Edebiyatı (DR)
   abbreviation: TDE-DR
   code: '819'
   yoksis_id: '169487'
@@ -9785,7 +9785,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Türk Dili ve Edebiyatı (Yl) (Tezli)
+- name: Türk Dili ve Edebiyatı (YL) (Tezli)
   abbreviation: TDE-YL
   code: '820'
   yoksis_id: '230723'
@@ -9799,7 +9799,7 @@
   duration: 2
   founded_at: 07.05.2018
 
-- name: Uluslararası İlişkiler (Yl) (Tezli)
+- name: Uluslararası İlişkiler (YL) (Tezli)
   abbreviation: Uİ-YL
   code: '821'
   yoksis_id: '169470'
@@ -9812,7 +9812,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Yerel Yönetimler (Yl) (Tezsiz) (Uzaktan Öğretim)
+- name: Yerel Yönetimler (YL) (Tezsiz) (Uzaktan Öğretim)
   abbreviation: YERELYÖN-YZ-UZ
   code: '030'
   yoksis_id: '258555'
@@ -9826,7 +9826,7 @@
   duration: 2
   founded_at: 19.06.2014
 
-- name: Özel Hukuk (Yl) (Tezli) (Karadeniz Teknik Üniversitesi Ortak)
+- name: Özel Hukuk (YL) (Tezli) (Karadeniz Teknik Üniversitesi Ortak)
   abbreviation: ÖZELHUKUK-YL-KTÜ
   code: '822'
   yoksis_id: '255439'
@@ -9840,7 +9840,7 @@
   duration: 2
   founded_at: 20.02.2014
 
-- name: İktisat (Dr)
+- name: İktisat (DR)
   abbreviation: İKTİSAT-DR
   code: '823'
   yoksis_id: '281623'
@@ -9854,7 +9854,7 @@
   duration: 4
   founded_at: 22.10.2015
 
-- name: İktisat (Yl) (Tezli)
+- name: İktisat (YL) (Tezli)
   abbreviation: İKTİSAT-YL
   code: '824'
   yoksis_id: '219793'
@@ -9868,7 +9868,7 @@
   duration: 2
   founded_at: 26.06.2012
 
-- name: İktisat (Yl) (Tezsiz) (İö)
+- name: İktisat (YL) (Tezsiz) (İÖ)
   abbreviation: İKTİSAT-YZ-2
   code: '825'
   yoksis_id: '323942'
@@ -9895,7 +9895,7 @@
   unit_instruction_type_id: Normal Öğretim
   founded_at: 22.06.2016
 
-- name: Medya ve İletişim Bilimleri (Yl) (Tezli)
+- name: Medya ve İletişim Bilimleri (YL) (Tezli)
   abbreviation: SOSYAL-BİLİM-İLETİŞİM-MEDYA-YL
   code: '826'
   yoksis_id: '297536'
@@ -9909,7 +9909,7 @@
   duration: 2
   founded_at: 22.06.2016
 
-- name: İslam Tarihi ve Sanatları (Dr)
+- name: İslam Tarihi ve Sanatları (DR)
   abbreviation: İSLAMTS-DR
   code: '827'
   yoksis_id: '169479'
@@ -9922,7 +9922,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: İslam Tarihi ve Sanatları (Yl) (Tezli)
+- name: İslam Tarihi ve Sanatları (YL) (Tezli)
   abbreviation: İSLAMTS-YL
   code: '828'
   yoksis_id: '230799'
@@ -9935,7 +9935,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: İşletme (Dr)
+- name: İşletme (DR)
   abbreviation: SOSYAL-BİLİM-İŞLETME-DR
   code: '829'
   yoksis_id: '235190'
@@ -9949,7 +9949,7 @@
   duration: 4
   founded_at: 01.03.2013
 
-- name: İşletme (Yl) (Tezli)
+- name: İşletme (YL) (Tezli)
   abbreviation: SOSYAL-BİLİM-İŞLETME-YL
   code: '830'
   yoksis_id: '209533'
@@ -9963,7 +9963,7 @@
   duration: 2
   founded_at: 22.09.2011
 
-- name: İşletme (Yl) (Tezsiz)
+- name: İşletme (YL) (Tezsiz)
   abbreviation: SOSYAL-BİLİM-İŞLETME-YZ
   code: '831'
   yoksis_id: '209537'
@@ -9990,7 +9990,7 @@
   unit_instruction_type_id: Normal Öğretim
   founded_at: 21.07.2011
 
-- name: İşletme ve Endüstri İlişkileri (Yl) (Tezli)
+- name: İşletme ve Endüstri İlişkileri (YL) (Tezli)
   abbreviation: İŞLENİ-YL
   code: '832'
   yoksis_id: '219261'
@@ -10122,7 +10122,7 @@
   duration: 2
   founded_at: 04.08.2017
 
-- name: Gıda Kalite Kontrolü ve Analizi Programı (İö)
+- name: Gıda Kalite Kontrolü ve Analizi Programı (İÖ)
   abbreviation: TERME-MYO-GIDA-KKA-PR-2
   code: '317'
   yoksis_id: '276137'
@@ -12226,7 +12226,7 @@
   duration: 2
   founded_at: 26.02.2009
 
-- name: Bilgisayar Programcılığı Programı (İö)
+- name: Bilgisayar Programcılığı Programı (İÖ)
   abbreviation: VEZİRKÖPRÜ-MYO-BT-BP-PR-2
   code: '327'
   yoksis_id: '170003'
@@ -12321,7 +12321,7 @@
   duration: 2
   founded_at: 21.07.2011
 
-- name: Ormancılık ve Orman Ürünleri Programı (İö)
+- name: Ormancılık ve Orman Ürünleri Programı (İÖ)
   abbreviation: VEZİRKÖPRÜ-MYO-ORMAN-PR-2
   code: '331'
   yoksis_id: '239580'
@@ -12377,7 +12377,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Çocuk Gelişimi Programı (İö)
+- name: Çocuk Gelişimi Programı (İÖ)
   abbreviation: VEZİRKÖPRÜ-MYO-ÇBGH-ÇG-PR-2
   code: '333'
   yoksis_id: '170006'
@@ -12564,7 +12564,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Antrenörlük Eğitimi Programı (İö)
+- name: Antrenörlük Eğitimi Programı (İÖ)
   abbreviation: ANTRENÖR-PR-2
   code: '335'
   yoksis_id: '319847'
@@ -12578,7 +12578,7 @@
   duration: 4
   founded_at: 20.04.2017
 
-- name: Antrenörlük Eğitimi Programı (İö) (Bk.2)
+- name: Antrenörlük Eğitimi Programı (İÖ) (Bk.2)
   abbreviation: ANTRENÖR-PR-2-2
   code: '336'
   yoksis_id: '169400'
@@ -12752,7 +12752,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Spor Yöneticiliği Programı (İö)
+- name: Spor Yöneticiliği Programı (İÖ)
   abbreviation: SPORYÖN-PR-2
   code: '340'
   yoksis_id: '320347'
@@ -12766,7 +12766,7 @@
   duration: 4
   founded_at: 20.04.2017
 
-- name: Spor Yöneticiliği Programı (İö) (Bk.2)
+- name: Spor Yöneticiliği Programı (İÖ) (Bk.2)
   abbreviation: SPORYÖN-PR-2-2
   code: '341'
   yoksis_id: '169406'
@@ -12846,7 +12846,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Elektronik Teknolojisi Programı (İö)
+- name: Elektronik Teknolojisi Programı (İÖ)
   abbreviation: YEŞİLYURT-MYO-ELEKTRO-ET-PR-2
   code: '344'
   yoksis_id: '215491'
@@ -12887,7 +12887,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Elektrik Programı (İö)
+- name: Elektrik Programı (İÖ)
   abbreviation: YEŞİLYURT-MYO-ELEKTRİK-PR-2
   code: '346'
   yoksis_id: '215490'
@@ -12929,7 +12929,7 @@
   duration: 2
   founded_at: 19.01.2011
 
-- name: Gıda Teknolojisi Programı (İö)
+- name: Gıda Teknolojisi Programı (İÖ)
   abbreviation: YEŞİLYURT-MYO-GIDA-TEKNO-PR-2
   code: '348'
   yoksis_id: '267990'
@@ -12971,7 +12971,7 @@
   duration: 2
   founded_at: 23.12.2010
 
-- name: Kimya Teknolojisi Programı (İö)
+- name: Kimya Teknolojisi Programı (İÖ)
   abbreviation: YEŞİLYURT-MYO-KİMYA-TEKNO-PR-2
   code: '350'
   yoksis_id: '238468'
@@ -13016,7 +13016,7 @@
   duration: 2
   founded_at: 19.01.2011
 
-- name: Endüstriyel Kalıpçılık Programı (İö)
+- name: Endüstriyel Kalıpçılık Programı (İÖ)
   abbreviation: YEŞİLYURT-MYO-METAL-EK-PR-2
   code: '352'
   yoksis_id: '257436'
@@ -13057,7 +13057,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Otomotiv Teknolojisi Programı (İö)
+- name: Otomotiv Teknolojisi Programı (İÖ)
   abbreviation: YEŞİLYURT-MYO-MOTOR-OTO-PR-2
   code: '354'
   yoksis_id: '240434'
@@ -13891,7 +13891,7 @@
   issues:
     - Kuruluş tarihi hatalı
 
-- name: Çağrı Merkezi Hizmetleri Programı (İö)
+- name: Çağrı Merkezi Hizmetleri Programı (İÖ)
   abbreviation: TİCARET-MYO-BHS-ÇMH-PR-2
   code: '364'
   yoksis_id: '294078'
@@ -13948,7 +13948,7 @@
   duration: 2
   founded_at: 04.08.2017
 
-- name: Bilgi Güvenliği Teknolojisi Programı (İö)
+- name: Bilgi Güvenliği Teknolojisi Programı (İÖ)
   abbreviation: TİCARET-MYO-BT-BGT-PR-2
   code: '367'
   yoksis_id: '267068'
@@ -13977,7 +13977,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Bilgisayar Programcılığı Programı (İö)
+- name: Bilgisayar Programcılığı Programı (İÖ)
   abbreviation: TİCARET-MYO-BT-BP-PR-2
   code: '369'
   yoksis_id: '229376'
@@ -14017,7 +14017,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Bankacılık ve Sigortacılık Programı (İö)
+- name: Bankacılık ve Sigortacılık Programı (İÖ)
   abbreviation: TİCARET-MYO-FİNANS-BANKA-PR-2
   code: '371'
   yoksis_id: '238469'
@@ -14073,7 +14073,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Muhasebe ve Vergi Uygulamaları Programı (İö)
+- name: Muhasebe ve Vergi Uygulamaları Programı (İÖ)
   abbreviation: TİCARET-MYO-MV-PR-2
   code: '373'
   yoksis_id: '229379'
@@ -14115,7 +14115,7 @@
   duration: 2
   founded_at: 17.04.2014
 
-- name: Sosyal Güvenlik Programı (İö)
+- name: Sosyal Güvenlik Programı (İÖ)
   abbreviation: TİCARET-MYO-MKG-SG-PR-2
   code: '375'
   yoksis_id: '257435'
@@ -15166,7 +15166,7 @@
   duration: 4
   founded_at: 10.09.2009
 
-- name: İlahiyat Programı (İö)
+- name: İlahiyat Programı (İÖ)
   abbreviation: İLAHİYAT-PR-2
   code: '382'
   yoksis_id: '168774'
@@ -15481,7 +15481,7 @@
   duration: 4
   founded_at: 18.04.2013
 
-- name: Halkla İlişkiler ve Tanıtım Programı (İö)
+- name: Halkla İlişkiler ve Tanıtım Programı (İÖ)
   abbreviation: HİT-PR-2
   code: '385'
   yoksis_id: '291019'
@@ -15626,7 +15626,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Tıbbi Görüntüleme Teknikleri Programı (İö)
+- name: Tıbbi Görüntüleme Teknikleri Programı (İÖ)
   yoksis_id: '240436'
   parent_yoksis_id: '205956'
   unit_type_id: Önlisans/lisans Programı
@@ -15815,7 +15815,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Biyoloji Öğretmenliği Programı (İö)
+- name: Biyoloji Öğretmenliği Programı (İÖ)
   yoksis_id: '273561'
   parent_yoksis_id: '269757'
   unit_type_id: Önlisans/lisans Programı
@@ -15833,7 +15833,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Fen Bilgisi Öğretmenliği Programı (İö)
+- name: Fen Bilgisi Öğretmenliği Programı (İÖ)
   yoksis_id: '273563'
   parent_yoksis_id: '269757'
   unit_type_id: Önlisans/lisans Programı
@@ -15887,7 +15887,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Sosyal Bilgiler Öğretmenliği Programı (İö)
+- name: Sosyal Bilgiler Öğretmenliği Programı (İÖ)
   yoksis_id: '273573'
   parent_yoksis_id: '269757'
   unit_type_id: Önlisans/lisans Programı
@@ -15905,7 +15905,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Sınıf Öğretmenliği Programı (İö)
+- name: Sınıf Öğretmenliği Programı (İÖ)
   yoksis_id: '273571'
   parent_yoksis_id: '269757'
   unit_type_id: Önlisans/lisans Programı
@@ -15941,7 +15941,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Türkçe Öğretmenliği Programı (İö)
+- name: Türkçe Öğretmenliği Programı (İÖ)
   yoksis_id: '273577'
   parent_yoksis_id: '269757'
   unit_type_id: Önlisans/lisans Programı
@@ -15959,7 +15959,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: İlköğretim Matematik Öğretmenliği Programı (İö)
+- name: İlköğretim Matematik Öğretmenliği Programı (İÖ)
   yoksis_id: '273565'
   parent_yoksis_id: '269757'
   unit_type_id: Önlisans/lisans Programı
@@ -15995,7 +15995,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
-- name: Bilgisayar Programcılığı Programı (İö) (Bk.320)
+- name: Bilgisayar Programcılığı Programı (İÖ) (Bk.320)
   yoksis_id: '273578'
   parent_yoksis_id: '269758'
   unit_type_id: Önlisans/lisans Programı
@@ -16004,7 +16004,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
 
-- name: Bilgisayar Teknolojisi ve Programlama Programı (İö) (Bk.320)
+- name: Bilgisayar Teknolojisi ve Programlama Programı (İÖ) (Bk.320)
   yoksis_id: '273579'
   parent_yoksis_id: '269758'
   unit_type_id: Önlisans/lisans Programı
@@ -16022,7 +16022,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Büro Yönetimi ve Sekreterlik Programı (İö)
+- name: Büro Yönetimi ve Sekreterlik Programı (İÖ)
   yoksis_id: '273581'
   parent_yoksis_id: '269758'
   unit_type_id: Önlisans/lisans Programı
@@ -16040,7 +16040,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Elektrik Programı (İö)
+- name: Elektrik Programı (İÖ)
   yoksis_id: '273583'
   parent_yoksis_id: '269758'
   unit_type_id: Önlisans/lisans Programı
@@ -16058,7 +16058,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Elektronik Haberleşme Programı (İö)
+- name: Elektronik Haberleşme Programı (İÖ)
   yoksis_id: '273585'
   parent_yoksis_id: '269758'
   unit_type_id: Önlisans/lisans Programı
@@ -16076,7 +16076,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Endüstriyel Elektronik Programı (İö)
+- name: Endüstriyel Elektronik Programı (İÖ)
   yoksis_id: '273587'
   parent_yoksis_id: '269758'
   unit_type_id: Önlisans/lisans Programı
@@ -16094,7 +16094,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Endüstriyel Otomasyon Programı (İö)
+- name: Endüstriyel Otomasyon Programı (İÖ)
   yoksis_id: '273589'
   parent_yoksis_id: '269758'
   unit_type_id: Önlisans/lisans Programı
@@ -16121,7 +16121,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Haberleşme Programı (İö)
+- name: Haberleşme Programı (İÖ)
   yoksis_id: '273592'
   parent_yoksis_id: '269758'
   unit_type_id: Önlisans/lisans Programı
@@ -16139,7 +16139,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Harita Kadastropr. (İö)
+- name: Harita Kadastropr. (İÖ)
   yoksis_id: '273594'
   parent_yoksis_id: '269758'
   unit_type_id: Önlisans/lisans Programı
@@ -16148,7 +16148,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
 
-- name: Hazır Giyim Programı (İö) (Bk.322)
+- name: Hazır Giyim Programı (İÖ) (Bk.322)
   yoksis_id: '273595'
   parent_yoksis_id: '269758'
   unit_type_id: Önlisans/lisans Programı
@@ -16166,7 +16166,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Kontrol Sistemleri Teknolojisi Programı (İö)
+- name: Kontrol Sistemleri Teknolojisi Programı (İÖ)
   yoksis_id: '273599'
   parent_yoksis_id: '269758'
   unit_type_id: Önlisans/lisans Programı
@@ -16175,7 +16175,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
 
-- name: Makine Programı (İö) (Bk.320)
+- name: Makine Programı (İÖ) (Bk.320)
   yoksis_id: '273600'
   parent_yoksis_id: '269758'
   unit_type_id: Önlisans/lisans Programı
@@ -16193,7 +16193,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Muhasebe Programı (İö)
+- name: Muhasebe Programı (İÖ)
   yoksis_id: '273602'
   parent_yoksis_id: '269758'
   unit_type_id: Önlisans/lisans Programı
@@ -16202,7 +16202,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
 
-- name: Otomotiv Programı (İö) (Bk.320)
+- name: Otomotiv Programı (İÖ) (Bk.320)
   yoksis_id: '273603'
   parent_yoksis_id: '269758'
   unit_type_id: Önlisans/lisans Programı
@@ -16220,7 +16220,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Pazarlama Programı (İö)
+- name: Pazarlama Programı (İÖ)
   yoksis_id: '273605'
   parent_yoksis_id: '269758'
   unit_type_id: Önlisans/lisans Programı
@@ -16229,7 +16229,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
 
-- name: Tekstil Programı (İö) (Bk.322)
+- name: Tekstil Programı (İÖ) (Bk.322)
   yoksis_id: '273606'
   parent_yoksis_id: '269758'
   unit_type_id: Önlisans/lisans Programı
@@ -16256,7 +16256,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Turizm ve Otel İşletmeciliği Programı (İö)
+- name: Turizm ve Otel İşletmeciliği Programı (İÖ)
   yoksis_id: '273609'
   parent_yoksis_id: '269758'
   unit_type_id: Önlisans/lisans Programı
@@ -16274,7 +16274,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Turizm ve Otelcilik Programı (İö)
+- name: Turizm ve Otelcilik Programı (İÖ)
   yoksis_id: '273611'
   parent_yoksis_id: '269758'
   unit_type_id: Önlisans/lisans Programı
@@ -16292,7 +16292,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: İnşaat Programı (İö)
+- name: İnşaat Programı (İÖ)
   yoksis_id: '273597'
   parent_yoksis_id: '269758'
   unit_type_id: Önlisans/lisans Programı
@@ -16352,7 +16352,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
-- name: Endüstriyel Elektronik Programı (İö) (Bk.611)
+- name: Endüstriyel Elektronik Programı (İÖ) (Bk.611)
   yoksis_id: '273615'
   parent_yoksis_id: '269761'
   unit_type_id: Önlisans/lisans Programı
@@ -16380,7 +16380,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Organik Tarım Programı (İö)
+- name: Organik Tarım Programı (İÖ)
   abbreviation: BAFRA-MYO-BHU-OT-PR-2
   code: '390'
   yoksis_id: '169421'
@@ -16417,7 +16417,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Tütün Yetiştiriciliği ve İşlemeciliği Programı (İö)
+- name: Tütün Yetiştiriciliği ve İşlemeciliği Programı (İÖ)
   abbreviation: BAFRA-MYO-BHU-TÜTÜN-PR-2
   code: '393'
   yoksis_id: '145887'
@@ -16498,7 +16498,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Bilgisayar Teknolojisi ve Programlama Programı (İö)
+- name: Bilgisayar Teknolojisi ve Programlama Programı (İÖ)
   yoksis_id: '145886'
   parent_yoksis_id: '122356'
   unit_type_id: Önlisans/lisans Programı
@@ -16539,7 +16539,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Seracılık Programı (İö)
+- name: Seracılık Programı (İÖ)
   yoksis_id: '169434'
   parent_yoksis_id: '122356'
   unit_type_id: Önlisans/lisans Programı
@@ -16570,7 +16570,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Muhasebe Programı (İö)
+- name: Muhasebe Programı (İÖ)
   yoksis_id: '128053'
   parent_yoksis_id: '128052'
   unit_type_id: Önlisans/lisans Programı
@@ -16684,7 +16684,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Hazır Giyim Programı (İö) (Bk.612)
+- name: Hazır Giyim Programı (İÖ) (Bk.612)
   yoksis_id: '273618'
   parent_yoksis_id: '269762'
   unit_type_id: Önlisans/lisans Programı
@@ -16693,7 +16693,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
 
-- name: Tekstil Programı (İö) (Bk.612)
+- name: Tekstil Programı (İÖ) (Bk.612)
   yoksis_id: '273620'
   parent_yoksis_id: '269762'
   unit_type_id: Önlisans/lisans Programı
@@ -16840,7 +16840,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
-- name: Alman Dili Eğitimi (Dr)
+- name: Alman Dili Eğitimi (DR)
   abbreviation: EĞİTİM-BİLİM-ALM-DR
   code: '833'
   yoksis_id: '267762'
@@ -16852,7 +16852,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Alman Dili Eğitimi (Yl) (Tezli)
+- name: Alman Dili Eğitimi (YL) (Tezli)
   abbreviation: EĞİTİM-BİLİM-ALM-YL
   code: '834'
   yoksis_id: '267761'
@@ -16864,7 +16864,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Coğrafya Eğitimi (Yl) (Tezli)
+- name: Coğrafya Eğitimi (YL) (Tezli)
   abbreviation: EĞİTİM-BİLİM-COĞ-YL
   code: '835'
   yoksis_id: '267769'
@@ -16876,7 +16876,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Eğitim Yönetimi, Teftişi, Planlaması ve Ekonomisi (Yl) (Tezli)
+- name: Eğitim Yönetimi, Teftişi, Planlaması ve Ekonomisi (YL) (Tezli)
   abbreviation: EĞİTİM-BİLİM-EYTPE-YL
   code: '836'
   yoksis_id: '267767'
@@ -16888,7 +16888,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Eğitim Yönetimi, Teftişi, Planlaması ve Ekonomisi (Yl) (Tezsiz) (Uzaktan Öğretim)
+- name: Eğitim Yönetimi, Teftişi, Planlaması ve Ekonomisi (YL) (Tezsiz) (Uzaktan Öğretim)
   abbreviation: EĞİTİM-BİLİM-EYTPE-YZ-UZ
   code: '032'
   yoksis_id: '234519'
@@ -16900,7 +16900,7 @@
   unit_instruction_type_id: Uzaktan Öğretim
   duration: 2
 
-- name: Eğitim Yönetimi, Teftişi, Planlaması ve Ekonomisi (Yl) (Tezsiz) (İö)
+- name: Eğitim Yönetimi, Teftişi, Planlaması ve Ekonomisi (YL) (Tezsiz) (İÖ)
   abbreviation: EĞİTİM-BİLİM-EYTPE-YZ-2
   code: '837'
   yoksis_id: '267768'
@@ -16912,7 +16912,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
 
-- name: Eğitimin Sosyal Tarihi ve Temelleri (Yl) (Tezli)
+- name: Eğitimin Sosyal Tarihi ve Temelleri (YL) (Tezli)
   abbreviation: EĞİTİM-BİLİM-ESTT-YL
   code: '838'
   yoksis_id: '255124'
@@ -16924,7 +16924,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Fransız Dili Eğitimi (Yl) (Tezli)
+- name: Fransız Dili Eğitimi (YL) (Tezli)
   abbreviation: EĞİTİM-BİLİM-FR-YL
   code: '839'
   yoksis_id: '267763'
@@ -16936,7 +16936,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Müzik Eğitimi (Dr)
+- name: Müzik Eğitimi (DR)
   abbreviation: MÜZİK-DR
   code: '840'
   yoksis_id: '267755'
@@ -16948,7 +16948,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Rehberlik ve Psikolojik Danışmanlık (Dr)
+- name: Rehberlik ve Psikolojik Danışmanlık (DR)
   abbreviation: EĞİTİM-BİLİM-PDR-DR
   code: '841'
   yoksis_id: '267766'
@@ -16960,7 +16960,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Rehberlik ve Psikolojik Danışmanlık (Yl) (Tezli)
+- name: Rehberlik ve Psikolojik Danışmanlık (YL) (Tezli)
   abbreviation: EĞİTİM-BİLİM-PDR-YL
   code: '842'
   yoksis_id: '267765'
@@ -16972,7 +16972,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Sosyal Bilimler Eğitimi (Dr)
+- name: Sosyal Bilimler Eğitimi (DR)
   abbreviation: EĞİTİM-BİLİM-SBE-DR
   code: '843'
   yoksis_id: '169483'
@@ -16984,7 +16984,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Sosyal Bilimler Eğitimi (Yl) (Tezli)
+- name: Sosyal Bilimler Eğitimi (YL) (Tezli)
   abbreviation: EĞİTİM-BİLİM-SBE-YL
   code: '844'
   yoksis_id: '267756'
@@ -16996,7 +16996,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: İngiliz Dili Eğitimi (Yl) (Tezli)
+- name: İngiliz Dili Eğitimi (YL) (Tezli)
   abbreviation: EĞİTİM-BİLİM-İNG-YL
   code: '845'
   yoksis_id: '267764'
@@ -17008,7 +17008,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: İngiliz Dili Eğitimi (Yl) (Tezli) (Gazi Üniversitesi Ortak)
+- name: İngiliz Dili Eğitimi (YL) (Tezli) (Gazi Üniversitesi Ortak)
   abbreviation: EĞİTİM-BİLİM-İNG-YL-GAZİ
   code: '846'
   yoksis_id: '235313'
@@ -17030,7 +17030,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Beden Eğitimi ve Spor Öğretmenliği Programı (İö)
+- name: Beden Eğitimi ve Spor Öğretmenliği Programı (İÖ)
   yoksis_id: '277322'
   parent_yoksis_id: '122082'
   unit_type_id: Önlisans/lisans Programı
@@ -17040,7 +17040,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
 
-- name: Bilgisayar ve Öğretim Teknolojileri Öğretmenliği Programı (İö)
+- name: Bilgisayar ve Öğretim Teknolojileri Öğretmenliği Programı (İÖ)
   abbreviation: BÖTE-PR-2
   code: '396'
   yoksis_id: '168653'
@@ -17064,7 +17064,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Din Kültürü ve Ahlak Bilgisi Öğretmenliği Programı (İö)
+- name: Din Kültürü ve Ahlak Bilgisi Öğretmenliği Programı (İÖ)
   yoksis_id: '285283'
   parent_yoksis_id: '122082'
   unit_type_id: Önlisans/lisans Programı
@@ -17131,7 +17131,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Rehberlik ve Psikolojik Danışmanlık Programı (İö)
+- name: Rehberlik ve Psikolojik Danışmanlık Programı (İÖ)
   abbreviation: PDR-PR-2
   code: '402'
   yoksis_id: '168675'
@@ -17153,7 +17153,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
-- name: Resim-İş Öğretmenliği Programı (İö)
+- name: Resim-İş Öğretmenliği Programı (İÖ)
   abbreviation: RESİMİŞ-PR-2
   code: '403'
   yoksis_id: '169388'
@@ -17165,7 +17165,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
 
-- name: Biyoloji Öğretmenliği Programı (İö)
+- name: Biyoloji Öğretmenliği Programı (İÖ)
   yoksis_id: '318208'
   parent_yoksis_id: '298694'
   unit_type_id: Önlisans/lisans Programı
@@ -17175,7 +17175,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
 
-- name: Fen Bilgisi Öğretmenliği Programı (İö)
+- name: Fen Bilgisi Öğretmenliği Programı (İÖ)
   abbreviation: MF-FEN-PR-2
   code: '404'
   yoksis_id: '168657'
@@ -17200,7 +17200,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Fizik Öğretmenliği Programı (İö)
+- name: Fizik Öğretmenliği Programı (İÖ)
   yoksis_id: '268109'
   parent_yoksis_id: '298694'
   unit_type_id: Önlisans/lisans Programı
@@ -17223,7 +17223,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Matematik Öğretmenliği Programı (İö)
+- name: Matematik Öğretmenliği Programı (İÖ)
   yoksis_id: '275945'
   parent_yoksis_id: '298694'
   unit_type_id: Önlisans/lisans Programı
@@ -17254,7 +17254,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: İlköğretim Matematik Öğretmenliği Programı (İö)
+- name: İlköğretim Matematik Öğretmenliği Programı (İÖ)
   abbreviation: MF-İLKMAT-PR-2
   code: '408'
   yoksis_id: '168664'
@@ -17358,7 +17358,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Okul Öncesi Öğretmenliği Programı (İö)
+- name: Okul Öncesi Öğretmenliği Programı (İÖ)
   abbreviation: TE-OÖE-PR-2
   code: '415'
   yoksis_id: '168673'
@@ -17371,7 +17371,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
 
-- name: Sınıf Öğretmenliği Programı (İö)
+- name: Sınıf Öğretmenliği Programı (İÖ)
   abbreviation: TE-SINIF-PR-2
   code: '416'
   yoksis_id: '168677'
@@ -17452,7 +17452,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Coğrafya Öğretmenliği Programı (İö)
+- name: Coğrafya Öğretmenliği Programı (İÖ)
   yoksis_id: '275947'
   parent_yoksis_id: '298815'
   unit_type_id: Önlisans/lisans Programı
@@ -17462,7 +17462,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
 
-- name: Sosyal Bilgiler Öğretmenliği Programı (İö)
+- name: Sosyal Bilgiler Öğretmenliği Programı (İÖ)
   abbreviation: TS-SOSYAL-PR-2
   code: '421'
   yoksis_id: '168679'
@@ -17486,7 +17486,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Tarih Öğretmenliği Programı (İö)
+- name: Tarih Öğretmenliği Programı (İÖ)
   yoksis_id: '321775'
   parent_yoksis_id: '298815'
   unit_type_id: Önlisans/lisans Programı
@@ -17506,7 +17506,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Türk Dili ve Edebiyatı Öğretmenliği Programı (İö)
+- name: Türk Dili ve Edebiyatı Öğretmenliği Programı (İÖ)
   yoksis_id: '275949'
   parent_yoksis_id: '298815'
   unit_type_id: Önlisans/lisans Programı
@@ -17516,7 +17516,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
 
-- name: Türkçe Öğretmenliği Programı (İö)
+- name: Türkçe Öğretmenliği Programı (İÖ)
   abbreviation: TS-TÜRKÇE-PR-2
   code: '423'
   yoksis_id: '168681'
@@ -17528,7 +17528,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
 
-- name: Almanca Öğretmenliği Programı (İö)
+- name: Almanca Öğretmenliği Programı (İÖ)
   abbreviation: YDİLEĞ-ALM-PR-2
   code: '424'
   yoksis_id: '168651'
@@ -17540,7 +17540,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
 
-- name: Fransızca Öğretmenliği Programı (İö)
+- name: Fransızca Öğretmenliği Programı (İÖ)
   abbreviation: YDİLEĞ-FR-PR-2
   code: '425'
   yoksis_id: '168662'
@@ -17600,7 +17600,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: İngilizce Öğretmenliği Programı (İö)
+- name: İngilizce Öğretmenliği Programı (İÖ)
   abbreviation: YDİLEĞ-İNG-PR-2
   code: '430'
   yoksis_id: '168667'
@@ -17636,7 +17636,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Zihin Engelliler Öğretmenliği Programı (İö)
+- name: Zihin Engelliler Öğretmenliği Programı (İÖ)
   abbreviation: ÖZELEĞİTİM-ZİHİN-PR-2
   code: '432'
   yoksis_id: '168683'
@@ -17662,7 +17662,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: İşitme Engelliler Öğretmenliği Programı (İö)
+- name: İşitme Engelliler Öğretmenliği Programı (İÖ)
   abbreviation: ÖZELEĞİTİM-İŞİTME-PR-2
   code: '434'
   yoksis_id: '168669'
@@ -17698,7 +17698,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: İlköğretim Din Kültürü ve Ahlak Bilgisi Öğretmenliği Programı (İö)
+- name: İlköğretim Din Kültürü ve Ahlak Bilgisi Öğretmenliği Programı (İÖ)
   abbreviation: İDKABE-PR-2
   code: '436'
   yoksis_id: '285294'
@@ -17710,7 +17710,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
 
-- name: Biyoloji Eğitimi (Yl) (Tezsiz)
+- name: Biyoloji Eğitimi (YL) (Tezsiz)
   yoksis_id: '330618'
   parent_yoksis_id: '122386'
   unit_type_id: Yüksek Lisans Programı
@@ -17720,7 +17720,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Fen Bilgisi Eğitim (Yl) (Tezli) (Ordu Üniversitesi Ortak)
+- name: Fen Bilgisi Eğitim (YL) (Tezli) (Ordu Üniversitesi Ortak)
   yoksis_id: '258271'
   parent_yoksis_id: '122386'
   unit_type_id: Yüksek Lisans Programı
@@ -17730,7 +17730,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Fen Bilgisi Eğitimi (Dr)
+- name: Fen Bilgisi Eğitimi (DR)
   yoksis_id: '169496'
   parent_yoksis_id: '122386'
   unit_type_id: Doktora Programı
@@ -17740,7 +17740,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Fizik Eğitimi (Yl) (Tezsiz)
+- name: Fizik Eğitimi (YL) (Tezsiz)
   yoksis_id: '330619'
   parent_yoksis_id: '122386'
   unit_type_id: Yüksek Lisans Programı
@@ -17750,7 +17750,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Harita Mühendisliği (Dr) (Karadeniz Teknik Üniversitesi Ortak)
+- name: Harita Mühendisliği (DR) (Karadeniz Teknik Üniversitesi Ortak)
   abbreviation: HARİTA-DR-KTÜ
   code: '847'
   yoksis_id: '215657'
@@ -17762,7 +17762,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Hesaplamalı Bilimler (Yl) (Tezli)
+- name: Hesaplamalı Bilimler (YL) (Tezli)
   yoksis_id: '255367'
   parent_yoksis_id: '122386'
   unit_type_id: Yüksek Lisans Programı
@@ -17772,7 +17772,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Kimya Eğitimi (Yl) (Tezsiz)
+- name: Kimya Eğitimi (YL) (Tezsiz)
   yoksis_id: '330620'
   parent_yoksis_id: '122386'
   unit_type_id: Yüksek Lisans Programı
@@ -17782,7 +17782,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Malzeme Bilimi ve Mühendisliği (Yl) (Tezli)
+- name: Malzeme Bilimi ve Mühendisliği (YL) (Tezli)
   abbreviation: MALZEME-YL-DİĞER
   code: '848'
   yoksis_id: '211288'
@@ -17796,7 +17796,7 @@
   issues:
     - yoksis_id '371245' ile isim benzerliği, aktiflik farklı
 
-- name: Matematik (Yl) (Tezsiz)
+- name: Matematik (YL) (Tezsiz)
   yoksis_id: '234094'
   parent_yoksis_id: '122386'
   unit_type_id: Yüksek Lisans Programı
@@ -17806,7 +17806,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Matematik Eğitimi (Yl) (Tezsiz)
+- name: Matematik Eğitimi (YL) (Tezsiz)
   yoksis_id: '330621'
   parent_yoksis_id: '122386'
   unit_type_id: Yüksek Lisans Programı
@@ -17816,7 +17816,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Moleküler Biyoloji ve Genetik (Dr) (Ücretli)
+- name: Moleküler Biyoloji ve Genetik (DR) (Ücretli)
   abbreviation: MOLBİYOGEN-DR-ÜCRETLİ
   code: '849'
   yoksis_id: '299032'
@@ -17828,7 +17828,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Moleküler Biyoloji ve Genetik (Yl) (Tezli)
+- name: Moleküler Biyoloji ve Genetik (YL) (Tezli)
   abbreviation: MOLBİYOGEN-YL
   code: '850'
   yoksis_id: '381852'
@@ -17843,7 +17843,7 @@
   issues:
     - Yerleşke eksik
 
-- name: Moleküler Biyoloji ve Genetik (Yl) (Tezli) (Ücretli)
+- name: Moleküler Biyoloji ve Genetik (YL) (Tezli) (Ücretli)
   abbreviation: MOLBİYOGEN-YL-ÜCRETLİ
   code: '851'
   yoksis_id: '299033'
@@ -17855,7 +17855,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Su Ürünleri (Dr)
+- name: Su Ürünleri (DR)
   yoksis_id: '321481'
   parent_yoksis_id: '122386'
   unit_type_id: Doktora Programı
@@ -17865,7 +17865,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Su Ürünleri (Yl) (Tezli)
+- name: Su Ürünleri (YL) (Tezli)
   yoksis_id: '330622'
   parent_yoksis_id: '122386'
   unit_type_id: Yüksek Lisans Programı
@@ -17875,7 +17875,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Su Ürünleri Avlama ve İşleme Tekniği (Dr)
+- name: Su Ürünleri Avlama ve İşleme Tekniği (DR)
   yoksis_id: '321447'
   parent_yoksis_id: '122386'
   unit_type_id: Doktora Programı
@@ -17885,7 +17885,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Su Ürünleri Avlama ve İşleme Tekniği  (Yl) (Tezli)
+- name: Su Ürünleri Avlama ve İşleme Tekniği  (YL) (Tezli)
   yoksis_id: '317808'
   parent_yoksis_id: '122386'
   unit_type_id: Yüksek Lisans Programı
@@ -17895,7 +17895,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Su Ürünleri Yetiştiriciliği (Dr)
+- name: Su Ürünleri Yetiştiriciliği (DR)
   yoksis_id: '321482'
   parent_yoksis_id: '122386'
   unit_type_id: Doktora Programı
@@ -17905,7 +17905,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: İlköğretim Fen Bilgisi Eğitimi (Yl) (Tezli)
+- name: İlköğretim Fen Bilgisi Eğitimi (YL) (Tezli)
   yoksis_id: '324884'
   parent_yoksis_id: '122386'
   unit_type_id: Yüksek Lisans Programı
@@ -17915,7 +17915,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: İnşaat Mühendisliği (Yl) (Tezli) (Ücretli)
+- name: İnşaat Mühendisliği (YL) (Tezli) (Ücretli)
   abbreviation: İNŞAAT-YL-ÜCRETLİ
   code: '852'
   yoksis_id: '299031'
@@ -17993,7 +17993,7 @@
   issues:
     - Aktifken kısaltma verdiğimiz bu birim kapatılmış
 
-- name: Biyoloji Programı (İö)
+- name: Biyoloji Programı (İÖ)
   abbreviation: BİYO-PR-2
   code: '437'
   yoksis_id: '168688'
@@ -18005,7 +18005,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
 
-- name: Coğrafya Programı (İö)
+- name: Coğrafya Programı (İÖ)
   abbreviation: COĞRAFYA-PR-2
   code: '438'
   yoksis_id: '168694'
@@ -18018,7 +18018,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
 
-- name: Felsefe Programı (İö)
+- name: Felsefe Programı (İÖ)
   abbreviation: FELSEFE-PR-2
   code: '439'
   yoksis_id: '241626'
@@ -18044,7 +18044,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Fizik Programı (İö)
+- name: Fizik Programı (İÖ)
   abbreviation: FİZİK-PR-2
   code: '441'
   yoksis_id: '168705'
@@ -18068,7 +18068,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Kimya Programı (İö)
+- name: Kimya Programı (İÖ)
   abbreviation: KİMYA-PR-2
   code: '443'
   yoksis_id: '168709'
@@ -18081,7 +18081,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
 
-- name: Matematik Programı (İö)
+- name: Matematik Programı (İÖ)
   abbreviation: MAT-PR-2
   code: '444'
   yoksis_id: '168713'
@@ -18239,7 +18239,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Tarih Programı (İö)
+- name: Tarih Programı (İÖ)
   abbreviation: TARİH-PR-2
   code: '456'
   yoksis_id: '168718'
@@ -18288,7 +18288,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Türk Dili ve Edebiyatı Programı (İö)
+- name: Türk Dili ve Edebiyatı Programı (İÖ)
   abbreviation: TDE-PR-2
   code: '460'
   yoksis_id: '168722'
@@ -18320,7 +18320,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: İstatistik Programı (İö)
+- name: İstatistik Programı (İÖ)
   abbreviation: İSTATİSTİK-PR-2
   code: '461'
   yoksis_id: '168707'
@@ -18604,7 +18604,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Büro Yönetimi ve Sekreterlik Programı (İö)
+- name: Büro Yönetimi ve Sekreterlik Programı (İÖ)
   yoksis_id: '169582'
   parent_yoksis_id: '169579'
   unit_type_id: Önlisans/lisans Programı
@@ -18644,7 +18644,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Fizyoterapi Programı (İö)
+- name: Fizyoterapi Programı (İÖ)
   yoksis_id: '169583'
   parent_yoksis_id: '147579'
   unit_type_id: Önlisans/lisans Programı
@@ -18696,7 +18696,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Emlak ve Emlak Yönetimi Programı (İö)
+- name: Emlak ve Emlak Yönetimi Programı (İÖ)
   abbreviation: HAVZA-MYO-TPS-EMLAK-PR-2
   code: '464'
   yoksis_id: '228555'
@@ -18738,7 +18738,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Büro Yönetimi ve Sekreterlik Programı (İö)
+- name: Büro Yönetimi ve Sekreterlik Programı (İÖ)
   yoksis_id: '169577'
   parent_yoksis_id: '122382'
   unit_type_id: Önlisans/lisans Programı
@@ -18782,7 +18782,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: İnşaat Teknolojisi Programı (İö)
+- name: İnşaat Teknolojisi Programı (İÖ)
   abbreviation: HAVZA-MYO-İNŞAAT-PR-2
   code: '466'
   yoksis_id: '145888'
@@ -18887,7 +18887,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Harita ve Kadastro Programı (İö)
+- name: Harita ve Kadastro Programı (İÖ)
   yoksis_id: '169633'
   parent_yoksis_id: '169626'
   unit_type_id: Önlisans/lisans Programı
@@ -18898,7 +18898,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
 
-- name: Harita ve Kadastro Programı (İö)
+- name: Harita ve Kadastro Programı (İÖ)
   yoksis_id: '381449'
   parent_yoksis_id: '169626'
   unit_type_id: Önlisans/lisans Programı
@@ -18918,7 +18918,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Mimari Restorasyon Programı (İö)
+- name: Mimari Restorasyon Programı (İÖ)
   yoksis_id: '267991'
   parent_yoksis_id: '169626'
   unit_type_id: Önlisans/lisans Programı
@@ -18989,7 +18989,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Harita ve Kadastro Programı (İö)
+- name: Harita ve Kadastro Programı (İÖ)
   yoksis_id: '169612'
   parent_yoksis_id: '122293'
   unit_type_id: Önlisans/lisans Programı
@@ -19020,7 +19020,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Yapı Denetimi Programı (İö)
+- name: Yapı Denetimi Programı (İÖ)
   yoksis_id: '229172'
   parent_yoksis_id: '169618'
   unit_type_id: Önlisans/lisans Programı
@@ -19041,7 +19041,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: İnşaat Programı (İö)
+- name: İnşaat Programı (İÖ)
   yoksis_id: '145978'
   parent_yoksis_id: '169618'
   unit_type_id: Önlisans/lisans Programı
@@ -19062,7 +19062,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: İnşaat Teknolojisi Programı (İö)
+- name: İnşaat Teknolojisi Programı (İÖ)
   yoksis_id: '238467'
   parent_yoksis_id: '169618'
   unit_type_id: Önlisans/lisans Programı
@@ -19099,7 +19099,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Büro Yönetimi ve Sekreterlik Programı (İö)
+- name: Büro Yönetimi ve Sekreterlik Programı (İÖ)
   yoksis_id: '273648'
   parent_yoksis_id: '269767'
   unit_type_id: Önlisans/lisans Programı
@@ -19126,7 +19126,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Pazarlama Programı (İö)
+- name: Pazarlama Programı (İÖ)
   yoksis_id: '273653'
   parent_yoksis_id: '269767'
   unit_type_id: Önlisans/lisans Programı
@@ -19144,7 +19144,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: İnşaat Programı (İö)
+- name: İnşaat Programı (İÖ)
   yoksis_id: '273651'
   parent_yoksis_id: '269767'
   unit_type_id: Önlisans/lisans Programı
@@ -19414,7 +19414,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Gıda Mühendisliği Programı (İö)
+- name: Gıda Mühendisliği Programı (İÖ)
   abbreviation: GIDA-PR-2
   code: '481'
   yoksis_id: '168868'
@@ -19427,7 +19427,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
 
-- name: Harita Mühendisliği Programı (İö)
+- name: Harita Mühendisliği Programı (İÖ)
   abbreviation: HARİTA-PR-2
   code: '482'
   yoksis_id: '168870'
@@ -19450,7 +19450,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Jeodezi ve Fotogrametri Mühendisliği Programı (İö)
+- name: Jeodezi ve Fotogrametri Mühendisliği Programı (İÖ)
   yoksis_id: '275953'
   parent_yoksis_id: '147731'
   unit_type_id: Önlisans/lisans Programı
@@ -19460,7 +19460,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
 
-- name: Makine Mühendisliği Programı (İö)
+- name: Makine Mühendisliği Programı (İÖ)
   abbreviation: MAKİNE-PR-2
   code: '483'
   yoksis_id: '168874'
@@ -19497,7 +19497,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
-- name: Çevre Mühendisliği Programı (İö)
+- name: Çevre Mühendisliği Programı (İÖ)
   abbreviation: ÇEVRE-PR-2
   code: '485'
   yoksis_id: '168863'
@@ -19558,7 +19558,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: İnşaat Mühendisliği Programı (İö)
+- name: İnşaat Mühendisliği Programı (İÖ)
   abbreviation: İNŞAAT-PR-2
   code: '490'
   yoksis_id: '168872'
@@ -19703,7 +19703,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Elektrik Programı (İö)
+- name: Elektrik Programı (İÖ)
   yoksis_id: '169895'
   parent_yoksis_id: '169892'
   unit_type_id: Önlisans/lisans Programı
@@ -19723,7 +19723,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Elektronik Teknolojisi Programı (İö)
+- name: Elektronik Teknolojisi Programı (İÖ)
   yoksis_id: '169905'
   parent_yoksis_id: '169899'
   unit_type_id: Önlisans/lisans Programı
@@ -19743,7 +19743,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Otomotiv Teknolojisi Programı (İö)
+- name: Otomotiv Teknolojisi Programı (İÖ)
   yoksis_id: '145865'
   parent_yoksis_id: '169909'
   unit_type_id: Önlisans/lisans Programı
@@ -19773,7 +19773,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Ağırlama Hizmetleri Programı (İö)
+- name: Ağırlama Hizmetleri Programı (İÖ)
   yoksis_id: '169807'
   parent_yoksis_id: '168851'
   unit_type_id: Önlisans/lisans Programı
@@ -19783,7 +19783,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
 
-- name: Peyzaj ve Süs Bitkileri Programı (İö)
+- name: Peyzaj ve Süs Bitkileri Programı (İÖ)
   abbreviation: SAMSUN-MYO-PARK-PEYZAJ-PR-2
   code: '491'
   yoksis_id: '174838'
@@ -19805,7 +19805,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
-- name: Çocuk Gelişimi Programı (İö)
+- name: Çocuk Gelişimi Programı (İÖ)
   yoksis_id: '128073'
   parent_yoksis_id: '128071'
   unit_type_id: Önlisans/lisans Programı
@@ -19816,7 +19816,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
 
-- name: Grafik Tasarım Programı (İö)
+- name: Grafik Tasarım Programı (İÖ)
   yoksis_id: '145864'
   parent_yoksis_id: '169841'
   unit_type_id: Önlisans/lisans Programı
@@ -19837,7 +19837,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Basım ve Yayın Teknolojileri Programı (İö)
+- name: Basım ve Yayın Teknolojileri Programı (İÖ)
   yoksis_id: '122363'
   parent_yoksis_id: '122361'
   unit_type_id: Önlisans/lisans Programı
@@ -19857,7 +19857,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Bilgisayar Teknolojisi ve Programlama Programı (İö)
+- name: Bilgisayar Teknolojisi ve Programlama Programı (İÖ)
   yoksis_id: '122367'
   parent_yoksis_id: '122361'
   unit_type_id: Önlisans/lisans Programı
@@ -19877,7 +19877,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Duvar Süsleme Sanatları Programı (İö)
+- name: Duvar Süsleme Sanatları Programı (İÖ)
   yoksis_id: '301884'
   parent_yoksis_id: '122361'
   unit_type_id: Önlisans/lisans Programı
@@ -19897,7 +19897,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Elektrik Programı (İö)
+- name: Elektrik Programı (İÖ)
   yoksis_id: '128058'
   parent_yoksis_id: '122361'
   unit_type_id: Önlisans/lisans Programı
@@ -19927,7 +19927,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Endüstriyel Elektronik Teknolojisi Programı (İö)
+- name: Endüstriyel Elektronik Teknolojisi Programı (İÖ)
   yoksis_id: '145813'
   parent_yoksis_id: '122361'
   unit_type_id: Önlisans/lisans Programı
@@ -19937,7 +19937,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
 
-- name: Grafik Tasarımı Programı (İö)
+- name: Grafik Tasarımı Programı (İÖ)
   abbreviation: SAMSUN-MYO-TEKNİK-GRAFİK-PR-2
   code: '492'
   yoksis_id: '128059'
@@ -19971,7 +19971,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Mimari Dekoratif Sanatlar Programı (İö)
+- name: Mimari Dekoratif Sanatlar Programı (İÖ)
   yoksis_id: '169843'
   parent_yoksis_id: '122361'
   unit_type_id: Önlisans/lisans Programı
@@ -19982,7 +19982,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
 
-- name: Otomotiv Programı (İö)
+- name: Otomotiv Programı (İÖ)
   yoksis_id: '128065'
   parent_yoksis_id: '122361'
   unit_type_id: Önlisans/lisans Programı
@@ -20057,7 +20057,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Çocuk Gelişimi Programı (İö)
+- name: Çocuk Gelişimi Programı (İÖ)
   abbreviation: SAMSUN-MYO-ÇBGH-ÇG-PR-2
   code: '494'
   yoksis_id: '169885'
@@ -20080,7 +20080,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Ağırlama Hizmetleri Programı (İö)
+- name: Ağırlama Hizmetleri Programı (İÖ)
   yoksis_id: '169806'
   parent_yoksis_id: '122370'
   unit_type_id: Önlisans/lisans Programı
@@ -20101,7 +20101,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Muhasebe ve Vergi Uygulamaları Programı (İö)
+- name: Muhasebe ve Vergi Uygulamaları Programı (İÖ)
   yoksis_id: '169803'
   parent_yoksis_id: '122370'
   unit_type_id: Önlisans/lisans Programı
@@ -20125,7 +20125,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Turizm ve Otel İşletmeciliği Programı (İö)
+- name: Turizm ve Otel İşletmeciliği Programı (İÖ)
   abbreviation: SAMSUN-MYO-İKTİSAT-TOİ-PR-2
   code: '496'
   yoksis_id: '169805'
@@ -20148,7 +20148,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Turizm ve Otelcilik Programı (İö)
+- name: Turizm ve Otelcilik Programı (İÖ)
   yoksis_id: '301949'
   parent_yoksis_id: '122370'
   unit_type_id: Önlisans/lisans Programı
@@ -20574,7 +20574,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Acil Tıp Hemşireliği (Dr)
+- name: Acil Tıp Hemşireliği (DR)
   yoksis_id: '257558'
   parent_yoksis_id: '122387'
   unit_type_id: Doktora Programı
@@ -20584,7 +20584,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Acil Tıp Hemşireliği (Yl) (Tezli)
+- name: Acil Tıp Hemşireliği (YL) (Tezli)
   yoksis_id: '213248'
   parent_yoksis_id: '122387'
   unit_type_id: Yüksek Lisans Programı
@@ -20594,7 +20594,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Anatomi (Yl) (Tezli)
+- name: Anatomi (YL) (Tezli)
   abbreviation: ANATOMİ-YL
   code: '853'
   yoksis_id: '267774'
@@ -20606,7 +20606,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Anatomi (Veteriner) (Dr)
+- name: Anatomi (Veteriner) (DR)
   abbreviation: VETERİNER-ANATOMİ-DR
   code: '854'
   yoksis_id: '267772'
@@ -20618,7 +20618,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Ağız, Diş ve Çene Radyolojisi (Dr)
+- name: Ağız, Diş ve Çene Radyolojisi (DR)
   abbreviation: ADÇR-DR
   code: '855'
   yoksis_id: '267775'
@@ -20630,7 +20630,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Beden Eğitimi ve Spor (Yl) (Tezli)
+- name: Beden Eğitimi ve Spor (YL) (Tezli)
   abbreviation: SAĞLIK-BİLİM-BES-YL
   code: '856'
   yoksis_id: '267776'
@@ -20642,7 +20642,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Evde Bakım Hemşireliği (Yl) (Tezli)
+- name: Evde Bakım Hemşireliği (YL) (Tezli)
   abbreviation: EBH-YL
   code: '857'
   yoksis_id: '267777'
@@ -20654,7 +20654,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Evde Bakım Hemşireliği (Yl) (Tezsiz) (Uzaktan Öğretim)
+- name: Evde Bakım Hemşireliği (YL) (Tezsiz) (Uzaktan Öğretim)
   abbreviation: EBH-YZ-UZ
   code: '036'
   yoksis_id: '267778'
@@ -20666,7 +20666,7 @@
   unit_instruction_type_id: Uzaktan Öğretim
   duration: 2
 
-- name: Fizyoloji (Yl) (Tezli)
+- name: Fizyoloji (YL) (Tezli)
   abbreviation: FİZYOLOJİ-YL
   code: '858'
   yoksis_id: '267779'
@@ -20678,7 +20678,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Sağlık Kurumları Yönetimi (Yl) (Tezsiz) (İö) (Canik Başarı Ortak)
+- name: Sağlık Kurumları Yönetimi (YL) (Tezsiz) (İÖ) (Canik Başarı Ortak)
   yoksis_id: '235440'
   parent_yoksis_id: '122387'
   unit_type_id: Yüksek Lisans Programı
@@ -20688,7 +20688,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
 
-- name: Tıbbi Biyokimya (Yl) (Tezli)
+- name: Tıbbi Biyokimya (YL) (Tezli)
   abbreviation: TBİYOKİMYA-YL
   code: '859'
   yoksis_id: '267781'
@@ -20700,7 +20700,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Tıbbi Mikrobiyoloji (Yl) (Tezli)
+- name: Tıbbi Mikrobiyoloji (YL) (Tezli)
   abbreviation: TMİKRO-YL
   code: '860'
   yoksis_id: '267780'
@@ -20854,7 +20854,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Hemşirelik Programı (İö)
+- name: Hemşirelik Programı (İÖ)
   yoksis_id: '322461'
   parent_yoksis_id: '122337'
   unit_type_id: Önlisans/lisans Programı
@@ -20929,7 +20929,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Tıbbi Dokümantasyon ve Sekreterlik Programı (İö)
+- name: Tıbbi Dokümantasyon ve Sekreterlik Programı (İÖ)
   yoksis_id: '122342'
   parent_yoksis_id: '122337'
   unit_type_id: Önlisans/lisans Programı
@@ -20960,7 +20960,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Yaşlı Bakım Hizmetleri Programı (İö)
+- name: Yaşlı Bakım Hizmetleri Programı (İÖ)
   yoksis_id: '169794'
   parent_yoksis_id: '122337'
   unit_type_id: Önlisans/lisans Programı
@@ -21055,7 +21055,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Tıbbi Görüntüleme Teknikleri Programı (İö) (Ücretli)
+- name: Tıbbi Görüntüleme Teknikleri Programı (İÖ) (Ücretli)
   abbreviation: SAĞLIK-MYO-THT-TGT-PR-2-ÜCRETLİ
   code: '515'
   yoksis_id: '304701'
@@ -21067,7 +21067,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
 
-- name: Tıbbi Laboratuvar Teknikleri Programı (İö)
+- name: Tıbbi Laboratuvar Teknikleri Programı (İÖ)
   yoksis_id: '145881'
   parent_yoksis_id: '169645'
   unit_type_id: Önlisans/lisans Programı
@@ -21192,7 +21192,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Bilgisayarlı Muhasebe ve Vergi Uygulama Programı (İö) (Bk.613)
+- name: Bilgisayarlı Muhasebe ve Vergi Uygulama Programı (İÖ) (Bk.613)
   yoksis_id: '273678'
   parent_yoksis_id: '269775'
   unit_type_id: Önlisans/lisans Programı
@@ -21219,7 +21219,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Elektrik Programı (İö) (Bk.610)
+- name: Elektrik Programı (İÖ) (Bk.610)
   yoksis_id: '273682'
   parent_yoksis_id: '269775'
   unit_type_id: Önlisans/lisans Programı
@@ -21228,7 +21228,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
 
-- name: Endüstriyel Elektronik Programı (İö) (Bk.611)
+- name: Endüstriyel Elektronik Programı (İÖ) (Bk.611)
   yoksis_id: '273683'
   parent_yoksis_id: '269775'
   unit_type_id: Önlisans/lisans Programı
@@ -21246,7 +21246,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Makine Programı (İö) (Bk.610)
+- name: Makine Programı (İÖ) (Bk.610)
   yoksis_id: '273685'
   parent_yoksis_id: '269775'
   unit_type_id: Önlisans/lisans Programı
@@ -21255,7 +21255,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
 
-- name: Mobilya ve Dekorasyon Programı (İö) (Bk.610)
+- name: Mobilya ve Dekorasyon Programı (İÖ) (Bk.610)
   yoksis_id: '273686'
   parent_yoksis_id: '269775'
   unit_type_id: Önlisans/lisans Programı
@@ -21273,7 +21273,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Muhasebe Programı (İö) (Bk.613)
+- name: Muhasebe Programı (İÖ) (Bk.613)
   yoksis_id: '273688'
   parent_yoksis_id: '269775'
   unit_type_id: Önlisans/lisans Programı
@@ -21342,7 +21342,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Sinop Su Ürünleri Programı (İö)
+- name: Sinop Su Ürünleri Programı (İÖ)
   yoksis_id: '273693'
   parent_yoksis_id: '269778'
   unit_type_id: Önlisans/lisans Programı
@@ -21495,7 +21495,7 @@
   issues:
     - Üst birim olan Sivil Havacılık YO kapatılmış
 
-- name: Alman Dili Eğitimi (Yl) (Tezli)
+- name: Alman Dili Eğitimi (YL) (Tezli)
   yoksis_id: '324897'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21505,7 +21505,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Coğrafya Eğitimi (Yl) (Tezli)
+- name: Coğrafya Eğitimi (YL) (Tezli)
   yoksis_id: '330606'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21515,7 +21515,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Coğrafya Eğitimi (Yl) (Tezsiz)
+- name: Coğrafya Eğitimi (YL) (Tezsiz)
   yoksis_id: '330607'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21525,7 +21525,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Din Eğitimi (Dr)
+- name: Din Eğitimi (DR)
   yoksis_id: '330594'
   parent_yoksis_id: '122388'
   unit_type_id: Doktora Programı
@@ -21535,7 +21535,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Din Eğitimi (Yl) (Tezli)
+- name: Din Eğitimi (YL) (Tezli)
   yoksis_id: '330593'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21545,7 +21545,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Din Felsefesi (Dr)
+- name: Din Felsefesi (DR)
   yoksis_id: '330596'
   parent_yoksis_id: '122388'
   unit_type_id: Doktora Programı
@@ -21555,7 +21555,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Din Felsefesi (Yl) (Tezli)
+- name: Din Felsefesi (YL) (Tezli)
   yoksis_id: '330595'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21565,7 +21565,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Din Kültürü ve Ahlak Bilgisi Eğitimi (Yl) (Tezsiz)
+- name: Din Kültürü ve Ahlak Bilgisi Eğitimi (YL) (Tezsiz)
   yoksis_id: '381453'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21574,7 +21574,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Din Psikolojisi (Dr)
+- name: Din Psikolojisi (DR)
   yoksis_id: '330598'
   parent_yoksis_id: '122388'
   unit_type_id: Doktora Programı
@@ -21584,7 +21584,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Din Psikolojisi (Yl) (Tezli)
+- name: Din Psikolojisi (YL) (Tezli)
   yoksis_id: '330597'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21594,7 +21594,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Din Sosyolojisi (Dr)
+- name: Din Sosyolojisi (DR)
   yoksis_id: '330599'
   parent_yoksis_id: '122388'
   unit_type_id: Doktora Programı
@@ -21604,7 +21604,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Dinler Tarihi (Dr)
+- name: Dinler Tarihi (DR)
   yoksis_id: '330601'
   parent_yoksis_id: '122388'
   unit_type_id: Doktora Programı
@@ -21614,7 +21614,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Dinler Tarihi (Yl) (Tezli)
+- name: Dinler Tarihi (YL) (Tezli)
   yoksis_id: '330600'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21624,7 +21624,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Eski Türk Dili (Yl) (Tezli)
+- name: Eski Türk Dili (YL) (Tezli)
   yoksis_id: '330616'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21634,7 +21634,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Eski Türk Edebiyatı (Dr)
+- name: Eski Türk Edebiyatı (DR)
   yoksis_id: '330617'
   parent_yoksis_id: '122388'
   unit_type_id: Doktora Programı
@@ -21644,7 +21644,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Eğitim Bilimleri (Dr)
+- name: Eğitim Bilimleri (DR)
   yoksis_id: '324886'
   parent_yoksis_id: '122388'
   unit_type_id: Doktora Programı
@@ -21654,7 +21654,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Eğitim Bilimleri (Yl) (Tezli)
+- name: Eğitim Bilimleri (YL) (Tezli)
   yoksis_id: '324885'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21664,7 +21664,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Eğitim Yönetimi, Teftişi ve Planlaması (Yl) (Tezsiz)
+- name: Eğitim Yönetimi, Teftişi ve Planlaması (YL) (Tezsiz)
   yoksis_id: '176437'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21674,7 +21674,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Güzel Sanatlar Eğitimi (Dr)
+- name: Güzel Sanatlar Eğitimi (DR)
   yoksis_id: '324890'
   parent_yoksis_id: '122388'
   unit_type_id: Doktora Programı
@@ -21684,7 +21684,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Güzel Sanatlar Eğitimi (Yl) (Tezli)
+- name: Güzel Sanatlar Eğitimi (YL) (Tezli)
   yoksis_id: '324889'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21694,7 +21694,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Müzik Eğitimi (Yl) (Tezli)
+- name: Müzik Eğitimi (YL) (Tezli)
   yoksis_id: '324891'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21704,7 +21704,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Ortaöğretim Sosyal Alanlar Eğitimi (Yl) (Tezsiz)
+- name: Ortaöğretim Sosyal Alanlar Eğitimi (YL) (Tezsiz)
   yoksis_id: '330608'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21714,7 +21714,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Rehberlik ve Psikolojik Danışmanlık (Dr)
+- name: Rehberlik ve Psikolojik Danışmanlık (DR)
   yoksis_id: '324888'
   parent_yoksis_id: '122388'
   unit_type_id: Doktora Programı
@@ -21724,7 +21724,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Rehberlik ve Psikolojik Danışmanlık (Yl) (Tezli)
+- name: Rehberlik ve Psikolojik Danışmanlık (YL) (Tezli)
   yoksis_id: '324887'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21734,7 +21734,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Resim-İş Eğitimi (Dr)
+- name: Resim-İş Eğitimi (DR)
   yoksis_id: '324893'
   parent_yoksis_id: '122388'
   unit_type_id: Doktora Programı
@@ -21744,7 +21744,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Resim-İş Eğitimi (Yl) (Tezli)
+- name: Resim-İş Eğitimi (YL) (Tezli)
   yoksis_id: '324892'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21754,7 +21754,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Sağlık Kurumları Yönetimi (Yl) (Tezsiz) (İö) (OMÜ Ortak) (Ücretli)
+- name: Sağlık Kurumları Yönetimi (YL) (Tezsiz) (İÖ) (OMÜ Ortak) (Ücretli)
   yoksis_id: '300981'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21764,7 +21764,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
 
-- name: Sınıf Öğretmenliği (Yl) (Tezli)
+- name: Sınıf Öğretmenliği (YL) (Tezli)
   yoksis_id: '314753'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21774,7 +21774,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Tarih Eğitimi (Yl) (Tezli)
+- name: Tarih Eğitimi (YL) (Tezli)
   yoksis_id: '330610'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21784,7 +21784,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Tarih Eğitimi (Yl) (Tezsiz)
+- name: Tarih Eğitimi (YL) (Tezsiz)
   yoksis_id: '330609'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21794,7 +21794,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Türk Dili ve Edebiyatı (Yl) (Ücretli)
+- name: Türk Dili ve Edebiyatı (YL) (Ücretli)
   abbreviation: TDE-YL-ÜCRETLİ
   code: '861'
   yoksis_id: '311762'
@@ -21806,7 +21806,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Türk Dili ve Edebiyatı Eğitimi (Yl) (Tezsiz)
+- name: Türk Dili ve Edebiyatı Eğitimi (YL) (Tezsiz)
   yoksis_id: '330611'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21816,7 +21816,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Türk İslam Sanatları Tarihi (Yl) (Tezli)
+- name: Türk İslam Sanatları Tarihi (YL) (Tezli)
   yoksis_id: '330605'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21826,7 +21826,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Türkiye Cumhuriyeti Tarihi (Dr)
+- name: Türkiye Cumhuriyeti Tarihi (DR)
   abbreviation: SOSYAL-BİLİM-TC-DR
   code: '862'
   yoksis_id: '267771'
@@ -21838,7 +21838,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Türkiye Cumhuriyeti Tarihi (Yl) (Tezli)
+- name: Türkiye Cumhuriyeti Tarihi (YL) (Tezli)
   yoksis_id: '327638'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21848,7 +21848,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Türkçe Eğitimi (Yl) (Tezli)
+- name: Türkçe Eğitimi (YL) (Tezli)
   yoksis_id: '324896'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21858,7 +21858,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Uluslararası Ticaret ve İşletmecilik (Yl) (Tezli) (Ücretli)
+- name: Uluslararası Ticaret ve İşletmecilik (YL) (Tezli) (Ücretli)
   abbreviation: UTİ-YL-ÜCRETLİ
   code: '863'
   yoksis_id: '299076'
@@ -21870,7 +21870,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Uluslararası Ticaret ve İşletmecilik (Yl) (Tezsiz) (Ücretli)
+- name: Uluslararası Ticaret ve İşletmecilik (YL) (Tezsiz) (Ücretli)
   abbreviation: UTİ-YZ-ÜCRETLİ
   code: '864'
   yoksis_id: '299077'
@@ -21882,7 +21882,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Yabancı Diller Eğitimi (Yl) (Tezli)
+- name: Yabancı Diller Eğitimi (YL) (Tezli)
   yoksis_id: '324899'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21892,7 +21892,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Yakın Çağ Tarihi (Dr)
+- name: Yakın Çağ Tarihi (DR)
   yoksis_id: '330613'
   parent_yoksis_id: '122388'
   unit_type_id: Doktora Programı
@@ -21902,7 +21902,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Yakın Çağ Tarihi (Yl) (Tezli)
+- name: Yakın Çağ Tarihi (YL) (Tezli)
   yoksis_id: '330612'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21912,7 +21912,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Yeni Türk Edebiyatı (Yl) (Tezli) (Ücretli)
+- name: Yeni Türk Edebiyatı (YL) (Tezli) (Ücretli)
   abbreviation: SOSYAL-BİLİM-YENİTE-YL-ÜCRETLİ
   code: '865'
   yoksis_id: '299078'
@@ -21924,7 +21924,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Yeni Çağ Tarihi (Yl) (Tezli)
+- name: Yeni Çağ Tarihi (YL) (Tezli)
   yoksis_id: '330614'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21934,7 +21934,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Çağdaş Türk Lehçeleri ve Edebiyatları (Yl) (Tezli)
+- name: Çağdaş Türk Lehçeleri ve Edebiyatları (YL) (Tezli)
   yoksis_id: '330615'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21944,7 +21944,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: İlköğretim (Yl) (Tezli)
+- name: İlköğretim (YL) (Tezli)
   yoksis_id: '324894'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21954,7 +21954,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: İlköğretim Sınıf Öğretmenliği (Yl) (Tezli)
+- name: İlköğretim Sınıf Öğretmenliği (YL) (Tezli)
   yoksis_id: '314880'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21964,7 +21964,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: İngiliz Dili Eğitimi (Yl) (Tezli)
+- name: İngiliz Dili Eğitimi (YL) (Tezli)
   yoksis_id: '324898'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -21974,7 +21974,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: İslam Felsefesi (Dr)
+- name: İslam Felsefesi (DR)
   yoksis_id: '330602'
   parent_yoksis_id: '122388'
   unit_type_id: Doktora Programı
@@ -21984,7 +21984,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: İslam Tarihi (Dr)
+- name: İslam Tarihi (DR)
   yoksis_id: '330604'
   parent_yoksis_id: '122388'
   unit_type_id: Doktora Programı
@@ -21994,7 +21994,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: İslam Tarihi (Yl) (Tezli)
+- name: İslam Tarihi (YL) (Tezli)
   yoksis_id: '330603'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -22004,7 +22004,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: İşletme (Yl) (Tezsiz) (İö) (Canik Başarı Ortak)
+- name: İşletme (YL) (Tezsiz) (İÖ) (Canik Başarı Ortak)
   yoksis_id: '235338'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -22014,7 +22014,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
 
-- name: İşletme (Yl) (Tezsiz) (İö) (Ondokuz Mayıs Ortak) (Ücretli)
+- name: İşletme (YL) (Tezsiz) (İÖ) (Ondokuz Mayıs Ortak) (Ücretli)
   yoksis_id: '300980'
   parent_yoksis_id: '122388'
   unit_type_id: Yüksek Lisans Programı
@@ -22033,7 +22033,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
-- name: Muhasebe ve Vergi Uygulamaları Programı (İö)
+- name: Muhasebe ve Vergi Uygulamaları Programı (İÖ)
   abbreviation: TERME-MYO-MV-PR-2
   code: '516'
   yoksis_id: '145983'
@@ -22327,7 +22327,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
-- name: Muhasebe ve Vergi Uygulamaları Programı (İö)
+- name: Muhasebe ve Vergi Uygulamaları Programı (İÖ)
   abbreviation: VEZİRKÖPRÜ-MYO-MV-PR-2
   code: '518'
   yoksis_id: '170010'
@@ -22370,7 +22370,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Çocuk Gelişimi Programı (İö)
+- name: Çocuk Gelişimi Programı (İÖ)
   yoksis_id: '169995'
   parent_yoksis_id: '122301'
   unit_type_id: Önlisans/lisans Programı
@@ -22434,7 +22434,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Bilgisayar Teknolojisi ve Programlama Programı (İö)
+- name: Bilgisayar Teknolojisi ve Programlama Programı (İÖ)
   yoksis_id: '145966'
   parent_yoksis_id: '122297'
   unit_type_id: Önlisans/lisans Programı
@@ -22472,7 +22472,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Muhasebe Programı (İö)
+- name: Muhasebe Programı (İÖ)
   yoksis_id: '145973'
   parent_yoksis_id: '122299'
   unit_type_id: Önlisans/lisans Programı
@@ -22514,7 +22514,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Antrenörlük Eğitimi Programı (İö) (Bk.2)
+- name: Antrenörlük Eğitimi Programı (İÖ) (Bk.2)
   abbreviation: BESYO-ANTRENÖR-PR-2-2
   code: '520'
   yoksis_id: '295466'
@@ -22538,7 +22538,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Beden Eğitimi ve Spor Öğretmenliği Programı (İö)
+- name: Beden Eğitimi ve Spor Öğretmenliği Programı (İÖ)
   yoksis_id: '295468'
   parent_yoksis_id: '122373'
   unit_type_id: Önlisans/lisans Programı
@@ -22560,7 +22560,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Spor Yöneticiliği Programı (İö) (Bk.2)
+- name: Spor Yöneticiliği Programı (İÖ) (Bk.2)
   abbreviation: BESYO-SPORYÖN-PR-2-2
   code: '523'
   yoksis_id: '295470'
@@ -22572,7 +22572,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
 
-- name: Beden Eğitimi ve Spor Öğretmenliği Programı (İö)
+- name: Beden Eğitimi ve Spor Öğretmenliği Programı (İÖ)
   yoksis_id: '277323'
   parent_yoksis_id: '122374'
   unit_type_id: Önlisans/lisans Programı
@@ -22622,7 +22622,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Bahçe Bitkileri Programı (İö)
+- name: Bahçe Bitkileri Programı (İÖ)
   yoksis_id: '275955'
   parent_yoksis_id: '122259'
   unit_type_id: Önlisans/lisans Programı
@@ -22694,7 +22694,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Tarla Bitkileri Programı (İö)
+- name: Tarla Bitkileri Programı (İÖ)
   yoksis_id: '275958'
   parent_yoksis_id: '122267'
   unit_type_id: Önlisans/lisans Programı
@@ -22783,7 +22783,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Zootekni Programı (İö)
+- name: Zootekni Programı (İÖ)
   yoksis_id: '275960'
   parent_yoksis_id: '122271'
   unit_type_id: Önlisans/lisans Programı
@@ -22810,7 +22810,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Bilgisayar Programcılığı Programı (İö) (Bk.601)
+- name: Bilgisayar Programcılığı Programı (İÖ) (Bk.601)
   yoksis_id: '273622'
   parent_yoksis_id: '269763'
   unit_type_id: Önlisans/lisans Programı
@@ -22819,7 +22819,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
 
-- name: Bilgisayar Teknolojisi ve Programlama Programı (İö) (Bk.601)
+- name: Bilgisayar Teknolojisi ve Programlama Programı (İÖ) (Bk.601)
   yoksis_id: '273623'
   parent_yoksis_id: '269763'
   unit_type_id: Önlisans/lisans Programı
@@ -22837,7 +22837,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Muhasebe Programı (İö) (Bk.606)
+- name: Muhasebe Programı (İÖ) (Bk.606)
   yoksis_id: '273625'
   parent_yoksis_id: '269763'
   unit_type_id: Önlisans/lisans Programı
@@ -22855,7 +22855,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Muhasebe ve Vergi Uygulamaları Programı (İö) (Bk.606)
+- name: Muhasebe ve Vergi Uygulamaları Programı (İÖ) (Bk.606)
   yoksis_id: '273627'
   parent_yoksis_id: '269763'
   unit_type_id: Önlisans/lisans Programı
@@ -22864,7 +22864,7 @@
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
 
-- name: Bilgisayar Teknolojisi ve Programlama Programı (İö)
+- name: Bilgisayar Teknolojisi ve Programlama Programı (İÖ)
   yoksis_id: '324470'
   parent_yoksis_id: '169488'
   unit_type_id: Önlisans/lisans Programı
@@ -22904,7 +22904,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Bilgisayar Programcılığı Programı (İö)
+- name: Bilgisayar Programcılığı Programı (İÖ)
   yoksis_id: '145991'
   parent_yoksis_id: '128047'
   unit_type_id: Önlisans/lisans Programı
@@ -22955,7 +22955,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Muhasebe ve Vergi Uygulamaları Programı (İö)
+- name: Muhasebe ve Vergi Uygulamaları Programı (İÖ)
   yoksis_id: '145987'
   parent_yoksis_id: '122290'
   unit_type_id: Önlisans/lisans Programı
@@ -23207,7 +23207,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Siyaset Bilimi ve Kamu Yönetimi Programı (İö)
+- name: Siyaset Bilimi ve Kamu Yönetimi Programı (İÖ)
   abbreviation: SBKY-PR-2
   code: '531'
   yoksis_id: '241628'
@@ -23446,7 +23446,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: İşletme Programı (İö)
+- name: İşletme Programı (İÖ)
   abbreviation: İŞLETMEB-PR-2
   code: '549'
   yoksis_id: '241627'
@@ -23495,7 +23495,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: İlköğretim Din Kültürü ve Ahlak Bilgisi Öğretmenliği Programı (İö)
+- name: İlköğretim Din Kültürü ve Ahlak Bilgisi Öğretmenliği Programı (İÖ)
   abbreviation: İDKABE-PR-2-DİĞER
   code: '551'
   yoksis_id: '241629'
@@ -23540,7 +23540,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: İstatistik (Yl) (İngilizce) (Tezli)
+- name: İstatistik (YL) (İngilizce) (Tezli)
   abbreviation: İSTATİSTİK-YL-İNG
   code: '866'
   yoksis_id: '383211'

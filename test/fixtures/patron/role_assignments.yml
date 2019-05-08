@@ -1,0 +1,9 @@
+one:
+  role: admin
+  user: serhat
+two:
+  role: student
+  user: mine
+three:
+  role: authorization_manager
+  user: serhat

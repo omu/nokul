@@ -11,13 +11,13 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   draw :account
+  draw :calendar_management
+  draw :course_management
+  draw :first_registration
   draw :location
+  draw :patron
   draw :reference
   draw :yoksis
-  draw :calendar_management
-  draw :first_registration
-
-  draw :course_management
 
   resources :units do
     member do

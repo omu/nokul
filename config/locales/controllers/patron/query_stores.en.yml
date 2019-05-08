@@ -1,0 +1,40 @@
+en:
+  activerecord:
+    attributes:
+      patron/query_store: &query_stores_attributes
+        name: Scope Query Name
+        parameters: Parameters
+        scope_name: Scope Name
+        type: Scope Query Type
+    enums:
+      patron/query_store:
+        types:
+          exclude: Exclude
+          include: Include
+  helpers:
+    submit:
+      patron_query_store:
+        create: Create Scope Query
+        update: Update Scope Query
+  patron:
+    query_stores:
+      create:
+        success: Scope query successfully created.
+      destroy:
+        error: An error occured when deleting the scope query.
+        success: Scope query successfully deleted!
+      edit:
+        form_title: Update the Scope Query
+      index:
+        card_header:  Scope Queries
+        new_query_store_link: Add a New Scope Query
+        new_query_store_link_for_scope: Add for %{scope_name}
+        smart_search_placeholder: Scope Query Name or Scope Name
+      new:
+        form_title: Create a Scope Query
+      show:
+        <<: *query_stores_attributes
+        smart_search_placeholder: Search with Model-Specific Keyword
+        users: Users
+      update:
+        success: Scope query successfully updated.

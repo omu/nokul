@@ -54,6 +54,11 @@
             <% end %>
           </li>
           <li class="nav-item">
+            <%= link_to :prospective_employees, class: 'nav-link' do %>
+              <%= fa_icon('users', text: t('.prospective_employees'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+          <li class="nav-item">
             <%= link_to :registration_documents, class: 'nav-link' do %>
               <%= fa_icon('file-text', text: t('.registration_documents'), class: 'nav-icon') %>
             <% end %>
@@ -104,6 +109,11 @@
           <%= fa_icon('superpowers', class: 'nav-icon') %><%= t('.administration') %>
         </a>
         <ul class="nav-dropdown-items">
+          <li class="nav-item">
+            <%= link_to :patron, class: 'nav-link' do %>
+              <%= fa_icon('cogs', text: t('.authorizations'), class: 'nav-icon') %>
+            <% end %>
+          </li>
           <li class="nav-item">
             <%= link_to :reference, class: 'nav-link' do %>
               <%= fa_icon('th-list', text: t('.references'), class: 'nav-icon') %>

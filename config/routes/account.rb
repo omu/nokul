@@ -10,12 +10,13 @@ devise_for :users, controllers: {
 devise_scope :user do
   get 'account', to: 'account/registrations#edit'
   get 'login', to: 'account/sessions#new'
-  get 'register', to: 'account/registrations#new'
   get 'recover', to: 'account/passwords#new'
   delete 'logout', to: 'account/sessions#destroy'
 end
 
 scope module: :account do
+  get 'activation', to: 'activations#new'
+  post 'activation', to: 'activations#create'
   get '/profile', to: 'profile_settings#edit'
   patch '/profile', to: 'profile_settings#update'
 end

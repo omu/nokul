@@ -18,6 +18,7 @@ en:
         unit_type: Unit Type
         university_type: University Type
         yoksis_id: YOKSIS ID
+        effective_yoksis_id: Effective Unit
   helpers:
     submit:
       unit:

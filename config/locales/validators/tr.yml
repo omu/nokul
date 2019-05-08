@@ -2,6 +2,8 @@ tr:
   validators:
     academic_term:
       active_check: Akademik dönemlerden birinin aktif olması zorunludur.
+    activation_service:
+      cannot_be_blank: Eski kimliğe sahipseniz 'Seri' ve 'Seri No' alanlarını, çipli kimliğe sahipseniz 'Doküman No' alanını doldurmalısınız.
     address:
       max_formal: En fazla %{limit} tane ikamet adresi ekleyebilirsiniz.
       max_informal: En fazla %{limit} tane adres ekleyebilirsiniz.

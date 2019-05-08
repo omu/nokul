@@ -10,6 +10,7 @@
     <table class="table table-responsive-sm">
       <thead>
         <tr>
+          <th><%= t('.staff_number') %></th>
           <th><%= t('.title') %></th>
           <th><%= t('.active') %></th>
           <th><%= t('created_at') %></th>
@@ -20,6 +21,7 @@
       <tbody>
         <% @employees.each do |employee| %>
           <tr class="<%= employee.active? ? 'table-success' : 'table-secondary' %>">
+            <td><%= employee.staff_number %></td>
             <td><%= employee.title.name %></td>
             <td><%= employee.active? ? t('yes') : t('no') %></td>
             <td><%= as_date_and_time(employee.created_at) %></td>
