@@ -1,5 +1,8 @@
 language: minimal
 
+git:
+  depth: false
+
 cache:
   directories:
     - "$HOME/bundle"
