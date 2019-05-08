@@ -30,6 +30,7 @@ tr:
         password_changed_at: Son Parola Değişikliği
         password_confirmation: Parola (Tekrar)
         preferences: Görünürlük Ayarları
+        preferred_language: Sistem Dili
         profile: Profil Ayarları
         projects_count: Proje Sayısı
         public_photo: Profilimde Fotoğrafımı Göster

@@ -30,6 +30,7 @@ en:
         password_changed_at: Last Password Change
         password_confirmation: Password Confirmation
         preferences: Visibility Settings
+        preferred_language: Preferred Language
         profile: Profile Settings
         projects_count: Projects Count
         public_photo: Show picture on my profile
