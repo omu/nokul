@@ -5,6 +5,8 @@ author: İrfan SUBAŞ
 Yetkilendirme
 =============
 
+![Patron](../diagrams/Patron.png)
+
 Temel Bilgiler
 --------------
 
