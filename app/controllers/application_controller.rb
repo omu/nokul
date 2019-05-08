@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
+  include Pundit
+
   protect_from_forgery with: :exception
 
   before_action :configure_permitted_parameters, if: :devise_controller?
@@ -8,6 +10,7 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
 
   rescue_from ActiveRecord::RecordNotFound, with: :not_found
+  rescue_from Pundit::NotAuthorizedError,   with: :user_not_authorized
 
   def set_locale
     language = locale_params
@@ -45,5 +48,16 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:account_update, keys: %i[email])
+  end
+
+  private
+
+  def user_not_authorized(exception)
+    flash[:alert] = t(
+      "#{exception.policy.class.name.underscore}.#{exception.query}",
+      scope: 'pundit',
+      default: :default
+    )
+    redirect_back(fallback_location: root_path)
   end
 end

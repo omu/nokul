@@ -1,0 +1,18 @@
+en:
+  patron:
+    assignments:
+      edit:
+        form_title: Update the Assignment
+      index:
+        card_header: Users
+        smart_search_placeholder: TC/YU number, e-mail address, first or last name
+      preview_scope:
+        error: An error occurred when preview the scope.
+      show:
+        permissions: Permissions
+        query_stores: Scope Queries
+        roles: Roles
+        smart_search_placeholder: Search with Model-Specific Keyword
+        user_informations: User Informations
+      update:
+        success: Assignment successfully updated.

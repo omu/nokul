@@ -8,6 +8,7 @@ SimpleCov.start 'rails' do
   add_filter '/app/channels'
   add_group 'Decorators', 'app/decorators'
   add_group 'Plugins', 'plugins'
+  add_group 'Policies', 'app/policies'
   add_group 'Services', 'app/services'
   add_group 'Validators', 'app/validators'
 end

@@ -1,0 +1,27 @@
+en:
+  patron:
+    boolean:
+      'true': 'Yes'
+      'false': 'No'
+    suffixes:
+      value: Value
+      query_type: Query Type
+      skip_empty: Ignore If Value Is Empty
+    query_types:
+      in: In
+      not_in: Not In
+      equal: Equal
+      not_equal: Not Equal
+      greater_than: Greater Than
+      greater_than_to_equal: Greater Than to Equal
+      less_than: Less Than
+      less_than_to_equal: Less Than to Equal
+      start_with: Start With
+      end_with: End With
+      contain: Contain
+      not_start_with: Not Start With
+      not_end_with: Not End With
+      not_contain: Not Contain
+    book_scope:
+      id: ID
+      desc: Description

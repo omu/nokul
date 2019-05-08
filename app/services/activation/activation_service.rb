@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Activation
-  class StudentActivationService
+  class ActivationService
     include ActiveModel::Validations
 
     attr_accessor :country,
@@ -58,9 +58,9 @@ module Activation
       User.activated.exists?(id_number: id_number)
     end
 
-    # TODO: prospective_employee için geliştirme yapılmalı.
     def prospective?
-      ProspectiveStudent.not_archived.registered.exists?(id_number: id_number)
+      ProspectiveStudent.not_archived.registered.exists?(id_number: id_number) ||
+        ProspectiveEmployee.not_archived.exists?(id_number: id_number)
     end
 
     def active
@@ -75,12 +75,17 @@ module Activation
 
     private
 
-    def process
-      @prospective = ProspectiveStudent.find_by(id_number: id_number)
+    def set_prospective_and_user
+      @prospective = [*ProspectiveStudent.registered.where(id_number: id_number),
+                      *ProspectiveEmployee.where(id_number: id_number)]
       @user = User.find_by(id_number: id_number)
+    end
 
-      ProspectiveStudent.transaction do
-        prospective.update(archived: true)
+    def process
+      set_prospective_and_user
+
+      ActiveRecord::Base.transaction do
+        prospective.map { |p| p.update(archived: true) }
         user.update(activated: true, activated_at: Time.zone.now)
       end
     end

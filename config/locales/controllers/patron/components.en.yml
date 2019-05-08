@@ -1,0 +1,8 @@
+en:
+  patron:
+    components:
+      preview:
+        smart_search_placeholder: Search with Model-Specific Keyword
+        total_number_of_records: Total Number of Records
+      users:
+        assignment: Assign Role and Scope
