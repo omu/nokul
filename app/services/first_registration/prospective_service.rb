@@ -43,7 +43,11 @@ module FirstRegistration
 
     def set_error_messages
       error_messages.each do |key, message|
-        prospective.errors.add(key, message.join(''))
+        if prospective.attributes.include?(key.to_s)
+          prospective.errors.add(key, message.join(''))
+        else
+          prospective.errors.add(:base, message.join(''))
+        end
       end
       false
     end

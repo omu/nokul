@@ -21,6 +21,9 @@ module FirstRegistration
       prospective = FirstRegistration::ProspectiveService.new(@prospective_employee)
 
       if prospective.register
+        if User.exists?(id_number: @prospective_employee.id_number, activated: true)
+          @prospective_employee.update(archived: true)
+        end
         @prospective_employee.save ? redirect_to(:prospective_employees, notice: t('.success')) : render(:new)
       else
         render(:new)

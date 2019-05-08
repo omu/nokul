@@ -3,12 +3,12 @@
 require 'test_helper'
 
 module Activation
-  class StudentActivationServiceTest < ActiveSupport::TestCase
+  class ActivationServiceTest < ActiveSupport::TestCase
     setup do
       prospective = prospective_students(:mine)
 
       @activation =
-        Activation::StudentActivationService.new(
+        Activation::ActivationService.new(
           id_number: prospective.id_number,
           first_name: prospective.first_name,
           last_name: prospective.last_name,
@@ -73,7 +73,7 @@ module Activation
 
     test 'activation is must be active' do
       assert @activation.active
-      assert @activation.prospective.archived?
+      assert @activation.prospective.map(&:archived).all?
       assert @activation.user.activated?
     end
   end
