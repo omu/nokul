@@ -2,10 +2,6 @@ tr:
   devise:
     registrations:
       user:
-        destroyed: "Güle güle! Hesabınız başarılı bir şekilde iptal edildi. Sizi tekrar görmeyi umut ediyoruz."
-        signed_up_but_inactive: "Başarılı bir şekilde kayıt oldunuz. Ancak henüz hesabınızı doğrulamadığınız için giriş yapamazsınız."
-        signed_up_but_locked: "Başarılı bir şekilde kayıt oldunuz. Ancak hesabınız kilitli olduğu için giriş yapamazsınız."
-        signed_up_but_unconfirmed: "Eposta adresinize onaylama linkli bir mesaj gönderildi. Lütfen hesabınızı aktif etmek için linke tıklayın."
         update_needs_confirmation: "Hesabınız başarılı bir şekilde güncellendi. Fakat eposta adresinizi onaylamanız gerekmektedir. Lütfen eposta kutunuzu kontrol ediniz ve yeni eposta adresinizi onaylama linkine tıklayınız."
         updated: "Hesabınız başarılı bir şekilde güncellendi."
   account:
