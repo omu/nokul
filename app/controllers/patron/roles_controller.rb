@@ -12,10 +12,12 @@ module Patron
     end
 
     def show
-      @collections = {
-        permissions: pagy_multi_by_search(@role.permissions.order(:name), page_param: 'page_permission'),
-        users: pagy_multi_by_search(@role.users, page_param: 'page_user')
-      }
+      @permissions = pagy_by_search(
+        @role.permissions.order(:name), page_param: 'page_permission', pagy_name: :pagy_permissions
+      )
+      @users = pagy_by_search(
+        @role.users, page_param: 'page_user', pagy_name: :pagy_users
+      )
     end
 
     def new

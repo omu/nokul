@@ -19,13 +19,13 @@
       </h5>
       <div class="card-body">
         <%= render 'patron/components/permissions',
-                   permissions: @collections[:permissions][:collection],
+                   permissions: @permissions,
                    actions_visible: false %>
       </div>
 
       <nav aria-label='pagination'>
         <ul class='pagination justify-content-center'>
-          <%== pagy_bootstrap_nav(@collections[:permissions][:pagy]) %>
+          <%== pagy_bootstrap_nav(@pagy_permissions) %>
         </ul>
       </nav>
     </div>
@@ -38,12 +38,12 @@
       </h5>
       <div class="card-body">
         <%= render 'patron/components/users',
-                   users: @collections[:users][:collection],
+                   users: @users,
                    actions_visible: false %>
       </div>
       <nav aria-label='pagination'>
         <ul class='pagination justify-content-center'>
-          <%== pagy_bootstrap_nav(@collections[:users][:pagy]) %>
+          <%== pagy_bootstrap_nav(@pagy_users) %>
         </ul>
       </nav>
     </div>

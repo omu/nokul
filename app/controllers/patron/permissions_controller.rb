@@ -13,10 +13,12 @@ module Patron
     def show
       @permission = Patron::Permission.find(params[:id])
 
-      @collections = {
-        roles: pagy_multi_by_search(@permission.roles.order(:name), page_param: 'page_permission'),
-        users: pagy_multi_by_search(@permission.users, page_param: 'page_user')
-      }
+      @roles = pagy_by_search(
+        @permission.roles.order(:name), page_param: 'page_role', pagy_name: :pagy_roles
+      )
+      @users = pagy_by_search(
+        @permission.users, page_param: 'page_user', pagy_name: :pagy_users
+      )
 
       authorize @permission
     end
