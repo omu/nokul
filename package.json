@@ -11,7 +11,7 @@
     "chalk": "^2.4.2",
     "flatpickr": "^4.5.2",
     "jquery.maskedinput": "^1.4.1",
-    "select2": "^4.0.6-rc.1",
+    "select2": "^4.0.7-rc.0",
     "toastr": "^2.1.4",
     "trix": "^1.0.0",
     "turbolinks": "^5.2.0"
