@@ -96,6 +96,18 @@ class User < ApplicationRecord
     employees.active.first.try(:title).try(:name)
   end
 
+  def employee?
+    employees.active.exists?
+  end
+
+  def student?
+    students.exists?
+  end
+
+  def academic?
+    employees.active.academic.exists?
+  end
+
   def self.with_most_articles
     where.not(articles_count: 0).order('articles_count desc').limit(10)
   end

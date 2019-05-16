@@ -44,4 +44,8 @@ class Identity < ApplicationRecord
     self.type = 'informal' if type.blank?
   end
   # rubocop:enable Metrics/AbcSize
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
 end
