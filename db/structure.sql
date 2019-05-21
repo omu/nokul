@@ -1747,6 +1747,77 @@ ALTER SEQUENCE public.languages_id_seq OWNED BY public.languages.id;
 
 
 --
+-- Name: ldap_synchronization_errors; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.ldap_synchronization_errors (
+    id bigint NOT NULL,
+    ldap_synchronization_id bigint NOT NULL,
+    description text,
+    resolved boolean,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT ldap_synchronization_errors_description_length CHECK ((length(description) <= 65535)),
+    CONSTRAINT ldap_synchronization_errors_description_presence CHECK (((description IS NOT NULL) AND (description !~ '^\s*$'::text))),
+    CONSTRAINT ldap_synchronization_errors_resolved_null CHECK ((resolved IS NOT NULL))
+);
+
+
+--
+-- Name: ldap_synchronization_errors_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.ldap_synchronization_errors_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: ldap_synchronization_errors_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.ldap_synchronization_errors_id_seq OWNED BY public.ldap_synchronization_errors.id;
+
+
+--
+-- Name: ldap_synchronizations; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.ldap_synchronizations (
+    id bigint NOT NULL,
+    user_id bigint NOT NULL,
+    "values" jsonb,
+    status integer,
+    synchronized_at timestamp without time zone,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT ldap_synchronizations_status_numericality CHECK ((status >= 0))
+);
+
+
+--
+-- Name: ldap_synchronizations_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.ldap_synchronizations_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: ldap_synchronizations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.ldap_synchronizations_id_seq OWNED BY public.ldap_synchronizations.id;
+
+
+--
 -- Name: meeting_agendas; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -3320,6 +3391,20 @@ ALTER TABLE ONLY public.languages ALTER COLUMN id SET DEFAULT nextval('public.la
 
 
 --
+-- Name: ldap_synchronization_errors id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.ldap_synchronization_errors ALTER COLUMN id SET DEFAULT nextval('public.ldap_synchronization_errors_id_seq'::regclass);
+
+
+--
+-- Name: ldap_synchronizations id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.ldap_synchronizations ALTER COLUMN id SET DEFAULT nextval('public.ldap_synchronizations_id_seq'::regclass);
+
+
+--
 -- Name: meeting_agendas id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -3958,6 +4043,22 @@ ALTER TABLE ONLY public.languages
 
 ALTER TABLE ONLY public.languages
     ADD CONSTRAINT languages_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: ldap_synchronization_errors ldap_synchronization_errors_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.ldap_synchronization_errors
+    ADD CONSTRAINT ldap_synchronization_errors_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: ldap_synchronizations ldap_synchronizations_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.ldap_synchronizations
+    ADD CONSTRAINT ldap_synchronizations_pkey PRIMARY KEY (id);
 
 
 --
@@ -4833,6 +4934,20 @@ CREATE INDEX index_identities_on_user_id ON public.identities USING btree (user_
 
 
 --
+-- Name: index_ldap_synchronization_errors_on_ldap_synchronization_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_ldap_synchronization_errors_on_ldap_synchronization_id ON public.ldap_synchronization_errors USING btree (ldap_synchronization_id);
+
+
+--
+-- Name: index_ldap_synchronizations_on_user_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_ldap_synchronizations_on_user_id ON public.ldap_synchronizations USING btree (user_id);
+
+
+--
 -- Name: index_meeting_agendas_on_agenda_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -5599,6 +5714,14 @@ ALTER TABLE ONLY public.available_courses
 
 
 --
+-- Name: ldap_synchronizations fk_rails_afbb5c5bcf; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.ldap_synchronizations
+    ADD CONSTRAINT fk_rails_afbb5c5bcf FOREIGN KEY (user_id) REFERENCES public.users(id);
+
+
+--
 -- Name: prospective_students fk_rails_b1c146f76e; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -5628,6 +5751,14 @@ ALTER TABLE ONLY public.projects
 
 ALTER TABLE ONLY public.agendas
     ADD CONSTRAINT fk_rails_b92b5eaf98 FOREIGN KEY (agenda_type_id) REFERENCES public.agenda_types(id);
+
+
+--
+-- Name: ldap_synchronization_errors fk_rails_bac30ae8e6; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.ldap_synchronization_errors
+    ADD CONSTRAINT fk_rails_bac30ae8e6 FOREIGN KEY (ldap_synchronization_id) REFERENCES public.ldap_synchronizations(id);
 
 
 --
@@ -5862,6 +5993,8 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20190422104613'),
 ('20190422141252'),
 ('20190425065306'),
-('20190507195222');
+('20190507195222'),
+('20190517112616'),
+('20190517112657');
 
 
