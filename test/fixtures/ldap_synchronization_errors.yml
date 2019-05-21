@@ -1,0 +1,8 @@
+one:
+  ldap_synchronization: one
+  description: Description
+  resolved: false
+two:
+  ldap_synchronization: two
+  description: Description
+  resolved: false

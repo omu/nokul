@@ -1,0 +1,10 @@
+one:
+  user: serhat
+  values: "{\"foo\":\"bar\"}"
+  status: 0
+  synchronized_at:
+two:
+  user: mine
+  values: "{\"foo\":\"bar\"}"
+  status: 2
+  synchronized_at: 2019-05-17 14:26:16
