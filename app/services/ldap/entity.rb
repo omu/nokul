@@ -5,24 +5,26 @@ module Ldap
     # rubocop:disable Naming/MethodName
     module Attributes
       def cn
-        identity&.full_name
+        identity.try(:full_name)
       end
 
       def displayName
-        identity&.full_name
+        identity.try(:full_name)
       end
 
       def eduPersonAffiliation
-        affiliations.each_with_object([]) do |(_, values), array|
-          array << [*values[:scope], values[:key]].reverse if values[:status]
-        end
+        affiliations.select { |_, value| value[:status] }
+                    .map    { |_, value| value[:scope] << value[:key] }
+                    .flatten
+                    .sort
+                    .uniq
       end
 
       def eduPersonPrimaryAffiliation
-        primary = affiliations.select { |_, values| values[:status] }
-                              .max_by { |_, values| values[:priority] }
+        primary = affiliations.select { |_, value| value[:status] }
+                              .max_by { |_, value| value[:priority] }
 
-        (primary.last || {})[:predicate]
+        (primary.try(:last) || {})[:key]
       end
 
       def eduPersonPrincipalName
@@ -38,7 +40,7 @@ module Ldap
       end
 
       def givenName
-        identity&.first_name
+        identity.try(:first_name)
       end
 
       def jpegPhoto
@@ -62,7 +64,7 @@ module Ldap
       end
 
       def schacDateOfBirth
-        identity&.date_of_birth&.strftime('%Y%m%d')
+        identity.try(:date_of_birth).try(:strftime, '%Y%m%d')
       end
 
       def schacExpiryDate
@@ -70,7 +72,7 @@ module Ldap
       end
 
       def schacGender
-        case identity&.gender
+        case identity.try(:gender)
         when 'male'   then 1
         when 'female' then 2
         when 'other'  then 0
@@ -99,11 +101,13 @@ module Ldap
       end
 
       def schacYearOfBirth
-        identity&.date_of_birth&.strftime('%Y')
+        identity.try(:date_of_birth).try(:strftime, '%Y')
+
+        # identity&.date_of_birth&.strftime('%Y')
       end
 
       def sn
-        identity&.last_name
+        identity.try(:last_name)
       end
 
       def uid
@@ -111,7 +115,7 @@ module Ldap
       end
 
       def userPassword
-        '{BCRYPT}PASSWORD'
+        "{BCRYPT}#{user.encrypted_password}"
       end
 
       private
