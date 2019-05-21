@@ -252,6 +252,7 @@ GEM
     msgpack (1.2.10)
     multi_json (1.13.1)
     multipart-post (2.0.0)
+    net-ldap (0.16.1)
     netaddr (2.0.3)
     nexmo (5.7.0)
       jwt (~> 2)
@@ -444,6 +445,7 @@ DEPENDENCIES
   letter_opener
   listen (>= 3.0.5, < 3.2)
   lol_dba
+  net-ldap
   nexmo
   nokul-support!
   nokul-tenant!
