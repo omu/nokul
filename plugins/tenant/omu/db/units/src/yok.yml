@@ -14466,6 +14466,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  effective_unit_id: '174831'
 
 - name: Emlak ve Emlak Yönetimi Programı
   yoksis_id: '317312'
@@ -14527,6 +14528,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '228131'
 
 - name: Hukuk Programı (Tam Burslu)
   yoksis_id: '304510'
@@ -14548,6 +14550,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '228131'
 
 - name: Anayasa Hukuku Anabilim Dalı
   yoksis_id: '159908'
@@ -15929,6 +15932,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168674'
 
 - name: Rehberlik ve Psikolojik Danışmanlık Programı (%50 Burslu)
   abbreviation: PDR-PR-ELLİ
@@ -15940,6 +15944,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168674'
 
 - name: Rehberlik ve Psikolojik Danışmanlık Programı (Tam Burslu)
   abbreviation: PDR-PR-YÜZ
@@ -15951,6 +15956,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168674'
 
 - name: Rehberlik ve Psikolojik Danışmanlık Programı (Ücretli)
   abbreviation: PDR-PR-ÜCRETLİ
@@ -15962,6 +15968,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168674'
 
 - name: Rehberlik ve Psikolojik Danışmanlık Programı (İÖ)
   abbreviation: PDR-PR-2
@@ -16079,6 +16086,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168663'
 
 - name: İlköğretim Matematik Öğretmenliği Programı (İÖ)
   abbreviation: MF-İLKMAT-PR-2
@@ -16164,6 +16172,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168672'
 
 - name: Okul Öncesi Öğretmenliği Programı (Tam Burslu)
   abbreviation: TE-OÖE-PR-YÜZ
@@ -16175,6 +16184,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168672'
 
 - name: Okul Öncesi Öğretmenliği Programı (İÖ)
   abbreviation: TE-OÖE-PR-2
@@ -16219,6 +16229,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168680'
 
 - name: Türkçe Öğretmenliği Programı (%50 Burslu)
   abbreviation: TÜRKÇEĞ-PR-ELLİ
@@ -16230,6 +16241,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168680'
 
 - name: Türkçe Öğretmenliği Programı (Tam Burslu)
   abbreviation: TÜRKÇEĞ-PR-YÜZ
@@ -16241,6 +16253,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168680'
 
 - name: Türkçe Öğretmenliği Programı (Ücretli)
   abbreviation: TÜRKÇEĞ-PR-ÜCRETLİ
@@ -16252,6 +16265,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168680'
 
 - name: Coğrafya Öğretmenliği Programı
   yoksis_id: '275946'
@@ -16368,6 +16382,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168674'
 
 - name: İngilizce Öğretmenliği Programı (%50 Burslu)
   abbreviation: YDİLEĞ-İNG-PR-ELLİ
@@ -16379,6 +16394,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168665'
 
 - name: İngilizce Öğretmenliği Programı (Tam Burslu)
   abbreviation: YDİLEĞ-İNG-PR-YÜZ
@@ -16390,6 +16406,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168665'
 
 - name: İngilizce Öğretmenliği Programı (Ücretli)
   abbreviation: YDİLEĞ-İNG-PR-ÜCRETLİ
@@ -16401,6 +16418,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168665'
 
 - name: İngilizce Öğretmenliği Programı (İÖ)
   abbreviation: YDİLEĞ-İNG-PR-2
@@ -16849,6 +16867,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168708'
 
 - name: Kimya Programı (İÖ)
   abbreviation: KİMYA-PR-2
@@ -16896,6 +16915,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '320927'
 
 - name: Moleküler Biyoloji ve Genetik Programı (%50 Burslu)
   abbreviation: MOLBİYOGEN-PR-ELLİ
@@ -16907,6 +16927,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '320927'
 
 - name: Moleküler Biyoloji ve Genetik Programı (%75 Burslu)
   abbreviation: MOLBİYOGEN-PR-YETMİŞBEŞ
@@ -16918,6 +16939,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '320927'
 
 - name: Moleküler Biyoloji ve Genetik Programı (Tam Burslu)
   abbreviation: MOLBİYOGEN-PR-YÜZ
@@ -16929,6 +16951,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '320927'
 
 - name: Moleküler Biyoloji ve Genetik Programı (Ücretli)
   abbreviation: MOLBİYOGEN-PR-ÜCRETLİ
@@ -16940,6 +16963,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '320927'
 
 - name: Psikoloji Programı (%25 Burslu)
   abbreviation: PSİKOLOJİ-PR-YİRMİBEŞ
@@ -16951,6 +16975,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168714'
 
 - name: Psikoloji Programı (%50 Burslu)
   abbreviation: PSİKOLOJİ-PR-ELLİ
@@ -16962,6 +16987,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168714'
 
 - name: Psikoloji Programı (Tam Burslu)
   abbreviation: PSİKOLOJİ-PR-YÜZ
@@ -16973,6 +16999,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168714'
 
 - name: Psikoloji Programı (Ücretli)
   abbreviation: PSİKOLOJİ-PR-ÜCRETLİ
@@ -16984,6 +17011,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168714'
 
 - name: Sosyoloji Programı (%50 Burslu)
   abbreviation: SOSYOLOJİ-PR-ELLİ
@@ -16995,6 +17023,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '203698'
 
 - name: Sosyoloji Programı (Tam Burslu)
   abbreviation: SOSYOLOJİ-PR-YÜZ
@@ -17006,6 +17035,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '203698'
 
 - name: Tarih Programı (İÖ)
   abbreviation: TARİH-PR-2
@@ -17029,6 +17059,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168721'
 
 - name: Türk Dili ve Edebiyatı Programı (%50 Burslu)
   abbreviation: TDE-PR-ELLİ
@@ -17040,6 +17071,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168721'
 
 - name: Türk Dili ve Edebiyatı Programı (Tam Burslu)
   abbreviation: TDE-PR-YÜZ
@@ -17051,6 +17083,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168721'
 
 - name: Türk Dili ve Edebiyatı Programı (İÖ)
   abbreviation: TDE-PR-2
@@ -17222,6 +17255,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '245360'
 
 - name: Havacılık ve Uzay Bilimleri Fakültesi
   yoksis_id: '204856'
@@ -17455,6 +17489,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  effective_unit_id: '169586'
 
 - name: Emlak ve Emlak Yönetimi Programı (İÖ)
   abbreviation: HAVZA-MYO-TPS-EMLAK-PR-2
@@ -17973,6 +18008,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '245567'
 
 - name: Mimarlık Programı (%50 Burslu)
   abbreviation: MİMARLIK-PR-ELLİ
@@ -17984,6 +18020,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '245567'
 
 - name: Mimarlık Programı (%75 Burslu)
   abbreviation: MİMARLIK-PR-YETMİŞBEŞ
@@ -17995,6 +18032,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '245567'
 
 - name: Mimarlık Programı (Tam Burslu)
   abbreviation: MİMARLIK-PR-YÜZ
@@ -18006,6 +18044,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '245567'
 
 - name: Mimarlık Programı (Ücretli)
   abbreviation: MİMARLIK-PR-ÜCRETLİ
@@ -18017,6 +18056,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '245567'
 
 - name: İç Mimarlık Programı (%25 Burslu)
   abbreviation: İÇMİMAR-PR-YİRMİBEŞ
@@ -18028,6 +18068,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '299061' #tam bursluya refere ediyor. ana program yok?
 
 - name: İç Mimarlık Programı (%50 Burslu)
   abbreviation: İÇMİMAR-PR-ELLİ
@@ -18039,6 +18080,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '299061' #tam bursluya refere ediyor. ana program yok?
 
 - name: İç Mimarlık Programı (Tam Burslu)
   abbreviation: İÇMİMAR-PR-YÜZ
@@ -18050,6 +18092,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '299061' #kendine refere ediyor
 
 - name: İç Mimarlık Programı (Ücretli)
   abbreviation: İÇMİMAR-PR-ÜCRETLİ
@@ -18061,6 +18104,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '299062' #kendine refere ediyor
 
 - name: Bilgisayar Mühendisliği Programı (%25 Burslu)
   abbreviation: BİLGİSAYAR-PR-YİRMİBEŞ
@@ -18072,6 +18116,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168861'
 
 - name: Bilgisayar Mühendisliği Programı (%50 Burslu)
   yoksis_id: '308510'
@@ -18103,6 +18148,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168865'
 
 - name: Elektrik-Elektronik Mühendisliği Programı (İngilizce) (%50 Burslu)
   yoksis_id: '299060'
@@ -18134,6 +18180,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168865'
 
 - name: Elektrik-Elektronik Mühendisliği Programı (Ücretli)
   abbreviation: ELEKTRİK-PR-ÜCRETLİ
@@ -18145,6 +18192,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168865'
 
 - name: Endüstri Mühendisliği Programı (Ücretli)
   abbreviation: ENDÜSTRİ-PR-ÜCRETLİ
@@ -18156,6 +18204,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168866'
 
 - name: Gıda Mühendisliği Programı (İÖ)
   abbreviation: GIDA-PR-2
@@ -18258,6 +18307,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168871'
 
 - name: İnşaat Mühendisliği Programı (%50 Burslu)
   abbreviation: İNŞAAT-PR-ELLİ
@@ -18269,6 +18319,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168871'
 
 - name: İnşaat Mühendisliği Programı (Tam Burslu)
   abbreviation: İNŞAAT-PR-YÜZ
@@ -18280,6 +18331,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168871'
 
 - name: İnşaat Mühendisliği Programı (Ücretli)
   abbreviation: İNŞAAT-PR-ÜCRETLİ
@@ -18291,6 +18343,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '168871'
 
 - name: İnşaat Mühendisliği Programı (İÖ)
   abbreviation: İNŞAAT-PR-2
@@ -18775,6 +18828,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
   duration: 2
+  effective_unit_id: '215483'
 
 - name: Çocuk Gelişimi Programı (Ücretli)
   yoksis_id: '304695'
@@ -18970,6 +19024,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '240429'
 
 - name: Beslenme ve Diyetetik Programı (%50 Burslu)
   abbreviation: SAĞLIK-YO-BESLENME-PR-ELLİ
@@ -18981,6 +19036,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '240429'
 
 - name: Beslenme ve Diyetetik Programı (Ücretli)
   abbreviation: SAĞLIK-YO-BESLENME-PR-ÜCRETLİ
@@ -18992,6 +19048,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '240429'
 
 - name: Diyetetik Anabilim Dalı
   yoksis_id: '250148'
@@ -19141,6 +19198,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '169397'
 
 - name: Hemşirelik Programı (%50 Burslu)
   abbreviation: SAĞLIK-YO-HEMŞİRELİK-PR-ELLİ
@@ -19152,6 +19210,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '169397'
 
 - name: Hemşirelik Programı (Tam Burslu)
   abbreviation: SAĞLIK-YO-HEMŞİRELİK-PR-YÜZ
@@ -19163,6 +19222,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '169397'
 
 - name: Hemşirelik Programı (Ücretli)
   abbreviation: SAĞLIK-YO-HEMŞİRELİK-PR-ÜCRETLİ
@@ -19174,6 +19234,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '169397'
 
 - name: Hemşirelikte Yönetim Anabilim Dalı
   yoksis_id: '250158'
@@ -19265,6 +19326,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '256685'
 
 - name: Sosyal Hizmet Programı (Ücretli)
   abbreviation: SAĞLIK-YO-SH-PR-ÜCRETLİ
@@ -19276,6 +19338,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '256685'
 
 - name: Acil Tıp Hemşireliği (DR)
   yoksis_id: '257558'
@@ -19669,6 +19732,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  effective_unit_id: '215479'
 
 - name: Optisyenlik Programı (Ücretli)
   yoksis_id: '304647'
@@ -19741,6 +19805,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  effective_unit_id: '145869'
 
 - name: Tıbbi Görüntüleme Teknikleri Programı (İÖ) (Ücretli)
   abbreviation: SAĞLIK-MYO-THT-TGT-PR-2-ÜCRETLİ
@@ -19752,6 +19817,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
+  effective_unit_id: '243775'
 
 - name: Tıbbi Laboratuvar Teknikleri Programı (İÖ)
   yoksis_id: '145881'
@@ -20839,6 +20905,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 6
+  effective_unit_id: '228132'
 
 - name: Hastalıklar ve Klinik Bilimleri Bölümü
   yoksis_id: '122234'
@@ -21841,6 +21908,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '169309'
 
 - name: Siyaset Bilimi ve Kamu Yönetimi Programı (Tam Burslu)
   abbreviation: SBKY-PR-YÜZ
@@ -21852,6 +21920,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '169309'
 
 - name: Siyaset Bilimi ve Kamu Yönetimi Programı (Ücretli)
   abbreviation: SBKY-PR-ÜCRETLİ
@@ -21863,6 +21932,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '169309'
 
 - name: Siyaset Bilimi ve Kamu Yönetimi Programı (İÖ)
   abbreviation: SBKY-PR-2
@@ -21896,6 +21966,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '299050' #tam bursluya refere etmiş. ana program yok?
 
 - name: Siyaset Bilimi ve Uluslararası İlişkiler Programı (%50 Burslu)
   abbreviation: SBUİ-PR-ELLİ
@@ -21907,6 +21978,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '299050' #tam bursluya refere etmiş. ana program yok?
 
 - name: Siyaset Bilimi ve Uluslararası İlişkiler Programı (Tam Burslu)
   abbreviation: SBUİ-PR-YÜZ
@@ -21918,6 +21990,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '299050' #kendine refere ediyor
 
 - name: Siyaset Bilimi ve Uluslararası İlişkiler Programı (Ücretli)
   abbreviation: SBUİ-PR-ÜCRETLİ
@@ -21929,6 +22002,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '299051' #kendine refere ediyor
 
 - name: Uluslararası Ticaret ve Lojistik Programı (%25 Burslu)
   abbreviation: UTL-PR-YİRMİBEŞ
@@ -21940,6 +22014,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '252836'
 
 - name: Uluslararası Ticaret ve Lojistik Programı (%50 Burslu)
   abbreviation: UTL-PR-ELLİ
@@ -21951,6 +22026,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '252836'
 
 - name: Uluslararası Ticaret ve Lojistik Programı (Tam Burslu)
   abbreviation: UTL-PR-YÜZ
@@ -21962,6 +22038,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '252836'
 
 - name: Uluslararası Ticaret ve Lojistik Programı (Ücretli)
   abbreviation: UTL-PR-ÜCRETLİ
@@ -21973,6 +22050,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '252836'
 
 - name: Uluslararası Ticaret ve İşletmecilik Bölümü
   abbreviation: UTİ
@@ -21994,6 +22072,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '299055' #tam bursluya refere ediyor. ana program yok?
 
 - name: Uluslararası Ticaret ve İşletmecilik Programı (%50 Burslu)
   abbreviation: UTİ-PR-ELLİ
@@ -22005,6 +22084,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '299055' #tam bursluya refere ediyor. ana program yok?
 
 - name: Uluslararası Ticaret ve İşletmecilik Programı (Tam Burslu)
   abbreviation: UTİ-PR-YÜZ
@@ -22016,6 +22096,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '299055' #kendine refere ediyor
 
 - name: Uluslararası Ticaret ve İşletmecilik Programı (Ücretli)
   abbreviation: UTİ-PR-ÜCRETLİ
@@ -22027,6 +22108,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '299056' #kendine refere ediyor
 
 - name: İşletme Programı (%25 Burslu)
   abbreviation: İŞLETMEB-PR-YİRMİBEŞ
@@ -22038,6 +22120,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '169308'
 
 - name: İşletme Programı (%50 Burslu)
   abbreviation: İŞLETMEB-PR-ELLİ
@@ -22049,6 +22132,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '169308'
 
 - name: İşletme Programı (%75 Burslu)
   abbreviation: İŞLETMEB-PR-YETMİŞBEŞ
@@ -22060,6 +22144,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '169308'
 
 - name: İşletme Programı (Tam Burslu)
   abbreviation: İŞLETMEB-PR-YÜZ
@@ -22071,6 +22156,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '169308'
 
 - name: İşletme Programı (Ücretli)
   abbreviation: İŞLETMEB-PR-ÜCRETLİ
@@ -22082,6 +22168,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  effective_unit_id: '169308'
 
 - name: İşletme Programı (İÖ)
   abbreviation: İŞLETMEB-PR-2
