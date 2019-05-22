@@ -35,7 +35,7 @@ schacPlaceOfBirth: Samsun, Türkiye
 schacYearOfBirth: 1991
 sn: Yılmaz
 uid: emrecan.1234
-userPassword: {BCRYPT}$2b$10$tFrK0DCl5AzcAJqMIJck9ejLiy1yE4fOo5Xxl3OJd0V5gdKXNwhHO
+userPassword: {BCRYPT}$2b$10$P9c9uTcr5RjqOhmf1ZcYvO255n/q6SknPA3ERvaAqqEoDSGLer3sy
 objectClass: person
 objectClass: organizationalPerson
 objectClass: inetOrgPerson
@@ -74,7 +74,7 @@ schacPlaceOfBirth: Samsun, Türkiye
 schacYearOfBirth: 1991
 sn: Sahir
 uid: cezmi.5678
-userPassword: {BCRYPT}$2b$10$tFrK0DCl5AzcAJqMIJck9ejLiy1yE4fOo5Xxl3OJd0V5gdKXNwhHO
+userPassword: {BCRYPT}$2b$10$P9c9uTcr5RjqOhmf1ZcYvO255n/q6SknPA3ERvaAqqEoDSGLer3sy
 objectClass: person
 objectClass: organizationalPerson
 objectClass: inetOrgPerson
@@ -86,16 +86,50 @@ objectClass: schacEntryMetadata
 objectClass: schacUserEntitlements
 objectClass: schacExperimentalOC
 
-dn: cn=muhendislik,ou=groups,dc=test,dc=omu,dc=edu,dc=tr
-cn: muhendislik
-description: muhendislik fakültesi
-objectclass: groupofuniquenames
-uniqueMember: uid=emrecan.1234,ou=people,dc=test,dc=omu,dc=edu,dc=tr
+dn: cn=alum@test.omu.edu.tr,ou=groups,dc=test,dc=omu,dc=edu,dc=tr
+cn: alum@test.omu.edu.tr
+description: Mezun öğrenciler
+memberURL: ldap:///ou=people,dc=test,dc=omu,dc=edu,dc=tr?mail?sub?(eduPersonAffiliation=alum)
+objectclass: groupOfURLs
 
-dn: cn=baum,ou=groups,dc=test,dc=omu,dc=edu,dc=tr
-cn: baum
-objectclass: groupofuniquenames
-description: bilgisayar araştırma ve uygulama merkezi
-uniqueMember: uid=emrecan.1234,ou=people,dc=test,dc=omu,dc=edu,dc=tr
-uniqueMember: uid=cezmi.5678,ou=people,dc=test,dc=omu,dc=edu,dc=tr
+dn: cn=affiliate@test.omu.edu.tr,ou=groups,dc=test,dc=omu,dc=edu,dc=tr
+cn: affiliate@test.omu.edu.tr
+description: Affiliate
+memberURL: ldap:///ou=people,dc=test,dc=omu,dc=edu,dc=tr?mail?sub?(eduPersonAffiliation=affiliate)
+objectclass: groupOfURLs
 
+dn: cn=library-walk-in@test.omu.edu.tr,ou=groups,dc=test,dc=omu,dc=edu,dc=tr
+cn: library-walk-in@test.omu.edu.tr
+description: Yalnızca kütüphane için kaydediler kişiler
+memberURL: ldap:///ou=people,dc=test,dc=omu,dc=edu,dc=tr?mail?sub?(eduPersonAffiliation=library-walk-in)
+objectclass: groupOfURLs
+
+dn: cn=member@test.omu.edu.tr,ou=groups,dc=test,dc=omu,dc=edu,dc=tr
+cn: member@test.omu.edu.tr
+description: Kurumla ilişkili aktif herkes
+memberURL: ldap:///ou=people,dc=test,dc=omu,dc=edu,dc=tr?mail?sub?(eduPersonAffiliation=member)
+objectclass: groupOfURLs
+
+dn: cn=student@test.omu.edu.tr,ou=groups,dc=test,dc=omu,dc=edu,dc=tr
+cn: student@test.omu.edu.tr
+description: Aktif öğrenciler
+memberURL: ldap:///ou=people,dc=test,dc=omu,dc=edu,dc=tr?mail?sub?(eduPersonAffiliation=student)
+objectclass: groupOfURLs
+
+dn: cn=employee@test.omu.edu.tr,ou=groups,dc=test,dc=omu,dc=edu,dc=tr
+cn: employee@test.omu.edu.tr
+description: Tüm personeller
+memberURL: ldap:///ou=people,dc=test,dc=omu,dc=edu,dc=tr?mail?sub?(eduPersonAffiliation=employee)
+objectclass: groupOfURLs
+
+dn: cn=faculty@test.omu.edu.tr,ou=groups,dc=test,dc=omu,dc=edu,dc=tr
+cn: faculty@test.omu.edu.tr
+description: Akademik personeller
+memberURL: ldap:///ou=people,dc=test,dc=omu,dc=edu,dc=tr?mail?sub?(eduPersonAffiliation=faculty)
+objectclass: groupOfURLs
+
+dn: cn=staff@test.omu.edu.tr,ou=groups,dc=test,dc=omu,dc=edu,dc=tr
+cn: staff@test.omu.edu.tr
+description: Akademik olmayan personeller
+memberURL: ldap:///ou=people,dc=test,dc=omu,dc=edu,dc=tr?mail?sub?(eduPersonAffiliation=staff)
+objectclass: groupOfURLs
