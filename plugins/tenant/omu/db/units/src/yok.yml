@@ -14460,13 +14460,13 @@
   abbreviation: ADALET-MYO-HUKUK-A-PR-ÜCRETLİ
   yoksis_id: '304522'
   parent_yoksis_id: '174830'
+  effective_unit_id: '174831'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Çarşamba
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
-  effective_unit_id: '174831'
 
 - name: Emlak ve Emlak Yönetimi Programı
   yoksis_id: '317312'
@@ -14522,13 +14522,13 @@
   abbreviation: HUKUK-PR-ELLİ
   yoksis_id: '304513'
   parent_yoksis_id: '176334'
+  effective_unit_id: '228131'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Çarşamba
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '228131'
 
 - name: Hukuk Programı (Tam Burslu)
   yoksis_id: '304510'
@@ -14544,13 +14544,13 @@
   abbreviation: HUKUK-PR-ÜCRETLİ
   yoksis_id: '309085'
   parent_yoksis_id: '176334'
+  effective_unit_id: '228131'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Çarşamba
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '228131'
 
 - name: Anayasa Hukuku Anabilim Dalı
   yoksis_id: '159908'
@@ -15926,49 +15926,49 @@
   abbreviation: PDR-PR-YİRMİBEŞ
   yoksis_id: '299025'
   parent_yoksis_id: '122083'
+  effective_unit_id: '168674'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168674'
 
 - name: Rehberlik ve Psikolojik Danışmanlık Programı (%50 Burslu)
   abbreviation: PDR-PR-ELLİ
   yoksis_id: '299026'
   parent_yoksis_id: '122083'
+  effective_unit_id: '168674'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168674'
 
 - name: Rehberlik ve Psikolojik Danışmanlık Programı (Tam Burslu)
   abbreviation: PDR-PR-YÜZ
   yoksis_id: '299023'
   parent_yoksis_id: '122083'
+  effective_unit_id: '168674'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168674'
 
 - name: Rehberlik ve Psikolojik Danışmanlık Programı (Ücretli)
   abbreviation: PDR-PR-ÜCRETLİ
   yoksis_id: '299024'
   parent_yoksis_id: '122083'
+  effective_unit_id: '168674'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168674'
 
 - name: Rehberlik ve Psikolojik Danışmanlık Programı (İÖ)
   abbreviation: PDR-PR-2
@@ -16080,13 +16080,13 @@
   abbreviation: MF-İLKMAT-PR-ELLİ
   yoksis_id: '308562'
   parent_yoksis_id: '298694'
+  effective_unit_id: '168663'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168663'
 
 - name: İlköğretim Matematik Öğretmenliği Programı (İÖ)
   abbreviation: MF-İLKMAT-PR-2
@@ -16166,25 +16166,25 @@
   abbreviation: TE-OÖE-PR-YİRMİBEŞ
   yoksis_id: '308561'
   parent_yoksis_id: '298632'
+  effective_unit_id: '168672'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168672'
 
 - name: Okul Öncesi Öğretmenliği Programı (Tam Burslu)
   abbreviation: TE-OÖE-PR-YÜZ
   yoksis_id: '304532'
   parent_yoksis_id: '298632'
+  effective_unit_id: '168672'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168672'
 
 - name: Okul Öncesi Öğretmenliği Programı (İÖ)
   abbreviation: TE-OÖE-PR-2
@@ -16223,49 +16223,49 @@
   abbreviation: TÜRKÇEĞ-PR-YİRMİBEŞ
   yoksis_id: '299029'
   parent_yoksis_id: '122095'
+  effective_unit_id: '168680'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168680'
 
 - name: Türkçe Öğretmenliği Programı (%50 Burslu)
   abbreviation: TÜRKÇEĞ-PR-ELLİ
   yoksis_id: '299030'
   parent_yoksis_id: '122095'
+  effective_unit_id: '168680'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168680'
 
 - name: Türkçe Öğretmenliği Programı (Tam Burslu)
   abbreviation: TÜRKÇEĞ-PR-YÜZ
   yoksis_id: '299027'
   parent_yoksis_id: '122095'
+  effective_unit_id: '168680'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168680'
 
 - name: Türkçe Öğretmenliği Programı (Ücretli)
   abbreviation: TÜRKÇEĞ-PR-ÜCRETLİ
   yoksis_id: '299028'
   parent_yoksis_id: '122095'
+  effective_unit_id: '168680'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168680'
 
 - name: Coğrafya Öğretmenliği Programı
   yoksis_id: '275946'
@@ -16376,49 +16376,49 @@
   abbreviation: YDİLEĞ-İNG-PR-YİRMİBEŞ
   yoksis_id: '299021'
   parent_yoksis_id: '122088'
+  effective_unit_id: '168674'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168674'
 
 - name: İngilizce Öğretmenliği Programı (%50 Burslu)
   abbreviation: YDİLEĞ-İNG-PR-ELLİ
   yoksis_id: '299022'
   parent_yoksis_id: '122088'
+  effective_unit_id: '168665'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168665'
 
 - name: İngilizce Öğretmenliği Programı (Tam Burslu)
   abbreviation: YDİLEĞ-İNG-PR-YÜZ
   yoksis_id: '299019'
   parent_yoksis_id: '122088'
+  effective_unit_id: '168665'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168665'
 
 - name: İngilizce Öğretmenliği Programı (Ücretli)
   abbreviation: YDİLEĞ-İNG-PR-ÜCRETLİ
   yoksis_id: '299020'
   parent_yoksis_id: '122088'
+  effective_unit_id: '168665'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168665'
 
 - name: İngilizce Öğretmenliği Programı (İÖ)
   abbreviation: YDİLEĞ-İNG-PR-2
@@ -16861,13 +16861,13 @@
   abbreviation: KİMYA-PR-ELLİ
   yoksis_id: '304539'
   parent_yoksis_id: '122027'
+  effective_unit_id: '168708'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168708'
 
 - name: Kimya Programı (İÖ)
   abbreviation: KİMYA-PR-2
@@ -16909,133 +16909,133 @@
   abbreviation: MOLBİYOGEN-PR-YİRMİBEŞ
   yoksis_id: '299036'
   parent_yoksis_id: '299034'
+  effective_unit_id: '320927'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '320927'
 
 - name: Moleküler Biyoloji ve Genetik Programı (%50 Burslu)
   abbreviation: MOLBİYOGEN-PR-ELLİ
   yoksis_id: '299037'
   parent_yoksis_id: '299034'
+  effective_unit_id: '320927'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '320927'
 
 - name: Moleküler Biyoloji ve Genetik Programı (%75 Burslu)
   abbreviation: MOLBİYOGEN-PR-YETMİŞBEŞ
   yoksis_id: '309339'
   parent_yoksis_id: '299034'
+  effective_unit_id: '320927'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '320927'
 
 - name: Moleküler Biyoloji ve Genetik Programı (Tam Burslu)
   abbreviation: MOLBİYOGEN-PR-YÜZ
   yoksis_id: '299035'
   parent_yoksis_id: '299034'
+  effective_unit_id: '320927'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '320927'
 
 - name: Moleküler Biyoloji ve Genetik Programı (Ücretli)
   abbreviation: MOLBİYOGEN-PR-ÜCRETLİ
   yoksis_id: '309084'
   parent_yoksis_id: '299034'
+  effective_unit_id: '320927'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '320927'
 
 - name: Psikoloji Programı (%25 Burslu)
   abbreviation: PSİKOLOJİ-PR-YİRMİBEŞ
   yoksis_id: '299040'
   parent_yoksis_id: '122040'
+  effective_unit_id: '168714'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168714'
 
 - name: Psikoloji Programı (%50 Burslu)
   abbreviation: PSİKOLOJİ-PR-ELLİ
   yoksis_id: '299039'
   parent_yoksis_id: '122040'
+  effective_unit_id: '168714'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168714'
 
 - name: Psikoloji Programı (Tam Burslu)
   abbreviation: PSİKOLOJİ-PR-YÜZ
   yoksis_id: '299038'
   parent_yoksis_id: '122040'
+  effective_unit_id: '168714'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168714'
 
 - name: Psikoloji Programı (Ücretli)
   abbreviation: PSİKOLOJİ-PR-ÜCRETLİ
   yoksis_id: '299041'
   parent_yoksis_id: '122040'
+  effective_unit_id: '168714'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168714'
 
 - name: Sosyoloji Programı (%50 Burslu)
   abbreviation: SOSYOLOJİ-PR-ELLİ
   yoksis_id: '308529'
   parent_yoksis_id: '122077'
+  effective_unit_id: '203698'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '203698'
 
 - name: Sosyoloji Programı (Tam Burslu)
   abbreviation: SOSYOLOJİ-PR-YÜZ
   yoksis_id: '308530'
   parent_yoksis_id: '122077'
+  effective_unit_id: '203698'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '203698'
 
 - name: Tarih Programı (İÖ)
   abbreviation: TARİH-PR-2
@@ -17053,37 +17053,37 @@
   abbreviation: TDE-PR-YİRMİBEŞ
   yoksis_id: '299043'
   parent_yoksis_id: '122050'
+  effective_unit_id: '168721'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168721'
 
 - name: Türk Dili ve Edebiyatı Programı (%50 Burslu)
   abbreviation: TDE-PR-ELLİ
   yoksis_id: '299044'
   parent_yoksis_id: '122050'
+  effective_unit_id: '168721'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168721'
 
 - name: Türk Dili ve Edebiyatı Programı (Tam Burslu)
   abbreviation: TDE-PR-YÜZ
   yoksis_id: '299042'
   parent_yoksis_id: '122050'
+  effective_unit_id: '168721'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168721'
 
 - name: Türk Dili ve Edebiyatı Programı (İÖ)
   abbreviation: TDE-PR-2
@@ -17249,13 +17249,13 @@
   abbreviation: GİT-PR-YÜZ
   yoksis_id: '304543'
   parent_yoksis_id: '232412'
+  effective_unit_id: '245360'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '245360'
 
 - name: Havacılık ve Uzay Bilimleri Fakültesi
   yoksis_id: '204856'
@@ -17483,13 +17483,13 @@
   abbreviation: HAVZA-MYO-TERAPİ-FİZYO-PR-ÜCRETLİ
   yoksis_id: '304552'
   parent_yoksis_id: '169584'
+  effective_unit_id: '169586'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Havza
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
-  effective_unit_id: '169586'
 
 - name: Emlak ve Emlak Yönetimi Programı (İÖ)
   abbreviation: HAVZA-MYO-TPS-EMLAK-PR-2
@@ -18002,97 +18002,97 @@
   abbreviation: MİMARLIK-PR-YİRMİBEŞ
   yoksis_id: '299071'
   parent_yoksis_id: '214339'
+  effective_unit_id: '245567'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '245567'
 
 - name: Mimarlık Programı (%50 Burslu)
   abbreviation: MİMARLIK-PR-ELLİ
   yoksis_id: '299072'
   parent_yoksis_id: '214339'
+  effective_unit_id: '245567'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '245567'
 
 - name: Mimarlık Programı (%75 Burslu)
   abbreviation: MİMARLIK-PR-YETMİŞBEŞ
   yoksis_id: '310648'
   parent_yoksis_id: '214339'
+  effective_unit_id: '245567'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '245567'
 
 - name: Mimarlık Programı (Tam Burslu)
   abbreviation: MİMARLIK-PR-YÜZ
   yoksis_id: '299069'
   parent_yoksis_id: '214339'
+  effective_unit_id: '245567'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '245567'
 
 - name: Mimarlık Programı (Ücretli)
   abbreviation: MİMARLIK-PR-ÜCRETLİ
   yoksis_id: '299070'
   parent_yoksis_id: '214339'
+  effective_unit_id: '245567'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '245567'
 
 - name: İç Mimarlık Programı (%25 Burslu)
   abbreviation: İÇMİMAR-PR-YİRMİBEŞ
   yoksis_id: '299063'
   parent_yoksis_id: '247958'
+  effective_unit_id: '299062'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '299062'
 
 - name: İç Mimarlık Programı (%50 Burslu)
   abbreviation: İÇMİMAR-PR-ELLİ
   yoksis_id: '299064'
   parent_yoksis_id: '247958'
+  effective_unit_id: '299062'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '299062'
 
 - name: İç Mimarlık Programı (Tam Burslu)
   abbreviation: İÇMİMAR-PR-YÜZ
   yoksis_id: '299061'
   parent_yoksis_id: '247958'
+  effective_unit_id: '299062'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '299062'
 
 - name: İç Mimarlık Programı (Ücretli)
   abbreviation: İÇMİMAR-PR-ÜCRETLİ
@@ -18109,13 +18109,13 @@
   abbreviation: BİLGİSAYAR-PR-YİRMİBEŞ
   yoksis_id: '308509'
   parent_yoksis_id: '122184'
+  effective_unit_id: '168861'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168861'
 
 - name: Bilgisayar Mühendisliği Programı (%50 Burslu)
   yoksis_id: '308510'
@@ -18141,13 +18141,13 @@
   abbreviation: ELEKTRİK-PR-ELLİ
   yoksis_id: '304617'
   parent_yoksis_id: '122225'
+  effective_unit_id: '168865'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168865'
 
 - name: Elektrik-Elektronik Mühendisliği Programı (İngilizce) (%50 Burslu)
   yoksis_id: '299060'
@@ -18173,37 +18173,37 @@
   abbreviation: ELEKTRİK-PR-YÜZ
   yoksis_id: '304600'
   parent_yoksis_id: '122225'
+  effective_unit_id: '168865'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168865'
 
 - name: Elektrik-Elektronik Mühendisliği Programı (Ücretli)
   abbreviation: ELEKTRİK-PR-ÜCRETLİ
   yoksis_id: '308532'
   parent_yoksis_id: '122225'
+  effective_unit_id: '168865'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168865'
 
 - name: Endüstri Mühendisliği Programı (Ücretli)
   abbreviation: ENDÜSTRİ-PR-ÜCRETLİ
   yoksis_id: '304641'
   parent_yoksis_id: '122192'
+  effective_unit_id: '168866'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168866'
 
 - name: Gıda Mühendisliği Programı (İÖ)
   abbreviation: GIDA-PR-2
@@ -18300,49 +18300,49 @@
   abbreviation: İNŞAAT-PR-YİRMİBEŞ
   yoksis_id: '299067'
   parent_yoksis_id: '122198'
+  effective_unit_id: '168871'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168871'
 
 - name: İnşaat Mühendisliği Programı (%50 Burslu)
   abbreviation: İNŞAAT-PR-ELLİ
   yoksis_id: '299068'
   parent_yoksis_id: '122198'
+  effective_unit_id: '168871'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168871'
 
 - name: İnşaat Mühendisliği Programı (Tam Burslu)
   abbreviation: İNŞAAT-PR-YÜZ
   yoksis_id: '299065'
   parent_yoksis_id: '122198'
+  effective_unit_id: '168871'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168871'
 
 - name: İnşaat Mühendisliği Programı (Ücretli)
   abbreviation: İNŞAAT-PR-ÜCRETLİ
   yoksis_id: '299066'
   parent_yoksis_id: '122198'
+  effective_unit_id: '168871'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '168871'
 
 - name: İnşaat Mühendisliği Programı (İÖ)
   abbreviation: İNŞAAT-PR-2
@@ -18821,13 +18821,13 @@
   abbreviation: SAMSUN-MYO-ÇBGH-ÇG-PR-UZ-YİRMİBEŞ
   yoksis_id: '304693'
   parent_yoksis_id: '215482'
+  effective_unit_id: '215483'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
   duration: 2
-  effective_unit_id: '215483'
 
 - name: Çocuk Gelişimi Programı (Ücretli)
   yoksis_id: '304695'
@@ -19017,37 +19017,37 @@
   abbreviation: SAĞLIK-YO-BESLENME-PR-YİRMİBEŞ
   yoksis_id: '308558'
   parent_yoksis_id: '147574'
+  effective_unit_id: '240429'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '240429'
 
 - name: Beslenme ve Diyetetik Programı (%50 Burslu)
   abbreviation: SAĞLIK-YO-BESLENME-PR-ELLİ
   yoksis_id: '304711'
   parent_yoksis_id: '147574'
+  effective_unit_id: '240429'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '240429'
 
 - name: Beslenme ve Diyetetik Programı (Ücretli)
   abbreviation: SAĞLIK-YO-BESLENME-PR-ÜCRETLİ
   yoksis_id: '308559'
   parent_yoksis_id: '147574'
+  effective_unit_id: '240429'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '240429'
 
 - name: Diyetetik Anabilim Dalı
   yoksis_id: '250148'
@@ -19191,49 +19191,49 @@
   abbreviation: SAĞLIK-YO-HEMŞİRELİK-PR-YİRMİBEŞ
   yoksis_id: '308534'
   parent_yoksis_id: '122354'
+  effective_unit_id: '169397'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '169397'
 
 - name: Hemşirelik Programı (%50 Burslu)
   abbreviation: SAĞLIK-YO-HEMŞİRELİK-PR-ELLİ
   yoksis_id: '304714'
   parent_yoksis_id: '122354'
+  effective_unit_id: '169397'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '169397'
 
 - name: Hemşirelik Programı (Tam Burslu)
   abbreviation: SAĞLIK-YO-HEMŞİRELİK-PR-YÜZ
   yoksis_id: '304713'
   parent_yoksis_id: '122354'
+  effective_unit_id: '169397'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '169397'
 
 - name: Hemşirelik Programı (Ücretli)
   abbreviation: SAĞLIK-YO-HEMŞİRELİK-PR-ÜCRETLİ
   yoksis_id: '308553'
   parent_yoksis_id: '122354'
+  effective_unit_id: '169397'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '169397'
 
 - name: Hemşirelikte Yönetim Anabilim Dalı
   yoksis_id: '250158'
@@ -19319,25 +19319,25 @@
   abbreviation: SAĞLIK-YO-SH-PR-YÜZ
   yoksis_id: '304722'
   parent_yoksis_id: '201577'
+  effective_unit_id: '256685'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '256685'
 
 - name: Sosyal Hizmet Programı (Ücretli)
   abbreviation: SAĞLIK-YO-SH-PR-ÜCRETLİ
   yoksis_id: '308560'
   parent_yoksis_id: '201577'
+  effective_unit_id: '256685'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '256685'
 
 - name: Acil Tıp Hemşireliği (DR)
   yoksis_id: '257558'
@@ -19725,13 +19725,13 @@
   abbreviation: SAĞLIK-MYO-THT-DİYALİZ-PR-ÜCRETLİ
   yoksis_id: '304672'
   parent_yoksis_id: '169645'
+  effective_unit_id: '215479'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
-  effective_unit_id: '215479'
 
 - name: Optisyenlik Programı (Ücretli)
   yoksis_id: '304647'
@@ -19798,25 +19798,25 @@
   abbreviation: SAĞLIK-MYO-THT-TGT-PR-ÜCRETLİ
   yoksis_id: '304658'
   parent_yoksis_id: '169645'
+  effective_unit_id: '145869'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
-  effective_unit_id: '145869'
 
 - name: Tıbbi Görüntüleme Teknikleri Programı (İÖ) (Ücretli)
   abbreviation: SAĞLIK-MYO-THT-TGT-PR-2-ÜCRETLİ
   yoksis_id: '304701'
   parent_yoksis_id: '169645'
+  effective_unit_id: '243775'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
-  effective_unit_id: '243775'
 
 - name: Tıbbi Laboratuvar Teknikleri Programı (İÖ)
   yoksis_id: '145881'
@@ -20898,13 +20898,13 @@
   abbreviation: TIP-PR-ÜCRETLİ
   yoksis_id: '308528'
   parent_yoksis_id: '121947'
+  effective_unit_id: '228132'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 6
-  effective_unit_id: '228132'
 
 - name: Hastalıklar ve Klinik Bilimleri Bölümü
   yoksis_id: '122234'
@@ -21901,37 +21901,37 @@
   abbreviation: SBKY-PR-ELLİ
   yoksis_id: '305047'
   parent_yoksis_id: '128036'
+  effective_unit_id: '169309'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '169309'
 
 - name: Siyaset Bilimi ve Kamu Yönetimi Programı (Tam Burslu)
   abbreviation: SBKY-PR-YÜZ
   yoksis_id: '305046'
   parent_yoksis_id: '128036'
+  effective_unit_id: '169309'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '169309'
 
 - name: Siyaset Bilimi ve Kamu Yönetimi Programı (Ücretli)
   abbreviation: SBKY-PR-ÜCRETLİ
   yoksis_id: '308554'
   parent_yoksis_id: '128036'
+  effective_unit_id: '169309'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '169309'
 
 - name: Siyaset Bilimi ve Kamu Yönetimi Programı (İÖ)
   abbreviation: SBKY-PR-2
@@ -21959,37 +21959,37 @@
   abbreviation: SBUİ-PR-YİRMİBEŞ
   yoksis_id: '299052'
   parent_yoksis_id: '299049'
+  effective_unit_id: '299051'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '299051'
 
 - name: Siyaset Bilimi ve Uluslararası İlişkiler Programı (%50 Burslu)
   abbreviation: SBUİ-PR-ELLİ
   yoksis_id: '299053'
   parent_yoksis_id: '299049'
+  effective_unit_id: '299051'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '299051'
 
 - name: Siyaset Bilimi ve Uluslararası İlişkiler Programı (Tam Burslu)
   abbreviation: SBUİ-PR-YÜZ
   yoksis_id: '299050'
   parent_yoksis_id: '299049'
+  effective_unit_id: '299051'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '299051'
 
 - name: Siyaset Bilimi ve Uluslararası İlişkiler Programı (Ücretli)
   abbreviation: SBUİ-PR-ÜCRETLİ
@@ -22006,49 +22006,49 @@
   abbreviation: UTL-PR-YİRMİBEŞ
   yoksis_id: '308556'
   parent_yoksis_id: '235948'
+  effective_unit_id: '252836'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '252836'
 
 - name: Uluslararası Ticaret ve Lojistik Programı (%50 Burslu)
   abbreviation: UTL-PR-ELLİ
   yoksis_id: '304580'
   parent_yoksis_id: '235948'
+  effective_unit_id: '252836'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '252836'
 
 - name: Uluslararası Ticaret ve Lojistik Programı (Tam Burslu)
   abbreviation: UTL-PR-YÜZ
   yoksis_id: '304558'
   parent_yoksis_id: '235948'
+  effective_unit_id: '252836'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '252836'
 
 - name: Uluslararası Ticaret ve Lojistik Programı (Ücretli)
   abbreviation: UTL-PR-ÜCRETLİ
   yoksis_id: '308557'
   parent_yoksis_id: '235948'
+  effective_unit_id: '252836'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '252836'
 
 - name: Uluslararası Ticaret ve İşletmecilik Bölümü
   abbreviation: UTİ
@@ -22064,37 +22064,37 @@
   abbreviation: UTİ-PR-YİRMİBEŞ
   yoksis_id: '299057'
   parent_yoksis_id: '299054'
+  effective_unit_id: '299056'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '299056'
 
 - name: Uluslararası Ticaret ve İşletmecilik Programı (%50 Burslu)
   abbreviation: UTİ-PR-ELLİ
   yoksis_id: '299058'
   parent_yoksis_id: '299054'
+  effective_unit_id: '299056'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '299056'
 
 - name: Uluslararası Ticaret ve İşletmecilik Programı (Tam Burslu)
   abbreviation: UTİ-PR-YÜZ
   yoksis_id: '299055'
   parent_yoksis_id: '299054'
+  effective_unit_id: '299056'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '299056'
 
 - name: Uluslararası Ticaret ve İşletmecilik Programı (Ücretli)
   abbreviation: UTİ-PR-ÜCRETLİ
@@ -22111,61 +22111,61 @@
   abbreviation: İŞLETMEB-PR-YİRMİBEŞ
   yoksis_id: '299047'
   parent_yoksis_id: '128030'
+  effective_unit_id: '169308'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '169308'
 
 - name: İşletme Programı (%50 Burslu)
   abbreviation: İŞLETMEB-PR-ELLİ
   yoksis_id: '299048'
   parent_yoksis_id: '128030'
+  effective_unit_id: '169308'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '169308'
 
 - name: İşletme Programı (%75 Burslu)
   abbreviation: İŞLETMEB-PR-YETMİŞBEŞ
   yoksis_id: '304555'
   parent_yoksis_id: '128030'
+  effective_unit_id: '169308'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '169308'
 
 - name: İşletme Programı (Tam Burslu)
   abbreviation: İŞLETMEB-PR-YÜZ
   yoksis_id: '299045'
   parent_yoksis_id: '128030'
+  effective_unit_id: '169308'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '169308'
 
 - name: İşletme Programı (Ücretli)
   abbreviation: İŞLETMEB-PR-ÜCRETLİ
   yoksis_id: '299046'
   parent_yoksis_id: '128030'
+  effective_unit_id: '169308'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '169308'
 
 - name: İşletme Programı (İÖ)
   abbreviation: İŞLETMEB-PR-2
