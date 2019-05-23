@@ -27,6 +27,8 @@ module Nokul
             parent_detsis_id
             parent_detsis_id_
 
+            effective_unit_id
+
             unit_type_id
             unit_status_id
             district_id
