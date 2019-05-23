@@ -18068,7 +18068,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '299061' #tam bursluya refere ediyor. ana program yok?
+  effective_unit_id: '299062'
 
 - name: İç Mimarlık Programı (%50 Burslu)
   abbreviation: İÇMİMAR-PR-ELLİ
@@ -18080,7 +18080,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '299061' #tam bursluya refere ediyor. ana program yok?
+  effective_unit_id: '299062'
 
 - name: İç Mimarlık Programı (Tam Burslu)
   abbreviation: İÇMİMAR-PR-YÜZ
@@ -18092,7 +18092,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '299061' #kendine refere ediyor
+  effective_unit_id: '299062'
 
 - name: İç Mimarlık Programı (Ücretli)
   abbreviation: İÇMİMAR-PR-ÜCRETLİ
@@ -18104,7 +18104,6 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '299062' #kendine refere ediyor
 
 - name: Bilgisayar Mühendisliği Programı (%25 Burslu)
   abbreviation: BİLGİSAYAR-PR-YİRMİBEŞ
@@ -21966,7 +21965,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '299050' #tam bursluya refere etmiş. ana program yok?
+  effective_unit_id: '299051'
 
 - name: Siyaset Bilimi ve Uluslararası İlişkiler Programı (%50 Burslu)
   abbreviation: SBUİ-PR-ELLİ
@@ -21978,7 +21977,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '299050' #tam bursluya refere etmiş. ana program yok?
+  effective_unit_id: '299051'
 
 - name: Siyaset Bilimi ve Uluslararası İlişkiler Programı (Tam Burslu)
   abbreviation: SBUİ-PR-YÜZ
@@ -21990,7 +21989,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '299050' #kendine refere ediyor
+  effective_unit_id: '299051'
 
 - name: Siyaset Bilimi ve Uluslararası İlişkiler Programı (Ücretli)
   abbreviation: SBUİ-PR-ÜCRETLİ
@@ -22002,7 +22001,6 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '299051' #kendine refere ediyor
 
 - name: Uluslararası Ticaret ve Lojistik Programı (%25 Burslu)
   abbreviation: UTL-PR-YİRMİBEŞ
@@ -22072,7 +22070,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '299055' #tam bursluya refere ediyor. ana program yok?
+  effective_unit_id: '299056'
 
 - name: Uluslararası Ticaret ve İşletmecilik Programı (%50 Burslu)
   abbreviation: UTİ-PR-ELLİ
@@ -22084,7 +22082,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '299055' #tam bursluya refere ediyor. ana program yok?
+  effective_unit_id: '299056'
 
 - name: Uluslararası Ticaret ve İşletmecilik Programı (Tam Burslu)
   abbreviation: UTİ-PR-YÜZ
@@ -22096,7 +22094,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '299055' #kendine refere ediyor
+  effective_unit_id: '299056'
 
 - name: Uluslararası Ticaret ve İşletmecilik Programı (Ücretli)
   abbreviation: UTİ-PR-ÜCRETLİ
@@ -22108,7 +22106,6 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
-  effective_unit_id: '299056' #kendine refere ediyor
 
 - name: İşletme Programı (%25 Burslu)
   abbreviation: İŞLETMEB-PR-YİRMİBEŞ
