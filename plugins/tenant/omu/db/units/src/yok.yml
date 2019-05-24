@@ -14460,6 +14460,7 @@
   abbreviation: ADALET-MYO-HUKUK-A-PR-ÜCRETLİ
   yoksis_id: '304522'
   parent_yoksis_id: '174830'
+  effective_unit_id: '174831'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Çarşamba
@@ -14521,6 +14522,7 @@
   abbreviation: HUKUK-PR-ELLİ
   yoksis_id: '304513'
   parent_yoksis_id: '176334'
+  effective_unit_id: '228131'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Çarşamba
@@ -14542,6 +14544,7 @@
   abbreviation: HUKUK-PR-ÜCRETLİ
   yoksis_id: '309085'
   parent_yoksis_id: '176334'
+  effective_unit_id: '228131'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Çarşamba
@@ -15923,6 +15926,7 @@
   abbreviation: PDR-PR-YİRMİBEŞ
   yoksis_id: '299025'
   parent_yoksis_id: '122083'
+  effective_unit_id: '168674'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -15934,6 +15938,7 @@
   abbreviation: PDR-PR-ELLİ
   yoksis_id: '299026'
   parent_yoksis_id: '122083'
+  effective_unit_id: '168674'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -15945,6 +15950,7 @@
   abbreviation: PDR-PR-YÜZ
   yoksis_id: '299023'
   parent_yoksis_id: '122083'
+  effective_unit_id: '168674'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -15956,6 +15962,7 @@
   abbreviation: PDR-PR-ÜCRETLİ
   yoksis_id: '299024'
   parent_yoksis_id: '122083'
+  effective_unit_id: '168674'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -16073,6 +16080,7 @@
   abbreviation: MF-İLKMAT-PR-ELLİ
   yoksis_id: '308562'
   parent_yoksis_id: '298694'
+  effective_unit_id: '168663'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -16158,6 +16166,7 @@
   abbreviation: TE-OÖE-PR-YİRMİBEŞ
   yoksis_id: '308561'
   parent_yoksis_id: '298632'
+  effective_unit_id: '168672'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -16169,6 +16178,7 @@
   abbreviation: TE-OÖE-PR-YÜZ
   yoksis_id: '304532'
   parent_yoksis_id: '298632'
+  effective_unit_id: '168672'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -16213,6 +16223,7 @@
   abbreviation: TÜRKÇEĞ-PR-YİRMİBEŞ
   yoksis_id: '299029'
   parent_yoksis_id: '122095'
+  effective_unit_id: '168680'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -16224,6 +16235,7 @@
   abbreviation: TÜRKÇEĞ-PR-ELLİ
   yoksis_id: '299030'
   parent_yoksis_id: '122095'
+  effective_unit_id: '168680'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -16235,6 +16247,7 @@
   abbreviation: TÜRKÇEĞ-PR-YÜZ
   yoksis_id: '299027'
   parent_yoksis_id: '122095'
+  effective_unit_id: '168680'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -16246,6 +16259,7 @@
   abbreviation: TÜRKÇEĞ-PR-ÜCRETLİ
   yoksis_id: '299028'
   parent_yoksis_id: '122095'
+  effective_unit_id: '168680'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -16362,6 +16376,7 @@
   abbreviation: YDİLEĞ-İNG-PR-YİRMİBEŞ
   yoksis_id: '299021'
   parent_yoksis_id: '122088'
+  effective_unit_id: '168674'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -16373,6 +16388,7 @@
   abbreviation: YDİLEĞ-İNG-PR-ELLİ
   yoksis_id: '299022'
   parent_yoksis_id: '122088'
+  effective_unit_id: '168665'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -16384,6 +16400,7 @@
   abbreviation: YDİLEĞ-İNG-PR-YÜZ
   yoksis_id: '299019'
   parent_yoksis_id: '122088'
+  effective_unit_id: '168665'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -16395,6 +16412,7 @@
   abbreviation: YDİLEĞ-İNG-PR-ÜCRETLİ
   yoksis_id: '299020'
   parent_yoksis_id: '122088'
+  effective_unit_id: '168665'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -16843,6 +16861,7 @@
   abbreviation: KİMYA-PR-ELLİ
   yoksis_id: '304539'
   parent_yoksis_id: '122027'
+  effective_unit_id: '168708'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -16890,6 +16909,7 @@
   abbreviation: MOLBİYOGEN-PR-YİRMİBEŞ
   yoksis_id: '299036'
   parent_yoksis_id: '299034'
+  effective_unit_id: '320927'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -16901,6 +16921,7 @@
   abbreviation: MOLBİYOGEN-PR-ELLİ
   yoksis_id: '299037'
   parent_yoksis_id: '299034'
+  effective_unit_id: '320927'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -16912,6 +16933,7 @@
   abbreviation: MOLBİYOGEN-PR-YETMİŞBEŞ
   yoksis_id: '309339'
   parent_yoksis_id: '299034'
+  effective_unit_id: '320927'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -16923,6 +16945,7 @@
   abbreviation: MOLBİYOGEN-PR-YÜZ
   yoksis_id: '299035'
   parent_yoksis_id: '299034'
+  effective_unit_id: '320927'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -16934,6 +16957,7 @@
   abbreviation: MOLBİYOGEN-PR-ÜCRETLİ
   yoksis_id: '309084'
   parent_yoksis_id: '299034'
+  effective_unit_id: '320927'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -16945,6 +16969,7 @@
   abbreviation: PSİKOLOJİ-PR-YİRMİBEŞ
   yoksis_id: '299040'
   parent_yoksis_id: '122040'
+  effective_unit_id: '168714'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -16956,6 +16981,7 @@
   abbreviation: PSİKOLOJİ-PR-ELLİ
   yoksis_id: '299039'
   parent_yoksis_id: '122040'
+  effective_unit_id: '168714'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -16967,6 +16993,7 @@
   abbreviation: PSİKOLOJİ-PR-YÜZ
   yoksis_id: '299038'
   parent_yoksis_id: '122040'
+  effective_unit_id: '168714'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -16978,6 +17005,7 @@
   abbreviation: PSİKOLOJİ-PR-ÜCRETLİ
   yoksis_id: '299041'
   parent_yoksis_id: '122040'
+  effective_unit_id: '168714'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -16989,6 +17017,7 @@
   abbreviation: SOSYOLOJİ-PR-ELLİ
   yoksis_id: '308529'
   parent_yoksis_id: '122077'
+  effective_unit_id: '203698'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -17000,6 +17029,7 @@
   abbreviation: SOSYOLOJİ-PR-YÜZ
   yoksis_id: '308530'
   parent_yoksis_id: '122077'
+  effective_unit_id: '203698'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -17023,6 +17053,7 @@
   abbreviation: TDE-PR-YİRMİBEŞ
   yoksis_id: '299043'
   parent_yoksis_id: '122050'
+  effective_unit_id: '168721'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -17034,6 +17065,7 @@
   abbreviation: TDE-PR-ELLİ
   yoksis_id: '299044'
   parent_yoksis_id: '122050'
+  effective_unit_id: '168721'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -17045,6 +17077,7 @@
   abbreviation: TDE-PR-YÜZ
   yoksis_id: '299042'
   parent_yoksis_id: '122050'
+  effective_unit_id: '168721'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -17216,6 +17249,7 @@
   abbreviation: GİT-PR-YÜZ
   yoksis_id: '304543'
   parent_yoksis_id: '232412'
+  effective_unit_id: '245360'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
@@ -17449,6 +17483,7 @@
   abbreviation: HAVZA-MYO-TERAPİ-FİZYO-PR-ÜCRETLİ
   yoksis_id: '304552'
   parent_yoksis_id: '169584'
+  effective_unit_id: '169586'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Havza
@@ -17967,6 +18002,7 @@
   abbreviation: MİMARLIK-PR-YİRMİBEŞ
   yoksis_id: '299071'
   parent_yoksis_id: '214339'
+  effective_unit_id: '245567'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
@@ -17978,6 +18014,7 @@
   abbreviation: MİMARLIK-PR-ELLİ
   yoksis_id: '299072'
   parent_yoksis_id: '214339'
+  effective_unit_id: '245567'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
@@ -17989,6 +18026,7 @@
   abbreviation: MİMARLIK-PR-YETMİŞBEŞ
   yoksis_id: '310648'
   parent_yoksis_id: '214339'
+  effective_unit_id: '245567'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
@@ -18000,6 +18038,7 @@
   abbreviation: MİMARLIK-PR-YÜZ
   yoksis_id: '299069'
   parent_yoksis_id: '214339'
+  effective_unit_id: '245567'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
@@ -18011,6 +18050,7 @@
   abbreviation: MİMARLIK-PR-ÜCRETLİ
   yoksis_id: '299070'
   parent_yoksis_id: '214339'
+  effective_unit_id: '245567'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
@@ -18022,6 +18062,7 @@
   abbreviation: İÇMİMAR-PR-YİRMİBEŞ
   yoksis_id: '299063'
   parent_yoksis_id: '247958'
+  effective_unit_id: '299062'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
@@ -18033,6 +18074,7 @@
   abbreviation: İÇMİMAR-PR-ELLİ
   yoksis_id: '299064'
   parent_yoksis_id: '247958'
+  effective_unit_id: '299062'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
@@ -18044,6 +18086,7 @@
   abbreviation: İÇMİMAR-PR-YÜZ
   yoksis_id: '299061'
   parent_yoksis_id: '247958'
+  effective_unit_id: '299062'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
@@ -18066,6 +18109,7 @@
   abbreviation: BİLGİSAYAR-PR-YİRMİBEŞ
   yoksis_id: '308509'
   parent_yoksis_id: '122184'
+  effective_unit_id: '168861'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -18097,6 +18141,7 @@
   abbreviation: ELEKTRİK-PR-ELLİ
   yoksis_id: '304617'
   parent_yoksis_id: '122225'
+  effective_unit_id: '168865'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -18128,6 +18173,7 @@
   abbreviation: ELEKTRİK-PR-YÜZ
   yoksis_id: '304600'
   parent_yoksis_id: '122225'
+  effective_unit_id: '168865'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -18139,6 +18185,7 @@
   abbreviation: ELEKTRİK-PR-ÜCRETLİ
   yoksis_id: '308532'
   parent_yoksis_id: '122225'
+  effective_unit_id: '168865'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -18150,6 +18197,7 @@
   abbreviation: ENDÜSTRİ-PR-ÜCRETLİ
   yoksis_id: '304641'
   parent_yoksis_id: '122192'
+  effective_unit_id: '168866'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -18252,6 +18300,7 @@
   abbreviation: İNŞAAT-PR-YİRMİBEŞ
   yoksis_id: '299067'
   parent_yoksis_id: '122198'
+  effective_unit_id: '168871'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -18263,6 +18312,7 @@
   abbreviation: İNŞAAT-PR-ELLİ
   yoksis_id: '299068'
   parent_yoksis_id: '122198'
+  effective_unit_id: '168871'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -18274,6 +18324,7 @@
   abbreviation: İNŞAAT-PR-YÜZ
   yoksis_id: '299065'
   parent_yoksis_id: '122198'
+  effective_unit_id: '168871'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -18285,6 +18336,7 @@
   abbreviation: İNŞAAT-PR-ÜCRETLİ
   yoksis_id: '299066'
   parent_yoksis_id: '122198'
+  effective_unit_id: '168871'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -18769,6 +18821,7 @@
   abbreviation: SAMSUN-MYO-ÇBGH-ÇG-PR-UZ-YİRMİBEŞ
   yoksis_id: '304693'
   parent_yoksis_id: '215482'
+  effective_unit_id: '215483'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
@@ -18964,6 +19017,7 @@
   abbreviation: SAĞLIK-YO-BESLENME-PR-YİRMİBEŞ
   yoksis_id: '308558'
   parent_yoksis_id: '147574'
+  effective_unit_id: '240429'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -18975,6 +19029,7 @@
   abbreviation: SAĞLIK-YO-BESLENME-PR-ELLİ
   yoksis_id: '304711'
   parent_yoksis_id: '147574'
+  effective_unit_id: '240429'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -18986,6 +19041,7 @@
   abbreviation: SAĞLIK-YO-BESLENME-PR-ÜCRETLİ
   yoksis_id: '308559'
   parent_yoksis_id: '147574'
+  effective_unit_id: '240429'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -19135,6 +19191,7 @@
   abbreviation: SAĞLIK-YO-HEMŞİRELİK-PR-YİRMİBEŞ
   yoksis_id: '308534'
   parent_yoksis_id: '122354'
+  effective_unit_id: '169397'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -19146,6 +19203,7 @@
   abbreviation: SAĞLIK-YO-HEMŞİRELİK-PR-ELLİ
   yoksis_id: '304714'
   parent_yoksis_id: '122354'
+  effective_unit_id: '169397'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -19157,6 +19215,7 @@
   abbreviation: SAĞLIK-YO-HEMŞİRELİK-PR-YÜZ
   yoksis_id: '304713'
   parent_yoksis_id: '122354'
+  effective_unit_id: '169397'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -19168,6 +19227,7 @@
   abbreviation: SAĞLIK-YO-HEMŞİRELİK-PR-ÜCRETLİ
   yoksis_id: '308553'
   parent_yoksis_id: '122354'
+  effective_unit_id: '169397'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -19259,6 +19319,7 @@
   abbreviation: SAĞLIK-YO-SH-PR-YÜZ
   yoksis_id: '304722'
   parent_yoksis_id: '201577'
+  effective_unit_id: '256685'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -19270,6 +19331,7 @@
   abbreviation: SAĞLIK-YO-SH-PR-ÜCRETLİ
   yoksis_id: '308560'
   parent_yoksis_id: '201577'
+  effective_unit_id: '256685'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -19663,6 +19725,7 @@
   abbreviation: SAĞLIK-MYO-THT-DİYALİZ-PR-ÜCRETLİ
   yoksis_id: '304672'
   parent_yoksis_id: '169645'
+  effective_unit_id: '215479'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -19735,6 +19798,7 @@
   abbreviation: SAĞLIK-MYO-THT-TGT-PR-ÜCRETLİ
   yoksis_id: '304658'
   parent_yoksis_id: '169645'
+  effective_unit_id: '145869'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -19746,6 +19810,7 @@
   abbreviation: SAĞLIK-MYO-THT-TGT-PR-2-ÜCRETLİ
   yoksis_id: '304701'
   parent_yoksis_id: '169645'
+  effective_unit_id: '243775'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -20833,6 +20898,7 @@
   abbreviation: TIP-PR-ÜCRETLİ
   yoksis_id: '308528'
   parent_yoksis_id: '121947'
+  effective_unit_id: '228132'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -21835,6 +21901,7 @@
   abbreviation: SBKY-PR-ELLİ
   yoksis_id: '305047'
   parent_yoksis_id: '128036'
+  effective_unit_id: '169309'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -21846,6 +21913,7 @@
   abbreviation: SBKY-PR-YÜZ
   yoksis_id: '305046'
   parent_yoksis_id: '128036'
+  effective_unit_id: '169309'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -21857,6 +21925,7 @@
   abbreviation: SBKY-PR-ÜCRETLİ
   yoksis_id: '308554'
   parent_yoksis_id: '128036'
+  effective_unit_id: '169309'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -21890,6 +21959,7 @@
   abbreviation: SBUİ-PR-YİRMİBEŞ
   yoksis_id: '299052'
   parent_yoksis_id: '299049'
+  effective_unit_id: '299051'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -21901,6 +21971,7 @@
   abbreviation: SBUİ-PR-ELLİ
   yoksis_id: '299053'
   parent_yoksis_id: '299049'
+  effective_unit_id: '299051'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -21912,6 +21983,7 @@
   abbreviation: SBUİ-PR-YÜZ
   yoksis_id: '299050'
   parent_yoksis_id: '299049'
+  effective_unit_id: '299051'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -21934,6 +22006,7 @@
   abbreviation: UTL-PR-YİRMİBEŞ
   yoksis_id: '308556'
   parent_yoksis_id: '235948'
+  effective_unit_id: '252836'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -21945,6 +22018,7 @@
   abbreviation: UTL-PR-ELLİ
   yoksis_id: '304580'
   parent_yoksis_id: '235948'
+  effective_unit_id: '252836'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -21956,6 +22030,7 @@
   abbreviation: UTL-PR-YÜZ
   yoksis_id: '304558'
   parent_yoksis_id: '235948'
+  effective_unit_id: '252836'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -21967,6 +22042,7 @@
   abbreviation: UTL-PR-ÜCRETLİ
   yoksis_id: '308557'
   parent_yoksis_id: '235948'
+  effective_unit_id: '252836'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -21988,6 +22064,7 @@
   abbreviation: UTİ-PR-YİRMİBEŞ
   yoksis_id: '299057'
   parent_yoksis_id: '299054'
+  effective_unit_id: '299056'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -21999,6 +22076,7 @@
   abbreviation: UTİ-PR-ELLİ
   yoksis_id: '299058'
   parent_yoksis_id: '299054'
+  effective_unit_id: '299056'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -22010,6 +22088,7 @@
   abbreviation: UTİ-PR-YÜZ
   yoksis_id: '299055'
   parent_yoksis_id: '299054'
+  effective_unit_id: '299056'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -22032,6 +22111,7 @@
   abbreviation: İŞLETMEB-PR-YİRMİBEŞ
   yoksis_id: '299047'
   parent_yoksis_id: '128030'
+  effective_unit_id: '169308'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -22043,6 +22123,7 @@
   abbreviation: İŞLETMEB-PR-ELLİ
   yoksis_id: '299048'
   parent_yoksis_id: '128030'
+  effective_unit_id: '169308'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -22054,6 +22135,7 @@
   abbreviation: İŞLETMEB-PR-YETMİŞBEŞ
   yoksis_id: '304555'
   parent_yoksis_id: '128030'
+  effective_unit_id: '169308'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -22065,6 +22147,7 @@
   abbreviation: İŞLETMEB-PR-YÜZ
   yoksis_id: '299045'
   parent_yoksis_id: '128030'
+  effective_unit_id: '169308'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -22076,6 +22159,7 @@
   abbreviation: İŞLETMEB-PR-ÜCRETLİ
   yoksis_id: '299046'
   parent_yoksis_id: '128030'
+  effective_unit_id: '169308'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
