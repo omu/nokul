@@ -1747,62 +1747,29 @@ ALTER SEQUENCE public.languages_id_seq OWNED BY public.languages.id;
 
 
 --
--- Name: ldap_synchronization_errors; Type: TABLE; Schema: public; Owner: -
+-- Name: ldap_entities; Type: TABLE; Schema: public; Owner: -
 --
 
-CREATE TABLE public.ldap_synchronization_errors (
-    id bigint NOT NULL,
-    ldap_synchronization_id bigint NOT NULL,
-    description text,
-    resolved boolean,
-    created_at timestamp(6) without time zone NOT NULL,
-    updated_at timestamp(6) without time zone NOT NULL,
-    CONSTRAINT ldap_synchronization_errors_description_length CHECK ((length(description) <= 65535)),
-    CONSTRAINT ldap_synchronization_errors_description_presence CHECK (((description IS NOT NULL) AND (description !~ '^\s*$'::text))),
-    CONSTRAINT ldap_synchronization_errors_resolved_null CHECK ((resolved IS NOT NULL))
-);
-
-
---
--- Name: ldap_synchronization_errors_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE public.ldap_synchronization_errors_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: ldap_synchronization_errors_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE public.ldap_synchronization_errors_id_seq OWNED BY public.ldap_synchronization_errors.id;
-
-
---
--- Name: ldap_synchronizations; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.ldap_synchronizations (
+CREATE TABLE public.ldap_entities (
     id bigint NOT NULL,
     user_id bigint NOT NULL,
     "values" jsonb,
-    status integer,
+    dn character varying,
+    status integer DEFAULT 0,
     synchronized_at timestamp without time zone,
     created_at timestamp(6) without time zone NOT NULL,
     updated_at timestamp(6) without time zone NOT NULL,
-    CONSTRAINT ldap_synchronizations_status_numericality CHECK ((status >= 0))
+    CONSTRAINT ldap_entities_dn_length CHECK ((length((dn)::text) <= 255)),
+    CONSTRAINT ldap_entities_dn_presence CHECK (((dn IS NOT NULL) AND ((dn)::text !~ '^\s*$'::text))),
+    CONSTRAINT ldap_entities_status_numericality CHECK ((status >= 0))
 );
 
 
 --
--- Name: ldap_synchronizations_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+-- Name: ldap_entities_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
-CREATE SEQUENCE public.ldap_synchronizations_id_seq
+CREATE SEQUENCE public.ldap_entities_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -1811,10 +1778,46 @@ CREATE SEQUENCE public.ldap_synchronizations_id_seq
 
 
 --
--- Name: ldap_synchronizations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+-- Name: ldap_entities_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
-ALTER SEQUENCE public.ldap_synchronizations_id_seq OWNED BY public.ldap_synchronizations.id;
+ALTER SEQUENCE public.ldap_entities_id_seq OWNED BY public.ldap_entities.id;
+
+
+--
+-- Name: ldap_sync_errors; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.ldap_sync_errors (
+    id bigint NOT NULL,
+    ldap_entity_id bigint NOT NULL,
+    description text,
+    resolved boolean DEFAULT false,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT ldap_sync_errors_description_length CHECK ((length(description) <= 65535)),
+    CONSTRAINT ldap_sync_errors_description_presence CHECK (((description IS NOT NULL) AND (description !~ '^\s*$'::text))),
+    CONSTRAINT ldap_sync_errors_resolved_null CHECK ((resolved IS NOT NULL))
+);
+
+
+--
+-- Name: ldap_sync_errors_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.ldap_sync_errors_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: ldap_sync_errors_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.ldap_sync_errors_id_seq OWNED BY public.ldap_sync_errors.id;
 
 
 --
@@ -3391,17 +3394,17 @@ ALTER TABLE ONLY public.languages ALTER COLUMN id SET DEFAULT nextval('public.la
 
 
 --
--- Name: ldap_synchronization_errors id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: ldap_entities id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY public.ldap_synchronization_errors ALTER COLUMN id SET DEFAULT nextval('public.ldap_synchronization_errors_id_seq'::regclass);
+ALTER TABLE ONLY public.ldap_entities ALTER COLUMN id SET DEFAULT nextval('public.ldap_entities_id_seq'::regclass);
 
 
 --
--- Name: ldap_synchronizations id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: ldap_sync_errors id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY public.ldap_synchronizations ALTER COLUMN id SET DEFAULT nextval('public.ldap_synchronizations_id_seq'::regclass);
+ALTER TABLE ONLY public.ldap_sync_errors ALTER COLUMN id SET DEFAULT nextval('public.ldap_sync_errors_id_seq'::regclass);
 
 
 --
@@ -4046,19 +4049,19 @@ ALTER TABLE ONLY public.languages
 
 
 --
--- Name: ldap_synchronization_errors ldap_synchronization_errors_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: ldap_entities ldap_entities_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY public.ldap_synchronization_errors
-    ADD CONSTRAINT ldap_synchronization_errors_pkey PRIMARY KEY (id);
+ALTER TABLE ONLY public.ldap_entities
+    ADD CONSTRAINT ldap_entities_pkey PRIMARY KEY (id);
 
 
 --
--- Name: ldap_synchronizations ldap_synchronizations_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: ldap_sync_errors ldap_sync_errors_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY public.ldap_synchronizations
-    ADD CONSTRAINT ldap_synchronizations_pkey PRIMARY KEY (id);
+ALTER TABLE ONLY public.ldap_sync_errors
+    ADD CONSTRAINT ldap_sync_errors_pkey PRIMARY KEY (id);
 
 
 --
@@ -4934,17 +4937,17 @@ CREATE INDEX index_identities_on_user_id ON public.identities USING btree (user_
 
 
 --
--- Name: index_ldap_synchronization_errors_on_ldap_synchronization_id; Type: INDEX; Schema: public; Owner: -
+-- Name: index_ldap_entities_on_user_id; Type: INDEX; Schema: public; Owner: -
 --
 
-CREATE INDEX index_ldap_synchronization_errors_on_ldap_synchronization_id ON public.ldap_synchronization_errors USING btree (ldap_synchronization_id);
+CREATE INDEX index_ldap_entities_on_user_id ON public.ldap_entities USING btree (user_id);
 
 
 --
--- Name: index_ldap_synchronizations_on_user_id; Type: INDEX; Schema: public; Owner: -
+-- Name: index_ldap_sync_errors_on_ldap_entity_id; Type: INDEX; Schema: public; Owner: -
 --
 
-CREATE INDEX index_ldap_synchronizations_on_user_id ON public.ldap_synchronizations USING btree (user_id);
+CREATE INDEX index_ldap_sync_errors_on_ldap_entity_id ON public.ldap_sync_errors USING btree (ldap_entity_id);
 
 
 --
@@ -5714,14 +5717,6 @@ ALTER TABLE ONLY public.available_courses
 
 
 --
--- Name: ldap_synchronizations fk_rails_afbb5c5bcf; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.ldap_synchronizations
-    ADD CONSTRAINT fk_rails_afbb5c5bcf FOREIGN KEY (user_id) REFERENCES public.users(id);
-
-
---
 -- Name: prospective_students fk_rails_b1c146f76e; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -5754,19 +5749,19 @@ ALTER TABLE ONLY public.agendas
 
 
 --
--- Name: ldap_synchronization_errors fk_rails_bac30ae8e6; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.ldap_synchronization_errors
-    ADD CONSTRAINT fk_rails_bac30ae8e6 FOREIGN KEY (ldap_synchronization_id) REFERENCES public.ldap_synchronizations(id);
-
-
---
 -- Name: course_evaluation_types fk_rails_bb4be290e9; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.course_evaluation_types
     ADD CONSTRAINT fk_rails_bb4be290e9 FOREIGN KEY (available_course_id) REFERENCES public.available_courses(id);
+
+
+--
+-- Name: ldap_sync_errors fk_rails_c34f07ddd2; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.ldap_sync_errors
+    ADD CONSTRAINT fk_rails_c34f07ddd2 FOREIGN KEY (ldap_entity_id) REFERENCES public.ldap_entities(id);
 
 
 --
@@ -5839,6 +5834,14 @@ ALTER TABLE ONLY public.role_assignments
 
 ALTER TABLE ONLY public.curriculum_courses
     ADD CONSTRAINT fk_rails_e756d4597e FOREIGN KEY (course_id) REFERENCES public.courses(id);
+
+
+--
+-- Name: ldap_entities fk_rails_e81413ee07; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.ldap_entities
+    ADD CONSTRAINT fk_rails_e81413ee07 FOREIGN KEY (user_id) REFERENCES public.users(id);
 
 
 --
