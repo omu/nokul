@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-class LdapSynchronizationError < ApplicationRecord
+class LdapSyncError < ApplicationRecord
   # relations
-  belongs_to :ldap_synchronization
+  belongs_to :ldap_entity
 
   # validations
   validates :description, length: { maximum: 65_535 }

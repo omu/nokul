@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-class LdapSynchronizationTest < ActiveSupport::TestCase
+class LdapEntityTest < ActiveSupport::TestCase
   extend Support::Minitest::AssociationHelper
   extend Support::Minitest::EnumerationHelper
   extend Support::Minitest::ValidationHelper
@@ -15,4 +15,5 @@ class LdapSynchronizationTest < ActiveSupport::TestCase
 
   # validations: presence
   validates_presence_of :values
+  validates_presence_of :dn
 end

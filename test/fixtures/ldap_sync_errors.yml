@@ -1,8 +1,8 @@
 one:
-  ldap_synchronization: one
+  ldap_entity: one
   description: Description
   resolved: false
 two:
-  ldap_synchronization: two
+  ldap_entity: two
   description: Description
   resolved: false
