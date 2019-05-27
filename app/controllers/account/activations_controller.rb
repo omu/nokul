@@ -12,10 +12,9 @@ module Account
 
     def create
       @activation = Activation::ActivationService.new(params[:activation])
-      @full_error_messages = {}
+      @activation.active
       respond_to do |format|
         format.js
-        @full_error_messages = @activation.errors.full_messages unless @activation.active
       end
     end
 
