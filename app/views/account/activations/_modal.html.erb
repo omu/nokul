@@ -1,7 +1,7 @@
 <div class='modal-dialog modal-dialog-centered'>
   <div class='modal-content'>
     <div class='modal-header'>
-      <h5 class='modal-title'>Telefonunuzu Doğrulayın</h5>
+      <h5 class='modal-title'><%= t('.verify_your_phone') %></h5>
     </div>
     <div class='modal-body'>
       <%= simple_form_for(:phone_verification, url: { action: :phone_verification, controller: 'account/activations' }) do |f| %>
@@ -10,12 +10,12 @@
           <%= f.hidden_field :prospective_employees, value: params[:employees]&.pluck(:id) %>
           <%= f.hidden_field :user_id, value: params[:user]&.id %>
           <%= f.hidden_field :mobile_phone, value: @activation.mobile_phone %>
-          <label class='col-sm-4 col-form-label text-right'>Telefon Doğrulama Kodu</label>
+          <label class='col-sm-4 col-form-label text-right'><%= t('.verification_code') %></label>
           <div class='col-sm-5'>
             <%= f.input :verification_code, label: false %>
           </div>
           <div class='col-sm-2'>
-            <%= submit_tag 'Doğrula', class: 'btn btn-primary' %>
+            <%= submit_tag t('.verify'), class: 'btn btn-primary' %>
           </div>
         </div>
       <% end %>
