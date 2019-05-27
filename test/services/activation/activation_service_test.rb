@@ -58,6 +58,14 @@ module Activation
       assert @activation.prospective?
     end
 
+    test 'student must be verified identity' do
+      assert @activation.verified_identity?
+    end
+
+    test 'must be send verification code' do
+      assert @activation.send_verification_code?
+    end
+
     {
       '70336212330' => 'record_not_found',
       '10570898198' => 'already_activated'
