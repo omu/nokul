@@ -32,9 +32,8 @@ module Accounts
           serial_no: '94646',
           mobile_phone: '5551111111',
           country: 'TR'
-        }
+        }, format: :js
       }
-      assert_redirected_to login_path(locale: I18n.locale)
     end
   end
 end
