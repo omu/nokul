@@ -11,7 +11,8 @@ module Activation
                   :id_number,
                   :last_name,
                   :mobile_phone,
-                  :prospective,
+                  :prospective_employee,
+                  :prospective_student,
                   :serial,
                   :serial_no,
                   :user
@@ -29,6 +30,7 @@ module Activation
     validate :must_not_be_activated
     validate :must_be_prospective, unless: :activated?
     validate :must_be_verified_identity, if: :prospective?
+    validate :send_verification_code
 
     def initialize(attributes = {})
       attributes.each do |name, value|
@@ -66,28 +68,23 @@ module Activation
     def active
       return unless valid?
 
-      process
+      set_prospectives_and_user
     rescue StandardError => e
       Rails.logger.error e.message
       errors.add(:base, I18n.t('.account.activations.system_error'))
       false
     end
 
-    private
-
-    def set_prospective_and_user
-      @prospective = [*ProspectiveStudent.registered.where(id_number: id_number),
-                      *ProspectiveEmployee.where(id_number: id_number)]
-      @user = User.find_by(id_number: id_number)
+    def send_verification_code?
+      Twilio::Verify.send_phone_verification_code(mobile_phone) == 'ok'
     end
 
-    def process
-      set_prospective_and_user
+    private
 
-      ActiveRecord::Base.transaction do
-        prospective.map { |p| p.update(archived: true) }
-        user.update(activated: true, activated_at: Time.zone.now)
-      end
+    def set_prospectives_and_user
+      @prospective_student = ProspectiveStudent.registered.where(id_number: id_number)
+      @prospective_employee = ProspectiveEmployee.where(id_number: id_number)
+      @user = User.find_by(id_number: id_number)
     end
 
     def must_not_be_activated
@@ -106,6 +103,13 @@ module Activation
       return if errors.any?
 
       errors.add(:base, I18n.t('.account.activations.identity_not_verified')) unless verified_identity?
+    end
+
+    def send_verification_code
+      return if errors.any?
+
+      @mobile_phone = TelephoneNumber.parse(mobile_phone, country.to_sym).e164_number
+      errors.add(:base, I18n.t('.account.activations.not_send_verify_code')) unless send_verification_code?
     end
   end
 end

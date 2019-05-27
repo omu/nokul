@@ -1,0 +1,12 @@
+en:
+  twilio:
+    errors:
+      60003: Client has reached the maximum number of requests per time unit on the given endpoint
+      60021: An error occurred creating phone verification
+      60022: The phone verification code was incorrect
+      60023: The phone verification was not found with the parameters given
+      60033: The phone number or country code is invalid
+      60042: Invalid parameters in phone verification
+      60060: Twilio account is suspended
+      60082: Can not send SMS to landline phone numbers
+      60083: Phone number not provisioned with any carrier

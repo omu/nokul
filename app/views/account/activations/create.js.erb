@@ -1,0 +1,11 @@
+$(".list-group-item.list-group-item-accent-danger.list-group-item-danger").remove();
+
+if ("<%= @full_error_messages %>" == '{}') {
+  $("#verification_modal").html("<%= escape_javascript(render 'modal', params: { students: @activation.prospective_student, employees: @activation.prospective_employee, user: @activation.user } ) %>");
+  $("#verification_modal").modal('show')
+} else {
+  full_error_messages = JSON.parse('<%= @full_error_messages.to_json.html_safe %>')
+  $.each(full_error_messages, function(i, error) {
+    $("#error_messages").append('<li class="list-group-item list-group-item-accent-danger list-group-item-danger">'+ error +'</li>')
+  });
+}

@@ -3,17 +3,9 @@
     <div class='card-body p-4'>
       <h1 class='text-center'><%= t('.activation') %></h1>
       <p class='text-muted text-center'><%= t('.account_activation') %></p>
-      <%= simple_form_for(:activation, url: activation_path) do |f| %>
+      <%= simple_form_for(:activation, url: activation_path, remote: true, authenticity_token: true) do |f| %>
         <%= f.error_notification %>
-        <% if @activation.errors.any? %>
-          <ul class='list-group list-group-accent'>
-            <% @activation.errors.full_messages.each do |message| %>
-              <li class='list-group-item list-group-item-accent-danger list-group-item-danger'>
-                <%= message %>
-              </li>
-            <% end %>
-          </ul>
-        <% end %>
+        <ul id='error_messages' class='list-group list-group-accent'></ul>
         <fieldset class='border p-3'>
           <legend class='w-auto'><%= t('.identity_verification') %></legend>
           <div class='form-group row'>
@@ -105,4 +97,5 @@
   </div>
 </div>
 
+<div id='verification_modal' class='modal fade' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true' data-backdrop='static' data-keyboard='false'></div>
 <%= render 'js' %>
