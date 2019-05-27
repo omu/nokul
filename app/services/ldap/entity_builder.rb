@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Ldap
-  class Entity
+  class EntityBuilder
     # rubocop:disable Naming/MethodName
     module Attributes
       def cn
@@ -28,15 +28,19 @@ module Ldap
       end
 
       def eduPersonPrincipalName
-        'test'
+        "#{username}@#{Tenant.configuration.ldap.organization}"
       end
 
       def eduPersonPrincipalNamePrior
-        'test'
+        'onceki_username'
       end
 
       def eduPersonScopedAffiliation
-        'test'
+        scoped_affiliations.select { |_, value| value[:status] }.map do |_, value|
+          value[:prefixes].map do |prefix|
+            value[:units].map { |unit| generate_person_scoped_affiliation(prefix, unit) }
+          end
+        end.flatten
       end
 
       def givenName
@@ -44,7 +48,10 @@ module Ldap
       end
 
       def jpegPhoto
-        'photo'
+        return unless user.avatar.attached?
+
+        # "data:#{user.avatar.content_type};base64" +
+        Base64.encode64(user.avatar.download)
       end
 
       def mail
@@ -68,15 +75,15 @@ module Ldap
       end
 
       def schacExpiryDate
-        'test'
+        '20051231125959Z'
       end
 
       def schacGender
         case identity.try(:gender)
-        when 'male'   then 1
-        when 'female' then 2
-        when 'other'  then 0
-        else               9
+        when 'male'   then '1'
+        when 'female' then '2'
+        when 'other'  then '0'
+        else               '9'
         end
       end
 
@@ -102,8 +109,6 @@ module Ldap
 
       def schacYearOfBirth
         identity.try(:date_of_birth).try(:strftime, '%Y')
-
-        # identity&.date_of_birth&.strftime('%Y')
       end
 
       def sn
@@ -111,11 +116,26 @@ module Ldap
       end
 
       def uid
-        'username'
+        user.id_number
       end
 
       def userPassword
         "{BCRYPT}#{user.encrypted_password}"
+      end
+
+      def objectclass
+        %w[
+          person
+          organizationalPerson
+          inetOrgPerson
+          eduPerson
+          schacPersonalCharacteristics
+          schacContactLocation
+          schacLinkageIdentifiers
+          schacEntryMetadata
+          schacUserEntitlements
+          schacExperimentalOC
+        ]
       end
 
       private
@@ -152,6 +172,40 @@ module Ldap
       def identity
         @identity ||= user.identities.user_identity
       end
+
+      def username
+        user.id_number
+      end
+
+      def scoped_affiliations
+        @scoped_affiliations ||= {
+          academic: {
+            status: user.employee? && user.academic?,
+            prefixes: %w[member employee faculty],
+            units: user.duties.active.map(&:unit)
+          },
+          staff: {
+            status: user.employee? && !user.academic?,
+            prefixes: %w[member employee staff],
+            units: user.duties.active.map(&:unit)
+          },
+          student: {
+            status: user.student?,
+            prefixes: %w[member student],
+            units: user.students.map(&:unit)
+          }
+        }
+      end
+
+      def generate_person_scoped_affiliation(prefix, unit)
+        abbreviations = (
+          unit.path.pluck(:abbreviation) - Unit.roots.pluck(:abbreviation)
+        )
+
+        abbreviations = abbreviations.map { |abbr| abbr.downcase(:turkic) }.reverse.join('.')
+
+        "#{prefix}@_#{abbreviations}.#{Tenant.configuration.ldap.organization}"
+      end
     end
     # rubocop:enable Naming/MethodName
 
@@ -163,13 +217,23 @@ module Ldap
       @user = user
     end
 
+    def dn
+      "uid=#{uid}, ou=people, dc=test, dc=omu, dc=edu, dc=tr"
+    end
+
     def to_hash
       attributes.each_with_object({}) do |attribute, hash|
-        hash[attribute] = public_send(attribute)
+        value = public_send(attribute)
+        hash[attribute] = value if value.present?
       end
     end
 
     alias to_h to_hash
+    alias values to_hash
+
+    def create
+      LdapEntity.create(user_id: user.id, values: values, dn: dn)
+    end
 
     private
 
