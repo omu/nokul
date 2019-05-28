@@ -4,12 +4,11 @@ class LdapSyncJob < ApplicationJob
   queue_as :high
 
   def perform(entity)
-    if Ldap::Client.create(entity)
-      entity.update(synchronized_at: Time.current, status: :success)
-      entity.ldap_sync_errors.update(resolved: true)
-    else
-      entity.update(status: :fail)
-      entity.ldap_sync_errors.create(description: Ldap::Client.results.message)
-    end
+    Ldap::Client.create(entity)
+    entity.update(status: :synchronized)
+    entity.ldap_sync_errors.update(resolved: true)
+  rescue Ldap::Client::Error => e
+    entity.update(status: :failed)
+    entity.ldap_sync_errors.create(description: e.message)
   end
 end
