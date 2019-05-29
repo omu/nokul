@@ -38,13 +38,16 @@ module Account
     # rubocop:enable Metrics/MethodLength
     # rubocop:enable Metrics/AbcSize
 
+    private
+
     def update_process(prospective_student_ids, prospective_employee_ids, user_id, phone)
       ActiveRecord::Base.transaction do
         user = User.find(user_id)
+        address = user.addresses.formal.first
         ProspectiveStudent.archive(prospective_student_ids)
         ProspectiveEmployee.archive(prospective_employee_ids)
         user.update(activated: true, activated_at: Time.zone.now)
-        user.addresses.formal.first.update(phone_number: phone)
+        address.update(phone_number: phone) if address.present?
       end
     end
 
