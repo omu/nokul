@@ -36,6 +36,7 @@ module Activation
       attributes.each do |name, value|
         send("#{name}=", value)
       end
+      @mobile_phone = TelephoneNumber.parse(mobile_phone, country&.to_sym).e164_number
     end
 
     # rubocop:disable Metrics/MethodLength
@@ -108,7 +109,6 @@ module Activation
     def send_verification_code
       return if errors.any?
 
-      @mobile_phone = TelephoneNumber.parse(mobile_phone, country.to_sym).e164_number
       errors.add(:base, I18n.t('.account.activations.not_send_verify_code')) unless send_verification_code?
     end
   end
