@@ -15,8 +15,8 @@ module Activation
           date_of_birth: '1984-11-16',
           serial: 'J10',
           serial_no: '94646',
-          mobile_phone: '5551111111',
-          country: 'TR'
+          mobile_phone: '4159373912', # Sample mobile phone provided by Twilio API
+          country: 'US'
         )
     end
 
@@ -62,10 +62,6 @@ module Activation
       assert @activation.verified_identity?
     end
 
-    test 'must be send verification code' do
-      assert @activation.send_verification_code?
-    end
-
     {
       '70336212330' => 'record_not_found',
       '10570898198' => 'already_activated'
@@ -77,12 +73,6 @@ module Activation
         assert_not_empty fake.errors[:base]
         assert_equal I18n.t('.account.activations.' + error_key), fake.errors[:base].first
       end
-    end
-
-    test 'activation is must be active' do
-      assert @activation.active
-      assert_not_nil @activation.prospective_student || @activation.prospective_employee
-      assert_not_nil @activation.user
     end
   end
 end
