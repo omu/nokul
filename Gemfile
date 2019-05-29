@@ -70,7 +70,7 @@ gem 'friendly_id', '~> 5.2.0'
 # sms
 gem 'nexmo'
 gem 'smstools'
-gem 'twilio-ruby', '~> 5.22.3'
+gem 'twilio-ruby', '~> 5.23.0'
 
 group :development, :test do
   gem 'brakeman', require: false
@@ -88,7 +88,7 @@ end
 group :test do
   gem 'capybara', '>= 2.15'
   gem 'codacy-coverage', require: false
-  gem 'webdrivers', '~> 3.0'
+  gem 'webdrivers', '~> 4.0'
   gem 'webmock'
 end
 
