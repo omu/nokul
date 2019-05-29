@@ -25,7 +25,7 @@ module Account
       response = Twilio::Verify.check_verification_code(verify[:mobile_phone], verify[:verification_code])
 
       if response == 'ok'
-        if update_process(verify[:prospective_students], verify[:prospective_employees], verify[:user_id])
+        if update_process(params[:students], params[:employees], params[:user], verify[:mobile_phone])
           redirect_to login_path, notice: t('.success')
         else
           redirect_to activation_path, alert: t('account.activations.system_error')
@@ -37,11 +37,13 @@ module Account
     # rubocop:enable Metrics/MethodLength
     # rubocop:enable Metrics/AbcSize
 
-    def update_process(prospective_student_ids, prospective_employee_ids, user_id)
+    def update_process(prospective_student_ids, prospective_employee_ids, user_id, phone)
       ActiveRecord::Base.transaction do
-        ProspectiveStudent.where(id: prospective_student_ids.split(' ')).map { |p| p.update(archived: true) }
-        ProspectiveEmployee.where(id: prospective_employee_ids).map { |p| p.update(archived: true) }
-        User.find(user_id).update(activated: true, activated_at: Time.zone.now)
+        user = User.find(user_id)
+        ProspectiveStudent.archive(prospective_student_ids)
+        ProspectiveEmployee.archive(prospective_employee_ids)
+        user.update(activated: true, activated_at: Time.zone.now)
+        user.addresses.formal.first.update(phone_number: phone)
       end
     end
 

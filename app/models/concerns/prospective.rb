@@ -14,4 +14,10 @@ module Prospective
     scope :archived, -> { where(archived: true) }
     scope :not_archived, -> { where(archived: false) }
   end
+
+  class_methods do
+    def archive(ids)
+      where(id: ids).map { |p| p.update(archived: true) }
+    end
+  end
 end
