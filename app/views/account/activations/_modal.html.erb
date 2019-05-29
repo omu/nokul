@@ -4,11 +4,11 @@
       <h5 class='modal-title'><%= t('.verify_your_phone') %></h5>
     </div>
     <div class='modal-body'>
-      <%= simple_form_for(:phone_verification, url: { action: :phone_verification, controller: 'account/activations' }) do |f| %>
+      <% student_ids = @activation.prospective_student&.pluck(:id) %>
+      <% employee_ids = @activation.prospective_employee&.pluck(:id) %>
+      <% user_id = @activation.user&.id %>
+      <%= simple_form_for(:phone_verification, url: { action: :phone_verification, controller: 'account/activations', students: student_ids, employees: employee_ids, user: user_id }) do |f| %>
         <div class='form-group row'>
-          <%= f.hidden_field :prospective_students, value: params[:students]&.pluck(:id) %>
-          <%= f.hidden_field :prospective_employees, value: params[:employees]&.pluck(:id) %>
-          <%= f.hidden_field :user_id, value: params[:user]&.id %>
           <%= f.hidden_field :mobile_phone, value: @activation.mobile_phone %>
           <label class='col-sm-4 col-form-label text-right'><%= t('.verification_code') %></label>
           <div class='col-sm-5'>
