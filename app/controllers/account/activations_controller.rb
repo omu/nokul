@@ -42,12 +42,9 @@ module Account
 
     def update_process(prospective_student_ids, prospective_employee_ids, user_id, phone)
       ActiveRecord::Base.transaction do
-        user = User.find(user_id)
-        address = user.addresses.formal.first
         ProspectiveStudent.archive(prospective_student_ids)
         ProspectiveEmployee.archive(prospective_employee_ids)
-        user.update(activated: true, activated_at: Time.zone.now)
-        address.update(phone_number: phone) if address.present?
+        User.find(user_id).update(mobile_phone: phone, activated: true, activated_at: Time.zone.now)
       end
     end
 
