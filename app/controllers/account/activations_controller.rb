@@ -31,7 +31,8 @@ module Account
           redirect_to activation_path, alert: t('account.activations.system_error')
         end
       else
-        redirect_to activation_path, alert: t("twilio.errors.#{response.error_code}")
+        redirect_to activation_path,
+                    alert: t("twilio.errors.#{response.error_code}", default: t('account.activations.system_error'))
       end
     end
     # rubocop:enable Metrics/MethodLength
