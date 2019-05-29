@@ -167,16 +167,14 @@ ALTER SEQUENCE public.active_storage_blobs_id_seq OWNED BY public.active_storage
 CREATE TABLE public.addresses (
     id bigint NOT NULL,
     type integer,
-    phone_number character varying,
     full_address character varying,
     district_id bigint NOT NULL,
     user_id bigint NOT NULL,
-    updated_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
-    created_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
+    updated_at timestamp without time zone DEFAULT now(),
+    created_at timestamp without time zone DEFAULT now(),
     CONSTRAINT addresses_created_at_null CHECK ((created_at IS NOT NULL)),
     CONSTRAINT addresses_full_address_length CHECK ((length((full_address)::text) <= 255)),
     CONSTRAINT addresses_full_address_presence CHECK (((full_address IS NOT NULL) AND ((full_address)::text !~ '^\s*$'::text))),
-    CONSTRAINT addresses_phone_number_length CHECK ((length((phone_number)::text) <= 255)),
     CONSTRAINT addresses_type_null CHECK ((type IS NOT NULL)),
     CONSTRAINT addresses_type_numericality CHECK ((type >= 0)),
     CONSTRAINT addresses_updated_at_null CHECK ((updated_at IS NOT NULL))
@@ -1671,8 +1669,8 @@ CREATE TABLE public.identities (
     registered_to character varying,
     user_id bigint NOT NULL,
     student_id bigint,
-    created_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
-    updated_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
+    created_at timestamp without time zone DEFAULT now(),
+    updated_at timestamp without time zone DEFAULT now(),
     CONSTRAINT identities_created_at_null CHECK ((created_at IS NOT NULL)),
     CONSTRAINT identities_date_of_birth_null CHECK ((date_of_birth IS NOT NULL)),
     CONSTRAINT identities_fathers_name_length CHECK ((length((fathers_name)::text) <= 255)),
@@ -2962,7 +2960,7 @@ CREATE TABLE public.users (
     last_sign_in_at timestamp without time zone,
     current_sign_in_ip inet,
     last_sign_in_ip inet,
-    password_changed_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
+    password_changed_at timestamp without time zone DEFAULT now(),
     failed_attempts integer DEFAULT 0,
     unlock_token character varying,
     locked_at timestamp without time zone,
@@ -2975,6 +2973,7 @@ CREATE TABLE public.users (
     updated_at timestamp without time zone NOT NULL,
     activated boolean DEFAULT false,
     activated_at timestamp without time zone,
+    mobile_phone character varying,
     CONSTRAINT users_activated_null CHECK ((activated IS NOT NULL)),
     CONSTRAINT users_articles_count_null CHECK ((articles_count IS NOT NULL)),
     CONSTRAINT users_articles_count_numericality CHECK ((articles_count >= 0)),
@@ -2987,6 +2986,7 @@ CREATE TABLE public.users (
     CONSTRAINT users_failed_attempts_numericality CHECK ((failed_attempts >= 0)),
     CONSTRAINT users_id_number_length CHECK ((length((id_number)::text) = 11)),
     CONSTRAINT users_id_number_presence CHECK (((id_number IS NOT NULL) AND ((id_number)::text !~ '^\s*$'::text))),
+    CONSTRAINT users_mobile_phone_length CHECK ((length((mobile_phone)::text) <= 255)),
     CONSTRAINT users_password_changed_at_null CHECK ((password_changed_at IS NOT NULL)),
     CONSTRAINT users_preferred_language_length CHECK ((length((preferred_language)::text) = 2)),
     CONSTRAINT users_projects_count_null CHECK ((projects_count IS NOT NULL)),
@@ -5862,6 +5862,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20190422104613'),
 ('20190422141252'),
 ('20190425065306'),
-('20190507195222');
+('20190507195222'),
+('20190529121036');
 
 
