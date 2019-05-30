@@ -11,7 +11,7 @@
           <div class='form-group row'>
             <label class='col-sm-3 col-form-label text-right'><%= t('.id_number') %></label>
             <div class='col-sm-9'>
-              <%= f.input :id_number, required: true, label: false, autofocus: true, wrapper: false, input_html: { class: @activation.errors[:id_number].any? ? 'is-invalid' : '' } %>
+              <%= f.input :id_number, required: true, label: false, autofocus: true, wrapper: false %>
             </div>
           </div>
           <div class='form-group row'>
@@ -47,7 +47,7 @@
           <div class='form-group row'>
             <label for='activation_document_no' class='col-sm-3 col-form-label text-right'><%= t('.document_no') %></label>
             <div class='col-sm-9'>
-              <%= f.input :document_no, required: false, label: false, wrapper: false, input_html: { class: @activation.errors[:document_no].any? ? 'is-invalid' : '' } %>
+              <%= f.input :document_no, required: false, label: false, wrapper: false %>
             </div>
           </div>
         </fieldset>
@@ -56,7 +56,7 @@
           <div class='form-group row'>
             <label class='col-sm-3 col-form-label text-right'><%= t('.mobile_phone') %></label>
             <div class='col-sm-9'>
-              <%= f.input :mobile_phone, label: false, wrapper: false, input_html: { class: @activation.errors[:mobile_phone].any? ? 'is-invalid' : '' } %>
+              <%= f.input :mobile_phone, label: false, wrapper: false %>
               <small class='text-muted'><%= number_to_phone(1_235_551_234, area_code: true) %></small>
             </div>
           </div>
