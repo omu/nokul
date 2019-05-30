@@ -42,13 +42,9 @@ class User < ApplicationRecord
                                numericality: { only_integer: true }
   validates :id_number, uniqueness: true, numericality: { only_integer: true }, length: { is: 11 }
   validates :linkedin, allow_blank: true, length: { maximum: 50 }
-  validates :mobile_phone, length: { maximum: 255 },
-                           allow_blank: true,
-                           uniqueness: true,
-                           telephone_number: { country: proc { |record| record.country }, types: [:mobile] }
-  validates :phone_number, allow_blank: true,
-                           length: { maximum: 255 },
-                           telephone_number: { country: proc { |record| record.country }, types: [:fixed_line] }
+  validates :fixed_phone, allow_blank: true,
+                          length: { maximum: 255 },
+                          telephone_number: { country: proc { |record| record.country }, types: [:fixed_line] }
   validates :password, not_pwned: true
   validates :preferred_language, inclusion: { in: I18n.available_locales.map(&:to_s) }
   validates :skype, allow_blank: true, length: { maximum: 50 }
@@ -69,7 +65,7 @@ class User < ApplicationRecord
     extension_number
     linkedin
     orcid
-    phone_number
+    fixed_phone
     public_photo
     public_studies
     skype

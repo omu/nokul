@@ -41,8 +41,7 @@ class UserTest < ActiveSupport::TestCase
   validates_length_of :extension_number, maximum: 8
   validates_length_of :id_number, is: 11
   validates_length_of :linkedin, maximum: 50
-  validates_length_of :mobile_phone
-  validates_length_of :phone_number
+  validates_length_of :fixed_phone
   validates_length_of :skype, maximum: 50
   validates_length_of :twitter, maximum: 50
   validates_length_of :website, maximum: 50
