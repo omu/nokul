@@ -18,6 +18,7 @@
 !/log/.keep
 !/tmp/.keep
 .byebug_history
+.DS_Store
 
 # Ignore uploaded files in development.
 /storage/*
