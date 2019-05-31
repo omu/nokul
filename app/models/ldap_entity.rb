@@ -13,7 +13,7 @@ class LdapEntity < ApplicationRecord
   has_many :ldap_sync_errors, dependent: :destroy
 
   # stores
-  store :values, coder: JSON
+  store :values, coder: JSON, accessors: Ldap::EntityBuilder::Attributes.instance_methods
 
   # validations
   validates :values, presence: true

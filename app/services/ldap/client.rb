@@ -44,9 +44,9 @@ module Ldap
       #  Ldap::Client.update(entity)
       #  Ldap::Client.create_or_update(entity)
       def update(entity)
-        return create(entity) unless LdapEntity.synchronized_for_user(entity.user)
+        return create(entity) unless exists?(entity)
 
-        operations = generate_update_operations(entity.prev.values, entity.values)
+        operations = generate_operations_for_update(entity.prev.values, entity.values)
 
         return true if operations.blank?
 
@@ -60,6 +60,21 @@ module Ldap
       #  Ldap::Client.destroy(entity)
       def destroy(entity)
         run(:delete, dn: entity.dn)
+      end
+
+      # entity: a record of the LdapEntity
+      # Usage:
+      #  Ldap::Client.exists?(entity)
+      def exists?(entity)
+        treebase = entity.dn
+                         .split(',')
+                         .select { |item| item.include?('dc=') }
+                         .join(',')
+
+        response = run(:search,
+                       base: treebase,
+                       filter: Net::LDAP::Filter.eq('uid', entity.uid))
+        response.present?
       end
 
       def response
@@ -78,7 +93,7 @@ module Ldap
       #   [:delete, "jpegPhoto", nil],
       #   [:add, "eduPersonPrincipalNamePrior", "onceki_username"]
       # ]
-      def generate_update_operations(first, last)
+      def generate_operations_for_update(first, last)
         result = []
 
         last.each do |key, value|
