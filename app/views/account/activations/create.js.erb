@@ -1,12 +1,12 @@
-$('.list-group-item.list-group-item-accent-danger.list-group-item-danger').remove();
-'<% errors = @activation.errors.full_messages %>'
+$('#error_messages').html('');
 
-if ('<%= errors %>' == '[]') {
+<% if @activation.errors.full_messages.present? %>
+  <% @activation.errors.full_messages.each do |error| %>
+    $('#error_messages').append(
+      "<li class='list-group-item list-group-item-accent-danger list-group-item-danger'> <%= error %> </li>"
+    )
+  <% end %>
+<% else %>
   $('#verification_modal').html("<%= escape_javascript(render 'modal') %>");
   $('#verification_modal').modal('show')
-} else {
-  full_error_messages = JSON.parse('<%= errors.to_json.html_safe %>')
-  $.each(full_error_messages, function(i, error) {
-    $('#error_messages').append('<li class="list-group-item list-group-item-accent-danger list-group-item-danger">'+ error +'</li>')
-  });
-}
+<% end %>
