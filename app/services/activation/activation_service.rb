@@ -77,7 +77,7 @@ module Activation
 
     def self.find_user(encrypted_user_id)
       user_id = EncryptorService.decrypt(
-        encrypted_user_id, salt: Rails.application.credentials.activation_crypt_key
+        encrypted_user_id, salt: Tenant.credentials.activation_crypt_key
       )
       User.find(user_id)
     rescue ActiveSupport::MessageEncryptor::InvalidMessage
@@ -90,7 +90,7 @@ module Activation
 
     def identifier
       EncryptorService.encrypt(
-        user&.id.to_s, salt: Rails.application.credentials.activation_crypt_key
+        user&.id.to_s, salt: Tenant.credentials.activation_crypt_key
       )
     end
 
