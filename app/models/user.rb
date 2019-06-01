@@ -34,6 +34,8 @@ class User < ApplicationRecord
   has_many :units, through: :employees
   has_many :positions, through: :duties
   has_many :administrative_functions, through: :duties
+  has_many :prospective_students, primary_key: :id_number, foreign_key: :id_number, dependent: :nullify
+  has_many :prospective_employees, primary_key: :id_number, foreign_key: :id_number, dependent: :nullify
 
   # validations
   validates :email, presence: true, uniqueness: true, length: { maximum: 255 }

@@ -24,8 +24,8 @@ module Account
       response = Twilio::Verify.check_verification_code(verify[:mobile_phone], verify[:verification_code])
 
       if response == 'ok'
-        return redirect_to login_path, notice: t('.success') if update_process(params[:students], params[:employees],
-                                                                               params[:user], verify[:mobile_phone])
+        return redirect_to login_path, notice: t('.success') if update_process(params[:identifier],
+                                                                               verify[:mobile_phone])
 
         redirect_to activation_path, alert: t('account.activations.system_error')
       else
@@ -37,11 +37,12 @@ module Account
 
     private
 
-    def update_process(prospective_student_ids, prospective_employee_ids, user_id, phone)
+    def update_process(identifier, phone)
+      user = Activation::ActivationService.find_user(identifier)
       ActiveRecord::Base.transaction do
-        ProspectiveStudent.archive(prospective_student_ids)
-        ProspectiveEmployee.archive(prospective_employee_ids)
-        User.find(user_id).update!(mobile_phone: phone, activated: true, activated_at: Time.zone.now)
+        user.prospective_students.registered.update(archived: true)
+        user.prospective_employees.update(archived: true)
+        user.update!(mobile_phone: phone, activated: true, activated_at: Time.zone.now)
       end
     rescue StandardError => e
       Rails.logger.error e.message

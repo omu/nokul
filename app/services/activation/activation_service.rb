@@ -11,11 +11,8 @@ module Activation
                   :id_number,
                   :last_name,
                   :mobile_phone,
-                  :prospective_employee,
-                  :prospective_student,
                   :serial,
-                  :serial_no,
-                  :user
+                  :serial_no
 
     validates :country, presence: true
     validates :date_of_birth, presence: true
@@ -66,27 +63,38 @@ module Activation
         ProspectiveEmployee.not_archived.exists?(id_number: id_number)
     end
 
+    def send_verification_code?
+      Twilio::Verify.send_phone_verification_code(mobile_phone) == 'ok'
+    end
+
     def active
       return unless valid?
-
-      set_prospectives_and_user
     rescue StandardError => e
       Rails.logger.error e.message
       errors.add(:base, I18n.t('.account.activations.system_error'))
       false
     end
 
-    def send_verification_code?
-      Twilio::Verify.send_phone_verification_code(mobile_phone) == 'ok'
+    def self.find_user(encrypted_user_id)
+      user_id = EncryptorService.decrypt(
+        encrypted_user_id, salt: Rails.application.credentials.activation_crypt_key
+      )
+      User.find(user_id)
+    rescue ActiveSupport::MessageEncryptor::InvalidMessage
+      nil
+    end
+
+    def user
+      @user ||= User.find_by(id_number: id_number)
+    end
+
+    def identifier
+      EncryptorService.encrypt(
+        user&.id.to_s, salt: Rails.application.credentials.activation_crypt_key
+      )
     end
 
     private
-
-    def set_prospectives_and_user
-      @prospective_student = ProspectiveStudent.registered.where(id_number: id_number)
-      @prospective_employee = ProspectiveEmployee.where(id_number: id_number)
-      @user = User.find_by(id_number: id_number)
-    end
 
     def must_not_be_activated
       return if errors.any?
