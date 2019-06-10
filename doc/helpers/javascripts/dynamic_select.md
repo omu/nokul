@@ -1,5 +1,6 @@
 ---
-author: İrfan Subaş
+author(s):
+  - İrfan Subaş (@isubas)
 ---
 
 Dynamic Select

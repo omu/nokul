@@ -1,3 +1,8 @@
+---
+author(s):
+  - M. Serhat Dundar (@msdundar)
+---
+
 Entity Relationship Diagrams
 ============================
 

@@ -1,5 +1,6 @@
 ---
-author: M. Serhat Dundar
+author(s):
+  - M. Serhat Dundar (@msdundar)
 ---
 
 How To: Navigate Between Units
