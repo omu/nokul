@@ -1,9 +1,11 @@
 ---
-author: M. Serhat Dundar
+author(s):
+  - M. Serhat Dundar (@msdundar)
+  - Hüseyin Tekinaslan (@huseyin)
 ---
 
-Installation
-============
+Nokul Kurulumu
+==============
 
 Prerequisites
 -------------
@@ -15,11 +17,11 @@ Prerequisites
 - [libvips](https://github.com/jcupitt/libvips/wiki/Build-for-Ubuntu)
 - [wkhtmltopdf](https://github.com/mileszs/wicked_pdf#installation)
 
-Installation
-------------
+Kurulum
+-------
 
-- Create a separate PostgreSQL user for the development and test environments. As per our policy, PostgreSQL user name
-  must be the same as the application name: `nokul`.
+- `development` ve `test` ortamları için ayrı PostgresQL kullanıcıları oluştur. Politikalarımıza göre kullanıcı adı,
+  uygulama adı ile aynı olmalıdır (örneğin; `nokul`).
 
   ```bash
   sudo -u postgres psql <<-EOF
@@ -28,28 +30,28 @@ Installation
   EOF
   ```
 
-  In order to communicate with third parties, you also need to setup some credentials which are stored in
-  `credentials.yml.enc`. For obtaining credentials you can either download a copy of `master.key` into config/ or you
-  can define the key value as `RAILS_MASTER_KEY` environment variable. For adding new secrets run the command show,
-  below after you obtain the key:
+  3rd-party servislere erişebilmek için `credentials.yml.enc` dosyasında korunan bilgilere ihtiyaç duyulmaktadır. Bu
+  bilgileri elde etmek için `master.key` dosyasının bir kopyasını `config` dizini altına indirmeli veya
+  `RAILS_MASTER_KEY` ortam değişkenini tanımlamalısınız. Eğer yeni bir girdi ekleyecek veya varolan bir girdiyi
+  düzenleyecekseniz aşağıdaki komutu çalıştırın.
 
   ```ruby
   bin/rails credentials:edit
   ```
 
-- Install GEM dependencies:
+- GEM bağımlılıklarını kur:
 
   ```bash
   bundle
   ```
 
-- Install asset dependencies:
+- JavaScript bağımlılıklarını kur:
 
   ```bash
   yarn install
   ```
 
-- Create database, migrate tables and run the seed data:
+- Veritabanını oluştur, tabloları "migrate" et ve "seed" verilerini doldur:
 
   ```bash
   rake db:create
@@ -57,16 +59,14 @@ Installation
   rake db:seed
   ```
 
-- If you are setting up again, when you already have previous databases:
+- Veritabanını yeniden ayarlamak için (drop, reload and reseed the database) için aşağıdaki komutu kullanın:
 
   ```bash
   rake db:reset
   ```
 
-  `reset` is equivalent of `rake db:drop & rake db:setup`.
-
-Restoring an Existing PostgreSQL Dump from Dokku
-------------------------------------------------
+Dokku'da PostgreSQL Dump Restore Etme
+-------------------------------------
 
 ```bash
 pg_restore -h localhost -p 5432 -U nokul -d nokul_development -v "some_dump.backup"
