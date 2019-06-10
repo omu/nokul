@@ -1,15 +1,23 @@
 ---
-author: M. Serhat Dundar
+author(s):
+  - M. Serhat Dundar (@msdundar)
+  - Hüseyin Tekinaslan (@huseyin)
 ---
 
-Rake Tasks
-==========
+Rake Görevleri
+==============
 
-- [OPTIONAL]. `setup` or `seed` already does it, but if you want to externally create YOKSIS references, departments,
-  country codes etc. inside your app, run the specific tasks alone:
+- Uygulamada mevcut tüm Rake görevlerini listelemek için şu komutu çalıştır
 
   ```bash
-  rake -T # lists all available rake tasks, see ones categorized under import or fetch
+  rake -T
   ```
 
-- `fetch` prefix has used for API operations, `import` prefix has used for local CSV importing operations.
+- Bunun dışında spesifik bir görevi çalıştırmak için (harici olarak çekilen YOKSIS referansları gibi) aşağıdaki
+  komutu çalıştır
+
+  ```bash
+  rake fetch:references
+  ```
+
+Genel olarak `fetch` ön eki API operasyonları, `import` ön eki ise CSV "import" işlemleri için kullanılmaktadır.
