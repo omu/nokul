@@ -4,8 +4,8 @@ author(s):
   - Hüseyin Tekinaslan (@huseyin)
 ---
 
-Nokul Kurulumu
-==============
+Manuel Nokul Kurulumu
+=====================
 
 Gereksinimler
 -------------
