@@ -7,7 +7,7 @@ author(s):
 Nokul Kurulumu
 ==============
 
-Prerequisites
+Gereksinimler
 -------------
 
 - [PostgreSQL (>=11.x)](https://www.postgresql.org/download/)
