@@ -1,13 +1,15 @@
 ---
-author: M. Serhat Dundar
+author(s):
+  - M. Serhat Dundar (@msdundar)
+  - Hüseyin Tekinaslan (@huseyin)
 ---
 
 Test Coverage
 =============
 
-Currently, coverage reports are being sent to Codacy automatically in CI environment. If you would like to generate a
-local report for yourself (using SimpleCov), you simply need to run tests and view the generated file in
-`coverage/index.html.erb`:
+Şu anda CI ortamındaki coverage raporları otomatik olarak Codacy'e gönderilmektedir. Eğer kendiniz için yerel raporlar
+oluşturmak istiyorsanız (SımpleCov kullanarak), testleri çalıştırmanız ve üretilen `coverage/index.html.erb` dosyasını
+görüntülemeniz yeterlidir.
 
 ```ruby
 rake test
