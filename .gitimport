@@ -2,3 +2,7 @@
   files:
     - source: .github
       target: .github
+    - source: etc/rubocop/rubocop.yml
+      target: .rubocop_common.yml
+    - source: etc/markdownlint/markdownlint_common.yml
+      target: .markdownlint_common.yml
