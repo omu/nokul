@@ -2,7 +2,7 @@
 
 module Account
   class ActivationsController < ApplicationController
-    before_action :check_user_login
+    before_action :redirect_to_root, if: -> { user_signed_in? }
     skip_before_action :authenticate_user!
     layout 'guest'
 
@@ -13,9 +13,7 @@ module Account
     def create
       @activation = Activation::ActivationService.new(params[:activation])
       @activation.active
-      respond_to do |format|
-        format.js
-      end
+      respond_to :js
     end
 
     # rubocop:disable Metrics/AbcSize
@@ -39,18 +37,18 @@ module Account
 
     def update_process(identifier, phone)
       user = Activation::ActivationService.find_user(identifier)
-      ActiveRecord::Base.transaction do
+      user.transaction do
         user.prospective_students.registered.update(archived: true)
         user.prospective_employees.update(archived: true)
         user.update!(mobile_phone: phone, activated: true, activated_at: Time.zone.now)
       end
     rescue StandardError => e
-      Rails.logger.error e.message
+      Rollbar.error(e, e.message)
       false
     end
 
-    def check_user_login
-      redirect_to root_path if user_signed_in?
+    def redirect_to_root
+      redirect_to(:root)
     end
   end
 end

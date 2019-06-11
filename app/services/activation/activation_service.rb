@@ -63,14 +63,14 @@ module Activation
         ProspectiveEmployee.not_archived.exists?(id_number: id_number)
     end
 
-    def send_verification_code?
+    def verification_code_sent?
       Twilio::Verify.send_phone_verification_code(mobile_phone) == 'ok'
     end
 
     def active
       return unless valid?
     rescue StandardError => e
-      Rails.logger.error e.message
+      Rollbar.error(e, e.message)
       errors.add(:base, I18n.t('.account.activations.system_error'))
       false
     end
@@ -117,7 +117,7 @@ module Activation
     def send_verification_code
       return if errors.any?
 
-      errors.add(:base, I18n.t('.account.activations.not_send_verify_code')) unless send_verification_code?
+      errors.add(:base, I18n.t('.account.activations.not_send_verify_code')) unless verification_code_sent?
     end
   end
 end

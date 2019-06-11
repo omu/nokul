@@ -11,6 +11,7 @@ class ProspectiveStudentTest < ActiveSupport::TestCase
   belongs_to :language, optional: true
   belongs_to :student_entrance_type
   belongs_to :student_disability_type, optional: true
+  belongs_to :user
 
   # validations: presence
   validates_presence_of :expiry_date
