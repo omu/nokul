@@ -1,3 +1,8 @@
+---
+author(s):
+  - Hüseyin Tekinaslan (@huseyin)
+---
+
 `RestClient`
 =============
 

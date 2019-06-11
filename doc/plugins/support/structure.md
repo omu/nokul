@@ -1,5 +1,6 @@
 ---
-author: Recai Oktaş
+author(s):
+  - Recai Oktaş (@roktas)
 ---
 
 `Structure`

@@ -1,6 +1,7 @@
 ---
-author: Recai Oktaş
-co-author: M. Serhat Dündar
+author(s):
+  - Recai Oktaş (@roktas)
+  - M. Serhat Dündar (@msdundar)
 ---
 
 `Sensitive`
