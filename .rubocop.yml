@@ -25,6 +25,7 @@ AllCops:
   Exclude:
     - app/controllers/concerns/yoksis_resource.rb
     - bin/**/*
+    - tmp/**/*
     - db/schema.rb
     - db/migrate/*.rb
     - config/initializers/simple_form.rb
