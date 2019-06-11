@@ -3,8 +3,8 @@ author(s):
   - M. Serhat Dundar (@msdundar)
 ---
 
-Seed
-====
+Seeds
+=====
 
 - `rake db:seed` varsayılan olarak export edilmiş seed verisini içeren .SQL dosyasını içeri aktarır.
 
