@@ -1,6 +1,6 @@
 ---
 author(s):
-  - İrfan SUBAŞ (@isubas)
+  - İrfan Subaş (@isubas)
 ---
 
 Yetkilendirme
