@@ -1,0 +1,4 @@
+mkdocs
+mkdocs-exclude
+mkdocs-material
+pymdown-extensions

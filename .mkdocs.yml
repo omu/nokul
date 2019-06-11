@@ -1,0 +1,79 @@
+site_name: 'Nokul Dokümantasyonu'
+site_description: 'Nokul Projesi Dokümantasyonu'
+repo_name: omu/nokul
+repo_url: https://github.com/omu/nokul/tree/develop
+copyright: 'Bu sitede yayınlanan dokümanlar <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC Attribution-ShareAlike 3.0 Unported</a> ile lisanslanmıştır.'
+docs_dir: doc
+markdown_extensions:
+  - codehilite:
+      linenums: false
+  - pymdownx.superfences
+theme:
+  name: material
+  language: tr
+  logo:
+    icon: pages
+  palette:
+    primary: blue grey
+    accent: indigo
+plugins:
+  - exclude:
+      glob:
+        - bin/git-import.md
+extra:
+  social:
+    - type: github
+      link: https://github.com/omu
+    - type: linkedin
+      link: https://linkedin.com/company/omu-baum
+nav:
+  - Geliştirme:
+    - Ortam:
+      - Docker Compose: development/environment/docker-compose.md
+      - Vagrant: development/environment/vagrant.md
+    - Yardımcılar:
+      - JavaScript:
+        - dynamic_select: development/helpers/javascript/dynamic_select.md
+      - link_to_helper: development/helpers/link_to_helper.md
+    - Rake Görevleri:
+      - dump: development/tasks/dump.md
+      - fetch: development/tasks/fetch.md
+      - import: development/tasks/import.md
+      - nokul: development/tasks/nokul.md
+      - patron: development/tasks/patron.md
+      - pull_request: development/tasks/pull_request.md
+      - quality: development/tasks/quality.md
+      - security: development/tasks/security.md
+      - tenant: development/tasks/tenant.md
+    - Testler:
+      - Coverage: development/tests/coverage.md
+      - Birim Testler: development/tests/unit-test.md
+    - Yetkilendirme: development/authorization.md
+    - Birim Yapısı: development/navigate-units.md
+    - Kullanıcı Yapısı: development/navigate-users.md
+    - Sırlar: development/secrets.md
+    - Seed Verileri: development/seeds.md
+  - Operasyonel:
+    - Kurulum: operations/installation.md
+    - Güncelleme: operations/upgrading.md
+    - Konuşlandırma: operations/deployment.md
+  - Eklentiler:
+    - Support:
+      - codification: plugins/support/codification.md
+      - collection: plugins/support/collection.md
+      - core_ext: plugins/support/core_ext.md
+      - rest_client: plugins/support/rest_client.md
+      - sensitive: plugins/support/sensitive.md
+      - structure: plugins/support/structure.md
+      - uniq_collection: plugins/support/uniq_collection.md
+    - Tenant:
+      - Ortak:
+        - Geliştirme:
+          - Kodifikasyon: plugins/tenant/common/development/codification.md
+          - Tenant: plugins/tenant/common/development/tenant.md
+          - Birimler: plugins/tenant/common/development/units.md
+        - Spesifikasyonlar:
+          - Kullanıcıların İsimlendirilmesi: plugins/tenant/common/specification/user-names.md
+          - Öğrenci Numaraları: plugins/tenant/common/specification/student-numbers.md
+          - Birim Kısaltmaları: plugins/tenant/common/specification/unit-abbreviations.md
+          - Birim Kodları: plugins/tenant/common/specification/unit-codes.md
