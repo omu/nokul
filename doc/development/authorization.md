@@ -6,7 +6,7 @@ author(s):
 Yetkilendirme
 =============
 
-![Patron](../diagrams/Patron.png)
+![Patron](../assets/patron.png)
 
 Temel Bilgiler
 --------------
