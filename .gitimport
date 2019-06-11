@@ -1,0 +1,4 @@
+- remote: https://github.com/omu/omu
+  files:
+    - source: .github
+      target: .github
