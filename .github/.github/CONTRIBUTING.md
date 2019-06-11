@@ -12,9 +12,9 @@ politikalarını](https://github.com/omu/resmi/tree/master/bilgi-g%C3%BCvenli%C4
 eklenmesi muhtemel yeni politikaları peşinen kabul ettiğinizi beyan etmiş sayılırsınız.
 
 Proje ve projede ortaya çıkan ürünlerin tüm hakları Ondokuz Mayıs Üniversitesine aittir. Uygulamaya yapacağınız
-katkıların hakları da Ondokuz Mayıs Üniversitesine ait olacaktır. Nokul projesinde çalışma sorumluluğu bulunmayan
-kişilerin yaptıkları katkılar tamamen gönüllü katkı olarak değerlendirilecek olup, bu kişilerin yaptıkları katkılar için
-telif hakkı, ücret, projenin herhangi bir yerinde isminin anılması (mention) gibi herhangi bir istekte bulunma hakları
+katkıların hakları da Ondokuz Mayıs Üniversitesine ait olacaktır. Projede çalışma sorumluluğu bulunmayan kişilerin
+yaptıkları katkılar tamamen gönüllü katkı olarak değerlendirilecek olup, bu kişilerin yaptıkları katkılar için telif
+hakkı, ücret, projenin herhangi bir yerinde isminin anılması (mention) gibi herhangi bir istekte bulunma hakları
 bulunmamaktadır. `Katkı sağlayan` olarak kullanıcı adınız, isminiz, sağladığınız katkı ve katkı sağladığınız tarih gibi
 bilgiler bu projede herkese açık bir biçimde görüntülenebilir. Projeye yapacağınız katkılar Ondokuz Mayıs Üniversitesine
 ait olacağı için gelecekte yaptığınız katkıların projeden kaldırılmasını talep etme hakkınız bulunmamaktadır.
