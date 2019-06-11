@@ -9,7 +9,7 @@ class ProspectiveStudent < ApplicationRecord
   pg_search_scope(
     :search,
     against: %i[id_number first_name last_name],
-    using: { tsearch: { prefix: true } }
+    using:   { tsearch: { prefix: true } }
   )
 
   search_keys :meb_status, :military_status, :obs_status, :unit_id, :student_entrance_type_id,
@@ -41,11 +41,11 @@ class ProspectiveStudent < ApplicationRecord
   validates :fathers_name, length: { maximum: 255 }
   validates :high_school_code, length: { maximum: 255 }
   validates :high_school_branch, length: { maximum: 255 }
-  validates :high_school_graduation_year, allow_nil: true,
+  validates :high_school_graduation_year, allow_nil:    true,
                                           numericality: {
-                                            only_integer: true,
+                                            only_integer:             true,
                                             greater_than_or_equal_to: 1910,
-                                            less_than_or_equal_to: 2050
+                                            less_than_or_equal_to:    2050
                                           }
   validates :home_phone, length: { maximum: 255 }
   validates :id_number, presence: true, uniqueness: { scope: %i[unit_id exam_score] }, length: { is: 11 }
@@ -82,10 +82,10 @@ class ProspectiveStudent < ApplicationRecord
 
   def registered_user(user)
     Student.new(
-      user: user,
-      unit: unit,
+      user:                   user,
+      unit:                   unit,
       permanently_registered: can_permanently_register?,
-      student_number: id_number # TODO: must be generated
+      student_number:         id_number # TODO: must be generated
     )
   end
 

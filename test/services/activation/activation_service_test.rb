@@ -9,14 +9,14 @@ module Activation
 
       @activation =
         Activation::ActivationService.new(
-          id_number: prospective.id_number,
-          first_name: prospective.first_name,
-          last_name: prospective.last_name,
+          id_number:     prospective.id_number,
+          first_name:    prospective.first_name,
+          last_name:     prospective.last_name,
           date_of_birth: '1984-11-16',
-          serial: 'J10',
-          serial_no: '94646',
-          mobile_phone: '5551111111',
-          country: 'TR'
+          serial:        'J10',
+          serial_no:     '94646',
+          mobile_phone:  '5551111111',
+          country:       'TR'
         )
     end
 

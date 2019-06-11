@@ -27,11 +27,11 @@ module CourseManagement
 
     test 'should create course group' do
       parameters = {
-        name: 'Course Group Test',
+        name:                 'Course Group Test',
         total_ects_condition: 5,
-        unit_id: units(:fen_bilgisi_ogretmenligi_programi).id,
+        unit_id:              units(:fen_bilgisi_ogretmenligi_programi).id,
         course_group_type_id: course_group_types(:universite_secmeli).id,
-        course_ids: [courses(:fen_egitiminde_teknolojik_alan_bilgisi).id]
+        course_ids:           [courses(:fen_egitiminde_teknolojik_alan_bilgisi).id]
       }
 
       assert_difference('CourseGroup.count') do

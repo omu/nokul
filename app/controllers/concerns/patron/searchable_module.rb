@@ -20,7 +20,7 @@ module Patron
       result     = pagy(collection, page_param: page_param)
       {
         collection: result.last,
-        pagy: result.first
+        pagy:       result.first
       }
     end
   end

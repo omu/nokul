@@ -34,10 +34,10 @@ module FirstRegistration
       assert_difference('RegistrationDocument.count') do
         post registration_documents_path, params: {
           registration_document: {
-            unit_id: units(:uzem).id,
+            unit_id:          units(:uzem).id,
             document_type_id: document_types(:ales).id,
             academic_term_id: academic_terms(:spring_2017_2018).id,
-            description: 'Lorem ipsum!'
+            description:      'Lorem ipsum!'
           }
         }
       end

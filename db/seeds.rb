@@ -18,9 +18,9 @@ module PgExec
   def args
     config = ActiveRecord::Base.configurations[Rails.env]
     {
-      host: config['host'],
-      dbname: config['database'],
-      user: config['username'],
+      host:     config['host'],
+      dbname:   config['database'],
+      user:     config['username'],
       password: config['password']
     }
   end

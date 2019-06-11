@@ -8,7 +8,7 @@ class Course < ApplicationRecord
   pg_search_scope(
     :search,
     against: %i[name code],
-    using: { tsearch: { prefix: true } }
+    using:   { tsearch: { prefix: true } }
   )
 
   # dynamic_search

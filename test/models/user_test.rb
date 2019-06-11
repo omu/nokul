@@ -114,9 +114,9 @@ class UserTest < ActiveSupport::TestCase
     assert_enqueued_with(job: Kps::AddressSaveJob) do
       password = SecureRandom.hex(20).freeze
       User.create(
-        id_number: '12345678912',
-        email: 'fakeuser@fakemail.com',
-        password: password,
+        id_number:             '12345678912',
+        email:                 'fakeuser@fakemail.com',
+        password:              password,
         password_confirmation: password
       )
     end
@@ -126,9 +126,9 @@ class UserTest < ActiveSupport::TestCase
     assert_enqueued_with(job: Kps::IdentitySaveJob) do
       password = SecureRandom.hex(20).freeze
       User.create(
-        id_number: '98765432198',
-        email: 'anotherfakeuser@fakemail.com',
-        password: password,
+        id_number:             '98765432198',
+        email:                 'anotherfakeuser@fakemail.com',
+        password:              password,
         password_confirmation: password
       )
     end

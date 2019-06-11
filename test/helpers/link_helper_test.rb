@@ -10,54 +10,54 @@ class LinkHelperTest < ActionView::TestCase
   HTML
 
   LINKS = {
-    back: {
-      klass: 'btn btn-secondary btn-sm',
+    back:    {
+      klass:   'btn btn-secondary btn-sm',
       options: '',
-      icon: 'fa fa-arrow-left',
-      path: '/path',
-      text: I18n.t('action_group.back')
+      icon:    'fa fa-arrow-left',
+      path:    '/path',
+      text:    I18n.t('action_group.back')
     },
     destroy: {
-      klass: 'btn btn-outline-danger btn-sm',
+      klass:   'btn btn-outline-danger btn-sm',
       options: "data-confirm='#{I18n.t('are_you_sure')}' rel='nofollow' data-method='delete'",
-      icon: 'fa fa-trash',
-      path: '/path',
-      text: I18n.t('action_group.destroy')
+      icon:    'fa fa-trash',
+      path:    '/path',
+      text:    I18n.t('action_group.destroy')
     },
-    edit: {
-      klass: 'btn btn-outline-success btn-sm',
+    edit:    {
+      klass:   'btn btn-outline-success btn-sm',
       options: '',
-      icon: 'fa fa-pencil',
-      path: '/path',
-      text: I18n.t('action_group.edit')
+      icon:    'fa fa-pencil',
+      path:    '/path',
+      text:    I18n.t('action_group.edit')
     },
-    file: {
-      klass: 'btn btn-secondary btn-sm',
+    file:    {
+      klass:   'btn btn-secondary btn-sm',
       options: '',
-      icon: 'fa fa-file-word-o',
-      path: '/path',
-      text: I18n.t('action_group.file')
+      icon:    'fa fa-file-word-o',
+      path:    '/path',
+      text:    I18n.t('action_group.file')
     },
-    new: {
-      klass: 'btn btn-outline-primary btn-sm',
+    new:     {
+      klass:   'btn btn-outline-primary btn-sm',
       options: 'id="add-button"',
-      icon: 'fa fa-plus',
-      path: '/path',
-      text: I18n.t('action_group.add')
+      icon:    'fa fa-plus',
+      path:    '/path',
+      text:    I18n.t('action_group.add')
     },
-    show: {
-      klass: 'btn btn-outline-info btn-sm',
+    show:    {
+      klass:   'btn btn-outline-info btn-sm',
       options: '',
-      icon: 'fa fa-eye',
-      path: '/path',
-      text: I18n.t('action_group.show')
+      icon:    'fa fa-eye',
+      path:    '/path',
+      text:    I18n.t('action_group.show')
     },
-    update: {
-      klass: 'btn btn-outline-info btn-sm',
+    update:  {
+      klass:   'btn btn-outline-info btn-sm',
       options: '',
-      icon: 'fa fa-pencil-square-o',
-      path: '/path',
-      text: I18n.t('action_group.update')
+      icon:    'fa fa-pencil-square-o',
+      path:    '/path',
+      text:    I18n.t('action_group.update')
     }
   }.freeze
 
@@ -73,8 +73,8 @@ class LinkHelperTest < ActionView::TestCase
     course = Course.last
 
     links = {
-      show: link_to_show(course_path(course)),
-      edit: link_to_edit(edit_course_path(course)),
+      show:    link_to_show(course_path(course)),
+      edit:    link_to_edit(edit_course_path(course)),
       destroy: link_to_destroy(course_path(course))
     }
 
@@ -82,7 +82,7 @@ class LinkHelperTest < ActionView::TestCase
     assert_equal link_to_actions(course, except: :show), links.values_at(:edit, :destroy).join(' ')
     assert_equal link_to_actions(course, except: %i[show edit]), links.values_at(:destroy).join(' ')
     assert_equal link_to_actions(course, except: %i[edit destroy],
-                                         show: {
+                                         show:   {
                                            text: 'Show', options: { class: 'btn btn-primary' }
                                          }),
                  link_to_show('Show', course_path(course), class: 'btn btn-primary')

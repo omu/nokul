@@ -6,7 +6,7 @@ class Calendar < ApplicationRecord
   pg_search_scope(
     :search,
     against: %i[name],
-    using: { tsearch: { prefix: true } }
+    using:   { tsearch: { prefix: true } }
   )
 
   # relations
@@ -16,17 +16,17 @@ class Calendar < ApplicationRecord
   has_many :calendar_event_types, through: :calendar_events
   has_many :committee_decisions, through: :calendar_committee_decisions
   has_many :unit_calendars, dependent: :destroy
-  has_many :units, through: :unit_calendars,
-                   before_add: proc { |calendar, unit| create_sub_calendars(calendar, unit) },
+  has_many :units, through:       :unit_calendars,
+                   before_add:    proc { |calendar, unit| create_sub_calendars(calendar, unit) },
                    before_remove: proc { |calendar, unit| destroy_sub_calendars(calendar, unit) }
 
   accepts_nested_attributes_for :units, allow_destroy: true, reject_if: :all_blank
   accepts_nested_attributes_for :calendar_events, allow_destroy: true, reject_if: :all_blank
 
   # validations
-  validates :name, presence: true,
+  validates :name, presence:   true,
                    uniqueness: { scope: :academic_term_id },
-                   length: { maximum: 255 }
+                   length:     { maximum: 255 }
   validates :committee_decisions, presence: true
   validates :timezone, presence: true, length: { maximum: 255 }
   validates :description, length: { maximum: 65_535 }

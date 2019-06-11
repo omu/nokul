@@ -28,16 +28,16 @@ module CourseManagement
 
     test 'should create course' do
       parameters = {
-        name: 'Test Controller Course',
-        code: 'TTC',
+        name:           'Test Controller Course',
+        code:           'TTC',
         course_type_id: course_types(:compulsory_course).id,
-        theoric: 3,
-        practice: 0,
-        laboratory: 0,
-        unit_id: units(:omu).id,
-        program_type: 'undergraduate',
-        language_id: languages(:turkce).id,
-        status: 'active'
+        theoric:        3,
+        practice:       0,
+        laboratory:     0,
+        unit_id:        units(:omu).id,
+        program_type:   'undergraduate',
+        language_id:    languages(:turkce).id,
+        status:         'active'
       }
       assert_difference('Course.count') do
         post courses_path, params: { course: parameters }

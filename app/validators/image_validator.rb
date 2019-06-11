@@ -25,9 +25,9 @@ class ImageValidator < ActiveModel::Validator
     extension_whitelist = whitelist.map { |f| f.split('/').last }.join(', ')
     @record.errors[:base] << I18n.t(
       'not_permitted',
-      mime_type: mime_type,
+      mime_type:           mime_type,
       extension_whitelist: extension_whitelist,
-      scope: %I[validators image]
+      scope:               %I[validators image]
     ) && teardown
   end
 
@@ -36,7 +36,7 @@ class ImageValidator < ActiveModel::Validator
       'size_not_satisfied',
       minimum: MINIMUM_FILE_SIZE / 1024,
       maximum: MAXIMUM_FILE_SIZE / (1024 * 1024),
-      scope: %I[validators image]
+      scope:   %I[validators image]
     ) && teardown
   end
 

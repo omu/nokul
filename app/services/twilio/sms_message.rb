@@ -5,7 +5,7 @@ module Twilio
     def initialize(to, body)
       response = TWILIO_CLIENT.messages.create(
         from: Tenant.credentials.twilio[:sender],
-        to: to,
+        to:   to,
         body: body
       )
 
