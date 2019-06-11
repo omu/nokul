@@ -1,8 +1,0 @@
----
-author(s):
----
-
-Quality
-=======
-
-TODO
