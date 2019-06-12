@@ -62,3 +62,9 @@ else
     end
   end
 end
+
+# authorization data
+Rake::Task['patron:all'].invoke
+
+user = User.find_by(id_number: '11111111111')
+user.roles << Patron::Role.all if user
