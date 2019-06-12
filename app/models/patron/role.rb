@@ -7,7 +7,7 @@ module Patron
     pg_search_scope(
       :search,
       against: %i[name identifier],
-      using: { tsearch: { prefix: true } }
+      using:   { tsearch: { prefix: true } }
     )
 
     # relations

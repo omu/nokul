@@ -23,9 +23,9 @@ namespace :fetch do
         id_number = academic_staff[:id_number]
 
         user = User.new(
-          id_number: id_number,
-          email: "#{id_number}@omu.edu.tr",
-          password: password,
+          id_number:             id_number,
+          email:                 "#{id_number}@omu.edu.tr",
+          password:              password,
           password_confirmation: password
         )
 

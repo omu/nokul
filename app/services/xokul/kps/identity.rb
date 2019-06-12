@@ -42,8 +42,8 @@ module Xokul
       def model_data
         {
           **basic_informations,
-          registered_to: place_of_registry,
-          gender: basic_informations.dig(:gender, :code),
+          registered_to:  place_of_registry,
+          gender:         basic_informations.dig(:gender, :code),
           marital_status: status_informations.dig(:marital_status, :code)
         }
       end

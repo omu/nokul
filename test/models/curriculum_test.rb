@@ -10,7 +10,7 @@ class CurriculumTest < ActiveSupport::TestCase
   # constants
   {
     MAX_NUMBER_OF_SEMESTERS: 12,
-    MAX_NUMBER_OF_YEARS: 6
+    MAX_NUMBER_OF_YEARS:     6
   }.each do |constant, value|
     test "should have a #{constant} constant" do
       assert_equal Curriculum.const_get(constant), value
@@ -22,10 +22,10 @@ class CurriculumTest < ActiveSupport::TestCase
   has_many :available_courses, dependent: :destroy
   has_many :curriculum_programs, dependent: :destroy
   has_many :programs, through: :curriculum_programs,
-                      source: :unit
+                      source:  :unit
   has_many :semesters, class_name: 'CurriculumSemester',
                        inverse_of: :curriculum,
-                       dependent: :destroy
+                       dependent:  :destroy
   has_many :courses, through: :semesters
   has_many :curriculum_course_groups, through: :semesters
   has_many :course_groups, through: :curriculum_course_groups

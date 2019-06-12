@@ -1,50 +1,65 @@
+---
+author(s):
+  - M. Serhat Dundar (@msdundar)
+  - Hüseyin Tekinaslan (@huseyin)
+---
+
 Nokul Dokümantasyonu
 ====================
 
-Bu klasör Nokul ve ilişkili araçları hakkında dokümanları barındırır.
+Burada Nokul'a ait dokümanlar yer almaktadır. Bu dokümanları kullanarak Nokul'u kullanmaya veya ona katkı vermeye
+başlayabilirsiniz.
 
-TOC
----
+*Dokümanlara [docs.omu.sh/nokul](docs.omu.sh/nokul) üzerinden de ulaşabilirsiniz.*
 
-### Geliştirici
+İçerik
+------
 
-- [Geliştirici Dokümanları](./development)
-- [Git ve Github İpuçları](./diagrams)
-- [Helper Dokümanları](./helpers)
-- [DevOps ve Operatör Geliştirici](./ops)
-- [PostgreSQL](./postgresql)
-- [Geliştirme Kural ve Stilleri](./rule)
-- [ERD Diagramları](./diagrams)
-- [Diğer Herşey](./howto)
+### Uygulama İç Yapısı
+
+- [Kullanıcılar](app/user.md)
+- [Birimler](app/unit.md)
+- [Patron](app/patron.md)
+
+### Operasyonlar
+
+- [Kurulum](operations/installation.md)
+- [Güncelleme](operations/upgrading.md)
+- [Konuşlandırma](operations/deployment.md)
+
+### Geliştirme
+
+- [Rake Görevleri](development/tasks.md)
+- [Testler](development/tests.md)
+- [Seed İşlemleri](development/seeds.md)
+- [Sırlar](development/secrets.md)
+- [Docker](development/docker.md)
+- [Vagrant](development/vagrant.md)
+
+### Yardımcılar
+
+- [Birim Testler](helpers/unit-test.md)
+- [link_to_helper](helpers/link_to_helper.md)
+- [dynamic_select](helpers/dynamic_select.md)
 
 ### Eklentiler
 
-### Support
-
-Uygulama genelinde ortak olarak kullanılan kütüphaneleri barındıran plug-in'i temsil eder.
-
-- [Kodlamalar](../plugins/support/doc/codification.md)
-- [Collection](../plugins/support/doc/collection.md)
-- [RestClient ve API İstekleri](../plugins/support/doc/rest_client.md)
-- [Hassas Verilerin Şifrelenmesi-Çözülmesi](../plugins/support/doc/sensitive.md)
-- [Structure](../plugins/support/doc/structure.md)
-- [UniqCollection](../plugins/support/doc/uniq_collection.md)
-
-### Tenant::Common
-
-Tüm tenant'lar için geçerli olan ortak davranışları barındıran plug-in'i temsil eder.
-
-- [Kiracı Yönetimi](../plugins/tenant/common/doc/development/tenant.md)
-- [Kiracılar için Birim Yönetimi](../plugins/tenant/common/doc/development/units.md)
-- [Kiracı kodlamaları](../plugins/tenant/common/doc/development/codification.md)
-
-- [Öğrenci Numaraları](../plugins/tenant/common/doc/specification/student-numbers.md)
-- [Kullanıcı Adları](../plugins/tenant/common/doc/specification/user-names.md)
-- [Birim Kısaltmaları](../plugins/tenant/common/doc/specification/unit-abbreviations.md)
-- [Birim Kodları](../plugins/tenant/common/doc/specification/unit-codes.md)
-
-### LDAP
-
-LDAP entegrasyonlarına ilişkin dokümanları içeriri.
-
-- [Ruby ve LDAP](../lib/templates/ldap/)
+- Support
+  + [Codification](plugins/support/codification.md)
+  + [Collection](plugins/support/collection.md)
+  + [Rest Client](plugins/support/rest_client.md)
+  + [Sensitive](plugins/support/sensitive.md)
+  + [Structure](plugins/support/structure.md)
+  + [Uniq Collection](plugins/support/uniq_collection.md)
+  + [Çekirdek Eklentileri](plugins/support/core_ext.md)
+- Tenant
+  + Ortak
+    - Geliştirme
+      + [Nokul::Tenant::Codification](plugins/tenant/common/development/codification.md)
+      + [Nokul::Tenant](plugins/tenant/common/development/tenant.md)
+      + [Nokul::Tenant::Units](plugins/tenant/common/development/units.md)
+    - Spesifikasyonlar
+      + [Öğrencilerin Numaralandırılması](plugins/tenant/common/specification/student-numbers.md)
+      + [Birimlerin Kodlanması](plugins/tenant/common/specification/unit-codes.md)
+      + [Birim Kısaltmaları](plugins/tenant/common/specification/unit-abbreviations.md)
+      + [Kullanıların İsimlendirilmesi](plugins/tenant/common/specification/user-names.md)

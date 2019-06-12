@@ -9,10 +9,10 @@ class AcademicTermsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @target_path = 'reference'
     @create_params = {
-      year: '2019 - 2020',
-      term: 'spring',
+      year:          '2019 - 2020',
+      term:          'spring',
       start_of_term: '2019-01-15 08:00:00'.in_time_zone,
-      end_of_term: '2019-06-18 17:00:00'.in_time_zone
+      end_of_term:   '2019-06-18 17:00:00'.in_time_zone
     }
     @update_params = {
       year: '2020 - 2021',

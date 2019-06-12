@@ -2,9 +2,9 @@
 
 devise_for :users, controllers: {
   registrations: 'account/registrations',
-  passwords: 'account/passwords',
-  sessions: 'account/sessions',
-  unlocks: 'account/unlocks'
+  passwords:     'account/passwords',
+  sessions:      'account/sessions',
+  unlocks:       'account/unlocks'
 }
 
 devise_scope :user do

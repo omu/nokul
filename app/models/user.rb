@@ -12,9 +12,9 @@ class User < ApplicationRecord
   include PgSearch
   pg_search_scope(
     :search,
-    against: %i[id_number email],
+    against:            %i[id_number email],
     associated_against: { identities: %i[first_name last_name] },
-    using: { tsearch: { prefix: true } }
+    using:              { tsearch: { prefix: true } }
   )
 
   # authentication
@@ -37,13 +37,13 @@ class User < ApplicationRecord
 
   # validations
   validates :email, presence: true, uniqueness: true, length: { maximum: 255 }
-  validates :extension_number, allow_blank: true,
-                               length: { maximum: 8 },
+  validates :extension_number, allow_blank:  true,
+                               length:       { maximum: 8 },
                                numericality: { only_integer: true }
   validates :id_number, uniqueness: true, numericality: { only_integer: true }, length: { is: 11 }
   validates :linkedin, allow_blank: true, length: { maximum: 50 }
-  validates :phone_number, length: { maximum: 255 },
-                           allow_blank: true,
+  validates :phone_number, length:           { maximum: 255 },
+                           allow_blank:      true,
                            telephone_number: { country: proc { |record| record.country }, types: [:fixed_line] }
   validates :password, not_pwned: true
   validates :preferred_language, inclusion: { in: I18n.available_locales.map(&:to_s) }

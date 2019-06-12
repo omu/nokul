@@ -13,12 +13,12 @@ module Xokul
 
       response = Support::RestClient.get(
         URI.join(BASE_URL, path).to_s,
-        headers: {
+        headers:     {
           'Authorization' => "Bearer #{BEARER_TOKEN}",
-          'Content-Type' => 'application/json'
+          'Content-Type'  => 'application/json'
         },
-        payload: params.to_json,
-        use_ssl: true,
+        payload:     params.to_json,
+        use_ssl:     true,
         verify_mode: OpenSSL::SSL::VERIFY_PEER,
         **http_options
       )

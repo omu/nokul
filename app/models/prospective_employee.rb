@@ -8,7 +8,7 @@ class ProspectiveEmployee < ApplicationRecord
   pg_search_scope(
     :search,
     against: %i[id_number staff_number first_name last_name],
-    using: { tsearch: { prefix: true } }
+    using:   { tsearch: { prefix: true } }
   )
 
   search_keys :unit_id, :title_id, :archived

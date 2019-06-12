@@ -14,7 +14,7 @@ class Curriculum < ApplicationRecord
   pg_search_scope(
     :search,
     against: %i[name],
-    using: { tsearch: { prefix: true } }
+    using:   { tsearch: { prefix: true } }
   )
 
   # dynamic_search
@@ -28,10 +28,10 @@ class Curriculum < ApplicationRecord
   has_many :available_courses, dependent: :destroy
   has_many :curriculum_programs, dependent: :destroy
   has_many :programs, through: :curriculum_programs,
-                      source: :unit
+                      source:  :unit
   has_many :semesters, class_name: 'CurriculumSemester',
                        inverse_of: :curriculum,
-                       dependent: :destroy
+                       dependent:  :destroy
   has_many :courses, through: :semesters
   has_many :curriculum_course_groups, through: :semesters
   has_many :course_groups, through: :curriculum_course_groups
@@ -51,8 +51,8 @@ class Curriculum < ApplicationRecord
     terms = %i[spring fall]
     (1..number_of_semesters.to_i).each do |sequence|
       semesters.build(sequence: sequence,
-                      year: (sequence.to_f / divisor).round,
-                      term: terms[sequence % 2])
+                      year:     (sequence.to_f / divisor).round,
+                      term:     terms[sequence % 2])
     end
   end
 end

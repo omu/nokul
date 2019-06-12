@@ -1,24 +1,15 @@
-require: rubocop-performance
+inherit_from: .rubocop_common.yml
+
+require: rubocop-rails
 
 Rails:
   Enabled: true
-Style/AsciiComments:
-  Enabled: false
-Style/Lambda:
-  Enabled: false
-Style/FormatStringToken:
-  EnforcedStyle: template
-Documentation:
-  Enabled: false
-Naming/MemoizedInstanceVariableName:
-  EnforcedStyleForLeadingUnderscores: optional
 Rails/UnknownEnv:
   Environments:
     - development
     - production
     - test
 Metrics/LineLength:
-  Max: 120
   Exclude:
     - app/validators/employee_validator.rb # Won't fix
 Metrics/BlockLength:
@@ -35,6 +26,7 @@ AllCops:
   Exclude:
     - app/controllers/concerns/yoksis_resource.rb
     - bin/**/*
+    - tmp/**/*
     - db/schema.rb
     - db/migrate/*.rb
     - config/initializers/simple_form.rb

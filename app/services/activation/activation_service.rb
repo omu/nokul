@@ -41,14 +41,14 @@ module Activation
       birth_date = Date.strptime(date_of_birth)
 
       Xokul::Kps::Verification.id_card(
-        id_number: id_number,
-        first_name: first_name,
-        last_name: last_name,
-        day_of_birth: birth_date.day,
-        month_of_birth: birth_date.month,
-        year_of_birth: birth_date.year,
-        serial: serial,
-        number: serial_no,
+        id_number:       id_number,
+        first_name:      first_name,
+        last_name:       last_name,
+        day_of_birth:    birth_date.day,
+        month_of_birth:  birth_date.month,
+        year_of_birth:   birth_date.year,
+        serial:          serial,
+        number:          serial_no,
         document_number: document_no
       )
     end

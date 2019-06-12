@@ -5,10 +5,10 @@ class Project < ApplicationRecord
 
   # enums
   enum status: {
-    completed: 1,
+    completed:  1,
     continuing: 2,
-    deferred: 3,
-    pending: 4
+    deferred:   3,
+    pending:    4
   }
 
   enum activity: { passive: 0, active: 1 }
@@ -18,7 +18,7 @@ class Project < ApplicationRecord
   belongs_to :user, counter_cache: true
 
   # validations
-  validates :yoksis_id, uniqueness: { scope: %i[user_id status] },
+  validates :yoksis_id, uniqueness:   { scope: %i[user_id status] },
                         numericality: { only_integer: true, greater_than: 0 }
   validates :name, presence: true, length: { maximum: 65_535 }
   validates :subject, length: { maximum: 65_535 }

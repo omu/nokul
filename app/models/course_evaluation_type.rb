@@ -10,9 +10,9 @@ class CourseEvaluationType < ApplicationRecord
 
   # validations
   validates :percentage, numericality: {
-    only_integer: true,
+    only_integer:             true,
     greater_than_or_equal_to: 0,
-    less_than_or_equal_to: 100
+    less_than_or_equal_to:    100
   }
 
   validates :evaluation_type, uniqueness: { scope: :available_course }

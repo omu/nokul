@@ -5,21 +5,21 @@ namespace :import do
   task unit_groups: :environment do
     # unit_type grouping
     types_and_groups = {
-      other: [
+      other:                 [
         'Eğitim Araştırma Hastanesi',
         'Rektörlük',
         'Üniversite',
         'YÖK'
       ],
-      faculty: [
+      faculty:               [
         'Fakülte',
         'Meslek Yüksekokulu',
         'Yüksekokul'
       ],
-      department: [
+      department:            [
         'Bölüm'
       ],
-      major: [
+      major:                 [
         'Anabilim Dalı',
         'Anasanat Dalı',
         'Bilim Dalı',
@@ -32,7 +32,7 @@ namespace :import do
         'Önlisans/lisans Programı',
         'Tıpta Uzmanlık Programı'
       ],
-      graduate_program: [
+      graduate_program:      [
         'Bütünleşik Doktora Programı',
         'Disiplinlerarası Doktora Programı',
         'Disiplinlerarası Sanatta Yeterlilik Programı',
@@ -41,13 +41,13 @@ namespace :import do
         'Sanatta Yeterlilik Programı',
         'Yüksek Lisans Programı'
       ],
-      institute: [
+      institute:             [
         'Enstitü'
       ],
-      research_center: [
+      research_center:       [
         'Uygulama ve Araştırma Merkezi'
       ],
-      committee: [
+      committee:             [
         'Diğer Komisyon',
         'Diğer Kurul',
         'Enstitü Disiplin Kurulu',
@@ -67,7 +67,7 @@ namespace :import do
         'Yüksekokul Kurulu',
         'Yüksekokul Yönetim Kurulu'
       ],
-      administrative: [
+      administrative:        [
         'Anabilim Dalı Başkanlığı',
         'Anasanat Dalı Başkanlığı',
         'Başhekimlik',

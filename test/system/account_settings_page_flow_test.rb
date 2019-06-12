@@ -15,9 +15,9 @@ class AccountSettingsFlowTest < ApplicationSystemTestCase
       page.driver.browser.manage.window.resize_to(*resolution)
       visit(account_path)
       {
-        password: @password,
+        password:              @password,
         password_confirmation: @password,
-        current_password: 'd61c16acabedeab84f1ad062d7ad948ef3'
+        current_password:      'd61c16acabedeab84f1ad062d7ad948ef3'
       }.each do |key, value|
         fill_in("user[#{key}]", with: value)
       end
@@ -29,7 +29,7 @@ class AccountSettingsFlowTest < ApplicationSystemTestCase
       page.driver.browser.manage.window.resize_to(*resolution)
       visit(account_path)
       {
-        password: @password,
+        password:              @password,
         password_confirmation: @password
       }.each do |key, value|
         fill_in("user[#{key}]", with: value)

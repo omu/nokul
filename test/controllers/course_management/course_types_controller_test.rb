@@ -22,8 +22,8 @@ module CourseManagement
 
     test 'should create course type' do
       parameters = {
-        name: 'Course Type Test',
-        code: 'CTT',
+        name:       'Course Type Test',
+        code:       'CTT',
         min_credit: 1
       }
 
@@ -48,8 +48,8 @@ module CourseManagement
     test 'should update course type' do
       course_type = CourseType.last
       parameters = {
-        name: 'Course Type Update Test',
-        code: 'CTUT',
+        name:       'Course Type Update Test',
+        code:       'CTUT',
         min_credit: 2
       }
 
