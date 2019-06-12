@@ -7,6 +7,8 @@ docs_dir: doc
 markdown_extensions:
   - codehilite:
       linenums: false
+  - extra
+  - mdx_truly_sane_lists
   - pymdownx.superfences
 theme:
   name: material
@@ -27,53 +29,42 @@ extra:
     - type: linkedin
       link: https://linkedin.com/company/omu-baum
 nav:
+  - Uygulama İç Yapısı:
+    - Kullanıcılar: app/user.md
+    - Birimler: app/unit.md
+    - Patron: app/patron.md
   - Geliştirme:
-    - Ortam:
-      - Docker Compose: development/environment/docker-compose.md
-      - Vagrant: development/environment/vagrant.md
-    - Yardımcılar:
-      - JavaScript:
-        - dynamic_select: development/helpers/javascript/dynamic_select.md
-      - link_to_helper: development/helpers/link_to_helper.md
-    - Rake Görevleri:
-      - dump: development/tasks/dump.md
-      - fetch: development/tasks/fetch.md
-      - import: development/tasks/import.md
-      - nokul: development/tasks/nokul.md
-      - patron: development/tasks/patron.md
-      - pull_request: development/tasks/pull_request.md
-      - quality: development/tasks/quality.md
-      - security: development/tasks/security.md
-      - tenant: development/tasks/tenant.md
-    - Testler:
-      - Coverage: development/tests/coverage.md
-      - Birim Testler: development/tests/unit-test.md
-    - Yetkilendirme: development/authorization.md
-    - Birim Yapısı: development/navigate-units.md
-    - Kullanıcı Yapısı: development/navigate-users.md
+    - Rake Görevleri: development/tasks.md
+    - Testler: development/tests.md
+    - Seed İşlemleri: development/seeds.md
     - Sırlar: development/secrets.md
-    - Seed Verileri: development/seeds.md
-  - Operasyonel:
+    - Docker: development/docker.md
+    - Vagrant: development/vagrant.md
+  - Yardımcılar:
+    - Birim Testler: helpers/unit-test.md
+    - link_to_helper: helpers/link_to_helper.md
+    - dynamic_select: helpers/dynamic_select.md
+  - Operasyonlar:
     - Kurulum: operations/installation.md
     - Güncelleme: operations/upgrading.md
     - Konuşlandırma: operations/deployment.md
   - Eklentiler:
     - Support:
-      - codification: plugins/support/codification.md
-      - collection: plugins/support/collection.md
-      - core_ext: plugins/support/core_ext.md
-      - rest_client: plugins/support/rest_client.md
-      - sensitive: plugins/support/sensitive.md
-      - structure: plugins/support/structure.md
-      - uniq_collection: plugins/support/uniq_collection.md
+      - Codification: plugins/support/codification.md
+      - Collection: plugins/support/collection.md
+      - Rest Client: plugins/support/rest_client.md
+      - Sensitive: plugins/support/sensitive.md
+      - Structure: plugins/support/structure.md
+      - Uniq Collection: plugins/support/uniq_collection.md
+      - Çekirdek Eklentileri: plugins/support/core_ext.md
     - Tenant:
       - Ortak:
         - Geliştirme:
-          - Kodifikasyon: plugins/tenant/common/development/codification.md
-          - Tenant: plugins/tenant/common/development/tenant.md
-          - Birimler: plugins/tenant/common/development/units.md
+          - Nokul::Tenant::Codification: plugins/tenant/common/development/codification.md
+          - Nokul::Tenant: plugins/tenant/common/development/tenant.md
+          - Nokul::Tenant::Units: plugins/tenant/common/development/units.md
         - Spesifikasyonlar:
           - Kullanıcıların İsimlendirilmesi: plugins/tenant/common/specification/user-names.md
-          - Öğrenci Numaraları: plugins/tenant/common/specification/student-numbers.md
+          - Öğrencilerin Numaralandırılması: plugins/tenant/common/specification/student-numbers.md
           - Birim Kısaltmaları: plugins/tenant/common/specification/unit-abbreviations.md
-          - Birim Kodları: plugins/tenant/common/specification/unit-codes.md
+          - Birimlerin Kodlanması: plugins/tenant/common/specification/unit-codes.md

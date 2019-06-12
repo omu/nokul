@@ -29,7 +29,7 @@ başlayabilirsiniz.
 
 ### Geliştirme
 
-- [Rake Görevleri](development/docker.md)
+- [Rake Görevleri](development/tasks.md)
 - [Testler](development/tests.md)
 - [Seed İşlemleri](development/seeds.md)
 - [Sırlar](development/secrets.md)
@@ -38,28 +38,28 @@ başlayabilirsiniz.
 
 ### Yardımcılar
 
-- [Birim Testler](helpers/javascript/unit-test.md)
-- [dynamic_select](helpers/javascript/dynamic_select.md)
-- [link_to_action](helpers/javascript/link_to_action.md)
+- [Birim Testler](helpers/unit-test.md)
+- [link_to_helper](helpers/link_to_helper.md)
+- [dynamic_select](helpers/dynamic_select.md)
 
 ### Eklentiler
 
 - Support
-  - [codification](plugins/support/codification.md)
-  - [collection](plugins/support/collection.md)
-  - [core_ext](plugins/support/core_ext.md)
-  - [rest_client](plugins/support/rest_client.md)
-  - [sensitive](plugins/support/sensitive.md)
-  - [structure](plugins/support/structure.md)
-  - [uniq_collection](plugins/support/uniq_collection.md)
+  + [Codification](plugins/support/codification.md)
+  + [Collection](plugins/support/collection.md)
+  + [Rest Client](plugins/support/rest_client.md)
+  + [Sensitive](plugins/support/sensitive.md)
+  + [Structure](plugins/support/structure.md)
+  + [Uniq Collection](plugins/support/uniq_collection.md)
+  + [Çekirdek Eklentileri](plugins/support/core_ext.md)
 - Tenant
-  - Ortak
+  + Ortak
     - Geliştirme
-      - [Kodifikasyon](plugins/tenant/common/development/codification.md)
-      - [Tenant](plugins/tenant/common/development/tenant.md)
-      - [Birimler](plugins/tenant/common/development/units.md)
+      + [Nokul::Tenant::Codification](plugins/tenant/common/development/codification.md)
+      + [Nokul::Tenant](plugins/tenant/common/development/tenant.md)
+      + [Nokul::Tenant::Units](plugins/tenant/common/development/units.md)
     - Spesifikasyonlar
-      - [Öğrenci Numaraları](plugins/tenant/common/specification/student-numbers.md)
-      - [Birim Kısaltmaları](plugins/tenant/common/specification/unit-abbreviations.md)
-      - [Birim Kodları](plugins/tenant/common/specification/unit-codes.md)
-      - [Kullanıların İsimlendirilmesi](plugins/tenant/common/specification/user-names.md)
+      + [Öğrencilerin Numaralandırılması](plugins/tenant/common/specification/student-numbers.md)
+      + [Birimlerin Kodlanması](plugins/tenant/common/specification/unit-codes.md)
+      + [Birim Kısaltmaları](plugins/tenant/common/specification/unit-abbreviations.md)
+      + [Kullanıların İsimlendirilmesi](plugins/tenant/common/specification/user-names.md)
