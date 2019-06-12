@@ -120,4 +120,8 @@ class Unit < ApplicationRecord
     Employee.includes(:user, :title).joins(:units, user: :identities)
             .where(units: { id: subtree.active.ids })
   end
+
+  def effective_unit
+    Unit.find_by(yoksis_id: effective_yoksis_id) if effective_yoksis_id.present?
+  end
 end

@@ -19,6 +19,7 @@ Metrics/BlockLength:
 Metrics/ClassLength:
   Exclude:
     - test/**/*.rb
+    - app/models/unit.rb # TODO: Workaround until refactor
 AllCops:
   TargetRubyVersion: 2.6
   # Do not exclude files from ALL COPS unless it's really necessary!

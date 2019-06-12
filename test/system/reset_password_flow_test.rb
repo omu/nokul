@@ -12,7 +12,7 @@ class ResetPasswordFlowTest < ApplicationSystemTestCase
       assert find_link(t('account.passwords.new.login'), visible: true).visible?
       fill_in('user[email]', with: users(:serhat).email)
       click_button(t('account.passwords.new.reset_password'))
-      assert_equal t('devise.passwords.send_instructions'), page.find('div', class: 'toast-message').text
+      assert_equal t('devise.passwords.send_paranoid_instructions'), page.find('div', class: 'toast-message').text
     end
   end
 end
