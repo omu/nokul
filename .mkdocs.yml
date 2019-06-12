@@ -19,9 +19,8 @@ theme:
     primary: blue grey
     accent: indigo
 plugins:
-  - exclude:
-      glob:
-        - bin/git-import.md
+  - search:
+      lang: tr
 extra:
   social:
     - type: github
