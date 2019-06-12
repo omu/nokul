@@ -3,8 +3,8 @@ author(s):
   - M. Serhat Dundar (@msdundar)
 ---
 
-Unit Tests
-==========
+Unit Test
+=========
 
 - Unit Test yazarken ilgili modülleri testinize `extend` ederek aşağıda örneklenen test yardımcılarını
   kullanabilirsiniz.
