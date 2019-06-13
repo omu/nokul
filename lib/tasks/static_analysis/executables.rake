@@ -32,6 +32,6 @@ namespace :static_analysis do
     end
     warn ''
 
-    warn SuspiciousExecutable::FIXING_MESSAGE
+    abort SuspiciousExecutable::FIXING_MESSAGE
   end
 end
