@@ -22,7 +22,7 @@ namespace :static_analysis do
   task :executables do
     suspicious_executables = SuspiciousExecutable.find
 
-    next warn 'No suspicious files found. Yay!' if suspicious_executables.empty?
+    next warn 'Yey, no suspicious files found!' if suspicious_executables.empty?
 
     warn 'Files with the executable bit set found:'
 
