@@ -67,7 +67,7 @@ namespace :prerequisities do
     abort 'psql not found!' unless Environment.psql?
     abort 'psql version is wrong!' unless Environment.check_psql_version
   end
-  
+
   desc 'Run all the prerequisite checks'
   task all: %w[rails_master_key tenant_master_key fit-commit node psql]
 end
