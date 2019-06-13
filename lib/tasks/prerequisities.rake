@@ -10,7 +10,7 @@ module Environment
   module_function
 
   def rails_master_key?
-    MASTER_KEY_PATH.exist? || ENV['RAILS_MASTER_KEYS']
+    MASTER_KEY_PATH.exist? || ENV['RAILS_MASTER_KEY']
   end
 
   def tenant_master_key?
