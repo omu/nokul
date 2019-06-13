@@ -29,12 +29,12 @@ module Environment
     !!find_executable('psql')
   end
 
-  def check_node_version
+  def node_version_ok?
     version = `node -v`.chomp.tr 'v', ''
     Gem::Version.new(MIN_NODE_VERSION) < Gem::Version.new(version)
   end
 
-  def check_psql_version
+  def psql_version_ok?
     version = `psql --version`.chomp[/[\d]+.[\d]+/]
     Gem::Version.new(MIN_PSQL_VERSION) < Gem::Version.new(version)
   end
@@ -59,13 +59,13 @@ namespace :prerequisities do
   desc 'Check NodeJS on the system'
   task :node do
     abort 'node not found!' unless Environment.node?
-    abort 'node version is wrong!' unless Environment.check_node_version
+    abort 'node version is wrong!' unless Environment.node_version_ok?
   end
   
   desc 'Check PostgreSQL on the system'
   task :psql do
     abort 'psql not found!' unless Environment.psql?
-    abort 'psql version is wrong!' unless Environment.check_psql_version
+    abort 'psql version is wrong!' unless Environment.psql_version_ok?
   end
 
   desc 'Run all the prerequisite checks'
