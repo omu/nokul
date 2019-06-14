@@ -27,12 +27,12 @@ jobs:
       # first job at this stage
       name: "Quality Tests"
       before_script: skip
-      script: docker-compose run test bundle exec rake quality:all
+      script: docker-compose run test bundle exec rake static_analysis:all
 
       # second job at this stage
     - name: "Security and Database Tests"
       before_script: skip
-      script: docker-compose run test bundle exec rake security:all database:all
+      script: docker-compose run test bundle exec rake db:all
 
       # third job at this stage
     - name: "Integration Tests"
