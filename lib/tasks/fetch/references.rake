@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 namespace :fetch do
-  # You can also call a specific task with its name (ie: reference['unit_types']).
-  # If you're using a Shell other than Bash (e.g.: ZSH), you must escape braces.
   desc 'Fetch all references'
   task :references do
     progress_bar = ProgressBar.spawn 'YOKSIS - Referanslar', 15
@@ -33,6 +31,8 @@ namespace :fetch do
     end
   end
   
+  # You can also call a specific task with its name (ie: reference['unit_types']).
+  # If you're using a Shell other than Bash (e.g.: ZSH), you must escape braces.
   desc 'Fetch only one reference'
   task :reference, %i[action klass] => [:environment] do |_, args|
     response = Xokul::Yoksis::References.send(args[:action])
