@@ -13,6 +13,8 @@ module Account
     def create
       @activation = Activation::ActivationService.new(params[:activation])
       @activation.active
+      session[:user_id] = @activation.user&.id
+
       respond_to :js
     end
 
@@ -22,7 +24,7 @@ module Account
       response = Twilio::Verify.check_verification_code(verify[:mobile_phone], verify[:verification_code])
 
       if response == 'ok'
-        return redirect_to login_path, notice: t('.success') if update_process(params[:identifier],
+        return redirect_to login_path, notice: t('.success') if update_process(session[:user_id],
                                                                                verify[:mobile_phone])
 
         redirect_to activation_path, alert: t('account.activations.system_error')
@@ -35,14 +37,14 @@ module Account
 
     private
 
-    def update_process(identifier, phone)
-      user = Activation::ActivationService.find_user(identifier)
+    def update_process(user_id, phone)
+      user = User.find(user_id)
       user.transaction do
         user.prospective_students.registered.update(archived: true)
         user.prospective_employees.update(archived: true)
         user.update!(mobile_phone: phone, activated: true, activated_at: Time.zone.now)
       end
-    rescue StandardError => e
+    rescue ActiveRecord::RecordNotFound, ActiveRecord::RecordInvalid => e
       Rollbar.error(e, e.message)
       false
     end

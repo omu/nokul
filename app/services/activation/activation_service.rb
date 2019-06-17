@@ -12,7 +12,8 @@ module Activation
                   :last_name,
                   :mobile_phone,
                   :serial,
-                  :serial_no
+                  :serial_no,
+                  :user
 
     validates :country, presence: true
     validates :date_of_birth, presence: true
@@ -69,32 +70,19 @@ module Activation
 
     def active
       return unless valid?
+
+      set_user
     rescue StandardError => e
       Rollbar.error(e, e.message)
       errors.add(:base, I18n.t('.account.activations.system_error'))
       false
     end
 
-    def self.find_user(encrypted_user_id)
-      user_id = EncryptorService.decrypt(
-        encrypted_user_id, salt: Tenant.credentials.activation_crypt_key
-      )
-      User.find(user_id)
-    rescue ActiveSupport::MessageEncryptor::InvalidMessage
-      nil
-    end
-
-    def user
-      @user ||= User.find_by(id_number: id_number)
-    end
-
-    def identifier
-      EncryptorService.encrypt(
-        user&.id.to_s, salt: Tenant.credentials.activation_crypt_key
-      )
-    end
-
     private
+
+    def set_user
+      @user = User.find_by(id_number: id_number)
+    end
 
     def must_not_be_activated
       return if errors.any?
