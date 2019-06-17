@@ -1,7 +1,7 @@
 - remote: https://github.com/omu/omu
   files:
     - source: .github
-      target: .github
+      target: .
     - source: etc/rubocop/rubocop.yml
       target: .rubocop_common.yml
     - source: etc/markdownlint/markdownlint.yml
