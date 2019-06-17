@@ -13,8 +13,9 @@
 [//]: # (PR ile geliştirilen çözümün eksiklikleri varsa "Teknik borç" türünde iş kayıtları oluşturulmalı)
 [//]: # (İş kaydını ön izlemeye al ve aşağıda görüntülenen bağlantıyı yeni sekmede aç)
 [//]: # (Bu şekilde oluşturulan kayıtları `References` anahtar kelimesiyle listele)
+[//]: # (DİKKAT! TEKNİK BORÇ YOKSA AŞAĞIDAKİ SATIRI N/A İLE DEĞİŞTİRİN VEYA SİLİN!)
 
-[Teknik borç](new?labels=debt&template=debt.md)
+[Teknik borç](../issues/new?labels=debt&template=debt.md)
 
 #### Veritabanına etkileri
 
