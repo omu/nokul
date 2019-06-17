@@ -1,0 +1,12 @@
+tr:
+  twilio:
+    errors:
+      60003: Kısa süre içerisinde çok fazla SMS gönderme işlemi yapıldığı için bir süreliğine hesap askıya alındı.
+      60021: Telefon doğrulaması yapılırken bir hata ile karşılaşıldı.
+      60022: Telefon doğrulama kodu hatalı
+      60023: Telefon doğrulama verilen parametrelerle yapılamadı.
+      60033: Telefon numarası veya ülke kodu geçersiz.
+      60042: Telefon doğrulamasında geçersiz parametreler kullanılmıştır.
+      60060: SMS gönderme servisiyle ilgili bir sorun yaşanıyor.
+      60082: Sabit telefon numaralarına SMS gönderilemiyor.
+      60083: Telefon numarasına herhangi bir operatör verilmemiş.

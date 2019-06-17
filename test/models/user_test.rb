@@ -19,6 +19,8 @@ class UserTest < ActiveSupport::TestCase
   has_many :duties, through: :employees
   has_many :units, through: :employees
   has_many :positions, through: :duties
+  has_many :prospective_employees
+  has_many :prospective_students
   has_many :administrative_functions, through: :duties
   # relations with patron
   has_many :scope_assignments, class_name: 'Patron::ScopeAssignment', dependent: :destroy
@@ -41,7 +43,7 @@ class UserTest < ActiveSupport::TestCase
   validates_length_of :extension_number, maximum: 8
   validates_length_of :id_number, is: 11
   validates_length_of :linkedin, maximum: 50
-  validates_length_of :phone_number
+  validates_length_of :fixed_phone
   validates_length_of :skype, maximum: 50
   validates_length_of :twitter, maximum: 50
   validates_length_of :website, maximum: 50

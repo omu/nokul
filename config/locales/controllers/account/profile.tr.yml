@@ -6,7 +6,7 @@ tr:
         extension_number: Dahili Numaranız
         linkedin: Linkedin Kullanıcı Adı
         orcid: ORCID
-        phone_number: Sabit Telefon Numaranız
+        fixed_phone: Sabit Telefon Numaranız
         profile_settings: Profil Ayarları
         public_photo: Profilimde Fotoğrafımı Göster
         public_studies: Profilimde Akademik Çalışmalarımı Göster

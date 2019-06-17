@@ -5,7 +5,6 @@ tr:
         country: Ülke
         district: İlçe
         full_address: Açık Adres
-        phone_number: Cep Telefonu Numarası
         type: Adres Türü
     enums:
       address:

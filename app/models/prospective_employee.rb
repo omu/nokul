@@ -18,6 +18,7 @@ class ProspectiveEmployee < ApplicationRecord
 
   # relations
   belongs_to :unit
+  belongs_to :user, optional: true, primary_key: :id_number, foreign_key: :id_number, inverse_of: :prospective_employees
   belongs_to :title
 
   # validations

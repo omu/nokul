@@ -64,7 +64,7 @@ module Twilio
           locale:       locale
         )
 
-        'ok' if response.ok?
+        response.ok? ? 'ok' : response
       end
 
       def check_verification_code(phone_number, verification_code)
@@ -74,7 +74,7 @@ module Twilio
           phone_number:      parse_phone_number(phone_number)[:normalized_number]
         )
 
-        'ok' if response.ok?
+        response.ok? ? 'ok' : response
       end
 
       def parse_phone_number(phone_number)

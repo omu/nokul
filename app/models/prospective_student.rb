@@ -31,6 +31,7 @@ class ProspectiveStudent < ApplicationRecord
   belongs_to :student_entrance_type
   belongs_to :student_disability_type, optional: true
   belongs_to :unit
+  belongs_to :user, optional: true, primary_key: :id_number, foreign_key: :id_number, inverse_of: :prospective_students
 
   # validations
   validates :additional_score, allow_nil: true, inclusion: { in: additional_scores.keys }

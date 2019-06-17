@@ -15,7 +15,7 @@ class ProfileSettingFlowTest < ApplicationSystemTestCase
       visit(profile_path)
       attach_file('user[avatar]', File.absolute_path('test/fixtures/files/valid_jpg_picture.jpg'))
       {
-        phone_number:     '362 312 1919',
+        fixed_phone:      '362 312 1919',
         extension_number: '1234',
         website:          'http://example.com',
         twitter:          'twitter',
