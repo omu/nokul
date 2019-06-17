@@ -28,30 +28,30 @@ module Patron
 
         def generate_field_for_value(filter, option)
           Field.new(
-            name: "#{filter}_value",
-            as: option.field_type,
+            name:       "#{filter}_value",
+            as:         option.field_type,
             collection: option.collection,
-            multiple: option.multiple,
-            label: Utils::I18n.translate_suffix('value')
+            multiple:   option.multiple,
+            label:      Utils::I18n.translate_suffix('value')
           )
         end
 
         def generate_field_for_query_type(filter, option)
           Field.new(
-            name: "#{filter}_query_type",
-            as: :select,
+            name:       "#{filter}_query_type",
+            as:         :select,
             collection: Utils::I18n.translate_collection_for_query_types(arel_predicates_for(option.type)),
-            required: false,
-            label: Utils::I18n.translate_suffix('query_type')
+            required:   false,
+            label:      Utils::I18n.translate_suffix('query_type')
           )
         end
 
         def generate_field_for_skip_empty(filter)
           Field.new(
-            name: "#{filter}_skip_empty",
+            name:       "#{filter}_skip_empty",
             collection: Utils::I18n.translate_collection_for_boolean(%w[true false]),
-            as: :select,
-            label: Utils::I18n.translate_suffix('skip_empty')
+            as:         :select,
+            label:      Utils::I18n.translate_suffix('skip_empty')
           )
         end
 

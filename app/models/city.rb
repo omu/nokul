@@ -6,7 +6,7 @@ class City < ApplicationRecord
   pg_search_scope(
     :search,
     against: %i[name alpha_2_code],
-    using: { tsearch: { prefix: true } }
+    using:   { tsearch: { prefix: true } }
   )
 
   # callbacks

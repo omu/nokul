@@ -44,13 +44,13 @@ module Patron
 
     test 'should create query store' do
       parameters = {
-        name: 'Query Store Create',
-        scope_name: 'DummyModelScope',
-        type: 'include',
-        name_value: 'name created',
+        name:            'Query Store Create',
+        scope_name:      'DummyModelScope',
+        type:            'include',
+        name_value:      'name created',
         name_query_type: 'equal',
         name_skip_empty: 'false',
-        desc_value: 'desc created',
+        desc_value:      'desc created',
         desc_query_type: 'equal',
         desc_skip_empty: 'true'
       }
@@ -79,12 +79,12 @@ module Patron
 
     test 'should update query store' do
       parameters = {
-        name: 'Query Store Update',
-        type: 'include',
-        name_value: 'name updated',
+        name:            'Query Store Update',
+        type:            'include',
+        name_value:      'name updated',
         name_query_type: 'equal',
         name_skip_empty: 'false',
-        desc_value: 'desc updated',
+        desc_value:      'desc updated',
         desc_query_type: 'equal',
         desc_skip_empty: 'true'
       }

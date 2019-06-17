@@ -82,16 +82,16 @@ class DepartmentCourse
   def find_or_create_curriculum_course_group
     CurriculumCourseGroup.find_or_create_by(
       curriculum_semester_id: curriculum_semester.id,
-      course_group_id: course_group.id,
-      ects: course_group.total_ects_condition
+      course_group_id:        course_group.id,
+      ects:                   course_group.total_ects_condition
     )
   end
 
   def create_curriculum_course
     curriculum_course = CurriculumCourse.new(
       curriculum_semester_id: curriculum_semester.id,
-      course_id: course.id,
-      ects: ects
+      course_id:              course.id,
+      ects:                   ects
     )
     curriculum_course.curriculum_course_group = find_or_create_curriculum_course_group if elective?
     curriculum_course.save
@@ -115,20 +115,20 @@ class DepartmentCourses < Support::Collection
     elective_courses.each do |key, department_courses|
       courses = department_courses.map(&:course)
       CourseGroup.create(
-        name: key,
+        name:                 key,
         total_ects_condition: department_courses.sum { |c| c.ects.to_i },
-        unit_id: unit.id,
+        unit_id:              unit.id,
         course_group_type_id: CourseGroupType.find_by(name: 'Seçmeli Ders').id,
-        course_ids: courses.map(&:id)
+        course_ids:           courses.map(&:id)
       )
     end
   end
 
   def create_curriculum(number_of_semesters, semester_type)
     curriculum = Curriculum.new(
-      name: "#{unit.name} Müfredatı",
-      status: 'active',
-      unit_id: unit.id,
+      name:        "#{unit.name} Müfredatı",
+      status:      'active',
+      unit_id:     unit.id,
       program_ids: programs.pluck(:id)
     )
     curriculum.build_semesters(number_of_semesters: number_of_semesters, type: semester_type)

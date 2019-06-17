@@ -18,9 +18,9 @@ module PgExec
   def args
     config = ActiveRecord::Base.configurations[Rails.env]
     {
-      host: config['host'],
-      dbname: config['database'],
-      user: config['username'],
+      host:     config['host'],
+      dbname:   config['database'],
+      user:     config['username'],
       password: config['password']
     }
   end
@@ -62,3 +62,9 @@ else
     end
   end
 end
+
+# authorization data
+Rake::Task['patron:all'].invoke
+
+user = User.find_by(id_number: '11111111111')
+user.roles << Patron::Role.all if user

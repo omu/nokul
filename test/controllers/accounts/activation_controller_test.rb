@@ -23,14 +23,14 @@ module Accounts
     test 'should create activation' do
       post activation_path, params: {
         activation: {
-          id_number: @prospective.id_number,
-          first_name: @prospective.first_name,
-          last_name: @prospective.last_name,
+          id_number:     @prospective.id_number,
+          first_name:    @prospective.first_name,
+          last_name:     @prospective.last_name,
           date_of_birth: '1984-11-16',
-          serial: 'J10',
-          serial_no: '94646',
-          mobile_phone: '5551111111',
-          country: 'TR'
+          serial:        'J10',
+          serial_no:     '94646',
+          mobile_phone:  '5551111111',
+          country:       'TR'
         }, format: :js
       }
     end
@@ -38,14 +38,14 @@ module Accounts
     test 'should check phone verification' do
       post phone_verification_path, params: {
         phone_verification: {
-          prospective_students: @prospective.id,
+          prospective_students:  @prospective.id,
           prospective_employees: '',
-          user: users(:mine).id,
-          mobile_phone: '+905551111111'
+          user:                  users(:mine).id,
+          mobile_phone:          '+905551111111'
         }
       }
 
-      assert_redirected_to activation_path({})
+      assert_redirected_to activation_path(locale: I18n.locale)
       assert_not_empty flash[:alert]
     end
   end

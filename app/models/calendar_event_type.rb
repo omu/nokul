@@ -6,19 +6,19 @@ class CalendarEventType < ApplicationRecord
   pg_search_scope(
     :search,
     against: %i[name identifier],
-    using: { tsearch: { prefix: true } }
+    using:   { tsearch: { prefix: true } }
   )
 
   # enums
   enum category: {
-    applications: 1,
-    payments: 2,
+    applications:  1,
+    payments:      2,
     registrations: 3,
-    advisor: 4,
-    exams: 5,
-    courses: 6,
-    submission: 7,
-    announcement: 8
+    advisor:       4,
+    exams:         5,
+    courses:       6,
+    submission:    7,
+    announcement:  8
   }
 
   # relations

@@ -14,9 +14,9 @@ class CommitteeDecision < ApplicationRecord
   validates :description, presence: true, length: { maximum: 65_535 }
   validates :decision_no, presence: true, uniqueness: true, length: { maximum: 255 }
   validates :year, numericality: {
-    only_inter: true,
+    only_inter:               true,
     greater_than_or_equal_to: 1950,
-    less_than_or_equal_to: 2050
+    less_than_or_equal_to:    2050
   }
 
   # delegates

@@ -32,6 +32,10 @@
               <td><%= @unit.detsis_id %></td>
             </tr>
             <tr>
+              <td><%= t('.effective_yoksis_id') %></td>
+              <td><%= link_to(@unit.effective_unit.try(:names_depth_cache), @unit.effective_unit) if @unit.effective_unit %></td>
+            </tr>
+            <tr>
               <td><%= t('.foet_code') %></td>
               <td><%= @unit.foet_code %></td>
             </tr>

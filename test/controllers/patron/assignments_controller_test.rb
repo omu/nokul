@@ -30,7 +30,7 @@ module Patron
 
     test 'should update role' do
       parameters = {
-        role_ids: [patron_roles(:admin).id],
+        role_ids:        [patron_roles(:admin).id],
         query_store_ids: [patron_query_stores(:unit_scope_egitim).id]
       }
       patch patron_assignment_path(@user), params: { user: parameters }

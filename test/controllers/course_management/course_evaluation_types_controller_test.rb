@@ -19,13 +19,13 @@ module CourseManagement
     test 'should create course evaluation type' do
       available_course = available_courses(:test_fall_2018_2019)
       parameters = {
-        available_course_id: available_course.id,
-        evaluation_type_id: @evaluation_type.id,
-        percentage: 60,
+        available_course_id:                  available_course.id,
+        evaluation_type_id:                   @evaluation_type.id,
+        percentage:                           60,
         course_assessment_methods_attributes: {
           '0' => {
             assessment_method_id: assessment_methods(:exam).id,
-            percentage: 100
+            percentage:           100
           }
         }
       }
@@ -55,11 +55,11 @@ module CourseManagement
       patch available_course_evaluation_type_path(available_course, course_evaluation_type),
             params: {
               course_evaluation_type: {
-                percentage: 60,
+                percentage:                           60,
                 course_assessment_methods_attributes: {
                   '0' => {
                     assessment_method_id: assessment_methods(:exam).id,
-                    percentage: 100
+                    percentage:           100
                   }
                 }
               }

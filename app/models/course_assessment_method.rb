@@ -7,9 +7,9 @@ class CourseAssessmentMethod < ApplicationRecord
 
   # validations
   validates :percentage, numericality: {
-    only_integer: true,
+    only_integer:             true,
     greater_than_or_equal_to: 0,
-    less_than_or_equal_to: 100
+    less_than_or_equal_to:    100
   }
   validates :assessment_method, uniqueness: { scope: :course_evaluation_type }
 

@@ -15,7 +15,7 @@ class ProspectiveStudentDecoratorTest < ActiveSupport::TestCase
 
   test 'registration_documents method' do
     registration_documents = RegistrationDocument.where(
-      unit_id: @prospective_student.unit_id,
+      unit_id:       @prospective_student.unit_id,
       academic_term: @prospective_student.academic_term
     )
     assert_equal @prospective_student.registration_documents, registration_documents

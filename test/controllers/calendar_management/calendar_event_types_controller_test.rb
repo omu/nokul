@@ -32,8 +32,8 @@ module CalendarManagement
       assert_difference('CalendarEventType.count') do
         post calendar_event_types_path, params: {
           calendar_event_type: {
-            name: 'Sample Event Type',
-            category: 'exams',
+            name:       'Sample Event Type',
+            category:   'exams',
             identifier: 'sample_event_type_exams'
           }
         }

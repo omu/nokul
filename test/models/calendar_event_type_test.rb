@@ -25,13 +25,13 @@ class CalendarEventTypeTest < ActiveSupport::TestCase
 
   # enums
   enum category: {
-    applications: 1,
-    payments: 2,
+    applications:  1,
+    payments:      2,
     registrations: 3,
-    advisor: 4,
-    exams: 5,
-    courses: 6,
-    submission: 7,
-    announcement: 8
+    advisor:       4,
+    exams:         5,
+    courses:       6,
+    submission:    7,
+    announcement:  8
   }
 end

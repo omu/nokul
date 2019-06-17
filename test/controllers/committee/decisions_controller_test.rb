@@ -27,7 +27,7 @@ module Committee
         post committee_meeting_agenda_decisions_path(@committee, meeting_agenda),
              params: {
                committee_decision: {
-                 description: 'Karar test',
+                 description:     'Karar test',
                  meeeting_agenda: meeting_agendas(:four)
                }
              }
