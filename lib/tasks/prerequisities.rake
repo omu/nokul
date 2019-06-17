@@ -30,7 +30,7 @@ module Environment
   end
 
   def node_version_ok?
-    version = `node -v`.chomp.tr 'v', ''
+    version = `node -v`.chomp.delete_prefix 'v'
     Gem::Version.new(MIN_NODE_VERSION) < Gem::Version.new(version)
   end
 
