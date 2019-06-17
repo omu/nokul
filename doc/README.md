@@ -10,7 +10,7 @@ Nokul Dokümantasyonu
 Burada Nokul'a ait dokümanlar yer almaktadır. Bu dokümanları kullanarak Nokul'u kullanmaya veya ona katkı vermeye
 başlayabilirsiniz.
 
-*Dokümanlara [docs.omu.sh/nokul](docs.omu.sh/nokul) üzerinden de ulaşabilirsiniz.*
+*Dokümanlara [https://doc.omu.sh/nokul](https://doc.omu.sh/nokul) üzerinden de ulaşabilirsiniz.*
 
 İçerik
 ------
