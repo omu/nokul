@@ -19,6 +19,8 @@ class UserTest < ActiveSupport::TestCase
   has_many :duties, through: :employees
   has_many :units, through: :employees
   has_many :positions, through: :duties
+  has_many :prospective_employees
+  has_many :prospective_students
   has_many :administrative_functions, through: :duties
   # relations with patron
   has_many :scope_assignments, class_name: 'Patron::ScopeAssignment', dependent: :destroy
