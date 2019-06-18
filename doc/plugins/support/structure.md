@@ -55,7 +55,6 @@ Nesne için `initialize` metodu yazmanız gerekmiyor, yazma olanağınız da yok
 Ama nesne inşa edilirken `initialize` sürecinde yapmayı istediğiniz bir işlem
 varsa argüman almayan `after_initialize` metodunu kullanabilirsiniz.
 
-
 ```ruby
 class Unit
   class_attribute :units, default: []
