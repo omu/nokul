@@ -19,9 +19,9 @@ namespace :db do
         --column-inserts \
         nokul_development > tmp/sample_data.sql
       '
-  
+
       Support::Sensitive.read_write 'tmp/sample_data.sql'
-  
+
       sh 'gzip -c tmp/sample_data.sql.enc > db/encrypted_data/sample_data.sql.enc.gz'
       sh 'rm tmp/sample_data.*'
     end

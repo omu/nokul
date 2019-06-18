@@ -3,7 +3,7 @@
 require 'mkmf'
 
 module Environment
-  MASTER_KEY_PATH  = Pathname.new(Rails.root.join 'config', 'master.key')
+  MASTER_KEY_PATH  = Pathname.new(Rails.root.join('config', 'master.key'))
   MIN_NODE_VERSION = '10'
   MIN_PSQL_VERSION = '11'
 
@@ -18,15 +18,15 @@ module Environment
   end
 
   def fit_commit?
-    !!find_executable('fit-commit')
+    !find_executable('fit-commit').nil?
   end
 
   def node?
-    !!find_executable('node')
+    !find_executable('node').nil?
   end
 
   def psql?
-    !!find_executable('psql')
+    !find_executable('psql').nil?
   end
 
   def node_version_ok?
@@ -55,13 +55,13 @@ namespace :prerequisities do
   task 'fit-commit' do
     abort 'fit-commit not found!' unless Environment.fit_commit?
   end
-  
+
   desc 'Check NodeJS on the system'
   task :node do
     abort 'node not found!' unless Environment.node?
     abort 'node version is wrong!' unless Environment.node_version_ok?
   end
-  
+
   desc 'Check PostgreSQL on the system'
   task :psql do
     abort 'psql not found!' unless Environment.psql?

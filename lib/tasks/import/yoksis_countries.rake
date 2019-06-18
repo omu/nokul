@@ -10,7 +10,7 @@ namespace :import do
     countries.each do |country|
       found = Country.find_by(name: country['name'])
       found&.update(yoksis_code: country['yoksis_code'])
-      
+
       progress_bar&.increment
     end
   end
