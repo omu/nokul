@@ -10,7 +10,7 @@ namespace :import do
     districts.each do |district|
       city = City.find_by(alpha_2_code: district['alpha_2_code'])
       city.districts.create(district.except('alpha_2_code'))
-      
+
       progress_bar&.increment
     end
   end

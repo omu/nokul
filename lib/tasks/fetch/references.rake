@@ -26,16 +26,16 @@ namespace :fetch do
 
       # https://stackoverflow.com/questions/4822020/why-does-a-rake-task-in-a-loop-execute-only-once
       Rake::Task['fetch:reference'].reenable
-      
+
       progress_bar&.increment
     end
   end
-  
+
   # You can also call a specific task with its name (ie: reference['unit_types']).
   # If you're using a Shell other than Bash (e.g.: ZSH), you must escape braces.
   desc 'Fetch only one reference'
   task :reference, %i[action klass] => [:environment] do |_, args|
     response = Xokul::Yoksis::References.send(args[:action])
-    response.each { |reference| klass.create(reference) } if response
+    response&.each { |reference| klass.create(reference) }
   end
 end
