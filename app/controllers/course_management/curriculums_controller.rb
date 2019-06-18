@@ -31,7 +31,7 @@ module CourseManagement
       @curriculum = Curriculum.new(curriculum_params)
       @curriculum.build_semesters(
         number_of_semesters: params.dig(:curriculum, :number_of_semesters),
-        type: params.dig(:curriculum, :type)
+        type:                params.dig(:curriculum, :type)
       )
       @curriculum.save ? redirect_with('success') : render(:new)
     end
@@ -62,7 +62,7 @@ module CourseManagement
 
     def curriculum_params
       params.require(:curriculum).permit(
-        :name, :unit_id, :status, program_ids: [],
+        :name, :unit_id, :status, program_ids:          [],
                                   semesters_attributes: %i[id sequence year _destroy]
       )
     end

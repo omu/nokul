@@ -14,7 +14,7 @@ class PunditTestCase < ActiveSupport::TestCase
   # )
   def assert_permit(user, **options)
     options = {
-      assert_method: :assert,
+      assert_method:  :assert,
       assert_message: <<~MSG
         Expected %{policy_class} to grant %{permission}
         on %{record} for user but it didn't
@@ -31,7 +31,7 @@ class PunditTestCase < ActiveSupport::TestCase
   # )
   def assert_not_permit(user, **options)
     options = {
-      assert_method: :assert_not,
+      assert_method:  :assert_not,
       assert_message: <<~MSG
         Expected %{policy_class} not to grant %{permission}
         on %{record} for user but it did
@@ -54,8 +54,8 @@ class PunditTestCase < ActiveSupport::TestCase
         policy.public_send(permission),
         format(
           options[:assert_message],
-          permission: permission,
-          record: options[:record],
+          permission:   permission,
+          record:       options[:record],
           policy_class: policy.class.name
         )
       )

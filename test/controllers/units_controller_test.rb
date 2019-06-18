@@ -28,16 +28,16 @@ class UnitsControllerTest < ActionDispatch::IntegrationTest
     assert_difference('Unit.count') do
       post units_path params: {
         unit: {
-          name: 'Test Unit',
-          yoksis_id: 200_000,
-          founded_at: '1.1.2018',
-          duration: 1,
-          unit_type_id: unit_types(:faculty).id,
-          district_id: districts(:atakum).id,
-          unit_status_id: unit_statuses(:active).id,
+          name:                         'Test Unit',
+          yoksis_id:                    200_000,
+          founded_at:                   '1.1.2018',
+          duration:                     1,
+          unit_type_id:                 unit_types(:faculty).id,
+          district_id:                  districts(:atakum).id,
+          unit_status_id:               unit_statuses(:active).id,
           unit_instruction_language_id: unit_instruction_languages(:turkish).id,
-          unit_instruction_type_id: unit_instruction_types(:normal_education).id,
-          parent_id: units(:omu).id
+          unit_instruction_type_id:     unit_instruction_types(:normal_education).id,
+          parent_id:                    units(:omu).id
         }
       }
     end
@@ -62,16 +62,16 @@ class UnitsControllerTest < ActionDispatch::IntegrationTest
     unit = Unit.last
     patch unit_path(unit), params: {
       unit: {
-        name: 'Test Unit Update',
-        yoksis_id: 300_000,
-        founded_at: '1.1.2018',
-        duration: 2,
-        unit_type_id: unit_types(:research_center).id,
-        district_id: districts(:atakum).id,
-        unit_status_id: unit_statuses(:active).id,
+        name:                         'Test Unit Update',
+        yoksis_id:                    300_000,
+        founded_at:                   '1.1.2018',
+        duration:                     2,
+        unit_type_id:                 unit_types(:research_center).id,
+        district_id:                  districts(:atakum).id,
+        unit_status_id:               unit_statuses(:active).id,
         unit_instruction_language_id: unit_instruction_languages(:turkish).id,
-        unit_instruction_type_id: unit_instruction_types(:normal_education).id,
-        parent_id: units(:cbu).id
+        unit_instruction_type_id:     unit_instruction_types(:normal_education).id,
+        parent_id:                    units(:cbu).id
       }
     }
 

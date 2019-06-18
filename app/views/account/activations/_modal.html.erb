@@ -1,0 +1,21 @@
+<div class='modal-dialog modal-dialog-centered'>
+  <div class='modal-content'>
+    <div class='modal-header'>
+      <h5 class='modal-title'><%= t('.verify_your_phone') %></h5>
+    </div>
+    <div class='modal-body'>
+      <%= simple_form_for(:phone_verification, url: { action: :phone_verification, controller: 'account/activations' }) do |f| %>
+        <div class='form-group row'>
+          <%= f.hidden_field :mobile_phone, value: @activation.mobile_phone %>
+          <label class='col-sm-4 col-form-label text-right'><%= t('.verification_code') %></label>
+          <div class='col-sm-5'>
+            <%= f.input :verification_code, label: false %>
+          </div>
+          <div class='col-sm-2'>
+            <%= submit_tag t('.verify'), class: 'btn btn-primary' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

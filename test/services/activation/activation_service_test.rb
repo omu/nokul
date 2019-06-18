@@ -9,14 +9,14 @@ module Activation
 
       @activation =
         Activation::ActivationService.new(
-          id_number: prospective.id_number,
-          first_name: prospective.first_name,
-          last_name: prospective.last_name,
+          id_number:     prospective.id_number,
+          first_name:    prospective.first_name,
+          last_name:     prospective.last_name,
           date_of_birth: '1984-11-16',
-          serial: 'J10',
-          serial_no: '94646',
-          mobile_phone: '5551111111',
-          country: 'TR'
+          serial:        'J10',
+          serial_no:     '94646',
+          mobile_phone:  '5551111111',
+          country:       'TR'
         )
     end
 
@@ -58,6 +58,10 @@ module Activation
       assert @activation.prospective?
     end
 
+    test 'student must be verified identity' do
+      assert @activation.verified_identity?
+    end
+
     {
       '70336212330' => 'record_not_found',
       '10570898198' => 'already_activated'
@@ -69,12 +73,6 @@ module Activation
         assert_not_empty fake.errors[:base]
         assert_equal I18n.t('.account.activations.' + error_key), fake.errors[:base].first
       end
-    end
-
-    test 'activation is must be active' do
-      assert @activation.active
-      assert @activation.prospective.map(&:archived).all?
-      assert @activation.user.activated?
     end
   end
 end

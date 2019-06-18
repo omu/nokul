@@ -3,26 +3,15 @@
     <div class='card-body p-4'>
       <h1 class='text-center'><%= t('.activation') %></h1>
       <p class='text-muted text-center'><%= t('.account_activation') %></p>
-      <%= simple_form_for(:activation, url: activation_path) do |f| %>
+      <%= simple_form_for(:activation, url: activation_path, remote: true, authenticity_token: true) do |f| %>
         <%= f.error_notification %>
-        <% if @activation.errors.any? %>
-          <ul class='list-group list-group-accent'>
-            <% @activation.errors.full_messages.each do |message| %>
-              <li class='list-group-item list-group-item-accent-danger list-group-item-danger'>
-                <%= message %>
-              </li>
-            <% end %>
-          </ul>
-        <% end %>
+        <ul id='error_messages' class='list-group list-group-accent'></ul>
         <fieldset class='border p-3'>
           <legend class='w-auto'><%= t('.identity_verification') %></legend>
           <div class='form-group row'>
             <label class='col-sm-3 col-form-label text-right'><%= t('.id_number') %></label>
             <div class='col-sm-9'>
-              <%= f.input :id_number, required: true, label: false, autofocus: true, wrapper: false, input_html: { class: @activation.errors[:id_number].any? ? 'is-invalid' : '' } %>
-              <div class="invalid-feedback">
-                <%= @activation.errors[:id_number].first %>
-              </div>
+              <%= f.input :id_number, required: true, label: false, autofocus: true, wrapper: false %>
             </div>
           </div>
           <div class='form-group row'>
@@ -58,10 +47,7 @@
           <div class='form-group row'>
             <label for='activation_document_no' class='col-sm-3 col-form-label text-right'><%= t('.document_no') %></label>
             <div class='col-sm-9'>
-              <%= f.input :document_no, required: false, label: false, wrapper: false, input_html: { class: @activation.errors[:document_no].any? ? 'is-invalid' : '' } %>
-              <div class="invalid-feedback">
-                <%= @activation.errors[:document_no].first %>
-              </div>
+              <%= f.input :document_no, required: false, label: false, wrapper: false %>
             </div>
           </div>
         </fieldset>
@@ -70,10 +56,7 @@
           <div class='form-group row'>
             <label class='col-sm-3 col-form-label text-right'><%= t('.mobile_phone') %></label>
             <div class='col-sm-9'>
-              <%= f.input :mobile_phone, label: false, wrapper: false, input_html: { class: @activation.errors[:mobile_phone].any? ? 'is-invalid' : '' } %>
-              <div class="invalid-feedback">
-                <%= @activation.errors[:mobile_phone].first %>
-              </div>
+              <%= f.input :mobile_phone, label: false, wrapper: false %>
               <small class='text-muted'><%= number_to_phone(1_235_551_234, area_code: true) %></small>
             </div>
           </div>
@@ -105,4 +88,5 @@
   </div>
 </div>
 
+<div id='verification_modal' class='modal fade' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true' data-backdrop='static' data-keyboard='false'></div>
 <%= render 'js' %>

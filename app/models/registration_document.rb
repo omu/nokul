@@ -6,10 +6,10 @@ class RegistrationDocument < ApplicationRecord
   pg_search_scope(
     :search,
     associated_against: {
-      unit: :name,
+      unit:          :name,
       document_type: :name
     },
-    using: { tsearch: { prefix: true } }
+    using:              { tsearch: { prefix: true } }
   )
 
   # relations

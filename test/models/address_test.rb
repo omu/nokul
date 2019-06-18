@@ -25,7 +25,6 @@ class AddressTest < ActiveSupport::TestCase
 
   # validations: length
   validates_length_of :full_address
-  validates_length_of :phone_number
 
   # enumerations
   enum type: { formal: 1, informal: 2 }

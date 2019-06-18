@@ -6,7 +6,7 @@ module EnumForTerm
   included do
     # enum
     enum term: {
-      fall: 0,
+      fall:   0,
       spring: 1,
       summer: 2
     }

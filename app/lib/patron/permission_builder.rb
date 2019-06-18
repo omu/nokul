@@ -12,8 +12,8 @@ module Patron
     # permission :foo, name: 'Foo', description: 'Desc'
     def permission(identifier, name:, description:)
       generated_permission = Permission.new(
-        name: name,
-        identifier: identifier,
+        name:        name,
+        identifier:  identifier,
         description: description
       )
 

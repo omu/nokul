@@ -8,7 +8,7 @@ class CourseGroup < ApplicationRecord
   pg_search_scope(
     :search,
     against: %i[name],
-    using: { tsearch: { prefix: true } }
+    using:   { tsearch: { prefix: true } }
   )
 
   # dynamic_search
@@ -28,9 +28,9 @@ class CourseGroup < ApplicationRecord
   validates :course_ids, presence: true
   validates :name, presence: true, uniqueness: { scope: :unit_id }, length: { maximum: 255 }
   validates :total_ects_condition, numericality: {
-    only_integer: true,
+    only_integer:             true,
     greater_than_or_equal_to: 0,
-    less_than_or_equal_to: 300
+    less_than_or_equal_to:    300
   }
 
   private

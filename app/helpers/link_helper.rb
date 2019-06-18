@@ -2,54 +2,54 @@
 
 module LinkHelper
   LINKS = {
-    back: {
-      icon: 'arrow-left',
-      text: 'action_group.back',
+    back:    {
+      icon:    'arrow-left',
+      text:    'action_group.back',
       options: {
         class: 'btn btn-secondary btn-sm'
       }
     },
     destroy: {
-      icon: 'trash',
-      text: 'action_group.destroy',
+      icon:    'trash',
+      text:    'action_group.destroy',
       options: {
-        class: 'btn btn-outline-danger btn-sm',
+        class:  'btn btn-outline-danger btn-sm',
         method: :delete,
-        data: { confirm: I18n.t('are_you_sure') }
+        data:   { confirm: I18n.t('are_you_sure') }
       }
     },
-    edit: {
-      icon: 'pencil',
-      text: 'action_group.edit',
+    edit:    {
+      icon:    'pencil',
+      text:    'action_group.edit',
       options: {
         class: 'btn btn-outline-success btn-sm'
       }
     },
-    file: {
-      icon: 'file-word-o',
-      text: 'action_group.file',
+    file:    {
+      icon:    'file-word-o',
+      text:    'action_group.file',
       options: {
         class: 'btn btn-secondary btn-sm'
       }
     },
-    new: {
-      icon: 'plus',
-      text: 'action_group.add',
+    new:     {
+      icon:    'plus',
+      text:    'action_group.add',
       options: {
         class: 'btn btn-outline-primary btn-sm',
-        id: 'add-button'
+        id:    'add-button'
       }
     },
-    show: {
-      icon: 'eye',
-      text: 'action_group.show',
+    show:    {
+      icon:    'eye',
+      text:    'action_group.show',
       options: {
         class: 'btn btn-outline-info btn-sm'
       }
     },
-    update: {
-      icon: 'pencil-square-o',
-      text: 'action_group.update',
+    update:  {
+      icon:    'pencil-square-o',
+      text:    'action_group.update',
       options: {
         class: 'btn btn-outline-info btn-sm'
       }

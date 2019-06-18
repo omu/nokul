@@ -7,6 +7,7 @@ class ProspectiveEmployeeTest < ActiveSupport::TestCase
 
   # relations
   belongs_to :title
+  belongs_to :user
 
   # validations: presence
   validates_presence_of :date_of_birth

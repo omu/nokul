@@ -17,13 +17,13 @@ module Yoksis
       response.each do |project|
         user.projects.create(
           yoksis_id: project[:id],
-          status: project[:status_id],
-          duty: project[:location_name],
-          type: project[:type_name],
-          currency: project[:currency_name],
-          activity: project[:activity_id],
-          scope: project[:scope_id],
-          title: project[:title_name],
+          status:    project[:status_id],
+          duty:      project[:location_name],
+          type:      project[:type_name],
+          currency:  project[:currency_name],
+          activity:  project[:activity_id],
+          scope:     project[:scope_id],
+          title:     project[:title_name],
           **project.slice(:name, :subject, :start_date, :end_date, :budget, :last_update, :unit_id, :incentive_point)
         )
       end

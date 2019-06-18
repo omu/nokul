@@ -10,8 +10,8 @@ module Patron
 
     def role(identifier, name:, permissions:)
       role = Role.new(
-        name: name,
-        identifier: identifier,
+        name:        name,
+        identifier:  identifier,
         permissions: permissions
       )
       roles[identifier]           = role

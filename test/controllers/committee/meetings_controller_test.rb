@@ -31,10 +31,10 @@ module Committee
         post committee_meetings_path(@committee),
              params: {
                committee_meeting: {
-                 meeting_no: 5,
+                 meeting_no:   5,
                  meeting_date: Time.zone.today,
-                 year: Time.zone.today.year,
-                 unit: @committee
+                 year:         Time.zone.today.year,
+                 unit:         @committee
                }
              }
       end
@@ -60,10 +60,10 @@ module Committee
       patch committee_meeting_path(@committee, committee_meeting),
             params: {
               committee_meeting: {
-                meeting_no: 8,
+                meeting_no:   8,
                 meeting_date: date,
-                year: date.year,
-                unit: @committee
+                year:         date.year,
+                unit:         @committee
               }
             }
 
