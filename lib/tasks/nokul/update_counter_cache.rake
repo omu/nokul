@@ -11,6 +11,6 @@ namespace :nokul do
     User.find_each { |user| User.reset_counters(user.id, :projects) }
   end
 
-  desc 'Runs all counter cache update tasks'
+  desc 'Run all counter cache update tasks'
   task all: %w[update_article_counter update_project_counter]
 end
