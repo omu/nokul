@@ -19,13 +19,6 @@ module Xokul
       )
     end
 
-    def syllabuses_by_department(unit_id, year, term)
-      Connection.request(
-        '/meksis/department_syllabuses',
-        params: { unit_id: unit_id, year: year, term: term }
-      )
-    end
-
     def syllabuses_by_unit(unit_id, year, term)
       Connection.request(
         '/meksis/unit_syllabuses',
