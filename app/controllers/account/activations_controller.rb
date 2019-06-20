@@ -27,10 +27,10 @@ module Account
         return redirect_to login_path, notice: t('.success') if update_process(session[:user_id],
                                                                                verify[:mobile_phone])
 
-        redirect_to activation_path, alert: t('account.activations.system_error')
+        redirect_to activation_path, alert: t('errors.system_error')
       else
         redirect_to activation_path,
-                    alert: t("twilio.errors.#{response.error_code}", default: t('account.activations.system_error'))
+                    alert: t("twilio.errors.#{response.error_code}", default: t('errors.system_error'))
       end
     end
     # rubocop:enable Metrics/AbcSize
