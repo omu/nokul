@@ -32,7 +32,7 @@ jobs:
       # second job at this stage
     - name: "Security and Database Tests"
       before_script: skip
-      script: docker-compose run test bundle exec rake db:all
+      script: docker-compose run test bundle exec rake db:index
 
       # third job at this stage
     - name: "Integration Tests"
