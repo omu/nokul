@@ -9,6 +9,8 @@ devise_for :users, controllers: {
 
 devise_scope :user do
   get 'account', to: 'account/registrations#edit'
+  put 'phone_verification', to: 'account/registrations#phone_verification'
+  post 'check_phone_verification', to: 'account/registrations#check_phone_verification'
   get 'login', to: 'account/sessions#new'
   get 'recover', to: 'account/passwords#new'
   delete 'logout', to: 'account/sessions#destroy'

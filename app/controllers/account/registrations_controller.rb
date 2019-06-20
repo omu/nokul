@@ -34,6 +34,37 @@ module Account
       not_found
     end
 
+    # rubocop:disable Metrics/AbcSize
+    def phone_verification
+      phone = params.dig(:user, :mobile_phone)
+      current_user[:mobile_phone] = phone
+      respond_to do |format|
+        if current_user.valid? && current_user.mobile_phone_changed?
+          return format.js if Twilio::Verify.send_phone_verification_code(phone) == 'ok'
+
+          format.js { flash.now[:notice] = t('errors.system_error') }
+        else
+          format.js
+        end
+      end
+    end
+
+    def check_phone_verification
+      verify = params[:phone_verification]
+      response = Twilio::Verify.check_verification_code(verify[:mobile_phone], verify[:verification_code])
+
+      if response == 'ok'
+        return redirect_to account_path, notice: t('.success') if current_user
+                                                                  .update(mobile_phone: verify[:mobile_phone])
+
+        redirect_to account_path, alert: t('errors.system_error')
+      else
+        redirect_to account_path,
+                    alert: t("twilio.errors.#{response.error_code}", default: t('errors.system_error'))
+      end
+    end
+    # rubocop:enable Metrics/AbcSize
+
     # GET /resource/cancel
     # Forces the session data which is usually expired after sign
     # in to be expired now. This is useful if the user wants to
