@@ -4,7 +4,7 @@ namespace :import do
   desc 'Runs all static data importing tasks'
   task all: %w[
     countries
-    yoksis_country_codes
+    yoksis_countries
     cities
     districts
     languages
