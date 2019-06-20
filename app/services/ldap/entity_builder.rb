@@ -2,33 +2,48 @@
 
 module Ldap
   class EntityBuilder
+    OBJECT_CLASSES = %w[
+      person
+      organizationalPerson
+      inetOrgPerson
+      eduPerson
+      schacPersonalCharacteristics
+      schacContactLocation
+      schacLinkageIdentifiers
+      schacEntryMetadata
+      schacUserEntitlements
+      schacExperimentalOC
+    ].freeze
+
+    ROLE_SCOPES = {
+      faculty: %i[member employee],
+      staff:   %i[member employee],
+      student: %i[member]
+    }.freeze
+
     # rubocop:disable Naming/MethodName
     module Attributes
       def cn
-        identity.try(:full_name)
+        user.full_name
       end
 
       def displayName
-        identity.try(:full_name)
+        user.full_name
       end
 
       def eduPersonAffiliation
-        affiliations.select { |_, value| value[:status] }
-                    .map    { |_, value| value[:scope] << value[:key] }
-                    .flatten
-                    .sort
-                    .uniq
+        user.ldap_roles
+            .map { |role| prefixes_for_role(role) }
+            .flatten
+            .uniq
       end
 
       def eduPersonPrimaryAffiliation
-        primary = affiliations.select { |_, value| value[:status] }
-                              .max_by { |_, value| value[:priority] }
-
-        (primary.try(:last) || {})[:key]
+        user.ldap_roles.min_by { |role| ROLE_SCOPES.keys.index(role) }.to_s
       end
 
       def eduPersonPrincipalName
-        "#{username}@#{Tenant.configuration.ldap.organization}"
+        "#{user.username}@#{Tenant.configuration.ldap.organization}"
       end
 
       def eduPersonPrincipalNamePrior
@@ -36,21 +51,22 @@ module Ldap
       end
 
       def eduPersonScopedAffiliation
-        scoped_affiliations.select { |_, value| value[:status] }.map do |_, value|
-          value[:prefixes].map do |prefix|
-            value[:units].map { |unit| generate_person_scoped_affiliation(prefix, unit) }
+        user.ldap_roles.map do |role|
+          user.units_by(role).map do |unit|
+            prefixes_for_role(role).map do |prefix|
+              generate_person_scoped_affiliation(prefix, unit)
+            end
           end
         end.flatten
       end
 
       def givenName
-        identity.try(:first_name)
+        user.first_name
       end
 
       def jpegPhoto
         return unless user.avatar.attached?
 
-        # "data:#{user.avatar.content_type};base64" +
         Base64.encode64(user.avatar.download)
       end
 
@@ -59,19 +75,20 @@ module Ldap
       end
 
       def mobile
-        user.phone_number
+        user.mobile_phone
       end
 
       def preferredLanguage
         user.preferred_language
       end
 
+      # TODO: Gerekli düzenleme yapılmalı
       def schacCountryOfCitizenship
-        'test'
+        'Samsun'
       end
 
       def schacDateOfBirth
-        identity.try(:date_of_birth).try(:strftime, '%Y%m%d')
+        user.date_of_birth.try(:strftime, '%Y%m%d')
       end
 
       def schacExpiryDate
@@ -79,12 +96,7 @@ module Ldap
       end
 
       def schacGender
-        case identity.try(:gender)
-        when 'male'   then '1'
-        when 'female' then '2'
-        when 'other'  then '0'
-        else               '9'
-        end
+        user.ldap_gender
       end
 
       def schacHomeOrganization
@@ -108,11 +120,11 @@ module Ldap
       end
 
       def schacYearOfBirth
-        identity.try(:date_of_birth).try(:strftime, '%Y')
+        user.date_of_birth.try(:strftime, '%Y')
       end
 
       def sn
-        identity.try(:last_name)
+        user.last_name
       end
 
       def uid
@@ -124,77 +136,13 @@ module Ldap
       end
 
       def objectclass
-        %w[
-          person
-          organizationalPerson
-          inetOrgPerson
-          eduPerson
-          schacPersonalCharacteristics
-          schacContactLocation
-          schacLinkageIdentifiers
-          schacEntryMetadata
-          schacUserEntitlements
-          schacExperimentalOC
-        ]
+        OBJECT_CLASSES
       end
 
       private
 
-      def affiliations
-        @affiliations ||= {
-          academic: {
-            status: user.employee? && user.academic?,
-            priority: 5,
-            key: 'faculty',
-            scope: %w[member employee]
-          },
-          staff: {
-            status: user.employee? && !user.academic?,
-            priority: 4,
-            key: 'staff',
-            scope: %w[member employee]
-          },
-          student: {
-            status: user.student?,
-            priority: 3,
-            key: 'student',
-            scope: %w[member]
-          },
-          affiliate: {
-            status: !user.employee? && !user.student?,
-            priority: 2,
-            key: 'affiliate',
-            scope: []
-          }
-        }
-      end
-
-      def identity
-        @identity ||= user.identities.user_identity
-      end
-
-      def username
-        user.id_number
-      end
-
-      def scoped_affiliations
-        @scoped_affiliations ||= {
-          academic: {
-            status: user.employee? && user.academic?,
-            prefixes: %w[member employee faculty],
-            units: user.duties.active.map(&:unit)
-          },
-          staff: {
-            status: user.employee? && !user.academic?,
-            prefixes: %w[member employee staff],
-            units: user.duties.active.map(&:unit)
-          },
-          student: {
-            status: user.student?,
-            prefixes: %w[member student],
-            units: user.students.map(&:unit)
-          }
-        }
+      def prefixes_for_role(role)
+        [*ROLE_SCOPES.fetch(role, []), role].map(&:to_s)
       end
 
       def generate_person_scoped_affiliation(prefix, unit)
@@ -214,7 +162,7 @@ module Ldap
     attr_reader :user
 
     def initialize(user)
-      @user = user
+      @user = Ldap::UserDecorator.new(user)
     end
 
     def dn

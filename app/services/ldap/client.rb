@@ -22,7 +22,7 @@ module Ldap
         host: host,
         port: 389,
         auth: {
-          method: :simple,
+          method:   :simple,
           username: username,
           password: password
         }
@@ -62,6 +62,13 @@ module Ldap
         run(:delete, dn: entity.dn)
       end
 
+      # Usage:
+      #   Ldap::Client.where('dc=test, dc=com, dc=tr',
+      #                      filter: Net::LDAP::Filter.eq('uid', 'Foo'))
+      def where(base, filter:, **options)
+        run(:search, base: base, filter: filter, **options)
+      end
+
       # entity: a record of the LdapEntity
       # Usage:
       #  Ldap::Client.exists?(entity)
@@ -71,9 +78,7 @@ module Ldap
                          .select { |item| item.include?('dc=') }
                          .join(',')
 
-        response = run(:search,
-                       base: treebase,
-                       filter: Net::LDAP::Filter.eq('uid', entity.uid))
+        response = where(treebase, filter: Net::LDAP::Filter.eq('uid', entity.uid))
         response.present?
       end
 
@@ -94,20 +99,20 @@ module Ldap
       #   [:add, "eduPersonPrincipalNamePrior", "onceki_username"]
       # ]
       def generate_operations_for_update(first, last)
-        result = []
+        variances = []
 
         last.each do |key, value|
           next if first.key?(key) && first[key].eql?(value)
 
           operation = first.key?(key) ? :replace : :add
-          result << [operation, key, value]
+          variances << [operation, key, value]
         end
 
         first.each do |key, _|
-          result << [:delete, key, nil] unless last.key?(key)
+          variances << [:delete, key, nil] unless last.key?(key)
         end
 
-        result
+        variances
       end
     end
   end
