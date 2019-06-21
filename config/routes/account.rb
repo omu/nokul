@@ -10,7 +10,7 @@ devise_for :users, controllers: {
 devise_scope :user do
   get 'account', to: 'account/registrations#edit'
   put 'phone_verification', to: 'account/registrations#phone_verification'
-  post 'check_phone_verification', to: 'account/registrations#check_phone_verification'
+  post 'registration_phone_verification', to: 'account/registrations#check_phone_verification'
   get 'login', to: 'account/sessions#new'
   get 'recover', to: 'account/passwords#new'
   delete 'logout', to: 'account/sessions#destroy'
@@ -20,7 +20,7 @@ scope module: :account do
   get 'activation', to: 'activations#new'
   post 'activation', to: 'activations#create'
   get 'phone_verification', to: 'activations#phone_verification'
-  post 'phone_verification', to: 'activations#check_phone_verification'
+  post 'activation_phone_verification', to: 'activations#check_phone_verification'
   get '/profile', to: 'profile_settings#edit'
   patch '/profile', to: 'profile_settings#update'
 end

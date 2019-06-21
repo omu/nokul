@@ -5,6 +5,9 @@
 <% elsif flash[:notice].present? %>
   toastr.error('<%= flash[:notice] %>')
 <% else %>
-  $('#verification_modal').html("<%= escape_javascript(render 'modal') %>");
+  $('#verification_modal').html("<%= escape_javascript(render partial: 'layouts/shared/phone_verification_modal', \
+                                                              locals: { action: 'check_phone_verification', \
+                                                                        controller: 'account/registrations', \
+                                                                        mobile_phone: params.dig(:user, :mobile_phone) }) %>");
   $('#verification_modal').modal('show')
 <% end %>

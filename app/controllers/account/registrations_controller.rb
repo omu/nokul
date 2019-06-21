@@ -2,6 +2,7 @@
 
 module Account
   class RegistrationsController < Devise::RegistrationsController
+    include PhoneVerification
     layout 'guest', except: %i[edit update]
 
     # before_action :configure_sign_up_params, only: [:create]
@@ -48,22 +49,11 @@ module Account
         end
       end
     end
+    # rubocop:enable Metrics/AbcSize
 
     def check_phone_verification
-      verify = params[:phone_verification]
-      response = Twilio::Verify.check_verification_code(verify[:mobile_phone], verify[:verification_code])
-
-      if response == 'ok'
-        return redirect_to account_path, notice: t('.success') if current_user
-                                                                  .update(mobile_phone: verify[:mobile_phone])
-
-        redirect_to account_path, alert: t('errors.system_error')
-      else
-        redirect_to account_path,
-                    alert: t("twilio.errors.#{response.error_code}", default: t('errors.system_error'))
-      end
+      check(params, account_path, account_path)
     end
-    # rubocop:enable Metrics/AbcSize
 
     # GET /resource/cancel
     # Forces the session data which is usually expired after sign
