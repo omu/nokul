@@ -25,7 +25,7 @@ jobs:
   include:
     - stage: test
       # first job at this stage
-      name: "Quality Tests"
+      name: "Static analysis checks"
       before_script: skip
       script: docker-compose run test bundle exec rake static_analysis:all
 
