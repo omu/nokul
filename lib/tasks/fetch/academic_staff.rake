@@ -27,6 +27,10 @@ module Academics
       user&.update!(email: email)
     end
   end
+
+  def staff_number(user, prefix: 'A', length: 6)
+    "#{prefix}#{'0' * (length - user.id.to_s.size)}#{user.id}"
+  end
 end
 
 namespace :fetch do
@@ -54,7 +58,7 @@ namespace :fetch do
         title = Title.find_by(name: staff[:title].capitalize_turkish)
         unit = Unit.find_by(yoksis_id: staff[:unit_id])
 
-        employee = Employee.create(title: title, user: user)
+        employee = Employee.create(title: title, user: user, staff_number: Academics.staff_number(user))
         employee.duties.create(temporary: false, start_date: Time.zone.today, unit: unit)
       end
     end

@@ -50,7 +50,7 @@ module Osym
           state_of_education:          state_of_education,
           high_school_graduation_year: high_school_graduation_year,
           placement_type:              placement_type,
-          exam_score:                  exam_score,
+          exam_score:                  exam_score.tr(',', '.'),
           language:                    language,
           address:                     address + ' ' + district + '/' + city,
           home_phone:                  home_phone,
