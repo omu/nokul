@@ -36,6 +36,6 @@ namespace :fetch do
   desc 'Fetch only one reference'
   task :reference, %i[action klass] => [:environment] do |_, args|
     response = Xokul::Yoksis::References.send(args[:action])
-    response&.each { |reference| klass.create(reference) }
+    response&.each { |reference| args[:klass].constantize.create(reference) }
   end
 end

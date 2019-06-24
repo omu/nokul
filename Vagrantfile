@@ -17,7 +17,7 @@ Vagrant.configure('2') do |config|
   config.vm.define 'dev', primary: true do |dev|
     dev.vm.box = 'omu/debian-stable-server'
 
-    dev.vm.network 'forwarded_port', guest: 3000, host: 3000
+    dev.vm.network 'forwarded_port', guest: 3000, host: 3000, auto_correct: true
 
     dev.vm.provider :lxc do |lxc|
       lxc.customize 'cgroup.memory.limit_in_bytes', '2048M'
