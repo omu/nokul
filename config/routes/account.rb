@@ -19,7 +19,6 @@ end
 scope module: :account do
   get 'activation', to: 'activations#new'
   post 'activation', to: 'activations#create'
-  get 'phone_verification', to: 'activations#phone_verification'
   post 'activation_phone_verification', to: 'activations#check_phone_verification'
   get '/profile', to: 'profile_settings#edit'
   patch '/profile', to: 'profile_settings#update'
