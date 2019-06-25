@@ -2,8 +2,8 @@
   toastr.error("<%= current_user.errors.full_messages.join(',') %>")
 <% elsif current_user.mobile_phone_changed? == false %>
   toastr.error("<%= t('.cannot_change_phone') %>")
-<% elsif flash[:notice].present? %>
-  toastr.error('<%= flash[:notice] %>')
+<% elsif flash[:alert].present? %>
+  toastr.error('<%= flash[:alert] %>')
 <% else %>
   $('#verification_modal').html("<%= escape_javascript(render partial: 'layouts/shared/phone_verification_modal', \
                                                               locals: { action: 'check_phone_verification', \

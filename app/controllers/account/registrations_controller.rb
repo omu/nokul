@@ -35,7 +35,6 @@ module Account
       not_found
     end
 
-    # rubocop:disable Metrics/AbcSize
     def phone_verification
       phone = params.dig(:user, :mobile_phone)
       current_user[:mobile_phone] = phone
@@ -43,13 +42,12 @@ module Account
         if current_user.valid? && current_user.mobile_phone_changed?
           return format.js if Twilio::Verify.send_phone_verification_code(phone) == 'ok'
 
-          format.js { flash.now[:notice] = t('errors.system_error') }
+          format.js { flash[:alert] = t('errors.system_error') }
         else
           format.js
         end
       end
     end
-    # rubocop:enable Metrics/AbcSize
 
     def check_phone_verification
       check(params, account_path, account_path)
