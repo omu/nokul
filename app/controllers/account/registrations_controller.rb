@@ -35,6 +35,7 @@ module Account
       not_found
     end
 
+    # rubocop:disable Metrics/AbcSize
     def phone_verification
       phone = params.dig(:user, :mobile_phone)
       current_user[:mobile_phone] = phone
@@ -48,6 +49,7 @@ module Account
         end
       end
     end
+    # rubocop:enable Metrics/AbcSize
 
     def check_phone_verification
       check(params, account_path, account_path)
