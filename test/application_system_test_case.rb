@@ -9,7 +9,7 @@ class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
     [768, 1024],  # tablet
     [360, 640]    # small mobile device
   ].freeze
-  
+
   Capybara.server = :puma, { Silent: true }
 
   Capybara.register_driver 'chrome_headless' do |driver|
@@ -26,9 +26,9 @@ class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
     options.add_argument '--disable-gpu'
     options.add_argument '--disable-dev-shm-usage'
     options.add_argument '--disable-popup-blocking'
-  
+
     Capybara::Selenium::Driver.new(driver, browser: :chrome, options: options)
   end
-  
+
   driven_by 'chrome_headless'
 end
