@@ -1,26 +1,7 @@
 # frozen_string_literal: true
 
 module Ldap
-  class EntityBuilder
-    OBJECT_CLASSES = %w[
-      person
-      organizationalPerson
-      inetOrgPerson
-      eduPerson
-      schacPersonalCharacteristics
-      schacContactLocation
-      schacLinkageIdentifiers
-      schacEntryMetadata
-      schacUserEntitlements
-      schacExperimentalOC
-    ].freeze
-
-    ROLE_SCOPES = {
-      faculty: %i[member employee],
-      staff:   %i[member employee],
-      student: %i[member]
-    }.freeze
-
+  class Entity
     # rubocop:disable Naming/MethodName
     module Attributes
       def cn
@@ -39,7 +20,7 @@ module Ldap
       end
 
       def eduPersonPrimaryAffiliation
-        user.ldap_roles.min_by { |role| ROLE_SCOPES.keys.index(role) }.to_s
+        user.ldap_roles.min_by { |role| ROLE_DEPENDENCIES.keys.index(role) }.to_s
       end
 
       def eduPersonPrincipalName
@@ -142,7 +123,7 @@ module Ldap
       private
 
       def prefixes_for_role(role)
-        [*ROLE_SCOPES.fetch(role, []), role].map(&:to_s)
+        [*ROLE_DEPENDENCIES.fetch(role, []), role].map(&:to_s)
       end
 
       def generate_person_scoped_affiliation(prefix, unit)
@@ -152,10 +133,59 @@ module Ldap
 
         abbreviations = abbreviations.map { |abbr| abbr.downcase(:turkic) }.reverse.join('.')
 
-        "#{prefix}@_#{abbreviations}.#{Tenant.configuration.ldap.organization}"
+        "#{prefix}@_.#{abbreviations}.#{Tenant.configuration.ldap.organization}"
       end
     end
     # rubocop:enable Naming/MethodName
+
+    OBJECT_CLASSES = %w[
+      person
+      organizationalPerson
+      inetOrgPerson
+      eduPerson
+      schacPersonalCharacteristics
+      schacContactLocation
+      schacLinkageIdentifiers
+      schacEntryMetadata
+      schacUserEntitlements
+      schacExperimentalOC
+    ].freeze
+
+    # INFO: Liste anahtarlarının sırası önceliği belirtir.
+    ROLE_DEPENDENCIES = {
+      faculty: %i[member employee],
+      staff:   %i[member employee],
+      student: %i[member]
+    }.freeze
+
+    ATTRIBUTES = {
+      cn:                          :single,
+      displayName:                 :single,
+      eduPersonAffiliation:        :multiple,
+      eduPersonPrimaryAffiliation: :single,
+      eduPersonPrincipalName:      :single,
+      eduPersonPrincipalNamePrior: :single,
+      eduPersonScopedAffiliation:  :multiple,
+      givenName:                   :single,
+      jpegPhoto:                   :single,
+      mail:                        :single,
+      mobile:                      :single,
+      objectclass:                 :multiple,
+      preferredLanguage:           :single,
+      schacCountryOfCitizenship:   :single,
+      schacDateOfBirth:            :single,
+      schacExpiryDate:             :single,
+      schacGender:                 :single,
+      schacHomeOrganization:       :single,
+      schacPersonalUniqueCode:     :single,
+      schacPersonalUniqueID:       :single,
+      schacPlaceOfBirth:           :single,
+      schacUserStatus:             :single,
+      schacYearOfBirth:            :single,
+      sn:                          :single,
+      uid:                         :single,
+      userPassword:                :single
+    }.freeze
 
     include Attributes
 
@@ -165,12 +195,22 @@ module Ldap
       @user = Ldap::UserDecorator.new(user)
     end
 
+    class << self
+      def build(user)
+        new(user)
+      end
+
+      def attributes
+        Attributes.instance_methods.map(&:to_s)
+      end
+    end
+
     def dn
       "uid=#{uid}, ou=people, dc=test, dc=omu, dc=edu, dc=tr"
     end
 
     def to_hash
-      attributes.each_with_object({}) do |attribute, hash|
+      ATTRIBUTES.keys.each_with_object({}) do |attribute, hash|
         value = public_send(attribute)
         hash[attribute] = value if value.present?
       end
@@ -181,12 +221,6 @@ module Ldap
 
     def create
       LdapEntity.create(user_id: user.id, values: values, dn: dn)
-    end
-
-    private
-
-    def attributes
-      Attributes.instance_methods
     end
   end
 end

@@ -36,7 +36,7 @@ module Ldap
       # Usage:
       #  Ldap::Client.create(entity)
       def create(entity)
-        run(:add, dn: entity.dn, attributes: entity.values)
+        run!(:add, dn: entity.dn, attributes: entity.values)
       end
 
       # entity: a record of the LdapEntity
@@ -46,11 +46,10 @@ module Ldap
       def update(entity)
         return create(entity) unless exists?(entity)
 
-        operations = generate_operations_for_update(entity.prev.values, entity.values)
-
+        operations = build_operations_for_update(entity)
         return true if operations.blank?
 
-        run(:modify, dn: entity.dn, operations: operations)
+        run!(:modify, dn: entity.dn, operations: operations)
       end
 
       alias create_or_update update
@@ -59,26 +58,34 @@ module Ldap
       # Usage:
       #  Ldap::Client.destroy(entity)
       def destroy(entity)
-        run(:delete, dn: entity.dn)
+        run!(:delete, dn: entity.dn)
       end
 
       # Usage:
       #   Ldap::Client.where('dc=test, dc=com, dc=tr',
       #                      filter: Net::LDAP::Filter.eq('uid', 'Foo'))
       def where(base, filter:, **options)
-        run(:search, base: base, filter: filter, **options)
+        base = base.split(',')
+                   .select { |item| item.include?('dc=') }
+                   .join(',')
+
+        run!(:search, base: base, filter: filter, **options)
+      end
+
+      # Usage:
+      #   Ldap::Client.find_by('dc=test, dc=com, dc=tr', uid: '11223344550')
+      def find_by(base, **queries)
+        queries = queries.map    { |key, value| Net::LDAP::Filter.eq(key, value) }
+                         .inject { |prev, query| prev | query }
+
+        where(base, filter: queries).first
       end
 
       # entity: a record of the LdapEntity
       # Usage:
       #  Ldap::Client.exists?(entity)
       def exists?(entity)
-        treebase = entity.dn
-                         .split(',')
-                         .select { |item| item.include?('dc=') }
-                         .join(',')
-
-        response = where(treebase, filter: Net::LDAP::Filter.eq('uid', entity.uid))
+        response = find_by(entity.dn, uid: entity.uid)
         response.present?
       end
 
@@ -88,7 +95,7 @@ module Ldap
 
       private
 
-      def run(action, **parameters)
+      def run!(action, **parameters)
         instance.client.public_send(action, parameters) || raise(Error, response.message)
       end
 
@@ -98,21 +105,30 @@ module Ldap
       #   [:delete, "jpegPhoto", nil],
       #   [:add, "eduPersonPrincipalNamePrior", "onceki_username"]
       # ]
-      def generate_operations_for_update(first, last)
-        variances = []
+      def build_operations_for_update(entity)
+        current_values   = find_ldap_values(entity).with_indifferent_access
+        values           = entity.values.with_indifferent_access
+        variances        = []
 
-        last.each do |key, value|
-          next if first.key?(key) && first[key].eql?(value)
+        values.each do |key, value|
+          next if current_values.key?(key) && current_values[key].eql?(value)
 
-          operation = first.key?(key) ? :replace : :add
-          variances << [operation, key, value]
+          variances << [(current_values.key?(key) ? :replace : :add), key, value]
         end
 
-        first.each do |key, _|
-          variances << [:delete, key, nil] unless last.key?(key)
-        end
+        current_values.each { |key, _| variances << [:delete, key, nil] unless values.key?(key) }
 
         variances
+      end
+
+      def find_ldap_values(entity)
+        current_values = find_by(entity.dn, uid: entity.uid)
+        Entity::ATTRIBUTES.each_with_object({}) do |(attribute, type), hash|
+          value           = current_values.public_send(attribute.downcase)
+          hash[attribute] = (type == :single ? value.first : value)
+        rescue NoMethodError
+          next
+        end
       end
     end
   end

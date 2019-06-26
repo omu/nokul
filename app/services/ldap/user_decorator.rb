@@ -16,7 +16,7 @@ module Ldap
     end
 
     def identity
-      @identity ||= identities.user_identity
+      @identity ||= [*identities.user_identity].first
     end
 
     delegate :first_name,    to: :identity, allow_nil: true
