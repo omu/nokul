@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
 class Employee < ApplicationRecord
+  # Ldap
+  include LdapSyncTrigger
+
+  ldap_sync_trigger :user, observed_attributes: %i[title_id active]
+
   # relations
   belongs_to :title
   belongs_to :user

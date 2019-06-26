@@ -5,6 +5,10 @@ class User < ApplicationRecord
   include Patron::Roleable
   include Patron::Scopable
 
+  # Ldap
+  include LdapSyncTrigger
+  ldap_sync_trigger :self
+
   # virtual attributes
   attr_accessor :country
 

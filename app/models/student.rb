@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
 class Student < ApplicationRecord
+  # Ldap
+  include LdapSyncTrigger
+
+  ldap_sync_trigger :user
+
   # relations
   belongs_to :user
   belongs_to :unit
