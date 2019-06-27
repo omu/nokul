@@ -34,6 +34,7 @@ class User < ApplicationRecord
   has_many :employees, dependent: :destroy
   has_many :projects, dependent: :destroy
   has_many :students, dependent: :destroy
+  has_many :ldap_entities, dependent: :destroy
   has_many :duties, through: :employees
   has_many :units, through: :employees
   has_many :positions, through: :duties
@@ -46,7 +47,6 @@ class User < ApplicationRecord
                                    foreign_key: :id_number,
                                    dependent:   :nullify,
                                    inverse_of:  :user
-
   # validations
   validates :email, presence: true, uniqueness: true, length: { maximum: 255 }
   validates :extension_number, allow_blank:  true,

@@ -58,7 +58,7 @@ module Ldap
       # Usage:
       #  Ldap::Client.destroy(entity)
       def destroy(entity)
-        run!(:delete, dn: entity.dn)
+        run!(:delete, dn: entity.dn) if exists?(entity)
       end
 
       # Usage:
