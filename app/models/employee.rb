@@ -4,7 +4,7 @@ class Employee < ApplicationRecord
   # Ldap
   include LdapSyncTrigger
 
-  ldap_sync_trigger :user, observed_attributes: %i[title_id active]
+  ldap_sync_trigger :user, attributes: %i[title_id active]
 
   # relations
   belongs_to :title

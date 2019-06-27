@@ -12,6 +12,10 @@ class Student < ApplicationRecord
   has_one :identity, dependent: :destroy
   has_many :calendars, -> { Calendar.active }, through: :unit
 
+  # scopes
+  # TODO: Query will be organized according to activity status
+  scope :active, -> { where(permanently_registered: true) }
+
   # validations
   validates :unit_id, uniqueness: { scope: %i[user] }
   # TODO: Will set equal_to: N, when we decide about student numbers

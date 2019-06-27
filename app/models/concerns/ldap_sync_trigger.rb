@@ -4,13 +4,24 @@ module LdapSyncTrigger
   extend ActiveSupport::Concern
 
   class_methods do
-    def ldap_sync_trigger(user_method, observed_attributes: [])
+    def ldap_sync_trigger(user_method, attributes: [])
       after_save do
-        if observed_attributes.blank? ||
-           observed_attributes.any? { |attribute| [*public_send("#{attribute}_previous_change")].uniq.count > 1 }
-          user = (user_method == :self ? self : public_send(user_method))
-          Ldap::Entity.build(user).create
+        if attributes.blank? || attributes.any? { |attribute| send("#{attribute}_change?") }
+          user = case user_method
+                 when Proc  then user_method.call(self)
+                 when :self then self
+                 else            public_send(user_method)
+                 end
+          user.ldap_sync
         end
+      end
+    end
+  end
+
+  included do |klass|
+    if klass.name == 'User'
+      def ldap_sync
+        Ldap::EntitySaveJob.perform_later(self)
       end
     end
   end

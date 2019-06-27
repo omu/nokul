@@ -48,4 +48,12 @@ class Identity < ApplicationRecord
   def full_name
     "#{first_name} #{last_name}"
   end
+
+  def country_of_citizenship
+    city.try(:country)
+  end
+
+  def city
+    City.find_by(name: registered_to.split('/').last)
+  end
 end
