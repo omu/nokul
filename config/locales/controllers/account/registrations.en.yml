@@ -6,7 +6,7 @@ en:
         updated: "Your account has been updated successfully."
   account:
     registrations:
-      check_phone_verification:
+      update_mobile_phone:
         success: Your mobile number has been updated.
       edit:
         account_settings: Account Settings

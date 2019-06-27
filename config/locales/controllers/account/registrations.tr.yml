@@ -6,7 +6,7 @@ tr:
         updated: "Hesabınız başarılı bir şekilde güncellendi."
   account:
     registrations:
-      check_phone_verification:
+      update_mobile_phone:
         success: Telefon numaranız başarılı bir şekilde güncellendi.
       edit:
         account_settings: Hesap Ayarları

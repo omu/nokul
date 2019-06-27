@@ -35,24 +35,24 @@ module Account
       not_found
     end
 
-    # rubocop:disable Metrics/AbcSize
     def phone_verification
-      phone = params.dig(:user, :mobile_phone)
-      current_user[:mobile_phone] = phone
-      respond_to do |format|
-        if current_user.valid? && current_user.mobile_phone_changed?
-          return format.js if Twilio::Verify.send_phone_verification_code(phone) == 'ok'
+      phone = current_user[:mobile_phone] = params.dig(:user, :mobile_phone)
 
-          format.js { flash[:alert] = t('errors.system_error') }
-        else
-          format.js
-        end
-      end
+      return respond_to :js unless current_user.valid? && current_user.mobile_phone_changed?
+
+      flash[:alert] = t('errors.system_error') unless Twilio::Verify.send_phone_verification_code(phone) == 'ok'
+
+      respond_to :js
     end
-    # rubocop:enable Metrics/AbcSize
 
-    def check_phone_verification
-      check(params, account_path, account_path)
+    def update_mobile_phone
+      verify = params[:phone_verification]
+      response = check_verification_code
+
+      return redirect_to_with_twilio_error(response, account_path) unless response == 'ok'
+      return redirect_to account_path, notice: t('.success') if current_user.update(mobile_phone: verify[:mobile_phone])
+
+      redirect_to account_path, alert: t('errors.system_error')
     end
 
     # GET /resource/cancel
