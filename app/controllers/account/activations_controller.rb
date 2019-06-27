@@ -31,6 +31,8 @@ module Account
     end
     # rubocop:enable Metrics/AbcSize
 
+    private
+
     def update_process(user_id, mobile_phone)
       user = User.find(user_id)
       user.transaction do
@@ -42,8 +44,6 @@ module Account
       Rollbar.error(e, e.message)
       false
     end
-
-    private
 
     def redirect_to_root
       redirect_to(:root)
