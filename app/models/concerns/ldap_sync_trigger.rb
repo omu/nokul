@@ -20,10 +20,7 @@ module LdapSyncTrigger
   class_methods do
     def ldap_sync_trigger(method, attributes: [])
       after_save_commit do
-        return unless attributes.blank? ||
-                      attributes.any? { |attribute| [*send("#{attribute}_previous_change")].uniq.count > 1 }
-
-        Trigger.start(self, method)
+        Trigger.start(self, method) if attributes.blank? || attributes.any? { |key| previous_changes.include?(key) }
       end
 
       after_destroy_commit do
