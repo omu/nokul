@@ -103,7 +103,7 @@ module Ldap
       private
 
       def run!(action, **parameters)
-        raise(Error, 'authentication failed') unless active?
+        raise(Error, 'Service unavailable or authentication failed') unless active?
 
         instance.client.public_send(action, parameters) || raise(Error, response.message)
       end
