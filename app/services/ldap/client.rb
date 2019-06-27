@@ -19,9 +19,10 @@ module Ldap
 
     def generate_client
       Net::LDAP.new(
-        host: host,
-        port: 389,
-        auth: {
+        host:            host,
+        port:            389,
+        connect_timeout: 1, # sn
+        auth:            {
           method:   :simple,
           username: username,
           password: password
@@ -32,6 +33,12 @@ module Ldap
     Error = Class.new(StandardError)
 
     class << self
+      def active?
+        instance.client.bind
+      rescue Net::LDAP::Error
+        false
+      end
+
       # entity: a record of the LdapEntity
       # Usage:
       #  Ldap::Client.create(entity)
@@ -96,6 +103,8 @@ module Ldap
       private
 
       def run!(action, **parameters)
+        raise(Error, 'authentication failed') unless active?
+
         instance.client.public_send(action, parameters) || raise(Error, response.message)
       end
 
