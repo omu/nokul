@@ -3,7 +3,6 @@
 class Student < ApplicationRecord
   # Ldap
   include LdapSyncTrigger
-
   ldap_sync_trigger :user
 
   # relations

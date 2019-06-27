@@ -16,7 +16,7 @@ module Ldap
     end
 
     def identity
-      @identity ||= [*identities.user_identity].first
+      @identity ||= [*identities.user_identity].first || identities.new
     end
 
     delegate :country_of_citizenship, to: :identity, allow_nil: true

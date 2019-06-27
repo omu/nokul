@@ -5,7 +5,7 @@ module Ldap
     queue_as :high
 
     def perform(user)
-      Ldap::Entity.build(user)
+      Ldap::Entity.create(user)
     end
   end
 end

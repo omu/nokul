@@ -3,6 +3,10 @@
 class Identity < ApplicationRecord
   self.inheritance_column = nil
 
+  # Ldap
+  include LdapSyncTrigger
+  ldap_sync_trigger :user
+
   # callbacks
   before_save :capitalize_attributes
 
@@ -54,6 +58,6 @@ class Identity < ApplicationRecord
   end
 
   def city
-    City.find_by(name: registered_to.split('/').last)
+    City.find_by(name: registered_to.to_s.split('/').last)
   end
 end
