@@ -24,7 +24,7 @@ module Account
       verify = params[:phone_verification]
       response = check_verification_code
 
-      return redirect_to_with_twilio_error(response, activation_path) unless response == 'ok'
+      return redirect_to_with_twilio_error(response, activation_path) unless response.ok?
       return redirect_to login_path, notice: t('.success') if update_process(session[:user_id], verify[:mobile_phone])
 
       redirect_to error_path, alert: t('errors.system_error')

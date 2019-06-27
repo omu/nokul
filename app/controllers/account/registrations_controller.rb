@@ -40,20 +40,22 @@ module Account
 
       return respond_to :js unless current_user.valid? && current_user.mobile_phone_changed?
 
-      flash[:alert] = t('errors.system_error') unless Twilio::Verify.send_phone_verification_code(phone) == 'ok'
+      flash[:alert] = t('errors.system_error') unless Twilio::Verify.send_phone_verification_code(phone).ok?
 
       respond_to :js
     end
 
+    # rubocop:disable Metrics/AbcSize
     def update_mobile_phone
-      verify = params[:phone_verification]
+      phone = params[:phone_verification][:mobile_phone]
       response = check_verification_code
 
-      return redirect_to_with_twilio_error(response, account_path) unless response == 'ok'
-      return redirect_to account_path, notice: t('.success') if current_user.update(mobile_phone: verify[:mobile_phone])
+      return redirect_to_with_twilio_error(response, account_path) unless response.ok?
+      return redirect_to account_path, notice: t('.success') if current_user.update(mobile_phone: phone)
 
       redirect_to account_path, alert: t('errors.system_error')
     end
+    # rubocop:enable Metrics/AbcSize
 
     # GET /resource/cancel
     # Forces the session data which is usually expired after sign
