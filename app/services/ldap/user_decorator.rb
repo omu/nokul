@@ -19,14 +19,30 @@ module Ldap
       @identity ||= [*identities.user_identity].first
     end
 
-    delegate :first_name,    to: :identity, allow_nil: true
-    delegate :last_name,     to: :identity, allow_nil: true
-    delegate :full_name,     to: :identity, allow_nil: true
-    delegate :date_of_birth, to: :identity, allow_nil: true
+    delegate :country_of_citizenship, to: :identity, allow_nil: true
+    delegate :date_of_birth,          to: :identity, allow_nil: true
+    delegate :first_name,             to: :identity, allow_nil: true
+    delegate :full_name,              to: :identity, allow_nil: true
+    delegate :last_name,              to: :identity, allow_nil: true
 
     # TODO: id_number yerine username bilgisi eklenecek
     def username
       id_number
+    end
+
+    def place_of_birth_for_ldap
+      [
+        identity.try(:city).try(:name),
+        identity.country_of_citizenship.try(:name)
+      ].join(' ,')
+    end
+
+    def staff_numbers
+      employee? ? employees.active.pluck(:staff_number) : []
+    end
+
+    def student_numbers
+      student? ? students.active.pluck(:student_number) : []
     end
 
     def faculty?

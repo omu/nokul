@@ -6,7 +6,7 @@ class LdapEntity < ApplicationRecord
 
   # callbacks
   after_create_commit :start_sync
-  # before_validation :set_synchronized_at, if: :status_changed?
+  before_validation :set_synchronized_at, if: :status_changed?
 
   # relations
   belongs_to :user
@@ -31,7 +31,7 @@ class LdapEntity < ApplicationRecord
   end
 
   def start_sync
-    LdapSyncJob.perform_later(self)
+    Ldap::SyncJob.perform_later(self)
   end
 
   private

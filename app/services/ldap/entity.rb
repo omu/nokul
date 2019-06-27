@@ -31,6 +31,10 @@ module Ldap
         'onceki_username'
       end
 
+      # Format
+      #   role@_.unit-identifiers.join('.').domain
+      # Example
+      #   student@_.bilgisayar-pr.bilgisayar.muhendislik.omu.edu.tr
       def eduPersonScopedAffiliation
         user.ldap_roles.map do |role|
           user.units_by(role).map do |unit|
@@ -63,17 +67,20 @@ module Ldap
         user.preferred_language
       end
 
-      # TODO: Gerekli düzenleme yapılmalı
       def schacCountryOfCitizenship
-        'Samsun'
+        user.country_of_citizenship&.alpha_2_code&.downcase
       end
 
+      # Format:
+      #   YYYYMMDD
+      # Example:
+      #   19660412
       def schacDateOfBirth
         user.date_of_birth.try(:strftime, '%Y%m%d')
       end
 
       def schacExpiryDate
-        '20051231125959Z'
+        # TODO: Will be determined in the future
       end
 
       def schacGender
@@ -84,22 +91,43 @@ module Ldap
         Tenant.configuration.ldap.organization
       end
 
+      # Format:
+      #  urn:schac:personalUniqueCode:CountryCode:iNSS
+      # Example:
+      #  urn:schac:personalUniqueCode:tr:employeeID:omu.edu.tr:12345
       def schacPersonalUniqueCode
-        'test'
+        codes = {
+          employeeID: user.staff_numbers,
+          studentID:  user.student_numbers
+        }
+
+        codes.map do |key, numbers|
+          numbers.map { |number| "urn:schac:personalUniqueCode:tr:#{key}:#{schacHomeOrganization}:#{number}" }
+        end.flatten
       end
 
+      # Format:
+      #  n:schac:personalUniqueID:CountryCode:ID Type:ID
+      # Example:
+      #  urn:schac:personalUniqueID:tr:NIN:12345678901
       def schacPersonalUniqueID
-        'test'
+        [
+          "urn:schac:personalUniqueID:tr:NIN:#{user.id_number}"
+        ]
       end
 
       def schacPlaceOfBirth
-        'test'
+        user.place_of_birth_for_ldap
       end
 
       def schacUserStatus
-        'test'
+        # TODO: Will be determined in the future
       end
 
+      # Format:
+      #   YYYY
+      # Example:
+      #   1966
       def schacYearOfBirth
         user.date_of_birth.try(:strftime, '%Y')
       end
@@ -131,7 +159,7 @@ module Ldap
           unit.path.pluck(:abbreviation) - Unit.roots.pluck(:abbreviation)
         )
 
-        abbreviations = abbreviations.map { |abbr| abbr.downcase(:turkic) }.reverse.join('.')
+        abbreviations = abbreviations.map { |abbr| abbr.to_s.downcase(:turkic) }.reverse.join('.')
 
         "#{prefix}@_.#{abbreviations}.#{Tenant.configuration.ldap.organization}"
       end
@@ -196,12 +224,12 @@ module Ldap
     end
 
     class << self
-      def build(user)
-        new(user)
+      def create(user)
+        new(user).create
       end
 
       def attributes
-        Attributes.instance_methods.map(&:to_s)
+        ATTRIBUTES.keys.map(&:to_s)
       end
     end
 

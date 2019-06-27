@@ -76,7 +76,7 @@ module Ldap
       #   Ldap::Client.find_by('dc=test, dc=com, dc=tr', uid: '11223344550')
       def find_by(base, **queries)
         queries = queries.map    { |key, value| Net::LDAP::Filter.eq(key, value) }
-                         .inject { |prev, query| prev | query }
+                         .inject { |first, last| first | last }
 
         where(base, filter: queries).first
       end
@@ -106,7 +106,7 @@ module Ldap
       #   [:add, "eduPersonPrincipalNamePrior", "onceki_username"]
       # ]
       def build_operations_for_update(entity)
-        current_values   = find_ldap_values(entity).with_indifferent_access
+        current_values   = find_values_via_ldap(entity).with_indifferent_access
         values           = entity.values.with_indifferent_access
         variances        = []
 
@@ -121,7 +121,7 @@ module Ldap
         variances
       end
 
-      def find_ldap_values(entity)
+      def find_values_via_ldap(entity)
         current_values = find_by(entity.dn, uid: entity.uid)
         Entity::ATTRIBUTES.each_with_object({}) do |(attribute, type), hash|
           value           = current_values.public_send(attribute.downcase)
