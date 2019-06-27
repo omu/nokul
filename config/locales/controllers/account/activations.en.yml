@@ -17,13 +17,8 @@ en:
       check_phone_verification:
         success: Your account has been activated.
       identity_not_verified: Your identity not verified. Make sure that the data you entered is correct.
-      modal:
-        verification_code: Verification Code
-        verify: Verify
-        verify_your_phone: Verify Your Phone
       not_send_verify_code: An error occurred sending phone verification code.
       record_not_found: There is no record in the system to activate your account.
-      system_error: The system error has occurred. Please try later.
       new:
         <<: *activation_attributes
         activation: Activation

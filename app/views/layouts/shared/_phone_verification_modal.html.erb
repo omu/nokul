@@ -4,9 +4,9 @@
       <h5 class='modal-title'><%= t('.verify_your_phone') %></h5>
     </div>
     <div class='modal-body'>
-      <%= simple_form_for(:phone_verification, url: { action: :phone_verification, controller: 'account/activations' }) do |f| %>
+      <%= simple_form_for(:phone_verification, url: { action: action, controller: controller }) do |f| %>
         <div class='form-group row'>
-          <%= f.hidden_field :mobile_phone, value: @activation.mobile_phone %>
+          <%= f.hidden_field :mobile_phone, value: mobile_phone %>
           <label class='col-sm-4 col-form-label text-right'><%= t('.verification_code') %></label>
           <div class='col-sm-5'>
             <%= f.input :verification_code, label: false %>

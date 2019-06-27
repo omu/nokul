@@ -8,17 +8,20 @@ devise_for :users, controllers: {
 }
 
 devise_scope :user do
-  get 'account', to: 'account/registrations#edit'
-  get 'login', to: 'account/sessions#new'
-  get 'recover', to: 'account/passwords#new'
-  delete 'logout', to: 'account/sessions#destroy'
+  scope module: :account do
+    get 'account', to: 'registrations#edit'
+    put 'phone_verification', to: 'registrations#phone_verification'
+    post 'update_mobile_phone', to: 'registrations#update_mobile_phone'
+    get 'login', to: 'sessions#new'
+    get 'recover', to: 'passwords#new'
+    delete 'logout', to: 'sessions#destroy'
+  end
 end
 
 scope module: :account do
   get 'activation', to: 'activations#new'
   post 'activation', to: 'activations#create'
-  get 'phone_verification', to: 'activations#phone_verification'
-  post 'phone_verification', to: 'activations#check_phone_verification'
+  post 'activation_phone_verification', to: 'activations#check_phone_verification'
   get '/profile', to: 'profile_settings#edit'
   patch '/profile', to: 'profile_settings#update'
 end

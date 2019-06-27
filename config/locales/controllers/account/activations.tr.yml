@@ -17,13 +17,8 @@ tr:
       check_phone_verification:
         success: Hesabınız aktifleştirildi.
       identity_not_verified: Kimlik bilgileriniz doğrulanamadı. Girmiş olduğunuz verilerin doğruluğundan emin olunuz.
-      modal:
-        verification_code: Doğrulama Kodu
-        verify: Doğrula
-        verify_your_phone: Telefonunuzu Doğrulayın
       not_send_verify_code: Telefon doğrulama kodu gönderilirken bir sorunla karşılaşıldı.
       record_not_found: Sistemde hesabınızı aktifleştirecek bir kayıt bulunamamıştır.
-      system_error: Sistemsel bir hata oluştu. Lütfen daha sonra tekrar deneyin.
       new:
         <<: *activation_attributes
         activation: Aktivasyon

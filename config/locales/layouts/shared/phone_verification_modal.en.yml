@@ -1,0 +1,7 @@
+en:
+  layouts:
+    shared:
+      phone_verification_modal:
+        verification_code: Verification Code
+        verify: Verify
+        verify_your_phone: Verify Your Phone

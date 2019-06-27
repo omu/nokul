@@ -50,6 +50,9 @@ class User < ApplicationRecord
                                numericality: { only_integer: true }
   validates :id_number, uniqueness: true, numericality: { only_integer: true }, length: { is: 11 }
   validates :linkedin, allow_blank: true, length: { maximum: 50 }
+  validates :mobile_phone, allow_blank:      true,
+                           length:           { maximum: 255 },
+                           telephone_number: { country: proc { |record| record.country }, types: [:mobile] }
   validates :fixed_phone, allow_blank:      true,
                           length:           { maximum: 255 },
                           telephone_number: { country: proc { |record| record.country }, types: [:fixed_line] }

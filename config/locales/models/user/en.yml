@@ -26,6 +26,7 @@ en:
         current_password: Current Password
         email: E-mail
         id_number: ID Number
+        mobile_phone: Mobile Phone
         password: Password
         password_changed_at: Last Password Change
         password_confirmation: Password Confirmation

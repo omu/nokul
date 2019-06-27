@@ -36,7 +36,7 @@ module Accounts
     end
 
     test 'should check phone verification' do
-      post phone_verification_path, params: {
+      post activation_phone_verification_path, params: {
         phone_verification: {
           prospective_students:  @prospective.id,
           prospective_employees: '',
