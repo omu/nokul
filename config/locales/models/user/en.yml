@@ -23,6 +23,7 @@ en:
         activated: Account Activation
         activated_at: Account Activation Date
         articles_count: Articles Count
+        country: Country
         current_password: Current Password
         email: E-mail
         id_number: ID Number
