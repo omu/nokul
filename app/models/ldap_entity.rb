@@ -2,7 +2,7 @@
 
 class LdapEntity < ApplicationRecord
   # enumerations
-  enum status: { pending: 0, synchronized: 1, failed: 4 }
+  enum status: { pending: 0, synchronized: 1, failed: 2 }
 
   # callbacks
   after_create_commit :start_sync

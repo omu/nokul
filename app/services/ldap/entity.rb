@@ -159,7 +159,7 @@ module Ldap
           unit.path.pluck(:abbreviation) - Unit.roots.pluck(:abbreviation)
         )
 
-        abbreviations = abbreviations.map { |abbr| abbr.to_s.downcase(:turkic) }.reverse.join('.')
+        abbreviations = abbreviations.map { |abbr| abbr.to_s.downcase(:turkic).asciified }.reverse.join('.')
 
         "#{prefix}@_.#{abbreviations}.#{Tenant.configuration.ldap.organization}"
       end
