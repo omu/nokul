@@ -47,7 +47,7 @@
         <%= simple_form_for(resource, url: { action: :phone_verification, controller: 'account/registrations' }, remote: true, html: { method: :put }) do |f| %>
           <div class='row'>
             <div class='form-group col-sm-6'>
-              <%= f.input :country, collection: Country.order(:name), value_method: :alpha_2_code, selected: phone_parse(f.object.mobile_phone).country.country_id, required: true %>
+              <%= f.input :country, collection: Country.order(:name), value_method: :alpha_2_code, selected: phone_parse(f.object.mobile_phone).country&.country_id, required: true %>
             </div>
             <div class='form-group col-sm-6'>
               <%= f.input :mobile_phone, input_html: { value: phone_parse(f.object.mobile_phone).normalized_number }, required: true %>
