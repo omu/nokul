@@ -51,4 +51,6 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  resources :ldap_entities
 end
