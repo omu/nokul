@@ -2,36 +2,13 @@
   <div class='col-lg-12'>
     <div class='card'>
       <div class='card-header'>
-        <%= fa_icon 'align-justify', text: "t('.card_header')" %>
+        <%= fa_icon 'database', text: t('.card_header') %>
       </div>
       <div class='card-body'>
-        <table class='table table-responsive-sm table-sm'>
-          <thead>
-            <tr>
-              <th><%= "t('.name')" %></th>
-              <th><%= "t('.abbreviation')" %></th>
-              <th><%= "t('.unit_type')" %></th>
-              <th><%= "t('.unit_status')" %></th>
-              <th><%= "t('.unit_instruction_type')" %></th>
-              <th><%= t('actions') %></th>
-            </tr>
-          </thead>
-          <tbody>
-            <% @entities.each do |entity| %>
-              <tr>
-                <td><%= entity.user.id_number %></td>
-                <td><%= entity.dn %></td>
-                <td>
-                  <span class='badge badge-<%= klass_for_status(entity.status) %>'>
-                    <%= entity.status %>
-                  </span>
-                </td>
-                <td><%= entity.synchronized_at %></td>
-                <td><%= link_to_show(entity) %></td>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
+        <%= render 'layouts/shared/smart_search_form',
+                   path:        :ldap_entities,
+                   placeholder: t('.search') %>
+        <%= render 'entities', entities: @entities %>
       </div>
     </div>
     <nav aria-label='pagination'>

@@ -1,33 +1,41 @@
-<div class='row'>
-  <div class='col-lg-12'>
-    <div class="card">
-      <div class="card-header">
-        <%= fa_icon 'university' %><strong><%= 'Foo' %></strong>
-      </div>
+<%= action_bar do %>
+  <%= link_to_back ldap_entities_path %>
+<% end %>
 
-      <div class="card-body">
-        <table class="table table-bordered table-hover">
-          <tbody>
-            <tr>
-              <th><%= "t('.abbreviation')" %></th>
-              <td><%= @entity.dn %></td>
-            </tr>
-            <% Ldap::Entity.attributes.each do |attribute| %>
-              <tr>
-                <th><%= attribute %></th>
-                <td>
-                  <% if attribute == 'jpegPhoto' %>
-                    <%= image_tag("data:image/png;base64,#{@entity.public_send(attribute)}") %>
-                  <% else %>
-                    <%= to_list_group(@entity.public_send(attribute)) %>
-                  <% end %>
-                </td>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
-      </div>
-    </div>
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <a class="nav-item nav-link active"
+       id="nav-entity-tab"
+       data-toggle="tab"
+       href="#nav-entity"
+       role="tab"
+       aria-controls="nav-entity"
+       aria-selected="true">
+       <%= t('.sync_information') %>
+    </a>
+    <a class="nav-item nav-link"
+       id="nav-errors-tab"
+       data-toggle="tab"
+       href="#nav-errors"
+       role="tab"
+       aria-controls="nav-errors"
+       aria-selected="false">
+       <%= t('.sync_errors') %> <span class="badge badge-pill badge-danger"><%= @errors.count %></span>
+    </a>
+  </div>
+</nav>
+
+<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active"
+       id="nav-entity"
+       role="tabpanel"
+       aria-labelledby="nav-entity-tab">
+    <%= render 'entity', entity: @entity %>
+  </div>
+  <div class="tab-pane fade"
+       id="nav-errors"
+       role="tabpanel"
+       aria-labelledby="nav-errors-tab">
+    <%= render 'errors', errors: @errors %>
   </div>
 </div>
-

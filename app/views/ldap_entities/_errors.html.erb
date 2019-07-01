@@ -1,0 +1,16 @@
+<table class='table table-responsive-sm table-striped table-hover'>
+  <thead class='thead-dark'>
+    <th><%= t('.description') %></th>
+    <th><%= t('.resolved') %></th>
+    <th><%= t('.created_at') %></th>
+  </thead>
+  <tbody>
+    <% @errors.each do |error| %>
+      <tr>
+        <td><%= error.description %></td>
+        <td><%= icon_for_check(error.resolved) %></td>
+        <td><%= error.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
