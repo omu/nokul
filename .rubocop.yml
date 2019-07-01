@@ -20,6 +20,10 @@ Metrics/ClassLength:
   Exclude:
     - test/**/*.rb
     - app/models/unit.rb # TODO: Workaround until refactor
+    - app/models/user.rb # TODO: Workaround until refactor
+Metrics/ModuleLength:
+  Exclude:
+    - app/services/ldap/entity.rb
 AllCops:
   TargetRubyVersion: 2.6
   # Do not exclude files from ALL COPS unless it's really necessary!
