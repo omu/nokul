@@ -1,6 +1,14 @@
 # frozen_string_literal: true
 
 class LdapEntity < ApplicationRecord
+  # search
+  include PgSearch
+  pg_search_scope(
+    :search,
+    against: %i[dn],
+    using:   { tsearch: { prefix: true } }
+  )
+
   # enumerations
   enum status: { pending: 0, synchronized: 1, failed: 2 }
 

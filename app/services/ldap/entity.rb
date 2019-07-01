@@ -155,13 +155,12 @@ module Ldap
       end
 
       def generate_person_scoped_affiliation(prefix, unit)
-        abbreviations = (
-          unit.path.pluck(:abbreviation) - Unit.roots.pluck(:abbreviation)
-        )
+        abbreviations = unit.path
+                            .where.not(id: Unit.roots)
+                            .map { |item| item.abbreviation.to_s.downcase(:turkic).asciified }
+                            .reverse
 
-        abbreviations = abbreviations.map { |abbr| abbr.to_s.downcase(:turkic).asciified }.reverse.join('.')
-
-        "#{prefix}@_.#{abbreviations}.#{Tenant.configuration.ldap.organization}"
+        "#{prefix}@_.#{abbreviations.join('.')}.#{Tenant.configuration.ldap.organization}"
       end
     end
     # rubocop:enable Naming/MethodName

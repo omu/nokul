@@ -8,7 +8,7 @@ module ComponentHelper
     synchronized: 'success'
   }.freeze
 
-  def to_list_group(items, **options)
+  def list_group_tag(items, **options)
     return items unless items.is_a?(Array)
 
     tag.ul(class: options.fetch(:ul_class, 'list-group')) do

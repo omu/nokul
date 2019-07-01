@@ -24,9 +24,7 @@ module LdapSyncTrigger
       end
 
       after_destroy_commit do
-        return Ldap::Client.destroy(Ldap::Entity.new(self)) if self.class.name == 'User'
-
-        Trigger.call(self, method)
+        self.class.name == 'User' ? Ldap::Client.destroy(Ldap::Entity.new(self)) : Trigger.call(self, method)
       end
     end
   end
