@@ -1,0 +1,32 @@
+tr:
+  activerecord:
+    attributes:
+      ldap_entity: &ldap_entity_attributes
+        created_at: Oluşturulma Tarihi
+        dn: Tanımlayıcı İsim (DN)
+        status: Durum
+        synchronized_at: Senkronize Edilme Tarihi
+        user: Kullanıcı
+        values: Ldap Nitelik Değerleri
+      ldap_sync_error: &ldap_sync_error_attributes
+        created_at: Oluşturulma Tarihi
+        description: Açıklama
+        resolved: Çözülme Durumu
+    enums:
+      ldap_entity:
+        statuses:
+          failed: Başarısız
+          pending: Beklemede
+          synchronized: Senkronize Edildi
+  ldap_entities:
+    entities:
+      <<: *ldap_entity_attributes
+      id_number: Kimlik Numarası
+    errors:
+      <<: *ldap_sync_error_attributes
+    index:
+      search: Tanımlayıcı İsim (DN) ile Ara
+      card_header: Ldap Senkronizasyonları
+    show:
+      sync_errors: Senkronizasyon Hataları
+      sync_information: Senkronizasyon Bilgileri
