@@ -3,29 +3,46 @@
 module LdapSyncTrigger
   extend ActiveSupport::Concern
 
-  module Trigger
-    module_function
+  class LdapTrigger
+    attr_reader :user_finder_method
 
-    def call(object, user_method)
-      user = case user_method
-             when Proc  then user_method.call(object)
-             when :self then object
-             else            object.public_send(user_method)
-             end
-
-      Ldap::EntitySaveJob.perform_later(user)
+    def initialize(user_finder_method)
+      @user_finder_method = user_finder_method
     end
+
+    def after_commit(record)
+      user =  case user_finder_method
+              when Proc  then user_finder_method.call(record)
+              when :self then record
+              else            record.public_send(user_finder_method)
+              end
+
+      if record.destroyed? && record.class.name == 'User'
+        Ldap::Client.destroy(Ldap::Entity.new(user))
+      else
+        Ldap::EntitySaveJob.perform_later(user)
+      end
+    end
+
+    # alias after_save_commit after_commit
+    # alias after_destroy_commit after_commit
   end
 
   class_methods do
     def ldap_sync_trigger(method, attributes: [])
-      after_save_commit do
-        Trigger.call(self, method) if attributes.blank? || attributes.any? { |key| previous_changes.include?(key) }
-      end
+      @ldap_sync_trigger_configuration = {
+        method: method, attributes: attributes
+      }
 
-      after_destroy_commit do
-        self.class.name == 'User' ? Ldap::Client.destroy(Ldap::Entity.new(self)) : Trigger.call(self, method)
-      end
+      after_save_commit LdapTrigger.new(method), if: -> {
+        attributes.blank? || attributes.any? { |key| previous_changes.include?(key) }
+      }
+
+      after_destroy_commit LdapTrigger.new(method)
+    end
+
+    def ldap_sync_trigger_configuration
+      @ldap_sync_trigger_configuration ||= {}
     end
   end
 end
