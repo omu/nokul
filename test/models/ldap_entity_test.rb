@@ -20,6 +20,6 @@ class LdapEntityTest < ActiveSupport::TestCase
   validates_presence_of :dn
 
   # callbacks
-  after_commit :start_sync
+  after_commit :sync
   before_validation :set_synchronized_at
 end

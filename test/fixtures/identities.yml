@@ -4,15 +4,16 @@ formal_user:
   last_name: doe
   gender: male
   marital_status: married
-  place_of_birth: london
+  place_of_birth: Stockholm
   date_of_birth: <%= Time.zone.now - 20.years %>
+  registered_to: Stockholm
   user: serhat
 formal_student:
   type: formal
-  first_name: john
-  last_name: doe
+  first_name: Serhat
+  last_name: Dundar
   gender: male
-  place_of_birth: london
+  place_of_birth: Stockholm
   date_of_birth: <%= Time.zone.now - 20.years %>
   user: serhat
   student: serhat
