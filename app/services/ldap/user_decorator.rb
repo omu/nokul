@@ -34,7 +34,7 @@ module Ldap
       [
         identity.try(:city).try(:name),
         identity.country_of_citizenship.try(:name)
-      ].join(' ,')
+      ].compact.join(', ')
     end
 
     def staff_numbers
@@ -60,7 +60,7 @@ module Ldap
     def units_by(role)
       case role
       when :faculty, :staff then duties.active.map(&:unit)
-      when :student         then students.map(&:unit)
+      when :student         then students.active.map(&:unit)
       else                       []
       end
     end

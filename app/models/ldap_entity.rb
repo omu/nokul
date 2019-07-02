@@ -13,7 +13,7 @@ class LdapEntity < ApplicationRecord
   enum status: { pending: 0, synchronized: 1, failed: 2 }
 
   # callbacks
-  after_create_commit :start_sync
+  after_create_commit :sync
   before_validation :set_synchronized_at, if: :status_changed?
 
   # relations
@@ -27,10 +27,6 @@ class LdapEntity < ApplicationRecord
   validates :values, presence: true
   validates :dn, presence: true
 
-  def self.synchronized_for_user(user)
-    LdapEntity.exists?(user_id: user.id, status: :synchronized)
-  end
-
   def prev
     LdapEntity.where.not(id: id)
               .where(user_id: user_id, status: :synchronized)
@@ -38,7 +34,7 @@ class LdapEntity < ApplicationRecord
               .first
   end
 
-  def start_sync
+  def sync
     Ldap::SyncJob.perform_later(self)
   end
 
