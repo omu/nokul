@@ -75,7 +75,7 @@ module Ldap
 
       # Schema: eduPerson
       def eduPersonPrincipalNamePrior
-        'onceki_username'
+        []
       end
 
       # Format:  role@_.unit-identifiers.join('.').domain

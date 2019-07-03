@@ -2,17 +2,14 @@
 
 module Ldap
   class UserDecorator < SimpleDelegator
+    LDAP_GENDER = { 'male' => '1', 'female' => '2', 'other' => '0' }.freeze
+
     def ldap_roles
       @ldap_roles ||= build_roles.inquiry
     end
 
     def ldap_gender
-      case identity.try(:gender)
-      when 'male'   then '1'
-      when 'female' then '2'
-      when 'other'  then '0'
-      else               '9'
-      end
+      LDAP_GENDER.fetch(identity.try(:gender), '9')
     end
 
     def identity

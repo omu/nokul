@@ -121,17 +121,17 @@ module Ldap
       def build_operations_for_update(entity)
         current_values   = find_values_via_ldap(entity).with_indifferent_access
         values           = entity.values.with_indifferent_access
-        variances        = []
+        operations       = []
 
         values.each do |key, value|
           next if current_values.key?(key) && current_values[key].eql?(value)
 
-          variances << [(current_values.key?(key) ? :replace : :add), key, value]
+          operations << [(current_values.key?(key) ? :replace : :add), key, value]
         end
 
-        current_values.each { |key, _| variances << [:delete, key, nil] unless values.key?(key) }
+        current_values.each { |key, _| operations << [:delete, key, nil] unless values.key?(key) }
 
-        variances
+        operations
       end
 
       def find_values_via_ldap(entity)

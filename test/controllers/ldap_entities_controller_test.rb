@@ -18,4 +18,10 @@ class LdapEntitiesControllerTest < ActionDispatch::IntegrationTest
     get ldap_entity_path(@entity)
     assert_response :success
   end
+
+  test 'should get start_sync' do
+    get start_sync_ldap_entity_path(@entity)
+    assert_redirected_to ldap_entity_path(@entity)
+    assert_equal translate('ldap_entities.start_sync.success'), flash[:notice]
+  end
 end
