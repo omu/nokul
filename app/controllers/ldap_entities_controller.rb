@@ -14,7 +14,6 @@ class LdapEntitiesController < ApplicationController
   end
 
   def start_sync
-    @entity = LdapEntity.find(params[:id])
     @entity.sync
     redirect_to(@entity, notice: t('.success'))
   end
