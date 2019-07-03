@@ -44,11 +44,11 @@
         <table class="table table-responsive-sm">
           <tbody>
             <tr>
-              <th><%= t('.dn') %></td>
+              <th><%= t('.dn') %></th>
               <td><%= @entity.dn %></td>
             </tr>
             <tr>
-              <th><%= t('.status') %></td>
+              <th><%= t('.status') %></th>
               <td>
                 <span class='badge badge-<%= klass_for_status(@entity.status) %>'>
                   <%= enum_t(@entity, :status) %>
@@ -56,11 +56,11 @@
               </td>
             </tr>
             <tr>
-              <th><%= t('.synchronized_at') %></td>
+              <th><%= t('.synchronized_at') %></th>
               <td><%= l(@entity.synchronized_at) if @entity.synchronized_at?  %></td>
             </tr>
             <tr>
-              <th><%= t('.created_at') %></td>
+              <th><%= t('.created_at') %></th>
               <td><%= l @entity.created_at %></td>
             </tr>
           </tbody>

@@ -18,7 +18,7 @@ module LdapSyncTrigger
               end
 
       if record.destroyed? && record.class.name == 'User'
-        Ldap::Client.destroy(Ldap::Entity.new(user))
+        Ldap::Client.destroy(Ldap::Entity.new(user)) if Ldap::Client.active?
       else
         Ldap::EntitySaveJob.perform_later(user)
       end

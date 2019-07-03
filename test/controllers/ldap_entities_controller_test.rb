@@ -11,7 +11,7 @@ class LdapEntitiesControllerTest < ActionDispatch::IntegrationTest
   test 'should get index' do
     get ldap_entities_path
     assert_response :success
-    assert_select '#collapseSmartSearchLink', t('smart_search')
+    assert_select '#collapseSearchLink', t('search')
   end
 
   test 'should get show' do
