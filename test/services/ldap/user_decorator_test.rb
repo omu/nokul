@@ -46,5 +46,10 @@ module Ldap
       assert     @user2.affiliate?
       assert_not @user1.affiliate?
     end
+
+    test 'user can respond to units_by method' do
+      assert_includes     @user1.units_by(:faculty), units(:egitim_bilimleri_enstitusu)
+      assert_not_includes @user1.units_by(:faculty), units(:uzem)
+    end
   end
 end
