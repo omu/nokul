@@ -23,9 +23,11 @@ tr:
         activated: Hesap Aktifleştirme
         activated_at: Hesap Aktifleştirme Tarihi
         articles_count: Makale Sayısı
+        country: Ülke
         current_password: Mevcut Parola
         email: E-mail Adresi
         id_number: Kimlik Numarası
+        mobile_phone: Cep Telefonu
         password: Parola
         password_changed_at: Son Parola Değişikliği
         password_confirmation: Parola (Tekrar)

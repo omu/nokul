@@ -11,24 +11,19 @@ Tüm kiracılarda ortak olarak kullanılan lojiği barındıran modül.
 İlkleme
 -------
 
-Aktif kiracı aşağıdaki olay sırasıyla yüklenir.  Örneklendirme
-`Nokul::Tenant::OMU` kiracısı üzerinden yapılmıştır.
+Aktif kiracı aşağıdaki olay sırasıyla yüklenir.  Örneklendirme `Nokul::Tenant::OMU` kiracısı üzerinden yapılmıştır.
 
-- `NOKUL_TENANT` ortam değişkeni ayarlanır.  Geçerli değer `plugins/tenant`
-  dizini altındaki bir dizin adı (`common` dışında) olmalıdır.  Örneğin
-  `NOKUL_TENANT=omu` ise `plugins/tenant/omu` dizini hedef alınmıştır.
+- `NOKUL_TENANT` ortam değişkeni ayarlanır.  Geçerli değer `plugins/tenant` dizini altındaki bir dizin adı (`common`
+  dışında) olmalıdır.  Örneğin `NOKUL_TENANT=omu` ise `plugins/tenant/omu` dizini hedef alınmıştır.
 
-- `config/application` yapılandırmasında
-  `plugins/tenant/common/lib/nokul/tenant.rb` dosyasında tanımlı
+- `config/application` yapılandırmasında `plugins/tenant/common/lib/nokul/tenant.rb` dosyasında tanımlı
   `Nokul::Tenant.load` çağrılır.
 
-- `Nokul::Tenant.load` Tenant adını `plugins/tenant` altındaki ilgili Gem ile
-  eşleştirerek Gem'i `require` ile yükler; örneğin `plugins/tenant/omu`.
+- `Nokul::Tenant.load` Tenant adını `plugins/tenant` altındaki ilgili Gem ile eşleştirerek Gem'i `require` ile yükler;
+  örneğin `plugins/tenant/omu`.
 
-- Yüklenen Gem'de `lib/nokul/tenant/omu/engine.rb` dosyasında tanımlı
-  `Nokul::Tenant::OMU < Rails::Engine` sınıfı
-  `plugins/tenant/common/lib/nokul/tenant/engine.rb` dosyasında tanımlı
-  `Nokul::Tenant::Engine` modülünü katıştırır.
+- Yüklenen Gem'de `lib/nokul/tenant/omu/engine.rb` dosyasında tanımlı `Nokul::Tenant::OMU < Rails::Engine` sınıfı
+  `plugins/tenant/common/lib/nokul/tenant/engine.rb` dosyasında tanımlı `Nokul::Tenant::Engine` modülünü katıştırır.
 
   ```ruby
   class Nokul::Tenant::KİRACI < Rails::Engine
@@ -38,24 +33,22 @@ Aktif kiracı aşağıdaki olay sırasıyla yüklenir.  Örneklendirme
   end
   ```
 
-- `Nokul::Tenant::Engine` bir `ActiveSupport::Concern` modülüdür.  Modülde
-  tanımlı `included` hook ile `plugins/tenant/common/lib/nokul/tenant.rb`
-  dosyasındaki `Nokul::Tenant.initialize` metodu çağrılarak, metoda aktif Tenant
-  sınıf adı geçirilir.
+- `Nokul::Tenant::Engine` bir `ActiveSupport::Concern` modülüdür.  Modülde tanımlı `included` hook ile
+  `plugins/tenant/common/lib/nokul/tenant.rb` dosyasındaki `Nokul::Tenant.initialize` metodu çağrılarak, metoda aktif
+  Tenant sınıf adı geçirilir.
 
   ```ruby
   Nokul::Tenant.initialize(Nokul::Tenant::OMU)
   ```
 
-- `Nokul::Tenant.initialize` kendisine geçirilen aktif Tenant sınıfı bilgisini
-  kullanarak `Nokul::Tenant.engine` atamasını yapar.
+- `Nokul::Tenant.initialize` kendisine geçirilen aktif Tenant sınıfı bilgisini kullanarak `Nokul::Tenant.engine`
+  atamasını yapar.
 
   ```ruby
   Nokul::Tenant.engine = Nokul::Tenant::OMU.instance
   ```
 
-- Artık aktif Tenant atandığından `plugins/tenant/omu/config/tenant.yml`
-  dosyasındaki ana yapılandırma yüklenebilir.
+- Artık aktif Tenant atandığından `plugins/tenant/omu/config/tenant.yml` dosyasındaki ana yapılandırma yüklenebilir.
 
   ```ruby
   Nokul::Tenant.configuration = Nokul::Tenant.engine.deep_config_for :tenant
@@ -64,9 +57,7 @@ Aktif kiracı aşağıdaki olay sırasıyla yüklenir.  Örneklendirme
 API
 ---
 
-Tüm Nokul::Tenant API metodlarını aşağıdaki dosyada bulabilirsiniz.
-
-        plugins/tenant/common/lib/nokul/tenant/api.rb
+Tüm Nokul::Tenant API metodlarını `plugins/tenant/common/lib/nokul/tenant/api.rb` dosyasında bulabilirsiniz.
 
 - `Nokul::Tenant.name`:  Aktif Tenant adını döner.
 
@@ -78,10 +69,9 @@ Tüm Nokul::Tenant API metodlarını aşağıdaki dosyada bulabilirsiniz.
 
 - `Nokul::Tenant.engine`: Aktif Tenant nesnesini döner.
 
-  `Rails::Engine` sınıfından miras alan bu nesne `Ruby.application` ana uygulama
-  nesnesiyle benzer bir işleve sahiptir.  `Rails::Engine` sınıfındaki bazı
-  metodları çalıştırmak için nadir durumlarda kullanılır.  Çoğu durumda bu
-  nesneyi kullanmak yerine aşağıdaki sarmalayıcı metodları kullanmak yeterlidir.
+  `Rails::Engine` sınıfından miras alan bu nesne `Ruby.application` ana uygulama nesnesiyle benzer bir işleve sahiptir.
+  `Rails::Engine` sınıfındaki bazı metodları çalıştırmak için nadir durumlarda kullanılır.  Çoğu durumda bu nesneyi
+  kullanmak yerine aşağıdaki sarmalayıcı metodları kullanmak yeterlidir.
 
 - `Nokul::Tenant.configuration`: Aktif Tenant yapılandırması.
 
@@ -98,9 +88,8 @@ Tüm Nokul::Tenant API metodlarını aşağıdaki dosyada bulabilirsiniz.
   Nokul::Tenant.root #=> '/rails/root/plugins/tenant/omu'
   ```
 
-- `Nokul::Tenant.deep_config_for(name)`: Aktif Tenant için verilen `name`
-  yapılandırmasının ilgili ortamda etkin bölümünü içi içe `OpenStruct` nesnesi
-  halinde döner.
+- `Nokul::Tenant.deep_config_for(name)`: Aktif Tenant için verilen `name` yapılandırmasının ilgili ortamda etkin
+  bölümünü içi içe `OpenStruct` nesnesi halinde döner.
 
   Örnek:
 
@@ -118,8 +107,7 @@ Tüm Nokul::Tenant API metodlarını aşağıdaki dosyada bulabilirsiniz.
   foo_config.bar.baz #=> 'ok'
   ```
 
-- `Nokul::Tenant.load(fallback: DEFAULT_TENANT)`: `NOKUL_TENANT` ortam
-  değişkenine bakarak aktif Tenantı yükler.
+- `Nokul::Tenant.load(fallback: DEFAULT_TENANT)`: `NOKUL_TENANT` ortam değişkenine bakarak aktif Tenantı yükler.
 
   Örnek:
 
@@ -127,9 +115,8 @@ Tüm Nokul::Tenant API metodlarını aşağıdaki dosyada bulabilirsiniz.
   Nokul::Tenant.load
   ```
 
-- `Nokul::Tenant.units(predication = nil)`: Birleştirilmiş birimler
-  kolleksiyonunu (`src/all` kaynağından yükleyerek) döner.  İsteğe bağlı olarak
-  verilen `predication` argümanıyla dönülen kolleksiyonda filtreleme yapar.
+- `Nokul::Tenant.units(predication = nil)`: Birleştirilmiş birimler kolleksiyonunu (`src/all` kaynağından yükleyerek)
+  döner.  İsteğe bağlı olarak verilen `predication` argümanıyla dönülen kolleksiyonda filtreleme yapar.
 
   Örnek:
 
@@ -139,14 +126,11 @@ Tüm Nokul::Tenant API metodlarını aşağıdaki dosyada bulabilirsiniz.
   Nokul::Tenant.units :academic       #=> Sadece akademik birimler
   ```
 
-  Kullanılabilecek `predication` seçenekleri için aşağıdaki dosyaya başvurun
-  (method adlarındaki `?` karakterini kaldırmayı unutmayın).
+  Kullanılabilecek `predication` seçenekleri için `plugins/tenant/common/lib/nokul/tenant/units/concerns/predicable.rb`
+  dosyasına başvurun (method adlarındaki `?` karakterini kaldırmayı unutmayın).
 
-        plugins/tenant/common/lib/nokul/tenant/units/concerns/predicable.rb
-
-- `Nokul::Tenant.unit_types(category = nil)`: Birleştirilmiş birimler bağlamında
-  tüm tekil birim tiplerini döner.  İsteğe bağlı olarak verilen `category`
-  argümanıyla sadece ilgili kategorideki birim tiplerini döner.  `category`
+- `Nokul::Tenant.unit_types(category = nil)`: Birleştirilmiş birimler bağlamında tüm tekil birim tiplerini döner.
+  İsteğe bağlı olarak verilen `category` argümanıyla sadece ilgili kategorideki birim tiplerini döner.  `category`
   argümanı `adminisitrative` ve `academic` değerlerini alabilir.
 
   Örnek:

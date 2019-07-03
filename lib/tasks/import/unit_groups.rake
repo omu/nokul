@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
 namespace :import do
-  desc 'Imports administrative_units from db/static_data'
+  desc 'Import administrative units from db/static_data'
   task unit_groups: :environment do
-    # unit_type grouping
     types_and_groups = {
       other:                 [
         'Eğitim Araştırma Hastanesi',

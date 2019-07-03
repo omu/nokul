@@ -58,9 +58,7 @@ dosyalarda daima `.enc` uzantısı kullanıldığı varsayılır.
 
   `foo.txt.enc` şifrelenmiş dosyası oluşturulur.
 
-
 Bu modülü kullanmadan önce lütfen aşağıdaki hususları dikkate alın:
-
 
 - Hassas verileri **tercihen** depoya eklemeyin. Bu mümkün değilse
   `RAILS_MASTER_KEY` ile simetrik şekilde şifreleyerek depoya ekleyin.
@@ -71,7 +69,6 @@ Bu modülü kullanmadan önce lütfen aşağıdaki hususları dikkate alın:
 - Şifrelenen dosyaları tercihen tek bir dizinde `.enc` uzantısıyla toplayın.
   Örneğin `db` dizinindeki dosyalar için standart olarak  `db/enc` dizinini
   kullanabilirsiniz.
-
 
 - Dosyayı şifreledikten sonra şifrelenmemiş dosyayı silerek şifrelenmişi depoya ekleyin.
 

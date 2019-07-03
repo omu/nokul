@@ -1,0 +1,7 @@
+tr:
+  layouts:
+    shared:
+      phone_verification_modal:
+        verification_code: Doğrulama Kodu
+        verify: Doğrula
+        verify_your_phone: Telefonunuzu Doğrulayın

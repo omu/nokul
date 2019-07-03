@@ -65,7 +65,7 @@ module Activation
     end
 
     def verification_code_sent?
-      Twilio::Verify.send_phone_verification_code(mobile_phone) == 'ok'
+      Twilio::Verify.send_phone_verification_code(mobile_phone).ok?
     end
 
     def active
