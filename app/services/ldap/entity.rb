@@ -4,14 +4,58 @@ module Ldap
   class Entity
     # rubocop:disable Naming/MethodName
     module Attributes
+      # Schema: person
       def cn
         user.full_name
       end
 
+      # Schema: person
+      def sn
+        user.last_name
+      end
+
+      def uid
+        user.id_number
+      end
+
+      # Schema: person
+      def userPassword
+        "{BCRYPT}#{user.encrypted_password}"
+      end
+
+      # Schema: inetOrgPerson
       def displayName
         user.full_name
       end
 
+      # Schema: inetOrgPerson
+      def givenName
+        user.first_name
+      end
+
+      # Schema: inetOrgPerson
+      def jpegPhoto
+        return unless user.avatar.attached?
+
+        Base64.encode64(user.avatar.download)
+      end
+
+      # Schema: inetOrgPerson
+      def mail
+        user.email
+      end
+
+      # Schema: inetOrgPerson
+      def mobile
+        user.mobile_phone
+      end
+
+      # Schema: inetOrgPerson
+      def preferredLanguage
+        user.preferred_language
+      end
+
+      # Schema: eduPerson
       def eduPersonAffiliation
         user.ldap_roles
             .map { |role| prefixes_for_role(role) }
@@ -19,22 +63,24 @@ module Ldap
             .uniq
       end
 
+      # Schema: eduPerson
       def eduPersonPrimaryAffiliation
         user.ldap_roles.min_by { |role| ROLE_DEPENDENCIES.keys.index(role) }.to_s
       end
 
+      # Schema: eduPerson
       def eduPersonPrincipalName
         "#{user.username}@#{Tenant.configuration.ldap.organization}"
       end
 
+      # Schema: eduPerson
       def eduPersonPrincipalNamePrior
         'onceki_username'
       end
 
-      # Format
-      #   role@_.unit-identifiers.join('.').domain
-      # Example
-      #   student@_.bilgisayar-pr.bilgisayar.muhendislik.omu.edu.tr
+      # Format:  role@_.unit-identifiers.join('.').domain
+      # Schema:  eduPerson
+      # Example: student@_.bilgisayar-pr.bilgisayar.muhendislik.omu.edu.tr
       def eduPersonScopedAffiliation
         user.ldap_roles.map do |role|
           user.units_by(role).map do |unit|
@@ -45,56 +91,36 @@ module Ldap
         end.flatten
       end
 
-      def givenName
-        user.first_name
-      end
-
-      def jpegPhoto
-        return unless user.avatar.attached?
-
-        Base64.encode64(user.avatar.download)
-      end
-
-      def mail
-        user.email
-      end
-
-      def mobile
-        user.mobile_phone
-      end
-
-      def preferredLanguage
-        user.preferred_language
-      end
-
+      # Schema: schacPersonalCharacteristics
       def schacCountryOfCitizenship
         user.country_of_citizenship&.alpha_2_code&.downcase
       end
 
-      # Format:
-      #   YYYYMMDD
-      # Example:
-      #   19660412
+      # Format:  YYYYMMDD
+      # Schema:  schacPersonalCharacteristics
+      # Example: 19660412
       def schacDateOfBirth
         user.date_of_birth.try(:strftime, '%Y%m%d')
       end
 
+      # Schema: schacEntryMetadata
       def schacExpiryDate
         # TODO: Will be determined in the future
       end
 
+      # Schema: schacPersonalCharacteristics
       def schacGender
         user.ldap_gender
       end
 
+      # Schema: schacContactLocation
       def schacHomeOrganization
         Tenant.configuration.ldap.organization
       end
 
-      # Format:
-      #  urn:schac:personalUniqueCode:CountryCode:iNSS
-      # Example:
-      #  urn:schac:personalUniqueCode:tr:employeeID:omu.edu.tr:12345
+      # Format:  urn:schac:personalUniqueCode:CountryCode:iNSS
+      # Schema:  schacLinkageIdentifiers
+      # Example: urn:schac:personalUniqueCode:tr:employeeID:omu.edu.tr:12345
       def schacPersonalUniqueCode
         codes = {
           employeeID: user.staff_numbers,
@@ -106,42 +132,30 @@ module Ldap
         end.flatten
       end
 
-      # Format:
-      #  n:schac:personalUniqueID:CountryCode:ID Type:ID
-      # Example:
-      #  urn:schac:personalUniqueID:tr:NIN:12345678901
+      # Format:  urn:schac:personalUniqueID:CountryCode:ID Type:ID
+      # Schema:  schacLinkageIdentifiers
+      # Example: urn:schac:personalUniqueID:tr:NIN:12345678901
       def schacPersonalUniqueID
         [
           "urn:schac:personalUniqueID:tr:NIN:#{user.id_number}"
         ]
       end
 
+      # Schema: schacPersonalCharacteristics
       def schacPlaceOfBirth
         user.place_of_birth_for_ldap
       end
 
+      # Schema: schacUserEntitlements
       def schacUserStatus
         # TODO: Will be determined in the future
       end
 
-      # Format:
-      #   YYYY
-      # Example:
-      #   1966
+      # Format: YYYY
+      # Schema: schacExperimentalOC
+      # Example: 1966
       def schacYearOfBirth
         user.date_of_birth.try(:strftime, '%Y')
-      end
-
-      def sn
-        user.last_name
-      end
-
-      def uid
-        user.id_number
-      end
-
-      def userPassword
-        "{BCRYPT}#{user.encrypted_password}"
       end
 
       def objectclass

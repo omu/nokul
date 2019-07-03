@@ -9,7 +9,7 @@ module Ldap
     def initialize
       @username = 'cn=admin,dc=test,dc=omu,dc=edu,dc=tr'
       @password = '12345'
-      @host     = 'ldap.vagrant.ga'
+      @host     = '10.20.4.240' # 'ldap.vagrant.ga'
       @client   = generate_client
     end
 
