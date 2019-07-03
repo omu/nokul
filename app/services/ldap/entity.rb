@@ -247,7 +247,7 @@ module Ldap
     end
 
     def dn
-      "uid=#{uid}, ou=people, dc=test, dc=omu, dc=edu, dc=tr"
+      "uid=#{uid}, ou=people, #{Rails.application.credentials.ldap.fetch(:dc, '')}"
     end
 
     def to_hash

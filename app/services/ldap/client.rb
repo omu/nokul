@@ -7,9 +7,9 @@ module Ldap
     attr_reader :client
 
     def initialize
-      @username = 'cn=admin,dc=test,dc=omu,dc=edu,dc=tr'
-      @password = '12345'
-      @host     = '10.20.4.240' # 'ldap.vagrant.ga'
+      @username = configuration[:username]
+      @password = configuration[:password]
+      @host     = configuration[:host]
       @client   = generate_client
     end
 
@@ -24,10 +24,14 @@ module Ldap
         connect_timeout: 1, # sn
         auth:            {
           method:   :simple,
-          username: username,
-          password: password
+          username: username.to_s,
+          password: password.to_s
         }
       )
+    end
+
+    def configuration
+      @configuration ||= Rails.application.credentials.ldap
     end
 
     Error = Class.new(StandardError)
