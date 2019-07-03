@@ -21,7 +21,7 @@ module Ldap
       Net::LDAP.new(
         host:            host,
         port:            389,
-        connect_timeout: 1, # sn
+        connect_timeout: 1, # seconds
         auth:            {
           method:   :simple,
           username: username.to_s,
