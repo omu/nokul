@@ -5,9 +5,7 @@
         <%= fa_icon 'database', text: t('.card_header') %>
       </div>
       <div class='card-body'>
-        <%= render 'layouts/shared/smart_search_form',
-                   path:        :ldap_entities,
-                   placeholder: t('.search') %>
+        <%= render 'search' %>
         <%= render 'entities', entities: @entities %>
       </div>
     </div>

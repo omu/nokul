@@ -1,0 +1,76 @@
+<div id="SearchForms" role="tablist">
+  <div class="card">
+    <div class="card-header" role="tab" id="Search">
+      <h5 class="mb-0">
+        <a class="collapsed"
+           data-toggle="collapse"
+           href="#collapseSearch"
+           id="collapseSearchLink"
+           aria-expanded="false"
+           aria-controls="Search">
+          <%= t('search') %>
+        </a>
+        <div class="float-right">
+          <%= link_to t('reset'), ldap_entities_path, class: 'btn btn-warning btn-sm' %>
+        </div>
+      </h5>
+    </div>
+    <div id="collapseSearch"
+         class="collapse show"
+         role="tabpanel"
+         aria-labelledby="Search"
+         data-parent="#SearchForms">
+      <div class="card-body">
+        <%= form_tag ldap_entities_path, method: :get do %>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <%= label_tag :term, t('smart_search') %>
+                <%= text_field_tag :term,
+                                   params[:term],
+                                   placeholder: t('.smart_search_placeholder'),
+                                   class: 'form-control' %>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <%= label_tag :status, t('.status') %>
+                <%= select_tag(:status,
+                               options_for_select(enum_options_for_select(LdapEntity, :status), params[:status]),
+                               include_blank: true,
+                               class: 'form-control') %>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <%= label_tag :created_at, t('.created_at') %>
+                <%= text_field_tag :created_at,
+                                   params[:created_at],
+                                   include_blank: true,
+                                   class: 'datetimepicker' %>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <%= label_tag :synchronized_at, t('.synchronized_at') %>
+                <%= text_field_tag :synchronized_at,
+                                   params[:synchronized_at],
+                                   include_blank: true,
+                                   class: 'datetimepicker' %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <%= submit_tag t('search'), class: 'btn btn-primary' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  flatpickr(".datetimepicker", { mode: 'range', enableTime: true, altInput: true })
+</script>

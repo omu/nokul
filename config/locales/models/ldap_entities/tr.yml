@@ -25,8 +25,14 @@ tr:
     errors:
       <<: *ldap_sync_error_attributes
     index:
-      search: Tanımlayıcı İsim (DN) ile Ara
       card_header: Ldap Senkronizasyonları
+    search:
+      <<: *ldap_entity_attributes
+      smart_search_placeholder: Tanımlayıcı İsim (DN) ile Ara
     show:
+      <<: *ldap_entity_attributes
+      start_sync: Senkronizasyonu Başlat
       sync_errors: Senkronizasyon Hataları
       sync_information: Senkronizasyon Bilgileri
+    start_sync:
+      success: Senkronizasyon başarıyla başlatıldı

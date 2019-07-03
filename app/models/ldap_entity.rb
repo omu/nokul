@@ -3,11 +3,16 @@
 class LdapEntity < ApplicationRecord
   # search
   include PgSearch
+  include DynamicSearch
+
   pg_search_scope(
     :search,
     against: %i[dn],
     using:   { tsearch: { prefix: true } }
   )
+
+  # dynamic_search
+  search_keys :status, :created_at, :synchronized_at
 
   # enumerations
   enum status: { pending: 0, synchronized: 1, failed: 2 }

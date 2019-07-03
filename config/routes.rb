@@ -52,5 +52,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :ldap_entities
+  resources :ldap_entities do
+    get :start_sync, on: :member
+  end
 end

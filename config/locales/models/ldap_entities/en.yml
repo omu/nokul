@@ -26,8 +26,14 @@ en:
       <<: *ldap_sync_error_attributes
     index:
       <<: *ldap_entity_attributes
-      search: Search with DN
       card_header: Ldap Synchronizations
+    search:
+      <<: *ldap_entity_attributes
+      smart_search_placeholder: Search with DN
     show:
+      <<: *ldap_entity_attributes
+      start_sync: Start Sync
       sync_errors: Sync Errors
       sync_information: Sync Information
+    start_sync:
+      success: Sync started successfully
