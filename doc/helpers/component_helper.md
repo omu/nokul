@@ -43,7 +43,7 @@ Belirlenen durum değerleri için daha önceden belirlelen css class değerini d
 
 Durumlara ve class eşleştirme bilgilerine `ComponentHelper::STATUSES` sabit üzerinden bakabilirsiniz.
 
-#### Argumanlar
+#### Argümanlar
 
 - **status: (zorunlu)** css class değeri istenen durum bilgisi
 
