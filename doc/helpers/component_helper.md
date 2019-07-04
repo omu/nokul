@@ -18,7 +18,7 @@ Bileşenler
 
 Bir dizinin hızlı bir şekilde liste görünümüne dönüştürülmesi sağlayan yardımcı metoddur.
 
-#### Argumanlar
+#### Argümanlar
 
 - **items: (zorunlu)** Listede görüntülenecek değer dizisi
 - **ul_class: (opsiyonel)** *ul* etiketinin css class özelliği *(Default: list-group)*
