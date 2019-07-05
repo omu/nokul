@@ -116,7 +116,7 @@ class User < ApplicationRecord
   end
 
   def student?
-    students.exists?
+    students.active.exists?
   end
 
   def academic?

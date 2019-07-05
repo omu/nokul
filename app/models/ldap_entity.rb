@@ -40,7 +40,7 @@ class LdapEntity < ApplicationRecord
   end
 
   def sync
-    Ldap::SyncJob.perform_later(self)
+    Ldap::SyncJob.perform_later(self) if user
   end
 
   private

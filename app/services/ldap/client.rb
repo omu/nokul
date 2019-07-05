@@ -10,17 +10,18 @@ module Ldap
       @username = configuration[:username]
       @password = configuration[:password]
       @host     = configuration[:host]
+      @port     = configuration[:port]
       @client   = generate_client
     end
 
     private
 
-    attr_reader :host, :username, :password
+    attr_reader :host, :username, :password, :port
 
     def generate_client
       Net::LDAP.new(
         host:            host,
-        port:            389,
+        port:            port,
         connect_timeout: 1, # sn
         auth:            {
           method:   :simple,
