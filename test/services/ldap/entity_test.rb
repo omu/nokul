@@ -31,7 +31,7 @@ module Ldap
     end
 
     test 'eduPersonPrincipalNamePrior attribute' do
-      assert_equal @entity.eduPersonPrincipalNamePrior, 'onceki_username'
+      assert_equal @entity.eduPersonPrincipalNamePrior, []
     end
 
     test 'eduPersonScopedAffiliation attribute' do

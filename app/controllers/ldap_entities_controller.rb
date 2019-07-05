@@ -29,8 +29,8 @@ class LdapEntitiesController < ApplicationController
     %i[created_at synchronized_at].each do |attribute|
       next unless filters.key?(attribute) && filters[attribute].present?
 
-      splited_date       = filters[attribute].split(' - ').sort
-      filters[attribute] = splited_date.first..splited_date.last
+      dates              = filters[attribute].split(' - ').sort
+      filters[attribute] = dates.first..dates.last
     end
 
     filters

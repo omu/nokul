@@ -75,7 +75,7 @@ module Ldap
 
       # Schema: eduPerson
       def eduPersonPrincipalNamePrior
-        'onceki_username'
+        []
       end
 
       # Format:  role@_.unit-identifiers.join('.').domain
@@ -192,7 +192,7 @@ module Ldap
       schacExperimentalOC
     ].freeze
 
-    # INFO: Liste anahtarlarının sırası önceliği belirtir.
+    # NOTE: Role keys are listed in order of priority
     ROLE_DEPENDENCIES = {
       faculty: %i[member employee],
       staff:   %i[member employee],
