@@ -1,12 +1,15 @@
 serhat:
   student_number: 12345
   user: serhat
-  unit: su
+  unit: bilgisayar_muhendisligi_programı
+  permanently_registered: true
 serhat_omu:
   student_number: 98765
   user: serhat
-  unit: omu
+  unit: matematik_ogretmenligi_programi
+  permanently_registered: true
 john:
   student_number: 45612
   user: john
   unit: bilgisayar_muhendisligi
+  permanently_registered: true

@@ -32,10 +32,10 @@ module CalendarManagement
       assert_difference('Calendar.count') do
         post calendars_path, params: {
           calendar: {
-            name: 'Sample Calendar',
-            description: 'lorem and ipsum',
-            timezone: 'Istanbul',
-            academic_term_id: AcademicTerm.first.id,
+            name:                   'Sample Calendar',
+            description:            'lorem and ipsum',
+            timezone:               'Istanbul',
+            academic_term_id:       AcademicTerm.first.id,
             committee_decision_ids: [committee_decisions(:one).id]
           }
         }

@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 class Duty < ApplicationRecord
+  # Ldap
+  include LdapSyncTrigger
+  ldap_sync_trigger ->(obj) { obj.employee.user }
+
   # relations
   belongs_to :employee
   belongs_to :unit

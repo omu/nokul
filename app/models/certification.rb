@@ -6,16 +6,16 @@ class Certification < ApplicationRecord
   # enums
   enum type: {
     certification: 1,
-    course: 2,
-    research: 3,
-    study: 4,
-    report: 5,
-    workshop: 6,
-    interview: 7,
-    essay: 8,
-    evaluation: 9,
-    conversation: 10,
-    translation: 11
+    course:        2,
+    research:      3,
+    study:         4,
+    report:        5,
+    workshop:      6,
+    interview:     7,
+    essay:         8,
+    evaluation:    9,
+    conversation:  10,
+    translation:   11
   }
 
   enum scope: { national: 0, international: 1 }
@@ -25,7 +25,7 @@ class Certification < ApplicationRecord
   belongs_to :user
 
   # validations
-  validates :yoksis_id, uniqueness: { scope: %i[user_id status] },
+  validates :yoksis_id, uniqueness:   { scope: %i[user_id status] },
                         numericality: { only_integer: true, greater_than: 0 }
   validates :title, presence: true, length: { maximum: 255 }
   validates :type, inclusion: { in: types.keys }

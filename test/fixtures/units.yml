@@ -1,5 +1,6 @@
 omu:
   name: Ondokuz Mayıs Üniversitesi
+  abbreviation: OMÜ
   yoksis_id: 121946
   founded_at: 11.04.1975
   duration:
@@ -12,6 +13,7 @@ omu:
 
 omu_rektorluk:
   name: Rektörlük
+  abbreviation: REKTÖRLÜK
   yoksis_id: 122287
   founded_at:
   duration:
@@ -49,6 +51,7 @@ su:
 
 uzem:
   name: Uzaktan Eğitim Araştırma ve Uygulama Merkezi
+  abbreviation: UZEM
   yoksis_id: 169431
   duration:
   district: atakum
@@ -60,6 +63,7 @@ uzem:
 
 baum:
   name: Bilgisayar Araştırmaları Uygulama ve Araştırma Merkezi
+  abbreviation: BAUM
   yoksis_id: 327269
   founded_at: 27.07.2017
   duration:
@@ -85,6 +89,7 @@ muhendislik_fakultesi_yonetim_kurulu:
 
 egitim_fakultesi:
   name: Eğitim Fakültesi
+  abbreviation: EĞİTİM
   yoksis_id: 122082
   duration:
   district: atakum
@@ -96,6 +101,7 @@ egitim_fakultesi:
 
 muhendislik_fakultesi:
   name: Mühendislik Fakültesi
+  abbreviation: MÜHENDİSLİK
   yoksis_id: 122082
   duration:
   district: atakum
@@ -107,6 +113,7 @@ muhendislik_fakultesi:
 
 bilgisayar_muhendisligi:
   name: Bilgisayar Mühendisliği Bölümü
+  abbreviation: BİLGİSAYAR
   yoksis_id: 122184
   duration: 4
   district: atakum
@@ -121,6 +128,7 @@ bilgisayar_muhendisligi:
 
 bilgisayar_muhendisligi_programı:
   name: Bilgisayar Mühendisliği Pr.
+  abbreviation: BİLGİSAYAR-PR
   yoksis_id: 168861
   duration: 4
   district: atakum
@@ -137,6 +145,7 @@ bilgisayar_muhendisligi_programı:
 
 matematik_ve_fen_bilimleri_egitimi_bolumu:
   name: Matematik Ve Fen Bilimleri Eğitimi Bölümü
+  abbreviation: MATEMATİK-FEN
   yoksis_id: 298694
   duration: 4
   district: atakum
@@ -151,6 +160,7 @@ matematik_ve_fen_bilimleri_egitimi_bolumu:
 
 fen_bilgisi_ogretmenligi_programi:
   name: Fen Bilgisi Öğretmenliği Pr.
+  abbreviation: MF-FEN-PR
   yoksis_id: 168656
   duration: 4
   district: atakum
@@ -167,6 +177,7 @@ fen_bilgisi_ogretmenligi_programi:
 
 matematik_ogretmenligi_programi:
   name: Matematik Öğretmenliği Pr.
+  abbreviation: MF-MAT-PR
   yoksis_id: 168671
   duration: 4
   district: atakum
@@ -183,6 +194,7 @@ matematik_ogretmenligi_programi:
 
 ilkogretim_matematik_ogretmenligi:
   name: İlköğretim Matematik Öğretmenliği Pr.
+  abbreviation: MF-İLKMAT-PR
   yoksis_id: 168663
   duration: 4
   district: atakum
@@ -199,6 +211,7 @@ ilkogretim_matematik_ogretmenligi:
 
 bote_bolumu:
   name: Bilgisayar Ve Öğretim Teknolojileri Eğitimi Bölümü
+  abbreviation: BÖTE
   yoksis_id: 122154
   duration: 4
   district: atakum
@@ -213,6 +226,7 @@ bote_bolumu:
 
 bote_anabilim_dali:
   name: Bilgisayar Öğretim Ve Teknolojisi Eğitimi Anabilim Dalı
+  abbreviation: BÖTE-ABD
   yoksis_id: 122115
   duration:
   district: atakum
@@ -228,6 +242,7 @@ bote_anabilim_dali:
 
 egitim_bilimleri_enstitusu:
   name: Eğitim Bilimleri Enstitüsü
+  abbreviation: EĞİTİM-BİLİM
   yoksis_id: 174846
   duration:
   district: atakum
@@ -239,6 +254,7 @@ egitim_bilimleri_enstitusu:
 
 alman_dili_egitimi_dr:
   name: Alman Dili Eğitimi (dr)
+  abbreviation: EĞİTİM-BİLİM-ALM-DR
   yoksis_id:  267762
   duration: 4
   district: atakum
@@ -253,6 +269,7 @@ alman_dili_egitimi_dr:
 
 veteriner_fakultesi:
   name: Veteriner Fakültesi
+  abbreviation: VETERİNER
   yoksis_id: 122233
   district: atakum
   unit_status: active
@@ -263,6 +280,7 @@ veteriner_fakultesi:
 
 senate:
   name: Senato
+  abbreviation: SENATO
   detsis_id: 999999
   district: atakum
   unit_status: active

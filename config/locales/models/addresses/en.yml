@@ -5,7 +5,6 @@ en:
         country: Country
         district: District
         full_address: Full Address
-        phone_number: Phone Number
         type: Address Type
     enums:
       address:

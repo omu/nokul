@@ -30,13 +30,13 @@ module FirstRegistration
     test 'should create prospective student' do
       academic_term = academic_terms(:fall_2018_2019)
       parameters = {
-        id_number: '78784545987',
-        first_name: 'Test First Name',
-        last_name: 'TEST SURNAME',
-        gender: 'male',
-        unit_id: units(:bilgisayar_muhendisligi).id,
-        academic_term_id: academic_term.id,
-        expiry_date: academic_term.end_of_term,
+        id_number:                '78784545987',
+        first_name:               'Test First Name',
+        last_name:                'TEST SURNAME',
+        gender:                   'male',
+        unit_id:                  units(:bilgisayar_muhendisligi).id,
+        academic_term_id:         academic_term.id,
+        expiry_date:              academic_term.end_of_term,
         student_entrance_type_id: StudentEntranceType.find_by(name: 'ÖSYS').id
       }
 

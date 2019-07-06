@@ -9,7 +9,7 @@ class Unit < ApplicationRecord
   pg_search_scope(
     :search,
     against: %i[name yoksis_id detsis_id abbreviation],
-    using: { tsearch: { prefix: true } }
+    using:   { tsearch: { prefix: true } }
   )
 
   # dynamic_search
@@ -119,5 +119,9 @@ class Unit < ApplicationRecord
   def subtree_employees
     Employee.includes(:user, :title).joins(:units, user: :identities)
             .where(units: { id: subtree.active.ids })
+  end
+
+  def effective_unit
+    Unit.find_by(yoksis_id: effective_yoksis_id) if effective_yoksis_id.present?
   end
 end

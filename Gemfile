@@ -24,6 +24,7 @@ gem 'ancestry'
 # active-storage
 gem 'aws-sdk-s3', require: false
 gem 'image_processing', '~> 1.2'
+gem 'ruby-vips', '2.0.13'
 
 # authentication
 gem 'authy'
@@ -31,6 +32,9 @@ gem 'devise'
 
 # authorization
 gem 'pundit'
+
+# ldap
+gem 'net-ldap'
 
 # assets: core asset dependencies
 # TODO: Edge versions require coffee-rails https://github.com/rails/rails/issues/28965
@@ -70,7 +74,7 @@ gem 'friendly_id', '~> 5.2.0'
 # sms
 gem 'nexmo'
 gem 'smstools'
-gem 'twilio-ruby', '~> 5.22.3'
+gem 'twilio-ruby', '~> 5.23.0'
 
 group :development, :test do
   gem 'brakeman', require: false
@@ -82,13 +86,14 @@ group :development, :test do
   gem 'lol_dba'
   gem 'rubocop'
   gem 'rubocop-performance'
+  gem 'rubocop-rails'
   gem 'simplecov', require: false
 end
 
 group :test do
   gem 'capybara', '>= 2.15'
   gem 'codacy-coverage', require: false
-  gem 'webdrivers', '~> 3.0'
+  gem 'webdrivers', '~> 4.0'
   gem 'webmock'
 end
 

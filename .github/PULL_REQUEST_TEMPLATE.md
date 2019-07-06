@@ -1,31 +1,47 @@
-**Bu PR'in yaptığı işi/değişikliği ve bu işi/değişikliği neden yaptığını açıklayın:**
+#### Bu PR'in yaptığı işi/değişikliği ve bu işi/değişikliği neden yaptığını açıklayın
 
-[//]: # (Kısa ve net bir şekilde bu PR'e neden ihtiyaç var, ne iş/değişiklik yapıyor açıklanmalıdır.)
+[//]: # (Kısa ve net bir şekilde bu PR'e neden ihtiyaç var?)
+[//]: # (Ne iş/değişiklik yapıyor?)
 
-**İlgili/kapatılacak iş kayıtları:**
+#### İlgili/kapatılacak iş kayıtları
 
-[//]: # (Bu PR merge edildiğinde hangi iş kayıtları kapatılacak ise `Closes`, `Fixes` gibi anahtar kelimeler ile birlikte ID numaralarını listeleyin. Kapatılmayan ancak referans verilecek iş kayıtları için `References` anahtar kelimesini kullanın.)
+[//]: # (PR merge edildiğinde hangi iş kayıtları kapatılacak ise `Closes`, `Fixes` gibi anahtar kelimeler ile birlikte ID numaralarını listele)
+[//]: # (Kapatılmayan ancak referans verilecek iş kayıtları için `References` anahtar kelimesini kullan)
 
-**Veritabanına etkileri:**
+#### Teknik borç kayıtları
 
-[//]: # (Bu PR merge edildiğinde veritabanı üzerinde herhangi bir değişiklik -migration, seed, add/drop vb.- yapılması gerekecek mi açıklayın.)
+[//]: # (PR ile geliştirilen çözümün eksiklikleri varsa "Teknik borç" türünde iş kayıtları oluşturulmalı)
+[//]: # (İş kaydını ön izlemeye al ve aşağıda görüntülenen bağlantıyı yeni sekmede aç)
+[//]: # (Bu şekilde oluşturulan kayıtları `References` anahtar kelimesiyle listele)
+[//]: # (DİKKAT! TEKNİK BORÇ YOKSA AŞAĞIDAKİ SATIRI N/A İLE DEĞİŞTİRİN VEYA SİLİN!)
 
-**Sistem/Ops etkileri:**
+[Teknik borç](../issues/new?labels=debt&template=debt.md)
 
-[//]: # (Bu PR merge edildiğinde sunucular üzerinde bir değişiklik - paket kurulması, buildpack eklenmesi vb. - yapılması gerekecek mi, açıklayın.)
+#### Veritabanına etkileri
 
-**Kontrol listesi:**
+[//]: # (PR merge edildiğinde veritabanı üzerinde herhangi bir düzenleme gerekecek mi?)
+[//]: # (Örnek: migration, seed, add/drop)
 
-* [ ] Açtığınız PR'in başlığı kurallara (sadece ilk harf büyük, emir kipinde problem cümlesi vb.) uygun mu?
-* [ ] [Katkı sağlama dokümanını](https://github.com/omu/nokul/.github/CONTRIBUTING.md) okudunuz mu?
-* [ ] Yaptığınız iş/değişikliği dokümante ettiniz mi?
-* [ ] Yaptığınız iş/değişikliğin testlerini yazdınız mı?
-* [ ] Test coverage oranını kontrol ettiniz mi?
-* [ ] Kod kalitesi (karma) ve test suite dahil olmak üzere tüm entegre kontroller başarıyla geçiyor mu?
-* [ ] Kendinizi bu PR'e assign ettiniz mi?
-* [ ] Yaptığınız iş/değişiklik ile ilgili **tüm** proje üyelerinden review talep ettiniz mi?
-* [ ] Gerekli etiketleri (bug, feature-step, help-wanted vb.) girdiniz mi?
+#### Sistem etkileri
 
-**Ek içerik:**
+[//]: # (PR merge edildiğinde sunucular üzerinde herhangi bir düzenleme gerekecek mi?)
+[//]: # (Örnek: yeni paket kurulması, buildpack eklenmesi)
 
-[//]: # (Varsa kaynaklar, dış bağlantılar, ekran görüntüleri, örnek çözümler ve benzeri diğer kaynakları ekleyiniz.)
+#### Kontrol listesi
+
+- [ ] [Katkı sağlama dokümanını](../blob/master/.github/CONTRIBUTING.md) okudum
+- [ ] İş kaydının başlığı kurallara (sadece ilk harf büyük, emir kipinde problem cümlesi) uygun
+- [ ] Yapılan iş/değişikliği dokümante ettim
+- [ ] Yapılan iş/değişikliğin testlerini yazdım
+- [ ] Test coverage oranını kontrol ettim
+- [ ] Kod kalitesi (karma) ve test suite dahil olmak üzere tüm entegre kontroller başarıyla geçiyor
+- [ ] Kendimi bu PR'e assign ettim
+- [ ] Yapılan iş/değişiklik ile ilgili proje üyelerinden review talep ettim
+- [ ] Gerekli etiketlemeyi (ör. bug) yaptım
+
+#### Ek içerik
+
+[//]: # (Kaynaklar)
+[//]: # (Dış bağlantılar)
+[//]: # (Ekran görüntüleri)
+[//]: # (Örnek çözümler)

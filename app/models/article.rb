@@ -10,41 +10,41 @@ class Article < ApplicationRecord
   enum status: { deleted: 0, active: 1 }
 
   enum index: {
-    ssci: 5,
-    sci_expanded: 6,
-    ahci: 7,
-    field_indexes: 8,
-    well_established_indexes: 9,
-    sci: 40,
-    not_indexed: 42,
-    ebsco: 46,
-    index_islamicus: 47,
-    index_medicus: 48,
-    dental_index: 49,
-    engineering_index: 50,
-    compumath_index: 51,
-    education_index: 52,
+    ssci:                       5,
+    sci_expanded:               6,
+    ahci:                       7,
+    field_indexes:              8,
+    well_established_indexes:   9,
+    sci:                        40,
+    not_indexed:                42,
+    ebsco:                      46,
+    index_islamicus:            47,
+    index_medicus:              48,
+    dental_index:               49,
+    engineering_index:          50,
+    compumath_index:            51,
+    education_index:            52,
     australian_education_index: 53,
-    british_education_index: 54,
-    eric: 55,
-    esci: 56,
-    index_chemicus: 59,
-    turkish_index: 45,
-    art_index: 62
+    british_education_index:    54,
+    eric:                       55,
+    esci:                       56,
+    index_chemicus:             59,
+    turkish_index:              45,
+    art_index:                  62
   }
 
   enum type: {
-    original_article: 1,
-    technical_note: 2,
-    commentary: 3,
-    case_report: 4,
+    original_article:     1,
+    technical_note:       2,
+    commentary:           3,
+    case_report:          4,
     letter_to_the_editor: 5,
-    abstract: 6,
-    book_review: 7,
-    research_note: 8,
-    expert_report: 9,
-    review_article: 10,
-    short_article: 11
+    abstract:             6,
+    book_review:          7,
+    research_note:        8,
+    expert_report:        9,
+    review_article:       10,
+    short_article:        11
   }
 
   # relations
@@ -72,13 +72,13 @@ class Article < ApplicationRecord
   validates :review, allow_nil: true, inclusion: { in: reviews.keys }
   validates :index, allow_nil: true, inclusion: { in: indices.keys }
   validates :country, allow_nil: true, numericality: { only_integer: true, greater_than: 0 }
-  validates :month, allow_nil: true,
+  validates :month, allow_nil:    true,
                     numericality: { only_integer: true, greater_than: 0, less_than_or_equal_to: 12 }
-  validates :year, allow_nil: true,
+  validates :year, allow_nil:    true,
                    numericality: { only_integer: true, greater_than_or_equal_to: 1950, less_than_or_equal_to: 2050 }
-  validates :first_page, allow_nil: true,
+  validates :first_page, allow_nil:    true,
                          numericality: { only_integer: true, greater_than: 0, less_than_or_equal_to: 15_000 }
-  validates :last_page, allow_nil: true,
+  validates :last_page, allow_nil:    true,
                         numericality: { only_integer: true, greater_than: 0, less_than_or_equal_to: 15_000 }
   validates :access_type, allow_nil: true, inclusion: { in: access_types.keys }
   validates :special_issue, allow_nil: true, numericality: { only_integer: true, greater_than: 0 }

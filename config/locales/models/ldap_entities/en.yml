@@ -1,0 +1,39 @@
+en:
+  activerecord:
+    attributes:
+      ldap_entity: &ldap_entity_attributes
+        created_at: Created Date
+        dn: Distinguished Name (DN)
+        status: Status
+        synchronized_at: Synchronized Date
+        user: User
+        values: Values for Ldap Attributes
+      ldap_sync_error: &ldap_sync_error_attributes
+        created_at: Created Date
+        description: Description
+        resolved: Resolving Status
+    enums:
+      ldap_entity:
+        statuses:
+          failed: Failed
+          pending: Pending
+          synchronized: Synchronized
+  ldap_entities:
+    entities:
+      <<: *ldap_entity_attributes
+      id_number: ID Number
+    errors:
+      <<: *ldap_sync_error_attributes
+    index:
+      <<: *ldap_entity_attributes
+      card_header: Ldap Synchronizations
+    search:
+      <<: *ldap_entity_attributes
+      smart_search_placeholder: Search with DN
+    show:
+      <<: *ldap_entity_attributes
+      start_sync: Start Sync
+      sync_errors: Sync Errors
+      sync_information: Sync Information
+    start_sync:
+      success: Sync started successfully

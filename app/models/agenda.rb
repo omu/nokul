@@ -8,7 +8,7 @@ class Agenda < ApplicationRecord
   pg_search_scope(
     :search,
     against: %i[description],
-    using: { tsearch: { prefix: true } }
+    using:   { tsearch: { prefix: true } }
   )
 
   # dynamic_search

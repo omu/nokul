@@ -1,23 +1,32 @@
 ---
-name: Görev
-about: Yapılacak işin net olduğu ve genellikle lojistik görev ihtiva eden işlerdir.
-labels: task
-
+name: Genel iş kaydı
+about: Gerçekleştirilmesi gereken bir iş kaydı.
 ---
-[//]: # (Yapılması beklenen görevi net olarak yazmalısınız. Örneğin; Öğrenci işleri daire başkanlığından tüm öğrencilerin bulunduğu öğrenci listesini dijital olarak al, json formatında google drive'da nokul ekip drive'ında paylaş ve linkini bu issue'nun altında yorum olarak belirt.)
 
-**Katkı sağlama:**
+#### İş kaydı
 
-[//]: # (Bu iş kaydının size atanmasını istiyor musunuz* Yardımına/bilgisine ihtiyaç duyduğunuz diğer ekip üyeleri varsa burada nasıl bir yardıma ihtiyaç duyduğunuzu belirtin.)
+[//]: # (Kısa ve net şekilde iş kaydının hedeflediği problemi tanımla)
+[//]: # (Kısa ve net bir şekilde çözüm önerini yaz)
 
-* [ ] Evet, bu iş kaydının bana atanmasını istiyorum.
+#### Katkı sağlama
 
-**Kontrol listesi**
+[//]: # (Bu iş kaydının sana atanmasını istiyor musun?)
+[//]: # (Yardımına/bilgisine ihtiyaç duyduğun diğer ekip üyeleri varsa burada nasıl bir yardıma ihtiyaç duyduğunu belirt.)
 
-* [ ] İş kaydınızın başlığı kurallara (sadece ilk harf büyük, emir kipinde problem cümlesi vb.) uygun mu?
-* [ ] [Katkı sağlama dokümanını](https://github.com/omu/nokul/CONTRIBUTING.md) okudunuz mu?
-* [ ] Konuyla ilgili açık olarak bekleyen bir [issue](https://github.com/omu/nokul/issues) veya [pull request](https://github.com/omu/nokul/pulls) olmadığından emin misiniz?
+- [ ] Evet, bu iş kaydının bana atanmasını istiyorum.
 
-**Ek içerik:**
+#### Kontrol listesi
 
-[//]: # (Kaynaklar, dış bağlantılar, ekran görüntüleri, örnek çözümler ve benzeri diğer kaynakları ekleyiniz.)
+- [ ] [Katkı sağlama dokümanını](../blob/master/.github/CONTRIBUTING.md) okudum
+- [ ] İş kaydının başlığı kurallara (sadece ilk harf büyük, emir kipinde problem cümlesi) uygun
+- [ ] İş kaydı hata bildirimi veya ürün özelliği dışında bir niteliğe sahip
+- [ ] İş kaydıyla ilgili uygun etiketlemeleri yaptım
+- [ ] Bu iş kaydıyla alakalı açık olarak bekleyen bir [issue](../issues) yok
+- [ ] Bu iş kaydıyla alakalı açık olarak bekleyen bir [pull request](../pulls) yok
+
+#### Ek içerik
+
+[//]: # (Kaynaklar)
+[//]: # (Dış bağlantılar)
+[//]: # (Ekran görüntüleri)
+[//]: # (Örnek çözümler)

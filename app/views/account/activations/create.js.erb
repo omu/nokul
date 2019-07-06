@@ -1,0 +1,15 @@
+$('#error_messages').html('');
+
+<% if @activation.errors.full_messages.present? %>
+  <% @activation.errors.full_messages.each do |error| %>
+    $('#error_messages').append(
+      "<li class='list-group-item list-group-item-accent-danger list-group-item-danger'> <%= error %> </li>"
+    )
+  <% end %>
+<% else %>
+  $('#verification_modal').html("<%= escape_javascript(render partial: 'layouts/shared/phone_verification_modal', \
+                                                              locals: { action: 'check_phone_verification', \
+                                                                        controller: 'account/activations', \
+                                                                        mobile_phone: @activation.mobile_phone }) %>");
+  $('#verification_modal').modal('show')
+<% end %>

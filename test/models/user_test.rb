@@ -19,6 +19,8 @@ class UserTest < ActiveSupport::TestCase
   has_many :duties, through: :employees
   has_many :units, through: :employees
   has_many :positions, through: :duties
+  has_many :prospective_employees
+  has_many :prospective_students
   has_many :administrative_functions, through: :duties
   # relations with patron
   has_many :scope_assignments, class_name: 'Patron::ScopeAssignment', dependent: :destroy
@@ -41,7 +43,7 @@ class UserTest < ActiveSupport::TestCase
   validates_length_of :extension_number, maximum: 8
   validates_length_of :id_number, is: 11
   validates_length_of :linkedin, maximum: 50
-  validates_length_of :phone_number
+  validates_length_of :fixed_phone
   validates_length_of :skype, maximum: 50
   validates_length_of :twitter, maximum: 50
   validates_length_of :website, maximum: 50
@@ -109,14 +111,25 @@ class UserTest < ActiveSupport::TestCase
     assert users(:serhat).accounts
   end
 
+  test 'user can respond to title method' do
+    assert_equal users(:serhat).title, 'Araştırma Görevlisi'
+  end
+
+  %i[employee? student? academic?].each do |method|
+    test "user can respond to #{method} method" do
+      assert     users(:serhat).public_send(method)
+      assert_not users(:mine).public_send(method)
+    end
+  end
+
   # job tests
   test 'user enqueues Kps::AddressSaveJob after being created' do
     assert_enqueued_with(job: Kps::AddressSaveJob) do
       password = SecureRandom.hex(20).freeze
       User.create(
-        id_number: '12345678912',
-        email: 'fakeuser@fakemail.com',
-        password: password,
+        id_number:             '12345678912',
+        email:                 'fakeuser@fakemail.com',
+        password:              password,
         password_confirmation: password
       )
     end
@@ -126,9 +139,9 @@ class UserTest < ActiveSupport::TestCase
     assert_enqueued_with(job: Kps::IdentitySaveJob) do
       password = SecureRandom.hex(20).freeze
       User.create(
-        id_number: '98765432198',
-        email: 'anotherfakeuser@fakemail.com',
-        password: password,
+        id_number:             '98765432198',
+        email:                 'anotherfakeuser@fakemail.com',
+        password:              password,
         password_confirmation: password
       )
     end

@@ -11,9 +11,9 @@ class CurriculumSemester < ApplicationRecord
 
   # validations
   validates :sequence, numericality: { greater_than: 0 },
-                       uniqueness: { scope: :curriculum_id }
+                       uniqueness:   { scope: :curriculum_id }
   validates :year, numericality: { greater_than: 0 },
-                   uniqueness: { scope: %i[sequence curriculum_id] }
+                   uniqueness:   { scope: %i[sequence curriculum_id] }
   validates :term, uniqueness: { scope: %i[year curriculum_id] }
 
   # custom methods

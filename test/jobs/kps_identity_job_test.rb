@@ -19,11 +19,10 @@ class KpsIdentityJobTest < ActiveJob::TestCase
 
   test 'can perform enqueued jobs for Kps::IdentitySaveJob' do
     skip 'this block on CircleCI since it needs IP permissions to run.' if ENV['CI']
-    assert_performed_jobs 0
-    perform_enqueued_jobs do
+    assert_no_performed_jobs
+    assert_performed_jobs 1, only: Kps::IdentitySaveJob do
       Kps::IdentitySaveJob.perform_later(users(:serhat))
     end
-    assert_performed_jobs 1
   end
 
   test 'KPS::Identity jobs runs in the high priority queue' do

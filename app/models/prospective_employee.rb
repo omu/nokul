@@ -8,7 +8,7 @@ class ProspectiveEmployee < ApplicationRecord
   pg_search_scope(
     :search,
     against: %i[id_number staff_number first_name last_name],
-    using: { tsearch: { prefix: true } }
+    using:   { tsearch: { prefix: true } }
   )
 
   search_keys :unit_id, :title_id, :archived
@@ -18,6 +18,7 @@ class ProspectiveEmployee < ApplicationRecord
 
   # relations
   belongs_to :unit
+  belongs_to :user, optional: true, primary_key: :id_number, foreign_key: :id_number, inverse_of: :prospective_employees
   belongs_to :title
 
   # validations

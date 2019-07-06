@@ -63,7 +63,7 @@ module Nexmo
     def send_message
       response = NEXMO_CLIENT.sms.send(
         from: Tenant.credentials.dig(:nexmo, :from),
-        to: @to_number,
+        to:   @to_number,
         type: @type,
         text: @message
       ).messages.first

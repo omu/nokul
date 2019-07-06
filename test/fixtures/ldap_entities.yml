@@ -1,0 +1,12 @@
+one:
+  user: serhat
+  values: "{\"uid\":\"123456\"}"
+  status: 0
+  dn: 'uid=123456, ou=people, dc=test, dc=omu, dc=edu, dc=tr'
+  synchronized_at:
+two:
+  user: mine
+  values: "{\"uid\":\"987654\"}"
+  status: 2
+  dn: 'uid=987654, ou=people, dc=test, dc=omu, dc=edu, dc=tr'
+  synchronized_at: 2019-05-17 14:26:16

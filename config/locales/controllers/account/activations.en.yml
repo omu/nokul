@@ -1,7 +1,7 @@
 en:
   activemodel:
     attributes:
-      activation/student_activation_service: &activation_attributes
+      activation/activation_service: &activation_attributes
         country: Country
         date_of_birth: Date of Birth
         document_no: Document No
@@ -14,11 +14,11 @@ en:
   account:
     activations:
       already_activated: Your account is already activated.
-      create:
+      check_phone_verification:
         success: Your account has been activated.
       identity_not_verified: Your identity not verified. Make sure that the data you entered is correct.
+      not_send_verify_code: An error occurred sending phone verification code.
       record_not_found: There is no record in the system to activate your account.
-      system_error: The system error has occurred. Please try later.
       new:
         <<: *activation_attributes
         activation: Activation

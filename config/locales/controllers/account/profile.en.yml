@@ -6,7 +6,7 @@ en:
         extension_number: Extension Number
         linkedin: Linkedin Username
         orcid: ORCID
-        phone_number: Fixed Phone Number
+        fixed_phone: Fixed Phone Number
         profile_settings: Profile Settings
         public_photo: Show picture on my profile
         public_studies: Show academic studies on my profile

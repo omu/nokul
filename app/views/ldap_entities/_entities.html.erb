@@ -1,0 +1,26 @@
+<table class='table table-responsive-sm table-striped table-hover'>
+  <thead class='thead-dark'>
+    <tr>
+      <th><%= t('.id_number') %></th>
+      <th><%= t('.dn') %></th>
+      <th><%= t('.status') %></th>
+      <th><%= t('.synchronized_at') %></th>
+      <th><%= t('actions') %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% entities.each do |entity| %>
+      <tr>
+        <td><%= link_to entity.user.id_number, entity.user %></td>
+        <td><%= entity.dn %></td>
+        <td>
+          <span class='badge badge-<%= klass_for_status(entity.status) %>'>
+            <%= enum_t(entity, :status) %>
+          </span>
+        </td>
+        <td><%= l(entity.synchronized_at) if entity.synchronized_at? %></td>
+        <td><%= link_to_show(entity) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

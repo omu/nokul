@@ -17,7 +17,7 @@ Vagrant.configure('2') do |config|
   config.vm.define 'dev', primary: true do |dev|
     dev.vm.box = 'omu/debian-stable-server'
 
-    dev.vm.network 'forwarded_port', guest: 3000, host: 3000
+    dev.vm.network 'forwarded_port', guest: 3000, host: 3000, auto_correct: true
 
     dev.vm.provider :lxc do |lxc|
       lxc.customize 'cgroup.memory.limit_in_bytes', '2048M'
@@ -39,6 +39,11 @@ Vagrant.configure('2') do |config|
 
   config.vm.define 'ldap', autostart: false do |ldap|
     ldap.vm.box = 'omu/debian-stable-server'
+
+    ldap.vm.provider :lxc do |lxc|
+      lxc.customize 'cgroup.memory.limit_in_bytes', '1024M'
+      lxc.customize 'net.0.ipv4.address', '10.0.3.12' # ldap.vagrant.ga
+    end
 
     ldap.vm.network :forwarded_port, guest: 389, host: 1389
 

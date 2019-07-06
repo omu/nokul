@@ -5,6 +5,10 @@ class User < ApplicationRecord
   include Patron::Roleable
   include Patron::Scopable
 
+  # Ldap
+  include LdapSyncTrigger
+  ldap_sync_trigger :self
+
   # virtual attributes
   attr_accessor :country
 
@@ -12,9 +16,9 @@ class User < ApplicationRecord
   include PgSearch
   pg_search_scope(
     :search,
-    against: %i[id_number email],
+    against:            %i[id_number email],
     associated_against: { identities: %i[first_name last_name] },
-    using: { tsearch: { prefix: true } }
+    using:              { tsearch: { prefix: true } }
   )
 
   # authentication
@@ -30,21 +34,32 @@ class User < ApplicationRecord
   has_many :employees, dependent: :destroy
   has_many :projects, dependent: :destroy
   has_many :students, dependent: :destroy
+  has_many :ldap_entities, dependent: :destroy
   has_many :duties, through: :employees
   has_many :units, through: :employees
   has_many :positions, through: :duties
   has_many :administrative_functions, through: :duties
-
+  has_many :prospective_students, primary_key: :id_number,
+                                  foreign_key: :id_number,
+                                  dependent:   :nullify,
+                                  inverse_of:  :user
+  has_many :prospective_employees, primary_key: :id_number,
+                                   foreign_key: :id_number,
+                                   dependent:   :nullify,
+                                   inverse_of:  :user
   # validations
   validates :email, presence: true, uniqueness: true, length: { maximum: 255 }
-  validates :extension_number, allow_blank: true,
-                               length: { maximum: 8 },
+  validates :extension_number, allow_blank:  true,
+                               length:       { maximum: 8 },
                                numericality: { only_integer: true }
   validates :id_number, uniqueness: true, numericality: { only_integer: true }, length: { is: 11 }
   validates :linkedin, allow_blank: true, length: { maximum: 50 }
-  validates :phone_number, length: { maximum: 255 },
-                           allow_blank: true,
-                           telephone_number: { country: proc { |record| record.country }, types: [:fixed_line] }
+  validates :mobile_phone, allow_blank:      true,
+                           length:           { maximum: 255 },
+                           telephone_number: { country: proc { |record| record.country }, types: [:mobile] }
+  validates :fixed_phone, allow_blank:      true,
+                          length:           { maximum: 255 },
+                          telephone_number: { country: proc { |record| record.country }, types: [:fixed_line] }
   validates :password, not_pwned: true
   validates :preferred_language, inclusion: { in: I18n.available_locales.map(&:to_s) }
   validates :skype, allow_blank: true, length: { maximum: 50 }
@@ -65,7 +80,7 @@ class User < ApplicationRecord
     extension_number
     linkedin
     orcid
-    phone_number
+    fixed_phone
     public_photo
     public_studies
     skype
@@ -94,6 +109,18 @@ class User < ApplicationRecord
 
   def title
     employees.active.first.try(:title).try(:name)
+  end
+
+  def employee?
+    employees.active.exists?
+  end
+
+  def student?
+    students.active.exists?
+  end
+
+  def academic?
+    employees.active.academic.exists?
   end
 
   def self.with_most_articles

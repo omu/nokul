@@ -31,8 +31,8 @@ module Patron
 
     test 'should create role' do
       parameters = {
-        name: 'Role Create',
-        identifier: 'role_create',
+        name:           'Role Create',
+        identifier:     'role_create',
         permission_ids: Permission.pluck(:id)
       }
 
@@ -61,8 +61,8 @@ module Patron
       role = patron_roles(:role_to_update)
 
       parameters = {
-        name: 'Role Update',
-        identifier: 'role_update',
+        name:           'Role Update',
+        identifier:     'role_update',
         permission_ids: Patron::Permission.pluck(:id)
       }
       patch patron_role_path(role), params: { patron_role: parameters }

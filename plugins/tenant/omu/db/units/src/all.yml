@@ -15599,6 +15599,7 @@
   code: '387'
   yoksis_id: '304522'
   parent_yoksis_id: '174830'
+  effective_unit_id: '174831'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Çarşamba
@@ -15661,6 +15662,7 @@
   code: '388'
   yoksis_id: '304513'
   parent_yoksis_id: '176334'
+  effective_unit_id: '228131'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Çarşamba
@@ -15683,6 +15685,7 @@
   code: '389'
   yoksis_id: '309085'
   parent_yoksis_id: '176334'
+  effective_unit_id: '228131'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Çarşamba
@@ -17088,6 +17091,7 @@
   code: '398'
   yoksis_id: '299025'
   parent_yoksis_id: '122083'
+  effective_unit_id: '168674'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -17100,6 +17104,7 @@
   code: '399'
   yoksis_id: '299026'
   parent_yoksis_id: '122083'
+  effective_unit_id: '168674'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -17112,6 +17117,7 @@
   code: '400'
   yoksis_id: '299023'
   parent_yoksis_id: '122083'
+  effective_unit_id: '168674'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -17124,6 +17130,7 @@
   code: '401'
   yoksis_id: '299024'
   parent_yoksis_id: '122083'
+  effective_unit_id: '168674'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -17247,6 +17254,7 @@
   code: '407'
   yoksis_id: '308562'
   parent_yoksis_id: '298694'
+  effective_unit_id: '168663'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -17339,6 +17347,7 @@
   code: '413'
   yoksis_id: '308561'
   parent_yoksis_id: '298632'
+  effective_unit_id: '168672'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -17351,6 +17360,7 @@
   code: '414'
   yoksis_id: '304532'
   parent_yoksis_id: '298632'
+  effective_unit_id: '168672'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -17399,6 +17409,7 @@
   code: '417'
   yoksis_id: '299029'
   parent_yoksis_id: '122095'
+  effective_unit_id: '168680'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -17411,6 +17422,7 @@
   code: '418'
   yoksis_id: '299030'
   parent_yoksis_id: '122095'
+  effective_unit_id: '168680'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -17423,6 +17435,7 @@
   code: '419'
   yoksis_id: '299027'
   parent_yoksis_id: '122095'
+  effective_unit_id: '168680'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -17435,6 +17448,7 @@
   code: '420'
   yoksis_id: '299028'
   parent_yoksis_id: '122095'
+  effective_unit_id: '168680'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -17557,6 +17571,7 @@
   code: '426'
   yoksis_id: '299021'
   parent_yoksis_id: '122088'
+  effective_unit_id: '168674'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -17569,6 +17584,7 @@
   code: '427'
   yoksis_id: '299022'
   parent_yoksis_id: '122088'
+  effective_unit_id: '168665'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -17581,6 +17597,7 @@
   code: '428'
   yoksis_id: '299019'
   parent_yoksis_id: '122088'
+  effective_unit_id: '168665'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -17593,6 +17610,7 @@
   code: '429'
   yoksis_id: '299020'
   parent_yoksis_id: '122088'
+  effective_unit_id: '168665'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -18061,6 +18079,7 @@
   code: '442'
   yoksis_id: '304539'
   parent_yoksis_id: '122027'
+  effective_unit_id: '168708'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -18112,6 +18131,7 @@
   code: '445'
   yoksis_id: '299036'
   parent_yoksis_id: '299034'
+  effective_unit_id: '320927'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -18124,6 +18144,7 @@
   code: '446'
   yoksis_id: '299037'
   parent_yoksis_id: '299034'
+  effective_unit_id: '320927'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -18136,6 +18157,7 @@
   code: '447'
   yoksis_id: '309339'
   parent_yoksis_id: '299034'
+  effective_unit_id: '320927'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -18148,6 +18170,7 @@
   code: '448'
   yoksis_id: '299035'
   parent_yoksis_id: '299034'
+  effective_unit_id: '320927'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -18160,6 +18183,7 @@
   code: '449'
   yoksis_id: '309084'
   parent_yoksis_id: '299034'
+  effective_unit_id: '320927'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -18172,6 +18196,7 @@
   code: '450'
   yoksis_id: '299040'
   parent_yoksis_id: '122040'
+  effective_unit_id: '168714'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -18184,6 +18209,7 @@
   code: '451'
   yoksis_id: '299039'
   parent_yoksis_id: '122040'
+  effective_unit_id: '168714'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -18196,6 +18222,7 @@
   code: '452'
   yoksis_id: '299038'
   parent_yoksis_id: '122040'
+  effective_unit_id: '168714'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -18208,6 +18235,7 @@
   code: '453'
   yoksis_id: '299041'
   parent_yoksis_id: '122040'
+  effective_unit_id: '168714'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -18220,6 +18248,7 @@
   code: '454'
   yoksis_id: '308529'
   parent_yoksis_id: '122077'
+  effective_unit_id: '203698'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -18232,6 +18261,7 @@
   code: '455'
   yoksis_id: '308530'
   parent_yoksis_id: '122077'
+  effective_unit_id: '203698'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -18257,6 +18287,7 @@
   code: '457'
   yoksis_id: '299043'
   parent_yoksis_id: '122050'
+  effective_unit_id: '168721'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -18269,6 +18300,7 @@
   code: '458'
   yoksis_id: '299044'
   parent_yoksis_id: '122050'
+  effective_unit_id: '168721'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -18281,6 +18313,7 @@
   code: '459'
   yoksis_id: '299042'
   parent_yoksis_id: '122050'
+  effective_unit_id: '168721'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -18455,6 +18488,7 @@
   code: '462'
   yoksis_id: '304543'
   parent_yoksis_id: '232412'
+  effective_unit_id: '245360'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
@@ -18689,6 +18723,7 @@
   code: '463'
   yoksis_id: '304552'
   parent_yoksis_id: '169584'
+  effective_unit_id: '169586'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Havza
@@ -19211,6 +19246,7 @@
   code: '467'
   yoksis_id: '299071'
   parent_yoksis_id: '214339'
+  effective_unit_id: '245567'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
@@ -19223,6 +19259,7 @@
   code: '468'
   yoksis_id: '299072'
   parent_yoksis_id: '214339'
+  effective_unit_id: '245567'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
@@ -19235,6 +19272,7 @@
   code: '469'
   yoksis_id: '310648'
   parent_yoksis_id: '214339'
+  effective_unit_id: '245567'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
@@ -19247,6 +19285,7 @@
   code: '470'
   yoksis_id: '299069'
   parent_yoksis_id: '214339'
+  effective_unit_id: '245567'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
@@ -19259,6 +19298,7 @@
   code: '471'
   yoksis_id: '299070'
   parent_yoksis_id: '214339'
+  effective_unit_id: '245567'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
@@ -19271,6 +19311,7 @@
   code: '472'
   yoksis_id: '299063'
   parent_yoksis_id: '247958'
+  effective_unit_id: '299062'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
@@ -19283,6 +19324,7 @@
   code: '473'
   yoksis_id: '299064'
   parent_yoksis_id: '247958'
+  effective_unit_id: '299062'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
@@ -19295,6 +19337,7 @@
   code: '474'
   yoksis_id: '299061'
   parent_yoksis_id: '247958'
+  effective_unit_id: '299062'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
@@ -19319,6 +19362,7 @@
   code: '476'
   yoksis_id: '308509'
   parent_yoksis_id: '122184'
+  effective_unit_id: '168861'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -19351,6 +19395,7 @@
   code: '477'
   yoksis_id: '304617'
   parent_yoksis_id: '122225'
+  effective_unit_id: '168865'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -19383,6 +19428,7 @@
   code: '478'
   yoksis_id: '304600'
   parent_yoksis_id: '122225'
+  effective_unit_id: '168865'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -19395,6 +19441,7 @@
   code: '479'
   yoksis_id: '308532'
   parent_yoksis_id: '122225'
+  effective_unit_id: '168865'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -19407,6 +19454,7 @@
   code: '480'
   yoksis_id: '304641'
   parent_yoksis_id: '122192'
+  effective_unit_id: '168866'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -19515,6 +19563,7 @@
   code: '486'
   yoksis_id: '299067'
   parent_yoksis_id: '122198'
+  effective_unit_id: '168871'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -19527,6 +19576,7 @@
   code: '487'
   yoksis_id: '299068'
   parent_yoksis_id: '122198'
+  effective_unit_id: '168871'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -19539,6 +19589,7 @@
   code: '488'
   yoksis_id: '299065'
   parent_yoksis_id: '122198'
+  effective_unit_id: '168871'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -19551,6 +19602,7 @@
   code: '489'
   yoksis_id: '299066'
   parent_yoksis_id: '122198'
+  effective_unit_id: '168871'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -20040,6 +20092,7 @@
   code: '033'
   yoksis_id: '304693'
   parent_yoksis_id: '215482'
+  effective_unit_id: '215483'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
@@ -20242,6 +20295,7 @@
   code: '498'
   yoksis_id: '308558'
   parent_yoksis_id: '147574'
+  effective_unit_id: '240429'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -20254,6 +20308,7 @@
   code: '499'
   yoksis_id: '304711'
   parent_yoksis_id: '147574'
+  effective_unit_id: '240429'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -20266,6 +20321,7 @@
   code: '500'
   yoksis_id: '308559'
   parent_yoksis_id: '147574'
+  effective_unit_id: '240429'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -20423,6 +20479,7 @@
   code: '503'
   yoksis_id: '308534'
   parent_yoksis_id: '122354'
+  effective_unit_id: '169397'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -20435,6 +20492,7 @@
   code: '504'
   yoksis_id: '304714'
   parent_yoksis_id: '122354'
+  effective_unit_id: '169397'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -20447,6 +20505,7 @@
   code: '505'
   yoksis_id: '304713'
   parent_yoksis_id: '122354'
+  effective_unit_id: '169397'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -20459,6 +20518,7 @@
   code: '506'
   yoksis_id: '308553'
   parent_yoksis_id: '122354'
+  effective_unit_id: '169397'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -20555,6 +20615,7 @@
   code: '509'
   yoksis_id: '304722'
   parent_yoksis_id: '201577'
+  effective_unit_id: '256685'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -20567,6 +20628,7 @@
   code: '510'
   yoksis_id: '308560'
   parent_yoksis_id: '201577'
+  effective_unit_id: '256685'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -20975,6 +21037,7 @@
   code: '513'
   yoksis_id: '304672'
   parent_yoksis_id: '169645'
+  effective_unit_id: '215479'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -21048,6 +21111,7 @@
   code: '514'
   yoksis_id: '304658'
   parent_yoksis_id: '169645'
+  effective_unit_id: '145869'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -21060,6 +21124,7 @@
   code: '515'
   yoksis_id: '304701'
   parent_yoksis_id: '169645'
+  effective_unit_id: '243775'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -22158,6 +22223,7 @@
   code: '517'
   yoksis_id: '308528'
   parent_yoksis_id: '121947'
+  effective_unit_id: '228132'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -23176,6 +23242,7 @@
   code: '528'
   yoksis_id: '305047'
   parent_yoksis_id: '128036'
+  effective_unit_id: '169309'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -23188,6 +23255,7 @@
   code: '529'
   yoksis_id: '305046'
   parent_yoksis_id: '128036'
+  effective_unit_id: '169309'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -23200,6 +23268,7 @@
   code: '530'
   yoksis_id: '308554'
   parent_yoksis_id: '128036'
+  effective_unit_id: '169309'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -23236,6 +23305,7 @@
   code: '532'
   yoksis_id: '299052'
   parent_yoksis_id: '299049'
+  effective_unit_id: '299051'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -23248,6 +23318,7 @@
   code: '533'
   yoksis_id: '299053'
   parent_yoksis_id: '299049'
+  effective_unit_id: '299051'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -23260,6 +23331,7 @@
   code: '534'
   yoksis_id: '299050'
   parent_yoksis_id: '299049'
+  effective_unit_id: '299051'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -23284,6 +23356,7 @@
   code: '536'
   yoksis_id: '308556'
   parent_yoksis_id: '235948'
+  effective_unit_id: '252836'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -23296,6 +23369,7 @@
   code: '537'
   yoksis_id: '304580'
   parent_yoksis_id: '235948'
+  effective_unit_id: '252836'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -23308,6 +23382,7 @@
   code: '538'
   yoksis_id: '304558'
   parent_yoksis_id: '235948'
+  effective_unit_id: '252836'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -23320,6 +23395,7 @@
   code: '539'
   yoksis_id: '308557'
   parent_yoksis_id: '235948'
+  effective_unit_id: '252836'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -23343,6 +23419,7 @@
   code: '540'
   yoksis_id: '299057'
   parent_yoksis_id: '299054'
+  effective_unit_id: '299056'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -23355,6 +23432,7 @@
   code: '541'
   yoksis_id: '299058'
   parent_yoksis_id: '299054'
+  effective_unit_id: '299056'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -23367,6 +23445,7 @@
   code: '542'
   yoksis_id: '299055'
   parent_yoksis_id: '299054'
+  effective_unit_id: '299056'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -23391,6 +23470,7 @@
   code: '544'
   yoksis_id: '299047'
   parent_yoksis_id: '128030'
+  effective_unit_id: '169308'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -23403,6 +23483,7 @@
   code: '545'
   yoksis_id: '299048'
   parent_yoksis_id: '128030'
+  effective_unit_id: '169308'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -23415,6 +23496,7 @@
   code: '546'
   yoksis_id: '304555'
   parent_yoksis_id: '128030'
+  effective_unit_id: '169308'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -23427,6 +23509,7 @@
   code: '547'
   yoksis_id: '299045'
   parent_yoksis_id: '128030'
+  effective_unit_id: '169308'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
@@ -23439,6 +23522,7 @@
   code: '548'
   yoksis_id: '299046'
   parent_yoksis_id: '128030'
+  effective_unit_id: '169308'
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
