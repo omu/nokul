@@ -14,7 +14,8 @@
     "select2": "^4.0.7-rc.0",
     "toastr": "^2.1.4",
     "trix": "^1.0.0",
-    "turbolinks": "^5.2.0"
+    "turbolinks": "^5.2.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "eslint": "^5.13.0",
@@ -29,6 +30,9 @@
   },
   "scripts": {
     "lint": "eslint ./app/assets --color",
-    "lint-fix": "eslint ./app/assets --color --fix"
-  }
+    "lint-fix": "eslint ./app/assets --color --fix",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
