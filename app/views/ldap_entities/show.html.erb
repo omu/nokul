@@ -1,0 +1,80 @@
+<%= action_bar do %>
+  <%= link_to_back ldap_entities_path %>
+<% end %>
+
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <a class="nav-item nav-link active"
+       id="nav-entity-tab"
+       data-toggle="tab"
+       href="#nav-entity"
+       role="tab"
+       aria-controls="nav-entity"
+       aria-selected="true">
+       <%= t('.sync_information') %>
+    </a>
+    <a class="nav-item nav-link"
+       id="nav-errors-tab"
+       data-toggle="tab"
+       href="#nav-errors"
+       role="tab"
+       aria-controls="nav-errors"
+       aria-selected="false">
+       <%= t('.sync_errors') %> <span class="badge badge-pill badge-danger"><%= @errors.count %></span>
+    </a>
+  </div>
+</nav>
+
+<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active"
+       id="nav-entity"
+       role="tabpanel"
+       aria-labelledby="nav-entity-tab">
+
+    <div class="card">
+      <% unless @entity.synchronized? %>
+        <div class="card-header">
+          <div class="card-header-actions">
+            <%= link_to t('.start_sync'), start_sync_ldap_entity_path(@entity), class: 'btn btn-outline-primary btn-sm' %>
+          </div>
+        </div>
+      <% end %>
+
+      <div class="card-body">
+        <table class="table table-responsive-sm">
+          <tbody>
+            <tr>
+              <th><%= t('.dn') %></th>
+              <td><%= @entity.dn %></td>
+            </tr>
+            <tr>
+              <th><%= t('.status') %></th>
+              <td>
+                <span class='badge badge-<%= klass_for_status(@entity.status) %>'>
+                  <%= enum_t(@entity, :status) %>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th><%= t('.synchronized_at') %></th>
+              <td><%= l(@entity.synchronized_at) if @entity.synchronized_at?  %></td>
+            </tr>
+            <tr>
+              <th><%= t('.created_at') %></th>
+              <td><%= l @entity.created_at %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <hr>
+    <%= render 'entity', entity: @entity %>
+  </div>
+  <div class="tab-pane fade"
+       id="nav-errors"
+       role="tabpanel"
+       aria-labelledby="nav-errors-tab">
+    <%= render 'errors', errors: @errors %>
+  </div>
+</div>

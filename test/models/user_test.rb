@@ -111,6 +111,17 @@ class UserTest < ActiveSupport::TestCase
     assert users(:serhat).accounts
   end
 
+  test 'user can respond to title method' do
+    assert_equal users(:serhat).title, 'Araştırma Görevlisi'
+  end
+
+  %i[employee? student? academic?].each do |method|
+    test "user can respond to #{method} method" do
+      assert     users(:serhat).public_send(method)
+      assert_not users(:mine).public_send(method)
+    end
+  end
+
   # job tests
   test 'user enqueues Kps::AddressSaveJob after being created' do
     assert_enqueued_with(job: Kps::AddressSaveJob) do

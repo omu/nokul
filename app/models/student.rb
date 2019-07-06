@@ -1,11 +1,19 @@
 # frozen_string_literal: true
 
 class Student < ApplicationRecord
+  # Ldap
+  include LdapSyncTrigger
+  ldap_sync_trigger :user
+
   # relations
   belongs_to :user
   belongs_to :unit
   has_one :identity, dependent: :destroy
   has_many :calendars, -> { Calendar.active }, through: :unit
+
+  # scopes
+  # TODO: Query will be organized according to activity status
+  scope :active, -> { where(permanently_registered: true) }
 
   # validations
   validates :unit_id, uniqueness: { scope: %i[user] }

@@ -43,7 +43,9 @@ ldapmodify -Q -Y EXTERNAL -H ldapi:/// -f 05-enable-dynlist.ldif
 ldapadd -Q -Y EXTERNAL -H ldapi:/// -f 06-dynlist-dbconfig.ldif
 ldapadd -Q -Y EXTERNAL -H ldapi:/// -f schema/eduperson2016.ldif
 ldapadd -Q -Y EXTERNAL -H ldapi:/// -f schema/schac-schema-1.5.ldif
+ldapadd -x -D "cn=admin,dc=test,dc=omu,dc=edu,dc=tr" -w 12345 -f 07-create-reader-user.ldif
+ldapmodify -Q -Y EXTERNAL -H ldapi:// -f 08-acl.ldif
 
-ldapadd -x -D cn=admin,dc=test,dc=omu,dc=edu,dc=tr -w 12345 -f import.ldif
+ldapadd -x -D "cn=admin,dc=test,dc=omu,dc=edu,dc=tr" -w 12345 -f import.ldif
 
 touch /var/lib/ldap/bootstrapped

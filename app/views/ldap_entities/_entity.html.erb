@@ -1,0 +1,22 @@
+<table class="table table-bordered table-hover">
+  <tbody>
+    <tr>
+      <th>dn</th>
+      <td><%= entity.dn %></td>
+    </tr>
+    <% Ldap::Entity.attributes.each do |attribute| %>
+      <tr>
+        <th><%= attribute %></th>
+        <td>
+          <% if attribute.include?('Photo') %>
+            <%= image_tag("data:image/png;base64,#{entity.public_send(attribute)}") %>
+          <% elsif attribute.include?('Password') %>
+            <%= truncate(entity.public_send(attribute)) %>
+          <% else %>
+            <%= list_group_tag(entity.public_send(attribute)) %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

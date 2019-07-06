@@ -33,6 +33,9 @@ gem 'devise'
 # authorization
 gem 'pundit'
 
+# ldap
+gem 'net-ldap'
+
 # assets: core asset dependencies
 # TODO: Edge versions require coffee-rails https://github.com/rails/rails/issues/28965
 gem 'coffee-rails', '~> 5.0'

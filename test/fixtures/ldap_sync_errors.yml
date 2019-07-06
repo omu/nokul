@@ -1,0 +1,8 @@
+one:
+  ldap_entity: one
+  description: Description
+  resolved: false
+two:
+  ldap_entity: two
+  description: Description
+  resolved: false

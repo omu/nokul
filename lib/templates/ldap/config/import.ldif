@@ -8,46 +8,128 @@ ou: groups
 description: All groups in organisation
 objectclass: organizationalunit
 
-dn: uid=09060286,ou=people,dc=test,dc=omu,dc=edu,dc=tr
+dn: uid=emrecan.1234,ou=people,dc=test,dc=omu,dc=edu,dc=tr
 cn: Emre Can Yılmaz
+displayName: Emre Can Yılmaz
+eduPersonAffiliation: member
+eduPersonAffiliation: employee
+eduPersonAffiliation: faculty
+eduPersonPrimaryAffiliation: faculty
+eduPersonPrincipalName: emrecan@omu.edu.tr
+eduPersonPrincipalNamePrior: emrecan.old@omu.edu.tr
+eduPersonScopedAffiliation: faculty@_.bilgisayar-pr.bilgisayar.muhendislik.omu.edu.tr
 givenName: Emre Can
+jpegPhoto: base64ilebiseylerbiseyler
+mail: emrecan@omu.edu.tr
+mobile: +90 362 312 1919
+preferredLanguage: tr
+schacCountryOfCitizenship: tr
+schacExpiryDate: 20051231125959Z
+schacPersonalUniqueCode: urn:schac:personalUniqueCode:tr:employeeID:omu.edu.tr:12345
+schacPersonalUniqueID: urn:schac:personalUniqueID:tr:NIN:10570898198
+schacUserStatus: urn:schac:userStatus:tr:omu.edu.tr:affiliation:expired
+schacDateOfBirth: 19910128
+schacGender: 2
+schacHomeOrganization: omu.edu.tr
+schacPlaceOfBirth: Samsun, Türkiye
+schacYearOfBirth: 1991
 sn: Yılmaz
-telephoneNumber: x105
+uid: emrecan.1234
 userPassword: {BCRYPT}$2b$10$P9c9uTcr5RjqOhmf1ZcYvO255n/q6SknPA3ERvaAqqEoDSGLer3sy
-displayName: user1
-mail: 09060286@test.omu.edu.tr
-uid: 09060286
 objectClass: person
 objectClass: organizationalPerson
 objectClass: inetOrgPerson
 objectClass: eduPerson
-eduPersonPrimaryAffiliation: student
+objectClass: schacPersonalCharacteristics
+objectClass: schacContactLocation
+objectClass: schacLinkageIdentifiers
+objectClass: schacEntryMetadata
+objectClass: schacUserEntitlements
+objectClass: schacExperimentalOC
 
-dn: uid=0123456,ou=people,dc=test,dc=omu,dc=edu,dc=tr
-cn: Mustafa Kemal Atatürk
-givenName: Mustafa Kemal
-sn: Atatürk
-telephoneNumber: x105
+dn: uid=cezmi.5678,ou=people,dc=test,dc=omu,dc=edu,dc=tr
+cn: Cezmi Seha Sahir
+displayName: Cezmi Seha Sahir
+eduPersonAffiliation: member
+eduPersonAffiliation: employee
+eduPersonAffiliation: faculty
+eduPersonPrimaryAffiliation: faculty
+eduPersonPrincipalName: cezmi@omu.edu.tr
+eduPersonPrincipalNamePrior: cezmi.old@omu.edu.tr
+eduPersonScopedAffiliation: faculty@_.bilgisayar-pr.bilgisayar.muhendislik.omu.edu.tr
+givenName: Cezmi Seha
+jpegPhoto: base64ilebiseylerbiseyler
+mail: cezmi@omu.edu.tr
+mobile: +90 362 312 1919
+preferredLanguage: tr
+schacCountryOfCitizenship: tr
+schacExpiryDate: 20051231125959Z
+schacPersonalUniqueCode: urn:schac:personalUniqueCode:tr:employeeID:omu.edu.tr:56785
+schacPersonalUniqueID: urn:schac:personalUniqueID:tr:NIN:10570898198
+schacUserStatus: urn:schac:userStatus:tr:omu.edu.tr:affiliation:expired
+schacDateOfBirth: 19910128
+schacGender: 2
+schacHomeOrganization: omu.edu.tr
+schacPlaceOfBirth: Samsun, Türkiye
+schacYearOfBirth: 1991
+sn: Sahir
+uid: cezmi.5678
 userPassword: {BCRYPT}$2b$10$P9c9uTcr5RjqOhmf1ZcYvO255n/q6SknPA3ERvaAqqEoDSGLer3sy
-displayName: Mustafa Kemal Atatürk
-mail: 0123456@test.omu.edu.tr
-uid: 0123456
 objectClass: person
 objectClass: organizationalPerson
 objectClass: inetOrgPerson
 objectClass: eduPerson
-eduPersonPrimaryAffiliation: student staff
+objectClass: schacPersonalCharacteristics
+objectClass: schacContactLocation
+objectClass: schacLinkageIdentifiers
+objectClass: schacEntryMetadata
+objectClass: schacUserEntitlements
+objectClass: schacExperimentalOC
 
-dn: cn=muhendislik,ou=groups,dc=test,dc=omu,dc=edu,dc=tr
-cn: muhendislik
-description: muhendislik fakültesi
-objectclass: groupofuniquenames
-uniqueMember: uid=0123456,ou=people,dc=test,dc=omu,dc=edu,dc=tr
+dn: cn=alum@test.omu.edu.tr,ou=groups,dc=test,dc=omu,dc=edu,dc=tr
+cn: alum@test.omu.edu.tr
+description: Mezun öğrenciler
+memberURL: ldap:///ou=people,dc=test,dc=omu,dc=edu,dc=tr?mail?sub?(eduPersonAffiliation=alum)
+objectclass: groupOfURLs
 
-dn: cn=baum,ou=groups,dc=test,dc=omu,dc=edu,dc=tr
-cn: baum
-objectclass: groupofuniquenames
-description: bilgisayar araştırma ve uygulama merkezi
-uniqueMember: uid=0123456,ou=people,dc=test,dc=omu,dc=edu,dc=tr
-uniqueMember: uid=09060286,ou=people,dc=test,dc=omu,dc=edu,dc=tr
+dn: cn=affiliate@test.omu.edu.tr,ou=groups,dc=test,dc=omu,dc=edu,dc=tr
+cn: affiliate@test.omu.edu.tr
+description: Affiliate
+memberURL: ldap:///ou=people,dc=test,dc=omu,dc=edu,dc=tr?mail?sub?(eduPersonAffiliation=affiliate)
+objectclass: groupOfURLs
 
+dn: cn=library-walk-in@test.omu.edu.tr,ou=groups,dc=test,dc=omu,dc=edu,dc=tr
+cn: library-walk-in@test.omu.edu.tr
+description: Yalnızca kütüphane için kaydediler kişiler
+memberURL: ldap:///ou=people,dc=test,dc=omu,dc=edu,dc=tr?mail?sub?(eduPersonAffiliation=library-walk-in)
+objectclass: groupOfURLs
+
+dn: cn=member@test.omu.edu.tr,ou=groups,dc=test,dc=omu,dc=edu,dc=tr
+cn: member@test.omu.edu.tr
+description: Kurumla ilişkili aktif herkes
+memberURL: ldap:///ou=people,dc=test,dc=omu,dc=edu,dc=tr?mail?sub?(eduPersonAffiliation=member)
+objectclass: groupOfURLs
+
+dn: cn=student@test.omu.edu.tr,ou=groups,dc=test,dc=omu,dc=edu,dc=tr
+cn: student@test.omu.edu.tr
+description: Aktif öğrenciler
+memberURL: ldap:///ou=people,dc=test,dc=omu,dc=edu,dc=tr?mail?sub?(eduPersonAffiliation=student)
+objectclass: groupOfURLs
+
+dn: cn=employee@test.omu.edu.tr,ou=groups,dc=test,dc=omu,dc=edu,dc=tr
+cn: employee@test.omu.edu.tr
+description: Tüm personeller
+memberURL: ldap:///ou=people,dc=test,dc=omu,dc=edu,dc=tr?mail?sub?(eduPersonAffiliation=employee)
+objectclass: groupOfURLs
+
+dn: cn=faculty@test.omu.edu.tr,ou=groups,dc=test,dc=omu,dc=edu,dc=tr
+cn: faculty@test.omu.edu.tr
+description: Akademik personeller
+memberURL: ldap:///ou=people,dc=test,dc=omu,dc=edu,dc=tr?mail?sub?(eduPersonAffiliation=faculty)
+objectclass: groupOfURLs
+
+dn: cn=staff@test.omu.edu.tr,ou=groups,dc=test,dc=omu,dc=edu,dc=tr
+cn: staff@test.omu.edu.tr
+description: Akademik olmayan personeller
+memberURL: ldap:///ou=people,dc=test,dc=omu,dc=edu,dc=tr?mail?sub?(eduPersonAffiliation=staff)
+objectclass: groupOfURLs

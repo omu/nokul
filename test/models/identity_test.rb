@@ -62,4 +62,20 @@ class IdentityTest < ActiveSupport::TestCase
     assert identities(:formal_student).valid?
     assert identities(:formal_student_omu).valid?
   end
+
+  # custom methods
+  test 'identity can respond to full_name method' do
+    identity = identities(:formal_user)
+    assert_equal identity.full_name, "#{identity.first_name} #{identity.last_name}"
+  end
+
+  test 'identity can respond to country_of_citizenship method' do
+    assert_equal identities(:formal_user).country_of_citizenship, countries(:sweden)
+    assert_nil   identities(:informal).country_of_citizenship
+  end
+
+  test 'identity can respond to city method' do
+    assert_equal identities(:formal_user).city, cities(:stockholm)
+    assert_nil   identities(:informal).city
+  end
 end

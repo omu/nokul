@@ -5,6 +5,10 @@ class User < ApplicationRecord
   include Patron::Roleable
   include Patron::Scopable
 
+  # Ldap
+  include LdapSyncTrigger
+  ldap_sync_trigger :self
+
   # virtual attributes
   attr_accessor :country
 
@@ -30,6 +34,7 @@ class User < ApplicationRecord
   has_many :employees, dependent: :destroy
   has_many :projects, dependent: :destroy
   has_many :students, dependent: :destroy
+  has_many :ldap_entities, dependent: :destroy
   has_many :duties, through: :employees
   has_many :units, through: :employees
   has_many :positions, through: :duties
@@ -42,7 +47,6 @@ class User < ApplicationRecord
                                    foreign_key: :id_number,
                                    dependent:   :nullify,
                                    inverse_of:  :user
-
   # validations
   validates :email, presence: true, uniqueness: true, length: { maximum: 255 }
   validates :extension_number, allow_blank:  true,
@@ -105,6 +109,18 @@ class User < ApplicationRecord
 
   def title
     employees.active.first.try(:title).try(:name)
+  end
+
+  def employee?
+    employees.active.exists?
+  end
+
+  def student?
+    students.active.exists?
+  end
+
+  def academic?
+    employees.active.academic.exists?
   end
 
   def self.with_most_articles

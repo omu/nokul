@@ -19,6 +19,7 @@ en:
         curriculums: Curriculums
         first_registration: First Registration
         high_school_types: High School Types
+        ldap_sync: Ldap Sync
         prospective_employees: Prospective Employees
         prospective_students: Prospective Students
         references: References
