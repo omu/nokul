@@ -31,5 +31,14 @@
     $('#activation_serial, #activation_serial_no, #activation_document_no').on('input', function () {
       setDisabledStateOfInputs('change')
     })
+
+    var input = document.querySelector('#activation_mobile_phone');
+
+    window.intlTelInput(input, {
+      utilsScript: '/assets/shared/intl_tel_input_utils.js',
+      nationalMode: false,
+      initialCountry: 'tr',
+      preferredCountries: ['tr']
+    })
   })
 </script>
