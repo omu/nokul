@@ -37,8 +37,7 @@ module Account
 
     # rubocop:disable Metrics/AbcSize
     def phone_verification
-      phone = current_user[:mobile_phone] = TelephoneNumber.parse(params.dig(:user, :mobile_phone),
-                                                                  params.dig(:user, :country)).e164_number
+      phone = current_user[:mobile_phone] = TelephoneNumber.parse(params.dig(:user, :mobile_phone)).e164_number
 
       return respond_to :js unless current_user.valid? && current_user.mobile_phone_changed?
 
