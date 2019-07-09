@@ -32,13 +32,39 @@
       setDisabledStateOfInputs('change')
     })
 
-    var input = document.querySelector('#activation_mobile_phone');
+    // entering and validating international telephone numbers  --------------->
+    var input = document.querySelector('#activation_mobile_phone'),
+      error_msg = document.querySelector('#error-msg');
 
-    window.intlTelInput(input, {
-      utilsScript: '/assets/shared/intl_tel_input_utils.js',
+    var error_messages = <%= raw t('intl_tel_input.errors').values %>
+
+    var reset = function () {
+      input.classList.remove('is-invalid');
+      input.classList.remove('is-valid');
+      error_msg.innerHTML = '';
+    };
+
+    var iti = window.intlTelInput(input, {
+      utilsScript: 'assets/shared/intl_tel_input_utils.js',
       nationalMode: false,
       initialCountry: 'tr',
       preferredCountries: ['tr']
     })
+
+    input.addEventListener('blur', function() {
+      reset();
+      if (input.value.trim()) {
+        if (iti.isValidNumber()) {
+          input.classList.add('is-valid');
+        } else {
+          input.classList.add('is-invalid');
+          var error_code = iti.getValidationError();
+          error_msg.innerHTML = error_messages[error_code] || error_messages[0]
+        }
+      }
+    });
+
+    input.addEventListener('change', reset);
+    input.addEventListener('keyup', reset);
   })
 </script>

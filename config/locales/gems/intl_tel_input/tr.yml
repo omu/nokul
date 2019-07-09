@@ -1,0 +1,8 @@
+tr:
+  intl_tel_input:
+    errors:
+      0: Geçersiz numara
+      1: Geçersiz ülke kodu
+      2: Numara çok kısa
+      3: Numara çok uzun
+      4: Geçersiz numara
