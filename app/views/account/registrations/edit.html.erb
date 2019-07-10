@@ -60,5 +60,10 @@
   </div>
 </div>
 <div id='verification_modal' class='modal fade' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true' data-backdrop='static' data-keyboard='false'></div>
+<%= javascript_include_tag 'shared/intl_tel_input_validation' %>
 
-<%= render 'js' %>
+<script type='text/javascript'>
+  $('#user_country').select2();
+
+  TelInputValidation('#user_mobile_phone', '#error-msg', <%= raw t('intl_tel_input.errors').values %>)
+</script>

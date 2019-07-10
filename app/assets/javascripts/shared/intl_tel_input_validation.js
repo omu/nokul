@@ -1,10 +1,8 @@
-<script type='text/javascript'>
-  $('#user_country').select2();
+// validate the telephone number on the blur event
 
-  var input = document.querySelector('#user_mobile_phone'),
-    error_msg = document.querySelector('#error-msg');
-
-  var error_messages = <%= raw t('intl_tel_input.errors').values %>
+var TelInputValidation = function(input_id, error_msg_id, error_messages) {
+  var input = document.querySelector(input_id),
+    error_msg = document.querySelector(error_msg_id);
 
   var reset = function () {
     input.classList.remove('is-invalid');
@@ -34,4 +32,4 @@
 
   input.addEventListener('change', reset);
   input.addEventListener('keyup', reset);
-</script>
+}
