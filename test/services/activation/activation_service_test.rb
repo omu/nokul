@@ -15,8 +15,7 @@ module Activation
           date_of_birth: '1984-11-16',
           serial:        'J10',
           serial_no:     '94646',
-          mobile_phone:  '5551111111',
-          country:       'TR'
+          mobile_phone:  '+905551111111'
         )
     end
 
@@ -26,7 +25,6 @@ module Activation
       first_name
       last_name
       date_of_birth
-      country
       mobile_phone
     ].each do |property|
       test "#{property} of activation can not be nil" do

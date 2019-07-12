@@ -1,0 +1,8 @@
+en:
+  intl_tel_input:
+    errors:
+      0: Invalid number
+      1: Invalid country code
+      2: Number is too short
+      3: Number is too long
+      4: Invalid number

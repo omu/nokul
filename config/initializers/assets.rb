@@ -20,6 +20,7 @@ Rails.application.config.assets.precompile += [
   'guest.scss',
   'guest.js',
   'shared/cocoon.js',
+  'shared/intl_tel_input_validation.js',
   Tenant.configuration.branding.logo.file,
   Tenant.configuration.branding.badge.file
 ].compact

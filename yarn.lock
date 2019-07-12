@@ -3882,6 +3882,11 @@ interpret@1.2.0:
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.2.0.tgz#d5061a6224be58e8083985f5014d844359576296"
   integrity sha512-mT34yGKMNceBQUoVn7iCDKDntA7SC6gycMAWzGx1z/CMCTV7b2AAtXlo3nRyHZ1FelRkQbQjprHSYGwzLtkVbw==
 
+intl-tel-input@^16.0.2:
+  version "16.0.2"
+  resolved "https://registry.yarnpkg.com/intl-tel-input/-/intl-tel-input-16.0.2.tgz#2ad5fa4d6f2c3022d5abc34a6f2002ff20ec9c4c"
+  integrity sha512-HKElXcK7ksfuzLz0ZFt6E2DjB0MJ3xKazHDLN4I8zglKuXN762WLx9T21ZGDKRxLrlhPgiSxw7nS83vpG+WH7Q==
+
 invariant@^2.2.2:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
