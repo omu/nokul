@@ -2,7 +2,7 @@
 
 class City < ApplicationRecord
   # search
-  include PgSearch
+  include PgSearch::Model
   pg_search_scope(
     :search,
     against: %i[name alpha_2_code],

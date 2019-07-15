@@ -2,7 +2,7 @@
 
 class ProspectiveStudent < ApplicationRecord
   # search
-  include PgSearch
+  include PgSearch::Model
   include DynamicSearch
   include Prospective
 

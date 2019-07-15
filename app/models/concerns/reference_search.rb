@@ -2,7 +2,7 @@
 
 module ReferenceSearch
   extend ActiveSupport::Concern
-  include PgSearch
+  include PgSearch::Model
 
   included do
     # search

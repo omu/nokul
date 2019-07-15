@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class ProspectiveEmployee < ApplicationRecord
-  include PgSearch
+  include PgSearch::Model
   include DynamicSearch
   include Prospective
 
