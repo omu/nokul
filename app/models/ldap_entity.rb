@@ -2,7 +2,7 @@
 
 class LdapEntity < ApplicationRecord
   # search
-  include PgSearch
+  include PgSearch::Model
   include DynamicSearch
 
   pg_search_scope(

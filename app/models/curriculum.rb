@@ -8,7 +8,7 @@ class Curriculum < ApplicationRecord
   MAX_NUMBER_OF_YEARS = 6
 
   # search
-  include PgSearch
+  include PgSearch::Model
   include DynamicSearch
 
   pg_search_scope(

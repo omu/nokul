@@ -13,7 +13,7 @@ class User < ApplicationRecord
   attr_accessor :country
 
   # search
-  include PgSearch
+  include PgSearch::Model
   pg_search_scope(
     :search,
     against:            %i[id_number email],

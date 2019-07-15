@@ -4,7 +4,7 @@ module Patron
   class QueryStore < ApplicationRecord
     include Patron::Scope::Store::Accessor
     include Patron::Scope::Store::Validation
-    include PgSearch
+    include PgSearch::Model
 
     self.inheritance_column = nil
 

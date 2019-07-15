@@ -2,7 +2,7 @@
 
 class Unit < ApplicationRecord
   # search
-  include PgSearch
+  include PgSearch::Model
   include DynamicSearch
   include Patron::Scope::Model
 

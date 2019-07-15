@@ -3,7 +3,7 @@
 module Patron
   class Permission < ApplicationRecord
     # search
-    include PgSearch
+    include PgSearch::Model
     pg_search_scope(
       :search,
       against: %i[name identifier],
