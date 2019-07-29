@@ -6,9 +6,9 @@ ruby File.read('.ruby-version')
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # core
-gem 'bootsnap', '>= 1.4.0', require: false
-gem 'puma', '~> 3.11'
-gem 'rails', github: 'rails/rails', tag: 'v6.0.0.rc1'
+gem 'bootsnap', require: false
+gem 'puma'
+gem 'rails', github: 'rails/rails', tag: 'v6.0.0.rc2'
 gem 'redis', '~> 4.0'
 gem 'sidekiq'
 
@@ -24,7 +24,7 @@ gem 'ancestry'
 # active-storage
 gem 'aws-sdk-s3', require: false
 gem 'image_processing', '~> 1.2'
-gem 'ruby-vips', '2.0.13'
+gem 'ruby-vips', '~> 2.0.14'
 
 # authentication
 gem 'authy'
@@ -53,7 +53,7 @@ gem 'simple_form'
 gem 'wicked_pdf'
 
 # api
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder', '~> 2.9'
 
 # security
 gem 'bcrypt', '~> 3.1.7'
@@ -74,7 +74,7 @@ gem 'friendly_id', '~> 5.2.0'
 # sms
 gem 'nexmo'
 gem 'smstools'
-gem 'twilio-ruby', '~> 5.23.0'
+gem 'twilio-ruby'
 
 group :development, :test do
   gem 'brakeman', require: false
@@ -91,7 +91,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'capybara', '>= 2.15'
+  gem 'capybara'
   gem 'codacy-coverage', require: false
   gem 'webdrivers', '~> 4.0'
   gem 'webmock'

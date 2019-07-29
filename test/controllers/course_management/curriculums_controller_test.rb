@@ -83,7 +83,7 @@ module CourseManagement
       get openable_courses_curriculum_path(@curriculum)
 
       assert_response :success
-      assert_equal 'application/json', response.content_type
+      assert_equal 'application/json', response.media_type
       assert_equal @curriculum.openable_courses_for_active_term.count,
                    JSON.parse(response.body).count
     end
