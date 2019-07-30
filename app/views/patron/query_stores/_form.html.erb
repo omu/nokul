@@ -31,16 +31,19 @@
                     <strong><%= filter %></strong>
                   </div>
                   <div class='card-body'>
-                    <div class="row">
+                    <div class="row" data-filter-name="<%= filter %>">
                       <% field_group.each do |field| %>
-                        <div class="col-sm-12">
+                        <div class="col-sm-12 <%= field.for %>">
                           <%= f.label field.name, field.label %>
                           <%= f.input field.name,
                                       as: field.as,
                                       collection: field.collection,
                                       required: field.required,
                                       label: false,
-                                      input_html: { multiple: field.multiple } %>
+                                      input_html: {
+                                        multiple: field.multiple,
+                                        data: { filter: filter, type: field.type, for: field.for }
+                                      } %>
                         </div>
                       <% end %>
                     </div>
@@ -58,3 +61,28 @@
     </div>
   </div>
 </div>
+
+<script>
+  $( document ).ready(function(){
+    $('select[data-type="value_type"]').change(function () {
+      filter_name = $(this).attr('data-filter')
+      parent      = $('div[data-filter-name="' + filter_name + '"]')
+
+      if (this.value == 'static'){
+        $(parent).children('.static').show()
+        $(parent).find('[data-for="static"]').prop( 'disabled', false );
+
+        $(parent).children('.dynamic').hide()
+        $(parent).find('[data-for="dynamic"]').prop( 'disabled', true );
+      } else if (this.value == 'dynamic') {
+        $(parent).children('.dynamic').show()
+        $(parent).find('[data-for="dynamic"]').prop( 'disabled', false );
+
+        $(parent).children('.static').hide()
+        $(parent).find('[data-for="static"]').prop( 'disabled', true );
+      }
+    })
+
+    $('select[data-type="value_type"]').trigger('change')
+  })
+</script>

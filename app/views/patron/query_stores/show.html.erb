@@ -32,6 +32,14 @@
 
         <div class="card-body">
           <table class="table table-striped">
+           <tr class="table-dark">
+              <th width="40%">
+                <%= Patron::Utils::I18n.translate_suffix('value_type') %>
+              </th>
+              <td>
+                <strong><%= Patron::Utils::I18n.translate_value_type(@query_store.public_send("#{attribute}_value_type")) %></strong>
+              </td>
+            </tr>
             <tr class="table-success">
               <th width="40%">
                 <%= Patron::Utils::I18n.translate_suffix('value') %>
@@ -40,7 +48,7 @@
                 <%= @query_store.public_send("#{attribute}_value") %>
               </td>
             </tr>
-            <tr class="table-primary">
+            <tr class="table-success">
               <th>
                 <%= Patron::Utils::I18n.translate_suffix('query_type') %>
               </th>
@@ -48,6 +56,24 @@
                 <%= Patron::Utils::I18n.translate_query_type(@query_store.public_send("#{attribute}_query_type")) %>
               </td>
             </tr>
+
+            <tr class="table-primary">
+              <th width="40%">
+                <%= Patron::Utils::I18n.translate_suffix('dynamic_value') %>
+              </th>
+              <td>
+                <%= @query_store.public_send("#{attribute}_dynamic_value") %>
+              </td>
+            </tr>
+            <tr class="table-primary">
+              <th>
+                <%= Patron::Utils::I18n.translate_suffix('dynamic_query_type') %>
+              </th>
+              <td>
+                <%= Patron::Utils::I18n.translate_query_type(@query_store.public_send("#{attribute}_dynamic_query_type")) %>
+              </td>
+            </tr>
+
             <tr class="table-secondary">
               <th>
                 <%= Patron::Utils::I18n.translate_suffix('skip_empty') %>
