@@ -8,9 +8,9 @@ module Patron
 
         def initialize(**args)
           @name       = args[:name]
-          @query_type = args[:query_type]
+          @query_type = prepare_query_type(args)
           @skip_empty = ActiveModel::Type::Boolean.new.cast(args[:skip_empty])
-          @value      = args[:value]
+          @value      = prepare_value(args)
         end
 
         def to_arel_for(scope_klass)
@@ -23,6 +23,20 @@ module Patron
 
         def assignable?
           value.present? || !skip_empty
+        end
+
+        def prepare_value(args)
+          case args[:value_type]
+          when 'static'  then args[:value]
+          when 'dynamic' then args[:instance].try("#{args[:dynamic_value]}_value")
+          end
+        end
+
+        def prepare_query_type(args)
+          case args[:value_type]
+          when 'static'  then args[:query_type]
+          when 'dynamic' then args[:dynamic_query_type]
+          end
         end
       end
     end
