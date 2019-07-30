@@ -21,15 +21,13 @@ module Patron
         translate(name, scope: %i[patron boolean])
       end
 
-      def translate_collection_for_boolean(collection)
-        [*collection].map do |item|
-          [translate_skip_empty(item), item]
-        end
+      def translate_value_type(name)
+        translate(name, scope: %i[patron value_types])
       end
 
-      def translate_collection_for_query_types(collection)
+      def translate_collection(collection, attribute:)
         [*collection].map do |item|
-          [translate_query_type(item), item]
+          [send("translate_#{attribute}", item), item]
         end
       end
 
