@@ -38,7 +38,7 @@ module Patron
 
       if query_stores.present?
         @scope      = query_stores.first.scope_klass
-        @records    = @scope.preview_for_records(query_stores)
+        @records    = @scope.preview_for_records(query_stores, user: @user)
         @collection = pagy_by_search(@records)
       else
         redirect_to([:patron, :assignment, id: @user], alert: t('.error'))
