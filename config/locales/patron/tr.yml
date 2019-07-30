@@ -4,9 +4,12 @@ tr:
       'true': 'Evet'
       'false': 'Hayır'
     suffixes:
-      value: Değeri
+      dynamic_value: Dinamik Değeri
       query_type: Sorgulama Türü
       skip_empty: Değeri Boşsa Yoksay
+      value: Değeri
+      value_type: Değer Türü
+      dynamic_query_type: Dinamik Değer için Sorgulama Türü
     query_types:
       in: Seçilenler
       not_in: Seçilenler Dışında Kalanlar
@@ -22,3 +25,6 @@ tr:
       not_start_with: İle Başlamayan
       not_end_with: İle Sonlanmayan
       not_contain: İçermeyen
+    value_types:
+      static: Statik Değer
+      dynamic: Dinamik Değer
