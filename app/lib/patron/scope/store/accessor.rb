@@ -15,9 +15,12 @@ module Patron
         end
 
         ACCESSORS_SUFFIXES = %w[
-          value
+          dynamic_query_type
+          dynamic_value
           query_type
           skip_empty
+          value
+          value_type
         ].freeze
 
         # AccessorDefiner

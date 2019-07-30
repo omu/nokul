@@ -51,7 +51,7 @@ module Patron
           return [] if parameters.blank?
 
           parameters.map do |key, options|
-            Query::Parameter.new(name: key, **options.symbolize_keys)
+            Query::Parameter.new(name: key, instance: instance, **options.symbolize_keys)
           end
         end
 
