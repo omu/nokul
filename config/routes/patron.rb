@@ -10,7 +10,10 @@ namespace :patron do
   end
   resources :permissions, only: %i[index show]
   resources :query_stores do
-    get :preview, on: :member
+    member do
+      get :preview
+      post :preview
+    end
   end
   resources :roles
 
