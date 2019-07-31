@@ -32,6 +32,8 @@ tr:
         smart_search_placeholder: Kapsam Sorgu Adı veya Kapsam Adı
       new:
         form_title: Kapsam Sorgusu Oluştur
+      preview:
+        preview: Ön İzle
       show:
         <<: *query_stores_attributes
         smart_search_placeholder: Modele Özgü Anahtar Kelime ile Arama
