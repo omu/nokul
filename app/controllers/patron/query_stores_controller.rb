@@ -40,9 +40,15 @@ module Patron
     end
 
     def preview
-      @scope      = @query_store.scope_klass
-      @records    = @scope.preview_for_records(@query_store)
-      @collection = pagy_by_search(@records)
+      respond_to do |format|
+        format.html
+        format.js do
+          @scope      = @query_store.scope_klass
+          @user       = User.find(params[:user_id])
+          @records    = @scope.preview_for_records(@query_store, user: @user)
+          @collection = pagy_by_search(@records, link_extra: 'data-remote="true"', params: { user_id: @user.id })
+        end
+      end
     end
 
     private

@@ -1,0 +1,33 @@
+<div class="card">
+  <div class="card-header" role="tab" id="smartSearch">
+    <h5 class="mb-0">
+      <a data-toggle="collapse"
+          href="#collapseSmartSearch"
+          id="collapseSmartSearchLink"
+          aria-expanded="true"
+          aria-controls="SmartSearch">
+        <%= t('smart_search') %>
+      </a>
+      <div class="float-right">
+        <%= link_to t('reset'), path, class: 'btn btn-warning btn-sm' %>
+      </div>
+    </h5>
+  </div>
+  <div id="collapseSmartSearch"
+        class="collapse show"
+        role="tabpanel"
+        aria-labelledby="smartSearch"
+        data-parent="#SearchForms">
+    <div class="card-body">
+      <%= form_tag path, method: method, remote: remote do %>
+        <div class="form-group">
+          <%= text_field_tag :term,
+                             params[:term],
+                             placeholder: placeholder,
+                             class: 'form-control' %>
+        </div>
+        <%= submit_tag t('search'), class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
