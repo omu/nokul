@@ -255,7 +255,7 @@ GEM
     nexmo (5.9.0)
       jwt (~> 2)
     nio4r (2.4.0)
-    nokogiri (1.10.3)
+    nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
     pagy (3.4.1)
