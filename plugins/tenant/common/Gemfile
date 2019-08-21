@@ -15,5 +15,5 @@ gem 'nokul-support', path: PLUGINS_DIR.join('support')
 
 group :test do
   gem 'minitest-focus'
-  gem 'rails', github: 'rails/rails', tag: 'v6.0.0.rc2'
+  gem 'rails', '~> 6.0'
 end
