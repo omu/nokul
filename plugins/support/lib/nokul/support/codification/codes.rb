@@ -21,7 +21,6 @@ module Nokul
 
       codifications.each do |codification|
         name            = codification.to_s.demodulize.underscore
-
         plural_method   = name.pluralize
         singular_method = name.singularize
 
