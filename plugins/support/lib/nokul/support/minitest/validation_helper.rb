@@ -45,6 +45,7 @@ module Nokul
             minimum: { value: -1, error_key: :too_short },
             maximum: { value: 1, error_key: :too_long }
           }
+
           key       = option.keys.first
           value     = option[key].to_i + controls.dig(key, :value).to_i
           error_key = controls.dig(key, :error_key)

@@ -51,9 +51,9 @@ namespace :fetch do
           password_confirmation: password
         )
 
-        next unless user.save
-
         progress_bar&.increment
+
+        next unless user.save
 
         title = Title.find_by(name: staff[:title].capitalize_turkish)
         unit = Unit.find_by(yoksis_id: staff[:unit_id])
