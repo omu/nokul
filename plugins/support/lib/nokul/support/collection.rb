@@ -55,8 +55,8 @@ module Nokul
 
       def self.write_to_yaml_file(file, instance, **options)
         comment = options[:comment]
-        yaml  = comment ? comment.gsub(/^/m, '# ') : ''
-        yaml += to_yaml_pretty(instance)
+        yaml    = comment ? comment.gsub(/^/m, '# ') : ''
+        yaml   += to_yaml_pretty(instance)
         Support.with_status_and_notification(file, **options) { File.write file, yaml }
       end
 
