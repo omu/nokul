@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     nokul-support (0.1.0)
-      activesupport (~> 6.0.0.rc1)
+      activesupport (~> 6.0.0)
 
 GEM
   remote: https://rubygems.org/
