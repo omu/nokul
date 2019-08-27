@@ -39,7 +39,11 @@ gem 'net-ldap'
 # assets: core asset dependencies
 # TODO: Edge versions require coffee-rails https://github.com/rails/rails/issues/28965
 gem 'coffee-rails', '~> 5.0'
+
+# TODO: This line should be removed when sassc-rails has the latest version of sassc.
+gem 'sassc', '~> 2.2.0'
 gem 'sassc-rails'
+
 gem 'uglifier', '>= 1.3.0'
 gem 'webpacker'
 
