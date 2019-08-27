@@ -55,6 +55,7 @@ gem 'groupdate'
 gem 'pagy'
 gem 'simple_form'
 gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 
 # api
 gem 'jbuilder', '~> 2.9'
