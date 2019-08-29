@@ -15,7 +15,6 @@ module Activation
                   :serial_no,
                   :user
 
-    validates :country, presence: true
     validates :date_of_birth, presence: true
     validates :document_no, allow_blank: true, length: { is: 9 }
     validates :first_name, presence: true
@@ -34,7 +33,7 @@ module Activation
       attributes.each do |name, value|
         send("#{name}=", value)
       end
-      @mobile_phone = TelephoneNumber.parse(mobile_phone, country&.to_sym).e164_number
+      @mobile_phone = TelephoneNumber.parse(mobile_phone).e164_number
     end
 
     # rubocop:disable Metrics/MethodLength

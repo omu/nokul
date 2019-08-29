@@ -38,7 +38,7 @@
 </div>
 <div class='row'>
   <div class='col-sm-12'>
-    <div class='card'>
+    <div class='card text-center'>
       <div class='card-header'>
         <%= fa_icon 'phone' %>
         <strong><%= t('.mobile_phone_updating') %></strong>
@@ -46,11 +46,9 @@
       <div class='card-body'>
         <%= simple_form_for(resource, url: { action: :phone_verification, controller: 'account/registrations' }, remote: true, html: { method: :put }) do |f| %>
           <div class='row'>
-            <div class='form-group col-sm-6'>
-              <%= f.input :country, collection: Country.order(:name), value_method: :alpha_2_code, selected: TelephoneNumber.parse(f.object.mobile_phone).country&.country_id, required: true %>
-            </div>
-            <div class='form-group col-sm-6'>
-              <%= f.input :mobile_phone, input_html: { value: TelephoneNumber.parse(f.object.mobile_phone).normalized_number }, required: true %>
+            <div class='form-group col-sm-12'>
+              <%= f.input :mobile_phone, type: 'tel', label: false, placeholder: false, required: true, wrapper: false %>
+              <span id='error-msg' class='invalid-feedback d-block'></span>
             </div>
             <div class='form-group col-sm-12'>
               <%= f.button :submit, t('action_group.update'), class: 'btn btn-outline-success btn-sm' %>
@@ -62,7 +60,14 @@
   </div>
 </div>
 <div id='verification_modal' class='modal fade' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true' data-backdrop='static' data-keyboard='false'></div>
+<%= javascript_include_tag 'shared/intl_tel_input_validation' %>
 
-<script type="text/javascript">
+<script type='text/javascript'>
   $('#user_country').select2();
+
+  TelInputValidation('#user_mobile_phone', '#error-msg', <%= raw t('intl_tel_input.errors').values %>)
 </script>
+
+<style media='screen'>
+  .iti__flag { background-image: url('https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.2/img/flags.png'); }
+</style>

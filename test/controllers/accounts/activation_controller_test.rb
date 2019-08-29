@@ -5,7 +5,7 @@ require 'test_helper'
 module Accounts
   class ActivationControllerTest < ActionDispatch::IntegrationTest
     setup do
-      @form_params = %w[id_number first_name last_name date_of_birth serial serial_no document_no mobile_phone country]
+      @form_params = %w[id_number first_name last_name date_of_birth serial serial_no document_no mobile_phone]
       @prospective = prospective_students(:mine)
     end
 

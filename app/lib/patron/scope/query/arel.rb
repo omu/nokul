@@ -10,13 +10,11 @@ module Patron
           predicates << name
           predicate = options.fetch(:equivalent_to, name)
 
-          define_method(name) do |model, attribute, value|
+          define_singleton_method(name) do |model, attribute, value|
             model.arel_table[attribute].public_send(
               predicate, format_and_sanitize_value(predicate, value, options)
             )
           end
-
-          module_function(name)
         end
 
         define_predicate :in

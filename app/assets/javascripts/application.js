@@ -13,3 +13,4 @@
 //= require chartkick
 //= require flatpickr/dist/flatpickr.min
 //= require flatpickr/dist/l10n/tr
+//= require intl-tel-input/build/js/intlTelInput.min

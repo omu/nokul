@@ -31,5 +31,7 @@
     $('#activation_serial, #activation_serial_no, #activation_document_no').on('input', function () {
       setDisabledStateOfInputs('change')
     })
+
+    TelInputValidation('#activation_mobile_phone', '#error-msg', <%= raw t('intl_tel_input.errors').values %>)
   })
 </script>
