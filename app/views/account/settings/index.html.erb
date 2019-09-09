@@ -1,30 +1,30 @@
-<h3>Giriş ve Güvenlik</h3>
+<h3><%= t('.title') %></h3>
 <hr>
 <div class='row'>
   <div class='container-fluid'>
     <div class='card border-light bg-transparent'>
       <div class='card-body'>
         <%= link_to t('action_group.update'), edit_user_registration_path, class: 'pull-right' %>
-        <h5>E-Posta</h5>
-        <small class='pull-right'><%= current_user.email %></small>
-        <small>E-posta adresini güncelle</small>
+        <h5><%= t('.email') %></h5>
+        <small class='text-muted pull-right'><%= current_user.email %></small>
+        <small class='text-muted'><%= t('.updating_email') %></small>
       </div>
     </div>
     <hr>
     <div class='card border-light bg-transparent'>
       <div class='card-body'>
         <%= link_to t('action_group.update'), phone_setting_path, class: 'pull-right' %>
-        <h5>Telefon Numarası</h5>
-        <small class='pull-right'><%= current_user.mobile_phone %></small>
-        <small>Telefon numaranı güncelle ve doğrula</small>
+        <h5><%= t('.mobile_phone') %></h5>
+        <small class='text-muted pull-right'><%= current_user.mobile_phone %></small>
+        <small class='text-muted'><%= t('.updating_mobile_phone') %></small>
       </div>
     </div>
     <hr>
     <div class='card border-light bg-transparent'>
       <div class='card-body'>
         <%= link_to t('action_group.update'), edit_user_registration_path, class: 'pull-right' %>
-        <h5>Şifre Değiştir</h5>
-        <small>Hesabını korumak için güvenli bir şifre belirle</small>
+        <h5><%= t('.change_password') %></h5>
+        <small class='text-muted'><%= t('.set_password') %></small>
       </div>
     </div>
   </div>

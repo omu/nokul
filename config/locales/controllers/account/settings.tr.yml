@@ -1,9 +1,17 @@
 tr:
   account:
     settings:
-      update_mobile_phone:
-        success: Telefon numaranız başarılı bir şekilde güncellendi.
+      index:
+        email: E-Posta
+        change_password: Şifre Değiştir
+        mobile_phone: Telefon Numarası
+        set_password: Hesabını korumak için güvenli bir şifre belirle
+        title: Giriş ve Güvenlik
+        updating_email: E-posta adresini güncelle
+        updating_mobile_phone: Telefon numaranı güncelle ve doğrula
       phone_setting:
         mobile_phone_updating: Cep Telefonu Güncelleme
       phone_verification:
         cannot_change_phone: Telefon güncelleme talebinizi aynı telefon numarası ile yapamazsınız.
+      update_mobile_phone:
+        success: Telefon numaranız başarılı bir şekilde güncellendi.
