@@ -1,0 +1,9 @@
+tr:
+  account:
+    settings:
+      update_mobile_phone:
+        success: Telefon numaranız başarılı bir şekilde güncellendi.
+      phone_setting:
+        mobile_phone_updating: Cep Telefonu Güncelleme
+      phone_verification:
+        cannot_change_phone: Telefon güncelleme talebinizi aynı telefon numarası ile yapamazsınız.

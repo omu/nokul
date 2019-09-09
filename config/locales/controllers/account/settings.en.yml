@@ -1,0 +1,9 @@
+en:
+  account:
+    settings:
+      update_mobile_phone:
+        success: Your mobile number has been updated.
+      phone_setting:
+        mobile_phone_updating: Mobile Phone Updating
+      phone_verification:
+        cannot_change_phone: You cannot make a mobile phone update request with the same number

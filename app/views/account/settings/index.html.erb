@@ -1,0 +1,31 @@
+<h3>Giriş ve Güvenlik</h3>
+<hr>
+<div class='row'>
+  <div class='container-fluid'>
+    <div class='card border-light bg-transparent'>
+      <div class='card-body'>
+        <%= link_to t('action_group.update'), edit_user_registration_path, class: 'pull-right' %>
+        <h5>E-Posta</h5>
+        <small class='pull-right'><%= current_user.email %></small>
+        <small>E-posta adresini güncelle</small>
+      </div>
+    </div>
+    <hr>
+    <div class='card border-light bg-transparent'>
+      <div class='card-body'>
+        <%= link_to t('action_group.update'), phone_setting_path, class: 'pull-right' %>
+        <h5>Telefon Numarası</h5>
+        <small class='pull-right'><%= current_user.mobile_phone %></small>
+        <small>Telefon numaranı güncelle ve doğrula</small>
+      </div>
+    </div>
+    <hr>
+    <div class='card border-light bg-transparent'>
+      <div class='card-body'>
+        <%= link_to t('action_group.update'), edit_user_registration_path, class: 'pull-right' %>
+        <h5>Şifre Değiştir</h5>
+        <small>Hesabını korumak için güvenli bir şifre belirle</small>
+      </div>
+    </div>
+  </div>
+</div>
