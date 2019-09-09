@@ -6,13 +6,8 @@ en:
         updated: "Your account has been updated successfully."
   account:
     registrations:
-      update_mobile_phone:
-        success: Your mobile number has been updated.
       edit:
         account_settings: Account Settings
         current_password: Current Password
         current_password_hint: you must enter your current password for changing your e-mail address
         leave_blank: leave blank if you don't want to change
-        mobile_phone_updating: Mobile Phone Updating
-      phone_verification:
-        cannot_change_phone: You cannot make a mobile phone update request with the same number
