@@ -76,5 +76,11 @@ module Account
       slug = nil if params[:email].present?
       # rubocop:enable Lint/UselessAssignment
     end
+
+    protected
+
+    def after_update_path_for(_resource)
+      settings_path
+    end
   end
 end
