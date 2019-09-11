@@ -1,0 +1,8 @@
+en:
+  account:
+    settings:
+      phones:
+        edit:
+          mobile_phone_updating: Mobile Phone Updating
+        update:
+          success: Mobile phone successfully updated.

@@ -1,0 +1,8 @@
+tr:
+  account:
+    settings:
+      phones:
+        edit:
+          mobile_phone_updating: Telefon Güncelle
+        update:
+          success: Telefon başarılı bir şekilde güncellendi.

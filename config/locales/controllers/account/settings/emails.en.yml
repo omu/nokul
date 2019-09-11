@@ -1,0 +1,9 @@
+en:
+  account:
+    settings:
+      emails:
+        edit:
+          current_password: Current Password
+          update_email: Update Email
+        update:
+          success: Email successfully updated.
