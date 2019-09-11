@@ -6,7 +6,7 @@ tr:
         change_password: Şifre Değiştir
         mobile_phone: Telefon Numarası
         set_password: Hesabını korumak için güvenli bir şifre belirle
-        title: Giriş ve Güvenlik
+        access_and_security: Giriş ve Güvenlik
         updating_email: E-posta adresini güncelle
         updating_mobile_phone: Telefon numaranı güncelle ve doğrula
       phone_setting:

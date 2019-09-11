@@ -6,7 +6,7 @@ en:
         change_password: Change Password
         mobile_phone: Mobile Phone
         set_password: Set a secure password to protect your account
-        title: Access and Security
+        access_and_security: Access and Security
         updating_email: Update your email
         updating_mobile_phone: Update and verify your mobile phone
       phone_setting:
