@@ -13,12 +13,3 @@ tr:
         addresses: Adres Bilgileri
         identities: Kimlik Bilgileri
         registered_users: Kayıtlı Kullanıcılar
-  layouts:
-    application:
-      account_settings: Hesap Ayarları
-      addresses: Adres Bilgileri
-      identities: Kimlik Bilgileri
-      logout: Çıkış Yap
-      my_account: Hesabım
-      profile_settings: Profil Ayarları
-      settings: Ayarlar
