@@ -2,13 +2,22 @@ tr:
   account:
     settings:
       index:
-        email: E-Posta
-        change_password: Şifre Değiştir
-        mobile_phone: Telefon Numarası
-        set_password: Hesabını korumak için güvenli bir şifre belirle
         access_and_security: Giriş ve Güvenlik
-        updating_email: E-posta adresini güncelle
-        updating_mobile_phone: Telefon numaranı güncelle ve doğrula
+        addresses: Adresler
+        add_address: Hesabına adres ekle veya çıkart
+        change: Değiştir
+        change_password: Şifre Değiştir
+        email: E-Posta
+        general_settings: Genel Ayarlar
+        identity_informations: Kimlik Bilgileri
+        manage: Yönet
+        mobile_phone: Telefon Numarası
+        personal_informations: Kişisel Bilgiler
+        set_password: Hesabını korumak için güvenli bir şifre belirle
+        update_email: E-posta adresini güncelle
+        update_general_settings: Sosyal medya hesaplarını ve diğer ayarları güncelle
+        update_identity_informations: Kimlik bilgilerini görüntüle ve güncelle
+        update_mobile_phone: Telefon numaranı güncelle ve doğrula
       phone_setting:
         mobile_phone_updating: Cep Telefonu Güncelleme
       phone_verification:
