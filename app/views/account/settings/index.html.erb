@@ -1,56 +1,49 @@
 <h4><%= t('.access_and_security') %></h4>
 <hr />
-<div class='row'>
-  <div class='container-fluid'>
-    <div class='card border-light bg-transparent'>
-      <div class='card-body'>
-        <%= link_to t('action_group.update'), settings_emails_path, class: 'pull-right' %>
-        <h5><%= t('.email') %></h5>
-        <small class='text-muted pull-right'><%= current_user.email %></small>
-        <small class='text-muted'><%= t('.update_email') %></small>
-      </div>
-    </div>
-    <div class='card border-light bg-transparent'>
-      <div class='card-body'>
-        <%= link_to t('action_group.update'), settings_phones_path, class: 'pull-right' %>
-        <h5><%= t('.mobile_phone') %></h5>
-        <small class='text-muted pull-right'><%= current_user.mobile_phone %></small>
-        <small class='text-muted'><%= t('.update_mobile_phone') %></small>
-      </div>
-    </div>
-    <div class='card border-light bg-transparent'>
-      <div class='card-body'>
-        <%= link_to t('.change'), settings_passwords_path, class: 'pull-right' %>
-        <h5><%= t('.change_password') %></h5>
-        <small class='text-muted'><%= t('.set_password') %></small>
-      </div>
-    </div>
+<div class='card border-light bg-transparent'>
+  <div class='card-body'>
+    <%= link_to t('action_group.update'), settings_emails_path, class: 'pull-right' %>
+    <h5><%= t('.email') %></h5>
+    <small class='text-muted pull-right'><%= current_user.email %></small>
+    <small class='text-muted'><%= t('.update_email') %></small>
   </div>
 </div>
+<div class='card border-light bg-transparent'>
+  <div class='card-body'>
+    <%= link_to t('action_group.update'), settings_phones_path, class: 'pull-right' %>
+    <h5><%= t('.mobile_phone') %></h5>
+    <small class='text-muted pull-right'><%= current_user.mobile_phone %></small>
+    <small class='text-muted'><%= t('.update_mobile_phone') %></small>
+  </div>
+</div>
+<div class='card border-light bg-transparent'>
+  <div class='card-body'>
+    <%= link_to t('.change'), settings_passwords_path, class: 'pull-right' %>
+    <h5><%= t('.change_password') %></h5>
+    <small class='text-muted'><%= t('.set_password') %></small>
+  </div>
+</div>
+
 <h4><%= t('.personal_informations') %></h4>
 <hr />
-<div class='row'>
-  <div class='container-fluid'>
-    <div class='card border-light bg-transparent'>
-      <div class='card-body'>
-        <%= link_to t('.manage'), user_addresses_path(current_user), class: 'pull-right' %>
-        <h5><%= t('.addresses') %></h5>
-        <small class='text-muted'><%= t('.add_address') %></small>
-      </div>
-    </div>
-    <div class='card border-light bg-transparent'>
-      <div class='card-body'>
-        <%= link_to t('action_group.update'), user_identities_path(current_user), class: 'pull-right' %>
-        <h5><%= t('.identity_informations') %></h5>
-        <small class='text-muted'><%= t('.update_identity_informations') %></small>
-      </div>
-    </div>
-    <div class='card border-light bg-transparent'>
-      <div class='card-body'>
-        <%= link_to t('action_group.update'), profile_path, class: 'pull-right' %>
-        <h5><%= t('.general_settings') %></h5>
-        <small class='text-muted'><%= t('.update_general_settings') %></small>
-      </div>
-    </div>
+<div class='card border-light bg-transparent'>
+  <div class='card-body'>
+    <%= link_to t('.manage'), user_addresses_path(current_user), class: 'pull-right' %>
+    <h5><%= t('.addresses') %></h5>
+    <small class='text-muted'><%= t('.add_address') %></small>
+  </div>
+</div>
+<div class='card border-light bg-transparent'>
+  <div class='card-body'>
+    <%= link_to t('action_group.update'), user_identities_path(current_user), class: 'pull-right' %>
+    <h5><%= t('.identity_informations') %></h5>
+    <small class='text-muted'><%= t('.update_identity_informations') %></small>
+  </div>
+</div>
+<div class='card border-light bg-transparent'>
+  <div class='card-body'>
+    <%= link_to t('action_group.update'), profile_path, class: 'pull-right' %>
+    <h5><%= t('.general_settings') %></h5>
+    <small class='text-muted'><%= t('.update_general_settings') %></small>
   </div>
 </div>
