@@ -7,6 +7,7 @@ module Accounts
     class PasswordsControllerTest < ActionDispatch::IntegrationTest
       setup do
         @user = users(:serhat)
+        @password = SecureRandom.hex(15).freeze
         sign_in @user
       end
 
@@ -19,8 +20,8 @@ module Accounts
 
       test 'should update password' do
         parameters = {
-          password:              '3a540dd482342b65bf840ba716da87eb1e',
-          password_confirmation: '3a540dd482342b65bf840ba716da87eb1e',
+          password:              @password,
+          password_confirmation: @password,
           current_password:      'd61c16acabedeab84f1ad062d7ad948ef3'
         }
 
@@ -28,7 +29,7 @@ module Accounts
 
         @user.reload
 
-        assert @user.valid_password?('3a540dd482342b65bf840ba716da87eb1e')
+        assert @user.valid_password?(@password)
         assert_equal translate('.update.success'), flash[:notice]
         assert_redirected_to :settings
       end
