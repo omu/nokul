@@ -35,7 +35,7 @@
       <% if last_password_change(current_user) > 1 %>
         <hr />
         <div class="alert alert-danger" role="alert">
-          <small class="text-muted"><%= link_to t('.change_password'), edit_user_registration_path %></small>
+          <small class="text-muted"><%= link_to t('.change_password'), settings_passwords_path %></small>
         </div>
       <% end %>
     </div>
