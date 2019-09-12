@@ -1,15 +1,13 @@
 # frozen_string_literal: true
 
-devise_for :users, controllers: {
-  registrations: 'account/registrations',
-  passwords:     'account/passwords',
-  sessions:      'account/sessions',
-  unlocks:       'account/unlocks'
+devise_for :users, skip: :registrations, controllers: {
+  passwords: 'account/passwords',
+  sessions:  'account/sessions',
+  unlocks:   'account/unlocks'
 }
 
 devise_scope :user do
   scope module: :account do
-    get 'account', to: 'registrations#edit'
     get 'login', to: 'sessions#new'
     get 'recover', to: 'passwords#new'
     delete 'logout', to: 'sessions#destroy'
