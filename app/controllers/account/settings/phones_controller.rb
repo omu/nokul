@@ -5,13 +5,13 @@ module Account
     class PhonesController < ApplicationController
       include PhoneVerification
 
-      before_action :set_user
-
       def edit; end
 
+      # rubocop:disable Metrics/AbcSize
       def verification
-        phone = @user.mobile_phone = TelephoneNumber.parse(params.dig(:user, :mobile_phone)).e164_number
-        return respond_to :js unless @user.valid? && @user.mobile_phone_changed?
+        phone = current_user.mobile_phone = TelephoneNumber.parse(params.dig(:user, :mobile_phone)).e164_number
+
+        return respond_to :js unless current_user.valid? && current_user.mobile_phone_changed?
 
         flash[:alert] = t('errors.system_error') unless Twilio::Verify.send_phone_verification_code(phone).ok?
 
@@ -23,16 +23,11 @@ module Account
         response = check_verification_code
 
         return redirect_to_with_twilio_error(response, settings_path) unless response.ok?
-        return redirect_to settings_path, notice: t('.success') if @user.update(mobile_phone: phone)
+        return redirect_to settings_path, notice: t('.success') if current_user.update(mobile_phone: phone)
 
         redirect_to settings_path, alert: t('errors.system_error')
       end
-
-      private
-
-      def set_user
-        @user = current_user
-      end
+      # rubocop:enable Metrics/AbcSize
     end
   end
 end

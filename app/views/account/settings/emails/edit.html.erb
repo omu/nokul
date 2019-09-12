@@ -6,7 +6,7 @@
         <strong><%= t('.update_email') %></strong>
       </div>
       <div class='card-body'>
-        <%= simple_form_for(@user, as: :user, url: settings_emails_path, html: { method: :put }) do |f| %>
+        <%= simple_form_for(current_user, as: :user, url: settings_emails_path, html: { method: :put }) do |f| %>
           <div class='row'>
             <div class='form-group col-sm-12'>
               <%= f.error_notification %>

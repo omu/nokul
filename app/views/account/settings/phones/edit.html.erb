@@ -6,7 +6,7 @@
         <strong><%= t('.mobile_phone_updating') %></strong>
       </div>
       <div class='card-body text-center'>
-        <%= simple_form_for(@user, url: { action: :verification, controller: 'account/settings/phones' }, remote: true, html: { method: :put }) do |f| %>
+        <%= simple_form_for(current_user, url: { action: :verification, controller: 'account/settings/phones' }, remote: true, html: { method: :put }) do |f| %>
           <div class='row'>
             <div class='form-group col-sm-12'>
               <%= f.input :mobile_phone, type: 'tel', label: false, placeholder: false, required: true, wrapper: false %>
