@@ -1,71 +1,21 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang='tr'>
   <head>
     <%= render 'layouts/shared/meta' %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-    <script type="text/javascript">
+    <script type='text/javascript'>
       flatpickr.localize(flatpickr.l10ns["<%= I18n.locale %>"])
     </script>
   </head>
-  <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
-    <header class="app-header navbar">
-      <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <%= link_to :root, class: 'navbar-brand' do %>
-        <%= image_tag Tenant.configuration.branding.logo.file,
-                      height: '36',
-                      width: '134',
-                      alt: Tenant.configuration.branding.logo.alt_text,
-                      class: 'navbar-brand-full' %>
-      <% end %>
-      <button class="navbar-toggler sidebar-toggler d-none d-md-block d-lg-none" type="button" data-toggle="sidebar-lg-show">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <ul class="nav navbar-nav ml-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-            <%= fa_icon 'user 2x' %>
-          </a>
-          <div class="dropdown-menu dropdown-menu-right">
-            <div class="dropdown-header text-center">
-              <strong><%= t('.my_account') %></strong>
-            </div>
-            <%= link_to [:user, :identities, { user_id: current_user.id }], class: 'dropdown-item' do %>
-              <%= fa_icon('id-card', text: t('.identities')) %>
-            <% end %>
-            <%= link_to [:user, :addresses, { user_id: current_user.id }], class: 'dropdown-item' do %>
-              <%= fa_icon('home', text: t('.addresses')) %>
-            <% end %>
-            <%= link_to :profile, class: 'dropdown-item' do %>
-              <%= fa_icon('user', text: t('.profile_settings')) %>
-            <% end %>
-            <div class="dropdown-header text-center">
-              <strong><%= t('.settings') %></strong>
-            </div>
-            <%= link_to :account, class: 'dropdown-item' do %>
-              <%= fa_icon('shield', text: t('.account_settings')) %>
-            <% end %>
-            <%= link_to :logout, class: 'dropdown-item', method: :delete do %>
-              <%= fa_icon('lock', text: t('.logout')) %>
-            <% end %>
-          </div>
-        </li>
-      </ul>
-      <button class="navbar-toggler aside-menu-toggler d-md-down-none" type="button" data-toggle="aside-menu-lg-show">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <button class="navbar-toggler aside-menu-toggler d-lg-none" type="button" data-toggle="aside-menu-show">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </header>
-    <div class="app-body">
+  <body class='app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show'>
+    <%= render 'layouts/shared/header' %>
+    <div class='app-body'>
       <%= render 'layouts/shared/sidebar' %>
-      <main class="main">
+      <main class='main'>
         <p></p>
-        <div class="container-fluid">
-          <div class="animated fadeIn">
+        <div class='container-fluid'>
+          <div class='animated fadeIn'>
             <%= yield %>
           </div>
         </div>

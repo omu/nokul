@@ -1,0 +1,20 @@
+en:
+  account:
+    settings:
+      index:
+        access_and_security: Access and Security
+        addresses: Addresses
+        add_address: Add or remove address to your account
+        change: Change
+        change_password: Change Password
+        email: Email
+        general_settings: General Settings
+        identity_informations: Identity Informations
+        manage: Manage
+        mobile_phone: Mobile Phone
+        personal_informations: Personal Informations
+        set_password: Set a secure password to protect your account
+        update_email: Update your email
+        update_general_settings: Update social media accounts and other settings
+        update_identity_informations: Update your identity informations
+        update_mobile_phone: Update and verify your mobile phone

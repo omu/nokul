@@ -1,0 +1,7 @@
+en:
+  layouts:
+    shared:
+      header:
+        account_settings: Account Settings
+        logout: Logout
+        profile_settings: Your Profile

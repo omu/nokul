@@ -1,0 +1,9 @@
+tr:
+  account:
+    settings:
+      emails:
+        edit:
+          current_password: Mevcut Parolanız
+          update_email: E-posta Güncelle
+        update:
+          success: E-posta başarılı bir şekilde güncellendi.

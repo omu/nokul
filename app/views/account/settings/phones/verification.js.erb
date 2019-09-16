@@ -6,8 +6,8 @@
   toastr.error('<%= flash[:alert] %>')
 <% else %>
   $('#verification_modal').html("<%= escape_javascript(render partial: 'layouts/shared/phone_verification_modal', \
-                                                              locals: { action: 'update_mobile_phone', \
-                                                                        controller: 'account/registrations', \
+                                                              locals: { action: 'update', \
+                                                                        controller: 'account/settings/phones', \
                                                                         mobile_phone: current_user.mobile_phone }) %>");
   $('#verification_modal').modal('show')
 <% end %>

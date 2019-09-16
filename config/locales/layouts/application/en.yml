@@ -13,12 +13,3 @@ en:
         addresses: Addresses
         identities: Identities
         registered_users: Registered Users
-  layouts:
-    application:
-      account_settings: Account Settings
-      addresses: Addresses
-      identities: Identities
-      logout: Logout
-      my_account: My Account
-      profile_settings: Profile Settings
-      settings: Settings
