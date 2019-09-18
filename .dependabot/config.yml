@@ -1,0 +1,26 @@
+version: 1
+update_configs:
+  - package_manager: "ruby:bundler"
+    directory: "/"
+    update_schedule: "weekly"
+    commit_message:
+      prefix: "chore"
+      include_scope: true
+    allowed_updates:
+      - match:
+          dependency_type: "all"
+          update_type: "all"
+    default_labels:
+      - "dependencies"
+  - package_manager: "javascript"
+    directory: "/"
+    update_schedule: "weekly"
+    commit_message:
+      prefix: "chore"
+      include_scope: true
+    allowed_updates:
+      - match:
+          dependency_type: "all"
+          update_type: "all"
+    default_labels:
+      - "dependencies"
