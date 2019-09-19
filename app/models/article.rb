@@ -5,7 +5,7 @@ class Article < ApplicationRecord
 
   # enums
   enum scope: { national: 0, international: 1 }
-  enum review: { reviewed: 0, not_reviewed: 1 }
+  enum review: { reviewed: 0, unreviewed: 1 }
   enum access_type: { printed: 1, electronic: 2, printed_and_electronic: 3 }
   enum status: { deleted: 0, active: 1 }
 
@@ -16,7 +16,7 @@ class Article < ApplicationRecord
     field_indexes:              8,
     well_established_indexes:   9,
     sci:                        40,
-    not_indexed:                42,
+    unindexed:                  42,
     ebsco:                      46,
     index_islamicus:            47,
     index_medicus:              48,
