@@ -16,6 +16,10 @@ en:
         website: Website
       update:
         success: Profile successfully updated.
+      show:
+        academic_activities: Academic Activities
+        articles: Articles
+        status: Status
   simple_form:
     placeholders:
       user:

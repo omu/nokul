@@ -16,6 +16,10 @@ tr:
         website: Web Sayfanız
       update:
         success: Profiliniz başarıyla güncellendi
+      show:
+        academic_activities: Akademik Aktiviteler
+        articles: Makaleler
+        status: Durum
   simple_form:
     placeholders:
       user:

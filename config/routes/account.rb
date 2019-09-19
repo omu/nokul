@@ -34,7 +34,8 @@ scope module: :account do
   get 'activation', to: 'activations#new'
   post 'activation', to: 'activations#create'
   post 'activation_phone_verification', to: 'activations#check_phone_verification'
-  get '/profile', to: 'profile_settings#edit'
+  get '/profile/edit', to: 'profile_settings#edit'
+  get '/profile', to: 'profile_settings#show'
   patch '/profile', to: 'profile_settings#update'
 end
 

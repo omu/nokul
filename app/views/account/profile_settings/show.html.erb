@@ -1,0 +1,35 @@
+<div class='row'>
+  <div class='col-sm-12'>
+    <div class='card bg-transparent'>
+      <div class='card-body'>
+        <div class='row'>
+          <div class='col-sm-1'>
+            <% if current_user.avatar.attached? && current_user.avatar.variable? %>
+              <%= image_tag current_user.avatar.variant(resize_to_limit: [150, 150]) %>
+            <% else %>
+              <%= image_tag 'profile/avatar_placeholder.svg', width: '150px' %>
+            <% end %>
+            <hr />
+          </div>
+          <div class='col-sm-4'>
+            <h4><%= "#{current_user.identities.first&.first_name} #{current_user.identities.first&.last_name}" %></h4><br />
+            <%= current_user.mobile_phone %><br />
+            <%= current_user.email %><br />
+            <%= link_to fa_icon('linkedin'), current_user.linkedin %>
+            <%= link_to fa_icon('skype'), current_user.skype %>
+            <%= link_to fa_icon('twitter-square'), current_user.twitter %>
+          </div>
+        </div>
+        <h3><%= t('.academic_activities') %></h3>
+        <br />
+        <div class="col-sm-12">
+          <h4><%= t('.articles') %></h4>
+          <% current_user.articles.last(10).each do |article| %>
+            <small><li class="list-group-item"><%= apa_citation(article) %></li></small>
+          <% end %>
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

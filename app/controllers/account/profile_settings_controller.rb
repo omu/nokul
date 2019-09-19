@@ -3,6 +3,7 @@
 module Account
   class ProfileSettingsController < ApplicationController
     # before_action :purge_avatar, only: :update
+    def show; end
 
     def edit; end
 
