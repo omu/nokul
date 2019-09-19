@@ -17,6 +17,7 @@ class Article < ApplicationRecord
     well_established_indexes:   9,
     sci:                        40,
     unindexed:                  42,
+    turkish_index:              45,
     ebsco:                      46,
     index_islamicus:            47,
     index_medicus:              48,
@@ -29,8 +30,12 @@ class Article < ApplicationRecord
     eric:                       55,
     esci:                       56,
     index_chemicus:             59,
-    turkish_index:              45,
-    art_index:                  62
+    architectural_periodicals:  60,
+    design_and_applied_art:     61,
+    art_index:                  62,
+    iconda:                     63,
+    economics_abstracts:        64,
+    education_full_text:        65
   }
 
   enum type: {
