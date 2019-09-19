@@ -28,6 +28,10 @@
             <small><li class="list-group-item"><%= apa_citation(article) %></li></small>
           <% end %>
           <br />
+          <h4><%= t('.projects') %></h4>
+          <% current_user.projects.each do |project| %>
+            <small><li class="list-group-item"><%= project_format(project) %></li></small>
+          <% end %>
         </div>
       </div>
     </div>

@@ -16,4 +16,12 @@ module ApaHelper
       "#{last_name}, #{first_name}"
     end.join(' & ')
   end
+
+  def project_format(project)
+    concat "#{project.type} - #{project.duty} - \
+            #{l project.start_date, format: '%Y / %m'} - \
+            #{project.end_date ? l(project.end_date, format: '%Y') : ''} | \
+            #{t('.status')} : #{enum_t(project, :status)}"
+    tag.p project.subject
+  end
 end
