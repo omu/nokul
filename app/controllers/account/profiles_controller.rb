@@ -21,8 +21,7 @@ module Account
 
     def profile_params
       params.require(:user).permit(
-        :avatar, :country, :fixed_phone, :extension_number, :website, :twitter, :linkedin, :skype, :orcid,
-        :public_photo, :public_studies
+        :avatar, :country, :fixed_phone, :extension_number, :website, :twitter, :linkedin, :skype, :orcid
       )
     end
   end

@@ -30,6 +30,10 @@ scope module: :account do
       put 'phone_verification', action: :verification
       post 'phones', action: :update
     end
+    namespace :preferences do
+      get 'profile', to: 'profiles#edit'
+      patch 'profile', to: 'profiles#update'
+    end
   end
   get 'activation', to: 'activations#new'
   post 'activation', to: 'activations#create'
