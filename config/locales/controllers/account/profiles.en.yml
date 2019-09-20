@@ -1,6 +1,6 @@
 en:
   account:
-    profile_settings:
+    profiles:
       edit:
         country: Country
         extension_number: Extension Number

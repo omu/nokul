@@ -1,6 +1,6 @@
 tr:
   account:
-    profile_settings:
+    profiles:
       edit:
         country: Ülke
         extension_number: Dahili Numaranız

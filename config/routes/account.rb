@@ -34,9 +34,9 @@ scope module: :account do
   get 'activation', to: 'activations#new'
   post 'activation', to: 'activations#create'
   post 'activation_phone_verification', to: 'activations#check_phone_verification'
-  get '/profile/edit', to: 'profile_settings#edit'
-  get '/profile', to: 'profile_settings#show'
-  patch '/profile', to: 'profile_settings#update'
+  get '/profile/edit', to: 'profiles#edit'
+  get '/profile', to: 'profiles#show'
+  patch '/profile', to: 'profiles#update'
 end
 
 resources :users, only: [] do
