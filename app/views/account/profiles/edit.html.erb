@@ -109,13 +109,11 @@
               </div>
             </div>
 
-            <% unless current_user.employees.active.any? %>
-              <div class='form-group col-sm-12'>
-                <hr />
-                <%= f.button :submit, t('save'), class: 'btn btn-outline-success btn-sm' %>
-                <%= link_to_back(:back) %>
-              </div>
-            <% end %>
+            <div class='form-group col-sm-12'>
+              <hr />
+              <%= f.button :submit, t('save'), class: 'btn btn-outline-success btn-sm' %>
+              <%= link_to_back(:back) %>
+            </div>
           </div>
         </div>
       </div>
