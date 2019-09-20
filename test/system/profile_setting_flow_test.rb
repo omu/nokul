@@ -26,7 +26,7 @@ class ProfileSettingFlowTest < ApplicationSystemTestCase
         fill_in("user[#{key}]", with: value)
       end
       click_button(t('save'))
-      assert_equal t('account.profile_settings.update.success'), page.find('div', class: 'toast-message').text
+      assert_equal t('account.profiles.update.success'), page.find('div', class: 'toast-message').text
     end
   end
 end
