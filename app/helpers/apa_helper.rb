@@ -24,4 +24,9 @@ module ApaHelper
             #{t('.status')} : #{enum_t(project, :status)}"
     tag.p project.subject
   end
+
+  def certification_format(certificate)
+    "#{certificate.name} - #{enum_t(certificate, :scope)}, #{enum_t(certificate, :type)} - \
+    #{certificate.city_and_country} - (#{l(certificate.start_date, format: '%Y')})"
+  end
 end

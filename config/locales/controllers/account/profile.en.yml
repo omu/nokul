@@ -19,6 +19,7 @@ en:
       show:
         academic_activities: Academic Activities
         articles: Articles
+        certifications: Certifications
         projects: Projects
         status: Status
   simple_form:

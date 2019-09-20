@@ -32,6 +32,11 @@
             <% current_user.projects.each do |project| %>
               <small><li class='list-group-item list-group-item-accent-secondary list-group-item-secondary'><%= project_format(project) %></li></small>
             <% end %>
+            <br />
+            <h4>Sertifikalar</h4>
+            <% current_user.certifications.each do |certificate| %>
+              <small><li class='list-group-item list-group-item-accent-secondary list-group-item-secondary'><%= certification_format(certificate) %></li></small>
+            <% end %>
           </div>
         </div>
       </div>

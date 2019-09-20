@@ -19,6 +19,7 @@ tr:
       show:
         academic_activities: Akademik Aktiviteler
         articles: Makaleler
+        certification: Sertifikalar
         projects: Projeler
         status: Durum
   simple_form:
