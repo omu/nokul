@@ -23,6 +23,11 @@ module Account
       redirect_to(:profile, notice: t('.will_update'))
     end
 
+    def save_certifications_from_yoksis
+      Yoksis::CertificationsSaveJob.perform_later(current_user)
+      redirect_to(:profile, notice: t('.will_update'))
+    end
+
     private
 
     # def purge_avatar

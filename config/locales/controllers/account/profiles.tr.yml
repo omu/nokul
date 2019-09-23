@@ -16,6 +16,8 @@ tr:
         website: Web Sayfanız
       save_articles_from_yoksis:
         will_update: Makale oluşturma veya güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde makaleleriniz güncellenecek.
+      save_certifications_from_yoksis:
+        will_update: Sertifika oluşturma veya güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde sertifikalarınız güncellenecek.
       save_projects_from_yoksis:
         will_update: Proje oluşturma veya güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde projeleriniz güncellenecek.
       show:
@@ -23,10 +25,12 @@ tr:
         articles: Makaleler
         certifications: Sertifikalar
         create_articles_from_yoksis: Makalelerimi YÖKSİS'ten Oluştur
+        create_certifications_from_yoksis: Sertifikalarımı YÖKSİS'ten Oluştur
         create_projects_from_yoksis: Projelerimi YÖKSİS'ten Oluştur
         projects: Projeler
         status: Durum
         update_articles_from_yoksis: Makalelerimi YÖKSİS'ten Güncelle
+        update_certifications_from_yoksis: Sertifikalarımı YÖKSİS'ten Güncelle
         update_projects_from_yoksis: Projelerimi YÖKSİS'ten Güncelle
       update:
         success: Profiliniz başarıyla güncellendi.
