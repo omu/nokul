@@ -13,6 +13,11 @@ module Account
       render(:edit)
     end
 
+    def save_articles_from_yoksis
+      Yoksis::ArticlesCreateJob.perform_later(current_user)
+      redirect_to(:profile, notice: t('.will_update'))
+    end
+
     private
 
     # def purge_avatar

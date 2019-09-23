@@ -88,8 +88,8 @@ class Article < ApplicationRecord
   validates :access_type, allow_nil: true, inclusion: { in: access_types.keys }
   validates :special_issue, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :special_issue_name, length: { maximum: 255 }
-  validates :author_id, numericality: { only_integer: true, greater_than: 0 }
-  validates :incentive_point, numericality: { greater_than_or_equal_to: 0 }
+  validates :author_id, numericality: { only_integer: true, greater_than: 0, allow_nil: true }
+  validates :incentive_point, numericality: { greater_than_or_equal_to: 0, allow_nil: true }
 
   def self.unique_count
     active.group_by(&:yoksis_id).count

@@ -14,14 +14,18 @@ en:
         twitter: Twitter Username
         visiblity_settings: Visiblity Settings
         website: Website
-      update:
-        success: Profile successfully updated.
+      save_articles_from_yoksis:
+        will_update: We have received your request for articles creation or an update, and within a few seconds/minutes your articles will be updated.
       show:
         academic_activities: Academic Activities
         articles: Articles
         certifications: Certifications
+        create_articles_from_yoksis: Create my articles from YOKSİS
         projects: Projects
         status: Status
+        update_articles_from_yoksis: Update my articles from YOKSİS
+      update:
+        success: Profile successfully updated.
   simple_form:
     placeholders:
       user:

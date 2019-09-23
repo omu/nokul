@@ -14,14 +14,18 @@ tr:
         twitter: Twitter Kullanıcı Adı
         visiblity_settings: Görünürlük Ayarları
         website: Web Sayfanız
-      update:
-        success: Profiliniz başarıyla güncellendi
+      save_articles_from_yoksis:
+        will_update: Makale oluşturma veya güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde makaleleriniz güncellenecek.
       show:
         academic_activities: Akademik Aktiviteler
         articles: Makaleler
         certifications: Sertifikalar
+        create_articles_from_yoksis: Makalelerimi YÖKSİS'ten Oluştur
         projects: Projeler
         status: Durum
+        update_articles_from_yoksis: Makalelerimi YÖKSİS'ten Güncelle
+      update:
+        success: Profiliniz başarıyla güncellendi.
   simple_form:
     placeholders:
       user:

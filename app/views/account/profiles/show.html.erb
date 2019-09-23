@@ -23,7 +23,14 @@
         <div class='col-sm-12'>
           <h3><%= t('.academic_activities') %></h3><br />
           <div class='list-group list-group-accent'>
-            <h4><%= t('.articles') %></h4>
+            <div class='row'>
+              <div class='col-sm-12'>
+                <%= link_to (current_user.articles.exists? ? t('.update_articles_from_yoksis') : t('.create_articles_from_yoksis')),
+                            save_articles_from_yoksis_path,
+                            class: 'btn btn-secondary btn-sm pull-right' %>
+                <h4><%= t('.articles') %></h4>
+              </div>
+            </div>
             <% current_user.articles.last(10).each do |article| %>
               <small><li class='list-group-item list-group-item-accent-secondary list-group-item-secondary'><%= apa_citation(article) %></li></small>
             <% end %>
