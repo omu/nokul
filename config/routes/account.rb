@@ -43,9 +43,9 @@ scope module: :account do
     get 'profile/edit', action: :edit
     get 'profile', action: :show
     patch 'profile', action: :update
-    get 'save_articles_from_yoksis', action: :save_articles_from_yoksis
-    get 'save_certifications_from_yoksis', action: :save_certifications_from_yoksis
-    get 'save_projects_from_yoksis', action: :save_projects_from_yoksis
+    get :save_articles_from_yoksis
+    get :save_certifications_from_yoksis
+    get :save_projects_from_yoksis
   end
 end
 
