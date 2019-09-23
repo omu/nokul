@@ -18,6 +18,11 @@ module Account
       redirect_to(:profile, notice: t('.will_update'))
     end
 
+    def save_projects_from_yoksis
+      Yoksis::ProjectsSaveJob.perform_later(current_user)
+      redirect_to(:profile, notice: t('.will_update'))
+    end
+
     private
 
     # def purge_avatar

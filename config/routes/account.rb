@@ -42,6 +42,7 @@ scope module: :account do
   get '/profile', to: 'profiles#show'
   patch '/profile', to: 'profiles#update'
   get 'save_articles_from_yoksis', to: 'profiles#save_articles_from_yoksis'
+  get 'save_projects_from_yoksis', to: 'profiles#save_projects_from_yoksis'
 end
 
 resources :users, only: [] do
