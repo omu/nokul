@@ -5,3 +5,5 @@ en:
         profiles:
           edit:
             visibility_settings: Visibility Settings
+          update:
+            success: Your profile visibility settings have successfully updated.
