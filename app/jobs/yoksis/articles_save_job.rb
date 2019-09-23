@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Yoksis
-  class ArticlesCreateJob < ApplicationJob
+  class ArticlesSaveJob < ApplicationJob
     queue_as :high
 
     # slow operation

@@ -14,7 +14,7 @@ module Account
     end
 
     def save_articles_from_yoksis
-      Yoksis::ArticlesCreateJob.perform_later(current_user)
+      Yoksis::ArticlesSaveJob.perform_later(current_user)
       redirect_to(:profile, notice: t('.will_update'))
     end
 
