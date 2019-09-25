@@ -30,6 +30,7 @@ class User < ApplicationRecord
   has_many :addresses, dependent: :destroy
   has_many :articles, dependent: :destroy
   has_many :certifications, dependent: :destroy
+  has_many :academic_credentials, dependent: :destroy
   has_many :identities, dependent: :destroy
   has_many :employees, dependent: :destroy
   has_many :projects, dependent: :destroy

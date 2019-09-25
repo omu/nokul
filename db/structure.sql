@@ -5,12 +5,74 @@ SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
+SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
 SET default_tablespace = '';
 
 SET default_with_oids = false;
+
+--
+-- Name: academic_credentials; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.academic_credentials (
+    id bigint NOT NULL,
+    yoksis_id integer,
+    activity integer,
+    country_id bigint,
+    department character varying,
+    discipline character varying,
+    location integer,
+    profession_name character varying,
+    scientific_field character varying,
+    status integer,
+    title character varying,
+    unit_name character varying,
+    unit_id integer,
+    university_id integer,
+    start_date date,
+    end_date date,
+    last_update timestamp without time zone,
+    user_id bigint NOT NULL,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT academic_credentials_activity_null CHECK ((activity IS NOT NULL)),
+    CONSTRAINT academic_credentials_activity_numericality CHECK ((activity >= 0)),
+    CONSTRAINT academic_credentials_department_length CHECK ((length((department)::text) <= 255)),
+    CONSTRAINT academic_credentials_discipline_length CHECK ((length((discipline)::text) <= 255)),
+    CONSTRAINT academic_credentials_location_numericality CHECK ((location >= 0)),
+    CONSTRAINT academic_credentials_profession_name_length CHECK ((length((profession_name)::text) <= 255)),
+    CONSTRAINT academic_credentials_scientific_field_length CHECK ((length((scientific_field)::text) <= 255)),
+    CONSTRAINT academic_credentials_status_numericality CHECK ((status >= 0)),
+    CONSTRAINT academic_credentials_title_length CHECK ((length((title)::text) <= 255)),
+    CONSTRAINT academic_credentials_unit_id_null CHECK ((unit_id IS NOT NULL)),
+    CONSTRAINT academic_credentials_unit_name_length CHECK ((length((unit_name)::text) <= 255)),
+    CONSTRAINT academic_credentials_university_id_null CHECK ((university_id IS NOT NULL)),
+    CONSTRAINT academic_credentials_yoksis_id_null CHECK ((yoksis_id IS NOT NULL)),
+    CONSTRAINT academic_credentials_yoksis_id_numericality CHECK ((yoksis_id >= 0))
+);
+
+
+--
+-- Name: academic_credentials_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.academic_credentials_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: academic_credentials_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.academic_credentials_id_seq OWNED BY public.academic_credentials.id;
+
 
 --
 -- Name: academic_terms; Type: TABLE; Schema: public; Owner: -
@@ -3093,6 +3155,13 @@ ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
 
 
 --
+-- Name: academic_credentials id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.academic_credentials ALTER COLUMN id SET DEFAULT nextval('public.academic_credentials_id_seq'::regclass);
+
+
+--
 -- Name: academic_terms id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -3622,6 +3691,14 @@ ALTER TABLE ONLY public.university_types ALTER COLUMN id SET DEFAULT nextval('pu
 --
 
 ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_id_seq'::regclass);
+
+
+--
+-- Name: academic_credentials academic_credentials_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.academic_credentials
+    ADD CONSTRAINT academic_credentials_pkey PRIMARY KEY (id);
 
 
 --
@@ -4542,6 +4619,20 @@ ALTER TABLE ONLY public.users
 
 ALTER TABLE ONLY public.users
     ADD CONSTRAINT users_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: index_academic_credentials_on_country_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_academic_credentials_on_country_id ON public.academic_credentials USING btree (country_id);
+
+
+--
+-- Name: index_academic_credentials_on_user_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_academic_credentials_on_user_id ON public.academic_credentials USING btree (user_id);
 
 
 --
@@ -5749,6 +5840,14 @@ ALTER TABLE ONLY public.agendas
 
 
 --
+-- Name: academic_credentials fk_rails_b9d9c54fa8; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.academic_credentials
+    ADD CONSTRAINT fk_rails_b9d9c54fa8 FOREIGN KEY (country_id) REFERENCES public.countries(id);
+
+
+--
 -- Name: course_evaluation_types fk_rails_bb4be290e9; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -5794,6 +5893,14 @@ ALTER TABLE ONLY public.registration_documents
 
 ALTER TABLE ONLY public.prospective_employees
     ADD CONSTRAINT fk_rails_cfef503ec1 FOREIGN KEY (unit_id) REFERENCES public.units(id);
+
+
+--
+-- Name: academic_credentials fk_rails_d55570421b; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.academic_credentials
+    ADD CONSTRAINT fk_rails_d55570421b FOREIGN KEY (user_id) REFERENCES public.users(id);
 
 
 --
@@ -5999,6 +6106,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20190507195222'),
 ('20190517112616'),
 ('20190517112657'),
-('20190529121036');
+('20190529121036'),
+('20190925063737');
 
 
