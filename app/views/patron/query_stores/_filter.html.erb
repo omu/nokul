@@ -1,0 +1,66 @@
+ <div class="card mb-3">
+  <div class="card-header">
+    <%= Patron::Utils::I18n.filter(options.i18n_key, class_name: @query_store.scope_klass.model) %>
+    <span class="badge badge-primary"><%= attribute %></span>
+    <span class="badge badge-success"><%= @query_store.value_for(attribute, :value_type, i18n_method: :value_type) %></span>
+  </div>
+
+  <div class="card-body">
+    <table class="table table-striped table-hover">
+      <tr class="table-dark">
+        <th width="40%">
+          <%= Patron::Utils::I18n.label('value_type') %>
+        </th>
+        <td>
+          <strong><%= @query_store.value_for(attribute, :value_type, i18n_method: :value_type) %></strong>
+        </td>
+      </tr>
+      <% if @query_store.static?(attribute) %>
+
+        <tr class="table-success">
+          <th>
+            <%= Patron::Utils::I18n.label('static_value') %>
+          </th>
+          <td>
+            <strong><%= @query_store.value_for(attribute, :static_value) %></strong>
+          </td>
+        </tr>
+        <tr class="table-success">
+          <th>
+            <%= Patron::Utils::I18n.label('static_query_type') %>
+          </th>
+          <td>
+            <strong><%= @query_store.value_for(attribute, :static_query_type, i18n_method: :query_type) %></strong>
+          </td>
+        </tr>
+      <% elsif @query_store.dynamic?(attribute) %>
+        <tr class="table-primary">
+          <th>
+            <%= Patron::Utils::I18n.label('dynamic_value') %>
+          </th>
+          <td>
+            <strong><%= @query_store.value_for(attribute, :dynamic_value) %></strong>
+          </td>
+        </tr>
+        <tr class="table-primary">
+          <th>
+            <%= Patron::Utils::I18n.label('dynamic_query_type') %>
+          </th>
+          <td>
+            <strong><%= @query_store.value_for(attribute, :dynamic_query_type, i18n_method: :query_type) %></strong>
+          </td>
+        </tr>
+      <% else %>
+        <div class="alert alert-danger">Değer türü hatalı!</div>
+      <% end %>
+      <tr class="table-danger">
+        <th>
+          <%= Patron::Utils::I18n.label('skip_empty') %>
+        </th>
+        <td>
+          <strong><%= @query_store.value_for(attribute, :skip_empty, i18n_method: :skip_empty) %></strong>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

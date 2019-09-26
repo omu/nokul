@@ -37,12 +37,29 @@ module Patron
     validates :parameters, presence: true
     validates :type, inclusion: { in: types.keys }
 
+    # helper methods
     def full_name
       "#{name} - #{scope_name}"
     end
 
     def scope_klass
       scope_name.to_s.safe_constantize
+    end
+
+    def active?
+      Patron.scope_names.include?(scope_name)
+    end
+
+    def passive?
+      !active?
+    end
+
+    def static?(attribute)
+      value_for(attribute, :value_type) == 'static'
+    end
+
+    def dynamic?(attribute)
+      value_for(attribute, :value_type) == 'dynamic'
     end
   end
 end
