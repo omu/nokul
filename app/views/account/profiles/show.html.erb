@@ -12,7 +12,7 @@
             <hr />
           </div>
           <div class='col-sm-4'>
-            <h4><%= "#{current_user.identities.first&.first_name} #{current_user.identities.first&.last_name}" %></h4><br />
+            <h4><%= "#{current_user.title} #{full_name(current_user.identities.formal.first)}" %></h4><br />
             <%= current_user.mobile_phone %><br />
             <%= current_user.email %><br />
             <%= link_to fa_icon('linkedin'), current_user.linkedin %>
