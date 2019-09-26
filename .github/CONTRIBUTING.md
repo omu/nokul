@@ -75,7 +75,7 @@ kısıtlı servisler ile haberleşmekte ve çeşitli erişim bilgilerine ihtiya�
 
 - Projeye yazma yetkiniz varsa projeyi klonlayın, yazma yetkiniz yoksa projeyi `fork` edin.
 
-- [Branch](https://doc.omu.sh/workflow/branch.md) kurallarını dikkatlice gözden geçirin.
+- [Branch](https://doc.omu.sh/workflow/branch/) kurallarını dikkatlice gözden geçirin.
 
 - Proje klonunda veya kendi "fork" kopyanızda, branch kurallarını dikkate alan bir branch oluşturun: `git checkout -b
   my-awesome-feature`
