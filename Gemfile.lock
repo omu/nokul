@@ -83,7 +83,7 @@ GEM
     authy (2.7.5)
       httpclient (>= 2.5.3.3)
     aws-eventstream (1.0.3)
-    aws-partitions (1.214.0)
+    aws-partitions (1.217.0)
     aws-sdk-core (3.68.0)
       aws-eventstream (~> 1.0, >= 1.0.2)
       aws-partitions (~> 1.0)
@@ -220,7 +220,7 @@ GEM
     mini_magick (4.9.5)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
-    minitest (5.11.3)
+    minitest (5.12.0)
     msgpack (1.3.1)
     multipart-post (2.1.1)
     net-ldap (0.16.1)
@@ -321,7 +321,7 @@ GEM
     ruby_dep (1.5.0)
     rubyzip (1.2.4)
     safe_yaml (1.0.5)
-    sassc (2.2.0)
+    sassc (2.2.1)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
       railties (>= 4.0.0)
@@ -366,7 +366,7 @@ GEM
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
-    twilio-ruby (5.26.0)
+    twilio-ruby (5.27.0)
       faraday (~> 0.9)
       jwt (>= 1.5, <= 2.5)
       nokogiri (>= 1.6, < 2.0)
@@ -463,7 +463,7 @@ DEPENDENCIES
   rubocop-rails
   ruby-progressbar
   ruby-vips (~> 2.0.14)
-  sassc (~> 2.2.0)
+  sassc (~> 2.2.1)
   sassc-rails
   sidekiq
   simple_form

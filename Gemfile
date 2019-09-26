@@ -41,7 +41,7 @@ gem 'net-ldap'
 gem 'coffee-rails', '~> 5.0'
 
 # TODO: The following line should be removed when sassc-rails has the latest version of sassc.
-gem 'sassc', '~> 2.2.0'
+gem 'sassc', '~> 2.2.1'
 gem 'sassc-rails'
 
 gem 'uglifier', '>= 1.3.0'
