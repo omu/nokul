@@ -8,7 +8,7 @@ module Patron
     before_action :authorized?
 
     def index
-      @query_stores = pagy_by_search(Patron::QueryStore.active.order(:name, :scope_name))
+      @query_stores = pagy_by_search(Patron::QueryStore.order(:name, :scope_name))
     end
 
     def show
@@ -19,7 +19,9 @@ module Patron
       @query_store = initialize_query_scope(params[:scope])
     end
 
-    def edit; end
+    def edit
+      redirect_to %i[patron query_stores], alert: t('.warning') if @query_store.passive?
+    end
 
     def create
       @query_store = initialize_query_scope(query_store_params[:scope_name])
@@ -62,7 +64,7 @@ module Patron
     end
 
     def set_query_store
-      @query_store = Patron::QueryStore.active.find(params[:id])
+      @query_store = Patron::QueryStore.find(params[:id])
     end
 
     def query_store_params
