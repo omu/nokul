@@ -27,4 +27,5 @@ class AcademicCredential < ApplicationRecord
                                          greater_than_or_equal_to: 1950, less_than_or_equal_to: 2050 }
   validates :end_year, allow_nil:    true,
                        numericality: { only_integer: true, greater_than_or_equal_to: 1950, less_than_or_equal_to: 2050 }
+  validates :university_name, presence: true, length: { maximum: 255 }
 end

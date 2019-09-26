@@ -21,6 +21,7 @@ class AcademicCredentialTest < ActiveSupport::TestCase
   validates_presence_of :activity
   validates_presence_of :unit_id
   validates_presence_of :university_id
+  validates_presence_of :university_name
 
   # validations: length
   validates_length_of :department
@@ -29,6 +30,7 @@ class AcademicCredentialTest < ActiveSupport::TestCase
   validates_length_of :scientific_field
   validates_length_of :title
   validates_length_of :unit_name
+  validates_length_of :university_name
 
   # validations: numericality
   validates_numericality_of :yoksis_id

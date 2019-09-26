@@ -16,6 +16,7 @@ class CreateAcademicCredentials < ActiveRecord::Migration[6.0]
       t.string :unit_name
       t.integer :unit_id
       t.integer :university_id
+      t.string :university_name
       t.integer :start_year
       t.integer :end_year
       t.datetime :last_update
@@ -28,12 +29,15 @@ class CreateAcademicCredentials < ActiveRecord::Migration[6.0]
     add_null_constraint :academic_credentials, :unit_id
     add_null_constraint :academic_credentials, :university_id
 
+    add_presence_constraint :academic_credentials, :university_name
+
     add_length_constraint :academic_credentials, :department, less_than_or_equal_to: 255
     add_length_constraint :academic_credentials, :discipline, less_than_or_equal_to: 255
     add_length_constraint :academic_credentials, :profession_name, less_than_or_equal_to: 255
     add_length_constraint :academic_credentials, :scientific_field, less_than_or_equal_to: 255
     add_length_constraint :academic_credentials, :title, less_than_or_equal_to: 255
     add_length_constraint :academic_credentials, :unit_name, less_than_or_equal_to: 255
+    add_length_constraint :academic_credentials, :university_name, less_than_or_equal_to: 255
 
     add_numericality_constraint :academic_credentials, :yoksis_id, greater_than_or_equal_to: 0
     add_numericality_constraint :academic_credentials, :activity, greater_than_or_equal_to: 0

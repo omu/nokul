@@ -32,6 +32,7 @@ CREATE TABLE public.academic_credentials (
     unit_name character varying,
     unit_id integer,
     university_id integer,
+    university_name character varying,
     start_year integer,
     end_year integer,
     last_update timestamp without time zone,
@@ -52,6 +53,8 @@ CREATE TABLE public.academic_credentials (
     CONSTRAINT academic_credentials_unit_id_null CHECK ((unit_id IS NOT NULL)),
     CONSTRAINT academic_credentials_unit_name_length CHECK ((length((unit_name)::text) <= 255)),
     CONSTRAINT academic_credentials_university_id_null CHECK ((university_id IS NOT NULL)),
+    CONSTRAINT academic_credentials_university_name_length CHECK ((length((university_name)::text) <= 255)),
+    CONSTRAINT academic_credentials_university_name_presence CHECK (((university_name IS NOT NULL) AND ((university_name)::text !~ '^\s*$'::text))),
     CONSTRAINT academic_credentials_yoksis_id_null CHECK ((yoksis_id IS NOT NULL)),
     CONSTRAINT academic_credentials_yoksis_id_numericality CHECK ((yoksis_id >= 0))
 );
