@@ -27,15 +27,15 @@ module Patron
 
         def prepare_value(args)
           case args[:value_type]
-          when 'static'  then args[:value]
+          when 'static'  then args[:static_value]
           when 'dynamic' then args[:instance].try("#{args[:dynamic_value]}_value")
           end
         end
 
         def prepare_query_type(args)
           case args[:value_type]
-          when 'static'  then args[:query_type]
-          when 'dynamic' then args[:dynamic_query_type]
+          when 'static'  then args.fetch(:static_query_type)
+          when 'dynamic' then args.fetch(:dynamic_query_type)
           end
         end
       end
