@@ -6,3 +6,5 @@ tr:
         total_number_of_records: Toplam Kayıt Sayısı
       users:
         assignment: Rol ve Kapsam Ata
+      query_stores:
+        not_found_scope: Kapsam sistem üzerinde bulunamadı

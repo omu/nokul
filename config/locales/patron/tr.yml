@@ -1,15 +1,15 @@
 tr:
   patron:
-    boolean:
+    skip_empties:
       'true': 'Evet'
       'false': 'Hayır'
-    suffixes:
-      dynamic_value: Dinamik Değeri
-      query_type: Sorgulama Türü
-      skip_empty: Değeri Boşsa Yoksay
-      value: Değeri
-      value_type: Değer Türü
+    labels:
       dynamic_query_type: Dinamik Değer için Sorgulama Türü
+      dynamic_value: Dinamik Değer
+      skip_empty: Değeri Boşsa Yoksay
+      static_query_type: Statik Değer için Sorgulama Türü
+      static_value: Statik Değer
+      value_type: Değer Türü
     query_types:
       in: Seçilenler
       not_in: Seçilenler Dışında Kalanlar
@@ -26,5 +26,5 @@ tr:
       not_end_with: İle Sonlanmayan
       not_contain: İçermeyen
     value_types:
-      static: Statik Değer
-      dynamic: Dinamik Değer
+      static: Statik
+      dynamic: Dinamik
