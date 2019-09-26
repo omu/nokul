@@ -14,6 +14,8 @@ en:
         twitter: Twitter Username
         visiblity_settings: Visiblity Settings
         website: Website
+      save_academic_credentials_from_yoksis:
+        will_update: We have received your request for academic credentials creation or an update, and within a few seconds/minutes your academic credentials will be updated.
       save_articles_from_yoksis:
         will_update: We have received your request for articles creation or an update, and within a few seconds/minutes your articles will be updated.
       save_certifications_from_yoksis:
@@ -21,14 +23,18 @@ en:
       save_projects_from_yoksis:
         will_update: We have received your request for projects creation or an update, and within a few seconds/minutes your projects will be updated.
       show:
+        academic: Academic
         academic_activities: Academic Activities
         articles: Articles
         certifications: Certifications
+        update_academic_credentials_from_yoksis: Create my academic credentials from YOKSIS
         create_articles_from_yoksis: Create my articles from YOKSIS
         create_certifications_from_yoksis: Create my certifications from YOKSIS
         create_projects_from_yoksis: Create my projects from YOKSIS
+        professional_experience: Professional Experience
         projects: Projects
         status: Status
+        update_academic_credentials_from_yoksis: Update my academic credentials from YOKSIS
         update_articles_from_yoksis: Update my articles from YOKSIS
         update_certifications_from_yoksis: Update my certifications from YOKSIS
         update_projects_from_yoksis: Update my projects from YOKSIS
