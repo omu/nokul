@@ -6,3 +6,5 @@ en:
         total_number_of_records: Total Number of Records
       users:
         assignment: Assign Role and Scope
+      query_stores:
+        not_found_scope: Scope not found on system

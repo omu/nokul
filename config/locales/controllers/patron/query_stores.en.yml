@@ -22,9 +22,10 @@ en:
         success: Scope query successfully created.
       destroy:
         error: An error occured when deleting the scope query.
-        success: Scope query successfully deleted!
+        success: Scope query successfully deleted
       edit:
         form_title: Update the Scope Query
+        warning: Passive records cannot be edited.
       index:
         card_header:  Scope Queries
         new_query_store_link: Add a New Scope Query
@@ -36,7 +37,11 @@ en:
         preview: Preview
       show:
         <<: *query_stores_attributes
+        active: Active
+        parameters: Parameters
+        passive: Passive
         smart_search_placeholder: Search with Model-Specific Keyword
+        status: Status
         users: Users
       update:
         success: Scope query successfully updated.

@@ -25,6 +25,7 @@ tr:
         success: Kapsam sorgusu başarıyla silindi.
       edit:
         form_title: Kapsam Sorgusunu Güncelle
+        warning: Pasif kayıtlarda düzenleme yapılamaz.
       index:
         card_header: Kapsam Sorguları
         new_query_store_link: Yeni Kapsam Sorgusu Ekle
@@ -36,7 +37,11 @@ tr:
         preview: Ön İzle
       show:
         <<: *query_stores_attributes
+        active: Aktif
+        parameters: Parametreler
+        passive: Pasif
         smart_search_placeholder: Modele Özgü Anahtar Kelime ile Arama
+        status: Durum
         users: Kullanıcılar
       update:
         success: Kapsam sorgusu başarıyla güncellendi.
