@@ -5,39 +5,26 @@ module Patron
     module I18n
       module_function
 
-      def translate_filter(name, class_name:)
-        translate(name, scope: [:activerecord, :attributes, class_name.to_s.underscore])
+      def filter(name, class_name:)
+        ::I18n.translate(name, scope: [:activerecord, :attributes, class_name.to_s.underscore])
       end
 
-      def translate_suffix(name)
-        translate(name, scope: %i[patron suffixes])
-      end
-
-      def translate_query_type(name)
-        translate(name, scope: %i[patron query_types])
-      end
-
-      def translate_skip_empty(name)
-        translate(name, scope: %i[patron boolean])
-      end
-
-      def translate_value_type(name)
-        translate(name, scope: %i[patron value_types])
-      end
-
-      def translate_collection(collection, attribute:)
-        [*collection].map do |item|
-          [send("translate_#{attribute}", item), item]
+      %w[
+        label
+        query_type
+        skip_empty
+        value_type
+      ].each do |method_name|
+        define_method(method_name) do |name|
+          ::I18n.translate(name, scope: [:patron, method_name.to_s.pluralize])
         end
       end
 
-      def translate(name, **options)
-        return '' if name.blank?
-
-        ::I18n.translate(name, options)
+      def collection(collection, attribute:)
+        [*collection].map do |item|
+          [send(attribute, item), item]
+        end
       end
-
-      private_class_method :translate
     end
   end
 end
