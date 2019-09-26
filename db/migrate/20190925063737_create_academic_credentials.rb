@@ -16,8 +16,8 @@ class CreateAcademicCredentials < ActiveRecord::Migration[6.0]
       t.string :unit_name
       t.integer :unit_id
       t.integer :university_id
-      t.date :start_date
-      t.date :end_date
+      t.integer :start_year
+      t.integer :end_year
       t.datetime :last_update
       t.references :user, null: false, foreign_key: true
       t.timestamps
@@ -39,5 +39,7 @@ class CreateAcademicCredentials < ActiveRecord::Migration[6.0]
     add_numericality_constraint :academic_credentials, :activity, greater_than_or_equal_to: 0
     add_numericality_constraint :academic_credentials, :location, greater_than_or_equal_to: 0
     add_numericality_constraint :academic_credentials, :status, greater_than_or_equal_to: 0
+    add_numericality_constraint :academic_credentials, :start_year, greater_than_or_equal_to: 1950, less_than_or_equal_to: 2050
+    add_numericality_constraint :academic_credentials, :end_year, greater_than_or_equal_to: 1950, less_than_or_equal_to: 2050
   end
 end

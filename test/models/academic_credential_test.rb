@@ -33,4 +33,6 @@ class AcademicCredentialTest < ActiveSupport::TestCase
   # validations: numericality
   validates_numericality_of :yoksis_id
   validates_numerical_range :yoksis_id, greater_than: 0
+  validates_numerical_range :start_year, greater_than_or_equal_to: 1950, less_than_or_equal_to: 2050
+  validates_numerical_range :end_year, greater_than_or_equal_to: 1950, less_than_or_equal_to: 2050
 end
