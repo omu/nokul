@@ -31,13 +31,11 @@ module ApaHelper
     #{certificate.city_and_country} - (#{l(certificate.start_date, format: '%Y')})"
   end
 
-  # rubocop:disable Metrics/AbcSize
   def user_academic_credentials(credential)
     concat content_tag(:b, credential.title)
     concat tag.br
-    concat Unit.find_by(yoksis_id: credential.university_id)&.name
+    concat credential.university_name
     concat tag.br
     content_tag(:small, "#{credential.start_year} - #{credential.end_year || 'devam ediyor'}")
   end
-  # rubocop:enable Metrics/AbcSize
 end

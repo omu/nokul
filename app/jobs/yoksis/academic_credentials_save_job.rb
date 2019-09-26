@@ -28,7 +28,7 @@ module Yoksis
           title:            credential[:title_name].try(:capitalize_turkish),
           unit_name:        credential[:academic_unit_name],
           **credential.slice(
-            :department, :discipline, :last_update, :profession_name, :unit_id, :university_id
+            :department, :discipline, :last_update, :profession_name, :unit_id, :university_id, :university_name
           )
         )
         academic_credential.save
