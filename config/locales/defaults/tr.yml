@@ -15,6 +15,7 @@ tr:
   detailed_search: Detaylı Arama
   home_nav: Anasayfa
   'no': Hayır
+  loading: Yükleniyor... Lütfen bekleyiniz.
   passive: Pasif
   preview: Ön İzleme
   reset: Reset
