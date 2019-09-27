@@ -39,7 +39,6 @@ CREATE TABLE public.academic_credentials (
     user_id bigint NOT NULL,
     created_at timestamp(6) without time zone NOT NULL,
     updated_at timestamp(6) without time zone NOT NULL,
-    CONSTRAINT academic_credentials_activity_null CHECK ((activity IS NOT NULL)),
     CONSTRAINT academic_credentials_activity_numericality CHECK ((activity >= 0)),
     CONSTRAINT academic_credentials_department_length CHECK ((length((department)::text) <= 255)),
     CONSTRAINT academic_credentials_discipline_length CHECK ((length((discipline)::text) <= 255)),
@@ -51,8 +50,10 @@ CREATE TABLE public.academic_credentials (
     CONSTRAINT academic_credentials_status_numericality CHECK ((status >= 0)),
     CONSTRAINT academic_credentials_title_length CHECK ((length((title)::text) <= 255)),
     CONSTRAINT academic_credentials_unit_id_null CHECK ((unit_id IS NOT NULL)),
+    CONSTRAINT academic_credentials_unit_id_numericality CHECK ((unit_id >= 0)),
     CONSTRAINT academic_credentials_unit_name_length CHECK ((length((unit_name)::text) <= 255)),
     CONSTRAINT academic_credentials_university_id_null CHECK ((university_id IS NOT NULL)),
+    CONSTRAINT academic_credentials_university_id_numericality CHECK ((university_id >= 0)),
     CONSTRAINT academic_credentials_university_name_length CHECK ((length((university_name)::text) <= 255)),
     CONSTRAINT academic_credentials_university_name_presence CHECK (((university_name IS NOT NULL) AND ((university_name)::text !~ '^\s*$'::text))),
     CONSTRAINT academic_credentials_yoksis_id_null CHECK ((yoksis_id IS NOT NULL)),
@@ -1545,6 +1546,84 @@ CREATE SEQUENCE public.duties_id_seq
 --
 
 ALTER SEQUENCE public.duties_id_seq OWNED BY public.duties.id;
+
+
+--
+-- Name: education_informations; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.education_informations (
+    id bigint NOT NULL,
+    unit_id integer,
+    unit_name character varying,
+    activity integer,
+    advisor character varying,
+    advisor_id_number integer,
+    country_id bigint,
+    department character varying,
+    diploma_equivalency character varying,
+    diploma_no character varying,
+    end_year integer,
+    faculty character varying,
+    last_update timestamp without time zone,
+    location integer,
+    other_discipline character varying,
+    other_university character varying,
+    program integer,
+    start_year integer,
+    start_date_of_thesis integer,
+    thesis_name character varying,
+    thesis_step integer,
+    university_id integer,
+    university_name character varying,
+    yoksis_id integer,
+    user_id bigint NOT NULL,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT education_informations_activity_numericality CHECK ((activity >= 0)),
+    CONSTRAINT education_informations_advisor_id_number_numericality CHECK ((advisor_id_number = 11)),
+    CONSTRAINT education_informations_advisor_length CHECK ((length((advisor)::text) <= 255)),
+    CONSTRAINT education_informations_department_length CHECK ((length((department)::text) <= 255)),
+    CONSTRAINT education_informations_diploma_equivalency_length CHECK ((length((diploma_equivalency)::text) <= 255)),
+    CONSTRAINT education_informations_diploma_no_length CHECK ((length((diploma_no)::text) <= 100)),
+    CONSTRAINT education_informations_end_year_numericality CHECK (((end_year >= 1950) AND (end_year <= 2050))),
+    CONSTRAINT education_informations_faculty_length CHECK ((length((faculty)::text) <= 255)),
+    CONSTRAINT education_informations_location_null CHECK ((location IS NOT NULL)),
+    CONSTRAINT education_informations_location_numericality CHECK ((location >= 0)),
+    CONSTRAINT education_informations_other_discipline_length CHECK ((length((other_discipline)::text) <= 255)),
+    CONSTRAINT education_informations_other_university_length CHECK ((length((other_university)::text) <= 255)),
+    CONSTRAINT education_informations_program_null CHECK ((program IS NOT NULL)),
+    CONSTRAINT education_informations_program_numericality CHECK ((program >= 0)),
+    CONSTRAINT education_informations_start_date_of_thesis_numericality CHECK (((start_date_of_thesis >= 1950) AND (start_date_of_thesis <= 2050))),
+    CONSTRAINT education_informations_start_year_numericality CHECK (((start_year >= 1950) AND (start_year <= 2050))),
+    CONSTRAINT education_informations_thesis_name_length CHECK ((length((thesis_name)::text) <= 255)),
+    CONSTRAINT education_informations_thesis_step_numericality CHECK ((thesis_step >= 0)),
+    CONSTRAINT education_informations_unit_id_numericality CHECK ((unit_id >= 0)),
+    CONSTRAINT education_informations_unit_name_length CHECK ((length((unit_name)::text) <= 255)),
+    CONSTRAINT education_informations_university_id_numericality CHECK ((university_id >= 0)),
+    CONSTRAINT education_informations_university_name_length CHECK ((length((university_name)::text) <= 255)),
+    CONSTRAINT education_informations_yoksis_id_null CHECK ((yoksis_id IS NOT NULL)),
+    CONSTRAINT education_informations_yoksis_id_numericality CHECK ((yoksis_id >= 0))
+);
+
+
+--
+-- Name: education_informations_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.education_informations_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: education_informations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.education_informations_id_seq OWNED BY public.education_informations.id;
 
 
 --
@@ -3419,6 +3498,13 @@ ALTER TABLE ONLY public.duties ALTER COLUMN id SET DEFAULT nextval('public.dutie
 
 
 --
+-- Name: education_informations id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.education_informations ALTER COLUMN id SET DEFAULT nextval('public.education_informations_id_seq'::regclass);
+
+
+--
 -- Name: employees id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -4048,6 +4134,14 @@ ALTER TABLE ONLY public.document_types
 
 ALTER TABLE ONLY public.duties
     ADD CONSTRAINT duties_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: education_informations education_informations_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.education_informations
+    ADD CONSTRAINT education_informations_pkey PRIMARY KEY (id);
 
 
 --
@@ -4970,6 +5064,20 @@ CREATE INDEX index_duties_on_unit_id ON public.duties USING btree (unit_id);
 
 
 --
+-- Name: index_education_informations_on_country_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_education_informations_on_country_id ON public.education_informations USING btree (country_id);
+
+
+--
+-- Name: index_education_informations_on_user_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_education_informations_on_user_id ON public.education_informations USING btree (user_id);
+
+
+--
 -- Name: index_employees_on_title_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -5645,6 +5753,14 @@ ALTER TABLE ONLY public.meeting_agendas
 
 
 --
+-- Name: education_informations fk_rails_6ffd5f9683; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.education_informations
+    ADD CONSTRAINT fk_rails_6ffd5f9683 FOREIGN KEY (user_id) REFERENCES public.users(id);
+
+
+--
 -- Name: group_courses fk_rails_728bb39a67; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -5874,6 +5990,14 @@ ALTER TABLE ONLY public.ldap_sync_errors
 
 ALTER TABLE ONLY public.available_courses
     ADD CONSTRAINT fk_rails_c4a7c8b06e FOREIGN KEY (curriculum_id) REFERENCES public.curriculums(id);
+
+
+--
+-- Name: education_informations fk_rails_ca86dff26a; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.education_informations
+    ADD CONSTRAINT fk_rails_ca86dff26a FOREIGN KEY (country_id) REFERENCES public.countries(id);
 
 
 --
@@ -6112,6 +6236,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20190517112616'),
 ('20190517112657'),
 ('20190529121036'),
-('20190925063737');
+('20190925063737'),
+('20190927071636');
 
 

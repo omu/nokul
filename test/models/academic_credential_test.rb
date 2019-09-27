@@ -18,7 +18,6 @@ class AcademicCredentialTest < ActiveSupport::TestCase
 
   # validations: presence
   validates_presence_of :yoksis_id
-  validates_presence_of :activity
   validates_presence_of :unit_id
   validates_presence_of :university_id
   validates_presence_of :university_name
@@ -34,7 +33,11 @@ class AcademicCredentialTest < ActiveSupport::TestCase
 
   # validations: numericality
   validates_numericality_of :yoksis_id
+  validates_numericality_of :unit_id
+  validates_numericality_of :university_id
   validates_numerical_range :yoksis_id, greater_than: 0
+  validates_numerical_range :unit_id, greater_than: 0
+  validates_numerical_range :university_id, greater_than: 0
   validates_numerical_range :start_year, greater_than_or_equal_to: 1950, less_than_or_equal_to: 2050
   validates_numerical_range :end_year, greater_than_or_equal_to: 1950, less_than_or_equal_to: 2050
 end
