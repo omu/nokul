@@ -44,15 +44,17 @@ module Patron
 
     test 'should create query store' do
       parameters = {
-        name:            'Query Store Create',
-        scope_name:      'DummyModelScope',
-        type:            'include',
-        name_value:      'name created',
-        name_query_type: 'equal',
-        name_skip_empty: 'false',
-        desc_value:      'desc created',
-        desc_query_type: 'equal',
-        desc_skip_empty: 'true'
+        name:                   'Query Store Create',
+        scope_name:             'DummyModelScope',
+        type:                   'include',
+        name_value_type:        'static',
+        name_static_value:      'name created',
+        name_static_query_type: 'equal',
+        name_skip_empty:        'false',
+        desc_value_type:        'static',
+        desc_static_value:      'desc created',
+        desc_static_query_type: 'equal',
+        desc_skip_empty:        'false'
       }
 
       assert_difference('Patron::QueryStore.count') do
@@ -79,14 +81,16 @@ module Patron
 
     test 'should update query store' do
       parameters = {
-        name:            'Query Store Update',
-        type:            'include',
-        name_value:      'name updated',
-        name_query_type: 'equal',
-        name_skip_empty: 'false',
-        desc_value:      'desc updated',
-        desc_query_type: 'equal',
-        desc_skip_empty: 'true'
+        name:                   'Query Store Update',
+        type:                   'include',
+        name_value_type:        'static',
+        name_static_value:      'name updated',
+        name_static_query_type: 'equal',
+        name_skip_empty:        'false',
+        desc_value_type:        'static',
+        desc_static_value:      'desc updated',
+        desc_static_query_type: 'equal',
+        desc_skip_empty:        'false'
       }
 
       query_store = Patron::QueryStore.new(scope_name: DummyModelScope)
