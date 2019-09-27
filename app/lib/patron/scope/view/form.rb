@@ -106,6 +106,47 @@ module Patron
           )
         end
 
+        def generate_field_for_dynamic_value(filter)
+          collection = dynamic_values.dig(:scopes, filter.to_sym)
+
+          return if collection.nil?
+
+          Field.new(
+            type:       :dynamic_value,
+            for:        :dynamic,
+            name:       "#{filter}_dynamic_value",
+            collection: collection,
+            as:         :select,
+            label:      Utils::I18n.translate_suffix('dynamic_value')
+          )
+        end
+
+        def generate_field_for_dynamic_query_type(filter)
+          return unless dynamic_values.dig(:scopes, filter.to_sym)
+
+          Field.new(
+            type:       :dynamic_query_type,
+            for:        :dynamic,
+            name:       "#{filter}_dynamic_query_type",
+            as:         :select,
+            collection: Utils::I18n.translate_collection(Query::Arel.predicates, attribute: :query_type),
+            required:   false,
+            label:      Utils::I18n.translate_suffix('dynamic_query_type')
+          )
+        end
+
+        def generate_field_for_value_type(filter)
+          collection = dynamic_values.dig(:scopes, filter.to_sym) ? %i[static dynamic] : [:static]
+
+          Field.new(
+            type:       :value_type,
+            name:       "#{filter}_value_type",
+            collection: Utils::I18n.translate_collection(collection, attribute: :value_type),
+            as:         :select,
+            label:      Utils::I18n.translate_suffix('value_type')
+          )
+        end
+
         def arel_predicates_for(type)
           case type
           when :array  then %i[in not_in]
