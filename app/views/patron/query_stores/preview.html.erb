@@ -17,16 +17,18 @@
 <div id="result"></div>
 
 
-<div class="d-flex justify-content-center">
-  <div id="spinner" class="spinner-border text-success" style="width: 3rem; height: 3rem;" role="status">
-    <span class="sr-only">Loading...</span>
+<div class="spinner" id="spinner" style="display: none;">
+  <div class="spinner-content">
+    <div class="spinner-border text-success" style="width: 3rem; height: 3rem;" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <br>
+    <h4 class="text-white">Veriler Yükleniyor... Lütfen Bekleyiniz.<h4>
   </div>
 </div>
 
 <script>
   $('select#user_id').select2()
-
-  // $('#spinner').hide()
 
   document.body.addEventListener('ajax:beforeSend', function(event) {
     $('#spinner').show()
@@ -36,8 +38,28 @@
     alert('error')
   })
 
- document.body.addEventListener('ajax:complete', function(event) {
-   //$('#spinner').hide()
+  document.body.addEventListener('ajax:complete', function(event) {
+    $('#spinner').hide()
   })
-
 </script>
+
+<style>
+  .spinner {
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  .spinner > .spinner-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+</style>
