@@ -18,7 +18,7 @@ class CreateEducationInformations < ActiveRecord::Migration[6.0]
       t.integer :location
       t.string :other_discipline
       t.string :other_university
-      t.integer :program
+      t.string :program
       t.integer :start_year
       t.integer :start_date_of_thesis
       t.string :thesis_name
@@ -31,9 +31,10 @@ class CreateEducationInformations < ActiveRecord::Migration[6.0]
     end
 
     add_null_constraint :education_informations, :location
-    add_null_constraint :education_informations, :program
     add_null_constraint :education_informations, :yoksis_id
     add_null_constraint :education_informations, :start_year
+
+    add_presence_constraint :education_informations, :program
 
     add_length_constraint :education_informations, :advisor, less_than_or_equal_to: 255
     add_length_constraint :education_informations, :department, less_than_or_equal_to: 255
@@ -43,6 +44,7 @@ class CreateEducationInformations < ActiveRecord::Migration[6.0]
     add_length_constraint :education_informations, :faculty, less_than_or_equal_to: 255
     add_length_constraint :education_informations, :other_discipline, less_than_or_equal_to: 255
     add_length_constraint :education_informations, :other_university, less_than_or_equal_to: 255
+    add_length_constraint :education_informations, :program, less_than_or_equal_to: 255
     add_length_constraint :education_informations, :thesis_name, less_than_or_equal_to: 255
     add_length_constraint :education_informations, :university, less_than_or_equal_to: 255
 
@@ -51,7 +53,6 @@ class CreateEducationInformations < ActiveRecord::Migration[6.0]
     add_numericality_constraint :education_informations, :end_date_of_thesis, greater_than_or_equal_to: 1950, less_than_or_equal_to: 2050
     add_numericality_constraint :education_informations, :end_year, greater_than_or_equal_to: 1950, less_than_or_equal_to: 2050
     add_numericality_constraint :education_informations, :location, greater_than_or_equal_to: 0
-    add_numericality_constraint :education_informations, :program, greater_than_or_equal_to: 0
     add_numericality_constraint :education_informations, :start_date_of_thesis, greater_than_or_equal_to: 1950, less_than_or_equal_to: 2050
     add_numericality_constraint :education_informations, :start_year, greater_than_or_equal_to: 1950, less_than_or_equal_to: 2050
     add_numericality_constraint :education_informations, :thesis_step, greater_than_or_equal_to: 0
