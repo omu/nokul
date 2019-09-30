@@ -27,7 +27,8 @@ en:
         academic_activities: Academic Activities
         articles: Articles
         certifications: Certifications
-        update_academic_credentials_from_yoksis: Create my academic credentials from YOKSIS
+        continuing: Continuing
+        create_academic_credentials_from_yoksis: Create my academic credentials from YOKSIS
         create_articles_from_yoksis: Create my articles from YOKSIS
         create_certifications_from_yoksis: Create my certifications from YOKSIS
         create_projects_from_yoksis: Create my projects from YOKSIS

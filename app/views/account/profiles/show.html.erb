@@ -30,7 +30,11 @@
                             class: 'btn btn-secondary btn-sm pull-right' %>
                 <h4><%= t('.academic') %></h4>
                 <% current_user.academic_credentials.order(start_year: :desc).each do |credential| %>
-                  <li class='list-group-item bg-transparent'><%= user_academic_credentials(credential) %></li>
+                  <li class='list-group-item bg-transparent'>
+                    <b><%= credential.title %></b><br />
+                    <%= credential.university %><br />
+                    <small><%= "#{credential.start_year} - #{credential.end_year || t('.continuing')}" %></small>
+                  </li>
                 <% end %>
               </div>
             </div>
@@ -44,7 +48,7 @@
                             save_articles_from_yoksis_path,
                             class: 'btn btn-secondary btn-sm pull-right' %>
                 <h4><%= t('.articles') %></h4>
-                <% current_user.articles.last(10).each do |article| %>
+                <% current_user.articles.order(year: :desc).each do |article| %>
                   <small><li class='list-group-item bg-transparent'><%= apa_citation(article) %></li></small>
                 <% end %>
               </div>
@@ -56,7 +60,7 @@
                             save_projects_from_yoksis_path,
                             class: 'btn btn-secondary btn-sm pull-right' %>
                 <h4><%= t('.projects') %></h4>
-                <% current_user.projects.each do |project| %>
+                <% current_user.projects.order(start_date: :desc).each do |project| %>
                   <small><li class='list-group-item bg-transparent'><%= user_projects(project) %></li></small>
                 <% end %>
               </div>

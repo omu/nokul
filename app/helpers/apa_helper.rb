@@ -19,23 +19,15 @@ module ApaHelper
 
   def user_projects(project)
     concat "#{project.type} - #{project.duty} - \
-            #{l project.start_date, format: '%Y / %m'} - \
+            #{project.start_date ? l(project.start_date, format: '%Y / %m') : ''} - \
             #{project.end_date ? l(project.end_date, format: '%Y') : ''} | \
             #{t('.status')} : #{enum_t(project, :status)}"
     concat tag.br
-    project.subject
+    project.name
   end
 
   def user_certifications(certificate)
     "#{certificate.name} - #{enum_t(certificate, :scope)}, #{enum_t(certificate, :type)} - \
     #{certificate.city_and_country} - (#{l(certificate.start_date, format: '%Y')})"
-  end
-
-  def user_academic_credentials(credential)
-    concat content_tag(:b, credential.title)
-    concat tag.br
-    concat credential.university_name
-    concat tag.br
-    content_tag(:small, "#{credential.start_year} - #{credential.end_year || 'devam ediyor'}")
   end
 end
