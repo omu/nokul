@@ -74,7 +74,7 @@ gem 'rollbar'
 gem 'slack-notifier'
 
 # permalinks
-gem 'friendly_id', '~> 5.2.0'
+gem 'friendly_id', '~> 5.3.0'
 
 # sms
 gem 'nexmo'
