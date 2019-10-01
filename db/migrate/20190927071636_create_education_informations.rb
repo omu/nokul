@@ -5,7 +5,7 @@ class CreateEducationInformations < ActiveRecord::Migration[6.0]
     create_table :education_informations do |t|
       t.integer :activity
       t.string :advisor
-      t.integer :advisor_id_number
+      t.string :advisor_id_number
       t.references :country, foreign_key: true
       t.string :department
       t.string :diploma_equivalency
@@ -22,7 +22,7 @@ class CreateEducationInformations < ActiveRecord::Migration[6.0]
       t.integer :start_year
       t.integer :start_date_of_thesis
       t.string :thesis_name
-      t.integer :thesis_step
+      t.string :thesis_step
       t.references :user, null: false, foreign_key: true
       t.integer :unit_id
       t.string :university
@@ -37,6 +37,7 @@ class CreateEducationInformations < ActiveRecord::Migration[6.0]
     add_presence_constraint :education_informations, :program
 
     add_length_constraint :education_informations, :advisor, less_than_or_equal_to: 255
+    add_length_constraint :education_informations, :advisor_id_number, equal_to: 11
     add_length_constraint :education_informations, :department, less_than_or_equal_to: 255
     add_length_constraint :education_informations, :diploma_equivalency, less_than_or_equal_to: 255
     add_length_constraint :education_informations, :diploma_no, less_than_or_equal_to: 100
@@ -46,16 +47,15 @@ class CreateEducationInformations < ActiveRecord::Migration[6.0]
     add_length_constraint :education_informations, :other_university, less_than_or_equal_to: 255
     add_length_constraint :education_informations, :program, less_than_or_equal_to: 255
     add_length_constraint :education_informations, :thesis_name, less_than_or_equal_to: 255
+    add_length_constraint :education_informations, :thesis_step, less_than_or_equal_to: 100
     add_length_constraint :education_informations, :university, less_than_or_equal_to: 255
 
     add_numericality_constraint :education_informations, :activity, greater_than_or_equal_to: 0
-    add_numericality_constraint :education_informations, :advisor_id_number, equal_to: 11
     add_numericality_constraint :education_informations, :end_date_of_thesis, greater_than_or_equal_to: 1950, less_than_or_equal_to: 2050
     add_numericality_constraint :education_informations, :end_year, greater_than_or_equal_to: 1950, less_than_or_equal_to: 2050
     add_numericality_constraint :education_informations, :location, greater_than_or_equal_to: 0
     add_numericality_constraint :education_informations, :start_date_of_thesis, greater_than_or_equal_to: 1950, less_than_or_equal_to: 2050
     add_numericality_constraint :education_informations, :start_year, greater_than_or_equal_to: 1950, less_than_or_equal_to: 2050
-    add_numericality_constraint :education_informations, :thesis_step, greater_than_or_equal_to: 0
     add_numericality_constraint :education_informations, :unit_id, greater_than_or_equal_to: 0
     add_numericality_constraint :education_informations, :yoksis_id, greater_than_or_equal_to: 0
   end

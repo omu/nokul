@@ -4,7 +4,6 @@ class EducationInformation < ApplicationRecord
   # enums
   enum activity: { deleted: 0, active: 1 }
   enum location: { domestic: 0, abroad: 1 }
-  enum thesis_step: { nil: 0, preparing: 1, completed: 3, subject_and_advisor_undetermined: 4 }
 
   # relations
   belongs_to :user
@@ -13,7 +12,7 @@ class EducationInformation < ApplicationRecord
   # validations
   validates :activity, allow_nil: true, inclusion: { in: activities.keys }
   validates :advisor, length: { maximum: 255 }
-  validates :advisor_id_number, allow_nil: true, numericality: { only_integer: true, equal_to: 11 }
+  validates :advisor_id_number, allow_nil: true, numericality: { only_integer: true }, length: { is: 11 }
   validates :department, length: { maximum: 255 }
   validates :diploma_equivalency, length: { maximum: 255 }
   validates :diploma_no, length: { maximum: 100 }
@@ -35,7 +34,7 @@ class EducationInformation < ApplicationRecord
                                          greater_than_or_equal_to: 1950,
                                          less_than_or_equal_to:    2050 }
   validates :thesis_name, length: { maximum: 255 }
-  validates :thesis_step, allow_nil: true, inclusion: { in: thesis_steps.keys }
+  validates :thesis_step, length: { maximum: 100 }
   validates :unit_id, allow_nil: true, numericality: { only_integer: true, greater_than: 0 }
   validates :university, length: { maximum: 255 }
   validates :yoksis_id, uniqueness: { scope: :user }, numericality: { only_integer: true, greater_than: 0 }

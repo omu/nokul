@@ -23,7 +23,7 @@ module Yoksis
           location:    education[:location_id],
           program:     education[:program_name],
           start_year:  education[:start_date],
-          thesis_step: education[:thesis_step_id],
+          thesis_step: education[:thesis_step_name],
           unit_id:     education[:academic_unit_id],
           university:  education[:university_name],
           yoksis_id:   education[:yoksis_id],
