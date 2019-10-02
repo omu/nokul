@@ -33,6 +33,11 @@ module Account
       redirect_to(:profile, notice: t('.will_update'))
     end
 
+    def save_education_informations_from_yoksis
+      Yoksis::EducationInformationsSaveJob.perform_later(current_user)
+      redirect_to(:profile, notice: t('.will_update'))
+    end
+
     private
 
     # def purge_avatar

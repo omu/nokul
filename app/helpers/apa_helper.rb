@@ -25,9 +25,4 @@ module ApaHelper
     concat tag.br
     project.name
   end
-
-  def user_certifications(certificate)
-    "#{certificate.name} - #{enum_t(certificate, :scope)}, #{enum_t(certificate, :type)} - \
-    #{certificate.city_and_country} - (#{l(certificate.start_date, format: '%Y')})"
-  end
 end

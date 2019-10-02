@@ -7,7 +7,7 @@
             <% if current_user.avatar.attached? && current_user.avatar.variable? %>
               <%= image_tag current_user.avatar.variant(resize_to_limit: [150, 150]) %>
             <% else %>
-              <%= image_tag 'profile/avatar_placeholder.svg', width: '150px' %>
+              <%= image_tag 'profile/avatar_placeholder.svg' %>
             <% end %>
             <hr />
           </div>
@@ -15,16 +15,34 @@
             <h4><%= "#{current_user.title} #{full_name(current_user.identities.formal.first)}" %></h4><br />
             <%= current_user.mobile_phone %><br />
             <%= current_user.email %><br />
-            <%= link_to fa_icon('linkedin'), current_user.linkedin %>
-            <%= link_to fa_icon('skype'), current_user.skype %>
-            <%= link_to fa_icon('twitter-square'), current_user.twitter %>
+            <%= link_to fa_icon('linkedin 2x'), current_user.linkedin %>
+            <%= link_to fa_icon('skype 2x'), current_user.skype %>
+            <%= link_to fa_icon('twitter-square 2x'), current_user.twitter %>
           </div>
         </div>
         <div class='col-sm-12'>
-          <h2><%= t('.professional_experience') %></h2><br />
           <ul class='list-group list-group-flush'>
             <div class='row'>
               <div class='col-sm-12'>
+                <%= link_to (current_user.education_informations.exists? ? t('.update_education_informations_from_yoksis') : t('.create_education_informations_from_yoksis')),
+                             save_education_informations_from_yoksis_path,
+                             class: 'btn btn-secondary btn-sm pull-right' %>
+                <h2><%= t('.education_informations') %></h2><br />
+                <% current_user.education_informations.order(start_year: :desc).each do |education| %>
+                  <li class='list-group-item bg-transparent'>
+                    <b><%= "#{education.program}:" %></b>
+                    <%= "#{education.university}, #{education.faculty}, #{education.department} /" %>
+                    <%= "#{education.start_year} - #{education.end_year || t('.continuing')}" %>
+                  </li>
+                <% end %>
+              </div>
+            </div>
+          </ul>
+          <br />
+          <ul class='list-group list-group-flush'>
+            <div class='row'>
+              <div class='col-sm-12'>
+                <h2><%= t('.professional_experience') %></h2><br />
                 <%= link_to (current_user.academic_credentials.exists? ? t('.update_academic_credentials_from_yoksis') : t('.create_academic_credentials_from_yoksis')),
                             save_academic_credentials_from_yoksis_path,
                             class: 'btn btn-secondary btn-sm pull-right' %>
@@ -40,10 +58,10 @@
             </div>
           </ul>
           <br />
-          <h2><%= t('.academic_activities') %></h2><br />
-          <div class='list-group list-group-flush'>
+          <ul class='list-group list-group-flush'>
             <div class='row'>
               <div class='col-sm-12'>
+                <h2><%= t('.academic_activities') %></h2><br />
                 <%= link_to (current_user.articles.exists? ? t('.update_articles_from_yoksis') : t('.create_articles_from_yoksis')),
                             save_articles_from_yoksis_path,
                             class: 'btn btn-secondary btn-sm pull-right' %>
@@ -73,11 +91,16 @@
                             class: 'btn btn-secondary btn-sm pull-right' %>
                 <h4><%= t('.certifications') %></h4>
                 <% current_user.certifications.each do |certificate| %>
-                  <small><li class='list-group-item bg-transparent'><%= user_certifications(certificate) %></li></small>
+                  <small>
+                    <li class='list-group-item bg-transparent'>
+                      <%= "#{certificate.name} - #{enum_t(certificate, :scope)}, #{enum_t(certificate, :type)} - \
+                           #{certificate.city_and_country} - (#{l(certificate.start_date, format: '%Y')})" %>
+                    </li>
+                  </small>
                 <% end %>
               </div>
             </div>
-          </div>
+          </ul>
         </div>
       </div>
     </div>

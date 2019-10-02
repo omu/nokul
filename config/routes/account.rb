@@ -47,6 +47,7 @@ scope module: :account do
     get :save_certifications_from_yoksis
     get :save_projects_from_yoksis
     get :save_academic_credentials_from_yoksis
+    get :save_education_informations_from_yoksis
   end
 end
 
