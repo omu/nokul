@@ -19,10 +19,10 @@ module ApaHelper
 
   def user_projects(project)
     concat "#{project.type} - #{project.duty} - \
-            #{l(project.start_date, format: '%Y / %m', default: '')} - \
-            #{l(project.end_date, format: '%Y', default: '')} | \
+            #{l(project.start_date, format: '%m - %Y', default: '')} / \
+            #{l(project.end_date, format: '%m - %Y', default: '')} | \
             #{t('.status')} : #{enum_t(project, :status)}"
     concat tag.br
-    project.name
+    project.subject || project.name
   end
 end
