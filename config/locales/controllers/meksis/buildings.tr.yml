@@ -20,7 +20,7 @@ tr:
         <<: *common
         buildings_list: Bina Listesi
         university_name: Ondokuz Mayıs Üniversitesi
-        university_wide_stats: Üniversite Geneli İstatistikler
+        stats: İstatistikler
         title: Mekan Yönetim Sistemi
         value: Değer
         variable: Değişken

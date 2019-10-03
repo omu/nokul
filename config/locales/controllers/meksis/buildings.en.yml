@@ -20,7 +20,7 @@ en:
         <<: *common
         buildings_list: Buildings List
         university_name: Ondokuz Mayıs University
-        university_wide_stats: University-wide Stats
+        stats: Stats
         title: The Inventory Classification System
         value: Value
         variable: Variable
