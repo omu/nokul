@@ -22,84 +22,16 @@
         </div>
         <div class='col-sm-12'>
           <ul class='list-group list-group-flush'>
-            <div class='row'>
-              <div class='col-sm-12'>
-                <%= link_to (current_user.education_informations.exists? ? t('.update_education_informations_from_yoksis') : t('.create_education_informations_from_yoksis')),
-                             save_education_informations_from_yoksis_path,
-                             class: 'btn btn-secondary btn-sm pull-right' %>
-                <h2><%= t('.education_informations') %></h2><br />
-                <% current_user.education_informations.order(start_year: :desc).each do |education| %>
-                  <li class='list-group-item bg-transparent'>
-                    <b><%= "#{education.program}:" %></b>
-                    <%= "#{education.university}, #{education.faculty}, #{education.department} /" %>
-                    <%= "#{education.start_year} - #{education.end_year || t('.continuing')}" %>
-                  </li>
-                <% end %>
-              </div>
-            </div>
+            <%= render 'education_informations' %>
           </ul>
-          <br />
           <ul class='list-group list-group-flush'>
-            <div class='row'>
-              <div class='col-sm-12'>
-                <h2><%= t('.professional_experience') %></h2><br />
-                <%= link_to (current_user.academic_credentials.exists? ? t('.update_academic_credentials_from_yoksis') : t('.create_academic_credentials_from_yoksis')),
-                            save_academic_credentials_from_yoksis_path,
-                            class: 'btn btn-secondary btn-sm pull-right' %>
-                <h4><%= t('.academic') %></h4>
-                <% current_user.academic_credentials.order(start_year: :desc).each do |credential| %>
-                  <li class='list-group-item bg-transparent'>
-                    <b><%= credential.title %></b><br />
-                    <%= credential.university %><br />
-                    <small><%= "#{credential.start_year} - #{credential.end_year || t('.continuing')}" %></small>
-                  </li>
-                <% end %>
-              </div>
-            </div>
+            <%= render 'academic_credentials' %>
           </ul>
-          <br />
           <ul class='list-group list-group-flush'>
-            <div class='row'>
-              <div class='col-sm-12'>
-                <h2><%= t('.academic_activities') %></h2><br />
-                <%= link_to (current_user.articles.exists? ? t('.update_articles_from_yoksis') : t('.create_articles_from_yoksis')),
-                            save_articles_from_yoksis_path,
-                            class: 'btn btn-secondary btn-sm pull-right' %>
-                <h4><%= t('.articles') %></h4>
-                <% current_user.articles.order(year: :desc).each do |article| %>
-                  <small><li class='list-group-item bg-transparent'><%= apa_citation(article) %></li></small>
-                <% end %>
-              </div>
-            </div>
-            <br />
-            <div class='row'>
-              <div class='col-sm-12'>
-                <%= link_to (current_user.projects.exists? ? t('.update_projects_from_yoksis') : t('.create_projects_from_yoksis')),
-                            save_projects_from_yoksis_path,
-                            class: 'btn btn-secondary btn-sm pull-right' %>
-                <h4><%= t('.projects') %></h4>
-                <% current_user.projects.order(start_date: :desc).each do |project| %>
-                  <small><li class='list-group-item bg-transparent'><%= user_projects(project) %></li></small>
-                <% end %>
-              </div>
-            </div>
-            <br />
-            <div class='row'>
-              <div class='col-sm-12'>
-                <%= link_to (current_user.certifications.exists? ? t('.update_certifications_from_yoksis') : t('.create_certifications_from_yoksis')),
-                            save_certifications_from_yoksis_path,
-                            class: 'btn btn-secondary btn-sm pull-right' %>
-                <h4><%= t('.certifications') %></h4>
-                <% current_user.certifications.each do |certificate| %>
-                  <small>
-                    <li class='list-group-item bg-transparent'>
-                      <%= "#{certificate.name} - #{enum_t(certificate, :scope)}, #{enum_t(certificate, :type)} - \
-                           #{certificate.city_and_country} - (#{l(certificate.start_date, format: '%Y')})" %>
-                    </li>
-                  </small>
-                <% end %>
-              </div>
-            </div>
+            <h2><%= t('.academic_activities') %></h2><br />
+            <%= render 'articles' %>
+            <%= render 'projects' %>
+            <%= render 'certifications' %>
           </ul>
         </div>
       </div>

@@ -1,6 +1,20 @@
 en:
   account:
     profiles:
+      academic_credentials:
+        academic: Academic
+        continuing: Continuing
+        create_academic_credentials_from_yoksis: Create my academic credentials from YOKSIS
+        professional_experience: Professional Experience
+        update_academic_credentials_from_yoksis: Update my academic credentials from YOKSIS
+      articles:
+        articles: Articles
+        create_articles_from_yoksis: Create my articles from YOKSIS
+        update_articles_from_yoksis: Update my articles from YOKSIS
+      certifications:
+        certifications: Certifications
+        create_certifications_from_yoksis: Create my certifications from YOKSIS
+        update_certifications_from_yoksis: Update my certifications from YOKSIS
       edit:
         country: Country
         extension_number: Extension Number
@@ -14,6 +28,15 @@ en:
         twitter: Twitter Username
         visiblity_settings: Visiblity Settings
         website: Website
+      education_informations:
+        create_education_informations_from_yoksis: Create my education informations from YOKSIS
+        education_informations: Education Informations
+        update_education_informations_from_yoksis: Update my education informations from YOKSIS
+      projects:
+        create_projects_from_yoksis: Create my projects from YOKSIS
+        projects: Projects
+        status: Status
+        update_projects_from_yoksis: Update my projects from YOKSIS
       save_academic_credentials_from_yoksis:
         will_update: We have received your request for academic credentials creation or an update, and within a few seconds/minutes your academic credentials will be updated.
       save_education_informations_from_yoksis:
@@ -25,25 +48,7 @@ en:
       save_projects_from_yoksis:
         will_update: We have received your request for projects creation or an update, and within a few seconds/minutes your projects will be updated.
       show:
-        academic: Academic
         academic_activities: Academic Activities
-        articles: Articles
-        certifications: Certifications
-        continuing: Continuing
-        create_academic_credentials_from_yoksis: Create my academic credentials from YOKSIS
-        create_articles_from_yoksis: Create my articles from YOKSIS
-        create_education_informations_from_yoksis: Create my education informations from YOKSIS
-        create_certifications_from_yoksis: Create my certifications from YOKSIS
-        create_projects_from_yoksis: Create my projects from YOKSIS
-        education_informations: Education Informations
-        professional_experience: Professional Experience
-        projects: Projects
-        status: Status
-        update_academic_credentials_from_yoksis: Update my academic credentials from YOKSIS
-        update_articles_from_yoksis: Update my articles from YOKSIS
-        update_education_informations_from_yoksis: Update my education informations from YOKSIS
-        update_certifications_from_yoksis: Update my certifications from YOKSIS
-        update_projects_from_yoksis: Update my projects from YOKSIS
       update:
         success: Profile successfully updated.
   simple_form:
