@@ -12,9 +12,8 @@ module Yoksis
     # callbacks
     after_perform do |job|
       user = job.arguments.first
-      response = [@response].flatten
 
-      response.each do |project|
+      [*@response].each do |project|
         user_project = user.projects.find_or_initialize_by(yoksis_id: project[:id])
         user_project.assign_attributes(
           yoksis_id: project[:id],

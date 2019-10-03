@@ -12,9 +12,8 @@ module Yoksis
     # callbacks
     after_perform do |job|
       user = job.arguments.first
-      response = [@response].flatten
 
-      response.each do |credential|
+      [*@response].each do |credential|
         academic_credential = user.academic_credentials.find_or_initialize_by(yoksis_id: credential[:id])
         academic_credential.assign_attributes(
           activity:         credential[:activity_id],
