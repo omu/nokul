@@ -18,6 +18,10 @@
         padding: 15px;
       }
 
+      thead { display: table-header-group }
+      tfoot { display: table-row-group }
+      tr { page-break-inside: avoid }
+
       #header {
         position: relative;
         width: 100%;
@@ -55,13 +59,13 @@
     <div id="header">
       <h1><%= t('.university_name') %><br><%= t('.title') %></h1>
       <div id="logo">
-        <img src="https://upload.wikimedia.org/wikipedia/tr/b/b4/OM%C3%9C_logo.png"/>
+        <img src="http://www.omu.edu.tr/sites/all/themes/anasayfa/images/Kurumsal/omu-logotr.jpg"/>
       </div>
       <div align="right">
         <img style="width: 124px; height: 35px; margin-bottom: -4em;" src="http://baum.omu.edu.tr/user/sites/baum.omu.edu.tr/pages/01.home/baum-245x40.png"/>
       </div>
     </div>
-    <h2><%= t('.university_wide_stats') %></h2>
+    <h2><%= t('.stats') %></h2>
     <table id="stats">
       <tr>
         <td><%= t('.indoor_area') %> (m<sup>2</sup>)</td>
@@ -89,6 +93,7 @@
       </tr>
     </table>
     <h2><%= t('.buildings_list') %></h2>
+    <div class="alwaysbreak">
     <table id="buildings">
       <tr>
         <th><%= t('.name') %></th>
