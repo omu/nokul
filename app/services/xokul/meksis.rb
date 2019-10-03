@@ -4,6 +4,14 @@ module Xokul
   module Meksis
     module_function
 
+    def parent_place_types
+      Connection.request('/meksis/main_functions')
+    end
+
+    def children_place_types
+      Connection.request('/meksis/sub_functions')
+    end
+
     def buildings
       Connection.request('/meksis/buildings')
     end
