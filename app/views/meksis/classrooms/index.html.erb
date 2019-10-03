@@ -1,0 +1,46 @@
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'align-justify', text: t('.card_header') %>
+        <div class="float-right">
+          <%= link_to t('.buildings'), meksis_buildings_path, class: 'btn btn-outline-info btn-sm' %>
+        </div>
+      </div>
+      <div class='card-body'>
+        <%= render 'search' %>
+        <table class='table table-responsive-sm table-striped'>
+          <thead class="thead-dark">
+            <tr>
+              <th><%= t('.name') %></th>
+              <th><%= t('.code') %></th>
+              <th><%= t('.meksis_id') %></th>
+              <th><%= t('.place_type') %></th>
+              <th><%= t('.unit') %></th>
+              <th><%= t('.building') %></th>
+              <th><%= t('actions') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @classrooms.each do |classroom| %>
+              <tr>
+                <td><%= classroom.name %></td>
+                <td><%= classroom.code %></td>
+                <td><%= classroom.meksis_id %></td>
+                <td><%= classroom.place_type.name %></td>
+                <td><%= classroom.building.unit.name %></td>
+                <td><%= classroom.building.name %></td>
+                <td><%= link_to_show [:meksis, @building, classroom] %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <nav aria-label='pagination'>
+      <ul class='pagination justify-content-center'>
+        <%== pagy_bootstrap_nav(@pagy) %>
+      </ul>
+    </nav>
+  </div>
+</div>
