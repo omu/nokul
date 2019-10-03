@@ -1,0 +1,52 @@
+tr:
+  activerecord:
+    attributes:
+      building: &attributes
+        code: Bina Kodu
+        name: Bina Adı
+  meksis:
+    buildings:
+      common: &common
+        unit: Birim Adı
+      numbers: &numbers
+        <<: *attributes
+        exam_capacity: Sınav Kapasitesi
+        indoor_area: Kapalı Alan
+        number_of_active_buildings: Aktif Bina Sayısı
+        number_of_buildings: Bina Sayısı
+        number_of_classrooms: Sınıf Sayısı
+        student_capacity: Öğrenci Kapasitesi
+      pdf: &pdf
+        <<: *common
+        buildings_list: Bina Listesi
+        university_name: Ondokuz Mayıs Üniversitesi
+        university_wide_stats: Üniversite Geneli İstatistikler
+        title: Mekan Yönetim Sistemi
+        value: Değer
+        variable: Değişken
+      edit:
+        latitude: Enlem
+        longitude: Boylam
+      index:
+        <<: *numbers
+        <<: *pdf
+        active: Aktif
+        card_header: Bina Listesi
+        place_type: Mekan Türü
+      search:
+        <<: *common
+        card_header: Akıllı Arama
+        place_type: Mekan Türü
+        smart_search_placeholder: Ara
+      show:
+        <<: *attributes
+        <<: *common
+        buildings: Binalar
+        classrooms: Sınıflar
+        details: Detaylar
+      stats:
+        <<: *numbers
+        card_header: İstatistikler
+        chart_of_available_spaces: Sınıf Tiplerine Göre Mevcut Alan Miktarı
+        chart_of_classrooms: Mekan Türüne Göre Sınıflar
+        chart_of_place_numbers: Türüne Göre Mekan Sayıları

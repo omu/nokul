@@ -1,0 +1,52 @@
+en:
+  activerecord:
+    attributes:
+      building: &attributes
+        code: Building Code
+        name: Building Name
+  meksis:
+    buildings:
+      common: &common
+        unit: Unit Name
+      numbers: &numbers
+        <<: *attributes
+        exam_capacity: Exam Capacity
+        indoor_area: Indoor Area
+        number_of_active_buildings: Number of Active Buildings
+        number_of_buildings: Number of Buildings
+        number_of_classrooms: Number of Classrooms
+        student_capacity: Student Capacity
+      pdf: &pdf
+        <<: *common
+        buildings_list: Buildings List
+        university_name: Ondokuz Mayıs University
+        university_wide_stats: University-wide Stats
+        title: The Inventory Classification System
+        value: Value
+        variable: Variable
+      edit:
+        latitude: Latitude
+        longitude: Longitude
+      index:
+        <<: *numbers
+        <<: *pdf
+        active: Active
+        card_header: Buildings List
+        place_type: Place Type
+      search:
+        <<: *common
+        card_header: Smart Search
+        place_type: Place Type
+        smart_search_placeholder: Search
+      show:
+        <<: *attributes
+        <<: *common
+        buildings: Buildings
+        classrooms: Classrooms
+        details: Details
+      stats:
+        <<: *numbers
+        card_header: Stats
+        chart_of_available_spaces: Numeric Distribution of Available Spaces by Classroom
+        chart_of_classrooms: Numeric Distribution of Classrooms by Place Type
+        chart_of_place_numbers: Numeric Distribution of Place Numbers by Place Type
