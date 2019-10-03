@@ -1,0 +1,33 @@
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class="alert alert-light">
+      <%= link_to_back root_path %>
+    </div>
+  </div>
+</div>
+
+<div class='row'>
+  <div class="col-sm-6">
+    <div class="card border-default mb-3">
+      <div class="card-header">
+        <strong><%= t('.available_courses') %></strong>
+      </div>
+      <% @semesters.each do |year, semesters| %>
+        <div class="card-body">
+          <%= render 'semesters', semesters: semesters %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card border-success mb-3">
+      <div class="card-header">
+        <strong><%= t('.selected_courses') %></strong>
+      </div>
+      <div class="card-body">
+        <div class="card-body table-responsive">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

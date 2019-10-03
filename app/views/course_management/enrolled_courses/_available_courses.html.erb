@@ -1,0 +1,20 @@
+  <table class="table table-responsive-sm table-striped table-hover">
+    <thead>
+      <tr class="thead-dark">
+        <th><%= t('.code') %></th>
+        <th><%= t('.name') %></th>
+        <th><%= t('.credit') %></th>
+        <th><%= t('actions') %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% courses.each do |available_course| %>
+        <tr>
+          <td><%= available_course.code %></td>
+          <td><%= available_course.name %></td>
+          <td><%= available_course.credit %></td>
+          <td><%= link_to(t('.add'), '#', class: 'btn btn-success') %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>

@@ -1,0 +1,19 @@
+<div class="row">
+  <% semesters.each do |semester| %>
+    <div class="col-lg-12 col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <strong><%= "#{semester.sequence}. #{t('semester')}" %></strong>
+        </div>
+
+        <div class="card-body table-responsive">
+          <%= render 'available_courses',
+                     klass: 'border-primary',
+                     courses: semester.available_courses.where(academic_term: AcademicTerm.active.last)
+                                                        .includes(:course)
+                                                        .order('courses.name') %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

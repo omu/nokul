@@ -1,0 +1,11 @@
+en:
+  course_management:
+    enrolled_courses:
+      available_courses:
+        code: Code
+        credit: Credit
+        name: Name
+        add: Add
+      index:
+        available_courses: Available Courses
+        selected_courses: Selected Courses

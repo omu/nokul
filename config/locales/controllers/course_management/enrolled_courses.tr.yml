@@ -1,0 +1,11 @@
+tr:
+  course_management:
+    enrolled_courses:
+      available_courses:
+        code: Dersin Kodu
+        credit: Kredi
+        name: Dersin Adı
+        add: Ekle
+      index:
+        available_courses: Açılan Dersler
+        selected_courses: Seçilen Dersler
