@@ -26,6 +26,7 @@ class Course < ApplicationRecord
   belongs_to :course_type
   belongs_to :language
   belongs_to :unit
+  has_many :available_courses, dependent: :destroy
 
   # validations
   validates :code, presence: true, uniqueness: true, length: { maximum: 255 }
