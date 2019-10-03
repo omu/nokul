@@ -1,0 +1,8 @@
+tr:
+  meksis:
+    dashboard:
+      index:
+        card_header: Yükseköğretim Mekanları Envanter Sınıflandırma Sistemi
+      card:
+        buildings: Binalar
+        main_place_types: Ana Mekan Türleri
