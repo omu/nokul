@@ -1,0 +1,16 @@
+en:
+  activerecord:
+    attributes:
+      place_type: &attributes
+        name: Place Name
+  meksis:
+    place_types:
+      index:
+        <<: *attributes
+        card_header: Main Place Types List
+        new_place_type_link: New Place Type
+        number_of_children: Number of Sub Place Types
+      show:
+        <<: *attributes
+        card_header: Sub Place Types List
+        smart_search_placeholder: Search
