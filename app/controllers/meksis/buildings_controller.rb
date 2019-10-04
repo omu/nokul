@@ -13,7 +13,7 @@ module Meksis
 
       respond_to do |format|
         format.html
-        format.pdf { render pdf: 'report', no_background: true }
+        format.pdf { render pdf: 'report', no_background: true, footer: { center: '[page]' } }
       end
     end
 

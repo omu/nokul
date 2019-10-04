@@ -5,11 +5,11 @@ module Xokul
     module_function
 
     def parent_place_types
-      Connection.request('/meksis/main_functions')
+      Connection.request('/meksis/main_place_types')
     end
 
-    def children_place_types
-      Connection.request('/meksis/sub_functions')
+    def sub_place_types
+      Connection.request('/meksis/sub_place_types')
     end
 
     def buildings
