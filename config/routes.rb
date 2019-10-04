@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   draw :patron
   draw :reference
   draw :yoksis
+  draw :meksis
 
   resources :units do
     member do

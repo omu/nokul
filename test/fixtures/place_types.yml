@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  meksis_id: 1
+  name: MyString
+  ancestry: MyString
+
+two:
+  meksis_id: 1
+  name: MyString
+  ancestry: MyString
