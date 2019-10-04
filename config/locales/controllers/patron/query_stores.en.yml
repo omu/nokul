@@ -9,8 +9,8 @@ en:
     enums:
       patron/query_store:
         types:
-          exclude: Exclude
-          include: Include
+          exclusive: Exclusive
+          inclusive: Inclusive
   helpers:
     submit:
       patron_query_store:
