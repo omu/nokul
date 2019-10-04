@@ -4,7 +4,7 @@ namespace :fetch do
   desc 'Fetch place types from Meksis'
   task place_types: :environment do
     parents  = Xokul::Meksis.parent_place_types
-    children = Xokul::Meksis.children_place_types
+    children = Xokul::Meksis.sub_place_types
 
     progress_bar = ProgressBar.spawn 'Meksis - Place Types', (parents + children).size
 

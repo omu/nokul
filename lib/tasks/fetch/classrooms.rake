@@ -10,7 +10,7 @@ namespace :fetch do
       progress_bar = ProgressBar.spawn 'Meksis - Classroom', classrooms.size
 
       classrooms.each do |classroom|
-        place_type = PlaceType.find_by(meksis_id: classroom[:sub_function_id])
+        place_type = PlaceType.find_by(meksis_id: classroom[:sub_place_type_id])
 
         Classroom.create!(
           meksis_id:        classroom[:id],

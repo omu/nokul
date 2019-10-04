@@ -8,8 +8,8 @@ namespace :fetch do
     progress_bar = ProgressBar.spawn 'Meksis - Buildings', buildings.size
 
     buildings.each do |building|
-      place_type = PlaceType.find_by(meksis_id: building[:place_type_id])
-      unit = Unit.find_by(yoksis_id: building[:yoksis_id])
+      place_type = PlaceType.find_by(meksis_id: building[:main_place_type_id])
+      unit = Unit.find_by(yoksis_id: building[:unit_id])
 
       Building.create(
         meksis_id:   building[:id],
