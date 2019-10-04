@@ -12,17 +12,7 @@ class UnitScope < Patron::Scope::Base
 
   preview_attributes :name, :names_depth_cache, :code
 
-  dynamic_value :employee_unit_id, scope: %i[name unit_type_id] do
-    user.id_number
-  end
-
   dynamic_value :email, scope: :name do
-    foo
-  end
-
-  private
-
-  def foo
-    'Rek'
+    user.email
   end
 end
