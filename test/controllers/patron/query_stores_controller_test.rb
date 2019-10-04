@@ -46,7 +46,7 @@ module Patron
       parameters = {
         name:                   'Query Store Create',
         scope_name:             'DummyModelScope',
-        type:                   'include',
+        type:                   'inclusive',
         name_value_type:        'static',
         name_static_value:      'name created',
         name_static_query_type: 'equal',
@@ -82,7 +82,7 @@ module Patron
     test 'should update query store' do
       parameters = {
         name:                   'Query Store Update',
-        type:                   'include',
+        type:                   'inclusive',
         name_value_type:        'static',
         name_static_value:      'name updated',
         name_static_query_type: 'equal',
