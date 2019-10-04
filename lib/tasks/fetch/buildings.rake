@@ -11,7 +11,8 @@ namespace :fetch do
       place_type = PlaceType.find_by(meksis_id: building[:main_place_type_id])
       unit = Unit.find_by(yoksis_id: building[:unit_id])
 
-      Building.create(
+      record = Building.find_or_initialize_by(meksis_id: building[:id])
+      record.assign_attributes(
         meksis_id:   building[:id],
         name:        building[:name],
         code:        building[:code],
@@ -20,7 +21,8 @@ namespace :fetch do
         place_type:  place_type,
         unit:        unit
       )
-
+      record.save
+      
       progress_bar&.increment
     end
   end

@@ -9,13 +9,21 @@ namespace :fetch do
     progress_bar = ProgressBar.spawn 'Meksis - Place Types', (parents + children).size
 
     parents.each do |place|
-      PlaceType.create(meksis_id: place[:id], name: place[:name])
+      record = PlaceType.find_or_initialize_by(meksis_id: place[:id])
+      
+      record.assign_attributes(meksis_id: place[:id], name: place[:name])
+      record.save
+
       progress_bar&.increment
     end
 
     children.each do |place|
       parent = PlaceType.find_by(meksis_id: place[:parent_id])
-      PlaceType.create(meksis_id: place[:id], name: place[:name], parent: parent)
+      record = PlaceType.find_or_initialize_by(meksis_id: place[:id])
+
+      record.assign_attributes(meksis_id: place[:id], name: place[:name], parent: parent)
+      record.save
+
       progress_bar&.increment
     end
   end

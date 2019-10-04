@@ -12,7 +12,8 @@ namespace :fetch do
       classrooms.each do |classroom|
         place_type = PlaceType.find_by(meksis_id: classroom[:sub_place_type_id])
 
-        Classroom.create!(
+        record = Classroom.find_or_initialize_by(meksis_id: classroom[:id])
+        record.assign_attributes(
           meksis_id:        classroom[:id],
           name:             classroom[:name],
           code:             classroom[:code],
@@ -27,7 +28,8 @@ namespace :fetch do
           building:         building,
           place_type:       place_type
         )
-
+        record.save
+        
         progress_bar&.increment
       end
     end
