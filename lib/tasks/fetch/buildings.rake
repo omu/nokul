@@ -13,7 +13,6 @@ namespace :fetch do
 
       record = Building.find_or_initialize_by(meksis_id: building[:id])
       record.assign_attributes(
-        meksis_id:   building[:id],
         name:        building[:name],
         code:        building[:code],
         indoor_area: building[:indoor_area],
@@ -22,7 +21,7 @@ namespace :fetch do
         unit:        unit
       )
       record.save
-      
+
       progress_bar&.increment
     end
   end

@@ -1,9 +1,8 @@
- 
 <%= render 'layouts/builders/index',
-      namespace: 'meksis',
-      klass: 'place_type',
-      collection: @place_types,
-      pagy: @pagy,
-      card_header: t('.card_header'),
-      params: %w[name number_of_children],
-      actions: %w[show] %>
+           namespace:   'meksis',
+           klass:       'place_type',
+           collection:  @place_types,
+           pagy:        @pagy,
+           card_header: t('.card_header'),
+           params:      %w[name number_of_children],
+           actions:     %w[show] %>

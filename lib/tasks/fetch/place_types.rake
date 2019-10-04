@@ -10,8 +10,8 @@ namespace :fetch do
 
     parents.each do |place|
       record = PlaceType.find_or_initialize_by(meksis_id: place[:id])
-      
-      record.assign_attributes(meksis_id: place[:id], name: place[:name])
+
+      record.assign_attributes(name: place[:name])
       record.save
 
       progress_bar&.increment
@@ -21,7 +21,7 @@ namespace :fetch do
       parent = PlaceType.find_by(meksis_id: place[:parent_id])
       record = PlaceType.find_or_initialize_by(meksis_id: place[:id])
 
-      record.assign_attributes(meksis_id: place[:id], name: place[:name], parent: parent)
+      record.assign_attributes(name: place[:name], parent: parent)
       record.save
 
       progress_bar&.increment

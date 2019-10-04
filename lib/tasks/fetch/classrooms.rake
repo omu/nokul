@@ -14,7 +14,6 @@ namespace :fetch do
 
         record = Classroom.find_or_initialize_by(meksis_id: classroom[:id])
         record.assign_attributes(
-          meksis_id:        classroom[:id],
           name:             classroom[:name],
           code:             classroom[:code],
           room_number:      classroom[:room_number],
@@ -29,7 +28,7 @@ namespace :fetch do
           place_type:       place_type
         )
         record.save
-        
+
         progress_bar&.increment
       end
     end
