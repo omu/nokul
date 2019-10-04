@@ -20,7 +20,7 @@
           <% end %>
         </td>
         <td>
-          <% if query_store.include? %>
+          <% if query_store.inclusive? %>
             <%= fa_icon('plus', text: enum_t(query_store, :type), class: 'text-success') %>
           <% else %>
             <%= fa_icon('minus', text: enum_t(query_store, :type), class: 'text-danger') %>

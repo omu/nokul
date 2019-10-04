@@ -26,12 +26,13 @@ module Patron
         attr_reader :instance, :klass
 
         def build
-          queries = []
-
-          queries << prepare(records(type: :include))
-          queries << Query::Arel.not(prepare(records(type: :exclude)))
-
-          Query::Arel.merge(queries.compact, with: :and)
+          Query::Arel.merge(
+            [
+              prepare(records(type: :inclusive)),
+              Query::Arel.not(prepare(records(type: :exclusive)))
+            ].compact,
+            with: :and
+          )
         end
 
         def prepare(datas)

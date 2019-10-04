@@ -18,7 +18,7 @@ module Patron
 
         def fields_for_form
           filters.each_with_object({}) do |(filter, option), hash|
-            hash[translate_filter(option.i18n_key)] = [
+            hash[Utils::I18n.filter(option.i18n_key, class_name: model)] = [
               generate_field_for_value_type(filter),
               generate_field_for_static_value(filter, option),
               generate_field_for_static_query_type(filter, option),
@@ -112,10 +112,6 @@ module Patron
           when :string then Query::Arel.predicates.to_a - %i[in not_in]
           else              []
           end
-        end
-
-        def translate_filter(key)
-          Utils::I18n.filter(key, class_name: model)
         end
       end
     end

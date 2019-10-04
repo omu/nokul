@@ -9,8 +9,8 @@ tr:
     enums:
       patron/query_store:
         types:
-          exclude: Hariç Tut
-          include: Dahil Et
+          exclusive: Hariç Tut
+          inclusive: Dahil Et
   helpers:
     submit:
       patron_query_store:

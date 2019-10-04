@@ -12,7 +12,7 @@ module Patron
     after_update { self.parameters = nil }
 
     # enums
-    enum type: { exclude: 0, include: 1 }
+    enum type: { exclusive: 0, inclusive: 1 }
 
     # search
     pg_search_scope(
