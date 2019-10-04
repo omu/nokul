@@ -1,0 +1,9 @@
+tr:
+  activerecord:
+    enums:
+      project:
+        statuses:
+          completed: Tamamlandı
+          continuing: Devam ediyor
+          deferred: Ertelendi
+          pending: Beklemede

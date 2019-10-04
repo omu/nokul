@@ -8,11 +8,14 @@ en:
         change: Change
         change_password: Change Password
         email: Email
-        general_settings: General Settings
+        general_settings: General Profile Settings
         identity_informations: Identity Informations
         manage: Manage
+        manage_profile_preferences: Manage profile page visibility preferences
         mobile_phone: Mobile Phone
         personal_informations: Personal Informations
+        profile_preferences: Profile Preferences
+        preferences: Preferences
         set_password: Set a secure password to protect your account
         update_email: Update your email
         update_general_settings: Update social media accounts and other settings
