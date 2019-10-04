@@ -1,0 +1,8 @@
+en:
+  meksis:
+    dashboard:
+      index:
+        card_header: The Inventory Classification System of Higher Education Facilities
+      card:
+        buildings: Buildings
+        main_place_types: Main Place Types

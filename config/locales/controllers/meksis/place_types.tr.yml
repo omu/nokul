@@ -1,0 +1,16 @@
+tr:
+  activerecord:
+    attributes:
+      place_type: &attributes
+        name: Mekan Adı
+  meksis:
+    place_types:
+      index:
+        <<: *attributes
+        card_header: Ana Mekan Türü Listesi
+        new_place_type_link: Yeni Mekan Türü
+        number_of_children: Alt Mekan Türü Sayısı
+      show:
+        <<: *attributes
+        card_header: Alt Mekan Türü Listesi
+        smart_search_placeholder: Ara

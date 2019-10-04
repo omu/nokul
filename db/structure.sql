@@ -618,6 +618,51 @@ ALTER SEQUENCE public.available_courses_id_seq OWNED BY public.available_courses
 
 
 --
+-- Name: buildings; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.buildings (
+    id bigint NOT NULL,
+    meksis_id integer,
+    name character varying,
+    code character varying,
+    indoor_area double precision,
+    latitude numeric,
+    longitude numeric,
+    active boolean,
+    place_type_id bigint NOT NULL,
+    unit_id bigint NOT NULL,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT buildings_code_length CHECK ((length((code)::text) <= 255)),
+    CONSTRAINT buildings_code_presence CHECK (((code IS NOT NULL) AND ((code)::text !~ '^\s*$'::text))),
+    CONSTRAINT buildings_meksis_id_null CHECK ((meksis_id IS NOT NULL)),
+    CONSTRAINT buildings_meksis_id_numericality CHECK ((meksis_id >= 1)),
+    CONSTRAINT buildings_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT buildings_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
+);
+
+
+--
+-- Name: buildings_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.buildings_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: buildings_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.buildings_id_seq OWNED BY public.buildings.id;
+
+
+--
 -- Name: calendar_committee_decisions; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -865,6 +910,55 @@ CREATE SEQUENCE public.cities_id_seq
 --
 
 ALTER SEQUENCE public.cities_id_seq OWNED BY public.cities.id;
+
+
+--
+-- Name: classrooms; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.classrooms (
+    id bigint NOT NULL,
+    meksis_id integer,
+    name character varying,
+    code character varying,
+    room_number integer,
+    student_capacity integer,
+    exam_capacity integer,
+    available_space double precision,
+    height double precision,
+    width double precision,
+    length double precision,
+    volume double precision,
+    place_type_id bigint NOT NULL,
+    building_id bigint NOT NULL,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT classrooms_code_length CHECK ((length((code)::text) <= 255)),
+    CONSTRAINT classrooms_code_presence CHECK (((code IS NOT NULL) AND ((code)::text !~ '^\s*$'::text))),
+    CONSTRAINT classrooms_meksis_id_null CHECK ((meksis_id IS NOT NULL)),
+    CONSTRAINT classrooms_meksis_id_numericality CHECK ((meksis_id >= 1)),
+    CONSTRAINT classrooms_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT classrooms_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
+);
+
+
+--
+-- Name: classrooms_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.classrooms_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: classrooms_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.classrooms_id_seq OWNED BY public.classrooms.id;
 
 
 --
@@ -2033,6 +2127,41 @@ CREATE SEQUENCE public.permissions_id_seq
 --
 
 ALTER SEQUENCE public.permissions_id_seq OWNED BY public.permissions.id;
+
+
+--
+-- Name: place_types; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.place_types (
+    id bigint NOT NULL,
+    meksis_id integer,
+    name character varying,
+    ancestry character varying,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT place_types_meksis_id_null CHECK ((meksis_id IS NOT NULL)),
+    CONSTRAINT place_types_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
+);
+
+
+--
+-- Name: place_types_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.place_types_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: place_types_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.place_types_id_seq OWNED BY public.place_types.id;
 
 
 --
@@ -3335,6 +3464,13 @@ ALTER TABLE ONLY public.available_courses ALTER COLUMN id SET DEFAULT nextval('p
 
 
 --
+-- Name: buildings id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.buildings ALTER COLUMN id SET DEFAULT nextval('public.buildings_id_seq'::regclass);
+
+
+--
 -- Name: calendar_committee_decisions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -3374,6 +3510,13 @@ ALTER TABLE ONLY public.certifications ALTER COLUMN id SET DEFAULT nextval('publ
 --
 
 ALTER TABLE ONLY public.cities ALTER COLUMN id SET DEFAULT nextval('public.cities_id_seq'::regclass);
+
+
+--
+-- Name: classrooms id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.classrooms ALTER COLUMN id SET DEFAULT nextval('public.classrooms_id_seq'::regclass);
 
 
 --
@@ -3577,6 +3720,13 @@ ALTER TABLE ONLY public.meeting_agendas ALTER COLUMN id SET DEFAULT nextval('pub
 --
 
 ALTER TABLE ONLY public.permissions ALTER COLUMN id SET DEFAULT nextval('public.permissions_id_seq'::regclass);
+
+
+--
+-- Name: place_types id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.place_types ALTER COLUMN id SET DEFAULT nextval('public.place_types_id_seq'::regclass);
 
 
 --
@@ -3927,6 +4077,54 @@ ALTER TABLE ONLY public.available_courses
 
 
 --
+-- Name: buildings buildings_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.buildings
+    ADD CONSTRAINT buildings_code_unique UNIQUE (code) DEFERRABLE;
+
+
+--
+-- Name: buildings buildings_latitude_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.buildings
+    ADD CONSTRAINT buildings_latitude_unique UNIQUE (latitude) DEFERRABLE;
+
+
+--
+-- Name: buildings buildings_longitude_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.buildings
+    ADD CONSTRAINT buildings_longitude_unique UNIQUE (longitude) DEFERRABLE;
+
+
+--
+-- Name: buildings buildings_meksis_id_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.buildings
+    ADD CONSTRAINT buildings_meksis_id_unique UNIQUE (meksis_id) DEFERRABLE;
+
+
+--
+-- Name: buildings buildings_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.buildings
+    ADD CONSTRAINT buildings_name_unique UNIQUE (name) DEFERRABLE;
+
+
+--
+-- Name: buildings buildings_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.buildings
+    ADD CONSTRAINT buildings_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: calendar_committee_decisions calendar_committee_decisions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -3988,6 +4186,30 @@ ALTER TABLE ONLY public.certifications
 
 ALTER TABLE ONLY public.cities
     ADD CONSTRAINT cities_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: classrooms classrooms_meksis_id_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.classrooms
+    ADD CONSTRAINT classrooms_meksis_id_unique UNIQUE (meksis_id) DEFERRABLE;
+
+
+--
+-- Name: classrooms classrooms_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.classrooms
+    ADD CONSTRAINT classrooms_name_unique UNIQUE (name) DEFERRABLE;
+
+
+--
+-- Name: classrooms classrooms_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.classrooms
+    ADD CONSTRAINT classrooms_pkey PRIMARY KEY (id);
 
 
 --
@@ -4252,6 +4474,30 @@ ALTER TABLE ONLY public.meeting_agendas
 
 ALTER TABLE ONLY public.permissions
     ADD CONSTRAINT permissions_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: place_types place_types_meksis_id_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.place_types
+    ADD CONSTRAINT place_types_meksis_id_unique UNIQUE (meksis_id) DEFERRABLE;
+
+
+--
+-- Name: place_types place_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.place_types
+    ADD CONSTRAINT place_types_name_unique UNIQUE (name) DEFERRABLE;
+
+
+--
+-- Name: place_types place_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.place_types
+    ADD CONSTRAINT place_types_pkey PRIMARY KEY (id);
 
 
 --
@@ -4852,6 +5098,20 @@ CREATE INDEX index_available_courses_on_unit_id ON public.available_courses USIN
 
 
 --
+-- Name: index_buildings_on_place_type_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_buildings_on_place_type_id ON public.buildings USING btree (place_type_id);
+
+
+--
+-- Name: index_buildings_on_unit_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_buildings_on_unit_id ON public.buildings USING btree (unit_id);
+
+
+--
 -- Name: index_calendar_committee_decisions_on_calendar_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -4898,6 +5158,20 @@ CREATE INDEX index_certifications_on_user_id ON public.certifications USING btre
 --
 
 CREATE INDEX index_cities_on_country_id ON public.cities USING btree (country_id);
+
+
+--
+-- Name: index_classrooms_on_building_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_classrooms_on_building_id ON public.classrooms USING btree (building_id);
+
+
+--
+-- Name: index_classrooms_on_place_type_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_classrooms_on_place_type_id ON public.classrooms USING btree (place_type_id);
 
 
 --
@@ -5171,6 +5445,13 @@ CREATE INDEX index_meeting_agendas_on_committee_meeting_id ON public.meeting_age
 --
 
 CREATE UNIQUE INDEX index_permissions_on_name ON public.permissions USING btree (name);
+
+
+--
+-- Name: index_place_types_on_ancestry; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_place_types_on_ancestry ON public.place_types USING btree (ancestry);
 
 
 --
@@ -5919,11 +6200,27 @@ ALTER TABLE ONLY public.registration_documents
 
 
 --
+-- Name: classrooms fk_rails_a9065d53fc; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.classrooms
+    ADD CONSTRAINT fk_rails_a9065d53fc FOREIGN KEY (place_type_id) REFERENCES public.place_types(id);
+
+
+--
 -- Name: available_courses fk_rails_a9099f01f5; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.available_courses
     ADD CONSTRAINT fk_rails_a9099f01f5 FOREIGN KEY (coordinator_id) REFERENCES public.employees(id);
+
+
+--
+-- Name: classrooms fk_rails_b0064b7304; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.classrooms
+    ADD CONSTRAINT fk_rails_b0064b7304 FOREIGN KEY (building_id) REFERENCES public.buildings(id);
 
 
 --
@@ -6039,6 +6336,14 @@ ALTER TABLE ONLY public.prospective_students
 
 
 --
+-- Name: buildings fk_rails_db1dc1e28f; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.buildings
+    ADD CONSTRAINT fk_rails_db1dc1e28f FOREIGN KEY (unit_id) REFERENCES public.units(id);
+
+
+--
 -- Name: units fk_rails_db99877142; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6052,6 +6357,14 @@ ALTER TABLE ONLY public.units
 
 ALTER TABLE ONLY public.employees
     ADD CONSTRAINT fk_rails_dcfd3d4fc3 FOREIGN KEY (user_id) REFERENCES public.users(id);
+
+
+--
+-- Name: buildings fk_rails_df02533716; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.buildings
+    ADD CONSTRAINT fk_rails_df02533716 FOREIGN KEY (place_type_id) REFERENCES public.place_types(id);
 
 
 --
@@ -6235,6 +6548,9 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20190517112657'),
 ('20190529121036'),
 ('20190925063737'),
-('20190927071636');
+('20190927071636'),
+('20191003075056'),
+('20191003100000'),
+('20191003102101');
 
 
