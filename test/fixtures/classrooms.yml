@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  meksis_id: 1
+  name: MyString
+  code: MyString
+  room_number: 1
+  student_capacity: 1
+  exam_capacity: 1
+  available_space: 1.5
+  height: 1.5
+  width: 1.5
+  length: 1.5
+  volume: 1.5
+  place_type: one
+  building: one
+
+two:
+  meksis_id: 1
+  name: MyString
+  code: MyString
+  room_number: 1
+  student_capacity: 1
+  exam_capacity: 1
+  available_space: 1.5
+  height: 1.5
+  width: 1.5
+  length: 1.5
+  volume: 1.5
+  place_type: two
+  building: two

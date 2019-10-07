@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Yoksis
-  class CertificationsCreateJob < ApplicationJob
+  class CertificationsSaveJob < ApplicationJob
     queue_as :high
 
     # slow operation
@@ -12,10 +12,10 @@ module Yoksis
     # callbacks
     after_perform do |job|
       user = job.arguments.first
-      response = [@response].flatten
 
-      response.each do |certification|
-        user.certifications.create(
+      [*@response].each do |certification|
+        user_certification = user.certifications.find_or_initialize_by(yoksis_id: certification[:yoksis_id])
+        user_certification.assign_attributes(
           type:   certification[:type_id],
           scope:  certification[:scope_id],
           title:  certification[:title_name].try(:capitalize_turkish),
@@ -25,6 +25,7 @@ module Yoksis
             :incentive_point, :duration, :number_of_authors, :city_and_country
           )
         )
+        user_certification.save
       end
     end
   end

@@ -21,6 +21,7 @@ tr:
         first_registration: İlk Kayıt
         high_school_types: Lise Türleri
         ldap_sync: Ldap Sync
+        meksis: MEKSİS
         prospective_employees: Aday Personeller
         prospective_students: Aday Öğrenciler
         references: Tanımlar

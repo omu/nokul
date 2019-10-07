@@ -1,0 +1,59 @@
+en:
+  account:
+    profiles:
+      academic_credentials:
+        academic: Academic
+        continuing: Continuing
+        create_academic_credentials_from_yoksis: Create my academic credentials from YOKSIS
+        professional_experience: Professional Experience
+        update_academic_credentials_from_yoksis: Update my academic credentials from YOKSIS
+      articles:
+        articles: Articles
+        create_articles_from_yoksis: Create my articles from YOKSIS
+        update_articles_from_yoksis: Update my articles from YOKSIS
+      certifications:
+        certifications: Certifications
+        create_certifications_from_yoksis: Create my certifications from YOKSIS
+        update_certifications_from_yoksis: Update my certifications from YOKSIS
+      edit:
+        country: Country
+        extension_number: Extension Number
+        linkedin: Linkedin Username
+        orcid: ORCID
+        fixed_phone: Fixed Phone Number
+        profile_settings: Profile Settings
+        public_photo: Show picture on my profile
+        public_studies: Show academic studies on my profile
+        skype: Skype Username
+        twitter: Twitter Username
+        visiblity_settings: Visiblity Settings
+        website: Website
+      education_informations:
+        create_education_informations_from_yoksis: Create my education informations from YOKSIS
+        education_informations: Education Informations
+        update_education_informations_from_yoksis: Update my education informations from YOKSIS
+      projects:
+        create_projects_from_yoksis: Create my projects from YOKSIS
+        projects: Projects
+        status: Status
+        update_projects_from_yoksis: Update my projects from YOKSIS
+      save_academic_credentials_from_yoksis:
+        will_update: We have received your request for academic credentials creation or an update, and within a few seconds/minutes your academic credentials will be updated.
+      save_education_informations_from_yoksis:
+        will_update: We have received your request for education informations creation or an update, and within a few seconds/minutes your education informations will be updated.
+      save_articles_from_yoksis:
+        will_update: We have received your request for articles creation or an update, and within a few seconds/minutes your articles will be updated.
+      save_certifications_from_yoksis:
+        will_update: We have received your request for certifications creation or an update, and within a few seconds/minutes your certifications will be updated.
+      save_projects_from_yoksis:
+        will_update: We have received your request for projects creation or an update, and within a few seconds/minutes your projects will be updated.
+      show:
+        academic_activities: Academic Activities
+      update:
+        success: Profile successfully updated.
+  simple_form:
+    placeholders:
+      user:
+        linkedin: linkedin.com/
+        twitter: twitter.com/
+        phone_number: 'I.e. 3623121919'

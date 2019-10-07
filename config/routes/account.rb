@@ -30,12 +30,25 @@ scope module: :account do
       put 'phone_verification', action: :verification
       post 'phones', action: :update
     end
+    namespace :preferences do
+      get 'profile', to: 'profiles#edit'
+      patch 'profile', to: 'profiles#update'
+    end
   end
   get 'activation', to: 'activations#new'
   post 'activation', to: 'activations#create'
   post 'activation_phone_verification', to: 'activations#check_phone_verification'
-  get '/profile', to: 'profile_settings#edit'
-  patch '/profile', to: 'profile_settings#update'
+
+  scope module: :profiles do
+    get 'profile/edit', action: :edit
+    get 'profile', action: :show
+    patch 'profile', action: :update
+    get :save_articles_from_yoksis
+    get :save_certifications_from_yoksis
+    get :save_projects_from_yoksis
+    get :save_academic_credentials_from_yoksis
+    get :save_education_informations_from_yoksis
+  end
 end
 
 resources :users, only: [] do

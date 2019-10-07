@@ -8,11 +8,14 @@ tr:
         change: Değiştir
         change_password: Şifre Değiştir
         email: E-Posta
-        general_settings: Genel Ayarlar
+        general_settings: Genel Profil Ayarları
         identity_informations: Kimlik Bilgileri
         manage: Yönet
+        manage_profile_preferences: Profil sayfası görüntüleme tercihlerini yönet
         mobile_phone: Telefon Numarası
         personal_informations: Kişisel Bilgiler
+        preferences: Tercihler
+        profile_preferences: Profil Tercihleri
         set_password: Hesabını korumak için güvenli bir şifre belirle
         update_email: E-posta adresini güncelle
         update_general_settings: Sosyal medya hesaplarını ve diğer ayarları güncelle

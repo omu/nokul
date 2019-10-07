@@ -1,0 +1,26 @@
+tr:
+  meksis:
+    classrooms:
+      index:
+        building: Bina Adı
+        buildings: Binalar
+        card_header: Sınıflar
+        code: Sınıf Kodu
+        meksis_id: Meksis ID
+        name: Sınıf Adı
+        place_type: Mekan Türü
+        unit: Birim Adı
+      search:
+        card_header: Akıllı Arama
+        place_type: Mekan Türü
+        smart_search_placeholder: Ara
+      show:
+        available_space: Mevcut Alan
+        card_header: Detaylar
+        exam_capacity: Sınav Kapasitesi
+        height: Yükseklik
+        length: Uzunluk
+        room_number: Oda Numarası
+        student_capacity: Öğrenci Kapasitesi
+        volume: Hacim
+        width: Genişlik

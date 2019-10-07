@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Yoksis
-  class ArticlesCreateJob < ApplicationJob
+  class ArticlesSaveJob < ApplicationJob
     queue_as :high
 
     # slow operation
@@ -9,13 +9,13 @@ module Yoksis
       @response = Xokul::Yoksis::Resumes.articles(id_number: user.id_number)
     end
 
-    # callbacks
+    # rubocop:disable Metrics/BlockLength
     after_perform do |job|
       user = job.arguments.first
-      response = [@response].flatten
 
-      response.each do |article|
-        user.articles.create(
+      [*@response].each do |article|
+        user_article = user.articles.find_or_initialize_by(yoksis_id: article[:publication_id])
+        user_article.assign_attributes(
           yoksis_id:               article[:publication_id],
           scope:                   article[:scope_id],
           review:                  article[:reviewer_id],
@@ -36,7 +36,9 @@ module Yoksis
             :last_update, :incentive_point, :sponsored_by, :number_of_authors
           )
         )
+        user_article.save
       end
     end
+    # rubocop:enable Metrics/BlockLength
   end
 end
