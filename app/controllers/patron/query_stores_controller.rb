@@ -6,6 +6,7 @@ module Patron
 
     before_action :set_query_store, only: %i[show edit update destroy preview]
     before_action :authorized?
+    sudo only: %i[new edit destroy]
 
     def index
       @query_stores = pagy_by_search(Patron::QueryStore.order(:name, :scope_name))

@@ -6,6 +6,7 @@ module Patron
 
     before_action :set_user, only: %i[edit show update preview_scope]
     before_action :authorized?
+    sudo only: :edit
 
     def index
       @users = pagy_by_search(User.all)
