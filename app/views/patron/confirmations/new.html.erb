@@ -1,0 +1,26 @@
+<div class='col-md-6'>
+  <div class='card mx-4'>
+    <div class="card-header">
+      <h4 class="text-center"><%= t('.title') %></h4>
+    </div>
+    <div class='card-body'>
+      <%= simple_form_for(current_user,
+                          as: :sudo,
+                          url: %i[patron confirmations],
+                          method: :post) do |f| %>
+        <%= f.error_notification %>
+        <%= hidden_field :sudo, :return_to, value: params.dig(:sudo, :return_to) || request.url %>
+        <strong><%= f.label :password %></strong>
+        <div class='input-group mb-3'>
+          <div class='input-group-prepend'>
+            <span class='input-group-text'>
+              <%= fa_icon('lock') %>
+            </span>
+          </div>
+          <%= f.input :password, required: true, label: false, wrapper: false %>
+        </div>
+        <%= f.button :submit, t('.submit'), class: 'btn btn-block btn-success' %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+tr:
+  patron:
+    confirmations:
+      create:
+        error: Yanlış parola
+      new:
+        submit: Parolayı Onayla
+        title: Devam etmek için parolanızı onaylayın

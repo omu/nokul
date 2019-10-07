@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 namespace :patron do
+  get '/', to: 'dashboard#index'
   resources :assignments do
     collection do
       get :roles
@@ -8,14 +9,13 @@ namespace :patron do
     end
     get :preview_scope, on: :member
   end
+  resources :confirmations, only: %i[new create]
   resources :permissions, only: %i[index show]
+  resources :roles
   resources :query_stores do
     member do
       get :preview
       post :preview
     end
   end
-  resources :roles
-
-  get '/', to: 'dashboard#index'
 end

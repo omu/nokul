@@ -2,6 +2,7 @@
 
 class ApplicationController < ActionController::Base
   include Pundit
+  include Patron::Sudo
 
   protect_from_forgery with: :exception
 

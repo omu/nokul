@@ -6,6 +6,7 @@ require_relative 'patron/utils/i18n.rb'
 require_relative 'patron/scope'
 require_relative 'patron/permission_builder'
 require_relative 'patron/role_builder'
+require_relative 'patron/sudo'
 
 module Patron
   class Error < StandardError; end
