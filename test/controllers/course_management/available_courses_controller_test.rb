@@ -28,7 +28,7 @@ module CourseManagement
       assert_difference('AvailableCourse.count') do
         post available_courses_path, params: {
           available_course: {
-            curriculum_id: curriculums(:one).id, course_id: courses(:ydi).id,
+            curriculum_id: curriculums(:one).id, curriculum_course_id: curriculum_courses(:two).id,
             coordinator_id: employees(:chief_john).id, unit_id: units(:omu).id,
             groups_attributes: {
               '0' => {
@@ -64,7 +64,7 @@ module CourseManagement
       available_course = AvailableCourse.last
       patch available_course_path(available_course), params: {
         available_course: {
-          curriculum_id: curriculums(:one).id, course_id: courses(:ydi).id,
+          curriculum_id: curriculums(:one).id, curriculum_course_id: curriculum_courses(:two).id,
           groups_attributes: {
             '0' => {
               name: 'Group 1', quota: 10,
@@ -82,7 +82,7 @@ module CourseManagement
       available_course.reload
 
       assert_equal curriculums(:one), available_course.curriculum
-      assert_equal courses(:ydi), available_course.course
+      assert_equal curriculum_courses(:two), available_course.curriculum_course
       assert_redirected_to available_course_path(available_course)
       assert_equal translate('.update.success'), flash[:notice]
     end

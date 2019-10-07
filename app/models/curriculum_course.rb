@@ -13,6 +13,7 @@ class CurriculumCourse < ApplicationRecord
   belongs_to :course
   belongs_to :curriculum_course_group, optional: true
   belongs_to :curriculum_semester
+  has_many :available_courses, dependent: :destroy
 
   # validations
   validates :ects, numericality: { greater_than: 0 }
@@ -26,4 +27,6 @@ class CurriculumCourse < ApplicationRecord
   def assign_type
     self.type = curriculum_course_group.nil? ? :compulsory : :elective
   end
+
+  delegate :code, :name, :theoric, :practice, :laboratory, :credit, :program_type, to: :course
 end

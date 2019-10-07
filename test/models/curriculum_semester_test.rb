@@ -12,6 +12,7 @@ class CurriculumSemesterTest < ActiveSupport::TestCase
   has_many :curriculum_courses, dependent: :destroy
   has_many :curriculum_course_groups, dependent: :destroy
   has_many :courses, through: :curriculum_courses
+  has_many :available_courses, through: :curriculum_courses
 
   # validations: presence
   validates_presence_of :year

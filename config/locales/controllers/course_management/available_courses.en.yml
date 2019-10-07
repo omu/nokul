@@ -4,7 +4,7 @@ en:
       available_course: &available_course_attributes
         academic_term: Academic Term
         coordinator: Coordinator
-        course: Course
+        curriculum_course: Course
         curriculum: Curriculum
         groups: Groups
         unit: Unit

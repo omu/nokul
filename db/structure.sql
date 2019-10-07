@@ -586,13 +586,13 @@ CREATE TABLE public.available_courses (
     id bigint NOT NULL,
     academic_term_id bigint NOT NULL,
     curriculum_id bigint NOT NULL,
-    course_id bigint NOT NULL,
     unit_id bigint NOT NULL,
     coordinator_id bigint,
     groups_count integer DEFAULT 0,
     assessments_approved boolean DEFAULT false,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
+    curriculum_course_id bigint NOT NULL,
     CONSTRAINT available_courses_assessments_approved_null CHECK ((assessments_approved IS NOT NULL)),
     CONSTRAINT available_courses_groups_count_numericality CHECK ((groups_count >= 0))
 );
@@ -5077,10 +5077,10 @@ CREATE INDEX index_available_courses_on_coordinator_id ON public.available_cours
 
 
 --
--- Name: index_available_courses_on_course_id; Type: INDEX; Schema: public; Owner: -
+-- Name: index_available_courses_on_curriculum_course_id; Type: INDEX; Schema: public; Owner: -
 --
 
-CREATE INDEX index_available_courses_on_course_id ON public.available_courses USING btree (course_id);
+CREATE INDEX index_available_courses_on_curriculum_course_id ON public.available_courses USING btree (curriculum_course_id);
 
 
 --
@@ -5928,14 +5928,6 @@ ALTER TABLE ONLY public.committee_decisions
 
 
 --
--- Name: available_courses fk_rails_4783d78ac5; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.available_courses
-    ADD CONSTRAINT fk_rails_4783d78ac5 FOREIGN KEY (course_id) REFERENCES public.courses(id);
-
-
---
 -- Name: unit_calendars fk_rails_47a7d8ee6a; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6328,6 +6320,14 @@ ALTER TABLE ONLY public.academic_credentials
 
 
 --
+-- Name: available_courses fk_rails_d65cfbfb56; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.available_courses
+    ADD CONSTRAINT fk_rails_d65cfbfb56 FOREIGN KEY (curriculum_course_id) REFERENCES public.curriculum_courses(id);
+
+
+--
 -- Name: prospective_students fk_rails_d94afad69b; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6551,6 +6551,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20190927071636'),
 ('20191003075056'),
 ('20191003100000'),
-('20191003102101');
+('20191003102101'),
+('20191007074407');
 
 

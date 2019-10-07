@@ -36,9 +36,9 @@
             <div class='form-group col-sm-6'>
               <% if f.object.curriculum %>
                 <% courses = CurriculumDecorator.new(f.object.curriculum)
-                                                .openable_courses_for_active_term(appends: f.object.course) %>
+                                                .openable_courses_for_active_term(appends: f.object.curriculum_course) %>
               <% end %>
-              <%= f.association :course,
+              <%= f.association :curriculum_course,
                                 collection: [*courses] %>
             </div>
           </div>

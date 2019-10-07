@@ -7,7 +7,7 @@ class AvailableCourse < ApplicationRecord
 
   pg_search_scope(
     :search,
-    associated_against: { course: %i[name code] },
+    associated_against: { curriculum_course: %i[name code] },
     using:              { tsearch: { prefix: true } }
   )
 
@@ -20,7 +20,7 @@ class AvailableCourse < ApplicationRecord
   # relations
   belongs_to :academic_term
   belongs_to :coordinator, class_name: 'Employee'
-  belongs_to :course
+  belongs_to :curriculum_course
   belongs_to :curriculum
   belongs_to :unit
   has_many :evaluation_types, class_name: 'CourseEvaluationType', dependent: :destroy
@@ -30,11 +30,11 @@ class AvailableCourse < ApplicationRecord
 
   # validations
   validates :assessments_approved, inclusion: { in: [true, false] }
-  validates :course, uniqueness: { scope: %i[academic_term curriculum] }
+  validates :curriculum_course, uniqueness: { scope: %i[academic_term curriculum] }
   validates :groups, presence: true
 
   # delegates
-  delegate :code, :name, :theoric, :practice, :laboratory, :credit, :program_type, to: :course
+  delegate :code, :name, :theoric, :practice, :laboratory, :credit, :program_type, to: :curriculum_course
   delegate :name, to: :curriculum, prefix: true
   delegate :name, to: :unit, prefix: true
 

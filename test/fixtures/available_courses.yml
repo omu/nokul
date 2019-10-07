@@ -2,19 +2,19 @@ ati_fall_2018_2019:
   academic_term: fall_2018_2019
   curriculum: one
   coordinator: serhat_active
-  course: ati
+  curriculum_course: one
   unit: omu
 
 test_fall_2018_2019:
   academic_term: fall_2018_2019
   curriculum: one
   coordinator: serhat_active
-  course: test
+  curriculum_course: elective_course
   unit: omu
 
 available_course_to_delete:
   academic_term: spring_2018_2019
   curriculum: one
   coordinator: serhat_passive
-  course: ati
+  curriculum_course: one
   unit: omu
