@@ -3928,10 +3928,10 @@ interpret@1.2.0:
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.2.0.tgz#d5061a6224be58e8083985f5014d844359576296"
   integrity sha512-mT34yGKMNceBQUoVn7iCDKDntA7SC6gycMAWzGx1z/CMCTV7b2AAtXlo3nRyHZ1FelRkQbQjprHSYGwzLtkVbw==
 
-intl-tel-input@^16.0.2:
-  version "16.0.3"
-  resolved "https://registry.yarnpkg.com/intl-tel-input/-/intl-tel-input-16.0.3.tgz#b8cd991486de61f01b2279db57fbfc2785c898db"
-  integrity sha512-GXibKQolfIO1b5dFQgBk9GBdfdU4KXliuaZqDPplw8caXFUBBgJE8+LXBBfQHGGXMSMpssIZeQoizjmT7WkU0g==
+intl-tel-input@^16.0.4:
+  version "16.0.4"
+  resolved "https://registry.yarnpkg.com/intl-tel-input/-/intl-tel-input-16.0.4.tgz#e5bd17a879a0305d3d52e015c6883a1187806b28"
+  integrity sha512-uZ2+LNFa2foTo/aGj1Tkj/CDH5qSrqaLFP+FtuOjjZ9OvBuApEFgq12sMyDl+9Upr9devcbliJuAA4TJ7LsRYA==
 
 invariant@^2.2.2:
   version "2.2.4"
