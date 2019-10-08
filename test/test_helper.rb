@@ -26,6 +26,8 @@ WebMock.allow_net_connect!
 # Test Modules
 require_relative 'models/concerns/reference_test_module'
 
+Patron.sudo_disable = true
+
 module ActiveSupport
   class TestCase
     include AbstractController::Translation
