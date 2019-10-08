@@ -6,8 +6,13 @@ class User < ApplicationRecord
   include Patron::Scopable
 
   # Ldap
-  include LdapSyncTrigger
-  ldap_sync_trigger :self
+  include LDAP::Trigger
+  ldap_trigger :self, attributes: %i[
+    id_number
+    email
+    preferred_language
+    activated
+  ]
 
   # virtual attributes
   attr_accessor :country
