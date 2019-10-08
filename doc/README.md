@@ -62,4 +62,4 @@ başlayabilirsiniz.
       + [Öğrencilerin Numaralandırılması](plugins/tenant/common/specification/student-numbers.md)
       + [Birimlerin Kodlanması](plugins/tenant/common/specification/unit-codes.md)
       + [Birim Kısaltmaları](plugins/tenant/common/specification/unit-abbreviations.md)
-      + [Kullanıların İsimlendirilmesi](plugins/tenant/common/specification/user-names.md)
+      + [Kullanıcıların İsimlendirilmesi](plugins/tenant/common/specification/user-names.md)
