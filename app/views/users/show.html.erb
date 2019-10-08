@@ -2,7 +2,7 @@
   <div class="col-sm-12 mb-4">
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a class="nav-link active" data-toggle="tab" href="#account" role="tab" aria-controls="account">
+        <a class="nav-link active"data-toggle="tab" href="#account" role="tab" aria-controls="account">
         <%= fa_icon 'user' %><strong> <%= t('.account') %></strong></a>
       </li>
       <li class="nav-item">
@@ -22,15 +22,14 @@
       <div class="tab-pane active" id="account" role="tabpanel">
         <%= render 'account' %>
       </div>
-      <div class="tab-pane" id="identities" role="tabpanel">
-        <%= render 'identities' %>
-      </div>
-      <div class="tab-pane" id="addresses" role="tabpanel">
-        <%= render 'addresses' %>
-      </div>
-      <div class="tab-pane" id="employees" role="tabpanel">
-        <%= render 'employees' %>
-      </div>
+      <div class="tab-pane" id="identities" role="tabpanel"></div>
+      <div class="tab-pane" id="addresses" role="tabpanel"></div>
+      <div class="tab-pane" id="employees" role="tabpanel"><%= render 'employees' %></div>
     </div>
   </div>
 </div>
+
+<script>
+  $('#identities').load("<%= user_identities_path(@user) %>")
+  $('#addresses').load("<%= user_addresses_path(@user) %>")
+</script>

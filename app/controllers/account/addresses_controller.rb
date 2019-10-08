@@ -10,6 +10,7 @@ module Account
 
     def index
       @addresses = @user.addresses.includes(district: [:city])
+      render layout: false
     end
 
     def new
