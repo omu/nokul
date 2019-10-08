@@ -4,7 +4,9 @@ en:
       available_courses:
         code: Code
         credit: Credit
+        ects: ECTS
         name: Name
+        type: Course Type
         add: Add
       index:
         available_courses: Available Courses

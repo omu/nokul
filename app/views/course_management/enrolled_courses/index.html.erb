@@ -12,9 +12,9 @@
       <div class="card-header">
         <strong><%= t('.available_courses') %></strong>
       </div>
-      <% @semesters.each do |year, semesters| %>
+      <% @semesters.each do |semester| %>
         <div class="card-body">
-          <%= render 'semesters', semesters: semesters %>
+          <%= render 'semesters', semester: semester %>
         </div>
       <% end %>
     </div>

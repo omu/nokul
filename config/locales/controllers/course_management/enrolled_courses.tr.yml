@@ -4,7 +4,9 @@ tr:
       available_courses:
         code: Dersin Kodu
         credit: Kredi
+        ects: AKTS
         name: Dersin Adı
+        type: Ders Türü
         add: Ekle
       index:
         available_courses: Açılan Dersler

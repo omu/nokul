@@ -3,7 +3,9 @@
       <tr class="thead-dark">
         <th><%= t('.code') %></th>
         <th><%= t('.name') %></th>
+        <th><%= t('.type') %></th>
         <th><%= t('.credit') %></th>
+        <th><%= t('.ects') %></th>
         <th><%= t('actions') %></th>
       </tr>
     </thead>
@@ -12,7 +14,9 @@
         <tr>
           <td><%= available_course.code %></td>
           <td><%= available_course.name %></td>
+          <td><%= enum_t(available_course.curriculum_course, :type) %></td>
           <td><%= available_course.credit %></td>
+          <td><%= available_course.ects %></td>
           <td><%= link_to(t('.add'), '#', class: 'btn btn-success') %></td>
         </tr>
       <% end %>
