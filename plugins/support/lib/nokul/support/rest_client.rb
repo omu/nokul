@@ -82,7 +82,7 @@ module Nokul
         end
 
         def error!
-          http_response.error! unless code.eql? 200
+          http_response.error! unless code.between?(200, 299)
         end
 
         def unmarshal_json
