@@ -3,7 +3,7 @@ Style/AsciiComments:
   Enabled: false
 Style/Lambda:
   Enabled: false
-Documentation:
+Style/Documentation:
   Enabled: false
 Metrics/LineLength:
   Max: 120
