@@ -11,6 +11,9 @@ require_relative 'patron/sudo'
 module Patron
   class Error < StandardError; end
 
+  mattr_accessor :sudo_timeout, default: 15.minutes
+  mattr_accessor :sudo_disable, default: false
+
   module_function
 
   def scope_names

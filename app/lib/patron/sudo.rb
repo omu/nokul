@@ -17,13 +17,14 @@ module Patron
     protected
 
     def sudo?
+      return true  if Patron.sudo_disable
       return false if session[:sudo].nil?
 
       session[:sudo] >= Time.current
     end
 
     def set_sudo_session!
-      session[:sudo] = Time.current + 15.minutes
+      session[:sudo] = Time.current + Patron.sudo_timeout
     end
 
     def reset_sudo_session!
