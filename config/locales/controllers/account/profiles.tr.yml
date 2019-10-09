@@ -34,6 +34,7 @@ tr:
         visiblity_settings: Görünürlük Ayarları
         website: Web Sayfanız
       education_informations:
+        continuing: Devam ediyor
         create_education_informations_from_yoksis: Eğitim Bilgilerimi YÖKSİS'ten Oluştur
         education_informations: Eğitim Bilgileri
         update_education_informations_from_yoksis: Eğitim Bilgilerimi YÖKSİS'ten Güncelle
