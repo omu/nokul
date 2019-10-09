@@ -86,7 +86,7 @@ module Nokul
         end
 
         def unmarshal_json
-          JSON.parse(body || '')
+          JSON.parse(body) if body
         rescue JSON::ParserError
           raise UnmarshalJSONError, 'response body is not parseable'
         end
