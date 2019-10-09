@@ -26,7 +26,7 @@
         <div class="card-body">
           <table class='table table-responsive-sm'>
             <tr>
-              <td><%= t('activerecord.attributes.identity.type') %></td>
+              <td><%= t('.type') %></td>
               <td>
                 <span class="badge badge-secondary">
                   <%= fa_icon('gavel', text: t('activerecord.enums.identity.types.formal')) if identity.formal? %>
@@ -35,39 +35,39 @@
               </td>
             </tr>
             <tr>
-              <td><%= t('activerecord.attributes.identity.last_name') %></td>
+              <td><%= t('.last_name') %></td>
               <td><%= identity.last_name %></td>
             </tr>
             <tr>
-              <td><%= t('activerecord.attributes.identity.first_name') %></td>
+              <td><%= t('.first_name') %></td>
               <td><%= identity.first_name %></td>
             </tr>
             <tr>
-              <td><%= t('activerecord.attributes.identity.mothers_name') %></td>
+              <td><%= t('.mothers_name') %></td>
               <td><%= identity.mothers_name %></td>
             </tr>
             <tr>
-              <td><%= t('activerecord.attributes.identity.fathers_name') %></td>
+              <td><%= t('.fathers_name') %></td>
               <td><%= identity.fathers_name %></td>
             </tr>
             <tr>
-              <td><%= t('activerecord.attributes.identity.gender') %></td>
+              <td><%= t('.gender') %></td>
               <td><%= enum_t(identity, :gender) %></td>
             </tr>
             <tr>
-              <td><%= t('activerecord.attributes.identity.marital_status') %></td>
+              <td><%= t('.marital_status') %></td>
               <td><%= enum_t(identity, :marital_status) %></td>
             </tr>
             <tr>
-              <td><%= t('activerecord.attributes.identity.place_of_birth') %></td>
+              <td><%= t('.place_of_birth') %></td>
               <td><%= identity.place_of_birth %></td>
             </tr>
             <tr>
-              <td><%= t('activerecord.attributes.identity.date_of_birth') %></td>
+              <td><%= t('.date_of_birth') %></td>
               <td><%= identity.date_of_birth %></td>
             </tr>
             <tr>
-              <td><%= t('activerecord.attributes.identity.registered_to') %></td>
+              <td><%= t('.registered_to') %></td>
               <td><%= identity.registered_to %></td>
             </tr>
             <% if identity.student_id.present? %>

@@ -65,7 +65,7 @@ module Account
     end
 
     def redirect_with(message)
-      redirect_to(user_identities_path(@user), notice: t(".#{message}"))
+      redirect_to(user_path(@user), notice: t(".#{message}"))
     end
 
     def identity_params
