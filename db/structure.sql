@@ -618,6 +618,92 @@ ALTER SEQUENCE public.available_courses_id_seq OWNED BY public.available_courses
 
 
 --
+-- Name: books; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.books (
+    id bigint NOT NULL,
+    access_link text,
+    activity integer,
+    author_id integer,
+    authors character varying,
+    chapter_first_page integer,
+    chapter_last_page integer,
+    chapter_name character varying,
+    city character varying,
+    contribution_rate integer,
+    country_id bigint,
+    discipline character varying,
+    editor_name character varying,
+    incentive_point double precision,
+    isbn character varying,
+    keywords text,
+    language_of_publication character varying,
+    last_update timestamp without time zone,
+    name character varying,
+    number_of_authors integer,
+    number_of_copy integer,
+    number_of_page integer,
+    publisher character varying,
+    scope integer,
+    type integer,
+    type_of_release integer,
+    user_id bigint NOT NULL,
+    year integer,
+    yoksis_id integer,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT books_access_link_length CHECK ((length(access_link) <= 2000)),
+    CONSTRAINT books_activity_null CHECK ((activity IS NOT NULL)),
+    CONSTRAINT books_activity_numericality CHECK ((activity >= 0)),
+    CONSTRAINT books_author_id_numericality CHECK ((author_id >= 0)),
+    CONSTRAINT books_authors_length CHECK ((length((authors)::text) <= 255)),
+    CONSTRAINT books_chapter_first_page_numericality CHECK ((chapter_first_page >= 0)),
+    CONSTRAINT books_chapter_last_page_numericality CHECK ((chapter_last_page >= 0)),
+    CONSTRAINT books_chapter_name_length CHECK ((length((chapter_name)::text) <= 255)),
+    CONSTRAINT books_city_length CHECK ((length((city)::text) <= 255)),
+    CONSTRAINT books_contribution_rate_numericality CHECK ((contribution_rate >= 0)),
+    CONSTRAINT books_discipline_length CHECK ((length((discipline)::text) <= 255)),
+    CONSTRAINT books_editor_name_length CHECK ((length((editor_name)::text) <= 255)),
+    CONSTRAINT books_incentive_point_numericality CHECK ((incentive_point >= (0)::double precision)),
+    CONSTRAINT books_isbn_length CHECK ((length((isbn)::text) <= 255)),
+    CONSTRAINT books_keywords_length CHECK ((length(keywords) <= 4000)),
+    CONSTRAINT books_language_of_publication_length CHECK ((length((language_of_publication)::text) <= 255)),
+    CONSTRAINT books_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT books_number_of_authors_numericality CHECK ((number_of_authors >= 0)),
+    CONSTRAINT books_number_of_copy_numericality CHECK ((number_of_copy >= 0)),
+    CONSTRAINT books_number_of_page_numericality CHECK ((number_of_page >= 0)),
+    CONSTRAINT books_publisher_length CHECK ((length((publisher)::text) <= 255)),
+    CONSTRAINT books_scope_null CHECK ((scope IS NOT NULL)),
+    CONSTRAINT books_scope_numericality CHECK ((scope >= 0)),
+    CONSTRAINT books_type_numericality CHECK ((type >= 0)),
+    CONSTRAINT books_type_of_release_numericality CHECK ((type_of_release >= 0)),
+    CONSTRAINT books_year_numericality CHECK (((year >= 1950) AND (year <= 2050))),
+    CONSTRAINT books_yoksis_id_null CHECK ((yoksis_id IS NOT NULL)),
+    CONSTRAINT books_yoksis_id_numericality CHECK ((yoksis_id >= 0))
+);
+
+
+--
+-- Name: books_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.books_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: books_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.books_id_seq OWNED BY public.books.id;
+
+
+--
 -- Name: buildings; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -3321,6 +3407,7 @@ CREATE TABLE public.users (
     activated boolean DEFAULT false,
     activated_at timestamp without time zone,
     mobile_phone character varying,
+    books_count integer DEFAULT 0,
     CONSTRAINT users_activated_null CHECK ((activated IS NOT NULL)),
     CONSTRAINT users_articles_count_null CHECK ((articles_count IS NOT NULL)),
     CONSTRAINT users_articles_count_numericality CHECK ((articles_count >= 0)),
@@ -3461,6 +3548,13 @@ ALTER TABLE ONLY public.available_course_lecturers ALTER COLUMN id SET DEFAULT n
 --
 
 ALTER TABLE ONLY public.available_courses ALTER COLUMN id SET DEFAULT nextval('public.available_courses_id_seq'::regclass);
+
+
+--
+-- Name: books id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.books ALTER COLUMN id SET DEFAULT nextval('public.books_id_seq'::regclass);
 
 
 --
@@ -4074,6 +4168,14 @@ ALTER TABLE ONLY public.available_course_lecturers
 
 ALTER TABLE ONLY public.available_courses
     ADD CONSTRAINT available_courses_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: books books_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.books
+    ADD CONSTRAINT books_pkey PRIMARY KEY (id);
 
 
 --
@@ -5095,6 +5197,20 @@ CREATE INDEX index_available_courses_on_curriculum_id ON public.available_course
 --
 
 CREATE INDEX index_available_courses_on_unit_id ON public.available_courses USING btree (unit_id);
+
+
+--
+-- Name: index_books_on_country_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_books_on_country_id ON public.books USING btree (country_id);
+
+
+--
+-- Name: index_books_on_user_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_books_on_user_id ON public.books USING btree (user_id);
 
 
 --
@@ -6272,6 +6388,14 @@ ALTER TABLE ONLY public.course_evaluation_types
 
 
 --
+-- Name: books fk_rails_bc582ddd02; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.books
+    ADD CONSTRAINT fk_rails_bc582ddd02 FOREIGN KEY (user_id) REFERENCES public.users(id);
+
+
+--
 -- Name: ldap_sync_errors fk_rails_c34f07ddd2; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6448,6 +6572,14 @@ ALTER TABLE ONLY public.committee_meetings
 
 
 --
+-- Name: books fk_rails_f99d7ae06f; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.books
+    ADD CONSTRAINT fk_rails_f99d7ae06f FOREIGN KEY (country_id) REFERENCES public.countries(id);
+
+
+--
 -- Name: unit_calendars fk_rails_faff5aa83d; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6551,6 +6683,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20190927071636'),
 ('20191003075056'),
 ('20191003100000'),
-('20191003102101');
+('20191003102101'),
+('20191008065752');
 
 
