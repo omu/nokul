@@ -1,10 +1,12 @@
-<div class="alert alert-light">
-  <%= link_to_back user_path(@user) %>
-  <%= link_to_new(t('.new_address'), new_user_address_path(@user)) if @user.addresses.informal.blank? %>
-  <%= link_to (@addresses.formal.present? ? t('.update_from_mernis') : t('.create_from_mernis')), save_from_mernis_user_addresses_path, class: 'btn btn-outline-primary btn-sm' %>
-</div>
-
 <div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <%= link_to_new(t('.new_address'), new_user_address_path(@user)) if @user.addresses.informal.blank? %>
+        <%= link_to (@user.addresses.formal.present? ? t('.update_from_mernis') : t('.create_from_mernis')), save_address_from_mernis_user_path(@user), class: 'btn btn-outline-primary btn-sm' %>
+      </div>
+    </div>
+  </div>
   <% @addresses.each do |address| %>
     <div class="col-sm-6">
       <div class="card">
@@ -18,14 +20,14 @@
             </div>
           <% end %>
         </div>
+
         <div class="card-body">
           <table class='table table-responsive-sm'>
             <tr>
               <td><%= t('.type') %></td>
               <td>
                 <span class="badge badge-secondary">
-                  <%= fa_icon('gavel', text: t('activerecord.enums.address.types.formal')) if address.formal? %>
-                  <%= fa_icon('home', text: t('activerecord.enums.address.types.informal')) if address.informal? %>
+                  <%= fa_icon (address.formal? ? 'gavel' : 'address-book') , text: enum_t(address, :type) %>
                 </span>
               </td>
             </tr>

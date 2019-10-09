@@ -1,2 +1,2 @@
 web: bundle exec puma -C config/puma.rb
-worker: bundle exec sidekiq -q high -q low
+worker: bundle exec sidekiq -q high -q low -q mailers

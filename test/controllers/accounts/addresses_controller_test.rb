@@ -37,7 +37,7 @@ module Accounts
       assert_equal 'OMÜ BAUM', address.full_address
       assert_equal districts(:gerze), address.district
 
-      assert_redirected_to user_addresses_path(@user)
+      assert_redirected_to user_path(@user)
       assert_equal translate('.create.success'), flash[:notice]
     end
 
@@ -70,7 +70,7 @@ module Accounts
 
       assert_equal 'OMÜ UZEM', address.full_address
 
-      assert_redirected_to user_addresses_path(@user)
+      assert_redirected_to user_path(@user)
       assert_equal translate('.update.success'), flash[:notice]
     end
 
@@ -92,7 +92,7 @@ module Accounts
         delete user_address_path(@user, @user.addresses.where.not(type: :formal).first)
       end
 
-      assert_redirected_to user_addresses_path(@user)
+      assert_redirected_to user_path(@user)
       assert_equal translate('.destroy.success'), flash[:notice]
     end
 
