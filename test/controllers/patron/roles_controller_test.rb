@@ -33,7 +33,7 @@ module Patron
       parameters = {
         name:           'Role Create',
         identifier:     'role_create',
-        permission_ids: Permission.pluck(:id)
+        permission_ids: Permission.pluck(:id).sort
       }
 
       assert_difference('Patron::Role.count') do
@@ -64,7 +64,7 @@ module Patron
       parameters = {
         name:           'Role Update',
         identifier:     'role_update',
-        permission_ids: Patron::Permission.pluck(:id)
+        permission_ids: Patron::Permission.pluck(:id).sort
       }
       patch patron_role_path(role), params: { patron_role: parameters }
 

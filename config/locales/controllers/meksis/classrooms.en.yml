@@ -1,0 +1,26 @@
+en:
+  meksis:
+    classrooms:
+      index:
+        building: Building Name
+        buildings: Buildings
+        card_header: Classrooms
+        code: Classroom Code
+        meksis_id: Meksis ID
+        name: Classroom Name
+        place_type: Place Type
+        unit: Unit Name
+      search:
+        card_header: Smart Search
+        place_type: Place Type
+        smart_search_placeholder: Search
+      show:
+        available_space: Available Space
+        card_header: Details
+        exam_capacity: Exam Capacity
+        height: Height
+        length: Length
+        room_number: Room Number
+        student_capacity: Student Capacity
+        volume: Volume
+        width: Width

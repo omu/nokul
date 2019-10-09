@@ -1,0 +1,61 @@
+<div id="SearchForms" role="tablist">
+  <div class="card">
+    <div class="card-header" role="tab" id="Search">
+      <h5 class="mb-0">
+        <a class="collapsed"
+           data-toggle="collapse"
+           href="#collapseSearch"
+           id="collapseSearchLink"
+           aria-expanded="false"
+           aria-controls="Search">
+          <%= t('.card_header') %>
+        </a>
+        <div class="float-right">
+          <%= link_to t('reset'), meksis_building_classrooms_path, class: 'btn btn-warning btn-sm' %>
+        </div>
+      </h5>
+    </div>
+    <div id="collapseSearch"
+         class="collapse show"
+         role="tabpanel"
+         aria-labelledby="Search"
+         data-parent="#SearchForms">
+      <div class="card-body">
+        <%= form_tag meksis_building_classrooms_path, method: :get do %>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <%= label_tag :term, t('smart_search') %>
+                <%= text_field_tag :term,
+                                   params[:term],
+                                   placeholder: t('.smart_search_placeholder'),
+                                   class: 'form-control' %>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <%= label_tag(:place_type_id, t('.place_type')) %>
+                <%= select_tag(:place_type_id,
+                               options_from_collection_for_select(PlaceType.non_roots, :id, :name, params[:place_type_id]),
+                               include_blank: true,
+                               class: 'form-control',
+                               style: 'width: 100%') %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <%= submit_tag t('search'), class: 'btn btn-primary' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type='text/javascript'>
+  $(document).ready(function() {
+    $('#place_type_id').select2();
+  });
+</script>

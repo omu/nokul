@@ -10,6 +10,7 @@ module Account
 
     def index
       @addresses = @user.addresses.includes(district: [:city])
+      render layout: false
     end
 
     def new
@@ -54,7 +55,7 @@ module Account
     end
 
     def redirect_with(message)
-      redirect_to(user_addresses_path(@user), notice: t(".#{message}"))
+      redirect_to(user_path(@user), notice: t(".#{message}"))
     end
 
     def address_params

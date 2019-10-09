@@ -2,8 +2,8 @@
 
 class Duty < ApplicationRecord
   # Ldap
-  include LdapSyncTrigger
-  ldap_sync_trigger ->(obj) { obj.employee.user }
+  include LDAP::Trigger
+  ldap_trigger ->(obj) { obj.employee.user }
 
   # relations
   belongs_to :employee

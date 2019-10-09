@@ -6,8 +6,13 @@ class User < ApplicationRecord
   include Patron::Scopable
 
   # Ldap
-  include LdapSyncTrigger
-  ldap_sync_trigger :self
+  include LDAP::Trigger
+  ldap_trigger :self, attributes: %i[
+    id_number
+    email
+    preferred_language
+    activated
+  ]
 
   # virtual attributes
   attr_accessor :country
@@ -27,11 +32,13 @@ class User < ApplicationRecord
 
   # relations
   has_one_attached :avatar
+  has_many :academic_credentials, dependent: :destroy
   has_many :addresses, dependent: :destroy
   has_many :articles, dependent: :destroy
   has_many :certifications, dependent: :destroy
-  has_many :identities, dependent: :destroy
+  has_many :education_informations, dependent: :destroy
   has_many :employees, dependent: :destroy
+  has_many :identities, dependent: :destroy
   has_many :projects, dependent: :destroy
   has_many :students, dependent: :destroy
   has_many :ldap_entities, dependent: :destroy

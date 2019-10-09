@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  meksis_id: 1
+  name: MyString
+  code: MyString
+  indoor_area: 1.5
+  latitude: 9.99
+  longitude: 9.99
+  active: false
+  place_type: one
+  unit: one
+
+two:
+  meksis_id: 1
+  name: MyString
+  code: MyString
+  indoor_area: 1.5
+  latitude: 9.99
+  longitude: 9.99
+  active: false
+  place_type: two
+  unit: two

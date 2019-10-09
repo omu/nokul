@@ -1,0 +1,22 @@
+en:
+  activerecord:
+    enums:
+      certification:
+        scopes:
+          national: National
+          international: International
+        statuses:
+          active: Active
+          passive: Passive
+        types:
+          certification: Certification
+          course: Course
+          research: Research
+          study: Study
+          report: Report
+          workshop: Workshop
+          interview: Interview
+          essay: Essay
+          evaluation: Evaluation
+          conversation: Conversation
+          translation: Translation

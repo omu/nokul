@@ -30,6 +30,7 @@ en:
     identities:
       create:
         success: Identity successfully created!
+        error: You have a legal identity, you cannot create a new identity!
       destroy:
         success: Identity successfully deleted!
         warning: Identity can not be deleted!
@@ -46,6 +47,7 @@ en:
         update_from_mernis: Update from MERNIS
         user_identity: User Identity
       new:
+        error: You have a legal identity, you cannot create a new identity!
         form_title: Create Identity
       save_from_mernis:
         wait: You recently created or updated your identity. You can only update your identity once a week from MERNIS.

@@ -26,7 +26,7 @@ class LdapEntity < ApplicationRecord
   has_many :ldap_sync_errors, dependent: :destroy
 
   # stores
-  store :values, coder: JSON, accessors: Ldap::Entity.attributes
+  store :values, coder: JSON, accessors: LDAP::Entity.attributes
 
   # validations
   validates :values, presence: true
@@ -40,7 +40,7 @@ class LdapEntity < ApplicationRecord
   end
 
   def sync
-    Ldap::SyncJob.perform_later(self) if user
+    LDAP::SyncJob.perform_later(self) if user
   end
 
   private
