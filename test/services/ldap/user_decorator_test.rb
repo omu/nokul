@@ -5,9 +5,9 @@ require 'test_helper'
 module Ldap
   class UserDecoratorTest < ActiveSupport::TestCase
     setup do
-      @user1 = Ldap::UserDecorator.new(users(:serhat))
-      @user2 = Ldap::UserDecorator.new(users(:mine))
-      @user3 = Ldap::UserDecorator.new(users(:john))
+      @user1 = LDAP::UserDecorator.new(users(:serhat))
+      @user2 = LDAP::UserDecorator.new(users(:mine))
+      @user3 = LDAP::UserDecorator.new(users(:john))
     end
 
     test 'user can respond to ldap_roles method' do

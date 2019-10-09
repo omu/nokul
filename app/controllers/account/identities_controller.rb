@@ -5,22 +5,31 @@ module Account
     include UpdateableFromMernis
 
     before_action :set_user
-    before_action :set_identity, only: %i[edit update destroy]
+    before_action :set_identity,     only: %i[edit update destroy]
     before_action :set_elapsed_time, only: %i[save_from_mernis]
 
     def index
       @identities = @user.identities
+      render layout: false
     end
 
     def new
-      @identity = @user.identities.informal.new
+      if @user.can_create_identity?
+        @identity = @user.identities.informal.new
+      else
+        redirect_to @user, alert: t('.error')
+      end
     end
 
     def edit; end
 
     def create
-      @identity = @user.identities.informal.new(identity_params)
-      @identity.save ? redirect_with('success') : render(:new)
+      if @user.can_create_identity?
+        @identity = @user.identities.informal.new(identity_params)
+        @identity.save ? redirect_with('success') : render(:new)
+      else
+        redirect_to @user, alert: t('.error')
+      end
     end
 
     def update
@@ -39,7 +48,9 @@ module Account
     private
 
     def set_user
-      @user = User.friendly.find(params[:user_id])
+      @user = UserDecorator.new(
+        User.friendly.find(params[:user_id])
+      )
     end
 
     def set_identity
@@ -54,7 +65,7 @@ module Account
     end
 
     def redirect_with(message)
-      redirect_to(user_identities_path(@user), notice: t(".#{message}"))
+      redirect_to(user_path(@user), notice: t(".#{message}"))
     end
 
     def identity_params

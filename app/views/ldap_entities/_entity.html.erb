@@ -4,7 +4,7 @@
       <th>dn</th>
       <td><%= entity.dn %></td>
     </tr>
-    <% Ldap::Entity.attributes.each do |attribute| %>
+    <% LDAP::Entity.attributes.each do |attribute| %>
       <tr>
         <th><%= attribute %></th>
         <td>

@@ -2,8 +2,8 @@
 
 class Student < ApplicationRecord
   # Ldap
-  include LdapSyncTrigger
-  ldap_sync_trigger :user
+  include LDAP::Trigger
+  ldap_trigger :user
 
   # relations
   belongs_to :user

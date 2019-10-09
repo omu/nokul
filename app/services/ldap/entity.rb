@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ldap
+module LDAP
   class Entity
     # rubocop:disable Naming/MethodName
     module Attributes
@@ -233,7 +233,7 @@ module Ldap
     attr_reader :user
 
     def initialize(user)
-      @user = Ldap::UserDecorator.new(user)
+      @user = LDAP::UserDecorator.new(user)
     end
 
     class << self
