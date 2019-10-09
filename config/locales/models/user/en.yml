@@ -51,12 +51,6 @@ en:
   users:
     account:
       <<: *user_attributes
-    addresses:
-      create_from_mernis: Create from MERNIS
-      formal_address: Formal Address
-      informal_address: Informal Address
-      new_address: Create New Address
-      update_from_mernis: Update from MERNIS
     create:
       success: User successfully created.
     destroy:
@@ -73,13 +67,6 @@ en:
       <<: *duty_attributes
       <<: *position_attributes
       title: Title
-    identities:
-      create_from_mernis: Create from MERNIS
-      informal_identity: Informal Identity
-      new_identity: Create New Identity
-      update_from_mernis: Update from MERNIS
-      student_identity: Student Identity
-      user_identity: User Identity
     index:
       <<: *user_attributes
       addresses: Addresses

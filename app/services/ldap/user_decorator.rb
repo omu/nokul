@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
-module Ldap
+module LDAP
   class UserDecorator < SimpleDelegator
-    LDAP_GENDER = { 'male' => '1', 'female' => '2', 'other' => '0' }.freeze
+    GENDER = { 'male' => '1', 'female' => '2', 'other' => '0' }.freeze
 
     def ldap_roles
       @ldap_roles ||= build_roles.inquiry
     end
 
     def ldap_gender
-      LDAP_GENDER.fetch(identity.try(:gender), '9')
+      GENDER.fetch(identity.try(:gender), '9')
     end
 
     def identity

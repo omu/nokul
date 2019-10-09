@@ -4,8 +4,8 @@ class Identity < ApplicationRecord
   self.inheritance_column = nil
 
   # Ldap
-  include LdapSyncTrigger
-  ldap_sync_trigger :user
+  include LDAP::Trigger
+  ldap_trigger :user
 
   # callbacks
   before_save :capitalize_attributes

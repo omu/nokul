@@ -19,6 +19,7 @@ Rails.application.config.assets.paths += [
 Rails.application.config.assets.precompile += [
   'guest.scss',
   'guest.js',
+  'pdf.scss',
   'shared/cocoon.js',
   'shared/intl_tel_input_validation.js',
   Tenant.configuration.branding.logo.file,
