@@ -9,5 +9,11 @@ tr:
         type: Ders Türü
         add: Ekle
       index:
+        active_curriculum_not_found: Aktif müfredat bulunamadı.
+        active_term_not_found: Aktif dönem bulunamadı.
         available_courses: Açılan Dersler
+        program: Program
         selected_courses: Seçilen Dersler
+        student_records: Öğrencilik Kayıtları
+        student_info: Öğrenci Bilgileri
+        student_number: Öğrenci Numarası

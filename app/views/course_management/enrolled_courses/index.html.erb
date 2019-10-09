@@ -3,6 +3,41 @@
     <div class="alert alert-light">
       <%= link_to_back root_path %>
     </div>
+
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'align-justify' %><strong><%= t('.student_records') %></strong>
+      </div>
+      <div class="card-body">
+        <div class="list-group list-group-sm">
+          <% @students.each do |student| %>
+            <%= link_to enrolled_courses_url(student_id: student.id), class: "list-group-item list-group-item-action justify-content-between align-items-center" do %>
+              <%= student.unit.name %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'user' %><strong><%= t('.student_info') %></strong>
+      </div>
+      <div class="card-body table-responsive">
+        <table class='table table-bordered table-hover'>
+          <tbody>
+            <tr>
+              <th><%= t('.student_number') %></th>
+              <td><%= @student.student_number %></td>
+            </tr>
+            <tr>
+              <th><%= t('.program') %></th>
+              <td><%= @student.unit.name %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </div>
 
