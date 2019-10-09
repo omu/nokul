@@ -43,11 +43,12 @@ scope module: :account do
     get 'profile/edit', action: :edit
     get 'profile', action: :show
     patch 'profile', action: :update
-    get :save_articles_from_yoksis
-    get :save_certifications_from_yoksis
-    get :save_projects_from_yoksis
     get :save_academic_credentials_from_yoksis
+    get :save_articles_from_yoksis
+    get :save_books_from_yoksis
+    get :save_certifications_from_yoksis
     get :save_education_informations_from_yoksis
+    get :save_projects_from_yoksis
   end
 end
 

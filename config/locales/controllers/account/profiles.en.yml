@@ -11,6 +11,11 @@ en:
         articles: Articles
         create_articles_from_yoksis: Create my articles from YOKSIS
         update_articles_from_yoksis: Update my articles from YOKSIS
+      books:
+        books: Books
+        create_books_from_yoksis: Create my books from YOKSIS
+        page_numbers_abbrev: pp.
+        update_books_from_yoksis: Update my books from YOKSIS
       certifications:
         certifications: Certifications
         create_certifications_from_yoksis: Create my certifications from YOKSIS
@@ -39,6 +44,8 @@ en:
         update_projects_from_yoksis: Update my projects from YOKSIS
       save_academic_credentials_from_yoksis:
         will_update: We have received your request for academic credentials creation or an update, and within a few seconds/minutes your academic credentials will be updated.
+      save_books_from_yoksis:
+        will_update: We have received your request for academic book or an update, and within a few seconds/minutes your books will be updated.
       save_education_informations_from_yoksis:
         will_update: We have received your request for education informations creation or an update, and within a few seconds/minutes your education informations will be updated.
       save_articles_from_yoksis:

@@ -9,7 +9,6 @@
             <% else %>
               <%= image_tag 'profile/avatar_placeholder.svg' %>
             <% end %>
-            <hr />
           </div>
           <div class='col-sm-4'>
             <h4><%= "#{current_user.title} #{full_name(current_user.identities.formal.first)}" %></h4><br />
@@ -20,6 +19,7 @@
             <%= link_to fa_icon('twitter-square 2x'), current_user.twitter %>
           </div>
         </div>
+        <hr />
         <div class='col-sm-12'>
           <ul class='list-group list-group-flush'>
             <%= render 'education_informations' %>
@@ -31,6 +31,7 @@
             <h2><%= t('.academic_activities') %></h2><br />
             <%= render 'articles' %>
             <%= render 'projects' %>
+            <%= render 'books' %>
             <%= render 'certifications' %>
           </ul>
         </div>
