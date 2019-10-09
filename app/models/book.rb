@@ -23,7 +23,7 @@ class Book < ApplicationRecord
   # validations
   validates :access_link, length: { maximum: 2000 }
   validates :activity, inclusion: { in: activities.keys }
-  validates :author_id, numericality: { only_integer: true, greater_than: 0, allow_nil: true }
+  validates :author_id, numericality: { only_integer: true, greater_than_or_equal_to: 0, allow_nil: true }
   validates :authors, length: { maximum: 255 }
   validates :chapter_first_page, numericality: { only_integer: true, greater_than_or_equal_to: 0, allow_nil: true }
   validates :chapter_last_page, numericality: { only_integer: true, greater_than_or_equal_to: 0, allow_nil: true }
