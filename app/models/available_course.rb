@@ -7,7 +7,7 @@ class AvailableCourse < ApplicationRecord
 
   pg_search_scope(
     :search,
-    associated_against: { curriculum_course: %i[name code] },
+    associated_against: { course: %i[name code] },
     using:              { tsearch: { prefix: true } }
   )
 
@@ -26,6 +26,7 @@ class AvailableCourse < ApplicationRecord
   has_many :evaluation_types, class_name: 'CourseEvaluationType', dependent: :destroy
   has_many :groups, class_name: 'AvailableCourseGroup', dependent: :destroy
   has_many :lecturers, through: :groups
+  has_one :course, through: :curriculum_course
   accepts_nested_attributes_for :groups, reject_if: :all_blank, allow_destroy: true
 
   # validations
