@@ -2,33 +2,23 @@
 
 module Patron
   module Sudo
-    extend ActiveSupport::Concern
+    mattr_accessor :timeout, default: 15.minutes
+    mattr_accessor :enabled, default: true
 
-    class_methods do
-      def sudo(**options)
-        options[:unless] = :sudo?
+    module_function
 
-        before_action(options) do
-          render 'patron/confirmations/new', layout: 'guest'
-        end
-      end
+    def required_now?(started_at, timeout: nil)
+      enabled? && !timed_out?(started_at, timeout: timeout)
     end
 
-    protected
-
-    def sudo?
-      return true  if Patron.sudo_disable
-      return false if session[:sudo].nil?
-
-      session[:sudo] >= Time.current
+    def enabled?
+      enabled
     end
 
-    def set_sudo_session!
-      session[:sudo] = Time.current + Patron.sudo_timeout
-    end
+    def timed_out?(started_at, timeout: nil)
+      return true unless started_at
 
-    def reset_sudo_session!
-      session[:sudo] = nil
+      DateTime.parse(started_at.to_s) + (timeout || Sudo.timeout) >= Time.current
     end
   end
 end

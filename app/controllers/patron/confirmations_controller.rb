@@ -6,7 +6,7 @@ module Patron
 
     def create
       if current_user.valid_password?(secure_params[:password])
-        set_sudo_session!
+        extend_sudo_session!
         redirect_to secure_params[:return_to]
       else
         flash[:alert] = t('.error')
