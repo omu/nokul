@@ -8,9 +8,7 @@
         <div class="card-body table-responsive">
           <%= render 'available_courses',
                      klass: 'border-primary',
-                     courses: semester.available_courses.includes(curriculum_course: :course)
-                                                        .where(academic_term: @term)
-                                                        .order('courses.name') %>
+                     courses: CurriculumSemesterDecorator.new(semester).course_catalog %>
         </div>
       </div>
     </div>
