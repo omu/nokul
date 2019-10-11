@@ -75,20 +75,14 @@ module Nokul
       private_constant :Request
 
       Response = Struct.new(:http_response) do
-        delegate :body, to: :http_response
+        delegate :body, :error!, to: :http_response
 
         def code
           http_response.code.to_i
         end
 
-        def error!
-          http_response.error! unless code.between?(200, 299)
-        end
-
-        def unmarshal_json
-          JSON.parse(body) if body
-        rescue JSON::ParserError
-          raise UnmarshalJSONError, 'response body is not parseable'
+        def success?
+          code.between?(200, 299)
         end
       end
 
