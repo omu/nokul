@@ -41,28 +41,35 @@
   </div>
 </div>
 
-<div class='row'>
-  <div class="col-sm-6">
-    <div class="card border-default mb-3">
-      <div class="card-header">
-        <strong><%= t('.available_courses') %></strong>
+<% if StudentDecorator.new(@student).registrable_for_online_course? %>
+  <div class='row'>
+    <div class="col-sm-6">
+      <div class="card border-default mb-3">
+        <div class="card-header">
+          <strong><%= t('.available_courses') %></strong>
+        </div>
+        <% @semesters.each do |semester| %>
+          <div class="card-body">
+            <%= render 'semesters', semester: semester %>
+          </div>
+        <% end %>
       </div>
-      <% @semesters.each do |semester| %>
+    </div>
+    <div class="col-sm-6">
+      <div class="card border-success mb-3">
+        <div class="card-header">
+          <strong><%= t('.selected_courses') %></strong>
+        </div>
         <div class="card-body">
-          <%= render 'semesters', semester: semester %>
-        </div>
-      <% end %>
-    </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card border-success mb-3">
-      <div class="card-header">
-        <strong><%= t('.selected_courses') %></strong>
-      </div>
-      <div class="card-body">
-        <div class="card-body table-responsive">
+          <div class="card-body table-responsive">
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+<% else %>
+  <div class="alert alert-danger" role="alert">
+    <%= fa_icon 'exclamation-triangle', class: 'fa-2x' %>
+    <strong><%= t('.not_proper_register_event_range') %></strong>
+  </div>
+<% end %>
