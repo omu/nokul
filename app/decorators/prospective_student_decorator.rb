@@ -14,32 +14,14 @@ class ProspectiveStudentDecorator < SimpleDelegator
   end
 
   def permanent_registrable?
-    check_events('permanent_registration_applications')
+    calendar.check_events('permanent_registration_applications')
   end
 
   def temporary_registrable?
-    check_events('temporary_registration_applications')
+    calendar.check_events('temporary_registration_applications')
   end
 
   def document_required?
     registration_documents.present?
-  end
-
-  private
-
-  def event_type(identifier)
-    CalendarEventType.find_by(identifier: identifier)
-  end
-
-  def calendar_events
-    calendar&.calendar_events
-  end
-
-  def check_events(identifier)
-    return unless event_type(identifier) && calendar_events.present?
-
-    calendar_events.find_by(
-      calendar_event_type: event_type(identifier)
-    ).try(:active_now?)
   end
 end
