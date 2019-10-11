@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module ApaHelper
-  def apa_citation(article)
+  def article_citation(article)
     title = article.title.capitalize_turkish
 
     "#{authors_in_apa_format(article.authors)}. (#{article.year}). #{title}. #{article.journal}, \
