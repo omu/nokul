@@ -9,22 +9,22 @@ class CurriculumSemesterDecoratorTest < ActiveSupport::TestCase
     )
   end
 
-  test 'available_courses method' do
-    courses = @curriculum_semester.available_courses
+  test 'selectable_courses method' do
+    courses = @curriculum_semester.selectable_courses
     assert_not_includes courses, courses(:test)
     assert_not_includes courses, [courses(:java), courses(:mobil_programlama)]
     assert_includes courses, courses(:programlamaya_giris)
 
-    courses = @curriculum_semester.available_courses(appends: [courses(:test)])
+    courses = @curriculum_semester.selectable_courses(appends: [courses(:test)])
     assert_includes courses, courses(:test)
   end
 
-  test 'available_course_groups method' do
-    course_groups = @curriculum_semester.available_course_groups
+  test 'selectable_course_groups method' do
+    course_groups = @curriculum_semester.selectable_course_groups
     assert_not_includes course_groups, course_groups(:bilgisayar_muhendligi_teknik_secmeli_1)
     assert_includes course_groups, course_groups(:bilgisayar_muhendligi_teknik_secmeli_2)
 
-    course_groups = @curriculum_semester.available_course_groups(
+    course_groups = @curriculum_semester.selectable_course_groups(
       appends: [course_groups(:bilgisayar_muhendligi_teknik_secmeli_1)]
     )
     assert_includes course_groups, course_groups(:bilgisayar_muhendligi_teknik_secmeli_1)
