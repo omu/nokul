@@ -19,25 +19,27 @@ module Nokul
 
       class HTTPMethodError < Error; end
 
-      class UnmarshalJSONError < Error; end
-
       class UnsupportedHTTPOptionError < Error; end
 
       class Request
         SUPPORTED_HTTP_OPTIONS = {
-          open_timeout: 60,
-          read_timeout: 60,
+          open_timeout: 10,
+          read_timeout: 10,
           use_ssl: false,
           verify_mode: OpenSSL::SSL::VERIFY_NONE
         }.freeze
 
-        private_constant :SUPPORTED_HTTP_OPTIONS
+        HEADERS = {
+          'Content-Type' => 'application/json'
+        }.freeze
+
+        private_constant :SUPPORTED_HTTP_OPTIONS, :HEADERS
 
         # rubocop:disable Style/IfUnlessModifier
         def initialize(method, url, headers = {}, **http_options)
           @method  = method
           @url     = url
-          @headers = headers
+          @headers = HEADERS.merge(headers)
 
           unless method.in?(SUPPORTED_HTTP_METHODS)
             raise HTTPMethodError, "unsupported HTTP method: #{method}"
@@ -75,10 +77,18 @@ module Nokul
       private_constant :Request
 
       Response = Struct.new(:http_response) do
-        delegate :body, :error!, to: :http_response
+        delegate :body, to: :http_response
 
         def code
           http_response.code.to_i
+        end
+
+        def decode
+          body && JSON.parse(body, symbolize_names: true)
+        end
+
+        def error!
+          http_response.error! unless success?
         end
 
         def success?
