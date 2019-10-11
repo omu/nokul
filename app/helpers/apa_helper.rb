@@ -2,23 +2,37 @@
 
 module ApaHelper
   def article_citation(article)
-    title = article.title.capitalize_turkish
-
-    "#{authors_in_apa_format(article.authors)}. (#{article.year}). #{title}. #{article.journal}, \
-    #{article.volume}(#{article.issue}), #{article.first_page}-#{article.last_page}"
+    <<~TEXT.strip.squish
+      #{authors_in_apa_format(article.authors)}.
+      (#{article.year}).
+      #{article.title.capitalize_turkish}.
+      #{article.journal},
+      #{article.volume}(#{article.issue}),
+      #{article.first_page}-#{article.last_page}
+    TEXT
   end
 
   def book_citation(book)
-    "#{authors_in_apa_format(book.authors)}. (#{book.year}). #{book.name.capitalize_turkish}. \
-    #{book.city}: #{book.publisher}."
+    <<~TEXT.strip.squish
+      #{authors_in_apa_format(book.authors)}.
+      (#{book.year}).
+      #{book.name.capitalize_turkish}.
+      #{[book.city, book.publisher].compact.join(': ')}.
+    TEXT
   end
 
+  # rubocop:disable Metrics/AbcSize
   def book_chapter_citation(book)
-    "#{authors_in_apa_format(book.authors)}. (#{book.year}). #{book.chapter_name}. \
-    #{authors_in_apa_format(book.editor_name || '')}, #{book.name} \
-    (#{t('.page_numbers_abbrev')} #{book.chapter_first_page} - #{book.chapter_last_page}). \
-    #{book.city}: #{book.publisher}."
+    <<~TEXT.strip.squish
+      #{authors_in_apa_format(book.authors)}.
+      (#{book.year}).
+      #{book.chapter_name}.
+      #{authors_in_apa_format(book.editor_name || '')}, #{book.name}
+      (#{t('.page_numbers_abbrev')} #{book.chapter_first_page} - #{book.chapter_last_page}).
+      #{[book.city, book.publisher].compact.join(': ')}.
+    TEXT
   end
+  # rubocop:enable Metrics/AbcSize
 
   def authors_in_apa_format(authors)
     authors.split(',').map do |author|
