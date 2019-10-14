@@ -98,7 +98,7 @@ end
 group :test do
   gem 'capybara'
   gem 'codacy-coverage', require: false
-  gem 'webdrivers', '~> 4.0'
+  gem 'webdrivers', '~> 4.1'
   gem 'webmock'
 end
 

@@ -66,10 +66,10 @@
 <div id="header">
   <h1><%= t('.university_name') %><br><%= t('.title') %></h1>
   <div id="logo">
-    <img src="<%= asset_url('meksis/omu.jpg') %>"/>
+    <%= wicked_pdf_image_tag 'meksis/omu.jpg' %>
   </div>
   <div align="right">
-    <img style="width: 124px; height: 35px; margin-bottom: -4em;" src="<%= asset_url('meksis/baum.png') %>"/>
+    <%= wicked_pdf_image_tag 'meksis/baum.png', style: 'width: 124px; height: 35px; margin-bottom: -4em;' %>
   </div>
 </div>
 <h2><%= t('.stats') %></h2>
@@ -100,7 +100,6 @@
   </tr>
 </table>
 <h2><%= t('.buildings_list') %></h2>
-<div class="alwaysbreak">
 <table id="buildings">
   <tr>
     <th><%= t('.name') %></th>
