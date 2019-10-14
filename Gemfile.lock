@@ -301,6 +301,8 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 1.7)
+    rubocop-minitest (0.3.0)
+      rubocop (>= 0.74)
     rubocop-performance (1.5.0)
       rubocop (>= 0.71.0)
     rubocop-rails (2.3.2)
@@ -448,6 +450,7 @@ DEPENDENCIES
   rein
   rollbar
   rubocop
+  rubocop-minitest
   rubocop-performance
   rubocop-rails
   ruby-progressbar
