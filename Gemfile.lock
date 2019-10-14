@@ -159,7 +159,7 @@ GEM
     email_address (0.1.11)
       netaddr (~> 2.0)
       simpleidn
-    erb_lint (0.0.29)
+    erb_lint (0.0.30)
       activesupport
       better_html (~> 1.0.7)
       html_tokenizer
