@@ -79,20 +79,22 @@ module Nokul
       Response = Struct.new(:http_response) do
         delegate :body, to: :http_response
 
-        def code
-          http_response.code.to_i
-        end
-
         def decode
           body && JSON.parse(body, symbolize_names: true)
+        rescue JSON::JSONError => e
+          Rails.logger.warn("JSON parse error: #{e}")
+          nil
         end
 
         def error!
-          http_response.error! unless success?
+          http_response.error! unless ok?
+        rescue Net::HTTPError, Net::HTTPFatalError => e
+          Rails.logger.warn("HTTP error: #{e}")
+          nil
         end
 
-        def success?
-          code.between?(200, 299)
+        def ok?
+          http_response.is_a?(Net::HTTPOK)
         end
       end
 
