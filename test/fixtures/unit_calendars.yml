@@ -5,5 +5,5 @@ egitim_bilimleri_calendar:
   calendar: graduate_calendar
   unit: egitim_bilimleri_enstitusu
 bilgisayar_muhendisligi_calendar:
-  calendar: calendar_to_delete
-  unit: bilgisayar_muhendisligi
+  calendar: bm_calendar
+  unit: bilgisayar_muhendisligi_programi
