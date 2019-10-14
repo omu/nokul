@@ -26,6 +26,8 @@ tr:
       edit:
         form_title: Kapsam Sorgusunu Güncelle
         warning: Pasif kayıtlarda düzenleme yapılamaz.
+      filter:
+        value_type_error: Değer türü hatalı!
       index:
         card_header: Kapsam Sorguları
         new_query_store_link: Yeni Kapsam Sorgusu Ekle

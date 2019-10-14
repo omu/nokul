@@ -26,6 +26,8 @@ en:
       edit:
         form_title: Update the Scope Query
         warning: Passive records cannot be edited.
+      filter:
+        value_type_error: Value type is incorrect!
       index:
         card_header:  Scope Queries
         new_query_store_link: Add a New Scope Query
