@@ -27,29 +27,29 @@
               <div class="form-group">
                 <%= label_tag :term, t('smart_search') %>
                 <%= text_field_tag :term,
-                      params[:term],
-                      placeholder: t('.smart_search_placeholder'),
-                      class: 'form-control' %>
+                                   params[:term],
+                                   placeholder: t('.smart_search_placeholder'),
+                                   class:       'form-control' %>
               </div>
             </div>
             <div class="col-sm-3">
               <div class="form-group">
                 <%= label_tag(:unit_id, t('.unit')) %>
                 <%= select_tag(:unit_id,
-                      options_from_collection_for_select(Unit.where(id: Building.pluck(:unit_id)), :id, :name, params[:unit_id]),
-                      include_blank: true,
-                      class: 'form-control',
-                      style: 'width: 100%') %>
+                               options_from_collection_for_select(Unit.where(id: Building.pluck(:unit_id)), :id, :name, params[:unit_id]),
+                               include_blank: true,
+                               class:         'form-control',
+                               style:         'width: 100%') %>
               </div>
             </div>
             <div class="col-sm-3">
               <div class="form-group">
                 <%= label_tag(:place_type_id, t('.place_type')) %>
                 <%= select_tag(:place_type_id,
-                      options_from_collection_for_select(PlaceType.roots, :id, :name, params[:place_type_id]),
-                      include_blank: true,
-                      class: 'form-control',
-                      style: 'width: 100%') %>
+                               options_from_collection_for_select(PlaceType.roots, :id, :name, params[:place_type_id]),
+                               include_blank: true,
+                               class:         'form-control',
+                               style:         'width: 100%') %>
               </div>
             </div>
           </div>

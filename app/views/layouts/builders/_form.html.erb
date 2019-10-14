@@ -11,24 +11,24 @@
             <% params.each do |parameter| %>
               <%= content_tag :div, class: "form-group col-sm-#{parameter[:width]}" do %>
                 <%= f.input parameter[:field].to_sym,
-                            as: parameter[:as].try(:to_sym),
-                            required: parameter[:required] || false,
-                            collection: parameter[:collection],
-                            label: parameter[:label],
-                            inline_label: parameter[:inline_label],
-                            hint: parameter[:hint],
-                            placeholder: parameter[:placeholder],
-                            prompt: parameter[:promt],
-                            disabled: parameter[:disabled] || false,
-                            start_year: parameter[:start_year],
-                            end_year: parameter[:end_year],
-                            discard_day: parameter[:discard_day],
-                            label_method: parameter[:label_method].try(:to_sym),
-                            value_method: parameter[:value_method].try(:to_sym),
-                            group_method: parameter[:group_method].try(:to_sym),
+                            as:                 parameter[:as].try(:to_sym),
+                            required:           parameter[:required] || false,
+                            collection:         parameter[:collection],
+                            label:              parameter[:label],
+                            inline_label:       parameter[:inline_label],
+                            hint:               parameter[:hint],
+                            placeholder:        parameter[:placeholder],
+                            prompt:             parameter[:promt],
+                            disabled:           parameter[:disabled] || false,
+                            start_year:         parameter[:start_year],
+                            end_year:           parameter[:end_year],
+                            discard_day:        parameter[:discard_day],
+                            label_method:       parameter[:label_method].try(:to_sym),
+                            value_method:       parameter[:value_method].try(:to_sym),
+                            group_method:       parameter[:group_method].try(:to_sym),
                             group_label_method: parameter[:group_label_method].try(:to_sym),
-                            priority: parameter[:priority],
-                            selected: parameter[:selected] %>
+                            priority:           parameter[:priority],
+                            selected:           parameter[:selected] %>
               <% end %>
             <% end %>
             <div class='form-group col-sm-12'>

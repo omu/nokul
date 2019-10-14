@@ -19,7 +19,7 @@
                 <%= image_tag 'profile/avatar_placeholder.svg', width: '150px' %>
               <% end %>
               <p><%= f.input :avatar, label: false, as: :file %></p>
-              <hr />
+              <hr>
             </div>
 
             <div class='form-group col-sm-2'>
@@ -29,13 +29,13 @@
                   <span class="input-group-text"><%= fa_icon('globe') %></span>
                 </div>
                 <%= f.input :country,
-                            as: :select,
-                            collection: Country.order(:name).pluck(:name, :alpha_2_code),
+                            as:           :select,
+                            collection:   Country.order(:name).pluck(:name, :alpha_2_code),
                             label_method: :first,
                             value_method: :second,
-                            selected: 'TR',
-                            wrapper: false,
-                            label: false %>
+                            selected:     'TR',
+                            wrapper:      false,
+                            label:        false %>
               </div>
             </div>
 
@@ -110,7 +110,7 @@
             </div>
 
             <div class='form-group col-sm-12'>
-              <hr />
+              <hr>
               <%= f.button :submit, t('save'), class: 'btn btn-outline-success btn-sm' %>
               <%= link_to_back(:back) %>
             </div>

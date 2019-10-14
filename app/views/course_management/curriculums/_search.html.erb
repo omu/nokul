@@ -29,7 +29,7 @@
                 <%= text_field_tag :term,
                                    params[:term],
                                    placeholder: t('.smart_search_placeholder'),
-                                   class: 'form-control' %>
+                                   class:       'form-control' %>
               </div>
             </div>
             <div class="col-sm-4">
@@ -38,7 +38,7 @@
                 <%= select_tag(:unit_id,
                                options_from_collection_for_select(Unit.active.departments.order(:name), :id, :names_depth_cache, params[:unit_id]),
                                include_blank: true,
-                               class: 'form-control') %>
+                               class:         'form-control') %>
               </div>
             </div>
             <div class="col-sm-4">
@@ -47,7 +47,7 @@
                 <%= select_tag(:status,
                                options_for_select(enum_options_for_select(Curriculum, :status), params[:status]),
                                include_blank: true,
-                               class: 'form-control') %>
+                               class:         'form-control') %>
               </div>
             </div>
           </div>

@@ -20,7 +20,7 @@
           <div class='row mt-3'>
             <div class='col-sm-4'>
               <%= f.association :unit,
-                                collection: Unit.active.coursable.order(:name),
+                                collection:   Unit.active.coursable.order(:name),
                                 label_method: :names_depth_cache %>
             </div>
             <div class='col-sm-4'>
@@ -51,12 +51,12 @@
             <div class='col-sm-4'>
               <%= f.association :language,
                                 include_blank: false,
-                                selected: Language.find_by(name: 'Türkçe').try(:id) %>
+                                selected:      Language.find_by(name: 'Türkçe').try(:id) %>
             </div>
             <div class='col-sm-4'>
               <%= f.input :status,
                           collection: enum_options_for_select(f.object.class, :status),
-                          selected: :active %>
+                          selected:   :active %>
             </div>
             <div class='col-sm-12'>
               <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>

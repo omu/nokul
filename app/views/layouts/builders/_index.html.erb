@@ -12,7 +12,7 @@
       </div>
       <div class='card-body'>
         <%= render 'layouts/shared/smart_search_form',
-                   path: klass.tableize.to_s,
+                   path:        klass.tableize.to_s,
                    placeholder: t([namespace || scope_module, klass.pluralize, 'index', 'name'].compact.join('.')) %>
         <table class='table table-responsive-sm table-striped'>
           <thead class='thead-dark'>
