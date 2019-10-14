@@ -13,7 +13,7 @@ module Patron
       #   sudo timeout: 30.minutes # custom timeout definition
       def sudo(**options)
         before_action(options) do
-          next unless Sudo.required_now?(session[:sudo], timeout: options[:timeout])
+          next unless Sudo.required?(session[:sudo], timeout: options[:timeout])
 
           render 'patron/confirmations/new', layout: 'guest'
         end

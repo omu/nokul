@@ -88,7 +88,7 @@ module Patron
             for:        :dynamic,
             name:       "#{filter}_dynamic_query_type",
             as:         :select,
-            collection: Utils::I18n.collection(Query::Arel.predicates, attribute: :query_type),
+            collection: Utils::I18n.collection(Query::Arel.predicates.keys, attribute: :query_type),
             required:   false,
             label:      Utils::I18n.label('dynamic_query_type')
           )
@@ -107,11 +107,7 @@ module Patron
         end
 
         def arel_predicates_for(type)
-          case type
-          when :array  then %i[in not_in]
-          when :string then Query::Arel.predicates.to_a - %i[in not_in]
-          else              []
-          end
+          Query::Arel.filter_predicates_by_scope(type).keys
         end
       end
     end

@@ -7,7 +7,7 @@ module Patron
 
     module_function
 
-    def required_now?(started_at, timeout: nil)
+    def required?(started_at, timeout: nil)
       enabled? && timed_out?(started_at, timeout: timeout)
     end
 
