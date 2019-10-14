@@ -29,14 +29,14 @@ class DutyTest < ActiveSupport::TestCase
     fake.update(end_date: fake.start_date - 1.year)
     assert_not fake.valid?
     assert_not_empty fake.errors[:end_date]
-    assert fake.errors[:end_date].include?(t('validators.duty.invalid_end_date'))
+    assert_includes(fake.errors[:end_date], t('validators.duty.invalid_end_date'))
   end
 
   test 'a user can only have one active tenure duty' do
     tenure = duties(:omu).dup
     assert_not tenure.valid?
     assert_not_empty tenure.errors[:base]
-    assert tenure.errors[:base].include?(t('validators.duty.active_and_tenure'))
+    assert_includes(tenure.errors[:base], t('validators.duty.active_and_tenure'))
   end
 
   test 'a user can have more than one active temporary duty' do
@@ -50,7 +50,7 @@ class DutyTest < ActiveSupport::TestCase
     active = duties(:baum).dup
     assert_not active.valid?
     assert_not_empty active.errors[:base]
-    assert active.errors[:base].include?(t('validators.duty.multiple_active'))
+    assert_includes(active.errors[:base], t('validators.duty.multiple_active'))
   end
 
   test 'a user can have more than one passive duty' do
@@ -62,17 +62,17 @@ class DutyTest < ActiveSupport::TestCase
 
   # scopes
   test 'temporary scope returns temporary duties' do
-    assert @duties.temporary.to_a.include?(duties(:uzem))
+    assert_includes(@duties.temporary.to_a, duties(:uzem))
     assert_not @duties.temporary.to_a.include?(duties(:omu))
   end
 
   test 'tenure scope returns tenure duties' do
-    assert @duties.tenure.to_a.include?(duties(:omu))
+    assert_includes(@duties.tenure.to_a, duties(:omu))
     assert_not @duties.tenure.to_a.include?(duties(:uzem))
   end
 
   test 'active scope returns active duties' do
-    assert @duties.active.to_a.include?(duties(:omu))
+    assert_includes(@duties.active.to_a, duties(:omu))
     assert_not @duties.active.to_a.include?(duties(:uzem))
   end
 
