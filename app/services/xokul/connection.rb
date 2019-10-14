@@ -19,10 +19,6 @@ module Xokul
 
       resp.error!
       resp.decode
-    rescue Net::HTTPError, Net::HTTPFatalError => e
-      warn "unexpected HTTP error: #{e}"
-    rescue JSON::JSONError => e
-      warn "decode error: #{e}"
     end
   end
 
