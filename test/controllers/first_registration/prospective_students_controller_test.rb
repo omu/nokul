@@ -34,7 +34,7 @@ module FirstRegistration
         first_name:               'Test First Name',
         last_name:                'TEST SURNAME',
         gender:                   'male',
-        unit_id:                  units(:bilgisayar_muhendisligi).id,
+        unit_id:                  units(:bilgisayar_muhendisligi_programi).id,
         academic_term_id:         academic_term.id,
         expiry_date:              academic_term.end_of_term,
         student_entrance_type_id: StudentEntranceType.find_by(name: 'ÖSYS').id
