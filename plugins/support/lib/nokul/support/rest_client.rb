@@ -19,25 +19,27 @@ module Nokul
 
       class HTTPMethodError < Error; end
 
-      class UnmarshalJSONError < Error; end
-
       class UnsupportedHTTPOptionError < Error; end
 
       class Request
         SUPPORTED_HTTP_OPTIONS = {
-          open_timeout: 60,
-          read_timeout: 60,
+          open_timeout: 10,
+          read_timeout: 10,
           use_ssl: false,
           verify_mode: OpenSSL::SSL::VERIFY_NONE
         }.freeze
 
-        private_constant :SUPPORTED_HTTP_OPTIONS
+        HEADERS = {
+          'Content-Type' => 'application/json'
+        }.freeze
+
+        private_constant :SUPPORTED_HTTP_OPTIONS, :HEADERS
 
         # rubocop:disable Style/IfUnlessModifier
         def initialize(method, url, headers = {}, **http_options)
           @method  = method
           @url     = url
-          @headers = headers
+          @headers = HEADERS.merge(headers)
 
           unless method.in?(SUPPORTED_HTTP_METHODS)
             raise HTTPMethodError, "unsupported HTTP method: #{method}"
@@ -77,18 +79,22 @@ module Nokul
       Response = Struct.new(:http_response) do
         delegate :body, to: :http_response
 
-        def code
-          http_response.code.to_i
+        def decode
+          body && JSON.parse(body, symbolize_names: true)
+        rescue JSON::JSONError => e
+          Rails.logger.warn("JSON parse error: #{e}")
+          nil
         end
 
         def error!
-          http_response.error! unless code.between?(200, 299)
+          http_response.error! unless ok?
+        rescue Net::HTTPError, Net::HTTPFatalError => e
+          Rails.logger.warn("HTTP error: #{e}")
+          nil
         end
 
-        def unmarshal_json
-          JSON.parse(body || '')
-        rescue JSON::ParserError
-          raise UnmarshalJSONError, 'response body is not parseable'
+        def ok?
+          http_response.is_a?(Net::HTTPOK)
         end
       end
 

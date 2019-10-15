@@ -49,7 +49,7 @@
                   <th><%= registration_document.name %></th>
                   <td>
                     <label class="switch switch-label switch-pill switch-success">
-                      <input type="checkbox" class="registration-documents-checks switch-input" />
+                      <input type="checkbox" class="registration-documents-checks switch-input">
                       <span class="switch-slider" data-checked="&#x2713;" data-unchecked="&#x2715;"></span>
                     </label>
                   </td>
@@ -66,24 +66,24 @@
             <% if @prospective_student.can_permanently_register? %>
               <%= link_to(t('.permanently_register'),
                           %i[register prospective_student],
-                          class: 'btn btn-block btn-success registration-button',
+                          class:    'btn btn-block btn-success registration-button',
                           disabled: @prospective_student.unit.registration_documents.present?) %>
             <% else %>
               <%= link_to(t('.can_not_register'),
                           %i[register prospective_student],
-                          class: 'btn btn-block btn-danger registration-button',
+                          class:    'btn btn-block btn-danger registration-button',
                           disabled: true) %>
             <% end %>
           <% elsif @prospective_student.temporary_registrable? %>
             <% if @prospective_student.can_temporarily_register? %>
               <%= link_to(t('.temporarily_register'),
                           %i[register prospective_student],
-                          class: 'btn btn-block btn-success registration-button',
+                          class:    'btn btn-block btn-success registration-button',
                           disabled: @prospective_student.unit.registration_documents.present?) %>
             <% else %>
               <%= link_to(t('.can_not_register'),
                           %i[register prospective_student],
-                          class: 'btn btn-block btn-danger registration-button',
+                          class:    'btn btn-block btn-danger registration-button',
                           disabled: true) %>
             <% end %>
           <% else %>

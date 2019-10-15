@@ -133,13 +133,6 @@ GEM
     codacy-coverage (2.1.0)
       simplecov
     coderay (1.1.2)
-    coffee-rails (5.0.0)
-      coffee-script (>= 2.2.0)
-      railties (>= 5.2.0)
-    coffee-script (2.4.1)
-      coffee-script-source
-      execjs
-    coffee-script-source (1.12.2)
     concurrent-ruby (1.1.5)
     connection_pool (2.2.2)
     crack (0.4.3)
@@ -310,6 +303,8 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 1.7)
+    rubocop-minitest (0.3.0)
+      rubocop (>= 0.74)
     rubocop-performance (1.5.0)
       rubocop (>= 0.71.0)
     rubocop-rails (2.3.2)
@@ -424,7 +419,6 @@ DEPENDENCIES
   chartkick
   cocoon
   codacy-coverage
-  coffee-rails (~> 5.0)
   devise
   dotenv-rails
   email_address
@@ -459,6 +453,7 @@ DEPENDENCIES
   rein
   rollbar
   rubocop
+  rubocop-minitest
   rubocop-performance
   rubocop-rails
   ruby-progressbar

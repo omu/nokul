@@ -17,9 +17,9 @@ Rails.application.config.assets.paths += [
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 Rails.application.config.assets.precompile += [
-  'guest.scss',
+  'guest.css',
   'guest.js',
-  'pdf.scss',
+  'pdf.css',
   'shared/cocoon.js',
   'shared/intl_tel_input_validation.js',
   'shared/loading.js',

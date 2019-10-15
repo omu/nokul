@@ -24,7 +24,7 @@ module Nokul
                          yoksis_id: '122183', unit_type_id: 'Fakülte')
 
         assert_equal 'Mühendislik Fakültesi', unit.name
-        assert_equal true, unit.faculty?
+        assert(unit.faculty?)
       end
 
       test 'can get member list from class' do

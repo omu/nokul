@@ -36,13 +36,17 @@
                         <div class="col-sm-12 <%= field.for %>">
                           <%= f.label field.name, field.label %>
                           <%= f.input field.name,
-                                      as: field.as,
+                                      as:         field.as,
                                       collection: field.collection,
-                                      required: field.required,
-                                      label: false,
+                                      required:   field.required,
+                                      label:      false,
                                       input_html: {
                                         multiple: field.multiple,
-                                        data: { filter: filter, type: field.type, for: field.for }
+                                        data:     {
+                                          filter: filter,
+                                          type:   field.type,
+                                          for:    field.for
+                                        }
                                       } %>
                         </div>
                       <% end %>

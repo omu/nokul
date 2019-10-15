@@ -49,13 +49,13 @@ class IdentityTest < ActiveSupport::TestCase
   test 'a user can only have one formal user identity' do
     fake = identities(:formal_user).dup
     assert_not fake.valid?
-    assert fake.errors[:base].include?(t('validators.identity.max_formal', limit: 1))
+    assert_includes(fake.errors[:base], t('validators.identity.max_formal', limit: 1))
   end
 
   test 'a user can only have one informal user identity' do
     fake = identities(:informal).dup
     assert_not fake.valid?
-    assert fake.errors[:base].include?(t('validators.identity.max_informal', limit: 1))
+    assert_includes(fake.errors[:base], t('validators.identity.max_informal', limit: 1))
   end
 
   test 'a user can have one formal identity for each studentship' do

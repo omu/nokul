@@ -1,21 +1,21 @@
 <%= render 'layouts/builders/form',
            namespace: nil,
-           klass: @calendar_event_type,
-           params: [
+           klass:     @calendar_event_type,
+           params:    [
              {
-               field: 'name',
-               width: 12,
+               field:    'name',
+               width:    12,
                required: true
              },
              {
-               field: 'category',
-               width: 12,
-               required: true,
+               field:      'category',
+               width:      12,
+               required:   true,
                collection: CalendarEventType.categories.keys.sort
              },
              {
-               field: 'identifier',
-               width: 12,
+               field:    'identifier',
+               width:    12,
                required: true
              }
            ] %>

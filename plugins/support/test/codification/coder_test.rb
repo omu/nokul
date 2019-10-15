@@ -184,7 +184,7 @@ module Nokul
 
           coder.run
           err = assert_raise(Error) { coder.run }
-          assert err.message.include? 'many tries'
+          assert_includes(err.message, 'many tries')
         end
       end
     end

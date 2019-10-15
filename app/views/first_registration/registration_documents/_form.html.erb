@@ -1,30 +1,30 @@
 <%= render 'layouts/builders/form',
            namespace: nil,
-           klass: @registration_document,
-           params: [
+           klass:     @registration_document,
+           params:    [
              {
-               field: 'unit_id',
-               width: 12,
-               required: true,
-               collection: Unit.active.academic.order(:name),
+               field:        'unit_id',
+               width:        12,
+               required:     true,
+               collection:   Unit.active.academic.order(:name),
                label_method: 'names_depth_cache'
              },
              {
-               field: 'document_type_id',
-               width: 12,
-               required: true,
+               field:      'document_type_id',
+               width:      12,
+               required:   true,
                collection: DocumentType.order(:name)
              },
              {
-               field: 'academic_term_id',
+               field:      'academic_term_id',
                collection: AcademicTerm.select(
                  :id, :year, :term
                ).map { |record| [record.year + ' ' + enum_t(record, :term), record.id] },
-               width: 12,
-               required: true
+               width:      12,
+               required:   true
              },
              {
-               as: 'text',
+               as:    'text',
                field: 'description',
                width: 12
              }

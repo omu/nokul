@@ -1,6 +1,6 @@
 <div class="alert alert-info">
   <h5><strong>SQL</strong></h5>
-  <hr />
+  <hr>
   <p class="text-justify"><code><%= @records.to_sql %></code></p>
 </div>
 
@@ -21,7 +21,7 @@
       <thead class="thead-dark">
         <% @scope.preview_attributes.keys.each do |attribute| %>
           <th><%= t(attribute,
-                    scope: [:activerecord, :attributes, @scope.model.to_s.underscore],
+                    scope:   [:activerecord, :attributes, @scope.model.to_s.underscore],
                     default: attribute.to_s) %></th>
         <% end %>
       </thead>

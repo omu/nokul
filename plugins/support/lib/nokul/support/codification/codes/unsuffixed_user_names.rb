@@ -29,7 +29,7 @@ module Nokul
             end
 
             def non_abbreviated
-              surname, forenames = last, clip # rubocop:disable ParallelAssignment
+              surname, forenames = last, clip # rubocop:disable Style/ParallelAssignment
 
               forenames.send(:index_combinations_of_source).map do |indexes|
                 [*forenames.values_at(*indexes), surname]

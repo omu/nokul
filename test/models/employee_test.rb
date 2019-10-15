@@ -41,7 +41,7 @@ class EmployeeTest < ActiveSupport::TestCase
     fake = employees(:serhat_active).dup
     assert_not fake.valid?
     assert_not_empty fake.errors[:base]
-    assert fake.errors[:base].include?(t('validators.employee.active'))
+    assert_includes(fake.errors[:base], t('validators.employee.active'))
   end
 
   test 'a user can have more than one passive employees' do
@@ -54,7 +54,7 @@ class EmployeeTest < ActiveSupport::TestCase
   # scopes
   test 'active scope returns active employees of user' do
     active = users(:serhat).employees.active
-    assert active.to_a.include?(employees(:serhat_active))
+    assert_includes(active.to_a, employees(:serhat_active))
     assert_not active.to_a.include?(employees(:serhat_passive))
   end
 
