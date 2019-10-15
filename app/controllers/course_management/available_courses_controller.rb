@@ -7,7 +7,7 @@ module CourseManagement
     before_action :set_available_course, only: %i[show edit update destroy]
 
     def index
-      available_courses = AvailableCourse.includes(:unit, :curriculum, :academic_term, [curriculum_course: :course])
+      available_courses = AvailableCourse.includes(:unit, :curriculum, :academic_term, curriculum_course: :course)
                                          .order('units.name, curriculums.name')
                                          .dynamic_search(search_params(AvailableCourse))
 
