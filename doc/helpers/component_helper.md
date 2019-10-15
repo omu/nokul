@@ -74,7 +74,11 @@ durumları javascript ile yönetilir.
 ```erb
   <%= loading_tag %>
 
+  // Ajax işlemlerinde yüklenme göstergesinin görüntüle/gizle durumunu yönetem js kodudur.
+  <%= javascript_include_tag 'shared/loading' %>
+
   <script>
+    // Özel durumlarda yüklenme göstergesini yönetmek için kullanılan yardımcı js metodları
     $('#loading').show() // loading tag'ı görüntüle
     $('#loading').hide() // loading tag'ı gizle
   </script>
