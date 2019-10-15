@@ -7,17 +7,17 @@
       <div class="row">
         <div class="col-sm-4">
           <%= f.input :sequence,
-                      collection: (1..Curriculum::MAX_NUMBER_OF_SEMESTERS),
+                      collection:    (1..Curriculum::MAX_NUMBER_OF_SEMESTERS),
                       include_blank: false %>
         </div>
         <div class="col-sm-4">
           <%= f.input :year,
-                      collection: (1..Curriculum::MAX_NUMBER_OF_YEARS),
+                      collection:    (1..Curriculum::MAX_NUMBER_OF_YEARS),
                       include_blank: false %>
         </div>
         <div class='col-sm-4'>
           <%= f.input :term,
-                      collection: enum_options_for_select(f.object.class, :term),
+                      collection:    enum_options_for_select(f.object.class, :term),
                       include_blank: false %>
         </div>
       </div>

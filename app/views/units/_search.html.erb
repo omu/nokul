@@ -29,7 +29,7 @@
                 <%= text_field_tag :term,
                                    params[:term],
                                    placeholder: t('.smart_search_placeholder'),
-                                   class: 'form-control' %>
+                                   class:       'form-control' %>
               </div>
             </div>
             <div class="col-sm-3">
@@ -38,7 +38,7 @@
                 <%= text_field_tag :duration,
                                    params[:duration],
                                    placeholder: 'Öğretim Süresi (Yıl)',
-                                   class: 'form-control' %>
+                                   class:       'form-control' %>
               </div>
             </div>
             <div class="col-sm-3">
@@ -47,7 +47,7 @@
                 <%= select_tag(:unit_status_id,
                                options_from_collection_for_select(UnitStatus.all, :id, :name, params[:unit_status_id]),
                                include_blank: true,
-                               class: 'form-control') %>
+                               class:         'form-control') %>
               </div>
             </div>
             <div class="col-sm-3">
@@ -56,7 +56,7 @@
                 <%= select_tag(:unit_instruction_language_id,
                                options_from_collection_for_select(UnitInstructionLanguage.all, :id, :name, params[:unit_instruction_language_id]),
                                include_blank: true,
-                               class: 'form-control') %>
+                               class:         'form-control') %>
               </div>
             </div>
             <div class="col-sm-3">
@@ -65,7 +65,7 @@
                 <%= select_tag(:unit_instruction_type_id,
                                options_from_collection_for_select(UnitInstructionType.all, :id, :name, params[:unit_instruction_type_id]),
                                include_blank: true,
-                               class: 'form-control') %>
+                               class:         'form-control') %>
               </div>
             </div>
           </div>

@@ -12,7 +12,7 @@
         <div class='card-body'>
           <div class="alert alert-warning" role="alert">
             <p><%= t('.alert_text_general') %></p>
-            <hr />
+            <hr>
             <p class="mb-0">
               <%= t('.alert_text_programs') %>
             </p>
@@ -26,8 +26,8 @@
         <div class='card-body'>
           <%= f.association :units,
                             collection: Unit.active.faculties.order(:name),
-                            as: :check_boxes,
-                            label: t('.faculties') %>
+                            as:         :check_boxes,
+                            label:      t('.faculties') %>
         </div>
       </div>
     </div>
@@ -36,8 +36,8 @@
         <div class='card-body'>
           <%= f.association :units,
                             collection: Unit.active.institutes.order(:name),
-                            as: :check_boxes,
-                            label: t('.institutes') %>
+                            as:         :check_boxes,
+                            label:      t('.institutes') %>
         </div>
       </div>
     </div>
@@ -46,8 +46,8 @@
         <div class='card-body'>
           <%= f.association :units,
                             collection: Unit.active.research_centers.order(:name),
-                            as: :check_boxes,
-                            label: t('.research_centers') %>
+                            as:         :check_boxes,
+                            label:      t('.research_centers') %>
         </div>
       </div>
     </div>
@@ -56,8 +56,8 @@
         <div class='card-body'>
           <%= f.association :units,
                             collection: Unit.active.others.order(:name),
-                            as: :check_boxes,
-                            label: t('.others') %>
+                            as:         :check_boxes,
+                            label:      t('.others') %>
         </div>
       </div>
     </div>
@@ -65,10 +65,10 @@
       <div class='card'>
         <div class='card-body'>
           <%= f.association :units,
-                            collection: Unit.active.programs.order(:name),
-                            as: :check_boxes,
+                            collection:   Unit.active.programs.order(:name),
+                            as:           :check_boxes,
                             label_method: :names_depth_cache,
-                            label: t('.programs') %>
+                            label:        t('.programs') %>
         </div>
       </div>
     </div>

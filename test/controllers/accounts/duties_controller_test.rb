@@ -28,7 +28,7 @@ module Accounts
 
       assert_equal employees(:serhat_active), duty.employee
       assert_equal @unit, duty.unit
-      assert_equal true, duty.temporary
+      assert(duty.temporary)
 
       assert_redirected_to user_path(@user)
       assert_equal translate('.create.success'), flash[:notice]
@@ -46,7 +46,7 @@ module Accounts
       duty.reload
 
       assert_equal @unit, duty.unit
-      assert_equal true, duty.temporary
+      assert(duty.temporary)
 
       assert_redirected_to user_path(@user)
       assert_equal translate('.update.success'), flash[:notice]

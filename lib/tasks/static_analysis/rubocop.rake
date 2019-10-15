@@ -5,6 +5,11 @@ if Rails.env.development? || Rails.env.test?
 
   namespace :static_analysis do
     desc 'Check code quality via RuboCop'
-    RuboCop::RakeTask.new { |t| t.options = %w[-f fu -D] }
+    RuboCop::RakeTask.new do |task|
+      task.requires << 'rubocop-minitest'
+      task.requires << 'rubocop-performance'
+      task.requires << 'rubocop-rails'
+      task.options = %w[-f fu -D]
+    end
   end
 end

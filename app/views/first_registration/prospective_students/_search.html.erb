@@ -29,7 +29,7 @@
                 <%= text_field_tag :term,
                                    params[:term],
                                    placeholder: t('.smart_search_placeholder'),
-                                   class: 'form-control' %>
+                                   class:       'form-control' %>
               </div>
             </div>
             <div class="col-sm-3">
@@ -38,7 +38,7 @@
                 <%= select_tag(:registered,
                                options_for_select([[t('.registered'), true], [t('.not_registered'), false]], params[:registered]),
                                include_blank: true,
-                               class: 'form-control') %>
+                               class:         'form-control') %>
               </div>
             </div>
             <div class="col-sm-3">
@@ -47,7 +47,7 @@
                 <%= select_tag(:meb_status,
                                options_for_select([[t('.graduated'), true], [t('.not_graduated_or_unknown'), false]], params[:meb_status]),
                                include_blank: true,
-                               class: 'form-control') %>
+                               class:         'form-control') %>
               </div>
             </div>
             <div class="col-sm-3">
@@ -56,7 +56,7 @@
                 <%= select_tag(:military_status,
                                options_for_select([[t('.unproblematic'), true], [t('.must_see_recruiting_office'), false]], params[:military_status]),
                                include_blank: true,
-                               class: 'form-control') %>
+                               class:         'form-control') %>
               </div>
             </div>
             <div class="col-sm-3">
@@ -65,7 +65,7 @@
                 <%= select_tag(:obs_status,
                                options_for_select([[t('.unproblematic'), true], [t('.student_in_a_different_unit'), false]], params[:obs_status]),
                                include_blank: true,
-                               class: 'form-control') %>
+                               class:         'form-control') %>
               </div>
             </div>
             <div class="col-sm-3">
@@ -74,7 +74,7 @@
                 <%= select_tag(:student_entrance_type_id,
                                options_from_collection_for_select(StudentEntranceType.order(:name), :id, :name),
                                include_blank: true,
-                               class: 'form-control') %>
+                               class:         'form-control') %>
               </div>
             </div>
             <div class="col-sm-3">
@@ -83,8 +83,8 @@
                 <%= select_tag(:root_unit_id,
                                options_from_collection_for_select(Unit.active.academic.without_programs.order(:name), :id, :names_depth_cache, params[:root_unit_id]),
                                include_blank: true,
-                               class: 'form-control',
-                               style: 'width: 100%') %>
+                               class:         'form-control',
+                               style:         'width: 100%') %>
               </div>
             </div>
             <div class="col-sm-3">
@@ -104,7 +104,7 @@
                 <%= select_tag(:academic_term_id,
                                options_from_collection_for_select(AcademicTerm.order(year: :desc), :id, lambda { |term| full_name(term) }),
                                include_blank: true,
-                               class: 'form-control') %>
+                               class:         'form-control') %>
               </div>
             </div>
             <div class="col-sm-3">
@@ -113,7 +113,7 @@
                 <%= select_tag(:system_register_type,
                                options_for_select(enum_options_for_select(ProspectiveStudent, :system_register_type), params[:system_register_type]),
                                include_blank: true,
-                               class: 'form-control') %>
+                               class:         'form-control') %>
               </div>
             </div>
             <div class="col-sm-3">
@@ -122,7 +122,7 @@
                 <%= select_tag(:archived,
                                options_for_select([[t('.archived'), true], [t('.not_archived'), false]], params[:archived]),
                                include_blank: true,
-                               class: 'form-control') %>
+                               class:         'form-control') %>
               </div>
             </div>
           </div>

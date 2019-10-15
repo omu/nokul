@@ -18,7 +18,7 @@
             <div class="row">
               <div class="col-sm-3">
                 <div id="map" style="height: 500px;"></div>
-                <script>
+                <script type="text/javascript">
                   var map;
                   function initMap() {
                     var coordinates = { lat: <%= @building.latitude %>, lng: <%= @building.longitude %> };
@@ -32,7 +32,7 @@
                     });
                   }
                 </script>
-                <script async defer
+                <script type="text/javascript" async defer
                         src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.application.credentials.google_maps_api_key %>&callback=initMap">
                 </script>
               </div>

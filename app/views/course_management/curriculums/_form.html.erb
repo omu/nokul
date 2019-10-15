@@ -18,7 +18,7 @@
             </div>
             <div class='col-sm-6'>
               <%= f.association :unit,
-                                collection: Unit.active.curriculumable.order(:name),
+                                collection:   Unit.active.curriculumable.order(:name),
                                 label_method: :names_depth_cache %>
             </div>
             <div class='col-sm-6'>
@@ -32,14 +32,14 @@
             <% if curriculum.new_record? %>
               <div class='col-sm-6'>
                 <%= f.input :number_of_semesters,
-                            collection: (1..Curriculum::MAX_NUMBER_OF_SEMESTERS),
-                            selected: 8,
+                            collection:    (1..Curriculum::MAX_NUMBER_OF_SEMESTERS),
+                            selected:      8,
                             include_blank: false %>
               </div>
               <div class='col-sm-6'>
                 <%= f.input :type,
-                            collection: collection_options_for_select(%i[periodic yearly]),
-                            selected: :periodic,
+                            collection:    collection_options_for_select(%i[periodic yearly]),
+                            selected:      :periodic,
                             include_blank: false %>
               </div>
             <% else %>

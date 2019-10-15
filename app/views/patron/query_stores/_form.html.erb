@@ -36,10 +36,10 @@
                         <div class="col-sm-12">
                           <%= f.label field.name, field.label %>
                           <%= f.input field.name,
-                                      as: field.as,
+                                      as:         field.as,
                                       collection: field.collection,
-                                      required: field.required,
-                                      label: false,
+                                      required:   field.required,
+                                      label:      false,
                                       input_html: { multiple: field.multiple } %>
                         </div>
                       <% end %>
