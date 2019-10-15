@@ -6,7 +6,7 @@ class StudentDecorator < SimpleDelegator
   end
 
   def registrable_for_online_course?
-    calendar.check_events('online_course_registrations')
+    calendar&.check_events('online_course_registrations')
   end
 
   private
