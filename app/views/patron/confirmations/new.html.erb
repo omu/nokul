@@ -5,8 +5,8 @@
     </div>
     <div class='card-body'>
       <%= simple_form_for(current_user,
-                          as: :sudo,
-                          url: %i[patron confirmations],
+                          as:     :sudo,
+                          url:    %i[patron confirmations],
                           method: :post) do |f| %>
         <%= f.error_notification %>
         <%= hidden_field :sudo, :return_to, value: params.dig(:sudo, :return_to) || request.url %>

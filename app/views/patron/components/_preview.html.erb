@@ -12,9 +12,9 @@
   <div class="card-body">
     <% if @records.size > 0 && @records.first.class.respond_to?(:search) %>
       <%= render 'patron/components/smart_search_form',
-                 path: search_path,
-                 method: :post,
-                 remote: true,
+                 path:        search_path,
+                 method:      :post,
+                 remote:      true,
                  placeholder: t('.smart_search_placeholder') %>
     <% end %>
     <table class="table table-bordered">
