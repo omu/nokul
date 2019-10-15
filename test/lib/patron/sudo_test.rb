@@ -8,11 +8,11 @@ class SudoTest < ActiveSupport::TestCase
   end
 
   test 'timeout defined' do
-    assert @sudo.respond_to?(:timeout)
+    assert_respond_to @sudo, :timeout
   end
 
   test 'enabled defined' do
-    assert @sudo.respond_to?(:enabled)
+    assert_respond_to @sudo, :enabled
   end
 
   test 'required_now? method' do
