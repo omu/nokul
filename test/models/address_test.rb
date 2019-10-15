@@ -37,13 +37,13 @@ class AddressTest < ActiveSupport::TestCase
     formal = addresses(:formal).dup
     assert_not formal.valid?
     assert_not_empty formal.errors[:base]
-    assert formal.errors[:base].include?(t('validators.address.max_formal', limit: 1))
+    assert_includes(formal.errors[:base], t('validators.address.max_formal', limit: 1))
   end
 
   test 'a user can only have one informal address' do
     informal = addresses(:informal).dup
     assert_not informal.valid?
     assert_not_empty informal.errors[:base]
-    assert informal.errors[:base].include?(t('validators.address.max_informal', limit: 1))
+    assert_includes(informal.errors[:base], t('validators.address.max_informal', limit: 1))
   end
 end

@@ -3,26 +3,26 @@
     <div class='card-body bg-light'>
       <div class='row'>
         <div class='col-sm-12'>
-          <%= f.input :calendar_event_type_id, required: true,
+          <%= f.input :calendar_event_type_id, required:   true,
                                                collection: CalendarEventType.order(:name),
                                                input_html: { class: 'select_search_class' } %>
         </div>
         <div class='col-sm-3'>
-          <%= f.input :start_time, required: true,
-                                   as: :date_time_picker,
+          <%= f.input :start_time, required:   true,
+                                   as:         :date_time_picker,
                                    input_html: { data: { class: 'event-date' } } %>
         </div>
         <div class='col-sm-3'>
-          <%= f.input :end_time, required: true,
-                                 as: :date_time_picker,
+          <%= f.input :end_time, required:   true,
+                                 as:         :date_time_picker,
                                  input_html: { data: { class: 'event-date' } } %>
         </div>
         <div class='col-sm-3'>
           <%= f.input :location %>
         </div>
         <div class='col-sm-3'>
-          <%= f.input :timezone, required: true,
-                                 collection: timezone_list_with_offset,
+          <%= f.input :timezone, required:     true,
+                                 collection:   timezone_list_with_offset,
                                  label_method: :first,
                                  value_method: :second %>
         </div>

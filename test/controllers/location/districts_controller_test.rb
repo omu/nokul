@@ -38,7 +38,7 @@ module Location
 
       assert_equal 'Test District', district.name
       assert_equal '9999', district.mernis_code
-      assert_equal true, district.active
+      assert(district.active)
       assert_redirected_to country_city_path(@country, @city)
       assert_equal translate('.create.success'), flash[:notice]
     end

@@ -20,11 +20,11 @@
             </div>
             <div class='form-group col-sm-2'>
               <%= f.input :country,
-                          as: :select,
-                          collection: Country.order(:name).pluck(:name, :alpha_2_code),
+                          as:           :select,
+                          collection:   Country.order(:name).pluck(:name, :alpha_2_code),
                           label_method: :first,
                           value_method: :second,
-                          selected: 'TR' %>
+                          selected:     'TR' %>
             </div>
             <div class='form-group col-sm-12'>
               <%= f.input :full_address %>

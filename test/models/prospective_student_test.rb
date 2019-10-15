@@ -38,7 +38,7 @@ class ProspectiveStudentTest < ActiveSupport::TestCase
   # search
   test 'prospective_student is a searchable model' do
     assert_not_empty ProspectiveStudent.search('Serhat')
-    assert ProspectiveStudent.search('Serhat').include?(prospective_students(:serhat))
+    assert_includes(ProspectiveStudent.search('Serhat'), prospective_students(:serhat))
     assert_not ProspectiveStudent.search('Serhat').include?(prospective_students(:john))
   end
 

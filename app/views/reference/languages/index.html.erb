@@ -1,8 +1,8 @@
 <%= render 'layouts/builders/index',
-           namespace: 'reference',
-           klass: 'language',
-           collection: @languages,
-           pagy: @pagy,
+           namespace:   'reference',
+           klass:       'language',
+           collection:  @languages,
+           pagy:        @pagy,
            card_header: t('.card_header'),
-           params: %w[name iso],
-           actions: %w[edit destroy] %>
+           params:      %w[name iso],
+           actions:     %w[edit destroy] %>

@@ -29,7 +29,7 @@
                 <%= text_field_tag :term,
                                    params[:term],
                                    placeholder: t('.smart_search_placeholder'),
-                                   class: 'form-control' %>
+                                   class:       'form-control' %>
               </div>
             </div>
             <div class="col-sm-3">
@@ -38,8 +38,8 @@
                 <%= select_tag(:place_type_id,
                                options_from_collection_for_select(PlaceType.non_roots, :id, :name, params[:place_type_id]),
                                include_blank: true,
-                               class: 'form-control',
-                               style: 'width: 100%') %>
+                               class:         'form-control',
+                               style:         'width: 100%') %>
               </div>
             </div>
           </div>

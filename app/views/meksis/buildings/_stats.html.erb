@@ -49,7 +49,7 @@
             </tr>
           </tbody>
         </table>
-        <div class="row"> 
+        <div class="row">
           <div class="col-sm-4">
             <p><center><%= t('.chart_of_classrooms') %></center></p>
             <%= pie_chart @buildings.joins(:place_type).order('place_types.name').group('place_types.name').count.to_a %>

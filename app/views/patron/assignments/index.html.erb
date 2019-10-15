@@ -11,10 +11,10 @@
       </div>
       <div class='card-body'>
         <%= render 'layouts/shared/smart_search_form',
-                   path: patron_assignments_path,
+                   path:        patron_assignments_path,
                    placeholder: t('.smart_search_placeholder') %>
         <%= render 'patron/components/users',
-                   users: @users,
+                   users:           @users,
                    actions_visible: true %>
       </div>
     </div>

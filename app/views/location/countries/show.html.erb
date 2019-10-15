@@ -67,7 +67,7 @@
       </div>
       <div class='card-body'>
         <%= render 'layouts/shared/smart_search_form',
-                   path: @country,
+                   path:        @country,
                    placeholder: t('.name') %>
         <% if @country.cities.any? %>
           <table class='table table-striped table-responsive-sm'>
