@@ -11,10 +11,15 @@ graduate_calendar:
 bm_calendar:
   name: Bilgisayar Mühendisliği Lisans Takvimi
   description: Bilgisayar Mühendisliği Lisans etkinlikleri
-  academic_term: fall_2018_2019
+  academic_term: active_term
   timezone: Istanbul
 calendar_to_delete:
   name: Some calendar to delete in tests
   description: Nothing to describe.
   academic_term: fall_2018_2019
+  timezone: Istanbul
+active_calendar:
+  name: Active Calendar
+  description: Nothing to describe.
+  academic_term: active_term
   timezone: Istanbul

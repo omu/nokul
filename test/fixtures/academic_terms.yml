@@ -21,7 +21,7 @@ fall_2018_2019:
   term: fall
   start_of_term: 2018-08-12 08:00:00
   end_of_term: 2018-12-18 17:00:00
-  active: true
+  active: false
 spring_2018_2019:
   year: 2018 - 2019
   term: spring
@@ -40,3 +40,9 @@ academic_term_to_delete:
   start_of_term: 2019-07-05 08:00:00
   end_of_term: 2019-08-13 17:00:00
   active: false
+active_term:
+  year: <%= Time.current.year %>_<%= Time.current.year + 1 %>
+  term: fall
+  start_of_term: <%= Time.current - 4.months %>
+  end_of_term: <%= Time.current + 1.months %>
+  active: true

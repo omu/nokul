@@ -39,7 +39,7 @@ class AcademicTermTest < ActiveSupport::TestCase
 
   # scopes
   test 'active scope returns active academic terms' do
-    assert_includes AcademicTerm.active, academic_terms(:fall_2018_2019)
+    assert_includes AcademicTerm.active, academic_terms(:active_term)
     assert_not_includes AcademicTerm.active, academic_terms(:spring_2017_2018)
   end
 
