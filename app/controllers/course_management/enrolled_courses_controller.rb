@@ -18,12 +18,14 @@ module CourseManagement
     end
 
     def set_student
-      @student =
+      student =
         if (student_id = params[:student_id].presence)
           current_user.students.find(student_id)
         else
           current_user.students.first
         end
+
+      @student = StudentDecorator.new(student)
     end
 
     def set_curriculum

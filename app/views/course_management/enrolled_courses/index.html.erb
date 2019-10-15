@@ -41,7 +41,7 @@
   </div>
 </div>
 
-<% if StudentDecorator.new(@student).registrable_for_online_course? %>
+<% if @student.registrable_for_online_course? %>
   <div class='row'>
     <div class="col-sm-6">
       <div class="card border-default mb-3">
