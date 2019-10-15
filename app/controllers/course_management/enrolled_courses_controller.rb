@@ -29,7 +29,7 @@ module CourseManagement
     end
 
     def set_curriculum
-      @curriculum = @student.unit.curriculums.active.last
+      @curriculum = @student.curriculums.active.last
       redirect_with('active_curriculum_not_found') unless @curriculum
     end
 
