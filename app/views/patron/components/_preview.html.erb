@@ -1,6 +1,6 @@
 <div class="alert alert-info">
   <h5><strong>SQL</strong></h5>
-  <hr />
+  <hr>
   <p class="text-justify"><code><%= @records.to_sql %></code></p>
 </div>
 
@@ -12,14 +12,14 @@
   <div class="card-body">
     <% if @records.size > 0 && @records.first.class.respond_to?(:search) %>
       <%= render 'layouts/shared/smart_search_form',
-                 path: search_path,
+                 path:        search_path,
                  placeholder: t('.smart_search_placeholder') %>
     <% end %>
     <table class="table table-bordered">
       <thead class="thead-dark">
         <% @scope.preview_attributes.keys.each do |attribute| %>
           <th><%= t(attribute,
-                    scope: [:activerecord, :attributes, @scope.model.to_s.underscore],
+                    scope:   [:activerecord, :attributes, @scope.model.to_s.underscore],
                     default: attribute.to_s) %></th>
         <% end %>
       </thead>

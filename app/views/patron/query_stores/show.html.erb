@@ -10,7 +10,7 @@
   <h3 class='text-center'>
     <%= @query_store.name %>
   </h3>
-  <hr />
+  <hr>
   <h5 class='text-center'>
     <p><%= t('.type') %>: </p>
     <% if @query_store.include? %>
@@ -71,10 +71,10 @@
       </h5>
       <div class="card-body">
         <%= render 'layouts/shared/smart_search_form',
-                   path: patron_query_store_path(@query_store),
+                   path:        patron_query_store_path(@query_store),
                    placeholder: t('.smart_search_placeholder') %>
         <%= render 'patron/components/users',
-                   users: @users,
+                   users:           @users,
                    actions_visible: false %>
       </div>
       <nav aria-label='pagination'>

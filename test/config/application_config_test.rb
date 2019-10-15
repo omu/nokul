@@ -26,8 +26,8 @@ class ApplicationConfigTest < ActiveSupport::TestCase
   end
 
   test 'Turkish and English must be in available locales' do
-    assert I18n.available_locales.include?(:tr)
-    assert I18n.available_locales.include?(:en)
+    assert_includes(I18n.available_locales, :tr)
+    assert_includes(I18n.available_locales, :en)
   end
 
   test 'image_processor is set to :vips' do
@@ -39,6 +39,6 @@ class ApplicationConfigTest < ActiveSupport::TestCase
   end
 
   test 'rack::attack is up and running as middleware' do
-    assert Rails.application.config.middleware.middlewares.include?(Rack::Attack)
+    assert_includes(Rails.application.config.middleware.middlewares, Rack::Attack)
   end
 end

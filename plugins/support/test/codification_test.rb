@@ -13,8 +13,8 @@ module Nokul
             unsuffixed_user_names
             suffixed_user_names
           ].all? do |method|
-            assert Codification.respond_to?(method.pluralize)
-            assert Codification.respond_to?(method.singularize)
+            assert_respond_to(Codification, method.pluralize)
+            assert_respond_to(Codification, method.singularize)
           end
         end
       end

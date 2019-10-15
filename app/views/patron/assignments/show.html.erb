@@ -28,7 +28,7 @@
 </div>
 
 <%= render 'layouts/shared/smart_search_form',
-           path: patron_assignment_path(@user),
+           path:        patron_assignment_path(@user),
            placeholder: t('.smart_search_placeholder') %>
 
 <div class="row">
@@ -40,7 +40,7 @@
 
       <div class="card-body">
         <%= render 'patron/components/roles',
-                   roles: @roles,
+                   roles:           @roles,
                    actions_visible: false %>
       </div>
       <nav aria-label='pagination'>
@@ -58,7 +58,7 @@
       </h5>
       <div class="card-body">
         <%= render 'patron/components/permissions',
-                   permissions: @permissions,
+                   permissions:     @permissions,
                    actions_visible: false %>
       </div>
       <nav aria-label='pagination'>
@@ -96,7 +96,7 @@
       <% end %>
 
         <%= render 'patron/components/query_stores',
-                   query_stores: @query_stores,
+                   query_stores:    @query_stores,
                    actions_visible: false %>
       </div>
       <nav aria-label='pagination'>

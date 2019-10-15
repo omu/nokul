@@ -22,7 +22,7 @@ class PositionTest < ActiveSupport::TestCase
     fake.update(end_date: fake.start_date - 1.year)
     assert_not fake.valid?
     assert_not_empty fake.errors[:end_date]
-    assert fake.errors[:end_date].include?(t('validators.position.invalid_end_date'))
+    assert_includes(fake.errors[:end_date], t('validators.position.invalid_end_date'))
   end
 
   test 'a user can not have same active position in same unit' do
@@ -30,7 +30,7 @@ class PositionTest < ActiveSupport::TestCase
     active.update(start_date: active.start_date + 1.year)
     assert_not active.valid?
     assert_not_empty active.errors[:base]
-    assert active.errors[:base].include?(t('validators.position.multiple_active_repetitive'))
+    assert_includes(active.errors[:base], t('validators.position.multiple_active_repetitive'))
   end
 
   test 'a user can have different active positions in same unit' do

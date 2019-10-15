@@ -9,11 +9,12 @@
             <% else %>
               <%= image_tag 'profile/avatar_placeholder.svg' %>
             <% end %>
+            <hr>
           </div>
           <div class='col-sm-4'>
-            <h4><%= "#{current_user.title} #{full_name(current_user.identities.formal.first)}" %></h4><br />
-            <%= current_user.mobile_phone %><br />
-            <%= current_user.email %><br />
+            <h4><%= "#{current_user.title} #{full_name(current_user.identities.formal.first)}" %></h4><br>
+            <%= current_user.mobile_phone %><br>
+            <%= current_user.email %><br>
             <%= link_to fa_icon('linkedin 2x'), current_user.linkedin %>
             <%= link_to fa_icon('skype 2x'), current_user.skype %>
             <%= link_to fa_icon('twitter-square 2x'), current_user.twitter %>
@@ -28,7 +29,7 @@
             <%= render 'academic_credentials' %>
           </ul>
           <ul class='list-group list-group-flush'>
-            <h2><%= t('.academic_activities') %></h2><br />
+            <h2><%= t('.academic_activities') %></h2><br>
             <%= render 'articles' %>
             <%= render 'projects' %>
             <%= render 'books' %>

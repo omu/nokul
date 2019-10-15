@@ -19,7 +19,7 @@
             </div>
             <div class='col-sm-6'>
               <%= f.association :unit,
-                                collection: Unit.active.academic.without_programs.order(:name),
+                                collection:   Unit.active.academic.without_programs.order(:name),
                                 label_method: :names_depth_cache %>
             </div>
             <div class='col-sm-6'>
@@ -27,8 +27,8 @@
             </div>
             <div class="col-sm-6">
               <%= f.association :courses,
-                                collection: f.object.unit.present? ? f.object.unit.courses.active : [],
-                                required: true,
+                                collection:   f.object.unit.present? ? f.object.unit.courses.active : [],
+                                required:     true,
                                 label_method: :name_with_code %>
             </div>
             <div class='col-sm-12'>

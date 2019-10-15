@@ -37,9 +37,6 @@ gem 'pundit'
 gem 'net-ldap'
 
 # assets: core asset dependencies
-# TODO: Edge versions require coffee-rails https://github.com/rails/rails/issues/28965
-gem 'coffee-rails', '~> 5.0'
-
 # TODO: The following line should be removed when sassc-rails has the latest version of sassc.
 gem 'sassc', '~> 2.2.1'
 gem 'sassc-rails'
@@ -90,6 +87,7 @@ group :development, :test do
   gem 'erb_lint', require: false
   gem 'lol_dba'
   gem 'rubocop'
+  gem 'rubocop-minitest'
   gem 'rubocop-performance'
   gem 'rubocop-rails'
   gem 'simplecov', require: false

@@ -29,7 +29,7 @@
                 <%= text_field_tag :term,
                                    params[:term],
                                    placeholder: t('.smart_search_placeholder'),
-                                   class: 'form-control' %>
+                                   class:       'form-control' %>
               </div>
             </div>
             <div class="col-sm-4">
@@ -38,7 +38,7 @@
                 <%= select_tag(:status,
                                options_for_select(enum_options_for_select(LdapEntity, :status), params[:status]),
                                include_blank: true,
-                               class: 'form-control') %>
+                               class:         'form-control') %>
               </div>
             </div>
             <div class="col-sm-4">
@@ -47,7 +47,7 @@
                 <%= text_field_tag :created_at,
                                    params[:created_at],
                                    include_blank: true,
-                                   class: 'datetimepicker' %>
+                                   class:         'datetimepicker' %>
               </div>
             </div>
             <div class="col-sm-4">
@@ -56,7 +56,7 @@
                 <%= text_field_tag :synchronized_at,
                                    params[:synchronized_at],
                                    include_blank: true,
-                                   class: 'datetimepicker' %>
+                                   class:         'datetimepicker' %>
               </div>
             </div>
           </div>
