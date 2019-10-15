@@ -18,7 +18,7 @@ module Patron
     def timed_out?(started_at, timeout: nil)
       return true unless started_at
 
-      DateTime.parse(started_at.to_s) + (timeout || Sudo.timeout) < Time.current
+      Time.zone.parse(started_at.to_s) + (timeout || Sudo.timeout) < Time.current
     end
   end
 end
