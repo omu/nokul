@@ -19,11 +19,10 @@ module CourseManagement
 
     def set_student
       student =
-        if (student_id = params[:student_id].presence)
-          current_user.students.find(student_id)
-        else
-          current_user.students.first
-        end
+        current_user.students.find_by(id: params[:student_id]) ||
+        current_user.students.first
+
+      redirect_with('student_record_not_found') unless student
 
       @student = StudentDecorator.new(student)
     end

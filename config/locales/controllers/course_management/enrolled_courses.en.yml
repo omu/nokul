@@ -17,4 +17,5 @@ en:
         student_records: Student Records
         student_info: Student Info
         student_number: Student Number
+        student_record_not_found: Student record not found.
         not_proper_register_event_range: 'There is no online course registration activity covering the date range today.'

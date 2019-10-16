@@ -17,4 +17,5 @@ tr:
         student_records: Öğrencilik Kayıtları
         student_info: Öğrenci Bilgileri
         student_number: Öğrenci Numarası
+        student_record_not_found: Öğrencilik kaydı bulunamadı.
         not_proper_register_event_range: 'Tarih aralığı bugünü kapsayan online ders kayıtlanma aktivitesi bulunmamaktadır.'
