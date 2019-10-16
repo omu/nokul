@@ -7,7 +7,7 @@
 
         <div class="card-body table-responsive">
           <%= render 'available_courses',
-                     klass: 'border-primary',
+                     klass:   'border-primary',
                      courses: CurriculumSemesterDecorator.new(semester).course_catalog %>
         </div>
       </div>
