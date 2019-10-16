@@ -38,4 +38,21 @@ class CurriculumCourseTest < ActiveSupport::TestCase
     curriculum_course.save
     assert_equal 'compulsory', curriculum_course.type
   end
+
+  %i[
+    code
+    credit
+    course_type
+    name
+    theoric
+    practice
+    laboratory
+    program_type
+  ].each do |method|
+    test "can respond to #{method} method" do
+      assert_respond_to curriculum_courses(:one), :code
+      assert_equal curriculum_courses(:one).try(method),
+                   curriculum_courses(:one).course.try(method)
+    end
+  end
 end
