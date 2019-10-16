@@ -18,9 +18,5 @@ module CourseManagement
     def index_path
       enrolled_courses_path
     end
-
-    def translate(key)
-      t("course_management.enrolled_courses#{key}")
-    end
   end
 end
