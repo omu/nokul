@@ -21,12 +21,10 @@ class CurriculumCourse < ApplicationRecord
   validates_with CurriculumCourseValidator
 
   # delegates
-  delegate :code, :credit, :course_type, :name, to: :course
+  delegate :code, :credit, :course_type, :name, :theoric, :practice, :laboratory, :program_type, to: :course
 
   # callbacks
   def assign_type
     self.type = curriculum_course_group.nil? ? :compulsory : :elective
   end
-
-  delegate :code, :name, :theoric, :practice, :laboratory, :credit, :program_type, to: :course
 end
