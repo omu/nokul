@@ -9,12 +9,13 @@ en:
         type: Course Type
         add: Add
       index:
+        student_records: Student Records
+      new:
         active_curriculum_not_found: Active curriculum not found.
         active_term_not_found: Active term not found.
         available_courses: Available Courses
         program: Program
         selected_courses: Selected Courses
-        student_records: Student Records
         student_info: Student Info
         student_number: Student Number
         student_record_not_found: Student record not found.

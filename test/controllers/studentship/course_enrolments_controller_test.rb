@@ -9,14 +9,13 @@ module Studentship
     end
 
     test 'should get index' do
-      get index_path, params: { student_id: students(:serhat).id }
+      get course_enrolments_path
       assert_response :success
     end
 
-    private
-
-    def index_path
-      course_enrolments_path
+    test 'should get new' do
+      get new_course_enrolment_path, params: { student_id: students(:serhat).id }
+      assert_response :success
     end
   end
 end

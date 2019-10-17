@@ -2,12 +2,15 @@
 
 module Studentship
   class CourseEnrolmentsController < ApplicationController
-    before_action :set_student
-    before_action :set_curriculum
-    before_action :set_term
+    before_action :set_student, only: :new
+    before_action :set_curriculum, only: :new
+    before_action :set_term, only: :new
 
     def index
       @students = current_user.students.includes(:unit)
+    end
+
+    def new
       @semesters = @curriculum.semesters.where(term: @term.term).order(:sequence)
     end
 
