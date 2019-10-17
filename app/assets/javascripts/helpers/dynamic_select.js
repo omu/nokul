@@ -8,16 +8,17 @@ var DynamicSelect = function (parameters) { // eslint-disable-line no-unused-var
   function init () {
     $.each(parameters, function (k, parameter) {
       $(parameter.el).change(function (event, value = undefined) {
-        var path = generateSourcePath(parameter)
-        var config = {
-          value: value,
-          label_attribute: parameter.label_attribute,
-          value_attribute: parameter.value_attribute,
-          placeholder: parameter.placeholder,
-          target: parameter.target
-        }
         reset($(parameter.reset_selectors))
-        builder(path, config)
+        builder(
+          generateSourcePath(parameter),
+          {
+            value: value,
+            label_attribute: parameter.label_attribute,
+            value_attribute: parameter.value_attribute,
+            targets: parameter.targets || [parameter.target],
+            placeholder: parameter.placeholder
+          }
+        )
       })
       if ('after_initialize' in parameter) parameter.after_initialize()
     })
@@ -25,14 +26,23 @@ var DynamicSelect = function (parameters) { // eslint-disable-line no-unused-var
 
   function builder (path, config) {
     $.getJSON(path, function (response) {
-      var options = new OptionsBuilder(
-        response, config.placeholder, {
-          labelMethod: config.label_attribute,
-          valueMethod: config.value_attribute
-        }
-      )
-      Store[config.target] = options.build()
-      options.setSelectBox($(config.target), config.value)
+      configureForTargets(config)
+
+      $.each(config.targets, function (el, configuration) {
+        if (typeof (configuration) !== 'object') configuration = {}
+
+        var builder = new OptionsBuilder(
+          response,
+          {
+            placeholder: configuration.placeholder || config.placeholder,
+            labelMethod: configuration.label_attribute || config.label_attribute,
+            valueMethod: configuration.value_attribute || config.value_attribute
+          }
+        )
+
+        Store[el] = builder.build()
+        builder.setSelectBox(el, config.value)
+      })
     })
   }
 
@@ -53,26 +63,32 @@ var DynamicSelect = function (parameters) { // eslint-disable-line no-unused-var
     return Store[targetElementSelector]
   }
 
+  function configureForTargets (config) {
+    if (Array.isArray(config.targets)) {
+      var targets = {}
+
+      $.each(config.targets, function (_, element) {
+        targets[element] = {}
+      })
+
+      config.targets = targets
+    }
+  }
+
   return {
     init: init,
     getResultForTargetElement: getResultForTargetElement
   }
 }
 
-var OptionsBuilder = function (datas, placeholder, config = {}) {
+var OptionsBuilder = function (datas, config = {}) {
+  var options = []
+
   function build () {
-    var options = []
+    if (options.length > 0) return options
+    if (config.placeholder) options.push(`<option value="">${config.placeholder}</option>`)
 
-    if (placeholder) {
-      options.push(addPlaceHolder())
-    }
-
-    $.each(datas, function (_, data) {
-      var option = addOption(data)
-      if (option) {
-        options.push(option)
-      }
-    })
+    datas.forEach(function (data) { addOption(data) })
 
     return options
   }
@@ -81,19 +97,13 @@ var OptionsBuilder = function (datas, placeholder, config = {}) {
     var id = data[config.valueMethod || 'id']
     var text = data[config.labelMethod || 'name']
 
-    if (text !== null && text !== '') {
-      return `<option value=${id}>${text}</option>`
-    }
-  }
-
-  function addPlaceHolder () {
-    return `<option value="">${placeholder}</option>`
+    if (text !== null && text !== '') options.push(`<option value=${id}>${text}</option>`)
   }
 
   function setSelectBox (el, value = undefined) {
-    var options = build()
-    el.html(options.join(' '))
-    el.attr('disabled', false)
+    build()
+    $(el).html(options.join(' '))
+    $(el).attr('disabled', false)
     if (value !== undefined) el.val(value)
   }
 

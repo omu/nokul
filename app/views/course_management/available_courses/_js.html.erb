@@ -20,12 +20,18 @@
       },
       {
         el: '#available_course_unit_id',
-        target: '.group_lecturer',
-        params: { 'unit_id': '#available_course_unit_id' },
+        targets: {
+          '#available_course_coordinator_id': {
+            placeholder: <%== t('.coordinator_placeholder').to_json %>
+          },
+          '.group_lecturer': {
+            placeholder: <%== t('.lecturer_placeholder').to_json %>,
+          }
+        },
+        params: { 'unit_id': '#available_course_unit_id'},
         source: '/units/:unit_id/employees/',
         label_attribute: 'full_name',
-        reset_selectors: '#group_lecturer_id',
-        placeholder: <%== t('.lecturer_placeholder').to_json %>
+        reset_selectors: '.group_lecturer, #available_course_coordinator_id',
       },
       {
         el: '#available_course_curriculum_id',
@@ -34,15 +40,6 @@
         source: '/curriculums/:curriculum_id/openable_courses',
         reset_selectors: '#available_course_curriculum_course_id',
         placeholder: <%== t('.course_placeholder').to_json %>
-      },
-      {
-        el: '#available_course_unit_id',
-        target: '#available_course_coordinator_id',
-        params: { 'unit_id': '#available_course_unit_id' },
-        source: '/units/:unit_id/employees/',
-        label_attribute: 'full_name',
-        reset_selectors: '#available_course_coordinator_id',
-        placeholder: <%== t('.coordinator_placeholder').to_json %>
       }
     ]
 

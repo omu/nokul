@@ -6,17 +6,21 @@ author(s):
 Dynamic Select
 ==============
 
-Uygulamanızda `selectbox` türü inputlar kullanarak ilişkisel verileri görüntüleme ve seçebilme işlemlerini hızlı ve
-kolay bir şekilde yapılması sağlayan yardımcı bir js modülüdür.
+Uygulamanızda `selectbox` türü inputlar kullanarak ilişkisel verileri
+görüntüleme ve seçebilme işlemlerini hızlı ve kolay bir şekilde yapılması
+sağlayan yardımcı bir js modülüdür.
 
-Temel görevi yukarıda belirtilen seçim işlemleri yapabilmek için yazmanız gereken `change` event'larını ve `ajax`
-isteklerini parametrik olarak yönetmenizi sağlamaktır.
+Temel görevi yukarıda belirtilen seçim işlemleri yapabilmek için yazmanız
+gereken `change` event'larını ve `ajax` isteklerini parametrik olarak
+yönetmenizi sağlamaktır.
 
-Yukarıda anlatılan görevini örneklememiz gerekirse; sayfanızda `Ülkeler`, `Şehirler` ve `İlçeler` adında 3 adet
-selectbox türünde input'unuzun olduğunu varsayalım. Burada sizinde tahmin edebileceğiniz gibi ülkenin şehirleri,
-şehirlerin ise ilçeleri var. Bir ülke seçildiğinde ona bağlı şehirlerin `Şehirler` selectbox'ın görüntülenmesi
-gerekiyor, bu arada eğer `İlçeler` selectbox'ında veri varsa bununda sıfırlanması gerekiyor, aynı durum il seçimi içinde
-geçerli.
+Yukarıda anlatılan görevini örneklememiz gerekirse; sayfanızda `Ülkeler`,
+`Şehirler` ve `İlçeler` adında 3 adet selectbox türünde input'unuzun olduğunu
+varsayalım. Burada sizinde tahmin edebileceğiniz gibi ülkenin şehirleri,
+şehirlerin ise ilçeleri var. Bir ülke seçildiğinde ona bağlı şehirlerin
+`Şehirler` selectbox'ın görüntülenmesi gerekiyor, bu arada eğer `İlçeler`
+selectbox'ında veri varsa bununda sıfırlanması gerekiyor, aynı durum il seçimi
+içinde geçerli.
 
 Sayfamıza bu işlevselliği kazandırmak için aşağıda karşılaştırmalı iki örnek var.
 
@@ -121,8 +125,9 @@ $(document).ready(function() {
 });
 ```
 
-Yukarıdaki örneklerde de görüldüğü gibi `DynamicSelect` yardımcı js mödülü kullanılarak çok daha az kodla ve anlaşılır
-bir şekilde bu işlevselliği kazandırmış olduk.
+Yukarıdaki örneklerde de görüldüğü gibi `DynamicSelect` yardımcı js mödülü
+kullanılarak çok daha az kodla ve anlaşılır bir şekilde bu işlevselliği
+kazandırmış olduk.
 
 DynamicSelect Parametreleri ve Kullanımı
 ----------------------------------------
@@ -146,14 +151,68 @@ DynamicSelect Parametreleri ve Kullanımı
 }
 ```
 
-- **el** `change` event'ının tanımlanacağı elementin hangisi olacağını belirlemek için kullanılan parametredir.
-  **Doldurulması zorunludur.**
+```js
+{
+  el: '#city_id',
+  targets: {
+    '#district_id': {},
+    '#district_id_one': {
+      placeholder: 'Placeholder One',
+      label_attribute: 'foo',
+      value_attribute: 'bar'
+    }
+  },
+  params: { 'city_id': '#city_id' },
+  source: '/api/cities/:city_id/districts',
+  reset_selectors: '#reset',
+  label_attribute: 'name',
+  value_attribute: 'id',
+  placeholder: 'Placeholder',
+  after_initialize: function(){
+    console.log(this.targets)
+    console.log(this.source)
+  }
+}
+```
 
-- **target** `change` event'ının tetiklenmesi sonrasında bu olaydan etkilenecek elementin belirlenmesini sağlayan
-  parametredir. **Doldurulması zorunludur.**
+- **el** `change` event'ının tanımlanacağı elementin hangisi olacağını
+  belirlemek için kullanılan parametredir. **Doldurulması zorunludur.**
 
-- **params** `source` belirlenirken kullanılmak istenen parametrelerin belirlenmesi sağlayan, object türünde değer alan
-  bir parametredir. `source` alanına parametre geçirmek isteniyorsa **Doldurulması zorunludur.**
+- **target** `change` event'ının tetiklenmesi sonrasında bu olaydan etkilenecek
+  elementin belirlenmesini sağlayan parametredir. **Doldurulması zorunludur.**
+
+- **targets** Tek bir yapılandırma üzerinden birden fazla hedef elementi
+  değiştirmek ve yapılandırmak için kullanılan parametredir. Array veya Object
+  tipinde değer alabilir. Yapılandırma üzerinden `placeholder`,
+  `label_attribute`, `value_attribute` özelliklerini her bir hedef element için
+  özelleştirebilirsiniz. Özelleştirme yapmak istemezseniz genel yapılandırmalar
+  kullanıcaktır. **target doldurulmazsa doldurulması zorunludur.**
+
+  **Örnekler:**
+
+  ```js
+    targets: ['#foo', '#bar']
+  ```
+
+  ```js
+    targets: {
+      '#foo': {
+        placeholder: 'Placeholder for foo',
+        label_attribute: 'foo_label',
+        value_attribute: 'foo_value'
+      },
+      '#bar': {
+        placeholder: 'Placeholder for bar',
+        label_attribute: 'bar_label',
+        value_attribute: 'bar_value'
+      },
+      '.test': {}
+    }
+  ```
+
+- **params** `source` belirlenirken kullanılmak istenen parametrelerin
+  belirlenmesi sağlayan, object türünde değer alan bir parametredir. `source`
+  alanına parametre geçirmek isteniyorsa **Doldurulması zorunludur.**
 
    **Örnek:**
 
@@ -165,11 +224,12 @@ DynamicSelect Parametreleri ve Kullanımı
 
   `source` alanında `:source_alanında_kullanılacak_key` olarak parametre geçirilebilir.
 
-- **source** Ajax isteğin yapılacağı kaynağı belirlemek için kullanılan parametredir. `source` alanına parametre
-  geçirilmek isteniyorsa `params` parametresi kullanılmalıdır. **Doldurulması zorunludur.**
+- **source** Ajax isteğin yapılacağı kaynağı belirlemek için kullanılan
+  parametredir. `source` alanına parametre geçirilmek isteniyorsa `params`
+  parametresi kullanılmalıdır. **Doldurulması zorunludur.**
 
-- **reset_selectors** `change` event esnasında resetlenmesini istediğiniz elementlerin belirlenebildiği parametredir.
-  **Opsiyoneldir.**
+- **reset_selectors** `change` event esnasında resetlenmesini istediğiniz
+  elementlerin belirlenebildiği parametredir. **Opsiyoneldir.**
 
   Resetleme işleminde aşağıdaki kod parçacığı çalıştırılır.
 
@@ -178,26 +238,33 @@ DynamicSelect Parametreleri ve Kullanımı
     elements.attr('disabled', true)
   ```
 
-- **label_attribute** Ajax isteği sonucunda dönen json datasındaki hangi niteliğin option text'i olarak görüntülenmesi
-  gerektiğini belirleyen parametredir. Varsayılan olarak `name` niteliği belirlenmiştir. `name` dışında farklı bir
-  niteliğin görüntülenmesi gerekiyorsa, bu parametre kullanılmalıdır.
+- **label_attribute** Ajax isteği sonucunda dönen json datasındaki hangi
+  niteliğin option text'i olarak görüntülenmesi gerektiğini belirleyen
+  parametredir. Varsayılan olarak `name` niteliği belirlenmiştir. `name` dışında
+  farklı bir niteliğin görüntülenmesi gerekiyorsa, bu parametre kullanılmalıdır.
 
-- **value_attribute** Ajax isteği sonucunda dönen json datasındaki hangi niteliğin option değeri olarak görüntülenmesi
-  gerektiğini belirleyen parametredir. Varsayılan olarak `id` niteliği belirlenmiştir. `id` dışında farklı bir niteliğin
-  option değeri olarak belirlenmesi gerekiyorsa, bu parametre kullanılmalıdır.
+- **value_attribute** Ajax isteği sonucunda dönen json datasındaki hangi
+  niteliğin option değeri olarak görüntülenmesi gerektiğini belirleyen
+  parametredir. Varsayılan olarak `id` niteliği belirlenmiştir. `id` dışında
+  farklı bir niteliğin option değeri olarak belirlenmesi gerekiyorsa, bu
+  parametre kullanılmalıdır.
 
-- **placeholder** `selectbox`'lara placeholder eklemek için kullanılan parametredir. Bu parametreye verilen değer
-  `target` elementi içindir. **Opsiyoneldir.**
+- **placeholder** `selectbox`'lara placeholder eklemek için kullanılan
+  parametredir. Bu parametreye verilen değer `target` elementi içindir.
+  **Opsiyoneldir.**
 
-- **after_initialize** İlgili elemente `change` event'ı tanımlandıktan sonra yapılmasını istediğiniz işlemleri bir
-  fonksiyon halinde belirterek çalıştırmanızı sağlar. `after_initialize` değer olarak her zaman bir fonksiyon bekler.
-  Fonksiyon içerisinde `this` ile parametre değerlerine erişebilirsiniz. **Opsiyoneldir.**
+- **after_initialize** İlgili elemente `change` event'ı tanımlandıktan sonra
+  yapılmasını istediğiniz işlemleri bir fonksiyon halinde belirterek
+  çalıştırmanızı sağlar. `after_initialize` değer olarak her zaman bir fonksiyon
+  bekler. Fonksiyon içerisinde `this` ile parametre değerlerine erişebilirsiniz.
+  **Opsiyoneldir.**
 
 ### Hedef element için oluşturulan sonuca erişme
 
-Bazı durumlarda, daha önceden oluşan event'lar sonucunda elde edilen değerleri farklı
-element veya elementlerin değeri olarak atamak isteyebilirsinz. Bu durumlarda aşağıdaki
-yardımcı metod ile hedef element için önceden oluşan değerlere erişebilirsiniz.
+Bazı durumlarda, daha önceden oluşan event'lar sonucunda elde edilen değerleri
+farklı element veya elementlerin değeri olarak atamak isteyebilirsinz. Bu
+durumlarda aşağıdaki yardımcı metod ile hedef element için önceden oluşan
+değerlere erişebilirsiniz.
 
 ```js
   dynamicSelectHelper.getResultForTargetElement('hedef_element_seçicisi')
