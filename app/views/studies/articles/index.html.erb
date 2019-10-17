@@ -41,7 +41,7 @@
       <div class="card-body">
         <ul class="list-group">
           <% Article.most_recent.each do |article| %>
-            <small><li class="list-group-item"><%= apa_citation(article) %></li></small>
+            <small><li class="list-group-item"><%= article_citation(article) %></li></small>
           <% end %>
         </ul>
       </div>

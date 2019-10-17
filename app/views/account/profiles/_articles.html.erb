@@ -5,7 +5,7 @@
                 class: 'btn btn-secondary btn-sm pull-right' %>
     <h4><%= t('.articles') %></h4>
     <% current_user.articles.active.order(year: :desc).each do |article| %>
-      <small><li class='list-group-item bg-transparent'><%= apa_citation(article) %></li></small>
+      <small><li class='list-group-item bg-transparent'><%= article_citation(article) %></li></small>
     <% end %>
   </div>
 </div>
