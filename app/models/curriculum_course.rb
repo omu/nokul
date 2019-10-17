@@ -13,6 +13,7 @@ class CurriculumCourse < ApplicationRecord
   belongs_to :course
   belongs_to :curriculum_course_group, optional: true
   belongs_to :curriculum_semester
+  has_many :available_courses, dependent: :destroy
 
   # validations
   validates :ects, numericality: { greater_than: 0 }
@@ -20,7 +21,7 @@ class CurriculumCourse < ApplicationRecord
   validates_with CurriculumCourseValidator
 
   # delegates
-  delegate :code, :credit, :course_type, :name, to: :course
+  delegate :code, :credit, :course_type, :name, :theoric, :practice, :laboratory, :program_type, to: :course
 
   # callbacks
   def assign_type

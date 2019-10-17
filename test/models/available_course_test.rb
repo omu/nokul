@@ -9,7 +9,7 @@ class AvailableCourseTest < ActiveSupport::TestCase
   # relations
   belongs_to :academic_term
   belongs_to :coordinator, class_name: 'Employee'
-  belongs_to :course
+  belongs_to :curriculum_course
   belongs_to :curriculum
   belongs_to :unit
   has_many :evaluation_types, class_name: 'CourseEvaluationType', dependent: :destroy
@@ -24,6 +24,6 @@ class AvailableCourseTest < ActiveSupport::TestCase
   test 'uniqueness validations for available_course of a course' do
     fake = available_courses(:ati_fall_2018_2019).dup
     assert_not fake.valid?
-    assert_not_empty fake.errors[:course]
+    assert_not_empty fake.errors[:curriculum_course]
   end
 end

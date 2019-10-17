@@ -9,10 +9,6 @@ class ProspectiveStudentDecoratorTest < ActiveSupport::TestCase
     )
   end
 
-  test 'academic_term method' do
-    assert_equal @prospective_student.academic_term, AcademicTerm.active.last
-  end
-
   test 'registration_documents method' do
     registration_documents = RegistrationDocument.where(
       unit_id:       @prospective_student.unit_id,

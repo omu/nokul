@@ -5,3 +5,10 @@ add_drop_fall_2018_grad:
   end_time: 2018-12-20 23:15:04 +0300
   location: Online
   timezone: Istanbul
+active_online_course_registrations:
+  calendar: active_calendar
+  calendar_event_type: online_course_registrations
+  start_time: <%= Time.current - 5.days %>
+  end_time: <%= Time.current + 5.days %>
+  location: Online
+  timezone: Istanbul

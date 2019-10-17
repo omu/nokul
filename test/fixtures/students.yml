@@ -1,7 +1,7 @@
 serhat:
   student_number: 12345
   user: serhat
-  unit: bilgisayar_muhendisligi_programı
+  unit: bilgisayar_muhendisligi_programi
   permanently_registered: true
 serhat_omu:
   student_number: 98765
@@ -11,5 +11,5 @@ serhat_omu:
 john:
   student_number: 45612
   user: john
-  unit: bilgisayar_muhendisligi
+  unit: bilgisayar_muhendisligi_programi
   permanently_registered: true
