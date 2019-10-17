@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module CourseManagement
+module Studentship
   class CourseEnrolmentsController < ApplicationController
     before_action :set_student
     before_action :set_curriculum

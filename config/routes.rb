@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   draw :location
   draw :patron
   draw :reference
+  draw :studentship
   draw :yoksis
   draw :meksis
 

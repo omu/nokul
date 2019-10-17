@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-module CourseManagement
+module Studentship
   class CourseEnrolmentsControllerTest < ActionDispatch::IntegrationTest
     setup do
       sign_in users(:serhat)
