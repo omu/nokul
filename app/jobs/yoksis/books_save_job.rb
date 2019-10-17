@@ -13,7 +13,7 @@ module Yoksis
     after_perform do |job|
       user = job.arguments.first
 
-      [*@response].each do |book|
+      [@response].flatten.compact.each do |book|
         user_book = user.books.find_or_initialize_by(yoksis_id: book[:yoksis_id])
         user_book.assign_attributes(
           activity:                book[:activity_id],

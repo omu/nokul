@@ -13,7 +13,7 @@ module Yoksis
     after_perform do |job|
       user = job.arguments.first
 
-      [*@response].each do |education|
+      [@response].flatten.compact.each do |education|
         education_information = user.education_informations.find_or_initialize_by(yoksis_id: education[:yoksis_id])
         education_information.assign_attributes(
           activity:    education[:activity_id],
