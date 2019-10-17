@@ -6,7 +6,7 @@ tr:
         addresses: Adresler
         add_address: Hesabına adres ekle veya çıkart
         change: Değiştir
-        change_password: Şifre Değiştir
+        change_password: Parola Değiştir
         email: E-Posta
         general_settings: Genel Profil Ayarları
         identity_informations: Kimlik Bilgileri
@@ -16,7 +16,7 @@ tr:
         personal_informations: Kişisel Bilgiler
         preferences: Tercihler
         profile_preferences: Profil Tercihleri
-        set_password: Hesabını korumak için güvenli bir şifre belirle
+        set_password: Hesabını korumak için güvenli bir parola belirle
         update_email: E-posta adresini güncelle
         update_general_settings: Sosyal medya hesaplarını ve diğer ayarları güncelle
         update_identity_informations: Kimlik bilgilerini görüntüle ve güncelle
