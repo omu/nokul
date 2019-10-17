@@ -3,6 +3,8 @@
 'use strict'
 
 var DynamicSelect = function (parameters) { // eslint-disable-line no-unused-vars
+  var Store = {}
+
   function init () {
     $.each(parameters, function (k, parameter) {
       $(parameter.el).change(function (event, value = undefined) {
@@ -29,6 +31,7 @@ var DynamicSelect = function (parameters) { // eslint-disable-line no-unused-var
           valueMethod: config.value_attribute
         }
       )
+      Store[config.target] = options.build()
       options.setSelectBox($(config.target), config.value)
     })
   }
@@ -46,8 +49,13 @@ var DynamicSelect = function (parameters) { // eslint-disable-line no-unused-var
     elements.attr('disabled', true)
   }
 
+  function getResultForTargetElement (targetElementSelector) {
+    return Store[targetElementSelector]
+  }
+
   return {
-    init: init
+    init: init,
+    getResultForTargetElement: getResultForTargetElement
   }
 }
 

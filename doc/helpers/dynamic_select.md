@@ -192,3 +192,16 @@ DynamicSelect Parametreleri ve Kullanımı
 - **after_initialize** İlgili elemente `change` event'ı tanımlandıktan sonra yapılmasını istediğiniz işlemleri bir
   fonksiyon halinde belirterek çalıştırmanızı sağlar. `after_initialize` değer olarak her zaman bir fonksiyon bekler.
   Fonksiyon içerisinde `this` ile parametre değerlerine erişebilirsiniz. **Opsiyoneldir.**
+
+### Hedef element için oluşturulan sonuca erişme
+
+Bazı durumlarda, daha önceden oluşan event'lar sonucunda elde edilen değerleri farklı
+element veya elementlerin değeri olarak atamak isteyebilirsinz. Bu durumlarda aşağıdaki
+yardımcı metod ile hedef element için önceden oluşan değerlere erişebilirsiniz.
+
+```js
+  dynamicSelectHelper.getResultForTargetElement('hedef_element_seçicisi')
+
+  // Örnek: Daha önceden bir event sonucu oluşan ilçelerin select box için değerleri
+  dynamicSelectHelper.getResultForTargetElement('#district_id')
+```
