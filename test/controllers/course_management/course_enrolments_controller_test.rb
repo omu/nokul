@@ -3,7 +3,7 @@
 require 'test_helper'
 
 module CourseManagement
-  class EnrolledCoursesControllerTest < ActionDispatch::IntegrationTest
+  class CourseEnrolmentsControllerTest < ActionDispatch::IntegrationTest
     setup do
       sign_in users(:serhat)
     end
@@ -16,7 +16,7 @@ module CourseManagement
     private
 
     def index_path
-      enrolled_courses_path
+      course_enrolments_path
     end
   end
 end

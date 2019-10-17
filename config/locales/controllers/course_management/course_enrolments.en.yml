@@ -1,6 +1,6 @@
 en:
   course_management:
-    enrolled_courses:
+    course_enrolments:
       available_courses:
         code: Code
         credit: Credit

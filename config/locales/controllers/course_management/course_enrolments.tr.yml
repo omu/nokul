@@ -1,6 +1,6 @@
 tr:
   course_management:
-    enrolled_courses:
+    course_enrolments:
       available_courses:
         code: Dersin Kodu
         credit: Kredi

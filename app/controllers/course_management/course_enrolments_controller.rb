@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module CourseManagement
-  class EnrolledCoursesController < ApplicationController
+  class CourseEnrolmentsController < ApplicationController
     before_action :set_student
     before_action :set_curriculum
     before_action :set_term

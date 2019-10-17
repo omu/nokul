@@ -22,5 +22,5 @@ scope module: :course_management do
     resources :curriculum_course_groups, except: %i[index show]
   end
 
-  resources :enrolled_courses, only: :index
+  resources :course_enrolments, only: :index
 end
