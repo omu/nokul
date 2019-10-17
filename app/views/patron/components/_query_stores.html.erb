@@ -1,4 +1,4 @@
-<table class='table table-responsive-sm table-striped table-hover'>
+<table class='table table-responsive-sm table-striped'>
   <thead class="thead-dark">
     <tr>
       <th><%= t('name', scope: %i[activerecord attributes patron/query_store]) %></th>
@@ -11,11 +11,16 @@
   </thead>
   <tbody>
     <% query_stores.each do |query_store| %>
-      <tr>
+      <tr class="table-<%= query_store.passive? ? 'danger' : '' %>">
         <td><%= link_to(query_store.name, query_store) %></td>
-        <td><%= query_store.scope_name %></td>
         <td>
-          <% if query_store.include? %>
+          <%= query_store.scope_name %>
+          <% if query_store.passive? %>
+            <p class="font-weight-bold text-danger"><%= t('.not_found_scope') %></p>
+          <% end %>
+        </td>
+        <td>
+          <% if query_store.inclusive? %>
             <%= fa_icon('plus', text: enum_t(query_store, :type), class: 'text-success') %>
           <% else %>
             <%= fa_icon('minus', text: enum_t(query_store, :type), class: 'text-danger') %>

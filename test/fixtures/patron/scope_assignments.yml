@@ -1,7 +1,3 @@
 one:
-  query_store: unit_scope_muhendislik
-  user: serhat
-
-two:
   query_store: unit_scope_egitim
   user: serhat

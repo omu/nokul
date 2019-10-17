@@ -9,8 +9,8 @@ en:
     enums:
       patron/query_store:
         types:
-          exclude: Exclude
-          include: Include
+          exclusive: Exclusive
+          inclusive: Inclusive
   helpers:
     submit:
       patron_query_store:
@@ -22,9 +22,12 @@ en:
         success: Scope query successfully created.
       destroy:
         error: An error occured when deleting the scope query.
-        success: Scope query successfully deleted!
+        success: Scope query successfully deleted
       edit:
         form_title: Update the Scope Query
+        warning: Passive records cannot be edited.
+      filter:
+        value_type_error: Value type is incorrect!
       index:
         card_header:  Scope Queries
         new_query_store_link: Add a New Scope Query
@@ -32,9 +35,15 @@ en:
         smart_search_placeholder: Scope Query Name or Scope Name
       new:
         form_title: Create a Scope Query
+      preview:
+        preview: Preview
       show:
         <<: *query_stores_attributes
+        active: Active
+        parameters: Parameters
+        passive: Passive
         smart_search_placeholder: Search with Model-Specific Keyword
+        status: Status
         users: Users
       update:
         success: Scope query successfully updated.

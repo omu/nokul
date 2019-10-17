@@ -3,6 +3,23 @@
 module Patron
   module Scope
     module Dsl
+      def dynamic_value(method_name, scope:, &block)
+        dynamic_values[method_name] = block
+
+        [*scope].each do |key|
+          dynamic_values[:scopes][key] = [] unless dynamic_values.dig(:scopes, key)
+          dynamic_values[:scopes][key] << method_name
+        end
+
+        define_method("#{method_name}_value") do
+          instance_exec(&block)
+        end
+      end
+
+      def dynamic_values
+        @dynamic_values ||= { scopes: {} }
+      end
+
       def preview_attributes(*attributes)
         @preview_attributes ||= (attributes.presence || filter_attributes).each_with_object({}) do |item, hash|
           case item
@@ -35,7 +52,7 @@ module Patron
       def exist!(attribute)
         return if model.attribute_names.include?(attribute.to_s)
 
-        raise ArgumentError, "Unrecognized attribute: #{attribute}"
+        raise ArgumentError, "Unrecognized attribute: #{attribute} for #{model}"
       end
 
       class Option

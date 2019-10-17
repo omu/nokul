@@ -12,10 +12,13 @@ module Patron
           def set_accessors_validations
             [*scope_klass&.filter_attributes].each do |filter|
               unless skip_empty_for?(filter)
-                validates_presence_of "#{filter}_value".to_sym
-                validates_presence_of "#{filter}_query_type".to_sym
+                prefix = public_send("#{filter}_value_type") || 'static'
+
+                validates_presence_of "#{filter}_#{prefix}_value".to_sym
+                validates_presence_of "#{filter}_#{prefix}_query_type".to_sym
               end
               validates_inclusion_of "#{filter}_skip_empty".to_sym, in: %w[true false]
+              validates_inclusion_of "#{filter}_value_type".to_sym, in: %w[static dynamic]
             end
           end
 

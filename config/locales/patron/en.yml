@@ -1,12 +1,15 @@
 en:
   patron:
-    boolean:
+    skip_empties:
       'true': 'Yes'
       'false': 'No'
-    suffixes:
-      value: Value
-      query_type: Query Type
+    labels:
+      dynamic_query_type: Query Type for Dynamic Value
+      dynamic_value: Dynamic Value
       skip_empty: Ignore If Value Is Empty
+      static_query_type: Query Type for Static Value
+      static_value: Static Value
+      value_type: Value Type
     query_types:
       in: In
       not_in: Not In
@@ -22,6 +25,6 @@ en:
       not_start_with: Not Start With
       not_end_with: Not End With
       not_contain: Not Contain
-    book_scope:
-      id: ID
-      desc: Description
+    value_types:
+      static: Static
+      dynamic: Dynamic

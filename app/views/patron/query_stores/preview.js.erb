@@ -1,0 +1,4 @@
+$("#result").html(
+  "<%= escape_javascript(render 'patron/components/preview', search_path: [:preview, @query_store, user_id: @user.id]) %>"
+);
+$('#loading').hide()

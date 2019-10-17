@@ -6,9 +6,14 @@ require_relative 'patron/utils/i18n.rb'
 require_relative 'patron/scope'
 require_relative 'patron/permission_builder'
 require_relative 'patron/role_builder'
+require_relative 'patron/sudo'
+require_relative 'patron/sudoable'
 
 module Patron
   class Error < StandardError; end
+
+  mattr_accessor :sudo_timeout, default: 15.minutes
+  mattr_accessor :sudo_disable, default: false
 
   module_function
 

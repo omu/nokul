@@ -6,9 +6,10 @@ module Patron
 
     before_action :set_query_store, only: %i[show edit update destroy preview]
     before_action :authorized?
+    sudo only: %i[new edit destroy]
 
     def index
-      @query_stores = pagy_by_search(Patron::QueryStore.active.order(:name, :scope_name))
+      @query_stores = pagy_by_search(Patron::QueryStore.order(:name, :scope_name))
     end
 
     def show
@@ -19,7 +20,9 @@ module Patron
       @query_store = initialize_query_scope(params[:scope])
     end
 
-    def edit; end
+    def edit
+      redirect_to %i[patron query_stores], alert: t('.warning') if @query_store.passive?
+    end
 
     def create
       @query_store = initialize_query_scope(query_store_params[:scope_name])
@@ -40,9 +43,15 @@ module Patron
     end
 
     def preview
-      @scope      = @query_store.scope_klass
-      @records    = @scope.preview_for_records(@query_store)
-      @collection = pagy_by_search(@records)
+      respond_to do |format|
+        format.html
+        format.js do
+          @scope      = @query_store.scope_klass
+          @user       = User.find(params[:user_id])
+          @records    = @scope.preview_for_records(@query_store, user: @user)
+          @collection = pagy_by_search(@records, link_extra: 'data-remote="true"', params: { user_id: @user.id })
+        end
+      end
     end
 
     private
@@ -56,7 +65,7 @@ module Patron
     end
 
     def set_query_store
-      @query_store = Patron::QueryStore.active.find(params[:id])
+      @query_store = Patron::QueryStore.find(params[:id])
     end
 
     def query_store_params

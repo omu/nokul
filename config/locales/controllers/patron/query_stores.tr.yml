@@ -9,8 +9,8 @@ tr:
     enums:
       patron/query_store:
         types:
-          exclude: Hariç Tut
-          include: Dahil Et
+          exclusive: Hariç Tut
+          inclusive: Dahil Et
   helpers:
     submit:
       patron_query_store:
@@ -25,6 +25,9 @@ tr:
         success: Kapsam sorgusu başarıyla silindi.
       edit:
         form_title: Kapsam Sorgusunu Güncelle
+        warning: Pasif kayıtlarda düzenleme yapılamaz.
+      filter:
+        value_type_error: Değer türü hatalı!
       index:
         card_header: Kapsam Sorguları
         new_query_store_link: Yeni Kapsam Sorgusu Ekle
@@ -32,9 +35,15 @@ tr:
         smart_search_placeholder: Kapsam Sorgu Adı veya Kapsam Adı
       new:
         form_title: Kapsam Sorgusu Oluştur
+      preview:
+        preview: Ön İzle
       show:
         <<: *query_stores_attributes
+        active: Aktif
+        parameters: Parametreler
+        passive: Pasif
         smart_search_placeholder: Modele Özgü Anahtar Kelime ile Arama
+        status: Durum
         users: Kullanıcılar
       update:
         success: Kapsam sorgusu başarıyla güncellendi.
