@@ -6,61 +6,60 @@
               class: 'btn btn-outline-info btn-sm' %>
 <% end %>
 
-<div class="alert alert-light" role="alert">
+<div class="alert alert-<%= @query_store.active? ? 'light' : 'danger' %>" role="alert">
   <h3 class='text-center'>
     <%= @query_store.name %>
   </h3>
   <hr>
   <h5 class='text-center'>
-    <p><%= t('.type') %>: </p>
-    <% if @query_store.include? %>
-      <%= fa_icon('plus', text: enum_t(@query_store, :type), class: 'text-success') %>
-    <% else %>
-      <%= fa_icon('minus', text: enum_t(@query_store, :type), class: 'text-danger') %>
-    <% end %>
+    <%= t('.type') %>
+    (
+      <% if @query_store.inclusive? %>
+        <%= fa_icon('plus', text: enum_t(@query_store, :type), class: 'text-success') %>
+      <% else %>
+        <%= fa_icon('minus', text: enum_t(@query_store, :type), class: 'text-danger') %>
+      <% end %>
+    )
+  </h5>
+  <hr>
+  <h5 class='text-center'>
+    <%= t('.status') %>
+    (
+      <% if @query_store.active? %>
+        <%= fa_icon('check', text: t('.active'), class: 'text-success') %>
+      <% else %>
+        <%= fa_icon('close', text: t('.passive'), class: 'text-danger') %>
+      <% end %>
+    )
   </h5>
 </div>
 
 <div class="row">
-  <% @query_store.scope_klass.filters.each do |attribute, option| %>
-    <div class="col-sm-6">
-      <div class="card mb-3">
-        <div class="card-header">
-          <%= Patron::Utils::I18n.translate_filter(option.i18n_key, class_name: @query_store.scope_klass.model) %>
-          <strong>( <%= attribute %> ) </strong>
-        </div>
+  <% if @query_store.active? %>
+    <% @query_store.scope_klass.filters.each do |attribute, options| %>
+      <div class="col-sm-6">
+        <%= render 'filter', attribute: attribute, options: options %>
+      </div>
+    <% end %>
+  <% end %>
 
-        <div class="card-body">
-          <table class="table table-striped">
-            <tr class="table-success">
-              <th width="40%">
-                <%= Patron::Utils::I18n.translate_suffix('value') %>
-              </th>
-              <td>
-                <%= @query_store.public_send("#{attribute}_value") %>
-              </td>
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <%= t('.parameters') %>
+      </div>
+      <div class="card-body">
+        <table class="table table-striped">
+          <% @query_store.parameters.each do |filter, options| %>
+            <tr>
+              <th><%= filter %></th>
+              <td><code><%= options %></code></td>
             </tr>
-            <tr class="table-primary">
-              <th>
-                <%= Patron::Utils::I18n.translate_suffix('query_type') %>
-              </th>
-              <td>
-                <%= Patron::Utils::I18n.translate_query_type(@query_store.public_send("#{attribute}_query_type")) %>
-              </td>
-            </tr>
-            <tr class="table-secondary">
-              <th>
-                <%= Patron::Utils::I18n.translate_suffix('skip_empty') %>
-              </th>
-              <td>
-                <%= Patron::Utils::I18n.translate_skip_empty(@query_store.public_send("#{attribute}_skip_empty")) %>
-              </td>
-            </tr>
-          </table>
-        </div>
+          <% end %>
+        </table>
       </div>
     </div>
-  <% end %>
+  </div>
 </div>
 
 <div class="row">

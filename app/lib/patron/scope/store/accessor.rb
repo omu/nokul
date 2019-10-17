@@ -15,9 +15,12 @@ module Patron
         end
 
         ACCESSORS_SUFFIXES = %w[
-          value
-          query_type
+          dynamic_query_type
+          dynamic_value
           skip_empty
+          static_query_type
+          static_value
+          value_type
         ].freeze
 
         # AccessorDefiner
@@ -47,7 +50,7 @@ module Patron
         # PermittedAttributeDefiner
         module PermittedAttributeDefiner
           def define_permitted_attributes(accessor, suffix, option)
-            permitted_attributes << if suffix == 'value' && option.multiple
+            permitted_attributes << if suffix == 'static_value' && option.multiple
                                       { accessor => [] }
                                     else
                                       accessor
@@ -61,9 +64,19 @@ module Patron
           include AccessorDefiner
           include PermittedAttributeDefiner
 
+          def value_for(attribute, suffix, i18n_method: nil)
+            value = public_send("#{attribute}_#{suffix}")
+
+            return value if i18n_method.nil? || value.blank?
+
+            Patron::Utils::I18n.public_send(i18n_method, value)
+          end
+
           private
 
           def define_dynamic_accessors
+            return if scope_klass.nil?
+
             scope_klass.filters.each do |filter, option|
               ACCESSORS_SUFFIXES.each do |suffix|
                 accessor = "#{filter}_#{suffix}"

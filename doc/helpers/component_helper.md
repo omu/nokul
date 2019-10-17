@@ -13,6 +13,7 @@ Bileşenler
 
 - list_group_tag
 - klass_for_status
+- loading_tag
 
 ### list_group_tag
 
@@ -55,4 +56,30 @@ Durumlara ve class eşleştirme bilgilerine `ComponentHelper::STATUSES` sabit ü
 
 ```html
   <span class="badge badge-danger">Durum</span>
+```
+
+### loading_tag
+
+Ajax isteklerindeki bekleme/yüklenme durumlarında kullanıcıya durum bilgisi
+vermek amacıyla oluşturulan yüklenme göstergesidir. Görüntülenme ve gizlenme
+durumları javascript ile yönetilir.
+
+#### Argümanlar
+
+- **text: (opsiyonel)** Durum alanında gösterilmesi istenen değerdir. Default
+  olarak **t('loading')** değeri belirlenmiştir.
+
+#### Kullanım
+
+```erb
+  <%= loading_tag %>
+
+  // Ajax işlemlerinde yüklenme göstergesinin görüntüle/gizle durumunu yönetem js kodudur.
+  <%= javascript_include_tag 'shared/loading' %>
+
+  <script>
+    // Özel durumlarda yüklenme göstergesini yönetmek için kullanılan yardımcı js metodları
+    $('#loading').show() // loading tag'ı görüntüle
+    $('#loading').hide() // loading tag'ı gizle
+  </script>
 ```

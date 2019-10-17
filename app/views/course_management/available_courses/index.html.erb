@@ -16,7 +16,7 @@
               <th><%= t('.academic_term') %></th>
               <th><%= t('.curriculum') %></th>
               <th><%= t('.course_code') %></th>
-              <th><%= t('.course') %></th>
+              <th><%= t('.curriculum_course') %></th>
               <th><%= t('.group_count') %></th>
               <th><%= t('.quota') %></th>
               <th><%= t('actions') %></th>
@@ -28,8 +28,8 @@
                 <td><%= available_course.unit.names_depth_cache %></td>
                 <td><%= full_name(available_course.academic_term) %></td>
                 <td><%= available_course.curriculum.name %></td>
-                <td><%= available_course.course.code %></td>
-                <td><%= available_course.course.name %></td>
+                <td><%= available_course.code %></td>
+                <td><%= available_course.name %></td>
                 <td><%= available_course.groups_count %></td>
                 <td><%= available_course.groups.sum(:quota) %></td>
                 <td><%= link_to_actions(available_course) %></td>

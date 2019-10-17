@@ -31,4 +31,9 @@ class CalendarTest < ActiveSupport::TestCase
 
   # validations: nested models
   validates_presence_of_nested_model :committee_decisions
+
+  # custom tests
+  test 'check if events exists' do
+    assert_not calendars(:bm_calendar).check_events('online_course_registrations')
+  end
 end

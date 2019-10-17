@@ -42,9 +42,10 @@ module Patron
 
       role = Patron::Role.last
 
-      assert_equal parameters[:name],           role.name
-      assert_equal parameters[:identifier],     role.identifier
-      assert_equal parameters[:permission_ids], role.permission_ids.sort
+      assert_equal parameters[:name], role.name
+      assert_equal parameters[:identifier], role.identifier
+      assert_equal parameters[:permission_ids].sort, role.permission_ids.sort
+
       action_check('create')
       assert_redirected_to patron_role_path(role)
       assert_equal translate('.create.success'), flash[:notice]
@@ -69,9 +70,10 @@ module Patron
 
       role.reload
 
-      assert_equal parameters[:name],           role.name
-      assert_equal parameters[:identifier],     role.identifier
-      assert_equal parameters[:permission_ids], role.permission_ids.sort
+      assert_equal parameters[:name], role.name
+      assert_equal parameters[:identifier], role.identifier
+      assert_equal parameters[:permission_ids].sort, role.permission_ids.sort
+
       action_check('update')
       assert_redirected_to patron_role_path(role)
       assert_equal translate('.update.success'), flash[:notice]

@@ -22,6 +22,7 @@ Rails.application.config.assets.precompile += [
   'pdf.css',
   'shared/cocoon.js',
   'shared/intl_tel_input_validation.js',
+  'shared/loading.js',
   Tenant.configuration.branding.logo.file,
   Tenant.configuration.branding.badge.file
 ].compact

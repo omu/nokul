@@ -5,12 +5,16 @@ module Patron
     extend ActiveSupport::Concern
     include Pagy::Backend
 
-    def pagy_by_search(collection, page_param: :page, pagy_name: :pagy)
+    def pagy_by_search(collection, **options)
+      options = {
+        page_param: :page, pagy_name: :pagy
+      }.merge(options)
+
       term       = params[:term]
       collection = term.present? && collection.respond_to?(:search) ? collection.search(term) : collection
-      pagination = pagy(collection, page_param: page_param)
+      pagination = pagy(collection, options)
 
-      instance_variable_set("@#{pagy_name}", pagination.first)
+      instance_variable_set("@#{options[:pagy_name]}", pagination.first)
       pagination.last
     end
 

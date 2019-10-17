@@ -17,6 +17,7 @@ require 'codacy-coverage' if ENV['CI']
 Codacy::Reporter.start if ENV['CI']
 
 require 'minitest/autorun'
+require 'minitest/focus'
 require_relative '../config/environment'
 require 'rails/test_help'
 
@@ -25,6 +26,8 @@ WebMock.allow_net_connect!
 
 # Test Modules
 require_relative 'models/concerns/reference_test_module'
+
+Patron::Sudo.enabled = false
 
 module ActiveSupport
   class TestCase

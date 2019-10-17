@@ -41,6 +41,11 @@
               <%= fa_icon('book', text: t('.available_courses'), class: 'nav-icon') %>
             <% end %>
           </li>
+          <li class="nav-item">
+            <%= link_to :enrolled_courses, class: 'nav-link' do %>
+              <%= fa_icon('book', text: t('.course_registration'), class: 'nav-icon') %>
+            <% end %>
+          </li>
         </ul>
       </li>
       <li class="nav-item nav-dropdown">

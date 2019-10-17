@@ -13,6 +13,7 @@ class StudentTest < ActiveSupport::TestCase
   belongs_to :unit
   has_one :identity, dependent: :destroy
   has_many :calendars, through: :unit
+  has_many :curriculums, through: :unit
 
   # validations: presence
   validates_presence_of :student_number

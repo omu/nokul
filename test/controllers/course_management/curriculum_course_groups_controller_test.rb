@@ -19,7 +19,7 @@ module CourseManagement
 
     test 'should create curriculum course group' do
       parameters = {
-        course_group_id: @curriculum_semester.available_course_groups.first.id, ects: 5
+        course_group_id: @curriculum_semester.selectable_course_groups.first.id, ects: 5
       }
       assert_difference('CurriculumCourseGroup.count') do
         post curriculum_semester_curriculum_course_groups_path(

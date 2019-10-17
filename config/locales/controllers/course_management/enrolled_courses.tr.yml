@@ -1,0 +1,21 @@
+tr:
+  course_management:
+    enrolled_courses:
+      available_courses:
+        code: Dersin Kodu
+        credit: Kredi
+        ects: AKTS
+        name: Dersin Adı
+        type: Ders Türü
+        add: Ekle
+      index:
+        active_curriculum_not_found: Aktif müfredat bulunamadı.
+        active_term_not_found: Aktif dönem bulunamadı.
+        available_courses: Açılan Dersler
+        program: Program
+        selected_courses: Seçilen Dersler
+        student_records: Öğrencilik Kayıtları
+        student_info: Öğrenci Bilgileri
+        student_number: Öğrenci Numarası
+        student_record_not_found: Öğrencilik kaydı bulunamadı.
+        not_proper_register_event_range: 'Tarih aralığı bugünü kapsayan online ders kayıtlanma aktivitesi bulunmamaktadır.'

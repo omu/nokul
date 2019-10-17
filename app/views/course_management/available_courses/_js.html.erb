@@ -2,7 +2,7 @@
   $(document).ready(function() {
     elements = [
       '#available_course_coordinator_id',
-      '#available_course_course_id',
+      '#available_course_curriculum_course_id',
       '#available_course_curriculum_id',
       '#available_course_unit_id',
     ]
@@ -15,7 +15,7 @@
         target: '#available_course_curriculum_id',
         params: { 'unit_id': '#available_course_unit_id' },
         source: '/units/:unit_id/curriculums/',
-        reset_selectors: '#available_course_curriculum_id, #available_course_course_id',
+        reset_selectors: '#available_course_curriculum_id, #available_course_curriculum_course_id',
         placeholder: <%== t('.curriculum_placeholder').to_json %>
       },
       {
@@ -29,10 +29,10 @@
       },
       {
         el: '#available_course_curriculum_id',
-        target: '#available_course_course_id',
+        target: '#available_course_curriculum_course_id',
         params: { 'curriculum_id': '#available_course_curriculum_id' },
         source: '/curriculums/:curriculum_id/openable_courses',
-        reset_selectors: '#available_course_course_id',
+        reset_selectors: '#available_course_curriculum_course_id',
         placeholder: <%== t('.course_placeholder').to_json %>
       },
       {
