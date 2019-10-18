@@ -26,6 +26,7 @@ class AvailableCourse < ApplicationRecord
   has_many :evaluation_types, class_name: 'CourseEvaluationType', dependent: :destroy
   has_many :groups, class_name: 'AvailableCourseGroup', dependent: :destroy
   has_many :lecturers, through: :groups
+  has_many :course_enrollments, dependent: :destroy
   has_one :course, through: :curriculum_course
   accepts_nested_attributes_for :groups, reject_if: :all_blank, allow_destroy: true
 

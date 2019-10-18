@@ -1237,6 +1237,44 @@ ALTER SEQUENCE public.course_assessment_methods_id_seq OWNED BY public.course_as
 
 
 --
+-- Name: course_enrollments; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.course_enrollments (
+    id bigint NOT NULL,
+    sequence integer,
+    year integer,
+    student_id bigint NOT NULL,
+    available_course_id bigint NOT NULL,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT course_enrollments_sequence_null CHECK ((sequence IS NOT NULL)),
+    CONSTRAINT course_enrollments_sequence_numericality CHECK ((sequence > 0)),
+    CONSTRAINT course_enrollments_year_null CHECK ((year IS NOT NULL)),
+    CONSTRAINT course_enrollments_year_numericality CHECK ((year > 0))
+);
+
+
+--
+-- Name: course_enrollments_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.course_enrollments_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: course_enrollments_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.course_enrollments_id_seq OWNED BY public.course_enrollments.id;
+
+
+--
 -- Name: course_evaluation_types; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -3642,6 +3680,13 @@ ALTER TABLE ONLY public.course_assessment_methods ALTER COLUMN id SET DEFAULT ne
 
 
 --
+-- Name: course_enrollments id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.course_enrollments ALTER COLUMN id SET DEFAULT nextval('public.course_enrollments_id_seq'::regclass);
+
+
+--
 -- Name: course_evaluation_types id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -4352,6 +4397,14 @@ ALTER TABLE ONLY public.countries
 
 ALTER TABLE ONLY public.course_assessment_methods
     ADD CONSTRAINT course_assessment_methods_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: course_enrollments course_enrollments_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.course_enrollments
+    ADD CONSTRAINT course_enrollments_pkey PRIMARY KEY (id);
 
 
 --
@@ -5319,6 +5372,20 @@ CREATE INDEX index_course_assessment_methods_on_course_evaluation_type_id ON pub
 
 
 --
+-- Name: index_course_enrollments_on_available_course_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_course_enrollments_on_available_course_id ON public.course_enrollments USING btree (available_course_id);
+
+
+--
+-- Name: index_course_enrollments_on_student_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_course_enrollments_on_student_id ON public.course_enrollments USING btree (student_id);
+
+
+--
 -- Name: index_course_evaluation_types_on_available_course_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6156,6 +6223,14 @@ ALTER TABLE ONLY public.group_courses
 
 
 --
+-- Name: course_enrollments fk_rails_76acb3bc21; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.course_enrollments
+    ADD CONSTRAINT fk_rails_76acb3bc21 FOREIGN KEY (available_course_id) REFERENCES public.available_courses(id);
+
+
+--
 -- Name: positions fk_rails_78999e7b17; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6217,6 +6292,14 @@ ALTER TABLE ONLY public.curriculum_course_groups
 
 ALTER TABLE ONLY public.units
     ADD CONSTRAINT fk_rails_8ab0da65e4 FOREIGN KEY (unit_instruction_type_id) REFERENCES public.unit_instruction_types(id);
+
+
+--
+-- Name: course_enrollments fk_rails_8ab18ea2b7; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.course_enrollments
+    ADD CONSTRAINT fk_rails_8ab18ea2b7 FOREIGN KEY (student_id) REFERENCES public.students(id);
 
 
 --
@@ -6685,6 +6768,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20191003100000'),
 ('20191003102101'),
 ('20191007074407'),
-('20191008065752');
+('20191008065752'),
+('20191018084942');
 
 

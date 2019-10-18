@@ -14,6 +14,7 @@ class StudentTest < ActiveSupport::TestCase
   has_one :identity, dependent: :destroy
   has_many :calendars, through: :unit
   has_many :curriculums, through: :unit
+  has_many :course_enrollments, dependent: :destroy
 
   # validations: presence
   validates_presence_of :student_number

@@ -15,6 +15,7 @@ class AvailableCourseTest < ActiveSupport::TestCase
   has_many :evaluation_types, class_name: 'CourseEvaluationType', dependent: :destroy
   has_many :groups, class_name: 'AvailableCourseGroup', dependent: :destroy
   has_many :lecturers, through: :groups
+  has_many :course_enrollments, dependent: :destroy
   accepts_nested_attributes_for :groups, allow_destroy: true
 
   # callbacks
