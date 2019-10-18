@@ -8,6 +8,13 @@ en:
         name: Name
         type: Course Type
         add: Add
+      course_enrollments:
+        code: Code
+        credit: Credit
+        ects: ECTS
+        name: Name
+        type: Course Type
+        drop: Drop
       index:
         student_records: Student Records
       new:

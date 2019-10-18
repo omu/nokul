@@ -47,6 +47,9 @@
         </div>
         <div class="card-body">
           <div class="card-body table-responsive">
+            <%= render 'course_enrollments',
+                       klass:   'border-primary',
+                       courses: @student.enrolled_courses %>
           </div>
         </div>
       </div>

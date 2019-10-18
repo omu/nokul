@@ -8,4 +8,10 @@ class StudentDecorator < SimpleDelegator
   def registrable_for_online_course?
     calendar&.check_events('online_course_registrations')
   end
+
+  # TODO
+  def enrolled_courses
+    course_enrollments.includes(:available_course)
+                      .where(year: 1, sequence: 1)
+  end
 end

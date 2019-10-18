@@ -8,6 +8,13 @@ tr:
         name: Dersin Adı
         type: Ders Türü
         add: Ekle
+      course_enrollments:
+        code: Dersin Kodu
+        credit: Kredi
+        ects: AKTS
+        name: Dersin Adı
+        type: Ders Türü
+        drop: Sil
       index:
         student_records: Öğrencilik Kayıtları
       new:

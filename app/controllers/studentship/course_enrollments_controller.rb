@@ -2,7 +2,7 @@
 
 module Studentship
   class CourseEnrollmentsController < ApplicationController
-    before_action :set_student, only: :new
+    before_action :set_student, only: %i[new create]
     before_action :set_curriculum, only: :new
     before_action :set_term, only: :new
 
@@ -12,6 +12,12 @@ module Studentship
 
     def new
       @semesters = @curriculum.semesters.where(term: @term.term).order(:sequence)
+    end
+
+    # TODO
+    def create
+      @student.course_enrollments.create(available_course_id: params[:available_course_id], year: 1, sequence: 1)
+      redirect_to new_course_enrollment_path
     end
 
     private

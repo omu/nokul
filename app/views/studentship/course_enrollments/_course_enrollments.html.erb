@@ -1,0 +1,25 @@
+<table class="table table-responsive-sm table-striped table-hover">
+<thead>
+  <tr class="thead-dark">
+    <th><%= t('.code') %></th>
+    <th><%= t('.name') %></th>
+    <th><%= t('.type') %></th>
+    <th><%= t('.credit') %></th>
+    <th><%= t('.ects') %></th>
+    <th><%= t('actions') %></th>
+  </tr>
+</thead>
+<tbody>
+  <% courses.each do |course_enrollment| %>
+    <tr>
+      <% available_course = course_enrollment.available_course %>
+      <td><%= available_course.code %></td>
+      <td><%= available_course.name %></td>
+      <td><%= enum_t(available_course.curriculum_course, :type) %></td>
+      <td><%= available_course.credit %></td>
+      <td><%= available_course.ects %></td>
+      <td><%= link_to(t('.drop'), course_enrollment_path(course_enrollment), method: :delete, class: 'btn btn-sm btn-danger') %></td>
+    </tr>
+  <% end %>
+</tbody>
+</table>
