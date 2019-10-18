@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Studentship
-  class CourseEnrolmentsController < ApplicationController
+  class CourseEnrollmentsController < ApplicationController
     before_action :set_student, only: :new
     before_action :set_curriculum, only: :new
     before_action :set_term, only: :new

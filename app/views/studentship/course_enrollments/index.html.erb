@@ -11,7 +11,7 @@
       <div class="card-body">
         <div class="list-group list-group-sm">
           <% @students.each do |student| %>
-            <%= link_to new_course_enrolment_url(student_id: student.id), class: 'list-group-item list-group-item-action justify-content-between align-items-center' do %>
+            <%= link_to new_course_enrollment_url(student_id: student.id), class: 'list-group-item list-group-item-action justify-content-between align-items-center' do %>
               <%= student.unit.name %>
             <% end %>
           <% end %>
