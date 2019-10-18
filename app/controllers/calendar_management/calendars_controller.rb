@@ -4,7 +4,7 @@ module CalendarManagement
   class CalendarsController < ApplicationController
     include SearchableModule
 
-    before_action :set_calendar, only: %i[show edit update destroy]
+    before_action :set_calendar, only: %i[show edit update destroy duplicate units]
 
     def index
       @calendars = pagy_by_search(Calendar.includes(:academic_term).order(created_at: :desc))
@@ -43,23 +43,20 @@ module CalendarManagement
     end
 
     def duplicate
-      calendar = Calendar.find(params[:calendar_id])
+      duplicate_record = AcademicCalendars::DuplicateService.call(@calendar)
 
-      duplicate_record = AcademicCalendars::DuplicateCalendarService.new(calendar, 'name').duplicate
-      redirect_to(:calendars, alert: t('.warning')) && return unless duplicate_record
-
-      AcademicCalendars::DuplicateEventsService.new(calendar, duplicate_record)
       redirect_to([:edit, duplicate_record], notice: t('.success'))
+    rescue ActiveRecord::RecordInvalid
+      redirect_to(:calendars, alert: t('.warning'))
     end
 
-    def units
-      @calendar = Calendar.find(params[:calendar_id])
-    end
+    def units; end
 
     private
 
     def set_calendar
-      @calendar = Calendar.includes(calendar_events: [:calendar_event_type]).find(params[:id])
+      @calendar = Calendar.includes(calendar_events: [:calendar_event_type])
+                          .find(params[:id])
     end
 
     def calendar_params
