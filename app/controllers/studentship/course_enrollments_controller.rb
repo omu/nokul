@@ -2,7 +2,8 @@
 
 module Studentship
   class CourseEnrollmentsController < ApplicationController
-    before_action :set_student, only: %i[new create]
+    before_action :set_student, only: %i[new create destroy]
+    before_action :set_course_enrollment, only: :destroy
     before_action :set_curriculum, only: :new
     before_action :set_term, only: :new
 
@@ -20,6 +21,12 @@ module Studentship
       redirect_to new_course_enrollment_path
     end
 
+    # TODO
+    def destroy
+      @course_enrollment.destroy
+      redirect_to new_course_enrollment_path
+    end
+
     private
 
     def redirect_with(message)
@@ -34,6 +41,10 @@ module Studentship
       redirect_with('student_record_not_found') unless student
 
       @student = StudentDecorator.new(student)
+    end
+
+    def set_course_enrollment
+      @course_enrollment = @student.course_enrollments.find(params[:id])
     end
 
     def set_curriculum
