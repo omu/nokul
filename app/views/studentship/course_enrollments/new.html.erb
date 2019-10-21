@@ -33,9 +33,9 @@
         <div class="card-header">
           <strong><%= t('.available_courses') %></strong>
         </div>
-        <% @semesters.each do |semester| %>
+        <% @student.course_catalog.each do |semester, courses| %>
           <div class="card-body">
-            <%= render 'semesters', semester: semester %>
+            <%= render 'semesters', semester: semester, courses: courses %>
           </div>
         <% end %>
       </div>

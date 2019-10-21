@@ -4,16 +4,12 @@ module Studentship
   class CourseEnrollmentsController < ApplicationController
     before_action :set_student, only: %i[new create destroy]
     before_action :set_course_enrollment, only: :destroy
-    before_action :set_curriculum, only: :new
-    before_action :set_term, only: :new
 
     def index
       @students = current_user.students.includes(:unit)
     end
 
-    def new
-      @semesters = @curriculum.semesters.where(term: @term.term).order(:sequence)
-    end
+    def new; end
 
     # TODO
     def create
@@ -45,16 +41,6 @@ module Studentship
 
     def set_course_enrollment
       @course_enrollment = @student.course_enrollments.find(params[:id])
-    end
-
-    def set_curriculum
-      @curriculum = @student.curriculums.active.last
-      redirect_with('active_curriculum_not_found') unless @curriculum
-    end
-
-    def set_term
-      @term = AcademicTerm.active.last
-      redirect_with('active_term_not_found') unless @term
     end
   end
 end

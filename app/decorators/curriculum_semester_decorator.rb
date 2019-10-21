@@ -19,12 +19,6 @@ class CurriculumSemesterDecorator < SimpleDelegator
     end
   end
 
-  def course_catalog
-    available_courses.includes(curriculum_course: :course)
-                     .where(academic_term: term)
-                     .order('courses.name')
-  end
-
   private
 
   def merge(collection, appends)
