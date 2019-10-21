@@ -13,7 +13,7 @@ module Studentship
 
     # TODO
     def create
-      @student.course_enrollments.create(available_course_id: params[:available_course_id], year: 1, sequence: 1)
+      @student.course_enrollments.create(available_course_id: params[:available_course_id], semester: @student.semester)
       redirect_to new_course_enrollment_path
     end
 

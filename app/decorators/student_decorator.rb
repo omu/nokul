@@ -17,14 +17,14 @@ class StudentDecorator < SimpleDelegator
   # TODO
   def enrolled_courses
     course_enrollments.includes(:available_course)
-                      .where(year: 1, sequence: 1)
+                      .where(semester: semester)
   end
-
-  private
 
   def active_term
     AcademicTerm.active.last
   end
+
+  private
 
   def curriculum
     curriculums.active.last
