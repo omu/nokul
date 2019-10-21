@@ -25,7 +25,7 @@ tr:
         articles_count: Makale Sayısı
         country: Ülke
         current_password: Mevcut Parola
-        email: E-mail Adresi
+        email: E-posta Adresi
         id_number: Kimlik Numarası
         mobile_phone: Cep Telefonu
         password: Parola
@@ -88,7 +88,7 @@ tr:
       identities: Kimlik Bilgileri
       last_name: Soyadı
       new_user_link: Yeni Kullanıcı Oluştur
-      smart_search_placeholder: TC/YU numarası, e-mail adresi, ad veya soyad
+      smart_search_placeholder: TC/YU numarası, e-posta adresi, ad veya soyad
     new:
       form_title: Hesap Oluştur
     save_address_from_mernis:
