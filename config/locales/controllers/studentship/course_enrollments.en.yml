@@ -23,6 +23,8 @@ en:
         available_courses: Available Courses
         program: Program
         selected_courses: Selected Courses
+        selected_ects: Selected ECTS
+        selectable_ects: Selectable ECTS
         student_info: Student Info
         student_number: Student Number
         student_record_not_found: Student record not found.

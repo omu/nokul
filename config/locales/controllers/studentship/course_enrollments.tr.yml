@@ -23,6 +23,8 @@ tr:
         available_courses: Açılan Dersler
         program: Program
         selected_courses: Seçilen Dersler
+        selected_ects: Seçilen AKTS
+        selectable_ects: Seçilebilecek AKTS
         student_info: Öğrenci Bilgileri
         student_number: Öğrenci Numarası
         student_record_not_found: Öğrencilik kaydı bulunamadı.

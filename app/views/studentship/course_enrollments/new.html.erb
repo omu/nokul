@@ -32,8 +32,11 @@
       <div class="card border-default mb-3">
         <div class="card-header">
           <strong><%= t('.available_courses') %></strong>
+          <div class="float-right">
+            <strong><%= "#{t('.selectable_ects')}: #{@student.selectable_ects}" %></strong>
+          </div>
         </div>
-        <% @student.course_catalog.each do |semester, courses| %>
+        <% @student.selectable_courses.each do |semester, courses| %>
           <div class="card-body">
             <%= render 'semesters', semester: semester, courses: courses %>
           </div>
@@ -44,12 +47,15 @@
       <div class="card border-success mb-3">
         <div class="card-header">
           <strong><%= t('.selected_courses') %></strong>
+          <div class="float-right">
+            <strong><%= "#{t('.selected_ects')}: #{@student.selected_ects}" %></strong>
+          </div>
         </div>
         <div class="card-body">
           <div class="card-body table-responsive">
             <%= render 'course_enrollments',
                        klass:   'border-primary',
-                       courses: @student.enrolled_courses %>
+                       courses: @student.selected_courses %>
           </div>
         </div>
       </div>
