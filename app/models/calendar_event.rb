@@ -14,7 +14,7 @@ class CalendarEvent < ApplicationRecord
   validates :end_time, datetime: {
     after:         :start_time,
     before_or_eql: ->(record) { record.calendar.academic_term.end_of_term }
-  }
+  }, if: :end_time?
 
   validates :timezone, presence: true, length: { maximum: 255 }
   validates :visible, inclusion: { in: [true, false] }

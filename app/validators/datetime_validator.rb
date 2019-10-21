@@ -29,9 +29,11 @@ class DatetimeValidator < ActiveModel::EachValidator
     def check!(record)
       return if check?(record)
 
+      value = I18n.t(:comparison_value, scope: %i[validators datetime]) if value.blank?
+
       record.errors.add(
         attribute,
-        message || I18n.t(method, scope: %i[validators datetime], restriction: I18n.l(value))
+        message || I18n.t(method, scope: %i[validators datetime], restriction: value)
       )
       false
     end
@@ -72,9 +74,11 @@ class DatetimeValidator < ActiveModel::EachValidator
   end
 
   def validate_each(record, attribute, value)
-    record.errors.add attribute, :presence && return if value.blank?
-
-    checkers[attribute].each { |checker| checker.check!(record) }
+    if value.blank?
+      record.errors.add attribute, :blank
+    else
+      checkers[attribute].each { |checker| checker.check!(record) }
+    end
   end
 
   private

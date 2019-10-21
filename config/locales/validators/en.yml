@@ -16,6 +16,7 @@ en:
       after: must be after than %{restriction}
       before_or_eql: must be equal or before than %{restriction}
       before: must be before than %{restriction}
+      comparison_value: Comparison value
       eql: must be eql %{restriction}
     duty:
       active_and_tenure: This user already has an active and tenure duty. Edit the existing duty or make it passive in order to create a new one.
