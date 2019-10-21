@@ -14,7 +14,7 @@ tr:
         ects: AKTS
         name: Dersin Adı
         type: Ders Türü
-        drop: Sil
+        drop: Çıkar
       index:
         student_records: Öğrencilik Kayıtları
       new:
