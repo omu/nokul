@@ -13,7 +13,7 @@ tr:
         not_archived: Arşivlenmemiş
         smart_search_placeholder: Personel kimlik numarası, sicil numarası, adı veya soyadı
         staff_number: Personel Sicil No
-        title: Ünvan
+        title: Unvan
         unit: Atandığı Birim
     enums:
       prospective_employee:

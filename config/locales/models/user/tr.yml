@@ -13,7 +13,7 @@ tr:
         id_number: Kimlik Numarası
         is_active: Aktif mi?
         staff_number: Personel Sicil No
-        title_id: Ünvan
+        title_id: Unvan
         user_id: Kullanıcı
       position: &position_attributes
         administrative_function_id: Görev
@@ -72,7 +72,7 @@ tr:
       <<: *employee_attributes
       <<: *duty_attributes
       <<: *position_attributes
-      title: Ünvan
+      title: Unvan
     identities:
       create_from_mernis: MERNİS'ten Oluştur
       informal_identity: Diğer Kimliğiniz
