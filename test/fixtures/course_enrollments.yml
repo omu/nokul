@@ -1,5 +1,4 @@
 elective_course:
   student: serhat
   available_course: available_elective_course
-  year: 1
-  sequence: 1
+  semester: 1
