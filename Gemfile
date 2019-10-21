@@ -24,7 +24,7 @@ gem 'ancestry'
 # active-storage
 gem 'aws-sdk-s3', require: false
 gem 'image_processing', '~> 1.2'
-gem 'ruby-vips', '~> 2.0.14'
+gem 'ruby-vips', '~> 2.0.16'
 
 # authentication
 gem 'authy'

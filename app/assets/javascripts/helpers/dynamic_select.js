@@ -47,8 +47,8 @@ var DynamicSelect = function (parameters) { // eslint-disable-line no-unused-var
   }
 
   function generateSourcePath (parameter) {
-    var source = parameter['source']
-    $.each(parameter['params'], function (key, selector) {
+    var source = parameter.source
+    $.each(parameter.params, function (key, selector) {
       source = source.replace(`:${key}`, $(selector).val())
     })
     return source
