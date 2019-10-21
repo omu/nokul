@@ -3082,9 +3082,13 @@ CREATE TABLE public.students (
     unit_id bigint NOT NULL,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
+    semester integer,
+    year integer,
     CONSTRAINT students_permanently_registered_null CHECK ((permanently_registered IS NOT NULL)),
+    CONSTRAINT students_semester_numericality CHECK ((semester > 0)),
     CONSTRAINT students_student_number_length CHECK ((length((student_number)::text) <= 255)),
-    CONSTRAINT students_student_number_presence CHECK (((student_number IS NOT NULL) AND ((student_number)::text !~ '^\s*$'::text)))
+    CONSTRAINT students_student_number_presence CHECK (((student_number IS NOT NULL) AND ((student_number)::text !~ '^\s*$'::text))),
+    CONSTRAINT students_year_numericality CHECK ((year >= 0))
 );
 
 
@@ -6766,6 +6770,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20191003102101'),
 ('20191007074407'),
 ('20191008065752'),
-('20191018084942');
+('20191018084942'),
+('20191021073002');
 
 
