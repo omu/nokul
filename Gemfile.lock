@@ -296,7 +296,7 @@ GEM
       actionpack (>= 5.0)
       railties (>= 5.0)
     rollbar (2.22.1)
-    rubocop (0.75.0)
+    rubocop (0.75.1)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.6)
