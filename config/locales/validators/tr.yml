@@ -9,10 +9,6 @@ tr:
       max_informal: En fazla %{limit} tane adres ekleyebilirsiniz.
     available_course_lecturer:
       coordinator: Açılan ders grubunun bir koordinatörü olmalı.
-    calendar_event:
-      invalid_time_range: Etkinlik bitiş tarihi başlangıç tarihinden önceki bir tarih olarak seçilemez.
-      invalid_start_time: Etkinlik akademik dönemin başlama tarihinden önce oluşturulamaz.
-      invalid_end_time: Etkinlik akademik dönemin bitiş tarihinden sonra oluşturulamaz.
     course_evaluation_type:
       invalid_percentages: Ölçme kriterlerinin yüzdelik toplamı 100'e eşit olmalı.
     datetime:
