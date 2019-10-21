@@ -7,6 +7,5 @@ class CourseEnrollment < ApplicationRecord
 
   # validations
   validates :student, uniqueness: { scope: :available_course }
-  validates :sequence, numericality: { greater_than: 0 }
-  validates :year, numericality: { greater_than: 0 }
+  validates :semester, numericality: { greater_than: 0 }
 end
