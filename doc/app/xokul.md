@@ -17,6 +17,20 @@ bin/rails credentials:edit
 
 API yanıtları için [şuraya](https://github.com/omu/xokul/tree/dev/app/serializers) bakabilirsiniz.
 
+**Not:** Tüm Xokul metotları aşağıdaki durumlar oluştuğunda `nil` dönecektir. Bununla ilgili log düşülmektedir. Detaylı
+bilgi için Rails loglarını takip edin.
+
+- REST istemcisi boş gövde (body) döndüğünde (ki bu `204 "No Content"` hata koduna sahiptir)
+- REST istemcisi `200 "HTTP OK"` dışında bir yanıt döndürdüğünde
+- Yanıt gövdesi JSON ile "parse" edilirken bir hata meydana geldiğinde
+
+Yukarıdaki durumu programatik olarak şu şekilde kullanılabilir:
+
+```ruby
+resp = Xokul::Meksis.buildings
+resp.each(&:puts) if resp
+```
+
 Meksis
 ------
 

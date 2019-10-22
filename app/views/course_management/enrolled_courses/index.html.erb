@@ -1,0 +1,75 @@
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class="alert alert-light">
+      <%= link_to_back root_path %>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'align-justify' %><strong><%= t('.student_records') %></strong>
+      </div>
+      <div class="card-body">
+        <div class="list-group list-group-sm">
+          <% @students.each do |student| %>
+            <%= link_to enrolled_courses_url(student_id: student.id), class: 'list-group-item list-group-item-action justify-content-between align-items-center' do %>
+              <%= student.unit.name %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'user' %><strong><%= t('.student_info') %></strong>
+      </div>
+      <div class="card-body table-responsive">
+        <table class='table table-bordered table-hover'>
+          <tbody>
+            <tr>
+              <th><%= t('.student_number') %></th>
+              <td><%= @student.student_number %></td>
+            </tr>
+            <tr>
+              <th><%= t('.program') %></th>
+              <td><%= @student.unit.name %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% if @student.registrable_for_online_course? %>
+  <div class='row'>
+    <div class="col-sm-6">
+      <div class="card border-default mb-3">
+        <div class="card-header">
+          <strong><%= t('.available_courses') %></strong>
+        </div>
+        <% @semesters.each do |semester| %>
+          <div class="card-body">
+            <%= render 'semesters', semester: semester %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card border-success mb-3">
+        <div class="card-header">
+          <strong><%= t('.selected_courses') %></strong>
+        </div>
+        <div class="card-body">
+          <div class="card-body table-responsive">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <div class="alert alert-danger" role="alert">
+    <%= fa_icon 'exclamation-triangle', class: 'fa-2x' %>
+    <strong><%= t('.not_proper_register_event_range') %></strong>
+  </div>
+<% end %>

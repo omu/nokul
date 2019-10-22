@@ -1,0 +1,67 @@
+<%= action_bar do %>
+  <%= link_to_back :back %>
+<% end %>
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'street-view' %> <%= t('.details') %>
+        <div class="float-right">
+          <%= link_to t('.buildings'), meksis_buildings_path, class: 'btn btn-outline-info btn-sm' %>
+          <%= link_to_edit [:edit, :meksis, @building] %>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-sm-3">
+                <div id="map" style="height: 500px;"></div>
+                <script type="text/javascript">
+                  var map;
+                  function initMap() {
+                    var coordinates = { lat: <%= @building.latitude %>, lng: <%= @building.longitude %> };
+                    map = new google.maps.Map(document.getElementById('map'), {
+                      center: coordinates,
+                      zoom: 17
+                    });
+                    var marker = new google.maps.Marker({
+                      position: coordinates,
+                      map: map,
+                    });
+                  }
+                </script>
+                <script type="text/javascript" async defer
+                        src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.application.credentials.google_maps_api_key %>&callback=initMap">
+                </script>
+              </div>
+              <div class="col-sm-9">
+                <table class="table table-responsive-sm">
+                  <tbody>
+                    <tr>
+                      <td><%= t('.name') %></td>
+                      <td><%= @building.name %></td>
+                    </tr>
+                    <tr>
+                      <td><%= t('.unit') %></td>
+                      <td><%= @building.unit.name %></td>
+                    </tr>
+                    <tr>
+                      <td><%= t('.code') %></td>
+                      <td><%= @building.code %></td>
+                    </tr>
+                    <tr>
+                      <td><%= t('actions') %></td>
+                      <td><%= link_to_show t('.classrooms'), [:meksis, @building, :classrooms] %></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

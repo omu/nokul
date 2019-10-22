@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Ldap
+module LDAP
   class Client
     include Singleton
 
@@ -46,15 +46,15 @@ module Ldap
 
       # entity: a record of the LdapEntity
       # Usage:
-      #  Ldap::Client.create(entity)
+      #  LDAP::Client.create(entity)
       def create(entity)
         run!(:add, dn: entity.dn, attributes: entity.values)
       end
 
       # entity: a record of the LdapEntity
       # Usage:
-      #  Ldap::Client.update(entity)
-      #  Ldap::Client.create_or_update(entity)
+      #  LDAP::Client.update(entity)
+      #  LDAP::Client.create_or_update(entity)
       def update(entity)
         return create(entity) unless exists?(entity)
 
@@ -68,13 +68,13 @@ module Ldap
 
       # entity: a record of the LdapEntity
       # Usage:
-      #  Ldap::Client.destroy(entity)
+      #  LDAP::Client.destroy(entity)
       def destroy(entity)
         run!(:delete, dn: entity.dn) if exists?(entity)
       end
 
       # Usage:
-      #   Ldap::Client.where('dc=test, dc=com, dc=tr',
+      #   LDAP::Client.where('dc=test, dc=com, dc=tr',
       #                      filter: Net::LDAP::Filter.eq('uid', 'Foo'))
       def where(base, filter:, **options)
         base = base.split(',')
@@ -85,7 +85,7 @@ module Ldap
       end
 
       # Usage:
-      #   Ldap::Client.find_by('dc=test, dc=com, dc=tr', uid: '11223344550')
+      #   LDAP::Client.find_by('dc=test, dc=com, dc=tr', uid: '11223344550')
       def find_by(base, **queries)
         queries = queries.map    { |key, value| Net::LDAP::Filter.eq(key, value) }
                          .inject { |first, last| first | last }
@@ -95,7 +95,7 @@ module Ldap
 
       # entity: a record of the LdapEntity
       # Usage:
-      #  Ldap::Client.exists?(entity)
+      #  LDAP::Client.exists?(entity)
       def exists?(entity)
         response = find_by(entity.dn, uid: entity.uid)
         response.present?

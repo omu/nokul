@@ -7,7 +7,7 @@
 
     <div class='card'>
       <div class='card-header'>
-         <%= fa_icon 'book' %><strong><%= @available_course.course.name %></strong>
+         <%= fa_icon 'book' %><strong><%= @available_course.name %></strong>
       </div>
       <div class='card-body table-responsive'>
         <table class='table table-bordered table-hover'>
@@ -19,7 +19,7 @@
               <td><%= @available_course.curriculum_name %></td>
             </tr>
             <tr>
-              <th><%= t('.course') %></th>
+              <th><%= t('.curriculum_course') %></th>
               <td>
                 <%= @available_course.name %>
                 <span class='badge badge-primary'>T: <%= @available_course.theoric %></span>

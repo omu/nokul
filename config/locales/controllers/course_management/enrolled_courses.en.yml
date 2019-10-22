@@ -1,0 +1,21 @@
+en:
+  course_management:
+    enrolled_courses:
+      available_courses:
+        code: Code
+        credit: Credit
+        ects: ECTS
+        name: Name
+        type: Course Type
+        add: Add
+      index:
+        active_curriculum_not_found: Active curriculum not found.
+        active_term_not_found: Active term not found.
+        available_courses: Available Courses
+        program: Program
+        selected_courses: Selected Courses
+        student_records: Student Records
+        student_info: Student Info
+        student_number: Student Number
+        student_record_not_found: Student record not found.
+        not_proper_register_event_range: 'There is no online course registration activity covering the date range today.'

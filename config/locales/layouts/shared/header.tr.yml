@@ -1,0 +1,7 @@
+tr:
+  layouts:
+    shared:
+      header:
+        account_settings: Hesap Ayarları
+        logout: Çıkış Yap
+        profile_settings: Profiliniz

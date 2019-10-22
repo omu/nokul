@@ -34,7 +34,7 @@ module FirstRegistration
         first_name:               'Test First Name',
         last_name:                'TEST SURNAME',
         gender:                   'male',
-        unit_id:                  units(:bilgisayar_muhendisligi).id,
+        unit_id:                  units(:bilgisayar_muhendisligi_programi).id,
         academic_term_id:         academic_term.id,
         expiry_date:              academic_term.end_of_term,
         student_entrance_type_id: StudentEntranceType.find_by(name: 'ÖSYS').id
@@ -92,7 +92,7 @@ module FirstRegistration
       assert_equal 'register', @controller.action_name
       assert_equal @prospective_student.email, user.email
       assert_equal user, student.user
-      assert_equal true, student.permanently_registered
+      assert(student.permanently_registered)
       assert_redirected_to :prospective_students
       assert_equal translate('.register.success'), flash[:notice]
     end
@@ -114,7 +114,7 @@ module FirstRegistration
       assert_equal 'register', @controller.action_name
       assert_equal john.email, user.email
       assert_equal user, student.user
-      assert_equal false, student.permanently_registered
+      assert_not(student.permanently_registered)
       assert_redirected_to :prospective_students
       assert_equal translate('.register.success'), flash[:notice]
     end

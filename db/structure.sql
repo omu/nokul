@@ -5,12 +5,77 @@ SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
+SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
 SET default_tablespace = '';
 
 SET default_with_oids = false;
+
+--
+-- Name: academic_credentials; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.academic_credentials (
+    id bigint NOT NULL,
+    activity integer,
+    country_id bigint,
+    department character varying,
+    discipline character varying,
+    end_year integer,
+    faculty character varying,
+    last_update timestamp without time zone,
+    location integer,
+    profession_name character varying,
+    scientific_field character varying,
+    start_year integer,
+    status integer,
+    title character varying,
+    unit_id integer,
+    university character varying,
+    user_id bigint NOT NULL,
+    yoksis_id integer,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT academic_credentials_activity_numericality CHECK ((activity >= 0)),
+    CONSTRAINT academic_credentials_department_length CHECK ((length((department)::text) <= 255)),
+    CONSTRAINT academic_credentials_discipline_length CHECK ((length((discipline)::text) <= 255)),
+    CONSTRAINT academic_credentials_end_year_numericality CHECK (((end_year >= 1950) AND (end_year <= 2050))),
+    CONSTRAINT academic_credentials_faculty_length CHECK ((length((faculty)::text) <= 255)),
+    CONSTRAINT academic_credentials_location_null CHECK ((location IS NOT NULL)),
+    CONSTRAINT academic_credentials_location_numericality CHECK ((location >= 0)),
+    CONSTRAINT academic_credentials_profession_name_length CHECK ((length((profession_name)::text) <= 255)),
+    CONSTRAINT academic_credentials_scientific_field_length CHECK ((length((scientific_field)::text) <= 255)),
+    CONSTRAINT academic_credentials_start_year_null CHECK ((start_year IS NOT NULL)),
+    CONSTRAINT academic_credentials_start_year_numericality CHECK (((start_year >= 1950) AND (start_year <= 2050))),
+    CONSTRAINT academic_credentials_status_numericality CHECK ((status >= 0)),
+    CONSTRAINT academic_credentials_title_length CHECK ((length((title)::text) <= 255)),
+    CONSTRAINT academic_credentials_unit_id_numericality CHECK ((unit_id >= 0)),
+    CONSTRAINT academic_credentials_university_length CHECK ((length((university)::text) <= 255)),
+    CONSTRAINT academic_credentials_yoksis_id_null CHECK ((yoksis_id IS NOT NULL)),
+    CONSTRAINT academic_credentials_yoksis_id_numericality CHECK ((yoksis_id >= 0))
+);
+
+
+--
+-- Name: academic_credentials_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.academic_credentials_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: academic_credentials_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.academic_credentials_id_seq OWNED BY public.academic_credentials.id;
+
 
 --
 -- Name: academic_terms; Type: TABLE; Schema: public; Owner: -
@@ -521,13 +586,13 @@ CREATE TABLE public.available_courses (
     id bigint NOT NULL,
     academic_term_id bigint NOT NULL,
     curriculum_id bigint NOT NULL,
-    course_id bigint NOT NULL,
     unit_id bigint NOT NULL,
     coordinator_id bigint,
     groups_count integer DEFAULT 0,
     assessments_approved boolean DEFAULT false,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
+    curriculum_course_id bigint NOT NULL,
     CONSTRAINT available_courses_assessments_approved_null CHECK ((assessments_approved IS NOT NULL)),
     CONSTRAINT available_courses_groups_count_numericality CHECK ((groups_count >= 0))
 );
@@ -550,6 +615,137 @@ CREATE SEQUENCE public.available_courses_id_seq
 --
 
 ALTER SEQUENCE public.available_courses_id_seq OWNED BY public.available_courses.id;
+
+
+--
+-- Name: books; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.books (
+    id bigint NOT NULL,
+    access_link text,
+    activity integer,
+    author_id integer,
+    authors character varying,
+    chapter_first_page integer,
+    chapter_last_page integer,
+    chapter_name character varying,
+    city character varying,
+    contribution_rate integer,
+    country_id bigint,
+    discipline character varying,
+    editor_name character varying,
+    incentive_point double precision,
+    isbn character varying,
+    keywords text,
+    language_of_publication character varying,
+    last_update timestamp without time zone,
+    name character varying,
+    number_of_authors integer,
+    number_of_copy integer,
+    number_of_page integer,
+    publisher character varying,
+    scope integer,
+    type integer,
+    type_of_release integer,
+    user_id bigint NOT NULL,
+    year integer,
+    yoksis_id integer,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT books_access_link_length CHECK ((length(access_link) <= 2000)),
+    CONSTRAINT books_activity_null CHECK ((activity IS NOT NULL)),
+    CONSTRAINT books_activity_numericality CHECK ((activity >= 0)),
+    CONSTRAINT books_author_id_numericality CHECK ((author_id >= 0)),
+    CONSTRAINT books_authors_length CHECK ((length((authors)::text) <= 255)),
+    CONSTRAINT books_chapter_first_page_numericality CHECK ((chapter_first_page >= 0)),
+    CONSTRAINT books_chapter_last_page_numericality CHECK ((chapter_last_page >= 0)),
+    CONSTRAINT books_chapter_name_length CHECK ((length((chapter_name)::text) <= 255)),
+    CONSTRAINT books_city_length CHECK ((length((city)::text) <= 255)),
+    CONSTRAINT books_contribution_rate_numericality CHECK ((contribution_rate >= 0)),
+    CONSTRAINT books_discipline_length CHECK ((length((discipline)::text) <= 255)),
+    CONSTRAINT books_editor_name_length CHECK ((length((editor_name)::text) <= 255)),
+    CONSTRAINT books_incentive_point_numericality CHECK ((incentive_point >= (0)::double precision)),
+    CONSTRAINT books_isbn_length CHECK ((length((isbn)::text) <= 255)),
+    CONSTRAINT books_keywords_length CHECK ((length(keywords) <= 4000)),
+    CONSTRAINT books_language_of_publication_length CHECK ((length((language_of_publication)::text) <= 255)),
+    CONSTRAINT books_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT books_number_of_authors_numericality CHECK ((number_of_authors >= 0)),
+    CONSTRAINT books_number_of_copy_numericality CHECK ((number_of_copy >= 0)),
+    CONSTRAINT books_number_of_page_numericality CHECK ((number_of_page >= 0)),
+    CONSTRAINT books_publisher_length CHECK ((length((publisher)::text) <= 255)),
+    CONSTRAINT books_scope_null CHECK ((scope IS NOT NULL)),
+    CONSTRAINT books_scope_numericality CHECK ((scope >= 0)),
+    CONSTRAINT books_type_numericality CHECK ((type >= 0)),
+    CONSTRAINT books_type_of_release_numericality CHECK ((type_of_release >= 0)),
+    CONSTRAINT books_year_numericality CHECK (((year >= 1950) AND (year <= 2050))),
+    CONSTRAINT books_yoksis_id_null CHECK ((yoksis_id IS NOT NULL)),
+    CONSTRAINT books_yoksis_id_numericality CHECK ((yoksis_id >= 0))
+);
+
+
+--
+-- Name: books_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.books_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: books_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.books_id_seq OWNED BY public.books.id;
+
+
+--
+-- Name: buildings; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.buildings (
+    id bigint NOT NULL,
+    meksis_id integer,
+    name character varying,
+    code character varying,
+    indoor_area double precision,
+    latitude numeric,
+    longitude numeric,
+    active boolean,
+    place_type_id bigint NOT NULL,
+    unit_id bigint NOT NULL,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT buildings_code_length CHECK ((length((code)::text) <= 255)),
+    CONSTRAINT buildings_code_presence CHECK (((code IS NOT NULL) AND ((code)::text !~ '^\s*$'::text))),
+    CONSTRAINT buildings_meksis_id_null CHECK ((meksis_id IS NOT NULL)),
+    CONSTRAINT buildings_meksis_id_numericality CHECK ((meksis_id >= 1)),
+    CONSTRAINT buildings_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT buildings_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
+);
+
+
+--
+-- Name: buildings_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.buildings_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: buildings_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.buildings_id_seq OWNED BY public.buildings.id;
 
 
 --
@@ -800,6 +996,55 @@ CREATE SEQUENCE public.cities_id_seq
 --
 
 ALTER SEQUENCE public.cities_id_seq OWNED BY public.cities.id;
+
+
+--
+-- Name: classrooms; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.classrooms (
+    id bigint NOT NULL,
+    meksis_id integer,
+    name character varying,
+    code character varying,
+    room_number integer,
+    student_capacity integer,
+    exam_capacity integer,
+    available_space double precision,
+    height double precision,
+    width double precision,
+    length double precision,
+    volume double precision,
+    place_type_id bigint NOT NULL,
+    building_id bigint NOT NULL,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT classrooms_code_length CHECK ((length((code)::text) <= 255)),
+    CONSTRAINT classrooms_code_presence CHECK (((code IS NOT NULL) AND ((code)::text !~ '^\s*$'::text))),
+    CONSTRAINT classrooms_meksis_id_null CHECK ((meksis_id IS NOT NULL)),
+    CONSTRAINT classrooms_meksis_id_numericality CHECK ((meksis_id >= 1)),
+    CONSTRAINT classrooms_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT classrooms_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
+);
+
+
+--
+-- Name: classrooms_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.classrooms_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: classrooms_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.classrooms_id_seq OWNED BY public.classrooms.id;
 
 
 --
@@ -1481,6 +1726,85 @@ ALTER SEQUENCE public.duties_id_seq OWNED BY public.duties.id;
 
 
 --
+-- Name: education_informations; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.education_informations (
+    id bigint NOT NULL,
+    activity integer,
+    advisor character varying,
+    advisor_id_number character varying,
+    country_id bigint,
+    department character varying,
+    diploma_equivalency character varying,
+    diploma_no character varying,
+    discipline character varying,
+    end_year integer,
+    end_date_of_thesis integer,
+    faculty character varying,
+    last_update timestamp without time zone,
+    location integer,
+    other_discipline character varying,
+    other_university character varying,
+    program character varying,
+    start_year integer,
+    start_date_of_thesis integer,
+    thesis_name character varying,
+    thesis_step character varying,
+    user_id bigint NOT NULL,
+    unit_id integer,
+    university character varying,
+    yoksis_id integer,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT education_informations_activity_numericality CHECK ((activity >= 0)),
+    CONSTRAINT education_informations_advisor_id_number_length CHECK ((length((advisor_id_number)::text) = 11)),
+    CONSTRAINT education_informations_advisor_length CHECK ((length((advisor)::text) <= 255)),
+    CONSTRAINT education_informations_department_length CHECK ((length((department)::text) <= 255)),
+    CONSTRAINT education_informations_diploma_equivalency_length CHECK ((length((diploma_equivalency)::text) <= 255)),
+    CONSTRAINT education_informations_diploma_no_length CHECK ((length((diploma_no)::text) <= 100)),
+    CONSTRAINT education_informations_discipline_length CHECK ((length((discipline)::text) <= 255)),
+    CONSTRAINT education_informations_end_date_of_thesis_numericality CHECK (((end_date_of_thesis >= 1950) AND (end_date_of_thesis <= 2050))),
+    CONSTRAINT education_informations_end_year_numericality CHECK (((end_year >= 1950) AND (end_year <= 2050))),
+    CONSTRAINT education_informations_faculty_length CHECK ((length((faculty)::text) <= 255)),
+    CONSTRAINT education_informations_location_null CHECK ((location IS NOT NULL)),
+    CONSTRAINT education_informations_location_numericality CHECK ((location >= 0)),
+    CONSTRAINT education_informations_other_discipline_length CHECK ((length((other_discipline)::text) <= 255)),
+    CONSTRAINT education_informations_other_university_length CHECK ((length((other_university)::text) <= 255)),
+    CONSTRAINT education_informations_program_length CHECK ((length((program)::text) <= 255)),
+    CONSTRAINT education_informations_program_presence CHECK (((program IS NOT NULL) AND ((program)::text !~ '^\s*$'::text))),
+    CONSTRAINT education_informations_start_date_of_thesis_numericality CHECK (((start_date_of_thesis >= 1950) AND (start_date_of_thesis <= 2050))),
+    CONSTRAINT education_informations_start_year_null CHECK ((start_year IS NOT NULL)),
+    CONSTRAINT education_informations_start_year_numericality CHECK (((start_year >= 1950) AND (start_year <= 2050))),
+    CONSTRAINT education_informations_thesis_name_length CHECK ((length((thesis_name)::text) <= 255)),
+    CONSTRAINT education_informations_thesis_step_length CHECK ((length((thesis_step)::text) <= 100)),
+    CONSTRAINT education_informations_unit_id_numericality CHECK ((unit_id >= 0)),
+    CONSTRAINT education_informations_university_length CHECK ((length((university)::text) <= 255)),
+    CONSTRAINT education_informations_yoksis_id_null CHECK ((yoksis_id IS NOT NULL)),
+    CONSTRAINT education_informations_yoksis_id_numericality CHECK ((yoksis_id >= 0))
+);
+
+
+--
+-- Name: education_informations_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.education_informations_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: education_informations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.education_informations_id_seq OWNED BY public.education_informations.id;
+
+
+--
 -- Name: employees; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -1889,6 +2213,41 @@ CREATE SEQUENCE public.permissions_id_seq
 --
 
 ALTER SEQUENCE public.permissions_id_seq OWNED BY public.permissions.id;
+
+
+--
+-- Name: place_types; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.place_types (
+    id bigint NOT NULL,
+    meksis_id integer,
+    name character varying,
+    ancestry character varying,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT place_types_meksis_id_null CHECK ((meksis_id IS NOT NULL)),
+    CONSTRAINT place_types_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
+);
+
+
+--
+-- Name: place_types_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.place_types_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: place_types_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.place_types_id_seq OWNED BY public.place_types.id;
 
 
 --
@@ -3048,6 +3407,7 @@ CREATE TABLE public.users (
     activated boolean DEFAULT false,
     activated_at timestamp without time zone,
     mobile_phone character varying,
+    books_count integer DEFAULT 0,
     CONSTRAINT users_activated_null CHECK ((activated IS NOT NULL)),
     CONSTRAINT users_articles_count_null CHECK ((articles_count IS NOT NULL)),
     CONSTRAINT users_articles_count_numericality CHECK ((articles_count >= 0)),
@@ -3090,6 +3450,13 @@ CREATE SEQUENCE public.users_id_seq
 --
 
 ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
+
+
+--
+-- Name: academic_credentials id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.academic_credentials ALTER COLUMN id SET DEFAULT nextval('public.academic_credentials_id_seq'::regclass);
 
 
 --
@@ -3184,6 +3551,20 @@ ALTER TABLE ONLY public.available_courses ALTER COLUMN id SET DEFAULT nextval('p
 
 
 --
+-- Name: books id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.books ALTER COLUMN id SET DEFAULT nextval('public.books_id_seq'::regclass);
+
+
+--
+-- Name: buildings id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.buildings ALTER COLUMN id SET DEFAULT nextval('public.buildings_id_seq'::regclass);
+
+
+--
 -- Name: calendar_committee_decisions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -3223,6 +3604,13 @@ ALTER TABLE ONLY public.certifications ALTER COLUMN id SET DEFAULT nextval('publ
 --
 
 ALTER TABLE ONLY public.cities ALTER COLUMN id SET DEFAULT nextval('public.cities_id_seq'::regclass);
+
+
+--
+-- Name: classrooms id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.classrooms ALTER COLUMN id SET DEFAULT nextval('public.classrooms_id_seq'::regclass);
 
 
 --
@@ -3345,6 +3733,13 @@ ALTER TABLE ONLY public.duties ALTER COLUMN id SET DEFAULT nextval('public.dutie
 
 
 --
+-- Name: education_informations id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.education_informations ALTER COLUMN id SET DEFAULT nextval('public.education_informations_id_seq'::regclass);
+
+
+--
 -- Name: employees id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -3419,6 +3814,13 @@ ALTER TABLE ONLY public.meeting_agendas ALTER COLUMN id SET DEFAULT nextval('pub
 --
 
 ALTER TABLE ONLY public.permissions ALTER COLUMN id SET DEFAULT nextval('public.permissions_id_seq'::regclass);
+
+
+--
+-- Name: place_types id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.place_types ALTER COLUMN id SET DEFAULT nextval('public.place_types_id_seq'::regclass);
 
 
 --
@@ -3625,6 +4027,14 @@ ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_
 
 
 --
+-- Name: academic_credentials academic_credentials_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.academic_credentials
+    ADD CONSTRAINT academic_credentials_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: academic_terms academic_terms_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -3761,6 +4171,62 @@ ALTER TABLE ONLY public.available_courses
 
 
 --
+-- Name: books books_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.books
+    ADD CONSTRAINT books_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: buildings buildings_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.buildings
+    ADD CONSTRAINT buildings_code_unique UNIQUE (code) DEFERRABLE;
+
+
+--
+-- Name: buildings buildings_latitude_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.buildings
+    ADD CONSTRAINT buildings_latitude_unique UNIQUE (latitude) DEFERRABLE;
+
+
+--
+-- Name: buildings buildings_longitude_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.buildings
+    ADD CONSTRAINT buildings_longitude_unique UNIQUE (longitude) DEFERRABLE;
+
+
+--
+-- Name: buildings buildings_meksis_id_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.buildings
+    ADD CONSTRAINT buildings_meksis_id_unique UNIQUE (meksis_id) DEFERRABLE;
+
+
+--
+-- Name: buildings buildings_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.buildings
+    ADD CONSTRAINT buildings_name_unique UNIQUE (name) DEFERRABLE;
+
+
+--
+-- Name: buildings buildings_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.buildings
+    ADD CONSTRAINT buildings_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: calendar_committee_decisions calendar_committee_decisions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -3822,6 +4288,30 @@ ALTER TABLE ONLY public.certifications
 
 ALTER TABLE ONLY public.cities
     ADD CONSTRAINT cities_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: classrooms classrooms_meksis_id_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.classrooms
+    ADD CONSTRAINT classrooms_meksis_id_unique UNIQUE (meksis_id) DEFERRABLE;
+
+
+--
+-- Name: classrooms classrooms_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.classrooms
+    ADD CONSTRAINT classrooms_name_unique UNIQUE (name) DEFERRABLE;
+
+
+--
+-- Name: classrooms classrooms_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.classrooms
+    ADD CONSTRAINT classrooms_pkey PRIMARY KEY (id);
 
 
 --
@@ -3969,6 +4459,14 @@ ALTER TABLE ONLY public.duties
 
 
 --
+-- Name: education_informations education_informations_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.education_informations
+    ADD CONSTRAINT education_informations_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: employees employees_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -4078,6 +4576,30 @@ ALTER TABLE ONLY public.meeting_agendas
 
 ALTER TABLE ONLY public.permissions
     ADD CONSTRAINT permissions_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: place_types place_types_meksis_id_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.place_types
+    ADD CONSTRAINT place_types_meksis_id_unique UNIQUE (meksis_id) DEFERRABLE;
+
+
+--
+-- Name: place_types place_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.place_types
+    ADD CONSTRAINT place_types_name_unique UNIQUE (name) DEFERRABLE;
+
+
+--
+-- Name: place_types place_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.place_types
+    ADD CONSTRAINT place_types_pkey PRIMARY KEY (id);
 
 
 --
@@ -4545,6 +5067,20 @@ ALTER TABLE ONLY public.users
 
 
 --
+-- Name: index_academic_credentials_on_country_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_academic_credentials_on_country_id ON public.academic_credentials USING btree (country_id);
+
+
+--
+-- Name: index_academic_credentials_on_user_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_academic_credentials_on_user_id ON public.academic_credentials USING btree (user_id);
+
+
+--
 -- Name: index_action_text_rich_texts_uniqueness; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -4643,10 +5179,10 @@ CREATE INDEX index_available_courses_on_coordinator_id ON public.available_cours
 
 
 --
--- Name: index_available_courses_on_course_id; Type: INDEX; Schema: public; Owner: -
+-- Name: index_available_courses_on_curriculum_course_id; Type: INDEX; Schema: public; Owner: -
 --
 
-CREATE INDEX index_available_courses_on_course_id ON public.available_courses USING btree (course_id);
+CREATE INDEX index_available_courses_on_curriculum_course_id ON public.available_courses USING btree (curriculum_course_id);
 
 
 --
@@ -4661,6 +5197,34 @@ CREATE INDEX index_available_courses_on_curriculum_id ON public.available_course
 --
 
 CREATE INDEX index_available_courses_on_unit_id ON public.available_courses USING btree (unit_id);
+
+
+--
+-- Name: index_books_on_country_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_books_on_country_id ON public.books USING btree (country_id);
+
+
+--
+-- Name: index_books_on_user_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_books_on_user_id ON public.books USING btree (user_id);
+
+
+--
+-- Name: index_buildings_on_place_type_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_buildings_on_place_type_id ON public.buildings USING btree (place_type_id);
+
+
+--
+-- Name: index_buildings_on_unit_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_buildings_on_unit_id ON public.buildings USING btree (unit_id);
 
 
 --
@@ -4710,6 +5274,20 @@ CREATE INDEX index_certifications_on_user_id ON public.certifications USING btre
 --
 
 CREATE INDEX index_cities_on_country_id ON public.cities USING btree (country_id);
+
+
+--
+-- Name: index_classrooms_on_building_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_classrooms_on_building_id ON public.classrooms USING btree (building_id);
+
+
+--
+-- Name: index_classrooms_on_place_type_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_classrooms_on_place_type_id ON public.classrooms USING btree (place_type_id);
 
 
 --
@@ -4874,6 +5452,20 @@ CREATE INDEX index_duties_on_unit_id ON public.duties USING btree (unit_id);
 
 
 --
+-- Name: index_education_informations_on_country_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_education_informations_on_country_id ON public.education_informations USING btree (country_id);
+
+
+--
+-- Name: index_education_informations_on_user_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_education_informations_on_user_id ON public.education_informations USING btree (user_id);
+
+
+--
 -- Name: index_employees_on_title_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -4969,6 +5561,13 @@ CREATE INDEX index_meeting_agendas_on_committee_meeting_id ON public.meeting_age
 --
 
 CREATE UNIQUE INDEX index_permissions_on_name ON public.permissions USING btree (name);
+
+
+--
+-- Name: index_place_types_on_ancestry; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_place_types_on_ancestry ON public.place_types USING btree (ancestry);
 
 
 --
@@ -5445,14 +6044,6 @@ ALTER TABLE ONLY public.committee_decisions
 
 
 --
--- Name: available_courses fk_rails_4783d78ac5; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.available_courses
-    ADD CONSTRAINT fk_rails_4783d78ac5 FOREIGN KEY (course_id) REFERENCES public.courses(id);
-
-
---
 -- Name: unit_calendars fk_rails_47a7d8ee6a; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -5546,6 +6137,14 @@ ALTER TABLE ONLY public.calendar_events
 
 ALTER TABLE ONLY public.meeting_agendas
     ADD CONSTRAINT fk_rails_694b3fc610 FOREIGN KEY (committee_meeting_id) REFERENCES public.committee_meetings(id);
+
+
+--
+-- Name: education_informations fk_rails_6ffd5f9683; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.education_informations
+    ADD CONSTRAINT fk_rails_6ffd5f9683 FOREIGN KEY (user_id) REFERENCES public.users(id);
 
 
 --
@@ -5709,11 +6308,27 @@ ALTER TABLE ONLY public.registration_documents
 
 
 --
+-- Name: classrooms fk_rails_a9065d53fc; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.classrooms
+    ADD CONSTRAINT fk_rails_a9065d53fc FOREIGN KEY (place_type_id) REFERENCES public.place_types(id);
+
+
+--
 -- Name: available_courses fk_rails_a9099f01f5; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.available_courses
     ADD CONSTRAINT fk_rails_a9099f01f5 FOREIGN KEY (coordinator_id) REFERENCES public.employees(id);
+
+
+--
+-- Name: classrooms fk_rails_b0064b7304; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.classrooms
+    ADD CONSTRAINT fk_rails_b0064b7304 FOREIGN KEY (building_id) REFERENCES public.buildings(id);
 
 
 --
@@ -5749,11 +6364,27 @@ ALTER TABLE ONLY public.agendas
 
 
 --
+-- Name: academic_credentials fk_rails_b9d9c54fa8; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.academic_credentials
+    ADD CONSTRAINT fk_rails_b9d9c54fa8 FOREIGN KEY (country_id) REFERENCES public.countries(id);
+
+
+--
 -- Name: course_evaluation_types fk_rails_bb4be290e9; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.course_evaluation_types
     ADD CONSTRAINT fk_rails_bb4be290e9 FOREIGN KEY (available_course_id) REFERENCES public.available_courses(id);
+
+
+--
+-- Name: books fk_rails_bc582ddd02; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.books
+    ADD CONSTRAINT fk_rails_bc582ddd02 FOREIGN KEY (user_id) REFERENCES public.users(id);
 
 
 --
@@ -5770,6 +6401,14 @@ ALTER TABLE ONLY public.ldap_sync_errors
 
 ALTER TABLE ONLY public.available_courses
     ADD CONSTRAINT fk_rails_c4a7c8b06e FOREIGN KEY (curriculum_id) REFERENCES public.curriculums(id);
+
+
+--
+-- Name: education_informations fk_rails_ca86dff26a; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.education_informations
+    ADD CONSTRAINT fk_rails_ca86dff26a FOREIGN KEY (country_id) REFERENCES public.countries(id);
 
 
 --
@@ -5797,11 +6436,35 @@ ALTER TABLE ONLY public.prospective_employees
 
 
 --
+-- Name: academic_credentials fk_rails_d55570421b; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.academic_credentials
+    ADD CONSTRAINT fk_rails_d55570421b FOREIGN KEY (user_id) REFERENCES public.users(id);
+
+
+--
+-- Name: available_courses fk_rails_d65cfbfb56; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.available_courses
+    ADD CONSTRAINT fk_rails_d65cfbfb56 FOREIGN KEY (curriculum_course_id) REFERENCES public.curriculum_courses(id);
+
+
+--
 -- Name: prospective_students fk_rails_d94afad69b; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.prospective_students
     ADD CONSTRAINT fk_rails_d94afad69b FOREIGN KEY (academic_term_id) REFERENCES public.academic_terms(id);
+
+
+--
+-- Name: buildings fk_rails_db1dc1e28f; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.buildings
+    ADD CONSTRAINT fk_rails_db1dc1e28f FOREIGN KEY (unit_id) REFERENCES public.units(id);
 
 
 --
@@ -5818,6 +6481,14 @@ ALTER TABLE ONLY public.units
 
 ALTER TABLE ONLY public.employees
     ADD CONSTRAINT fk_rails_dcfd3d4fc3 FOREIGN KEY (user_id) REFERENCES public.users(id);
+
+
+--
+-- Name: buildings fk_rails_df02533716; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.buildings
+    ADD CONSTRAINT fk_rails_df02533716 FOREIGN KEY (place_type_id) REFERENCES public.place_types(id);
 
 
 --
@@ -5898,6 +6569,14 @@ ALTER TABLE ONLY public.available_courses
 
 ALTER TABLE ONLY public.committee_meetings
     ADD CONSTRAINT fk_rails_f85b219ea4 FOREIGN KEY (unit_id) REFERENCES public.units(id);
+
+
+--
+-- Name: books fk_rails_f99d7ae06f; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.books
+    ADD CONSTRAINT fk_rails_f99d7ae06f FOREIGN KEY (country_id) REFERENCES public.countries(id);
 
 
 --
@@ -5999,6 +6678,13 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20190507195222'),
 ('20190517112616'),
 ('20190517112657'),
-('20190529121036');
+('20190529121036'),
+('20190925063737'),
+('20190927071636'),
+('20191003075056'),
+('20191003100000'),
+('20191003102101'),
+('20191007074407'),
+('20191008065752');
 
 

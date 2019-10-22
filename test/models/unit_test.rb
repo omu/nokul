@@ -57,7 +57,7 @@ class UnitTest < ActiveSupport::TestCase
   # search
   test 'unit is a searchable model' do
     assert_not_empty Unit.search('Ondokuz')
-    assert Unit.search('Ondokuz').include?(units(:omu))
+    assert_includes(Unit.search('Ondokuz'), units(:omu))
     assert_not Unit.search('Ondokuz').include?(units(:uzem))
   end
 

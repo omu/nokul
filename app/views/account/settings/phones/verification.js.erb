@@ -1,0 +1,13 @@
+<% if current_user.errors.any? %>
+  toastr.error("<%= current_user.errors.full_messages.join(',') %>")
+<% elsif current_user.mobile_phone_changed? == false %>
+  toastr.error("<%= t('.cannot_change_phone') %>")
+<% elsif flash[:alert].present? %>
+  toastr.error('<%= flash[:alert] %>')
+<% else %>
+  $('#verification_modal').html("<%= escape_javascript(render partial: 'layouts/shared/phone_verification_modal', \
+                                                              locals: { action: 'update', \
+                                                                        controller: 'account/settings/phones', \
+                                                                        mobile_phone: current_user.mobile_phone }) %>");
+  $('#verification_modal').modal('show')
+<% end %>

@@ -22,15 +22,14 @@
       <div class="tab-pane active" id="account" role="tabpanel">
         <%= render 'account' %>
       </div>
-      <div class="tab-pane" id="identities" role="tabpanel">
-        <%= render 'identities' %>
-      </div>
-      <div class="tab-pane" id="addresses" role="tabpanel">
-        <%= render 'addresses' %>
-      </div>
-      <div class="tab-pane" id="employees" role="tabpanel">
-        <%= render 'employees' %>
-      </div>
+      <div class="tab-pane" id="identities" role="tabpanel"></div>
+      <div class="tab-pane" id="addresses" role="tabpanel"></div>
+      <div class="tab-pane" id="employees" role="tabpanel"><%= render 'employees' %></div>
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  $('#identities').load("<%= user_identities_path(@user) %>")
+  $('#addresses').load("<%= user_addresses_path(@user) %>")
+</script>

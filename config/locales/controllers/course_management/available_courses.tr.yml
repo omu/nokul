@@ -4,7 +4,7 @@ tr:
       available_course: &available_course_attributes
         academic_term: Akademik Dönem
         coordinator: Koordinatör
-        course: Ders
+        curriculum_course: Ders
         curriculum: Müfredat
         groups: Gruplar
         unit: Birim

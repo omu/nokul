@@ -14,12 +14,14 @@ tr:
         committees: Kurullar/Komisyonlar
         course_groups: Ders Grupları
         course_management: Ders İşlemleri
+        course_registration: Ders Kaydı
         course_unit_groups: Ders Grupları
         courses: Dersler
         curriculums: Müfredatlar
         first_registration: İlk Kayıt
         high_school_types: Lise Türleri
         ldap_sync: Ldap Sync
+        meksis: MEKSİS
         prospective_employees: Aday Personeller
         prospective_students: Aday Öğrenciler
         references: Tanımlar

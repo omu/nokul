@@ -1,0 +1,22 @@
+tr:
+  activerecord:
+    enums:
+      certification:
+        scopes:
+          national: Ulusal
+          international: Uluslararası
+        statuses:
+          active: Aktif
+          passive: Pasif
+        types:
+          certification: Sertifika
+          course: Ders
+          research: Araştırma
+          study: İnceleme
+          report: Rapor
+          workshop: Çalıştay
+          interview: Görüşme
+          essay: Makale
+          evaluation: Değerlendirme
+          conversation: Söyleşi
+          translation: Çeviri

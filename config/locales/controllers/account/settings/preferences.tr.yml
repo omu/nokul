@@ -1,0 +1,9 @@
+tr:
+  account:
+    settings:
+      preferences:
+        profiles:
+          edit:
+            visibility_settings: Görünürlük Ayarları
+          update:
+            success: Profil gürünürlük ayarlarınız başarıyla güncellendi.

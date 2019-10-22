@@ -23,4 +23,15 @@ module ComponentHelper
 
     STATUSES.fetch(status.to_sym, 'secondary')
   end
+
+  def loading_tag(text = t('loading'))
+    tag.div(class: 'loading', id: 'loading', style: 'display: none;') do
+      tag.div(class: 'loading-content') do
+        safe_join [
+          tag.div(tag.span(text, class: 'sr-only'), class: 'spinner-border text-success spinner-large', role: 'status'),
+          tag.h4(text, class: 'text-white')
+        ]
+      end
+    end
+  end
 end

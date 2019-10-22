@@ -12,6 +12,8 @@ class CourseTest < ActiveSupport::TestCase
   belongs_to :course_type
   belongs_to :language
   belongs_to :unit
+  has_many :curriculum_courses, dependent: :destroy
+  has_many :available_courses, through: :curriculum_courses
 
   # validations: presence
   validates_presence_of :code

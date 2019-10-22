@@ -1,17 +1,23 @@
 unit_scope_muhendislik:
   name: Mühendislik Bölümleri
-  scope_name: UnitScope
-  parameters: "{}"
-  type: include
+  scope_name: DummyModelScope
+  parameters: '{ "name": { "value_type": "static" }, "desc": { "value_type": "dynamic" } }'
+  type: inclusive
 
 unit_scope_egitim:
   name: Eğitim Bölümleri
-  scope_name: UnitScope
+  scope_name: DummyModelScope
   parameters: "{}"
-  type: include
+  type: inclusive
+
+passive:
+  name: Delete Scope
+  scope_name: FooScope
+  parameters: "{}"
+  type: inclusive
 
 query_store_to_delete:
   name: Delete Scope
-  scope_name: UnitScope
+  scope_name: DummyModelScope
   parameters: "{}"
-  type: include
+  type: inclusive

@@ -66,3 +66,5 @@ sudo -EH -u "$operator" bash -xs <<-'EOF'
 		bin/rails db:seed SAMPLE_DATA=true
 	fi
 EOF
+
+systemctl disable ufw

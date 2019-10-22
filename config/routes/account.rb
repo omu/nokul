@@ -1,17 +1,13 @@
 # frozen_string_literal: true
 
-devise_for :users, controllers: {
-  registrations: 'account/registrations',
-  passwords:     'account/passwords',
-  sessions:      'account/sessions',
-  unlocks:       'account/unlocks'
+devise_for :users, skip: :registrations, controllers: {
+  passwords: 'account/passwords',
+  sessions:  'account/sessions',
+  unlocks:   'account/unlocks'
 }
 
 devise_scope :user do
   scope module: :account do
-    get 'account', to: 'registrations#edit'
-    put 'phone_verification', to: 'registrations#phone_verification'
-    post 'update_mobile_phone', to: 'registrations#update_mobile_phone'
     get 'login', to: 'sessions#new'
     get 'recover', to: 'passwords#new'
     delete 'logout', to: 'sessions#destroy'
@@ -19,11 +15,41 @@ devise_scope :user do
 end
 
 scope module: :account do
+  namespace :settings do
+    get '/', action: :index
+    scope module: :emails do
+      get 'emails', action: :edit
+      put 'emails', action: :update
+    end
+    scope module: :passwords do
+      get 'passwords', action: :edit
+      put 'passwords', action: :update
+    end
+    scope module: :phones do
+      get 'phones', action: :edit
+      put 'phone_verification', action: :verification
+      post 'phones', action: :update
+    end
+    namespace :preferences do
+      get 'profile', to: 'profiles#edit'
+      patch 'profile', to: 'profiles#update'
+    end
+  end
   get 'activation', to: 'activations#new'
   post 'activation', to: 'activations#create'
   post 'activation_phone_verification', to: 'activations#check_phone_verification'
-  get '/profile', to: 'profile_settings#edit'
-  patch '/profile', to: 'profile_settings#update'
+
+  scope module: :profiles do
+    get 'profile/edit', action: :edit
+    get 'profile', action: :show
+    patch 'profile', action: :update
+    get :save_academic_credentials_from_yoksis
+    get :save_articles_from_yoksis
+    get :save_books_from_yoksis
+    get :save_certifications_from_yoksis
+    get :save_education_informations_from_yoksis
+    get :save_projects_from_yoksis
+  end
 end
 
 resources :users, only: [] do

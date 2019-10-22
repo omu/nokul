@@ -2,13 +2,12 @@
 
 module Account
   class RegistrationsController < Devise::RegistrationsController
-    include PhoneVerification
     layout 'guest', except: %i[edit update]
 
     # before_action :configure_sign_up_params, only: [:create]
     # before_action :configure_account_update_params, only: [:update]
     before_action :update_slug, only: :update
-    after_action :update_password_change_time, only: :update
+    before_action :update_password_change_time, only: :update
 
     # GET /resource/sign_up
     def new
@@ -34,28 +33,6 @@ module Account
     def destroy
       not_found
     end
-
-    # rubocop:disable Metrics/AbcSize
-    def phone_verification
-      phone = current_user[:mobile_phone] = TelephoneNumber.parse(params.dig(:user, :mobile_phone)).e164_number
-
-      return respond_to :js unless current_user.valid? && current_user.mobile_phone_changed?
-
-      flash[:alert] = t('errors.system_error') unless Twilio::Verify.send_phone_verification_code(phone).ok?
-
-      respond_to :js
-    end
-
-    def update_mobile_phone
-      phone = params[:phone_verification][:mobile_phone]
-      response = check_verification_code
-
-      return redirect_to_with_twilio_error(response, account_path) unless response.ok?
-      return redirect_to account_path, notice: t('.success') if current_user.update(mobile_phone: phone)
-
-      redirect_to account_path, alert: t('errors.system_error')
-    end
-    # rubocop:enable Metrics/AbcSize
 
     # GET /resource/cancel
     # Forces the session data which is usually expired after sign
@@ -98,6 +75,12 @@ module Account
       # rubocop:disable Lint/UselessAssignment
       slug = nil if params[:email].present?
       # rubocop:enable Lint/UselessAssignment
+    end
+
+    protected
+
+    def after_update_path_for(_resource)
+      settings_path
     end
   end
 end

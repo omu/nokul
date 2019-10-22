@@ -8,10 +8,10 @@ class CurriculumDecoratorTest < ActiveSupport::TestCase
   end
 
   test 'openable_courses_for_active_term method' do
-    courses = @curriculum.openable_courses_for_active_term
+    curriculum_course_ids = @curriculum.openable_courses_for_active_term.pluck(:id)
 
-    assert_not_includes courses, courses(:ati)
-    assert_not_includes courses, courses(:test)
-    assert_includes courses, courses(:ydi)
+    assert_not_includes curriculum_course_ids, curriculum_courses(:one).id
+    assert_not_includes curriculum_course_ids, curriculum_courses(:elective_course).id
+    assert_includes curriculum_course_ids, curriculum_courses(:ydi).id
   end
 end

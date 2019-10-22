@@ -1,0 +1,23 @@
+tr:
+  account:
+    settings:
+      index:
+        access_and_security: Giriş ve Güvenlik
+        addresses: Adresler
+        add_address: Hesabına adres ekle veya çıkart
+        change: Değiştir
+        change_password: Parola Değiştir
+        email: E-Posta
+        general_settings: Genel Profil Ayarları
+        identity_informations: Kimlik Bilgileri
+        manage: Yönet
+        manage_profile_preferences: Profil sayfası görüntüleme tercihlerini yönet
+        mobile_phone: Telefon Numarası
+        personal_informations: Kişisel Bilgiler
+        preferences: Tercihler
+        profile_preferences: Profil Tercihleri
+        set_password: Hesabını korumak için güvenli bir parola belirle
+        update_email: E-posta adresini güncelle
+        update_general_settings: Sosyal medya hesaplarını ve diğer ayarları güncelle
+        update_identity_informations: Kimlik bilgilerini görüntüle ve güncelle
+        update_mobile_phone: Telefon numaranı güncelle ve doğrula

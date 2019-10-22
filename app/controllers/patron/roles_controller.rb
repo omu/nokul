@@ -6,6 +6,7 @@ module Patron
 
     before_action :set_role, only: %i[show edit update destroy]
     before_action :authorized?
+    sudo only: %i[new edit destroy]
 
     def index
       @roles = pagy_by_search(Patron::Role.order(:name))

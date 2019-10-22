@@ -1,0 +1,9 @@
+en:
+  activerecord:
+    enums:
+      project:
+        statuses:
+          completed: Completed
+          continuing: Continuing
+          deferred: Deferred
+          pending: Pending

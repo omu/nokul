@@ -8,7 +8,7 @@ Beyanat
 -------
 
 Projeye katkı yaparak Ondokuz Mayıs Üniversitesi [bilişim
-politikalarını](https://github.com/omu/resmi/tree/master/bilgi-g%C3%BCvenli%C4%9Fi-politikas%C4%B1) ve gelecekte
+politikalarını](https://github.com/omu/root/tree/master/doc/resmi/bilgi-güvenliği-politikası) ve gelecekte
 eklenmesi muhtemel yeni politikaları peşinen kabul ettiğinizi beyan etmiş sayılırsınız.
 
 Proje ve projede ortaya çıkan ürünlerin tüm hakları Ondokuz Mayıs Üniversitesine aittir. Uygulamaya yapacağınız
@@ -46,7 +46,7 @@ Katkı sağlama iş akışı
 - Projeye katkı sağlamadan önce, katkı sağlamak istediğiniz konuyla ilişkili bir iş kaydı açın. İş kaydı bulunmayan ve
   bir iş kaydına atıfta bulunmayan pull request'ler değerlendirmeye alınmayabilir veya geç değerlendirmeye alınabilir.
 
-- [Issue](/doc/workflow/issue.md) kurallarını dikkatlice gözden geçirin.
+- [Issue](https://doc.omu.sh/workflow/issue/) kurallarını dikkatlice gözden geçirin.
 
 ### Geliştirme öncesi
 
@@ -66,7 +66,7 @@ kısıtlı servisler ile haberleşmekte ve çeşitli erişim bilgilerine ihtiya�
 
 - VPN
 
-  Harici servisler yalnızca [BAUM-VPN](https://doc.omu.sh/services/vpn.md#baum-vpn)'e açıktır. Geliştirme yaparken
+  Harici servisler yalnızca [BAUM-VPN](https://doc.omu.sh/services/vpn/#baum-vpn)'e açıktır. Geliştirme yaparken
   ihtiyaç duyacağınız bu servisleri kullanmak için BAUM-VPN'e bağlı olmalısınız. VPN erişimi için [sistem
   grubu](https://github.com/orgs/omu/teams/ops) ile iletişime geçin. Tüm geliştirme süreciniz boyunca ve testleri
   çalıştırırken mutlaka BAUM-VPN'e bağlı olun.
@@ -75,7 +75,7 @@ kısıtlı servisler ile haberleşmekte ve çeşitli erişim bilgilerine ihtiya�
 
 - Projeye yazma yetkiniz varsa projeyi klonlayın, yazma yetkiniz yoksa projeyi `fork` edin.
 
-- [Branch](https://doc.omu.sh/workflow/branch.md) kurallarını dikkatlice gözden geçirin.
+- [Branch](https://doc.omu.sh/workflow/branch/) kurallarını dikkatlice gözden geçirin.
 
 - Proje klonunda veya kendi "fork" kopyanızda, branch kurallarını dikkate alan bir branch oluşturun: `git checkout -b
   my-awesome-feature`
@@ -86,11 +86,11 @@ kısıtlı servisler ile haberleşmekte ve çeşitli erişim bilgilerine ihtiya�
 
 - Kod üzerinde değişiklikleri yapın.
 
-- [Commit](https://doc.omu.sh/workflow/commit.md) kurallarını dikkatlice gözden geçirin.
+- [Commit](https://doc.omu.sh/workflow/commit) kurallarını dikkatlice gözden geçirin.
 
 - Değişiklerinizi commit'leyin.
 
-- [Test Coverage](/doc/development/test-coverage.md) kurallarını dikkatlice gözden geçirin.
+- [Test Coverage](/doc/development/tests.md) kurallarını dikkatlice gözden geçirin.
 
 - Yaptığınız değişikliğin test coverage oranını düşürmediğinden emin olun.
 
@@ -131,7 +131,7 @@ Dokümanları hatasız düzenlemek için:
 
   + VIM için [ALE](https://github.com/w0rp/ale) eklentisini kurun
 
-  + VSCode için ilgili [yapılandırmayı](https://doc.omu.sh/etc/vscode.md) uygulayın
+  + VSCode için ilgili [yapılandırmayı](https://doc.omu.sh/etc/vscode) uygulayın
 
   + Sublime için [Sublime Text
     Markdownlint](https://github.com/jonlabelle/SublimeLinter-contrib-markdownlint)

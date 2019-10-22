@@ -14,31 +14,45 @@ module Accounts
       assert_response :success
     end
 
-    test 'should get new' do
+    test 'should not get new' do
       get new_user_identity_path(@user)
+      assert_redirected_to user_path(@user)
+      assert_equal translate('.new.error'), flash[:alert]
+    end
+
+    test 'should get new' do
+      get new_user_identity_path(users(:mine))
       assert_response :success
     end
 
+    test 'should not create identity' do
+      post user_identities_path(@user), params: { identity: {} }
+
+      assert_redirected_to user_path(@user)
+      assert_equal translate('.create.error'), flash[:alert]
+    end
+
     test 'should create identity' do
-      @user.identities.informal.destroy_all
-      assert_difference('@user.identities.count') do
-        post user_identities_path(@user), params: {
+      user = users(:mine)
+      user.identities.destroy_all
+      assert_difference('user.identities.count') do
+        post user_identities_path(user), params: {
           identity: {
-            first_name: 'Mustafa Serhat', last_name: 'Dündar', gender: :male,
+            first_name: 'Mine', last_name: 'Sahir', gender: :male,
             marital_status: :married, place_of_birth: cities(:samsun).id,
             date_of_birth: Time.zone.now - 20.years
           }
         }
       end
 
-      identity = @user.identities.informal.first
+      identity = user.identities.informal.first
 
-      assert_equal 'Mustafa Serhat', identity.first_name
-      assert_equal 'DÜNDAR', identity.last_name
+      assert_equal 'Mine', identity.first_name
+      assert_equal 'SAHİR', identity.last_name
       assert identity.married?
       assert identity.male?
 
-      assert_redirected_to user_identities_path(@user)
+      assert_redirected_to user_path(user)
       assert_equal translate('.create.success'), flash[:notice]
     end
 
@@ -73,7 +87,7 @@ module Accounts
       assert_equal 'Test', identity.first_name
       assert_equal 'TEST', identity.last_name
 
-      assert_redirected_to user_identities_path(@user)
+      assert_redirected_to user_path(@user)
       assert_equal translate('.update.success'), flash[:notice]
     end
 
@@ -95,7 +109,7 @@ module Accounts
         delete user_identity_path(@user, @user.identities.find_by(type: :informal))
       end
 
-      assert_redirected_to user_identities_path(@user)
+      assert_redirected_to user_path(@user)
       assert_equal translate('.destroy.success'), flash[:notice]
     end
 

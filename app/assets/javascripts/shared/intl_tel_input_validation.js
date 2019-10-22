@@ -11,7 +11,7 @@ var TelInputValidation = function (inputId, errorMsgId, errorMessages) { // esli
   }
 
   var iti = window.intlTelInput(input, {
-    utilsScript: 'assets/shared/intl_tel_input_utils.js',
+    utilsScript: '/assets/shared/intl_tel_input_utils.js',
     nationalMode: false,
     initialCountry: 'tr',
     preferredCountries: ['tr']

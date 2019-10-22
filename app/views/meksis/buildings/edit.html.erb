@@ -1,0 +1,13 @@
+<%= render 'layouts/builders/form',
+           namespace: nil,
+           klass:     [:meksis, @building],
+           params:    [
+             {
+               field: 'latitude',
+               width: 6
+             },
+             {
+               field: 'longitude',
+               width: 6
+             }
+           ] %>

@@ -6,9 +6,9 @@
       <% end %>
       <div class='row'>
         <div class='col-sm-6'>
-          <%= f.association :lecturer, collection: [*@available_course&.unit&.subtree_employees],
+          <%= f.association :lecturer, collection:   [*@available_course&.unit&.subtree_employees],
                                        label_method: lambda { |c| full_name(c) },
-                                       input_html: { id: 'group_lecturer_id' } %>
+                                       input_html:   { id: 'group_lecturer_id' } %>
         </div>
         <div class='col-sm-6'>
           <%= f.input :coordinator, collection: [[t('yes'), true], [t('no'), false]], required: true %>

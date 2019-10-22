@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-module Ldap
+module LDAP
   class EntitySaveJob < ApplicationJob
     queue_as :high
 
     def perform(user)
-      Ldap::Entity.create(user)
+      LDAP::Entity.create(user)
     end
   end
 end

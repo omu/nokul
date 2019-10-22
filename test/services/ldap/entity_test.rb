@@ -5,8 +5,8 @@ require 'test_helper'
 module Ldap
   class EntityTest < ActiveSupport::TestCase
     setup do
-      @user   = Ldap::UserDecorator.new(users(:serhat))
-      @entity = Ldap::Entity.new(users(:serhat))
+      @user   = LDAP::UserDecorator.new(users(:serhat))
+      @entity = LDAP::Entity.new(users(:serhat))
     end
 
     test 'cn attribute' do

@@ -1,0 +1,8 @@
+en:
+  patron:
+    confirmations:
+      create:
+        error: Incorrect password
+      new:
+        submit: Confirm Password
+        title: Confirm password to continue

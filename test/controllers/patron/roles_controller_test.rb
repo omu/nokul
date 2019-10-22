@@ -33,7 +33,7 @@ module Patron
       parameters = {
         name:           'Role Create',
         identifier:     'role_create',
-        permission_ids: Permission.pluck(:id)
+        permission_ids: Permission.pluck(:id).sort
       }
 
       assert_difference('Patron::Role.count') do
@@ -42,9 +42,10 @@ module Patron
 
       role = Patron::Role.last
 
-      parameters.each do |attribute, value|
-        assert_equal value, role.send(attribute)
-      end
+      assert_equal parameters[:name], role.name
+      assert_equal parameters[:identifier], role.identifier
+      assert_equal parameters[:permission_ids].sort, role.permission_ids.sort
+
       action_check('create')
       assert_redirected_to patron_role_path(role)
       assert_equal translate('.create.success'), flash[:notice]
@@ -63,15 +64,16 @@ module Patron
       parameters = {
         name:           'Role Update',
         identifier:     'role_update',
-        permission_ids: Patron::Permission.pluck(:id)
+        permission_ids: Patron::Permission.pluck(:id).sort
       }
       patch patron_role_path(role), params: { patron_role: parameters }
 
       role.reload
 
-      parameters.each do |attribute, value|
-        assert_equal value, role.send(attribute)
-      end
+      assert_equal parameters[:name], role.name
+      assert_equal parameters[:identifier], role.identifier
+      assert_equal parameters[:permission_ids].sort, role.permission_ids.sort
+
       action_check('update')
       assert_redirected_to patron_role_path(role)
       assert_equal translate('.update.success'), flash[:notice]

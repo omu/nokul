@@ -23,7 +23,7 @@ module Accounts
         }
       }
 
-      assert_equal true, @user.avatar.attached?
+      assert(@user.avatar.attached?)
       assert_response :success
     end
   end

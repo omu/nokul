@@ -34,9 +34,9 @@ module Nokul
         private
 
         def relations_for(relation, attribute)
-          klass.reflect_on_all_associations(relation).select do |association|
+          klass.reflect_on_all_associations(relation).find do |association|
             association.name == attribute
-          end.first
+          end
         end
 
         def klass

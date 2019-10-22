@@ -5,7 +5,7 @@ class Article < ApplicationRecord
 
   # enums
   enum scope: { national: 0, international: 1 }
-  enum review: { reviewed: 0, not_reviewed: 1 }
+  enum review: { reviewed: 0, unreviewed: 1 }
   enum access_type: { printed: 1, electronic: 2, printed_and_electronic: 3 }
   enum status: { deleted: 0, active: 1 }
 
@@ -16,7 +16,8 @@ class Article < ApplicationRecord
     field_indexes:              8,
     well_established_indexes:   9,
     sci:                        40,
-    not_indexed:                42,
+    unindexed:                  42,
+    turkish_index:              45,
     ebsco:                      46,
     index_islamicus:            47,
     index_medicus:              48,
@@ -29,8 +30,12 @@ class Article < ApplicationRecord
     eric:                       55,
     esci:                       56,
     index_chemicus:             59,
-    turkish_index:              45,
-    art_index:                  62
+    architectural_periodicals:  60,
+    design_and_applied_art:     61,
+    art_index:                  62,
+    iconda:                     63,
+    economics_abstracts:        64,
+    education_full_text:        65
   }
 
   enum type: {
@@ -81,10 +86,10 @@ class Article < ApplicationRecord
   validates :last_page, allow_nil:    true,
                         numericality: { only_integer: true, greater_than: 0, less_than_or_equal_to: 15_000 }
   validates :access_type, allow_nil: true, inclusion: { in: access_types.keys }
-  validates :special_issue, allow_nil: true, numericality: { only_integer: true, greater_than: 0 }
+  validates :special_issue, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :special_issue_name, length: { maximum: 255 }
-  validates :author_id, numericality: { only_integer: true, greater_than: 0 }
-  validates :incentive_point, numericality: { greater_than_or_equal_to: 0 }
+  validates :author_id, numericality: { only_integer: true, greater_than: 0, allow_nil: true }
+  validates :incentive_point, numericality: { greater_than_or_equal_to: 0, allow_nil: true }
 
   def self.unique_count
     active.group_by(&:yoksis_id).count

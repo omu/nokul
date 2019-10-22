@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
-ruby File.read('.ruby-version')
+ruby File.read(File.expand_path('.ruby-version', __dir__))
 
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -24,7 +24,7 @@ gem 'ancestry'
 # active-storage
 gem 'aws-sdk-s3', require: false
 gem 'image_processing', '~> 1.2'
-gem 'ruby-vips', '~> 2.0.14'
+gem 'ruby-vips', '~> 2.0.16'
 
 # authentication
 gem 'authy'
@@ -37,11 +37,8 @@ gem 'pundit'
 gem 'net-ldap'
 
 # assets: core asset dependencies
-# TODO: Edge versions require coffee-rails https://github.com/rails/rails/issues/28965
-gem 'coffee-rails', '~> 5.0'
-
 # TODO: The following line should be removed when sassc-rails has the latest version of sassc.
-gem 'sassc', '~> 2.2.0'
+gem 'sassc', '~> 2.2.1'
 gem 'sassc-rails'
 
 gem 'uglifier', '>= 1.3.0'
@@ -74,7 +71,7 @@ gem 'rollbar'
 gem 'slack-notifier'
 
 # permalinks
-gem 'friendly_id', '~> 5.2.0'
+gem 'friendly_id', '~> 5.3.0'
 
 # sms
 gem 'nexmo'
@@ -90,6 +87,7 @@ group :development, :test do
   gem 'erb_lint', require: false
   gem 'lol_dba'
   gem 'rubocop'
+  gem 'rubocop-minitest'
   gem 'rubocop-performance'
   gem 'rubocop-rails'
   gem 'simplecov', require: false
@@ -98,14 +96,15 @@ end
 group :test do
   gem 'capybara'
   gem 'codacy-coverage', require: false
-  gem 'webdrivers', '~> 4.0'
+  gem 'minitest-focus'
+  gem 'webdrivers', '~> 4.1'
   gem 'webmock'
 end
 
 group :development do
   gem 'fit-commit'
   gem 'letter_opener'
-  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'listen', '>= 3.0.5', '< 3.3'
   gem 'pry-rails'
   gem 'rack-mini-profiler'
   gem 'ruby-progressbar'

@@ -6,11 +6,12 @@ class CurriculumDecorator < SimpleDelegator
 
     return [] unless term
 
-    courses = semesters.where(term: term)
-                       .includes(:courses, :curriculum_courses)
-                       .where.not(courses: { id: available_courses.pluck(:course_id) })
-                       .order('courses.name')
-                       .map(&:courses)
-    [*appends, courses].flatten
+    openable_courses = semesters.where(term: term)
+                                .joins(curriculum_courses: :course)
+                                .where.not(curriculum_courses: { id: available_courses.pluck(:curriculum_course_id) })
+                                .select('curriculum_courses.id, courses.name')
+                                .order('name')
+
+    [*appends, openable_courses].flatten
   end
 end

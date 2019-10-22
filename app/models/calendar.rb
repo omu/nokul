@@ -49,4 +49,18 @@ class Calendar < ApplicationRecord
       UnitCalendar.where(calendar_id: calendar.id, unit_id: unit.descendants.ids).destroy_all
     end
   end
+
+  def check_events(identifier)
+    return unless event_type(identifier) && calendar_events.present?
+
+    calendar_events.find_by(
+      calendar_event_type: event_type(identifier)
+    ).try(:active_now?)
+  end
+
+  private
+
+  def event_type(identifier)
+    CalendarEventType.find_by(identifier: identifier)
+  end
 end

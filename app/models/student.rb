@@ -2,14 +2,15 @@
 
 class Student < ApplicationRecord
   # Ldap
-  include LdapSyncTrigger
-  ldap_sync_trigger :user
+  include LDAP::Trigger
+  ldap_trigger :user
 
   # relations
   belongs_to :user
   belongs_to :unit
   has_one :identity, dependent: :destroy
   has_many :calendars, -> { Calendar.active }, through: :unit
+  has_many :curriculums, through: :unit
 
   # scopes
   # TODO: Query will be organized according to activity status

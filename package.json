@@ -9,24 +9,24 @@
     "@rails/ujs": "^6.0.0-alpha",
     "@rails/webpacker": "https://github.com/rails/webpacker",
     "chalk": "^2.4.2",
-    "flatpickr": "^4.5.2",
-    "intl-tel-input": "^16.0.2",
+    "flatpickr": "^4.6.3",
+    "intl-tel-input": "^16.0.4",
     "jquery.maskedinput": "^1.4.1",
-    "select2": "^4.0.8",
+    "select2": "^4.0.11",
     "toastr": "^2.1.4",
     "trix": "^1.0.0",
     "turbolinks": "^5.2.0"
   },
   "devDependencies": {
-    "eslint": "^5.13.0",
-    "eslint-config-standard": "^12.0.0",
+    "eslint": "^6.5.1",
+    "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-node": "^9.0.1",
+    "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "htmlhint": "^0.11.0",
-    "markdownlint-cli": "^0.17.0",
-    "webpack-dev-server": "^3.1.14"
+    "markdownlint-cli": "^0.18.0",
+    "webpack-dev-server": "^3.8.1"
   },
   "scripts": {
     "lint": "eslint ./app/assets --color",

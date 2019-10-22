@@ -126,7 +126,7 @@ bilgisayar_muhendisligi:
     <%=ActiveRecord::FixtureSet.identify(:muhendislik_fakultesi) %>\
   "
 
-bilgisayar_muhendisligi_programı:
+bilgisayar_muhendisligi_programi:
   name: Bilgisayar Mühendisliği Pr.
   abbreviation: BİLGİSAYAR-PR
   yoksis_id: 168861
