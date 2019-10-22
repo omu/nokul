@@ -34,7 +34,7 @@ tr:
         lecturer: Öğretim Elemanı
         name: Grup Adı
         quota: Kontenjan
-        title: Ünvan
+        title: Unvan
       index:
         <<: *available_course_attributes
         add_new_available_course: Yeni Açılan Ders Ekle
