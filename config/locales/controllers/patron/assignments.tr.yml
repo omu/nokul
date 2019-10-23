@@ -5,7 +5,7 @@ tr:
         form_title: Atamayı Güncelle
       index:
         card_header: Kullanıcılar
-        smart_search_placeholder: TC/YU numarası, e-mail adresi, ad veya soyad
+        smart_search_placeholder: TC/YU numarası, e-posta adresi, ad veya soyad
       preview_scope:
         error: Kapsam ön izlemesi sırasında bir hata oluştu.
       show:

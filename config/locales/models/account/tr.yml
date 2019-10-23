@@ -14,7 +14,7 @@ tr:
         id_number: Kimlik Numarası
         is_active: Aktif mi?
         staff_number: Personel Sicil No
-        title_id: Ünvan
+        title_id: Unvan
         user_id: Kullanıcı
       position:
         duty_id: İdari Birim
