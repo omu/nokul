@@ -49,15 +49,32 @@ class StudentDecorator < SimpleDelegator
     curriculum.semesters.where(term: active_term.term).order(:sequence)
   end
 
-  # TODO: fix for selected elective courses
+  def group_elective_ids_for(available_course)
+    available_course.curriculum_course.curriculum_course_group.curriculum_courses
+                    .joins(:available_courses).pluck('available_courses.id')
+  end
+
+  def not_enrolled_at_group?(available_course)
+    (selected_courses.pluck(:available_course_id) & group_elective_ids_for(available_course)).empty?
+  end
+
+  def can_enroll?(available_course)
+    if available_course.type == 'elective'
+      selectable_ects > available_course.ects && not_enrolled_at_group?(available_course)
+    else
+      selectable_ects > available_course.ects
+    end
+  end
+
   def course_catalog_for_semester(curriculum_semester)
     curriculum_semester.available_courses.includes(curriculum_course: :course)
                        .where(academic_term: active_term)
                        .where.not(id: selected_courses.pluck(:available_course_id))
                        .order('courses.name')
+                       .collect { |available_course| [available_course, can_enroll?(available_course)] }
   end
 
-  def elective_course_ids_for(curriculum_semester)
+  def elective_ids_for(curriculum_semester)
     curriculum_semester.curriculum_course_groups
                        .joins(curriculum_courses: :available_courses)
                        .select('curriculum_course_groups.id, available_courses.id as available_course_id')
@@ -75,7 +92,7 @@ class StudentDecorator < SimpleDelegator
     enrolled_course_ids = course_enrollments.pluck(:available_course_id)
 
     enrolled_at_electives = true
-    elective_course_ids_for(curriculum_semester).each do |elective_ids|
+    elective_ids_for(curriculum_semester).each do |elective_ids|
       break unless enrolled_at_electives &&= (enrolled_course_ids & elective_ids).any?
     end
 
