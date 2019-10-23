@@ -36,7 +36,7 @@ class AvailableCourse < ApplicationRecord
   validates :groups, presence: true
 
   # delegates
-  delegate :code, :name, :theoric, :practice, :laboratory, :credit, :program_type, :ects, to: :curriculum_course
+  delegate :code, :name, :theoric, :practice, :laboratory, :credit, :program_type, :ects, :type, to: :curriculum_course
   delegate :name, to: :curriculum, prefix: true
   delegate :name, to: :unit, prefix: true
 
