@@ -29,3 +29,5 @@ en:
         student_number: Student Number
         student_record_not_found: Student record not found.
         not_proper_register_event_range: 'There is no online course registration activity covering the date range today.'
+        not_enough_ects: 'The amount of ECTS that can be selected is not enough for you to take this course.'
+        already_enrolled_at_group: 'Another course from this group of electives courses has already been selected.'

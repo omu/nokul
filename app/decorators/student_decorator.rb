@@ -54,16 +54,18 @@ class StudentDecorator < SimpleDelegator
                     .joins(:available_courses).pluck('available_courses.id')
   end
 
-  def not_enrolled_at_group?(available_course)
-    (selected_courses.pluck(:available_course_id) & group_elective_ids_for(available_course)).empty?
+  def enrolled_at_group?(available_course)
+    (selected_courses.pluck(:available_course_id) & group_elective_ids_for(available_course)).any?
   end
 
   def can_enroll?(available_course)
-    if available_course.type == 'elective'
-      selectable_ects > available_course.ects && not_enrolled_at_group?(available_course)
-    else
-      selectable_ects > available_course.ects
+    if available_course.type == 'elective' && enrolled_at_group?(available_course)
+      return [false, translate('.already_enrolled_at_group')]
     end
+
+    return [false, translate('.not_enough_ects')] if selectable_ects < available_course.ects
+
+    true
   end
 
   def course_catalog_for_semester(curriculum_semester)
@@ -71,7 +73,7 @@ class StudentDecorator < SimpleDelegator
                        .where(academic_term: active_term)
                        .where.not(id: selected_courses.pluck(:available_course_id))
                        .order('courses.name')
-                       .collect { |available_course| [available_course, can_enroll?(available_course)] }
+                       .collect { |available_course| [available_course, can_enroll?(available_course)].flatten }
   end
 
   def elective_ids_for(curriculum_semester)
@@ -99,5 +101,9 @@ class StudentDecorator < SimpleDelegator
     enrolled_at_compulsories = (compulsory_ids_for(curriculum_semester) - enrolled_course_ids).empty?
 
     enrolled_at_electives && enrolled_at_compulsories
+  end
+
+  def translate(key)
+    I18n.t("studentship.course_enrollments.new.#{key}")
   end
 end

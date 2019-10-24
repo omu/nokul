@@ -29,3 +29,5 @@ tr:
         student_number: Öğrenci Numarası
         student_record_not_found: Öğrencilik kaydı bulunamadı.
         not_proper_register_event_range: 'Tarih aralığı bugünü kapsayan online ders kayıtlanma aktivitesi bulunmamaktadır.'
+        not_enough_ects: 'Seçilebilecek AKTS miktarı bu dersi alabilmeniz için yeterli değil.'
+        already_enrolled_at_group: 'Bu seçmeli ders grubundan başka bir ders seçilmiş.'

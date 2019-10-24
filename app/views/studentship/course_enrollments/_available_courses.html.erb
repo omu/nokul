@@ -10,7 +10,7 @@
     </tr>
   </thead>
   <tbody>
-    <% courses.each do |available_course, selectable| %>
+    <% courses.each do |available_course, selectable, info| %>
       <tr>
         <td><%= available_course.code %></td>
         <td><%= available_course.name %></td>
@@ -21,7 +21,9 @@
           <% if selectable %>
             <%= link_to(t('.add'), course_enrollments_path(available_course_id: available_course.id), method: :post, class: 'btn btn-sm btn-outline-success') %>
           <% else%>
-            <button class="btn btn-sm btn-outline-secondary" style="pointer-events: none;" type="button" disabled><%= t('.add') %></button>
+            <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="<%= info %>">
+              <button class="btn btn-sm btn-outline-secondary" style="pointer-events: none;" type="button" disabled><%= t('.add') %></button>
+            </span>
           <% end %>
         </td>
       </tr>
