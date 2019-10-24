@@ -19,6 +19,7 @@ tr:
       index:
         student_records: Öğrencilik Kayıtları
       new:
+        academic_term: Akademik Dönem
         active_curriculum_not_found: Aktif müfredat bulunamadı.
         active_term_not_found: Aktif dönem bulunamadı.
         available_courses: Açılan Dersler
@@ -32,3 +33,4 @@ tr:
         not_proper_register_event_range: 'Tarih aralığı bugünü kapsayan online ders kayıtlanma aktivitesi bulunmamaktadır.'
         not_enough_ects: 'Seçilebilecek AKTS miktarı bu dersi alabilmeniz için yeterli değil.'
         already_enrolled_at_group: 'Bu seçmeli ders grubundan başka bir ders seçilmiş.'
+        year_and_semester: Sınıfı/Yarıyılı

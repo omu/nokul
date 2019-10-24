@@ -16,8 +16,16 @@
               <td><%= @student.student_number %></td>
             </tr>
             <tr>
+              <th><%= t('.year_and_semester') %></th>
+              <td><%= "#{@student.year}/#{@student.semester}" %></td>
+            </tr>
+            <tr>
               <th><%= t('.program') %></th>
               <td><%= @student.unit.name %></td>
+            </tr>
+            <tr>
+              <th><%= t('.academic_term') %></th>
+              <td><%= full_name(@student.active_term) %></td>
             </tr>
           </tbody>
         </table>
