@@ -15,6 +15,7 @@ en:
         name: Name
         type: Course Type
         drop: Drop
+        must_drop_first: 'Courses taken from the top semester must be dropped first.'
       index:
         student_records: Student Records
       new:

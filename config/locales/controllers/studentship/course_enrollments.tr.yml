@@ -15,6 +15,7 @@ tr:
         name: Dersin Adı
         type: Ders Türü
         drop: Çıkar
+        must_drop_first: 'Öncelikli olarak en üst dönemden alınan dersler çıkarılmalı.'
       index:
         student_records: Öğrencilik Kayıtları
       new:

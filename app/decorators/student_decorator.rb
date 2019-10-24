@@ -24,8 +24,13 @@ class StudentDecorator < SimpleDelegator
   end
 
   def selected_courses
-    @selected_courses ||= course_enrollments.includes(available_course: [curriculum_course: :course])
-                                            .where(semester: semester)
+    @selected_courses ||=
+      course_enrollments.includes(available_course: [curriculum_course: %i[course curriculum_semester]])
+                        .where(semester: semester)
+  end
+
+  def selected_catlog
+    selected_courses.collect { |course_enrollment| [course_enrollment, can_drop?(course_enrollment)] }
   end
 
   def course_catalog
@@ -58,6 +63,10 @@ class StudentDecorator < SimpleDelegator
     (selected_courses.pluck(:available_course_id) & group_elective_ids_for(available_course)).any?
   end
 
+  def max_sequence
+    @max_sequence ||= selected_courses.pluck(:sequence).max
+  end
+
   def can_enroll?(available_course)
     if available_course.type == 'elective' && enrolled_at_group?(available_course)
       return [false, translate('.already_enrolled_at_group')]
@@ -68,8 +77,12 @@ class StudentDecorator < SimpleDelegator
     true
   end
 
+  def can_drop?(course_enrollment)
+    max_sequence <= course_enrollment.available_course.curriculum_course.curriculum_semester.sequence
+  end
+
   def course_catalog_for_semester(curriculum_semester)
-    curriculum_semester.available_courses.includes(curriculum_course: :course)
+    curriculum_semester.available_courses.includes(curriculum_course: %i[course curriculum_course_group])
                        .where(academic_term: active_term)
                        .where.not(id: selected_courses.pluck(:available_course_id))
                        .order('courses.name')

@@ -10,7 +10,7 @@
     </tr>
   </thead>
   <tbody>
-    <% courses.each do |course_enrollment| %>
+    <% courses.each do |course_enrollment, dropable, info| %>
       <tr>
         <% available_course = course_enrollment.available_course %>
         <td><%= available_course.code %></td>
@@ -18,7 +18,15 @@
         <td><%= enum_t(available_course.curriculum_course, :type) %></td>
         <td><%= available_course.credit %></td>
         <td><%= available_course.ects %></td>
-        <td><%= link_to(t('.drop'), course_enrollment_path(course_enrollment), method: :delete, class: 'btn btn-sm btn-outline-danger') %></td>
+        <td>
+          <% if dropable %>
+            <%= link_to(t('.drop'), course_enrollment_path(course_enrollment), method: :delete, class: 'btn btn-sm btn-outline-danger') %>
+          <% else%>
+            <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="<%= t('.must_drop_first') %>">
+              <button class="btn btn-sm btn-outline-secondary" style="pointer-events: none;" type="button" disabled><%= t('.drop') %></button>
+            </span>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
