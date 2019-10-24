@@ -1,7 +1,10 @@
 <title><%= t('.title') %></title>
+<%= csrf_meta_tags %>
+<%= csp_meta_tag %>
+<link rel="manifest" href="/manifest.json">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="theme-color" content="#8e2731">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="<%= t('.author') %>">
 <meta name="description" content="<%= t('.description') %>">
-<%= csrf_meta_tags %>
