@@ -16,16 +16,16 @@ class StudentDecorator < SimpleDelegator
   end
 
   def selected_ects
-    selected_courses.sum(&:ects).to_i
+    @selected_ects ||= selected_courses.sum(&:ects).to_i
   end
 
   def selectable_ects
-    TOTAL_ECTS - selected_ects
+    @selectable_ects ||= TOTAL_ECTS - selected_ects
   end
 
   def selected_courses
-    course_enrollments.includes(available_course: [curriculum_course: :course])
-                      .where(semester: semester)
+    @selected_courses ||= course_enrollments.includes(available_course: [curriculum_course: :course])
+                                            .where(semester: semester)
   end
 
   def course_catalog
