@@ -1,4 +1,10 @@
 tr:
+  activerecord:
+    enums:
+      course_enrollment:
+        statuses:
+          draft: Taslak
+          saved: Kaydedildi
   studentship:
     course_enrollments:
       available_courses:
