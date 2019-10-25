@@ -19,6 +19,17 @@ class CurriculumSemesterDecorator < SimpleDelegator
     end
   end
 
+  def elective_ids
+    curriculum_course_groups.joins(curriculum_courses: :available_courses)
+                            .select('curriculum_course_groups.id, available_courses.id as available_course_id')
+                            .group_by(&:id)
+                            .collect { |_group_id, group| group.pluck('available_course_id') }
+  end
+
+  def compulsory_ids
+    curriculum_courses.compulsory.includes(:available_courses).map(&:available_courses).flatten.pluck(:id)
+  end
+
   private
 
   def merge(collection, appends)
