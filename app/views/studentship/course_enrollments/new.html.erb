@@ -55,7 +55,7 @@
             <strong><%= "#{t('.selectable_ects')}: #{@student.selectable_ects}" %></strong>
           </div>
         </div>
-        <% @student.course_catalog.each do |semester, courses| %>
+        <% @student.selectable_courses.each do |semester, courses| %>
           <div class="card-body">
             <%= render 'semesters', semester: semester, courses: courses %>
           </div>
@@ -74,7 +74,7 @@
           <div class="card-body table-responsive">
             <%= render 'course_enrollments',
                        klass:   'border-primary',
-                       courses: @student.selected_catlog %>
+                       courses: @student.selected_courses %>
           </div>
         </div>
       </div>

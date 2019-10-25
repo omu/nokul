@@ -24,7 +24,7 @@ module Studentship
     end
 
     def save
-      @student.selected_courses.update(status: :saved)
+      @student.semester_enrollments.update(status: :saved)
       redirect_to new_course_enrollment_path
     end
 
