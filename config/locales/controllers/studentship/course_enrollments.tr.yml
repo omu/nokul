@@ -30,6 +30,7 @@ tr:
         active_term_not_found: Aktif dönem bulunamadı.
         available_courses: Açılan Dersler
         program: Program
+        save_enrollments: Seçimleri Kaydet
         selected_courses: Seçilen Dersler
         selected_ects: Seçilen AKTS
         selectable_ects: Seçilebilecek AKTS

@@ -2,7 +2,7 @@
 
 module Studentship
   class CourseEnrollmentsController < ApplicationController
-    before_action :set_student, only: %i[new create destroy]
+    before_action :set_student, only: %i[new create destroy save]
     before_action :set_course_enrollment, only: :destroy
 
     def index
@@ -20,6 +20,11 @@ module Studentship
     # TODO
     def destroy
       @course_enrollment.destroy
+      redirect_to new_course_enrollment_path
+    end
+
+    def save
+      @student.selected_courses.update(status: :saved)
       redirect_to new_course_enrollment_path
     end
 

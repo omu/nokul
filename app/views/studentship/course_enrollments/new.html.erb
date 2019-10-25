@@ -34,6 +34,13 @@
           </tbody>
         </table>
       </div>
+      <% if @student.enrollment_status == :draft %>
+        <div class="card-footer">
+          <div class="float-right">
+            <%= link_to(t('.save_enrollments'), save_course_enrollments_path, class: 'btn btn-success') %>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

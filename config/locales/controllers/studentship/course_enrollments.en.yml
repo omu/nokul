@@ -30,6 +30,7 @@ en:
         active_term_not_found: Active term not found.
         available_courses: Available Courses
         program: Program
+        save_enrollments: Save Enrollments
         selected_courses: Selected Courses
         selected_ects: Selected ECTS
         selectable_ects: Selectable ECTS
