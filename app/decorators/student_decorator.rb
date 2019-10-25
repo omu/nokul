@@ -11,6 +11,10 @@ class StudentDecorator < SimpleDelegator
     calendars.last
   end
 
+  def enrollment_status
+    @enrollment_status ||= selected_courses.pluck(:status).include?('draft') ? :draft : :saved
+  end
+
   def registrable_for_online_course?
     calendar&.check_events('online_course_registrations')
   end

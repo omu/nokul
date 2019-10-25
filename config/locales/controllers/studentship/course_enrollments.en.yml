@@ -33,6 +33,7 @@ en:
         selected_courses: Selected Courses
         selected_ects: Selected ECTS
         selectable_ects: Selectable ECTS
+        enrollment_status: Enrollment Status
         student_info: Student Info
         student_number: Student Number
         student_record_not_found: Student record not found.
