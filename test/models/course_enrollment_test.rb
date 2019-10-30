@@ -12,7 +12,7 @@ class CourseEnrollmentTest < ActiveSupport::TestCase
 
   # validations: uniqueness
   test 'uniqueness validations for course_enrollment of a student' do
-    fake = course_enrollments(:elective_course).dup
+    fake = course_enrollments(:elective).dup
     assert_not fake.valid?
     assert_not_empty fake.errors[:student]
   end

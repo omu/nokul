@@ -21,3 +21,15 @@ bilgisayar_muh_mufredati_birinci_donem:
   year: 1
   term: fall
   curriculum: bilgisayar_muhendisligi_mufredati
+
+bilgisayar_muh_mufredati_ucuncu_donem:
+  sequence: 3
+  year: 2
+  term: fall
+  curriculum: bilgisayar_muhendisligi_mufredati
+
+bilgisayar_muh_mufredati_besinci_donem:
+  sequence: 5
+  year: 3
+  term: fall
+  curriculum: bilgisayar_muhendisligi_mufredati

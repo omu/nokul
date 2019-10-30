@@ -7,6 +7,3 @@ egitim_bilimleri_calendar:
 bilgisayar_muhendisligi_calendar:
   calendar: bm_calendar
   unit: bilgisayar_muhendisligi_programi
-matematik_ogretmenligi_programi_calendar:
-  calendar: active_calendar
-  unit: matematik_ogretmenligi_programi

@@ -1,4 +1,12 @@
-elective_course:
+old:
   student: serhat
-  available_course: available_elective_course
+  available_course: test_fall_2018_2019
   semester: 1
+elective:
+  student: serhat
+  available_course: elective_course
+  semester: 3
+compulsory:
+  student: serhat
+  available_course: compulsory_course
+  semester: 3

@@ -3,13 +3,19 @@ serhat:
   user: serhat
   unit: bilgisayar_muhendisligi_programi
   permanently_registered: true
+  year: 2
+  semester: 3
 serhat_omu:
   student_number: 98765
   user: serhat
   unit: matematik_ogretmenligi_programi
   permanently_registered: true
+  year: 1
+  semester: 1
 john:
   student_number: 45612
   user: john
   unit: bilgisayar_muhendisligi_programi
   permanently_registered: true
+  year: 1
+  semester: 1

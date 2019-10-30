@@ -34,6 +34,6 @@ class CalendarTest < ActiveSupport::TestCase
 
   # custom tests
   test 'check if events exists' do
-    assert_not calendars(:bm_calendar).check_events('online_course_registrations')
+    assert calendars(:bm_calendar).check_events('online_course_registrations')
   end
 end
