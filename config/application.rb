@@ -38,5 +38,10 @@ module Nokul
 
     # use rack-attack as middleware
     config.middleware.use Rack::Attack
+
+    # default mailer settings
+    config.action_mailer.default_url_options = {
+      host: ENV.fetch('HOST', Tenant.configuration.host)
+    }
   end
 end
