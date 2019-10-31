@@ -2,19 +2,15 @@
 <%= csrf_meta_tags %>
 <%= csp_meta_tag %>
 <link rel="manifest" href="/manifest.json">
-
-<link rel="apple-touch-icon" href="<%= asset_path('logo/baum-logo-36.png')%>">
-<link rel="apple-touch-icon" sizes="152x152" href="<%= asset_path('logo/baum-logo-ipad.png')%>">
-<link rel="apple-touch-icon" sizes="180x180" href="<%= asset_path('logo/baum-logo-iphone-retina.png')%>">
-<link rel="apple-touch-icon" sizes="167x167" href="<%= asset_path('logo/baum-logo-ipad-retina.png.png')%>">
-
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="theme-color" content="#8e2731">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="NOKUL">
-
 <meta name="author" content="<%= t('.author') %>">
 <meta name="description" content="<%= t('.description') %>">
+
+<!-- Add iOS meta tags and icons -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#8e2731">
+<meta name="apple-mobile-web-app-title" content="NOKUL">
+<link rel="apple-touch-icon" href="<%= asset_path('logo/baum-logo-ipad.png')%>">
