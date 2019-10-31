@@ -54,7 +54,9 @@
                     <%= f.association :title %>
                   </div>
                   <div class='col-sm-4'>
-                    <%= f.association :unit, collection: Unit.active.order(:name) %>
+                    <%= f.association :unit,
+                                      collection: Unit.active.order(:ancestry, :name),
+                                      label_method: :names_depth_cache %>
                   </div>
                 </div>
               </fieldset>
