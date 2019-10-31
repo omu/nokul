@@ -33,6 +33,13 @@ class ApplicationController < ActionController::Base
 
   protected
 
+  def append_info_to_payload(payload)
+    super
+    payload[:host] = request.host
+    payload[:remote_ip] = request.remote_ip
+    payload[:user_id] = current_user.try(:id)
+  end
+
   def search_params(model = nil)
     parameters = [:term]
     parameters << model.dynamic_search_keys if model
