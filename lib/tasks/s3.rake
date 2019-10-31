@@ -88,33 +88,18 @@ module Shell
   end
 end
 
-module Git
-  module_function
-
-  def toplevel
-    build %w[rev-parse --show-toplevel]
-  end
-
-  class << self
-    private
-
-    def build(args)
-      ['git', *args]
-    end
-  end
-end
-
 class S3
   include Singleton
 
-  BUCKET = 'static'
+  BUCKET       = 'static'
+  GIT_TOPLEVEL = %w[git rev-parse --show-toplevel].freeze
 
   def initialize(config = Tenant.credentials.config[:s3])
     @client = Aws::S3::Client.new(config)
   end
 
   def pull(source, target, bucket: BUCKET)
-    Dir.chdir(Shell.run_or_die(Git.toplevel).outline) do
+    Dir.chdir(Shell.run_or_die(GIT_TOPLEVEL).outline) do
       origdir = Dir.pwd
       dest = File.join(origdir, target, source)
       FileUtils.mkdir_p File.dirname(dest)
@@ -125,7 +110,7 @@ class S3
   end
 
   def push(source, bucket: BUCKET)
-    Dir.chdir(Shell.run_or_die(Git.toplevel).outline) do
+    Dir.chdir(Shell.run_or_die(GIT_TOPLEVEL).outline) do
       origdir = Dir.pwd
       dest = File.join(origdir, source)
       file_name = File.basename(source)
