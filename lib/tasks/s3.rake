@@ -91,15 +91,15 @@ end
 class S3
   include Singleton
 
-  BUCKET       = 'static'
-  GIT_TOPLEVEL = %w[git rev-parse --show-toplevel].freeze
+  TOPLEVEL = %w[git rev-parse --show-toplevel].freeze
+  BUCKET   = 'static'
 
   def initialize(config = Tenant.credentials.config[:s3])
     @client = Aws::S3::Client.new(config)
   end
 
   def pull(source, target, bucket: BUCKET)
-    Dir.chdir(Shell.run_or_die(GIT_TOPLEVEL).outline) do
+    Dir.chdir(Shell.run_or_die(TOPLEVEL).outline) do
       origdir = Dir.pwd
       dest = File.join(origdir, target, source)
       FileUtils.mkdir_p File.dirname(dest)
@@ -110,7 +110,7 @@ class S3
   end
 
   def push(source, bucket: BUCKET)
-    Dir.chdir(Shell.run_or_die(GIT_TOPLEVEL).outline) do
+    Dir.chdir(Shell.run_or_die(TOPLEVEL).outline) do
       origdir = Dir.pwd
       dest = File.join(origdir, source)
       file_name = File.basename(source)
@@ -126,8 +126,9 @@ class S3
 end
 
 OBJECTS = [
-  { source: 'sample_data.sql.enc.gz', target: 'db/encrypted_data' },
-  { source: 'static_data.sql.enc.gz', target: 'db/encrypted_data' }
+  { source: 'sample_data.sql.enc.gz',            target: 'db/encrypted_data' },
+  { source: 'static_data.sql.enc.gz',            target: 'db/encrypted_data' },
+  { source: 'openldap-2.4-bcyrpt-module.tar.gz', target: 'lib/templates/ldap'}
 ].freeze
 
 namespace :s3 do
