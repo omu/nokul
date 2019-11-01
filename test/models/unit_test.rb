@@ -162,4 +162,15 @@ class UnitTest < ActiveSupport::TestCase
     employees = Employee.joins(:units, user: :identities).where(units: { id: units(:omu).subtree.active.ids })
     assert_equal employees.count, units(:omu).subtree_employees.count
   end
+
+  test 'program? method' do
+    assert units(:bilgisayar_muhendisligi_programi).program?
+    assert_not units(:omu).program?
+    assert_not units(:bilgisayar_muhendisligi).program?
+  end
+
+  test 'semester_type method' do
+    assert_equal units(:bilgisayar_muhendisligi_programi).semester_type, 'periodic'
+    assert_equal units(:dis_hekimligi_programı).semester_type, 'yearly'
+  end
 end

@@ -278,6 +278,33 @@ veteriner_fakultesi:
   unit_type: faculty
   ancestry: <%= ActiveRecord::FixtureSet.identify(:omu) %>
 
+dis_hekimligi_fakultesi:
+  name: Diş Hekimliği Fakültesi
+  abbreviation: DİŞ
+  yoksis_id: 121996
+  district: atakum
+  unit_status: active
+  unit_instruction_language: turkish
+  unit_instruction_type: normal_education
+  unit_type: faculty
+  ancestry: <%= ActiveRecord::FixtureSet.identify(:omu) %>
+
+dis_hekimligi_programı:
+  name: Diş Hekimliği Programı
+  abbreviation: DİŞ-PR
+  yoksis_id: 228143
+  duration: 5
+  district: atakum
+  unit_status: active
+  unit_instruction_language: turkish
+  unit_instruction_type: normal_education
+  unit_type: program
+  osym_id: 1234896762
+  ancestry: "\
+    <%= ActiveRecord::FixtureSet.identify(:omu) %>/\
+    <%= ActiveRecord::FixtureSet.identify(:dis_hekimligi_fakultesi) %>/\
+  "
+
 senate:
   name: Senato
   abbreviation: SENATO

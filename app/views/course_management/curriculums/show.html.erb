@@ -18,7 +18,7 @@
             </tr>
             <tr>
               <th><%= t('.unit') %></th>
-              <td><%= @curriculum.unit.try(:name) %></td>
+              <td><%= @curriculum.unit.try(:names_depth_cache) %></td>
             </tr>
             <tr>
               <th><%= t('.semesters_count') %></th>
