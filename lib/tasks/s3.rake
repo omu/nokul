@@ -98,26 +98,25 @@ class S3
     @client = Aws::S3::Client.new(config)
   end
 
-  def pull(source, target, bucket: BUCKET)
+  def pull(file, bucket: BUCKET)
     Dir.chdir(Shell.run_or_die(TOPLEVEL).outline) do
-      origdir = Dir.pwd
-      dest = File.join(origdir, target, source)
-      FileUtils.mkdir_p File.dirname(dest)
-      client.get_object bucket: bucket, key: source, response_target: dest
+      target = File.join(Dir.pwd, file)
+      key = File.basename(target)
+      FileUtils.mkdir_p File.dirname(target)
+      client.get_object bucket: bucket, key: key, response_target: target
     end
   rescue Errno::EEXIST
-    warn "#{target} already exist."
+    warn "#{file} already exist."
   end
 
-  def push(source, bucket: BUCKET)
+  def push(file, bucket: BUCKET)
     Dir.chdir(Shell.run_or_die(TOPLEVEL).outline) do
-      origdir = Dir.pwd
-      dest = File.join(origdir, source)
-      file_name = File.basename(source)
-      client.put_object bucket: bucket, body: IO.read(dest), key: file_name
+      body = IO.read(File.join(Dir.pwd, file))
+      key = File.basename(file)
+      client.put_object bucket: bucket, body: body, key: key
     end
   rescue Errno::ENOENT
-    warn "#{source} does not exist."
+    warn "#{file} does not exist."
   end
 
   protected
@@ -126,30 +125,29 @@ class S3
 end
 
 namespace :s3 do
-  OBJECTS = [
-    { source: 'sample_data.sql.enc.gz',            target: 'db/encrypted_data'  },
-    { source: 'static_data.sql.enc.gz',            target: 'db/encrypted_data'  },
-    { source: 'openldap-2.4-bcyrpt-module.tar.gz', target: 'lib/templates/ldap' }
+  FILES = %w[
+    db/encrypted_data/sample_data.sql.enc.gz
+    db/encrypted_data/static_data.sql.enc.gz
+    lib/templates/ldap/openldap-2.4-bcyrpt-module.tar.gz
   ].freeze
 
   desc 'Pull S3 objects from remote'
   task pull: :environment do
-    OBJECTS.each do |object|
-      puts "#{object[:source]} pulling..."
-      S3.instance.pull(*object.values)
+    FILES.each do |file|
+      puts "#{file} pulling..."
+      S3.instance.pull(file)
     end
   rescue StandardError => e
-    warn "An error occured for #{object}: #{e}"
+    warn "An error occured: #{e}"
   end
 
   desc 'Push S3 objects to remote'
   task push: :environment do
-    OBJECTS.each do |object|
-      puts "#{object[:source]} pushing..."
-      src = File.join(object[:target], object[:source])
-      S3.instance.push(src)
+    FILES.each do |file|
+      puts "#{file} pushing..."
+      S3.instance.push(file)
     end
   rescue StandardError => e
-    warn "An error occured for #{object}: #{e}"
+    warn "An error occured: #{e}"
   end
 end
