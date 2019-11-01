@@ -125,13 +125,13 @@ class S3
   attr_reader :client
 end
 
-OBJECTS = [
-  { source: 'sample_data.sql.enc.gz',            target: 'db/encrypted_data' },
-  { source: 'static_data.sql.enc.gz',            target: 'db/encrypted_data' },
-  { source: 'openldap-2.4-bcyrpt-module.tar.gz', target: 'lib/templates/ldap'}
-].freeze
-
 namespace :s3 do
+  OBJECTS = [
+    { source: 'sample_data.sql.enc.gz',            target: 'db/encrypted_data'  },
+    { source: 'static_data.sql.enc.gz',            target: 'db/encrypted_data'  },
+    { source: 'openldap-2.4-bcyrpt-module.tar.gz', target: 'lib/templates/ldap' }
+  ].freeze
+
   desc 'Pull S3 objects from remote'
   task pull: :environment do
     OBJECTS.each do |object|
