@@ -133,7 +133,7 @@ OBJECTS = [
 
 namespace :s3 do
   desc 'Pull S3 objects from remote'
-  task :pull do
+  task pull: :environment do
     OBJECTS.each do |object|
       puts "#{object[:source]} pulling..."
       S3.instance.pull(*object.values)
@@ -143,7 +143,7 @@ namespace :s3 do
   end
 
   desc 'Push S3 objects to remote'
-  task :push do
+  task push: :environment do
     OBJECTS.each do |object|
       puts "#{object[:source]} pushing..."
       src = File.join(object[:target], object[:source])
