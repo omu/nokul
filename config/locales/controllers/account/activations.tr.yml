@@ -21,12 +21,16 @@ tr:
       record_not_found: Sistemde hesabınızı aktifleştirecek bir kayıt bulunamamıştır.
       new:
         <<: *activation_attributes
-        activation: Aktivasyon
         account_activation: Hesabınızı aktifleştirin
+        activation: Aktivasyon
         agreements: Hesabınızı aktifleştirerek, %{user_agreements_link} ve %{privacy_policies_link} kabul etmiş olursunuz.
-        for_old_id_cards: Eski kimlik kartları için
+        identity_card: Kimlik Kartı
+        identity_certificate: Nüfus Cüzdanı
+        identity_type: Kimlik Türü
         identity_verification: Kimlik Doğrulama
         login: Giriş Yap
+        new_identity_card: Yeni Kimlik Kartı
+        old_identity_card: Eski Kimlik Kartı
         phone_verification: Telefon Doğrulama
         privacy_policy: Gizlilik Politikalarımızı
         user_agreement: Kurallarımızı

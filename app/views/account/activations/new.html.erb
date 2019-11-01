@@ -33,18 +33,33 @@
             </div>
           </div>
           <div class='form-group row'>
+            <label class='col-sm-3 col-form-label text-right'><%= t('.identity_type') %></label>
+            <div class='col-sm-9'>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="identity-card" name="identity-switch" class="custom-control-input" checked>
+                <label class="custom-control-label" for="identity-card">
+                  <%= t('.identity_card') %> <small class='text-danger' id='span_serial'>(<%= t('.new_identity_card') %>)</small>
+                </label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="identity-certificate" name="identity-switch" class="custom-control-input">
+                <label class="custom-control-label" for="identity-certificate">
+                  <%= t('.identity_certificate') %> <small class='text-danger' id='span_serial'>(<%= t('.old_identity_card') %>)</small>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class='form-group row' id='certificate-inputs'>
             <label for='activation_serial' class='col-sm-3 col-form-label text-right'><%= t('.serial') %></label>
             <div class='col-sm-3'>
               <%= f.input :serial, required: false, label: false, wrapper: false %>
-              <small class='text-danger' id='span_serial'><%= t('.for_old_id_cards') %></small>
             </div>
             <label for='activation_serial_no' class='col-sm-2 col-form-label text-right'><%= t('.serial_no') %></label>
             <div class='col-sm-3'>
               <%= f.input :serial_no, required: false, label: false, wrapper: false %>
-              <small class='text-danger' id='span_serial_no'><%= t('.for_old_id_cards') %></small>
             </div>
           </div>
-          <div class='form-group row'>
+          <div class='form-group row' id='card-inputs'>
             <label for='activation_document_no' class='col-sm-3 col-form-label text-right'><%= t('.document_no') %></label>
             <div class='col-sm-9'>
               <%= f.input :document_no, required: false, label: false, wrapper: false %>
