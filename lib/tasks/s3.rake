@@ -134,7 +134,7 @@ namespace :s3 do
   desc 'Pull S3 objects from remote'
   task pull: :environment do
     FILES.each do |file|
-      puts "#{file} pulling..."
+      warn "#{file} pulling..."
       S3.instance.pull(file)
     end
   rescue StandardError => e
