@@ -144,7 +144,7 @@ namespace :s3 do
   desc 'Push S3 objects to remote'
   task push: :environment do
     FILES.each do |file|
-      puts "#{file} pushing..."
+      warn "#{file} pushing..."
       S3.instance.push(file)
     end
   rescue StandardError => e
