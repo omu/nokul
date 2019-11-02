@@ -27,9 +27,3 @@ bilgisayar_muh_mufredati_ucuncu_donem:
   year: 2
   term: fall
   curriculum: bilgisayar_muhendisligi_mufredati
-
-bilgisayar_muh_mufredati_besinci_donem:
-  sequence: 5
-  year: 3
-  term: fall
-  curriculum: bilgisayar_muhendisligi_mufredati
