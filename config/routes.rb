@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     mount PgHero::Engine, at: 'postgres'
   end
 
+  get '/service-worker.js', to: 'service_workers/workers#index'
+  get '/manifest.json', to: 'service_workers/manifests#index'  
   root to: 'home#index'
 
   draw :account

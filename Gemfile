@@ -78,6 +78,9 @@ gem 'nexmo'
 gem 'smstools'
 gem 'twilio-ruby'
 
+# log
+gem 'lograge'
+
 group :development, :test do
   gem 'brakeman', require: false
   gem 'bullet'
