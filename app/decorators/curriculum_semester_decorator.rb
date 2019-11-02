@@ -21,13 +21,16 @@ class CurriculumSemesterDecorator < SimpleDelegator
 
   def elective_ids
     curriculum_course_groups.joins(curriculum_courses: :available_courses)
+                            .where('available_courses.academic_term_id = ?', active_term)
                             .select('curriculum_course_groups.id, available_courses.id as available_course_id')
                             .group_by(&:id)
                             .collect { |_group_id, group| group.pluck('available_course_id') }
   end
 
   def compulsory_ids
-    curriculum_courses.compulsory.includes(:available_courses).map(&:available_courses).flatten.pluck(:id)
+    curriculum_courses.compulsory.joins(:available_courses)
+                      .where('available_courses.academic_term_id = ?', active_term)
+                      .map(&:available_courses).flatten.pluck(:id)
   end
 
   private
@@ -46,7 +49,7 @@ class CurriculumSemesterDecorator < SimpleDelegator
     unit.course_groups.includes(:courses).map(&:courses).flatten
   end
 
-  def term
+  def active_term
     AcademicTerm.active.last
   end
 end
