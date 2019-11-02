@@ -19,14 +19,14 @@ ydi:
 elective_course:
   course: mobil_programlama
   curriculum_semester: bilgisayar_muh_mufredati_ucuncu_donem
-  curriculum_course_group: one
+  curriculum_course_group: ucuncu_donem_secmeli_grubu
   ects: 2
   type: elective
 
 elective_course_2:
   course: java
   curriculum_semester: bilgisayar_muh_mufredati_ucuncu_donem
-  curriculum_course_group: one
+  curriculum_course_group: ucuncu_donem_secmeli_grubu
   ects: 2
   type: elective
 
