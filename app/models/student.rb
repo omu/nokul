@@ -22,6 +22,8 @@ class Student < ApplicationRecord
   # TODO: Will set equal_to: N, when we decide about student numbers
   validates :student_number, presence: true, uniqueness: true, length: { maximum: 255 }
   validates :permanently_registered, inclusion: { in: [true, false] }
+  validates :semester, numericality: { greater_than: 0 }
+  validates :year, numericality: { greater_than_or_equal_to: 0 }
 
   # delegations
   delegate :addresses, to: :user
