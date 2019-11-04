@@ -3087,9 +3087,11 @@ CREATE TABLE public.students (
     semester integer,
     year integer,
     CONSTRAINT students_permanently_registered_null CHECK ((permanently_registered IS NOT NULL)),
+    CONSTRAINT students_semester_null CHECK ((semester IS NOT NULL)),
     CONSTRAINT students_semester_numericality CHECK ((semester > 0)),
     CONSTRAINT students_student_number_length CHECK ((length((student_number)::text) <= 255)),
     CONSTRAINT students_student_number_presence CHECK (((student_number IS NOT NULL) AND ((student_number)::text !~ '^\s*$'::text))),
+    CONSTRAINT students_year_null CHECK ((year IS NOT NULL)),
     CONSTRAINT students_year_numericality CHECK ((year >= 0))
 );
 
