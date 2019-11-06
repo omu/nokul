@@ -40,6 +40,10 @@ class AvailableCourse < ApplicationRecord
   delegate :name, to: :curriculum, prefix: true
   delegate :name, to: :unit, prefix: true
 
+  def quota_full?
+    groups.sum(:quota) == course_enrollments.length
+  end
+
   private
 
   def assign_academic_term

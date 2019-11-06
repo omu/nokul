@@ -41,4 +41,5 @@ en:
         not_proper_register_event_range: 'There is no online course registration activity covering the date range today.'
         not_enough_ects: 'The amount of ECTS that can be selected is not enough for you to take this course.'
         already_enrolled_at_group: 'Another course from this group of electives courses has already been selected.'
+        quota_full: 'The course has reached its quota.'
         year_and_semester: Year/Semester

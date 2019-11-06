@@ -80,6 +80,8 @@ class StudentDecorator < SimpleDelegator
 
     return [false, translate('.not_enough_ects')] if selectable_ects < available_course.ects
 
+    return [false, translate('.quota_full')] if available_course.quota_full?
+
     true
   end
 

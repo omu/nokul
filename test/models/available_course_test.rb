@@ -27,4 +27,10 @@ class AvailableCourseTest < ActiveSupport::TestCase
     assert_not fake.valid?
     assert_not_empty fake.errors[:curriculum_course]
   end
+
+  # custom methods
+  test 'quota_full? method' do
+    assert available_courses(:elective_course).quota_full?
+    assert_not available_courses(:compulsory_course).quota_full?
+  end
 end
