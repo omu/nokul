@@ -15,26 +15,6 @@ class StudentDecorator < SimpleDelegator
     @enrollment_status ||= semester_enrollments.pluck(:status).include?('draft') ? :draft : :saved
   end
 
-  def semester_enrollments
-    @semester_enrollments ||=
-      course_enrollments.includes(available_course: [curriculum_course: %i[course curriculum_semester]])
-                        .where(semester: semester)
-  end
-
-  def fake_gpa
-    @fake_gpa ||= student_number.to_s[0..1].to_f / 25
-  end
-
-  def plus_ects
-    @plus_ects ||= case fake_gpa
-                   when 1.8..2.49 then 6
-                   when 2.5..2.99 then 10
-                   when 3.0..3.49 then 12
-                   when 3.5..4 then 15
-                   else 0
-                   end
-  end
-
   def selected_ects
     @selected_ects ||= semester_enrollments.sum(&:ects).to_i
   end

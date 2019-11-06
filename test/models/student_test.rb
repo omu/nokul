@@ -38,6 +38,17 @@ class StudentTest < ActiveSupport::TestCase
     assert students(:serhat).addresses
   end
 
+  # custom methods
+  test 'fake gpa method' do
+    assert_equal students(:serhat).fake_gpa, 0.48
+    assert_equal students(:serhat_omu).fake_gpa, 3.92
+  end
+
+  test 'plus ects method' do
+    assert_equal students(:serhat).plus_ects, 0
+    assert_equal students(:serhat_omu).plus_ects, 15
+  end
+
   # job tests
   test 'student enqueues Kps::IdentitySaveJob after being created' do
     users(:serhat).students.destroy_all

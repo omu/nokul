@@ -24,18 +24,8 @@ class StudentDecoratorTest < ActiveSupport::TestCase
     assert_includes course_enrollments, course_enrollments(:elective)
   end
 
-  test 'fake_gpa method' do
-    assert_equal @student.fake_gpa, 0.48
-    assert_equal StudentDecorator.new(students(:serhat_omu)).fake_gpa, 3.92
-  end
-
-  test 'plus_ects method' do
-    assert_equal @student.plus_ects, 0
-    assert_equal StudentDecorator.new(students(:serhat_omu)).plus_ects, 15
-  end
-
   test 'selectable_ects method' do
-    assert_equal @student.selectable_ects, TOTAL_ECTS - selected_ects
+    assert_equal @student.selectable_ects, TOTAL_ECTS + @student.plus_ects - selected_ects
   end
 
   test 'selected_courses method' do
