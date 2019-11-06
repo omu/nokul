@@ -12,7 +12,7 @@ compulsory:
   student: serhat
   available_course: compulsory_course
   semester: 3
-compulsory:
+johns_enrollment:
   student: john
   available_course: compulsory_course
   semester: 3
