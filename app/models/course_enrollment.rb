@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class CourseEnrollment < ApplicationRecord
+  # callbacks
+  before_validation :assign_semester
+
   # enums
   enum status: { draft: 0, saved: 1 }
 
@@ -14,4 +17,10 @@ class CourseEnrollment < ApplicationRecord
 
   # delegates
   delegate :ects, to: :available_course
+
+  private
+
+  def assign_semester
+    self.semester = student&.semester
+  end
 end

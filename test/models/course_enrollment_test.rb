@@ -4,8 +4,12 @@ require 'test_helper'
 
 class CourseEnrollmentTest < ActiveSupport::TestCase
   extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::CallbackHelper
   extend Support::Minitest::EnumerationHelper
   extend Support::Minitest::ValidationHelper
+
+  # callbacks
+  before_validation :assign_semester
 
   # enums
   enum status: { draft: 0, saved: 1 }
