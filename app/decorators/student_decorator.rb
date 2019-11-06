@@ -56,7 +56,9 @@ class StudentDecorator < SimpleDelegator
 
   def group_elective_ids_of(available_course)
     available_course.curriculum_course.curriculum_course_group.curriculum_courses
-                    .joins(:available_courses).pluck('available_courses.id')
+                    .joins(:available_courses)
+                    .where('available_courses.academic_term_id = ?', active_term.id)
+                    .pluck('available_courses.id')
   end
 
   def enrolled_at_group?(available_course)
@@ -82,7 +84,8 @@ class StudentDecorator < SimpleDelegator
   end
 
   def selectable_courses_for(curriculum_semester)
-    curriculum_semester.available_courses.includes(curriculum_course: %i[course curriculum_course_group])
+    curriculum_semester.available_courses
+                       .includes(:course_enrollments, :groups, curriculum_course: %i[course curriculum_course_group])
                        .where(academic_term: active_term)
                        .where.not(id: semester_enrollments.pluck(:available_course_id))
                        .order('courses.name')
