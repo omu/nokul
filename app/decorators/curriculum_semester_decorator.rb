@@ -28,9 +28,9 @@ class CurriculumSemesterDecorator < SimpleDelegator
   end
 
   def compulsory_ids
-    curriculum_courses.compulsory.joins(:available_courses)
+    curriculum_courses.compulsory.includes(:available_courses)
                       .where('available_courses.academic_term_id = ?', active_term)
-                      .map(&:available_courses).flatten.pluck(:id)
+                      .pluck('available_courses.id')
   end
 
   private
