@@ -15,6 +15,8 @@ class StudentDecoratorTest < ActiveSupport::TestCase
   end
 
   test 'enrollment_status method' do
+    assert_not StudentDecorator.new(students(:serhat_omu)).enrollment_status
+    assert_equal StudentDecorator.new(students(:john)).enrollment_status, :saved
     assert_equal @student.enrollment_status, :draft
   end
 

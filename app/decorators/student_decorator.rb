@@ -12,7 +12,8 @@ class StudentDecorator < SimpleDelegator
   end
 
   def enrollment_status
-    @enrollment_status ||= semester_enrollments.pluck(:status).include?('draft') ? :draft : :saved
+    statuses = semester_enrollments.pluck(:status)
+    @enrollment_status ||= statuses.include?('draft') ? :draft : :saved if statuses.any?
   end
 
   def selected_ects
