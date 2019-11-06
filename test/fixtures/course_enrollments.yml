@@ -2,11 +2,18 @@ old:
   student: serhat
   available_course: test_fall_2018_2019
   semester: 1
+  status: saved
 elective:
   student: serhat
   available_course: elective_course
   semester: 3
+  status: saved
 compulsory:
   student: serhat
   available_course: compulsory_course
   semester: 3
+compulsory:
+  student: john
+  available_course: compulsory_course
+  semester: 3
+  status: saved
