@@ -11,27 +11,26 @@ module Studentship
 
     def new; end
 
-    # TODO
     def create
-      @student.course_enrollments.create(available_course_id: params[:available_course_id], semester: @student.semester)
-      redirect_to new_course_enrollment_path
+      enrollment = @student.course_enrollments.new(available_course_id: params[:available_course_id], semester: @student.semester)
+      message = enrollment.save ? t('.success') : t('.error')
+      redirect_with(message)
     end
 
-    # TODO
     def destroy
-      @course_enrollment.destroy
-      redirect_to new_course_enrollment_path
+      message = @course_enrollment.destroy ? t('.success') : t('.error')
+      redirect_with(message)
     end
 
     def save
-      @student.semester_enrollments.update(status: :saved)
-      redirect_to new_course_enrollment_path
+      message = @student.semester_enrollments.update(status: :saved) ? t('.success') : t('.error')
+      redirect_with(message)
     end
 
     private
 
     def redirect_with(message)
-      redirect_to(:root, alert: t(".#{message}"))
+      redirect_to(new_course_enrollment_path, flash: { info: message })
     end
 
     def set_student
@@ -39,7 +38,7 @@ module Studentship
         current_user.students.find_by(id: params[:student_id]) ||
         current_user.students.first
 
-      redirect_with('student_record_not_found') unless student
+      redirect_to(:root, alert: t('.student_record_not_found')) unless student
 
       @student = StudentDecorator.new(student)
     end

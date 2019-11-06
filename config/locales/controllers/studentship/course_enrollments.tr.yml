@@ -24,6 +24,12 @@ tr:
         must_drop_first: 'Öncelikli olarak en üst dönemden alınan dersler çıkarılmalı.'
       index:
         student_records: Öğrencilik Kayıtları
+      create:
+        error: Ders seçilen derslere eklenirken bir hata oluştu.
+        success: Ders seçilen derslere eklendi.
+      destroy:
+        error: Ders seçilen derslerden çıkarırken bir hata oluştu.
+        success: Ders seçilen derslerden çıkarıldı.
       new:
         academic_term: Akademik Dönem
         active_curriculum_not_found: Aktif müfredat bulunamadı.
@@ -43,3 +49,6 @@ tr:
         already_enrolled_at_group: 'Bu seçmeli ders grubundan başka bir ders seçilmiş.'
         quota_full: 'Ders için belirlenen kontenjan dolmuş.'
         year_and_semester: Sınıfı/Yarıyılı
+      save:
+        error: Seçilen dersler kaydedilirken bir hata oluştu.
+        success: Seçilen dersler başarıyla kaydedildi.

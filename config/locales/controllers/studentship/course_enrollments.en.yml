@@ -24,6 +24,12 @@ en:
         must_drop_first: 'Courses taken from the top semester must be dropped first.'
       index:
         student_records: Student Records
+      create:
+        error: An error occured when adding the course from selected courses.
+        success: The course successfully added to selected courses.
+      destroy:
+        error: An error occured when removing the course from selected courses.
+        success: The course successfully removed from selected courses.
       new:
         academic_term: Academic Term
         active_curriculum_not_found: Active curriculum not found.
@@ -43,3 +49,6 @@ en:
         already_enrolled_at_group: 'Another course from this group of electives courses has already been selected.'
         quota_full: 'The course has reached its quota.'
         year_and_semester: Year/Semester
+      save:
+        error: An error occured when saving selected courses.
+        success: Selected courses successfully saved.
