@@ -36,7 +36,7 @@ class ApplicationController < ActionController::Base
   def append_info_to_payload(payload)
     super
     payload[:host] = request.host
-    payload[:remote_ip] = request.remote_ip
+    payload[:remote_ip] = request.ip
     payload[:user_id] = current_user.try(:id)
   end
 
