@@ -26,7 +26,7 @@ class StudentDecorator < SimpleDelegator
 
   def selected_courses
     semester_enrollments.collect do |course_enrollment|
-      [course_enrollment, can_drop?(course_enrollment.available_course)]
+      [course_enrollment, can_drop?(course_enrollment.available_course)].flatten
     end
   end
 
@@ -71,7 +71,10 @@ class StudentDecorator < SimpleDelegator
   end
 
   def can_drop?(available_course)
-    max_sequence <= available_course.curriculum_course.curriculum_semester.sequence
+    sequence = available_course.curriculum_course.curriculum_semester.sequence
+    return [false, translate('must_drop_first')] if max_sequence > sequence
+
+    true
   end
 
   def can_add?(available_course)
