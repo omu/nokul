@@ -47,8 +47,13 @@ class Student < ApplicationRecord
   end
 
   def semester_enrollments
-    course_enrollments.includes(available_course: [curriculum_course: %i[course curriculum_semester]])
-                      .where(semester: semester)
+    @semester_enrollments ||=
+      course_enrollments.includes(available_course: [curriculum_course: %i[course curriculum_semester]])
+                        .where(semester: semester)
+  end
+
+  def enrolled_at_group?(available_course)
+    (semester_enrollments.pluck(:available_course_id) & available_course.group_courses.pluck(:id)).any?
   end
 
   private
