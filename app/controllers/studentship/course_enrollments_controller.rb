@@ -12,8 +12,7 @@ module Studentship
     def new; end
 
     def create
-      enrollment = @student.course_enrollments.new(available_course_id: params[:available_course_id])
-      message = enrollment.save ? t('.success') : t('.error')
+      message = @student.course_enrollments.new(course_enrollment_params).save ? t('.success') : t('.error')
       redirect_with(message)
     end
 
@@ -45,6 +44,10 @@ module Studentship
 
     def set_course_enrollment
       @course_enrollment = @student.course_enrollments.find(params[:id])
+    end
+
+    def course_enrollment_params
+      params.require(:course_enrollment).permit(:available_course_id)
     end
   end
 end
