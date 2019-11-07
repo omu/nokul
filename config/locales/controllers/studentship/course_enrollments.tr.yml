@@ -7,47 +7,41 @@ tr:
           saved: Kaydedildi
   studentship:
     course_enrollments:
-      available_courses:
-        code: Dersin Kodu
+      available_courses: &course_attributes
+        code: Kodu
         credit: Kredi
         ects: AKTS
-        name: Dersin Adı
-        type: Ders Türü
+        name: Adı
+        type: Türü
         add: Ekle
       course_enrollments:
-        code: Dersin Kodu
-        credit: Kredi
-        ects: AKTS
-        name: Dersin Adı
-        type: Ders Türü
+        <<: *course_attributes
         drop: Çıkar
-        must_drop_first: 'Öncelikli olarak en üst dönemden alınan dersler çıkarılmalı.'
-      index:
-        student_records: Öğrencilik Kayıtları
       create:
         error: Ders seçilen derslere eklenirken bir hata oluştu.
         success: Ders seçilen derslere eklendi.
       destroy:
         error: Ders seçilen derslerden çıkarırken bir hata oluştu.
         success: Ders seçilen derslerden çıkarıldı.
+      index:
+        student_records: Öğrencilik Kayıtları
       new:
         academic_term: Akademik Dönem
-        active_curriculum_not_found: Aktif müfredat bulunamadı.
-        active_term_not_found: Aktif dönem bulunamadı.
+        already_enrolled_at_group: Bu seçmeli ders grubundan başka bir ders seçilmiş.
         available_courses: Açılan Dersler
+        enrollment_status: Kayıtlanma Durumu
+        must_drop_first: Öncelikli olarak en üst dönemden alınan dersler çıkarılmalı.
+        not_proper_register_event_range: Tarih aralığı bugünü kapsayan online ders kayıtlanma aktivitesi bulunmamaktadır.
+        not_enough_ects: Seçilebilecek AKTS miktarı bu dersi alabilmeniz için yeterli değil.
         program: Program
+        quota_full: Ders için belirlenen kontenjan dolmuş.
         save_enrollments: Seçimleri Kaydet
+        selectable_ects: Seçilebilecek AKTS
         selected_courses: Seçilen Dersler
         selected_ects: Seçilen AKTS
-        selectable_ects: Seçilebilecek AKTS
-        enrollment_status: Kayıtlanma Durumu
         student_info: Öğrenci Bilgileri
         student_number: Öğrenci Numarası
         student_record_not_found: Öğrencilik kaydı bulunamadı.
-        not_proper_register_event_range: 'Tarih aralığı bugünü kapsayan online ders kayıtlanma aktivitesi bulunmamaktadır.'
-        not_enough_ects: 'Seçilebilecek AKTS miktarı bu dersi alabilmeniz için yeterli değil.'
-        already_enrolled_at_group: 'Bu seçmeli ders grubundan başka bir ders seçilmiş.'
-        quota_full: 'Ders için belirlenen kontenjan dolmuş.'
         year_and_semester: Sınıfı/Yarıyılı
       save:
         error: Seçilen dersler kaydedilirken bir hata oluştu.
