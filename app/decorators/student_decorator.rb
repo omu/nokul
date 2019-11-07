@@ -57,15 +57,8 @@ class StudentDecorator < SimpleDelegator
     curriculum.semesters.where(term: active_term.term).order(:sequence)
   end
 
-  def group_elective_ids_of(available_course)
-    available_course.curriculum_course.curriculum_course_group.curriculum_courses
-                    .joins(:available_courses)
-                    .where('available_courses.academic_term_id = ?', active_term.id)
-                    .pluck('available_courses.id')
-  end
-
   def enrolled_at_group?(available_course)
-    (semester_enrollments.pluck(:available_course_id) & group_elective_ids_of(available_course)).any?
+    (semester_enrollments.pluck(:available_course_id) & available_course.group_courses.pluck(:id)).any?
   end
 
   def max_sequence
