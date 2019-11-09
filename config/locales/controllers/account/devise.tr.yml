@@ -10,27 +10,27 @@ tr:
       not_found_in_database: "Geçersiz %{authentication_keys} veya parola."
       timeout: Oturum süreniz sonlandı. Lütfen devam etmek için tekrar giriş yapın.
       unauthenticated: Devam etmeden önce giriş yapmalı veya kayıt olmalısınız.
-      unconfirmed: Devam etmeden önce eposta adresinizi onaylamalısınız.
+      unconfirmed: Devam etmeden önce e-posta adresinizi onaylamalısınız.
     mailer:
       common:
         hello: 'Merhaba, %{mail}!'
       confirmation_instructions:
         subject: Onaylama talimatları
       email_changed:
-        body: 'Kayıtlı e-mail adresiniz başarıyla değiştirilmiştir. Bir yanlışlık olduğunu düşünüyorsanız %{support_mail} adresine durumu anlatan bir e-mail gönderebilirsiniz.'
-        new_mail: 'Yeni e-mail adresiniz: %{mail}'
-        subject: Email Adresiniz Değişti
+        body: 'Kayıtlı e-posta adresiniz başarıyla değiştirilmiştir. Bir yanlışlık olduğunu düşünüyorsanız %{support_mail} adresine durumu anlatan bir e-posta gönderebilirsiniz.'
+        new_mail: 'Yeni e-posta adresiniz: %{mail}'
+        subject: E-posta Adresiniz Değişti
       password_change:
-        body: 'Parolanız başarıyla değiştirilmiştir. Bir yanlışlık olduğunu düşünüyorsanız %{support_mail} adresine durumu anlatan bir e-mail gönderebilirsiniz.'
+        body: 'Parolanız başarıyla değiştirilmiştir. Bir yanlışlık olduğunu düşünüyorsanız %{support_mail} adresine durumu anlatan bir e-posta gönderebilirsiniz.'
         subject: Parolanız Değişti
       reset_password_instructions:
-        body: Siz veya başka birisi parolanızı sıfırlama talebinde bulundu. Parolanızı sıfırlamak istiyorsanız aşağıdaki linke tıklayabilirsiniz.
-        didnt_requested: Eğer böyle bir istekte bulunmadıysanız bu e-mail'i görmezden gelebilirsiniz. Yukarıdaki linke tıklayarak yeni bir parola belirlemediğiniz sürece parolanız değişmeyecektir.
+        body: Siz veya başka birisi parolanızı sıfırlama talebinde bulundu. Parolanızı sıfırlamak istiyorsanız aşağıdaki bağlantıya tıklayabilirsiniz.
+        didnt_requested: Eğer böyle bir istekte bulunmadıysanız bu e-postayı görmezden gelebilirsiniz. Yukarıdaki bağlantıya tıklayarak yeni bir parola belirlemediğiniz sürece parolanız değişmeyecektir.
         reset_password: Parolamı Sıfırla
         subject: Parola sıfırlama talimatları
       unlock_instructions:
         subject: Kilit kaldırma talimalatları
-        body: 'Hesabınız çok fazla başarısız giriş denemesinden sonra güvenliğiniz için kilitlendi. Hesabınızı tekrar aktive etmek için lütfen aşağıdaki linke tıklayınız:'
+        body: 'Hesabınız çok fazla başarısız giriş denemesinden sonra güvenliğiniz için kilitlendi. Hesabınızı tekrar aktive etmek için lütfen aşağıdaki bağlantıya tıklayınız:'
         unlock_my_account: Hesabımı aktive et
   errors:
     messages:

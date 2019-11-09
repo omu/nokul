@@ -1,0 +1,38 @@
+# Application
+/app/ @omu/backend
+/config/ @omu/backend @omu/ops
+/db/  @omu/backend @omu/ops
+/doc/ @omu/staff
+/lib/ @omu/backend
+/test/ @omu/backend
+Gemfile @omu/backend @omu/ops
+app.json @omu/backend @omu/ops
+package.json @omu/backend @omu/ops
+
+# OPs
+.travis.yml @omu/ops
+.ruby-version @omu/ops
+Vagrantfile @omu/ops
+Dockerfile @omu/ops
+Procfile @omu/ops
+
+# Meta
+.browserslistrc @msdundar @roktas @isubas @huseyin
+.circleci @msdundar @roktas @isubas @huseyin
+.codebeatsettings @msdundar @roktas @isubas @huseyin
+.dependabot @msdundar @roktas @isubas @huseyin
+.erb-lint.yml @msdundar @roktas @isubas @huseyin
+.eslintrc.json @msdundar @roktas @isubas @huseyin
+.gitallowed @msdundar @roktas @isubas @huseyin
+.gitattributes @msdundar @roktas @isubas @huseyin
+.github @msdundar @roktas @isubas @huseyin
+.gitignore @msdundar @roktas @isubas @huseyin
+.gitimport @msdundar @roktas @isubas @huseyin
+.htmlhintrc @msdundar @roktas @isubas @huseyin
+.markdownlint_common.yml @msdundar @roktas @isubas @huseyin
+.markdownlint.yml @msdundar @roktas @isubas @huseyin
+.mkdocs.yml @msdundar @roktas @isubas @huseyin
+.rubocop_common.yml @msdundar @roktas @isubas @huseyin
+.rubocop.yml @msdundar @roktas @isubas @huseyin
+.ruby-version @msdundar @roktas @isubas @huseyin
+.travis.yml @msdundar @roktas @isubas @huseyin

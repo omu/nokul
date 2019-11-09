@@ -1,19 +1,26 @@
 {
-  "name": "",
-  "short_name": "",
+  "short_name": "ÖBYS",
+  "name": "Öğrenci Bilgi Yönetim Sistemi",
   "icons": [
     {
-      "src": "/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
+      "src": "<%= asset_path('logo/baum-logo-130.png')%>",
+      "type": "image/png",
+      "sizes": "130x130"
     },
     {
-      "src": "/android-chrome-256x256.png",
-      "sizes": "256x256",
-      "type": "image/png"
+      "src": "<%= asset_path('logo/baum-logo-192.png')%>",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "<%= asset_path('logo/baum-logo-250.png')%>",
+      "type": "image/png",
+      "sizes": "250x250"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "display": "standalone"
+  "start_url": "<%= root_path %>",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "scope": "<%= root_path %>",
+  "theme_color": "#8e2731"
 }
