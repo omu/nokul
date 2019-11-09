@@ -114,7 +114,7 @@ class Unit < ApplicationRecord
   def semester_type
     return unless program?
 
-    return 'yearly' if /(T[ı,i]p|D[ı,i][s,ş] Hekim|Hukuk)/i.match?(name)
+    return 'yearly' if /(T[ıi]p|D[ıi][sş] Hekim|Hukuk)/i.match?(name)
 
     'periodic'
   end
