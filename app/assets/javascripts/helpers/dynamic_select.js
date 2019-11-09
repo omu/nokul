@@ -97,7 +97,7 @@ var OptionsBuilder = function (datas, config = {}) {
     var id = data[config.valueMethod || 'id']
     var text = data[config.labelMethod || 'name']
 
-    if (text !== null && text !== '') options.push(`<option value=${id}>${text}</option>`)
+    if (text !== null && text !== '' && text !== undefined) options.push(`<option value=${id}>${text}</option>`)
   }
 
   function setSelectBox (el, value = undefined) {
