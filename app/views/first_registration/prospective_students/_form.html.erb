@@ -153,7 +153,7 @@
                     <div class='row'>
                       <div class='col-sm-4'>
                         <%= f.association :unit,
-                                          collection: Unit.programs.active.order(:ancestry, :name),
+                                          collection:   Unit.programs.active.order(:ancestry, :name),
                                           label_method: :names_depth_cache %>
                       </div>
                       <div class='col-sm-4'>
