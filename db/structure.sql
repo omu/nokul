@@ -4187,22 +4187,6 @@ ALTER TABLE ONLY public.buildings
 
 
 --
--- Name: buildings buildings_latitude_unique; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.buildings
-    ADD CONSTRAINT buildings_latitude_unique UNIQUE (latitude) DEFERRABLE;
-
-
---
--- Name: buildings buildings_longitude_unique; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.buildings
-    ADD CONSTRAINT buildings_longitude_unique UNIQUE (longitude) DEFERRABLE;
-
-
---
 -- Name: buildings buildings_meksis_id_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6685,6 +6669,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20191003100000'),
 ('20191003102101'),
 ('20191007074407'),
-('20191008065752');
+('20191008065752'),
+('20191111082956');
 
 
