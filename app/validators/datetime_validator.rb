@@ -65,11 +65,8 @@ class DatetimeValidator < ActiveModel::EachValidator
     end
   end
 
-  attr_reader :checkers
-
   def initialize(options)
     super
-    @checkers = {}
     build_checkers(options)
   end
 
@@ -84,15 +81,16 @@ class DatetimeValidator < ActiveModel::EachValidator
   private
 
   def build_checkers(options)
-    CHECKS.each do |method, _|
-      next unless options.key?(method)
-
-      @attributes.each do |attribute|
-        checkers[attribute] = [] unless checkers.key?(attribute)
+    options.slice(*CHECKS.keys).each do |method, comparison_value|
+      attributes.each do |attribute|
         checkers[attribute] << Checker.new(
-          attribute, method, options[method], message: options["#{method}_message".to_sym]
+          attribute, method, comparison_value, message: options["#{method}_message".to_sym]
         )
       end
     end
+  end
+
+  def checkers
+    @_checkers ||= Hash.new { |hash, key| hash[key] = [] }
   end
 end
