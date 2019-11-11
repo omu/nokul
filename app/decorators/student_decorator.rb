@@ -11,6 +11,12 @@ class StudentDecorator < SimpleDelegator
     calendar&.check_events('online_course_registrations')
   end
 
+  def semester_enrollments
+    @semester_enrollments ||=
+      course_enrollments.where(semester: semester)
+                        .includes(available_course: [curriculum_course: %i[course curriculum_semester]])
+  end
+
   def enrollment_status
     @enrollment_status ||=
       if (statuses = semester_enrollments.pluck(:status)).any?
@@ -19,7 +25,7 @@ class StudentDecorator < SimpleDelegator
   end
 
   def selected_ects
-    @selected_ects ||= semester_enrollments.sum(&:ects).to_i
+    @selected_ects ||= semester_enrollments.sum(:ects).to_i
   end
 
   def selectable_ects
@@ -61,6 +67,10 @@ class StudentDecorator < SimpleDelegator
     @max_sequence ||= semester_enrollments.pluck(:sequence).max
   end
 
+  def enrolled_at_group?(available_course)
+    (semester_enrollments.pluck(:available_course_id) & available_course.group_courses.pluck(:id)).any?
+  end
+
   def can_drop?(available_course)
     sequence = available_course.curriculum_course.curriculum_semester.sequence
     return [false, translate('must_drop_first')] if max_sequence > sequence
@@ -82,25 +92,20 @@ class StudentDecorator < SimpleDelegator
 
   def selectable_courses_for(curriculum_semester)
     curriculum_semester.available_courses
-                       .includes(:course_enrollments, :groups, curriculum_course: %i[course curriculum_course_group])
                        .where(academic_term: active_term)
                        .where.not(id: semester_enrollments.pluck(:available_course_id))
-                       .order('courses.name')
                        .collect { |available_course| [available_course, can_add?(available_course)].flatten }
   end
 
   def enrolled_at?(curriculum_semester)
-    curriculum_semester = CurriculumSemesterDecorator.new(curriculum_semester)
     enrolled_course_ids = semester_enrollments.pluck(:available_course_id)
+    enrolled_at = true
 
-    enrolled_at_compulsories = (curriculum_semester.compulsory_ids - enrolled_course_ids).empty?
-    enrolled_at_electives = true
-
-    curriculum_semester.elective_ids.each do |elective_ids|
-      break unless enrolled_at_electives &&= (enrolled_course_ids & elective_ids).any?
+    CurriculumSemesterDecorator.new(curriculum_semester).active_available_courses.collect(&:ids).each do |ids|
+      break unless enrolled_at &&= (enrolled_course_ids & ids).any?
     end
 
-    enrolled_at_compulsories && enrolled_at_electives
+    enrolled_at
   end
 
   def translate(key)
