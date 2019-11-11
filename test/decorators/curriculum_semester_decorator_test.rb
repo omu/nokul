@@ -30,13 +30,10 @@ class CurriculumSemesterDecoratorTest < ActiveSupport::TestCase
     assert_includes course_groups, course_groups(:bilgisayar_muhendligi_teknik_secmeli_1)
   end
 
-  test 'elective_ids method' do
-    elective_ids = @curriculum_semester.elective_ids.flatten.sort
-    assert_equal elective_ids, [available_courses(:elective_course).id, available_courses(:elective_course_2).id].sort
-  end
-
-  test 'compulsory_ids method' do
-    compulsory_ids = @curriculum_semester.compulsory_ids
-    assert_equal compulsory_ids, [available_courses(:compulsory_course).id, available_courses(:compulsory_course_2).id]
+  test 'active_available_courses method' do
+    courses = @curriculum_semester.active_available_courses
+    assert_equal courses[0].to_a, [available_courses(:elective_course_2), available_courses(:elective_course)]
+    assert_equal courses[1].to_a, [available_courses(:compulsory_course)]
+    assert_equal courses[2].to_a, [available_courses(:compulsory_course_2)]
   end
 end
