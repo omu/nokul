@@ -19,6 +19,8 @@ module Xokul
 
       resp.error!
       resp.decode
+    rescue Support::RestClient::HTTPError
+      nil
     end
   end
 

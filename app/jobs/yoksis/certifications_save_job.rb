@@ -13,7 +13,7 @@ module Yoksis
     after_perform do |job|
       user = job.arguments.first
 
-      [*@response].each do |certification|
+      [@response].flatten.compact.each do |certification|
         user_certification = user.certifications.find_or_initialize_by(yoksis_id: certification[:yoksis_id])
         user_certification.assign_attributes(
           type:   certification[:type_id],

@@ -23,26 +23,14 @@
             </div>
             <div class='col-sm-6'>
               <%= f.association :programs,
-                                collection: f.object.new_record? ? [] : f.object.unit.children.programs %>
+                                collection: f.object.new_record? ? [] : f.object.unit.children.programs,
+                                input_html: { multiple: false } %>
             </div>
             <div class='col-sm-6'>
               <%= f.input :status,
                           collection: enum_options_for_select(f.object.class, :status) %>
             </div>
-            <% if curriculum.new_record? %>
-              <div class='col-sm-6'>
-                <%= f.input :number_of_semesters,
-                            collection:    (1..Curriculum::MAX_NUMBER_OF_SEMESTERS),
-                            selected:      8,
-                            include_blank: false %>
-              </div>
-              <div class='col-sm-6'>
-                <%= f.input :type,
-                            collection:    collection_options_for_select(%i[periodic yearly]),
-                            selected:      :periodic,
-                            include_blank: false %>
-              </div>
-            <% else %>
+            <% unless curriculum.new_record? %>
               <div class="col-sm-12">
                 <div class="alert alert-secondary">
                   <h3 class='text-center'><%= t('.semesters') %></h3>

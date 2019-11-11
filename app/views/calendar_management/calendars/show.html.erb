@@ -7,7 +7,7 @@
         <div class="card-header-actions">
           <%= link_to fa_icon('file-pdf-o'), [@calendar, format: :pdf],
                       class: 'btn btn-outline-primary btn-sm' %>
-          <%= link_to fa_icon('university', text: t('.assign_to_units')), [@calendar, :units],
+          <%= link_to fa_icon('university', text: t('.assign_to_units')), [:units, @calendar],
                       class: 'btn btn-outline-primary btn-sm' %>
           <%= link_to_actions(@calendar, except: :show) %>
         </div>

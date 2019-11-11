@@ -200,7 +200,7 @@ GEM
       activesupport (>= 4)
       railties (>= 4)
       request_store (~> 1.0)
-    lol_dba (2.1.8)
+    lol_dba (2.1.5)
       actionpack (>= 3.0)
       activerecord (>= 3.0)
       railties (>= 3.0)

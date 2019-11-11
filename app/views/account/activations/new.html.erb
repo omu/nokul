@@ -9,43 +9,58 @@
         <fieldset class='border p-3'>
           <legend class='w-auto'><%= t('.identity_verification') %></legend>
           <div class='form-group row'>
-            <label class='col-sm-3 col-form-label text-right'><%= t('.id_number') %></label>
+            <%= f.label :id_number, t('.id_number'), class: 'col-sm-3 col-form-label text-right' %>
             <div class='col-sm-9'>
               <%= f.input :id_number, required: true, label: false, autofocus: true, wrapper: false %>
             </div>
           </div>
           <div class='form-group row'>
-            <label class='col-sm-3 col-form-label text-right'><%= t('.first_name') %></label>
+            <%= f.label :first_name, t('.first_name'), class: 'col-sm-3 col-form-label text-right' %>
             <div class='col-sm-9'>
               <%= f.input :first_name, required: true, label: false, wrapper: false %>
             </div>
           </div>
           <div class='form-group row'>
-            <label class='col-sm-3 col-form-label text-right'><%= t('.last_name') %></label>
+            <%= f.label :last_name, t('.last_name'), class: 'col-sm-3 col-form-label text-right' %>
             <div class='col-sm-9'>
               <%= f.input :last_name, required: true, label: false, wrapper: false %>
             </div>
           </div>
           <div class='form-group row'>
-            <label class='col-sm-3 col-form-label text-right'><%= t('.date_of_birth') %></label>
+            <%= f.label :date_of_birth, t('.date_of_birth'), class: 'col-sm-3 col-form-label text-right' %>
             <div class='col-sm-9'>
               <%= f.input :date_of_birth, as: :date_time_picker, label: false, wrapper: false, input_html: { required: true } %>
             </div>
           </div>
           <div class='form-group row'>
-            <label for='activation_serial' class='col-sm-3 col-form-label text-right'><%= t('.serial') %></label>
-            <div class='col-sm-3'>
-              <%= f.input :serial, required: false, label: false, wrapper: false %>
-              <small class='text-danger' id='span_serial'><%= t('.for_old_id_cards') %></small>
-            </div>
-            <label for='activation_serial_no' class='col-sm-2 col-form-label text-right'><%= t('.serial_no') %></label>
-            <div class='col-sm-3'>
-              <%= f.input :serial_no, required: false, label: false, wrapper: false %>
-              <small class='text-danger' id='span_serial_no'><%= t('.for_old_id_cards') %></small>
+            <label class='col-sm-3 col-form-label text-right'><%= t('.identity_type') %></label>
+            <div class='col-sm-9'>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="identity-card" name="identity-switch" class="custom-control-input" checked>
+                <label class="custom-control-label" for="identity-card">
+                  <%= t('.identity_card') %> <small class='text-danger'>(<%= t('.new_identity_card') %>)</small>
+                </label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="identity-certificate" name="identity-switch" class="custom-control-input">
+                <label class="custom-control-label" for="identity-certificate">
+                  <%= t('.identity_certificate') %> <small class='text-danger'>(<%= t('.old_identity_card') %>)</small>
+                </label>
+              </div>
             </div>
           </div>
-          <div class='form-group row'>
-            <label for='activation_document_no' class='col-sm-3 col-form-label text-right'><%= t('.document_no') %></label>
+          <div class='form-group row' id='certificate-inputs'>
+            <%= f.label :serial, t('.serial'), class: 'col-sm-3 col-form-label text-right' %>
+            <div class='col-sm-3'>
+              <%= f.input :serial, required: false, label: false, wrapper: false %>
+            </div>
+            <%= f.label :serial_no, t('.serial_no'), class: 'col-sm-2 col-form-label text-right' %>
+            <div class='col-sm-3'>
+              <%= f.input :serial_no, required: false, label: false, wrapper: false %>
+            </div>
+          </div>
+          <div class='form-group row' id='card-inputs'>
+            <%= f.label :document_no, t('.serial_no'), class: 'col-sm-3 col-form-label text-right' %>
             <div class='col-sm-9'>
               <%= f.input :document_no, required: false, label: false, wrapper: false %>
             </div>
@@ -54,7 +69,7 @@
         <fieldset class='border p-3'>
           <legend class='w-auto'><%= t('.phone_verification') %></legend>
           <div class='form-group row'>
-            <label class='col-sm-3 col-form-label text-right'><%= t('.mobile_phone') %></label>
+            <%= f.label :mobile_phone, t('.mobile_phone'), class: 'col-sm-3 col-form-label text-right' %>
             <div class='col-sm-9'>
               <%= f.input :mobile_phone, type: 'tel', label: false, wrapper: false %>
               <span id='error-msg' class='invalid-feedback d-block'></span>
@@ -81,7 +96,40 @@
     </div>
   </div>
 </div>
-
-<div id='verification_modal' class='modal fade' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true' data-backdrop='static' data-keyboard='false'></div>
+<div id='verification_modal'
+     class='modal fade'
+     role='dialog'
+     aria-labelledby='VerificationModal'
+     aria-hidden='true'
+     data-backdrop='static'
+     data-keyboard='false'></div>
 <%= javascript_include_tag 'shared/intl_tel_input_validation' %>
-<%= render 'js' %>
+<script type='text/javascript'>
+  $(document).ready(function() {
+    flatpickr('.datetimepicker', { altInput: true })
+
+    $('#activation_country').select2();
+
+    TelInputValidation('#activation_mobile_phone', '#error-msg', <%= raw t('intl_tel_input.errors').values %>)
+
+    $('#certificate-inputs').hide()
+    $('#certificate-inputs input').prop('disabled', true)
+
+    $('#identity-card').change(function() {
+      $('#certificate-inputs').hide()
+      $('#certificate-inputs input').prop('disabled', true)
+      $('#card-inputs').show()
+      $('#card-inputs input').prop('disabled', false)
+    })
+
+    $('#identity-certificate').change(function() {
+      $('#card-inputs').hide()
+      $('#card-inputs input').prop('disabled', true)
+      $('#certificate-inputs').show()
+      $('#certificate-inputs input').prop('disabled', false)
+    })
+  })
+</script>
+<style>
+  .iti.iti--allow-dropdown { width: 100%; }
+</style>

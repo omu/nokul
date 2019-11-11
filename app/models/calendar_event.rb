@@ -7,10 +7,17 @@ class CalendarEvent < ApplicationRecord
 
   # validations
   validates :calendar, uniqueness: { scope: %i[calendar_event_type] }
-  validates :start_time, presence: true
+  validates :start_time, datetime: {
+    after_or_eql:  ->(record) { record.calendar.academic_term.start_of_term },
+    before_or_eql: ->(record) { record.calendar.academic_term.end_of_term }
+  }
+  validates :end_time, datetime: {
+    after:         :start_time,
+    before_or_eql: ->(record) { record.calendar.academic_term.end_of_term }
+  }, if: :end_time?
+
   validates :timezone, presence: true, length: { maximum: 255 }
   validates :visible, inclusion: { in: [true, false] }
-  validates_with CalendarEventValidator
 
   # delegations
   delegate :name, to: :calendar_event_type, prefix: :type

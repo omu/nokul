@@ -79,6 +79,7 @@ class User < ApplicationRecord
   # callbacks
   after_create_commit :build_address_information, if: proc { addresses.formal.empty? }
   after_create_commit :build_identity_information, if: proc { identities.formal.empty? }
+  before_save :update_password_changed_at
 
   # scopes
   scope :activated, -> { where(activated: true) }
@@ -155,5 +156,11 @@ class User < ApplicationRecord
 
   def build_identity_information
     Kps::IdentitySaveJob.perform_later(self)
+  end
+
+  def update_password_changed_at
+    return unless (new_record? || encrypted_password_changed?) && !password_changed_at_changed?
+
+    self.password_changed_at = Time.zone.now
   end
 end

@@ -13,7 +13,7 @@ module Yoksis
     after_perform do |job|
       user = job.arguments.first
 
-      [*@response].each do |article|
+      [@response].flatten.compact.each do |article|
         user_article = user.articles.find_or_initialize_by(yoksis_id: article[:publication_id])
         user_article.assign_attributes(
           yoksis_id:               article[:publication_id],

@@ -30,10 +30,10 @@
                   <%= link_to fa_icon('eye'), calendar, format: :pdf, class: 'btn btn-outline-primary btn-sm' %>
                   <%= link_to_actions(calendar, except: :show) %>
                   <%= link_to fa_icon('university', text: t('.assign_to_units')),
-                              [calendar, :units],
+                              [:units, calendar],
                               class: 'btn btn-outline-primary btn-sm' %>
                   <%= link_to fa_icon('copy', text: t('.duplicate')),
-                              [calendar, :duplicate],
+                              [:duplicate, calendar],
                               class: 'btn btn-outline-primary btn-sm' %>
                 </td>
               </tr>
