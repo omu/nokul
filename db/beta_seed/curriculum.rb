@@ -124,7 +124,7 @@ class DepartmentCourses < Support::Collection
     end
   end
 
-  def create_curriculum(number_of_semesters, semester_type)
+  def create_curriculum
     curriculum = Curriculum.new(
       name:        "#{unit.name} Müfredatı",
       status:      'active',
@@ -136,14 +136,14 @@ class DepartmentCourses < Support::Collection
   end
 end
 
-def build_curriculum(source, number_of_semesters: 8, semester_type: :periodic)
+def build_curriculum(source)
   courses = DepartmentCourses.create(
     CSV.foreach(source, headers: true, col_sep: '|', header_converters: :symbol, skip_blanks: true).map(&:to_h)
   )
 
   courses.each(&:create)
   courses.create_course_groups
-  courses.create_curriculum(number_of_semesters, semester_type)
+  courses.create_curriculum
   courses.each(&:create_curriculum_course)
 end
 
