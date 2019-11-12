@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors     = ['OMU BAUM Crew']
   spec.email       = ['contact@baum.omu.edu.tr']
   spec.summary     = 'ACME University.'
-  spec.description = 'Ondokuz Mayıs University tenant for Nokul, a university automation application.'
+  spec.description = 'ACME University tenant for Nokul, a university automation application.'
   spec.license     = 'GPL-3'
 
   spec.files       = Dir['README.md', 'LICENSE.md', 'CHANGELOG.md', 'Rakefile']
