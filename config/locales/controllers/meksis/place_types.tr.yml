@@ -8,8 +8,11 @@ tr:
       index:
         <<: *attributes
         card_header: Ana Mekan Türü Listesi
-        new_place_type_link: Yeni Mekan Türü
         number_of_children: Alt Mekan Türü Sayısı
+      search:
+        card_header: Akıllı Arama
+        place_type: Mekan Türü
+        smart_search_placeholder: Ara
       show:
         <<: *attributes
         card_header: Alt Mekan Türü Listesi
