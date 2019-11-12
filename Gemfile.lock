@@ -5,6 +5,13 @@ PATH
       activesupport (~> 6.0.0)
 
 PATH
+  remote: plugins/tenant/acme
+  specs:
+    nokul-tenant-acme (0.1.0)
+      nokul-tenant
+      rails (~> 6.0.0)
+
+PATH
   remote: plugins/tenant/common
   specs:
     nokul-tenant (0.1.0)
@@ -446,6 +453,7 @@ DEPENDENCIES
   nexmo
   nokul-support!
   nokul-tenant!
+  nokul-tenant-acme!
   nokul-tenant-omu!
   pagy
   pg

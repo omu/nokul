@@ -1,0 +1,39 @@
+default: &default
+  name: 'ACME Üniversitesi'
+  abbreviation: 'acme'
+  api_host: 'https://api.omu.sh'
+  contact:
+    address: 'ACME Üniversitesi, Kurupelit Kampüsü, Atakum/SAMSUN'
+    phone: '+9 0362 312 1919'
+    country: 'TR'
+    district: 'Atakum'
+  email:
+    domain: 'omu.edu.tr'
+    default_from: 'noreply@baum.omu.edu.tr'
+    support: 'hotline@baum.omu.edu.tr'
+    admin: 'sistem@baum.omu.edu.tr'
+  ldap:
+    organization: omu.edu.tr
+  network:
+    subnet: '10.0.0.0/8'
+  branding:
+    logo:
+      file: 'logos/baum-logo.svg'
+      alt_text: 'ACME Üniversitesi Logosu'
+    badge:
+      file: 'badges/baum-beta.svg'
+      alt_text: 'BAUM Beta Badge'
+      visible: true
+    background:
+      file: 'backgrounds/background.jpg'
+      alt_text: 'Background image'
+
+production:
+  <<: *default
+  host: 'https://dev.nokul.omu.sh'
+development:
+  <<: *default
+  host: 'localhost:3000'
+test:
+  <<: *default
+  host: 'localhost:3000'

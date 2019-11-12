@@ -41,7 +41,7 @@ module Nokul
 
     # default mailer settings
     config.action_mailer.default_url_options = {
-      host: ENV.fetch('NOKUL_HOST', Tenant.configuration.host)
+      host: Tenant.configuration.host
     }
   end
 end
