@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version     = Nokul::Tenant::ACME::VERSION
   spec.authors     = ['OMU BAUM Crew']
   spec.email       = ['contact@baum.omu.edu.tr']
-  spec.summary     = 'Ondokuz Mayıs University.'
+  spec.summary     = 'ACME University.'
   spec.description = 'Ondokuz Mayıs University tenant for Nokul, a university automation application.'
   spec.license     = 'GPL-3'
 
