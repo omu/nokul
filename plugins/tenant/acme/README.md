@@ -1,4 +1,4 @@
 Tenant::ACME
 ==============
 
-Ondokuz Mayıs Üniversitesi kiracısına ait engine.
+ACME kiracısına ait engine.
