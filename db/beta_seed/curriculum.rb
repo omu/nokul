@@ -131,7 +131,7 @@ class DepartmentCourses < Support::Collection
       unit_id:     unit.id,
       program_ids: programs.pluck(:id)
     )
-    curriculum.build_semesters(number_of_semesters: number_of_semesters, type: semester_type)
+    curriculum.build_semesters
     curriculum.save
   end
 end
