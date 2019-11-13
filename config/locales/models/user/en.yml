@@ -60,6 +60,7 @@ en:
       form_title: Edit Account
     employees:
       active: Is Active?
+      article: Article of Duty
       duties: Duties
       employees: Employee Records
       positions: Positions

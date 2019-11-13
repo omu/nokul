@@ -66,6 +66,7 @@ tr:
       form_title: Hesabı Düzenle
     employees:
       active: Aktif mi?
+      article: Görevlendirme Kanun Maddesi
       duties: Görevlendirmeler
       employees: Personel Kayıtları
       positions: İdari Görevler
