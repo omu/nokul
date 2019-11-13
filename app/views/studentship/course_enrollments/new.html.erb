@@ -5,35 +5,7 @@
     </div>
 
     <div class="card">
-      <div class="card-header">
-        <%= fa_icon 'user' %><strong><%= t('.student_info') %></strong>
-      </div>
-      <div class="card-body table-responsive">
-        <table class='table table-bordered table-hover'>
-          <tbody>
-            <tr>
-              <th><%= t('.student_number') %></th>
-              <td><%= @student.student_number %></td>
-            </tr>
-            <tr>
-              <th><%= t('.year_and_semester') %></th>
-              <td><%= "#{@student.year}/#{@student.semester}" %></td>
-            </tr>
-            <tr>
-              <th><%= t('.program') %></th>
-              <td><%= @student.unit.name %></td>
-            </tr>
-            <tr>
-              <th><%= t('.academic_term') %></th>
-              <td><%= full_name(@student.active_term) %></td>
-            </tr>
-            <tr>
-              <th><%= t('.enrollment_status') %></th>
-              <td><%= t('activerecord.enums.course_enrollment.statuses')[@student.enrollment_status] %></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <%= render 'student_info' %>
       <% if @student.enrollment_status == :draft %>
         <div class="card-footer">
           <div class="float-right">
