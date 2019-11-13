@@ -6,8 +6,9 @@ module Patron
 
     included do
       has_many :role_assignments, class_name: 'Patron::RoleAssignment', dependent: :destroy
-      has_many :roles, class_name: 'Patron::Role', through: :role_assignments
-      has_many :permissions, class_name: 'Patron::Permission', through: :roles
+      has_many :roles,            class_name: 'Patron::Role',           through: :role_assignments
+      has_many :permissions,      class_name: 'Patron::Permission',     through: :roles
+      has_many :role_permissions, class_name: 'Patron::RolePermission', through: :roles
     end
 
     def roles?(*identifiers)
@@ -24,6 +25,13 @@ module Patron
 
     def any_permissions?(*identifiers)
       permissions.exists?(identifier: identifiers)
+    end
+
+    def privilege?(permission, *privileges)
+      role_permissions.includes(:permission)
+                      .where_privileges(*privileges.flatten)
+                      .where(permissions: { identifier: permission })
+                      .exists?
     end
 
     alias role? roles?

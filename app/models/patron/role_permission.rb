@@ -8,5 +8,12 @@ module Patron
 
     # validations
     validates :permission_id, uniqueness: { scope: :role_id }
+    validates :privileges, presence: true
+
+    # delegates
+    delegate :name, :identifier, to: :permission
+
+    # enums
+    flag :privileges, Patron::PermissionBuilder::PRIVILEGES
   end
 end
