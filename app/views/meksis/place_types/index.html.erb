@@ -1,8 +1,35 @@
-<%= render 'layouts/builders/index',
-           namespace:   'meksis',
-           klass:       'place_type',
-           collection:  @place_types,
-           pagy:        @pagy,
-           card_header: t('.card_header'),
-           params:      %w[name number_of_children],
-           actions:     %w[show] %>
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'align-justify', text: t('.card_header') %>
+      </div>
+      <div class='card-body'>
+        <%= render 'search' %>
+        <table class='table table-responsive-sm table-striped'>
+          <thead class="thead-dark">
+            <tr>
+              <th><%= t('.name') %></th>
+              <th><%= t('.number_of_children') %></th>
+              <th><%= t('actions') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @place_types.each do |place_type| %>
+              <tr>
+                <td><%= place_type.name %></td>
+                <td><%= place_type.number_of_children %></td>
+                <td><%= link_to_actions([:meksis, place_type], except: %i[edit destroy]) %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <nav aria-label='pagination'>
+      <ul class='pagination justify-content-center'>
+        <%== pagy_bootstrap_nav(@pagy) %>
+      </ul>
+    </nav>
+  </div>
+</div>
