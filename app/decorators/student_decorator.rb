@@ -11,6 +11,10 @@ class StudentDecorator < SimpleDelegator
     calendar&.check_events('online_course_registrations')
   end
 
+  def registation_date_range
+    translate('index.registration_date_range', calendar&.date_range('online_course_registrations'))
+  end
+
   def semester_enrollments
     @semester_enrollments ||=
       course_enrollments.where(semester: semester)
@@ -73,19 +77,19 @@ class StudentDecorator < SimpleDelegator
 
   def can_drop?(available_course)
     sequence = available_course.curriculum_course.curriculum_semester.sequence
-    return [false, translate('must_drop_first')] if max_sequence > sequence
+    return [false, translate('new.must_drop_first')] if max_sequence > sequence
 
     true
   end
 
   def can_add?(available_course)
     if available_course.type == 'elective' && enrolled_at_group?(available_course)
-      return [false, translate('.already_enrolled_at_group')]
+      return [false, translate('new.already_enrolled_at_group')]
     end
 
-    return [false, translate('.not_enough_ects')] if selectable_ects < available_course.ects
+    return [false, translate('new.not_enough_ects')] if selectable_ects < available_course.ects
 
-    return [false, translate('.quota_full')] if available_course.quota_full?
+    return [false, translate('new.quota_full')] if available_course.quota_full?
 
     true
   end
@@ -108,7 +112,7 @@ class StudentDecorator < SimpleDelegator
     enrolled_at
   end
 
-  def translate(key)
-    I18n.t("studentship.course_enrollments.new.#{key}")
+  def translate(key, params = {})
+    I18n.t("studentship.course_enrollments.#{key}", params)
   end
 end
