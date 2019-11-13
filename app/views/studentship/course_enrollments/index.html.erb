@@ -9,10 +9,19 @@
         <%= fa_icon 'align-justify' %><strong><%= t('.student_records') %></strong>
       </div>
       <div class="card-body">
-        <div class="list-group list-group-sm">
+        <div class="list-group">
           <% @students.each do |student| %>
-            <%= link_to new_course_enrollment_url(student_id: student.id), class: 'list-group-item list-group-item-action justify-content-between align-items-center' do %>
-              <%= student.unit.name %>
+            <% student = StudentDecorator.new(student) %>
+            <% url = student.enrollment_status == :draft ?
+                       new_course_enrollment_url(student_id: student.id) :
+                       list_course_enrollments_url(student_id: student.id) %>
+
+            <%= link_to url, class: 'list-group-item list-group-item-action align-items-center' do %>
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1"><%= student.unit.name %></h5>
+              </div>
+              <p class="mb-1"><%= student.registation_date_range %></p>
+              <small><%= "#{t('.enrollment_status')}: #{t('activerecord.enums.course_enrollment.statuses')[student.enrollment_status]}" %></small>
             <% end %>
           <% end %>
         </div>

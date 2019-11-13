@@ -1,0 +1,55 @@
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class="alert alert-light">
+      <%= link_to_back course_enrollments_path %>
+    </div>
+
+    <div class="card">
+      <%= render 'student_info' %>
+    </div>
+  </div>
+</div>
+
+<div class='row'>
+  <div class="col-sm-12">
+    <div class="card border-success mb-3">
+      <div class="card-header">
+        <strong><%= t('.selected_courses') %></strong>
+        <div class="float-right">
+          <strong><%= "#{t('.selected_ects')}: #{@student.selected_ects}" %></strong>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-body table-responsive">
+          <table class="table table-responsive-sm table-striped table-hover">
+            <thead>
+              <tr class="thead-dark">
+                <th><%= t('.code') %></th>
+                <th><%= t('.name') %></th>
+                <th><%= t('.type') %></th>
+                <th><%= t('.year') %></th>
+      	        <th><%= t('.sequence') %></th>
+                <th><%= t('.credit') %></th>
+                <th><%= t('.ects') %></th>
+              </tr>
+            </thead>
+  	        <tbody>
+    	        <% @student.semester_enrollments.each do |course_enrollment, dropable, info| %>
+                <tr>
+                  <% available_course = course_enrollment.available_course %>
+                  <td><%= available_course.code %></td>
+                  <td><%= available_course.name %></td>
+                  <td><%= enum_t(available_course.curriculum_course, :type) %></td>
+                  <td><%= available_course.curriculum_course.curriculum_semester.year %></td>
+                  <td><%= available_course.curriculum_course.curriculum_semester.sequence %></td>
+                  <td><%= available_course.credit %></td>
+                  <td><%= available_course.ects %></td>
+                </tr>
+              <% end %>
+  	        </tbody>
+	        </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

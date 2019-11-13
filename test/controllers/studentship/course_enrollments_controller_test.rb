@@ -39,7 +39,7 @@ module Studentship
     test 'should save' do
       get save_course_enrollments_path, params: { student_id: @student.id }
       assert_equal StudentDecorator.new(@student).enrollment_status, :saved
-      assert_redirected_to new_course_enrollment_path
+      assert_redirected_to list_course_enrollments_path
     end
 
     test 'should destroy course_enrollment' do

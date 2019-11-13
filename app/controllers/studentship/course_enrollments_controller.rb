@@ -2,13 +2,16 @@
 
 module Studentship
   class CourseEnrollmentsController < ApplicationController
-    before_action :set_student, only: %i[new create destroy save]
+    before_action :set_student, except: :index
     before_action :set_course_enrollment, only: :destroy
     before_action :check_registrability, except: :index
+    before_action :check_enrollment_status, except: %i[index list]
 
     def index
       @students = current_user.students.includes(:unit)
     end
+
+    def list; end
 
     def new; end
 
@@ -24,7 +27,7 @@ module Studentship
 
     def save
       message = @student.semester_enrollments.update(status: :saved) ? t('.success') : t('.error')
-      redirect_with(message)
+      redirect_to(list_course_enrollments_path, flash: { info: message })
     end
 
     private
@@ -51,6 +54,12 @@ module Studentship
       return if @student.registrable_for_online_course?
 
       redirect_to(course_enrollments_path, alert: t('.errors.not_proper_register_event_range'))
+    end
+
+    def check_enrollment_status
+      return if @student.enrollment_status == :draft
+
+      redirect_to(course_enrollments_path, alert: t('.errors.registration completed'))
     end
 
     def course_enrollment_params
