@@ -2,7 +2,7 @@
 
 module Patron
   module PermissionBuilder
-    mattr_accessor :all, default: ActiveSupport::OrderedOptions.new
+    mattr_accessor :all, default: ActiveSupport::HashWithIndifferentAccess.new
 
     PRIVILEGES = %i[
       read
@@ -12,7 +12,7 @@ module Patron
     ].freeze
 
     def permissions
-      @permissions ||= ActiveSupport::OrderedOptions.new
+      @permissions ||= ActiveSupport::HashWithIndifferentAccess.new
     end
 
     # Example
