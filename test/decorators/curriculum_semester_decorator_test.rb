@@ -32,7 +32,7 @@ class CurriculumSemesterDecoratorTest < ActiveSupport::TestCase
 
   test 'active_available_courses method' do
     courses = @curriculum_semester.active_available_courses
-    assert_equal courses[0].to_a, [available_courses(:elective_course_2), available_courses(:elective_course)]
+    assert_equal courses[0].to_a, [available_courses(:elective_course), available_courses(:elective_course_2)]
     assert_equal courses[1].to_a, [available_courses(:compulsory_course)]
     assert_equal courses[2].to_a, [available_courses(:compulsory_course_2)]
   end
