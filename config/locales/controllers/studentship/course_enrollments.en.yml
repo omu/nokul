@@ -31,7 +31,6 @@ en:
         available_courses: Available Courses
         enrollment_status: Enrollment Status
         must_drop_first: Courses taken from the top semester must be dropped first.
-        not_proper_register_event_range: There is no online course registration activity covering the date range today.
         not_enough_ects: The amount of ECTS that can be selected is not enough for you to take this course.
         program: Program
         quota_full: The course has reached its quota.
@@ -41,8 +40,10 @@ en:
         selected_ects: Selected ECTS
         student_info: Student Info
         student_number: Student Number
-        student_record_not_found: Student record not found.
         year_and_semester: Year/Semester
       save:
         error: An error occured when saving selected courses.
         success: Selected courses successfully saved.
+      errors:
+        not_proper_register_event_range: There is no online course registration activity covering the date range today.
+        student_record_not_found: Student record not found.

@@ -38,7 +38,7 @@ module Studentship
         current_user.students.find_by(id: params[:student_id]) ||
         current_user.students.first
 
-      redirect_to(course_enrollments_path, alert: t('.student_record_not_found')) unless student
+      redirect_to(course_enrollments_path, alert: t('.errors.student_record_not_found')) unless student
 
       @student = StudentDecorator.new(student)
     end
@@ -50,7 +50,7 @@ module Studentship
     def check_registrability
       return if @student.registrable_for_online_course?
 
-      redirect_to(course_enrollments_path, alert: t('.not_proper_register_event_range'))
+      redirect_to(course_enrollments_path, alert: t('.errors.not_proper_register_event_range'))
     end
 
     def course_enrollment_params

@@ -31,7 +31,6 @@ tr:
         available_courses: Açılan Dersler
         enrollment_status: Kayıtlanma Durumu
         must_drop_first: Öncelikli olarak en üst dönemden alınan dersler çıkarılmalı.
-        not_proper_register_event_range: Tarih aralığı bugünü kapsayan online ders kayıtlanma aktivitesi bulunmamaktadır.
         not_enough_ects: Seçilebilecek AKTS miktarı bu dersi alabilmeniz için yeterli değil.
         program: Program
         quota_full: Ders için belirlenen kontenjan dolmuş.
@@ -41,8 +40,10 @@ tr:
         selected_ects: Seçilen AKTS
         student_info: Öğrenci Bilgileri
         student_number: Öğrenci Numarası
-        student_record_not_found: Öğrencilik kaydı bulunamadı.
         year_and_semester: Sınıfı/Yarıyılı
       save:
         error: Seçilen dersler kaydedilirken bir hata oluştu.
         success: Seçilen dersler başarıyla kaydedildi.
+      errors:
+        not_proper_register_event_range: Tarih aralığı bugünü kapsayan online ders kayıtlanma aktivitesi bulunmamaktadır.
+        student_record_not_found: Öğrencilik kaydı bulunamadı.
