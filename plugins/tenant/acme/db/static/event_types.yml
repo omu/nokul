@@ -1,0 +1,96 @@
+applications:
+  - identifier: single_course_exam
+    name: Tek Ders Sınavı Başvuları
+  - identifier: program
+    name: Başvuru Tarihleri
+  - identifier: excused_mid_term
+    name: Ara Sınav Mazeret Başvuruları
+  - identifier: major_and_minor
+    name: Çift Anadal ve Yandal Başvuruları
+  - identifier: additional_exam
+    name: Ek Sınav Başvuruları
+  - identifier: doctoral_proficiency_exam
+    name: Doktora Yeterlilik Sınavı Giriş Başvuruları
+  - identifier: permanent_registration
+    name: Kesin Kayıt Başvuruları
+  - identifier: temporary_registration
+    name: Geçici Kayıt Başvuruları
+payments:
+  - identifier: tuition_fee
+    name:  Öğrenim Ücreti ve Materyal Ücreti Taksitinin Ödenmesi
+  - identifier: first_installment_of_tuition_fee
+    name:  Öğrenim Ücreti ve Materyal Ücreti 1. Taksitinin Ödenmesi
+  - identifier: second_installment_of_tuition_fee
+    name:  Öğrenim Ücreti ve Materyal Ücreti 2. Taksitinin Ödenmesi
+  - identifier: third_installment_of_tuition_fee
+    name:  Öğrenim Ücreti ve Materyal Ücreti 3. Taksitinin Ödenmesi
+registrations:
+  - identifier: excused_course
+    name: Mazeretli Ders Kayıtları
+  - identifier: online_course
+    name: Çevrimiçi Ders Kayıtları
+  - identifier: excused_online_course
+    name: Mazeretli Çevrimiçi Ders Kayıtları
+  - identifier: add_drop
+    name: Ders Ekleme/Bırakma
+advisor:
+  - identifier: approvals
+    name: Danışman Onay İşlemleri
+  - identifier: transfer_for_elective_courses
+    name: Açılmayan Seçmeli Bir Dersi Seçen Öğrencilerin Açılan Başka Bir Seçmeli Derse Aktarılması
+exams:
+  - identifier: online_mid_term
+    name: Çevrimiçi Ara Sınavlar
+  - identifier: mid_term
+    name: Ara Sınavlar
+  - identifier: final
+    name: Yarıyıl Sonu Sınavları
+  - identifier: retake
+    name: Bütünleme Sınavları
+  - identifier: single_course
+    name: Tek Ders Sınavları
+  - identifier: foreign_language_exemption
+    name: Zorunlu Yabancı Dil Dersi Muafiyet Sınavları (5/i Dersleri İçin)
+  - identifier: foreign_language_proficiency
+    name: Zorunlu Hazırlık Sınıfları Yabancı Dil Yeterlik Sınavı
+  - identifier: preparatory_class_grading
+    name: Hazırlık Sınıfları için Düzey Belirleme Sınavı
+  - identifier: preparatory_class_proficiency
+    name: Hazırlık Sınıfları için Yeterlilik Sınavı
+  - identifier: excused_mid_term
+    name: Mazeretli Ara Sınavlar
+  - identifier: additional
+    name: Ek Sınavlar
+  - identifier: doctoral_proficiency
+    name: Doktora Yeterlilik Sınavı
+courses:
+  - identifier: start_and_end_of
+    name: Derslerin Başlaması-Bitişi
+  - identifier: start_and_end_of_asynchronous
+    name: Asenkron Derslerin Başlaması-Bitişi
+  - identifier: start_and_end_of_synchronous
+    name: Senkron Derslerin Başlaması-Bitişi
+  - identifier: start_and_end_of_practical
+    name: Uygulama Derslerinin Başlaması-Bitişi
+submission:
+  - identifier: final_project
+    name: Dönem Projelerinin Teslimi
+  - identifier: thesis
+    name: Tezlerin Enstitüye Teslimi
+  - identifier: project_seminar
+    name: Dönem Projesi/Seminerlerin Enstitüye Teslimi
+announcement:
+  - identifier: mid_term_results
+    name: Ara Sınav Sonuçlarının İlanı
+  - identifier: final_results
+    name: Yarıyıl Sonu Sınav Sonuçlarının İlanı
+  - identifier: retake_results
+    name: Bütünleme Sınav Sonuçlarının İlanı
+  - identifier: single_course_results
+    name: Tek Ders Sınav Sonuçlarının İlanı
+  - identifier: major_and_minor_application_results
+    name: Çift Anadal ve Yandal Başvuru Sonuçlarının İlanı
+  - identifier: foreign_language_proficiency_results
+    name: Zorunlu Hazırlık Sınıfları Yabancı Dil Yeterlik Sınav Sonuçlarının İlanı
+  - identifier: additional_exam_results
+    name: Ek Sınav Sonuçlarının İlanı
