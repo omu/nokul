@@ -58,6 +58,14 @@ class Calendar < ApplicationRecord
     ).try(:active_now?)
   end
 
+  def date_range(identifier)
+    event = calendar_events.find_by(calendar_event_type: event_type(identifier))
+    {
+      start_time: event.try(:start_time).try(:strftime, '%F %R'),
+      end_time:   event.try(:end_time).try(:strftime, '%F %R')
+    }
+  end
+
   private
 
   def event_type(identifier)
