@@ -2,7 +2,7 @@ FROM ondokuz/ruby:buster-19.1
 
 ENV PATH=/app/bin:$PATH
 
-ARG NOKUL_TENANT=omu
+ARG NOKUL_TENANT=acme
 ENV NOKUL_TENANT=$NOKUL_TENANT
 
 ARG RAILS_ENV=development
