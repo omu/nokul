@@ -2752,7 +2752,8 @@ CREATE TABLE public.role_permissions (
     role_id bigint NOT NULL,
     permission_id bigint NOT NULL,
     created_at timestamp(6) without time zone NOT NULL,
-    updated_at timestamp(6) without time zone NOT NULL
+    updated_at timestamp(6) without time zone NOT NULL,
+    privileges bigint DEFAULT 0 NOT NULL
 );
 
 
@@ -6977,6 +6978,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20191018084942'),
 ('20191021073002'),
 ('20191111082956'),
+('20191112123931'),
 ('20191113054514'),
 ('20191127055945'),
 ('20191226074849'),
