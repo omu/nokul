@@ -4,6 +4,7 @@ module Studentship
   class CourseEnrollmentsController < ApplicationController
     before_action :set_student, only: %i[new create destroy save]
     before_action :set_course_enrollment, only: :destroy
+    before_action :check_registrability, except: :index
 
     def index
       @students = current_user.students.includes(:unit)
@@ -37,13 +38,19 @@ module Studentship
         current_user.students.find_by(id: params[:student_id]) ||
         current_user.students.first
 
-      redirect_to(:root, alert: t('.student_record_not_found')) unless student
+      redirect_to(course_enrollments_path, alert: t('.student_record_not_found')) unless student
 
       @student = StudentDecorator.new(student)
     end
 
     def set_course_enrollment
       @course_enrollment = @student.course_enrollments.find(params[:id])
+    end
+
+    def check_registrability
+      return if @student.registrable_for_online_course?
+
+      redirect_to(course_enrollments_path, alert: t('.not_proper_register_event_range'))
     end
 
     def course_enrollment_params
