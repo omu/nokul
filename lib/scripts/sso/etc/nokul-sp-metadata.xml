@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<md:EntityDescriptor xmlns:md='urn:oasis:names:tc:SAML:2.0:metadata' ID='_8e655c76-3d5c-455d-a976-3999c86756e1' entityID='http://other.vagrant.ga:3000/saml/metadata'>
+ <md:SPSSODescriptor protocolSupportEnumeration='urn:oasis:names:tc:SAML:2.0:protocol' AuthnRequestsSigned='true' WantAssertionsSigned='false'>
+  <md:SingleLogoutService Binding='urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect' Location='http://other.vagrant.ga:3000/saml/logout' ResponseLocation='http://other.vagrant.ga:3000/saml/logout'/>
+  <md:NameIDFormat>
+   urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress
+  </md:NameIDFormat>
+  <md:AssertionConsumerService Binding='urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST' Location='http://other.vagrant.ga:3000/saml/acs' isDefault='true' index='0'/>
+ </md:SPSSODescriptor>
+</md:EntityDescriptor>
