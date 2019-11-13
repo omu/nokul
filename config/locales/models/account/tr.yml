@@ -3,6 +3,7 @@ tr:
   activerecord:
     attributes:
       duty:
+        article: Görevlendirme Kanun Maddesi
         employee_id: Personel
         end_date: Bitiş Tarihi
         start_date: Başlangıç Tarihi
@@ -21,6 +22,14 @@ tr:
         administrative_function_id: İdari Görev
         end_date: Bitiş Tarihi
         start_date: Başlangıç Tarihi
+    enums:
+      duty:
+        articles:
+          foreign: 34 / Yabancı uyruklu öğretim elemanı görevlendirme
+          internal: 13-B / Kurum içi görevlendirme
+          lecturer_education: 35 / Öğretim elemanı yetiştirme
+          public_institution: 38 / Kamu kuruluşları ve vakıflarda görevlendirme
+          temporary: 39 / Geçici görevlendirme
   helpers:
     submit:
       duty:

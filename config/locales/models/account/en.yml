@@ -3,6 +3,7 @@ en:
   activerecord:
     attributes:
       duty:
+        article: Article of Duty
         employee_id: Employee
         end_date: End Date
         start_date: Start Date
@@ -21,6 +22,14 @@ en:
         administrative_function_id: Administrative Function
         end_date: End Date
         start_date: Start Date
+    enums:
+      duty:
+        articles:
+          foreign: 34 / Assignment of foreign lecturer
+          internal: 13-B / Internal assignment
+          lecturer_education: 35 / Lecturer education
+          public_institution: 38 / Assignment in public institutions and foundations
+          temporary: 39 / Temporary assignment
   helpers:
     submit:
       duty:
