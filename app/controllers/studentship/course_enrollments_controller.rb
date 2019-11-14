@@ -57,7 +57,7 @@ module Studentship
     end
 
     def check_enrollment_status
-      return if @student.enrollment_status == :draft
+      return if @student.enrollment_status != :saved
 
       redirect_to(course_enrollments_path, alert: t('.errors.registration completed'))
     end

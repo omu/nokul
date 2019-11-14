@@ -12,7 +12,7 @@
         <div class="list-group">
           <% @students.each do |student| %>
             <% student = StudentDecorator.new(student) %>
-            <% url = student.enrollment_status == :draft ?
+            <% url = student.enrollment_status != :saved ?
                        new_course_enrollment_url(student_id: student.id) :
                        list_course_enrollments_url(student_id: student.id) %>
 
