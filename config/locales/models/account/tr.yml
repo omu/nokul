@@ -25,12 +25,12 @@ tr:
     enums:
       duty:
         articles:
-          foreign: 34 / Yabancı uyruklu öğretim elemanı görevlendirme
-          internal: 13-B / Kurum içi görevlendirme
-          lecturer_education: 35 / Öğretim elemanı yetiştirme
-          long_term_temporary: 39-b / Uzun süreli geçici görevlendirme
-          public_institution: 38 / Kamu kuruluşları ve vakıflarda görevlendirme
-          short_term_temporary: 39-a / Kısa süreli geçici görevlendirme
+          foreign: 34 - Yabancı uyruklu öğretim elemanı görevlendirme
+          internal: 13/b - Kurum içi görevlendirme
+          lecturer_education: 35 - Öğretim elemanı yetiştirme
+          long_term_temporary: 39/b - Uzun süreli geçici görevlendirme
+          public_institution: 38 - Kamu kuruluşları ve vakıflarda görevlendirme
+          short_term_temporary: 39/a - Kısa süreli geçici görevlendirme
   helpers:
     submit:
       duty:
