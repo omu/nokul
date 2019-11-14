@@ -2,7 +2,7 @@
 
 module Nokul
   module Tenant
-    DEFAULT_TENANT = 'omu'
+    DEFAULT_TENANT = 'acme'
 
     mattr_accessor :name
     mattr_accessor :engine
@@ -18,7 +18,7 @@ module Nokul
 
     def credentials
       Rails.application.encrypted(
-        Tenant.root.join('test', 'dummy', 'config', 'credentials.yml.enc'), env_key: 'TENANT_MASTER_KEY'
+        Tenant.root.join('test', 'dummy', 'config', 'credentials', Rails.env + '.yml.enc'), env_key: 'TENANT_MASTER_KEY'
       )
     end
 

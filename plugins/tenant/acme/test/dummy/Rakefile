@@ -1,0 +1,21 @@
+# frozen_string_literal: true
+
+# Add your own tasks in files placed in lib/tasks ending in .rake,
+# for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
+
+require_relative 'config/application'
+
+require 'rails/test_unit/runner'
+
+Rails.application.load_tasks
+# p FileList['../../../../tenant/test/**/*_test.rb']
+# p FileList['../../tenant/test/**/*_test.rb']
+
+namespace :test do
+  task :foo do
+    $LOAD_PATH << '../../tenant/test'
+    # Rails::TestUnit::Runner.rake_run ['**/*_test.rb']
+    # p FileList['../../tenant/test/**/*_test.rb'].to_a
+    Rails::TestUnit::Runner.rake_run FileList['../../tenant/test/**/*_test.rb']
+  end
+end

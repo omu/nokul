@@ -35,18 +35,20 @@ module Ldap
     end
 
     test 'eduPersonScopedAffiliation attribute' do
-      assert_equal @entity.eduPersonScopedAffiliation, %w[
-        member@_.egitim-bilim.omu.edu.tr
-        employee@_.egitim-bilim.omu.edu.tr
-        faculty@_.egitim-bilim.omu.edu.tr
-        member@_.baum.omu.edu.tr
-        employee@_.baum.omu.edu.tr
-        faculty@_.baum.omu.edu.tr
-        member@_.bilgisayar-pr.bilgisayar.muhendislik.omu.edu.tr
-        student@_.bilgisayar-pr.bilgisayar.muhendislik.omu.edu.tr
-        member@_.mf-mat-pr.matematik-fen.egitim.omu.edu.tr
-        student@_.mf-mat-pr.matematik-fen.egitim.omu.edu.tr
-      ]
+      affiliations = %w[
+        member@_.egitim-bilim
+        employee@_.egitim-bilim
+        faculty@_.egitim-bilim
+        member@_.baum
+        employee@_.baum
+        faculty@_.baum
+        member@_.bilgisayar-pr.bilgisayar.muhendislik
+        student@_.bilgisayar-pr.bilgisayar.muhendislik
+        member@_.mf-mat-pr.matematik-fen.egitim
+        student@_.mf-mat-pr.matematik-fen.egitim
+      ].map { |item| "#{item}.#{Tenant.configuration.ldap.organization}" }
+
+      assert_equal @entity.eduPersonScopedAffiliation, affiliations
     end
 
     test 'givenName attribute' do
