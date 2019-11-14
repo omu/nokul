@@ -27,9 +27,10 @@ en:
         articles:
           foreign: 34 / Assignment of foreign lecturer
           internal: 13-B / Internal assignment
+          long_term_temporary: 39-b / Long-term temporary assignment
           lecturer_education: 35 / Lecturer education
           public_institution: 38 / Assignment in public institutions and foundations
-          temporary: 39 / Temporary assignment
+          short_term_temporary: 39-a / Short-term temporary assignment
   helpers:
     submit:
       duty:

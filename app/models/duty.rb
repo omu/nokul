@@ -7,11 +7,12 @@ class Duty < ApplicationRecord
 
   # enums
   enum article: {
-    internal:           1,
-    foreign:            2,
-    temporary:          3,
-    public_institution: 4,
-    lecturer_education: 5
+    internal:             1,
+    foreign:              2,
+    long_term_temporary:  3,
+    short_term_temporary: 4,
+    public_institution:   5,
+    lecturer_education:   6
   }
 
   # relations
