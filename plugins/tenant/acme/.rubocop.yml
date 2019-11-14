@@ -1,0 +1,17 @@
+Style/AsciiComments:
+  Enabled: false
+Style/Lambda:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Metrics/LineLength:
+  Max: 120
+Naming/FileName:
+  Exclude:
+    - lib/nokul-tenant-*.rb
+Rails/Output:
+  Exclude:
+    - lib/**/*.rb
+Style/MixinUsage:
+  Exclude:
+    - test/dummy/**/*

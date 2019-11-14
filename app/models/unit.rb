@@ -111,6 +111,18 @@ class Unit < ApplicationRecord
                              end
   end
 
+  def semester_type
+    return unless program?
+
+    return 'yearly' if /(T[ıi]p|D[ıi][sş] Hekim|Hukuk)/i.match?(name)
+
+    'periodic'
+  end
+
+  def program?
+    UnitType.program.ids.include?(unit_type_id)
+  end
+
   # custom methods
   def subprograms
     descendants.programs

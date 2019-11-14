@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class Curriculum < ApplicationRecord
-  attr_accessor :number_of_semesters, :type
-
   # constants
   MAX_NUMBER_OF_SEMESTERS = 12
   MAX_NUMBER_OF_YEARS = 6
@@ -46,13 +44,24 @@ class Curriculum < ApplicationRecord
   validates :status, inclusion: { in: statuses.keys }
 
   # custom methods
-  def build_semesters(number_of_semesters: 0, type: :periodic)
-    divisor = (type.to_sym == :periodic ? 2 : 1)
-    terms = %i[spring fall]
+  def build_semesters
+    return false unless valid?
+
+    divisor              = (semester_type.to_sym == :periodic ? 2 : 1)
+    number_of_semesters  = duration * divisor
     (1..number_of_semesters.to_i).each do |sequence|
       semesters.build(sequence: sequence,
                       year:     (sequence.to_f / divisor).round,
-                      term:     terms[sequence % 2])
+                      term:     %i[spring fall][sequence % 2])
     end
+  end
+
+  private
+
+  # delegates
+  delegate :semester_type, :duration, to: :program
+
+  def program
+    @program ||= programs.last
   end
 end

@@ -1,4 +1,4 @@
-dn: cn=reader,dc=test,dc=omu,dc=edu,dc=tr
+dn: cn=reader,dc=acme,dc=omu,dc=sh
 cn: reader
 userPassword: {BCRYPT}$2b$10$tFrK0DCl5AzcAJqMIJck9ejLiy1yE4fOo5Xxl3OJd0V5gdKXNwhHO
 description: LDAP Reader User for Applications

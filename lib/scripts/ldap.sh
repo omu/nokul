@@ -22,9 +22,9 @@ debconf-set-selections <<-EOF
 	slapd slapd/password2 password 12345
 	slapd slapd/no_configuration boolean false
 	slapd slapd/move_old_database boolean true
-	slapd slapd/domain string test.omu.edu.tr
+	slapd slapd/domain string acme.omu.sh
 	slapd slapd/invalid_config boolean true
-	slapd shared/organization string omu
+	slapd shared/organization string acme
 	slapd slapd/backend string MDB
 	slapd slapd/purge_database boolean false
 EOF
@@ -36,16 +36,16 @@ pushd config &>/dev/null
 
 ldapadd -Q -Y EXTERNAL -H ldapi:/// -f 01-enable-bcrypt.ldif
 ldapmodify -Q -Y EXTERNAL -H ldapi:// -f 02-disallow-anon.ldif
-ldapmodify -H ldapi:// -x -D "cn=admin,dc=test,dc=omu,dc=edu,dc=tr" -w 12345 -f 03-admin-normal-password.ldif
+ldapmodify -H ldapi:// -x -D "cn=admin,dc=acme,dc=omu,dc=sh" -w 12345 -f 03-admin-normal-password.ldif
 ldapmodify -Q -Y EXTERNAL -H ldapi:// -f 04-admin-config-password.ldif
 ldapadd -Q -Y EXTERNAL -H ldapi:/// -f /etc/ldap/schema/dyngroup.ldif
 ldapmodify -Q -Y EXTERNAL -H ldapi:/// -f 05-enable-dynlist.ldif
 ldapadd -Q -Y EXTERNAL -H ldapi:/// -f 06-dynlist-dbconfig.ldif
 ldapadd -Q -Y EXTERNAL -H ldapi:/// -f schema/eduperson2016.ldif
 ldapadd -Q -Y EXTERNAL -H ldapi:/// -f schema/schac-schema-1.5.ldif
-ldapadd -x -D "cn=admin,dc=test,dc=omu,dc=edu,dc=tr" -w 12345 -f 07-create-reader-user.ldif
+ldapadd -x -D "cn=admin,dc=acme,dc=omu,dc=sh" -w 12345 -f 07-create-reader-user.ldif
 ldapmodify -Q -Y EXTERNAL -H ldapi:// -f 08-acl.ldif
 
-ldapadd -x -D "cn=admin,dc=test,dc=omu,dc=edu,dc=tr" -w 12345 -f import.ldif
+ldapadd -x -D "cn=admin,dc=acme,dc=omu,dc=sh" -w 12345 -f import.ldif
 
 touch /var/lib/ldap/bootstrapped

@@ -24,6 +24,7 @@ class Calendar < ApplicationRecord
   accepts_nested_attributes_for :calendar_events, allow_destroy: true, reject_if: :all_blank
 
   # validations
+  validates_associated :calendar_events
   validates :name, presence:   true,
                    uniqueness: { scope: :academic_term_id },
                    length:     { maximum: 255 }

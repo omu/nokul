@@ -4,7 +4,7 @@
   "dependencies": {
     "@coreui/coreui-free-bootstrap-admin-template": "https://github.com/coreui/coreui-free-bootstrap-admin-template.git",
     "@rails/actioncable": "^6.0.0-alpha",
-    "@rails/actiontext": "^6.0.0-beta1",
+    "@rails/actiontext": "^6.0.1",
     "@rails/activestorage": "^6.0.0-alpha",
     "@rails/ujs": "^6.0.0-alpha",
     "@rails/webpacker": "https://github.com/rails/webpacker",
@@ -12,7 +12,7 @@
     "flatpickr": "^4.6.3",
     "intl-tel-input": "^16.0.4",
     "jquery.maskedinput": "^1.4.1",
-    "select2": "^4.0.11",
+    "select2": "^4.0.12",
     "toastr": "^2.1.4",
     "trix": "^1.0.0",
     "turbolinks": "^5.2.0"

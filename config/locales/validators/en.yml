@@ -9,12 +9,15 @@ en:
       max_informal: You can add up to %{limit} addresses maximum.
     available_course_lecturer:
       coordinator: There must be one coordinator of the available course group.
-    calendar_event:
-      invalid_time_range: Event end date is not selected as a date before the start date.
-      invalid_start_time: Event is not selected as a date before the academic term start date.
-      invalid_end_time: Event is not selected as a date after the academic term end date.
     course_evaluation_type:
       invalid_percentages: The percentage of the assessment methods must be equal to 100.
+    datetime:
+      after_or_eql: must be equal or after than %{restriction}
+      after: must be after than %{restriction}
+      before_or_eql: must be equal or before than %{restriction}
+      before: must be before than %{restriction}
+      comparison_value: Comparison value
+      eql: must be eql %{restriction}
     duty:
       active_and_tenure: This user already has an active and tenure duty. Edit the existing duty or make it passive in order to create a new one.
       invalid_end_date: Start date is selected as a date after the end date
