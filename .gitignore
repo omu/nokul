@@ -45,6 +45,7 @@ mkmf.log
 # Ignore sensitives
 config/deploy_key
 /config/master.key
+/plugins/tenant/*/test/dummy/config/credentials/*.key
 
 # Ignore auto-generated PDFs of markdown files
 .pdf
