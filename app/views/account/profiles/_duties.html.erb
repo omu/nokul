@@ -3,7 +3,7 @@
     <h4><%= t('.duties') %></h4><br>
     <% current_user.duties.includes(:unit).order(start_date: :desc).each do |duty| %>
       <li class='list-group-item bg-transparent'>
-        <%= "#{[duty.unit.names_depth_cache, enum_t(duty, :article)].reject(&:blank?).join(', ')}, \
+        <%= "#{[duty.unit.names_depth_cache, enum_t(duty, :article)].reject(&:blank?).join(', ')},
              (#{duty.start_date} - #{duty.end_date || t('.continuing')})" %>
       </li>
     <% end %>
