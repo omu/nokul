@@ -21,6 +21,10 @@
         <td><%= full_name(@student.active_term) %></td>
       </tr>
       <tr>
+        <th><%= t('.gpa') %></th>
+        <td><%= @student.fake_gpa %></td>
+      </tr>
+      <tr>
         <th><%= t('.enrollment_status') %></th>
         <td><%= t('activerecord.enums.course_enrollment.statuses')[@student.enrollment_status] %></td>
       </tr>

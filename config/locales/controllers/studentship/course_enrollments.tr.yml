@@ -52,6 +52,7 @@ tr:
       student_info:
         academic_term: Akademik Dönem
         enrollment_status: Kayıtlanma Durumu
+        gpa: GANO
         program: Program
         student_info: Öğrenci Bilgileri
         student_number: Öğrenci Numarası

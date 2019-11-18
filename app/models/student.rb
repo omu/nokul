@@ -35,7 +35,7 @@ class Student < ApplicationRecord
 
   # custom methods
   def fake_gpa
-    student_number.to_s[0..1].to_f / 25
+    student_number.to_s[-2..-1].to_f / 25
   end
 
   def plus_ects

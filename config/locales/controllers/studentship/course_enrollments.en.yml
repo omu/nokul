@@ -52,6 +52,7 @@ en:
       student_info:
         academic_term: Academic Term
         enrollment_status: Enrollment Status
+        gpa: GPA
         program: Program
         student_info: Student Information
         student_number: Student Number
