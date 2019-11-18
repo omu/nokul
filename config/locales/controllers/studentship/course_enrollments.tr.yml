@@ -26,11 +26,10 @@ tr:
       errors:
         not_proper_register_event_range: Tarih aralığı bugünü kapsayan online ders kayıtlanma aktivitesi bulunmamaktadır.
         registration completed: Ders seçimini tamamladığınız için bu işlemi gerçekleştiremezsiniz.
-        student_record_not_found: Öğrencilik kaydı bulunamadı.
       index:
+        course_enrollments: Ders Kayıtları
         enrollment_status: Kayıtlanma Durumu
         registration_date_range: "Çevrimiçi Ders Kayıt Tarihleri: %{start_time} - %{end_time}"
-        student_records: Öğrencilik Kayıtları
       list:
         <<: *course_attributes
         sequence: Dönem

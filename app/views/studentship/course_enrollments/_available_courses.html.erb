@@ -19,7 +19,7 @@
         <td><%= available_course.ects.to_i %></td>
         <td>
           <% if (error = @student.ensure_addable(available_course)).nil? %>
-            <%= link_to(t('.add'), course_enrollments_path(course_enrollment: { available_course_id: available_course.id }, student_id: @student.id), method: :post, class: 'btn btn-sm btn-outline-success') %>
+            <%= link_to(t('.add'), student_course_enrollments_path(@student, course_enrollment: { available_course_id: available_course.id }), method: :post, class: 'btn btn-sm btn-outline-success') %>
           <% else%>
             <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="<%= error %>">
               <button class="btn btn-sm btn-outline-secondary" style="pointer-events: none;" type="button" disabled><%= t('.add') %></button>

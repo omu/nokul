@@ -10,20 +10,19 @@ module Studentship
     end
 
     test 'should get index' do
-      get course_enrollments_path
+      get student_course_enrollments_path(@student)
       assert_response :success
     end
 
     test 'should get new' do
-      get new_course_enrollment_path, params: { student_id: @student.id }
+      get new_student_course_enrollment_path(@student)
       assert_response :success
     end
 
     test 'should create course_enrollment' do
       assert_difference('CourseEnrollment.count') do
-        post course_enrollments_path params: {
-          course_enrollment: { available_course_id: available_courses(:compulsory_course_2).id },
-          student_id:        @student.id
+        post student_course_enrollments_path(@student), params: {
+          course_enrollment: { available_course_id: available_courses(:compulsory_course_2).id }
         }
       end
 
@@ -33,21 +32,21 @@ module Studentship
       assert_equal @student, course_enrollment.student
       assert_equal @student.semester, course_enrollment.semester
       assert_equal 'draft', course_enrollment.status
-      assert_redirected_to new_course_enrollment_path
+      assert_redirected_to new_student_course_enrollment_path(@student)
     end
 
     test 'should save' do
-      get save_course_enrollments_path, params: { student_id: @student.id }
+      get save_student_course_enrollments_path(@student)
       assert_equal StudentDecorator.new(@student).enrollment_status, :saved
-      assert_redirected_to list_course_enrollments_path
+      assert_redirected_to list_student_course_enrollments_path
     end
 
     test 'should destroy course_enrollment' do
       assert_difference('CourseEnrollment.count', -1) do
-        delete course_enrollment_path(CourseEnrollment.last, student_id: @student.id)
+        delete student_course_enrollment_path(@student, CourseEnrollment.last)
       end
 
-      assert_redirected_to new_course_enrollment_path
+      assert_redirected_to new_student_course_enrollment_path(@student)
     end
   end
 end

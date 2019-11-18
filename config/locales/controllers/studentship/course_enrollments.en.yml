@@ -26,11 +26,10 @@ en:
       errors:
         not_proper_register_event_range: There is no online course registration activity covering the date range today.
         registration completed: You can not perform this action since you have completed the course selection.
-        student_record_not_found: Student record not found.
       index:
+        course_enrollments: Course Enrollments
         enrollment_status: Enrollment Status
         registration_date_range: "Online Course Registration Dates: %{start_time} - %{end_time}"
-        student_records: Student Records
       list:
         <<: *course_attributes
         sequence: Sequence

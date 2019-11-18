@@ -45,15 +45,17 @@
       </li>
       <li class="nav-item nav-dropdown">
         <a class="nav-link nav-dropdown-toggle" href="#">
-          <%= fa_icon('graduation-cap', class: 'nav-icon') %><%= t('.studentship') %>
+          <%= fa_icon('book', class: 'nav-icon') %><%= t('.course_enrollments') %>
         </a>
-        <ul class="nav-dropdown-items">
-          <li class="nav-item">
-            <%= link_to :course_enrollments, class: 'nav-link' do %>
-              <%= fa_icon('book', text: t('.course_enrollments'), class: 'nav-icon') %>
-            <% end %>
-          </li>
-        </ul>
+        <% current_user.students.each do |student| %>
+          <ul class="nav-dropdown-items">
+            <li class="nav-item">
+              <%= link_to student_course_enrollments_path(student), class: 'nav-link' do %>
+                <%= fa_icon('graduation-cap', text: student.unit.name, class: 'nav-icon') %>
+              <% end %>
+            </li>
+          </ul>
+        <% end %>
       </li>
       <li class="nav-item nav-dropdown">
         <a class="nav-link nav-dropdown-toggle" href="#">
