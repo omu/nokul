@@ -84,16 +84,17 @@ class StudentDecorator < SimpleDelegator
   end
 
   def selectable_courses_for(curriculum_semester)
-    curriculum_semester.available_courses
-                       .where(academic_term: active_term)
-                       .where.not(id: semester_enrollments.pluck(:available_course_id))
+    CurriculumSemesterDecorator.new(curriculum_semester)
+                               .active_available_courses(except: semester_enrollments.pluck(:available_course_id))
+                               .flatten
   end
 
   def enrolled_at?(curriculum_semester)
     enrolled_course_ids = semester_enrollments.pluck(:available_course_id)
     enrolled_at = true
 
-    CurriculumSemesterDecorator.new(curriculum_semester).active_available_courses.collect(&:ids).each do |ids|
+    CurriculumSemesterDecorator.new(curriculum_semester)
+                               .active_available_courses(except: nil).collect(&:ids).each do |ids|
       break unless enrolled_at &&= (enrolled_course_ids & ids).any?
     end
 
