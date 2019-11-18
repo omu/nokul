@@ -43,7 +43,7 @@ class StudentDecorator < SimpleDelegator
   end
 
   def curriculum_semesters
-    curriculum.semesters.where(term: active_term.term).order(:sequence)
+    (semesters = curriculum&.semesters) ? semesters.where(term: active_term.term).order(:sequence) : []
   end
 
   def selectable_courses_for(curriculum_semester)
