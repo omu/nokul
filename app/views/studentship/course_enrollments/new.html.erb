@@ -25,9 +25,9 @@
           <strong><%= "#{t('.selectable_ects')}: #{@student.selectable_ects}" %></strong>
         </div>
       </div>
-      <% @student.selectable_courses.each do |semester, courses| %>
+      <% @student.course_catalog.each do |semester_courses| %>
         <div class="card-body">
-          <%= render 'semesters', semester: semester, courses: courses %>
+          <%= render 'semesters', semester: semester_courses[:semester], courses: semester_courses[:courses] %>
         </div>
       <% end %>
     </div>

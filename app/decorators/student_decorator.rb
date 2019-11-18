@@ -20,14 +20,15 @@ class StudentDecorator < SimpleDelegator
       end
   end
 
-  def selectable_courses
+  def course_catalog
     course_catalog = []
 
     curriculum_semesters.each do |curriculum_semester|
-      unless semester > curriculum_semester.sequence
-        course_catalog << [curriculum_semester, selectable_courses_for(curriculum_semester)]
-        return course_catalog unless !selectable_ects.negative? && enrolled_at?(curriculum_semester)
-      end
+      next if semester > curriculum_semester.sequence
+
+      course_catalog << { semester: curriculum_semester, courses: selectable_courses_for(curriculum_semester) }
+
+      return course_catalog unless !selectable_ects.negative? && enrolled_at?(curriculum_semester)
     end
   end
 
