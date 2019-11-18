@@ -42,8 +42,8 @@
                   <td><%= enum_t(available_course.curriculum_course, :type) %></td>
                   <td><%= available_course.curriculum_course.curriculum_semester.year %></td>
                   <td><%= available_course.curriculum_course.curriculum_semester.sequence %></td>
-                  <td><%= available_course.credit %></td>
-                  <td><%= available_course.ects %></td>
+                  <td><%= available_course.credit.to_i %></td>
+                  <td><%= available_course.ects.to_i %></td>
                 </tr>
               <% end %>
   	        </tbody>
