@@ -10,7 +10,7 @@
     "@rails/webpacker": "https://github.com/rails/webpacker",
     "chalk": "^2.4.2",
     "flatpickr": "^4.6.3",
-    "intl-tel-input": "^16.0.4",
+    "intl-tel-input": "^16.0.7",
     "jquery.maskedinput": "^1.4.1",
     "select2": "^4.0.12",
     "toastr": "^2.1.4",
