@@ -8,6 +8,8 @@ class StudentTest < ActiveSupport::TestCase
   extend Support::Minitest::ValidationHelper
   include ActiveJob::TestHelper
 
+  ECTS = 30
+
   # relations
   belongs_to :user
   belongs_to :unit
@@ -49,11 +51,31 @@ class StudentTest < ActiveSupport::TestCase
     assert_equal students(:serhat_omu).plus_ects, 15
   end
 
+  test 'semester_enrollments method' do
+    course_enrollments = students(:serhat).semester_enrollments
+    assert_not_includes course_enrollments, course_enrollments(:old)
+    assert_includes course_enrollments, course_enrollments(:elective)
+  end
+
+  test 'selected_ects method' do
+    assert_equal students(:serhat).selected_ects, selected_ects
+  end
+
+  test 'selectable_ects method' do
+    assert_equal students(:serhat).selectable_ects, ECTS + students(:serhat).plus_ects - selected_ects
+  end
+
   # job tests
   test 'student enqueues Kps::IdentitySaveJob after being created' do
     users(:serhat).students.destroy_all
     assert_enqueued_with(job: Kps::IdentitySaveJob) do
       Student.create(student_number: '1234', user: users(:serhat), unit: units(:omu), year: 1, semester: 1)
     end
+  end
+
+  private
+
+  def selected_ects
+    %i[elective compulsory].inject(0) { |ects, enrollment| ects + course_enrollments(enrollment).ects.to_i }
   end
 end
