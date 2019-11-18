@@ -3953,10 +3953,10 @@ interpret@1.2.0:
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.2.0.tgz#d5061a6224be58e8083985f5014d844359576296"
   integrity sha512-mT34yGKMNceBQUoVn7iCDKDntA7SC6gycMAWzGx1z/CMCTV7b2AAtXlo3nRyHZ1FelRkQbQjprHSYGwzLtkVbw==
 
-intl-tel-input@^16.0.4:
-  version "16.0.4"
-  resolved "https://registry.yarnpkg.com/intl-tel-input/-/intl-tel-input-16.0.4.tgz#e5bd17a879a0305d3d52e015c6883a1187806b28"
-  integrity sha512-uZ2+LNFa2foTo/aGj1Tkj/CDH5qSrqaLFP+FtuOjjZ9OvBuApEFgq12sMyDl+9Upr9devcbliJuAA4TJ7LsRYA==
+intl-tel-input@^16.0.7:
+  version "16.0.7"
+  resolved "https://registry.yarnpkg.com/intl-tel-input/-/intl-tel-input-16.0.7.tgz#e9d69b608978fec846f93369b4bf4c6880641e5f"
+  integrity sha512-Ufus9DzgxUGt5NNSO5CNATusIvUkvMvjE6s4z9g+oeOQolw8zOul5ktMc8xjqPfZsNaWC2YmfcSFjHFjFTcyhg==
 
 invariant@^2.2.2:
   version "2.2.4"
