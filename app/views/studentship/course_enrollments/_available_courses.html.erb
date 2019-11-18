@@ -10,7 +10,7 @@
     </tr>
   </thead>
   <tbody>
-    <% courses.each do |available_course, selectable, info| %>
+    <% courses.each do |available_course| %>
       <tr>
         <td><%= available_course.code %></td>
         <td><%= available_course.name %></td>
