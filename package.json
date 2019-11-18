@@ -6,7 +6,7 @@
     "@rails/actioncable": "^6.0.0-alpha",
     "@rails/actiontext": "^6.0.1",
     "@rails/activestorage": "^6.0.0-alpha",
-    "@rails/ujs": "^6.0.0-alpha",
+    "@rails/ujs": "^6.0.1",
     "@rails/webpacker": "https://github.com/rails/webpacker",
     "chalk": "^2.4.2",
     "flatpickr": "^4.6.3",
