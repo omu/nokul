@@ -36,12 +36,6 @@ class StudentDecorator < SimpleDelegator
     @selectable_ects ||= TOTAL_ECTS + plus_ects - selected_ects
   end
 
-  def selected_courses
-    semester_enrollments.collect do |course_enrollment|
-      [course_enrollment, can_drop?(course_enrollment.available_course)].flatten
-    end
-  end
-
   def selectable_courses
     course_catalog = []
 
@@ -51,6 +45,20 @@ class StudentDecorator < SimpleDelegator
         return course_catalog unless !selectable_ects.negative? && enrolled_at?(curriculum_semester)
       end
     end
+  end
+
+  def ensure_dropable(available_course)
+    sequence = available_course.curriculum_course.curriculum_semester.sequence
+    return translate('new.must_drop_first') if max_sequence > sequence
+  end
+
+  def ensure_addable(available_course)
+    if available_course.type == 'elective' && enrolled_at_group?(available_course)
+      return translate('new.already_enrolled_at_group')
+    end
+
+    return translate('new.not_enough_ects') if selectable_ects < available_course.ects
+    return translate('new.quota_full') if available_course.quota_full?
   end
 
   private
@@ -75,30 +83,10 @@ class StudentDecorator < SimpleDelegator
     (semester_enrollments.pluck(:available_course_id) & available_course.group_courses.pluck(:id)).any?
   end
 
-  def can_drop?(available_course)
-    sequence = available_course.curriculum_course.curriculum_semester.sequence
-    return [false, translate('new.must_drop_first')] if max_sequence > sequence
-
-    true
-  end
-
-  def can_add?(available_course)
-    if available_course.type == 'elective' && enrolled_at_group?(available_course)
-      return [false, translate('new.already_enrolled_at_group')]
-    end
-
-    return [false, translate('new.not_enough_ects')] if selectable_ects < available_course.ects
-
-    return [false, translate('new.quota_full')] if available_course.quota_full?
-
-    true
-  end
-
   def selectable_courses_for(curriculum_semester)
     curriculum_semester.available_courses
                        .where(academic_term: active_term)
                        .where.not(id: semester_enrollments.pluck(:available_course_id))
-                       .collect { |available_course| [available_course, can_add?(available_course)].flatten }
   end
 
   def enrolled_at?(curriculum_semester)

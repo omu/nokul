@@ -30,14 +30,6 @@ class StudentDecoratorTest < ActiveSupport::TestCase
     assert_equal @student.selectable_ects, TOTAL_ECTS + @student.plus_ects - selected_ects
   end
 
-  test 'selected_courses method' do
-    courses = @student.selected_courses
-    assert_not_includes courses, [course_enrollments(:old), false]
-    assert_not_includes courses, [course_enrollments(:old), true]
-    assert_not_includes courses, [course_enrollments(:elective), false]
-    assert_includes courses, [course_enrollments(:elective), true]
-  end
-
   test 'selectable_courses method' do
     courses = @student.selectable_courses.map { |row| row[1] }[0]
     assert_includes courses, [available_courses(:elective_course_2), false, translate('.already_enrolled_at_group')]
