@@ -16,8 +16,8 @@
         <td><%= available_course.code %></td>
         <td><%= available_course.name %></td>
         <td><%= enum_t(available_course.curriculum_course, :type) %></td>
-        <td><%= available_course.credit %></td>
-        <td><%= available_course.ects %></td>
+        <td><%= available_course.credit.to_i %></td>
+        <td><%= available_course.ects.to_i %></td>
         <td>
           <% if (error = @student.ensure_dropable(available_course)).nil? %>
             <%= link_to(t('.drop'), course_enrollment_path(course_enrollment, student_id: @student.id), method: :delete, class: 'btn btn-sm btn-outline-danger') %>

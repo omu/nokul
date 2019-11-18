@@ -15,8 +15,8 @@
         <td><%= available_course.code %></td>
         <td><%= available_course.name %></td>
         <td><%= enum_t(available_course.curriculum_course, :type) %></td>
-        <td><%= available_course.credit %></td>
-        <td><%= available_course.ects %></td>
+        <td><%= available_course.credit.to_i %></td>
+        <td><%= available_course.ects.to_i %></td>
         <td>
           <% if (error = @student.ensure_addable(available_course)).nil? %>
             <%= link_to(t('.add'), course_enrollments_path(course_enrollment: { available_course_id: available_course.id }, student_id: @student.id), method: :post, class: 'btn btn-sm btn-outline-success') %>
