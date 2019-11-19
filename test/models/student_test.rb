@@ -42,13 +42,13 @@ class StudentTest < ActiveSupport::TestCase
 
   # custom methods
   test 'fake gpa method' do
-    assert_equal students(:serhat).fake_gpa, 0.48
-    assert_equal students(:serhat_omu).fake_gpa, 3.92
+    assert_equal students(:serhat).fake_gpa, 1.8
+    assert_equal students(:serhat_omu).fake_gpa, 2.6
   end
 
   test 'plus ects method' do
-    assert_equal students(:serhat).plus_ects, 0
-    assert_equal students(:serhat_omu).plus_ects, 15
+    assert_equal students(:serhat).plus_ects, 6
+    assert_equal students(:serhat_omu).plus_ects, 10
   end
 
   test 'semester_enrollments method' do
