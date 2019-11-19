@@ -28,13 +28,13 @@
                 <th><%= t('.name') %></th>
                 <th><%= t('.type') %></th>
                 <th><%= t('.year') %></th>
-      	        <th><%= t('.sequence') %></th>
+                <th><%= t('.sequence') %></th>
                 <th><%= t('.credit') %></th>
                 <th><%= t('.ects') %></th>
               </tr>
             </thead>
-  	        <tbody>
-    	        <% @student.semester_enrollments.each do |course_enrollment, dropable, info| %>
+            <tbody>
+              <% @student.semester_enrollments.each do |course_enrollment, dropable, info| %>
                 <tr>
                   <% available_course = course_enrollment.available_course %>
                   <td><%= available_course.code %></td>
@@ -46,8 +46,8 @@
                   <td><%= available_course.ects.to_i %></td>
                 </tr>
               <% end %>
-  	        </tbody>
-	        </table>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

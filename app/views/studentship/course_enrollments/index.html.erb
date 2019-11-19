@@ -10,9 +10,11 @@
       </div>
       <div class="card-body">
         <div class="list-group">
-          <% url = @student.enrollment_status != :saved ?
-                   new_student_course_enrollment_url(@student) :
-                   list_student_course_enrollments_url(@student) %>
+          <% if @student.enrollment_status != :saved %>
+            <% url = new_student_course_enrollment_url(@student) %>
+          <% else %>
+            <% url = list_student_course_enrollments_url(@student) %>
+          <% end %>
 
           <%= link_to url, class: 'list-group-item list-group-item-action align-items-center' do %>
             <div class="d-flex w-100 justify-content-between">
