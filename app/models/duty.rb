@@ -5,6 +5,16 @@ class Duty < ApplicationRecord
   include LDAP::Trigger
   ldap_trigger ->(obj) { obj.employee.user }
 
+  # enums
+  enum article: {
+    internal:             1,
+    foreign:              2,
+    long_term_temporary:  3,
+    short_term_temporary: 4,
+    public_institution:   5,
+    lecturer_education:   6
+  }
+
   # relations
   belongs_to :employee
   belongs_to :unit
@@ -12,6 +22,7 @@ class Duty < ApplicationRecord
   has_many :administrative_functions, through: :positions
 
   # validations
+  validates :article, allow_nil: true, inclusion: { in: articles.keys }
   validates :temporary, inclusion: { in: [true, false] }
   validates :start_date, presence: true
   validates :unit_id, uniqueness: { scope: %i[employee start_date] }

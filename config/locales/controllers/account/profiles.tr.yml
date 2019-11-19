@@ -5,7 +5,6 @@ tr:
         academic: Akademik
         continuing: Devam ediyor
         create_academic_credentials_from_yoksis: Akademik Deneyimlerimi YÖKSİS'ten Oluştur
-        professional_experience: Mesleki Deneyimler
         update_academic_credentials_from_yoksis: Akademik Deneyimlerimi YÖKSİS'ten Güncelle
       articles:
         articles: Makaleler
@@ -20,6 +19,11 @@ tr:
         certifications: Sertifikalar
         create_certifications_from_yoksis: Sertifikalarımı YÖKSİS'ten Oluştur
         update_certifications_from_yoksis: Sertifikalarımı YÖKSİS'ten Güncelle
+      duties:
+        continuing: Devam ediyor
+        duties: Görevlendirmeler
+        temporary: Geçici Görevlendirme
+        tenure: Kadrolu
       edit:
         country: Ülke
         extension_number: Dahili Numaranız
@@ -57,6 +61,7 @@ tr:
         will_update: Proje oluşturma veya güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde projeleriniz güncellenecek.
       show:
         academic_activities: Akademik Faaliyetler
+        professional_experiences: Mesleki Deneyimler
       update:
         success: Profiliniz başarıyla güncellendi.
   simple_form:
