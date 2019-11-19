@@ -1,7 +1,5 @@
 // Manifest file for common assets being used in panel
 
-//= require rails-ujs
-//= require activestorage
 //= require coreui
 //= require helpers/dynamic_select
 //= require toastr/build/toastr.min
