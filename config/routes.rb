@@ -17,10 +17,11 @@ Rails.application.routes.draw do
   draw :course_management
   draw :first_registration
   draw :location
+  draw :manager
+  draw :meksis
   draw :patron
   draw :reference
   draw :yoksis
-  draw :meksis
 
   resources :units do
     member do
