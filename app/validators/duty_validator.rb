@@ -15,7 +15,7 @@ class DutyValidator < ActiveModel::Validator
 
   def restrict_duties
     add_to_base_error('multiple_active') if @duties.active.where(unit: @duty.unit).any?
-    add_to_base_error('active_and_tenure') if !@duty.temporary? && @duties.tenure.active.any?
+    add_to_base_error('active_and_tenure') if !@duty.temporary && @duties.tenure.active.any?
   end
 
   private

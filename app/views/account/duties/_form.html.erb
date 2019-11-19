@@ -12,8 +12,11 @@
               <%= f.error_notification %>
               <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
             </div>
-            <div class='form-group col-sm-12'>
-              <%= f.input :employee_id, collection: @user.employees, label_method: :title_name, required: true %>
+            <div class='form-group col-sm-6'>
+              <%= f.input :employee_id, collection: @user.employees.includes(:title), label_method: :title_name, required: true %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :article, collection: enum_options_for_select(f.object.class, :article) %>
             </div>
             <div class='form-group col-sm-4'>
               <%= f.input :unit_id,

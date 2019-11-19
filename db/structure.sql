@@ -1701,6 +1701,8 @@ CREATE TABLE public.duties (
     unit_id bigint NOT NULL,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
+    article integer,
+    CONSTRAINT duties_article_numericality CHECK ((article >= 1)),
     CONSTRAINT duties_start_date_null CHECK ((start_date IS NOT NULL)),
     CONSTRAINT duties_temporary_null CHECK ((temporary IS NOT NULL))
 );
@@ -6670,6 +6672,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20191003102101'),
 ('20191007074407'),
 ('20191008065752'),
-('20191111082956');
+('20191111082956'),
+('20191113054514');
 
 

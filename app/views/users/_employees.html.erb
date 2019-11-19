@@ -37,7 +37,7 @@
 <div class='card'>
   <div class='card-header'>
     <%= fa_icon 'group', text: t('.duties') %>
-    <div class="card-header-actions">
+    <div class='card-header-actions'>
       <%= link_to_new new_user_duty_path(@user) %>
     </div>
   </div>
@@ -46,6 +46,7 @@
       <thead>
         <tr>
           <th><%= t('.unit_id') %></th>
+          <th><%= t('.article') %></th>
           <th><%= t('.tenure_status') %></th>
           <th><%= t('.start_date') %></th>
           <th><%= t('.end_date') %></th>
@@ -56,7 +57,8 @@
         <% @duties.each do |duty| %>
           <tr>
             <td><%= duty.unit_name %></td>
-            <td><%= duty.temporary? ? t('.temporary') : t('.tenure') %></td>
+            <td><%= enum_t(duty, :article) %></td>
+            <td><%= duty.temporary ? t('.temporary') : t('.tenure') %></td>
             <td><%= duty.start_date %></td>
             <td><%= duty.end_date %></td>
             <td><%= link_to_actions([@user, duty], except: :show) %></td>
