@@ -68,7 +68,7 @@ class Student < ApplicationRecord
   end
 
   def ensure_addable(available_course)
-    if available_course.type == 'elective' && enrolled_at_group?(available_course)
+    if available_course.type == 'elective' && enrolled_in_group_of?(available_course)
       return translate('already_enrolled_at_group')
     end
 
@@ -86,7 +86,7 @@ class Student < ApplicationRecord
     @max_sequence ||= semester_enrollments.pluck(:sequence).max
   end
 
-  def enrolled_at_group?(available_course)
+  def enrolled_in_group_of?(available_course)
     (semester_enrollments.pluck(:available_course_id) & available_course.group_courses.pluck(:id)).any?
   end
 

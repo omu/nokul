@@ -28,7 +28,7 @@ class StudentDecorator < SimpleDelegator
 
       course_catalog << { semester: curriculum_semester, courses: selectable_courses_for(curriculum_semester) }
 
-      return course_catalog unless !selectable_ects.negative? && enrolled_at?(curriculum_semester)
+      return course_catalog unless !selectable_ects.negative? && enrolled_in_required_courses_of?(curriculum_semester)
     end
   end
 
@@ -52,16 +52,16 @@ class StudentDecorator < SimpleDelegator
                                .flatten
   end
 
-  def enrolled_at?(curriculum_semester)
+  def enrolled_in_required_courses_of?(curriculum_semester)
     enrolled_course_ids = semester_enrollments.pluck(:available_course_id)
-    enrolled_at = true
+    enrolled = true
 
     CurriculumSemesterDecorator.new(curriculum_semester)
                                .active_available_courses(except: nil).collect(&:ids).each do |ids|
-      break unless enrolled_at &&= (enrolled_course_ids & ids).any?
+      break unless enrolled &&= (enrolled_course_ids & ids).any?
     end
 
-    enrolled_at
+    enrolled
   end
 
   def translate(key, params = {})
