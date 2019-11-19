@@ -56,8 +56,7 @@ class StudentDecorator < SimpleDelegator
     enrolled_course_ids = semester_enrollments.pluck(:available_course_id)
     enrolled = true
 
-    CurriculumSemesterDecorator.new(curriculum_semester)
-                               .active_available_courses(except: nil).collect(&:ids).each do |ids|
+    CurriculumSemesterDecorator.new(curriculum_semester).active_available_courses.collect(&:ids).each do |ids|
       break unless enrolled &&= (enrolled_course_ids & ids).any?
     end
 
