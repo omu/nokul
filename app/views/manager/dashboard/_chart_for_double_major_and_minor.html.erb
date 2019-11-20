@@ -1,0 +1,44 @@
+<div id="double_major_and_minor"></div>
+
+<%
+  series = data.reject { |item| item[:category] == 'other' }.map do |item|
+    {
+      name: case item[:category]
+            when 'minor'       then 'Yandal'
+            when 'double major' then 'Çift Anadal'
+            end,
+      y: item[:number_of_students]
+    }
+  end
+%>
+
+<script>
+  Highcharts.chart('double_major_and_minor', {
+    chart: {
+      plotBackgroundColor: null,
+      plotBorderWidth: null,
+      plotShadow: false,
+      type: 'pie'
+    },
+    title: { text: 'Çift Anadal Yandal Sayıları' },
+    tooltip: {
+      pointFormat: '{series.name}: {series.y} <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+      pie: {
+        allowPointSelect: true,
+        cursor: 'pointer',
+        dataLabels: {
+          enabled: true,
+          format: '<b>{point.name}</b>: {point.y}'
+        },
+        showInLegend: true
+      }
+    },
+    series: [{
+      name: 'Öğrenci Sayısı',
+      colorByPoint: true,
+      data: <%= series.to_json.html_safe %>
+    }]
+  });
+</script>
