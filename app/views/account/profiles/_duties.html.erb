@@ -1,12 +1,33 @@
-<div class='row'>
-  <div class='col-sm-12'>
-    <h4><%= t('.duties') %></h4><br>
-    <% current_user.duties.includes(:unit).order(start_date: :desc).each do |duty| %>
-      <li class='list-group-item bg-transparent'>
-        <%= "#{[duty.unit.names_depth_cache, enum_t(duty, :article)].reject(&:blank?).join(', ')},
-             (#{duty.start_date} - #{duty.end_date || t('.continuing')})" %>
-      </li>
-    <% end %>
-  </div>
+<h3 class="font-weight-light text-center text-muted"><%= t('.duties') %></h4>
+<hr>
+<div class="container py-2 timeline">
+  <% current_user.duties.includes(:unit).order(start_date: :desc ).each_with_index do |duty, index| %>
+    <div class="row">
+      <!-- timeline item 1 left dot -->
+      <div class="col-sm-none"> <!--spacer--> </div>
+      <div class="col-auto text-center flex-column d-none d-md-flex">
+        <div class="row h-50">
+          <div class="<%= index.zero? ? "col" : "col border-right" %>">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+        <h5 class="m-2">
+          <span class="<%= index.zero? ? "bg-success " : "bg-light " %>badge badge-pill border">&nbsp;</span>
+        </h5>
+        <div class="row h-50">
+          <div class="col border-right">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+      </div>
+      <!-- timeline item 1 event content -->
+      <div class="col py-2">
+        <div class="card <%= index.zero? ? "border-success shadow" : " " %>">
+          <div class="card-body">
+            <div class="float-right text-muted"><%= "#{to_year(duty.start_date)} - #{to_year(duty.end_date)}" %></div>
+            <h6 class="card-title text-success"><%= "#{enum_t(duty, :article)}" %></h6>
+            <p class="card-text"><%= duty.unit.names_depth_cache %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>
-<br>
