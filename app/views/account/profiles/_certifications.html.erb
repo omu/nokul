@@ -1,17 +1,21 @@
 <div class='row'>
   <div class='col-sm-12'>
-    <%= link_to (current_user.certifications.active.exists? ? t('.update_certifications_from_yoksis') : t('.create_certifications_from_yoksis')),
-                save_certifications_from_yoksis_path,
-                class: 'btn btn-secondary btn-sm pull-right' %>
-    <h4><%= t('.certifications') %></h4>
-    <% current_user.certifications.active.each do |certificate| %>
-      <small>
-        <li class='list-group-item bg-transparent'>
-          <%= "#{certificate.name} - #{enum_t(certificate, :scope)}, #{enum_t(certificate, :type)} - \
+    <% unless current_user.certifications.active.exists? %>
+      <div class='text-center'>
+        <%= link_to(fa_icon('download', text: t('.create_certifications_from_yoksis')), save_certifications_from_yoksis_path,
+                    class: 'btn btn-sm btn-success m-4') %>
+      </div>
+    <% else %>
+      <%= link_to(fa_icon('retweet'), save_certifications_from_yoksis_path,
+                    class: 'btn btn-sm btn-outline-secondary pull-right') %>
+      <% current_user.certifications.active.each do |certificate| %>
+        <small>
+          <li class='list-group-item bg-transparent'>
+            <%= "#{certificate.name} - #{enum_t(certificate, :scope)}, #{enum_t(certificate, :type)} - \
                #{certificate.city_and_country} - (#{l(certificate.start_date, format: '%Y')})" %>
-        </li>
-      </small>
+          </li>
+        </small>
+      <% end %>
     <% end %>
   </div>
 </div>
-<br>
