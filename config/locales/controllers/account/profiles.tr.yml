@@ -4,6 +4,7 @@ tr:
       academic_credentials:
         academic: Akademik
         continuing: Devam ediyor
+        professional_experiences: Mesleki Deneyimler
         create_academic_credentials_from_yoksis: Akademik Deneyimlerimi YÖKSİS'ten Oluştur
         update_academic_credentials_from_yoksis: Akademik Deneyimlerimi YÖKSİS'ten Güncelle
       articles:
@@ -69,4 +70,4 @@ tr:
       user:
         linkedin: linkedin.com/
         twitter: twitter.com/
-        phone_number: 'Örn. 3623121919'
+        phone_number: "Örn. 3623121919"

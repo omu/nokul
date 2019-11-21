@@ -1,44 +1,110 @@
-<div class='row'>
-  <div class='col-sm-12'>
-    <div class='card bg-transparent'>
-      <div class='card-body'>
-        <div class='row'>
-          <div class='col-sm-1'>
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-body" style="background-color:#4BB28A; color:#EFEFEF;">
+        <div class="row">
+          <div class="col-md-2 text-center align-items-center justify-content-center">
             <% if current_user.avatar.attached? && current_user.avatar.variable? %>
-              <%= image_tag current_user.avatar.variant(resize_to_limit: [150, 150]) %>
+              <%= image_tag current_user.avatar.variant(resize_to_limit: [150, 150]), class:'rounded-circle img-fluid shadow' %>
             <% else %>
-              <%= image_tag 'profile/avatar_placeholder.svg' %>
+              <%= image_tag 'profile/male_avatar.svg' %>
             <% end %>
-            <hr>
           </div>
-          <div class='col-sm-4'>
-            <h4><%= "#{current_user.title} #{full_name(current_user.identities.formal.first)}" %></h4><br>
-            <%= current_user.mobile_phone %><br>
-            <%= current_user.email %><br>
-            <%= link_to fa_icon('linkedin 2x'), current_user.linkedin %>
-            <%= link_to fa_icon('skype 2x'), current_user.skype %>
-            <%= link_to fa_icon('twitter-square 2x'), current_user.twitter %>
+          <div class="col-md-6" style="margin-top: auto; margin-bottom: auto;">
+            <h3 style=""><%= "#{full_name(current_user.identities.informal.first)} " %></h3>
+            <h6 style=""><em><%= "#{current_user.title}" %></em></h6>
+            <hr style="border-color:#EFEFEF;">
+            <div class="row">
+              <div class="col-md-6">
+                <%= link_to fa_icon('linkedin-square', class:'header-icon'), current_user.linkedin %>
+                <%= current_user.linkedin %><br>
+                <%= link_to fa_icon('skype', class:'header-icon'), current_user.skype %>
+                <%= current_user.skype %><br>
+                <%= link_to fa_icon('twitter-square', class:'header-icon'), current_user.twitter %>
+                <%= current_user.twitter %>
+              </div>
+              <div class="col-md-6">
+                <%= fa_icon('envelope', class:'header-icon') %><%= current_user.email %><br>
+                <%= fa_icon('phone', class:'header-icon') %><%= current_user.mobile_phone %><br>
+              </div>
+            </div>
           </div>
-        </div>
-        <hr>
-        <div class='col-sm-12'>
-          <ul class='list-group list-group-flush'>
-            <%= render 'education_informations' %>
-          </ul>
-          <ul class='list-group list-group-flush'>
-            <h2><%= t('.professional_experiences') %></h2><br>
-            <%= render 'academic_credentials' %>
-            <%= render 'duties' %>
-          </ul>
-          <ul class='list-group list-group-flush'>
-            <h2><%= t('.academic_activities') %></h2><br>
-            <%= render 'articles' %>
-            <%= render 'projects' %>
-            <%= render 'books' %>
-            <%= render 'certifications' %>
-          </ul>
         </div>
       </div>
     </div>
   </div>
 </div>
+<div class="row row-eq-height">
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-body">
+        <%= render 'education_informations' %>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-body">
+        <%= render 'academic_credentials' %>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-body">
+        <%= render 'duties' %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class='row'>
+  <div class='col-md-12'>
+    <div class='card'>
+      <div class='card-body'>
+        <h3 class="font-weight-light text-muted"><%= t('.academic_activities') %></h3>
+        <br>
+        <div class="nav-tabs-boxed">
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#articles" role="tab" aria-controls="home">Makaleler <span class="badge badge-pill badge-success"><%= current_user.articles_count %></span></a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#projects" role="tab" aria-controls="projects">Projeler <span class="badge badge-pill badge-success"><%= current_user.projects_count %></span></a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#books" role="tab" aria-controls="books">Kitaplar <span class="badge badge-pill badge-success"><%= current_user.books_count %></span></a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#certifications" role="tab" aria-controls="certifications">Sertifikalar</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="articles" role="tabpanel">
+              <%= render 'articles' %>
+            </div>
+            <div class="tab-pane" id="projects" role="tabpanel">
+              <%= render 'projects' %>
+            </div>
+            <div class="tab-pane" id="books" role="tabpanel">
+              <%= render 'books' %>
+            </div>
+            <div class="tab-pane" id="certifications" role="tabpanel">
+              <%= render 'certifications' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .timeline >.row:last-child .row:last-child, .timeline >.row:first-child .row:first-child
+  {
+      visibility:hidden;
+  }
+  .timeline .card
+  {
+      margin-bottom:0;
+  }
+  .row-eq-height > [class*='col-'] > .card
+  {
+    height:calc(100% - 24px) !important;
+  }
+  .header-icon
+  {
+    padding-right:0.5em;
+    color:#EFEFEF;
+  }
+</style>

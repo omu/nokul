@@ -4,6 +4,7 @@ en:
       academic_credentials:
         academic: Academic
         continuing: Continuing
+        professional_experiences: Professional Experiences
         create_academic_credentials_from_yoksis: Create my academic credentials from YOKSIS
         update_academic_credentials_from_yoksis: Update my academic credentials from YOKSIS
       articles:
@@ -69,4 +70,4 @@ en:
       user:
         linkedin: linkedin.com/
         twitter: twitter.com/
-        phone_number: 'I.e. 3623121919'
+        phone_number: "I.e. 3623121919"
