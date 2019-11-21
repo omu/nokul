@@ -7,7 +7,7 @@
       </div>
     <% else %>
       <%= link_to(fa_icon('retweet'), save_projects_from_yoksis_path,
-                    class: 'btn btn-sm btn-outline-secondary pull-right') %>
+                  class: 'btn btn-sm btn-outline-secondary pull-right') %>
       <% current_user.projects.active.order(start_date: :desc).each do |project| %>
         <small>
           <li class='list-group-item bg-transparent'><%= user_projects(project) %></li>

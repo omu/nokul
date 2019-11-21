@@ -7,7 +7,7 @@
       </div>
     <% else %>
       <%= link_to(fa_icon('retweet'), save_books_from_yoksis_path,
-                    class: 'btn btn-sm btn-outline-secondary pull-right') %>
+                  class: 'btn btn-sm btn-outline-secondary pull-right') %>
       <% current_user.books.active.order(year: :desc).each do |book| %>
         <% if book.chapters? %>
           <small>
