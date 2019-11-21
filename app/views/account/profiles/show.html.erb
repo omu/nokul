@@ -5,27 +5,21 @@
         <div class="row">
           <div class="col-md-2 text-center align-items-center justify-content-center">
             <% if current_user.avatar.attached? && current_user.avatar.variable? %>
-              <%= image_tag current_user.avatar.variant(resize_to_limit: [150, 150]), class:'rounded-circle img-fluid shadow' %>
+              <%= image_tag current_user.avatar.variant(resize_to_limit: [150, 150]), class: 'rounded-circle img-fluid shadow' %>
             <% else %>
-              <%= image_tag 'profile/male_avatar.svg' %>
+              <%= image_tag current_user.identities.last.male? ? 'profile/male_avatar.svg' : 'profile/female_avatar.svg' %>
             <% end %>
           </div>
           <div class="col-md-6" style="margin-top: auto; margin-bottom: auto;">
             <h3 style=""><%= "#{full_name(current_user.identities.informal.first)} " %></h3>
-            <h6 style=""><em><%= "#{current_user.title}" %></em></h6>
+            <h6 style=""><em><%= current_user.title.to_s %></em></h6>
             <hr style="border-color:#EFEFEF;">
             <div class="row">
               <div class="col-md-6">
-                <%= link_to fa_icon('linkedin-square', class:'header-icon'), current_user.linkedin %>
-                <%= current_user.linkedin %><br>
-                <%= link_to fa_icon('skype', class:'header-icon'), current_user.skype %>
-                <%= current_user.skype %><br>
-                <%= link_to fa_icon('twitter-square', class:'header-icon'), current_user.twitter %>
-                <%= current_user.twitter %>
+                <%= social_media_links(current_user) %>
               </div>
               <div class="col-md-6">
-                <%= fa_icon('envelope', class:'header-icon') %><%= current_user.email %><br>
-                <%= fa_icon('phone', class:'header-icon') %><%= current_user.mobile_phone %><br>
+                <%= contact_links(current_user) %>
               </div>
             </div>
           </div>
@@ -106,5 +100,8 @@
   {
     padding-right:0.5em;
     color:#EFEFEF;
+  }
+  a:hover {
+    text-decoration: none;
   }
 </style>
