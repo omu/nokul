@@ -9,12 +9,17 @@
       <%= link_to(fa_icon('retweet'), save_certifications_from_yoksis_path,
                   class: 'btn btn-sm btn-outline-secondary pull-right') %>
       <% current_user.certifications.active.each do |certificate| %>
-        <small>
-          <li class='list-group-item bg-transparent'>
-            <%= "#{certificate.name} - #{enum_t(certificate, :scope)}, #{enum_t(certificate, :type)} - \
-               #{certificate.city_and_country} - (#{l(certificate.start_date, format: '%Y')})" %>
-          </li>
-        </small>
+        <div class="list-group">
+          <a class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <h6 class="mb-1"><%= certificate.name %></h6>
+            </div>
+            <span class="badge badge-info"><%= certificate.city_and_country  %></span>
+            <span class="badge badge-primary"><%= enum_t certificate, :scope %></span>
+            <span class="badge badge-success"><%= enum_t certificate, :type %></span>
+            <span class="badge badge-secondaty"><%= l(certificate.start_date, format: '%Y') %></span>
+          </a>
+        </div>
       <% end %>
     <% end %>
   </div>
