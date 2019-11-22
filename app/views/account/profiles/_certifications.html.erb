@@ -14,7 +14,7 @@
             <div class="d-flex w-100 justify-content-between">
               <h6 class="mb-1"><%= certificate.name %></h6>
             </div>
-            <span class="badge badge-info"><%= certificate.city_and_country  %></span>
+            <span class="badge badge-info"><%= certificate.city_and_country %></span>
             <span class="badge badge-primary"><%= enum_t certificate, :scope %></span>
             <span class="badge badge-success"><%= enum_t certificate, :type %></span>
             <span class="badge badge-secondaty"><%= l(certificate.start_date, format: '%Y') %></span>
