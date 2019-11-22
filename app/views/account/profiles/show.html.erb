@@ -59,10 +59,10 @@
         <br>
         <nav class="scrollable">
           <div class="nav nav-tabs" id="nav-tab" role="tablist">
-            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#articles" role="tab" aria-controls="nav-home" aria-selected="true">Makale</a>
-            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#projects" role="tab" aria-controls="nav-profile" aria-selected="false">Projeler</a>
-            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#books" role="tab" aria-controls="nav-contact" aria-selected="false">Kitaplar</a>
-            <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#certifications" role="tab" aria-controls="nav-home" aria-selected="true">Sertifikalar</a>
+            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#articles" role="tab" aria-controls="nav-home" aria-selected="true"><%= t('account.profiles.articles.articles') %></a>
+            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#projects" role="tab" aria-controls="nav-profile" aria-selected="false"><%= t('account.profiles.projects.projects') %></a>
+            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#books" role="tab" aria-controls="nav-contact" aria-selected="false"><%= t('account.profiles.books.books') %></a>
+            <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#certifications" role="tab" aria-controls="nav-home" aria-selected="true"><%= t('account.profiles.certifications.certifications') %></a>
           </div>
         </nav>
         <div class="tab-content pt-2" id="nav-tabContent">
@@ -76,6 +76,11 @@
   </div>
 </div>
 <style>
+  .header
+  {
+    background-color:#4BB28A; 
+    color:#EFEFEF;
+  }
   .timeline >.row:last-child .row:last-child, .timeline >.row:first-child .row:first-child
   {
       visibility:hidden;
