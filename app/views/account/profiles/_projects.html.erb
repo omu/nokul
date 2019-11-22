@@ -8,11 +8,19 @@
     <% else %>
       <%= link_to(fa_icon('retweet'), save_projects_from_yoksis_path,
                   class: 'btn btn-sm btn-outline-secondary pull-right') %>
-      <% current_user.projects.active.order(start_date: :desc).each do |project| %>
-        <small>
-          <li class='list-group-item bg-transparent'><%= user_projects(project) %></li>
-        </small>
-      <% end %>
+      <div class="list-group">
+        <% current_user.projects.active.order(start_date: :desc).each do |project| %>
+          <a class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <h6 class="mb-1"><%= project.name %></h6>
+            </div>
+            <span class="badge badge-info"><%= project.type %></span>
+            <span class="badge badge-primary"><%= project.duty %></span>
+            <span class="badge badge-success"><%= enum_t project, :status %></span>
+            <span class="badge badge-secondary"><%= enum_t project, :scope %></span>
+          </a>
+        <% end %>
+      </div>
     <% end %>
   </div>
 </div>
