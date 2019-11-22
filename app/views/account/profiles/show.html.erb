@@ -10,15 +10,15 @@
               <%= image_tag current_user.identities.last.male? ? 'profile/male_avatar.svg' : 'profile/female_avatar.svg' %>
             <% end %>
           </div>
-          <div class="col-md-6" style="margin-top: auto; margin-bottom: auto;">
+          <div class="col-md-10" style="margin-top: auto; margin-bottom: auto;">
             <h3 style=""><%= "#{full_name(current_user.identities.last)} " %></h3>
             <h6 style=""><em><%= current_user.title.to_s %></em></h6>
             <hr style="border-color:#EFEFEF;">
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-3">
                 <%= contact_links(current_user) %>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-3">
                 <%= social_media_links(current_user) %>
               </div>
             </div>
@@ -29,21 +29,21 @@
   </div>
 </div>
 <div class="row row-eq-height">
-  <div class="col-lg-4">
+  <div class="col-lg">
     <div class="card">
       <div class="card-body">
         <%= render 'education_informations' %>
       </div>
     </div>
   </div>
-  <div class="col-lg-4">
+  <div class="col-lg">
     <div class="card">
       <div class="card-body">
         <%= render 'academic_credentials' %>
       </div>
     </div>
   </div>
-  <div class="col-lg-4">
+  <div class="col-xl <%= current_user.duties.blank? ? "d-none" : "" %>">
     <div class="card">
       <div class="card-body">
         <%= render 'duties' %>
