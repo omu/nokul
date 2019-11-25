@@ -156,8 +156,8 @@ GEM
     dotenv-rails (2.7.5)
       dotenv (= 2.7.5)
       railties (>= 3.2, < 6.1)
-    email_address (0.1.11)
-      netaddr (~> 2.0)
+    email_address (0.1.12)
+      netaddr (>= 2.0.4, < 3)
       simpleidn
     erb_lint (0.0.30)
       activesupport
