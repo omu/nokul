@@ -59,7 +59,7 @@ en:
           completed: Completed
           deferred: Deferred
           pending: Pending
-        scope:
+        scopes:
           international: International
           national: National
   helpers:
