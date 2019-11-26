@@ -54,7 +54,7 @@ en:
           short_article: Short Article
           technical_note: Technical Note
       project:
-        status:
+        statuses:
           continuing: Continuing
           completed: Completed
           deferred: Deferred
