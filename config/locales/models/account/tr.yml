@@ -71,7 +71,7 @@ tr:
           printed: Basılı
           printed_and_electronic: Basılı ve Elektronik         
       project:
-        status:
+        statuses:
           continuing: Devam Ediyor
           completed: Tamamlanmış
           deferred: Ertelenmiş
