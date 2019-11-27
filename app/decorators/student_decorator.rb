@@ -6,11 +6,15 @@ class StudentDecorator < SimpleDelegator
   end
 
   def registrable_for_online_course?
-    calendar&.check_events('online_course_registrations')
+    event_online_course_registrations.try(:active_now?)
   end
 
   def registation_date_range
-    translate('index.registration_date_range', calendar&.date_range('online_course_registrations'))
+    translate(
+      'index.registration_date_range',
+      start_time: event_online_course_registrations&.start_time&.strftime('%F %R'),
+      end_time:   event_online_course_registrations&.end_time&.strftime('%F %R')
+    )
   end
 
   def enrollment_status
@@ -89,6 +93,10 @@ class StudentDecorator < SimpleDelegator
 
       enrolled
     end
+  end
+
+  def event_online_course_registrations
+    calendar&.event('online_course_registrations')
   end
 
   def translate(key, params = {})

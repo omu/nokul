@@ -36,10 +36,4 @@ class CalendarTest < ActiveSupport::TestCase
   test 'check if events exists' do
     assert calendars(:bm_calendar).check_events('online_course_registrations')
   end
-
-  test 'date_range method' do
-    event = calendar_events(:active_online_course_registrations)
-    assert_equal calendars(:bm_calendar).date_range('online_course_registrations'),
-                 start_time: event.start_time.try(:strftime, '%F %R'), end_time: event.end_time.try(:strftime, '%F %R')
-  end
 end
