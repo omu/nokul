@@ -21,7 +21,15 @@ module Studentship
     end
 
     def destroy
-      message = @course_enrollment.destroy ? t('.success') : t('.error')
+      available_course = @student.ensure_dropable(@course_enrollment.available_course)
+
+      message =
+        if available_course.errors.empty?
+          @course_enrollment.destroy ? t('.success') : t('.error')
+        else
+          available_course.errors.full_messages.first
+        end
+
       redirect_with(message)
     end
 
