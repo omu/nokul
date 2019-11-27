@@ -21,10 +21,10 @@
       <div class="card-header">
         <strong><%= t('.available_courses') %></strong>
         <div class="float-right">
-          <strong><%= "#{t('.selectable_ects')}: #{@student.selectable_ects}" %></strong>
+          <strong><%= "#{t('.selectable_ects')}: #{@service.selectable_ects}" %></strong>
         </div>
       </div>
-      <% @student.course_catalog.each do |semester_courses| %>
+      <% @service.course_catalog.each do |semester_courses| %>
         <div class="card-body">
           <%= render 'semesters', semester: semester_courses[:semester], courses: semester_courses[:compulsory_courses], groups: semester_courses[:elective_courses] %>
         </div>
@@ -36,12 +36,12 @@
       <div class="card-header">
         <strong><%= t('.selected_courses') %></strong>
         <div class="float-right">
-          <strong><%= "#{t('.selected_ects')}: #{@student.selected_ects}" %></strong>
+          <strong><%= "#{t('.selected_ects')}: #{@service.selected_ects}" %></strong>
         </div>
       </div>
       <div class="card-body">
         <div class="card-body table-responsive">
-          <%= render 'course_enrollments', klass: 'border-primary', courses: @student.semester_enrollments %>
+          <%= render 'course_enrollments', klass: 'border-primary', courses: @service.semester_enrollments %>
         </div>
       </div>
     </div>

@@ -16,7 +16,7 @@
       <div class="card-header">
         <strong><%= t('.selected_courses') %></strong>
         <div class="float-right">
-          <strong><%= "#{t('.selected_ects')}: #{@student.selected_ects}" %></strong>
+          <strong><%= "#{t('.selected_ects')}: #{@service.selected_ects}" %></strong>
         </div>
       </div>
       <div class="card-body">
@@ -34,7 +34,7 @@
               </tr>
             </thead>
             <tbody>
-              <% @student.semester_enrollments.each do |course_enrollment, dropable, info| %>
+              <% @service.semester_enrollments.each do |course_enrollment, dropable, info| %>
                 <tr>
                   <% available_course = course_enrollment.available_course %>
                   <td><%= available_course.code %></td>

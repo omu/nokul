@@ -3,6 +3,7 @@
 module Studentship
   class CourseEnrollmentsController < ApplicationController
     before_action :set_student
+    before_action :set_service
     before_action :set_course_enrollment, only: :destroy
     before_action :check_registrability, except: :index
     before_action :check_enrollment_status, except: %i[index list]
@@ -21,7 +22,7 @@ module Studentship
     end
 
     def destroy
-      available_course = @student.ensure_dropable(@course_enrollment.available_course)
+      available_course = @service.ensure_dropable(@course_enrollment.available_course)
 
       message =
         if available_course.errors.empty?
@@ -34,7 +35,7 @@ module Studentship
     end
 
     def save
-      message = @student.semester_enrollments.update(status: :saved) ? t('.success') : t('.error')
+      message = @service.semester_enrollments.update(status: :saved) ? t('.success') : t('.error')
       redirect_to(list_student_course_enrollments_path(@student), flash: { info: message })
     end
 
@@ -49,6 +50,10 @@ module Studentship
       @student = StudentDecorator.new(student)
     end
 
+    def set_service
+      @service = StudentCourseEnrollmentService.new(@student)
+    end
+
     def set_course_enrollment
       @course_enrollment = @student.course_enrollments.find(params[:id])
     end
@@ -60,7 +65,7 @@ module Studentship
     end
 
     def check_enrollment_status
-      return if @student.enrollment_status != :saved
+      return if @service.enrollment_status != :saved
 
       redirect_to(student_course_enrollments_path(@student), alert: t('.errors.registration completed'))
     end

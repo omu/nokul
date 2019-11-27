@@ -8,8 +8,6 @@ class StudentTest < ActiveSupport::TestCase
   extend Support::Minitest::ValidationHelper
   include ActiveJob::TestHelper
 
-  ECTS = 30
-
   # relations
   belongs_to :user
   belongs_to :unit
@@ -41,28 +39,9 @@ class StudentTest < ActiveSupport::TestCase
   end
 
   # custom methods
-  test 'fake gpa method' do
-    assert_equal students(:serhat).fake_gpa, 1.8
-    assert_equal students(:serhat_omu).fake_gpa, 2.6
-  end
-
-  test 'plus ects method' do
-    assert_equal students(:serhat).plus_ects, 6
-    assert_equal students(:serhat_omu).plus_ects, 10
-  end
-
-  test 'semester_enrollments method' do
-    course_enrollments = students(:serhat).semester_enrollments
-    assert_not_includes course_enrollments, course_enrollments(:old)
-    assert_includes course_enrollments, course_enrollments(:elective)
-  end
-
-  test 'selected_ects method' do
-    assert_equal students(:serhat).selected_ects, selected_ects
-  end
-
-  test 'selectable_ects method' do
-    assert_equal students(:serhat).selectable_ects, ECTS + students(:serhat).plus_ects - selected_ects
+  test 'gpa method' do
+    assert_equal students(:serhat).gpa, 1.8
+    assert_equal students(:serhat_omu).gpa, 2.6
   end
 
   # job tests
@@ -71,11 +50,5 @@ class StudentTest < ActiveSupport::TestCase
     assert_enqueued_with(job: Kps::IdentitySaveJob) do
       Student.create(student_number: '1234', user: users(:serhat), unit: units(:omu), year: 1, semester: 1)
     end
-  end
-
-  private
-
-  def selected_ects
-    %i[elective compulsory].inject(0) { |ects, enrollment| ects + course_enrollments(enrollment).ects.to_i }
   end
 end

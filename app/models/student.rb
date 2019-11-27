@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class Student < ApplicationRecord
-  ECTS = 30
-
   # Ldap
   include LDAP::Trigger
   ldap_trigger :user
@@ -34,63 +32,14 @@ class Student < ApplicationRecord
   after_create_commit :build_identity_information, if: proc { identity.nil? }
 
   # custom methods
-  def fake_gpa
+  def gpa
     student_number.to_s[-2..-1].to_f / 25
-  end
-
-  def plus_ects
-    case fake_gpa
-    when 1.8..2.49 then 6
-    when 2.5..2.99 then 10
-    when 3.0..3.49 then 12
-    when 3.5..4 then 15
-    else 0
-    end
-  end
-
-  def selected_ects
-    @selected_ects ||= semester_enrollments.sum(:ects).to_i
-  end
-
-  def selectable_ects
-    @selectable_ects ||= ECTS + plus_ects - selected_ects
-  end
-
-  def semester_enrollments
-    @semester_enrollments ||=
-      course_enrollments.where(semester: semester)
-                        .includes(available_course: [curriculum_course: %i[course curriculum_semester]])
-  end
-
-  def ensure_dropable(available_course)
-    sequence = available_course.curriculum_course.curriculum_semester.sequence
-    available_course.errors.add(:base, translate('must_drop_first')) if max_sequence > sequence
-
-    available_course
-  end
-
-  def ensure_addable(available_course)
-    available_course.errors.add(:base, translate('not_enough_ects')) if selectable_ects < available_course.ects
-    available_course.errors.add(:base, translate('quota_full')) if available_course.quota_full?
-
-    available_course
-  end
-
-  def enroll_a_course_from_group?(group)
-    semester_enrollments.includes(available_course: :curriculum_course)
-                        .where(curriculum_courses: { curriculum_course_group_id: group.id })
-                        .sum(:ects)
-                        .eql?(group.ects)
   end
 
   private
 
   def build_identity_information
     Kps::IdentitySaveJob.perform_later(user, id)
-  end
-
-  def max_sequence
-    @max_sequence ||= semester_enrollments.pluck(:sequence).max
   end
 
   def translate(key, params = {})

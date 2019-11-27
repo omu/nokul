@@ -37,7 +37,7 @@ module Studentship
 
     test 'should save' do
       get save_student_course_enrollments_path(@student)
-      assert_equal StudentDecorator.new(@student).enrollment_status, :saved
+      assert_equal StudentCourseEnrollmentService.new(@student).enrollment_status, :saved
       assert_redirected_to list_student_course_enrollments_path
     end
 
