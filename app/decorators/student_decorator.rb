@@ -89,7 +89,7 @@ class StudentDecorator < SimpleDelegator
 
   def enrolled_in_elective_courses?(curriculum_semester)
     curriculum_semester.curriculum_course_groups.inject(true) do |enrolled, group|
-      break unless enrolled &&= enroll_a_course_from_group?(group).positive?
+      break unless enrolled &&= enroll_a_course_from_group?(group)
 
       enrolled
     end
