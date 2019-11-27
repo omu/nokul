@@ -10,8 +10,6 @@ class CourseEnrollmentTest < ActiveSupport::TestCase
 
   # callbacks
   before_validation :assign_semester
-  before_create :check_addable
-  before_destroy :check_dropable
 
   # enums
   enum status: { draft: 0, saved: 1 }

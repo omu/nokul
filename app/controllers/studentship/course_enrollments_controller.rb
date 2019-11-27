@@ -17,7 +17,16 @@ module Studentship
     def new; end
 
     def create
-      message = @student.course_enrollments.new(course_enrollment_params).save ? t('.success') : t('.error')
+      course_enrollment = @student.course_enrollments.new(course_enrollment_params)
+      available_course = @service.ensure_addable(course_enrollment.available_course)
+
+      message =
+        if available_course.errors.empty?
+          course_enrollment.save ? t('.success') : t('.error')
+        else
+          available_course.errors.full_messages.first
+        end
+
       redirect_with(message)
     end
 
