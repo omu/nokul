@@ -19,17 +19,6 @@ class CurriculumSemesterDecorator < SimpleDelegator
     end
   end
 
-  def active_available_courses(except: nil)
-    curriculum_course_groups.includes(available_courses: [curriculum_course: %i[course curriculum_course_group]])
-                            .where.not(available_courses: { id: except })
-                            .where(available_courses: { academic_term: active_term })
-                            .collect(&:available_courses) +
-      curriculum_courses.includes(:available_courses, :course)
-                        .where(type: :compulsory, available_courses: { academic_term: active_term })
-                        .where.not(available_courses: { id: except })
-                        .map(&:available_courses)
-  end
-
   private
 
   def merge(collection, appends)

@@ -29,18 +29,4 @@ class CurriculumSemesterDecoratorTest < ActiveSupport::TestCase
     )
     assert_includes course_groups, course_groups(:bilgisayar_muhendligi_teknik_secmeli_1)
   end
-
-  test 'active_available_courses method' do
-    courses = @curriculum_semester.active_available_courses
-    assert_equal courses[0].to_a, [available_courses(:elective_course), available_courses(:elective_course_2)]
-    assert_equal courses[1].to_a, [available_courses(:compulsory_course)]
-    assert_equal courses[2].to_a, [available_courses(:compulsory_course_2)]
-  end
-
-  test 'active_available_courses method with except' do
-    courses = @curriculum_semester.active_available_courses(except: available_courses(:elective_course).id)
-    assert_equal courses[0].to_a, [available_courses(:elective_course_2)]
-    assert_equal courses[1].to_a, [available_courses(:compulsory_course)]
-    assert_equal courses[2].to_a, [available_courses(:compulsory_course_2)]
-  end
 end
