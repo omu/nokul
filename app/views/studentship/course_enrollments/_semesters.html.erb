@@ -10,6 +10,15 @@
                      klass:   'border-primary',
                      courses: courses %>
         </div>
+
+        <% groups.each do |group_courses|%>
+          <div class="card-body table-responsive">
+          <%= render 'available_courses',
+                     klass:   'border-primary',
+                     group: group_courses[:group],
+                     courses: group_courses[:courses] %>
+          </div>
+        <% end %>
       </div>
     </div>
 </div>

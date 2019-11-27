@@ -26,7 +26,7 @@
       </div>
       <% @student.course_catalog.each do |semester_courses| %>
         <div class="card-body">
-          <%= render 'semesters', semester: semester_courses[:semester], courses: semester_courses[:courses] %>
+          <%= render 'semesters', semester: semester_courses[:semester], courses: semester_courses[:compulsory_courses], groups: semester_courses[:elective_courses] %>
         </div>
       <% end %>
     </div>
