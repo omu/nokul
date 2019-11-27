@@ -64,12 +64,16 @@ class Student < ApplicationRecord
 
   def ensure_dropable(available_course)
     sequence = available_course.curriculum_course.curriculum_semester.sequence
-    return translate('must_drop_first') if max_sequence > sequence
+    available_course.errors.add(:base, translate('must_drop_first')) if max_sequence > sequence
+
+    available_course
   end
 
   def ensure_addable(available_course)
-    return translate('not_enough_ects') if selectable_ects < available_course.ects
-    return translate('quota_full') if available_course.quota_full?
+    available_course.errors.add(:base, translate('not_enough_ects')) if selectable_ects < available_course.ects
+    available_course.errors.add(:base, translate('quota_full')) if available_course.quota_full?
+
+    available_course
   end
 
   def enroll_a_course_from_group?(group)

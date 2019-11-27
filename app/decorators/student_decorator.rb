@@ -62,6 +62,7 @@ class StudentDecorator < SimpleDelegator
                        .where.not(id: semester_enrollments.pluck(:available_course_id))
                        .where(academic_term_id: active_term.id)
                        .where(curriculum_courses: { type: :compulsory })
+                       .each { |available_course| ensure_addable(available_course) }
   end
 
   def elective_courses_for(curriculum_semester)
@@ -69,6 +70,7 @@ class StudentDecorator < SimpleDelegator
       courses = group.available_courses
                      .where.not(id: semester_enrollments.pluck(:available_course_id))
                      .where(academic_term_id: active_term.id)
+                     .each { |available_course| ensure_addable(available_course) }
 
       group_courses << { group: group, courses: courses }
     end
