@@ -68,12 +68,15 @@ class Student < ApplicationRecord
   end
 
   def ensure_addable(available_course)
-    if available_course.type == 'elective' && enrolled_in_group_of?(available_course)
-      return translate('already_enrolled_at_group')
-    end
-
     return translate('not_enough_ects') if selectable_ects < available_course.ects
     return translate('quota_full') if available_course.quota_full?
+  end
+
+  def enroll_a_course_from_group?(group)
+    semester_enrollments.includes(available_course: :curriculum_course)
+                        .where(curriculum_courses: { curriculum_course_group_id: group.id })
+                        .sum(:ects)
+                        .eql?(group.ects)
   end
 
   private
@@ -84,10 +87,6 @@ class Student < ApplicationRecord
 
   def max_sequence
     @max_sequence ||= semester_enrollments.pluck(:sequence).max
-  end
-
-  def enrolled_in_group_of?(available_course)
-    (semester_enrollments.pluck(:available_course_id) & available_course.group_courses.pluck(:id)).any?
   end
 
   def translate(key, params = {})
