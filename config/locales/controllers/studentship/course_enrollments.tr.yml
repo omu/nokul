@@ -24,6 +24,9 @@ tr:
         error: Ders seçilen derslerden çıkarırken bir hata oluştu.
         success: Ders seçilen derslerden çıkarıldı.
       errors:
+        quota_full: Ders için belirlenen kontenjan dolmuş.
+        must_drop_first: Öncelikli olarak en üst dönemden alınan dersler çıkarılmalı.
+        not_enough_ects: Seçilebilecek AKTS miktarı bu dersi alabilmeniz için yeterli değil.
         not_proper_register_event_range: Tarih aralığı bugünü kapsayan online ders kayıtlanma aktivitesi bulunmamaktadır.
         registration completed: Ders seçimini tamamladığınız için bu işlemi gerçekleştiremezsiniz.
       index:
@@ -39,9 +42,6 @@ tr:
       new:
         already_enrolled_at_group: Bu seçmeli ders grubundan başka bir ders seçilmiş.
         available_courses: Açılan Dersler
-        must_drop_first: Öncelikli olarak en üst dönemden alınan dersler çıkarılmalı.
-        not_enough_ects: Seçilebilecek AKTS miktarı bu dersi alabilmeniz için yeterli değil.
-        quota_full: Ders için belirlenen kontenjan dolmuş.
         save_enrollments: Seçimleri Kaydet
         selectable_ects: Seçilebilecek AKTS
         selected_courses: Seçilen Dersler

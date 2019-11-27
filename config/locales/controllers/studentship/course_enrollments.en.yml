@@ -24,6 +24,9 @@ en:
         error: An error occured when removing the course from selected courses.
         success: The course successfully removed from selected courses.
       errors:
+        quota_full: The course has reached its quota.
+        must_drop_first: Courses taken from the top semester must be dropped first.
+        not_enough_ects: The amount of ECTS that can be selected is not enough for you to take this course.
         not_proper_register_event_range: There is no online course registration activity covering the date range today.
         registration completed: You can not perform this action since you have completed the course selection.
       index:
@@ -39,9 +42,6 @@ en:
       new:
         already_enrolled_at_group: Another course from this group of electives courses has already been selected.
         available_courses: Available Courses
-        must_drop_first: Courses taken from the top semester must be dropped first.
-        not_enough_ects: The amount of ECTS that can be selected is not enough for you to take this course.
-        quota_full: The course has reached its quota.
         save_enrollments: Save Enrollments
         selectable_ects: Selectable ECTS
         selected_courses: Selected Courses
