@@ -17,7 +17,7 @@
               <h6 class="mb-1"><%= book.name %></h6>
             </div>
             <p class="mb-1">
-              <small><%= book.chapters? ? book_chapter_citation(book) : book_citation(book)%></small>
+              <small><%= book.chapters? ? book_chapter_citation(book) : book_citation(book) %></small>
             </p>
             <span class="badge badge-info"><%= book.year %></span>
             <span class="badge badge-primary"><%= enum_t book, :contribution_rate %></span>

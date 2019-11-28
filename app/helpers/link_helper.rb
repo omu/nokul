@@ -5,9 +5,7 @@ module LinkHelper
     back:    {
       icon:    'arrow-left',
       text:    'action_group.back',
-      options: {
-        class: 'btn btn-secondary btn-sm'
-      }
+      options: { class: 'btn btn-secondary btn-sm' }
     },
     destroy: {
       icon:    'trash',
@@ -21,23 +19,17 @@ module LinkHelper
     edit:    {
       icon:    'pencil',
       text:    'action_group.edit',
-      options: {
-        class: 'btn btn-outline-success btn-sm'
-      }
+      options: { class: 'btn btn-outline-success btn-sm' }
     },
     file:    {
       icon:    'file-word-o',
       text:    'action_group.file',
-      options: {
-        class: 'btn btn-secondary btn-sm'
-      }
+      options: { class: 'btn btn-secondary btn-sm' }
     },
     fetch:   {
       icon:    'refresh',
       text:    '',
-      options: {
-        class: 'btn btn-sm btn-outline-success'
-      }
+      options: { class: 'btn btn-sm btn-outline-success' }
     },
     new:     {
       icon:    'plus',
@@ -50,16 +42,12 @@ module LinkHelper
     show:    {
       icon:    'eye',
       text:    'action_group.show',
-      options: {
-        class: 'btn btn-outline-info btn-sm'
-      }
+      options: { class: 'btn btn-outline-info btn-sm' }
     },
     update:  {
       icon:    'pencil-square-o',
       text:    'action_group.update',
-      options: {
-        class: 'btn btn-outline-info btn-sm'
-      }
+      options: { class: 'btn btn-outline-info btn-sm' }
     }
   }.freeze
 
@@ -87,10 +75,7 @@ module LinkHelper
   #                 destroy: { options: { class: 'btn btn-danger' } })
   def link_to_actions(path, options = {})
     actions = BASE_ACTIONS - [*options[:except]].map(&:to_sym)
-    safe_join(
-      create_links_for(path, actions, options),
-      ' '
-    )
+    safe_join(create_links_for(path, actions, options), ' ')
   end
 
   def action_bar
@@ -102,10 +87,7 @@ module LinkHelper
   private
 
   def create_links_for(path, actions, options = {})
-    config = {
-      edit: { path_prefix: :edit }
-    }
-
+    config = { edit: { path_prefix: :edit } }
     actions.map do |action|
       send("link_to_#{action}",
            options.dig(action, :text),
@@ -132,8 +114,6 @@ module LinkHelper
   end
 
   def safe_t(text)
-    return text if text.blank?
-
-    t(text)
+    text.blank? ? '' : t(text)
   end
 end
