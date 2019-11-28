@@ -20,7 +20,9 @@
       <div class="col py-2">
         <div class="card <%= index.zero? ? 'border-success shadow' : ' ' %>">
           <div class="card-body">
-            <div class="float-right text-muted"><%= "#{to_year(duty.start_date)} - #{to_year(duty.end_date)}" %></div>
+            <div class="float-right text-muted">
+              <%= "#{duty.start_date.strftime('%m.%Y')} - #{duty.end_date.try(:strftime, '%m.%Y')}" %>
+            </div>
             <h6 class="card-title text-success"><%= enum_t(duty, :article).to_s %></h6>
             <p class="card-text"><%= duty.unit.names_depth_cache %></p>
           </div>
