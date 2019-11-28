@@ -11,8 +11,8 @@
             <% end %>
           </div>
           <div class="col-md-10" style="margin-top: auto; margin-bottom: auto;">
-            <h3 style=""><%= "#{full_name(current_user.identities.last)} " %></h3>
-            <h6 style=""><em><%= current_user.title.to_s %></em></h6>
+            <h3><%= "#{full_name(current_user.identities.last)} " %></h3>
+            <h6><em><%= current_user.title.to_s %></em></h6>
             <hr class='bg-white'>
             <div class="row">
               <div class="col-md-3">
@@ -118,7 +118,7 @@
     flex-wrap: nowrap;
     border: 0px !important;
   }
-
+  
   .pagy-bootstrap-nav {
     overflow-x: auto;
   }
