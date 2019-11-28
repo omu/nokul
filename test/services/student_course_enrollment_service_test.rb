@@ -25,10 +25,11 @@ class StudentCourseEnrollmentServiceTest < ActiveSupport::TestCase
     assert_equal @service.enrollment_status, :draft
   end
 
-  test 'course_catalog method' do
-    compulsory_courses = @service.course_catalog.first[:compulsory_courses]
+  test 'catalog method' do
+    catalog = @service.catalog
+    compulsory_courses = catalog.first[:compulsory_courses]
     assert_includes compulsory_courses, available_courses(:compulsory_course_2)
-    elective_courses = @service.course_catalog.first[:elective_courses].first[:courses]
+    elective_courses = catalog.first[:elective_courses].first[:courses]
     assert_includes elective_courses, available_courses(:elective_course_2)
   end
 
