@@ -33,6 +33,7 @@ tr:
       index:
         academic_activities: Akademik Faaliyetler
         professional_experiences: Mesleki Deneyimler
+        avatar: Profil fotoğrafı
       partials:
         articles:
           articles: Makaleler

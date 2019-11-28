@@ -33,6 +33,7 @@ en:
       index:
         academic_activities: Academic Activities
         professional_experiences: Professional Experiences
+        avatar: Profile photo
       partials:
         articles:
           articles: Articles

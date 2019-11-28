@@ -5,9 +5,12 @@
         <div class="row">
           <div class="col-md-2 text-center align-items-center justify-content-center">
             <% if current_user.avatar.attached? && current_user.avatar.variable? %>
-              <%= image_tag current_user.avatar.variant(resize_to_limit: [150, 150]), class: 'rounded-circle img-fluid shadow' %>
+              <%= image_tag current_user.avatar.variant(resize_to_limit: [150, 150]),
+                            class: 'rounded-circle img-fluid shadow',
+                            alt:   t('.avatar'),
+                            style: 'width: 150px;height: 150px;' %>
             <% else %>
-              <%= image_tag current_user.identities.last.male? ? 'profile/male_avatar.svg' : 'profile/female_avatar.svg' %>
+              <%= image_tag current_user.identities.last.male? ? 'profile/male_avatar.svg' : 'profile/female_avatar.svg', alt: t('.avatar')  %>
             <% end %>
           </div>
           <div class="col-md-10" style="margin-top: auto; margin-bottom: auto;">
