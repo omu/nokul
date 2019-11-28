@@ -13,14 +13,13 @@ class StudentDecoratorTest < ActiveSupport::TestCase
   end
 
   test 'registation_date_range method' do
-    calendar = calendars(:bm_calendar)
     event = calendar_events(:active_online_course_registrations)
     assert_equal StudentDecorator.new(@student).registation_date_range,
                  translate(
-                  'index.registration_date_range',
-                  start_time: event.start_time&.strftime('%F %R'),
-                  end_time:   event.end_time&.strftime('%F %R')
-                )
+                   'index.registration_date_range',
+                   start_time: event.start_time&.strftime('%F %R'),
+                   end_time:   event.end_time&.strftime('%F %R')
+                 )
   end
 
   private
