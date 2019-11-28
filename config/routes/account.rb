@@ -36,15 +36,15 @@ scope module: :account do
     end
   end
 
-  get  'activation',                    to: 'activations#new'
+  get 'activation',                     to: 'activations#new'
   post 'activation',                    to: 'activations#create'
   post 'activation_phone_verification', to: 'activations#check_phone_verification'
-  get  'yoksis_services/fetch',         to: 'yoksis_services#fetch'
-  get  'profile',                       to: 'profile#index'
+  get 'yoksis_services/fetch',          to: 'yoksis_services#fetch'
+  get 'profile',                        to: 'profile#index'
+  patch 'profile',                      to: 'profile#update'
 
   namespace :profile do
     get :edit
-    patch :update
     get :articles
     get :books
     get :certifications
