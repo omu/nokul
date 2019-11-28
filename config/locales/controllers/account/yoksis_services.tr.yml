@@ -1,0 +1,10 @@
+tr:
+  account:
+    yoksis_services:
+      fetch:
+        academic_credentials:  Akademik deneyim oluşturma veya güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde akademik deneyimleriniz güncellenecek.
+        articles: Makale oluşturma veya güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde makaleleriniz güncellenecek.
+        books: Kitap oluşturma veya güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde kitaplarınız güncellenecek.
+        certifications: Sertifika oluşturma veya güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde sertifikalarınız güncellenecek.
+        education_informations: Eğitim bilgileri oluşturma veya güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde eğitim bilgileriniz güncellenecek.
+        projects: Proje oluşturma veya güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde projeleriniz güncellenecek.

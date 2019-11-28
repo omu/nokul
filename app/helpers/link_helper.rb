@@ -32,6 +32,13 @@ module LinkHelper
         class: 'btn btn-secondary btn-sm'
       }
     },
+    fetch:   {
+      icon:    'refresh',
+      text:    '',
+      options: {
+        class: 'btn btn-sm btn-outline-success'
+      }
+    },
     new:     {
       icon:    'plus',
       text:    'action_group.add',
@@ -113,7 +120,7 @@ module LinkHelper
     options = options.merge(custom_options) if custom_options.is_a?(Hash)
 
     link_to(
-      fa_icon(configuration[:icon], text: text || t(configuration[:text])),
+      fa_icon(configuration[:icon], text: text || safe_t(configuration[:text])),
       path,
       options
     )
@@ -122,5 +129,11 @@ module LinkHelper
   def split_args_for_link_to(args)
     number_of_args_check = args.last.is_a?(::Hash) ? 2 : 1
     args.length == number_of_args_check ? [nil, *args] : args
+  end
+
+  def safe_t(text)
+    return text if text.blank?
+
+    t(text)
   end
 end

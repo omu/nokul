@@ -1,12 +1,14 @@
-<%= link_to(fa_icon('retweet'), save_education_informations_from_yoksis_path,
-            class: 'btn btn-sm btn-outline-secondary pull-right') %>
-<h3 class="font-weight-light text-center text-muted"><%= t('.education_informations') %></h3>
+<div class='mb-2 text-right'>
+  <%= link_to_fetch yoksis_services_fetch_path(service: 'education_informations') %>
+</div>
+<h3 class="font-weight-light text-center text-muted">
+  <%= t('.education_informations') %>
+</h3>
 <hr>
 <div class="container py-2 timeline">
-
-  <% current_user.education_informations.active.order(start_year: :desc).each_with_index do |education, index| %>
+  <% education_informations.each_with_index do |education, index| %>
     <div class="row">
-      <div class="col-auto text-center flex-column d-none d-sm-flex">
+      <div class="col-auto text-center flex-column d-none d-lg-flex">
         <div class="row h-50">
           <div class="col border-right">&nbsp;</div>
           <div class="col">&nbsp;</div>
@@ -24,7 +26,7 @@
           <div class="card-body">
             <div class="float-right text-muted"><%= "#{education.start_year} - #{education.end_year}" %></div>
             <h6 class="card-title text-success"><%= "#{education.program}:" %></h6>
-            <p class="card-text"><%= "#{education.university}, #{education.faculty}, #{education.department} /" %></p>
+            <p class="card-text"><%= "#{education.university}, #{education.faculty}, #{education.department}" %></p>
           </div>
         </div>
       </div>
