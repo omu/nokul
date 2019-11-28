@@ -33,21 +33,21 @@ class StudentCourseEnrollmentService
       end
   end
 
-  def course_catalog
-    course_catalog = []
+  def catalog
+    catalog = []
 
-    curriculum_semesters.each do |curriculum_semester|
+    curriculum_semesters.includes(:curriculum_course_groups).each do |curriculum_semester|
       next if @student.semester > curriculum_semester.sequence
       next if selectable_ects < 1
 
-      course_catalog << { semester:           curriculum_semester,
-                          compulsory_courses: compulsory_courses_for(curriculum_semester),
-                          elective_courses:   elective_courses_for(curriculum_semester) }
+      catalog << { semester:           curriculum_semester,
+                   compulsory_courses: compulsory_courses_list(curriculum_semester),
+                   elective_courses:   elective_courses_list(curriculum_semester) }
 
       break unless enrolled_in_required_courses_of?(curriculum_semester)
     end
 
-    course_catalog
+    catalog
   end
 
   def ensure_dropable(available_course)
@@ -92,16 +92,21 @@ class StudentCourseEnrollmentService
     curriculum.semesters.where(term: active_term.term).order(:sequence)
   end
 
-  def compulsory_courses_for(curriculum_semester)
+  def compulsory_courses_from_semester(curriculum_semester)
     curriculum_semester.available_courses
+                       .includes(curriculum_course: :course)
                        .where.not(id: semester_enrollments.pluck(:available_course_id))
                        .where(academic_term_id: active_term.id)
                        .where(curriculum_courses: { type: :compulsory })
-                       .each { |available_course| ensure_addable(available_course) }
+  end
+
+  def compulsory_courses_list(curriculum_semester)
+    compulsory_courses_from_semester(curriculum_semester).each { |available_course| ensure_addable(available_course) }
   end
 
   def group_courses(group)
     group.available_courses
+         .includes(curriculum_course: :course)
          .where.not(id: semester_enrollments.pluck(:available_course_id))
          .where(academic_term_id: active_term.id)
   end
@@ -120,18 +125,14 @@ class StudentCourseEnrollmentService
     end
   end
 
-  def elective_courses_for(curriculum_semester)
+  def elective_courses_list(curriculum_semester)
     curriculum_semester.curriculum_course_groups.each_with_object([]) do |group, group_courses|
       group_courses << { group: group, courses: ensure_enrollable(group) }
     end
   end
 
   def enrolled_in_compulsory_courses?(curriculum_semester)
-    curriculum_semester.available_courses
-                       .where.not(id: semester_enrollments.pluck(:available_course_id))
-                       .where(curriculum_courses: { type: :compulsory })
-                       .where(academic_term_id: active_term.id)
-                       .empty?
+    compulsory_courses_from_semester(curriculum_semester).empty?
   end
 
   def selectable_ects_from_group(group)
