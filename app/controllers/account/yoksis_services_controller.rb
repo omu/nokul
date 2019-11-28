@@ -25,7 +25,7 @@ module Account
       @service_name = params.fetch(:service, '').to_sym
       return if (@service = SERVICES[@service_name])
 
-      flash.alert = t('.not_found_services')
+      flash.alert = t('.service_not_found')
       redirect_back fallback_location: params.fetch(:redirect, root_path)
     end
   end
