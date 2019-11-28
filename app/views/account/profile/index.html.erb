@@ -10,7 +10,7 @@
                             alt:   t('.avatar'),
                             style: 'width: 150px;height: 150px;' %>
             <% else %>
-              <%= image_tag current_user.identities.last.male? ? 'profile/male_avatar.svg' : 'profile/female_avatar.svg', alt: t('.avatar')  %>
+              <%= image_tag current_user.identities.last.male? ? 'profile/male_avatar.svg' : 'profile/female_avatar.svg', alt: t('.avatar') %>
             <% end %>
           </div>
           <div class="col-md-10" style="margin-top: auto; margin-bottom: auto;">
@@ -121,7 +121,7 @@
     flex-wrap: nowrap;
     border: 0px !important;
   }
-  
+
   .pagy-bootstrap-nav {
     overflow-x: auto;
   }
