@@ -24,6 +24,7 @@ en:
         error: An error occured when removing the course from selected courses.
         success: The course successfully removed from selected courses.
       errors:
+        already_enrolled_at_group: The maximum amount of ECTS that can be selected from the course group is selected.
         quota_full: The course has reached its quota.
         must_drop_first: Courses taken from the top semester must be dropped first.
         not_enough_ects: The amount of ECTS that can be selected is not enough for you to take this course.
@@ -40,12 +41,14 @@ en:
         selected_ects: Selected ECTS
         year: Year
       new:
-        already_enrolled_at_group: Another course from this group of electives courses has already been selected.
         available_courses: Available Courses
         save_enrollments: Save Enrollments
         selectable_ects: Selectable ECTS
         selected_courses: Selected Courses
         selected_ects: Selected ECTS
+      semesters:
+        elective_courses: Elective Courses
+        compulsory_courses: Compulsory Courses
       save:
         error: An error occured when saving selected courses.
         success: Selected courses successfully saved.

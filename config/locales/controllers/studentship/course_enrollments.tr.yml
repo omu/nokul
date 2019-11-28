@@ -24,6 +24,7 @@ tr:
         error: Ders seçilen derslerden çıkarırken bir hata oluştu.
         success: Ders seçilen derslerden çıkarıldı.
       errors:
+        already_enrolled_at_group: Ders grubundan seçilebilecek maksimum AKTS miktarı kadar ders seçilmiş.
         quota_full: Ders için belirlenen kontenjan dolmuş.
         must_drop_first: Öncelikli olarak en üst dönemden alınan dersler çıkarılmalı.
         not_enough_ects: Seçilebilecek AKTS miktarı bu dersi alabilmeniz için yeterli değil.
@@ -40,12 +41,14 @@ tr:
         selected_ects: Seçilen AKTS
         year: Yıl
       new:
-        already_enrolled_at_group: Bu seçmeli ders grubundan başka bir ders seçilmiş.
         available_courses: Açılan Dersler
         save_enrollments: Seçimleri Kaydet
         selectable_ects: Seçilebilecek AKTS
         selected_courses: Seçilen Dersler
         selected_ects: Seçilen AKTS
+      semesters:
+        elective_courses: Seçmeli Dersler
+        compulsory_courses: Zorunlu Dersler
       save:
         error: Seçilen dersler kaydedilirken bir hata oluştu.
         success: Seçilen dersler başarıyla kaydedildi.
