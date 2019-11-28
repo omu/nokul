@@ -14,7 +14,7 @@ module Patron
       privileges.to_a.each do |privilege|
         next if available_privileges.include?(privilege)
 
-        errors.add(:base, "Bu izin için #{privilege} geçerli bir ayrıcalık değil")
+        errors.add(:base, I18n.t('patron.errors.invalid_privilege', privilege: privilege))
       end
     end
 

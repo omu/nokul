@@ -9,7 +9,7 @@
           <% if f.object.errors.any? %>
             <ul class="list-group">
               <% f.object.errors.full_messages.each do |msg| %>
-                <li class="list-group-item list-group-item-danger"><%= msg %></li>
+                <li class="list-group-item list-group-item-danger"><%= raw msg %></li>
               <% end %>
             </ul>
             <hr>
