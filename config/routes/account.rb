@@ -48,6 +48,7 @@ scope module: :account do
     get :articles
     get :books
     get :certifications
+    get :papers
     get :projects
   end
 end

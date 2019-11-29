@@ -47,12 +47,31 @@ en:
           book_review: Book Review
           case_report: Case Report
           commentary: Commentary
-          expert_report: Expert Report  
+          expert_report: Expert Report
           letter_to_the_editor: Letter to the editor
           original_article: Original Article
           review_article: Review Article
           short_article: Short Article
           technical_note: Technical Note
+      paper:
+        presentation_types:
+          guest_speaker: Guest Speaker
+          poster: Poster
+          verbal: Verbal Paper
+        publication_statuses:
+          accepted: Accepted
+          published: Published
+          unpublished: Unpublished
+        scopes:
+          national: National
+          international: International
+        types:
+          full_text: Full-text Paper
+          summary: Summary Paper
+        type_of_releases:
+          electronic: Electronic
+          printed: Printed
+          printed_and_electronic: Printed and Electronic
       project:
         statuses:
           continuing: Continuing

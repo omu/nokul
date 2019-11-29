@@ -47,7 +47,7 @@ tr:
           book_review: Kitap İncelemesi
           case_report: Vaka Raporu
           commentary: Eleştiri
-          expert_report: Uzman Raporu   
+          expert_report: Uzman Raporu
           letter_to_the_editor: Editöre Mektup
           original_article: Özgün Makale
           review_article: Derleme Makale
@@ -65,11 +65,30 @@ tr:
           research: Araştırma Kitabı
           scientific: Bilimsel Kitap
           textbook: Ders Kitabı
-          translation: Kitap Tercümesi  
+          translation: Kitap Tercümesi
         type_of_releases:
           electronic: Elektronik
           printed: Basılı
-          printed_and_electronic: Basılı ve Elektronik         
+          printed_and_electronic: Basılı ve Elektronik
+      paper:
+        presentation_types:
+          guest_speaker: Davetli Konuşmacı
+          poster: Poster
+          verbal: Sözlü Sunum
+        publication_statuses:
+          accepted: Kabul Edildi
+          published: Yayımlanmış
+          unpublished: Yayımlanmamış
+        scopes:
+          national: Ulusal
+          international: Uluslararası
+        types:
+          full_text: Tam Metin Bildiri
+          summary: Özet Bildiri
+        type_of_releases:
+          electronic: Elektronik
+          printed: Basılı
+          printed_and_electronic: Basılı ve Elektronik
       project:
         statuses:
           continuing: Devam Ediyor
