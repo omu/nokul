@@ -57,7 +57,7 @@ else
   if ENV['SAMPLE_DATA'].eql?('true')
     restore_seed_data('sample_data')
 
-    Dir[Rails.root.join('db', 'beta_seed', '*.rb')].sort.each do |seed|
+    Dir[Rails.root.join('db/beta_seed/*.rb')].sort.each do |seed|
       load seed
     end
   end

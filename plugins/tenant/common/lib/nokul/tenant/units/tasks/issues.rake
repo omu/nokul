@@ -3,7 +3,7 @@
 namespace :tenant do
   namespace :units do
     desc 'Show unit issues'
-    task :issues do
+    task issues: :environment do
       hack_argv('src/yok', 'src/det', 'src/all') do |resource|
         total_number = 0
         Nokul::Tenant::Units.load_source(resource).each do |unit|
