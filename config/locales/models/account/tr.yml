@@ -31,6 +31,54 @@ tr:
           long_term_temporary: 39/b - Uzun süreli geçici görevlendirme
           public_institution: 38 - Kamu kuruluşları ve vakıflarda görevlendirme
           short_term_temporary: 39/a - Kısa süreli geçici görevlendirme
+      article:
+        access_type:
+          electronic: Elektronik
+          printed: Basılı
+          printed_and_electronic: Basılı ve Elektronik
+        scopes:
+          international: Uluslararası
+          national: Ulusal
+        reviews:
+          reviewed: Hakemli
+          unreviewed: Hakemsiz
+        types:
+          abstract: Özet
+          book_review: Kitap İncelemesi
+          case_report: Vaka Raporu
+          commentary: Eleştiri
+          expert_report: Uzman Raporu   
+          letter_to_the_editor: Editöre Mektup
+          original_article: Özgün Makale
+          review_article: Derleme Makale
+          short_article: Kısa Makale
+          technical_note: Teknik Not
+      book:
+        contribution_rates:
+          all_of: Tüm Kitap
+          chapters: Kitap Bölümü
+        scopes:
+          international: Uluslararası
+          national: Ulusal
+        types:
+          encyclopedia_article: Ansiklopedi
+          research: Araştırma Kitabı
+          scientific: Bilimsel Kitap
+          textbook: Ders Kitabı
+          translation: Kitap Tercümesi  
+        type_of_releases:
+          electronic: Elektronik
+          printed: Basılı
+          printed_and_electronic: Basılı ve Elektronik         
+      project:
+        statuses:
+          continuing: Devam Ediyor
+          completed: Tamamlanmış
+          deferred: Ertelenmiş
+          pending: Bekleyen
+        scopes:
+          international: Uluslararası
+          national: Ulusal
   helpers:
     submit:
       duty:

@@ -31,6 +31,37 @@ en:
           lecturer_education: 35 - Lecturer education
           public_institution: 38 - Assignment in public institutions and foundations
           short_term_temporary: 39/a - Short-term temporary assignment
+      article:
+        access_type:
+          electronic: Electronic
+          printed: Printed
+          printed_and_electronic: Printed and Electronic
+        scopes:
+          international: International
+          national: National
+        reviews:
+          reviewed: Reviewed
+          unreviewed: Unreviewed
+        types:
+          abstract: Abstract
+          book_review: Book Review
+          case_report: Case Report
+          commentary: Commentary
+          expert_report: Expert Report  
+          letter_to_the_editor: Letter to the editor
+          original_article: Original Article
+          review_article: Review Article
+          short_article: Short Article
+          technical_note: Technical Note
+      project:
+        statuses:
+          continuing: Continuing
+          completed: Completed
+          deferred: Deferred
+          pending: Pending
+        scopes:
+          international: International
+          national: National
   helpers:
     submit:
       duty:

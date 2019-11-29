@@ -1,0 +1,63 @@
+en:
+  account:
+    profile:
+      academic_credentials:
+        academic: Academic
+        continuing: Continuing
+        professional_experiences: Professional Experiences
+        create_academic_credentials_from_yoksis: Create my academic credentials from YOKSIS
+        update_academic_credentials_from_yoksis: Update my academic credentials from YOKSIS
+      duties:
+        continuing: Continuing
+        duties: Duties
+        temporary: Temporary Duty
+        tenure: Tenure
+      edit:
+        country: Country
+        extension_number: Extension Number
+        linkedin: Linkedin Username
+        orcid: ORCID
+        fixed_phone: Fixed Phone Number
+        profile_settings: Profile Settings
+        public_photo: Show picture on my profile
+        public_studies: Show academic studies on my profile
+        skype: Skype Username
+        twitter: Twitter Username
+        visiblity_settings: Visiblity Settings
+        website: Website
+      education_informations:
+        continuing: Continuing
+        create_education_informations_from_yoksis: Create my education informations from YOKSIS
+        education_informations: Education Informations
+        update_education_informations_from_yoksis: Update my education informations from YOKSIS
+      index:
+        academic_activities: Academic Activities
+        professional_experiences: Professional Experiences
+        avatar: Profile photo
+      partials:
+        articles:
+          articles: Articles
+          create_articles_from_yoksis: Create my articles from YOKSIS
+          update_articles_from_yoksis: Update my articles from YOKSIS
+        books:
+          books: Books
+          create_books_from_yoksis: Create my books from YOKSIS
+          page_numbers_abbrev: pp.
+          update_books_from_yoksis: Update my books from YOKSIS
+        certifications:
+          certifications: Certifications
+          create_certifications_from_yoksis: Create my certifications from YOKSIS
+          update_certifications_from_yoksis: Update my certifications from YOKSIS
+        projects:
+          create_projects_from_yoksis: Create my projects from YOKSIS
+          projects: Projects
+          status: Status
+          update_projects_from_yoksis: Update my projects from YOKSIS
+      update:
+        success: Profile successfully updated.
+  simple_form:
+    placeholders:
+      user:
+        linkedin: linkedin.com/
+        twitter: twitter.com/
+        phone_number: 'Example: 3623121919'

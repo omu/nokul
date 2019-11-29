@@ -5,9 +5,7 @@ module LinkHelper
     back:    {
       icon:    'arrow-left',
       text:    'action_group.back',
-      options: {
-        class: 'btn btn-secondary btn-sm'
-      }
+      options: { class: 'btn btn-secondary btn-sm' }
     },
     destroy: {
       icon:    'trash',
@@ -21,16 +19,17 @@ module LinkHelper
     edit:    {
       icon:    'pencil',
       text:    'action_group.edit',
-      options: {
-        class: 'btn btn-outline-success btn-sm'
-      }
+      options: { class: 'btn btn-outline-success btn-sm' }
     },
     file:    {
       icon:    'file-word-o',
       text:    'action_group.file',
-      options: {
-        class: 'btn btn-secondary btn-sm'
-      }
+      options: { class: 'btn btn-secondary btn-sm' }
+    },
+    fetch:   {
+      icon:    'refresh',
+      text:    '',
+      options: { class: 'btn btn-sm btn-outline-success' }
     },
     new:     {
       icon:    'plus',
@@ -43,16 +42,12 @@ module LinkHelper
     show:    {
       icon:    'eye',
       text:    'action_group.show',
-      options: {
-        class: 'btn btn-outline-info btn-sm'
-      }
+      options: { class: 'btn btn-outline-info btn-sm' }
     },
     update:  {
       icon:    'pencil-square-o',
       text:    'action_group.update',
-      options: {
-        class: 'btn btn-outline-info btn-sm'
-      }
+      options: { class: 'btn btn-outline-info btn-sm' }
     }
   }.freeze
 
@@ -80,10 +75,7 @@ module LinkHelper
   #                 destroy: { options: { class: 'btn btn-danger' } })
   def link_to_actions(path, options = {})
     actions = BASE_ACTIONS - [*options[:except]].map(&:to_sym)
-    safe_join(
-      create_links_for(path, actions, options),
-      ' '
-    )
+    safe_join(create_links_for(path, actions, options), ' ')
   end
 
   def action_bar
@@ -95,10 +87,7 @@ module LinkHelper
   private
 
   def create_links_for(path, actions, options = {})
-    config = {
-      edit: { path_prefix: :edit }
-    }
-
+    config = { edit: { path_prefix: :edit } }
     actions.map do |action|
       send("link_to_#{action}",
            options.dig(action, :text),
@@ -113,7 +102,7 @@ module LinkHelper
     options = options.merge(custom_options) if custom_options.is_a?(Hash)
 
     link_to(
-      fa_icon(configuration[:icon], text: text || t(configuration[:text])),
+      fa_icon(configuration[:icon], text: text || safe_t(configuration[:text])),
       path,
       options
     )
@@ -122,5 +111,9 @@ module LinkHelper
   def split_args_for_link_to(args)
     number_of_args_check = args.last.is_a?(::Hash) ? 2 : 1
     args.length == number_of_args_check ? [nil, *args] : args
+  end
+
+  def safe_t(text)
+    text.blank? ? '' : t(text)
   end
 end
