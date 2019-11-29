@@ -6,6 +6,8 @@ class StudentCourseEnrollmentService
 
   def initialize(student)
     @student = student
+    @selectable_ects_from_group = {}
+    @compulsory_courses_from_semester = {}
   end
 
   def active_term
@@ -93,11 +95,12 @@ class StudentCourseEnrollmentService
   end
 
   def compulsory_courses_from_semester(curriculum_semester)
-    curriculum_semester.available_courses
-                       .includes(curriculum_course: :course)
-                       .where.not(id: semester_enrollments.pluck(:available_course_id))
-                       .where(academic_term_id: active_term.id)
-                       .where(curriculum_courses: { type: :compulsory })
+    @compulsory_courses_from_semester[curriculum_semester] ||=
+      curriculum_semester.available_courses
+                         .includes(curriculum_course: :course)
+                         .where.not(id: semester_enrollments.pluck(:available_course_id))
+                         .where(academic_term_id: active_term.id)
+                         .where(curriculum_courses: { type: :compulsory })
   end
 
   def compulsory_courses_list(curriculum_semester)
@@ -136,9 +139,10 @@ class StudentCourseEnrollmentService
   end
 
   def selectable_ects_from_group(group)
-    group.ects - semester_enrollments.includes(available_course: :curriculum_course)
-                                     .where(curriculum_courses: { curriculum_course_group_id: group.id })
-                                     .sum(:ects)
+    @selectable_ects_from_group[group] ||=
+      group.ects - semester_enrollments.includes(available_course: :curriculum_course)
+                                       .where(curriculum_courses: { curriculum_course_group_id: group.id })
+                                       .sum(:ects)
   end
 
   def enrolled_in_elective_courses?(curriculum_semester)
