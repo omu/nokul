@@ -49,9 +49,9 @@ tr:
           create_certifications_from_yoksis: Sertifikalarımı YÖKSİS'ten Oluştur
           update_certifications_from_yoksis: Sertifikalarımı YÖKSİS'ten Güncelle
         papers:
-          create_papers_from_yoksis: Bildirimlerimi YÖKSİS'ten Oluştur
+          create_papers_from_yoksis: Bildirilerimi YÖKSİS'ten Oluştur
           papers: Bildiriler
-          update_papers_from_yoksis: Bildirimlerimi YÖKSİS'ten Güncelle
+          update_papers_from_yoksis: Bildirilerimi YÖKSİS'ten Güncelle
         projects:
           create_projects_from_yoksis: Projelerimi YÖKSİS'ten Oluştur
           projects: Projeler
