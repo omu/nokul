@@ -28,7 +28,7 @@ tr:
         quota_full: Ders için belirlenen kontenjan dolmuş.
         must_drop_first: Öncelikli olarak en üst dönemden alınan dersler çıkarılmalı.
         not_enough_ects: Seçilebilecek AKTS miktarı bu dersi alabilmeniz için yeterli değil.
-        not_proper_register_event_range: Tarih aralığı bugünü kapsayan online ders kayıtlanma aktivitesi bulunmamaktadır.
+        not_proper_register_event_range: Tarih aralığı bugünü kapsayan çevrimiçi ders kayıtlanma aktivitesi bulunmamaktadır.
         registration completed: Ders seçimini tamamladığınız için bu işlemi gerçekleştiremezsiniz.
       index:
         course_enrollments: Ders Kayıtları
