@@ -35,20 +35,20 @@ scope module: :account do
       patch 'profile', to: 'profiles#update'
     end
   end
-  get 'activation', to: 'activations#new'
-  post 'activation', to: 'activations#create'
-  post 'activation_phone_verification', to: 'activations#check_phone_verification'
 
-  scope module: :profiles do
-    get 'profile/edit', action: :edit
-    get 'profile', action: :show
-    patch 'profile', action: :update
-    get :save_academic_credentials_from_yoksis
-    get :save_articles_from_yoksis
-    get :save_books_from_yoksis
-    get :save_certifications_from_yoksis
-    get :save_education_informations_from_yoksis
-    get :save_projects_from_yoksis
+  get 'activation',                     to: 'activations#new'
+  post 'activation',                    to: 'activations#create'
+  post 'activation_phone_verification', to: 'activations#check_phone_verification'
+  get 'yoksis_services/fetch',          to: 'yoksis_services#fetch'
+  get 'profile',                        to: 'profile#index'
+  patch 'profile',                      to: 'profile#update'
+
+  namespace :profile do
+    get :edit
+    get :articles
+    get :books
+    get :certifications
+    get :projects
   end
 end
 

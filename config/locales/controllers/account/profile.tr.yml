@@ -1,0 +1,63 @@
+tr:
+  account:
+    profile:
+      academic_credentials:
+        academic: Akademik
+        continuing: Devam ediyor
+        professional_experiences: Mesleki Deneyimler
+        create_academic_credentials_from_yoksis: Akademik Deneyimlerimi YÖKSİS'ten Oluştur
+        update_academic_credentials_from_yoksis: Akademik Deneyimlerimi YÖKSİS'ten Güncelle
+      duties:
+        continuing: Devam ediyor
+        duties: Görevlendirmeler
+        temporary: Geçici Görevlendirme
+        tenure: Kadrolu
+      edit:
+        country: Ülke
+        extension_number: Dahili Numaranız
+        linkedin: Linkedin Kullanıcı Adı
+        orcid: ORCID
+        fixed_phone: Sabit Telefon Numaranız
+        profile_settings: Profil Ayarları
+        public_photo: Profilimde Fotoğrafımı Göster
+        public_studies: Profilimde Akademik Çalışmalarımı Göster
+        skype: Skype Kullanıcı Adı
+        twitter: Twitter Kullanıcı Adı
+        visiblity_settings: Görünürlük Ayarları
+        website: Web Sayfanız
+      education_informations:
+        continuing: Devam ediyor
+        create_education_informations_from_yoksis: Eğitim Bilgilerimi YÖKSİS'ten Oluştur
+        education_informations: Eğitim Bilgileri
+        update_education_informations_from_yoksis: Eğitim Bilgilerimi YÖKSİS'ten Güncelle
+      index:
+        academic_activities: Akademik Faaliyetler
+        professional_experiences: Mesleki Deneyimler
+        avatar: Profil fotoğrafı
+      partials:
+        articles:
+          articles: Makaleler
+          create_articles_from_yoksis: Makalelerimi YÖKSİS'ten Oluştur
+          update_articles_from_yoksis: Makalelerimi YÖKSİS'ten Güncelle
+        books:
+          books: Kitaplar
+          create_books_from_yoksis: Kitaplarımı YÖKSİS'ten Oluştur
+          page_numbers_abbrev: s.
+          update_books_from_yoksis: Kitaplarımı YÖKSİS'ten Güncelle
+        certifications:
+          certifications: Sertifikalar
+          create_certifications_from_yoksis: Sertifikalarımı YÖKSİS'ten Oluştur
+          update_certifications_from_yoksis: Sertifikalarımı YÖKSİS'ten Güncelle
+        projects:
+          create_projects_from_yoksis: Projelerimi YÖKSİS'ten Oluştur
+          projects: Projeler
+          status: Durum
+          update_projects_from_yoksis: Projelerimi YÖKSİS'ten Güncelle
+      update:
+        success: Profiliniz başarıyla güncellendi.
+  simple_form:
+    placeholders:
+      user:
+        linkedin: linkedin.com/
+        twitter: twitter.com/
+        phone_number: 'Örnek: 3623121919'
