@@ -1,7 +1,8 @@
 en:
   errors:
-    invalid_phone_number: This is not a valid phone number!
     can_not_be_concatenated: This text cannot be fit into a single SMS, or the sreceiver doesn't support concatenation!
     encoding_mismatch: Requested encoding does not match with the encoding of the text!
+    invalid_phone_number: This is not a valid phone number!
+    invalid_email: This is not a valid e-mail address!
     system_error: The system error has occurred. Please try later.
     unicode_not_supported: Receiver does not support unicode encoding!

@@ -1,7 +1,8 @@
 tr:
   errors:
-    invalid_phone_number: Geçerli bir telefon numarası değil!
     can_not_be_concatenated: Bu mesaj tek bir SMS için fazla uzun veya alıcı ülke mesaj birleştirmeyi desteklemiyor!
     encoding_mismatch: Mesaj metin kodlaması talep edilen kodlama ile eşleşmiyor!
+    invalid_phone_number: Geçerli bir telefon numarası değil!
+    invalid_email: Geçerli bir e-mail adresi değil!
     system_error: Sistemsel bir hata oluştu. Lütfen daha sonra tekrar deneyin.
     unicode_not_supported: Alıcı numara unicode desteklemiyor!
