@@ -51,6 +51,8 @@ class AvailableCourse < ApplicationRecord
 
   # scopes
   scope :without_ids, ->(ids) { where.not(id: ids) }
+  scope :compulsories, -> { includes(:curriculum_course).where(curriculum_courses: { type: :compulsory }) }
+  scope :electives, -> { includes(:curriculum_course).where(curriculum_courses: { type: :elective }) }
 
   # custom methods
   def quota_full?

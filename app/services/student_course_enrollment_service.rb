@@ -1,169 +1,144 @@
 # frozen_string_literal: true
 
-# rubocop:disable Metrics/ClassLength
 class StudentCourseEnrollmentService
   ECTS = 30
 
+  CompulsoryCourseGroup = OpenStruct.new(name: 'compulsories', completed: false)
+  EnrollableError       = Class.new(StandardError)
+
+  attr_reader :student, :catalog
+
   def initialize(student)
-    @student = student
-    @selectable_ects_from_group = {}
-    @compulsory_courses_from_semester = {}
+    @student           = student
+    @catalog           = Hash.new { |hash, key| hash[key] = {} }
+    @available_courses = {}
+
+    curriculum_semesters.includes(:curriculum_course_groups).each do |semester|
+      build_catalog(semester)
+      break unless completed?(semester)
+    end
   end
 
   def active_term
-    @active_term ||= AcademicTerm.active.last
+    AcademicTerm.current
   end
 
   def selected_ects
-    @selected_ects ||= semester_enrollments.sum(:ects).to_i
+    @selected_ects ||= course_enrollments.sum(:ects).to_i
   end
 
-  def selectable_ects
-    @selectable_ects ||= ECTS + plus_ects - selected_ects
+  def remaining_ects
+    @remaining_ects ||= ECTS + (student.gpa / 4).to_i - selected_ects
   end
 
-  def semester_enrollments
-    @semester_enrollments ||=
-      @student.course_enrollments.where(semester: @student.semester)
-              .includes(available_course: [curriculum_course: %i[course curriculum_semester]])
+  def course_enrollments
+    @course_enrollments ||=
+      student.course_enrollments
+             .where(semester: @student.semester)
+             .includes(available_course: [curriculum_course: %i[course curriculum_semester]])
   end
 
   def enrollment_status
-    @enrollment_status ||=
-      if (statuses = semester_enrollments.pluck(:status)).any?
-        statuses.include?('draft') ? :draft : :saved
-      end
+    @enrollment_status ||= course_enrollments.exists?(status: :draft) ? :draft : :saved
   end
 
-  def catalog
-    catalog = []
-
-    curriculum_semesters.includes(:curriculum_course_groups).each do |curriculum_semester|
-      next if @student.semester > curriculum_semester.sequence
-      next if selectable_ects < 1
-
-      catalog << { semester:           curriculum_semester,
-                   compulsory_courses: compulsory_courses_list(curriculum_semester),
-                   elective_courses:   elective_courses_list(curriculum_semester) }
-
-      break unless enrolled_in_required_courses_of?(curriculum_semester)
-    end
-
-    catalog
+  def enrollable(available_course)
+    check_group(available_course) if available_course.type == 'elective'
+    check_ects(available_course)
+    check_quota(available_course)
+    available_course
   end
 
-  def ensure_dropable(available_course)
+  def enrollable!(available_course)
+    return true if enrollable(available_course).errors.empty?
+
+    raise EnrollableError, available_course.errors.full_messages.first
+  end
+
+  def dropable(available_course)
     sequence = available_course.curriculum_course.curriculum_semester.sequence
     available_course.errors.add(:base, translate('must_drop_first')) if max_sequence > sequence
 
     available_course
   end
 
-  def ensure_addable(available_course)
-    if available_course.type == 'elective'
-      group_selectable_ects = selectable_ects_from_group(available_course.curriculum_course.curriculum_course_group)
-      available_course.errors.add(:base, translate('already_enrolled_at_group')) if group_selectable_ects.zero?
-      available_course.errors.add(:base, translate('not_enough_ects')) if group_selectable_ects < available_course.ects
-    end
+  def dropable!(available_course)
+    return true if dropable(available_course).errors.empty?
 
-    available_course.errors.add(:base, translate('not_enough_ects')) if selectable_ects < available_course.ects
-    available_course.errors.add(:base, translate('quota_full')) if available_course.quota_full?
-
-    available_course
+    raise EnrollableError, available_course.errors.full_messages.first
   end
 
   private
-
-  def plus_ects
-    case @student.gpa
-    when 1.8..2.49 then 6
-    when 2.5..2.99 then 10
-    when 3.0..3.49 then 12
-    when 3.5..4 then 15
-    else 0
-    end
-  end
 
   def curriculum
     @curriculum ||= @student.curriculums.active.last
   end
 
   def curriculum_semesters
-    return [] if curriculum.id.nil?
+    return [] if curriculum.nil?
 
-    curriculum.semesters.where(term: active_term.term).order(:sequence)
+    @curriculum_semesters ||=
+      curriculum.semesters.where(term: active_term.term)
+                .where('sequence >= ?', @student.semester)
+                .ordered
   end
 
-  def compulsory_courses_from_semester(curriculum_semester)
-    @compulsory_courses_from_semester[curriculum_semester] ||=
-      curriculum_semester.available_courses
-                         .includes(curriculum_course: :course)
-                         .where.not(id: semester_enrollments.pluck(:available_course_id))
-                         .where(academic_term_id: active_term.id)
-                         .where(curriculum_courses: { type: :compulsory })
+  def available_courses(semester)
+    @available_courses[semester] ||=
+      semester.available_courses
+              .includes(curriculum_course: %i[course curriculum_course_group])
+              .without_ids(course_enrollments.map(&:available_course_id))
   end
 
-  def compulsory_courses_list(curriculum_semester)
-    compulsory_courses_from_semester(curriculum_semester).each { |available_course| ensure_addable(available_course) }
-  end
-
-  def group_courses(group)
-    group.available_courses
-         .includes(curriculum_course: :course)
-         .where.not(id: semester_enrollments.pluck(:available_course_id))
-         .where(academic_term_id: active_term.id)
-  end
-
-  def ensure_enrollable(group)
-    group_selectable_ects = selectable_ects_from_group(group)
-
-    group_courses(group).each_with_object([]) do |course, courses|
-      course.errors.add(:base, translate('already_enrolled_at_group')) if group_selectable_ects.zero?
-      if (course.ects > group_selectable_ects) || (course.ects > selectable_ects)
-        course.errors.add(:base, translate('not_enough_ects'))
-      end
-      course.errors.add(:base, translate('quota_full')) if course.quota_full?
-
-      courses << course
+  def build_catalog(semester)
+    available_courses(semester).each_with_object(@catalog[semester]) do |available_course, collection|
+      group      = available_course.curriculum_course_group
+      collection = init(collection, group)
+      collection << enrollable(available_course)
     end
   end
 
-  def elective_courses_list(curriculum_semester)
-    curriculum_semester.curriculum_course_groups.each_with_object([]) do |group, group_courses|
-      group_courses << { group: group, courses: ensure_enrollable(group) }
-    end
+  def init(collection, group)
+    group ||= CompulsoryCourseGroup
+    collection[group] = [] unless collection.key?(group)
+    collection[group]
   end
 
-  def enrolled_in_compulsory_courses?(curriculum_semester)
-    compulsory_courses_from_semester(curriculum_semester).empty?
-  end
-
-  def selectable_ects_from_group(group)
-    @selectable_ects_from_group[group] ||=
-      group.ects - semester_enrollments.includes(available_course: :curriculum_course)
-                                       .where(curriculum_courses: { curriculum_course_group_id: group.id })
-                                       .sum(:ects)
-  end
-
-  def enrolled_in_elective_courses?(curriculum_semester)
-    curriculum_semester.curriculum_course_groups.inject(true) do |enrolled, group|
-      break unless enrolled &&= selectable_ects_from_group(group).zero?
-
-      enrolled
-    end
-  end
-
-  def enrolled_in_required_courses_of?(curriculum_semester)
-    enrolled_in_compulsory_courses?(curriculum_semester) &&
-      enrolled_in_elective_courses?(curriculum_semester)
+  def remaining_ects_for(group)
+    group.ects - course_enrollments.where(
+      curriculum_courses: { curriculum_course_group_id: group.id }
+    ).sum(:ects)
   end
 
   def max_sequence
-    @max_sequence ||= semester_enrollments.pluck(:sequence).max
+    @max_sequence ||= course_enrollments.maximum(:sequence)
+  end
+
+  def check_ects(available_course, ects: remaining_ects)
+    available_course.errors.add(:base, translate('not_enough_ects')) if ects < available_course.ects
+  end
+
+  def check_quota(available_course)
+    available_course.errors.add(:base, translate('quota_full')) if available_course.quota_full?
+  end
+
+  def check_group(available_course)
+    group_remaining_ects = remaining_ects_for(available_course.curriculum_course.curriculum_course_group)
+    available_course.errors.add(:base, translate('already_enrolled_at_group')) if group_remaining_ects.zero?
+    check_ects(available_course, ects: group_remaining_ects)
+  end
+
+  def completed?(semester)
+    return false if available_courses(semester).compulsories.present?
+
+    semester.curriculum_course_groups.all? { |group| group_completed?(group) }
+  end
+
+  def group_completed?(group)
+    group.ects >= course_enrollments.where(available_course_id: group.available_courses.ids).sum(:ects)
   end
 
   def translate(key, params = {})
     I18n.t("studentship.course_enrollments.errors.#{key}", params)
   end
 end
-# rubocop:enable Metrics/ClassLength

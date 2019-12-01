@@ -18,33 +18,22 @@ module Studentship
 
     def create
       course_enrollment = @student.course_enrollments.new(course_enrollment_params)
-      available_course = @service.ensure_addable(course_enrollment.available_course)
+      @service.enrollable!(course_enrollment.available_course)
 
-      message =
-        if available_course.errors.empty?
-          course_enrollment.save ? t('.success') : t('.error')
-        else
-          available_course.errors.full_messages.first
-        end
-
-      redirect_with(message)
+      redirect_with(course_enrollment.save ? t('.success') : t('.error'))
+    rescue StudentCourseEnrollmentService::EnrollableError => e
+      redirect_with(e.message)
     end
 
     def destroy
-      available_course = @service.ensure_dropable(@course_enrollment.available_course)
-
-      message =
-        if available_course.errors.empty?
-          @course_enrollment.destroy ? t('.success') : t('.error')
-        else
-          available_course.errors.full_messages.first
-        end
-
-      redirect_with(message)
+      @service.dropable!(@course_enrollment.available_course)
+      redirect_with(@course_enrollment.destroy ? t('.success') : t('.error'))
+    rescue StudentCourseEnrollmentService::EnrollableError => e
+      redirect_with(e.message)
     end
 
     def save
-      message = @service.semester_enrollments.update(status: :saved) ? t('.success') : t('.error')
+      message = @service.course_enrollments.update(status: :saved) ? t('.success') : t('.error')
       redirect_to(list_student_course_enrollments_path(@student), flash: { info: message })
     end
 

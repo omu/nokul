@@ -33,7 +33,7 @@ class Student < ApplicationRecord
 
   # custom methods
   def gpa
-    student_number.to_s[-2..-1].to_f / 25
+    student_number.to_s[-2..].to_f
   end
 
   private

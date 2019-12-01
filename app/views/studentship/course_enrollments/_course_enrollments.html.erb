@@ -12,7 +12,7 @@
   <tbody>
     <% courses.each do |course_enrollment| %>
       <tr>
-        <% available_course = @service.ensure_dropable(course_enrollment.available_course) %>
+        <% available_course = @service.dropable(course_enrollment.available_course) %>
         <td><%= available_course.code %></td>
         <td><%= available_course.name %></td>
         <td><%= enum_t(available_course.curriculum_course, :type) %></td>

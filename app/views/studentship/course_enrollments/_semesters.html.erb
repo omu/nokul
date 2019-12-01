@@ -1,26 +1,17 @@
 <div class="row">
-    <div class="col-lg-12 col-md-12">
-      <div class="card">
-        <div class="card-header">
-          <strong><%= "#{semester.sequence}. #{t('semester')}" %></strong>
-        </div>
-
-        <div class="card-body table-responsive">
+  <div class="col-lg-12 col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <strong><%= "#{semester.sequence}. #{t('semester')}" %></strong>
+      </div>
+      <div class="card-body table-responsive">
+        <% courses.each do |group, available_courses| %>
           <%= render 'available_courses',
                      klass:   'border-primary',
-                     title:   t('.compulsory_courses'),
-                     courses: courses %>
-        </div>
-
-        <% groups.each do |group_courses|%>
-          <div class="card-body table-responsive">
-          <%= render 'available_courses',
-                     klass:   'border-warning',
-                     title:   "#{t('.elective_courses')} - #{group_courses[:group].name}",
-                     group:   group_courses[:group],
-                     courses: group_courses[:courses] %>
-          </div>
+                     title:   group.name == 'compulsories' ? t('.compulsory_courses') : "#{t('.elective_courses')} - #{group.name}",
+                     courses: available_courses %>
         <% end %>
       </div>
     </div>
+  </div>
 </div>

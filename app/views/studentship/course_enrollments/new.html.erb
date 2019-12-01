@@ -3,7 +3,6 @@
     <div class="alert alert-light">
       <%= link_to_back student_course_enrollments_path(@student) %>
     </div>
-
     <div class="card">
       <%= render 'student_info' %>
       <div class="card-footer">
@@ -14,19 +13,18 @@
     </div>
   </div>
 </div>
-
 <div class='row'>
   <div class="col-sm-6">
     <div class="card border-default mb-3">
       <div class="card-header">
         <strong><%= t('.available_courses') %></strong>
         <div class="float-right">
-          <strong><%= "#{t('.selectable_ects')}: #{@service.selectable_ects}" %></strong>
+          <strong><%= "#{t('.selectable_ects')}: #{@service.remaining_ects}" %></strong>
         </div>
       </div>
-      <% @service.catalog.each do |semester_courses| %>
+      <% @service.catalog.each do |semester, courses| %>
         <div class="card-body">
-          <%= render 'semesters', semester: semester_courses[:semester], courses: semester_courses[:compulsory_courses], groups: semester_courses[:elective_courses] %>
+          <%= render 'semesters', semester: semester, courses: courses %>
         </div>
       <% end %>
     </div>
@@ -41,7 +39,7 @@
       </div>
       <div class="card-body">
         <div class="card-body table-responsive">
-          <%= render 'course_enrollments', klass: 'border-primary', courses: @service.semester_enrollments %>
+          <%= render 'course_enrollments', klass: 'border-primary', courses: @service.course_enrollments %>
         </div>
       </div>
     </div>
