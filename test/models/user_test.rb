@@ -128,7 +128,7 @@ class UserTest < ActiveSupport::TestCase
       password = SecureRandom.hex(20).freeze
       User.create(
         id_number:             '12345678912',
-        email:                 'fakeuser@fakemail.com',
+        email:                 'fakeuser@omu.edu.tr',
         password:              password,
         password_confirmation: password
       )
@@ -140,7 +140,7 @@ class UserTest < ActiveSupport::TestCase
       password = SecureRandom.hex(20).freeze
       User.create(
         id_number:             '98765432198',
-        email:                 'anotherfakeuser@fakemail.com',
+        email:                 'anotherfakeuser@omu.edu.tr',
         password:              password,
         password_confirmation: password
       )
