@@ -9,6 +9,7 @@ class CurriculumSemester < ApplicationRecord
   has_many :curriculum_course_groups, dependent: :destroy
   has_many :courses, through: :curriculum_courses
   has_many :available_courses, through: :curriculum_courses
+  has_many :elective_courses, through: :curriculum_course_groups, source: :courses
 
   # validations
   validates :sequence, numericality: { greater_than: 0 },
@@ -16,6 +17,9 @@ class CurriculumSemester < ApplicationRecord
   validates :year, numericality: { greater_than: 0 },
                    uniqueness:   { scope: %i[sequence curriculum_id] }
   validates :term, uniqueness: { scope: %i[year curriculum_id] }
+
+  # scopes
+  scope :ordered, -> { order(:sequence) }
 
   # custom methods
   def total_ects

@@ -36,9 +36,21 @@ class AvailableCourse < ApplicationRecord
   validates :groups, presence: true
 
   # delegates
-  delegate :code, :name, :theoric, :practice, :laboratory, :credit, :program_type, :ects, :type, to: :curriculum_course
+  delegate :code,
+           :name,
+           :theoric,
+           :practice,
+           :laboratory,
+           :credit,
+           :program_type,
+           :ects,
+           :type,
+           :curriculum_course_group, to: :curriculum_course
   delegate :name, to: :curriculum, prefix: true
   delegate :name, to: :unit, prefix: true
+
+  # scopes
+  scope :without_ids, ->(ids) { where.not(id: ids) }
 
   # custom methods
   def quota_full?
