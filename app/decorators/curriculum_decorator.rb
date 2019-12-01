@@ -2,7 +2,7 @@
 
 class CurriculumDecorator < SimpleDelegator
   def openable_courses_for_active_term(appends: nil)
-    term = AcademicTerm.active.last.try(:term)
+    term = AcademicTerm.current.try(:term)
 
     return [] unless term
 
