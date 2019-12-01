@@ -30,12 +30,4 @@ class CurriculumSemesterDecorator < SimpleDelegator
   def unit
     @unit ||= curriculum.unit
   end
-
-  def elective_courses
-    unit.course_groups.includes(:courses).map(&:courses).flatten
-  end
-
-  def active_term
-    AcademicTerm.active.last
-  end
 end
