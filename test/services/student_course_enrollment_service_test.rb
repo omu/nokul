@@ -7,6 +7,12 @@ class StudentCourseEnrollmentServiceTest < ActiveSupport::TestCase
     @service = StudentCourseEnrollmentService.new(students(:serhat))
   end
 
+  test 'build_catalog method' do
+    assert_empty @service.catalog
+    @service.build_catalog
+    assert_not_empty @service.catalog
+  end
+
   test 'active_term method' do
     assert_equal @service.active_term, academic_terms(:active_term)
   end
@@ -32,6 +38,7 @@ class StudentCourseEnrollmentServiceTest < ActiveSupport::TestCase
   end
 
   test 'catalog method' do
+    @service.build_catalog
     semester_courses = @service.catalog[curriculum_semesters(:bilgisayar_muh_mufredati_ucuncu_donem)]
     CompulsoryCourseGroup = OpenStruct.new(name: 'compulsories', completed: false)
     elective_course_group = curriculum_course_groups(:ucuncu_donem_secmeli_grubu)

@@ -4,6 +4,7 @@ module Studentship
   class CourseEnrollmentsController < ApplicationController
     before_action :set_student
     before_action :set_service
+    before_action :build_catalog, only: :new
     before_action :set_course_enrollment, only: :destroy
     before_action :check_registrability, except: :index
     before_action :check_enrollment_status, except: %i[index list]
@@ -50,6 +51,10 @@ module Studentship
 
     def set_service
       @service = StudentCourseEnrollmentService.new(@student)
+    end
+
+    def build_catalog
+      @service.build_catalog
     end
 
     def set_course_enrollment

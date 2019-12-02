@@ -12,9 +12,11 @@ class StudentCourseEnrollmentService
     @student           = student
     @catalog           = Hash.new { |hash, key| hash[key] = {} }
     @available_courses = {}
+  end
 
-    curriculum_semesters.includes(:curriculum_course_groups).each do |semester|
-      build_catalog(semester)
+  def build_catalog
+    curriculum_semesters.each do |semester|
+      build_semester_catalog(semester)
       break unless completed?(semester)
     end
   end
@@ -93,7 +95,7 @@ class StudentCourseEnrollmentService
               .without_ids(course_enrollments.map(&:available_course_id))
   end
 
-  def build_catalog(semester)
+  def build_semester_catalog(semester)
     available_courses(semester).each_with_object(@catalog[semester]) do |available_course, collection|
       group      = available_course.curriculum_course_group
       collection = init(collection, group)
