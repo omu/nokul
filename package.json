@@ -18,14 +18,14 @@
     "turbolinks": "^5.2.0"
   },
   "devDependencies": {
-    "eslint": "^6.5.1",
+    "eslint": "^6.7.2",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "htmlhint": "^0.11.0",
-    "markdownlint-cli": "^0.18.0",
+    "markdownlint-cli": "^0.19.0",
     "webpack-dev-server": "^3.9.0"
   },
   "scripts": {
