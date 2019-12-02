@@ -46,3 +46,10 @@ compulsory_course_2:
   coordinator: serhat_passive
   curriculum_course: compulsory_course_2
   unit: bilgisayar_muhendisligi
+
+old_course:
+  academic_term: active_term
+  curriculum: bilgisayar_muhendisligi_mufredati
+  coordinator: serhat_passive
+  curriculum_course: old_course
+  unit: bilgisayar_muhendisligi

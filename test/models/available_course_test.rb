@@ -28,6 +28,22 @@ class AvailableCourseTest < ActiveSupport::TestCase
     assert_not_empty fake.errors[:curriculum_course]
   end
 
+  # scopes
+  test 'without_ids returns available courses without given ids' do
+    available_course = available_courses(:elective_course)
+    assert_not_includes AvailableCourse.without_ids(available_course.id), available_course
+  end
+
+  test 'compulsories returns compulsory available courses' do
+    available_course = available_courses(:compulsory_course)
+    assert_includes AvailableCourse.compulsories, available_course
+  end
+
+  test 'electives returns elective available courses' do
+    available_course = available_courses(:elective_course)
+    assert_includes AvailableCourse.electives, available_course
+  end
+
   # custom methods
   test 'quota_full? method' do
     assert available_courses(:elective_course).quota_full?

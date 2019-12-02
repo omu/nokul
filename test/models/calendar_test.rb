@@ -33,6 +33,11 @@ class CalendarTest < ActiveSupport::TestCase
   validates_presence_of_nested_model :committee_decisions
 
   # custom tests
+  test 'event returns the event with the identifier' do
+    event = calendar_events(:online_course_registrations)
+    assert_equal calendars(:bm_calendar).event('online_course_registrations'), event
+  end
+
   test 'check if events exists' do
     assert calendars(:bm_calendar).check_events('online_course_registrations')
   end

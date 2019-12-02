@@ -40,8 +40,8 @@ class StudentTest < ActiveSupport::TestCase
 
   # custom methods
   test 'gpa method' do
-    assert_equal students(:serhat).gpa, 1.8
-    assert_equal students(:serhat_omu).gpa, 2.6
+    assert_equal students(:serhat).gpa, 45.0
+    assert_equal students(:serhat_omu).gpa, 65.0
   end
 
   # job tests

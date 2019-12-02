@@ -41,3 +41,9 @@ compulsory_course_2:
   curriculum_semester: bilgisayar_muh_mufredati_ucuncu_donem
   ects: 2
   type: compulsory
+
+old_course:
+  course: test
+  curriculum_semester: bilgisayar_muh_mufredati_birinci_donem
+  ects: 2
+  type: compulsory

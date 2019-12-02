@@ -3,18 +3,24 @@
 require 'test_helper'
 
 class StudentCourseEnrollmentServiceTest < ActiveSupport::TestCase
-  ECTS = 30
-
   setup do
     @service = StudentCourseEnrollmentService.new(students(:serhat))
   end
 
-  test 'selected_ects method' do
-    assert_equal @service.selected_ects, selected_ects
+  test 'active_term method' do
+    assert_equal @service.active_term, academic_terms(:active_term)
   end
 
-  test 'semester_enrollments method' do
-    course_enrollments = @service.semester_enrollments
+  test 'selected_ects method' do
+    assert_equal @service.selected_ects, 4
+  end
+
+  test 'remaining_ects method' do
+    assert_equal @service.remaining_ects, 37
+  end
+
+  test 'course_enrollments method' do
+    course_enrollments = @service.course_enrollments
     assert_not_includes course_enrollments, course_enrollments(:old)
     assert_includes course_enrollments, course_enrollments(:elective)
   end
@@ -26,16 +32,43 @@ class StudentCourseEnrollmentServiceTest < ActiveSupport::TestCase
   end
 
   test 'catalog method' do
-    catalog = @service.catalog
-    compulsory_courses = catalog.first[:compulsory_courses]
-    assert_includes compulsory_courses, available_courses(:compulsory_course_2)
-    elective_courses = catalog.first[:elective_courses].first[:courses]
-    assert_includes elective_courses, available_courses(:elective_course_2)
+    semester_courses = @service.catalog[curriculum_semesters(:bilgisayar_muh_mufredati_ucuncu_donem)]
+    CompulsoryCourseGroup = OpenStruct.new(name: 'compulsories', completed: false)
+    elective_course_group = curriculum_course_groups(:ucuncu_donem_secmeli_grubu)
+
+    assert_includes semester_courses[CompulsoryCourseGroup], available_courses(:compulsory_course_2)
+    assert_includes semester_courses[elective_course_group], available_courses(:elective_course_2)
+  end
+
+  test 'enrollable method' do
+    assert_empty @service.enrollable(available_courses(:compulsory_course_2)).errors
+  end
+
+  test 'enrollable method with error messages' do
+    available_course = @service.enrollable(available_courses(:elective_course_2))
+    assert_equal available_course.errors.full_messages.first, translate('already_enrolled_at_group')
+  end
+
+  test 'enrollabe! method' do
+    assert @service.enrollable(available_courses(:compulsory_course_2))
+  end
+
+  test 'dropable method' do
+    assert_empty @service.dropable(available_courses(:elective_course)).errors
+  end
+
+  test 'dropable method with error messages' do
+    available_course = @service.dropable(available_courses(:old_course))
+    assert_equal available_course.errors.full_messages.first, translate('must_drop_first')
+  end
+
+  test 'dropable! method' do
+    assert @service.dropable(available_courses(:elective_course))
   end
 
   private
 
-  def selected_ects
-    %i[elective compulsory].inject(0) { |ects, enrollment| ects + course_enrollments(enrollment).ects.to_i }
+  def translate(key, params = {})
+    I18n.t("studentship.course_enrollments.errors.#{key}", params)
   end
 end
