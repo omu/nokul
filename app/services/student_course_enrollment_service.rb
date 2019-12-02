@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class StudentCourseEnrollmentService
+class StudentCourseEnrollmentService # rubocop:disable Metrics/ClassLength
   ECTS = 30
 
   CompulsoryCourseGroup = OpenStruct.new(name: 'compulsories', completed: false)
