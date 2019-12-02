@@ -12,7 +12,7 @@ Rails.application.load_tasks
 # p FileList['../../tenant/test/**/*_test.rb']
 
 namespace :test do
-  task :foo do
+  task foo: :environment do
     $LOAD_PATH << '../../tenant/test'
     # Rails::TestUnit::Runner.rake_run ['**/*_test.rb']
     # p FileList['../../tenant/test/**/*_test.rb'].to_a

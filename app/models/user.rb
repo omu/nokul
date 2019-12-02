@@ -56,7 +56,12 @@ class User < ApplicationRecord
                                    dependent:   :nullify,
                                    inverse_of:  :user
   # validations
-  validates :email, presence: true, uniqueness: true, length: { maximum: 255 }
+  validates :email, presence: true, uniqueness: true, length: { maximum: 255 }, 'valid_email_2/email': {
+    mx:                     true,
+    disposable:             true,
+    disallow_subaddressing: true,
+    message:                I18n.t('errors.invalid_email')
+  }
   validates :extension_number, allow_blank:  true,
                                length:       { maximum: 8 },
                                numericality: { only_integer: true }
@@ -73,7 +78,6 @@ class User < ApplicationRecord
   validates :skype, allow_blank: true, length: { maximum: 50 }
   validates :twitter, allow_blank: true, length: { maximum: 50 }
   validates :website, allow_blank: true, length: { maximum: 50 }
-  validates_with EmailAddress::ActiveRecordValidator, field: :email
   validates_with ImageValidator, field: :avatar, if: proc { |a| a.avatar.attached? }
 
   # callbacks

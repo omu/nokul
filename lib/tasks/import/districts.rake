@@ -3,7 +3,7 @@
 namespace :import do
   desc 'Import districts from db/static_data'
   task districts: :environment do
-    districts = YAML.load_file(Rails.root.join('db', 'static_data', 'districts.yml'))
+    districts = YAML.load_file(Rails.root.join('db/static_data/districts.yml'))
 
     progress_bar = ProgressBar.spawn('YOKSIS - Districts', districts.count)
 
