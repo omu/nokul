@@ -41,8 +41,4 @@ class Student < ApplicationRecord
   def build_identity_information
     Kps::IdentitySaveJob.perform_later(user, id)
   end
-
-  def translate(key, params = {})
-    I18n.t("studentship.course_enrollments.new.#{key}", params)
-  end
 end
