@@ -39,7 +39,10 @@ class StudentCourseEnrollmentService
   end
 
   def enrollment_status
-    @enrollment_status ||= course_enrollments.exists?(status: :draft) ? :draft : :saved
+    @enrollment_status ||=
+      if course_enrollments.any?
+        course_enrollments.exists?(status: :draft) ? :draft : :saved
+      end
   end
 
   def enrollable(available_course)
