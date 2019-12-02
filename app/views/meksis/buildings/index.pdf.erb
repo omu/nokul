@@ -30,7 +30,7 @@
     position: absolute;
     max-width: 75%;
     text-align: center;
-    margin: 0 auto;
+    margin: -15px auto;
     left: 0;
     right: 0;
     -ms-transform: translateY(-50%);
@@ -64,39 +64,36 @@
   }
 </script>
 <div id="header">
-  <h1><%= t('.university_name') %><br><%= t('.title') %></h1>
+  <h1><br><%= t('.title') %><br/></h1>
   <div id="logo">
-    <%= wicked_pdf_image_tag 'meksis/omu.jpg' %>
-  </div>
-  <div align="right">
-    <%= wicked_pdf_image_tag 'meksis/baum.png', style: 'width: 124px; height: 35px; margin-bottom: -4em;' %>
+    <%= wicked_pdf_image_tag Tenant.configuration.branding.logo.file %>
   </div>
 </div>
 <h2><%= t('.stats') %></h2>
 <table id="stats">
   <tr>
     <td><%= t('.indoor_area') %> (m<sup>2</sup>)</td>
-    <td><%= number_to_human(@buildings.sum(:indoor_area)) %></td>
+    <td><%= @buildings.sum(:indoor_area) %></td>
   </tr>
   <tr>
     <td><%= t('.number_of_buildings') %></td>
-    <td><%= number_to_human(@buildings.count) %></td>
+    <td><%= @buildings.count %></td>
   </tr>
   <tr>
     <td><%= t('.number_of_active_buildings') %></td>
-    <td><%= number_to_human(@buildings.actives.size) %></td>
+    <td><%= @buildings.actives.size %></td>
   </tr>
   <tr>
     <td><%= t('.number_of_classrooms') %></td>
-    <td><%= number_to_human(@classrooms.count) %></td>
+    <td><%= @classrooms.count %></td>
   </tr>
   <tr>
     <td><%= t('.student_capacity') %></td>
-    <td><%= number_to_human(@classrooms.sum(:student_capacity)) %></td>
+    <td><%= @classrooms.sum(:student_capacity) %></td>
   </tr>
   <tr>
     <td><%= t('.exam_capacity') %></td>
-    <td><%= number_to_human(@classrooms.sum(:exam_capacity)) %></td>
+    <td><%= @classrooms.sum(:exam_capacity) %></td>
   </tr>
 </table>
 <h2><%= t('.buildings_list') %></h2>
@@ -116,9 +113,9 @@
       <td><%= building.code %></td>
       <td><%= building.place_type.name %></td>
       <td><%= building.unit.name %></td>
-      <td><%= number_to_human(building.classrooms.sum(:student_capacity)) %></td>
-      <td><%= number_to_human(building.classrooms.sum(:exam_capacity)) %></td>
-      <td><%= number_to_human(building.indoor_area) %></td>
+      <td><%= building.classrooms.sum(:student_capacity) %></td>
+      <td><%= building.classrooms.sum(:exam_capacity) %></td>
+      <td><%= building.indoor_area %></td>
     </tr>
   <% end %>
 </table>
