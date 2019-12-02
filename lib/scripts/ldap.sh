@@ -30,7 +30,7 @@ debconf-set-selections <<-EOF
 EOF
 
 dpkg-reconfigure -f noninteractive slapd
-tar -xf *.tar.gz -C /
+tar -xf ./*.tar.gz -C /
 
 pushd config &>/dev/null
 
