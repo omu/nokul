@@ -8,7 +8,7 @@ linters:
         Enabled: false
       Layout/InitialIndentation:
         Enabled: false
-      Layout/TrailingBlankLines:
+      Layout/TrailingEmptyLines:
         Enabled: false
       Naming/FileName:
         Enabled: false

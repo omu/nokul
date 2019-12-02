@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Academics
-  YAML_PATH = Rails.root.join('db', 'encrypted_data', 'academics.yml')
+  YAML_PATH = Rails.root.join('db/encrypted_data/academics.yml')
 
   module_function
 

@@ -15,7 +15,7 @@ module Nokul
           collection.collects = DETOne
           collection.produces = Src::DETMany
 
-          # rubocop:disable Layout/AlignHash
+          # rubocop:disable Layout/HashAlignment
           class_attribute :mapping, default: {
             name:                         proc { |raw| raw.name.split('>').last&.capitalize_and_fix },
             detsis_id:                    proc { |raw| raw.detsis_id&.to_s },
@@ -76,7 +76,7 @@ module Nokul
             'Diğer Kurul'                   => /Kurul/,
             'Diğer Komisyon'                => /Komisyon/
           }.freeze
-          # rubocop:enable Layout/AlignHash
+          # rubocop:enable Layout/HashAlignment
 
           mapping[:unit_type_id] = proc do |raw|
             name = mapping[:name].call(raw)

@@ -62,7 +62,7 @@ gem 'pwned'
 gem 'rack-attack'
 
 # validators
-gem 'email_address'
+gem 'valid_email2'
 gem 'telephone_number'
 
 # error tracking

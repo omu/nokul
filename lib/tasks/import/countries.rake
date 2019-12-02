@@ -3,7 +3,7 @@
 namespace :import do
   desc 'Import countries from db/static_data'
   task countries: :environment do
-    countries = YAML.load_file(Rails.root.join('db', 'static_data', 'countries.yml'))
+    countries = YAML.load_file(Rails.root.join('db/static_data/countries.yml'))
 
     progress_bar = ProgressBar.spawn('YOKSIS - Countries', countries.count)
 

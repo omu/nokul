@@ -3,7 +3,7 @@
 namespace :tenant do
   namespace :units do
     desc 'Unit statistics'
-    task :stats do
+    task stats: :environment do
       hack_argv('raw/yok', 'raw/det') do |resource|
         puts resource
       end

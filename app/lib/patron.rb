@@ -28,7 +28,7 @@ module Patron
   end
 
   def scope_names_through_files
-    Dir.glob(Rails.root.join('app', 'scopes', '*.rb'))
+    Dir.glob(Rails.root.join('app/scopes/*.rb'))
        .map { |f| File.basename(f, '.rb').classify }
   end
 end
