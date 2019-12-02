@@ -63,16 +63,11 @@ class UserTest < ActiveSupport::TestCase
       'Abc\@def@example.com',
       'Fred\ Bloggs@example.com',
       'Joe.\\Blow@example.com',
-      '"Abc@def"@example.com',
-      '"Fred Bloggs"@example.com',
-      'customer/department=shipping@example.com',
-      '$A12345@example.com',
-      '!def!xyz%abc@example.com',
-      '_somename@example.com'
+      '"Abc@def"@example.com'
     ].each do |email|
       fake.email = email
       assert_not fake.valid?
-      assert_not_empty fake.errors[:id_number]
+      assert_not_empty fake.errors[:email]
     end
   end
 
