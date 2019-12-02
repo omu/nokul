@@ -58,10 +58,10 @@ class User < ApplicationRecord
                                    inverse_of:  :user
   # validations
   validates :email, presence: true, uniqueness: true, length: { maximum: 255 }, 'valid_email_2/email': {
-    mx: true,
-    disposable: true,
+    mx:                     true,
+    disposable:             true,
     disallow_subaddressing: true,
-    message: I18n.t('errors.invalid_email')
+    message:                I18n.t('errors.invalid_email')
   }
   validates :extension_number, allow_blank:  true,
                                length:       { maximum: 8 },

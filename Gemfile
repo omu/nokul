@@ -62,8 +62,8 @@ gem 'pwned'
 gem 'rack-attack'
 
 # validators
-gem 'valid_email2'
 gem 'telephone_number'
+gem 'valid_email2'
 
 # error tracking
 gem 'rollbar'
