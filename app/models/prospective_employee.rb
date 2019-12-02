@@ -24,10 +24,10 @@ class ProspectiveEmployee < ApplicationRecord
   # validations
   validates :date_of_birth, presence: true
   validates :email, presence: true, length: { maximum: 255 }, 'valid_email_2/email': {
-    mx: true,
-    disposable: true,
+    mx:                     true,
+    disposable:             true,
     disallow_subaddressing: true,
-    message: I18n.t('errors.invalid_email')
+    message:                I18n.t('errors.invalid_email')
   }
   validates :first_name, presence: true, length: { maximum: 255 }
   validates :id_number, presence: true, uniqueness: { scope: %i[unit_id] }, length: { is: 11 }
