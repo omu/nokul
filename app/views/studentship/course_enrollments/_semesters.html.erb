@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-lg-12 col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <strong><%= "#{semester.sequence}. #{t('semester')}" %></strong>
+      </div>
+      <div class="card-body table-responsive">
+        <% courses.each do |group, available_courses| %>
+          <%= render 'available_courses',
+                     klass:   'border-primary',
+                     title:   group.name == 'compulsories' ? t('.compulsory_courses') : "#{t('.elective_courses')} - #{group.name}",
+                     courses: available_courses %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

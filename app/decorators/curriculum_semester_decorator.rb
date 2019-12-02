@@ -19,10 +19,8 @@ class CurriculumSemesterDecorator < SimpleDelegator
     end
   end
 
-  def course_catalog
-    available_courses.includes(curriculum_course: :course)
-                     .where(academic_term: term)
-                     .order('courses.name')
+  def elective_courses
+    unit.course_groups.includes(:courses).map(&:courses).flatten
   end
 
   private
@@ -35,13 +33,5 @@ class CurriculumSemesterDecorator < SimpleDelegator
 
   def unit
     @unit ||= curriculum.unit
-  end
-
-  def elective_courses
-    unit.course_groups.includes(:courses).map(&:courses).flatten
-  end
-
-  def term
-    AcademicTerm.active.last
   end
 end

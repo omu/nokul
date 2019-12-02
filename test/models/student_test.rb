@@ -14,10 +14,17 @@ class StudentTest < ActiveSupport::TestCase
   has_one :identity, dependent: :destroy
   has_many :calendars, through: :unit
   has_many :curriculums, through: :unit
+  has_many :course_enrollments, dependent: :destroy
 
   # validations: presence
   validates_presence_of :student_number
   validates_presence_of :permanently_registered
+  validates_presence_of :semester
+  validates_presence_of :year
+
+  # validations: numericality
+  validates_numerical_range :semester, greater_than: 0
+  validates_numerical_range :year, greater_than_or_equal_to: 0
 
   # validations: uniqueness
   validates_uniqueness_of :student_number
@@ -31,11 +38,17 @@ class StudentTest < ActiveSupport::TestCase
     assert students(:serhat).addresses
   end
 
+  # custom methods
+  test 'gpa method' do
+    assert_equal students(:serhat).gpa, 45.0
+    assert_equal students(:serhat_omu).gpa, 65.0
+  end
+
   # job tests
   test 'student enqueues Kps::IdentitySaveJob after being created' do
     users(:serhat).students.destroy_all
     assert_enqueued_with(job: Kps::IdentitySaveJob) do
-      Student.create(student_number: '1234', user: users(:serhat), unit: units(:omu))
+      Student.create(student_number: '1234', user: users(:serhat), unit: units(:omu), year: 1, semester: 1)
     end
   end
 end

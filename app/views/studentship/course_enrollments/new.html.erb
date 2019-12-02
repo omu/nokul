@@ -1,0 +1,47 @@
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class="alert alert-light">
+      <%= link_to_back student_course_enrollments_path(@student) %>
+    </div>
+    <div class="card">
+      <%= render 'student_info' %>
+      <div class="card-footer">
+        <div class="float-right">
+          <%= link_to(t('.save_enrollments'), save_student_course_enrollments_path(@student), class: 'btn btn-success') %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class='row'>
+  <div class="col-sm-6">
+    <div class="card border-default mb-3">
+      <div class="card-header">
+        <strong><%= t('.available_courses') %></strong>
+        <div class="float-right">
+          <strong><%= "#{t('.selectable_ects')}: #{@service.remaining_ects}" %></strong>
+        </div>
+      </div>
+      <% @service.catalog.each do |semester, courses| %>
+        <div class="card-body">
+          <%= render 'semesters', semester: semester, courses: courses %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card border-success mb-3">
+      <div class="card-header">
+        <strong><%= t('.selected_courses') %></strong>
+        <div class="float-right">
+          <strong><%= "#{t('.selected_ects')}: #{@service.selected_ects}" %></strong>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-body table-responsive">
+          <%= render 'course_enrollments', klass: 'border-primary', courses: @service.course_enrollments %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

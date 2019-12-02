@@ -18,3 +18,38 @@ available_course_to_delete:
   coordinator: serhat_passive
   curriculum_course: one
   unit: omu
+
+elective_course:
+  academic_term: active_term
+  curriculum: bilgisayar_muhendisligi_mufredati
+  coordinator: serhat_passive
+  curriculum_course: elective_course
+  unit: bilgisayar_muhendisligi
+
+elective_course_2:
+  academic_term: active_term
+  curriculum: bilgisayar_muhendisligi_mufredati
+  coordinator: serhat_passive
+  curriculum_course: elective_course_2
+  unit: bilgisayar_muhendisligi
+
+compulsory_course:
+  academic_term: active_term
+  curriculum: bilgisayar_muhendisligi_mufredati
+  coordinator: serhat_passive
+  curriculum_course: compulsory_course
+  unit: bilgisayar_muhendisligi
+
+compulsory_course_2:
+  academic_term: active_term
+  curriculum: bilgisayar_muhendisligi_mufredati
+  coordinator: serhat_passive
+  curriculum_course: compulsory_course_2
+  unit: bilgisayar_muhendisligi
+
+old_course:
+  academic_term: active_term
+  curriculum: bilgisayar_muhendisligi_mufredati
+  coordinator: serhat_passive
+  curriculum_course: old_course
+  unit: bilgisayar_muhendisligi
