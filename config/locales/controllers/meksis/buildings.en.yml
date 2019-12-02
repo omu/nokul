@@ -20,7 +20,7 @@ en:
         <<: *common
         buildings_list: Buildings List
         stats: Stats
-        title: The Stats of the Inventory Classification System 
+        title: The Stats of the Inventory Classification System
         value: Value
         variable: Variable
       edit:
