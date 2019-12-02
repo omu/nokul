@@ -19,6 +19,10 @@ class CurriculumSemesterDecorator < SimpleDelegator
     end
   end
 
+  def elective_courses
+    unit.course_groups.includes(:courses).map(&:courses).flatten
+  end
+
   private
 
   def merge(collection, appends)
