@@ -66,7 +66,7 @@
 <div id="header">
   <h1><br><%= t('.title') %><br/></h1>
   <div id="logo">
-    <%= wicked_pdf_image_tag Tenant.configuration.branding.logo.file %>
+    <%= wicked_pdf_image_tag Tenant.configuration.branding.logo.file, alt: Tenant.configuration.branding.logo.alt_text %>
   </div>
 </div>
 <h2><%= t('.stats') %></h2>
