@@ -1,10 +1,11 @@
 default: &default
   name: 'Ondokuz Mayıs Üniversitesi'
+  english_name: 'Ondokuz Mayıs University'
   abbreviation: 'omu'
   api_host: 'https://api.omu.sh'
   contact:
     address: 'Ondokuz Mayıs Üniversitesi, Kurupelit Kampüsü, Atakum/SAMSUN'
-    phone: '+9 0362 312 1919'
+    phone: '+90 362 312 1919'
     country: 'TR'
     district: 'Atakum'
   email:
