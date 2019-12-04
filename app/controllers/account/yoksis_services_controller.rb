@@ -8,6 +8,7 @@ module Account
       books:                  Yoksis::BooksSaveJob,
       certifications:         Yoksis::CertificationsSaveJob,
       education_informations: Yoksis::EducationInformationsSaveJob,
+      papers:                 Yoksis::PapersSaveJob,
       projects:               Yoksis::ProjectsSaveJob
     }.freeze
 

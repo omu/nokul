@@ -63,6 +63,7 @@
         <nav class="scrollable">
           <div class="nav nav-tabs" id="nav-tab" role="tablist">
             <a class="nav-item nav-link active" id="nav-articles-tab" data-toggle="tab" href="#articles" role="tab" aria-controls="nav-home" aria-selected="true"><%= t('account.profile.partials.articles.articles') %></a>
+            <a class="nav-item nav-link" id="nav-papers-tab" data-toggle="tab" href="#papers" role="tab" aria-controls="nav-profile" aria-selected="false"><%= t('account.profile.partials.papers.papers') %></a>
             <a class="nav-item nav-link" id="nav-projects-tab" data-toggle="tab" href="#projects" role="tab" aria-controls="nav-profile" aria-selected="false"><%= t('account.profile.partials.projects.projects') %></a>
             <a class="nav-item nav-link" id="nav-books-tab" data-toggle="tab" href="#books" role="tab" aria-controls="nav-contact" aria-selected="false"><%= t('account.profile.partials.books.books') %></a>
             <a class="nav-item nav-link" id="nav-certifications-tab" data-toggle="tab" href="#certifications" role="tab" aria-controls="nav-certifications" aria-selected="true"><%= t('account.profile.partials.certifications.certifications') %></a>
@@ -70,6 +71,9 @@
         </nav>
         <div class="tab-content pt-2" id="nav-tabContent">
           <div class="tab-pane fade show active" id="articles" role="tabpanel" aria-labelledby="nav-articles-tab">
+            <p class="text-center h4 text-muted"><%= t('loading') %></p>
+          </div>
+          <div class="tab-pane fade" id="papers" role="tabpanel" aria-labelledby="nav-papers-tab">
             <p class="text-center h4 text-muted"><%= t('loading') %></p>
           </div>
           <div class="tab-pane fade" id="projects" role="tabpanel" aria-labelledby="nav-projects-tab">
@@ -89,6 +93,7 @@
 <script type="text/javascript">
   $(document).ready(function(){
     $.get("<%= profile_articles_path %>")
+    $.get("<%= profile_papers_path %>")
     $.get("<%= profile_books_path %>")
     $.get("<%= profile_certifications_path %>")
     $.get("<%= profile_projects_path %>")
