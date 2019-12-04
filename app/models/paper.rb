@@ -34,14 +34,14 @@ class Paper < ApplicationRecord
   validates :last_page, allow_nil:    true,
                         numericality: { only_integer: true, greater_than: 0, less_than_or_equal_to: 15_000 }
   validates :name, length: { maximum: 255 }
-  validates :presentation_type, inclusion: { in: presentation_types.keys }
+  validates :presentation_type, allow_nil: true, inclusion: { in: presentation_types.keys }
   validates :print_isbn, length: { maximum: 255 }
-  validates :publication_status, inclusion: { in: publication_statuses.keys }
+  validates :publication_status, allow_nil: true, inclusion: { in: publication_statuses.keys }
   validates :scope, inclusion: { in: scopes.keys }
   validates :special_issue, length: { maximum: 255 }
   validates :sponsored_by, length: { maximum: 255 }
-  validates :type, inclusion: { in: types.keys }
-  validates :type_of_release, inclusion: { in: type_of_releases.keys }
+  validates :type, allow_nil: true, inclusion: { in: types.keys }
+  validates :type_of_release, allow_nil: true, inclusion: { in: type_of_releases.keys }
   validates :volume, numericality: { only_integer: true, greater_than_or_equal_to: 0, allow_nil: true }
   validates :yoksis_id, uniqueness: { scope: :user }, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 end
