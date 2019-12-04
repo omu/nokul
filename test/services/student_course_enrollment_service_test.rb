@@ -22,7 +22,7 @@ class StudentCourseEnrollmentServiceTest < ActiveSupport::TestCase
   end
 
   test 'remaining_ects method' do
-    assert_equal @service.remaining_ects, 37
+    assert_equal @service.remaining_ects, 32
   end
 
   test 'course_enrollments method' do

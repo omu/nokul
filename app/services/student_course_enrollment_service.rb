@@ -30,7 +30,7 @@ class StudentCourseEnrollmentService # rubocop:disable Metrics/ClassLength
   end
 
   def remaining_ects
-    @remaining_ects ||= ECTS + (student.gpa / 4).to_i - selected_ects
+    @remaining_ects ||= ECTS + extra_ects - selected_ects
   end
 
   def course_enrollments
@@ -74,6 +74,16 @@ class StudentCourseEnrollmentService # rubocop:disable Metrics/ClassLength
   end
 
   private
+
+  def extra_ects
+    case @student.gpa
+    when 1.8..2.49 then 6
+    when 2.5..2.99 then 10
+    when 3.0..3.49 then 12
+    when 3.5..4 then 15
+    else 0
+    end
+  end
 
   def curriculum
     @curriculum ||= @student.curriculums.active.last
