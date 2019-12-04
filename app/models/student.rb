@@ -33,7 +33,9 @@ class Student < ApplicationRecord
 
   # custom methods
   def gpa
-    student_number.to_s[-2..].to_f
+    return 0 if semester == 1
+
+    student_number.to_s[-2..].to_f / 25
   end
 
   private
