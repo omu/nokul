@@ -1,10 +1,11 @@
 default: &default
   name: 'ACME Üniversitesi'
+  english_name: 'ACME University'
   abbreviation: 'acme'
   api_host: 'https://api.omu.sh'
   contact:
     address: 'ACME Üniversitesi, Kurupelit Kampüsü, Atakum/SAMSUN'
-    phone: '+9 0362 312 1919'
+    phone: '+90 362 312 1919'
     country: 'TR'
     district: 'Atakum'
   email:

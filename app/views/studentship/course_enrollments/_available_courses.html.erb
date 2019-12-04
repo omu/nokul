@@ -1,0 +1,39 @@
+<div class="card <%= klass %>">
+  <div class="card-header">
+    <%= title %>
+  </div>
+  <div class="card-body">
+    <table class="table table-responsive-sm table-striped table-hover">
+      <thead>
+        <tr class="thead-dark">
+          <th><%= t('.code') %></th>
+          <th><%= t('.name') %></th>
+          <th><%= t('.type') %></th>
+          <th><%= t('.credit') %></th>
+          <th><%= t('.ects') %></th>
+          <th><%= t('actions') %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% courses.each do |available_course| %>
+          <tr>
+            <td><%= available_course.code %></td>
+            <td><%= available_course.name %></td>
+            <td><%= enum_t(available_course.curriculum_course, :type) %></td>
+            <td><%= available_course.credit.to_i %></td>
+            <td><%= available_course.ects.to_i %></td>
+            <td>
+              <% if available_course.errors.empty? %>
+                <%= link_to(t('.add'), student_course_enrollments_path(@student, course_enrollment: { available_course_id: available_course.id }), method: :post, class: 'btn btn-sm btn-outline-success') %>
+              <% else %>
+                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="<%= available_course.errors.full_messages.first %>">
+                  <button class="btn btn-sm btn-outline-secondary" style="pointer-events: none;" type="button" disabled><%= t('.add') %></button>
+                </span>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

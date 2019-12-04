@@ -51,12 +51,14 @@ class Calendar < ApplicationRecord
     end
   end
 
-  def check_events(identifier)
-    return unless event_type(identifier) && calendar_events.present?
+  def event(identifier)
+    return unless (type = event_type(identifier))
 
-    calendar_events.find_by(
-      calendar_event_type: event_type(identifier)
-    ).try(:active_now?)
+    calendar_events.find_by(calendar_event_type: type)
+  end
+
+  def check_events(identifier)
+    event(identifier).try(:active_now?)
   end
 
   private
