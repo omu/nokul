@@ -49,3 +49,5 @@ ldapmodify -Q -Y EXTERNAL -H ldapi:// -f 08-acl.ldif
 ldapadd -x -D "cn=admin,dc=acme,dc=omu,dc=sh" -w 12345 -f import.ldif
 
 touch /var/lib/ldap/bootstrapped
+
+ufw disable
