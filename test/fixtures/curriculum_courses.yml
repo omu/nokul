@@ -10,15 +10,40 @@ two:
   ects: 2
   type: compulsory
 
-elective_course:
-  course: test
-  curriculum_semester: bilgisayar_muh_mufredati_birinci_donem
-  curriculum_course_group: one
-  ects: 2
-  type: elective
-
 ydi:
   course: ydi
   curriculum_semester: one
   ects: 3
+  type: compulsory
+
+elective_course:
+  course: mobil_programlama
+  curriculum_semester: bilgisayar_muh_mufredati_ucuncu_donem
+  curriculum_course_group: ucuncu_donem_secmeli_grubu
+  ects: 2
+  type: elective
+
+elective_course_2:
+  course: java
+  curriculum_semester: bilgisayar_muh_mufredati_ucuncu_donem
+  curriculum_course_group: ucuncu_donem_secmeli_grubu
+  ects: 2
+  type: elective
+
+compulsory_course:
+  course: ydi
+  curriculum_semester: bilgisayar_muh_mufredati_ucuncu_donem
+  ects: 2
+  type: compulsory
+
+compulsory_course_2:
+  course: fi_tarihi
+  curriculum_semester: bilgisayar_muh_mufredati_ucuncu_donem
+  ects: 2
+  type: compulsory
+
+old_course:
+  course: test
+  curriculum_semester: bilgisayar_muh_mufredati_birinci_donem
+  ects: 2
   type: compulsory

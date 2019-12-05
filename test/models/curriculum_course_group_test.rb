@@ -11,6 +11,7 @@ class CurriculumCourseGroupTest < ActiveSupport::TestCase
   belongs_to :curriculum_semester
   has_many :curriculum_courses, dependent: :destroy
   has_many :courses, through: :curriculum_courses
+  has_many :available_courses, through: :curriculum_courses
 
   # validations: presence
   validates_presence_of :course_group

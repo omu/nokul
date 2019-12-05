@@ -13,8 +13,7 @@ module Activation
           first_name:    prospective.first_name,
           last_name:     prospective.last_name,
           date_of_birth: '1984-11-16',
-          serial:        'J10',
-          serial_no:     '94646',
+          document_no:   'A24B48573',
           mobile_phone:  '+905551111111'
         )
     end
@@ -37,9 +36,8 @@ module Activation
     # validations: numericality and length
     test 'check numericality and length validations' do
       assert_equal 11, @activation.id_number.length
-      assert_equal 3, @activation.serial.length
+      assert_equal 9, @activation.document_no.length
       assert @activation.id_number.match(/\A\d+\z/)
-      assert @activation.serial_no.match(/\A\d+\z/)
     end
 
     test 'phone number must be checked with country' do

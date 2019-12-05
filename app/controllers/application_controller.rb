@@ -14,17 +14,11 @@ class ApplicationController < ActionController::Base
   rescue_from Pundit::NotAuthorizedError,   with: :user_not_authorized
 
   def set_locale
-    language = locale_params
+    update_preferred_language if user_signed_in?
 
-    if user_signed_in?
-      current_user.update(preferred_language: language) if language
-      I18n.locale = current_user.preferred_language
-
-      # set locale for pagy gem
-      @pagy_locale = current_user.preferred_language || 'tr'
-    else
-      I18n.locale = language || I18n.default_locale
-    end
+    language     = current_user&.preferred_language || locale_params || I18n.default_locale
+    I18n.locale  = language
+    @pagy_locale = language if user_signed_in?
   end
 
   def default_url_options
@@ -32,6 +26,13 @@ class ApplicationController < ActionController::Base
   end
 
   protected
+
+  def append_info_to_payload(payload)
+    super
+    payload[:host] = request.host
+    payload[:remote_ip] = request.ip
+    payload[:user_id] = current_user.try(:id)
+  end
 
   def search_params(model = nil)
     parameters = [:term]
@@ -60,5 +61,12 @@ class ApplicationController < ActionController::Base
       default: :default
     )
     redirect_back(fallback_location: root_path)
+  end
+
+  def update_preferred_language
+    return if locale_params == current_user.preferred_language || locale_params.nil?
+
+    current_user.preferred_language = locale_params
+    current_user.save(validate: false)
   end
 end

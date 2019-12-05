@@ -24,6 +24,7 @@ class Calendar < ApplicationRecord
   accepts_nested_attributes_for :calendar_events, allow_destroy: true, reject_if: :all_blank
 
   # validations
+  validates_associated :calendar_events
   validates :name, presence:   true,
                    uniqueness: { scope: :academic_term_id },
                    length:     { maximum: 255 }
@@ -50,12 +51,14 @@ class Calendar < ApplicationRecord
     end
   end
 
-  def check_events(identifier)
-    return unless event_type(identifier) && calendar_events.present?
+  def event(identifier)
+    return unless (type = event_type(identifier))
 
-    calendar_events.find_by(
-      calendar_event_type: event_type(identifier)
-    ).try(:active_now?)
+    calendar_events.find_by(calendar_event_type: type)
+  end
+
+  def check_events(identifier)
+    event(identifier).try(:active_now?)
   end
 
   private

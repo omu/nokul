@@ -63,16 +63,11 @@ class UserTest < ActiveSupport::TestCase
       'Abc\@def@example.com',
       'Fred\ Bloggs@example.com',
       'Joe.\\Blow@example.com',
-      '"Abc@def"@example.com',
-      '"Fred Bloggs"@example.com',
-      'customer/department=shipping@example.com',
-      '$A12345@example.com',
-      '!def!xyz%abc@example.com',
-      '_somename@example.com'
+      '"Abc@def"@example.com'
     ].each do |email|
       fake.email = email
       assert_not fake.valid?
-      assert_not_empty fake.errors[:id_number]
+      assert_not_empty fake.errors[:email]
     end
   end
 
@@ -128,7 +123,7 @@ class UserTest < ActiveSupport::TestCase
       password = SecureRandom.hex(20).freeze
       User.create(
         id_number:             '12345678912',
-        email:                 'fakeuser@fakemail.com',
+        email:                 'fakeuser@omu.edu.tr',
         password:              password,
         password_confirmation: password
       )
@@ -140,7 +135,7 @@ class UserTest < ActiveSupport::TestCase
       password = SecureRandom.hex(20).freeze
       User.create(
         id_number:             '98765432198',
-        email:                 'anotherfakeuser@fakemail.com',
+        email:                 'anotherfakeuser@omu.edu.tr',
         password:              password,
         password_confirmation: password
       )

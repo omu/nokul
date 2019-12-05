@@ -32,7 +32,7 @@ module LDAP
     end
 
     def configuration
-      @configuration ||= Rails.application.credentials.ldap
+      @configuration ||= Tenant.credentials.ldap
     end
 
     Error = Class.new(StandardError)

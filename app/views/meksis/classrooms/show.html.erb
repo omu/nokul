@@ -27,23 +27,23 @@
                 </tr>
                 <tr>
                   <td><%= t('.length') %> (m)</td>
-                  <td><%= number_to_human(@classroom.length) %></td>
+                  <td><%= @classroom.length %></td>
                 </tr>
                 <tr>
                   <td><%= t('.width') %> (m)</td>
-                  <td><%= number_to_human(@classroom.width) %></td>
+                  <td><%= @classroom.width %></td>
                 </tr>
                 <tr>
                   <td><%= t('.height') %> (m)</td>
-                  <td><%= number_to_human(@classroom.height) %></td>
+                  <td><%= @classroom.height %></td>
                 </tr>
                 <tr>
                   <td><%= t('.volume') %> (m<sup>3</sup>)</td>
-                  <td><%= number_to_human(@classroom.volume) %></td>
+                  <td><%= @classroom.volume %></td>
                 </tr>
                 <tr>
                   <td><%= t('.available_space') %> (m<sup>2</sup>)</td>
-                  <td><%= number_to_human(@classroom.available_space) %></td>
+                  <td><%= @classroom.available_space %></td>
                 </tr>
               </tbody>
             </table>

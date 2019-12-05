@@ -1,36 +1,36 @@
-dn: ou=people,dc=test,dc=omu,dc=edu,dc=tr
+dn: ou=people,dc=acme,dc=omu,dc=sh
 ou: people
 description: All people in organisation
 objectclass: organizationalunit
 
-dn: ou=groups,dc=test,dc=omu,dc=edu,dc=tr
+dn: ou=groups,dc=acme,dc=omu,dc=sh
 ou: groups
 description: All groups in organisation
 objectclass: organizationalunit
 
-dn: uid=emrecan.1234,ou=people,dc=test,dc=omu,dc=edu,dc=tr
+dn: uid=emrecan.1234,ou=people,dc=acme,dc=omu,dc=sh
 cn: Emre Can Yılmaz
 displayName: Emre Can Yılmaz
 eduPersonAffiliation: member
 eduPersonAffiliation: employee
 eduPersonAffiliation: faculty
 eduPersonPrimaryAffiliation: faculty
-eduPersonPrincipalName: emrecan@omu.edu.tr
-eduPersonPrincipalNamePrior: emrecan.old@omu.edu.tr
-eduPersonScopedAffiliation: faculty@_.bilgisayar-pr.bilgisayar.muhendislik.omu.edu.tr
+eduPersonPrincipalName: emrecan@acme.omu.sh
+eduPersonPrincipalNamePrior: emrecan.old@acme.omu.sh
+eduPersonScopedAffiliation: faculty@_.bilgisayar-pr.bilgisayar.muhendislik.acme.omu.sh
 givenName: Emre Can
 jpegPhoto: base64ilebiseylerbiseyler
-mail: emrecan@omu.edu.tr
+mail: emrecan@acme.omu.sh
 mobile: +90 362 312 1919
 preferredLanguage: tr
 schacCountryOfCitizenship: tr
 schacExpiryDate: 20051231125959Z
-schacPersonalUniqueCode: urn:schac:personalUniqueCode:tr:employeeID:omu.edu.tr:12345
+schacPersonalUniqueCode: urn:schac:personalUniqueCode:tr:employeeID:acme.omu.sh:12345
 schacPersonalUniqueID: urn:schac:personalUniqueID:tr:NIN:10570898198
-schacUserStatus: urn:schac:userStatus:tr:omu.edu.tr:affiliation:expired
+schacUserStatus: urn:schac:userStatus:tr:acme.omu.sh:affiliation:expired
 schacDateOfBirth: 19910128
 schacGender: 2
-schacHomeOrganization: omu.edu.tr
+schacHomeOrganization: acme.omu.sh
 schacPlaceOfBirth: Samsun, Türkiye
 schacYearOfBirth: 1991
 sn: Yılmaz
@@ -47,29 +47,29 @@ objectClass: schacEntryMetadata
 objectClass: schacUserEntitlements
 objectClass: schacExperimentalOC
 
-dn: uid=cezmi.5678,ou=people,dc=test,dc=omu,dc=edu,dc=tr
+dn: uid=cezmi.5678,ou=people,dc=acme,dc=omu,dc=sh
 cn: Cezmi Seha Sahir
 displayName: Cezmi Seha Sahir
 eduPersonAffiliation: member
 eduPersonAffiliation: employee
 eduPersonAffiliation: faculty
 eduPersonPrimaryAffiliation: faculty
-eduPersonPrincipalName: cezmi@omu.edu.tr
-eduPersonPrincipalNamePrior: cezmi.old@omu.edu.tr
-eduPersonScopedAffiliation: faculty@_.bilgisayar-pr.bilgisayar.muhendislik.omu.edu.tr
+eduPersonPrincipalName: cezmi@acme.omu.sh
+eduPersonPrincipalNamePrior: cezmi.old@acme.omu.sh
+eduPersonScopedAffiliation: faculty@_.bilgisayar-pr.bilgisayar.muhendislik.acme.omu.sh
 givenName: Cezmi Seha
 jpegPhoto: base64ilebiseylerbiseyler
-mail: cezmi@omu.edu.tr
+mail: cezmi@acme.omu.sh
 mobile: +90 362 312 1919
 preferredLanguage: tr
 schacCountryOfCitizenship: tr
 schacExpiryDate: 20051231125959Z
-schacPersonalUniqueCode: urn:schac:personalUniqueCode:tr:employeeID:omu.edu.tr:56785
+schacPersonalUniqueCode: urn:schac:personalUniqueCode:tr:employeeID:acme.omu.sh:56785
 schacPersonalUniqueID: urn:schac:personalUniqueID:tr:NIN:10570898198
-schacUserStatus: urn:schac:userStatus:tr:omu.edu.tr:affiliation:expired
+schacUserStatus: urn:schac:userStatus:tr:acme.omu.sh:affiliation:expired
 schacDateOfBirth: 19910128
 schacGender: 2
-schacHomeOrganization: omu.edu.tr
+schacHomeOrganization: acme.omu.sh
 schacPlaceOfBirth: Samsun, Türkiye
 schacYearOfBirth: 1991
 sn: Sahir
@@ -86,50 +86,50 @@ objectClass: schacEntryMetadata
 objectClass: schacUserEntitlements
 objectClass: schacExperimentalOC
 
-dn: cn=alum@test.omu.edu.tr,ou=groups,dc=test,dc=omu,dc=edu,dc=tr
-cn: alum@test.omu.edu.tr
+dn: cn=alum@acme.omu.sh,ou=groups,dc=acme,dc=omu,dc=sh
+cn: alum@acme.omu.sh
 description: Mezun öğrenciler
-memberURL: ldap:///ou=people,dc=test,dc=omu,dc=edu,dc=tr?mail?sub?(eduPersonAffiliation=alum)
+memberURL: ldap:///ou=people,dc=acme,dc=omu,dc=sh?mail?sub?(eduPersonAffiliation=alum)
 objectclass: groupOfURLs
 
-dn: cn=affiliate@test.omu.edu.tr,ou=groups,dc=test,dc=omu,dc=edu,dc=tr
-cn: affiliate@test.omu.edu.tr
+dn: cn=affiliate@acme.omu.sh,ou=groups,dc=acme,dc=omu,dc=sh
+cn: affiliate@acme.omu.sh
 description: Affiliate
-memberURL: ldap:///ou=people,dc=test,dc=omu,dc=edu,dc=tr?mail?sub?(eduPersonAffiliation=affiliate)
+memberURL: ldap:///ou=people,dc=acme,dc=omu,dc=sh?mail?sub?(eduPersonAffiliation=affiliate)
 objectclass: groupOfURLs
 
-dn: cn=library-walk-in@test.omu.edu.tr,ou=groups,dc=test,dc=omu,dc=edu,dc=tr
-cn: library-walk-in@test.omu.edu.tr
+dn: cn=library-walk-in@acme.omu.sh,ou=groups,dc=acme,dc=omu,dc=sh
+cn: library-walk-in@acme.omu.sh
 description: Yalnızca kütüphane için kaydediler kişiler
-memberURL: ldap:///ou=people,dc=test,dc=omu,dc=edu,dc=tr?mail?sub?(eduPersonAffiliation=library-walk-in)
+memberURL: ldap:///ou=people,dc=acme,dc=omu,dc=sh?mail?sub?(eduPersonAffiliation=library-walk-in)
 objectclass: groupOfURLs
 
-dn: cn=member@test.omu.edu.tr,ou=groups,dc=test,dc=omu,dc=edu,dc=tr
-cn: member@test.omu.edu.tr
+dn: cn=member@acme.omu.sh,ou=groups,dc=acme,dc=omu,dc=sh
+cn: member@acme.omu.sh
 description: Kurumla ilişkili aktif herkes
-memberURL: ldap:///ou=people,dc=test,dc=omu,dc=edu,dc=tr?mail?sub?(eduPersonAffiliation=member)
+memberURL: ldap:///ou=people,dc=acme,dc=omu,dc=sh?mail?sub?(eduPersonAffiliation=member)
 objectclass: groupOfURLs
 
-dn: cn=student@test.omu.edu.tr,ou=groups,dc=test,dc=omu,dc=edu,dc=tr
-cn: student@test.omu.edu.tr
+dn: cn=student@acme.omu.sh,ou=groups,dc=acme,dc=omu,dc=sh
+cn: student@acme.omu.sh
 description: Aktif öğrenciler
-memberURL: ldap:///ou=people,dc=test,dc=omu,dc=edu,dc=tr?mail?sub?(eduPersonAffiliation=student)
+memberURL: ldap:///ou=people,dc=acme,dc=omu,dc=sh?mail?sub?(eduPersonAffiliation=student)
 objectclass: groupOfURLs
 
-dn: cn=employee@test.omu.edu.tr,ou=groups,dc=test,dc=omu,dc=edu,dc=tr
-cn: employee@test.omu.edu.tr
+dn: cn=employee@acme.omu.sh,ou=groups,dc=acme,dc=omu,dc=sh
+cn: employee@acme.omu.sh
 description: Tüm personeller
-memberURL: ldap:///ou=people,dc=test,dc=omu,dc=edu,dc=tr?mail?sub?(eduPersonAffiliation=employee)
+memberURL: ldap:///ou=people,dc=acme,dc=omu,dc=sh?mail?sub?(eduPersonAffiliation=employee)
 objectclass: groupOfURLs
 
-dn: cn=faculty@test.omu.edu.tr,ou=groups,dc=test,dc=omu,dc=edu,dc=tr
-cn: faculty@test.omu.edu.tr
+dn: cn=faculty@acme.omu.sh,ou=groups,dc=acme,dc=omu,dc=sh
+cn: faculty@acme.omu.sh
 description: Akademik personeller
-memberURL: ldap:///ou=people,dc=test,dc=omu,dc=edu,dc=tr?mail?sub?(eduPersonAffiliation=faculty)
+memberURL: ldap:///ou=people,dc=acme,dc=omu,dc=sh?mail?sub?(eduPersonAffiliation=faculty)
 objectclass: groupOfURLs
 
-dn: cn=staff@test.omu.edu.tr,ou=groups,dc=test,dc=omu,dc=edu,dc=tr
-cn: staff@test.omu.edu.tr
+dn: cn=staff@acme.omu.sh,ou=groups,dc=acme,dc=omu,dc=sh
+cn: staff@acme.omu.sh
 description: Akademik olmayan personeller
-memberURL: ldap:///ou=people,dc=test,dc=omu,dc=edu,dc=tr?mail?sub?(eduPersonAffiliation=staff)
+memberURL: ldap:///ou=people,dc=acme,dc=omu,dc=sh?mail?sub?(eduPersonAffiliation=staff)
 objectclass: groupOfURLs

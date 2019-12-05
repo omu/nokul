@@ -18,8 +18,3 @@ calendar_to_delete:
   description: Nothing to describe.
   academic_term: fall_2018_2019
   timezone: Istanbul
-active_calendar:
-  name: Active Calendar
-  description: Nothing to describe.
-  academic_term: active_term
-  timezone: Istanbul

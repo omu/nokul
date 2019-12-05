@@ -146,11 +146,62 @@ DynamicSelect Parametreleri ve Kullanımı
 }
 ```
 
+```js
+{
+  el: '#city_id',
+  targets: {
+    '#district_id': {},
+    '#district_id_one': {
+      placeholder: 'Placeholder One',
+      label_attribute: 'foo',
+      value_attribute: 'bar'
+    }
+  },
+  params: { 'city_id': '#city_id' },
+  source: '/api/cities/:city_id/districts',
+  reset_selectors: '#reset',
+  label_attribute: 'name',
+  value_attribute: 'id',
+  placeholder: 'Placeholder',
+  after_initialize: function(){
+    console.log(this.targets)
+    console.log(this.source)
+  }
+}
+```
+
 - **el** `change` event'ının tanımlanacağı elementin hangisi olacağını belirlemek için kullanılan parametredir.
   **Doldurulması zorunludur.**
 
 - **target** `change` event'ının tetiklenmesi sonrasında bu olaydan etkilenecek elementin belirlenmesini sağlayan
   parametredir. **Doldurulması zorunludur.**
+
+- **targets** Tek bir yapılandırma üzerinden birden fazla hedef elementi değiştirmek ve yapılandırmak için kullanılan
+  parametredir. Array veya Object tipinde değer alabilir. Yapılandırma üzerinden `placeholder`, `label_attribute`,
+  `value_attribute` özelliklerini her bir hedef element için özelleştirebilirsiniz. Özelleştirme yapmak istemezseniz
+  genel yapılandırmalar kullanıcaktır. **target doldurulmazsa doldurulması zorunludur.**
+
+  **Örnekler:**
+
+  ```js
+    targets: ['#foo', '#bar']
+  ```
+
+  ```js
+    targets: {
+      '#foo': {
+        placeholder: 'Placeholder for foo',
+        label_attribute: 'foo_label',
+        value_attribute: 'foo_value'
+      },
+      '#bar': {
+        placeholder: 'Placeholder for bar',
+        label_attribute: 'bar_label',
+        value_attribute: 'bar_value'
+      },
+      '.test': {}
+    }
+  ```
 
 - **params** `source` belirlenirken kullanılmak istenen parametrelerin belirlenmesi sağlayan, object türünde değer alan
   bir parametredir. `source` alanına parametre geçirmek isteniyorsa **Doldurulması zorunludur.**
@@ -192,3 +243,16 @@ DynamicSelect Parametreleri ve Kullanımı
 - **after_initialize** İlgili elemente `change` event'ı tanımlandıktan sonra yapılmasını istediğiniz işlemleri bir
   fonksiyon halinde belirterek çalıştırmanızı sağlar. `after_initialize` değer olarak her zaman bir fonksiyon bekler.
   Fonksiyon içerisinde `this` ile parametre değerlerine erişebilirsiniz. **Opsiyoneldir.**
+
+### Hedef element için oluşturulan sonuca erişme
+
+Bazı durumlarda, daha önceden oluşan event'lar sonucunda elde edilen değerleri farklı element veya elementlerin değeri
+olarak atamak isteyebilirsinz. Bu durumlarda aşağıdaki yardımcı metod ile hedef element için önceden oluşan değerlere
+erişebilirsiniz.
+
+```js
+  dynamicSelectHelper.getResultForTargetElement('hedef_element_seçicisi')
+
+  // Örnek: Daha önceden bir event sonucu oluşan ilçelerin select box için değerleri
+  dynamicSelectHelper.getResultForTargetElement('#district_id')
+```

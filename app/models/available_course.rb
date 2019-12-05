@@ -26,6 +26,7 @@ class AvailableCourse < ApplicationRecord
   has_many :evaluation_types, class_name: 'CourseEvaluationType', dependent: :destroy
   has_many :groups, class_name: 'AvailableCourseGroup', dependent: :destroy
   has_many :lecturers, through: :groups
+  has_many :course_enrollments, dependent: :destroy
   has_one :course, through: :curriculum_course
   accepts_nested_attributes_for :groups, reject_if: :all_blank, allow_destroy: true
 
@@ -35,9 +36,28 @@ class AvailableCourse < ApplicationRecord
   validates :groups, presence: true
 
   # delegates
-  delegate :code, :name, :theoric, :practice, :laboratory, :credit, :program_type, :ects, to: :curriculum_course
+  delegate :code,
+           :name,
+           :theoric,
+           :practice,
+           :laboratory,
+           :credit,
+           :program_type,
+           :ects,
+           :type,
+           :curriculum_course_group, to: :curriculum_course
   delegate :name, to: :curriculum, prefix: true
   delegate :name, to: :unit, prefix: true
+
+  # scopes
+  scope :without_ids, ->(ids) { where.not(id: ids) }
+  scope :compulsories, -> { includes(:curriculum_course).where(curriculum_courses: { type: :compulsory }) }
+  scope :electives, -> { includes(:curriculum_course).where(curriculum_courses: { type: :elective }) }
+
+  # custom methods
+  def quota_full?
+    groups.sum(:quota) == course_enrollments.where(status: :saved).length
+  end
 
   private
 

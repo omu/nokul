@@ -2,7 +2,7 @@
 
 namespace :static_analysis do
   desc 'Check HTML files via html_lint'
-  task :html_linter do
+  task html_linter: :environment do
     sh "yarn exec htmlhint --config .htmlhintrc 'app/views/**/*.html.erb'", verbose: false
   end
 end

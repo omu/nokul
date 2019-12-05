@@ -39,7 +39,7 @@ module Account
     end
 
     def duty_params
-      params.require(:duty).permit(:temporary, :start_date, :end_date, :unit_id, :employee_id)
+      params.require(:duty).permit(:temporary, :start_date, :end_date, :unit_id, :employee_id, :article)
     end
   end
 end

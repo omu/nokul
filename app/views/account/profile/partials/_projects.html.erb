@@ -1,0 +1,38 @@
+<div class='row'>
+  <div class='col-sm-12'>
+    <% unless projects.exists? %>
+      <div class='text-center'>
+        <%= link_to fa_icon('download', text: t('.create_projects_from_yoksis')),
+                    yoksis_services_fetch_path(service: 'projects'),
+                    class: 'btn btn-sm btn-success m-4' %>
+      </div>
+    <% else %>
+      <div class='mb-2 text-right'>
+        <%= link_to_fetch yoksis_services_fetch_path(service: 'projects') %>
+      </div>
+      <div class="list-group">
+        <% projects.each do |project| %>
+          <a class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <h6 class="mb-1"><%= project.name %></h6>
+            </div>
+            <span class="badge badge-info"><%= project.type %></span>
+            <span class="badge badge-primary"><%= project.duty %></span>
+            <span class="badge badge-success"><%= enum_t project, :status %></span>
+            <span class="badge badge-secondary"><%= enum_t project, :scope %></span>
+          </a>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <% if @pagy.pages > 1 %>
+    <div class='col-sm-12 mt-2'>
+      <nav aria-label='pagination'>
+        <ul class='pagination justify-content-center'>
+          <%== pagy_bootstrap_nav(pagy) %>
+        </ul>
+      </nav>
+    </div>
+  <% end %>
+</div>

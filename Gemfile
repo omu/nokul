@@ -52,7 +52,6 @@ gem 'groupdate'
 gem 'pagy'
 gem 'simple_form'
 gem 'wicked_pdf'
-gem 'wkhtmltopdf-binary'
 
 # api
 gem 'jbuilder', '~> 2.9'
@@ -63,8 +62,8 @@ gem 'pwned'
 gem 'rack-attack'
 
 # validators
-gem 'email_address'
 gem 'telephone_number'
+gem 'valid_email2'
 
 # error tracking
 gem 'rollbar'
@@ -77,6 +76,9 @@ gem 'friendly_id', '~> 5.3.0'
 gem 'nexmo'
 gem 'smstools'
 gem 'twilio-ruby'
+
+# log
+gem 'lograge'
 
 group :development, :test do
   gem 'brakeman', require: false

@@ -21,12 +21,16 @@ en:
       record_not_found: There is no record in the system to activate your account.
       new:
         <<: *activation_attributes
-        activation: Activation
         account_activation: Activate your account
+        activation: Activation
         agreements: By activating your account, you agree to our %{user_agreements_link} and %{privacy_policies_link}.
-        for_old_id_cards: For old identity cards
+        identity_card: Identity Card
+        identity_certificate: Identity Certificate
+        identity_type: Identity Type
         identity_verification: Identity Verification
         login: Login
+        new_identity_card: New Identity Card
+        old_identity_card: Old Identity Card
         phone_verification: Phone Verification
         privacy_policy: Privacy Policy
         user_agreement: User Agreement

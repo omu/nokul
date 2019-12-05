@@ -45,6 +45,12 @@ mkmf.log
 # Ignore sensitives
 config/deploy_key
 /config/master.key
+/plugins/tenant/*/test/dummy/config/credentials/*.key
 
 # Ignore auto-generated PDFs of markdown files
 .pdf
+
+# Ignore S3 objects
+db/encrypted_data/sample_data.sql.enc.gz
+db/encrypted_data/static_data.sql.enc.gz
+lib/templates/ldap/openldap-2.4-bcyrpt-module.tar.gz

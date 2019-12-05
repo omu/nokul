@@ -5,9 +5,9 @@ serhat_active:
   staff_number: A2000
 serhat_passive:
   user: serhat
-  title: associate_professor
+  title: computer_operator
   active: false
-  staff_number: A2000
+  staff_number: B2000
 chief_john:
   user: john
   title: chief

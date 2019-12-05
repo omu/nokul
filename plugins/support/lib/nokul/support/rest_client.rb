@@ -21,6 +21,8 @@ module Nokul
 
       class UnsupportedHTTPOptionError < Error; end
 
+      class HTTPError < Error; end
+
       class Request
         SUPPORTED_HTTP_OPTIONS = {
           open_timeout: 10,
@@ -90,7 +92,7 @@ module Nokul
           http_response.error! unless ok?
         rescue Net::HTTPError, Net::HTTPFatalError => e
           Rails.logger.warn("HTTP error: #{e}")
-          nil
+          raise HTTPError
         end
 
         def ok?

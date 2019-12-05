@@ -17,6 +17,9 @@ class CurriculumSemester < ApplicationRecord
                    uniqueness:   { scope: %i[sequence curriculum_id] }
   validates :term, uniqueness: { scope: %i[year curriculum_id] }
 
+  # scopes
+  scope :ordered, -> { order(:sequence) }
+
   # custom methods
   def total_ects
     curriculum_courses.compulsory.sum(:ects).to_f + curriculum_course_groups.sum(:ects).to_f

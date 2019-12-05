@@ -2,7 +2,7 @@
 
 namespace :fetch do
   desc 'Fetch all references'
-  task :references do
+  task references: :environment do
     progress_bar = ProgressBar.spawn 'YOKSIS - Referanslar', 15
 
     %w[

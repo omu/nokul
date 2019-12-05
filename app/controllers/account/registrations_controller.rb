@@ -7,7 +7,6 @@ module Account
     # before_action :configure_sign_up_params, only: [:create]
     # before_action :configure_account_update_params, only: [:update]
     before_action :update_slug, only: :update
-    before_action :update_password_change_time, only: :update
 
     # GET /resource/sign_up
     def new
@@ -66,10 +65,6 @@ module Account
     # end
 
     private
-
-    def update_password_change_time
-      current_user.update!(password_changed_at: Time.zone.now)
-    end
 
     def update_slug
       # rubocop:disable Lint/UselessAssignment

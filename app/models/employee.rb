@@ -16,7 +16,7 @@ class Employee < ApplicationRecord
 
   # validations
   validates :active, inclusion: { in: [true, false] }
-  validates :staff_number, presence: true, uniqueness: { scope: %i[active] }, length: { maximum: 255 }
+  validates :staff_number, presence: true, uniqueness: true, length: { maximum: 255 }
   validates :title_id, uniqueness: { scope: %i[user active] }
   validates_with EmployeeValidator
 

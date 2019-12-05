@@ -61,8 +61,7 @@ sudo -EH -u "$operator" bash -xs <<-'EOF'
 	bin/rails db:migrate
 
 	if [[ -z ${deploy_skip_seed:-} ]]; then
-		git lfs install
-		git lfs pull
+		bin/rails s3:pull
 		bin/rails db:seed SAMPLE_DATA=true
 	fi
 EOF

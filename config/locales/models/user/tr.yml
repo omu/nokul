@@ -13,7 +13,7 @@ tr:
         id_number: Kimlik Numarası
         is_active: Aktif mi?
         staff_number: Personel Sicil No
-        title_id: Ünvan
+        title_id: Unvan
         user_id: Kullanıcı
       position: &position_attributes
         administrative_function_id: Görev
@@ -25,7 +25,7 @@ tr:
         articles_count: Makale Sayısı
         country: Ülke
         current_password: Mevcut Parola
-        email: E-mail Adresi
+        email: E-posta Adresi
         id_number: Kimlik Numarası
         mobile_phone: Cep Telefonu
         password: Parola
@@ -66,13 +66,14 @@ tr:
       form_title: Hesabı Düzenle
     employees:
       active: Aktif mi?
+      article: Görevlendirme Kanun Maddesi
       duties: Görevlendirmeler
       employees: Personel Kayıtları
       positions: İdari Görevler
       <<: *employee_attributes
       <<: *duty_attributes
       <<: *position_attributes
-      title: Ünvan
+      title: Unvan
     identities:
       create_from_mernis: MERNİS'ten Oluştur
       informal_identity: Diğer Kimliğiniz
@@ -88,7 +89,7 @@ tr:
       identities: Kimlik Bilgileri
       last_name: Soyadı
       new_user_link: Yeni Kullanıcı Oluştur
-      smart_search_placeholder: TC/YU numarası, e-mail adresi, ad veya soyad
+      smart_search_placeholder: TC/YU numarası, e-posta adresi, ad veya soyad
     new:
       form_title: Hesap Oluştur
     save_address_from_mernis:

@@ -15,7 +15,6 @@ class TenantConfigTest < ActiveSupport::TestCase
   test 'Tenant main configuration includes keys for various environments' do
     config = YAML.load_file(Tenant.engine.config_file_for(:tenant))
     assert config.key?('production')
-    assert config.key?('beta')
     assert config.key?('test')
     assert config.key?('development')
   end

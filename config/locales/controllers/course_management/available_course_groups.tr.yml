@@ -5,7 +5,7 @@ tr:
         name: Grup Adı
         quota: Kontenjan
         lecturer: Öğretim Elemanı
-        title: Ünvan
+        title: Unvan
         coordinator: Koordinatör
     errors:
       models:

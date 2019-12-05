@@ -94,7 +94,10 @@ Tüm Nokul::Tenant API metodlarını `plugins/tenant/common/lib/nokul/tenant/api
   Örnek:
 
   ```sh
-  $ cd /rails/root/plugins/tenant/omu
+  cd /rails/root/plugins/tenant/omu
+  ```
+
+  ```sh
   $ cat config/foo.yml
   production:
     bar:
