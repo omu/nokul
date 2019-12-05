@@ -2,8 +2,10 @@
 \byarn\.lock
 \bGemfile\.lock
 ^app/lib/nokul/database_url\.rb
-^README.md:[6-7]:
+^README.md:[6-8]:
 ^lib/templates/ldap/.*
+^test/controllers/accounts/settings/emails_controller_test.rb:23:
+^test/controllers/accounts/settings/passwords_controller_test.rb:25:
 ^test/fixtures/users.yml:(1|6|11|16):
 ^test/system/account_settings_page_flow_test.rb:20:
 ^test/system/login_page_flow_test.rb:15:
