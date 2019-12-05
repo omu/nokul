@@ -6,9 +6,13 @@ module Account
     # before_action :configure_sign_in_params, only: [:create]
 
     # GET /resource/sign_in
-    # def new
-    #   super
-    # end
+    def new
+      if ENV.fetch('NOKUL_SSO_ENABLED', false)
+        redirect_to(user_openid_connect_omniauth_authorize_path)
+      else
+        super
+      end
+    end
 
     # POST /resource/sign_in
     # def create

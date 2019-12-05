@@ -3,7 +3,7 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  %w[.ngrok.io .serveo.net .localtunnel.me].each { |host| config.hosts <<  host }
+  %w[.ngrok.io .serveo.net .localtunnel.me other.vagrant.ga].each { |host| config.hosts <<  host }
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
@@ -65,4 +65,7 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  # Web console permissions
+  config.web_console.permissions = '10.0.3.0/16'
 end
