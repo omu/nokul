@@ -15,7 +15,7 @@ vagrant up dev --provider=lxc
 vagrant up sso --provider=lxc
 ```
 
-Nokulda SSO'yu aktif etmek için `.env` dosyasına aşağıdaki satırı ekleyin:
+Nokul'da SSO'yu etkinleştirmek için `.env` dosyasına aşağıdaki satırı ekleyin:
 
 ```text
 NOKUL_SSO_ENABLE=true
