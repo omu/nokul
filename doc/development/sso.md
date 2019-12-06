@@ -33,7 +33,7 @@ user.save(validate: false)
 LDAP::Entity.create(user)
 ```
 
-`vagrant ssh dev` diyerek dev sanal makinesine girip uygulamayı durdurun. Uygulamayı ssl kullanarak başlatmak için şunu
+`vagrant ssh dev` diyerek dev sanal makinesine girip uygulamayı durdurun. Uygulamayı SSL kullanarak başlatmak için:
 başlatın:
 
 ```bash
