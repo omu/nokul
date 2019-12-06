@@ -7,11 +7,9 @@ module Account
 
     # GET /resource/sign_in
     def new
-      if ENV.fetch('NOKUL_SSO_ENABLED', false)
-        redirect_to(user_openid_connect_omniauth_authorize_path)
-      else
-        super
-      end
+      return super unless ENV.fetch('NOKUL_SSO_ENABLE', false)
+
+      redirect_to(user_openid_connect_omniauth_authorize_path)
     end
 
     # POST /resource/sign_in
