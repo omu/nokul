@@ -171,4 +171,4 @@ ln -s /vagrant/lib/templates/sso/portal $TEMPLATE_DIR/acme
 lemonldap-ng-cli -yes 1 set portalSkin 'acme' portalSkinBackground 'acme-bg.jpg'
 
 lemonldap-ng-cli update-cache
-reboot
+systemctl restart lemonldap-ng-fastcgi-server.service
