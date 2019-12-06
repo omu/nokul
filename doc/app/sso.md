@@ -12,5 +12,5 @@ Uygulamada SSO'yu aktif hale getirmek için aşağıdaki ortam değişkeni tanı
 NOKUL_SSO_ENABLE=true
 ```
 
-Bu ortam değişkeni olmadığında sistem veritabanından yetkilendirmeye çalışacaktır. LDAP'taki ve veritabanındaki kullanıcı
+Bu ortam değişkeni olmadığında sistem veritabanından yetkilendirmeye çalışacaktır. LDAP ve veritabanındaki kullanıcı
 parolaları aynı olduğundan, kullanıcılar başarılı bir şekilde sisteme giriş yapabilmeye devam edebileceklerdir.

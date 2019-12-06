@@ -41,12 +41,12 @@ apt-get -y install lemonldap-ng \
 	cpanminus
 
 sed -i 's/example\.com/sso\.vagrant\.ga/g' /etc/lemonldap-ng/* /var/lib/lemonldap-ng/conf/lmConf-1.json
-sed -i -e 's/^;checkTime.*/checkTime = 1/' /etc/lemonldap-ng/lemonldap-ng.ini
-sed -i -e "s/^logLevel.*/logLevel=debug/" /etc/lemonldap-ng/lemonldap-ng.ini
+sed -i 's/^;checkTime.*/checkTime = 1/' /etc/lemonldap-ng/lemonldap-ng.ini
+sed -i 's/^logLevel.*/logLevel=debug/' /etc/lemonldap-ng/lemonldap-ng.ini
 
 # allow sso vagrant ip for reload
 # shellcheck disable=SC2117
-sed -i -e "35i \ \ \ \ allow 10.0.3.19;" /etc/nginx/sites-available/handler-nginx.conf
+sed -i '/^\s*location\s*=\s*[/]reload\>/a\    allow 10.0.3.19;' /etc/nginx/sites-available/handler-nginx.conf
 
 # for vagrant
 ln -s /vagrant/lib/templates/sso/etc/nginx/dhparam.pem /etc/nginx/dhparam.pem

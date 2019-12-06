@@ -3,7 +3,7 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  %w[.ngrok.io .serveo.net .localtunnel.me other.vagrant.ga].each { |host| config.hosts <<  host }
+  %w[.ngrok.io .serveo.net .localtunnel.me .vagrant.ga].each { |host| config.hosts <<  host }
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
