@@ -41,7 +41,7 @@ apt-get -y install lemonldap-ng \
 	cpanminus
 
 sed -i 's/example\.com/sso\.vagrant\.ga/g' /etc/lemonldap-ng/* /var/lib/lemonldap-ng/conf/lmConf-1.json
-sed -i -e 's/^;checkTime.*/checkTime = 1/' /etc/lemonldap-ng/lemonldap-ng.ini
+sed -i 's/^;checkTime.*/checkTime = 1/' /etc/lemonldap-ng/lemonldap-ng.ini
 sed -i 's/^logLevel.*/logLevel=debug/' /etc/lemonldap-ng/lemonldap-ng.ini
 
 # allow sso vagrant ip for reload
