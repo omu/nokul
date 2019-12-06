@@ -18,7 +18,7 @@ vagrant up sso --provider=lxc
 Nokulda SSO'yu aktif etmek için `.env` dosyasına aşağıdaki satırı ekleyin:
 
 ```text
-NOKUL_SSO_ENABLED=true
+NOKUL_SSO_ENABLE=true
 ```
 
 Nokul uygulamasına SSO üzerinden giriş yapabilmek için bir kullanıcınızın olması gerekiyor. Kullanıcınızı hazır hale

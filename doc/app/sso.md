@@ -9,7 +9,7 @@ Single Sign-on
 Uygulamada SSO'yu aktif hale getirmek için aşağıdaki ortam değişkeni tanımlanmalıdır.
 
 ```text
-NOKUL_SSO_ENABLED=true
+NOKUL_SSO_ENABLE=true
 ```
 
 Bu ortam değişkeni olmadığında sistem veritabanından yetkilendirmeye çalışacaktır. LDAP'taki ve veritabanındaki kullanıcı
