@@ -29,6 +29,8 @@ class User < ApplicationRecord
   # authentication
   devise :database_authenticatable, :registerable, :recoverable, :rememberable,
          :trackable, :validatable, :lockable, :timeoutable
+  devise :omniauthable, omniauth_providers: %i[openid_connect]
+  devise :timeoutable, timeout_in: 5.minutes
 
   # relations
   has_one_attached :avatar
@@ -105,6 +107,10 @@ class User < ApplicationRecord
   # permalinks
   extend FriendlyId
   friendly_id :permalink, use: :slugged
+
+  def self.from_omniauth(auth)
+    find_or_initialize_by(id_number: auth.uid)
+  end
 
   def permalink
     username, domain = email.split('@') if email

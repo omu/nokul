@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
 devise_for :users, skip: :registrations, controllers: {
-  passwords: 'account/passwords',
-  sessions:  'account/sessions',
-  unlocks:   'account/unlocks'
+  passwords:          'account/passwords',
+  sessions:           'account/sessions',
+  unlocks:            'account/unlocks',
+  omniauth_callbacks: 'account/omniauth_callbacks'
 }
 
 devise_scope :user do
