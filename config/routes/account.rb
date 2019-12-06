@@ -12,6 +12,7 @@ devise_scope :user do
     get 'login', to: 'sessions#new'
     get 'recover', to: 'passwords#new'
     delete 'logout', to: 'sessions#destroy'
+    get 'logout', to: 'sessions#destroy'
   end
 end
 
