@@ -46,7 +46,7 @@ sed -i -e "s/^logLevel.*/logLevel=debug/" /etc/lemonldap-ng/lemonldap-ng.ini
 
 # allow sso vagrant ip for reload
 # shellcheck disable=SC2117
-sed -i -e "35i \ \ \ \ allow 10.0.3.19;" /etc/nginx/sites-available/handler-nginx.conf
+sed -i '/^\s*location\s*=\s*[/]reload\>/a\    allow 10.0.3.19;' /etc/nginx/sites-available/handler-nginx.conf
 
 # for vagrant
 ln -s /vagrant/lib/templates/sso/etc/nginx/dhparam.pem /etc/nginx/dhparam.pem
