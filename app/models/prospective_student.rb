@@ -68,6 +68,7 @@ class ProspectiveStudent < ApplicationRecord
   validates :state_of_education, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :system_register_type, inclusion: { in: system_register_types.keys }
   validates :top_student, inclusion: { in: [true, false] }
+  validates_with ProspectiveStudentValidator, on: :update
 
   # scopes
   scope :registered, -> { where(registered: true) }

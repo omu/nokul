@@ -11,6 +11,7 @@
             <div class='form-group'>
               <div class='col-sm-12'>
                 <%= f.error_notification %>
+                <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
               </div>
 
               <div class='col-sm-12'>
