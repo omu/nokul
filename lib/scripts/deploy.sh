@@ -66,4 +66,4 @@ sudo -EH -u "$operator" bash -xs <<-'EOF'
 	fi
 EOF
 
-systemctl disable ufw
+ufw disable

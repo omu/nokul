@@ -21,6 +21,7 @@ Vagrant.configure('2') do |config|
 
     dev.vm.provider :lxc do |lxc|
       lxc.customize 'cgroup.memory.limit_in_bytes', '2048M'
+      lxc.customize 'net.0.ipv4.address', '10.0.3.15' # other.vagrant.ga
     end
 
     dev.vm.provision 'shell', name: 'environment', env: env, path: 'lib/scripts/environment.sh'
@@ -48,6 +49,17 @@ Vagrant.configure('2') do |config|
     ldap.vm.network :forwarded_port, guest: 389, host: 1389
 
     ldap.vm.provision 'shell', path: 'lib/scripts/ldap.sh'
+  end
+
+  config.vm.define 'sso', autostart: true do |sso|
+    sso.vm.box = 'omu/debian-stable-server'
+
+    sso.vm.provider :lxc do |lxc|
+      lxc.customize 'cgroup.memory.limit_in_bytes', '1024M'
+      lxc.customize 'net.0.ipv4.address', '10.0.3.19' # auth.sso.vagrant.ga
+    end
+
+    sso.vm.provision 'shell', name: 'sso-deploy', path: 'lib/scripts/sso.sh'
   end
 
   config.vm.define 'paas', autostart: false do |paas|

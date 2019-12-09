@@ -45,6 +45,14 @@ module Account
       )
     end
 
+    def papers
+      @pagy, @papers = pagy(
+        current_user.papers.active,
+        link_extra: 'data-remote="true"',
+        items:      PAGY_ITEMS
+      )
+    end
+
     def projects
       @pagy, @projects = pagy(
         current_user.projects.active.order(start_date: :desc),

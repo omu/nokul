@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
 devise_for :users, skip: :registrations, controllers: {
-  passwords: 'account/passwords',
-  sessions:  'account/sessions',
-  unlocks:   'account/unlocks'
+  passwords:          'account/passwords',
+  sessions:           'account/sessions',
+  unlocks:            'account/unlocks',
+  omniauth_callbacks: 'account/omniauth_callbacks'
 }
 
 devise_scope :user do
@@ -11,6 +12,7 @@ devise_scope :user do
     get 'login', to: 'sessions#new'
     get 'recover', to: 'passwords#new'
     delete 'logout', to: 'sessions#destroy'
+    get 'logout', to: 'sessions#destroy'
   end
 end
 
@@ -48,6 +50,7 @@ scope module: :account do
     get :articles
     get :books
     get :certifications
+    get :papers
     get :projects
   end
 end

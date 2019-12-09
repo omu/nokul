@@ -277,4 +277,12 @@ Devise.setup do |config|
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
+
+  config.omniauth :openid_connect,
+                  name:           :openid_connect,
+                  scope:          %i[openid email],
+                  response_type:  :code,
+                  issuer:         Tenant.credentials.lemonldap[:issuer],
+                  discovery:      true,
+                  client_options: Tenant.credentials.lemonldap[:client_options]
 end

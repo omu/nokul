@@ -29,6 +29,7 @@ gem 'ruby-vips', '~> 2.0.16'
 # authentication
 gem 'authy'
 gem 'devise'
+gem 'omniauth_openid_connect'
 
 # authorization
 gem 'pundit'

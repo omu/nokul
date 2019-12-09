@@ -7,5 +7,6 @@ tr:
         books: Kitap oluşturma veya güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde kitaplarınız güncellenecek.
         certifications: Sertifika oluşturma veya güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde sertifikalarınız güncellenecek.
         education_informations: Eğitim bilgileri oluşturma veya güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde eğitim bilgileriniz güncellenecek.
+        papers: Bildiri oluşturma veya güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde bildirimleriniz güncellenecek.
         projects: Proje oluşturma veya güncelleme talebinizi aldık, bir kaç saniye/dakika içerisinde projeleriniz güncellenecek.
         service_not_found: Servis bulunamadı.

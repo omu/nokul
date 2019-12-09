@@ -24,8 +24,14 @@
         <%= link_to :settings, class: 'dropdown-item' do %>
           <%= fa_icon('shield', text: t('.account_settings')) %>
         <% end %>
-        <%= link_to :logout, class: 'dropdown-item', method: :delete do %>
-          <%= fa_icon('lock', text: t('.logout')) %>
+        <% if ENV.fetch('NOKUL_SSO_ENABLE', false) %>
+          <%= link_to "#{Tenant.credentials.lemonldap[:issuer]}/oauth2/logout", class: 'dropdown-item' do %>
+            <%= fa_icon('lock', text: t('.logout')) %>
+          <% end %>
+        <% else %>
+          <%= link_to :logout, class: 'dropdown-item', method: :delete do %>
+            <%= fa_icon('lock', text: t('.logout')) %>
+          <% end %>
         <% end %>
       </div>
     </li>

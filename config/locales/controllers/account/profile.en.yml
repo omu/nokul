@@ -48,6 +48,10 @@ en:
           certifications: Certifications
           create_certifications_from_yoksis: Create my certifications from YOKSIS
           update_certifications_from_yoksis: Update my certifications from YOKSIS
+        papers:
+          create_papers_from_yoksis: Create my papers from YOKSIS
+          papers: Papers
+          update_papers_from_yoksis: Update my papers from YOKSIS
         projects:
           create_projects_from_yoksis: Create my projects from YOKSIS
           projects: Projects
