@@ -30,6 +30,8 @@ tr:
     image:
       not_permitted: '%{mime_type} izin verilen bir dosya türü değil. %{extension_whitelist} türlerinde bir dosya yükleyebilirsiniz'
       size_not_satisfied: Dosya boyutu izin verilen aralıkta değil. Yükleyeceğiniz dosya en az %{minimum} KB, en çok %{maximum} MB boyutunda olabilir.
+    prospective_student:
+      unchangeable_variables: Kayıtlı bir öğrencinin yerleştiği program ve akademik dönemi değiştirilemez.
     position:
       invalid_end_date: Görev başlangıç tarihi bitiş tarihinden sonraki bir tarih olarak seçilmiş.
       multiple_active_repetitive: Bu personelin seçilen birimde aktif olarak aynı görevi var!
