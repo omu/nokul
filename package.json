@@ -14,7 +14,7 @@
     "jquery.maskedinput": "^1.4.1",
     "select2": "^4.0.12",
     "toastr": "^2.1.4",
-    "trix": "^1.0.0",
+    "trix": "^1.2.2",
     "turbolinks": "^5.2.0"
   },
   "devDependencies": {
