@@ -16,6 +16,15 @@ muhendislik_fakultesi_b_blok:
   place_type: egitim
   unit: muhendislik_fakultesi
 
+muhendislik_fakultesi_c_blok:
+  meksis_id: 1249030246
+  name: Mühendislik Fakültesi / C Blok
+  code: Müh-fak-c
+  indoor_area: 14606.6
+  active: true
+  place_type: egitim
+  unit: muhendislik_fakultesi
+
 egitim_fakultesi_d_blok:
   meksis_id: 1249030245
   name: Eğitim Fakültesi / D Blok

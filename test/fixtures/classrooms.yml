@@ -1,31 +1,21 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  meksis_id: 1
-  name: MyString
-  code: MyString
+muh_fak_c_z1:
+  meksis_id: 44868
+  name: Müh-fak-c-z-1
+  code: Ed-z-1
   room_number: 1
-  student_capacity: 1
-  exam_capacity: 1
-  available_space: 1.5
-  height: 1.5
-  width: 1.5
-  length: 1.5
-  volume: 1.5
-  place_type: one
-  building: one
+  student_capacity: 72
+  exam_capacity: 36
+  available_space: 59.7
+  place_type: derslik
+  building: muhendislik_fakultesi_c_blok
 
-two:
-  meksis_id: 1
-  name: MyString
-  code: MyString
-  room_number: 1
-  student_capacity: 1
-  exam_capacity: 1
-  available_space: 1.5
-  height: 1.5
-  width: 1.5
-  length: 1.5
-  volume: 1.5
-  place_type: two
-  building: two
+muh_fak_c_z2:
+  meksis_id: 44874
+  name: Müh-fak-c-z-2
+  code: Ed-z-2
+  room_number: 2
+  student_capacity: 72
+  exam_capacity: 36
+  available_space: 59.7
+  place_type: derslik
+  building: muhendislik_fakultesi_c_blok
