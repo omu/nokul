@@ -49,3 +49,5 @@ tr:
         chart_of_available_spaces: Sınıf Tiplerine Göre Mevcut Alan Miktarı
         chart_of_classrooms: Mekan Türüne Göre Sınıflar
         chart_of_place_numbers: Türüne Göre Mekan Sayıları
+      update:
+        success: Bina başarıyla güncellenmiştir.
