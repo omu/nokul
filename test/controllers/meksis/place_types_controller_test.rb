@@ -5,8 +5,7 @@ require 'test_helper'
 module Meksis
   class PlaceTypesControllerTest < ActionDispatch::IntegrationTest
     setup do
-      @user = users(:john)
-      sign_in @user
+      sign_in users(:john)
     end
 
     test 'should get index' do
