@@ -25,5 +25,5 @@ derslik:
 
 amfi:
   meksis_id: 12
-  name: amfi
+  name: Amfi
   ancestry: <%= ActiveRecord::FixtureSet.identify(:egitim) %>
