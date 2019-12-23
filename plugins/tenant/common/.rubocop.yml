@@ -5,11 +5,15 @@ Style/Lambda:
   Enabled: false
 Style/Documentation:
   Enabled: false
-Metrics/LineLength:
+Layout/LineLength:
   Max: 120
 Layout/HashAlignment:
   EnforcedHashRocketStyle: table
   EnforcedColonStyle: table
+Lint/NonDeterministicRequireOrder:
+  Exclude:
+    - lib/nokul/tenant/tasks.rb
+    - lib/nokul/tenant/tests.rb
 Naming/FileName:
   Exclude:
     - lib/nokul-tenant.rb
