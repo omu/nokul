@@ -13,4 +13,8 @@ class PlaceTypeTest < ActiveSupport::TestCase
   test 'number_of_children method' do
     assert_equal place_types(:egitim).children.count, place_types(:egitim).number_of_children
   end
+
+  test 'non_roots method' do
+    assert_not_includes PlaceType.non_roots, place_types(:egitim)
+  end
 end

@@ -101,4 +101,12 @@ class ArticleTest < ActiveSupport::TestCase
   validates_numerical_range :special_issue, greater_than_or_equal_to: 0
   validates_numerical_range :year, greater_than_or_equal_to: 1950, less_than_or_equal_to: 2050
   validates_numerical_range :yoksis_id, greater_than: 0
+
+  test 'unique_count method' do
+    assert_equal Article.unique_count, Article.active.group_by(&:yoksis_id).count
+  end
+
+  test 'most_recent method' do
+    assert_equal Article.most_recent, Article.order(created_at: :desc).limit(10)
+  end
 end
