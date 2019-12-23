@@ -280,7 +280,7 @@ GEM
       activesupport (>= 3.0.0)
     pwned (2.0.0)
     rack (2.0.8)
-    rack-attack (6.2.1)
+    rack-attack (6.2.2)
       rack (>= 1.0, < 3)
     rack-mini-profiler (1.1.4)
       rack (>= 1.2.0)
