@@ -8,6 +8,13 @@ en:
         curriculum: Curriculum
         groups: Groups
         unit: Unit
+      available_course/groups:
+        name: Group Name
+        quota: Quota
+        lecturers: Lecturers
+      available_course/groups/lecturers:
+        lecturer: Lecturer
+        coordinator: Coordinator
   cocoon:
     groups:
       add: Add Group

@@ -4,8 +4,13 @@ require 'test_helper'
 
 module Meksis
   class DashboardControllerTest < ActionDispatch::IntegrationTest
-    # test "the truth" do
-    #   assert true
-    # end
+    setup do
+      sign_in users(:john)
+    end
+
+    test 'should get index' do
+      get meksis_path
+      assert_response :success
+    end
   end
 end

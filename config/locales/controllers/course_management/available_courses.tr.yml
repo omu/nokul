@@ -8,6 +8,13 @@ tr:
         curriculum: Müfredat
         groups: Gruplar
         unit: Birim
+      available_course/groups:
+        name: Grup Adı
+        quota: Kontenjan
+        lecturers: Öğretim elemanları
+      available_course/groups/lecturers:
+        lecturer: Öğretim Elemanı
+        coordinator: Koordinatör
   cocoon:
     groups:
       add: Grup Ekle

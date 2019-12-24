@@ -1,11 +1,29 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
+egitim:
   meksis_id: 1
-  name: MyString
-  ancestry: MyString
+  name: Eğitim
 
-two:
-  meksis_id: 1
-  name: MyString
-  ancestry: MyString
+arastirma:
+  meksis_id: 2
+  name: Araştırma
+
+yonetim:
+  meksis_id: 3
+  name: Yönetim
+
+saglik_hizmeti:
+  meksis_id: 4
+  name: Sağlık Hizmeti
+
+kutuphane:
+  meksis_id: 5
+  name: Kütüphane
+
+derslik:
+  meksis_id: 11
+  name: Derslik
+  ancestry: <%= ActiveRecord::FixtureSet.identify(:egitim) %>
+
+amfi:
+  meksis_id: 12
+  name: Amfi
+  ancestry: <%= ActiveRecord::FixtureSet.identify(:egitim) %>
