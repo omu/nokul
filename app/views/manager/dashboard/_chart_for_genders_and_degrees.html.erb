@@ -1,27 +1,25 @@
 <div id="chart-for-genders-degree"></div>
 
 <% categories = data.map { |item| item[:degree] }.uniq %>
-<% genders    = data.map { |item| item[:gender] }.uniq.sort %>
-<%
-  series = genders.map do |gender, hash|
-    {
-      name: gender,
-      color: (
-        case gender
-        when 'Erkek' then '#96d1c7'
-        when 'Kadın' then '#fc7978'
-        else              '#ffafb0'
-        end
-      ),
-      data: categories.map do |category|
-        row = data.find { |item| item[:degree] == category && item[:gender] == gender } || {}
-        row[:number_of_students]
-      end
-    }
-  end
-%>
+<% genders = data.map { |item| item[:gender] }.uniq.sort %>
+<% series = genders.map do |gender, _hash|
+     {
+       name:  gender,
+       color: (
+         case gender
+         when 'Erkek' then '#96d1c7'
+         when 'Kadın' then '#fc7978'
+         else              '#ffafb0'
+         end
+       ),
+       data:  categories.map do |category|
+         row = data.find { |item| item[:degree] == category && item[:gender] == gender } || {}
+         row[:number_of_students]
+       end
+     }
+   end %>
 
-<script>
+<script type="text/javascript">
   Highcharts.chart('chart-for-genders-degree', {
       chart: { type: 'column' },
       title: { text: 'Öğrenim Türlerine Göre Öğrenci Sayıları' },

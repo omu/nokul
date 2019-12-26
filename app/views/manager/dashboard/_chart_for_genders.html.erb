@@ -1,22 +1,20 @@
 <div id="chart-for-genders"></div>
 
-<%
-  series = data.map do |item|
-    {
-      name: item[:gender],
-      color: (
-        case item[:gender]
-        when 'Erkek' then '#96d1c7'
-        when 'Kadın' then '#fc7978'
-        else              '#ffafb0'
-        end
-      ),
-      y: item[:number_of_students]
-    }
-  end
-%>
+<% series = data.map do |item|
+     {
+       name:  item[:gender],
+       color: (
+         case item[:gender]
+         when 'Erkek' then '#96d1c7'
+         when 'Kadın' then '#fc7978'
+         else              '#ffafb0'
+         end
+       ),
+       y:     item[:number_of_students]
+     }
+   end %>
 
-<script>
+<script type="text/javascript">
   Highcharts.chart('chart-for-genders', {
     chart: {
       plotBackgroundColor: null,

@@ -1,18 +1,16 @@
 <div id="double_major_and_minor"></div>
 
-<%
-  series = data.reject { |item| item[:category] == 'other' }.map do |item|
-    {
-      name: case item[:category]
-            when 'minor'       then 'Yandal'
-            when 'double major' then 'Çift Anadal'
-            end,
-      y: item[:number_of_students]
-    }
-  end
-%>
+<% series = data.reject { |item| item[:category] == 'other' }.map do |item|
+     {
+       name: case item[:category]
+             when 'minor' then 'Yandal'
+             when 'double major' then 'Çift Anadal'
+             end,
+       y:    item[:number_of_students]
+     }
+   end %>
 
-<script>
+<script type="text/javascript">
   Highcharts.chart('double_major_and_minor', {
     chart: {
       plotBackgroundColor: null,
