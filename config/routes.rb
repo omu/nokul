@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   draw :meksis
   draw :patron
   draw :reference
+  draw :studentship
   draw :yoksis
 
   resources :units do

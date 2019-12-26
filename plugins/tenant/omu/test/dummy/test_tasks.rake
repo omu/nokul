@@ -3,7 +3,7 @@
 require 'rails/test_unit/runner'
 
 namespace :test do
-  task :foo do
+  task foo: :environment do
     $LOAD_PATH << '../../../../tenant/test'
     Rails::TestUnit::Runner.rake_run
   end

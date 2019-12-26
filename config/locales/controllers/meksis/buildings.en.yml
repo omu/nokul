@@ -19,9 +19,8 @@ en:
       pdf: &pdf
         <<: *common
         buildings_list: Buildings List
-        university_name: Ondokuz Mayıs University
         stats: Stats
-        title: The Inventory Classification System
+        title: The Stats of the Inventory Classification System
         value: Value
         variable: Variable
       edit:
@@ -50,3 +49,5 @@ en:
         chart_of_available_spaces: Numeric Distribution of Available Spaces by Classroom
         chart_of_classrooms: Numeric Distribution of Classrooms by Place Type
         chart_of_place_numbers: Numeric Distribution of Place Numbers by Place Type
+      update:
+        success: Building successfully updated.

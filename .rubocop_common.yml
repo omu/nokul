@@ -2,12 +2,12 @@ require: rubocop-performance
 
 Style/Documentation:
   Enabled: false
-Layout/AlignHash:
+Layout/HashAlignment:
   Enabled: true
   EnforcedHashRocketStyle: table
   EnforcedColonStyle: table
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 120
 
 Naming/MemoizedInstanceVariableName:

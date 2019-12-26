@@ -4,7 +4,7 @@ class AcademicTerm < ApplicationRecord
   include EnumForTerm
 
   # callbacks
-  after_save :deactivate_academic_terms
+  after_save :deactivate_academic_terms, :delete_cache
 
   # relations
   has_many :calendars, dependent: :nullify
@@ -21,9 +21,17 @@ class AcademicTerm < ApplicationRecord
   # scopes
   scope :active, -> { where(active: true) }
 
+  def self.current
+    Rails.cache.fetch('active_term') { active.last }
+  end
+
   private
 
   def deactivate_academic_terms
     AcademicTerm.where.not(id: id).update(active: false) if active?
+  end
+
+  def delete_cache
+    Rails.cache.delete('active_term')
   end
 end

@@ -29,6 +29,7 @@ gem 'ruby-vips', '~> 2.0.16'
 # authentication
 gem 'authy'
 gem 'devise'
+gem 'omniauth_openid_connect'
 
 # authorization
 gem 'pundit'
@@ -52,7 +53,6 @@ gem 'groupdate'
 gem 'pagy'
 gem 'simple_form'
 gem 'wicked_pdf'
-gem 'wkhtmltopdf-binary'
 
 # api
 gem 'jbuilder', '~> 2.9'
@@ -63,8 +63,8 @@ gem 'pwned'
 gem 'rack-attack'
 
 # validators
-gem 'email_address'
 gem 'telephone_number'
+gem 'valid_email2'
 
 # error tracking
 gem 'rollbar'

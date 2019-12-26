@@ -15,6 +15,7 @@ class AvailableCourseTest < ActiveSupport::TestCase
   has_many :evaluation_types, class_name: 'CourseEvaluationType', dependent: :destroy
   has_many :groups, class_name: 'AvailableCourseGroup', dependent: :destroy
   has_many :lecturers, through: :groups
+  has_many :course_enrollments, dependent: :destroy
   accepts_nested_attributes_for :groups, allow_destroy: true
 
   # callbacks
@@ -25,5 +26,27 @@ class AvailableCourseTest < ActiveSupport::TestCase
     fake = available_courses(:ati_fall_2018_2019).dup
     assert_not fake.valid?
     assert_not_empty fake.errors[:curriculum_course]
+  end
+
+  # scopes
+  test 'without_ids returns available courses without given ids' do
+    available_course = available_courses(:elective_course)
+    assert_not_includes AvailableCourse.without_ids(available_course.id), available_course
+  end
+
+  test 'compulsories returns compulsory available courses' do
+    available_course = available_courses(:compulsory_course)
+    assert_includes AvailableCourse.compulsories, available_course
+  end
+
+  test 'electives returns elective available courses' do
+    available_course = available_courses(:elective_course)
+    assert_includes AvailableCourse.electives, available_course
+  end
+
+  # custom methods
+  test 'quota_full? method' do
+    assert available_courses(:elective_course).quota_full?
+    assert_not available_courses(:compulsory_course).quota_full?
   end
 end

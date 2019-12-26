@@ -1237,6 +1237,43 @@ ALTER SEQUENCE public.course_assessment_methods_id_seq OWNED BY public.course_as
 
 
 --
+-- Name: course_enrollments; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.course_enrollments (
+    id bigint NOT NULL,
+    semester integer,
+    student_id bigint NOT NULL,
+    available_course_id bigint NOT NULL,
+    status integer DEFAULT 0 NOT NULL,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT course_enrollments_semester_null CHECK ((semester IS NOT NULL)),
+    CONSTRAINT course_enrollments_semester_numericality CHECK ((semester > 0)),
+    CONSTRAINT course_enrollments_status_numericality CHECK ((status >= 0))
+);
+
+
+--
+-- Name: course_enrollments_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.course_enrollments_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: course_enrollments_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.course_enrollments_id_seq OWNED BY public.course_enrollments.id;
+
+
+--
 -- Name: course_evaluation_types; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -2180,6 +2217,95 @@ ALTER SEQUENCE public.meeting_agendas_id_seq OWNED BY public.meeting_agendas.id;
 
 
 --
+-- Name: papers; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.papers (
+    id bigint NOT NULL,
+    access_link text,
+    activity integer,
+    author_id integer,
+    authors character varying,
+    number_of_authors integer,
+    city character varying,
+    country_id bigint,
+    discipline character varying,
+    doi character varying,
+    issn character varying,
+    incentive_point double precision DEFAULT 0.0,
+    issue character varying,
+    keywords text,
+    language_of_publication character varying,
+    first_page integer,
+    last_page integer,
+    last_update timestamp without time zone,
+    name character varying,
+    presentation_type integer,
+    print_isbn character varying,
+    publication_status integer,
+    release_date date,
+    scope integer,
+    special_issue character varying,
+    sponsored_by character varying,
+    type integer,
+    type_of_release integer,
+    volume integer,
+    user_id bigint NOT NULL,
+    yoksis_id integer,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT papers_access_link_length CHECK ((length(access_link) <= 2000)),
+    CONSTRAINT papers_activity_null CHECK ((activity IS NOT NULL)),
+    CONSTRAINT papers_activity_numericality CHECK ((activity >= 0)),
+    CONSTRAINT papers_author_id_numericality CHECK ((author_id >= 0)),
+    CONSTRAINT papers_authors_length CHECK ((length((authors)::text) <= 255)),
+    CONSTRAINT papers_city_length CHECK ((length((city)::text) <= 255)),
+    CONSTRAINT papers_discipline_length CHECK ((length((discipline)::text) <= 255)),
+    CONSTRAINT papers_doi_length CHECK ((length((doi)::text) <= 255)),
+    CONSTRAINT papers_first_page_numericality CHECK (((first_page >= 0) AND (first_page < 15000))),
+    CONSTRAINT papers_incentive_point_numericality CHECK ((incentive_point >= (0)::double precision)),
+    CONSTRAINT papers_issn_length CHECK ((length((issn)::text) <= 255)),
+    CONSTRAINT papers_issue_length CHECK ((length((issue)::text) <= 255)),
+    CONSTRAINT papers_keywords_length CHECK ((length(keywords) <= 4000)),
+    CONSTRAINT papers_language_of_publication_length CHECK ((length((language_of_publication)::text) <= 255)),
+    CONSTRAINT papers_last_page_numericality CHECK (((last_page >= 0) AND (last_page < 15000))),
+    CONSTRAINT papers_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT papers_number_of_authors_numericality CHECK ((number_of_authors >= 0)),
+    CONSTRAINT papers_presentation_type_numericality CHECK ((presentation_type >= 0)),
+    CONSTRAINT papers_print_isbn_length CHECK ((length((print_isbn)::text) <= 255)),
+    CONSTRAINT papers_publication_status_numericality CHECK ((publication_status >= 0)),
+    CONSTRAINT papers_scope_null CHECK ((scope IS NOT NULL)),
+    CONSTRAINT papers_scope_numericality CHECK ((scope >= 0)),
+    CONSTRAINT papers_special_issue_length CHECK ((length((special_issue)::text) <= 255)),
+    CONSTRAINT papers_sponsored_by_length CHECK ((length((sponsored_by)::text) <= 255)),
+    CONSTRAINT papers_type_numericality CHECK ((type >= 0)),
+    CONSTRAINT papers_type_of_release_numericality CHECK ((type_of_release >= 0)),
+    CONSTRAINT papers_volume_numericality CHECK ((volume >= 0)),
+    CONSTRAINT papers_yoksis_id_null CHECK ((yoksis_id IS NOT NULL)),
+    CONSTRAINT papers_yoksis_id_numericality CHECK ((yoksis_id >= 0))
+);
+
+
+--
+-- Name: papers_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.papers_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: papers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.papers_id_seq OWNED BY public.papers.id;
+
+
+--
 -- Name: permissions; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -3049,9 +3175,15 @@ CREATE TABLE public.students (
     unit_id bigint NOT NULL,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
+    semester integer,
+    year integer,
     CONSTRAINT students_permanently_registered_null CHECK ((permanently_registered IS NOT NULL)),
+    CONSTRAINT students_semester_null CHECK ((semester IS NOT NULL)),
+    CONSTRAINT students_semester_numericality CHECK ((semester > 0)),
     CONSTRAINT students_student_number_length CHECK ((length((student_number)::text) <= 255)),
-    CONSTRAINT students_student_number_presence CHECK (((student_number IS NOT NULL) AND ((student_number)::text !~ '^\s*$'::text)))
+    CONSTRAINT students_student_number_presence CHECK (((student_number IS NOT NULL) AND ((student_number)::text !~ '^\s*$'::text))),
+    CONSTRAINT students_year_null CHECK ((year IS NOT NULL)),
+    CONSTRAINT students_year_numericality CHECK ((year >= 0))
 );
 
 
@@ -3410,6 +3542,7 @@ CREATE TABLE public.users (
     activated_at timestamp without time zone,
     mobile_phone character varying,
     books_count integer DEFAULT 0,
+    papers_count integer DEFAULT 0,
     CONSTRAINT users_activated_null CHECK ((activated IS NOT NULL)),
     CONSTRAINT users_articles_count_null CHECK ((articles_count IS NOT NULL)),
     CONSTRAINT users_articles_count_numericality CHECK ((articles_count >= 0)),
@@ -3644,6 +3777,13 @@ ALTER TABLE ONLY public.course_assessment_methods ALTER COLUMN id SET DEFAULT ne
 
 
 --
+-- Name: course_enrollments id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.course_enrollments ALTER COLUMN id SET DEFAULT nextval('public.course_enrollments_id_seq'::regclass);
+
+
+--
 -- Name: course_evaluation_types id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -3809,6 +3949,13 @@ ALTER TABLE ONLY public.ldap_sync_errors ALTER COLUMN id SET DEFAULT nextval('pu
 --
 
 ALTER TABLE ONLY public.meeting_agendas ALTER COLUMN id SET DEFAULT nextval('public.meeting_agendas_id_seq'::regclass);
+
+
+--
+-- Name: papers id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.papers ALTER COLUMN id SET DEFAULT nextval('public.papers_id_seq'::regclass);
 
 
 --
@@ -4341,6 +4488,14 @@ ALTER TABLE ONLY public.course_assessment_methods
 
 
 --
+-- Name: course_enrollments course_enrollments_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.course_enrollments
+    ADD CONSTRAINT course_enrollments_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: course_evaluation_types course_evaluation_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -4554,6 +4709,14 @@ ALTER TABLE ONLY public.ldap_sync_errors
 
 ALTER TABLE ONLY public.meeting_agendas
     ADD CONSTRAINT meeting_agendas_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: papers papers_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.papers
+    ADD CONSTRAINT papers_pkey PRIMARY KEY (id);
 
 
 --
@@ -5305,6 +5468,20 @@ CREATE INDEX index_course_assessment_methods_on_course_evaluation_type_id ON pub
 
 
 --
+-- Name: index_course_enrollments_on_available_course_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_course_enrollments_on_available_course_id ON public.course_enrollments USING btree (available_course_id);
+
+
+--
+-- Name: index_course_enrollments_on_student_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_course_enrollments_on_student_id ON public.course_enrollments USING btree (student_id);
+
+
+--
 -- Name: index_course_evaluation_types_on_available_course_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -5540,6 +5717,20 @@ CREATE INDEX index_meeting_agendas_on_agenda_id ON public.meeting_agendas USING 
 --
 
 CREATE INDEX index_meeting_agendas_on_committee_meeting_id ON public.meeting_agendas USING btree (committee_meeting_id);
+
+
+--
+-- Name: index_papers_on_country_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_papers_on_country_id ON public.papers USING btree (country_id);
+
+
+--
+-- Name: index_papers_on_user_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_papers_on_user_id ON public.papers USING btree (user_id);
 
 
 --
@@ -6142,6 +6333,14 @@ ALTER TABLE ONLY public.group_courses
 
 
 --
+-- Name: course_enrollments fk_rails_76acb3bc21; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.course_enrollments
+    ADD CONSTRAINT fk_rails_76acb3bc21 FOREIGN KEY (available_course_id) REFERENCES public.available_courses(id);
+
+
+--
 -- Name: positions fk_rails_78999e7b17; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6206,6 +6405,14 @@ ALTER TABLE ONLY public.units
 
 
 --
+-- Name: course_enrollments fk_rails_8ab18ea2b7; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.course_enrollments
+    ADD CONSTRAINT fk_rails_8ab18ea2b7 FOREIGN KEY (student_id) REFERENCES public.students(id);
+
+
+--
 -- Name: positions fk_rails_8d264a5cbc; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6259,6 +6466,14 @@ ALTER TABLE ONLY public.cities
 
 ALTER TABLE ONLY public.certifications
     ADD CONSTRAINT fk_rails_99ad041748 FOREIGN KEY (user_id) REFERENCES public.users(id);
+
+
+--
+-- Name: papers fk_rails_9adcc8c446; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.papers
+    ADD CONSTRAINT fk_rails_9adcc8c446 FOREIGN KEY (user_id) REFERENCES public.users(id);
 
 
 --
@@ -6435,6 +6650,14 @@ ALTER TABLE ONLY public.academic_credentials
 
 ALTER TABLE ONLY public.available_courses
     ADD CONSTRAINT fk_rails_d65cfbfb56 FOREIGN KEY (curriculum_course_id) REFERENCES public.curriculum_courses(id);
+
+
+--
+-- Name: papers fk_rails_d78f5fcdcb; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.papers
+    ADD CONSTRAINT fk_rails_d78f5fcdcb FOREIGN KEY (country_id) REFERENCES public.countries(id);
 
 
 --
@@ -6672,7 +6895,10 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20191003102101'),
 ('20191007074407'),
 ('20191008065752'),
+('20191018084942'),
+('20191021073002'),
 ('20191111082956'),
-('20191113054514');
+('20191113054514'),
+('20191127055945');
 
 

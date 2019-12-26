@@ -14,7 +14,7 @@ tr:
         committees: Kurullar/Komisyonlar
         course_groups: Ders Grupları
         course_management: Ders İşlemleri
-        course_registration: Ders Kaydı
+        course_enrollments: Ders Kayıtları
         course_unit_groups: Ders Grupları
         courses: Dersler
         curriculums: Müfredatlar

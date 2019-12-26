@@ -19,7 +19,7 @@ end
 
 namespace :static_analysis do
   desc 'Detect suspicious executables'
-  task :executables do
+  task executables: :environment do
     suspicious_executables = SuspiciousExecutable.find
 
     next warn 'Yey, no suspicious files found!' if suspicious_executables.empty?

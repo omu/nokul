@@ -45,7 +45,7 @@ module Nokul
         ActiveSupport::EncryptedFile.new(
           content_path: file,
           env_key: 'RAILS_MASTER_KEY',
-          key_path: Rails.root.join('config', 'master.key'),
+          key_path: Rails.root.join('config/master.key'),
           raise_if_missing_key: true
         )
       end

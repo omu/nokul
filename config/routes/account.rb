@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
 devise_for :users, skip: :registrations, controllers: {
-  passwords: 'account/passwords',
-  sessions:  'account/sessions',
-  unlocks:   'account/unlocks'
+  passwords:          'account/passwords',
+  sessions:           'account/sessions',
+  unlocks:            'account/unlocks',
+  omniauth_callbacks: 'account/omniauth_callbacks'
 }
 
 devise_scope :user do
@@ -11,6 +12,7 @@ devise_scope :user do
     get 'login', to: 'sessions#new'
     get 'recover', to: 'passwords#new'
     delete 'logout', to: 'sessions#destroy'
+    get 'logout', to: 'sessions#destroy'
   end
 end
 
@@ -35,20 +37,21 @@ scope module: :account do
       patch 'profile', to: 'profiles#update'
     end
   end
-  get 'activation', to: 'activations#new'
-  post 'activation', to: 'activations#create'
-  post 'activation_phone_verification', to: 'activations#check_phone_verification'
 
-  scope module: :profiles do
-    get 'profile/edit', action: :edit
-    get 'profile', action: :show
-    patch 'profile', action: :update
-    get :save_academic_credentials_from_yoksis
-    get :save_articles_from_yoksis
-    get :save_books_from_yoksis
-    get :save_certifications_from_yoksis
-    get :save_education_informations_from_yoksis
-    get :save_projects_from_yoksis
+  get 'activation',                     to: 'activations#new'
+  post 'activation',                    to: 'activations#create'
+  post 'activation_phone_verification', to: 'activations#check_phone_verification'
+  get 'yoksis_services/fetch',          to: 'yoksis_services#fetch'
+  get 'profile',                        to: 'profile#index'
+  patch 'profile',                      to: 'profile#update'
+
+  namespace :profile do
+    get :edit
+    get :articles
+    get :books
+    get :certifications
+    get :papers
+    get :projects
   end
 end
 

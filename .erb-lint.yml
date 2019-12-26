@@ -8,13 +8,13 @@ linters:
         Enabled: false
       Layout/InitialIndentation:
         Enabled: false
-      Layout/TrailingBlankLines:
+      Layout/TrailingEmptyLines:
         Enabled: false
       Naming/FileName:
         Enabled: false
       Style/FrozenStringLiteralComment:
         Enabled: false
-      Metrics/LineLength:
+      Layout/LineLength:
         Enabled: false
       Lint/UselessAssignment:
         Enabled: false

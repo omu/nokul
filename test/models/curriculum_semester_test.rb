@@ -25,6 +25,13 @@ class CurriculumSemesterTest < ActiveSupport::TestCase
   # enums
   enum term: { fall: 0, spring: 1, summer: 2 }
 
+  # scopes
+  test 'ordered returns semesters ordered by sequence' do
+    semesters = curriculums(:one).semesters.ordered
+    assert_equal semesters.first, curriculum_semesters(:one)
+    assert_equal semesters.last, curriculum_semesters(:two)
+  end
+
   # custom methods
   test 'total_ects method' do
     assert_equal curriculum_semesters(:one).total_ects, 6.0

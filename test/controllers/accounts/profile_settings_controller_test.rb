@@ -5,7 +5,7 @@ require 'test_helper'
 module Accounts
   class ProfileSettingsControllerTest < ActionDispatch::IntegrationTest
     setup do
-      @user = users(:john)
+      @user = users(:serhat)
       sign_in @user
     end
 
@@ -24,7 +24,7 @@ module Accounts
       }
 
       assert(@user.avatar.attached?)
-      assert_response :success
+      assert_redirected_to profile_path
     end
   end
 end

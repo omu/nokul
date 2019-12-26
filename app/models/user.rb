@@ -29,6 +29,8 @@ class User < ApplicationRecord
   # authentication
   devise :database_authenticatable, :registerable, :recoverable, :rememberable,
          :trackable, :validatable, :lockable, :timeoutable
+  devise :omniauthable, omniauth_providers: %i[openid_connect]
+  devise :timeoutable, timeout_in: 5.minutes
 
   # relations
   has_one_attached :avatar
@@ -37,6 +39,7 @@ class User < ApplicationRecord
   has_many :articles, dependent: :destroy
   has_many :books, dependent: :destroy
   has_many :certifications, dependent: :destroy
+  has_many :papers, dependent: :destroy
   has_many :education_informations, dependent: :destroy
   has_many :employees, dependent: :destroy
   has_many :identities, dependent: :destroy
@@ -56,7 +59,12 @@ class User < ApplicationRecord
                                    dependent:   :nullify,
                                    inverse_of:  :user
   # validations
-  validates :email, presence: true, uniqueness: true, length: { maximum: 255 }
+  validates :email, presence: true, uniqueness: true, length: { maximum: 255 }, 'valid_email_2/email': {
+    mx:                     true,
+    disposable:             true,
+    disallow_subaddressing: true,
+    message:                I18n.t('errors.invalid_email')
+  }
   validates :extension_number, allow_blank:  true,
                                length:       { maximum: 8 },
                                numericality: { only_integer: true }
@@ -73,7 +81,6 @@ class User < ApplicationRecord
   validates :skype, allow_blank: true, length: { maximum: 50 }
   validates :twitter, allow_blank: true, length: { maximum: 50 }
   validates :website, allow_blank: true, length: { maximum: 50 }
-  validates_with EmailAddress::ActiveRecordValidator, field: :email
   validates_with ImageValidator, field: :avatar, if: proc { |a| a.avatar.attached? }
 
   # callbacks
@@ -100,6 +107,10 @@ class User < ApplicationRecord
   # permalinks
   extend FriendlyId
   friendly_id :permalink, use: :slugged
+
+  def self.from_omniauth(auth)
+    find_or_initialize_by(id_number: auth.uid)
+  end
 
   def permalink
     username, domain = email.split('@') if email
