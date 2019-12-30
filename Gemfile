@@ -23,7 +23,7 @@ gem 'ancestry'
 
 # active-storage
 gem 'aws-sdk-s3', require: false
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.10'
 gem 'ruby-vips', '~> 2.0.16'
 
 # authentication
@@ -100,7 +100,7 @@ group :test do
   gem 'capybara'
   gem 'codacy-coverage', require: false
   gem 'minitest-focus'
-  gem 'webdrivers', '~> 4.1'
+  gem 'webdrivers', '~> 4.2'
   gem 'webmock'
 end
 
