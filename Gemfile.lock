@@ -137,7 +137,7 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
-    chartkick (3.3.0)
+    chartkick (3.3.1)
     childprocess (3.0.0)
     cocoon (1.2.14)
     codacy-coverage (2.1.5)
