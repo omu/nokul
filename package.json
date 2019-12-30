@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {
     "@coreui/coreui-free-bootstrap-admin-template": "https://github.com/coreui/coreui-free-bootstrap-admin-template.git#master",
+    "@highcharts/map-collection": "^1.1.2",
     "@rails/actioncable": "^6.0.0-alpha",
     "@rails/actiontext": "^6.0.2",
     "@rails/activestorage": "^6.0.0-alpha",

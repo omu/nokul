@@ -24,4 +24,7 @@
   <div class="col-sm-6 mb-5">
     <%= render 'chart_for_double_major_and_minor', data: Xokul::Ubs::Statistic::Student.double_major_and_minor %>
   </div>
+  <div class="col-sm-12 mb-5">
+    <%= render 'chart_for_map', data: Xokul::Ubs::Statistic::Student.by_cities %>
+  </div>
 </div>
