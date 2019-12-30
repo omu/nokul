@@ -7,7 +7,7 @@
     "@rails/actiontext": "^6.0.2",
     "@rails/activestorage": "^6.0.0-alpha",
     "@rails/ujs": "^6.0.1",
-    "@rails/webpacker": "4.1.0",
+    "@rails/webpacker": "4.2.2",
     "chalk": "^3.0.0",
     "flatpickr": "^4.6.3",
     "intl-tel-input": "^16.0.8",
