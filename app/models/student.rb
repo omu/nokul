@@ -11,6 +11,7 @@ class Student < ApplicationRecord
   has_one :identity, dependent: :destroy
   has_many :calendars, -> { Calendar.active }, through: :unit
   has_many :curriculums, through: :unit
+  has_many :semester_registrations, dependent: :destroy
 
   # scopes
   # TODO: Query will be organized according to activity status
@@ -35,6 +36,11 @@ class Student < ApplicationRecord
     return 0 if semester == 1
 
     student_number.to_s[-2..].to_f / 25
+  end
+
+  def current_registration
+    @current_registration =
+      semester_registrations.where(semester: semester).last || semester_registrations.create
   end
 
   private
