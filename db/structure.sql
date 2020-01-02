@@ -2858,6 +2858,43 @@ ALTER SEQUENCE public.scope_assignments_id_seq OWNED BY public.scope_assignments
 
 
 --
+-- Name: semester_registrations; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.semester_registrations (
+    id bigint NOT NULL,
+    semester integer,
+    status integer DEFAULT 0 NOT NULL,
+    academic_term_id bigint NOT NULL,
+    student_id bigint NOT NULL,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT semester_registrations_semester_null CHECK ((semester IS NOT NULL)),
+    CONSTRAINT semester_registrations_semester_numericality CHECK ((semester > 0)),
+    CONSTRAINT semester_registrations_status_numericality CHECK ((status >= 0))
+);
+
+
+--
+-- Name: semester_registrations_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.semester_registrations_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: semester_registrations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.semester_registrations_id_seq OWNED BY public.semester_registrations.id;
+
+
+--
 -- Name: student_disability_types; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -4043,6 +4080,13 @@ ALTER TABLE ONLY public.scope_assignments ALTER COLUMN id SET DEFAULT nextval('p
 
 
 --
+-- Name: semester_registrations id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.semester_registrations ALTER COLUMN id SET DEFAULT nextval('public.semester_registrations_id_seq'::regclass);
+
+
+--
 -- Name: student_disability_types id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -4837,6 +4881,14 @@ ALTER TABLE ONLY public.schema_migrations
 
 ALTER TABLE ONLY public.scope_assignments
     ADD CONSTRAINT scope_assignments_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: semester_registrations semester_registrations_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.semester_registrations
+    ADD CONSTRAINT semester_registrations_pkey PRIMARY KEY (id);
 
 
 --
@@ -5916,6 +5968,20 @@ CREATE INDEX index_scope_assignments_on_user_id ON public.scope_assignments USIN
 
 
 --
+-- Name: index_semester_registrations_on_academic_term_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_semester_registrations_on_academic_term_id ON public.semester_registrations USING btree (academic_term_id);
+
+
+--
+-- Name: index_semester_registrations_on_student_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_semester_registrations_on_student_id ON public.semester_registrations USING btree (student_id);
+
+
+--
 -- Name: index_students_on_unit_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6245,6 +6311,14 @@ ALTER TABLE ONLY public.course_groups
 
 
 --
+-- Name: semester_registrations fk_rails_4de980fa38; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.semester_registrations
+    ADD CONSTRAINT fk_rails_4de980fa38 FOREIGN KEY (academic_term_id) REFERENCES public.academic_terms(id);
+
+
+--
 -- Name: calendar_committee_decisions fk_rails_4f3eb3da94; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6482,6 +6556,14 @@ ALTER TABLE ONLY public.papers
 
 ALTER TABLE ONLY public.scope_assignments
     ADD CONSTRAINT fk_rails_9d2d00a9ee FOREIGN KEY (user_id) REFERENCES public.users(id);
+
+
+--
+-- Name: semester_registrations fk_rails_a47620f287; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.semester_registrations
+    ADD CONSTRAINT fk_rails_a47620f287 FOREIGN KEY (student_id) REFERENCES public.students(id);
 
 
 --
@@ -6899,6 +6981,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20191021073002'),
 ('20191111082956'),
 ('20191113054514'),
-('20191127055945');
+('20191127055945'),
+('20191226074849');
 
 
