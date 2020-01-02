@@ -35,16 +35,25 @@ class StudentCourseEnrollmentService # rubocop:disable Metrics/ClassLength
 
   def course_enrollments
     @course_enrollments ||=
-      student.course_enrollments
-             .where(semester: @student.semester)
-             .includes(available_course: [curriculum_course: %i[course curriculum_semester]])
+      @student.current_registration
+              .course_enrollments
+              .includes(available_course: [curriculum_course: %i[course curriculum_semester]])
   end
 
-  def enrollment_status
-    @enrollment_status ||=
-      if course_enrollments.any?
-        course_enrollments.exists?(status: :draft) ? :draft : :saved
-      end
+  def enroll(course_enrollment_params)
+    course_enrollment = @student.current_registration.course_enrollments.new(course_enrollment_params)
+    enrollable!(course_enrollment.available_course)
+    course_enrollment.save
+  end
+
+  def drop(course_enrollment)
+    dropable!(course_enrollment.available_course)
+    course_enrollment.destroy
+  end
+
+  def save
+    @student.current_registration.course_enrollments.update(status: :saved)
+    @student.current_registration.update(status: :saved)
   end
 
   def enrollable(available_course)

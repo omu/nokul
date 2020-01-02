@@ -10,10 +10,10 @@
       </div>
       <div class="card-body">
         <div class="list-group">
-          <% if @service.enrollment_status != :saved %>
-            <% url = new_student_course_enrollment_url(@student) %>
-          <% else %>
+          <% if @student.current_registration.saved? %>
             <% url = list_student_course_enrollments_url(@student) %>
+          <% else %>
+            <% url = new_student_course_enrollment_url(@student) %>
           <% end %>
 
           <%= link_to url, class: 'list-group-item list-group-item-action align-items-center' do %>
@@ -21,7 +21,7 @@
               <h5 class="mb-1"><%= @student.unit.name %></h5>
             </div>
             <p class="mb-1"><%= @student.registation_date_range %></p>
-            <small><%= "#{t('.enrollment_status')}: #{t('activerecord.enums.course_enrollment.statuses')[@service.enrollment_status]}" if @service.enrollment_status.presence %></small>
+            <small><%= "#{t('.enrollment_status')}: #{t('activerecord.enums.course_enrollment.statuses')[@student.current_registration.status.to_sym]}" %></small>
           <% end %>
         </div>
       </div>
