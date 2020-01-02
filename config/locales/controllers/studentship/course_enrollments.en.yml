@@ -5,6 +5,10 @@ en:
         statuses:
           draft: Draft
           saved: Saved
+      semester_enrollment:
+        statuses:
+          draft: Draft
+          saved: Saved
   studentship:
     course_enrollments:
       available_courses: &course_attributes

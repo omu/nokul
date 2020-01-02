@@ -5,6 +5,10 @@ tr:
         statuses:
           draft: Taslak
           saved: Kaydedildi
+      semester_enrollment:
+        statuses:
+          draft: Taslak
+          saved: Kaydedildi
   studentship:
     course_enrollments:
       available_courses: &course_attributes
