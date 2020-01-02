@@ -31,12 +31,6 @@ class StudentCourseEnrollmentServiceTest < ActiveSupport::TestCase
     assert_includes course_enrollments, course_enrollments(:elective)
   end
 
-  test 'enrollment_status method' do
-    assert_not StudentCourseEnrollmentService.new(students(:serhat_omu)).enrollment_status
-    assert_equal StudentCourseEnrollmentService.new(students(:john)).enrollment_status, :saved
-    assert_equal @service.enrollment_status, :draft
-  end
-
   test 'catalog method' do
     @service.build_catalog
     semester_courses = @service.catalog[curriculum_semesters(:bilgisayar_muh_mufredati_ucuncu_donem)]
