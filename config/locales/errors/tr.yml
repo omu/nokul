@@ -6,3 +6,4 @@ tr:
     invalid_email: Geçerli bir e-mail adresi değil!
     system_error: Sistemsel bir hata oluştu. Lütfen daha sonra tekrar deneyin.
     unicode_not_supported: Alıcı numara unicode desteklemiyor!
+    invalid_authenticity_token: Geçersiz kimlik doğrulama jetonu! Lütfen tekrar deneyin.
