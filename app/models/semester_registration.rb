@@ -7,6 +7,7 @@ class SemesterRegistration < ApplicationRecord
   # relations
   belongs_to :academic_term
   belongs_to :student
+  has_many :course_enrollments, dependent: :destroy
 
   # validations
   validates :semester, uniqueness: { scope: :student_id }

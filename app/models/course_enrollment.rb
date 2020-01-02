@@ -6,6 +6,7 @@ class CourseEnrollment < ApplicationRecord
 
   # relations
   belongs_to :available_course
+  belongs_to :semester_registration
 
   # validations
   validates :available_course, uniqueness: { scope: :semester_registration_id }
