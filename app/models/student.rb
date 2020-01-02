@@ -11,7 +11,6 @@ class Student < ApplicationRecord
   has_one :identity, dependent: :destroy
   has_many :calendars, -> { Calendar.active }, through: :unit
   has_many :curriculums, through: :unit
-  has_many :course_enrollments, dependent: :destroy
 
   # scopes
   # TODO: Query will be organized according to activity status

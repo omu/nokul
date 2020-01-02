@@ -1242,14 +1242,10 @@ ALTER SEQUENCE public.course_assessment_methods_id_seq OWNED BY public.course_as
 
 CREATE TABLE public.course_enrollments (
     id bigint NOT NULL,
-    semester integer,
-    student_id bigint NOT NULL,
     available_course_id bigint NOT NULL,
     status integer DEFAULT 0 NOT NULL,
     created_at timestamp(6) without time zone NOT NULL,
     updated_at timestamp(6) without time zone NOT NULL,
-    CONSTRAINT course_enrollments_semester_null CHECK ((semester IS NOT NULL)),
-    CONSTRAINT course_enrollments_semester_numericality CHECK ((semester > 0)),
     CONSTRAINT course_enrollments_status_numericality CHECK ((status >= 0))
 );
 
@@ -5527,13 +5523,6 @@ CREATE INDEX index_course_enrollments_on_available_course_id ON public.course_en
 
 
 --
--- Name: index_course_enrollments_on_student_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX index_course_enrollments_on_student_id ON public.course_enrollments USING btree (student_id);
-
-
---
 -- Name: index_course_evaluation_types_on_available_course_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6479,14 +6468,6 @@ ALTER TABLE ONLY public.units
 
 
 --
--- Name: course_enrollments fk_rails_8ab18ea2b7; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.course_enrollments
-    ADD CONSTRAINT fk_rails_8ab18ea2b7 FOREIGN KEY (student_id) REFERENCES public.students(id);
-
-
---
 -- Name: positions fk_rails_8d264a5cbc; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6982,6 +6963,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20191111082956'),
 ('20191113054514'),
 ('20191127055945'),
-('20191226074849');
+('20191226074849'),
+('20200102083531');
 
 
