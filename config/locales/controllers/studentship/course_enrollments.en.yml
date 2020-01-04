@@ -5,7 +5,7 @@ en:
         statuses:
           draft: Draft
           saved: Saved
-      semester_enrollment:
+      semester_registration:
         statuses:
           draft: Draft
           saved: Saved

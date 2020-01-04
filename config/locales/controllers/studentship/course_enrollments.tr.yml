@@ -5,7 +5,7 @@ tr:
         statuses:
           draft: Taslak
           saved: Kaydedildi
-      semester_enrollment:
+      semester_registration:
         statuses:
           draft: Taslak
           saved: Kaydedildi
