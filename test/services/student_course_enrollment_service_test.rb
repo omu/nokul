@@ -66,10 +66,6 @@ class StudentCourseEnrollmentServiceTest < ActiveSupport::TestCase
     assert_equal available_course.errors.full_messages.first, translate('already_enrolled_at_group')
   end
 
-  test 'enrollabe! method' do
-    assert @service.enrollable(available_courses(:compulsory_course_2))
-  end
-
   test 'dropable method' do
     assert_empty @service.dropable(available_courses(:elective_course)).errors
   end
@@ -77,10 +73,6 @@ class StudentCourseEnrollmentServiceTest < ActiveSupport::TestCase
   test 'dropable method with error messages' do
     available_course = @service.dropable(available_courses(:old_course))
     assert_equal available_course.errors.full_messages.first, translate('must_drop_first')
-  end
-
-  test 'dropable! method' do
-    assert @service.dropable(available_courses(:elective_course))
   end
 
   private
