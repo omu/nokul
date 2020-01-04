@@ -25,7 +25,7 @@
         <td><%= @student.gpa %></td>
       </tr>
       <tr>
-        <th><%= t('.enrollment_status') %></th>
+        <th><%= t('.registration_status') %></th>
         <td><%= t('activerecord.enums.semester_registration.statuses')[@student.current_registration.status.to_sym] %></td>
       </tr>
     </tbody>

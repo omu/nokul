@@ -6,7 +6,7 @@ module Studentship
     before_action :set_service, except: :index
     before_action :set_course_enrollment, only: :destroy
     before_action :check_registrability, except: :index
-    before_action :check_enrollment_status, except: %i[index list]
+    before_action :check_registration_status, except: %i[index list]
 
     def index
       @students = current_user.students.includes(:unit)
@@ -62,7 +62,7 @@ module Studentship
       redirect_to(student_course_enrollments_path(@student), alert: t('.errors.not_proper_register_event_range'))
     end
 
-    def check_enrollment_status
+    def check_registration_status
       return if @student.current_registration.draft?
 
       redirect_to(student_course_enrollments_path(@student), alert: t('.errors.enrollment_completed'))

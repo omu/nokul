@@ -36,7 +36,7 @@ en:
         registration completed: You can not perform this action since you have completed the course selection.
       index:
         course_enrollments: Course Enrollments
-        enrollment_status: Enrollment Status
+        registration_status: Enrollment Status
         registration_date_range: "Online Course Registration Dates: %{start_time} - %{end_time}"
       list:
         <<: *course_attributes
@@ -58,7 +58,7 @@ en:
         success: Selected courses successfully saved.
       student_info:
         academic_term: Academic Term
-        enrollment_status: Enrollment Status
+        registration_status: Enrollment Status
         gpa: GPA
         program: Program
         student_info: Student Information

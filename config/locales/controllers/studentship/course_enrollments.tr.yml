@@ -36,7 +36,7 @@ tr:
         registration completed: Ders seçimini tamamladığınız için bu işlemi gerçekleştiremezsiniz.
       index:
         course_enrollments: Ders Kayıtları
-        enrollment_status: Kayıtlanma Durumu
+        registration_status: Kayıt Durumu
         registration_date_range: "Çevrimiçi Ders Kayıt Tarihleri: %{start_time} - %{end_time}"
       list:
         <<: *course_attributes
@@ -58,7 +58,7 @@ tr:
         success: Seçilen dersler başarıyla kaydedildi.
       student_info:
         academic_term: Akademik Dönem
-        enrollment_status: Kayıtlanma Durumu
+        registration_status: Kayıtlanma Durumu
         gpa: GANO
         program: Program
         student_info: Öğrenci Bilgileri
