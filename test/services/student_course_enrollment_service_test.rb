@@ -31,6 +31,22 @@ class StudentCourseEnrollmentServiceTest < ActiveSupport::TestCase
     assert_includes course_enrollments, course_enrollments(:elective)
   end
 
+  test 'enroll method' do
+    available_course = available_courses(:compulsory_course_2)
+    @service.enroll(available_course_id: available_course.id)
+    assert_includes @service.course_enrollments.pluck(:available_course_id), available_course.id
+  end
+
+  test 'drop method' do
+    @service.drop(course_enrollments(:elective))
+    assert_not_includes @service.course_enrollments, course_enrollments(:elective)
+  end
+
+  test 'save method' do
+    @service.save
+    assert @service.student.current_registration.saved?
+  end
+
   test 'catalog method' do
     @service.build_catalog
     semester_courses = @service.catalog[curriculum_semesters(:bilgisayar_muh_mufredati_ucuncu_donem)]
