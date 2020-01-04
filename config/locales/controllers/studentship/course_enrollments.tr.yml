@@ -29,6 +29,7 @@ tr:
         success: Ders seçilen derslerden çıkarıldı.
       errors:
         already_enrolled_at_group: Ders grubundan seçilebilecek maksimum AKTS miktarı kadar ders seçilmiş.
+        empty_selected_courses_list: Seçilen dersler listesi boş.
         quota_full: Ders için belirlenen kontenjan dolmuş.
         must_drop_first: Öncelikli olarak en üst dönemden alınan dersler çıkarılmalı.
         not_enough_ects: Seçilebilecek AKTS miktarı bu dersi alabilmeniz için yeterli değil.

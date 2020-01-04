@@ -29,6 +29,7 @@ en:
         success: The course successfully removed from selected courses.
       errors:
         already_enrolled_at_group: The maximum amount of ECTS that can be selected from the course group is selected.
+        empty_selected_courses_list: The list of selected courses is empty.
         quota_full: The course has reached its quota.
         must_drop_first: Courses taken from the top semester must be dropped first.
         not_enough_ects: The amount of ECTS that can be selected is not enough for you to take this course.
