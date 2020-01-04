@@ -42,13 +42,19 @@ class StudentCourseEnrollmentService # rubocop:disable Metrics/ClassLength
 
   def enroll(course_enrollment_params)
     course_enrollment = @student.current_registration.course_enrollments.new(course_enrollment_params)
-    enrollable!(course_enrollment.available_course)
-    course_enrollment.save
+    available_course = course_enrollment.available_course
+
+    return course_enrollment.save if enrollable(available_course).errors.empty?
+
+    raise EnrollableError, available_course.errors.full_messages.first
   end
 
   def drop(course_enrollment)
-    dropable!(course_enrollment.available_course)
-    course_enrollment.destroy
+    available_course = course_enrollment.available_course
+
+    return course_enrollment.destroy if dropable(available_course).errors.empty?
+
+    raise EnrollableError, available_course.errors.full_messages.first
   end
 
   def save
@@ -63,23 +69,11 @@ class StudentCourseEnrollmentService # rubocop:disable Metrics/ClassLength
     available_course
   end
 
-  def enrollable!(available_course)
-    return true if enrollable(available_course).errors.empty?
-
-    raise EnrollableError, available_course.errors.full_messages.first
-  end
-
   def dropable(available_course)
     sequence = available_course.curriculum_course.curriculum_semester.sequence
     available_course.errors.add(:base, translate('must_drop_first')) if max_sequence > sequence
 
     available_course
-  end
-
-  def dropable!(available_course)
-    return true if dropable(available_course).errors.empty?
-
-    raise EnrollableError, available_course.errors.full_messages.first
   end
 
   private
