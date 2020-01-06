@@ -168,7 +168,7 @@ GEM
       smart_properties
     erubi (1.9.0)
     execjs (2.7.0)
-    faraday (0.17.1)
+    faraday (0.17.3)
       multipart-post (>= 1.2, < 3)
     ffi (1.11.3)
     fit-commit (3.8.1)
