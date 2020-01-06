@@ -1246,7 +1246,7 @@ CREATE TABLE public.course_enrollments (
     status integer DEFAULT 0 NOT NULL,
     created_at timestamp(6) without time zone NOT NULL,
     updated_at timestamp(6) without time zone NOT NULL,
-    semester_registration_id bigint NOT NULL,
+    semester_registration_id bigint,
     CONSTRAINT course_enrollments_status_numericality CHECK ((status >= 0))
 );
 
