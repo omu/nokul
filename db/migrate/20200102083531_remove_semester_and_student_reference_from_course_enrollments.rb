@@ -3,6 +3,6 @@ class RemoveSemesterAndStudentReferenceFromCourseEnrollments < ActiveRecord::Mig
     remove_reference :course_enrollments, :student, null: false, foreign_key: true
     remove_numericality_constraint :course_enrollments, :semester, greater_than: 0
     remove_null_constraint :course_enrollments, :semester
-    remove_column :course_enrollments, :semester, :integer
+    remove_column :course_enrollments, :semester, :integer, default: 1
   end
 end
