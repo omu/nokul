@@ -69,7 +69,7 @@ module Studentship
     def check_registration_status
       return if @student.current_registration.draft?
 
-      redirect_to(student_course_enrollments_path(@student), alert: t('.errors.enrollment_completed'))
+      redirect_to(student_course_enrollments_path(@student), alert: t('.errors.registration_completed'))
     end
 
     def course_enrollment_params

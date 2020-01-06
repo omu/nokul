@@ -34,7 +34,7 @@ en:
         must_drop_first: Courses taken from the top semester must be dropped first.
         not_enough_ects: The amount of ECTS that can be selected is not enough for you to take this course.
         not_proper_register_event_range: There is no online course registration activity covering the date range today.
-        registration completed: You can not perform this action since you have completed the course selection.
+        registration_completed: You can not perform this action since you have completed the course selection.
       index:
         course_enrollments: Course Enrollments
         registration_status: Enrollment Status
