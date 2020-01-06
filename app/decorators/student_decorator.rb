@@ -24,6 +24,6 @@ class StudentDecorator < SimpleDelegator
   end
 
   def translate(key, params = {})
-    I18n.t("studentship.course_enrollments.#{key}", params)
+    I18n.t("studentship.course_enrollments.#{key}", **params)
   end
 end
