@@ -157,6 +157,6 @@ class StudentCourseEnrollmentService # rubocop:disable Metrics/ClassLength
   end
 
   def translate(key, params = {})
-    I18n.t("studentship.course_enrollments.errors.#{key}", params)
+    I18n.t("studentship.course_enrollments.errors.#{key}", **params)
   end
 end

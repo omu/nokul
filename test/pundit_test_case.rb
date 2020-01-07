@@ -19,9 +19,9 @@ class PunditTestCase < ActiveSupport::TestCase
         Expected %{policy_class} to grant %{permission}
         on %{record} for user but it didn't
       MSG
-    }.merge(options)
+    }.merge(**options)
 
-    pundit_test(user, options)
+    pundit_test(user, **options)
   end
 
   # Usage:
@@ -36,17 +36,17 @@ class PunditTestCase < ActiveSupport::TestCase
         Expected %{policy_class} not to grant %{permission}
         on %{record} for user but it did
       MSG
-    }.merge(options)
+    }.merge(**options)
 
-    pundit_test(user, options)
+    pundit_test(user, **options)
   end
 
   private
 
   # rubocop:disable Metrics/MethodLength
   def pundit_test(user, **options)
-    permissions = resolve_permissions(options)
-    policy      = policy_instance(user, options)
+    permissions = resolve_permissions(**options)
+    policy      = policy_instance(user, **options)
 
     permissions.each do |permission|
       public_send(
