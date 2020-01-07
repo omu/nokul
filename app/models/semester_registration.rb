@@ -14,8 +14,7 @@ class SemesterRegistration < ApplicationRecord
   has_many :course_enrollments, dependent: :destroy
 
   # validations
-  validates :semester, uniqueness: { scope: :student_id }
-  validates :semester, numericality: { greater_than: 0 }
+  validates :semester, uniqueness: { scope: :student_id }, numericality: { greater_than: 0 }
 
   private
 
