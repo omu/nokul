@@ -9,8 +9,7 @@ class SemesterRegistrationTest < ActiveSupport::TestCase
   extend Support::Minitest::ValidationHelper
 
   # callbacks
-  before_validation :assign_academic_term
-  before_validation :assign_semester
+  before_validation :assign_academic_term_and_semester
 
   # enums
   enum status: { draft: 0, saved: 1 }
