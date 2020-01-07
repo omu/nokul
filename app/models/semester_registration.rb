@@ -2,8 +2,7 @@
 
 class SemesterRegistration < ApplicationRecord
   # callbacks
-  before_validation :assign_academic_term
-  before_validation :assign_semester
+  before_validation :assign_academic_term_and_semester
 
   # enums
   enum status: { draft: 0, saved: 1 }
@@ -18,11 +17,7 @@ class SemesterRegistration < ApplicationRecord
 
   private
 
-  def assign_academic_term
-    self.academic_term = AcademicTerm.current
-  end
-
-  def assign_semester
-    self.semester = student&.semester
+  def assign_academic_term_and_semester
+    assign_attributes(academic_term: AcademicTerm.current, semester: student&.semester)
   end
 end
