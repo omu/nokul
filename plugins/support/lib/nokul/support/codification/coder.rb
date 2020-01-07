@@ -12,7 +12,8 @@ module Nokul
 
         def initialize(code, **options)
           @code      = code.must_be_any_of! Code
-          @processor = Processor.new @options = default_options.merge(options)
+          @options   = default_options.merge(**options)
+          @processor = Processor.new(**@options)
 
           setup if defined? setup
         end
