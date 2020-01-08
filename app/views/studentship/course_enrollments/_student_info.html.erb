@@ -26,7 +26,7 @@
       </tr>
       <tr>
         <th><%= t('.registration_status') %></th>
-        <td><%= t('activerecord.enums.semester_registration.statuses')[@student.current_registration.status.to_sym] %></td>
+        <td><%= enum_t(@student.current_registration, :status) %></td>
       </tr>
     </tbody>
   </table>
