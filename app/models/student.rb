@@ -40,7 +40,7 @@ class Student < ApplicationRecord
   end
 
   def current_registration
-    @current_registration =
+    @current_registration ||=
       semester_registrations.where(semester: semester).last || semester_registrations.create
   end
 
