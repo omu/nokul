@@ -25,8 +25,8 @@
         <td><%= @student.gpa %></td>
       </tr>
       <tr>
-        <th><%= t('.enrollment_status') %></th>
-        <td><%= t('activerecord.enums.course_enrollment.statuses')[@service.enrollment_status] %></td>
+        <th><%= t('.registration_status') %></th>
+        <td><%= enum_t(@student.current_registration, :status) %></td>
       </tr>
     </tbody>
   </table>
