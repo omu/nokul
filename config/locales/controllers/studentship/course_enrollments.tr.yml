@@ -5,6 +5,10 @@ tr:
         statuses:
           draft: Taslak
           saved: Kaydedildi
+      semester_registration:
+        statuses:
+          draft: Taslak
+          saved: Kaydedildi
   studentship:
     course_enrollments:
       available_courses: &course_attributes
@@ -25,14 +29,15 @@ tr:
         success: Ders seçilen derslerden çıkarıldı.
       errors:
         already_enrolled_at_group: Ders grubundan seçilebilecek maksimum AKTS miktarı kadar ders seçilmiş.
+        empty_selected_courses_list: Seçilen dersler listesi boş.
         quota_full: Ders için belirlenen kontenjan dolmuş.
         must_drop_first: Öncelikli olarak en üst dönemden alınan dersler çıkarılmalı.
         not_enough_ects: Seçilebilecek AKTS miktarı bu dersi alabilmeniz için yeterli değil.
         not_proper_register_event_range: Tarih aralığı bugünü kapsayan çevrimiçi ders kayıtlanma aktivitesi bulunmamaktadır.
-        registration completed: Ders seçimini tamamladığınız için bu işlemi gerçekleştiremezsiniz.
+        registration_completed: Ders seçimini tamamladığınız için bu işlemi gerçekleştiremezsiniz.
       index:
         course_enrollments: Ders Kayıtları
-        enrollment_status: Kayıtlanma Durumu
+        registration_status: Kayıt Durumu
         registration_date_range: "Çevrimiçi Ders Kayıt Tarihleri: %{start_time} - %{end_time}"
       list:
         <<: *course_attributes
@@ -54,7 +59,7 @@ tr:
         success: Seçilen dersler başarıyla kaydedildi.
       student_info:
         academic_term: Akademik Dönem
-        enrollment_status: Kayıtlanma Durumu
+        registration_status: Kayıtlanma Durumu
         gpa: GANO
         program: Program
         student_info: Öğrenci Bilgileri

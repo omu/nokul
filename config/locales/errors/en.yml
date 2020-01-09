@@ -6,3 +6,4 @@ en:
     invalid_email: This is not a valid e-mail address!
     system_error: The system error has occurred. Please try later.
     unicode_not_supported: Receiver does not support unicode encoding!
+    invalid_authenticity_token: Invalid authenticity token! Please try again.

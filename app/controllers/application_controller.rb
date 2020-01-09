@@ -4,14 +4,14 @@ class ApplicationController < ActionController::Base
   include Pundit
   include Patron::Sudoable
 
-  protect_from_forgery with: :exception
+  protect_from_forgery with: :reset_session
 
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :authenticate_user!
   before_action :set_locale
 
   rescue_from ActiveRecord::RecordNotFound, with: :not_found
-  rescue_from Pundit::NotAuthorizedError,   with: :user_not_authorized
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
   def set_locale
     update_preferred_language if user_signed_in?
@@ -53,6 +53,11 @@ class ApplicationController < ActionController::Base
   end
 
   private
+
+  def handle_unverified_request
+    super
+    redirect_back(fallback_location: root_path, alert: t('errors.invalid_authenticity_token'))
+  end
 
   def user_not_authorized(exception)
     flash[:alert] = t(

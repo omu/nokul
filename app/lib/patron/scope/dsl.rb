@@ -32,7 +32,7 @@ module Patron
       def filter(attribute, **options)
         exist!(attribute)
 
-        filters[attribute] = Option.new(attribute, options)
+        filters[attribute] = Option.new(attribute, **options)
       end
 
       def filters
@@ -64,7 +64,7 @@ module Patron
                     :i18n_key
 
         def initialize(attribute, **args)
-          @collection = collection_to_proc(args)
+          @collection = collection_to_proc(**args)
           @multiple   = args.fetch(:multiple, false)
           @type       = forecast_type(args)
           @i18n_key   = args.fetch(:i18n_key, attribute)
@@ -93,7 +93,7 @@ module Patron
 
         private
 
-        def collection_to_proc(args)
+        def collection_to_proc(**args)
           collection = args.fetch(:collection, proc { nil })
 
           case collection
