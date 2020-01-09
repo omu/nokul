@@ -15,6 +15,12 @@ module Patron
       @permissions ||= ActiveSupport::HashWithIndifferentAccess.new
     end
 
+    def privilege?(identifier, privilege)
+      return false unless permissions.include?(identifier.to_sym)
+
+      permissions[identifier.to_sym].privileges.include?(privilege)
+    end
+
     # Example
     # permission :foo, name: 'Foo', description: 'Desc'
     def permission(identifier, name:, description:, privileges:)

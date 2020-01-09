@@ -19,7 +19,7 @@
           <td><%= permission.identifier %></td>
           <% Patron::PermissionBuilder::PRIVILEGES.each do |privilege| %>
             <th>
-              <% if RoleManagement.permissions[permission.identifier.to_sym].privileges.include?(privilege) %>
+              <% if RoleManagement.privilege?(permission.identifier.to_sym, privilege) %>
                 <%= icon_for_check(permission.privileges.public_send("#{privilege}?")) %>
               <% else %>
                 -
