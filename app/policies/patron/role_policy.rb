@@ -11,7 +11,7 @@ module Patron
     end
 
     def create?
-      permitted? :write
+      new?
     end
 
     def new?
