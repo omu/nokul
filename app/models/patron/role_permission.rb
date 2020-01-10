@@ -22,6 +22,6 @@ module Patron
     delegate :name, :identifier, :available_privileges, to: :permission
 
     # enums
-    flag :privileges, Patron::PermissionBuilder::PRIVILEGES
+    flag :privileges, Patron::PermissionBuilder.supported_privileges
   end
 end

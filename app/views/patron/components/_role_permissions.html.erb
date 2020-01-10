@@ -4,7 +4,7 @@
       <tr>
         <th><%= t('name', scope: %i[activerecord attributes patron/permission]) %></th>
         <th><%= t('identifier', scope: %i[activerecord attributes patron/permission]) %></th>
-        <% Patron::PermissionBuilder::PRIVILEGES.each do |privilege| %>
+        <% Patron::PermissionBuilder.supported_privileges.each do |privilege| %>
           <th><%= t(privilege, scope: %i[active_flag patron/role_permission privileges]) %></th>
         <% end %>
         <% if actions_visible %>
@@ -17,7 +17,7 @@
         <tr>
           <td><%= link_to(permission.name, permission.permission) %></td>
           <td><%= permission.identifier %></td>
-          <% Patron::PermissionBuilder::PRIVILEGES.each do |privilege| %>
+          <% Patron::PermissionBuilder.supported_privileges.each do |privilege| %>
             <th>
               <% if RoleManagement.privilege?(permission.identifier.to_sym, privilege) %>
                 <%= icon_for_check(permission.privileges.public_send("#{privilege}?")) %>

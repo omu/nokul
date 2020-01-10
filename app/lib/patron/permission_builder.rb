@@ -4,12 +4,16 @@ module Patron
   module PermissionBuilder
     mattr_accessor :all, default: ActiveSupport::HashWithIndifferentAccess.new
 
-    PRIVILEGES = %i[
-      read
-      write
-      destroy
-      report
-    ].freeze
+    SUPPORTED_PRIVILEGES = {
+      read:    0,
+      write:   1,
+      destroy: 2,
+      report:  3
+    }.freeze
+
+    def self.supported_privileges
+      SUPPORTED_PRIVILEGES.sort_by { |_, v| v }.map(&:first)
+    end
 
     def permissions
       @permissions ||= ActiveSupport::HashWithIndifferentAccess.new
@@ -43,7 +47,7 @@ module Patron
 
     def available_privileges_check!(privileges)
       privileges.each do |privilege|
-        raise "Unavailable privilege: #{privilege}" unless PRIVILEGES.include?(privilege)
+        raise "Unavailable privilege: #{privilege}" unless SUPPORTED_PRIVILEGES.key?(privilege)
       end
 
       privileges.inquiry
