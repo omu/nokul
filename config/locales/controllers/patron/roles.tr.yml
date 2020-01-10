@@ -20,6 +20,8 @@ tr:
         success: Rol başarıyla silindi.
       edit:
         form_title: Rolü Güncelle
+      form:
+        permissions: İzinler
       index:
         card_header: Roller
         new_role_link: Yeni Rol Ekle
