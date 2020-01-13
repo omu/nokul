@@ -46,7 +46,7 @@ Rol ve izin bazlı yetkilendirme yönetimi için `Pundit` gemi kullanılmıştı
 ### Dahili (built-in) Rol ve İzin Tanımlama
 
 Sistem genelinde temel rollendirme için kullanılacak rol ve izinlerin built-in olarak oluşturulması gerekir. Dahili rol
-ve izinleri `config/initializers/role_management.rb` dosyası üzerinden tanımlanır. Aşağıda rol ve izin tanımlama
+ve izinler `config/initializers/role_management.rb` dosyası üzerinden tanımlanır. Aşağıda rol ve izin tanımlama
 örneğine görmektesiniz.
 
 ```ruby
