@@ -12,14 +12,14 @@ module Patron
 
     before_validation do
       privileges.to_a.each do |privilege|
-        next if available_privileges.include?(privilege)
+        next if privileges_for_identifier.include?(privilege)
 
         errors.add(:base, I18n.t('patron.errors.invalid_privilege', privilege: privilege))
       end
     end
 
     # delegates
-    delegate :name, :identifier, :available_privileges, to: :permission
+    delegate :name, :identifier, :privileges_for_identifier, to: :permission
 
     # enums
     flag :privileges, Patron::PermissionBuilder.supported_privileges

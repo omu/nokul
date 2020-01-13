@@ -32,7 +32,7 @@ module Patron
         name:        name,
         identifier:  identifier,
         description: description,
-        privileges:  available_privileges_check!(privileges)
+        privileges:  supported_privileges_check!(privileges)
       )
 
       permissions[identifier]           = generated_permission
@@ -45,9 +45,9 @@ module Patron
 
     private
 
-    def available_privileges_check!(privileges)
+    def supported_privileges_check!(privileges)
       privileges.each do |privilege|
-        raise "Unavailable privilege: #{privilege}" unless SUPPORTED_PRIVILEGES.key?(privilege)
+        raise "Unsupported privilege: #{privilege}" unless SUPPORTED_PRIVILEGES.key?(privilege)
       end
 
       privileges.inquiry
