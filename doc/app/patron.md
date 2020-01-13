@@ -97,8 +97,9 @@ Parametreler:
 - `permissions (Hash):` Rolün sahip olduğu izinler ve bu rol için izinlere verilen ayrıcalıklar **({ izin_tanımlayıcısı:
   [Ayrıcalık Listesi] })**
 
-### Dahili (built-in) Rol ve İzin Tanımlama
+### Dahili Rol ve İzinleri Veritabanına Aktarma
 
+`rails patron:all` rake görevini kullanarak veritabanı aktarım işlemini gerçekleştirebilirsiniz.
 
 ### Kapsam Oluşturması ve Kullanımı
 
