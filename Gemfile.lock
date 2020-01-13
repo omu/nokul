@@ -353,7 +353,7 @@ GEM
       rack (>= 1.1)
       rubocop (>= 0.72.0)
     ruby-progressbar (1.10.1)
-    ruby-vips (2.0.16)
+    ruby-vips (2.0.17)
       ffi (~> 1.9)
     rubyzip (2.0.0)
     safe_yaml (1.0.5)
@@ -511,7 +511,7 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rails
   ruby-progressbar
-  ruby-vips (~> 2.0.16)
+  ruby-vips (~> 2.0.17)
   sassc (~> 2.2.1)
   sassc-rails
   sidekiq
