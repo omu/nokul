@@ -24,6 +24,16 @@ module ComponentHelper
     STATUSES.fetch(status.to_sym, 'secondary')
   end
 
+  def content_loader_tag(url, header: nil, refresh: {} )
+    render 'layouts/components/content_loader',
+            url:     url,
+            header:  header,
+            refresh: OpenStruct.new(
+              auto:     refresh.fetch(:auto, false),
+              interval: refresh.fetch(:interval, 10000)
+            )
+  end
+
   def loading_tag(text = t('loading'))
     tag.div(class: 'loading', id: 'loading', style: 'display: none;') do
       tag.div(class: 'loading-content') do
