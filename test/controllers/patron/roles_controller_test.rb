@@ -31,9 +31,14 @@ module Patron
 
     test 'should create role' do
       parameters = {
-        name:           'Role Create',
-        identifier:     'role_create',
-        permission_ids: Permission.pluck(:id).sort
+        name:                        'Role Create',
+        identifier:                  'role_create',
+        role_permissions_attributes: [
+          {
+            permission_id: patron_permissions(:scope_query_management).id,
+            privileges:    %w[read write destroy]
+          }
+        ]
       }
 
       assert_difference('Patron::Role.count') do
@@ -44,7 +49,7 @@ module Patron
 
       assert_equal parameters[:name], role.name
       assert_equal parameters[:identifier], role.identifier
-      assert_equal parameters[:permission_ids].sort, role.permission_ids.sort
+      assert_equal [patron_permissions(:scope_query_management).id], role.permission_ids
 
       action_check('create')
       assert_redirected_to patron_role_path(role)
@@ -62,9 +67,14 @@ module Patron
       role = patron_roles(:role_to_update)
 
       parameters = {
-        name:           'Role Update',
-        identifier:     'role_update',
-        permission_ids: Patron::Permission.pluck(:id).sort
+        name:                        'Role Update',
+        identifier:                  'role_update',
+        role_permissions_attributes: [
+          {
+            permission_id: patron_permissions(:role_management).id,
+            privileges:    %w[read write]
+          }
+        ]
       }
       patch patron_role_path(role), params: { patron_role: parameters }
 
@@ -72,7 +82,7 @@ module Patron
 
       assert_equal parameters[:name], role.name
       assert_equal parameters[:identifier], role.identifier
-      assert_equal parameters[:permission_ids].sort, role.permission_ids.sort
+      assert_equal [patron_permissions(:role_management).id], role.permission_ids
 
       action_check('update')
       assert_redirected_to patron_role_path(role)

@@ -50,7 +50,7 @@ module Patron
       private
 
       def exist!(attribute)
-        return if model.attribute_names.include?(attribute.to_s)
+        return if Rails.env.test? || model.attribute_names.include?(attribute.to_s)
 
         raise ArgumentError, "Unrecognized attribute: #{attribute} for #{model}"
       end

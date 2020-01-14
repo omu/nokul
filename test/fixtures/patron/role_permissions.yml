@@ -1,18 +1,24 @@
 one:
   role: admin
   permission: unit_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
 two:
   role: admin
   permission: course_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
 three:
   role: authorization_manager
   permission: role_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
 four:
   role: authorization_manager
   permission: permission_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
 five:
   role: authorization_manager
   permission: scope_query_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
 six:
   role: authorization_manager
   permission: authorization_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>

@@ -1,0 +1,36 @@
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th><%= t('name', scope: %i[activerecord attributes patron/permission]) %></th>
+        <th><%= t('identifier', scope: %i[activerecord attributes patron/permission]) %></th>
+        <% Patron::PermissionBuilder.supported_privileges.each do |privilege| %>
+          <th><%= t(privilege, scope: %i[active_flag patron/role_permission privileges]) %></th>
+        <% end %>
+        <% if actions_visible %>
+          <th><%= t('actions') %></th>
+        <% end %>
+      </tr>
+    </thead>
+    <tbody>
+      <% permissions.each do |permission| %>
+        <tr>
+          <td><%= link_to(permission.name, permission.permission) %></td>
+          <td><%= permission.identifier %></td>
+          <% Patron::PermissionBuilder.supported_privileges.each do |privilege| %>
+            <th>
+              <% if RoleManagement.privilege?(permission.identifier.to_sym, privilege) %>
+                <%= icon_for_check(permission.privileges.public_send("#{privilege}?")) %>
+              <% else %>
+                -
+              <% end %>
+            </th>
+          <% end %>
+          <% if actions_visible %>
+            <td><%= link_to_show(permission) %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

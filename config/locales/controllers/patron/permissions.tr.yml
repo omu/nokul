@@ -5,6 +5,10 @@ tr:
         identifier: İzin Tanımlayıcı
         name: İzin Adı
         description: İzin Açıklaması
+        privileges: Ayrıcalıkları
+      patron/role_permission:
+        permission: İzin
+        privileges: Ayrıcalıkları
   patron:
     permissions:
       index:
@@ -15,4 +19,10 @@ tr:
         roles: Roller
         smart_search_placeholder: Modele Özel Anahtar Kelime ile Arama
         users: Kullanıcılar
-
+  active_flag:
+     patron/role_permission:
+      privileges:
+        read: Okuma
+        write: Yazma
+        destroy: Silme
+        report: Raporlama

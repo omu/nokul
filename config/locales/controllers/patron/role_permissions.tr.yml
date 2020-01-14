@@ -1,0 +1,13 @@
+tr:
+  activerecord:
+    attributes:
+      patron/role_permission:
+        permission: İzin
+        privileges: Ayrıcalıkları
+  active_flag:
+     patron/role_permission:
+      privileges:
+        read: Okuma
+        write: Yazma
+        destroy: Silme
+        report: Raporlama

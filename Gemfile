@@ -126,3 +126,5 @@ Dir['plugins/tenant/**/*.gemspec'].each do |gemspec|
 
   gem name, path: File.dirname(gemspec), require: false
 end
+
+gem 'active_flag'
