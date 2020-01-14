@@ -189,9 +189,9 @@ GEM
     httpclient (2.8.3)
     i18n (1.8.1)
       concurrent-ruby (~> 1.0)
-    image_processing (1.10.0)
+    image_processing (1.10.3)
       mini_magick (>= 4.9.5, < 5)
-      ruby-vips (>= 2.0.13, < 3)
+      ruby-vips (>= 2.0.17, < 3)
     jaro_winkler (1.5.4)
     jbuilder (2.9.1)
       activesupport (>= 4.2.0)
@@ -355,7 +355,7 @@ GEM
       rack (>= 1.1)
       rubocop (>= 0.72.0)
     ruby-progressbar (1.10.1)
-    ruby-vips (2.0.16)
+    ruby-vips (2.0.17)
       ffi (~> 1.9)
     rubyzip (2.0.0)
     safe_yaml (1.0.5)
@@ -481,7 +481,7 @@ DEPENDENCIES
   font-awesome-rails
   friendly_id (~> 5.3.0)
   groupdate
-  image_processing (~> 1.10)
+  image_processing (~> 1.10.3)
   jbuilder (~> 2.9)
   letter_opener
   listen (>= 3.0.5, < 3.3)
@@ -514,7 +514,7 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rails
   ruby-progressbar
-  ruby-vips (~> 2.0.16)
+  ruby-vips (~> 2.0.17)
   sassc (~> 2.2.1)
   sassc-rails
   sidekiq
