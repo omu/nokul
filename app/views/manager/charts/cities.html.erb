@@ -1,0 +1,47 @@
+<div id="chart-for-maps"></div>
+
+<script type="text/javascript" async>
+  Highcharts.mapChart('chart-for-maps', {
+    chart: {
+      map: 'countries/tr/tr-all',
+      height: 800
+    },
+    title: {
+      text: 'Şehirlere Göre Öğrenci Sayıları'
+    },
+    mapNavigation: {
+      enabled: true,
+      buttonOptions: {
+          verticalAlign: 'bottom'
+      }
+    },
+    colorAxis: {
+        min: 0
+    },
+    series: [{
+      data: <%= sanitize(@series) %>,
+      joinBy: 'name',
+      states: {
+        hover: {
+          color: '#BADA55'
+        }
+      },
+      dataLabels: {
+        enabled: true,
+        format: '{point.name}'
+      },
+      tooltip: {
+        headerFormat: '',
+        pointFormat: `
+          <strong>{point.name}</strong>
+          <br/>
+          <span style="color: #96d1c7; font-weight: bold;">Erkek: {point.male}<span/><br/>
+          <span style="color: #fc7978; font-weight: bold;">Kadın: {point.female}</span><br/>
+          <span style="color: #626262; font-weight: bold;">Toplam: {point.value}</span><br/>
+        `,
+      }
+    }]
+  });
+
+  $('.highcharts-credits').html('')
+</script>

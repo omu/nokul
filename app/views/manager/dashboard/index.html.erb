@@ -16,18 +16,18 @@
 </div>
 <div class="row">
   <div class="col-sm-6 mb-5">
-    <%= render 'manager/dashboard/charts/genders', data: Xokul::Ubs::Statistic::Student.by_genders %>
+    <%= content_loader_panel_tag(manager_charts_genders_path, refresh: { auto: true }) %>
   </div>
   <div class="col-sm-6 mb-5">
-    <%= render 'manager/dashboard/charts/genders_and_degrees', data: Xokul::Ubs::Statistic::Student.by_genders_and_degree %>
+    <%= content_loader_panel_tag(manager_charts_genders_and_degrees_path, refresh: { auto: true }) %>
   </div>
   <div class="col-sm-6 mb-5">
-    <%= render 'manager/dashboard/charts/double_major_and_minor', data: Xokul::Ubs::Statistic::Student.double_major_and_minor %>
+    <%= content_loader_panel_tag(manager_charts_double_major_and_minor_path, refresh: { auto: true }) %>
   </div>
   <div class="col-sm-6 mb-5">
-    <%= render 'manager/dashboard/charts/non_graduates', data: Xokul::Ubs::Statistic::Student.non_graduates %>
+    <%= content_loader_panel_tag(manager_charts_non_graduates_path, refresh: { auto: true }) %>
   </div>
   <div class="col-sm-12 mb-5">
-    <%= render 'manager/dashboard/charts/cities', data: Xokul::Ubs::Statistic::Student.by_cities %>
+    <%= content_loader_panel_tag(manager_charts_cities_path, refresh: { auto: true }) %>
   </div>
 </div>

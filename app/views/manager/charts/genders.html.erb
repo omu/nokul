@@ -1,0 +1,33 @@
+<div id="chart-for-genders"></div>
+
+<script type="text/javascript">
+  Highcharts.chart('chart-for-genders', {
+    chart: {
+      plotBackgroundColor: null,
+      plotBorderWidth: null,
+      plotShadow: false,
+      type: 'pie'
+    },
+    title: { text: 'Cinsiyetlere Göre Öğrenci Sayıları' },
+    tooltip: {
+      pointFormat: '{series.name}: {series.y} <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+      pie: {
+        allowPointSelect: true,
+        cursor: 'pointer',
+        dataLabels: {
+          enabled: true,
+          format: '<b>{point.name}</b>: {point.y}'
+        },
+        showInLegend: true
+      }
+    },
+    series: [{
+      name: 'Öğrenci Sayısı',
+      colorByPoint: true,
+      data: <%= sanitize(@series) %>
+    }]
+  });
+  $('.highcharts-credits').html('')
+</script>
