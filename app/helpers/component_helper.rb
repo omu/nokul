@@ -24,14 +24,19 @@ module ComponentHelper
     STATUSES.fetch(status.to_sym, 'secondary')
   end
 
-  def content_loader_tag(url, header: nil, refresh: {} )
-    render 'layouts/components/content_loader',
-            url:     url,
-            header:  header,
-            refresh: OpenStruct.new(
-              auto:     refresh.fetch(:auto, false),
-              interval: refresh.fetch(:interval, 10000)
-            )
+  def content_loader_panel_tag(url, header: nil, refresh: {}, &block)
+    render 'layouts/components/content_loader_panel',
+           url:     url,
+           header:  header,
+           content: (block_given? ? capture(&block) : nil),
+           refresh: OpenStruct.new(
+             auto:     refresh.fetch(:auto, false),
+             interval: refresh.fetch(:interval, 10_000)
+           )
+  end
+
+  def content_loader_tag(url)
+    render 'layouts/components/content_loader_basic', url: url
   end
 
   def loading_tag(text = t('loading'))

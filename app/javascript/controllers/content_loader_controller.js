@@ -19,7 +19,7 @@ export default class extends Controller {
     fetch(this.url)
       .then(response => response.text())
       .then(html => {
-        this.contentTarget.innerHTML = html
+        $(this.contentTarget).html(html)
         this.loadingMessageTarget.classList.add('d-none')
       })
   }
@@ -43,7 +43,7 @@ export default class extends Controller {
   }
 
   reset () {
-    this.contentTarget.innerHTML = ''
+    // this.contentTarget.innerHTML = ''
     this.loadingMessageTarget.classList.remove('d-none')
   }
 
