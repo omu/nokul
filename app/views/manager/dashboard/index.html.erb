@@ -1,33 +1,56 @@
-<%= javascript_include_tag 'chart' %>
+<div data-controller="manager-dashboard">
+  <div class="row">
+    <div class="col">
+      <div class="card text-white bg-success">
+        <div class="card-body">
+          <div class="h1 text-muted text-right mb-4"><i class="icon-people"></i></div>
+          <div class="text-value"><%= Xokul::Ubs::Statistic::Student.by_genders.sum { |item| item[:number_of_students] } %></div>
+          <p class="text-muted text-uppercase font-weight-bold">Öğrenci</p>
+          <hr>
+          <a href="#"
+             data-action="click->manager-dashboard#load"
+             data-content-url="<%= manager_students_path %>"
+             class="btn btn-light btn-sm pull-right">Detaylı Bilgi</a>
+        </div>
+      </div>
+    </div>
 
-<div class="row">
-  <div class="col-sm-6 col-md-2">
-    <div class="card text-white bg-info">
-      <div class="card-body">
-        <div class="h1 text-muted text-right mb-4"><i class="icon-people"></i></div>
-        <div class="text-value"><%= Xokul::Ubs::Statistic::Student.by_genders.sum { |item| item[:number_of_students] } %></div>
-        <small class="text-muted text-uppercase font-weight-bold">Öğrenci</small>
-        <div class="progress progress-white progress-xs mt-3">
-          <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="col">
+      <div class="card text-white bg-info">
+        <div class="card-body">
+          <div class="h1 text-muted text-right mb-4"><i class="icon-people"></i></div>
+          <div class="text-value"><%= Employee.active.distinct(:user_id).count %></div>
+          <p class="text-muted text-uppercase font-weight-bold">Personel</p>
+          <hr>
+          <a href="#"
+             data-action="click->manager-dashboard#load"
+             data-content-url="<%= manager_employees_path %>"
+             class="btn btn-light btn-sm pull-right">Detaylı Bilgi</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card text-white bg-warning">
+        <div class="card-body">
+          <div class="h1 text-muted text-right mb-4"><i class="icon-people"></i></div>
+          <div class="text-value"><%= Article.count %></div>
+          <p class="text-muted text-uppercase font-weight-bold">Akademik Yayınlar</p>
+          <hr>
+          <a href="#"
+             data-action="click->manager-dashboard#load"
+             data-content-url="<%= manager_articles_path %>"
+             class="btn btn-light btn-sm pull-right">Detaylı Bilgi</a>
         </div>
       </div>
     </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-sm-6 mb-5">
-    <%= content_loader_panel_tag(manager_charts_genders_path, refresh: { auto: true }) %>
+
+  <div data-target="manager-dashboard.content">
+    <%= content_loader_tag(manager_students_path) %>
   </div>
-  <div class="col-sm-6 mb-5">
-    <%= content_loader_panel_tag(manager_charts_genders_and_degrees_path, refresh: { auto: true }) %>
-  </div>
-  <div class="col-sm-6 mb-5">
-    <%= content_loader_panel_tag(manager_charts_double_major_and_minor_path, refresh: { auto: true }) %>
-  </div>
-  <div class="col-sm-6 mb-5">
-    <%= content_loader_panel_tag(manager_charts_non_graduates_path, refresh: { auto: true }) %>
-  </div>
-  <div class="col-sm-12 mb-5">
-    <%= content_loader_panel_tag(manager_charts_cities_path, refresh: { auto: true }) %>
+  <div data-target="manager-dashboard.loadingMessage"
+       class="d-none">
+    <%= render 'layouts/components/loading' %>
   </div>
 </div>
