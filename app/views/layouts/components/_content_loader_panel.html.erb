@@ -40,14 +40,7 @@
     <div class="card-body">
       <div data-target="content-loader.content"></div>
       <%= content %>
-      <div class="loading" data-target="content-loader.loadingMessage">
-        <div class="loading-content">
-          <div class="spinner-border" role="status">
-            <span class="sr-only"><%= t('loading') %></span>
-          </div>
-          <p class="h3"><%= t('loading') %></p>
-        </div>
-      </div>
+      <%= render 'layouts/components/loading' %>
     </div>
   </div>
 </div>
