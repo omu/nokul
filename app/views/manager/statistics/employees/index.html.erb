@@ -5,7 +5,7 @@
         <%= 'Akademik Personel Sayıları' %>
       </div>
       <div class="card-body">
-        <%= column_chart Employee.active.academic.group('titles.name').count, refresh: 1, adapter: :highcharts %>
+        <%= column_chart Employee.active.academic.group('titles.name').count, adapter: :highcharts %>
       </div>
     </div>
   </div>
