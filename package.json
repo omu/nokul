@@ -21,6 +21,7 @@
     "turbolinks": "^5.2.0"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.16.0",
@@ -32,7 +33,7 @@
     "webpack-dev-server": "^3.9.0"
   },
   "scripts": {
-    "lint": "eslint ./app/assets --color",
-    "lint-fix": "eslint ./app/assets --color --fix"
+    "lint": "eslint ./app/assets ./app/javascript --color",
+    "lint-fix": "eslint ./app/assets ./app/javascript --color --fix"
   }
 }
