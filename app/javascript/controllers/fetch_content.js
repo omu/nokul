@@ -1,4 +1,5 @@
-export function fetchContent({ url, targetElement, loadingElement }) {
+/* eslint-disable no-undef */
+export function fetchContent ({ url, targetElement, loadingElement }) {
   const ERROR_MESSAGE = `
     <div class="alert alert-danger text-center">
       <p class="h4">
@@ -7,6 +8,7 @@ export function fetchContent({ url, targetElement, loadingElement }) {
       </p>
     </div>
   `
+
   fetch(url)
     .then(response => {
       if (response.ok) return response.text()
@@ -17,8 +19,8 @@ export function fetchContent({ url, targetElement, loadingElement }) {
       $(targetElement).html(html)
       loadingElement.classList.add('d-none')
     })
-    .catch((error) => {
+    .catch(() => {
       $(targetElement).html(ERROR_MESSAGE)
       loadingElement.classList.add('d-none')
-    });
+    })
 }
