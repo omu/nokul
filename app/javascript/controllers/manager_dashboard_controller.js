@@ -1,21 +1,22 @@
 /* eslint-disable no-undef */
 import { Controller } from 'stimulus'
+import { fetchContent } from './fetch_content'
 
 export default class extends Controller {
-  static targets = ['content', 'loadingMessage' ]
+  static targets = ['content', 'loadingMessage']
 
-  load (event) {
+  load(event) {
     this.reset()
-    fetch(event.target.dataset.contentUrl)
-      .then(response => response.text())
-      .then(html => {
-        $(this.contentTarget).html(html)
-        this.loadingMessageTarget.classList.add('d-none')
-      })
+
+    fetchContent({
+      url: event.target.dataset.contentUrl,
+      targetElement: this.contentTarget,
+      loadingElement: this.loadingMessageTarget
+    })
   }
 
 
-  reset () {
+  reset() {
     this.loadingMessageTarget.classList.remove('d-none')
   }
 }
