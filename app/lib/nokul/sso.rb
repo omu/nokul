@@ -5,7 +5,7 @@ module Nokul
     module_function
 
     def disabled?
-      !enable?
+      !enabled?
     end
 
     def enabled?
