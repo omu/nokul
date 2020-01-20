@@ -4,7 +4,7 @@ module Nokul
   module SSO
     module_function
 
-    def disable?
+    def disabled?
       !enable?
     end
 
