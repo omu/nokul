@@ -8,7 +8,7 @@ module Nokul
       !enable?
     end
 
-    def enable?
+    def enabled?
       ActiveRecord::Type::Boolean.new.cast(
         ENV.fetch('NOKUL_SSO_ENABLE', false)
       )
