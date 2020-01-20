@@ -171,7 +171,7 @@ Devise.setup do |config|
   # The time you want to timeout the user session without activity. After this
   # time the user will be asked for credentials again. Default is 30 minutes.
   config.timeout_in =
-    if Nokul::SSO.enable?
+    if Nokul::SSO.enabled?
       5.minutes
     elsif Rails.env.development?
       120.minutes
