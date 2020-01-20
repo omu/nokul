@@ -7,7 +7,7 @@ module Account
 
     # GET /resource/sign_in
     def new
-      return super if Nokul::SSO.disable?
+      return super if Nokul::SSO.disabled?
 
       redirect_to(user_openid_connect_omniauth_authorize_path)
     end
