@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Sncc < ApplicationRecord
   belongs_to :institution
 
