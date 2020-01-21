@@ -1,0 +1,16 @@
+one:
+  yoksis_id: 755
+  type: research
+  name: Pyrimicroquik'in Düzce İlinde Fındık Kurduna Karşı Biyolojik Etkinlik Denemesi
+  content: Pyrimicroquik İsimli İlacın Ruhsata Esas Olmak Üzere Batı Karadeniz Bölgesinde Fındık Kurduna Karşı Biyolojik Etkinlik Denemesinin Kurulması
+  location: Fındık Bahçesi
+  scope: national
+  start_date: Mon, 02 Mar 2015
+  end_date: Thu, 10 Sep 2015
+  title: Doçent
+  number_of_authors: 3
+  city_and_country: Düzce
+  last_update: Fri, 15 Jan 2016 20:43:56 EET +02:00
+  incentive_point: 3.0
+  status: active
+  user: john

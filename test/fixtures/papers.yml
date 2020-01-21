@@ -1,0 +1,17 @@
+one:
+  activity: active
+  authors: Mine Uraslı
+  number_of_authors: 1
+  country: turkey
+  discipline: Fen Bilimleri ve Matematik Temel Alanı
+  incentive_point: 1.5
+  language_of_publication: İngilizce
+  last_update: Fri 28 Feb 2014 17:35:42 EET +02:00
+  name: Accurate Binary Decisions
+  presentation_type: verbal
+  publication_status: published
+  scope: international
+  type: summary
+  type_of_release: printed
+  user: mine
+  yoksis_id: 683676

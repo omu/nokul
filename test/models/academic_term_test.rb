@@ -12,6 +12,7 @@ class AcademicTermTest < ActiveSupport::TestCase
   has_many :calendars, dependent: :nullify
   has_many :prospective_students, dependent: :nullify
   has_many :registration_documents, dependent: :nullify
+  has_many :semester_registrations, dependent: :nullify
 
   # validations: presence
   validates_presence_of :active

@@ -1,0 +1,29 @@
+<div class='nested-fields col-sm-6'>
+  <div class='card card-default'>
+    <div class='card-body bg-light'>
+      <%= link_to_remove_association f do %>
+        <%= button_tag('x', type: 'button', class: 'close', data: { confirm: t('are_you_sure') }) %>
+      <% end %>
+      <div class="row">
+        <div class='col-sm-12'>
+          <% if f.object.errors.any? %>
+            <ul class="list-group">
+              <% f.object.errors.full_messages.each do |msg| %>
+                <li class="list-group-item list-group-item-danger"><%= raw msg %></li>
+              <% end %>
+            </ul>
+            <hr>
+          <% end %>
+        </div>
+        <div class='col-sm-6'>
+          <%= f.association :permission %>
+        </div>
+        <div class='col-sm-6'>
+          <div class="form-check">
+            <%= f.input :privileges, as: :check_boxes, collection: f.object.class.privileges.pairs %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

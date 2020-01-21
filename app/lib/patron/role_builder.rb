@@ -24,7 +24,7 @@ module Patron
       def initialize(identifier:, name:, permissions:)
         @identifier  = identifier
         @name        = name
-        @permissions = Set.new(permissions)
+        @permissions = permissions
         check!
       end
 
@@ -33,7 +33,7 @@ module Patron
       def check!
         raise ArgumentError, 'Permissions must not be empty' if permissions.blank?
 
-        permissions.each do |permission|
+        permissions.keys.each do |permission|
           raise ArgumentError, "Permission not found: #{permission}" unless PermissionBuilder.all.key?(permission)
         end
       end

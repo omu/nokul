@@ -1,23 +1,34 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+muhendislik_fakultesi_a_blok:
+  meksis_id: 1249030236
+  name: Mühendislik Fakültesi / A Blok
+  code: Müh-fak-a
+  indoor_area: 4872.2
+  active: true
+  place_type: egitim
+  unit: muhendislik_fakultesi
 
-one:
-  meksis_id: 1
-  name: MyString
-  code: MyString
-  indoor_area: 1.5
-  latitude: 9.99
-  longitude: 9.99
-  active: false
-  place_type: one
-  unit: one
+muhendislik_fakultesi_b_blok:
+  meksis_id: 1249030245
+  name: Mühendislik Fakültesi / B Blok
+  code: Müh-fak-b
+  indoor_area: 4768.4
+  active: true
+  place_type: egitim
+  unit: muhendislik_fakultesi
 
-two:
-  meksis_id: 1
-  name: MyString
-  code: MyString
-  indoor_area: 1.5
-  latitude: 9.99
-  longitude: 9.99
+muhendislik_fakultesi_c_blok:
+  meksis_id: 1249030246
+  name: Mühendislik Fakültesi / C Blok
+  code: Müh-fak-c
+  indoor_area: 14606.6
+  active: true
+  place_type: egitim
+  unit: muhendislik_fakultesi
+
+egitim_fakultesi_d_blok:
+  meksis_id: 1249030245
+  name: Eğitim Fakültesi / D Blok
+  code: Eğıtım-d
   active: false
-  place_type: two
-  unit: two
+  place_type: egitim
+  unit: egitim_fakultesi

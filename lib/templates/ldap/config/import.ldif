@@ -8,46 +8,7 @@ ou: groups
 description: All groups in organisation
 objectclass: organizationalunit
 
-dn: uid=emrecan.1234,ou=people,dc=acme,dc=omu,dc=sh
-cn: Emre Can Yılmaz
-displayName: Emre Can Yılmaz
-eduPersonAffiliation: member
-eduPersonAffiliation: employee
-eduPersonAffiliation: faculty
-eduPersonPrimaryAffiliation: faculty
-eduPersonPrincipalName: emrecan@acme.omu.sh
-eduPersonPrincipalNamePrior: emrecan.old@acme.omu.sh
-eduPersonScopedAffiliation: faculty@_.bilgisayar-pr.bilgisayar.muhendislik.acme.omu.sh
-givenName: Emre Can
-jpegPhoto: base64ilebiseylerbiseyler
-mail: emrecan@acme.omu.sh
-mobile: +90 362 312 1919
-preferredLanguage: tr
-schacCountryOfCitizenship: tr
-schacExpiryDate: 20051231125959Z
-schacPersonalUniqueCode: urn:schac:personalUniqueCode:tr:employeeID:acme.omu.sh:12345
-schacPersonalUniqueID: urn:schac:personalUniqueID:tr:NIN:10570898198
-schacUserStatus: urn:schac:userStatus:tr:acme.omu.sh:affiliation:expired
-schacDateOfBirth: 19910128
-schacGender: 2
-schacHomeOrganization: acme.omu.sh
-schacPlaceOfBirth: Samsun, Türkiye
-schacYearOfBirth: 1991
-sn: Yılmaz
-uid: emrecan.1234
-userPassword: {BCRYPT}$2b$10$P9c9uTcr5RjqOhmf1ZcYvO255n/q6SknPA3ERvaAqqEoDSGLer3sy
-objectClass: person
-objectClass: organizationalPerson
-objectClass: inetOrgPerson
-objectClass: eduPerson
-objectClass: schacPersonalCharacteristics
-objectClass: schacContactLocation
-objectClass: schacLinkageIdentifiers
-objectClass: schacEntryMetadata
-objectClass: schacUserEntitlements
-objectClass: schacExperimentalOC
-
-dn: uid=cezmi.5678,ou=people,dc=acme,dc=omu,dc=sh
+dn: uid=cezmi,ou=people,dc=acme,dc=omu,dc=sh
 cn: Cezmi Seha Sahir
 displayName: Cezmi Seha Sahir
 eduPersonAffiliation: member
@@ -73,8 +34,8 @@ schacHomeOrganization: acme.omu.sh
 schacPlaceOfBirth: Samsun, Türkiye
 schacYearOfBirth: 1991
 sn: Sahir
-uid: cezmi.5678
-userPassword: {BCRYPT}$2b$10$P9c9uTcr5RjqOhmf1ZcYvO255n/q6SknPA3ERvaAqqEoDSGLer3sy
+uid: cezmi
+userPassword: {BCRYPT}$2b$10$tFrK0DCl5AzcAJqMIJck9ejLiy1yE4fOo5Xxl3OJd0V5gdKXNwhHO
 objectClass: person
 objectClass: organizationalPerson
 objectClass: inetOrgPerson

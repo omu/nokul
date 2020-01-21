@@ -35,16 +35,31 @@ class StudentCourseEnrollmentService # rubocop:disable Metrics/ClassLength
 
   def course_enrollments
     @course_enrollments ||=
-      student.course_enrollments
-             .where(semester: @student.semester)
-             .includes(available_course: [curriculum_course: %i[course curriculum_semester]])
+      @student.current_registration
+              .course_enrollments
+              .includes(available_course: [curriculum_course: %i[course curriculum_semester]])
   end
 
-  def enrollment_status
-    @enrollment_status ||=
-      if course_enrollments.any?
-        course_enrollments.exists?(status: :draft) ? :draft : :saved
-      end
+  def enroll(course_enrollment_params)
+    course_enrollment = @student.current_registration.course_enrollments.new(course_enrollment_params)
+    available_course = course_enrollment.available_course
+
+    return course_enrollment.save if enrollable(available_course).errors.empty?
+
+    raise EnrollableError, available_course.errors.full_messages.first
+  end
+
+  def drop(course_enrollment)
+    available_course = course_enrollment.available_course
+
+    return course_enrollment.destroy if dropable(available_course).errors.empty?
+
+    raise EnrollableError, available_course.errors.full_messages.first
+  end
+
+  def save
+    @student.current_registration.course_enrollments.update(status: :saved)
+    @student.current_registration.update(status: :saved)
   end
 
   def enrollable(available_course)
@@ -54,23 +69,11 @@ class StudentCourseEnrollmentService # rubocop:disable Metrics/ClassLength
     available_course
   end
 
-  def enrollable!(available_course)
-    return true if enrollable(available_course).errors.empty?
-
-    raise EnrollableError, available_course.errors.full_messages.first
-  end
-
   def dropable(available_course)
     sequence = available_course.curriculum_course.curriculum_semester.sequence
     available_course.errors.add(:base, translate('must_drop_first')) if max_sequence > sequence
 
     available_course
-  end
-
-  def dropable!(available_course)
-    return true if dropable(available_course).errors.empty?
-
-    raise EnrollableError, available_course.errors.full_messages.first
   end
 
   private
@@ -154,6 +157,6 @@ class StudentCourseEnrollmentService # rubocop:disable Metrics/ClassLength
   end
 
   def translate(key, params = {})
-    I18n.t("studentship.course_enrollments.errors.#{key}", params)
+    I18n.t("studentship.course_enrollments.errors.#{key}", **params)
   end
 end

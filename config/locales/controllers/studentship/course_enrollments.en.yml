@@ -5,6 +5,10 @@ en:
         statuses:
           draft: Draft
           saved: Saved
+      semester_registration:
+        statuses:
+          draft: Draft
+          saved: Saved
   studentship:
     course_enrollments:
       available_courses: &course_attributes
@@ -25,14 +29,15 @@ en:
         success: The course successfully removed from selected courses.
       errors:
         already_enrolled_at_group: The maximum amount of ECTS that can be selected from the course group is selected.
+        empty_selected_courses_list: The list of selected courses is empty.
         quota_full: The course has reached its quota.
         must_drop_first: Courses taken from the top semester must be dropped first.
         not_enough_ects: The amount of ECTS that can be selected is not enough for you to take this course.
         not_proper_register_event_range: There is no online course registration activity covering the date range today.
-        registration completed: You can not perform this action since you have completed the course selection.
+        registration_completed: You can not perform this action since you have completed the course selection.
       index:
         course_enrollments: Course Enrollments
-        enrollment_status: Enrollment Status
+        registration_status: Enrollment Status
         registration_date_range: "Online Course Registration Dates: %{start_time} - %{end_time}"
       list:
         <<: *course_attributes
@@ -54,7 +59,7 @@ en:
         success: Selected courses successfully saved.
       student_info:
         academic_term: Academic Term
-        enrollment_status: Enrollment Status
+        registration_status: Enrollment Status
         gpa: GPA
         program: Program
         student_info: Student Information

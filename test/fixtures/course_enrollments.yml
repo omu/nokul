@@ -1,24 +1,19 @@
 old:
-  student: serhat
+  semester_registration: serhat_first_semester
   available_course: test_fall_2018_2019
-  semester: 1
   status: saved
 elective:
-  student: serhat
+  semester_registration: serhat_third_semester
   available_course: elective_course
-  semester: 3
   status: saved
 failed:
-  student: serhat
+  semester_registration: serhat_first_semester
   available_course: old_course
-  semester: 1
   status: saved
 compulsory:
-  student: serhat
+  semester_registration: serhat_third_semester
   available_course: compulsory_course
-  semester: 3
 johns_enrollment:
-  student: john
+  semester_registration: john_third_semester
   available_course: compulsory_course
-  semester: 3
   status: saved

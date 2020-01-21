@@ -170,7 +170,14 @@ Devise.setup do |config|
   # ==> Configuration for :timeoutable
   # The time you want to timeout the user session without activity. After this
   # time the user will be asked for credentials again. Default is 30 minutes.
-  config.timeout_in = 45.minutes
+  config.timeout_in =
+    if Nokul::SSO.enabled?
+      5.minutes
+    elsif Rails.env.development?
+      120.minutes
+    else
+      45.minutes
+    end
 
   # ==> Configuration for :lockable
   # Defines which strategy will be used to lock an account.
@@ -277,4 +284,12 @@ Devise.setup do |config|
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
+
+  config.omniauth :openid_connect,
+                  name:           :openid_connect,
+                  scope:          %i[openid email],
+                  response_type:  :code,
+                  issuer:         Tenant.credentials.lemonldap[:issuer],
+                  discovery:      true,
+                  client_options: Tenant.credentials.lemonldap[:client_options]
 end

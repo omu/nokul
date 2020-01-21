@@ -60,7 +60,7 @@ class ProspectiveStudent < ApplicationRecord
   validates :placement_rank, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :placement_score, allow_nil: true, numericality: { greater_than_or_equal_to: 0 }
   validates :placement_score_type, length: { maximum: 255 }
-  validates :placement_type, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :placement_type, allow_nil: true, inclusion: { in: placement_types.keys }
   validates :preference_order, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :registration_city, length: { maximum: 255 }
   validates :registered, inclusion: { in: [true, false] }
@@ -68,6 +68,7 @@ class ProspectiveStudent < ApplicationRecord
   validates :state_of_education, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :system_register_type, inclusion: { in: system_register_types.keys }
   validates :top_student, inclusion: { in: [true, false] }
+  validates_with ProspectiveStudentValidator, on: :update
 
   # scopes
   scope :registered, -> { where(registered: true) }

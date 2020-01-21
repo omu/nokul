@@ -31,10 +31,20 @@ class StudentCourseEnrollmentServiceTest < ActiveSupport::TestCase
     assert_includes course_enrollments, course_enrollments(:elective)
   end
 
-  test 'enrollment_status method' do
-    assert_not StudentCourseEnrollmentService.new(students(:serhat_omu)).enrollment_status
-    assert_equal StudentCourseEnrollmentService.new(students(:john)).enrollment_status, :saved
-    assert_equal @service.enrollment_status, :draft
+  test 'enroll method' do
+    available_course = available_courses(:compulsory_course_2)
+    @service.enroll(available_course_id: available_course.id)
+    assert_includes @service.course_enrollments.pluck(:available_course_id), available_course.id
+  end
+
+  test 'drop method' do
+    @service.drop(course_enrollments(:elective))
+    assert_not_includes @service.course_enrollments, course_enrollments(:elective)
+  end
+
+  test 'save method' do
+    @service.save
+    assert @service.student.current_registration.saved?
   end
 
   test 'catalog method' do
@@ -56,10 +66,6 @@ class StudentCourseEnrollmentServiceTest < ActiveSupport::TestCase
     assert_equal available_course.errors.full_messages.first, translate('already_enrolled_at_group')
   end
 
-  test 'enrollabe! method' do
-    assert @service.enrollable(available_courses(:compulsory_course_2))
-  end
-
   test 'dropable method' do
     assert_empty @service.dropable(available_courses(:elective_course)).errors
   end
@@ -69,13 +75,9 @@ class StudentCourseEnrollmentServiceTest < ActiveSupport::TestCase
     assert_equal available_course.errors.full_messages.first, translate('must_drop_first')
   end
 
-  test 'dropable! method' do
-    assert @service.dropable(available_courses(:elective_course))
-  end
-
   private
 
   def translate(key, params = {})
-    I18n.t("studentship.course_enrollments.errors.#{key}", params)
+    I18n.t("studentship.course_enrollments.errors.#{key}", **params)
   end
 end

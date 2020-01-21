@@ -1,13 +1,13 @@
 {
   "name": "nokul",
   "slug": "nokul",
-  "description": "Nokul, nitelikli okul universiteler icin ogrenci ve personel otomasyonudur.",
+  "description": "Nitelikli okul (Nokul, /nəʊkuːl/), üniversiteler için öğrenci ve personel otomasyonudur.",
   "keywords": [
     "dokku",
     "rails"
   ],
   "repository": "https://github.com/omu/nokul",
-  "version": "0.7.2",
+  "version": "0.7.4",
   "scripts": {
     "dokku": {
       "predeploy":  "bin/plugdo bundle install -j4 --path /app/vendor/bundle --without development:test && bundle exec rails assets:precompile && bundle exec rails db:migrate"

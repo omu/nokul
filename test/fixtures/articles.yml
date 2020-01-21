@@ -1,0 +1,20 @@
+one:
+  yoksis_id: 669229
+  scope: international
+  review: reviewed
+  index: sci_expanded
+  title: Bayesian İnference Of Bivariate Generalized Linear Model İn Diagnosing Renal Arterial Obstruction
+  authors: John Doe
+  number_of_authors: 1
+  journal: The Statistical Methodology
+  language_of_publication: İngilizce
+  month: 1
+  year: 2005
+  volume: 2
+  first_page: 168
+  last_page: 174
+  discipline: Fen Bilimleri ve Matematik Temel Alanı
+  last_update: Fri, 28 Feb 2014 15:44:10 EET +02:00
+  status: active
+  type: original_article
+  user: john

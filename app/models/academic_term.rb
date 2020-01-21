@@ -10,6 +10,7 @@ class AcademicTerm < ApplicationRecord
   has_many :calendars, dependent: :nullify
   has_many :prospective_students, dependent: :nullify
   has_many :registration_documents, dependent: :nullify
+  has_many :semester_registrations, dependent: :nullify
 
   # validations
   validates :active, inclusion: { in: [true, false] }

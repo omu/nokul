@@ -3,7 +3,9 @@
 require 'test_helper'
 
 class ClassroomTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  extend Support::Minitest::AssociationHelper
+
+  # relations
+  belongs_to :place_type
+  belongs_to :building
 end

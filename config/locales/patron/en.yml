@@ -1,5 +1,7 @@
 en:
   patron:
+    errors:
+      invalid_privilege: '<strong>%{privilege}</strong> is not a valid privilege for this permission'
     skip_empties:
       'true': 'Yes'
       'false': 'No'

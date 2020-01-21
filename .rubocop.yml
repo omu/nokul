@@ -11,7 +11,7 @@ Rails/UnknownEnv:
     - development
     - production
     - test
-Metrics/LineLength:
+Layout/LineLength:
   Exclude:
     - app/validators/employee_validator.rb # Won't fix
 Metrics/BlockLength:
