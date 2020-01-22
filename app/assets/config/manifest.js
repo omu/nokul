@@ -3,3 +3,4 @@
 
 //= link application.js
 //= link chart.js
+//= link highcharts-langs/tr.js
