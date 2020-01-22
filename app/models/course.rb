@@ -28,6 +28,7 @@ class Course < ApplicationRecord
   belongs_to :unit
   has_many :curriculum_courses, dependent: :destroy
   has_many :available_courses, through: :curriculum_courses
+  has_many :targets, dependent: :delete_all
 
   # validations
   validates :code, presence: true, uniqueness: true, length: { maximum: 255 }

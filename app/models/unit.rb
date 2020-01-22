@@ -47,6 +47,7 @@ class Unit < ApplicationRecord
   has_many :available_courses, dependent: :destroy
   has_many :unit_calendars, dependent: :destroy
   has_many :calendars, through: :unit_calendars
+  has_many :snccs, dependent: :destroy
 
   # validations
   validates :name, presence: true,
