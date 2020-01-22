@@ -3,17 +3,17 @@
 module Patron
   class PermissionPolicy < ApplicationPolicy
     def index?
-      permitted?
+      permitted? :read
     end
 
     def show?
-      permitted?
+      permitted? :read
     end
 
     private
 
-    def permitted?
-      user.permission? :permission_management
+    def permitted?(*privileges)
+      user.privilege? :permission_management, privileges
     end
   end
 end

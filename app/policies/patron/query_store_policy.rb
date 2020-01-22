@@ -3,23 +3,23 @@
 module Patron
   class QueryStorePolicy < ApplicationPolicy
     def index?
-      permitted?
+      permitted? :read
     end
 
     def show?
-      permitted?
-    end
-
-    def create?
-      permitted?
+      permitted? :read
     end
 
     def new?
       create?
     end
 
+    def create?
+      permitted? :write
+    end
+
     def update?
-      permitted?
+      permitted? :write
     end
 
     def edit?
@@ -27,17 +27,17 @@ module Patron
     end
 
     def destroy?
-      permitted?
+      permitted? :destroy
     end
 
     def preview?
-      permitted?
+      permitted? :read
     end
 
     private
 
-    def permitted?
-      user.permission? :scope_query_management
+    def permitted?(*privileges)
+      user.privilege? :scope_query_management, privileges
     end
   end
 end

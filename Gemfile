@@ -23,8 +23,8 @@ gem 'ancestry'
 
 # active-storage
 gem 'aws-sdk-s3', require: false
-gem 'image_processing', '~> 1.10'
-gem 'ruby-vips', '~> 2.0.16'
+gem 'image_processing', '~> 1.10.3'
+gem 'ruby-vips', '~> 2.0.17'
 
 # authentication
 gem 'authy'
@@ -126,3 +126,5 @@ Dir['plugins/tenant/**/*.gemspec'].each do |gemspec|
 
   gem name, path: File.dirname(gemspec), require: false
 end
+
+gem 'active_flag'

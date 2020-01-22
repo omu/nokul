@@ -14,7 +14,9 @@ module Patron
 
     def show
       @permissions = pagy_by_search(
-        @role.permissions.order(:name), page_param: 'page_permission', pagy_name: :pagy_permissions
+        @role.role_permissions.includes(:permission).order('permissions.name'),
+        page_param: 'page_permission',
+        pagy_name:  :pagy_permissions
       )
       @users = pagy_by_search(
         @role.users, page_param: 'page_user', pagy_name: :pagy_users
@@ -55,7 +57,9 @@ module Patron
     end
 
     def role_params
-      params.require(:patron_role).permit(:name, :identifier, :locked, permission_ids: [])
+      params.require(:patron_role).permit(:name, :identifier, :locked, role_permissions_attributes: [
+                                            :id, :permission_id, :_destroy, privileges: []
+                                          ])
     end
   end
 end

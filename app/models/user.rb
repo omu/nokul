@@ -30,7 +30,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :recoverable, :rememberable,
          :trackable, :validatable, :lockable, :timeoutable
   devise :omniauthable, omniauth_providers: %i[openid_connect]
-  devise :timeoutable, timeout_in: 5.minutes
 
   # relations
   has_one_attached :avatar

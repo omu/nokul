@@ -1,5 +1,7 @@
 tr:
   patron:
+    errors:
+      invalid_privilege: Bu izin için <strong>%{privilege}</strong> geçerli bir ayrıcalık değil
     skip_empties:
       'true': 'Evet'
       'false': 'Hayır'

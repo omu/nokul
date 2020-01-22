@@ -19,5 +19,9 @@ module Patron
     validates :name, uniqueness: true, presence: true, length: { maximum: 255 }
     validates :identifier, uniqueness: true, presence: true, length: { maximum: 255 }
     validates :description, length: { maximum: 65_535 }
+
+    def privileges_for_identifier
+      Patron::PermissionBuilder.all[identifier]&.privileges || []
+    end
   end
 end

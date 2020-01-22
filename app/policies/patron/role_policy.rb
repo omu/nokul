@@ -3,23 +3,23 @@
 module Patron
   class RolePolicy < ApplicationPolicy
     def index?
-      permitted?
+      permitted? :read
     end
 
     def show?
-      permitted?
+      permitted? :read
     end
 
     def create?
-      permitted?
+      new?
     end
 
     def new?
-      create?
+      permitted? :write
     end
 
     def update?
-      permitted? && !record.locked?
+      permitted?(:write) && !record.locked?
     end
 
     def edit?
@@ -27,13 +27,13 @@ module Patron
     end
 
     def destroy?
-      permitted? && !record.locked?
+      permitted?(:destroy) && !record.locked?
     end
 
     private
 
-    def permitted?
-      user.permission? :role_management
+    def permitted?(*privileges)
+      user.privilege? :role_management, privileges
     end
   end
 end

@@ -3,15 +3,15 @@
 module Patron
   class AssignmentPolicy < ApplicationPolicy
     def index?
-      permitted?
+      permitted? :read
     end
 
     def show?
-      permitted?
+      permitted? :read
     end
 
     def update?
-      permitted?
+      permitted? :write
     end
 
     def edit?
@@ -19,13 +19,13 @@ module Patron
     end
 
     def preview_scope?
-      permitted?
+      permitted? :read
     end
 
     private
 
-    def permitted?
-      user.permission? :authorization_management
+    def permitted?(*privileges)
+      user.privilege? :authorization_management, privileges
     end
   end
 end

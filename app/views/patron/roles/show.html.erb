@@ -1,5 +1,5 @@
 <%= action_bar do %>
-  <%= link_to_back :back %>
+  <%= link_to_back %i[patron roles] %>
   <%= link_to_edit [:edit, @role] %>
 <% end %>
 
@@ -18,7 +18,7 @@
         <%= t('.permissions') %>
       </h5>
       <div class="card-body">
-        <%= render 'patron/components/permissions',
+        <%= render 'patron/components/role_permissions',
                    permissions:     @permissions,
                    actions_visible: false %>
       </div>

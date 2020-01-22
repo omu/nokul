@@ -20,6 +20,8 @@ en:
         success: Role successfully deleted!
       edit:
         form_title: Update the Role
+      form:
+        permissions: Permissions
       index:
         card_header: Roles
         new_role_link: Add a New Role
