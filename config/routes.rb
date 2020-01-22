@@ -38,13 +38,6 @@ Rails.application.routes.draw do
     get 'save_identity_from_mernis', on: :member
   end
 
-  scope module: :studies do
-    get '/studies', to: 'dashboard#index'
-    get '/studies/articles', to: 'articles#index'
-    get '/studies/projects', to: 'projects#index'
-    get '/studies/certifications', to: 'certifications#index'
-  end
-
   resources :agenda_types, except: :show, module: :committee
 
   resources :committees, only: :index, controller: 'committee/dashboard' do

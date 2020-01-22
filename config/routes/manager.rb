@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 namespace :manager do
-  get '/', to: 'dashboard#index'
+  get :statistics, to: 'dashboard#statistics'
 
   scope module: :statistics do
     get 'articles', to: 'articles#index'
