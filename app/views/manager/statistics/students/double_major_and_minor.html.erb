@@ -8,7 +8,9 @@
       plotShadow: false,
       type: 'pie'
     },
-    title: { text: 'Çift Anadal Yandal Sayıları' },
+    title: {
+      text: "<%= t('.title') %>"
+    },
     tooltip: {
       pointFormat: '{series.name}: {series.y} <b>{point.percentage:.1f}%</b>'
     },
@@ -24,7 +26,7 @@
       }
     },
     series: [{
-      name: 'Öğrenci Sayısı',
+      name: "<%= t('.rate') %>",
       colorByPoint: true,
       data: <%= sanitize(@series) %>
     }]

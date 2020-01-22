@@ -5,7 +5,10 @@ namespace :manager do
 
   scope module: :statistics do
     get 'articles', to: 'articles#index'
-    get 'employees', to: 'employees#index'
+    namespace :employees do
+      get '/', action: :index
+      get :academic
+    end
     namespace :students do
       get '/', action: :index
       get :cities

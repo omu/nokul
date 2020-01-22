@@ -1,12 +1,5 @@
 <div class="row">
   <div class="col-sm-6">
-    <div class="card">
-      <div class='card-header'>
-        <%= 'Akademik Personel Sayıları' %>
-      </div>
-      <div class="card-body">
-        <%= column_chart Employee.active.academic.group('titles.name').count, adapter: :highcharts %>
-      </div>
-    </div>
+    <%= content_loader_panel_tag(manager_employees_academic_path, refresh: { auto: true }) %>
   </div>
 </div>

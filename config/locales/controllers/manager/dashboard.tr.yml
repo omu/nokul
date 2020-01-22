@@ -1,0 +1,8 @@
+tr:
+  manager:
+    dashboard:
+      index:
+        academic_publishing: Akademik Yayın
+        employee: Personel
+        more_information: Detaylı Bilgi
+        student: Öğrenci

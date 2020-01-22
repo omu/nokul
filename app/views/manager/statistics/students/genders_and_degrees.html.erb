@@ -2,12 +2,18 @@
 
 <script type="text/javascript">
   Highcharts.chart('chart-for-genders-degree', {
-      chart: { type: 'column' },
-      title: { text: 'Öğrenim Türlerine Göre Öğrenci Sayıları' },
+      chart: {
+        type: 'column'
+      },
+      title: {
+        text: "<%= t('.title') %>"
+      },
       xAxis: { categories: <%= sanitize(@categories.to_json) %> },
       yAxis: {
         min: 0,
-        title: { text: 'Toplam Öğrenci Sayısı' },
+        title: {
+          text: "<%= t('.total_number_of_students') %>"
+        },
         stackLabels: { enabled: true }
       },
       tooltip: {

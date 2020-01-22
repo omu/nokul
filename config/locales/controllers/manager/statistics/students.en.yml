@@ -1,0 +1,21 @@
+en:
+  manager:
+    statistics:
+      students:
+        cities:
+          female: Female
+          male: Male
+          title: Number of Students by Cities
+          total: Total
+        double_major_and_minor:
+          rate: Rate
+          title: Number of Students Studying in Double Major and Minor Programs
+        genders:
+          rate: Oran
+          title: Number of Student by Genders
+        genders_and_degrees:
+          title: Number of Students by Academic Degree and Gender
+          total_number_of_students: Total Number of Students
+        non_graduates:
+          total_number_of_students: Total Number of Students
+          title: Number of Students Nongraduate on Time by Academic Degree

@@ -9,12 +9,15 @@
         <div class="col-sm-9">
           <p class="text-center"><%= header %></p>
         </div>
-        <div class="col-sm-3" style="z-index: 2000;">
+        <div class="col-sm-3">
           <div class="d-flex justify-content-end">
             <div class="p-2">
               <button class="btn btn-outline-success btn-sm"
-                      data-action="click->content-loader#refresh">
-                <%= fa_icon 'refresh', text: 'Refresh' %>
+                      data-action="click->content-loader#refresh"
+                      data-toggle="tooltip"
+                      data-placement="bottom"
+                      title="<%= t('refresh') %>">
+                <%= fa_icon 'refresh' %>
               </button>
             </div>
             <% if refresh.auto %>
@@ -29,7 +32,7 @@
                         data-unchecked="&#x2715;"
                         data-toggle="tooltip"
                         data-placement="bottom"
-                        title="Active/Passive Auto Refresh"></span>
+                        title="<%= t('toggle_auto_refresh') %>"></span>
                 </label>
               </div>
             <% end %>

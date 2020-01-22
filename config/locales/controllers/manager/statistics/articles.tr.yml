@@ -11,8 +11,3 @@ tr:
           publications_by_publication_types: Yayın Türüne Göre Makaleler
           recently_added: En Son Eklenen Makaleler
           top_publishers: En Çok Makalesi Olanlar
-      dashboard:
-        index:
-          articles: Makaleler
-          certifications: Sertifikalar
-          projects: Projeler

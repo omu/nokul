@@ -6,6 +6,10 @@ module Manager
       layout false
 
       def index; end
+
+      def academic
+        @series = Employee.active.academic.group('titles.name').count
+      end
     end
   end
 end
