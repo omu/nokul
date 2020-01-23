@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  main: 1
+  first: 1
+  second: 1
+  third: 1
+  name: MyString
+
+two:
+  main: 1
+  first: 1
+  second: 1
+  third: 1
+  name: MyString
