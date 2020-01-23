@@ -18,6 +18,7 @@ en:
         course_enrollments: Course Enrolments
         course_unit_groups: Course Unit Group
         curriculums: Curriculums
+        detsis: DETSIS
         first_registration: First Registration
         high_school_types: High School Types
         ldap_sync: Ldap Sync
