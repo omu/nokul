@@ -7,7 +7,10 @@ namespace :fetch do
     progress_bar = ProgressBar.spawn 'Detsis - SDP code references', sdp_codes.size
 
     sdp_codes.each do |code|
-      SdpCode.create(**code)
+      record = SdpCode.find_or_initialize_by(**code)
+      record.assign_attributes(**code)
+      record.save
+
       progress_bar&.increment
     end
   end
