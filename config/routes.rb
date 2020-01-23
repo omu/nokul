@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   draw :studentship
   draw :yoksis
   draw :meksis
+  draw :detsis
 
   resources :units do
     member do
