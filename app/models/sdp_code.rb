@@ -11,7 +11,7 @@ class SdpCode < ApplicationRecord
   search_keys :main, :first, :second, :third, :name
 
   # rubocop:disable Style/FormatStringToken
-  def to_s
+  def full_code
     tmpl = '%03<main>d.%02<first>d.%02<second>d.%02<third>d'
     format(tmpl, main: main, first: first, second: second, third: third)
   end

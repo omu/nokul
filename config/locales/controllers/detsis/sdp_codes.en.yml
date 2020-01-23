@@ -3,11 +3,11 @@ en:
     sdp_codes:
       index:
         card_header: SDP Codes
-        name: Name
-        main: Main Code
         first: First code
+        full_code: Full code
+        main: Main Code
+        name: Name
         second: Second code
         third: Third code
-        full: Full code
       search:
         smart_search_placeholder: Search

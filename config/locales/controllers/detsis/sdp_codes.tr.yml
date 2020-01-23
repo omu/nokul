@@ -3,11 +3,11 @@ tr:
     sdp_codes:
       index:
         card_header: SDP Kodları
-        name: Adı
-        main: Ana kod
         first: Birinci kod
+        full_code: Tam kod
+        main: Ana kod
+        name: Adı
         second: İkinci kod
         third: Üçüncü kod
-        full: Tam kod
       search:
         smart_search_placeholder: Ara
