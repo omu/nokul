@@ -2,10 +2,13 @@
 
 class SdpCode < ApplicationRecord
   include PgSearch::Model
+  include DynamicSearch
 
   pg_search_scope(
     :search, against: %i[main first second third name], using: { tsearch: { prefix: true } }
   )
+
+  search_keys :main, :first, :second, :third, :name
 
   # rubocop:disable Style/FormatStringToken
   def to_s
