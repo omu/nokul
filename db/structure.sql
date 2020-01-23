@@ -1247,6 +1247,7 @@ CREATE TABLE public.course_enrollments (
     created_at timestamp(6) without time zone NOT NULL,
     updated_at timestamp(6) without time zone NOT NULL,
     semester_registration_id bigint,
+    available_course_group_id bigint,
     CONSTRAINT course_enrollments_status_numericality CHECK ((status >= 0))
 );
 
@@ -5518,6 +5519,13 @@ CREATE INDEX index_course_assessment_methods_on_course_evaluation_type_id ON pub
 
 
 --
+-- Name: index_course_enrollments_on_available_course_group_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_course_enrollments_on_available_course_group_id ON public.course_enrollments USING btree (available_course_group_id);
+
+
+--
 -- Name: index_course_enrollments_on_available_course_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6178,6 +6186,14 @@ ALTER TABLE ONLY public.students
 
 ALTER TABLE ONLY public.curriculum_semesters
     ADD CONSTRAINT fk_rails_32e14f7893 FOREIGN KEY (curriculum_id) REFERENCES public.curriculums(id);
+
+
+--
+-- Name: course_enrollments fk_rails_32f6a8ca4e; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.course_enrollments
+    ADD CONSTRAINT fk_rails_32f6a8ca4e FOREIGN KEY (available_course_group_id) REFERENCES public.available_course_groups(id);
 
 
 --
@@ -6983,6 +6999,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20191127055945'),
 ('20191226074849'),
 ('20200102083531'),
-('20200102083736');
+('20200102083736'),
+('20200123164837');
 
 
