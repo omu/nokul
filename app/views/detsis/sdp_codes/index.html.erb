@@ -18,14 +18,14 @@
             </tr>
           </thead>
           <tbody>
-            <% @paginated.each do |sdp_code| %>
+            <% @sdp_codes.each do |code| %>
               <tr>
-                <td><%= sdp_code.name %></td>
-                <td><%= sdp_code.main %></td>
-                <td><%= sdp_code.first %></td>
-                <td><%= sdp_code.second %></td>
-                <td><%= sdp_code.third %></td>
-                <td><%= sdp_code.full_code %></td>
+                <td><%= code.name %></td>
+                <td><%= code.main %></td>
+                <td><%= code.first %></td>
+                <td><%= code.second %></td>
+                <td><%= code.third %></td>
+                <td><%= code.full_code %></td>
               </tr>
             <% end %>
           </tbody>

@@ -5,8 +5,7 @@ module Detsis
     include SearchableModule
 
     def index
-      sdp_codes = SdpCode.order(:main).dynamic_search(search_params(SdpCode))
-      @pagy, @paginated = pagy(sdp_codes)
+      @sdp_codes = pagy_by_search(SdpCode.order(:main))
     end
   end
 end
