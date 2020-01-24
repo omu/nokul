@@ -20,4 +20,8 @@ class AvailableCourseGroup < ApplicationRecord
   def quota_full?
     quota == course_enrollments.where(status: :saved).length
   end
+
+  def coordinator
+    lecturers.coordinator.first.lecturer
+  end
 end
