@@ -15,6 +15,7 @@ en:
         code: Code
         credit: Credit
         ects: ECTS
+        lecturer: Lecturer
         name: Name
         type: Type
         add: Add

@@ -73,7 +73,7 @@ module Studentship
     end
 
     def course_enrollment_params
-      params.require(:course_enrollment).permit(:available_course_id)
+      params.require(:course_enrollment).permit(:available_course_id, :available_course_group_id)
     end
   end
 end
