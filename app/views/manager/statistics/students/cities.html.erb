@@ -1,6 +1,6 @@
 <div id="chart-for-maps"></div>
 
-<script type="text/javascript" async>
+<script type="text/javascript">
   Highcharts.mapChart('chart-for-maps', {
     chart: {
       map: 'countries/tr/tr-all',
@@ -33,13 +33,11 @@
       tooltip: {
         headerFormat: '',
         pointFormat: `
-          <strong>{point.name}</strong>
-          <br/>
-          <hr/>
-          <span style="color: #96d1c7; font-weight: bold;"><%= t('.male') %>: {point.male}<span/><br/>
-          <span style="color: #fc7978; font-weight: bold;"><%= t('.female') %>: {point.female}</span><br/>
-          <span style="color: #626262; font-weight: bold;"><%= t('.total') %>: {point.value}</span><br/>
-        `,
+          <strong>{point.name}</strong><br/>
+          <p style="color: #96d1c7; font-weight: bold;"><%= t('.male') %>: {point.male}<p/><br/>
+          <p style="color: #fc7978; font-weight: bold;"><%= t('.female') %>: {point.female}</p><br/>
+          <p style="color: #626262; font-weight: bold;"><%= t('.total') %>: {point.value}</p><br/>
+        `
       }
     }]
   });

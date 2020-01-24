@@ -2,9 +2,6 @@
 
 <script type="text/javascript">
   Highcharts.chart('chart-for-genders', {
-    data: {
-      table: 'datatable'
-    },
     chart: {
       plotBackgroundColor: null,
       plotBorderWidth: null,
@@ -28,11 +25,13 @@
         showInLegend: true
       }
     },
-    series: [{
-      name: "<%= t('.rate') %>",
-      colorByPoint: true,
-      data: <%= sanitize(@series) %>
-    }]
+    series: [
+      {
+        name: "<%= t('.rate') %>",
+        data: <%= sanitize(@series) %>,
+      }
+    ],
+    colors: ['#96d1c7', '#fc7978', '#ffafb0']
   });
   $('.highcharts-credits').html('')
 </script>

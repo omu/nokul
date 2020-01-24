@@ -8,83 +8,53 @@ module Manager
       def index; end
 
       def cities
-        @series = Xokul::Ubs::Statistic::Student.by_cities.map do |item|
-          {
-            name:   item[:city].capitalize_turkish,
-            male:   item[:male],
-            female: item[:female],
-            value:  item[:total]
+        @series = Xokul::Ubs::Statistic::Student.by_cities(
+          schema: {
+            city:  :name,
+            total: :value
           }
-        end.to_json
+        ).each { |item| item[:name] = item[:name].capitalize_turkish }.to_json
       end
 
       def double_major_and_minor
-        data    = Xokul::Ubs::Statistic::Student.double_major_and_minor
-        @series = data.reject { |item| item[:category] == 'other' }.map do |item|
-          {
-            name: case item[:category]
-                  when 'minor' then 'Yandal'
-                  when 'double major' then 'Çift Anadal'
-                  end,
-            y:    item[:number_of_students]
+        @series = Xokul::Ubs::Statistic::Student.double_major_and_minor(
+          schema: {
+            category:           :name,
+            number_of_students: :y
           }
-        end.to_json
+        ).to_json
       end
 
       def genders
-        @series = Xokul::Ubs::Statistic::Student.by_genders.map do |item|
-          {
-            name:  item[:gender],
-            color: (
-              case item[:gender]
-              when 'Erkek' then '#96d1c7'
-              when 'Kadın' then '#fc7978'
-              else              '#ffafb0'
-              end
-            ),
-            y:     item[:number_of_students]
+        @series = Xokul::Ubs::Statistic::Student.by_genders(
+          schema: {
+            gender:             :name,
+            number_of_students: :y
           }
-        end.to_json
+        ).to_json
       end
 
       def genders_and_degrees
-        data        = Xokul::Ubs::Statistic::Student.by_genders_and_degree
-        @categories = data.map { |item| item[:degree] }.uniq
-        @genders    = data.map { |item| item[:gender] }.uniq.sort
-        @series     = @genders.map do |gender, _hash|
+        data     = Xokul::Ubs::Statistic::Student.by_genders_and_degree
+        @degrees = data.map { |item| item[:degree] }.uniq
+        @series  = data.group_by { |item| item[:gender] }.map do |gender, values|
           {
-            name:  gender,
-            color: (
-              case gender
-              when 'Erkek' then '#96d1c7'
-              when 'Kadın' then '#fc7978'
-              else              '#ffafb0'
-              end
-            ),
-            data:  @categories.map do |category|
-              row = data.find { |item| item[:degree] == category && item[:gender] == gender } || {}
-              row[:number_of_students]
+            name: gender,
+            data: @degrees.map do |degree|
+              values.find { |v| v[:degree] == degree }&.fetch(:number_of_students, 0)
             end
           }
         end.to_json
       end
 
       def non_graduates
-        data        = Xokul::Ubs::Statistic::Student.non_graduates
-        @categories = data.map { |item| item[:educational_level] }.uniq
-        @statuses   = data.map { |item| item[:status] }.uniq.sort
-        @series     = @statuses.map do |status, _hash|
+        data     = Xokul::Ubs::Statistic::Student.non_graduates
+        @degrees = data.map { |item| item[:degree] }.uniq
+        @series  = data.group_by { |item| item[:status] }.map do |status, values|
           {
-            name:  status,
-            color: (
-              case status
-              when 'Uzatan' then '#8E2C3E'
-              when 'Normal' then '#B27D32'
-              end
-            ),
-            data:  @categories.map do |category|
-              row = data.find { |item| item[:educational_level] == category && item[:status] == status } || {}
-              row[:number_of_students]
+            name: status,
+            data: @degrees.map do |degree|
+              values.find { |v| v[:degree] == degree }&.fetch(:number_of_students, 0)
             end
           }
         end.to_json

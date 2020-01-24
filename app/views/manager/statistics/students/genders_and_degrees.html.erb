@@ -8,7 +8,9 @@
     title: {
       text: "<%= t('.title') %>"
     },
-    xAxis: { categories: <%= sanitize(@categories.to_json) %> },
+    xAxis: {
+      categories: <%= sanitize(@degrees.to_json) %>
+    },
     yAxis: {
       min: 0,
       title: {
@@ -25,7 +27,8 @@
         stacking: 'percent'
       }
     },
-    series: <%= sanitize(@series) %>
+    series: <%= sanitize(@series) %>,
+    colors: ['#ffafb0', '#96d1c7', '#fc7978'],
   });
   $('.highcharts-credits').html('')
 </script>
