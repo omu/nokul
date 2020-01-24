@@ -42,9 +42,10 @@ class StudentCourseEnrollmentService # rubocop:disable Metrics/ClassLength
 
   def enroll(course_enrollment_params)
     course_enrollment = @student.current_registration.course_enrollments.new(course_enrollment_params)
-    available_course = course_enrollment.available_course
+    available_course = enrollable(course_enrollment.available_course)
+    check_group_quota(available_course, course_enrollment.available_course_group)
 
-    return course_enrollment.save if enrollable(available_course).errors.empty?
+    return course_enrollment.save if available_course.errors.empty?
 
     raise EnrollableError, available_course.errors.full_messages.first
   end
@@ -138,6 +139,10 @@ class StudentCourseEnrollmentService # rubocop:disable Metrics/ClassLength
 
   def check_quota(available_course)
     available_course.errors.add(:base, translate('quota_full')) if available_course.quota_full?
+  end
+
+  def check_group_quota(available_course, available_course_group)
+    available_course.errors.add(:base, translate('quota_full')) if available_course_group.quota_full?
   end
 
   def check_group(available_course)
