@@ -7,7 +7,7 @@ class SdpCodeTest < ActiveSupport::TestCase
     sdp_code_one = sdp_codes(:one)
     sdp_code_two = sdp_codes(:two)
 
-    assert_equal sdp_code_one.full_code, '010.01.99.05'
-    assert_equal sdp_code_two.full_code, '045.99.00.10'
+    assert_equal sdp_code_one.full_code, '010.01.99'
+    assert_equal sdp_code_two.full_code, '045.99.00'
   end
 end

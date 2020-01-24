@@ -12,8 +12,8 @@ class SdpCode < ApplicationRecord
 
   # rubocop:disable Style/FormatStringToken
   def full_code
-    tmpl = '%03<main>d.%02<first>d.%02<second>d.%02<third>d'
-    format(tmpl, main: main, first: first, second: second, third: third)
+    tmpl = '%03<main>d.%02<first>d.%02<second>d'
+    format(tmpl, main: main, first: first, second: second)
   end
   # rubocop:enable Style/FormatStringToken
 end
