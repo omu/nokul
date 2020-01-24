@@ -11,7 +11,7 @@ SET row_security = off;
 
 SET default_tablespace = '';
 
-SET default_table_access_method = heap;
+SET default_with_oids = false;
 
 --
 -- Name: academic_credentials; Type: TABLE; Schema: public; Owner: -
