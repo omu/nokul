@@ -2867,7 +2867,18 @@ CREATE TABLE public.sdp_codes (
     third integer,
     name character varying,
     created_at timestamp(6) without time zone NOT NULL,
-    updated_at timestamp(6) without time zone NOT NULL
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT sdp_codes_first_null CHECK ((first IS NOT NULL)),
+    CONSTRAINT sdp_codes_first_numericality CHECK ((first >= 0)),
+    CONSTRAINT sdp_codes_main_null CHECK ((main IS NOT NULL)),
+    CONSTRAINT sdp_codes_main_numericality CHECK ((main >= 0)),
+    CONSTRAINT sdp_codes_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT sdp_codes_name_null CHECK ((name IS NOT NULL)),
+    CONSTRAINT sdp_codes_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text))),
+    CONSTRAINT sdp_codes_second_null CHECK ((second IS NOT NULL)),
+    CONSTRAINT sdp_codes_second_numericality CHECK ((second >= 0)),
+    CONSTRAINT sdp_codes_third_null CHECK ((third IS NOT NULL)),
+    CONSTRAINT sdp_codes_third_numericality CHECK ((third >= 0))
 );
 
 
