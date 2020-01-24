@@ -15,4 +15,9 @@ class AvailableCourseGroup < ApplicationRecord
   validates :name, presence: true, uniqueness: { scope: :available_course }, length: { maximum: 255 }
   validates :quota, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 1 }
   validates_associated :lecturers
+
+  # custom methods
+  def quota_full?
+    quota == course_enrollments.where(status: :saved).length
+  end
 end

@@ -59,6 +59,10 @@ class AvailableCourse < ApplicationRecord
     groups.sum(:quota) == course_enrollments.where(status: :saved).length
   end
 
+  def enrollable_groups
+    groups.reject(&:quota_full?)
+  end
+
   private
 
   def assign_academic_term
