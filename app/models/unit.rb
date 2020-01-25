@@ -27,6 +27,7 @@ class Unit < ApplicationRecord
   belongs_to :unit_instruction_type, optional: true
   belongs_to :unit_instruction_language, optional: true
   belongs_to :university_type, optional: true
+
   has_many :duties, dependent: :destroy
   has_many :employees, through: :duties
   has_many :students, dependent: :nullify
@@ -48,6 +49,9 @@ class Unit < ApplicationRecord
   has_many :unit_calendars, dependent: :destroy
   has_many :calendars, through: :unit_calendars
   has_many :snccs, dependent: :destroy
+  has_many :source_books, dependent: :destroy
+  has_many :questions, dependent: :destroy
+  has_many :open_ended_questions, dependent: :destroy
 
   # validations
   validates :name, presence: true,

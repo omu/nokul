@@ -34,6 +34,7 @@ class User < ApplicationRecord
 
   # relations
   has_one_attached :avatar
+
   has_many :academic_credentials, dependent: :destroy
   has_many :addresses, dependent: :destroy
   has_many :articles, dependent: :destroy
@@ -58,6 +59,13 @@ class User < ApplicationRecord
                                    foreign_key: :id_number,
                                    dependent:   :nullify,
                                    inverse_of:  :user
+  has_many :author_questions, dependent: :destroy, foreign_key: :author_id, class_name: 'Question'
+  has_many :editor_questions, dependent: :destroy, foreign_key: :editor_id, class_name: 'Question'
+  has_many :master_questions, dependent: :destroy, foreign_key: :master_id, class_name: 'Question'
+  has_many :author_open_ended_questions, dependent: :destroy, foreign_key: :author_id, class_name: 'OpenEndedQuestion'
+  has_many :editor_open_ended_questions, dependent: :destroy, foreign_key: :editor_id, class_name: 'OpenEndedQuestion'
+  has_many :master_open_ended_questions, dependent: :destroy, foreign_key: :master_id, class_name: 'OpenEndedQuestion'
+
   # validations
   validates :email, presence: true, uniqueness: true, length: { maximum: 255 }, 'valid_email_2/email': {
     mx:                     true,
