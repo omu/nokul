@@ -18,7 +18,7 @@ Highcharts.setOptions({
     rangeSelectorZoom: 'Aralık seç',
     resetZoom: 'Yakınlaşmayı Sıfırla',
     resetZoomTitle: 'Yakınlaşmayı Sıfırla',
-    shortMonths: ['Ock', 'Şbt', 'Mrt', 'Nsn', 'Mys', 'Hazn', 'Tem', 'Ağts', 'Eyl', 'Ekm', 'Kas', 'Arlk'],
+    shortMonths: ['Oca', 'Şub', 'Mar', 'Nis', 'May', 'Haz', 'Tem', 'Ağu', 'Eyl', 'Eki', 'Kas', 'Ara'],
     thousandsSep: '.',
     viewFullscreen: 'Tam Ekran Görüntüle',
     weekdays: ['Pazar', 'Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma', 'Cumartesi']

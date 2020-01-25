@@ -20,7 +20,7 @@ en:
         curriculums: Curriculums
         first_registration: First Registration
         high_school_types: High School Types
-        ldap_sync: Ldap Sync
+        ldap: LDAP
         manager:
           statistics: University Statistics
           title: Manager Pages
