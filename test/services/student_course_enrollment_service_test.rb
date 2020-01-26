@@ -33,7 +33,7 @@ class StudentCourseEnrollmentServiceTest < ActiveSupport::TestCase
 
   test 'enroll method' do
     available_course = available_courses(:compulsory_course_2)
-    @service.enroll(available_course_id: available_course.id)
+    @service.enroll(available_course_id: available_course.id, available_course_group: available_course.groups.first)
     assert_includes @service.course_enrollments.pluck(:available_course_id), available_course.id
   end
 

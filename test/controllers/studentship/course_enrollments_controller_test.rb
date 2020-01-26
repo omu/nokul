@@ -22,7 +22,10 @@ module Studentship
     test 'should create course_enrollment' do
       assert_difference('CourseEnrollment.count') do
         post student_course_enrollments_path(@student), params: {
-          course_enrollment: { available_course_id: available_courses(:compulsory_course_2).id }
+          course_enrollment: {
+            available_course_id:       available_courses(:compulsory_course_2).id,
+            available_course_group_id: available_course_groups(:compulsory_course_2_group).id
+          }
         }
       end
 

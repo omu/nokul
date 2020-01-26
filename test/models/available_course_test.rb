@@ -46,7 +46,7 @@ class AvailableCourseTest < ActiveSupport::TestCase
 
   # custom methods
   test 'quota_full? method' do
-    assert available_courses(:elective_course).quota_full?
-    assert_not available_courses(:compulsory_course).quota_full?
+    assert available_courses(:old_course).quota_full?
+    assert_not available_courses(:elective_course).quota_full?
   end
 end

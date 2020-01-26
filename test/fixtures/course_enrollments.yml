@@ -1,19 +1,23 @@
 old:
   semester_registration: serhat_first_semester
   available_course: test_fall_2018_2019
-  status: saved
-elective:
-  semester_registration: serhat_third_semester
-  available_course: elective_course
+  available_course_group: ati_group_1
   status: saved
 failed:
   semester_registration: serhat_first_semester
   available_course: old_course
+  available_course_group: old_course_group
   status: saved
+elective:
+  semester_registration: serhat_third_semester
+  available_course: elective_course
+  available_course_group: elective_course_group
 compulsory:
   semester_registration: serhat_third_semester
   available_course: compulsory_course
+  available_course_group: compulsory_course_group
 johns_enrollment:
   semester_registration: john_third_semester
-  available_course: compulsory_course
+  available_course: elective_course
+  available_course_group: elective_course_group
   status: saved
