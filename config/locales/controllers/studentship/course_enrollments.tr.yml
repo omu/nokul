@@ -31,10 +31,11 @@ tr:
       errors:
         already_enrolled_at_group: Ders grubundan seçilebilecek maksimum AKTS miktarı kadar ders seçilmiş.
         empty_selected_courses_list: Seçilen dersler listesi boş.
-        quota_full: Ders için belirlenen kontenjan dolmuş.
+        group_quota_full: Ders grubu için belirlenen kontenjan dolmuş.
         must_drop_first: Öncelikli olarak en üst dönemden alınan dersler çıkarılmalı.
         not_enough_ects: Seçilebilecek AKTS miktarı bu dersi alabilmeniz için yeterli değil.
         not_proper_register_event_range: Tarih aralığı bugünü kapsayan çevrimiçi ders kayıtlanma aktivitesi bulunmamaktadır.
+        quota_full: Ders için belirlenen kontenjan dolmuş.
         registration_completed: Ders seçimini tamamladığınız için bu işlemi gerçekleştiremezsiniz.
       index:
         course_enrollments: Ders Kayıtları

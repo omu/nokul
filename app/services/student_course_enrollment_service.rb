@@ -142,7 +142,7 @@ class StudentCourseEnrollmentService # rubocop:disable Metrics/ClassLength
   end
 
   def check_group_quota(available_course, available_course_group)
-    available_course.errors.add(:base, translate('quota_full')) if available_course_group.quota_full?
+    available_course.errors.add(:base, translate('group_quota_full')) if available_course_group.quota_full?
   end
 
   def check_group(available_course)

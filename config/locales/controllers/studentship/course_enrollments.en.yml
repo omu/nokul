@@ -31,10 +31,11 @@ en:
       errors:
         already_enrolled_at_group: The maximum amount of ECTS that can be selected from the course group is selected.
         empty_selected_courses_list: The list of selected courses is empty.
-        quota_full: The course has reached its quota.
+        group_quota_full: The course group has reached its quota.
         must_drop_first: Courses taken from the top semester must be dropped first.
         not_enough_ects: The amount of ECTS that can be selected is not enough for you to take this course.
         not_proper_register_event_range: There is no online course registration activity covering the date range today.
+        quota_full: The course has reached its quota.
         registration_completed: You can not perform this action since you have completed the course selection.
       index:
         course_enrollments: Course Enrollments
