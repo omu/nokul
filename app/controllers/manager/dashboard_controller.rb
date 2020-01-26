@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module Studies
+module Manager
   class DashboardController < ApplicationController
-    def index; end
+    def stats; end
   end
 end

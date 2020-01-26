@@ -1,0 +1,20 @@
+<%= javascript_include_tag 'chart' %>
+<%= javascript_include_tag 'highcharts-langs/tr' if I18n.locale == :tr %>
+
+<div class="row">
+  <div class="col-sm-12 mb-5">
+    <%= content_loader_panel_tag(manager_students_cities_path, refresh: { auto: true }) %>
+  </div>
+  <div class="col-sm-6 mb-5">
+    <%= content_loader_panel_tag(manager_students_genders_path, refresh: { auto: true }) %>
+  </div>
+  <div class="col-sm-6 mb-5">
+    <%= content_loader_panel_tag(manager_students_genders_and_degrees_path, refresh: { auto: true }) %>
+  </div>
+  <div class="col-sm-6 mb-5">
+    <%= content_loader_panel_tag(manager_students_double_major_and_minor_path, refresh: { auto: true }) %>
+  </div>
+  <div class="col-sm-6 mb-5">
+    <%= content_loader_panel_tag(manager_students_non_graduates_path, refresh: { auto: true }) %>
+  </div>
+</div>

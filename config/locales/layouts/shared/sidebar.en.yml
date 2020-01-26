@@ -12,22 +12,24 @@ en:
         calendars: Calendars
         committee_units: Committee Units
         committees: Committees
-        courses: Courses
+        course_enrollments: Course Enrollments
         course_groups: Course Unit Group
         course_management: Course Management
-        course_enrollments: Course Enrolments
         course_unit_groups: Course Unit Group
+        courses: Courses
         curriculums: Curriculums
         detsis: DETSIS
         first_registration: First Registration
         high_school_types: High School Types
-        ldap_sync: Ldap Sync
+        ldap: LDAP
+        manager:
+          stats: University Stats
+          title: Manager Pages
         meksis: MEKSIS
         prospective_employees: Prospective Employees
         prospective_students: Prospective Students
         references: References
         registration_documents: Registration Documents
-        studies: Academic Studies
         units: Units
         users: Users
         yoksis: YOKSIS
