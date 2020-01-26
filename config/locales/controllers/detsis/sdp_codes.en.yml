@@ -1,0 +1,13 @@
+en:
+  detsis:
+    sdp_codes:
+      index:
+        card_header: SDP Codes
+        first: First code
+        full_code: Full code
+        main: Main Code
+        name: Name
+        second: Second code
+        third: Third code
+      search:
+        smart_search_placeholder: Search

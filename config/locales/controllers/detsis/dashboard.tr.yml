@@ -1,0 +1,7 @@
+tr:
+  detsis:
+    dashboard:
+      index:
+        card_header: DETSİS Referansları
+      card:
+        sdp_codes: SDP Kodları

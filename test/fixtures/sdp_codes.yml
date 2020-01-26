@@ -1,0 +1,13 @@
+one:
+  main: 10
+  first: 1
+  second: 99
+  third: 5
+  name: GENEL
+
+two:
+  main: 45
+  first: 99
+  second: 0
+  third: 10
+  name: DİĞER

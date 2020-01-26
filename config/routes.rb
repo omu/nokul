@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   draw :reference
   draw :studentship
   draw :yoksis
+  draw :detsis
 
   resources :units do
     member do
