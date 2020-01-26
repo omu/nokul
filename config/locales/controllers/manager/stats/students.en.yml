@@ -11,7 +11,7 @@ en:
           rate: Rate
           title: Number of Students Studying in Double Major and Minor Programs
         genders:
-          rate: Oran
+          rate: Rate
           title: Number of Student by Genders
         genders_and_degrees:
           title: Number of Students by Academic Degree and Gender
