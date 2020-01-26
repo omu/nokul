@@ -1,3 +1,9 @@
 ---
+engines:
+ eslint:
+   exclude_paths:
+     - app/assets/javascripts/highcharts-maps/tr.js
+     - plugins/tenant/omu/test/dummy/app/assets/javascripts/*
+     - plugins/tenant/acme/test/dummy/app/assets/javascripts/*
 exclude_paths:
   - '**.md'

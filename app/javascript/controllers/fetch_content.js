@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-export function fetchContent ({ url, targetElement, loadingElement }) {
+export default function ({ url, targetElement, loadingElement }) {
   const ERROR_MESSAGE = `
     <div class="alert alert-danger text-center">
       <p class="h4">

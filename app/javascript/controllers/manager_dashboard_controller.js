@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import { Controller } from 'stimulus'
-import { fetchContent } from './fetch_content'
+import fetchContent from './fetch_content'
 
 export default class extends Controller {
   static targets = ['content', 'loadingMessage']
