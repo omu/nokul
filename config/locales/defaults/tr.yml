@@ -11,6 +11,7 @@ tr:
   actions: İşlemler
   active: Aktif
   are_you_sure: Emin misiniz?
+  toggle_auto_refresh: Otomatik Yenilemeyi Aç / Kapat
   created_at: Oluşturulma Tarihi
   detailed_search: Detaylı Arama
   home_nav: Anasayfa
@@ -18,6 +19,7 @@ tr:
   loading: Yükleniyor... Lütfen bekleyiniz.
   passive: Pasif
   preview: Ön İzleme
+  refresh: Yenile
   reset: Sıfırla
   save: Kaydet
   search: Arama Yap

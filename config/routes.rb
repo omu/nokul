@@ -17,11 +17,12 @@ Rails.application.routes.draw do
   draw :course_management
   draw :first_registration
   draw :location
+  draw :manager
+  draw :meksis
   draw :patron
   draw :reference
   draw :studentship
   draw :yoksis
-  draw :meksis
 
   resources :units do
     member do
@@ -35,13 +36,6 @@ Rails.application.routes.draw do
   resources :users, except: [:new, :create] do
     get 'save_address_from_mernis', on: :member
     get 'save_identity_from_mernis', on: :member
-  end
-
-  scope module: :studies do
-    get '/studies', to: 'dashboard#index'
-    get '/studies/articles', to: 'articles#index'
-    get '/studies/projects', to: 'projects#index'
-    get '/studies/certifications', to: 'certifications#index'
   end
 
   resources :agenda_types, except: :show, module: :committee

@@ -7,11 +7,6 @@
         <% end %>
       </li>
       <li class="nav-item">
-        <%= link_to :studies, class: 'nav-link' do %>
-          <%= fa_icon('book', text: t('.studies'), class: 'nav-icon') %>
-        <% end %>
-      </li>
-      <li class="nav-item">
         <%= link_to :units, class: 'nav-link' do %>
           <%= fa_icon('sitemap', text: t('.units'), class: 'nav-icon') %>
         <% end %>
@@ -145,7 +140,19 @@
           </li>
           <li class="nav-item">
             <%= link_to :ldap_entities, class: 'nav-link' do %>
-              <%= fa_icon('database', text: t('.ldap_sync'), class: 'nav-icon') %>
+              <%= fa_icon('database', text: t('.ldap'), class: 'nav-icon') %>
+            <% end %>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item nav-dropdown">
+        <a class="nav-link nav-dropdown-toggle" href="#">
+          <%= fa_icon('microchip', class: 'nav-icon') %><%= t('.manager.title') %>
+        </a>
+        <ul class="nav-dropdown-items">
+          <li class="nav-item">
+            <%= link_to [:manager, :stats], class: 'nav-link' do %>
+              <%= fa_icon('area-chart', text: t('.manager.stats'), class: 'nav-icon') %>
             <% end %>
           </li>
         </ul>

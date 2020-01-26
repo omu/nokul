@@ -1,0 +1,35 @@
+<div id="double_major_and_minor"></div>
+
+<script type="text/javascript">
+  Highcharts.chart('double_major_and_minor', {
+    chart: {
+      plotBackgroundColor: null,
+      plotBorderWidth: null,
+      plotShadow: false,
+      type: 'pie'
+    },
+    title: {
+      text: "<%= t('.title') %>"
+    },
+    tooltip: {
+      pointFormat: '{series.name}: {series.y} <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+      pie: {
+        allowPointSelect: true,
+        cursor: 'pointer',
+        dataLabels: {
+          enabled: true,
+          format: '<b>{point.name}</b>: {point.y}'
+        },
+        showInLegend: true
+      }
+    },
+    series: [{
+      name: "<%= t('.rate') %>",
+      colorByPoint: true,
+      data: <%= sanitize(@series) %>
+    }]
+  });
+  $('.highcharts-credits').html('')
+</script>
