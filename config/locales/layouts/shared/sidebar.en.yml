@@ -22,7 +22,7 @@ en:
         high_school_types: High School Types
         ldap: LDAP
         manager:
-          statistics: University Statistics
+          stats: University Stats
           title: Manager Pages
         meksis: MEKSIS
         prospective_employees: Prospective Employees

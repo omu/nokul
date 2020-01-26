@@ -2,6 +2,6 @@
 
 module Manager
   class DashboardController < ApplicationController
-    def statistics; end
+    def stats; end
   end
 end

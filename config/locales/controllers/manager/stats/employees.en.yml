@@ -1,6 +1,6 @@
 en:
   manager:
-    statistics:
+    stats:
       employees:
         academic:
           title: Number of Academic Employee

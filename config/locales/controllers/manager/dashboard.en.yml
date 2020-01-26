@@ -1,7 +1,7 @@
 en:
   manager:
     dashboard:
-      statistics:
+      stats:
         more_information: More Information
         academic_publishing: Academic Publishing
         employee: Employee

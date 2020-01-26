@@ -1,6 +1,6 @@
 tr:
   manager:
-    statistics:
+    stats:
       students:
         cities:
           female: Kadın

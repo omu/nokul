@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 namespace :manager do
-  get :statistics, to: 'dashboard#statistics'
+  get :stats, to: 'dashboard#stats'
 
-  scope module: :statistics do
+  scope module: :stats do
     get 'articles', to: 'articles#index'
     namespace :employees do
       get '/', action: :index

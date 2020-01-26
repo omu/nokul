@@ -1,6 +1,6 @@
 tr:
   manager:
-    statistics:
+    stats:
       articles:
         index:
           article: Makale

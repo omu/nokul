@@ -1,6 +1,6 @@
 tr:
   manager:
-    statistics:
+    stats:
       employees:
         academic:
           title: Akademik Personel Sayıları

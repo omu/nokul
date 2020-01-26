@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Manager
-  module Statistics
+  module Stats
     class ArticlesController < ApplicationController
       layout false
 

@@ -1,7 +1,7 @@
 tr:
   manager:
     dashboard:
-      statistics:
+      stats:
         academic_publishing: Akademik Yayın
         employee: Personel
         more_information: Detaylı Bilgi

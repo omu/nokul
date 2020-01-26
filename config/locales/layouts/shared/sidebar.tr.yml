@@ -22,8 +22,8 @@ tr:
         high_school_types: Lise Türleri
         ldap: LDAP
         manager:
+          stats: Üniversite İstatistikleri
           title: Yönetici Sayfaları
-          statistics: Üniversite İstatistikleri
         meksis: MEKSİS
         prospective_employees: Aday Personeller
         prospective_students: Aday Öğrenciler
