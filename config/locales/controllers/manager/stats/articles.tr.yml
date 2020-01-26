@@ -6,7 +6,7 @@ tr:
           article: Makale
           number_of_articles_by_years: Yıllara Göre Makale Sayısı
           publications_by_index_types: Index Türüne Göre Makaleler
-          publications_by_language: Yayın Dili Göre Makaleler
+          publications_by_language: Yayın Diline Göre Makaleler
           publications_by_number_of_authors: Yazar Sayısına Göre Makaleler
           publications_by_publication_types: Yayın Türüne Göre Makaleler
           recently_added: En Son Eklenen Makaleler
