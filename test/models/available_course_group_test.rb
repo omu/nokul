@@ -31,8 +31,4 @@ class AvailableCourseGroupTest < ActiveSupport::TestCase
     assert available_course_groups(:elective_course_group).quota_full?
     assert_not available_course_groups(:elective_course_2_group).quota_full?
   end
-
-  test 'coordinator method' do
-    assert available_course_groups(:ati_group_1).coordinator, employees(:chief_john)
-  end
 end
