@@ -60,7 +60,7 @@ class AvailableCourse < ApplicationRecord
   end
 
   def enrollable_groups
-    groups.reject(&:quota_full?)
+    groups.order(:name).reject(&:quota_full?)
   end
 
   private
