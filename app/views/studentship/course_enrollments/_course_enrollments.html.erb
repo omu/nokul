@@ -6,7 +6,7 @@
       <th><%= t('.type') %></th>
       <th><%= t('.credit') %></th>
       <th><%= t('.ects') %></th>
-      <th><%= t('.lecturer') %></th>
+      <th><%= t('.group') %></th>
       <th><%= t('actions') %></th>
     </tr>
   </thead>
@@ -19,7 +19,7 @@
         <td><%= enum_t(available_course.curriculum_course, :type) %></td>
         <td><%= available_course.credit.to_i %></td>
         <td><%= available_course.ects.to_i %></td>
-        <td><%= full_name(course_enrollment.available_course_group.coordinator.identities.formal.first) %></td>
+        <td><%= course_enrollment.available_course_group.name %></td>
         <td>
           <% if available_course.errors.empty? %>
             <%= link_to(t('.drop'), student_course_enrollment_path(@student, course_enrollment), method: :delete, class: 'btn btn-sm btn-outline-danger') %>

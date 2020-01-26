@@ -15,7 +15,7 @@ tr:
         code: Kodu
         credit: Kredi
         ects: AKTS
-        lecturer: Öğrenim Üyesi
+        group: Grup
         name: Adı
         type: Türü
         add: Ekle

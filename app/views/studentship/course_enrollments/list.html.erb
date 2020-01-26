@@ -29,7 +29,7 @@
                 <th><%= t('.sequence') %></th>
                 <th><%= t('.credit') %></th>
                 <th><%= t('.ects') %></th>
-                <th><%= t('.lecturer') %></th>
+                <th><%= t('.group') %></th>
               </tr>
             </thead>
             <tbody>
@@ -43,7 +43,7 @@
                   <td><%= available_course.curriculum_course.curriculum_semester.sequence %></td>
                   <td><%= available_course.credit.to_i %></td>
                   <td><%= available_course.ects.to_i %></td>
-                  <td><%= full_name(course_enrollment.available_course_group.coordinator.identities.formal.first) %></td>
+                  <td><%= course_enrollment.available_course_group.name %></td>
                 </tr>
               <% end %>
             </tbody>
