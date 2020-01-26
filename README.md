@@ -20,7 +20,7 @@ services, 50K students and 4K employees as a case.
 Installation
 ------------
 
-See [installation guide](/doc/development/installation.md) for details.
+See [installation guide](/doc/operations/installation.md) for details.
 
 Documentation
 -------------

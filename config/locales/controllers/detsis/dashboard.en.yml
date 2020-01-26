@@ -1,0 +1,7 @@
+en:
+  detsis:
+    dashboard:
+      index:
+        card_header: DETSIS References
+      card:
+        sdp_codes: SDP Codes
