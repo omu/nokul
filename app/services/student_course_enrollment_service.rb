@@ -80,7 +80,7 @@ class StudentCourseEnrollmentService # rubocop:disable Metrics/ClassLength
   end
 
   def savable
-    @savable ||= @student.current_registration.available_course_groups.map(&:quota_full?).none?
+    @savable ||= @student.current_registration.available_course_groups.none?(&:quota_full?)
   end
 
   private
