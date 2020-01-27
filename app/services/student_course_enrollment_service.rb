@@ -59,7 +59,7 @@ class StudentCourseEnrollmentService # rubocop:disable Metrics/ClassLength
   end
 
   def save
-    return unless savable
+    return unless savable?
 
     @course_enrollments.update(status: :saved)
     @student.current_registration.update(status: :saved)
@@ -79,8 +79,8 @@ class StudentCourseEnrollmentService # rubocop:disable Metrics/ClassLength
     available_course
   end
 
-  def savable
-    @savable ||= @student.current_registration.available_course_groups.none?(&:quota_full?)
+  def savable?
+    @student.current_registration.available_course_groups.none?(&:quota_full?)
   end
 
   private

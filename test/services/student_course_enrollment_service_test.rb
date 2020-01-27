@@ -76,13 +76,13 @@ class StudentCourseEnrollmentServiceTest < ActiveSupport::TestCase
     assert_equal available_course.errors.full_messages.first, translate('must_drop_first')
   end
 
-  test 'savable method with false return' do
-    assert_not @service.savable
+  test 'savable? method with false return' do
+    assert_not @service.savable?
   end
 
-  test 'savable method' do
+  test 'savable? method' do
     @service.drop(course_enrollments(:elective))
-    assert @service.savable
+    assert @service.savable?
   end
 
   private
