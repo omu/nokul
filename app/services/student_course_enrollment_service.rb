@@ -59,7 +59,9 @@ class StudentCourseEnrollmentService # rubocop:disable Metrics/ClassLength
   end
 
   def save
-    @student.current_registration.course_enrollments.update(status: :saved)
+    return unless savable
+
+    @course_enrollments.update(status: :saved)
     @student.current_registration.update(status: :saved)
   end
 
@@ -75,6 +77,10 @@ class StudentCourseEnrollmentService # rubocop:disable Metrics/ClassLength
     available_course.errors.add(:base, translate('must_drop_first')) if max_sequence > sequence
 
     available_course
+  end
+
+  def savable
+    @savable ||= @student.current_registration.available_course_groups.map(&:quota_full?).none?
   end
 
   private

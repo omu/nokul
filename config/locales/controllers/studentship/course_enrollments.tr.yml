@@ -49,6 +49,7 @@ tr:
         year: Yıl
       new:
         available_courses: Açılan Dersler
+        courses_with_full_quota: Seçilen dersler listenizde kotası dolmuş dersler bulunmaktadır. Lütfen kırmızı butonla belirtilen dersi/dersleri listenizden çıkarınız.
         save_enrollments: Seçimleri Kaydet
         selectable_ects: Seçilebilecek AKTS
         selected_courses: Seçilen Dersler

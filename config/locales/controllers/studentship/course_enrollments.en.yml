@@ -49,6 +49,7 @@ en:
         year: Year
       new:
         available_courses: Available Courses
+        courses_with_full_quota: There are courses reached its quota in your selected courses list. Please remove the course(s) indicated by the red button from your list.
         save_enrollments: Save Enrollments
         selectable_ects: Selectable ECTS
         selected_courses: Selected Courses

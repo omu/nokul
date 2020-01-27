@@ -7,12 +7,23 @@
       <%= render 'student_info' %>
       <div class="card-footer">
         <div class="float-right">
-          <%= link_to(t('.save_enrollments'), save_student_course_enrollments_path(@student), class: 'btn btn-success') %>
+          <% if @service.savable %>
+            <%= link_to(t('.save_enrollments'), save_student_course_enrollments_path(@student), class: 'btn btn-success') %>
+          <% else %>
+            <button class="btn btn-success" style="pointer-events: none;" type="button" disabled><%= t('.save_enrollments') %></button>
+          <% end %>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<% unless @service.savable %>
+  <div class="alert alert-danger" role="alert">
+    <p class="mb-0"><%= t('.courses_with_full_quota') %></p>
+  </div>
+<% end %>
+
 <div class='row'>
   <div class="col-sm-6">
     <div class="card border-default mb-3">

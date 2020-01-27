@@ -34,8 +34,11 @@ module Studentship
 
     def save
       if @service.course_enrollments.any?
-        message = @service.save ? t('.success') : t('.error')
-        redirect_to(list_student_course_enrollments_path(@student), flash: { info: message })
+        if @service.save
+          redirect_to(list_student_course_enrollments_path(@student), flash: { info: t('.success') })
+        else
+          redirect_with(t('.error'))
+        end
       else
         redirect_with(t('.errors.empty_selected_courses_list'))
       end

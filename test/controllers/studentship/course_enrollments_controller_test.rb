@@ -37,6 +37,7 @@ module Studentship
     end
 
     test 'should save' do
+      delete student_course_enrollment_path(@student, course_enrollments(:elective))
       get save_student_course_enrollments_path(@student)
       assert @student.current_registration.saved?
       assert_redirected_to list_student_course_enrollments_path
