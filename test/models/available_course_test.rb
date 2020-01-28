@@ -46,7 +46,13 @@ class AvailableCourseTest < ActiveSupport::TestCase
 
   # custom methods
   test 'quota_full? method' do
-    assert available_courses(:elective_course).quota_full?
-    assert_not available_courses(:compulsory_course).quota_full?
+    assert available_courses(:old_course).quota_full?
+    assert_not available_courses(:elective_course).quota_full?
+  end
+
+  test 'enrollable_groups method' do
+    enrollable_groups = available_courses(:elective_course).enrollable_groups
+    assert_includes enrollable_groups, available_course_groups(:elective_course_group_2)
+    assert_not_includes enrollable_groups, available_course_groups(:elective_course_group)
   end
 end

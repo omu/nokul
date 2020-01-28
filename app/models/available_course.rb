@@ -56,7 +56,11 @@ class AvailableCourse < ApplicationRecord
 
   # custom methods
   def quota_full?
-    groups.sum(:quota) == course_enrollments.where(status: :saved).length
+    groups.sum(:quota) == course_enrollments.saved.count
+  end
+
+  def enrollable_groups
+    groups.order(:name).reject(&:quota_full?)
   end
 
   private
