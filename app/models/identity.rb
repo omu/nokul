@@ -29,25 +29,20 @@ class Identity < ApplicationRecord
   validates :mothers_name, length: { maximum: 255 }
   validates :place_of_birth, presence: true, length: { maximum: 255 }
   validates :registered_to, length: { maximum: 255 }
-  validates :student_id, uniqueness: true, allow_nil: true
   validates :type, inclusion: { in: types.keys }
   validates_with AddressAndIdentityValidator, on: :create
 
-  # scopes
-  scope :student_identity, -> { formal.where.not(student_id: nil).first }
-  scope :user_identity, -> { formal.find_by(student_id: nil) }
-
   # callbacks
-  # rubocop:disable Metrics/AbcSize
   def capitalize_attributes
-    self.fathers_name = fathers_name.capitalize_turkish if fathers_name
-    self.first_name = first_name.capitalize_turkish
-    self.last_name = last_name.upcase(:turkic)
-    self.mothers_name = mothers_name.capitalize_turkish if mothers_name
-    self.place_of_birth = place_of_birth.capitalize_turkish if place_of_birth
-    self.type = 'informal' if type.blank?
+    assign_attributes(
+      fathers_name:   fathers_name&.capitalize_turkish,
+      first_name:     first_name.capitalize_turkish,
+      last_name:      last_name.upcase(:turkic),
+      mothers_name:   mothers_name&.capitalize_turkish,
+      place_of_birth: place_of_birth&.capitalize_turkish,
+      type:           (type.presence || 'informal')
+    )
   end
-  # rubocop:enable Metrics/AbcSize
 
   def full_name
     "#{first_name} #{last_name}"

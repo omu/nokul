@@ -11,7 +11,7 @@ SET row_security = off;
 
 SET default_tablespace = '';
 
-SET default_with_oids = false;
+SET default_table_access_method = heap;
 
 --
 -- Name: academic_credentials; Type: TABLE; Schema: public; Owner: -
@@ -2028,9 +2028,10 @@ CREATE TABLE public.identities (
     date_of_birth date,
     registered_to character varying,
     user_id bigint NOT NULL,
-    student_id bigint,
     created_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
     updated_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
+    active boolean DEFAULT true,
+    CONSTRAINT identities_active_null CHECK ((active IS NOT NULL)),
     CONSTRAINT identities_created_at_null CHECK ((created_at IS NOT NULL)),
     CONSTRAINT identities_date_of_birth_null CHECK ((date_of_birth IS NOT NULL)),
     CONSTRAINT identities_fathers_name_length CHECK ((length((fathers_name)::text) <= 255)),
@@ -5789,13 +5790,6 @@ CREATE INDEX index_group_courses_on_course_id ON public.group_courses USING btre
 
 
 --
--- Name: index_identities_on_student_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX index_identities_on_student_id ON public.identities USING btree (student_id);
-
-
---
 -- Name: index_identities_on_user_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6506,14 +6500,6 @@ ALTER TABLE ONLY public.units
 
 
 --
--- Name: identities fk_rails_8540afbff7; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.identities
-    ADD CONSTRAINT fk_rails_8540afbff7 FOREIGN KEY (student_id) REFERENCES public.students(id);
-
-
---
 -- Name: available_course_lecturers fk_rails_86397e28ff; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7045,6 +7031,8 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20191226074849'),
 ('20200102083531'),
 ('20200102083736'),
-('20200122124332');
+('20200122124332'),
+('20200127102603'),
+('20200127115253');
 
 
