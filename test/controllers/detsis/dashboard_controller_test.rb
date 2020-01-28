@@ -9,7 +9,7 @@ module Detsis
     end
 
     test 'should get index' do
-      get detsis_path
+      get detsis_root_path
 
       assert_response :success
       assert_equal 'index', @controller.action_name

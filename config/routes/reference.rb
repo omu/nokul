@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 namespace :reference do
-  get '/', to: 'dashboard#index'
+  root to: 'dashboard#index'
   resources :academic_terms, except: :show
   resources :assessment_methods, except: :show
   resources :document_types, except: :show

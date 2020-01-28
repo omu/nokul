@@ -9,7 +9,7 @@ module Patron
     end
 
     test 'should get index' do
-      get patron_path
+      get patron_root_path
       assert_response :success
       assert_equal 'index', @controller.action_name
     end

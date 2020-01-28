@@ -9,7 +9,7 @@ module Meksis
     end
 
     test 'should get index' do
-      get meksis_path
+      get meksis_root_path
       assert_response :success
     end
   end

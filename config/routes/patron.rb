@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 namespace :patron do
-  get '/', to: 'dashboard#index'
+  root to: 'dashboard#index'
   resources :assignments do
     collection do
       get :roles

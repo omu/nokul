@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 namespace :yoksis do
-  get '/', to: 'dashboard#index'
+  root to: 'dashboard#index'
   resources :administrative_functions, except: :show
   resources :student_disability_types, except: :show
   resources :student_drop_out_types, except: :show

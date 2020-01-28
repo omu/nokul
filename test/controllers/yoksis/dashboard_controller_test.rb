@@ -9,7 +9,7 @@ module Yoksis
     end
 
     test 'should get index' do
-      get yoksis_path
+      get yoksis_root_path
       assert_equal 'index', @controller.action_name
       assert_response :success
     end
