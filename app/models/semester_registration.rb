@@ -11,6 +11,7 @@ class SemesterRegistration < ApplicationRecord
   belongs_to :academic_term
   belongs_to :student
   has_many :course_enrollments, dependent: :destroy
+  has_many :available_course_groups, through: :course_enrollments
 
   # validations
   validates :semester, uniqueness: { scope: :student_id }, numericality: { greater_than: 0 }

@@ -2,6 +2,7 @@ serhat_first_semester:
   academic_term: summer_2018_2019
   semester: 1
   student: serhat
+  status: saved
 serhat_third_semester:
   academic_term: active_term
   semester: 3
@@ -10,3 +11,4 @@ john_third_semester:
   academic_term: active_term
   semester: 3
   student: john
+  status: saved

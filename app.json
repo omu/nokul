@@ -7,7 +7,7 @@
     "rails"
   ],
   "repository": "https://github.com/omu/nokul",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "scripts": {
     "dokku": {
       "predeploy":  "bin/plugdo bundle install -j4 --path /app/vendor/bundle --without development:test && bundle exec rails assets:precompile && bundle exec rails db:migrate"

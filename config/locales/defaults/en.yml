@@ -11,6 +11,7 @@ en:
   actions: Actions
   active: Active
   are_you_sure: Are you sure?
+  toggle_auto_refresh: Toggle Automatic Refresh
   created_at: Created At
   detailed_search: Detailed Search
   home_nav: Home
@@ -18,6 +19,7 @@ en:
   loading: Loading... Please wait.
   passive: Passive
   preview: Preview
+  refresh: Refresh
   reset: Reset
   save: Save
   search: Search

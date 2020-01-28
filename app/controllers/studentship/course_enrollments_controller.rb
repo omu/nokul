@@ -33,12 +33,10 @@ module Studentship
     end
 
     def save
-      if @service.course_enrollments.any?
-        message = @service.save ? t('.success') : t('.error')
-        redirect_to(list_student_course_enrollments_path(@student), flash: { info: message })
-      else
-        redirect_with(t('.errors.empty_selected_courses_list'))
-      end
+      return redirect_with(t('.errors.empty_selected_courses_list')) if @service.course_enrollments.empty?
+      return redirect_with(t('.error')) unless @service.save
+
+      redirect_to(list_student_course_enrollments_path(@student), flash: { info: t('.success') })
     end
 
     private
@@ -73,7 +71,7 @@ module Studentship
     end
 
     def course_enrollment_params
-      params.require(:course_enrollment).permit(:available_course_id)
+      params.require(:course_enrollment).permit(:available_course_id, :available_course_group_id)
     end
   end
 end

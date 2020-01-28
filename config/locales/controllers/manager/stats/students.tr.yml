@@ -1,0 +1,22 @@
+tr:
+  manager:
+    stats:
+      students:
+        cities:
+          female: Kadın
+          male: Erkek
+          title: Şehirlere Göre Öğrenci Sayıları
+          total: Toplam
+        double_major_and_minor:
+          rate: Oran
+          title: Çift Anadal ve Yandal Programlarında Öğrenim Gören Öğrenci Sayısı
+        genders:
+          rate: Oran
+          title: Cinsiyetlerine Göre Öğrenci Sayıları
+        genders_and_degrees:
+          title: Öğrenim Düzeylerine ve Cinsiyetlerine Göre Öğrenci Sayıları
+          total_number_of_students: Toplam Öğrenci Sayısı
+        non_graduates:
+          total_number_of_students: Toplam Öğrenci Sayısı
+          title: Öğrenim Düzeylerine Göre Zamanında Mezun Olamayan Öğrenci Sayıları
+

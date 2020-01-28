@@ -1247,6 +1247,7 @@ CREATE TABLE public.course_enrollments (
     created_at timestamp(6) without time zone NOT NULL,
     updated_at timestamp(6) without time zone NOT NULL,
     semester_registration_id bigint,
+    available_course_group_id bigint,
     CONSTRAINT course_enrollments_status_numericality CHECK ((status >= 0))
 );
 
@@ -2856,6 +2857,52 @@ ALTER SEQUENCE public.scope_assignments_id_seq OWNED BY public.scope_assignments
 
 
 --
+-- Name: sdp_codes; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.sdp_codes (
+    id bigint NOT NULL,
+    main integer,
+    first integer,
+    second integer,
+    third integer,
+    name character varying,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT sdp_codes_first_null CHECK ((first IS NOT NULL)),
+    CONSTRAINT sdp_codes_first_numericality CHECK ((first >= 0)),
+    CONSTRAINT sdp_codes_main_null CHECK ((main IS NOT NULL)),
+    CONSTRAINT sdp_codes_main_numericality CHECK ((main >= 0)),
+    CONSTRAINT sdp_codes_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT sdp_codes_name_null CHECK ((name IS NOT NULL)),
+    CONSTRAINT sdp_codes_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text))),
+    CONSTRAINT sdp_codes_second_null CHECK ((second IS NOT NULL)),
+    CONSTRAINT sdp_codes_second_numericality CHECK ((second >= 0)),
+    CONSTRAINT sdp_codes_third_null CHECK ((third IS NOT NULL)),
+    CONSTRAINT sdp_codes_third_numericality CHECK ((third >= 0))
+);
+
+
+--
+-- Name: sdp_codes_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.sdp_codes_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: sdp_codes_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.sdp_codes_id_seq OWNED BY public.sdp_codes.id;
+
+
+--
 -- Name: semester_registrations; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -4078,6 +4125,13 @@ ALTER TABLE ONLY public.scope_assignments ALTER COLUMN id SET DEFAULT nextval('p
 
 
 --
+-- Name: sdp_codes id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.sdp_codes ALTER COLUMN id SET DEFAULT nextval('public.sdp_codes_id_seq'::regclass);
+
+
+--
 -- Name: semester_registrations id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -4882,6 +4936,14 @@ ALTER TABLE ONLY public.scope_assignments
 
 
 --
+-- Name: sdp_codes sdp_codes_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.sdp_codes
+    ADD CONSTRAINT sdp_codes_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: semester_registrations semester_registrations_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -5515,6 +5577,13 @@ CREATE INDEX index_course_assessment_methods_on_assessment_method_id ON public.c
 --
 
 CREATE INDEX index_course_assessment_methods_on_course_evaluation_type_id ON public.course_assessment_methods USING btree (course_evaluation_type_id);
+
+
+--
+-- Name: index_course_enrollments_on_available_course_group_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_course_enrollments_on_available_course_group_id ON public.course_enrollments USING btree (available_course_group_id);
 
 
 --
@@ -6178,6 +6247,14 @@ ALTER TABLE ONLY public.students
 
 ALTER TABLE ONLY public.curriculum_semesters
     ADD CONSTRAINT fk_rails_32e14f7893 FOREIGN KEY (curriculum_id) REFERENCES public.curriculums(id);
+
+
+--
+-- Name: course_enrollments fk_rails_32f6a8ca4e; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.course_enrollments
+    ADD CONSTRAINT fk_rails_32f6a8ca4e FOREIGN KEY (available_course_group_id) REFERENCES public.available_course_groups(id);
 
 
 --
@@ -6983,6 +7060,8 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20191127055945'),
 ('20191226074849'),
 ('20200102083531'),
-('20200102083736');
+('20200102083736'),
+('20200122124332'),
+('20200123164837');
 
 

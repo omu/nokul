@@ -6,6 +6,7 @@ class CourseEnrollment < ApplicationRecord
 
   # relations
   belongs_to :available_course
+  belongs_to :available_course_group
   belongs_to :semester_registration
 
   # validations
