@@ -4,27 +4,31 @@ module Kps
   class IdentitySaveJob < ApplicationJob
     queue_as :high
 
-    # slow operation
-    def perform(user, student_id = nil)
+    def perform(user)
       @user = user
-      @student_id = student_id
-      @response = Xokul::Kps::Identity.new(@user.id_number)
+      Identity.transaction do
+        updatable? ? @user.identity.update!(response) : @user.identities.create!(response)
+      end
     end
 
-    # callbacks
-    after_perform do
-      model_data = @response.model_data.merge!(type: 'formal')
-      user_identity = @user.identities.user_identity
-      student_identity = @user.identities.where(student_id: @student_id)
+    private
 
-      if @student_id.present?
-        model_data = model_data.merge(student_id: @student_id)
-        return if student_identity.present?
+    def response
+      @response ||= Xokul::Kps::Identity.new(@user.id_number).model_data.merge(
+        type: 'formal'
+      )
+    end
 
-        @user.identities.create(model_data)
-      else
-        user_identity.present? ? user_identity.update(model_data) : @user.identities.create(model_data)
-      end
+    def eql?(str1, str2)
+      str1.to_s.asciified.casecmp?(str2.to_s.asciified)
+    end
+
+    def updateable?
+      identity = @user.identity
+
+      identity.present? &&
+        eql?(identity.first_name, response[:first_name]) &&
+        eql?(identity.last_name, response[:last_name])
     end
   end
 end
