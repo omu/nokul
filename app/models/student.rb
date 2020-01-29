@@ -8,7 +8,8 @@ class Student < ApplicationRecord
   # relations
   belongs_to :user
   belongs_to :unit
-  has_one :identity, dependent: :destroy
+  belongs_to :identity
+
   has_many :calendars, -> { Calendar.active }, through: :unit
   has_many :curriculums, through: :unit
   has_many :semester_registrations, dependent: :destroy
@@ -27,10 +28,12 @@ class Student < ApplicationRecord
   validates :year, numericality: { greater_than_or_equal_to: 0 }
 
   # delegations
-  delegate :addresses, to: :user
+  delegate :addresses,  to: :user
+  delegate :first_name, to: :identity
+  delegate :last_name,  to: :identity
 
-  # background jobs
-  after_create_commit :build_identity_information, if: proc { identity.nil? }
+  # callbacks
+  before_validation :set_identity
 
   # custom methods
   def gpa
@@ -46,7 +49,7 @@ class Student < ApplicationRecord
 
   private
 
-  def build_identity_information
-    Kps::IdentitySaveJob.perform_later(user, id)
+  def set_identity
+    self.identity_id = user.identity
   end
 end

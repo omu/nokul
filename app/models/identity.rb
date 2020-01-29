@@ -9,6 +9,7 @@ class Identity < ApplicationRecord
 
   # callbacks
   before_save :capitalize_attributes
+  after_save :deactivate_identities
 
   # enums
   enum type: { formal: 1, informal: 2 }
@@ -16,7 +17,6 @@ class Identity < ApplicationRecord
   enum marital_status: { single: 1, married: 2, divorced: 3, unknown: 4 }
 
   # relations
-  belongs_to :student, optional: true
   belongs_to :user
 
   # validations
@@ -30,7 +30,7 @@ class Identity < ApplicationRecord
   validates :place_of_birth, presence: true, length: { maximum: 255 }
   validates :registered_to, length: { maximum: 255 }
   validates :type, inclusion: { in: types.keys }
-  validates_with AddressAndIdentityValidator, on: :create
+  # validates_with AddressAndIdentityValidator, on: :create
 
   # callbacks
   def capitalize_attributes
@@ -54,5 +54,11 @@ class Identity < ApplicationRecord
 
   def city
     City.find_by(name: registered_to.to_s.split('/').last)
+  end
+
+  private
+
+  def deactivate_identities
+    user.identities.where.not(id: id).update(active: false) if active?
   end
 end

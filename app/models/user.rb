@@ -22,7 +22,7 @@ class User < ApplicationRecord
   pg_search_scope(
     :search,
     against:            %i[id_number email],
-    associated_against: { identities: %i[first_name last_name] },
+    associated_against: { identity: %i[first_name last_name] },
     using:              { tsearch: { prefix: true } }
   )
 
@@ -30,6 +30,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :recoverable, :rememberable,
          :trackable, :validatable, :lockable, :timeoutable
   devise :omniauthable, omniauth_providers: %i[openid_connect]
+
+  # delegates
+  delegate :first_name, to: :identity, allow_nil: true
+  delegate :last_name,  to: :identity, allow_nil: true
+  delegate :gender,     to: :identity, allow_nil: true
 
   # relations
   has_one_attached :avatar
@@ -57,6 +62,8 @@ class User < ApplicationRecord
                                    foreign_key: :id_number,
                                    dependent:   :nullify,
                                    inverse_of:  :user
+  has_one :identity, -> { where(active: true) }, inverse_of: :user
+
   # validations
   validates :email, presence: true, uniqueness: true, length: { maximum: 255 }, 'valid_email_2/email': {
     mx:                     true,
