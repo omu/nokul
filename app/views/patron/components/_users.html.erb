@@ -15,8 +15,8 @@
       <tr>
         <td><%= user.id_number %></td>
         <td><%= user.email %></td>
-        <td><%= user.identities.user_identity.try(:first_name) %></td>
-        <td><%= user.identities.user_identity.try(:last_name) %></td>
+        <td><%= user.first_name %></td>
+        <td><%= user.last_name %></td>
         <% if actions_visible %>
           <td>
             <%= link_to_show patron_assignment_path(user) %>

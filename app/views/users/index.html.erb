@@ -23,8 +23,8 @@
               <tr>
                 <td><%= user.id_number %></td>
                 <td><%= user.email %></td>
-                <td><%= user.identities.user_identity.try(:first_name) %></td>
-                <td><%= user.identities.user_identity.try(:last_name) %></td>
+                <td><%= user.first_name %></td>
+                <td><%= user.last_name %></td>
                 <td><%= link_to_actions(user) %></td>
               </tr>
             <% end %>

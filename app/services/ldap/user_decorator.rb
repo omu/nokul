@@ -12,10 +12,6 @@ module LDAP
       GENDER.fetch(identity.try(:gender), '9')
     end
 
-    def identity
-      @identity ||= [*identities.user_identity].first || identities.new
-    end
-
     delegate :country_of_citizenship, to: :identity, allow_nil: true
     delegate :date_of_birth,          to: :identity, allow_nil: true
     delegate :first_name,             to: :identity, allow_nil: true
