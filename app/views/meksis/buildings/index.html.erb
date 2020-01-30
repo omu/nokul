@@ -26,9 +26,9 @@
                 <td><%= building.name %></td>
                 <td><%= building.code %></td>
                 <td><%= building.place_type.name %></td>
-                <td><%= building.indoor_area %></td>
                 <td><%= building.classrooms.sum(:student_capacity) %></td>
                 <td><%= building.classrooms.sum(:exam_capacity) %></td>
+                <td><%= building.indoor_area %></td>
                 <td><%= icon_for_check building.active %></td>
                 <td><%= link_to_actions([:meksis, building], except: %i[new destroy]) %></td>
               </tr>
