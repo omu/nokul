@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class SidekiqRakeJob < ApplicationJob
+class RakeJob < ApplicationJob
   Nokul::Application.load_tasks if Rake::Task.tasks.empty?
 
   def perform(args = {})

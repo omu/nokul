@@ -15,7 +15,7 @@ Cron görevi olarak eklemek için `config/schedule.yml` dosyasına aşağıdaki 
 ```yml
 first_job:
   cron: "* * * * *" # execute at every minute
-  class: SidekiqRakeJob
+  class: RakeJob
   queue: high
   args:
     name: fetch:reference
@@ -33,7 +33,7 @@ aşağıdaki gibi cron eklemesi yapabilirsiniz.
 ```ruby
 k = "AdministrativeFunction"
 args = { name: 'fetch:reference', params: [k.tableize, k] }
-job = Sidekiq::Cron::Job.new(name: 'Fetch Reference - every min', cron: '* * * * *', class: 'SidekiqRakeJob', args: args,
+job = Sidekiq::Cron::Job.new(name: 'Fetch Reference - every min', cron: '* * * * *', class: 'RakeJob', args: args,
   queue: 'high')
 job.save
 ```
