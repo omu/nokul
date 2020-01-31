@@ -81,6 +81,9 @@ gem 'twilio-ruby'
 # log
 gem 'lograge'
 
+# cron
+gem 'sidekiq-cron'
+
 group :development, :test do
   gem 'brakeman', require: false
   gem 'bullet'

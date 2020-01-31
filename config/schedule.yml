@@ -1,0 +1,10 @@
+# https://github.com/ondrejbartas/sidekiq-cron#adding-cron-job
+# first_job:
+#   cron: "* * * * *" # execute at every minute
+#   class: RakeJob
+#   queue: high
+#   args:
+#     name: fetch:reference
+#     params:
+#       - administrative_functions
+#       - AdministrativeFunction
