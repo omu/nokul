@@ -3,10 +3,15 @@
 module UpdateableFromMernis
   extend ActiveSupport::Concern
 
-  def elapsed_time(resource)
-    elapsed_time = (Time.zone.now - resource.updated_at) / 1.day
-    return unless elapsed_time.blank? || elapsed_time < 7
+  def updatable_form_mernis!(resource, redirect_path:)
+    return true if resource.nil? || elapsed_time(resource) > 7.days
 
-    @user.present? ? redirect_to(@user, notice: t('.wait')) : redirect_with('wait')
+    redirect_to(redirect_path, alert: t('.wait'))
+  end
+
+  private
+
+  def elapsed_time(resource)
+    Time.zone.now - (resource&.updated_at || Time.now.zone)
   end
 end
