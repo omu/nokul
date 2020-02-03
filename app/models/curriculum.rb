@@ -40,20 +40,25 @@ class Curriculum < ApplicationRecord
   # validations
   validates :name, presence: true, uniqueness: { scope: :unit_id }, length: { maximum: 255 }
   validates :programs, presence: true
-  validates :semesters_count, numericality: { greater_than_or_equal_to: 0 }
+  validates :semesters_count, numericality: {
+    equal_to: ->(record) { record.number_of_semesters },
+    message:  :number_of_semesters_must_be_equal
+  }
   validates :status, inclusion: { in: statuses.keys }
 
   # custom methods
   def build_semesters
     return false unless valid?
 
-    divisor              = (semester_type.to_sym == :periodic ? 2 : 1)
-    number_of_semesters  = duration * divisor
-    (1..number_of_semesters.to_i).each do |sequence|
+    (1..number_of_semesters).each do |sequence|
       semesters.build(sequence: sequence,
                       year:     (sequence.to_f / divisor).round,
                       term:     %i[spring fall][sequence % 2])
     end
+  end
+
+  def number_of_semesters
+    @number_of_semesters ||= duration * (semester_type.to_sym == :periodic ? 2 : 1).to_i
   end
 
   private
