@@ -9,7 +9,6 @@ module Nokul
         def validates_presence_of(*attributes)
           attributes.each do |attribute|
             test "#{attribute} must be present (presence: true)" do
-              object = class_name.delete_suffix(SUFFIX).constantize.take
               object.send("#{attribute}=", nil)
               assert_not object.valid?
               assert_not_empty object.errors[attribute]
@@ -20,7 +19,6 @@ module Nokul
         def validates_presence_of_nested_model(attribute, ids: nil)
           test "nested model (#{attribute}) must be present" do
             ids ||= "#{attribute.to_s.singularize}_ids"
-            object = class_name.delete_suffix(SUFFIX).constantize.take
             object.send("#{ids}=", nil)
             assert_not object.valid?
             assert_not_empty object.errors[attribute]
@@ -30,7 +28,7 @@ module Nokul
         def validates_uniqueness_of(*attributes)
           attributes.each do |attribute|
             test "#{attribute} must be unique (uniqueness: true)" do
-              duplicate_object = class_name.delete_suffix(SUFFIX).constantize.take.dup
+              duplicate_object = object.dup
               assert_not duplicate_object.valid?
               assert_not_empty duplicate_object.errors[attribute]
             end
@@ -51,7 +49,6 @@ module Nokul
           error_key = controls.dig(key, :error_key)
 
           test "#{attribute} length must be #{option}" do
-            object = class_name.delete_suffix(SUFFIX).constantize.take
             object.send("#{attribute}=", (0..value).map { ('a'..'z').to_a[rand(26)] }.join)
             assert_not object.valid?
             assert object.errors.details[attribute].map { |err| err[:error] }.include?(error_key)
@@ -60,7 +57,6 @@ module Nokul
 
         def validates_numericality_of(attribute)
           test "#{attribute} must be a number" do
-            object = class_name.delete_suffix(SUFFIX).constantize.take
             object.send("#{attribute}=", 'some string')
             assert_not object.valid?
             assert object.errors.details[attribute].map { |err| err[:error] }.include?(:not_a_number)
@@ -79,10 +75,17 @@ module Nokul
           value = option[key].to_i + controls[key].to_i
 
           test "#{attribute} must be #{key} #{value}" do
-            object = class_name.delete_suffix(SUFFIX).constantize.take
             object.send("#{attribute}=", value)
             assert_not object.valid?
             assert object.errors.details[attribute].map { |err| err[:error] }.include?(key)
+          end
+        end
+
+        def self.extended(base)
+          base.class_eval do
+            def object
+              @object ||= class_name.delete_suffix(SUFFIX).constantize.take
+            end
           end
         end
       end
