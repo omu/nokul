@@ -3625,10 +3625,13 @@ CREATE TABLE public.users (
     mobile_phone character varying,
     books_count integer DEFAULT 0,
     papers_count integer DEFAULT 0,
+    disability_type_id bigint,
+    disability_rate integer DEFAULT 0,
     CONSTRAINT users_activated_null CHECK ((activated IS NOT NULL)),
     CONSTRAINT users_articles_count_null CHECK ((articles_count IS NOT NULL)),
     CONSTRAINT users_articles_count_numericality CHECK ((articles_count >= 0)),
     CONSTRAINT users_created_at_null CHECK ((created_at IS NOT NULL)),
+    CONSTRAINT users_disability_rate_numericality CHECK (((disability_rate >= 0) AND (disability_rate <= 100))),
     CONSTRAINT users_email_length CHECK ((length((email)::text) <= 255)),
     CONSTRAINT users_email_presence CHECK (((email IS NOT NULL) AND ((email)::text !~ '^\s*$'::text))),
     CONSTRAINT users_encrypted_password_length CHECK ((length((encrypted_password)::text) <= 255)),
@@ -6133,6 +6136,13 @@ CREATE UNIQUE INDEX index_user_id_and_role_id ON public.role_assignments USING b
 
 
 --
+-- Name: index_users_on_disability_type_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_users_on_disability_type_id ON public.users USING btree (disability_type_id);
+
+
+--
 -- Name: index_users_on_email; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6922,6 +6932,14 @@ ALTER TABLE ONLY public.course_assessment_methods
 
 
 --
+-- Name: users fk_rails_f5440d526e; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.users
+    ADD CONSTRAINT fk_rails_f5440d526e FOREIGN KEY (disability_type_id) REFERENCES public.student_disability_types(id);
+
+
+--
 -- Name: available_courses fk_rails_f75b60bc6a; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7062,6 +7080,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20200102083531'),
 ('20200102083736'),
 ('20200122124332'),
-('20200123164837');
+('20200123164837'),
+('20200129072653');
 
 
