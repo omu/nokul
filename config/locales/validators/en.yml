@@ -19,7 +19,7 @@ en:
       comparison_value: Comparison value
       eql: must be eql %{restriction}
     disability:
-      disability_error: Both the type of disabilty and the rate of disabilty must be filled.
+      disability_error: Both the type of disability and the rate of disability must be filled.
     duty:
       active_and_tenure: This user already has an active and tenure duty. Edit the existing duty or make it passive in order to create a new one.
       invalid_end_date: Start date is selected as a date after the end date

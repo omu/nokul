@@ -2,6 +2,6 @@ en:
   account:
     disability:
       edit:
-        form_title: Update the Disability Type 
+        form_title: Update the Disability Status
       update:
-        success: Disability type successfully updated.
+        success: Disability status successfully updated.
