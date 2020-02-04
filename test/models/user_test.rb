@@ -28,6 +28,10 @@ class UserTest < ActiveSupport::TestCase
   has_many :role_assignments, class_name: 'Patron::RoleAssignment', dependent: :destroy
   has_many :roles, class_name: 'Patron::Role', through: :role_assignments
   has_many :permissions, class_name: 'Patron::Permission', through: :roles
+  belongs_to :disability_type, class_name:  'StudentDisabilityType',
+                               foreign_key: 'disability_type_id',
+                               inverse_of:  :users,
+                               optional:    true
 
   # validations: presence
   validates_presence_of :email
@@ -49,8 +53,9 @@ class UserTest < ActiveSupport::TestCase
   validates_length_of :website, maximum: 50
 
   # validations: numericality
-  validates_numericality_of :id_number
+  validates_numericality_of :disability_rate
   validates_numericality_of :extension_number
+  validates_numerical_range :disability_rate, greater_than_or_equal_to: 0, less_than_or_equal_to: 100
 
   # callback tests
   after_commit :build_address_information
