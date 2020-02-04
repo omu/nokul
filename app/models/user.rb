@@ -89,6 +89,7 @@ class User < ApplicationRecord
   validates :twitter, allow_blank: true, length: { maximum: 50 }
   validates :website, allow_blank: true, length: { maximum: 50 }
   validates_with ImageValidator, field: :avatar, if: proc { |a| a.avatar.attached? }
+  validates_with DisabilityValidator
 
   # callbacks
   after_create_commit :build_address_information, if: proc { addresses.formal.empty? }
