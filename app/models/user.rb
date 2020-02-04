@@ -57,7 +57,15 @@ class User < ApplicationRecord
                                    foreign_key: :id_number,
                                    dependent:   :nullify,
                                    inverse_of:  :user
+  belongs_to :disability_type, class_name:  'StudentDisabilityType',
+                               foreign_key: 'disability_type_id',
+                               inverse_of:  :users,
+                               optional:    true
+
   # validations
+  validates :disability_rate, numericality: { only_integer:             true,
+                                              greater_than_or_equal_to: 0,
+                                              less_than_or_equal_to:    100 }
   validates :email, presence: true, uniqueness: true, length: { maximum: 255 }, 'valid_email_2/email': {
     mx:                     true,
     disposable:             true,
