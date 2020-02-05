@@ -57,10 +57,6 @@ class User < ApplicationRecord
                                    foreign_key: :id_number,
                                    dependent:   :nullify,
                                    inverse_of:  :user
-  belongs_to :disability_type, class_name:  'StudentDisabilityType',
-                               foreign_key: 'disability_type_id',
-                               inverse_of:  :users,
-                               optional:    true
 
   # validations
   validates :disability_rate, numericality: { only_integer:             true,
@@ -89,7 +85,6 @@ class User < ApplicationRecord
   validates :twitter, allow_blank: true, length: { maximum: 50 }
   validates :website, allow_blank: true, length: { maximum: 50 }
   validates_with ImageValidator, field: :avatar, if: proc { |a| a.avatar.attached? }
-  validates_with DisabilityValidator
 
   # callbacks
   after_create_commit :build_address_information, if: proc { addresses.formal.empty? }

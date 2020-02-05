@@ -28,10 +28,6 @@ class UserTest < ActiveSupport::TestCase
   has_many :role_assignments, class_name: 'Patron::RoleAssignment', dependent: :destroy
   has_many :roles, class_name: 'Patron::Role', through: :role_assignments
   has_many :permissions, class_name: 'Patron::Permission', through: :roles
-  belongs_to :disability_type, class_name:  'StudentDisabilityType',
-                               foreign_key: 'disability_type_id',
-                               inverse_of:  :users,
-                               optional:    true
 
   # validations: presence
   validates_presence_of :email

@@ -61,7 +61,6 @@ en:
     disability:
       disability_status: Disability Status
       rate: Disability Rate
-      type: Disability Type
     edit:
       form_title: Edit Account
     employees:

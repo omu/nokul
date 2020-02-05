@@ -12,10 +12,7 @@
               <%= f.error_notification %>
               <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
             </div>
-            <div class='form-group col-sm-6'>
-              <%= f.association :disability_type %>
-            </div>
-            <div class='form-group col-sm-6'>
+            <div class='form-group col-sm-12'>
               <%= f.input :disability_rate %>
             </div>
             <div class='form-group col-sm-12'>

@@ -18,8 +18,6 @@ tr:
       before: "%{restriction} tarihinden önce olmalı"
       comparison_value: Karşılaştırma değeri
       eql: "%{restriction} tarihine eşit olmalı"
-    disability:
-      disability_error: Engel türü ve engel oranının ikisi de doldurulmalı.
     duty:
       active_and_tenure: Bu personelin zaten aktif ve kadrolu bir görevi var! Yeni kayıt girmek yerine aktif kaydı düzenleyin veya öncelikle aktif kaydı pasifleştirin.
       invalid_end_date: Görev başlangıç tarihi bitiş tarihinden sonraki bir tarih olarak seçilmiş.

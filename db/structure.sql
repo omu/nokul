@@ -3625,7 +3625,6 @@ CREATE TABLE public.users (
     mobile_phone character varying,
     books_count integer DEFAULT 0,
     papers_count integer DEFAULT 0,
-    disability_type_id bigint,
     disability_rate integer DEFAULT 0,
     CONSTRAINT users_activated_null CHECK ((activated IS NOT NULL)),
     CONSTRAINT users_articles_count_null CHECK ((articles_count IS NOT NULL)),
@@ -6136,13 +6135,6 @@ CREATE UNIQUE INDEX index_user_id_and_role_id ON public.role_assignments USING b
 
 
 --
--- Name: index_users_on_disability_type_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX index_users_on_disability_type_id ON public.users USING btree (disability_type_id);
-
-
---
 -- Name: index_users_on_email; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6929,14 +6921,6 @@ ALTER TABLE ONLY public.curriculum_course_groups
 
 ALTER TABLE ONLY public.course_assessment_methods
     ADD CONSTRAINT fk_rails_f2b5f80e2c FOREIGN KEY (assessment_method_id) REFERENCES public.assessment_methods(id);
-
-
---
--- Name: users fk_rails_f5440d526e; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.users
-    ADD CONSTRAINT fk_rails_f5440d526e FOREIGN KEY (disability_type_id) REFERENCES public.student_disability_types(id);
 
 
 --

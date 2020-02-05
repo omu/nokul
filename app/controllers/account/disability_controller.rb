@@ -20,7 +20,7 @@ module Account
     end
 
     def user_params
-      params.require(:user).permit(:disability_type_id, :disability_rate)
+      params.require(:user).permit(:disability_rate)
     end
   end
 end

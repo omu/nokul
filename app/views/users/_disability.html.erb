@@ -10,13 +10,11 @@
     <table class='table table-responsive-sm'>
       <thead>
         <tr>
-          <th><%= t('.type') %></th>
           <th><%= t('.rate') %></th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><%= @user.disability_type&.name %></td>
           <td><%= number_to_percentage(@user.disability_rate, precision: 0) %></td>
         </tr>
       </tbody>

@@ -67,7 +67,6 @@ tr:
     disability:
         disability_status: Engel Durumu
         rate: Engel Oranı
-        type: Engel Türü
     edit:
       form_title: Hesabı Düzenle
     employees:
