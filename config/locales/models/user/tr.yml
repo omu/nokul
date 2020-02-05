@@ -107,6 +107,6 @@ tr:
       addresses: Adres Bilgileri
       employees: Personel İşlemleri
       identities: Kimlik Bilgileri
-      other_informations: Diğer Bilgiler
+      other_information: Diğer Bilgiler
     update:
       success: Kullanıcı başarıyla güncellendi.

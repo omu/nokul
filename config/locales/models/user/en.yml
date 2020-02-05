@@ -94,6 +94,6 @@ en:
       addresses: Addresses
       employees: Employees
       identities: Identities
-      other_informations: Other Informations
+      other_information: Other Information
     update:
       success: User successfully updated.
