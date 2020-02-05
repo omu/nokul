@@ -32,20 +32,21 @@
             </div>
             <% unless curriculum.new_record? %>
               <div class="col-sm-12">
-                <div class="alert alert-secondary">
-                  <h3 class='text-center'><%= t('.semesters') %></h3>
-                </div>
-              </div>
+                <fieldset class="border p-3">
+                  <legend class='w-auto'><%= t('.semesters') %></legend>
+                  <%= f.error :semesters_count, class: 'alert alert-danger' if f.object.errors.key?(:semesters_count) %>
+                  <div class='row'>
+                    <%= f.simple_fields_for :semesters do |semester| %>
+                      <%= render 'semester_fields', f: semester %>
+                    <% end %>
+                  </div>
 
-              <%= f.simple_fields_for :semesters do |semester| %>
-                <%= render 'semester_fields', f: semester %>
-              <% end %>
-
-              <div class='links col-sm-12'>
-                <%= link_to_add_association f, :semesters, class: 'btn btn-primary btn-sm pull-right' %>
+                  <div class='links col-sm-12'>
+                    <%= link_to_add_association f, :semesters, class: 'btn btn-primary btn-sm pull-right' %>
+                  </div>
+                </fieldset>
               </div>
             <% end %>
-
             <div class='form-group col-sm-12 mt-2'>
               <%= f.button :submit, class: 'btn btn-outline-success' %>
             </div>

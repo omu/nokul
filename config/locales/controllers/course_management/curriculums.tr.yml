@@ -14,6 +14,12 @@ tr:
         statuses:
           active: Aktif
           passive: Pasif
+    errors:
+      models:
+        curriculum:
+          attributes:
+            semesters_count:
+              number_of_semesters_must_be_equal: Dönem sayısı %{count} olmalı
   course_management:
     curriculums:
       create:

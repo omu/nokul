@@ -50,7 +50,7 @@ class StudentCourseEnrollmentServiceTest < ActiveSupport::TestCase
 
   test 'catalog method' do
     @service.build_catalog
-    semester_courses = @service.catalog[curriculum_semesters(:bilgisayar_muh_mufredati_ucuncu_donem)]
+    semester_courses = @service.catalog[curriculum_semesters(:bm_third)]
     CompulsoryCourseGroup = OpenStruct.new(name: 'compulsories', completed: false)
     elective_course_group = curriculum_course_groups(:ucuncu_donem_secmeli_grubu)
 
