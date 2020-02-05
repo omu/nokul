@@ -82,10 +82,8 @@ module Nokul
         end
 
         def self.extended(base)
-          base.class_eval do
-            def object
-              @object ||= class_name.delete_suffix(SUFFIX).constantize.take
-            end
+          base.define_method :object do
+            @object ||= class_name.delete_suffix(SUFFIX).constantize.take
           end
         end
       end
