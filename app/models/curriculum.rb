@@ -68,7 +68,7 @@ class Curriculum < ApplicationRecord
   end
 
   def number_of_semesters_for_one_year
-    (semester_type.to_s.to_sym == :periodic ? 2 : 1).to_i
+    semester_type&.to_sym == :periodic ? 2 : 1
   end
 
   def check_semester
