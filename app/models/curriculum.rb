@@ -41,7 +41,7 @@ class Curriculum < ApplicationRecord
   validates :name, presence: true, uniqueness: { scope: :unit_id }, length: { maximum: 255 }
   validates :programs, presence: true
   validates :status, inclusion: { in: statuses.keys }
-  validate :check_semester
+  validate :check_semesters_count
 
   # custom methods
   def build_semesters
@@ -52,6 +52,7 @@ class Curriculum < ApplicationRecord
                       year:     (sequence.to_f / number_of_semesters_for_one_year).round,
                       term:     %i[spring fall][sequence % 2])
     end
+    semesters
   end
 
   def number_of_semesters
@@ -71,7 +72,7 @@ class Curriculum < ApplicationRecord
     semester_type&.to_sym == :periodic ? 2 : 1
   end
 
-  def check_semester
+  def check_semesters_count
     return if semesters.size == number_of_semesters
 
     errors.add(:semesters_count, :number_of_semesters_must_be_equal, count: number_of_semesters)
