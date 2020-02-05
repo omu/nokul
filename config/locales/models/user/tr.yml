@@ -26,7 +26,6 @@ tr:
         country: Ülke
         current_password: Mevcut Parola
         disability_rate: Engel Oranı
-        disability_type: Engel Türü
         email: E-posta Adresi
         id_number: Kimlik Numarası
         mobile_phone: Cep Telefonu
@@ -65,8 +64,8 @@ tr:
       success: Kullanıcı başarıyla silindi!
       warning: Kullanıcı silinemedi!
     disability:
-        disability_status: Engel Durumu
-        rate: Engel Oranı
+      disability_status: Engel Durumu
+      rate: Engel Oranı
     edit:
       form_title: Hesabı Düzenle
     employees:

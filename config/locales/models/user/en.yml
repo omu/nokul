@@ -26,7 +26,6 @@ en:
         country: Country
         current_password: Current Password
         disability_rate: Disability Rate
-        disability_type: Disability Type
         email: E-mail
         id_number: ID Number
         mobile_phone: Mobile Phone
