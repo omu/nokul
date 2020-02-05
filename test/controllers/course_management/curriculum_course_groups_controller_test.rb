@@ -7,7 +7,7 @@ module CourseManagement
     setup do
       sign_in users(:serhat)
       @curriculum_semester = CurriculumSemesterDecorator.new(
-        curriculum_semesters(:bilgisayar_muh_mufredati_birinci_donem)
+        curriculum_semesters(:bm_first)
       )
       @curriculum_course_group = @curriculum_semester.curriculum_course_groups.first
     end

@@ -2,23 +2,28 @@ one:
   name: Test Müfredatı 1
   unit: omu
   status: active
+  semesters_count: 8
 
 two:
   name: Test Müfredatı 2
   unit: omu
   status: active
+  semesters_count: 8
 
 three:
   name: Test Müfredatı 3
   unit: omu
   status: active
+  semesters_count: 8
 
 bilgisayar_muhendisligi_mufredati:
   name: Bilgisayar Mühendiliği Müfredatı
   unit: bilgisayar_muhendisligi
   status: active
+  semesters_count: 8
 
 curriculum_to_delete:
   name: Test Müfredat
   unit: cbu
   status: passive
+  semesters_count: 8
