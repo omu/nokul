@@ -10,10 +10,10 @@ class DisabilityValidator < ActiveModel::Validator
   private
 
   def both_empty?
-    !@user.disability_type_id? && @user.disability_rate.zero?
+    !@user.disability_type_id? && @user.disability_rate&.zero?
   end
 
   def both_full?
-    @user.disability_type_id? && !@user.disability_rate.zero?
+    @user.disability_type_id? && !@user.disability_rate&.zero?
   end
 end
