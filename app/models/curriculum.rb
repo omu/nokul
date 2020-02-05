@@ -45,7 +45,7 @@ class Curriculum < ApplicationRecord
 
   # custom methods
   def build_semesters
-    return false if semesters_count >= number_of_semesters
+    return if semesters_count >= number_of_semesters
 
     (1..number_of_semesters).each do |sequence|
       semesters.build(sequence: sequence,
