@@ -50,7 +50,9 @@ class UserTest < ActiveSupport::TestCase
 
   # validations: numericality
   validates_numericality_of :id_number
+  validates_numericality_of :disability_rate
   validates_numericality_of :extension_number
+  validates_numerical_range :disability_rate, greater_than_or_equal_to: 0, less_than_or_equal_to: 100
 
   # callback tests
   after_commit :build_address_information

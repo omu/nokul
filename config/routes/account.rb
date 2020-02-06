@@ -67,5 +67,8 @@ resources :users, only: [] do
     resources :employees, except: %i[index show]
     resources :duties, except: %i[index show]
     resources :positions, except: %i[index show]
+
+    get 'disability', to: 'disability#edit'
+    put 'disability', to: 'disability#update'
   end
 end

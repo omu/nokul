@@ -25,6 +25,7 @@ en:
         articles_count: Articles Count
         country: Country
         current_password: Current Password
+        disability_rate: Disability Rate
         email: E-mail
         id_number: ID Number
         mobile_phone: Mobile Phone
@@ -56,6 +57,9 @@ en:
     destroy:
       success: User successfully deleted!
       warning: User can not be deleted.
+    disability:
+      disability_status: Disability Status
+      rate: Disability Rate
     edit:
       form_title: Edit Account
     employees:
@@ -90,5 +94,6 @@ en:
       addresses: Addresses
       employees: Employees
       identities: Identities
+      other_information: Other Information
     update:
       success: User successfully updated.

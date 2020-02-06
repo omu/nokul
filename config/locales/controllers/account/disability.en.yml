@@ -1,0 +1,7 @@
+en:
+  account:
+    disability:
+      edit:
+        form_title: Update the Disability Status
+      update:
+        success: Disability status successfully updated.
