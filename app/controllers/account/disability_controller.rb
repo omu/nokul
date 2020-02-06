@@ -16,7 +16,6 @@ module Account
 
     def set_user
       @user = User.friendly.find(params[:user_id])
-      not_found unless @user
     end
 
     def user_params
