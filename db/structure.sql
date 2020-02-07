@@ -2825,6 +2825,39 @@ CREATE TABLE public.schema_migrations (
 
 
 --
+-- Name: scholarship_types; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.scholarship_types (
+    id bigint NOT NULL,
+    name character varying,
+    active boolean DEFAULT true,
+    CONSTRAINT scholarship_types_active_null CHECK ((active IS NOT NULL)),
+    CONSTRAINT scholarship_types_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT scholarship_types_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
+);
+
+
+--
+-- Name: scholarship_types_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.scholarship_types_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: scholarship_types_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.scholarship_types_id_seq OWNED BY public.scholarship_types.id;
+
+
+--
 -- Name: scope_assignments; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -4120,6 +4153,13 @@ ALTER TABLE ONLY public.roles ALTER COLUMN id SET DEFAULT nextval('public.roles_
 
 
 --
+-- Name: scholarship_types id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.scholarship_types ALTER COLUMN id SET DEFAULT nextval('public.scholarship_types_id_seq'::regclass);
+
+
+--
 -- Name: scope_assignments id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -4927,6 +4967,14 @@ ALTER TABLE ONLY public.roles
 
 ALTER TABLE ONLY public.schema_migrations
     ADD CONSTRAINT schema_migrations_pkey PRIMARY KEY (version);
+
+
+--
+-- Name: scholarship_types scholarship_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.scholarship_types
+    ADD CONSTRAINT scholarship_types_pkey PRIMARY KEY (id);
 
 
 --
@@ -7065,6 +7113,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20200102083736'),
 ('20200122124332'),
 ('20200123164837'),
-('20200129072653');
+('20200129072653'),
+('20200206083358');
 
 
