@@ -1,0 +1,35 @@
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'users' %><b><%= t('.students') %></b>
+      </div>
+      <div class='card-body'>
+        <% @groups.each do |group| %>
+          <div class='card-header'>
+            <%= fa_icon 'cube' %><b><%= group.name %></b>
+          </div>
+          <table class='table table-sm table-striped'>
+            <thead class='thead'>
+              <tr>
+                <th><%= t('.student_number') %></th>
+                <th><%= t('.name') %></th>
+                <th><%= t('.year_and_semester') %></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% group.course_enrollments.each do |enrollment| %>
+                <tr>
+                  <% student = enrollment.student %>
+                  <td><%= student.student_number %></td>
+                  <td><%= full_name(student.user.identities.formal.first) %></td>
+                  <td><%= "#{student.year}/#{student.semester}" %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

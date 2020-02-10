@@ -1,0 +1,31 @@
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'align-justify', text: t('.given_courses') %>
+      </div>
+      <div class='card-body'>
+        <table class='table table-responsive-sm table-striped table-hover'>
+          <thead>
+            <tr>
+              <th><%= t('.course_code') %></th>
+              <th><%= t('.curriculum_course') %></th>
+              <th><%= t('.unit') %></th>
+              <th><%= t('actions') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @courses.each do |course| %>
+              <tr>
+                <td><%= course.code %></td>
+                <td><%= course.name %></td>
+                <td><%= course.unit.names_depth_cache %></td>
+                <td><%= link_to_show(given_course_path(course)) %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
