@@ -37,7 +37,7 @@ module Activation
     test 'check numericality and length validations' do
       assert_equal 11, @activation.id_number.length
       assert_equal 9, @activation.document_no.length
-      assert @activation.id_number.match(/\A\d+\z/)
+      assert_match(/\A\d+\z/, @activation.id_number)
     end
 
     test 'phone number must be checked with country' do
