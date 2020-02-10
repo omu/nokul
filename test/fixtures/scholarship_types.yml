@@ -1,0 +1,12 @@
+meb:
+  name: Milli Eğitim Bakanlığı
+  active: true
+kkk:
+  name: Kara Kuvvetleri Komutanlığı
+  active: true
+kyk:
+  name: KYK Bursu
+  active: true
+scholarship_type_to_delete:
+  name: This scholarship type will be deleted
+  active: true
