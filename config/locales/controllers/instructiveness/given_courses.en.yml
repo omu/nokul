@@ -1,0 +1,29 @@
+en:
+  instructiveness:
+    given_courses:
+      given_course: &given_course_attributes
+        academic_term: Academic Term
+        coordinator: Coordinator
+        curriculum_course: Course
+        curriculum: Curriculum
+        groups: Groups
+        unit: Unit
+      groups:
+        course_groups: Course Groups
+        coordinator: Coordinator
+        lecturer: Lecturer
+        name: Group Name
+        number_of_enrolled_students: Number of Enrolled Students
+        title: Title
+      index:
+        <<: *given_course_attributes
+        given_courses: Given Courses
+        course_code: Course Code
+      show:
+        <<: *given_course_attributes
+        coordinator: Coodinator
+      students:
+        name: Name
+        students: Students
+        student_number: Student Number
+        year_and_semester: Year/Semester

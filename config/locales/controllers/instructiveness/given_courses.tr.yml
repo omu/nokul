@@ -1,0 +1,29 @@
+tr:
+  instructiveness:
+    given_courses:
+      given_course: &given_course_attributes
+        academic_term: Akademik Dönem
+        coordinator: Koordinatör
+        curriculum_course: Ders
+        curriculum: Müfredat
+        groups: Gruplar
+        unit: Birim
+      groups:
+        course_groups: Ders Grupları
+        coordinator: Koordinatör
+        lecturer: Öğretim Elemanı
+        name: Grup Adı
+        number_of_enrolled_students: Kayıtlı Öğrenci Sayısı
+        title: Unvan
+      index:
+        <<: *given_course_attributes
+        given_courses: Verilen Dersler
+        course_code: Ders Kodu
+      show:
+        <<: *given_course_attributes
+        coordinator: Koordinatör
+      students:
+        name: Adı
+        students: Öğrenciler
+        student_number: Öğrenci Numarası
+        year_and_semester: Sınıfı/Yarıyılı
