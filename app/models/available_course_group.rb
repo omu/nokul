@@ -18,6 +18,10 @@ class AvailableCourseGroup < ApplicationRecord
 
   # custom methods
   def quota_full?
-    quota == course_enrollments.saved.count
+    quota == number_of_enrolled_students
+  end
+
+  def number_of_enrolled_students
+    course_enrollments.saved.count
   end
 end
