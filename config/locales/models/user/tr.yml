@@ -22,6 +22,7 @@ tr:
       student: &student_attributes
         student_number: Öğrenci Numarası
         scholarship_type: Burs Türü
+        unit: Birim
       user: &user_attributes
         activated: Hesap Aktifleştirme
         activated_at: Hesap Aktifleştirme Tarihi

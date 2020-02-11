@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   end
 
   get '/service-worker.js', to: 'service_workers/workers#index'
-  get '/manifest.json', to: 'service_workers/manifests#index'  
+  get '/manifest.json', to: 'service_workers/manifests#index'
   root to: 'home#index'
 
   draw :account
@@ -25,6 +25,8 @@ Rails.application.routes.draw do
   draw :studentship
   draw :yoksis
   draw :detsis
+
+  resources :students, only: %i[edit update]
 
   resources :units do
     member do

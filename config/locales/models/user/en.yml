@@ -22,6 +22,7 @@ en:
       student: &student_attributes
         student_number: Student Number
         scholarship_type: Scholarship Type
+        unit: Unit
       user: &user_attributes
         activated: Account Activation
         activated_at: Account Activation Date
