@@ -6,7 +6,7 @@ module Instructiveness
     before_action :set_course, except: :index
 
     def index
-      @courses = @employee.available_courses.includes(:unit, curriculum_course: :course)
+      @courses = @employee.given_courses.includes(:unit, curriculum_course: :course)
                           .order('units.name', 'courses.name')
     end
 
@@ -25,7 +25,7 @@ module Instructiveness
     end
 
     def set_course
-      @course = @employee.available_courses.find(params[:id])
+      @course = @employee.given_courses.find(params[:id])
     end
   end
 end

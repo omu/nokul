@@ -12,7 +12,6 @@ class Employee < ApplicationRecord
   has_many :units, through: :duties
   has_many :positions, through: :duties
   has_many :administrative_functions, through: :duties
-  has_many :available_courses, foreign_key: :coordinator_id, inverse_of: :coordinator, dependent: :destroy
   has_many :available_course_lecturers, foreign_key: :lecturer_id, inverse_of: :lecturer, dependent: :destroy
 
   # validations
@@ -35,5 +34,10 @@ class Employee < ApplicationRecord
   # custom methods
   def academic?
     title.branch.eql?('ÖE')
+  end
+
+  def given_courses
+    AvailableCourse.joins(groups: :lecturers)
+                   .where('coordinator_id = ? OR (coordinator = ? AND lecturer_id = ?)', id, true, id)
   end
 end
