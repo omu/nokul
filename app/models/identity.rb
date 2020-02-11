@@ -30,7 +30,6 @@ class Identity < ApplicationRecord
   validates :place_of_birth, presence: true, length: { maximum: 255 }
   validates :registered_to, length: { maximum: 255 }
   validates :type, inclusion: { in: types.keys }
-  # validates_with AddressAndIdentityValidator, on: :create
 
   # callbacks
   def capitalize_attributes
