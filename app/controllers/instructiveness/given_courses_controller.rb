@@ -26,8 +26,7 @@ module Instructiveness
     private
 
     def set_employee
-      @employee = current_user.current_employee
-      raise ActiveRecord::RecordNotFound if @employee.nil?
+      not_found if (@employee = current_user.current_employee).nil?
     end
 
     def set_course
