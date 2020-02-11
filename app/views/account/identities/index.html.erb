@@ -21,8 +21,7 @@
               <td><%= t('.type') %></td>
               <td>
                 <span class="badge badge-secondary">
-                  <%= fa_icon('gavel', text: t('activerecord.enums.identity.types.formal')) if identity.formal? %>
-                  <%= fa_icon('user', text: t('activerecord.enums.identity.types.informal')) if identity.informal? %>
+                  <%= fa_icon (identity.formal? ? 'gavel' : 'user'), text: enum_t(identity, :type) %>
                 </span>
               </td>
             </tr>

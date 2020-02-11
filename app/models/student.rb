@@ -33,7 +33,7 @@ class Student < ApplicationRecord
   delegate :last_name,  to: :identity
 
   # callbacks
-  before_validation :set_identity
+  before_validation :set_identity, on: :create
 
   # custom methods
   def gpa
