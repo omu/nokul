@@ -19,6 +19,8 @@ en:
         <<: *given_course_attributes
         given_courses: Given Courses
         course_code: Course Code
+      search:
+        smart_search_placeholder: Course Name / Course Code
       show:
         <<: *given_course_attributes
         coordinator: Coodinator

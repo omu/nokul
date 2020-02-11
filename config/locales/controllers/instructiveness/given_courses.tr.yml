@@ -19,6 +19,8 @@ tr:
         <<: *given_course_attributes
         given_courses: Verilen Dersler
         course_code: Ders Kodu
+      search:
+        smart_search_placeholder: Ders Adı / Ders Kodu
       show:
         <<: *given_course_attributes
         coordinator: Koordinatör

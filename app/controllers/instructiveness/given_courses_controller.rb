@@ -2,12 +2,17 @@
 
 module Instructiveness
   class GivenCoursesController < ApplicationController
+    include SearchableModule
+
     before_action :set_employee
     before_action :set_course, except: :index
 
     def index
-      @courses = @employee.given_courses.includes(:unit, curriculum_course: :course)
-                          .order('units.name', 'courses.name')
+      courses = @employee.given_courses.includes(:unit, curriculum_course: :course)
+                         .order('units.name', 'courses.name')
+                         .dynamic_search(search_params(AvailableCourse))
+
+      @pagy, @courses = pagy(courses)
     end
 
     def show
