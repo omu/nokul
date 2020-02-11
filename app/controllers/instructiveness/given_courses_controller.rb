@@ -15,7 +15,7 @@ module Instructiveness
     end
 
     def students
-      @groups = @course.groups.includes(course_enrollments: [semester_registration: [student: :user]])
+      @groups = @course.groups
     end
 
     private
