@@ -49,6 +49,10 @@ class Student < ApplicationRecord
       semester_registrations.find_by(semester: semester) || semester_registrations.create
   end
 
+  def scholarship?
+    scholarship_type_id?
+  end
+
   private
 
   def build_identity_information

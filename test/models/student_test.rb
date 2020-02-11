@@ -46,6 +46,11 @@ class StudentTest < ActiveSupport::TestCase
     assert_equal students(:serhat_omu).gpa, 0
   end
 
+  test 'scholarship?' do
+    assert students(:serhat).scholarship?
+    assert_not students(:john).scholarship?
+  end
+
   # job tests
   test 'student enqueues Kps::IdentitySaveJob after being created' do
     users(:serhat).students.destroy_all
