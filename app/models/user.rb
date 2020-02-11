@@ -130,6 +130,10 @@ class User < ApplicationRecord
     (students + employees).flatten
   end
 
+  def current_employee
+    employees.active.last
+  end
+
   def title
     employees.active.first.try(:title).try(:name)
   end

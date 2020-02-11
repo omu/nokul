@@ -26,7 +26,7 @@ module Instructiveness
     private
 
     def set_employee
-      @employee = current_user.employees.active.last
+      @employee = current_user.current_employee
       redirect_to(root_path, alert: t('.errors.no_employee_record')) unless @employee
     end
 
