@@ -63,6 +63,10 @@ class AvailableCourse < ApplicationRecord
     groups.order(:name).reject(&:quota_full?)
   end
 
+  def number_of_enrolled_students
+    course_enrollments.saved.count
+  end
+
   private
 
   def assign_academic_term
