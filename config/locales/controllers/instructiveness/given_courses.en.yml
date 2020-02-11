@@ -22,6 +22,8 @@ en:
       show:
         <<: *given_course_attributes
         coordinator: Coodinator
+        number_of_enrolled_students: Number of Enrolled Students
+        students: Students
       students:
         name: Name
         students: Students
