@@ -20,8 +20,11 @@ elective_course_2_group_lecturer:
   coordinator: true
 elective_course_2_group_lecturer:
   group: elective_course_group
-  lecturer: serhat_active
+  lecturer: chief_john
   coordinator: true
+elective_course_2_group_lecturer:
+  group: elective_course_group
+  lecturer: serhat_active
 compulsory_course_group_lecturer:
   group: compulsory_course_group
   lecturer: serhat_active

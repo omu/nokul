@@ -68,6 +68,7 @@ class EmployeeTest < ActiveSupport::TestCase
     given_courses = employees(:serhat_active).given_courses.to_a
     assert_includes given_courses, available_courses(:compulsory_course)
     assert_includes given_courses, available_courses(:elective_course)
+    assert_includes given_courses, available_courses(:elective_course_2)
     assert_not_includes given_courses, available_courses(:compulsory_course_2)
   end
 end
