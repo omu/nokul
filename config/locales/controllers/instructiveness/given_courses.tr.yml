@@ -1,6 +1,8 @@
 tr:
   instructiveness:
     given_courses:
+      errors:
+        no_employee_record: Personel kaydınız bulunmamaktadır.
       given_course: &given_course_attributes
         academic_term: Akademik Dönem
         coordinator: Koordinatör

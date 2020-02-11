@@ -1,6 +1,8 @@
 en:
   instructiveness:
     given_courses:
+      errors:
+        no_employee_record: You have not an employee record.
       given_course: &given_course_attributes
         academic_term: Academic Term
         coordinator: Coordinator
