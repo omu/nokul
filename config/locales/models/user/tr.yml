@@ -19,6 +19,9 @@ tr:
         administrative_function_id: Görev
         end_date: Bitiş Tarihi
         start_date: Başlangıç Tarihi
+      student: &student_attributes
+        student_number: Öğrenci Numarası
+        scholarship_type: Burs Türü
       user: &user_attributes
         activated: Hesap Aktifleştirme
         activated_at: Hesap Aktifleştirme Tarihi
@@ -108,5 +111,8 @@ tr:
       employees: Personel İşlemleri
       identities: Kimlik Bilgileri
       other_information: Diğer Bilgiler
+      students: Öğrenci Bilgileri
+    students:
+      <<: *student_attributes
     update:
       success: Kullanıcı başarıyla güncellendi.

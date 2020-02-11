@@ -19,6 +19,9 @@ en:
         administrative_function_id: Administrative Function
         end_date: End Date
         start_date: Start Date
+      student: &student_attributes
+        student_number: Student Number
+        scholarship_type: Scholarship Type
       user: &user_attributes
         activated: Account Activation
         activated_at: Account Activation Date
@@ -95,5 +98,8 @@ en:
       employees: Employees
       identities: Identities
       other_information: Other Information
+      students: Öğrenci Bilgileri
+    students:
+      <<: *student_attributes
     update:
       success: User successfully updated.

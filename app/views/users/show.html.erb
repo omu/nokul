@@ -14,6 +14,10 @@
         <%= fa_icon 'home' %><strong> <%= t('.addresses') %></strong></a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#students" role="tab" aria-controls="students">
+        <%= fa_icon 'home' %><strong> <%= t('.students') %></strong></a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" data-toggle="tab" href="#employees" role="tab" aria-controls="employees">
         <%= fa_icon 'graduation-cap' %><strong> <%= t('.employees') %></strong></a>
       </li>
@@ -28,6 +32,7 @@
       </div>
       <div class="tab-pane" id="identities" role="tabpanel"></div>
       <div class="tab-pane" id="addresses" role="tabpanel"></div>
+      <div class="tab-pane" id="students" role="tabpanel"><%= render 'students' %></div>
       <div class="tab-pane" id="employees" role="tabpanel"><%= render 'employees' %></div>
       <div class="tab-pane" id="others" role="tabpanel"><%= render 'disability' %></div>
     </div>

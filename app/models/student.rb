@@ -29,6 +29,8 @@ class Student < ApplicationRecord
 
   # delegations
   delegate :addresses, to: :user
+  delegate :name, to: :unit, prefix: true
+  delegate :name, to: :scholarship_type, prefix: true, allow_nil: true
 
   # background jobs
   after_create_commit :build_identity_information, if: proc { identity.nil? }

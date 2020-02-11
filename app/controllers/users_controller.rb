@@ -18,6 +18,7 @@ class UsersController < ApplicationController
     @addresses = @user.addresses.includes(district: :city)
     @employees = @user.employees.includes(:title).order(active: :desc)
     @duties = @user.duties.includes(:unit)
+    @students = @user.students.includes(:unit, :scholarship_type)
     @positions = @user.positions.includes(:administrative_function, :duty)
   end
 
