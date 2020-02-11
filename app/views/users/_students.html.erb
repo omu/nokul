@@ -1,7 +1,10 @@
 <% @students.each do |student| %>
   <div class='card'>
     <div class='card-header'>
-        <%= fa_icon 'user', text: student.unit_name %>
+      <%= fa_icon 'bookmark', text: student.unit_name %>
+      <div class='card-header-actions'>
+        <%= link_to_actions(student, except: %w[destroy show]) %>
+      </div>
     </div>
 
     <div class='card-body'>
