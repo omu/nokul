@@ -1,0 +1,69 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <%= link_to (@identities.formal.present? ? t('.update_from_mernis') : t('.create_from_mernis')), save_from_mernis_user_identities_path(@user), class: 'btn btn-outline-primary btn-sm' %>
+      </div>
+    </div>
+  </div>
+
+  <% @identities.each do |identity| %>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-header">
+          <%= fa_icon 'id-card' %>
+          <strong><%= t('.user_identity') %></strong>
+        </div>
+
+        <div class="card-body">
+          <table class='table table-responsive-sm'>
+            <tr>
+              <td><%= t('.type') %></td>
+              <td>
+                <span class="badge badge-secondary">
+                  <%= fa_icon (identity.formal? ? 'gavel' : 'user'), text: enum_t(identity, :type) %>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><%= t('.last_name') %></td>
+              <td><%= identity.last_name %></td>
+            </tr>
+            <tr>
+              <td><%= t('.first_name') %></td>
+              <td><%= identity.first_name %></td>
+            </tr>
+            <tr>
+              <td><%= t('.mothers_name') %></td>
+              <td><%= identity.mothers_name %></td>
+            </tr>
+            <tr>
+              <td><%= t('.fathers_name') %></td>
+              <td><%= identity.fathers_name %></td>
+            </tr>
+            <tr>
+              <td><%= t('.gender') %></td>
+              <td><%= enum_t(identity, :gender) %></td>
+            </tr>
+            <tr>
+              <td><%= t('.marital_status') %></td>
+              <td><%= enum_t(identity, :marital_status) %></td>
+            </tr>
+            <tr>
+              <td><%= t('.place_of_birth') %></td>
+              <td><%= identity.place_of_birth %></td>
+            </tr>
+            <tr>
+              <td><%= t('.date_of_birth') %></td>
+              <td><%= identity.date_of_birth %></td>
+            </tr>
+            <tr>
+              <td><%= t('.registered_to') %></td>
+              <td><%= identity.registered_to %></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

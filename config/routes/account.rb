@@ -55,17 +55,17 @@ scope module: :account do
   end
 end
 
-resources :users, only: [] do
-  scope module: :account do
-    resources :identities, except: [:show] do
-      get 'save_from_mernis', on: :collection
-    end
-    resources :addresses, except: :show do
-      get 'save_from_mernis', on: :collection
-    end
-
-    resources :employees, except: %i[index show]
-    resources :duties, except: %i[index show]
-    resources :positions, except: %i[index show]
+scope module: :account do
+  resources :identities, except: [:show] do
+    get 'save_from_mernis', on: :collection
   end
+end
+
+resources :users, only: [] do
+  resources :addresses, except: :show do
+    get 'save_from_mernis', on: :collection
+  end
+  resources :employees, except: %i[index show]
+  resources :duties, except: %i[index show]
+  resources :positions, except: %i[index show]
 end
