@@ -9,6 +9,7 @@ class StudentTest < ActiveSupport::TestCase
   include ActiveJob::TestHelper
 
   # relations
+  belongs_to :scholarship_type, optional: true
   belongs_to :user
   belongs_to :unit
   has_one :identity, dependent: :destroy
