@@ -31,4 +31,8 @@ class AvailableCourseGroupTest < ActiveSupport::TestCase
     assert available_course_groups(:elective_course_group).quota_full?
     assert_not available_course_groups(:elective_course_2_group).quota_full?
   end
+
+  test 'number_of_enrolled_students method' do
+    assert_equal available_course_groups(:elective_course_group).number_of_enrolled_students, 1
+  end
 end

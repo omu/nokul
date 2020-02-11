@@ -55,4 +55,8 @@ class AvailableCourseTest < ActiveSupport::TestCase
     assert_includes enrollable_groups, available_course_groups(:elective_course_group_2)
     assert_not_includes enrollable_groups, available_course_groups(:elective_course_group)
   end
+
+  test 'number_of_enrolled_students method' do
+    assert_equal available_courses(:elective_course).number_of_enrolled_students, 1
+  end
 end
