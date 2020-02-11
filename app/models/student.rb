@@ -6,6 +6,7 @@ class Student < ApplicationRecord
   ldap_trigger :user
 
   # relations
+  belongs_to :scholarship_type, optional: true
   belongs_to :user
   belongs_to :unit
   has_one :identity, dependent: :destroy
