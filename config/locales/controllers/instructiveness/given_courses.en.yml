@@ -20,6 +20,7 @@ en:
         given_courses: Given Courses
         course_code: Course Code
       search:
+        academic_term: Academic Term
         smart_search_placeholder: Course Name / Course Code
       show:
         <<: *given_course_attributes

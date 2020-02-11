@@ -30,6 +30,14 @@
                                  placeholder: t('.smart_search_placeholder'),
                                  class:       'form-control' %>
             </div>
+            <div class='form-group col-sm-12'>
+            <%= label_tag(:academic_term_id, t('.academic_term')) %>
+            <%= select_tag(:academic_term_id,
+                           options_from_collection_for_select(AcademicTerm.all, :id, lambda { |term| full_name(term) }, params[:academic_term_id]),
+                           include_blank: true,
+                           class:         'form-control',
+                           style:         'width: 100%') %>
+            </div>
           </div>
           <div class='row'>
             <div class='col-sm-12'>
@@ -41,3 +49,9 @@
     </div>
   </div>
 </div>
+
+<script type='text/javascript'>
+  $(document).ready(function() {
+    $('#academic_term_id').select2();
+  });
+</script>

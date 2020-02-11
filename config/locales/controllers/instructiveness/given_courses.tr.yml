@@ -20,6 +20,7 @@ tr:
         given_courses: Verilen Dersler
         course_code: Ders Kodu
       search:
+        academic_term: Akademik Dönem
         smart_search_placeholder: Ders Adı / Ders Kodu
       show:
         <<: *given_course_attributes
