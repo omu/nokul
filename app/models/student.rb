@@ -18,6 +18,8 @@ class Student < ApplicationRecord
   # scopes
   # TODO: Query will be organized according to activity status
   scope :active, -> { where(permanently_registered: true) }
+  scope :not_scholarships, -> { where(scholarship_type_id: nil) }
+  scope :scholarships, -> { where.not(scholarship_type_id: nil) }
 
   # validations
   validates :unit_id, uniqueness: { scope: %i[user] }
