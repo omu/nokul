@@ -38,6 +38,6 @@ class Employee < ApplicationRecord
 
   def given_courses
     AvailableCourse.joins(groups: :lecturers)
-                   .where('coordinator_id = ? OR (coordinator = ? AND lecturer_id = ?)', id, true, id)
+                   .where('coordinator_id = ? OR lecturer_id = ?', id, id)
   end
 end
