@@ -108,6 +108,10 @@ class UserTest < ActiveSupport::TestCase
     assert users(:serhat).accounts
   end
 
+  test 'user can respond to current_employee method' do
+    assert_equal users(:serhat).current_employee, employees(:serhat_active)
+  end
+
   test 'user can respond to title method' do
     assert_equal users(:serhat).title, 'Araştırma Görevlisi'
   end
