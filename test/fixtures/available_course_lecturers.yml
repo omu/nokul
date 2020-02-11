@@ -17,14 +17,10 @@ elective_course_group_2_lecturer:
 elective_course_2_group_lecturer:
   group: elective_course_2_group
   lecturer: serhat_active
-  coordinator: true
-elective_course_2_group_lecturer:
+elective_course_2_group_lecturer_2:
   group: elective_course_group
   lecturer: chief_john
   coordinator: true
-elective_course_2_group_lecturer:
-  group: elective_course_group
-  lecturer: serhat_active
 compulsory_course_group_lecturer:
   group: compulsory_course_group
   lecturer: serhat_active
