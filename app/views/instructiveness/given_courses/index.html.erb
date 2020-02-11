@@ -11,6 +11,7 @@
             <tr>
               <th><%= t('.course_code') %></th>
               <th><%= t('.curriculum_course') %></th>
+              <th><%= t('.academic_term') %></th>
               <th><%= t('.unit') %></th>
               <th><%= t('actions') %></th>
             </tr>
@@ -20,6 +21,7 @@
               <tr>
                 <td><%= course.code %></td>
                 <td><%= course.name %></td>
+                <td><%= full_name(course.academic_term) %></td>
                 <td><%= course.unit.names_depth_cache %></td>
                 <td><%= link_to_show(given_course_path(course)) %></td>
               </tr>

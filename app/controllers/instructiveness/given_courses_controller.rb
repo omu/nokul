@@ -8,7 +8,7 @@ module Instructiveness
     before_action :set_course, except: :index
 
     def index
-      courses = @employee.given_courses.includes(:unit, curriculum_course: :course)
+      courses = @employee.given_courses.includes(:unit, :academic_term, curriculum_course: :course)
                          .order('units.name', 'courses.name')
                          .dynamic_search(search_params(AvailableCourse))
 
