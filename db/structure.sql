@@ -3292,6 +3292,7 @@ CREATE TABLE public.students (
     updated_at timestamp without time zone NOT NULL,
     semester integer,
     year integer,
+    scholarship_type_id bigint,
     CONSTRAINT students_permanently_registered_null CHECK ((permanently_registered IS NOT NULL)),
     CONSTRAINT students_semester_null CHECK ((semester IS NOT NULL)),
     CONSTRAINT students_semester_numericality CHECK ((semester > 0)),
@@ -6099,6 +6100,13 @@ CREATE INDEX index_semester_registrations_on_student_id ON public.semester_regis
 
 
 --
+-- Name: index_students_on_scholarship_type_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_students_on_scholarship_type_id ON public.students USING btree (scholarship_type_id);
+
+
+--
 -- Name: index_students_on_unit_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6561,6 +6569,14 @@ ALTER TABLE ONLY public.scope_assignments
 
 ALTER TABLE ONLY public.prospective_employees
     ADD CONSTRAINT fk_rails_7e3da1fde7 FOREIGN KEY (title_id) REFERENCES public.titles(id);
+
+
+--
+-- Name: students fk_rails_818ba821f0; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.students
+    ADD CONSTRAINT fk_rails_818ba821f0 FOREIGN KEY (scholarship_type_id) REFERENCES public.scholarship_types(id);
 
 
 --
@@ -7114,6 +7130,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20200122124332'),
 ('20200123164837'),
 ('20200129072653'),
-('20200206083358');
+('20200206083358'),
+('20200211084915');
 
 
