@@ -65,7 +65,7 @@ en:
         unit: Unit
       show:
         <<: *available_course_attributes
-        coordinator: Coodinator
+        coordinator: Coordinator
       update:
         success: Available course successfully updated.
   helpers:

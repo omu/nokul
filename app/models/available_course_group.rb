@@ -6,6 +6,8 @@ class AvailableCourseGroup < ApplicationRecord
   has_many :course_enrollments, dependent: :destroy
   has_many :lecturers, class_name: 'AvailableCourseLecturer', foreign_key: :group_id,
                        inverse_of: :group, dependent: :destroy
+  has_many :saved_enrollments, -> { saved }, class_name: 'CourseEnrollment',
+                                             inverse_of: :available_course
 
   # nested models
   accepts_nested_attributes_for :lecturers, reject_if: :all_blank, allow_destroy: true
@@ -18,6 +20,10 @@ class AvailableCourseGroup < ApplicationRecord
 
   # custom methods
   def quota_full?
-    quota == course_enrollments.saved.count
+    quota == number_of_enrolled_students
+  end
+
+  def number_of_enrolled_students
+    saved_enrollments.count
   end
 end

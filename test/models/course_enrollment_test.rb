@@ -21,4 +21,14 @@ class CourseEnrollmentTest < ActiveSupport::TestCase
     assert_not fake.valid?
     assert_not_empty fake.errors[:available_course]
   end
+
+  # delegates
+  %i[
+    ects
+    student
+  ].each do |property|
+    test "a course_enrollment reach #{property} parameter" do
+      assert course_enrollments(:elective).send(property)
+    end
+  end
 end
