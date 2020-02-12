@@ -40,6 +40,15 @@ class StudentTest < ActiveSupport::TestCase
     assert students(:serhat).addresses
   end
 
+  # scopes
+  test 'not_scholarships scope returns students without scholarship' do
+    assert_includes(Student.not_scholarships, students(:john))
+  end
+
+  test 'scholarships scope returns students with scholarship' do
+    assert_includes(Student.scholarships, students(:serhat))
+  end
+
   # custom methods
   test 'gpa method' do
     assert_equal students(:serhat).gpa, 1.8
