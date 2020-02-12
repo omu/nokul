@@ -23,7 +23,7 @@ en:
         warning: Scholarship type can not be deleted.
       index:
         <<: *scholarship_type_attributes
-        card_header:  Scholarship Types
+        card_header: Scholarship Types
         new_scholarship_type_link: Create a New Scholarship Type
       update:
         success: Scholarship type successfully updated.
