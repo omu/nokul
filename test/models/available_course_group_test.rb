@@ -13,6 +13,7 @@ class AvailableCourseGroupTest < ActiveSupport::TestCase
                        foreign_key: :group_id,
                        inverse_of:  :group,
                        dependent:   :destroy
+  has_many :saved_enrollments, class_name: 'CourseEnrollment', inverse_of: :available_course
 
   # validations: presence
   validates_presence_of :name

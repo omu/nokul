@@ -16,6 +16,7 @@ class AvailableCourseTest < ActiveSupport::TestCase
   has_many :groups, class_name: 'AvailableCourseGroup', dependent: :destroy
   has_many :lecturers, through: :groups
   has_many :course_enrollments, dependent: :destroy
+  has_many :saved_enrollments, class_name: 'CourseEnrollment', inverse_of: :available_course
   accepts_nested_attributes_for :groups, allow_destroy: true
 
   # callbacks
