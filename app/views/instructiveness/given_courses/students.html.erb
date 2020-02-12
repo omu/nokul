@@ -5,7 +5,7 @@
     </div>
     <div class='card'>
       <div class='card-header'>
-        <%= fa_icon 'users' %><b><%= t('.students') %></b>
+        <%= fa_icon 'users' %><b><%= t('.students', course_name: @course.name) %></b>
       </div>
       <div class='card-body'>
         <% @groups.each do |group| %>

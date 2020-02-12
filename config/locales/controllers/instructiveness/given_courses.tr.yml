@@ -26,9 +26,8 @@ tr:
         <<: *given_course_attributes
         coordinator: Koordinatör
         number_of_enrolled_students: Kayıtlı Öğrenci Sayısı
-        students: Öğrenciler
       students:
         name: Adı
-        students: Öğrenciler
+        students: '%{course_name} Dersine Kayıtlanan Öğrenciler'
         student_number: Öğrenci Numarası
         year_and_semester: Sınıfı/Yarıyılı
