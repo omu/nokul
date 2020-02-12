@@ -2,6 +2,7 @@ en:
   activerecord:
     attributes:
       identity: &identity_attributes
+        active: Active
         date_of_birth: Date of Birth
         fathers_name: Fathers Name
         first_name: First Name

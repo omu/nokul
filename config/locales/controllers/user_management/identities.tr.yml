@@ -2,6 +2,7 @@ tr:
   activerecord:
     attributes:
       identity: &identity_attributes
+        active: Aktif
         date_of_birth: Doğum Tarihi
         fathers_name: Baba Adı
         first_name: Ad

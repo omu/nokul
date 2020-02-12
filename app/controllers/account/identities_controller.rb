@@ -12,8 +12,7 @@ module Account
     end
 
     def index
-      @identities = current_user.identities
-      render layout: false
+      @identities = current_user.identities.order(active: :desc)
     end
 
     def save_from_mernis

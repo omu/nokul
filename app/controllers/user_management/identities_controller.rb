@@ -10,12 +10,12 @@ module UserManagement
     before_action only: :save_from_mernis do
       updatable_form_mernis!(
         current_user.identity,
-        redirect_path: users_path
+        redirect_path: @user
       )
     end
 
     def index
-      @identities = @user.identities
+      @identities = @user.identities.order(active: :desc)
       render layout: false
     end
 

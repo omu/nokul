@@ -2,23 +2,23 @@
   <div class="col-sm-12">
     <div class="card">
       <div class="card-body">
-        <%= link_to (@identities.formal.present? ? t('.update_from_mernis') : t('.create_from_mernis')), save_from_mernis_user_identities_path(current_user), class: 'btn btn-outline-primary btn-sm' %>
+        <%= link_to_back :settings %>
+        <%= link_to (@identities.formal.present? ? t('.update_from_mernis') : t('.create_from_mernis')), save_from_mernis_identities_path, class: 'btn btn-outline-primary btn-sm' %>
       </div>
     </div>
   </div>
 
   <% @identities.each do |identity| %>
-    <div class="col-sm-6">
+    <div class="col-sm-4">
       <div class="card">
-        <div class="card-header">
-          <%= fa_icon 'id-card' %>
-          <strong><%= t('.user_identity') %></strong>
+        <div class="card-header bg-<%= identity.active? ? 'success' : 'danger' %>">
+          <%= fa_icon 'id-card', text: t('.user_identity') %>
         </div>
 
         <div class="card-body">
           <table class='table table-responsive-sm'>
             <tr>
-              <td><%= t('.type') %></td>
+              <th><%= t('activerecord.attributes.identity.type') %></th>
               <td>
                 <span class="badge badge-secondary">
                   <%= fa_icon (identity.formal? ? 'gavel' : 'user'), text: enum_t(identity, :type) %>
@@ -26,40 +26,44 @@
               </td>
             </tr>
             <tr>
-              <td><%= t('.last_name') %></td>
+              <th><%= t('activerecord.attributes.identity.last_name', scope: %i[]) %></th>
               <td><%= identity.last_name %></td>
             </tr>
             <tr>
-              <td><%= t('.first_name') %></td>
+              <th><%= t('activerecord.attributes.identity.first_name') %></th>
               <td><%= identity.first_name %></td>
             </tr>
             <tr>
-              <td><%= t('.mothers_name') %></td>
+              <th><%= t('activerecord.attributes.identity.mothers_name') %></th>
               <td><%= identity.mothers_name %></td>
             </tr>
             <tr>
-              <td><%= t('.fathers_name') %></td>
+              <th><%= t('activerecord.attributes.identity.fathers_name') %></th>
               <td><%= identity.fathers_name %></td>
             </tr>
             <tr>
-              <td><%= t('.gender') %></td>
+              <th><%= t('activerecord.attributes.identity.gender') %></th>
               <td><%= enum_t(identity, :gender) %></td>
             </tr>
             <tr>
-              <td><%= t('.marital_status') %></td>
+              <th><%= t('activerecord.attributes.identity.marital_status') %></th>
               <td><%= enum_t(identity, :marital_status) %></td>
             </tr>
             <tr>
-              <td><%= t('.place_of_birth') %></td>
+              <th><%= t('activerecord.attributes.identity.place_of_birth') %></th>
               <td><%= identity.place_of_birth %></td>
             </tr>
             <tr>
-              <td><%= t('.date_of_birth') %></td>
+              <th><%= t('activerecord.attributes.identity.date_of_birth') %></th>
               <td><%= identity.date_of_birth %></td>
             </tr>
             <tr>
-              <td><%= t('.registered_to') %></td>
+              <th><%= t('activerecord.attributes.identity.registered_to') %></th>
               <td><%= identity.registered_to %></td>
+            </tr>
+            <tr>
+              <th><%= t('activerecord.attributes.identity.active') %></th>
+              <td><%= icon_for_check(identity.active) %></td>
             </tr>
           </table>
         </div>

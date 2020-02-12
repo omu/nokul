@@ -12,9 +12,7 @@ module Kps
     private
 
     def response
-      @response ||= Xokul::Kps::Identity.new(@user.id_number).model_data.merge(
-        type: 'formal'
-      )
+      @response ||= Xokul::Kps::Identity.new(@user.id_number).model_data.merge(type: 'formal')
     end
   end
 end

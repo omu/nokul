@@ -18,7 +18,9 @@ class IdentityUpsertService
   end
 
   def call
-    updatable? ? update : create
+    Identity.transaction do
+      updatable? ? update : create
+    end
   end
 
   private
