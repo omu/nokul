@@ -24,7 +24,7 @@ en:
         smart_search_placeholder: Course Name / Course Code
       show:
         <<: *given_course_attributes
-        coordinator: Coodinator
+        coordinator: Coordinator
         number_of_enrolled_students: Number of Enrolled Students
       students:
         name: Name
