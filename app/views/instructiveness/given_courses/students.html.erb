@@ -21,7 +21,7 @@
               </tr>
             </thead>
             <tbody>
-              <% group.course_enrollments.saved.includes(semester_registration: [student: :user]).each do |enrollment| %>
+              <% group.saved_enrollments.includes(semester_registration: [student: :user]).each do |enrollment| %>
                 <tr>
                   <% student = enrollment.student %>
                   <td><%= student.student_number %></td>
