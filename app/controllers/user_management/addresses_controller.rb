@@ -1,29 +1,31 @@
 # frozen_string_literal: true
 
-module Account
+module UserManagement
   class AddressesController < ApplicationController
     include UpdateableFromMernis
 
+    before_action :set_user
     before_action :set_address, only: %i[edit update destroy]
     before_action only: :save_from_mernis do
       updatable_form_mernis!(
-        current_user.addresses.formal,
+        @user.addresses.formal,
         redirect_path: settings_path
       )
     end
 
     def index
-      @addresses = current_user.addresses.includes(district: [:city])
+      @addresses = @user.addresses.includes(district: [:city])
+      render layout: false
     end
 
     def new
-      @address = current_user.addresses.informal.new
+      @address = @user.addresses.informal.new
     end
 
     def edit; end
 
     def create
-      @address = current_user.addresses.informal.new(address_params)
+      @address = @user.addresses.informal.new(address_params)
       @address.save ? redirect_with('success') : render(:new)
     end
 
@@ -36,18 +38,22 @@ module Account
     end
 
     def save_from_mernis
-      Kps::AddressSaveJob.perform_later(current_user)
+      Kps::AddressSaveJob.perform_later(@user)
       redirect_with('will_update')
     end
 
     private
 
+    def set_user
+      @user = User.friendly.find(params[:user_id])
+    end
+
     def set_address
-      @address = current_user.addresses.informal.find(params[:id])
+      @address = @user.addresses.informal.find(params[:id])
     end
 
     def redirect_with(message)
-      redirect_to(:settings, notice: t(".#{message}"))
+      redirect_to(@user, notice: t(".#{message}"))
     end
 
     def address_params

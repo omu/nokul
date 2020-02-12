@@ -28,14 +28,14 @@
 <hr>
 <div class='card border-light bg-transparent'>
   <div class='card-body'>
-    <%= link_to t('.manage'), user_addresses_path(current_user), class: 'pull-right' %>
+    <%= link_to t('.manage'), addresses_path, class: 'pull-right' %>
     <h5><%= t('.addresses') %></h5>
     <small class='text-muted'><%= t('.add_address') %></small>
   </div>
 </div>
 <div class='card border-light bg-transparent'>
   <div class='card-body'>
-    <%= link_to t('action_group.update'), user_identities_path(current_user), class: 'pull-right' %>
+    <%= link_to t('action_group.update'), identities_path, class: 'pull-right' %>
     <h5><%= t('.identity_informations') %></h5>
     <small class='text-muted'><%= t('.update_identity_informations') %></small>
   </div>

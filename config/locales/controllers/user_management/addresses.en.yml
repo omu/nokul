@@ -1,0 +1,57 @@
+en:
+  activerecord:
+    attributes:
+      address: &address_attributes
+        country: Country
+        district: District
+        full_address: Full Address
+        type: Address Type
+    enums:
+      address:
+        types:
+          formal: Formal Address
+          informal: Other Address
+
+  addresses: &addresses_pages
+    create:
+      success: Address successfully created!
+    destroy:
+      success: Address successfully deleted!
+      warning: Address can not be deleted!
+    edit:
+      form_title: Edit Address
+      warning: You can not edit your formal address!
+    index:
+      <<: *address_attributes
+      card_header: Address Information
+      create_from_mernis: Create from MERNIS
+      district_and_city: District / City
+      formal_address: Formal Address
+      informal_address: Informal Address
+      new_address: Add a New Address
+      update_from_mernis: Update from MERNİS
+    new:
+      form_title: Create Address
+    save_from_mernis:
+      wait: You recently created or updated your address. You can update your address once every week.
+      will_update: We got your address create or update request. In a couple of seconds/minutes you will be able to see your new address.
+    update:
+      success: Address successfully updated!
+
+  account:
+    addresses:
+      <<: *addresses_pages
+
+  user_management:
+    addresses:
+      <<: *addresses_pages
+
+  helpers:
+    submit:
+      address:
+        create: Save the Address
+        update: Update the Address
+  simple_form:
+    hints:
+      address:
+        full_address: Neighbourhood, street and door number

@@ -5,5 +5,8 @@ scope module: :user_management do
     resources :identities do
       get :save_from_mernis, on: :collection
     end
+    resources :addresses do
+      get :save_from_mernis, on: :collection
+    end
   end
 end

@@ -2,9 +2,8 @@
   <div class="col-sm-12">
     <div class="card">
       <div class="card-body">
-        <%= link_to_back :settings %>
-        <%= link_to_new(t('.new_address'), new_address_path) if current_user.addresses.informal.blank? %>
-        <%= link_to (current_user.addresses.formal.present? ? t('.update_from_mernis') : t('.create_from_mernis')), save_from_mernis_addresses_path(current_user), class: 'btn btn-outline-primary btn-sm' %>
+        <%= link_to_new(t('.new_address'), new_address_path) if @user.addresses.informal.blank? %>
+        <%= link_to (@user.addresses.formal.present? ? t('.update_from_mernis') : t('.create_from_mernis')), save_from_mernis_addresses_path(@user), class: 'btn btn-outline-primary btn-sm' %>
       </div>
     </div>
   </div>
