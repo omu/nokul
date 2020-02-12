@@ -28,6 +28,7 @@ class UserTest < ActiveSupport::TestCase
   has_many :role_assignments, class_name: 'Patron::RoleAssignment', dependent: :destroy
   has_many :roles, class_name: 'Patron::Role', through: :role_assignments
   has_many :permissions, class_name: 'Patron::Permission', through: :roles
+  has_one :current_employee, class_name: 'Employee', inverse_of: :user
 
   # validations: presence
   validates_presence_of :email
@@ -106,10 +107,6 @@ class UserTest < ActiveSupport::TestCase
   # custom tests
   test 'user can respond to account method' do
     assert users(:serhat).accounts
-  end
-
-  test 'user can respond to current_employee method' do
-    assert_equal users(:serhat).current_employee, employees(:serhat_active)
   end
 
   test 'user can respond to title method' do

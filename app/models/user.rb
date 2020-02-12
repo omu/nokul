@@ -57,6 +57,7 @@ class User < ApplicationRecord
                                    foreign_key: :id_number,
                                    dependent:   :nullify,
                                    inverse_of:  :user
+  has_one :current_employee, -> { active }, class_name: 'Employee', inverse_of: :user
 
   # validations
   validates :disability_rate, numericality: { only_integer:             true,
@@ -128,10 +129,6 @@ class User < ApplicationRecord
   # custom methods
   def accounts
     (students + employees).flatten
-  end
-
-  def current_employee
-    employees.active.last
   end
 
   def title
