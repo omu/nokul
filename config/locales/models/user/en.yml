@@ -99,7 +99,7 @@ en:
       employees: Employees
       identities: Identities
       other_information: Other Information
-      students: Öğrenci Bilgileri
+      students: Student Information
     students:
       <<: *student_attributes
     update:
