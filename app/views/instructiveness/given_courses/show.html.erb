@@ -1,0 +1,44 @@
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class='alert alert-light'>
+      <%= link_to_back(:back) %>
+    </div>
+
+    <div class='card'>
+      <div class='card-header'>
+         <%= fa_icon 'book' %><strong><%= @course.name %></strong>
+      </div>
+      <div class='card-body table-responsive'>
+        <table class='table table-bordered table-hover'>
+          <tbody>
+            <tr>
+              <th><%= t('.unit') %></th>
+              <td><%= @course.unit_name %></td>
+              <th><%= t('.curriculum') %></th>
+              <td><%= @course.curriculum_name %></td>
+            </tr>
+            <tr>
+              <th><%= t('.curriculum_course') %></th>
+              <td>
+                <%= @course.name %>
+                <span class='badge badge-primary'>T: <%= @course.theoric %></span>
+                <span class='badge badge-warning'>P: <%= @course.practice %></span>
+                <span class='badge badge-info'>L: <%= @course.laboratory %></span>
+                <span class='badge badge-success'>K: <%= @course.credit %></span>
+              </td>
+              <th><%= t('.academic_term') %></th>
+              <td><%= full_name(@course.academic_term) %></td>
+            </tr>
+            <tr>
+              <th><%= t('.coordinator') %></th>
+              <td><%= full_name(@course.coordinator) %></td>
+              <th><%= t('.number_of_enrolled_students') %></th>
+              <td><%= link_to(@course.number_of_enrolled_students, students_given_course_path(@course)) %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <%= render 'groups' %>
+    </div>
+  </div>
+</div>

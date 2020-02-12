@@ -14,4 +14,5 @@ class CourseEnrollment < ApplicationRecord
 
   # delegates
   delegate :ects, to: :available_course
+  delegate :student, to: :semester_registration
 end

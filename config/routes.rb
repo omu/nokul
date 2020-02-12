@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   draw :calendar_management
   draw :course_management
   draw :first_registration
+  draw :instructiveness
   draw :location
   draw :manager
   draw :meksis

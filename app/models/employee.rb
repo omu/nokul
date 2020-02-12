@@ -35,4 +35,9 @@ class Employee < ApplicationRecord
   def academic?
     title.branch.eql?('ÖE')
   end
+
+  def given_courses
+    AvailableCourse.joins(groups: :lecturers)
+                   .where('coordinator_id = ? OR lecturer_id = ?', id, id)
+  end
 end
