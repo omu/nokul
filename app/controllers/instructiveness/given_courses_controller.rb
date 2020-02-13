@@ -16,6 +16,8 @@ module Instructiveness
     end
 
     def show
+      @evaluation_types =
+        @course.evaluation_types.includes(:evaluation_type, course_assessment_methods: :assessment_method)
       @groups = @course.groups.includes(:lecturers)
     end
 

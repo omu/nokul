@@ -8,6 +8,10 @@ tr:
         curriculum: Müfredat
         groups: Gruplar
         unit: Birim
+      evaluation_types:
+        assessment_method: Ölçme Kriteri
+        card_header: Değerlendirme Türleri
+        percentage: Yüzde
       groups:
         course_groups: Ders Grupları
         coordinator: Koordinatör
