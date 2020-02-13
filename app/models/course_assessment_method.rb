@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class CourseAssessmentMethod < ApplicationRecord
+  # enums
+  enum status: { no_grade_entered: 0, draft: 1 }
+
   # relations
   belongs_to :assessment_method
   belongs_to :course_evaluation_type

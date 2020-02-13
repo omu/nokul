@@ -1212,6 +1212,7 @@ CREATE TABLE public.course_assessment_methods (
     percentage integer,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
+    status integer DEFAULT 0 NOT NULL,
     CONSTRAINT course_assessment_methods_percentage_null CHECK ((percentage IS NOT NULL)),
     CONSTRAINT course_assessment_methods_percentage_numericality CHECK (((percentage >= 0) AND (percentage <= 100)))
 );
@@ -7212,6 +7213,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20200129072653'),
 ('20200206083358'),
 ('20200211084915'),
-('20200213110520');
+('20200213110520'),
+('20200213124638');
 
 
