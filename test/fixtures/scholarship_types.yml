@@ -4,8 +4,8 @@ meb:
 kkk:
   name: Kara Kuvvetleri Komutanlığı
   active: true
-kyk:
-  name: KYK Bursu
+istiklal:
+  name: İstiklal Madalyası
   active: true
 scholarship_type_to_delete:
   name: This scholarship type will be deleted
