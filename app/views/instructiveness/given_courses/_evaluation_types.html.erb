@@ -18,6 +18,7 @@
             <tr>
               <th><%= t('.assessment_method') %></th>
               <th><%= t('.percentage') %></th>
+              <th><%= t('.status') %></th>
             </tr>
           </thead>
           <tbody>
@@ -25,6 +26,7 @@
               <tr>
                 <td><%= assessment.name %></td>
                 <td><%= assessment.percentage %></td>
+                <td><%= enum_t(assessment, :status) %></td>
               </tr>
             <% end %>
           </tbody>

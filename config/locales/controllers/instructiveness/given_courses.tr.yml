@@ -12,6 +12,7 @@ tr:
         assessment_method: Ölçme Kriteri
         card_header: Değerlendirme Türleri
         percentage: Yüzde
+        status: Durum
       groups:
         course_groups: Ders Grupları
         coordinator: Koordinatör

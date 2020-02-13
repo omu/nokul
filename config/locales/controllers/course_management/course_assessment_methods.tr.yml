@@ -4,3 +4,8 @@ tr:
       course_assessment_method:
         assessment_method: Ölçme Kriteri
         percentage: Yüzde
+  enums:
+      course_assessment_method:
+        statuses:
+          no_grade_entered: Not Girişi Yapılmadı
+          draft: Taslak

@@ -4,3 +4,8 @@ en:
       course_assessment_method:
         assessment_method: Assessment Method
         percentage: Percentage
+  enums:
+      course_assessment_method:
+        statuses:
+          no_grade_entered: No Grade Entered
+          draft: Draft

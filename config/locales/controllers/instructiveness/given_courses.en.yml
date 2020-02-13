@@ -12,6 +12,7 @@ en:
         assessment_method: Assessment Method
         card_header: Evaluation Types
         percentage: Percentage
+        status: Status
       groups:
         course_groups: Course Groups
         coordinator: Coordinator
