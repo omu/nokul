@@ -33,7 +33,7 @@ class Student < ApplicationRecord
   delegate :last_name,  to: :identity
 
   # callbacks
-  before_validation :set_identity, on: :create
+  before_validation :set_identity
 
   # custom methods
   def gpa
@@ -47,9 +47,14 @@ class Student < ApplicationRecord
       semester_registrations.find_by(semester: semester) || semester_registrations.create
   end
 
+  # TODO: Temporary method
+  def active?
+    permanently_registered?
+  end
+
   private
 
   def set_identity
-    self.identity_id = user.identity
+    self.identity = user.identity if new_record? || active?
   end
 end
