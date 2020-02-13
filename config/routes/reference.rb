@@ -8,5 +8,6 @@ namespace :reference do
   resources :evaluation_types, except: :show
   resources :high_school_types, except: :show
   resources :languages, except: :show
+  resources :scholarship_types, except: :show
   resources :titles, except: :show
 end
