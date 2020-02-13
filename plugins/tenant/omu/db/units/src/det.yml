@@ -890,7 +890,7 @@
   district_id: Vezirköprü
 
 - name: Muhasebe ve Vergi Bölüm Başkanlığı
-  abbreviation: VEZİRKÖPRÜ-MYO-NV-BB
+  abbreviation: VEZİRKÖPRÜ-MYO-MV-BB
   parent_yoksis_id: '170007'
   detsis_id: '88418293'
   parent_detsis_id: '61206311'
@@ -2711,7 +2711,7 @@
   district_id: Atakum
 
 - name: Din Felsefesi Anabilim Dalı Başkanlığı
-  abbreviation: FDE-DİNF-ADB
+  abbreviation: FDB-DİNF-ADB
   parent_yoksis_id: '122171'
   detsis_id: '52443415'
   parent_detsis_id: '17646606'
@@ -2720,7 +2720,7 @@
   district_id: Atakum
 
 - name: Din Psikolojisi Anabilim Dalı Başkanlığı
-  abbreviation: FDE-DİNP-ADB
+  abbreviation: FDB-DİNP-ADB
   parent_yoksis_id: '122174'
   detsis_id: '45455078'
   parent_detsis_id: '17646606'
@@ -2729,7 +2729,7 @@
   district_id: Atakum
 
 - name: Din Sosyolojisi Anabilim Dalı Başkanlığı
-  abbreviation: FDE-DİNS-ADB
+  abbreviation: FDB-DİNS-ADB
   parent_yoksis_id: '122173'
   detsis_id: '67743338'
   parent_detsis_id: '17646606'
@@ -2738,7 +2738,7 @@
   district_id: Atakum
 
 - name: Dinler Tarihi Anabilim Dalı Başkanlığı
-  abbreviation: FDE-DİNT-ADB
+  abbreviation: FDB-DİNT-ADB
   parent_yoksis_id: '122168'
   detsis_id: '17194020'
   parent_detsis_id: '17646606'
@@ -2747,7 +2747,7 @@
   district_id: Atakum
 
 - name: Felsefe Tarihi Anabilim Dalı Başkanlığı
-  abbreviation: FDE-FT-ADB
+  abbreviation: FDB-FT-ADB
   parent_yoksis_id: '122169'
   detsis_id: '60927548'
   parent_detsis_id: '17646606'
@@ -2756,7 +2756,7 @@
   district_id: Atakum
 
 - name: İslam Felsefesi Anabilim Dalı Başkanlığı
-  abbreviation: FDE-İF-ADB
+  abbreviation: FDB-İF-ADB
   parent_yoksis_id: '122170'
   detsis_id: '51130924'
   parent_detsis_id: '17646606'
@@ -2765,7 +2765,7 @@
   district_id: Atakum
 
 - name: Mantık Anabilim Dalı Başkanlığı
-  abbreviation: FDE-MANTIK-ADB
+  abbreviation: FDB-MANTIK-ADB
   parent_yoksis_id: '122172'
   detsis_id: '72866993'
   parent_detsis_id: '17646606'
@@ -5551,7 +5551,7 @@
   district_id: İlkadım
 
 - name: Bitkisel ve Hayvansal Üretim Bölüm Başkanlığı
-  abbreviation: SAMSUN-MYO-BİTKİ-BB
+  abbreviation: SAMSUN-MYO-BHÜ-BB
   parent_yoksis_id: '169860'
   detsis_id: '86912044'
   parent_detsis_id: '56591305'

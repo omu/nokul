@@ -13584,7 +13584,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Din Eğitimi Tarihi Bilim Dalı
-  abbreviation: FDE-DİNEĞ-TARİH-BD
+  abbreviation: FDB-DİNEĞ-TARİH-BD
   yoksis_id: '168740'
   parent_yoksis_id: '122167'
   unit_type_id: Bilim Dalı
@@ -13595,7 +13595,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Din Felsefesi Anabilim Dalı
-  abbreviation: FDE-DİNF-AD
+  abbreviation: FDB-DİNF-AD
   yoksis_id: '122171'
   parent_yoksis_id: '122166'
   unit_type_id: Anabilim Dalı
@@ -13606,7 +13606,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Din Psikolojisi Anabilim Dalı
-  abbreviation: FDE-DİNP-AD
+  abbreviation: FDB-DİNP-AD
   yoksis_id: '122174'
   parent_yoksis_id: '122166'
   unit_type_id: Anabilim Dalı
@@ -13617,7 +13617,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Din Sosyolojisi Anabilim Dalı
-  abbreviation: FDE-DİNS-AD
+  abbreviation: FDB-DİNS-AD
   yoksis_id: '122173'
   parent_yoksis_id: '122166'
   unit_type_id: Anabilim Dalı
@@ -13628,7 +13628,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Dinler Tarihi Anabilim Dalı
-  abbreviation: FDE-DİNT-AD
+  abbreviation: FDB-DİNT-AD
   yoksis_id: '122168'
   parent_yoksis_id: '122166'
   unit_type_id: Anabilim Dalı
@@ -13639,7 +13639,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Din Fenomenolojisi Bilim Dalı
-  abbreviation: FDE-DİNT-DİNF-BD
+  abbreviation: FDB-DİNT-DİNF-BD
   yoksis_id: '168742'
   parent_yoksis_id: '122168'
   unit_type_id: Bilim Dalı
@@ -13650,7 +13650,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Dinler Tarihi Bilim Dalı
-  abbreviation: FDE-DİNT-BD
+  abbreviation: FDB-DİNT-BD
   yoksis_id: '168743'
   parent_yoksis_id: '122168'
   unit_type_id: Bilim Dalı
@@ -13661,7 +13661,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Mukayeseli Dinler Bilim Dalı
-  abbreviation: FDE-DİNT-MD-BD
+  abbreviation: FDB-DİNT-MD-BD
   yoksis_id: '168744'
   parent_yoksis_id: '122168'
   unit_type_id: Bilim Dalı
@@ -13672,7 +13672,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Felsefe Tarihi Anabilim Dalı
-  abbreviation: FDE-FT-AD
+  abbreviation: FDB-FT-AD
   yoksis_id: '122169'
   parent_yoksis_id: '122166'
   unit_type_id: Anabilim Dalı
@@ -13683,7 +13683,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Yeniçağ Felsefesi Tarihi Bilim Dalı
-  abbreviation: FDE-FT-YENİÇAĞ-BD
+  abbreviation: FDB-FT-YENİÇAĞ-BD
   yoksis_id: '168747'
   parent_yoksis_id: '122169'
   unit_type_id: Bilim Dalı
@@ -13695,7 +13695,7 @@
   founded_at: 10.09.2009
 
 - name: İlkçağ Felsefesi Tarihi Bilim Dalı
-  abbreviation: FDE-FT-İLKÇAĞ-BD
+  abbreviation: FDB-FT-İLKÇAĞ-BD
   yoksis_id: '168746'
   parent_yoksis_id: '122169'
   unit_type_id: Bilim Dalı
@@ -13706,7 +13706,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Mantık Anabilim Dalı
-  abbreviation: FDE-MANTIK-AD
+  abbreviation: FDB-MANTIK-AD
   yoksis_id: '122172'
   parent_yoksis_id: '122166'
   unit_type_id: Anabilim Dalı
@@ -13717,7 +13717,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: İslam Felsefesi Anabilim Dalı
-  abbreviation: FDE-İF-AD
+  abbreviation: FDB-İF-AD
   yoksis_id: '122170'
   parent_yoksis_id: '122166'
   unit_type_id: Anabilim Dalı
@@ -13728,7 +13728,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Türk Düşünce Tarihi Bilim Dalı
-  abbreviation: FDE-İF-TDT-BD
+  abbreviation: FDB-İF-TDT-BD
   yoksis_id: '168751'
   parent_yoksis_id: '122170'
   unit_type_id: Bilim Dalı
@@ -13739,7 +13739,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: İslam Ahlakı Bilim Dalı
-  abbreviation: FDE-İF-AHLAK-BD
+  abbreviation: FDB-İF-AHLAK-BD
   yoksis_id: '168748'
   parent_yoksis_id: '122170'
   unit_type_id: Bilim Dalı
@@ -13750,7 +13750,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: İslam Felsefesi Tarihi Bilim Dalı
-  abbreviation: FDE-İF-TARİH-BD
+  abbreviation: FDB-İF-TARİH-BD
   yoksis_id: '168750'
   parent_yoksis_id: '122170'
   unit_type_id: Bilim Dalı
