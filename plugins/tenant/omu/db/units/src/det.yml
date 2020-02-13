@@ -10525,7 +10525,7 @@
 
 - name: Uluslararası Ticaret Anabilim Dalı Başkanlığı
   abbreviation: UTL-UT-ADB
-  parent_yoksis_id: '326681'
+  parent_yoksis_id: '326680'
   detsis_id: '94334960'
   parent_detsis_id: '26676436'
   unit_type_id: Anabilim Dalı Başkanlığı
