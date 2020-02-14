@@ -9,13 +9,13 @@ module UserManagement
     before_action :can_create_identity?, only: %i[new create]
     before_action only: :save_from_mernis do
       updatable_form_mernis!(
-        current_user.identity,
+        current_user.identities.active.formal.first,
         redirect_path: @user
       )
     end
 
     def index
-      @identities = @user.identities.order(active: :desc)
+      @identities = @user.identities.order(active: :desc, updated_at: :desc)
       render layout: false
     end
 
@@ -31,7 +31,7 @@ module UserManagement
     end
 
     def update
-      @identity.update(identity_params) ? redirect_with('success') : render(:edit)
+      IdentityUpsetService.call(@user, identity, identity_params) ? redirect_with('success') : render(:edit)
     end
 
     def destroy

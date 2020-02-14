@@ -67,6 +67,12 @@
             </tr>
           </table>
         </div>
+
+        <div class="card-footer">
+          <p class="text-muted">
+            <strong><%= t('last_updated') %>:</strong> <%= l identity.updated_at, format: :long %> (<%= distance_of_time_in_words_to_now identity.updated_at %>)
+          </p>
+        </div>
       </div>
     </div>
   <% end %>

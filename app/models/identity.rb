@@ -19,6 +19,9 @@ class Identity < ApplicationRecord
   # relations
   belongs_to :user
 
+  # scopes
+  scope :active, -> { where(active: true) }
+
   # validations
   validates :date_of_birth, presence: true
   validates :fathers_name, length: { maximum: 255 }

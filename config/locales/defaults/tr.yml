@@ -28,8 +28,8 @@ tr:
   updated_at: Güncellenme Tarihi
   'yes': Evet
   year: Yıl
-
   cocoon:
     defaults:
-      add: 'Ekle'
-      remove: 'Sil'
+      add: Ekle
+      remove: Sil
+  last_updated: Son güncellenme tarihi

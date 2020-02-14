@@ -1,0 +1,51 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'id-card' %>
+        <strong><%= form_title %></strong>
+      </div>
+      <div class="card-body">
+        <%= simple_form_for([@user, identity]) do |f| %>
+          <div class="row">
+            <div class='form-group col-sm-12'>
+              <%= f.error_notification %>
+              <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.input :first_name %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.input :last_name %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :mothers_name %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :fathers_name %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :gender, collection: enum_options_for_select(f.object.class, :gender) %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :marital_status, collection: enum_options_for_select(f.object.class, :marital_status) %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :place_of_birth, collection: City.all, value_method: :name %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :date_of_birth, start_year: Time.zone.today.year - 90, end_year: Time.zone.today.year - 10 %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.input :registered_to %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
+              <%= link_to_back(:back) %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -6,13 +6,15 @@ module Kps
 
     def perform(user)
       @user = user
-      IdentityUpsertService.call(@user, response)
+      IdentityUpsertService.call(@user, **response)
     end
 
     private
 
     def response
-      @response ||= Xokul::Kps::Identity.new(@user.id_number).model_data.merge(type: 'formal')
+      @response ||= Xokul::Kps::Identity.new(@user.id_number).model_data.merge(
+        type: 'formal'
+      )
     end
   end
 end

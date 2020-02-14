@@ -28,8 +28,8 @@ en:
   updated_at: Updated At
   'yes': 'Yes'
   year: Year
-
   cocoon:
     defaults:
-      add: 'Add'
-      remove: 'Remove'
+      add: Add
+      remove: Remove
+  last_updated: Last Updated

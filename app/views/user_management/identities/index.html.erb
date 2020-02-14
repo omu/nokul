@@ -2,6 +2,7 @@
   <div class="col-sm-12">
     <div class="card">
       <div class="card-body">
+        <%= link_to_new(t('.new_identity'), new_user_identity_path(@user)) if @user.identities.formal.none? %>
         <%= link_to (@identities.formal.present? ? t('.update_from_mernis') : t('.create_from_mernis')), save_from_mernis_user_identities_path(@user), class: 'btn btn-outline-primary btn-sm' %>
       </div>
     </div>
@@ -65,6 +66,21 @@
               <td><%= icon_for_check(identity.active) %></td>
             </tr>
           </table>
+        </div>
+
+        <div class="card-footer">
+          <div class="d-flex">
+            <div class="align-content-stretch">
+              <p class="text-muted">
+                <strong><%= t('last_updated') %>:</strong> <%= l identity.updated_at, format: :long %> (<%= distance_of_time_in_words_to_now identity.updated_at %>)
+              </p>
+            </div>
+            <div class="ml-auto">
+              <% if identity.informal? && identity.active? %>
+                <div class="text-right"><%= link_to_actions([@user, identity], except: :show) %></div>
+              <% end %>
+            </div>
+          </div>
         </div>
       </div>
     </div>
