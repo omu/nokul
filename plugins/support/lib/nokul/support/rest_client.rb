@@ -103,7 +103,7 @@ module Nokul
 
       module_function
 
-      SUPPORTED_HTTP_METHODS.each do |method|
+      HTTP_METHODS.each do |method|
         define_method(method) do |url, headers: {}, payload: nil, **http_options|
           Request.new(method, url, headers, **http_options).execute(payload)
         end
