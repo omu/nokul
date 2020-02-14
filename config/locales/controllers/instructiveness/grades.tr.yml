@@ -1,0 +1,8 @@
+tr:
+  instructiveness:
+    grades:
+      edit:
+        name: Adı
+        students: '%{course_name} Dersine Kayıtlanan Öğrenciler'
+        student_number: Öğrenci Numarası
+        year_and_semester: Sınıfı/Yarıyılı

@@ -1,0 +1,45 @@
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class='alert alert-light'>
+      <%= link_to_back(:back) %>
+    </div>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'users' %><b><%= t('.students', course_name: @course.name) %></b>
+        <span class='pull-right'>
+          <input type="submit" value=<%= t('save') %> class="btn btn-outline-success btn-sm" form="grades_form">
+        </span>
+      </div>
+      <div class='card-body'>
+        <% @groups.each do |group| %>
+          <div class='card-header'>
+            <%= fa_icon 'cube' %><b><%= group.name %></b>
+          </div>
+          <table class='table table-sm table-striped'>
+            <thead class='thead'>
+              <tr>
+                <th><%= t('.student_number') %></th>
+                <th><%= t('.name') %></th>
+                <th><%= t('.year_and_semester') %></th>
+                <th><%= @assessment.name %></th>
+              </tr>
+            </thead>
+            <tbody>
+              <%= simple_form_for(:grade, url: given_course_assessment_grades_path(@course, @assessment), html: { id: 'grades_form' }) do |f| %>
+                <% group.saved_enrollments.includes(semester_registration: [student: :user]).each do |enrollment| %>
+                  <tr>
+                    <% student = enrollment.student %>
+                    <td><%= student.student_number %></td>
+                    <td><%= full_name(student.user.identities.formal.first) %></td>
+                    <td><%= "#{student.year}/#{student.semester}" %></td>
+                    <td><%= f.input :grade, label: false, input_html: { value: enrollment.grades.find_by(course_assessment_method: @assessment)&.point, name: "course_enrollment_grades[#{enrollment.id}]" } %></td>
+                  </tr>
+                <% end %>
+              <% end %>
+            </tbody>
+          </table>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
