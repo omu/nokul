@@ -5,7 +5,7 @@ require 'openssl'
 module Nokul
   module Support
     module RestClient
-      SUPPORTED_HTTP_METHODS = %i[
+      HTTP_METHODS = %i[
         delete
         get
         patch
@@ -13,18 +13,18 @@ module Nokul
         put
       ].freeze
 
-      private_constant :SUPPORTED_HTTP_METHODS
+      private_constant :HTTP_METHODS
 
       class Error < StandardError; end
 
       class HTTPMethodError < Error; end
 
-      class UnsupportedHTTPOptionError < Error; end
+      class HTTPOptionError < Error; end
 
       class HTTPError < Error; end
 
       class Request
-        SUPPORTED_HTTP_OPTIONS = {
+        HTTP_OPTIONS = {
           open_timeout: 10,
           read_timeout: 10,
           use_ssl: false,
@@ -35,7 +35,7 @@ module Nokul
           'Content-Type' => 'application/json'
         }.freeze
 
-        private_constant :SUPPORTED_HTTP_OPTIONS, :HEADERS
+        private_constant :HTTP_OPTIONS, :HEADERS
 
         # rubocop:disable Style/IfUnlessModifier
         def initialize(method, url, headers = {}, **http_options)
@@ -43,8 +43,8 @@ module Nokul
           @url     = url
           @headers = HEADERS.merge(headers)
 
-          unless method.in?(SUPPORTED_HTTP_METHODS)
-            raise HTTPMethodError, "unsupported HTTP method: #{method}"
+          unless method.in?(HTTP_METHODS)
+            raise HTTPMethodError, "invalid HTTP method: #{method}"
           end
 
           build_http_object http_options
@@ -67,10 +67,9 @@ module Nokul
           uri   = URI.parse(url)
           @http = Net::HTTP.new uri.host, uri.port
 
-          unsupported_options = http_options.keys - SUPPORTED_HTTP_OPTIONS.keys
-          unless unsupported_options.empty?
-            raise UnsupportedHTTPOptionError, "unsupported HTTP options: #{unsupported_options}"
-          end
+          invalid_opts = http_options.keys - HTTP_OPTIONS.keys
+
+          raise HTTPOptionError, "invalid HTTP options: #{invalid_opts}" unless invalid_opts.empty?
 
           http_options.each { |option, value| @http.send "#{option}=", value }
         end
