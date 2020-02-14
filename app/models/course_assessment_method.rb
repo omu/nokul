@@ -7,6 +7,7 @@ class CourseAssessmentMethod < ApplicationRecord
   # relations
   belongs_to :assessment_method
   belongs_to :course_evaluation_type
+  has_many :grades, dependent: :destroy
 
   # validations
   validates :percentage, numericality: {
