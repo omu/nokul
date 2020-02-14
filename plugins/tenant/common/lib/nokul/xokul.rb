@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'nokul/support/rest_client'
+require 'nokul/support/rest'
 
 module Nokul
   # Xokul
@@ -10,7 +10,7 @@ module Nokul
     module_function
 
     def request(endpoint, params = {})
-      response = Support::RestClient.get(
+      response = Support::REST.get(
         endpoint,
         header:  {
           'Authorization': "Bearer #{BEARER_TOKEN}",
