@@ -4,8 +4,10 @@ scope module: :instructiveness do
   resources :given_courses, only: %i[index show] do
     resources :assessments, only: [] do
       resources :grades, only: [] do
-        get :edit, on: :collection
-        post :update, on: :collection
+        collection do
+          get :edit
+          post :update
+        end
       end
     end
 
