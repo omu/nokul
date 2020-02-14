@@ -4,7 +4,7 @@ require 'openssl'
 
 module Nokul
   module Support
-    module RestClient
+    module REST
       HTTP_METHODS = %i[
         delete
         get
@@ -31,17 +31,13 @@ module Nokul
           verify_mode: OpenSSL::SSL::VERIFY_NONE
         }.freeze
 
-        HEADERS = {
-          'Content-Type' => 'application/json'
-        }.freeze
-
-        private_constant :HTTP_OPTIONS, :HEADERS
+        private_constant :HTTP_OPTIONS
 
         # rubocop:disable Style/IfUnlessModifier
         def initialize(method, url, headers = {}, **http_options)
           @method  = method
           @url     = url
-          @headers = HEADERS.merge(headers)
+          @headers = headers
 
           unless method.in?(HTTP_METHODS)
             raise HTTPMethodError, "invalid HTTP method: #{method}"
@@ -80,17 +76,9 @@ module Nokul
       Response = Struct.new(:http_response) do
         delegate :body, to: :http_response
 
-        def decode
-          body && JSON.parse(body, symbolize_names: true)
-        rescue JSON::JSONError => e
-          Rails.logger.warn("JSON parse error: #{e}")
-          nil
-        end
-
         def error!
           http_response.error! unless ok?
         rescue Net::HTTPError, Net::HTTPFatalError => e
-          Rails.logger.warn("HTTP error: #{e}")
           raise HTTPError
         end
 
