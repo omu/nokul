@@ -11,6 +11,7 @@ tr:
       evaluation_types:
         assessment_method: Ölçme Kriteri
         card_header: Değerlendirme Türleri
+        grade_entry: Not Girişi
         percentage: Yüzde
         status: Durum
       groups:

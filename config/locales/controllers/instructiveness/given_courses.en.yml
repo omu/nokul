@@ -11,6 +11,7 @@ en:
       evaluation_types:
         assessment_method: Assessment Method
         card_header: Evaluation Types
+        grade_entry: Grade Entry
         percentage: Percentage
         status: Status
       groups:
