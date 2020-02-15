@@ -5,6 +5,7 @@ require 'nokul/support/rest_client'
 module Nokul
   # Xokul
   module Xokul
+    # rubocop:disable Metrics/MethodLength
     def self.request(path, **params)
       base_url     = Tenant.configuration.api_host
       bearer_token = Tenant.credentials.dig(:xokul, :bearer_token)
@@ -12,7 +13,7 @@ module Nokul
         headers:     { 'Authorization' => "Bearer #{bearer_token}" },
         use_ssl:     true,
         verify_mode: OpenSSL::SSL::VERIFY_PEER,
-        payload: params.to_json
+        payload:     params.to_json
       }.freeze
 
       resp = Support::RestClient.get(
@@ -24,5 +25,6 @@ module Nokul
     rescue Support::RestClient::HTTPError
       nil
     end
+    # rubocop:enable Metrics/MethodLength
   end
 end

@@ -108,7 +108,7 @@ module Nokul
 
           def produce_units
             response = Xokul.request(END_POINT)
-            return [] unless response && response.ok?
+            return [] unless response&.ok?
 
             [response.decode || []].flatten.map! do |args|
               self.class.collects.new(**args.symbolize_keys)
