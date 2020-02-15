@@ -14,14 +14,15 @@ module Nokul
           collection.label    = 'YÖKSİS ham birimler'
           collection.collects = YOKOne
           collection.produces = Src::YOKMany
+
           class_attribute :mapping, default: {
             name:                         proc { |raw| raw.long_name.split('/').last&.capitalize_and_fix },
 
-            yoksis_id:                    proc { |raw| raw.unit_code&.to_s },
-            parent_yoksis_id:             proc { |raw| raw.parent_unit_id&.to_s },
+            yoksis_id:                    proc { |raw| raw.unit_code&.to_i },
+            parent_yoksis_id:             proc { |raw| raw.parent_unit_id&.to_i },
             district_id:                  proc { |raw| raw.district_name&.capitalize_and_fix },
 
-            osym:                         proc { |raw| raw.osym_id&.to_s },
+            osym:                         proc { |raw| raw.osym_id&.to_i },
             unit_type_id:                 proc { |raw| raw.unit_type_name&.capitalize_and_fix },
             unit_status_id:               proc { |raw| raw.status_name&.capitalize_and_fix },
             unit_instruction_language_id: proc { |raw| raw.instruction_language_name&.capitalize_and_fix },
@@ -32,7 +33,7 @@ module Nokul
           END_POINT = 'https://api.omu.sh/yoksis/units/%s'
 
           def self.fetch
-            root_id = config.fetching.yok.root_id
+            root_id = config.fetching.yok.root_id.to_i
             File.write Tenant.root.join(collection.source), create.fetch(root_id).as_canonical_yaml_string
           end
 
@@ -71,7 +72,7 @@ module Nokul
 
           def produce_units_from_end_point(end_point:, id:)
             response = Xokul.request(END_POINT % end_point, unit_id: id)
-            return [] unless response.ok?
+            return [] unless response || response.ok?
 
             [response.decode || []].flatten.map! do |args|
               self.class.collects.new(**args.symbolize_keys)
