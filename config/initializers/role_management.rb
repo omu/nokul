@@ -33,21 +33,26 @@ class RoleManagement
              name:        'Açılan Ders Yönetimi',
              description: 'Açılan Ders Yönetimi Yetkisi',
              privileges:  %i[read write destroy report]
+  permission :curriculum_management,
+             name:        'Müfredat Yönetimi',
+             description: 'Müfredat Yönetimi Yetkisi',
+             privileges:  %i[read write destroy report]
   # roles
   role :authorization_manager,
        name:        'Yetkilendirme Yöneticisi',
        permissions: {
-         role_management:          %i[read write destroy],
+         authorization_management: %i[read write destroy],
          permission_management:    %i[read write destroy],
-         scope_query_management:   %i[read write destroy],
-         authorization_management: %i[read write destroy]
+         role_management:          %i[read write destroy],
+         scope_query_management:   %i[read write destroy]
        }
 
   role :admin,
        name:        'Admin',
        permissions: {
+         available_course_management: %i[read write destroy report],
          calendar_management:         %i[read write destroy],
          course_management:           %i[read write destroy report],
-         available_course_management: %i[read write destroy report]
+         curriculum_management:       %i[read write destroy report]
        }
 end

@@ -30,3 +30,7 @@ calendar_management:
   name: Takvim Yönetimi
   identifier: calendar_management
   description: Takvim Yönetimi Yetkisi
+curriculum_management:
+  name: Müfredat Yönetimi
+  identifier: curriculum_management
+  description: Müfredat Yetkisi
