@@ -5,6 +5,7 @@ module CalendarManagement
     include SearchableModule
 
     before_action :set_calendar_event_type, only: %i[edit update destroy]
+    before_action :authorized?
 
     def index
       @calendar_event_types = pagy_by_search(CalendarEventType.order(:name))
@@ -41,6 +42,10 @@ module CalendarManagement
 
     def set_calendar_event_type
       @calendar_event_type = CalendarEventType.find(params[:id])
+    end
+
+    def authorized?
+      authorize([:calendar_management, @calendar_event_type || CalendarEventType])
     end
 
     def calendar_event_type_params

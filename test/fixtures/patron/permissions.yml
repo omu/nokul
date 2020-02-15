@@ -22,3 +22,7 @@ authorization_management:
   name: Yetkilendirme Yönetimi
   identifier: authorization_management
   description: Yetkilendirme Yönetimi Yetkisi
+calendar_management:
+  name: Takvim Yönetimi
+  identifier: calendar_management
+  description: Takvim Yönetimi Yetkisi

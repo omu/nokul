@@ -21,6 +21,10 @@ class RoleManagement
              name:        'Yetkilendirme Yönetimi',
              description: 'Yetkilendirme Yönetimi Yetkisi',
              privileges:  %i[read write destroy]
+  permission :calendar_management,
+             name:        'Takvim Yönetimi',
+             description: 'Takvim Yönetimi Yetkisi',
+             privileges:  %i[read write destroy]
 
   # roles
   role :authorization_manager,
@@ -30,5 +34,11 @@ class RoleManagement
          permission_management:    %i[read write destroy],
          scope_query_management:   %i[read write destroy],
          authorization_management: %i[read write destroy]
+       }
+
+  role :admin,
+       name:        'Admin',
+       permissions: {
+         calendar_management: %i[read write destroy]
        }
 end
