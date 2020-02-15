@@ -340,7 +340,7 @@
 
 - name: Deniz ve Liman İşletmeciliği Programı
   abbreviation: ALAÇAM-MYO-UH-DLİ-PR
-  code: '203'
+  code: '204'
   yoksis_id: 205957
   parent_yoksis_id: 205956
   unit_type_id: Önlisans/lisans Programı
@@ -355,7 +355,7 @@
 
 - name: Deniz ve Liman İşletmeciliği Programı (İÖ)
   abbreviation: ALAÇAM-MYO-UH-DLİ-PR-2
-  code: '204'
+  code: '205'
   yoksis_id: 276136
   parent_yoksis_id: 205956
   unit_type_id: Önlisans/lisans Programı
@@ -370,7 +370,7 @@
 
 - name: Posta Hizmetleri Programı
   abbreviation: ALAÇAM-MYO-UH-PH-PR
-  code: '205'
+  code: '206'
   yoksis_id: 153810
   parent_yoksis_id: 205956
   unit_type_id: Önlisans/lisans Programı
@@ -385,7 +385,7 @@
 
 - name: Posta Hizmetleri Programı (KKTC Uyruklu)
   abbreviation: ALAÇAM-MYO-UH-PH-PR-KKTC
-  code: '206'
+  code: '207'
   yoksis_id: 327588
   parent_yoksis_id: 205956
   unit_type_id: Önlisans/lisans Programı
@@ -417,7 +417,7 @@
 
 - name: Posta Hizmetleri Programı (İÖ)
   abbreviation: ALAÇAM-MYO-UH-PH-PR-2
-  code: '207'
+  code: '208'
   yoksis_id: 240435
   parent_yoksis_id: 205956
   unit_type_id: Önlisans/lisans Programı
@@ -447,7 +447,7 @@
 
 - name: Lojistik Programı
   abbreviation: ALAÇAM-MYO-YO-L-PR
-  code: '208'
+  code: '209'
   yoksis_id: 153811
   parent_yoksis_id: 153820
   unit_type_id: Önlisans/lisans Programı
@@ -462,7 +462,7 @@
 
 - name: Lojistik Programı (İÖ)
   abbreviation: ALAÇAM-MYO-YO-L-PR-2
-  code: '209'
+  code: '210'
   yoksis_id: 240433
   parent_yoksis_id: 153820
   unit_type_id: Önlisans/lisans Programı
@@ -491,7 +491,7 @@
 
 - name: Ali Fuad Başgil Hukuk Programı
   abbreviation: HUKUK-PR
-  code: '210'
+  code: '211'
   yoksis_id: 228131
   parent_yoksis_id: 128074
   unit_type_id: Önlisans/lisans Programı
@@ -814,7 +814,7 @@
 
 - name: Bilgisayar Programcılığı Programı
   abbreviation: BAFRA-MYO-BT-BP-PR
-  code: '211'
+  code: '212'
   yoksis_id: 169446
   parent_yoksis_id: 169441
   unit_type_id: Önlisans/lisans Programı
@@ -829,7 +829,7 @@
 
 - name: Bilgisayar Programcılığı Programı (İÖ)
   abbreviation: BAFRA-MYO-BT-BP-PR-2
-  code: '212'
+  code: '213'
   yoksis_id: 169447
   parent_yoksis_id: 169441
   unit_type_id: Önlisans/lisans Programı
@@ -855,7 +855,7 @@
 
 - name: Bitki Koruma Programı
   abbreviation: BAFRA-MYO-BHÜ-BK-PR
-  code: '213'
+  code: '214'
   yoksis_id: 254936
   parent_yoksis_id: 169417
   unit_type_id: Önlisans/lisans Programı
@@ -870,7 +870,7 @@
 
 - name: Organik Tarım Programı
   abbreviation: BAFRA-MYO-BHÜ-OT-PR
-  code: '214'
+  code: '215'
   yoksis_id: 169419
   parent_yoksis_id: 169417
   unit_type_id: Önlisans/lisans Programı
@@ -884,7 +884,7 @@
 
 - name: Tıbbi ve Aromatik Bitkiler Programı
   abbreviation: BAFRA-MYO-BHÜ-TAB-PR
-  code: '215'
+  code: '216'
   yoksis_id: 169425
   parent_yoksis_id: 169417
   unit_type_id: Önlisans/lisans Programı
@@ -898,7 +898,7 @@
 
 - name: Tıbbi ve Aromatik Bitkiler Programı (İÖ)
   abbreviation: BAFRA-MYO-BHÜ-TAB-PR-2
-  code: '216'
+  code: '217'
   yoksis_id: 169426
   parent_yoksis_id: 169417
   unit_type_id: Önlisans/lisans Programı
@@ -955,7 +955,7 @@
 
 - name: Muhasebe ve Vergi Uygulamaları Programı (İÖ) (Bk.605)
   abbreviation: BAFRA-MYO-MV-PR-2-605
-  code: '217'
+  code: '218'
   yoksis_id: 145961
   parent_yoksis_id: 169471
   unit_type_id: Önlisans/lisans Programı
@@ -1080,7 +1080,7 @@
 
 - name: Turizm ve Seyahat Hizmetleri Programı
   abbreviation: TURİZM-MYO-STEH-TSH-PR
-  code: '218'
+  code: '219'
   yoksis_id: 279025
   parent_yoksis_id: 279024
   unit_type_id: Önlisans/lisans Programı
@@ -1249,7 +1249,7 @@
 
 - name: Geleneksel Türk Müzikleri Programı
   abbreviation: KONSERVATUVAR-DİĞER-GTM-PR
-  code: '219'
+  code: '220'
   yoksis_id: 256111
   parent_yoksis_id: 122304
   unit_type_id: Önlisans/lisans Programı
@@ -1276,7 +1276,7 @@
 
 - name: Diş Hekimliği Programı
   abbreviation: DİŞ-PR
-  code: '220'
+  code: '221'
   yoksis_id: 228143
   parent_yoksis_id: 121996
   unit_type_id: Önlisans/lisans Programı
@@ -1503,7 +1503,7 @@
 
 - name: Eğitim Programları ve Öğretim (YL) (Tezli)
   abbreviation: EPO-YL
-  code: '603'
+  code: '604'
   yoksis_id: 207884
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1517,7 +1517,7 @@
 
 - name: Eğitim Programları ve Öğretim (YL) (Tezsiz)
   abbreviation: EPO-YZ
-  code: '604'
+  code: '605'
   yoksis_id: 339817
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1531,7 +1531,7 @@
 
 - name: Eğitim Yönetimi (DR)
   abbreviation: EY-DR
-  code: '605'
+  code: '606'
   yoksis_id: 327630
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
@@ -1545,7 +1545,7 @@
 
 - name: Eğitim Yönetimi (YL) (Tezli)
   abbreviation: EY-YL
-  code: '606'
+  code: '608'
   yoksis_id: 327629
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1573,7 +1573,7 @@
 
 - name: Eğitim Yönetimi (YL) (Tezsiz) (İÖ)
   abbreviation: EY-YZ-2
-  code: '608'
+  code: '609'
   yoksis_id: 327631
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1587,7 +1587,7 @@
 
 - name: Eğitimin Felsefi, Sosyal ve Tarihi Temelleri (DR)
   abbreviation: EFST-DR
-  code: '609'
+  code: '610'
   yoksis_id: 376129
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
@@ -1601,7 +1601,7 @@
 
 - name: Fen Bilgisi Eğitim (DR)
   abbreviation: FENBİL-DR
-  code: '610'
+  code: '611'
   yoksis_id: 267754
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
@@ -1615,7 +1615,7 @@
 
 - name: Fen Bilgisi Eğitim (YL) (Tezli)
   abbreviation: FENBİL-YL
-  code: '611'
+  code: '612'
   yoksis_id: 267753
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1645,7 +1645,7 @@
 
 - name: Fen Bilgisi Eğitimi (YL) (Tezsiz) (İÖ)
   abbreviation: FENBİL-YZ-2
-  code: '612'
+  code: '613'
   yoksis_id: 235189
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1659,7 +1659,7 @@
 
 - name: Fizik Eğitimi (YL) (Tezli)
   abbreviation: FİZİKEĞ-YL
-  code: '613'
+  code: '614'
   yoksis_id: 245968
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1685,7 +1685,7 @@
 
 - name: Müzik Eğitimi (YL) (Tezli)
   abbreviation: MÜZİK-YL
-  code: '614'
+  code: '615'
   yoksis_id: 230796
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1699,7 +1699,7 @@
 
 - name: Müzik Eğitimi (YL) (Tezsiz) (İÖ)
   abbreviation: MÜZİK-YZ-2
-  code: '615'
+  code: '616'
   yoksis_id: 244884
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1713,7 +1713,7 @@
 
 - name: Ortaöğretim Fen ve Matematik Alanları Eğitimi (DR)
   abbreviation: ORTAFENMAT-DR
-  code: '616'
+  code: '617'
   yoksis_id: 174856
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
@@ -1727,7 +1727,7 @@
 
 - name: Ortaöğretim Sosyal Alanlar Eğitimi (DR)
   abbreviation: ORTASOSYAL-DR
-  code: '617'
+  code: '618'
   yoksis_id: 174850
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
@@ -1741,7 +1741,7 @@
 
 - name: Rehberlik ve Psikolojik Danışmanlık (YL) (Tezli) (Ordu Üniversitesi Ortak)
   abbreviation: PDR-YL-ORDU
-  code: '618'
+  code: '619'
   yoksis_id: 280865
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1755,7 +1755,7 @@
 
 - name: Resim-İş Eğitimi (DR)
   abbreviation: RESİMİŞ-DR
-  code: '619'
+  code: '620'
   yoksis_id: 230808
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
@@ -1769,7 +1769,7 @@
 
 - name: Resim-İş Eğitimi (YL) (Tezli)
   abbreviation: RESİMİŞ-YL
-  code: '620'
+  code: '621'
   yoksis_id: 230810
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1783,7 +1783,7 @@
 
 - name: Sınıf Eğitimi (DR)
   abbreviation: SINIF-DR
-  code: '621'
+  code: '622'
   yoksis_id: 267760
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
@@ -1797,7 +1797,7 @@
 
 - name: Sınıf Eğitimi (YL) (Tezli)
   abbreviation: SINIF-YL
-  code: '622'
+  code: '623'
   yoksis_id: 267759
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1825,7 +1825,7 @@
 
 - name: Sınıf Eğitimi (YL) (Tezsiz) (İÖ)
   abbreviation: SINIF-YZ-2
-  code: '623'
+  code: '624'
   yoksis_id: 327682
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1839,7 +1839,7 @@
 
 - name: Sosyal Bilgiler Eğitimi (DR)
   abbreviation: SOSYALBİL-DR
-  code: '624'
+  code: '625'
   yoksis_id: 327681
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
@@ -1853,7 +1853,7 @@
 
 - name: Sosyal Bilgiler Eğitimi (YL) (Tezli)
   abbreviation: SOSYALBİL-YL
-  code: '625'
+  code: '626'
   yoksis_id: 327632
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1881,7 +1881,7 @@
 
 - name: Sosyal Bilgiler Eğitimi (YL) (Tezsiz) (İÖ)
   abbreviation: SOSYALBİL-YZ-2
-  code: '626'
+  code: '627'
   yoksis_id: 327680
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1895,7 +1895,7 @@
 
 - name: Tarih Eğitimi (YL) (Tezli)
   abbreviation: TARİHEĞ-YL
-  code: '627'
+  code: '628'
   yoksis_id: 213373
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1923,7 +1923,7 @@
 
 - name: Türkçe Eğitimi (DR)
   abbreviation: TÜRKÇE-DR
-  code: '628'
+  code: '629'
   yoksis_id: 174852
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
@@ -1937,7 +1937,7 @@
 
 - name: Türkçe Eğitimi (YL) (Tezli)
   abbreviation: TÜRKÇE-YL
-  code: '629'
+  code: '630'
   yoksis_id: 267757
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1963,7 +1963,7 @@
 
 - name: İlköğretim (DR)
   abbreviation: İLK-DR
-  code: '630'
+  code: '631'
   yoksis_id: 174851
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
@@ -1977,7 +1977,7 @@
 
 - name: İlköğretim Matematik Eğitimi (YL) (Tezli)
   abbreviation: İLKMAT-YL
-  code: '631'
+  code: '632'
   yoksis_id: 267758
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1991,7 +1991,7 @@
 
 - name: İlköğretim Sınıf Öğretmenliği (YL) (Tezsiz) (İÖ)
   abbreviation: İLKSINIF-YZ-2
-  code: '632'
+  code: '633'
   yoksis_id: 235186
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -2134,7 +2134,7 @@
 
 - name: Rehberlik ve Psikolojik Danışmanlık Programı
   abbreviation: PDR-PR
-  code: '221'
+  code: '222'
   yoksis_id: 168674
   parent_yoksis_id: 122083
   unit_type_id: Önlisans/lisans Programı
@@ -2161,7 +2161,7 @@
 
 - name: Müzik Öğretmenliği Programı
   abbreviation: MÜZİK-PR
-  code: '222'
+  code: '223'
   yoksis_id: 169386
   parent_yoksis_id: 122097
   unit_type_id: Önlisans/lisans Programı
@@ -2176,7 +2176,7 @@
 
 - name: Müzik Öğretmenliği Programı (KKTC Uyruklu)
   abbreviation: MÜZİK-PR-KKTC
-  code: '223'
+  code: '224'
   yoksis_id: 279641
   parent_yoksis_id: 122097
   unit_type_id: Önlisans/lisans Programı
@@ -2206,7 +2206,7 @@
 
 - name: Resim-İş Öğretmenliği Programı
   abbreviation: RESİMİŞ-PR
-  code: '224'
+  code: '225'
   yoksis_id: 169387
   parent_yoksis_id: 122097
   unit_type_id: Önlisans/lisans Programı
@@ -2249,7 +2249,7 @@
 
 - name: Biyoloji Öğretmenliği Programı
   abbreviation: MF-BİYO-PR
-  code: '225'
+  code: '226'
   yoksis_id: 168654
   parent_yoksis_id: 298694
   unit_type_id: Önlisans/lisans Programı
@@ -2275,7 +2275,7 @@
 
 - name: Fen Bilgisi Öğretmenliği Programı
   abbreviation: MF-FEN-PR
-  code: '226'
+  code: '227'
   yoksis_id: 168656
   parent_yoksis_id: 298694
   unit_type_id: Önlisans/lisans Programı
@@ -2328,7 +2328,7 @@
 
 - name: Matematik Öğretmenliği Programı
   abbreviation: MF-MAT-PR
-  code: '227'
+  code: '228'
   yoksis_id: 168671
   parent_yoksis_id: 298694
   unit_type_id: Önlisans/lisans Programı
@@ -2342,7 +2342,7 @@
 
 - name: İlköğretim Matematik Öğretmenliği Programı
   abbreviation: MF-İLKMAT-PR
-  code: '228'
+  code: '229'
   yoksis_id: 168663
   parent_yoksis_id: 298694
   unit_type_id: Önlisans/lisans Programı
@@ -2384,7 +2384,7 @@
 
 - name: Okul Öncesi Öğretmenliği Programı
   abbreviation: TE-OÖE-PR
-  code: '229'
+  code: '230'
   yoksis_id: 168672
   parent_yoksis_id: 298632
   unit_type_id: Önlisans/lisans Programı
@@ -2410,7 +2410,7 @@
 
 - name: Sınıf Öğretmenliği Programı
   abbreviation: TE-SINIF-PR
-  code: '230'
+  code: '231'
   yoksis_id: 168676
   parent_yoksis_id: 298632
   unit_type_id: Önlisans/lisans Programı
@@ -2480,7 +2480,7 @@
 
 - name: Sosyal Bilgiler Öğretmenliği Programı
   abbreviation: TS-SOSYAL-PR
-  code: '231'
+  code: '232'
   yoksis_id: 168678
   parent_yoksis_id: 298815
   unit_type_id: Önlisans/lisans Programı
@@ -2533,7 +2533,7 @@
 
 - name: Türkçe Öğretmenliği Programı
   abbreviation: TS-TÜRKÇE-PR
-  code: '232'
+  code: '233'
   yoksis_id: 168680
   parent_yoksis_id: 298815
   unit_type_id: Önlisans/lisans Programı
@@ -2571,7 +2571,7 @@
 
 - name: Almanca Öğretmenliği Programı
   abbreviation: YDİLEĞ-ALM-PR
-  code: '233'
+  code: '234'
   yoksis_id: 168650
   parent_yoksis_id: 122088
   unit_type_id: Önlisans/lisans Programı
@@ -2613,7 +2613,7 @@
 
 - name: Fransızca Öğretmenliği Programı
   abbreviation: YDİLEĞ-FR-PR
-  code: '234'
+  code: '235'
   yoksis_id: 168658
   parent_yoksis_id: 122088
   unit_type_id: Önlisans/lisans Programı
@@ -2655,7 +2655,7 @@
 
 - name: İngilizce Öğretmenliği Programı
   abbreviation: YDİLEĞ-İNG-PR
-  code: '235'
+  code: '236'
   yoksis_id: 168665
   parent_yoksis_id: 122088
   unit_type_id: Önlisans/lisans Programı
@@ -2693,7 +2693,7 @@
 
 - name: Özel Eğitim Öğretmenliği Programı
   abbreviation: ÖZELEĞİTİM-PR
-  code: '236'
+  code: '237'
   yoksis_id: 283503
   parent_yoksis_id: 122092
   unit_type_id: Önlisans/lisans Programı
@@ -2732,7 +2732,7 @@
 
 - name: Adli Bilimler (YL) (Tezli)
   abbreviation: ADLİ-YL
-  code: '633'
+  code: '634'
   yoksis_id: 255365
   parent_yoksis_id: 122386
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -2746,7 +2746,7 @@
 
 - name: Akıllı Sistemler Mühendisliği (YL) (Tezli)
   abbreviation: ASM-YL
-  code: '634'
+  code: '635'
   yoksis_id: 255366
   parent_yoksis_id: 122386
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -2760,7 +2760,7 @@
 
 - name: Bahçe Bitkileri (DR)
   abbreviation: BAHÇE-DR
-  code: '635'
+  code: '636'
   yoksis_id: 211283
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
@@ -2773,7 +2773,7 @@
 
 - name: Bahçe Bitkileri (YL) (Tezli)
   abbreviation: BAHÇE-YL
-  code: '636'
+  code: '637'
   yoksis_id: 211284
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -2786,7 +2786,7 @@
 
 - name: Bilgisayar Mühendisliği (YL) (Tezli)
   abbreviation: BİLGİSAYAR-YL
-  code: '637'
+  code: '603'
   yoksis_id: 211296
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -3689,7 +3689,7 @@
 
 - name: Arkeoloji Programı
   abbreviation: ARKEO-PR
-  code: '237'
+  code: '238'
   yoksis_id: 228891
   parent_yoksis_id: 140229
   unit_type_id: Önlisans/lisans Programı
@@ -3766,7 +3766,7 @@
 
 - name: Biyoloji Programı
   abbreviation: BİYO-PR
-  code: '238'
+  code: '239'
   yoksis_id: 168686
   parent_yoksis_id: 122006
   unit_type_id: Önlisans/lisans Programı
@@ -3865,7 +3865,7 @@
 
 - name: Coğrafya Programı
   abbreviation: COĞRAFYA-PR
-  code: '239'
+  code: '240'
   yoksis_id: 168692
   parent_yoksis_id: 122012
   unit_type_id: Önlisans/lisans Programı
@@ -3943,7 +3943,7 @@
 
 - name: Felsefe Programı
   abbreviation: FELSEFE-PR
-  code: '240'
+  code: '241'
   yoksis_id: 168695
   parent_yoksis_id: 128020
   unit_type_id: Önlisans/lisans Programı
@@ -4131,7 +4131,7 @@
 
 - name: Kimya Programı
   abbreviation: FEN-KİMYA-PR
-  code: '241'
+  code: '242'
   yoksis_id: 168708
   parent_yoksis_id: 122027
   unit_type_id: Önlisans/lisans Programı
@@ -4223,7 +4223,7 @@
 
 - name: Matematik Programı
   abbreviation: MAT-PR
-  code: '242'
+  code: '243'
   yoksis_id: 168710
   parent_yoksis_id: 122033
   unit_type_id: Önlisans/lisans Programı
@@ -4302,7 +4302,7 @@
 
 - name: Moleküler Biyoloji ve Genetik Programı
   abbreviation: MOLBİYOGEN-PR
-  code: '243'
+  code: '244'
   yoksis_id: 320927
   parent_yoksis_id: 320926
   unit_type_id: Önlisans/lisans Programı
@@ -4356,7 +4356,7 @@
 
 - name: Psikoloji Programı
   abbreviation: PSİKOLOJİ-PR
-  code: '244'
+  code: '245'
   yoksis_id: 168714
   parent_yoksis_id: 122040
   unit_type_id: Önlisans/lisans Programı
@@ -4446,7 +4446,7 @@
 
 - name: Sanat Tarihi Programı
   abbreviation: SANATTARİHİ-PR
-  code: '245'
+  code: '246'
   yoksis_id: 231278
   parent_yoksis_id: 166108
   unit_type_id: Önlisans/lisans Programı
@@ -4552,7 +4552,7 @@
 
 - name: Sosyoloji Programı
   abbreviation: SOSYOLOJİ-PR
-  code: '246'
+  code: '247'
   yoksis_id: 203698
   parent_yoksis_id: 122077
   unit_type_id: Önlisans/lisans Programı
@@ -4630,7 +4630,7 @@
 
 - name: Tarih Programı
   abbreviation: TARİH-PR
-  code: '247'
+  code: '248'
   yoksis_id: 168716
   parent_yoksis_id: 122045
   unit_type_id: Önlisans/lisans Programı
@@ -4716,7 +4716,7 @@
 
 - name: Türk Dili ve Edebiyatı Programı
   abbreviation: TDE-PR
-  code: '248'
+  code: '249'
   yoksis_id: 168721
   parent_yoksis_id: 122050
   unit_type_id: Önlisans/lisans Programı
@@ -4856,7 +4856,7 @@
 
 - name: İstatistik Programı
   abbreviation: İSTATİSTİK-PR
-  code: '249'
+  code: '250'
   yoksis_id: 168706
   parent_yoksis_id: 122023
   unit_type_id: Önlisans/lisans Programı
@@ -5041,7 +5041,7 @@
 
 - name: Endüstri Ürünleri Tasarımı Programı
   abbreviation: ENTAS-EÜT-PR
-  code: '250'
+  code: '251'
   yoksis_id: 337269
   parent_yoksis_id: 232411
   unit_type_id: Önlisans/lisans Programı
@@ -5071,7 +5071,7 @@
 
 - name: Grafik Programı
   abbreviation: GİT-GRAFİK-PR
-  code: '251'
+  code: '252'
   yoksis_id: 337400
   parent_yoksis_id: 232412
   unit_type_id: Önlisans/lisans Programı
@@ -5127,7 +5127,7 @@
 
 - name: Görsel İletişim Tasarımı Programı
   abbreviation: GİT-PR
-  code: '252'
+  code: '253'
   yoksis_id: 245360
   parent_yoksis_id: 232412
   unit_type_id: Önlisans/lisans Programı
@@ -5198,7 +5198,7 @@
 
 - name: Resim Programı
   abbreviation: RESİM-PR
-  code: '253'
+  code: '254'
   yoksis_id: 252835
   parent_yoksis_id: 232414
   unit_type_id: Önlisans/lisans Programı
@@ -5239,7 +5239,7 @@
 
 - name: Seramik-Cam Programı
   abbreviation: SERAMİK-PR
-  code: '254'
+  code: '255'
   yoksis_id: 270024
   parent_yoksis_id: 232413
   unit_type_id: Önlisans/lisans Programı
@@ -5293,7 +5293,7 @@
 
 - name: Büro Yönetimi ve Yönetici Asistanlığı Programı
   abbreviation: HAVZA-MYO-BHS-BYYA-PR
-  code: '255'
+  code: '256'
   yoksis_id: 175630
   parent_yoksis_id: 169579
   unit_type_id: Önlisans/lisans Programı
@@ -5322,7 +5322,7 @@
 
 - name: Büro Yönetimi ve Yönetici Asistanlığı Programı (İÖ)
   abbreviation: HAVZA-MYO-BHS-BYYA-PR-2
-  code: '256'
+  code: '257'
   yoksis_id: 175631
   parent_yoksis_id: 169579
   unit_type_id: Önlisans/lisans Programı
@@ -5349,7 +5349,7 @@
 
 - name: İş Sağlığı ve Güvenliği Programı
   abbreviation: HAVZA-MYO-MKG-İSG-PR
-  code: '257'
+  code: '258'
   yoksis_id: 249949
   parent_yoksis_id: 249948
   unit_type_id: Önlisans/lisans Programı
@@ -5392,7 +5392,7 @@
 
 - name: Turizm ve Otel İşletmeciliği Programı
   abbreviation: HAVZA-MYO-OTEL-TOİ-PR
-  code: '258'
+  code: '259'
   yoksis_id: 169573
   parent_yoksis_id: 169571
   unit_type_id: Önlisans/lisans Programı
@@ -5407,7 +5407,7 @@
 
 - name: Turizm ve Otel İşletmeciliği Programı (İÖ)
   abbreviation: HAVZA-MYO-OTEL-TOİ-PR-2
-  code: '259'
+  code: '260'
   yoksis_id: 169575
   parent_yoksis_id: 169571
   unit_type_id: Önlisans/lisans Programı
@@ -5435,7 +5435,7 @@
 
 - name: Fizyoterapi Programı
   abbreviation: HAVZA-MYO-TERAPİ-FİZYO-PR
-  code: '260'
+  code: '261'
   yoksis_id: 169586
   parent_yoksis_id: 169584
   unit_type_id: Önlisans/lisans Programı
@@ -5450,7 +5450,7 @@
 
 - name: Fizyoterapi Programı (İÖ)
   abbreviation: HAVZA-MYO-TERAPİ-FİZYO-PR-2
-  code: '261'
+  code: '262'
   yoksis_id: 169588
   parent_yoksis_id: 169584
   unit_type_id: Önlisans/lisans Programı
@@ -5477,7 +5477,7 @@
 
 - name: Emlak ve Emlak Yönetimi Programı
   abbreviation: HAVZA-MYO-TPS-EMLAK-PR
-  code: '262'
+  code: '263'
   yoksis_id: 228124
   parent_yoksis_id: 251125
   unit_type_id: Önlisans/lisans Programı
@@ -5503,7 +5503,7 @@
 
 - name: İşletme Yönetimi Programı
   abbreviation: HAVZA-MYO-YO-İY-PR
-  code: '263'
+  code: '264'
   yoksis_id: 145893
   parent_yoksis_id: 169598
   unit_type_id: Önlisans/lisans Programı
@@ -5533,7 +5533,7 @@
 
 - name: İşletme Yönetimi Programı (İÖ)
   abbreviation: HAVZA-MYO-YO-İY-PR-2
-  code: '264'
+  code: '265'
   yoksis_id: 240432
   parent_yoksis_id: 169598
   unit_type_id: Önlisans/lisans Programı
@@ -5642,7 +5642,7 @@
 
 - name: Bilgisayar Mühendisliği Programı
   abbreviation: BİLGİSAYAR-PR
-  code: '265'
+  code: '203'
   yoksis_id: 168861
   parent_yoksis_id: 122184
   unit_type_id: Önlisans/lisans Programı
