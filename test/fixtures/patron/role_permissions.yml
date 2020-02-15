@@ -5,7 +5,7 @@ one:
 two:
   role: admin
   permission: course_management
-  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy, :report]) %>
 three:
   role: authorization_manager
   permission: role_management
@@ -26,3 +26,8 @@ seven:
   role: admin
   permission: calendar_management
   privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
+eight:
+  role: admin
+  permission: available_course_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy, :report]) %>
+

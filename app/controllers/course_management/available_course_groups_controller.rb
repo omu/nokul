@@ -5,6 +5,7 @@ module CourseManagement
     before_action :set_available_course
     before_action :set_lecturers
     before_action :set_available_course_group, only: %i[edit update destroy]
+    before_action :authorized?
 
     def new
       @available_course_group = @available_course.groups.new
@@ -43,6 +44,10 @@ module CourseManagement
 
     def set_lecturers
       @lecturers = @available_course.unit.subtree_employees
+    end
+
+    def authorized?
+      authorize([:course_management, @available_course_group || AvailableCourseGroup])
     end
 
     def available_course_group_params

@@ -1,3 +1,7 @@
+available_course_management:
+  name: Açılan Ders Yönetimi
+  identifier: available_course_management
+  description: Açılan Ders Yönetimi Yetkisi
 unit_management:
   name: Birim Yönetimi
   identifier: unit_management

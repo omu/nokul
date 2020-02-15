@@ -29,6 +29,10 @@ class RoleManagement
              name:        'Ders Yönetimi',
              description: 'Ders Yönetimi Yetkisi',
              privileges:  %i[read write destroy report]
+  permission :available_course_management,
+             name:        'Açılan Ders Yönetimi',
+             description: 'Açılan Ders Yönetimi Yetkisi',
+             privileges:  %i[read write destroy report]
   # roles
   role :authorization_manager,
        name:        'Yetkilendirme Yöneticisi',
@@ -42,7 +46,8 @@ class RoleManagement
   role :admin,
        name:        'Admin',
        permissions: {
-         calendar_management: %i[read write destroy],
-         course_management:   %i[read write destroy]
+         calendar_management:         %i[read write destroy],
+         course_management:           %i[read write destroy report],
+         available_course_management: %i[read write destroy report]
        }
 end
