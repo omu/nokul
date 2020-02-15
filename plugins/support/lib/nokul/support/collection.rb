@@ -32,7 +32,7 @@ module Nokul
       def self.canonicalize_hashes(hashes)
         raise Error, 'All collection items must be hash' unless hashes.all? { |hash| hash.is_a? Hash }
 
-        hashes.map { |hash| collects.new(**hash.symbolize_keys) }
+        hashes.map { |hash| collects.new(**hash.deep_symbolize_keys) }
       end
 
       def self.create(hashes = [])
