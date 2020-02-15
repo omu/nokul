@@ -5,6 +5,7 @@ module CourseManagement
     include SearchableModule
 
     before_action :set_course_group_type, only: %i[edit update destroy]
+    before_action :authorized?
 
     def index
       @course_group_types = pagy_by_search(CourseGroupType.order(:name))
@@ -41,6 +42,10 @@ module CourseManagement
 
     def set_course_group_type
       @course_group_type = CourseGroupType.find(params[:id])
+    end
+
+    def authorized?
+      authorize([:course_management, @course_group_type || CourseGroupType])
     end
 
     def course_group_type_params
