@@ -498,6 +498,12 @@
   active: true
   activity: true
 
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Astronomi Eğitimi Uygulama ve Araştırma Merkezi Müdürlüğü
+  detsis_id: 30837812
+  parent_administrative_identity_code: 78633602
+  active: true
+  activity: true
+
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Atatürk İlkeleri ve İnkılap Tarihi Araştırma ve Uygulama Merkezi Müdürlüğü
   detsis_id: 50057338
   parent_administrative_identity_code: 78633602
@@ -706,12 +712,132 @@
   detsis_id: 57246715
   parent_administrative_identity_code: 78633602
   active: true
-  activity: false
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Bafra İşletme Fakültesi Dekanlığı > Fakülte Disiplin Kurulu
+  detsis_id: 74095031
+  parent_administrative_identity_code: 57246715
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Bafra İşletme Fakültesi Dekanlığı > Fakülte Kurulu
+  detsis_id: 45653669
+  parent_administrative_identity_code: 57246715
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Bafra İşletme Fakültesi Dekanlığı > Fakülte Sekreterliği
+  detsis_id: 75457335
+  parent_administrative_identity_code: 57246715
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Bafra İşletme Fakültesi Dekanlığı > Fakülte Yönetim Kurulu
+  detsis_id: 92564308
+  parent_administrative_identity_code: 57246715
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Bafra İşletme Fakültesi Dekanlığı > Sigortacılık ve Aktüerya Bilimleri Bölüm Başkanlığı
+  detsis_id: 23363322
+  parent_administrative_identity_code: 57246715
+  active: true
+  activity: true
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ballıca Meslek Yüksekokulu Müdürlüğü
   detsis_id: 46697017
   parent_administrative_identity_code: 78633602
   active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ballıca Meslek Yüksekokulu Müdürlüğü > Basın Yayın ve Halkla İlişkiler Birimi
+  detsis_id: 78806516
+  parent_administrative_identity_code: 46697017
+  active: false
+  activity: false
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ballıca Meslek Yüksekokulu Müdürlüğü > Bilgi İşlem Birimi
+  detsis_id: 57243461
+  parent_administrative_identity_code: 46697017
+  active: false
+  activity: false
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ballıca Meslek Yüksekokulu Müdürlüğü > Hukuk İşleri Birimi
+  detsis_id: 58382488
+  parent_administrative_identity_code: 46697017
+  active: false
+  activity: false
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ballıca Meslek Yüksekokulu Müdürlüğü > Mali İşler Birimi
+  detsis_id: 30582242
+  parent_administrative_identity_code: 46697017
+  active: false
+  activity: false
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ballıca Meslek Yüksekokulu Müdürlüğü > Meslek Yüksekokulu Disiplin Kurulu
+  detsis_id: 17832416
+  parent_administrative_identity_code: 46697017
+  active: true
+  activity: false
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ballıca Meslek Yüksekokulu Müdürlüğü > Meslek Yüksekokulu Kurulu
+  detsis_id: 53946601
+  parent_administrative_identity_code: 46697017
+  active: true
+  activity: false
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ballıca Meslek Yüksekokulu Müdürlüğü > Meslek Yüksekokulu Sekreterliği
+  detsis_id: 25170302
+  parent_administrative_identity_code: 46697017
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ballıca Meslek Yüksekokulu Müdürlüğü > Meslek Yüksekokulu Yönetim Kurulu
+  detsis_id: 12577702
+  parent_administrative_identity_code: 46697017
+  active: true
+  activity: false
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ballıca Meslek Yüksekokulu Müdürlüğü > Personel İşleri Birimi
+  detsis_id: 31828083
+  parent_administrative_identity_code: 46697017
+  active: false
+  activity: false
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ballıca Meslek Yüksekokulu Müdürlüğü > Sağlık, Kültür ve Spor İşleri Birimi
+  detsis_id: 98335055
+  parent_administrative_identity_code: 46697017
+  active: false
+  activity: false
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ballıca Meslek Yüksekokulu Müdürlüğü > Strateji Geliştirme ve Kalite Birimi
+  detsis_id: 43700408
+  parent_administrative_identity_code: 46697017
+  active: false
+  activity: false
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ballıca Meslek Yüksekokulu Müdürlüğü > Yapı, Tesis ve Teknik İşler Birimi
+  detsis_id: 57636203
+  parent_administrative_identity_code: 46697017
+  active: false
+  activity: false
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ballıca Meslek Yüksekokulu Müdürlüğü > Yayın, Kütüphane ve Dokümantasyon Birimi
+  detsis_id: 31884579
+  parent_administrative_identity_code: 46697017
+  active: false
+  activity: false
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ballıca Meslek Yüksekokulu Müdürlüğü > Öğrenci İşleri Birimi
+  detsis_id: 54193137
+  parent_administrative_identity_code: 46697017
+  active: false
+  activity: false
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ballıca Meslek Yüksekokulu Müdürlüğü > İdari İşler Birimi
+  detsis_id: 35778622
+  parent_administrative_identity_code: 46697017
+  active: false
   activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Basın Yayın ve Halkla İlişkiler
@@ -894,6 +1020,12 @@
   active: true
   activity: true
 
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Dil ve Konuşma Bozuklukları Eğitimi Uygulama ve Araştırma Merkezi Müdürlüğü
+  detsis_id: 16278565
+  parent_administrative_identity_code: 78633602
+  active: true
+  activity: true
+
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Diş Hekimliği Fakültesi Dekanlığı
   detsis_id: 45458912
   parent_administrative_identity_code: 78633602
@@ -1073,6 +1205,12 @@
   parent_administrative_identity_code: 78633602
   active: true
   activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eczacılık Fakültesi Dekanlığı
+  detsis_id: 36795605
+  parent_administrative_identity_code: 78633602
+  active: true
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Enformatik Bölüm Başkanlığı
   detsis_id: 62265988
@@ -2490,6 +2628,12 @@
   active: false
   activity: true
 
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fındık ve Diğer Sert Kabuklu Meyveler Araştırma ve Uygulama Merkezi Müdürlüğü
+  detsis_id: 51346436
+  parent_administrative_identity_code: 78633602
+  active: false
+  activity: true
+
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Gelişimsel Eğitim Araştırma Uygulama Merkezi Müdürlüğü
   detsis_id: 70080549
   parent_administrative_identity_code: 78633602
@@ -3102,6 +3246,36 @@
   active: true
   activity: true
 
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Kenevir Araştırmaları Enstitüsü Müdürlüğü
+  detsis_id: 33393879
+  parent_administrative_identity_code: 78633602
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Kenevir Araştırmaları Enstitüsü Müdürlüğü > Gıda, Yem ve İlaç Anabilim Dalı Başkanlığı
+  detsis_id: 46067842
+  parent_administrative_identity_code: 33393879
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Kenevir Araştırmaları Enstitüsü Müdürlüğü > Sanayi ve Pazarlama Anabilim Dalı Başkanlığı
+  detsis_id: 18881787
+  parent_administrative_identity_code: 33393879
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Kenevir Araştırmaları Enstitüsü Müdürlüğü > Tarım ve Islah Anabilim Dalı Başkanlığı
+  detsis_id: 19358555
+  parent_administrative_identity_code: 33393879
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Klinik Araştırmalar Etik Kurulu
+  detsis_id: 88984990
+  parent_administrative_identity_code: 78633602
+  active: true
+  activity: true
+
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Koordinatörlükler
   detsis_id: 64774613
   parent_administrative_identity_code: 78633602
@@ -3114,7 +3288,7 @@
   active: false
   activity: true
 
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Kök Hücre Araştırma Merkezi Müdürlüğü
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Kök Hücre Uygulama ve Araştırma Merkezi Müdürlüğü
   detsis_id: 83478762
   parent_administrative_identity_code: 78633602
   active: true
@@ -4074,6 +4248,12 @@
   active: true
   activity: true
 
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Araştırma ve Uygulama Merkezi Müdürlüğü > Nöromodülasyon Ünitesi
+  detsis_id: 12221006
+  parent_administrative_identity_code: 15374210
+  active: true
+  activity: true
+
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Araştırma ve Uygulama Merkezi Müdürlüğü > Personel İşleri Birimi
   detsis_id: 46010950
   parent_administrative_identity_code: 15374210
@@ -4284,6 +4464,18 @@
   active: true
   activity: true
 
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Deney Hayvanları Araştırmaları Anabilim Dalı Başkanlığı
+  detsis_id: 48395142
+  parent_administrative_identity_code: 93771576
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Dil ve Konuşma Terapisi Anabilim Dalı Başkanlığı
+  detsis_id: 83466304
+  parent_administrative_identity_code: 93771576
+  active: true
+  activity: true
+
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Dölerme ve Suni Tohumlama Anabilim Dalı Başkanlığı
   detsis_id: 94836752
   parent_administrative_identity_code: 93771576
@@ -4326,7 +4518,7 @@
   active: true
   activity: true
 
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Evde Bakım Hemşireliği Anabilim Dalı Başkanlığı
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Evde Hasta Bakımı Hemşireliği Anabilim Dalı Başkanlığı
   detsis_id: 29830028
   parent_administrative_identity_code: 93771576
   active: true
@@ -4830,6 +5022,18 @@
   active: true
   activity: true
 
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Fakültesi Dekanlığı > Fizyoterapi ve Rehabilitasyon Bölüm Başkanlığı
+  detsis_id: 34357349
+  parent_administrative_identity_code: 28050591
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Fakültesi Dekanlığı > Fizyoterapi ve Rehabilitasyon Bölüm Başkanlığı > Fizyoterapi ve Rehabilitasyon Anabilim Dalı Başkanlığı
+  detsis_id: 25550913
+  parent_administrative_identity_code: 34357349
+  active: true
+  activity: true
+
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Fakültesi Dekanlığı > Hemşirelik Bölüm Başkanlığı
   detsis_id: 81006479
   parent_administrative_identity_code: 28050591
@@ -4896,6 +5100,24 @@
   active: true
   activity: true
 
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Fakültesi Dekanlığı > Odyoloji Bölüm Başkanlığı
+  detsis_id: 25960321
+  parent_administrative_identity_code: 28050591
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Fakültesi Dekanlığı > Odyoloji Bölüm Başkanlığı > Odyoloji Anabilim Dalı Başkanlığı
+  detsis_id: 31447479
+  parent_administrative_identity_code: 25960321
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Fakültesi Dekanlığı > Ortez-protez Bölüm Başkanlığı
+  detsis_id: 83283698
+  parent_administrative_identity_code: 28050591
+  active: true
+  activity: true
+
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Fakültesi Dekanlığı > Personel İşleri Birimi
   detsis_id: 66469556
   parent_administrative_identity_code: 28050591
@@ -4952,6 +5174,12 @@
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Fakültesi Dekanlığı > Yayın, Kütüphane ve Dokümantasyon Birimi
   detsis_id: 75802247
+  parent_administrative_identity_code: 28050591
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Fakültesi Dekanlığı > Çocuk Gelişimi Bölüm Başkanlığı
+  detsis_id: 54917329
   parent_administrative_identity_code: 28050591
   active: true
   activity: true
@@ -5175,8 +5403,8 @@
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Kültür ve Spor Daire Başkanlığı > Güzel Sanatlar Kampüsü Şube Müdürlüğü
   detsis_id: 64211159
   parent_administrative_identity_code: 53521241
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Kültür ve Spor Daire Başkanlığı > Kültür ve Spor Şube Müdürlüğü
   detsis_id: 27290195
@@ -5193,8 +5421,8 @@
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Kültür ve Spor Daire Başkanlığı > Sağlık Hizmetleri Şube Müdürlüğü
   detsis_id: 50881910
   parent_administrative_identity_code: 53521241
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Kültür ve Spor Daire Başkanlığı > Sosyal Hizmetler Şube Müdürlüğü
   detsis_id: 10539022
@@ -5204,6 +5432,12 @@
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Kültür ve Spor Daire Başkanlığı > Taşınır Kayıt ve Kontrol Birimi
   detsis_id: 20134082
+  parent_administrative_identity_code: 53521241
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Kültür ve Spor Daire Başkanlığı > Yurtlar Şube Müdürlüğü
+  detsis_id: 96886882
   parent_administrative_identity_code: 53521241
   active: true
   activity: true
@@ -5312,6 +5546,12 @@
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Felsefe ve Din Bilimleri Anabilim Dalı Başkanlığı
   detsis_id: 16553436
+  parent_administrative_identity_code: 61232311
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Girişimcilik ve Yenilikçilik Anabilim Dalı Başkanlığı
+  detsis_id: 93062464
   parent_administrative_identity_code: 61232311
   active: true
   activity: true
@@ -5736,6 +5976,12 @@
   active: true
   activity: true
 
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Terme Meslek Yüksekokulu Müdürlüğü > Yönetim ve Organizasyon Bölüm Başkanlığı
+  detsis_id: 62682161
+  parent_administrative_identity_code: 36024139
+  active: true
+  activity: true
+
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Terme Meslek Yüksekokulu Müdürlüğü > Öğrenci İşleri Birimi
   detsis_id: 40935542
   parent_administrative_identity_code: 36024139
@@ -5800,7 +6046,13 @@
   detsis_id: 64554296
   parent_administrative_identity_code: 37195700
   active: true
-  activity: false
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Turizm Fakültesi Dekanlığı > Gastronomi ve Mutfak Sanatları Bölüm Başkanlığı > Gastronomi ve Mutfak Sanatları Anabilim Dalı Başkanlığı
+  detsis_id: 89292868
+  parent_administrative_identity_code: 64554296
+  active: true
+  activity: true
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Turizm Fakültesi Dekanlığı > Hukuk İşleri Birimi
   detsis_id: 83812155
@@ -5816,6 +6068,12 @@
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Turizm Fakültesi Dekanlığı > Personel İşleri Birimi
   detsis_id: 28643737
+  parent_administrative_identity_code: 37195700
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Turizm Fakültesi Dekanlığı > Rekreasyon Yönetimi Bölüm Başkanlığı
+  detsis_id: 57132954
   parent_administrative_identity_code: 37195700
   active: true
   activity: true
@@ -5844,9 +6102,21 @@
   active: true
   activity: true
 
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Turizm Fakültesi Dekanlığı > Turizm Rehberliği Bölüm Başkanlığı > Turizm Rehberliği Anabilim Dalı Başkanlığı
+  detsis_id: 54285866
+  parent_administrative_identity_code: 17503256
+  active: true
+  activity: true
+
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Turizm Fakültesi Dekanlığı > Turizm İşletmeciliği Bölüm Başkanlığı
   detsis_id: 22017889
   parent_administrative_identity_code: 37195700
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Turizm Fakültesi Dekanlığı > Turizm İşletmeciliği Bölüm Başkanlığı > Turizm İşletmeciliği Anabilim Dalı Başkanlığı
+  detsis_id: 34620086
+  parent_administrative_identity_code: 22017889
   active: true
   activity: true
 
@@ -6018,7 +6288,7 @@
   active: true
   activity: true
 
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Tıp Fakültesi Dekanlığı > Dahili Tıp Bilimleri Bölüm Başkanlığı > Dermatoloji Anabilim Dalı Başkanlığı
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Tıp Fakültesi Dekanlığı > Dahili Tıp Bilimleri Bölüm Başkanlığı > Deri ve Zührevi Hastalıklar Anabilim Dalı Başkanlığı
   detsis_id: 82295067
   parent_administrative_identity_code: 37439758
   active: true
@@ -6072,20 +6342,20 @@
   active: true
   activity: true
 
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Tıp Fakültesi Dekanlığı > Dahili Tıp Bilimleri Bölüm Başkanlığı > Psikiyatri Anabilim Dalı Başkanlığı
-  detsis_id: 28960095
-  parent_administrative_identity_code: 37439758
-  active: true
-  activity: true
-
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Tıp Fakültesi Dekanlığı > Dahili Tıp Bilimleri Bölüm Başkanlığı > Radyasyon Onkolojisi Anabilim Dalı Başkanlığı
   detsis_id: 80058605
   parent_administrative_identity_code: 37439758
   active: true
   activity: true
 
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Tıp Fakültesi Dekanlığı > Dahili Tıp Bilimleri Bölüm Başkanlığı > Radyodiagnostik Anabilim Dalı Başkanlığı
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Tıp Fakültesi Dekanlığı > Dahili Tıp Bilimleri Bölüm Başkanlığı > Radyoloji Anabilim Dalı Başkanlığı
   detsis_id: 18393763
+  parent_administrative_identity_code: 37439758
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Tıp Fakültesi Dekanlığı > Dahili Tıp Bilimleri Bölüm Başkanlığı > Ruh Sağlığı ve Hastalıkları Anabilim Dalı Başkanlığı
+  detsis_id: 28960095
   parent_administrative_identity_code: 37439758
   active: true
   activity: true
@@ -6750,6 +7020,12 @@
   active: true
   activity: true
 
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Vezirköprü Meslek Yüksekokulu Müdürlüğü > Tasarım Bölüm Başkanlığı
+  detsis_id: 98370047
+  parent_administrative_identity_code: 61206311
+  active: true
+  activity: true
+
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Vezirköprü Meslek Yüksekokulu Müdürlüğü > Yapı, Tesis ve Teknik İşler Birimi
   detsis_id: 16635386
   parent_administrative_identity_code: 61206311
@@ -6844,13 +7120,13 @@
   detsis_id: 41323324
   parent_administrative_identity_code: 20346779
   active: true
-  activity: false
+  activity: true
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Yabancı Diller Yüksekokulu Müdürlüğü > Mütercim Tercümanlık Bölüm Başkanlığı > Mütercim Tercümanlık (ingilizce) Anabilim Dalı Başkanlığı
   detsis_id: 86068149
   parent_administrative_identity_code: 20346779
   active: true
-  activity: false
+  activity: true
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Yabancı Diller Yüksekokulu Müdürlüğü > Mütercim Tercümanlık Bölüm Başkanlığı > Mütercim Tercümanlık (çince) Anabilim Dalı Başkanlığı
   detsis_id: 49727580
@@ -7320,6 +7596,30 @@
   active: true
   activity: true
 
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ziraat Fakültesi Dekanlığı > Bahçe Bitkileri Bölüm Başkanlığı > Bağ Yetiştirme ve Islahı Anabilim Dalı Başkanlığı
+  detsis_id: 53179598
+  parent_administrative_identity_code: 51766710
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ziraat Fakültesi Dekanlığı > Bahçe Bitkileri Bölüm Başkanlığı > Meyve Yetiştirme ve Islahı Anabilim Dalı Başkanlığı
+  detsis_id: 46244487
+  parent_administrative_identity_code: 51766710
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ziraat Fakültesi Dekanlığı > Bahçe Bitkileri Bölüm Başkanlığı > Sebze Yetiştirme ve Islahı Anabilim Dalı Başkanlığı
+  detsis_id: 80967982
+  parent_administrative_identity_code: 51766710
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ziraat Fakültesi Dekanlığı > Bahçe Bitkileri Bölüm Başkanlığı > Süs Bitkileri Yetiştirme ve Islahı Anabilim Dalı Başkanlığı
+  detsis_id: 19028155
+  parent_administrative_identity_code: 51766710
+  active: true
+  activity: true
+
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ziraat Fakültesi Dekanlığı > Basın Yayın ve Halkla İlişkiler Birimi
   detsis_id: 87518066
   parent_administrative_identity_code: 52180288
@@ -7335,6 +7635,18 @@
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ziraat Fakültesi Dekanlığı > Bitki Koruma Bölüm Başkanlığı
   detsis_id: 30360806
   parent_administrative_identity_code: 52180288
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ziraat Fakültesi Dekanlığı > Bitki Koruma Bölüm Başkanlığı > Entomoloji Anabilim Dalı Başkanlığı
+  detsis_id: 16771683
+  parent_administrative_identity_code: 30360806
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ziraat Fakültesi Dekanlığı > Bitki Koruma Bölüm Başkanlığı > Fitopatoloji Anabilim Dalı Başkanlığı
+  detsis_id: 85218112
+  parent_administrative_identity_code: 30360806
   active: true
   activity: true
 
@@ -7422,9 +7734,39 @@
   active: true
   activity: true
 
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ziraat Fakültesi Dekanlığı > Tarla Bitkileri Bölüm Başkanlığı > Endüstri Bitkileri Anabilim Dalı Başkanlığı
+  detsis_id: 19791492
+  parent_administrative_identity_code: 88073621
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ziraat Fakültesi Dekanlığı > Tarla Bitkileri Bölüm Başkanlığı > Tahıllar ve Yemeklik Baklagiller Anabilim Dalı Başkanlığı
+  detsis_id: 34957183
+  parent_administrative_identity_code: 88073621
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ziraat Fakültesi Dekanlığı > Tarla Bitkileri Bölüm Başkanlığı > Çayır Mera ve Yem Bitkileri Anabilim Dalı Başkanlığı
+  detsis_id: 55528295
+  parent_administrative_identity_code: 88073621
+  active: true
+  activity: true
+
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ziraat Fakültesi Dekanlığı > Tarım Ekonomisi Bölüm Başkanlığı
   detsis_id: 41945832
   parent_administrative_identity_code: 52180288
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ziraat Fakültesi Dekanlığı > Tarım Ekonomisi Bölüm Başkanlığı > Tarım Politikası ve Yayım Anabilim Dalı Başkanlığı
+  detsis_id: 17184421
+  parent_administrative_identity_code: 41945832
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ziraat Fakültesi Dekanlığı > Tarım Ekonomisi Bölüm Başkanlığı > Tarım İşletmeciliği Anabilim Dalı Başkanlığı
+  detsis_id: 85416548
+  parent_administrative_identity_code: 41945832
   active: true
   activity: true
 
@@ -7434,9 +7776,33 @@
   active: true
   activity: true
 
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ziraat Fakültesi Dekanlığı > Tarım Makineleri ve Teknolojileri Mühendisliği Bölüm Başkanlığı > Tarım Makineleri ve Teknolojileri Mühendisliği Anabilim Dalı Başkanlığı
+  detsis_id: 91635289
+  parent_administrative_identity_code: 38298812
+  active: true
+  activity: true
+
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ziraat Fakültesi Dekanlığı > Tarımsal Biyoteknoloji Bölüm Başkanlığı
   detsis_id: 39322077
   parent_administrative_identity_code: 52180288
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ziraat Fakültesi Dekanlığı > Tarımsal Biyoteknoloji Bölüm Başkanlığı > Bitkisel Biyoteknoloji Anabilim Dalı Başkanlığı
+  detsis_id: 15854088
+  parent_administrative_identity_code: 39322077
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ziraat Fakültesi Dekanlığı > Tarımsal Biyoteknoloji Bölüm Başkanlığı > Enzim ve Mikrobiyel Biyoteknoloji Anabilim Dalı Başkanlığı
+  detsis_id: 55841282
+  parent_administrative_identity_code: 39322077
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ziraat Fakültesi Dekanlığı > Tarımsal Biyoteknoloji Bölüm Başkanlığı > Hayvansal Biyoteknoloji Anabilim Dalı Başkanlığı
+  detsis_id: 86244733
+  parent_administrative_identity_code: 39322077
   active: true
   activity: true
 
@@ -7446,9 +7812,27 @@
   active: true
   activity: true
 
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ziraat Fakültesi Dekanlığı > Tarımsal Yapılar ve Sulama Bölüm Başkanlığı > Tarımsal Yapılar ve Sulama Anabilim Dalı Başkanlığı
+  detsis_id: 42963378
+  parent_administrative_identity_code: 69046183
+  active: true
+  activity: true
+
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ziraat Fakültesi Dekanlığı > Toprak Bilimi ve Bitki Besleme Bölüm Başkanlığı
   detsis_id: 25676019
   parent_administrative_identity_code: 52180288
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ziraat Fakültesi Dekanlığı > Toprak Bilimi ve Bitki Besleme Bölüm Başkanlığı > Bitki Besleme Anabilim Dalı Başkanlığı
+  detsis_id: 83929159
+  parent_administrative_identity_code: 25676019
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ziraat Fakültesi Dekanlığı > Toprak Bilimi ve Bitki Besleme Bölüm Başkanlığı > Toprak Bilimi Anabilim Dalı Başkanlığı
+  detsis_id: 42846038
+  parent_administrative_identity_code: 25676019
   active: true
   activity: true
 
@@ -7467,6 +7851,24 @@
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ziraat Fakültesi Dekanlığı > Zootekni Bölüm Başkanlığı
   detsis_id: 59625322
   parent_administrative_identity_code: 52180288
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ziraat Fakültesi Dekanlığı > Zootekni Bölüm Başkanlığı > Biyometri-genetik Anabilim Dalı Başkanlığı
+  detsis_id: 54790359
+  parent_administrative_identity_code: 59625322
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ziraat Fakültesi Dekanlığı > Zootekni Bölüm Başkanlığı > Hayvan Yetiştirme ve Islahı Anabilim Dalı Başkanlığı
+  detsis_id: 16443102
+  parent_administrative_identity_code: 59625322
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ziraat Fakültesi Dekanlığı > Zootekni Bölüm Başkanlığı > Yemler ve Hayvan Besleme Anabilim Dalı Başkanlığı
+  detsis_id: 69025855
+  parent_administrative_identity_code: 59625322
   active: true
   activity: true
 
@@ -7696,6 +8098,48 @@
   detsis_id: 94886247
   parent_administrative_identity_code: 93417155
   active: false
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Çarşamba İnsan ve Toplum Bilimleri Fakültesi Dekanlığı > Tarih Bölüm Başkanlığı
+  detsis_id: 13806242
+  parent_administrative_identity_code: 93417155
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Çarşamba İnsan ve Toplum Bilimleri Fakültesi Dekanlığı > Tarih Bölüm Başkanlığı > Eskiçağ Tarihi Anabilim Dalı Başkanlığı
+  detsis_id: 20981008
+  parent_administrative_identity_code: 13806242
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Çarşamba İnsan ve Toplum Bilimleri Fakültesi Dekanlığı > Tarih Bölüm Başkanlığı > Genel Türk Tarihi Anabilim Dalı Başkanlığı
+  detsis_id: 66965106
+  parent_administrative_identity_code: 13806242
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Çarşamba İnsan ve Toplum Bilimleri Fakültesi Dekanlığı > Tarih Bölüm Başkanlığı > Ortaçağ Tarihi Anabilim Dalı Başkanlığı
+  detsis_id: 72446498
+  parent_administrative_identity_code: 13806242
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Çarşamba İnsan ve Toplum Bilimleri Fakültesi Dekanlığı > Tarih Bölüm Başkanlığı > Türkiye Cumhuriyeti Tarihi Anabilim Dalı Başkanlığı
+  detsis_id: 31622048
+  parent_administrative_identity_code: 13806242
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Çarşamba İnsan ve Toplum Bilimleri Fakültesi Dekanlığı > Tarih Bölüm Başkanlığı > Yakınçağ Tarihi Anabilim Dalı Başkanlığı
+  detsis_id: 46938089
+  parent_administrative_identity_code: 13806242
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Çarşamba İnsan ve Toplum Bilimleri Fakültesi Dekanlığı > Tarih Bölüm Başkanlığı > Yeniçağ Tarihi Anabilim Dalı Başkanlığı
+  detsis_id: 14794339
+  parent_administrative_identity_code: 13806242
+  active: true
   activity: true
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Çarşamba İnsan ve Toplum Bilimleri Fakültesi Dekanlığı > Öğrenci İşleri Birimi
@@ -7984,7 +8428,7 @@
   detsis_id: 94334960
   parent_administrative_identity_code: 26676436
   active: true
-  activity: false
+  activity: true
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > İktisadi ve İdari Bilimler Fakültesi Dekanlığı > Uluslararası İlişkiler Bölüm Başkanlığı
   detsis_id: 90667682

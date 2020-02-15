@@ -14639,7 +14639,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Din Eğitimi Tarihi Bilim Dalı
-  abbreviation: FDE-DİNEĞ-TARİH-BD
+  abbreviation: FDB-DİNEĞ-TARİH-BD
   code: C6C
   yoksis_id: 168740
   parent_yoksis_id: 122167
@@ -14651,7 +14651,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Din Felsefesi Anabilim Dalı
-  abbreviation: FDE-DİNF-AD
+  abbreviation: FDB-DİNF-AD
   code: C6D
   yoksis_id: 122171
   parent_yoksis_id: 122166
@@ -14663,7 +14663,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Din Psikolojisi Anabilim Dalı
-  abbreviation: FDE-DİNP-AD
+  abbreviation: FDB-DİNP-AD
   code: C6E
   yoksis_id: 122174
   parent_yoksis_id: 122166
@@ -14675,7 +14675,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Din Sosyolojisi Anabilim Dalı
-  abbreviation: FDE-DİNS-AD
+  abbreviation: FDB-DİNS-AD
   code: C6F
   yoksis_id: 122173
   parent_yoksis_id: 122166
@@ -14687,7 +14687,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Dinler Tarihi Anabilim Dalı
-  abbreviation: FDE-DİNT-AD
+  abbreviation: FDB-DİNT-AD
   code: C70
   yoksis_id: 122168
   parent_yoksis_id: 122166
@@ -14699,7 +14699,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Din Fenomenolojisi Bilim Dalı
-  abbreviation: FDE-DİNT-DİNF-BD
+  abbreviation: FDB-DİNT-DİNF-BD
   code: C71
   yoksis_id: 168742
   parent_yoksis_id: 122168
@@ -14711,7 +14711,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Dinler Tarihi Bilim Dalı
-  abbreviation: FDE-DİNT-BD
+  abbreviation: FDB-DİNT-BD
   code: C72
   yoksis_id: 168743
   parent_yoksis_id: 122168
@@ -14723,7 +14723,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Mukayeseli Dinler Bilim Dalı
-  abbreviation: FDE-DİNT-MD-BD
+  abbreviation: FDB-DİNT-MD-BD
   code: C73
   yoksis_id: 168744
   parent_yoksis_id: 122168
@@ -14735,7 +14735,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Felsefe Tarihi Anabilim Dalı
-  abbreviation: FDE-FT-AD
+  abbreviation: FDB-FT-AD
   code: C74
   yoksis_id: 122169
   parent_yoksis_id: 122166
@@ -14747,7 +14747,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Yeniçağ Felsefesi Tarihi Bilim Dalı
-  abbreviation: FDE-FT-YENİÇAĞ-BD
+  abbreviation: FDB-FT-YENİÇAĞ-BD
   code: C75
   yoksis_id: 168747
   parent_yoksis_id: 122169
@@ -14760,7 +14760,7 @@
   founded_at: 10.09.2009
 
 - name: İlkçağ Felsefesi Tarihi Bilim Dalı
-  abbreviation: FDE-FT-İLKÇAĞ-BD
+  abbreviation: FDB-FT-İLKÇAĞ-BD
   code: C76
   yoksis_id: 168746
   parent_yoksis_id: 122169
@@ -14772,7 +14772,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Mantık Anabilim Dalı
-  abbreviation: FDE-MANTIK-AD
+  abbreviation: FDB-MANTIK-AD
   code: C77
   yoksis_id: 122172
   parent_yoksis_id: 122166
@@ -14784,7 +14784,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: İslam Felsefesi Anabilim Dalı
-  abbreviation: FDE-İF-AD
+  abbreviation: FDB-İF-AD
   code: C78
   yoksis_id: 122170
   parent_yoksis_id: 122166
@@ -14796,7 +14796,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Türk Düşünce Tarihi Bilim Dalı
-  abbreviation: FDE-İF-TDT-BD
+  abbreviation: FDB-İF-TDT-BD
   code: C79
   yoksis_id: 168751
   parent_yoksis_id: 122170
@@ -14808,7 +14808,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: İslam Ahlakı Bilim Dalı
-  abbreviation: FDE-İF-AHLAK-BD
+  abbreviation: FDB-İF-AHLAK-BD
   code: C7A
   yoksis_id: 168748
   parent_yoksis_id: 122170
@@ -14820,7 +14820,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: İslam Felsefesi Tarihi Bilim Dalı
-  abbreviation: FDE-İF-TARİH-BD
+  abbreviation: FDB-İF-TARİH-BD
   code: C7B
   yoksis_id: 168750
   parent_yoksis_id: 122170
@@ -25157,7 +25157,7 @@
   district_id: Vezirköprü
 
 - name: Muhasebe ve Vergi Bölüm Başkanlığı
-  abbreviation: VEZİRKÖPRÜ-MYO-NV-BB
+  abbreviation: VEZİRKÖPRÜ-MYO-MV-BB
   code: G3C
   parent_yoksis_id: 170007
   detsis_id: 88418293
@@ -27181,7 +27181,7 @@
   district_id: Atakum
 
 - name: Din Felsefesi Anabilim Dalı Başkanlığı
-  abbreviation: FDE-DİNF-ADB
+  abbreviation: FDB-DİNF-ADB
   code: GA5
   parent_yoksis_id: 122171
   detsis_id: 52443415
@@ -27191,7 +27191,7 @@
   district_id: Atakum
 
 - name: Din Psikolojisi Anabilim Dalı Başkanlığı
-  abbreviation: FDE-DİNP-ADB
+  abbreviation: FDB-DİNP-ADB
   code: GA6
   parent_yoksis_id: 122174
   detsis_id: 45455078
@@ -27201,7 +27201,7 @@
   district_id: Atakum
 
 - name: Din Sosyolojisi Anabilim Dalı Başkanlığı
-  abbreviation: FDE-DİNS-ADB
+  abbreviation: FDB-DİNS-ADB
   code: GA7
   parent_yoksis_id: 122173
   detsis_id: 67743338
@@ -27211,7 +27211,7 @@
   district_id: Atakum
 
 - name: Dinler Tarihi Anabilim Dalı Başkanlığı
-  abbreviation: FDE-DİNT-ADB
+  abbreviation: FDB-DİNT-ADB
   code: GA8
   parent_yoksis_id: 122168
   detsis_id: 17194020
@@ -27221,7 +27221,7 @@
   district_id: Atakum
 
 - name: Felsefe Tarihi Anabilim Dalı Başkanlığı
-  abbreviation: FDE-FT-ADB
+  abbreviation: FDB-FT-ADB
   code: GA9
   parent_yoksis_id: 122169
   detsis_id: 60927548
@@ -27231,7 +27231,7 @@
   district_id: Atakum
 
 - name: İslam Felsefesi Anabilim Dalı Başkanlığı
-  abbreviation: FDE-İF-ADB
+  abbreviation: FDB-İF-ADB
   code: GAA
   parent_yoksis_id: 122170
   detsis_id: 51130924
@@ -27241,7 +27241,7 @@
   district_id: Atakum
 
 - name: Mantık Anabilim Dalı Başkanlığı
-  abbreviation: FDE-MANTIK-ADB
+  abbreviation: FDB-MANTIK-ADB
   code: GAB
   parent_yoksis_id: 122172
   detsis_id: 72866993
@@ -35897,7 +35897,7 @@
 - name: Uluslararası Ticaret Anabilim Dalı Başkanlığı
   abbreviation: UTL-UT-ADB
   code: HA6
-  parent_yoksis_id: 326681
+  parent_yoksis_id: 326680
   detsis_id: 94334960
   parent_detsis_id: 26676436
   unit_type_id: Anabilim Dalı Başkanlığı
