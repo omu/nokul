@@ -20,7 +20,7 @@
   yoksis_id: 122316
   parent_yoksis_id: 121946
   unit_type_id: Yüksekokul
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -33,7 +33,7 @@
   yoksis_id: 122317
   parent_yoksis_id: 122316
   unit_type_id: Bölüm
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: İlkadım
   foet_code: '212'
   unit_instruction_language_id: Türkçe
@@ -45,7 +45,7 @@
   yoksis_id: 254783
   parent_yoksis_id: 122317
   unit_type_id: Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: İlkadım
   foet_code: '212'
   unit_instruction_language_id: Türkçe
@@ -57,7 +57,7 @@
   yoksis_id: 122321
   parent_yoksis_id: 122317
   unit_type_id: Anasanat Dalı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: İlkadım
   foet_code: '212'
   unit_instruction_language_id: Türkçe
@@ -69,7 +69,7 @@
   yoksis_id: 122320
   parent_yoksis_id: 122317
   unit_type_id: Anasanat Dalı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: İlkadım
   foet_code: '212'
   unit_instruction_language_id: Türkçe
@@ -81,7 +81,7 @@
   yoksis_id: 122319
   parent_yoksis_id: 122317
   unit_type_id: Anasanat Dalı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: İlkadım
   foet_code: '212'
   unit_instruction_language_id: Türkçe
@@ -93,7 +93,7 @@
   yoksis_id: 122318
   parent_yoksis_id: 122317
   unit_type_id: Anasanat Dalı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: İlkadım
   foet_code: '212'
   unit_instruction_language_id: Türkçe
@@ -105,7 +105,7 @@
   yoksis_id: 122322
   parent_yoksis_id: 122316
   unit_type_id: Bölüm
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: İlkadım
   foet_code: '212'
   unit_instruction_language_id: Türkçe
@@ -117,7 +117,7 @@
   yoksis_id: 122324
   parent_yoksis_id: 122322
   unit_type_id: Anasanat Dalı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: İlkadım
   foet_code: '212'
   unit_instruction_language_id: Türkçe
@@ -129,7 +129,7 @@
   yoksis_id: 122325
   parent_yoksis_id: 122322
   unit_type_id: Anasanat Dalı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: İlkadım
   foet_code: '212'
   unit_instruction_language_id: Türkçe
@@ -141,7 +141,7 @@
   yoksis_id: 122323
   parent_yoksis_id: 122322
   unit_type_id: Anasanat Dalı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: İlkadım
   foet_code: '212'
   unit_instruction_language_id: Türkçe
@@ -153,7 +153,7 @@
   yoksis_id: 122326
   parent_yoksis_id: 122316
   unit_type_id: Bölüm
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: İlkadım
   foet_code: '212'
   unit_instruction_language_id: Türkçe
@@ -165,7 +165,7 @@
   yoksis_id: 122329
   parent_yoksis_id: 122326
   unit_type_id: Anasanat Dalı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: İlkadım
   foet_code: '212'
   unit_instruction_language_id: Türkçe
@@ -179,7 +179,7 @@
   yoksis_id: 122328
   parent_yoksis_id: 122326
   unit_type_id: Anasanat Dalı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: İlkadım
   foet_code: '212'
   unit_instruction_language_id: Türkçe
@@ -193,7 +193,7 @@
   yoksis_id: 122327
   parent_yoksis_id: 122326
   unit_type_id: Anasanat Dalı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: İlkadım
   foet_code: '212'
   unit_instruction_language_id: Türkçe
@@ -232,7 +232,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Çarşamba
-  osym: '108251017'
+  osym: 108251017
   foet_code: '380'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -268,7 +268,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Alaçam
-  osym: '108251344'
+  osym: 108251344
   foet_code: '346'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -280,9 +280,9 @@
   yoksis_id: 278570
   parent_yoksis_id: 242252
   unit_type_id: Önlisans/lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Alaçam
-  osym: '108251335'
+  osym: 108251335
   foet_code: '346'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
@@ -323,7 +323,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Alaçam
-  osym: '108251168'
+  osym: 108251168
   foet_code: '345'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -337,7 +337,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Alaçam
-  osym: '108271066'
+  osym: 108271066
   foet_code: '345'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -351,7 +351,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Alaçam
-  osym: '108251008'
+  osym: 108251008
   foet_code: '840'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -365,7 +365,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Alaçam
-  osym: '108251423'
+  osym: 108251423
   foet_code: '840'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -379,7 +379,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Alaçam
-  osym: '108251195'
+  osym: 108251195
   foet_code: '840'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
@@ -395,7 +395,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Alaçam
-  osym: '108270932'
+  osym: 108270932
   foet_code: '840'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -423,7 +423,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Alaçam
-  osym: '108250991'
+  osym: 108250991
   foet_code: '345'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -437,7 +437,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Alaçam
-  osym: '108270923'
+  osym: 108270923
   foet_code: '345'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -464,7 +464,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Çarşamba
-  osym: '108210841'
+  osym: 108210841
   foet_code: '380'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -763,7 +763,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Bafra
-  osym: '108250452'
+  osym: 108250452
   foet_code: '481'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -777,7 +777,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Bafra
-  osym: '108270456'
+  osym: 108270456
   foet_code: '481'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -801,7 +801,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Bafra
-  osym: '108251317'
+  osym: 108251317
   foet_code: '621'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -815,7 +815,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Bafra
-  osym: '108250894'
+  osym: 108250894
   foet_code: '621'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -828,7 +828,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Bafra
-  osym: '108250901'
+  osym: 108250901
   foet_code: '621'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -841,7 +841,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Bafra
-  osym: '108270835'
+  osym: 108270835
   foet_code: '621'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -894,7 +894,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Bafra
-  osym: '108270695'
+  osym: 108270695
   foet_code: '344'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -1010,7 +1010,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Bafra
-  osym: '108290161'
+  osym: 108290161
   foet_code: '812'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -1022,7 +1022,7 @@
   yoksis_id: 293681
   parent_yoksis_id: 121946
   unit_type_id: Fakülte
-  unit_status_id: Pasif
+  unit_status_id: Aktif
   district_id: Bafra
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -1033,7 +1033,7 @@
   yoksis_id: 334064
   parent_yoksis_id: 293681
   unit_type_id: Bölüm
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: Bafra
   district_id_: Bafra
   foet_code: '343'
@@ -1050,7 +1050,7 @@
   yoksis_id: 334065
   parent_yoksis_id: 334064
   unit_type_id: Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: Atakum
   district_id_: Atakum
   foet_code: '343'
@@ -1169,7 +1169,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: İlkadım
-  osym: '108290124'
+  osym: 108290124
   foet_code: '212'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -1194,7 +1194,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210011'
+  osym: 108210011
   foet_code: '724'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -1385,7 +1385,7 @@
     - üst birim olan Eğitim Bilimleri (Dr) arşiv olarak görünüyor
     - Detsis tarafında anabilim dalı başkanlığı enstitüye bağlı
 
-- name: Eğitimin Felsefi, Sosyal ve Tarihi Temelleri (YL)
+- name: Eğitimin Felsefi, Sosyal ve Tarihi Temelleri (YL) (Tezli)
   abbreviation: EFST-YL
   yoksis_id: 327688
   parent_yoksis_id: 174846
@@ -1624,7 +1624,7 @@
   yoksis_id: 280865
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '142'
   unit_instruction_language_id: Türkçe
@@ -1904,9 +1904,9 @@
   yoksis_id: 168652
   parent_yoksis_id: 122154
   unit_type_id: Önlisans/lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108210038'
+  osym: 108210038
   foet_code: '146'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -1990,7 +1990,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210153'
+  osym: 108210153
   foet_code: '142'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -2015,7 +2015,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108290018'
+  osym: 108290018
   foet_code: '146'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -2029,7 +2029,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108290142'
+  osym: 108290142
   foet_code: '146'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -2057,7 +2057,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108290027'
+  osym: 108290027
   foet_code: '146'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -2097,7 +2097,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210047'
+  osym: 108210047
   foet_code: '145'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -2121,7 +2121,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210065'
+  osym: 108210065
   foet_code: '145'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -2170,7 +2170,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210135'
+  osym: 108210135
   foet_code: '145'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -2183,7 +2183,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210092'
+  osym: 108210092
   foet_code: '145'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -2222,7 +2222,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210144'
+  osym: 108210144
   foet_code: '143'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -2246,7 +2246,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210162'
+  osym: 108210162
   foet_code: '144'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -2311,7 +2311,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210171'
+  osym: 108210171
   foet_code: '145'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -2360,7 +2360,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210189'
+  osym: 108210189
   foet_code: '145'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -2395,7 +2395,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210029'
+  osym: 108210029
   foet_code: '145'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -2434,7 +2434,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210083'
+  osym: 108210083
   foet_code: '145'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -2473,7 +2473,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210108'
+  osym: 108210108
   foet_code: '145'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -2508,7 +2508,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108211106'
+  osym: 108211106
   foet_code: '144'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -2767,7 +2767,7 @@
   yoksis_id: 279463
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '541'
   unit_instruction_language_id: Türkçe
@@ -2793,7 +2793,7 @@
   yoksis_id: 226065
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '541'
   unit_instruction_language_id: Türkçe
@@ -2946,7 +2946,7 @@
   yoksis_id: 242518
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '461'
   unit_instruction_language_id: Türkçe
@@ -2993,10 +2993,10 @@
   duration: 2
   founded_at: 23.05.2018
 
-- name: Nanobilim ve Nanoteknoloji (DR) (İngilizce)
+- name: Nanobilim ve Nanoteknoloji (Disiplinlerarası) (DR) (İngilizce)
   abbreviation: NANO-DR-İNG
   yoksis_id: 255370
-  parent_yoksis_id: 122386
+  parent_yoksis_id: 406607
   unit_type_id: Disiplinlerarası Doktora Programı
   unit_status_id: Aktif
   district_id: Atakum
@@ -3009,7 +3009,7 @@
 - name: Nanobilim ve Nanoteknoloji (YL) (Tezli) (İngilizce)
   abbreviation: NANO-YL-İNG
   yoksis_id: 255369
-  parent_yoksis_id: 122386
+  parent_yoksis_id: 406607
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
@@ -3267,7 +3267,7 @@
   yoksis_id: 226064
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '621'
   unit_instruction_language_id: Türkçe
@@ -3367,7 +3367,7 @@
   yoksis_id: 213389
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '462'
   unit_instruction_language_id: Türkçe
@@ -3416,7 +3416,7 @@
   yoksis_id: 140230
   parent_yoksis_id: 140229
   unit_type_id: Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: Atakum
   foet_code: '225'
   unit_instruction_language_id: Türkçe
@@ -3432,7 +3432,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210895'
+  osym: 108210895
   foet_code: '225'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -3503,7 +3503,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210205'
+  osym: 108210205
   foet_code: '421'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -3594,7 +3594,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210214'
+  osym: 108210214
   foet_code: '443'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -3651,7 +3651,7 @@
   yoksis_id: 143417
   parent_yoksis_id: 128020
   unit_type_id: Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: Atakum
   foet_code: '226'
   unit_instruction_language_id: Türkçe
@@ -3667,7 +3667,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210692'
+  osym: 108210692
   foet_code: '226'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -3840,7 +3840,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210241'
+  osym: 108210241
   foet_code: '442'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -3925,7 +3925,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210259'
+  osym: 108210259
   foet_code: '461'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -3998,7 +3998,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108211187'
+  osym: 108211187
   foet_code: '421'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -4048,7 +4048,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210268'
+  osym: 108210268
   foet_code: '311'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -4131,7 +4131,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210902'
+  osym: 108210902
   foet_code: '211'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -4214,7 +4214,7 @@
   yoksis_id: 122079
   parent_yoksis_id: 122077
   unit_type_id: Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: Atakum
   foet_code: '312'
   unit_instruction_language_id: Türkçe
@@ -4230,7 +4230,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210859'
+  osym: 108210859
   foet_code: '312'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -4302,7 +4302,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210277'
+  osym: 108210277
   foet_code: '225'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -4381,7 +4381,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210286'
+  osym: 108210286
   foet_code: '223'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -4510,7 +4510,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210232'
+  osym: 108210232
   foet_code: '462'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -4601,7 +4601,7 @@
   duration: 2
   founded_at: 28.10.2015
 
-- name: Sanat ve Tasarım (Sy) (Tezli)
+- name: Sanat ve Tasarım (Sy)
   abbreviation: ST-SY
   yoksis_id: 325573
   parent_yoksis_id: 208606
@@ -4681,7 +4681,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: İlkadım
-  osym: '108290160'
+  osym: 108290160
   foet_code: '214'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -4709,7 +4709,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: İlkadım
-  osym: '108290159'
+  osym: 108290159
   foet_code: '213'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -4761,7 +4761,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: İlkadım
-  osym: '108210947'
+  osym: 108210947
   foet_code: '213'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -4827,7 +4827,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: İlkadım
-  osym: '108290115'
+  osym: 108290115
   foet_code: '211'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -4865,7 +4865,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: İlkadım
-  osym: '108290133'
+  osym: 108290133
   foet_code: '215'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -4915,7 +4915,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Havza
-  osym: '108250937'
+  osym: 108250937
   foet_code: '346'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -4926,9 +4926,9 @@
   yoksis_id: 294856
   parent_yoksis_id: 169579
   unit_type_id: Önlisans/lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Havza
-  osym: '108251398'
+  osym: 108251398
   foet_code: '346'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
@@ -4940,9 +4940,9 @@
   yoksis_id: 175631
   parent_yoksis_id: 169579
   unit_type_id: Önlisans/lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Havza
-  osym: '108270853'
+  osym: 108270853
   foet_code: '346'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -4967,7 +4967,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Havza
-  osym: '108251432'
+  osym: 108251432
   foet_code: '862'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -4981,7 +4981,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Havza
-  osym: '108251459'
+  osym: 108251459
   foet_code: '862'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
@@ -5007,7 +5007,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Havza
-  osym: '108250497'
+  osym: 108250497
   foet_code: '811'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -5021,13 +5021,13 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Havza
-  osym: '108270641'
+  osym: 108270641
   foet_code: '811'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
 
-- name: Terapi ve Rahabilitasyon Bölümü
+- name: Terapi ve Rehabilitasyon Bölümü
   abbreviation: HAVZA-MYO-TERAPİ
   yoksis_id: 169584
   parent_yoksis_id: 122379
@@ -5037,6 +5037,7 @@
   foet_code: '726'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  duration: 2
   founded_at: 10.09.2009
 
 - name: Fizyoterapi Programı
@@ -5046,7 +5047,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Havza
-  osym: '108250928'
+  osym: 108250928
   foet_code: '726'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -5060,7 +5061,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Havza
-  osym: '108270844'
+  osym: 108270844
   foet_code: '726'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -5085,7 +5086,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Havza
-  osym: '108251132'
+  osym: 108251132
   foet_code: '345'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -5109,7 +5110,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Havza
-  osym: '108250788'
+  osym: 108250788
   foet_code: '345'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -5121,9 +5122,9 @@
   yoksis_id: 294855
   parent_yoksis_id: 169598
   unit_type_id: Önlisans/lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Havza
-  osym: '108251389'
+  osym: 108251389
   foet_code: '345'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
@@ -5137,7 +5138,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Havza
-  osym: '108270959'
+  osym: 108270959
   foet_code: '345'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -5238,7 +5239,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210665'
+  osym: 108210665
   foet_code: '523'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -5360,7 +5361,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210329'
+  osym: 108210329
   foet_code: '523'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -5420,7 +5421,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210823'
+  osym: 108210823
   foet_code: '520'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -5470,7 +5471,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210338'
+  osym: 108210338
   foet_code: '541'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -5517,7 +5518,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210789'
+  osym: 108210789
   foet_code: '581'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -5530,7 +5531,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108211036'
+  osym: 108211036
   foet_code: '581'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -5677,7 +5678,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210877'
+  osym: 108210877
   foet_code: '524'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -5800,7 +5801,7 @@
   yoksis_id: 122221
   parent_yoksis_id: 122215
   unit_type_id: Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: Atakum
   foet_code: '521'
   unit_instruction_language_id: Türkçe
@@ -5816,7 +5817,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210674'
+  osym: 108210674
   foet_code: '521'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -5889,7 +5890,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210683'
+  osym: 108210683
   foet_code: '521'
   unit_instruction_language_id: İngilizce (%30)
   unit_instruction_type_id: Normal Öğretim
@@ -5927,7 +5928,7 @@
   yoksis_id: 122191
   parent_yoksis_id: 122188
   unit_type_id: Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: Atakum
   foet_code: '851'
   unit_instruction_language_id: Türkçe
@@ -5940,7 +5941,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210311'
+  osym: 108210311
   foet_code: '851'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -6035,7 +6036,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210347'
+  osym: 108210347
   foet_code: '582'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -6083,7 +6084,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: İlkadım
-  osym: '108210965'
+  osym: 108210965
   foet_code: '581'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -6313,7 +6314,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: İlkadım
-  osym: '108250346'
+  osym: 108250346
   foet_code: '481'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -6326,7 +6327,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: İlkadım
-  osym: '108251247'
+  osym: 108251247
   foet_code: '481'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
@@ -6340,7 +6341,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: İlkadım
-  osym: '108270402'
+  osym: 108270402
   foet_code: '481'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -6364,7 +6365,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: İlkadım
-  osym: '108250276'
+  osym: 108250276
   foet_code: '622'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -6389,7 +6390,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: İlkadım
-  osym: '108250258'
+  osym: 108250258
   foet_code: '214'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -6401,9 +6402,9 @@
   yoksis_id: 169850
   parent_yoksis_id: 169847
   unit_type_id: Önlisans/lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: İlkadım
-  osym: '108270298'
+  osym: 108270298
   foet_code: '214'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -6454,7 +6455,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: İlkadım
-  osym: '108250725'
+  osym: 108250725
   foet_code: '213'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -6493,7 +6494,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: İlkadım
-  osym: '108250867'
+  osym: 108250867
   foet_code: '525'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -6531,7 +6532,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: İlkadım
-  osym: '108250734'
+  osym: 108250734
   foet_code: '344'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -6543,9 +6544,9 @@
   yoksis_id: 169804
   parent_yoksis_id: 169802
   unit_type_id: Önlisans/lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: İlkadım
-  osym: '108270686'
+  osym: 108270686
   foet_code: '344'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -6571,7 +6572,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: İlkadım
-  osym: '108250301'
+  osym: 108250301
   foet_code: '811'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -6587,7 +6588,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: İlkadım
-  osym: '108270323'
+  osym: 108270323
   foet_code: '811'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -6613,7 +6614,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: İlkadım
-  osym: '108250964'
+  osym: 108250964
   foet_code: '622'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -6639,7 +6640,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: İlkadım
-  osym: '108251256'
+  osym: 108251256
   foet_code: '342'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -6653,7 +6654,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: İlkadım
-  osym: '108251229'
+  osym: 108251229
   foet_code: '321'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
@@ -6679,7 +6680,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: İlkadım
-  osym: '108251123'
+  osym: 108251123
   foet_code: '213'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -6734,7 +6735,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: İlkadım
-  osym: '108251053'
+  osym: 108251053
   foet_code: '143'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -6748,7 +6749,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: İlkadım
-  osym: '108251238'
+  osym: 108251238
   foet_code: '143'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
@@ -6946,7 +6947,7 @@
   duration: 4
   founded_at: 30.11.2011
 
-- name: Veterinerlik Biyokimyası (YL) (Tezli)
+- name: Biyokimya (YL) (Tezli) (Veteriner)
   abbreviation: VETERİNER-BİYOKİMYA-YL
   yoksis_id: 213249
   parent_yoksis_id: 122387
@@ -7143,7 +7144,7 @@
   yoksis_id: 220719
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '723'
   unit_instruction_language_id: Türkçe
@@ -7306,7 +7307,7 @@
   yoksis_id: 284464
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '723'
   unit_instruction_language_id: Türkçe
@@ -7706,11 +7707,11 @@
   duration: 4
   founded_at: 28.02.2018
 
-- name: Sinir Bilimleri Anabilim Dalı
+- name: Sinir Bilimleri Anabilim Dalı (Disiplinlerarası)
   abbreviation: SAĞLIK-BİLİM-SİNİR-AD
   yoksis_id: 203748
   parent_yoksis_id: 122387
-  unit_type_id: Anabilim Dalı
+  unit_type_id: Disiplinlerarası Anabilim Dalı
   unit_status_id: Aktif
   district_id: Atakum
   foet_code: '721'
@@ -7950,7 +7951,7 @@
   duration: 4
   founded_at: 07.05.2018
 
-- name: Zootekni (Veteriner) (YL) (Tezli)
+- name: Zootekni (YL) (Tezli) (Veteriner)
   abbreviation: VETERİNER-ZOO-YL
   yoksis_id: 278856
   parent_yoksis_id: 122387
@@ -8031,7 +8032,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108211115'
+  osym: 108211115
   foet_code: '726'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -8129,7 +8130,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108211124'
+  osym: 108211124
   foet_code: '723'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -8205,7 +8206,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108211133'
+  osym: 108211133
   foet_code: '723'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -8291,7 +8292,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108211142'
+  osym: 108211142
   foet_code: '345'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -8329,7 +8330,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108211151'
+  osym: 108211151
   foet_code: '762'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -8365,7 +8366,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108251141'
+  osym: 108251141
   foet_code: '724'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -8389,7 +8390,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108251044'
+  osym: 108251044
   foet_code: '723'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -8405,7 +8406,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108270898'
+  osym: 108270898
   foet_code: '723'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -8433,7 +8434,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108250364'
+  osym: 108250364
   foet_code: '721'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -8447,7 +8448,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108251026'
+  osym: 108251026
   foet_code: '721'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -8460,7 +8461,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108251353'
+  osym: 108251353
   foet_code: '725'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -8474,7 +8475,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108251211'
+  osym: 108251211
   foet_code: '725'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -8488,7 +8489,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108251035'
+  osym: 108251035
   foet_code: '725'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -8501,7 +8502,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108270889'
+  osym: 108270889
   foet_code: '725'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -8514,7 +8515,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108250407'
+  osym: 108250407
   foet_code: '346'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -8527,7 +8528,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108270668'
+  osym: 108270668
   foet_code: '346'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -8541,7 +8542,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108250858'
+  osym: 108250858
   foet_code: '725'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -8555,7 +8556,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108270977'
+  osym: 108270977
   foet_code: '725'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -8571,7 +8572,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108250831'
+  osym: 108250831
   foet_code: '725'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -8587,7 +8588,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108250946'
+  osym: 108250946
   foet_code: '725'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -8600,7 +8601,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108270871'
+  osym: 108270871
   foet_code: '725'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -8800,12 +8801,12 @@
   duration: 2
   founded_at: 23.06.2011
 
-- name: Kamu Hukuku (DR) (Karadeniz Teknik Üniversitesi Ortak)
+- name: Kamu Hukuku (DR) (Karadeniz Teknikn Üniversitesi Ortak)
   abbreviation: KAMU-DR-KTÜ
   yoksis_id: 225763
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '380'
   unit_instruction_language_id: Türkçe
@@ -9114,7 +9115,7 @@
   yoksis_id: 255439
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '380'
   unit_instruction_language_id: Türkçe
@@ -9261,7 +9262,7 @@
   unit_instruction_type_id: Normal Öğretim
   founded_at: 21.07.2011
 
-- name: İşletme ve Endüstri İlişkileri (YL) (Tezli)
+- name: İşletme ve Endüstri İlişkileri (YL) (Tezsiz) (İÖ)
   abbreviation: İŞLENİ-YL
   yoksis_id: 219261
   parent_yoksis_id: 122388
@@ -9270,7 +9271,7 @@
   district_id: Atakum
   foet_code: '347'
   unit_instruction_language_id: Türkçe
-  unit_instruction_type_id: Normal Öğretim
+  unit_instruction_type_id: İkinci Öğretim
   duration: 2
   founded_at: 07.05.2018
 
@@ -9336,7 +9337,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Terme
-  osym: '108251441'
+  osym: 108251441
   foet_code: '341'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -9362,7 +9363,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Terme
-  osym: '108251326'
+  osym: 108251326
   foet_code: '541'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -9376,7 +9377,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Terme
-  osym: '108251414'
+  osym: 108251414
   foet_code: '541'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -9390,7 +9391,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Terme
-  osym: '108271075'
+  osym: 108271075
   foet_code: '541'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -9404,7 +9405,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Terme
-  osym: '108250522'
+  osym: 108250522
   foet_code: '541'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -9430,7 +9431,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Terme
-  osym: '108250752'
+  osym: 108250752
   foet_code: '344'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -9455,7 +9456,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Terme
-  osym: '108250691'
+  osym: 108250691
   foet_code: '342'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -10721,7 +10722,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210365'
+  osym: 108210365
   foet_code: '721'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -10734,7 +10735,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210868'
+  osym: 108210868
   foet_code: '721'
   unit_instruction_language_id: İngilizce
   unit_instruction_type_id: Normal Öğretim
@@ -10840,7 +10841,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Bafra
-  osym: '108211196'
+  osym: 108211196
   foet_code: '812'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -10880,7 +10881,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Bafra
-  osym: '108210956'
+  osym: 108210956
   foet_code: '812'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -11214,7 +11215,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210374'
+  osym: 108210374
   foet_code: '640'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -11323,7 +11324,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Vezirköprü
-  osym: '108250849'
+  osym: 108250849
   foet_code: '481'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -11335,9 +11336,9 @@
   yoksis_id: 170003
   parent_yoksis_id: 169999
   unit_type_id: Önlisans/lisans Programı
-  unit_status_id: Yarı Pasif
+  unit_status_id: Aktif
   district_id: Vezirköprü
-  osym: '108270792'
+  osym: 108270792
   foet_code: '481'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -11362,7 +11363,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Vezirköprü
-  osym: '108250919'
+  osym: 108250919
   foet_code: '543'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -11387,7 +11388,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Vezirköprü
-  osym: '108250761'
+  osym: 108250761
   foet_code: '344'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -11411,7 +11412,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Vezirköprü
-  osym: '108251202'
+  osym: 108251202
   foet_code: '623'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -11425,7 +11426,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Vezirköprü
-  osym: '108271003'
+  osym: 108271003
   foet_code: '623'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -11464,7 +11465,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Vezirköprü
-  osym: '108250707'
+  osym: 108250707
   foet_code: '143'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -11477,7 +11478,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Vezirköprü
-  osym: '108270659'
+  osym: 108270659
   foet_code: '143'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -11490,7 +11491,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Vezirköprü
-  osym: '108251371'
+  osym: 108251371
   foet_code: '481'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
@@ -11637,7 +11638,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108290045'
+  osym: 108290045
   foet_code: '146'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -11648,7 +11649,7 @@
   yoksis_id: 319847
   parent_yoksis_id: 122377
   unit_type_id: Önlisans/lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '146'
   unit_instruction_language_id: Türkçe
@@ -11663,7 +11664,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108290063'
+  osym: 108290063
   foet_code: '146'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -11675,7 +11676,7 @@
   yoksis_id: 122374
   parent_yoksis_id: 242486
   unit_type_id: Bölüm
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: Atakum
   foet_code: '146'
   unit_instruction_language_id: Türkçe
@@ -11687,7 +11688,7 @@
   yoksis_id: 122375
   parent_yoksis_id: 122374
   unit_type_id: Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: Atakum
   foet_code: '146'
   unit_instruction_language_id: Türkçe
@@ -11705,13 +11706,13 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108290054'
+  osym: 108290054
   foet_code: '146'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Beden Eğitimi ve Spor Eğitimi Bölümü
+- name: Beden Eğitimi ve Spor Bölümü
   abbreviation: BESEĞ
   yoksis_id: 176337
   parent_yoksis_id: 242486
@@ -11721,11 +11722,12 @@
   foet_code: '146'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  duration: 4
   founded_at: 02.10.2013
   issues:
     - Detsis tarafında bölüm başkanlığı yok
 
-- name: Beden Eğitimi ve Spor Eğitimi Anabilim Dalı
+- name: Beden Eğitimi ve Spor Anabilim Dalı
   abbreviation: BESEĞ-AD
   yoksis_id: 327807
   parent_yoksis_id: 176337
@@ -11735,6 +11737,7 @@
   foet_code: '146'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  duration: 4
   founded_at: 14.08.2017
   issues:
     - Mükerrer isimli birim; BES-AD
@@ -11772,7 +11775,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108290162'
+  osym: 108290162
   foet_code: '812'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -11812,7 +11815,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108290081'
+  osym: 108290081
   foet_code: '345'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -11823,7 +11826,7 @@
   yoksis_id: 320347
   parent_yoksis_id: 122376
   unit_type_id: Önlisans/lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '345'
   unit_instruction_language_id: Türkçe
@@ -11838,7 +11841,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108290099'
+  osym: 108290099
   foet_code: '345'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -11885,7 +11888,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Tekkeköy
-  osym: '108251362'
+  osym: 108251362
   foet_code: '725'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -11899,7 +11902,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Tekkeköy
-  osym: '108250797'
+  osym: 108250797
   foet_code: '523'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -11912,7 +11915,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Tekkeköy
-  osym: '108270756'
+  osym: 108270756
   foet_code: '523'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -11937,7 +11940,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Tekkeköy
-  osym: '108250973'
+  osym: 108250973
   foet_code: '522'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -11950,7 +11953,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Tekkeköy
-  osym: '108270262'
+  osym: 108270262
   foet_code: '522'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -11975,7 +11978,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Tekkeköy
-  osym: '108251308'
+  osym: 108251308
   foet_code: '541'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -11989,7 +11992,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Tekkeköy
-  osym: '108271048'
+  osym: 108271048
   foet_code: '541'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -12014,7 +12017,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Tekkeköy
-  osym: '108250955'
+  osym: 108250955
   foet_code: '524'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -12028,7 +12031,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Tekkeköy
-  osym: '108270986'
+  osym: 108270986
   foet_code: '524'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -12056,7 +12059,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Tekkeköy
-  osym: '108251159'
+  osym: 108251159
   foet_code: '521'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -12070,7 +12073,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Tekkeköy
-  osym: '108271012'
+  osym: 108271012
   foet_code: '521'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -12095,7 +12098,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Tekkeköy
-  osym: '108251177'
+  osym: 108251177
   foet_code: '525'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -12108,7 +12111,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Tekkeköy
-  osym: '108270738'
+  osym: 108270738
   foet_code: '525'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -12145,7 +12148,7 @@
   yoksis_id: 122260
   parent_yoksis_id: 122259
   unit_type_id: Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: Atakum
   foet_code: '622'
   unit_instruction_language_id: Türkçe
@@ -12160,7 +12163,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210708'
+  osym: 108210708
   foet_code: '622'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -12242,7 +12245,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210717'
+  osym: 108210717
   foet_code: '621'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -12336,7 +12339,7 @@
   yoksis_id: 122276
   parent_yoksis_id: 122275
   unit_type_id: Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: Atakum
   foet_code: '541'
   unit_instruction_language_id: Türkçe
@@ -12406,7 +12409,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210726'
+  osym: 108210726
   foet_code: '621'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -12473,7 +12476,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108211072'
+  osym: 108211072
   foet_code: '525'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -12567,7 +12570,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210814'
+  osym: 108210814
   foet_code: '421'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -12645,7 +12648,7 @@
   yoksis_id: 122268
   parent_yoksis_id: 122267
   unit_type_id: Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: Atakum
   foet_code: '621'
   unit_instruction_language_id: Türkçe
@@ -12660,7 +12663,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210753'
+  osym: 108210753
   foet_code: '621'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -12724,7 +12727,7 @@
   yoksis_id: 208208
   parent_yoksis_id: 145775
   unit_type_id: Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: Atakum
   foet_code: '621'
   unit_instruction_language_id: Türkçe
@@ -12739,7 +12742,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210762'
+  osym: 108210762
   foet_code: '621'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -12803,7 +12806,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210771'
+  osym: 108210771
   foet_code: '621'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -12868,7 +12871,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Çarşamba
-  osym: '108251186'
+  osym: 108251186
   foet_code: '346'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -12884,7 +12887,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Çarşamba
-  osym: '108271084'
+  osym: 108271084
   foet_code: '346'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -12909,7 +12912,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Çarşamba
-  osym: '108251283'
+  osym: 108251283
   foet_code: '481'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -12923,7 +12926,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Çarşamba
-  osym: '108251405'
+  osym: 108251405
   foet_code: '481'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -12937,7 +12940,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Çarşamba
-  osym: '108271039'
+  osym: 108271039
   foet_code: '481'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -12951,7 +12954,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Çarşamba
-  osym: '108250716'
+  osym: 108250716
   foet_code: '481'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -12964,7 +12967,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Çarşamba
-  osym: '108270765'
+  osym: 108270765
   foet_code: '481'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -12988,7 +12991,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Çarşamba
-  osym: '108250982'
+  osym: 108250982
   foet_code: '343'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -13001,7 +13004,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Çarşamba
-  osym: '108270995'
+  osym: 108270995
   foet_code: '343'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -13040,7 +13043,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Çarşamba
-  osym: '108250743'
+  osym: 108250743
   foet_code: '344'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -13053,7 +13056,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Çarşamba
-  osym: '108270702'
+  osym: 108270702
   foet_code: '344'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -13078,7 +13081,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Çarşamba
-  osym: '108251265'
+  osym: 108251265
   foet_code: '340'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -13092,7 +13095,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Çarşamba
-  osym: '108271021'
+  osym: 108271021
   foet_code: '340'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -13104,10 +13107,11 @@
   yoksis_id: 293682
   parent_yoksis_id: 121946
   unit_type_id: Fakülte
-  unit_status_id: Pasif
+  unit_status_id: Aktif
   district_id: Çarşamba
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  duration: 4
   founded_at: '08.04.2016'
 
 - name: Bilgi ve Belge Yönetimi Bölümü
@@ -13228,7 +13232,7 @@
   yoksis_id: 128038
   parent_yoksis_id: 128036
   unit_type_id: Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: Atakum
   foet_code: '313'
   unit_instruction_language_id: Türkçe
@@ -13243,7 +13247,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210805'
+  osym: 108210805
   foet_code: '313'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -13319,7 +13323,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210974'
+  osym: 108210974
   foet_code: '340'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -13381,7 +13385,7 @@
   yoksis_id: 128029
   parent_yoksis_id: 122182
   unit_type_id: Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: Atakum
   foet_code: '314'
   unit_instruction_language_id: Türkçe
@@ -13408,7 +13412,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210295'
+  osym: 108210295
   foet_code: '314'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -13422,7 +13426,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108211063'
+  osym: 108211063
   foet_code: '314'
   unit_instruction_language_id: İngilizce
   unit_instruction_type_id: Normal Öğretim
@@ -13517,7 +13521,7 @@
   yoksis_id: 128032
   parent_yoksis_id: 128030
   unit_type_id: Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: Atakum
   foet_code: '345'
   unit_instruction_language_id: Türkçe
@@ -13532,7 +13536,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210798'
+  osym: 108210798
   foet_code: '345'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -13863,7 +13867,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
-- name: Kur'an-ı Kerim Okuma ve Kıraat İlmi Anabilim Dalı
+- name: Kur'an-ı Kerim Okuma ve Kırâat İlmi Anabilim Dalı
   abbreviation: TİB-KURAN-AD
   yoksis_id: 166016
   parent_yoksis_id: 122158
@@ -13921,7 +13925,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
-- name: Kıraat Bilim Dalı
+- name: Kırâat Bilim Dalı
   abbreviation: TİB-TEFSİR-KIRAAT-BD
   yoksis_id: 168723
   parent_yoksis_id: 122161
@@ -14052,7 +14056,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210302'
+  osym: 108210302
   foet_code: '221'
   unit_instruction_language_id: Arapça (%30)
   unit_instruction_type_id: Normal Öğretim
@@ -14066,7 +14070,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108230342'
+  osym: 108230342
   foet_code: '221'
   unit_instruction_language_id: Arapça (%30)
   unit_instruction_type_id: İkinci Öğretim
@@ -14277,7 +14281,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Çarşamba
-  osym: '108210929'
+  osym: 108210929
   foet_code: '321'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -14343,7 +14347,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Çarşamba
-  osym: '108210938'
+  osym: 108210938
   foet_code: '342'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -14357,7 +14361,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Çarşamba
-  osym: '108230396'
+  osym: 108230396
   foet_code: '342'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -14397,7 +14401,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Çarşamba
-  osym: '108211081'
+  osym: 108211081
   foet_code: '213'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -14847,7 +14851,7 @@
   district_id: Merkez
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  duration: 4
+  duration: 2
 
 - name: Amasya Meslek Yüksekokulu
   yoksis_id: 269758
@@ -15249,7 +15253,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Bafra
-  osym: '108270826'
+  osym: 108270826
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
@@ -15382,7 +15386,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Bafra
-  osym: '108250894'
+  osym: 108250894
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -15413,7 +15417,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Bafra
-  osym: '108250901'
+  osym: 108250901
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -15567,38 +15571,38 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Kompozisyon ve Orkestra Şefi Anabilim Dalı
+- name: Kompozisyon ve Orkestra Şefi Anasanat Dalı
   yoksis_id: 122308
   parent_yoksis_id: 122304
-  unit_type_id: Anabilim Dalı
-  unit_status_id: Kapatılmış
+  unit_type_id: Anasanat Dalı
+  unit_status_id: Aktif
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
-- name: Piyano Anabilim Dalı
+- name: Piyano Anasanat Dalı
   yoksis_id: 122307
   parent_yoksis_id: 122304
-  unit_type_id: Anabilim Dalı
-  unit_status_id: Kapatılmış
+  unit_type_id: Anasanat Dalı
+  unit_status_id: Aktif
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
-- name: Yaylı Çalgılar Anabilim Dalı
+- name: Yaylı Çalgılar Anasanat Dalı
   yoksis_id: 122306
   parent_yoksis_id: 122304
-  unit_type_id: Anabilim Dalı
-  unit_status_id: Kapatılmış
+  unit_type_id: Anasanat Dalı
+  unit_status_id: Aktif
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
-- name: Üflemeli ve Vurmalı Çalgılar Anabilim Dalı
+- name: Üflemeli ve Vurmalı Çalgılar Anasanat Dalı
   yoksis_id: 122305
   parent_yoksis_id: 122304
-  unit_type_id: Anabilim Dalı
-  unit_status_id: Kapatılmış
+  unit_type_id: Anasanat Dalı
+  unit_status_id: Aktif
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -15607,7 +15611,7 @@
   yoksis_id: 122309
   parent_yoksis_id: 122303
   unit_type_id: Bölüm
-  unit_status_id: Kapatılmış
+  unit_status_id: Aktif
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -15616,7 +15620,7 @@
   yoksis_id: 122311
   parent_yoksis_id: 122309
   unit_type_id: Anabilim Dalı
-  unit_status_id: Kapatılmış
+  unit_status_id: Aktif
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -15625,7 +15629,7 @@
   yoksis_id: 122312
   parent_yoksis_id: 122309
   unit_type_id: Anabilim Dalı
-  unit_status_id: Kapatılmış
+  unit_status_id: Aktif
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -15634,7 +15638,7 @@
   yoksis_id: 122310
   parent_yoksis_id: 122309
   unit_type_id: Anabilim Dalı
-  unit_status_id: Kapatılmış
+  unit_status_id: Aktif
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -15643,34 +15647,34 @@
   yoksis_id: 122313
   parent_yoksis_id: 122303
   unit_type_id: Bölüm
-  unit_status_id: Kapatılmış
+  unit_status_id: Aktif
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
-- name: Bale Anabilim Dalı
+- name: Bale Anasanat Dalı
   yoksis_id: 122315
   parent_yoksis_id: 122313
-  unit_type_id: Anabilim Dalı
-  unit_status_id: Kapatılmış
+  unit_type_id: Anasanat Dalı
+  unit_status_id: Aktif
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
-- name: Opera Anabilim Dalı
+- name: Opera Anasanat Dalı
   yoksis_id: 143426
   parent_yoksis_id: 122313
-  unit_type_id: Anabilim Dalı
-  unit_status_id: Kapatılmış
+  unit_type_id: Anasanat Dalı
+  unit_status_id: Aktif
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
-- name: Tiyatro Anabilim Dalı
+- name: Tiyatro Anasanat Dalı
   yoksis_id: 122314
   parent_yoksis_id: 122313
-  unit_type_id: Anabilim Dalı
-  unit_status_id: Kapatılmış
+  unit_type_id: Anasanat Dalı
+  unit_status_id: Aktif
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -15681,7 +15685,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Atakum
-  osym: '108211009'
+  osym: 108211009
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 5
@@ -15977,7 +15981,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108230096'
+  osym: 108230096
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
@@ -16028,9 +16032,9 @@
   yoksis_id: 168660
   parent_yoksis_id: 298694
   unit_type_id: Önlisans/lisans Programı
-  unit_status_id: Yarı Pasif
+  unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210074'
+  osym: 108210074
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
@@ -16052,7 +16056,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108210126'
+  osym: 108210126
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
@@ -16193,7 +16197,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108230087'
+  osym: 108230087
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
@@ -16438,7 +16442,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108210198'
+  osym: 108210198
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
@@ -16449,7 +16453,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Atakum
-  osym: '108211018'
+  osym: 108211018
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
@@ -16461,7 +16465,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108230139'
+  osym: 108230139
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
@@ -16473,7 +16477,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108210117'
+  osym: 108210117
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
@@ -16485,7 +16489,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108230078'
+  osym: 108230078
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
@@ -16817,7 +16821,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108230306'
+  osym: 108230306
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
@@ -16829,7 +16833,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108230369'
+  osym: 108230369
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
@@ -16841,7 +16845,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Aktif
   district_id: Atakum
-  osym: '108210223'
+  osym: 108210223
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
@@ -16876,7 +16880,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108230175'
+  osym: 108230175
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
@@ -16888,7 +16892,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108230184'
+  osym: 108230184
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
@@ -17044,7 +17048,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108230324'
+  osym: 108230324
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
@@ -17092,7 +17096,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108230299'
+  osym: 108230299
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
@@ -17123,7 +17127,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108230166'
+  osym: 108230166
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
@@ -17289,7 +17293,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: 19 Mayıs
-  osym: '108211054'
+  osym: 108211054
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
@@ -17300,12 +17304,12 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: 19 Mayıs
-  osym: '108211169'
+  osym: 108211169
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Meteoroloji Mühendisliği Programı (Yurtdışı Kontenjanı)
+- name: Meteoroloji Mühendisliği Programı (Yurt Dışı Kontenjanı)
   yoksis_id: 276275
   parent_yoksis_id: 204865
   unit_type_id: Önlisans/lisans Programı
@@ -17373,7 +17377,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: 19 Mayıs
-  osym: '108210992'
+  osym: 108210992
   unit_instruction_language_id: İngilizce (%30)
   unit_instruction_type_id: Normal Öğretim
   duration: 4
@@ -17384,7 +17388,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: 19 Mayıs
-  osym: '108211178'
+  osym: 108211178
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
@@ -17434,7 +17438,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Havza
-  osym: '108250928'
+  osym: 108250928
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -17445,7 +17449,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Havza
-  osym: '108270844'
+  osym: 108270844
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
@@ -17498,7 +17502,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Havza
-  osym: '108270968'
+  osym: 108270968
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
@@ -17548,7 +17552,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Havza
-  osym: '108250497'
+  osym: 108250497
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -17570,7 +17574,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Havza
-  osym: '108250876'
+  osym: 108250876
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -17674,7 +17678,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Kavak
-  osym: '108250504'
+  osym: 108250504
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -17685,7 +17689,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Kavak
-  osym: '108270483'
+  osym: 108270483
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
@@ -17705,7 +17709,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Kavak
-  osym: '108251292'
+  osym: 108251292
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -17716,7 +17720,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Kavak
-  osym: '108271057'
+  osym: 108271057
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
@@ -17736,7 +17740,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Kavak
-  osym: '108251468'
+  osym: 108251468
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -17776,7 +17780,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Kavak
-  osym: '108250504'
+  osym: 108250504
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -17787,7 +17791,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Kavak
-  osym: '108270483'
+  osym: 108270483
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
@@ -17807,7 +17811,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Kavak
-  osym: '108251062'
+  osym: 108251062
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -17818,7 +17822,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Kavak
-  osym: '108270914'
+  osym: 108270914
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
@@ -17849,7 +17853,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Kavak
-  osym: '108250885'
+  osym: 108250885
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -17860,7 +17864,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Kavak
-  osym: '108270817'
+  osym: 108270817
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
@@ -18212,7 +18216,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108230209'
+  osym: 108230209
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
@@ -18224,7 +18228,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108230315'
+  osym: 108230315
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
@@ -18256,7 +18260,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108230333'
+  osym: 108230333
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
@@ -18268,7 +18272,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108210683'
+  osym: 108210683
   unit_instruction_language_id: İngilizce (%30)
   unit_instruction_type_id: Normal Öğretim
   duration: 4
@@ -18291,7 +18295,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108230193'
+  osym: 108230193
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
@@ -18351,7 +18355,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108230281'
+  osym: 108230281
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
@@ -18575,7 +18579,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
-  osym: '108270862'
+  osym: 108270862
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
@@ -18595,7 +18599,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: İlkadım
-  osym: '108270253'
+  osym: 108270253
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
@@ -18616,7 +18620,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: İlkadım
-  osym: '108250725'
+  osym: 108250725
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -18728,7 +18732,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
-  osym: '108270677'
+  osym: 108270677
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
@@ -18749,7 +18753,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: İlkadım
-  osym: '108250258'
+  osym: 108250258
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -18760,7 +18764,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: İlkadım
-  osym: '108270298'
+  osym: 108270298
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
@@ -18781,7 +18785,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: İlkadım
-  osym: '108250276'
+  osym: 108250276
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -18846,7 +18850,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
-  osym: '108270253'
+  osym: 108270253
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
@@ -18877,7 +18881,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: İlkadım
-  osym: '108250734'
+  osym: 108250734
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -18888,7 +18892,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: İlkadım
-  osym: '108270686'
+  osym: 108270686
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
@@ -18898,9 +18902,9 @@
   yoksis_id: 122372
   parent_yoksis_id: 122370
   unit_type_id: Önlisans/lisans Programı
-  unit_status_id: Yarı Pasif
+  unit_status_id: Kapatılmış
   district_id: İlkadım
-  osym: '108250301'
+  osym: 108250301
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -18910,9 +18914,9 @@
   yoksis_id: 169805
   parent_yoksis_id: 122370
   unit_type_id: Önlisans/lisans Programı
-  unit_status_id: Yarı Pasif
+  unit_status_id: Kapatılmış
   district_id: İlkadım
-  osym: '108270323'
+  osym: 108270323
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
@@ -19008,7 +19012,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108210832'
+  osym: 108210832
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
@@ -19103,7 +19107,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108210426'
+  osym: 108210426
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
@@ -19116,7 +19120,8 @@
   unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
-  unit_instruction_type_id: Uzaktan Öğretim
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
 
 - name: Ebelik Programı (Lisans Tamamlama)
   abbreviation: SAĞLIK-YO-EBELİK-PR-LT
@@ -19182,7 +19187,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108210435'
+  osym: 108210435
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
@@ -19288,7 +19293,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108211045'
+  osym: 108211045
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
@@ -19310,7 +19315,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108210983'
+  osym: 108210983
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
@@ -19370,12 +19375,12 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Anatomi (Veteriner) (DR)
+- name: Veterinerlik Anatomisi (DR)
   abbreviation: VETERİNER-ANATOMİ-DR
   yoksis_id: 267772
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Yarı Pasif
+  unit_status_id: Aktif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -19408,7 +19413,7 @@
   yoksis_id: 267777
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -19419,7 +19424,7 @@
   yoksis_id: 267778
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
@@ -19540,7 +19545,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Atakum
-  osym: '108250364'
+  osym: 108250364
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -19633,7 +19638,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108251353'
+  osym: 108251353
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -19644,7 +19649,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Atakum
-  osym: '108251211'
+  osym: 108251211
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -19675,7 +19680,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Atakum
-  osym: '108250407'
+  osym: 108250407
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -19686,7 +19691,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Atakum
-  osym: '108270668'
+  osym: 108270668
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
@@ -19759,7 +19764,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Pasif
   district_id: Atakum
-  osym: '108251274'
+  osym: 108251274
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -20181,7 +20186,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: 19 Mayıs
-  osym: '108211099'
+  osym: 108211099
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
@@ -20218,7 +20223,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: 19 Mayıs
-  osym: '108210911'
+  osym: 108210911
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
@@ -20483,10 +20488,10 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: Resim-İş Eğitimi (DR)
+- name: Resim-İş Eğitimi (Sy)
   yoksis_id: 324893
   parent_yoksis_id: 122388
-  unit_type_id: Doktora Programı
+  unit_type_id: Sanatta Yeterlilik Programı
   unit_status_id: Arşiv
   district_id: Atakum
   unit_instruction_language_id: Türkçe
@@ -20784,7 +20789,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Terme
-  osym: '108270711'
+  osym: 108270711
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
@@ -20814,7 +20819,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Terme
-  osym: '108250522'
+  osym: 108250522
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -20823,8 +20828,9 @@
   yoksis_id: 317313
   parent_yoksis_id: 317332
   unit_type_id: Önlisans/lisans Programı
-  unit_status_id: Pasif
+  unit_status_id: Aktif
   district_id: Terme
+  osym: 108290234
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -20854,7 +20860,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Terme
-  osym: '108250691'
+  osym: 108250691
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -21075,7 +21081,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Vezirköprü
-  osym: '108270729'
+  osym: 108270729
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
@@ -21105,7 +21111,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Vezirköprü
-  osym: '108250707'
+  osym: 108250707
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -21116,7 +21122,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Vezirköprü
-  osym: '108270659'
+  osym: 108270659
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
@@ -21149,7 +21155,7 @@
   parent_yoksis_id: 382185
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Pasif
-  osym: '999999630'
+  osym: 999999630
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -21349,8 +21355,9 @@
   yoksis_id: 216349
   parent_yoksis_id: 202463
   unit_type_id: Önlisans/lisans Programı
-  unit_status_id: Pasif
+  unit_status_id: Aktif
   district_id: Tekkeköy
+  osym: 108290231
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -21443,7 +21450,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108210735'
+  osym: 108210735
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
@@ -21475,7 +21482,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108210744'
+  osym: 108210744
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
@@ -21486,7 +21493,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Pasif
   district_id: Atakum
-  osym: '108211027'
+  osym: 108211027
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
@@ -21628,7 +21635,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Çarşamba
-  osym: '108250716'
+  osym: 108250716
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -21639,7 +21646,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Çarşamba
-  osym: '108270765'
+  osym: 108270765
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
@@ -21679,7 +21686,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Çarşamba
-  osym: '108250743'
+  osym: 108250743
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -21690,7 +21697,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Kapatılmış
   district_id: Çarşamba
-  osym: '108270702'
+  osym: 108270702
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
@@ -21940,7 +21947,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108230387'
+  osym: 108230387
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
@@ -22174,12 +22181,12 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108230378'
+  osym: 108230378
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
 
-- name: İlahiyat Programı (Uzaktan Öğretim)
+- name: İlahiyat Programı (Uzaktan Öğretim) (İlitam) (Lisans Tamamlama)
   abbreviation: İLAHİYAT-PR-UZ
   yoksis_id: 215478
   parent_yoksis_id: 122157
@@ -22208,7 +22215,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108210056'
+  osym: 108210056
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
@@ -22220,7 +22227,7 @@
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Yarı Pasif
   district_id: Atakum
-  osym: '108230351'
+  osym: 108230351
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 4
@@ -22250,13 +22257,14 @@
   yoksis_id: 383182
   parent_yoksis_id: 169471
   unit_type_id: Önlisans/lisans Programı
-  unit_status_id: Pasif
-  osym: '999999491'
+  unit_status_id: Aktif
+  district_id: Bafra
+  osym: 108290233
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
-- name: İstatistik (YL) (İngilizce) (Tezli)
+- name: İstatistik (YL) (Tezli) (İngilizce)
   abbreviation: İSTATİSTİK-YL-İNG
   yoksis_id: 383211
   parent_yoksis_id: 122386
@@ -22275,7 +22283,475 @@
   parent_yoksis_id: 215488
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Pasif
-  osym: '999999757'
+  osym: 999999757
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Astronomi Eğitim Uygulama ve Araştırma Merkezi
+  yoksis_id: 385001
+  parent_yoksis_id: 121946
+  unit_type_id: Uygulama ve Araştırma Merkezi
+  unit_status_id: Aktif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Sigortacılık ve Aktüerya Bilimleri Bölümü
+  yoksis_id: 389933
+  parent_yoksis_id: 293681
+  unit_type_id: Bölüm
+  unit_status_id: Aktif
+  district_id: Bafra
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Sigortacılık ve Aktüerya Bilimleri Anabilim Dalı
+  yoksis_id: 389935
+  parent_yoksis_id: 389933
+  unit_type_id: Anabilim Dalı
+  unit_status_id: Aktif
+  district_id: Bafra
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Sigortacılık ve Aktüerya Bilimleri Programı
+  yoksis_id: 392833
+  parent_yoksis_id: 389933
+  unit_type_id: Önlisans/lisans Programı
+  unit_status_id: Aktif
+  district_id: Bafra
+  osym: 108290236
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Sigortacılık ve Sosyal Güvenlik Anabilim Dalı
+  yoksis_id: 389934
+  parent_yoksis_id: 389933
+  unit_type_id: Anabilim Dalı
+  unit_status_id: Kapatılmış
+  district_id: Bafra
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Dil ve Konuşma Bozuklukları Eğitim Araştırma ve Uygulama Merkezi
+  yoksis_id: 389044
+  parent_yoksis_id: 121946
+  unit_type_id: Uygulama ve Araştırma Merkezi
+  unit_status_id: Aktif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Eczacılık Fakültesi
+  yoksis_id: 391242
+  parent_yoksis_id: 121946
+  unit_type_id: Fakülte
+  unit_status_id: Pasif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Eğitim Programları ve Öğretim (YL) (Tezsiz) (Uzaktan Öğretim)
+  yoksis_id: 408265
+  parent_yoksis_id: 174846
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Uzaktan Öğretim
+  duration: 2
+
+- name: Kimya Eğitimi (YL) (Tezsiz)
+  yoksis_id: 407988
+  parent_yoksis_id: 174846
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Arşiv
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Nanobilim ve Nanoteknoloji Anabilim Dalı (Disiplinlerarası)
+  yoksis_id: 406607
+  parent_yoksis_id: 122386
+  unit_type_id: Disiplinlerarası Anabilim Dalı
+  unit_status_id: Aktif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Su Ürünleri Avlama ve İşleme Teknolojisi (DR)
+  yoksis_id: 387834
+  parent_yoksis_id: 122386
+  unit_type_id: Doktora Programı
+  unit_status_id: Arşiv
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Su Ürünleri Avlama ve İşleme Teknolojisi (YL) (Tezli)
+  yoksis_id: 387835
+  parent_yoksis_id: 122386
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Arşiv
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Su Ürünleri Temel Bilimleri (YL) (Tezli)
+  yoksis_id: 386342
+  parent_yoksis_id: 122386
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Arşiv
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Su Ürünleri Yetiştiriciliği (YL) (Tezli)
+  yoksis_id: 386341
+  parent_yoksis_id: 122386
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Arşiv
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Müzikte Yorumculuk (Sy)
+  yoksis_id: 390166
+  parent_yoksis_id: 208606
+  unit_type_id: Sanatta Yeterlilik Programı
+  unit_status_id: Aktif
+  district_id: İlkadım
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Kenevir Araştırma Enstitüsü
+  yoksis_id: 388477
+  parent_yoksis_id: 121946
+  unit_type_id: Enstitü
+  unit_status_id: Aktif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Gıda, Yem ve İlaç Anabilim Dalı
+  yoksis_id: 391649
+  parent_yoksis_id: 388477
+  unit_type_id: Anabilim Dalı
+  unit_status_id: Aktif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Sanayi ve Pazarlama Anabilim Dalı
+  yoksis_id: 391747
+  parent_yoksis_id: 388477
+  unit_type_id: Anabilim Dalı
+  unit_status_id: Aktif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Tarım ve Islah Anabilim Dalı
+  yoksis_id: 391648
+  parent_yoksis_id: 388477
+  unit_type_id: Anabilim Dalı
+  unit_status_id: Aktif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Kök Hücre Uygulama ve Araştırma Merkezi
+  yoksis_id: 393813
+  parent_yoksis_id: 121946
+  unit_type_id: Uygulama ve Araştırma Merkezi
+  unit_status_id: Aktif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Şehir ve Bölge Planlama Programı
+  yoksis_id: 386187
+  parent_yoksis_id: 251540
+  unit_type_id: Önlisans/lisans Programı
+  unit_status_id: Aktif
+  district_id: İlkadım
+  osym: 108290232
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Deney Hayvanları Araştırmaları (YL) (Tezli)
+  yoksis_id: 393122
+  parent_yoksis_id: 122387
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Dil ve Konuşma Terapisi (YL) (Tezli)
+  yoksis_id: 393050
+  parent_yoksis_id: 122387
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Evde Hasta Bakım Hemşireliği (YL) (Tezli)
+  yoksis_id: 392993
+  parent_yoksis_id: 122387
+  unit_type_id: Disiplinlerarası Yüksek Lisans Programı
+  unit_status_id: Aktif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Evde Hasta Bakım Hemşireliği (YL) (Tezsiz) (İÖ)
+  yoksis_id: 392994
+  parent_yoksis_id: 122387
+  unit_type_id: Disiplinlerarası Yüksek Lisans Programı
+  unit_status_id: Aktif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: İkinci Öğretim
+  duration: 2
+
+- name: Evde Hasta Bakım Hemşireliği (YL) (Tezsiz) (Uzaktan Öğretim)
+  yoksis_id: 392995
+  parent_yoksis_id: 122387
+  unit_type_id: Disiplinlerarası Yüksek Lisans Programı
+  unit_status_id: Aktif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Uzaktan Öğretim
+  duration: 2
+
+- name: Radyoloji Anabilim Dalı
+  yoksis_id: 407971
+  parent_yoksis_id: 122387
+  unit_type_id: Anabilim Dalı
+  unit_status_id: Aktif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Veteriner İmmünihistoloji ve Embriyoloji (DR)
+  yoksis_id: 405472
+  parent_yoksis_id: 122387
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Veterinerlik Zootekni (DR)
+  yoksis_id: 393049
+  parent_yoksis_id: 122387
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Dil ve Konuşma Terapisi Programı
+  yoksis_id: 386857
+  parent_yoksis_id: 293579
+  unit_type_id: Önlisans/lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  osym: 108290230
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Odyoloji Bölümü
+  yoksis_id: 386330
+  parent_yoksis_id: 293577
+  unit_type_id: Bölüm
+  unit_status_id: Aktif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Odyoloji Anabilim Dalı
+  yoksis_id: 386331
+  parent_yoksis_id: 386330
+  unit_type_id: Anabilim Dalı
+  unit_status_id: Aktif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Ortez-Protez Bölümü
+  yoksis_id: 386328
+  parent_yoksis_id: 293577
+  unit_type_id: Bölüm
+  unit_status_id: Aktif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Ortez-Protez Anabilim Dalı
+  yoksis_id: 386329
+  parent_yoksis_id: 386328
+  unit_type_id: Anabilim Dalı
+  unit_status_id: Aktif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Çocuk Gelişimi Bölümü
+  yoksis_id: 389166
+  parent_yoksis_id: 293577
+  unit_type_id: Bölüm
+  unit_status_id: Aktif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Çocuk Gelişimi Anabilim Dalı
+  yoksis_id: 389167
+  parent_yoksis_id: 389166
+  unit_type_id: Anabilim Dalı
+  unit_status_id: Aktif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Arkeoloji (DR)
+  yoksis_id: 393051
+  parent_yoksis_id: 122388
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Girişimcilik ve Yenilikçilik Anabilim Dalı (Disiplinlerarası)
+  yoksis_id: 390151
+  parent_yoksis_id: 122388
+  unit_type_id: Disiplinlerarası Anabilim Dalı
+  unit_status_id: Aktif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Girişimcilik ve Yenilikçilik (YL) (İngilizce) (Tezli)
+  yoksis_id: 390152
+  parent_yoksis_id: 390151
+  unit_type_id: Disiplinlerarası Yüksek Lisans Programı
+  unit_status_id: Aktif
+  unit_instruction_language_id: İngilizce
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Girişimcilik ve Yenilikçilik (YL) (İngilizce) (Tezsiz)
+  yoksis_id: 406572
+  parent_yoksis_id: 390151
+  unit_type_id: Disiplinlerarası Yüksek Lisans Programı
+  unit_status_id: Aktif
+  unit_instruction_language_id: İngilizce
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Girişimcilik ve Yenilikçilik (YL) (Tezli)
+  yoksis_id: 390153
+  parent_yoksis_id: 390151
+  unit_type_id: Disiplinlerarası Yüksek Lisans Programı
+  unit_status_id: Aktif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Yenilikçilik ve Girişimcilik (YL) (İngilizce) (Tezsiz) (Uzaktan Öğretim)
+  yoksis_id: 406573
+  parent_yoksis_id: 390151
+  unit_type_id: Disiplinlerarası Yüksek Lisans Programı
+  unit_status_id: Aktif
+  unit_instruction_language_id: İngilizce
+  unit_instruction_type_id: Uzaktan Öğretim
+  duration: 2
+
+- name: İslam Hukuku (YL) (Tezli)
+  yoksis_id: 390206
+  parent_yoksis_id: 122388
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Kelam (YL) (Tezli)
+  yoksis_id: 390207
+  parent_yoksis_id: 122388
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Genel Dahiliye Bilim Dalı
+  yoksis_id: 384120
+  parent_yoksis_id: 121970
+  unit_type_id: Bilim Dalı
+  unit_status_id: Aktif
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Eskiçağ Tarihi Anabilim Dalı
+  yoksis_id: 383959
+  parent_yoksis_id: 381679
+  unit_type_id: Anabilim Dalı
+  unit_status_id: Aktif
+  district_id: Çarşamba
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Genel Türk Tarihi Anabilim Dalı
+  yoksis_id: 383960
+  parent_yoksis_id: 381679
+  unit_type_id: Anabilim Dalı
+  unit_status_id: Aktif
+  district_id: Çarşamba
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Ortaçağ Tarihi Anabilim Dalı
+  yoksis_id: 383958
+  parent_yoksis_id: 381679
+  unit_type_id: Anabilim Dalı
+  unit_status_id: Aktif
+  district_id: Çarşamba
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Tarih Programı
+  yoksis_id: 392832
+  parent_yoksis_id: 381679
+  unit_type_id: Önlisans/lisans Programı
+  unit_status_id: Aktif
+  district_id: Çarşamba
+  osym: 108290235
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Türkiye Cumhuriyeti Tarihi Anabilim Dalı
+  yoksis_id: 383956
+  parent_yoksis_id: 381679
+  unit_type_id: Anabilim Dalı
+  unit_status_id: Aktif
+  district_id: Çarşamba
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Yakınçağ Tarihi Anabilim Dalı
+  yoksis_id: 383930
+  parent_yoksis_id: 381679
+  unit_type_id: Anabilim Dalı
+  unit_status_id: Aktif
+  district_id: Çarşamba
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Yeniçağ Tarihi Anabilim Dalı
+  yoksis_id: 383957
+  parent_yoksis_id: 381679
+  unit_type_id: Anabilim Dalı
+  unit_status_id: Aktif
+  district_id: Çarşamba
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2

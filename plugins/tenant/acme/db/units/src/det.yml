@@ -2992,7 +2992,7 @@
   issues:
     - İlişkili olduğu merkez yöksis verilerimiz arasında yok
 
-- name: Kök Hücre Araştırma Merkezi Müdürlüğü
+- name: Kök Hücre Uygulama ve Araştırma Merkezi Müdürlüğü
   abbreviation: KÖKHÜCRE-MD
   detsis_id: 83478762
   parent_detsis_id: 78633602
@@ -3896,7 +3896,7 @@
   detsis_id: 64211159
   parent_detsis_id: 53521241
   unit_type_id: Şube Müdürlüğü
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: İdari İşler Şube Müdürlüğü
@@ -3936,7 +3936,7 @@
   detsis_id: 50881910
   parent_detsis_id: 53521241
   unit_type_id: Şube Müdürlüğü
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Sosyal Hizmetler Şube Müdürlüğü
@@ -4246,7 +4246,7 @@
   unit_status_id: Aktif
   district_id: Atakum
 
-- name: Dermatoloji Anabilim Dalı Başkanlığı
+- name: Deri ve Zührevi Hastalıklar Anabilim Dalı Başkanlığı
   abbreviation: TIP-DAHİLİ-DERMA-ADB
   parent_yoksis_id: 169259
   detsis_id: 82295067
@@ -4340,7 +4340,7 @@
   unit_status_id: Aktif
   district_id: Atakum
 
-- name: Psikiyatri Anabilim Dalı Başkanlığı
+- name: Ruh Sağlığı ve Hastalıkları Anabilim Dalı Başkanlığı
   abbreviation: TIP-DAHİLİ-PSİ-ADB
   parent_yoksis_id: 169288
   detsis_id: 28960095
@@ -4358,7 +4358,7 @@
   unit_status_id: Aktif
   district_id: Atakum
 
-- name: Radyodiagnostik Anabilim Dalı Başkanlığı
+- name: Radyoloji Anabilim Dalı Başkanlığı
   abbreviation: TIP-DAHİLİ-RD-ADB
   parent_yoksis_id: 143494
   detsis_id: 18393763
@@ -6584,7 +6584,7 @@
   district_id: Atakum
   district_id_: Atakum
 
-- name: Evde Bakım Hemşireliği Anabilim Dalı Başkanlığı
+- name: Evde Hasta Bakımı Hemşireliği Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-EBH-ADB
   detsis_id: 29830028
   parent_detsis_id: 93771576
@@ -7140,7 +7140,7 @@
   detsis_id: 41323324
   parent_detsis_id: 20346779
   unit_type_id: Anabilim Dalı Başkanlığı
-  unit_status_id: Yarı Pasif
+  unit_status_id: Aktif
   district_id: Atakum
   issues:
     - İsimde yazım hatası
@@ -7487,7 +7487,7 @@
   detsis_id: 46697017
   parent_detsis_id: 78633602
   unit_type_id: Yüksekokul Müdürlüğü
-  unit_status_id: Yarı Pasif
+  unit_status_id: Aktif
   district_id: 19 Mayıs
 
 - name: Veterinerlik Fizyolojisi Anabilim Dalı Başkanlığı
@@ -8205,7 +8205,7 @@
   detsis_id: 57246715
   parent_detsis_id: 78633602
   unit_type_id: Fakülte Dekanlığı
-  unit_status_id: Yarı Pasif
+  unit_status_id: Aktif
   district_id: Bafra
   issues:
     - İlişkili olduğu birim pasif
@@ -8613,7 +8613,7 @@
   detsis_id: 64554296
   parent_detsis_id: 37195700
   unit_type_id: Bölüm Başkanlığı
-  unit_status_id: Yarı Pasif
+  unit_status_id: Aktif
   district_id: Bafra
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
@@ -9943,7 +9943,7 @@
   detsis_id: 86068149
   parent_detsis_id: 20346779
   unit_type_id: Anabilim Dalı Başkanlığı
-  unit_status_id: Yarı Pasif
+  unit_status_id: Aktif
   district_id: Atakum
 
 - name: Ortodonti Anabilim Dalı Başkanlığı
@@ -10529,7 +10529,7 @@
   detsis_id: 94334960
   parent_detsis_id: 26676436
   unit_type_id: Anabilim Dalı Başkanlığı
-  unit_status_id: Yarı Pasif
+  unit_status_id: Aktif
   district_id: Atakum
 
 - name: Öğrenci İşleri Birimi
@@ -12256,3 +12256,447 @@
   unit_status_id: Pasif
   district_id: Atakum
   district_id_: Atakum
+
+- name: Astronomi Eğitimi Uygulama ve Araştırma Merkezi Müdürlüğü
+  detsis_id: 30837812
+  parent_detsis_id: 78633602
+  unit_type_id: Merkez Müdürlüğü
+  unit_status_id: Aktif
+
+- name: Fakülte Disiplin Kurulu
+  detsis_id: 74095031
+  parent_detsis_id: 57246715
+  unit_type_id: Fakülte Disiplin Kurulu
+  unit_status_id: Aktif
+
+- name: Fakülte Kurulu
+  detsis_id: 45653669
+  parent_detsis_id: 57246715
+  unit_type_id: Fakülte Kurulu
+  unit_status_id: Aktif
+
+- name: Fakülte Sekreterliği
+  detsis_id: 75457335
+  parent_detsis_id: 57246715
+  unit_type_id: Fakülte Sekreterliği
+  unit_status_id: Aktif
+
+- name: Fakülte Yönetim Kurulu
+  detsis_id: 92564308
+  parent_detsis_id: 57246715
+  unit_type_id: Fakülte Yönetim Kurulu
+  unit_status_id: Aktif
+
+- name: Sigortacılık ve Aktüerya Bilimleri Bölüm Başkanlığı
+  detsis_id: 23363322
+  parent_detsis_id: 57246715
+  unit_type_id: Bölüm Başkanlığı
+  unit_status_id: Aktif
+
+- name: Basın Yayın ve Halkla İlişkiler Birimi
+  detsis_id: 78806516
+  parent_detsis_id: 46697017
+  unit_type_id: Diğer İdari Birim
+  unit_status_id: Pasif
+
+- name: Bilgi İşlem Birimi
+  detsis_id: 57243461
+  parent_detsis_id: 46697017
+  unit_type_id: Diğer İdari Birim
+  unit_status_id: Pasif
+
+- name: Hukuk İşleri Birimi
+  detsis_id: 58382488
+  parent_detsis_id: 46697017
+  unit_type_id: Diğer İdari Birim
+  unit_status_id: Pasif
+
+- name: Mali İşler Birimi
+  detsis_id: 30582242
+  parent_detsis_id: 46697017
+  unit_type_id: Diğer İdari Birim
+  unit_status_id: Pasif
+
+- name: Meslek Yüksekokulu Disiplin Kurulu
+  detsis_id: 17832416
+  parent_detsis_id: 46697017
+  unit_type_id: Yüksekokul Disiplin Kurulu
+  unit_status_id: Yarı Pasif
+
+- name: Meslek Yüksekokulu Kurulu
+  detsis_id: 53946601
+  parent_detsis_id: 46697017
+  unit_type_id: Yüksekokul Kurulu
+  unit_status_id: Yarı Pasif
+
+- name: Meslek Yüksekokulu Sekreterliği
+  detsis_id: 25170302
+  parent_detsis_id: 46697017
+  unit_type_id: Yüksekokul Sekreterliği
+  unit_status_id: Aktif
+
+- name: Meslek Yüksekokulu Yönetim Kurulu
+  detsis_id: 12577702
+  parent_detsis_id: 46697017
+  unit_type_id: Yüksekokul Yönetim Kurulu
+  unit_status_id: Yarı Pasif
+
+- name: Personel İşleri Birimi
+  detsis_id: 31828083
+  parent_detsis_id: 46697017
+  unit_type_id: Diğer İdari Birim
+  unit_status_id: Pasif
+
+- name: Sağlık, Kültür ve Spor İşleri Birimi
+  detsis_id: 98335055
+  parent_detsis_id: 46697017
+  unit_type_id: Diğer İdari Birim
+  unit_status_id: Pasif
+
+- name: Strateji Geliştirme ve Kalite Birimi
+  detsis_id: 43700408
+  parent_detsis_id: 46697017
+  unit_type_id: Diğer İdari Birim
+  unit_status_id: Pasif
+
+- name: Yapı, Tesis ve Teknik İşler Birimi
+  detsis_id: 57636203
+  parent_detsis_id: 46697017
+  unit_type_id: Diğer İdari Birim
+  unit_status_id: Pasif
+
+- name: Yayın, Kütüphane ve Dokümantasyon Birimi
+  detsis_id: 31884579
+  parent_detsis_id: 46697017
+  unit_type_id: Diğer İdari Birim
+  unit_status_id: Pasif
+
+- name: Öğrenci İşleri Birimi
+  detsis_id: 54193137
+  parent_detsis_id: 46697017
+  unit_type_id: Diğer İdari Birim
+  unit_status_id: Pasif
+
+- name: İdari İşler Birimi
+  detsis_id: 35778622
+  parent_detsis_id: 46697017
+  unit_type_id: Diğer İdari Birim
+  unit_status_id: Pasif
+
+- name: Dil ve Konuşma Bozuklukları Eğitimi Uygulama ve Araştırma Merkezi Müdürlüğü
+  detsis_id: 16278565
+  parent_detsis_id: 78633602
+  unit_type_id: Merkez Müdürlüğü
+  unit_status_id: Aktif
+
+- name: Eczacılık Fakültesi Dekanlığı
+  detsis_id: 36795605
+  parent_detsis_id: 78633602
+  unit_type_id: Fakülte Dekanlığı
+  unit_status_id: Yarı Pasif
+
+- name: Fındık ve Diğer Sert Kabuklu Meyveler Araştırma ve Uygulama Merkezi Müdürlüğü
+  detsis_id: 51346436
+  parent_detsis_id: 78633602
+  unit_type_id: Merkez Müdürlüğü
+  unit_status_id: Pasif
+
+- name: Kenevir Araştırmaları Enstitüsü Müdürlüğü
+  detsis_id: 33393879
+  parent_detsis_id: 78633602
+  unit_type_id: Enstitü Müdürlüğü
+  unit_status_id: Aktif
+
+- name: Gıda, Yem ve İlaç Anabilim Dalı Başkanlığı
+  detsis_id: 46067842
+  parent_detsis_id: 33393879
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Sanayi ve Pazarlama Anabilim Dalı Başkanlığı
+  detsis_id: 18881787
+  parent_detsis_id: 33393879
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Tarım ve Islah Anabilim Dalı Başkanlığı
+  detsis_id: 19358555
+  parent_detsis_id: 33393879
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Klinik Araştırmalar Etik Kurulu
+  detsis_id: 88984990
+  parent_detsis_id: 78633602
+  unit_type_id: Etik Kurul
+  unit_status_id: Aktif
+
+- name: Nöromodülasyon Ünitesi
+  detsis_id: 12221006
+  parent_detsis_id: 15374210
+  unit_type_id: Diğer İdari Birim
+  unit_status_id: Aktif
+
+- name: Deney Hayvanları Araştırmaları Anabilim Dalı Başkanlığı
+  detsis_id: 48395142
+  parent_detsis_id: 93771576
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Dil ve Konuşma Terapisi Anabilim Dalı Başkanlığı
+  detsis_id: 83466304
+  parent_detsis_id: 93771576
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Fizyoterapi ve Rehabilitasyon Bölüm Başkanlığı
+  detsis_id: 34357349
+  parent_detsis_id: 28050591
+  unit_type_id: Bölüm Başkanlığı
+  unit_status_id: Aktif
+
+- name: Fizyoterapi ve Rehabilitasyon Anabilim Dalı Başkanlığı
+  detsis_id: 25550913
+  parent_detsis_id: 34357349
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Odyoloji Bölüm Başkanlığı
+  detsis_id: 25960321
+  parent_detsis_id: 28050591
+  unit_type_id: Bölüm Başkanlığı
+  unit_status_id: Aktif
+
+- name: Odyoloji Anabilim Dalı Başkanlığı
+  detsis_id: 31447479
+  parent_detsis_id: 25960321
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Ortez-Protez Bölüm Başkanlığı
+  detsis_id: 83283698
+  parent_detsis_id: 28050591
+  unit_type_id: Bölüm Başkanlığı
+  unit_status_id: Aktif
+
+- name: Çocuk Gelişimi Bölüm Başkanlığı
+  detsis_id: 54917329
+  parent_detsis_id: 28050591
+  unit_type_id: Bölüm Başkanlığı
+  unit_status_id: Aktif
+
+- name: Yurtlar Şube Müdürlüğü
+  detsis_id: 96886882
+  parent_detsis_id: 53521241
+  unit_type_id: Şube Müdürlüğü
+  unit_status_id: Aktif
+
+- name: Girişimcilik ve Yenilikçilik Anabilim Dalı Başkanlığı
+  detsis_id: 93062464
+  parent_detsis_id: 61232311
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Yönetim ve Organizasyon Bölüm Başkanlığı
+  detsis_id: 62682161
+  parent_detsis_id: 36024139
+  unit_type_id: Bölüm Başkanlığı
+  unit_status_id: Aktif
+
+- name: Gastronomi ve Mutfak Sanatları Anabilim Dalı Başkanlığı
+  detsis_id: 89292868
+  parent_detsis_id: 64554296
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Rekreasyon Yönetimi Bölüm Başkanlığı
+  detsis_id: 57132954
+  parent_detsis_id: 37195700
+  unit_type_id: Bölüm Başkanlığı
+  unit_status_id: Aktif
+
+- name: Turizm Rehberliği Anabilim Dalı Başkanlığı
+  detsis_id: 54285866
+  parent_detsis_id: 17503256
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Turizm İşletmeciliği Anabilim Dalı Başkanlığı
+  detsis_id: 34620086
+  parent_detsis_id: 22017889
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Tasarım Bölüm Başkanlığı
+  detsis_id: 98370047
+  parent_detsis_id: 61206311
+  unit_type_id: Bölüm Başkanlığı
+  unit_status_id: Aktif
+
+- name: Bağ Yetiştirme ve Islahı Anabilim Dalı Başkanlığı
+  detsis_id: 53179598
+  parent_detsis_id: 51766710
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Meyve Yetiştirme ve Islahı Anabilim Dalı Başkanlığı
+  detsis_id: 46244487
+  parent_detsis_id: 51766710
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Sebze Yetiştirme ve Islahı Anabilim Dalı Başkanlığı
+  detsis_id: 80967982
+  parent_detsis_id: 51766710
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Süs Bitkileri Yetiştirme ve Islahı Anabilim Dalı Başkanlığı
+  detsis_id: 19028155
+  parent_detsis_id: 51766710
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Entomoloji Anabilim Dalı Başkanlığı
+  detsis_id: 16771683
+  parent_detsis_id: 30360806
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Fitopatoloji Anabilim Dalı Başkanlığı
+  detsis_id: 85218112
+  parent_detsis_id: 30360806
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Endüstri Bitkileri Anabilim Dalı Başkanlığı
+  detsis_id: 19791492
+  parent_detsis_id: 88073621
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Tahıllar ve Yemeklik Baklagiller Anabilim Dalı Başkanlığı
+  detsis_id: 34957183
+  parent_detsis_id: 88073621
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Çayır Mera ve Yem Bitkileri Anabilim Dalı Başkanlığı
+  detsis_id: 55528295
+  parent_detsis_id: 88073621
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Tarım Politikası ve Yayım Anabilim Dalı Başkanlığı
+  detsis_id: 17184421
+  parent_detsis_id: 41945832
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Tarım İşletmeciliği Anabilim Dalı Başkanlığı
+  detsis_id: 85416548
+  parent_detsis_id: 41945832
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Tarım Makineleri ve Teknolojileri Mühendisliği Anabilim Dalı Başkanlığı
+  detsis_id: 91635289
+  parent_detsis_id: 38298812
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Bitkisel Biyoteknoloji Anabilim Dalı Başkanlığı
+  detsis_id: 15854088
+  parent_detsis_id: 39322077
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Enzim ve Mikrobiyel Biyoteknoloji Anabilim Dalı Başkanlığı
+  detsis_id: 55841282
+  parent_detsis_id: 39322077
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Hayvansal Biyoteknoloji Anabilim Dalı Başkanlığı
+  detsis_id: 86244733
+  parent_detsis_id: 39322077
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Tarımsal Yapılar ve Sulama Anabilim Dalı Başkanlığı
+  detsis_id: 42963378
+  parent_detsis_id: 69046183
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Bitki Besleme Anabilim Dalı Başkanlığı
+  detsis_id: 83929159
+  parent_detsis_id: 25676019
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Toprak Bilimi Anabilim Dalı Başkanlığı
+  detsis_id: 42846038
+  parent_detsis_id: 25676019
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Biyometri-Genetik Anabilim Dalı Başkanlığı
+  detsis_id: 54790359
+  parent_detsis_id: 59625322
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Hayvan Yetiştirme ve Islahı Anabilim Dalı Başkanlığı
+  detsis_id: 16443102
+  parent_detsis_id: 59625322
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Yemler ve Hayvan Besleme Anabilim Dalı Başkanlığı
+  detsis_id: 69025855
+  parent_detsis_id: 59625322
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Tarih Bölüm Başkanlığı
+  detsis_id: 13806242
+  parent_detsis_id: 93417155
+  unit_type_id: Bölüm Başkanlığı
+  unit_status_id: Aktif
+
+- name: Eskiçağ Tarihi Anabilim Dalı Başkanlığı
+  detsis_id: 20981008
+  parent_detsis_id: 13806242
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Genel Türk Tarihi Anabilim Dalı Başkanlığı
+  detsis_id: 66965106
+  parent_detsis_id: 13806242
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Ortaçağ Tarihi Anabilim Dalı Başkanlığı
+  detsis_id: 72446498
+  parent_detsis_id: 13806242
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Türkiye Cumhuriyeti Tarihi Anabilim Dalı Başkanlığı
+  detsis_id: 31622048
+  parent_detsis_id: 13806242
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Yakınçağ Tarihi Anabilim Dalı Başkanlığı
+  detsis_id: 46938089
+  parent_detsis_id: 13806242
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Yeniçağ Tarihi Anabilim Dalı Başkanlığı
+  detsis_id: 14794339
+  parent_detsis_id: 13806242
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
