@@ -96,11 +96,11 @@ module Nokul
           end
 
           def fetch(root_id)
-            mark_root(produce_units).each { |unit| populate(unit) }
+            mark_root(produce_units, root_id).each { |unit| populate(unit) }
             self
           end
 
-          def mark_root(units)
+          def mark_root(units, root_id)
             root = units.find { |unit| !unit.detsis_id.nil? && unit.detsis_id.to_i == root_id.to_i }
             root.parent_administrative_identity_code = 0
             units
