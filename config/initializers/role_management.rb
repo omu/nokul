@@ -19,27 +19,27 @@ class RoleManagement
              privileges:  %i[read write destroy]
   permission :authorization_management,
              name:        'Yetkilendirme Yönetimi',
-             description: 'Yetkilendirme Yönetimi Yetkisi',
+             description: 'Yetkilendirme Yönetim Yetkisi',
              privileges:  %i[read write destroy]
   permission :calendar_management,
              name:        'Takvim Yönetimi',
-             description: 'Takvim Yönetimi Yetkisi',
+             description: 'Takvim Yönetim Yetkisi',
              privileges:  %i[read write destroy]
   permission :course_management,
              name:        'Ders Yönetimi',
-             description: 'Ders Yönetimi Yetkisi',
+             description: 'Ders Yönetim Yetkisi',
              privileges:  %i[read write destroy report]
   permission :available_course_management,
              name:        'Açılan Ders Yönetimi',
-             description: 'Açılan Ders Yönetimi Yetkisi',
+             description: 'Açılan Ders Yönetim Yetkisi',
              privileges:  %i[read write destroy report]
   permission :curriculum_management,
              name:        'Müfredat Yönetimi',
-             description: 'Müfredat Yönetimi Yetkisi',
+             description: 'Müfredat Yönetim Yetkisi',
              privileges:  %i[read write destroy report]
   permission :committee_management,
              name:        'Kurul Yönetimi',
-             description: 'Kurul Yönetimi Yetkisi',
+             description: 'Kurul Yönetim Yetkisi',
              privileges:  %i[read write destroy]
   permission :decision_management,
              name:        'Karar Yönetimi',
@@ -47,21 +47,24 @@ class RoleManagement
              privileges:  %i[read write destroy]
   permission :agenda_management,
              name:        'Gündem Yönetimi',
-             description: 'Gündem Yönetimi Yetkisi',
+             description: 'Gündem Yönetim Yetkisi',
              privileges:  %i[read write destroy]
   permission :meeting_management,
              name:        'Toplantı Yönetimi',
-             description: 'Toplantı Yönetimi Yetkisi',
+             description: 'Toplantı Yönetim Yetkisi',
              privileges:  %i[read write destroy]
   permission :detsis_management,
              name:        'DETSİS Yönetimi',
-             description: 'DETSİS Yönetimi Yetkisi',
+             description: 'DETSİS Yönetim Yetkisi',
              privileges:  %i[read write destroy]
   permission :location_management,
              name:        'Konum Yönetimi',
-             description: 'Ülke, Şehir ve İlçe Yönetimi Yetkisi',
+             description: 'Ülke, Şehir ve İlçe Yönetim Yetkisi',
              privileges:  %i[read write destroy]
-
+  permission :meksis_management,
+             name:        'Meksis Yönetimi',
+             description: 'Meksis Yönetim Yetkisi',
+             privileges:  %i[read write destroy]
   # roles
   role :authorization_manager,
        name:        'Yetkilendirme Yöneticisi',
@@ -84,6 +87,7 @@ class RoleManagement
          decision_management:         %i[read write destroy],
          detsis_management:           %i[read write destroy],
          location_management:         %i[read write destroy],
-         meeting_management:          %i[read write destroy]
+         meeting_management:          %i[read write destroy],
+         meksis_management:           %i[read write destroy]
        }
 end

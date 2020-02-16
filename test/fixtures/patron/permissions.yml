@@ -1,15 +1,15 @@
 available_course_management:
   name: Açılan Ders Yönetimi
   identifier: available_course_management
-  description: Açılan Ders Yönetimi Yetkisi
+  description: Açılan Ders Yönetim Yetkisi
 unit_management:
   name: Birim Yönetimi
   identifier: unit_management
-  description: Description
+  description: Birim Yönetim Yetkisi
 course_management:
   name: Ders Yönetimi
   identifier: course_management
-  description: Description
+  description: Ders Yönetim Yetkisi
 role_management:
   name: Rol Yönetimi
   identifier: role_management
@@ -25,36 +25,40 @@ scope_query_management:
 authorization_management:
   name: Yetkilendirme Yönetimi
   identifier: authorization_management
-  description: Yetkilendirme Yönetimi Yetkisi
+  description: Yetkilendirme Yönetim Yetkisi
 calendar_management:
   name: Takvim Yönetimi
   identifier: calendar_management
-  description: Takvim Yönetimi Yetkisi
+  description: Takvim Yönetim Yetkisi
 curriculum_management:
   name: Müfredat Yönetimi
   identifier: curriculum_management
-  description: Müfredat Yetkisi
+  description: Müfredat Yönetim Yetkisi
 committee_management:
   name: Kurul Yönetimi
   identifier: committee_management
-  description: Kurul Yönetimi Yetkisi
+  description: Kurul Yönetim Yetkisi
 decision_management:
   name: Karar Yönetimi
   identifier: decision_management
-  description: Karar Yönetimi Yetkisi
+  description: Karar Yönetim Yetkisi
 agenda_management:
   name: Gündem Yönetimi
   identifier: agenda_management
-  description: Gündem Yönetimi Yetkisi
+  description: Gündem Yönetim Yetkisi
 meeting_management:
   name: Toplantı Yönetimi
   identifier: meeting_management
-  description: Toplantı Yönetimi Yetkisi
+  description: Toplantı Yönetim Yetkisi
 detsis_management:
   name: Detsis Yönetimi
   identifier: detsis_management
-  description: Detsis Yönetimi Yetkisi
+  description: DETSİS Yönetim Yetkisi
 location_management:
   name: Konum Yönetimi
   identifier: location_management
   description: Ülke, Şehir ve İlçe Yönetimi Yetkisi
+meksis_management:
+  name: MEKSİS Yönetimi
+  identifier: meksis_management
+  description: MEKSİS Yönetim Yetkisi
