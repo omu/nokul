@@ -6,6 +6,7 @@ module Instructiveness
 
     before_action :set_employee
     before_action :set_course, except: :index
+    before_action :authorized?
 
     def index
       courses = @employee.given_courses.includes(:unit, :academic_term, curriculum_course: :course)
@@ -27,6 +28,10 @@ module Instructiveness
 
     def set_employee
       not_found if (@employee = current_user.current_employee).nil?
+    end
+
+    def authorized?
+      authorize(@employee, policy_class: Instructiveness::GivenCoursePolicy)
     end
 
     def set_course
