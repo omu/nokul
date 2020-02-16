@@ -54,3 +54,7 @@ fourteen:
   role: admin
   permission: detsis_management
   privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
+fifteen:
+  role: admin
+  permission: location_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>

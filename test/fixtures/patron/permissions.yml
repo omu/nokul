@@ -54,3 +54,7 @@ detsis_management:
   name: Detsis Yönetimi
   identifier: detsis_management
   description: Detsis Yönetimi Yetkisi
+location_management:
+  name: Konum Yönetimi
+  identifier: location_management
+  description: Ülke, Şehir ve İlçe Yönetimi Yetkisi

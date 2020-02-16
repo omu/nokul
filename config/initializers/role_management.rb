@@ -57,6 +57,11 @@ class RoleManagement
              name:        'DETSİS Yönetimi',
              description: 'DETSİS Yönetimi Yetkisi',
              privileges:  %i[read write destroy]
+  permission :location_management,
+             name:        'Konum Yönetimi',
+             description: 'Ülke, Şehir ve İlçe Yönetimi Yetkisi',
+             privileges:  %i[read write destroy]
+
   # roles
   role :authorization_manager,
        name:        'Yetkilendirme Yöneticisi',
@@ -78,6 +83,7 @@ class RoleManagement
          curriculum_management:       %i[read write destroy report],
          decision_management:         %i[read write destroy],
          detsis_management:           %i[read write destroy],
+         location_management:         %i[read write destroy],
          meeting_management:          %i[read write destroy]
        }
 end
