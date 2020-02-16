@@ -2,6 +2,7 @@
 
 class StudentsController < ApplicationController
   before_action :set_student
+  before_action :authorized?
 
   def edit; end
 
@@ -13,6 +14,10 @@ class StudentsController < ApplicationController
 
   def set_student
     @student = Student.find(params[:id])
+  end
+
+  def authorized?
+    authorize(@student || Student)
   end
 
   def student_params

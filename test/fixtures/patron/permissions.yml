@@ -77,4 +77,8 @@ ldap_management:
 unit_management:
   name: Birim Yönetimi
   identifier: unit_management
-  description: BirimLDAP Yönetim Yetkisi
+  description: Birim Yönetim Yetkisi
+student_management:
+  name: Öğrenci Yönetimi
+  identifier: student_management
+  description: Öğrenci Yönetim Yetkisi

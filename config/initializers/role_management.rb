@@ -77,6 +77,11 @@ class RoleManagement
              name:        'Birim Yönetimi',
              description: 'Birim Yönetim Yetkisi',
              privileges:  %i[read write destroy report]
+  permission :student_management,
+             name:        'Öğrenci Yönetimi',
+             description: 'Öğrenci Yönetim Yetkisi',
+             privileges:  %i[read write destroy report]
+
   # roles
   role :authorization_manager,
        name:        'Yetkilendirme Yöneticisi',
@@ -103,6 +108,7 @@ class RoleManagement
          meeting_management:          %i[read write destroy],
          meksis_management:           %i[read write destroy],
          reference_management:        %i[read write destroy],
+         student_management:          %i[read write destroy report],
          unit_management:             %i[read write destroy report]
        }
 end
