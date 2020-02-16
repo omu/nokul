@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Account
+module UserManagement
   class DisabilityController < ApplicationController
     before_action :set_user
 
@@ -15,7 +15,11 @@ module Account
     private
 
     def set_user
-      @user = User.friendly.find(params[:user_id])
+      @user = User.friendly.find(params[:id])
+    end
+
+    def authorized?
+      authorize(@user || User, policy_class: UserManagement::DisabilityPolicy)
     end
 
     def user_params

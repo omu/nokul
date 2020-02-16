@@ -1,5 +1,5 @@
 en:
-  account:
+  user_management:
     disability:
       edit:
         form_title: Update the Disability Status

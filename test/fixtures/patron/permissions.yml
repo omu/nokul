@@ -82,3 +82,7 @@ student_management:
   name: Öğrenci Yönetimi
   identifier: student_management
   description: Öğrenci Yönetim Yetkisi
+user_management:
+  name: Kullanıcı Yönetimi
+  identifier: user_management
+  description: Kullanıcı Yönetim Yetkisi

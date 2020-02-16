@@ -1,5 +1,5 @@
 tr:
-  account:
+  user_management:
     disability:
       edit:
         form_title: Engel Durumunu Güncelle

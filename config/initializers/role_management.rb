@@ -81,7 +81,10 @@ class RoleManagement
              name:        'Öğrenci Yönetimi',
              description: 'Öğrenci Yönetim Yetkisi',
              privileges:  %i[read write destroy report]
-
+  permission :user_management,
+             name:        'Kullanıcı Yönetimi',
+             description: 'Kullanıcı Yönetim Yetkisi',
+             privileges:  %i[read write destroy report]
   # roles
   role :authorization_manager,
        name:        'Yetkilendirme Yöneticisi',

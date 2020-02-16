@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   draw :account
   draw :calendar_management
   draw :course_management
+  draw :detsis
   draw :first_registration
   draw :instructiveness
   draw :location
@@ -24,8 +25,8 @@ Rails.application.routes.draw do
   draw :patron
   draw :reference
   draw :studentship
+  draw :user_management
   draw :yoksis
-  draw :detsis
 
   resources :students, only: %i[edit update]
 
@@ -36,11 +37,6 @@ Rails.application.routes.draw do
       get :curriculums, defaults: { format: :json }
       get :employees, default: { format: :json }
     end
-  end
-
-  resources :users, except: [:new, :create] do
-    get 'save_address_from_mernis', on: :member
-    get 'save_identity_from_mernis', on: :member
   end
 
   resources :agenda_types, except: :show, module: :committee
