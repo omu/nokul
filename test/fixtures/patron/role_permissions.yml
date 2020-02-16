@@ -62,3 +62,7 @@ sixteen:
   role: admin
   permission: meksis_management
   privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
+seventeen:
+  role: admin
+  permission: yoksis_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>

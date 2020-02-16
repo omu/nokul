@@ -62,3 +62,7 @@ meksis_management:
   name: MEKSİS Yönetimi
   identifier: meksis_management
   description: MEKSİS Yönetim Yetkisi
+yoksis_management:
+  name: YÖKSİS Yönetimi
+  identifier: yoksis_management
+  description: YÖKSİS Yönetim Yetkisi
