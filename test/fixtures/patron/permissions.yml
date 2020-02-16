@@ -70,3 +70,7 @@ reference_management:
   name: Referans Yönetimi
   identifier: reference_management
   description: Referans Tanımlama Yetkisi
+ldap_management:
+  name: LDAP Yönetimi
+  identifier: ldap_management
+  description: LDAP Yönetimi Yetkisi
