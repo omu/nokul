@@ -66,3 +66,7 @@ yoksis_management:
   name: YÖKSİS Yönetimi
   identifier: yoksis_management
   description: YÖKSİS Yönetim Yetkisi
+reference_management:
+  name: Referans Yönetimi
+  identifier: reference_management
+  description: Referans Tanımlama Yetkisi

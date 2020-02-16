@@ -65,6 +65,11 @@ class RoleManagement
              name:        'Meksis Yönetimi',
              description: 'Meksis Yönetim Yetkisi',
              privileges:  %i[read write destroy]
+  permission :reference_management,
+             name:        'Referans Yönetimi',
+             description: 'Referans Tanımlama Yetkisi',
+             privileges:  %i[read write destroy]
+
   # roles
   role :authorization_manager,
        name:        'Yetkilendirme Yöneticisi',
@@ -88,6 +93,7 @@ class RoleManagement
          detsis_management:           %i[read write destroy],
          location_management:         %i[read write destroy],
          meeting_management:          %i[read write destroy],
-         meksis_management:           %i[read write destroy]
+         meksis_management:           %i[read write destroy],
+         reference_management:        %i[read write destroy]
        }
 end
