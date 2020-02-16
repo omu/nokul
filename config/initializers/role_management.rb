@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/ClassLength
 class RoleManagement
   extend Patron::PermissionBuilder
   extend Patron::RoleBuilder
@@ -115,3 +116,4 @@ class RoleManagement
          unit_management:             %i[read write destroy report]
        }
 end
+# rubocop:enable Metrics/ClassLength
