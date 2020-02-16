@@ -34,3 +34,19 @@ nine:
   role: admin
   permission: curriculum_management
   privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy, :report]) %>
+ten:
+  role: admin
+  permission: committee_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
+eleven:
+  role: admin
+  permission: decision_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
+twelve:
+  role: admin
+  permission: agenda_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
+thirteen:
+  role: admin
+  permission: meeting_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>

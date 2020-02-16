@@ -34,3 +34,19 @@ curriculum_management:
   name: Müfredat Yönetimi
   identifier: curriculum_management
   description: Müfredat Yetkisi
+committee_management:
+  name: Kurul Yönetimi
+  identifier: committee_management
+  description: Kurul Yönetimi Yetkisi
+decision_management:
+  name: Karar Yönetimi
+  identifier: decision_management
+  description: Karar Yönetimi Yetkisi
+agenda_management:
+  name: Gündem Yönetimi
+  identifier: agenda_management
+  description: Gündem Yönetimi Yetkisi
+meeting_management:
+  name: Toplantı Yönetimi
+  identifier: meeting_management
+  description: Toplantı Yönetimi Yetkisi

@@ -37,6 +37,22 @@ class RoleManagement
              name:        'Müfredat Yönetimi',
              description: 'Müfredat Yönetimi Yetkisi',
              privileges:  %i[read write destroy report]
+  permission :committee_management,
+             name:        'Kurul Yönetimi',
+             description: 'Kurul Yönetimi Yetkisi',
+             privileges:  %i[read write destroy]
+  permission :decision_management,
+             name:        'Karar Yönetimi',
+             description: 'Karar Yönetimi Yetkisi',
+             privileges:  %i[read write destroy]
+  permission :agenda_management,
+             name:        'Gündem Yönetimi',
+             description: 'Gündem Yönetimi Yetkisi',
+             privileges:  %i[read write destroy]
+  permission :meeting_management,
+             name:        'Toplantı Yönetimi',
+             description: 'Toplantı Yönetimi Yetkisi',
+             privileges:  %i[read write destroy]
   # roles
   role :authorization_manager,
        name:        'Yetkilendirme Yöneticisi',
@@ -50,9 +66,13 @@ class RoleManagement
   role :admin,
        name:        'Admin',
        permissions: {
+         agenda_management:           %i[read write destroy],
          available_course_management: %i[read write destroy report],
          calendar_management:         %i[read write destroy],
+         committee_management:        %i[read write destroy],
          course_management:           %i[read write destroy report],
-         curriculum_management:       %i[read write destroy report]
+         curriculum_management:       %i[read write destroy report],
+         decision_management:         %i[read write destroy],
+         meeting_management:          %i[read write destroy]
        }
 end

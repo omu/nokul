@@ -6,6 +6,7 @@ module Committee
 
     before_action :set_committee
     before_action :set_agenda, only: %i[edit update destroy]
+    before_action :authorized?
 
     def index
       agendas =
@@ -44,6 +45,10 @@ module Committee
 
     def set_agenda
       @agenda = @committee.agendas.find(params[:id])
+    end
+
+    def authorized?
+      authorize([:committee, @agenda || Agenda])
     end
 
     def agenda_params
