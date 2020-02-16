@@ -1,15 +1,20 @@
 <div class='row'>
   <div class='col-lg-12'>
+    <%= action_bar do %>
+      <%= link_to_back reference_path %>
+    <% end %>
+  </div>
+  <div class='col-lg-12'>
     <div class='card'>
       <div class='card-header'>
         <%= fa_icon 'tags', text: t('.card_header') %>
         <div class='card-header-actions'>
-          <%= link_to_new t('.new_course_group_type_link'), new_course_group_type_path %>
+          <%= link_to_new t('.new_course_group_type_link'), new_reference_course_group_type_path %>
         </div>
       </div>
       <div class='card-body'>
         <%= render 'layouts/shared/smart_search_form',
-                   path:        course_group_types_path,
+                   path:        reference_course_group_types_path,
                    placeholder: t('.name') %>
         <table class='table table-responsive-sm table-striped'>
           <thead>
@@ -22,7 +27,7 @@
             <% @course_group_types.each do |course_group_type| %>
               <tr>
                 <td><%= course_group_type.name %></td>
-                <td><%= link_to_actions(course_group_type, except: :show) %></td>
+                <td><%= link_to_actions([:reference, course_group_type], except: :show) %></td>
               </tr>
             <% end %>
           </tbody>

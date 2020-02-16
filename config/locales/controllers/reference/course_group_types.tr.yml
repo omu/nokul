@@ -3,7 +3,7 @@ tr:
     attributes:
       course_group_type: &course_group_type_attributes
         name: Ders Grup Tür Adı
-  course_management:
+  reference:
     course_group_types:
       create:
         success: Ders grup türü başarıyla oluşturuldu.

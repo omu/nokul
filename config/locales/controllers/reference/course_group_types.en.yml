@@ -3,7 +3,7 @@ en:
     attributes:
       course_group_type: &course_group_type_attributes
         name: Course Group Type Name
-  course_management:
+  reference:
     course_group_types:
       create:
         success: Course group type successfully created.

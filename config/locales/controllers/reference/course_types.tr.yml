@@ -5,7 +5,7 @@ tr:
         name: Ders Türü
         code: Kod
         min_credit: Asgari Kredi
-  course_management:
+  reference:
     course_types:
       create:
         success: Ders türü başarıyla oluşturuldu.

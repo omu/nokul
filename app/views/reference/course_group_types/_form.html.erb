@@ -6,21 +6,15 @@
         <strong><%= form_title %></strong>
       </div>
       <div class='card-body'>
-        <%= simple_form_for(course_type) do |f| %>
+        <%= simple_form_for([:reference, course_group_type]) do |f| %>
           <div class='row'>
-            <div class='col-sm-12'>
+            <div class='form-group col-sm-12'>
               <%= f.error_notification %>
             </div>
-            <div class='col-sm-12'>
+            <div class='form-group col-sm-12'>
               <%= f.input :name, required: true %>
             </div>
-            <div class='col-sm-12'>
-              <%= f.input :code, required: true %>
-            </div>
-            <div class='col-sm-12'>
-              <%= f.input :min_credit, required: true %>
-            </div>
-            <div class='col-sm-12'>
+            <div class='form-group col-sm-12'>
               <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
               <%= link_to_back(:back) %>
             </div>

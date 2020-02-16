@@ -5,7 +5,7 @@ en:
         name: Course Type
         code: Code
         min_credit: Minimum Credit
-  course_management:
+  reference:
     course_types:
       create:
         success: Course type successfully created.
