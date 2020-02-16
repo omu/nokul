@@ -73,6 +73,10 @@ class RoleManagement
              name:        'LDAP Yönetimi',
              description: 'LDAP Yönetim Yetkisi',
              privileges:  %i[read write destroy]
+  permission :unit_management,
+             name:        'Birim Yönetimi',
+             description: 'Birim Yönetim Yetkisi',
+             privileges:  %i[read write destroy report]
   # roles
   role :authorization_manager,
        name:        'Yetkilendirme Yöneticisi',
@@ -94,10 +98,11 @@ class RoleManagement
          curriculum_management:       %i[read write destroy report],
          decision_management:         %i[read write destroy],
          detsis_management:           %i[read write destroy],
+         ldap_management:             %i[read write destroy],
          location_management:         %i[read write destroy],
          meeting_management:          %i[read write destroy],
          meksis_management:           %i[read write destroy],
          reference_management:        %i[read write destroy],
-         ldap_management:             %i[read write destroy]
+         unit_management:             %i[read write destroy report]
        }
 end

@@ -1,7 +1,7 @@
 one:
   role: admin
   permission: unit_management
-  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy, :report]) %>
 two:
   role: admin
   permission: course_management
