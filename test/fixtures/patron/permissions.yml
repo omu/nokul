@@ -50,3 +50,7 @@ meeting_management:
   name: Toplantı Yönetimi
   identifier: meeting_management
   description: Toplantı Yönetimi Yetkisi
+detsis_management:
+  name: Detsis Yönetimi
+  identifier: detsis_management
+  description: Detsis Yönetimi Yetkisi

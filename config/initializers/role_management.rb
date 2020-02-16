@@ -53,6 +53,10 @@ class RoleManagement
              name:        'Toplantı Yönetimi',
              description: 'Toplantı Yönetimi Yetkisi',
              privileges:  %i[read write destroy]
+  permission :detsis_management,
+             name:        'DETSİS Yönetimi',
+             description: 'DETSİS Yönetimi Yetkisi',
+             privileges:  %i[read write destroy]
   # roles
   role :authorization_manager,
        name:        'Yetkilendirme Yöneticisi',
@@ -73,6 +77,7 @@ class RoleManagement
          course_management:           %i[read write destroy report],
          curriculum_management:       %i[read write destroy report],
          decision_management:         %i[read write destroy],
+         detsis_management:           %i[read write destroy],
          meeting_management:          %i[read write destroy]
        }
 end

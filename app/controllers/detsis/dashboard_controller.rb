@@ -2,6 +2,8 @@
 
 module Detsis
   class DashboardController < ApplicationController
-    def index; end
+    def index
+      authorize %i[detsis dashboard]
+    end
   end
 end
