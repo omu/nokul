@@ -86,3 +86,11 @@ user_management:
   name: Kullanıcı Yönetimi
   identifier: user_management
   description: Kullanıcı Yönetim Yetkisi
+registration_management_for_students:
+  name: Öğrenciler için Kayıtlanma Yönetimi
+  identifier: registration_management_for_students
+  description: Öğrenciler için Kayıtlanma Yönetim Yetkisi
+registration_management_for_employees:
+  name: Personeller için Kayıtlanma Yönetimi
+  identifier: registration_management_for_employees
+  description: Personeller için Kayıtlanma Yönetim Yetkisi

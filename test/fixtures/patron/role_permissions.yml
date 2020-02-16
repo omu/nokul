@@ -82,3 +82,12 @@ twenty_one:
   role: admin
   permission: user_management
   privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy, :report]) %>
+twenty_two:
+  role: admin
+  permission: registration_management_for_students
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
+twenty_three:
+  role: admin
+  permission: registration_management_for_employees
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
+

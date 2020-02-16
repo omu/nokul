@@ -86,6 +86,15 @@ class RoleManagement
              name:        'Kullanıcı Yönetimi',
              description: 'Kullanıcı Yönetim Yetkisi',
              privileges:  %i[read write destroy report]
+  permission :registration_management_for_students,
+             name:        'Öğrenciler için Kayıtlanma Yönetimi',
+             description: 'Öğrenciler için Kayıtlanma Yönetim Yetkisi',
+             privileges:  %i[read write destroy]
+  permission :registration_management_for_employees,
+             name:        'Personeller için Kayıtlanma Yönetimi',
+             description: 'Personeller için Kayıtlanma Yönetim Yetkisi',
+             privileges:  %i[read write destroy]
+
   # roles
   role :authorization_manager,
        name:        'Yetkilendirme Yöneticisi',
@@ -99,21 +108,23 @@ class RoleManagement
   role :admin,
        name:        'Admin',
        permissions: {
-         agenda_management:           %i[read write destroy],
-         available_course_management: %i[read write destroy report],
-         calendar_management:         %i[read write destroy],
-         committee_management:        %i[read write destroy],
-         course_management:           %i[read write destroy report],
-         curriculum_management:       %i[read write destroy report],
-         decision_management:         %i[read write destroy],
-         detsis_management:           %i[read write destroy],
-         ldap_management:             %i[read write destroy],
-         location_management:         %i[read write destroy],
-         meeting_management:          %i[read write destroy],
-         meksis_management:           %i[read write destroy],
-         reference_management:        %i[read write destroy],
-         student_management:          %i[read write destroy report],
-         unit_management:             %i[read write destroy report]
+         agenda_management:                     %i[read write destroy],
+         available_course_management:           %i[read write destroy report],
+         calendar_management:                   %i[read write destroy],
+         committee_management:                  %i[read write destroy],
+         course_management:                     %i[read write destroy report],
+         curriculum_management:                 %i[read write destroy report],
+         decision_management:                   %i[read write destroy],
+         detsis_management:                     %i[read write destroy],
+         ldap_management:                       %i[read write destroy],
+         location_management:                   %i[read write destroy],
+         meeting_management:                    %i[read write destroy],
+         meksis_management:                     %i[read write destroy],
+         reference_management:                  %i[read write destroy],
+         student_management:                    %i[read write destroy report],
+         unit_management:                       %i[read write destroy report],
+         registration_management_for_students:  %i[read write destroy],
+         registration_management_for_employees: %i[read write destroy]
        }
 end
 # rubocop:enable Metrics/ClassLength
