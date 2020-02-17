@@ -10,7 +10,7 @@ module Instructiveness
     def edit; end
 
     def update
-      @course.saved_enrollments.each do |enrollment|
+      @course.saved_enrollments.where(available_course_group: @groups).each do |enrollment|
         new_point = grades_params[enrollment.id.to_s]
         grade = enrollment.grades.find_or_initialize_by(course_assessment_method: @assessment)
         grade.update(point: new_point) if grade.point != new_point
