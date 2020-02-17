@@ -16,7 +16,7 @@
   founded_at: 11.04.1975
 
 - name: 19 Mayıs Samsun Devlet Konservatuvarı
-  abbreviation: KONSERVATUVAR
+  abbreviation: KONSERVATUVAR-DİĞER
   yoksis_id: 122316
   parent_yoksis_id: 121946
   unit_type_id: Yüksekokul
@@ -26,10 +26,10 @@
   unit_instruction_type_id: Normal Öğretim
   founded_at: 11.07.1992
   issues:
-    - Devlet Konservatuvarı adıyla bir tane daha var, hangisi aktif?
+    - Devlet Konservatuvarı aktif olduğu için yarı pasif birime Diğer eklendi
 
 - name: Müzik Bölümü
-  abbreviation: MÜZİK
+  abbreviation: KONSERVATUVAR-DİĞER-MÜZİK
   yoksis_id: 122317
   parent_yoksis_id: 122316
   unit_type_id: Bölüm
@@ -41,7 +41,7 @@
   founded_at: 26.02.2009
 
 - name: Geleneksel Türk Müzikleri Anabilim Dalı
-  abbreviation: MÜZİK-GTM-AD
+  abbreviation: KONSERVATUVAR-DİĞER-MÜZİK-GTM-AD
   yoksis_id: 254783
   parent_yoksis_id: 122317
   unit_type_id: Anabilim Dalı
@@ -53,7 +53,7 @@
   founded_at: 16.04.2014
 
 - name: Kompozisyon ve Orkestra Şefliği Anasanat Dalı
-  abbreviation: MÜZİK-KOŞ-AD
+  abbreviation: KONSERVATUVAR-DİĞER-MÜZİK-KOŞ-AD
   yoksis_id: 122321
   parent_yoksis_id: 122317
   unit_type_id: Anasanat Dalı
@@ -65,7 +65,7 @@
   founded_at: 26.02.2009
 
 - name: Piyano Anasanat Dalı
-  abbreviation: MÜZİK-P-AD
+  abbreviation: KONSERVATUVAR-DİĞER-MÜZİK-P-AD
   yoksis_id: 122320
   parent_yoksis_id: 122317
   unit_type_id: Anasanat Dalı
@@ -77,7 +77,7 @@
   founded_at: 26.02.2009
 
 - name: Yaylı Çalgılar Anasanat Dalı
-  abbreviation: MÜZİK-YÇ-AD
+  abbreviation: KONSERVATUVAR-DİĞER-MÜZİK-YÇ-AD
   yoksis_id: 122319
   parent_yoksis_id: 122317
   unit_type_id: Anasanat Dalı
@@ -89,7 +89,7 @@
   founded_at: 26.02.2009
 
 - name: Üflemeli ve Vurmalı Çalgılar Anasanat Dalı
-  abbreviation: MÜZİK-ÜVÇ-AD
+  abbreviation: KONSERVATUVAR-DİĞER-MÜZİK-ÜVÇ-AD
   yoksis_id: 122318
   parent_yoksis_id: 122317
   unit_type_id: Anasanat Dalı
@@ -101,7 +101,7 @@
   founded_at: 26.02.2009
 
 - name: Müzikoloji Bölümü
-  abbreviation: MÜZİKO
+  abbreviation: KONSERVATUVAR-DİĞER-MÜZİKO
   yoksis_id: 122322
   parent_yoksis_id: 122316
   unit_type_id: Bölüm
@@ -113,7 +113,7 @@
   founded_at: 26.02.2009
 
 - name: Etnomüzikoloji ve Folklor Anasanat Dalı
-  abbreviation: MÜZİKO-EF-AD
+  abbreviation: KONSERVATUVAR-DİĞER-MÜZİKO-EF-AD
   yoksis_id: 122324
   parent_yoksis_id: 122322
   unit_type_id: Anasanat Dalı
@@ -125,7 +125,7 @@
   founded_at: 26.02.2009
 
 - name: Geleneksel ve Modal Müzik Anasanat Dalı
-  abbreviation: MÜZİKO-GMM-AD
+  abbreviation: KONSERVATUVAR-DİĞER-MÜZİKO-GMM-AD
   yoksis_id: 122325
   parent_yoksis_id: 122322
   unit_type_id: Anasanat Dalı
@@ -137,7 +137,7 @@
   founded_at: 26.02.2009
 
 - name: Genel Müzikoloji Anasanat Dalı
-  abbreviation: MÜZİKO-GM-AD
+  abbreviation: KONSERVATUVAR-DİĞER-MÜZİKO-GENEL-AD
   yoksis_id: 122323
   parent_yoksis_id: 122322
   unit_type_id: Anasanat Dalı
@@ -149,7 +149,7 @@
   founded_at: 26.02.2009
 
 - name: Sahne Sanatları Bölümü
-  abbreviation: SAHNE
+  abbreviation: KONSERVATUVAR-DİĞER-SAHNE
   yoksis_id: 122326
   parent_yoksis_id: 122316
   unit_type_id: Bölüm
@@ -161,7 +161,7 @@
   founded_at: 26.02.2009
 
 - name: Bale Anasanat Dalı
-  abbreviation: SAHNE-B-AD
+  abbreviation: KONSERVATUVAR-DİĞER-SAHNE-B-AD
   yoksis_id: 122329
   parent_yoksis_id: 122326
   unit_type_id: Anasanat Dalı
@@ -175,7 +175,7 @@
     - Detsis tarafında anasanat dalı başkanlığı yok
 
 - name: Opera Anasanat Dalı
-  abbreviation: SAHNE-O-AD
+  abbreviation: KONSERVATUVAR-DİĞER-SAHNE-O-AD
   yoksis_id: 122328
   parent_yoksis_id: 122326
   unit_type_id: Anasanat Dalı
@@ -189,7 +189,7 @@
     - Detsis tarafında anasanat dalı başkanlığı yok
 
 - name: Tiyatro Anasanat Dalı
-  abbreviation: SAHNE-T-AD
+  abbreviation: KONSERVATUVAR-DİĞER-SAHNE-T-AD
   yoksis_id: 122327
   parent_yoksis_id: 122326
   unit_type_id: Anasanat Dalı
@@ -1041,9 +1041,6 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
   founded_at: 07.03.2018
-  issues:
-    - Üst birim Bafra İşletme Fakültesi pasif görünüyor
-    - Yerleşke eksik
 
 - name: Sigortacılık ve Sosyal Güvenlik Anabilim Dalı
   abbreviation: SSG-AD
@@ -1058,8 +1055,6 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
   founded_at: 07.03.2018
-  issues:
-    - Yerleşke eksik
 
 - name: Ballıca Meslek Yüksekokulu
   abbreviation: BALLICA-MYO
@@ -1071,8 +1066,6 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 15.01.2016
-  issues:
-    - Detsis tarafındaki müdürlük yarı pasif
 
 - name: Ulaştırma Hizmetleri Bölümü
   abbreviation: BALLICA-MYO-UH
@@ -1140,7 +1133,7 @@
   founded_at: 22.02.2012
 
 - name: Devlet Konservatuvarı
-  abbreviation: KONSERVATUVAR-DİĞER
+  abbreviation: KONSERVATUVAR
   yoksis_id: 122303
   parent_yoksis_id: 121946
   unit_type_id: Yüksekokul
@@ -1151,7 +1144,7 @@
   founded_at: 10.09.2009
 
 - name: Müzik Bölümü
-  abbreviation: KONSERVATUVAR-DİĞER-MÜZİK
+  abbreviation: MÜZİK
   yoksis_id: 122304
   parent_yoksis_id: 122303
   unit_type_id: Bölüm
@@ -1163,7 +1156,7 @@
   founded_at: 10.09.2009
 
 - name: Geleneksel Türk Müzikleri Programı
-  abbreviation: KONSERVATUVAR-DİĞER-GTM-PR
+  abbreviation: MÜZİK-GTM-PR
   yoksis_id: 256111
   parent_yoksis_id: 122304
   unit_type_id: Önlisans/lisans Programı
@@ -7073,8 +7066,6 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
-  issues:
-    - s/Vinekoloji/Jinekoloji
 
 - name: Dölerme ve Suni Tohumlama (DR)
   abbreviation: DÖLERME-DR
@@ -8813,6 +8804,8 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
   founded_at: 12.07.2012
+  issues:
+    - Teknik yazımı hatalı
 
 - name: Kamu Hukuku (YL) (Tezli)
   abbreviation: KAMU-YL
@@ -9263,7 +9256,7 @@
   founded_at: 21.07.2011
 
 - name: İşletme ve Endüstri İlişkileri (YL) (Tezsiz) (İÖ)
-  abbreviation: İŞLENİ-YL
+  abbreviation: İŞLENİ-YZ-2
   yoksis_id: 219261
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -9474,8 +9467,6 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 02.03.2017
-  issues:
-    - Detsis tarafında bölüm başkanlığı yok
 
 - name: Tıp Fakültesi
   abbreviation: TIP
@@ -9841,6 +9832,8 @@
   foet_code: '721'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Deri ve Zührevi Hastalıklar Anabilim Dalı
   abbreviation: TIP-DAHİLİ-DERİ-AD
@@ -9853,8 +9846,6 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 26.02.2009
-  issues:
-    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Enfeksiyon Hastalıkları ve Klinik Mikrobiyoloji Anabilim Dalı
   abbreviation: TIP-DAHİLİ-EHKM-AD
@@ -10010,6 +10001,8 @@
   foet_code: '721'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Radyasyon Onkolojisi Anabilim Dalı
   abbreviation: TIP-DAHİLİ-RO-AD
@@ -10034,6 +10027,8 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 26.02.2009
+  issues:
+    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Radyoloji Anabilim Dalı
   abbreviation: TIP-DAHİLİ-RADYO-AD
@@ -10046,8 +10041,6 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 26.02.2009
-  issues:
-    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Girişimsel Radyoloji Bilim Dalı
   abbreviation: TIP-DAHİLİ-RADYO-GİRİŞİM-BD
@@ -10096,8 +10089,6 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 26.02.2009
-  issues:
-    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Spor Hekimliği Anabilim Dalı
   abbreviation: TIP-DAHİLİ-SPOR-AD
@@ -10293,8 +10284,6 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 13.10.2011
-  issues:
-    - İsimde kısaltma yapılmamalı
 
 - name: Çocuk Nefrolojisi Bilim Dalı
   abbreviation: TIP-DAHİLİ-ÇSH-NEFRO-BD
@@ -10763,8 +10752,6 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 14.03.2012
-  issues:
-    - Detsis tarafında bölüm başkanlığı yarı pasif
 
 - name: Gastronomi ve Mutfak Sanatları Anabilim Dalı
   abbreviation: GASTRONOMİ-AD
@@ -10777,11 +10764,9 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 05.04.2017
-  issues:
-    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Rekreasyon Yönetimi Bölümü
-  abbreviation: REKREASYON
+  abbreviation: REKYÖN
   yoksis_id: 214341
   parent_yoksis_id: 208125
   unit_type_id: Bölüm
@@ -10791,11 +10776,9 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 14.03.2012
-  issues:
-    - Detsis tarafında bölüm başkanlığı yok
 
 - name: Rekreasyon Yönetimi Anabilim Dalı
-  abbreviation: REKREASYON-AD
+  abbreviation: REKYÖN-AD
   yoksis_id: 328526
   parent_yoksis_id: 214341
   unit_type_id: Anabilim Dalı
@@ -10831,8 +10814,6 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 05.04.2017
-  issues:
-    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Turizm Rehberliği Programı
   abbreviation: REHBERLİK-PR
@@ -10871,8 +10852,6 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 05.04.2017
-  issues:
-    - Detsis tarafında anabilim dalı başkanlığı SOSYAL-BİLİM altında; SOSYAL-BİLİM-TURİŞ-ADB
 
 - name: Turizm İşletmeciliği Programı
   abbreviation: TURİŞ-PR
@@ -11672,7 +11651,7 @@
   founded_at: 26.02.2009
 
 - name: Beden Eğitimi ve Spor Bölümü
-  abbreviation: BES
+  abbreviation: BESB
   yoksis_id: 122374
   parent_yoksis_id: 242486
   unit_type_id: Bölüm
@@ -11684,7 +11663,7 @@
   founded_at: 26.02.2009
 
 - name: Beden Eğitimi ve Spor Eğitimi Anabilim Dalı
-  abbreviation: BES-AD
+  abbreviation: BESB-AD
   yoksis_id: 122375
   parent_yoksis_id: 122374
   unit_type_id: Anabilim Dalı
@@ -11713,7 +11692,7 @@
   duration: 4
 
 - name: Beden Eğitimi ve Spor Bölümü
-  abbreviation: BESEĞ
+  abbreviation: BES
   yoksis_id: 176337
   parent_yoksis_id: 242486
   unit_type_id: Bölüm
@@ -11724,11 +11703,9 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
   founded_at: 02.10.2013
-  issues:
-    - Detsis tarafında bölüm başkanlığı yok
 
 - name: Beden Eğitimi ve Spor Anabilim Dalı
-  abbreviation: BESEĞ-AD
+  abbreviation: BES-AD
   yoksis_id: 327807
   parent_yoksis_id: 176337
   unit_type_id: Anabilim Dalı
@@ -11739,11 +11716,9 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
   founded_at: 14.08.2017
-  issues:
-    - Mükerrer isimli birim; BES-AD
 
 - name: Rekreasyon Bölümü
-  abbreviation: REKRASYON
+  abbreviation: REKREASYON
   yoksis_id: 214343
   parent_yoksis_id: 242486
   unit_type_id: Bölüm
@@ -11755,7 +11730,7 @@
   founded_at: 14.03.2012
 
 - name: Rekreasyon Anabilim Dalı
-  abbreviation: REKRASYON-AD
+  abbreviation: REKREASYON-AD
   yoksis_id: 322903
   parent_yoksis_id: 214343
   unit_type_id: Anabilim Dalı
@@ -12181,8 +12156,6 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 01.06.2011
-  issues:
-    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Meyve Yetiştirme ve Islahı Anabilim Dalı
   abbreviation: BAHÇE-MEYVE-AD
@@ -12195,8 +12168,6 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 01.06.2011
-  issues:
-    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Sebze Yetiştirme ve Islahı Anabilim Dalı
   abbreviation: BAHÇE-SEBZE-AD
@@ -12209,8 +12180,6 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 01.06.2011
-  issues:
-    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Süs Bitkileri Yetiştirme ve Islahı Anabilim Dalı
   abbreviation: BAHÇE-SÜS-AD
@@ -12223,8 +12192,6 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 01.06.2011
-  issues:
-    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Bitki Koruma Bölümü
   abbreviation: BİTKİKOR
@@ -12262,8 +12229,6 @@
   foet_code: '421'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  issues:
-    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Fitopatoloji Anabilim Dalı
   abbreviation: BİTKİKOR-FİTO-AD
@@ -12275,8 +12240,6 @@
   foet_code: '621'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  issues:
-    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Bitkisel Üretim Bölümü
   abbreviation: BİTKİÜR
@@ -12426,8 +12389,6 @@
   foet_code: '621'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  issues:
-    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Tarım İşletmeciliği Anabilim Dalı
   abbreviation: TARIMEKO-İŞ-AD
@@ -12439,8 +12400,6 @@
   foet_code: '621'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  issues:
-    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Tarım Makineleri ve Teknolojileri Mühendiliği Bölümü
   abbreviation: TARIMAKTEK
@@ -12532,8 +12491,6 @@
   foet_code: '421'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  issues:
-    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Enzim ve Mikrobiyel Biyoteknoloji Anabilim Dalı
   abbreviation: TARIMBİYOTEK-MİKRO-AD
@@ -12546,8 +12503,6 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 26.02.2009
-  issues:
-    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Hayvansal Biyoteknoloji Anabilim Dalı
   abbreviation: TARIMBİYOTEK-HAYVAN-AD
@@ -12599,8 +12554,6 @@
   foet_code: '621'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  issues:
-    - Detsis tarafında anabilim dalı başkanlığı FEN-BİLİM altında; FEN-BİLİM-TARIMYAP-ADB
 
 - name: Tarla Bitkileri Bölümü
   abbreviation: TARLABİTKİ
@@ -12625,8 +12578,6 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 25.01.2012
-  issues:
-    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Tahıllar ve Yemeklk Baklagiller Anabilim Dalı
   abbreviation: TARLABİTKİ-TAHIL-AD
@@ -12641,7 +12592,6 @@
   founded_at: 25.01.2012
   issues:
     - İsimdeki Yemeklik yazımı hatalı
-    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Tarla Bitkileri Anabilim Dalı
   abbreviation: TARLABİTKİ-AD
@@ -12681,8 +12631,6 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   founded_at: 25.01.2012
-  issues:
-    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Toprak Bilimi ve Bitki Besleme Bölümü
   abbreviation: TOPRAKBİL
@@ -12705,8 +12653,6 @@
   foet_code: '621'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  issues:
-    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Toprak Anabilim Dalı
   abbreviation: TOPRAKBİL-TOPRAK-AD
@@ -12733,7 +12679,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   issues:
-    - Detsis tarafında anabilim dalı başkanlığı FEN-BİLİM altında; FEN-BİLİM-TOPRAKBİL-ADB
+    - Detsis tarafında ismi Toprak Bilimi Anabilim Dalı Başkanlığı
 
 - name: Toprak Bilimi ve Bitki Besleme Programı
   abbreviation: TOPRAKBİL-PR
@@ -12770,8 +12716,6 @@
   foet_code: '421'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  issues:
-    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Hayvan Yetiştirme Anabilim Dalı
   abbreviation: ZOOTEKNİ-HAYVAN-AD
@@ -12784,7 +12728,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   issues:
-    - Detsis tarafında anabilim dalı başkanlığı yok
+    - Detsis tarafında ismi Hayvan Yetiştirme ve Islahı Anabilim Dalı Başkanlığı
 
 - name: Yemler ve Hayvan Besleme Anabilim Dalı
   abbreviation: ZOOTEKNİ-YEM-AD
@@ -12796,8 +12740,6 @@
   foet_code: '621'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
-  issues:
-    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Zootekni Programı
   abbreviation: ZOOTEKNİ-PR
@@ -15572,6 +15514,7 @@
   duration: 2
 
 - name: Kompozisyon ve Orkestra Şefi Anasanat Dalı
+  abbreviation: MÜZİK-KOŞ-AD
   yoksis_id: 122308
   parent_yoksis_id: 122304
   unit_type_id: Anasanat Dalı
@@ -15579,8 +15522,11 @@
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Piyano Anasanat Dalı
+  abbreviation: MÜZİK-PİYANO-AD
   yoksis_id: 122307
   parent_yoksis_id: 122304
   unit_type_id: Anasanat Dalı
@@ -15588,8 +15534,11 @@
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Yaylı Çalgılar Anasanat Dalı
+  abbreviation: MÜZİK-YÇ-AD
   yoksis_id: 122306
   parent_yoksis_id: 122304
   unit_type_id: Anasanat Dalı
@@ -15597,8 +15546,11 @@
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Üflemeli ve Vurmalı Çalgılar Anasanat Dalı
+  abbreviation: MÜZİK-ÜVÇ-AD
   yoksis_id: 122305
   parent_yoksis_id: 122304
   unit_type_id: Anasanat Dalı
@@ -15606,8 +15558,11 @@
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Müzikoloji Bölümü
+  abbreviation: MÜZİKO
   yoksis_id: 122309
   parent_yoksis_id: 122303
   unit_type_id: Bölüm
@@ -15617,6 +15572,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Etnomüzikoloji ve Folklor Anabilim Dalı
+  abbreviation: MÜZİKO-EF-AD
   yoksis_id: 122311
   parent_yoksis_id: 122309
   unit_type_id: Anabilim Dalı
@@ -15624,8 +15580,11 @@
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Geleneksel ve Modal Müzikler Anabilim Dalı
+  abbreviation: MÜZİKO-GMM-AD
   yoksis_id: 122312
   parent_yoksis_id: 122309
   unit_type_id: Anabilim Dalı
@@ -15633,8 +15592,11 @@
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Genel Müzikoloji Anabilim Dalı
+  abbreviation: MÜZİKO-GENEL-AD
   yoksis_id: 122310
   parent_yoksis_id: 122309
   unit_type_id: Anabilim Dalı
@@ -15642,8 +15604,11 @@
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Sahne Sanatları Bölümü
+  abbreviation: SAHNE
   yoksis_id: 122313
   parent_yoksis_id: 122303
   unit_type_id: Bölüm
@@ -15653,6 +15618,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Bale Anasanat Dalı
+  abbreviation: SAHNE-BALE-AD
   yoksis_id: 122315
   parent_yoksis_id: 122313
   unit_type_id: Anasanat Dalı
@@ -15660,8 +15626,11 @@
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Opera Anasanat Dalı
+  abbreviation: SAHNE-OPERA-AD
   yoksis_id: 143426
   parent_yoksis_id: 122313
   unit_type_id: Anasanat Dalı
@@ -15669,8 +15638,11 @@
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Tiyatro Anasanat Dalı
+  abbreviation: SAHNE-TİYATRO-AD
   yoksis_id: 122314
   parent_yoksis_id: 122313
   unit_type_id: Anasanat Dalı
@@ -15678,6 +15650,8 @@
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Diş Hekimliği Programı (KKTC Uyruklu)
   yoksis_id: 258804
@@ -20825,6 +20799,7 @@
   duration: 2
 
 - name: Lojistik Programı
+  abbreviation: TERME-MYO-YO-L-PR
   yoksis_id: 317313
   parent_yoksis_id: 317332
   unit_type_id: Önlisans/lisans Programı
@@ -21352,6 +21327,7 @@
   duration: 2
 
 - name: Mekatronik Programı
+  abbreviation: YEŞİLYURT-MYO-METAL-M-PR
   yoksis_id: 216349
   parent_yoksis_id: 202463
   unit_type_id: Önlisans/lisans Programı
@@ -21723,7 +21699,6 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   issues:
-    - Üst birimi olan Çarşamba İnsan Ve Toplum Bilimleri Fakültesi pasif
     - Yerleşke eksik
 
 - name: Mütercim Tercümanlık (İngilizce) Anabilim Dalı
@@ -22187,7 +22162,7 @@
   duration: 4
 
 - name: İlahiyat Programı (Uzaktan Öğretim) (İlitam) (Lisans Tamamlama)
-  abbreviation: İLAHİYAT-PR-UZ
+  abbreviation: İLAHİYAT-PR-UZ-LT
   yoksis_id: 215478
   parent_yoksis_id: 122157
   unit_type_id: Önlisans/lisans Programı
@@ -22254,6 +22229,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Muhasebe ve Vergi Uygulamaları Programı
+  abbreviation: BAFRA-MYO-MV-PR
   yoksis_id: 383182
   parent_yoksis_id: 169471
   unit_type_id: Önlisans/lisans Programı
@@ -22289,14 +22265,18 @@
   duration: 2
 
 - name: Astronomi Eğitim Uygulama ve Araştırma Merkezi
+  abbreviation: ASTRO
   yoksis_id: 385001
   parent_yoksis_id: 121946
   unit_type_id: Uygulama ve Araştırma Merkezi
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
 - name: Sigortacılık ve Aktüerya Bilimleri Bölümü
+  abbreviation: SAB
   yoksis_id: 389933
   parent_yoksis_id: 293681
   unit_type_id: Bölüm
@@ -22307,6 +22287,7 @@
   duration: 4
 
 - name: Sigortacılık ve Aktüerya Bilimleri Anabilim Dalı
+  abbreviation: SAB-AD
   yoksis_id: 389935
   parent_yoksis_id: 389933
   unit_type_id: Anabilim Dalı
@@ -22315,8 +22296,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Sigortacılık ve Aktüerya Bilimleri Programı
+  abbreviation: SAB-PR
   yoksis_id: 392833
   parent_yoksis_id: 389933
   unit_type_id: Önlisans/lisans Programı
@@ -22338,14 +22322,18 @@
   duration: 4
 
 - name: Dil ve Konuşma Bozuklukları Eğitim Araştırma ve Uygulama Merkezi
+  abbreviation: DKBE
   yoksis_id: 389044
   parent_yoksis_id: 121946
   unit_type_id: Uygulama ve Araştırma Merkezi
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
 - name: Eczacılık Fakültesi
+  abbreviation: ECZACILIK
   yoksis_id: 391242
   parent_yoksis_id: 121946
   unit_type_id: Fakülte
@@ -22355,10 +22343,13 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Eğitim Programları ve Öğretim (YL) (Tezsiz) (Uzaktan Öğretim)
+  abbreviation: EPO-YZ-UZ
   yoksis_id: 408265
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
   duration: 2
@@ -22373,10 +22364,13 @@
   duration: 2
 
 - name: Nanobilim ve Nanoteknoloji Anabilim Dalı (Disiplinlerarası)
+  abbreviation: NANO-AD
   yoksis_id: 406607
   parent_yoksis_id: 122386
   unit_type_id: Disiplinlerarası Anabilim Dalı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
@@ -22417,6 +22411,7 @@
   duration: 2
 
 - name: Müzikte Yorumculuk (Sy)
+  abbreviation: MY-SY
   yoksis_id: 390166
   parent_yoksis_id: 208606
   unit_type_id: Sanatta Yeterlilik Programı
@@ -22427,47 +22422,63 @@
   duration: 4
 
 - name: Kenevir Araştırma Enstitüsü
+  abbreviation: KENEVİR
   yoksis_id: 388477
   parent_yoksis_id: 121946
   unit_type_id: Enstitü
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
 - name: Gıda, Yem ve İlaç Anabilim Dalı
+  abbreviation: KENEVİR-GYİ-AD
   yoksis_id: 391649
   parent_yoksis_id: 388477
   unit_type_id: Anabilim Dalı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
 - name: Sanayi ve Pazarlama Anabilim Dalı
+  abbreviation: KENEVİR-SP-AD
   yoksis_id: 391747
   parent_yoksis_id: 388477
   unit_type_id: Anabilim Dalı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
 - name: Tarım ve Islah Anabilim Dalı
+  abbreviation: KENEVİR-TI-AD
   yoksis_id: 391648
   parent_yoksis_id: 388477
   unit_type_id: Anabilim Dalı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
 - name: Kök Hücre Uygulama ve Araştırma Merkezi
+  abbreviation: KÖKHÜCRE
   yoksis_id: 393813
   parent_yoksis_id: 121946
   unit_type_id: Uygulama ve Araştırma Merkezi
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
 - name: Şehir ve Bölge Planlama Programı
+  abbreviation: ŞEHİR-PR
   yoksis_id: 386187
   parent_yoksis_id: 251540
   unit_type_id: Önlisans/lisans Programı
@@ -22479,77 +22490,108 @@
   duration: 4
 
 - name: Deney Hayvanları Araştırmaları (YL) (Tezli)
+  abbreviation: SAĞLIK-BİLİM-DHA-YL
   yoksis_id: 393122
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
 - name: Dil ve Konuşma Terapisi (YL) (Tezli)
+  abbreviation: DİLKOT-YL
   yoksis_id: 393050
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
 - name: Evde Hasta Bakım Hemşireliği (YL) (Tezli)
+  abbreviation: EHBH-YL
   yoksis_id: 392993
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
 - name: Evde Hasta Bakım Hemşireliği (YL) (Tezsiz) (İÖ)
+  abbreviation: EHBH-YZ-2
   yoksis_id: 392994
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
 
 - name: Evde Hasta Bakım Hemşireliği (YL) (Tezsiz) (Uzaktan Öğretim)
+  abbreviation: EHBH-YZ-UZ
   yoksis_id: 392995
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
   duration: 2
 
 - name: Radyoloji Anabilim Dalı
+  abbreviation: SAĞLIK-BİLİM-RADYO-AD
   yoksis_id: 407971
   parent_yoksis_id: 122387
   unit_type_id: Anabilim Dalı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - TIP-DAHİLİ-RADYO-AD ile mükerrer isim
 
 - name: Veteriner İmmünihistoloji ve Embriyoloji (DR)
+  abbreviation: VETERİNER-İE-DR
   yoksis_id: 405472
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - İsimde hata olabilir, çoğu yerde Veteriner Histoloji ve Embriyoloji olarak geçmiş
 
 - name: Veterinerlik Zootekni (DR)
+  abbreviation: VETERİNER-ZOO-DR-DİĞER
   yoksis_id: 393049
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - Mükerrer birim
 
 - name: Dil ve Konuşma Terapisi Programı
+  abbreviation: DİLKOT-PR
   yoksis_id: 386857
   parent_yoksis_id: 293579
   unit_type_id: Önlisans/lisans Programı
@@ -22561,134 +22603,186 @@
   duration: 4
 
 - name: Odyoloji Bölümü
+  abbreviation: ODYO
   yoksis_id: 386330
   parent_yoksis_id: 293577
   unit_type_id: Bölüm
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
 - name: Odyoloji Anabilim Dalı
+  abbreviation: ODYO-AD
   yoksis_id: 386331
   parent_yoksis_id: 386330
   unit_type_id: Anabilim Dalı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
 - name: Ortez-Protez Bölümü
+  abbreviation: ORTEZ
   yoksis_id: 386328
   parent_yoksis_id: 293577
   unit_type_id: Bölüm
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
 - name: Ortez-Protez Anabilim Dalı
+  abbreviation: ORTEZ-AD
   yoksis_id: 386329
   parent_yoksis_id: 386328
   unit_type_id: Anabilim Dalı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Çocuk Gelişimi Bölümü
+  abbreviation: ÇOCUKGELİŞİM
   yoksis_id: 389166
   parent_yoksis_id: 293577
   unit_type_id: Bölüm
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
 - name: Çocuk Gelişimi Anabilim Dalı
+  abbreviation: ÇOCUKGELİŞİM-AD
   yoksis_id: 389167
   parent_yoksis_id: 389166
   unit_type_id: Anabilim Dalı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Arkeoloji (DR)
+  abbreviation: ARKEO-DR
   yoksis_id: 393051
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
 - name: Girişimcilik ve Yenilikçilik Anabilim Dalı (Disiplinlerarası)
+  abbreviation: SOSYAL-BİLİM-GY-AD-DA
   yoksis_id: 390151
   parent_yoksis_id: 122388
   unit_type_id: Disiplinlerarası Anabilim Dalı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
 - name: Girişimcilik ve Yenilikçilik (YL) (İngilizce) (Tezli)
+  abbreviation: SOSYAL-BİLİM-GY-YL-İNG
   yoksis_id: 390152
   parent_yoksis_id: 390151
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: İngilizce
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
 - name: Girişimcilik ve Yenilikçilik (YL) (İngilizce) (Tezsiz)
+  abbreviation: SOSYAL-BİLİM-GY-YZ-İNG
   yoksis_id: 406572
   parent_yoksis_id: 390151
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: İngilizce
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
 - name: Girişimcilik ve Yenilikçilik (YL) (Tezli)
+  abbreviation: SOSYAL-BİLİM-GY-YL
   yoksis_id: 390153
   parent_yoksis_id: 390151
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
 - name: Yenilikçilik ve Girişimcilik (YL) (İngilizce) (Tezsiz) (Uzaktan Öğretim)
+  abbreviation: SOSYAL-BİLİM-GY-YZ-UZ-İNG
   yoksis_id: 406573
   parent_yoksis_id: 390151
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: İngilizce
   unit_instruction_type_id: Uzaktan Öğretim
   duration: 2
+  issues:
+    - İsim Girişimcilik ve Yenilikçilik olmalı
 
 - name: İslam Hukuku (YL) (Tezli)
+  abbreviation: İSLAMH-YL
   yoksis_id: 390206
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
 - name: Kelam (YL) (Tezli)
+  abbreviation: KELAM-YL
   yoksis_id: 390207
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
 
 - name: Genel Dahiliye Bilim Dalı
+  abbreviation: TIP-DAHİLİ-İÇH-GENEL-BD
   yoksis_id: 384120
   parent_yoksis_id: 121970
   unit_type_id: Bilim Dalı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
 - name: Eskiçağ Tarihi Anabilim Dalı
+  abbreviation: İNSAN-TARİH-ESKİÇAĞ-AD
   yoksis_id: 383959
   parent_yoksis_id: 381679
   unit_type_id: Anabilim Dalı
@@ -22698,6 +22792,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Genel Türk Tarihi Anabilim Dalı
+  abbreviation: İNSAN-TARİH-GTT-AD
   yoksis_id: 383960
   parent_yoksis_id: 381679
   unit_type_id: Anabilim Dalı
@@ -22708,6 +22803,7 @@
   duration: 2
 
 - name: Ortaçağ Tarihi Anabilim Dalı
+  abbreviation: İNSAN-TARİH-ORTAÇAĞ-AD
   yoksis_id: 383958
   parent_yoksis_id: 381679
   unit_type_id: Anabilim Dalı
@@ -22717,6 +22813,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Tarih Programı
+  abbreviation: İNSAN-TARİH-PR
   yoksis_id: 392832
   parent_yoksis_id: 381679
   unit_type_id: Önlisans/lisans Programı
@@ -22728,6 +22825,7 @@
   duration: 4
 
 - name: Türkiye Cumhuriyeti Tarihi Anabilim Dalı
+  abbreviation: İNSAN-TARİH-TC-AD
   yoksis_id: 383956
   parent_yoksis_id: 381679
   unit_type_id: Anabilim Dalı
@@ -22737,6 +22835,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Yakınçağ Tarihi Anabilim Dalı
+  abbreviation: İNSAN-TARİH-YAKINÇAĞ-AD
   yoksis_id: 383930
   parent_yoksis_id: 381679
   unit_type_id: Anabilim Dalı
@@ -22747,6 +22846,7 @@
   duration: 2
 
 - name: Yeniçağ Tarihi Anabilim Dalı
+  abbreviation: İNSAN-TARİH-YENİÇAĞ-AD
   yoksis_id: 383957
   parent_yoksis_id: 381679
   unit_type_id: Anabilim Dalı
