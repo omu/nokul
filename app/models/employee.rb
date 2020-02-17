@@ -42,6 +42,6 @@ class Employee < ApplicationRecord
   end
 
   def given_course_groups_of(course)
-    self == course.coordinator ? course.groups : course.groups.joins(groups: :lecturers).where('lecturer_id = ?', id)
+    self == course.coordinator ? course.groups : course.groups.joins(:lecturers).where('lecturer_id = ?', id)
   end
 end
