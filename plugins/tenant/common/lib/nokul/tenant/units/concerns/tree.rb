@@ -11,14 +11,14 @@ module Nokul
             @tree ||= begin
               tree = Hash.new { |hash, key| hash[key] = [] }
               each do |unit|
-                tree[unit.parent_id.to_i] << unit unless unit.parent_id.nil?
+                tree[unit.parent_id.to_i] << unit if unit.parent_id
               end
               tree
             end
           end
 
           def root
-            find { |unit| !unit.parent_id.nil? && unit.parent_id.to_i.zero? }
+            find { |unit| unit.parent_id&.to_i&.zero? }
           end
 
           def visit_unit(unit = root, level = 0, &block)

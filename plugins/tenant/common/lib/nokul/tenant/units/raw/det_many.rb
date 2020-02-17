@@ -101,9 +101,10 @@ module Nokul
           end
 
           def mark_root(units, root_id)
-            root = units.find { |unit| !unit.detsis_id.nil? && unit.detsis_id.to_i == root_id.to_i }
-            root.parent_administrative_identity_code = 0
-            units
+            units.tap do
+              root = units.find { |unit| unit.detsis_id&.to_i == root_id.to_i }
+              root.parent_administrative_identity_code = 0
+            end
           end
 
           def produce_units
