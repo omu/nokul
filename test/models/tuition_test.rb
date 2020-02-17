@@ -8,7 +8,8 @@ class TuitionTest < ActiveSupport::TestCase
 
   # relations
   belongs_to :academic_term
-  belongs_to :unit
+  has_many :unit_tuitions, dependent: :destroy
+  has_many :units, through: :unit_tuitions
 
   # validations: numericality
   validates_numericality_of :fee
