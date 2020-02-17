@@ -40,4 +40,8 @@ class Employee < ApplicationRecord
     AvailableCourse.joins(groups: :lecturers)
                    .where('coordinator_id = ? OR lecturer_id = ?', id, id)
   end
+
+  def given_course_groups_of(course)
+    self == course.coordinator ? course.groups : course.groups.joins(groups: :lecturers).where('lecturer_id = ?', id)
+  end
 end
