@@ -6,7 +6,7 @@ module Xokul
 
     def initialize(endpoint)
       @endpoint = endpoint
-      @headers  = { 'Content-Type' => 'application/json' }
+      @headers  = { 'Content-Type' => 'application/json', 'X-Permitted-Cross-Domain-Policies' => 'none' }
     end
 
     # Will be redesigned using dispatcher.
