@@ -4,7 +4,7 @@ module Xokul
   class API
     include ActiveSupport::Configurable
 
-    config_accessor :namespace, :version, instance_writer: false
+    config_accessor :synopsis, :version, instance_writer: false
 
     def initialize(*)
       @conn = Connection.new(Configuration.endpoint)

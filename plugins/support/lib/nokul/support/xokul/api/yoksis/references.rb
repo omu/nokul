@@ -2,11 +2,14 @@
 
 module Xokul
   module Yoksis
-    module References
-      module_function
+    class References < API
+      configure do |config|
+        config.synopsis = 'Get references provided by YOKSIS'
+        config.version  = '1'
+      end
 
       def cities
-        Connection.get '/yoksis/references/cities'
+        conn.get '/yoksis/references/cities'
       end
     end
   end
