@@ -5275,7 +5275,7 @@
   district_id: İlkadım
 
 - name: Geleneksel Türk Müzikleri Anasanat Dalı Başkanlığı
-  abbreviation: KONSERVATUVAR-DİĞER-MÜZİK-GTM-AD
+  abbreviation: KONSERVATUVAR-DİĞER-MÜZİK-GTM-ADB
   parent_yoksis_id: 254783
   detsis_id: 40140864
   parent_detsis_id: 55870850
@@ -12329,8 +12329,8 @@
   parent_detsis_id: 46697017
   unit_type_id: Yüksekokul Disiplin Kurulu
   unit_status_id: Yarı Pasif
-  district_id: Ballıca
-  district_id_: Ballıca
+  district_id: 19 Mayıs
+  district_id_: 19 Mayıs
 
 - name: Meslek Yüksekokulu Kurulu
   abbreviation: BALLICA-MYO-KUR
@@ -12338,8 +12338,8 @@
   parent_detsis_id: 46697017
   unit_type_id: Yüksekokul Kurulu
   unit_status_id: Yarı Pasif
-  district_id: Ballıca
-  district_id_: Ballıca
+  district_id: 19 Mayıs
+  district_id_: 19 Mayıs
 
 - name: Meslek Yüksekokulu Sekreterliği
   abbreviation: BALLICA-MYO-SEK
@@ -12347,8 +12347,8 @@
   parent_detsis_id: 46697017
   unit_type_id: Yüksekokul Sekreterliği
   unit_status_id: Aktif
-  district_id: Ballıca
-  district_id_: Ballıca
+  district_id: 19 Mayıs
+  district_id_: 19 Mayıs
 
 - name: Meslek Yüksekokulu Yönetim Kurulu
   abbreviation: BALLICA-MYO-YÖNKUR
@@ -12356,8 +12356,8 @@
   parent_detsis_id: 46697017
   unit_type_id: Yüksekokul Yönetim Kurulu
   unit_status_id: Yarı Pasif
-  district_id: Ballıca
-  district_id_: Ballıca
+  district_id: 19 Mayıs
+  district_id_: 19 Mayıs
 
 - name: Personel İşleri Birimi
   detsis_id: 31828083
@@ -12831,7 +12831,7 @@
   district_id_: Atakum
 
 - name: Biyometri-Genetik Anabilim Dalı Başkanlığı
-  abbreviation: ZOOTEKNİ-BİYOGEN-AD
+  abbreviation: ZOOTEKNİ-BİYOGEN-ADB
   parent_yoksis_id: 122272
   detsis_id: 54790359
   parent_detsis_id: 59625322
@@ -12861,7 +12861,7 @@
   district_id_: Atakum
 
 - name: Tarih Bölüm Başkanlığı
-  abbreviation: İNSAN-TARİH
+  abbreviation: İNSAN-TARİH-BB
   parent_yoksis_id: 381679
   detsis_id: 13806242
   parent_detsis_id: 93417155

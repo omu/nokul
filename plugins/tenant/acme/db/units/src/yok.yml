@@ -22270,6 +22270,8 @@
   parent_yoksis_id: 121946
   unit_type_id: Uygulama ve Araştırma Merkezi
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
@@ -22325,6 +22327,8 @@
   parent_yoksis_id: 121946
   unit_type_id: Uygulama ve Araştırma Merkezi
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
@@ -22344,6 +22348,8 @@
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
   duration: 2
@@ -22363,6 +22369,8 @@
   parent_yoksis_id: 122386
   unit_type_id: Disiplinlerarası Anabilim Dalı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
@@ -22419,6 +22427,8 @@
   parent_yoksis_id: 121946
   unit_type_id: Enstitü
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -22429,6 +22439,8 @@
   parent_yoksis_id: 388477
   unit_type_id: Anabilim Dalı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
@@ -22438,6 +22450,8 @@
   parent_yoksis_id: 388477
   unit_type_id: Anabilim Dalı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
@@ -22447,6 +22461,8 @@
   parent_yoksis_id: 388477
   unit_type_id: Anabilim Dalı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
@@ -22456,6 +22472,8 @@
   parent_yoksis_id: 121946
   unit_type_id: Uygulama ve Araştırma Merkezi
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
@@ -22477,6 +22495,8 @@
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -22487,6 +22507,8 @@
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -22497,6 +22519,8 @@
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -22507,6 +22531,8 @@
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
@@ -22517,6 +22543,8 @@
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
   duration: 2
@@ -22527,6 +22555,8 @@
   parent_yoksis_id: 122387
   unit_type_id: Anabilim Dalı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   issues:
@@ -22538,6 +22568,8 @@
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
@@ -22550,6 +22582,8 @@
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
@@ -22574,6 +22608,8 @@
   parent_yoksis_id: 293577
   unit_type_id: Bölüm
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
@@ -22583,6 +22619,8 @@
   parent_yoksis_id: 386330
   unit_type_id: Anabilim Dalı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
@@ -22592,6 +22630,8 @@
   parent_yoksis_id: 293577
   unit_type_id: Bölüm
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
@@ -22601,6 +22641,8 @@
   parent_yoksis_id: 386328
   unit_type_id: Anabilim Dalı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   issues:
@@ -22612,6 +22654,8 @@
   parent_yoksis_id: 293577
   unit_type_id: Bölüm
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
@@ -22621,6 +22665,8 @@
   parent_yoksis_id: 389166
   unit_type_id: Anabilim Dalı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   issues:
@@ -22632,6 +22678,8 @@
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
@@ -22642,6 +22690,8 @@
   parent_yoksis_id: 122388
   unit_type_id: Disiplinlerarası Anabilim Dalı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -22662,6 +22712,8 @@
   parent_yoksis_id: 390151
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: İngilizce
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -22672,6 +22724,8 @@
   parent_yoksis_id: 390151
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -22682,6 +22736,8 @@
   parent_yoksis_id: 390151
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: İngilizce
   unit_instruction_type_id: Uzaktan Öğretim
   duration: 2
@@ -22694,6 +22750,8 @@
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -22704,6 +22762,8 @@
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -22714,6 +22774,8 @@
   parent_yoksis_id: 121970
   unit_type_id: Bilim Dalı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
