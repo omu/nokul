@@ -22229,6 +22229,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Muhasebe ve Vergi Uygulamaları Programı
+  abbreviation: BAFRA-MYO-MV-PR
   yoksis_id: 383182
   parent_yoksis_id: 169471
   unit_type_id: Önlisans/lisans Programı
