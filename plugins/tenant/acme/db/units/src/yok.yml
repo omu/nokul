@@ -15581,7 +15581,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   issues:
-   - Detsis tarafında anabilim dalı başkanlığı yok
+    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Geleneksel ve Modal Müzikler Anabilim Dalı
   abbreviation: MÜZİKO-GMM-AD
@@ -15593,7 +15593,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   issues:
-   - Detsis tarafında anabilim dalı başkanlığı yok
+    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Genel Müzikoloji Anabilim Dalı
   abbreviation: MÜZİKO-GENEL-AD
@@ -15605,7 +15605,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   issues:
-   - Detsis tarafında anabilim dalı başkanlığı yok
+    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Sahne Sanatları Bölümü
   abbreviation: SAHNE
@@ -15627,7 +15627,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   issues:
-   - Detsis tarafında anabilim dalı başkanlığı yok
+    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Opera Anasanat Dalı
   abbreviation: SAHNE-OPERA-AD
@@ -15639,7 +15639,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   issues:
-   - Detsis tarafında anabilim dalı başkanlığı yok
+    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Tiyatro Anasanat Dalı
   abbreviation: SAHNE-TİYATRO-AD
@@ -15651,7 +15651,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   issues:
-   - Detsis tarafında anabilim dalı başkanlığı yok
+    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Diş Hekimliği Programı (KKTC Uyruklu)
   yoksis_id: 258804
