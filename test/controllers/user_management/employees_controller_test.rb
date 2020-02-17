@@ -2,8 +2,8 @@
 
 require 'test_helper'
 
-module Accounts
-  class EmployeesController < ActionDispatch::IntegrationTest
+module UserManagement
+  class EmployeesControllerTest < ActionDispatch::IntegrationTest
     setup do
       @user = users(:serhat)
       @title = titles(:chief)
@@ -65,7 +65,7 @@ module Accounts
     private
 
     def translate(key)
-      t("account.employees#{key}")
+      t("user_management.employees#{key}")
     end
   end
 end

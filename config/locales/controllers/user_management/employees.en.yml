@@ -1,5 +1,5 @@
 en:
-  account:
+  user_management:
     employees:
       create:
         success: Employee successfully created.

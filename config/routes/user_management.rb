@@ -9,5 +9,9 @@ scope module: :user_management do
       get 'disability', to: 'disability#edit'
       put 'disability', to: 'disability#update'
     end
+
+    resources :employees, except: %i[index show]
+    resources :duties,    except: %i[index show]
+    resources :positions, except: %i[index show]
   end
 end

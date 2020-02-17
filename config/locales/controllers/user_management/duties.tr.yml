@@ -1,5 +1,5 @@
 tr:
-  account:
+  user_management:
     duties:
       create:
         success: Görevlendirme başarıyla oluşturuldu.

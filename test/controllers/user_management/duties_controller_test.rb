@@ -2,8 +2,8 @@
 
 require 'test_helper'
 
-module Accounts
-  class DutiesController < ActionDispatch::IntegrationTest
+module UserManagement
+  class DutiesControllerTest < ActionDispatch::IntegrationTest
     setup do
       @user = users(:serhat)
       @unit = units(:cbu)
@@ -64,7 +64,7 @@ module Accounts
     private
 
     def translate(key)
-      t("account.duties#{key}")
+      t("user_management.duties#{key}")
     end
   end
 end

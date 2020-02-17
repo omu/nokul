@@ -94,6 +94,10 @@ class RoleManagement
              name:        'Personeller için Kayıtlanma Yönetimi',
              description: 'Personeller için Kayıtlanma Yönetim Yetkisi',
              privileges:  %i[read write destroy]
+  permission :employee_management,
+             name:        'Personel Yönetimi',
+             description: 'Personel Yönetim Yetkisi',
+             privileges:  %i[read write destroy report]
 
   # roles
   role :authorization_manager,
@@ -116,15 +120,16 @@ class RoleManagement
          curriculum_management:                 %i[read write destroy report],
          decision_management:                   %i[read write destroy],
          detsis_management:                     %i[read write destroy],
+         employee_management:                   %i[read write destroy report],
          ldap_management:                       %i[read write destroy],
          location_management:                   %i[read write destroy],
          meeting_management:                    %i[read write destroy],
          meksis_management:                     %i[read write destroy],
          reference_management:                  %i[read write destroy],
-         student_management:                    %i[read write destroy report],
-         unit_management:                       %i[read write destroy report],
+         registration_management_for_employees: %i[read write destroy],
          registration_management_for_students:  %i[read write destroy],
-         registration_management_for_employees: %i[read write destroy]
+         student_management:                    %i[read write destroy report],
+         unit_management:                       %i[read write destroy report]
        }
 end
 # rubocop:enable Metrics/ClassLength

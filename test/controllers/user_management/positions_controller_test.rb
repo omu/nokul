@@ -2,8 +2,8 @@
 
 require 'test_helper'
 
-module Accounts
-  class PositionsController < ActionDispatch::IntegrationTest
+module UserManagement
+  class PositionsControllerTest < ActionDispatch::IntegrationTest
     setup do
       @user = users(:serhat)
       @administrative_function = administrative_functions(:yok_member)
@@ -65,7 +65,7 @@ module Accounts
     private
 
     def translate(key)
-      t("account.positions#{key}")
+      t("user_management.positions#{key}")
     end
   end
 end

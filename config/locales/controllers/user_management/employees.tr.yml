@@ -1,5 +1,5 @@
 tr:
-  account:
+  user_management:
     employees:
       create:
         success: Personel kaydı başarıyla oluşturuldu.
