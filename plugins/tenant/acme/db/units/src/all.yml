@@ -37700,6 +37700,8 @@
   parent_detsis_id: 78633602
   unit_type_id: Merkez Müdürlüğü
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Fakülte Disiplin Kurulu
   abbreviation: İŞLETME-DİSKUR
@@ -37708,6 +37710,8 @@
   parent_detsis_id: 57246715
   unit_type_id: Fakülte Disiplin Kurulu
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Fakülte Kurulu
   abbreviation: İŞLETME-KUR
@@ -37716,6 +37720,8 @@
   parent_detsis_id: 57246715
   unit_type_id: Fakülte Kurulu
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Fakülte Sekreterliği
   abbreviation: İŞLETME-SEK
@@ -37724,6 +37730,8 @@
   parent_detsis_id: 57246715
   unit_type_id: Fakülte Sekreterliği
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Fakülte Yönetim Kurulu
   abbreviation: İŞLETME-YÖNKUR
@@ -37732,6 +37740,8 @@
   parent_detsis_id: 57246715
   unit_type_id: Fakülte Yönetim Kurulu
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Sigortacılık ve Aktüerya Bilimleri Bölüm Başkanlığı
   abbreviation: SAB-BB
@@ -37741,6 +37751,8 @@
   parent_detsis_id: 57246715
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   detsis_id: 78806516
@@ -37773,6 +37785,8 @@
   parent_detsis_id: 46697017
   unit_type_id: Yüksekokul Disiplin Kurulu
   unit_status_id: Yarı Pasif
+  district_id: Ballıca
+  district_id_: Ballıca
 
 - name: Meslek Yüksekokulu Kurulu
   abbreviation: BALLICA-MYO-KUR
@@ -37781,6 +37795,8 @@
   parent_detsis_id: 46697017
   unit_type_id: Yüksekokul Kurulu
   unit_status_id: Yarı Pasif
+  district_id: Ballıca
+  district_id_: Ballıca
 
 - name: Meslek Yüksekokulu Sekreterliği
   abbreviation: BALLICA-MYO-SEK
@@ -37789,6 +37805,8 @@
   parent_detsis_id: 46697017
   unit_type_id: Yüksekokul Sekreterliği
   unit_status_id: Aktif
+  district_id: Ballıca
+  district_id_: Ballıca
 
 - name: Meslek Yüksekokulu Yönetim Kurulu
   abbreviation: BALLICA-MYO-YÖNKUR
@@ -37797,6 +37815,8 @@
   parent_detsis_id: 46697017
   unit_type_id: Yüksekokul Yönetim Kurulu
   unit_status_id: Yarı Pasif
+  district_id: Ballıca
+  district_id_: Ballıca
 
 - name: Personel İşleri Birimi
   detsis_id: 31828083
@@ -37848,6 +37868,8 @@
   parent_detsis_id: 78633602
   unit_type_id: Merkez Müdürlüğü
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Eczacılık Fakültesi Dekanlığı
   abbreviation: ECZACILIK-DEK
@@ -37857,6 +37879,8 @@
   parent_detsis_id: 78633602
   unit_type_id: Fakülte Dekanlığı
   unit_status_id: Yarı Pasif
+  district_id: Atakum
+  district_id_: Atakum
   issues:
     - Fakülte pasif
 
@@ -37874,6 +37898,8 @@
   parent_detsis_id: 78633602
   unit_type_id: Enstitü Müdürlüğü
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Gıda, Yem ve İlaç Anabilim Dalı Başkanlığı
   abbreviation: KENEVİR-GYİ-ADB
@@ -37883,6 +37909,8 @@
   parent_detsis_id: 33393879
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Sanayi ve Pazarlama Anabilim Dalı Başkanlığı
   abbreviation: KENEVİR-SP-ADB
@@ -37892,6 +37920,8 @@
   parent_detsis_id: 33393879
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Tarım ve Islah Anabilim Dalı Başkanlığı
   abbreviation: KENEVİR-TI-ADB
@@ -37901,6 +37931,8 @@
   parent_detsis_id: 33393879
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Klinik Araştırmalar Etik Kurulu
   abbreviation: KA-ETİKUR
@@ -37909,6 +37941,8 @@
   parent_detsis_id: 78633602
   unit_type_id: Etik Kurul
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Nöromodülasyon Ünitesi
   abbreviation: SAĞLIK-AUM-NÜ
@@ -37917,6 +37951,8 @@
   parent_detsis_id: 15374210
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Deney Hayvanları Araştırmaları Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-DHA-ADB
@@ -37925,6 +37961,8 @@
   parent_detsis_id: 93771576
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   issues:
     - Yöksis tarafında anabilim dalı yok.
 
@@ -37935,6 +37973,8 @@
   parent_detsis_id: 93771576
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   issues:
     - DİLKOT-ADB ile mükerrer isimli
     - Yöksis tarafında anabilim dalı yok
@@ -37947,6 +37987,8 @@
   parent_detsis_id: 28050591
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Fizyoterapi ve Rehabilitasyon Anabilim Dalı Başkanlığı
   abbreviation: FTR-ADB
@@ -37956,6 +37998,8 @@
   parent_detsis_id: 34357349
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Odyoloji Bölüm Başkanlığı
   abbreviation: ODYO-BB
@@ -37965,6 +38009,8 @@
   parent_detsis_id: 28050591
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Odyoloji Anabilim Dalı Başkanlığı
   abbreviation: ODYO-ADB
@@ -37974,6 +38020,8 @@
   parent_detsis_id: 25960321
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Ortez-Protez Bölüm Başkanlığı
   abbreviation: ORTEZ-BB
@@ -37983,6 +38031,8 @@
   parent_detsis_id: 28050591
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Çocuk Gelişimi Bölüm Başkanlığı
   abbreviation: ÇOCUKGELİŞİM-BB
@@ -37992,6 +38042,8 @@
   parent_detsis_id: 28050591
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Yurtlar Şube Müdürlüğü
   abbreviation: SKS-YURTLAR-ŞB
@@ -38000,6 +38052,8 @@
   parent_detsis_id: 53521241
   unit_type_id: Şube Müdürlüğü
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Girişimcilik ve Yenilikçilik Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-GY-ADB
@@ -38009,6 +38063,8 @@
   parent_detsis_id: 61232311
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Yönetim ve Organizasyon Bölüm Başkanlığı
   abbreviation: TERME-MYO-YO-BB
@@ -38018,6 +38074,8 @@
   parent_detsis_id: 36024139
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Gastronomi ve Mutfak Sanatları Anabilim Dalı Başkanlığı
   abbreviation: GASTRONOMİ-ADB
@@ -38027,6 +38085,8 @@
   parent_detsis_id: 64554296
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Rekreasyon Yönetimi Bölüm Başkanlığı
   abbreviation: REKYÖN-BB
@@ -38036,6 +38096,8 @@
   parent_detsis_id: 37195700
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Turizm Rehberliği Anabilim Dalı Başkanlığı
   abbreviation: REHBERLİK-ADB
@@ -38045,6 +38107,8 @@
   parent_detsis_id: 17503256
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Turizm İşletmeciliği Anabilim Dalı Başkanlığı
   abbreviation: TURİŞ-ADB
@@ -38054,6 +38118,8 @@
   parent_detsis_id: 22017889
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Tasarım Bölüm Başkanlığı
   abbreviation: VEZİRKÖPRÜ-MYO-TASARIM-BB
@@ -38063,6 +38129,8 @@
   parent_detsis_id: 61206311
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Bağ Yetiştirme ve Islahı Anabilim Dalı Başkanlığı
   abbreviation: BAHÇE-BAĞ-ADB
@@ -38072,6 +38140,8 @@
   parent_detsis_id: 51766710
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Meyve Yetiştirme ve Islahı Anabilim Dalı Başkanlığı
   abbreviation: BAHÇE-MEYVE-ADB
@@ -38081,6 +38151,8 @@
   parent_detsis_id: 51766710
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Sebze Yetiştirme ve Islahı Anabilim Dalı Başkanlığı
   abbreviation: BAHÇE-SEBZE-ADB
@@ -38090,6 +38162,8 @@
   parent_detsis_id: 51766710
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Süs Bitkileri Yetiştirme ve Islahı Anabilim Dalı Başkanlığı
   abbreviation: BAHÇE-SÜS-ADB
@@ -38099,6 +38173,8 @@
   parent_detsis_id: 51766710
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Entomoloji Anabilim Dalı Başkanlığı
   abbreviation: BİTKİKOR-ENTO-ADB
@@ -38108,6 +38184,8 @@
   parent_detsis_id: 30360806
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Fitopatoloji Anabilim Dalı Başkanlığı
   abbreviation: BİTKİKOR-FİTO-ADB
@@ -38117,6 +38195,8 @@
   parent_detsis_id: 30360806
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Endüstri Bitkileri Anabilim Dalı Başkanlığı
   abbreviation: TARLABİTKİ-ENDÜSTRİ-ADB
@@ -38126,6 +38206,8 @@
   parent_detsis_id: 88073621
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Tahıllar ve Yemeklik Baklagiller Anabilim Dalı Başkanlığı
   abbreviation: TARLABİTKİ-TAHIL-ADB
@@ -38135,6 +38217,8 @@
   parent_detsis_id: 88073621
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Çayır Mera ve Yem Bitkileri Anabilim Dalı Başkanlığı
   abbreviation: TARLABİTKİ-ÇAYIRMERA-ADB
@@ -38144,6 +38228,8 @@
   parent_detsis_id: 88073621
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Tarım Politikası ve Yayım Anabilim Dalı Başkanlığı
   abbreviation: TARIMEKO-POLİ-ADB
@@ -38153,6 +38239,8 @@
   parent_detsis_id: 41945832
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Tarım İşletmeciliği Anabilim Dalı Başkanlığı
   abbreviation: TARIMEKO-İŞ-ADB
@@ -38162,6 +38250,8 @@
   parent_detsis_id: 41945832
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Tarım Makineleri ve Teknolojileri Mühendisliği Anabilim Dalı Başkanlığı
   abbreviation: TARIMAKTEK-ADB
@@ -38170,6 +38260,8 @@
   parent_detsis_id: 38298812
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   issues:
     - Yöksis tarafında anabilim dalı yok
 
@@ -38181,6 +38273,8 @@
   parent_detsis_id: 39322077
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Enzim ve Mikrobiyel Biyoteknoloji Anabilim Dalı Başkanlığı
   abbreviation: TARIMBİYOTEK-MİKRO-ADB
@@ -38190,6 +38284,8 @@
   parent_detsis_id: 39322077
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Hayvansal Biyoteknoloji Anabilim Dalı Başkanlığı
   abbreviation: TARIMBİYOTEK-HAYVAN-ADB
@@ -38199,6 +38295,8 @@
   parent_detsis_id: 39322077
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Tarımsal Yapılar ve Sulama Anabilim Dalı Başkanlığı
   abbreviation: TARIMYAP-ADB
@@ -38208,6 +38306,8 @@
   parent_detsis_id: 69046183
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Bitki Besleme Anabilim Dalı Başkanlığı
   abbreviation: TOPRAKBİL-BİTKİBES-ADB
@@ -38217,6 +38317,8 @@
   parent_detsis_id: 25676019
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Toprak Bilimi Anabilim Dalı Başkanlığı
   abbreviation: TOPRAKBİL-ADB
@@ -38226,6 +38328,8 @@
   parent_detsis_id: 25676019
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Biyometri-Genetik Anabilim Dalı Başkanlığı
   abbreviation: ZOOTEKNİ-BİYOGEN-AD
@@ -38235,6 +38339,8 @@
   parent_detsis_id: 59625322
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Hayvan Yetiştirme ve Islahı Anabilim Dalı Başkanlığı
   abbreviation: ZOOTEKNİ-HAYVAN-ADB
@@ -38244,6 +38350,8 @@
   parent_detsis_id: 59625322
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Yemler ve Hayvan Besleme Anabilim Dalı Başkanlığı
   abbreviation: ZOOTEKNİ-YEM-ADB
@@ -38253,6 +38361,8 @@
   parent_detsis_id: 59625322
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Tarih Bölüm Başkanlığı
   abbreviation: İNSAN-TARİH
@@ -38262,6 +38372,8 @@
   parent_detsis_id: 93417155
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Eskiçağ Tarihi Anabilim Dalı Başkanlığı
   abbreviation: İNSAN-TARİH-ESKİÇAĞ-ADB
@@ -38271,6 +38383,8 @@
   parent_detsis_id: 13806242
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Genel Türk Tarihi Anabilim Dalı Başkanlığı
   abbreviation: İNSAN-TARİH-GTT-ADB
@@ -38280,6 +38394,8 @@
   parent_detsis_id: 13806242
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Ortaçağ Tarihi Anabilim Dalı Başkanlığı
   abbreviation: İNSAN-TARİH-ORTAÇAĞ-ADB
@@ -38289,6 +38405,8 @@
   parent_detsis_id: 13806242
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Türkiye Cumhuriyeti Tarihi Anabilim Dalı Başkanlığı
   abbreviation: İNSAN-TARİH-TC-ADB
@@ -38298,6 +38416,8 @@
   parent_detsis_id: 13806242
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Yakınçağ Tarihi Anabilim Dalı Başkanlığı
   abbreviation: İNSAN-TARİH-YAKINÇAĞ-ADB
@@ -38307,6 +38427,8 @@
   parent_detsis_id: 13806242
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
 
 - name: Yeniçağ Tarihi Anabilim Dalı Başkanlığı
   abbreviation: İNSAN-TARİH-YENİÇAĞ-ADB
@@ -38316,3 +38438,5 @@
   parent_detsis_id: 13806242
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
