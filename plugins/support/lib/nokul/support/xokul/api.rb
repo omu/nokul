@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative 'api/yoksis'
-
 module Xokul
   class API
     include ActiveSupport::Configurable
@@ -16,13 +14,5 @@ module Xokul
     protected
 
     attr_reader :conn
-
-    private
-
-    def request(path, params: {})
-      url  = URI.join(namespace, path).to_s
-      resp = conn.get(url, params: params)
-      resp.decode
-    end
   end
 end
