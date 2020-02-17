@@ -4,12 +4,10 @@ module Instructiveness
   class GradesController < ApplicationController
     before_action :set_employee
     before_action :set_course
+    before_action :set_groups
     before_action :set_assessment
 
-    def edit
-      @groups = @course.groups
-      @grades = @assessment.grades
-    end
+    def edit; end
 
     def update
       @course.saved_enrollments.each do |enrollment|
@@ -33,6 +31,10 @@ module Instructiveness
 
     def set_course
       @course = @employee.given_courses.find(params[:given_course_id])
+    end
+
+    def set_groups
+      @groups = @employee.given_course_groups_of(@course)
     end
 
     def set_assessment
