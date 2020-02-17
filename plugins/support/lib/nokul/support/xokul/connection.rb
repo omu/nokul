@@ -4,7 +4,7 @@ module Xokul
   class Connection
     attr_accessor :endpoint
 
-    def initialize(endpoint = Configuration.endpoint)
+    def initialize(endpoint)
       @endpoint = endpoint
       @headers  = { 'Content-Type' => 'application/json' }
     end
