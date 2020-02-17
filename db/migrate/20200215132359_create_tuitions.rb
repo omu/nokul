@@ -3,7 +3,6 @@
 class CreateTuitions < ActiveRecord::Migration[6.0]
   def change
     create_table :tuitions do |t|
-      t.references :unit, foreign_key: true
       t.references :academic_term, foreign_key: true
       t.decimal :fee, precision: 8, scale: 3, default: 0
       t.decimal :foreign_student_fee, precision: 8, scale: 3, default: 0
