@@ -453,8 +453,6 @@
   unit_type_id: Fakülte Dekanlığı
   unit_status_id: Aktif
   district_id: Çarşamba
-  issues:
-    - Akademik tarafta bağlı olduğu fakülte pasif
 
 - name: Fakülte Sekreterliği
   abbreviation: İNSAN-SEK
@@ -2999,8 +2997,6 @@
   unit_type_id: Merkez Müdürlüğü
   unit_status_id: Aktif
   district_id: Atakum
-  issues:
-    - İlişkili olduğu Araştırma Merkezi yoksis verilerimiz arasında yok
 
 - name: Kütüphane ve Dokümantasyon Daire Başkanlığı
   abbreviation: KD-DB
@@ -4247,8 +4243,8 @@
   district_id: Atakum
 
 - name: Deri ve Zührevi Hastalıklar Anabilim Dalı Başkanlığı
-  abbreviation: TIP-DAHİLİ-DERMA-ADB
-  parent_yoksis_id: 169259
+  abbreviation: TIP-DAHİLİ-DERİ-ADB
+  parent_yoksis_id: 121966
   detsis_id: 82295067
   parent_detsis_id: 37439758
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -4341,8 +4337,8 @@
   district_id: Atakum
 
 - name: Ruh Sağlığı ve Hastalıkları Anabilim Dalı Başkanlığı
-  abbreviation: TIP-DAHİLİ-PSİ-ADB
-  parent_yoksis_id: 169288
+  abbreviation: TIP-DAHİLİ-RUH-ADB
+  parent_yoksis_id: 121973
   detsis_id: 28960095
   parent_detsis_id: 37439758
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -4359,8 +4355,8 @@
   district_id: Atakum
 
 - name: Radyoloji Anabilim Dalı Başkanlığı
-  abbreviation: TIP-DAHİLİ-RD-ADB
-  parent_yoksis_id: 143494
+  abbreviation: TIP-DAHİLİ-RADYO-ADB
+  parent_yoksis_id: 121979
   detsis_id: 18393763
   parent_detsis_id: 37439758
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -4953,7 +4949,7 @@
 
 - name: Beden Eğitimi ve Spor Bölüm Başkanlığı
   abbreviation: BES-BB
-  parent_yoksis_id: 122374
+  parent_yoksis_id: 176337
   detsis_id: 36370335
   parent_detsis_id: 80270232
   unit_type_id: Bölüm Başkanlığı
@@ -4969,7 +4965,7 @@
   district_id: Atakum
 
 - name: Rekreasyon Bölüm Başkanlığı
-  abbreviation: REKRASYON-BB
+  abbreviation: REKREASYON-BB
   parent_yoksis_id: 214343
   detsis_id: 56933569
   parent_detsis_id: 80270232
@@ -5253,18 +5249,16 @@
   district_id: Atakum
 
 - name: Devlet Konservatuvarı Müdürlüğü
-  abbreviation: KONSERVATUVAR-DİĞER-MD
+  abbreviation: KONSERVATUVAR-MD
   parent_yoksis_id: 122303
   detsis_id: 95441125
   parent_detsis_id: 78633602
   unit_type_id: Konservatuvar Müdürlüğü
   unit_status_id: Aktif
   district_id: İlkadım
-  issues:
-    - Devlet Konservatuvarı mı 19 Mayıs Samsun Devlet Konservatuvarı mı?
 
 - name: Konservatuvar Sekreterliği
-  abbreviation: KONSERVATUVAR-DİĞER-SEK
+  abbreviation: KONSERVATUVAR-SEK
   detsis_id: 52718513
   parent_detsis_id: 95441125
   unit_type_id: Konservatuvar Sekreterliği
@@ -5272,18 +5266,16 @@
   district_id: İlkadım
 
 - name: Müzik Bölüm Başkanlığı
-  abbreviation: KONSERVATUVAR-DİĞER-MÜZİK-BB
+  abbreviation: MÜZİK-BB
   parent_yoksis_id: 122304
   detsis_id: 55870850
   parent_detsis_id: 95441125
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
   district_id: İlkadım
-  issues:
-    - Hangi konservatuvar'a bağlı?
 
 - name: Geleneksel Türk Müzikleri Anasanat Dalı Başkanlığı
-  abbreviation: KONSERVATUVAR-DİĞER-GTM-ADB
+  abbreviation: KONSERVATUVAR-DİĞER-MÜZİK-GTM-AD
   parent_yoksis_id: 254783
   detsis_id: 40140864
   parent_detsis_id: 55870850
@@ -5291,29 +5283,25 @@
   unit_status_id: Aktif
   district_id: İlkadım
   issues:
-    - Hangi konservatuvar'a bağlı?
+    - Yöksis tarafında anabilim dalı yarı pasif
 
 - name: Müzikoloji Bölüm Başkanlığı
-  abbreviation: KONSERVATUVAR-DİĞER-MÜZİKO-BB
-  parent_yoksis_id: 122322
+  abbreviation: MÜZİKO-BB
+  parent_yoksis_id: 122309
   detsis_id: 22937161
   parent_detsis_id: 95441125
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
   district_id: İlkadım
-  issues:
-    - Hangi konservatuvar'a bağlı?
 
 - name: Sahne Sanatları Bölüm Başkanlığı
-  abbreviation: KONSERVATUVAR-DİĞER-SAHNE-BB
-  parent_yoksis_id: 122326
+  abbreviation: SAHNE-BB
+  parent_yoksis_id: 122313
   detsis_id: 50929935
   parent_detsis_id: 95441125
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
   district_id: İlkadım
-  issues:
-    - Hangi konservatuvar'a bağlı?
 
 - name: Güzel Sanatlar Fakültesi Dekanlığı
   abbreviation: GÜZELSANATLAR-DEK
@@ -6377,6 +6365,8 @@
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
+  issues:
+    - TOPRAKBİL-ADB ile mükerrer isim
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
   abbreviation: TIP-YAYIN-BR
@@ -6585,7 +6575,7 @@
   district_id_: Atakum
 
 - name: Evde Hasta Bakımı Hemşireliği Anabilim Dalı Başkanlığı
-  abbreviation: SAĞLIK-BİLİM-EBH-ADB
+  abbreviation: SAĞLIK-BİLİM-EHBH-ADB
   detsis_id: 29830028
   parent_detsis_id: 93771576
   unit_type_id: Anabilim Dalı Başkanlığı
@@ -7142,8 +7132,6 @@
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
-  issues:
-    - İsimde yazım hatası
 
 - name: Bilgi İşlem Birimi
   abbreviation: ZİRAAT-BİLGİ-BR
@@ -7331,14 +7319,13 @@
   district_id: İlkadım
 
 - name: Nanobilim ve Nanoteknoloji Anabilim Dalı Başkanlığı
-  abbreviation: FEN-BİLİM-NANO-ADB
+  abbreviation: NANO-ADB
+  parent_yoksis_id: 406607
   detsis_id: 44220146
   parent_detsis_id: 43847920
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
-  issues:
-    - Yoksis tarafında anabilim dalı yok
 
 - name: Döner Sermaye Birimi
   abbreviation: TUAM-DÖNER-BR
@@ -7865,7 +7852,7 @@
   unit_status_id: Aktif
   district_id: Atakum
   issues:
-    - Yöksis tarafında anabilim dalı TURİZM/TURİŞ altında
+    - TURİŞ-ADB ile mükerrer isim
 
 - name: İdari İşler Birimi
   abbreviation: HAVZA-MYO-İDARİ-BR
@@ -8207,8 +8194,6 @@
   unit_type_id: Fakülte Dekanlığı
   unit_status_id: Aktif
   district_id: Bafra
-  issues:
-    - İlişkili olduğu birim pasif
 
 - name: Ortodonti Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-ORTO-ADB
@@ -9395,6 +9380,8 @@
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
+  issues:
+    - TARIMYAP-ADB ile mükerrer isim
 
 - name: Öğrenci İşleri Birimi
   abbreviation: İLAHİYAT-ÖĞRENCİ-BR
@@ -10415,13 +10402,12 @@
 
 - name: Beden Eğitimi Bölüm Başkanlığı
   abbreviation: BEDEN-BB
+  parent_yoksis_id: 169448
   detsis_id: 92050340
   parent_detsis_id: 78633602
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
-  issues:
-    - Yoksis tarafında bölüm yok
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
   abbreviation: MİMARLIK-YAPI-BR
@@ -12258,36 +12244,44 @@
   district_id_: Atakum
 
 - name: Astronomi Eğitimi Uygulama ve Araştırma Merkezi Müdürlüğü
+  abbreviation: ASTRO-MD
+  parent_yoksis_id: 385001
   detsis_id: 30837812
   parent_detsis_id: 78633602
   unit_type_id: Merkez Müdürlüğü
   unit_status_id: Aktif
 
 - name: Fakülte Disiplin Kurulu
+  abbreviation: İŞLETME-DİSKUR
   detsis_id: 74095031
   parent_detsis_id: 57246715
   unit_type_id: Fakülte Disiplin Kurulu
   unit_status_id: Aktif
 
 - name: Fakülte Kurulu
+  abbreviation: İŞLETME-KUR
   detsis_id: 45653669
   parent_detsis_id: 57246715
   unit_type_id: Fakülte Kurulu
   unit_status_id: Aktif
 
 - name: Fakülte Sekreterliği
+  abbreviation: İŞLETME-SEK
   detsis_id: 75457335
   parent_detsis_id: 57246715
   unit_type_id: Fakülte Sekreterliği
   unit_status_id: Aktif
 
 - name: Fakülte Yönetim Kurulu
+  abbreviation: İŞLETME-YÖNKUR
   detsis_id: 92564308
   parent_detsis_id: 57246715
   unit_type_id: Fakülte Yönetim Kurulu
   unit_status_id: Aktif
 
 - name: Sigortacılık ve Aktüerya Bilimleri Bölüm Başkanlığı
+  abbreviation: SAB-BB
+  parent_yoksis_id: 389933
   detsis_id: 23363322
   parent_detsis_id: 57246715
   unit_type_id: Bölüm Başkanlığı
@@ -12318,24 +12312,28 @@
   unit_status_id: Pasif
 
 - name: Meslek Yüksekokulu Disiplin Kurulu
+  abbreviation: BALLICA-MYO-DİSKUR
   detsis_id: 17832416
   parent_detsis_id: 46697017
   unit_type_id: Yüksekokul Disiplin Kurulu
   unit_status_id: Yarı Pasif
 
 - name: Meslek Yüksekokulu Kurulu
+  abbreviation: BALLICA-MYO-KUR
   detsis_id: 53946601
   parent_detsis_id: 46697017
   unit_type_id: Yüksekokul Kurulu
   unit_status_id: Yarı Pasif
 
 - name: Meslek Yüksekokulu Sekreterliği
+  abbreviation: BALLICA-MYO-SEK
   detsis_id: 25170302
   parent_detsis_id: 46697017
   unit_type_id: Yüksekokul Sekreterliği
   unit_status_id: Aktif
 
 - name: Meslek Yüksekokulu Yönetim Kurulu
+  abbreviation: BALLICA-MYO-YÖNKUR
   detsis_id: 12577702
   parent_detsis_id: 46697017
   unit_type_id: Yüksekokul Yönetim Kurulu
@@ -12384,16 +12382,22 @@
   unit_status_id: Pasif
 
 - name: Dil ve Konuşma Bozuklukları Eğitimi Uygulama ve Araştırma Merkezi Müdürlüğü
+  abbreviation: DKBE-MD
+  parent_yoksis_id: 389044
   detsis_id: 16278565
   parent_detsis_id: 78633602
   unit_type_id: Merkez Müdürlüğü
   unit_status_id: Aktif
 
 - name: Eczacılık Fakültesi Dekanlığı
+  abbreviation: ECZACILIK-DEK
+  parent_yoksis_id: 391242
   detsis_id: 36795605
   parent_detsis_id: 78633602
   unit_type_id: Fakülte Dekanlığı
   unit_status_id: Yarı Pasif
+  issues:
+    - Fakülte pasif
 
 - name: Fındık ve Diğer Sert Kabuklu Meyveler Araştırma ve Uygulama Merkezi Müdürlüğü
   detsis_id: 51346436
@@ -12402,300 +12406,401 @@
   unit_status_id: Pasif
 
 - name: Kenevir Araştırmaları Enstitüsü Müdürlüğü
+  abbreviation: KENEVİR-MD
+  parent_yoksis_id: 388477
   detsis_id: 33393879
   parent_detsis_id: 78633602
   unit_type_id: Enstitü Müdürlüğü
   unit_status_id: Aktif
 
 - name: Gıda, Yem ve İlaç Anabilim Dalı Başkanlığı
+  abbreviation: KENEVİR-GYİ-ADB
+  parent_yoksis_id: 391649
   detsis_id: 46067842
   parent_detsis_id: 33393879
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Sanayi ve Pazarlama Anabilim Dalı Başkanlığı
+  abbreviation: KENEVİR-SP-ADB
+  parent_yoksis_id: 391747
   detsis_id: 18881787
   parent_detsis_id: 33393879
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Tarım ve Islah Anabilim Dalı Başkanlığı
+  abbreviation: KENEVİR-TI-ADB
+  parent_yoksis_id: 391648
   detsis_id: 19358555
   parent_detsis_id: 33393879
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Klinik Araştırmalar Etik Kurulu
+  abbreviation: KA-ETİKUR
   detsis_id: 88984990
   parent_detsis_id: 78633602
   unit_type_id: Etik Kurul
   unit_status_id: Aktif
 
 - name: Nöromodülasyon Ünitesi
+  abbreviation: SAĞLIK-AUM-NÜ
   detsis_id: 12221006
   parent_detsis_id: 15374210
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
 
 - name: Deney Hayvanları Araştırmaları Anabilim Dalı Başkanlığı
+  abbreviation: SAĞLIK-BİLİM-DHA-ADB
   detsis_id: 48395142
   parent_detsis_id: 93771576
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  issues:
+    - Yöksis tarafında anabilim dalı yok.
 
 - name: Dil ve Konuşma Terapisi Anabilim Dalı Başkanlığı
+  abbreviation: SAĞLIK-BİLİM-DİLKOT-ADB
   detsis_id: 83466304
   parent_detsis_id: 93771576
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  issues:
+    - DİLKOT-ADB ile mükerrer isimli
+    - Yöksis tarafında anabilim dalı yok
 
 - name: Fizyoterapi ve Rehabilitasyon Bölüm Başkanlığı
+  abbreviation: FTR-BB
+  parent_yoksis_id: 379526
   detsis_id: 34357349
   parent_detsis_id: 28050591
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
 
 - name: Fizyoterapi ve Rehabilitasyon Anabilim Dalı Başkanlığı
+  abbreviation: FTR-ADB
+  parent_yoksis_id: 379534
   detsis_id: 25550913
   parent_detsis_id: 34357349
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Odyoloji Bölüm Başkanlığı
+  abbreviation: ODYO-BB
+  parent_yoksis_id: 386330
   detsis_id: 25960321
   parent_detsis_id: 28050591
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
 
 - name: Odyoloji Anabilim Dalı Başkanlığı
+  abbreviation: ODYO-ADB
+  parent_yoksis_id: 386331
   detsis_id: 31447479
   parent_detsis_id: 25960321
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Ortez-Protez Bölüm Başkanlığı
+  abbreviation: ORTEZ-BB
+  parent_yoksis_id: 386328
   detsis_id: 83283698
   parent_detsis_id: 28050591
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
 
 - name: Çocuk Gelişimi Bölüm Başkanlığı
+  abbreviation: ÇOCUKGELİŞİM-BB
+  parent_yoksis_id: 389166
   detsis_id: 54917329
   parent_detsis_id: 28050591
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
 
 - name: Yurtlar Şube Müdürlüğü
+  abbreviation: SKS-YURTLAR-ŞB
   detsis_id: 96886882
   parent_detsis_id: 53521241
   unit_type_id: Şube Müdürlüğü
   unit_status_id: Aktif
 
 - name: Girişimcilik ve Yenilikçilik Anabilim Dalı Başkanlığı
+  abbreviation: SOSYAL-BİLİM-GY-ADB
+  parent_yoksis_id: 390151
   detsis_id: 93062464
   parent_detsis_id: 61232311
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Yönetim ve Organizasyon Bölüm Başkanlığı
+  abbreviation: TERME-MYO-YO-BB
+  parent_yoksis_id: 317332
   detsis_id: 62682161
   parent_detsis_id: 36024139
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
 
 - name: Gastronomi ve Mutfak Sanatları Anabilim Dalı Başkanlığı
+  abbreviation: GASTRONOMİ-ADB
+  parent_yoksis_id: 319340
   detsis_id: 89292868
   parent_detsis_id: 64554296
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Rekreasyon Yönetimi Bölüm Başkanlığı
+  abbreviation: REKYÖN-BB
+  parent_yoksis_id: 214341
   detsis_id: 57132954
   parent_detsis_id: 37195700
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
 
 - name: Turizm Rehberliği Anabilim Dalı Başkanlığı
+  abbreviation: REHBERLİK-ADB
+  parent_yoksis_id: 319339
   detsis_id: 54285866
   parent_detsis_id: 17503256
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Turizm İşletmeciliği Anabilim Dalı Başkanlığı
+  abbreviation: TURİŞ-ADB
+  parent_yoksis_id: 319338
   detsis_id: 34620086
   parent_detsis_id: 22017889
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Tasarım Bölüm Başkanlığı
+  abbreviation: VEZİRKÖPRÜ-MYO-TASARIM-BB
+  parent_yoksis_id: 382185
   detsis_id: 98370047
   parent_detsis_id: 61206311
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
 
 - name: Bağ Yetiştirme ve Islahı Anabilim Dalı Başkanlığı
+  abbreviation: BAHÇE-BAĞ-ADB
+  parent_yoksis_id: 206910
   detsis_id: 53179598
   parent_detsis_id: 51766710
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Meyve Yetiştirme ve Islahı Anabilim Dalı Başkanlığı
+  abbreviation: BAHÇE-MEYVE-ADB
+  parent_yoksis_id: 206908
   detsis_id: 46244487
   parent_detsis_id: 51766710
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Sebze Yetiştirme ve Islahı Anabilim Dalı Başkanlığı
+  abbreviation: BAHÇE-SEBZE-ADB
+  parent_yoksis_id: 206909
   detsis_id: 80967982
   parent_detsis_id: 51766710
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Süs Bitkileri Yetiştirme ve Islahı Anabilim Dalı Başkanlığı
+  abbreviation: BAHÇE-SÜS-ADB
+  parent_yoksis_id: 207804
   detsis_id: 19028155
   parent_detsis_id: 51766710
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Entomoloji Anabilim Dalı Başkanlığı
+  abbreviation: BİTKİKOR-ENTO-ADB
+  parent_yoksis_id: 122262
   detsis_id: 16771683
   parent_detsis_id: 30360806
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Fitopatoloji Anabilim Dalı Başkanlığı
+  abbreviation: BİTKİKOR-FİTO-ADB
+  parent_yoksis_id: 122263
   detsis_id: 85218112
   parent_detsis_id: 30360806
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Endüstri Bitkileri Anabilim Dalı Başkanlığı
+  abbreviation: TARLABİTKİ-ENDÜSTRİ-ADB
+  parent_yoksis_id: 213016
   detsis_id: 19791492
   parent_detsis_id: 88073621
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Tahıllar ve Yemeklik Baklagiller Anabilim Dalı Başkanlığı
+  abbreviation: TARLABİTKİ-TAHIL-ADB
+  parent_yoksis_id: 213018
   detsis_id: 34957183
   parent_detsis_id: 88073621
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Çayır Mera ve Yem Bitkileri Anabilim Dalı Başkanlığı
+  abbreviation: TARLABİTKİ-ÇAYIRMERA-ADB
+  parent_yoksis_id: 213017
   detsis_id: 55528295
   parent_detsis_id: 88073621
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Tarım Politikası ve Yayım Anabilim Dalı Başkanlığı
+  abbreviation: TARIMEKO-POLİ-ADB
+  parent_yoksis_id: 122266
   detsis_id: 17184421
   parent_detsis_id: 41945832
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Tarım İşletmeciliği Anabilim Dalı Başkanlığı
+  abbreviation: TARIMEKO-İŞ-ADB
+  parent_yoksis_id: 122265
   detsis_id: 85416548
   parent_detsis_id: 41945832
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Tarım Makineleri ve Teknolojileri Mühendisliği Anabilim Dalı Başkanlığı
+  abbreviation: TARIMAKTEK-ADB
   detsis_id: 91635289
   parent_detsis_id: 38298812
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  issues:
+    - Yöksis tarafında anabilim dalı yok
 
 - name: Bitkisel Biyoteknoloji Anabilim Dalı Başkanlığı
+  abbreviation: TARIMBİYOTEK-BİTKİ-ADB
+  parent_yoksis_id: 176341
   detsis_id: 15854088
   parent_detsis_id: 39322077
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Enzim ve Mikrobiyel Biyoteknoloji Anabilim Dalı Başkanlığı
+  abbreviation: TARIMBİYOTEK-MİKRO-ADB
+  parent_yoksis_id: 161569
   detsis_id: 55841282
   parent_detsis_id: 39322077
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Hayvansal Biyoteknoloji Anabilim Dalı Başkanlığı
+  abbreviation: TARIMBİYOTEK-HAYVAN-ADB
+  parent_yoksis_id: 161570
   detsis_id: 86244733
   parent_detsis_id: 39322077
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Tarımsal Yapılar ve Sulama Anabilim Dalı Başkanlığı
+  abbreviation: TARIMYAP-ADB
+  parent_yoksis_id: 122282
   detsis_id: 42963378
   parent_detsis_id: 69046183
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Bitki Besleme Anabilim Dalı Başkanlığı
+  abbreviation: TOPRAKBİL-BİTKİBES-ADB
+  parent_yoksis_id: 209316
   detsis_id: 83929159
   parent_detsis_id: 25676019
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Toprak Bilimi Anabilim Dalı Başkanlığı
+  abbreviation: TOPRAKBİL-ADB
+  parent_yoksis_id: 208208
   detsis_id: 42846038
   parent_detsis_id: 25676019
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Biyometri-Genetik Anabilim Dalı Başkanlığı
+  abbreviation: ZOOTEKNİ-BİYOGEN-AD
+  parent_yoksis_id: 122272
   detsis_id: 54790359
   parent_detsis_id: 59625322
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Hayvan Yetiştirme ve Islahı Anabilim Dalı Başkanlığı
+  abbreviation: ZOOTEKNİ-HAYVAN-ADB
+  parent_yoksis_id: 122273
   detsis_id: 16443102
   parent_detsis_id: 59625322
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Yemler ve Hayvan Besleme Anabilim Dalı Başkanlığı
+  abbreviation: ZOOTEKNİ-YEM-ADB
+  parent_yoksis_id: 122274
   detsis_id: 69025855
   parent_detsis_id: 59625322
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Tarih Bölüm Başkanlığı
+  abbreviation: İNSAN-TARİH
+  parent_yoksis_id: 381679
   detsis_id: 13806242
   parent_detsis_id: 93417155
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
 
 - name: Eskiçağ Tarihi Anabilim Dalı Başkanlığı
+  abbreviation: İNSAN-TARİH-ESKİÇAĞ-ADB
+  parent_yoksis_id: 383959
   detsis_id: 20981008
   parent_detsis_id: 13806242
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Genel Türk Tarihi Anabilim Dalı Başkanlığı
+  abbreviation: İNSAN-TARİH-GTT-ADB
+  parent_yoksis_id: 383960
   detsis_id: 66965106
   parent_detsis_id: 13806242
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Ortaçağ Tarihi Anabilim Dalı Başkanlığı
+  abbreviation: İNSAN-TARİH-ORTAÇAĞ-ADB
+  parent_yoksis_id: 383958
   detsis_id: 72446498
   parent_detsis_id: 13806242
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Türkiye Cumhuriyeti Tarihi Anabilim Dalı Başkanlığı
+  abbreviation: İNSAN-TARİH-TC-ADB
+  parent_yoksis_id: 383956
   detsis_id: 31622048
   parent_detsis_id: 13806242
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Yakınçağ Tarihi Anabilim Dalı Başkanlığı
+  abbreviation: İNSAN-TARİH-YAKINÇAĞ-ADB
+  parent_yoksis_id: 383930
   detsis_id: 46938089
   parent_detsis_id: 13806242
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
 
 - name: Yeniçağ Tarihi Anabilim Dalı Başkanlığı
+  abbreviation: İNSAN-TARİH-YENİÇAĞ-ADB
+  parent_yoksis_id: 383957
   detsis_id: 14794339
   parent_detsis_id: 13806242
   unit_type_id: Anabilim Dalı Başkanlığı
