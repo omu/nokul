@@ -1,0 +1,11 @@
+one:
+  unit: bilgisayar_muhendisligi_programi
+  academic_term: active_term
+  fee: 387,00
+  foreign_student_fee: 2.460,00
+
+two:
+  unit: bilgisayar_muhendisligi_programi
+  academic_term: spring_2018_2019
+  fee: 305,00
+  foreign_student_fee: 2.180,00
