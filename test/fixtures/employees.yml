@@ -13,6 +13,16 @@ chief_john:
   title: chief
   active: true
   staff_number: B3000
+rector:
+  user: rector
+  title: professor
+  active: true
+  staff_number: A0001
+vice_rector:
+  user: vice_rector
+  title: professor
+  active: true
+  staff_number: A0002
 employee_to_delete:
   user: john
   title: research_assistant

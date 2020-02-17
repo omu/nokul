@@ -4,6 +4,9 @@ dean:
 rector:
   name: Rektör
   code: 15
+vice_rector:
+  name: Rektör Yardımcısı
+  code: 14
 yok_member:
   name: YÖK Üyesi
   code: 18

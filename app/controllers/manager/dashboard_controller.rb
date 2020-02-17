@@ -2,6 +2,8 @@
 
 module Manager
   class DashboardController < ApplicationController
-    def stats; end
+    def stats
+      authorize(current_user, policy_class: Manager::DashboardPolicy)
+    end
   end
 end
