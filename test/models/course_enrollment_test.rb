@@ -14,6 +14,7 @@ class CourseEnrollmentTest < ActiveSupport::TestCase
   belongs_to :available_course
   belongs_to :available_course_group
   belongs_to :semester_registration
+  has_many :grades, dependent: :destroy
 
   # validations: uniqueness
   test 'uniqueness validations for course_enrollment of a available_course' do

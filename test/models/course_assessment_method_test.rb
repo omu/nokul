@@ -4,11 +4,16 @@ require 'test_helper'
 
 class CourseAssessmentMethodTest < ActiveSupport::TestCase
   extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::EnumerationHelper
   extend Support::Minitest::ValidationHelper
+
+  # enums
+  enum status: { no_grade_entered: 0, draft: 1 }
 
   # relations
   belongs_to :assessment_method
   belongs_to :course_evaluation_type
+  has_many :grades, dependent: :destroy
 
   # validations: presence
   validates_presence_of :percentage

@@ -13,6 +13,7 @@ class AvailableCourseTest < ActiveSupport::TestCase
   belongs_to :curriculum
   belongs_to :unit
   has_many :evaluation_types, class_name: 'CourseEvaluationType', dependent: :destroy
+  has_many :course_assessment_methods, through: :evaluation_types
   has_many :groups, class_name: 'AvailableCourseGroup', dependent: :destroy
   has_many :lecturers, through: :groups
   has_many :course_enrollments, dependent: :destroy
