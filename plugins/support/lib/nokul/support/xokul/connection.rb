@@ -1,12 +1,30 @@
 # frozen_string_literal: true
 
 module Xokul
-  module Connection
-    module_function
+  class Connection
+    attr_accessor :endpoint
 
+    def initialize(endpoint = Configuration.endpoint)
+      @endpoint = endpoint
+      @headers  = { 'Content-Type' => 'application/json' }
+    end
+
+    # Will be redesigned using dispatcher.
     def get(path, params: {})
-      url = URI.join(Configuration.endpoint, path)
-      Support::REST.get(url.to_s, headers: headers, payload: params.to_json, use_ssl: true)
+      url = URI.join(endpoint, path).to_s
+      Support::REST.get(url, headers: headers, payload: params.to_json, **ssl_opts)
+    end
+
+    def bearer_auth(bearer_token)
+      headers['Authorization'] = "Bearer #{bearer_token}"
+    end
+
+    private
+
+    attr_reader :headers
+
+    def ssl_opts
+      { use_ssl: true, verify_mode: OpenSSL::SSL::VERIFY_PEER }
     end
   end
 end
