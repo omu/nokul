@@ -22702,6 +22702,8 @@
   parent_yoksis_id: 390151
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
   unit_status_id: Aktif
+  district_id: Atakum
+  district_id_: Atakum
   unit_instruction_language_id: İngilizce
   unit_instruction_type_id: Normal Öğretim
   duration: 2
