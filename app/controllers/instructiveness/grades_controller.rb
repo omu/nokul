@@ -16,13 +16,13 @@ module Instructiveness
         grade.update(point: new_point) if grade.point != new_point
       end
 
-      @assessment.update(status: :draft) ? redirect_with('success') : render(:edit)
+      @assessment.update(status: :draft) ? redirect_with('.success') : render(:edit)
     end
 
     private
 
     def redirect_with(message)
-      redirect_to(edit_given_course_assessment_grades_path(@course, @assessment), flash: { info: message })
+      redirect_to(edit_given_course_assessment_grades_path(@course, @assessment), flash: { info: t(".#{message}") })
     end
 
     def set_employee
