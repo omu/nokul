@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get '/manifest.json', to: 'service_workers/manifests#index'
   root to: 'home#index'
 
+  get :switch_account, to: 'application#switch_account'
+
   draw :account
   draw :calendar_management
   draw :course_management

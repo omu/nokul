@@ -131,5 +131,6 @@ class RoleManagement
          student_management:                    %i[read write destroy report],
          unit_management:                       %i[read write destroy report]
        }
+  role :manager, name: 'Yönetici', permissions: {}
 end
 # rubocop:enable Metrics/ClassLength

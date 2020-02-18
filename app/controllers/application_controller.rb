@@ -25,6 +25,16 @@ class ApplicationController < ActionController::Base
     user_signed_in? ? { locale: nil } : { locale: I18n.locale }
   end
 
+  def switch_account
+    account = Patron::Account.find_by(user: current_user, type: params[:type], id: params[:id])
+    if account
+      session[:account] = account.identifier
+      flash[:notice] = 'Hesabınız başarıyla değişti'
+    end
+
+    redirect_to root_path
+  end
+
   protected
 
   def append_info_to_payload(payload)
@@ -52,6 +62,19 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update, keys: %i[email])
   end
 
+  def current_account
+    if session.key?(:account) && session.dig(:account, 'type').present?
+      Patron::Account.find_by(
+        user: current_user, type: session.dig(:account, 'type'), id: session.dig(:account, 'id')
+      )
+    else
+      set_current_account
+    end
+  rescue Patron::Account::NotFound
+    set_current_account
+  end
+  helper_method :current_account
+
   private
 
   def handle_unverified_request
@@ -73,5 +96,11 @@ class ApplicationController < ActionController::Base
 
     current_user.preferred_language = locale_params
     current_user.save(validate: false)
+  end
+
+  def set_current_account
+    account           = current_user.accounts.first
+    session[:account] = account&.identifier
+    account
   end
 end
