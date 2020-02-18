@@ -12259,8 +12259,8 @@
   parent_detsis_id: 57246715
   unit_type_id: Fakülte Disiplin Kurulu
   unit_status_id: Aktif
-  district_id: Atakum
-  district_id_: Atakum
+  district_id: Bafra
+  district_id_: Bafra
 
 - name: Fakülte Kurulu
   abbreviation: İŞLETME-KUR
@@ -12268,8 +12268,8 @@
   parent_detsis_id: 57246715
   unit_type_id: Fakülte Kurulu
   unit_status_id: Aktif
-  district_id: Atakum
-  district_id_: Atakum
+  district_id: Bafra
+  district_id_: Bafra
 
 - name: Fakülte Sekreterliği
   abbreviation: İŞLETME-SEK
@@ -12277,8 +12277,8 @@
   parent_detsis_id: 57246715
   unit_type_id: Fakülte Sekreterliği
   unit_status_id: Aktif
-  district_id: Atakum
-  district_id_: Atakum
+  district_id: Bafra
+  district_id_: Bafra
 
 - name: Fakülte Yönetim Kurulu
   abbreviation: İŞLETME-YÖNKUR
@@ -12286,8 +12286,8 @@
   parent_detsis_id: 57246715
   unit_type_id: Fakülte Yönetim Kurulu
   unit_status_id: Aktif
-  district_id: Atakum
-  district_id_: Atakum
+  district_id: Bafra
+  district_id_: Bafra
 
 - name: Sigortacılık ve Aktüerya Bilimleri Bölüm Başkanlığı
   abbreviation: SAB-BB
@@ -12296,8 +12296,8 @@
   parent_detsis_id: 57246715
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
-  district_id: Atakum
-  district_id_: Atakum
+  district_id: Bafra
+  district_id_: Bafra
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
   detsis_id: 78806516
@@ -12867,8 +12867,8 @@
   parent_detsis_id: 93417155
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
-  district_id: Atakum
-  district_id_: Atakum
+  district_id: Bafra
+  district_id_: Bafra
 
 - name: Eskiçağ Tarihi Anabilim Dalı Başkanlığı
   abbreviation: İNSAN-TARİH-ESKİÇAĞ-ADB
@@ -12877,8 +12877,8 @@
   parent_detsis_id: 13806242
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
-  district_id: Atakum
-  district_id_: Atakum
+  district_id: Bafra
+  district_id_: Bafra
 
 - name: Genel Türk Tarihi Anabilim Dalı Başkanlığı
   abbreviation: İNSAN-TARİH-GTT-ADB
@@ -12887,8 +12887,8 @@
   parent_detsis_id: 13806242
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
-  district_id: Atakum
-  district_id_: Atakum
+  district_id: Bafra
+  district_id_: Bafra
 
 - name: Ortaçağ Tarihi Anabilim Dalı Başkanlığı
   abbreviation: İNSAN-TARİH-ORTAÇAĞ-ADB
@@ -12897,8 +12897,8 @@
   parent_detsis_id: 13806242
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
-  district_id: Atakum
-  district_id_: Atakum
+  district_id: Bafra
+  district_id_: Bafra
 
 - name: Türkiye Cumhuriyeti Tarihi Anabilim Dalı Başkanlığı
   abbreviation: İNSAN-TARİH-TC-ADB
@@ -12907,8 +12907,8 @@
   parent_detsis_id: 13806242
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
-  district_id: Atakum
-  district_id_: Atakum
+  district_id: Bafra
+  district_id_: Bafra
 
 - name: Yakınçağ Tarihi Anabilim Dalı Başkanlığı
   abbreviation: İNSAN-TARİH-YAKINÇAĞ-ADB
