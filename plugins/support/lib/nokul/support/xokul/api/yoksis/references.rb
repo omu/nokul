@@ -6,7 +6,7 @@ module Xokul
       configure do |config|
         config.synopsis  = 'Get references provided by YOKSIS'
         config.version   = '1'
-        config.namespace = '/yoksis/references/'
+        config.namespace = '/yoksis/references'
       end
 
       def administrative_functions

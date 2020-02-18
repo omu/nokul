@@ -6,7 +6,7 @@ module Xokul
       configure do |config|
         config.synopsis  = "Get someone's graduation information from YOKSIS"
         config.version   = '1'
-        config.namespace = '/yoksis/graduates/'
+        config.namespace = '/yoksis/graduates'
       end
 
       def information(id_number)
