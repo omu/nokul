@@ -36,14 +36,14 @@ module Nokul
           # Conveniency wrappers for code, name pairs.
           # E.g. unit_code['name'] => unit_code_name
           CODE_NAME_PAIRS.each do |name|
-            define_method("#{name}_name") { send(name)['name'] }
-            define_method("#{name}_code") { send(name)['code'] }
+            define_method("#{name}_name") { send(name)[:name] }
+            define_method("#{name}_code") { send(name)[:code] }
           end
 
           def tolerate!
             self.instruction_language = {} if instruction_language.blank?
-            instruction_language['code'] ||= 1
-            instruction_language['name'] ||= 'Türkçe'
+            instruction_language[:code] ||= 1
+            instruction_language[:name] ||= 'Türkçe'
 
             self.long_name = unit_name      if long_name.blank?
             self.long_name = 'unknown unit' if long_name.blank?

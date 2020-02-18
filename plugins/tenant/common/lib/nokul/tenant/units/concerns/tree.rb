@@ -11,14 +11,14 @@ module Nokul
             @tree ||= begin
               tree = Hash.new { |hash, key| hash[key] = [] }
               each do |unit|
-                tree[unit.parent_id] << unit
+                tree[unit.parent_id.to_i] << unit if unit.parent_id
               end
               tree
             end
           end
 
           def root
-            find { |unit| unit.parent_id.to_i.zero? }
+            find { |unit| unit.parent_id&.to_i&.zero? }
           end
 
           def visit_unit(unit = root, level = 0, &block)
@@ -26,7 +26,7 @@ module Nokul
 
             yield(unit, level) if block_given?
 
-            return if (children = tree[unit.id]).empty?
+            return if (children = tree[unit.id.to_i]).empty?
 
             children.sort_by!(&:name)
 
