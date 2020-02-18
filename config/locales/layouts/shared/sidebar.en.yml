@@ -45,7 +45,7 @@ en:
         accounts:
           title: Accounts
           types:
-            manager: Admin
+            admin: Admin
             employee: Employee
             student: Student
             institution_manager: Institution Manager

@@ -45,7 +45,7 @@ tr:
         accounts:
           title: Hesaplarım
           types:
-            manager: Admin
+            admin: Admin
             employee: Personel
             student: Öğrenci
             institution_manager: Kurum Yöneticisi
