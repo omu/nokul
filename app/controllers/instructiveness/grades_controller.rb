@@ -7,7 +7,15 @@ module Instructiveness
     before_action :set_groups
     before_action :set_assessment
 
-    def edit; end
+    def edit
+      enrollments = @course.saved_enrollments
+                           .where(available_course_group: @groups)
+                           .where.not(id: @assessment.grades.pluck(:course_enrollment_id))
+
+      return if enrollments.empty?
+
+      @assessment.grades.create(enrollments.collect { |e| { course_enrollment_id: e.id } })
+    end
 
     def update
       @grades = @assessment.grades.update(grades_params.keys, grades_params.values)
