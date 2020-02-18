@@ -11,33 +11,30 @@
         </span>
       </div>
       <div class='card-body'>
-        <%= simple_form_for(:grade, url: given_course_assessment_grades_path(@course, @assessment), html: { id: 'grades_form' }) do |f| %>
-          <% @groups.includes(:saved_enrollments).each do |group| %>
-            <div class='card-header'>
-              <%= fa_icon 'cube' %><b><%= group.name %></b>
-            </div>
-            <table class='table table-sm table-striped'>
-              <thead class='thead'>
-                <tr>
-                  <th style='width: 30%'><%= t('.student_number') %></th>
-                  <th style='width: 40%'><%= t('.name') %></th>
-                  <th style='width: 20%'><%= t('.year_and_semester') %></th>
-                  <th style='width: 10%'><%= @assessment.name %></th>
-                </tr>
-              </thead>
-              <tbody>
-                <% group.saved_enrollments.each do |enrollment| %>
+        <%= form_tag(given_course_assessment_grades_path(@course, @assessment), id: 'grades_form') do %> 
+          <table class='table table-sm table-striped'>
+            <thead class='thead'>
+              <tr>
+                <th style='width: 30%'><%= t('.student_number') %></th>
+                <th style='width: 40%'><%= t('.name') %></th>
+                <th style='width: 20%'><%= t('.year_and_semester') %></th>
+                <th style='width: 10%'><%= @assessment.name %></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @assessment.grades.each do |grade| %>
+                <%= fields_for "grades[]", grade do |f| %>
                   <tr>
-                    <% student = enrollment.student %>
+                    <% student = grade.course_enrollment.student %>
                     <td><%= student.student_number %></td>
                     <td><%= full_name(student.user.identities.formal.first) %></td>
                     <td><%= "#{student.year}/#{student.semester}" %></td>
-                    <td><%= f.input :grade, label: false, input_html: { value: enrollment.grades.find_by(course_assessment_method: @assessment)&.point, name: "course_enrollment_grades[#{enrollment.id}]" } %></td>
+                    <td><%= f.number_field(:point, required: true, class: 'form-control numeric integer required') %></td>
                   </tr>
                 <% end %>
-              </tbody>
-            </table>
-          <% end %>
+              <% end %>
+            </tbody>
+          </table>
         <% end %>
       </div>
     </div>

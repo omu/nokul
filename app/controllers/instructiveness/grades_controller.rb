@@ -10,13 +10,15 @@ module Instructiveness
     def edit; end
 
     def update
-      @course.saved_enrollments.where(available_course_group: @groups).each do |enrollment|
-        new_point = grades_params[enrollment.id.to_s]
-        grade = enrollment.grades.find_or_initialize_by(course_assessment_method: @assessment)
-        grade.update(point: new_point) if grade.point != new_point
-      end
+      @grades = @assessment.grades.update(grades_params.keys, grades_params.values)
+      @grades.reject! { |g| g.errors.empty? }
 
-      @assessment.update(status: :draft) ? redirect_with('.success') : render(:edit)
+      if @grades.empty?
+        @assessment.update(status: :draft) unless @assessment.draft?
+        redirect_with('success')
+      else
+        render :edit
+      end
     end
 
     private
@@ -42,7 +44,7 @@ module Instructiveness
     end
 
     def grades_params
-      params.require(:course_enrollment_grades)
+      params.require(:grades)
     end
   end
 end
