@@ -34,7 +34,7 @@ module Nokul
         private_constant :HTTP_OPTIONS
 
         # rubocop:disable Style/IfUnlessModifier
-        def initialize(method, url, headers = {}, **http_options)
+        def initialize(method, url, headers = {}, **http_opts)
           @method  = method
           @url     = url
           @headers = headers
@@ -43,7 +43,7 @@ module Nokul
             raise HTTPMethodError, "invalid HTTP method: #{method}"
           end
 
-          build_http_object http_options
+          build_http_object http_opts
         end
         # rubocop:enable Style/IfUnlessModifier
 
@@ -59,15 +59,15 @@ module Nokul
 
         private
 
-        def build_http_object(http_options)
+        def build_http_object(http_opts)
           uri   = URI.parse(url)
           @http = Net::HTTP.new uri.host, uri.port
 
-          invalid_opts = http_options.keys - HTTP_OPTIONS.keys
+          invalid_opts = http_opts.keys - HTTP_OPTIONS.keys
 
           raise HTTPOptionError, "invalid HTTP options: #{invalid_opts}" unless invalid_opts.empty?
 
-          http_options.each { |option, value| @http.send "#{option}=", value }
+          http_opts.each { |option, value| @http.send "#{option}=", value }
         end
       end
 
@@ -92,8 +92,8 @@ module Nokul
       module_function
 
       HTTP_METHODS.each do |method|
-        define_method(method) do |url, headers: {}, payload: nil, **http_options|
-          Request.new(method, url, headers, **http_options).execute(payload)
+        define_method(method) do |url, headers: {}, payload: nil, **http_opts|
+          Request.new(method, url, headers, **http_opts).execute(payload)
         end
       end
     end
