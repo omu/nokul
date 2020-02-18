@@ -12597,7 +12597,7 @@
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
-  district_id_: Atakum
+  district_id_: Terme
 
 - name: Gastronomi ve Mutfak Sanatları Anabilim Dalı Başkanlığı
   abbreviation: GASTRONOMİ-ADB
@@ -12647,7 +12647,7 @@
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
-  district_id_: Atakum
+  district_id_: Vezirköprü
 
 - name: Bağ Yetiştirme ve Islahı Anabilim Dalı Başkanlığı
   abbreviation: BAHÇE-BAĞ-ADB
@@ -12868,7 +12868,7 @@
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
   district_id: Bafra
-  district_id_: Bafra
+  district_id_: Çarşamba
 
 - name: Eskiçağ Tarihi Anabilim Dalı Başkanlığı
   abbreviation: İNSAN-TARİH-ESKİÇAĞ-ADB
@@ -12878,7 +12878,7 @@
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Bafra
-  district_id_: Bafra
+  district_id_: Çarşamba
 
 - name: Genel Türk Tarihi Anabilim Dalı Başkanlığı
   abbreviation: İNSAN-TARİH-GTT-ADB
@@ -12888,7 +12888,7 @@
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Bafra
-  district_id_: Bafra
+  district_id_: Çarşamba
 
 - name: Ortaçağ Tarihi Anabilim Dalı Başkanlığı
   abbreviation: İNSAN-TARİH-ORTAÇAĞ-ADB
@@ -12898,7 +12898,7 @@
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Bafra
-  district_id_: Bafra
+  district_id_: Çarşamba
 
 - name: Türkiye Cumhuriyeti Tarihi Anabilim Dalı Başkanlığı
   abbreviation: İNSAN-TARİH-TC-ADB
@@ -12908,7 +12908,7 @@
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Bafra
-  district_id_: Bafra
+  district_id_: Çarşamba
 
 - name: Yakınçağ Tarihi Anabilim Dalı Başkanlığı
   abbreviation: İNSAN-TARİH-YAKINÇAĞ-ADB
@@ -12918,7 +12918,7 @@
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
-  district_id_: Atakum
+  district_id_: Çarşamba
 
 - name: Yeniçağ Tarihi Anabilim Dalı Başkanlığı
   abbreviation: İNSAN-TARİH-YENİÇAĞ-ADB
@@ -12928,4 +12928,4 @@
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
-  district_id_: Atakum
+  district_id_: Çarşamba
