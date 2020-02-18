@@ -6,7 +6,11 @@ module Xokul
 
     def initialize(endpoint)
       @endpoint = endpoint
-      @headers  = { 'Content-Type' => 'application/json', 'X-Permitted-Cross-Domain-Policies' => 'none' }
+      # Actually, there are lots of default headers coming with Kong. Most param
+      # is to manage Kong-specific configurations. Therefore, they won't be added
+      # here. Instead that, common configurations suggested by community will be
+      # set up at Kong side.
+      @headers  = { 'Content-Type' => 'application/json' }
     end
 
     # Will be redesigned using dispatcher.
