@@ -38138,8 +38138,8 @@
   parent_detsis_id: 36024139
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
-  district_id: Atakum
-  district_id_: Atakum
+  district_id: Terme
+  district_id_: Terme
 
 - name: Gastronomi ve Mutfak Sanatları Anabilim Dalı Başkanlığı
   abbreviation: GASTRONOMİ-ADB
@@ -38193,8 +38193,8 @@
   parent_detsis_id: 61206311
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
-  district_id: Atakum
-  district_id_: Atakum
+  district_id: Vezirköprü
+  district_id_: Vezirköprü
 
 - name: Bağ Yetiştirme ve Islahı Anabilim Dalı Başkanlığı
   abbreviation: BAHÇE-BAĞ-ADB
@@ -38436,8 +38436,8 @@
   parent_detsis_id: 93417155
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
-  district_id: Bafra
-  district_id_: Bafra
+  district_id: Çarşamba
+  district_id_: Çarşamba
 
 - name: Eskiçağ Tarihi Anabilim Dalı Başkanlığı
   abbreviation: İNSAN-TARİH-ESKİÇAĞ-ADB
@@ -38447,8 +38447,8 @@
   parent_detsis_id: 13806242
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
-  district_id: Bafra
-  district_id_: Bafra
+  district_id: Çarşamba
+  district_id_: Çarşamba
 
 - name: Genel Türk Tarihi Anabilim Dalı Başkanlığı
   abbreviation: İNSAN-TARİH-GTT-ADB
@@ -38458,8 +38458,8 @@
   parent_detsis_id: 13806242
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
-  district_id: Bafra
-  district_id_: Bafra
+  district_id: Çarşamba
+  district_id_: Çarşamba
 
 - name: Ortaçağ Tarihi Anabilim Dalı Başkanlığı
   abbreviation: İNSAN-TARİH-ORTAÇAĞ-ADB
@@ -38469,8 +38469,8 @@
   parent_detsis_id: 13806242
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
-  district_id: Bafra
-  district_id_: Bafra
+  district_id: Çarşamba
+  district_id_: Çarşamba
 
 - name: Türkiye Cumhuriyeti Tarihi Anabilim Dalı Başkanlığı
   abbreviation: İNSAN-TARİH-TC-ADB
@@ -38480,8 +38480,8 @@
   parent_detsis_id: 13806242
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
-  district_id: Bafra
-  district_id_: Bafra
+  district_id: Çarşamba
+  district_id_: Çarşamba
 
 - name: Yakınçağ Tarihi Anabilim Dalı Başkanlığı
   abbreviation: İNSAN-TARİH-YAKINÇAĞ-ADB
@@ -38491,8 +38491,8 @@
   parent_detsis_id: 13806242
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
-  district_id: Atakum
-  district_id_: Atakum
+  district_id: Çarşamba
+  district_id_: Çarşamba
 
 - name: Yeniçağ Tarihi Anabilim Dalı Başkanlığı
   abbreviation: İNSAN-TARİH-YENİÇAĞ-ADB
@@ -38502,5 +38502,5 @@
   parent_detsis_id: 13806242
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
-  district_id: Atakum
-  district_id_: Atakum
+  district_id: Çarşamba
+  district_id_: Çarşamba
