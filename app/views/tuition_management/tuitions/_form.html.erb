@@ -1,0 +1,55 @@
+<div class='row'>
+  <div class='col-sm-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'calendar' %>
+        <strong>Harç Ekle</strong>
+      </div>
+      <div class='card-body'>
+        <%= simple_form_for(tuition) do |f| %>
+          <div class='row'>
+            <div class='form-group col-sm-12'>
+              <%= f.error_notification %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :unit_ids, as: :grouped_select, group_method: :units, role: :group, input_html: { multiple: 'multiple' } %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.association :academic_term, label_method: lambda { |academic_term| full_name(academic_term) } %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :fee, required: true %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :foreign_student_fee %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.button :submit, t('save'), class: 'btn btn-outline-success btn-sm' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class='card-footer'>
+        <%= link_to_back(:back) %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type='text/javascript'>
+  $('#tuition_unit_ids').select2({
+    ajax: {
+      url: "units.json",
+      dataType: "json",
+      data: function (params) {
+          return {
+            q: params.term
+          };
+        },
+      processResults: function (data) {
+        return { results: data.results };
+      },
+    cache: true
+    }
+  });
+</script>

@@ -1,0 +1,34 @@
+<div class='row'>
+  <div class='col-sm-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'street-view', text: 'Harçlar' %>
+        <div class='card-header-actions'>
+          <%= link_to_new 'Yeni Harç Ekle', %i[new tuition] %>
+        </div>
+      </div>
+      <div class='card-body'>
+        <table class='table table-responsive-sm table-striped table-hover'>
+          <thead class="thead-dark">
+            <tr>
+              <th>Birimler</th>
+              <th>Ücret</th>
+              <th>Yabancı Öğrenci Ücret</th>
+              <th><%= t('actions') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @tuitions.each do |tuition| %>
+              <tr>
+                <td><%= tuition.units.map(&:name).join(', ') %></td>
+                <td><%= tuition.fee %></td>
+                <td><%= tuition.foreign_student_fee %></td>
+                <td></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
