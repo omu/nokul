@@ -42,10 +42,4 @@ en:
             stats: University Stats
       sidebar:
         authorizations: Yetkilendirmeler
-        accounts:
-          title: Accounts
-          types:
-            admin: Admin
-            employee: Employee
-            student: Student
-            institution_manager: Institution Manager
+        accounts: Accounts

@@ -8,7 +8,7 @@ module Patron
       end
 
       def label
-        "#{identity.first_name} #{identity.last_name}"
+        I18n.t('patron.accounts.institution_manager')
       end
 
       def type

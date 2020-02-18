@@ -42,10 +42,4 @@ tr:
             stats: Üniversite İstatistikleri
       sidebar:
         authorizations: Yetkilendirmeler
-        accounts:
-          title: Hesaplarım
-          types:
-            admin: Admin
-            employee: Personel
-            student: Öğrenci
-            institution_manager: Kurum Yöneticisi
+        accounts: Hesaplarım

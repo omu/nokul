@@ -39,12 +39,6 @@ module Patron
           id:   id
         }
       end
-
-      protected
-
-      def identity
-        @identity ||= [*user.identities.user_identity].first || identities.new
-      end
     end
   end
 end
