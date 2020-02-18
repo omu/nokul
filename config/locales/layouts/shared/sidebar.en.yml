@@ -2,14 +2,7 @@ en:
   layouts:
     shared:
       menus:
-        employee:
-          given_courses: Given Courses
-        student:
-          course_enrollment: Course Enrollment
-        institution_manager:
-          manager:
-            stats: University Stats
-        manager:
+        admin:
           academic_calendars: Academic Calendars
           administration: Administration
           agenda_types: Agenda Types
@@ -40,6 +33,13 @@ en:
           units: Units
           users: Users
           yoksis: YOKSIS
+        employee:
+          given_courses: Given Courses
+        student:
+          course_enrollment: Course Enrollment
+        institution_manager:
+          manager:
+            stats: University Stats
       sidebar:
         authorizations: Yetkilendirmeler
         accounts:

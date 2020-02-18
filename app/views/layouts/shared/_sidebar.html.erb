@@ -1,21 +1,23 @@
 <div class="sidebar">
   <nav class="sidebar-nav">
     <ul class="nav">
-      <li class="nav-item nav-dropdown">
-        <a class="nav-link nav-dropdown-toggle" href="#">
-          <%= fa_icon('users', text: t('.accounts.title'), class: 'nav-icon') %>
-        </a>
+      <% if current_user.accounts.present? %>
+        <li class="nav-item nav-dropdown">
+          <a class="nav-link nav-dropdown-toggle" href="#">
+            <%= fa_icon('users', text: t('.accounts.title'), class: 'nav-icon') %>
+          </a>
 
-        <ul class="nav-dropdown-items">
-          <% current_user.accounts.each do |account| %>
-            <li class="nav-item" style="<%= 'background: cadetblue;' if account.active_for?(current_account) %>">
-              <%= link_to switch_account_path(account.identifier), class: 'nav-link' do %>
-                <%= t(".accounts.types.#{account.type}") %> - <%= account.label %>
+            <ul class="nav-dropdown-items">
+              <% current_user.accounts.each do |account| %>
+                <li class="nav-item" style="<%= 'background: cadetblue;' if account.active_for?(current_account) %>">
+                  <%= link_to switch_account_path(account.identifier), class: 'nav-link' do %>
+                    <%= t(".accounts.types.#{account.type}") %> - <%= account.label %>
+                  <% end %>
+                </li>
               <% end %>
-            </li>
-          <% end %>
-        </ul>
-      </li>
+            </ul>
+        </li>
+      <% end %>
 
       <li class="nav-item">
         <%= link_to :root, class: 'nav-link' do %>
@@ -23,7 +25,7 @@
         <% end %>
       </li>
 
-      <%= render "layouts/shared/menus/#{current_account.type}" %>
+      <%= render "layouts/shared/menus/#{current_account.type}" if current_user.accounts.present? %>
     </ul>
   </nav>
   <button class="sidebar-minimizer brand-minimizer" type="button"></button>

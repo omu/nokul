@@ -2,14 +2,7 @@ tr:
   layouts:
     shared:
       menus:
-        employee:
-          given_courses: Verilen Dersler
-        student:
-          course_enrollment: Ders Kayıtlanma
-        institution_manager:
-          manager:
-            stats: Üniversite İstatistikleri
-        manager:
+        admin:
           academic_calendars: Akademik Takvimler
           administration: Yönetim
           agenda_types: Gündem Türleri
@@ -40,6 +33,13 @@ tr:
           units: Birimler
           users: Kullanıcılar
           yoksis: YÖKSİS
+        employee:
+          given_courses: Verilen Dersler
+        student:
+          course_enrollment: Ders Kayıtlanma
+        institution_manager:
+          manager:
+            stats: Üniversite İstatistikleri
       sidebar:
         authorizations: Yetkilendirmeler
         accounts:

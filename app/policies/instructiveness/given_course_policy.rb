@@ -17,7 +17,7 @@ module Instructiveness
     private
 
     def permitted?
-      user&.employee? && record&.academic?
+      user&.employee? && user.current_employee&.academic?
     end
   end
 end

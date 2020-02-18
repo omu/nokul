@@ -19,8 +19,7 @@ module Patron
       end
 
       def find_by(user:, type:, id:)
-        klass   = "Patron::Accounts::#{type.to_s.camelize}".safe_constantize
-        account = klass&.new(id, user.id)
+        account = user.accounts.find { |item| item.type == type && item.id == id.to_i }
         account&.verify? ? account : raise(NotFound)
       end
     end
