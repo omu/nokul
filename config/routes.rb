@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   draw :studentship
   draw :yoksis
   draw :detsis
+  draw :tuition_management
 
   resources :students, only: %i[edit update]
 
