@@ -1958,7 +1958,6 @@ CREATE TABLE public.grades (
     point integer,
     created_at timestamp(6) without time zone NOT NULL,
     updated_at timestamp(6) without time zone NOT NULL,
-    CONSTRAINT grades_point_null CHECK ((point IS NOT NULL)),
     CONSTRAINT grades_point_numericality CHECK (((point >= 0) AND (point <= 100)))
 );
 

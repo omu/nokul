@@ -10,8 +10,6 @@ class CreateGrades < ActiveRecord::Migration[6.0]
       t.timestamps
     end
 
-    add_null_constraint :grades, :point
-
     add_numericality_constraint :grades, :point,
                                 greater_than_or_equal_to: 0,
                                 less_than_or_equal_to: 100                  
