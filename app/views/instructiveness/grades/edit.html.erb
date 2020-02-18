@@ -15,9 +15,10 @@
           <table class='table table-sm table-striped'>
             <thead class='thead'>
               <tr>
-                <th style='width: 30%'><%= t('.student_number') %></th>
+                <th style='width: 20%'><%= t('.student_number') %></th>
                 <th style='width: 40%'><%= t('.name') %></th>
-                <th style='width: 20%'><%= t('.year_and_semester') %></th>
+                <th style='width: 15%'><%= t('.year_and_semester') %></th>
+                <th style='width: 15%'><%= t('.group_name') %></th>
                 <th style='width: 10%'><%= @assessment.name %></th>
               </tr>
             </thead>
@@ -25,10 +26,12 @@
               <% @assessment.grades.each do |grade| %>
                 <%= fields_for "grades[]", grade do |f| %>
                   <tr>
-                    <% student = grade.course_enrollment.student %>
+                    <% enrollment = grade.course_enrollment %>
+                    <% student = enrollment.student %>
                     <td><%= student.student_number %></td>
                     <td><%= full_name(student.user.identities.formal.first) %></td>
                     <td><%= "#{student.year}/#{student.semester}" %></td>
+                    <td><%= enrollment.available_course_group.name %></td>
                     <td><%= f.number_field(:point, required: true, class: 'form-control numeric integer required') %></td>
                   </tr>
                 <% end %>

@@ -2,6 +2,7 @@ tr:
   instructiveness:
     grades:
       edit:
+        group_name: Grup Adı
         name: Adı
         students: '%{course_name} Dersine Kayıtlanan Öğrenciler'
         student_number: Öğrenci Numarası
