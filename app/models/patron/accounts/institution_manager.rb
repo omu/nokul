@@ -18,6 +18,10 @@ module Patron
       def verify?
         object.present?
       end
+
+      def root_path
+        %i[manager stats]
+      end
     end
   end
 end

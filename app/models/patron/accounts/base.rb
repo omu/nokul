@@ -29,6 +29,10 @@ module Patron
         raise NotImplementedError
       end
 
+      def root_path
+        :root
+      end
+
       def active_for?(account)
         account&.identifier == identifier
       end

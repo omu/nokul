@@ -7,15 +7,15 @@
             <%= fa_icon('users', text: t('.accounts'), class: 'nav-icon') %>
           </a>
 
-            <ul class="nav-dropdown-items">
-              <% current_user.accounts.each do |account| %>
-                <li class="nav-item" style="<%= 'background: cadetblue;' if account.active_for?(current_account) %>">
-                  <%= link_to switch_account_path(account.identifier), class: 'nav-link' do %>
-                    <%= account.label %>
-                  <% end %>
-                </li>
-              <% end %>
-            </ul>
+          <ul class="nav-dropdown-items">
+            <% current_user.accounts.each do |account| %>
+              <li class="nav-item" style="<%= 'background: cadetblue;' if account.active_for?(current_account) %>">
+                <%= link_to switch_account_path(account.identifier), class: 'nav-link' do %>
+                  <%= account.label %>
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
         </li>
       <% end %>
 
@@ -24,9 +24,16 @@
           <%= fa_icon('home', class: 'nav-icon') %> <%= t('home_nav') %>
         <% end %>
       </li>
-
       <%= render "layouts/shared/menus/#{current_account.type}" if current_user.accounts.present? %>
     </ul>
   </nav>
   <button class="sidebar-minimizer brand-minimizer" type="button"></button>
 </div>
+
+<script type="text/javascript">
+  $('.nav-dropdown').each(function( index ) {
+    if ($(this).children('ul').children().length == 0) {
+      $(this).remove();
+    }
+  });
+</script>
