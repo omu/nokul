@@ -4,10 +4,11 @@ module Xokul
   class API
     include ActiveSupport::Configurable
 
-    config_accessor :synopsis, :version, instance_writer: false
+    config_accessor :synopsis, :version, :namespace, instance_writer: false
 
     def initialize(*)
-      @conn = Connection.new(Configuration.endpoint)
+      url   = URI.join(Configuration.endpoint, namespace).to_s
+      @conn = Connection.new(url)
       @conn.bearer_auth Configuration.bearer_token
     end
 
