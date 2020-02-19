@@ -5,7 +5,7 @@ module TuitionManagement
     before_action :set_tuition, only: %i[edit update destroy]
 
     def index
-      @tuitions = Tuition.includes(:units, :unit_tuitions)
+      @tuitions = Tuition.includes(:units, :unit_tuitions, :academic_term)
     end
 
     def new

@@ -12,6 +12,7 @@
           <thead class="thead-dark">
             <tr>
               <th><%= t('.unit_ids') %></th>
+              <th><%= t('.academic_term') %></th>
               <th><%= t('.fee') %></th>
               <th><%= t('.foreign_student_fee') %></th>
               <th><%= t('actions') %></th>
@@ -21,6 +22,7 @@
             <% @tuitions.each do |tuition| %>
               <tr>
                 <td><%= tuition.units.map(&:name).join(', ') %></td>
+                <td><%= full_name(tuition.academic_term) %></td>
                 <td><%= number_to_currency(tuition.fee) %></td>
                 <td><%= number_to_currency(tuition.foreign_student_fee) %></td>
                 <td><%= link_to_actions(tuition, except: :show) %></td>
