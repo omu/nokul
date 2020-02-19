@@ -2,10 +2,10 @@
 
 module TuitionManagement
   class TuitionsController < ApplicationController
-    before_action :set_tuition, only: %i[edit update]
+    before_action :set_tuition, only: %i[edit update destroy]
 
     def index
-      @tuitions = Tuition.all
+      @tuitions = Tuition.includes(:units, :unit_tuitions)
     end
 
     def new
@@ -14,13 +14,19 @@ module TuitionManagement
 
     def create
       @tuition = Tuition.new(tuition_params)
-      @tuition.save ? redirect_to(:tuitions, notice: 'Başarılı') : render(:new)
+      @tuition.save ? redirect_to(:tuitions, notice: t('.success')) : render(:new)
     end
 
     def edit; end
 
     def update
-      @tuition.update(tuition_params) ? redirect_to(:tuitions, notice: 'Başarılı') : render(:edit)
+      @tuition.update(tuition_params) ? redirect_to(:tuitions, notice: t('.success')) : render(:edit)
+    end
+
+    def destroy
+      return redirect_to(:tuitions, notice: t('.success')) if @tuition.destroy
+
+      redirect_to(:tuitions, alert: t('.warning'))
     end
 
     def units

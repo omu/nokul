@@ -2,18 +2,18 @@
   <div class='col-sm-12'>
     <div class='card'>
       <div class='card-header'>
-        <%= fa_icon 'street-view', text: 'Harçlar' %>
+        <%= fa_icon 'money', text: t('.card_header') %>
         <div class='card-header-actions'>
-          <%= link_to_new 'Yeni Harç Ekle', %i[new tuition] %>
+          <%= link_to_new t('.new_tuition_link'), %i[new tuition] %>
         </div>
       </div>
       <div class='card-body'>
         <table class='table table-responsive-sm table-striped table-hover'>
           <thead class="thead-dark">
             <tr>
-              <th>Birimler</th>
-              <th>Ücret</th>
-              <th>Yabancı Öğrenci Ücret</th>
+              <th><%= t('.unit_ids') %></th>
+              <th><%= t('.fee') %></th>
+              <th><%= t('.foreign_student_fee') %></th>
               <th><%= t('actions') %></th>
             </tr>
           </thead>
@@ -23,7 +23,7 @@
                 <td><%= tuition.units.map(&:name).join(', ') %></td>
                 <td><%= tuition.fee %></td>
                 <td><%= tuition.foreign_student_fee %></td>
-                <td></td>
+                <td><%= link_to_actions(tuition, except: :show) %></td>
               </tr>
             <% end %>
           </tbody>

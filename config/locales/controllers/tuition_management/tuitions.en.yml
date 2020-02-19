@@ -1,0 +1,23 @@
+en:
+  activerecord:
+    attributes:
+      tuition: &tuition_attributes
+        academic_term: Academic Term
+        fee: Tuition Fee
+        foreign_student_fee: Foreign Student Tuition Fee
+        unit_ids: Units
+  tuition_management:
+    tuitions:
+      create:
+        success: Tuitions successfully created.
+      destroy:
+        success: Tuitions successfully deleted.
+        warning: Tuitions can not be deleted!
+      form:
+        form_title: Harç Ekle
+      index:
+        <<: *tuition_attributes
+        card_header: Harçlar
+        new_tuition_link: Yeni Harç Ekle
+      update:
+        success: Tuitions successfully updated.
