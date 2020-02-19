@@ -7,6 +7,7 @@ module Yoksis
     %w[
       create?
       destroy?
+      edit?
       index?
       new?
       update?

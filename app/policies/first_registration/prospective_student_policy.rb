@@ -2,32 +2,12 @@
 
 module FirstRegistration
   class ProspectiveStudentPolicy < ApplicationPolicy
-    def create?
-      new?
-    end
+    include CrudPolicyMethods
 
-    def edit?
-      permitted? :write
-    end
-
-    def index?
-      permitted? :read
-    end
-
-    def new?
-      permitted? :write
-    end
+    undef :destroy?
 
     def register?
       permitted? :write
-    end
-
-    def show?
-      permitted? :read
-    end
-
-    def update?
-      edit?
     end
 
     private

@@ -2,21 +2,9 @@
 
 module Meksis
   class BuildingPolicy < ApplicationPolicy
-    def edit?
-      permitted? :write
-    end
+    include CrudPolicyMethods
 
-    def index?
-      permitted? :read
-    end
-
-    def show?
-      permitted? :read
-    end
-
-    def update?
-      permitted? :write
-    end
+    undef :new?, :create?, :destroy?
 
     private
 

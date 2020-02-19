@@ -2,25 +2,9 @@
 
 module UserManagement
   class EmployeePolicy < ApplicationPolicy
-    def create?
-      permitted? :write
-    end
+    include CrudPolicyMethods
 
-    def destroy?
-      permitted? :destroy
-    end
-
-    def edit?
-      permitted? :write
-    end
-
-    def new?
-      permitted? :write
-    end
-
-    def update?
-      permitted? :write
-    end
+    undef :index?, :show?
 
     private
 

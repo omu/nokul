@@ -2,29 +2,9 @@
 
 module FirstRegistration
   class RegistrationDocumentPolicy < ApplicationPolicy
-    def create?
-      new?
-    end
+    include CrudPolicyMethods
 
-    def destroy?
-      permitted? :destroy
-    end
-
-    def edit?
-      permitted? :write
-    end
-
-    def index?
-      permitted? :read
-    end
-
-    def new?
-      permitted? :write
-    end
-
-    def update?
-      edit?
-    end
+    undef :show?
 
     private
 

@@ -2,25 +2,9 @@
 
 module Committee
   class DecisionPolicy < ApplicationPolicy
-    def create?
-      permitted? :write
-    end
+    include CrudPolicyMethods
 
-    def edit?
-      permitted? :write
-    end
-
-    def new?
-      permitted? :write
-    end
-
-    def show?
-      permitted? :read
-    end
-
-    def update?
-      permitted? :write
-    end
+    undef :destroy?, :index?
 
     private
 

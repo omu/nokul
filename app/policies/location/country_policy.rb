@@ -2,33 +2,7 @@
 
 module Location
   class CountryPolicy < ApplicationPolicy
-    def create?
-      permitted? :write
-    end
-
-    def destroy?
-      permitted? :destroy
-    end
-
-    def edit?
-      permitted? :write
-    end
-
-    def index?
-      permitted? :read
-    end
-
-    def new?
-      permitted? :write
-    end
-
-    def show?
-      permitted? :read
-    end
-
-    def update?
-      permitted? :write
-    end
+    include CrudPolicyMethods
 
     private
 
