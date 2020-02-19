@@ -6,11 +6,11 @@ module Xokul
 
     config_accessor :synopsis, :version, :namespace, instance_writer: false
 
-    attr_reader :url
+    attr_reader :request_url
 
     def initialize
-      @url  = URI.join(Configuration.endpoint, namespace.chomp('/') + '/').to_s
-      @conn = Connection.new(@url)
+      @request_url = URI.join(Configuration.endpoint, namespace.chomp('/') + '/').to_s
+      @conn = Connection.new(@request_url)
       @conn.bearer_auth Configuration.bearer_token
 
       after_initialize!
