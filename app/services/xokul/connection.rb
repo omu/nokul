@@ -24,5 +24,5 @@ module Xokul
     end
   end
 
-  # private_constant :Connection
+  private_constant :Connection
 end
