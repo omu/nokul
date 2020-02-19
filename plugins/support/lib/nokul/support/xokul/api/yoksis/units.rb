@@ -18,8 +18,6 @@ module Xokul
       end
 
       def units(unit_id)
-        # TODO: Xokul doesn't have such an endpoint. It must be refactored
-        # for the last changes.
         conn.get '/', params: { unit_id: unit_id }
       end
 
