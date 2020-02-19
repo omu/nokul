@@ -21,8 +21,8 @@
             <% @tuitions.each do |tuition| %>
               <tr>
                 <td><%= tuition.units.map(&:name).join(', ') %></td>
-                <td><%= tuition.fee %></td>
-                <td><%= tuition.foreign_student_fee %></td>
+                <td><%= number_to_currency(tuition.fee) %></td>
+                <td><%= number_to_currency(tuition.foreign_student_fee) %></td>
                 <td><%= link_to_actions(tuition, except: :show) %></td>
               </tr>
             <% end %>
