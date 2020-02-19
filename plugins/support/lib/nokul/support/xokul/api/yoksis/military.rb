@@ -10,7 +10,7 @@ module Xokul
       end
 
       def status(id_number)
-        conn.get '/status', params: { id_number: id_number }
+        conn.get :status, params: { id_number: id_number }
       end
     end
   end

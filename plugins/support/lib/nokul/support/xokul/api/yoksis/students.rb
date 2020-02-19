@@ -10,7 +10,7 @@ module Xokul
       end
 
       def information(id_number)
-        conn.get '/information', params: { id_number: id_number }
+        conn.get :information, params: { id_number: id_number }
       end
     end
   end
