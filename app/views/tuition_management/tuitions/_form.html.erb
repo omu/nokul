@@ -12,7 +12,7 @@
               <%= f.error_notification %>
             </div>
             <div class='form-group col-sm-6'>
-              <%= f.input :unit_ids, as: :grouped_select, group_method: :units, role: :group, input_html: { multiple: 'multiple' } %>
+              <%= f.input :unit_ids, collection: f.object.units, value_method: :id, label_method: :name,  input_html: { multiple: 'multiple' } %>
             </div>
             <div class='form-group col-sm-6'>
               <%= f.association :academic_term, label_method: lambda { |academic_term| full_name(academic_term) } %>
@@ -39,7 +39,7 @@
 <script type='text/javascript'>
   $('#tuition_unit_ids').select2({
     ajax: {
-      url: "units.json",
+      url: "/tuitions/units.json",
       dataType: "json",
       data: function (params) {
           return {
@@ -47,9 +47,9 @@
           };
         },
       processResults: function (data) {
-        return { results: data.results };
+        return { results: data };
       },
-    cache: true
+      cache: true
     }
   });
 </script>
