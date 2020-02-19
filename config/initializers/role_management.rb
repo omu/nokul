@@ -129,7 +129,8 @@ class RoleManagement
          registration_management_for_employees: %i[read write destroy],
          registration_management_for_students:  %i[read write destroy],
          student_management:                    %i[read write destroy report],
-         unit_management:                       %i[read write destroy report]
+         unit_management:                       %i[read write destroy report],
+         user_management:                       %i[read write destroy report]
        }
   role :manager, name: 'Yönetici', permissions: {}
 end
