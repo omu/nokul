@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'yoksis/graduates'
+require_relative 'yoksis/military'
 require_relative 'yoksis/references'
 require_relative 'yoksis/resumes'
 require_relative 'yoksis/staff'
