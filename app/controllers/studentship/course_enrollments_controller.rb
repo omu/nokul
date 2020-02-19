@@ -60,7 +60,7 @@ module Studentship
     end
 
     def authorized?
-      authorize @student, policy_class: Studentship::CourseEnrollmentPolicy
+      authorize(@student, policy_class: Studentship::CourseEnrollmentPolicy)
     end
 
     def check_registrability

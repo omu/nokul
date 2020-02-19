@@ -103,7 +103,7 @@ class ApplicationController < ActionController::Base
 
   def set_current_account
     if (account = current_user.accounts.first)
-      session[:account] = account&.identifier
+      session[:account] = account.identifier
       account
     else
       session.delete(:account)
