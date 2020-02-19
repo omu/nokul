@@ -19,7 +19,9 @@ module TuitionManagement
 
     def edit; end
 
-    def update; end
+    def update
+      @tuition.update(tuition_params) ? redirect_to(:tuitions, notice: 'Başarılı') : render(:edit)
+    end
 
     def units
       @units = Unit.faculties
