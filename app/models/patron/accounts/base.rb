@@ -4,7 +4,7 @@ module Patron
   module Accounts
     class Base
       attr_reader :id, :user_id
-      
+
       def initialize(id, user_id)
         @id      = id.to_i
         @user_id = user_id
