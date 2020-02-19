@@ -2,21 +2,9 @@
 
 module Patron
   class AssignmentPolicy < ApplicationPolicy
-    def index?
-      permitted? :read
-    end
+    include CrudPolicyMethods
 
-    def show?
-      permitted? :read
-    end
-
-    def update?
-      permitted? :write
-    end
-
-    def edit?
-      update?
-    end
+    undef :new?, :create?, :destroy?
 
     def preview_scope?
       permitted? :read

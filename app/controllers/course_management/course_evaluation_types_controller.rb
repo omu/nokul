@@ -4,6 +4,7 @@ module CourseManagement
   class CourseEvaluationTypesController < ApplicationController
     before_action :set_available_course
     before_action :set_course_evaluation_type, only: %i[edit update destroy]
+    before_action :authorized?
 
     def new
       @evaluation_type = @available_course.evaluation_types.new
@@ -38,6 +39,10 @@ module CourseManagement
 
     def set_course_evaluation_type
       @evaluation_type = @available_course.evaluation_types.find(params[:id])
+    end
+
+    def authorized?
+      authorize([:course_management, @evaluation_type || CourseEvaluationType])
     end
 
     def course_evaluation_type_params

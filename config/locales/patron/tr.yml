@@ -1,5 +1,10 @@
 tr:
   patron:
+    accounts:
+      admin: Admin
+      employee: Personel
+      student: Öğrenci
+      institution_manager: Kurum Yöneticisi
     errors:
       invalid_privilege: Bu izin için <strong>%{privilege}</strong> geçerli bir ayrıcalık değil
     skip_empties:

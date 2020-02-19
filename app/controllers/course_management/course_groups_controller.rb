@@ -5,6 +5,7 @@ module CourseManagement
     include Pagy::Backend
 
     before_action :set_course_group, only: %i[show edit update destroy]
+    before_action :authorized?
 
     def index
       course_groups = CourseGroup.includes(:unit, :course_group_type)
@@ -43,6 +44,10 @@ module CourseManagement
 
     def set_course_group
       @course_group = CourseGroup.find(params[:id])
+    end
+
+    def authorized?
+      authorize([:course_management, @course_group || CourseGroup])
     end
 
     def course_group_params

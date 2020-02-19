@@ -1,0 +1,7 @@
+tr:
+  user_management:
+    disability:
+      edit:
+        form_title: Engel Durumunu Güncelle
+      update:
+        success: Engel durumu başarılı bir şekilde güncellendi.
