@@ -14,10 +14,10 @@ en:
         success: Tuitions successfully deleted.
         warning: Tuitions can not be deleted!
       form:
-        form_title: Harç Ekle
+        form_title: Add Tuition
       index:
         <<: *tuition_attributes
-        card_header: Harçlar
-        new_tuition_link: Yeni Harç Ekle
+        card_header: Unit Tuition Fees
+        new_tuition_link: Add New Tuition
       update:
         success: Tuitions successfully updated.
