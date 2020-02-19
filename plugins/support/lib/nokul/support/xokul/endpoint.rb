@@ -9,8 +9,8 @@ module Xokul
     attr_reader :url
 
     def initialize
-      @url = URI.join(Configuration.endpoint, namespace.chomp('/') + '/').to_s
-      @conn = Connection.new(@url)
+      url   = URI.join(Configuration.endpoint, namespace.chomp('/') + '/').to_s
+      @conn = Connection.new(url)
       @conn.bearer_auth Configuration.bearer_token
 
       after_initialize!
