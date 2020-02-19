@@ -4,6 +4,9 @@ module Manager
   module Stats
     class StudentsController < ApplicationController
       layout false
+      before_action do
+        authorize(current_user, policy_class: Manager::Stats::StudentPolicy)
+      end
 
       def index; end
 

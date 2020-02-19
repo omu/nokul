@@ -6,6 +6,7 @@ module FirstRegistration
 
     before_action :set_prospective_student, only: %i[show edit update register]
     before_action :can_register?, only: :register
+    before_action :authorized?
 
     def index
       prospective_students = ProspectiveStudent.includes(:unit, :student_entrance_type)
@@ -54,6 +55,10 @@ module FirstRegistration
 
     def set_prospective_student
       @prospective_student = ProspectiveStudent.find(params[:id])
+    end
+
+    def authorized?
+      authorize([:first_registration, @prospective_student || ProspectiveStudent])
     end
 
     def can_register?

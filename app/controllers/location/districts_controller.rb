@@ -4,6 +4,7 @@ module Location
   class DistrictsController < ApplicationController
     before_action :set_city
     before_action :set_district, only: %i[edit update destroy]
+    before_action :authorized?
 
     def new
       @district = @city.districts.new
@@ -44,6 +45,10 @@ module Location
 
     def set_district
       @district = @city.districts.find(params[:id])
+    end
+
+    def authorized?
+      authorize([:location, @district || District])
     end
 
     def district_params

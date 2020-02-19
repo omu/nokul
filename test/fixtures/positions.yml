@@ -3,7 +3,7 @@ baum_dean:
   duty: baum
   start_date: 01.01.2016
   end_date: <%= Time.zone.now - 2.years %>
-omu_rector:
+omu_rector_passive:
   administrative_function: rector
   duty: omu
   start_date: 01.01.2016
@@ -12,4 +12,14 @@ uzem_yok_member:
   administrative_function: yok_member
   duty: uzem
   start_date: 01.01.2015
+  end_date: <%= Time.zone.now + 2.years %>
+omu_rector:
+  administrative_function: rector
+  duty: omu_rector
+  start_date: 01.01.2016
+  end_date: <%= Time.zone.now + 2.years %>
+omu_vice_rector:
+  administrative_function: vice_rector
+  duty: omu_vice_rector
+  start_date: 01.01.2016
   end_date: <%= Time.zone.now + 2.years %>

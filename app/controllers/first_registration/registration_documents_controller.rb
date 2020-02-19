@@ -5,6 +5,7 @@ module FirstRegistration
     include SearchableModule
 
     before_action :set_registration_document, only: %i[edit update destroy]
+    before_action :authorized?
 
     def index
       @registration_documents = pagy_by_search(
@@ -49,6 +50,10 @@ module FirstRegistration
 
     def set_registration_document
       @registration_document = RegistrationDocument.find(params[:id])
+    end
+
+    def authorized?
+      authorize([:first_registration, @registration_document || RegistrationDocument])
     end
 
     def registration_document_params

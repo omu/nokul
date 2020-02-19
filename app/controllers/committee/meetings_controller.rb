@@ -4,6 +4,7 @@ module Committee
   class MeetingsController < ApplicationController
     before_action :set_committee
     before_action :set_meeting, only: %i[show edit update destroy]
+    before_action :authorized?
 
     def index
       @meetings = @committee.meetings.order(year: :desc, meeting_no: :asc)
@@ -44,6 +45,10 @@ module Committee
 
     def set_meeting
       @meeting = @committee.meetings.find(params[:id])
+    end
+
+    def authorized?
+      authorize(@meeting || CommitteeMeeting, policy_class: Committee::MeetingPolicy)
     end
 
     def meeting_params

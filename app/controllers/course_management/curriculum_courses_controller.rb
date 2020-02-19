@@ -4,6 +4,7 @@ module CourseManagement
   class CurriculumCoursesController < ApplicationController
     before_action :set_semester, only: %i[new create edit update destroy]
     before_action :set_curriculum_course, only: %i[edit update destroy]
+    before_action :authorized?
 
     def new
       @curriculum_course = @semester.curriculum_courses.new
@@ -39,6 +40,10 @@ module CourseManagement
       @semester = CurriculumSemesterDecorator.new(
         CurriculumSemester.find(params[:curriculum_semester_id])
       )
+    end
+
+    def authorized?
+      authorize([:course_management, @curriculum_course || CurriculumCourse])
     end
 
     def curriculum_course_params

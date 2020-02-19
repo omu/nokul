@@ -1,0 +1,27 @@
+tr:
+  activerecord:
+    attributes:
+      course_group_type: &course_group_type_attributes
+        name: Ders Grup Tür Adı
+  reference:
+    course_group_types:
+      create:
+        success: Ders grup türü başarıyla oluşturuldu.
+      destroy:
+        warning: Ders grup türü silinirken bir hata oluştu.
+        success: Ders grup türü başarıyla silindi.
+      edit:
+        form_title: Ders Grup Türü Düzenle
+      index:
+        <<: *course_group_type_attributes
+        card_header: Ders Grup Türleri
+        new_course_group_type_link: Yeni Ders Grup Türü Ekle
+      new:
+        form_title: Ders Grup Türü Oluştur
+      update:
+        success: Ders grup türü başarıyla güncellendi.
+  helpers:
+    submit:
+      course_group_type:
+        create: Ders Grup Türü Ekle
+        update: Ders Grup Türü Güncelle

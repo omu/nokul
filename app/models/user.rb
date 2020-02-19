@@ -128,7 +128,7 @@ class User < ApplicationRecord
 
   # custom methods
   def accounts
-    (students + employees).flatten
+    Patron::Account.call(self)
   end
 
   def title

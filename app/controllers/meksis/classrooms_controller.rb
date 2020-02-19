@@ -9,10 +9,13 @@ module Meksis
     def index
       classrooms = @building.classrooms.includes(:place_type).order(:name)
       @pagy, @classrooms = pagy(classrooms.dynamic_search(search_params(Classroom)))
+
+      authorize([:meksis, @classrooms])
     end
 
     def show
       @classroom = Classroom.find(params[:id])
+      authorize([:meksis, @classroom])
     end
 
     private

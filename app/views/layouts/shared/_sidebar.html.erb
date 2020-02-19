@@ -1,173 +1,39 @@
 <div class="sidebar">
   <nav class="sidebar-nav">
     <ul class="nav">
+      <% if current_user.accounts.present? %>
+        <li class="nav-item nav-dropdown">
+          <a class="nav-link nav-dropdown-toggle" href="#">
+            <%= fa_icon('users', text: t('.accounts'), class: 'nav-icon') %>
+          </a>
+
+          <ul class="nav-dropdown-items">
+            <% current_user.accounts.each do |account| %>
+              <li class="nav-item" style="<%= 'background: cadetblue;' if account.active_for?(current_account) %>">
+                <%= link_to switch_account_path(account.identifier), class: 'nav-link' do %>
+                  <%= account.label %>
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
+        </li>
+      <% end %>
+
       <li class="nav-item">
         <%= link_to :root, class: 'nav-link' do %>
           <%= fa_icon('home', class: 'nav-icon') %> <%= t('home_nav') %>
         <% end %>
       </li>
-      <li class="nav-item">
-        <%= link_to :units, class: 'nav-link' do %>
-          <%= fa_icon('sitemap', text: t('.units'), class: 'nav-icon') %>
-        <% end %>
-      </li>
-      <li class="nav-item nav-dropdown">
-        <a class="nav-link nav-dropdown-toggle" href="#">
-          <%= fa_icon('list', class: 'nav-icon') %><%= t('.course_management') %>
-        </a>
-        <ul class="nav-dropdown-items">
-          <li class="nav-item">
-            <%= link_to :curriculums, class: 'nav-link' do %>
-              <%= fa_icon('book', text: t('.curriculums'), class: 'nav-icon') %>
-            <% end %>
-          </li>
-          <li class="nav-item">
-            <%= link_to :courses, class: 'nav-link' do %>
-              <%= fa_icon('book', text: t('.courses'), class: 'nav-icon') %>
-            <% end %>
-          </li>
-          <li class="nav-item">
-            <%= link_to :course_groups, class: 'nav-link' do %>
-              <%= fa_icon('cubes', text: t('.course_groups'), class: 'nav-icon') %>
-            <% end %>
-          </li>
-          <li class="nav-item">
-            <%= link_to :available_courses, class: 'nav-link' do %>
-              <%= fa_icon('book', text: t('.available_courses'), class: 'nav-icon') %>
-            <% end %>
-          </li>
-          <li class="nav-item">
-            <%= link_to :given_courses, class: 'nav-link' do %>
-              <%= fa_icon('book', text: t('.given_courses'), class: 'nav-icon') %>
-            <% end %>
-          </li>
-        </ul>
-      </li>
-      <li class="nav-item nav-dropdown">
-        <a class="nav-link nav-dropdown-toggle" href="#">
-          <%= fa_icon('book', class: 'nav-icon') %><%= t('.course_enrollments') %>
-        </a>
-        <% current_user.students.each do |student| %>
-          <ul class="nav-dropdown-items">
-            <li class="nav-item">
-              <%= link_to student_course_enrollments_path(student), class: 'nav-link' do %>
-                <%= fa_icon('graduation-cap', text: student.unit.name, class: 'nav-icon') %>
-              <% end %>
-            </li>
-          </ul>
-        <% end %>
-      </li>
-      <li class="nav-item nav-dropdown">
-        <a class="nav-link nav-dropdown-toggle" href="#">
-          <%= fa_icon('user-plus', class: 'nav-icon') %><%= t('.first_registration') %>
-        </a>
-        <ul class="nav-dropdown-items">
-          <li class="nav-item">
-            <%= link_to :prospective_students, class: 'nav-link' do %>
-              <%= fa_icon('users', text: t('.prospective_students'), class: 'nav-icon') %>
-            <% end %>
-          </li>
-          <li class="nav-item">
-            <%= link_to :prospective_employees, class: 'nav-link' do %>
-              <%= fa_icon('users', text: t('.prospective_employees'), class: 'nav-icon') %>
-            <% end %>
-          </li>
-          <li class="nav-item">
-            <%= link_to :registration_documents, class: 'nav-link' do %>
-              <%= fa_icon('file-text', text: t('.registration_documents'), class: 'nav-icon') %>
-            <% end %>
-          </li>
-        </ul>
-      </li>
-      <li class="nav-item nav-dropdown">
-        <a class="nav-link nav-dropdown-toggle" href="#">
-          <%= fa_icon('tasks', class: 'nav-icon') %><%= t('.committees') %>
-        </a>
-        <ul class="nav-dropdown-items">
-          <li class="nav-item">
-            <%= link_to :agenda_types, class: 'nav-link' do %>
-              <%= fa_icon('tags', text: t('.agenda_types'), class: 'nav-icon') %>
-            <% end %>
-          </li>
-          <li class="nav-item">
-            <%= link_to :committees, class: 'nav-link' do %>
-              <%= fa_icon('cubes', text: t('.committee_units'), class: 'nav-icon') %>
-            <% end %>
-          </li>
-        </ul>
-      </li>
-      <li class="nav-item nav-dropdown">
-        <a class="nav-link nav-dropdown-toggle" href="#">
-          <%= fa_icon('calendar', class: 'nav-icon') %><%= t('.calendar_management') %>
-        </a>
-        <ul class="nav-dropdown-items">
-          <li class="nav-item">
-            <%= link_to :calendar_event_types, class: 'nav-link' do %>
-              <%= fa_icon('calendar-plus-o', text: t('.calendar_event_types'), class: 'nav-icon') %>
-            <% end %>
-          </li>
-          <li class="nav-item">
-            <%= link_to :calendars, class: 'nav-link' do %>
-              <%= fa_icon('calendar-check-o', text: t('.academic_calendars'), class: 'nav-icon') %>
-            <% end %>
-          </li>
-        </ul>
-      </li>
-      <li class="nav-item">
-        <%= link_to :users, class: 'nav-link' do %>
-          <%= fa_icon('user', text: t('.users'), class: 'nav-icon') %>
-        <% end %>
-      </li>
-      <li class="nav-item nav-dropdown">
-        <a class="nav-link nav-dropdown-toggle" href="#">
-          <%= fa_icon('superpowers', class: 'nav-icon') %><%= t('.administration') %>
-        </a>
-        <ul class="nav-dropdown-items">
-          <li class="nav-item">
-            <%= link_to :patron, class: 'nav-link' do %>
-              <%= fa_icon('cogs', text: t('.authorizations'), class: 'nav-icon') %>
-            <% end %>
-          </li>
-          <li class="nav-item">
-            <%= link_to :reference, class: 'nav-link' do %>
-              <%= fa_icon('th-list', text: t('.references'), class: 'nav-icon') %>
-            <% end %>
-          </li>
-          <li class="nav-item">
-            <%= link_to :yoksis, class: 'nav-link' do %>
-              <%= fa_icon('th', text: t('.yoksis'), class: 'nav-icon') %>
-            <% end %>
-          </li>
-          <li class="nav-item">
-            <%= link_to :meksis, class: 'nav-link' do %>
-              <%= fa_icon('th', text: t('.meksis'), class: 'nav-icon') %>
-            <% end %>
-          </li>
-          <li class="nav-item">
-            <%= link_to :detsis, class: 'nav-link' do %>
-              <%= fa_icon('th', text: t('.detsis'), class: 'nav-icon') %>
-            <% end %>
-          </li>
-          <li class="nav-item">
-            <%= link_to :ldap_entities, class: 'nav-link' do %>
-              <%= fa_icon('database', text: t('.ldap'), class: 'nav-icon') %>
-            <% end %>
-          </li>
-        </ul>
-      </li>
-      <li class="nav-item nav-dropdown">
-        <a class="nav-link nav-dropdown-toggle" href="#">
-          <%= fa_icon('microchip', class: 'nav-icon') %><%= t('.manager.title') %>
-        </a>
-        <ul class="nav-dropdown-items">
-          <li class="nav-item">
-            <%= link_to %i[manager stats], class: 'nav-link' do %>
-              <%= fa_icon('area-chart', text: t('.manager.stats'), class: 'nav-icon') %>
-            <% end %>
-          </li>
-        </ul>
-      </li>
+      <%= render "layouts/shared/menus/#{current_account.type}" if current_user.accounts.present? %>
     </ul>
   </nav>
   <button class="sidebar-minimizer brand-minimizer" type="button"></button>
 </div>
+
+<script type="text/javascript">
+  $('.nav-dropdown').each(function( index ) {
+    if ($(this).children('ul').children().length == 0) {
+      $(this).remove();
+    }
+  });
+</script>

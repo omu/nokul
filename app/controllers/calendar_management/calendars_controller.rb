@@ -5,6 +5,7 @@ module CalendarManagement
     include SearchableModule
 
     before_action :set_calendar, only: %i[show edit update destroy duplicate units]
+    before_action :authorized?
 
     def index
       @calendars = pagy_by_search(Calendar.includes(:academic_term).order(created_at: :desc))
@@ -57,6 +58,10 @@ module CalendarManagement
     def set_calendar
       @calendar = Calendar.includes(calendar_events: [:calendar_event_type])
                           .find(params[:id])
+    end
+
+    def authorized?
+      authorize([:calendar_management, @calendar || Calendar])
     end
 
     def calendar_params

@@ -2,6 +2,8 @@
 
 module Reference
   class DashboardController < ApplicationController
-    def index; end
+    def index
+      authorize %i[reference dashboard]
+    end
   end
 end

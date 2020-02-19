@@ -3,6 +3,7 @@
 module Studentship
   class CourseEnrollmentsController < ApplicationController
     before_action :set_student
+    before_action :authorized?
     before_action :set_service, except: :index
     before_action :set_course_enrollment, only: :destroy
     before_action :check_registrability, except: :index
@@ -56,6 +57,10 @@ module Studentship
 
     def set_course_enrollment
       @course_enrollment = @student.current_registration.course_enrollments.find(params[:id])
+    end
+
+    def authorized?
+      authorize(@student, policy_class: Studentship::CourseEnrollmentPolicy)
     end
 
     def check_registrability
