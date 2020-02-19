@@ -2,10 +2,14 @@
 
 module TuitionManagement
   class TuitionsController < ApplicationController
+    include SearchableModule
+
     before_action :set_tuition, only: %i[edit update destroy]
 
     def index
-      @tuitions = Tuition.includes(:units, :unit_tuitions, :academic_term)
+      tuitions = Tuition.includes(:units, :unit_tuitions, :academic_term)
+
+      @pagy, @tuitions = pagy(tuitions.dynamic_search(search_params(Tuition)))
     end
 
     def new

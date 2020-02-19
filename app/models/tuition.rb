@@ -1,6 +1,12 @@
 # frozen_string_literal: true
 
 class Tuition < ApplicationRecord
+  # search
+  include DynamicSearch
+
+  # dynamic_search
+  search_keys :academic_term_id
+
   # relations
   belongs_to :academic_term
   has_many :unit_tuitions, dependent: :destroy

@@ -19,5 +19,7 @@ en:
         <<: *tuition_attributes
         card_header: Unit Tuition Fees
         new_tuition_link: Add New Tuition
+      search:
+        academic_term: Academic Term
       update:
         success: Tuitions successfully updated.
