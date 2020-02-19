@@ -2,7 +2,7 @@
 
 module Xokul
   module Yoksis
-    class References < API
+    class References < Endpoint
       configure do |config|
         config.synopsis  = 'Get references provided by YOKSIS'
         config.version   = '1'

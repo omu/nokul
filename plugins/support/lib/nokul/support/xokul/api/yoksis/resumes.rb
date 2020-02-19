@@ -2,7 +2,7 @@
 
 module Xokul
   module Yoksis
-    class Resumes < API
+    class Resumes < Endpoint
       configure do |config|
         config.synopsis  = "Get someone's academic history from YOKSIS"
         config.version   = '1'

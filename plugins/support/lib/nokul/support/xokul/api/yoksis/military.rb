@@ -2,7 +2,7 @@
 
 module Xokul
   module Yoksis
-    class Military < API
+    class Military < Endpoint
       configure do |config|
         config.synopsis  = "Get someone's military status from YOKSIS"
         config.version   = '1'
@@ -10,7 +10,7 @@ module Xokul
       end
 
       def status(id_number)
-        conn.get '/information', params: { id_number: id_number }
+        conn.get '/status', params: { id_number: id_number }
       end
     end
   end

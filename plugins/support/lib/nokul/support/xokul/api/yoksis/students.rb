@@ -2,7 +2,7 @@
 
 module Xokul
   module Yoksis
-    class Students < API
+    class Students < Endpoint
       configure do |config|
         config.synopsis  = 'Get student related information from YOKSIS'
         config.version   = '1'

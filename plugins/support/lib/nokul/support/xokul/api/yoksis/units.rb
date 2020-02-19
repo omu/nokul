@@ -2,7 +2,7 @@
 
 module Xokul
   module Yoksis
-    class Units < API
+    class Units < Endpoint
       configure do |config|
         config.synopsis  = 'Get everything related to units from YOKSIS'
         config.version   = '1'
