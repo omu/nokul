@@ -63,8 +63,8 @@ class RoleManagement
              description: 'Ülke, Şehir ve İlçe Yönetim Yetkisi',
              privileges:  %i[read write destroy]
   permission :meksis_management,
-             name:        'Meksis Yönetimi',
-             description: 'Meksis Yönetim Yetkisi',
+             name:        'MEKSİS Yönetimi',
+             description: 'MEKSİS Yönetim Yetkisi',
              privileges:  %i[read write destroy]
   permission :reference_management,
              name:        'Referans Yönetimi',
@@ -98,7 +98,10 @@ class RoleManagement
              name:        'Personel Yönetimi',
              description: 'Personel Yönetim Yetkisi',
              privileges:  %i[read write destroy report]
-
+  permission :yoksis_management,
+             name:        'YÖKSİS Yönetimi',
+             description: 'YÖKSİS Yönetim Yetkisi',
+             privileges:  %i[read write destroy]
   # roles
   role :authorization_manager,
        name:        'Yetkilendirme Yöneticisi',
@@ -130,7 +133,8 @@ class RoleManagement
          registration_management_for_students:  %i[read write destroy],
          student_management:                    %i[read write destroy report],
          unit_management:                       %i[read write destroy report],
-         user_management:                       %i[read write destroy report]
+         user_management:                       %i[read write destroy report],
+         yoksis_management:                     %i[read write destroy]
        }
   role :manager, name: 'Yönetici', permissions: {}
 end
