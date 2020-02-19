@@ -8,7 +8,7 @@ module Patron
       end
 
       def label
-        "#{I18n.t('patron.accounts.student')} - #{object.student_number}"
+        "#{I18n.t('patron.accounts.student')} - #{object&.student_number}"
       end
 
       def type

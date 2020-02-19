@@ -9,9 +9,7 @@ module Manager
     private
 
     def manager?
-      user.positions.active.exists?(
-        administrative_function_id: AdministrativeFunction.where(name: ['Rektör', 'Rektör Yardımcısı']).ids
-      )
+      Patron::Utils::RoleQuerier.new(user).institution_manager?
     end
   end
 end
