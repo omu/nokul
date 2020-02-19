@@ -85,7 +85,7 @@ en:
         identities: Identities
         last_name: Last Name
         new_user_link: Create a New User
-        smart_search_placeholder: TC/YU number, e-mail address, first of last name
+        smart_search_placeholder: TC/YU number, e-mail address, first or last name
       new:
         form_title: Create Account
       save_address_from_mernis:
