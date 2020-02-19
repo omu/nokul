@@ -27,12 +27,15 @@ class ApplicationController < ActionController::Base
 
   def switch_account
     account = Patron::Account.find_by(user: current_user, type: params[:type], id: params[:id])
+    path    = root_path
+
     if account
       session[:account] = account.identifier
-      flash[:notice] = t('switched_account')
+      flash[:notice]    = t('switched_account')
+      path              = [*account&.root_path, only_path: true]
     end
 
-    redirect_to account&.root_path || root_path
+    redirect_to path
   end
 
   protected
