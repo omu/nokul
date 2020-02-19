@@ -11,7 +11,7 @@ module Xokul
 
     # Will be redesigned using dispatcher.
     def get(path, params: {})
-      url  = URI.join(endpoint, path).to_s
+      url  = URI.join(endpoint, path.to_s).to_s
       resp = Support::REST.get(url, headers: headers, payload: params.to_json, **ssl_opts)
       JSON.parse(resp.body) # Keep it here temporarily
     end

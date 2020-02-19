@@ -6,8 +6,6 @@ module Xokul
 
     config_accessor :synopsis, :version, :namespace, instance_writer: false
 
-    attr_reader :url
-
     def initialize
       url   = URI.join(Configuration.endpoint, namespace.chomp('/') + '/').to_s
       @conn = Connection.new(url)
