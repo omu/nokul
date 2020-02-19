@@ -21,6 +21,8 @@ module Xokul
         conn.get '/pages', params: { page: page }, read_timeout: 15
       end
 
+      # TODO: YOKSIS provides a terrible pagination mechanism. However, pagination
+      # can be managed well in the client code.
       def total_pages
         r = conn.get '/total_pages'
         r[:result]
