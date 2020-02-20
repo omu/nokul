@@ -22,7 +22,7 @@ module Xokul
       end
 
       def cities
-        conn.get :citiess
+        conn.get :cities
       end
 
       def districts(city_code)
