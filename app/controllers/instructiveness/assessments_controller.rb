@@ -6,7 +6,12 @@ module Instructiveness
     before_action :set_course
     before_action :set_assessment
 
-    def edit; end
+    def edit
+      @grades = @assessment.grades_under_authority_of_(@employee)
+      enrollments = @course.enrollments_under_authority_of(@employee)
+                           .where.not(id: @grades.map(&:course_enrollment_id))
+      @grades += @assessment.grades.build(enrollments.collect { |e| { course_enrollment_id: e.id } })
+    end
 
     def update
       if @assessment.update(assessment_params)

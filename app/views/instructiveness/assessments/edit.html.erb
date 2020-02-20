@@ -25,7 +25,7 @@
           </thead>
           <tbody>
             <%= simple_form_for(@assessment, url: given_course_assessment_path(@course, @assessment), html: { id: :edit_grades }) do |f| %>
-              <%= f.simple_fields_for :grades do |grade| %>
+              <%= f.simple_fields_for :grades, @grades do |grade| %>
                 <% enrollment = grade.object.course_enrollment %>
                 <%= grade.input :course_assessment_method_id, as: :hidden, input_html: { value: @assessment.id } %>
                 <%= grade.input :course_enrollment_id, as: :hidden, input_html: { value: enrollment.id } %>
