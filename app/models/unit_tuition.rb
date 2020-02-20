@@ -7,4 +7,8 @@ class UnitTuition < ApplicationRecord
 
   # validations
   validates :tuition_id, uniqueness: { scope: :unit_id }
+  validates_with UnitTuitionValidator
+
+  # delegates
+  delegate :academic_term, to: :tuition
 end

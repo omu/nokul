@@ -15,4 +15,5 @@ class Tuition < ApplicationRecord
   # validations
   validates :fee, numericality: { greater_than_or_equal_to: 0 }
   validates :foreign_student_fee, numericality: { greater_than_or_equal_to: 0 }
+  validates_associated :unit_tuitions
 end

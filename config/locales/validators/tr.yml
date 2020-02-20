@@ -35,3 +35,5 @@ tr:
     position:
       invalid_end_date: Görev başlangıç tarihi bitiş tarihinden sonraki bir tarih olarak seçilmiş.
       multiple_active_repetitive: Bu personelin seçilen birimde aktif olarak aynı görevi var!
+    unit_tuition:
+      defined: '%{name} için harç ücreti tanımlı'
