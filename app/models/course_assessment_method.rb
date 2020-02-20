@@ -20,4 +20,10 @@ class CourseAssessmentMethod < ApplicationRecord
 
   # delegates
   delegate :name, to: :assessment_method
+
+  # custom methods
+  def grades_under_authority_of_(employee)
+    grades.joins(course_enrollment: [:available_course, available_course_group: :lecturers])
+          .where('coordinator_id = ? or lecturer_id = ?', employee.id, employee.id)
+  end
 end

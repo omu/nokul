@@ -70,6 +70,11 @@ class AvailableCourse < ApplicationRecord
     saved_enrollments.count
   end
 
+  def enrollments_under_authority_of(employee)
+    saved_enrollments.joins(:available_course, available_course_group: :lecturers)
+                     .where('coordinator_id = ? or lecturer_id = ?', employee.id, employee.id)
+  end
+
   private
 
   def assign_academic_term
