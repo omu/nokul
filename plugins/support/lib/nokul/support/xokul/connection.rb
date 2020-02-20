@@ -2,7 +2,7 @@
 
 module Xokul
   class Connection
-    attr_accessor :endpoint
+    attr_reader :endpoint, :headers
 
     def initialize(endpoint)
       @endpoint = endpoint
@@ -21,8 +21,6 @@ module Xokul
     end
 
     private
-
-    attr_reader :headers
 
     def ssl_opts
       { use_ssl: true, verify_mode: OpenSSL::SSL::VERIFY_PEER }
