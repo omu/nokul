@@ -10,6 +10,7 @@
           <div class='row'>
             <div class='form-group col-sm-12'>
               <%= f.error_notification %>
+              <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
             </div>
             <div class='form-group col-sm-6'>
               <%= f.input :unit_ids, collection: f.object.units, value_method: :id, label_method: :name,  input_html: { multiple: 'multiple' }, required: true %>
