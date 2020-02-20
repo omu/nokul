@@ -4,9 +4,9 @@ module Xokul
   module Yoksis
     class Students < Endpoint
       configure do |config|
-        config.synopsis  = 'Get student related information from YOKSIS'
-        config.version   = '1'
-        config.namespace = '/yoksis/students'
+        config.synopsis         = 'Get student related information from YOKSIS'
+        config.namespace        = '/yoksis/students'
+        config.upstream_version = '1'
       end
 
       def information(id_number)

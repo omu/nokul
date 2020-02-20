@@ -4,9 +4,9 @@ module Xokul
   module Yoksis
     class Units < Endpoint
       configure do |config|
-        config.synopsis  = 'Get everything related to units from YOKSIS'
-        config.version   = '1'
-        config.namespace = '/yoksis/units'
+        config.synopsis         = 'Get everything related to units from YOKSIS'
+        config.namespace        = '/yoksis/units'
+        config.upstream_version = '1'
       end
 
       def programs(sub_unit_id)

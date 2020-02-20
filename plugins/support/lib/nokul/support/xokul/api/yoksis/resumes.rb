@@ -4,9 +4,9 @@ module Xokul
   module Yoksis
     class Resumes < Endpoint
       configure do |config|
-        config.synopsis  = "Get someone's academic history from YOKSIS"
-        config.version   = '1'
-        config.namespace = '/yoksis/resumes'
+        config.synopsis         = "Get someone's academic history from YOKSIS"
+        config.namespace        = '/yoksis/resumes'
+        config.upstream_version = '1'
       end
 
       def academic_duties(id_number)
