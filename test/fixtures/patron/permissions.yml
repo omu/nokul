@@ -1,11 +1,15 @@
+available_course_management:
+  name: Açılan Ders Yönetimi
+  identifier: available_course_management
+  description: Açılan Ders Yönetim Yetkisi
 unit_management:
   name: Birim Yönetimi
   identifier: unit_management
-  description: Description
+  description: Birim Yönetim Yetkisi
 course_management:
   name: Ders Yönetimi
   identifier: course_management
-  description: Description
+  description: Ders Yönetim Yetkisi
 role_management:
   name: Rol Yönetimi
   identifier: role_management
@@ -21,4 +25,76 @@ scope_query_management:
 authorization_management:
   name: Yetkilendirme Yönetimi
   identifier: authorization_management
-  description: Yetkilendirme Yönetimi Yetkisi
+  description: Yetkilendirme Yönetim Yetkisi
+calendar_management:
+  name: Takvim Yönetimi
+  identifier: calendar_management
+  description: Takvim Yönetim Yetkisi
+curriculum_management:
+  name: Müfredat Yönetimi
+  identifier: curriculum_management
+  description: Müfredat Yönetim Yetkisi
+committee_management:
+  name: Kurul Yönetimi
+  identifier: committee_management
+  description: Kurul Yönetim Yetkisi
+decision_management:
+  name: Karar Yönetimi
+  identifier: decision_management
+  description: Karar Yönetim Yetkisi
+agenda_management:
+  name: Gündem Yönetimi
+  identifier: agenda_management
+  description: Gündem Yönetim Yetkisi
+meeting_management:
+  name: Toplantı Yönetimi
+  identifier: meeting_management
+  description: Toplantı Yönetim Yetkisi
+detsis_management:
+  name: Detsis Yönetimi
+  identifier: detsis_management
+  description: DETSİS Yönetim Yetkisi
+location_management:
+  name: Konum Yönetimi
+  identifier: location_management
+  description: Ülke, Şehir ve İlçe Yönetimi Yetkisi
+meksis_management:
+  name: MEKSİS Yönetimi
+  identifier: meksis_management
+  description: MEKSİS Yönetim Yetkisi
+yoksis_management:
+  name: YÖKSİS Yönetimi
+  identifier: yoksis_management
+  description: YÖKSİS Yönetim Yetkisi
+reference_management:
+  name: Referans Yönetimi
+  identifier: reference_management
+  description: Referans Tanımlama Yetkisi
+ldap_management:
+  name: LDAP Yönetimi
+  identifier: ldap_management
+  description: LDAP Yönetim Yetkisi
+unit_management:
+  name: Birim Yönetimi
+  identifier: unit_management
+  description: Birim Yönetim Yetkisi
+student_management:
+  name: Öğrenci Yönetimi
+  identifier: student_management
+  description: Öğrenci Yönetim Yetkisi
+user_management:
+  name: Kullanıcı Yönetimi
+  identifier: user_management
+  description: Kullanıcı Yönetim Yetkisi
+registration_management_for_students:
+  name: Öğrenciler için Kayıtlanma Yönetimi
+  identifier: registration_management_for_students
+  description: Öğrenciler için Kayıtlanma Yönetim Yetkisi
+registration_management_for_employees:
+  name: Personeller için Kayıtlanma Yönetimi
+  identifier: registration_management_for_employees
+  description: Personeller için Kayıtlanma Yönetim Yetkisi
+employee_management:
+  name: Personel Yönetimi
+  identifier: employee_management
+  description: Personel Yönetim Yetkisi

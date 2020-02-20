@@ -5,7 +5,9 @@ module Manager
     class ArticlesController < ApplicationController
       layout false
 
-      def index; end
+      def index
+        authorize(current_user, policy_class: Manager::Stats::ArticlePolicy)
+      end
     end
   end
 end

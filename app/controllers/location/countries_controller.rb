@@ -5,6 +5,7 @@ module Location
     include SearchableModule
 
     before_action :set_country, only: %i[show edit update destroy]
+    before_action :authorized?
 
     def index
       @countries = pagy_by_search(Country.order(:name))
@@ -37,6 +38,10 @@ module Location
 
     def set_country
       @country = Country.find(params[:id])
+    end
+
+    def authorized?
+      authorize([:location, @country || Country])
     end
 
     def country_params

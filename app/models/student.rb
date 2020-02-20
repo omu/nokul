@@ -38,6 +38,11 @@ class Student < ApplicationRecord
   after_create_commit :build_identity_information, if: proc { identity.nil? }
 
   # custom methods
+  # TODO: Temporary method will be organized according to student status in the future
+  def active?
+    permanently_registered?
+  end
+
   def gpa
     return 0 if semester == 1
 

@@ -1,5 +1,10 @@
 en:
   patron:
+    accounts:
+      admin: Admin
+      employee: Employee
+      student: Student
+      institution_manager: Institution Manager
     errors:
       invalid_privilege: '<strong>%{privilege}</strong> is not a valid privilege for this permission'
     skip_empties:
