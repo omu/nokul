@@ -4,7 +4,6 @@ module Xokul
   module Yoksis
     class Military < Endpoint
       configure do |config|
-        config.synopsis         = "Get someone's military status from YOKSIS"
         config.namespace        = '/yoksis/military'
         config.upstream_version = '1'
       end

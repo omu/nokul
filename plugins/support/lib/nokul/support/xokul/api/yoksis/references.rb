@@ -4,7 +4,6 @@ module Xokul
   module Yoksis
     class References < Endpoint
       configure do |config|
-        config.synopsis         = 'Get references provided by YOKSIS'
         config.namespace        = '/yoksis/references'
         config.upstream_version = '1'
       end

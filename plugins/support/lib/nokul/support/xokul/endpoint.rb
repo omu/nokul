@@ -4,7 +4,7 @@ module Xokul
   class Endpoint
     include ActiveSupport::Configurable
 
-    config_accessor :synopsis, :namespace, :upstream_version, instance_writer: false
+    config_accessor :namespace, :upstream_version, instance_writer: false
 
     def initialize
       url   = URI.join(Configuration.endpoint, namespace.chomp('/') + '/').to_s

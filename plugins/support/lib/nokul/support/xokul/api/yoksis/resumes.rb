@@ -4,7 +4,6 @@ module Xokul
   module Yoksis
     class Resumes < Endpoint
       configure do |config|
-        config.synopsis         = "Get someone's academic history from YOKSIS"
         config.namespace        = '/yoksis/resumes'
         config.upstream_version = '1'
       end

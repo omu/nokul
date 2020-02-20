@@ -4,7 +4,6 @@ module Xokul
   module Yoksis
     class Staff < Endpoint
       configure do |config|
-        config.synopsis         = 'Get staff related information from YOKSIS'
         config.namespace        = '/yoksis/staff'
         config.upstream_version = '1'
       end
