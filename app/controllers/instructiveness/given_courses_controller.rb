@@ -6,6 +6,7 @@ module Instructiveness
 
     before_action :set_employee
     before_action :set_course, except: :index
+    before_action :set_groups, except: :index
     before_action :authorized?
 
     def index
@@ -19,12 +20,9 @@ module Instructiveness
     def show
       @evaluation_types =
         @course.evaluation_types.includes(:evaluation_type, course_assessment_methods: :assessment_method)
-      @groups = @course.groups.includes(:lecturers)
     end
 
-    def students
-      @groups = @course.groups
-    end
+    def students; end
 
     private
 
@@ -34,6 +32,10 @@ module Instructiveness
 
     def authorized?
       authorize(@employee, policy_class: Instructiveness::GivenCoursePolicy)
+    end
+
+    def set_groups
+      @groups = @course.groups_under_authority_of(@employee).includes(:lecturers)
     end
 
     def set_course
