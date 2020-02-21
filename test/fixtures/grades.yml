@@ -2,3 +2,7 @@ elective_midterm_project_grade:
   course_assessment_method: elective_midterm_project_assessment
   course_enrollment: elective
   point: 50
+johns_elective_midterm_project_grade:
+  course_assessment_method: elective_midterm_project_assessment
+  course_enrollment: johns_enrollment
+  point: 40

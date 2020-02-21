@@ -59,6 +59,18 @@ class AvailableCourseTest < ActiveSupport::TestCase
   end
 
   test 'number_of_enrolled_students method' do
-    assert_equal available_courses(:elective_course).number_of_enrolled_students, 1
+    assert_equal 2, available_courses(:elective_course).number_of_enrolled_students
+  end
+
+  test 'groups_under_authority_of employee method' do
+    groups = available_courses(:elective_course).groups_under_authority_of(employees(:serhat_active))
+    assert_includes groups, available_course_groups(:elective_course_group)
+    assert_not_includes groups, available_course_groups(:elective_course_group_2)
+  end
+
+  test 'enrollments_under_authority_of employee method' do
+    enrollments = available_courses(:elective_course).enrollments_under_authority_of(employees(:serhat_active))
+    assert_includes enrollments, course_enrollments(:elective)
+    assert_not_includes enrollments, course_enrollments(:johns_enrollment)
   end
 end

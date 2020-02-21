@@ -34,6 +34,6 @@ class AvailableCourseGroupTest < ActiveSupport::TestCase
   end
 
   test 'number_of_enrolled_students method' do
-    assert_equal available_course_groups(:elective_course_group).number_of_enrolled_students, 1
+    assert_equal 1, available_course_groups(:elective_course_group).number_of_enrolled_students
   end
 end

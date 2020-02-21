@@ -13,6 +13,11 @@ elective_midterm_project_assessment:
   assessment_method: project
   percentage: 50
 
+elective_midterm_exam_assessment:
+  course_evaluation_type: elective_midterm_evaluation_type
+  assessment_method: exam
+  percentage: 50
+
 assessment_method_to_delete:
   course_evaluation_type: ati_midterm_evaluation_type
   assessment_method: lab
