@@ -4,7 +4,7 @@ module Xokul
   module Yoksis
     class Students < Endpoint
       configure do |config|
-        config.namespace        = '/yoksis/students'
+        config.namespace = '/yoksis/students'
         config.upstream_version = '1'
       end
 

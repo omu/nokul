@@ -4,7 +4,7 @@ module Xokul
   module Yoksis
     class Units < Endpoint
       configure do |config|
-        config.namespace        = '/yoksis/units'
+        config.namespace = '/yoksis/units'
         config.upstream_version = '1'
       end
 

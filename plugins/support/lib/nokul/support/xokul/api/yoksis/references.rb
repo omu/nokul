@@ -4,7 +4,7 @@ module Xokul
   module Yoksis
     class References < Endpoint
       configure do |config|
-        config.namespace        = '/yoksis/references'
+        config.namespace = '/yoksis/references'
         config.upstream_version = '1'
       end
 

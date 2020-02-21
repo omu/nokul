@@ -4,7 +4,7 @@ module Xokul
   module Yoksis
     class Staff < Endpoint
       configure do |config|
-        config.namespace        = '/yoksis/staff'
+        config.namespace = '/yoksis/staff'
         config.upstream_version = '1'
       end
 

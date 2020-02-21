@@ -4,7 +4,7 @@ module Xokul
   module Yoksis
     class Resumes < Endpoint
       configure do |config|
-        config.namespace        = '/yoksis/resumes'
+        config.namespace = '/yoksis/resumes'
         config.upstream_version = '1'
       end
 

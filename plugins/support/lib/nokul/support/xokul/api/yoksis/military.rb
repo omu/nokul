@@ -4,7 +4,7 @@ module Xokul
   module Yoksis
     class Military < Endpoint
       configure do |config|
-        config.namespace        = '/yoksis/military'
+        config.namespace = '/yoksis/military'
         config.upstream_version = '1'
       end
 
