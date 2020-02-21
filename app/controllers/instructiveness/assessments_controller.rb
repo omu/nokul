@@ -7,19 +7,13 @@ module Instructiveness
     before_action :set_assessment
 
     def edit
-      @grades = @assessment.grades_under_authority_of_(@employee)
-      enrollments = @course.enrollments_under_authority_of(@employee)
-                           .where.not(id: @grades.map(&:course_enrollment_id))
-      @grades += @assessment.grades.build(enrollments.collect { |e| { course_enrollment_id: e.id } })
+      @grades = @assessment.grades_under_authority_of(@employee)
+      enrollments = @course.enrollments_under_authority_of(@employee).where.not(id: @grades.map(&:course_enrollment_id))
+      @grades += @assessment.build_grades_for(enrollments)
     end
 
     def update
-      if @assessment.update(assessment_params)
-        @assessment.update(status: :draft) unless @assessment.draft?
-        redirect_with('success')
-      else
-        render(:edit)
-      end
+      @assessment.update(assessment_params) ? redirect_with('success') : render(:edit)
     end
 
     private
@@ -43,6 +37,7 @@ module Instructiveness
     def assessment_params
       params.require(:course_assessment_method)
             .permit(grades_attributes: %i[id course_assessment_method_id course_enrollment_id point])
+            .merge(status: :draft)
     end
   end
 end
