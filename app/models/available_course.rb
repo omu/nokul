@@ -70,9 +70,12 @@ class AvailableCourse < ApplicationRecord
     saved_enrollments.count
   end
 
+  def groups_under_authority_of(employee)
+    coordinator == employee ? groups : groups.joins(:lecturers).where('lecturer_id = ?', employee.id)
+  end
+
   def enrollments_under_authority_of(employee)
-    saved_enrollments.joins(:available_course, available_course_group: :lecturers)
-                     .where('coordinator_id = ? or lecturer_id = ?', employee.id, employee.id)
+    saved_enrollments.where(available_course_group: groups_under_authority_of(employee))
   end
 
   private

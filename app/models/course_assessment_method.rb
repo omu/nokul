@@ -19,11 +19,15 @@ class CourseAssessmentMethod < ApplicationRecord
   validates :assessment_method, uniqueness: { scope: :course_evaluation_type }
 
   # delegates
+  delegate :available_course, to: :course_evaluation_type
   delegate :name, to: :assessment_method
 
   # custom methods
-  def grades_under_authority_of_(employee)
-    grades.joins(course_enrollment: [:available_course, available_course_group: :lecturers])
-          .where('coordinator_id = ? or lecturer_id = ?', employee.id, employee.id)
+  def grades_under_authority_of(employee)
+    grades.where(course_enrollment: available_course.enrollments_under_authority_of(employee))
+  end
+
+  def build_grades_for(enrollments)
+    grades.build(enrollments.collect { |enrollment| { course_enrollment_id: enrollment.id } })
   end
 end
