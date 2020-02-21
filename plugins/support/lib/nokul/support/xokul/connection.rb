@@ -9,7 +9,7 @@ module Xokul
       @headers  = { 'Content-Type' => 'application/json' }
     end
 
-    def get(path, params: {})
+    def get(path = nil, params: {})
       url = URI.join(endpoint, path.to_s).to_s
 
       r = Support::REST.get(url, headers: headers, payload: params.to_json, **ssl_opts)
