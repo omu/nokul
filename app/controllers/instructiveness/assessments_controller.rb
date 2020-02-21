@@ -5,6 +5,7 @@ module Instructiveness
     before_action :set_employee
     before_action :set_course
     before_action :set_assessment
+    before_action :authorized?
 
     def edit
       @grades = @assessment.grades_under_authority_of(@employee)
@@ -24,6 +25,10 @@ module Instructiveness
 
     def set_employee
       not_found if (@employee = current_user.current_employee).nil?
+    end
+
+    def authorized?
+      authorize(@employee, policy_class: Instructiveness::AssessmentPolicy)
     end
 
     def set_course
