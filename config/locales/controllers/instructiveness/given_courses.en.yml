@@ -20,6 +20,7 @@ en:
         lecturer: Lecturer
         name: Group Name
         number_of_enrolled_students: Number of Enrolled Students
+        student_list: Student List
         title: Title
       index:
         <<: *given_course_attributes

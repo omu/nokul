@@ -20,6 +20,7 @@ tr:
         lecturer: Öğretim Elemanı
         name: Grup Adı
         number_of_enrolled_students: Kayıtlı Öğrenci Sayısı
+        student_list: Öğrenci Listesi
         title: Unvan
       index:
         <<: *given_course_attributes

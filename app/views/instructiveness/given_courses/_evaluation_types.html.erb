@@ -16,10 +16,10 @@
         <table class='table table-sm table-striped'>
           <thead class='thead'>
             <tr>
-              <th><%= t('.assessment_method') %></th>
-              <th><%= t('.percentage') %></th>
-              <th><%= t('.status') %></th>
-              <th><%= t('actions') %></th>
+              <th style='width: 30%'><%= t('.assessment_method') %></th>
+              <th style='width: 30%'><%= t('.percentage') %></th>
+              <th style='width: 30%'><%= t('.status') %></th>
+              <th style='width: 30%'><%= t('actions') %></th>
             </tr>
           </thead>
           <tbody>
@@ -28,7 +28,7 @@
                 <td><%= assessment.name %></td>
                 <td><%= assessment.percentage %></td>
                 <td><%= enum_t(assessment, :status) %></td>
-                <td><%= link_to_edit(edit_given_course_assessment_path(@course, assessment))  %></td>
+                <td><%= link_to_edit(t('.grade_entry'), edit_given_course_assessment_path(@course, assessment)) %></td>
               </tr>
             <% end %>
           </tbody>

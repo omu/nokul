@@ -2,6 +2,9 @@
   <div class='card'>
     <div class='card-header'>
       <%= fa_icon 'cubes' %><b><%= t('.course_groups') %></b>
+      <span class='pull-right'>
+        <%= link_to(t('.student_list'), students_given_course_path(@course), class: 'btn btn-primary btn-sm') %>
+      </span>
     </div>
     <div class='card-body'>
       <% @groups.each do |group| %>
@@ -11,9 +14,9 @@
         <table class='table table-sm table-striped'>
           <thead class='thead'>
             <tr>
-              <th><%= t('.title') %></th>
-              <th><%= t('.lecturer') %></th>
-              <th><%= t('.coordinator') %></th>
+              <th style='width: 40%'><%= t('.title') %></th>
+              <th style='width: 40%'><%= t('.lecturer') %></th>
+              <th style='width: 40%'><%= t('.coordinator') %></th>
             </tr>
           </thead>
           <tbody>
@@ -28,7 +31,7 @@
         </table>
         <div class='callout callout-info'>
          <small class='text-muted'><%= t('.number_of_enrolled_students') %> </small><br>
-         <b class='h4'><%= link_to(group.number_of_enrolled_students, students_given_course_path(@course)) %></b>
+         <b class='h4'><%= group.number_of_enrolled_students %></b>
        </div>
      <% end %>
     </div>
