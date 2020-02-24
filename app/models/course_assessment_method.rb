@@ -2,7 +2,7 @@
 
 class CourseAssessmentMethod < ApplicationRecord
   # enums
-  enum status: { no_grade_entered: 0, draft: 1 }
+  enum status: { no_grade_entered: 0, draft: 1, saved: 2 }
 
   # relations
   belongs_to :assessment_method
@@ -29,5 +29,10 @@ class CourseAssessmentMethod < ApplicationRecord
 
   def build_grades_for(enrollments)
     grades.build(enrollments.collect { |enrollment| { course_enrollment_id: enrollment.id } })
+  end
+
+  def fully_graded?
+    enrollments_ids = available_course.saved_enrollments.map(&:id)
+    grades.where.not(point: nil).where(course_enrollment_id: enrollments_ids).count == enrollments_ids.count
   end
 end
