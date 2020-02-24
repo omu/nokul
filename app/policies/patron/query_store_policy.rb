@@ -2,33 +2,7 @@
 
 module Patron
   class QueryStorePolicy < ApplicationPolicy
-    def index?
-      permitted? :read
-    end
-
-    def show?
-      permitted? :read
-    end
-
-    def new?
-      create?
-    end
-
-    def create?
-      permitted? :write
-    end
-
-    def update?
-      permitted? :write
-    end
-
-    def edit?
-      update?
-    end
-
-    def destroy?
-      permitted? :destroy
-    end
+    include CrudPolicyMethods
 
     def preview?
       permitted? :read

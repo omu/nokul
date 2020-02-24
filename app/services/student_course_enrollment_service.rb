@@ -37,14 +37,15 @@ class StudentCourseEnrollmentService # rubocop:disable Metrics/ClassLength
     @course_enrollments ||=
       @student.current_registration
               .course_enrollments
-              .includes(available_course: [curriculum_course: %i[course curriculum_semester]])
+              .includes(:available_course_group, available_course: [curriculum_course: %i[course curriculum_semester]])
   end
 
   def enroll(course_enrollment_params)
     course_enrollment = @student.current_registration.course_enrollments.new(course_enrollment_params)
-    available_course = course_enrollment.available_course
+    available_course = enrollable(course_enrollment.available_course)
+    check_group_quota(available_course, course_enrollment.available_course_group)
 
-    return course_enrollment.save if enrollable(available_course).errors.empty?
+    return course_enrollment.save if available_course.errors.empty?
 
     raise EnrollableError, available_course.errors.full_messages.first
   end
@@ -58,7 +59,9 @@ class StudentCourseEnrollmentService # rubocop:disable Metrics/ClassLength
   end
 
   def save
-    @student.current_registration.course_enrollments.update(status: :saved)
+    return unless savable?
+
+    @course_enrollments.update(status: :saved)
     @student.current_registration.update(status: :saved)
   end
 
@@ -74,6 +77,10 @@ class StudentCourseEnrollmentService # rubocop:disable Metrics/ClassLength
     available_course.errors.add(:base, translate('must_drop_first')) if max_sequence > sequence
 
     available_course
+  end
+
+  def savable?
+    @student.current_registration.available_course_groups.none?(&:quota_full?)
   end
 
   private
@@ -138,6 +145,10 @@ class StudentCourseEnrollmentService # rubocop:disable Metrics/ClassLength
 
   def check_quota(available_course)
     available_course.errors.add(:base, translate('quota_full')) if available_course.quota_full?
+  end
+
+  def check_group_quota(available_course, available_course_group)
+    available_course.errors.add(:base, translate('group_quota_full')) if available_course_group.quota_full?
   end
 
   def check_group(available_course)

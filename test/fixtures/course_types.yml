@@ -22,3 +22,8 @@ elective:
   name: Seçmeli
   code: SCM
   min_credit: 1
+
+course_type_to_delete:
+  name: Course type to delete
+  code: CTD
+  min_credit: 1

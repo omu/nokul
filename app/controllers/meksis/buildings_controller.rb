@@ -5,6 +5,7 @@ module Meksis
     include SearchableModule
 
     before_action :set_building, only: %i[edit show update]
+    before_action :authorized?
 
     def index
       @buildings = Building.includes(:place_type).order(:name).dynamic_search(search_params(Building))
@@ -29,6 +30,10 @@ module Meksis
 
     def set_building
       @building = Building.find(params[:id])
+    end
+
+    def authorized?
+      authorize([:meksis, @building || Building])
     end
 
     def secure_params

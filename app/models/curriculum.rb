@@ -40,28 +40,41 @@ class Curriculum < ApplicationRecord
   # validations
   validates :name, presence: true, uniqueness: { scope: :unit_id }, length: { maximum: 255 }
   validates :programs, presence: true
-  validates :semesters_count, numericality: { greater_than_or_equal_to: 0 }
   validates :status, inclusion: { in: statuses.keys }
+  validate :check_semesters_count
 
   # custom methods
   def build_semesters
-    return false unless valid?
+    return if semesters_count >= number_of_semesters
 
-    divisor              = (semester_type.to_sym == :periodic ? 2 : 1)
-    number_of_semesters  = duration * divisor
-    (1..number_of_semesters.to_i).each do |sequence|
+    (1..number_of_semesters).each do |sequence|
       semesters.build(sequence: sequence,
-                      year:     (sequence.to_f / divisor).round,
+                      year:     (sequence.to_f / number_of_semesters_for_one_year).round,
                       term:     %i[spring fall][sequence % 2])
     end
+    semesters
+  end
+
+  def number_of_semesters
+    @number_of_semesters ||= duration.to_i * number_of_semesters_for_one_year
   end
 
   private
 
   # delegates
-  delegate :semester_type, :duration, to: :program
+  delegate :semester_type, :duration, to: :program, allow_nil: true
 
   def program
     @program ||= programs.last
+  end
+
+  def number_of_semesters_for_one_year
+    semester_type&.to_sym == :periodic ? 2 : 1
+  end
+
+  def check_semesters_count
+    return if semesters.size == number_of_semesters
+
+    errors.add(:semesters_count, :number_of_semesters_must_be_equal, count: number_of_semesters)
   end
 end

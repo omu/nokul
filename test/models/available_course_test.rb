@@ -16,6 +16,7 @@ class AvailableCourseTest < ActiveSupport::TestCase
   has_many :groups, class_name: 'AvailableCourseGroup', dependent: :destroy
   has_many :lecturers, through: :groups
   has_many :course_enrollments, dependent: :destroy
+  has_many :saved_enrollments, class_name: 'CourseEnrollment', inverse_of: :available_course
   accepts_nested_attributes_for :groups, allow_destroy: true
 
   # callbacks
@@ -46,7 +47,17 @@ class AvailableCourseTest < ActiveSupport::TestCase
 
   # custom methods
   test 'quota_full? method' do
-    assert available_courses(:elective_course).quota_full?
-    assert_not available_courses(:compulsory_course).quota_full?
+    assert available_courses(:old_course).quota_full?
+    assert_not available_courses(:elective_course).quota_full?
+  end
+
+  test 'enrollable_groups method' do
+    enrollable_groups = available_courses(:elective_course).enrollable_groups
+    assert_includes enrollable_groups, available_course_groups(:elective_course_group_2)
+    assert_not_includes enrollable_groups, available_course_groups(:elective_course_group)
+  end
+
+  test 'number_of_enrolled_students method' do
+    assert_equal available_courses(:elective_course).number_of_enrolled_students, 1
   end
 end

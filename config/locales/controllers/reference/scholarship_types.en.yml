@@ -1,0 +1,29 @@
+en:
+  activerecord:
+    attributes:
+      scholarship_type: &scholarship_type_attributes
+        active: Active?
+        name: Scholarship Type
+    enums:
+      scholarship_type:
+        actives:
+          'true': 'Yes'
+          'false': 'No'
+  helpers:
+    submit:
+      scholarship_type:
+        create: Create Scholarship Type
+        update: Update Scholarship Type
+  reference:
+    scholarship_types:
+      create:
+        success: Scholarship type successfully created.
+      destroy:
+        success: Scholarship type successfully deleted!
+        warning: Scholarship type can not be deleted.
+      index:
+        <<: *scholarship_type_attributes
+        card_header: Scholarship Types
+        new_scholarship_type_link: Create a New Scholarship Type
+      update:
+        success: Scholarship type successfully updated.

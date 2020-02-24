@@ -18,8 +18,8 @@ module Nokul
           # rubocop:disable Layout/HashAlignment
           class_attribute :mapping, default: {
             name:                         proc { |raw| raw.name.split('>').last&.capitalize_and_fix },
-            detsis_id:                    proc { |raw| raw.detsis_id&.to_s },
-            parent_detsis_id:             proc { |raw| raw.parent_detsis_id&.to_s },
+            detsis_id:                    proc { |raw| raw.detsis_id&.to_i },
+            parent_detsis_id:             proc { |raw| raw.parent_administrative_identity_code&.to_i },
             unit_status_id:               proc do |raw|
               next 'Aktif'      if raw.active &&  raw.activity
               next 'Yarı Pasif' if raw.active && !raw.activity
@@ -91,22 +91,25 @@ module Nokul
           END_POINT = 'https://api.omu.sh/detsis/units'
 
           def self.fetch
-            root_id = config.fetching.det.root_id
+            root_id = config.fetching.det.root_id.to_i
             File.write Tenant.root.join(collection.source), create.fetch(root_id).as_canonical_yaml_string
           end
 
           def fetch(root_id)
-            produce_units.each do |unit|
-              unit.parent_detsis_id = 0 if unit.detsis_id.to_s == root_id.to_s
-              populate(unit)
-            end
-
+            mark_root(produce_units, root_id).each { |unit| populate(unit) }
             self
+          end
+
+          def mark_root(units, root_id)
+            units.tap do
+              root = units.find { |unit| unit.detsis_id&.to_i == root_id.to_i }
+              root.parent_administrative_identity_code = 0
+            end
           end
 
           def produce_units
             response = Xokul.request(END_POINT)
-            return [] unless response.ok?
+            return [] unless response&.ok?
 
             [response.decode || []].flatten.map! do |args|
               self.class.collects.new(**args.symbolize_keys)

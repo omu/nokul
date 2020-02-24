@@ -55,7 +55,7 @@ gem 'simple_form'
 gem 'wicked_pdf'
 
 # api
-gem 'jbuilder', '~> 2.9'
+gem 'jbuilder', '~> 2.10'
 
 # security
 gem 'bcrypt', '~> 3.1.7'
@@ -80,6 +80,9 @@ gem 'twilio-ruby'
 
 # log
 gem 'lograge'
+
+# cron
+gem 'sidekiq-cron'
 
 group :development, :test do
   gem 'brakeman', require: false

@@ -1,0 +1,29 @@
+tr:
+  activerecord:
+    attributes:
+      scholarship_type: &scholarship_type_attributes
+        active: Aktif mi?
+        name: Burs Türü
+    enums:
+      scholarship_type:
+        actives:
+          'true': Evet
+          'false': Hayır
+  helpers:
+    submit:
+      scholarship_type:
+        create: Burs Türü Oluştur
+        update: Burs Türü Güncelle
+  reference:
+    scholarship_types:
+      create:
+        success: Burs türü başarıyla oluşturuldu.
+      destroy:
+        success: Burs türü başarıyla silindi.
+        warning: Burs türü silinemedi!
+      index:
+        <<: *scholarship_type_attributes
+        card_header: Burs Türleri
+        new_scholarship_type_link: Yeni Burs Türü Oluştur
+      update:
+        success: Burs türü başarıyla güncellendi.

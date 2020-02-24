@@ -2,6 +2,7 @@
 
 Rails.application.routes.draw do
   require 'sidekiq/web'
+  require 'sidekiq/cron/web'
 
   authenticate :user do
     mount Sidekiq::Web, at: 'sidekiq'
@@ -12,11 +13,14 @@ Rails.application.routes.draw do
   get '/manifest.json', to: 'service_workers/manifests#index'
   root to: 'home#index'
 
+  get :switch_account, to: 'application#switch_account'
+
   draw :account
   draw :calendar_management
   draw :course_management
   draw :detsis
   draw :first_registration
+  draw :instructiveness
   draw :location
   draw :manager
   draw :meksis
@@ -25,6 +29,8 @@ Rails.application.routes.draw do
   draw :studentship
   draw :user_management
   draw :yoksis
+
+  resources :students, only: %i[edit update]
 
   resources :units do
     member do

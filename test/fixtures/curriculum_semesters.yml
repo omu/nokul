@@ -16,14 +16,43 @@ three:
   term: fall
   curriculum: two
 
-bilgisayar_muh_mufredati_birinci_donem:
+bm_first:
   sequence: 1
   year: 1
   term: fall
   curriculum: bilgisayar_muhendisligi_mufredati
-
-bilgisayar_muh_mufredati_ucuncu_donem:
+bm_second:
+  sequence: 2
+  year: 1
+  term: spring
+  curriculum: bilgisayar_muhendisligi_mufredati
+bm_third:
   sequence: 3
   year: 2
   term: fall
+  curriculum: bilgisayar_muhendisligi_mufredati
+bm_fourth:
+  sequence: 4
+  year: 2
+  term: spring
+  curriculum: bilgisayar_muhendisligi_mufredati
+bm_fifth:
+  sequence: 5
+  year: 3
+  term: fall
+  curriculum: bilgisayar_muhendisligi_mufredati
+bm_sixth:
+  sequence: 6
+  year: 3
+  term: spring
+  curriculum: bilgisayar_muhendisligi_mufredati
+bm_seventh:
+  sequence: 7
+  year: 4
+  term: fall
+  curriculum: bilgisayar_muhendisligi_mufredati
+bm_eighth:
+  sequence: 8
+  year: 4
+  term: spring
   curriculum: bilgisayar_muhendisligi_mufredati

@@ -5,6 +5,7 @@ module CourseManagement
     include SearchableModule
 
     before_action :set_course, only: %i[show edit update destroy]
+    before_action :authorized?
 
     def index
       courses = Course.includes(:unit, :language, :course_type)
@@ -44,6 +45,10 @@ module CourseManagement
 
     def set_course
       @course = Course.find(params[:id])
+    end
+
+    def authorized?
+      authorize([:course_management, @course || Course])
     end
 
     def course_params

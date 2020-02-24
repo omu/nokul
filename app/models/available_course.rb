@@ -27,6 +27,8 @@ class AvailableCourse < ApplicationRecord
   has_many :groups, class_name: 'AvailableCourseGroup', dependent: :destroy
   has_many :lecturers, through: :groups
   has_many :course_enrollments, dependent: :destroy
+  has_many :saved_enrollments, -> { saved }, class_name: 'CourseEnrollment',
+                                             inverse_of: :available_course
   has_one :course, through: :curriculum_course
   accepts_nested_attributes_for :groups, reject_if: :all_blank, allow_destroy: true
 
@@ -56,7 +58,15 @@ class AvailableCourse < ApplicationRecord
 
   # custom methods
   def quota_full?
-    groups.sum(:quota) == course_enrollments.where(status: :saved).length
+    groups.sum(:quota) == number_of_enrolled_students
+  end
+
+  def enrollable_groups
+    groups.order(:name).reject(&:quota_full?)
+  end
+
+  def number_of_enrolled_students
+    saved_enrollments.count
   end
 
   private

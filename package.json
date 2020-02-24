@@ -11,7 +11,7 @@
     "chalk": "^3.0.0",
     "echarts": "^4.5.0",
     "flatpickr": "^4.6.3",
-    "highcharts": "^7.2.1",
+    "highcharts": "^8.0.0",
     "intl-tel-input": "^16.0.8",
     "jquery.maskedinput": "^1.4.1",
     "select2": "^4.0.12",
@@ -24,12 +24,12 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2",
     "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "htmlhint": "^0.11.0",
-    "markdownlint-cli": "^0.21.0",
+    "markdownlint-cli": "^0.22.0",
     "webpack-dev-server": "^3.9.0"
   },
   "scripts": {

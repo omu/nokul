@@ -2826,6 +2826,39 @@ CREATE TABLE public.schema_migrations (
 
 
 --
+-- Name: scholarship_types; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.scholarship_types (
+    id bigint NOT NULL,
+    name character varying,
+    active boolean DEFAULT true,
+    CONSTRAINT scholarship_types_active_null CHECK ((active IS NOT NULL)),
+    CONSTRAINT scholarship_types_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT scholarship_types_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
+);
+
+
+--
+-- Name: scholarship_types_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.scholarship_types_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: scholarship_types_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.scholarship_types_id_seq OWNED BY public.scholarship_types.id;
+
+
+--
 -- Name: scope_assignments; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -3261,6 +3294,7 @@ CREATE TABLE public.students (
     semester integer,
     year integer,
     identity_id bigint NOT NULL,
+    scholarship_type_id bigint,
     CONSTRAINT students_permanently_registered_null CHECK ((permanently_registered IS NOT NULL)),
     CONSTRAINT students_semester_null CHECK ((semester IS NOT NULL)),
     CONSTRAINT students_semester_numericality CHECK ((semester > 0)),
@@ -3627,10 +3661,12 @@ CREATE TABLE public.users (
     mobile_phone character varying,
     books_count integer DEFAULT 0,
     papers_count integer DEFAULT 0,
+    disability_rate integer DEFAULT 0,
     CONSTRAINT users_activated_null CHECK ((activated IS NOT NULL)),
     CONSTRAINT users_articles_count_null CHECK ((articles_count IS NOT NULL)),
     CONSTRAINT users_articles_count_numericality CHECK ((articles_count >= 0)),
     CONSTRAINT users_created_at_null CHECK ((created_at IS NOT NULL)),
+    CONSTRAINT users_disability_rate_numericality CHECK (((disability_rate >= 0) AND (disability_rate <= 100))),
     CONSTRAINT users_email_length CHECK ((length((email)::text) <= 255)),
     CONSTRAINT users_email_presence CHECK (((email IS NOT NULL) AND ((email)::text !~ '^\s*$'::text))),
     CONSTRAINT users_encrypted_password_length CHECK ((length((encrypted_password)::text) <= 255)),
@@ -4117,6 +4153,13 @@ ALTER TABLE ONLY public.role_permissions ALTER COLUMN id SET DEFAULT nextval('pu
 --
 
 ALTER TABLE ONLY public.roles ALTER COLUMN id SET DEFAULT nextval('public.roles_id_seq'::regclass);
+
+
+--
+-- Name: scholarship_types id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.scholarship_types ALTER COLUMN id SET DEFAULT nextval('public.scholarship_types_id_seq'::regclass);
 
 
 --
@@ -4927,6 +4970,14 @@ ALTER TABLE ONLY public.roles
 
 ALTER TABLE ONLY public.schema_migrations
     ADD CONSTRAINT schema_migrations_pkey PRIMARY KEY (version);
+
+
+--
+-- Name: scholarship_types scholarship_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.scholarship_types
+    ADD CONSTRAINT scholarship_types_pkey PRIMARY KEY (id);
 
 
 --
@@ -6050,6 +6101,12 @@ CREATE INDEX index_semester_registrations_on_student_id ON public.semester_regis
 CREATE INDEX index_students_on_identity_id ON public.students USING btree (identity_id);
 
 
+-- Name: index_students_on_scholarship_type_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_students_on_scholarship_type_id ON public.students USING btree (scholarship_type_id);
+
+
 --
 -- Name: index_students_on_unit_id; Type: INDEX; Schema: public; Owner: -
 --
@@ -6521,6 +6578,14 @@ ALTER TABLE ONLY public.scope_assignments
 
 ALTER TABLE ONLY public.prospective_employees
     ADD CONSTRAINT fk_rails_7e3da1fde7 FOREIGN KEY (title_id) REFERENCES public.titles(id);
+
+
+--
+-- Name: students fk_rails_818ba821f0; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.students
+    ADD CONSTRAINT fk_rails_818ba821f0 FOREIGN KEY (scholarship_type_id) REFERENCES public.scholarship_types(id);
 
 
 --
@@ -7067,6 +7132,9 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20200123164837'),
 ('20200127102603'),
 ('20200127115253'),
+('20200129072653'),
+('20200206083358'),
+('20200211084915'),
 ('20200213083927');
 
 

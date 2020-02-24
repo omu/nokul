@@ -55,6 +55,7 @@ scope module: :account do
   end
 end
 
+<<<<<<< HEAD
 scope module: :account do
   resources :identities, only: :index do
     get 'save_from_mernis', on: :collection
@@ -62,6 +63,16 @@ scope module: :account do
 
   resources :addresses, except: :show do
     get 'save_from_mernis', on: :collection
+=======
+resources :users, only: [] do
+  scope module: :account do
+    resources :identities, except: [:show] do
+      get 'save_from_mernis', on: :collection
+    end
+    resources :addresses, except: :show do
+      get 'save_from_mernis', on: :collection
+    end
+>>>>>>> develop
   end
 end
 

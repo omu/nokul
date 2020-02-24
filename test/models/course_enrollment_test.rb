@@ -12,6 +12,7 @@ class CourseEnrollmentTest < ActiveSupport::TestCase
 
   # relations
   belongs_to :available_course
+  belongs_to :available_course_group
   belongs_to :semester_registration
 
   # validations: uniqueness
@@ -19,5 +20,15 @@ class CourseEnrollmentTest < ActiveSupport::TestCase
     fake = course_enrollments(:elective).dup
     assert_not fake.valid?
     assert_not_empty fake.errors[:available_course]
+  end
+
+  # delegates
+  %i[
+    ects
+    student
+  ].each do |property|
+    test "a course_enrollment reach #{property} parameter" do
+      assert course_enrollments(:elective).send(property)
+    end
   end
 end

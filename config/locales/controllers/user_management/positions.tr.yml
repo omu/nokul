@@ -1,0 +1,14 @@
+tr:
+  user_management:
+    positions:
+      create:
+        success: İdari görev başarıyla oluşturuldu.
+      destroy:
+        success: İdari görev başarıyla silindi.
+        warning: İdari görev silinemedi!
+      edit:
+        form_title: İdari Görevi Güncelle
+      new:
+        form_title: İdari Görev Oluştur
+      update:
+        success: İdari görev başarıyla güncellendi.

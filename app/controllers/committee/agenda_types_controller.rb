@@ -5,6 +5,7 @@ module Committee
     include SearchableModule
 
     before_action :set_agenda_type, only: %i[edit update destroy]
+    before_action :authorized?
 
     def index
       @agenda_types = pagy_by_search(AgendaType.order(:name))
@@ -37,6 +38,10 @@ module Committee
 
     def set_agenda_type
       @agenda_type = AgendaType.find(params[:id])
+    end
+
+    def authorized?
+      authorize([:committee, @agenda_type || AgendaType])
     end
 
     def agenda_type_params

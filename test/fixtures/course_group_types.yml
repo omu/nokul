@@ -3,3 +3,6 @@ one:
 
 universite_secmeli:
   name: Üniversite Seçmeli
+
+course_group_type_to_delete:
+  name: Course group type to delete

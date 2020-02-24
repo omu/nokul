@@ -5,6 +5,7 @@ module CourseManagement
     include SearchableModule
 
     before_action :set_curriculum, only: %i[show edit update destroy openable_courses]
+    before_action :authorized?
 
     def index
       curriculums = Curriculum.includes(:unit)
@@ -57,10 +58,14 @@ module CourseManagement
       @curriculum = Curriculum.find(params[:id])
     end
 
+    def authorized?
+      authorize([:course_management, @curriculum || Curriculum])
+    end
+
     def curriculum_params
       params.require(:curriculum).permit(
         :name, :unit_id, :status, :program_ids,
-        semesters_attributes: %i[id sequence year _destroy]
+        semesters_attributes: %i[id sequence year term _destroy]
       )
     end
   end

@@ -1,0 +1,8 @@
+<%= render 'layouts/builders/index',
+           namespace:   'reference',
+           klass:       'scholarship_type',
+           collection:  @scholarship_types,
+           pagy:        @pagy,
+           card_header: t('.card_header'),
+           params:      %w[name active],
+           actions:     %w[edit destroy] %>

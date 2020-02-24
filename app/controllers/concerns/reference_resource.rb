@@ -8,6 +8,12 @@ module ReferenceResource
       def redirect_with(message)
         redirect_to(send("reference_#{controller_name}_path"), notice: t(".#{message}"))
       end
+
+      protected
+
+      def authorized?
+        authorize([:reference, instance_variable_get(@singular_variable.to_sym) || @model_name])
+      end
     end
   end
 end

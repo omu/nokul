@@ -1,35 +1,44 @@
 en:
   layouts:
     shared:
+      menus:
+        admin:
+          academic_calendars: Academic Calendars
+          administration: Administration
+          agenda_types: Agenda Types
+          authorizations: Authorizations
+          available_courses: Available Courses
+          calendar_event_types: Event Types
+          calendar_management: Calendar Management
+          calendars: Calendars
+          committee_units: Committee Units
+          committees: Committees
+          course_groups: Course Groups
+          course_management: Course Management
+          courses: Courses
+          curriculums: Curriculums
+          detsis: DETSIS
+          first_registration: First Registration
+          high_school_types: High School Types
+          ldap: LDAP
+          manager:
+            stats: University Stats
+            title: Manager Pages
+          meksis: MEKSIS
+          prospective_employees: Prospective Employees
+          prospective_students: Prospective Students
+          references: References
+          registration_documents: Registration Documents
+          units: Units
+          users: Users
+          yoksis: YOKSIS
+        employee:
+          given_courses: Given Courses
+        student:
+          course_enrollment: Course Enrollment
+        institution_manager:
+          manager:
+            stats: University Stats
       sidebar:
-        academic_calendars: Academic Calendars
-        administration: Administration
-        agenda_types: Agenda Types
-        authorizations: Authorizations
-        available_courses: Available Courses
-        calendar_event_types: Event Types
-        calendar_management: Calendar Management
-        calendars: Calendars
-        committee_units: Committee Units
-        committees: Committees
-        course_enrollments: Course Enrollments
-        course_groups: Course Unit Group
-        course_management: Course Management
-        course_unit_groups: Course Unit Group
-        courses: Courses
-        curriculums: Curriculums
-        detsis: DETSIS
-        first_registration: First Registration
-        high_school_types: High School Types
-        ldap: LDAP
-        manager:
-          stats: University Stats
-          title: Manager Pages
-        meksis: MEKSIS
-        prospective_employees: Prospective Employees
-        prospective_students: Prospective Students
-        references: References
-        registration_documents: Registration Documents
-        units: Units
-        users: Users
-        yoksis: YOKSIS
+        authorizations: Yetkilendirmeler
+        accounts: Accounts

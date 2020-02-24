@@ -2,6 +2,8 @@
 
 module Meksis
   class DashboardController < ApplicationController
-    def index; end
+    def index
+      authorize %i[meksis dashboard]
+    end
   end
 end

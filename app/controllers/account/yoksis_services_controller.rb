@@ -15,6 +15,7 @@ module Account
     before_action :set_service
 
     def fetch
+      authorize(@service, policy_class: Account::YoksisServicePolicy)
       @service.public_send(:perform_later, current_user)
       flash.notice = t(".#{@service_name}")
       redirect_back fallback_location: params.fetch(:redirect, root_path)

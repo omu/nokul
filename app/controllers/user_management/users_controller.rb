@@ -7,15 +7,19 @@ module UserManagement
 
     before_action :set_user, except: :index
     before_action :nullify_slug, only: :update
+    before_action :authorized?
 
     def index
-      @users = pagy_by_search(User.includes(:identity))
+      @users = pagy_by_search(User.all)
     end
 
     def show
-      @employees  = @user.employees.includes(:title).order(active: :desc)
-      @duties     = @user.duties.includes(:unit)
-      @positions  = @user.positions.includes(:administrative_function, :duty)
+      @identities = @user.identities
+      @addresses = @user.addresses.includes(district: :city)
+      @employees = @user.employees.includes(:title).order(active: :desc)
+      @duties = @user.duties.includes(:unit)
+      @students = @user.students.includes(:unit, :scholarship_type)
+      @positions = @user.positions.includes(:administrative_function, :duty)
     end
 
     def edit; end
@@ -36,6 +40,10 @@ module UserManagement
 
     def set_user
       @user = User.friendly.find(params[:id])
+    end
+
+    def authorized?
+      authorize([:user_management, @user || User])
     end
 
     def nullify_slug

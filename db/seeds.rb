@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+# authorization data
+Rake::Task['patron:all'].invoke
+
 module PgExec
   module_function
 
@@ -62,6 +65,3 @@ else
     end
   end
 end
-
-# authorization data
-Rake::Task['patron:all'].invoke

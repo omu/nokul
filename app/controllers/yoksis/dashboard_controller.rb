@@ -2,6 +2,8 @@
 
 module Yoksis
   class DashboardController < ApplicationController
-    def index; end
+    def index
+      authorize %i[yoksis dashboard]
+    end
   end
 end

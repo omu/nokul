@@ -1,0 +1,36 @@
+<div class='col-lg-12'>
+  <div class='card'>
+    <div class='card-header'>
+      <%= fa_icon 'cubes' %><b><%= t('.course_groups') %></b>
+    </div>
+    <div class='card-body'>
+      <% @groups.each do |group| %>
+        <div class='card-header'>
+          <%= fa_icon 'cube' %><b><%= group.name %></b>
+        </div>
+        <table class='table table-sm table-striped'>
+          <thead class='thead'>
+            <tr>
+              <th><%= t('.title') %></th>
+              <th><%= t('.lecturer') %></th>
+              <th><%= t('.coordinator') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% group.lecturers.each do |lecturer| %>
+            <tr>
+              <td><%= lecturer.title.name %></td>
+              <td><%= full_name(lecturer.identities.formal.first) %></td>
+              <td><%= icon_for_check(lecturer.coordinator) %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <div class='callout callout-info'>
+         <small class='text-muted'><%= t('.number_of_enrolled_students') %> </small><br>
+         <b class='h4'><%= link_to(group.number_of_enrolled_students, students_given_course_path(@course)) %></b>
+       </div>
+     <% end %>
+    </div>
+  </div>
+</div>

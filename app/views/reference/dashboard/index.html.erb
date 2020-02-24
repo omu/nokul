@@ -7,10 +7,10 @@
       </div>
       <div class="card-body">
         <div class="list-group list-group-sm">
-          <%= link_to :course_types, class: item_class do %>
+          <%= link_to %i[reference course_types], class: item_class do %>
             <%= t('.course_types') %>
           <% end %>
-          <%= link_to :course_group_types, class: item_class do %>
+          <%= link_to %i[reference course_group_types], class: item_class do %>
             <%= t('.course_group_types') %>
           <% end %>
           <%= link_to %i[reference assessment_methods], class: item_class do %>
@@ -42,6 +42,9 @@
         <div class="list-group list-group-sm">
           <%= link_to %i[reference document_types], class: item_class do %>
             <%= t('.document_types') %>
+          <% end %>
+          <%= link_to %i[reference scholarship_types], class: item_class do %>
+            <%= t('.scholarship_types') %>
           <% end %>
           <%= link_to %i[reference languages], class: item_class do %>
             <%= t('.languages') %>

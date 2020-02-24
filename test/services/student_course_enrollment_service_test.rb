@@ -33,7 +33,7 @@ class StudentCourseEnrollmentServiceTest < ActiveSupport::TestCase
 
   test 'enroll method' do
     available_course = available_courses(:compulsory_course_2)
-    @service.enroll(available_course_id: available_course.id)
+    @service.enroll(available_course_id: available_course.id, available_course_group: available_course.groups.first)
     assert_includes @service.course_enrollments.pluck(:available_course_id), available_course.id
   end
 
@@ -43,13 +43,14 @@ class StudentCourseEnrollmentServiceTest < ActiveSupport::TestCase
   end
 
   test 'save method' do
-    @service.save
+    @service.drop(course_enrollments(:elective))
+    assert @service.save
     assert @service.student.current_registration.saved?
   end
 
   test 'catalog method' do
     @service.build_catalog
-    semester_courses = @service.catalog[curriculum_semesters(:bilgisayar_muh_mufredati_ucuncu_donem)]
+    semester_courses = @service.catalog[curriculum_semesters(:bm_third)]
     CompulsoryCourseGroup = OpenStruct.new(name: 'compulsories', completed: false)
     elective_course_group = curriculum_course_groups(:ucuncu_donem_secmeli_grubu)
 
@@ -73,6 +74,15 @@ class StudentCourseEnrollmentServiceTest < ActiveSupport::TestCase
   test 'dropable method with error messages' do
     available_course = @service.dropable(available_courses(:old_course))
     assert_equal available_course.errors.full_messages.first, translate('must_drop_first')
+  end
+
+  test 'savable? method with false return' do
+    assert_not @service.savable?
+  end
+
+  test 'savable? method' do
+    @service.drop(course_enrollments(:elective))
+    assert @service.savable?
   end
 
   private

@@ -6,3 +6,26 @@ ati_group_1_lecturer_serhat:
   group: ati_group_1
   lecturer: serhat_active
   coordinator: false
+elective_course_group_lecturer:
+  group: elective_course_group
+  lecturer: serhat_active
+  coordinator: true
+elective_course_group_2_lecturer:
+  group: elective_course_group_2
+  lecturer: serhat_active
+  coordinator: true
+elective_course_2_group_lecturer:
+  group: elective_course_2_group
+  lecturer: serhat_active
+elective_course_2_group_lecturer_2:
+  group: elective_course_group
+  lecturer: chief_john
+  coordinator: true
+compulsory_course_group_lecturer:
+  group: compulsory_course_group
+  lecturer: serhat_active
+  coordinator: true
+compulsory_course_2_group_lecturer:
+  group: compulsory_course_2_group
+  lecturer: chief_john
+  coordinator: true

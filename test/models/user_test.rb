@@ -28,6 +28,7 @@ class UserTest < ActiveSupport::TestCase
   has_many :role_assignments, class_name: 'Patron::RoleAssignment', dependent: :destroy
   has_many :roles, class_name: 'Patron::Role', through: :role_assignments
   has_many :permissions, class_name: 'Patron::Permission', through: :roles
+  has_one :current_employee, class_name: 'Employee', inverse_of: :user
 
   # validations: presence
   validates_presence_of :email
@@ -50,7 +51,9 @@ class UserTest < ActiveSupport::TestCase
 
   # validations: numericality
   validates_numericality_of :id_number
+  validates_numericality_of :disability_rate
   validates_numericality_of :extension_number
+  validates_numerical_range :disability_rate, greater_than_or_equal_to: 0, less_than_or_equal_to: 100
 
   # callback tests
   after_commit :build_address_information

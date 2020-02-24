@@ -15,6 +15,7 @@ tr:
         code: Kodu
         credit: Kredi
         ects: AKTS
+        group: Grup
         name: Adı
         type: Türü
         add: Ekle
@@ -30,10 +31,11 @@ tr:
       errors:
         already_enrolled_at_group: Ders grubundan seçilebilecek maksimum AKTS miktarı kadar ders seçilmiş.
         empty_selected_courses_list: Seçilen dersler listesi boş.
-        quota_full: Ders için belirlenen kontenjan dolmuş.
+        group_quota_full: Ders grubu için belirlenen kontenjan dolmuş.
         must_drop_first: Öncelikli olarak en üst dönemden alınan dersler çıkarılmalı.
         not_enough_ects: Seçilebilecek AKTS miktarı bu dersi alabilmeniz için yeterli değil.
         not_proper_register_event_range: Tarih aralığı bugünü kapsayan çevrimiçi ders kayıtlanma aktivitesi bulunmamaktadır.
+        quota_full: Ders için belirlenen kontenjan dolmuş.
         registration_completed: Ders seçimini tamamladığınız için bu işlemi gerçekleştiremezsiniz.
       index:
         course_enrollments: Ders Kayıtları
@@ -47,6 +49,7 @@ tr:
         year: Yıl
       new:
         available_courses: Açılan Dersler
+        courses_with_full_quota: Seçilen dersler listenizde kotası dolmuş dersler bulunmaktadır. Lütfen kırmızı butonla belirtilen dersi/dersleri listenizden çıkarınız.
         save_enrollments: Seçimleri Kaydet
         selectable_ects: Seçilebilecek AKTS
         selected_courses: Seçilen Dersler

@@ -36,7 +36,7 @@ elective_course_2:
 compulsory_course:
   academic_term: active_term
   curriculum: bilgisayar_muhendisligi_mufredati
-  coordinator: serhat_passive
+  coordinator: serhat_active
   curriculum_course: compulsory_course
   unit: bilgisayar_muhendisligi
 

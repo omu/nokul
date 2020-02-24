@@ -1,0 +1,31 @@
+<% @students.each do |student| %>
+  <div class='card'>
+    <div class='card-header'>
+      <%= fa_icon 'bookmark', text: student.unit_name %>
+      <div class='card-header-actions'>
+        <%= link_to_actions(student, except: %w[destroy show]) %>
+      </div>
+    </div>
+
+    <div class='card-body'>
+      <table class='table table-responsive-sm'>
+        <thead>
+          <tr>
+            <th><%= t('.student_number') %></th>
+            <th><%= t('year') %></th>
+            <th><%= t('semester') %></th>
+            <th><%= t('.scholarship_type') %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= student.student_number %></td>
+            <td><%= student.year %></td>
+            <td><%= student.semester %></td>
+            <td><%= student.scholarship_type_name %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+<% end %>

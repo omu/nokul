@@ -1,0 +1,5 @@
+<li class="nav-item">
+  <%= link_to student_course_enrollments_path(current_account.object), class: 'nav-link' do %>
+    <%= fa_icon('graduation-cap', text: t('.course_enrollment'), class: 'nav-icon') %>
+  <% end %>
+</li>
