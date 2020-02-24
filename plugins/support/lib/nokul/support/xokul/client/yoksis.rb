@@ -9,5 +9,9 @@ module Xokul
     include Staff
     include Students
     include Units
+
+    def initialize(client)
+      @client = client
+    end
   end
 end
