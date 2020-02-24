@@ -84,6 +84,9 @@ gem 'lograge'
 # cron
 gem 'sidekiq-cron'
 
+# HTTP client
+gem 'http'
+
 group :development, :test do
   gem 'brakeman', require: false
   gem 'bullet'
