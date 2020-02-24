@@ -25,18 +25,20 @@
           </thead>
           <tbody>
             <%= simple_form_for(@assessment, url: given_course_assessment_path(@course, @assessment), html: { id: :edit_grades }) do |f| %>
-              <%= f.simple_fields_for :grades, @grades do |grade| %>
-                <% enrollment = grade.object.course_enrollment %>
-                <%= grade.input :course_enrollment_id, as: :hidden, input_html: { value: enrollment.id } %>
+              <%= f.simple_fields_for :grades do |grade| %>
+                <% if @enrollments.map(&:id).include?(grade.object.course_enrollment_id) %>
+                  <% enrollment = grade.object.course_enrollment %>
+                  <%= grade.input :course_enrollment_id, as: :hidden, input_html: { value: enrollment.id } %>
 
-                <tr>
-                  <% student = enrollment.student %>
-                  <td><%= student.student_number %></td>
-                  <td><%= full_name(student.user.identities.formal.first) %></td>
-                  <td><%= "#{student.year}/#{student.semester}" %></td>
-                  <td><%= enrollment.available_course_group.name %></td>
-                  <td><%= grade.input(:point, label: false) %></td>
-                </tr>
+                  <tr>
+                    <% student = enrollment.student %>
+                    <td><%= student.student_number %></td>
+                    <td><%= full_name(student.user.identities.formal.first) %></td>
+                    <td><%= "#{student.year}/#{student.semester}" %></td>
+                    <td><%= enrollment.available_course_group.name %></td>
+                    <td><%= grade.input(:point, label: false) %></td>
+                  </tr>
+                <% end %>
               <% end %>
             <% end %>
           </tbody>
