@@ -7,5 +7,11 @@ en:
         students: 'Students Enrolled in %{course_name} Course'
         student_number: Student Number
         year_and_semester: Year/Semester
+      show:
+        group_name: Group Name
+        name: Name
+        students: 'Students Enrolled in %{course_name} Course'
+        student_number: Student Number
+        year_and_semester: Year/Semester
       update:
         success: Grades successfully saved.

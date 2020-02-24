@@ -5,22 +5,43 @@ module Instructiveness
     before_action :set_employee
     before_action :set_course
     before_action :set_assessment
+    before_action :check_status, only: %i[edit update]
+    before_action :check_coordinator, only: %i[save draft]
     before_action :authorized?
 
+    def show
+      @enrollments = @course.enrollments_under_authority_of(@employee)
+    end
+
     def edit
-      @grades = @assessment.grades_under_authority_of(@employee)
-      enrollments = @course.enrollments_under_authority_of(@employee).where.not(id: @grades.map(&:course_enrollment_id))
-      @grades += @assessment.build_grades_for(enrollments)
+      @enrollments = @course.enrollments_under_authority_of(@employee)
+      @assessment.build_grades_for(@enrollments.where.not(id: @assessment.grades.map(&:course_enrollment_id)))
     end
 
     def update
+      @enrollments = @course.enrollments_under_authority_of(@employee)
       @assessment.update(assessment_params) ? redirect_with('success') : render(:edit)
+    end
+
+    def save
+      return redirect_with('error') unless @assessment.draft?
+      return redirect_with('not_full_graded_error') unless @assessment.fully_graded?
+
+      @assessment.update(status: :saved)
+      redirect_with('success')
+    end
+
+    def draft
+      return redirect_with('error') unless @assessment.saved?
+
+      @assessment.update(status: :draft)
+      redirect_to edit_given_course_assessment_path(@course, @assessment), flash: { info: t('.success') }
     end
 
     private
 
     def redirect_with(message)
-      redirect_to edit_given_course_assessment_path(@course, @assessment), flash: { info: t(".#{message}") }
+      redirect_to given_course_assessment_path(@course, @assessment), flash: { info: t(".#{message}") }
     end
 
     def set_employee
@@ -37,6 +58,14 @@ module Instructiveness
 
     def set_assessment
       @assessment = @course.course_assessment_methods.find(params[:id])
+    end
+
+    def check_status
+      redirect_with('.errors.saved') if @assessment.saved?
+    end
+
+    def check_coordinator
+      redirect_with('.errors.not_coordinator') unless @employee.coordinator_of?(@course)
     end
 
     def assessment_params

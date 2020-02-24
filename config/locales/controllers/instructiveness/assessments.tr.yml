@@ -7,5 +7,11 @@ tr:
         students: '%{course_name} Dersine Kayıtlanan Öğrenciler'
         student_number: Öğrenci Numarası
         year_and_semester: Sınıfı/Yarıyılı
+      show:
+        group_name: Grup Adı
+        name: Adı
+        students: '%{course_name} Dersine Kayıtlanan Öğrenciler'
+        student_number: Öğrenci Numarası
+        year_and_semester: Sınıfı/Yarıyılı
       update:
         success: Notlar başarıyla kaydedildi.
