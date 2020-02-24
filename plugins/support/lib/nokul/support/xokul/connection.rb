@@ -18,6 +18,8 @@ module Xokul
       JSON.parse(r.body)
     end
 
+    def paginate; end
+
     def bearer_auth(bearer_token)
       headers['Authorization'] = "Bearer #{bearer_token}"
     end
