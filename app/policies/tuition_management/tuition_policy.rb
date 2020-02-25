@@ -6,6 +6,10 @@ module TuitionManagement
 
     undef :show?
 
+    def units?
+      permitted? :read
+    end
+
     private
 
     def permitted?(*privileges)
