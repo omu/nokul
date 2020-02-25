@@ -42,10 +42,10 @@ module Ldap
         member@_.baum
         employee@_.baum
         faculty@_.baum
-        member@_.mf-mat-pr.matematik-fen.egitim
-        student@_.mf-mat-pr.matematik-fen.egitim
         member@_.bilgisayar-pr.bilgisayar.muhendislik
         student@_.bilgisayar-pr.bilgisayar.muhendislik
+        member@_.mf-mat-pr.matematik-fen.egitim
+        student@_.mf-mat-pr.matematik-fen.egitim
       ].map { |item| "#{item}.#{Tenant.configuration.ldap.organization}" }
 
       assert_equal @entity.eduPersonScopedAffiliation, affiliations
