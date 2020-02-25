@@ -29,7 +29,9 @@ tr:
           prospective_students: Aday Öğrenciler
           references: Tanımlar
           registration_documents: İstenen Belgeler
+          tuition_management: Harç Yönetimi
           units: Birimler
+          unit_tuitions: Birim Harç Ücretleri
           users: Kullanıcılar
           yoksis: YÖKSİS
         employee:
