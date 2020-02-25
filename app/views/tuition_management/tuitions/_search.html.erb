@@ -23,7 +23,15 @@
       <div class='card-body'>
         <%= form_tag tuitions_path, method: :get do %>
           <div class='row'>
-            <div class='form-group col-sm-12'>
+            <div class='form-group col-sm-6'>
+              <%= label_tag(:unit_id, t('.unit')) %>
+              <%= select_tag(:unit_id,
+                              options_from_collection_for_select(Unit.active.programs.order(:name), :id, :names_depth_cache, params[:unit_id]),
+                              include_blank: true,
+                              class:         'form-control',
+                              style:         'width: 100%') %>
+            </div>
+            <div class='form-group col-sm-6'>
               <%= label_tag(:academic_term_id, t('.academic_term')) %>
               <%= select_tag(:academic_term_id,
                              options_from_collection_for_select(AcademicTerm.all, :id, lambda { |term| full_name(term) }, params[:academic_term_id]),

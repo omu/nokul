@@ -21,6 +21,7 @@ tr:
         new_tuition_link: Yeni Harç Ekle
       search:
         academic_term: Akademik Dönem
+        unit: Birimler
       update:
         success: Harçlar başarıyla güncellendi.
 
