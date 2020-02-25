@@ -37,23 +37,4 @@
   </div>
 </div>
 
-<script type='text/javascript'>
-$(document).ready(function() {
-  $('#tuition_unit_ids').select2({
-    closeOnSelect: false,
-    ajax: {
-      url: "/tuitions/units.json",
-      dataType: "json",
-      data: function (params) {
-          return {
-            q: params.term
-          };
-        },
-      processResults: function (data) {
-        return { results: data };
-      },
-      cache: true
-    }
-  });
-});
-</script>
+<%= render 'select2' %>
