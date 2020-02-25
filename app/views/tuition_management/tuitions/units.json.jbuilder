@@ -3,12 +3,8 @@
 json.array!(@units) do |unit|
   json.id unit.id
   json.text unit.name
-  json.children(unit.children) do |unit|
-    json.id unit.id
-    json.text unit.name
-    json.children(unit.children) do |unit|
-      json.id unit.id
-      json.text unit.name
-    end
+  json.children(unit.subprograms) do |program|
+    json.id program.id
+    json.text program.name
   end
 end
