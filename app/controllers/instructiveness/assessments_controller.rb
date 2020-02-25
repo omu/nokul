@@ -5,9 +5,9 @@ module Instructiveness
     before_action :set_employee
     before_action :set_course
     before_action :set_assessment
+    before_action :authorized?
     before_action :check_status, only: %i[edit update]
     before_action :check_coordinator, only: %i[save draft]
-    before_action :authorized?
 
     def show
       @enrollments = @course.enrollments_under_authority_of(@employee)
@@ -35,7 +35,7 @@ module Instructiveness
       return redirect_with('error') unless @assessment.saved?
 
       @assessment.update(status: :draft)
-      redirect_to edit_given_course_assessment_path(@course, @assessment), flash: { info: t('.success') }
+      redirect_with('success')
     end
 
     private
