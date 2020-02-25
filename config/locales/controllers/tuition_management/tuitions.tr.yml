@@ -14,7 +14,7 @@ tr:
         success: Harçlar başarıyla silindi.
         warning: Harçlar silinemedi!
       form:
-        form_title: Harç Ekle
+        form_title: Birimlere Harç Ekle
       index:
         <<: *tuition_attributes
         card_header: Birim Harç Ücretleri

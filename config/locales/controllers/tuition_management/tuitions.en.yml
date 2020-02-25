@@ -14,7 +14,7 @@ en:
         success: Tuitions successfully deleted.
         warning: Tuitions can not be deleted!
       form:
-        form_title: Add Tuition
+        form_title: Add Tuition to Units
       index:
         <<: *tuition_attributes
         card_header: Unit Tuition Fees
