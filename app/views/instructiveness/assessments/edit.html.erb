@@ -9,7 +9,7 @@
         <%= fa_icon 'users' %><b><%= t('.students', course_name: @course.name) %></b>
         <div class='card-header-actions'>
           <span class='pull-right'>
-            <input type="submit" value=<%= t('save') %> class="btn btn-outline-success btn-sm" form="edit_grades">
+            <%= button_tag(t('save'), type: 'submit', class: 'btn btn-outline-success btn-sm', form: 'edit_grades') %>
           </span>
         </div>
       </div>
