@@ -11,6 +11,11 @@ module Instructiveness
       @course_enrollment = course_enrollments(:johns_enrollment)
     end
 
+    test 'should get show' do
+      get given_course_assessment_path(@course, @assessment)
+      assert_response :success
+    end
+
     test 'should get edit' do
       get edit_given_course_assessment_path(@course, @assessment)
       assert_response :success

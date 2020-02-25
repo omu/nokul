@@ -8,7 +8,7 @@ class CourseAssessmentMethodTest < ActiveSupport::TestCase
   extend Support::Minitest::ValidationHelper
 
   # enums
-  enum status: { no_grade_entered: 0, draft: 1 }
+  enum status: { no_grade_entered: 0, draft: 1, saved: 2 }
 
   # relations
   belongs_to :assessment_method
