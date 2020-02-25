@@ -35,7 +35,7 @@ module Instructiveness
     end
 
     def set_groups
-      @groups = @course.groups_under_authority_of(@employee).includes(:lecturers)
+      @groups = @course.groups_under_authority_of(@employee)
     end
 
     def set_course

@@ -7,7 +7,7 @@
       </span>
     </div>
     <div class='card-body'>
-      <% @groups.each do |group| %>
+      <% @groups.includes(lecturers: [lecturer: %i[title user]]).each do |group| %>
         <div class='card-header'>
           <%= fa_icon 'cube' %><b><%= group.name %></b>
         </div>
