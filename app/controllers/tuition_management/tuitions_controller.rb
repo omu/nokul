@@ -34,10 +34,8 @@ module TuitionManagement
     end
 
     def units
-      @units = Unit.faculties
-      respond_to do |format|
-        format.json
-      end
+      @units = Unit.active.faculties
+      respond_to :json
     end
 
     private
