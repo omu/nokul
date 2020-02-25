@@ -4,10 +4,12 @@ module Xokul
   module Configuration
     include ActiveSupport::Configurable
 
-    config_accessor :endpoint,
-                    :username,
-                    :password,
-                    :access_token,
-                    :bearer_token, instance_writer: false
+    # Initialize with default endpoint
+    config_accessor :endpoint do
+      Default::ENDPOINT
+    end
+
+    # Authentication related configurations
+    config_accessor :username, :password, :access_token, :bearer_token
   end
 end
