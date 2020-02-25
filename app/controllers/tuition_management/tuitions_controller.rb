@@ -5,6 +5,7 @@ module TuitionManagement
     include SearchableModule
 
     before_action :set_tuition, only: %i[edit update destroy]
+    before_action :authorized?
 
     def index
       tuitions = Tuition.includes(:units, :unit_tuitions, :academic_term)
@@ -42,6 +43,10 @@ module TuitionManagement
 
     def set_tuition
       @tuition = Tuition.find(params[:id])
+    end
+
+    def authorized?
+      authorize([:tuition_management, @tuition || Tuition])
     end
 
     def tuition_params
