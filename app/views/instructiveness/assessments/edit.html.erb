@@ -3,6 +3,7 @@
     <div class='alert alert-light'>
       <%= link_to_back(:back) %>
     </div>
+    <%= render 'assessment_info' %>
     <div class='card'>
       <div class='card-header'>
         <%= fa_icon 'users' %><b><%= t('.students', course_name: @course.name) %></b>
@@ -25,6 +26,17 @@
           </thead>
           <tbody>
             <%= simple_form_for(@assessment, url: given_course_assessment_path(@course, @assessment), html: { id: :edit_grades }) do |f| %>
+              <%= f.error_notification %>
+              <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+              <% if f.object.errors.any? %>
+                <ul class='list-group list-group-accent'>
+                  <% f.object.errors.full_messages.each do |message| %>
+                    <li class='list-group-item list-group-item-accent-danger list-group-item-danger'>
+                      <%= message %>
+                    </li>
+                  <% end %>
+                </ul>
+              <% end %>
               <%= f.simple_fields_for :grades do |grade| %>
                 <% if @enrollments.map(&:id).include?(grade.object.course_enrollment_id) %>
                   <% enrollment = grade.object.course_enrollment %>

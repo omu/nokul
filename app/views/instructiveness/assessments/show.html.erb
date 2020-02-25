@@ -3,14 +3,17 @@
     <div class='alert alert-light'>
       <%= link_to_back(:back) %>
     </div>
+    <%= render 'assessment_info' %>
     <div class='card'>
       <div class='card-header'>
         <%= fa_icon 'users' %><b><%= t('.students', course_name: @course.name) %></b>
         <div class='card-header-actions'>
           <span class='pull-right'>
-            <%= link_to('Taslak Durumuna Getir', draft_given_course_assessment_path(@course, @assessment), class: 'btn btn-outline-success btn-sm') if @assessment.saved? && @employee.coordinator_of?(@course) %>
-            <%= link_to('Kalıcı Olarak Kaydet', save_given_course_assessment_path(@course, @assessment), class: 'btn btn-outline-success btn-sm') if @assessment.draft? && @employee.coordinator_of?(@course) && @assessment.fully_graded? %>
-            <%= link_to('Düzenle', edit_given_course_assessment_path(@course, @assessment), class: 'btn btn-outline-success btn-sm') if @assessment.draft? %>
+            <% if @employee.coordinator_of?(@course) %>
+              <%= link_to(t('.draft'), draft_given_course_assessment_path(@course, @assessment), class: 'btn btn-warning btn-sm') if @assessment.saved? %>
+              <%= link_to(t('.save'), save_given_course_assessment_path(@course, @assessment), class: 'btn btn-warning btn-sm') if @assessment.draft? && @assessment.fully_graded? %>
+            <% end %>
+            <%= link_to(t('action_group.edit'), edit_given_course_assessment_path(@course, @assessment), class: 'btn btn-outline-success btn-sm') if @assessment.draft? %>
           </span>
         </div>
       </div>
@@ -33,7 +36,7 @@
                 <td><%= full_name(student.user.identities.formal.first) %></td>
                 <td><%= "#{student.year}/#{student.semester}" %></td>
                 <td><%= enrollment.available_course_group.name %></td>
-                <td><%= enrollment.grades.find_by(course_assessment_method: @assessment)&.point %></td>
+                <td><%= enrollment.grade_of(@assessment)&.point %></td>
               </tr>
             <% end %>
           </tbody>

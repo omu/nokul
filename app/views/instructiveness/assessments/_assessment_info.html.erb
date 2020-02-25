@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-header">
+    <%= fa_icon 'pencil' %><strong><%= t('.grade_entry') %></strong>
+  </div>
+  <div class="card-body table-responsive">
+    <table class='table table-bordered table-hover'>
+      <tbody>
+        <tr>
+          <th><%= t('.evaluation_type') %></th>
+          <td><%= @assessment.course_evaluation_type.name %></td>
+          <th><%= t('.percentage') %></th>
+          <td><%= @assessment.percentage %></td>
+        </tr>
+        <tr>
+          <th><%= t('.assessment') %></th>
+          <td><%= @assessment.name %></td>
+          <th><%= t('.status') %></th>
+          <td><%= enum_t(@assessment, :status) %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
