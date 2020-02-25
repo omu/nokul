@@ -5,7 +5,7 @@ require 'test_helper'
 module Instructiveness
   class AssessmentsControllerTest < ActionDispatch::IntegrationTest
     setup do
-      sign_in users(:serhat)
+      sign_in users(:vice_rector)
       @course = available_courses(:elective_course)
       @assessment = course_assessment_methods(:elective_midterm_exam_assessment)
       @course_enrollment = course_enrollments(:johns_enrollment)
@@ -32,6 +32,21 @@ module Instructiveness
       assert_equal @course_enrollment, grade.course_enrollment
       assert_equal 50, grade.point
       assert_equal translate('.update.success'), flash[:info]
+    end
+
+    test 'should get save' do
+      assessment = course_assessment_methods(:elective_midterm_project_assessment)
+      get save_given_course_assessment_path(@course, assessment)
+      assert_redirected_to given_course_assessment_path(@course, assessment)
+      assert_equal translate('.save.success'), flash[:info]
+    end
+
+    test 'should get draft' do
+      assessment = course_assessment_methods(:elective_midterm_project_assessment)
+      assessment.update(status: :saved)
+      get draft_given_course_assessment_path(@course, assessment)
+      assert_redirected_to given_course_assessment_path(@course, assessment)
+      assert_equal translate('.draft.success'), flash[:info]
     end
 
     private

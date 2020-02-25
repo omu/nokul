@@ -12,11 +12,18 @@ elective_midterm_project_assessment:
   course_evaluation_type: elective_midterm_evaluation_type
   assessment_method: project
   percentage: 50
+  status: draft
 
 elective_midterm_exam_assessment:
   course_evaluation_type: elective_midterm_evaluation_type
   assessment_method: exam
   percentage: 50
+
+compulsory_midterm_exam_assessment:
+  course_evaluation_type: compulsory_midterm_evaluation_type
+  assessment_method: exam
+  percentage: 50
+  status: draft
 
 assessment_method_to_delete:
   course_evaluation_type: ati_midterm_evaluation_type

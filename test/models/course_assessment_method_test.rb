@@ -50,4 +50,8 @@ class CourseAssessmentMethodTest < ActiveSupport::TestCase
     enrollments = available_courses(:elective_course).enrollments_under_authority_of(employees(:serhat_active))
     assert_equal enrollments.pluck(:id), assessment.build_grades_for(enrollments).pluck(:course_enrollment_id)
   end
+
+  test 'fully_graded? method' do
+    assert course_assessment_methods(:elective_midterm_project_assessment).fully_graded?
+  end
 end

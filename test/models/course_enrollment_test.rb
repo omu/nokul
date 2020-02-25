@@ -32,4 +32,10 @@ class CourseEnrollmentTest < ActiveSupport::TestCase
       assert course_enrollments(:elective).send(property)
     end
   end
+
+  # custom methods
+  test 'grade_of assessment method' do
+    grade = course_enrollments(:elective).grade_of(course_assessment_methods(:elective_midterm_project_assessment))
+    assert_equal 50, grade.point
+  end
 end
