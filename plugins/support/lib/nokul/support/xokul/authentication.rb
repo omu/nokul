@@ -15,9 +15,9 @@ module Xokul
     end
 
     def authenticate
-      http.basic_auth user: Configuration.username, pass: Configuration.password if basic_auth?
-      http.auth "Bearer #{Configuration.bearer_token}" if bearer_auth?
-      http.auth "token #{Configuration.access_token}" if token_auth?
+      @http = http.basic_auth user: Configuration.username, pass: Configuration.password if basic_auth?
+      @http = http.auth "Bearer #{Configuration.bearer_token}" if bearer_auth?
+      @http = http.auth "token #{Configuration.access_token}" if token_auth?
     end
   end
 end
