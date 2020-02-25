@@ -13,7 +13,7 @@
               <%= link_to(t('.draft'), draft_given_course_assessment_path(@course, @assessment), class: 'btn btn-warning btn-sm') if @assessment.saved? %>
               <%= link_to(t('.save'), save_given_course_assessment_path(@course, @assessment), class: 'btn btn-warning btn-sm') if @assessment.draft? && @assessment.fully_graded? %>
             <% end %>
-            <%= link_to(t('action_group.edit'), edit_given_course_assessment_path(@course, @assessment), class: 'btn btn-outline-success btn-sm') if @assessment.draft? %>
+            <%= link_to(t('action_group.edit'), edit_given_course_assessment_path(@course, @assessment), class: 'btn btn-outline-success btn-sm') unless @assessment.saved? %>
           </span>
         </div>
       </div>
