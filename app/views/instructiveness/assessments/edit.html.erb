@@ -38,7 +38,7 @@
                 </ul>
               <% end %>
               <%= f.simple_fields_for :grades do |grade| %>
-                <% if @enrollments.map(&:id).include?(grade.object.course_enrollment_id) %>
+                <% if @enrollments.ids.include?(grade.object.course_enrollment_id) %>
                   <% enrollment = grade.object.course_enrollment %>
                   <%= grade.input(:course_enrollment_id, as: :hidden, wrapper: false, input_html: { value: enrollment.id }) %>
 

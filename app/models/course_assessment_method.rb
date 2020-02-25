@@ -32,7 +32,7 @@ class CourseAssessmentMethod < ApplicationRecord
   end
 
   def fully_graded?
-    enrollments_ids = available_course.saved_enrollments.map(&:id)
-    grades.where.not(point: nil).where(course_enrollment_id: enrollments_ids).count == enrollments_ids.count
+    enrollment_ids = available_course.saved_enrollments.ids
+    grades.where.not(point: nil).where(course_enrollment_id: enrollment_ids).count == enrollment_ids.count
   end
 end
