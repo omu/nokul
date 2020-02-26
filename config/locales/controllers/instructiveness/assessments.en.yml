@@ -4,7 +4,7 @@ en:
       grade:
         point: Point
       grades:
-        point: Puan
+        point: Point
     enums:
       course_assessment_method:
         statuses:
