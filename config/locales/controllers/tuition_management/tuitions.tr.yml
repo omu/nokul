@@ -13,12 +13,14 @@ tr:
       destroy:
         success: Harçlar başarıyla silindi.
         warning: Harçlar silinemedi!
-      form:
-        form_title: Birimlere Harç Ekle
+      edit:
+        form_title: Birimlerin Harç Bilgilerini Düzenle
       index:
         <<: *tuition_attributes
         card_header: Birim Harç Ücretleri
         new_tuition_link: Yeni Harç Ekle
+      new:
+        form_title: Birimlere Harç Ekle
       search:
         academic_term: Akademik Dönem
         unit: Birimler

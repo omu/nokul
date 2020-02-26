@@ -13,12 +13,14 @@ en:
       destroy:
         success: Tuitions successfully deleted.
         warning: Tuitions can not be deleted!
-      form:
-        form_title: Add Tuition to Units
+      edit:
+        form_title: Update Tuition Information of Units
       index:
         <<: *tuition_attributes
         card_header: Unit Tuition Fees
         new_tuition_link: Add New Tuition
+      new:
+        form_title: Add Tuition to Units
       search:
         academic_term: Academic Term
         unit: Birimler
