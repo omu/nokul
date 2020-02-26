@@ -97,4 +97,7 @@ registration_management_for_employees:
 employee_management:
   name: Personel Yönetimi
   identifier: employee_management
-  description: Personel Yönetim Yetkisi
+tuition_management:
+  name: Harç Yönetimi
+  identifier: tuition_management
+  description: Harç Yönetim Yetkisi
