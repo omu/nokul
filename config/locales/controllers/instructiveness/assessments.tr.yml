@@ -21,6 +21,7 @@ tr:
         status: Durum
       draft:
         error: Notlandırma taslak durumuna alınamadı.
+        not_saved_error: Notlandırma kalıcı olarak kaydedilemedi, kaydedilmiş durumda değil.
         success: Notlandırma taslak durumuna alındı.
       edit:
         group_name: Grup Adı
@@ -30,6 +31,7 @@ tr:
         year_and_semester: Sınıfı/Yarıyılı
       save:
         error: Notlandırma kalıcı olarak kaydedilemedi.
+        not_draft_error: Notlandırma kalıcı olarak kaydedilemedi, taslak durumunda değil.
         not_full_graded_error: Notlandırma kalıcı olarak kaydedilemedi, not girişi yapılmamış kayıtlanmalar bulunmaktadır.
         success: Notlandırma başarıyla kalıcı olarak kaydedildi.
       show:

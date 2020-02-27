@@ -21,6 +21,7 @@ en:
         status: Status
       draft:
         error: Assessment could not be drafted.
+        not_saved_error: Assessment is not in saved status, could not be drafted.
         success: Assessment successfully drafted.
       edit:
         group_name: Group Name
@@ -30,6 +31,7 @@ en:
         year_and_semester: Year/Semester
       save:
         error: Assessment could not be saved permanently.
+        not_draft_error: Assessment is not in draft status, could not be saved permanently.
         not_full_graded_error: Assessment could not be saved permanently, there are enrollments with no grade entries.
         success: Assessment saved permanently.
       show:

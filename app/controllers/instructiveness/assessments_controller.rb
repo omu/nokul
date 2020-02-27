@@ -28,18 +28,16 @@ module Instructiveness
     end
 
     def save
-      return redirect_with('error') unless @assessment.draft?
+      return redirect_with('not_draft_error') unless @assessment.draft?
       return redirect_with('not_full_graded_error') unless @assessment.fully_graded?
 
-      @assessment.update(status: :saved)
-      redirect_with('success')
+      @assessment.update(status: :saved) ? redirect_with('success') : redirect_with('error')
     end
 
     def draft
-      return redirect_with('error') unless @assessment.saved?
+      return redirect_with('not_saved_error') unless @assessment.saved?
 
-      @assessment.update(status: :draft)
-      redirect_with('success')
+      @assessment.update(status: :draft) ? redirect_with('success') : redirect_with('error')
     end
 
     private
