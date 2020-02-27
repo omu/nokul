@@ -10,6 +10,11 @@ module Xokul
     end
 
     # Authentication related configurations
-    config_accessor :username, :password, :access_token, :bearer_token
+    config_accessor :user, :password, :access_token, :bearer_token
+
+    # Advanced logging instrumenter
+    config_accessor :instrumenter do
+      Default::INSTRUMENTER
+    end
   end
 end

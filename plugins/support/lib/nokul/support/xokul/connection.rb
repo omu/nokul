@@ -9,8 +9,8 @@ module Xokul
     delegate :get, :post, :put, to: :@http
 
     def initialize
-      @http = HTTP.persistent(Configuration.endpoint)
-      authenticate
+      @http = HTTP.use instrumenter: Configuration.instrumenter, namespace: 'xokul.http'
+      @http.authenticate
     end
   end
 end
