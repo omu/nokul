@@ -9,7 +9,7 @@
         <%= fa_icon 'users' %><b><%= t('.students', course_name: @course.name) %></b>
         <div class='card-header-actions'>
           <span class='pull-right'>
-            <% if @employee.coordinator_of?(@course) %>
+            <% if @employee.coordinatorships.include?(@course) %>
               <%= link_to(t('.draft'), draft_given_course_assessment_path(@course, @assessment), class: 'btn btn-warning btn-sm') if @assessment.saved? %>
               <%= link_to(t('.save'), save_given_course_assessment_path(@course, @assessment), class: 'btn btn-warning btn-sm') if @assessment.draft? && @assessment.fully_graded? %>
             <% end %>

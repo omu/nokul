@@ -65,7 +65,7 @@ module Instructiveness
     end
 
     def check_coordinator
-      redirect_with('.errors.not_coordinator') unless @employee.coordinator_of?(@course)
+      redirect_with('.errors.not_coordinator') unless @employee.coordinatorships.include?(@course)
     end
 
     def assessment_params
