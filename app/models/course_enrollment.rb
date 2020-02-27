@@ -15,7 +15,7 @@ class CourseEnrollment < ApplicationRecord
 
   # delegates
   delegate :ects, to: :available_course
-  delegate :student, to: :semester_registration
+  delegate :student, :academic_term, to: :semester_registration
 
   # custom methods
   def grade_of(assessment)

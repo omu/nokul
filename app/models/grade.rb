@@ -13,4 +13,7 @@ class Grade < ApplicationRecord
     less_than_or_equal_to:    100
   }
   validates :course_enrollment, uniqueness: { scope: :course_assessment_method_id }
+
+  # delegates
+  delegate :student, :academic_term, to: :course_enrollment
 end
