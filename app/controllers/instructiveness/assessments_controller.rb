@@ -5,17 +5,14 @@ module Instructiveness
     before_action :set_employee
     before_action :set_course
     before_action :set_assessment
+    before_action :set_enrollments
     before_action :authorized?
     before_action :not_saved?, only: %i[edit update]
-    before_action :any_enrollments?, only: %i[edit update]
     before_action :coordinator?, only: %i[save draft]
 
-    def show
-      @enrollments = @course.enrollments_under_authority_of(@employee)
-    end
+    def show; end
 
     def edit
-      @enrollments = @course.enrollments_under_authority_of(@employee)
       @grades = @assessment.grades_under_authority_of(@employee) +
                 @assessment.build_grades_for(@enrollments.where.not(id: @assessment.grades.map(&:course_enrollment_id)))
     end
@@ -23,7 +20,6 @@ module Instructiveness
     def update
       return redirect_with('success') if @assessment.update(assessment_params)
 
-      @enrollments = @course.enrollments_under_authority_of(@employee)
       @grades = @assessment.grades.select { |grade| @enrollments.ids.include?(grade.course_enrollment_id) }
       render(:edit)
     end
@@ -51,10 +47,6 @@ module Instructiveness
       not_found if (@employee = current_user.current_employee).nil?
     end
 
-    def authorized?
-      authorize(@employee, policy_class: Instructiveness::AssessmentPolicy)
-    end
-
     def set_course
       @course = @employee.given_courses.find(params[:given_course_id])
     end
@@ -63,12 +55,17 @@ module Instructiveness
       @assessment = @course.course_assessment_methods.find(params[:id])
     end
 
-    def not_saved?
-      redirect_with('.errors.saved') if @assessment.saved?
+    def set_enrollments
+      @enrollments = @course.enrollments_under_authority_of(@employee)
+      redirect_to given_course_path(@course), flash: { info: t('.errors.no_enrollments') } if @enrollments.empty?
     end
 
-    def any_enrollments?
-      redirect_with('errors.no_enrollments') if @assessment.saved_enrollments.empty?
+    def authorized?
+      authorize(@employee, policy_class: Instructiveness::AssessmentPolicy)
+    end
+
+    def not_saved?
+      redirect_with('.errors.saved') if @assessment.saved?
     end
 
     def coordinator?

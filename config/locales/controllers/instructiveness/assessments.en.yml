@@ -30,7 +30,7 @@ en:
         student_number: Student Number
         year_and_semester: Year/Semester
       errors:
-        no_enrollments: There are no students enrolled in the course.
+        no_enrollments: There are no students enrolled in the course under your authority.
         not_coordinator: The process can only be carried out by the course coordinator.
         saved: Assessment was saved permanently, updating cannot be done.
       save:

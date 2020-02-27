@@ -30,7 +30,7 @@ tr:
         student_number: Öğrenci Numarası
         year_and_semester: Sınıfı/Yarıyılı
       errors:
-        no_enrollments: Derse kayıtlanmış öğrenci bulunmamaktadır.
+        no_enrollments: Yetkiniz altında derse kayıtlanmış öğrenci bulunmamaktadır.
         not_coordinator: İşlem yalnızca ders koordinatörü tarafından gerçekleştirilebilir.
         saved: Notlandırma kesin olarak kaydedilmiş, güncelleme işlemi yapılamaz.
       save:
