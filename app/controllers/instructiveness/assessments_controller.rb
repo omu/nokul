@@ -15,12 +15,16 @@ module Instructiveness
 
     def edit
       @enrollments = @course.enrollments_under_authority_of(@employee)
-      @assessment.build_grades_for(@enrollments.where.not(id: @assessment.grades.map(&:course_enrollment_id)))
+      @grades = @assessment.grades_under_authority_of(@employee) +
+                @assessment.build_grades_for(@enrollments.where.not(id: @assessment.grades.map(&:course_enrollment_id)))
     end
 
     def update
+      return redirect_with('success') if @assessment.update(assessment_params)
+
       @enrollments = @course.enrollments_under_authority_of(@employee)
-      @assessment.update(assessment_params) ? redirect_with('success') : render(:edit)
+      @grades = @assessment.grades.select { |grade| @enrollments.ids.include?(grade.course_enrollment_id) }
+      render(:edit)
     end
 
     def save
