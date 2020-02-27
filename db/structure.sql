@@ -1212,6 +1212,7 @@ CREATE TABLE public.course_assessment_methods (
     percentage integer,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
+    status integer DEFAULT 0 NOT NULL,
     CONSTRAINT course_assessment_methods_percentage_null CHECK ((percentage IS NOT NULL)),
     CONSTRAINT course_assessment_methods_percentage_numericality CHECK (((percentage >= 0) AND (percentage <= 100)))
 );
@@ -1944,6 +1945,41 @@ CREATE SEQUENCE public.friendly_id_slugs_id_seq
 --
 
 ALTER SEQUENCE public.friendly_id_slugs_id_seq OWNED BY public.friendly_id_slugs.id;
+
+
+--
+-- Name: grades; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.grades (
+    id bigint NOT NULL,
+    course_assessment_method_id bigint NOT NULL,
+    course_enrollment_id bigint NOT NULL,
+    lecturer_id bigint NOT NULL,
+    point integer,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT grades_point_numericality CHECK (((point >= 0) AND (point <= 100)))
+);
+
+
+--
+-- Name: grades_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.grades_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: grades_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.grades_id_seq OWNED BY public.grades.id;
 
 
 --
@@ -4021,6 +4057,13 @@ ALTER TABLE ONLY public.friendly_id_slugs ALTER COLUMN id SET DEFAULT nextval('p
 
 
 --
+-- Name: grades id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.grades ALTER COLUMN id SET DEFAULT nextval('public.grades_id_seq'::regclass);
+
+
+--
 -- Name: group_courses id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -4776,6 +4819,14 @@ ALTER TABLE ONLY public.evaluation_types
 
 ALTER TABLE ONLY public.friendly_id_slugs
     ADD CONSTRAINT friendly_id_slugs_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: grades grades_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.grades
+    ADD CONSTRAINT grades_pkey PRIMARY KEY (id);
 
 
 --
@@ -5834,6 +5885,27 @@ CREATE INDEX index_friendly_id_slugs_on_sluggable_type ON public.friendly_id_slu
 
 
 --
+-- Name: index_grades_on_course_assessment_method_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_grades_on_course_assessment_method_id ON public.grades USING btree (course_assessment_method_id);
+
+
+--
+-- Name: index_grades_on_course_enrollment_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_grades_on_course_enrollment_id ON public.grades USING btree (course_enrollment_id);
+
+
+--
+-- Name: index_grades_on_lecturer_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_grades_on_lecturer_id ON public.grades USING btree (lecturer_id);
+
+
+--
 -- Name: index_group_courses_on_course_group_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6284,6 +6356,14 @@ ALTER TABLE ONLY public.addresses
 
 
 --
+-- Name: grades fk_rails_2edc8b4497; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.grades
+    ADD CONSTRAINT fk_rails_2edc8b4497 FOREIGN KEY (course_assessment_method_id) REFERENCES public.course_assessment_methods(id);
+
+
+--
 -- Name: registration_documents fk_rails_2f3d74d701; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6497,6 +6577,14 @@ ALTER TABLE ONLY public.units
 
 ALTER TABLE ONLY public.calendar_committee_decisions
     ADD CONSTRAINT fk_rails_5d6264c4f2 FOREIGN KEY (committee_decision_id) REFERENCES public.committee_decisions(id);
+
+
+--
+-- Name: grades fk_rails_5e0aa9d9a4; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.grades
+    ADD CONSTRAINT fk_rails_5e0aa9d9a4 FOREIGN KEY (course_enrollment_id) REFERENCES public.course_enrollments(id);
 
 
 --
@@ -6860,6 +6948,14 @@ ALTER TABLE ONLY public.prospective_employees
 
 
 --
+-- Name: grades fk_rails_d05f1e31bd; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.grades
+    ADD CONSTRAINT fk_rails_d05f1e31bd FOREIGN KEY (lecturer_id) REFERENCES public.employees(id);
+
+
+--
 -- Name: academic_credentials fk_rails_d55570421b; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7131,6 +7227,8 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20200123164837'),
 ('20200129072653'),
 ('20200206083358'),
-('20200211084915');
+('20200211084915'),
+('20200213110520'),
+('20200213124638');
 
 

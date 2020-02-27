@@ -8,12 +8,19 @@ tr:
         curriculum: Müfredat
         groups: Gruplar
         unit: Birim
+      evaluation_types:
+        assessment_method: Ölçme Kriteri
+        card_header: Değerlendirme Türleri
+        grade_entry: Not Girişi
+        percentage: Yüzde
+        status: Durum
       groups:
         course_groups: Ders Grupları
         coordinator: Koordinatör
         lecturer: Öğretim Elemanı
         name: Grup Adı
         number_of_enrolled_students: Kayıtlı Öğrenci Sayısı
+        student_list: Öğrenci Listesi
         title: Unvan
       index:
         <<: *given_course_attributes

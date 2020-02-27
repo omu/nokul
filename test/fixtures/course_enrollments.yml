@@ -12,6 +12,7 @@ elective:
   semester_registration: serhat_third_semester
   available_course: elective_course
   available_course_group: elective_course_group
+  status: saved
 compulsory:
   semester_registration: serhat_third_semester
   available_course: compulsory_course
@@ -19,5 +20,5 @@ compulsory:
 johns_enrollment:
   semester_registration: john_third_semester
   available_course: elective_course
-  available_course_group: elective_course_group
+  available_course_group: elective_course_group_2
   status: saved

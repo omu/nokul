@@ -24,6 +24,7 @@ class AvailableCourse < ApplicationRecord
   belongs_to :curriculum
   belongs_to :unit
   has_many :evaluation_types, class_name: 'CourseEvaluationType', dependent: :destroy
+  has_many :course_assessment_methods, through: :evaluation_types
   has_many :groups, class_name: 'AvailableCourseGroup', dependent: :destroy
   has_many :lecturers, through: :groups
   has_many :course_enrollments, dependent: :destroy
@@ -67,6 +68,14 @@ class AvailableCourse < ApplicationRecord
 
   def number_of_enrolled_students
     saved_enrollments.count
+  end
+
+  def groups_under_authority_of(employee)
+    coordinator == employee ? groups : groups.joins(:lecturers).where('lecturer_id = ?', employee.id)
+  end
+
+  def enrollments_under_authority_of(employee)
+    saved_enrollments.where(available_course_group: groups_under_authority_of(employee))
   end
 
   private

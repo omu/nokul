@@ -33,12 +33,13 @@
               <th><%= t('.coordinator') %></th>
               <td><%= full_name(@course.coordinator) %></td>
               <th><%= t('.number_of_enrolled_students') %></th>
-              <td><%= link_to(@course.number_of_enrolled_students, students_given_course_path(@course)) %></td>
+              <td><%= @course.number_of_enrolled_students %></td>
             </tr>
           </tbody>
         </table>
       </div>
       <%= render 'groups' %>
+      <%= render 'evaluation_types' %>
     </div>
   </div>
 </div>

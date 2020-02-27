@@ -12,7 +12,7 @@ elective_course_group_lecturer:
   coordinator: true
 elective_course_group_2_lecturer:
   group: elective_course_group_2
-  lecturer: serhat_active
+  lecturer: serhat_passive
   coordinator: true
 elective_course_2_group_lecturer:
   group: elective_course_2_group

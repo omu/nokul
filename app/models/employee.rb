@@ -13,6 +13,8 @@ class Employee < ApplicationRecord
   has_many :positions, through: :duties
   has_many :administrative_functions, through: :duties
   has_many :available_course_lecturers, foreign_key: :lecturer_id, inverse_of: :lecturer, dependent: :destroy
+  has_many :coordinatorships, class_name: 'AvailableCourse', foreign_key: :coordinator_id,
+                              inverse_of: :coordinator, dependent: :destroy
 
   # validations
   validates :active, inclusion: { in: [true, false] }
