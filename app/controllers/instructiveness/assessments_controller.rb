@@ -6,9 +6,9 @@ module Instructiveness
     before_action :set_course
     before_action :set_assessment
     before_action :authorized?
-    before_action :check_status, only: %i[edit update]
-    before_action :check_any_enrollments, only: %i[edit update]
-    before_action :check_coordinator, only: %i[save draft]
+    before_action :not_saved?, only: %i[edit update]
+    before_action :any_enrollments?, only: %i[edit update]
+    before_action :coordinator?, only: %i[save draft]
 
     def show
       @enrollments = @course.enrollments_under_authority_of(@employee)
@@ -63,15 +63,15 @@ module Instructiveness
       @assessment = @course.course_assessment_methods.find(params[:id])
     end
 
-    def check_status
+    def not_saved?
       redirect_with('.errors.saved') if @assessment.saved?
     end
 
-    def check_any_enrollments
+    def any_enrollments?
       redirect_with('errors.no_enrollments') if @assessment.saved_enrollments.empty?
     end
 
-    def check_coordinator
+    def coordinator?
       redirect_with('.errors.not_coordinator') unless @employee.coordinatorships.include?(@course)
     end
 
