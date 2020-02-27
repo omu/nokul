@@ -9,6 +9,7 @@ class GradeTest < ActiveSupport::TestCase
   # relations
   belongs_to :course_assessment_method
   belongs_to :course_enrollment
+  belongs_to :lecturer, class_name: 'Employee'
 
   # validations: uniqueness
   test 'uniqueness validations for grade of a course_enrollment' do
