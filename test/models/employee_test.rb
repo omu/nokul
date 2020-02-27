@@ -73,10 +73,4 @@ class EmployeeTest < ActiveSupport::TestCase
     assert_includes given_courses, available_courses(:elective_course_2)
     assert_not_includes given_courses, available_courses(:compulsory_course_2)
   end
-
-  test 'coordinator_of? course method' do
-    course = available_courses(:elective_course)
-    assert employees(:vice_rector).coordinator_of?(course)
-    assert_not employees(:serhat_active).coordinator_of?(course)
-  end
 end
