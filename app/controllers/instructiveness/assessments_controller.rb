@@ -7,6 +7,7 @@ module Instructiveness
     before_action :set_assessment
     before_action :authorized?
     before_action :check_status, only: %i[edit update]
+    before_action :check_any_enrollments, only: %i[edit update]
     before_action :check_coordinator, only: %i[save draft]
 
     def show
@@ -64,6 +65,10 @@ module Instructiveness
 
     def check_status
       redirect_with('.errors.saved') if @assessment.saved?
+    end
+
+    def check_any_enrollments
+      redirect_with('errors.no_enrollments') if @assessment.saved_enrollments.empty?
     end
 
     def check_coordinator

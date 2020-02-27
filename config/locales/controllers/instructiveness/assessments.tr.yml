@@ -29,6 +29,10 @@ tr:
         students: '%{course_name} Dersine Kayıtlanan Öğrenciler'
         student_number: Öğrenci Numarası
         year_and_semester: Sınıfı/Yarıyılı
+      errors:
+        no_enrollments: Derse kayıtlanmış öğrenci bulunmamaktadır.
+        not_coordinator: İşlem yalnızca ders koordinatörü tarafından gerçekleştirilebilir.
+        saved: Notlandırma kesin olarak kaydedilmiş, güncelleme işlemi yapılamaz.
       save:
         error: Notlandırma kalıcı olarak kaydedilemedi.
         not_draft_error: Notlandırma kalıcı olarak kaydedilemedi, taslak durumunda değil.
