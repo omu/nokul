@@ -2,10 +2,13 @@ elective_midterm_project_grade:
   course_assessment_method: elective_midterm_project_assessment
   course_enrollment: elective
   point: 50
+  lecturer: vice_rector
 johns_elective_midterm_project_grade:
   course_assessment_method: elective_midterm_project_assessment
   course_enrollment: johns_enrollment
   point: 40
+  lecturer: vice_rector
 johns_compulsory_midterm_project_grade:
   course_assessment_method: elective_midterm_project_assessment
   course_enrollment: compulsory
+  lecturer: serhat_active

@@ -1955,6 +1955,7 @@ CREATE TABLE public.grades (
     id bigint NOT NULL,
     course_assessment_method_id bigint NOT NULL,
     course_enrollment_id bigint NOT NULL,
+    lecturer_id bigint NOT NULL,
     point integer,
     created_at timestamp(6) without time zone NOT NULL,
     updated_at timestamp(6) without time zone NOT NULL,
@@ -5898,6 +5899,13 @@ CREATE INDEX index_grades_on_course_enrollment_id ON public.grades USING btree (
 
 
 --
+-- Name: index_grades_on_lecturer_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_grades_on_lecturer_id ON public.grades USING btree (lecturer_id);
+
+
+--
 -- Name: index_group_courses_on_course_group_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6937,6 +6945,14 @@ ALTER TABLE ONLY public.registration_documents
 
 ALTER TABLE ONLY public.prospective_employees
     ADD CONSTRAINT fk_rails_cfef503ec1 FOREIGN KEY (unit_id) REFERENCES public.units(id);
+
+
+--
+-- Name: grades fk_rails_d05f1e31bd; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.grades
+    ADD CONSTRAINT fk_rails_d05f1e31bd FOREIGN KEY (lecturer_id) REFERENCES public.employees(id);
 
 
 --

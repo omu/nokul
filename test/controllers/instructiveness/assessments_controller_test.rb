@@ -25,7 +25,7 @@ module Instructiveness
       patch given_course_assessment_path(@course, @assessment), params: {
         course_assessment_method: {
           grades_attributes: {
-            '0' => { course_enrollment_id: @course_enrollment.id, point: 50 }
+            '0' => { course_enrollment_id: @course_enrollment.id, point: 50, lecturer_id: employees(:vice_rector).id }
           }
         }
       }

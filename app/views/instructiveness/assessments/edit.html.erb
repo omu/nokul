@@ -40,6 +40,7 @@
               <%= f.simple_fields_for :grades, @grades do |grade| %>
                 <% enrollment = grade.object.course_enrollment %>
                 <%= grade.input(:course_enrollment_id, as: :hidden, wrapper: false, input_html: { value: enrollment.id }) %>
+                <%= grade.input(:lecturer_id, as: :hidden, wrapper: false, input_html: { value: @employee.id }) %>
 
                 <tr>
                   <% student = enrollment.student %>

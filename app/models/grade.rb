@@ -4,6 +4,7 @@ class Grade < ApplicationRecord
   # relations
   belongs_to :course_assessment_method
   belongs_to :course_enrollment
+  belongs_to :lecturer, class_name: 'Employee'
 
   # validations
   validates :point, numericality: {

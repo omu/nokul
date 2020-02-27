@@ -74,7 +74,7 @@ module Instructiveness
 
     def assessment_params
       params.require(:course_assessment_method)
-            .permit(grades_attributes: %i[id course_enrollment_id point])
+            .permit(grades_attributes: %i[id course_enrollment_id lecturer_id point])
             .merge(status: :draft)
     end
   end

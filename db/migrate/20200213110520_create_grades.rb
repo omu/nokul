@@ -5,6 +5,7 @@ class CreateGrades < ActiveRecord::Migration[6.0]
     create_table :grades do |t|
       t.references :course_assessment_method, foreign_key: true, null: false
       t.references :course_enrollment, foreign_key: true, null: false
+      t.references :lecturer, foreign_key: { to_table: :employees }, null: false
       t.integer :point
 
       t.timestamps
