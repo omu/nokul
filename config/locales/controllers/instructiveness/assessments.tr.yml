@@ -36,7 +36,7 @@ tr:
       save:
         error: Notlandırma kalıcı olarak kaydedilemedi.
         not_draft_error: Notlandırma kalıcı olarak kaydedilemedi, taslak durumunda değil.
-        not_full_graded_error: Notlandırma kalıcı olarak kaydedilemedi, not girişi yapılmamış kayıtlanmalar bulunmaktadır.
+        not_fully_graded_error: Notlandırma kalıcı olarak kaydedilemedi, not girişi yapılmamış kayıtlanmalar bulunmaktadır.
         success: Notlandırma başarıyla kalıcı olarak kaydedildi.
       show:
         draft: Taslak Durumuna Getir

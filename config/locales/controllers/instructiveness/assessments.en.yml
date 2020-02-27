@@ -36,7 +36,7 @@ en:
       save:
         error: Assessment could not be saved permanently.
         not_draft_error: Assessment is not in draft status, could not be saved permanently.
-        not_full_graded_error: Assessment could not be saved permanently, there are enrollments with no grade entries.
+        not_fully_graded_error: Assessment could not be saved permanently, there are enrollments with no grade entries.
         success: Assessment saved permanently.
       show:
         draft: Draft
