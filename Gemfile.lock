@@ -118,7 +118,7 @@ GEM
       html_tokenizer (~> 0.0.6)
       parser (>= 2.4)
       smart_properties
-    bindata (2.4.5)
+    bindata (2.4.6)
     bindex (0.8.1)
     bootsnap (1.4.5)
       msgpack (~> 1.0)
