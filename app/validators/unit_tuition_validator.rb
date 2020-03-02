@@ -9,7 +9,8 @@ class UnitTuitionValidator < ActiveModel::Validator
   end
 
   def tuition_exists?
-    UnitTuition.where.not(id: @unit_tuition).where(unit: @unit).map(&:academic_term).uniq.include?(@academic_term)
+    UnitTuition.includes(tuition: :academic_term)
+               .where.not(id: @unit_tuition).where(unit: @unit).map(&:academic_term).include?(@academic_term)
   end
 
   def error_message
