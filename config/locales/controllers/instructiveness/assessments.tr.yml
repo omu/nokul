@@ -1,0 +1,50 @@
+tr:
+  activerecord:
+    attributes:
+      grade:
+        point: Puan
+      grades:
+        point: Puan
+    enums:
+      course_assessment_method:
+        statuses:
+          no_grade_entered: Not Girişi Yapılmadı
+          draft: Taslak
+          saved: Kaydedildi
+  instructiveness:
+    assessments:
+      assessment_info:
+        evaluation_type: Değerlendirme Türü
+        assessment: Ölçme Kriteri
+        grade_entry: Not Girişi
+        percentage: Yüzde
+        status: Durum
+      draft:
+        error: Notlandırma taslak durumuna alınamadı.
+        not_saved_error: Notlandırma kalıcı olarak kaydedilemedi, kaydedilmiş durumda değil.
+        success: Notlandırma taslak durumuna alındı.
+      edit:
+        group_name: Grup Adı
+        name: Adı
+        students: '%{course_name} Dersine Kayıtlanan Öğrenciler'
+        student_number: Öğrenci Numarası
+        year_and_semester: Sınıfı/Yarıyılı
+      errors:
+        no_enrollments: Yetkiniz altında derse kayıtlanmış öğrenci bulunmamaktadır.
+        not_coordinator: İşlem yalnızca ders koordinatörü tarafından gerçekleştirilebilir.
+        saved: Notlandırma kesin olarak kaydedilmiş, güncelleme işlemi yapılamaz.
+      save:
+        error: Notlandırma kalıcı olarak kaydedilemedi.
+        not_draft_error: Notlandırma kalıcı olarak kaydedilemedi, taslak durumunda değil.
+        not_fully_graded_error: Notlandırma kalıcı olarak kaydedilemedi, not girişi yapılmamış kayıtlanmalar bulunmaktadır.
+        success: Notlandırma başarıyla kalıcı olarak kaydedildi.
+      show:
+        draft: Taslak Durumuna Getir
+        group_name: Grup Adı
+        name: Adı
+        save: Kalıcı Olarak Kaydet
+        students: '%{course_name} Dersine Kayıtlanan Öğrenciler'
+        student_number: Öğrenci Numarası
+        year_and_semester: Sınıfı/Yarıyılı
+      update:
+        success: Notlar başarıyla kaydedildi.

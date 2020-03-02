@@ -1,0 +1,36 @@
+<div class='col-lg-12'>
+  <div class='card'>
+    <div class='card-header'>
+      <%= fa_icon 'list-alt' %><strong><%= t('.card_header') %></strong>
+      <span class='pull-right'>
+      </span>
+    </div>
+    <div class='card-body'>
+      <% @evaluation_types.each do |evaluation_type| %>
+        <div class='card-header'>
+          <%= fa_icon 'sticky-note' %><b><%= "#{evaluation_type.name} (%#{evaluation_type.percentage})" %></b>
+        </div>
+        <table class='table table-sm table-striped'>
+          <thead class='thead'>
+            <tr>
+              <th style='width: 30%'><%= t('.assessment_method') %></th>
+              <th style='width: 30%'><%= t('.percentage') %></th>
+              <th style='width: 30%'><%= t('.status') %></th>
+              <th style='width: 30%'><%= t('actions') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% evaluation_type.course_assessment_methods.each do |assessment| %>
+              <tr>
+                <td><%= assessment.name %></td>
+                <td><%= assessment.percentage %></td>
+                <td><%= enum_t(assessment, :status) %></td>
+                <td><%= link_to_edit(t('.grade_entry'), given_course_assessment_path(@course, assessment)) %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% end %>
+    </div>
+  </div>
+</div>

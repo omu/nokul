@@ -14,6 +14,7 @@ class CourseEnrollmentTest < ActiveSupport::TestCase
   belongs_to :available_course
   belongs_to :available_course_group
   belongs_to :semester_registration
+  has_many :grades, dependent: :destroy
 
   # validations: uniqueness
   test 'uniqueness validations for course_enrollment of a available_course' do
@@ -30,5 +31,11 @@ class CourseEnrollmentTest < ActiveSupport::TestCase
     test "a course_enrollment reach #{property} parameter" do
       assert course_enrollments(:elective).send(property)
     end
+  end
+
+  # custom methods
+  test 'grade_of assessment method' do
+    grade = course_enrollments(:elective).grade_of(course_assessment_methods(:elective_midterm_project_assessment))
+    assert_equal 50, grade.point
   end
 end
