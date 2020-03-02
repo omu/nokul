@@ -98,7 +98,7 @@ GEM
     minitest-focus (1.1.2)
       minitest (>= 4, < 6)
     nio4r (2.5.2)
-    nokogiri (1.10.5)
+    nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
     rack (2.0.8)
     rack-test (1.1.0)
