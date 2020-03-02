@@ -188,7 +188,7 @@ GEM
       activesupport (>= 4.2.0)
     groupdate (5.0.0)
       activesupport (>= 5)
-    hashdiff (1.0.0)
+    hashdiff (1.0.1)
     hashie (3.6.0)
     html_tokenizer (0.0.7)
     httpclient (2.8.3)
