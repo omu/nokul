@@ -6480,6 +6480,7 @@ ALTER TABLE ONLY public.addresses
 ALTER TABLE ONLY public.unit_tuitions
     ADD CONSTRAINT fk_rails_2b01e356e7 FOREIGN KEY (unit_id) REFERENCES public.units(id);
 
+
 --
 -- Name: grades fk_rails_2edc8b4497; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
@@ -7369,9 +7370,9 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20200129072653'),
 ('20200206083358'),
 ('20200211084915'),
-('20200215132359'),
-('20200217110305'),
 ('20200213110520'),
-('20200213124638');
+('20200213124638'),
+('20200215132359'),
+('20200217110305');
 
 
