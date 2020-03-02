@@ -6,6 +6,12 @@ tr:
         fee: Harç Ücreti
         foreign_student_fee: Yabancı Öğrenci Harç Ücreti
         unit_ids: Birimler
+    errors:
+      models:
+        tuition:
+          attributes:
+            base:
+              not_specified_fees: Harç ücretlerinin ikisi birden boş geçilemez.
   tuition_management:
     tuitions:
       create:
