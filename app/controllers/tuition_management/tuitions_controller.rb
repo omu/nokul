@@ -37,7 +37,7 @@ module TuitionManagement
     end
 
     def units
-      @units = Unit.active.faculties
+      @units = params[:term].present? ? Unit.active.faculties.search(params[:term]) : Unit.active.faculties
       respond_to :json
     end
 

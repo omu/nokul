@@ -7,10 +7,10 @@
         dataType: "json",
         delay: 250,
         data: function (params) {
-            return {
-              q: params.term
-            };
-          },
+          return {
+            term: params.term
+          };
+        },
         processResults: function (data) {
           return { results: data };
         },
