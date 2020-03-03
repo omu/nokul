@@ -8,8 +8,9 @@ module TuitionManagement
     before_action :authorized?
 
     def index
-      tuitions = Unit.find_by(id: params[:unit_id])&.tuitions&.includes(:units, :unit_tuitions, :academic_term) ||
-                 Tuition.includes(:units, :unit_tuitions, :academic_term)
+      tuitions = Tuition.includes(:units, :unit_tuitions, :academic_term).where(
+        params[:unit_id].present? ? { units: { id: params[:unit_id] } } : {}
+      )
 
       @pagy, @tuitions = pagy(tuitions.dynamic_search(search_params(Tuition)))
     end
