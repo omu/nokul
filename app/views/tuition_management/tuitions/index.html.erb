@@ -22,7 +22,7 @@
           <tbody>
             <% @tuitions.each do |tuition| %>
               <tr>
-                <td><%= tuition.units.map(&:name).join(', ') %></td>
+                <td style='width: 60%'><%= tuition.units.map(&:names_depth_cache).join(', ') %></td>
                 <td><%= full_name(tuition.academic_term) %></td>
                 <td><%= number_to_currency(tuition.fee) %></td>
                 <td><%= number_to_currency(tuition.foreign_student_fee) %></td>
