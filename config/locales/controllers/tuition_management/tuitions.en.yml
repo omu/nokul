@@ -29,6 +29,6 @@ en:
         form_title: Add Tuition to Units
       search:
         academic_term: Academic Term
-        unit: Birimler
+        unit: Units
       update:
         success: Tuitions successfully updated.
