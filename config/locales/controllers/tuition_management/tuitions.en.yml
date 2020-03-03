@@ -6,12 +6,6 @@ en:
         fee: Tuition Fee
         foreign_student_fee: Foreign Student Tuition Fee
         unit_ids: Units
-    errors:
-      models:
-        tuition:
-          attributes:
-            base:
-              not_specified_fees: Both fees cannot be left empty.
   tuition_management:
     tuitions:
       create:

@@ -15,5 +15,5 @@ class TuitionTest < ActiveSupport::TestCase
   validates_numericality_of :fee
   validates_numericality_of :foreign_student_fee
   validates_numerical_range :fee, greater_than_or_equal_to: 0
-  validates_numerical_range :foreign_student_fee, greater_than_or_equal_to: 0
+  validates_numerical_range :foreign_student_fee, greater_than: 0
 end
