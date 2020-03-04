@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   draw :patron
   draw :reference
   draw :studentship
+  draw :tuition_management
   draw :user_management
   draw :yoksis
 

@@ -3396,6 +3396,43 @@ ALTER SEQUENCE public.titles_id_seq OWNED BY public.titles.id;
 
 
 --
+-- Name: tuitions; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.tuitions (
+    id bigint NOT NULL,
+    academic_term_id bigint,
+    fee numeric(8,3) DEFAULT 0.0,
+    foreign_student_fee numeric(8,3) DEFAULT 0.0,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT tuitions_fee_null CHECK ((fee IS NOT NULL)),
+    CONSTRAINT tuitions_fee_numericality CHECK ((fee >= (0)::numeric)),
+    CONSTRAINT tuitions_foreign_student_fee_null CHECK ((foreign_student_fee IS NOT NULL)),
+    CONSTRAINT tuitions_foreign_student_fee_numericality CHECK ((foreign_student_fee >= (0)::numeric))
+);
+
+
+--
+-- Name: tuitions_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.tuitions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: tuitions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.tuitions_id_seq OWNED BY public.tuitions.id;
+
+
+--
 -- Name: unit_calendars; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -3525,6 +3562,36 @@ CREATE SEQUENCE public.unit_statuses_id_seq
 --
 
 ALTER SEQUENCE public.unit_statuses_id_seq OWNED BY public.unit_statuses.id;
+
+
+--
+-- Name: unit_tuitions; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.unit_tuitions (
+    id bigint NOT NULL,
+    unit_id bigint,
+    tuition_id bigint
+);
+
+
+--
+-- Name: unit_tuitions_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.unit_tuitions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: unit_tuitions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.unit_tuitions_id_seq OWNED BY public.unit_tuitions.id;
 
 
 --
@@ -4302,6 +4369,13 @@ ALTER TABLE ONLY public.titles ALTER COLUMN id SET DEFAULT nextval('public.title
 
 
 --
+-- Name: tuitions id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.tuitions ALTER COLUMN id SET DEFAULT nextval('public.tuitions_id_seq'::regclass);
+
+
+--
 -- Name: unit_calendars id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -4327,6 +4401,13 @@ ALTER TABLE ONLY public.unit_instruction_types ALTER COLUMN id SET DEFAULT nextv
 --
 
 ALTER TABLE ONLY public.unit_statuses ALTER COLUMN id SET DEFAULT nextval('public.unit_statuses_id_seq'::regclass);
+
+
+--
+-- Name: unit_tuitions id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.unit_tuitions ALTER COLUMN id SET DEFAULT nextval('public.unit_tuitions_id_seq'::regclass);
 
 
 --
@@ -5286,6 +5367,14 @@ ALTER TABLE ONLY public.titles
 
 
 --
+-- Name: tuitions tuitions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.tuitions
+    ADD CONSTRAINT tuitions_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: unit_calendars unit_calendars_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -5363,6 +5452,14 @@ ALTER TABLE ONLY public.unit_statuses
 
 ALTER TABLE ONLY public.unit_statuses
     ADD CONSTRAINT unit_statuses_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: unit_tuitions unit_tuitions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.unit_tuitions
+    ADD CONSTRAINT unit_tuitions_pkey PRIMARY KEY (id);
 
 
 --
@@ -6193,6 +6290,13 @@ CREATE INDEX index_students_on_user_id ON public.students USING btree (user_id);
 
 
 --
+-- Name: index_tuitions_on_academic_term_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_tuitions_on_academic_term_id ON public.tuitions USING btree (academic_term_id);
+
+
+--
 -- Name: index_unit_calendars_on_calendar_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6204,6 +6308,20 @@ CREATE INDEX index_unit_calendars_on_calendar_id ON public.unit_calendars USING 
 --
 
 CREATE INDEX index_unit_calendars_on_unit_id ON public.unit_calendars USING btree (unit_id);
+
+
+--
+-- Name: index_unit_tuitions_on_tuition_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_unit_tuitions_on_tuition_id ON public.unit_tuitions USING btree (tuition_id);
+
+
+--
+-- Name: index_unit_tuitions_on_unit_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_unit_tuitions_on_unit_id ON public.unit_tuitions USING btree (unit_id);
 
 
 --
@@ -6353,6 +6471,14 @@ ALTER TABLE ONLY public.duties
 
 ALTER TABLE ONLY public.addresses
     ADD CONSTRAINT fk_rails_1b98d66e19 FOREIGN KEY (district_id) REFERENCES public.districts(id);
+
+
+--
+-- Name: unit_tuitions fk_rails_2b01e356e7; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.unit_tuitions
+    ADD CONSTRAINT fk_rails_2b01e356e7 FOREIGN KEY (unit_id) REFERENCES public.units(id);
 
 
 --
@@ -6796,6 +6922,14 @@ ALTER TABLE ONLY public.prospective_students
 
 
 --
+-- Name: tuitions fk_rails_a69914cacf; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.tuitions
+    ADD CONSTRAINT fk_rails_a69914cacf FOREIGN KEY (academic_term_id) REFERENCES public.academic_terms(id);
+
+
+--
 -- Name: courses fk_rails_a72394c071; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6849,6 +6983,14 @@ ALTER TABLE ONLY public.prospective_students
 
 ALTER TABLE ONLY public.course_evaluation_types
     ADD CONSTRAINT fk_rails_b25d062eb5 FOREIGN KEY (evaluation_type_id) REFERENCES public.evaluation_types(id);
+
+
+--
+-- Name: unit_tuitions fk_rails_b6e960ceae; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.unit_tuitions
+    ADD CONSTRAINT fk_rails_b6e960ceae FOREIGN KEY (tuition_id) REFERENCES public.tuitions(id);
 
 
 --
@@ -7229,6 +7371,8 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20200206083358'),
 ('20200211084915'),
 ('20200213110520'),
-('20200213124638');
+('20200213124638'),
+('20200215132359'),
+('20200217110305');
 
 

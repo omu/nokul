@@ -94,4 +94,7 @@ twenty_four:
   role: admin
   permission: employee_management
   privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy, :report]) %>
-
+twenty_five:
+  role: admin
+  permission: tuition_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>

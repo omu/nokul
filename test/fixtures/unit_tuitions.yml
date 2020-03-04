@@ -1,0 +1,11 @@
+one:
+  unit: bilgisayar_muhendisligi_programi
+  tuition: one
+
+two:
+  unit: bilgisayar_muhendisligi_programi
+  tuition: two
+
+unit_tuition_to_delete:
+  unit: fen_bilgisi_ogretmenligi_programi
+  tuition: tuition_to_delete
