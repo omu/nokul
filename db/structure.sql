@@ -2251,6 +2251,47 @@ ALTER SEQUENCE public.meeting_agendas_id_seq OWNED BY public.meeting_agendas.id;
 
 
 --
+-- Name: outcomes; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.outcomes (
+    id bigint NOT NULL,
+    unit_id bigint NOT NULL,
+    parent_id bigint,
+    code character varying,
+    name_tr character varying,
+    name_en character varying,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT outcomes_code_length CHECK ((length((code)::text) <= 10)),
+    CONSTRAINT outcomes_code_presence CHECK (((code IS NOT NULL) AND ((code)::text !~ '^\s*$'::text))),
+    CONSTRAINT outcomes_name_en_length CHECK ((length((name_en)::text) <= 255)),
+    CONSTRAINT outcomes_name_en_presence CHECK (((name_en IS NOT NULL) AND ((name_en)::text !~ '^\s*$'::text))),
+    CONSTRAINT outcomes_name_tr_length CHECK ((length((name_tr)::text) <= 255)),
+    CONSTRAINT outcomes_name_tr_presence CHECK (((name_tr IS NOT NULL) AND ((name_tr)::text !~ '^\s*$'::text)))
+);
+
+
+--
+-- Name: outcomes_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.outcomes_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: outcomes_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.outcomes_id_seq OWNED BY public.outcomes.id;
+
+
+--
 -- Name: papers; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -3006,6 +3047,45 @@ CREATE SEQUENCE public.semester_registrations_id_seq
 --
 
 ALTER SEQUENCE public.semester_registrations_id_seq OWNED BY public.semester_registrations.id;
+
+
+--
+-- Name: standards; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.standards (
+    id bigint NOT NULL,
+    version character varying,
+    name_tr character varying,
+    name_en character varying,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT standards_name_en_length CHECK ((length((name_en)::text) <= 255)),
+    CONSTRAINT standards_name_en_presence CHECK (((name_en IS NOT NULL) AND ((name_en)::text !~ '^\s*$'::text))),
+    CONSTRAINT standards_name_tr_length CHECK ((length((name_tr)::text) <= 255)),
+    CONSTRAINT standards_name_tr_presence CHECK (((name_tr IS NOT NULL) AND ((name_tr)::text !~ '^\s*$'::text))),
+    CONSTRAINT standards_version_length CHECK ((length((version)::text) <= 50)),
+    CONSTRAINT standards_version_presence CHECK (((version IS NOT NULL) AND ((version)::text !~ '^\s*$'::text)))
+);
+
+
+--
+-- Name: standards_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.standards_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: standards_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.standards_id_seq OWNED BY public.standards.id;
 
 
 --
@@ -4180,6 +4260,13 @@ ALTER TABLE ONLY public.meeting_agendas ALTER COLUMN id SET DEFAULT nextval('pub
 
 
 --
+-- Name: outcomes id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.outcomes ALTER COLUMN id SET DEFAULT nextval('public.outcomes_id_seq'::regclass);
+
+
+--
 -- Name: papers id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -4289,6 +4376,13 @@ ALTER TABLE ONLY public.sdp_codes ALTER COLUMN id SET DEFAULT nextval('public.sd
 --
 
 ALTER TABLE ONLY public.semester_registrations ALTER COLUMN id SET DEFAULT nextval('public.semester_registrations_id_seq'::regclass);
+
+
+--
+-- Name: standards id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.standards ALTER COLUMN id SET DEFAULT nextval('public.standards_id_seq'::regclass);
 
 
 --
@@ -4983,6 +5077,22 @@ ALTER TABLE ONLY public.meeting_agendas
 
 
 --
+-- Name: outcomes outcomes_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.outcomes
+    ADD CONSTRAINT outcomes_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: outcomes outcomes_unit_id_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.outcomes
+    ADD CONSTRAINT outcomes_unit_id_code_unique UNIQUE (unit_id, code) DEFERRABLE;
+
+
+--
 -- Name: papers papers_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -5132,6 +5242,30 @@ ALTER TABLE ONLY public.sdp_codes
 
 ALTER TABLE ONLY public.semester_registrations
     ADD CONSTRAINT semester_registrations_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: standards standards_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.standards
+    ADD CONSTRAINT standards_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: standards standards_version_name_en_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.standards
+    ADD CONSTRAINT standards_version_name_en_unique UNIQUE (version, name_en) DEFERRABLE;
+
+
+--
+-- Name: standards standards_version_name_tr_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.standards
+    ADD CONSTRAINT standards_version_name_tr_unique UNIQUE (version, name_tr) DEFERRABLE;
 
 
 --
@@ -6059,6 +6193,20 @@ CREATE INDEX index_meeting_agendas_on_committee_meeting_id ON public.meeting_age
 
 
 --
+-- Name: index_outcomes_on_parent_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_outcomes_on_parent_id ON public.outcomes USING btree (parent_id);
+
+
+--
+-- Name: index_outcomes_on_unit_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_outcomes_on_unit_id ON public.outcomes USING btree (unit_id);
+
+
+--
 -- Name: index_papers_on_country_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6570,6 +6718,14 @@ ALTER TABLE ONLY public.articles
 
 
 --
+-- Name: outcomes fk_rails_3ea0ff4a78; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.outcomes
+    ADD CONSTRAINT fk_rails_3ea0ff4a78 FOREIGN KEY (parent_id) REFERENCES public.outcomes(id);
+
+
+--
 -- Name: duties fk_rails_3f1a2d48dd; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6727,6 +6883,14 @@ ALTER TABLE ONLY public.role_permissions
 
 ALTER TABLE ONLY public.calendar_events
     ADD CONSTRAINT fk_rails_64d7b22524 FOREIGN KEY (calendar_event_type_id) REFERENCES public.calendar_event_types(id);
+
+
+--
+-- Name: outcomes fk_rails_670b6764c7; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.outcomes
+    ADD CONSTRAINT fk_rails_670b6764c7 FOREIGN KEY (unit_id) REFERENCES public.units(id);
 
 
 --
@@ -7373,6 +7537,8 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20200213110520'),
 ('20200213124638'),
 ('20200215132359'),
-('20200217110305');
+('20200217110305'),
+('20200305103056'),
+('20200305120339');
 
 
