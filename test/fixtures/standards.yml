@@ -1,13 +1,4 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  code: MyString
-  version: MyString
-  name_tr: MyString
-  name_en: MyString
-
-two:
-  code: MyString
-  version: MyString
-  name_tr: MyString
-  name_en: MyString
+mudek:
+  version: Version
+  name_tr: MÜDEK
+  name_en: MÜDEK

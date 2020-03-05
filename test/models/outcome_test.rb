@@ -2,5 +2,5 @@
 
 require 'test_helper'
 
-class StandardTest < ActiveSupport::TestCase
+class OutcomeTest < ActiveSupport::TestCase
 end
