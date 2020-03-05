@@ -1,0 +1,28 @@
+en:
+  activerecord:
+    attributes:
+      tuition: &tuition_attributes
+        academic_term: Academic Term
+        fee: Tuition Fee
+        foreign_student_fee: Foreign Student Tuition Fee
+        unit_ids: Units
+  tuition_management:
+    tuitions:
+      create:
+        success: Tuitions successfully created.
+      destroy:
+        success: Tuitions successfully deleted.
+        warning: Tuitions can not be deleted!
+      edit:
+        form_title: Update Tuition Information of Units
+      index:
+        <<: *tuition_attributes
+        card_header: Unit Tuition Fees
+        new_tuition_link: Add New Tuition
+      new:
+        form_title: Add Tuition to Units
+      search:
+        academic_term: Academic Term
+        unit: Units
+      update:
+        success: Tuitions successfully updated.

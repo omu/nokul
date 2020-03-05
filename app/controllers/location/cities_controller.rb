@@ -6,6 +6,7 @@ module Location
 
     before_action :set_country
     before_action :set_city, only: %i[show edit update destroy]
+    before_action :authorized?
 
     def show
       @districts = pagy_by_search(@city.districts.order(:name))
@@ -42,6 +43,10 @@ module Location
 
     def set_city
       @city = @country.cities.find(params[:id])
+    end
+
+    def authorized?
+      authorize([:location, @city || City])
     end
 
     def city_params

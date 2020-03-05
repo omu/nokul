@@ -21,7 +21,7 @@ module Nokul
         def run_verbose
           n = 0
 
-          while (n += 1) < LOOP_GUARD
+          while (n += 1) <= LOOP_GUARD
             over_loop!(n)
 
             attempt = try

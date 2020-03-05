@@ -4,6 +4,7 @@ module Committee
   class DecisionsController < ApplicationController
     before_action :set_committee_and_agenda
     before_action :set_decision, only: %i[show edit update]
+    before_action :authorized?
 
     def show; end
 
@@ -30,11 +31,15 @@ module Committee
 
     def set_committee_and_agenda
       @committee = Unit.committees.find(params[:committee_id])
-      @agenda = @committee.meeting_agendas.find(params[:meeting_agenda_id])
+      @agenda    = @committee.meeting_agendas.find(params[:meeting_agenda_id])
     end
 
     def set_decision
       @decision = @agenda.decision
+    end
+
+    def authorized?
+      authorize(@decision || CommitteeDecision, policy_class: Committee::DecisionPolicy)
     end
 
     def decision_params

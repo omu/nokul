@@ -7,6 +7,10 @@ class CurriculumTest < ActiveSupport::TestCase
   extend Support::Minitest::EnumerationHelper
   extend Support::Minitest::ValidationHelper
 
+  setup do
+    @object = curriculums(:bilgisayar_muhendisligi_mufredati)
+  end
+
   # constants
   {
     MAX_NUMBER_OF_SEMESTERS: 12,
@@ -33,7 +37,6 @@ class CurriculumTest < ActiveSupport::TestCase
 
   # validations: presence
   validates_presence_of :name
-  validates_presence_of :semesters_count
   validates_presence_of :status
   validates_presence_of :unit
 
@@ -46,21 +49,16 @@ class CurriculumTest < ActiveSupport::TestCase
   # validations: uniqueness
   validates_uniqueness_of :name
 
-  # validations: numericality
-  validates_numericality_of :semesters_count
-  validates_numerical_range :semesters_count, greater_than_or_equal_to: 0
-
   # enums
   enum status: { passive: 0, active: 1 }
 
   # custom methods
   test 'build_semester method' do
-    curriculum = curriculums(:one)
-    Curriculum.reset_counters(curriculum.id, :semesters_count)
-    curriculum.semesters.destroy_all
-    curriculum.semesters_count = 0
-    curriculum.build_semesters
-    assert_equal 8, curriculum.semesters.size
-    assert_equal [1, 2, 3, 4], curriculum.semesters.pluck(:year).uniq
+    Curriculum.reset_counters(@object.id, :semesters_count)
+    @object.semesters.destroy_all
+    @object.semesters_count = 0
+    @object.build_semesters
+    assert_equal @object.number_of_semesters, @object.semesters.size
+    assert_equal [1, 2, 3, 4], @object.semesters.pluck(:year).uniq
   end
 end

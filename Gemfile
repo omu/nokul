@@ -23,8 +23,8 @@ gem 'ancestry'
 
 # active-storage
 gem 'aws-sdk-s3', require: false
-gem 'image_processing', '~> 1.10'
-gem 'ruby-vips', '~> 2.0.16'
+gem 'image_processing', '~> 1.10.3'
+gem 'ruby-vips', '~> 2.0.17'
 
 # authentication
 gem 'authy'
@@ -55,7 +55,7 @@ gem 'simple_form'
 gem 'wicked_pdf'
 
 # api
-gem 'jbuilder', '~> 2.9'
+gem 'jbuilder', '~> 2.10'
 
 # security
 gem 'bcrypt', '~> 3.1.7'
@@ -80,6 +80,9 @@ gem 'twilio-ruby'
 
 # log
 gem 'lograge'
+
+# cron
+gem 'sidekiq-cron'
 
 group :development, :test do
   gem 'brakeman', require: false
@@ -126,3 +129,5 @@ Dir['plugins/tenant/**/*.gemspec'].each do |gemspec|
 
   gem name, path: File.dirname(gemspec), require: false
 end
+
+gem 'active_flag'

@@ -33,6 +33,8 @@ class UnitTest < ActiveSupport::TestCase
   has_many :available_courses, dependent: :destroy
   has_many :unit_calendars, dependent: :destroy
   has_many :calendars, through: :unit_calendars
+  has_many :unit_tuitions, dependent: :destroy
+  has_many :tuitions, through: :unit_tuitions
 
   # validations: presence
   validates_presence_of :name

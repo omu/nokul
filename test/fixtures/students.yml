@@ -5,6 +5,7 @@ serhat:
   permanently_registered: true
   year: 2
   semester: 3
+  scholarship_type: meb
 serhat_omu:
   student_number: 98765
   user: serhat

@@ -1,0 +1,13 @@
+en:
+  activerecord:
+    attributes:
+      patron/role_permission:
+        permission: Permission
+        privileges: Privileges
+  active_flag:
+    patron/role_permission:
+      privileges:
+        read: Read
+        write: Write
+        destroy: Destroy
+        report: Report

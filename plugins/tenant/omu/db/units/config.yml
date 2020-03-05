@@ -1,9 +1,9 @@
 ---
 fetching:
   yok:
-    root_id: '121946'
+    root_id: 121946
   det:
-    root_id: '78633602'
+    root_id: 78633602
 
 coding:
   pools:
@@ -46,10 +46,10 @@ coding:
   reservations:
     # Bilgisayar
     - key: yoksis_id
-      value: '168861'
+      value: 168861
       reservation: '203'
     - key: yoksis_id
-      value: '211296'
+      value: 211296
       reservation: '603'
     # BÖTE
     - key: yoksis_id

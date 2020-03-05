@@ -3,6 +3,7 @@
 class LdapEntitiesController < ApplicationController
   include SearchableModule
   before_action :set_ldap_entity, only: %i[show start_sync]
+  before_action :authorized?
 
   def index
     entities = LdapEntity.includes(:user).order(created_at: :desc)
@@ -22,6 +23,10 @@ class LdapEntitiesController < ApplicationController
 
   def set_ldap_entity
     @entity = LdapEntity.find(params[:id])
+  end
+
+  def authorized?
+    authorize(@entity || LdapEntity)
   end
 
   def params_for_filter

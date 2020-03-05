@@ -11,6 +11,7 @@ en:
   actions: Actions
   active: Active
   are_you_sure: Are you sure?
+  toggle_auto_refresh: Toggle Automatic Refresh
   created_at: Created At
   detailed_search: Detailed Search
   home_nav: Home
@@ -18,11 +19,13 @@ en:
   loading: Loading... Please wait.
   passive: Passive
   preview: Preview
+  refresh: Refresh
   reset: Reset
   save: Save
   search: Search
   semester: Semester
   smart_search: Smart Search
+  switched_account: Your account transition has been successfully done
   updated_at: Updated At
   'yes': 'Yes'
   year: Year

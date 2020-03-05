@@ -9,6 +9,7 @@ class StudentTest < ActiveSupport::TestCase
   include ActiveJob::TestHelper
 
   # relations
+  belongs_to :scholarship_type, optional: true
   belongs_to :user
   belongs_to :unit
   has_one :identity, dependent: :destroy
@@ -39,10 +40,24 @@ class StudentTest < ActiveSupport::TestCase
     assert students(:serhat).addresses
   end
 
+  # scopes
+  test 'not_scholarships scope returns students without scholarship' do
+    assert_includes(Student.not_scholarships, students(:john))
+  end
+
+  test 'scholarships scope returns students with scholarship' do
+    assert_includes(Student.scholarships, students(:serhat))
+  end
+
   # custom methods
   test 'gpa method' do
     assert_equal students(:serhat).gpa, 1.8
     assert_equal students(:serhat_omu).gpa, 0
+  end
+
+  test 'scholarship?' do
+    assert students(:serhat).scholarship?
+    assert_not students(:john).scholarship?
   end
 
   # job tests

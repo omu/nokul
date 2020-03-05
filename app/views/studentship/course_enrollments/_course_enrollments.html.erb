@@ -6,6 +6,7 @@
       <th><%= t('.type') %></th>
       <th><%= t('.credit') %></th>
       <th><%= t('.ects') %></th>
+      <th><%= t('.group') %></th>
       <th><%= t('actions') %></th>
     </tr>
   </thead>
@@ -18,9 +19,11 @@
         <td><%= enum_t(available_course.curriculum_course, :type) %></td>
         <td><%= available_course.credit.to_i %></td>
         <td><%= available_course.ects.to_i %></td>
+        <td><%= course_enrollment.available_course_group.name %></td>
         <td>
           <% if available_course.errors.empty? %>
-            <%= link_to(t('.drop'), student_course_enrollment_path(@student, course_enrollment), method: :delete, class: 'btn btn-sm btn-outline-danger') %>
+            <% drop_button_class = course_enrollment.available_course_group.quota_full? ? 'btn-danger' : 'btn-outline-danger' %>
+            <%= link_to(t('.drop'), student_course_enrollment_path(@student, course_enrollment), method: :delete, class: "btn btn-sm #{drop_button_class}") %>
           <% else %>
             <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="<%= available_course.errors.full_messages.first %>">
               <button class="btn btn-sm btn-outline-secondary" style="pointer-events: none;" type="button" disabled><%= t('.drop') %></button>

@@ -22,7 +22,10 @@ module Studentship
     test 'should create course_enrollment' do
       assert_difference('CourseEnrollment.count') do
         post student_course_enrollments_path(@student), params: {
-          course_enrollment: { available_course_id: available_courses(:compulsory_course_2).id }
+          course_enrollment: {
+            available_course_id:       available_courses(:compulsory_course_2).id,
+            available_course_group_id: available_course_groups(:compulsory_course_2_group).id
+          }
         }
       end
 
@@ -34,6 +37,7 @@ module Studentship
     end
 
     test 'should save' do
+      delete student_course_enrollment_path(@student, course_enrollments(:elective))
       get save_student_course_enrollments_path(@student)
       assert @student.current_registration.saved?
       assert_redirected_to list_student_course_enrollments_path

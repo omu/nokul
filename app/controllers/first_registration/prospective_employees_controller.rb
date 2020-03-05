@@ -5,6 +5,7 @@ module FirstRegistration
     include SearchableModule
 
     before_action :set_prospective_employee, only: %i[edit update destroy]
+    before_action :authorized?
 
     def index
       prospective_employees = ProspectiveEmployee.not_archived.includes(:unit, :title)
@@ -52,6 +53,10 @@ module FirstRegistration
 
     def set_prospective_employee
       @prospective_employee = ProspectiveEmployee.find(params[:id])
+    end
+
+    def authorized?
+      authorize([:first_registration, @prospective_employee || ProspectiveEmployee])
     end
 
     # rubocop:disable Metrics/MethodLength

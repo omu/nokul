@@ -1,0 +1,40 @@
+en:
+  instructiveness:
+    given_courses:
+      given_course: &given_course_attributes
+        academic_term: Academic Term
+        coordinator: Coordinator
+        curriculum_course: Course
+        curriculum: Curriculum
+        groups: Groups
+        unit: Unit
+      evaluation_types:
+        assessment_method: Assessment Method
+        card_header: Evaluation Types
+        grade_entry: Grade Entry
+        percentage: Percentage
+        status: Status
+      groups:
+        course_groups: Course Groups
+        coordinator: Coordinator
+        lecturer: Lecturer
+        name: Group Name
+        number_of_enrolled_students: Number of Enrolled Students
+        student_list: Student List
+        title: Title
+      index:
+        <<: *given_course_attributes
+        given_courses: Given Courses
+        course_code: Course Code
+      search:
+        academic_term: Academic Term
+        smart_search_placeholder: Course Name / Course Code
+      show:
+        <<: *given_course_attributes
+        coordinator: Coordinator
+        number_of_enrolled_students: Number of Enrolled Students
+      students:
+        name: Name
+        students: 'Students Enrolled in %{course_name} Course'
+        student_number: Student Number
+        year_and_semester: Year/Semester

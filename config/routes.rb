@@ -2,6 +2,7 @@
 
 Rails.application.routes.draw do
   require 'sidekiq/web'
+  require 'sidekiq/cron/web'
 
   authenticate :user do
     mount Sidekiq::Web, at: 'sidekiq'
@@ -12,17 +13,27 @@ Rails.application.routes.draw do
   get '/manifest.json', to: 'service_workers/manifests#index'
   root to: 'home#index'
 
+  get :switch_account, to: 'application#switch_account'
+
   draw :account
   draw :calendar_management
   draw :course_management
+  draw :detsis
   draw :first_registration
+  draw :instructiveness
   draw :location
+  draw :manager
+  draw :meksis
   draw :patron
   draw :reference
   draw :studentship
+  draw :tuition_management
+  draw :user_management
   draw :yoksis
   draw :meksis
   draw :standard
+
+  resources :students, only: %i[edit update]
 
   resources :units do
     member do
@@ -31,18 +42,6 @@ Rails.application.routes.draw do
       get :curriculums, defaults: { format: :json }
       get :employees, default: { format: :json }
     end
-  end
-
-  resources :users, except: [:new, :create] do
-    get 'save_address_from_mernis', on: :member
-    get 'save_identity_from_mernis', on: :member
-  end
-
-  scope module: :studies do
-    get '/studies', to: 'dashboard#index'
-    get '/studies/articles', to: 'articles#index'
-    get '/studies/projects', to: 'projects#index'
-    get '/studies/certifications', to: 'certifications#index'
   end
 
   resources :agenda_types, except: :show, module: :committee

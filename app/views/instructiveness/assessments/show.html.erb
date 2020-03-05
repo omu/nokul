@@ -1,0 +1,47 @@
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class='alert alert-light'>
+      <%= link_to_back(:back) %>
+    </div>
+    <%= render 'assessment_info' %>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'users' %><b><%= t('.students', course_name: @course.name) %></b>
+        <div class='card-header-actions'>
+          <span class='pull-right'>
+            <% if @employee.coordinatorships.include?(@course) %>
+              <%= link_to(t('.draft'), draft_given_course_assessment_path(@course, @assessment), class: 'btn btn-warning btn-sm') if @assessment.saved? %>
+              <%= link_to(t('.save'), save_given_course_assessment_path(@course, @assessment), class: 'btn btn-warning btn-sm') if @assessment.draft? && @assessment.fully_graded? %>
+            <% end %>
+            <%= link_to(t('action_group.edit'), edit_given_course_assessment_path(@course, @assessment), class: 'btn btn-outline-success btn-sm') unless @assessment.saved? || @assessment.saved_enrollments.empty? %>
+          </span>
+        </div>
+      </div>
+      <div class='card-body'>
+        <table class='table table-responsive-sm table-striped table-hover'>
+          <thead class='thead-dark'>
+            <tr>
+              <th style='width: 20%'><%= t('.student_number') %></th>
+              <th style='width: 40%'><%= t('.name') %></th>
+              <th style='width: 15%'><%= t('.year_and_semester') %></th>
+              <th style='width: 15%'><%= t('.group_name') %></th>
+              <th style='width: 10%'><%= @assessment.name %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @enrollments.includes(:available_course_group, semester_registration: [student: :user]).each do |enrollment| %>
+              <tr>
+                <% student = enrollment.student %>
+                <td><%= student.student_number %></td>
+                <td><%= full_name(student.user.identities.formal.first) %></td>
+                <td><%= "#{student.year}/#{student.semester}" %></td>
+                <td><%= enrollment.available_course_group.name %></td>
+                <td><%= enrollment.grade_of(@assessment)&.point %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
