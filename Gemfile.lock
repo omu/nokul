@@ -169,7 +169,7 @@ GEM
       rubocop (~> 0.79.0)
       smart_properties
     erubi (1.9.0)
-    et-orbi (1.2.2)
+    et-orbi (1.2.3)
       tzinfo
     execjs (2.7.0)
     faraday (1.0.0)
