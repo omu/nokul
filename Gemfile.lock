@@ -206,8 +206,8 @@ GEM
       aes_key_wrap
       bindata
     jwt (2.2.1)
-    launchy (2.4.3)
-      addressable (~> 2.3)
+    launchy (2.5.0)
+      addressable (~> 2.7)
     letter_opener (1.7.0)
       launchy (~> 2.2)
     listen (3.2.1)
