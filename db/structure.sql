@@ -2259,16 +2259,13 @@ CREATE TABLE public.outcomes (
     unit_id bigint NOT NULL,
     parent_id bigint,
     code character varying,
-    name_tr character varying,
-    name_en character varying,
+    name character varying,
     created_at timestamp(6) without time zone NOT NULL,
     updated_at timestamp(6) without time zone NOT NULL,
     CONSTRAINT outcomes_code_length CHECK ((length((code)::text) <= 10)),
     CONSTRAINT outcomes_code_presence CHECK (((code IS NOT NULL) AND ((code)::text !~ '^\s*$'::text))),
-    CONSTRAINT outcomes_name_en_length CHECK ((length((name_en)::text) <= 255)),
-    CONSTRAINT outcomes_name_en_presence CHECK (((name_en IS NOT NULL) AND ((name_en)::text !~ '^\s*$'::text))),
-    CONSTRAINT outcomes_name_tr_length CHECK ((length((name_tr)::text) <= 255)),
-    CONSTRAINT outcomes_name_tr_presence CHECK (((name_tr IS NOT NULL) AND ((name_tr)::text !~ '^\s*$'::text)))
+    CONSTRAINT outcomes_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT outcomes_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
 );
 
 
@@ -3056,14 +3053,11 @@ ALTER SEQUENCE public.semester_registrations_id_seq OWNED BY public.semester_reg
 CREATE TABLE public.standards (
     id bigint NOT NULL,
     version character varying,
-    name_tr character varying,
-    name_en character varying,
+    name character varying,
     created_at timestamp(6) without time zone NOT NULL,
     updated_at timestamp(6) without time zone NOT NULL,
-    CONSTRAINT standards_name_en_length CHECK ((length((name_en)::text) <= 255)),
-    CONSTRAINT standards_name_en_presence CHECK (((name_en IS NOT NULL) AND ((name_en)::text !~ '^\s*$'::text))),
-    CONSTRAINT standards_name_tr_length CHECK ((length((name_tr)::text) <= 255)),
-    CONSTRAINT standards_name_tr_presence CHECK (((name_tr IS NOT NULL) AND ((name_tr)::text !~ '^\s*$'::text))),
+    CONSTRAINT standards_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT standards_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text))),
     CONSTRAINT standards_version_length CHECK ((length((version)::text) <= 50)),
     CONSTRAINT standards_version_presence CHECK (((version IS NOT NULL) AND ((version)::text !~ '^\s*$'::text)))
 );
@@ -5253,19 +5247,11 @@ ALTER TABLE ONLY public.standards
 
 
 --
--- Name: standards standards_version_name_en_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: standards standards_version_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.standards
-    ADD CONSTRAINT standards_version_name_en_unique UNIQUE (version, name_en) DEFERRABLE;
-
-
---
--- Name: standards standards_version_name_tr_unique; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.standards
-    ADD CONSTRAINT standards_version_name_tr_unique UNIQUE (version, name_tr) DEFERRABLE;
+    ADD CONSTRAINT standards_version_name_unique UNIQUE (version, name) DEFERRABLE;
 
 
 --
