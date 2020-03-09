@@ -1,0 +1,8 @@
+<%= render 'layouts/builders/index',
+           namespace:   'reference',
+           klass:       'standard',
+           collection:  @standards,
+           pagy:        @pagy,
+           card_header: t('.card_header'),
+           params:      %w[name],
+           actions:     %w[edit destroy] %>
