@@ -5,8 +5,18 @@ require 'test_helper'
 class StudentTest < ActiveSupport::TestCase
   extend Support::Minitest::AssociationHelper
   extend Support::Minitest::CallbackHelper
+  extend Support::Minitest::EnumerationHelper
   extend Support::Minitest::ValidationHelper
   include ActiveJob::TestHelper
+
+  # enums
+  enum status: {
+    active:       1,
+    passive:      2,
+    disengaged:   3,
+    not_enrolled: 4,
+    graduated:    5
+  }
 
   # relations
   belongs_to :scholarship_type, optional: true
@@ -20,7 +30,6 @@ class StudentTest < ActiveSupport::TestCase
 
   # validations: presence
   validates_presence_of :student_number
-  validates_presence_of :permanently_registered
   validates_presence_of :semester
   validates_presence_of :year
 
