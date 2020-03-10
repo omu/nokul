@@ -12,13 +12,13 @@
               <%= f.error_notification %>
             </div>
             <div class='form-group col-sm-12'>
-              <%= f.association :unit, collection: Unit.programs %>
+              <%= f.association :unit, collection:   Unit.active.programs.order(:name), label_method: :names_depth_cache %>
             </div>
             <div class='form-group col-sm-6'>
               <%= f.association :standard %>
             </div>
             <div class='col-sm-6'>
-              <%= f.input :status, collection: enum_options_for_select(f.object.class, :status) %>
+              <%= f.input :status, collection: enum_options_for_select(f.object.class, :status), selected: :active %>
             </div>
 
             <div class='form-group col-sm-12'>
@@ -31,3 +31,5 @@
     </div>
   </div>
 </div>
+
+<%= render 'select2' %>
