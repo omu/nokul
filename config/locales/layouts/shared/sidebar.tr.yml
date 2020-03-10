@@ -25,12 +25,14 @@ tr:
             stats: Üniversite İstatistikleri
             title: Yönetici Sayfaları
           meksis: MEKSİS
+          outcome_management: Çıktı Yönetimi
           prospective_employees: Aday Personeller
           prospective_students: Aday Öğrenciler
           references: Tanımlar
           registration_documents: İstenen Belgeler
           tuition_management: Harç Yönetimi
           units: Birimler
+          unit_standards: Birim Standartları
           unit_tuitions: Birim Harç Ücretleri
           users: Kullanıcılar
           yoksis: YÖKSİS
