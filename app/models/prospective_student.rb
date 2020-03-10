@@ -84,12 +84,12 @@ class ProspectiveStudent < ApplicationRecord
 
   def registered_user(user)
     Student.new(
-      user:                   user,
-      unit:                   unit,
-      permanently_registered: can_permanently_register?,
-      student_number:         id_number, # TODO: must be generated
-      year:                   1, # TODO: can have a different value depending on the characteristics of the program
-      semester:               1
+      user:           user,
+      unit:           unit,
+      status:         can_permanently_register? ? :active : :passive,
+      student_number: id_number, # TODO: must be generated
+      year:           1, # TODO: can have a different value depending on the characteristics of the program
+      semester:       1
     )
   end
 
