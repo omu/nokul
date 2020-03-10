@@ -3605,6 +3605,41 @@ ALTER SEQUENCE public.unit_instruction_types_id_seq OWNED BY public.unit_instruc
 
 
 --
+-- Name: unit_standards; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.unit_standards (
+    id bigint NOT NULL,
+    standard_id bigint NOT NULL,
+    unit_id bigint NOT NULL,
+    status integer,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT unit_standards_status_null CHECK ((status IS NOT NULL)),
+    CONSTRAINT unit_standards_status_numericality CHECK ((status >= 0))
+);
+
+
+--
+-- Name: unit_standards_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.unit_standards_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: unit_standards_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.unit_standards_id_seq OWNED BY public.unit_standards.id;
+
+
+--
 -- Name: unit_statuses; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -4482,6 +4517,13 @@ ALTER TABLE ONLY public.unit_instruction_languages ALTER COLUMN id SET DEFAULT n
 --
 
 ALTER TABLE ONLY public.unit_instruction_types ALTER COLUMN id SET DEFAULT nextval('public.unit_instruction_types_id_seq'::regclass);
+
+
+--
+-- Name: unit_standards id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.unit_standards ALTER COLUMN id SET DEFAULT nextval('public.unit_standards_id_seq'::regclass);
 
 
 --
@@ -5551,6 +5593,14 @@ ALTER TABLE ONLY public.unit_instruction_types
 
 
 --
+-- Name: unit_standards unit_standards_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.unit_standards
+    ADD CONSTRAINT unit_standards_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: unit_statuses unit_statuses_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6445,6 +6495,20 @@ CREATE INDEX index_unit_calendars_on_unit_id ON public.unit_calendars USING btre
 
 
 --
+-- Name: index_unit_standards_on_standard_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_unit_standards_on_standard_id ON public.unit_standards USING btree (standard_id);
+
+
+--
+-- Name: index_unit_standards_on_unit_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_unit_standards_on_unit_id ON public.unit_standards USING btree (unit_id);
+
+
+--
 -- Name: index_unit_tuitions_on_tuition_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6805,6 +6869,14 @@ ALTER TABLE ONLY public.semester_registrations
 
 ALTER TABLE ONLY public.calendar_committee_decisions
     ADD CONSTRAINT fk_rails_4f3eb3da94 FOREIGN KEY (calendar_id) REFERENCES public.calendars(id);
+
+
+--
+-- Name: unit_standards fk_rails_505755c23e; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.unit_standards
+    ADD CONSTRAINT fk_rails_505755c23e FOREIGN KEY (unit_id) REFERENCES public.units(id);
 
 
 --
@@ -7192,6 +7264,14 @@ ALTER TABLE ONLY public.books
 
 
 --
+-- Name: unit_standards fk_rails_bd51470089; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.unit_standards
+    ADD CONSTRAINT fk_rails_bd51470089 FOREIGN KEY (standard_id) REFERENCES public.standards(id);
+
+
+--
 -- Name: ldap_sync_errors fk_rails_c34f07ddd2; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7525,6 +7605,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20200215132359'),
 ('20200217110305'),
 ('20200305103056'),
-('20200305120339');
+('20200305120339'),
+('20200310044429');
 
 
