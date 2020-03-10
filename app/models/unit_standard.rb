@@ -10,5 +10,5 @@ class UnitStandard < ApplicationRecord
 
   # validations
   validates :standard, presence: true, uniqueness: { scope: :unit }
-  validates :status, inclusion: { in: statuses.keys }
+  validates :status, inclusion: { in: statuses.keys }, uniqueness: { scope: :unit }
 end
