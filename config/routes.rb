@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   draw :location
   draw :manager
   draw :meksis
+  draw :outcome_management
   draw :patron
   draw :reference
   draw :studentship
@@ -31,7 +32,6 @@ Rails.application.routes.draw do
   draw :user_management
   draw :yoksis
   draw :meksis
-  draw :standard
 
   resources :students, only: %i[edit update]
 
