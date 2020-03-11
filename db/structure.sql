@@ -2256,7 +2256,7 @@ ALTER SEQUENCE public.meeting_agendas_id_seq OWNED BY public.meeting_agendas.id;
 
 CREATE TABLE public.outcomes (
     id bigint NOT NULL,
-    unit_id bigint NOT NULL,
+    unit_standard_id bigint NOT NULL,
     parent_id bigint,
     code character varying,
     name character varying,
@@ -5121,11 +5121,11 @@ ALTER TABLE ONLY public.outcomes
 
 
 --
--- Name: outcomes outcomes_unit_id_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: outcomes outcomes_unit_standard_id_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.outcomes
-    ADD CONSTRAINT outcomes_unit_id_code_unique UNIQUE (unit_id, code) DEFERRABLE;
+    ADD CONSTRAINT outcomes_unit_standard_id_code_unique UNIQUE (unit_standard_id, code) DEFERRABLE;
 
 
 --
@@ -6236,10 +6236,10 @@ CREATE INDEX index_outcomes_on_parent_id ON public.outcomes USING btree (parent_
 
 
 --
--- Name: index_outcomes_on_unit_id; Type: INDEX; Schema: public; Owner: -
+-- Name: index_outcomes_on_unit_standard_id; Type: INDEX; Schema: public; Owner: -
 --
 
-CREATE INDEX index_outcomes_on_unit_id ON public.outcomes USING btree (unit_id);
+CREATE INDEX index_outcomes_on_unit_standard_id ON public.outcomes USING btree (unit_standard_id);
 
 
 --
@@ -6744,6 +6744,14 @@ ALTER TABLE ONLY public.available_courses
 
 
 --
+-- Name: outcomes fk_rails_3634b68120; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.outcomes
+    ADD CONSTRAINT fk_rails_3634b68120 FOREIGN KEY (unit_standard_id) REFERENCES public.unit_standards(id);
+
+
+--
 -- Name: group_courses fk_rails_3b3edaa11b; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6941,14 +6949,6 @@ ALTER TABLE ONLY public.role_permissions
 
 ALTER TABLE ONLY public.calendar_events
     ADD CONSTRAINT fk_rails_64d7b22524 FOREIGN KEY (calendar_event_type_id) REFERENCES public.calendar_event_types(id);
-
-
---
--- Name: outcomes fk_rails_670b6764c7; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.outcomes
-    ADD CONSTRAINT fk_rails_670b6764c7 FOREIGN KEY (unit_id) REFERENCES public.units(id);
 
 
 --
