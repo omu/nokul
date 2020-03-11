@@ -1,0 +1,26 @@
+tr:
+  activerecord:
+    attributes:
+      outcome: &outcome_attributes
+        code: Code
+        name: Name
+  helpers:
+    submit:
+      outcome:
+        create: Create Learning Outcome
+        update: Update Learning Outcome
+  outcome_management:
+    outcomes:
+      create:
+        success: Learning outcome successfully created.
+      destroy:
+        success: Learning outcome successfully deleted.
+        warning: Learning outcome can not be deleted.
+      edit:
+        form_title: Create a Learning Outcome
+      new:
+        form_title: Create a New Learning Outcome
+      show:
+        <<: *outcome_attributes
+      update:
+        success: Learning outcome successfully updated.

@@ -1,0 +1,27 @@
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'dot-circle-o' %><strong><%= @outcome.code %></strong>
+        <div class="card-header-actions">
+          <%= link_to_actions([@unit_standard, @outcome], except: :show) %>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <table class="table table-responsive-sm">
+          <tbody>
+            <tr>
+              <td><%= t('.code') %></td>
+              <td><%= @outcome.code %></td>
+            </tr>
+            <tr>
+              <td><%= t('.name') %></td>
+              <td><%= @outcome.name %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+tr:
+  activerecord:
+    attributes:
+      outcome: &outcome_attributes
+        code: Kod
+        name: Adı
+  helpers:
+    submit:
+      outcome:
+        create: Öğrenim Çıktısı Oluştur
+        update: Öğrenim Çıktısını Güncelle
+  outcome_management:
+    outcomes:
+      create:
+        success: Öğrenim çıktısı başarıyla oluşturuldu.
+      destroy:
+        success: Öğrenim çıktısı başarıyla silindi.
+        warning: Öğrenim çıktısı silinemedi.
+      edit:
+        form_title: Öğrenim Çıktısını Güncelle
+      new:
+        form_title: Öğrenim Çıktısı Oluştur
+      show:
+        <<: *outcome_attributes
+      update:
+        success: Öğrenim çıktısı başarıyla güncellendi.
