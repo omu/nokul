@@ -13,6 +13,7 @@ module OutcomeManagement
 
     def show
       @unit = @unit_standard.unit
+      @outcomes = @unit_standard.macro_outcomes.ordered
     end
 
     def new
