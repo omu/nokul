@@ -50,6 +50,10 @@ class StudentTest < ActiveSupport::TestCase
   end
 
   # scopes
+  test 'exceeded scope returns students with exceeded education period' do
+    assert_includes(Student.exceeded, students(:john))
+  end
+
   test 'not_scholarships scope returns students without scholarship' do
     assert_includes(Student.not_scholarships, students(:john))
   end

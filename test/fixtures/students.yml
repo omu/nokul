@@ -21,3 +21,4 @@ john:
   status: active
   year: 2
   semester: 3
+  exceeded_education_period: true
