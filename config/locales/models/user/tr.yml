@@ -20,6 +20,8 @@ tr:
         end_date: Bitiş Tarihi
         start_date: Başlangıç Tarihi
       student: &student_attributes
+        exceeded_education_period: Eğitim süresi içerisinde mezun olamadı
+        status: Öğrenci Durumu
         student_number: Öğrenci Numarası
         scholarship_type: Burs Türü
         unit: Birim
@@ -44,6 +46,14 @@ tr:
         public_studies: Profilimde Akademik Çalışmalarımı Göster
         roles: Roller
         query_stores: Kapsam Sorguları
+    enums:
+      student:
+        statuses:
+          active: Aktif
+          disengaged: İlişiği Kesik
+          graduated: Mezun
+          not_enrolled: Kayıtlanmamış
+          passive: Pasif
   helpers:
     submit:
       user:

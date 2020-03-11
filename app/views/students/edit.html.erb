@@ -26,8 +26,14 @@
             <div class='form-group col-sm-6'>
               <%= f.input :semester, label: t('semester') %>
             </div>
-            <div class='form-group col-sm-12'>
+            <div class='form-group col-sm-6'>
+              <%= f.input :status, collection: enum_options_for_select(f.object.class, :status), required: true %>
+            </div>
+            <div class='form-group col-sm-6'>
               <%= f.association :scholarship_type %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.input :exceeded_education_period %>
             </div>
             <div class='form-group col-sm-12'>
               <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>

@@ -12,17 +12,21 @@
         <thead>
           <tr>
             <th><%= t('.student_number') %></th>
+            <th><%= t('.status') %></th>
             <th><%= t('year') %></th>
             <th><%= t('semester') %></th>
             <th><%= t('.scholarship_type') %></th>
+            <th><%= t('.exceeded_education_period') %></th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><%= student.student_number %></td>
+            <td><%= enum_t(student, :status) %></td>
             <td><%= student.year %></td>
             <td><%= student.semester %></td>
             <td><%= student.scholarship_type_name %></td>
+            <td><%= icon_for_check(student.exceeded_education_period) %></td>
           </tr>
         </tbody>
       </table>
