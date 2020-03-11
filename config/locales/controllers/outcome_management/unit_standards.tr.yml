@@ -27,7 +27,7 @@ tr:
       index:
         <<: *unit_standard_attributes
         card_header: Birim Standartları
-        new_unit_link: Yeni Birim Standardı Oluştur
+        new_unit_standard_link: Yeni Birim Standardı Oluştur
       new:
         form_title: Birim Standardı Oluştur
       show:

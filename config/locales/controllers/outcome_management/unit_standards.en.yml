@@ -27,7 +27,7 @@ en:
       index:
         <<: *unit_standard_attributes
         card_header: Unit Standards
-        new_unit_link: Create a New Unit Standard
+        new_unit_standard_link: Create a New Unit Standard
       new:
         form_title: Create a Unit Standard
       show:
