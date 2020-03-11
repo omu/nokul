@@ -8,6 +8,7 @@ class UnitStandard < ApplicationRecord
   belongs_to :standard
   belongs_to :unit
   has_many :outcomes, dependent: :destroy
+  has_many :macro_outcomes, -> { where(parent_id: nil) }, class_name: 'Outcome', inverse_of: :unit_standard
 
   # validations
   validates :standard, presence: true, uniqueness: { scope: :unit }
