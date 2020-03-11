@@ -10,4 +10,7 @@ class Outcome < ApplicationRecord
 
   # delegates
   delegate :unit, to: :unit_standard
+
+  # scopes
+  scope :ordered, -> { order(:code) }
 end
