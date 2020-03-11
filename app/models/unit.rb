@@ -49,7 +49,6 @@ class Unit < ApplicationRecord
   has_many :calendars, through: :unit_calendars
   has_many :unit_tuitions, dependent: :destroy
   has_many :tuitions, through: :unit_tuitions
-  has_many :outcomes, dependent: :destroy
 
   # validations
   validates :name, presence: true,
