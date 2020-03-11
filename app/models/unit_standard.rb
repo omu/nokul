@@ -7,6 +7,7 @@ class UnitStandard < ApplicationRecord
   # relations
   belongs_to :standard
   belongs_to :unit
+  has_many :outcomes, dependent: :destroy
 
   # validations
   validates :standard, presence: true, uniqueness: { scope: :unit }
