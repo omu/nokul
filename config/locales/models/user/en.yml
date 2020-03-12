@@ -50,7 +50,7 @@ en:
       student:
         statuses:
           active: Active
-          disengaged: Disangaged
+          disengaged: Disengaged
           graduated: Graduated
           unenrolled: Not Enrolled
           passive: Passive
