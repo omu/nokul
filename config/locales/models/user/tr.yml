@@ -52,7 +52,7 @@ tr:
           active: Aktif
           disengaged: İlişiği Kesik
           graduated: Mezun
-          not_enrolled: Kayıtlanmamış
+          unenrolled: Kayıtlanmamış
           passive: Pasif
   helpers:
     submit:

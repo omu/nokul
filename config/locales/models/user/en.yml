@@ -52,7 +52,7 @@ en:
           active: Active
           disengaged: Disangaged
           graduated: Graduated
-          not_enrolled: Not Enrolled
+          unenrolled: Not Enrolled
           passive: Passive
   helpers:
     submit:

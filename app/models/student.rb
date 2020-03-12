@@ -7,11 +7,11 @@ class Student < ApplicationRecord
 
   # enums
   enum status: {
-    active:       1,
-    passive:      2,
-    disengaged:   3,
-    not_enrolled: 4,
-    graduated:    5
+    active:     1,
+    passive:    2,
+    disengaged: 3,
+    unenrolled: 4,
+    graduated:  5
   }
 
   # relations
