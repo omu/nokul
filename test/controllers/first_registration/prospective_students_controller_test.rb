@@ -92,7 +92,7 @@ module FirstRegistration
       assert_equal 'register', @controller.action_name
       assert_equal @prospective_student.email, user.email
       assert_equal user, student.user
-      assert(student.permanently_registered)
+      assert student.active?
       assert_redirected_to :prospective_students
       assert_equal translate('.register.success'), flash[:notice]
     end
@@ -114,7 +114,7 @@ module FirstRegistration
       assert_equal 'register', @controller.action_name
       assert_equal john.email, user.email
       assert_equal user, student.user
-      assert_not(student.permanently_registered)
+      assert_not student.active?
       assert_redirected_to :prospective_students
       assert_equal translate('.register.success'), flash[:notice]
     end
