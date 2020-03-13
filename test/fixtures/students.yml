@@ -2,6 +2,7 @@ serhat:
   student_number: 12345
   user: serhat
   unit: bilgisayar_muhendisligi_programi
+  permanently_registered: true
   year: 2
   semester: 3
   status: active
@@ -11,6 +12,7 @@ serhat_omu:
   student_number: 98765
   user: serhat
   unit: matematik_ogretmenligi_programi
+  permanently_registered: true
   status: active
   year: 1
   semester: 1
@@ -18,6 +20,7 @@ john:
   student_number: 45612
   user: john
   unit: bilgisayar_muhendisligi_programi
+  permanently_registered: true
   status: active
   year: 2
   semester: 3

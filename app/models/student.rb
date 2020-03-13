@@ -32,6 +32,7 @@ class Student < ApplicationRecord
   # validations
   validates :exceeded_education_period, inclusion: { in: [true, false] }
   validates :unit_id, uniqueness: { scope: %i[user] }
+  validates :permanently_registered, inclusion: { in: [true, false] }
   # TODO: Will set equal_to: N, when we decide about student numbers
   validates :student_number, presence: true, uniqueness: true, length: { maximum: 255 }
   validates :semester, numericality: { greater_than: 0 }

@@ -30,6 +30,7 @@ class StudentTest < ActiveSupport::TestCase
 
   # validations: presence
   validates_presence_of :student_number
+  validates_presence_of :permanently_registered
   validates_presence_of :semester
   validates_presence_of :year
 
