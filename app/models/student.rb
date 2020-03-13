@@ -5,6 +5,15 @@ class Student < ApplicationRecord
   include LDAP::Trigger
   ldap_trigger :user
 
+  # enums
+  enum status: {
+    active:     1,
+    passive:    2,
+    disengaged: 3,
+    unenrolled: 4,
+    graduated:  5
+  }
+
   # relations
   belongs_to :scholarship_type, optional: true
   belongs_to :user
@@ -16,17 +25,18 @@ class Student < ApplicationRecord
   has_many :course_enrollments, through: :semester_registrations
 
   # scopes
-  # TODO: Query will be organized according to activity status
-  scope :active, -> { where(permanently_registered: true) }
+  scope :exceeded, -> { where(exceeded_education_period: true) }
   scope :not_scholarships, -> { where(scholarship_type_id: nil) }
   scope :scholarships, -> { where.not(scholarship_type_id: nil) }
 
   # validations
+  validates :exceeded_education_period, inclusion: { in: [true, false] }
   validates :unit_id, uniqueness: { scope: %i[user] }
+  validates :permanently_registered, inclusion: { in: [true, false] }
   # TODO: Will set equal_to: N, when we decide about student numbers
   validates :student_number, presence: true, uniqueness: true, length: { maximum: 255 }
-  validates :permanently_registered, inclusion: { in: [true, false] }
   validates :semester, numericality: { greater_than: 0 }
+  validates :status, inclusion: { in: statuses.keys }
   validates :year, numericality: { greater_than_or_equal_to: 0 }
 
   # delegations
@@ -38,11 +48,6 @@ class Student < ApplicationRecord
   after_create_commit :build_identity_information, if: proc { identity.nil? }
 
   # custom methods
-  # TODO: Temporary method will be organized according to student status in the future
-  def active?
-    permanently_registered?
-  end
-
   def gpa
     return 0 if semester == 1
 

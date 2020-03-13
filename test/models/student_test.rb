@@ -5,8 +5,18 @@ require 'test_helper'
 class StudentTest < ActiveSupport::TestCase
   extend Support::Minitest::AssociationHelper
   extend Support::Minitest::CallbackHelper
+  extend Support::Minitest::EnumerationHelper
   extend Support::Minitest::ValidationHelper
   include ActiveJob::TestHelper
+
+  # enums
+  enum status: {
+    active:     1,
+    passive:    2,
+    disengaged: 3,
+    unenrolled: 4,
+    graduated:  5
+  }
 
   # relations
   belongs_to :scholarship_type, optional: true
@@ -41,6 +51,10 @@ class StudentTest < ActiveSupport::TestCase
   end
 
   # scopes
+  test 'exceeded scope returns students with exceeded education period' do
+    assert_includes(Student.exceeded, students(:john))
+  end
+
   test 'not_scholarships scope returns students without scholarship' do
     assert_includes(Student.not_scholarships, students(:john))
   end
