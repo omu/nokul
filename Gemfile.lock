@@ -120,7 +120,7 @@ GEM
       smart_properties
     bindata (2.4.6)
     bindex (0.8.1)
-    bootsnap (1.4.5)
+    bootsnap (1.4.6)
       msgpack (~> 1.0)
     brakeman (4.8.0)
     builder (3.2.4)
