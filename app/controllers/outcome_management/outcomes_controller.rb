@@ -6,6 +6,7 @@ module OutcomeManagement
 
     before_action :set_unit_standard
     before_action :set_outcome, except: %i[new create]
+    before_action :authorized?
 
     def show; end
 
@@ -41,6 +42,10 @@ module OutcomeManagement
 
     def set_outcome
       @outcome = @unit_standard.macro_outcomes.find(params[:id])
+    end
+
+    def authorized?
+      authorize([:outcome_management, @outcome || Outcome])
     end
 
     def outcome_params

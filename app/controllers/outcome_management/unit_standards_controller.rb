@@ -5,6 +5,7 @@ module OutcomeManagement
     include SearchableModule
 
     before_action :set_unit_standard, only: %i[show edit update destroy]
+    before_action :authorized?
 
     def index
       unit_standards = UnitStandard.includes(:standard, :unit)
@@ -44,6 +45,10 @@ module OutcomeManagement
 
     def set_unit_standard
       @unit_standard = UnitStandard.find(params[:id])
+    end
+
+    def authorized?
+      authorize([:outcome_management, @unit_standard || UnitStandard])
     end
 
     def unit_standard_params
