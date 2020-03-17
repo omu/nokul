@@ -40,7 +40,7 @@ module OutcomeManagement
     end
 
     def set_outcome
-      @outcome = @unit_standard.outcomes.find(params[:id])
+      @outcome = @unit_standard.macro_outcomes.find(params[:id])
     end
 
     def outcome_params
