@@ -18,7 +18,7 @@ class Student < ApplicationRecord
   belongs_to :scholarship_type, optional: true
   belongs_to :user
   belongs_to :unit
-  belongs_to :stage, class_name: 'StudentGrade'
+  belongs_to :stage, class_name: 'StudentGrade', optional: true
   has_one :identity, dependent: :destroy
   has_many :calendars, -> { Calendar.active }, through: :unit
   has_many :curriculums, through: :unit
