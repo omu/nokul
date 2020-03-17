@@ -20,7 +20,7 @@ class StudentTest < ActiveSupport::TestCase
 
   # relations
   belongs_to :scholarship_type, optional: true
-  belongs_to :stage, optional: true
+  belongs_to :stage, class_name: 'StudentGrade', optional: true
   belongs_to :user
   belongs_to :unit
   has_one :identity, dependent: :destroy
