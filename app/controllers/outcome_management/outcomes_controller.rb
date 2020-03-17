@@ -44,7 +44,10 @@ module OutcomeManagement
     end
 
     def outcome_params
-      params.require(:outcome).permit(:code, :name, :parent_id, :unit_standard_id)
+      params.require(:outcome).permit(
+        :code, :name, :unit_standard_id,
+        micro_outcomes_attributes: %i[id code name unit_standard_id _destroy]
+      )
     end
   end
 end
