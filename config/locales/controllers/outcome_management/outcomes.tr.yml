@@ -4,6 +4,7 @@ tr:
       outcome: &outcome_attributes
         code: Kod
         name: Adı
+        outcomes: Alt Çıktılar
   helpers:
     submit:
       outcome:
