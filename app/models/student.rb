@@ -29,7 +29,7 @@ class Student < ApplicationRecord
   scope :exceeded, -> { where(exceeded_education_period: true) }
   scope :not_scholarships, -> { where(scholarship_type_id: nil) }
   scope :scholarships, -> { where.not(scholarship_type_id: nil) }
-  scope :preparatory, -> { where(stage: StudentGrade.preparatory) }
+  scope :preparations, -> { where(stage: StudentGrade.preparation) }
 
   # validations
   validates :exceeded_education_period, inclusion: { in: [true, false] }

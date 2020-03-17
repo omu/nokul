@@ -20,6 +20,7 @@ class StudentTest < ActiveSupport::TestCase
 
   # relations
   belongs_to :scholarship_type, optional: true
+  belongs_to :stage, optional: true
   belongs_to :user
   belongs_to :unit
   has_one :identity, dependent: :destroy
@@ -61,6 +62,10 @@ class StudentTest < ActiveSupport::TestCase
 
   test 'scholarships scope returns students with scholarship' do
     assert_includes(Student.scholarships, students(:serhat))
+  end
+
+  test 'preparations scope returns students with preparations' do
+    assert_includes(Student.preparations, students(:serhat_omu))
   end
 
   # custom methods
