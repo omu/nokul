@@ -33,7 +33,7 @@ module OutcomeManagement
     private
 
     def redirect_with(message)
-      redirect_to unit_standard_path(@unit_standard), flash: { notice: t(".#{message}") }
+      redirect_to unit_standard_path(@unit_standard), flash: { info: t(".#{message}") }
     end
 
     def set_unit_standard

@@ -40,7 +40,7 @@ module OutcomeManagement
     private
 
     def redirect_with(message)
-      redirect_to unit_standards_path, flash: { notice: t(".#{message}") }
+      redirect_to unit_standards_path, flash: { info: t(".#{message}") }
     end
 
     def set_unit_standard
