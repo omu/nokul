@@ -21,6 +21,7 @@ en:
         start_date: Start Date
       student: &student_attributes
         exceeded_education_period: Couldn't graduate during education period
+        stage: Stage
         status: Student Status
         student_number: Student Number
         scholarship_type: Scholarship Type

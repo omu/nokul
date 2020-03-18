@@ -3395,6 +3395,7 @@ ALTER SEQUENCE public.student_studentship_statuses_id_seq OWNED BY public.studen
 CREATE TABLE public.students (
     id bigint NOT NULL,
     student_number character varying,
+    permanently_registered boolean DEFAULT false,
     user_id bigint NOT NULL,
     unit_id bigint NOT NULL,
     created_at timestamp without time zone NOT NULL,
@@ -3402,9 +3403,9 @@ CREATE TABLE public.students (
     semester integer,
     year integer,
     scholarship_type_id bigint,
-    permanently_registered boolean DEFAULT false,
     status integer DEFAULT 1,
     exceeded_education_period boolean DEFAULT false,
+    stage_id bigint,
     CONSTRAINT students_permanently_registered_null CHECK ((permanently_registered IS NOT NULL)),
     CONSTRAINT students_semester_null CHECK ((semester IS NOT NULL)),
     CONSTRAINT students_semester_numericality CHECK ((semester > 0)),
@@ -6464,6 +6465,13 @@ CREATE INDEX index_students_on_scholarship_type_id ON public.students USING btre
 
 
 --
+-- Name: index_students_on_stage_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_students_on_stage_id ON public.students USING btree (stage_id);
+
+
+--
 -- Name: index_students_on_unit_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6657,6 +6665,14 @@ ALTER TABLE ONLY public.agendas
 
 ALTER TABLE ONLY public.students
     ADD CONSTRAINT fk_rails_148c9e88f4 FOREIGN KEY (user_id) REFERENCES public.users(id);
+
+
+--
+-- Name: students fk_rails_155a016013; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.students
+    ADD CONSTRAINT fk_rails_155a016013 FOREIGN KEY (stage_id) REFERENCES public.student_grades(id);
 
 
 --
@@ -7611,5 +7627,6 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20200305103056'),
 ('20200305120339'),
 ('20200310044429'),
-('20200310101357');
+('20200310101357'),
+('20200317094504');
 

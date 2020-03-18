@@ -16,6 +16,7 @@ serhat_omu:
   status: active
   year: 1
   semester: 1
+  stage: foreign_preparation
 john:
   student_number: 45612
   user: john

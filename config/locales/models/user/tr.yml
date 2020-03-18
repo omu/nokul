@@ -21,6 +21,7 @@ tr:
         start_date: Başlangıç Tarihi
       student: &student_attributes
         exceeded_education_period: Eğitim süresi içerisinde mezun olamadı
+        stage: Aşama
         status: Öğrenci Durumu
         student_number: Öğrenci Numarası
         scholarship_type: Burs Türü

@@ -7,6 +7,9 @@ first_grade:
 second_grade:
   name: 2. Sinif
   code: 3
+foreign_preparation:
+  name: Yabancı Dil Hazırlık
+  code: 1
 student_grade_to_delete:
   name: Will be Deleted
   code: 99

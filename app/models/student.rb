@@ -18,6 +18,7 @@ class Student < ApplicationRecord
   belongs_to :scholarship_type, optional: true
   belongs_to :user
   belongs_to :unit
+  belongs_to :stage, class_name: 'StudentGrade', optional: true
   has_one :identity, dependent: :destroy
   has_many :calendars, -> { Calendar.active }, through: :unit
   has_many :curriculums, through: :unit
@@ -28,6 +29,7 @@ class Student < ApplicationRecord
   scope :exceeded, -> { where(exceeded_education_period: true) }
   scope :not_scholarships, -> { where(scholarship_type_id: nil) }
   scope :scholarships, -> { where.not(scholarship_type_id: nil) }
+  scope :preparations, -> { where(stage: StudentGrade.preparation) }
 
   # validations
   validates :exceeded_education_period, inclusion: { in: [true, false] }
@@ -41,6 +43,7 @@ class Student < ApplicationRecord
 
   # delegations
   delegate :addresses, to: :user
+  delegate :name, to: :stage, prefix: true, allow_nil: true
   delegate :name, to: :unit, prefix: true
   delegate :name, to: :scholarship_type, prefix: true, allow_nil: true
 
@@ -57,6 +60,10 @@ class Student < ApplicationRecord
   def current_registration
     @current_registration ||=
       semester_registrations.find_by(semester: semester) || semester_registrations.create
+  end
+
+  def preparation?
+    Student.preparations.ids.include?(id)
   end
 
   def scholarship?
