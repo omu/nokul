@@ -31,7 +31,6 @@ Rails.application.routes.draw do
   draw :tuition_management
   draw :user_management
   draw :yoksis
-  draw :meksis
 
   resources :students, only: %i[edit update]
 
