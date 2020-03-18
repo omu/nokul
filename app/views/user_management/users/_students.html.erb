@@ -16,6 +16,7 @@
             <th><%= t('year') %></th>
             <th><%= t('semester') %></th>
             <th><%= t('.scholarship_type') %></th>
+            <th><%= t('.stage') %></th>
             <th><%= t('.exceeded_education_period') %></th>
           </tr>
         </thead>
@@ -26,6 +27,7 @@
             <td><%= student.year %></td>
             <td><%= student.semester %></td>
             <td><%= student.scholarship_type_name %></td>
+            <td><%= student.stage_name %></td>
             <td><%= icon_for_check(student.exceeded_education_period) %></td>
           </tr>
         </tbody>
