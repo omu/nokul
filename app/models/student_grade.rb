@@ -6,7 +6,7 @@ class StudentGrade < ApplicationRecord
   include ReferenceValidations
 
   # relations
-  has_many :students, dependent: :nullify
+  has_many :students, foreign_key: :stage_id, inverse_of: :stage, dependent: :nullify
 
   # scopes
   scope :course, -> { where(code: 9) }

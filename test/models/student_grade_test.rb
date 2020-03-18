@@ -7,5 +7,5 @@ class StudentGradeTest < ActiveSupport::TestCase
   include ReferenceTestModule
 
   # relations
-  has_many :students, dependent: :nullify
+  has_many :students, foreign_key: :stage_id, inverse_of: :stage, dependent: :nullify
 end
