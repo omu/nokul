@@ -87,6 +87,7 @@ class ProspectiveStudent < ApplicationRecord
       user:                   user,
       unit:                   unit,
       permanently_registered: can_permanently_register?,
+      status:                 can_permanently_register? ? :active : :passive,
       student_number:         id_number, # TODO: must be generated
       year:                   1, # TODO: can have a different value depending on the characteristics of the program
       semester:               1

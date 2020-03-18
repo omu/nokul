@@ -5,12 +5,15 @@ serhat:
   permanently_registered: true
   year: 2
   semester: 3
+  status: active
   scholarship_type: meb
+  exceeded_education_period: false
 serhat_omu:
   student_number: 98765
   user: serhat
   unit: matematik_ogretmenligi_programi
   permanently_registered: true
+  status: active
   year: 1
   semester: 1
 john:
@@ -18,5 +21,7 @@ john:
   user: john
   unit: bilgisayar_muhendisligi_programi
   permanently_registered: true
+  status: active
   year: 2
   semester: 3
+  exceeded_education_period: true

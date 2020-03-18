@@ -20,6 +20,8 @@ en:
         end_date: End Date
         start_date: Start Date
       student: &student_attributes
+        exceeded_education_period: Couldn't graduate during education period
+        status: Student Status
         student_number: Student Number
         scholarship_type: Scholarship Type
         unit: Unit
@@ -44,6 +46,14 @@ en:
         public_studies: Show academic studies on my profile
         roles: Roles
         query_stores: Scope Queries
+    enums:
+      student:
+        statuses:
+          active: Active
+          disengaged: Disengaged
+          graduated: Graduated
+          unenrolled: Not Enrolled
+          passive: Passive
   helpers:
     submit:
       user:
