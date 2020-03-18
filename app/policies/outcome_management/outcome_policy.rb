@@ -1,4 +1,3 @@
-
 # frozen_string_literal: true
 
 module OutcomeManagement
@@ -6,11 +5,11 @@ module OutcomeManagement
     include CrudPolicyMethods
 
     undef :index?
-  
+
     private
-  
+
     def permitted?(*privileges)
       user.privilege? :outcome_management, privileges
     end
   end
-end  
+end

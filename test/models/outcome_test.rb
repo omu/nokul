@@ -30,7 +30,7 @@ class OutcomeTest < ActiveSupport::TestCase
   end
 
   # delegates
-  test "a outcome reach unit parameter" do
+  test 'a outcome reach unit parameter' do
     assert outcomes(:one).unit
   end
 

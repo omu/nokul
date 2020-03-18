@@ -47,7 +47,6 @@ module OutcomeManagement
     end
 
     test 'should update outcome' do
-      outcome = Outcome.first
       patch unit_standard_outcome_path(@unit_standard, @outcome), params: {
         outcome: {
           code: 'PÇ1', name: 'Seçme ve uygulama becerisi.',

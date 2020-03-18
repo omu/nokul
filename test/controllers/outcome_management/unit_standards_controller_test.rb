@@ -28,9 +28,9 @@ module OutcomeManagement
       assert_difference('UnitStandard.count') do
         post unit_standards_path, params: {
           unit_standard: {
-            unit_id: units(:fen_bilgisi_ogretmenligi_programi).id,
+            unit_id:     units(:fen_bilgisi_ogretmenligi_programi).id,
             standard_id: standards(:fedek).id,
-            status: :active
+            status:      :active
           }
         }
       end
@@ -53,9 +53,9 @@ module OutcomeManagement
       unit_standard = UnitStandard.last
       patch unit_standard_path(@unit_standard), params: {
         unit_standard: {
-          unit_id: units(:fen_bilgisi_ogretmenligi_programi).id,
+          unit_id:     units(:fen_bilgisi_ogretmenligi_programi).id,
           standard_id: standards(:fedek).id,
-          status: :passive
+          status:      :passive
         }
       }
 

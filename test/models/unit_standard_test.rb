@@ -6,7 +6,7 @@ class UnitStandardTest < ActiveSupport::TestCase
   extend Support::Minitest::AssociationHelper
   extend Support::Minitest::EnumerationHelper
   extend Support::Minitest::ValidationHelper
-  
+
   # enums
   enum status: { passive: 0, active: 1 }
 
