@@ -65,11 +65,13 @@
     <%= fa_icon('dot-circle-o', class: 'nav-icon') %><%= t('.outcome_management') %>
   </a>
   <ul class="nav-dropdown-items">
-    <li class="nav-item">
-      <%= link_to :unit_standards, class: 'nav-link' do %>
-        <%= fa_icon('sitemap', text: t('.unit_standards'), class: 'nav-icon') %>
-      <% end %>
-    </li>
+    <% if policy([:outcome_management, :unit_standard]).index? %>
+      <li class="nav-item">
+        <%= link_to :unit_standards, class: 'nav-link' do %>
+          <%= fa_icon('sitemap', text: t('.unit_standards'), class: 'nav-icon') %>
+        <% end %>
+      </li>
+    <% end %>
   </ul>
 </li>
 
