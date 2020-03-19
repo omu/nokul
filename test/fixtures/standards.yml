@@ -1,6 +1,9 @@
 fedek:
-  version: Version
+  version: 1
   name: FEDEK
 mudek:
-  version: Version
+  version: 1
   name: MÜDEK
+standard_to_delete:
+  version: 1
+  name: Standard
