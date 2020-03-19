@@ -4,7 +4,7 @@
       <div class='card-header'>
         <%= fa_icon 'align-justify', text: t('.card_header') %>
         <div class='card-header-actions'>
-          <%= link_to_new(t('.new_outcome_link'), new_unit_standard_outcome_path(@unit_standard)) %>
+          <%= link_to_new(t('.new_outcome_link'), new_standard_outcome_path(@standard)) %>
         </div>
       </div>
       <div class='card-body'>
@@ -21,7 +21,7 @@
               <tr>
                 <td><%= outcome.code %></td>
                 <td><%= outcome.name %></td>
-                <td><%= link_to_actions[@unit_standard, outcome]) %></td>
+                <td><%= link_to_actions[@standard, outcome]) %></td>
               </tr>
             <% end %>
           </tbody>
