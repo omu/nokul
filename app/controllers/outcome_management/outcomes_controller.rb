@@ -4,20 +4,20 @@ module OutcomeManagement
   class OutcomesController < ApplicationController
     include SearchableModule
 
-    before_action :set_unit_standard
+    before_action :set_standard
     before_action :set_outcome, except: %i[new create]
     before_action :authorized?
 
     def show; end
 
     def new
-      @outcome = @unit_standard.outcomes.new
+      @outcome = @standard.outcomes.new
     end
 
     def edit; end
 
     def create
-      @outcome = @unit_standard.outcomes.new(outcome_params)
+      @outcome = @standard.outcomes.new(outcome_params)
       @outcome.save ? redirect_with('success') : render(:new)
     end
 
@@ -33,15 +33,15 @@ module OutcomeManagement
     private
 
     def redirect_with(message)
-      redirect_to unit_standard_path(@unit_standard), flash: { info: t(".#{message}") }
+      redirect_to standard_path(@standard), flash: { info: t(".#{message}") }
     end
 
-    def set_unit_standard
-      @unit_standard = UnitStandard.find(params[:unit_standard_id])
+    def set_standard
+      @standard = Standard.find(params[:standard_id])
     end
 
     def set_outcome
-      @outcome = @unit_standard.macro_outcomes.find(params[:id])
+      @outcome = @standard.macro_outcomes.find(params[:id])
     end
 
     def authorized?
@@ -50,8 +50,8 @@ module OutcomeManagement
 
     def outcome_params
       params.require(:outcome).permit(
-        :code, :name, :unit_standard_id,
-        micro_outcomes_attributes: %i[id code name unit_standard_id _destroy]
+        :code, :name, :standard_id,
+        micro_outcomes_attributes: %i[id code name standard_id _destroy]
       )
     end
   end
