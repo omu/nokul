@@ -1,0 +1,28 @@
+tr:
+  activerecord:
+    attributes:
+      accreditation_standard: &accreditation_standard_attributes
+        version: Versiyon
+        name: Adı
+  helpers:
+    submit:
+      accreditation_standard:
+        create: Akreditasyon standardı Oluştur
+        update: Akreditasyon standardını Güncelle
+  reference:
+    accreditation_standards:
+      create:
+        success: Akreditasyon standardı başarıyla oluşturuldu.
+      destroy:
+        success: Akreditasyon standardı başarıyla silindi.
+        warning: Akreditasyon standardı silinemedi!
+      edit:
+        form_title: Akreditasyon Standardını Güncelle
+      index:
+        <<: *accreditation_standard_attributes
+        card_header: Akreditasyon Standartları
+        new_accreditation_standard_link: Yeni Akreditasyon Standardı
+      new:
+        form_title: Akreditasyon Standardı Oluştur
+      update:
+        success: Akreditasyon standardı başarıyla güncellendi.

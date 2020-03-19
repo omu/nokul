@@ -1,0 +1,28 @@
+en:
+  activerecord:
+    attributes:
+      accreditation_standard: &accreditation_standard_attributes
+        version: Version
+        name: Name
+  helpers:
+    submit:
+      accreditation_standard:
+        create: Create Accreditation Standard
+        update: Update Accreditation Standard
+  reference:
+    accreditation_standards:
+      create:
+        success: Accreditation standard successfully created.
+      destroy:
+        success: Accreditation standard successfully deleted.
+        warning: Accreditation standard could not be deleted.
+      edit:
+        form_title: Update the Accreditation Standard
+      index:
+        <<: *accreditation_standard_attributes
+        card_header: Accreditation Standards
+        new_accreditation_standard_link: New Accreditation Standard
+      new:
+        form_title: Create a New Accreditation Standard
+      update:
+        success: Accreditation standard successfully updated.

@@ -1,0 +1,15 @@
+<%= render 'layouts/builders/form',
+           namespace: 'reference',
+           klass:     @accreditation_standard,
+           params:    [
+             {
+               field:    'version',
+               width:    6,
+               required: true
+             },
+             {
+               field:    'name',
+               width:    6,
+               required: true
+             }
+           ] %>
