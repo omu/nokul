@@ -2,13 +2,14 @@
 
 require_relative '../tuition_handler'
 require_relative '../operation/scholarship'
+require_relative '../operation/disability'
 
 module Debt
   module Tuition
     module Process
       class SecondaryEducation < TuitionHandler
         def self.chain
-          Operation::Scholarship.new
+          Operation::Scholarship.new(Operation::Disability.new)
         end
       end
     end
