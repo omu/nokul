@@ -35,5 +35,7 @@ en:
     position:
       invalid_end_date: Start date is selected as a date after the end date
       multiple_active_repetitive: This employee already has this position in this unit
+    unit_standard:
+      defined: 'Active standard already defined for %{name}'
     unit_tuition:
       defined: 'Tuition fee already defined for %{name}'

@@ -1,0 +1,40 @@
+en:
+  activerecord:
+    attributes:
+      standard: &standard_attributes
+        standard: Standard
+        status: Status
+        units: Programs
+    enums:
+      standard:
+        statuses:
+          active: Active
+          passive: Passive
+  helpers:
+    submit:
+      standard:
+        create: Create Unit Standard
+        update: Update Unit Standard
+  outcome_management:
+    standards:
+      create:
+        success: Unit standard successfully created.
+      destroy:
+        success: Unit standard successfully deleted.
+        warning: Unit standard can not be deleted.
+      edit:
+        form_title: Update Unit Standard
+      index:
+        <<: *standard_attributes
+        card_header: Unit Standards
+        new_standard_link: Create a New Unit Standard
+      new:
+        form_title: Create a Unit Standard
+      show:
+        <<: *standard_attributes
+        card_header: Learning Outcomes
+        new_outcome_link: Create a New Learning Outcome
+        outcome_code: Code
+        outcome_name: Name
+      update:
+        success: Unit standard successfully updated.

@@ -1,0 +1,72 @@
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'university' %><strong><%= @standard.accreditation_standard.name %></strong>
+        <div class="card-header-actions">
+          <%= link_to_actions(@standard, except: :show) %>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <table class="table table-responsive-sm">
+          <tbody>
+            <tr>
+              <td><%= t('.units') %></td>
+              <td><%= @standard.units.map(&:names_depth_cache).join(', ') %></td>
+            </tr>
+            <tr>
+              <td><%= t('.accreditation_standard') %></td>
+              <td><%= @standard.name %></td>
+            </tr>
+            <tr>
+              <td><%= t('.status') %></td>
+              <td><%= enum_t(@standard, :status)  %></td>
+            </tr>
+            <tr>
+              <td><%= t('created_at') %></td>
+              <td><%= @standard.created_at %></td>
+            </tr>
+            <tr>
+              <td><%= t('updated_at') %></td>
+              <td><%= @standard.updated_at %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'dot-circle-o', text: t('.card_header') %>
+        <div class='card-header-actions'>
+          <%= link_to_new(t('.new_outcome_link'), new_standard_outcome_path(@standard)) %>
+        </div>
+      </div>
+      <div class='card-body'>
+        <table class='table table-responsive-sm table-sm'>
+          <thead>
+            <tr>
+              <th><%= t('.outcome_code') %></th>
+              <th><%= t('.outcome_name') %></th>
+              <th><%= t('actions') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @outcomes.each do |outcome| %>
+              <tr>
+                <td><%= outcome.code %></td>
+                <td><%= outcome.name %></td>
+                <td><%= link_to_show([@standard, outcome]) %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

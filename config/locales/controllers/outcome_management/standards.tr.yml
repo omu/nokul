@@ -1,0 +1,40 @@
+tr:
+  activerecord:
+    attributes:
+      standard: &standard_attributes
+        accreditation_standard: Standart
+        status: Durum
+        units: Programlar
+    enums:
+      standard:
+        statuses:
+          active: Aktif
+          passive: Pasif
+  helpers:
+    submit:
+      standard:
+        create: Birim Standardı Oluştur
+        update: Birim Standardını Güncelle
+  outcome_management:
+    standards:
+      create:
+        success: Birim standardı başarıyla oluşturuldu.
+      destroy:
+        success: Birim standardı başarıyla silindi!
+        warning: Birim standardı silinemedi!
+      edit:
+        form_title: Birim Standardını Güncelle
+      index:
+        <<: *standard_attributes
+        card_header: Birim Standartları
+        new_standard_link: Yeni Birim Standardı Oluştur
+      new:
+        form_title: Birim Standardı Oluştur
+      show:
+        <<: *standard_attributes
+        card_header: Öğrenim Çıktıları
+        new_outcome_link: Yeni Öğrenim Çıktısı Oluştur
+        outcome_code: Kodu
+        outcome_name: Adı
+      update:
+        success: Birim standardı başarıyla güncellendi.
