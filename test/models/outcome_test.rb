@@ -7,7 +7,7 @@ class OutcomeTest < ActiveSupport::TestCase
   extend Support::Minitest::ValidationHelper
 
   # relations
-  belongs_to :unit_standard
+  belongs_to :standard
   belongs_to :macro_outcome, class_name: 'Outcome', foreign_key: :parent_id,
                              inverse_of: :micro_outcomes, optional: true
   has_many :micro_outcomes, class_name: 'Outcome', foreign_key: :parent_id,
@@ -29,14 +29,9 @@ class OutcomeTest < ActiveSupport::TestCase
     assert_not_empty fake.errors[:code]
   end
 
-  # delegates
-  test 'a outcome reach unit parameter' do
-    assert outcomes(:one).unit
-  end
-
   # scopes
   test 'ordered returns outcomes ordered by code' do
-    outcomes = unit_standards(:one).macro_outcomes.ordered
+    outcomes = standards(:one).macro_outcomes.ordered
     assert_equal outcomes(:one), outcomes.first
     assert_equal outcomes(:four), outcomes.last
   end
