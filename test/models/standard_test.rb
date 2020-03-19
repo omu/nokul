@@ -3,7 +3,11 @@
 require 'test_helper'
 
 class StandardTest < ActiveSupport::TestCase
+  extend Support::Minitest::AssociationHelper
   extend Support::Minitest::ValidationHelper
+
+  # relations
+  has_many :unit_standards, dependent: :destroy
 
   # validations: presence
   validates_presence_of :version
