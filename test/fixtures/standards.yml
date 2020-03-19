@@ -1,9 +1,3 @@
-fedek:
-  version: 1
-  name: FEDEK
-mudek:
-  version: 1
-  name: MÜDEK
-standard_to_delete:
-  version: 1
-  name: Standard
+one:
+  accreditation_standard: mudek
+  status: active
