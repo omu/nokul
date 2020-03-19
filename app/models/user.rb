@@ -147,6 +147,10 @@ class User < ApplicationRecord
     employees.active.academic.exists?
   end
 
+  def disabled?
+    !disability_rate.zero?
+  end
+
   def self.with_most_articles
     where.not(articles_count: 0).order('articles_count desc').limit(10)
   end
