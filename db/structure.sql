@@ -116,6 +116,42 @@ ALTER SEQUENCE public.academic_terms_id_seq OWNED BY public.academic_terms.id;
 
 
 --
+-- Name: accreditation_standards; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.accreditation_standards (
+    id bigint NOT NULL,
+    version character varying,
+    name character varying,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT accreditation_standards_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT accreditation_standards_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text))),
+    CONSTRAINT accreditation_standards_version_length CHECK ((length((version)::text) <= 50)),
+    CONSTRAINT accreditation_standards_version_presence CHECK (((version IS NOT NULL) AND ((version)::text !~ '^\s*$'::text)))
+);
+
+
+--
+-- Name: accreditation_standards_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.accreditation_standards_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: accreditation_standards_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.accreditation_standards_id_seq OWNED BY public.accreditation_standards.id;
+
+
+--
 -- Name: action_text_rich_texts; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -2251,6 +2287,44 @@ ALTER SEQUENCE public.meeting_agendas_id_seq OWNED BY public.meeting_agendas.id;
 
 
 --
+-- Name: outcomes; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.outcomes (
+    id bigint NOT NULL,
+    standard_id bigint NOT NULL,
+    parent_id bigint,
+    code character varying,
+    name character varying,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT outcomes_code_length CHECK ((length((code)::text) <= 10)),
+    CONSTRAINT outcomes_code_presence CHECK (((code IS NOT NULL) AND ((code)::text !~ '^\s*$'::text))),
+    CONSTRAINT outcomes_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT outcomes_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
+);
+
+
+--
+-- Name: outcomes_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.outcomes_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: outcomes_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.outcomes_id_seq OWNED BY public.outcomes.id;
+
+
+--
 -- Name: papers; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -3009,6 +3083,40 @@ ALTER SEQUENCE public.semester_registrations_id_seq OWNED BY public.semester_reg
 
 
 --
+-- Name: standards; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.standards (
+    id bigint NOT NULL,
+    accreditation_standard_id bigint NOT NULL,
+    status integer,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT standards_status_null CHECK ((status IS NOT NULL)),
+    CONSTRAINT standards_status_numericality CHECK ((status >= 0))
+);
+
+
+--
+-- Name: standards_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.standards_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: standards_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.standards_id_seq OWNED BY public.standards.id;
+
+
+--
 -- Name: student_disability_types; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -3536,6 +3644,38 @@ ALTER SEQUENCE public.unit_instruction_types_id_seq OWNED BY public.unit_instruc
 
 
 --
+-- Name: unit_standards; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.unit_standards (
+    id bigint NOT NULL,
+    unit_id bigint,
+    standard_id bigint,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL
+);
+
+
+--
+-- Name: unit_standards_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.unit_standards_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: unit_standards_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.unit_standards_id_seq OWNED BY public.unit_standards.id;
+
+
+--
 -- Name: unit_statuses; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -3825,6 +3965,13 @@ ALTER TABLE ONLY public.academic_credentials ALTER COLUMN id SET DEFAULT nextval
 --
 
 ALTER TABLE ONLY public.academic_terms ALTER COLUMN id SET DEFAULT nextval('public.academic_terms_id_seq'::regclass);
+
+
+--
+-- Name: accreditation_standards id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.accreditation_standards ALTER COLUMN id SET DEFAULT nextval('public.accreditation_standards_id_seq'::regclass);
 
 
 --
@@ -4185,6 +4332,13 @@ ALTER TABLE ONLY public.meeting_agendas ALTER COLUMN id SET DEFAULT nextval('pub
 
 
 --
+-- Name: outcomes id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.outcomes ALTER COLUMN id SET DEFAULT nextval('public.outcomes_id_seq'::regclass);
+
+
+--
 -- Name: papers id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -4297,6 +4451,13 @@ ALTER TABLE ONLY public.semester_registrations ALTER COLUMN id SET DEFAULT nextv
 
 
 --
+-- Name: standards id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.standards ALTER COLUMN id SET DEFAULT nextval('public.standards_id_seq'::regclass);
+
+
+--
 -- Name: student_disability_types id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -4402,6 +4563,13 @@ ALTER TABLE ONLY public.unit_instruction_types ALTER COLUMN id SET DEFAULT nextv
 
 
 --
+-- Name: unit_standards id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.unit_standards ALTER COLUMN id SET DEFAULT nextval('public.unit_standards_id_seq'::regclass);
+
+
+--
 -- Name: unit_statuses id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -4457,6 +4625,22 @@ ALTER TABLE ONLY public.academic_credentials
 
 ALTER TABLE ONLY public.academic_terms
     ADD CONSTRAINT academic_terms_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: accreditation_standards accreditation_standards_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.accreditation_standards
+    ADD CONSTRAINT accreditation_standards_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: accreditation_standards accreditation_standards_version_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.accreditation_standards
+    ADD CONSTRAINT accreditation_standards_version_name_unique UNIQUE (version, name) DEFERRABLE;
 
 
 --
@@ -4988,6 +5172,22 @@ ALTER TABLE ONLY public.meeting_agendas
 
 
 --
+-- Name: outcomes outcomes_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.outcomes
+    ADD CONSTRAINT outcomes_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: outcomes outcomes_standard_id_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.outcomes
+    ADD CONSTRAINT outcomes_standard_id_code_unique UNIQUE (standard_id, code) DEFERRABLE;
+
+
+--
 -- Name: papers papers_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -5137,6 +5337,14 @@ ALTER TABLE ONLY public.sdp_codes
 
 ALTER TABLE ONLY public.semester_registrations
     ADD CONSTRAINT semester_registrations_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: standards standards_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.standards
+    ADD CONSTRAINT standards_pkey PRIMARY KEY (id);
 
 
 --
@@ -5433,6 +5641,14 @@ ALTER TABLE ONLY public.unit_instruction_types
 
 ALTER TABLE ONLY public.unit_instruction_types
     ADD CONSTRAINT unit_instruction_types_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: unit_standards unit_standards_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.unit_standards
+    ADD CONSTRAINT unit_standards_pkey PRIMARY KEY (id);
 
 
 --
@@ -6064,6 +6280,20 @@ CREATE INDEX index_meeting_agendas_on_committee_meeting_id ON public.meeting_age
 
 
 --
+-- Name: index_outcomes_on_parent_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_outcomes_on_parent_id ON public.outcomes USING btree (parent_id);
+
+
+--
+-- Name: index_outcomes_on_standard_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_outcomes_on_standard_id ON public.outcomes USING btree (standard_id);
+
+
+--
 -- Name: index_papers_on_country_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6274,6 +6504,13 @@ CREATE INDEX index_semester_registrations_on_student_id ON public.semester_regis
 
 
 --
+-- Name: index_standards_on_accreditation_standard_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_standards_on_accreditation_standard_id ON public.standards USING btree (accreditation_standard_id);
+
+
+--
 -- Name: index_students_on_scholarship_type_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6320,6 +6557,20 @@ CREATE INDEX index_unit_calendars_on_calendar_id ON public.unit_calendars USING 
 --
 
 CREATE INDEX index_unit_calendars_on_unit_id ON public.unit_calendars USING btree (unit_id);
+
+
+--
+-- Name: index_unit_standards_on_standard_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_unit_standards_on_standard_id ON public.unit_standards USING btree (standard_id);
+
+
+--
+-- Name: index_unit_standards_on_unit_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_unit_standards_on_unit_id ON public.unit_standards USING btree (unit_id);
 
 
 --
@@ -6590,6 +6841,14 @@ ALTER TABLE ONLY public.articles
 
 
 --
+-- Name: outcomes fk_rails_3ea0ff4a78; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.outcomes
+    ADD CONSTRAINT fk_rails_3ea0ff4a78 FOREIGN KEY (parent_id) REFERENCES public.outcomes(id);
+
+
+--
 -- Name: duties fk_rails_3f1a2d48dd; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6683,6 +6942,14 @@ ALTER TABLE ONLY public.semester_registrations
 
 ALTER TABLE ONLY public.calendar_committee_decisions
     ADD CONSTRAINT fk_rails_4f3eb3da94 FOREIGN KEY (calendar_id) REFERENCES public.calendars(id);
+
+
+--
+-- Name: unit_standards fk_rails_505755c23e; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.unit_standards
+    ADD CONSTRAINT fk_rails_505755c23e FOREIGN KEY (unit_id) REFERENCES public.units(id);
 
 
 --
@@ -6982,11 +7249,27 @@ ALTER TABLE ONLY public.available_courses
 
 
 --
+-- Name: outcomes fk_rails_ab65fefdd7; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.outcomes
+    ADD CONSTRAINT fk_rails_ab65fefdd7 FOREIGN KEY (standard_id) REFERENCES public.standards(id);
+
+
+--
 -- Name: classrooms fk_rails_b0064b7304; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.classrooms
     ADD CONSTRAINT fk_rails_b0064b7304 FOREIGN KEY (building_id) REFERENCES public.buildings(id);
+
+
+--
+-- Name: standards fk_rails_b1419bb38e; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.standards
+    ADD CONSTRAINT fk_rails_b1419bb38e FOREIGN KEY (accreditation_standard_id) REFERENCES public.accreditation_standards(id);
 
 
 --
@@ -7059,6 +7342,14 @@ ALTER TABLE ONLY public.course_evaluation_types
 
 ALTER TABLE ONLY public.books
     ADD CONSTRAINT fk_rails_bc582ddd02 FOREIGN KEY (user_id) REFERENCES public.users(id);
+
+
+--
+-- Name: unit_standards fk_rails_bd51470089; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.unit_standards
+    ADD CONSTRAINT fk_rails_bd51470089 FOREIGN KEY (standard_id) REFERENCES public.standards(id);
 
 
 --
@@ -7395,6 +7686,10 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20200215132359'),
 ('20200217110305'),
 ('20200310101357'),
-('20200317094504');
+('20200317094504'),
+('20200319080917'),
+('20200319082359'),
+('20200319085939'),
+('20200319090221');
 
 
