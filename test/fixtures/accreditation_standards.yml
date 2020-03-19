@@ -1,0 +1,9 @@
+fedek:
+  version: 1
+  name: FEDEK
+mudek:
+  version: 1
+  name: MÜDEK
+accreditation_standard_to_delete:
+  version: 1
+  name: Standard
