@@ -3401,6 +3401,44 @@ ALTER SEQUENCE public.titles_id_seq OWNED BY public.titles.id;
 
 
 --
+-- Name: tuition_debts; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.tuition_debts (
+    id bigint NOT NULL,
+    student_id bigint NOT NULL,
+    academic_term_id bigint NOT NULL,
+    unit_tuition_id bigint NOT NULL,
+    amount numeric(8,3),
+    description text,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT tuition_debts_amount_null CHECK ((amount IS NOT NULL)),
+    CONSTRAINT tuition_debts_amount_numericality CHECK ((amount > (0)::numeric)),
+    CONSTRAINT tuition_debts_description_length CHECK ((length(description) <= 65535))
+);
+
+
+--
+-- Name: tuition_debts_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.tuition_debts_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: tuition_debts_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.tuition_debts_id_seq OWNED BY public.tuition_debts.id;
+
+
+--
 -- Name: tuitions; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -4371,6 +4409,13 @@ ALTER TABLE ONLY public.students ALTER COLUMN id SET DEFAULT nextval('public.stu
 --
 
 ALTER TABLE ONLY public.titles ALTER COLUMN id SET DEFAULT nextval('public.titles_id_seq'::regclass);
+
+
+--
+-- Name: tuition_debts id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.tuition_debts ALTER COLUMN id SET DEFAULT nextval('public.tuition_debts_id_seq'::regclass);
 
 
 --
@@ -5372,6 +5417,14 @@ ALTER TABLE ONLY public.titles
 
 
 --
+-- Name: tuition_debts tuition_debts_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.tuition_debts
+    ADD CONSTRAINT tuition_debts_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: tuitions tuitions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6302,6 +6355,27 @@ CREATE INDEX index_students_on_user_id ON public.students USING btree (user_id);
 
 
 --
+-- Name: index_tuition_debts_on_academic_term_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_tuition_debts_on_academic_term_id ON public.tuition_debts USING btree (academic_term_id);
+
+
+--
+-- Name: index_tuition_debts_on_student_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_tuition_debts_on_student_id ON public.tuition_debts USING btree (student_id);
+
+
+--
+-- Name: index_tuition_debts_on_unit_tuition_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_tuition_debts_on_unit_tuition_id ON public.tuition_debts USING btree (unit_tuition_id);
+
+
+--
 -- Name: index_tuitions_on_academic_term_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6694,6 +6768,14 @@ ALTER TABLE ONLY public.identities
 
 
 --
+-- Name: tuition_debts fk_rails_544f94c661; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.tuition_debts
+    ADD CONSTRAINT fk_rails_544f94c661 FOREIGN KEY (student_id) REFERENCES public.students(id);
+
+
+--
 -- Name: prospective_students fk_rails_54b90f3e1c; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6982,6 +7064,14 @@ ALTER TABLE ONLY public.available_courses
 
 
 --
+-- Name: tuition_debts fk_rails_aba306a739; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.tuition_debts
+    ADD CONSTRAINT fk_rails_aba306a739 FOREIGN KEY (academic_term_id) REFERENCES public.academic_terms(id);
+
+
+--
 -- Name: classrooms fk_rails_b0064b7304; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7230,6 +7320,14 @@ ALTER TABLE ONLY public.available_course_groups
 
 
 --
+-- Name: tuition_debts fk_rails_edf549ccde; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.tuition_debts
+    ADD CONSTRAINT fk_rails_edf549ccde FOREIGN KEY (unit_tuition_id) REFERENCES public.unit_tuitions(id);
+
+
+--
 -- Name: curriculum_course_groups fk_rails_f0035661f5; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7395,6 +7493,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20200215132359'),
 ('20200217110305'),
 ('20200310101357'),
-('20200317094504');
+('20200317094504'),
+('20200320114534');
 
 
