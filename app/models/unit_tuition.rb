@@ -10,5 +10,5 @@ class UnitTuition < ApplicationRecord
   validates_with UnitTuitionValidator
 
   # delegates
-  delegate :academic_term, to: :tuition
+  delegate :academic_term, :fee, :foreign_student_fee, to: :tuition
 end
