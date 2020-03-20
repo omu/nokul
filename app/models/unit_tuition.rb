@@ -4,6 +4,7 @@ class UnitTuition < ApplicationRecord
   # relations
   belongs_to :unit
   belongs_to :tuition
+  has_many :tuition_debts, dependent: :nullify
 
   # validations
   validates :tuition_id, uniqueness: { scope: :unit_id }

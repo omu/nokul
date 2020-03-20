@@ -12,6 +12,7 @@ class AcademicTerm < ApplicationRecord
   has_many :registration_documents, dependent: :nullify
   has_many :semester_registrations, dependent: :nullify
   has_many :tuitions, dependent: :nullify
+  has_many :tuition_debts, dependent: :nullify
 
   # validations
   validates :active, inclusion: { in: [true, false] }
