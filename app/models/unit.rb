@@ -74,6 +74,7 @@ class Unit < ApplicationRecord
   scope :partially_passive,      -> { where(unit_status: UnitStatus.partially_passive) }
   scope :programs,               -> { where(unit_type: UnitType.program) }
   scope :research_centers,       -> { where(unit_type: UnitType.research_center) }
+  scope :secondary,              -> { where(unit_instruction_type: UnitInstructionType.secondary) }
   scope :senates,                -> { where(unit_type: UnitType.senate) }
   scope :undergraduate_programs, -> { where(unit_type: UnitType.undergraduate_program) }
   scope :without_programs,       -> { where.not(unit_type: UnitType.program) }
