@@ -8,7 +8,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 # core
 gem 'bootsnap', require: false
 gem 'puma'
-gem 'rails', '~> 6.0'
+gem 'rails', '~> 6.0', '>= 6.0.2.2'
 gem 'redis', '~> 4.0'
 gem 'sidekiq'
 
@@ -28,7 +28,7 @@ gem 'ruby-vips', '~> 2.0.17'
 
 # authentication
 gem 'authy'
-gem 'devise'
+gem 'devise', '>= 4.7.1'
 gem 'omniauth_openid_connect'
 
 # authorization
@@ -40,18 +40,18 @@ gem 'net-ldap'
 # assets: core asset dependencies
 # TODO: The following line should be removed when sassc-rails has the latest version of sassc.
 gem 'sassc', '~> 2.2.1'
-gem 'sassc-rails'
+gem 'sassc-rails', '>= 2.1.2'
 
 gem 'uglifier', '>= 1.3.0'
-gem 'webpacker'
+gem 'webpacker', '>= 4.2.2'
 
 # view helpers: tools for forms, views, etc.
 gem 'chartkick'
 gem 'cocoon'
-gem 'font-awesome-rails'
+gem 'font-awesome-rails', '>= 4.7.0.5'
 gem 'groupdate'
 gem 'pagy'
-gem 'simple_form'
+gem 'simple_form', '>= 5.0.2'
 gem 'wicked_pdf'
 
 # api
@@ -79,7 +79,7 @@ gem 'smstools'
 gem 'twilio-ruby'
 
 # log
-gem 'lograge'
+gem 'lograge', '>= 0.11.2'
 
 # cron
 gem 'sidekiq-cron'
@@ -89,9 +89,9 @@ group :development, :test do
   gem 'bullet'
   gem 'bundler-audit'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'dotenv-rails'
-  gem 'erb_lint', require: false
-  gem 'lol_dba'
+  gem 'dotenv-rails', '>= 2.7.5'
+  gem 'erb_lint', '>= 0.0.31', require: false
+  gem 'lol_dba', '>= 2.1.5'
   gem 'rubocop'
   gem 'rubocop-minitest'
   gem 'rubocop-performance'
@@ -116,7 +116,7 @@ group :development do
   gem 'ruby-progressbar'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'web-console'
+  gem 'web-console', '>= 4.0.1'
 end
 
 # core plugins
