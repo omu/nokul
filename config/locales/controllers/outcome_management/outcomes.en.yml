@@ -4,7 +4,7 @@ tr:
       outcome: &outcome_attributes
         code: Code
         name: Name
-        outcomes: Sub Outcomes
+        outcomes: Sub Learning Outcomes
   helpers:
     submit:
       outcome:

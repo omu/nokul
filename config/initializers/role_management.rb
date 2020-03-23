@@ -107,7 +107,7 @@ class RoleManagement
              description: 'Harç Yönetim Yetkisi',
              privileges:  %i[read write destroy]
   permission :outcome_management,
-             name:        'Çıktı Yönetimi',
+             name:        'Öğrenim Çıktılarının Yönetimi',
              description: 'Öğrenim Çıktısı Yönetim Yetkisi',
              privileges:  %i[read write destroy]
 
