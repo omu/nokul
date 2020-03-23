@@ -1,6 +1,12 @@
 # frozen_string_literal: true
 
 class Standard < ApplicationRecord
+  # search
+  include DynamicSearch
+
+  # dynamic_search
+  search_keys :accreditation_standard_id, :status
+
   # enums
   enum status: { passive: 0, active: 1 }
 

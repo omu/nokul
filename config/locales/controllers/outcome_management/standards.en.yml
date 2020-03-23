@@ -30,6 +30,9 @@ en:
         new_standard_link: Create a New Unit Standard
       new:
         form_title: Create a Unit Standard
+      search:
+        <<: *standard_attributes
+        unit: Program
       show:
         <<: *standard_attributes
         card_header: Learning Outcomes

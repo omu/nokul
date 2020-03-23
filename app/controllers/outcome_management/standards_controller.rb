@@ -8,8 +8,11 @@ module OutcomeManagement
     before_action :authorized?
 
     def index
-      standards = Standard.includes(:accreditation_standard, :unit_standards, :units)
-      @pagy, @standards = pagy(standards)
+      standards = Standard.includes(:accreditation_standard, :unit_standards, :units).where(
+        params[:unit_id].present? ? { unit_standards: { unit_id: params[:unit_id] } } : {}
+      )
+
+      @pagy, @standards = pagy(standards.dynamic_search(search_params(Standard)))
     end
 
     def show
