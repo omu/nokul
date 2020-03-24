@@ -4,6 +4,7 @@ class UnitStandardValidator < ActiveModel::Validator
   def validate(record)
     @record = record
     @standard = record.standard
+    return unless @standard.active?
     return unless already_exists?
 
     @standard.errors.add(
