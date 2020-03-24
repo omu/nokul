@@ -7,7 +7,7 @@ module Reference
     private
 
     def secure_params
-      params.require(:accreditation_standard).permit(:name, :version)
+      params.require(:accreditation_standard).permit(:name)
     end
   end
 end

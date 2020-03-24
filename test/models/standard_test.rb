@@ -17,8 +17,21 @@ class StandardTest < ActiveSupport::TestCase
   has_many :unit_standards, dependent: :destroy
   has_many :units, through: :unit_standards
 
+  # validations: presence
+  validates_presence_of :version
+
+  # validations: length
+  validates_length_of :version, maximum: 50
+
   # delegates
   test 'a standard reach accreditation standard name parameter' do
     assert standards(:one).send(:name)
+  end
+
+  # validations: uniqueness
+  test 'uniqueness validations for version of a standard' do
+    fake = standards(:one).dup
+    assert_not fake.valid?
+    assert_not_empty fake.errors[:version]
   end
 end

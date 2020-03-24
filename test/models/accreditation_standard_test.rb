@@ -10,11 +10,9 @@ class AccreditationStandardTest < ActiveSupport::TestCase
   has_many :standards, dependent: :destroy
 
   # validations: presence
-  validates_presence_of :version
   validates_presence_of :name
 
   # validations: length
-  validates_length_of :version, maximum: 50
   validates_length_of :name, maximum: 255
 
   # validations: uniqueness

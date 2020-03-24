@@ -8,7 +8,7 @@ class AccreditationStandardsControllerTest < ActionDispatch::IntegrationTest
 
   setup do
     @target_path = 'reference'
-    @create_params = { name: 'MİAK', version: '1' }
-    @update_params = { name: 'EPDAD', version: '1' }
+    @create_params = { name: 'MİAK' }
+    @update_params = { name: 'EPDAD' }
   end
 end

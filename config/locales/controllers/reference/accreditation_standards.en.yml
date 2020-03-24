@@ -2,7 +2,6 @@ en:
   activerecord:
     attributes:
       accreditation_standard: &accreditation_standard_attributes
-        version: Version
         name: Name
   helpers:
     submit:

@@ -2,7 +2,6 @@ tr:
   activerecord:
     attributes:
       accreditation_standard: &accreditation_standard_attributes
-        version: Versiyon
         name: Adı
   helpers:
     submit:

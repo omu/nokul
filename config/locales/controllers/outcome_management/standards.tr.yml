@@ -3,6 +3,7 @@ tr:
     attributes:
       standard: &standard_attributes
         accreditation_standard: Standart
+        version: Versiyon
         status: Durum
         units: Programlar
     enums:

@@ -23,7 +23,7 @@
       <div class='card-body'>
         <%= form_tag standards_path, method: :get do %>
           <div class='row'>
-            <div class='form-group col-sm-6'>
+            <div class='form-group col-sm-12'>
               <%= label_tag(:unit_id, t('.unit')) %>
               <%= select_tag(:unit_id,
                              options_from_collection_for_select(Unit.active.programs.order(:name), :id, :names_depth_cache, params[:unit_id]),
@@ -31,7 +31,7 @@
                              class:         'form-control',
                              style:         'width: 100%') %>
             </div>
-            <div class='form-group col-sm-3'>
+            <div class='form-group col-sm-4'>
               <%= label_tag(:accreditation_standard_id, t('.accreditation_standard')) %>
               <%= select_tag(:accreditation_standard_id,
                              options_from_collection_for_select(AccreditationStandard.order(:name), :id, :name, params[:accreditation_standard_id]),
@@ -40,7 +40,15 @@
                              class:         'form-control',
                              style:         'width: 100%') %>
             </div>
-            <div class='form-group col-sm-3'>
+            <div class='form-group col-sm-4'>
+              <%= label_tag(:version, t('.version')) %>
+                <%= text_field_tag(:version,
+                                   params[:version],
+                                   include_blank: true,
+                                   class:         'form-control',
+                                   style:         'width: 100%') %>
+            </div>
+            <div class='form-group col-sm-4'>
               <%= label_tag(:status, t('.status')) %>
               <%= select_tag(:status,
                              options_for_select(enum_options_for_select(Standard, :status), params[:status]),

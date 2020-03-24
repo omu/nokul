@@ -3,6 +3,7 @@ en:
     attributes:
       standard: &standard_attributes
         standard: Standard
+        version: Version
         status: Status
         units: Programs
     enums:

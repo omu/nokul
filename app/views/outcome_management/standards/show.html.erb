@@ -20,8 +20,12 @@
               <td><%= @standard.name %></td>
             </tr>
             <tr>
+              <td><%= t('.version') %></td>
+              <td><%= @standard.version %></td>
+            </tr>
+            <tr>
               <td><%= t('.status') %></td>
-              <td><%= enum_t(@standard, :status)  %></td>
+              <td><%= enum_t(@standard, :status) %></td>
             </tr>
             <tr>
               <td><%= t('created_at') %></td>

@@ -121,14 +121,11 @@ ALTER SEQUENCE public.academic_terms_id_seq OWNED BY public.academic_terms.id;
 
 CREATE TABLE public.accreditation_standards (
     id bigint NOT NULL,
-    version character varying,
     name character varying,
     created_at timestamp(6) without time zone NOT NULL,
     updated_at timestamp(6) without time zone NOT NULL,
     CONSTRAINT accreditation_standards_name_length CHECK ((length((name)::text) <= 255)),
-    CONSTRAINT accreditation_standards_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text))),
-    CONSTRAINT accreditation_standards_version_length CHECK ((length((version)::text) <= 50)),
-    CONSTRAINT accreditation_standards_version_presence CHECK (((version IS NOT NULL) AND ((version)::text !~ '^\s*$'::text)))
+    CONSTRAINT accreditation_standards_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
 );
 
 
@@ -3089,11 +3086,14 @@ ALTER SEQUENCE public.semester_registrations_id_seq OWNED BY public.semester_reg
 CREATE TABLE public.standards (
     id bigint NOT NULL,
     accreditation_standard_id bigint NOT NULL,
+    version character varying,
     status integer,
     created_at timestamp(6) without time zone NOT NULL,
     updated_at timestamp(6) without time zone NOT NULL,
     CONSTRAINT standards_status_null CHECK ((status IS NOT NULL)),
-    CONSTRAINT standards_status_numericality CHECK ((status >= 0))
+    CONSTRAINT standards_status_numericality CHECK ((status >= 0)),
+    CONSTRAINT standards_version_length CHECK ((length((version)::text) <= 50)),
+    CONSTRAINT standards_version_presence CHECK (((version IS NOT NULL) AND ((version)::text !~ '^\s*$'::text)))
 );
 
 
@@ -4628,19 +4628,19 @@ ALTER TABLE ONLY public.academic_terms
 
 
 --
+-- Name: accreditation_standards accreditation_standards_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.accreditation_standards
+    ADD CONSTRAINT accreditation_standards_name_unique UNIQUE (name) DEFERRABLE;
+
+
+--
 -- Name: accreditation_standards accreditation_standards_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.accreditation_standards
     ADD CONSTRAINT accreditation_standards_pkey PRIMARY KEY (id);
-
-
---
--- Name: accreditation_standards accreditation_standards_version_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.accreditation_standards
-    ADD CONSTRAINT accreditation_standards_version_name_unique UNIQUE (version, name) DEFERRABLE;
 
 
 --
@@ -5345,6 +5345,14 @@ ALTER TABLE ONLY public.semester_registrations
 
 ALTER TABLE ONLY public.standards
     ADD CONSTRAINT standards_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: standards standards_version_accreditation_standard_id_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.standards
+    ADD CONSTRAINT standards_version_accreditation_standard_id_unique UNIQUE (version, accreditation_standard_id) DEFERRABLE;
 
 
 --

@@ -5,7 +5,7 @@ class Standard < ApplicationRecord
   include DynamicSearch
 
   # dynamic_search
-  search_keys :accreditation_standard_id, :status
+  search_keys :accreditation_standard_id, :version, :status
 
   # enums
   enum status: { passive: 0, active: 1 }
@@ -19,6 +19,7 @@ class Standard < ApplicationRecord
 
   # validations
   validates :status, inclusion: { in: statuses.keys }
+  validates :version, presence: true, uniqueness: { scope: :accreditation_standard_id }, length: { maximum: 50 }
   validates_associated :unit_standards
 
   # delegates

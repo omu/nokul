@@ -13,6 +13,7 @@
           <thead>
             <tr>
               <th><%= t('.accreditation_standard') %></th>
+              <th><%= t('.version') %></th>
               <th><%= t('.units') %></th>
               <th><%= t('.status') %></th>
               <th><%= t('actions') %></th>
@@ -22,6 +23,7 @@
             <% @standards.each do |standard| %>
               <tr>
                 <td><%= standard.name %></td>
+                <td><%= standard.version %></td>
                 <td style='width: 60%'><%= standard.units.map(&:names_depth_cache).join(', ') %></td>
                 <td><%= enum_t(standard, :status) %></td>
                 <td><%= link_to_actions(standard) %></td>

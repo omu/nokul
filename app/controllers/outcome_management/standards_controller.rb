@@ -59,7 +59,7 @@ module OutcomeManagement
     end
 
     def standard_params
-      params.require(:standard).permit(:accreditation_standard_id, :status, unit_ids: [])
+      params.require(:standard).permit(:accreditation_standard_id, :version, :status, unit_ids: [])
     end
   end
 end
