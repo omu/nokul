@@ -15,7 +15,7 @@ class UnitAccreditationStandardValidator < ActiveModel::Validator
 
   def already_exists?
     UnitAccreditationStandard.includes(:accreditation_standard)
-                .where.not(id: @record.id)
-                .where(unit: @record.unit_id, accreditation_standards: { status: :active }).exists?
+                             .where.not(id: @record.id)
+                             .where(unit: @record.unit_id, accreditation_standards: { status: :active }).exists?
   end
 end
