@@ -9,5 +9,4 @@ class TuitionDebt < ApplicationRecord
   # validations
   validates :amount, numericality: { greater_than: 0 }
   validates :description, length: { maximum: 65_535 }
-  validates :student_id, uniqueness: { scope: :academic_term_id }
 end
