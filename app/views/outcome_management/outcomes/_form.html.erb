@@ -6,6 +6,24 @@
         <strong><%= form_title %></strong>
       </div>
       <div class='card-body'>
+        <table class="table table-responsive-sm">
+          <tbody>
+            <tr>
+              <td><%= t('.units') %></td>
+              <td><%= @accreditation_standard.units.map(&:names_depth_cache).join(', ') %></td>
+            </tr>
+            <tr>
+              <td><%= t('.accreditation_institution') %></td>
+              <td><%= @accreditation_standard.name %></td>
+            </tr>
+            <tr>
+              <td><%= t('.version') %></td>
+              <td><%= @accreditation_standard.version %></td>
+            </tr>
+          </tbody>
+        </table>
+        <hr>
+
         <%= simple_form_for([@accreditation_standard, @outcome]) do |f| %>
           <div class='row'>
             <div class='form-group col-sm-12'>

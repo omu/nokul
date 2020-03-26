@@ -19,6 +19,10 @@ tr:
         warning: Öğrenim çıktısı silinemedi.
       edit:
         form_title: Öğrenim Çıktısını Güncelle
+      form:
+        accreditation_institution: Akreditasyon Kurumu
+        version: Versiyon
+        units: Programlar
       new:
         form_title: Öğrenim Çıktısı Oluştur
       show:
