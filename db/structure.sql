@@ -3546,6 +3546,38 @@ ALTER SEQUENCE public.tuitions_id_seq OWNED BY public.tuitions.id;
 
 
 --
+-- Name: unit_accreditation_standards; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.unit_accreditation_standards (
+    id bigint NOT NULL,
+    unit_id bigint,
+    accreditation_standard_id bigint,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL
+);
+
+
+--
+-- Name: unit_accreditation_standards_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.unit_accreditation_standards_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: unit_accreditation_standards_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.unit_accreditation_standards_id_seq OWNED BY public.unit_accreditation_standards.id;
+
+
+--
 -- Name: unit_calendars; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -3641,38 +3673,6 @@ CREATE SEQUENCE public.unit_instruction_types_id_seq
 --
 
 ALTER SEQUENCE public.unit_instruction_types_id_seq OWNED BY public.unit_instruction_types.id;
-
-
---
--- Name: unit_standards; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.unit_standards (
-    id bigint NOT NULL,
-    unit_id bigint,
-    accreditation_standard_id bigint,
-    created_at timestamp(6) without time zone NOT NULL,
-    updated_at timestamp(6) without time zone NOT NULL
-);
-
-
---
--- Name: unit_standards_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE public.unit_standards_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: unit_standards_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE public.unit_standards_id_seq OWNED BY public.unit_standards.id;
 
 
 --
@@ -4542,6 +4542,13 @@ ALTER TABLE ONLY public.tuitions ALTER COLUMN id SET DEFAULT nextval('public.tui
 
 
 --
+-- Name: unit_accreditation_standards id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.unit_accreditation_standards ALTER COLUMN id SET DEFAULT nextval('public.unit_accreditation_standards_id_seq'::regclass);
+
+
+--
 -- Name: unit_calendars id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -4560,13 +4567,6 @@ ALTER TABLE ONLY public.unit_instruction_languages ALTER COLUMN id SET DEFAULT n
 --
 
 ALTER TABLE ONLY public.unit_instruction_types ALTER COLUMN id SET DEFAULT nextval('public.unit_instruction_types_id_seq'::regclass);
-
-
---
--- Name: unit_standards id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.unit_standards ALTER COLUMN id SET DEFAULT nextval('public.unit_standards_id_seq'::regclass);
 
 
 --
@@ -5596,6 +5596,14 @@ ALTER TABLE ONLY public.tuitions
 
 
 --
+-- Name: unit_accreditation_standards unit_accreditation_standards_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.unit_accreditation_standards
+    ADD CONSTRAINT unit_accreditation_standards_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: unit_calendars unit_calendars_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -5649,14 +5657,6 @@ ALTER TABLE ONLY public.unit_instruction_types
 
 ALTER TABLE ONLY public.unit_instruction_types
     ADD CONSTRAINT unit_instruction_types_pkey PRIMARY KEY (id);
-
-
---
--- Name: unit_standards unit_standards_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.unit_standards
-    ADD CONSTRAINT unit_standards_pkey PRIMARY KEY (id);
 
 
 --
@@ -6554,6 +6554,20 @@ CREATE INDEX index_tuitions_on_academic_term_id ON public.tuitions USING btree (
 
 
 --
+-- Name: index_unit_accreditation_standards_on_accreditation_standard_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_unit_accreditation_standards_on_accreditation_standard_id ON public.unit_accreditation_standards USING btree (accreditation_standard_id);
+
+
+--
+-- Name: index_unit_accreditation_standards_on_unit_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_unit_accreditation_standards_on_unit_id ON public.unit_accreditation_standards USING btree (unit_id);
+
+
+--
 -- Name: index_unit_calendars_on_calendar_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6565,20 +6579,6 @@ CREATE INDEX index_unit_calendars_on_calendar_id ON public.unit_calendars USING 
 --
 
 CREATE INDEX index_unit_calendars_on_unit_id ON public.unit_calendars USING btree (unit_id);
-
-
---
--- Name: index_unit_standards_on_accreditation_standard_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX index_unit_standards_on_accreditation_standard_id ON public.unit_standards USING btree (accreditation_standard_id);
-
-
---
--- Name: index_unit_standards_on_unit_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX index_unit_standards_on_unit_id ON public.unit_standards USING btree (unit_id);
 
 
 --
@@ -6961,14 +6961,6 @@ ALTER TABLE ONLY public.calendar_committee_decisions
 
 
 --
--- Name: unit_standards fk_rails_505755c23e; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.unit_standards
-    ADD CONSTRAINT fk_rails_505755c23e FOREIGN KEY (unit_id) REFERENCES public.units(id);
-
-
---
 -- Name: identities fk_rails_5373344100; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7022,14 +7014,6 @@ ALTER TABLE ONLY public.grades
 
 ALTER TABLE ONLY public.role_permissions
     ADD CONSTRAINT fk_rails_60126080bd FOREIGN KEY (role_id) REFERENCES public.roles(id);
-
-
---
--- Name: unit_standards fk_rails_613e417d3c; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.unit_standards
-    ADD CONSTRAINT fk_rails_613e417d3c FOREIGN KEY (accreditation_standard_id) REFERENCES public.accreditation_standards(id);
 
 
 --
@@ -7313,6 +7297,14 @@ ALTER TABLE ONLY public.unit_tuitions
 
 
 --
+-- Name: unit_accreditation_standards fk_rails_b72e8aed01; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.unit_accreditation_standards
+    ADD CONSTRAINT fk_rails_b72e8aed01 FOREIGN KEY (accreditation_standard_id) REFERENCES public.accreditation_standards(id);
+
+
+--
 -- Name: projects fk_rails_b872a6760a; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7430,6 +7422,14 @@ ALTER TABLE ONLY public.academic_credentials
 
 ALTER TABLE ONLY public.available_courses
     ADD CONSTRAINT fk_rails_d65cfbfb56 FOREIGN KEY (curriculum_course_id) REFERENCES public.curriculum_courses(id);
+
+
+--
+-- Name: unit_accreditation_standards fk_rails_d6d89b24f4; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.unit_accreditation_standards
+    ADD CONSTRAINT fk_rails_d6d89b24f4 FOREIGN KEY (unit_id) REFERENCES public.units(id);
 
 
 --

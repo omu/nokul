@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-class UnitStandard < ApplicationRecord
+class UnitAccreditationStandard < ApplicationRecord
   # relations
   belongs_to :unit
   belongs_to :accreditation_standard
 
   # validations
   validates :accreditation_standard, uniqueness: { scope: :unit }
-  validates_with UnitStandardValidator
+  validates_with UnitAccreditationStandardValidator
 end

@@ -33,7 +33,7 @@ class UnitTest < ActiveSupport::TestCase
   has_many :available_courses, dependent: :destroy
   has_many :unit_calendars, dependent: :destroy
   has_many :calendars, through: :unit_calendars
-  has_many :unit_standards, dependent: :destroy
+  has_many :unit_accreditation_standards, dependent: :destroy
   has_many :unit_tuitions, dependent: :destroy
   has_many :tuitions, through: :unit_tuitions
 

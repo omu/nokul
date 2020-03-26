@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class UnitStandardValidator < ActiveModel::Validator
+class UnitAccreditationStandardValidator < ActiveModel::Validator
   def validate(record)
     @record = record
     @accreditation_standard = record.accreditation_standard
@@ -9,12 +9,12 @@ class UnitStandardValidator < ActiveModel::Validator
 
     @accreditation_standard.errors.add(
       :base,
-      I18n.t('defined', name: @record&.unit&.name, scope: %i[validators unit_standard])
+      I18n.t('defined', name: @record&.unit&.name, scope: %i[validators unit_accreditation_standard])
     )
   end
 
   def already_exists?
-    UnitStandard.includes(:accreditation_standard)
+    UnitAccreditationStandard.includes(:accreditation_standard)
                 .where.not(id: @record.id)
                 .where(unit: @record.unit_id, accreditation_standards: { status: :active }).exists?
   end
