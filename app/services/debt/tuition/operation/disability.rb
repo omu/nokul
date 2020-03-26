@@ -6,12 +6,25 @@ module Debt
   module Tuition
     module Operation
       class Disability < TuitionHandler
-        def compute(params)
-          params.amount -= (params.amount * params.user.disability_rate) / 100
+        include Creation
+
+        def operate(params)
+          compute(params)
+          create_debt(params, description)
         end
 
         def fulfill?(params)
           params.user.disabled?
+        end
+
+        private
+
+        def compute(params)
+          params.amount -= (params.amount * params.user.disability_rate) / 100
+        end
+
+        def description
+          'Engel durumu göz önünde bulundurularak harç borcu oluşturulmuştur.'
         end
       end
     end
