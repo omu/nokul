@@ -3,7 +3,7 @@
 require 'pundit_test_case'
 
 module OutcomeManagement
-  class StandardPolicyTest < PunditTestCase
+  class AccreditationStandardPolicyTest < PunditTestCase
     %w[
       create?
       destroy?

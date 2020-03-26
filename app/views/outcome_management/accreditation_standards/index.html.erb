@@ -4,7 +4,7 @@
       <div class='card-header'>
         <%= fa_icon 'align-justify', text: t('.card_header') %>
         <div class='card-header-actions'>
-          <%= link_to_new(t('.new_standard_link'), new_standard_path) %>
+          <%= link_to_new(t('.new_accreditation_standard_link'), new_accreditation_standard_path) %>
         </div>
       </div>
       <div class='card-body'>
@@ -20,13 +20,13 @@
             </tr>
           </thead>
           <tbody>
-            <% @standards.each do |standard| %>
+            <% @accreditation_standards.each do |accreditation_standard| %>
               <tr>
-                <td><%= standard.name %></td>
-                <td><%= standard.version %></td>
-                <td style='width: 60%'><%= standard.units.map(&:names_depth_cache).join(', ') %></td>
-                <td><%= enum_t(standard, :status) %></td>
-                <td><%= link_to_actions(standard) %></td>
+                <td><%= accreditation_standard.name %></td>
+                <td><%= accreditation_standard.version %></td>
+                <td style='width: 60%'><%= accreditation_standard.units.map(&:names_depth_cache).join(', ') %></td>
+                <td><%= enum_t(accreditation_standard, :status) %></td>
+                <td><%= link_to_actions(accreditation_standard) %></td>
               </tr>
             <% end %>
           </tbody>

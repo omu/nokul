@@ -4,6 +4,7 @@ tr:
       menus:
         admin:
           academic_calendars: Akademik Takvimler
+          accreditation_standards: Akreditasyon Standartları
           administration: Yönetim
           agenda_types: Gündem Türleri
           authorizations: Yetkilendirmeler
@@ -32,7 +33,6 @@ tr:
           registration_documents: İstenen Belgeler
           tuition_management: Harç Yönetimi
           units: Birimler
-          unit_standards: Birim Standartları
           unit_tuitions: Birim Harç Ücretleri
           users: Kullanıcılar
           yoksis: YÖKSİS

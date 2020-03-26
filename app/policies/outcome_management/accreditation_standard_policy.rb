@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module OutcomeManagement
-  class StandardPolicy < ApplicationPolicy
+  class AccreditationStandardPolicy < ApplicationPolicy
     include CrudPolicyMethods
 
     def units?

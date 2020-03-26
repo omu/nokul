@@ -2,9 +2,9 @@
   <div class='col-lg-12'>
     <div class="card">
       <div class="card-header">
-        <%= fa_icon 'university' %><strong><%= @standard.name %></strong>
+        <%= fa_icon 'university' %><strong><%= @accreditation_standard.name %></strong>
         <div class="card-header-actions">
-          <%= link_to_actions(@standard, except: :show) %>
+          <%= link_to_actions(@accreditation_standard, except: :show) %>
         </div>
       </div>
 
@@ -13,27 +13,27 @@
           <tbody>
             <tr>
               <td><%= t('.units') %></td>
-              <td><%= @standard.units.map(&:names_depth_cache).join(', ') %></td>
+              <td><%= @accreditation_standard.units.map(&:names_depth_cache).join(', ') %></td>
             </tr>
             <tr>
               <td><%= t('.accreditation_institution') %></td>
-              <td><%= @standard.name %></td>
+              <td><%= @accreditation_standard.name %></td>
             </tr>
             <tr>
               <td><%= t('.version') %></td>
-              <td><%= @standard.version %></td>
+              <td><%= @accreditation_standard.version %></td>
             </tr>
             <tr>
               <td><%= t('.status') %></td>
-              <td><%= enum_t(@standard, :status) %></td>
+              <td><%= enum_t(@accreditation_standard, :status) %></td>
             </tr>
             <tr>
               <td><%= t('created_at') %></td>
-              <td><%= @standard.created_at %></td>
+              <td><%= @accreditation_standard.created_at %></td>
             </tr>
             <tr>
               <td><%= t('updated_at') %></td>
-              <td><%= @standard.updated_at %></td>
+              <td><%= @accreditation_standard.updated_at %></td>
             </tr>
           </tbody>
         </table>
@@ -48,7 +48,7 @@
       <div class='card-header'>
         <%= fa_icon 'dot-circle-o', text: t('.card_header') %>
         <div class='card-header-actions'>
-          <%= link_to_new(t('.new_outcome_link'), new_standard_outcome_path(@standard)) %>
+          <%= link_to_new(t('.new_outcome_link'), new_accreditation_standard_outcome_path(@accreditation_standard)) %>
         </div>
       </div>
       <div class='card-body'>
@@ -65,7 +65,7 @@
               <tr>
                 <td><%= outcome.code %></td>
                 <td><%= outcome.name %></td>
-                <td><%= link_to_actions([@standard, outcome]) %></td>
+                <td><%= link_to_actions([@accreditation_standard, outcome]) %></td>
               </tr>
             <% end %>
           </tbody>

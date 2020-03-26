@@ -11,7 +11,7 @@
           <%= t('search') %>
         </a>
         <div class='float-right'>
-          <%= link_to t('reset'), standards_path, class: 'btn btn-warning btn-sm' %>
+          <%= link_to t('reset'), accreditation_standards_path, class: 'btn btn-warning btn-sm' %>
         </div>
       </h5>
     </div>
@@ -21,7 +21,7 @@
          aria-labelledby='Search'
          data-parent='#SearchForms'>
       <div class='card-body'>
-        <%= form_tag standards_path, method: :get do %>
+        <%= form_tag accreditation_standards_path, method: :get do %>
           <div class='row'>
             <div class='form-group col-sm-12'>
               <%= label_tag(:unit_id, t('.unit')) %>
@@ -50,7 +50,7 @@
             <div class='form-group col-sm-4'>
               <%= label_tag(:status, t('.status')) %>
               <%= select_tag(:status,
-                             options_for_select(enum_options_for_select(Standard, :status), params[:status]),
+                             options_for_select(enum_options_for_select(AccreditationStandard, :status), params[:status]),
                              include_blank: true,
                              class:         'form-control',
                              style:         'width: 100%') %>

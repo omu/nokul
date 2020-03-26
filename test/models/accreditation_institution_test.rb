@@ -7,7 +7,7 @@ class AccreditationInstitutionTest < ActiveSupport::TestCase
   extend Support::Minitest::ValidationHelper
 
   # relations
-  has_many :standards, dependent: :destroy
+  has_many :accreditation_standards, dependent: :destroy
 
   # validations: presence
   validates_presence_of :name

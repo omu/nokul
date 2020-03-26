@@ -6,14 +6,14 @@
         <strong><%= form_title %></strong>
       </div>
       <div class='card-body'>
-        <%= simple_form_for(@standard) do |f| %>
+        <%= simple_form_for(@accreditation_standard) do |f| %>
           <div class='row'>
             <div class='form-group col-sm-12'>
               <%= f.error_notification %>
               <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
             </div>
             <div class='form-group col-sm-6'>
-              <%= f.input :unit_ids, label: t('units', scope: %i[activerecord attributes standard]), collection: f.object.units, value_method: :id, label_method: :name, input_html: { multiple: 'multiple' }, required: true %>
+              <%= f.input :unit_ids, label: t('units', scope: %i[activerecord attributes accreditation_standard]), collection: f.object.units, value_method: :id, label_method: :name, input_html: { multiple: 'multiple' }, required: true %>
             </div>
             <div class='col-sm-6'>
               <%= f.input :status, collection: enum_options_for_select(f.object.class, :status) %>

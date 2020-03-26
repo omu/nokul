@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-class StandardTest < ActiveSupport::TestCase
+class AccreditationStandardTest < ActiveSupport::TestCase
   extend Support::Minitest::AssociationHelper
   extend Support::Minitest::EnumerationHelper
   extend Support::Minitest::ValidationHelper
@@ -12,7 +12,7 @@ class StandardTest < ActiveSupport::TestCase
 
   # relations
   belongs_to :accreditation_institution
-  has_many :macro_outcomes, class_name: 'Outcome', inverse_of: :standard
+  has_many :macro_outcomes, class_name: 'Outcome', inverse_of: :accreditation_standard
   has_many :outcomes, dependent: :destroy
   has_many :unit_standards, dependent: :destroy
   has_many :units, through: :unit_standards
@@ -24,13 +24,13 @@ class StandardTest < ActiveSupport::TestCase
   validates_length_of :version, maximum: 50
 
   # delegates
-  test 'a standard reach accreditation institution name parameter' do
-    assert standards(:one).send(:name)
+  test 'a accreditation standard reach accreditation institution name parameter' do
+    assert accreditation_standards(:one).send(:name)
   end
 
   # validations: uniqueness
-  test 'uniqueness validations for version of a standard' do
-    fake = standards(:one).dup
+  test 'uniqueness validations for version of a accreditation standard' do
+    fake = accreditation_standards(:one).dup
     assert_not fake.valid?
     assert_not_empty fake.errors[:version]
   end

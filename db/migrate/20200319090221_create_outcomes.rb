@@ -1,7 +1,7 @@
 class CreateOutcomes < ActiveRecord::Migration[6.0]
   def change
     create_table :outcomes do |t|
-      t.references :standard, null: false, foreign_key: true
+      t.references :accreditation_standard, null: false, foreign_key: true
       t.references :parent, foreign_key: { to_table: :outcomes }
       t.string :code
       t.string :name
@@ -15,6 +15,6 @@ class CreateOutcomes < ActiveRecord::Migration[6.0]
     add_presence_constraint :outcomes, :code
     add_presence_constraint :outcomes, :name
 
-    add_unique_constraint :outcomes, [:standard_id, :code]
+    add_unique_constraint :outcomes, [:accreditation_standard_id, :code]
   end
 end

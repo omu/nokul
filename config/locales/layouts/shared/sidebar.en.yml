@@ -4,6 +4,7 @@ en:
       menus:
         admin:
           academic_calendars: Academic Calendars
+          accreditation_standards: Accreditation Standards
           administration: Administration
           agenda_types: Agenda Types
           authorizations: Authorizations
@@ -32,7 +33,6 @@ en:
           registration_documents: Registration Documents
           tuition_management: Tuition Management
           units: Units
-          unit_standards: Unit Standards
           unit_tuitions: Unit Tuitions
           users: Users
           yoksis: YOKSIS

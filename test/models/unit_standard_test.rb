@@ -8,12 +8,12 @@ class UnitStandardTest < ActiveSupport::TestCase
 
   # relations
   belongs_to :unit
-  belongs_to :standard
+  belongs_to :accreditation_standard
 
   # validations: uniqueness
-  test 'uniqueness validations for standard of a unit_standard' do
+  test 'uniqueness validations for accreditation standard of a unit standard' do
     fake = unit_standards(:one).dup
     assert_not fake.valid?
-    assert_not_empty fake.errors[:standard]
+    assert_not_empty fake.errors[:accreditation_standard]
   end
 end

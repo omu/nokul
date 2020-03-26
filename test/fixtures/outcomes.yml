@@ -1,16 +1,16 @@
 one:
-  standard: one
+  accreditation_standard: one
   code: PÇ-1
   name: Seçme ve uygulama becerisi
 two:
-  standard: one
+  accreditation_standard: one
   code: PÇ-1-1
   name: Seçme becerisi
 three:
-  standard: one
+  accreditation_standard: one
   code: PÇ-1-2
   name: Uygulama becerisi
 four:
-  standard: one
+  accreditation_standard: one
   code: PÇ-2
   name: Yorumlama becerisi

@@ -5,7 +5,7 @@ class AccreditationInstitution < ApplicationRecord
   include ReferenceSearch
 
   # relations
-  has_many :standards, dependent: :destroy
+  has_many :accreditation_standards, dependent: :destroy
 
   # validations
   validates :name, presence: true, uniqueness: true, length: { maximum: 255 }

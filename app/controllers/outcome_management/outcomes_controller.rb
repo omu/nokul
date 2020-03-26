@@ -4,20 +4,20 @@ module OutcomeManagement
   class OutcomesController < ApplicationController
     include SearchableModule
 
-    before_action :set_standard
+    before_action :set_accreditation_standard
     before_action :set_outcome, except: %i[new create]
     before_action :authorized?
 
     def show; end
 
     def new
-      @outcome = @standard.outcomes.new
+      @outcome = @accreditation_standard.outcomes.new
     end
 
     def edit; end
 
     def create
-      @outcome = @standard.outcomes.new(outcome_params)
+      @outcome = @accreditation_standard.outcomes.new(outcome_params)
       @outcome.save ? redirect_with('success') : render(:new)
     end
 
@@ -33,15 +33,15 @@ module OutcomeManagement
     private
 
     def redirect_with(message)
-      redirect_to standard_path(@standard), flash: { info: t(".#{message}") }
+      redirect_to accreditation_standard_path(@accreditation_standard), flash: { info: t(".#{message}") }
     end
 
-    def set_standard
-      @standard = Standard.find(params[:standard_id])
+    def set_accreditation_standard
+      @accreditation_standard = AccreditationStandard.find(params[:accreditation_standard_id])
     end
 
     def set_outcome
-      @outcome = @standard.macro_outcomes.find(params[:id])
+      @outcome = @accreditation_standard.macro_outcomes.find(params[:id])
     end
 
     def authorized?
@@ -50,8 +50,8 @@ module OutcomeManagement
 
     def outcome_params
       params.require(:outcome).permit(
-        :code, :name, :standard_id,
-        micro_outcomes_attributes: %i[id code name standard_id _destroy]
+        :code, :name, :accreditation_standard_id,
+        micro_outcomes_attributes: %i[id code name accreditation_standard_id _destroy]
       )
     end
   end
