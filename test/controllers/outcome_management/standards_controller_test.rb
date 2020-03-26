@@ -29,9 +29,9 @@ module OutcomeManagement
         post standards_path, params: {
           standard: {
             accreditation_institution_id: accreditation_institutions(:fedek).id,
-            version:                   '2020',
-            status:                    :active,
-            unit_ids:                  [units(:fen_bilgisi_ogretmenligi_programi).id]
+            version:                      '2020',
+            status:                       :active,
+            unit_ids:                     [units(:fen_bilgisi_ogretmenligi_programi).id]
           }
         }
       end
@@ -55,9 +55,9 @@ module OutcomeManagement
       patch standard_path(@standard), params: {
         standard: {
           accreditation_institution_id: accreditation_institutions(:fedek).id,
-          version:                   '2020',
-          status:                    :passive,
-          unit_ids:                  [units(:bilgisayar_muhendisligi_programi).id]
+          version:                      '2020',
+          status:                       :passive,
+          unit_ids:                     [units(:bilgisayar_muhendisligi_programi).id]
         }
       }
 
