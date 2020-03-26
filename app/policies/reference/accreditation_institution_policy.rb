@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Reference
-  class AccreditationStandardPolicy < ApplicationPolicy
+  class AccreditationInstitutionPolicy < ApplicationPolicy
     include CrudPolicyMethods
 
     undef :show?

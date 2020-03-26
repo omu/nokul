@@ -8,7 +8,7 @@ module OutcomeManagement
     before_action :authorized?
 
     def index
-      standards = Standard.includes(:accreditation_standard, :unit_standards, :units).where(
+      standards = Standard.includes(:accreditation_institution, :unit_standards, :units).where(
         params[:unit_id].present? ? { unit_standards: { unit_id: params[:unit_id] } } : {}
       )
 
@@ -59,7 +59,7 @@ module OutcomeManagement
     end
 
     def standard_params
-      params.require(:standard).permit(:accreditation_standard_id, :version, :status, unit_ids: [])
+      params.require(:standard).permit(:accreditation_institution_id, :version, :status, unit_ids: [])
     end
   end
 end

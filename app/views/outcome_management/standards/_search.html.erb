@@ -32,10 +32,9 @@
                              style:         'width: 100%') %>
             </div>
             <div class='form-group col-sm-4'>
-              <%= label_tag(:accreditation_standard_id, t('.accreditation_standard')) %>
-              <%= select_tag(:accreditation_standard_id,
-                             options_from_collection_for_select(AccreditationStandard.order(:name), :id, :name, params[:accreditation_standard_id]),
-                             collection: AccreditationStandard.all,
+              <%= label_tag(:accreditation_institution_id, t('.accreditation_institution')) %>
+              <%= select_tag(:accreditation_institution_id,
+                             options_from_collection_for_select(AccreditationInstitution.order(:name), :id, :name, params[:accreditation_institution_id]),
                              include_blank: true,
                              class:         'form-control',
                              style:         'width: 100%') %>
@@ -70,6 +69,6 @@
 
 <script type='text/javascript'>
   $(document).ready(function() {
-    $('#accreditation_standard_id, #status, #unit_id').select2();
+    $('#accreditation_institution_id, #status, #unit_id').select2();
   });
 </script>

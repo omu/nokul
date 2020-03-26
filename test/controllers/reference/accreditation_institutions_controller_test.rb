@@ -3,7 +3,7 @@
 require 'test_helper'
 require_relative '../concerns/reference_resource_test'
 
-class AccreditationStandardsControllerTest < ActionDispatch::IntegrationTest
+class AccreditationInstitutionsControllerTest < ActionDispatch::IntegrationTest
   include ReferenceResourceTest
 
   setup do

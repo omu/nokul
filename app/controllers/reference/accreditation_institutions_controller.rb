@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 module Reference
-  class AccreditationStandardsController < ApplicationController
+  class AccreditationInstitutionsController < ApplicationController
     include ReferenceResource
 
     private
 
     def secure_params
-      params.require(:accreditation_standard).permit(:name)
+      params.require(:accreditation_institution).permit(:name)
     end
   end
 end

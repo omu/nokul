@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-class AccreditationStandardTest < ActiveSupport::TestCase
+class AccreditationInstitutionTest < ActiveSupport::TestCase
   extend Support::Minitest::AssociationHelper
   extend Support::Minitest::ValidationHelper
 
@@ -16,8 +16,8 @@ class AccreditationStandardTest < ActiveSupport::TestCase
   validates_length_of :name, maximum: 255
 
   # validations: uniqueness
-  test 'uniqueness validations for name of a accreditation standard' do
-    fake = accreditation_standards(:fedek).dup
+  test 'uniqueness validations for name of a accreditation institution' do
+    fake = accreditation_institutions(:fedek).dup
     assert_not fake.valid?
     assert_not_empty fake.errors[:name]
   end

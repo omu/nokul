@@ -2,7 +2,7 @@ en:
   activerecord:
     attributes:
       standard: &standard_attributes
-        standard: Standard
+        accreditation_institution: Accreditation Institutions
         version: Version
         status: Status
         units: Programs

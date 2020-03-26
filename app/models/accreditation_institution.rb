@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class AccreditationStandard < ApplicationRecord
+class AccreditationInstitution < ApplicationRecord
   # search
   include ReferenceSearch
 

@@ -1,0 +1,27 @@
+en:
+  activerecord:
+    attributes:
+      accreditation_institution: &accreditation_institution_attributes
+        name: Name
+  helpers:
+    submit:
+      accreditation_institution:
+        create: Create Accreditation Institution
+        update: Update Accreditation Institution
+  reference:
+    accreditation_institutions:
+      create:
+        success: Accreditation institution successfully created.
+      destroy:
+        success: Accreditation institution successfully deleted.
+        warning: Accreditation institution could not be deleted.
+      edit:
+        form_title: Update the Accreditation Institutions
+      index:
+        <<: *accreditation_institution_attributes
+        card_header: Accreditation Institutions
+        new_accreditation_institution_link: New Accreditation Institution
+      new:
+        form_title: Create a New Accreditation Institution
+      update:
+        success: Accreditation institution successfully updated.

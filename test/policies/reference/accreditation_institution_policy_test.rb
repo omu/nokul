@@ -3,7 +3,7 @@
 require 'pundit_test_case'
 
 module Reference
-  class AccreditationStandardPolicyTest < PunditTestCase
+  class AccreditationInstitutionPolicyTest < PunditTestCase
     %w[
       create?
       destroy?

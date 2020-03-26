@@ -11,7 +11,7 @@ class StandardTest < ActiveSupport::TestCase
   enum status: { passive: 0, active: 1 }
 
   # relations
-  belongs_to :accreditation_standard
+  belongs_to :accreditation_institution
   has_many :macro_outcomes, class_name: 'Outcome', inverse_of: :standard
   has_many :outcomes, dependent: :destroy
   has_many :unit_standards, dependent: :destroy
@@ -24,7 +24,7 @@ class StandardTest < ActiveSupport::TestCase
   validates_length_of :version, maximum: 50
 
   # delegates
-  test 'a standard reach accreditation standard name parameter' do
+  test 'a standard reach accreditation institution name parameter' do
     assert standards(:one).send(:name)
   end
 

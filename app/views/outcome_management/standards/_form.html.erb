@@ -19,7 +19,7 @@
               <%= f.input :status, collection: enum_options_for_select(f.object.class, :status) %>
             </div>
             <div class='form-group col-sm-6'>
-              <%= f.association :accreditation_standard %>
+              <%= f.association :accreditation_institution %>
             </div>
             <div class='col-sm-6'>
               <%= f.input :version %>
