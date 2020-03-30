@@ -395,7 +395,7 @@ GEM
     slack-notifier (2.3.2)
     smart_properties (1.15.0)
     smstools (0.2.0)
-    sorbet-runtime (0.5.5460)
+    sorbet-runtime (0.5.5472)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
