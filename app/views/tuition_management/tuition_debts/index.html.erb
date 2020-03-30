@@ -4,7 +4,7 @@
       <div class='card-header'>
         <%= fa_icon 'money', text: t('.card_header') %>
         <div class='card-header-actions'>
-
+          <%= link_to_new(t('.add_bulk_tuition_debt'), new_tuition_debt_path(type: 'bulk')) %>
         </div>
       </div>
       <div class='card-body'>
@@ -36,4 +36,3 @@
     </div>
   </div>
 </div>
-
