@@ -1,0 +1,39 @@
+<div class='row'>
+  <div class='col-sm-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'money', text: t('.card_header') %>
+        <div class='card-header-actions'>
+
+        </div>
+      </div>
+      <div class='card-body'>
+        <table class='table table-responsive-sm table-striped table-hover'>
+          <thead class='thead-dark'>
+            <tr>
+              <th><%= t('.academic_term') %></th>
+              <th><%= t('.unit') %></th>
+              <th><%= t('.student') %></th>
+              <th><%= t('.amount') %></th>
+              <th><%= t('.description') %></th>
+              <th><%= t('actions') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @tuition_debts.each do |debt| %>
+              <tr>
+                <td><%= full_name(debt.academic_term) %></td>
+                <td><%= debt.student.unit.name %></td>
+                <td><%= full_name(debt.student.user.identities.formal.first)%></td>
+                <td><%= number_to_currency(debt.amount) %></td>
+                <td><%= debt.description %></td>
+                <td><%= link_to_actions(debt, except: %i[show edit]) %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+

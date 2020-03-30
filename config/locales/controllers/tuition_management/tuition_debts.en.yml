@@ -1,0 +1,21 @@
+en:
+  activerecord:
+    attributes:
+      tuition_debt: &tuition_debt_attributes
+        academic_term: Academic Term
+        amount: Amount
+        description: Description
+        student: Student
+        unit: Unit
+        unit_ids: Units
+  tuition_management:
+    tuition_debts:
+      destroy:
+        success: Tuition debt successfully deleted.
+        warning: Tuition debt can not be deleted!
+      index:
+        <<: *tuition_debt_attributes
+        add_bulk_tuition_debt: Add Bulk Tuition Debt
+        card_header: Tuition Debts
+      new:
+        form_bulk_title: Create Bulk Tuition Debt

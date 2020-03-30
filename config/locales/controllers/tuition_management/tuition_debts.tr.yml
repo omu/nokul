@@ -1,0 +1,21 @@
+tr:
+  activerecord:
+    attributes:
+      tuition_debt: &tuition_debt_attributes
+        academic_term: Akademik Dönem
+        amount: Meblağ
+        description: Açıklama
+        student: Öğrenci
+        unit: Birim
+        unit_ids: Birimler
+  tuition_management:
+    tuition_debts:
+      destroy:
+        success: Harç borcu silindi
+        warning: Harç borcu silinemedi!
+      index:
+        <<: *tuition_debt_attributes
+        add_bulk_tuition_debt: Toplu Harç Borcu Ekle
+        card_header: Harç Borçları
+      new:
+        form_bulk_title: Toplu Harç Borcu Oluşturma
