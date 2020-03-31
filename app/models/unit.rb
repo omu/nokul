@@ -66,6 +66,7 @@ class Unit < ApplicationRecord
   scope :administratives,        -> { where(unit_type: UnitType.administrative) }
   scope :committees,             -> { where(unit_type: UnitType.committee) }
   scope :departments,            -> { where(unit_type: UnitType.department) }
+  scope :evenings,               -> { where(unit_instruction_type: UnitInstructionType.evening) }
   scope :faculties,              -> { where(unit_type: UnitType.faculty) }
   scope :graduate_programs,      -> { where(unit_type: UnitType.graduate_program) }
   scope :institutes,             -> { where(unit_type: UnitType.institute) }
@@ -74,7 +75,6 @@ class Unit < ApplicationRecord
   scope :partially_passive,      -> { where(unit_status: UnitStatus.partially_passive) }
   scope :programs,               -> { where(unit_type: UnitType.program) }
   scope :research_centers,       -> { where(unit_type: UnitType.research_center) }
-  scope :secondary,              -> { where(unit_instruction_type: UnitInstructionType.secondary) }
   scope :senates,                -> { where(unit_type: UnitType.senate) }
   scope :undergraduate_programs, -> { where(unit_type: UnitType.undergraduate_program) }
   scope :without_programs,       -> { where.not(unit_type: UnitType.program) }
@@ -124,6 +124,10 @@ class Unit < ApplicationRecord
 
   def program?
     UnitType.program.ids.include?(unit_type_id)
+  end
+
+  def evening?
+    Unit.evenings.ids.include?(id)
   end
 
   # custom methods
