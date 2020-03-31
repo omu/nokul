@@ -8,7 +8,7 @@ require_relative '../operation/no_discount'
 module Debt
   module Tuition
     module Process
-      class SecondaryEducation < TuitionHandler
+      class EveningEducation < TuitionHandler
         def self.chain
           Operation::Scholarship.new(Operation::Disability.new(Operation::NoDiscount.new))
         end

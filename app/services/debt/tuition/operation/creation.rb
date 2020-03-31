@@ -6,8 +6,6 @@ module Debt
   module Tuition
     module Operation
       module Creation
-        include ActiveSupport::Concern
-
         def create_debt(params, description)
           ::TuitionDebt.create(
             student:       params.student,
