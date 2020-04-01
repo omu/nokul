@@ -37,8 +37,8 @@ en:
       show:
         <<: *accreditation_standard_attributes
         card_header: Learning Outcomes
-        new_outcome_link: Create a New Learning Outcome
-        outcome_code: Code
-        outcome_name: Name
+        new_learning_outcome_link: Create a New Learning Outcome
+        learning_outcome_code: Code
+        learning_outcome_name: Name
       update:
         success: Accreditation standard successfully updated.

@@ -30,7 +30,7 @@ tr:
     image:
       not_permitted: '%{mime_type} izin verilen bir dosya türü değil. %{extension_whitelist} türlerinde bir dosya yükleyebilirsiniz'
       size_not_satisfied: Dosya boyutu izin verilen aralıkta değil. Yükleyeceğiniz dosya en az %{minimum} KB, en çok %{maximum} MB boyutunda olabilir.
-    outcome:
+    learning_outcome:
       invalid_code: Birden farklı öğrenim çıktısına aynı kod verilmiş, kod alanı benzersiz olmalıdır.
       must_be_uniq: benzersiz olmalıdır.
     prospective_student:

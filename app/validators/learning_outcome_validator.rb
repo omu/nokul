@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class OutcomeValidator < ActiveModel::Validator
+class LearningOutcomeValidator < ActiveModel::Validator
   def validate(record)
     @record = record
     @micro_outcomes = record.micro_outcomes
@@ -28,6 +28,6 @@ class OutcomeValidator < ActiveModel::Validator
   private
 
   def message(key)
-    I18n.t(key, scope: %i[validators outcome])
+    I18n.t(key, scope: %i[validators learning_outcome])
   end
 end

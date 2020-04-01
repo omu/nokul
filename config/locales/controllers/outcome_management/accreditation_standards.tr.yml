@@ -37,8 +37,8 @@ tr:
       show:
         <<: *accreditation_standard_attributes
         card_header: Öğrenim Çıktıları
-        new_outcome_link: Yeni Öğrenim Çıktısı Oluştur
-        outcome_code: Kodu
-        outcome_name: Adı
+        new_learning_outcome_link: Yeni Öğrenim Çıktısı Oluştur
+        learning_outcome_code: Kodu
+        learning_outcome_name: Adı
       update:
         success: Akreditasyon standardı başarıyla güncellendi.

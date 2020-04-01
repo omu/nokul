@@ -2,15 +2,15 @@
 
 require 'test_helper'
 
-class OutcomeTest < ActiveSupport::TestCase
+class LearningOutcomeTest < ActiveSupport::TestCase
   extend Support::Minitest::AssociationHelper
   extend Support::Minitest::ValidationHelper
 
   # relations
   belongs_to :accreditation_standard
-  belongs_to :macro_outcome, class_name: 'Outcome', foreign_key: :parent_id,
+  belongs_to :macro_outcome, class_name: 'LearningOutcome', foreign_key: :parent_id,
                              inverse_of: :micro_outcomes, optional: true
-  has_many :micro_outcomes, class_name: 'Outcome', foreign_key: :parent_id,
+  has_many :micro_outcomes, class_name: 'LearningOutcome', foreign_key: :parent_id,
                             inverse_of: :macro_outcome, dependent: :destroy
   accepts_nested_attributes_for :micro_outcomes, allow_destroy: true
 
@@ -23,16 +23,16 @@ class OutcomeTest < ActiveSupport::TestCase
   validates_length_of :name, maximum: 255
 
   # validations: uniqueness
-  test 'uniqueness validations for code of a outcome' do
-    fake = outcomes(:one).dup
+  test 'uniqueness validations for code of a learning outcome' do
+    fake = learning_outcomes(:one).dup
     assert_not fake.valid?
     assert_not_empty fake.errors[:code]
   end
 
   # scopes
-  test 'ordered returns outcomes ordered by code' do
-    outcomes = accreditation_standards(:one).macro_outcomes.ordered
-    assert_equal outcomes(:one), outcomes.first
-    assert_equal outcomes(:four), outcomes.last
+  test 'ordered returns learning outcomes ordered by code' do
+    learning_outcomes = accreditation_standards(:one).macro_outcomes.ordered
+    assert_equal learning_outcomes(:one), learning_outcomes.first
+    assert_equal learning_outcomes(:four), learning_outcomes.last
   end
 end

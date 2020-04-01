@@ -2286,6 +2286,44 @@ ALTER SEQUENCE public.ldap_sync_errors_id_seq OWNED BY public.ldap_sync_errors.i
 
 
 --
+-- Name: learning_outcomes; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.learning_outcomes (
+    id bigint NOT NULL,
+    accreditation_standard_id bigint NOT NULL,
+    parent_id bigint,
+    code character varying,
+    name character varying,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT learning_outcomes_code_length CHECK ((length((code)::text) <= 10)),
+    CONSTRAINT learning_outcomes_code_presence CHECK (((code IS NOT NULL) AND ((code)::text !~ '^\s*$'::text))),
+    CONSTRAINT learning_outcomes_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT learning_outcomes_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
+);
+
+
+--
+-- Name: learning_outcomes_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.learning_outcomes_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: learning_outcomes_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.learning_outcomes_id_seq OWNED BY public.learning_outcomes.id;
+
+
+--
 -- Name: meeting_agendas; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -2318,44 +2356,6 @@ CREATE SEQUENCE public.meeting_agendas_id_seq
 --
 
 ALTER SEQUENCE public.meeting_agendas_id_seq OWNED BY public.meeting_agendas.id;
-
-
---
--- Name: outcomes; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.outcomes (
-    id bigint NOT NULL,
-    accreditation_standard_id bigint NOT NULL,
-    parent_id bigint,
-    code character varying,
-    name character varying,
-    created_at timestamp(6) without time zone NOT NULL,
-    updated_at timestamp(6) without time zone NOT NULL,
-    CONSTRAINT outcomes_code_length CHECK ((length((code)::text) <= 10)),
-    CONSTRAINT outcomes_code_presence CHECK (((code IS NOT NULL) AND ((code)::text !~ '^\s*$'::text))),
-    CONSTRAINT outcomes_name_length CHECK ((length((name)::text) <= 255)),
-    CONSTRAINT outcomes_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
-);
-
-
---
--- Name: outcomes_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE public.outcomes_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: outcomes_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE public.outcomes_id_seq OWNED BY public.outcomes.id;
 
 
 --
@@ -4332,17 +4332,17 @@ ALTER TABLE ONLY public.ldap_sync_errors ALTER COLUMN id SET DEFAULT nextval('pu
 
 
 --
+-- Name: learning_outcomes id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.learning_outcomes ALTER COLUMN id SET DEFAULT nextval('public.learning_outcomes_id_seq'::regclass);
+
+
+--
 -- Name: meeting_agendas id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.meeting_agendas ALTER COLUMN id SET DEFAULT nextval('public.meeting_agendas_id_seq'::regclass);
-
-
---
--- Name: outcomes id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.outcomes ALTER COLUMN id SET DEFAULT nextval('public.outcomes_id_seq'::regclass);
 
 
 --
@@ -5180,27 +5180,27 @@ ALTER TABLE ONLY public.ldap_sync_errors
 
 
 --
+-- Name: learning_outcomes learning_outcomes_accreditation_standard_id_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.learning_outcomes
+    ADD CONSTRAINT learning_outcomes_accreditation_standard_id_code_unique UNIQUE (accreditation_standard_id, code) DEFERRABLE;
+
+
+--
+-- Name: learning_outcomes learning_outcomes_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.learning_outcomes
+    ADD CONSTRAINT learning_outcomes_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: meeting_agendas meeting_agendas_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.meeting_agendas
     ADD CONSTRAINT meeting_agendas_pkey PRIMARY KEY (id);
-
-
---
--- Name: outcomes outcomes_accreditation_standard_id_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.outcomes
-    ADD CONSTRAINT outcomes_accreditation_standard_id_code_unique UNIQUE (accreditation_standard_id, code) DEFERRABLE;
-
-
---
--- Name: outcomes outcomes_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.outcomes
-    ADD CONSTRAINT outcomes_pkey PRIMARY KEY (id);
 
 
 --
@@ -6281,6 +6281,20 @@ CREATE INDEX index_ldap_sync_errors_on_ldap_entity_id ON public.ldap_sync_errors
 
 
 --
+-- Name: index_learning_outcomes_on_accreditation_standard_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_learning_outcomes_on_accreditation_standard_id ON public.learning_outcomes USING btree (accreditation_standard_id);
+
+
+--
+-- Name: index_learning_outcomes_on_parent_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_learning_outcomes_on_parent_id ON public.learning_outcomes USING btree (parent_id);
+
+
+--
 -- Name: index_meeting_agendas_on_agenda_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6292,20 +6306,6 @@ CREATE INDEX index_meeting_agendas_on_agenda_id ON public.meeting_agendas USING 
 --
 
 CREATE INDEX index_meeting_agendas_on_committee_meeting_id ON public.meeting_agendas USING btree (committee_meeting_id);
-
-
---
--- Name: index_outcomes_on_accreditation_standard_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX index_outcomes_on_accreditation_standard_id ON public.outcomes USING btree (accreditation_standard_id);
-
-
---
--- Name: index_outcomes_on_parent_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX index_outcomes_on_parent_id ON public.outcomes USING btree (parent_id);
 
 
 --
@@ -6753,19 +6753,19 @@ ALTER TABLE ONLY public.addresses
 
 
 --
+-- Name: learning_outcomes fk_rails_233dbdf7c4; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.learning_outcomes
+    ADD CONSTRAINT fk_rails_233dbdf7c4 FOREIGN KEY (accreditation_standard_id) REFERENCES public.accreditation_standards(id);
+
+
+--
 -- Name: unit_tuitions fk_rails_2b01e356e7; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.unit_tuitions
     ADD CONSTRAINT fk_rails_2b01e356e7 FOREIGN KEY (unit_id) REFERENCES public.units(id);
-
-
---
--- Name: outcomes fk_rails_2ea1d50d55; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.outcomes
-    ADD CONSTRAINT fk_rails_2ea1d50d55 FOREIGN KEY (accreditation_standard_id) REFERENCES public.accreditation_standards(id);
 
 
 --
@@ -6854,14 +6854,6 @@ ALTER TABLE ONLY public.curriculums
 
 ALTER TABLE ONLY public.articles
     ADD CONSTRAINT fk_rails_3d31dad1cc FOREIGN KEY (user_id) REFERENCES public.users(id);
-
-
---
--- Name: outcomes fk_rails_3ea0ff4a78; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.outcomes
-    ADD CONSTRAINT fk_rails_3ea0ff4a78 FOREIGN KEY (parent_id) REFERENCES public.outcomes(id);
 
 
 --
@@ -7262,6 +7254,14 @@ ALTER TABLE ONLY public.classrooms
 
 ALTER TABLE ONLY public.available_courses
     ADD CONSTRAINT fk_rails_a9099f01f5 FOREIGN KEY (coordinator_id) REFERENCES public.employees(id);
+
+
+--
+-- Name: learning_outcomes fk_rails_ab9bdb6c0a; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.learning_outcomes
+    ADD CONSTRAINT fk_rails_ab9bdb6c0a FOREIGN KEY (parent_id) REFERENCES public.learning_outcomes(id);
 
 
 --

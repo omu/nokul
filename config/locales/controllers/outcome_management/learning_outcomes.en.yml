@@ -1,17 +1,17 @@
 tr:
   activerecord:
     attributes:
-      outcome: &outcome_attributes
+      learning_outcome: &learning_outcome_attributes
         code: Code
         name: Name
         outcomes: Sub Learning Outcomes
   helpers:
     submit:
-      outcome:
+      learning_outcome:
         create: Create Learning Outcome
         update: Update Learning Outcome
   outcome_management:
-    outcomes:
+    learning_outcomes:
       create:
         success: Learning outcome successfully created.
       destroy:
@@ -26,6 +26,6 @@ tr:
       new:
         form_title: Create a New Learning Outcome
       show:
-        <<: *outcome_attributes
+        <<: *learning_outcome_attributes
       update:
         success: Learning outcome successfully updated.

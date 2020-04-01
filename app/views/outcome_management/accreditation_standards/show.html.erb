@@ -29,11 +29,11 @@
             </tr>
             <tr>
               <td><%= t('created_at') %></td>
-              <td><%= @accreditation_standard.created_at %></td>
+              <td><%= l(@accreditation_standard.created_at, format: :long) %></td>
             </tr>
             <tr>
               <td><%= t('updated_at') %></td>
-              <td><%= @accreditation_standard.updated_at %></td>
+              <td><%= l(@accreditation_standard.updated_at, format: :long) %></td>
             </tr>
           </tbody>
         </table>
@@ -48,24 +48,24 @@
       <div class='card-header'>
         <%= fa_icon 'dot-circle-o', text: t('.card_header') %>
         <div class='card-header-actions'>
-          <%= link_to_new(t('.new_outcome_link'), new_accreditation_standard_outcome_path(@accreditation_standard)) %>
+          <%= link_to_new(t('.new_learning_outcome_link'), new_accreditation_standard_learning_outcome_path(@accreditation_standard)) %>
         </div>
       </div>
       <div class='card-body'>
         <table class='table table-responsive-sm table-sm'>
           <thead>
             <tr>
-              <th><%= t('.outcome_code') %></th>
-              <th><%= t('.outcome_name') %></th>
+              <th><%= t('.learning_outcome_code') %></th>
+              <th><%= t('.learning_outcome_name') %></th>
               <th><%= t('actions') %></th>
             </tr>
           </thead>
           <tbody>
-            <% @outcomes.each do |outcome| %>
+            <% @learning_outcomes.each do |learning_outcome| %>
               <tr>
-                <td><%= outcome.code %></td>
-                <td><%= outcome.name %></td>
-                <td><%= link_to_actions([@accreditation_standard, outcome]) %></td>
+                <td><%= learning_outcome.code %></td>
+                <td><%= learning_outcome.name %></td>
+                <td><%= link_to_actions([@accreditation_standard, learning_outcome]) %></td>
               </tr>
             <% end %>
           </tbody>

@@ -12,8 +12,8 @@ class AccreditationStandardTest < ActiveSupport::TestCase
 
   # relations
   belongs_to :accreditation_institution
-  has_many :macro_outcomes, class_name: 'Outcome', inverse_of: :accreditation_standard
-  has_many :outcomes, dependent: :destroy
+  has_many :macro_outcomes, class_name: 'LearningOutcome', inverse_of: :accreditation_standard
+  has_many :learning_outcomes, dependent: :destroy
   has_many :unit_accreditation_standards, dependent: :destroy
   has_many :units, through: :unit_accreditation_standards
 

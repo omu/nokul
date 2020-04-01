@@ -30,7 +30,7 @@ en:
     image:
       not_permitted: '%{mime_type} is not an allowed file type. You can upload files in %{extension_whitelist} formats.'
       size_not_satisfied: File size is not between the permitted range. You can upload files from minimum %{minimum} KBs to maximum %{maximum} MBs.
-    outcome:
+    learning_outcome:
       invalid_code: Multiple learning outcome have the same code, the code field must be unique.
       must_be_uniq: must be unique.
     prospective_student:

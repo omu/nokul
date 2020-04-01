@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module OutcomeManagement
-  class OutcomePolicy < ApplicationPolicy
+  class LearningOutcomePolicy < ApplicationPolicy
     include CrudPolicyMethods
 
     undef :index?

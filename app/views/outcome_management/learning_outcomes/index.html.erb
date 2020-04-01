@@ -4,7 +4,7 @@
       <div class='card-header'>
         <%= fa_icon 'align-justify', text: t('.card_header') %>
         <div class='card-header-actions'>
-          <%= link_to_new(t('.new_outcome_link'), new_accreditation_standard_outcome_path(@accreditation_standard)) %>
+          <%= link_to_new(t('.new_learning_outcome_link'), new_accreditation_standard_learning_outcome_path(@accreditation_standard)) %>
         </div>
       </div>
       <div class='card-body'>
@@ -17,11 +17,11 @@
             </tr>
           </thead>
           <tbody>
-            <% @outcomes.each do |outcome| %>
+            <% @learning_outcomes.each do |learning_outcome| %>
               <tr>
-                <td><%= outcome.code %></td>
-                <td><%= outcome.name %></td>
-                <td><%= link_to_actions[@accreditation_standard, outcome]) %></td>
+                <td><%= learning_outcome.code %></td>
+                <td><%= learning_outcome.name %></td>
+                <td><%= link_to_actions[@accreditation_standard, learning_outcome]) %></td>
               </tr>
             <% end %>
           </tbody>

@@ -24,7 +24,7 @@
         </table>
         <hr>
 
-        <%= simple_form_for([@accreditation_standard, @outcome]) do |f| %>
+        <%= simple_form_for([@accreditation_standard, @learning_outcome]) do |f| %>
           <div class='row'>
             <div class='form-group col-sm-12'>
               <%= f.error_notification %>
@@ -41,7 +41,7 @@
               <div class='card card-default'>
                 <div class='card-header'>
                   <%= fa_icon 'dot-circle-o' %>
-                  <strong><%= t('outcomes', scope: %i[activerecord attributes outcome]) %></strong>
+                  <strong><%= t('outcomes', scope: %i[activerecord attributes learning_outcome]) %></strong>
                 </div>
                 <div class='card-body bg-light'>
                   <div class='row'>
