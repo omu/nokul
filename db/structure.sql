@@ -3408,7 +3408,7 @@ CREATE TABLE public.tuition_debts (
     id bigint NOT NULL,
     student_id bigint NOT NULL,
     academic_term_id bigint NOT NULL,
-    unit_tuition_id bigint NOT NULL,
+    unit_tuition_id bigint,
     amount numeric(8,3),
     description text,
     created_at timestamp(6) without time zone NOT NULL,

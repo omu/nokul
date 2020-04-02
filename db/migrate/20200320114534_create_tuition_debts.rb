@@ -5,7 +5,7 @@ class CreateTuitionDebts < ActiveRecord::Migration[6.0]
     create_table :tuition_debts do |t|
       t.references :student, null: false, foreign_key: true
       t.references :academic_term, null: false, foreign_key: true
-      t.references :unit_tuition, null: false, foreign_key: true
+      t.references :unit_tuition, foreign_key: true
       t.decimal :amount, precision: 8, scale: 3
       t.text :description
 
