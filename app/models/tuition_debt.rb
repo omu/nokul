@@ -2,7 +2,7 @@
 
 class TuitionDebt < ApplicationRecord
   # virtual attributes
-  attr_accessor :unit_ids
+  attr_accessor :unit_ids, :unit_id
 
   # relations
   belongs_to :student
