@@ -3,7 +3,7 @@
 class UnitsController < ApplicationController
   include SearchableModule
 
-  before_action :set_unit, only: %i[edit update destroy show courses programs curriculums employees]
+  before_action :set_unit, only: %i[edit update destroy show courses programs curriculums employees students]
   before_action :authorized?
 
   def index
@@ -56,6 +56,10 @@ class UnitsController < ApplicationController
   def employees
     @employees = Employee.includes(:units, :title, user: :identities)
                          .where(units: { id: @unit.subtree.active.ids })
+  end
+
+  def students
+    @students = @unit.students.active
   end
 
   private
