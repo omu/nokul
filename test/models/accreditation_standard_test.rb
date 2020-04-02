@@ -34,4 +34,13 @@ class AccreditationStandardTest < ActiveSupport::TestCase
     assert_not fake.valid?
     assert_not_empty fake.errors[:version]
   end
+
+  # validations: format
+  test 'format validations for version of a accreditation standard' do
+    accreditation_standard = accreditation_standards(:one)
+    accreditation_standard.version = 'AAA'
+    assert_not accreditation_standard.valid?
+    accreditation_standard.version = '1.0'
+    assert accreditation_standard.valid?
+  end
 end

@@ -4,6 +4,7 @@ tr:
     encoding_mismatch: Mesaj metin kodlaması talep edilen kodlama ile eşleşmiyor!
     invalid_phone_number: Geçerli bir telefon numarası değil!
     invalid_email: Geçerli bir e-mail adresi değil!
+    invalid_version: Geçerli bir versiyon numarası değil!
     system_error: Sistemsel bir hata oluştu. Lütfen daha sonra tekrar deneyin.
     unicode_not_supported: Alıcı numara unicode desteklemiyor!
     invalid_authenticity_token: Geçersiz kimlik doğrulama jetonu! Lütfen tekrar deneyin.

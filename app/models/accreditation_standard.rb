@@ -20,7 +20,8 @@ class AccreditationStandard < ApplicationRecord
 
   # validations
   validates :status, inclusion: { in: statuses.keys }
-  validates :version, presence: true, uniqueness: { scope: :accreditation_institution_id }, length: { maximum: 50 }
+  validates :version, presence: true, uniqueness: { scope: :accreditation_institution_id }, length: { maximum: 50 },
+                      format: { with: /\A(\d+)(\.\d+)?(\.\d+)?\z/, message: I18n.t('errors.invalid_version') }
   validates_associated :unit_accreditation_standards
 
   # delegates
