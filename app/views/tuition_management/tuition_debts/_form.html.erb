@@ -11,7 +11,7 @@
             <div class='form-group col-sm-12'>
               <%= f.error_notification %>
             </div>
-            <% if params[:action] == 'new' %>
+            <% if @tuition_debt.new_record? %>
               <div class='form-group col-sm-6'>
                 <%= f.input :unit_id, collection: Unit.programs.active, label_method: :name, required: true %>
               </div>
@@ -27,6 +27,9 @@
             </div>
             <div class='form-group col-sm-12'>
               <%= f.input :description %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.hidden_field :type, value: :personal %>
             </div>
             <div class='form-group col-sm-12'>
               <%= f.button :submit, t('save'), class: 'btn btn-outline-success btn-sm' %>

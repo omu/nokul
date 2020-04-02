@@ -4,7 +4,11 @@ require 'test_helper'
 
 class TuitionDebtTest < ActiveSupport::TestCase
   extend Support::Minitest::AssociationHelper
+  extend Support::Minitest::EnumerationHelper
   extend Support::Minitest::ValidationHelper
+
+  # enums
+  enum type: { personal: 1, bulk: 2 }
 
   # relations
   belongs_to :student

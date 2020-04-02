@@ -43,7 +43,7 @@ module TuitionManagement
     end
 
     def tuition_debt_params
-      params.require(:tuition_debt).permit(:student_id, :academic_term_id, :unit_tuition_id, :amount, :description)
+      params.require(:tuition_debt).permit(:student_id, :academic_term_id, :amount, :description, :type, :paid)
     end
   end
 end

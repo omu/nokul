@@ -4,3 +4,5 @@ one:
   unit_tuition: one
   amount: 2.460,00
   description: Yurtdışından kabul edilen öğrenciler kapsamında borçlandırılma yapılmıştır.
+  type: :personal
+  paid: false

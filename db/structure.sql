@@ -3411,11 +3411,16 @@ CREATE TABLE public.tuition_debts (
     unit_tuition_id bigint,
     amount numeric(8,3),
     description text,
+    type integer,
+    paid boolean DEFAULT false,
     created_at timestamp(6) without time zone NOT NULL,
     updated_at timestamp(6) without time zone NOT NULL,
     CONSTRAINT tuition_debts_amount_null CHECK ((amount IS NOT NULL)),
     CONSTRAINT tuition_debts_amount_numericality CHECK ((amount > (0)::numeric)),
-    CONSTRAINT tuition_debts_description_length CHECK ((length(description) <= 65535))
+    CONSTRAINT tuition_debts_description_length CHECK ((length(description) <= 65535)),
+    CONSTRAINT tuition_debts_paid_null CHECK ((paid IS NOT NULL)),
+    CONSTRAINT tuition_debts_type_null CHECK ((type IS NOT NULL)),
+    CONSTRAINT tuition_debts_type_numericality CHECK ((type >= 0))
 );
 
 

@@ -12,7 +12,8 @@ module Debt
             academic_term: params.academic_term,
             unit_tuition:  params.unit_tuition,
             amount:        params.amount,
-            description:   description
+            description:   description,
+            type:          :bulk
           )
         end
       end
