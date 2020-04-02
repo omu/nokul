@@ -25,18 +25,18 @@ module OutcomeManagement
         post accreditation_standard_learning_outcomes_path(@accreditation_standard), params: {
           learning_outcome: {
             code: 'PÇ-3', name: 'Çözme ve uygulayabilme becerisi',
-            micro_outcomes_attributes: {
+            micros_attributes: {
               '0' => { accreditation_standard_id: @accreditation_standard.id, code: 'PÇ3-1', name: 'Çözme becerisi' }
             }
           }
         }
       end
 
-      learning_outcome = @accreditation_standard.macro_outcomes.last
+      learning_outcome = @accreditation_standard.macro_learning_outcomes.last
 
       assert_equal 'PÇ-3', learning_outcome.code
       assert_equal 'Çözme ve uygulayabilme becerisi', learning_outcome.name
-      assert_equal 1, learning_outcome.micro_outcomes.count
+      assert_equal 1, learning_outcome.micros.count
       assert_redirected_to accreditation_standard_path(@accreditation_standard)
     end
 
@@ -50,7 +50,7 @@ module OutcomeManagement
       patch accreditation_standard_learning_outcome_path(@accreditation_standard, @learning_outcome), params: {
         learning_outcome: {
           code: 'PÇ1', name: 'Seçme ve uygulama becerisi.',
-          micro_outcomes_attributes: {
+          micros_attributes: {
             '0' => { accreditation_standard_id: @accreditation_standard.id, code: 'PÇ1-1', name: 'Seçme becerisi.' }
           }
         }
@@ -60,7 +60,7 @@ module OutcomeManagement
 
       assert_equal 'PÇ1', @learning_outcome.code
       assert_equal 'Seçme ve uygulama becerisi.', @learning_outcome.name
-      assert_equal 'PÇ1-1', @learning_outcome.micro_outcomes.ordered.first.code
+      assert_equal 'PÇ1-1', @learning_outcome.micros.ordered.first.code
       assert_redirected_to accreditation_standard_path(@accreditation_standard)
       assert_equal translate('.update.success'), flash[:info]
     end

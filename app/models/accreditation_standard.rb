@@ -12,8 +12,9 @@ class AccreditationStandard < ApplicationRecord
 
   # relations
   belongs_to :accreditation_institution
-  has_many :macro_outcomes, -> { where(parent_id: nil) }, class_name: 'LearningOutcome', inverse_of: :accreditation_standard
   has_many :learning_outcomes, dependent: :destroy
+  has_many :macro_learning_outcomes, -> { where(parent_id: nil) },
+           class_name: 'LearningOutcome', inverse_of: :accreditation_standard
   has_many :unit_accreditation_standards, dependent: :destroy
   has_many :units, through: :unit_accreditation_standards
 

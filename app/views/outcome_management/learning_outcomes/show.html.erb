@@ -41,10 +41,10 @@
             </tr>
           </thead>
           <tbody>
-            <% @learning_outcome.micro_outcomes.each do |outcome| %>
+            <% @learning_outcome.micros.each do |learning_outcome| %>
               <tr>
-                <td><%= outcome.code %></td>
-                <td><%= outcome.name %></td>
+                <td><%= learning_outcome.code %></td>
+                <td><%= learning_outcome.name %></td>
               </tr>
             <% end %>
           </tbody>

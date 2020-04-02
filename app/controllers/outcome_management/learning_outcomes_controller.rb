@@ -41,7 +41,7 @@ module OutcomeManagement
     end
 
     def set_learning_outcome
-      @learning_outcome = @accreditation_standard.macro_outcomes.find(params[:id])
+      @learning_outcome = @accreditation_standard.macro_learning_outcomes.find(params[:id])
     end
 
     def authorized?
@@ -51,7 +51,7 @@ module OutcomeManagement
     def learning_outcome_params
       params.require(:learning_outcome).permit(
         :code, :name, :accreditation_standard_id,
-        micro_outcomes_attributes: %i[id code name accreditation_standard_id _destroy]
+        micros_attributes: %i[id code name accreditation_standard_id _destroy]
       )
     end
   end

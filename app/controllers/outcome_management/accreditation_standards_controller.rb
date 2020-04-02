@@ -16,7 +16,7 @@ module OutcomeManagement
     end
 
     def show
-      @learning_outcomes = @accreditation_standard.macro_outcomes.ordered
+      @learning_outcomes = @accreditation_standard.macro_learning_outcomes.ordered
     end
 
     def new

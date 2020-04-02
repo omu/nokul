@@ -8,11 +8,11 @@ class LearningOutcomeTest < ActiveSupport::TestCase
 
   # relations
   belongs_to :accreditation_standard
-  belongs_to :macro_outcome, class_name: 'LearningOutcome', foreign_key: :parent_id,
-                             inverse_of: :micro_outcomes, optional: true
-  has_many :micro_outcomes, class_name: 'LearningOutcome', foreign_key: :parent_id,
-                            inverse_of: :macro_outcome, dependent: :destroy
-  accepts_nested_attributes_for :micro_outcomes, allow_destroy: true
+  belongs_to :macro, class_name: 'LearningOutcome', foreign_key: :parent_id,
+                     inverse_of: :micros, optional: true
+  has_many :micros, class_name: 'LearningOutcome', foreign_key: :parent_id,
+                    inverse_of: :macro, dependent: :destroy
+  accepts_nested_attributes_for :micros, allow_destroy: true
 
   # validations: presence
   validates_presence_of :code
@@ -31,7 +31,7 @@ class LearningOutcomeTest < ActiveSupport::TestCase
 
   # scopes
   test 'ordered returns learning outcomes ordered by code' do
-    learning_outcomes = accreditation_standards(:one).macro_outcomes.ordered
+    learning_outcomes = accreditation_standards(:one).macro_learning_outcomes.ordered
     assert_equal learning_outcomes(:one), learning_outcomes.first
     assert_equal learning_outcomes(:four), learning_outcomes.last
   end

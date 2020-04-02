@@ -3,8 +3,8 @@
 class LearningOutcomeValidator < ActiveModel::Validator
   def validate(record)
     @record = record
-    @micro_outcomes = record.micro_outcomes
-    @codes = @micro_outcomes.map(&:code).push(record.code)
+    @micros = record.micros
+    @codes = @micros.map(&:code).push(record.code)
     return if codes_unique?
 
     add_error_message_to_invalid_records
@@ -18,8 +18,8 @@ class LearningOutcomeValidator < ActiveModel::Validator
   def add_error_message_to_invalid_records
     invalid_codes = @codes.select { |code| @codes.count(code) > 1 }.uniq
 
-    @micro_outcomes.each do |micro_outcome|
-      micro_outcome.errors.add(:code, message('must_be_uniq')) if invalid_codes.include?(micro_outcome.code)
+    @micros.each do |learning_outcome|
+      learning_outcome.errors.add(:code, message('must_be_uniq')) if invalid_codes.include?(learning_outcome.code)
     end
 
     @record.errors.add(:code, message('must_be_uniq')) if invalid_codes.include?(@record.code)
