@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module OutcomeManagement
+module AccreditationManagement
   class AccreditationStandardPolicy < ApplicationPolicy
     include CrudPolicyMethods
 
@@ -11,7 +11,7 @@ module OutcomeManagement
     private
 
     def permitted?(*privileges)
-      user.privilege? :outcome_management, privileges
+      user.privilege? :accreditation_management, privileges
     end
   end
 end

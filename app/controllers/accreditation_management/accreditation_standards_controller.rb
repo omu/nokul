@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module OutcomeManagement
+module AccreditationManagement
   class AccreditationStandardsController < ApplicationController
     include SearchableModule
 
@@ -55,7 +55,7 @@ module OutcomeManagement
     end
 
     def authorized?
-      authorize([:outcome_management, @accreditation_standard || AccreditationStandard])
+      authorize([:accreditation_management, @accreditation_standard || AccreditationStandard])
     end
 
     def accreditation_standard_params

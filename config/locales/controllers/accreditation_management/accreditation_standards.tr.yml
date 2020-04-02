@@ -16,7 +16,7 @@ tr:
       accreditation_standard:
         create: Akreditasyon Standardı Oluştur
         update: Akreditasyon Standardını Güncelle
-  outcome_management:
+  accreditation_management:
     accreditation_standards:
       create:
         success: Akreditasyon standardı başarıyla oluşturuldu.

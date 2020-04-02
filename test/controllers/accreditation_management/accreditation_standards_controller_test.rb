@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-module OutcomeManagement
+module AccreditationManagement
   class AccreditationStandardsControllerTest < ActionDispatch::IntegrationTest
     setup do
       sign_in users(:serhat)
@@ -89,7 +89,7 @@ module OutcomeManagement
     private
 
     def translate(key)
-      t("outcome_management.accreditation_standards#{key}")
+      t("accreditation_management.accreditation_standards#{key}")
     end
   end
 end

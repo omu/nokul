@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module OutcomeManagement
+module AccreditationManagement
   class LearningOutcomesController < ApplicationController
     include SearchableModule
 
@@ -45,7 +45,7 @@ module OutcomeManagement
     end
 
     def authorized?
-      authorize([:outcome_management, @learning_outcome || LearningOutcome])
+      authorize([:accreditation_management, @learning_outcome || LearningOutcome])
     end
 
     def learning_outcome_params

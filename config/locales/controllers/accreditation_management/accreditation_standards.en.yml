@@ -16,7 +16,7 @@ en:
       accreditation_standard:
         create: Create Accreditation Standard
         update: Update Accreditation Standard
-  outcome_management:
+  accreditation_management:
     accreditation_standards:
       create:
         success: Accreditation standard successfully created.

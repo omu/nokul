@@ -2,12 +2,13 @@
 
 require 'pundit_test_case'
 
-module OutcomeManagement
-  class LearningOutcomePolicyTest < PunditTestCase
+module AccreditationManagement
+  class AccreditationStandardPolicyTest < PunditTestCase
     %w[
       create?
       destroy?
       edit?
+      index?
       new?
       show?
       update?

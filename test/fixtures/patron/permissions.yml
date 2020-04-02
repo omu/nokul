@@ -101,7 +101,7 @@ tuition_management:
   name: Harç Yönetimi
   identifier: tuition_management
   description: Harç Yönetim Yetkisi
-outcome_management:
+accreditation_management:
   name: Öğrenim Çıktılarının Yönetimi
-  identifier: outcome_management
+  identifier: accreditation_management
   description: Öğrenim Çıktısı Yönetim Yetkisi

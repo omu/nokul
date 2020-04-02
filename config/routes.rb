@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get :switch_account, to: 'application#switch_account'
 
   draw :account
+  draw :accreditation_management
   draw :calendar_management
   draw :course_management
   draw :detsis
@@ -24,7 +25,6 @@ Rails.application.routes.draw do
   draw :location
   draw :manager
   draw :meksis
-  draw :outcome_management
   draw :patron
   draw :reference
   draw :studentship

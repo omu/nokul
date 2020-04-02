@@ -65,7 +65,7 @@
     <%= fa_icon('dot-circle-o', class: 'nav-icon') %><%= t('.learning_outcomes') %>
   </a>
   <ul class="nav-dropdown-items">
-    <% if policy([:outcome_management, :accreditation_standard]).index? %>
+    <% if policy([:accreditation_management, :accreditation_standard]).index? %>
       <li class="nav-item">
         <%= link_to :accreditation_standards, class: 'nav-link' do %>
           <%= fa_icon('sitemap', text: t('.accreditation_standards'), class: 'nav-icon') %>

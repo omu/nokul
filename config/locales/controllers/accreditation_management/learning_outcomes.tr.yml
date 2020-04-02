@@ -10,7 +10,7 @@ tr:
       learning_outcome:
         create: Öğrenim Çıktısı Oluştur
         update: Öğrenim Çıktısını Güncelle
-  outcome_management:
+  accreditation_management:
     learning_outcomes:
       create:
         success: Öğrenim çıktısı başarıyla oluşturuldu.
