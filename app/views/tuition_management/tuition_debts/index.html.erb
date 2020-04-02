@@ -5,6 +5,7 @@
         <%= fa_icon 'money', text: t('.card_header') %>
         <div class='card-header-actions'>
           <%= link_to_new(t('.add_bulk_tuition_debt'), new_tuition_debt_path(type: 'bulk')) %>
+          <%= link_to_new(t('.add_personal_tuition_debt'), new_tuition_debt_path) %>
         </div>
       </div>
       <div class='card-body'>
@@ -27,7 +28,7 @@
                 <td><%= full_name(debt.student.user.identities.formal.first)%></td>
                 <td><%= number_to_currency(debt.amount) %></td>
                 <td><%= debt.description %></td>
-                <td><%= link_to_actions(debt, except: %i[show edit]) %></td>
+                <td><%= link_to_actions(debt, except: %i[show]) %></td>
               </tr>
             <% end %>
           </tbody>

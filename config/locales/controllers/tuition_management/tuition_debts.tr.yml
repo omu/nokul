@@ -7,19 +7,28 @@ tr:
         description: Açıklama
         student: Öğrenci
         unit: Birim
+        unit_id: Birim
         unit_ids: Birimler
   tuition_management:
     tuition_debts:
+      create:
+        success: Harç borcu başarıyla oluşturuldu.
       create_with_service:
         will_update: Harç borçları bir kaç saniye/dakika içerisinde oluşturulacaktır.
       destroy:
         success: Harç borcu silindi
         warning: Harç borcu silinemedi!
+      edit:
+        form_title: Harç Borcu Düzenleme
       form_bulk:
         create_tuition_debts: Harç Borçlarını Oluştur
       index:
         <<: *tuition_debt_attributes
         add_bulk_tuition_debt: Toplu Harç Borcu Ekle
+        add_personal_tuition_debt: Bireysel Harç Borcu Ekle
         card_header: Harç Borçları
       new:
         form_bulk_title: Toplu Harç Borcu Oluşturma
+        form_title: Kişiye Özel Harç Borcu Oluşturma
+      update:
+        success: Harç borcu başarıyla güncellendi.

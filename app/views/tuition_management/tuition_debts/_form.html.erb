@@ -1,0 +1,62 @@
+<div class='row'>
+  <div class='col-sm-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'money' %>
+        <strong><%= form_title %></strong>
+      </div>
+      <div class='card-body'>
+        <%= simple_form_for(@tuition_debt) do |f| %>
+          <div class='row'>
+            <div class='form-group col-sm-12'>
+              <%= f.error_notification %>
+            </div>
+            <% if params[:action] == 'new' %>
+              <div class='form-group col-sm-6'>
+                <%= f.input :unit_id, collection: Unit.programs.active, label_method: :name, required: true %>
+              </div>
+            <% end %>
+            <div class='form-group col-sm-6'>
+              <%= f.association :student, label_method: lambda { |student| full_name(student.user.identities.formal.first) } %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.association :academic_term, label_method: lambda { |academic_term| full_name(academic_term) } %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :amount %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.input :description %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.button :submit, t('save'), class: 'btn btn-outline-success btn-sm' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class='card-footer'>
+        <%= link_to_back(:back) %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'js'%>
+<script type='text/javascript'>
+  $(document).ready(function() {
+    $('#tuition_debt_student_id').select2()
+    var parameters = [
+      {
+        el: '#tuition_debt_unit_id',
+        target: '#tuition_debt_student_id',
+        params: { 'unit_id': '#tuition_debt_unit_id' },
+        source: '/units/:unit_id/students/',
+        label_attribute: 'full_name',
+        reset_selectors: '#tuition_debt_student_id'
+      }
+    ]
+
+    var dynamic_select = new DynamicSelect(parameters)
+    dynamic_select.init()
+  });
+</script>

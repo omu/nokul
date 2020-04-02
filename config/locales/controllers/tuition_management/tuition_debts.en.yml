@@ -7,19 +7,28 @@ en:
         description: Description
         student: Student
         unit: Unit
+        unit_id: Unit
         unit_ids: Units
   tuition_management:
     tuition_debts:
+      create:
+        success: Tuition debt successfully created.
       create_with_service:
         will_update: Tuition debts will be created in a couple of seconds/minutes.
       destroy:
         success: Tuition debt successfully deleted.
         warning: Tuition debt can not be deleted!
+      edit:
+        form_title: Edit Tuition Debt
       form_bulk:
         create_tuition_debts: Create Tuition Debts
       index:
         <<: *tuition_debt_attributes
         add_bulk_tuition_debt: Add Bulk Tuition Debt
+        add_personal_tuition_debt: Add Personal Tuition Debt
         card_header: Tuition Debts
       new:
         form_bulk_title: Create Bulk Tuition Debt
+        form_title: Create Personal Tuition Debt
+      update:
+        success: Tuition debt successfully updated.
