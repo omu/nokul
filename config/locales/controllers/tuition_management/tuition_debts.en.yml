@@ -6,6 +6,7 @@ en:
         amount: Amount
         description: Description
         student: Student
+        paid: Paid?
         unit: Unit
         unit_id: Unit
         unit_ids: Units
