@@ -31,5 +31,7 @@ en:
       new:
         form_bulk_title: Create Bulk Tuition Debt
         form_title: Create Personal Tuition Debt
+      search:
+        <<: *tuition_debt_attributes
       update:
         success: Tuition debt successfully updated.

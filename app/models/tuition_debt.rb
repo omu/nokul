@@ -6,6 +6,12 @@ class TuitionDebt < ApplicationRecord
   # virtual attributes
   attr_accessor :unit_ids, :unit_id
 
+  # search
+  include DynamicSearch
+
+  # dynamic_search
+  search_keys :academic_term_id, :student_id
+
   # enums
   enum type: { personal: 1, bulk: 2 }
 
@@ -13,6 +19,7 @@ class TuitionDebt < ApplicationRecord
   belongs_to :student
   belongs_to :academic_term
   belongs_to :unit_tuition, optional: true
+  has_one :unit, through: :unit_tuition
 
   # validations
   validates :amount, numericality: { greater_than: 0 }

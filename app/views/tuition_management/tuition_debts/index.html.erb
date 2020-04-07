@@ -9,6 +9,7 @@
         </div>
       </div>
       <div class='card-body'>
+        <%= render 'search' %>
         <table class='table table-responsive-sm table-striped table-hover'>
           <thead class='thead-dark'>
             <tr>
@@ -25,7 +26,7 @@
             <% @tuition_debts.each do |debt| %>
               <tr>
                 <td><%= full_name(debt.academic_term) %></td>
-                <td><%= debt.student.unit.name %></td>
+                <td><%= debt.unit_tuition.unit.name %></td>
                 <td><%= full_name(debt.student.user.identities.formal.first)%></td>
                 <td><%= number_to_currency(debt.amount) %></td>
                 <td><%= debt.description %></td>
@@ -37,5 +38,10 @@
         </table>
       </div>
     </div>
+    <nav aria-label='pagination'>
+      <ul class='pagination justify-content-center'>
+        <%== pagy_bootstrap_nav(@pagy) %>
+      </ul>
+    </nav>
   </div>
 </div>

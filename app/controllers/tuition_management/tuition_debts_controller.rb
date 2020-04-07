@@ -2,10 +2,17 @@
 
 module TuitionManagement
   class TuitionDebtsController < ApplicationController
+    include SearchableModule
+
     before_action :set_tuition_debt, only: %i[edit update destroy]
 
     def index
-      @tuition_debts = TuitionDebt.includes(:academic_term, student: %i[unit user])
+      tuition_debts =
+        TuitionDebt.includes(:academic_term, unit_tuition: :unit, student: :user).joins(:unit).where(
+          params[:unit_id].present? ? { units: { id: params[:unit_id] } } : {}
+        )
+
+      @pagy, @tuition_debts = pagy(tuition_debts.dynamic_search(search_params(TuitionDebt)))
     end
 
     def new

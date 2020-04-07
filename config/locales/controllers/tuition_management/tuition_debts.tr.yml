@@ -31,5 +31,7 @@ tr:
       new:
         form_bulk_title: Toplu Harç Borcu Oluşturma
         form_title: Kişiye Özel Harç Borcu Oluşturma
+      search:
+        <<: *tuition_debt_attributes
       update:
         success: Harç borcu başarıyla güncellendi.
