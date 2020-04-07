@@ -17,11 +17,24 @@ module Debt
         end
 
         def chain
-          if student.exceeded_education_period
+          if exceeded? || other_studentship?
             Operation::Disability.new(Operation::NoDiscount.new)
           else
             Operation::Scholarship.new(Operation::Disability.new(Operation::NoDiscount.new))
           end
+        end
+
+        private
+
+        def exceeded?
+          student.exceeded_education_period
+        end
+
+        def other_studentship?
+          status = student.prospective_student&.obs_status
+          return true if status.nil?
+
+          !status
         end
       end
     end

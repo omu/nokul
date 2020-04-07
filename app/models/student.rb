@@ -71,6 +71,10 @@ class Student < ApplicationRecord
     scholarship_type_id?
   end
 
+  def prospective_student
+    user.prospective_students.find_by(unit_id: unit_id)
+  end
+
   private
 
   def build_identity_information
