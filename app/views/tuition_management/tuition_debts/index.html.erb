@@ -26,7 +26,7 @@
             <% @tuition_debts.each do |debt| %>
               <tr>
                 <td><%= full_name(debt.academic_term) %></td>
-                <td><%= debt.unit_tuition.unit.name %></td>
+                <td><%= debt.unit.name %></td>
                 <td><%= full_name(debt.student.user.identities.formal.first)%></td>
                 <td><%= number_to_currency(debt.amount) %></td>
                 <td><%= debt.description %></td>

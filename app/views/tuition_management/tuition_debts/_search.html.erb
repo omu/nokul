@@ -38,7 +38,7 @@
                              class:         'form-control',
                              style:         'width: 100%') %>
             </div>
-           <div class='form-group col-sm-4'>
+            <div class='form-group col-sm-4'>
               <%= label_tag(:academic_term_id, t('.academic_term')) %>
               <%= select_tag(:academic_term_id,
                              options_from_collection_for_select(AcademicTerm.all, :id, lambda { |term| full_name(term) }, params[:academic_term_id]),

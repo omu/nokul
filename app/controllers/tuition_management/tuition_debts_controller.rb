@@ -8,7 +8,7 @@ module TuitionManagement
 
     def index
       tuition_debts =
-        TuitionDebt.includes(:academic_term, unit_tuition: :unit, student: :user).joins(:unit).where(
+        TuitionDebt.includes(:academic_term, :unit, student: :user).joins(:unit).where(
           params[:unit_id].present? ? { units: { id: params[:unit_id] } } : {}
         )
 
