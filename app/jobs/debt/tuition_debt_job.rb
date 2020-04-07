@@ -22,7 +22,7 @@ module Debt
 
     def set_chain(unit, student)
       if unit.evening?
-        Debt::Tuition::Process::EveningEducation.chain
+        Debt::Tuition::Process::EveningEducation.new(student).chain
       else
         Debt::Tuition::Process::DaytimeEducation.new(student).chain
       end
