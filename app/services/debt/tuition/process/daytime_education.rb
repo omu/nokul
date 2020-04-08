@@ -30,9 +30,10 @@ module Debt
           student.exceeded_education_period
         end
 
+        # TODO: This information shouldn't be obtained from prospective student
         def other_studentship?
           status = student.prospective_student&.obs_status
-          return true if status.nil?
+          return false if status.nil?
 
           !status
         end
