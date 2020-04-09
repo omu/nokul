@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative '../tuition_handler'
-
 module Debt
   module Tuition
     module Operation
