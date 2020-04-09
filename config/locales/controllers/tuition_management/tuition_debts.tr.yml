@@ -16,6 +16,9 @@ tr:
         success: Harç borcu başarıyla oluşturuldu.
       create_with_service:
         will_update: Harç borçları bir kaç saniye/dakika içerisinde oluşturulacaktır.
+      descriptions:
+        disability: Engel oranı hesaba katılarak oluşturulmuştur.
+        no_discount: Hiç bir indirim yapılmadan oluşturulmuştur.
       destroy:
         success: Harç borcu silindi
         warning: Harç borcu silinemedi!

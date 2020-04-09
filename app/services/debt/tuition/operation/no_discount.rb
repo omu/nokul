@@ -19,7 +19,7 @@ module Debt
         private
 
         def description
-          'Hiç bir indirim yapılmadan harç borcu oluşturulmuştur.'
+          I18n.t('.tuition_management.tuition_debts.descriptions.no_discount')
         end
       end
     end

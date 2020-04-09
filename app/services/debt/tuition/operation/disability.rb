@@ -24,7 +24,7 @@ module Debt
         end
 
         def description
-          'Engel durumu göz önünde bulundurularak harç borcu oluşturulmuştur.'
+          I18n.t('.tuition_management.tuition_debts.descriptions.disability')
         end
       end
     end

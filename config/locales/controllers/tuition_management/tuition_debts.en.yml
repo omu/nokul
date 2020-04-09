@@ -16,6 +16,9 @@ en:
         success: Tuition debt successfully created.
       create_with_service:
         will_update: Tuition debts will be created in a couple of seconds/minutes.
+      descriptions:
+        disability: It was created with calculating the disability rate.
+        no_discount: It was created without any discount.
       destroy:
         success: Tuition debt successfully deleted.
         warning: Tuition debt can not be deleted!
