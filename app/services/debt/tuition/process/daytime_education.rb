@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
-require_relative '../operation/scholarship'
 require_relative '../operation/disability'
+require_relative '../operation/free'
 require_relative '../operation/no_discount'
+require_relative '../operation/scholarship'
 
 module Debt
   module Tuition
@@ -20,7 +21,7 @@ module Debt
           if exceeded? || other_studentship?
             Operation::Disability.new(Operation::NoDiscount.new)
           else
-            Operation::Scholarship.new(Operation::Disability.new(Operation::NoDiscount.new))
+            Operation::Free.new
           end
         end
 
