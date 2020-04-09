@@ -11,8 +11,6 @@ module Debt
       class DaytimeEducation
         attr_reader :student
 
-        delegate :exceeded_education_period, to: :student
-
         def initialize(student)
           @student = student
         end
