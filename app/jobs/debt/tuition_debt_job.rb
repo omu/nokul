@@ -14,7 +14,9 @@ module Debt
         unit.students.active.each do |student|
           chain   = set_chain(unit, student)
           tuition = unit.tuitions.find_by(academic_term_id: @term_id)
-          debt    = Debt::Tuition::TuitionDebt.new(student, tuition.unit_tuitions.first)
+          next if tuition.nil?
+
+          debt = Debt::Tuition::TuitionDebt.new(student, tuition.unit_tuitions.first)
           chain.call(debt)
         end
       end
