@@ -5,9 +5,9 @@ module Debt
     queue_as :high
 
     def perform(unit_ids, term_id)
-      units = Unit.find(unit_ids.reject(&:empty?))
+      units = Unit.where(id: unit_ids.reject(&:empty?)).joins(:students).select { |u| u.students.exists? }
 
-      Debt::Tuition::Dispatch.perform([units].flatten.compact, term_id)
+      Debt::Tuition::Dispatch.perform(units.flatten, term_id)
     end
   end
 end
