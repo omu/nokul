@@ -17,6 +17,9 @@
             <div class='form-group col-sm-6'>
               <%= f.association :academic_term, label_method: lambda { |academic_term| full_name(academic_term) } %>
             </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :due_date, as: :date_time_picker %>
+            </div>
             <div class='form-group col-sm-12'>
               <%= f.button :submit, t('.create_tuition_debts'), class: 'btn btn-outline-success btn-sm' %>
             </div>

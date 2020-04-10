@@ -9,6 +9,7 @@ class CreateTuitionDebts < ActiveRecord::Migration[6.0]
       t.decimal :amount, precision: 8, scale: 3
       t.text :description
       t.integer :type
+      t.datetime :due_date
       t.boolean :paid, default: false
 
       t.timestamps

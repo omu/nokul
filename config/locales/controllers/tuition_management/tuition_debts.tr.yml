@@ -5,6 +5,7 @@ tr:
         academic_term: Akademik Dönem
         amount: Meblağ
         description: Açıklama
+        due_date: Son Ödeme Tarihi
         paid: Ödendi mi?
         student: Öğrenci
         unit: Birim

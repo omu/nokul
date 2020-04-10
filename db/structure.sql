@@ -3412,6 +3412,7 @@ CREATE TABLE public.tuition_debts (
     amount numeric(8,3),
     description text,
     type integer,
+    due_date timestamp without time zone,
     paid boolean DEFAULT false,
     created_at timestamp(6) without time zone NOT NULL,
     updated_at timestamp(6) without time zone NOT NULL,

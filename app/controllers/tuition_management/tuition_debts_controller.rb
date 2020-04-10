@@ -8,8 +8,8 @@ module TuitionManagement
 
     def index
       tuition_debts =
-        TuitionDebt.includes(:academic_term, :unit, student: :user).joins(:unit).where(
-          params[:unit_id].present? ? { units: { id: params[:unit_id] } } : {}
+        TuitionDebt.includes(:academic_term, student: %i[unit user]).joins(:student).where(
+          params[:unit_id].present? ? { students: { unit_id: params[:unit_id] } } : {}
         )
 
       @pagy, @tuition_debts = pagy(tuition_debts.dynamic_search(search_params(TuitionDebt)))
@@ -32,7 +32,8 @@ module TuitionManagement
 
     def create_with_service
       Debt::TuitionDebtJob.perform_later(params.dig(:tuition_debt, :unit_ids),
-                                         params.dig(:tuition_debt, :academic_term_id))
+                                         params.dig(:tuition_debt, :academic_term_id),
+                                         params.dig(:tuition_debt, :due_date))
       redirect_to(tuition_debts_path, notice: t('.will_update'))
     end
 
@@ -50,7 +51,9 @@ module TuitionManagement
     end
 
     def tuition_debt_params
-      params.require(:tuition_debt).permit(:student_id, :academic_term_id, :amount, :description, :type, :paid)
+      params.require(:tuition_debt).permit(
+        :student_id, :academic_term_id, :amount, :description, :type, :paid, :due_date
+      )
     end
   end
 end

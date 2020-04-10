@@ -24,6 +24,7 @@ class TuitionDebt < ApplicationRecord
   # validations
   validates :amount, numericality: { greater_than: 0 }
   validates :description, length: { maximum: 65_535 }
+  validates :due_date, presence: true
   validates :paid, inclusion: { in: [true, false] }
   validates :type, inclusion: { in: types.keys }
 end

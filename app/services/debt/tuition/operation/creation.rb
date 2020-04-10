@@ -11,7 +11,8 @@ module Debt
             unit_tuition:  params.unit_tuition,
             amount:        params.amount,
             description:   description,
-            type:          :bulk
+            type:          :bulk,
+            due_date:      params.due_date
           )
         end
       end

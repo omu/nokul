@@ -5,6 +5,7 @@ en:
         academic_term: Academic Term
         amount: Amount
         description: Description
+        due_date: Due Date
         student: Student
         paid: Paid?
         unit: Unit

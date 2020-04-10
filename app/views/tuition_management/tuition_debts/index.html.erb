@@ -18,6 +18,7 @@
               <th><%= t('.student') %></th>
               <th><%= t('.amount') %></th>
               <th><%= t('.description') %></th>
+              <th><%= t('.due_date') %></th>
               <th><%= t('.paid') %></th>
               <th><%= t('actions') %></th>
             </tr>
@@ -26,10 +27,11 @@
             <% @tuition_debts.each do |debt| %>
               <tr>
                 <td><%= full_name(debt.academic_term) %></td>
-                <td><%= debt.unit.name %></td>
+                <td><%= debt.student.unit.name %></td>
                 <td><%= full_name(debt.student.user.identities.formal.first)%></td>
                 <td><%= number_to_currency(debt.amount) %></td>
                 <td><%= debt.description %></td>
+                <td><%= l(debt.due_date, format: :short) %></td>
                 <td><%= icon_for_check(debt.paid) %></td>
                 <td><%= link_to_actions(debt, except: %i[show]) %></td>
               </tr>
