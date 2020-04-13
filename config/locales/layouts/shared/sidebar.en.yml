@@ -4,6 +4,7 @@ en:
       menus:
         admin:
           academic_calendars: Academic Calendars
+          accreditation_standards: Accreditation Standards
           administration: Administration
           agenda_types: Agenda Types
           authorizations: Authorizations
@@ -25,6 +26,7 @@ en:
             stats: University Stats
             title: Manager Pages
           meksis: MEKSIS
+          learning_outcomes: Learning Outcomes
           prospective_employees: Prospective Employees
           prospective_students: Prospective Students
           references: References

@@ -1,0 +1,23 @@
+<script type='text/javascript'>
+  $(document).ready(function() {
+    $('#accreditation_standard_accreditation_institution_id, #accreditation_standard_status').select2();
+
+    $('#accreditation_standard_unit_ids').select2({
+      closeOnSelect: false,
+      ajax: {
+        url: "/accreditation_standards/units.json",
+        dataType: "json",
+        delay: 250,
+        data: function (params) {
+          return {
+            term: params.term
+          };
+        },
+        processResults: function (data) {
+          return { results: data };
+        },
+        cache: true
+      }
+    });
+  });
+</script>

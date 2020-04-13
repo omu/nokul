@@ -1,0 +1,31 @@
+tr:
+  activerecord:
+    attributes:
+      learning_outcome: &learning_outcome_attributes
+        code: Kod
+        name: Adı
+        outcomes: Alt Öğrenim Çıktıları
+  helpers:
+    submit:
+      learning_outcome:
+        create: Öğrenim Çıktısı Oluştur
+        update: Öğrenim Çıktısını Güncelle
+  accreditation_management:
+    learning_outcomes:
+      create:
+        success: Öğrenim çıktısı başarıyla oluşturuldu.
+      destroy:
+        success: Öğrenim çıktısı başarıyla silindi.
+        warning: Öğrenim çıktısı silinemedi.
+      edit:
+        form_title: Öğrenim Çıktısını Güncelle
+      form:
+        accreditation_institution: Akreditasyon Kurumu
+        version: Versiyon
+        units: Programlar
+      new:
+        form_title: Öğrenim Çıktısı Oluştur
+      show:
+        <<: *learning_outcome_attributes
+      update:
+        success: Öğrenim çıktısı başarıyla güncellendi.

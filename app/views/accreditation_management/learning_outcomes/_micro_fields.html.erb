@@ -1,0 +1,18 @@
+<div class='nested-fields' id='micros'>
+  <div class='card card-default'>
+    <div class='card-body bg-light'>
+      <div class='row'>
+        <%= f.input(:accreditation_standard_id, as: :hidden, wrapper: false, input_html: { value: @accreditation_standard.id }) %>
+        <div class='col-sm-2'>
+          <%= f.input :code %>
+        </div>
+        <div class='col-sm-10'>
+          <%= f.input :name, as: :text, input_html: { rows: 3 } %>
+        </div>
+      </div>
+    </div>
+    <div class='card-footer'>
+      <%= link_to_remove_association f, class: 'btn btn-danger btn-sm' %>
+    </div>
+  </div>
+</div>

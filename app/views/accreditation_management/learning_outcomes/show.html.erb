@@ -1,0 +1,55 @@
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'dot-circle-o' %><strong><%= @learning_outcome.code %></strong>
+        <div class="card-header-actions">
+          <%= link_to_actions([@accreditation_standard, @learning_outcome], except: :show) %>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <table class="table table-responsive-sm">
+          <tbody>
+            <tr>
+              <td><%= t('.code') %></td>
+              <td><%= @learning_outcome.code %></td>
+            </tr>
+            <tr>
+              <td><%= t('.name') %></td>
+              <td><%= @learning_outcome.name %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'dot-circle-o', text: t('.outcomes') %>
+      </div>
+      <div class='card-body'>
+        <table class='table table-responsive-sm table-sm'>
+          <thead>
+            <tr>
+              <th><%= t('.code') %></th>
+              <th><%= t('.name') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @learning_outcome.micros.each do |learning_outcome| %>
+              <tr>
+                <td><%= learning_outcome.code %></td>
+                <td><%= learning_outcome.name %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

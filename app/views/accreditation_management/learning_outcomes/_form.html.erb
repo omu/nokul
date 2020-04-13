@@ -1,0 +1,75 @@
+<div class='row'>
+  <div class='col-sm-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'dot-circle-o' %>
+        <strong><%= form_title %></strong>
+      </div>
+      <div class='card-body'>
+        <table class="table table-responsive-sm">
+          <tbody>
+            <tr>
+              <td><%= t('.units') %></td>
+              <td><%= @accreditation_standard.units.map(&:names_depth_cache).join(', ') %></td>
+            </tr>
+            <tr>
+              <td><%= t('.accreditation_institution') %></td>
+              <td><%= @accreditation_standard.name %></td>
+            </tr>
+            <tr>
+              <td><%= t('.version') %></td>
+              <td><%= @accreditation_standard.version %></td>
+            </tr>
+          </tbody>
+        </table>
+        <hr>
+
+        <%= simple_form_for([@accreditation_standard, @learning_outcome]) do |f| %>
+          <div class='row'>
+            <div class='form-group col-sm-12'>
+              <%= f.error_notification %>
+              <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+            </div>
+            <div class='form-group col-sm-2'>
+              <%= f.input :code %>
+            </div>
+            <div class='form-group col-sm-10'>
+              <%= f.input :name, as: :text, input_html: { rows: 3 } %>
+            </div>
+
+            <div class='form-group col-sm-12'>
+              <div class='card card-default'>
+                <div class='card-header'>
+                  <%= fa_icon 'dot-circle-o' %>
+                  <strong><%= t('outcomes', scope: %i[activerecord attributes learning_outcome]) %></strong>
+                </div>
+                <div class='card-body bg-light'>
+                  <div class='row'>
+                    <div class='form-group col-sm-12'>
+                      <%= f.simple_fields_for :micros do |learning_outcome| %>
+                        <%= render 'micro_fields', f: learning_outcome %>
+                      <% end %>
+                    </div>
+
+                    <div class='form-group col-sm-12'>
+                      <div class='links text-center'>
+                        <%= link_to_add_association f, :micros, class: 'btn btn-success btn-sm' %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class='form-group col-sm-12'>
+              <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
+              <%= link_to_back(:back) %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= javascript_include_tag 'shared/cocoon' %>

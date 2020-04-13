@@ -1,0 +1,44 @@
+en:
+  activerecord:
+    attributes:
+      accreditation_standard: &accreditation_standard_attributes
+        accreditation_institution: Accreditation Institutions
+        version: Version
+        status: Status
+        units: Programs
+    enums:
+      accreditation_standard:
+        statuses:
+          active: Active
+          passive: Passive
+  helpers:
+    submit:
+      accreditation_standard:
+        create: Create Accreditation Standard
+        update: Update Accreditation Standard
+  accreditation_management:
+    accreditation_standards:
+      create:
+        success: Accreditation standard successfully created.
+      destroy:
+        success: Accreditation standard successfully deleted.
+        warning: Accreditation standard can not be deleted.
+      edit:
+        form_title: Update Accreditation Standard
+      index:
+        <<: *accreditation_standard_attributes
+        card_header: Accreditation Standards
+        new_accreditation_standard_link: Create a New Accreditation Standard
+      new:
+        form_title: Create a Accreditation Standard
+      search:
+        <<: *accreditation_standard_attributes
+        unit: Program
+      show:
+        <<: *accreditation_standard_attributes
+        card_header: Learning Outcomes
+        new_learning_outcome_link: Create a New Learning Outcome
+        learning_outcome_code: Code
+        learning_outcome_name: Name
+      update:
+        success: Accreditation standard successfully updated.
