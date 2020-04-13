@@ -7343,12 +7343,6 @@ ALTER TABLE ONLY public.classrooms
 ALTER TABLE ONLY public.available_courses
     ADD CONSTRAINT fk_rails_a9099f01f5 FOREIGN KEY (coordinator_id) REFERENCES public.employees(id);
 
---
--- Name: tuition_debts fk_rails_aba306a739; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.tuition_debts
-    ADD CONSTRAINT fk_rails_aba306a739 FOREIGN KEY (academic_term_id) REFERENCES public.academic_terms(id);
 
 --
 -- Name: learning_outcomes fk_rails_ab9bdb6c0a; Type: FK CONSTRAINT; Schema: public; Owner: -
@@ -7356,6 +7350,15 @@ ALTER TABLE ONLY public.tuition_debts
 
 ALTER TABLE ONLY public.learning_outcomes
     ADD CONSTRAINT fk_rails_ab9bdb6c0a FOREIGN KEY (parent_id) REFERENCES public.learning_outcomes(id);
+
+
+--
+-- Name: tuition_debts fk_rails_aba306a739; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.tuition_debts
+    ADD CONSTRAINT fk_rails_aba306a739 FOREIGN KEY (academic_term_id) REFERENCES public.academic_terms(id);
+
 
 --
 -- Name: classrooms fk_rails_b0064b7304; Type: FK CONSTRAINT; Schema: public; Owner: -
