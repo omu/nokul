@@ -1,0 +1,31 @@
+en:
+  activerecord:
+    attributes:
+      learning_outcome: &learning_outcome_attributes
+        code: Code
+        name: Name
+        outcomes: Sub Learning Outcomes
+  helpers:
+    submit:
+      learning_outcome:
+        create: Create Learning Outcome
+        update: Update Learning Outcome
+  accreditation_management:
+    learning_outcomes:
+      create:
+        success: Learning outcome successfully created.
+      destroy:
+        success: Learning outcome successfully deleted.
+        warning: Learning outcome can not be deleted.
+      edit:
+        form_title: Create a Learning Outcome
+      form:
+        accreditation_institution: Accreditation Institutions
+        version: Version
+        units: Programs
+      new:
+        form_title: Create a New Learning Outcome
+      show:
+        <<: *learning_outcome_attributes
+      update:
+        success: Learning outcome successfully updated.

@@ -62,6 +62,21 @@
 
 <li class="nav-item nav-dropdown">
   <a class="nav-link nav-dropdown-toggle" href="#">
+    <%= fa_icon('dot-circle-o', class: 'nav-icon') %><%= t('.learning_outcomes') %>
+  </a>
+  <ul class="nav-dropdown-items">
+    <% if policy([:accreditation_management, :accreditation_standard]).index? %>
+      <li class="nav-item">
+        <%= link_to :accreditation_standards, class: 'nav-link' do %>
+          <%= fa_icon('sitemap', text: t('.accreditation_standards'), class: 'nav-icon') %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</li>
+
+<li class="nav-item nav-dropdown">
+  <a class="nav-link nav-dropdown-toggle" href="#">
     <%= fa_icon('user-plus', class: 'nav-icon') %><%= t('.first_registration') %>
   </a>
   <ul class="nav-dropdown-items">

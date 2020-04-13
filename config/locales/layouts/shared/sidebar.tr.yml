@@ -4,6 +4,7 @@ tr:
       menus:
         admin:
           academic_calendars: Akademik Takvimler
+          accreditation_standards: Akreditasyon Standartları
           administration: Yönetim
           agenda_types: Gündem Türleri
           authorizations: Yetkilendirmeler
@@ -25,6 +26,7 @@ tr:
             stats: Üniversite İstatistikleri
             title: Yönetici Sayfaları
           meksis: MEKSİS
+          learning_outcomes: Öğrenim Çıktıları
           prospective_employees: Aday Personeller
           prospective_students: Aday Öğrenciler
           references: Tanımlar

@@ -1,0 +1,27 @@
+tr:
+  activerecord:
+    attributes:
+      accreditation_institution: &accreditation_institution_attributes
+        name: Adı
+  helpers:
+    submit:
+      accreditation_institution:
+        create: Akreditasyon Kurumu Oluştur
+        update: Akreditasyon Kurumunu Güncelle
+  reference:
+    accreditation_institutions:
+      create:
+        success: Akreditasyon kurumu başarıyla oluşturuldu.
+      destroy:
+        success: Akreditasyon kurumu başarıyla silindi.
+        warning: Akreditasyon kurumu silinemedi!
+      edit:
+        form_title: Akreditasyon Kurumunu Güncelle
+      index:
+        <<: *accreditation_institution_attributes
+        card_header: Akreditasyon Standartları
+        new_accreditation_institution_link: Yeni Akreditasyon Kurumu
+      new:
+        form_title: Akreditasyon Kurumu Oluştur
+      update:
+        success: Akreditasyon kurumu başarıyla güncellendi.
