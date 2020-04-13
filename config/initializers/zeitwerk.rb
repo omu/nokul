@@ -3,6 +3,7 @@
 Rails.autoloaders.each do |autoloader|
   autoloader.inflector.inflect(
     'ldap' => 'LDAP',
-    'sso'  => 'SSO'
+    'sso'  => 'SSO',
+    'ubs'  => 'UBS'
   )
 end
