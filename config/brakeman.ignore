@@ -1,0 +1,381 @@
+{
+  "ignored_warnings": [
+    {
+      "warning_type": "Unscoped Find",
+      "warning_code": 82,
+      "fingerprint": "009a371c87a814eea3cfbfcf8ab9ec901509d1551feee27d5009e303333a307d",
+      "check_name": "UnscopedFind",
+      "message": "Unscoped call to `Building#find`",
+      "file": "app/controllers/meksis/buildings_controller.rb",
+      "line": 32,
+      "link": "https://brakemanscanner.org/docs/warning_types/unscoped_find/",
+      "code": "Building.find(params[:id])",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "Meksis::BuildingsController",
+        "method": "set_building"
+      },
+      "user_input": "params[:id]",
+      "confidence": "Weak",
+      "note": ""
+    },
+    {
+      "warning_type": "Unscoped Find",
+      "warning_code": 82,
+      "fingerprint": "06b49597b05bcade6f4b201076884018924fb60aa7839b22c8c8bd048869e922",
+      "check_name": "UnscopedFind",
+      "message": "Unscoped call to `Building#find`",
+      "file": "app/controllers/meksis/classrooms_controller.rb",
+      "line": 24,
+      "link": "https://brakemanscanner.org/docs/warning_types/unscoped_find/",
+      "code": "Building.find(params[:building_id])",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "Meksis::ClassroomsController",
+        "method": "set_building"
+      },
+      "user_input": "params[:building_id]",
+      "confidence": "Weak",
+      "note": ""
+    },
+    {
+      "warning_type": "Unscoped Find",
+      "warning_code": 82,
+      "fingerprint": "215986feff13a5f656408f017a7c77e8809d2a7ee6ec7656b90de9ae3aa4a2df",
+      "check_name": "UnscopedFind",
+      "message": "Unscoped call to `City#find`",
+      "file": "app/controllers/location/districts_controller.rb",
+      "line": 43,
+      "link": "https://brakemanscanner.org/docs/warning_types/unscoped_find/",
+      "code": "City.find(params[:city_id])",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "Location::DistrictsController",
+        "method": "set_city"
+      },
+      "user_input": "params[:city_id]",
+      "confidence": "Weak",
+      "note": ""
+    },
+    {
+      "warning_type": "Unscoped Find",
+      "warning_code": 82,
+      "fingerprint": "23580930c51bcc89600188458e043c560a0ad8f734c8cec7fbc3130798243421",
+      "check_name": "UnscopedFind",
+      "message": "Unscoped call to `CourseGroup#find`",
+      "file": "app/controllers/course_management/course_groups_controller.rb",
+      "line": 46,
+      "link": "https://brakemanscanner.org/docs/warning_types/unscoped_find/",
+      "code": "CourseGroup.find(params[:id])",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "CourseManagement::CourseGroupsController",
+        "method": "set_course_group"
+      },
+      "user_input": "params[:id]",
+      "confidence": "Weak",
+      "note": ""
+    },
+    {
+      "warning_type": "Unscoped Find",
+      "warning_code": 82,
+      "fingerprint": "2f613264811375df1b0c2358468775b7e71eb728569a62e9b11bbe2ae4eecb4c",
+      "check_name": "UnscopedFind",
+      "message": "Unscoped call to `AvailableCourse#find`",
+      "file": "app/controllers/course_management/available_course_groups_controller.rb",
+      "line": 38,
+      "link": "https://brakemanscanner.org/docs/warning_types/unscoped_find/",
+      "code": "AvailableCourse.find(params[:available_course_id])",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "CourseManagement::AvailableCourseGroupsController",
+        "method": "set_available_course"
+      },
+      "user_input": "params[:available_course_id]",
+      "confidence": "Weak",
+      "note": ""
+    },
+    {
+      "warning_type": "Unscoped Find",
+      "warning_code": 82,
+      "fingerprint": "3565c5ce6cd7638cc7a26fa1f5bf996a2dbbd51724976186c2203f680a75229f",
+      "check_name": "UnscopedFind",
+      "message": "Unscoped call to `CurriculumSemester#find`",
+      "file": "app/controllers/course_management/curriculum_course_groups_controller.rb",
+      "line": 41,
+      "link": "https://brakemanscanner.org/docs/warning_types/unscoped_find/",
+      "code": "CurriculumSemester.find(params[:curriculum_semester_id])",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "CourseManagement::CurriculumCourseGroupsController",
+        "method": "set_semester"
+      },
+      "user_input": "params[:curriculum_semester_id]",
+      "confidence": "Weak",
+      "note": ""
+    },
+    {
+      "warning_type": "Unscoped Find",
+      "warning_code": 82,
+      "fingerprint": "5254e83a96b566b79bb64342c59dcbb3864a005237a3c0d5b14534c98031efce",
+      "check_name": "UnscopedFind",
+      "message": "Unscoped call to `Tuition#find`",
+      "file": "app/controllers/tuition_management/tuitions_controller.rb",
+      "line": 47,
+      "link": "https://brakemanscanner.org/docs/warning_types/unscoped_find/",
+      "code": "Tuition.find(params[:id])",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "TuitionManagement::TuitionsController",
+        "method": "set_tuition"
+      },
+      "user_input": "params[:id]",
+      "confidence": "Weak",
+      "note": ""
+    },
+    {
+      "warning_type": "Unscoped Find",
+      "warning_code": 82,
+      "fingerprint": "630f4b087d4fad4a1f2bce6269bf604be073c06cc87eecc8edab04b74b957050",
+      "check_name": "UnscopedFind",
+      "message": "Unscoped call to `RegistrationDocument#find`",
+      "file": "app/controllers/first_registration/registration_documents_controller.rb",
+      "line": 52,
+      "link": "https://brakemanscanner.org/docs/warning_types/unscoped_find/",
+      "code": "RegistrationDocument.find(params[:id])",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "FirstRegistration::RegistrationDocumentsController",
+        "method": "set_registration_document"
+      },
+      "user_input": "params[:id]",
+      "confidence": "Weak",
+      "note": ""
+    },
+    {
+      "warning_type": "Reverse Tabnabbing",
+      "warning_code": 111,
+      "fingerprint": "77bc91361998d678d3cdd145c8fcf7f1a2d18e096dfd1ac229bd23f338a33438",
+      "check_name": "ReverseTabnabbing",
+      "message": "When opening a link in a new tab without setting `rel: \"noopener noreferrer\"`, the new tab can control the parent tab's location. For example, an attacker could redirect to a phishing page.",
+      "file": "app/views/devise/mailer/reset_password_instructions.html.erb",
+      "line": 13,
+      "link": "https://brakemanscanner.org/docs/warning_types/reverse_tabnabbing/",
+      "code": "link_to(t(\".reset_password\"), edit_password_url(@resource, :reset_password_token => (@token)), :target => \"_blank\", :style => \"display: inline-block; color: #ffffff; background-color: #3498db; border: solid 1px #3498db; border-radius: 5px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 14px; font-weight: bold; margin: 0; padding: 12px 25px; text-transform: capitalize; border-color: #3498db;\", :rel => \"noopener\")",
+      "render_path": null,
+      "location": {
+        "type": "template",
+        "template": "devise/mailer/reset_password_instructions"
+      },
+      "user_input": "\"noopener\"",
+      "confidence": "Weak",
+      "note": ""
+    },
+    {
+      "warning_type": "Unscoped Find",
+      "warning_code": 82,
+      "fingerprint": "980aa09895befd7ca91c42e971e511d47a7a66107c651ef6e9e85ca696145bda",
+      "check_name": "UnscopedFind",
+      "message": "Unscoped call to `AvailableCourse#find`",
+      "file": "app/controllers/course_management/available_courses_controller.rb",
+      "line": 56,
+      "link": "https://brakemanscanner.org/docs/warning_types/unscoped_find/",
+      "code": "AvailableCourse.find(params[:id])",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "CourseManagement::AvailableCoursesController",
+        "method": "set_available_course"
+      },
+      "user_input": "params[:id]",
+      "confidence": "Weak",
+      "note": ""
+    },
+    {
+      "warning_type": "Unscoped Find",
+      "warning_code": 82,
+      "fingerprint": "a5501b1823c8a421ee31525d4f0a2489aa2a9e38ba0503416c676ca25b7b73ed",
+      "check_name": "UnscopedFind",
+      "message": "Unscoped call to `CurriculumSemester#find`",
+      "file": "app/controllers/course_management/curriculum_courses_controller.rb",
+      "line": 41,
+      "link": "https://brakemanscanner.org/docs/warning_types/unscoped_find/",
+      "code": "CurriculumSemester.find(params[:curriculum_semester_id])",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "CourseManagement::CurriculumCoursesController",
+        "method": "set_semester"
+      },
+      "user_input": "params[:curriculum_semester_id]",
+      "confidence": "Weak",
+      "note": ""
+    },
+    {
+      "warning_type": "Unscoped Find",
+      "warning_code": 82,
+      "fingerprint": "aebc0f0c1d08f8ecf36aca4df2aff1c183fab4ff3c86eceb5e5317324f76dfba",
+      "check_name": "UnscopedFind",
+      "message": "Unscoped call to `LdapEntity#find`",
+      "file": "app/controllers/ldap_entities_controller.rb",
+      "line": 25,
+      "link": "https://brakemanscanner.org/docs/warning_types/unscoped_find/",
+      "code": "LdapEntity.find(params[:id])",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "LdapEntitiesController",
+        "method": "set_ldap_entity"
+      },
+      "user_input": "params[:id]",
+      "confidence": "Weak",
+      "note": ""
+    },
+    {
+      "warning_type": "Unscoped Find",
+      "warning_code": 82,
+      "fingerprint": "b3bbd8ecb105ea32574a66bf8131b49bac28989540758256baaefd3fa33acf86",
+      "check_name": "UnscopedFind",
+      "message": "Unscoped call to `Curriculum#find`",
+      "file": "app/controllers/course_management/curriculums_controller.rb",
+      "line": 58,
+      "link": "https://brakemanscanner.org/docs/warning_types/unscoped_find/",
+      "code": "Curriculum.find(params[:id])",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "CourseManagement::CurriculumsController",
+        "method": "set_curriculum"
+      },
+      "user_input": "params[:id]",
+      "confidence": "Weak",
+      "note": ""
+    },
+    {
+      "warning_type": "Unscoped Find",
+      "warning_code": 82,
+      "fingerprint": "c17d43c1829fd5b2aaaa014ae33a186bb09ad6e52f2574935da18dec4bc75dfb",
+      "check_name": "UnscopedFind",
+      "message": "Unscoped call to `AvailableCourse#find`",
+      "file": "app/controllers/course_management/course_evaluation_types_controller.rb",
+      "line": 37,
+      "link": "https://brakemanscanner.org/docs/warning_types/unscoped_find/",
+      "code": "AvailableCourse.find(params[:available_course_id])",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "CourseManagement::CourseEvaluationTypesController",
+        "method": "set_available_course"
+      },
+      "user_input": "params[:available_course_id]",
+      "confidence": "Weak",
+      "note": ""
+    },
+    {
+      "warning_type": "Unscoped Find",
+      "warning_code": 82,
+      "fingerprint": "c89871dbe53c5587a92c455666819edd3043ec9b2c2f72a9f0fcd4ff1b11804c",
+      "check_name": "UnscopedFind",
+      "message": "Unscoped call to `AccreditationStandard#find`",
+      "file": "app/controllers/accreditation_management/learning_outcomes_controller.rb",
+      "line": 40,
+      "link": "https://brakemanscanner.org/docs/warning_types/unscoped_find/",
+      "code": "AccreditationStandard.find(params[:accreditation_standard_id])",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "AccreditationManagement::LearningOutcomesController",
+        "method": "set_accreditation_standard"
+      },
+      "user_input": "params[:accreditation_standard_id]",
+      "confidence": "Weak",
+      "note": ""
+    },
+    {
+      "warning_type": "Unscoped Find",
+      "warning_code": 82,
+      "fingerprint": "c9d74948c2f20753b5800b8fdb2ab7580585f85b7575969fe3ea92eef0699f49",
+      "check_name": "UnscopedFind",
+      "message": "Unscoped call to `Course#find`",
+      "file": "app/controllers/course_management/courses_controller.rb",
+      "line": 47,
+      "link": "https://brakemanscanner.org/docs/warning_types/unscoped_find/",
+      "code": "Course.find(params[:id])",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "CourseManagement::CoursesController",
+        "method": "set_course"
+      },
+      "user_input": "params[:id]",
+      "confidence": "Weak",
+      "note": ""
+    },
+    {
+      "warning_type": "Unscoped Find",
+      "warning_code": 82,
+      "fingerprint": "cf7d958eebfff44dfce57a06bbafa5f6cde08cb6e26c2c650bf298965247f1bd",
+      "check_name": "UnscopedFind",
+      "message": "Unscoped call to `Classroom#find`",
+      "file": "app/controllers/meksis/classrooms_controller.rb",
+      "line": 17,
+      "link": "https://brakemanscanner.org/docs/warning_types/unscoped_find/",
+      "code": "Classroom.find(params[:id])",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "Meksis::ClassroomsController",
+        "method": "show"
+      },
+      "user_input": "params[:id]",
+      "confidence": "Weak",
+      "note": ""
+    },
+    {
+      "warning_type": "Unscoped Find",
+      "warning_code": 82,
+      "fingerprint": "d89bdc0af97e03d67d19c3692455d6ae3b8f753b498396d1fb67e5697ef2cdfd",
+      "check_name": "UnscopedFind",
+      "message": "Unscoped call to `AccreditationStandard#find`",
+      "file": "app/controllers/accreditation_management/accreditation_standards_controller.rb",
+      "line": 54,
+      "link": "https://brakemanscanner.org/docs/warning_types/unscoped_find/",
+      "code": "AccreditationStandard.find(params[:id])",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "AccreditationManagement::AccreditationStandardsController",
+        "method": "set_accreditation_standard"
+      },
+      "user_input": "params[:id]",
+      "confidence": "Weak",
+      "note": ""
+    },
+    {
+      "warning_type": "SSL Verification Bypass",
+      "warning_code": 71,
+      "fingerprint": "ef2af50a97746b3f85cd1be970c8e9bf1ec4c3da9eebc2e05948fba247c64915",
+      "check_name": "SSLVerify",
+      "message": "SSL certificate verification was bypassed",
+      "file": "config/initializers/ssl.rb",
+      "line": 5,
+      "link": "https://brakemanscanner.org/docs/warning_types/ssl_verification_bypass/",
+      "code": "config.ssl_config.verify_mode = OpenSSL::SSL::VERIFY_NONE",
+      "render_path": null,
+      "location": null,
+      "user_input": null,
+      "confidence": "High",
+      "note": ""
+    }
+  ],
+  "updated": "2020-04-13 11:47:40 +0300",
+  "brakeman_version": "4.8.0"
+}
