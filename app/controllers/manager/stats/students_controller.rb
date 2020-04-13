@@ -7,11 +7,14 @@ module Manager
       before_action do
         authorize(current_user, policy_class: Manager::Stats::StudentPolicy)
       end
+      rescue_from Support::RestClient::HTTPError, with: -> {
+        render status: :internal_server_error
+      }
 
       def index; end
 
       def cities
-        @series = Xokul::Ubs::Statistic::Student.by_cities(
+        @series = Xokul::UBS::Statistic::Student.by_cities(
           schema: {
             city:  :name,
             total: :value
@@ -20,7 +23,7 @@ module Manager
       end
 
       def double_major_and_minor
-        @series = Xokul::Ubs::Statistic::Student.double_major_and_minor(
+        @series = Xokul::UBS::Statistic::Student.double_major_and_minor(
           schema: {
             category:           :name,
             number_of_students: :y
@@ -29,7 +32,7 @@ module Manager
       end
 
       def genders
-        @series = Xokul::Ubs::Statistic::Student.by_genders(
+        @series = Xokul::UBS::Statistic::Student.by_genders(
           schema: {
             gender:             :name,
             number_of_students: :y
@@ -38,7 +41,7 @@ module Manager
       end
 
       def genders_and_degrees
-        data     = Xokul::Ubs::Statistic::Student.by_genders_and_degree
+        data     = Xokul::UBS::Statistic::Student.by_genders_and_degree
         @degrees = data.map { |item| item[:degree] }.uniq
         @series  = data.group_by { |item| item[:gender] }.map do |gender, values|
           {
@@ -51,7 +54,7 @@ module Manager
       end
 
       def non_graduates
-        data     = Xokul::Ubs::Statistic::Student.non_graduates
+        data     = Xokul::UBS::Statistic::Student.non_graduates
         @degrees = data.map { |item| item[:degree] }.uniq
         @series  = data.group_by { |item| item[:status] }.map do |status, values|
           {
