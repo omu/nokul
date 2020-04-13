@@ -22,6 +22,7 @@ class TuitionDebt < ApplicationRecord
   has_one :unit, through: :unit_tuition
 
   # validations
+  validates :academic_term_id, uniqueness: { scope: :student_id }
   validates :amount, numericality: { greater_than: 0 }
   validates :description, length: { maximum: 65_535 }
   validates :due_date, presence: true
