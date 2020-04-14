@@ -3,7 +3,6 @@
 require_relative '../operation/disability'
 require_relative '../operation/free'
 require_relative '../operation/no_discount'
-require_relative '../operation/scholarship'
 
 module Debt
   module Tuition
