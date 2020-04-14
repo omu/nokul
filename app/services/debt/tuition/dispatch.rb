@@ -11,11 +11,11 @@ module Debt
       def perform(units, term_id, due_date)
         units.each do |unit|
           unit.students.active.each do |student|
-            chain   = set_chain(unit, student)
             tuition = unit.tuitions.find_by(academic_term_id: term_id)
             next if tuition.nil?
 
-            debt = TuitionDebt.new(student, tuition.unit_tuitions.first, due_date)
+            chain = set_chain(unit, student)
+            debt  = TuitionDebt.new(student, tuition.unit_tuitions.first, due_date)
             chain.call(debt)
           end
         end
