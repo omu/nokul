@@ -13,7 +13,7 @@ module Debt
         return operate(tuition) if fulfill?(tuition)
         return successor.call(tuition) if successor
 
-        Rails.logger.info "Any tuition chain operation couldn't possible for #{tuition.user.id_number}."
+        Rails.logger.warn("Any tuition chain operation couldn't possible for #{tuition.user.id_number}.")
       end
     end
   end
