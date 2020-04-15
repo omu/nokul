@@ -7,8 +7,9 @@ module Xokul
 
       def initialize(id_number)
         @response = Connection.request(
-          '/kps/queries/addresses', params: { id_number: id_number }
-        )
+          '/kps/queries/addresses',
+          params: { id_number: id_number }
+        ) || {}
       end
 
       def full_informations
@@ -31,7 +32,7 @@ module Xokul
       private
 
       def current_address
-        @response[:current_address]
+        @response[:current_address] || {}
       end
 
       def district

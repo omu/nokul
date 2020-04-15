@@ -21,11 +21,13 @@ tr:
         start_date: Başlangıç Tarihi
       student: &student_attributes
         exceeded_education_period: Eğitim süresi içerisinde mezun olamadı
+        scholarship_type: Burs Türü
+        semester: Yarıyıl
         stage: Aşama
         status: Öğrenci Durumu
         student_number: Öğrenci Numarası
-        scholarship_type: Burs Türü
         unit: Birim
+        year: Yıl
       user: &user_attributes
         activated: Hesap Aktifleştirme
         activated_at: Hesap Aktifleştirme Tarihi

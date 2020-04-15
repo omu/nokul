@@ -74,8 +74,6 @@ gem 'slack-notifier'
 gem 'friendly_id', '~> 5.3.0'
 
 # sms
-gem 'nexmo'
-gem 'smstools'
 gem 'twilio-ruby'
 
 # log

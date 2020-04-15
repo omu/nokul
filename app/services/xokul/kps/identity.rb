@@ -7,8 +7,9 @@ module Xokul
 
       def initialize(id_number)
         @response = Connection.request(
-          '/kps/queries/identities', params: { id_number: id_number }
-        )
+          '/kps/queries/identities',
+          params: { id_number: id_number }
+        ) || {}
       end
 
       def full_informations

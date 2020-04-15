@@ -5,7 +5,7 @@
         <div class="brand-card-header bg-success"><%= fa_icon 'graduation-cap' %></div>
         <div class="brand-card-body">
           <div>
-            <div class="text-value"><%= Xokul::Ubs::Statistic::Student.by_genders.sum { |item| item[:number_of_students] } %></div>
+            <div class="text-value"><%= Xokul::UBS::Statistic::Student.by_genders.sum { |item| item[:number_of_students] } %></div>
             <div class="text-uppercase text-muted small"><%= t('.student') %></div>
           </div>
           <div>

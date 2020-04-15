@@ -21,11 +21,13 @@ en:
         start_date: Start Date
       student: &student_attributes
         exceeded_education_period: Couldn't graduate during education period
+        scholarship_type: Scholarship Type
+        semester: Semester
         stage: Stage
         status: Student Status
         student_number: Student Number
-        scholarship_type: Scholarship Type
         unit: Unit
+        year: Year
       user: &user_attributes
         activated: Account Activation
         activated_at: Account Activation Date
