@@ -10,10 +10,6 @@ module Debt
           create_debt(params, description)
         end
 
-        def fulfill?(_params)
-          true
-        end
-
         private
 
         def description

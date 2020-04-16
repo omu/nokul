@@ -9,6 +9,12 @@ module Debt
         @successor = successor
       end
 
+      def operate(_); end
+
+      def fulfill?(_)
+        true
+      end
+
       def call(tuition)
         return operate(tuition) if fulfill?(tuition)
         return successor.call(tuition) if successor
