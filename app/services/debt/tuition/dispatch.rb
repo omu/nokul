@@ -15,7 +15,7 @@ module Debt
             next if tuition.nil?
 
             chain = set_chain(unit, student)
-            debt  = TuitionDebt.new(student, tuition.unit_tuitions.first, due_date)
+            debt  = Debt.new(student, tuition.unit_tuitions.first, due_date)
             chain.call(debt)
           end
         end

@@ -2,7 +2,7 @@
 
 module Debt
   module Tuition
-    class TuitionHandler
+    class Handler
       attr_reader :successor
 
       def initialize(successor = nil)

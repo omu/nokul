@@ -2,7 +2,7 @@
 
 module Debt
   module Tuition
-    class TuitionDebt
+    class Debt
       attr_reader :academic_term, :due_date, :student, :user, :unit_tuition
       attr_accessor :amount
 

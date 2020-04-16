@@ -1,11 +1,9 @@
 # frozen_string_literal: true
 
-require_relative '../tuition_handler'
-
 module Debt
   module Tuition
     module Operation
-      class Disability < TuitionHandler
+      class Disability < Handler
         include Creation
 
         def operate(params)
