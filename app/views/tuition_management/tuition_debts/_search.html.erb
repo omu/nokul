@@ -70,7 +70,7 @@
         source: '/units/:unit_id/students/',
         label_attribute: 'full_name',
         reset_selectors: '#student_id',
-        placeholder: 'Öğrenci Seç'
+        placeholder: <%== t('.student_placeholder').to_json %>
       }
     ]
     var dynamic_select = new DynamicSelect(parameters)
