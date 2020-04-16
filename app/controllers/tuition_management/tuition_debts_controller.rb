@@ -38,8 +38,7 @@ module TuitionManagement
     end
 
     def destroy
-      tuition_debt = TuitionDebt.find(params[:id])
-      return redirect_to(:tuition_debts, notice: t('.success')) if tuition_debt.destroy
+      return redirect_to(:tuition_debts, notice: t('.success')) if @tuition_debt.destroy
 
       redirect_to(:tuition_debts, alert: t('.warning'))
     end
