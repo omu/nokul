@@ -11,15 +11,17 @@ tr:
         unit: Birim
         unit_id: Birim
         unit_ids: Birimler
+    enums:
+      tuition_debt:
+        descriptions:
+          disability: Engellilik yüzdesi kadar indirim uygulanmıştır.
+          no_discount: Herhangi bir indirim uygulanmamıştır.
   tuition_management:
     tuition_debts:
       create:
         success: Harç borcu başarıyla oluşturuldu.
       create_with_service:
         will_update: Harç borçları bir kaç saniye/dakika içerisinde oluşturulacaktır.
-      descriptions:
-        disability: Engel oranı hesaba katılarak oluşturulmuştur.
-        no_discount: Hiç bir indirim yapılmadan oluşturulmuştur.
       destroy:
         success: Harç borcu silindi
         warning: Harç borcu silinemedi!

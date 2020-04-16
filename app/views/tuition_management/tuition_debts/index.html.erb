@@ -30,7 +30,7 @@
                 <td><%= debt.student.unit.name %></td>
                 <td><%= full_name(debt.student.user.identities.formal.first) %></td>
                 <td><%= number_to_currency(debt.amount) %></td>
-                <td><%= debt.description %></td>
+                <td><%= enum_t(debt, :description) %></td>
                 <td><%= l(debt.due_date, format: :short) %></td>
                 <td><%= icon_for_check(debt.paid) %></td>
                 <td><%= link_to_actions(debt, except: %i[show]) %></td>

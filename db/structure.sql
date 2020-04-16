@@ -3518,7 +3518,7 @@ CREATE TABLE public.tuition_debts (
     academic_term_id bigint NOT NULL,
     unit_tuition_id bigint,
     amount numeric(8,3),
-    description text,
+    description integer,
     type integer,
     due_date timestamp without time zone,
     paid boolean DEFAULT false,
@@ -3526,7 +3526,7 @@ CREATE TABLE public.tuition_debts (
     updated_at timestamp(6) without time zone NOT NULL,
     CONSTRAINT tuition_debts_amount_null CHECK ((amount IS NOT NULL)),
     CONSTRAINT tuition_debts_amount_numericality CHECK ((amount > (0)::numeric)),
-    CONSTRAINT tuition_debts_description_length CHECK ((length(description) <= 65535)),
+    CONSTRAINT tuition_debts_description_numericality CHECK ((description >= 0)),
     CONSTRAINT tuition_debts_paid_null CHECK ((paid IS NOT NULL)),
     CONSTRAINT tuition_debts_type_null CHECK ((type IS NOT NULL)),
     CONSTRAINT tuition_debts_type_numericality CHECK ((type >= 0))

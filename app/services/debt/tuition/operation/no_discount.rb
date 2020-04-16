@@ -7,13 +7,7 @@ module Debt
         include Creation
 
         def operate(debt)
-          create_debt(debt, description)
-        end
-
-        private
-
-        def description
-          I18n.t('.tuition_management.tuition_debts.descriptions.no_discount')
+          create_debt(debt, :no_discount)
         end
       end
     end

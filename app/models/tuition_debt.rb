@@ -13,6 +13,7 @@ class TuitionDebt < ApplicationRecord
   search_keys :academic_term_id, :student_id
 
   # enums
+  enum description: { disability: 1, no_discount: 2 }
   enum type: { personal: 1, bulk: 2 }
 
   # relations
@@ -24,7 +25,7 @@ class TuitionDebt < ApplicationRecord
   # validations
   validates :academic_term_id, uniqueness: { scope: :student_id }
   validates :amount, numericality: { greater_than: 0 }
-  validates :description, length: { maximum: 65_535 }
+  validates :description, allow_nil: true, inclusion: { in: descriptions.keys }
   validates :due_date, presence: true
   validates :paid, inclusion: { in: [true, false] }
   validates :type, inclusion: { in: types.keys }

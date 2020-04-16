@@ -16,7 +16,7 @@ module Debt
       assert_equal tuition_debt.student, students(:john)
       assert_equal tuition_debt.academic_term, academic_term
       assert_equal tuition_debt.amount.to_f, 305
-      assert_equal tuition_debt.description, translate('no_discount')
+      assert_equal tuition_debt.description, 'no_discount'
       assert_equal tuition_debt.type, 'bulk'
       assert_not tuition_debt.paid
     end
@@ -33,7 +33,7 @@ module Debt
       assert_equal tuition_debt.student, students(:mike)
       assert_equal tuition_debt.academic_term, academic_term
       assert_equal tuition_debt.amount.to_f, 325
-      assert_equal tuition_debt.description, translate('disability')
+      assert_equal tuition_debt.description, 'disability'
       assert_equal tuition_debt.type, 'bulk'
       assert_not tuition_debt.paid
     end
@@ -53,15 +53,9 @@ module Debt
       assert_equal tuition_debt.student, student
       assert_equal tuition_debt.academic_term, academic_term
       assert_equal tuition_debt.amount.to_f, 650
-      assert_equal tuition_debt.description, translate('no_discount')
+      assert_equal tuition_debt.description, 'no_discount'
       assert_equal tuition_debt.type, 'bulk'
       assert_not tuition_debt.paid
-    end
-
-    private
-
-    def translate(key)
-      I18n.t("tuition_management.tuition_debts.descriptions.#{key}")
     end
   end
 end

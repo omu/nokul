@@ -23,10 +23,10 @@
               <%= f.association :academic_term, label_method: lambda { |academic_term| full_name(academic_term) } %>
             </div>
             <div class='form-group col-sm-6'>
-              <%= f.input :amount %>
+              <%= f.input :amount, required: true %>
             </div>
-            <div class='form-group col-sm-12'>
-              <%= f.input :description %>
+            <div class='form-group col-sm-6'>
+              <%= f.input :description, collection: enum_options_for_select(f.object.class, :description)  %>
             </div>
             <div class='form-group col-sm-6'>
               <%= f.input :due_date, as: :date_time_picker %>

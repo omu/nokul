@@ -5,7 +5,7 @@ module Debt
     module Operation
       module Creation
         def create_debt(debt, description)
-          ::TuitionDebt.create(
+          TuitionDebt.create(
             student:       debt.student,
             academic_term: debt.academic_term,
             unit_tuition:  debt.unit_tuition,

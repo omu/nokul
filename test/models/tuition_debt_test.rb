@@ -8,6 +8,7 @@ class TuitionDebtTest < ActiveSupport::TestCase
   extend Support::Minitest::ValidationHelper
 
   # enums
+  enum description: { disability: 1, no_discount: 2 }
   enum type: { personal: 1, bulk: 2 }
 
   # relations
@@ -18,6 +19,5 @@ class TuitionDebtTest < ActiveSupport::TestCase
 
   # validations
   validates_numerical_range :amount, greater_than: 0
-  validates_length_of :description, maximum: 65_535
   validates_presence_of :due_date
 end
