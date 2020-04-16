@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require_relative 'process/daytime_education'
-require_relative 'process/evening_education'
-
 module Debt
   module Tuition
     module Dispatch

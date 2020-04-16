@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-require_relative '../operation/scholarship'
-require_relative '../operation/disability'
-require_relative '../operation/no_discount'
-
 module Debt
   module Tuition
     module Process
