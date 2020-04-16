@@ -6,19 +6,19 @@ module Debt
       class Disability < Handler
         include Creation
 
-        def operate(params)
-          compute(params)
-          create_debt(params, description)
+        def operate(debt)
+          compute(debt)
+          create_debt(debt, description)
         end
 
-        def fulfill?(params)
-          params.user.disabled?
+        def fulfill?(debt)
+          debt.user.disabled?
         end
 
         private
 
-        def compute(params)
-          params.amount -= (params.amount * params.user.disability_rate) / 100
+        def compute(debt)
+          debt.amount -= (debt.amount * debt.user.disability_rate) / 100
         end
 
         def description

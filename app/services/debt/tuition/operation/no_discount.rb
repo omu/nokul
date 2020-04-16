@@ -6,8 +6,8 @@ module Debt
       class NoDiscount < Handler
         include Creation
 
-        def operate(params)
-          create_debt(params, description)
+        def operate(debt)
+          create_debt(debt, description)
         end
 
         private

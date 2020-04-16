@@ -4,8 +4,8 @@ module Debt
   module Tuition
     module Operation
       class Scholarship < Handler
-        def fulfill?(params)
-          params.student.scholarship?
+        def fulfill?(debt)
+          debt.student.scholarship?
         end
       end
     end
