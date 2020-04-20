@@ -6,6 +6,10 @@ two:
   unit: bilgisayar_muhendisligi_programi
   tuition: two
 
+three:
+  unit: buro_yonetimi_ve_yonetici_asistanligi_io
+  tuition: three
+
 unit_tuition_to_delete:
   unit: fen_bilgisi_ogretmenligi_programi
   tuition: tuition_to_delete

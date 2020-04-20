@@ -26,3 +26,12 @@ john:
   year: 2
   semester: 3
   exceeded_education_period: true
+mike:
+  student_number: 45789
+  user: mike
+  unit: buro_yonetimi_ve_yonetici_asistanligi_io
+  permanently_registered: true
+  status: active
+  year: 1
+  semester: 1
+  exceeded_education_period: false

@@ -1,0 +1,79 @@
+<div id='SearchForms' role='tablist'>
+  <div class='card'>
+    <div class='card-header' role='tab' id='Search'>
+      <h5 class='mb-0'>
+        <a class='collapsed'
+           data-toggle='collapse'
+           href='#collapseSearch'
+           id='collapseSearchLink'
+           aria-expanded='false'
+           aria-controls='Search'>
+          <%= t('search') %>
+        </a>
+        <div class='float-right'>
+          <%= link_to t('reset'), tuition_debts_path, class: 'btn btn-warning btn-sm' %>
+        </div>
+      </h5>
+    </div>
+    <div id='collapseSearch'
+         class='collapse show'
+         role='tabpanel'
+         aria-labelledby='Search'
+         data-parent='#SearchForms'>
+      <div class='card-body'>
+        <%= form_tag tuition_debts_path, method: :get do %>
+          <div class='row'>
+            <div class='form-group col-sm-4'>
+              <%= label_tag(:unit_id, t('.unit')) %>
+              <%= select_tag(:unit_id,
+                             options_from_collection_for_select(Unit.active.programs.order(:name), :id, :names_depth_cache, params[:unit_id]),
+                             include_blank: true,
+                             class:         'form-control',
+                             style:         'width: 100%') %>
+            </div>
+            <div class='form-group col-sm-4'>
+              <%= label_tag(:student_id, t('.student')) %>
+              <%= select_tag(:student_id,
+                             include_blank: true,
+                             class:         'form-control',
+                             style:         'width: 100%') %>
+            </div>
+            <div class='form-group col-sm-4'>
+              <%= label_tag(:academic_term_id, t('.academic_term')) %>
+              <%= select_tag(:academic_term_id,
+                             options_from_collection_for_select(AcademicTerm.all, :id, lambda { |term| full_name(term) }, params[:academic_term_id]),
+                             include_blank: true,
+                             class:         'form-control',
+                             style:         'width: 100%') %>
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-sm-12'>
+              <%= submit_tag t('search'), class: 'btn btn-primary' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type='text/javascript'>
+  $(document).ready(function() {
+    $('#academic_term_id, #student_id, #unit_id').select2();
+
+    var parameters = [
+      {
+        el: '#unit_id',
+        target: '#student_id',
+        params: { 'unit_id': '#unit_id' },
+        source: '/units/:unit_id/students/',
+        label_attribute: 'full_name',
+        reset_selectors: '#student_id',
+        placeholder: <%== t('.student_placeholder').to_json %>
+      }
+    ]
+    var dynamic_select = new DynamicSelect(parameters)
+    dynamic_select.init()
+  });
+</script>

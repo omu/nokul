@@ -24,6 +24,7 @@ class Student < ApplicationRecord
   has_many :curriculums, through: :unit
   has_many :semester_registrations, dependent: :destroy
   has_many :course_enrollments, through: :semester_registrations
+  has_many :tuition_debts, dependent: :destroy
 
   # scopes
   scope :exceeded, -> { where(exceeded_education_period: true) }
@@ -68,6 +69,10 @@ class Student < ApplicationRecord
 
   def scholarship?
     scholarship_type_id?
+  end
+
+  def prospective_student
+    user.prospective_students.find_by(unit_id: unit_id)
   end
 
   private

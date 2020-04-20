@@ -67,6 +67,7 @@ class Unit < ApplicationRecord
   scope :administratives,        -> { where(unit_type: UnitType.administrative) }
   scope :committees,             -> { where(unit_type: UnitType.committee) }
   scope :departments,            -> { where(unit_type: UnitType.department) }
+  scope :evenings,               -> { where(unit_instruction_type: UnitInstructionType.evening) }
   scope :faculties,              -> { where(unit_type: UnitType.faculty) }
   scope :graduate_programs,      -> { where(unit_type: UnitType.graduate_program) }
   scope :institutes,             -> { where(unit_type: UnitType.institute) }
@@ -124,6 +125,10 @@ class Unit < ApplicationRecord
 
   def program?
     UnitType.program.ids.include?(unit_type_id)
+  end
+
+  def evening?
+    Unit.evenings.exists?(id: id)
   end
 
   # custom methods

@@ -1,0 +1,17 @@
+one:
+  student: john
+  academic_term: active_term
+  unit_tuition: one
+  amount: 2.460,00
+  type: :personal
+  paid: false
+  due_date: <%= Time.zone.now + 2.months %>
+
+tuition_debt_to_delete:
+  student: serhat
+  academic_term: active_term
+  unit_tuition: one
+  amount: 387,00
+  type: :personal
+  paid: false
+  due_date: <%= Time.zone.now + 2.months %>

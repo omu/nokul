@@ -19,6 +19,10 @@ class UnitPolicy < ApplicationPolicy
     permitted? :read
   end
 
+  def students?
+    permitted? :read
+  end
+
   private
 
   def permitted?(*privileges)
