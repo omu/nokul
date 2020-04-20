@@ -128,7 +128,7 @@ class Unit < ApplicationRecord
   end
 
   def evening?
-    Unit.evenings.ids.include?(id)
+    Unit.evenings.exists?(id: id)
   end
 
   # custom methods
