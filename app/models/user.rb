@@ -148,7 +148,7 @@ class User < ApplicationRecord
   end
 
   def disabled?
-    !disability_rate.zero?
+    disability_rate.positive?
   end
 
   def self.with_most_articles
