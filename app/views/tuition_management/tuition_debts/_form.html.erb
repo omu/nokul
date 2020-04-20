@@ -26,7 +26,7 @@
               <%= f.input :amount, required: true %>
             </div>
             <div class='form-group col-sm-6'>
-              <%= f.input :description, collection: enum_options_for_select(f.object.class, :description)  %>
+              <%= f.input :description, collection: enum_options_for_select(f.object.class, :description) %>
             </div>
             <div class='form-group col-sm-6'>
               <%= f.input :due_date, as: :date_time_picker %>
