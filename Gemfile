@@ -39,7 +39,7 @@ gem 'net-ldap'
 
 # assets: core asset dependencies
 # TODO: The following line should be removed when sassc-rails has the latest version of sassc.
-gem 'sassc', '~> 2.2.1'
+gem 'sassc', '~> 2.3.0'
 gem 'sassc-rails'
 
 gem 'uglifier', '>= 1.3.0'
