@@ -37,6 +37,7 @@ tr:
         success: Takvim ve etkinlikler başarıyla çoğaltıldı. Gerekli değişiklikleri yapabilirsiniz.
         warning: Takvim çoğaltılamadı! Bu takvimi daha önce çoğaltmadığınızdan emin olun.
       units:
+        departments: Bölümler
         faculties: Fakülteler
         institutes: Enstitüler
         others: Diğer Birimler
