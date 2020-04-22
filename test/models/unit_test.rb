@@ -139,6 +139,7 @@ class UnitTest < ActiveSupport::TestCase
     assert_equal Unit.eventable.count,
                  Unit.faculties.count +
                  Unit.institutes.count +
+                 Unit.departments.count +
                  Unit.programs.count +
                  Unit.research_centers.count +
                  Unit.others.count
