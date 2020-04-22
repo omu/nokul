@@ -101,6 +101,7 @@ class Unit < ApplicationRecord
   scope :eventable, -> {
     faculties
       .or(institutes)
+      .or(departments)
       .or(programs)
       .or(research_centers)
       .or(others)
