@@ -19,6 +19,6 @@ class CourseEnrollment < ApplicationRecord
 
   # custom methods
   def grade_of(assessment)
-    grades.find_by(course_assessment_method: assessment)
+    grades.find_by(course_assessment_method_id: assessment.id)
   end
 end
