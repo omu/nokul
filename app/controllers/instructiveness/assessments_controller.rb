@@ -5,6 +5,7 @@ module Instructiveness
     before_action :set_employee
     before_action :set_course
     before_action :set_assessment
+    before_action :check_date_range, except: :show
     before_action :set_enrollments
     before_action :authorized?
     before_action :not_saved?, only: %i[edit update]
@@ -52,7 +53,12 @@ module Instructiveness
     end
 
     def set_assessment
-      @assessment = @course.course_assessment_methods.find(params[:id])
+      assessment = @course.course_assessment_methods.find(params[:id])
+      @assessment = AssessmentDecorator.new(assessment)
+    end
+
+    def check_date_range
+      redirect_with('.errors.not_proper_event_range') unless @assessment.results_announcement_active?
     end
 
     def set_enrollments
