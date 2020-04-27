@@ -33,6 +33,7 @@ tr:
         no_enrollments: Yetkiniz altında derse kayıtlanmış öğrenci bulunmamaktadır.
         not_coordinator: İşlem yalnızca ders koordinatörü tarafından gerçekleştirilebilir.
         saved: Notlandırma kesin olarak kaydedilmiş, güncelleme işlemi yapılamaz.
+        not_proper_event_range: Tarih aralığı bugünü kapsayan not girişi aktivitesi bulunmamaktadır.
       save:
         error: Notlandırma kalıcı olarak kaydedilemedi.
         not_draft_error: Notlandırma kalıcı olarak kaydedilemedi, taslak durumunda değil.
@@ -42,6 +43,7 @@ tr:
         draft: Taslak Durumuna Getir
         group_name: Grup Adı
         name: Adı
+        results_announcement_date_range: "Değerlendirme Sonuçları İlan Tarihleri: %{start_time} - %{end_time}"
         save: Kalıcı Olarak Kaydet
         students: '%{course_name} Dersine Kayıtlanan Öğrenciler'
         student_number: Öğrenci Numarası
