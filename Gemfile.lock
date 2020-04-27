@@ -271,7 +271,7 @@ GEM
       activesupport (>= 5.2)
     pghero (2.4.2)
       activerecord (>= 5)
-    pry (0.13.0)
+    pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
     pry-rails (0.3.9)
