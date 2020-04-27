@@ -261,7 +261,7 @@ GEM
       validate_url
       webfinger (>= 1.0.1)
     orm_adapter (0.5.0)
-    pagy (3.7.5)
+    pagy (3.8.0)
     parallel (1.19.1)
     parser (2.7.1.1)
       ast (~> 2.4.0)
