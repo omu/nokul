@@ -13,6 +13,14 @@ class AssessmentDecorator < SimpleDelegator
     )
   end
 
+  def editable?
+    !saved? && saved_enrollments.any?
+  end
+
+  def saveable?
+    draft? && fully_graded?
+  end
+
   private
 
   def calendar
