@@ -20,6 +20,7 @@ class Student < ApplicationRecord
   belongs_to :unit
   belongs_to :stage, class_name: 'StudentGrade', optional: true
   has_one :identity, dependent: :destroy
+  has_one :history, class_name: 'StudentHistory', dependent: :destroy
   has_many :calendars, -> { Calendar.active }, through: :unit
   has_many :curriculums, through: :unit
   has_many :semester_registrations, dependent: :destroy
