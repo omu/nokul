@@ -1,0 +1,14 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+serhat:
+  student: serhat
+  entrance_type: dgs
+  registration_term: fall_2018_2019
+  other_studentship: false
+  preparatory_class: 0
+john:
+  student: john
+  entrance_type: dgs
+  registration_term: fall_2018_2019
+  other_studentship: false
+  preparatory_class: 0
