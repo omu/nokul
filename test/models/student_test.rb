@@ -45,6 +45,7 @@ class StudentTest < ActiveSupport::TestCase
 
   # callback tests
   after_commit :build_identity_information
+  after_commit :create_student_history
 
   # delegations
   test 'a student can communicate with addresses over the user' do

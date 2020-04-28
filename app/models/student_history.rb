@@ -4,8 +4,8 @@ class StudentHistory < ApplicationRecord
   # relations
   belongs_to :student
   belongs_to :entrance_type, class_name: 'StudentEntranceType'
-  belongs_to :graduation_term, class_name: 'AcademicTerm'
-  belongs_to :registration_term, class_name: 'AcademicTerm'
+  belongs_to :graduation_term, class_name: 'AcademicTerm', optional: true
+  belongs_to :registration_term, class_name: 'AcademicTerm', optional: true
 
   # validations
   validates :other_studentship, inclusion: { in: [true, false] }

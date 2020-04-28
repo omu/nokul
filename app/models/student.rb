@@ -51,6 +51,7 @@ class Student < ApplicationRecord
 
   # background jobs
   after_create_commit :build_identity_information, if: proc { identity.nil? }
+  after_create_commit :create_student_history
 
   # custom methods
   def gpa
@@ -74,6 +75,15 @@ class Student < ApplicationRecord
 
   def prospective_student
     user.prospective_students.find_by(unit_id: unit_id)
+  end
+
+  def create_student_history
+    create_history(
+      entrance_type_id:     prospective_student&.student_entrance_type_id,
+      registration_date:    created_at,
+      registration_term_id: prospective_student&.academic_term_id,
+      other_studentship:    !prospective_student&.obs_status
+    )
   end
 
   private
