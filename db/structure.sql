@@ -3368,8 +3368,7 @@ CREATE TABLE public.student_histories (
     graduation_term_id bigint,
     other_studentship boolean DEFAULT false,
     preparatory_class integer DEFAULT 0,
-    created_at timestamp(6) without time zone NOT NULL,
-    updated_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp without time zone,
     CONSTRAINT student_histories_other_studentship_null CHECK ((other_studentship IS NOT NULL)),
     CONSTRAINT student_histories_preparatory_class_numericality CHECK ((preparatory_class >= 0))
 );
