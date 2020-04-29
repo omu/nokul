@@ -14,6 +14,10 @@ excused_mid_term_applications:
   name: Ara Sınav Mazeret Başvuruları
   identifier: excused_mid_term_applications
   category: applications
+mid_term_results_announcement:
+  name: Ara Sınav
+  identifier: mid_term_results_announcement
+  category: announcement
 calendar_event_type_to_delete:
   name: This event type will be deleted in tests
   identifier: some_event_type_to_delete
