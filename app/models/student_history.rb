@@ -9,5 +9,7 @@ class StudentHistory < ApplicationRecord
 
   # validations
   validates :other_studentship, inclusion: { in: [true, false] }
-  validates :preparatory_class, numericality: { inclusion: 0..2 }
+  validates :preparatory_class, numericality: { only_integer:             true,
+                                                greater_than_or_equal_to: 0,
+                                                less_than_or_equal_to:    2 }
 end

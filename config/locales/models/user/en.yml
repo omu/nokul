@@ -28,6 +28,14 @@ en:
         student_number: Student Number
         unit: Unit
         year: Year
+      student_history:
+        entrance_type: Entrance Type
+        graduation_date: Graduation Date
+        graduation_term: Graduation Term
+        other_studentship: There Is Other Studentship
+        preparatory_class: Preparatory Class
+        registration_date: Registration Date
+        registration_term: Registration Term
       user: &user_attributes
         activated: Account Activation
         activated_at: Account Activation Date

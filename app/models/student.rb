@@ -19,13 +19,14 @@ class Student < ApplicationRecord
   belongs_to :user
   belongs_to :unit
   belongs_to :stage, class_name: 'StudentGrade', optional: true
-  has_one :identity, dependent: :destroy
   has_one :history, class_name: 'StudentHistory', dependent: :destroy
+  has_one :identity, dependent: :destroy
   has_many :calendars, -> { Calendar.active }, through: :unit
   has_many :curriculums, through: :unit
   has_many :semester_registrations, dependent: :destroy
   has_many :course_enrollments, through: :semester_registrations
   has_many :tuition_debts, dependent: :destroy
+  accepts_nested_attributes_for :history, allow_destroy: true
 
   # scopes
   scope :exceeded, -> { where(exceeded_education_period: true) }

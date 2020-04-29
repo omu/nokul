@@ -28,6 +28,14 @@ tr:
         student_number: Öğrenci Numarası
         unit: Birim
         year: Yıl
+      student_history:
+        entrance_type: Giriş Türü
+        graduation_date: Mezuniyet Tarihi
+        graduation_term: Mezuniyet Dönemi
+        other_studentship: Başka Öğrenciliği Var
+        preparatory_class: Hazırlık Sınıfı
+        registration_date: Kayıt Tarihi
+        registration_term: Kayıt Dönemi
       user: &user_attributes
         activated: Hesap Aktifleştirme
         activated_at: Hesap Aktifleştirme Tarihi
