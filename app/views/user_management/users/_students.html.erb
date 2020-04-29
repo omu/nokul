@@ -28,7 +28,30 @@
             <td><%= student.semester %></td>
             <td><%= student.scholarship_type_name %></td>
             <td><%= student.stage_name %></td>
-            <td><%= icon_for_check(student.exceeded_education_period) %></td>
+            <td><%= student.exceeded_education_period ? t('yes') : t('no') %></td>
+          </tr>
+        </tbody>
+
+        <thead>
+          <tr>
+            <th><%= t('.entrance_type') %></th>
+            <th><%= t('.registration_date') %></th>
+            <th><%= t('.registration_term') %></th>
+            <th><%= t('.graduation_date') %></th>
+            <th><%= t('.graduation_term') %></th>
+            <th><%= t('.other_studentship') %></th>
+            <th><%= t('.preparatory_class') %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= student.entrance_type.name %></td>
+            <td><%= l(student.registration_date, format: '%d %b %Y') %></td>
+            <td><%= full_name(student.registration_term) %></td>
+            <td><%= l(student.graduation_date, format: '%d %b %Y') %></td>
+            <td><%= full_name(student.graduation_term) %></td>
+            <td><%= student.other_studentship ? t('yes') : t('no') %></td>
+            <td><%= student.preparatory_class %></td>
           </tr>
         </tbody>
       </table>

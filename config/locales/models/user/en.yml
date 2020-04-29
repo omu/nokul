@@ -28,7 +28,7 @@ en:
         student_number: Student Number
         unit: Unit
         year: Year
-      student_history:
+      student_history: &student_history_attributes
         entrance_type: Entrance Type
         graduation_date: Graduation Date
         graduation_term: Graduation Term
@@ -124,5 +124,6 @@ en:
         students: Student Information
       students:
         <<: *student_attributes
+        <<: *student_history_attributes
       update:
         success: User successfully updated.
