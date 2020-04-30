@@ -50,7 +50,7 @@ class Student < ApplicationRecord
   delegate :name, to: :unit, prefix: true
   delegate :name, to: :scholarship_type, prefix: true, allow_nil: true
   delegate :entrance_type, :graduation_term, :other_studentship, :preparatory_class,
-           :registration_date, :registration_term, :graduation_date, to: :history
+           :registration_date, :registration_term, :graduation_date, to: :history, allow_nil: true
 
   # background jobs
   after_create_commit :build_identity_information, if: proc { identity.nil? }
