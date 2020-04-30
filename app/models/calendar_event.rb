@@ -21,8 +21,4 @@ class CalendarEvent < ApplicationRecord
 
   # delegations
   delegate :name, to: :calendar_event_type, prefix: :type
-
-  def active_now?
-    end_time ? Time.current.between?(start_time, end_time) : start_time.past?
-  end
 end
