@@ -43,7 +43,6 @@ en:
         draft: Draft
         group_name: Group Name
         name: Name
-        results_announcement_date_range: "Evaluation Results Announcement Dates: %{start_time} - %{end_time}"
         save: Save Permanently
         students: 'Students Enrolled in %{course_name} Course'
         student_number: Student Number
