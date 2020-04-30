@@ -12,3 +12,5 @@ en:
     calendars:
       calendar_event_fields:
         <<: *calendar_event_attributes
+      date_range: "Event Dates: %{start_time} - %{end_time}"
+      undefined_date_range: Event dates are not defined.

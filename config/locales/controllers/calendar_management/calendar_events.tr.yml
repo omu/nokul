@@ -12,3 +12,5 @@ tr:
     calendars:
       calendar_event_fields:
         <<: *calendar_event_attributes
+      date_range: "Ekinlik Tarihleri: %{start_time} - %{end_time}"
+      undefined_date_range: Etkinlik tarihleri tanımlanmamış.
