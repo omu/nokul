@@ -14,10 +14,11 @@
               <%= link_to(t('.save'), save_given_course_assessment_path(@course, @assessment), class: 'btn btn-warning btn-sm') if @assessment.saveable? %>
             <% end %>
 
-            <% if @assessment.results_announcement_active? %>
+            <% event = @assessment.results_announcement_event %>
+            <% if event.active_now? %>
               <%= link_to_edit(t('action_group.edit'), edit_given_course_assessment_path(@course, @assessment), class: 'btn btn-outline-success btn-sm') if @assessment.editable? %>
             <% else %>
-              <%= @assessment.date_range %>
+              <%= event.date_range %>
             <% end %>
           </span>
         </div>

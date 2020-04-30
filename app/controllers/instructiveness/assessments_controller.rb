@@ -6,7 +6,7 @@ module Instructiveness
     before_action :set_course
     before_action :set_assessment
     before_action :authorized?
-    before_action :check_date_range, except: :show
+    before_action :event_active?, except: :show
     before_action :coordinator?, only: %i[save draft]
     before_action :set_enrollments
     before_action :editable?, only: %i[edit update]
@@ -61,8 +61,8 @@ module Instructiveness
       authorize(@employee, policy_class: Instructiveness::AssessmentPolicy)
     end
 
-    def check_date_range
-      redirect_with('.errors.not_proper_event_range') unless @assessment.results_announcement_active?
+    def event_active?
+      redirect_with('.errors.not_proper_event_range') unless @assessment.results_announcement_event.active_now?
     end
 
     def coordinator?

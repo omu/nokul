@@ -6,7 +6,7 @@ module Studentship
     before_action :authorized?
     before_action :set_service, except: :index
     before_action :set_course_enrollment, only: :destroy
-    before_action :check_registrability, except: :index
+    before_action :event_active?, except: :index
     before_action :check_registration_status, except: %i[index list]
 
     def index
@@ -63,8 +63,8 @@ module Studentship
       authorize(@student, policy_class: Studentship::CourseEnrollmentPolicy)
     end
 
-    def check_registrability
-      return if @student.registrable_for_online_course?
+    def event_active?
+      return if @student.event_online_course_registrations.active_now?
 
       redirect_to(student_course_enrollments_path(@student), alert: t('.errors.not_proper_register_event_range'))
     end
