@@ -20,7 +20,7 @@ tr:
         end_date: Bitiş Tarihi
         start_date: Başlangıç Tarihi
       student: &student_attributes
-        exceeded_education_period: Eğitim süresi içerisinde mezun olamadı
+        exceeded_education_period: Okulu Uzattı
         scholarship_type: Burs Türü
         semester: Yarıyıl
         stage: Aşama

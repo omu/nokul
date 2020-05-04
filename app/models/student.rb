@@ -80,6 +80,8 @@ class Student < ApplicationRecord
     user.prospective_students.find_by(unit_id: unit_id)
   end
 
+  private
+
   def create_student_history
     create_history(
       entrance_type_id:     prospective_student&.student_entrance_type_id,
@@ -88,8 +90,6 @@ class Student < ApplicationRecord
       other_studentship:    !prospective_student&.obs_status
     )
   end
-
-  private
 
   def build_identity_information
     Kps::IdentitySaveJob.perform_later(user, id)
