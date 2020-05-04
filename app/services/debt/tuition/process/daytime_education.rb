@@ -11,7 +11,7 @@ module Debt
         end
 
         def chain
-          if exceeded? || other_studentship?
+          if exceeded? || other_studentship? || student.preparatory_class_repetition?
             Operation::Disability.new(Operation::NoDiscount.new)
           else
             Operation::Free.new

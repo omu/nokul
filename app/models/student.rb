@@ -76,6 +76,10 @@ class Student < ApplicationRecord
     scholarship_type_id?
   end
 
+  def preparatory_class_repetition?
+    preparatory_class.to_i >= 2
+  end
+
   def prospective_student
     user.prospective_students.find_by(unit_id: unit_id)
   end
