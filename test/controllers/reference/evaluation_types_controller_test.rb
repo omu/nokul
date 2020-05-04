@@ -8,7 +8,7 @@ class EvaluationTypesControllerTest < ActionDispatch::IntegrationTest
 
   setup do
     @target_path = 'reference'
-    @create_params = { name: 'Test Create' }
-    @update_params = { name: 'Test Update' }
+    @create_params = { identifier: 'test_identifier', name: 'Test Create' }
+    @update_params = { identifier: 'test_identifier', name: 'Test Update' }
   end
 end
