@@ -13,6 +13,7 @@ class EvaluationType < ApplicationRecord
 
   # validations
   validates :name, presence: true, uniqueness: true, length: { maximum: 255 }
+  validates :identifier, uniqueness: true, length: { maximum: 255 }
 
   private
 
