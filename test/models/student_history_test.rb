@@ -18,4 +18,5 @@ class StudentHistoryTest < ActiveSupport::TestCase
 
   # validations: numericality
   validates_numericality_of :preparatory_class
+  validates_numerical_range :preparatory_class, greater_than_or_equal_to: 0, less_than_or_equal_to: 2
 end
