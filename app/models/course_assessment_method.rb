@@ -20,7 +20,7 @@ class CourseAssessmentMethod < ApplicationRecord
   validates :assessment_method, uniqueness: { scope: :course_evaluation_type }
 
   # delegates
-  delegate :available_course, to: :course_evaluation_type
+  delegate :available_course, :identifier, to: :course_evaluation_type
   delegate :name, to: :assessment_method
 
   # custom methods
