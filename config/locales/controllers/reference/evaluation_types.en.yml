@@ -3,6 +3,7 @@ en:
     attributes:
       evaluation_type: &evaluation_type_attributes
         name: Name of Evaluation Type
+        identifier: Type Identifier
   helpers:
     submit:
       evaluation_type:
