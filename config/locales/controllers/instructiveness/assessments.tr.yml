@@ -16,7 +16,9 @@ tr:
       assessment_info:
         evaluation_type: Değerlendirme Türü
         assessment: Ölçme Kriteri
+        date_range: Değerlendirme Tarih Aralığı
         grade_entry: Not Girişi
+        number_of_students: Öğrenci Sayısı
         percentage: Yüzde
         status: Durum
       draft:

@@ -16,7 +16,9 @@ en:
       assessment_info:
         evaluation_type: Evaluation Type
         assessment: Assessment Method
+        date_range: Evaluation Date Range
         grade_entry: Grade Entry
+        number_of_students: Number of Students
         percentage: Percentage
         status: Status
       draft:
