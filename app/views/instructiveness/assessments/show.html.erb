@@ -9,16 +9,13 @@
         <%= fa_icon 'users' %><b><%= t('.students', course_name: @course.name) %></b>
         <div class='card-header-actions'>
           <span class='pull-right'>
-            <% if @employee.coordinatorships.include?(@course) %>
-              <%= link_to(t('.draft'), draft_given_course_assessment_path(@course, @assessment), class: 'btn btn-warning btn-sm') if @assessment.saved? %>
-              <%= link_to(t('.save'), save_given_course_assessment_path(@course, @assessment), class: 'btn btn-warning btn-sm') if @assessment.saveable? %>
-            <% end %>
+            <% if  @assessment.results_announcement_event.active_now? %>
+              <% if @employee.coordinatorships.include?(@course) %>
+                <%= link_to(t('.draft'), draft_given_course_assessment_path(@course, @assessment), class: 'btn btn-warning btn-sm') if @assessment.saved? %>
+                <%= link_to(t('.save'), save_given_course_assessment_path(@course, @assessment), class: 'btn btn-warning btn-sm') if @assessment.saveable? %>
+              <% end %>
 
-            <% event = @assessment.results_announcement_event %>
-            <% if event.active_now? %>
               <%= link_to_edit(t('action_group.edit'), edit_given_course_assessment_path(@course, @assessment), class: 'btn btn-outline-success btn-sm') if @assessment.editable? %>
-            <% else %>
-              <%= event.date_range %>
             <% end %>
           </span>
         </div>
