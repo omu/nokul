@@ -16,6 +16,6 @@ class AssessmentDecorator < SimpleDelegator
   private
 
   def calendar
-    course_evaluation_type.available_course.unit.calendars.last
+    course_evaluation_type.available_course.calendars.last
   end
 end
