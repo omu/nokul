@@ -40,6 +40,7 @@ tr:
       index:
         course_enrollments: Ders Kayıtları
         registration_status: Kayıt Durumu
+        registration_date_range: Ders Kayıt Tarih Aralığı
       list:
         <<: *course_attributes
         sequence: Dönem
