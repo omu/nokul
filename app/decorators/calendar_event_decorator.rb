@@ -8,18 +8,8 @@ class CalendarEventDecorator < SimpleDelegator
   end
 
   def date_range
-    return translate('undefined_date_range') unless presence
+    return I18n.t('calendar_management.calendar_events.undefined_date_range') unless presence
 
-    translate(
-      'date_range',
-      start_time: start_time&.strftime('%F %R'),
-      end_time:   end_time&.strftime('%F %R')
-    )
-  end
-
-  private
-
-  def translate(key, params = {})
-    I18n.t("calendar_management.calendars.#{key}", **params)
+    "#{start_time&.strftime('%F %R')} - #{end_time&.strftime('%F %R')}"
   end
 end

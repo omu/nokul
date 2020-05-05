@@ -14,16 +14,6 @@ class CalendarEventDecoratorTest < ActiveSupport::TestCase
 
   test 'date_range? method' do
     assert_equal @calendar_event.date_range,
-                 translate(
-                   'date_range',
-                   start_time: @calendar_event.start_time&.strftime('%F %R'),
-                   end_time:   @calendar_event.end_time&.strftime('%F %R')
-                 )
-  end
-
-  private
-
-  def translate(key, params = {})
-    t("calendar_management.calendars.#{key}", params)
+                 "#{@calendar_event.start_time&.strftime('%F %R')} - #{@calendar_event.end_time&.strftime('%F %R')}"
   end
 end
