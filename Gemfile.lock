@@ -284,7 +284,7 @@ GEM
     pwned (2.0.1)
     raabro (1.1.6)
     rack (2.0.9)
-    rack-attack (6.2.2)
+    rack-attack (6.3.0)
       rack (>= 1.0, < 3)
     rack-mini-profiler (2.0.1)
       rack (>= 1.2.0)
