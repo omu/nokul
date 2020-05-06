@@ -57,6 +57,10 @@ class Calendar < ApplicationRecord
     calendar_events.find_by(calendar_event_type: type)
   end
 
+  def check_events(identifier)
+    event(identifier).try(:active_now?)
+  end
+
   private
 
   def event_type(identifier)
