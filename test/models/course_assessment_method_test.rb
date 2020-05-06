@@ -14,6 +14,8 @@ class CourseAssessmentMethodTest < ActiveSupport::TestCase
   belongs_to :assessment_method
   belongs_to :course_evaluation_type
   has_many :grades, dependent: :destroy
+  has_many :saved_enrollments, through: :course_evaluation_type
+  has_one :available_course, through: :course_evaluation_type
   accepts_nested_attributes_for :grades
 
   # validations: presence
@@ -29,7 +31,7 @@ class CourseAssessmentMethodTest < ActiveSupport::TestCase
 
   # delegates
   %i[
-    available_course
+    identifier
     name
   ].each do |property|
     test "a course_assessment_method reach #{property} parameter" do
