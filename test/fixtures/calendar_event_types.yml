@@ -15,7 +15,7 @@ excused_mid_term_applications:
   identifier: excused_mid_term_applications
   category: applications
 mid_term_results_announcement:
-  name: Ara Sınav
+  name: Ara Sınav Sonuçlarının İlanı
   identifier: mid_term_results_announcement
   category: announcement
 calendar_event_type_to_delete:
