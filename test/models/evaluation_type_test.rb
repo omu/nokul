@@ -13,6 +13,7 @@ class EvaluationTypeTest < ActiveSupport::TestCase
 
   # validations: presence
   validates_presence_of :name
+  validates_presence_of :identifier
 
   # validations: uniqueness
   validates_uniqueness_of :name
