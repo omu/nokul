@@ -62,7 +62,7 @@ module Instructiveness
     end
 
     def event_active?
-      redirect_with('.errors.not_proper_event_range') unless @assessment.results_announcement_event.active_now?
+      redirect_with('.errors.not_proper_event_range') unless @assessment.results_announcement_event&.active_now?
     end
 
     def coordinator?
