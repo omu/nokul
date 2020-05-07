@@ -11,7 +11,7 @@ class CreateStudentHistories < ActiveRecord::Migration[6.0]
       t.references :graduation_term, foreign_key: { to_table: :academic_terms }
       t.boolean :other_studentship, default: false
       t.integer :preparatory_class, default: 0
-      t.datetime :updated_at
+      t.timestamps
     end
 
     add_null_constraint :student_histories, :other_studentship
