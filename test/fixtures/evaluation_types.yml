@@ -1,6 +1,6 @@
 undergraduate_midterm:
   name: Dönem İçi Değerlendirme
-  identifier: mid_term
+  identifier: midterm
 
 undergraduate_final:
   name: Dönem Sonu Değerlendirme

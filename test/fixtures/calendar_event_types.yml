@@ -10,13 +10,13 @@ online_course_registrations:
   name: Çevrimiçi Ders Kayıtları
   identifier: online_course_registrations
   category: registrations
-excused_mid_term_applications:
+excused_midterm_applications:
   name: Ara Sınav Mazeret Başvuruları
-  identifier: excused_mid_term_applications
+  identifier: excused_midterm_applications
   category: applications
-mid_term_results_announcement:
+midterm_results_announcement:
   name: Ara Sınav Sonuçlarının İlanı
-  identifier: mid_term_results_announcement
+  identifier: midterm_results_announcement
   category: announcement
 calendar_event_type_to_delete:
   name: This event type will be deleted in tests

@@ -22,6 +22,6 @@ class CalendarEventTest < ActiveSupport::TestCase
 
   test 'active_now? method' do
     assert_not calendar_events(:add_drop_fall_2018_grad).active_now?
-    assert calendar_events(:mid_term_results_announcement).active_now?
+    assert calendar_events(:midterm_results_announcement).active_now?
   end
 end

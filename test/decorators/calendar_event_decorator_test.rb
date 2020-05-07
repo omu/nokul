@@ -4,7 +4,7 @@ require 'test_helper'
 
 class CalendarEventDecoratorTest < ActiveSupport::TestCase
   setup do
-    @calendar_event = CalendarEventDecorator.new(calendar_events(:mid_term_results_announcement))
+    @calendar_event = CalendarEventDecorator.new(calendar_events(:midterm_results_announcement))
   end
 
   test 'date_range? method' do
