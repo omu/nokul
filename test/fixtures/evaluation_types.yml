@@ -1,15 +1,15 @@
 undergraduate_midterm:
   name: Dönem İçi Değerlendirme
-  identifier: mid_term_results_announcement
+  identifier: mid_term
 
 undergraduate_final:
   name: Dönem Sonu Değerlendirme
-  identifier: final_results_announcement
+  identifier: final
 
 undergraduate_retake:
   name: Bütünleme Değerlendirme
-  identifier: retake_results_announcement
+  identifier: retake
 
 evaluation_type_to_delete:
   name: This evaluation type will be deleted
-  identifier: retake_results_announcement
+  identifier: test

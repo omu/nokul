@@ -24,6 +24,7 @@ class AssessmentDecorator < SimpleDelegator
   end
 
   def results_announcement_event
-    @results_announcement_event ||= CalendarEventDecorator.new(calendar&.event(identifier))
+    @results_announcement_event ||=
+      CalendarEventDecorator.new(calendar&.event("#{identifier}_results_announcement"))
   end
 end
