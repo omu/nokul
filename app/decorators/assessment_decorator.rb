@@ -9,13 +9,21 @@ class AssessmentDecorator < SimpleDelegator
     draft? && fully_graded?
   end
 
-  def results_announcement_event
-    @results_announcement_event ||= CalendarEventDecorator.new(calendar&.event(identifier))
+  def gradable?
+    results_announcement_event.try(:active_now?)
+  end
+
+  def gradable_date_range
+    results_announcement_event.date_range
   end
 
   private
 
   def calendar
     available_course.calendars.last
+  end
+
+  def results_announcement_event
+    @results_announcement_event ||= CalendarEventDecorator.new(calendar&.event(identifier))
   end
 end

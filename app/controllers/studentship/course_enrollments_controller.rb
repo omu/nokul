@@ -64,7 +64,7 @@ module Studentship
     end
 
     def event_active?
-      return if @student.event_online_course_registrations&.active_now?
+      return if @student.registrable_for_online_course?
 
       redirect_to(student_course_enrollments_path(@student), alert: t('.errors.not_proper_register_event_range'))
     end
