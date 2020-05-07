@@ -3355,46 +3355,6 @@ ALTER SEQUENCE public.student_grading_systems_id_seq OWNED BY public.student_gra
 
 
 --
--- Name: student_histories; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.student_histories (
-    id bigint NOT NULL,
-    student_id bigint NOT NULL,
-    entrance_type_id bigint,
-    registration_date timestamp without time zone,
-    registration_term_id bigint,
-    graduation_date timestamp without time zone,
-    graduation_term_id bigint,
-    other_studentship boolean DEFAULT false,
-    preparatory_class integer DEFAULT 0,
-    created_at timestamp(6) without time zone NOT NULL,
-    updated_at timestamp(6) without time zone NOT NULL,
-    CONSTRAINT student_histories_other_studentship_null CHECK ((other_studentship IS NOT NULL)),
-    CONSTRAINT student_histories_preparatory_class_numericality CHECK ((preparatory_class >= 0))
-);
-
-
---
--- Name: student_histories_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE public.student_histories_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: student_histories_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE public.student_histories_id_seq OWNED BY public.student_histories.id;
-
-
---
 -- Name: student_punishment_types; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -3480,7 +3440,14 @@ CREATE TABLE public.students (
     status integer DEFAULT 1,
     exceeded_education_period boolean DEFAULT false,
     stage_id bigint,
+    entrance_type_id bigint,
+    other_studentship boolean DEFAULT false,
+    preparatory_class integer DEFAULT 0,
+    registration_date timestamp without time zone,
+    registration_term_id bigint,
+    CONSTRAINT students_other_studentship_null CHECK ((other_studentship IS NOT NULL)),
     CONSTRAINT students_permanently_registered_null CHECK ((permanently_registered IS NOT NULL)),
+    CONSTRAINT students_preparatory_class_numericality CHECK ((preparatory_class >= 0)),
     CONSTRAINT students_semester_null CHECK ((semester IS NOT NULL)),
     CONSTRAINT students_semester_numericality CHECK ((semester > 0)),
     CONSTRAINT students_status_null CHECK ((status IS NOT NULL)),
@@ -4591,13 +4558,6 @@ ALTER TABLE ONLY public.student_grading_systems ALTER COLUMN id SET DEFAULT next
 
 
 --
--- Name: student_histories id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.student_histories ALTER COLUMN id SET DEFAULT nextval('public.student_histories_id_seq'::regclass);
-
-
---
 -- Name: student_punishment_types id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -5622,14 +5582,6 @@ ALTER TABLE ONLY public.student_grading_systems
 
 
 --
--- Name: student_histories student_histories_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.student_histories
-    ADD CONSTRAINT student_histories_pkey PRIMARY KEY (id);
-
-
---
 -- Name: student_punishment_types student_punishment_types_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6633,31 +6585,17 @@ CREATE INDEX index_semester_registrations_on_student_id ON public.semester_regis
 
 
 --
--- Name: index_student_histories_on_entrance_type_id; Type: INDEX; Schema: public; Owner: -
+-- Name: index_students_on_entrance_type_id; Type: INDEX; Schema: public; Owner: -
 --
 
-CREATE INDEX index_student_histories_on_entrance_type_id ON public.student_histories USING btree (entrance_type_id);
-
-
---
--- Name: index_student_histories_on_graduation_term_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX index_student_histories_on_graduation_term_id ON public.student_histories USING btree (graduation_term_id);
+CREATE INDEX index_students_on_entrance_type_id ON public.students USING btree (entrance_type_id);
 
 
 --
--- Name: index_student_histories_on_registration_term_id; Type: INDEX; Schema: public; Owner: -
+-- Name: index_students_on_registration_term_id; Type: INDEX; Schema: public; Owner: -
 --
 
-CREATE INDEX index_student_histories_on_registration_term_id ON public.student_histories USING btree (registration_term_id);
-
-
---
--- Name: index_student_histories_on_student_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX index_student_histories_on_student_id ON public.student_histories USING btree (student_id);
+CREATE INDEX index_students_on_registration_term_id ON public.students USING btree (registration_term_id);
 
 
 --
@@ -6897,14 +6835,6 @@ ALTER TABLE ONLY public.students
 
 ALTER TABLE ONLY public.students
     ADD CONSTRAINT fk_rails_155a016013 FOREIGN KEY (stage_id) REFERENCES public.student_grades(id);
-
-
---
--- Name: student_histories fk_rails_1aec1b73f4; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.student_histories
-    ADD CONSTRAINT fk_rails_1aec1b73f4 FOREIGN KEY (entrance_type_id) REFERENCES public.student_entrance_types(id);
 
 
 --
@@ -7188,14 +7118,6 @@ ALTER TABLE ONLY public.role_permissions
 
 
 --
--- Name: student_histories fk_rails_60b0bff9e5; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.student_histories
-    ADD CONSTRAINT fk_rails_60b0bff9e5 FOREIGN KEY (registration_term_id) REFERENCES public.academic_terms(id);
-
-
---
 -- Name: calendar_events fk_rails_64d7b22524; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7209,6 +7131,14 @@ ALTER TABLE ONLY public.calendar_events
 
 ALTER TABLE ONLY public.meeting_agendas
     ADD CONSTRAINT fk_rails_694b3fc610 FOREIGN KEY (committee_meeting_id) REFERENCES public.committee_meetings(id);
+
+
+--
+-- Name: students fk_rails_6b6ccfbba8; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.students
+    ADD CONSTRAINT fk_rails_6b6ccfbba8 FOREIGN KEY (registration_term_id) REFERENCES public.academic_terms(id);
 
 
 --
@@ -7265,14 +7195,6 @@ ALTER TABLE ONLY public.accreditation_standards
 
 ALTER TABLE ONLY public.prospective_employees
     ADD CONSTRAINT fk_rails_7e3da1fde7 FOREIGN KEY (title_id) REFERENCES public.titles(id);
-
-
---
--- Name: student_histories fk_rails_7f34dd6017; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.student_histories
-    ADD CONSTRAINT fk_rails_7f34dd6017 FOREIGN KEY (graduation_term_id) REFERENCES public.academic_terms(id);
 
 
 --
@@ -7532,6 +7454,14 @@ ALTER TABLE ONLY public.academic_credentials
 
 
 --
+-- Name: students fk_rails_ba6ab25b1e; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.students
+    ADD CONSTRAINT fk_rails_ba6ab25b1e FOREIGN KEY (entrance_type_id) REFERENCES public.student_entrance_types(id);
+
+
+--
 -- Name: course_enrollments fk_rails_baabe22f29; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7553,14 +7483,6 @@ ALTER TABLE ONLY public.course_evaluation_types
 
 ALTER TABLE ONLY public.books
     ADD CONSTRAINT fk_rails_bc582ddd02 FOREIGN KEY (user_id) REFERENCES public.users(id);
-
-
---
--- Name: student_histories fk_rails_be0b7f94b6; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.student_histories
-    ADD CONSTRAINT fk_rails_be0b7f94b6 FOREIGN KEY (student_id) REFERENCES public.students(id);
 
 
 --

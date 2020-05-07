@@ -20,7 +20,12 @@ tr:
         end_date: Bitiş Tarihi
         start_date: Başlangıç Tarihi
       student: &student_attributes
+        entrance_type: Giriş Türü
         exceeded_education_period: Okulu Uzattı
+        other_studentship: Başka Öğrenciliği Var
+        preparatory_class: Hazırlık Sınıfı
+        registration_date: Kayıt Tarihi
+        registration_term: Kayıt Dönemi
         scholarship_type: Burs Türü
         semester: Yarıyıl
         stage: Aşama
@@ -28,14 +33,6 @@ tr:
         student_number: Öğrenci Numarası
         unit: Birim
         year: Yıl
-      student_history: &student_history_attributes
-        entrance_type: Giriş Türü
-        graduation_date: Mezuniyet Tarihi
-        graduation_term: Mezuniyet Dönemi
-        other_studentship: Başka Öğrenciliği Var
-        preparatory_class: Hazırlık Sınıfı
-        registration_date: Kayıt Tarihi
-        registration_term: Kayıt Dönemi
       user: &user_attributes
         activated: Hesap Aktifleştirme
         activated_at: Hesap Aktifleştirme Tarihi
@@ -137,6 +134,5 @@ tr:
         students: Öğrenci Bilgileri
       students:
         <<: *student_attributes
-        <<: *student_history_attributes
       update:
         success: Kullanıcı başarıyla güncellendi.

@@ -15,18 +15,18 @@ class Student < ApplicationRecord
   }
 
   # relations
+  belongs_to :entrance_type, class_name: 'StudentEntranceType'
+  belongs_to :registration_term, class_name: 'AcademicTerm', optional: true
   belongs_to :scholarship_type, optional: true
+  belongs_to :stage, class_name: 'StudentGrade', optional: true
   belongs_to :user
   belongs_to :unit
-  belongs_to :stage, class_name: 'StudentGrade', optional: true
-  has_one :history, class_name: 'StudentHistory', dependent: :destroy
   has_one :identity, dependent: :destroy
   has_many :calendars, -> { Calendar.active }, through: :unit
   has_many :curriculums, through: :unit
   has_many :semester_registrations, dependent: :destroy
   has_many :course_enrollments, through: :semester_registrations
   has_many :tuition_debts, dependent: :destroy
-  accepts_nested_attributes_for :history, allow_destroy: true
 
   # scopes
   scope :exceeded, -> { where(exceeded_education_period: true) }
@@ -37,8 +37,12 @@ class Student < ApplicationRecord
   # validations
   validates :exceeded_education_period, inclusion: { in: [true, false] }
   validates :unit_id, uniqueness: { scope: %i[user] }
+  validates :other_studentship, inclusion: { in: [true, false] }
   validates :permanently_registered, inclusion: { in: [true, false] }
   # TODO: Will set equal_to: N, when we decide about student numbers
+  validates :preparatory_class, numericality: { only_integer:             true,
+                                                greater_than_or_equal_to: 0,
+                                                less_than_or_equal_to:    2 }
   validates :student_number, presence: true, uniqueness: true, length: { maximum: 255 }
   validates :semester, numericality: { greater_than: 0 }
   validates :status, inclusion: { in: statuses.keys }
@@ -49,12 +53,9 @@ class Student < ApplicationRecord
   delegate :name, to: :stage, prefix: true, allow_nil: true
   delegate :name, to: :unit, prefix: true
   delegate :name, to: :scholarship_type, prefix: true, allow_nil: true
-  delegate :entrance_type, :graduation_term, :other_studentship, :preparatory_class,
-           :registration_date, :registration_term, :graduation_date, to: :history, allow_nil: true
 
   # background jobs
   after_create_commit :build_identity_information, if: proc { identity.nil? }
-  after_create_commit :create_student_history
 
   # custom methods
   def gpa
@@ -85,15 +86,6 @@ class Student < ApplicationRecord
   end
 
   private
-
-  def create_student_history
-    create_history(
-      entrance_type_id:     prospective_student&.student_entrance_type_id,
-      registration_date:    created_at,
-      registration_term_id: prospective_student&.academic_term_id,
-      other_studentship:    !prospective_student&.obs_status
-    )
-  end
 
   def build_identity_information
     Kps::IdentitySaveJob.perform_later(user, id)

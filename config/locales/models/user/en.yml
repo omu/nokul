@@ -20,7 +20,12 @@ en:
         end_date: End Date
         start_date: Start Date
       student: &student_attributes
+        entrance_type: Entrance Type
         exceeded_education_period: Couldn't graduate during education period
+        other_studentship: There Is Other Studentship
+        preparatory_class: Preparatory Class
+        registration_date: Registration Date
+        registration_term: Registration Term
         scholarship_type: Scholarship Type
         semester: Semester
         stage: Stage
@@ -28,14 +33,6 @@ en:
         student_number: Student Number
         unit: Unit
         year: Year
-      student_history: &student_history_attributes
-        entrance_type: Entrance Type
-        graduation_date: Graduation Date
-        graduation_term: Graduation Term
-        other_studentship: There Is Other Studentship
-        preparatory_class: Preparatory Class
-        registration_date: Registration Date
-        registration_term: Registration Term
       user: &user_attributes
         activated: Account Activation
         activated_at: Account Activation Date
@@ -124,6 +121,5 @@ en:
         students: Student Information
       students:
         <<: *student_attributes
-        <<: *student_history_attributes
       update:
         success: User successfully updated.

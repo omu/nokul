@@ -20,7 +20,7 @@ module UserManagement
       @addresses = @user.addresses.includes(district: :city)
       @employees = @user.employees.includes(:title).order(active: :desc)
       @duties = @user.duties.includes(:unit)
-      @students = @user.students.includes(:unit, :scholarship_type, :history, :stage)
+      @students = @user.students.includes(:unit, :scholarship_type, :stage)
       @positions = @user.positions.includes(:administrative_function, :duty)
     end
 

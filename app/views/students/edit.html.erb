@@ -35,41 +35,29 @@
             <div class='form-group col-sm-6'>
               <%= f.association :stage %>
             </div>
+            <div class='form-group col-sm-6'>
+              <%= f.association :entrance_type %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :registration_date, as: :date_time_picker %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.association :registration_term,
+                                label_method: lambda { |academic_term| full_name(academic_term) } %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :preparatory_class %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.input :other_studentship %>
+            </div>
             <div class='form-group col-sm-12'>
               <%= f.input :exceeded_education_period %>
             </div>
           </div>
-          <hr>
-          <div class='row'>
-            <%= f.simple_fields_for :history do |h| %>
-              <div class='form-group col-sm-6'>
-                <%= h.input :registration_date, as: :date_time_picker %>
-              </div>
-              <div class='form-group col-sm-6'>
-                <%= h.association :registration_term,
-                                  label_method: lambda { |academic_term| full_name(academic_term) } %>
-              </div>
-              <div class='form-group col-sm-6'>
-                <%= h.input :graduation_date, as: :date_time_picker %>
-              </div>
-              <div class='form-group col-sm-6'>
-                <%= h.association :graduation_term,
-                                  label_method: lambda { |academic_term| full_name(academic_term) } %>
-              </div>
-              <div class='form-group col-sm-6'>
-                <%= h.association :entrance_type %>
-              </div>
-              <div class='form-group col-sm-6'>
-                <%= h.input :preparatory_class %>
-              </div>
-              <div class='form-group col-sm-6'>
-                <%= h.input :other_studentship %>
-              </div>
-            <% end %>
-            <div class='form-group col-sm-12'>
-              <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
-              <%= link_to_back user_path(@student.user) %>
-            </div>
+          <div class='form-group col-sm-12'>
+            <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
+            <%= link_to_back user_path(@student.user) %>
           </div>
         <% end %>
       </div>
@@ -79,7 +67,7 @@
 
 <script type='text/javascript'>
   $(document).ready(function() {
-    $('#student_unit_id, #student_history_attributes_entrance_type_id').select2();
+    $('#student_unit_id, #student_entrance_type_id').select2();
     flatpickr('.datetimepicker', { altInput: true })
   });
 </script>
