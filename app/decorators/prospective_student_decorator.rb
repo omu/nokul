@@ -14,11 +14,11 @@ class ProspectiveStudentDecorator < SimpleDelegator
   end
 
   def permanent_registrable?
-    CalendarEventDecorator.new(calendar&.event('permanent_registration_applications')).active_now?
+    calendar&.check_events('permanent_registration_applications')
   end
 
   def temporary_registrable?
-    CalendarEventDecorator.new(calendar&.event('temporary_registration_applications')).active_now?
+    calendar&.check_events('temporary_registration_applications')
   end
 
   def document_required?
