@@ -15,7 +15,12 @@ class AssessmentDecoratorTest < ActiveSupport::TestCase
     assert_not @assessment.saveable?
   end
 
-  test 'results_announcement_event method' do
-    assert @assessment.results_announcement_event
+  test 'gradable? method' do
+    assert @assessment.gradable?
+  end
+
+  test 'gradable_date_range method' do
+    assert_equal @assessment.gradable_date_range,
+                 CalendarEventDecorator.new(calendar_events(:midterm_results_announcement)).date_range
   end
 end

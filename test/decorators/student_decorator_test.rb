@@ -7,7 +7,12 @@ class StudentDecoratorTest < ActiveSupport::TestCase
     @student = StudentDecorator.new(students(:serhat))
   end
 
-  test 'event_online_course_registrations method' do
-    assert @student.event_online_course_registrations
+  test 'registrable_for_online_course? method' do
+    assert @student.registrable_for_online_course?
+  end
+
+  test 'registrable_for_online_course_date_range method' do
+    assert_equal @student.registrable_for_online_course_date_range,
+                 CalendarEventDecorator.new(calendar_events(:midterm_results_announcement)).date_range
   end
 end
