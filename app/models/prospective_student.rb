@@ -82,6 +82,7 @@ class ProspectiveStudent < ApplicationRecord
     military_status
   end
 
+  # rubocop:disable Metrics/MethodLength
   def registered_user(user)
     Student.new(
       user:                   user,
@@ -90,9 +91,14 @@ class ProspectiveStudent < ApplicationRecord
       status:                 can_permanently_register? ? :active : :passive,
       student_number:         id_number, # TODO: must be generated
       year:                   1, # TODO: can have a different value depending on the characteristics of the program
-      semester:               1
+      semester:               1,
+      entrance_type:          student_entrance_type,
+      other_studentship:      !obs_status,
+      registration_date:      Time.zone.now,
+      registration_term:      academic_term
     )
   end
+  # rubocop:enable Metrics/MethodLength
 
   private
 
