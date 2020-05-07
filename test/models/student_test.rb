@@ -19,6 +19,8 @@ class StudentTest < ActiveSupport::TestCase
   }
 
   # relations
+  belongs_to :entrance_type, class_name: 'StudentEntranceType'
+  belongs_to :registration_term, class_name: 'AcademicTerm', optional: true
   belongs_to :scholarship_type, optional: true
   belongs_to :stage, class_name: 'StudentGrade', optional: true
   belongs_to :user
@@ -30,12 +32,16 @@ class StudentTest < ActiveSupport::TestCase
   has_many :course_enrollments, through: :semester_registrations
 
   # validations: presence
-  validates_presence_of :student_number
+  validates_presence_of :other_studentship
   validates_presence_of :permanently_registered
+  validates_presence_of :preparatory_class
   validates_presence_of :semester
+  validates_presence_of :student_number
   validates_presence_of :year
 
   # validations: numericality
+  validates_numericality_of :preparatory_class
+  validates_numerical_range :preparatory_class, greater_than_or_equal_to: 0, less_than_or_equal_to: 2
   validates_numerical_range :semester, greater_than: 0
   validates_numerical_range :year, greater_than_or_equal_to: 0
 
@@ -45,7 +51,6 @@ class StudentTest < ActiveSupport::TestCase
 
   # callback tests
   after_commit :build_identity_information
-  after_commit :create_student_history
 
   # delegations
   test 'a student can communicate with addresses over the user' do
@@ -84,7 +89,8 @@ class StudentTest < ActiveSupport::TestCase
   test 'student enqueues Kps::IdentitySaveJob after being created' do
     users(:serhat).students.destroy_all
     assert_enqueued_with(job: Kps::IdentitySaveJob) do
-      Student.create(student_number: '1234', user: users(:serhat), unit: units(:omu), year: 1, semester: 1)
+      Student.create(student_number: '1234', user: users(:serhat), unit: units(:omu), year: 1, semester: 1,
+                     entrance_type: student_entrance_types(:osys))
     end
   end
 end

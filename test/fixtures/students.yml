@@ -8,6 +8,10 @@ serhat:
   status: active
   scholarship_type: meb
   exceeded_education_period: false
+  entrance_type: dgs
+  registration_term: fall_2018_2019
+  other_studentship: false
+  preparatory_class: 0
 serhat_omu:
   student_number: 98765
   user: serhat
@@ -17,6 +21,7 @@ serhat_omu:
   year: 1
   semester: 1
   stage: foreign_preparation
+  entrance_type: osys
 john:
   student_number: 45612
   user: john
@@ -26,6 +31,10 @@ john:
   year: 2
   semester: 3
   exceeded_education_period: true
+  entrance_type: dgs
+  registration_term: fall_2018_2019
+  other_studentship: false
+  preparatory_class: 0
 mike:
   student_number: 45789
   user: mike
@@ -35,3 +44,4 @@ mike:
   year: 1
   semester: 1
   exceeded_education_period: false
+  entrance_type: osys

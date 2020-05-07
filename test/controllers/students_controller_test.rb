@@ -18,14 +18,13 @@ class StudentsControllerTest < ActionDispatch::IntegrationTest
   test 'should update student' do
     patch student_path(@student), params: {
       student: {
-        scholarship_type_id: scholarship_types(:kkk).id,
-        history_attributes:  {
-          entrance_type_id:     student_entrance_types(:osys).id,
-          registration_date:    '2018-09-12 08:00:00',
-          registration_term_id: @academic_term.id,
-          other_studentship:    true,
-          preparatory_class:    1
-        }
+        scholarship_type_id:  scholarship_types(:kkk).id,
+        entrance_type_id:     student_entrance_types(:osys).id,
+        registration_date:    '2018-09-12 08:00:00',
+        registration_term_id: @academic_term.id,
+        other_studentship:    true,
+        preparatory_class:    1
+
       }
     }
 
