@@ -20,5 +20,5 @@ class CourseEvaluationType < ApplicationRecord
   validates_with CourseEvaluationTypeValidator
 
   # delegations
-  delegate :name, to: :evaluation_type
+  delegate :identifier, :name, to: :evaluation_type
 end

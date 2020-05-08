@@ -16,7 +16,9 @@ en:
       assessment_info:
         evaluation_type: Evaluation Type
         assessment: Assessment Method
+        date_range: Evaluation Date Range
         grade_entry: Grade Entry
+        number_of_students: Number of Students
         percentage: Percentage
         status: Status
       draft:
@@ -33,6 +35,7 @@ en:
         no_enrollments: There are no students enrolled in the course under your authority.
         not_coordinator: The process can only be carried out by the course coordinator.
         saved: Assessment was saved permanently, updating cannot be done.
+        not_proper_event_range: There is no grade entry activity covering the date range today.
       save:
         error: Assessment could not be saved permanently.
         not_draft_error: Assessment is not in draft status, could not be saved permanently.

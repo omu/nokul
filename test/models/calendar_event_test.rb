@@ -19,4 +19,9 @@ class CalendarEventTest < ActiveSupport::TestCase
 
   # validations: length
   validates_length_of :timezone
+
+  test 'active_now? method' do
+    assert_not calendar_events(:add_drop_fall_2018_grad).active_now?
+    assert calendar_events(:midterm_results_announcement).active_now?
+  end
 end

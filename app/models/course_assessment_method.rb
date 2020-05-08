@@ -9,6 +9,7 @@ class CourseAssessmentMethod < ApplicationRecord
   belongs_to :course_evaluation_type
   has_many :grades, dependent: :destroy
   has_many :saved_enrollments, through: :course_evaluation_type
+  has_one :available_course, through: :course_evaluation_type
   accepts_nested_attributes_for :grades
 
   # validations
@@ -20,7 +21,7 @@ class CourseAssessmentMethod < ApplicationRecord
   validates :assessment_method, uniqueness: { scope: :course_evaluation_type }
 
   # delegates
-  delegate :available_course, to: :course_evaluation_type
+  delegate :identifier, to: :course_evaluation_type
   delegate :name, to: :assessment_method
 
   # custom methods

@@ -3,6 +3,7 @@ tr:
     attributes:
       evaluation_type: &evaluation_type_attributes
         name: Değerlendirme Türü
+        identifier: Tür Tanımlayıcısı
   helpers:
     submit:
       evaluation_type:
