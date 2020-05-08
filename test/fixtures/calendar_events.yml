@@ -12,3 +12,10 @@ online_course_registrations:
   end_time: <%= Time.current + 5.days %>
   location: Online
   timezone: Istanbul
+midterm_results_announcement:
+  calendar: bm_calendar
+  calendar_event_type: midterm_results_announcement
+  start_time: <%= Time.current - 5.days %>
+  end_time: <%= Time.current + 5.days %>
+  location: Online
+  timezone: Istanbul

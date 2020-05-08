@@ -6,7 +6,7 @@ module CalendarManagement
   class CalendarEventTypesControllerTest < ActionDispatch::IntegrationTest
     setup do
       sign_in users(:john)
-      @calendar_event_type = calendar_event_types(:excused_mid_term_applications)
+      @calendar_event_type = calendar_event_types(:excused_midterm_applications)
       @form_params = %w[name identifier category]
     end
 

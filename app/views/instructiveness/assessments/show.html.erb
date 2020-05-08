@@ -9,11 +9,14 @@
         <%= fa_icon 'users' %><b><%= t('.students', course_name: @course.name) %></b>
         <div class='card-header-actions'>
           <span class='pull-right'>
-            <% if @employee.coordinatorships.include?(@course) %>
-              <%= link_to(t('.draft'), draft_given_course_assessment_path(@course, @assessment), class: 'btn btn-warning btn-sm') if @assessment.saved? %>
-              <%= link_to(t('.save'), save_given_course_assessment_path(@course, @assessment), class: 'btn btn-warning btn-sm') if @assessment.draft? && @assessment.fully_graded? %>
+            <% if @assessment.gradable? %>
+              <% if @employee.coordinatorships.include?(@course) %>
+                <%= link_to(t('.draft'), draft_given_course_assessment_path(@course, @assessment), class: 'btn btn-warning btn-sm') if @assessment.saved? %>
+                <%= link_to(t('.save'), save_given_course_assessment_path(@course, @assessment), class: 'btn btn-warning btn-sm') if @assessment.saveable? %>
+              <% end %>
+
+              <%= link_to_edit(t('action_group.edit'), edit_given_course_assessment_path(@course, @assessment), class: 'btn btn-outline-success btn-sm') if @assessment.editable? %>
             <% end %>
-            <%= link_to(t('action_group.edit'), edit_given_course_assessment_path(@course, @assessment), class: 'btn btn-outline-success btn-sm') unless @assessment.saved? || @assessment.saved_enrollments.empty? %>
           </span>
         </div>
       </div>

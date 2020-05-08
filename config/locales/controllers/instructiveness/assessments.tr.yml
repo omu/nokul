@@ -16,7 +16,9 @@ tr:
       assessment_info:
         evaluation_type: Değerlendirme Türü
         assessment: Ölçme Kriteri
+        date_range: Değerlendirme Tarih Aralığı
         grade_entry: Not Girişi
+        number_of_students: Öğrenci Sayısı
         percentage: Yüzde
         status: Durum
       draft:
@@ -33,6 +35,7 @@ tr:
         no_enrollments: Yetkiniz altında derse kayıtlanmış öğrenci bulunmamaktadır.
         not_coordinator: İşlem yalnızca ders koordinatörü tarafından gerçekleştirilebilir.
         saved: Notlandırma kesin olarak kaydedilmiş, güncelleme işlemi yapılamaz.
+        not_proper_event_range: Tarih aralığı bugünü kapsayan not girişi aktivitesi bulunmamaktadır.
       save:
         error: Notlandırma kalıcı olarak kaydedilemedi.
         not_draft_error: Notlandırma kalıcı olarak kaydedilemedi, taslak durumunda değil.

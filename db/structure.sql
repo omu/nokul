@@ -1955,6 +1955,8 @@ ALTER SEQUENCE public.employees_id_seq OWNED BY public.employees.id;
 CREATE TABLE public.evaluation_types (
     id bigint NOT NULL,
     name character varying,
+    identifier character varying,
+    CONSTRAINT evaluation_types_identifier_length CHECK ((length((identifier)::text) <= 255)),
     CONSTRAINT evaluation_types_name_length CHECK ((length((name)::text) <= 255)),
     CONSTRAINT evaluation_types_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
 );
@@ -5135,6 +5137,14 @@ ALTER TABLE ONLY public.employees
 
 
 --
+-- Name: evaluation_types evaluation_types_identifier_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.evaluation_types
+    ADD CONSTRAINT evaluation_types_identifier_unique UNIQUE (identifier) DEFERRABLE;
+
+
+--
 -- Name: evaluation_types evaluation_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7803,6 +7813,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20200319082359'),
 ('20200319085939'),
 ('20200319090221'),
-('20200320114534');
+('20200320114534'),
+('20200430130429');
 
 

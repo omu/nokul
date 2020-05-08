@@ -24,6 +24,7 @@ class AvailableCourse < ApplicationRecord
   belongs_to :curriculum
   belongs_to :unit
   has_many :evaluation_types, class_name: 'CourseEvaluationType', dependent: :destroy
+  has_many :calendars, -> { Calendar.active }, through: :unit
   has_many :course_assessment_methods, through: :evaluation_types
   has_many :groups, class_name: 'AvailableCourseGroup', dependent: :destroy
   has_many :lecturers, through: :groups

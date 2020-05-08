@@ -20,7 +20,7 @@
             <div class="d-flex w-100 justify-content-between">
               <h5 class="mb-1"><%= @student.unit.name %></h5>
             </div>
-            <p class="mb-1"><%= @student.registation_date_range %></p>
+            <p class="mb-1"><%= "#{t('.registration_date_range')}: #{@student.registrable_for_online_course_date_range}" %></p>
             <small><%= "#{t('.registration_status')}: #{enum_t(@student.current_registration, :status)}" %></small>
           <% end %>
         </div>

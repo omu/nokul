@@ -7,7 +7,7 @@ module Reference
     private
 
     def secure_params
-      params.require(:evaluation_type).permit(:name)
+      params.require(:evaluation_type).permit(:identifier, :name)
     end
   end
 end

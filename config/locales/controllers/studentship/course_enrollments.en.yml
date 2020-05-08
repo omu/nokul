@@ -40,7 +40,7 @@ en:
       index:
         course_enrollments: Course Enrollments
         registration_status: Enrollment Status
-        registration_date_range: "Online Course Registration Dates: %{start_time} - %{end_time}"
+        registration_date_range: Course Registration Date Range
       list:
         <<: *course_attributes
         sequence: Sequence

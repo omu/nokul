@@ -25,7 +25,7 @@
                 <td><%= assessment.name %></td>
                 <td><%= assessment.percentage %></td>
                 <td><%= enum_t(assessment, :status) %></td>
-                <td><%= link_to_edit(t('.grade_entry'), given_course_assessment_path(@course, assessment)) %></td>
+                <td><%= link_to_show(given_course_assessment_path(@course, assessment)) %></td>
               </tr>
             <% end %>
           </tbody>

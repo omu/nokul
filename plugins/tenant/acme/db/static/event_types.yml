@@ -3,7 +3,7 @@ applications:
     name: Tek Ders Sınavı Başvuları
   - identifier: program
     name: Başvuru Tarihleri
-  - identifier: excused_mid_term
+  - identifier: excused_midterm
     name: Ara Sınav Mazeret Başvuruları
   - identifier: major_and_minor
     name: Çift Anadal ve Yandal Başvuruları
@@ -39,9 +39,9 @@ advisor:
   - identifier: transfer_for_elective_courses
     name: Açılmayan Seçmeli Bir Dersi Seçen Öğrencilerin Açılan Başka Bir Seçmeli Derse Aktarılması
 exams:
-  - identifier: online_mid_term
+  - identifier: online_midterm
     name: Çevrimiçi Ara Sınavlar
-  - identifier: mid_term
+  - identifier: midterm
     name: Ara Sınavlar
   - identifier: final
     name: Yarıyıl Sonu Sınavları
@@ -57,7 +57,7 @@ exams:
     name: Hazırlık Sınıfları için Düzey Belirleme Sınavı
   - identifier: preparatory_class_proficiency
     name: Hazırlık Sınıfları için Yeterlilik Sınavı
-  - identifier: excused_mid_term
+  - identifier: excused_midterm
     name: Mazeretli Ara Sınavlar
   - identifier: additional
     name: Ek Sınavlar
@@ -80,7 +80,7 @@ submission:
   - identifier: project_seminar
     name: Dönem Projesi/Seminerlerin Enstitüye Teslimi
 announcement:
-  - identifier: mid_term_results
+  - identifier: midterm_results
     name: Ara Sınav Sonuçlarının İlanı
   - identifier: final_results
     name: Yarıyıl Sonu Sınav Sonuçlarının İlanı
