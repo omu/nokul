@@ -22,8 +22,8 @@ class StudentsController < ApplicationController
 
   def student_params
     params.require(:student).permit(
-      :student_number, :unit_id, :year, :semester, :scholarship_type_id, :status,
-      :exceeded_education_period, :stage_id
+      :student_number, :unit_id, :year, :semester, :scholarship_type_id, :status, :exceeded_education_period,
+      :stage_id, :entrance_type_id, :registration_date, :registration_term_id, :other_studentship, :preparatory_class
     )
   end
 end

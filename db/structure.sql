@@ -3442,7 +3442,14 @@ CREATE TABLE public.students (
     status integer DEFAULT 1,
     exceeded_education_period boolean DEFAULT false,
     stage_id bigint,
+    entrance_type_id bigint,
+    other_studentship boolean DEFAULT false,
+    preparatory_class integer DEFAULT 0,
+    registration_date timestamp without time zone,
+    registration_term_id bigint,
+    CONSTRAINT students_other_studentship_null CHECK ((other_studentship IS NOT NULL)),
     CONSTRAINT students_permanently_registered_null CHECK ((permanently_registered IS NOT NULL)),
+    CONSTRAINT students_preparatory_class_numericality CHECK ((preparatory_class >= 0)),
     CONSTRAINT students_semester_null CHECK ((semester IS NOT NULL)),
     CONSTRAINT students_semester_numericality CHECK ((semester > 0)),
     CONSTRAINT students_status_null CHECK ((status IS NOT NULL)),
@@ -6588,6 +6595,20 @@ CREATE INDEX index_semester_registrations_on_student_id ON public.semester_regis
 
 
 --
+-- Name: index_students_on_entrance_type_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_students_on_entrance_type_id ON public.students USING btree (entrance_type_id);
+
+
+--
+-- Name: index_students_on_registration_term_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_students_on_registration_term_id ON public.students USING btree (registration_term_id);
+
+
+--
 -- Name: index_students_on_scholarship_type_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -7123,6 +7144,14 @@ ALTER TABLE ONLY public.meeting_agendas
 
 
 --
+-- Name: students fk_rails_6b6ccfbba8; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.students
+    ADD CONSTRAINT fk_rails_6b6ccfbba8 FOREIGN KEY (registration_term_id) REFERENCES public.academic_terms(id);
+
+
+--
 -- Name: education_informations fk_rails_6ffd5f9683; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7432,6 +7461,14 @@ ALTER TABLE ONLY public.agendas
 
 ALTER TABLE ONLY public.academic_credentials
     ADD CONSTRAINT fk_rails_b9d9c54fa8 FOREIGN KEY (country_id) REFERENCES public.countries(id);
+
+
+--
+-- Name: students fk_rails_ba6ab25b1e; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.students
+    ADD CONSTRAINT fk_rails_ba6ab25b1e FOREIGN KEY (entrance_type_id) REFERENCES public.student_entrance_types(id);
 
 
 --
@@ -7814,6 +7851,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20200319085939'),
 ('20200319090221'),
 ('20200320114534'),
+('20200427103727'),
 ('20200430130429');
 
 
