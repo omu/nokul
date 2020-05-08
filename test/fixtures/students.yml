@@ -22,6 +22,7 @@ serhat_omu:
   semester: 1
   stage: foreign_preparation
   entrance_type: osys
+  preparatory_class: 2
 john:
   student_number: 45612
   user: john

@@ -80,6 +80,11 @@ class StudentTest < ActiveSupport::TestCase
     assert_equal students(:serhat_omu).gpa, 0
   end
 
+  test 'preparatory_class_repetition? method' do
+    assert students(:serhat_omu).preparatory_class_repetition?
+    assert_not students(:john).preparatory_class_repetition?
+  end
+
   test 'scholarship?' do
     assert students(:serhat).scholarship?
     assert_not students(:john).scholarship?
