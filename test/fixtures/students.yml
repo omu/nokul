@@ -24,7 +24,7 @@ serhat_omu:
   entrance_type: osys
   preparatory_class: 2
 john:
-  student_number: 45612
+  student_number: 45689
   user: john
   unit: bilgisayar_muhendisligi_programi
   permanently_registered: true
