@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 module Lisans
-  class SelectableMaxEcts < Regulation::Article
-    name       'Selectable Max ECTS'
-    identifier :lisans_selectable_max_ects
+  class SelectableMaximumEcts < Regulation::Article
+    name       'Selectable Maximum ECTS'
+    identifier :lisans_selectable_maximum_ects
     number     10
     version    31_103
     register   V1::UndergraduateRegulation

@@ -31,6 +31,8 @@ module Lisans
     end
 
     def call
+      raise ArgumentError, 'unit must be of the program type' unless program.program?
+
       store_data.fetch(program.duration)
     end
   end
