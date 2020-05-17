@@ -5,25 +5,27 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', async: true %>
-    <script type='text/javascript'>
+    <script type="text/javascript">
       flatpickr.localize(flatpickr.l10ns["<%= I18n.locale %>"])
     </script>
   </head>
-  <body class='app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show'>
-    <%= render 'layouts/shared/header' %>
-    <div class='app-body'>
-      <%= render 'layouts/shared/sidebar' %>
-      <main class='main'>
-        <p></p>
-        <div class='container-fluid'>
-          <div class='animated fadeIn'>
-            <%= yield %>
+  <body class='c-app'>
+    <%= render 'layouts/shared/sidebar' %>
+    <%= render 'layouts/shared/aside' %>
+    <div class="c-wrapper c-fixed-components">
+      <%= render 'layouts/shared/header' %>
+      <div class='c-body'>
+        <main class='c-main'>
+          <div class='container-fluid'>
+            <div class='animated fadeIn'>
+              <%= yield %>
+            </div>
           </div>
-        </div>
-      </main>
-      <%= render 'layouts/shared/aside' %>
+        </main>
+      </div>
+      <%= render 'layouts/shared/footer' %>
     </div>
-    <%= render 'layouts/shared/footer' %>
     <%= render 'layouts/shared/toastr' %>
+    <%= javascript_include_tag 'coreui' %>
   </body>
 </html>

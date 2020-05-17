@@ -9,7 +9,7 @@ class AccountTest < ApplicationSystemTestCase
     login_as(@user, scope: :user, run_callbacks: false)
     page.driver.browser.manage.window.resize_to(1024, 768)
     visit(root_path)
-    within('.sidebar-nav') do
+    within('.c-sidebar-nav') do
       click_on(t('layouts.shared.sidebar.accounts'))
     end
   end
@@ -34,6 +34,6 @@ class AccountTest < ApplicationSystemTestCase
   end
 
   def roi
-    @roi = page.find('.sidebar-nav')
+    @roi = page.find('.c-sidebar-nav')
   end
 end
