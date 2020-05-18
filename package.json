@@ -12,7 +12,7 @@
     "echarts": "^4.5.0",
     "flatpickr": "^4.6.3",
     "highcharts": "^8.0.4",
-    "intl-tel-input": "^16.0.8",
+    "intl-tel-input": "^17.0.0",
     "jquery.maskedinput": "^1.4.1",
     "select2": "^4.0.12",
     "stimulus": "^1.1.1",
