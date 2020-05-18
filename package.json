@@ -14,7 +14,7 @@
     "highcharts": "^8.0.4",
     "intl-tel-input": "^16.0.8",
     "jquery.maskedinput": "^1.4.1",
-    "select2": "^4.0.12",
+    "select2": "^4.0.13",
     "stimulus": "^1.1.1",
     "toastr": "^2.1.4",
     "trix": "^1.2.3",
