@@ -250,7 +250,7 @@ GEM
       addressable (~> 2.5)
       omniauth (~> 1.9)
       openid_connect (~> 1.1)
-    openid_connect (1.1.8)
+    openid_connect (1.2.0)
       activemodel
       attr_required (>= 1.0.0)
       json-jwt (>= 1.5.0)
@@ -404,7 +404,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    swd (1.1.2)
+    swd (1.2.0)
       activesupport (>= 3)
       attr_required (>= 0.0.5)
       httpclient (>= 2.4)
@@ -429,7 +429,7 @@ GEM
     validate_email (0.1.6)
       activemodel (>= 3.0)
       mail (>= 2.2.5)
-    validate_url (1.0.8)
+    validate_url (1.0.11)
       activemodel (>= 3.0.0)
       public_suffix
     warden (1.2.8)
