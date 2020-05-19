@@ -1,6 +1,6 @@
 // Manifest file for common assets being used in panel
 
-//= require coreui
+//= require jquery/dist/jquery.min
 //= require helpers/dynamic_select
 //= require toastr/build/toastr.min
 //= require shared/toastr_config

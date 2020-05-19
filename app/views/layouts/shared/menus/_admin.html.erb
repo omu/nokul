@@ -1,154 +1,154 @@
 <% if policy([:unit]).index? %>
-  <li class="nav-item">
-    <%= link_to :units, class: 'nav-link' do %>
-      <%= fa_icon('sitemap', text: t('.units'), class: 'nav-icon') %>
+  <li class="c-sidebar-nav-item">
+    <%= link_to :units, class: 'c-sidebar-nav-link' do %>
+      <%= fa_icon('sitemap', text: t('.units'), class: 'c-sidebar-nav-icon') %>
     <% end %>
   </li>
 <% end %>
 
-<li class="nav-item nav-dropdown">
-  <a class="nav-link nav-dropdown-toggle" href="#">
-    <%= fa_icon('list', class: 'nav-icon') %><%= t('.course_management') %>
+<li class="c-sidebar-nav-dropdown">
+  <a class="c-sidebar-nav-dropdown-toggle" href="#">
+    <%= fa_icon('list', class: 'c-sidebar-nav-icon') %><%= t('.course_management') %>
   </a>
-  <ul class="nav-dropdown-items">
+  <ul class="c-sidebar-nav-dropdown-items">
     <% if policy([:course_management, :course]).index? %>
-      <li class="nav-item">
-        <%= link_to :courses, class: 'nav-link' do %>
-          <%= fa_icon('book', text: t('.courses'), class: 'nav-icon') %>
+      <li class="c-sidebar-nav-item">
+        <%= link_to :courses, class: 'c-sidebar-nav-link' do %>
+          <%= fa_icon('book', text: t('.courses'), class: 'c-sidebar-nav-icon') %>
         <% end %>
       </li>
     <% end %>
 
     <% if policy([:course_management, :course_group]).index? %>
-      <li class="nav-item">
-        <%= link_to :course_groups, class: 'nav-link' do %>
-          <%= fa_icon('cubes', text: t('.course_groups'), class: 'nav-icon') %>
+      <li class="c-sidebar-nav-item">
+        <%= link_to :course_groups, class: 'c-sidebar-nav-link' do %>
+          <%= fa_icon('cubes', text: t('.course_groups'), class: 'c-sidebar-nav-icon') %>
         <% end %>
       </li>
     <% end %>
 
     <% if policy([:course_management, :curriculum]).index? %>
-      <li class="nav-item">
-        <%= link_to :curriculums, class: 'nav-link' do %>
-          <%= fa_icon('book', text: t('.curriculums'), class: 'nav-icon') %>
+      <li class="c-sidebar-nav-item">
+        <%= link_to :curriculums, class: 'c-sidebar-nav-link' do %>
+          <%= fa_icon('book', text: t('.curriculums'), class: 'c-sidebar-nav-icon') %>
         <% end %>
       </li>
     <% end %>
 
     <% if policy([:course_management, :available_course]).index? %>
-      <li class="nav-item">
-        <%= link_to :available_courses, class: 'nav-link' do %>
-          <%= fa_icon('book', text: t('.available_courses'), class: 'nav-icon') %>
+      <li class="c-sidebar-nav-item">
+        <%= link_to :available_courses, class: 'c-sidebar-nav-link' do %>
+          <%= fa_icon('book', text: t('.available_courses'), class: 'c-sidebar-nav-icon') %>
         <% end %>
       </li>
     <% end %>
   </ul>
 </li>
 
-<li class="nav-item nav-dropdown">
-  <a class="nav-link nav-dropdown-toggle" href="#">
-    <%= fa_icon('money', class: 'nav-icon') %><%= t('.tuition_management') %>
+<li class="c-sidebar-nav-dropdown">
+  <a class="c-sidebar-nav-dropdown-toggle" href="#">
+    <%= fa_icon('money', class: 'c-sidebar-nav-icon') %><%= t('.tuition_management') %>
   </a>
-  <ul class="nav-dropdown-items">
+  <ul class="c-sidebar-nav-dropdown-items">
     <% if policy([:tuition_management, :tuition]).index? %>
-      <li class="nav-item">
-        <%= link_to :tuitions, class: 'nav-link' do %>
-          <%= fa_icon('sitemap', text: t('.unit_tuitions'), class: 'nav-icon') %>
+      <li class="c-sidebar-nav-item">
+        <%= link_to :tuitions, class: 'c-sidebar-nav-link' do %>
+          <%= fa_icon('sitemap', text: t('.unit_tuitions'), class: 'c-sidebar-nav-icon') %>
         <% end %>
       </li>
-      <li class="nav-item">
-        <%= link_to :tuition_debts, class: 'nav-link' do %>
-          <%= fa_icon('money', text: t('.tuition_debts'), class: 'nav-icon') %>
+      <li class="c-sidebar-nav-item">
+        <%= link_to :tuition_debts, class: 'c-sidebar-nav-link' do %>
+          <%= fa_icon('money', text: t('.tuition_debts'), class: 'c-sidebar-nav-icon') %>
         <% end %>
       </li>
     <% end %>
   </ul>
 </li>
 
-<li class="nav-item nav-dropdown">
-  <a class="nav-link nav-dropdown-toggle" href="#">
-    <%= fa_icon('dot-circle-o', class: 'nav-icon') %><%= t('.learning_outcomes') %>
+<li class="c-sidebar-nav-dropdown">
+  <a class="c-sidebar-nav-dropdown-toggle" href="#">
+    <%= fa_icon('dot-circle-o', class: 'c-sidebar-nav-icon') %><%= t('.learning_outcomes') %>
   </a>
-  <ul class="nav-dropdown-items">
+  <ul class="c-sidebar-nav-dropdown-items">
     <% if policy([:accreditation_management, :accreditation_standard]).index? %>
-      <li class="nav-item">
-        <%= link_to :accreditation_standards, class: 'nav-link' do %>
-          <%= fa_icon('sitemap', text: t('.accreditation_standards'), class: 'nav-icon') %>
+      <li class="c-sidebar-nav-item">
+        <%= link_to :accreditation_standards, class: 'c-sidebar-nav-link' do %>
+          <%= fa_icon('sitemap', text: t('.accreditation_standards'), class: 'c-sidebar-nav-icon') %>
         <% end %>
       </li>
     <% end %>
   </ul>
 </li>
 
-<li class="nav-item nav-dropdown">
-  <a class="nav-link nav-dropdown-toggle" href="#">
-    <%= fa_icon('user-plus', class: 'nav-icon') %><%= t('.first_registration') %>
+<li class="c-sidebar-nav-dropdown">
+  <a class="c-sidebar-nav-dropdown-toggle" href="#">
+    <%= fa_icon('user-plus', class: 'c-sidebar-nav-icon') %><%= t('.first_registration') %>
   </a>
-  <ul class="nav-dropdown-items">
+  <ul class="c-sidebar-nav-dropdown-items">
     <% if policy([:first_registration, :prospective_student]).index? %>
-      <li class="nav-item">
-        <%= link_to :prospective_students, class: 'nav-link' do %>
-          <%= fa_icon('users', text: t('.prospective_students'), class: 'nav-icon') %>
+      <li class="c-sidebar-nav-item">
+        <%= link_to :prospective_students, class: 'c-sidebar-nav-link' do %>
+          <%= fa_icon('users', text: t('.prospective_students'), class: 'c-sidebar-nav-icon') %>
         <% end %>
       </li>
     <% end %>
 
     <% if policy([:first_registration, :prospective_employee]).index? %>
-      <li class="nav-item">
-        <%= link_to :prospective_employees, class: 'nav-link' do %>
-          <%= fa_icon('users', text: t('.prospective_employees'), class: 'nav-icon') %>
+      <li class="c-sidebar-nav-item">
+        <%= link_to :prospective_employees, class: 'c-sidebar-nav-link' do %>
+          <%= fa_icon('users', text: t('.prospective_employees'), class: 'c-sidebar-nav-icon') %>
         <% end %>
       </li>
     <% end %>
 
     <% if policy([:first_registration, :registration_document]).index? %>
-      <li class="nav-item">
-        <%= link_to :registration_documents, class: 'nav-link' do %>
-          <%= fa_icon('file-text', text: t('.registration_documents'), class: 'nav-icon') %>
+      <li class="c-sidebar-nav-item">
+        <%= link_to :registration_documents, class: 'c-sidebar-nav-link' do %>
+          <%= fa_icon('file-text', text: t('.registration_documents'), class: 'c-sidebar-nav-icon') %>
         <% end %>
       </li>
     <% end %>
   </ul>
 </li>
-<li class="nav-item nav-dropdown">
-  <a class="nav-link nav-dropdown-toggle" href="#">
-    <%= fa_icon('tasks', class: 'nav-icon') %><%= t('.committees') %>
+<li class="c-sidebar-nav-dropdown">
+  <a class="c-sidebar-nav-dropdown-toggle" href="#">
+    <%= fa_icon('tasks', class: 'c-sidebar-nav-icon') %><%= t('.committees') %>
   </a>
-  <ul class="nav-dropdown-items">
+  <ul class="c-sidebar-nav-dropdown-items">
     <% if policy([:committee, :agenda_type]).index? %>
-      <li class="nav-item">
-        <%= link_to :agenda_types, class: 'nav-link' do %>
-          <%= fa_icon('tags', text: t('.agenda_types'), class: 'nav-icon') %>
+      <li class="c-sidebar-nav-item">
+        <%= link_to :agenda_types, class: 'c-sidebar-nav-link' do %>
+          <%= fa_icon('tags', text: t('.agenda_types'), class: 'c-sidebar-nav-icon') %>
         <% end %>
       </li>
     <% end %>
 
     <% if policy([:committee, :agenda_type]).index? %>
-      <li class="nav-item">
-        <%= link_to :committees, class: 'nav-link' do %>
-          <%= fa_icon('cubes', text: t('.committee_units'), class: 'nav-icon') %>
+      <li class="c-sidebar-nav-item">
+        <%= link_to :committees, class: 'c-sidebar-nav-link' do %>
+          <%= fa_icon('cubes', text: t('.committee_units'), class: 'c-sidebar-nav-icon') %>
         <% end %>
       </li>
     <% end %>
   </ul>
 </li>
-<li class="nav-item nav-dropdown">
-  <a class="nav-link nav-dropdown-toggle" href="#">
-    <%= fa_icon('calendar', class: 'nav-icon') %><%= t('.calendar_management') %>
+<li class="c-sidebar-nav-dropdown">
+  <a class="c-sidebar-nav-dropdown-toggle" href="#">
+    <%= fa_icon('calendar', class: 'c-sidebar-nav-icon') %><%= t('.calendar_management') %>
   </a>
-  <ul class="nav-dropdown-items">
+  <ul class="c-sidebar-nav-dropdown-items">
     <% if policy([:calendar_management, :calendar]).index? %>
-      <li class="nav-item">
-        <%= link_to :calendars, class: 'nav-link' do %>
-          <%= fa_icon('calendar-check-o', text: t('.academic_calendars'), class: 'nav-icon') %>
+      <li class="c-sidebar-nav-item">
+        <%= link_to :calendars, class: 'c-sidebar-nav-link' do %>
+          <%= fa_icon('calendar-check-o', text: t('.academic_calendars'), class: 'c-sidebar-nav-icon') %>
         <% end %>
       </li>
     <% end %>
 
     <% if policy([:calendar_management, :calendar_event_type]).index? %>
-      <li class="nav-item">
-        <%= link_to :calendar_event_types, class: 'nav-link' do %>
-          <%= fa_icon('calendar-plus-o', text: t('.calendar_event_types'), class: 'nav-icon') %>
+      <li class="c-sidebar-nav-item">
+        <%= link_to :calendar_event_types, class: 'c-sidebar-nav-link' do %>
+          <%= fa_icon('calendar-plus-o', text: t('.calendar_event_types'), class: 'c-sidebar-nav-icon') %>
         <% end %>
       </li>
     <% end %>
@@ -156,64 +156,70 @@
 </li>
 
 <% if policy([:user_management, :user]).index? %>
-  <li class="nav-item">
-    <%= link_to :users, class: 'nav-link' do %>
-      <%= fa_icon('user', text: t('.users'), class: 'nav-icon') %>
+  <li class="c-sidebar-nav-item">
+    <%= link_to :users, class: 'c-sidebar-nav-link' do %>
+      <%= fa_icon('user', text: t('.users'), class: 'c-sidebar-nav-icon') %>
     <% end %>
   </li>
 <% end %>
 
-<li class="nav-item nav-dropdown">
-  <a class="nav-link nav-dropdown-toggle" href="#">
-    <%= fa_icon('superpowers', class: 'nav-icon') %><%= t('.administration') %>
+<li class="c-sidebar-nav-dropdown">
+  <a class="c-sidebar-nav-dropdown-toggle" href="#">
+    <%= fa_icon('superpowers', class: 'c-sidebar-nav-icon') %><%= t('.administration') %>
   </a>
-  <ul class="nav-dropdown-items">
+  <ul class="c-sidebar-nav-dropdown-items">
     <% if policy([:patron, :dashboard]).index? %>
-      <li class="nav-item">
-        <%= link_to :patron, class: 'nav-link' do %>
-          <%= fa_icon('cogs', text: t('.authorizations'), class: 'nav-icon') %>
+      <li class="c-sidebar-nav-item">
+        <%= link_to :patron, class: 'c-sidebar-nav-link' do %>
+          <%= fa_icon('cogs', text: t('.authorizations'), class: 'c-sidebar-nav-icon') %>
         <% end %>
       </li>
     <% end %>
 
     <% if current_user.privilege? :reference_management, :read %>
-      <li class="nav-item">
-        <%= link_to :reference, class: 'nav-link' do %>
-          <%= fa_icon('th-list', text: t('.references'), class: 'nav-icon') %>
+      <li class="c-sidebar-nav-item">
+        <%= link_to :reference, class: 'c-sidebar-nav-link' do %>
+          <%= fa_icon('th-list', text: t('.references'), class: 'c-sidebar-nav-icon') %>
         <% end %>
       </li>
     <% end %>
 
     <% if policy([:yoksis, :dashboard]).index? %>
-      <li class="nav-item">
-        <%= link_to :yoksis, class: 'nav-link' do %>
-          <%= fa_icon('th', text: t('.yoksis'), class: 'nav-icon') %>
+      <li class="c-sidebar-nav-item">
+        <%= link_to :yoksis, class: 'c-sidebar-nav-link' do %>
+          <%= fa_icon('th', text: t('.yoksis'), class: 'c-sidebar-nav-icon') %>
         <% end %>
       </li>
     <% end %>
 
     <% if policy([:meksis, :dashboard]).index? %>
-      <li class="nav-item">
-        <%= link_to :meksis, class: 'nav-link' do %>
-          <%= fa_icon('th', text: t('.meksis'), class: 'nav-icon') %>
+      <li class="c-sidebar-nav-item">
+        <%= link_to :meksis, class: 'c-sidebar-nav-link' do %>
+          <%= fa_icon('th', text: t('.meksis'), class: 'c-sidebar-nav-icon') %>
         <% end %>
       </li>
     <% end %>
 
     <% if policy([:detsis, :dashboard]).index? %>
-      <li class="nav-item">
-        <%= link_to :detsis, class: 'nav-link' do %>
-          <%= fa_icon('th', text: t('.detsis'), class: 'nav-icon') %>
+      <li class="c-sidebar-nav-item">
+        <%= link_to :detsis, class: 'c-sidebar-nav-link' do %>
+          <%= fa_icon('th', text: t('.detsis'), class: 'c-sidebar-nav-icon') %>
         <% end %>
       </li>
     <% end %>
 
     <% if policy(:ldap_entity).index? %>
-      <li class="nav-item">
-        <%= link_to :ldap_entities, class: 'nav-link' do %>
-          <%= fa_icon('database', text: t('.ldap'), class: 'nav-icon') %>
+      <li class="c-sidebar-nav-item">
+        <%= link_to :ldap_entities, class: 'c-sidebar-nav-link' do %>
+          <%= fa_icon('database', text: t('.ldap'), class: 'c-sidebar-nav-icon') %>
         <% end %>
       </li>
     <% end %>
+
+    <li class="c-sidebar-nav-item">
+      <%= link_to %i[manager stats], class: 'c-sidebar-nav-link' do %>
+        <%= fa_icon('area-chart', text: t('.manager.stats'), class: 'c-sidebar-nav-icon') %>
+      <% end %>
+    </li>
   </ul>
 </li>
