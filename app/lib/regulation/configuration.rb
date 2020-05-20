@@ -2,8 +2,8 @@
 
 module Regulation
   module Configuration
-    def register(identifier, **options)
-      articles[identifier] = options
+    def register(identifier, metadata: {})
+      articles[identifier] = Metadata.new(metadata)
     end
   end
 end

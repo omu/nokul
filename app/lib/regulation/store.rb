@@ -5,13 +5,17 @@ module Regulation
     extend ActiveSupport::Concern
 
     class_methods do
-      def store
-        @_store ||= yield
+      def store(name = :default)
+        stores[name] ||= yield
+      end
+
+      def stores
+        @_stores ||= {}
       end
     end
 
-    def store_data
-      self.class.store
+    def store(name = store_key)
+      self.class.stores[name] || raise("No store defined for key #{store_key}")
     end
   end
 end

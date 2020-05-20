@@ -12,7 +12,12 @@ module Regulation
       delegate :fetch, to: :articles
 
       def call(identifier, *params)
-        fetch(identifier)[:class].call(*params)
+        article = find_article(identifier)
+        article.klass.call(*params, store_key: article.store)
+      end
+
+      def find_article(identifier)
+        fetch(identifier) { raise "article not found for #{identifier}" }
       end
     end
   end

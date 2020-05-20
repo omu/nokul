@@ -13,28 +13,11 @@ module Regulation
         @_identifier ||= name
       end
 
-      def version(version = nil)
-        @_version ||= version
-      end
-
-      def number(number = nil)
-        @_number ||= number
-      end
-
-      def sub_articles(*keys)
-        @_sub_articles ||= keys
-      end
-
-      def register(*klasses)
+      def register(*klasses, metadata: {})
         valid!
 
         klasses.each do |klass|
-          klass.register(identifier,
-                         class:        self,
-                         name:         name,
-                         version:      version,
-                         number:       number,
-                         sub_articles: sub_articles)
+          klass.register(identifier, metadata: metadata.merge(klass: self))
         end
       end
 
@@ -42,13 +25,23 @@ module Regulation
         %i[
           name
           identifier
-          number
-          version
         ].each do |property|
           next if public_send(property).present?
 
           raise ArgumentError, "#{property} property should not be empty"
         end
+      end
+    end
+
+    attr_reader :store_key
+
+    def initialize(store_key: :default)
+      @store_key = store_key
+    end
+
+    class << self
+      def call(*params)
+        new(*params).call
       end
     end
 
