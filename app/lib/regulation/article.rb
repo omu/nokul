@@ -13,11 +13,16 @@ module Regulation
         @_identifier ||= name
       end
 
+      def regulations
+        @_regulations ||= []
+      end
+
       def register(*klasses, metadata: {})
         valid!
 
         klasses.each do |klass|
-          klass.register(identifier, metadata: metadata.merge(klass: self))
+          regulations << klass
+          klass.register(identifier, metadata: metadata.merge(klass: self, name: name))
         end
       end
 
@@ -33,6 +38,9 @@ module Regulation
       end
     end
 
+    extend Configuration
+    include Store
+
     attr_reader :store_key
 
     def initialize(store_key: :default)
@@ -40,12 +48,9 @@ module Regulation
     end
 
     class << self
-      def call(*params)
-        new(*params).call
+      def call(**params)
+        new(**params).call
       end
     end
-
-    extend Configuration
-    include Store
   end
 end

@@ -4,6 +4,7 @@ module Regulation
   class Metadata
     ATTRIBUTES = {
       klass:        { required: true, types: [Regulation::Article] },
+      name:         { required: true, types: [String] },
       version:      { required: true, types: [String, Integer] },
       number:       { required: true, types: [String, Integer] },
       sub_articles: { required: false, types: [Array] },
