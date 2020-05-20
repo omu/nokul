@@ -138,7 +138,7 @@ class Unit < ApplicationRecord
   end
 
   def subtree_employees
-    Employee.includes(:user, :title).joins(:units, user: :identities)
+    Employee.active.includes(:user, :title).joins(:units, user: :identities)
             .where(units: { id: subtree.active.ids })
   end
 
