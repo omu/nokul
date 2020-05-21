@@ -8,18 +8,18 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 # core
 gem 'bootsnap', require: false
 gem 'puma'
-gem 'rails', '~> 6.0'
+gem 'rails', '~> 6.0', '>= 6.0.3.1'
 gem 'redis', '~> 4.1'
 gem 'sidekiq'
 
 # database
 gem 'pg'
-gem 'pg_search'
-gem 'pghero'
-gem 'rein'
+gem 'pg_search', '>= 2.3.2'
+gem 'pghero', '>= 2.4.2'
+gem 'rein', '>= 5.1.0'
 
 # active-record
-gem 'ancestry'
+gem 'ancestry', '>= 3.0.7'
 
 # active-storage
 gem 'aws-sdk-s3', require: false
@@ -28,11 +28,14 @@ gem 'ruby-vips', '~> 2.0.17'
 
 # authentication
 gem 'authy'
-gem 'devise'
-gem 'omniauth_openid_connect'
+gem 'devise', '>= 4.7.1'
+gem 'omniauth_openid_connect', '>= 0.3.3'
+
+# TODO: workaround for https://github.com/nov/rack-oauth2/issues/75
+gem 'rack-oauth2', '<= 1.11.0'
 
 # authorization
-gem 'pundit'
+gem 'pundit', '>= 2.1.0'
 
 # ldap
 gem 'net-ldap'
@@ -40,22 +43,22 @@ gem 'net-ldap'
 # assets: core asset dependencies
 # TODO: The following line should be removed when sassc-rails has the latest version of sassc.
 gem 'sassc', '~> 2.3.0'
-gem 'sassc-rails'
+gem 'sassc-rails', '>= 2.1.2'
 
 gem 'uglifier', '>= 1.3.0'
-gem 'webpacker'
+gem 'webpacker', '>= 5.1.1'
 
 # view helpers: tools for forms, views, etc.
 gem 'chartkick'
 gem 'cocoon'
-gem 'font-awesome-rails'
-gem 'groupdate'
+gem 'font-awesome-rails', '>= 4.7.0.5'
+gem 'groupdate', '>= 5.0.0'
 gem 'pagy'
-gem 'simple_form'
-gem 'wicked_pdf'
+gem 'simple_form', '>= 5.0.2'
+gem 'wicked_pdf', '>= 2.0.2'
 
 # api
-gem 'jbuilder', '~> 2.10'
+gem 'jbuilder', '~> 2.10', '>= 2.10.0'
 
 # security
 gem 'bcrypt', '~> 3.1.7'
@@ -64,7 +67,7 @@ gem 'rack-attack'
 
 # validators
 gem 'telephone_number'
-gem 'valid_email2'
+gem 'valid_email2', '>= 3.2.2'
 
 # error tracking
 gem 'rollbar'
@@ -77,23 +80,23 @@ gem 'friendly_id', '~> 5.3.0'
 gem 'twilio-ruby'
 
 # log
-gem 'lograge'
+gem 'lograge', '>= 0.11.2'
 
 # cron
 gem 'sidekiq-cron'
 
 group :development, :test do
   gem 'brakeman', require: false
-  gem 'bullet'
+  gem 'bullet', '>= 6.1.0'
   gem 'bundler-audit'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'dotenv-rails'
-  gem 'erb_lint', require: false
-  gem 'lol_dba'
+  gem 'dotenv-rails', '>= 2.7.5'
+  gem 'erb_lint', '>= 0.0.32', require: false
+  gem 'lol_dba', '>= 2.2.0'
   gem 'rubocop'
   gem 'rubocop-minitest'
   gem 'rubocop-performance'
-  gem 'rubocop-rails'
+  gem 'rubocop-rails', '>= 2.5.2'
   gem 'simplecov', require: false
 end
 
@@ -114,7 +117,7 @@ group :development do
   gem 'ruby-progressbar'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'web-console'
+  gem 'web-console', '>= 4.0.2'
 end
 
 # core plugins
@@ -128,4 +131,4 @@ Dir['plugins/tenant/**/*.gemspec'].each do |gemspec|
   gem name, path: File.dirname(gemspec), require: false
 end
 
-gem 'active_flag'
+gem 'active_flag', '>= 1.5.0'
