@@ -5,6 +5,7 @@ module CourseManagement
     before_action :set_available_course
     before_action :set_course_evaluation_type, only: %i[edit update destroy]
     before_action :authorized?
+    before_action :event_active?, except: %i[edit update]
 
     def new
       @evaluation_type = @available_course.evaluation_types.new
@@ -34,7 +35,8 @@ module CourseManagement
     end
 
     def set_available_course
-      @available_course = AvailableCourse.find(params[:available_course_id])
+      available_course = AvailableCourse.find(params[:available_course_id])
+      @available_course = AvailableCourseDecorator.new(available_course)
     end
 
     def set_course_evaluation_type
@@ -43,6 +45,10 @@ module CourseManagement
 
     def authorized?
       authorize([:course_management, @evaluation_type || CourseEvaluationType])
+    end
+
+    def event_active?
+      redirect_with('.errors.not_proper_event_range') unless @available_course.reifiable?
     end
 
     def course_evaluation_type_params
