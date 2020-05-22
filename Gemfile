@@ -31,9 +31,6 @@ gem 'authy'
 gem 'devise', '>= 4.7.1'
 gem 'omniauth_openid_connect', '>= 0.3.3'
 
-# TODO: workaround for https://github.com/nov/rack-oauth2/issues/75
-gem 'rack-oauth2', '<= 1.11.0'
-
 # authorization
 gem 'pundit', '>= 2.1.0'
 
