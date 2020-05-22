@@ -25,4 +25,13 @@ namespace :fix_data do
       evaluation_type.update(identifier: identifier)
     end
   end
+
+  desc 'Adds new calendar event type'
+  task new_calendar_event_type: :environment do
+    CalendarEventType.create(
+      name:       'Açılan Ders Ekle/Çıkar İşlemleri',
+      identifier: 'add_drop_available_courses',
+      category:   'courses'
+    )
+  end
 end
