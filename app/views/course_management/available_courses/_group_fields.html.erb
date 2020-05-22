@@ -19,7 +19,7 @@
       </div>
     </div>
     <div class='card-footer'>
-      <%= link_to_remove_association f, class: 'btn btn-danger btn-sm' %>
+      <%= link_to_remove_association f, class: 'btn btn-danger btn-sm' if @available_course.persisted? && @available_course.reifiable? %>
     </div>
   </div>
 </div>

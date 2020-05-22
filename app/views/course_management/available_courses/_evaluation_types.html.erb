@@ -3,7 +3,7 @@
     <div class='card-header'>
       <%= fa_icon 'list-alt' %><strong><%= t('.card_header') %></strong>
       <span class='pull-right'>
-        <%= link_to_new(t('.create_evaluation_type'), new_available_course_evaluation_type_path(@available_course)) %>
+        <%= link_to_new(t('.create_evaluation_type'), new_available_course_evaluation_type_path(@available_course)) if @available_course.reifiable? %>
       </span>
     </div>
     <div class='card-body'>
