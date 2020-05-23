@@ -9,9 +9,23 @@ SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
+--
+-- Name: pgcrypto; Type: EXTENSION; Schema: -; Owner: -
+--
+
+CREATE EXTENSION IF NOT EXISTS pgcrypto WITH SCHEMA public;
+
+
+--
+-- Name: EXTENSION pgcrypto; Type: COMMENT; Schema: -; Owner: -
+--
+
+COMMENT ON EXTENSION pgcrypto IS 'cryptographic functions';
+
+
 SET default_tablespace = '';
 
-SET default_with_oids = false;
+SET default_table_access_method = heap;
 
 --
 -- Name: academic_credentials; Type: TABLE; Schema: public; Owner: -
@@ -2137,9 +2151,11 @@ CREATE TABLE public.identities (
     date_of_birth date,
     registered_to character varying,
     user_id bigint NOT NULL,
-    student_id bigint,
     created_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
     updated_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
+    active boolean DEFAULT true,
+    student_id integer,
+    CONSTRAINT identities_active_null CHECK ((active IS NOT NULL)),
     CONSTRAINT identities_created_at_null CHECK ((created_at IS NOT NULL)),
     CONSTRAINT identities_date_of_birth_null CHECK ((date_of_birth IS NOT NULL)),
     CONSTRAINT identities_fathers_name_length CHECK ((length((fathers_name)::text) <= 255)),
@@ -2859,6 +2875,22 @@ ALTER SEQUENCE public.registration_documents_id_seq OWNED BY public.registration
 
 
 --
+-- Name: regulations; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.regulations (
+    id uuid DEFAULT public.gen_random_uuid() NOT NULL,
+    class_name character varying,
+    effective_date date,
+    repealed_at timestamp without time zone,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT regulations_class_name_length CHECK ((length((class_name)::text) <= 255)),
+    CONSTRAINT regulations_class_name_presence CHECK (((class_name IS NOT NULL) AND ((class_name)::text !~ '^\s*$'::text)))
+);
+
+
+--
 -- Name: role_assignments; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -3439,6 +3471,7 @@ CREATE TABLE public.students (
     semester integer,
     year integer,
     scholarship_type_id bigint,
+    identity_id bigint NOT NULL,
     status integer DEFAULT 1,
     exceeded_education_period boolean DEFAULT false,
     stage_id bigint,
@@ -5360,6 +5393,14 @@ ALTER TABLE ONLY public.registration_documents
 
 
 --
+-- Name: regulations regulations_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.regulations
+    ADD CONSTRAINT regulations_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: role_assignments role_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6329,13 +6370,6 @@ CREATE INDEX index_group_courses_on_course_id ON public.group_courses USING btre
 
 
 --
--- Name: index_identities_on_student_id; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX index_identities_on_student_id ON public.identities USING btree (student_id);
-
-
---
 -- Name: index_identities_on_user_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6602,6 +6636,13 @@ CREATE INDEX index_students_on_entrance_type_id ON public.students USING btree (
 
 
 --
+-- Name: index_students_on_identity_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_students_on_identity_id ON public.students USING btree (identity_id);
+
+
+--
 -- Name: index_students_on_registration_term_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6845,6 +6886,14 @@ ALTER TABLE ONLY public.students
 
 ALTER TABLE ONLY public.students
     ADD CONSTRAINT fk_rails_155a016013 FOREIGN KEY (stage_id) REFERENCES public.student_grades(id);
+
+
+--
+-- Name: students fk_rails_15c49a4d60; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.students
+    ADD CONSTRAINT fk_rails_15c49a4d60 FOREIGN KEY (identity_id) REFERENCES public.identities(id);
 
 
 --
@@ -7221,14 +7270,6 @@ ALTER TABLE ONLY public.students
 
 ALTER TABLE ONLY public.units
     ADD CONSTRAINT fk_rails_83a021318e FOREIGN KEY (unit_instruction_language_id) REFERENCES public.unit_instruction_languages(id);
-
-
---
--- Name: identities fk_rails_8540afbff7; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.identities
-    ADD CONSTRAINT fk_rails_8540afbff7 FOREIGN KEY (student_id) REFERENCES public.students(id);
 
 
 --
@@ -7837,9 +7878,12 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20200102083736'),
 ('20200122124332'),
 ('20200123164837'),
+('20200127102603'),
+('20200127115253'),
 ('20200129072653'),
 ('20200206083358'),
 ('20200211084915'),
+('20200213083927'),
 ('20200213110520'),
 ('20200213124638'),
 ('20200215132359'),
@@ -7852,6 +7896,8 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20200319090221'),
 ('20200320114534'),
 ('20200427103727'),
-('20200430130429');
+('20200430130429'),
+('20200523152237'),
+('20200523152250');
 
 
