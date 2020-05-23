@@ -215,5 +215,13 @@
         <% end %>
       </li>
     <% end %>
+
+    <% if policy(:regulation).index? %>
+      <li class="nav-item">
+        <%= link_to :regulations, class: 'nav-link' do %>
+          <%= fa_icon('book', text: t('.regulations'), class: 'nav-icon') %>
+        <% end %>
+      </li>
+    <% end %>
   </ul>
 </li>
