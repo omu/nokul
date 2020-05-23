@@ -21,7 +21,13 @@
                 <td><%= regulation.name %></td>
                 <td><%= l regulation.effective_date %></td>
                 <td><%= regulation.repealed_at %></td>
-                <td><%= regulation.repealed? ? t('.repealed') : t('.active') %></td>
+                <td>
+                  <% if regulation.repealed? %>
+                    <h5><span class="badge bg-danger"><%= t('.repealed') %></span></h5>
+                  <% else %>
+                    <h5><span class="badge bg-success"><%= t('.active') %></span></h5>
+                  <% end %>
+                </td>
                 <td><%= link_to_show(regulation) %></td>
               </tr>
             <% end %>

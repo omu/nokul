@@ -4,7 +4,7 @@ class Regulation < ApplicationRecord
   Extensions::Regulation::Loader.call
 
   # validates
-  validates :class_name, presence: true
+  validates :class_name, presence: true, length: { maximum: 255 }
   validates :effective_date, presence: true
 
   # scopes
