@@ -1,0 +1,23 @@
+en:
+  activerecord:
+    attributes:
+      regulation: &regulation_attributes
+        name: Regulation Name
+        class_name: Class Name
+        effective_date: Effective Date
+        repealed_at: Repealed Date
+        status: Status
+        repealed: Repealed
+        active: Active
+  regulations:
+    index:
+      <<: *regulation_attributes
+      card_header: Regulations
+    show:
+      <<: *regulation_attributes
+      articles: Articles
+      article_name: Article Name
+      number: Article Number
+      sub_articles: Sub-article
+      version: Version
+      store: Store ID
