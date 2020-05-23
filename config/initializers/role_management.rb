@@ -110,6 +110,10 @@ class RoleManagement
              name:        'Akreditasyon Yönetimi',
              description: 'Akreditasyon Yönetim Yetkisi',
              privileges:  %i[read write destroy]
+  permission :regulation_management,
+             name:        'Yönetmelik Yönetimi',
+             description: 'Yönetmelik Yönetimi Yetkisi',
+             privileges:  %i[read write destroy]
 
   # roles
   role :authorization_manager,
@@ -145,7 +149,8 @@ class RoleManagement
          user_management:                       %i[read write destroy report],
          yoksis_management:                     %i[read write destroy],
          tuition_management:                    %i[read write destroy],
-         accreditation_management:              %i[read write destroy]
+         accreditation_management:              %i[read write destroy],
+         regulation_management:                 %i[read write destroy],
        }
   role :manager, name: 'Yönetici', permissions: {}
 end
