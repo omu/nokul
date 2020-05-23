@@ -2,9 +2,8 @@
 
 module Articles
   module V1
-    class SelectableMaximumEcts < Regulation::Article
-      name       'Selectable Maximum ECTS'
-      identifier :selectable_maximum_ects
+    class SelectableMaximumEcts < Extensions::Regulation::Article
+      identifier  :selectable_maximum_ects
       register   ::V1::UndergraduateRegulation, metadata: {
         version: 31_103,
         number:  10,

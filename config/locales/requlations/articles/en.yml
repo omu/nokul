@@ -1,0 +1,8 @@
+en:
+  regulations:
+    v1:
+      undergraduate: Undergraduate Regulation
+    articles/v1:
+      maximum_duration_of_education: Maximum duration of education
+      selectable_additional_ects: Selectable additional ects
+      selectable_maximum_ects: Selectable maximum ECTS

@@ -2,9 +2,8 @@
 
 module Articles
   module V1
-    class MaximumDuration < Regulation::Article
-      name         'Maximum Duration'
-      identifier   :maximum_duration
+    class MaximumDuration < Extensions::Regulation::Article
+      identifier   :maximum_duration_of_education
       register     ::V1::UndergraduateRegulation, metadata: {
         version:      31_103,
         number:       8,

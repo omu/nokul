@@ -2,8 +2,7 @@
 
 module Articles
   module V1
-    class SelectableAdditionalEcts < Regulation::Article
-      name         'Selectable Additional ECTS'
+    class SelectableAdditionalEcts < Extensions::Regulation::Article
       identifier   :selectable_additional_ects
       register     ::V1::UndergraduateRegulation, metadata: {
         version:      31_103,
