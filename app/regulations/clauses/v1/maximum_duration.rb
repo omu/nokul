@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-module Articles
+module Clauses
   module V1
-    class MaximumDuration < Extensions::Regulation::Article
+    class MaximumDuration < Extensions::Regulation::Clause
       identifier   :maximum_duration_of_education
       register     ::V1::UndergraduateRegulation, metadata: {
-        version:      31_103,
-        number:       8,
-        sub_articles: 1,
-        store:        :default
+        version:   31_103,
+        number:    8,
+        paragraph: 1,
+        store:     :default
       }
 
       store do

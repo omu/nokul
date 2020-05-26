@@ -2,7 +2,8 @@
 
 require 'test_helper'
 
-module Lisans
+module Clauses
+  module V1
   class SelectableAdditionalEctsTest < ActiveSupport::TestCase
     setup do
       @klass = Lisans::SelectableAdditionalEcts
@@ -30,4 +31,5 @@ module Lisans
       assert V1::UndergraduateRegulation.articles.key?(@klass.identifier)
     end
   end
+end
 end

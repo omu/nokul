@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-module Articles
+module Clauses
   module V1
-    class SelectableAdditionalEcts < Extensions::Regulation::Article
+    class SelectableAdditionalEcts < Extensions::Regulation::Clause
       identifier   :selectable_additional_ects
       register     ::V1::UndergraduateRegulation, metadata: {
-        version:      31_103,
-        number:       10,
-        sub_articles: [7, 8, 9, 10, 11],
-        store:        :default
+        version:   31_103,
+        number:    10,
+        paragraph: [7, 8, 9, 10, 11],
+        store:     :default
       }
 
       store do

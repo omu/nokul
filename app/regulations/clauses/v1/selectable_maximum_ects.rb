@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-module Articles
+module Clauses
   module V1
-    class SelectableMaximumEcts < Extensions::Regulation::Article
+    class SelectableMaximumEcts < Extensions::Regulation::Clause
       identifier  :selectable_maximum_ects
       register   ::V1::UndergraduateRegulation, metadata: {
         version: 31_103,

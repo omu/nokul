@@ -11,11 +11,12 @@ module Extensions
 
       ATTRIBUTES = {
         identifier:   { required: true, types: [Symbol] },
-        klass:        { required: true, types: [Regulation::Article] },
+        klass:        { required: true, types: [Regulation::Clause] },
         version:      { required: true, types: [String, Integer] },
         number:       { required: true, types: [String, Integer] },
-        sub_articles: { required: false, types: [Array] },
-        store:        { required: true, types: [Symbol] }
+        paragraph:    { required: false, default: [], types: [Array] },
+        subparagraph: { required: false, default: [], types: [Array] },
+        store:        { required: true, default: :default, types: [Symbol] }
       }.freeze
 
       ATTRIBUTES.each_key do |attr|
@@ -23,13 +24,13 @@ module Extensions
       end
 
       def initialize(attributes = {})
-        ATTRIBUTES.each_key { |attr| instance_variable_set("@#{attr}", attributes[attr] || nil) }
+        ATTRIBUTES.each do |attr, options|
+          value = %i[paragraph subparagraph].include?(attr) ? [*attributes[attr]] : attributes[attr]
+
+          instance_variable_set("@#{attr}", value || options[:default])
+        end
 
         valid!
-      end
-
-      def sub_articles
-        [*@sub_articles]
       end
 
       private

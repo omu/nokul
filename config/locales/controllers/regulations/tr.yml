@@ -15,9 +15,10 @@ tr:
       card_header: Yönetmelikler
     show:
       <<: *regulation_attributes
-      articles: Maddeler
-      article_name: Madde Adı
+      clauses: Maddeler
+      clause_name: Madde Adı
       number: Madde Numarası
-      sub_articles: Alt Maddeler (Fıkralar)
+      paragraph: Fıkra
+      subparagraph: Bent
       version: Versiyon
       store: Veri ID

@@ -19,8 +19,8 @@ class Regulation < ApplicationRecord
     class_name.safe_constantize
   end
 
-  def articles
-    klass&.articles&.values&.sort || []
+  def clauses
+    klass&.clauses&.values&.sort || []
   end
 
   def repealed?

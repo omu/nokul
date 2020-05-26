@@ -14,6 +14,6 @@ class RegulationsController < ApplicationController
 
     authorize(@regulation)
 
-    @pagy, @articles = pagy_array(@regulation.articles)
+    @pagy, @clauses = pagy_array(@regulation.clauses)
   end
 end

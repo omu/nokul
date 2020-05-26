@@ -33,7 +33,7 @@ module Extensions
         end
 
         def register(identifier, metadata: {})
-          articles[identifier] = Metadata.new(metadata)
+          clauses[identifier] = Metadata.new(metadata)
         end
 
         def valid!
@@ -52,19 +52,16 @@ module Extensions
       extend Configuration
 
       class << self
-        def articles
-          @_articles ||= {}
+        def clauses
+          @_clauses ||= {}
         end
 
-        delegate :fetch, to: :articles
+        delegate :fetch, to: :clauses
 
         def call(identifier, *params)
-          article = find_article(identifier)
-          article.klass.call(*params, store_key: article.store)
-        end
+          clause = fetch(identifier) { raise "clause not found for #{identifier}" }
 
-        def find_article(identifier)
-          fetch(identifier) { raise "article not found for #{identifier}" }
+          clause.klass.call(*params, store_key: clause.store)
         end
       end
     end

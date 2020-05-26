@@ -2,7 +2,7 @@
 
 module Extensions
   module Regulation
-    class Article
+    class Clause
       module Configuration
         extend ActiveSupport::Concern
 
@@ -11,7 +11,7 @@ module Extensions
         end
 
         def i18n_key(key = nil)
-          @i18n_key ||= key || "regulations.articles/#{version}.#{identifier}"
+          @i18n_key ||= key || "regulations.clauses/#{version}.#{identifier}"
         end
 
         def version

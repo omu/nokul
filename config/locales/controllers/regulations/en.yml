@@ -18,6 +18,7 @@ en:
       articles: Articles
       article_name: Article Name
       number: Article Number
-      sub_articles: Sub-article
+      paragraph: Paragraph
+      subparagraph: Subparagraph
       version: Version
       store: Store ID

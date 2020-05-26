@@ -8,7 +8,7 @@ module Extensions
       def call
         return if Rails.env.production?
 
-        Dir.glob(Rails.root.join('app/regulations/articles/**/*.rb'))
+        Dir.glob(Rails.root.join('app/regulations/clauses/**/*.rb'))
            .each { |file| load file }
       end
     end
