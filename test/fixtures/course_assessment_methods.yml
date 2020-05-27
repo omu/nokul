@@ -26,6 +26,6 @@ compulsory_midterm_exam_assessment:
   status: draft
 
 assessment_method_to_delete:
-  course_evaluation_type: ati_midterm_evaluation_type
+  course_evaluation_type: evaluation_type_to_delete
   assessment_method: lab
   percentage: 20
