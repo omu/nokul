@@ -6,7 +6,7 @@
         <strong><%= form_title %></strong>
       </div>
       <div class='card-body'>
-        <% manageable = @available_course.manageable? %>
+        <% manageable = @available_course.new_record? || @available_course.manageable? %>
         <%= simple_form_for(@available_course) do |f| %>
           <%= f.error_notification %>
           <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
