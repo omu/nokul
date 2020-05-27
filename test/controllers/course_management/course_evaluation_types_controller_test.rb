@@ -6,9 +6,8 @@ module CourseManagement
   class CourseEvaluationTypesControllerTest < ActionDispatch::IntegrationTest
     setup do
       sign_in users(:serhat)
-      @course_evaluation_type = course_evaluation_types(:ati_midterm_evaluation_type)
-      @available_course = available_courses(:ati_fall_2018_2019)
-      @evaluation_type = evaluation_types(:undergraduate_retake)
+      @course_evaluation_type = course_evaluation_types(:elective_midterm_evaluation_type)
+      @available_course = @course_evaluation_type.available_course
     end
 
     test 'should get new' do
@@ -17,10 +16,10 @@ module CourseManagement
     end
 
     test 'should create course evaluation type' do
-      available_course = available_courses(:test_fall_2018_2019)
+      evaluation_type = evaluation_types(:undergraduate_final)
       parameters = {
-        available_course_id:                  available_course.id,
-        evaluation_type_id:                   @evaluation_type.id,
+        available_course_id:                  @available_course.id,
+        evaluation_type_id:                   evaluation_type.id,
         percentage:                           60,
         course_assessment_methods_attributes: {
           '0' => {
@@ -30,16 +29,16 @@ module CourseManagement
         }
       }
       assert_difference('CourseEvaluationType.count') do
-        post available_course_evaluation_types_path(available_course),
+        post available_course_evaluation_types_path(@available_course),
              params: { course_evaluation_type: parameters }
       end
 
       course_evaluation_type = CourseEvaluationType.last
 
-      assert_equal available_course, course_evaluation_type.available_course
-      assert_equal @evaluation_type, course_evaluation_type.evaluation_type
+      assert_equal @available_course, course_evaluation_type.available_course
+      assert_equal evaluation_type, course_evaluation_type.evaluation_type
       assert_equal 60, course_evaluation_type.percentage
-      assert_redirected_to available_course_path(available_course)
+      assert_redirected_to available_course_path(@available_course)
       assert_equal translate('.create.success'), flash[:notice]
     end
 
@@ -50,34 +49,35 @@ module CourseManagement
     end
 
     test 'should update course evaluation type' do
-      course_evaluation_type = CourseEvaluationType.last
-      available_course = course_evaluation_type.available_course
-      patch available_course_evaluation_type_path(available_course, course_evaluation_type),
+      patch available_course_evaluation_type_path(@available_course, @course_evaluation_type),
             params: {
               course_evaluation_type: {
                 percentage:                           60,
                 course_assessment_methods_attributes: {
                   '0' => {
-                    assessment_method_id: assessment_methods(:exam).id,
-                    percentage:           100
+                    assessment_method_id: assessment_methods(:lab).id,
+                    percentage:           10
                   }
                 }
               }
             }
 
-      course_evaluation_type.reload
+      @course_evaluation_type.reload
 
-      assert_equal 60, course_evaluation_type.percentage
-      assert_redirected_to available_course_path(available_course)
+      assert_equal 60, @course_evaluation_type.percentage
+      assert_redirected_to available_course_path(@available_course)
       assert_equal translate('.update.success'), flash[:notice]
     end
 
     test 'should destroy course evaluation type' do
+      course_evaluation_type = course_evaluation_types(:course_evaluation_type_to_delete)
+      available_course = course_evaluation_type.available_course
+
       assert_difference('CourseEvaluationType.count', -1) do
-        delete available_course_evaluation_type_path(@available_course, evaluation_types(:evaluation_type_to_delete))
+        delete available_course_evaluation_type_path(available_course, course_evaluation_type)
       end
 
-      assert_redirected_to available_course_path(@available_course)
+      assert_redirected_to available_course_path(available_course)
       assert_equal translate('.destroy.success'), flash[:notice]
     end
 

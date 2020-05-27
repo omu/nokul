@@ -17,7 +17,7 @@ elective_midterm_project_assessment:
 elective_midterm_exam_assessment:
   course_evaluation_type: elective_midterm_evaluation_type
   assessment_method: exam
-  percentage: 50
+  percentage: 40
 
 compulsory_midterm_exam_assessment:
   course_evaluation_type: compulsory_midterm_evaluation_type

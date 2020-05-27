@@ -6,7 +6,7 @@ module CourseManagement
   class AvailableCoursesControllerTest < ActionDispatch::IntegrationTest
     setup do
       sign_in users(:serhat)
-      @available_course = available_courses(:ati_fall_2018_2019)
+      @available_course = available_courses(:elective_course)
     end
 
     test 'should get index' do
@@ -29,7 +29,7 @@ module CourseManagement
         post available_courses_path, params: {
           available_course: {
             curriculum_id: curriculums(:one).id, curriculum_course_id: curriculum_courses(:two).id,
-            coordinator_id: employees(:chief_john).id, unit_id: units(:omu).id,
+            coordinator_id: employees(:chief_john).id, unit_id: units(:bilgisayar_muhendisligi).id,
             groups_attributes: {
               '0' => {
                 name: 'Group 1', quota: 20,
@@ -61,16 +61,15 @@ module CourseManagement
     end
 
     test 'should update available course' do
-      available_course = AvailableCourse.last
-      patch available_course_path(available_course), params: {
+      patch available_course_path(@available_course), params: {
         available_course: {
           curriculum_id: curriculums(:one).id, curriculum_course_id: curriculum_courses(:two).id,
           groups_attributes: {
             '0' => {
-              name: 'Group 1', quota: 10,
+              name: 'Group 3', quota: 10,
               lecturers_attributes: {
                 '0' => {
-                  lecturer_id: employees(:serhat_active).id,
+                  lecturer_id: employees(:rector).id,
                   coordinator: true
                 }
               }
@@ -79,17 +78,17 @@ module CourseManagement
         }
       }
 
-      available_course.reload
+      @available_course.reload
 
-      assert_equal curriculums(:one), available_course.curriculum
-      assert_equal curriculum_courses(:two), available_course.curriculum_course
-      assert_redirected_to available_course_path(available_course)
+      assert_equal curriculums(:one), @available_course.curriculum
+      assert_equal curriculum_courses(:two), @available_course.curriculum_course
+      assert_redirected_to available_course_path(@available_course)
       assert_equal translate('.update.success'), flash[:notice]
     end
 
     test 'should destroy available course' do
       assert_difference('AvailableCourse.count', -1) do
-        delete available_course_path(AvailableCourse.last)
+        delete available_course_path(@available_course)
       end
 
       assert_redirected_to available_courses_path
