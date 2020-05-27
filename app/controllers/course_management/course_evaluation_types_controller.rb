@@ -48,7 +48,10 @@ module CourseManagement
     end
 
     def event_active?
-      redirect_with('.errors.not_proper_event_range') unless @available_course.manageable?
+      return if @available_course.manageable?
+
+      redirect_to(@available_course,
+                  flash: { info: t('errors.not_proper_event_range', scope: %i[course_management available_courses]) })
     end
 
     def course_evaluation_type_params
