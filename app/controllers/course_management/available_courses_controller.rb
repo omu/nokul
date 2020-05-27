@@ -36,7 +36,8 @@ module CourseManagement
     def edit; end
 
     def update
-      if @available_course.update(available_course_params)
+      exception_keys = @available_course.manageable? ? [] : %i[curriculum_id curriculum_course_id unit_id]
+      if @available_course.update(available_course_params.except(*exception_keys))
         redirect_to(@available_course, notice: t('.success'))
       else
         render(:edit)
