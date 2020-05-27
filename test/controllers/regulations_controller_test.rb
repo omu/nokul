@@ -18,6 +18,6 @@ class RegulationsControllerTest < ActionDispatch::IntegrationTest
     get regulation_path(@regulation)
     assert_response :success
     assert_select '.card-header', @regulation.name
-    assert_select '#articles tbody tr', @regulation.articles.count
+    assert_select '#clauses tbody tr', @regulation.clauses.count
   end
 end

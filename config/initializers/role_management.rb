@@ -150,7 +150,7 @@ class RoleManagement
          yoksis_management:                     %i[read write destroy],
          tuition_management:                    %i[read write destroy],
          accreditation_management:              %i[read write destroy],
-         regulation_management:                 %i[read write destroy],
+         regulation_management:                 %i[read write destroy]
        }
   role :manager, name: 'Yönetici', permissions: {}
 end

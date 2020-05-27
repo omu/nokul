@@ -24,7 +24,6 @@ class RegulationTest < ActiveSupport::TestCase
     assert_equal @regulation.klass, V1::UndergraduateRegulation
   end
 
-
   test 'display_name callable' do
     assert_not_raises NoMethodError do
       @regulation.display_name
