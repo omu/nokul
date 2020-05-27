@@ -6,6 +6,12 @@ module Extensions
       module Configuration
         extend ActiveSupport::Concern
 
+        def attributes(*args)
+          @_attributes ||= Set.new
+          args.each { |arg| @_attributes.add arg }
+          @_attributes
+        end
+
         def display_name
           I18n.t(i18n_key)
         end
@@ -51,14 +57,26 @@ module Extensions
 
       attr_reader :store_key
 
-      def initialize(store_key: :default)
+      def initialize(*params, store_key: :default)
+        unless params.size == attributes.size
+          raise ArgumentError, "Wrong number of arguments (given #{params.size}, expected #{attributes.length})"
+        end
+
+        attributes.zip(params).each { |attr, param| instance_variable_set("@#{attr}", param) }
         @store_key = store_key
+        self.class.attr_reader(*attributes)
       end
 
       class << self
-        def call(**params)
-          new(**params).call
+        def call(*params, **config)
+          new(*params, **config).call
         end
+      end
+
+      private
+
+      def attributes
+        self.class.attributes
       end
     end
   end

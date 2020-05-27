@@ -20,12 +20,7 @@ module Clauses
         }
       end
 
-      attr_reader :student
-
-      def initialize(student, store_key: :default)
-        @student   = student
-        @store_key = store_key
-      end
+      attributes :student
 
       def call
         ects = 0

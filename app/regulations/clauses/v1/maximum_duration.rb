@@ -20,12 +20,7 @@ module Clauses
         }
       end
 
-      attr_reader :program
-
-      def initialize(program, store_key: :default)
-        @program   = program
-        @store_key = store_key
-      end
+      attributes :program
 
       def call
         raise ArgumentError, 'unit must be of the program type' unless program.program?
