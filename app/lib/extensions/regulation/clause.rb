@@ -55,16 +55,16 @@ module Extensions
       extend Configuration
       include Store
 
-      attr_reader :store_key, :executive
+      attr_reader :store_key, :executer
 
-      def initialize(*params, executive:)
+      def initialize(*params, executer:)
         define_instance_variables(params)
 
-        if executive.superclass == Regulation::Base || (raise ArgumentError, 'executive type must be Regulation')
-          @executive = executive
+        if (executer.is_a?(Class) && executer&.superclass == Regulation::Base) || (raise ArgumentError, 'executer type must be Regulation')
+          @executer = executer
         end
 
-        @store_key = executive.fetch(identifier).store
+        @store_key = executer.fetch(identifier).store
       end
 
       class << self

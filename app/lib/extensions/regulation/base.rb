@@ -59,7 +59,7 @@ module Extensions
         def call(identifier, *params)
           clause = fetch(identifier)
 
-          clause.klass.call(*params, executive: self)
+          clause.klass.call(*params, executer: self)
         end
 
         def fetch(identifier)
