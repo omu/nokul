@@ -23,11 +23,13 @@
             <div class='form-group col-sm-6'>
               <%= f.association :unit,
                                 collection:   manageable ? Unit.actively_coursable.order(:name) : [@available_course.unit],
-                                label_method: :names_depth_cache %>
+                                label_method: :names_depth_cache,
+                                disabled: !manageable %>
             </div>
             <div class='form-group col-sm-6'>
               <%= f.association :curriculum,
-                                collection: [*f.object.unit.try(:managed_curriculums)] %>
+                                collection: [*f.object.unit.try(:managed_curriculums)],
+                                disabled: !manageable %>
             </div>
             <div class='form-group col-sm-6'>
               <%= f.association :coordinator,
@@ -40,7 +42,8 @@
                                                 .openable_courses_for_active_term(appends: f.object.curriculum_course) %>
               <% end %>
               <%= f.association :curriculum_course,
-                                collection: [*courses] %>
+                                collection: [*courses],
+                                disabled: !manageable %>
             </div>
           </div>
 
