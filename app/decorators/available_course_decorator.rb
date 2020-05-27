@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class AvailableCourseDecorator < SimpleDelegator
-  def reifiable?
+  def manageable?
     add_drop_available_courses_event.try(:active_now?)
   end
 

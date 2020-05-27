@@ -48,7 +48,7 @@ module CourseManagement
     end
 
     def event_active?
-      redirect_with('.errors.not_proper_event_range') unless @available_course.reifiable?
+      redirect_with('.errors.not_proper_event_range') unless @available_course.manageable?
     end
 
     def course_evaluation_type_params

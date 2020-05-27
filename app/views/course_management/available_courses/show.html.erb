@@ -2,7 +2,7 @@
   <div class='col-lg-12'>
     <div class='alert alert-light'>
       <%= link_to_back available_courses_path %>
-      <% except = %i[show] << (:destroy unless @available_course.reifiable?) %>
+      <% except = %i[show] << (:destroy unless @available_course.manageable?) %>
       <%= link_to_actions(@available_course, except: except.compact) %>
     </div>
 

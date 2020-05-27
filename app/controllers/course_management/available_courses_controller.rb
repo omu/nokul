@@ -28,7 +28,7 @@ module CourseManagement
 
     def create
       @available_course = AvailableCourse.new(available_course_params)
-      return redirect_with('.errors.not_proper_event_range') unless @available_course.reifiable?
+      return redirect_with('.errors.not_proper_event_range') unless @available_course.manageable?
 
       @available_course.save ? redirect_to(@available_course, notice: t('.success')) : render(:new)
     end
@@ -44,7 +44,7 @@ module CourseManagement
     end
 
     def destroy
-      return redirect_with('.errors.not_proper_event_range') unless @available_course.reifiable?
+      return redirect_with('.errors.not_proper_event_range') unless @available_course.manageable?
 
       message = @available_course.destroy ? 'success' : 'error'
       redirect_with(message)
