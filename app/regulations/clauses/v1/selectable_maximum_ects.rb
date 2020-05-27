@@ -20,7 +20,7 @@ module Clauses
       attributes :student
 
       def call
-        SelectableAdditionalEcts.call(student) +
+        SelectableAdditionalEcts.call(student, executive: executive) +
           store.fetch(student.unit.semester_type, 0)
       end
     end

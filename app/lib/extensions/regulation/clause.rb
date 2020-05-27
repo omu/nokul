@@ -55,16 +55,16 @@ module Extensions
       extend Configuration
       include Store
 
-      attr_reader :store_key
+      attr_reader :store_key, :executive
 
-      def initialize(*params, store_key: :default)
-        unless params.size == attributes.size
-          raise ArgumentError, "Wrong number of arguments (given #{params.size}, expected #{attributes.length})"
+      def initialize(*params, executive:)
+        define_instance_variables(params)
+
+        if executive.superclass == Regulation::Base || (raise ArgumentError, 'executive type must be Regulation')
+          @executive = executive
         end
 
-        attributes.zip(params).each { |attr, param| instance_variable_set("@#{attr}", param) }
-        @store_key = store_key
-        self.class.attr_reader(*attributes)
+        @store_key = executive.fetch(identifier).store
       end
 
       class << self
@@ -73,10 +73,19 @@ module Extensions
         end
       end
 
+      delegate :identifier, :attributes, to: :class
+
       private
 
-      def attributes
-        self.class.attributes
+      def define_instance_variables(params)
+        unless params.size == attributes.size
+          raise ArgumentError, "Wrong number of arguments (given #{params.size}, expected #{attributes.length})"
+        end
+
+        attributes.zip(params).each { |attr, param| instance_variable_set("@#{attr}", param) }
+
+        # define reader
+        self.class.attr_reader(*attributes)
       end
     end
   end

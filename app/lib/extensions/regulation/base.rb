@@ -56,12 +56,14 @@ module Extensions
           @_clauses ||= {}
         end
 
-        delegate :fetch, to: :clauses
-
         def call(identifier, *params)
-          clause = fetch(identifier) { raise "clause not found for #{identifier}" }
+          clause = fetch(identifier)
 
-          clause.klass.call(*params, store_key: clause.store)
+          clause.klass.call(*params, executive: self)
+        end
+
+        def fetch(identifier)
+          clauses.fetch(identifier) { raise "Not found #{identifier} clause for #{self.identifier} regulation" }
         end
       end
     end

@@ -44,13 +44,13 @@ module Extensions
 
           raise ArgumentError, "#{attr} property should not be empty" if required && data.blank?
 
-          next if types.any? { |type| check_type(data, type) }
+          next if types.any? { |type| type_checker(data, type) }
 
           raise ArgumentError, "#{attr} type must be #{'any of ' if types.count > 1}#{types.to_sentence}"
         end
       end
 
-      def check_type(data, type)
+      def type_checker(data, type)
         data.is_a?(Class) ? data.superclass == type : data.is_a?(type)
       end
     end
