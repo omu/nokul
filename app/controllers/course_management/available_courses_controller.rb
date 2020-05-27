@@ -22,12 +22,12 @@ module CourseManagement
     end
 
     def new
-      @available_course = AvailableCourse.new
+      @available_course = AvailableCourseDecorator.new(AvailableCourse.new)
       @available_course.groups.build.lecturers.build
     end
 
     def create
-      @available_course = AvailableCourse.new(available_course_params)
+      @available_course = AvailableCourseDecorator.new(AvailableCourse.new(available_course_params))
       return redirect_with('.errors.not_proper_event_range') unless @available_course.manageable?
 
       @available_course.save ? redirect_to(@available_course, notice: t('.success')) : render(:new)
