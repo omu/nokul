@@ -3,7 +3,7 @@
     <div class='card-header'>
       <%= fa_icon 'list-alt' %><strong><%= t('.card_header') %></strong>
       <span class='pull-right'>
-        <%= link_to_new(t('.create_evaluation_type'), new_available_course_evaluation_type_path(@available_course)) if @available_course.manageable? %>
+        <%= link_to_new(t('.create_evaluation_type'), new_available_course_evaluation_type_path(@available_course)) if manageable %>
       </span>
     </div>
     <div class='card-body'>
@@ -12,7 +12,7 @@
           <%= fa_icon 'sticky-note' %><b><%= "#{evaluation_type.name} (%#{evaluation_type.percentage})" %></b>
           <span class='pull-right'>
             <%= link_to_edit(edit_available_course_evaluation_type_path(@available_course, evaluation_type)) %>
-            <%= link_to_destroy(available_course_evaluation_type_path(@available_course, evaluation_type)) %>
+            <%= link_to_destroy(available_course_evaluation_type_path(@available_course, evaluation_type)) if manageable %>
           </span>
         </div>
         <table class='table table-sm table-striped'>
