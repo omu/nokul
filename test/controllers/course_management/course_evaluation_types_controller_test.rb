@@ -36,7 +36,7 @@ module CourseManagement
       end
 
       assert_redirected_to available_course_path(@available_course)
-      assert_equal t('errors.not_proper_event_range', scope: %i[course_management available_courses]), flash[:info]
+      assert_equal translate('.errors.not_proper_event_range'), flash[:notice]
     end
 
     test 'should get edit' do
@@ -88,7 +88,7 @@ module CourseManagement
       end
 
       assert_redirected_to available_course_path(available_course)
-      assert_equal t('errors.not_proper_event_range', scope: %i[course_management available_courses]), flash[:info]
+      assert_equal translate('.errors.not_proper_event_range'), flash[:notice]
     end
 
     private
