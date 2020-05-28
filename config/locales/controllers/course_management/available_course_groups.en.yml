@@ -22,6 +22,8 @@ en:
         success: Available course group successfully destroyed.
       edit:
         form_title: 'Update the %{course} Course Group'
+      errors:
+        not_proper_event_range: There is no add/drop available course activity covering the date range today.
       form:
         lecturers: Lecturers
       new:

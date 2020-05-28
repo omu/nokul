@@ -22,6 +22,8 @@ tr:
         success: Açılan ders grubu başarıyla silindi.
       edit:
         form_title: '%{course} Açılan Ders Grubunu Düzenle'
+      errors:
+        not_proper_event_range: Tarih aralığı bugünü kapsayan açılan ders ekle/çıkar aktivitesi bulunmamaktadır.
       form:
         lecturers: Öğretim Elemanları
       new:
