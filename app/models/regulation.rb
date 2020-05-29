@@ -11,7 +11,7 @@ class Regulation < ApplicationRecord
   scope :active, -> { where.not(repealed_at: nil) }
 
   # delegates
-  delegate :display_name, to: :klass, allow_nil: true
+  delegate :display_name, :identifier, to: :klass, allow_nil: true
 
   alias name display_name
 

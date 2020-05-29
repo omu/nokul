@@ -65,6 +65,13 @@ module Extensions
         def fetch(identifier)
           clauses.fetch(identifier) { raise "Not found #{identifier} clause for #{self.identifier} regulation" }
         end
+
+        def included?(identifier)
+          clauses.key? identifier
+        end
+
+        alias registered? included?
+        alias [] fetch
       end
     end
   end
