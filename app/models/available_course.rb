@@ -79,7 +79,15 @@ class AvailableCourse < ApplicationRecord
     saved_enrollments.where(available_course_group: groups_under_authority_of(employee))
   end
 
+  def manageable?
+    add_drop_available_courses_event.try(:active_now?)
+  end
+
   private
+
+  def add_drop_available_courses_event
+    @add_drop_available_courses_event ||= calendars.active.last&.event('add_drop_available_courses')
+  end
 
   def assign_academic_term
     self.academic_term = AcademicTerm.active.last

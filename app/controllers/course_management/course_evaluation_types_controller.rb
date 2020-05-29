@@ -35,8 +35,7 @@ module CourseManagement
     end
 
     def set_available_course
-      available_course = AvailableCourse.find(params[:available_course_id])
-      @available_course = AvailableCourseDecorator.new(available_course)
+      @available_course = AvailableCourse.find(params[:available_course_id])
     end
 
     def set_course_evaluation_type
