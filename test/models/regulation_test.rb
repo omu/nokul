@@ -13,20 +13,18 @@ class RegulationTest < ActiveSupport::TestCase
   validates_length_of :class_name
 
   setup do
-    @regulation = registrations(:undergraduate)
+    @regulation = regulations(:undergraduate)
   end
 
-  test 'articles' do
-    assert_equal @regulation.articles.present?
+  test 'clauses should be accessible' do
+    assert @regulation.clauses.present?
   end
 
-  test 'klass' do
+  test 'klass method' do
     assert_equal @regulation.klass, V1::UndergraduateRegulation
   end
 
-  test 'display_name callable' do
-    assert_not_raises NoMethodError do
-      @regulation.display_name
-    end
+  test 'name method' do
+    assert_equal @regulation.name, I18n.t("regulations.v1.#{@regulation.identifier}")
   end
 end
