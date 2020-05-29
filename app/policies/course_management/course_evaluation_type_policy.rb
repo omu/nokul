@@ -6,6 +6,10 @@ module CourseManagement
 
     undef :index?, :show?
 
+    def destroy?
+      permitted?(:destroy) && record.available_course.manageable?
+    end
+
     private
 
     def permitted?(*privileges)

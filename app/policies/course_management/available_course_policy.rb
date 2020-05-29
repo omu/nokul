@@ -4,6 +4,10 @@ module CourseManagement
   class AvailableCoursePolicy < ApplicationPolicy
     include CrudPolicyMethods
 
+    def destroy?
+      permitted?(:destroy) && record.manageable?
+    end
+
     private
 
     def permitted?(*privileges)

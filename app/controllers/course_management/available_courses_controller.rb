@@ -44,8 +44,6 @@ module CourseManagement
     end
 
     def destroy
-      return redirect_with('.errors.not_proper_event_range') unless @available_course.manageable?
-
       message = @available_course.destroy ? 'success' : 'error'
       redirect_with(message)
     end

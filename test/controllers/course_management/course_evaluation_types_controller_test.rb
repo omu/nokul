@@ -87,8 +87,8 @@ module CourseManagement
         delete available_course_evaluation_type_path(available_course, course_evaluation_type)
       end
 
-      assert_redirected_to available_course_path(available_course)
-      assert_equal translate('.errors.not_proper_event_range'), flash[:notice]
+      assert_redirected_to root_path
+      assert_equal t('pundit.default'), flash[:alert]
     end
 
     private
