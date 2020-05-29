@@ -2,7 +2,7 @@ PATH
   remote: plugins/support
   specs:
     nokul-support (0.1.0)
-      activesupport (~> 6.0.0)
+      activesupport (>= 6.0.3.1)
 
 PATH
   remote: plugins/tenant/acme
