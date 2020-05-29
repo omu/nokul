@@ -36,8 +36,7 @@ module CourseManagement
     def edit; end
 
     def update
-      exception_keys = @available_course.manageable? ? [] : %i[curriculum_id curriculum_course_id unit_id]
-      if @available_course.update(available_course_params.except(*exception_keys))
+      if @available_course.update(available_course_params_for_update)
         redirect_to(@available_course, notice: t('.success'))
       else
         render(:edit)
@@ -71,6 +70,11 @@ module CourseManagement
         groups_attributes: [:id, :name, :quota, :_destroy,
                             lecturers_attributes: %i[id lecturer_id coordinator _destroy]]
       )
+    end
+
+    def available_course_params_for_update
+      exception_keys = @available_course.manageable? ? [] : %i[curriculum_id curriculum_course_id unit_id]
+      available_course_params.except(*exception_keys)
     end
   end
 end
