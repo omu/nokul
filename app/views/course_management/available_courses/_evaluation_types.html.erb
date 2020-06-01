@@ -12,7 +12,7 @@
           <%= fa_icon 'sticky-note' %><b><%= "#{evaluation_type.name} (%#{evaluation_type.percentage})" %></b>
           <span class='pull-right'>
             <%= link_to_edit(edit_available_course_evaluation_type_path(@available_course, evaluation_type)) %>
-            <%= link_to_destroy(available_course_evaluation_type_path(@available_course, evaluation_type)) if policy([:course_management, evaluation_type]).destroy? %>
+            <%= link_to_destroy(available_course_evaluation_type_path(@available_course, evaluation_type)) if manageable %>
           </span>
         </div>
         <table class='table table-sm table-striped'>
