@@ -3,8 +3,8 @@
     <div class='alert alert-light'>
       <%= link_to_back available_courses_path %>
       <% manageable = @available_course.manageable? %>
-      <% except = %i[show] << (:destroy unless manageable) %>
-      <%= link_to_actions(@available_course, except: except.compact) %>
+      <%= link_to_edit([:edit, @available_course]) %>
+      <%= link_to_destroy(@available_course) if manageable %>
     </div>
 
     <div class='card'>
