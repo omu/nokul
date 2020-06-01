@@ -80,8 +80,8 @@ module CourseManagement
         delete available_course_available_course_group_path(@available_course, @group)
       end
 
-      assert_redirected_to root_path
-      assert_equal t('pundit.default'), flash[:alert]
+      assert_redirected_to available_course_path(@available_course)
+      assert_equal translate('.errors.not_proper_event_range'), flash[:info]
     end
 
     private

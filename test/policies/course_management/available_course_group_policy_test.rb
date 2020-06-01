@@ -4,10 +4,6 @@ require 'pundit_test_case'
 
 module CourseManagement
   class AvailableCourseGroupPolicyTest < PunditTestCase
-    setup do
-      @group = available_course_groups(:elective_course_group)
-    end
-
     %w[
       create?
       destroy?
@@ -16,8 +12,8 @@ module CourseManagement
       update?
     ].each do |method|
       test method do
-        assert_permit     users(:serhat), record: @group
-        assert_not_permit users(:mine), record: @group
+        assert_permit     users(:serhat)
+        assert_not_permit users(:mine)
       end
     end
   end
