@@ -18,9 +18,9 @@ elective_course_2_group_lecturer:
   group: elective_course_2_group
   lecturer: serhat_active
 elective_course_2_group_lecturer_2:
-  group: elective_course_group
+  group: elective_course_group_2
   lecturer: chief_john
-  coordinator: true
+  coordinator: false
 compulsory_course_group_lecturer:
   group: compulsory_course_group
   lecturer: serhat_active
