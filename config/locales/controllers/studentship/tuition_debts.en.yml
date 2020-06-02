@@ -1,0 +1,9 @@
+en:
+  studentship:
+    tuition_debts:
+      index:
+        academic_term: Academic Term
+        amount: Amount
+        due_date: Due Date
+        paid: Paid?
+        tuition_debt_information: Tuition Debt Information
