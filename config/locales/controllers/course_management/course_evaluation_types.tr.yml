@@ -13,6 +13,8 @@ tr:
         success: Ders değerlendirme türü başarıyla silindi.
       edit:
         form_title: '%{course} Dersi Değerlendirme Türünü Düzenle'
+      errors:
+        not_proper_event_range: Tarih aralığı bugünü kapsayan açılan ders ekle/çıkar aktivitesi bulunmamaktadır.
       form:
         assessment_methods: Ölçme Kriterleri
         create_assessment_method: Ölçme Kriteri Ekle

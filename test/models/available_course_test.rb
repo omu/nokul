@@ -74,4 +74,8 @@ class AvailableCourseTest < ActiveSupport::TestCase
     assert_includes enrollments, course_enrollments(:elective)
     assert_not_includes enrollments, course_enrollments(:johns_enrollment)
   end
+
+  test 'manageable? method' do
+    assert available_courses(:elective_course).manageable?
+  end
 end

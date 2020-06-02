@@ -27,6 +27,8 @@ tr:
       destroy:
         error: Açılan ders silinirken bir hata oluştu.
         success: Açılan ders başarıyla silindi.
+      errors:
+        not_proper_event_range: Tarih aralığı bugünü kapsayan açılan ders ekle/çıkar aktivitesi bulunmamaktadır.
       edit:
         form_title: '%{course} Açılan Dersi Düzenle'
       evaluation_types:

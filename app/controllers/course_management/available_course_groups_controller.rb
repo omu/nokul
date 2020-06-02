@@ -6,6 +6,7 @@ module CourseManagement
     before_action :set_lecturers
     before_action :set_available_course_group, only: %i[edit update destroy]
     before_action :authorized?
+    before_action :event_active?, except: %i[edit update]
 
     def new
       @available_course_group = @available_course.groups.new
@@ -48,6 +49,12 @@ module CourseManagement
 
     def authorized?
       authorize([:course_management, @available_course_group || AvailableCourseGroup])
+    end
+
+    def event_active?
+      return if @available_course.manageable?
+
+      redirect_with('errors.not_proper_event_range')
     end
 
     def available_course_group_params

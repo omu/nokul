@@ -13,6 +13,8 @@ en:
         success: Course evaluation type successfully destroyed.
       edit:
         form_title: 'Update the %{course} Course Evaluation Type'
+      errors:
+        not_proper_event_range: There is no add/drop available course activity covering the date range today.
       form:
         assessment_methods: Assessment Methods
         create_assessment_method: Create Assessment Method
