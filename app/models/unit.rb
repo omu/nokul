@@ -145,4 +145,10 @@ class Unit < ApplicationRecord
   def effective_unit
     Unit.find_by(yoksis_id: effective_yoksis_id) if effective_yoksis_id.present?
   end
+
+  def self.actively_coursable
+    active.coursable.joins(calendars: [calendar_events: :calendar_event_type])
+          .where(calendar_event_types: { identifier: 'add_drop_available_courses' })
+          .where('? BETWEEN start_time AND end_time', Time.current)
+  end
 end

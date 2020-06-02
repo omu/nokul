@@ -72,6 +72,8 @@ courses:
     name: Senkron Derslerin Başlaması-Bitişi
   - identifier: start_and_end_of_practical
     name: Uygulama Derslerinin Başlaması-Bitişi
+  - identifier: add_drop_available
+    name: Açılan Ders Ekle/Çıkar İşlemleri
 submission:
   - identifier: final_project
     name: Dönem Projelerinin Teslimi

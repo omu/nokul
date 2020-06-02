@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class AvailableCourseGroup < ApplicationRecord
+  # callbacks
+  before_destroy :must_be_another_group
+
   # relations
   belongs_to :available_course, counter_cache: :groups_count
   has_many :course_enrollments, dependent: :destroy
@@ -25,5 +28,11 @@ class AvailableCourseGroup < ApplicationRecord
 
   def number_of_enrolled_students
     saved_enrollments.count
+  end
+
+  private
+
+  def must_be_another_group
+    throw(:abort) if available_course.groups.where.not(id: id).empty? && !destroyed_by_association
   end
 end
