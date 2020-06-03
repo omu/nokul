@@ -41,6 +41,7 @@ tr:
           given_courses: Verilen Dersler
         student:
           course_enrollment: Ders Kayıtlanma
+          tuition_debt_information: Harç Borcu Bilgileri
         institution_manager:
           manager:
             stats: Üniversite İstatistikleri

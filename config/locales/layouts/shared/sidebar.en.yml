@@ -41,6 +41,7 @@ en:
           given_courses: Given Courses
         student:
           course_enrollment: Course Enrollment
+          tuition_debt_information: Tuition Debt Information
         institution_manager:
           manager:
             stats: University Stats
