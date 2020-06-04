@@ -3,3 +3,8 @@
     <%= fa_icon('graduation-cap', text: t('.course_enrollment'), class: 'c-sidebar-nav-icon') %>
   <% end %>
 </li>
+<li class="c-sidebar-nav-item">
+  <%= link_to student_tuition_debts_path(current_account.object), class: 'c-sidebar-nav-link' do %>
+    <%= fa_icon('money', text: t('.tuition_debt_information'), class: 'c-sidebar-nav-icon') %>
+  <% end %>
+</li>
