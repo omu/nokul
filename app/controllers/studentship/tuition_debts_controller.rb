@@ -6,7 +6,7 @@ module Studentship
     before_action :authorized?
 
     def index
-      @debts = @student.tuition_debts
+      @debts = @student.tuition_debts.includes(:academic_term).order(:due_date)
     end
 
     private
