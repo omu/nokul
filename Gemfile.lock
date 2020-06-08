@@ -331,7 +331,7 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     redis (4.1.4)
-    regexp_parser (1.7.0)
+    regexp_parser (1.7.1)
     rein (5.1.0)
       activerecord (>= 4.0.0)
       activesupport (>= 4.0.0)
