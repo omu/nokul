@@ -12,7 +12,7 @@ class AcademicCredentialTest < ActiveSupport::TestCase
   belongs_to :country, optional: true
 
   # enums
-  enum activity: { deleted: 0, active: 1 }
+  enum activity: { passive: 0, active: 1 }
   enum location: { domestic: 1, abroad: 2 }
   enum status: { full_time: 0, part_time: 1 }
 

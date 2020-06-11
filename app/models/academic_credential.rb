@@ -2,7 +2,7 @@
 
 class AcademicCredential < ApplicationRecord
   # enums
-  enum activity: { deleted: 0, active: 1 }
+  enum activity: { passive: 0, active: 1 }
   enum location: { domestic: 1, abroad: 2 }
   enum status: { full_time: 0, part_time: 1 }
 

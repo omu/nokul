@@ -4,7 +4,7 @@ class Book < ApplicationRecord
   self.inheritance_column = nil
 
   # enums
-  enum activity: { deleted: 0, active: 1 }
+  enum activity: { passive: 0, active: 1 }
   enum contribution_rate: { all_of: 0, chapters: 1 }
   enum scope: { national: 0, international: 1 }
   enum type: {

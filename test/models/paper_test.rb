@@ -12,7 +12,7 @@ class PaperTest < ActiveSupport::TestCase
   belongs_to :country, optional: true
 
   # enums
-  enum activity: { deleted: 0, active: 1 }
+  enum activity: { passive: 0, active: 1 }
   enum presentation_type: { verbal: 33, guest_speaker: 39, poster: 38 }
   enum publication_status: { unpublished: 0, published: 1, accepted: 2 }
   enum scope: { national: 0, international: 1 }
