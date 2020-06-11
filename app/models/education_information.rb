@@ -3,7 +3,7 @@
 class EducationInformation < ApplicationRecord
   # enums
   enum activity: { deleted: 0, active: 1 }
-  enum location: { domestic: 0, abroad: 1 }
+  enum location: { domestic: 1, abroad: 2 }
 
   # relations
   belongs_to :user
