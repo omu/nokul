@@ -5,5 +5,7 @@ module V1
     identifier      :undergraduate
     number          31_103
     effective_date '23/05/2020'
+    repealed_at    '15/06/2020'
+    scope          :education
   end
 end

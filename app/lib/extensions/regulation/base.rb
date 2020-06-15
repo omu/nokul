@@ -4,6 +4,11 @@ module Extensions
   module Regulation
     class Base
       module Configuration
+        AVAILABLE_SCOPES = %i[
+          education
+          assessment_and_evaluation
+        ].freeze
+
         def display_name
           I18n.t(i18n_key)
         end
@@ -24,16 +29,34 @@ module Extensions
           @_number ||= number
         end
 
+        def scope(key = nil)
+          @_scope ||= begin
+            unless AVAILABLE_SCOPES.include?(key.to_sym)
+              raise(ArgumentError, "Scope value must be one of #{AVAILABLE_SCOPES.to_sentence}")
+            end
+
+            key.to_sym
+          end
+        end
+
         def effective_date(datetime = nil)
-          @_effectived_date ||= Date.parse(datetime) if datetime.present?
+          @_effectived_date ||= (Date.parse(datetime) if datetime.present?)
         end
 
         def repealed_at(datetime = nil)
-          @_repealed_at ||= Datetime.parse(datetime) if datetime.present?
+          @_repealed_at ||= (Date.parse(datetime) if datetime.present?)
         end
 
         def register(identifier, metadata: {})
           clauses[identifier] = Metadata.new(metadata)
+        end
+
+        def active?(date = nil)
+          date ||= Date.current
+
+          return effective_date <= date if repealed_at.nil?
+
+          effective_date <= date && repealed_at >= date
         end
 
         def valid!
