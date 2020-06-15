@@ -89,7 +89,7 @@ GEM
     aes_key_wrap (1.0.1)
     ancestry (3.0.7)
       activerecord (>= 3.2.0)
-    ast (2.4.0)
+    ast (2.4.1)
     attr_required (1.0.1)
     authy (2.7.5)
       httpclient (>= 2.5.3.3)
@@ -354,7 +354,7 @@ GEM
       parser (>= 2.7.0.1)
     rubocop-minitest (0.9.0)
       rubocop (>= 0.74)
-    rubocop-performance (1.6.0)
+    rubocop-performance (1.6.1)
       rubocop (>= 0.71.0)
     rubocop-rails (2.5.2)
       activesupport
