@@ -2873,6 +2873,37 @@ ALTER SEQUENCE public.registration_documents_id_seq OWNED BY public.registration
 
 
 --
+-- Name: regulation_assignments; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.regulation_assignments (
+    id bigint NOT NULL,
+    regulation_id uuid NOT NULL,
+    assignable_type character varying NOT NULL,
+    assignable_id bigint NOT NULL
+);
+
+
+--
+-- Name: regulation_assignments_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.regulation_assignments_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: regulation_assignments_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.regulation_assignments_id_seq OWNED BY public.regulation_assignments.id;
+
+
+--
 -- Name: regulations; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -4492,6 +4523,13 @@ ALTER TABLE ONLY public.registration_documents ALTER COLUMN id SET DEFAULT nextv
 
 
 --
+-- Name: regulation_assignments id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.regulation_assignments ALTER COLUMN id SET DEFAULT nextval('public.regulation_assignments_id_seq'::regclass);
+
+
+--
 -- Name: role_assignments id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -5387,6 +5425,14 @@ ALTER TABLE ONLY public.query_stores
 
 ALTER TABLE ONLY public.registration_documents
     ADD CONSTRAINT registration_documents_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: regulation_assignments regulation_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.regulation_assignments
+    ADD CONSTRAINT regulation_assignments_pkey PRIMARY KEY (id);
 
 
 --
@@ -6556,6 +6602,20 @@ CREATE INDEX index_registration_documents_on_unit_id ON public.registration_docu
 
 
 --
+-- Name: index_regulation_assignments_assignable; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_regulation_assignments_assignable ON public.regulation_assignments USING btree (assignable_type, assignable_id);
+
+
+--
+-- Name: index_regulation_assignments_on_regulation_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_regulation_assignments_on_regulation_id ON public.regulation_assignments USING btree (regulation_id);
+
+
+--
 -- Name: index_role_assignments_on_role_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -7171,6 +7231,14 @@ ALTER TABLE ONLY public.role_permissions
 
 ALTER TABLE ONLY public.calendar_events
     ADD CONSTRAINT fk_rails_64d7b22524 FOREIGN KEY (calendar_event_type_id) REFERENCES public.calendar_event_types(id);
+
+
+--
+-- Name: regulation_assignments fk_rails_67199fa23b; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.regulation_assignments
+    ADD CONSTRAINT fk_rails_67199fa23b FOREIGN KEY (regulation_id) REFERENCES public.regulations(id);
 
 
 --
@@ -7892,6 +7960,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20200427103727'),
 ('20200430130429'),
 ('20200523152237'),
-('20200523152250');
+('20200523152250'),
+('20200615122311');
 
 
