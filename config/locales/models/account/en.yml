@@ -89,15 +89,6 @@ en:
           electronic: Electronic
           printed: Printed
           printed_and_electronic: Printed and Electronic
-      project:
-        statuses:
-          continuing: Continuing
-          completed: Completed
-          deferred: Deferred
-          pending: Pending
-        scopes:
-          international: International
-          national: National
   helpers:
     submit:
       duty:

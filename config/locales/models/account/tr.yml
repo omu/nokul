@@ -89,15 +89,6 @@ tr:
           electronic: Elektronik
           printed: Basılı
           printed_and_electronic: Basılı ve Elektronik
-      project:
-        statuses:
-          continuing: Devam Ediyor
-          completed: Tamamlanmış
-          deferred: Ertelenmiş
-          pending: Bekleyen
-        scopes:
-          international: Uluslararası
-          national: Ulusal
   helpers:
     submit:
       duty:
