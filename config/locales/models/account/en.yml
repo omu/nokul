@@ -53,23 +53,6 @@ en:
           review_article: Review Article
           short_article: Short Article
           technical_note: Technical Note
-      book:
-        contribution_rates:
-          all_of: All of book
-          chapters: Chapters
-        scopes:
-          national: National
-          international: International
-        types:
-          encyclopedia_article: Encyclopedia Article
-          research: Research
-          scientific: Scientific
-          textbook: Textbook
-          translation: Translation
-        type_of_releases:
-          electronic: Electronic
-          printed: Printed
-          printed_and_electronic: Printed and Electronic
   helpers:
     submit:
       duty:

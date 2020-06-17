@@ -1,0 +1,20 @@
+tr:
+  activerecord:
+    enums:
+      book:
+        contribution_rates:
+          all_of: Tüm Kitap
+          chapters: Kitap Bölümü
+        scopes:
+          international: Uluslararası
+          national: Ulusal
+        types:
+          encyclopedia_article: Ansiklopedi
+          research: Araştırma Kitabı
+          scientific: Bilimsel Kitap
+          textbook: Ders Kitabı
+          translation: Kitap Tercümesi
+        type_of_releases:
+          electronic: Elektronik
+          printed: Basılı
+          printed_and_electronic: Basılı ve Elektronik
