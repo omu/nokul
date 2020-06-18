@@ -1,0 +1,25 @@
+tr:
+  activerecord:
+    enums:
+      article:
+        access_type:
+          electronic: Elektronik
+          printed: Basılı
+          printed_and_electronic: Basılı ve Elektronik
+        scopes:
+          international: Uluslararası
+          national: Ulusal
+        reviews:
+          reviewed: Hakemli
+          unreviewed: Hakemsiz
+        types:
+          abstract: Özet
+          book_review: Kitap İncelemesi
+          case_report: Vaka Raporu
+          commentary: Eleştiri
+          expert_report: Uzman Raporu
+          letter_to_the_editor: Editöre Mektup
+          original_article: Özgün Makale
+          review_article: Derleme Makale
+          short_article: Kısa Makale
+          technical_note: Teknik Not
