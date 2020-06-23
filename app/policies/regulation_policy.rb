@@ -9,6 +9,8 @@ class RegulationPolicy < ApplicationPolicy
     permitted? :read
   end
 
+  alias clause? show?
+
   private
 
   def permitted?(*privileges)
