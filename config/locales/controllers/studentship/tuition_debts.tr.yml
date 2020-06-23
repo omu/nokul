@@ -1,0 +1,9 @@
+tr:
+  studentship:
+    tuition_debts:
+      index:
+        academic_term: Akademik Dönem
+        amount: Meblağ
+        due_date: Son Ödeme Tarihi
+        paid: Ödendi mi?
+        tuition_debt_information: Harç Borcu Bilgileri

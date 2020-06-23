@@ -6,6 +6,7 @@ module TuitionManagement
   class TuitionDebtPolicyTest < PunditTestCase
     %w[
       create?
+      create_with_service?
       destroy?
       edit?
       index?

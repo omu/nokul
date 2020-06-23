@@ -12,8 +12,8 @@ class EducationInformationTest < ActiveSupport::TestCase
   belongs_to :country, optional: true
 
   # enums
-  enum activity: { deleted: 0, active: 1 }
-  enum location: { domestic: 0, abroad: 1 }
+  enum activity: { passive: 0, active: 1 }
+  enum location: { domestic: 1, abroad: 2 }
 
   # validations: presence
   validates_presence_of :location

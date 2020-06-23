@@ -14,7 +14,7 @@ class ArticleTest < ActiveSupport::TestCase
   enum scope: { national: 0, international: 1 }
   enum review: { reviewed: 0, unreviewed: 1 }
   enum access_type: { printed: 1, electronic: 2, printed_and_electronic: 3 }
-  enum status: { deleted: 0, active: 1 }
+  enum status: { passive: 0, active: 1 }
 
   enum index: {
     ssci:                       5,

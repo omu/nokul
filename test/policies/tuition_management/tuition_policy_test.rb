@@ -10,6 +10,7 @@ module TuitionManagement
       edit?
       index?
       new?
+      units?
       update?
     ].each do |method|
       test method do

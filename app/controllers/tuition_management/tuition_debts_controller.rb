@@ -5,6 +5,7 @@ module TuitionManagement
     include SearchableModule
 
     before_action :set_tuition_debt, only: %i[edit update destroy]
+    before_action :authorized?
 
     def index
       tuition_debts =
@@ -47,6 +48,10 @@ module TuitionManagement
 
     def set_tuition_debt
       @tuition_debt = TuitionDebt.find(params[:id])
+    end
+
+    def authorized?
+      authorize([:tuition_management, @tuition_debt || TuitionDebt])
     end
 
     def tuition_debt_params

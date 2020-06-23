@@ -6,6 +6,7 @@
         <strong><%= form_title %></strong>
       </div>
       <div class='card-body'>
+        <% manageable = @available_course.new_record? || @available_course.manageable? %>
         <%= simple_form_for(@available_course) do |f| %>
           <%= f.error_notification %>
           <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -21,12 +22,14 @@
           <div class='row'>
             <div class='form-group col-sm-6'>
               <%= f.association :unit,
-                                collection:   Unit.active.coursable.order(:name),
-                                label_method: :names_depth_cache %>
+                                collection:   manageable ? Unit.actively_coursable.order(:name) : [@available_course.unit],
+                                label_method: :names_depth_cache,
+                                disabled: !manageable %>
             </div>
             <div class='form-group col-sm-6'>
               <%= f.association :curriculum,
-                                collection: [*f.object.unit.try(:managed_curriculums)] %>
+                                collection: [*f.object.unit.try(:managed_curriculums)],
+                                disabled: !manageable %>
             </div>
             <div class='form-group col-sm-6'>
               <%= f.association :coordinator,
@@ -39,7 +42,8 @@
                                                 .openable_courses_for_active_term(appends: f.object.curriculum_course) %>
               <% end %>
               <%= f.association :curriculum_course,
-                                collection: [*courses] %>
+                                collection: [*courses],
+                                disabled: !manageable %>
             </div>
           </div>
 
@@ -49,7 +53,7 @@
               <%= render 'group_fields', f: group %>
             <% end %>
             <div class='links text-center'>
-              <%= link_to_add_association f, :groups, class: 'btn btn-success btn-sm' %>
+              <%= link_to_add_association f, :groups, class: 'btn btn-success btn-sm' if manageable %>
             </div>
           </div>
           <div class='form-group col-sm-12'>

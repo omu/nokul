@@ -1,24 +1,14 @@
 one:
   activity: active
-  advisor:
-  advisor_id_number:
   country: turkey
   department: Bitki Koruma Bölümü
-  diploma_equivalency:
-  diploma_no:
   discipline: Bitki Koruma Pr.
   end_year: 1992
-  end_date_of_thesis:
   faculty: Ziraat Fakültesi
   last_update: Tue, 26 Nov 2013 19:26:35 EET +02:00
   location: abroad
-  other_discipline:
-  other_university:
   program: Lisans
   start_year: 1988
-  start_date_of_thesis:
-  thesis_name:
-  thesis_step:
   user: mine
   unit_id: 145105
   university: Çukurova Üniversitesi

@@ -7,7 +7,7 @@ module TuitionManagement
     undef :show?
 
     def create_with_service?
-      permitted? :read
+      permitted? :write
     end
 
     private

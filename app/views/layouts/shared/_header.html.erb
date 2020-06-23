@@ -1,45 +1,39 @@
-<header class='app-header navbar'>
-  <button class='navbar-toggler sidebar-toggler d-lg-none mr-auto' type='button' data-toggle='sidebar-show'>
-    <span class='navbar-toggler-icon'></span>
+<header class="c-header c-header-light c-header-fixed">
+  <button class="c-header-toggler c-class-toggler d-lg-none mfe-auto" type="button" data-target="#sidebar" data-class="c-sidebar-show">
+    <span class="c-header-toggler-icon"></span>
   </button>
-  <%= link_to :root, class: 'navbar-brand' do %>
-    <%= image_tag Tenant.configuration.branding.logo.file,
-                  height: '36',
-                  width:  '134',
-                  alt:    Tenant.configuration.branding.logo.alt_text,
-                  class:  'navbar-brand-full' %>
-  <% end %>
-  <button class='navbar-toggler sidebar-toggler d-none d-md-block d-lg-none' type='button' data-toggle='sidebar-lg-show'>
-    <span class='navbar-toggler-icon'></span>
+  <a class="c-header-brand d-lg-none c-header-brand-sm-up-center" href="#">
+    <span class="c-header-toggler-icon"></span>
+  </a>
+  <button class="c-header-toggler c-class-toggler mfs-3 d-md-down-none" type="button" data-target="#sidebar" data-class="c-sidebar-lg-show" responsive="true">
+    <span class="c-header-toggler-icon"></span>
   </button>
-  <ul class='nav navbar-nav ml-auto'>
-    <li class='nav-item dropdown'>
-      <a class='nav-link' data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false'>
+
+  <ul class='c-header-nav ml-auto'>
+    <li class='c-header-nav-item dropdown d-md-down-none mx-2'>
+      <a class='c-header-nav-link' data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false'>
         <%= fa_icon 'user 2x' %>
       </a>
-      <div class='dropdown-menu dropdown-menu-right'>
+      <div class='dropdown-menu dropdown-menu-right pt-0'>
         <%= link_to :profile, class: 'dropdown-item' do %>
-          <%= fa_icon('user', text: t('.profile_settings')) %>
+          <%= fa_icon('user', text: t('.profile_settings'), class: 'mfe-2') %>
         <% end %>
         <%= link_to :settings, class: 'dropdown-item' do %>
-          <%= fa_icon('shield', text: t('.account_settings')) %>
+          <%= fa_icon('shield', text: t('.account_settings'), class: 'mfe-2') %>
         <% end %>
-        <% if ENV.fetch('NOKUL_SSO_ENABLE', false) %>
+        <% if Nokul::SSO.enabled? %>
           <%= link_to "#{Tenant.credentials.lemonldap[:issuer]}/oauth2/logout", class: 'dropdown-item' do %>
-            <%= fa_icon('lock', text: t('.logout')) %>
+            <%= fa_icon('lock', text: t('.logout'), class: 'mfe-2') %>
           <% end %>
         <% else %>
           <%= link_to :logout, class: 'dropdown-item', method: :delete do %>
-            <%= fa_icon('lock', text: t('.logout')) %>
+            <%= fa_icon('lock', text: t('.logout'), class: 'mfe-2') %>
           <% end %>
         <% end %>
       </div>
     </li>
   </ul>
-  <button class='navbar-toggler aside-menu-toggler d-md-down-none' type='button' data-toggle='aside-menu-lg-show'>
-    <span class='navbar-toggler-icon'></span>
-  </button>
-  <button class='navbar-toggler aside-menu-toggler d-lg-none' type='button' data-toggle='aside-menu-show'>
-    <span class='navbar-toggler-icon'></span>
+ <button class="c-header-toggler c-class-toggler mfe-md-3" type="button" data-target="#aside" data-class="c-sidebar-show">
+    <span class="c-header-toggler-icon"></span>
   </button>
 </header>

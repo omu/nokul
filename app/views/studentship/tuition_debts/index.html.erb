@@ -1,0 +1,35 @@
+<div class='row'>
+  <div class='col-lg-12'>
+    <div class='alert alert-light'>
+      <%= link_to_back root_path %>
+    </div>
+
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'money' %><strong> <%= t('.tuition_debt_information') %></strong>
+      </div>
+      <div class='card-body'>
+        <table class='table table-responsive-sm table-striped table-hover'>
+          <thead class='thead-dark'>
+            <tr>
+              <th><%= t('.academic_term') %></th>
+              <th><%= t('.amount') %></th>
+              <th><%= t('.due_date') %></th>
+              <th><%= t('.paid') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @debts.each do |debt| %>
+              <tr>
+                <td><%= full_name(debt.academic_term) %></td>
+                <td><%= number_to_currency(debt.amount) %></td>
+                <td><%= l(debt.due_date, format: :short) %></td>
+                <td><%= icon_for_check(debt.paid) %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

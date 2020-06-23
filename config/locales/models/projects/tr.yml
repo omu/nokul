@@ -2,6 +2,12 @@ tr:
   activerecord:
     enums:
       project:
+        activities:
+          passive: Pasif
+          active: Aktif
+        scopes:
+          international: Uluslararası
+          national: Ulusal
         statuses:
           completed: Tamamlandı
           continuing: Devam ediyor

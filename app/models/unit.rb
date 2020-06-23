@@ -140,11 +140,17 @@ class Unit < ApplicationRecord
   end
 
   def subtree_employees
-    Employee.includes(:user, :title).joins(:units, user: :identities)
+    Employee.active.includes(:user, :title).joins(:units, user: :identities)
             .where(units: { id: subtree.active.ids })
   end
 
   def effective_unit
     Unit.find_by(yoksis_id: effective_yoksis_id) if effective_yoksis_id.present?
+  end
+
+  def self.actively_coursable
+    active.coursable.joins(calendars: [calendar_events: :calendar_event_type])
+          .where(calendar_event_types: { identifier: 'add_drop_available_courses' })
+          .where('? BETWEEN start_time AND end_time', Time.current)
   end
 end

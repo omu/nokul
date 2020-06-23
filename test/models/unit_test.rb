@@ -163,7 +163,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'subtree_employees returns unit subtree employees' do
-    employees = Employee.joins(:units, user: :identities).where(units: { id: units(:omu).subtree.active.ids })
+    employees = Employee.active.joins(:units, user: :identities).where(units: { id: units(:omu).subtree.active.ids })
     assert_equal employees.count, units(:omu).subtree_employees.count
   end
 
