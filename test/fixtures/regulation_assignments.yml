@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  regulation: one
+  assignable: one
+  assignable_type: Assignable
+
+two:
+  regulation: two
+  assignable: two
+  assignable_type: Assignable
