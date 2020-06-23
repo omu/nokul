@@ -60,10 +60,11 @@ module Extensions
       def initialize(*params, executer:)
         define_instance_variables(params)
 
-        if (executer.is_a?(Class) && executer&.superclass == Regulation::Base) || (raise ArgumentError, 'executer type must be Regulation')
-          @executer = executer
+        unless executer.is_a?(Class) && executer&.superclass == Regulation::Base
+          raise ArgumentError, 'executer type must be Regulation'
         end
 
+        @executer  = executer
         @store_key = executer.fetch(identifier).store
       end
 

@@ -40,7 +40,7 @@ module Extensions
         end
 
         def effective_date(datetime = nil)
-          @_effectived_date ||= (Date.parse(datetime) if datetime.present?)
+          @_effective_date ||= (Date.parse(datetime) if datetime.present?)
         end
 
         def repealed_at(datetime = nil)

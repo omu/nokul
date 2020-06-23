@@ -21,7 +21,7 @@ export default class extends Controller {
   }
 
   showModal () {
-    const modal = new coreui.Modal(this.modalTarget, {
+    const modal = new window.coreui.Modal(this.modalTarget, {
       keyboard: false
     })
     modal.show()
