@@ -39,12 +39,12 @@ module ComponentHelper
     render 'layouts/components/content_loader_basic', url: url
   end
 
-  def loading_tag(text = t('loading'))
-    tag.div(class: 'loading', id: 'loading', style: 'display: none;') do
+  def loading_tag(text = t('loading'), show: false)
+    tag.div(class: 'loading', id: 'loading', style: ('display: none;' unless show)) do
       tag.div(class: 'loading-content') do
         safe_join [
           tag.div(tag.span(text, class: 'sr-only'), class: 'spinner-border text-success spinner-large', role: 'status'),
-          tag.h4(text, class: 'text-white')
+          tag.h4(text, class: 'text-dark')
         ]
       end
     end

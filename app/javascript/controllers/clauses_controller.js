@@ -3,21 +3,36 @@ import { Controller } from 'stimulus'
 export default class extends Controller {
   static targets = ['content', 'modal']
 
-  detail () {
-    fetch(document.location + '/clause?identifier=' + event.target.parentElement.dataset.identifier)
+  detail (event) {
+    window.fetch(this.url(event.target.parentElement.dataset.identifier))
       .then(response => {
-        if (response.ok) return response.text()
+        this.showModal()
+
+        if (response.ok) return response.json()
 
         throw Error(response.statusText)
       })
-      .then(html => {
-        this.contentTarget.innerHTML = html
-        coreui.Modal(this.modalTarget).show()
+      .then(data => {
+        this.contentTarget.innerHTML = data.description || '-'
       })
       .catch(() => {
-        this.contentTarget.innerHTML = "Hata"
+        this.contentTarget.innerHTML = 'Loading Error'
       })
+  }
 
-      $(this.modalTarget).modal({ show: true })
+  showModal () {
+    const modal = new coreui.Modal(this.modalTarget, {
+      keyboard: false
+    })
+    modal.show()
+  }
+
+  url (identifier) {
+    return [
+      document.location.origin,
+      document.location.pathname,
+      '/clause?identifier=',
+      identifier
+    ].join('')
   }
 }

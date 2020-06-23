@@ -16,7 +16,10 @@ tr:
     show:
       <<: *regulation_attributes
       clauses: Maddeler
-      clause_name: Madde Adı
+      clause:
+        name: Madde Adı
+        description: Madde Açıklaması
+      clause_description: Madde Adı
       number: Madde Numarası
       paragraph: Fıkra
       subparagraph: Bent

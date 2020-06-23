@@ -15,9 +15,11 @@ en:
       card_header: Regulations
     show:
       <<: *regulation_attributes
-      articles: Articles
-      article_name: Article Name
-      number: Article Number
+      clauses: Articles
+      clause:
+        name: Clause Name
+        description: Clause Description
+      number: Clause Number
       paragraph: Paragraph
       subparagraph: Subparagraph
       version: Version
