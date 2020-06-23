@@ -10,13 +10,14 @@ module Extensions
       end
 
       ATTRIBUTES = {
+        description:  { required: false, default: '', types: [String] },
         identifier:   { required: true, types: [Symbol] },
         klass:        { required: true, types: [Regulation::Clause] },
-        version:      { required: true, types: [String, Integer] },
         number:       { required: true, types: [String, Integer] },
         paragraph:    { required: false, default: [], types: [Array] },
+        store:        { required: true, default: :default, types: [Symbol] },
         subparagraph: { required: false, default: [], types: [Array] },
-        store:        { required: true, default: :default, types: [Symbol] }
+        version:      { required: true, types: [String, Integer] }
       }.freeze
 
       ATTRIBUTES.each_key do |attr|
@@ -31,6 +32,10 @@ module Extensions
         end
 
         valid!
+      end
+
+      def to_h
+        ATTRIBUTES.keys.index_with { |attr| attr == :klass ? klass.to_s : public_send(attr) }
       end
 
       private
