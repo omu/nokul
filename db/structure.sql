@@ -25,8 +25,6 @@ COMMENT ON EXTENSION pgcrypto IS 'cryptographic functions';
 
 SET default_tablespace = '';
 
-SET default_table_access_method = heap;
-
 --
 -- Name: academic_credentials; Type: TABLE; Schema: public; Owner: -
 --

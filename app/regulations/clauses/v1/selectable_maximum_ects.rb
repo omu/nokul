@@ -5,7 +5,7 @@ module Clauses
     class SelectableMaximumEcts < Extensions::Regulation::Clause
       identifier  :selectable_maximum_ects
       register   ::V1::UndergraduateRegulation, metadata: {
-        version: 31_103,
+        version: 30_911,
         number:  10,
         store:   :default
       }

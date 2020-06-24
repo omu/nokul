@@ -34,6 +34,11 @@ module Extensions
         valid!
       end
 
+      def sanitized_description
+        sanitizer = Rails::Html::FullSanitizer.new
+        sanitizer.sanitize description
+      end
+
       def to_h
         ATTRIBUTES.keys.index_with { |attr| attr == :klass ? klass.to_s : public_send(attr) }
       end

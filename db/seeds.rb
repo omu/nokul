@@ -3,6 +3,9 @@
 # authorization data
 Rake::Task['patron:all'].invoke
 
+# regulation data
+Rake::Task['regulation:upsert'].invoke
+
 module PgExec
   module_function
 

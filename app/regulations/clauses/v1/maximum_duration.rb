@@ -5,7 +5,7 @@ module Clauses
     class MaximumDuration < Extensions::Regulation::Clause
       identifier   :maximum_duration_of_education
       register     ::V1::UndergraduateRegulation, metadata: {
-        version:     31_103,
+        version:     30_911,
         number:      8,
         paragraph:   1,
         store:       :default,
