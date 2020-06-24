@@ -50,6 +50,8 @@ class Unit < ApplicationRecord
   has_many :unit_accreditation_standards, dependent: :destroy
   has_many :unit_tuitions, dependent: :destroy
   has_many :tuitions, through: :unit_tuitions
+  has_many :regulation_assignments, as: :assignable, dependent: :destroy
+  has_many :regulations, through: :regulation_assignments
 
   # validations
   validates :name, presence: true,

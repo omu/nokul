@@ -59,4 +59,7 @@ Rails.application.routes.draw do
   resources :ldap_entities do
     get :start_sync, on: :member
   end
+  resources :regulations, only: %i[index show] do
+    get :clause, on: :member
+  end
 end

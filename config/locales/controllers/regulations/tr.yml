@@ -1,0 +1,27 @@
+tr:
+  activerecord:
+    attributes:
+      regulation: &regulation_attributes
+        name: Yönetmelik Adı
+        class_name: Sınıf Adı
+        effective_date: Yürürlüğe Girme Tarihi
+        repealed_at: Yürürlükten Kaldırılma Tarihi
+        status: Durumu
+        repealed: Yürürlükten Kaldırılmış
+        active: Aktif
+  regulations:
+    index:
+      <<: *regulation_attributes
+      card_header: Yönetmelikler
+    show:
+      <<: *regulation_attributes
+      clauses: Maddeler
+      clause:
+        name: Madde Adı
+        description: Madde Açıklaması
+      clause_description: Madde Adı
+      number: Madde Numarası
+      paragraph: Fıkra
+      subparagraph: Bent
+      version: Versiyon
+      store: Veri ID

@@ -1,0 +1,4 @@
+undergraduate:
+  class_name: V1::UndergraduateRegulation
+  effective_date: 2020-05-23
+  repealed_at:

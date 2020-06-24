@@ -105,3 +105,7 @@ accreditation_management:
   name: Öğrenim Çıktılarının Yönetimi
   identifier: accreditation_management
   description: Öğrenim Çıktısı Yönetim Yetkisi
+regulation_management:
+  name: Yönetmelik Yönetimi
+  identifier: regulation_management
+  description: Yönetmelik Yönetim Yetkisi

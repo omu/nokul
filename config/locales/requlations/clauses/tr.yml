@@ -1,0 +1,8 @@
+tr:
+  regulations:
+    v1:
+      undergraduate: Lisans Yönetmeliği
+    clauses/v1:
+      maximum_duration_of_education: Maksimum eğitim süresi
+      selectable_additional_ects: Seçilebilir ek ACTS
+      selectable_maximum_ects: Seçilebilir maksimum ACTS

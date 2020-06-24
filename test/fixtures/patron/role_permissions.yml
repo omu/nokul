@@ -102,3 +102,7 @@ twenty_six:
   role: admin
   permission: accreditation_management
   privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
+twenty_seven:
+  role: admin
+  permission: regulation_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>

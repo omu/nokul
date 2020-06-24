@@ -216,6 +216,13 @@
       </li>
     <% end %>
 
+    <% if policy(:regulation).index? %>
+      <li class="c-sidebar-nav-item">
+        <%= link_to :regulations, class: 'c-sidebar-nav-link' do %>
+          <%= fa_icon('book', text: t('.regulations'), class: 'c-sidebar-nav-icon') %>
+        <% end %>
+      </li>
+    <% end %>
     <li class="c-sidebar-nav-item">
       <%= link_to %i[manager stats], class: 'c-sidebar-nav-link' do %>
         <%= fa_icon('area-chart', text: t('.manager.stats'), class: 'c-sidebar-nav-icon') %>
