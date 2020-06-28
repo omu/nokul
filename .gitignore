@@ -54,3 +54,7 @@ config/deploy_key
 db/encrypted_data/sample_data.sql.enc.gz
 db/encrypted_data/static_data.sql.enc.gz
 lib/templates/ldap/openldap-2.4-bcyrpt-module.tar.gz
+
+# RuboCop generates leftover config file when a common configuration is
+# inherited from a remote source. To avoid this, we have to ignore the file.
+/.rubocop-*-yml
