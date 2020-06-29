@@ -7,6 +7,7 @@ module Osym
     # rubocop:disable Metrics/AbcSize
     # rubocop:disable Metrics/MethodLength
     # rubocop:disable Metrics/BlockLength
+    # rubocop:disable Metrics/CyclomaticComplexity
     def perform(file_path)
       content = Support::Sensitive.readlines(file_path)
 
@@ -82,6 +83,7 @@ module Osym
     # rubocop:enable Metrics/AbcSize
     # rubocop:enable Metrics/MethodLength
     # rubocop:enable Metrics/BlockLength
+    # rubocop:enable Metrics/CyclomaticComplexity
 
     private
 
