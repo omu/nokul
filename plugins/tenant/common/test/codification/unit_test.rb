@@ -41,7 +41,7 @@ module Nokul
         end
 
         test 'code_generator works with patterns' do
-          coder = Unit.code_generator(starting: '001', ending: '009', pattern: '^[^3-7]+$', memory: nil)
+          coder = Unit.code_generator(starting: '001', ending: '009', only: '^[^3-7]+$', memory: nil)
           assert_equal '001', coder.run
           assert_equal '002', coder.run
           assert_equal '008', coder.run
