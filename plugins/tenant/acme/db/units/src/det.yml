@@ -1246,7 +1246,7 @@
   detsis_id: 42301062
   parent_detsis_id: 78633602
   unit_type_id: Enstitü Müdürlüğü
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Enstitü Sekreterliği
@@ -1254,7 +1254,7 @@
   detsis_id: 27148102
   parent_detsis_id: 42301062
   unit_type_id: Enstitü Sekreterliği
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Enstitü Disiplin Kurulu
@@ -1262,7 +1262,7 @@
   detsis_id: 60162193
   parent_detsis_id: 42301062
   unit_type_id: Enstitü Disiplin Kurulu
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Enstitü Kurulu
@@ -1270,7 +1270,7 @@
   detsis_id: 39971369
   parent_detsis_id: 42301062
   unit_type_id: Enstitü Kurulu
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Enstitü Yönetim Kurulu
@@ -1278,7 +1278,7 @@
   detsis_id: 90709856
   parent_detsis_id: 42301062
   unit_type_id: Enstitü Yönetim Kurulu
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Eğitim Fakültesi Dekanlığı
@@ -1636,13 +1636,13 @@
   detsis_id: 43847920
   parent_detsis_id: 78633602
   unit_type_id: Enstitü Müdürlüğü
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Enstitü Sekreterliği
   abbreviation: FEN-BİLİM-SEK
   detsis_id: 75119924
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Enstitü Sekreterliği
   unit_status_id: Aktif
   district_id: Atakum
@@ -1650,7 +1650,7 @@
 - name: Enstitü Disiplin Kurulu
   abbreviation: FEN-BİLİM-DİSKUR
   detsis_id: 80907891
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Enstitü Disiplin Kurulu
   unit_status_id: Aktif
   district_id: Atakum
@@ -1658,7 +1658,7 @@
 - name: Enstitü Kurulu
   abbreviation: FEN-BİLİM-KUR
   detsis_id: 11805131
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Enstitü Kurulu
   unit_status_id: Aktif
   district_id: Atakum
@@ -1666,7 +1666,7 @@
 - name: Enstitü Yönetim Kurulu
   abbreviation: FEN-BİLİM-YÖNKUR
   detsis_id: 17608650
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Enstitü Yönetim Kurulu
   unit_status_id: Aktif
   district_id: Atakum
@@ -2428,7 +2428,7 @@
   detsis_id: 28913907
   parent_detsis_id: 78633602
   unit_type_id: Enstitü Müdürlüğü
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Enstitü Sekreterliği
@@ -2436,14 +2436,14 @@
   detsis_id: 64024110
   parent_detsis_id: 28913907
   unit_type_id: Enstitü Sekreterliği
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Tıbbi Resimleme Anabilim Dalı Başkanlığı
   abbreviation: GÜZEL-SANAT-TIBBİRESİM-ADB
   parent_yoksis_id: 278818
   detsis_id: 83982316
-  parent_detsis_id: 28913907
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -2453,7 +2453,7 @@
   detsis_id: 94725245
   parent_detsis_id: 28913907
   unit_type_id: Enstitü Disiplin Kurulu
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Enstitü Kurulu
@@ -2461,7 +2461,7 @@
   detsis_id: 86004387
   parent_detsis_id: 28913907
   unit_type_id: Enstitü Kurulu
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Enstitü Yönetim Kurulu
@@ -2469,7 +2469,7 @@
   detsis_id: 28791890
   parent_detsis_id: 28913907
   unit_type_id: Enstitü Yönetim Kurulu
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Hukuk Müşavirliği
@@ -3242,7 +3242,7 @@
   unit_status_id: Aktif
   district_id: Atakum
 
-- name: Kamu Ölçmeleri Anabilim Dalı Başkanlığı
+- name: Arazi Yönetimi Anabilim Dalı Başkanlığı
   abbreviation: HARİTA-KAMU-ADB
   parent_yoksis_id: 122208
   detsis_id: 34215046
@@ -3545,7 +3545,7 @@
   detsis_id: 93771576
   parent_detsis_id: 78633602
   unit_type_id: Enstitü Müdürlüğü
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Enstitü Disiplin Kurulu
@@ -3553,7 +3553,7 @@
   detsis_id: 29283638
   parent_detsis_id: 93771576
   unit_type_id: Enstitü Disiplin Kurulu
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Enstitü Kurulu
@@ -3561,7 +3561,7 @@
   detsis_id: 99323623
   parent_detsis_id: 93771576
   unit_type_id: Enstitü Kurulu
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Enstitü Yönetim Kurulu
@@ -3569,7 +3569,7 @@
   detsis_id: 99576486
   parent_detsis_id: 93771576
   unit_type_id: Enstitü Yönetim Kurulu
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Sağlık Bilimleri Fakültesi Dekanlığı
@@ -3949,7 +3949,7 @@
   detsis_id: 61232311
   parent_detsis_id: 78633602
   unit_type_id: Enstitü Müdürlüğü
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Enstitü Sekreterliği
@@ -3957,7 +3957,7 @@
   detsis_id: 35792979
   parent_detsis_id: 61232311
   unit_type_id: Enstitü Sekreterliği
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Enstitü Disiplin Kurulu
@@ -3965,7 +3965,7 @@
   detsis_id: 96478647
   parent_detsis_id: 61232311
   unit_type_id: Enstitü Disiplin Kurulu
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Enstitü Kurulu
@@ -3973,7 +3973,7 @@
   detsis_id: 24254010
   parent_detsis_id: 61232311
   unit_type_id: Enstitü Kurulu
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Enstitü Yönetim Kurulu
@@ -3981,7 +3981,7 @@
   detsis_id: 83752120
   parent_detsis_id: 61232311
   unit_type_id: Enstitü Yönetim Kurulu
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Strateji Geliştirme Daire Başkanlığı
@@ -5673,13 +5673,13 @@
   detsis_id: 10857470
   parent_detsis_id: 28913907
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Adli Bilimler Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-ADLİ-ADB
   detsis_id: 10899057
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -5707,7 +5707,7 @@
 - name: Elektrik-Elektronik Mühendisliği Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-EEM-ADB
   detsis_id: 11818910
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -5749,7 +5749,7 @@
 - name: Resim Anasanat Dalı Başkanlığı
   abbreviation: GÜZEL-SANAT-RESİM-ADB
   detsis_id: 12646015
-  parent_detsis_id: 28913907
+  parent_detsis_id: 72975315
   unit_type_id: Anasanat Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -5762,7 +5762,7 @@
   detsis_id: 12662115
   parent_detsis_id: 43847920
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
@@ -5818,7 +5818,7 @@
   detsis_id: 13592150
   parent_detsis_id: 61232311
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Sistem Yönetim Birimi
@@ -5840,7 +5840,7 @@
 - name: Bilgisayar ve Öğretim Teknolojileri Eğitimi Anabilim Dalı Başkanlığı
   abbreviation: EĞİTİM-BİLİM-BÖTE-ADB
   detsis_id: 13886282
-  parent_detsis_id: 42301062
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -5853,7 +5853,7 @@
   detsis_id: 14205133
   parent_detsis_id: 42301062
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
@@ -5867,7 +5867,7 @@
 - name: Veterinerlik Mikrobiyolojisi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-VMİKRO-ADB
   detsis_id: 14820566
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -5893,7 +5893,7 @@
 - name: Moleküler Tıp Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-MOLTIP-ADB
   detsis_id: 15373406
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -5916,7 +5916,7 @@
   detsis_id: 15437600
   parent_detsis_id: 28913907
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
@@ -5924,7 +5924,7 @@
   detsis_id: 15924021
   parent_detsis_id: 28913907
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Strateji Geliştirme ve Kalite Birimi
@@ -5938,7 +5938,7 @@
 - name: Fizyoloji Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-FİZYO-ADB
   detsis_id: 16194377
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -5981,7 +5981,7 @@
 - name: Felsefe ve Din Bilimleri Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-FDB-ADB
   detsis_id: 16553436
-  parent_detsis_id: 61232311
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -5999,7 +5999,7 @@
 - name: Kamu Yönetimi Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-KAMUYÖN-ADB
   detsis_id: 16682742
-  parent_detsis_id: 61232311
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -6059,7 +6059,7 @@
 - name: Temel İslam Bilimleri Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-TİB-ADB
   detsis_id: 17543552
-  parent_detsis_id: 61232311
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -6077,7 +6077,7 @@
 - name: Bitki Koruma Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-BİTKİKOR-ADB
   detsis_id: 18076240
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -6095,7 +6095,7 @@
 - name: Tarla Bitkileri Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-TARLABİTKİ-ADB
   detsis_id: 18286379
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -6121,7 +6121,7 @@
   detsis_id: 18937729
   parent_detsis_id: 42301062
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Personel İşleri Birimi
@@ -6169,7 +6169,7 @@
   detsis_id: 20066957
   parent_detsis_id: 43847920
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Taşınır Kayıt ve Kontrol Birimi
@@ -6245,7 +6245,7 @@
   detsis_id: 21431818
   parent_detsis_id: 93771576
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Personel İşleri Birimi
@@ -6270,7 +6270,7 @@
   detsis_id: 22247455
   parent_detsis_id: 42301062
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Hukuk İşleri Birimi
@@ -6294,7 +6294,7 @@
   detsis_id: 22823954
   parent_detsis_id: 43847920
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: İdari İşler Birimi
@@ -6316,7 +6316,7 @@
 - name: Veterinerlik Patolojisi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-PATO-ADB
   detsis_id: 23148769
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -6350,7 +6350,7 @@
 - name: Su Ürünleri Hastalıkları Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-SU-ADB
   detsis_id: 23479635
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -6361,7 +6361,7 @@
   abbreviation: FEN-BİLİM-TOPRAKBİL-ADB
   parent_yoksis_id: 208208
   detsis_id: 23946845
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -6379,7 +6379,7 @@
 - name: Tarım Makineleri Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-TARIMAK-ADB
   detsis_id: 24142896
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -6396,7 +6396,7 @@
 - name: Fizik Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-FİZİK-ADB
   detsis_id: 24159635
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -6413,7 +6413,7 @@
 - name: Avrupa-Akdeniz Kültürler ve Turizm Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-AAKT-ADB
   detsis_id: 24894277
-  parent_detsis_id: 61232311
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -6457,7 +6457,7 @@
   detsis_id: 25773886
   parent_detsis_id: 42301062
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Proje Birimi
@@ -6496,7 +6496,7 @@
 - name: Dini Danışmanlık ve Rehberlik Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-DDR-ADB
   detsis_id: 27795668
-  parent_detsis_id: 61232311
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -6524,7 +6524,7 @@
 - name: Ruh Sağlığı ve Hastalıkları Hemşireliği Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-RUH-ADB
   detsis_id: 28280552
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -6534,7 +6534,7 @@
 - name: Halk Sağlığı ve Hemşireliği Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-HSH-ADB
   detsis_id: 28359953
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -6577,7 +6577,7 @@
 - name: Evde Hasta Bakımı Hemşireliği Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-EHBH-ADB
   detsis_id: 29830028
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -6684,7 +6684,7 @@
 - name: Evlilik ve Aile Danışmanlığı Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-EVLİLİK-ADB
   detsis_id: 32638226
-  parent_detsis_id: 61232311
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -6726,7 +6726,7 @@
 - name: Ebelik Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-EBELİK-ADB
   detsis_id: 33278135
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -6747,7 +6747,7 @@
   detsis_id: 33988944
   parent_detsis_id: 93771576
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Döner Sermaye İşleri Birimi
@@ -6787,7 +6787,7 @@
   detsis_id: 35262425
   parent_detsis_id: 42301062
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
@@ -6859,7 +6859,7 @@
   detsis_id: 36404996
   parent_detsis_id: 93771576
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
@@ -6867,13 +6867,13 @@
   detsis_id: 36410545
   parent_detsis_id: 93771576
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Din Kültürü ve Ahlak Bilgisi Anabilim Dalı Başkanlığı
   abbreviation: EĞİTİM-BİLİM-DKAB-ADB
   detsis_id: 36445403
-  parent_detsis_id: 42301062
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -6885,7 +6885,7 @@
   detsis_id: 36460638
   parent_detsis_id: 28913907
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: İlkadım
 
 - name: Kayıt Kabul Birimi
@@ -6909,7 +6909,7 @@
   detsis_id: 37125759
   parent_detsis_id: 93771576
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Strateji Geliştirme ve Kalite Birimi
@@ -6917,13 +6917,13 @@
   detsis_id: 37253379
   parent_detsis_id: 43847920
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Ağız, Diş ve Çene Cerrahisi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-ADÇC-ADB
   detsis_id: 37274632
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -6942,7 +6942,7 @@
 - name: Veterinerlik Zootekni Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-ZOO-ADB
   detsis_id: 37638064
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -6953,7 +6953,7 @@
 - name: Makine Mühendisliği Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-MAKİNE-ADB
   detsis_id: 37649886
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -6969,7 +6969,7 @@
 - name: Görsel İletişim Tasarımı Anasanat Dalı Başkanlığı
   abbreviation: GÜZEL-SANAT-GİT-ADB
   detsis_id: 38121557
-  parent_detsis_id: 28913907
+  parent_detsis_id: 72975315
   unit_type_id: Anasanat Dalı Başkanlığı
   unit_status_id: Yarı Pasif
   district_id: İlkadım
@@ -6997,13 +6997,13 @@
   detsis_id: 38796049
   parent_detsis_id: 28913907
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Müzik Anasanat Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-MÜZİK-ADB
   detsis_id: 38908278
-  parent_detsis_id: 61232311
+  parent_detsis_id: 72975315
   unit_type_id: Anasanat Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -7024,7 +7024,7 @@
   detsis_id: 39549029
   parent_detsis_id: 61232311
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Bilgi İşlem Birimi
@@ -7046,7 +7046,7 @@
 - name: Tıbbi Biyokimya Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-TBİYOKİMYA-ADB
   detsis_id: 40148669
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -7081,7 +7081,7 @@
 - name: Veterinerlik Anatomisi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-VANATOMİ-ADB
   detsis_id: 40369060
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -7116,7 +7116,7 @@
 - name: Histoloji-Embriyoloji Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-HİSTO-ADB
   detsis_id: 41039653
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -7160,7 +7160,7 @@
 - name: Periodontoloji Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-PERİO-ADB
   detsis_id: 41685452
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -7188,7 +7188,7 @@
 - name: Kadın ve Aile Araştırmaları Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-KAA-ADB
   detsis_id: 42036856
-  parent_detsis_id: 61232311
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -7222,7 +7222,7 @@
 - name: Çevre Mühendisliği Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-ÇEVRE-ADB
   detsis_id: 42599812
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -7257,7 +7257,7 @@
 - name: Sanat ve Tasarım Anasanat Dalı Başkanlığı
   abbreviation: GÜZEL-SANAT-ST-ADB
   detsis_id: 43408176
-  parent_detsis_id: 28913907
+  parent_detsis_id: 72975315
   unit_type_id: Anasanat Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -7277,7 +7277,7 @@
   detsis_id: 43470589
   parent_detsis_id: 61232311
   unit_type_id: Anabilim Dalı Başkanlığı
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
   issues:
     - Mükerrer birim
@@ -7285,7 +7285,7 @@
 - name: Pedodonti Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-PEDO-ADB
   detsis_id: 43479317
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -7322,7 +7322,7 @@
   abbreviation: NANO-ADB
   parent_yoksis_id: 406607
   detsis_id: 44220146
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -7386,7 +7386,7 @@
 - name: Biyoistatistik ve Tıp Bilişimi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-BTB-ADB
   detsis_id: 45437333
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -7465,7 +7465,7 @@
   detsis_id: 46576151
   parent_detsis_id: 28913907
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Ballıca Meslek Yüksekokulu Müdürlüğü
@@ -7480,7 +7480,7 @@
 - name: Veterinerlik Fizyolojisi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-VFİZYO-ADB
   detsis_id: 46857964
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -7491,7 +7491,7 @@
 - name: Allerji ve İmmünoloji Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-ALERJİ-ADB
   detsis_id: 47024253
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -7502,7 +7502,7 @@
 - name: Matematik Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-MAT-ADB
   detsis_id: 47259451
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -7538,7 +7538,7 @@
   abbreviation: SOSYAL-BİLİM-İŞLETME-ADB
   parent_yoksis_id: 207833
   detsis_id: 47913381
-  parent_detsis_id: 61232311
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -7564,7 +7564,7 @@
   detsis_id: 48408972
   parent_detsis_id: 61232311
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: İktisat Tarihi Anabilim Dalı Başkanlığı
@@ -7581,7 +7581,7 @@
   detsis_id: 48550214
   parent_detsis_id: 61232311
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Teknik Destek Birimi
@@ -7611,7 +7611,7 @@
 - name: Sosyoloji Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-SOSYOLOJİ-ADB
   detsis_id: 48851387
-  parent_detsis_id: 61232311
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -7638,7 +7638,7 @@
   abbreviation: FEN-BİLİM-YEU-ADB
   parent_yoksis_id: 303063
   detsis_id: 49040734
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -7696,7 +7696,7 @@
 - name: Veterinerlik Besin Hijyeni ve Teknolojisi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-VBESİN-ADB
   detsis_id: 49971342
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -7709,7 +7709,7 @@
   detsis_id: 49972110
   parent_detsis_id: 43847920
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Personel İşleri Birimi
@@ -7725,7 +7725,7 @@
   detsis_id: 50417741
   parent_detsis_id: 61232311
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: İdari İşler Birimi
@@ -7749,7 +7749,7 @@
   detsis_id: 50722385
   parent_detsis_id: 93771576
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Sağlık, Kültür ve Spor İşleri Birimi
@@ -7773,7 +7773,7 @@
   detsis_id: 51409053
   parent_detsis_id: 93771576
   unit_type_id: Enstitü Sekreterliği
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Yapı, Tesis ve Teknik İşler Birimi
@@ -7803,7 +7803,7 @@
 - name: Anatomi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-ANATOMİ-ADB
   detsis_id: 51903356
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -7847,7 +7847,7 @@
 - name: Turizm İşletmeciliği Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-TURİŞ-ADB
   detsis_id: 52308424
-  parent_detsis_id: 61232311
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -7907,7 +7907,7 @@
   detsis_id: 53197681
   parent_detsis_id: 28913907
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: İdari İşler Birimi
@@ -7932,13 +7932,13 @@
   detsis_id: 53581522
   parent_detsis_id: 61232311
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Beslenme Bilimleri Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-BESLENME-ADB
   detsis_id: 53706045
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -7981,7 +7981,7 @@
 - name: Veterinerlik İç Hastalıkları Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-VİÇH-ADB
   detsis_id: 53936112
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -8010,7 +8010,7 @@
 - name: Veterinerlik Cerrahisi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-VCERRAHİ-ADB
   detsis_id: 54380477
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -8021,7 +8021,7 @@
 - name: Özel Hukuk Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-ÖZELHUKUK-ADB
   detsis_id: 54539635
-  parent_detsis_id: 61232311
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -8105,7 +8105,7 @@
 - name: Türk Dili ve Edebiyatı Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-TDE-ADB
   detsis_id: 56330438
-  parent_detsis_id: 61232311
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -8142,14 +8142,14 @@
   detsis_id: 56821914
   parent_detsis_id: 61232311
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: İnşaat Mühendisliği Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-İNŞAAT-ADB
   parent_yoksis_id: 202003
   detsis_id: 56922128
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -8159,7 +8159,7 @@
   detsis_id: 57086410
   parent_detsis_id: 43847920
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Bilgi İşlem Birimi
@@ -8167,7 +8167,7 @@
   detsis_id: 57140256
   parent_detsis_id: 42301062
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
@@ -8175,7 +8175,7 @@
   detsis_id: 57220800
   parent_detsis_id: 28913907
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: İlkadım
 
 - name: Strateji Geliştirme ve Kalite Birimi
@@ -8198,7 +8198,7 @@
 - name: Ortodonti Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-ORTO-ADB
   detsis_id: 57307857
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -8211,7 +8211,7 @@
   detsis_id: 57786613
   parent_detsis_id: 93771576
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
@@ -8233,7 +8233,7 @@
 - name: Sağlık Yönetimi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-SAĞLIKYÖN-ADB
   detsis_id: 58144189
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -8246,7 +8246,7 @@
   detsis_id: 58398455
   parent_detsis_id: 43847920
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Proje Birimi
@@ -8270,7 +8270,7 @@
   detsis_id: 58871806
   parent_detsis_id: 28913907
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: İdari İşler Birimi
@@ -8278,7 +8278,7 @@
   detsis_id: 58937905
   parent_detsis_id: 42301062
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Öğrenci İşleri Birimi
@@ -8300,7 +8300,7 @@
 - name: Tıbbi Mikrobiyoloji Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-TMİKRO-ADB
   detsis_id: 59268728
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -8310,7 +8310,7 @@
 - name: Biyoloji Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-BİYO-ADB
   detsis_id: 59515608
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -8346,7 +8346,7 @@
   detsis_id: 60075630
   parent_detsis_id: 42301062
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Hukuk İşleri Birimi
@@ -8370,13 +8370,13 @@
   detsis_id: 60465650
   parent_detsis_id: 28913907
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Veterinerlik Biyokimyası Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-VBİYOKİMYA-ADB
   detsis_id: 60669633
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -8404,7 +8404,7 @@
 - name: Hayvan Besleme ve Beslenme Hastalıkları Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-HBH-ADB
   detsis_id: 61110688
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -8456,7 +8456,7 @@
 - name: Tıbbi Farmakoloji Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-TFARMA-ADB
   detsis_id: 62257320
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -8474,7 +8474,7 @@
 - name: Tarım Ekonomisi Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-TARIMEKO-ADB
   detsis_id: 62564542
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -8502,7 +8502,7 @@
   detsis_id: 62894656
   parent_detsis_id: 28913907
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Meslek Yüksekokulu Sekreterliği
@@ -8535,14 +8535,14 @@
   detsis_id: 63472177
   parent_detsis_id: 42301062
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Eğitim Bilimleri Anabilim Dalı Başkanlığı
   abbreviation: EĞİTİM-BİLİM-EB-ADB
   parent_yoksis_id: 207882
   detsis_id: 63629408
-  parent_detsis_id: 42301062
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -8550,7 +8550,7 @@
 - name: Müzik Anasanat Dalı Başkanlığı
   abbreviation: GÜZEL-SANAT-MÜZİK-ADB
   detsis_id: 63701311
-  parent_detsis_id: 28913907
+  parent_detsis_id: 72975315
   unit_type_id: Anasanat Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -8561,7 +8561,7 @@
 - name: Kardiyopulmoner Fizyoterapi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-KARFİZ-ADB
   detsis_id: 63950292
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -8614,7 +8614,7 @@
   detsis_id: 64708084
   parent_detsis_id: 93771576
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: İdari İşler Birimi
@@ -8636,7 +8636,7 @@
 - name: Ağız, Diş ve Çene Radyolojisi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-ADÇR-ADB
   detsis_id: 65037691
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -8655,7 +8655,7 @@
 - name: Halk Sağlığı Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-HALK-ADB
   detsis_id: 65133038
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -8674,7 +8674,7 @@
 - name: Matematik ve Fen Bilimleri Eğitimi Anabilim Dalı Başkanlığı
   abbreviation: EĞİTİM-BİLİM-MF-ADB
   detsis_id: 65400135
-  parent_detsis_id: 42301062
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -8686,7 +8686,7 @@
   detsis_id: 65427923
   parent_detsis_id: 43847920
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Personel Bürosu
@@ -8741,7 +8741,7 @@
 - name: Restoratif Diş Tedavisi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-RDT-ADB
   detsis_id: 66182499
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -8776,7 +8776,7 @@
 - name: Kulak Burun Boğaz Odyoloji Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-KBBO-ADB
   detsis_id: 66588869
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -8796,7 +8796,7 @@
   detsis_id: 66639319
   parent_detsis_id: 61232311
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Bilgi İşlem Birimi
@@ -8834,7 +8834,7 @@
 - name: Tarih Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-TARİH-ADB
   detsis_id: 67624396
-  parent_detsis_id: 61232311
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -8951,7 +8951,7 @@
   detsis_id: 70161257
   parent_detsis_id: 53132832
   unit_type_id: Anabilim Dalı Başkanlığı
-  unit_status_id: Yarı Pasif
+  unit_status_id: Aktif
   district_id: Atakum
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
@@ -8959,7 +8959,7 @@
   detsis_id: 70234795
   parent_detsis_id: 43847920
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Personel İşleri Birimi
@@ -8983,7 +8983,7 @@
   detsis_id: 70597765
   parent_detsis_id: 28913907
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
@@ -9007,7 +9007,7 @@
   detsis_id: 70982221
   parent_detsis_id: 61232311
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Hasta Kabul Birimi
@@ -9038,7 +9038,7 @@
 - name: Veteriner Histoloji ve Embriyoloji Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-VHİSTO-ADB
   detsis_id: 71464078
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -9084,7 +9084,7 @@
   detsis_id: 71737007
   parent_detsis_id: 61232311
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: İdari İşler Birimi
@@ -9106,7 +9106,7 @@
 - name: İşletme ve Endüstri İlişkileri Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-İŞLENİ-ADB
   detsis_id: 72752876
-  parent_detsis_id: 61232311
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -9167,7 +9167,7 @@
 - name: İstatistik Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-İSTATİSTİK-ADB
   detsis_id: 73864038
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -9179,7 +9179,7 @@
   detsis_id: 74057431
   parent_detsis_id: 43847920
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Öğrenci İşleri Birimi
@@ -9243,7 +9243,7 @@
 - name: Sanat Tarihi Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-SANATTARİHİ-ADB
   detsis_id: 74742106
-  parent_detsis_id: 61232311
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -9253,7 +9253,7 @@
 - name: Akıllı Sistemler Mühendisliği Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-ASM-ADB
   detsis_id: 74912346
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -9263,7 +9263,7 @@
 - name: Psikoloji Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-PSİKOLOJİ-ADB
   detsis_id: 75091500
-  parent_detsis_id: 61232311
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -9290,7 +9290,7 @@
 - name: Spor Yöneticiliği Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-SPORYÖN-ADB
   detsis_id: 75401631
-  parent_detsis_id: 61232311
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -9300,7 +9300,7 @@
 - name: Hesaplamalı Bilimler Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-HB-ADB
   detsis_id: 75477090
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -9318,7 +9318,7 @@
 - name: Gıda Mühendisliği Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-GIDA-ADB
   detsis_id: 75687508
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -9376,7 +9376,7 @@
 - name: Tarımsal Yapılar ve Sulama Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-TARIMYAP-ADB
   detsis_id: 76614186
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -9394,7 +9394,7 @@
 - name: Kimya Mühendisliği Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-KİMYA-ADB
   detsis_id: 76778231
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -9406,7 +9406,7 @@
   detsis_id: 76934253
   parent_detsis_id: 42301062
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Personel İşleri Birimi
@@ -9428,7 +9428,7 @@
 - name: Tarımsal Biyoteknoloji Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-TARIMBİYOTEK-ADB
   detsis_id: 77136444
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -9471,7 +9471,7 @@
   abbreviation: FEN-BİLİM-FENKİMYA-ADB
   parent_yoksis_id: 234078
   detsis_id: 77807659
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -9503,7 +9503,7 @@
 - name: Endodonti Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-ENDO-ADB
   detsis_id: 78479583
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -9589,7 +9589,7 @@
 - name: Uluslararası Düzenleyici Bilim Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-UDB-ADB
   detsis_id: 80144548
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -9616,7 +9616,7 @@
   abbreviation: SAĞLIK-BİLİM-TOKSİK-ADB
   parent_yoksis_id: 297555
   detsis_id: 80397943
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -9634,7 +9634,7 @@
   detsis_id: 80706538
   parent_detsis_id: 93771576
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Hukuk İşleri Birimi
@@ -9688,7 +9688,7 @@
 - name: Veterinerlik Farmakoloji ve Toksikoloji Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-VFARMA-ADB
   detsis_id: 81888224
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -9707,7 +9707,7 @@
 - name: İktisat Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-İKTİSAT-ADB
   detsis_id: 82051364
-  parent_detsis_id: 61232311
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -9731,7 +9731,7 @@
 - name: Bahçe Bitkileri Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-BAHÇE-ADB
   detsis_id: 82473301
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -9782,7 +9782,7 @@
   detsis_id: 83342748
   parent_detsis_id: 42301062
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Hukuk İşleri Birimi
@@ -9790,7 +9790,7 @@
   detsis_id: 83377352
   parent_detsis_id: 42301062
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Araç İşletme Birimi
@@ -9863,7 +9863,7 @@
   detsis_id: 84742778
   parent_detsis_id: 43847920
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
@@ -9886,7 +9886,7 @@
   abbreviation: EĞİTİM-BİLİM-YDİLEĞ-ADB
   parent_yoksis_id: 211120
   detsis_id: 85156798
-  parent_detsis_id: 42301062
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -9949,7 +9949,7 @@
   detsis_id: 86248111
   parent_detsis_id: 93771576
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Bilgi İşlem Birimi
@@ -9964,7 +9964,7 @@
   abbreviation: EĞİTİM-BİLİM-GÜZELSANATLAR-ADB
   parent_yoksis_id: 211119
   detsis_id: 86348859
-  parent_detsis_id: 42301062
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -10020,7 +10020,7 @@
 - name: Felsefe Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-FELSEFE-ADB
   detsis_id: 86933361
-  parent_detsis_id: 61232311
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -10028,7 +10028,7 @@
 - name: Türkçe ve Sosyal Bilimler Eğitimi Anabilim Dalı Başkanlığı
   abbreviation: EĞİTİM-BİLİM-TS-ADB
   detsis_id: 87032861
-  parent_detsis_id: 42301062
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -10046,7 +10046,7 @@
 - name: Malzeme Bilimi ve Mühendisliği Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-MALZEME-ADB
   detsis_id: 87307245
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -10057,7 +10057,7 @@
 - name: İslam Tarihi ve Sanatları Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-İTS-ADB
   detsis_id: 87312513
-  parent_detsis_id: 61232311
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -10099,7 +10099,7 @@
 - name: Veterinerlik Parazitolojisi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-VPARAZİT-ADB
   detsis_id: 87661185
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -10126,7 +10126,7 @@
 - name: Klinik Sinir Bilimleri Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-KSB-ADB
   detsis_id: 87899366
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -10178,7 +10178,7 @@
   detsis_id: 88360635
   parent_detsis_id: 43847920
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Hukuk İşleri Birimi
@@ -10200,7 +10200,7 @@
 - name: Veterinerlik Doğum ve Jinekolojisi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-VJİNEKOLOJİ-ADB
   detsis_id: 88515739
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -10221,7 +10221,7 @@
   detsis_id: 88729056
   parent_detsis_id: 61232311
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Döner Sermaye Birimi
@@ -10284,7 +10284,7 @@
 - name: Hemşirelik Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-HEMŞİRE-ADB
   detsis_id: 90487276
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -10294,7 +10294,7 @@
 - name: Kamu Hukuku Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-KAMU-ADB
   detsis_id: 90583074
-  parent_detsis_id: 61232311
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -10320,7 +10320,7 @@
 - name: Temel Eğitim Anabilim Dalı Başkanlığı
   abbreviation: EĞİTİM-BİLİM-TE-ADB
   detsis_id: 91121353
-  parent_detsis_id: 42301062
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -10348,7 +10348,7 @@
   detsis_id: 91268476
   parent_detsis_id: 93771576
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Yayın, Kütüphane ve Dokümantasyon Birimi
@@ -10378,7 +10378,7 @@
 - name: Antrenörlük Eğitimi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-ANTRENÖR-ADB
   detsis_id: 91908821
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -10395,7 +10395,7 @@
   abbreviation: SAĞLIK-BİLİM-SİNİR-ADB
   parent_yoksis_id: 203748
   detsis_id: 92044395
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -10446,7 +10446,7 @@
   detsis_id: 92460850
   parent_detsis_id: 93771576
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Basın Yayın ve Halkla İlişkiler Birimi
@@ -10485,7 +10485,7 @@
 - name: Bilgisayar Mühendisliği Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-BİLGİSAYAR-ADB
   detsis_id: 93656557
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -10529,7 +10529,7 @@
 - name: Dölerme ve Suni Tohumlama Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-DÖLERME-ADB
   detsis_id: 94836752
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -10541,7 +10541,7 @@
   abbreviation: SOSYAL-BİLİM-İLETİŞİM-ADB
   parent_yoksis_id: 297535
   detsis_id: 94947571
-  parent_detsis_id: 61232311
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -10549,7 +10549,7 @@
 - name: Radyolojik Bilimler Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-RB-ADB
   detsis_id: 94999386
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -10567,7 +10567,7 @@
 - name: Arkeoloji Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-ARKEO-ADB
   detsis_id: 95273792
-  parent_detsis_id: 61232311
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -10577,7 +10577,7 @@
 - name: Harita Mühendisliği Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-HARİTA-ADB
   detsis_id: 95633724
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -10612,7 +10612,7 @@
 - name: Veterinerlik Viroloji Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-VİRO-ADB
   detsis_id: 96350930
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -10623,7 +10623,7 @@
 - name: Coğrafya Anabilim Dalı Başkanlığı
   abbreviation: SOSYAL-BİLİM-COĞRAFYA-ADB
   detsis_id: 96600690
-  parent_detsis_id: 61232311
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -10641,7 +10641,7 @@
 - name: Zootekni Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-ZOO-ADB
   detsis_id: 96900798
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -10667,7 +10667,7 @@
 - name: Veteriner Hekimliği Tarihi ve Deontoloji Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-DEON-ADB
   detsis_id: 97192299
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -10678,7 +10678,7 @@
 - name: Taşınmaz Geliştirme Anabilim Dalı Başkanlığı
   abbreviation: FEN-BİLİM-TAŞINMAZ-ADB
   detsis_id: 97593580
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -10688,7 +10688,7 @@
 - name: Protetik Diş Tedavisi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-PDT-ADB
   detsis_id: 97650724
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -10708,7 +10708,7 @@
 - name: Acil Hemşireliği Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-ACİL-ADB
   detsis_id: 97853903
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -10718,7 +10718,7 @@
 - name: Beden Eğitimi ve Spor Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-BES-ADB
   detsis_id: 97936532
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -10754,13 +10754,13 @@
   detsis_id: 98977299
   parent_detsis_id: 61232311
   unit_type_id: Diğer İdari Birim
-  unit_status_id: Aktif
+  unit_status_id: Pasif
   district_id: Atakum
 
 - name: Tıbbi Biyoloji Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-TBİYO-ADB
   detsis_id: 99046086
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -11160,7 +11160,7 @@
   abbreviation: MOLBİYOGEN-ADB
   parent_yoksis_id: 328410
   detsis_id: 69748915
-  parent_detsis_id: 43847920
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Alaçam
@@ -12490,7 +12490,7 @@
 - name: Deney Hayvanları Araştırmaları Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-DHA-ADB
   detsis_id: 48395142
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -12501,7 +12501,7 @@
 - name: Dil ve Konuşma Terapisi Anabilim Dalı Başkanlığı
   abbreviation: SAĞLIK-BİLİM-DİLKOT-ADB
   detsis_id: 83466304
-  parent_detsis_id: 93771576
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -12583,7 +12583,7 @@
   abbreviation: SOSYAL-BİLİM-GY-ADB
   parent_yoksis_id: 390151
   detsis_id: 93062464
-  parent_detsis_id: 61232311
+  parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
   district_id: Atakum
@@ -12929,3 +12929,81 @@
   unit_status_id: Aktif
   district_id: Çarşamba
   district_id_: Çarşamba
+
+- name: Sigortacılık ve Aktüerya Bilimleri Anabilim Dalı Başkanlığı
+  detsis_id: 78647311
+  parent_detsis_id: 23363322
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Pasif
+
+- name: Sigortacılık ve Aktüerya Bilimleri Anabilim Dalı Başkanlığı
+  detsis_id: 80189622
+  parent_detsis_id: 23363322
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Yönetim Bilişim Sistemleri Bölüm Başkanlığı
+  detsis_id: 59140833
+  parent_detsis_id: 57246715
+  unit_type_id: Bölüm Başkanlığı
+  unit_status_id: Aktif
+
+- name: Bilişim Teknolojileri Anabilim Dalı Başkanlığı
+  detsis_id: 59070853
+  parent_detsis_id: 59140833
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Bilişim Yönetimi Anabilim Dalı Başkanlığı
+  detsis_id: 21948262
+  parent_detsis_id: 59140833
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Bilim Felsefesi ve Mantık Anabilim Dalı Başkanlığı
+  detsis_id: 67247165
+  parent_detsis_id: 71132989
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Lisansüstü Eğitim Enstitüsü Müdürlüğü
+  detsis_id: 72975315
+  parent_detsis_id: 78633602
+  unit_type_id: Enstitü Müdürlüğü
+  unit_status_id: Aktif
+
+- name: Sürdürülebilir Tarım Anabilim Dalı Başkanlığı
+  detsis_id: 48278109
+  parent_detsis_id: 72975315
+  unit_type_id: Anabilim Dalı Başkanlığı
+  unit_status_id: Aktif
+
+- name: Acil Yardım ve Afet Yönetimi Bölüm Başkanlığı
+  detsis_id: 96417007
+  parent_detsis_id: 28050591
+  unit_type_id: Bölüm Başkanlığı
+  unit_status_id: Aktif
+
+- name: Ergoterapi Bölüm Başkanlığı
+  detsis_id: 39451398
+  parent_detsis_id: 28050591
+  unit_type_id: Bölüm Başkanlığı
+  unit_status_id: Aktif
+
+- name: Gerontoloji Bölüm Başkanlığı
+  detsis_id: 46749385
+  parent_detsis_id: 28050591
+  unit_type_id: Bölüm Başkanlığı
+  unit_status_id: Aktif
+
+- name: Enerji Yönetim Birimi
+  detsis_id: 44846511
+  parent_detsis_id: 68380559
+  unit_type_id: Diğer İdari Birim
+  unit_status_id: Aktif
+
+- name: Taşınır Yönetim Birimi
+  detsis_id: 85843448
+  parent_detsis_id: 15327320
+  unit_type_id: Diğer İdari Birim
+  unit_status_id: Aktif
