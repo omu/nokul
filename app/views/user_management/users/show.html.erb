@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col-sm-12 mb-4">
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#account" role="tab" aria-controls="account">
+        <%= fa_icon 'user' %><strong> <%= t('.account') %></strong></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#identities" role="tab" aria-controls="identities">
+        <%= fa_icon 'id-card' %><strong> <%= t('.identities') %></strong></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#addresses" role="tab" aria-controls="addresses">
+        <%= fa_icon 'home' %><strong> <%= t('.addresses') %></strong></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#students" role="tab" aria-controls="students">
+        <%= fa_icon 'graduation-cap' %><strong> <%= t('.students') %></strong></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#employees" role="tab" aria-controls="employees">
+        <%= fa_icon 'graduation-cap' %><strong> <%= t('.employees') %></strong></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#others" role="tab" aria-controls="others">
+        <%= fa_icon 'gear' %><strong> <%= t('.other_information') %></strong></a>
+      </li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane active" id="account" role="tabpanel">
+        <%= render 'account' %>
+      </div>
+      <div class="tab-pane" id="identities" role="tabpanel"></div>
+      <div class="tab-pane" id="addresses" role="tabpanel"></div>
+      <div class="tab-pane" id="students" role="tabpanel"><%= render 'students' %></div>
+      <div class="tab-pane" id="employees" role="tabpanel"><%= render 'employees' %></div>
+      <div class="tab-pane" id="others" role="tabpanel"><%= render 'disability' %></div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $('#identities').load("<%= user_identities_path(@user) %>")
+  $('#addresses').load("<%= user_addresses_path(@user) %>")
+</script>

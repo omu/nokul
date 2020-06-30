@@ -37,6 +37,7 @@ en:
         success: Calendar and related events successfully cloned. Make the needed changes here.
         warning: Can not be cloned! Make sure you didn't clone this calendar before.
       units:
+        departments: Departments
         faculties: Faculties
         institutes: Institutes
         others: Other Units

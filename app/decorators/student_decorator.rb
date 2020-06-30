@@ -2,15 +2,11 @@
 
 class StudentDecorator < SimpleDelegator
   def registrable_for_online_course?
-    event_online_course_registrations.try(:active_now?)
+    online_course_registrations_event.try(:active_now?)
   end
 
-  def registation_date_range
-    translate(
-      'index.registration_date_range',
-      start_time: event_online_course_registrations&.start_time&.strftime('%F %R'),
-      end_time:   event_online_course_registrations&.end_time&.strftime('%F %R')
-    )
+  def registrable_for_online_course_date_range
+    online_course_registrations_event.date_range
   end
 
   private
@@ -19,11 +15,8 @@ class StudentDecorator < SimpleDelegator
     calendars.last
   end
 
-  def event_online_course_registrations
-    calendar&.event('online_course_registrations')
-  end
-
-  def translate(key, params = {})
-    I18n.t("studentship.course_enrollments.#{key}", **params)
+  def online_course_registrations_event
+    @online_course_registrations_event ||=
+      CalendarEventDecorator.new(calendar&.event('online_course_registrations'))
   end
 end

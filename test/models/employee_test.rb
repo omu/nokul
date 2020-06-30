@@ -11,6 +11,8 @@ class EmployeeTest < ActiveSupport::TestCase
   belongs_to :user
   has_many :administrative_functions, through: :duties
   has_many :available_course_lecturers, foreign_key: :lecturer_id, inverse_of: :lecturer, dependent: :destroy
+  has_many :coordinatorships, class_name: 'AvailableCourse', foreign_key: :coordinator_id,
+                              inverse_of: :coordinator, dependent: :destroy
   has_many :duties, dependent: :destroy
   has_many :units, through: :duties
   has_many :positions, through: :duties
@@ -62,5 +64,13 @@ class EmployeeTest < ActiveSupport::TestCase
   test 'is an employee title academic' do
     assert employees(:serhat_active).academic?
     assert_not employees(:chief_john).academic?
+  end
+
+  test 'given_courses method' do
+    given_courses = employees(:serhat_active).given_courses.to_a
+    assert_includes given_courses, available_courses(:compulsory_course)
+    assert_includes given_courses, available_courses(:elective_course)
+    assert_includes given_courses, available_courses(:elective_course_2)
+    assert_not_includes given_courses, available_courses(:compulsory_course_2)
   end
 end

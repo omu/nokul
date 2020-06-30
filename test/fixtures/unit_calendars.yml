@@ -4,6 +4,9 @@ uzem_calendar:
 egitim_bilimleri_calendar:
   calendar: graduate_calendar
   unit: egitim_bilimleri_enstitusu
-bilgisayar_muhendisligi_calendar:
+bilgisayar_muhendisligi_programi_calendar:
   calendar: bm_calendar
   unit: bilgisayar_muhendisligi_programi
+bilgisayar_muhendisligi_calendar:
+  calendar: bm_calendar
+  unit: bilgisayar_muhendisligi

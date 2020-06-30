@@ -116,6 +116,76 @@ ALTER SEQUENCE public.academic_terms_id_seq OWNED BY public.academic_terms.id;
 
 
 --
+-- Name: accreditation_institutions; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.accreditation_institutions (
+    id bigint NOT NULL,
+    name character varying,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT accreditation_institutions_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT accreditation_institutions_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
+);
+
+
+--
+-- Name: accreditation_institutions_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.accreditation_institutions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: accreditation_institutions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.accreditation_institutions_id_seq OWNED BY public.accreditation_institutions.id;
+
+
+--
+-- Name: accreditation_standards; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.accreditation_standards (
+    id bigint NOT NULL,
+    accreditation_institution_id bigint NOT NULL,
+    version character varying,
+    status integer,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT accreditation_standards_status_null CHECK ((status IS NOT NULL)),
+    CONSTRAINT accreditation_standards_status_numericality CHECK ((status >= 0)),
+    CONSTRAINT accreditation_standards_version_length CHECK ((length((version)::text) <= 50)),
+    CONSTRAINT accreditation_standards_version_presence CHECK (((version IS NOT NULL) AND ((version)::text !~ '^\s*$'::text)))
+);
+
+
+--
+-- Name: accreditation_standards_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.accreditation_standards_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: accreditation_standards_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.accreditation_standards_id_seq OWNED BY public.accreditation_standards.id;
+
+
+--
 -- Name: action_text_rich_texts; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -1212,6 +1282,7 @@ CREATE TABLE public.course_assessment_methods (
     percentage integer,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
+    status integer DEFAULT 0 NOT NULL,
     CONSTRAINT course_assessment_methods_percentage_null CHECK ((percentage IS NOT NULL)),
     CONSTRAINT course_assessment_methods_percentage_numericality CHECK (((percentage >= 0) AND (percentage <= 100)))
 );
@@ -1884,6 +1955,8 @@ ALTER SEQUENCE public.employees_id_seq OWNED BY public.employees.id;
 CREATE TABLE public.evaluation_types (
     id bigint NOT NULL,
     name character varying,
+    identifier character varying,
+    CONSTRAINT evaluation_types_identifier_length CHECK ((length((identifier)::text) <= 255)),
     CONSTRAINT evaluation_types_name_length CHECK ((length((name)::text) <= 255)),
     CONSTRAINT evaluation_types_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
 );
@@ -1944,6 +2017,41 @@ CREATE SEQUENCE public.friendly_id_slugs_id_seq
 --
 
 ALTER SEQUENCE public.friendly_id_slugs_id_seq OWNED BY public.friendly_id_slugs.id;
+
+
+--
+-- Name: grades; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.grades (
+    id bigint NOT NULL,
+    course_assessment_method_id bigint NOT NULL,
+    course_enrollment_id bigint NOT NULL,
+    lecturer_id bigint NOT NULL,
+    point integer,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT grades_point_numericality CHECK (((point >= 0) AND (point <= 100)))
+);
+
+
+--
+-- Name: grades_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.grades_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: grades_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.grades_id_seq OWNED BY public.grades.id;
 
 
 --
@@ -2177,6 +2285,44 @@ CREATE SEQUENCE public.ldap_sync_errors_id_seq
 --
 
 ALTER SEQUENCE public.ldap_sync_errors_id_seq OWNED BY public.ldap_sync_errors.id;
+
+
+--
+-- Name: learning_outcomes; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.learning_outcomes (
+    id bigint NOT NULL,
+    accreditation_standard_id bigint NOT NULL,
+    parent_id bigint,
+    code character varying,
+    name character varying,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT learning_outcomes_code_length CHECK ((length((code)::text) <= 10)),
+    CONSTRAINT learning_outcomes_code_presence CHECK (((code IS NOT NULL) AND ((code)::text !~ '^\s*$'::text))),
+    CONSTRAINT learning_outcomes_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT learning_outcomes_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
+);
+
+
+--
+-- Name: learning_outcomes_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.learning_outcomes_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: learning_outcomes_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.learning_outcomes_id_seq OWNED BY public.learning_outcomes.id;
 
 
 --
@@ -2825,6 +2971,39 @@ CREATE TABLE public.schema_migrations (
 
 
 --
+-- Name: scholarship_types; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.scholarship_types (
+    id bigint NOT NULL,
+    name character varying,
+    active boolean DEFAULT true,
+    CONSTRAINT scholarship_types_active_null CHECK ((active IS NOT NULL)),
+    CONSTRAINT scholarship_types_name_length CHECK ((length((name)::text) <= 255)),
+    CONSTRAINT scholarship_types_name_presence CHECK (((name IS NOT NULL) AND ((name)::text !~ '^\s*$'::text)))
+);
+
+
+--
+-- Name: scholarship_types_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.scholarship_types_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: scholarship_types_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.scholarship_types_id_seq OWNED BY public.scholarship_types.id;
+
+
+--
 -- Name: scope_assignments; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -3259,9 +3438,22 @@ CREATE TABLE public.students (
     updated_at timestamp without time zone NOT NULL,
     semester integer,
     year integer,
+    scholarship_type_id bigint,
+    status integer DEFAULT 1,
+    exceeded_education_period boolean DEFAULT false,
+    stage_id bigint,
+    entrance_type_id bigint,
+    other_studentship boolean DEFAULT false,
+    preparatory_class integer DEFAULT 0,
+    registration_date timestamp without time zone,
+    registration_term_id bigint,
+    CONSTRAINT students_other_studentship_null CHECK ((other_studentship IS NOT NULL)),
     CONSTRAINT students_permanently_registered_null CHECK ((permanently_registered IS NOT NULL)),
+    CONSTRAINT students_preparatory_class_numericality CHECK ((preparatory_class >= 0)),
     CONSTRAINT students_semester_null CHECK ((semester IS NOT NULL)),
     CONSTRAINT students_semester_numericality CHECK ((semester > 0)),
+    CONSTRAINT students_status_null CHECK ((status IS NOT NULL)),
+    CONSTRAINT students_status_numericality CHECK ((status >= 0)),
     CONSTRAINT students_student_number_length CHECK ((length((student_number)::text) <= 255)),
     CONSTRAINT students_student_number_presence CHECK (((student_number IS NOT NULL) AND ((student_number)::text !~ '^\s*$'::text))),
     CONSTRAINT students_year_null CHECK ((year IS NOT NULL)),
@@ -3323,6 +3515,119 @@ CREATE SEQUENCE public.titles_id_seq
 --
 
 ALTER SEQUENCE public.titles_id_seq OWNED BY public.titles.id;
+
+
+--
+-- Name: tuition_debts; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.tuition_debts (
+    id bigint NOT NULL,
+    student_id bigint NOT NULL,
+    academic_term_id bigint NOT NULL,
+    unit_tuition_id bigint,
+    amount numeric(8,3),
+    description integer,
+    type integer,
+    due_date timestamp without time zone,
+    paid boolean DEFAULT false,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT tuition_debts_amount_null CHECK ((amount IS NOT NULL)),
+    CONSTRAINT tuition_debts_amount_numericality CHECK ((amount > (0)::numeric)),
+    CONSTRAINT tuition_debts_description_numericality CHECK ((description >= 0)),
+    CONSTRAINT tuition_debts_paid_null CHECK ((paid IS NOT NULL)),
+    CONSTRAINT tuition_debts_type_null CHECK ((type IS NOT NULL)),
+    CONSTRAINT tuition_debts_type_numericality CHECK ((type >= 0))
+);
+
+
+--
+-- Name: tuition_debts_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.tuition_debts_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: tuition_debts_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.tuition_debts_id_seq OWNED BY public.tuition_debts.id;
+
+
+--
+-- Name: tuitions; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.tuitions (
+    id bigint NOT NULL,
+    academic_term_id bigint,
+    fee numeric(8,3) DEFAULT 0.0,
+    foreign_student_fee numeric(8,3) DEFAULT 0.0,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL,
+    CONSTRAINT tuitions_fee_null CHECK ((fee IS NOT NULL)),
+    CONSTRAINT tuitions_fee_numericality CHECK ((fee >= (0)::numeric)),
+    CONSTRAINT tuitions_foreign_student_fee_null CHECK ((foreign_student_fee IS NOT NULL)),
+    CONSTRAINT tuitions_foreign_student_fee_numericality CHECK ((foreign_student_fee >= (0)::numeric))
+);
+
+
+--
+-- Name: tuitions_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.tuitions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: tuitions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.tuitions_id_seq OWNED BY public.tuitions.id;
+
+
+--
+-- Name: unit_accreditation_standards; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.unit_accreditation_standards (
+    id bigint NOT NULL,
+    unit_id bigint,
+    accreditation_standard_id bigint,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL
+);
+
+
+--
+-- Name: unit_accreditation_standards_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.unit_accreditation_standards_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: unit_accreditation_standards_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.unit_accreditation_standards_id_seq OWNED BY public.unit_accreditation_standards.id;
 
 
 --
@@ -3455,6 +3760,36 @@ CREATE SEQUENCE public.unit_statuses_id_seq
 --
 
 ALTER SEQUENCE public.unit_statuses_id_seq OWNED BY public.unit_statuses.id;
+
+
+--
+-- Name: unit_tuitions; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.unit_tuitions (
+    id bigint NOT NULL,
+    unit_id bigint,
+    tuition_id bigint
+);
+
+
+--
+-- Name: unit_tuitions_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.unit_tuitions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: unit_tuitions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.unit_tuitions_id_seq OWNED BY public.unit_tuitions.id;
 
 
 --
@@ -3625,10 +3960,12 @@ CREATE TABLE public.users (
     mobile_phone character varying,
     books_count integer DEFAULT 0,
     papers_count integer DEFAULT 0,
+    disability_rate integer DEFAULT 0,
     CONSTRAINT users_activated_null CHECK ((activated IS NOT NULL)),
     CONSTRAINT users_articles_count_null CHECK ((articles_count IS NOT NULL)),
     CONSTRAINT users_articles_count_numericality CHECK ((articles_count >= 0)),
     CONSTRAINT users_created_at_null CHECK ((created_at IS NOT NULL)),
+    CONSTRAINT users_disability_rate_numericality CHECK (((disability_rate >= 0) AND (disability_rate <= 100))),
     CONSTRAINT users_email_length CHECK ((length((email)::text) <= 255)),
     CONSTRAINT users_email_presence CHECK (((email IS NOT NULL) AND ((email)::text !~ '^\s*$'::text))),
     CONSTRAINT users_encrypted_password_length CHECK ((length((encrypted_password)::text) <= 255)),
@@ -3681,6 +4018,20 @@ ALTER TABLE ONLY public.academic_credentials ALTER COLUMN id SET DEFAULT nextval
 --
 
 ALTER TABLE ONLY public.academic_terms ALTER COLUMN id SET DEFAULT nextval('public.academic_terms_id_seq'::regclass);
+
+
+--
+-- Name: accreditation_institutions id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.accreditation_institutions ALTER COLUMN id SET DEFAULT nextval('public.accreditation_institutions_id_seq'::regclass);
+
+
+--
+-- Name: accreditation_standards id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.accreditation_standards ALTER COLUMN id SET DEFAULT nextval('public.accreditation_standards_id_seq'::regclass);
 
 
 --
@@ -3985,6 +4336,13 @@ ALTER TABLE ONLY public.friendly_id_slugs ALTER COLUMN id SET DEFAULT nextval('p
 
 
 --
+-- Name: grades id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.grades ALTER COLUMN id SET DEFAULT nextval('public.grades_id_seq'::regclass);
+
+
+--
 -- Name: group_courses id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -4024,6 +4382,13 @@ ALTER TABLE ONLY public.ldap_entities ALTER COLUMN id SET DEFAULT nextval('publi
 --
 
 ALTER TABLE ONLY public.ldap_sync_errors ALTER COLUMN id SET DEFAULT nextval('public.ldap_sync_errors_id_seq'::regclass);
+
+
+--
+-- Name: learning_outcomes id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.learning_outcomes ALTER COLUMN id SET DEFAULT nextval('public.learning_outcomes_id_seq'::regclass);
 
 
 --
@@ -4115,6 +4480,13 @@ ALTER TABLE ONLY public.role_permissions ALTER COLUMN id SET DEFAULT nextval('pu
 --
 
 ALTER TABLE ONLY public.roles ALTER COLUMN id SET DEFAULT nextval('public.roles_id_seq'::regclass);
+
+
+--
+-- Name: scholarship_types id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.scholarship_types ALTER COLUMN id SET DEFAULT nextval('public.scholarship_types_id_seq'::regclass);
 
 
 --
@@ -4216,6 +4588,27 @@ ALTER TABLE ONLY public.titles ALTER COLUMN id SET DEFAULT nextval('public.title
 
 
 --
+-- Name: tuition_debts id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.tuition_debts ALTER COLUMN id SET DEFAULT nextval('public.tuition_debts_id_seq'::regclass);
+
+
+--
+-- Name: tuitions id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.tuitions ALTER COLUMN id SET DEFAULT nextval('public.tuitions_id_seq'::regclass);
+
+
+--
+-- Name: unit_accreditation_standards id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.unit_accreditation_standards ALTER COLUMN id SET DEFAULT nextval('public.unit_accreditation_standards_id_seq'::regclass);
+
+
+--
 -- Name: unit_calendars id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -4241,6 +4634,13 @@ ALTER TABLE ONLY public.unit_instruction_types ALTER COLUMN id SET DEFAULT nextv
 --
 
 ALTER TABLE ONLY public.unit_statuses ALTER COLUMN id SET DEFAULT nextval('public.unit_statuses_id_seq'::regclass);
+
+
+--
+-- Name: unit_tuitions id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.unit_tuitions ALTER COLUMN id SET DEFAULT nextval('public.unit_tuitions_id_seq'::regclass);
 
 
 --
@@ -4285,6 +4685,38 @@ ALTER TABLE ONLY public.academic_credentials
 
 ALTER TABLE ONLY public.academic_terms
     ADD CONSTRAINT academic_terms_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: accreditation_institutions accreditation_institutions_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.accreditation_institutions
+    ADD CONSTRAINT accreditation_institutions_name_unique UNIQUE (name) DEFERRABLE;
+
+
+--
+-- Name: accreditation_institutions accreditation_institutions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.accreditation_institutions
+    ADD CONSTRAINT accreditation_institutions_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: accreditation_standards accreditation_standards_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.accreditation_standards
+    ADD CONSTRAINT accreditation_standards_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: accreditation_standards accreditation_standards_version_accreditation_institution_id_un; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.accreditation_standards
+    ADD CONSTRAINT accreditation_standards_version_accreditation_institution_id_un UNIQUE (version, accreditation_institution_id) DEFERRABLE;
 
 
 --
@@ -4712,6 +5144,14 @@ ALTER TABLE ONLY public.employees
 
 
 --
+-- Name: evaluation_types evaluation_types_identifier_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.evaluation_types
+    ADD CONSTRAINT evaluation_types_identifier_unique UNIQUE (identifier) DEFERRABLE;
+
+
+--
 -- Name: evaluation_types evaluation_types_name_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -4733,6 +5173,14 @@ ALTER TABLE ONLY public.evaluation_types
 
 ALTER TABLE ONLY public.friendly_id_slugs
     ADD CONSTRAINT friendly_id_slugs_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: grades grades_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.grades
+    ADD CONSTRAINT grades_pkey PRIMARY KEY (id);
 
 
 --
@@ -4797,6 +5245,22 @@ ALTER TABLE ONLY public.ldap_entities
 
 ALTER TABLE ONLY public.ldap_sync_errors
     ADD CONSTRAINT ldap_sync_errors_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: learning_outcomes learning_outcomes_accreditation_standard_id_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.learning_outcomes
+    ADD CONSTRAINT learning_outcomes_accreditation_standard_id_code_unique UNIQUE (accreditation_standard_id, code) DEFERRABLE;
+
+
+--
+-- Name: learning_outcomes learning_outcomes_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.learning_outcomes
+    ADD CONSTRAINT learning_outcomes_pkey PRIMARY KEY (id);
 
 
 --
@@ -4925,6 +5389,14 @@ ALTER TABLE ONLY public.roles
 
 ALTER TABLE ONLY public.schema_migrations
     ADD CONSTRAINT schema_migrations_pkey PRIMARY KEY (version);
+
+
+--
+-- Name: scholarship_types scholarship_types_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.scholarship_types
+    ADD CONSTRAINT scholarship_types_pkey PRIMARY KEY (id);
 
 
 --
@@ -5184,6 +5656,30 @@ ALTER TABLE ONLY public.titles
 
 
 --
+-- Name: tuition_debts tuition_debts_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.tuition_debts
+    ADD CONSTRAINT tuition_debts_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: tuitions tuitions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.tuitions
+    ADD CONSTRAINT tuitions_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: unit_accreditation_standards unit_accreditation_standards_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.unit_accreditation_standards
+    ADD CONSTRAINT unit_accreditation_standards_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: unit_calendars unit_calendars_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -5264,6 +5760,14 @@ ALTER TABLE ONLY public.unit_statuses
 
 
 --
+-- Name: unit_tuitions unit_tuitions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.unit_tuitions
+    ADD CONSTRAINT unit_tuitions_pkey PRIMARY KEY (id);
+
+
+--
 -- Name: unit_types unit_types_code_unique; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -5339,6 +5843,13 @@ CREATE INDEX index_academic_credentials_on_country_id ON public.academic_credent
 --
 
 CREATE INDEX index_academic_credentials_on_user_id ON public.academic_credentials USING btree (user_id);
+
+
+--
+-- Name: index_accreditation_standards_on_accreditation_institution_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_accreditation_standards_on_accreditation_institution_id ON public.accreditation_standards USING btree (accreditation_institution_id);
 
 
 --
@@ -5783,6 +6294,27 @@ CREATE INDEX index_friendly_id_slugs_on_sluggable_type ON public.friendly_id_slu
 
 
 --
+-- Name: index_grades_on_course_assessment_method_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_grades_on_course_assessment_method_id ON public.grades USING btree (course_assessment_method_id);
+
+
+--
+-- Name: index_grades_on_course_enrollment_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_grades_on_course_enrollment_id ON public.grades USING btree (course_enrollment_id);
+
+
+--
+-- Name: index_grades_on_lecturer_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_grades_on_lecturer_id ON public.grades USING btree (lecturer_id);
+
+
+--
 -- Name: index_group_courses_on_course_group_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -5822,6 +6354,20 @@ CREATE INDEX index_ldap_entities_on_user_id ON public.ldap_entities USING btree 
 --
 
 CREATE INDEX index_ldap_sync_errors_on_ldap_entity_id ON public.ldap_sync_errors USING btree (ldap_entity_id);
+
+
+--
+-- Name: index_learning_outcomes_on_accreditation_standard_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_learning_outcomes_on_accreditation_standard_id ON public.learning_outcomes USING btree (accreditation_standard_id);
+
+
+--
+-- Name: index_learning_outcomes_on_parent_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_learning_outcomes_on_parent_id ON public.learning_outcomes USING btree (parent_id);
 
 
 --
@@ -6049,6 +6595,34 @@ CREATE INDEX index_semester_registrations_on_student_id ON public.semester_regis
 
 
 --
+-- Name: index_students_on_entrance_type_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_students_on_entrance_type_id ON public.students USING btree (entrance_type_id);
+
+
+--
+-- Name: index_students_on_registration_term_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_students_on_registration_term_id ON public.students USING btree (registration_term_id);
+
+
+--
+-- Name: index_students_on_scholarship_type_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_students_on_scholarship_type_id ON public.students USING btree (scholarship_type_id);
+
+
+--
+-- Name: index_students_on_stage_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_students_on_stage_id ON public.students USING btree (stage_id);
+
+
+--
 -- Name: index_students_on_unit_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6063,6 +6637,48 @@ CREATE INDEX index_students_on_user_id ON public.students USING btree (user_id);
 
 
 --
+-- Name: index_tuition_debts_on_academic_term_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_tuition_debts_on_academic_term_id ON public.tuition_debts USING btree (academic_term_id);
+
+
+--
+-- Name: index_tuition_debts_on_student_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_tuition_debts_on_student_id ON public.tuition_debts USING btree (student_id);
+
+
+--
+-- Name: index_tuition_debts_on_unit_tuition_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_tuition_debts_on_unit_tuition_id ON public.tuition_debts USING btree (unit_tuition_id);
+
+
+--
+-- Name: index_tuitions_on_academic_term_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_tuitions_on_academic_term_id ON public.tuitions USING btree (academic_term_id);
+
+
+--
+-- Name: index_unit_accreditation_standards_on_accreditation_standard_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_unit_accreditation_standards_on_accreditation_standard_id ON public.unit_accreditation_standards USING btree (accreditation_standard_id);
+
+
+--
+-- Name: index_unit_accreditation_standards_on_unit_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_unit_accreditation_standards_on_unit_id ON public.unit_accreditation_standards USING btree (unit_id);
+
+
+--
 -- Name: index_unit_calendars_on_calendar_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6074,6 +6690,20 @@ CREATE INDEX index_unit_calendars_on_calendar_id ON public.unit_calendars USING 
 --
 
 CREATE INDEX index_unit_calendars_on_unit_id ON public.unit_calendars USING btree (unit_id);
+
+
+--
+-- Name: index_unit_tuitions_on_tuition_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_unit_tuitions_on_tuition_id ON public.unit_tuitions USING btree (tuition_id);
+
+
+--
+-- Name: index_unit_tuitions_on_unit_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_unit_tuitions_on_unit_id ON public.unit_tuitions USING btree (unit_id);
 
 
 --
@@ -6210,6 +6840,14 @@ ALTER TABLE ONLY public.students
 
 
 --
+-- Name: students fk_rails_155a016013; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.students
+    ADD CONSTRAINT fk_rails_155a016013 FOREIGN KEY (stage_id) REFERENCES public.student_grades(id);
+
+
+--
 -- Name: duties fk_rails_1b35a03564; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6223,6 +6861,30 @@ ALTER TABLE ONLY public.duties
 
 ALTER TABLE ONLY public.addresses
     ADD CONSTRAINT fk_rails_1b98d66e19 FOREIGN KEY (district_id) REFERENCES public.districts(id);
+
+
+--
+-- Name: learning_outcomes fk_rails_233dbdf7c4; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.learning_outcomes
+    ADD CONSTRAINT fk_rails_233dbdf7c4 FOREIGN KEY (accreditation_standard_id) REFERENCES public.accreditation_standards(id);
+
+
+--
+-- Name: unit_tuitions fk_rails_2b01e356e7; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.unit_tuitions
+    ADD CONSTRAINT fk_rails_2b01e356e7 FOREIGN KEY (unit_id) REFERENCES public.units(id);
+
+
+--
+-- Name: grades fk_rails_2edc8b4497; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.grades
+    ADD CONSTRAINT fk_rails_2edc8b4497 FOREIGN KEY (course_assessment_method_id) REFERENCES public.course_assessment_methods(id);
 
 
 --
@@ -6410,6 +7072,14 @@ ALTER TABLE ONLY public.identities
 
 
 --
+-- Name: tuition_debts fk_rails_544f94c661; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.tuition_debts
+    ADD CONSTRAINT fk_rails_544f94c661 FOREIGN KEY (student_id) REFERENCES public.students(id);
+
+
+--
 -- Name: prospective_students fk_rails_54b90f3e1c; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6442,6 +7112,14 @@ ALTER TABLE ONLY public.calendar_committee_decisions
 
 
 --
+-- Name: grades fk_rails_5e0aa9d9a4; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.grades
+    ADD CONSTRAINT fk_rails_5e0aa9d9a4 FOREIGN KEY (course_enrollment_id) REFERENCES public.course_enrollments(id);
+
+
+--
 -- Name: role_permissions fk_rails_60126080bd; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6463,6 +7141,14 @@ ALTER TABLE ONLY public.calendar_events
 
 ALTER TABLE ONLY public.meeting_agendas
     ADD CONSTRAINT fk_rails_694b3fc610 FOREIGN KEY (committee_meeting_id) REFERENCES public.committee_meetings(id);
+
+
+--
+-- Name: students fk_rails_6b6ccfbba8; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.students
+    ADD CONSTRAINT fk_rails_6b6ccfbba8 FOREIGN KEY (registration_term_id) REFERENCES public.academic_terms(id);
 
 
 --
@@ -6506,11 +7192,27 @@ ALTER TABLE ONLY public.scope_assignments
 
 
 --
+-- Name: accreditation_standards fk_rails_7bab08271b; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.accreditation_standards
+    ADD CONSTRAINT fk_rails_7bab08271b FOREIGN KEY (accreditation_institution_id) REFERENCES public.accreditation_institutions(id);
+
+
+--
 -- Name: prospective_employees fk_rails_7e3da1fde7; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.prospective_employees
     ADD CONSTRAINT fk_rails_7e3da1fde7 FOREIGN KEY (title_id) REFERENCES public.titles(id);
+
+
+--
+-- Name: students fk_rails_818ba821f0; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.students
+    ADD CONSTRAINT fk_rails_818ba821f0 FOREIGN KEY (scholarship_type_id) REFERENCES public.scholarship_types(id);
 
 
 --
@@ -6642,6 +7344,14 @@ ALTER TABLE ONLY public.prospective_students
 
 
 --
+-- Name: tuitions fk_rails_a69914cacf; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.tuitions
+    ADD CONSTRAINT fk_rails_a69914cacf FOREIGN KEY (academic_term_id) REFERENCES public.academic_terms(id);
+
+
+--
 -- Name: courses fk_rails_a72394c071; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6674,6 +7384,22 @@ ALTER TABLE ONLY public.available_courses
 
 
 --
+-- Name: learning_outcomes fk_rails_ab9bdb6c0a; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.learning_outcomes
+    ADD CONSTRAINT fk_rails_ab9bdb6c0a FOREIGN KEY (parent_id) REFERENCES public.learning_outcomes(id);
+
+
+--
+-- Name: tuition_debts fk_rails_aba306a739; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.tuition_debts
+    ADD CONSTRAINT fk_rails_aba306a739 FOREIGN KEY (academic_term_id) REFERENCES public.academic_terms(id);
+
+
+--
 -- Name: classrooms fk_rails_b0064b7304; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6698,6 +7424,22 @@ ALTER TABLE ONLY public.course_evaluation_types
 
 
 --
+-- Name: unit_tuitions fk_rails_b6e960ceae; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.unit_tuitions
+    ADD CONSTRAINT fk_rails_b6e960ceae FOREIGN KEY (tuition_id) REFERENCES public.tuitions(id);
+
+
+--
+-- Name: unit_accreditation_standards fk_rails_b72e8aed01; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.unit_accreditation_standards
+    ADD CONSTRAINT fk_rails_b72e8aed01 FOREIGN KEY (accreditation_standard_id) REFERENCES public.accreditation_standards(id);
+
+
+--
 -- Name: projects fk_rails_b872a6760a; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6719,6 +7461,14 @@ ALTER TABLE ONLY public.agendas
 
 ALTER TABLE ONLY public.academic_credentials
     ADD CONSTRAINT fk_rails_b9d9c54fa8 FOREIGN KEY (country_id) REFERENCES public.countries(id);
+
+
+--
+-- Name: students fk_rails_ba6ab25b1e; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.students
+    ADD CONSTRAINT fk_rails_ba6ab25b1e FOREIGN KEY (entrance_type_id) REFERENCES public.student_entrance_types(id);
 
 
 --
@@ -6794,6 +7544,14 @@ ALTER TABLE ONLY public.prospective_employees
 
 
 --
+-- Name: grades fk_rails_d05f1e31bd; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.grades
+    ADD CONSTRAINT fk_rails_d05f1e31bd FOREIGN KEY (lecturer_id) REFERENCES public.employees(id);
+
+
+--
 -- Name: academic_credentials fk_rails_d55570421b; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6807,6 +7565,14 @@ ALTER TABLE ONLY public.academic_credentials
 
 ALTER TABLE ONLY public.available_courses
     ADD CONSTRAINT fk_rails_d65cfbfb56 FOREIGN KEY (curriculum_course_id) REFERENCES public.curriculum_courses(id);
+
+
+--
+-- Name: unit_accreditation_standards fk_rails_d6d89b24f4; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.unit_accreditation_standards
+    ADD CONSTRAINT fk_rails_d6d89b24f4 FOREIGN KEY (unit_id) REFERENCES public.units(id);
 
 
 --
@@ -6903,6 +7669,14 @@ ALTER TABLE ONLY public.prospective_students
 
 ALTER TABLE ONLY public.available_course_groups
     ADD CONSTRAINT fk_rails_edbeba9693 FOREIGN KEY (available_course_id) REFERENCES public.available_courses(id);
+
+
+--
+-- Name: tuition_debts fk_rails_edf549ccde; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.tuition_debts
+    ADD CONSTRAINT fk_rails_edf549ccde FOREIGN KEY (unit_tuition_id) REFERENCES public.unit_tuitions(id);
 
 
 --
@@ -7062,6 +7836,22 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20200102083531'),
 ('20200102083736'),
 ('20200122124332'),
-('20200123164837');
+('20200123164837'),
+('20200129072653'),
+('20200206083358'),
+('20200211084915'),
+('20200213110520'),
+('20200213124638'),
+('20200215132359'),
+('20200217110305'),
+('20200310101357'),
+('20200317094504'),
+('20200319080917'),
+('20200319082359'),
+('20200319085939'),
+('20200319090221'),
+('20200320114534'),
+('20200427103727'),
+('20200430130429');
 
 

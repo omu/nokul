@@ -1,0 +1,14 @@
+<%= render 'layouts/builders/form',
+           namespace: 'reference',
+           klass:     @scholarship_type,
+           params:    [
+             {
+               field:    'name',
+               width:    12,
+               required: true
+             },
+             {
+               field: 'active',
+               width: 12
+             }
+           ] %>

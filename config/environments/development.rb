@@ -67,5 +67,5 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   # Web console permissions
-  config.web_console.permissions = '10.0.3.0/16'
+  config.web_console.permissions = %w[10.0.3.0/16 172.16.0.0/12]
 end

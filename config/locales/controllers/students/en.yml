@@ -1,0 +1,10 @@
+en:
+  students:
+    edit:
+      form_title: Update the Student Information
+    update:
+      success: Student information successfully updated.
+  helpers:
+    submit:
+      student:
+        update: Update Student

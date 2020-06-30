@@ -1,0 +1,36 @@
+<div class='row'>
+  <div class='col-sm-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'money' %>
+        <strong><%= form_title %></strong>
+      </div>
+      <div class='card-body'>
+        <%= simple_form_for(@tuition_debt, url: create_with_service_tuition_debts_path) do |f| %>
+          <div class='row'>
+            <div class='form-group col-sm-12'>
+              <%= f.error_notification %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :unit_ids, collection: Unit.programs.active, value_method: :id, label_method: :name, input_html: { multiple: 'multiple' }, required: true %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.association :academic_term, label_method: lambda { |academic_term| full_name(academic_term) } %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :due_date, as: :date_time_picker %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.button :submit, t('.create_tuition_debts'), class: 'btn btn-outline-success btn-sm' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class='card-footer'>
+        <%= link_to_back(:back) %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'js' %>

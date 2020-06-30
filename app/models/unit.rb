@@ -47,6 +47,9 @@ class Unit < ApplicationRecord
   has_many :available_courses, dependent: :destroy
   has_many :unit_calendars, dependent: :destroy
   has_many :calendars, through: :unit_calendars
+  has_many :unit_accreditation_standards, dependent: :destroy
+  has_many :unit_tuitions, dependent: :destroy
+  has_many :tuitions, through: :unit_tuitions
 
   # validations
   validates :name, presence: true,
@@ -64,6 +67,7 @@ class Unit < ApplicationRecord
   scope :administratives,        -> { where(unit_type: UnitType.administrative) }
   scope :committees,             -> { where(unit_type: UnitType.committee) }
   scope :departments,            -> { where(unit_type: UnitType.department) }
+  scope :evenings,               -> { where(unit_instruction_type: UnitInstructionType.evening) }
   scope :faculties,              -> { where(unit_type: UnitType.faculty) }
   scope :graduate_programs,      -> { where(unit_type: UnitType.graduate_program) }
   scope :institutes,             -> { where(unit_type: UnitType.institute) }
@@ -97,6 +101,7 @@ class Unit < ApplicationRecord
   scope :eventable, -> {
     faculties
       .or(institutes)
+      .or(departments)
       .or(programs)
       .or(research_centers)
       .or(others)
@@ -123,17 +128,27 @@ class Unit < ApplicationRecord
     UnitType.program.ids.include?(unit_type_id)
   end
 
+  def evening?
+    Unit.evenings.exists?(id: id)
+  end
+
   # custom methods
   def subprograms
     descendants.programs
   end
 
   def subtree_employees
-    Employee.includes(:user, :title).joins(:units, user: :identities)
+    Employee.active.includes(:user, :title).joins(:units, user: :identities)
             .where(units: { id: subtree.active.ids })
   end
 
   def effective_unit
     Unit.find_by(yoksis_id: effective_yoksis_id) if effective_yoksis_id.present?
+  end
+
+  def self.actively_coursable
+    active.coursable.joins(calendars: [calendar_events: :calendar_event_type])
+          .where(calendar_event_types: { identifier: 'add_drop_available_courses' })
+          .where('? BETWEEN start_time AND end_time', Time.current)
   end
 end

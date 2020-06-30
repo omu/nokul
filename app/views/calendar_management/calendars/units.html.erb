@@ -65,6 +65,17 @@
       <div class='card'>
         <div class='card-body'>
           <%= f.association :units,
+                            collection:   Unit.active.departments.order(:name),
+                            as:           :check_boxes,
+                            label_method: :names_depth_cache,
+                            label:        t('.departments') %>
+        </div>
+      </div>
+    </div>
+    <div class='col-sm-12'>
+      <div class='card'>
+        <div class='card-body'>
+          <%= f.association :units,
                             collection:   Unit.active.programs.order(:name),
                             as:           :check_boxes,
                             label_method: :names_depth_cache,

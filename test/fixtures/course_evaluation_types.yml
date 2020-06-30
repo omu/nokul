@@ -13,7 +13,17 @@ ati_retake_evaluation_type:
   evaluation_type: undergraduate_retake
   percentage: 60
 
-evaluation_type_to_delete:
-  available_course: ati_fall_2018_2019
+elective_midterm_evaluation_type:
+  available_course: elective_course
+  evaluation_type: undergraduate_midterm
+  percentage: 40
+
+compulsory_midterm_evaluation_type:
+  available_course: compulsory_course
+  evaluation_type: undergraduate_midterm
+  percentage: 40
+
+course_evaluation_type_to_delete:
+  available_course: available_course_to_delete
   evaluation_type: evaluation_type_to_delete
   percentage: 20

@@ -17,7 +17,7 @@ module Nokul
             units = (product = collection.produces).load_source
 
             each do |raw|
-              unless (unit = units.get raw.id.to_s)
+              unless (unit = units.get raw.id)
                 units << (unit = product.collection.collects.new)
               end
 

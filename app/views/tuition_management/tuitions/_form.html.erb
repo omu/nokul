@@ -1,0 +1,40 @@
+<div class='row'>
+  <div class='col-sm-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'money' %>
+        <strong><%= form_title %></strong>
+      </div>
+      <div class='card-body'>
+        <%= simple_form_for(tuition) do |f| %>
+          <div class='row'>
+            <div class='form-group col-sm-12'>
+              <%= f.error_notification %>
+              <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :unit_ids, collection: f.object.units, value_method: :id, label_method: :name, input_html: { multiple: 'multiple' }, required: true %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.association :academic_term, label_method: lambda { |academic_term| full_name(academic_term) } %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :fee, required: true %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :foreign_student_fee, required: true %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.button :submit, t('save'), class: 'btn btn-outline-success btn-sm' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class='card-footer'>
+        <%= link_to_back(:back) %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'select2' %>

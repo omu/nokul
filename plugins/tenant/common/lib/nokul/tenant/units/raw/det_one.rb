@@ -14,7 +14,7 @@ module Nokul
           include Support::Structure.of %i[
             name
             detsis_id
-            parent_detsis_id
+            parent_administrative_identity_code
             active
             activity
           ].freeze
@@ -24,7 +24,7 @@ module Nokul
           end
 
           def parent_id
-            parent_detsis_id
+            parent_administrative_identity_code
           end
 
           def label

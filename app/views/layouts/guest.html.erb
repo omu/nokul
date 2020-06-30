@@ -8,15 +8,14 @@
       flatpickr.localize(flatpickr.l10ns["<%= I18n.locale %>"])
     </script>
   </head>
-  <body>
-    <div class="app flex-row align-items-center">
-      <div class="container">
-        <div class="row justify-content-center">
-          <%= yield %>
-        </div>
+  <body class="c-app flex-row align-items-center">
+    <div class="container">
+      <div class="row justify-content-center">
+        <%= yield %>
       </div>
     </div>
     <%= render 'layouts/shared/toastr' %>
   </body>
   <%= render 'layouts/shared/footer' %>
+  <%= javascript_include_tag 'coreui' %>
 </html>

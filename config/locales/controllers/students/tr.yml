@@ -1,0 +1,10 @@
+tr:
+  students:
+    edit:
+      form_title: Öğrenci Bilgilerini Düzenle
+    update:
+      success: Öğrenci bilgileri başarıyla güncellendi.
+  helpers:
+    submit:
+      student:
+        update: Öğrenciyi Güncelle

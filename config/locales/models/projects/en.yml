@@ -2,6 +2,12 @@ en:
   activerecord:
     enums:
       project:
+        activities:
+          passive: Passive
+          active: Active
+        scopes:
+          international: International
+          national: National
         statuses:
           completed: Completed
           continuing: Continuing

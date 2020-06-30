@@ -1,0 +1,29 @@
+tr:
+  activerecord:
+    attributes:
+      tuition: &tuition_attributes
+        academic_term: Akademik Dönem
+        fee: Harç Ücreti
+        foreign_student_fee: Yabancı Öğrenci Harç Ücreti
+        unit_ids: Birimler
+  tuition_management:
+    tuitions:
+      create:
+        success: Harçlar başarıyla oluşturuldu.
+      destroy:
+        success: Harçlar başarıyla silindi.
+        warning: Harçlar silinemedi!
+      edit:
+        form_title: Birimlerin Harç Bilgilerini Düzenle
+      index:
+        <<: *tuition_attributes
+        card_header: Birim Harç Ücretleri
+        new_tuition_link: Yeni Harç Ekle
+      new:
+        form_title: Birimlere Harç Ekle
+      search:
+        academic_term: Akademik Dönem
+        unit: Birimler
+      update:
+        success: Harçlar başarıyla güncellendi.
+

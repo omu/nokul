@@ -1,52 +1,52 @@
 <div data-controller="manager-dashboard">
   <div class="row">
     <div class="col">
-      <div class="brand-card">
-        <div class="brand-card-header bg-success"><%= fa_icon 'graduation-cap' %></div>
-        <div class="brand-card-body">
+      <div class="card">
+        <div class="card-header bg-success text-white"><%= fa_icon 'graduation-cap' %></div>
+        <div class="card-body">
           <div>
-            <div class="text-value"><%= Xokul::Ubs::Statistic::Student.by_genders.sum { |item| item[:number_of_students] } %></div>
-            <div class="text-uppercase text-muted small"><%= t('.student') %></div>
+            <div class="text-value"><%= Xokul::UBS::Statistic::Student.by_genders.sum { |item| item[:number_of_students] } %></div>
+            <div class="text-uppercase text-muted small font-weight-bold"><%= t('.student') %></div>
           </div>
           <div>
             <a href="#"
               data-action="click->manager-dashboard#load"
               data-content-url="<%= manager_students_path %>"
-              class="btn btn-ghost-success btn-sm mt-2"><%= t('.more_information') %></a>
+              class="btn btn-outline-success btn-pill btn-sm float-right mt-2"><%= fa_icon('info-circle', text: t('.more_information')) %></a>
           </div>
         </div>
       </div>
     </div>
     <div class="col">
-      <div class="brand-card">
-        <div class="brand-card-header bg-info"><%= fa_icon 'users' %></div>
-        <div class="brand-card-body">
+      <div class="card">
+        <div class="card-header bg-info text-white"><%= fa_icon 'users' %></div>
+        <div class="card-body">
           <div>
             <div class="text-value"><%= Employee.active.distinct(:user_id).count %></div>
-            <div class="text-uppercase text-muted small"><%= t('.employee') %></div>
+            <div class="text-uppercase text-muted small font-weight-bold"><%= t('.employee') %></div>
           </div>
           <div>
             <a href="#"
               data-action="click->manager-dashboard#load"
               data-content-url="<%= manager_employees_path %>"
-              class="btn btn-ghost-info btn-sm mt-2"><%= t('.more_information') %></a>
+              class="btn btn-outline-info btn-pill btn-sm float-right mt-2"><%= fa_icon('info-circle', text: t('.more_information')) %></a>
           </div>
         </div>
       </div>
     </div>
     <div class="col">
-      <div class="brand-card">
-        <div class="brand-card-header bg-warning"><%= fa_icon 'book' %></div>
-        <div class="brand-card-body">
+      <div class="card">
+        <div class="card-header bg-warning text-white"><%= fa_icon 'book' %></div>
+        <div class="card-body">
           <div>
             <div class="text-value"><%= Article.count %></div>
-            <div class="text-uppercase text-muted small"><%= t('.academic_publishing') %></div>
+            <div class="text-uppercase text-muted small font-weight-bold"><%= t('.academic_publishing') %></div>
           </div>
           <div>
             <a href="#"
               data-action="click->manager-dashboard#load"
               data-content-url="<%= manager_articles_path %>"
-              class="btn btn-ghost-warning btn-sm mt-2"><%= t('.more_information') %></a>
+              class="btn btn-outline-warning btn-pill btn-sm float-right mt-2"><%= fa_icon('info-circle', text: t('.more_information')) %></a>
           </div>
         </div>
       </div>

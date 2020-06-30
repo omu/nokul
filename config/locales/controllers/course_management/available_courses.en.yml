@@ -27,6 +27,8 @@ en:
       destroy:
         error: An error occured when deleting the available course.
         success: Available course successfully destroyed.
+      errors:
+        not_proper_event_range: There is no add/drop available course activity covering the date range today.
       edit:
         form_title: 'Update the %{course} Available Course'
       evaluation_types:
@@ -65,7 +67,7 @@ en:
         unit: Unit
       show:
         <<: *available_course_attributes
-        coordinator: Coodinator
+        coordinator: Coordinator
       update:
         success: Available course successfully updated.
   helpers:

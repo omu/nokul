@@ -4,5 +4,5 @@
            collection:  @evaluation_types,
            pagy:        @pagy,
            card_header: t('.card_header'),
-           params:      ['name'],
+           params:      %w[identifier name],
            actions:     %w[edit destroy] %>

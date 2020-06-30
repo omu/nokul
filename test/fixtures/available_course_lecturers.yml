@@ -12,21 +12,20 @@ elective_course_group_lecturer:
   coordinator: true
 elective_course_group_2_lecturer:
   group: elective_course_group_2
-  lecturer: serhat_active
+  lecturer: serhat_passive
   coordinator: true
 elective_course_2_group_lecturer:
   group: elective_course_2_group
   lecturer: serhat_active
-  coordinator: true
-elective_course_2_group_lecturer:
-  group: elective_course_group
-  lecturer: serhat_active
-  coordinator: true
+elective_course_2_group_lecturer_2:
+  group: elective_course_group_2
+  lecturer: chief_john
+  coordinator: false
 compulsory_course_group_lecturer:
   group: compulsory_course_group
   lecturer: serhat_active
   coordinator: true
 compulsory_course_2_group_lecturer:
   group: compulsory_course_2_group
-  lecturer: serhat_active
+  lecturer: chief_john
   coordinator: true

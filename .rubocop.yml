@@ -1,4 +1,4 @@
-inherit_from: .rubocop_common.yml
+inherit_from: https://raw.githubusercontent.com/omu/omu/master/etc/rubocop/rubocop.yml
 
 require:
   - rubocop-rails

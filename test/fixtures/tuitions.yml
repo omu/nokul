@@ -1,0 +1,19 @@
+one:
+  academic_term: active_term
+  fee: 387
+  foreign_student_fee: 2460
+
+two:
+  academic_term: spring_2018_2019
+  fee: 305
+  foreign_student_fee: 2180
+
+three:
+  academic_term: active_term
+  fee: 650
+  foreign_student_fee: 1500
+
+tuition_to_delete:
+  academic_term: spring_2018_2019
+  fee: 275
+  foreign_student_fee: 1250

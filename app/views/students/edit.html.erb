@@ -1,0 +1,73 @@
+<div class='row'>
+  <div class='col-sm-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'bookmark' %>
+        <strong><%= t('.form_title') %></strong>
+      </div>
+      <div class='card-body'>
+        <%= simple_form_for(@student) do |f| %>
+          <div class='row'>
+            <div class='form-group col-sm-12'>
+              <%= f.error_notification %>
+              <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :student_number %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.association :unit,
+                                collection:   Unit.programs.active.order(:ancestry, :name),
+                                label_method: :names_depth_cache %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :year, label: t('year') %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :semester, label: t('semester') %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :status, collection: enum_options_for_select(f.object.class, :status), required: true %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.association :scholarship_type %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.association :stage %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.association :entrance_type %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :registration_date, as: :date_time_picker %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.association :registration_term,
+                                label_method: lambda { |academic_term| full_name(academic_term) } %>
+            </div>
+            <div class='form-group col-sm-6'>
+              <%= f.input :preparatory_class %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.input :other_studentship %>
+            </div>
+            <div class='form-group col-sm-12'>
+              <%= f.input :exceeded_education_period %>
+            </div>
+          </div>
+          <div class='form-group col-sm-12'>
+            <%= f.button :submit, class: 'btn btn-outline-success btn-sm' %>
+            <%= link_to_back user_path(@student.user) %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type='text/javascript'>
+  $(document).ready(function() {
+    $('#student_unit_id, #student_entrance_type_id').select2();
+    flatpickr('.datetimepicker', { altInput: true })
+  });
+</script>

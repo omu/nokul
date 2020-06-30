@@ -14,6 +14,12 @@ en:
         statuses:
           active: Active
           passive: Passive
+    errors:
+      models:
+        curriculum:
+          attributes:
+            semesters_count:
+              number_of_semesters_must_be_equal: Number of semesters must be equal to %{count}
   course_management:
     curriculums:
       create:

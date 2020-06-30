@@ -3,9 +3,10 @@
 module Studentship
   class CourseEnrollmentsController < ApplicationController
     before_action :set_student
+    before_action :authorized?
     before_action :set_service, except: :index
     before_action :set_course_enrollment, only: :destroy
-    before_action :check_registrability, except: :index
+    before_action :event_active?, except: :index
     before_action :check_registration_status, except: %i[index list]
 
     def index
@@ -58,7 +59,11 @@ module Studentship
       @course_enrollment = @student.current_registration.course_enrollments.find(params[:id])
     end
 
-    def check_registrability
+    def authorized?
+      authorize(@student, policy_class: Studentship::CourseEnrollmentPolicy)
+    end
+
+    def event_active?
       return if @student.registrable_for_online_course?
 
       redirect_to(student_course_enrollments_path(@student), alert: t('.errors.not_proper_register_event_range'))

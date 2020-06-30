@@ -1,11 +1,11 @@
 one:
   role: admin
   permission: unit_management
-  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy, :report]) %>
 two:
   role: admin
   permission: course_management
-  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy, :report]) %>
 three:
   role: authorization_manager
   permission: role_management
@@ -21,4 +21,84 @@ five:
 six:
   role: authorization_manager
   permission: authorization_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
+seven:
+  role: admin
+  permission: calendar_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
+eight:
+  role: admin
+  permission: available_course_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy, :report]) %>
+nine:
+  role: admin
+  permission: curriculum_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy, :report]) %>
+ten:
+  role: admin
+  permission: committee_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
+eleven:
+  role: admin
+  permission: decision_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
+twelve:
+  role: admin
+  permission: agenda_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
+thirteen:
+  role: admin
+  permission: meeting_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
+fourteen:
+  role: admin
+  permission: detsis_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
+fifteen:
+  role: admin
+  permission: location_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
+sixteen:
+  role: admin
+  permission: meksis_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
+seventeen:
+  role: admin
+  permission: yoksis_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
+eighteen:
+  role: admin
+  permission: reference_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
+nineteen:
+  role: admin
+  permission: ldap_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
+twenty:
+  role: admin
+  permission: student_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy, :report]) %>
+twenty_one:
+  role: admin
+  permission: user_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy, :report]) %>
+twenty_two:
+  role: admin
+  permission: registration_management_for_students
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
+twenty_three:
+  role: admin
+  permission: registration_management_for_employees
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
+twenty_four:
+  role: admin
+  permission: employee_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy, :report]) %>
+twenty_five:
+  role: admin
+  permission: tuition_management
+  privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>
+twenty_six:
+  role: admin
+  permission: accreditation_management
   privileges: <%= Patron::RolePermission.privileges.to_i([:read, :write, :destroy]) %>

@@ -39,7 +39,7 @@ module Nokul
           end
 
           def as_canonical_yaml_string
-            canonically_ordered.map(&:to_h).map(&:stringify_keys).to_yaml_pretty
+            canonically_ordered.map(&:to_h).map(&:deep_stringify_keys).to_yaml_pretty
           end
 
           include Tree

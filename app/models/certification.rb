@@ -5,17 +5,20 @@ class Certification < ApplicationRecord
 
   # enums
   enum type: {
-    certification: 1,
-    course:        2,
-    research:      3,
-    study:         4,
-    report:        5,
-    workshop:      6,
-    interview:     7,
-    essay:         8,
-    evaluation:    9,
-    conversation:  10,
-    translation:   11
+    certification:       1,
+    course:              2,
+    research:            3,
+    study:               4,
+    report:              5,
+    workshop:            6,
+    interview:           7,
+    essay:               8,
+    evaluation:          9,
+    conversation:        10,
+    translation:         11,
+    seminar:             12,
+    speeches:            13,
+    organizing_congress: 14
   }
 
   enum scope: { national: 0, international: 1 }

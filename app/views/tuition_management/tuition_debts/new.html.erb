@@ -1,0 +1,5 @@
+<% if params[:type] == 'bulk' %>
+  <%= render 'form_bulk', form_title: t('.form_bulk_title') %>
+<% else %>
+  <%= render 'form', form_title: t('.form_title') %>
+<% end %>

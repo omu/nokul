@@ -15,3 +15,15 @@ baum:
   temporary: true
   start_date: 01.01.2017
   end_date: <%= Time.zone.now + 5.years %>
+omu_rector:
+  employee: rector
+  unit: omu
+  temporary: true
+  start_date: 01.01.2017
+  end_date: <%= Time.zone.now + 1.years %>
+omu_vice_rector:
+  employee: vice_rector
+  unit: omu
+  temporary: false
+  start_date: 01.02.2017
+  end_date: <%= Time.zone.now + 1.years %>

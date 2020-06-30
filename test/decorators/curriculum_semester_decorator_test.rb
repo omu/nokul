@@ -5,7 +5,7 @@ require 'test_helper'
 class CurriculumSemesterDecoratorTest < ActiveSupport::TestCase
   setup do
     @curriculum_semester = CurriculumSemesterDecorator.new(
-      curriculum_semesters(:bilgisayar_muh_mufredati_ucuncu_donem)
+      curriculum_semesters(:bm_third)
     )
   end
 

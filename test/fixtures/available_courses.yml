@@ -13,16 +13,16 @@ test_fall_2018_2019:
   unit: omu
 
 available_course_to_delete:
-  academic_term: spring_2018_2019
+  academic_term: active_term
   curriculum: one
   coordinator: serhat_passive
   curriculum_course: one
-  unit: omu
+  unit: bilgisayar_muhendisligi
 
 elective_course:
   academic_term: active_term
   curriculum: bilgisayar_muhendisligi_mufredati
-  coordinator: serhat_passive
+  coordinator: vice_rector
   curriculum_course: elective_course
   unit: bilgisayar_muhendisligi
 
@@ -36,7 +36,7 @@ elective_course_2:
 compulsory_course:
   academic_term: active_term
   curriculum: bilgisayar_muhendisligi_mufredati
-  coordinator: serhat_passive
+  coordinator: serhat_active
   curriculum_course: compulsory_course
   unit: bilgisayar_muhendisligi
 

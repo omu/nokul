@@ -63,9 +63,5 @@ resources :users, only: [] do
     resources :addresses, except: :show do
       get 'save_from_mernis', on: :collection
     end
-
-    resources :employees, except: %i[index show]
-    resources :duties, except: %i[index show]
-    resources :positions, except: %i[index show]
   end
 end

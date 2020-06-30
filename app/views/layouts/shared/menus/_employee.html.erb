@@ -1,0 +1,7 @@
+<% if policy([:instructiveness, :given_course]).index? %>
+  <li class="c-sidebar-nav-item">
+    <%= link_to :given_courses, class: 'c-sidebar-nav-link' do %>
+      <%= fa_icon('book', text: t('.given_courses'), class: 'c-sidebar-nav-icon') %>
+    <% end %>
+  </li>
+<% end %>

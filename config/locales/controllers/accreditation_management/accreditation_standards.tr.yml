@@ -1,0 +1,44 @@
+tr:
+  activerecord:
+    attributes:
+      accreditation_standard: &accreditation_standard_attributes
+        accreditation_institution: Akreditasyon Kurumu
+        version: Versiyon
+        status: Durum
+        units: Programlar
+    enums:
+      accreditation_standard:
+        statuses:
+          active: Aktif
+          passive: Pasif
+  helpers:
+    submit:
+      accreditation_standard:
+        create: Akreditasyon Standardı Oluştur
+        update: Akreditasyon Standardını Güncelle
+  accreditation_management:
+    accreditation_standards:
+      create:
+        success: Akreditasyon standardı başarıyla oluşturuldu.
+      destroy:
+        success: Akreditasyon standardı başarıyla silindi!
+        warning: Akreditasyon standardı silinemedi!
+      edit:
+        form_title: Akreditasyon Standardını Güncelle
+      index:
+        <<: *accreditation_standard_attributes
+        card_header: Akreditasyon Standartları
+        new_accreditation_standard_link: Yeni Akreditasyon Standardı Oluştur
+      new:
+        form_title: Akreditasyon Standardı Oluştur
+      search:
+        <<: *accreditation_standard_attributes
+        unit: Program
+      show:
+        <<: *accreditation_standard_attributes
+        card_header: Öğrenim Çıktıları
+        new_learning_outcome_link: Yeni Öğrenim Çıktısı Oluştur
+        learning_outcome_code: Kodu
+        learning_outcome_name: Adı
+      update:
+        success: Akreditasyon standardı başarıyla güncellendi.

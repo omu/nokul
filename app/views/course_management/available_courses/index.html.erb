@@ -32,7 +32,7 @@
                 <td><%= available_course.name %></td>
                 <td><%= available_course.groups_count %></td>
                 <td><%= available_course.groups.sum(:quota) %></td>
-                <td><%= link_to_actions(available_course) %></td>
+                <td><%= link_to_actions(available_course, except: :destroy) %></td>
               </tr>
             <% end %>
           </tbody>

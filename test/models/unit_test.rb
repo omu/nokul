@@ -33,6 +33,9 @@ class UnitTest < ActiveSupport::TestCase
   has_many :available_courses, dependent: :destroy
   has_many :unit_calendars, dependent: :destroy
   has_many :calendars, through: :unit_calendars
+  has_many :unit_accreditation_standards, dependent: :destroy
+  has_many :unit_tuitions, dependent: :destroy
+  has_many :tuitions, through: :unit_tuitions
 
   # validations: presence
   validates_presence_of :name
@@ -136,6 +139,7 @@ class UnitTest < ActiveSupport::TestCase
     assert_equal Unit.eventable.count,
                  Unit.faculties.count +
                  Unit.institutes.count +
+                 Unit.departments.count +
                  Unit.programs.count +
                  Unit.research_centers.count +
                  Unit.others.count
@@ -159,7 +163,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'subtree_employees returns unit subtree employees' do
-    employees = Employee.joins(:units, user: :identities).where(units: { id: units(:omu).subtree.active.ids })
+    employees = Employee.active.joins(:units, user: :identities).where(units: { id: units(:omu).subtree.active.ids })
     assert_equal employees.count, units(:omu).subtree_employees.count
   end
 

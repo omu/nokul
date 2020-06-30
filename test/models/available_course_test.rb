@@ -13,9 +13,12 @@ class AvailableCourseTest < ActiveSupport::TestCase
   belongs_to :curriculum
   belongs_to :unit
   has_many :evaluation_types, class_name: 'CourseEvaluationType', dependent: :destroy
+  has_many :calendars, through: :unit
+  has_many :course_assessment_methods, through: :evaluation_types
   has_many :groups, class_name: 'AvailableCourseGroup', dependent: :destroy
   has_many :lecturers, through: :groups
   has_many :course_enrollments, dependent: :destroy
+  has_many :saved_enrollments, class_name: 'CourseEnrollment', inverse_of: :available_course
   accepts_nested_attributes_for :groups, allow_destroy: true
 
   # callbacks
@@ -54,5 +57,25 @@ class AvailableCourseTest < ActiveSupport::TestCase
     enrollable_groups = available_courses(:elective_course).enrollable_groups
     assert_includes enrollable_groups, available_course_groups(:elective_course_group_2)
     assert_not_includes enrollable_groups, available_course_groups(:elective_course_group)
+  end
+
+  test 'number_of_enrolled_students method' do
+    assert_equal 2, available_courses(:elective_course).number_of_enrolled_students
+  end
+
+  test 'groups_under_authority_of employee method' do
+    groups = available_courses(:elective_course).groups_under_authority_of(employees(:serhat_active))
+    assert_includes groups, available_course_groups(:elective_course_group)
+    assert_not_includes groups, available_course_groups(:elective_course_group_2)
+  end
+
+  test 'enrollments_under_authority_of employee method' do
+    enrollments = available_courses(:elective_course).enrollments_under_authority_of(employees(:serhat_active))
+    assert_includes enrollments, course_enrollments(:elective)
+    assert_not_includes enrollments, course_enrollments(:johns_enrollment)
+  end
+
+  test 'manageable? method' do
+    assert available_courses(:elective_course).manageable?
   end
 end

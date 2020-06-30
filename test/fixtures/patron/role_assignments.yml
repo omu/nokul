@@ -7,3 +7,6 @@ two:
 three:
   role: authorization_manager
   user: serhat
+four:
+  role: admin
+  user: john

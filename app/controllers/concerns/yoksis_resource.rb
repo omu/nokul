@@ -7,6 +7,7 @@ module YoksisResource
   included do
     before_action :set_variables
     before_action :set_resource, only: %i[edit update destroy]
+    before_action :authorized?
 
     def index
       value = pagy_by_search(@model_name.order(:name))
@@ -44,6 +45,10 @@ module YoksisResource
 
     def set_resource
       instance_variable_set(@singular_variable.to_sym, @model_name.find(params[:id]))
+    end
+
+    def authorized?
+      authorize([:yoksis, instance_variable_get(@singular_variable.to_sym) || @model_name])
     end
 
     def redirect_with(message)

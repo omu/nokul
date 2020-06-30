@@ -1,0 +1,22 @@
+<script type='text/javascript'>
+  $(document).ready(function() {
+    flatpickr(".datetimepicker", { enableTime: true, altInput: true })
+    $('#tuition_debt_unit_id, #tuition_debt_unit_ids').select2({
+      closeOnSelect: false,
+      ajax: {
+        url: "/tuitions/units.json",
+        dataType: "json",
+        delay: 250,
+        data: function (params) {
+          return {
+            term: params.term
+          };
+        },
+        processResults: function (data) {
+          return { results: data };
+        },
+        cache: true
+      }
+    });
+  });
+</script>

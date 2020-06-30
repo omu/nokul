@@ -1,21 +1,26 @@
-<aside class="aside-menu">
-  <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
+<aside class="c-sidebar c-sidebar-lg c-sidebar-light c-sidebar-right c-sidebar-overlaid" id="aside">
+  <button class="c-sidebar-close c-class-toggler" type="button" data-target="_parent" data-class="c-sidebar-show"
+      responsive="true">
+    <%= fa_icon('close') %>
+  </button>
+  <ul class="nav nav-tabs nav-underline nav-underline-primary" role="tablist">
+    <li class="c-sidebar-nav-item">
       <a class="nav-link active" data-toggle="tab" href="#timeline" role="tab">
         <%= fa_icon('list') %>
       </a>
     </li>
-    <li class="nav-item">
+    <li class="c-sidebar-nav-item">
       <a class="nav-link" data-toggle="tab" href="#messages" role="tab">
         <%= fa_icon('comment-o') %>
       </a>
     </li>
-    <li class="nav-item">
+    <li class="c-sidebar-nav-item">
       <a class="nav-link" data-toggle="tab" href="#settings" role="tab">
         <%= fa_icon('cogs') %>
       </a>
     </li>
   </ul>
+
   <!-- Tab panes-->
   <div class="tab-content">
     <div class="tab-pane active" id="timeline" role="tabpanel">
@@ -125,9 +130,9 @@
           <small>
             <b>Option 1</b>
           </small>
-          <label class="switch switch-label switch-pill switch-success switch-sm float-right">
-            <input class="switch-input" type="checkbox" checked="">
-            <span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
+          <label class="c-switch c-switch-label c-switch-pill c-switch-success c-switch-sm float-right">
+            <input class="c-switch-input" type="checkbox">
+            <span class="c-switch-slider" data-checked="On" data-unchecked="Off"></span>
           </label>
         </div>
         <div>
@@ -139,9 +144,9 @@
           <small>
             <b>Option 2</b>
           </small>
-          <label class="switch switch-label switch-pill switch-success switch-sm float-right">
-            <input class="switch-input" type="checkbox">
-            <span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
+          <label class="c-switch c-switch-label c-switch-pill c-switch-success c-switch-sm float-right">
+            <input class="c-switch-input" type="checkbox">
+            <span class="c-switch-slider" data-checked="On" data-unchecked="Off"></span>
           </label>
         </div>
         <div>
@@ -153,9 +158,9 @@
           <small>
             <b>Option 3</b>
           </small>
-          <label class="switch switch-label switch-pill switch-success switch-sm float-right">
-            <input class="switch-input" type="checkbox">
-            <span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
+          <label class="c-switch c-switch-label c-switch-pill c-switch-success c-switch-sm float-right">
+            <input class="c-switch-input" type="checkbox">
+            <span class="c-switch-slider" data-checked="On" data-unchecked="Off"></span>
           </label>
         </div>
       </div>
@@ -164,9 +169,9 @@
           <small>
             <b>Option 4</b>
           </small>
-          <label class="switch switch-label switch-pill switch-success switch-sm float-right">
-            <input class="switch-input" type="checkbox" checked="">
-            <span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
+          <label class="c-switch c-switch-label c-switch-pill c-switch-success c-switch-sm float-right">
+            <input class="c-switch-input" type="checkbox">
+            <span class="c-switch-slider" data-checked="On" data-unchecked="Off"></span>
           </label>
         </div>
       </div>

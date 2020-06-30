@@ -1,0 +1,42 @@
+<div class='row'>
+  <div class='col-sm-12'>
+    <div class='card'>
+      <div class='card-header'>
+        <%= fa_icon 'money', text: t('.card_header') %>
+        <div class='card-header-actions'>
+          <%= link_to_new t('.new_tuition_link'), %i[new tuition] %>
+        </div>
+      </div>
+      <div class='card-body'>
+        <%= render 'search' %>
+        <table class='table table-responsive-sm table-striped table-hover'>
+          <thead class="thead-dark">
+            <tr>
+              <th><%= t('.unit_ids') %></th>
+              <th><%= t('.academic_term') %></th>
+              <th><%= t('.fee') %></th>
+              <th><%= t('.foreign_student_fee') %></th>
+              <th><%= t('actions') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @tuitions.each do |tuition| %>
+              <tr>
+                <td style='width: 60%'><%= tuition.units.map(&:names_depth_cache).join(', ') %></td>
+                <td><%= full_name(tuition.academic_term) %></td>
+                <td><%= number_to_currency(tuition.fee) %></td>
+                <td><%= number_to_currency(tuition.foreign_student_fee) %></td>
+                <td><%= link_to_actions(tuition, except: :show) %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <nav aria-label='pagination'>
+      <ul class='pagination justify-content-center'>
+        <%== pagy_bootstrap_nav(@pagy) %>
+      </ul>
+    </nav>
+  </div>
+</div>

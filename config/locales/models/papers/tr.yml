@@ -1,0 +1,22 @@
+tr:
+  activerecord:
+    enums:
+      paper:
+        presentation_types:
+          guest_speaker: Davetli Konuşmacı
+          poster: Poster
+          verbal: Sözlü Sunum
+        publication_statuses:
+          accepted: Kabul Edildi
+          published: Yayımlanmış
+          unpublished: Yayımlanmamış
+        scopes:
+          national: Ulusal
+          international: Uluslararası
+        types:
+          full_text: Tam Metin Bildiri
+          summary: Özet Bildiri
+        type_of_releases:
+          electronic: Elektronik
+          printed: Basılı
+          printed_and_electronic: Basılı ve Elektronik

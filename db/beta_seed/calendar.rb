@@ -143,7 +143,7 @@ calendar_events = [
     visible:             true
   },
   {
-    calendar_event_type: CalendarEventType.find_by(identifier: 'mid_term_exams'),
+    calendar_event_type: CalendarEventType.find_by(identifier: 'midterm_exams'),
     start_time:          '2018-11-17 08:00:00',
     end_time:            '2018-11-25 17:00:00',
     timezone:            'Istanbul',

@@ -304,6 +304,16 @@ dis_hekimligi_programı:
     <%= ActiveRecord::FixtureSet.identify(:omu) %>/\
     <%= ActiveRecord::FixtureSet.identify(:dis_hekimligi_fakultesi) %>/\
   "
+buro_yonetimi_ve_yonetici_asistanligi_io:
+  name: Büro Yönetimi ve Yönetici Asistanlığı Programı (iö)
+  abbreviation: HAVZA-MYO-BHS-BYYA-PR-2
+  yoksis_id: 175631
+  duration: 2
+  district: havza
+  unit_status: active
+  unit_instruction_language: turkish
+  unit_instruction_type: evening_education
+  unit_type: undergraduate
 
 senate:
   name: Senato

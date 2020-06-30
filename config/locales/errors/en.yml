@@ -4,6 +4,7 @@ en:
     encoding_mismatch: Requested encoding does not match with the encoding of the text!
     invalid_phone_number: This is not a valid phone number!
     invalid_email: This is not a valid e-mail address!
+    invalid_version: This is not a valid version number!
     system_error: The system error has occurred. Please try later.
     unicode_not_supported: Receiver does not support unicode encoding!
     invalid_authenticity_token: Invalid authenticity token! Please try again.

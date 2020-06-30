@@ -1,35 +1,50 @@
 tr:
   layouts:
     shared:
+      menus:
+        admin:
+          academic_calendars: Akademik Takvimler
+          accreditation_standards: Akreditasyon Standartları
+          administration: Yönetim
+          agenda_types: Gündem Türleri
+          authorizations: Yetkilendirmeler
+          available_courses: Açılan Dersler
+          calendar_event_types: Olay Türleri
+          calendar_management: Takvim Yönetimi
+          calendars: Takvimler
+          committee_units: Kurul ve Komisyonlar
+          committees: Kurullar/Komisyonlar
+          course_groups: Ders Grupları
+          course_management: Ders İşlemleri
+          courses: Dersler
+          curriculums: Müfredatlar
+          detsis: DETSİS
+          first_registration: İlk Kayıt
+          high_school_types: Lise Türleri
+          ldap: LDAP
+          manager:
+            stats: Üniversite İstatistikleri
+            title: Yönetici Sayfaları
+          meksis: MEKSİS
+          learning_outcomes: Öğrenim Çıktıları
+          prospective_employees: Aday Personeller
+          prospective_students: Aday Öğrenciler
+          references: Tanımlar
+          registration_documents: İstenen Belgeler
+          tuition_debts: Harç Borçları
+          tuition_management: Harç Yönetimi
+          units: Birimler
+          unit_tuitions: Birim Harç Ücretleri
+          users: Kullanıcılar
+          yoksis: YÖKSİS
+        employee:
+          given_courses: Verilen Dersler
+        student:
+          course_enrollment: Ders Kayıtlanma
+          tuition_debt_information: Harç Borcu Bilgileri
+        institution_manager:
+          manager:
+            stats: Üniversite İstatistikleri
       sidebar:
-        academic_calendars: Akademik Takvimler
-        administration: Yönetim
-        agenda_types: Gündem Türleri
         authorizations: Yetkilendirmeler
-        available_courses: Açılan Dersler
-        calendar_event_types: Olay Türleri
-        calendar_management: Takvim Yönetimi
-        calendars: Takvimler
-        committee_units: Kurul ve Komisyonlar
-        committees: Kurullar/Komisyonlar
-        course_enrollments: Ders Kayıtları
-        course_groups: Ders Grupları
-        course_management: Ders İşlemleri
-        course_unit_groups: Ders Grupları
-        courses: Dersler
-        curriculums: Müfredatlar
-        detsis: DETSİS
-        first_registration: İlk Kayıt
-        high_school_types: Lise Türleri
-        ldap: LDAP
-        manager:
-          stats: Üniversite İstatistikleri
-          title: Yönetici Sayfaları
-        meksis: MEKSİS
-        prospective_employees: Aday Personeller
-        prospective_students: Aday Öğrenciler
-        references: Tanımlar
-        registration_documents: İstenen Belgeler
-        units: Birimler
-        users: Kullanıcılar
-        yoksis: YÖKSİS
+        accounts: Hesaplarım
