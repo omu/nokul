@@ -4,7 +4,7 @@ module Nokul
   module Tenant
     module Codification
       module Student
-        mattr_accessor :const, default: ActiveSupport::InheritableOptions.new(gross_length: 8,
+        mattr_accessor :const, default: ActiveSupport::InheritableOptions.new(gross_length: 10,
                                                                               year_length:  2)
 
         module_function
