@@ -66,3 +66,4 @@ services:
       - $HOME/bundle:/app/vendor/bundle
       - $HOME/.bundle_config:/app/.bundle
       - $HOME/node_modules:/app/node_modules
+      - $HOME/coverage:/app/coverage

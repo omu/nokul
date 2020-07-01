@@ -8,6 +8,7 @@ cache:
     - "$HOME/bundle"
     - "$HOME/.bundle_config"
     - "$HOME/node_modules"
+    - "$HOME/coverage"
 
 install:
   - docker-compose build test
@@ -37,7 +38,7 @@ jobs:
       # third job at this stage
     - name: "Integration Tests"
       before_script: skip
-      script: docker-compose run test bundle exec rails test:system test
+      script: docker-compose run test bundle exec rails test:system test && bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l Ruby -r $HOME/coverage/coverage.xml
 
     - stage: deploy
       # first job at this stage

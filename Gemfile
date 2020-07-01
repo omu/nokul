@@ -99,8 +99,8 @@ end
 
 group :test do
   gem 'capybara'
-  gem 'codacy-coverage', require: false
   gem 'minitest-focus'
+  gem 'simplecov-cobertura'
   gem 'webdrivers', '~> 4.4'
   gem 'webmock'
 end
