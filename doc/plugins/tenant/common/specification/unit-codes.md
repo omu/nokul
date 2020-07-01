@@ -42,7 +42,7 @@ alınmıştır:
 - En ön planda olan eğitim/öğretim programları için sadece rakamlar tercih
   ediliyor.
 
-- Sembolleri (rakam veya harf) **peşpeşe** en fazla 2 defa tekrar edilmesine
+- Sembollerin (rakam veya harf) **peşpeşe** en fazla 2 defa tekrar edilmesine
   izin veriliyor.  (Ör. `0001` geçersiz, `0010` geçerli)
 
 - Önem sırasında ikinci olan akademik birimler için rakamlara ilave olarak
