@@ -31,6 +31,83 @@ resp = Xokul::Meksis.buildings
 resp.each(&:puts) if resp
 ```
 
+YÖKSİS
+------
+
+### Prospectives
+
+#### `all`
+
+Tüm aday öğrenci listesini getirir. Sorguda kullanılan `type` aşağıdakilerden
+birisi olabilir:
+
+- YKS (Yükseköğretim Kurumları Sınavı)
+- YKS_EK (YKS Ek Yerleştirme)
+- YKS_MS (YKS Milli Sporcu)
+- DGS (Dikey Geçiş Sınavı)
+- DGS_EK (DGS Ek Yerleştirme)
+- LT (Lisans Tamamlama)
+
+```ruby
+type = 'YKS'
+year = 2019
+Xokul::Yoksis::Prospectives.all type, year
+```
+
+#### `through_electronic`
+
+Elektronik ortam aracılığıyla kaydolan aday öğrencileri getirir.
+
+```ruby
+type = 'YKS'
+year = 2019
+Xokul::Yoksis::Prospectives.through_electronic type, year
+```
+
+#### `without_electronics`
+
+Elektronik ortam dışındaki herhangi bir yolla kaydolan öğrencileri getirir.
+
+```ruby
+type = 'YKS'
+year = 2019
+Xokul::Yoksis::Prospectives.without_electronics type, year
+```
+
+#### `student`
+
+Elektronik ortam aracılığıyla kaydolan aday öğrencileri getirir.
+
+```ruby
+type = 'YKS'
+year = 2019
+id_number = '11111111111'
+Xokul::Yoksis::Prospectives.student type, year, id_number
+```
+
+#### `photo`
+
+Aday öğrencinin fotoğrafını döndürür.
+
+```ruby
+id_number = '11111111111'
+Xokul::Yoksis::Prospectives.photo id_number
+```
+
+#### Pagination
+
+Pagination yalnızca aşağıdaki metotlar için kullanılabilir.
+
+- `students`
+- `through_electronic`
+- `without_electronics`
+
+```ruby
+type = 'YKS'
+year = 2019
+Xokul::Yoksis::Prospectives.without_electronics type, year, page: 3, per_page: 100
+```
+
 Meksis
 ------
 
