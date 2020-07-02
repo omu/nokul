@@ -14,7 +14,13 @@ modellerine ilişkin kodifikasyon lojiği bulunmaktadır.
 `Unit`
 ------
 
-*`code_generator(starting:, ending:, pattern: nil, memory:)`*
+*`code_generator(starting:, ending:, only: nil, except: nil, memory:)`*
+
+Bu metodda `except` ve `only` argümanları:
+
+- Üretilen kodu hariç tutar (`except`) veya sadece belirli bir biçimde olmasını sağlar (`only`)
+- Skalar veya dizi olabilir
+- Her bir öge geçerli bir düzenli ifade string'i
 
 Birim kodları üreteci.
 
@@ -22,6 +28,11 @@ Birim kodları üreteci.
 generator = Nokul::Tenant::Codification::Unit.code_generator(starting: '001', ending: '999', memory: nil)
 generator.run #=> '001'
 generator.run #=> '002'
+
+generator = Nokul::Tenant::Codification::Unit.code_generator(starting: '001', ending: '999', memory: nil,
+                                                             except: '^0{2,}')
+generator.run #=> '010'
+generator.run #=> '011'
 ```
 
 `User`

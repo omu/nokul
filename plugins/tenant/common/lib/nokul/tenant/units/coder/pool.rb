@@ -10,7 +10,8 @@ module Nokul
             ending
             owner
             weight
-            pattern
+            only
+            except
             reserved
           ].freeze
 
@@ -19,7 +20,8 @@ module Nokul
           def after_initialize
             @coder = Codification::Unit.code_generator(starting: starting,
                                                        ending:   ending,
-                                                       pattern:  pattern,
+                                                       only:     only,
+                                                       except:   except,
                                                        memory:   Memory.instance)
           end
 

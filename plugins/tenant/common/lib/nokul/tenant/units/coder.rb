@@ -11,10 +11,15 @@ module Nokul
       class Coder
         class Memory < Support::Codification::SimpleMemory
           include Singleton
+
+          def remember_unit_codes(units)
+            units.each { |unit| remember(unit.code) if unit.code.present? }
+          end
         end
 
-        def self.code(units, config)
-          new(config).code(units)
+        def self.code(new_units:, old_units:, config:)
+          Memory.instance.remember(old_units)
+          new(config).code(new_units)
         end
 
         attr_reader :pools, :reservations, :memory

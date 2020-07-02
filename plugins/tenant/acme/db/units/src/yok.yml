@@ -1318,10 +1318,11 @@
   yoksis_id: 174846
   parent_yoksis_id: 121946
   unit_type_id: Enstitü
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  duration: 2
   founded_at: 26.02.2010
 
 - name: Bilgisayar ve Öğretim Teknolojileri Eğitimi (YL) (Tezli)
@@ -1329,7 +1330,7 @@
   yoksis_id: 244883
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '146'
   unit_instruction_language_id: İngilizce
@@ -1342,7 +1343,7 @@
   yoksis_id: 301215
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '145'
   unit_instruction_language_id: Türkçe
@@ -1383,7 +1384,7 @@
   yoksis_id: 327688
   parent_yoksis_id: 174846
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '142'
   unit_instruction_language_id: Türkçe
@@ -1396,7 +1397,7 @@
   yoksis_id: 207884
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '142'
   unit_instruction_language_id: Türkçe
@@ -1409,7 +1410,7 @@
   yoksis_id: 339817
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '142'
   unit_instruction_language_id: Türkçe
@@ -1422,7 +1423,7 @@
   yoksis_id: 327630
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '345'
   unit_instruction_language_id: Türkçe
@@ -1435,7 +1436,7 @@
   yoksis_id: 327629
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '345'
   unit_instruction_language_id: Türkçe
@@ -1448,7 +1449,7 @@
   yoksis_id: 327678
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '345'
   unit_instruction_language_id: Türkçe
@@ -1461,7 +1462,7 @@
   yoksis_id: 327631
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '345'
   unit_instruction_language_id: Türkçe
@@ -1474,7 +1475,7 @@
   yoksis_id: 376129
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '142'
   unit_instruction_language_id: Türkçe
@@ -1487,7 +1488,7 @@
   yoksis_id: 267754
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '145'
   unit_instruction_language_id: Türkçe
@@ -1500,7 +1501,7 @@
   yoksis_id: 267753
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '145'
   unit_instruction_language_id: Türkçe
@@ -1515,7 +1516,7 @@
   yoksis_id: 244484
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '145'
   unit_instruction_language_id: Türkçe
@@ -1528,7 +1529,7 @@
   yoksis_id: 235189
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '145'
   unit_instruction_language_id: Türkçe
@@ -1541,7 +1542,7 @@
   yoksis_id: 245968
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '145'
   unit_instruction_language_id: Türkçe
@@ -1554,18 +1555,19 @@
   yoksis_id: 211119
   parent_yoksis_id: 174846
   unit_type_id: Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: Atakum
   foet_code: '146'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  duration: 2
 
 - name: Müzik Eğitimi (YL) (Tezli)
   abbreviation: MÜZİK-YL
   yoksis_id: 230796
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '146'
   unit_instruction_language_id: Türkçe
@@ -1578,7 +1580,7 @@
   yoksis_id: 244884
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '146'
   unit_instruction_language_id: Türkçe
@@ -1591,7 +1593,7 @@
   yoksis_id: 174856
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '145'
   unit_instruction_language_id: Türkçe
@@ -1604,7 +1606,7 @@
   yoksis_id: 174850
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '145'
   unit_instruction_language_id: Türkçe
@@ -1630,7 +1632,7 @@
   yoksis_id: 230808
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '146'
   unit_instruction_language_id: Türkçe
@@ -1643,7 +1645,7 @@
   yoksis_id: 230810
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '146'
   unit_instruction_language_id: Türkçe
@@ -1656,7 +1658,7 @@
   yoksis_id: 267760
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '144'
   unit_instruction_language_id: Türkçe
@@ -1669,7 +1671,7 @@
   yoksis_id: 267759
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '144'
   unit_instruction_language_id: Türkçe
@@ -1682,7 +1684,7 @@
   yoksis_id: 244486
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '144'
   unit_instruction_language_id: Türkçe
@@ -1695,7 +1697,7 @@
   yoksis_id: 327682
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '144'
   unit_instruction_language_id: Türkçe
@@ -1708,7 +1710,7 @@
   yoksis_id: 327681
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '145'
   unit_instruction_language_id: Türkçe
@@ -1721,7 +1723,7 @@
   yoksis_id: 327632
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '145'
   unit_instruction_language_id: Türkçe
@@ -1734,7 +1736,7 @@
   yoksis_id: 244485
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '145'
   unit_instruction_language_id: Türkçe
@@ -1747,7 +1749,7 @@
   yoksis_id: 327680
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '145'
   unit_instruction_language_id: Türkçe
@@ -1760,7 +1762,7 @@
   yoksis_id: 213373
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '145'
   unit_instruction_language_id: Türkçe
@@ -1773,7 +1775,7 @@
   yoksis_id: 244483
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '145'
   unit_instruction_language_id: Türkçe
@@ -1786,7 +1788,7 @@
   yoksis_id: 174852
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '145'
   unit_instruction_language_id: Türkçe
@@ -1799,7 +1801,7 @@
   yoksis_id: 267757
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '145'
   unit_instruction_language_id: Türkçe
@@ -1812,18 +1814,19 @@
   yoksis_id: 211120
   parent_yoksis_id: 174846
   unit_type_id: Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: Atakum
   foet_code: '145'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  duration: 2
 
 - name: İlköğretim (DR)
   abbreviation: İLK-DR
   yoksis_id: 174851
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '144'
   unit_instruction_language_id: Türkçe
@@ -1836,7 +1839,7 @@
   yoksis_id: 267758
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '145'
   unit_instruction_language_id: Türkçe
@@ -1849,7 +1852,7 @@
   yoksis_id: 235186
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '144'
   unit_instruction_language_id: Türkçe
@@ -2524,10 +2527,11 @@
   yoksis_id: 122386
   parent_yoksis_id: 121946
   unit_type_id: Enstitü
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  duration: 2
   founded_at: 20.07.1982
 
 - name: Adli Bilimler (YL) (Tezli)
@@ -2535,7 +2539,7 @@
   yoksis_id: 255365
   parent_yoksis_id: 122386
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '380'
   unit_instruction_language_id: Türkçe
@@ -2546,9 +2550,9 @@
 - name: Akıllı Sistemler Mühendisliği (YL) (Tezli)
   abbreviation: ASM-YL
   yoksis_id: 255366
-  parent_yoksis_id: 122386
+  parent_yoksis_id: 409816
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '520'
   unit_instruction_language_id: Türkçe
@@ -2561,7 +2565,7 @@
   yoksis_id: 211283
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '622'
   unit_instruction_language_id: Türkçe
@@ -2573,7 +2577,7 @@
   yoksis_id: 211284
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '622'
   unit_instruction_language_id: Türkçe
@@ -2585,7 +2589,7 @@
   yoksis_id: 211296
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '523'
   unit_instruction_language_id: Türkçe
@@ -2597,7 +2601,7 @@
   yoksis_id: 211294
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '621'
   unit_instruction_language_id: Türkçe
@@ -2609,7 +2613,7 @@
   yoksis_id: 211293
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '621'
   unit_instruction_language_id: Türkçe
@@ -2622,7 +2626,7 @@
   yoksis_id: 211282
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '421'
   unit_instruction_language_id: Türkçe
@@ -2634,7 +2638,7 @@
   yoksis_id: 211261
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '421'
   unit_instruction_language_id: Türkçe
@@ -2647,7 +2651,7 @@
   yoksis_id: 234077
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '421'
   unit_instruction_language_id: Türkçe
@@ -2659,7 +2663,7 @@
   yoksis_id: 317402
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '421'
   unit_instruction_language_id: Türkçe
@@ -2672,7 +2676,7 @@
   yoksis_id: 211254
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '523'
   unit_instruction_language_id: Türkçe
@@ -2684,7 +2688,7 @@
   yoksis_id: 211253
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '523'
   unit_instruction_language_id: Türkçe
@@ -2696,7 +2700,7 @@
   yoksis_id: 211257
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '441'
   unit_instruction_language_id: Türkçe
@@ -2708,7 +2712,7 @@
   yoksis_id: 211258
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '441'
   unit_instruction_language_id: Türkçe
@@ -2723,7 +2727,7 @@
   yoksis_id: 234095
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '441'
   unit_instruction_language_id: Türkçe
@@ -2735,7 +2739,7 @@
   yoksis_id: 317401
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '441'
   unit_instruction_language_id: Türkçe
@@ -2748,7 +2752,7 @@
   yoksis_id: 211298
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '541'
   unit_instruction_language_id: Türkçe
@@ -2773,7 +2777,7 @@
   yoksis_id: 211297
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '541'
   unit_instruction_language_id: Türkçe
@@ -2799,7 +2803,7 @@
   yoksis_id: 211266
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '581'
   unit_instruction_language_id: Türkçe
@@ -2811,7 +2815,7 @@
   yoksis_id: 211265
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '581'
   unit_instruction_language_id: Türkçe
@@ -2826,7 +2830,7 @@
   yoksis_id: 255368
   parent_yoksis_id: 122386
   unit_type_id: Disiplinlerarası Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '461'
   unit_instruction_language_id: Türkçe
@@ -2851,7 +2855,7 @@
   yoksis_id: 211289
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '442'
   unit_instruction_language_id: Türkçe
@@ -2864,7 +2868,7 @@
   yoksis_id: 317403
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '442'
   unit_instruction_language_id: Türkçe
@@ -2877,18 +2881,19 @@
   yoksis_id: 234078
   parent_yoksis_id: 122386
   unit_type_id: Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: Atakum
   foet_code: '442'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  duration: 2
 
 - name: Kimya Mühendisliği (YL) (Tezli)
   abbreviation: KİMYA-YL
   yoksis_id: 225905
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '524'
   unit_instruction_language_id: Türkçe
@@ -2901,7 +2906,7 @@
   yoksis_id: 209678
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '521'
   unit_instruction_language_id: Türkçe
@@ -2914,7 +2919,7 @@
   yoksis_id: 169494
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '521'
   unit_instruction_language_id: Türkçe
@@ -2927,7 +2932,7 @@
   yoksis_id: 211256
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '461'
   unit_instruction_language_id: Türkçe
@@ -2952,7 +2957,7 @@
   yoksis_id: 211255
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '461'
   unit_instruction_language_id: Türkçe
@@ -2965,7 +2970,7 @@
   yoksis_id: 317399
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '461'
   unit_instruction_language_id: Türkçe
@@ -2978,7 +2983,7 @@
   yoksis_id: 371245
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '521'
   unit_instruction_language_id: Türkçe
@@ -2991,7 +2996,7 @@
   yoksis_id: 255370
   parent_yoksis_id: 406607
   unit_type_id: Disiplinlerarası Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '520'
   unit_instruction_language_id: İngilizce
@@ -3004,7 +3009,7 @@
   yoksis_id: 255369
   parent_yoksis_id: 406607
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '520'
   unit_instruction_language_id: İngilizce
@@ -3017,7 +3022,7 @@
   yoksis_id: 261702
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '541'
   unit_instruction_language_id: Türkçe
@@ -3030,7 +3035,7 @@
   yoksis_id: 176121
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '621'
   unit_instruction_language_id: Türkçe
@@ -3043,7 +3048,7 @@
   yoksis_id: 230597
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '621'
   unit_instruction_language_id: Türkçe
@@ -3056,7 +3061,7 @@
   yoksis_id: 211260
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '525'
   unit_instruction_language_id: Türkçe
@@ -3069,7 +3074,7 @@
   yoksis_id: 211259
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '525'
   unit_instruction_language_id: Türkçe
@@ -3082,7 +3087,7 @@
   yoksis_id: 255701
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '421'
   unit_instruction_language_id: Türkçe
@@ -3095,7 +3100,7 @@
   yoksis_id: 211287
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '421'
   unit_instruction_language_id: Türkçe
@@ -3108,7 +3113,7 @@
   yoksis_id: 211250
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '621'
   unit_instruction_language_id: Türkçe
@@ -3120,7 +3125,7 @@
   yoksis_id: 211249
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '621'
   unit_instruction_language_id: Türkçe
@@ -3133,7 +3138,7 @@
   yoksis_id: 211286
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '621'
   unit_instruction_language_id: Türkçe
@@ -3145,7 +3150,7 @@
   yoksis_id: 211285
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '621'
   unit_instruction_language_id: Türkçe
@@ -3158,7 +3163,7 @@
   yoksis_id: 215852
   parent_yoksis_id: 122386
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '341'
   unit_instruction_language_id: Türkçe
@@ -3171,7 +3176,7 @@
   yoksis_id: 203725
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '621'
   unit_instruction_language_id: Türkçe
@@ -3184,7 +3189,7 @@
   yoksis_id: 203724
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '621'
   unit_instruction_language_id: Türkçe
@@ -3197,7 +3202,7 @@
   yoksis_id: 339818
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '525'
   unit_instruction_language_id: Türkçe
@@ -3210,11 +3215,12 @@
   yoksis_id: 303063
   parent_yoksis_id: 122386
   unit_type_id: Disiplinlerarası Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '522'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  duration: 2
   founded_at: 01.06.2016
 
 - name: Yenilenebilir Enerji ve Uygulamaları (YL) (Tezli)
@@ -3222,7 +3228,7 @@
   yoksis_id: 303045
   parent_yoksis_id: 303063
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '522'
   unit_instruction_language_id: Türkçe
@@ -3235,7 +3241,7 @@
   yoksis_id: 211291
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '621'
   unit_instruction_language_id: Türkçe
@@ -3247,7 +3253,7 @@
   yoksis_id: 211292
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '621'
   unit_instruction_language_id: Türkçe
@@ -3273,7 +3279,7 @@
   yoksis_id: 211248
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '851'
   unit_instruction_language_id: Türkçe
@@ -3285,7 +3291,7 @@
   yoksis_id: 211247
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '851'
   unit_instruction_language_id: Türkçe
@@ -3298,7 +3304,7 @@
   yoksis_id: 244882
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '851'
   unit_instruction_language_id: İngilizce
@@ -3311,7 +3317,7 @@
   yoksis_id: 213374
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '582'
   unit_instruction_language_id: Türkçe
@@ -3324,7 +3330,7 @@
   yoksis_id: 231330
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '582'
   unit_instruction_language_id: Türkçe
@@ -3337,18 +3343,19 @@
   yoksis_id: 202003
   parent_yoksis_id: 122386
   unit_type_id: Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: Atakum
   foet_code: '582'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  duration: 4
 
 - name: İstatistik (DR)
   abbreviation: İSTATİSTİK-DR
   yoksis_id: 211251
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '462'
   unit_instruction_language_id: Türkçe
@@ -3373,7 +3380,7 @@
   yoksis_id: 211252
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '462'
   unit_instruction_language_id: Türkçe
@@ -4536,10 +4543,11 @@
   yoksis_id: 208606
   parent_yoksis_id: 121946
   unit_type_id: Enstitü
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  duration: 2
   founded_at: 20.07.1982
 
 - name: Görsel İletişim Tasarımı (YL) (Tezli)
@@ -4547,7 +4555,7 @@
   yoksis_id: 255316
   parent_yoksis_id: 208606
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: İlkadım
   foet_code: '213'
   unit_instruction_language_id: Türkçe
@@ -4560,7 +4568,7 @@
   yoksis_id: 258248
   parent_yoksis_id: 208606
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: İlkadım
   foet_code: '212'
   unit_instruction_language_id: Türkçe
@@ -4573,7 +4581,7 @@
   yoksis_id: 258249
   parent_yoksis_id: 208606
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: İlkadım
   foet_code: '212'
   unit_instruction_language_id: Türkçe
@@ -4586,7 +4594,7 @@
   yoksis_id: 281828
   parent_yoksis_id: 208606
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: İlkadım
   foet_code: '211'
   unit_instruction_language_id: Türkçe
@@ -4599,7 +4607,7 @@
   yoksis_id: 325573
   parent_yoksis_id: 208606
   unit_type_id: Sanatta Yeterlilik Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: İlkadım
   foet_code: '210'
   unit_instruction_language_id: Türkçe
@@ -4612,7 +4620,7 @@
   yoksis_id: 278819
   parent_yoksis_id: 208606
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: İlkadım
   foet_code: '211'
   unit_instruction_language_id: Türkçe
@@ -4625,11 +4633,12 @@
   yoksis_id: 278818
   parent_yoksis_id: 208606
   unit_type_id: Disiplinlerarası Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: İlkadım
   foet_code: '211'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  duration: 4
   founded_at: 24.06.2015
 
 - name: Güzel Sanatlar Fakültesi
@@ -5544,7 +5553,7 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
-- name: Kamu Ölçmeleri Anabilim Dalı
+- name: Arazi Yönetimi Anabilim Dalı
   abbreviation: HARİTA-KAMU-AD
   yoksis_id: 122208
   parent_yoksis_id: 122204
@@ -5554,6 +5563,7 @@
   foet_code: '581'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  duration: 4
 
 - name: Kartografya Anabilim Dalı
   abbreviation: HARİTA-KARTO-AD
@@ -6768,10 +6778,11 @@
   yoksis_id: 122387
   parent_yoksis_id: 121946
   unit_type_id: Enstitü
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  duration: 2
   founded_at: 20.07.1982
 
 - name: Acil Hemşireliği (DR)
@@ -6779,7 +6790,7 @@
   yoksis_id: 329992
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '723'
   unit_instruction_language_id: Türkçe
@@ -6792,7 +6803,7 @@
   yoksis_id: 329991
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '723'
   unit_instruction_language_id: Türkçe
@@ -6805,7 +6816,7 @@
   yoksis_id: 219171
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '721'
   unit_instruction_language_id: Türkçe
@@ -6817,7 +6828,7 @@
   yoksis_id: 169540
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '721'
   unit_instruction_language_id: Türkçe
@@ -6829,7 +6840,7 @@
   yoksis_id: 169511
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '721'
   unit_instruction_language_id: Türkçe
@@ -6842,7 +6853,7 @@
   yoksis_id: 267669
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '146'
   unit_instruction_language_id: Türkçe
@@ -6855,7 +6866,7 @@
   yoksis_id: 267668
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '146'
   unit_instruction_language_id: Türkçe
@@ -6868,7 +6879,7 @@
   yoksis_id: 169547
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '724'
   unit_instruction_language_id: Türkçe
@@ -6880,7 +6891,7 @@
   yoksis_id: 169551
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '146'
   unit_instruction_language_id: Türkçe
@@ -6894,7 +6905,7 @@
   yoksis_id: 225937
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '726'
   unit_instruction_language_id: Türkçe
@@ -6907,7 +6918,7 @@
   yoksis_id: 169576
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '541'
   unit_instruction_language_id: Türkçe
@@ -6919,7 +6930,7 @@
   yoksis_id: 169516
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '541'
   unit_instruction_language_id: Türkçe
@@ -6932,7 +6943,7 @@
   yoksis_id: 213250
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '421'
   unit_instruction_language_id: Türkçe
@@ -6945,7 +6956,7 @@
   yoksis_id: 213249
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '421'
   unit_instruction_language_id: Türkçe
@@ -6958,7 +6969,7 @@
   yoksis_id: 211302
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '462'
   unit_instruction_language_id: Türkçe
@@ -6970,7 +6981,7 @@
   yoksis_id: 211301
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '462'
   unit_instruction_language_id: Türkçe
@@ -6983,7 +6994,7 @@
   yoksis_id: 255317
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '640'
   unit_instruction_language_id: Türkçe
@@ -6996,7 +7007,7 @@
   yoksis_id: 244886
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '640'
   unit_instruction_language_id: Türkçe
@@ -7009,7 +7020,7 @@
   yoksis_id: 169578
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '640'
   unit_instruction_language_id: Türkçe
@@ -7021,7 +7032,7 @@
   yoksis_id: 301224
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '723'
   unit_instruction_language_id: Türkçe
@@ -7034,7 +7045,7 @@
   yoksis_id: 301216
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '723'
   unit_instruction_language_id: Türkçe
@@ -7047,7 +7058,7 @@
   yoksis_id: 301217
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '723'
   unit_instruction_language_id: Türkçe
@@ -7060,7 +7071,7 @@
   yoksis_id: 169535
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '640'
   unit_instruction_language_id: Türkçe
@@ -7072,7 +7083,7 @@
   yoksis_id: 169574
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '640'
   unit_instruction_language_id: Türkçe
@@ -7084,7 +7095,7 @@
   yoksis_id: 169517
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '640'
   unit_instruction_language_id: Türkçe
@@ -7097,7 +7108,7 @@
   yoksis_id: 169553
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '724'
   unit_instruction_language_id: Türkçe
@@ -7109,7 +7120,7 @@
   yoksis_id: 323921
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '723'
   unit_instruction_language_id: Türkçe
@@ -7122,7 +7133,7 @@
   yoksis_id: 209677
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '724'
   unit_instruction_language_id: Türkçe
@@ -7148,7 +7159,7 @@
   yoksis_id: 169567
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '421'
   unit_instruction_language_id: Türkçe
@@ -7160,7 +7171,7 @@
   yoksis_id: 169572
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '421'
   unit_instruction_language_id: Türkçe
@@ -7173,7 +7184,7 @@
   yoksis_id: 283800
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '421'
   unit_instruction_language_id: Türkçe
@@ -7186,7 +7197,7 @@
   yoksis_id: 169541
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '721'
   unit_instruction_language_id: Türkçe
@@ -7198,7 +7209,7 @@
   yoksis_id: 257559
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '721'
   unit_instruction_language_id: Türkçe
@@ -7211,7 +7222,7 @@
   yoksis_id: 169558
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '720'
   unit_instruction_language_id: Türkçe
@@ -7223,7 +7234,7 @@
   yoksis_id: 169518
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '723'
   unit_instruction_language_id: Türkçe
@@ -7236,7 +7247,7 @@
   yoksis_id: 219170
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '624'
   unit_instruction_language_id: Türkçe
@@ -7248,7 +7259,7 @@
   yoksis_id: 169580
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '640'
   unit_instruction_language_id: Türkçe
@@ -7260,7 +7271,7 @@
   yoksis_id: 169521
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '640'
   unit_instruction_language_id: Türkçe
@@ -7272,7 +7283,7 @@
   yoksis_id: 285232
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '723'
   unit_instruction_language_id: Türkçe
@@ -7285,7 +7296,7 @@
   yoksis_id: 285233
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '723'
   unit_instruction_language_id: Türkçe
@@ -7311,7 +7322,7 @@
   yoksis_id: 290926
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '723'
   unit_instruction_language_id: Türkçe
@@ -7324,7 +7335,7 @@
   yoksis_id: 219168
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '721'
   unit_instruction_language_id: Türkçe
@@ -7336,7 +7347,7 @@
   yoksis_id: 219167
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '721'
   unit_instruction_language_id: Türkçe
@@ -7349,7 +7360,7 @@
   yoksis_id: 230172
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '726'
   unit_instruction_language_id: Türkçe
@@ -7362,7 +7373,7 @@
   yoksis_id: 236919
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '721'
   unit_instruction_language_id: Türkçe
@@ -7375,11 +7386,12 @@
   yoksis_id: 297555
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '421'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  duration: 4
   founded_at: 22.06.2016
 
 - name: Klinik Toksikoloji (DR)
@@ -7387,7 +7399,7 @@
   yoksis_id: 297556
   parent_yoksis_id: 297555
   unit_type_id: Disiplinlerarası Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '421'
   unit_instruction_language_id: Türkçe
@@ -7400,7 +7412,7 @@
   yoksis_id: 257542
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '721'
   unit_instruction_language_id: Türkçe
@@ -7413,7 +7425,7 @@
   yoksis_id: 257541
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '721'
   unit_instruction_language_id: Türkçe
@@ -7426,7 +7438,7 @@
   yoksis_id: 225902
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '421'
   unit_instruction_language_id: Türkçe
@@ -7439,11 +7451,12 @@
   yoksis_id: 280440
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '421'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  duration: 4
   founded_at: 05.08.2015
   issues:
     - Detsis tarafında anabilim dalı başkanlığı yok. SAĞLIK-BİLİM-TMİKRO-ADB ile benzerlik kontrol edilmeli.
@@ -7453,7 +7466,7 @@
   yoksis_id: 280441
   parent_yoksis_id: 280440
   unit_type_id: Disiplinlerarası Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '421'
   unit_instruction_language_id: Türkçe
@@ -7466,7 +7479,7 @@
   yoksis_id: 169523
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '721'
   unit_instruction_language_id: Türkçe
@@ -7478,7 +7491,7 @@
   yoksis_id: 169555
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '724'
   unit_instruction_language_id: Türkçe
@@ -7490,7 +7503,7 @@
   yoksis_id: 169543
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '724'
   unit_instruction_language_id: Türkçe
@@ -7502,7 +7515,7 @@
   yoksis_id: 169560
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '421'
   unit_instruction_language_id: Türkçe
@@ -7514,7 +7527,7 @@
   yoksis_id: 225901
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '421'
   unit_instruction_language_id: Türkçe
@@ -7527,7 +7540,7 @@
   yoksis_id: 169561
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '721'
   unit_instruction_language_id: Türkçe
@@ -7539,7 +7552,7 @@
   yoksis_id: 219169
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '721'
   unit_instruction_language_id: Türkçe
@@ -7551,7 +7564,7 @@
   yoksis_id: 169570
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '724'
   unit_instruction_language_id: Türkçe
@@ -7563,7 +7576,7 @@
   yoksis_id: 169546
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '724'
   unit_instruction_language_id: Türkçe
@@ -7575,19 +7588,19 @@
   yoksis_id: 169556
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '724'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
 
-- name: Radyolojik Bilimler (DR)
+- name: Radyolojik Bilimler (Disiplinlerarası) (DR)
   abbreviation: RADYOB-DR
   yoksis_id: 309657
-  parent_yoksis_id: 122387
+  parent_yoksis_id: 407971
   unit_type_id: Disiplinlerarası Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '725'
   unit_instruction_language_id: Türkçe
@@ -7598,9 +7611,9 @@
 - name: Radyolojik Bilimler (YL) (Tezli)
   abbreviation: RADYOB-YL
   yoksis_id: 219260
-  parent_yoksis_id: 122387
+  parent_yoksis_id: 407971
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '725'
   unit_instruction_language_id: Türkçe
@@ -7613,7 +7626,7 @@
   yoksis_id: 169527
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '723'
   unit_instruction_language_id: Türkçe
@@ -7625,7 +7638,7 @@
   yoksis_id: 278605
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '345'
   unit_instruction_language_id: Türkçe
@@ -7638,7 +7651,7 @@
   yoksis_id: 213229
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '345'
   unit_instruction_language_id: Türkçe
@@ -7651,7 +7664,7 @@
   yoksis_id: 215871
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '345'
   unit_instruction_language_id: Türkçe
@@ -7664,7 +7677,7 @@
   yoksis_id: 225903
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '345'
   unit_instruction_language_id: Türkçe
@@ -7677,7 +7690,7 @@
   yoksis_id: 261143
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '624'
   unit_instruction_language_id: Türkçe
@@ -7690,7 +7703,7 @@
   yoksis_id: 334300
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '640'
   unit_instruction_language_id: Türkçe
@@ -7703,11 +7716,12 @@
   yoksis_id: 203748
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '721'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  duration: 2
   founded_at: 03.03.2011
 
 - name: Sinir Bilimleri (DR)
@@ -7715,7 +7729,7 @@
   yoksis_id: 203750
   parent_yoksis_id: 203748
   unit_type_id: Disiplinlerarası Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '721'
   unit_instruction_language_id: Türkçe
@@ -7728,7 +7742,7 @@
   yoksis_id: 203749
   parent_yoksis_id: 203748
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '721'
   unit_instruction_language_id: Türkçe
@@ -7741,7 +7755,7 @@
   yoksis_id: 169539
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '421'
   unit_instruction_language_id: Türkçe
@@ -7754,7 +7768,7 @@
   yoksis_id: 211304
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '421'
   unit_instruction_language_id: Türkçe
@@ -7766,7 +7780,7 @@
   yoksis_id: 211303
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '421'
   unit_instruction_language_id: Türkçe
@@ -7779,7 +7793,7 @@
   yoksis_id: 211300
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '421'
   unit_instruction_language_id: Türkçe
@@ -7791,7 +7805,7 @@
   yoksis_id: 211299
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '421'
   unit_instruction_language_id: Türkçe
@@ -7804,7 +7818,7 @@
   yoksis_id: 169549
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '421'
   unit_instruction_language_id: Türkçe
@@ -7817,11 +7831,12 @@
   yoksis_id: 301225
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '380'
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  duration: 2
   founded_at: 10.08.2016
   issues:
     - Detsis tarafında anabilim dalı başkanlığı yok
@@ -7831,7 +7846,7 @@
   yoksis_id: 301226
   parent_yoksis_id: 301225
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '380'
   unit_instruction_language_id: Türkçe
@@ -7844,7 +7859,7 @@
   yoksis_id: 261826
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '720'
   unit_instruction_language_id: Türkçe
@@ -7857,7 +7872,7 @@
   yoksis_id: 255372
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '226'
   unit_instruction_language_id: Türkçe
@@ -7870,7 +7885,7 @@
   yoksis_id: 255371
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '226'
   unit_instruction_language_id: Türkçe
@@ -7883,7 +7898,7 @@
   yoksis_id: 325734
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '721'
   unit_instruction_language_id: Türkçe
@@ -7896,7 +7911,7 @@
   yoksis_id: 169563
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '421'
   unit_instruction_language_id: Türkçe
@@ -7908,7 +7923,7 @@
   yoksis_id: 244885
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '421'
   unit_instruction_language_id: Türkçe
@@ -7921,7 +7936,7 @@
   yoksis_id: 169533
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '421'
   unit_instruction_language_id: Türkçe
@@ -7934,7 +7949,7 @@
   yoksis_id: 169565
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '621'
   unit_instruction_language_id: Türkçe
@@ -7947,7 +7962,7 @@
   yoksis_id: 278856
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '621'
   unit_instruction_language_id: Türkçe
@@ -7960,7 +7975,7 @@
   yoksis_id: 169569
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '640'
   unit_instruction_language_id: Türkçe
@@ -7973,7 +7988,7 @@
   yoksis_id: 281621
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '640'
   unit_instruction_language_id: Türkçe
@@ -8603,7 +8618,7 @@
   yoksis_id: 122388
   parent_yoksis_id: 121946
   unit_type_id: Enstitü
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -8614,7 +8629,7 @@
   yoksis_id: 258247
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '225'
   unit_instruction_language_id: Türkçe
@@ -8627,7 +8642,7 @@
   yoksis_id: 261825
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '313'
   unit_instruction_language_id: Türkçe
@@ -8640,7 +8655,7 @@
   yoksis_id: 266388
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '146'
   unit_instruction_language_id: Türkçe
@@ -8655,7 +8670,7 @@
   yoksis_id: 175687
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '443'
   unit_instruction_language_id: Türkçe
@@ -8668,7 +8683,7 @@
   yoksis_id: 230727
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '443'
   unit_instruction_language_id: Türkçe
@@ -8681,7 +8696,7 @@
   yoksis_id: 225938
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '221'
   unit_instruction_language_id: Türkçe
@@ -8694,7 +8709,7 @@
   yoksis_id: 207834
   parent_yoksis_id: 122388
   unit_type_id: Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: Atakum
   foet_code: '347'
   unit_instruction_language_id: Türkçe
@@ -8708,7 +8723,7 @@
   yoksis_id: 255364
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '762'
   unit_instruction_language_id: Türkçe
@@ -8721,7 +8736,7 @@
   yoksis_id: 301218
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '226'
   unit_instruction_language_id: Türkçe
@@ -8734,7 +8749,7 @@
   yoksis_id: 219791
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '226'
   unit_instruction_language_id: Türkçe
@@ -8747,7 +8762,7 @@
   yoksis_id: 169480
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '220'
   unit_instruction_language_id: Türkçe
@@ -8759,7 +8774,7 @@
   yoksis_id: 230721
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '220'
   unit_instruction_language_id: Türkçe
@@ -8771,7 +8786,7 @@
   yoksis_id: 297036
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '212'
   unit_instruction_language_id: Türkçe
@@ -8784,7 +8799,7 @@
   yoksis_id: 230643
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '312'
   unit_instruction_language_id: Türkçe
@@ -8812,7 +8827,7 @@
   yoksis_id: 176119
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '380'
   unit_instruction_language_id: Türkçe
@@ -8825,7 +8840,7 @@
   yoksis_id: 230164
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '380'
   unit_instruction_language_id: Türkçe
@@ -8838,7 +8853,7 @@
   yoksis_id: 235191
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '345'
   unit_instruction_language_id: Türkçe
@@ -8851,7 +8866,7 @@
   yoksis_id: 219792
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '345'
   unit_instruction_language_id: Türkçe
@@ -8864,7 +8879,7 @@
   yoksis_id: 264822
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '344'
   unit_instruction_language_id: Türkçe
@@ -8877,7 +8892,7 @@
   yoksis_id: 264823
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '344'
   unit_instruction_language_id: Türkçe
@@ -8890,7 +8905,7 @@
   yoksis_id: 258246
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '311'
   unit_instruction_language_id: Türkçe
@@ -8903,7 +8918,7 @@
   yoksis_id: 283048
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '211'
   unit_instruction_language_id: Türkçe
@@ -8916,7 +8931,7 @@
   yoksis_id: 323943
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '312'
   unit_instruction_language_id: Türkçe
@@ -8929,7 +8944,7 @@
   yoksis_id: 219789
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '312'
   unit_instruction_language_id: Türkçe
@@ -8942,7 +8957,7 @@
   yoksis_id: 280862
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '345'
   unit_instruction_language_id: Türkçe
@@ -8955,7 +8970,7 @@
   yoksis_id: 281995
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '345'
   unit_instruction_language_id: Türkçe
@@ -8968,7 +8983,7 @@
   yoksis_id: 267770
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '313'
   unit_instruction_language_id: Türkçe
@@ -8983,7 +8998,7 @@
   yoksis_id: 169484
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '225'
   unit_instruction_language_id: Türkçe
@@ -8995,7 +9010,7 @@
   yoksis_id: 230726
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '225'
   unit_instruction_language_id: Türkçe
@@ -9008,7 +9023,7 @@
   yoksis_id: 169474
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '221'
   unit_instruction_language_id: Türkçe
@@ -9020,7 +9035,7 @@
   yoksis_id: 230720
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '221'
   unit_instruction_language_id: Türkçe
@@ -9032,7 +9047,7 @@
   yoksis_id: 323944
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '812'
   unit_instruction_language_id: Türkçe
@@ -9045,7 +9060,7 @@
   yoksis_id: 301219
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '812'
   unit_instruction_language_id: Türkçe
@@ -9058,7 +9073,7 @@
   yoksis_id: 169487
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '223'
   unit_instruction_language_id: Türkçe
@@ -9070,7 +9085,7 @@
   yoksis_id: 230723
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '223'
   unit_instruction_language_id: Türkçe
@@ -9083,7 +9098,7 @@
   yoksis_id: 169470
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '313'
   unit_instruction_language_id: Türkçe
@@ -9095,7 +9110,7 @@
   yoksis_id: 258555
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '345'
   unit_instruction_language_id: Türkçe
@@ -9121,7 +9136,7 @@
   yoksis_id: 281623
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '314'
   unit_instruction_language_id: Türkçe
@@ -9134,7 +9149,7 @@
   yoksis_id: 219793
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '314'
   unit_instruction_language_id: Türkçe
@@ -9147,7 +9162,7 @@
   yoksis_id: 323942
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '314'
   unit_instruction_language_id: Türkçe
@@ -9160,7 +9175,7 @@
   yoksis_id: 297535
   parent_yoksis_id: 122388
   unit_type_id: Disiplinlerarası Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: Atakum
   foet_code: '213'
   unit_instruction_language_id: Türkçe
@@ -9172,7 +9187,7 @@
   yoksis_id: 297536
   parent_yoksis_id: 297535
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '321'
   unit_instruction_language_id: Türkçe
@@ -9185,7 +9200,7 @@
   yoksis_id: 169479
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '221'
   unit_instruction_language_id: Türkçe
@@ -9197,7 +9212,7 @@
   yoksis_id: 230799
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '221'
   unit_instruction_language_id: Türkçe
@@ -9209,7 +9224,7 @@
   yoksis_id: 235190
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '345'
   unit_instruction_language_id: Türkçe
@@ -9222,7 +9237,7 @@
   yoksis_id: 209533
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '345'
   unit_instruction_language_id: Türkçe
@@ -9235,7 +9250,7 @@
   yoksis_id: 209537
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '345'
   unit_instruction_language_id: Türkçe
@@ -9248,7 +9263,7 @@
   yoksis_id: 207833
   parent_yoksis_id: 122388
   unit_type_id: Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: Atakum
   foet_code: '345'
   unit_instruction_language_id: Türkçe
@@ -9260,7 +9275,7 @@
   yoksis_id: 219261
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   foet_code: '347'
   unit_instruction_language_id: Türkçe
@@ -15257,7 +15272,7 @@
   yoksis_id: 333586
   parent_yoksis_id: 282779
   unit_type_id: Önlisans/lisans Programı
-  unit_status_id: Pasif
+  unit_status_id: Aktif
   district_id: Bafra
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -15411,6 +15426,7 @@
   parent_yoksis_id: 296412
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Pasif
+  district_id: 19 Mayıs
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -15420,6 +15436,7 @@
   parent_yoksis_id: 296412
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Pasif
+  district_id: 19 Mayıs
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -15429,6 +15446,7 @@
   parent_yoksis_id: 296414
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Pasif
+  district_id: 19 Mayıs
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -16620,7 +16638,7 @@
   yoksis_id: 381852
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   district_id_: Atakum
   unit_instruction_language_id: Türkçe
@@ -17569,6 +17587,7 @@
   parent_yoksis_id: 121946
   unit_type_id: Fakülte
   unit_status_id: Arşiv
+  district_id: Çarşamba
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
 
@@ -17577,6 +17596,7 @@
   parent_yoksis_id: 269766
   unit_type_id: Önlisans/lisans Programı
   unit_status_id: Arşiv
+  district_id: Çarşamba
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
@@ -19343,7 +19363,7 @@
   yoksis_id: 267774
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -19354,7 +19374,7 @@
   yoksis_id: 267772
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -19365,7 +19385,7 @@
   yoksis_id: 267775
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -19376,7 +19396,7 @@
   yoksis_id: 267776
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -19409,7 +19429,7 @@
   yoksis_id: 267779
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -19430,7 +19450,7 @@
   yoksis_id: 267781
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -19441,7 +19461,7 @@
   yoksis_id: 267780
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -20298,6 +20318,7 @@
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
   unit_status_id: Arşiv
+  district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -20731,7 +20752,7 @@
   yoksis_id: 235338
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Kapatılmış
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
@@ -21129,7 +21150,8 @@
   yoksis_id: 382240
   parent_yoksis_id: 382185
   unit_type_id: Önlisans/lisans Programı
-  unit_status_id: Pasif
+  unit_status_id: Aktif
+  district_id: Vezirköprü
   osym: 999999630
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -22245,7 +22267,7 @@
   yoksis_id: 383211
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   district_id_: Atakum
   unit_instruction_language_id: İngilizce
@@ -22258,7 +22280,8 @@
   yoksis_id: 383467
   parent_yoksis_id: 215488
   unit_type_id: Önlisans/lisans Programı
-  unit_status_id: Pasif
+  unit_status_id: Aktif
+  district_id: Tekkeköy
   osym: 999999757
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -22347,7 +22370,7 @@
   yoksis_id: 408265
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   district_id_: Atakum
   unit_instruction_language_id: Türkçe
@@ -22359,6 +22382,7 @@
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
   unit_status_id: Arşiv
+  district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -22368,17 +22392,19 @@
   yoksis_id: 406607
   parent_yoksis_id: 122386
   unit_type_id: Disiplinlerarası Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: Atakum
   district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  duration: 2
 
 - name: Su Ürünleri Avlama ve İşleme Teknolojisi (DR)
   yoksis_id: 387834
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
   unit_status_id: Arşiv
+  district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
@@ -22388,6 +22414,7 @@
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
   unit_status_id: Arşiv
+  district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -22397,6 +22424,7 @@
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
   unit_status_id: Arşiv
+  district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -22406,6 +22434,7 @@
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
   unit_status_id: Arşiv
+  district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
@@ -22415,7 +22444,7 @@
   yoksis_id: 390166
   parent_yoksis_id: 208606
   unit_type_id: Sanatta Yeterlilik Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: İlkadım
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
@@ -22494,7 +22523,7 @@
   yoksis_id: 393122
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   district_id_: Atakum
   unit_instruction_language_id: Türkçe
@@ -22506,7 +22535,7 @@
   yoksis_id: 393050
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   district_id_: Atakum
   unit_instruction_language_id: Türkçe
@@ -22518,7 +22547,7 @@
   yoksis_id: 392993
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   district_id_: Atakum
   unit_instruction_language_id: Türkçe
@@ -22530,7 +22559,7 @@
   yoksis_id: 392994
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   district_id_: Atakum
   unit_instruction_language_id: Türkçe
@@ -22542,23 +22571,24 @@
   yoksis_id: 392995
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
   duration: 2
 
-- name: Radyoloji Anabilim Dalı
+- name: Radyolojik Bilimler Anabilim Dalı (Disiplinlerarası)
   abbreviation: SAĞLIK-BİLİM-RADYO-AD
   yoksis_id: 407971
   parent_yoksis_id: 122387
-  unit_type_id: Anabilim Dalı
-  unit_status_id: Aktif
+  unit_type_id: Disiplinlerarası Anabilim Dalı
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   district_id_: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  duration: 4
   issues:
     - TIP-DAHİLİ-RADYO-AD ile mükerrer isim
 
@@ -22567,7 +22597,7 @@
   yoksis_id: 405472
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   district_id_: Atakum
   unit_instruction_language_id: Türkçe
@@ -22581,7 +22611,7 @@
   yoksis_id: 393049
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   district_id_: Atakum
   unit_instruction_language_id: Türkçe
@@ -22677,7 +22707,7 @@
   yoksis_id: 393051
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   district_id_: Atakum
   unit_instruction_language_id: Türkçe
@@ -22689,7 +22719,7 @@
   yoksis_id: 390151
   parent_yoksis_id: 122388
   unit_type_id: Disiplinlerarası Anabilim Dalı
-  unit_status_id: Aktif
+  unit_status_id: Kapatılmış
   district_id: Atakum
   district_id_: Atakum
   unit_instruction_language_id: Türkçe
@@ -22701,7 +22731,7 @@
   yoksis_id: 390152
   parent_yoksis_id: 390151
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   district_id_: Atakum
   unit_instruction_language_id: İngilizce
@@ -22713,7 +22743,7 @@
   yoksis_id: 406572
   parent_yoksis_id: 390151
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   district_id_: Atakum
   unit_instruction_language_id: İngilizce
@@ -22725,7 +22755,7 @@
   yoksis_id: 390153
   parent_yoksis_id: 390151
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   district_id_: Atakum
   unit_instruction_language_id: Türkçe
@@ -22737,7 +22767,7 @@
   yoksis_id: 406573
   parent_yoksis_id: 390151
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   district_id_: Atakum
   unit_instruction_language_id: İngilizce
@@ -22751,7 +22781,7 @@
   yoksis_id: 390206
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   district_id_: Atakum
   unit_instruction_language_id: Türkçe
@@ -22763,7 +22793,7 @@
   yoksis_id: 390207
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
-  unit_status_id: Aktif
+  unit_status_id: Yarı Pasif
   district_id: Atakum
   district_id_: Atakum
   unit_instruction_language_id: Türkçe
@@ -22852,6 +22882,3222 @@
   unit_type_id: Anabilim Dalı
   unit_status_id: Aktif
   district_id: Çarşamba
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Yönetim Bilişim Sistemleri Bölümü
+  yoksis_id: 411423
+  parent_yoksis_id: 293681
+  unit_type_id: Bölüm
+  unit_status_id: Aktif
+  district_id: Bafra
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: -1
+
+- name: Bilişim Teknolojileri Anabilim Dalı
+  yoksis_id: 411425
+  parent_yoksis_id: 411423
+  unit_type_id: Anabilim Dalı
+  unit_status_id: Aktif
+  district_id: Bafra
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: -1
+
+- name: Bilişim Yönetimi Anabilim Dalı
+  yoksis_id: 411424
+  parent_yoksis_id: 411423
+  unit_type_id: Anabilim Dalı
+  unit_status_id: Aktif
+  district_id: Bafra
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: -1
+
+- name: Türk Müziği Bölümü
+  yoksis_id: 411420
+  parent_yoksis_id: 122303
+  unit_type_id: Bölüm
+  unit_status_id: Aktif
+  district_id: İlkadım
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: -1
+
+- name: Türk Halk Müziği Anabilim Dalı
+  yoksis_id: 411421
+  parent_yoksis_id: 411420
+  unit_type_id: Anabilim Dalı
+  unit_status_id: Aktif
+  district_id: İlkadım
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: -1
+
+- name: Türk Sanat Müziği Anabilim Dalı
+  yoksis_id: 411422
+  parent_yoksis_id: 411420
+  unit_type_id: Anabilim Dalı
+  unit_status_id: Aktif
+  district_id: İlkadım
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: -1
+
+- name: Akıllı Sistemler Mühendisliği Anabilim Dalı (Disiplinlerarası)
+  yoksis_id: 409816
+  parent_yoksis_id: 122386
+  unit_type_id: Disiplinlerarası Anabilim Dalı
+  unit_status_id: Yarı Pasif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Akıllı Sistemler Mühendisliği (DR)
+  yoksis_id: 409817
+  parent_yoksis_id: 409816
+  unit_type_id: Disiplinlerarası Doktora Programı
+  unit_status_id: Yarı Pasif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Bahçe Bitkileri (YL) (Tezli) (İngilizce)
+  yoksis_id: 409562
+  parent_yoksis_id: 122386
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Yarı Pasif
+  district_id: Atakum
+  unit_instruction_language_id: İngilizce
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Sürdürülebilir Tarım Anabilim Dalı (Disiplinlerarası)
+  yoksis_id: 409601
+  parent_yoksis_id: 122386
+  unit_type_id: Disiplinlerarası Anabilim Dalı
+  unit_status_id: Yarı Pasif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Sürdürülebilir Tarım (Disiplinlerarası) (DR)
+  yoksis_id: 409602
+  parent_yoksis_id: 409601
+  unit_type_id: Disiplinlerarası Doktora Programı
+  unit_status_id: Yarı Pasif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Lisansüstü Eğitim Enstitüsü
+  yoksis_id: 410905
+  parent_yoksis_id: 121946
+  unit_type_id: Enstitü
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Acil Hemşireliği (DR)
+  yoksis_id: 411061
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Acil Hemşireliği (YL) (Tezli)
+  yoksis_id: 411062
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Adli Bilimler (YL) (Tezli)
+  yoksis_id: 410993
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Akıllı Sistemler Mühendisliği Anabilim Dalı (Disiplinlerarası)
+  yoksis_id: 410994
+  parent_yoksis_id: 410905
+  unit_type_id: Disiplinlerarası Anabilim Dalı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Akıllı Sistemler Mühendisliği (DR)
+  yoksis_id: 410996
+  parent_yoksis_id: 410994
+  unit_type_id: Disiplinlerarası Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Akıllı Sistemler Mühendisliği (YL) (Tezli)
+  yoksis_id: 410995
+  parent_yoksis_id: 410994
+  unit_type_id: Disiplinlerarası Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Alerji-İmmünoloji (YL) (Tezli)
+  yoksis_id: 411065
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Alman Dili Eğitimi (DR)
+  yoksis_id: 411967
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Yarı Pasif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Alman Dili Eğitimi (YL) (Tezli)
+  yoksis_id: 411968
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Yarı Pasif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Anatomi (DR)
+  yoksis_id: 411066
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Anatomi (YL) (Tezli)
+  yoksis_id: 411067
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Antrenörlük Eğitimi (DR)
+  yoksis_id: 411068
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Antrenörlük Eğitimi (YL) (Tezli)
+  yoksis_id: 411069
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Arkeoloji (DR)
+  yoksis_id: 410992
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Arkeoloji (YL) (Tezli)
+  yoksis_id: 410959
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Avrupa-Akdeniz Kültürler ve Turizm (YL) (Tezli)
+  yoksis_id: 410961
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Ağız, Diş ve Çene Cerrahisi (DR)
+  yoksis_id: 411063
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Ağız, Diş ve Çene Radyolojisi (DR)
+  yoksis_id: 411064
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Bahçe Bitkileri (DR)
+  yoksis_id: 410997
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Bahçe Bitkileri (YL) (İngilizce) (Tezli)
+  yoksis_id: 410999
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: İngilizce
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Bahçe Bitkileri (YL) (Tezli)
+  yoksis_id: 410998
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Beden Eğitimi ve Spor (DR)
+  yoksis_id: 410964
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Beden Eğitimi ve Spor (DR)
+  yoksis_id: 411070
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Beden Eğitimi ve Spor (YL) (Tezli)
+  yoksis_id: 411071
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Beslenme Bilimleri (YL) (Tezli)
+  yoksis_id: 411072
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Bilgisayar Mühendisliği (YL) (Tezli)
+  yoksis_id: 411000
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Bilgisayar ve Öğretim Teknikleri Eğitimi (YL) (Tezli)
+  yoksis_id: 411969
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Bitki Koruma (DR)
+  yoksis_id: 411001
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Bitki Koruma (YL) (Tezli)
+  yoksis_id: 411002
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Biyoistatistik ve Tıbbi Bilişim (DR)
+  yoksis_id: 411073
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Biyoistatistik ve Tıbbi Bilişim (YL) (Tezli)
+  yoksis_id: 411074
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Biyokimya (YL) (Tezli) (Veteriner)
+  yoksis_id: 411075
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Biyoloji (DR)
+  yoksis_id: 411003
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Biyoloji (YL) (Tezli)
+  yoksis_id: 411004
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Biyoloji (YL) (Tezsiz) (Uzaktan Öğretim)
+  yoksis_id: 411006
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Uzaktan Öğretim
+  duration: 2
+
+- name: Biyoloji (YL) (Tezsiz)
+  yoksis_id: 411005
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Biyoloji Eğitimi (YL) (Tezli)
+  yoksis_id: 411970
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Coğrafya (DR)
+  yoksis_id: 410912
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Coğrafya (YL) (Tezli)
+  yoksis_id: 410951
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Coğrafya Eğitimi (YL) (Tezli)
+  yoksis_id: 411971
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Yarı Pasif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Deney Hayvanları Araştırmaları (YL) (Tezli)
+  yoksis_id: 411076
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Dil ve Konuşma Terapisi (YL) (Tezli)
+  yoksis_id: 411077
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Dini Danışmanlık ve Rehberlik (YL) (Tezsiz) (İÖ)
+  yoksis_id: 410944
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: İkinci Öğretim
+  duration: 2
+
+- name: Doğum ve Kadın Hastalıkları Hemşireliği (DR)
+  yoksis_id: 411078
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Doğum ve Kadın Hastalıkları Hemşireliği (YL) (Tezli)
+  yoksis_id: 411079
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Doğum ve Kadın Hastalıkları Hemşireliği (YL) (Tezsiz) (İÖ)
+  yoksis_id: 411080
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: İkinci Öğretim
+  duration: 2
+
+- name: Dölerme ve Suni Tohumlama (DR)
+  yoksis_id: 411082
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Dölerme ve Suni Tohumlama (YL) (Tezli)
+  yoksis_id: 411081
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Ebelik (YL) (Tezli)
+  yoksis_id: 411083
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Elektrik-Elektronik Mühendisliği (DR)
+  yoksis_id: 411010
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Elektrik-Elektronik Mühendisliği (YL) (Tezli)
+  yoksis_id: 411011
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Endodonti (DR)
+  yoksis_id: 411084
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Endüstri İlişkileri Anabilim Dalı
+  yoksis_id: 410915
+  parent_yoksis_id: 410905
+  unit_type_id: Anabilim Dalı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Evde Hasta Bakım Hemşireliği (YL) (Tezli)
+  yoksis_id: 411085
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Evde Hasta Bakım Hemşireliği (YL) (Tezsiz) (İÖ)
+  yoksis_id: 411086
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: İkinci Öğretim
+  duration: 2
+
+- name: Evde Hasta Bakım Hemşireliği (YL) (Tezsiz) (Uzaktan Öğretim)
+  yoksis_id: 411087
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Uzaktan Öğretim
+  duration: 2
+
+- name: Evlilik ve Aile Danışmanlığı (YL) (Tezsiz) (İÖ)
+  yoksis_id: 410956
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: İkinci Öğretim
+  duration: 2
+
+- name: Eğitim Programları ve Öğretim (YL) (Tezli)
+  yoksis_id: 411972
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Eğitim Programları ve Öğretim (YL) (Tezsiz) (Uzaktan Öğretim)
+  yoksis_id: 411974
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Uzaktan Öğretim
+  duration: 2
+
+- name: Eğitim Programları ve Öğretim (YL) (Tezsiz)
+  yoksis_id: 411973
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Eğitim Yönetimi (DR)
+  yoksis_id: 411975
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Eğitim Yönetimi (YL) (Tezli)
+  yoksis_id: 411907
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Eğitim Yönetimi (YL) (Tezsiz) (İÖ)
+  yoksis_id: 411908
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: İkinci Öğretim
+  duration: 2
+
+- name: Eğitim Yönetimi (YL) (Tezsiz) (Uzaktan Öğretim)
+  yoksis_id: 411909
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Uzaktan Öğretim
+  duration: 2
+
+- name: Eğitim Yönetimi, Teftişi, Planlaması ve Ekonomisi (YL) (Tezli)
+  yoksis_id: 411904
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Yarı Pasif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Eğitim Yönetimi, Teftişi, Planlaması ve Ekonomisi (YL) (Tezsiz) (İÖ)
+  yoksis_id: 411905
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Yarı Pasif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: İkinci Öğretim
+  duration: 2
+
+- name: Eğitim Yönetimi, Teftişi, Planlaması ve Ekonomisi (YL) (Tezsiz) (Uzaktan Öğretim)
+  yoksis_id: 411906
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Yarı Pasif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Uzaktan Öğretim
+  duration: 2
+
+- name: Eğitimin Felsefi, Sosyal ve Tarihi Temelleri (DR)
+  yoksis_id: 411910
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Eğitimin Felsefi, Sosyal ve Tarihi Temelleri (YL) (Tezli)
+  yoksis_id: 411976
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Farmakoloji (DR)
+  yoksis_id: 411088
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Felsefe (DR)
+  yoksis_id: 410979
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Felsefe (YL) (Tezli)
+  yoksis_id: 410920
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Felsefe ve Din Bilimleri (DR)
+  yoksis_id: 410909
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Felsefe ve Din Bilimleri (YL) (Tezli)
+  yoksis_id: 410948
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Fen Bilgisi Eğitimi (DR)
+  yoksis_id: 411911
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Fen Bilgisi Eğitimi (YL) (Tezli)
+  yoksis_id: 411912
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Fen Bilgisi Eğitimi (YL) (Tezsiz) (İÖ)
+  yoksis_id: 411914
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: İkinci Öğretim
+  duration: 2
+
+- name: Fen Bilgisi Eğitimi (YL) (Tezsiz) (Uzaktan Öğretim)
+  yoksis_id: 411913
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Uzaktan Öğretim
+  duration: 2
+
+- name: Fizik (DR)
+  yoksis_id: 411012
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Fizik (YL) (Tezli)
+  yoksis_id: 411013
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Fizik (YL) (Tezsiz) (Uzaktan Öğretim)
+  yoksis_id: 411015
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Uzaktan Öğretim
+  duration: 2
+
+- name: Fizik (YL) (Tezsiz)
+  yoksis_id: 411014
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Fizik Eğitimi (YL) (Tezli)
+  yoksis_id: 411977
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Fizyoloji (DR)
+  yoksis_id: 411089
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Fizyoloji (YL) (Tezli)
+  yoksis_id: 411090
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Fransız Dili Eğitimi (YL) (Tezli)
+  yoksis_id: 411978
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Yarı Pasif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Geleneksel Türk Müziği (YL) (Tezli)
+  yoksis_id: 410971
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Girişimcilik ve Yenilikçilik Anabilim Dalı (Disiplinlerarası)
+  yoksis_id: 410985
+  parent_yoksis_id: 410905
+  unit_type_id: Disiplinlerarası Anabilim Dalı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Girişimcilik ve Yenilikçilik (YL) (İngilizce) (Tezli)
+  yoksis_id: 410986
+  parent_yoksis_id: 410985
+  unit_type_id: Disiplinlerarası Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: İngilizce
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Girişimcilik ve Yenilikçilik (YL) (İngilizce) (Tezsiz)
+  yoksis_id: 410988
+  parent_yoksis_id: 410985
+  unit_type_id: Disiplinlerarası Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: İngilizce
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Girişimcilik ve Yenilikçilik (YL) (Tezli)
+  yoksis_id: 410987
+  parent_yoksis_id: 410985
+  unit_type_id: Disiplinlerarası Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Yenilikçilik ve Girişimcilik (YL) (İngilizce) (Tezsiz) (Uzaktan Öğretim)
+  yoksis_id: 410989
+  parent_yoksis_id: 410985
+  unit_type_id: Disiplinlerarası Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: İngilizce
+  unit_instruction_type_id: Uzaktan Öğretim
+  duration: 2
+
+- name: Görsel İletişim Tasarımı (YL) (Tezli)
+  yoksis_id: 411212
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Gıda Mühendisliği (DR)
+  yoksis_id: 411016
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Gıda Mühendisliği (YL) (Tezli)
+  yoksis_id: 411017
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Halk Sağlığı (DR)
+  yoksis_id: 411091
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Halk Sağlığı Hemşireliği (YL) (Tezli)
+  yoksis_id: 411092
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Harita Mühendisliği (DR)
+  yoksis_id: 411018
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Harita Mühendisliği (YL) (Tezli)
+  yoksis_id: 411019
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Hastalıklar (DR) (Veteriner)
+  yoksis_id: 411093
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Hayvan Besleme ve Beslenme Hastalıkları (DR)
+  yoksis_id: 411094
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Hayvan Besleme ve Beslenme Hastalıkları (YL) (Tezli)
+  yoksis_id: 411095
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Hemşirelik (DR)
+  yoksis_id: 411096
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Hemşirelik (YL) (Tezli)
+  yoksis_id: 411097
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Hemşirelik (YL) (Tezsiz)
+  yoksis_id: 411098
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Hesaplamalı Bilimler (DR)
+  yoksis_id: 411020
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Histoloji ve Embriyoloji (DR)
+  yoksis_id: 411099
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Histoloji ve Embriyoloji (YL) (Tezli)
+  yoksis_id: 411100
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: İktisat (DR)
+  yoksis_id: 410968
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: İktisat (YL) (Tezli)
+  yoksis_id: 410922
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: İktisat (YL) (Tezsiz) (İÖ)
+  yoksis_id: 410982
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: İkinci Öğretim
+  duration: 2
+
+- name: İletişim Bilimleri Anabilim Dalı (Disiplinlerarası)
+  yoksis_id: 410972
+  parent_yoksis_id: 410905
+  unit_type_id: Disiplinlerarası Anabilim Dalı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Medya ve İletişim Bilimleri (YL) (Tezli)
+  yoksis_id: 410973
+  parent_yoksis_id: 410972
+  unit_type_id: Disiplinlerarası Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: İlköğretim (DR)
+  yoksis_id: 411979
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: İlköğretim Matematik Eğitimi (YL) (Tezli)
+  yoksis_id: 411980
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: İlköğretim Matematik Eğitimi (YL) (Tezsiz) (İÖ)
+  yoksis_id: 411981
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: İkinci Öğretim
+  duration: 2
+
+- name: İngiliz Dili Eğitimi (YL) (Tezli)
+  yoksis_id: 411982
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Yarı Pasif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: İnşaat Mühendisliği (DR)
+  yoksis_id: 411021
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: İnşaat Mühendisliği (YL) (Tezli)
+  yoksis_id: 411022
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: İslam Hukuku (YL) (Tezli)
+  yoksis_id: 410990
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: İslam Tarihi ve Sanatları (DR)
+  yoksis_id: 410908
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: İslam Tarihi ve Sanatları (YL) (Tezli)
+  yoksis_id: 410952
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: İstatistik (DR)
+  yoksis_id: 411023
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: İstatistik (YL) (İngilizce) (Tezli)
+  yoksis_id: 411025
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: İngilizce
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: İstatistik (YL) (Tezli)
+  yoksis_id: 411024
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: İç Hastalıkları (DR) (Veteriner)
+  yoksis_id: 411101
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: İç Hastalıkları (YL) (Veteriner) (Tezli)
+  yoksis_id: 411102
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: İşletme (DR)
+  yoksis_id: 410953
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: İşletme (YL) (Tezli)
+  yoksis_id: 410916
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: İşletme (YL) (Tezsiz) (İÖ) (Canik Başarı Ortak)
+  yoksis_id: 410955
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Kapatılmış
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: İkinci Öğretim
+  duration: 2
+
+- name: İşletme (YL) (Tezsiz) (İÖ) (Ondokuz Mayıs Ortak) (Ücretli)
+  yoksis_id: 410977
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Kapatılmış
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: İkinci Öğretim
+  duration: 2
+
+- name: İşletme (YL) (Tezsiz)
+  yoksis_id: 410917
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: İkinci Öğretim
+  duration: 2
+
+- name: İşletme Anabilim Dalı
+  yoksis_id: 410914
+  parent_yoksis_id: 410905
+  unit_type_id: Anabilim Dalı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: İşletme ve Endüstri İlişkileri (YL) (Tezsiz) (İÖ)
+  yoksis_id: 410918
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: İkinci Öğretim
+  duration: 2
+
+- name: Kadın ve Aile Araştırmaları (YL) (Tezli)
+  yoksis_id: 410946
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Kamu Hukuku (DR) (Karadeniz Teknikn Üniversitesi Ortak)
+  yoksis_id: 410943
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Yarı Pasif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Kamu Hukuku (YL) (Tezli)
+  yoksis_id: 410913
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Kamu Hukuku (YL) (Tezsiz) (İÖ)
+  yoksis_id: 410945
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: İkinci Öğretim
+  duration: 2
+
+- name: Kamu Yönetimi (DR)
+  yoksis_id: 410954
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Kamu Yönetimi (YL) (Tezli)
+  yoksis_id: 410921
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Kardiyopulmoner Fizyoterapi (YL) (Tezli)
+  yoksis_id: 411103
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Kelam (YL) (Tezli)
+  yoksis_id: 410991
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Kimya (DR)
+  yoksis_id: 411026
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Kimya (YL) (Tezli)
+  yoksis_id: 411028
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Kimya (YL) (Tezsiz) (Uzaktan Öğretim)
+  yoksis_id: 411029
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Uzaktan Öğretim
+  duration: 2
+
+- name: Kimya Mühendisliği (YL) (Tezli)
+  yoksis_id: 411027
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Klinik Sinir Bilimleri (DR)
+  yoksis_id: 411104
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Klinik Toksikoloji Anabilim Dalı (Disiplinlerarası)
+  yoksis_id: 411105
+  parent_yoksis_id: 410905
+  unit_type_id: Disiplinlerarası Anabilim Dalı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Klinik Toksikoloji (DR)
+  yoksis_id: 411106
+  parent_yoksis_id: 411105
+  unit_type_id: Disiplinlerarası Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Makine Mühendisliği (DR)
+  yoksis_id: 411030
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Makine Mühendisliği (YL) (Tezli)
+  yoksis_id: 411031
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Matematik (DR)
+  yoksis_id: 411032
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Matematik (YL) (Tezli)
+  yoksis_id: 411033
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Matematik (YL) (Tezsiz) (Uzaktan Öğretim)
+  yoksis_id: 411034
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Uzaktan Öğretim
+  duration: 2
+
+- name: Metalurji ve Malzeme Mühendisliği (YL) (Tezli)
+  yoksis_id: 411035
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Mikrobiyoloji Anabilim Dalı (Disiplinlerarası)
+  yoksis_id: 411107
+  parent_yoksis_id: 410905
+  unit_type_id: Disiplinlerarası Anabilim Dalı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Veterinerlik Mikrobiyolojisi (DR)
+  yoksis_id: 411108
+  parent_yoksis_id: 411107
+  unit_type_id: Disiplinlerarası Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Moleküler Biyoloji ve Genetik (YL) (Tezli)
+  yoksis_id: 411036
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Moleküler Tıp (DR)
+  yoksis_id: 411109
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Moleküler Tıp (YL) (Tezli)
+  yoksis_id: 411110
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Muhasebe-Finansman (YL) (Tezli)
+  yoksis_id: 410962
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Muhasebe-Finansman (YL) (Tezsiz)
+  yoksis_id: 410963
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Müzik Eğitimi (DR)
+  yoksis_id: 411983
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Yarı Pasif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Müzik Eğitimi (YL) (Tezli)
+  yoksis_id: 411984
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Müzik Eğitimi (YL) (Tezsiz) (İÖ)
+  yoksis_id: 411985
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: İkinci Öğretim
+  duration: 2
+
+- name: Müzikte Yorumculuk (Sy)
+  yoksis_id: 411213
+  parent_yoksis_id: 410905
+  unit_type_id: Sanatta Yeterlilik Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Müzikte Yorumculuk (YL) (Tezli)
+  yoksis_id: 411214
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Müzikte Yorumculuk (YL) (Tezsiz) (İÖ)
+  yoksis_id: 411215
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: İkinci Öğretim
+  duration: 2
+
+- name: Nanobilim ve Nanoteknoloji Anabilim Dalı (Disiplinlerarası)
+  yoksis_id: 411037
+  parent_yoksis_id: 410905
+  unit_type_id: Disiplinlerarası Anabilim Dalı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Nanobilim ve Nanoteknoloji (İngilizce) (DR)
+  yoksis_id: 411038
+  parent_yoksis_id: 411037
+  unit_type_id: Disiplinlerarası Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: İngilizce
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Nanobilim ve Nanoteknoloji (YL) (İngilizce) (Tezli)
+  yoksis_id: 411039
+  parent_yoksis_id: 411037
+  unit_type_id: Disiplinlerarası Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: İngilizce
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Odyoloji (YL) (Tezli)
+  yoksis_id: 411111
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Oral Diagnoz ve Radyoloji (DR)
+  yoksis_id: 411112
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Ortaöğretim Fen ve Matematik Alanlar Eğitimi (DR)
+  yoksis_id: 411915
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Ortaöğretim Sosyal Alanlar Eğitimi (DR)
+  yoksis_id: 411916
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Ortodonti (DR)
+  yoksis_id: 411113
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Parazitoloji (DR)
+  yoksis_id: 411114
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Patoloji (DR)
+  yoksis_id: 411115
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Pedodonti (DR)
+  yoksis_id: 411116
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Periodontoloji (DR)
+  yoksis_id: 411117
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Protetik Diş Tedavisi (DR)
+  yoksis_id: 411118
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Psikoloji (YL) (Tezli)
+  yoksis_id: 410958
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Radyolojik Bilimler Anabilim Dalı (Disiplinlerarası)
+  yoksis_id: 411119
+  parent_yoksis_id: 410905
+  unit_type_id: Disiplinlerarası Anabilim Dalı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Radyolojik Bilimler (DR)
+  yoksis_id: 411120
+  parent_yoksis_id: 411119
+  unit_type_id: Disiplinlerarası Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Radyolojik Bilimler (YL) (Tezli)
+  yoksis_id: 411121
+  parent_yoksis_id: 411119
+  unit_type_id: Disiplinlerarası Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Rehberlik ve Psikolojik Danışmanlık (DR)
+  yoksis_id: 411917
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Yarı Pasif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Rehberlik ve Psikolojik Danışmanlık (YL) (Tezli)
+  yoksis_id: 411918
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Yarı Pasif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Resim (YL) (Tezli)
+  yoksis_id: 411216
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Resim-İş Eğitimi (DR)
+  yoksis_id: 411919
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Resim-İş Eğitimi (YL) (Tezli)
+  yoksis_id: 411920
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Restoratif Diş Tedavisi (DR)
+  yoksis_id: 411122
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Ruh Sağlığı ve Hastalıkları Hemşireliği (YL) (Tezli)
+  yoksis_id: 411123
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Sanat Tarihi (YL) (Tezli)
+  yoksis_id: 410970
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Sanat ve Tasarım (Sy)
+  yoksis_id: 411217
+  parent_yoksis_id: 410905
+  unit_type_id: Sanatta Yeterlilik Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Sağlık Kurumları Yönetimi (YL) (Tezsiz) (İÖ) (OMÜ Ortak) (Ücretli)
+  yoksis_id: 410978
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Kapatılmış
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: İkinci Öğretim
+  duration: 2
+
+- name: Sağlık Yönetimi (DR)
+  yoksis_id: 411124
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Sağlık Yönetimi (YL) (Tezli)
+  yoksis_id: 411125
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Sağlık Yönetimi (YL) (Tezsiz) (İÖ)
+  yoksis_id: 411127
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: İkinci Öğretim
+  duration: 2
+
+- name: Sağlık Yönetimi (YL) (Tezsiz) (İÖ)
+  yoksis_id: 411126
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: İkinci Öğretim
+  duration: 2
+
+- name: Sağlık, Gıda Güvenliği ve İlgili Politikalar (YL) (Tezli)
+  yoksis_id: 411040
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Sinir Bilimleri Anabilim Dalı (Disiplinlerarası)
+  yoksis_id: 411128
+  parent_yoksis_id: 410905
+  unit_type_id: Disiplinlerarası Anabilim Dalı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Sinir Bilimleri (DR)
+  yoksis_id: 411129
+  parent_yoksis_id: 411128
+  unit_type_id: Disiplinlerarası Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Sinir Bilimleri (YL) (Tezli)
+  yoksis_id: 411130
+  parent_yoksis_id: 411128
+  unit_type_id: Disiplinlerarası Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Siyaset Bilimi ve Kamu Yönetimi (YL) (Tezsiz) (Uzaktan Öğretim)
+  yoksis_id: 410965
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Uzaktan Öğretim
+  duration: 2
+
+- name: Sosyal Bilgiler Eğitimi (DR)
+  yoksis_id: 411992
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Yarı Pasif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Sosyal Bilgiler Eğitimi (DR)
+  yoksis_id: 411988
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Sosyal Bilgiler Eğitimi (YL) (Tezli)
+  yoksis_id: 411989
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Sosyal Bilgiler Eğitimi (YL) (Tezsiz) (İÖ)
+  yoksis_id: 411990
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: İkinci Öğretim
+  duration: 2
+
+- name: Sosyal Bilgiler Eğitimi (YL) (Tezsiz) (Uzaktan Öğretim)
+  yoksis_id: 411991
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Uzaktan Öğretim
+  duration: 2
+
+- name: Sosyoloji (DR)
+  yoksis_id: 410983
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Sosyoloji (YL) (Tezli)
+  yoksis_id: 410919
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Spor Yöneticiliği (DR)
+  yoksis_id: 410967
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Spor Yöneticiliği (YL) (Tezli)
+  yoksis_id: 410969
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Su Ürünleri Hastalıkları (YL) (Tezli)
+  yoksis_id: 411131
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Sucul Hayvan Hastalıkları (DR)
+  yoksis_id: 411132
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Sürdürülebilir Tarım Anabilim Dalı (Disiplinlerarası)
+  yoksis_id: 411041
+  parent_yoksis_id: 410905
+  unit_type_id: Disiplinlerarası Anabilim Dalı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Sürdürülebilir Tarım (DR)
+  yoksis_id: 411042
+  parent_yoksis_id: 411041
+  unit_type_id: Disiplinlerarası Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Sınıf Eğitimi (DR)
+  yoksis_id: 411921
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Sınıf Eğitimi (YL) (Tezli)
+  yoksis_id: 411922
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Sınıf Eğitimi (YL) (Tezsiz) (İÖ)
+  yoksis_id: 411986
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: İkinci Öğretim
+  duration: 2
+
+- name: Sınıf Eğitimi (YL) (Tezsiz) (Uzaktan Öğretim)
+  yoksis_id: 411987
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Uzaktan Öğretim
+  duration: 2
+
+- name: Tarih (DR)
+  yoksis_id: 410910
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Tarih (YL) (Tezli)
+  yoksis_id: 410950
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Tarih Eğitimi (YL) (Tezli)
+  yoksis_id: 411993
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Tarih Eğitimi (YL) (Tezsiz) (Uzaktan Öğretim)
+  yoksis_id: 411994
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Uzaktan Öğretim
+  duration: 2
+
+- name: Tarla Bitkileri (DR)
+  yoksis_id: 411051
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Tarla Bitkileri (YL) (Tezli)
+  yoksis_id: 411052
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Tarım Ekonomisi (DR)
+  yoksis_id: 411043
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Tarım Ekonomisi (YL) (Tezli)
+  yoksis_id: 411044
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Tarım Makineleri ve Teknolojileri Mühendisliği (DR)
+  yoksis_id: 411045
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Tarım Makineleri ve Teknolojileri Mühendisliği (YL) (Tezli)
+  yoksis_id: 411046
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Tarımsal Biyoteknoloji (DR)
+  yoksis_id: 411047
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Tarımsal Biyoteknoloji (YL) (Tezli)
+  yoksis_id: 411048
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Tarımsal Yapılar ve Sulama (DR)
+  yoksis_id: 411049
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Tarımsal Yapılar ve Sulama (YL) (Tezli)
+  yoksis_id: 411050
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Taşınmaz Değerleme ve Geliştirme (YL) (Tezsiz) (Uzaktan Öğretim)
+  yoksis_id: 411053
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Uzaktan Öğretim
+  duration: 2
+
+- name: Temel İslam Bilimleri (DR)
+  yoksis_id: 410907
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Temel İslam Bilimleri (YL) (Tezli)
+  yoksis_id: 410947
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Toprak Bilimi ve Bitki Besleme (DR)
+  yoksis_id: 411054
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Toprak Bilimi ve Bitki Besleme (YL) (Tezli)
+  yoksis_id: 411055
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Turizm İşletmeciliği (YL) (Tezli)
+  yoksis_id: 410984
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Turizm İşletmeciliği (YL) (Tezsiz)
+  yoksis_id: 410980
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Türk Dili ve Edebiyatı (DR)
+  yoksis_id: 410911
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Türk Dili ve Edebiyatı (YL) (Tezli)
+  yoksis_id: 410949
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Türk Dili ve Edebiyatı (YL) (Ücretli)
+  yoksis_id: 410981
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Yarı Pasif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Türkiye Cumhuriyeti Tarihi (DR)
+  yoksis_id: 410966
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Yarı Pasif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Türkçe Eğitimi (DR)
+  yoksis_id: 411995
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Türkçe Eğitimi (YL) (Tezli)
+  yoksis_id: 411996
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Tıbbi Biyokimya (DR)
+  yoksis_id: 411133
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Tıbbi Biyokimya (DR)
+  yoksis_id: 411135
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Tıbbi Biyokimya (YL) (Tezli)
+  yoksis_id: 411134
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Tıbbi Biyokimya (YL) (Tezli)
+  yoksis_id: 411136
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Tıbbi Farmakoloji (DR)
+  yoksis_id: 411137
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Tıbbi Farmakoloji (YL) (Tezli)
+  yoksis_id: 411138
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Tıbbi Mikrobiyoloji (DR)
+  yoksis_id: 411139
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Tıbbi Mikrobiyoloji (YL) (Tezli)
+  yoksis_id: 411140
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Tıbbi Resimleme Anabilim Dalı (Disiplinlerarası)
+  yoksis_id: 412023
+  parent_yoksis_id: 410905
+  unit_type_id: Disiplinlerarası Anabilim Dalı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Tıbbi Resimleme (YL) (Tezli)
+  yoksis_id: 411218
+  parent_yoksis_id: 412023
+  unit_type_id: Disiplinlerarası Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Tıp Hukuku Anabilim Dalı (Disiplinlerarası)
+  yoksis_id: 411141
+  parent_yoksis_id: 410905
+  unit_type_id: Disiplinlerarası Anabilim Dalı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Tıp Hukuku (YL) (Tezli)
+  yoksis_id: 411142
+  parent_yoksis_id: 411141
+  unit_type_id: Disiplinlerarası Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Uluslararası Düzenleyici Bilim (YL) (Tezli)
+  yoksis_id: 411143
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Uluslararası Ticaret ve İşletmecilik (YL) (Tezli) (Ücretli)
+  yoksis_id: 410974
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Yarı Pasif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Uluslararası Ticaret ve İşletmecilik (YL) (Tezsiz) (Ücretli)
+  yoksis_id: 410975
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Yarı Pasif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Uluslararası İlişkiler (YL) (Tezli)
+  yoksis_id: 410906
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Uçak ve Uzay Bilimleri Mühendisliği (YL) (Tezli)
+  yoksis_id: 411056
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Veteriner Hekimliği Tarihi ve Deontoloji (DR)
+  yoksis_id: 411144
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Veteriner Hekimliği Tarihi ve Deontoloji (YL) (Tezli)
+  yoksis_id: 411145
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Veterinerlik Anatomisi (DR)
+  yoksis_id: 411148
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Veterinerlik Anatomisi (YL) (Tezli)
+  yoksis_id: 411149
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Veterinerlik Besin Hijyeni ve Teknolojisi (DR)
+  yoksis_id: 411150
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Veterinerlik Besin Hijyeni ve Teknolojisi (YL) (Tezli)
+  yoksis_id: 411151
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Veterinerlik Biyokimyası (DR)
+  yoksis_id: 411152
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Veterinerlik Cerrahisi (DR)
+  yoksis_id: 411153
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Veterinerlik Cerrahisi (YL) (Tezli)
+  yoksis_id: 411154
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Veterinerlik Doğum ve Jinekolojisi (DR)
+  yoksis_id: 411155
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Veterinerlik Doğum ve Jinekolojisi (YL) (Tezli)
+  yoksis_id: 411156
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Veterinerlik Farmakoloji ve Toksikolojisi (DR)
+  yoksis_id: 411157
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Veterinerlik Farmakoloji ve Toksikolojisi (YL) (Tezli)
+  yoksis_id: 411158
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Veterinerlik Fizyolojisi (YL) (Tezli)
+  yoksis_id: 411159
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Veterinerlik Histoloji ve Embriyoloji (YL) (Tezli)
+  yoksis_id: 411146
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Veterinerlik Mikrobiyolojisi (YL) (Tezli)
+  yoksis_id: 411160
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Veterinerlik Parazitoloji (YL) (Tezli)
+  yoksis_id: 411161
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Veterinerlik Patolojsi (DR)
+  yoksis_id: 411162
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Veterinerlik Zootekni (DR)
+  yoksis_id: 411163
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Veterinerlik İmmünihistoloji ve Embriyoloji (DR)
+  yoksis_id: 411147
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Viroloji (DR) (Veteriner)
+  yoksis_id: 411165
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Viroloji (DR)
+  yoksis_id: 411164
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Viroloji (YL) (Veteriner) (Tezli)
+  yoksis_id: 411166
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Yeni Türk Edebiyatı (YL) (Tezli) (Ücretli)
+  yoksis_id: 410976
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Yarı Pasif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Yenilenebilir Enerji ve Uygulamaları Anabilim Dalı (Disiplinlerarası)
+  yoksis_id: 411057
+  parent_yoksis_id: 410905
+  unit_type_id: Disiplinlerarası Anabilim Dalı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+
+- name: Yenilenebilir Enerji ve Uygulamaları (YL) (Tezli)
+  yoksis_id: 411058
+  parent_yoksis_id: 411057
+  unit_type_id: Disiplinlerarası Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Yerel Yönetimler (YL) (Tezsiz) (Uzaktan Öğretim)
+  yoksis_id: 410960
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Uzaktan Öğretim
+  duration: 2
+
+- name: Zootekni (DR) (Veteriner)
+  yoksis_id: 411167
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Zootekni (DR)
+  yoksis_id: 411059
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Zootekni (YL) (Tezli) (Veteriner)
+  yoksis_id: 411168
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Zootekni (YL) (Tezli)
+  yoksis_id: 411060
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Çevre Mühendisliği (DR)
+  yoksis_id: 411007
+  parent_yoksis_id: 410905
+  unit_type_id: Doktora Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Çevre Mühendisliği (YL) (İngilizce) (Tezli)
+  yoksis_id: 411009
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: İngilizce
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Çevre Mühendisliği (YL) (Tezli)
+  yoksis_id: 411008
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Özel Hukuk (YL) (Tezli) (Karadeniz Teknik Üniversitesi Ortak)
+  yoksis_id: 410957
+  parent_yoksis_id: 410905
+  unit_type_id: Yüksek Lisans Programı
+  unit_status_id: Yarı Pasif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Acil Yardım ve Afet Yönetimi Bölümü
+  yoksis_id: 410893
+  parent_yoksis_id: 293577
+  unit_type_id: Bölüm
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: -1
+
+- name: Acil Durum ve Afet Yönetimi Anabilim Dalı
+  yoksis_id: 410894
+  parent_yoksis_id: 410893
+  unit_type_id: Anabilim Dalı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: -1
+
+- name: Ergoterapi Bölümü
+  yoksis_id: 410895
+  parent_yoksis_id: 293577
+  unit_type_id: Bölüm
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: -1
+
+- name: Ergoterapi Anabilim Dalı
+  yoksis_id: 410896
+  parent_yoksis_id: 410895
+  unit_type_id: Anabilim Dalı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: -1
+
+- name: Gerontoloji Bölümü
+  yoksis_id: 410897
+  parent_yoksis_id: 293577
+  unit_type_id: Bölüm
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: -1
+
+- name: Gerontoloji Anabilim Dalı
+  yoksis_id: 410898
+  parent_yoksis_id: 410897
+  unit_type_id: Anabilim Dalı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: -1
+
+- name: Ortez-Protez Programı
+  yoksis_id: 414118
+  parent_yoksis_id: 386328
+  unit_type_id: Önlisans/lisans Programı
+  unit_status_id: Aktif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 4
+
+- name: Elektronörofizyoloji Programı
+  yoksis_id: 410890
+  parent_yoksis_id: 169645
+  unit_type_id: Önlisans/lisans Programı
+  unit_status_id: Pasif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Ortopedik Protez ve Ortez Programı
+  yoksis_id: 410891
+  parent_yoksis_id: 169645
+  unit_type_id: Önlisans/lisans Programı
+  unit_status_id: Pasif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Otopsi Yardımcılığı Programı
+  yoksis_id: 410892
+  parent_yoksis_id: 169645
+  unit_type_id: Önlisans/lisans Programı
+  unit_status_id: Pasif
+  district_id: Atakum
+  unit_instruction_language_id: Türkçe
+  unit_instruction_type_id: Normal Öğretim
+  duration: 2
+
+- name: Elektromekanik Taşıyıcılar Programı
+  yoksis_id: 411643
+  parent_yoksis_id: 202463
+  unit_type_id: Önlisans/lisans Programı
+  unit_status_id: Pasif
+  district_id: Tekkeköy
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2

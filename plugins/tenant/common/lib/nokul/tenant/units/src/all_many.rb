@@ -13,8 +13,8 @@ module Nokul
           collection.label    = 'Tüm birimler'
           collection.collects = ALLOne
 
-          def code
-            Tenant::Units::Coder.code self, self.class.config.coding
+          def code(old_units)
+            Tenant::Units::Coder.code new_units: self, old_units: old_units, config: self.class.config.coding
             self
           end
 
@@ -24,7 +24,7 @@ module Nokul
               *Tenant::Units.load_source('src/det').map(&:to_h),
               *Tenant::Units.load_source('src/uni').map(&:to_h)
             ]
-            all_units.code
+            all_units.code self
           end
         end
       end
