@@ -39,7 +39,7 @@ YÖKSİS
 #### `all`
 
 Tüm aday öğrenci listesini getirir. Sorguda kullanılan `type` aşağıdakilerden
-birisi olabilir:
+birisi olabilir.
 
 - `YKS` (Yükseköğretim Kurumları Sınavı)
 - `YKS_EK` (YKS Ek Yerleştirme)
@@ -98,7 +98,7 @@ Xokul::Yoksis::Prospectives.photo id_number
 
 Pagination yalnızca aşağıdaki metotlar için kullanılabilir.
 
-- `students`
+- `all`
 - `through_electronic`
 - `without_electronics`
 
