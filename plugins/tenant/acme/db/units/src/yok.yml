@@ -1,5 +1,5 @@
 # REFER DOCUMENTATION TO EDIT THIS FILE.  PLEASE NOTE THAT:
-# 
+#
 # - EXISTING RAW ATTRIBUTES WILL NORMALLY BE OVERWRITTEN ON NEXT UPDATE.
 # - COMMENTS AND EXTRA BLANK LINES WILL NOT BE PRESERVED.
 ---
@@ -1326,7 +1326,7 @@
   founded_at: 26.02.2010
 
 - name: Bilgisayar ve Öğretim Teknolojileri Eğitimi (YL) (Tezli)
-  abbreviation: BÖTE-YL
+  abbreviation: BÖTE-YL-DİĞER
   yoksis_id: 244883
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1339,7 +1339,7 @@
   founded_at: 15.08.2013
 
 - name: Biyoloji Eğitimi (YL) (Tezli)
-  abbreviation: BİYOEĞ-YL
+  abbreviation: BİYOEĞ-YL-DİĞER
   yoksis_id: 301215
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1377,10 +1377,10 @@
   founded_at: 03.05.2011
   issues:
     - üst birim olan Eğitim Bilimleri (Dr) arşiv olarak görünüyor
-    - Detsis tarafında anabilim dalı başkanlığı enstitüye bağlı
+    - Detsis tarafında anabilim dalı başkanlığı lisansüstü altında
 
 - name: Eğitimin Felsefi, Sosyal ve Tarihi Temelleri (YL) (Tezli)
-  abbreviation: EFST-YL
+  abbreviation: EFST-YL-DİĞER
   yoksis_id: 327688
   parent_yoksis_id: 174846
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -1393,7 +1393,7 @@
   founded_at: '08.08.2017'
 
 - name: Eğitim Programları ve Öğretim (YL) (Tezli)
-  abbreviation: EPO-YL
+  abbreviation: EPO-YL-DİĞER
   yoksis_id: 207884
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1406,7 +1406,7 @@
   founded_at: 03.05.2011
 
 - name: Eğitim Programları ve Öğretim (YL) (Tezsiz)
-  abbreviation: EPO-YZ
+  abbreviation: EPO-YZ-DİĞER
   yoksis_id: 339817
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1419,7 +1419,7 @@
   founded_at: '09.05.2018'
 
 - name: Eğitim Yönetimi (DR)
-  abbreviation: EY-DR
+  abbreviation: EY-DR-DİĞER
   yoksis_id: 327630
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
@@ -1432,7 +1432,7 @@
   founded_at: '08.08.2017'
 
 - name: Eğitim Yönetimi (YL) (Tezli)
-  abbreviation: EY-YL
+  abbreviation: EY-YL-DİĞER
   yoksis_id: 327629
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1445,7 +1445,7 @@
   founded_at: '08.08.2017'
 
 - name: Eğitim Yönetimi (YL) (Tezsiz) (Uzaktan Öğretim)
-  abbreviation: EY-YZ-UZ
+  abbreviation: EY-YZ-UZ-DİĞER
   yoksis_id: 327678
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1458,7 +1458,7 @@
   founded_at: '08.08.2017'
 
 - name: Eğitim Yönetimi (YL) (Tezsiz) (İÖ)
-  abbreviation: EY-YZ-2
+  abbreviation: EY-YZ-2-DİĞER
   yoksis_id: 327631
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1471,7 +1471,7 @@
   founded_at: '08.08.2017'
 
 - name: Eğitimin Felsefi, Sosyal ve Tarihi Temelleri (DR)
-  abbreviation: EFST-DR
+  abbreviation: EFST-DR-DİĞER
   yoksis_id: 376129
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
@@ -1484,7 +1484,7 @@
   founded_at: 27.06.2018
 
 - name: Fen Bilgisi Eğitim (DR)
-  abbreviation: FENBİL-DR
+  abbreviation: FENBİL-DR-DİĞER
   yoksis_id: 267754
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
@@ -1497,7 +1497,7 @@
   founded_at: '08.08.2017'
 
 - name: Fen Bilgisi Eğitim (YL) (Tezli)
-  abbreviation: FENBİL-YL
+  abbreviation: FENBİL-YL-DİĞER
   yoksis_id: 267753
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1512,7 +1512,7 @@
     - Kuruluş tarihi hatalı
 
 - name: Fen Bilgisi Eğitim (YL) (Tezsiz) (Uzaktan Öğretim)
-  abbreviation: FENBİL-YZ-UZ
+  abbreviation: FENBİL-YZ-UZ-DİĞER
   yoksis_id: 244484
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1525,7 +1525,7 @@
   founded_at: 06.06.2013
 
 - name: Fen Bilgisi Eğitimi (YL) (Tezsiz) (İÖ)
-  abbreviation: FENBİL-YZ-2
+  abbreviation: FENBİL-YZ-2-DİĞER
   yoksis_id: 235189
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1538,7 +1538,7 @@
   founded_at: 01.03.2013
 
 - name: Fizik Eğitimi (YL) (Tezli)
-  abbreviation: FİZİKEĞ-YL
+  abbreviation: FİZİKEĞ-YL-DİĞER
   yoksis_id: 245968
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1563,7 +1563,7 @@
   duration: 2
 
 - name: Müzik Eğitimi (YL) (Tezli)
-  abbreviation: MÜZİK-YL
+  abbreviation: MÜZİK-YL-DİĞER
   yoksis_id: 230796
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1576,7 +1576,7 @@
   founded_at: 29.01.2004
 
 - name: Müzik Eğitimi (YL) (Tezsiz) (İÖ)
-  abbreviation: MÜZİK-YZ-2
+  abbreviation: MÜZİK-YZ-2-DİĞER
   yoksis_id: 244884
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1589,7 +1589,7 @@
   founded_at: 15.08.2013
 
 - name: Ortaöğretim Fen ve Matematik Alanları Eğitimi (DR)
-  abbreviation: ORTAFENMAT-DR
+  abbreviation: ORTAFENMAT-DR-DİĞER
   yoksis_id: 174856
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
@@ -1602,7 +1602,7 @@
   founded_at: 26.02.2010
 
 - name: Ortaöğretim Sosyal Alanlar Eğitimi (DR)
-  abbreviation: ORTASOSYAL-DR
+  abbreviation: ORTASOSYAL-DR-DİĞER
   yoksis_id: 174850
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
@@ -1628,7 +1628,7 @@
   founded_at: '09.09.2015'
 
 - name: Resim-İş Eğitimi (DR)
-  abbreviation: RESİMİŞ-DR
+  abbreviation: RESİMİŞ-DR-DİĞER
   yoksis_id: 230808
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
@@ -1641,7 +1641,7 @@
   founded_at: 19.02.2003
 
 - name: Resim-İş Eğitimi (YL) (Tezli)
-  abbreviation: RESİMİŞ-YL
+  abbreviation: RESİMİŞ-YL-DİĞER
   yoksis_id: 230810
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1654,7 +1654,7 @@
   founded_at: 13.07.2001
 
 - name: Sınıf Eğitimi (DR)
-  abbreviation: SINIF-DR
+  abbreviation: SINIF-DR-DİĞER
   yoksis_id: 267760
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
@@ -1667,7 +1667,7 @@
   founded_at: 02.08.2017
 
 - name: Sınıf Eğitimi (YL) (Tezli)
-  abbreviation: SINIF-YL
+  abbreviation: SINIF-YL-DİĞER
   yoksis_id: 267759
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1680,7 +1680,7 @@
   founded_at: 02.08.2017
 
 - name: Sınıf Eğitimi (YL) (Tezsiz) (Uzaktan Öğretim)
-  abbreviation: SINIF-YZ-UZ
+  abbreviation: SINIF-YZ-UZ-DİĞER
   yoksis_id: 244486
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1693,7 +1693,7 @@
   founded_at: 06.06.2013
 
 - name: Sınıf Eğitimi (YL) (Tezsiz) (İÖ)
-  abbreviation: SINIF-YZ-2
+  abbreviation: SINIF-YZ-2-DİĞER
   yoksis_id: 327682
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1706,7 +1706,7 @@
   founded_at: '08.08.2017'
 
 - name: Sosyal Bilgiler Eğitimi (DR)
-  abbreviation: SOSYALBİL-DR
+  abbreviation: SOSYALBİL-DR-DİĞER
   yoksis_id: 327681
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
@@ -1719,7 +1719,7 @@
   founded_at: '08.08.2017'
 
 - name: Sosyal Bilgiler Eğitimi (YL) (Tezli)
-  abbreviation: SOSYALBİL-YL
+  abbreviation: SOSYALBİL-YL-DİĞER
   yoksis_id: 327632
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1732,7 +1732,7 @@
   founded_at: '08.08.2017'
 
 - name: Sosyal Bilgiler Eğitimi (YL) (Tezsiz) (Uzaktan Öğretim)
-  abbreviation: SOSYALBİL-YZ-UZ
+  abbreviation: SOSYALBİL-YZ-UZ-DİĞER
   yoksis_id: 244485
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1745,7 +1745,7 @@
   founded_at: 06.06.2013
 
 - name: Sosyal Bilgiler Eğitimi (YL) (Tezsiz) (İÖ)
-  abbreviation: SOSYALBİL-YZ-2
+  abbreviation: SOSYALBİL-YZ-2-DİĞER
   yoksis_id: 327680
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1758,7 +1758,7 @@
   founded_at: '08.08.2017'
 
 - name: Tarih Eğitimi (YL) (Tezli)
-  abbreviation: TARİHEĞ-YL
+  abbreviation: TARİHEĞ-YL-DİĞER
   yoksis_id: 213373
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1771,7 +1771,7 @@
   founded_at: 02.02.2012
 
 - name: Tarih Eğitimi (YL) (Tezsiz) (Uzaktan Öğretim)
-  abbreviation: TARİHEĞ-YZ-UZ
+  abbreviation: TARİHEĞ-YZ-UZ-DİĞER
   yoksis_id: 244483
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1784,7 +1784,7 @@
   founded_at: 06.06.2013
 
 - name: Türkçe Eğitimi (DR)
-  abbreviation: TÜRKÇE-DR
+  abbreviation: TÜRKÇE-DR-DİĞER
   yoksis_id: 174852
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
@@ -1797,7 +1797,7 @@
   founded_at: 26.02.2010
 
 - name: Türkçe Eğitimi (YL) (Tezli)
-  abbreviation: TÜRKÇE-YL
+  abbreviation: TÜRKÇE-YL-DİĞER
   yoksis_id: 267757
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -1822,7 +1822,7 @@
   duration: 2
 
 - name: İlköğretim (DR)
-  abbreviation: İLK-DR
+  abbreviation: İLK-DR-DİĞER
   yoksis_id: 174851
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
@@ -1835,7 +1835,7 @@
   founded_at: 26.02.2010
 
 - name: İlköğretim Matematik Eğitimi (YL) (Tezli)
-  abbreviation: İLKMAT-YL
+  abbreviation: İLKMAT-YL-DİĞER
   yoksis_id: 267758
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -2535,7 +2535,7 @@
   founded_at: 20.07.1982
 
 - name: Adli Bilimler (YL) (Tezli)
-  abbreviation: ADLİ-YL
+  abbreviation: ADLİ-YL-DİĞER
   yoksis_id: 255365
   parent_yoksis_id: 122386
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -2548,7 +2548,7 @@
   founded_at: 26.02.2014
 
 - name: Akıllı Sistemler Mühendisliği (YL) (Tezli)
-  abbreviation: ASM-YL
+  abbreviation: ASM-YL-DİĞER
   yoksis_id: 255366
   parent_yoksis_id: 409816
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -2561,7 +2561,7 @@
   founded_at: 26.02.2014
 
 - name: Bahçe Bitkileri (DR)
-  abbreviation: BAHÇE-DR
+  abbreviation: BAHÇE-DR-DİĞER
   yoksis_id: 211283
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
@@ -2573,7 +2573,7 @@
   duration: 4
 
 - name: Bahçe Bitkileri (YL) (Tezli)
-  abbreviation: BAHÇE-YL
+  abbreviation: BAHÇE-YL-DİĞER
   yoksis_id: 211284
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -2585,7 +2585,7 @@
   duration: 2
 
 - name: Bilgisayar Mühendisliği (YL) (Tezli)
-  abbreviation: BİLGİSAYAR-YL
+  abbreviation: BİLGİSAYAR-YL-DİĞER
   yoksis_id: 211296
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -2597,7 +2597,7 @@
   duration: 2
 
 - name: Bitki Koruma (DR)
-  abbreviation: BİTKİKOR-DR
+  abbreviation: BİTKİKOR-DR-DİĞER
   yoksis_id: 211294
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
@@ -2609,7 +2609,7 @@
   duration: 4
 
 - name: Bitki Koruma (YL) (Tezli)
-  abbreviation: BİTKİKOR-YL
+  abbreviation: BİTKİKOR-YL-DİĞER
   yoksis_id: 211293
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -2622,7 +2622,7 @@
   founded_at: 07.05.2018
 
 - name: Biyoloji (DR)
-  abbreviation: BİYO-DR
+  abbreviation: BİYO-DR-DİĞER
   yoksis_id: 211282
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
@@ -2634,7 +2634,7 @@
   duration: 4
 
 - name: Biyoloji (YL) (Tezli)
-  abbreviation: BİYO-YL
+  abbreviation: BİYO-YL-DİĞER
   yoksis_id: 211261
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -2647,7 +2647,7 @@
   founded_at: 07.05.2018
 
 - name: Biyoloji (YL) (Tezsiz)
-  abbreviation: BİYO-YZ
+  abbreviation: BİYO-YZ-DİĞER
   yoksis_id: 234077
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -2659,7 +2659,7 @@
   duration: 2
 
 - name: Biyoloji (YL) (Tezsiz) (Uzaktan Öğretim)
-  abbreviation: BİYO-YZ-UZ
+  abbreviation: BİYO-YZ-UZ-DİĞER
   yoksis_id: 317402
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -2672,7 +2672,7 @@
   founded_at: 29.04.2012
 
 - name: Elektrik-Elektronik Mühendisliği (DR)
-  abbreviation: ELEKTRİK-DR
+  abbreviation: ELEKTRİK-DR-DİĞER
   yoksis_id: 211254
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
@@ -2684,7 +2684,7 @@
   duration: 4
 
 - name: Elektrik-Elektronik Mühendisliği (YL) (Tezli)
-  abbreviation: ELEKTRİK-YL
+  abbreviation: ELEKTRİK-YL-DİĞER
   yoksis_id: 211253
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -2696,7 +2696,7 @@
   duration: 2
 
 - name: Fizik (DR)
-  abbreviation: FİZİK-DR
+  abbreviation: FİZİK-DR-DİĞER
   yoksis_id: 211257
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
@@ -2708,7 +2708,7 @@
   duration: 4
 
 - name: Fizik (YL) (Tezli)
-  abbreviation: FİZİK-YL
+  abbreviation: FİZİK-YL-DİĞER
   yoksis_id: 211258
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -2723,7 +2723,7 @@
     - Kuruluş tarihi hatalı
 
 - name: Fizik (YL) (Tezsiz)
-  abbreviation: FİZİK-YZ
+  abbreviation: FİZİK-YZ-DİĞER
   yoksis_id: 234095
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -2735,7 +2735,7 @@
   duration: 2
 
 - name: Fizik (YL) (Tezsiz) (Uzaktan Öğretim)
-  abbreviation: FİZİK-YZ-UZ
+  abbreviation: FİZİK-YZ-UZ-DİĞER
   yoksis_id: 317401
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -2748,7 +2748,7 @@
   founded_at: 29.04.2012
 
 - name: Gıda Mühendisliği (DR)
-  abbreviation: GIDA-DR
+  abbreviation: GIDA-DR-DİĞER
   yoksis_id: 211298
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
@@ -2773,7 +2773,7 @@
   founded_at: '08.07.2015'
 
 - name: Gıda Mühendisliği (YL) (Tezli)
-  abbreviation: GIDA-YL
+  abbreviation: GIDA-YL-DİĞER
   yoksis_id: 211297
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -2799,7 +2799,7 @@
   founded_at: 13.09.2012
 
 - name: Harita Mühendisliği (DR)
-  abbreviation: HARİTA-DR
+  abbreviation: HARİTA-DR-DİĞER
   yoksis_id: 211266
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
@@ -2811,7 +2811,7 @@
   duration: 4
 
 - name: Harita Mühendisliği (YL) (Tezli)
-  abbreviation: HARİTA-YL
+  abbreviation: HARİTA-YL-DİĞER
   yoksis_id: 211265
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -2826,7 +2826,7 @@
     - Kuruluş tarihi hatalı
 
 - name: Hesaplamalı Bilimler (DR)
-  abbreviation: HESAP-DR
+  abbreviation: HESAP-DR-DİĞER
   yoksis_id: 255368
   parent_yoksis_id: 122386
   unit_type_id: Disiplinlerarası Doktora Programı
@@ -2839,7 +2839,7 @@
   founded_at: 26.02.2014
 
 - name: Kimya (DR)
-  abbreviation: FEN-KİMYA-DR
+  abbreviation: FEN-KİMYA-DR-DİĞER
   yoksis_id: 211290
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
@@ -2849,9 +2849,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - Bu program yarı pasif olmalı
 
 - name: Kimya (YL) (Tezli)
-  abbreviation: FEN-KİMYA-YL
+  abbreviation: FEN-KİMYA-YL-DİĞER
   yoksis_id: 211289
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -2864,7 +2866,7 @@
   founded_at: 07.05.2018
 
 - name: Kimya (YL) (Tezsiz) (Uzaktan Öğretim)
-  abbreviation: FEN-KİMYA-YL-UZ
+  abbreviation: FEN-KİMYA-YL-UZ-DİĞER
   yoksis_id: 317403
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -2889,7 +2891,7 @@
   duration: 2
 
 - name: Kimya Mühendisliği (YL) (Tezli)
-  abbreviation: KİMYA-YL
+  abbreviation: KİMYA-YL-DİĞER
   yoksis_id: 225905
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -2902,7 +2904,7 @@
   founded_at: '09.08.2012'
 
 - name: Makine Mühendisliği (DR)
-  abbreviation: MAKİNE-DR
+  abbreviation: MAKİNE-DR-DİĞER
   yoksis_id: 209678
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
@@ -2915,7 +2917,7 @@
   founded_at: 23.08.2011
 
 - name: Makine Mühendisliği (YL) (Tezli)
-  abbreviation: MAKİNE-YL
+  abbreviation: MAKİNE-YL-DİĞER
   yoksis_id: 169494
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -2928,7 +2930,7 @@
   founded_at: 10.09.2009
 
 - name: Matematik (DR)
-  abbreviation: MAT-DR
+  abbreviation: MAT-DR-DİĞER
   yoksis_id: 211256
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
@@ -2953,7 +2955,7 @@
   founded_at: 27.06.2013
 
 - name: Matematik (YL) (Tezli)
-  abbreviation: MAT-YL
+  abbreviation: MAT-YL-DİĞER
   yoksis_id: 211255
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -2966,7 +2968,7 @@
   founded_at: 07.05.2018
 
 - name: Matematik (YL) (Tezsiz) (Uzaktan Öğretim)
-  abbreviation: MAT-YL-UZ
+  abbreviation: MAT-YL-UZ-DİĞER
   yoksis_id: 317399
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -2979,7 +2981,7 @@
   founded_at: 29.04.2012
 
 - name: Metalurji ve Malzeme Mühendisliği (YL) (Tezli)
-  abbreviation: MALZEME-YL
+  abbreviation: MALZEME-YL-DİĞER
   yoksis_id: 371245
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -2992,7 +2994,7 @@
   founded_at: 23.05.2018
 
 - name: Nanobilim ve Nanoteknoloji (Disiplinlerarası) (DR) (İngilizce)
-  abbreviation: NANO-DR-İNG
+  abbreviation: NANO-DR-İNG-DİĞER
   yoksis_id: 255370
   parent_yoksis_id: 406607
   unit_type_id: Disiplinlerarası Doktora Programı
@@ -3005,7 +3007,7 @@
   founded_at: 26.02.2014
 
 - name: Nanobilim ve Nanoteknoloji (YL) (Tezli) (İngilizce)
-  abbreviation: NANO-YL-İNG
+  abbreviation: NANO-YL-İNG-DİĞER
   yoksis_id: 255369
   parent_yoksis_id: 406607
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -3018,7 +3020,7 @@
   founded_at: 26.02.2014
 
 - name: Sağlık, Gıda Güvenliği ve İlgili Politikalar (YL) (Tezli)
-  abbreviation: SGGİP-YL
+  abbreviation: SGGİP-YL-DİĞER
   yoksis_id: 261702
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -3031,7 +3033,7 @@
   founded_at: 25.09.2014
 
 - name: Tarım Ekonomisi (DR)
-  abbreviation: TARIM-DR
+  abbreviation: TARIM-DR-DİĞER
   yoksis_id: 176121
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
@@ -3044,7 +3046,7 @@
   founded_at: 26.08.2010
 
 - name: Tarım Ekonomisi (YL) (Tezli)
-  abbreviation: TARIM-YL
+  abbreviation: TARIM-YL-DİĞER
   yoksis_id: 230597
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -3083,7 +3085,7 @@
   founded_at: 03.06.2015
 
 - name: Tarımsal Biyoteknoloji (DR)
-  abbreviation: TBT-DR
+  abbreviation: TBT-DR-DİĞER
   yoksis_id: 255701
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
@@ -3096,7 +3098,7 @@
   founded_at: 20.02.2014
 
 - name: Tarımsal Biyoteknoloji (YL) (Tezli)
-  abbreviation: TBT-YL
+  abbreviation: TBT-YL-DİĞER
   yoksis_id: 211287
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -3109,7 +3111,7 @@
   founded_at: 07.05.2018
 
 - name: Tarımsal Yapılar ve Sulama (DR)
-  abbreviation: TYS-DR
+  abbreviation: TYS-DR-DİĞER
   yoksis_id: 211250
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
@@ -3121,7 +3123,7 @@
   duration: 4
 
 - name: Tarımsal Yapılar ve Sulama (YL) (Tezli)
-  abbreviation: TYS-YL
+  abbreviation: TYS-YL-DİĞER
   yoksis_id: 211249
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -3134,7 +3136,7 @@
   founded_at: 30.04.2018
 
 - name: Tarla Bitkileri (DR)
-  abbreviation: TARLA-DR
+  abbreviation: TARLA-DR-DİĞER
   yoksis_id: 211286
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
@@ -3146,7 +3148,7 @@
   duration: 4
 
 - name: Tarla Bitkileri (YL) (Tezli)
-  abbreviation: TARLA-YL
+  abbreviation: TARLA-YL-DİĞER
   yoksis_id: 211285
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -3159,7 +3161,7 @@
   founded_at: 30.04.2018
 
 - name: Taşınmaz Değerleme ve Geliştirme (YL) (Tezsiz) (Uzaktan Öğretim)
-  abbreviation: TAŞINMAZ-YZ-UZ
+  abbreviation: TAŞINMAZ-YZ-UZ-DİĞER
   yoksis_id: 215852
   parent_yoksis_id: 122386
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -3172,7 +3174,7 @@
   founded_at: 19.04.2012
 
 - name: Toprak Bilimi ve Bitki Besleme (DR)
-  abbreviation: TOPRAK-DR
+  abbreviation: TOPRAK-DR-DİĞER
   yoksis_id: 203725
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
@@ -3185,7 +3187,7 @@
   founded_at: 17.02.2011
 
 - name: Toprak Bilimi ve Bitki Besleme (YL) (Tezli)
-  abbreviation: TOPRAK-YL
+  abbreviation: TOPRAK-YL-DİĞER
   yoksis_id: 203724
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -3198,7 +3200,7 @@
   founded_at: 17.02.2011
 
 - name: Uçak ve Uzay Bilimleri Mühendisliği (YL) (Tezli)
-  abbreviation: UÇAK-YL
+  abbreviation: UÇAK-YL-DİĞER
   yoksis_id: 339818
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -3237,7 +3239,7 @@
   founded_at: 01.06.2016
 
 - name: Zootekni (DR)
-  abbreviation: ZOO-DR
+  abbreviation: ZOO-DR-DİĞER
   yoksis_id: 211291
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
@@ -3249,7 +3251,7 @@
   duration: 4
 
 - name: Zootekni (YL) (Tezli)
-  abbreviation: ZOO-YL
+  abbreviation: ZOO-YL-DİĞER
   yoksis_id: 211292
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -3275,7 +3277,7 @@
   founded_at: 13.09.2012
 
 - name: Çevre Mühendisliği (DR)
-  abbreviation: ÇEVRE-DR
+  abbreviation: ÇEVRE-DR-DİĞER
   yoksis_id: 211248
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
@@ -3287,7 +3289,7 @@
   duration: 4
 
 - name: Çevre Mühendisliği (YL) (Tezli)
-  abbreviation: ÇEVRE-YL
+  abbreviation: ÇEVRE-YL-DİĞER
   yoksis_id: 211247
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -3300,7 +3302,7 @@
   founded_at: 07.05.2018
 
 - name: Çevre Mühendisliği (YL) (Tezli) (İngilizce)
-  abbreviation: ÇEVRE-YL-İNG
+  abbreviation: ÇEVRE-YL-İNG-DİĞER
   yoksis_id: 244882
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -3313,7 +3315,7 @@
   founded_at: 15.08.2013
 
 - name: İnşaat Mühendisliği (DR)
-  abbreviation: İNŞAAT-DR
+  abbreviation: İNŞAAT-DR-DİĞER
   yoksis_id: 213374
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
@@ -3326,7 +3328,7 @@
   founded_at: 02.02.2012
 
 - name: İnşaat Mühendisliği (YL) (Tezli)
-  abbreviation: İNŞAAT-YL
+  abbreviation: İNŞAAT-YL-DİĞER
   yoksis_id: 231330
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -3351,7 +3353,7 @@
   duration: 4
 
 - name: İstatistik (DR)
-  abbreviation: İSTATİSTİK-DR
+  abbreviation: İSTATİSTİK-DR-DİĞER
   yoksis_id: 211251
   parent_yoksis_id: 122386
   unit_type_id: Doktora Programı
@@ -3376,7 +3378,7 @@
   founded_at: 02.02.2012
 
 - name: İstatistik (YL) (Tezli)
-  abbreviation: İSTATİSTİK-YL
+  abbreviation: İSTATİSTİK-YL-DİĞER
   yoksis_id: 211252
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -4551,7 +4553,7 @@
   founded_at: 20.07.1982
 
 - name: Görsel İletişim Tasarımı (YL) (Tezli)
-  abbreviation: GİT-YL
+  abbreviation: GİT-YL-DİĞER
   yoksis_id: 255316
   parent_yoksis_id: 208606
   unit_type_id: Yüksek Lisans Programı
@@ -4564,7 +4566,7 @@
   founded_at: 20.02.2014
 
 - name: Müzikte Yorumculuk (YL) (Tezli)
-  abbreviation: MY-YL
+  abbreviation: MY-YL-DİĞER
   yoksis_id: 258248
   parent_yoksis_id: 208606
   unit_type_id: Yüksek Lisans Programı
@@ -4577,7 +4579,7 @@
   founded_at: 19.06.2014
 
 - name: Müzikte Yorumculuk (YL) (Tezsiz)
-  abbreviation: MY-YZ
+  abbreviation: MY-YZ-2-DİĞER
   yoksis_id: 258249
   parent_yoksis_id: 208606
   unit_type_id: Yüksek Lisans Programı
@@ -4590,7 +4592,7 @@
   founded_at: 19.06.2014
 
 - name: Resim (YL) (Tezli)
-  abbreviation: RESİM-YL
+  abbreviation: RESİM-YL-DİĞER
   yoksis_id: 281828
   parent_yoksis_id: 208606
   unit_type_id: Yüksek Lisans Programı
@@ -4603,7 +4605,7 @@
   founded_at: 28.10.2015
 
 - name: Sanat ve Tasarım (Sy)
-  abbreviation: ST-SY
+  abbreviation: ST-SY-DİĞER
   yoksis_id: 325573
   parent_yoksis_id: 208606
   unit_type_id: Sanatta Yeterlilik Programı
@@ -4616,7 +4618,7 @@
   founded_at: 12.07.2017
 
 - name: Tıbbi Resimleme (YL) (Tezli)
-  abbreviation: TIBBİRESİM-YL
+  abbreviation: TIBBİRESİM-YL-DİĞER
   yoksis_id: 278819
   parent_yoksis_id: 208606
   unit_type_id: Yüksek Lisans Programı
@@ -6786,7 +6788,7 @@
   founded_at: 20.07.1982
 
 - name: Acil Hemşireliği (DR)
-  abbreviation: ACİL-DR
+  abbreviation: ACİL-DR-DİĞER
   yoksis_id: 329992
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Doktora Programı
@@ -6799,7 +6801,7 @@
   founded_at: 22.02.2017
 
 - name: Acil Hemşireliği (YL) (Tezli)
-  abbreviation: ACİL-YL
+  abbreviation: ACİL-YL-DİĞER
   yoksis_id: 329991
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -6812,7 +6814,7 @@
   founded_at: 22.02.2017
 
 - name: Alerji-İmmünoloji (YL) (Tezli)
-  abbreviation: ALERJİ-YL
+  abbreviation: ALERJİ-YL-DİĞER
   yoksis_id: 219171
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -6824,7 +6826,7 @@
   duration: 2
 
 - name: Anatomi (DR)
-  abbreviation: ANATOMİ-DR
+  abbreviation: ANATOMİ-DR-DİĞER
   yoksis_id: 169540
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -6836,7 +6838,7 @@
   duration: 4
 
 - name: Veterinerlik Anatomisi (YL) (Tezli)
-  abbreviation: VETERİNER-ANATOMİ-YL
+  abbreviation: VETERİNER-ANATOMİ-YL-DİĞER
   yoksis_id: 169511
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
@@ -6849,7 +6851,7 @@
   founded_at: 10.09.2009
 
 - name: Antrenörlük Eğitimi (DR)
-  abbreviation: ANTRENÖR-DR
+  abbreviation: ANTRENÖR-DR-DİĞER
   yoksis_id: 267669
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -6862,7 +6864,7 @@
   founded_at: 25.03.2015
 
 - name: Antrenörlük Eğitimi (YL) (Tezli)
-  abbreviation: ANTRENÖR-YL
+  abbreviation: ANTRENÖR-YL-DİĞER
   yoksis_id: 267668
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
@@ -6875,7 +6877,7 @@
   founded_at: 25.03.2015
 
 - name: Ağız, Diş ve Çene Cerrahisi (DR)
-  abbreviation: ADÇC-DR
+  abbreviation: ADÇC-DR-DİĞER
   yoksis_id: 169547
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -6901,7 +6903,7 @@
     - SAĞLIK-BİLİM VE SOSYAL-BİLİM altında aynı isimli Doktora
 
 - name: Beslenme Bilimleri (YL) (Tezli)
-  abbreviation: BESLENME-YL
+  abbreviation: BESLENME-YL-DİĞER
   yoksis_id: 225937
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -6914,7 +6916,7 @@
   founded_at: '09.08.2012'
 
 - name: Veterinerlik Besin Hijyeni ve Teknolojisi (DR)
-  abbreviation: VETERİNER-BESİN-DR
+  abbreviation: VETERİNER-BESİN-DR-DİĞER
   yoksis_id: 169576
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -6926,7 +6928,7 @@
   duration: 4
 
 - name: Veterinerlik Besin Hijyeni ve Teknolojisi (YL) (Tezli)
-  abbreviation: VETERİNER-BESİN-YL
+  abbreviation: VETERİNER-BESİN-YL-DİĞER
   yoksis_id: 169516
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
@@ -6939,7 +6941,7 @@
   founded_at: 10.09.2009
 
 - name: Veterinerlik Biyokimyası (DR)
-  abbreviation: VETERİNER-BİYOKİMYA-DR
+  abbreviation: VETERİNER-BİYOKİMYA-DR-DİĞER
   yoksis_id: 213250
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -6952,7 +6954,7 @@
   founded_at: 30.11.2011
 
 - name: Biyokimya (YL) (Tezli) (Veteriner)
-  abbreviation: VETERİNER-BİYOKİMYA-YL
+  abbreviation: VETERİNER-BİYOKİMYA-YL-DİĞER
   yoksis_id: 213249
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
@@ -6965,7 +6967,7 @@
   founded_at: 30.11.2011
 
 - name: Biyoistatistik ve Tıp Bilişimi (DR)
-  abbreviation: BİYOİSTATİSTİK-DR
+  abbreviation: BİYOİSTATİSTİK-DR-DİĞER
   yoksis_id: 211302
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -6977,7 +6979,7 @@
   duration: 4
 
 - name: Biyoistatistik ve Tıp Bilişimi (YL) (Tezli)
-  abbreviation: BİYOİSTATİSTİK-YL
+  abbreviation: BİYOİSTATİSTİK-YL-DİĞER
   yoksis_id: 211301
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
@@ -6990,7 +6992,7 @@
   founded_at: 07.05.2018
 
 - name: Veterinerlik Cerrahisi (DR)
-  abbreviation: VETERİNER-CERRAHİ-DR
+  abbreviation: VETERİNER-CERRAHİ-DR-DİĞER
   yoksis_id: 255317
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -7003,7 +7005,7 @@
   founded_at: 20.02.2014
 
 - name: Veterinerlik Cerrahisi (YL) (Tezli)
-  abbreviation: VETERİNER-CERRAHİ-YL
+  abbreviation: VETERİNER-CERRAHİ-YL-DİĞER
   yoksis_id: 244886
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
@@ -7016,7 +7018,7 @@
   founded_at: 15.08.2013
 
 - name: Veterinerlik Doğum ve Jinekolojisi (DR)
-  abbreviation: VETERİNER-JİNEKOLOJİ-DR
+  abbreviation: VETERİNER-JİNEKOLOJİ-DR-DİĞER
   yoksis_id: 169578
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -7028,7 +7030,7 @@
   duration: 4
 
 - name: Doğum ve Kadın Hastalıkları Hemşireliği (DR)
-  abbreviation: DOĞUMHEM-DR
+  abbreviation: DOĞUMHEM-DR-DİĞER
   yoksis_id: 301224
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -7041,7 +7043,7 @@
   founded_at: 10.08.2016
 
 - name: Doğum ve Kadın Hastalıkları Hemşireliği (YL) (Tezli)
-  abbreviation: DOĞUMHEM-YL
+  abbreviation: DOĞUMHEM-YL-DİĞER
   yoksis_id: 301216
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
@@ -7054,7 +7056,7 @@
   founded_at: 10.08.2016
 
 - name: Doğum ve Kadın Hastalıkları Hemşireliği (YL) (Tezsiz) (İÖ)
-  abbreviation: DOĞUMHEM-YZ-2
+  abbreviation: DOĞUMHEM-YZ-2-DİĞER
   yoksis_id: 301217
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
@@ -7067,7 +7069,7 @@
   founded_at: 10.08.2016
 
 - name: Veterinerlik Doğum ve Jinekolojisi (Veteriner) (YL) (Tezli)
-  abbreviation: VETERİNER-JİNEKOLOJİ-YL
+  abbreviation: VETERİNER-JİNEKOLOJİ-YL-DİĞER
   yoksis_id: 169535
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
@@ -7079,7 +7081,7 @@
   duration: 2
 
 - name: Dölerme ve Suni Tohumlama (DR)
-  abbreviation: DÖLERME-DR
+  abbreviation: DÖLERME-DR-DİĞER
   yoksis_id: 169574
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -7104,7 +7106,7 @@
   founded_at: 10.09.2009
 
 - name: Restoratif Diş Tedavisi (DR)
-  abbreviation: RDT-DR
+  abbreviation: RDT-DR-DİĞER
   yoksis_id: 169553
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -7116,7 +7118,7 @@
   duration: 4
 
 - name: Ebelik (YL) (Tezli)
-  abbreviation: EBELİK-YL
+  abbreviation: EBELİK-YL-DİĞER
   yoksis_id: 323921
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -7129,7 +7131,7 @@
   founded_at: 07.06.2017
 
 - name: Endodonti (DR)
-  abbreviation: ENDO-DR
+  abbreviation: ENDO-DR-DİĞER
   yoksis_id: 209677
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -7155,7 +7157,7 @@
   founded_at: 05.06.2012
 
 - name: Farmakoloji (DR)
-  abbreviation: FARMAKOLOJİ-DR
+  abbreviation: FARMAKOLOJİ-DR-DİĞER
   yoksis_id: 169567
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -7167,7 +7169,7 @@
   duration: 4
 
 - name: Veterinerlik Farmakoloji ve Toksikoloji (DR)
-  abbreviation: VETERİNER-FARMATOK-DR
+  abbreviation: VETERİNER-FARMATOK-DR-DİĞER
   yoksis_id: 169572
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -7180,7 +7182,7 @@
   founded_at: 10.09.2009
 
 - name: Veterinerlik Farmakoloji ve Toksikoloji (YL) (Tezli)
-  abbreviation: VETERİNER-FARMATOK-YL
+  abbreviation: VETERİNER-FARMATOK-YL-DİĞER
   yoksis_id: 283800
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
@@ -7193,7 +7195,7 @@
   founded_at: 06.01.2016
 
 - name: Fizyoloji (DR)
-  abbreviation: FİZYOLOJİ-DR
+  abbreviation: FİZYOLOJİ-DR-DİĞER
   yoksis_id: 169541
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -7205,7 +7207,7 @@
   duration: 4
 
 - name: Veterinerlik Fizyolojsi (YL) (Tezli)
-  abbreviation: VETERİNER-FİZYOLOJİ-YL
+  abbreviation: VETERİNER-FİZYOLOJİ-YL-DİĞER
   yoksis_id: 257559
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
@@ -7218,7 +7220,7 @@
   founded_at: 17.04.2014
 
 - name: Halk Sağlığı (DR)
-  abbreviation: HALK-DR
+  abbreviation: HALK-DR-DİĞER
   yoksis_id: 169558
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -7230,7 +7232,7 @@
   duration: 4
 
 - name: Halk Sağlığı Hemşireliği (YL) (Tezli)
-  abbreviation: HSH-YL
+  abbreviation: HSH-YL-DİĞER
   yoksis_id: 169518
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
@@ -7279,7 +7281,7 @@
   duration: 2
 
 - name: Hemşirelik (DR)
-  abbreviation: HEMŞİRE-DR
+  abbreviation: HEMŞİRE-DR-DİĞER
   yoksis_id: 285232
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -7292,7 +7294,7 @@
   founded_at: 22.06.2015
 
 - name: Hemşirelik (YL) (Tezli)
-  abbreviation: HEMŞİRE-YL
+  abbreviation: HEMŞİRE-YL-DİĞER
   yoksis_id: 285233
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
@@ -7318,7 +7320,7 @@
   founded_at: 13.01.2016
 
 - name: Hemşirelik (YL) (Tezsiz)
-  abbreviation: HEMŞİRE-YZ
+  abbreviation: HEMŞİRE-YZ-DİĞER
   yoksis_id: 290926
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
@@ -7331,7 +7333,7 @@
   founded_at: 10.06.2015
 
 - name: Histoloji ve Embriyoloji (DR)
-  abbreviation: HİSTO-DR
+  abbreviation: HİSTO-DR-DİĞER
   yoksis_id: 219168
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -7343,7 +7345,7 @@
   duration: 4
 
 - name: Histoloji ve Embriyoloji (YL) (Tezli)
-  abbreviation: HİSTO-YL
+  abbreviation: HİSTO-YL-DİĞER
   yoksis_id: 219167
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
@@ -7356,7 +7358,7 @@
   founded_at: 07.05.2018
 
 - name: Kardiyopulmoner Fizyoterapi (YL) (Tezli)
-  abbreviation: KPF-YL
+  abbreviation: KPF-YL-DİĞER
   yoksis_id: 230172
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -7369,7 +7371,7 @@
   founded_at: 25.08.2011
 
 - name: Klinik Sinir Bilimleri (DR)
-  abbreviation: KLİNİKSİNİR-DR
+  abbreviation: KLİNİKSİNİR-DR-DİĞER
   yoksis_id: 236919
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Doktora Programı
@@ -7408,7 +7410,7 @@
   founded_at: 22.06.2016
 
 - name: Moleküler Tıp (DR)
-  abbreviation: MOLTIP-DR
+  abbreviation: MOLTIP-DR-DİĞER
   yoksis_id: 257542
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Doktora Programı
@@ -7421,7 +7423,7 @@
   founded_at: 17.04.2014
 
 - name: Moleküler Tıp (YL) (Tezli)
-  abbreviation: MOL-TIP-YL
+  abbreviation: MOL-TIP-YL-DİĞER
   yoksis_id: 257541
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -7434,7 +7436,7 @@
   founded_at: 17.04.2014
 
 - name: Veterinerlik Mikrobiyolojisi (YL) (Tezli)
-  abbreviation: VETERİNER-MİKRO-YL
+  abbreviation: VETERİNER-MİKRO-YL-DİĞER
   yoksis_id: 225902
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -7462,7 +7464,7 @@
     - Detsis tarafında anabilim dalı başkanlığı yok. SAĞLIK-BİLİM-TMİKRO-ADB ile benzerlik kontrol edilmeli.
 
 - name: Veterinerlik Mikrobiyolojisi (DR)
-  abbreviation: VETERİNER-MİKRO-DR
+  abbreviation: VETERİNER-MİKRO-DR-DİĞER
   yoksis_id: 280441
   parent_yoksis_id: 280440
   unit_type_id: Disiplinlerarası Doktora Programı
@@ -7475,7 +7477,7 @@
   founded_at: 05.08.2015
 
 - name: Odyoloji (YL) (Tezli)
-  abbreviation: ODYO-TL
+  abbreviation: ODYO-YL-DİĞER
   yoksis_id: 169523
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
@@ -7487,7 +7489,7 @@
   duration: 2
 
 - name: Oral Diagnoz ve Radyoloji (DR)
-  abbreviation: ODR-DR
+  abbreviation: ODR-DR-DİĞER
   yoksis_id: 169555
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -7499,7 +7501,7 @@
   duration: 4
 
 - name: Ortodonti (DR)
-  abbreviation: ORTO-DR
+  abbreviation: ORTO-DR-DİĞER
   yoksis_id: 169543
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -7511,7 +7513,7 @@
   duration: 4
 
 - name: Parazitoloji (DR)
-  abbreviation: PARAZİT-DR
+  abbreviation: PARAZİT-DR-DİĞER
   yoksis_id: 169560
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -7523,7 +7525,7 @@
   duration: 4
 
 - name: Veterinerlik Parazitolojisi (YL) (Tezli)
-  abbreviation: VETERİNER-PARAZİT-YL
+  abbreviation: VETERİNER-PARAZİT-YL-DİĞER
   yoksis_id: 225901
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
@@ -7536,7 +7538,7 @@
   founded_at: '09.08.2012'
 
 - name: Patoloji (DR)
-  abbreviation: PATO-DR
+  abbreviation: PATO-DR-DİĞER
   yoksis_id: 169561
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -7548,7 +7550,7 @@
   duration: 4
 
 - name: Veterinerlik Patolojisi (DR)
-  abbreviation: VETERİNER-PATO-DR
+  abbreviation: VETERİNER-PATO-DR-DİĞER
   yoksis_id: 219169
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -7560,7 +7562,7 @@
   duration: 4
 
 - name: Pedodonti (DR)
-  abbreviation: PEDO-DR
+  abbreviation: PEDO-DR-DİĞER
   yoksis_id: 169570
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -7572,7 +7574,7 @@
   duration: 4
 
 - name: Periodontoloji (DR)
-  abbreviation: PERİO-DR
+  abbreviation: PERİO-DR-DİĞER
   yoksis_id: 169546
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -7584,7 +7586,7 @@
   duration: 4
 
 - name: Protetik Diş Tedavisi (DR)
-  abbreviation: PDT-DR
+  abbreviation: PDT-DR-DİĞER
   yoksis_id: 169556
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -7622,7 +7624,7 @@
   founded_at: 03.03.2011
 
 - name: Ruh Sağlığı ve Hastalıkları Hemşireliği (YL) (Tezli)
-  abbreviation: RUH-YL
+  abbreviation: RUH-YL-DİĞER
   yoksis_id: 169527
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
@@ -7634,7 +7636,7 @@
   duration: 2
 
 - name: Sağlık Yönetimi (DR)
-  abbreviation: SAĞLIKYÖN-DR
+  abbreviation: SAĞLIKYÖN-DR-DİĞER
   yoksis_id: 278605
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Doktora Programı
@@ -7647,7 +7649,7 @@
   founded_at: 16.06.2015
 
 - name: Sağlık Yönetimi (YL) (Tezli)
-  abbreviation: SAĞLIKYÖN-YL
+  abbreviation: SAĞLIKYÖN-YL-DİĞER
   yoksis_id: 213229
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -7673,7 +7675,7 @@
   founded_at: 19.04.2012
 
 - name: Sağlık Yönetimi (YL) (Tezsiz) (İÖ)
-  abbreviation: SAĞLIKYÖN-YZ-2
+  abbreviation: SAĞLIKYÖN-YZ-2-DİĞER
   yoksis_id: 225903
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -7686,7 +7688,7 @@
   founded_at: '09.08.2012'
 
 - name: Su Ürünleri Hastalıkları (YL) (Tezli)
-  abbreviation: SU-YL
+  abbreviation: SU-YL-DİĞER
   yoksis_id: 261143
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
@@ -7699,7 +7701,7 @@
   founded_at: 25.09.2014
 
 - name: Sucul Hayvan Hastalıkları (DR)
-  abbreviation: SUCUL-DR
+  abbreviation: SUCUL-DR-DİĞER
   yoksis_id: 334300
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -7725,7 +7727,7 @@
   founded_at: 03.03.2011
 
 - name: Sinir Bilimleri (DR)
-  abbreviation: SİNİR-DR
+  abbreviation: SİNİR-DR-DİĞER
   yoksis_id: 203750
   parent_yoksis_id: 203748
   unit_type_id: Disiplinlerarası Doktora Programı
@@ -7738,7 +7740,7 @@
   founded_at: 03.03.2011
 
 - name: Sinir Bilimleri (YL) (Tezli)
-  abbreviation: SİNİR-YL
+  abbreviation: SİNİR-YL-DİĞER
   yoksis_id: 203749
   parent_yoksis_id: 203748
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -7751,7 +7753,7 @@
   founded_at: 03.03.2011
 
 - name: Tıbbi Biyokimya (DR)
-  abbreviation: TBİYOKİMYA-DR
+  abbreviation: TBİYOKİMYA-DR-DİĞER
   yoksis_id: 169539
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -7789,7 +7791,7 @@
   founded_at: 07.05.2018
 
 - name: Tıbbi Farmakoloji (DR)
-  abbreviation: TFARMA-DR
+  abbreviation: TFARMA-DR-DİĞER
   yoksis_id: 211300
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -7801,7 +7803,7 @@
   duration: 4
 
 - name: Tıbbi Farmakoloji (YL) (Tezli)
-  abbreviation: TFARMA-YL
+  abbreviation: TFARMA-YL-DİĞER
   yoksis_id: 211299
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
@@ -7814,7 +7816,7 @@
   founded_at: 07.05.2018
 
 - name: Tıbbi Mikrobiyoloji (DR)
-  abbreviation: TMİKRO-DR
+  abbreviation: TMİKRO-DR-DİĞER
   yoksis_id: 169549
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -7855,7 +7857,7 @@
   founded_at: 10.08.2016
 
 - name: Uluslararası Düzenleyici Bilim (YL) (Tezli)
-  abbreviation: UDB-YL
+  abbreviation: UDB-YL-DİĞER
   yoksis_id: 261826
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -7868,7 +7870,7 @@
   founded_at: 15.10.2014
 
 - name: Veteriner Hekimliği Tarihi ve Deontoloji (DR)
-  abbreviation: VETERİNER-DEON-DR
+  abbreviation: VETERİNER-DEON-DR-DİĞER
   yoksis_id: 255372
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Doktora Programı
@@ -7881,7 +7883,7 @@
   founded_at: 26.02.2014
 
 - name: Veteriner Hekimliği Tarihi ve Deontoloji (YL) (Tezli)
-  abbreviation: VETERİNER-DEON-YL
+  abbreviation: VETERİNER-DEON-YL-DİĞER
   yoksis_id: 255371
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -7894,7 +7896,7 @@
   founded_at: 26.02.2014
 
 - name: Veteriner Histoloji ve Embriyoloji (YL) (Tezli)
-  abbreviation: VETERİNER-HİSTO-YL
+  abbreviation: VETERİNER-HİSTO-YL-DİĞER
   yoksis_id: 325734
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
@@ -7907,7 +7909,7 @@
   founded_at: 19.07.2017
 
 - name: Viroloji (DR)
-  abbreviation: VİROLOJİ-DR
+  abbreviation: VİROLOJİ-DR-DİĞER
   yoksis_id: 169563
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -7919,7 +7921,7 @@
   duration: 4
 
 - name: Viroloji (Veteriner) (DR)
-  abbreviation: VETERİNER-VİROLOJİ-DR
+  abbreviation: VETERİNER-VİROLOJİ-DR-DİĞER
   yoksis_id: 244885
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -7932,7 +7934,7 @@
   founded_at: 15.08.2013
 
 - name: Viroloji (Veteriner) (YL) (Tezli)
-  abbreviation: VETERİNER-VİROLOJİ-YL
+  abbreviation: VETERİNER-VİROLOJİ-YL-DİĞER
   yoksis_id: 169533
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
@@ -7945,7 +7947,7 @@
   founded_at: 07.05.2018
 
 - name: Zootekni (Veteriner) (DR)
-  abbreviation: VETERİNER-ZOO-DR
+  abbreviation: VETERİNER-ZOO-DR-DİĞER-3
   yoksis_id: 169565
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -7958,7 +7960,7 @@
   founded_at: 07.05.2018
 
 - name: Zootekni (YL) (Tezli) (Veteriner)
-  abbreviation: VETERİNER-ZOO-YL
+  abbreviation: VETERİNER-ZOO-YL-DİĞER
   yoksis_id: 278856
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
@@ -8625,7 +8627,7 @@
   founded_at: 20.07.1982
 
 - name: Arkeoloji (YL) (Tezli)
-  abbreviation: ARKEO-YL
+  abbreviation: ARKEO-YL-DİĞER
   yoksis_id: 258247
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -8638,7 +8640,7 @@
   founded_at: 19.06.2014
 
 - name: Avrupa-Akdeniz Kültürler ve Turizm (YL) (Tezli)
-  abbreviation: AAKT-YL
+  abbreviation: AAKT-YL-DİĞER
   yoksis_id: 261825
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -8666,7 +8668,7 @@
     - SAĞLIK-BİLİM VE SOSYAL-BİLİM altında aynı isimli Doktora
 
 - name: Coğrafya (DR)
-  abbreviation: COĞRAFYA-DR
+  abbreviation: COĞRAFYA-DR-DİĞER
   yoksis_id: 175687
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
@@ -8679,7 +8681,7 @@
   founded_at: 01.07.2010
 
 - name: Coğrafya (YL) (Tezli)
-  abbreviation: COĞRAFYA-YL
+  abbreviation: COĞRAFYA-YL-DİĞER
   yoksis_id: 230727
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -8692,7 +8694,7 @@
   founded_at: 07.05.2018
 
 - name: Dini Danışmanlık ve Rehberlik (YL) (Tezsiz) (İÖ)
-  abbreviation: DDR-YZ-2
+  abbreviation: DDR-YZ-2-DİĞER
   yoksis_id: 225938
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -8719,7 +8721,7 @@
     - Detsis tarafında anabilim dalı başkanlığı yok. SOSYAL-BİLİM-İŞLENİ-ADB ile benzerlik kontrol edilmeli.
 
 - name: Evlilik ve Aile Danışmanlığı (YL) (Tezsiz) (İÖ)
-  abbreviation: EVLİLİK-YZ-2
+  abbreviation: EVLİLİK-YZ-2-DİĞER
   yoksis_id: 255364
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -8732,7 +8734,7 @@
   founded_at: 26.02.2014
 
 - name: Felsefe (DR)
-  abbreviation: FELSEFE-DR
+  abbreviation: FELSEFE-DR-DİĞER
   yoksis_id: 301218
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
@@ -8745,7 +8747,7 @@
   founded_at: 10.08.2016
 
 - name: Felsefe (YL) (Tezli)
-  abbreviation: FELSEFE-YL
+  abbreviation: FELSEFE-YL-DİĞER
   yoksis_id: 219791
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -8758,7 +8760,7 @@
   founded_at: 26.06.2012
 
 - name: Felsefe ve Din Bilimleri (DR)
-  abbreviation: FELSEFEDİN-DR
+  abbreviation: FELSEFEDİN-DR-DİĞER
   yoksis_id: 169480
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
@@ -8770,7 +8772,7 @@
   duration: 4
 
 - name: Felsefe ve Din Bilimleri (YL) (Tezli)
-  abbreviation: FELSEFEDİN-YL
+  abbreviation: FELSEFEDİN-YL-DİĞER
   yoksis_id: 230721
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -8782,7 +8784,7 @@
   duration: 2
 
 - name: Geleneksel Türk Müziği (YL) (Tezli)
-  abbreviation: GTM-YL
+  abbreviation: GTM-YL-DİĞER
   yoksis_id: 297036
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -8795,7 +8797,7 @@
   founded_at: 15.06.2016
 
 - name: Kadın ve Aile Araştırmaları (YL) (Tezli)
-  abbreviation: KAA-YL
+  abbreviation: KAA-YL-DİĞER
   yoksis_id: 230643
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -8808,7 +8810,7 @@
   founded_at: 23.06.2011
 
 - name: Kamu Hukuku (DR) (Karadeniz Teknikn Üniversitesi Ortak)
-  abbreviation: KAMU-DR-KTÜ
+  abbreviation: KAMU-DR-KTÜ-DİĞER
   yoksis_id: 225763
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
@@ -8823,7 +8825,7 @@
     - Teknik yazımı hatalı
 
 - name: Kamu Hukuku (YL) (Tezli)
-  abbreviation: KAMU-YL
+  abbreviation: KAMU-YL-DİĞER
   yoksis_id: 176119
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -8836,7 +8838,7 @@
   founded_at: 26.08.2010
 
 - name: Kamu Hukuku (YL) (Tezsiz) (İÖ)
-  abbreviation: KAMU-YZ-2
+  abbreviation: KAMU-YZ-2-DİĞER
   yoksis_id: 230164
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -8849,7 +8851,7 @@
   founded_at: 07.07.2011
 
 - name: Kamu Yönetimi (DR)
-  abbreviation: KAMUYÖN-DR
+  abbreviation: KAMUYÖN-DR-DİĞER
   yoksis_id: 235191
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
@@ -8862,7 +8864,7 @@
   founded_at: 01.03.2013
 
 - name: Kamu Yönetimi (YL) (Tezli)
-  abbreviation: KAMUYÖN-YL
+  abbreviation: KAMUYÖN-YL-DİĞER
   yoksis_id: 219792
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -8875,7 +8877,7 @@
   founded_at: 26.06.2012
 
 - name: Muhasebe-Finansman (YL) (Tezli)
-  abbreviation: MUHASEBE-YL
+  abbreviation: MUHASEBE-YL-DİĞER
   yoksis_id: 264822
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -8888,7 +8890,7 @@
   founded_at: 20.01.2015
 
 - name: Muhasebe-Finansman (YL) (Tezsiz)
-  abbreviation: MUHASEBE-YZ
+  abbreviation: MUHASEBE-YZ-DİĞER
   yoksis_id: 264823
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -8901,7 +8903,7 @@
   founded_at: 20.01.2015
 
 - name: Psikoloji (YL) (Tezli)
-  abbreviation: PSİKOLOJİ-YL
+  abbreviation: PSİKOLOJİ-YL-DİĞER
   yoksis_id: 258246
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -8914,7 +8916,7 @@
   founded_at: 19.06.2014
 
 - name: Sanat Tarihi (YL) (Tezli)
-  abbreviation: SANATTARİHİ-YL
+  abbreviation: SANATTARİHİ-YL-DİĞER
   yoksis_id: 283048
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -8927,7 +8929,7 @@
   founded_at: 16.12.2015
 
 - name: Sosyoloji (DR)
-  abbreviation: SOSYOLOJİ-DR
+  abbreviation: SOSYOLOJİ-DR-DİĞER
   yoksis_id: 323943
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
@@ -8940,7 +8942,7 @@
   founded_at: 07.06.2017
 
 - name: Sosyoloji (YL) (Tezli)
-  abbreviation: SOSYOLOJİ-YL
+  abbreviation: SOSYOLOJİ-YL-DİĞER
   yoksis_id: 219789
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -8953,7 +8955,7 @@
   founded_at: 26.06.2012
 
 - name: Spor Yöneticiliği (DR)
-  abbreviation: SPORYÖN-DR
+  abbreviation: SPORYÖN-DR-DİĞER
   yoksis_id: 280862
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
@@ -8966,7 +8968,7 @@
   founded_at: '09.09.2015'
 
 - name: Spor Yöneticiliği (YL) (Tezli)
-  abbreviation: SPORYÖN-YL
+  abbreviation: SPORYÖN-YL-DİĞER
   yoksis_id: 281995
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -8979,7 +8981,7 @@
   founded_at: '09.09.2015'
 
 - name: Siyaset Bilimi ve Kamu Yönetimi (YL) (Tezsiz) (Uzaktan Öğretim)
-  abbreviation: SBKY-YZ-UZ
+  abbreviation: SBKY-YZ-UZ-DİĞER
   yoksis_id: 267770
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -8994,7 +8996,7 @@
     - Kuruluş tarihi hatalı
 
 - name: Tarih (DR)
-  abbreviation: TARİH-DR
+  abbreviation: TARİH-DR-DİĞER
   yoksis_id: 169484
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
@@ -9006,7 +9008,7 @@
   duration: 4
 
 - name: Tarih (YL) (Tezli)
-  abbreviation: TARİH-YL
+  abbreviation: TARİH-YL-DİĞER
   yoksis_id: 230726
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -9019,7 +9021,7 @@
   founded_at: 07.05.2018
 
 - name: Temel İslam Bilimleri (DR)
-  abbreviation: TİB-DR
+  abbreviation: TİB-DR-DİĞER
   yoksis_id: 169474
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
@@ -9031,7 +9033,7 @@
   duration: 4
 
 - name: Temel İslam Bilimleri (YL) (Tezli)
-  abbreviation: TİB-YL
+  abbreviation: TİB-YL-DİĞER
   yoksis_id: 230720
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -9043,7 +9045,7 @@
   duration: 2
 
 - name: Turizm İşletmeciliği (YL) (Tezli)
-  abbreviation: TURİZMİŞ-YL
+  abbreviation: TURİZMİŞ-YL-DİĞER
   yoksis_id: 323944
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -9056,7 +9058,7 @@
   founded_at: 07.06.2017
 
 - name: Turizm İşletmeciliği (YL) (Tezsiz)
-  abbreviation: TURİZMİŞ-YZ
+  abbreviation: TURİZMİŞ-YZ-DİĞER
   yoksis_id: 301219
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -9069,7 +9071,7 @@
   founded_at: 10.08.2016
 
 - name: Türk Dili ve Edebiyatı (DR)
-  abbreviation: TDE-DR
+  abbreviation: TDE-DR-DİĞER
   yoksis_id: 169487
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
@@ -9081,7 +9083,7 @@
   duration: 4
 
 - name: Türk Dili ve Edebiyatı (YL) (Tezli)
-  abbreviation: TDE-YL
+  abbreviation: TDE-YL-DİĞER
   yoksis_id: 230723
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -9094,7 +9096,7 @@
   founded_at: 07.05.2018
 
 - name: Uluslararası İlişkiler (YL) (Tezli)
-  abbreviation: Uİ-YL
+  abbreviation: Uİ-YL-DİĞER
   yoksis_id: 169470
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -9106,7 +9108,7 @@
   duration: 2
 
 - name: Yerel Yönetimler (YL) (Tezsiz) (Uzaktan Öğretim)
-  abbreviation: YERELYÖN-YZ-UZ
+  abbreviation: YERELYÖN-YZ-UZ-DİĞER
   yoksis_id: 258555
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -9119,7 +9121,7 @@
   founded_at: 19.06.2014
 
 - name: Özel Hukuk (YL) (Tezli) (Karadeniz Teknik Üniversitesi Ortak)
-  abbreviation: ÖZELHUKUK-YL-KTÜ
+  abbreviation: ÖZELHUKUK-YL-KTÜ-DİĞER
   yoksis_id: 255439
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -9132,7 +9134,7 @@
   founded_at: 20.02.2014
 
 - name: İktisat (DR)
-  abbreviation: İKTİSAT-DR
+  abbreviation: İKTİSAT-DR-DİĞER
   yoksis_id: 281623
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
@@ -9145,7 +9147,7 @@
   founded_at: 22.10.2015
 
 - name: İktisat (YL) (Tezli)
-  abbreviation: İKTİSAT-YL
+  abbreviation: İKTİSAT-YL-DİĞER
   yoksis_id: 219793
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -9158,7 +9160,7 @@
   founded_at: 26.06.2012
 
 - name: İktisat (YL) (Tezsiz) (İÖ)
-  abbreviation: İKTİSAT-YZ-2
+  abbreviation: İKTİSAT-YZ-2-DİĞER
   yoksis_id: 323942
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -9196,7 +9198,7 @@
   founded_at: 22.06.2016
 
 - name: İslam Tarihi ve Sanatları (DR)
-  abbreviation: İSLAMTS-DR
+  abbreviation: İSLAMTS-DR-DİĞER
   yoksis_id: 169479
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
@@ -9208,7 +9210,7 @@
   duration: 4
 
 - name: İslam Tarihi ve Sanatları (YL) (Tezli)
-  abbreviation: İSLAMTS-YL
+  abbreviation: İSLAMTS-YL-DİĞER
   yoksis_id: 230799
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -9271,7 +9273,7 @@
   founded_at: 21.07.2011
 
 - name: İşletme ve Endüstri İlişkileri (YL) (Tezsiz) (İÖ)
-  abbreviation: İŞLENİ-YZ-2
+  abbreviation: İŞLENİ-YZ-2-DİĞER
   yoksis_id: 219261
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -15269,6 +15271,7 @@
   duration: 2
 
 - name: Özel Güvenlik ve Koruma Programı
+  abbreviation: BAFRA-MYO-MKG-ÖGK-PR
   yoksis_id: 333586
   parent_yoksis_id: 282779
   unit_type_id: Önlisans/lisans Programı
@@ -15781,7 +15784,7 @@
   duration: 2
 
 - name: Müzik Eğitimi (DR)
-  abbreviation: MÜZİK-DR
+  abbreviation: MÜZİK-DR-DİĞER
   yoksis_id: 267755
   parent_yoksis_id: 174846
   unit_type_id: Doktora Programı
@@ -16634,7 +16637,7 @@
   duration: 4
 
 - name: Moleküler Biyoloji ve Genetik (YL) (Tezli)
-  abbreviation: MOLBİYOGEN-YL
+  abbreviation: MOLBİYOGEN-YL-DİĞER
   yoksis_id: 381852
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -19359,7 +19362,7 @@
   duration: 2
 
 - name: Anatomi (YL) (Tezli)
-  abbreviation: ANATOMİ-YL
+  abbreviation: ANATOMİ-YL-DİĞER
   yoksis_id: 267774
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
@@ -19370,7 +19373,7 @@
   duration: 2
 
 - name: Veterinerlik Anatomisi (DR)
-  abbreviation: VETERİNER-ANATOMİ-DR
+  abbreviation: VETERİNER-ANATOMİ-DR-DİĞER
   yoksis_id: 267772
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -19381,7 +19384,7 @@
   duration: 4
 
 - name: Ağız, Diş ve Çene Radyolojisi (DR)
-  abbreviation: ADÇR-DR
+  abbreviation: ADÇR-DR-DİĞER
   yoksis_id: 267775
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -19425,7 +19428,7 @@
   duration: 2
 
 - name: Fizyoloji (YL) (Tezli)
-  abbreviation: FİZYOLOJİ-YL
+  abbreviation: FİZYOLOJİ-YL-DİĞER
   yoksis_id: 267779
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
@@ -19446,7 +19449,7 @@
   duration: 2
 
 - name: Tıbbi Biyokimya (YL) (Tezli)
-  abbreviation: TBİYOKİMYA-YL
+  abbreviation: TBİYOKİMYA-YL-DİĞER
   yoksis_id: 267781
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
@@ -19457,7 +19460,7 @@
   duration: 2
 
 - name: Tıbbi Mikrobiyoloji (YL) (Tezli)
-  abbreviation: TMİKRO-YL
+  abbreviation: TMİKRO-YL-DİĞER
   yoksis_id: 267780
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
@@ -20544,7 +20547,7 @@
   duration: 2
 
 - name: Türk Dili ve Edebiyatı (YL) (Ücretli)
-  abbreviation: TDE-YL-ÜCRETLİ
+  abbreviation: TDE-YL-ÜCRETLİ-DİĞER
   yoksis_id: 311762
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -20606,7 +20609,7 @@
   duration: 2
 
 - name: Uluslararası Ticaret ve İşletmecilik (YL) (Tezli) (Ücretli)
-  abbreviation: UTİ-YL-ÜCRETLİ
+  abbreviation: UTİ-YL-ÜCRETLİ-DİĞER
   yoksis_id: 299076
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -20617,7 +20620,7 @@
   duration: 2
 
 - name: Uluslararası Ticaret ve İşletmecilik (YL) (Tezsiz) (Ücretli)
-  abbreviation: UTİ-YZ-ÜCRETLİ
+  abbreviation: UTİ-YZ-ÜCRETLİ-DİĞER
   yoksis_id: 299077
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -20749,6 +20752,7 @@
   duration: 2
 
 - name: İşletme (YL) (Tezsiz) (İÖ) (Canik Başarı Ortak)
+  abbreviation: SOSYAL-BİLİM-iŞLETME-YZ-2-CANİK
   yoksis_id: 235338
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -21147,6 +21151,7 @@
     - Yerleşke eksik
 
 - name: İç Mekan Tasarımı Programı
+  abbreviation: VEZİRKÖPRÜ-MYO-TASARIM-İÇMEKAN-PR
   yoksis_id: 382240
   parent_yoksis_id: 382185
   unit_type_id: Önlisans/lisans Programı
@@ -22263,7 +22268,7 @@
   duration: 2
 
 - name: İstatistik (YL) (Tezli) (İngilizce)
-  abbreviation: İSTATİSTİK-YL-İNG
+  abbreviation: İSTATİSTİK-YL-İNG-DİĞER
   yoksis_id: 383211
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -22277,6 +22282,7 @@
     - Yerleşke eksik
 
 - name: Silah Sanayi Teknikerliği Programı
+  abbreviation: YEŞİLYURT-MYO-KİMYA-SİLAH-PR
   yoksis_id: 383467
   parent_yoksis_id: 215488
   unit_type_id: Önlisans/lisans Programı
@@ -22366,7 +22372,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Eğitim Programları ve Öğretim (YL) (Tezsiz) (Uzaktan Öğretim)
-  abbreviation: EPO-YZ-UZ
+  abbreviation: EPO-YZ-UZ-DİĞER
   yoksis_id: 408265
   parent_yoksis_id: 174846
   unit_type_id: Yüksek Lisans Programı
@@ -22388,7 +22394,7 @@
   duration: 2
 
 - name: Nanobilim ve Nanoteknoloji Anabilim Dalı (Disiplinlerarası)
-  abbreviation: NANO-AD
+  abbreviation: NANO-AD-DİĞER
   yoksis_id: 406607
   parent_yoksis_id: 122386
   unit_type_id: Disiplinlerarası Anabilim Dalı
@@ -22440,7 +22446,7 @@
   duration: 2
 
 - name: Müzikte Yorumculuk (Sy)
-  abbreviation: MY-SY
+  abbreviation: MY-SY-DİĞER
   yoksis_id: 390166
   parent_yoksis_id: 208606
   unit_type_id: Sanatta Yeterlilik Programı
@@ -22531,7 +22537,7 @@
   duration: 2
 
 - name: Dil ve Konuşma Terapisi (YL) (Tezli)
-  abbreviation: DİLKOT-YL
+  abbreviation: DİLKOT-YL-DİĞER
   yoksis_id: 393050
   parent_yoksis_id: 122387
   unit_type_id: Yüksek Lisans Programı
@@ -22543,7 +22549,7 @@
   duration: 2
 
 - name: Evde Hasta Bakım Hemşireliği (YL) (Tezli)
-  abbreviation: EHBH-YL
+  abbreviation: EHBH-YL-DİĞER
   yoksis_id: 392993
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -22555,7 +22561,7 @@
   duration: 2
 
 - name: Evde Hasta Bakım Hemşireliği (YL) (Tezsiz) (İÖ)
-  abbreviation: EHBH-YZ-2
+  abbreviation: EHBH-YZ-2-DİĞER
   yoksis_id: 392994
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -22567,7 +22573,7 @@
   duration: 2
 
 - name: Evde Hasta Bakım Hemşireliği (YL) (Tezsiz) (Uzaktan Öğretim)
-  abbreviation: EHBH-YZ-UZ
+  abbreviation: EHBH-YZ-UZ-DİĞER
   yoksis_id: 392995
   parent_yoksis_id: 122387
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -22593,7 +22599,7 @@
     - TIP-DAHİLİ-RADYO-AD ile mükerrer isim
 
 - name: Veteriner İmmünihistoloji ve Embriyoloji (DR)
-  abbreviation: VETERİNER-İE-DR
+  abbreviation: VETERİNER-İE-DR-DİĞER
   yoksis_id: 405472
   parent_yoksis_id: 122387
   unit_type_id: Doktora Programı
@@ -22618,7 +22624,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 4
   issues:
-    - Mükerrer birim
+    - VETERİNER-ZOO-DR-DİĞER-2 ile mükerrer
 
 - name: Dil ve Konuşma Terapisi Programı
   abbreviation: DİLKOT-PR
@@ -22703,7 +22709,7 @@
     - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Arkeoloji (DR)
-  abbreviation: ARKEO-DR
+  abbreviation: ARKEO-DR-DİĞER
   yoksis_id: 393051
   parent_yoksis_id: 122388
   unit_type_id: Doktora Programı
@@ -22777,7 +22783,7 @@
     - İsim Girişimcilik ve Yenilikçilik olmalı
 
 - name: İslam Hukuku (YL) (Tezli)
-  abbreviation: İSLAMH-YL
+  abbreviation: İSLAMH-YL-DİĞER
   yoksis_id: 390206
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -22789,7 +22795,7 @@
   duration: 2
 
 - name: Kelam (YL) (Tezli)
-  abbreviation: KELAM-YL
+  abbreviation: KELAM-YL-DİĞER
   yoksis_id: 390207
   parent_yoksis_id: 122388
   unit_type_id: Yüksek Lisans Programı
@@ -22887,6 +22893,7 @@
   duration: 2
 
 - name: Yönetim Bilişim Sistemleri Bölümü
+  abbreviation: YBS
   yoksis_id: 411423
   parent_yoksis_id: 293681
   unit_type_id: Bölüm
@@ -22897,6 +22904,7 @@
   duration: -1
 
 - name: Bilişim Teknolojileri Anabilim Dalı
+  abbreviation: YBS-BT-AD
   yoksis_id: 411425
   parent_yoksis_id: 411423
   unit_type_id: Anabilim Dalı
@@ -22907,6 +22915,7 @@
   duration: -1
 
 - name: Bilişim Yönetimi Anabilim Dalı
+  abbreviation: YBS-BY-AD
   yoksis_id: 411424
   parent_yoksis_id: 411423
   unit_type_id: Anabilim Dalı
@@ -22917,6 +22926,7 @@
   duration: -1
 
 - name: Türk Müziği Bölümü
+  abbreviation: TÜRKMÜZİĞİ
   yoksis_id: 411420
   parent_yoksis_id: 122303
   unit_type_id: Bölüm
@@ -22927,6 +22937,7 @@
   duration: -1
 
 - name: Türk Halk Müziği Anabilim Dalı
+  abbreviation: TÜRKMÜZİĞİ-HALK-AD
   yoksis_id: 411421
   parent_yoksis_id: 411420
   unit_type_id: Anabilim Dalı
@@ -22937,6 +22948,7 @@
   duration: -1
 
 - name: Türk Sanat Müziği Anabilim Dalı
+  abbreviation: TÜRKMÜZİĞİ-SANAT-AD
   yoksis_id: 411422
   parent_yoksis_id: 411420
   unit_type_id: Anabilim Dalı
@@ -22947,6 +22959,7 @@
   duration: -1
 
 - name: Akıllı Sistemler Mühendisliği Anabilim Dalı (Disiplinlerarası)
+  abbreviation: ASM-AD-DİĞER
   yoksis_id: 409816
   parent_yoksis_id: 122386
   unit_type_id: Disiplinlerarası Anabilim Dalı
@@ -22957,6 +22970,7 @@
   duration: 2
 
 - name: Akıllı Sistemler Mühendisliği (DR)
+  abbreviation: ASM-DR-DİĞER
   yoksis_id: 409817
   parent_yoksis_id: 409816
   unit_type_id: Disiplinlerarası Doktora Programı
@@ -22967,6 +22981,7 @@
   duration: 4
 
 - name: Bahçe Bitkileri (YL) (Tezli) (İngilizce)
+  abbreviation: BAHÇE-YL-İNG-DİĞER
   yoksis_id: 409562
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -22977,6 +22992,7 @@
   duration: 2
 
 - name: Sürdürülebilir Tarım Anabilim Dalı (Disiplinlerarası)
+  abbreviation: SÜRTARIM-AD-DİĞER
   yoksis_id: 409601
   parent_yoksis_id: 122386
   unit_type_id: Disiplinlerarası Anabilim Dalı
@@ -22987,6 +23003,7 @@
   duration: 2
 
 - name: Sürdürülebilir Tarım (Disiplinlerarası) (DR)
+  abbreviation: SÜRTARIM-DR-DİĞER
   yoksis_id: 409602
   parent_yoksis_id: 409601
   unit_type_id: Disiplinlerarası Doktora Programı
@@ -22997,6 +23014,7 @@
   duration: 4
 
 - name: Lisansüstü Eğitim Enstitüsü
+  abbreviation: LİSANSÜSTÜ
   yoksis_id: 410905
   parent_yoksis_id: 121946
   unit_type_id: Enstitü
@@ -23006,6 +23024,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Acil Hemşireliği (DR)
+  abbreviation: ACİL-DR
   yoksis_id: 411061
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -23014,8 +23033,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - ACİL-DR-DİĞER ile mükerrer
 
 - name: Acil Hemşireliği (YL) (Tezli)
+  abbreviation: ACİL-YL
   yoksis_id: 411062
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23024,8 +23046,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - ACİL-YL-DİĞER ile mükerrer
 
 - name: Adli Bilimler (YL) (Tezli)
+  abbreviation: ADLİ-YL
   yoksis_id: 410993
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23034,8 +23059,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - ADLİ-YL-DİĞER ile mükerrer
 
 - name: Akıllı Sistemler Mühendisliği Anabilim Dalı (Disiplinlerarası)
+  abbreviation: ASM-AD
   yoksis_id: 410994
   parent_yoksis_id: 410905
   unit_type_id: Disiplinlerarası Anabilim Dalı
@@ -23043,8 +23071,11 @@
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - ASM-AD-DİĞER ile mükerrer
 
 - name: Akıllı Sistemler Mühendisliği (DR)
+  abbreviation: ASM-DR
   yoksis_id: 410996
   parent_yoksis_id: 410994
   unit_type_id: Disiplinlerarası Doktora Programı
@@ -23053,8 +23084,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - ASM-DR-DİĞER ile mükerrer
 
 - name: Akıllı Sistemler Mühendisliği (YL) (Tezli)
+  abbreviation: ASM-YL
   yoksis_id: 410995
   parent_yoksis_id: 410994
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -23063,8 +23097,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - ASM-YL-DİĞER ile mükerrer
 
 - name: Alerji-İmmünoloji (YL) (Tezli)
+  abbreviation: ALERJİ-YL
   yoksis_id: 411065
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23073,8 +23110,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - ALERJİ-YL-DİĞER ile mükerrer
 
 - name: Alman Dili Eğitimi (DR)
+  abbrviation: ALM-DR
   yoksis_id: 411967
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -23083,8 +23123,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - EĞİTİM-BİLİM-ALM-DR ile mükerrer
 
 - name: Alman Dili Eğitimi (YL) (Tezli)
+  abbreviation: ALM-YL
   yoksis_id: 411968
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23093,8 +23136,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - EĞİTİM-BİLİM-ALM-YL ile mükerrer
 
 - name: Anatomi (DR)
+  abbreviation: ANATOMİ-DR
   yoksis_id: 411066
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -23103,8 +23149,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - ANATOMİ-DR-DİĞER ile mükerrer
 
 - name: Anatomi (YL) (Tezli)
+  abbreviation: ANATOMİ-YL
   yoksis_id: 411067
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23113,8 +23162,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - ANATOMİ-YL-DİĞER ile mükerrer
 
 - name: Antrenörlük Eğitimi (DR)
+  abbreviation: ANTRENÖR-DR
   yoksis_id: 411068
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -23123,8 +23175,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - ANTRENÖR-DR-DİĞER ile mükerrer
 
 - name: Antrenörlük Eğitimi (YL) (Tezli)
+  abbreviation: ANTRENÖR-YL
   yoksis_id: 411069
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23133,8 +23188,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - ANTRENÖR-YL-DİĞER ile mükerrer
 
 - name: Arkeoloji (DR)
+  abbreviation: ARKEO-DR
   yoksis_id: 410992
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -23143,8 +23201,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - ARKEO-DR-DİĞER ile mükerrer
 
 - name: Arkeoloji (YL) (Tezli)
+  abbreviation: ARKEO-YL
   yoksis_id: 410959
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23153,8 +23214,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - ARKEO-YL-DİĞER ile mükerrer
 
 - name: Avrupa-Akdeniz Kültürler ve Turizm (YL) (Tezli)
+  abbreviation: AAKT-YL
   yoksis_id: 410961
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23163,8 +23227,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - AAKT-YL-DİĞER ile mükerrer
 
 - name: Ağız, Diş ve Çene Cerrahisi (DR)
+  abbreviation: ADÇC-DR
   yoksis_id: 411063
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -23173,8 +23240,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - ADÇC-DR-DİĞER ile mükerrer
 
 - name: Ağız, Diş ve Çene Radyolojisi (DR)
+  abbreviation: ADÇR-DR
   yoksis_id: 411064
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -23183,8 +23253,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - ADÇR-DR-DİĞER ile mükerrer
 
 - name: Bahçe Bitkileri (DR)
+  abbreviation: BAHÇE-DR
   yoksis_id: 410997
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -23193,8 +23266,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - BAHÇE-DR-DİĞER ile mükerrer
 
 - name: Bahçe Bitkileri (YL) (İngilizce) (Tezli)
+  abbreviation: BAHÇE-YL-İNG
   yoksis_id: 410999
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23203,8 +23279,11 @@
   unit_instruction_language_id: İngilizce
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - BAHÇE-YL-İNG-DİĞER ile mükerrer
 
 - name: Bahçe Bitkileri (YL) (Tezli)
+  abbreviation: BAHÇE-YL
   yoksis_id: 410998
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23213,8 +23292,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - BAHÇE-YL-DİĞER ile mükerrer
 
 - name: Beden Eğitimi ve Spor (DR)
+  abbreviation: BES-DR
   yoksis_id: 410964
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -23225,6 +23307,7 @@
   duration: 4
 
 - name: Beden Eğitimi ve Spor (DR)
+  abbreviation: BES-DR-DİĞER
   yoksis_id: 411070
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -23233,8 +23316,12 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - Aynı ensititü altında 2 tane açmışlar
+    - SAĞLIK-BİLİM-BES-DR ve SOSYAL-BİLİM-BES-DR ile benzer
 
 - name: Beden Eğitimi ve Spor (YL) (Tezli)
+  abbreviation: BES-YL
   yoksis_id: 411071
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23243,8 +23330,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - SAĞLIK-BİLİM-BES-YL ile mükerrer
 
 - name: Beslenme Bilimleri (YL) (Tezli)
+  abbreviation: BESLENME-YL
   yoksis_id: 411072
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23253,8 +23343,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - BESLENME-YL-DİĞER ile mükerrer
 
 - name: Bilgisayar Mühendisliği (YL) (Tezli)
+  abbreviation: BİLGİSAYAR-YL
   yoksis_id: 411000
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23263,8 +23356,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - BİLGİSAYAR-YL-DİĞER ile mükerrer
 
 - name: Bilgisayar ve Öğretim Teknikleri Eğitimi (YL) (Tezli)
+  abbreviation: BÖTE-YL
   yoksis_id: 411969
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23273,8 +23369,12 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - BÖTE-YL-DİĞER ile mükerrer
+    - Teknolojileri yerine Teknikleri isim değişikliği
 
 - name: Bitki Koruma (DR)
+  abbreviation: BİTKİKOR-DR
   yoksis_id: 411001
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -23283,8 +23383,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - BİTKİKOR-DR-DİĞER ile mükerrer
 
 - name: Bitki Koruma (YL) (Tezli)
+  abbreviation: BİTKİKOR-YL
   yoksis_id: 411002
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23293,8 +23396,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - BİTKİKOR-YL-DİĞER ile mükerrer
 
 - name: Biyoistatistik ve Tıbbi Bilişim (DR)
+  abbreviation: BİYOİSTATİSTİK-DR
   yoksis_id: 411073
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -23303,8 +23409,12 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - BİYOİSTATİSTİK-DR-DİĞER ile mükerrer
+    - İsim değişikliği yapılmış
 
 - name: Biyoistatistik ve Tıbbi Bilişim (YL) (Tezli)
+  abbreviation: BİYOİSTATİSTİK-YL
   yoksis_id: 411074
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23313,8 +23423,12 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - BİYOİSTATİSTİK-YL-DİĞER ile mükerrer
+    - İsim değişikliği yapılmış
 
 - name: Biyokimya (YL) (Tezli) (Veteriner)
+  abbreviation: VETERİNER-BİYOKİMYA-YL
   yoksis_id: 411075
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23323,8 +23437,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - VETERİNER-BİYOKİMYA-YL-DİĞER ile mükerrer
 
 - name: Biyoloji (DR)
+  abbreviation: BİYO-DR
   yoksis_id: 411003
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -23333,8 +23450,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - BİYO-DR-DİĞER ile mükerrer
 
 - name: Biyoloji (YL) (Tezli)
+  abbreviation: BİYO-YL
   yoksis_id: 411004
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23343,8 +23463,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - BİYO-YL-DİĞER ile mükerrer
 
 - name: Biyoloji (YL) (Tezsiz) (Uzaktan Öğretim)
+  abbreviation: BİYO-YZ-UZ
   yoksis_id: 411006
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23353,8 +23476,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
   duration: 2
+  issues:
+    - BİYO-YZ-UZ-DİĞER ile mükerrer
 
 - name: Biyoloji (YL) (Tezsiz)
+  abbreviation: BİYO-YZ
   yoksis_id: 411005
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23363,8 +23489,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - BİYO-YZ-DİĞER ile mükerrer
 
 - name: Biyoloji Eğitimi (YL) (Tezli)
+  abbreviation: BİYOEĞ-YL
   yoksis_id: 411970
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23373,8 +23502,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - BİYOEĞ-YL-DİĞER ile mükerrer
 
 - name: Coğrafya (DR)
+  abbreviation: COĞRAFYA-DR
   yoksis_id: 410912
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -23383,8 +23515,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - COĞRAFYA-DR-DİĞER ile mükerrer
 
 - name: Coğrafya (YL) (Tezli)
+  abbreviation: COĞRAFYA-YL
   yoksis_id: 410951
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23393,8 +23528,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - COĞRAFYA-YL-DİĞER ile mükerrer
 
 - name: Coğrafya Eğitimi (YL) (Tezli)
+  abbreviation: COĞ-YL
   yoksis_id: 411971
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23403,8 +23541,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - EĞİTİM-BİLİM-COĞ-YL ile mükerrer
 
 - name: Deney Hayvanları Araştırmaları (YL) (Tezli)
+  abbreviation: DHA-YL
   yoksis_id: 411076
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23413,8 +23554,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - SAĞLIK-BİLİM-DHA-YL ile mükerrer
 
 - name: Dil ve Konuşma Terapisi (YL) (Tezli)
+  abbreviation: DİLKOT-YL
   yoksis_id: 411077
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23423,8 +23567,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - DİLKOT-YL-DİĞER ile mükerrer
 
 - name: Dini Danışmanlık ve Rehberlik (YL) (Tezsiz) (İÖ)
+  abbreviation: DDR-YZ-2
   yoksis_id: 410944
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23433,8 +23580,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
+  issues:
+    - DDR-YZ-2-DİĞER ile mükerrer
 
 - name: Doğum ve Kadın Hastalıkları Hemşireliği (DR)
+  abbreviation: DOĞUMHEM-DR
   yoksis_id: 411078
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -23443,8 +23593,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - DOĞUMHEM-DR-DİĞER ile mükerrer
 
 - name: Doğum ve Kadın Hastalıkları Hemşireliği (YL) (Tezli)
+  abbreviation: DOĞUMHEM-YL
   yoksis_id: 411079
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23453,8 +23606,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - DOĞUMHEM-YL-DİĞER ile mükerrer
 
 - name: Doğum ve Kadın Hastalıkları Hemşireliği (YL) (Tezsiz) (İÖ)
+  abbreviation: DOĞUMHEM-YZ-2
   yoksis_id: 411080
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23463,8 +23619,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
+  issues:
+    - DOĞUMHEM-YZ-2-DİĞER ile mükerrer
 
 - name: Dölerme ve Suni Tohumlama (DR)
+  abbreviation: DÖLERME-DR
   yoksis_id: 411082
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -23473,8 +23632,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - DÖLERME-DR-DİĞER ile mükerrer
 
 - name: Dölerme ve Suni Tohumlama (YL) (Tezli)
+  abbreviation: DÖLERME-YL
   yoksis_id: 411081
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23483,8 +23645,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - VETERİNER-DÖLERME-YL ile benzer
 
 - name: Ebelik (YL) (Tezli)
+  abbreviation: EBELİK-YL
   yoksis_id: 411083
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23493,8 +23658,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - EBELİK-YL-DİĞER ile mükerrer
 
 - name: Elektrik-Elektronik Mühendisliği (DR)
+  abbreviation: ELEKTRİK-DR
   yoksis_id: 411010
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -23503,8 +23671,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - ELEKTRİK-DR-DİĞER ile mükerrer
 
 - name: Elektrik-Elektronik Mühendisliği (YL) (Tezli)
+  abbreviation: ELEKTRİK-YL
   yoksis_id: 411011
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23513,8 +23684,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - ELEKTRİK-YL-DİĞER ile mükerrer
 
 - name: Endodonti (DR)
+  abbreviation: ENDO-DR
   yoksis_id: 411084
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -23523,8 +23697,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - ENDO-DR-DİĞER ile mükerrer
 
 - name: Endüstri İlişkileri Anabilim Dalı
+  abbreviation: ENİLİŞ-AD
   yoksis_id: 410915
   parent_yoksis_id: 410905
   unit_type_id: Anabilim Dalı
@@ -23532,8 +23709,11 @@
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - SOSYAL-BİLİM-ENİLİŞ-AD ile benzer
 
 - name: Evde Hasta Bakım Hemşireliği (YL) (Tezli)
+  abbreviation: EHBH-YL
   yoksis_id: 411085
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23542,8 +23722,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - EHBH-YL-DİĞER ile mükerrer
 
 - name: Evde Hasta Bakım Hemşireliği (YL) (Tezsiz) (İÖ)
+  abbreviation: EHBH-YZ-2
   yoksis_id: 411086
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23552,8 +23735,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
+  issues:
+    - EHBH-YZ-2-DİĞER ile mükerrer
 
 - name: Evde Hasta Bakım Hemşireliği (YL) (Tezsiz) (Uzaktan Öğretim)
+  abbreviation: EHBH-YZ-UZ
   yoksis_id: 411087
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23562,8 +23748,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
   duration: 2
+  issues:
+    - EHBH-YZ-UZ-DİĞER ile mükerrer
 
 - name: Evlilik ve Aile Danışmanlığı (YL) (Tezsiz) (İÖ)
+  abbreviation: EVLİLİK-YZ-2
   yoksis_id: 410956
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23572,8 +23761,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
+  issues:
+    - EVLİLİK-YZ-2-DİĞER ile mükerrer
 
 - name: Eğitim Programları ve Öğretim (YL) (Tezli)
+  abbreviation: EPO-YL
   yoksis_id: 411972
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23582,8 +23774,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - EPO-YL-DİĞER ile mükerrer
 
 - name: Eğitim Programları ve Öğretim (YL) (Tezsiz) (Uzaktan Öğretim)
+  abbreviation: EPO-YZ-UZ
   yoksis_id: 411974
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23592,8 +23787,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
   duration: 2
+  issues:
+    - EPO-YZ-UZ-DİĞER ile mükerrer
 
 - name: Eğitim Programları ve Öğretim (YL) (Tezsiz)
+  abbreviation: EPO-YZ
   yoksis_id: 411973
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23602,8 +23800,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - EPO-YZ-DİĞER ile mükerrer
 
 - name: Eğitim Yönetimi (DR)
+  abbreviation: EY-DR
   yoksis_id: 411975
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -23612,8 +23813,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - EY-DR-DİĞER ile mükerrer
 
 - name: Eğitim Yönetimi (YL) (Tezli)
+  abbreviation: EY-YL
   yoksis_id: 411907
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23622,8 +23826,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - EY-YL-DİĞER ile mükerrer
 
 - name: Eğitim Yönetimi (YL) (Tezsiz) (İÖ)
+  abbreviation: EY-YZ-2
   yoksis_id: 411908
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23632,8 +23839,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
+  issues:
+    - EY-YZ-2-DİĞER ile mükerrer
 
 - name: Eğitim Yönetimi (YL) (Tezsiz) (Uzaktan Öğretim)
+  abbreviation: EY-YZ-UZ
   yoksis_id: 411909
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23642,8 +23852,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
   duration: 2
+  issues:
+    - EY-YZ-UZ-DİĞER ile mükerrer
 
 - name: Eğitim Yönetimi, Teftişi, Planlaması ve Ekonomisi (YL) (Tezli)
+  abbreviation: EYTPE-YL
   yoksis_id: 411904
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23652,8 +23865,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - EĞİTİM-BİLİM-EYTPE-YL ile mükerrer
 
 - name: Eğitim Yönetimi, Teftişi, Planlaması ve Ekonomisi (YL) (Tezsiz) (İÖ)
+  abbreviation: EYTPE-YZ-2
   yoksis_id: 411905
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23662,8 +23878,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
+  issues:
+    - EĞİTİM-BİLİM-EYTPE-YZ-2 ile mükerrer
 
 - name: Eğitim Yönetimi, Teftişi, Planlaması ve Ekonomisi (YL) (Tezsiz) (Uzaktan Öğretim)
+  abbreviation: EYTPE-YZ-UZ
   yoksis_id: 411906
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23672,8 +23891,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
   duration: 2
+  issues:
+    - EĞİTİM-BİLİM-EYTPE-YZ-UZ ile mükerrer
 
 - name: Eğitimin Felsefi, Sosyal ve Tarihi Temelleri (DR)
+  abbreviation: EFST-DR
   yoksis_id: 411910
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -23682,8 +23904,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - EFST-DR-DİĞER ile mükerrer
 
 - name: Eğitimin Felsefi, Sosyal ve Tarihi Temelleri (YL) (Tezli)
+  abbreviation: EFST-YL
   yoksis_id: 411976
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23692,8 +23917,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - EFST-YL-DİĞER ile mükerrer
 
 - name: Farmakoloji (DR)
+  abbreviation: FARMAKOLOJİ-DR
   yoksis_id: 411088
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -23702,8 +23930,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - FARMAKOLOJİ-DR-DİĞER ile mükerrer
 
 - name: Felsefe (DR)
+  abbreviation: FELSEFE-DR
   yoksis_id: 410979
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -23712,8 +23943,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - FELSEFE-DR-DİĞER ile mükerrer
 
 - name: Felsefe (YL) (Tezli)
+  abbreviation: FELSEFE-YL
   yoksis_id: 410920
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23722,8 +23956,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - FELSEFE-YL-DİĞER ile mükerrer
 
 - name: Felsefe ve Din Bilimleri (DR)
+  abbreviation: FELSEFEDİN-DR
   yoksis_id: 410909
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -23732,8 +23969,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - FELSEFEDİN-DR-DİĞER ile mükerrer
 
 - name: Felsefe ve Din Bilimleri (YL) (Tezli)
+  abbreviation: FELSEFEDİN-YL
   yoksis_id: 410948
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23742,8 +23982,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - FELSEFEDİN-YL-DİĞER ile mükerrer
 
 - name: Fen Bilgisi Eğitimi (DR)
+  abbreviation: FENBİL-DR
   yoksis_id: 411911
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -23752,8 +23995,12 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - FENBİL-DR-DİĞER ile mükerrer
+    - İsim değişikliği
 
 - name: Fen Bilgisi Eğitimi (YL) (Tezli)
+  abbreviation: FENBİL-YL
   yoksis_id: 411912
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23762,8 +24009,12 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - FENBİL-YL-DİĞER ile mükerrer
+    - İsim değişikliği
 
 - name: Fen Bilgisi Eğitimi (YL) (Tezsiz) (İÖ)
+  abbreviation: FENBİL-YZ-2
   yoksis_id: 411914
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23772,8 +24023,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
+  issues:
+    - FENBİL-YZ-2-DİĞER ile mükerrer
 
 - name: Fen Bilgisi Eğitimi (YL) (Tezsiz) (Uzaktan Öğretim)
+  abbreviation: FENBİL-YZ-UZ
   yoksis_id: 411913
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23782,8 +24036,12 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
   duration: 2
+  issues:
+    - FENBİL-YZ-UZ-DİĞER ile mükerrer
+    - İsim değişikliği
 
 - name: Fizik (DR)
+  abbreviation: FİZİK-DR
   yoksis_id: 411012
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -23792,8 +24050,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - FİZİK-DR-DİĞER ile mükerrer
 
 - name: Fizik (YL) (Tezli)
+  abbreviation: FİZİK-YL
   yoksis_id: 411013
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23802,8 +24063,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - FİZİK-YL-DİĞER ile mükerrer
 
 - name: Fizik (YL) (Tezsiz) (Uzaktan Öğretim)
+  abbreviation: FİZİK-YZ-UZ
   yoksis_id: 411015
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23812,8 +24076,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
   duration: 2
+  issues:
+    - FİZİK-YZ-UZ-DİĞER ile mükerrer
 
 - name: Fizik (YL) (Tezsiz)
+  abbreviation: FİZİK-YZ
   yoksis_id: 411014
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23822,8 +24089,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - FİZİK-YZ-DİĞER ile mükerrer
 
 - name: Fizik Eğitimi (YL) (Tezli)
+  abbreviation: FİZİKEĞ-YL
   yoksis_id: 411977
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23832,8 +24102,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - FİZİKEĞ-YL-DİĞER ile mükerrer
 
 - name: Fizyoloji (DR)
+  abbreviation: FİZYOLOJİ-DR
   yoksis_id: 411089
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -23842,8 +24115,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - FİZYOLOJİ-DR-DİĞER ile mükerrer
 
 - name: Fizyoloji (YL) (Tezli)
+  abbreviation: FİZYOLOJİ-YL
   yoksis_id: 411090
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23852,8 +24128,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - FİZYOLOJİ-YL-DİĞER ile mükerrer
 
 - name: Fransız Dili Eğitimi (YL) (Tezli)
+  abbreviation: FR-YL
   yoksis_id: 411978
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23862,8 +24141,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - EĞİTİM-BİLİM-FR-YL ile mükerrer
 
 - name: Geleneksel Türk Müziği (YL) (Tezli)
+  abbreviation: GTM-YL
   yoksis_id: 410971
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23872,8 +24154,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - GTM-YL-DİĞER ile mükerrer
 
 - name: Girişimcilik ve Yenilikçilik Anabilim Dalı (Disiplinlerarası)
+  abbreviation: GY-AD-DA
   yoksis_id: 410985
   parent_yoksis_id: 410905
   unit_type_id: Disiplinlerarası Anabilim Dalı
@@ -23884,6 +24169,7 @@
   duration: 2
 
 - name: Girişimcilik ve Yenilikçilik (YL) (İngilizce) (Tezli)
+  abbreviation: GY-YL-İNG
   yoksis_id: 410986
   parent_yoksis_id: 410985
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -23892,8 +24178,11 @@
   unit_instruction_language_id: İngilizce
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - SOSYAL-BİLİM-GY-YL-İNG ile mükerrer
 
 - name: Girişimcilik ve Yenilikçilik (YL) (İngilizce) (Tezsiz)
+  abbreviation: GY-YZ-İNG
   yoksis_id: 410988
   parent_yoksis_id: 410985
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -23902,8 +24191,11 @@
   unit_instruction_language_id: İngilizce
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - SOSYAL-BİLİM-GY-YZ-İNG ile mükerrer
 
 - name: Girişimcilik ve Yenilikçilik (YL) (Tezli)
+  abbreviation: GY-YL
   yoksis_id: 410987
   parent_yoksis_id: 410985
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -23912,8 +24204,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - SOSYAL-BİLİM-GY-YL ile mükerrer
 
 - name: Yenilikçilik ve Girişimcilik (YL) (İngilizce) (Tezsiz) (Uzaktan Öğretim)
+  abbreviation: GY-YZ-İNG-UZ
   yoksis_id: 410989
   parent_yoksis_id: 410985
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -23922,8 +24217,12 @@
   unit_instruction_language_id: İngilizce
   unit_instruction_type_id: Uzaktan Öğretim
   duration: 2
+  issues:
+    - SOSYAL-BİLİM-GY-YZ-UZ-İNG
+    - İsim Girişimcilik ve Yenilikçilik olmalı
 
 - name: Görsel İletişim Tasarımı (YL) (Tezli)
+  abbreviation: GİT-YL
   yoksis_id: 411212
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23932,8 +24231,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - GİT-YL-DİĞER ile mükerrer
 
 - name: Gıda Mühendisliği (DR)
+  abbreviation: GIDA-DR
   yoksis_id: 411016
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -23942,8 +24244,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - GIDA-DR-DİĞER ile mükerrer
 
 - name: Gıda Mühendisliği (YL) (Tezli)
+  abbreviation: GIDA-YL
   yoksis_id: 411017
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23952,8 +24257,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - GIDA-YL-DİĞER ile mükerrer
 
 - name: Halk Sağlığı (DR)
+  abbreviation: HALK-DR
   yoksis_id: 411091
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -23962,8 +24270,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - HALK-DR-DİĞER ile mükerrer
 
 - name: Halk Sağlığı Hemşireliği (YL) (Tezli)
+  abbreviation: HSH-YL
   yoksis_id: 411092
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23972,8 +24283,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - HSH-YL-DİĞER ile mükerrer
 
 - name: Harita Mühendisliği (DR)
+  abbreviation: HARİTA-DR
   yoksis_id: 411018
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -23982,8 +24296,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - HARİTA-DR-DİĞER ile mükerrer
 
 - name: Harita Mühendisliği (YL) (Tezli)
+  abbreviation: HARİTA-YL
   yoksis_id: 411019
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -23992,8 +24309,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - HARİTA-YL-DİĞER ile mükerrer
 
 - name: Hastalıklar (DR) (Veteriner)
+  abbreviation: HASTALIKLAR-DR
   yoksis_id: 411093
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24002,8 +24322,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - VETERİNER-HASTA-DR ile mükerrer
 
 - name: Hayvan Besleme ve Beslenme Hastalıkları (DR)
+  abbreviation: HBH-DR
   yoksis_id: 411094
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24012,8 +24335,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - VETERİNER-HBH-DR ile mükerrer
 
 - name: Hayvan Besleme ve Beslenme Hastalıkları (YL) (Tezli)
+  abbreviation: HBH-YL
   yoksis_id: 411095
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24022,8 +24348,12 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - VETERİNER-HBH-YL ile mükerrer
+    - Veteriner ismi kaldırılmış
 
 - name: Hemşirelik (DR)
+  abbreviation: HEMŞİRE-DR
   yoksis_id: 411096
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24032,8 +24362,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - HEMŞİRE-DR-DİĞER ile mükerrer
 
 - name: Hemşirelik (YL) (Tezli)
+  abbreviation: HEMŞİRE-YL
   yoksis_id: 411097
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24042,8 +24375,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - HEMŞİRE-YL-DİĞER ile mükerrer
 
 - name: Hemşirelik (YL) (Tezsiz)
+  abbreviation: HEMŞİRE-YZ
   yoksis_id: 411098
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24052,8 +24388,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - HEMŞİRE-YZ-DİĞER ile mükerrer
 
 - name: Hesaplamalı Bilimler (DR)
+  abbreviation: HESAP-DR
   yoksis_id: 411020
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24062,8 +24401,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - HESAP-DR-DİĞER ile mükerrer
 
 - name: Histoloji ve Embriyoloji (DR)
+  abbreviation: HİSTO-DR
   yoksis_id: 411099
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24072,8 +24414,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - HİSTO-DR-DİĞER ile mükerrer
 
 - name: Histoloji ve Embriyoloji (YL) (Tezli)
+  abbreviation: HİSTO-YL
   yoksis_id: 411100
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24082,8 +24427,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - HİSTO-YL-DİĞER ile mükerrer
 
 - name: İktisat (DR)
+  abbreviation: İKTİSAT-DR
   yoksis_id: 410968
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24092,8 +24440,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - İKTİSAT-DR-DİĞER ile mükerrer
 
 - name: İktisat (YL) (Tezli)
+  abbreviation: İKTİSAT-YL
   yoksis_id: 410922
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24102,8 +24453,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - İKTİSAT-YL-DİĞER ile mükerrer
 
 - name: İktisat (YL) (Tezsiz) (İÖ)
+  abbreviation: İKTİSAT-YZ-2
   yoksis_id: 410982
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24112,8 +24466,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
+  issues:
+    - İKTİSAT-YZ-2-DİĞER ile mükerrer
 
 - name: İletişim Bilimleri Anabilim Dalı (Disiplinlerarası)
+  abbreviation: İLETİŞİM-AD-DA
   yoksis_id: 410972
   parent_yoksis_id: 410905
   unit_type_id: Disiplinlerarası Anabilim Dalı
@@ -24123,6 +24480,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: Medya ve İletişim Bilimleri (YL) (Tezli)
+  abbreviation: İLETİŞİM-MEDYA-YL
   yoksis_id: 410973
   parent_yoksis_id: 410972
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -24131,8 +24489,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - SOSYAL-BİLİM-İLETİŞİM-MEDYA-YL ile mükerrer
 
 - name: İlköğretim (DR)
+  abbreviation: İLK-DR
   yoksis_id: 411979
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24141,8 +24502,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - İLK-DR-DİĞER ile mükerrer
 
 - name: İlköğretim Matematik Eğitimi (YL) (Tezli)
+  abbreviation: İLKMAT-YL
   yoksis_id: 411980
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24151,8 +24515,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - İLKMAT-YL-DİĞER ile mükerrer
 
 - name: İlköğretim Matematik Eğitimi (YL) (Tezsiz) (İÖ)
+  abbreviation: İLKMAT-YZ-2
   yoksis_id: 411981
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24163,6 +24530,7 @@
   duration: 2
 
 - name: İngiliz Dili Eğitimi (YL) (Tezli)
+  abbreviation: İNG-YL
   yoksis_id: 411982
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24171,8 +24539,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - EĞİTİM-BİLİM-İNG-YL ile mükerrer
 
 - name: İnşaat Mühendisliği (DR)
+  abbreviation: İNŞAAT-DR
   yoksis_id: 411021
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24181,8 +24552,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - İNŞAAT-DR-DİĞER ile mükerrer
 
 - name: İnşaat Mühendisliği (YL) (Tezli)
+  abbreviation: İNŞAAT-YL
   yoksis_id: 411022
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24191,8 +24565,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - İNŞAAT-YL-DİĞER ile mükerrer
 
 - name: İslam Hukuku (YL) (Tezli)
+  abbreviation: İSLAMH-YL
   yoksis_id: 410990
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24201,8 +24578,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - İSLAMH-YL-DİĞER ile mükerrer
 
 - name: İslam Tarihi ve Sanatları (DR)
+  abbreviation: İSLAMTS-DR
   yoksis_id: 410908
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24211,8 +24591,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - İSLAMTS-DR-DİĞER ile mükerrer
 
 - name: İslam Tarihi ve Sanatları (YL) (Tezli)
+  abbreviation: İSLAMTS-YL
   yoksis_id: 410952
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24221,8 +24604,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - İSLAMTS-YL-DİĞER ile mükerrer
 
 - name: İstatistik (DR)
+  abbreviation: İSTATİSTİK-DR
   yoksis_id: 411023
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24231,8 +24617,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - İSTATİSTİK-DR-DİĞER ile mükerrer
 
 - name: İstatistik (YL) (İngilizce) (Tezli)
+  abbreviation: İSTATİSTİK-YL-İNG
   yoksis_id: 411025
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24241,8 +24630,11 @@
   unit_instruction_language_id: İngilizce
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - İSTATİSTİK-YL-İNG-DİĞER ile mükerrer
 
 - name: İstatistik (YL) (Tezli)
+  abbreviation: İSTATİSTİK-YL
   yoksis_id: 411024
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24251,8 +24643,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - İSTATİSTİK-YL-DİĞER ile mükerrer
 
 - name: İç Hastalıkları (DR) (Veteriner)
+  abbreviation: İÇH-DR
   yoksis_id: 411101
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24261,8 +24656,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - VETERİNER-İÇH-DR ile mükerrer
 
 - name: İç Hastalıkları (YL) (Veteriner) (Tezli)
+  abbreviation: İÇH-YL
   yoksis_id: 411102
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24271,8 +24669,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - VETERİNER-İÇH-YL ile mükerrer
 
 - name: İşletme (DR)
+  abbreviation: İŞLETME-DR
   yoksis_id: 410953
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24281,8 +24682,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - SOSYAL-BİLİM-İŞLETME-DR ile mükerrer
 
 - name: İşletme (YL) (Tezli)
+  abbreviation: İŞLETME-YL
   yoksis_id: 410916
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24291,6 +24695,8 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - SOSYAL-BİLİM-İŞLETME-YL ile mükerrer
 
 - name: İşletme (YL) (Tezsiz) (İÖ) (Canik Başarı Ortak)
   yoksis_id: 410955
@@ -24313,6 +24719,7 @@
   duration: 2
 
 - name: İşletme (YL) (Tezsiz)
+  abbreviation: İŞLETME-YZ
   yoksis_id: 410917
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24321,8 +24728,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
+  issues:
+    - SOSYAL-BİLİM-İŞLETME-YZ ile mükerrer
 
 - name: İşletme Anabilim Dalı
+  abbreviation: İŞLETME-AD
   yoksis_id: 410914
   parent_yoksis_id: 410905
   unit_type_id: Anabilim Dalı
@@ -24332,6 +24742,7 @@
   unit_instruction_type_id: Normal Öğretim
 
 - name: İşletme ve Endüstri İlişkileri (YL) (Tezsiz) (İÖ)
+  abbreviation: İŞLENİ-YZ-2
   yoksis_id: 410918
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24340,8 +24751,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
+  issues:
+    - İŞLENİ-YZ-2-DİĞER ile mükerrer
 
 - name: Kadın ve Aile Araştırmaları (YL) (Tezli)
+  abbreviation: KAA-YL
   yoksis_id: 410946
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24350,8 +24764,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - KAA-YL-DİĞER ile mükerrer
 
 - name: Kamu Hukuku (DR) (Karadeniz Teknikn Üniversitesi Ortak)
+  abbreviation: KAMU-DR-KTÜ
   yoksis_id: 410943
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24360,8 +24777,12 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - KAMU-DR-KTÜ-DİĞER ile mükerrer
+    - Teknik yazımı hatalı
 
 - name: Kamu Hukuku (YL) (Tezli)
+  abbreviation: KAMU-YL
   yoksis_id: 410913
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24370,8 +24791,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - KAMU-YL-DİĞER ile mükerrer
 
 - name: Kamu Hukuku (YL) (Tezsiz) (İÖ)
+  abbreviation: KAMU-YZ-2
   yoksis_id: 410945
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24380,8 +24804,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
+  issues:
+    - KAMU-YZ-2-DİĞER ile mükerrer
 
 - name: Kamu Yönetimi (DR)
+  abbreviation: KAMUYÖN-DR
   yoksis_id: 410954
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24390,8 +24817,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - KAMUYÖN-DR-DİĞER ile mükerrer
 
 - name: Kamu Yönetimi (YL) (Tezli)
+  abbreviation: KAMUYÖN-YL
   yoksis_id: 410921
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24400,8 +24830,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - KAMUYÖN-YL-DİĞER ile mükerrer
 
 - name: Kardiyopulmoner Fizyoterapi (YL) (Tezli)
+  abbreviation: KPF-YL
   yoksis_id: 411103
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24410,8 +24843,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - KPF-YL-DİĞER ile mükerrer
 
 - name: Kelam (YL) (Tezli)
+  abbreviation: KELAM-YL
   yoksis_id: 410991
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24420,8 +24856,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - KELAM-YL-DİĞER ile mükerrer
 
 - name: Kimya (DR)
+  abbreviation: FEN-KİMYA-DR
   yoksis_id: 411026
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24430,8 +24869,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - FEN-KİMYA-DR-DİĞER ile mükerrer
 
 - name: Kimya (YL) (Tezli)
+  abbreviation: FEN-KİMYA-YL
   yoksis_id: 411028
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24440,8 +24882,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - FEN-KİMYA-YL-DİĞER ile mükerrer
 
 - name: Kimya (YL) (Tezsiz) (Uzaktan Öğretim)
+  abbreviation: FEN-KİMYA-YL-UZ
   yoksis_id: 411029
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24450,8 +24895,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
   duration: 2
+  issues:
+    - FEN-KİMYA-YL-UZ-DİĞER ile mükerrer
 
 - name: Kimya Mühendisliği (YL) (Tezli)
+  abbreviation: KİMYA-YL
   yoksis_id: 411027
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24460,8 +24908,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - KİMYA-YL-DİĞER ile mükerrer
 
 - name: Klinik Sinir Bilimleri (DR)
+  abbreviation: KLİNİKSİNİR-DR
   yoksis_id: 411104
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24470,8 +24921,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - KLİNİKSİNİR-DR-DİĞER ile mükerrer
 
 - name: Klinik Toksikoloji Anabilim Dalı (Disiplinlerarası)
+  abbreviation: TOKSİK-AD-DA
   yoksis_id: 411105
   parent_yoksis_id: 410905
   unit_type_id: Disiplinlerarası Anabilim Dalı
@@ -24479,8 +24933,11 @@
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - SAĞLIK-BİLİM-TOKSİK-AD-DA ile mükerrer
 
 - name: Klinik Toksikoloji (DR)
+  abbreviation: TOKSİK-DR-DA
   yoksis_id: 411106
   parent_yoksis_id: 411105
   unit_type_id: Disiplinlerarası Doktora Programı
@@ -24489,8 +24946,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - SAĞLIK-BİLİM-TOKSİK-DR-DA ile mükerrer
 
 - name: Makine Mühendisliği (DR)
+  abbreviation: MAKİNE-DR
   yoksis_id: 411030
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24499,8 +24959,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - MAKİNE-DR-DİĞER ile mükerrer
 
 - name: Makine Mühendisliği (YL) (Tezli)
+  abbreviation: MAKİNE-YL
   yoksis_id: 411031
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24509,8 +24972,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - MAKİNE-YL-DİĞER ile mükerrer
 
 - name: Matematik (DR)
+  abbreviation: MAT-DR
   yoksis_id: 411032
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24519,8 +24985,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - MAT-DR-DİĞER ile mükerrer
 
 - name: Matematik (YL) (Tezli)
+  abbreviation: MAT-YL
   yoksis_id: 411033
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24529,8 +24998,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - MAT-YL-DİĞER ile mükerrer
 
 - name: Matematik (YL) (Tezsiz) (Uzaktan Öğretim)
+  abbreviation: MAT-YL-UZ
   yoksis_id: 411034
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24539,8 +25011,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
   duration: 2
+  issues:
+    - MAT-YL-UZ-DİĞER ile mükerrer
 
 - name: Metalurji ve Malzeme Mühendisliği (YL) (Tezli)
+  abbreviation: MALZEME-YL
   yoksis_id: 411035
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24549,8 +25024,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - MALZEME-YL-DİĞER ile mükerrer
 
 - name: Mikrobiyoloji Anabilim Dalı (Disiplinlerarası)
+  abbreviation: MİKRO-AD-DA
   yoksis_id: 411107
   parent_yoksis_id: 410905
   unit_type_id: Disiplinlerarası Anabilim Dalı
@@ -24558,8 +25036,11 @@
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - SAĞLIK-BİLİM-MİKRO-AD-DA ile mükerrer
 
 - name: Veterinerlik Mikrobiyolojisi (DR)
+  abbreviation: VETERİNER-MİKRO-DR
   yoksis_id: 411108
   parent_yoksis_id: 411107
   unit_type_id: Disiplinlerarası Doktora Programı
@@ -24568,8 +25049,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - VETERİNER-MİKRO-DR-DİĞER ile mükerrer
 
 - name: Moleküler Biyoloji ve Genetik (YL) (Tezli)
+  abbreviation: MOLBİYOGEN-YL
   yoksis_id: 411036
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24578,8 +25062,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - MOLBİYOGEN-YL-DİĞER ile mükerrer
 
 - name: Moleküler Tıp (DR)
+  abbreviation: MOLTIP-DR
   yoksis_id: 411109
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24588,8 +25075,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - MOLTIP-DR-DİĞER ile mükerrer
 
 - name: Moleküler Tıp (YL) (Tezli)
+  abbreviation: MOL-TIP-YL
   yoksis_id: 411110
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24598,8 +25088,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - MOL-TIP-YL-DİĞER ile mükerrer
 
 - name: Muhasebe-Finansman (YL) (Tezli)
+  abbreviation: MUHASEBE-YL
   yoksis_id: 410962
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24608,8 +25101,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - MUHASEBE-YL-DİĞER ile mükerrer
 
 - name: Muhasebe-Finansman (YL) (Tezsiz)
+  abbreviation: MUHASEBE-YZ
   yoksis_id: 410963
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24618,8 +25114,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - MUHASEBE-YZ-DİĞER ile mükerrer
 
 - name: Müzik Eğitimi (DR)
+  abbreviation: MÜZİK-DR
   yoksis_id: 411983
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24628,8 +25127,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - MÜZİK-DR-DİĞER ile mükerrer
 
 - name: Müzik Eğitimi (YL) (Tezli)
+  abbreviation: MÜZİK-YL
   yoksis_id: 411984
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24638,8 +25140,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - MÜZİK-YL-DİĞER ile mükerrer
 
 - name: Müzik Eğitimi (YL) (Tezsiz) (İÖ)
+  abbreviation: MÜZİK-YZ-2
   yoksis_id: 411985
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24648,8 +25153,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
+  issues:
+    - MÜZİK-YZ-2-DİĞER ile mükerrer
 
 - name: Müzikte Yorumculuk (Sy)
+  abbreviation: MY-SY
   yoksis_id: 411213
   parent_yoksis_id: 410905
   unit_type_id: Sanatta Yeterlilik Programı
@@ -24658,8 +25166,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - MY-SY-DİĞER ile mükerrer
 
 - name: Müzikte Yorumculuk (YL) (Tezli)
+  abbreviation: MY-YL
   yoksis_id: 411214
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24668,8 +25179,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - MY-YL-DİĞER ile mükerrer
 
 - name: Müzikte Yorumculuk (YL) (Tezsiz) (İÖ)
+  abbreviation: MY-YZ-2
   yoksis_id: 411215
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24678,8 +25192,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
+  issues:
+    - MY-YZ-2-DİĞER ile mükerrer
 
 - name: Nanobilim ve Nanoteknoloji Anabilim Dalı (Disiplinlerarası)
+  abbreviation: NANO-AD
   yoksis_id: 411037
   parent_yoksis_id: 410905
   unit_type_id: Disiplinlerarası Anabilim Dalı
@@ -24687,8 +25204,11 @@
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - NANO-AD-DİĞER ile mükerrer
 
 - name: Nanobilim ve Nanoteknoloji (İngilizce) (DR)
+  abbreviation: NANO-DR-İNG
   yoksis_id: 411038
   parent_yoksis_id: 411037
   unit_type_id: Disiplinlerarası Doktora Programı
@@ -24697,8 +25217,11 @@
   unit_instruction_language_id: İngilizce
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - NANO-DR-İNG-DİĞER ile mükerrer
 
 - name: Nanobilim ve Nanoteknoloji (YL) (İngilizce) (Tezli)
+  abbreviation: NANO-YL-İNG
   yoksis_id: 411039
   parent_yoksis_id: 411037
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -24707,8 +25230,11 @@
   unit_instruction_language_id: İngilizce
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - NANO-YL-İNG-DİĞER ile mükerrer
 
 - name: Odyoloji (YL) (Tezli)
+  abbreviation: ODYO-YL-DİĞER
   yoksis_id: 411111
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24717,8 +25243,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - ODYO-YL-DİĞER ile mükerrer
 
 - name: Oral Diagnoz ve Radyoloji (DR)
+  abbreviation: ODR-DR
   yoksis_id: 411112
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24727,8 +25256,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - ODR-DR-DİĞER ile mükerrer
 
 - name: Ortaöğretim Fen ve Matematik Alanlar Eğitimi (DR)
+  abbreviation: ORTAFENMAT-DR
   yoksis_id: 411915
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24737,8 +25269,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - ORTAFENMAT-DR-DİĞER ile mükerrer
 
 - name: Ortaöğretim Sosyal Alanlar Eğitimi (DR)
+  abbreviation: ORTASOSYAL-DR
   yoksis_id: 411916
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24747,8 +25282,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - ORTASOSYAL-DR-DİĞER ile mükerrer
 
 - name: Ortodonti (DR)
+  abbreviation: ORTO-DR
   yoksis_id: 411113
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24757,8 +25295,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - ORTO-DR-DİĞER ile mükerrer
 
 - name: Parazitoloji (DR)
+  abbreviation: PARAZİT-DR
   yoksis_id: 411114
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24767,8 +25308,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - PARAZİT-DR-DİĞER ile mükerrer
 
 - name: Patoloji (DR)
+  abbreviation: PATO-DR
   yoksis_id: 411115
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24777,8 +25321,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - PATO-DR-DİĞER ile mükerrer
 
 - name: Pedodonti (DR)
+  abbreviation: PEDO-DR
   yoksis_id: 411116
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24787,8 +25334,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - PEDO-DR-DİĞER ile mükerrer
 
 - name: Periodontoloji (DR)
+  abbreviation: PERİO-DR
   yoksis_id: 411117
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24797,8 +25347,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - PERİO-DR-DİĞER ile mükerrer
 
 - name: Protetik Diş Tedavisi (DR)
+  abbreviation: PDT-DR
   yoksis_id: 411118
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24807,8 +25360,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - PDT-DR-DİĞER ile mükerrer
 
 - name: Psikoloji (YL) (Tezli)
+  abbreviation: PSİKOLOJİ-YL
   yoksis_id: 410958
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24817,8 +25373,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - PSİKOLOJİ-YL-DİĞER ile mükerrer
 
 - name: Radyolojik Bilimler Anabilim Dalı (Disiplinlerarası)
+  abbreviation: RADYO-AD
   yoksis_id: 411119
   parent_yoksis_id: 410905
   unit_type_id: Disiplinlerarası Anabilim Dalı
@@ -24826,8 +25385,11 @@
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - SAĞLIK-BİLİM-RADYO-AD ile benzer
 
 - name: Radyolojik Bilimler (DR)
+  abbreviation: RADYO-DR
   yoksis_id: 411120
   parent_yoksis_id: 411119
   unit_type_id: Disiplinlerarası Doktora Programı
@@ -24836,8 +25398,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - RADYOB-DR ile mükerrer
 
 - name: Radyolojik Bilimler (YL) (Tezli)
+  abbreviation: RADYO-YL
   yoksis_id: 411121
   parent_yoksis_id: 411119
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -24846,8 +25411,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - RADYOB-YL ile mükerrer
 
 - name: Rehberlik ve Psikolojik Danışmanlık (DR)
+  abbreviation: PDR-DR
   yoksis_id: 411917
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24856,8 +25424,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - EĞİTİM-BİLİM-PDR-DR ile mükerrer
 
 - name: Rehberlik ve Psikolojik Danışmanlık (YL) (Tezli)
+  abbreviation: PDR-YL
   yoksis_id: 411918
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24866,8 +25437,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - EĞİTİM-BİLİM-PDR-YL ile mükerrer
 
 - name: Resim (YL) (Tezli)
+  abbreviation: RESİM-YL
   yoksis_id: 411216
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24876,8 +25450,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - RESİM-YL-DİĞER ile mükerrer
 
 - name: Resim-İş Eğitimi (DR)
+  abbreviation: RESİMİŞ-DR
   yoksis_id: 411919
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24886,8 +25463,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - RESİMİŞ-DR-DİĞER ile mükerrer
 
 - name: Resim-İş Eğitimi (YL) (Tezli)
+  abbreviation: RESİMİŞ-YL
   yoksis_id: 411920
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24896,8 +25476,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - RESİMİŞ-YL-DİĞER ile mükerrer
 
 - name: Restoratif Diş Tedavisi (DR)
+  abbreviation: RDT-DR
   yoksis_id: 411122
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24906,8 +25489,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - RDT-DR-DİĞER ile mükerrer
 
 - name: Ruh Sağlığı ve Hastalıkları Hemşireliği (YL) (Tezli)
+  abbreviation: RUH-YL
   yoksis_id: 411123
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24916,8 +25502,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - RUH-YL-DİĞER ile mükerrer
 
 - name: Sanat Tarihi (YL) (Tezli)
+  abbreviation: SANATTARİHİ-YL
   yoksis_id: 410970
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24926,8 +25515,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - SANATTARİHİ-YL-DİĞER ile mükerrer
 
 - name: Sanat ve Tasarım (Sy)
+  abbreviation: ST-SY
   yoksis_id: 411217
   parent_yoksis_id: 410905
   unit_type_id: Sanatta Yeterlilik Programı
@@ -24936,6 +25528,8 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - ST-SY-DİĞER ile mükerrer
 
 - name: Sağlık Kurumları Yönetimi (YL) (Tezsiz) (İÖ) (OMÜ Ortak) (Ücretli)
   yoksis_id: 410978
@@ -24948,6 +25542,7 @@
   duration: 2
 
 - name: Sağlık Yönetimi (DR)
+  abbreviation: SAĞLIKYÖN-DR
   yoksis_id: 411124
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -24956,8 +25551,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - SAĞLIKYÖN-DR-DİĞER ile mükerrer
 
 - name: Sağlık Yönetimi (YL) (Tezli)
+  abbreviation: SAĞLIKYÖN-YL
   yoksis_id: 411125
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24966,8 +25564,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - SAĞLIKYÖN-YL-DİĞER ile mükerrer
 
 - name: Sağlık Yönetimi (YL) (Tezsiz) (İÖ)
+  abbreviation: SAĞLIKYÖN-YZ-2
   yoksis_id: 411127
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24976,8 +25577,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
+  issues:
+    - SAĞLIKYÖN-YZ-2-DİĞER ile mükerrer
 
 - name: Sağlık Yönetimi (YL) (Tezsiz) (İÖ)
+  abbreviation: SAĞLIKYÖN-YZ-2-DİĞER-2
   yoksis_id: 411126
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24986,8 +25590,12 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
+  issues:
+    - SAĞLIKYÖN-YZ-2 ile mükerrer
+    - Uzaktan Öğretim olmalı bir tanesi
 
 - name: Sağlık, Gıda Güvenliği ve İlgili Politikalar (YL) (Tezli)
+  abbreviation: SGGİP-YL
   yoksis_id: 411040
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -24996,8 +25604,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - SGGİP-YL-DİĞER ile mükerrer
 
 - name: Sinir Bilimleri Anabilim Dalı (Disiplinlerarası)
+  abbreviation: SİNİR-AD
   yoksis_id: 411128
   parent_yoksis_id: 410905
   unit_type_id: Disiplinlerarası Anabilim Dalı
@@ -25005,8 +25616,11 @@
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - SAĞLIK-BİLİM-SİNİR-AD ile mükerrer
 
 - name: Sinir Bilimleri (DR)
+  abbreviation: SİNİR-DR
   yoksis_id: 411129
   parent_yoksis_id: 411128
   unit_type_id: Disiplinlerarası Doktora Programı
@@ -25015,8 +25629,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - SİNİR-DR-DİĞER ile mükerrer
 
 - name: Sinir Bilimleri (YL) (Tezli)
+  abbreviation: SİNİR-YL
   yoksis_id: 411130
   parent_yoksis_id: 411128
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -25025,8 +25642,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - SİNİR-YL-DİĞER ile mükerrer
 
 - name: Siyaset Bilimi ve Kamu Yönetimi (YL) (Tezsiz) (Uzaktan Öğretim)
+  abbreviation: SBKY-YZ-UZ
   yoksis_id: 410965
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25035,8 +25655,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
   duration: 2
+  issues:
+    - SBKY-YZ-UZ-DİĞER ile mükerrer
 
 - name: Sosyal Bilgiler Eğitimi (DR)
+  abbreviation: SOSYALBİL-DR-DİĞER-2
   yoksis_id: 411992
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25045,8 +25668,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - SOSYALBİL-DR-DİĞER ile mükerrer
 
 - name: Sosyal Bilgiler Eğitimi (DR)
+  abbreviation: SOSYALBİL-DR
   yoksis_id: 411988
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25055,8 +25681,12 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - SOSYALBİL-DR-DİĞER ile mükerrer
+    - Aynı isimli 3 program var
 
 - name: Sosyal Bilgiler Eğitimi (YL) (Tezli)
+  abbreviation: SOSYALBİL-YL
   yoksis_id: 411989
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25065,8 +25695,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - SOSYALBİL-YL-DİĞER ile mükerrer
 
 - name: Sosyal Bilgiler Eğitimi (YL) (Tezsiz) (İÖ)
+  abbreviation: SOSYALBİL-YZ-2
   yoksis_id: 411990
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25075,8 +25708,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
+  issues:
+    - SOSYALBİL-YZ-2-DİĞER ile mükerrers
 
 - name: Sosyal Bilgiler Eğitimi (YL) (Tezsiz) (Uzaktan Öğretim)
+  abbreviation: SOSYALBİL-YZ-UZ
   yoksis_id: 411991
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25085,8 +25721,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
   duration: 2
+  issues:
+    - SOSYALBİL-YZ-UZ-DİĞER ile mükerrer
 
 - name: Sosyoloji (DR)
+  abbreviation: SOSYOLOJİ-DR
   yoksis_id: 410983
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25095,8 +25734,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - SOSYOLOJİ-DR-DİĞER ile mükerrer
 
 - name: Sosyoloji (YL) (Tezli)
+  abbreviation: SOSYOLOJİ-YL
   yoksis_id: 410919
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25105,8 +25747,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - SOSYOLOJİ-YL-DİĞER ile mükerrer
 
 - name: Spor Yöneticiliği (DR)
+  abbreviation: SPORYÖN-DR
   yoksis_id: 410967
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25115,8 +25760,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - SPORYÖN-DR-DİĞER ile mükerrer
 
 - name: Spor Yöneticiliği (YL) (Tezli)
+  abbreviation: SPORYÖN-YL
   yoksis_id: 410969
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25125,8 +25773,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - SPORYÖN-YL-DİĞER ile mükerrer
 
 - name: Su Ürünleri Hastalıkları (YL) (Tezli)
+  abbreviation: SU-YL
   yoksis_id: 411131
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25135,8 +25786,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - SU-YL-DİĞER ile mükerrer
 
 - name: Sucul Hayvan Hastalıkları (DR)
+  abbreviation: SUCUL-DR
   yoksis_id: 411132
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25145,8 +25799,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - SUCUL-DR-DİĞER ile mükerrer
 
 - name: Sürdürülebilir Tarım Anabilim Dalı (Disiplinlerarası)
+  abbreviation: SÜRTARIM-AD
   yoksis_id: 411041
   parent_yoksis_id: 410905
   unit_type_id: Disiplinlerarası Anabilim Dalı
@@ -25154,8 +25811,11 @@
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - SÜRTARIM-AD-DİĞER ile mükerrer
 
 - name: Sürdürülebilir Tarım (DR)
+  abbreviation: SÜRTARIM-DR
   yoksis_id: 411042
   parent_yoksis_id: 411041
   unit_type_id: Disiplinlerarası Doktora Programı
@@ -25164,8 +25824,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - SÜRTARIM-AD-DİĞER ile mükerrer
 
 - name: Sınıf Eğitimi (DR)
+  abbreviation: SINIF-DR
   yoksis_id: 411921
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25174,8 +25837,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - SINIF-DR-DİĞER ile mükerrer
 
 - name: Sınıf Eğitimi (YL) (Tezli)
+  abbreviation: SINIF-YL
   yoksis_id: 411922
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25184,8 +25850,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - SINIF-YL-DİĞER ile mükerrer
 
 - name: Sınıf Eğitimi (YL) (Tezsiz) (İÖ)
+  abbreviation: SINIF-YZ-2
   yoksis_id: 411986
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25194,8 +25863,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: İkinci Öğretim
   duration: 2
+  issues:
+    - SINIF-YZ-2-DİĞER ile mükerrer
 
 - name: Sınıf Eğitimi (YL) (Tezsiz) (Uzaktan Öğretim)
+  abbreviation: SINIF-YZ-UZ
   yoksis_id: 411987
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25204,8 +25876,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
   duration: 2
+  issues:
+    - SINIF-YZ-UZ-DİĞER ile mükerrer
 
 - name: Tarih (DR)
+  abbreviation: TARİH-DR
   yoksis_id: 410910
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25214,8 +25889,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - TARİH-DR-DİĞER ile mükerrer
 
 - name: Tarih (YL) (Tezli)
+  abbreviation: TARİH-YL
   yoksis_id: 410950
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25224,8 +25902,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - TARİH-YL-DİĞER ile mükerrer
 
 - name: Tarih Eğitimi (YL) (Tezli)
+  abbreviation: TARİHEĞ-YL
   yoksis_id: 411993
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25234,8 +25915,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - TARİHEĞ-YL-DİĞER ile mükerrer
 
 - name: Tarih Eğitimi (YL) (Tezsiz) (Uzaktan Öğretim)
+  abbreviation: TARİHEĞ-YZ-UZ
   yoksis_id: 411994
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25244,8 +25928,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
   duration: 2
+  issues:
+    - TARİHEĞ-YZ-UZ-DİĞER ile mükerrer
 
 - name: Tarla Bitkileri (DR)
+  abbreviation: TARLA-DR
   yoksis_id: 411051
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25254,8 +25941,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - TARLA-DR-DİĞER ile mükerrer
 
 - name: Tarla Bitkileri (YL) (Tezli)
+  abbreviation: TARLA-YL
   yoksis_id: 411052
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25264,8 +25954,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - TARLA-YL-DİĞER ile mükerrer
 
 - name: Tarım Ekonomisi (DR)
+  abbreviation: TARIM-DR
   yoksis_id: 411043
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25274,8 +25967,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - TARIM-DR-DİĞER ile mükerrer
 
 - name: Tarım Ekonomisi (YL) (Tezli)
+  abbreviation: TARIM-YL
   yoksis_id: 411044
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25284,8 +25980,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - TARIM-YL-DİĞER ile mükerrer
 
 - name: Tarım Makineleri ve Teknolojileri Mühendisliği (DR)
+  abbreviation: TARIMAKTEK-DR
   yoksis_id: 411045
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25296,6 +25995,7 @@
   duration: 4
 
 - name: Tarım Makineleri ve Teknolojileri Mühendisliği (YL) (Tezli)
+  abbreviation: TARIMAKTEK-YL
   yoksis_id: 411046
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25306,6 +26006,7 @@
   duration: 2
 
 - name: Tarımsal Biyoteknoloji (DR)
+  abbreviation: TBT-DR
   yoksis_id: 411047
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25314,8 +26015,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - TBT-DR-DİĞER ile mükerrer
 
 - name: Tarımsal Biyoteknoloji (YL) (Tezli)
+  abbreviation: TBT-YL
   yoksis_id: 411048
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25324,8 +26028,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - TBT-YL-DİĞER ile mükerrer
 
 - name: Tarımsal Yapılar ve Sulama (DR)
+  abbreviation: TYS-DR
   yoksis_id: 411049
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25334,8 +26041,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - TYS-DR-DİĞER ile mükerrer
 
 - name: Tarımsal Yapılar ve Sulama (YL) (Tezli)
+  abbreviation: TYS-YL
   yoksis_id: 411050
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25344,8 +26054,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - TYS-YL-DİĞER ile mükerrer
 
 - name: Taşınmaz Değerleme ve Geliştirme (YL) (Tezsiz) (Uzaktan Öğretim)
+  abbreviation: TAŞINMAZ-YZ-UZ
   yoksis_id: 411053
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25354,8 +26067,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
   duration: 2
+  issues:
+    - TAŞINMAZ-YZ-UZ-DİĞER ile mükerrer
 
 - name: Temel İslam Bilimleri (DR)
+  abbreviation: TİB-DR
   yoksis_id: 410907
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25364,8 +26080,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - TİB-DR-DİĞER ile mükerrer
 
 - name: Temel İslam Bilimleri (YL) (Tezli)
+  abbreviation: TİB-YL
   yoksis_id: 410947
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25374,8 +26093,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - TİB-YL-DİĞER ile mükerrer
 
 - name: Toprak Bilimi ve Bitki Besleme (DR)
+  abbreviation: TOPRAK-DR
   yoksis_id: 411054
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25384,8 +26106,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - TOPRAK-DR-DİĞER ile mükerrer
 
 - name: Toprak Bilimi ve Bitki Besleme (YL) (Tezli)
+  abbreviation: TOPRAK-YL
   yoksis_id: 411055
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25394,8 +26119,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - TOPRAK-YL-DİĞER ile mükerrer
 
 - name: Turizm İşletmeciliği (YL) (Tezli)
+  abbreviation: TURİZMİŞ-YL
   yoksis_id: 410984
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25404,8 +26132,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - TURİZMİŞ-YL-DİĞER ile mükerrer
 
 - name: Turizm İşletmeciliği (YL) (Tezsiz)
+  abbreviation: TURİZMİŞ-YZ
   yoksis_id: 410980
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25414,8 +26145,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - TURİZMİŞ-YZ-DİĞER ile mükerrer
 
 - name: Türk Dili ve Edebiyatı (DR)
+  abbreviation: TDE-DR
   yoksis_id: 410911
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25424,8 +26158,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - TDE-DR-DİĞER ile mükerrer
 
 - name: Türk Dili ve Edebiyatı (YL) (Tezli)
+  abbreviation: TDE-YL
   yoksis_id: 410949
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25434,8 +26171,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - TDE-YL-DİĞER ile mükerrer
 
 - name: Türk Dili ve Edebiyatı (YL) (Ücretli)
+  abbreviation: TDE-YL-ÜCRETLİ
   yoksis_id: 410981
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25444,8 +26184,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - TDE-YL-ÜCRETLİ-DİĞER ile mükerrer
 
 - name: Türkiye Cumhuriyeti Tarihi (DR)
+  abbreviation: TC-DR
   yoksis_id: 410966
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25454,8 +26197,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - SOSYAL-BİLİM-TC-DR ile mükerrer
 
 - name: Türkçe Eğitimi (DR)
+  abbreviation: TÜRKÇE-DR
   yoksis_id: 411995
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25464,8 +26210,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - TÜRKÇE-DR-DİĞER ile mükerrer
 
 - name: Türkçe Eğitimi (YL) (Tezli)
+  abbreviation: TÜRKÇE-YL
   yoksis_id: 411996
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25474,8 +26223,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - TÜRKÇE-YL-DİĞER ile mükerrer
 
 - name: Tıbbi Biyokimya (DR)
+  abbreviation: TBİYOKİMYA-DR
   yoksis_id: 411133
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25484,8 +26236,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - TBİYOKİMYA-DR-DİĞER ile mükerrer
 
 - name: Tıbbi Biyokimya (DR)
+  abbreviation: TBİYOKİMYA-DR-DİĞER-2
   yoksis_id: 411135
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25494,8 +26249,12 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - TBİYOKİMYA-DR-DİĞER ve TBİYOKİMYA-DR ile mükerrer
+    - Yeni program 2 tane açılmış
 
 - name: Tıbbi Biyokimya (YL) (Tezli)
+  abbreviation: TBİYOKİMYA-YL
   yoksis_id: 411134
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25504,8 +26263,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - TBİYOKİMYA-YL-DİĞER ile mükerrer
 
 - name: Tıbbi Biyokimya (YL) (Tezli)
+  abbreviation: TBİYOKİMYA-YL-DİĞER-2
   yoksis_id: 411136
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25514,8 +26276,12 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - TBİYOKİMYA-YL-DİĞER ve TBİYOKİMYA-YL ile mükerrer
+    - Yeni program 2 tane açılmış
 
 - name: Tıbbi Farmakoloji (DR)
+  abbreviation: TFARMA-DR
   yoksis_id: 411137
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25524,8 +26290,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - TFARMA-DR-DİĞER ile mükerrer
 
 - name: Tıbbi Farmakoloji (YL) (Tezli)
+  abbreviation: TFARMA-YL
   yoksis_id: 411138
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25534,8 +26303,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - TFARMA-YL-DİĞER ile mükerrer
 
 - name: Tıbbi Mikrobiyoloji (DR)
+  abbreviation: TMİKRO-DR
   yoksis_id: 411139
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25544,8 +26316,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - TMİKRO-DR-DİĞER ile mükerrer
 
 - name: Tıbbi Mikrobiyoloji (YL) (Tezli)
+  abbreviation: TMİKRO-YL
   yoksis_id: 411140
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25554,8 +26329,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - TMİKRO-YL-DİĞER
 
 - name: Tıbbi Resimleme Anabilim Dalı (Disiplinlerarası)
+  abbreviation: TIBBİRESİM-AD-DA
   yoksis_id: 412023
   parent_yoksis_id: 410905
   unit_type_id: Disiplinlerarası Anabilim Dalı
@@ -25563,8 +26341,11 @@
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - GÜZEL-SANAT-TIBBİRESİM-AD-DA ile mükerrer
 
 - name: Tıbbi Resimleme (YL) (Tezli)
+  abbreviation: TIBBİRESİM-YL
   yoksis_id: 411218
   parent_yoksis_id: 412023
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -25573,8 +26354,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - TIBBİRESİM-YL-DİĞER ile mükerrer
 
 - name: Tıp Hukuku Anabilim Dalı (Disiplinlerarası)
+  abbreviation: TIPH-AD-DA
   yoksis_id: 411141
   parent_yoksis_id: 410905
   unit_type_id: Disiplinlerarası Anabilim Dalı
@@ -25582,8 +26366,11 @@
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - SAĞLIK-BİLİM-TIPH-AD-DA ile mükerrer
 
 - name: Tıp Hukuku (YL) (Tezli)
+  abbreviation: TIPH-YL
   yoksis_id: 411142
   parent_yoksis_id: 411141
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -25592,8 +26379,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - SAĞLIK-BİLİM-TIPH-YL ile mükerrer
 
 - name: Uluslararası Düzenleyici Bilim (YL) (Tezli)
+  abbreviation: UDB-YL
   yoksis_id: 411143
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25602,8 +26392,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - UDB-YL-DİĞER ile mükerrer
 
 - name: Uluslararası Ticaret ve İşletmecilik (YL) (Tezli) (Ücretli)
+  abbreviation: UTİ-YL-ÜCRETLİ
   yoksis_id: 410974
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25612,8 +26405,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - UTİ-YL-ÜCRETLİ-DİĞER ile mükerrer
 
 - name: Uluslararası Ticaret ve İşletmecilik (YL) (Tezsiz) (Ücretli)
+  abbreviation: UTİ-YZ-ÜCRETLİ
   yoksis_id: 410975
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25622,8 +26418,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - UTİ-YZ-ÜCRETLİ-DİĞER ile mükerrer
 
 - name: Uluslararası İlişkiler (YL) (Tezli)
+  abbreviation: Uİ-YL
   yoksis_id: 410906
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25632,8 +26431,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - Uİ-YL-DİĞER ile mükerrer
 
 - name: Uçak ve Uzay Bilimleri Mühendisliği (YL) (Tezli)
+  abbreviation: UÇAK-YL
   yoksis_id: 411056
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25642,8 +26444,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - UÇAK-YL-DİĞER ile mükerrer
 
 - name: Veteriner Hekimliği Tarihi ve Deontoloji (DR)
+  abbreviation: VETERİNER-DEON-DR
   yoksis_id: 411144
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25652,8 +26457,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - VETERİNER-DEON-DR-DİĞER ile mükerrer
 
 - name: Veteriner Hekimliği Tarihi ve Deontoloji (YL) (Tezli)
+  abbreviation: VETERİNER-DEON-YL
   yoksis_id: 411145
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25662,8 +26470,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - VETERİNER-DEON-YL-DİĞER ile mükerrer
 
 - name: Veterinerlik Anatomisi (DR)
+  abbreviation: VETERİNER-ANATOMİ-DR
   yoksis_id: 411148
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25672,8 +26483,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - VETERİNER-ANATOMİ-DR-DİĞER ile mükerrer
 
 - name: Veterinerlik Anatomisi (YL) (Tezli)
+  abbreviation: VETERİNER-ANATOMİ-YL
   yoksis_id: 411149
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25682,8 +26496,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - VETERİNER-ANATOMİ-YL-DİĞER ile mükerrer
 
 - name: Veterinerlik Besin Hijyeni ve Teknolojisi (DR)
+  abbreviation: VETERİNER-BESİN-DR
   yoksis_id: 411150
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25692,8 +26509,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - VETERİNER-BESİN-DR-DİĞER ile mükerrer
 
 - name: Veterinerlik Besin Hijyeni ve Teknolojisi (YL) (Tezli)
+  abbreviation: VETERİNER-BESİN-YL
   yoksis_id: 411151
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25702,8 +26522,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - VETERİNER-BESİN-YL-DİĞER ile mükerrer
 
 - name: Veterinerlik Biyokimyası (DR)
+  abbreviation: VETERİNER-BİYOKİMYA-DR
   yoksis_id: 411152
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25712,8 +26535,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - VETERİNER-BİYOKİMYA-DR-DİĞER ile mükerrer
 
 - name: Veterinerlik Cerrahisi (DR)
+  abbreviation: VETERİNER-CERRAHİ-DR
   yoksis_id: 411153
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25722,8 +26548,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - VETERİNER-CERRAHİ-DR-DİĞER ile mükerrer
 
 - name: Veterinerlik Cerrahisi (YL) (Tezli)
+  abbreviation: VETERİNER-CERRAHİ-YL
   yoksis_id: 411154
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25732,8 +26561,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - VETERİNER-CERRAHİ-YL-DİĞER ile mükerrer
 
 - name: Veterinerlik Doğum ve Jinekolojisi (DR)
+  abbreviation: VETERİNER-JİNEKOLOJİ-DR
   yoksis_id: 411155
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25742,8 +26574,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - VETERİNER-JİNEKOLOJİ-DR-DİĞER ile mükerrer
 
 - name: Veterinerlik Doğum ve Jinekolojisi (YL) (Tezli)
+  abbreviation: VETERİNER-JİNEKOLOJİ-YL
   yoksis_id: 411156
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25752,8 +26587,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - VETERİNER-JİNEKOLOJİ-YL-DİĞER ile mükerrer
 
 - name: Veterinerlik Farmakoloji ve Toksikolojisi (DR)
+  abbreviation: VETERİNER-FARMATOK-DR
   yoksis_id: 411157
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25762,8 +26600,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - VETERİNER-FARMATOK-DR-DİĞER ile mükerrer
 
 - name: Veterinerlik Farmakoloji ve Toksikolojisi (YL) (Tezli)
+  abbreviation: VETERİNER-FARMATOK-YL
   yoksis_id: 411158
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25772,8 +26613,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - VETERİNER-FARMATOK-YL-DİĞER ile mükerrer
 
 - name: Veterinerlik Fizyolojisi (YL) (Tezli)
+  abbreviation: VETERİNER-FİZYOLOJİ-YL
   yoksis_id: 411159
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25782,8 +26626,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - VETERİNER-FİZYOLOJİ-YL-DİĞER ile mükerrer
 
 - name: Veterinerlik Histoloji ve Embriyoloji (YL) (Tezli)
+  abbreviation: VETERİNER-HİSTO-YL
   yoksis_id: 411146
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25792,8 +26639,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - VETERİNER-HİSTO-YL-DİĞER ile mükerrer
 
 - name: Veterinerlik Mikrobiyolojisi (YL) (Tezli)
+  abbreviation: VETERİNER-MİKRO-YL
   yoksis_id: 411160
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25802,8 +26652,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - VETERİNER-MİKRO-YL-DİĞER ile mükerrer
 
 - name: Veterinerlik Parazitoloji (YL) (Tezli)
+  abbreviation: VETERİNER-PARAZİT-YL
   yoksis_id: 411161
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25812,8 +26665,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - VETERİNER-PARAZİT-YL-DİĞER ile mükerrer
 
 - name: Veterinerlik Patolojsi (DR)
+  abbreviation: VETERİNER-PATO-DR
   yoksis_id: 411162
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25822,8 +26678,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - VETERİNER-PATO-DR-DİĞER ile mükerrer
 
 - name: Veterinerlik Zootekni (DR)
+  abbreviation: VETERİNER-ZOO-DR
   yoksis_id: 411163
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25832,8 +26691,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - VETERİNER-ZOO-DR-DİĞER, VETERİNER-ZOO-DR-DİĞER-2 ve VETERİNER-ZOO-DR-DİĞER-3 ile mükerrer
 
 - name: Veterinerlik İmmünihistoloji ve Embriyoloji (DR)
+  abbreviation: VETERİNER-İE-DR
   yoksis_id: 411147
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25842,8 +26704,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - VETERİNER-İE-DR-DİĞER ile mükerrer
 
 - name: Viroloji (DR) (Veteriner)
+  abbreviation: VETERİNER-VİROLOJİ-DR
   yoksis_id: 411165
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25852,8 +26717,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - VETERİNER-VİROLOJİ-DR-DİĞER ile mükerrer
 
 - name: Viroloji (DR)
+  abbreviation: VİROLOJİ-DR
   yoksis_id: 411164
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25862,8 +26730,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - VİROLOJİ-DR-DİĞER ile mükerrer
 
 - name: Viroloji (YL) (Veteriner) (Tezli)
+  abbreviation: VETERİNER-VİROLOJİ-YL
   yoksis_id: 411166
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25872,8 +26743,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - VETERİNER-VİROLOJİ-YL-DİĞER ile mükerrer
 
 - name: Yeni Türk Edebiyatı (YL) (Tezli) (Ücretli)
+  abbreviation: YENİTE-YL-ÜCRETLİ
   yoksis_id: 410976
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25882,8 +26756,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - SOSYAL-BİLİM-YENİTE-YL-ÜCRETLİ ile mükerrer
 
 - name: Yenilenebilir Enerji ve Uygulamaları Anabilim Dalı (Disiplinlerarası)
+  abbreviation: YEU-AD-DA
   yoksis_id: 411057
   parent_yoksis_id: 410905
   unit_type_id: Disiplinlerarası Anabilim Dalı
@@ -25891,8 +26768,11 @@
   district_id: Atakum
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
+  issues:
+    - FEN-BİLİM-YEU-AD-DA ile mükerrer
 
 - name: Yenilenebilir Enerji ve Uygulamaları (YL) (Tezli)
+  abbreviation: YEU-YL
   yoksis_id: 411058
   parent_yoksis_id: 411057
   unit_type_id: Disiplinlerarası Yüksek Lisans Programı
@@ -25901,8 +26781,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - FEN-BİLİM-YEU-YL ile mükerrer
 
 - name: Yerel Yönetimler (YL) (Tezsiz) (Uzaktan Öğretim)
+  abbreviation: YERELYÖN-YZ-UZ
   yoksis_id: 410960
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25911,8 +26794,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Uzaktan Öğretim
   duration: 2
+  issues:
+    - YERELYÖN-YZ-UZ-DİĞER ile mükerrer
 
 - name: Zootekni (DR) (Veteriner)
+  abbreviation: VETERİNER-ZOO-DR-DİĞER-2
   yoksis_id: 411167
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25921,8 +26807,12 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - Yeni program farklı adla 2 kez açılmış. Şu an 4 pr var benzer.
+    - VETERİNER-ZOO-DR-DİĞER, VETERİNER-ZOO-DR-DİĞER-2 ve VETERİNER-ZOO-DR-DİĞER-3 ile mükerrer
 
 - name: Zootekni (DR)
+  abbreviation: ZOO-DR
   yoksis_id: 411059
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25931,8 +26821,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - ZOO-DR-DİĞER ile mükerrer
 
 - name: Zootekni (YL) (Tezli) (Veteriner)
+  abbreviation: VETERİNER-ZOO-YL
   yoksis_id: 411168
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25941,8 +26834,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - VETERİNER-ZOO-YL-DİĞER ile mükerrer
 
 - name: Zootekni (YL) (Tezli)
+  abbreviation: ZOO-YL
   yoksis_id: 411060
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25951,8 +26847,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - ZOO-YL-DİĞER ile mükerrer
 
 - name: Çevre Mühendisliği (DR)
+  abbreviation: ÇEVRE-DR
   yoksis_id: 411007
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
@@ -25961,8 +26860,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 4
+  issues:
+    - ÇEVRE-DR-DİĞER ile mükerrer
 
 - name: Çevre Mühendisliği (YL) (İngilizce) (Tezli)
+  abbreviation: ÇEVRE-YL-İNG
   yoksis_id: 411009
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25971,8 +26873,11 @@
   unit_instruction_language_id: İngilizce
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - ÇEVRE-YL-İNG-DİĞER ile mükerrer
 
 - name: Çevre Mühendisliği (YL) (Tezli)
+  abbreviation: ÇEVRE-YL
   yoksis_id: 411008
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25981,8 +26886,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - ÇEVRE-YL-DİĞER ile mükerrer
 
 - name: Özel Hukuk (YL) (Tezli) (Karadeniz Teknik Üniversitesi Ortak)
+  abbreviation: ÖZELHUKUK-YL-KTÜ
   yoksis_id: 410957
   parent_yoksis_id: 410905
   unit_type_id: Yüksek Lisans Programı
@@ -25991,8 +26899,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: 2
+  issues:
+    - ÖZELHUKUK-YL-KTÜ-DİĞER ile mükerrer
 
 - name: Acil Yardım ve Afet Yönetimi Bölümü
+  abbreviation: ACİLDURUM
   yoksis_id: 410893
   parent_yoksis_id: 293577
   unit_type_id: Bölüm
@@ -26003,6 +26914,7 @@
   duration: -1
 
 - name: Acil Durum ve Afet Yönetimi Anabilim Dalı
+  abbreviation: ACİLDURUM-AD
   yoksis_id: 410894
   parent_yoksis_id: 410893
   unit_type_id: Anabilim Dalı
@@ -26013,6 +26925,7 @@
   duration: -1
 
 - name: Ergoterapi Bölümü
+  abbreviation: ERGOTERAPİ
   yoksis_id: 410895
   parent_yoksis_id: 293577
   unit_type_id: Bölüm
@@ -26023,6 +26936,7 @@
   duration: -1
 
 - name: Ergoterapi Anabilim Dalı
+  abbreviation: ERGOTERAPİ-AD
   yoksis_id: 410896
   parent_yoksis_id: 410895
   unit_type_id: Anabilim Dalı
@@ -26031,8 +26945,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: -1
+  issues:
+    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Gerontoloji Bölümü
+  abbreviation: GERONTOLOJİ
   yoksis_id: 410897
   parent_yoksis_id: 293577
   unit_type_id: Bölüm
@@ -26043,6 +26960,7 @@
   duration: -1
 
 - name: Gerontoloji Anabilim Dalı
+  abbreviation: GERONTOLOJİ-AD
   yoksis_id: 410898
   parent_yoksis_id: 410897
   unit_type_id: Anabilim Dalı
@@ -26051,8 +26969,11 @@
   unit_instruction_language_id: Türkçe
   unit_instruction_type_id: Normal Öğretim
   duration: -1
+  issues:
+    - Detsis tarafında anabilim dalı başkanlığı yok
 
 - name: Ortez-Protez Programı
+  abbreviation: ORTEZ-PR
   yoksis_id: 414118
   parent_yoksis_id: 386328
   unit_type_id: Önlisans/lisans Programı
@@ -26063,6 +26984,7 @@
   duration: 4
 
 - name: Elektronörofizyoloji Programı
+  abbreviation: SAĞLIK-MYO-THT-ENF-PR
   yoksis_id: 410890
   parent_yoksis_id: 169645
   unit_type_id: Önlisans/lisans Programı
@@ -26073,6 +26995,7 @@
   duration: 2
 
 - name: Ortopedik Protez ve Ortez Programı
+  abbreviation: SAĞLIK-MYO-THT-OPO-PR
   yoksis_id: 410891
   parent_yoksis_id: 169645
   unit_type_id: Önlisans/lisans Programı
@@ -26083,6 +27006,7 @@
   duration: 2
 
 - name: Otopsi Yardımcılığı Programı
+  abbreviation: SAĞLIK-MYO-THT-OTOPSİ-PR
   yoksis_id: 410892
   parent_yoksis_id: 169645
   unit_type_id: Önlisans/lisans Programı
@@ -26093,6 +27017,7 @@
   duration: 2
 
 - name: Elektromekanik Taşıyıcılar Programı
+  abbreviation: YEŞİLYURT-MYO-METAL-ET-PR
   yoksis_id: 411643
   parent_yoksis_id: 202463
   unit_type_id: Önlisans/lisans Programı
