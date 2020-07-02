@@ -41,12 +41,12 @@ YÖKSİS
 Tüm aday öğrenci listesini getirir. Sorguda kullanılan `type` aşağıdakilerden
 birisi olabilir:
 
-- YKS (Yükseköğretim Kurumları Sınavı)
-- YKS_EK (YKS Ek Yerleştirme)
-- YKS_MS (YKS Milli Sporcu)
-- DGS (Dikey Geçiş Sınavı)
-- DGS_EK (DGS Ek Yerleştirme)
-- LT (Lisans Tamamlama)
+- `YKS` (Yükseköğretim Kurumları Sınavı)
+- `YKS_EK` (YKS Ek Yerleştirme)
+- `YKS_MS` (YKS Milli Sporcu)
+- `DGS` (Dikey Geçiş Sınavı)
+- `DGS_EK` (DGS Ek Yerleştirme)
+- `LT` (Lisans Tamamlama)
 
 ```ruby
 type = 'YKS'
