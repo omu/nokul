@@ -54,24 +54,24 @@ year = 2019
 Xokul::Yoksis::Prospectives.all type, year
 ```
 
-#### `through_electronic`
+#### `online_registered_students`
 
-Elektronik ortam aracılığıyla kaydolan aday öğrencileri getirir.
+Elektronik ortam aracılığıyla kayıtlanan aday öğrencileri getirir.
 
 ```ruby
 type = 'YKS'
 year = 2019
-Xokul::Yoksis::Prospectives.through_electronic type, year
+Xokul::Yoksis::Prospectives.online_registered_students type, year
 ```
 
-#### `without_electronics`
+#### `manual_registered_students`
 
-Elektronik ortam dışındaki herhangi bir yolla kaydolan öğrencileri getirir.
+Elle kayıtlanan öğrencileri getirir.
 
 ```ruby
 type = 'YKS'
 year = 2019
-Xokul::Yoksis::Prospectives.without_electronics type, year
+Xokul::Yoksis::Prospectives.manual_registered_students type, year
 ```
 
 #### `student`
@@ -99,13 +99,13 @@ Xokul::Yoksis::Prospectives.photo id_number
 Pagination yalnızca aşağıdaki metotlar için kullanılabilir.
 
 - `all`
-- `through_electronic`
-- `without_electronics`
+- `online_registered_students`
+- `manual_registered_students`
 
 ```ruby
 type = 'YKS'
 year = 2019
-Xokul::Yoksis::Prospectives.without_electronics type, year, page: 3, per_page: 100
+Xokul::Yoksis::Prospectives.online_registered_students type, year, page: 3, per_page: 100
 ```
 
 Meksis

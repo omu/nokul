@@ -10,14 +10,14 @@ module Xokul
         Connection.request path, params: { prospective: { type: type, year: year } }
       end
 
-      def through_electronic(type, year, page: 1, per_page: 100)
-        path = path_with_page_params '/yoksis/prospectives/students/through_electronic', page, per_page
-        Connection.request path, params: { prospective: { type: type, year: year } }
+      def online_registered_students(type, year, page: 1, per_page: 100)
+        path = path_with_page_params '/yoksis/prospectives/students', page, per_page
+        Connection.request path, params: { prospective: { type: type, year: year, registration_type: 'online' } }
       end
 
-      def without_electronics(type, year, page: 1, per_page: 100)
-        path = path_with_page_params '/yoksis/prospectives/students/without_electronic', page, per_page
-        Connection.request path, params: { prospective: { type: type, year: year } }
+      def manual_registered_students(type, year, page: 1, per_page: 100)
+        path = path_with_page_params '/yoksis/prospectives/students', page, per_page
+        Connection.request path, params: { prospective: { type: type, year: year, registration_type: 'manual' } }
       end
 
       def student(type, year, id_number)
