@@ -18,7 +18,7 @@ module Yoksis
 
       response[:data].each do |params|
         Actions::ProspectiveStudent::Upsert.call(params)
-      rescue ActiveRecord::RecordInvalid => e
+      rescue ActiveRecord::RecordInvalid
         next
       end
 
