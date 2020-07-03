@@ -41,8 +41,10 @@ module FirstRegistration
       if Actions::ProspectiveStudent::Registration.call(@prospective_student)
         redirect_to(:prospective_students, notice: t('.success'))
       else
-        redirect_to(:prospective_students, alert: t('.warning'))
+        redirect_to(@prospective_student, alert: t('.warning'))
       end
+    rescue Actions::ProspectiveStudent::Registration::Error => e
+      redirect_to(@prospective_student, alert: e.details.join(' - '))
     end
 
     private

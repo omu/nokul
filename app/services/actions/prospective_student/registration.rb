@@ -3,6 +3,10 @@
 module Actions
   module ProspectiveStudent
     class Registration
+      Error = Class.new(StandardError) do
+        attr_accessor :details
+      end
+
       attr_reader :prospective
 
       def initialize(prospective)
@@ -16,7 +20,7 @@ module Actions
       end
 
       def call
-        return false unless valid?
+        valid!
 
         ActiveRecord::Base.transaction do
           user.save!
@@ -40,11 +44,13 @@ module Actions
                :student_entrance_type,
                to: :prospective
 
-      def valid?
-        return false unless user.valid?
-        return false unless student.valid?
+      def valid!
+        return true if user.valid? && student.valid?
 
-        true
+        error         = Error.new 'RecordInvalid'
+        error.details = [user.errors.full_messages, student.errors.full_messages].flatten!
+
+        raise error
       end
 
       def registered!
