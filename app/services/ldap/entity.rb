@@ -58,8 +58,8 @@ module LDAP
       def eduPersonAffiliation
         user.ldap_roles
             .map { |role| prefixes_for_role(role) }
-            .flatten!
-            .uniq!
+            .flatten
+            .uniq
       end
 
       # Schema: eduPerson
@@ -87,7 +87,7 @@ module LDAP
               generate_person_scoped_affiliation(prefix, unit)
             end
           end
-        end.flatten!
+        end.flatten
       end
 
       # Schema: schacPersonalCharacteristics
@@ -128,7 +128,7 @@ module LDAP
 
         codes.map do |key, numbers|
           numbers.map { |number| "urn:schac:personalUniqueCode:tr:#{key}:#{schacHomeOrganization}:#{number}" }
-        end.flatten!
+        end.flatten
       end
 
       # Format:  urn:schac:personalUniqueID:CountryCode:ID Type:ID

@@ -45,9 +45,10 @@ Performance/ChainArrayAllocation:
     - 'app/validators/available_course_lecturer_validator.rb'
     - 'app/validators/course_evaluation_type_validator.rb'
     - 'app/validators/learning_outcome_validator.rb'
-
+    - 'app/services/ldap/entity.rb'
+    - 'app/models/unit.rb'
 AllCops:
-  TargetRubyVersion: 2.6
+  TargetRubyVersion: 2.7
   # Do not exclude files from ALL COPS unless it's really necessary!
   Exclude:
     - app/controllers/concerns/yoksis_resource.rb

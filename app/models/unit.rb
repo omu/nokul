@@ -110,7 +110,7 @@ class Unit < ApplicationRecord
   def cache_ancestry
     parent_names = path.map(&:name)
     self.names_depth_cache = if path.count > 1
-                               parent_names.drop(1).reverse!.join(' / ')
+                               parent_names.drop(1).reverse.join(' / ')
                              else
                                parent_names.reverse.join(' / ')
                              end
