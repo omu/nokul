@@ -69,10 +69,9 @@
                           class:    'btn btn-block btn-success registration-button',
                           disabled: @prospective_student.unit.registration_documents.present?) %>
             <% else %>
-              <%= link_to(t('.can_not_register'),
-                          %i[register prospective_student],
-                          class:    'btn btn-block btn-danger registration-button',
-                          disabled: true) %>
+              <div class="alert alert-danger text-center">
+                <strong> <%= t('.can_not_register') %></strong>
+              </div>
             <% end %>
           <% elsif @prospective_student.temporary_registrable? %>
             <% if @prospective_student.can_temporarily_register? %>
@@ -81,10 +80,9 @@
                           class:    'btn btn-block btn-success registration-button',
                           disabled: @prospective_student.unit.registration_documents.present?) %>
             <% else %>
-              <%= link_to(t('.can_not_register'),
-                          %i[register prospective_student],
-                          class:    'btn btn-block btn-danger registration-button',
-                          disabled: true) %>
+              <div class="alert alert-danger text-center">
+                <strong> <%= t('.can_not_register') %></strong>
+              </div>
             <% end %>
           <% else %>
             <div class="alert alert-danger" role="alert">

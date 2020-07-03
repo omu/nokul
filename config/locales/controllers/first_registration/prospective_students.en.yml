@@ -72,7 +72,7 @@ en:
           turkish: Turkish Citizen
         placement_types:
           additional_score: Additional Scored
-          general_score: General
+          general: General
         system_register_types:
           bulk: Bulk
           manual: Manual

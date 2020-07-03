@@ -72,7 +72,7 @@ tr:
           turkish: Türk Vatandaşı
         placement_types:
           additional_score: Ek Puanlı
-          general_score: Genel
+          general: Genel
         system_register_types:
           bulk: Bulk
           manual: Manuel
