@@ -3,13 +3,6 @@
 module Actions
   module ProspectiveStudent
     class Upsert
-      PLACEMENT_TYPES = {
-        Genel:       :general,
-        "Ek Puanli": :additional_score
-      }.freeze
-
-      private_constant :PLACEMENT_TYPES
-
       attr_reader :params
 
       def initialize(params, academic_term: AcademicTerm.current, type: :bulk)
@@ -40,15 +33,12 @@ module Actions
       private
 
       def prepare_params
-        set_placement_type
         set_unit
         set_language
         set_obs_registered_program
         set_student_disability_type
         set_high_school_type
         set_student_entrance_type
-        set_gender
-        set_keys
         clean
       end
 
@@ -56,10 +46,6 @@ module Actions
         return false unless params.key?(key) && params[key].present? && !collection.include?(params[key])
 
         true
-      end
-
-      def set_placement_type
-        params[:placement_type] = PLACEMENT_TYPES[params[:quota]]
       end
 
       def set_unit
@@ -73,7 +59,7 @@ module Actions
       end
 
       def set_obs_registered_program
-        return unless params.fetch(:obs_status, false) &&
+        return unless !params.fetch(:obs_status) &&
                       content_valid_for?(:current_program, collection: %w[O null])
 
         params[:obs_registered_program] = Xokul::Yoksis::Units.unit_name_from_id(
@@ -98,16 +84,6 @@ module Actions
       def set_student_entrance_type
         # TODO: will be dynamic in the future
         params[:student_entrance_type_id] = StudentEntranceType.find_by(code: 1)&.id
-      end
-
-      def set_gender
-        return unless content_valid_for?(:gender)
-
-        params[:gender] = params[:gender].eql?('Erkek') ? 'male' : 'female'
-      end
-
-      def set_keys
-        params[:top_student] = params[:top_scoring_student]
       end
 
       def clean
