@@ -1,8 +1,11 @@
-inherit_from: https://raw.githubusercontent.com/omu/omu/master/etc/rubocop/rubocop.yml
-
 require:
   - rubocop-rails
+  - rubocop-performance
   - rubocop-minitest
+
+inherit_from:
+  - https://raw.githubusercontent.com/omu/omu/master/etc/rubocop/rubocop.yml
+  - .rubocop_todo.yml
 
 Rails:
   Enabled: true
@@ -11,42 +14,19 @@ Rails/UnknownEnv:
     - development
     - production
     - test
-Layout/LineLength:
-  Exclude:
-    - app/validators/employee_validator.rb # Won't fix
+
 Metrics/BlockLength:
   Exclude:
     - config/initializers/devise.rb
     - config/routes/**/*
     - lib/tasks/**/*.rake
+
 Metrics/ClassLength:
   Exclude:
     - test/**/*.rb
-    - app/models/unit.rb # TODO: Workaround until refactor
-    - app/models/user.rb # TODO: Workaround until refactor
-Metrics/ModuleLength:
-  Exclude:
-    - app/services/ldap/entity.rb
-Naming/MethodName:
-  Exclude:
-    - 'app/services/ldap/entity.rb'
+    - app/models/unit.rb
+    - app/models/user.rb
 
-# TODO: To be reviewed
-Performance/ChainArrayAllocation:
-  Exclude:
-    - 'app/decorators/curriculum_semester_decorator.rb'
-    - 'app/jobs/yoksis/academic_credentials_save_job.rb'
-    - 'app/jobs/yoksis/articles_save_job.rb'
-    - 'app/jobs/yoksis/books_save_job.rb'
-    - 'app/jobs/yoksis/certifications_save_job.rb'
-    - 'app/jobs/yoksis/education_informations_save_job.rb'
-    - 'app/jobs/yoksis/papers_save_job.rb'
-    - 'app/jobs/yoksis/projects_save_job.rb'
-    - 'app/validators/available_course_lecturer_validator.rb'
-    - 'app/validators/course_evaluation_type_validator.rb'
-    - 'app/validators/learning_outcome_validator.rb'
-    - 'app/services/ldap/entity.rb'
-    - 'app/models/unit.rb'
 AllCops:
   TargetRubyVersion: 2.7
   # Do not exclude files from ALL COPS unless it's really necessary!
