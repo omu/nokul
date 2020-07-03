@@ -16,7 +16,7 @@ class ProspectiveStudent < ApplicationRecord
               :registered, :academic_term_id, :system_register_type, :archived
 
   # callbacks
-  before_create :normalize_string_attributes
+  before_validation :normalize_attributes
 
   # enumerations
   enum additional_score: { handicapped: 1 }
@@ -100,17 +100,25 @@ class ProspectiveStudent < ApplicationRecord
   end
   # rubocop:enable Metrics/MethodLength
 
+  def avatar
+    return if id_number.blank?
+
+    Rails.cache.fetch(self, expires_in: 10.days) {
+      Xokul::Yoksis::Prospectives.photo(id_number)
+    }
+  end
+
   private
 
   # rubocop:disable Metrics/AbcSize
-  def normalize_string_attributes
-    self.first_name = first_name.capitalize_turkish
-    self.last_name  = last_name.upcase(:turkic)
-    self.fathers_name = fathers_name.capitalize_turkish if fathers_name
-    self.mothers_name = mothers_name.capitalize_turkish if mothers_name
-    self.place_of_birth = place_of_birth.capitalize_turkish if place_of_birth
-    self.registration_city = registration_city.capitalize_turkish if registration_city
-    self.registration_district = registration_district.capitalize_turkish if registration_district
+  def normalize_attributes
+    self.first_name            = first_name.to_s.capitalize_turkish
+    self.last_name             = last_name.to_s.upcase(:turkic)
+    self.fathers_name          = fathers_name.to_s.capitalize_turkish
+    self.mothers_name          = mothers_name.to_s.capitalize_turkish
+    self.place_of_birth        = place_of_birth.to_s.capitalize_turkish
+    self.registration_city     = registration_city.to_s.capitalize_turkish
+    self.registration_district = registration_district.to_s.capitalize_turkish
   end
   # rubocop:enable Metrics/AbcSize
 end
