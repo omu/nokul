@@ -3,14 +3,14 @@
 module I18nHelper
   # enum_options_for_select(Course, :status)
   def enum_options_for_select(klass, enum)
-    klass.send(enum.to_s.pluralize).map do |key, _|
+    klass.public_send(enum.to_s.pluralize).map do |key, _|
       [translate(klass, enum, key), key]
     end
   end
 
   # enum_t(course, :status)
   def enum_t(object, enum)
-    translate(object, enum, object.send(enum))
+    translate(object, enum, object.public_send(enum))
   end
 
   # options_for_select_for_collection([:add, :new])

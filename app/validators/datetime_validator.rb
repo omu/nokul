@@ -23,7 +23,7 @@ class DatetimeValidator < ActiveModel::EachValidator
       value_for!(record)
       return false if value.nil?
 
-      record.send(attribute).send(CHECKS[method], value)
+      record.public_send(attribute).public_send(CHECKS[method], value)
     end
 
     def check!(record)
@@ -51,7 +51,7 @@ class DatetimeValidator < ActiveModel::EachValidator
     end
 
     def symbol_to_value(record, comparison_value)
-      record.send(comparison_value) if record.respond_to?(comparison_value)
+      record.public_send(comparison_value) if record.respond_to?(comparison_value)
     end
 
     def string_to_value

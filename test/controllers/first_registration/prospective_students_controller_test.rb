@@ -49,7 +49,7 @@ module FirstRegistration
       prospective_student = ProspectiveStudent.last
 
       parameters.each do |attribute, value|
-        assert_equal value, prospective_student.send(attribute)
+        assert_equal value, prospective_student.public_send(attribute)
       end
 
       assert_redirected_to :prospective_students

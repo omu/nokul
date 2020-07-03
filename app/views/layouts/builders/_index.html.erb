@@ -29,7 +29,7 @@
             <% collection.each do |item| %>
               <tr>
                 <% params.each do |parameter| %>
-                  <% value = item.send(parameter) %>
+                  <% value = item.public_send(parameter) %>
                   <%= content_tag :td do %>
                     <% enum = item.class.defined_enums.key?(parameter) %>
                     <% boolean = [true, false].include?(value) %>

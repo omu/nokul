@@ -44,7 +44,7 @@ module FirstRegistration
       prospective_employee = ProspectiveEmployee.last
 
       parameters.each do |attribute, value|
-        assert_equal value, prospective_employee.send(attribute)
+        assert_equal value, prospective_employee.public_send(attribute)
       end
 
       assert_redirected_to :prospective_employees

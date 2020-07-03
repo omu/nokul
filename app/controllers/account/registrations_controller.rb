@@ -8,6 +8,12 @@ module Account
     # before_action :configure_account_update_params, only: [:update]
     before_action :update_slug, only: :update
 
+    protected
+
+    def after_update_path_for(_resource)
+      settings_path
+    end
+
     # GET /resource/sign_up
     def new
       not_found
@@ -70,12 +76,6 @@ module Account
       # rubocop:disable Lint/UselessAssignment
       slug = nil if params[:email].present?
       # rubocop:enable Lint/UselessAssignment
-    end
-
-    protected
-
-    def after_update_path_for(_resource)
-      settings_path
     end
   end
 end

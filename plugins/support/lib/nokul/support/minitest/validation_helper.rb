@@ -9,7 +9,7 @@ module Nokul
         def validates_presence_of(*attributes)
           attributes.each do |attribute|
             test "#{attribute} must be present (presence: true)" do
-              object.send("#{attribute}=", nil)
+              object.public_send("#{attribute}=", nil)
               assert_not object.valid?
               assert_not_empty object.errors[attribute]
             end
@@ -19,7 +19,7 @@ module Nokul
         def validates_presence_of_nested_model(attribute, ids: nil)
           test "nested model (#{attribute}) must be present" do
             ids ||= "#{attribute.to_s.singularize}_ids"
-            object.send("#{ids}=", nil)
+            object.public_send("#{ids}=", nil)
             assert_not object.valid?
             assert_not_empty object.errors[attribute]
           end
@@ -49,7 +49,7 @@ module Nokul
           error_key = controls.dig(key, :error_key)
 
           test "#{attribute} length must be #{option}" do
-            object.send("#{attribute}=", (0..value).map { ('a'..'z').to_a[rand(26)] }.join)
+            object.public_send("#{attribute}=", (0..value).map { ('a'..'z').to_a[rand(26)] }.join)
             assert_not object.valid?
             assert object.errors.details[attribute].map { |err| err[:error] }.include?(error_key)
           end
@@ -57,7 +57,7 @@ module Nokul
 
         def validates_numericality_of(attribute)
           test "#{attribute} must be a number" do
-            object.send("#{attribute}=", 'some string')
+            object.public_send("#{attribute}=", 'some string')
             assert_not object.valid?
             assert object.errors.details[attribute].map { |err| err[:error] }.include?(:not_a_number)
           end
@@ -75,7 +75,7 @@ module Nokul
           value = option[key].to_i + controls[key].to_i
 
           test "#{attribute} must be #{key} #{value}" do
-            object.send("#{attribute}=", value)
+            object.public_send("#{attribute}=", value)
             assert_not object.valid?
             assert object.errors.details[attribute].map { |err| err[:error] }.include?(key)
           end

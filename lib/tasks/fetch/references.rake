@@ -35,7 +35,7 @@ namespace :fetch do
   # If you're using a Shell other than Bash (e.g.: ZSH), you must escape braces.
   desc 'Fetch only one reference'
   task :reference, %i[action klass] => [:environment] do |_, args|
-    response = Xokul::Yoksis::References.send(args[:action])
+    response = Xokul::Yoksis::References.public_send(args[:action])
     response&.each { |reference| args[:klass].constantize.create(reference) }
   end
 end
