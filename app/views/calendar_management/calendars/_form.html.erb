@@ -13,7 +13,7 @@
             </div>
             <div class='col-sm-6'>
               <%= f.association :committee_decisions,
-                                collection:   Unit.senates.map(&:decisions).flatten,
+                                collection:   Unit.senates.map(&:decisions).flatten!,
                                 label_method: :decision_no %>
             </div>
             <div class='col-sm-6'>

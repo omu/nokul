@@ -18,7 +18,7 @@
           <thead class='thead-dark'>
             <tr>
               <% params.each do |parameter| %>
-                <%= content_tag :th do %>
+                <%= tag.th  do %>
                 <%= t([namespace || scope_module, klass.pluralize, 'index', parameter].compact.join('.')) %>
                 <% end %>
               <% end %>
@@ -30,7 +30,7 @@
               <tr>
                 <% params.each do |parameter| %>
                   <% value = item.public_send(parameter) %>
-                  <%= content_tag :td do %>
+                  <%= tag.td  do %>
                     <% enum = item.class.defined_enums.key?(parameter) %>
                     <% boolean = [true, false].include?(value) %>
                     <%= boolean || enum ? enum_t(item, parameter.to_sym) : value %>
