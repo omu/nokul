@@ -29,7 +29,8 @@ linters:
   FinalNewline:
     enabled: true
   ErbSafety:
-    enabled: true
+    # TODO: To be reviewed
+    enabled: false
   RightTrim:
     enabled: false
   SelfClosingTag:
