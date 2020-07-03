@@ -40,7 +40,7 @@ module Nokul
         end
 
         test 'regex post process option works' do
-          coder = Codification.random_numeric_codes '0'..'999', post_process: /^[1]+$/
+          coder = Codification.random_numeric_codes '0'..'999', post_process: /^1+$/
           assert_equal '111', coder.run
           assert_raise(StopIteration, Error) { coder.run }
         end
