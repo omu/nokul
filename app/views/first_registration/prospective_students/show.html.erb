@@ -105,6 +105,14 @@
         <table class="table table-responsive-sm">
           <tbody>
             <tr>
+              <th><%= t('.avatar') %></th>
+              <td>
+                <%= image_tag "data:image/jpeg;base64, #{@prospective_student.avatar}",
+                              class: 'rounded float-left',
+                              style: 'width: 150px; height: 200px' %>
+              </td>
+            </tr>
+            <tr>
               <th><%= t('.id_number') %></th>
               <td><%= @prospective_student.id_number %></td>
             </tr>

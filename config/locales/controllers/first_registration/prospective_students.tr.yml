@@ -2,6 +2,7 @@ tr:
   activerecord:
     attributes:
       prospective_student: &prospective_student_attributes
+        avatar: Profile Fotoğrafı
         academic_term: Akademik Dönem
         additional_score: Ek Puan
         address: Adres

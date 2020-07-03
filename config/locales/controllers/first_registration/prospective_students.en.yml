@@ -2,6 +2,7 @@ en:
   activerecord:
     attributes:
       prospective_student: &prospective_student_attributes
+        avatar: Profile Photo
         academic_term: Academic Term
         additional_score: Additional Score
         address: Address
