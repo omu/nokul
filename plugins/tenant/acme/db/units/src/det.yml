@@ -9264,7 +9264,7 @@
     - Yoksis tarafında anabilim dalı yok
 
 - name: Akıllı Sistemler Mühendisliği Anabilim Dalı Başkanlığı
-  abbreviation: ASM-AD
+  abbreviation: ASM-ADB
   parent_yoksis_id: 410994
   detsis_id: 74912346
   parent_detsis_id: 72975315
@@ -12972,6 +12972,7 @@
   parent_detsis_id: 23363322
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Bafra
   district_id_: Bafra
 
 - name: Yönetim Bilişim Sistemleri Bölüm Başkanlığı
@@ -12981,6 +12982,7 @@
   parent_detsis_id: 57246715
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
+  district_id: Bafra
   district_id_: Bafra
 
 - name: Bilişim Teknolojileri Anabilim Dalı Başkanlığı
@@ -12990,6 +12992,7 @@
   parent_detsis_id: 59140833
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Bafra
   district_id_: Bafra
 
 - name: Bilişim Yönetimi Anabilim Dalı Başkanlığı
@@ -12999,6 +13002,7 @@
   parent_detsis_id: 59140833
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Bafra
   district_id_: Bafra
 
 - name: Bilim Felsefesi ve Mantık Anabilim Dalı Başkanlığı
@@ -13008,6 +13012,7 @@
   parent_detsis_id: 71132989
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
   district_id_: Atakum
 
 - name: Lisansüstü Eğitim Enstitüsü Müdürlüğü
@@ -13017,6 +13022,7 @@
   parent_detsis_id: 78633602
   unit_type_id: Enstitü Müdürlüğü
   unit_status_id: Aktif
+  district_id: Atakum
   district_id_: Atakum
 
 - name: Sürdürülebilir Tarım Anabilim Dalı Başkanlığı
@@ -13026,6 +13032,7 @@
   parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
   district_id_: Atakum
 
 - name: Acil Yardım ve Afet Yönetimi Bölüm Başkanlığı
@@ -13035,6 +13042,7 @@
   parent_detsis_id: 28050591
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
   district_id_: Atakum
 
 - name: Ergoterapi Bölüm Başkanlığı
@@ -13044,6 +13052,7 @@
   parent_detsis_id: 28050591
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
   district_id_: Atakum
 
 - name: Gerontoloji Bölüm Başkanlığı
@@ -13053,6 +13062,7 @@
   parent_detsis_id: 28050591
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
+  district_id: Atakum
   district_id_: Atakum
 
 - name: Enerji Yönetim Birimi
@@ -13061,6 +13071,7 @@
   parent_detsis_id: 68380559
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
   district_id_: Atakum
 
 - name: Taşınır Yönetim Birimi
@@ -13069,4 +13080,5 @@
   parent_detsis_id: 15327320
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id: Atakum
   district_id_: Atakum
