@@ -21,7 +21,7 @@ class ProspectiveStudent < ApplicationRecord
   # enumerations
   enum additional_score: { handicapped: 1 }
   enum nationality: { turkish: 1, kktc: 2, foreign: 3 }
-  enum placement_type: { general_score: 1, additional_score: 2 }
+  enum placement_type: { general: 1, additional_score: 2 }
   enum system_register_type: { manual: 0, bulk: 1 }
 
   # relations
@@ -81,24 +81,6 @@ class ProspectiveStudent < ApplicationRecord
   def can_temporarily_register?
     military_status
   end
-
-  # rubocop:disable Metrics/MethodLength
-  def registered_user(user)
-    Student.new(
-      user:                   user,
-      unit:                   unit,
-      permanently_registered: can_permanently_register?,
-      status:                 can_permanently_register? ? :active : :passive,
-      student_number:         id_number, # TODO: must be generated
-      year:                   1, # TODO: can have a different value depending on the characteristics of the program
-      semester:               1,
-      entrance_type:          student_entrance_type,
-      other_studentship:      !obs_status,
-      registration_date:      Time.zone.now,
-      registration_term:      academic_term
-    )
-  end
-  # rubocop:enable Metrics/MethodLength
 
   def avatar
     return if id_number.blank?
