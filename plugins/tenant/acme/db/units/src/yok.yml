@@ -2981,7 +2981,7 @@
   founded_at: 29.04.2012
 
 - name: Metalurji ve Malzeme Mühendisliği (YL) (Tezli)
-  abbreviation: MALZEME-YL-DİĞER
+  abbreviation: MALZEME-YL-DİĞER-2
   yoksis_id: 371245
   parent_yoksis_id: 122386
   unit_type_id: Yüksek Lisans Programı
@@ -25025,7 +25025,7 @@
   unit_instruction_type_id: Normal Öğretim
   duration: 2
   issues:
-    - MALZEME-YL-DİĞER ile mükerrer
+    - MALZEME-YL-DİĞER ve MALZEME-YL-DİĞER-2 ile mükerrer
 
 - name: Mikrobiyoloji Anabilim Dalı (Disiplinlerarası)
   abbreviation: MİKRO-AD-DA

@@ -12972,6 +12972,7 @@
   parent_detsis_id: 23363322
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id_: Bafra
 
 - name: Yönetim Bilişim Sistemleri Bölüm Başkanlığı
   abbreviation: YBS-BB
@@ -12980,6 +12981,7 @@
   parent_detsis_id: 57246715
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
+  district_id_: Bafra
 
 - name: Bilişim Teknolojileri Anabilim Dalı Başkanlığı
   abbreviation: YBS-BT-ADB
@@ -12988,6 +12990,7 @@
   parent_detsis_id: 59140833
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id_: Bafra
 
 - name: Bilişim Yönetimi Anabilim Dalı Başkanlığı
   abbreviation: YBS-BY-ADB
@@ -12996,6 +12999,7 @@
   parent_detsis_id: 59140833
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id_: Bafra
 
 - name: Bilim Felsefesi ve Mantık Anabilim Dalı Başkanlığı
   abbreviation: FELSEFE-BİLİM-ADB
@@ -13004,6 +13008,7 @@
   parent_detsis_id: 71132989
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id_: Atakum
 
 - name: Lisansüstü Eğitim Enstitüsü Müdürlüğü
   abbreviation: LİSANSÜSTÜ-MD
@@ -13012,6 +13017,7 @@
   parent_detsis_id: 78633602
   unit_type_id: Enstitü Müdürlüğü
   unit_status_id: Aktif
+  district_id_: Atakum
 
 - name: Sürdürülebilir Tarım Anabilim Dalı Başkanlığı
   abbreviation: SÜRTARIM-ADB
@@ -13020,6 +13026,7 @@
   parent_detsis_id: 72975315
   unit_type_id: Anabilim Dalı Başkanlığı
   unit_status_id: Aktif
+  district_id_: Atakum
 
 - name: Acil Yardım ve Afet Yönetimi Bölüm Başkanlığı
   abbreviation: ACİLDURUM-BB
@@ -13028,6 +13035,7 @@
   parent_detsis_id: 28050591
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
+  district_id_: Atakum
 
 - name: Ergoterapi Bölüm Başkanlığı
   abbreviation: ERGOTERAPİ-BB
@@ -13036,6 +13044,7 @@
   parent_detsis_id: 28050591
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
+  district_id_: Atakum
 
 - name: Gerontoloji Bölüm Başkanlığı
   abbreviation: GERONTOLOJİ-BB
@@ -13044,6 +13053,7 @@
   parent_detsis_id: 28050591
   unit_type_id: Bölüm Başkanlığı
   unit_status_id: Aktif
+  district_id_: Atakum
 
 - name: Enerji Yönetim Birimi
   abbreviation: YAPIİŞ-DB-ENERJİ-BR
@@ -13051,6 +13061,7 @@
   parent_detsis_id: 68380559
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id_: Atakum
 
 - name: Taşınır Yönetim Birimi
   abbreviation: İMİ-DB-TAŞINIRYÖN-BR
@@ -13058,3 +13069,4 @@
   parent_detsis_id: 15327320
   unit_type_id: Diğer İdari Birim
   unit_status_id: Aktif
+  district_id_: Atakum
