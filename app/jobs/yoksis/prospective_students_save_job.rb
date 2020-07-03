@@ -4,20 +4,22 @@ module Yoksis
   class ProspectiveStudentsSaveJob < ApplicationJob
     queue_as :high
 
-    def perform(type, year)
-      @type = type
-      @year = year
-
+    def perform(type, year, academic_term: AcademicTerm.current)
+      @type          = type
+      @year          = year.to_i
+      @academic_term = academic_term
       process
     end
 
     private
 
     def process(page: 0)
-      response = Xokul::Yoksis::Prospectives.all(@type, @year, page: page)
+      response = Xokul::Yoksis::Prospectives.all(@type, @year, page: page) || {}
 
-      response[:data].each do |params|
-        Actions::ProspectiveStudent::Upsert.call(params)
+      response.fetch(:data, []).each do |params|
+        Actions::ProspectiveStudent::Upsert.call(
+          params.merge(year: @year), academic_term: @academic_term
+        )
       rescue ActiveRecord::RecordInvalid
         next
       end

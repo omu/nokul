@@ -13,6 +13,10 @@
               <td><%= @prospective_student.student_entrance_type.try(:name) %></td>
             </tr>
             <tr>
+              <th><%= t('.online_registration_term_type') %></th>
+              <td><%= @prospective_student.online_registration_term_type || '-' %></td>
+            </tr>
+            <tr>
               <th><%= t('.unit') %></th>
               <td><%= @prospective_student.unit.names_depth_cache %></td>
             </tr>

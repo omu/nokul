@@ -1,0 +1,69 @@
+<div id="FetchForms" role="tablist">
+  <div class="card bg-light">
+    <div class="card-header" role="tab" id="fetch">
+      <h5 class="mb-0">
+        <a class="collapsed"
+           data-toggle="collapse"
+           href="#collapseFetch"
+           id="collapseFetchLink"
+           aria-expanded="false"
+           aria-controls="Fetch">
+          <%= t('.form') %>
+        </a>
+      </h5>
+    </div>
+    <div id="collapseFetch"
+         class="collapse"
+         role="tabpanel"
+         aria-labelledby="Fetch"
+         data-parent="#FetchForms">
+      <div class="card-body">
+        <%= form_tag %i[fetch prospective_students], method: :post do %>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="form-group">
+                <%= label_tag :year, t('.year') %>
+                <%= select_tag(:year,
+                               options_for_select(2010..2100, Time.current.year),
+                               include_blank: false,
+                               class:         'form-control') %>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="form-group">
+                  <%= label_tag :academic_term_id, t('.academic_term') %>
+                  <%= select_tag(:academic_term_id,
+                                 options_for_select(
+                                   AcademicTerm.all.map { |term| [full_name(term), term.id] },
+                                   AcademicTerm.current&.id
+                                 ),
+                                 include_blank: false,
+                                 class:         'form-control') %>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="form-group">
+                  <%= label_tag :type, t('.online_registration_term_type') %>
+                  <%= select_tag(:type,
+                                 options_for_select(
+                                   %w[
+                                     YKS YKS_EK YKS_MS DGS DGS_EK LT MT YKS_YDHB DGS_YDHB YKS_SAG
+                                   ]
+                                 ),
+                                 include_blank: false,
+                                 class:         'form-control') %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <%= submit_tag t('.start'), class: 'btn btn-danger', data: { confirm: t('are_you_sure')} %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

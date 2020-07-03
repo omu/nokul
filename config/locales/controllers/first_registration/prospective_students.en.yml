@@ -59,6 +59,7 @@ en:
         unit: Placement Program
         unproblematic: Unproblematic
         year: Year
+        online_registration_term_type: Online Registration Type
     enums:
       prospective_student:
         additional_scores:
@@ -86,6 +87,12 @@ en:
         success: Prospective student successfully created.
       edit:
         form_title: Prospective Student Edit Form
+      fetch:
+        <<: *prospective_student_attributes
+        form: Transfer Start Form via YÖKSİS
+        start: Start
+        warning: The required parameters for transfer is incorrect, please check the parameters sent!
+        will_update: We have received your transfer request, within a few seconds/minutes your transfer will be started.
       form:
         address_and_contact_informations: Address/Contact Informations
         exam_informations: Exam Informations

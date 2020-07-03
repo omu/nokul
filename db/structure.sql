@@ -11,7 +11,7 @@ SET row_security = off;
 
 SET default_tablespace = '';
 
-SET default_with_oids = false;
+SET default_table_access_method = heap;
 
 --
 -- Name: academic_credentials; Type: TABLE; Schema: public; Owner: -
@@ -2726,6 +2726,8 @@ CREATE TABLE public.prospective_students (
     expiry_date timestamp without time zone,
     system_register_type integer DEFAULT 0,
     archived boolean DEFAULT false,
+    year integer,
+    online_registration_term_type character varying,
     CONSTRAINT prospective_students_additional_score_numericality CHECK ((additional_score >= 0)),
     CONSTRAINT prospective_students_address_length CHECK ((length((address)::text) <= 255)),
     CONSTRAINT prospective_students_email_length CHECK ((length((email)::text) <= 255)),
@@ -2750,6 +2752,7 @@ CREATE TABLE public.prospective_students (
     CONSTRAINT prospective_students_nationality_numericality CHECK ((nationality >= 0)),
     CONSTRAINT prospective_students_obs_registered_program_length CHECK ((length((obs_registered_program)::text) <= 255)),
     CONSTRAINT prospective_students_obs_status_null CHECK ((obs_status IS NOT NULL)),
+    CONSTRAINT prospective_students_online_registration_term_type_length CHECK ((length((online_registration_term_type)::text) <= 10)),
     CONSTRAINT prospective_students_place_of_birth_length CHECK ((length((place_of_birth)::text) <= 255)),
     CONSTRAINT prospective_students_placement_rank_numericality CHECK ((placement_rank >= 0)),
     CONSTRAINT prospective_students_placement_score_numericality CHECK ((placement_score >= (0)::double precision)),
@@ -2761,7 +2764,8 @@ CREATE TABLE public.prospective_students (
     CONSTRAINT prospective_students_registration_district_length CHECK ((length((registration_district)::text) <= 255)),
     CONSTRAINT prospective_students_state_of_education_numericality CHECK ((state_of_education >= 0)),
     CONSTRAINT prospective_students_system_register_type_numericality CHECK ((system_register_type >= 0)),
-    CONSTRAINT prospective_students_top_student_null CHECK ((top_student IS NOT NULL))
+    CONSTRAINT prospective_students_top_student_null CHECK ((top_student IS NOT NULL)),
+    CONSTRAINT prospective_students_year_numericality CHECK (((year >= 2010) AND (year <= 2100)))
 );
 
 
@@ -7852,6 +7856,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20200319090221'),
 ('20200320114534'),
 ('20200427103727'),
-('20200430130429');
+('20200430130429'),
+('20200703214608');
 
 

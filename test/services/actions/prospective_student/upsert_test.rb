@@ -50,7 +50,8 @@ module Actions
         online_registration_term_name:   '2019-YKS Ek Yerleştirme',
         online_registration_term_type:   'YKS_EK',
         online_registration_permit_code: 3,
-        online_registration_permit_date: nil
+        online_registration_permit_date: nil,
+        year:                            2019
       }.freeze
 
       test 'can create a prospective student' do

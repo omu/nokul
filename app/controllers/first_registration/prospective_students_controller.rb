@@ -47,6 +47,18 @@ module FirstRegistration
       redirect_to(@prospective_student, alert: e.details.join(' - '))
     end
 
+    def fetch
+      if fetch_params.values.size == 3
+        Yoksis::ProspectiveStudentsSaveJob.perform_later(
+          *fetch_params.values_at(:type, :year),
+          academic_term: AcademicTerm.find(params[:academic_term_id])
+        )
+        redirect_to(:prospective_students, notice: t('.will_update'))
+      else
+        redirect_to(:prospective_students, alert: t('.warning'))
+      end
+    end
+
     private
 
     def set_prospective_student
@@ -60,6 +72,10 @@ module FirstRegistration
     def can_register?
       alert = '.can_not_register'
       redirect_to(:prospective_students, alert: t(alert)) unless @prospective_student.can_temporarily_register?
+    end
+
+    def fetch_params
+      params.permit(:year, :type, :academic_term_id)
     end
 
     # rubocop:disable Metrics/MethodLength

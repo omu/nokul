@@ -59,6 +59,7 @@ tr:
         unit: Yerleştiği Program
         unproblematic: Sorunsuz
         year: Yıl
+        online_registration_term_type: Online Kayıtlanma Türü
     enums:
       prospective_student:
         additional_scores:
@@ -86,6 +87,12 @@ tr:
         success: Aday öğrenci başarılı bir şekilde oluşturuldu.
       edit:
         form_title: Aday Öğrenci Düzenleme Formu
+      fetch:
+        <<: *prospective_student_attributes
+        form: YÖKSİS Üzerinden Aktarım Başlatma Formu
+        start: Başlat
+        warning: Aktarım için gerekli parametre hatalı, lütfen gönderilen parametreleri kontrol ediniz!
+        will_update: Aktarım talebinizi aldık, bir kaç saniye/dakika içerisinde aktarım başlayacak.
       form:
         address_and_contact_informations: Adres/İletişim Bilgileri
         exam_informations: Sınav Bilgileri
