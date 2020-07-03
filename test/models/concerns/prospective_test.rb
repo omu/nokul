@@ -34,6 +34,6 @@ module ProspectiveTest
     enum gender: { male: 1, female: 2 }
 
     # callbacks
-    before_create :normalize_string_attributes
+    before_validation :normalize_attributes
   end
 end

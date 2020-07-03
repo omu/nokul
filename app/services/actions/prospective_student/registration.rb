@@ -42,6 +42,7 @@ module Actions
                :obs_status,
                :academic_term,
                :student_entrance_type,
+               :avatar,
                to: :prospective
 
       def valid!
@@ -62,12 +63,11 @@ module Actions
       end
 
       def upload_avatar!
+        return if avatar.blank?
+
         file = Tempfile.new(['avatar', '.jpg'])
-        file.write(Base64.decode64(prospective.avatar).force_encoding('UTF-8'))
-        user.avatar.attach(
-          io:       file.open,
-          filename: "#{id_number}.jpg"
-        )
+        file.write(Base64.decode64(avatar).force_encoding('UTF-8'))
+        user.avatar.attach(io: file.open, filename: "#{id_number}.jpg")
         file.unlink
       end
 
