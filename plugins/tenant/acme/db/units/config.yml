@@ -8,53 +8,69 @@ fetching:
 coding:
   pools:
     - owner: distance_education_program
-      # skip '000-009'
-      starting: '010'
-      ending: '099'
+      starting: '0000'
+      ending: '0999'
       weight: 600
+      except:
+        - '(0)\1{2,}' # exclude codes with zeros repeating more than twice
+        - '0$'        # exclude codes ending with zero
     - owner: undergraduate_program
-      starting: '100'
-      ending: '199'
+      starting: '1000'
+      ending: '2999'
       weight: 500
+      except:
+        - '(0)\1{2,}' # exclude codes with zeros repeating more than twice
+        - '0$'        # exclude codes ending with zero
       reserved: true
     - owner: undergraduate_program
-      # skip '200'
-      starting: '201'
-      ending: '599'
+      starting: '3000'
+      ending: '5999'
       weight: 500
+      except:
+        - '(0)\1{2,}' # exclude codes with zeros repeating more than twice
+        - '0$'        # exclude codes ending with zero
     - owner: graduate_program
-      # skip '600'
-      starting: '601'
-      ending: '999'
+      starting: '6000'
+      ending: '9999'
       weight: 400
+      except:
+        - '(0)\1{2,}' # exclude codes with zeros repeating more than twice
+        - '0$'        # exclude codes ending with zero
     - owner: academic
-      starting: 'A00'
-      ending: 'FF0'
+      starting: 'A000'
+      ending: 'FFFF'
       weight: 300
+      except:
+        - '(.)\1{2,}' # exclude codes with symbols repeating more than twice
+        - '0$'        # exclude codes ending with zero
     - owner: administrative
-      starting: 'G00'
-      ending: 'HZZ'
+      starting: 'G000'
+      ending: 'HZZZ'
       weight: 200
-      # skip problematic characters
-      pattern: '^[^ILOQWX]+$'
+      except:
+        - '(.)\1{2,}' # exclude codes with symbols repeating more than twice
+        - '0$'        # exclude codes ending with zero
+        - '[ILOQWX]'  # exclude codes with problematic characters
     - owner: special
-      starting: 'Z00'
-      ending: 'ZZZ'
+      starting: 'Z000'
+      ending: 'ZZZZ'
       weight: 100
-      # skip problematic characters
-      pattern: '^[^ILOQWX]+$'
+      except:
+        - '(.)\1{2,}' # exclude codes with symbols repeating more than twice
+        - '0$'        # exclude codes ending with zero
+        - '[ILOQWX]'  # exclude codes with problematic characters
   reservations:
     # Bilgisayar
     - key: yoksis_id
       value: 168861
-      reservation: '203'
+      reservation: '3456'
     - key: yoksis_id
       value: 211296
-      reservation: '603'
+      reservation: '7890'
     # BÖTE
     - key: yoksis_id
       value: 168652
-      reservation: 307
+      reservation: '3455'
     - key: yoksis_id
       value: 244883
-      reservation: 607
+      reservation: '7891'

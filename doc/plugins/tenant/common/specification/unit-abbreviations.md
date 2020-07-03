@@ -86,6 +86,7 @@ Kurallar
 
   | Ensititü                        | Kısaltma       |
   |:--------------------------------|:---------------|
+  | Lisansüstü Eğitim               | LİSANSÜSTÜ     |
   | Fen Bilimleri                   | FEN-BİLİM      |
   | Sosyal Bilimler                 | SOSYAL-BİLİM   |
   | Sağlık Bilimleri                | SAĞLIK-BİLİM   |
