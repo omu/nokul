@@ -23114,7 +23114,7 @@
     - ALERJİ-YL-DİĞER ile mükerrer
 
 - name: Alman Dili Eğitimi (DR)
-  abbrviation: ALM-DR
+  abbreviation: ALM-DR
   yoksis_id: 411967
   parent_yoksis_id: 410905
   unit_type_id: Doktora Programı
