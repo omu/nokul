@@ -17,7 +17,7 @@
                               class: 'img-thumbnail float-left',
                               alt:   t('.avatar') %>
               <% else %>
-                <%= image_tag @user.identities.last.male? ? 'profile/male_avatar.svg' : 'profile/female_avatar.svg',
+                <%= image_tag @user.identities.last&.male? ? 'profile/male_avatar.svg' : 'profile/female_avatar.svg',
                               alt: t('.avatar'),
                               class: 'rounded float-left',
                               style: 'width: 200px; height: 200px'%>
