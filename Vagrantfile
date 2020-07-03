@@ -51,7 +51,7 @@ Vagrant.configure('2') do |config|
     ldap.vm.provision 'shell', path: 'lib/scripts/ldap.sh'
   end
 
-  config.vm.define 'sso', autostart: true do |sso|
+  config.vm.define 'sso', autostart: false do |sso|
     sso.vm.box = 'omu/debian-stable-server'
 
     sso.vm.provider :lxc do |lxc|

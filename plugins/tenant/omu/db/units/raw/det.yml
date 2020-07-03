@@ -744,6 +744,36 @@
   active: true
   activity: true
 
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Bafra İşletme Fakültesi Dekanlığı > Sigortacılık ve Aktüerya Bilimleri Bölüm Başkanlığı > Sigortacılık ve Aktüerya Bilimleri Anabilim Dalı Başkanlığı
+  detsis_id: 78647311
+  parent_administrative_identity_code: 23363322
+  active: false
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Bafra İşletme Fakültesi Dekanlığı > Sigortacılık ve Aktüerya Bilimleri Bölüm Başkanlığı > Sigortacılık ve Aktüerya Bilimleri Anabilim Dalı Başkanlığı
+  detsis_id: 80189622
+  parent_administrative_identity_code: 23363322
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Bafra İşletme Fakültesi Dekanlığı > Yönetim Bilişim Sistemleri Bölüm Başkanlığı
+  detsis_id: 59140833
+  parent_administrative_identity_code: 57246715
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Bafra İşletme Fakültesi Dekanlığı > Yönetim Bilişim Sistemleri Bölüm Başkanlığı > Bilişim Teknolojileri Anabilim Dalı Başkanlığı
+  detsis_id: 59070853
+  parent_administrative_identity_code: 59140833
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Bafra İşletme Fakültesi Dekanlığı > Yönetim Bilişim Sistemleri Bölüm Başkanlığı > Bilişim Yönetimi Anabilim Dalı Başkanlığı
+  detsis_id: 21948262
+  parent_administrative_identity_code: 59140833
+  active: true
+  activity: true
+
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Ballıca Meslek Yüksekokulu Müdürlüğü
   detsis_id: 46697017
   parent_administrative_identity_code: 78633602
@@ -1227,86 +1257,50 @@
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü
   detsis_id: 42301062
   parent_administrative_identity_code: 78633602
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > Basın Yayın ve Halkla İlişkiler Birimi
   detsis_id: 18937729
   parent_administrative_identity_code: 42301062
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > Bilgi İşlem Birimi
   detsis_id: 57140256
   parent_administrative_identity_code: 42301062
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > Bilgisayar ve Öğretim Teknolojileri Eğitimi Anabilim Dalı Başkanlığı
-  detsis_id: 13886282
-  parent_administrative_identity_code: 42301062
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > Din Kültürü ve Ahlak Bilgisi Anabilim Dalı Başkanlığı
-  detsis_id: 36445403
-  parent_administrative_identity_code: 42301062
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > Enstitü Disiplin Kurulu
   detsis_id: 60162193
   parent_administrative_identity_code: 42301062
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > Enstitü Kurulu
   detsis_id: 39971369
   parent_administrative_identity_code: 42301062
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > Enstitü Sekreterliği
   detsis_id: 27148102
   parent_administrative_identity_code: 42301062
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > Enstitü Yönetim Kurulu
   detsis_id: 90709856
   parent_administrative_identity_code: 42301062
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > Eğitim Bilimleri Anabilim Dalı Başkanlığı
-  detsis_id: 63629408
-  parent_administrative_identity_code: 42301062
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > Güzel Sanatlar Eğitimi Anabilim Dalı Başkanlığı
-  detsis_id: 86348859
-  parent_administrative_identity_code: 42301062
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > Güzel Sanatlar Eğitimi Anabilim Dalı Başkanlığı > Müzik Eğitimi Bilim Dalı
-  detsis_id: 12649192
-  parent_administrative_identity_code: 86348859
   active: false
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > Güzel Sanatlar Eğitimi Anabilim Dalı Başkanlığı > Resim-iş Eğitimi Bilim Dalı
-  detsis_id: 60676885
-  parent_administrative_identity_code: 86348859
-  active: false
-  activity: true
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > Hukuk İşleri Birimi
   detsis_id: 83377352
   parent_administrative_identity_code: 42301062
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > Kurullar ve Komisyonlar
   detsis_id: 79816970
@@ -1317,14 +1311,8 @@
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > Mali İşler Birimi
   detsis_id: 35262425
   parent_administrative_identity_code: 42301062
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > Matematik ve Fen Bilimleri Eğitimi Anabilim Dalı Başkanlığı
-  detsis_id: 65400135
-  parent_administrative_identity_code: 42301062
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > Ortaöğretim Sosyal Alanlar Eğitimi Anabilim Dalı Başkanlığı
   detsis_id: 26406082
@@ -1335,68 +1323,50 @@
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > Personel İşleri Birimi
   detsis_id: 60075630
   parent_administrative_identity_code: 42301062
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > Sağlık, Kültür ve Spor İşleri Birimi
   detsis_id: 76934253
   parent_administrative_identity_code: 42301062
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > Strateji Geliştirme ve Kalite Birimi
   detsis_id: 14205133
   parent_administrative_identity_code: 42301062
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > Temel Eğitim Anabilim Dalı Başkanlığı
-  detsis_id: 91121353
-  parent_administrative_identity_code: 42301062
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > Türkçe ve Sosyal Bilimler Eğitimi Anabilim Dalı Başkanlığı
-  detsis_id: 87032861
-  parent_administrative_identity_code: 42301062
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > Yabancı Diller Eğitimi Anabilim Dalı Başkanlığı
-  detsis_id: 85156798
-  parent_administrative_identity_code: 42301062
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > Yapı, Tesis ve Teknik İşler Birimi
   detsis_id: 22247455
   parent_administrative_identity_code: 42301062
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > Yayın, Kütüphane ve Dokümantasyon Birimi
   detsis_id: 63472177
   parent_administrative_identity_code: 42301062
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > Özel Kalem Birimi
   detsis_id: 83342748
   parent_administrative_identity_code: 42301062
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > Öğrenci İşleri Birimi
   detsis_id: 25773886
   parent_administrative_identity_code: 42301062
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > İdari İşler Birimi
   detsis_id: 58937905
   parent_administrative_identity_code: 42301062
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Fakültesi Dekanlığı
   detsis_id: 98725097
@@ -1669,15 +1639,15 @@
   activity: true
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Fakültesi Dekanlığı > Türkçe ve Sosyal Bilimler Eğitimi Bölüm Başkanlığı > Türkçe Eğitimi Anabilim Dalı Başkanlığı
-  detsis_id: 97189975
-  parent_administrative_identity_code: 63688363
-  active: false
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Fakültesi Dekanlığı > Türkçe ve Sosyal Bilimler Eğitimi Bölüm Başkanlığı > Türkçe Eğitimi Anabilim Dalı Başkanlığı
   detsis_id: 80144990
   parent_administrative_identity_code: 63688363
   active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Fakültesi Dekanlığı > Türkçe ve Sosyal Bilimler Eğitimi Bölüm Başkanlığı > Türkçe Eğitimi Anabilim Dalı Başkanlığı
+  detsis_id: 97189975
+  parent_administrative_identity_code: 63688363
+  active: false
   activity: true
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Fakültesi Dekanlığı > Yabancı Diller Eğitimi Bölüm Başkanlığı
@@ -1755,128 +1725,26 @@
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü
   detsis_id: 43847920
   parent_administrative_identity_code: 78633602
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Adli Bilimler Anabilim Dalı Başkanlığı
-  detsis_id: 10899057
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Akıllı Sistemler Mühendisliği Anabilim Dalı Başkanlığı
-  detsis_id: 74912346
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Bahçe Bitkileri Anabilim Dalı Başkanlığı
-  detsis_id: 82473301
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Basın Yayın ve Halkla İlişkiler Birimi
   detsis_id: 70234795
   parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Bilgi İşlem Birimi
   detsis_id: 65427923
   parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Bilgisayar Mühendisliği Anabilim Dalı Başkanlığı
-  detsis_id: 93656557
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Bitki Koruma Anabilim Dalı Başkanlığı
-  detsis_id: 18076240
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Biyoloji Anabilim Dalı Başkanlığı
-  detsis_id: 59515608
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Elektrik-elektronik Mühendisliği Anabilim Dalı Başkanlığı
-  detsis_id: 11818910
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Enstitü Disiplin Kurulu
-  detsis_id: 80907891
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Enstitü Kurulu
-  detsis_id: 11805131
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Enstitü Sekreterliği
-  detsis_id: 75119924
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Enstitü Yönetim Kurulu
-  detsis_id: 17608650
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Fizik Anabilim Dalı Başkanlığı
-  detsis_id: 24159635
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Gıda Mühendisliği Anabilim Dalı Başkanlığı
-  detsis_id: 75687508
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Harita Mühendisliği Anabilim Dalı Başkanlığı
-  detsis_id: 95633724
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Hesaplamalı Bilimler Anabilim Dalı Başkanlığı
-  detsis_id: 75477090
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Hukuk İşleri Birimi
   detsis_id: 74057431
   parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Kimya Anabilim Dalı Başkanlığı
-  detsis_id: 77807659
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Kimya Mühendisliği Anabilim Dalı Başkanlığı
-  detsis_id: 76778231
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Kurullar ve Komisyonlar
   detsis_id: 98778265
@@ -1884,161 +1752,59 @@
   active: false
   activity: true
 
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Makine Mühendisliği Anabilim Dalı Başkanlığı
-  detsis_id: 37649886
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Mali İşler Birimi
   detsis_id: 22823954
   parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Malzeme Bilimi ve Mühendisliği Anabilim Dalı Başkanlığı
-  detsis_id: 87307245
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Matematik Anabilim Dalı Başkanlığı
-  detsis_id: 47259451
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Moleküler Biyoloji ve Genetik Anabilim Dalı Başkanlığı
-  detsis_id: 69748915
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Nanobilim ve Nanoteknoloji Anabilim Dalı Başkanlığı
-  detsis_id: 44220146
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Personel İşleri Birimi
   detsis_id: 84742778
   parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Sağlık, Kültür ve Spor İşleri Birimi
   detsis_id: 20066957
   parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Strateji Geliştirme ve Kalite Birimi
   detsis_id: 37253379
   parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Tarla Bitkileri Anabilim Dalı Başkanlığı
-  detsis_id: 18286379
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Tarım Ekonomisi Anabilim Dalı Başkanlığı
-  detsis_id: 62564542
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Tarım Makineleri Anabilim Dalı Başkanlığı
-  detsis_id: 24142896
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Tarımsal Biyoteknoloji Anabilim Dalı Başkanlığı
-  detsis_id: 77136444
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Tarımsal Yapılar ve Sulama Anabilim Dalı Başkanlığı
-  detsis_id: 76614186
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Taşınmaz Geliştirme Anabilim Dalı Başkanlığı
-  detsis_id: 97593580
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Toprak Bilimi ve Bitki Besleme Anabilim Dalı Başkanlığı
-  detsis_id: 23946845
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Yapı, Tesis ve Teknik İşler Birimi
   detsis_id: 58398455
   parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Yayın, Kütüphane ve Dokümantasyon Birimi
   detsis_id: 49972110
   parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Yenilenebilir Enerji ve Uygulamaları Anabilim Dalı Başkanlığı
-  detsis_id: 49040734
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Zootekni Anabilim Dalı Başkanlığı
-  detsis_id: 96900798
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Çevre Mühendisliği Anabilim Dalı Başkanlığı
-  detsis_id: 42599812
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Özel Kalem Birimi
   detsis_id: 12662115
   parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > Öğrenci İşleri Birimi
   detsis_id: 57086410
   parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > İdari İşler Birimi
   detsis_id: 88360635
   parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > İnşaat Mühendisliği Anabilim Dalı Başkanlığı
-  detsis_id: 56922128
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Bilimleri Enstitüsü Müdürlüğü > İstatistik Anabilim Dalı Başkanlığı
-  detsis_id: 73864038
-  parent_administrative_identity_code: 43847920
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Edebiyat Fakültesi Dekanlığı
   detsis_id: 41130367
@@ -2187,6 +1953,12 @@
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Edebiyat Fakültesi Dekanlığı > Felsefe Bölüm Başkanlığı
   detsis_id: 71132989
   parent_administrative_identity_code: 41130367
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Fen Edebiyat Fakültesi Dekanlığı > Felsefe Bölüm Başkanlığı > Bilim Felsefesi ve Mantık Anabilim Dalı Başkanlığı
+  detsis_id: 67247165
+  parent_administrative_identity_code: 71132989
   active: true
   activity: true
 
@@ -2703,56 +2475,50 @@
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Güzel Sanatlar Enstitüsü Müdürlüğü
   detsis_id: 28913907
   parent_administrative_identity_code: 78633602
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Güzel Sanatlar Enstitüsü Müdürlüğü > Basın Yayın ve Halkla İlişkiler Birimi
   detsis_id: 10857470
   parent_administrative_identity_code: 28913907
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Güzel Sanatlar Enstitüsü Müdürlüğü > Bilgi İşlem Birimi
   detsis_id: 58871806
   parent_administrative_identity_code: 28913907
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Güzel Sanatlar Enstitüsü Müdürlüğü > Enstitü Disiplin Kurulu
   detsis_id: 94725245
   parent_administrative_identity_code: 28913907
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Güzel Sanatlar Enstitüsü Müdürlüğü > Enstitü Kurulu
   detsis_id: 86004387
   parent_administrative_identity_code: 28913907
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Güzel Sanatlar Enstitüsü Müdürlüğü > Enstitü Sekreterliği
   detsis_id: 64024110
   parent_administrative_identity_code: 28913907
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Güzel Sanatlar Enstitüsü Müdürlüğü > Enstitü Yönetim Kurulu
   detsis_id: 28791890
   parent_administrative_identity_code: 28913907
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Güzel Sanatlar Enstitüsü Müdürlüğü > Görsel İletişim Tasarımı Anasanat Dalı Başkanlığı
-  detsis_id: 38121557
-  parent_administrative_identity_code: 28913907
-  active: true
+  active: false
   activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Güzel Sanatlar Enstitüsü Müdürlüğü > Hukuk İşleri Birimi
   detsis_id: 15437600
   parent_administrative_identity_code: 28913907
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Güzel Sanatlar Enstitüsü Müdürlüğü > Kurullar ve Komisyonlar
   detsis_id: 59886304
@@ -2763,44 +2529,26 @@
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Güzel Sanatlar Enstitüsü Müdürlüğü > Mali İşler Birimi
   detsis_id: 38796049
   parent_administrative_identity_code: 28913907
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Güzel Sanatlar Enstitüsü Müdürlüğü > Müzik Anasanat Dalı Başkanlığı
-  detsis_id: 63701311
-  parent_administrative_identity_code: 28913907
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Güzel Sanatlar Enstitüsü Müdürlüğü > Personel İşleri Birimi
   detsis_id: 62894656
   parent_administrative_identity_code: 28913907
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Güzel Sanatlar Enstitüsü Müdürlüğü > Resim Anasanat Dalı Başkanlığı
-  detsis_id: 12646015
-  parent_administrative_identity_code: 28913907
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Güzel Sanatlar Enstitüsü Müdürlüğü > Sanat ve Tasarım Anasanat Dalı Başkanlığı
-  detsis_id: 43408176
-  parent_administrative_identity_code: 28913907
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Güzel Sanatlar Enstitüsü Müdürlüğü > Sağlık, Kültür ve Spor İşleri Birimi
   detsis_id: 15924021
   parent_administrative_identity_code: 28913907
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Güzel Sanatlar Enstitüsü Müdürlüğü > Strateji Geliştirme ve Kalite Birimi
   detsis_id: 53197681
   parent_administrative_identity_code: 28913907
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Güzel Sanatlar Enstitüsü Müdürlüğü > Tıbbi Resimleme Anabilim Dalı Başkanlığı
   detsis_id: 84762792
@@ -2808,41 +2556,35 @@
   active: false
   activity: true
 
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Güzel Sanatlar Enstitüsü Müdürlüğü > Tıbbi Resimleme Anabilim Dalı Başkanlığı
-  detsis_id: 83982316
-  parent_administrative_identity_code: 28913907
-  active: true
-  activity: true
-
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Güzel Sanatlar Enstitüsü Müdürlüğü > Yapı, Tesis ve Teknik İşler Birimi
   detsis_id: 46576151
   parent_administrative_identity_code: 28913907
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Güzel Sanatlar Enstitüsü Müdürlüğü > Yayın, Kütüphane ve Dokümantasyon Birimi
   detsis_id: 57220800
   parent_administrative_identity_code: 28913907
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Güzel Sanatlar Enstitüsü Müdürlüğü > Özel Kalem Birimi
   detsis_id: 36460638
   parent_administrative_identity_code: 28913907
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Güzel Sanatlar Enstitüsü Müdürlüğü > Öğrenci İşleri Birimi
   detsis_id: 60465650
   parent_administrative_identity_code: 28913907
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Güzel Sanatlar Enstitüsü Müdürlüğü > İdari İşler Birimi
   detsis_id: 70597765
   parent_administrative_identity_code: 28913907
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Güzel Sanatlar Fakültesi Dekanlığı
   detsis_id: 32859882
@@ -3300,6 +3042,804 @@
   active: true
   activity: true
 
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü
+  detsis_id: 72975315
+  parent_administrative_identity_code: 78633602
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Acil Hemşireliği Anabilim Dalı Başkanlığı
+  detsis_id: 97853903
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Adli Bilimler Anabilim Dalı Başkanlığı
+  detsis_id: 10899057
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Akıllı Sistemler Mühendisliği Anabilim Dalı Başkanlığı
+  detsis_id: 74912346
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Allerji ve İmmünoloji Anabilim Dalı Başkanlığı
+  detsis_id: 47024253
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Anatomi Anabilim Dalı Başkanlığı
+  detsis_id: 51903356
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Antrenörlük Eğitimi Anabilim Dalı Başkanlığı
+  detsis_id: 91908821
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Arkeoloji Anabilim Dalı Başkanlığı
+  detsis_id: 95273792
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Avrupa-akdeniz Kültürler ve Turizm Anabilim Dalı Başkanlığı
+  detsis_id: 24894277
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Ağız, Diş ve Çene Cerrahisi Anabilim Dalı Başkanlığı
+  detsis_id: 37274632
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Ağız, Diş ve Çene Radyolojisi Anabilim Dalı Başkanlığı
+  detsis_id: 65037691
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Bahçe Bitkileri Anabilim Dalı Başkanlığı
+  detsis_id: 82473301
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Beden Eğitimi ve Spor Anabilim Dalı Başkanlığı
+  detsis_id: 97936532
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Beslenme Bilimleri Anabilim Dalı Başkanlığı
+  detsis_id: 53706045
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Bilgisayar Mühendisliği Anabilim Dalı Başkanlığı
+  detsis_id: 93656557
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Bilgisayar ve Öğretim Teknolojileri Eğitimi Anabilim Dalı Başkanlığı
+  detsis_id: 13886282
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Bitki Koruma Anabilim Dalı Başkanlığı
+  detsis_id: 18076240
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Biyoistatistik ve Tıp Bilişimi Anabilim Dalı Başkanlığı
+  detsis_id: 45437333
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Biyoloji Anabilim Dalı Başkanlığı
+  detsis_id: 59515608
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Coğrafya Anabilim Dalı Başkanlığı
+  detsis_id: 96600690
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Deney Hayvanları Araştırmaları Anabilim Dalı Başkanlığı
+  detsis_id: 48395142
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Dil ve Konuşma Terapisi Anabilim Dalı Başkanlığı
+  detsis_id: 83466304
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Din Kültürü ve Ahlak Bilgisi Anabilim Dalı Başkanlığı
+  detsis_id: 36445403
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Dini Danışmanlık ve Rehberlik Anabilim Dalı Başkanlığı
+  detsis_id: 27795668
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Dölerme ve Suni Tohumlama Anabilim Dalı Başkanlığı
+  detsis_id: 94836752
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Ebelik Anabilim Dalı Başkanlığı
+  detsis_id: 33278135
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Elektrik-elektronik Mühendisliği Anabilim Dalı Başkanlığı
+  detsis_id: 11818910
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Endodonti Anabilim Dalı Başkanlığı
+  detsis_id: 78479583
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Enstitü Disiplin Kurulu
+  detsis_id: 80907891
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Enstitü Kurulu
+  detsis_id: 11805131
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Enstitü Sekreterliği
+  detsis_id: 75119924
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Enstitü Yönetim Kurulu
+  detsis_id: 17608650
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Evde Hasta Bakımı Hemşireliği Anabilim Dalı Başkanlığı
+  detsis_id: 29830028
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Evlilik ve Aile Danışmanlığı Anabilim Dalı Başkanlığı
+  detsis_id: 32638226
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Eğitim Bilimleri Anabilim Dalı Başkanlığı
+  detsis_id: 63629408
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Felsefe Anabilim Dalı Başkanlığı
+  detsis_id: 86933361
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Felsefe ve Din Bilimleri Anabilim Dalı Başkanlığı
+  detsis_id: 16553436
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Fizik Anabilim Dalı Başkanlığı
+  detsis_id: 24159635
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Fizyoloji Anabilim Dalı Başkanlığı
+  detsis_id: 16194377
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Girişimcilik ve Yenilikçilik Anabilim Dalı Başkanlığı
+  detsis_id: 93062464
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Görsel İletişim Tasarımı Anasanat Dalı Başkanlığı
+  detsis_id: 38121557
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: false
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Güzel Sanatlar Eğitimi Anabilim Dalı Başkanlığı
+  detsis_id: 86348859
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > Güzel Sanatlar Eğitimi Anabilim Dalı Başkanlığı > Müzik Eğitimi Bilim Dalı
+  detsis_id: 12649192
+  parent_administrative_identity_code: 86348859
+  active: false
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Eğitim Bilimleri Enstitüsü Müdürlüğü > Güzel Sanatlar Eğitimi Anabilim Dalı Başkanlığı > Resim-iş Eğitimi Bilim Dalı
+  detsis_id: 60676885
+  parent_administrative_identity_code: 86348859
+  active: false
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Gıda Mühendisliği Anabilim Dalı Başkanlığı
+  detsis_id: 75687508
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Halk Sağlığı Anabilim Dalı Başkanlığı
+  detsis_id: 65133038
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Halk Sağlığı ve Hemşireliği Anabilim Dalı Başkanlığı
+  detsis_id: 28359953
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Harita Mühendisliği Anabilim Dalı Başkanlığı
+  detsis_id: 95633724
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Hayvan Besleme ve Beslenme Hastalıkları Anabilim Dalı Başkanlığı
+  detsis_id: 61110688
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Hemşirelik Anabilim Dalı Başkanlığı
+  detsis_id: 90487276
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Hesaplamalı Bilimler Anabilim Dalı Başkanlığı
+  detsis_id: 75477090
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Histoloji-embriyoloji Anabilim Dalı Başkanlığı
+  detsis_id: 41039653
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Kadın ve Aile Araştırmaları Anabilim Dalı Başkanlığı
+  detsis_id: 42036856
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Kamu Hukuku Anabilim Dalı Başkanlığı
+  detsis_id: 90583074
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Kamu Yönetimi Anabilim Dalı Başkanlığı
+  detsis_id: 16682742
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Kardiyopulmoner Fizyoterapi Anabilim Dalı Başkanlığı
+  detsis_id: 63950292
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Kimya Anabilim Dalı Başkanlığı
+  detsis_id: 77807659
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Kimya Mühendisliği Anabilim Dalı Başkanlığı
+  detsis_id: 76778231
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Klinik Sinir Bilimleri Anabilim Dalı Başkanlığı
+  detsis_id: 87899366
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Klinik Toksikoloji Anabilim Dalı Başkanlığı
+  detsis_id: 80397943
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Kulak Burun Boğaz Odyoloji Anabilim Dalı Başkanlığı
+  detsis_id: 66588869
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Makine Mühendisliği Anabilim Dalı Başkanlığı
+  detsis_id: 37649886
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Malzeme Bilimi ve Mühendisliği Anabilim Dalı Başkanlığı
+  detsis_id: 87307245
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Matematik Anabilim Dalı Başkanlığı
+  detsis_id: 47259451
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Matematik ve Fen Bilimleri Eğitimi Anabilim Dalı Başkanlığı
+  detsis_id: 65400135
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Moleküler Biyoloji ve Genetik Anabilim Dalı Başkanlığı
+  detsis_id: 69748915
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Moleküler Tıp Anabilim Dalı Başkanlığı
+  detsis_id: 15373406
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Müzik Anasanat Dalı Başkanlığı
+  detsis_id: 38908278
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Müzik Anasanat Dalı Başkanlığı
+  detsis_id: 63701311
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Nanobilim ve Nanoteknoloji Anabilim Dalı Başkanlığı
+  detsis_id: 44220146
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Ortodonti Anabilim Dalı Başkanlığı
+  detsis_id: 57307857
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Pedodonti Anabilim Dalı Başkanlığı
+  detsis_id: 43479317
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Periodontoloji Anabilim Dalı Başkanlığı
+  detsis_id: 41685452
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Protetik Diş Tedavisi Anabilim Dalı Başkanlığı
+  detsis_id: 97650724
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Psikoloji Anabilim Dalı Başkanlığı
+  detsis_id: 75091500
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Radyolojik Bilimler Anabilim Dalı Başkanlığı
+  detsis_id: 94999386
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Resim Anasanat Dalı Başkanlığı
+  detsis_id: 12646015
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Restoratif Diş Tedavisi Anabilim Dalı Başkanlığı
+  detsis_id: 66182499
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Ruh Sağlığı ve Hastalıkları Hemşireliği Anabilim Dalı Başkanlığı
+  detsis_id: 28280552
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Sanat Tarihi Anabilim Dalı Başkanlığı
+  detsis_id: 74742106
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Sanat ve Tasarım Anasanat Dalı Başkanlığı
+  detsis_id: 43408176
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Sağlık Yönetimi Anabilim Dalı Başkanlığı
+  detsis_id: 58144189
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Sinir Bilimleri Anabilim Dalı Başkanlığı
+  detsis_id: 92044395
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Sosyoloji Anabilim Dalı Başkanlığı
+  detsis_id: 48851387
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Spor Yöneticiliği Anabilim Dalı Başkanlığı
+  detsis_id: 75401631
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Su Ürünleri Hastalıkları Anabilim Dalı Başkanlığı
+  detsis_id: 23479635
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Sürdürülebilir Tarım Anabilim Dalı Başkanlığı
+  detsis_id: 48278109
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Tarih Anabilim Dalı Başkanlığı
+  detsis_id: 67624396
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Tarla Bitkileri Anabilim Dalı Başkanlığı
+  detsis_id: 18286379
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Tarım Ekonomisi Anabilim Dalı Başkanlığı
+  detsis_id: 62564542
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Tarım Makineleri Anabilim Dalı Başkanlığı
+  detsis_id: 24142896
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Tarımsal Biyoteknoloji Anabilim Dalı Başkanlığı
+  detsis_id: 77136444
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Tarımsal Yapılar ve Sulama Anabilim Dalı Başkanlığı
+  detsis_id: 76614186
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Taşınmaz Geliştirme Anabilim Dalı Başkanlığı
+  detsis_id: 97593580
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Temel Eğitim Anabilim Dalı Başkanlığı
+  detsis_id: 91121353
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Temel İslam Bilimleri Anabilim Dalı Başkanlığı
+  detsis_id: 17543552
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Toprak Bilimi ve Bitki Besleme Anabilim Dalı Başkanlığı
+  detsis_id: 23946845
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Turizm İşletmeciliği Anabilim Dalı Başkanlığı
+  detsis_id: 52308424
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Türk Dili ve Edebiyatı Anabilim Dalı Başkanlığı
+  detsis_id: 56330438
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Türkçe ve Sosyal Bilimler Eğitimi Anabilim Dalı Başkanlığı
+  detsis_id: 87032861
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Tıbbi Biyokimya Anabilim Dalı Başkanlığı
+  detsis_id: 40148669
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Tıbbi Biyoloji Anabilim Dalı Başkanlığı
+  detsis_id: 99046086
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Tıbbi Farmakoloji Anabilim Dalı Başkanlığı
+  detsis_id: 62257320
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Tıbbi Mikrobiyoloji Anabilim Dalı Başkanlığı
+  detsis_id: 59268728
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Tıbbi Resimleme Anabilim Dalı Başkanlığı
+  detsis_id: 83982316
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Uluslararası Düzenleyici Bilim Anabilim Dalı Başkanlığı
+  detsis_id: 80144548
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Veteriner Hekimliği Tarihi ve Deontoloji Anabilim Dalı Başkanlığı
+  detsis_id: 97192299
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Veteriner Histoloji ve Embriyoloji Anabilim Dalı Başkanlığı
+  detsis_id: 71464078
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Veterinerlik Anatomisi Anabilim Dalı Başkanlığı
+  detsis_id: 40369060
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Veterinerlik Besin Hijyeni ve Teknolojisi Anabilim Dalı Başkanlığı
+  detsis_id: 49971342
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Veterinerlik Biyokimyası Anabilim Dalı Başkanlığı
+  detsis_id: 60669633
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Veterinerlik Cerrahisi Anabilim Dalı Başkanlığı
+  detsis_id: 54380477
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Veterinerlik Doğum ve Jinekolojisi Anabilim Dalı Başkanlığı
+  detsis_id: 88515739
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Veterinerlik Farmakoloji ve Toksikoloji Anabilim Dalı Başkanlığı
+  detsis_id: 81888224
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Veterinerlik Fizyolojisi Anabilim Dalı Başkanlığı
+  detsis_id: 46857964
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Veterinerlik Mikrobiyolojisi Anabilim Dalı Başkanlığı
+  detsis_id: 14820566
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Veterinerlik Parazitolojisi Anabilim Dalı Başkanlığı
+  detsis_id: 87661185
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Veterinerlik Patolojisi Anabilim Dalı Başkanlığı
+  detsis_id: 23148769
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Veterinerlik Viroloji Anabilim Dalı Başkanlığı
+  detsis_id: 96350930
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Veterinerlik Zootekni Anabilim Dalı Başkanlığı
+  detsis_id: 37638064
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Veterinerlik İç Hastalıkları Anabilim Dalı Başkanlığı
+  detsis_id: 53936112
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Yabancı Diller Eğitimi Anabilim Dalı Başkanlığı
+  detsis_id: 85156798
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Yenilenebilir Enerji ve Uygulamaları Anabilim Dalı Başkanlığı
+  detsis_id: 49040734
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Zootekni Anabilim Dalı Başkanlığı
+  detsis_id: 96900798
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Çevre Mühendisliği Anabilim Dalı Başkanlığı
+  detsis_id: 42599812
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > Özel Hukuk Anabilim Dalı Başkanlığı
+  detsis_id: 54539635
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > İktisat Anabilim Dalı Başkanlığı
+  detsis_id: 82051364
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > İletişim Bilimleri Anabilim Dalı Başkanlığı
+  detsis_id: 94947571
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > İnşaat Mühendisliği Anabilim Dalı Başkanlığı
+  detsis_id: 56922128
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > İslam Tarihi ve Sanatları Anabilim Dalı Başkanlığı
+  detsis_id: 87312513
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > İstatistik Anabilim Dalı Başkanlığı
+  detsis_id: 73864038
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > İşletme Anabilim Dalı Başkanlığı
+  detsis_id: 47913381
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Lisansüstü Eğitim Enstitüsü Müdürlüğü > İşletme ve Endüstri İlişkileri Anabilim Dalı Başkanlığı
+  detsis_id: 72752876
+  parent_administrative_identity_code: 72975315
+  active: true
+  activity: true
+
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Mevlana Değişim Programı Koordinatörlüğü
   detsis_id: 23314928
   parent_administrative_identity_code: 78633602
@@ -3618,6 +4158,12 @@
   active: true
   activity: true
 
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Mühendislik Fakültesi Dekanlığı > Harita Mühendisliği Bölüm Başkanlığı > Arazi Yönetimi Anabilim Dalı Başkanlığı
+  detsis_id: 34215046
+  parent_administrative_identity_code: 23060321
+  active: true
+  activity: true
+
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Mühendislik Fakültesi Dekanlığı > Harita Mühendisliği Bölüm Başkanlığı > Fotogrametri Anabilim Dalı Başkanlığı
   detsis_id: 42331622
   parent_administrative_identity_code: 23060321
@@ -3626,12 +4172,6 @@
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Mühendislik Fakültesi Dekanlığı > Harita Mühendisliği Bölüm Başkanlığı > Jeodezi Anabilim Dalı Başkanlığı
   detsis_id: 78235995
-  parent_administrative_identity_code: 23060321
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Mühendislik Fakültesi Dekanlığı > Harita Mühendisliği Bölüm Başkanlığı > Kamu Ölçmeleri Anabilim Dalı Başkanlığı
-  detsis_id: 34215046
   parent_administrative_identity_code: 23060321
   active: true
   activity: true
@@ -4395,134 +4935,44 @@
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü
   detsis_id: 93771576
   parent_administrative_identity_code: 78633602
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Acil Hemşireliği Anabilim Dalı Başkanlığı
-  detsis_id: 97853903
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Allerji ve İmmünoloji Anabilim Dalı Başkanlığı
-  detsis_id: 47024253
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Anatomi Anabilim Dalı Başkanlığı
-  detsis_id: 51903356
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Antrenörlük Eğitimi Anabilim Dalı Başkanlığı
-  detsis_id: 91908821
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Ağız, Diş ve Çene Cerrahisi Anabilim Dalı Başkanlığı
-  detsis_id: 37274632
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Ağız, Diş ve Çene Radyolojisi Anabilim Dalı Başkanlığı
-  detsis_id: 65037691
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Basın Yayın ve Halkla İlişkiler Birimi
   detsis_id: 92460850
   parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Beden Eğitimi ve Spor Anabilim Dalı Başkanlığı
-  detsis_id: 97936532
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Beslenme Bilimleri Anabilim Dalı Başkanlığı
-  detsis_id: 53706045
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Bilgi İşlem Birimi
   detsis_id: 86248111
   parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Biyoistatistik ve Tıp Bilişimi Anabilim Dalı Başkanlığı
-  detsis_id: 45437333
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Deney Hayvanları Araştırmaları Anabilim Dalı Başkanlığı
-  detsis_id: 48395142
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Dil ve Konuşma Terapisi Anabilim Dalı Başkanlığı
-  detsis_id: 83466304
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Dölerme ve Suni Tohumlama Anabilim Dalı Başkanlığı
-  detsis_id: 94836752
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Ebelik Anabilim Dalı Başkanlığı
-  detsis_id: 33278135
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Endodonti Anabilim Dalı Başkanlığı
-  detsis_id: 78479583
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Enstitü Disiplin Kurulu
   detsis_id: 29283638
   parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Enstitü Kurulu
   detsis_id: 99323623
   parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Enstitü Sekreterliği
   detsis_id: 51409053
   parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Enstitü Yönetim Kurulu
   detsis_id: 99576486
   parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Evde Hasta Bakımı Hemşireliği Anabilim Dalı Başkanlığı
-  detsis_id: 29830028
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Fizyoloji Anabilim Dalı Başkanlığı
   detsis_id: 40251114
@@ -4530,71 +4980,11 @@
   active: false
   activity: true
 
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Fizyoloji Anabilim Dalı Başkanlığı
-  detsis_id: 16194377
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Halk Sağlığı Anabilim Dalı Başkanlığı
-  detsis_id: 65133038
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Halk Sağlığı ve Hemşireliği Anabilim Dalı Başkanlığı
-  detsis_id: 28359953
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Hayvan Besleme ve Beslenme Hastalıkları Anabilim Dalı Başkanlığı
-  detsis_id: 61110688
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Hemşirelik Anabilim Dalı Başkanlığı
-  detsis_id: 90487276
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Histoloji-embriyoloji Anabilim Dalı Başkanlığı
-  detsis_id: 41039653
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Hukuk İşleri Birimi
   detsis_id: 33988944
   parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Kardiyopulmoner Fizyoterapi Anabilim Dalı Başkanlığı
-  detsis_id: 63950292
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Klinik Sinir Bilimleri Anabilim Dalı Başkanlığı
-  detsis_id: 87899366
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Klinik Toksikoloji Anabilim Dalı Başkanlığı
-  detsis_id: 80397943
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Kulak Burun Boğaz Odyoloji Anabilim Dalı Başkanlığı
-  detsis_id: 66588869
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Kurullar ve Komisyonlar
   detsis_id: 67596551
@@ -4605,8 +4995,8 @@
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Mali İşler Birimi
   detsis_id: 36404996
   parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Moleküler Tıp Anabilim Dalı Başkanlığı
   detsis_id: 10452758
@@ -4662,83 +5052,23 @@
   active: false
   activity: true
 
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Moleküler Tıp Anabilim Dalı Başkanlığı
-  detsis_id: 15373406
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Ortodonti Anabilim Dalı Başkanlığı
-  detsis_id: 57307857
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Pedodonti Anabilim Dalı Başkanlığı
-  detsis_id: 43479317
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Periodontoloji Anabilim Dalı Başkanlığı
-  detsis_id: 41685452
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Personel İşleri Birimi
   detsis_id: 50722385
   parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Protetik Diş Tedavisi Anabilim Dalı Başkanlığı
-  detsis_id: 97650724
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Radyolojik Bilimler Anabilim Dalı Başkanlığı
-  detsis_id: 94999386
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Restoratif Diş Tedavisi Anabilim Dalı Başkanlığı
-  detsis_id: 66182499
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Ruh Sağlığı ve Hastalıkları Hemşireliği Anabilim Dalı Başkanlığı
-  detsis_id: 28280552
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Sağlık Yönetimi Anabilim Dalı Başkanlığı
-  detsis_id: 58144189
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Sağlık, Kültür ve Spor İşleri Birimi
   detsis_id: 80706538
   parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Sinir Bilimleri Anabilim Dalı Başkanlığı
-  detsis_id: 92044395
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Strateji Geliştirme ve Kalite Birimi
   detsis_id: 91268476
   parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Su Ürünleri Hastalıkları Anabilim Dalı Başkanlığı
   detsis_id: 72063408
@@ -4746,161 +5076,35 @@
   active: false
   activity: true
 
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Su Ürünleri Hastalıkları Anabilim Dalı Başkanlığı
-  detsis_id: 23479635
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Tıbbi Biyokimya Anabilim Dalı Başkanlığı
-  detsis_id: 40148669
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Tıbbi Biyoloji Anabilim Dalı Başkanlığı
-  detsis_id: 99046086
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Tıbbi Farmakoloji Anabilim Dalı Başkanlığı
-  detsis_id: 62257320
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Tıbbi Mikrobiyoloji Anabilim Dalı Başkanlığı
-  detsis_id: 59268728
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Uluslararası Düzenleyici Bilim Anabilim Dalı Başkanlığı
-  detsis_id: 80144548
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Veteriner Hekimliği Tarihi ve Deontoloji Anabilim Dalı Başkanlığı
-  detsis_id: 97192299
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Veteriner Histoloji ve Embriyoloji Anabilim Dalı Başkanlığı
-  detsis_id: 71464078
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Veterinerlik Anatomisi Anabilim Dalı Başkanlığı
-  detsis_id: 40369060
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Veterinerlik Besin Hijyeni ve Teknolojisi Anabilim Dalı Başkanlığı
-  detsis_id: 49971342
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Veterinerlik Biyokimyası Anabilim Dalı Başkanlığı
-  detsis_id: 60669633
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Veterinerlik Cerrahisi Anabilim Dalı Başkanlığı
-  detsis_id: 54380477
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Veterinerlik Doğum ve Jinekolojisi Anabilim Dalı Başkanlığı
-  detsis_id: 88515739
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Veterinerlik Farmakoloji ve Toksikoloji Anabilim Dalı Başkanlığı
-  detsis_id: 81888224
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Veterinerlik Fizyolojisi Anabilim Dalı Başkanlığı
-  detsis_id: 46857964
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Veterinerlik Mikrobiyolojisi Anabilim Dalı Başkanlığı
-  detsis_id: 14820566
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Veterinerlik Parazitolojisi Anabilim Dalı Başkanlığı
-  detsis_id: 87661185
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Veterinerlik Patolojisi Anabilim Dalı Başkanlığı
-  detsis_id: 23148769
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Veterinerlik Viroloji Anabilim Dalı Başkanlığı
-  detsis_id: 96350930
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Veterinerlik Zootekni Anabilim Dalı Başkanlığı
-  detsis_id: 37638064
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Veterinerlik İç Hastalıkları Anabilim Dalı Başkanlığı
-  detsis_id: 53936112
-  parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
-
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Yapı, Tesis ve Teknik İşler Birimi
   detsis_id: 36410545
   parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Yayın, Kütüphane ve Dokümantasyon Birimi
   detsis_id: 57786613
   parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Özel Kalem Birimi
   detsis_id: 64708084
   parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > Öğrenci İşleri Birimi
   detsis_id: 37125759
   parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Enstitüsü Müdürlüğü > İdari İşler Birimi
   detsis_id: 21431818
   parent_administrative_identity_code: 93771576
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Fakültesi Dekanlığı
   detsis_id: 28050591
@@ -4918,6 +5122,12 @@
   detsis_id: 68060458
   parent_administrative_identity_code: 28050591
   active: false
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Fakültesi Dekanlığı > Acil Yardım ve Afet Yönetimi Bölüm Başkanlığı
+  detsis_id: 96417007
+  parent_administrative_identity_code: 28050591
+  active: true
   activity: true
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Fakültesi Dekanlığı > Basın Yayın ve Halkla İlişkiler Birimi
@@ -4998,6 +5208,12 @@
   active: true
   activity: true
 
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Fakültesi Dekanlığı > Ergoterapi Bölüm Başkanlığı
+  detsis_id: 39451398
+  parent_administrative_identity_code: 28050591
+  active: true
+  activity: true
+
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Fakültesi Dekanlığı > Fakülte Disiplin Kurulu
   detsis_id: 30104911
   parent_administrative_identity_code: 28050591
@@ -5031,6 +5247,12 @@
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Fakültesi Dekanlığı > Fizyoterapi ve Rehabilitasyon Bölüm Başkanlığı > Fizyoterapi ve Rehabilitasyon Anabilim Dalı Başkanlığı
   detsis_id: 25550913
   parent_administrative_identity_code: 34357349
+  active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sağlık Bilimleri Fakültesi Dekanlığı > Gerontoloji Bölüm Başkanlığı
+  detsis_id: 46749385
+  parent_administrative_identity_code: 28050591
   active: true
   activity: true
 
@@ -5463,122 +5685,56 @@
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü
   detsis_id: 61232311
   parent_administrative_identity_code: 78633602
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Arkeoloji Anabilim Dalı Başkanlığı
   detsis_id: 43470589
   parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Arkeoloji Anabilim Dalı Başkanlığı
-  detsis_id: 95273792
-  parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Avrupa-akdeniz Kültürler ve Turizm Anabilim Dalı Başkanlığı
-  detsis_id: 24894277
-  parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Basın Yayın ve Halkla İlişkiler Birimi
   detsis_id: 56821914
   parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Bilgi İşlem Birimi
   detsis_id: 48408972
   parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Coğrafya Anabilim Dalı Başkanlığı
-  detsis_id: 96600690
-  parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Dini Danışmanlık ve Rehberlik Anabilim Dalı Başkanlığı
-  detsis_id: 27795668
-  parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Enstitü Disiplin Kurulu
   detsis_id: 96478647
   parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Enstitü Kurulu
   detsis_id: 24254010
   parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Enstitü Sekreterliği
   detsis_id: 35792979
   parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Enstitü Yönetim Kurulu
   detsis_id: 83752120
   parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Evlilik ve Aile Danışmanlığı Anabilim Dalı Başkanlığı
-  detsis_id: 32638226
-  parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Felsefe Anabilim Dalı Başkanlığı
-  detsis_id: 86933361
-  parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Felsefe ve Din Bilimleri Anabilim Dalı Başkanlığı
-  detsis_id: 16553436
-  parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Girişimcilik ve Yenilikçilik Anabilim Dalı Başkanlığı
-  detsis_id: 93062464
-  parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Hukuk İşleri Birimi
   detsis_id: 66639319
   parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Kadın ve Aile Araştırmaları Anabilim Dalı Başkanlığı
-  detsis_id: 42036856
-  parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Kamu Hukuku Anabilim Dalı Başkanlığı
-  detsis_id: 90583074
-  parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Kamu Yönetimi Anabilim Dalı Başkanlığı
-  detsis_id: 16682742
-  parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Kurullar ve Komisyonlar
   detsis_id: 35773261
@@ -5589,20 +5745,14 @@
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Mali İşler Birimi
   detsis_id: 13592150
   parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Müzik Anasanat Dalı Başkanlığı
-  detsis_id: 38908278
-  parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Personel İşleri Birimi
   detsis_id: 48550214
   parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Psikoloji Anabilim Dalı Başkanlığı
   detsis_id: 47526414
@@ -5610,131 +5760,47 @@
   active: false
   activity: true
 
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Psikoloji Anabilim Dalı Başkanlığı
-  detsis_id: 75091500
-  parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Sanat Tarihi Anabilim Dalı Başkanlığı
-  detsis_id: 74742106
-  parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
-
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Sağlık, Kültür ve Spor İşleri Birimi
   detsis_id: 88729056
   parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Sosyoloji Anabilim Dalı Başkanlığı
-  detsis_id: 48851387
-  parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Spor Yöneticiliği Anabilim Dalı Başkanlığı
-  detsis_id: 75401631
-  parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Strateji Geliştirme ve Kalite Birimi
   detsis_id: 71737007
   parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Tarih Anabilim Dalı Başkanlığı
-  detsis_id: 67624396
-  parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Temel İslam Bilimleri Anabilim Dalı Başkanlığı
-  detsis_id: 17543552
-  parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Turizm İşletmeciliği Anabilim Dalı Başkanlığı
-  detsis_id: 52308424
-  parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Türk Dili ve Edebiyatı Anabilim Dalı Başkanlığı
-  detsis_id: 56330438
-  parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Yapı, Tesis ve Teknik İşler Birimi
   detsis_id: 50417741
   parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Yayın, Kütüphane ve Dokümantasyon Birimi
   detsis_id: 53581522
   parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Özel Hukuk Anabilim Dalı Başkanlığı
-  detsis_id: 54539635
-  parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Özel Kalem Birimi
   detsis_id: 98977299
   parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > Öğrenci İşleri Birimi
   detsis_id: 39549029
   parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > İdari İşler Birimi
   detsis_id: 70982221
   parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > İktisat Anabilim Dalı Başkanlığı
-  detsis_id: 82051364
-  parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > İletişim Bilimleri Anabilim Dalı Başkanlığı
-  detsis_id: 94947571
-  parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > İslam Tarihi ve Sanatları Anabilim Dalı Başkanlığı
-  detsis_id: 87312513
-  parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > İşletme Anabilim Dalı Başkanlığı
-  detsis_id: 47913381
-  parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Bilimler Enstitüsü Müdürlüğü > İşletme ve Endüstri İlişkileri Anabilim Dalı Başkanlığı
-  detsis_id: 72752876
-  parent_administrative_identity_code: 61232311
-  active: true
-  activity: true
+  active: false
+  activity: false
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Sosyal Tesisler İşletme Müdürlüğü
   detsis_id: 27220789
@@ -6091,12 +6157,6 @@
   activity: true
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Turizm Fakültesi Dekanlığı > Turizm Rehberliği Bölüm Başkanlığı
-  detsis_id: 26422170
-  parent_administrative_identity_code: 37195700
-  active: false
-  activity: true
-
-- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Turizm Fakültesi Dekanlığı > Turizm Rehberliği Bölüm Başkanlığı
   detsis_id: 17503256
   parent_administrative_identity_code: 37195700
   active: true
@@ -6106,6 +6166,12 @@
   detsis_id: 54285866
   parent_administrative_identity_code: 17503256
   active: true
+  activity: true
+
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Turizm Fakültesi Dekanlığı > Turizm Rehberliği Bölüm Başkanlığı
+  detsis_id: 26422170
+  parent_administrative_identity_code: 37195700
+  active: false
   activity: true
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Turizm Fakültesi Dekanlığı > Turizm İşletmeciliği Bölüm Başkanlığı
@@ -7218,6 +7284,12 @@
   active: false
   activity: true
 
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Yapı İşleri ve Teknik Daire Başkanlığı > Enerji Yönetim Birimi
+  detsis_id: 44846511
+  parent_administrative_identity_code: 68380559
+  active: true
+  activity: true
+
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > Yapı İşleri ve Teknik Daire Başkanlığı > Orman ve Çevre Şube Müdürlüğü
   detsis_id: 87406384
   parent_administrative_identity_code: 68380559
@@ -8286,6 +8358,12 @@
   active: true
   activity: true
 
+- name: Ondokuz Mayıs Üniversitesi Rektörlüğü > İdari ve Mali İşler Daire Başkanlığı > Taşınır Yönetim Birimi
+  detsis_id: 85843448
+  parent_administrative_identity_code: 15327320
+  active: true
+  activity: true
+
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > İdari ve Mali İşler Daire Başkanlığı > İdari İşler Birimi
   detsis_id: 79795582
   parent_administrative_identity_code: 15327320
@@ -8398,7 +8476,7 @@
   detsis_id: 70161257
   parent_administrative_identity_code: 53132832
   active: true
-  activity: false
+  activity: true
 
 - name: Ondokuz Mayıs Üniversitesi Rektörlüğü > İktisadi ve İdari Bilimler Fakültesi Dekanlığı > Siyaset Bilimi ve Kamu Yönetimi Bölüm Başkanlığı > Yönetim Bilimleri Anabilim Dalı Başkanlığı
   detsis_id: 80965038
