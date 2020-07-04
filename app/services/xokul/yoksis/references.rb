@@ -40,7 +40,9 @@ module Xokul
         university_types
       ].each do |method|
         define_method(method) do
-          Connection.request "/yoksis/references/#{method}"
+          Rails.cache.fetch("xokul/yoksis/references/#{method}", expires_in: 1.day, skip_nil: true) {
+            Connection.request "/yoksis/references/#{method}"
+          }
         end
       end
     end

@@ -47,11 +47,7 @@
               <div class="form-group">
                   <%= label_tag :type, t('.online_registration_term_type') %>
                   <%= select_tag(:type,
-                                 options_for_select(
-                                   %w[
-                                     YKS YKS_EK YKS_MS DGS DGS_EK LT MT YKS_YDHB DGS_YDHB YKS_SAG
-                                   ]
-                                 ),
+                                 options_for_select(@term_types),
                                  include_blank: false,
                                  class:         'form-control') %>
               </div>
