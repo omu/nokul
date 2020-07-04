@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/ClassLength
 module FirstRegistration
   class ProspectiveStudentsController < ApplicationController
     include SearchableModule
@@ -49,7 +50,7 @@ module FirstRegistration
     end
 
     def fetch
-      if fetch_params.values.size == 3
+      if fetch_params.values_at(:year, :type, :academic_term_id).all?(&:present?)
         Yoksis::ProspectiveStudentsSaveJob.perform_later(
           *fetch_params.values_at(:type, :year),
           academic_term: AcademicTerm.find(params[:academic_term_id])
@@ -122,9 +123,11 @@ module FirstRegistration
         :student_disability_type_id,
         :student_entrance_type_id,
         :top_student,
-        :unit_id
+        :unit_id,
+        :year
       )
     end
     # rubocop:enable Metrics/MethodLength
   end
 end
+# rubocop:enable Metrics/ClassLength

@@ -25,8 +25,8 @@ module Actions
         ActiveRecord::Base.transaction do
           user.save!
           student.save!
-          registered!
-          archived!
+          register!
+          archive!
           upload_avatar!
         end
 
@@ -54,11 +54,11 @@ module Actions
         raise error
       end
 
-      def registered!
+      def register!
         prospective.update!(registered: true)
       end
 
-      def archived!
+      def archive!
         prospective.update!(archived: true) if user.activated
       end
 

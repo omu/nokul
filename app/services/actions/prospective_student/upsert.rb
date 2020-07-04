@@ -13,6 +13,8 @@ module Actions
         )
       end
 
+      private_class_method :new
+
       class << self
         def call(params, academic_term: AcademicTerm.current, type: :bulk)
           new(params, academic_term: academic_term, type: type).call
