@@ -13,7 +13,7 @@ module FirstRegistration
       prospective_students = ProspectiveStudent.includes(:unit, :student_entrance_type)
                                                .dynamic_search(search_params(ProspectiveStudent))
       @pagy, @prospective_students = pagy(prospective_students)
-      @term_types = (Xokul::Yoksis::References.term_types || {}).fetch(:data, [])
+      @term_types = Xokul::Yoksis::References.term_types
     end
 
     def show
