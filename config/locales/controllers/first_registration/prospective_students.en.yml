@@ -91,7 +91,7 @@ en:
         <<: *prospective_student_attributes
         form: Transfer Start Form via YÖKSİS
         start: Start
-        warning: The required parameters for transfer is incorrect, please check the parameters sent!
+        warning: The required parameters for the transfer is incorrect, please check the parameters sent!
         will_update: We have received your transfer request, within a few seconds/minutes your transfer will be started.
       form:
         address_and_contact_informations: Address/Contact Informations
