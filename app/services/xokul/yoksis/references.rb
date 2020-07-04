@@ -32,6 +32,7 @@ module Xokul
         student_punishment_types
         student_studentship_rights
         student_studentship_statuses
+        term_types
         unit_instruction_languages
         unit_instruction_types
         unit_statuses

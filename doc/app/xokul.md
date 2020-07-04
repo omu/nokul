@@ -108,6 +108,16 @@ year = 2019
 Xokul::Yoksis::Prospectives.online_registered_students type, year, page: 3, per_page: 100
 ```
 
+### References
+
+#### `term_types`
+
+YÖKSİS dönem türleri referansını döndürür.
+
+```ruby
+Xokul::Yoksis::References.term_types
+```
+
 Meksis
 ------
 
