@@ -25,7 +25,7 @@ services:
   redis:
     image: "redis:alpine"
   db:
-    image: "postgres:11.1"
+    image: "postgres:12.1"
     environment:
       POSTGRES_USER: nokul
       POSTGRES_PASSWORD: nokul
