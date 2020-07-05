@@ -9,7 +9,7 @@ if Rails.env.development? || Rails.env.test?
       task.requires << 'rubocop-minitest'
       task.requires << 'rubocop-performance'
       task.requires << 'rubocop-rails'
-      task.options = %w[-f fu -D --enable-pending-cops]
+      task.options = %w[-f fu -D]
     end
   end
 end

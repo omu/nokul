@@ -1,62 +1,36 @@
-inherit_from:
-  - .rubocop_todo.yml
-  - https://raw.githubusercontent.com/omu/omu/master/etc/rubocop/rubocop.yml
-
 require:
   - rubocop-rails
   - rubocop-performance
   - rubocop-minitest
 
+inherit_from:
+  - https://raw.githubusercontent.com/omu/omu/master/etc/rubocop/rubocop.yml
+  - .rubocop_todo.yml
 
+
+Lint/NonDeterministicRequireOrder:
+  Exclude:
+    - lib/nokul/tenant/tasks.rb
+    - lib/nokul/tenant/tests.rb
 
 Rails:
   Enabled: true
-Rails/Delegate:
-  Exclude:
-    - lib/nokul/tenant/api.rb
 Rails/UnknownEnv:
   Environments:
     - development
     - production
     - test
-Rails/Output:
-  Exclude:
-    - lib/**/*.rb
 
 Metrics/BlockLength:
   Exclude:
     - config/initializers/devise.rb
     - config/routes/**/*
     - lib/tasks/**/*.rake
-
 Metrics/ClassLength:
   Exclude:
     - test/**/*.rb
     - app/models/unit.rb
     - app/models/user.rb
-
-Metrics/AbcSize:
-  Exclude:
-    - lib/nokul/support/minitest/validation_helper.rb
-
-Naming/FileName:
-  Exclude:
-    - lib/nokul-support.rb
-    - lib/nokul-tenant.rb
-    - lib/nokul-tenant-*.rb
-
-Metrics/MethodLength:
-  Exclude:
-    - lib/nokul/support/minitest/validation_helper.rb
-
-Style/MixinUsage:
-  Exclude:
-    - test/dummy/**/*
-
-Lint/NonDeterministicRequireOrder:
-  Exclude:
-    - lib/nokul/tenant/tasks.rb
-    - lib/nokul/tenant/tests.rb
 
 AllCops:
   TargetRubyVersion: 2.7

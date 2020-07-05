@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class String
-  include Matchable
   TURKISH_CHARS = {
     'ı' => 'i',
     'ğ' => 'g',
@@ -29,6 +28,7 @@ class String
       \)
     )
     /x.freeze
+
   def asciified
     chars.to_a.map { |char| (ascii = TURKISH_CHARS[char]) ? ascii : char }.join
   end
@@ -121,4 +121,6 @@ class String
       end
     end
   end
+
+  include Matchable # rubocop:disable Layout/ClassStructure
 end
