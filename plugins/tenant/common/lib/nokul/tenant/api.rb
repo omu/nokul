@@ -31,7 +31,7 @@ module Nokul
       return units if predication.nil? || units.blank?
 
       unless units.first.respond_to?(predicator = "#{predication}?".to_sym)
-        raise "Unsupported unit predication: #{predication}"
+        raise ArgumentError, "Unsupported unit predication: #{predication}"
       end
 
       units.select(&predicator)
@@ -40,7 +40,9 @@ module Nokul
     def unit_types(category = nil)
       return units.map(&:unit_type_id).uniq.sort unless category
 
-      raise "Unsupported unit category: #{category}" unless %i[administrative academic].include? category.to_sym
+      unless %i[administrative academic].include? category.to_sym
+        raise ArgumentError, "Unsupported unit category: #{category}"
+      end
 
       units.select(&:"#{category}?").map(&:unit_type_id).uniq.sort
     end

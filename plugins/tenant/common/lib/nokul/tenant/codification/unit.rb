@@ -11,7 +11,7 @@ module Nokul
         def code_generator(starting:, ending:, pattern: nil, memory:)
           [starting = starting.to_s, ending = ending.to_s].each do |code|
             code.length == const.gross_length ||
-              raise("Code length must be #{const.gross_length}: #{code}")
+              raise(ArgumentError, "Code length must be #{const.gross_length}: #{code}")
           end
 
           range        = Range.new(starting, ending)

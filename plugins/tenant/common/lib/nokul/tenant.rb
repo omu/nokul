@@ -32,8 +32,10 @@ module Nokul
     end
 
     def initialize(engine_class)
-      raise "Engine must be a Rails Engine where found: #{engine_class}" unless engine_class < ::Rails::Engine
-      raise 'Only one tenant can be active' if engine
+      unless engine_class < ::Rails::Engine
+        raise ArgumentError, "Engine must be a Rails Engine where found: #{engine_class}"
+      end
+      raise ArgumentError, "Only one tenant can be active: #{engine_class}" if engine
 
       # Fill-in Tenant.engine
       self.engine = engine_class.instance

@@ -140,7 +140,7 @@ module Nokul
             #
             base.mattr_accessor :members, default: [] unless base.respond_to? :members
           else
-            raise 'Unexpected case during include'
+            raise ArgumentError, "Unexpected base type during include: #{base.class}"
           end
 
           base.members += members
