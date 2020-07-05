@@ -37,6 +37,7 @@ module FirstRegistration
         unit_id:                  units(:bilgisayar_muhendisligi_programi).id,
         academic_term_id:         academic_term.id,
         expiry_date:              academic_term.end_of_term,
+        year:                     2018,
         student_entrance_type_id: StudentEntranceType.find_by(name: 'ÖSYS').id
       }
 

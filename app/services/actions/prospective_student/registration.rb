@@ -71,8 +71,7 @@ module Actions
         file.unlink
       end
 
-      # rubocop:disable Metrics/MethodLength
-      def student
+      def student # rubocop:disable Metrics/MethodLength
         @student ||= Student.new(
           user:                   user,
           unit:                   unit,
@@ -87,7 +86,6 @@ module Actions
           registration_term:      academic_term
         )
       end
-      # rubocop:enable Metrics/MethodLength
 
       def user
         @user ||= begin

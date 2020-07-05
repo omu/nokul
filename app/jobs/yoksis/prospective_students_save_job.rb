@@ -17,10 +17,9 @@ module Yoksis
       response = Xokul::Yoksis::Prospectives.all(@type, @year, page: page) || {}
 
       response.fetch(:data, []).each do |params|
-        Actions::ProspectiveStudent::Upsert.call(
-          params.merge(year: @year), academic_term: @academic_term
-        )
-      rescue ActiveRecord::RecordInvalid
+        Actions::ProspectiveStudent::Upsert.call(params.merge(year: @year), academic_term: @academic_term)
+      rescue ActiveRecord::RecordInvalid => e
+        Rollbar.info(e, job: 'ProspectiveStudentsSaveJob', response: response)
         next
       end
 
