@@ -46,7 +46,9 @@ module Nokul
         end
 
         def process(instance, string, **options)
-          processors.reduce(string) { |result, processor| instance.instance_exec(result, **options, &processor) }
+          processors.reduce(string) do |result, processor|
+            instance.instance_exec(result, **options, &processor)
+          end
         end
 
         protected
