@@ -120,7 +120,7 @@ module Nokul
 
           def populate(unit)
             self << unit
-            puts format("%<number>4d\t%<label>s", number: size, label: unit.label)
+            puts format("%4{number}\t%{label}", number: size, label: unit.label)
             unit
           end
         end

@@ -41,15 +41,6 @@ Naming/MethodName:
 Performance/ChainArrayAllocation:
   Enabled: false
 
-# Offense count: 5
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: annotated, template, unannotated
-Style/FormatStringToken:
-  Exclude:
-    - 'plugins/tenant/common/lib/nokul/tenant.rb'
-    - 'plugins/tenant/common/lib/nokul/tenant/units/raw/det_many.rb'
-    - 'plugins/tenant/common/lib/nokul/tenant/units/raw/yok_many.rb'
-
 # Offense count: 8
 Style/ImplicitRuntimeError:
   Exclude:

@@ -11,7 +11,7 @@ require_relative 'tenant/engine'
 
 module Nokul
   module Tenant
-    PLUGIN_PATTERN = 'nokul-tenant-%<name>s'
+    PLUGIN_PATTERN = 'nokul-tenant-%{name}'
 
     module_function
 
