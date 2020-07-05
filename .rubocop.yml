@@ -32,6 +32,11 @@ Metrics/ClassLength:
     - app/models/unit.rb
     - app/models/user.rb
 
+Naming/FileName:
+  Exclude:
+    - plugins/support/lib/nokul-*.rb
+    - plugins/tenant/*/lib/nokul-*.rb
+
 AllCops:
   TargetRubyVersion: 2.7
   # Do not exclude files from ALL COPS unless it's really necessary!

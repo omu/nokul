@@ -30,16 +30,6 @@ Metrics/ModuleLength:
   Exclude:
     - 'app/services/ldap/entity.rb'
 
-# Offense count: 4
-# Configuration parameters: ExpectMatchingDefinition, CheckDefinitionPathHierarchy, Regex, IgnoreExecutableScripts, AllowedAcronyms.
-# AllowedAcronyms: CLI, DSL, ACL, API, ASCII, CPU, CSS, DNS, EOF, GUID, HTML, HTTP, HTTPS, ID, IP, JSON, LHS, QPS, RAM, RHS, RPC, SLA, SMTP, SQL, SSH, TCP, TLS, TTL, UDP, UI, UID, UUID, URI, URL, UTF8, VM, XML, XMPP, XSRF, XSS
-Naming/FileName:
-  Exclude:
-    - 'plugins/support/lib/nokul-support.rb'
-    - 'plugins/tenant/acme/lib/nokul-tenant-acme.rb'
-    - 'plugins/tenant/common/lib/nokul-tenant.rb'
-    - 'plugins/tenant/omu/lib/nokul-tenant-omu.rb'
-
 # Offense count: 20
 # Configuration parameters: EnforcedStyle, IgnoredPatterns.
 # SupportedStyles: snake_case, camelCase
