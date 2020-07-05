@@ -2,6 +2,7 @@
 
 module LDAP
   class Entity
+    # rubocop:disable Metrics/ModuleLength, Naming/MethodName
     module Attributes
       # Schema: person
       def cn
@@ -261,4 +262,5 @@ module LDAP
       LdapEntity.create(user_id: user.id, values: values, dn: dn)
     end
   end
+  # rubocop:enable Metrics/ModuleLength, Naming/MethodName
 end

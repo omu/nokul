@@ -24,19 +24,6 @@ Metrics/MethodLength:
   Exclude:
     - 'plugins/support/lib/nokul/support/minitest/validation_helper.rb'
 
-# Offense count: 1
-# Configuration parameters: CountComments, Max.
-Metrics/ModuleLength:
-  Exclude:
-    - 'app/services/ldap/entity.rb'
-
-# Offense count: 20
-# Configuration parameters: EnforcedStyle, IgnoredPatterns.
-# SupportedStyles: snake_case, camelCase
-Naming/MethodName:
-  Exclude:
-    - 'app/services/ldap/entity.rb'
-
 # Offense count: 30
 Performance/ChainArrayAllocation:
   Enabled: false
