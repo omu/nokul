@@ -12,7 +12,7 @@ module Nokul
 
     module_function
 
-    def root
+    def root # rubocop:disable Rails/Delegate
       engine.root
     end
 

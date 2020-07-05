@@ -41,13 +41,6 @@ Naming/MethodName:
 Performance/ChainArrayAllocation:
   Enabled: false
 
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: EnforceForPrefixed.
-Rails/Delegate:
-  Exclude:
-    - 'plugins/tenant/common/lib/nokul/tenant/api.rb'
-
 # Offense count: 5
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: annotated, template, unannotated
