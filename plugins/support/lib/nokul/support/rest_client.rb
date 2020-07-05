@@ -27,8 +27,8 @@ module Nokul
         SUPPORTED_HTTP_OPTIONS = {
           open_timeout: 10,
           read_timeout: 10,
-          use_ssl: false,
-          verify_mode: OpenSSL::SSL::VERIFY_NONE
+          use_ssl:      false,
+          verify_mode:  OpenSSL::SSL::VERIFY_NONE
         }.freeze
 
         HEADERS = {

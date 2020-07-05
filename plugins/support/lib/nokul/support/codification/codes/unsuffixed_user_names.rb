@@ -11,8 +11,8 @@ module Nokul
     module Codification
       module UnsuffixedUserNames
         mattr_reader :default_options, default: {
-          alternative: :non_abbreviated,
-          interfix: '.',
+          alternative:          :non_abbreviated,
+          interfix:             '.',
           builtin_post_process: %i[safe?]
         }
 
@@ -29,7 +29,7 @@ module Nokul
             end
 
             def non_abbreviated
-              surname, forenames = last, clip # rubocop:disable Style/ParallelAssignment
+              surname, forenames = last, clip
 
               forenames.send(:index_combinations_of_source).map do |indexes|
                 [*forenames.values_at(*indexes), surname]

@@ -39,7 +39,7 @@ module Nokul
           option[:maximum] = 255 if option.blank?
 
           controls = {
-            is: { value: 1, error_key: :wrong_length },
+            is:      { value: 1, error_key: :wrong_length },
             minimum: { value: -1, error_key: :too_short },
             maximum: { value: 1, error_key: :too_long }
           }
@@ -65,10 +65,10 @@ module Nokul
 
         def validates_numerical_range(attribute, **option)
           controls = {
-            greater_than: 0,
-            less_than: 0,
+            greater_than:             0,
+            less_than:                0,
             greater_than_or_equal_to: -1,
-            less_than_or_equal_to: 1
+            less_than_or_equal_to:    1
           }
 
           key   = option.keys.first

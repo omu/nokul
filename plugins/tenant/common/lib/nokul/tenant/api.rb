@@ -12,9 +12,7 @@ module Nokul
 
     module_function
 
-    def root
-      engine.root
-    end
+    delegate :root, to: :engine
 
     def credentials
       Rails.application.encrypted(
