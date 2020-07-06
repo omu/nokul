@@ -16,7 +16,7 @@ class AvailableCourseLecturerValidator < ActiveModel::Validator
   def check_lecturer_uniqueness(lecturer_ids)
     return if lecturer_ids.eql?(lecturer_ids.uniq)
 
-    @lecturer.errors[:lecturer_id] << I18n.t('lecturer_uniqueness', scope: %i[validators available_course_lecturer])
+    @lecturer.errors[:lecturer] << I18n.t('lecturer_uniqueness', scope: %i[validators available_course_lecturer])
   end
 
   def check_coordinator(record, lecturers)
