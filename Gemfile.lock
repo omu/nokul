@@ -159,7 +159,7 @@ GEM
     dotenv-rails (2.7.5)
       dotenv (= 2.7.5)
       railties (>= 3.2, < 6.1)
-    erb_lint (0.0.33)
+    erb_lint (0.0.34)
       activesupport
       better_html (~> 1.0.7)
       html_tokenizer
