@@ -10,7 +10,7 @@ class AvailableCourseLecturerValidator < ActiveModel::Validator
   private
 
   def lecturers(course_lecturers)
-    course_lecturers.map { |lecturer| lecturer unless lecturer.marked_for_destruction? }.compact
+    course_lecturers.reject(&:marked_for_destruction?)
   end
 
   def check_lecturer_uniqueness(lecturer_ids)
