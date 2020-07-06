@@ -32,7 +32,6 @@ module Xokul
         student_punishment_types
         student_studentship_rights
         student_studentship_statuses
-        term_types
         unit_instruction_languages
         unit_instruction_types
         unit_statuses
@@ -40,7 +39,21 @@ module Xokul
         university_types
       ].each do |method|
         define_method(method) do
-          Connection.request "/yoksis/references/#{method}"
+          Rails.cache.fetch("xokul/yoksis/references/#{method}", expires_in: 1.day, skip_nil: true) {
+            Connection.request "/yoksis/references/#{method}"
+          }
+        end
+      end
+
+      # TODO:
+      #   term_types has a different form of response than the other methods.
+      #   As the architects of Xokul, we are currently trying to provide the same
+      #   response for all methods in the next major version of Xokul. That day,
+      #   the below method will be included in the above methods.
+      def term_types
+        Rails.cache.fetch("xokul/yoksis/references/term_types", expires_in: 1.day, skip_nil: true) do
+          r = Connection.request '/yoksis/references/term_types'
+          (r || {}).fetch(:data, [])
         end
       end
     end

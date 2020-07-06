@@ -16,12 +16,12 @@ class ProspectiveStudent < ApplicationRecord
               :registered, :academic_term_id, :system_register_type, :archived
 
   # callbacks
-  before_create :normalize_string_attributes
+  before_validation :normalize_attributes
 
   # enumerations
   enum additional_score: { handicapped: 1 }
   enum nationality: { turkish: 1, kktc: 2, foreign: 3 }
-  enum placement_type: { general_score: 1, additional_score: 2 }
+  enum placement_type: { general: 1, additional_score: 2 }
   enum system_register_type: { manual: 0, bulk: 1 }
 
   # relations
@@ -68,6 +68,14 @@ class ProspectiveStudent < ApplicationRecord
   validates :state_of_education, allow_nil: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :system_register_type, inclusion: { in: system_register_types.keys }
   validates :top_student, inclusion: { in: [true, false] }
+  validates :year, allow_nil:    false,
+                   numericality: {
+                     only_integer:             true,
+                     greater_than_or_equal_to: 2010,
+                     less_than_or_equal_to:    2100
+                   }
+  validates :online_registration_term_type, length: { maximum: 255 }
+
   validates_with ProspectiveStudentValidator, on: :update
 
   # scopes
@@ -82,35 +90,25 @@ class ProspectiveStudent < ApplicationRecord
     military_status
   end
 
-  # rubocop:disable Metrics/MethodLength
-  def registered_user(user)
-    Student.new(
-      user:                   user,
-      unit:                   unit,
-      permanently_registered: can_permanently_register?,
-      status:                 can_permanently_register? ? :active : :passive,
-      student_number:         id_number, # TODO: must be generated
-      year:                   1, # TODO: can have a different value depending on the characteristics of the program
-      semester:               1,
-      entrance_type:          student_entrance_type,
-      other_studentship:      !obs_status,
-      registration_date:      Time.zone.now,
-      registration_term:      academic_term
-    )
+  def avatar
+    return if id_number.blank?
+
+    Rails.cache.fetch(self, expires_in: 10.days, skip_nil: true) {
+      Xokul::Yoksis::Prospectives.photo(id_number)
+    }
   end
-  # rubocop:enable Metrics/MethodLength
 
   private
 
   # rubocop:disable Metrics/AbcSize
-  def normalize_string_attributes
-    self.first_name = first_name.capitalize_turkish
-    self.last_name  = last_name.upcase(:turkic)
-    self.fathers_name = fathers_name.capitalize_turkish if fathers_name
-    self.mothers_name = mothers_name.capitalize_turkish if mothers_name
-    self.place_of_birth = place_of_birth.capitalize_turkish if place_of_birth
-    self.registration_city = registration_city.capitalize_turkish if registration_city
-    self.registration_district = registration_district.capitalize_turkish if registration_district
+  def normalize_attributes
+    self.first_name            = first_name.to_s.capitalize_turkish
+    self.last_name             = last_name.to_s.upcase(:turkic)
+    self.fathers_name          = fathers_name.to_s.capitalize_turkish
+    self.mothers_name          = mothers_name.to_s.capitalize_turkish
+    self.place_of_birth        = place_of_birth.to_s.capitalize_turkish
+    self.registration_city     = registration_city.to_s.capitalize_turkish
+    self.registration_district = registration_district.to_s.capitalize_turkish
   end
   # rubocop:enable Metrics/AbcSize
 end

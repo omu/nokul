@@ -52,7 +52,6 @@ if ENV['SYNC'].eql?('true')
 
   if ENV['SAMPLE_DATA'].eql?('true')
     Rake::Task['fetch:academic_staff'].invoke
-    Osym::ImportProspectiveStudentsJob.perform_later('db/encrypted_data/prospective_students.csv')
   end
 else
   restore_seed_data('static_data')

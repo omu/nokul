@@ -125,6 +125,16 @@
                                class:         'form-control') %>
               </div>
             </div>
+
+            <div class="col-sm-3">
+              <div class="form-group">
+                <%= label_tag :year, "t('.year')" %>
+                <%= select_tag(:year,
+                               options_for_select(2010..2100, params[:year]),
+                               include_blank: true,
+                               class:         'form-control') %>
+              </div>
+            </div>
           </div>
           <div class="row">
             <div class="col-sm-12">
@@ -139,14 +149,7 @@
 
 <script type='text/javascript'>
   $(document).ready(function() {
-    elements = [
-      '#root_unit_id',
-      '#unit_id',
-      '#student_entrance_type_id',
-      '#academic_term_id'
-    ]
-
-    $(elements.join(',')).select2();
+    $('select').select2();
 
     var parameters = [
       {

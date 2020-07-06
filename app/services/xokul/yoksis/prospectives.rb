@@ -29,7 +29,7 @@ module Xokul
       def photo(id_number)
         Connection.request(
           '/yoksis/prospectives/students/photo', params: { prospective: { id_number: id_number } }
-        )
+        )&.fetch(:image, nil)
       end
 
       def path_with_page_params(path, page, per_page)

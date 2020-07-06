@@ -6,33 +6,50 @@
   </div>
 
   <div class="card-body">
-    <table class="table table-responsive-sm">
-      <tbody>
-        <tr>
-          <td><%= t('.id_number') %></td>
-          <td><%= @user.id_number %></td>
-        </tr>
-        <tr>
-          <td><%= t('.email') %></td>
-          <td><%= @user.email %></td>
-        </tr>
-        <tr>
-          <td><%= t('created_at') %></td>
-          <td><%= @user.created_at %></td>
-        </tr>
-        <tr>
-          <td><%= t('updated_at') %></td>
-          <td><%= @user.updated_at %></td>
-        </tr>
-        <tr>
-          <td><%= t('.activated') %></td>
-          <td><%= icon_for_check(@user.activated) %></td>
-        </tr>
-        <tr>
-          <td><%= t('.activated_at') %></td>
-          <td><%= @user.activated_at %></td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-responsive-sm">
+      <table class="table table-borderless table-striped">
+        <tbody>
+          <tr>
+            <td class='align-middle'><%= t('.avatar') %></td>
+            <td>
+              <% if @user.avatar.attached? && @user.avatar.variable? %>
+                <%= image_tag @user.avatar.variant(resize_to_limit: [200, 200]),
+                              class: 'img-thumbnail float-left',
+                              alt:   t('.avatar') %>
+              <% else %>
+                <%= image_tag @user.identities.last&.male? ? 'profile/male_avatar.svg' : 'profile/female_avatar.svg',
+                              alt: t('.avatar'),
+                              class: 'rounded float-left',
+                              style: 'width: 200px; height: 200px'%>
+              <% end %>
+            </td>
+          </tr>
+          <tr>
+            <td><%= t('.id_number') %></td>
+            <td><%= @user.id_number %></td>
+          </tr>
+          <tr>
+            <td><%= t('.email') %></td>
+            <td><%= @user.email %></td>
+          </tr>
+          <tr>
+            <td><%= t('created_at') %></td>
+            <td><%= @user.created_at %></td>
+          </tr>
+          <tr>
+            <td><%= t('updated_at') %></td>
+            <td><%= @user.updated_at %></td>
+          </tr>
+          <tr>
+            <td><%= t('.activated') %></td>
+            <td><%= icon_for_check(@user.activated) %></td>
+          </tr>
+          <tr>
+            <td><%= t('.activated_at') %></td>
+            <td><%= @user.activated_at %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>

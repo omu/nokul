@@ -14,7 +14,7 @@ class ProspectiveEmployee < ApplicationRecord
   search_keys :unit_id, :title_id, :archived
 
   # callbacks
-  before_create :normalize_string_attributes
+  before_validation :normalize_attributes
 
   # relations
   belongs_to :unit
@@ -44,8 +44,8 @@ class ProspectiveEmployee < ApplicationRecord
 
   private
 
-  def normalize_string_attributes
-    self.first_name = first_name.capitalize_turkish
-    self.last_name  = last_name.upcase(:turkic)
+  def normalize_attributes
+    self.first_name = first_name&.capitalize_turkish
+    self.last_name  = last_name&.upcase(:turkic)
   end
 end

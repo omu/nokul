@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/ClassLength
 module FirstRegistration
   class ProspectiveStudentsController < ApplicationController
     include SearchableModule
@@ -12,6 +13,7 @@ module FirstRegistration
       prospective_students = ProspectiveStudent.includes(:unit, :student_entrance_type)
                                                .dynamic_search(search_params(ProspectiveStudent))
       @pagy, @prospective_students = pagy(prospective_students)
+      @term_types = Xokul::Yoksis::References.term_types
     end
 
     def show
@@ -38,14 +40,22 @@ module FirstRegistration
     end
 
     def register
-      prospective_student = FirstRegistration::ProspectiveService.new(@prospective_student)
-
-      if prospective_student.register
-        @prospective_student.update(registered: true)
-        if User.exists?(id_number: @prospective_student.id_number, activated: true)
-          @prospective_student.update(archived: true)
-        end
+      if Actions::ProspectiveStudent::Registration.call(@prospective_student)
         redirect_to(:prospective_students, notice: t('.success'))
+      else
+        redirect_to(@prospective_student, alert: t('.warning'))
+      end
+    rescue Actions::ProspectiveStudent::Registration::Error => e
+      redirect_to(@prospective_student, alert: e.details.join(' - '))
+    end
+
+    def fetch
+      if fetch_params.values_at(:year, :type, :academic_term_id).all?(&:present?)
+        Yoksis::ProspectiveStudentsSaveJob.perform_later(
+          *fetch_params.values_at(:type, :year),
+          academic_term: AcademicTerm.find(params[:academic_term_id])
+        )
+        redirect_to(:prospective_students, notice: t('.will_update'))
       else
         redirect_to(:prospective_students, alert: t('.warning'))
       end
@@ -64,6 +74,10 @@ module FirstRegistration
     def can_register?
       alert = '.can_not_register'
       redirect_to(:prospective_students, alert: t(alert)) unless @prospective_student.can_temporarily_register?
+    end
+
+    def fetch_params
+      params.permit(:year, :type, :academic_term_id)
     end
 
     # rubocop:disable Metrics/MethodLength
@@ -109,9 +123,11 @@ module FirstRegistration
         :student_disability_type_id,
         :student_entrance_type_id,
         :top_student,
-        :unit_id
+        :unit_id,
+        :year
       )
     end
     # rubocop:enable Metrics/MethodLength
   end
 end
+# rubocop:enable Metrics/ClassLength
