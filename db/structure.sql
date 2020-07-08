@@ -11,7 +11,7 @@ SET row_security = off;
 
 SET default_tablespace = '';
 
-SET default_table_access_method = heap;
+SET default_with_oids = false;
 
 --
 -- Name: academic_credentials; Type: TABLE; Schema: public; Owner: -
@@ -3266,6 +3266,8 @@ CREATE TABLE public.student_entrance_types (
     id bigint NOT NULL,
     name character varying,
     code integer,
+    abroad boolean DEFAULT false,
+    CONSTRAINT student_entrance_types_abroad_null CHECK ((abroad IS NOT NULL)),
     CONSTRAINT student_entrance_types_code_null CHECK ((code IS NOT NULL)),
     CONSTRAINT student_entrance_types_code_numericality CHECK ((code >= 0)),
     CONSTRAINT student_entrance_types_name_length CHECK ((length((name)::text) <= 255)),
@@ -7857,6 +7859,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20200320114534'),
 ('20200427103727'),
 ('20200430130429'),
-('20200703214608');
+('20200703214608'),
+('20200708072837');
 
 
