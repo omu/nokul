@@ -70,6 +70,10 @@ class Student < ApplicationRecord
       semester_registrations.find_by(semester: semester) || semester_registrations.create
   end
 
+  def abroad?
+    Student.abroads.ids.include?(id)
+  end
+
   def preparation?
     Student.preparations.ids.include?(id)
   end

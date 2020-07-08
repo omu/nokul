@@ -19,7 +19,9 @@ module Debt
       end
 
       def set_chain(unit, student)
-        if unit.evening?
+        if student.abroad?
+          Process::AbroadEducation.new(student).chain
+        elsif unit.evening?
           Process::EveningEducation.new(student).chain
         else
           Process::DaytimeEducation.new(student).chain
