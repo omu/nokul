@@ -3,7 +3,7 @@
 module Debt
   module Tuition
     module Process
-      class EveningEducation
+      class Abroad
         attr_reader :student
 
         def initialize(student)
