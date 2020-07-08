@@ -10,4 +10,7 @@ class StudentEntranceType < ApplicationRecord
 
   # validations
   validates :abroad, inclusion: { in: [true, false] }
+
+  # scopes
+  scope :abroads, -> { where(abroad: true) }
 end
