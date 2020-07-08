@@ -1,15 +1,24 @@
 osys:
   name: ÖSYS
   code: 1
+  abroad: false
 dgs:
   name: DGS
   code: 5
+  abroad: false
 aselsan:
   name: ASELSAN Protokolü
   code: 103
+  abroad: false
 oyp:
   name: ÖYP
   code: 62
+  abroad: false
+aos:
+  name: AÖS Yurt Dışı Programları Seçme Sınavı ile Gelen Öğrenci
+  code: 145
+  abroad: true
 student_entrance_type_to_delete:
   name: Will be Deleted
   code: 99
+  abroad: false
