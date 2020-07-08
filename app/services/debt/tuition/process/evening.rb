@@ -3,15 +3,9 @@
 module Debt
   module Tuition
     module Process
-      class Evening
-        attr_reader :student
-
-        def initialize(student)
-          @student = student
-        end
-
+      class Evening < Base
         def chain
-          if student.exceeded_education_period
+          if exceeded? || other_studentship? || preparatory_repetition?
             Operation::Disability.new(Operation::NoDiscount.new)
           else
             Operation::Scholarship.new(Operation::Disability.new(Operation::NoDiscount.new))
