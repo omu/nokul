@@ -10,6 +10,7 @@ serhat:
   meb_status: true
   registered: true
   academic_term: fall_2018_2019
+  year: 2018
   expiry_date: 2019-01-15 08:00:00
 john:
   email: johndoe@gmail.com
@@ -20,6 +21,7 @@ john:
   id_number: 10026078778 # Sample ID number provided by KPS
   gender: male
   academic_term: fall_2018_2019
+  year: 2018
   expiry_date: 2019-01-15 08:00:00
 jane:
   email: janedoe@gmail.com
@@ -33,6 +35,7 @@ jane:
   obs_status: true
   meb_status: true
   academic_term: fall_2018_2019
+  year: 2018
   expiry_date: 2019-01-15 08:00:00
 mine:
   email: mineurasli@gmail.com
@@ -47,6 +50,7 @@ mine:
   meb_status: true
   registered: true
   academic_term: fall_2018_2019
+  year: 2018
   expiry_date: 2019-05-15 08:00:00
 hira:
   first_name: Hira Nur
@@ -59,5 +63,6 @@ hira:
   obs_status: true
   meb_status: true
   registered: true
+  year: 2018
   academic_term: fall_2018_2019
   expiry_date: 2019-05-15 08:00:00

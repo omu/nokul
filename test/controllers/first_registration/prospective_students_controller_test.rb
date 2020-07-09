@@ -37,6 +37,7 @@ module FirstRegistration
         unit_id:                  units(:bilgisayar_muhendisligi_programi).id,
         academic_term_id:         academic_term.id,
         expiry_date:              academic_term.end_of_term,
+        year:                     2018,
         student_entrance_type_id: StudentEntranceType.find_by(name: 'ÖSYS').id
       }
 
@@ -49,7 +50,7 @@ module FirstRegistration
       prospective_student = ProspectiveStudent.last
 
       parameters.each do |attribute, value|
-        assert_equal value, prospective_student.send(attribute)
+        assert_equal value, prospective_student.public_send(attribute)
       end
 
       assert_redirected_to :prospective_students
@@ -127,8 +128,8 @@ module FirstRegistration
       end
 
       assert_equal 'register', @controller.action_name
-      assert_redirected_to :prospective_students
-      assert_equal translate('.register.warning'), flash[:alert]
+      assert_redirected_to prospective_students(:hira)
+      assert_not_empty flash[:alert]
     end
 
     private

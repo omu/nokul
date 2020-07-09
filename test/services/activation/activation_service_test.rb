@@ -27,7 +27,7 @@ module Activation
       mobile_phone
     ].each do |property|
       test "#{property} of activation can not be nil" do
-        @activation.send("#{property}=", nil)
+        @activation.public_send("#{property}=", nil)
         assert_not @activation.valid?
         assert_not_empty @activation.errors[property]
       end

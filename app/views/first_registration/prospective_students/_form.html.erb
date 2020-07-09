@@ -165,6 +165,9 @@
                                           label_method: lambda { |academic_term| full_name(academic_term) } %>
                       </div>
                       <div class='col-sm-4'>
+                        <%= f.input :year, collection: (2010..2100) %>
+                      </div>
+                      <div class='col-sm-4'>
                         <%= f.input :expiry_date, as: :date_time_picker %>
                       </div>
                       <div class='col-sm-4'>
@@ -213,6 +216,7 @@
       '#prospective_student_student_entrance_type_id',
       '#prospective_student_language_id',
       '#prospective_student_academic_term_id'
+      '#prospective_student_year'
     ]
 
     $(elements.join(',')).select2();

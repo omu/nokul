@@ -42,7 +42,7 @@ module Nokul
         def fulfill_reservations(units)
           units.each do |unit|
             reservations.each do |reservation|
-              next unless unit.send(reservation.key) == reservation.value
+              next unless unit.public_send(reservation.key) == reservation.value
 
               memory.remember unit.code = reservation.reservation.to_s
             end

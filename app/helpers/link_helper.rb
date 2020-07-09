@@ -89,10 +89,10 @@ module LinkHelper
   def create_links_for(path, actions, options = {})
     config = { edit: { path_prefix: :edit } }
     actions.map do |action|
-      send("link_to_#{action}",
-           options.dig(action, :text),
-           [*config.dig(action, :path_prefix), *options[:scope], *path],
-           options.dig(action, :options))
+      public_send("link_to_#{action}",
+                  options.dig(action, :text),
+                  [*config.dig(action, :path_prefix), *options[:scope], *path],
+                  options.dig(action, :options))
     end
   end
 

@@ -35,7 +35,7 @@ module Environment
   end
 
   def psql_version_ok?
-    version = `psql --version`.chomp[/[\d]+\.[\d]+/]
+    version = `psql --version`.chomp[/\d+\.\d+/]
     Gem::Version.new(MIN_PSQL_VERSION) < Gem::Version.new(version)
   end
 end

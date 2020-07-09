@@ -38,7 +38,7 @@ module Patron
       @user.reload
 
       parameters.each do |attribute, value|
-        assert_equal value, @user.send(attribute)
+        assert_equal value, @user.public_send(attribute)
       end
       action_check('update')
       assert_redirected_to patron_assignment_path(@user)

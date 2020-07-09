@@ -64,7 +64,7 @@ module Patron
       query_store = Patron::QueryStore.last
 
       parameters.each do |attribute, value|
-        assert_equal value, query_store.send(attribute)
+        assert_equal value, query_store.public_send(attribute)
       end
 
       action_check('create')
@@ -102,7 +102,7 @@ module Patron
       query_store.reload
 
       parameters.each do |attribute, value|
-        assert_equal value, query_store.send(attribute)
+        assert_equal value, query_store.public_send(attribute)
       end
 
       action_check('update')

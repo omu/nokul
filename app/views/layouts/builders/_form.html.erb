@@ -9,7 +9,7 @@
               <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
             </div>
             <% params.each do |parameter| %>
-              <%= content_tag :div, class: "form-group col-sm-#{parameter[:width]}" do %>
+              <%= tag.div class: "form-group col-sm-#{parameter[:width]}" do %>
                 <%= f.input parameter[:field].to_sym,
                             as:                 parameter[:as].try(:to_sym),
                             required:           parameter[:required] || false,

@@ -11,7 +11,7 @@ module Rake
 
       ARGV.each { |arg| task(arg.to_sym) {} }
 
-      ARGV[1..-1].each do |resource|
+      ARGV[1..].each do |resource|
         warn "====> #{resource}"
         yield resource
         warn ''
@@ -23,7 +23,7 @@ module Rake
     def ensure_allowed_args(*allowed)
       return if allowed.empty?
 
-      ARGV[1..-1].each do |arg|
+      ARGV[1..].each do |arg|
         abort "Allowed arguments: #{allowed}" unless allowed.include? arg
       end
     end

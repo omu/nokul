@@ -32,7 +32,7 @@ module Nokul
       end
 
       def content_decrypt(content)
-        encryptor('').send(:decrypt, content)
+        encryptor('').public_send(:decrypt, content)
       end
 
       EXT = '.enc'
@@ -43,9 +43,9 @@ module Nokul
 
       def encryptor(file)
         ActiveSupport::EncryptedFile.new(
-          content_path: file,
-          env_key: 'RAILS_MASTER_KEY',
-          key_path: Rails.root.join('config/master.key'),
+          content_path:         file,
+          env_key:              'RAILS_MASTER_KEY',
+          key_path:             Rails.root.join('config/master.key'),
           raise_if_missing_key: true
         )
       end

@@ -54,7 +54,7 @@ class UnitsController < ApplicationController
   end
 
   def employees
-    @employees = Employee.includes(:units, :title, user: :identities)
+    @employees = Employee.active.includes(:units, :title, user: :identities)
                          .where(units: { id: @unit.subtree.active.ids })
   end
 

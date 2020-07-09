@@ -31,7 +31,7 @@ module Nokul
             test "has #{callback} for #{action}" do
               kind, method = callback.to_s.split('_')
               klass        = class_name.delete_suffix('Test').constantize
-              callbacks    = klass.send("_#{method}_callbacks")
+              callbacks    = klass.public_send("_#{method}_callbacks")
               assert callbacks.select { |cb| cb.filter.eql?(action.to_sym) && cb.kind.eql?(kind.to_sym) }.any?
             end
           end

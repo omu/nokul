@@ -9,6 +9,7 @@ tr:
       max_informal: En fazla %{limit} tane adres ekleyebilirsiniz.
     available_course_lecturer:
       coordinator: Açılan ders grubunun bir koordinatörü olmalı.
+      lecturer_uniqueness: Aynı öğretim elemanını aynı ders grubuna ekleyemezsiniz.
     course_evaluation_type:
       invalid_percentages: Ölçme kriterlerinin yüzdelik toplamı 100'e eşit olmalı.
     datetime:

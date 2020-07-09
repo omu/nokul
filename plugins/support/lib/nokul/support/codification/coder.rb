@@ -10,6 +10,7 @@ module Nokul
 
         inherited_by_conveying_attributes :default_options
 
+        DEFAULT_AVAILABLE_LIMIT = 10
         def initialize(code, **options)
           @code      = code.must_be_any_of! Code
           @options   = default_options.merge(**options)
@@ -45,8 +46,6 @@ module Nokul
         def available!(limit = nil)
           self.class.available(code, limit: limit, **options)
         end
-
-        DEFAULT_AVAILABLE_LIMIT = 10
 
         def self.available(code, limit: nil, **options)
           coder = new(code, **options).extend Dry # extend object to avoid mutating memory

@@ -45,7 +45,7 @@ module CourseManagement
 
       course = Course.last
       parameters.each do |attribute, value|
-        assert_equal value, course.send(attribute)
+        assert_equal value, course.public_send(attribute)
       end
       assert_redirected_to courses_path
       assert_equal translate('.create.success'), flash[:info]
@@ -67,7 +67,7 @@ module CourseManagement
       course.reload
 
       parameters.each do |attribute, value|
-        assert_equal value, course.send(attribute)
+        assert_equal value, course.public_send(attribute)
       end
 
       assert_redirected_to courses_path

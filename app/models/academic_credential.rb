@@ -20,9 +20,11 @@ class AcademicCredential < ApplicationRecord
   validates :location, inclusion: { in: locations.keys }
   validates :profession_name, length: { maximum: 255 }
   validates :scientific_field, length: { maximum: 255 }
-  validates :start_year, numericality: { only_integer:             true,
-                                         greater_than_or_equal_to: 1950,
-                                         less_than_or_equal_to:    2050 }
+  validates :start_year, numericality: {
+    only_integer:             true,
+    greater_than_or_equal_to: 1950,
+    less_than_or_equal_to:    2050
+  }
   validates :status, allow_nil: true, inclusion: { in: statuses.keys }
   validates :title, length: { maximum: 255 }
   validates :unit_id, allow_nil: true, numericality: { only_integer: true, greater_than: 0 }

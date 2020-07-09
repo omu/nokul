@@ -3,6 +3,7 @@
 module LDAP
   class Client
     include Singleton
+    Error = Class.new(StandardError)
 
     attr_reader :client
 
@@ -34,8 +35,6 @@ module LDAP
     def configuration
       @configuration ||= Tenant.credentials.ldap
     end
-
-    Error = Class.new(StandardError)
 
     class << self
       def active?
@@ -87,9 +86,10 @@ module LDAP
       # Usage:
       #   LDAP::Client.find_by('dc=test, dc=com, dc=tr', uid: '11223344550')
       def find_by(base, **queries)
+        # rubocop:disable Style/SingleLineBlockParams
         queries = queries.map    { |key, value| Net::LDAP::Filter.eq(key, value) }
-                         .inject { |first, last| first | last }
-
+                         .reduce { |first, last| first | last }
+        # rubocop:enable Style/SingleLineBlockParams
         where(base, filter: queries).first
       end
 

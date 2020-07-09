@@ -10,6 +10,10 @@ module FirstRegistration
       permitted? :write
     end
 
+    def fetch?
+      permitted? :write
+    end
+
     private
 
     def permitted?(*privileges)

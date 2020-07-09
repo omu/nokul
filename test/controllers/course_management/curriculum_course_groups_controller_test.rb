@@ -29,7 +29,7 @@ module CourseManagement
 
       curriculum_course_group = CurriculumCourseGroup.last
       parameters.each do |attribute, value|
-        assert_equal value, curriculum_course_group.send(attribute)
+        assert_equal value, curriculum_course_group.public_send(attribute)
       end
       assert_redirected_to index_path
       assert_equal translate('.create.success'), flash[:notice]

@@ -75,6 +75,7 @@ en:
     users:
       account:
         <<: *user_attributes
+        avatar: Profile Photo
       create:
         success: User successfully created.
       destroy:

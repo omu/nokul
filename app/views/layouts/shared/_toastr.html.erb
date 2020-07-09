@@ -1,4 +1,4 @@
-<%= content_tag(:script) do %>
+<%= tag.script do %>
   <% flash.select { |record| record[1].is_a?(String) }.each do |type, message| %>
     <%= toastr_flash_class(type.to_s) %>('<%= message %>')
   <% end %>

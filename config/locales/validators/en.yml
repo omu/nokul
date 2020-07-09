@@ -9,6 +9,7 @@ en:
       max_informal: You can add up to %{limit} addresses maximum.
     available_course_lecturer:
       coordinator: There must be one coordinator of the available course group.
+      lecturer_uniqueness: You cannot add the same lecturer to the same course group.
     course_evaluation_type:
       invalid_percentages: The percentage of the assessment methods must be equal to 100.
     datetime:

@@ -8,15 +8,15 @@ module Nokul
           extend ActiveSupport::Concern
 
           def undergraduate_program?
-            unit_type_id =~ %r{[Öö]nlisans/[Ll]isans +[Pp]rogram[ı]?}
+            unit_type_id =~ %r{[Öö]nlisans/[Ll]isans +[Pp]rogramı?}
           end
 
           def doctoral_program?
-            unit_type_id =~ /[Dd]oktora +[Pp]rogram[ı]?/
+            unit_type_id =~ /[Dd]oktora +[Pp]rogramı?/
           end
 
           def masters_program?
-            unit_type_id =~ /[Yy]üksek +[Ll]isans +[Pp]rogram[ı]?/
+            unit_type_id =~ /[Yy]üksek +[Ll]isans +[Pp]rogramı?/
           end
 
           def graduate_program?

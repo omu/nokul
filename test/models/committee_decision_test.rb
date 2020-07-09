@@ -28,7 +28,7 @@ class CommitteeDecisionTest < ActiveSupport::TestCase
     meeting_agenda_unit
   ].each do |property|
     test "a decision reach committee_meeting's #{property} parameter" do
-      assert committee_decisions(:one).send(property)
+      assert committee_decisions(:one).public_send(property)
     end
   end
 
@@ -49,6 +49,6 @@ class CommitteeDecisionTest < ActiveSupport::TestCase
 
   # custom
   test 'count_of_decisions_by_year return decision count by year' do
-    assert_equal 3, committee_decisions(:one).send(:count_of_decisions_by_year, 2018)
+    assert_equal 3, committee_decisions(:one).public_send(:count_of_decisions_by_year, 2018)
   end
 end

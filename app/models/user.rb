@@ -60,9 +60,11 @@ class User < ApplicationRecord
   has_one :current_employee, -> { active }, class_name: 'Employee', inverse_of: :user
 
   # validations
-  validates :disability_rate, numericality: { only_integer:             true,
-                                              greater_than_or_equal_to: 0,
-                                              less_than_or_equal_to:    100 }
+  validates :disability_rate, numericality: {
+    only_integer:             true,
+    greater_than_or_equal_to: 0,
+    less_than_or_equal_to:    100
+  }
   validates :email, presence: true, uniqueness: true, length: { maximum: 255 }, 'valid_email_2/email': {
     mx:                     true,
     disposable:             true,
@@ -123,7 +125,7 @@ class User < ApplicationRecord
 
   # send devise e-mails through active job
   def send_devise_notification(notification, *args)
-    devise_mailer.send(notification, self, *args).deliver_later
+    devise_mailer.public_send(notification, self, *args).deliver_later
   end
 
   # custom methods
