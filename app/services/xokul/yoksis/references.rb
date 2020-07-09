@@ -39,19 +39,19 @@ module Xokul
         university_types
       ].each do |method|
         define_method(method) do
-          Rails.cache.fetch("xokul/yoksis/references/#{method}", expires_in: 1.day, skip_nil: true) {
+          Rails.cache.fetch("xokul/yoksis/references/#{method}", expires_in: 1.day, skip_nil: true) do
             Connection.request "/yoksis/references/#{method}"
-          }
+          end
         end
       end
 
-      # TODO:
+      # TODO: Related to the Xokul to be reviewed in the future
       #   term_types has a different form of response than the other methods.
       #   As the architects of Xokul, we are currently trying to provide the same
       #   response for all methods in the next major version of Xokul. That day,
       #   the below method will be included in the above methods.
       def term_types
-        Rails.cache.fetch("xokul/yoksis/references/term_types", expires_in: 1.day, skip_nil: true) do
+        Rails.cache.fetch('xokul/yoksis/references/term_types', expires_in: 1.day, skip_nil: true) do
           r = Connection.request '/yoksis/references/term_types'
           (r || {}).fetch(:data, [])
         end

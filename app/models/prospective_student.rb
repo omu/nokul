@@ -93,9 +93,9 @@ class ProspectiveStudent < ApplicationRecord
   def avatar
     return if id_number.blank?
 
-    Rails.cache.fetch(self, expires_in: 10.days, skip_nil: true) {
+    Rails.cache.fetch(self, expires_in: 10.days, skip_nil: true) do
       Xokul::Yoksis::Prospectives.photo(id_number)
-    }
+    end
   end
 
   private
