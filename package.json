@@ -30,7 +30,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "htmlhint": "^0.11.0",
     "markdownlint-cli": "^0.23.1",
-    "webpack-dev-server": "^3.9.0"
+    "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
     "lint": "eslint ./app/assets ./app/javascript --color",
