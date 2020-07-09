@@ -17,7 +17,7 @@ module Nokul
 
           def list_by(*predicators)
             select do |unit|
-              predicators.none? { |predicator| !unit.send(predicator) }
+              predicators.none? { |predicator| !unit.public_send(predicator) }
             end
           end
         end

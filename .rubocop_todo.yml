@@ -31,18 +31,3 @@ Metrics/MethodLength:
 # Offense count: 30
 Performance/ChainArrayAllocation:
   Enabled: false
-
-# Offense count: 19
-Style/Send:
-  Exclude:
-    - 'plugins/support/lib/nokul/support/codification/codes/unsuffixed_user_names.rb'
-    - 'plugins/support/lib/nokul/support/core_ext/class.rb'
-    - 'plugins/support/lib/nokul/support/rest_client.rb'
-    - 'plugins/support/lib/nokul/support/sensitive.rb'
-    - 'plugins/support/lib/nokul/support/structure.rb'
-    - 'plugins/support/test/codification/code_test.rb'
-    - 'plugins/tenant/common/lib/nokul/tenant/units.rb'
-    - 'plugins/tenant/common/lib/nokul/tenant/units/coder.rb'
-    - 'plugins/tenant/common/lib/nokul/tenant/units/coder/pool.rb'
-    - 'plugins/tenant/common/lib/nokul/tenant/units/concerns/src_many.rb'
-    - 'plugins/tenant/common/lib/nokul/tenant/units/raw/yok_one.rb'

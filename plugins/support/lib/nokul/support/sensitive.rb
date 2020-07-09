@@ -32,7 +32,7 @@ module Nokul
       end
 
       def content_decrypt(content)
-        encryptor('').send(:decrypt, content)
+        encryptor('').public_send(:decrypt, content)
       end
 
       EXT = '.enc'

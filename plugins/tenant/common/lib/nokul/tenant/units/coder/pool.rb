@@ -25,7 +25,7 @@ module Nokul
 
           def score_of(unit)
             predicator = owner + '?'
-            (unit.send(predicator) ? 1 : 0) * weight
+            (unit.public_send(predicator) ? 1 : 0) * weight
           end
 
           def code

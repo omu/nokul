@@ -31,7 +31,7 @@ module Nokul
             def non_abbreviated
               surname, forenames = last, clip
 
-              forenames.send(:index_combinations_of_source).map do |indexes|
+              forenames.__send__(:index_combinations_of_source).map do |indexes|
                 [*forenames.values_at(*indexes), surname]
               end.sort_by(&:length)
             end
@@ -57,7 +57,7 @@ module Nokul
               name.downcase(:turkic).asciified.gsub(/[^a-zA-Z]/, '')
             end
 
-            [*names.send(alternative), names].uniq
+            [*names.__send__(alternative), names].uniq
           end
 
           def take_out(value)

@@ -72,7 +72,7 @@ module Nokul
             raise UnsupportedHTTPOptionError, "unsupported HTTP options: #{unsupported_options}"
           end
 
-          http_options.each { |option, value| @http.send "#{option}=", value }
+          http_options.each { |option, value| @http.public_send "#{option}=", value }
         end
       end
 
