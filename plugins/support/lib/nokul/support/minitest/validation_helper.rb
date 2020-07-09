@@ -35,7 +35,7 @@ module Nokul
           end
         end
 
-        def validates_length_of(attribute, **option)
+        def validates_length_of(attribute, **option) # rubocop:disable Metrics/AbcSize,Metrics/MethodLength
           option[:maximum] = 255 if option.blank?
 
           controls = {
@@ -63,7 +63,7 @@ module Nokul
           end
         end
 
-        def validates_numerical_range(attribute, **option)
+        def validates_numerical_range(attribute, **option) # rubocop:disable Metrics/AbcSize,Metrics/MethodLength
           controls = {
             greater_than:             0,
             less_than:                0,

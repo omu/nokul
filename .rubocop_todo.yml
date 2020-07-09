@@ -10,18 +10,6 @@ require:
   - rubocop-rails
   - rubocop-performance
 
-# Offense count: 2
-# Configuration parameters: IgnoredMethods, Max.
-Metrics/AbcSize:
-  Exclude:
-    - 'plugins/support/lib/nokul/support/minitest/validation_helper.rb'
-
-# Offense count: 2
-# Configuration parameters: CountComments, Max, ExcludedMethods.
-Metrics/MethodLength:
-  Exclude:
-    - 'plugins/support/lib/nokul/support/minitest/validation_helper.rb'
-
 # Offense count: 30
 Performance/ChainArrayAllocation:
   Enabled: false
