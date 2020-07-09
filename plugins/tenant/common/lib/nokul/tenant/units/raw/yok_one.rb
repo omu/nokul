@@ -36,7 +36,7 @@ module Nokul
           # Conveniency wrappers for code, name pairs.
           # E.g. unit_code['name'] => unit_code_name
           CODE_NAME_PAIRS.each do |name|
-            define_method("#{name}_name") { pubic_send(name)[:name] }
+            define_method("#{name}_name") { public_send(name)[:name] }
             define_method("#{name}_code") { public_send(name)[:code] }
           end
 
