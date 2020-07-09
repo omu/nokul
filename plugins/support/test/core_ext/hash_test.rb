@@ -11,9 +11,9 @@ class HashTest < ActiveSupport::TestCase
         second_level: {
           second: 2
         },
-        first: 1
+        first:        1
       },
-      top: 0
+      top:         0
     }
 
     ostruct = hash.to_deep_ostruct

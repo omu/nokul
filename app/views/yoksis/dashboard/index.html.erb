@@ -34,7 +34,7 @@
             <%= render 'card',
                        count: klass.constantize.count,
                        title: ".#{klass.tableize}",
-                       path:  send("yoksis_#{klass.tableize}_path") %>
+                       path:  public_send("yoksis_#{klass.tableize}_path") %>
           <% end %>
         </div>
       </div>
@@ -51,7 +51,7 @@
             <%= render 'card',
                        count: klass.constantize.count,
                        title: ".#{klass.tableize}",
-                       path:  send("yoksis_#{klass.tableize}_path") %>
+                       path:  public_send("yoksis_#{klass.tableize}_path") %>
           <% end %>        </div>
       </div>
     </div>
@@ -67,7 +67,7 @@
             <%= render 'card',
                        count: klass.constantize.count,
                        title: ".#{klass.tableize}",
-                       path:  send("yoksis_#{klass.tableize}_path") %>
+                       path:  public_send("yoksis_#{klass.tableize}_path") %>
           <% end %>        </div>
       </div>
     </div>

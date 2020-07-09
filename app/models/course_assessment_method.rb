@@ -30,7 +30,7 @@ class CourseAssessmentMethod < ApplicationRecord
   end
 
   def build_grades_for(enrollments)
-    grades.build(enrollments.collect { |enrollment| { course_enrollment_id: enrollment.id } })
+    grades.build(enrollments.map { |enrollment| { course_enrollment_id: enrollment.id } })
   end
 
   def fully_graded?

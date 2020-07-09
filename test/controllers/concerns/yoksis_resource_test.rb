@@ -23,7 +23,7 @@ module YoksisResourceTest
     end
 
     test 'should get new' do
-      get send("new_#{@target_path}_#{@singular_variable}_path")
+      get public_send("new_#{@target_path}_#{@singular_variable}_path")
       assert_equal 'new', @controller.action_name
       assert_response :success
       assert_select '.simple_form' do
@@ -45,7 +45,7 @@ module YoksisResourceTest
       instance = @model_name.last
 
       @create_params.with_indifferent_access.each do |param|
-        assert_equal param[1], instance.send(param[0])
+        assert_equal param[1], instance.public_send(param[0])
       end
 
       assert_redirected_to controller_index_path
@@ -53,7 +53,7 @@ module YoksisResourceTest
     end
 
     test 'should get edit' do
-      get send("edit_#{@target_path}_#{@singular_variable}_path", @instance)
+      get public_send("edit_#{@target_path}_#{@singular_variable}_path", @instance)
 
       assert_equal 'edit', @controller.action_name
       assert_response :success
@@ -65,7 +65,7 @@ module YoksisResourceTest
     end
 
     test 'should update instance' do
-      patch send("#{@target_path}_#{@singular_variable}_path", @instance), params: {
+      patch public_send("#{@target_path}_#{@singular_variable}_path", @instance), params: {
         @singular_variable => @update_params
       }
 
@@ -74,7 +74,7 @@ module YoksisResourceTest
       @instance.reload
 
       @update_params.with_indifferent_access.each do |param|
-        assert_equal param[1], @instance.send(param[0].to_s)
+        assert_equal param[1], @instance.public_send(param[0].to_s)
       end
 
       assert_redirected_to controller_index_path
@@ -85,7 +85,7 @@ module YoksisResourceTest
       variable_to_delete = ActiveRecord::FixtureSet.identify("#{@singular_variable}_to_delete")
 
       assert_difference('@model_name.count', -1) do
-        delete send("#{@target_path}_#{@singular_variable}_path", variable_to_delete)
+        delete public_send("#{@target_path}_#{@singular_variable}_path", variable_to_delete)
       end
 
       assert_equal 'destroy', @controller.action_name
@@ -96,7 +96,7 @@ module YoksisResourceTest
     private
 
     def controller_index_path
-      send("#{@target_path}_#{controller_name}_path")
+      public_send("#{@target_path}_#{controller_name}_path")
     end
 
     def translate(key)

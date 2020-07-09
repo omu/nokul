@@ -27,7 +27,7 @@ module CourseManagement
 
       curriculum_course = CurriculumCourse.last
       parameters.each do |attribute, value|
-        assert_equal value, curriculum_course.send(attribute)
+        assert_equal value, curriculum_course.public_send(attribute)
       end
       assert_redirected_to index_path
       assert_equal translate('.create.success'), flash[:notice]

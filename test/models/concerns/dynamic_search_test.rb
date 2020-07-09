@@ -45,11 +45,11 @@ class DynamicSearchTest < ActiveSupport::TestCase
     param1 = { foo: 'Test Foo', bar: '', term: 'Foo' }
     param2 = { unkown: 'Test', term: 'Foo' }
     param3 = {}
-
+    # rubocop:disable Style/Send
     query1 = DynamicSearchModel.send(:build_query_for_dynamic_where, param1)
     query2 = DynamicSearchModel.send(:build_query_for_dynamic_where, param2)
     query3 = DynamicSearchModel.send(:build_query_for_dynamic_where, param3)
-
+    # rubocop:enable Style/Send
     assert_equal query1, foo: 'Test Foo'
     assert_equal query2, {}
     assert_equal query3, {}

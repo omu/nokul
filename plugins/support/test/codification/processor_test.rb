@@ -17,6 +17,7 @@ module Nokul
         module TestDummy
           class Dummy
             attr_reader :options
+
             def initialize(**options)
               @options = options.dup
             end

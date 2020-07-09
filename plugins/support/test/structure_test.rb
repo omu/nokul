@@ -35,9 +35,9 @@ module Nokul
         unit = Basic.new(name: 'Mühendislik Fakültesi', abbreviation: 'ABC',
                          yoksis_id: '122183', unit_type_id: 'Fakülte')
 
-        assert_equal unit.to_h, name: 'Mühendislik Fakültesi',
+        assert_equal unit.to_h, name:         'Mühendislik Fakültesi',
                                 abbreviation: 'ABC',
-                                yoksis_id: '122183',
+                                yoksis_id:    '122183',
                                 unit_type_id: 'Fakülte'
       end
 
@@ -45,8 +45,8 @@ module Nokul
         unit = Basic.new(name: 'Mühendislik Fakültesi', abbreviation: nil,
                          yoksis_id: '122183', unit_type_id: 'Fakülte')
 
-        assert_equal unit.to_h(omit_if_nil: %i[abbreviation]), name: 'Mühendislik Fakültesi',
-                                                               yoksis_id: '122183',
+        assert_equal unit.to_h(omit_if_nil: %i[abbreviation]), name:         'Mühendislik Fakültesi',
+                                                               yoksis_id:    '122183',
                                                                unit_type_id: 'Fakülte'
       end
 
@@ -57,9 +57,9 @@ module Nokul
 
         unit.merge!(name: 'Ziraat Fakültesi', yoksis_id: '123456')
 
-        assert_equal unit.to_h, name: 'Ziraat Fakültesi',
+        assert_equal unit.to_h, name:         'Ziraat Fakültesi',
                                 abbreviation: 'ABC',
-                                yoksis_id: '123456',
+                                yoksis_id:    '123456',
                                 unit_type_id: 'Fakülte'
       end
 
@@ -71,9 +71,9 @@ module Nokul
 
         unit.merge!(other)
 
-        assert_equal unit.to_h, name: 'Ziraat Fakültesi',
+        assert_equal unit.to_h, name:         'Ziraat Fakültesi',
                                 abbreviation: 'ABC',
-                                yoksis_id: '123456',
+                                yoksis_id:    '123456',
                                 unit_type_id: 'Fakülte'
       end
 
@@ -93,10 +93,10 @@ module Nokul
 
         unit.merge_keep!(name: 'Ziraat Fakültesi').to_h
 
-        assert_equal unit.to_h, name: 'Mühendislik Fakültesi',
-                                name_: 'Mühendislik Fakültesi',
+        assert_equal unit.to_h, name:         'Mühendislik Fakültesi',
+                                name_:        'Mühendislik Fakültesi',
                                 abbreviation: 'ABC',
-                                yoksis_id: '122183',
+                                yoksis_id:    '122183',
                                 unit_type_id: 'Fakülte'
       end
 
@@ -106,9 +106,9 @@ module Nokul
 
         unit.merge_keep!(name: 'Ziraat Fakültesi').to_h
 
-        assert_equal unit.to_h, name: 'Ziraat Fakültesi',
+        assert_equal unit.to_h, name:         'Ziraat Fakültesi',
                                 abbreviation: 'ABC',
-                                yoksis_id: '122183',
+                                yoksis_id:    '122183',
                                 unit_type_id: 'Fakülte'
       end
       # rubocop:enable Performance/RedundantMerge

@@ -16,6 +16,19 @@ class String
     'Ç' => 'C'
   }.freeze
 
+  # Regex stolen from https://stackoverflow.com/a/6331667
+  RE_PARANTHESIZED = /
+    (?<re>
+      \(
+        (?:
+          (?> [^()]+ )
+          |
+          \g<re>
+        )*
+      \)
+    )
+    /x.freeze
+
   def asciified
     chars.to_a.map { |char| (ascii = TURKISH_CHARS[char]) ? ascii : char }.join
   end
@@ -39,19 +52,6 @@ class String
       end
     end.join(' ')
   end
-
-  # Regex stolen from https://stackoverflow.com/a/6331667
-  RE_PARANTHESIZED = /
-    (?<re>
-      \(
-        (?:
-          (?> [^()]+ )
-          |
-          \g<re>
-        )*
-      \)
-    )
-    /x.freeze
 
   def capitalize_turkish_with_parenthesized
     capitalize_turkish.gsub RE_PARANTHESIZED do |match|
@@ -122,5 +122,5 @@ class String
     end
   end
 
-  include Matchable
+  include Matchable # rubocop:disable Layout/ClassStructure
 end

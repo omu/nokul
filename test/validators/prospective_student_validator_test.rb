@@ -14,7 +14,7 @@ class ProspectiveStudentValidatorTest < ActiveSupport::TestCase
     'academic_term' => @academic_term
   }.each do |property, value|
     test "unchangeable variables validation for #{property}" do
-      @prospective_student.send("#{property}=", value)
+      @prospective_student.public_send("#{property}=", value)
 
       assert @prospective_student.registered?
       assert_not @prospective_student.save

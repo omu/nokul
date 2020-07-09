@@ -74,7 +74,7 @@ module Nokul
           end
 
           coder = Coder.new TestSimpleCode::SimpleCode.new(%w[foo bar baz]),
-                            memory: memory,
+                            memory:       memory,
                             post_process: custom_process
 
           produced = []
@@ -95,7 +95,7 @@ module Nokul
           end
 
           coder = Coder.new TestSimpleCode::SimpleCode.new(%w[foo bar baz]),
-                            memory: memory,
+                            memory:       memory,
                             post_process: custom_process
 
           produced = []

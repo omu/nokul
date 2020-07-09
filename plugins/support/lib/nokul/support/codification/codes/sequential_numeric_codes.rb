@@ -36,7 +36,7 @@ module Nokul
           end
 
           def convert_from_range(source)
-            starting, ending = source.first, source.last # rubocop:disable Style/ParallelAssignment
+            starting, ending = source.first, source.last
 
             self.base, self.net_length = base_and_length_from_sample(ending)
 

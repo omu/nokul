@@ -2,4 +2,4 @@
 
 %w[
   units
-].each { |mod| Dir.glob(File.join(__dir__, mod, 'tasks')).each { |tasks| require tasks } }
+].each { |mod| Dir.glob(File.join(__dir__, mod, 'tasks')).sort.each { |tasks| require tasks } }

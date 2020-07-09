@@ -22,7 +22,7 @@ module Patron
 
       def collection(collection, attribute:)
         [*collection].map do |item|
-          [send(attribute, item), item]
+          [public_send(attribute, item), item]
         end
       end
     end

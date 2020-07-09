@@ -40,9 +40,11 @@ class Student < ApplicationRecord
   validates :other_studentship, inclusion: { in: [true, false] }
   validates :permanently_registered, inclusion: { in: [true, false] }
   # TODO: Will set equal_to: N, when we decide about student numbers
-  validates :preparatory_class, numericality: { only_integer:             true,
-                                                greater_than_or_equal_to: 0,
-                                                less_than_or_equal_to:    2 }
+  validates :preparatory_class, numericality: {
+    only_integer:             true,
+    greater_than_or_equal_to: 0,
+    less_than_or_equal_to:    2
+  }
   validates :student_number, presence: true, uniqueness: true, length: { maximum: 255 }
   validates :semester, numericality: { greater_than: 0 }
   validates :status, inclusion: { in: statuses.keys }

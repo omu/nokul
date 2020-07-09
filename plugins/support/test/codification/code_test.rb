@@ -11,7 +11,7 @@ module Nokul
             take_in
             take_out
           ].each do |method|
-            assert_raise(NotImplementedError) { Class.new(Code).new([]).send method }
+            assert_raise(NotImplementedError) { Class.new(Code).new([]).__send__ method }
           end
         end
 

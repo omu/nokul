@@ -21,7 +21,7 @@ module Nokul
                 skip
 
                 offensive_units = []
-                units.tree.values.each do |siblings|
+                units.tree.each_value do |siblings|
                   seen = {}
                   siblings.each do |unit|
                     next unless unit.active?

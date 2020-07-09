@@ -40,7 +40,7 @@ module Nokul
         def to_h(omit_if_nil: self.class.members)
           result = {}
           self.class.members.map do |member|
-            next if (value = send(member)).nil? && [*(omit_if_nil || [])].any? { |key| key.to_sym == member }
+            next if (value = __send__(member)).nil? && [*(omit_if_nil || [])].any? { |key| key.to_sym == member }
 
             result[member] = value
           end
@@ -52,7 +52,7 @@ module Nokul
           self.class.members.map do |member|
             next unless hash.key? member
 
-            send "#{member}=", hash[member]
+            __send__ "#{member}=", hash[member]
           end
           self
         end
@@ -62,13 +62,13 @@ module Nokul
         def merge_keep!(other)
           merge!(other)
           self.class.members.each do |member|
-            next if (value = send(member)).nil?
+            next if (value = __send__(member)).nil?
             next unless (member_string = member.to_s).end_with? SUFFIX_INDICATING_KEEP
 
             original_member = member_string.chomp SUFFIX_INDICATING_KEEP
             next unless respond_to? "#{original_member}="
 
-            send "#{original_member}=", value
+            __send__ "#{original_member}=", value
           end
           self
         end
@@ -87,7 +87,7 @@ module Nokul
         def _initialize(error_on_undefined_members = false, **args)
           args.each do |member, value|
             setter = "#{member}="
-            next send(setter, value) if respond_to? setter
+            next __send__(setter, value) if respond_to? setter
 
             raise(ArgumentError, "No such member: #{member}") if error_on_undefined_members
           end
@@ -140,7 +140,7 @@ module Nokul
             #
             base.mattr_accessor :members, default: [] unless base.respond_to? :members
           else
-            raise 'Unexpected case during include'
+            raise ArgumentError, "Unexpected base type during include: #{base.class}"
           end
 
           base.members += members

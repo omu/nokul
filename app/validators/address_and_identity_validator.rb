@@ -3,7 +3,7 @@
 class AddressAndIdentityValidator < ActiveModel::Validator
   def validate(record)
     @record = record
-    @records = record.user.send(record.class.name.tableize.to_sym)
+    @records = record.user.public_send(record.class.name.tableize.to_sym)
 
     restrict_formal if record.formal? && record.try(:student_id).nil?
     restrict_informal if record.informal?

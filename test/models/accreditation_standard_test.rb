@@ -25,7 +25,7 @@ class AccreditationStandardTest < ActiveSupport::TestCase
 
   # delegates
   test 'a accreditation standard reach accreditation institution name parameter' do
-    assert accreditation_standards(:one).send(:name)
+    assert accreditation_standards(:one).public_send(:name)
   end
 
   # validations: uniqueness

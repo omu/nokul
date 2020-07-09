@@ -29,15 +29,15 @@ module Nokul
       test 'basic mechanism should automagically work' do
         units = Units.create [
           {
-            'name' => 'Mühendislik Fakültesi',
+            'name'         => 'Mühendislik Fakültesi',
             'abbreviation' => 'MÜHENDİSLİK',
-            'yoksis_id' => '122183',
+            'yoksis_id'    => '122183',
             'unit_type_id' => 'Fakülte'
           },
           {
-            'name' => 'Bilgisayar Mühendisliği Bölümü',
+            'name'         => 'Bilgisayar Mühendisliği Bölümü',
             'abbreviation' => 'BİLGİSAYAR',
-            'yoksis_id' => '122184',
+            'yoksis_id'    => '122184',
             'unit_type_id' => 'Bölüm'
           }
         ]
@@ -58,15 +58,15 @@ module Nokul
       test 'can specify aggregated item class explicitly' do
         units = Departments.create [
           {
-            'name' => 'Mühendislik Fakültesi',
+            'name'         => 'Mühendislik Fakültesi',
             'abbreviation' => 'MÜHENDİSLİK',
-            'yoksis_id' => '122183',
+            'yoksis_id'    => '122183',
             'unit_type_id' => 'Fakülte'
           },
           {
-            'name' => 'Bilgisayar Mühendisliği Bölümü',
+            'name'         => 'Bilgisayar Mühendisliği Bölümü',
             'abbreviation' => 'BİLGİSAYAR',
-            'yoksis_id' => '122184',
+            'yoksis_id'    => '122184',
             'unit_type_id' => 'Bölüm'
           }
         ]

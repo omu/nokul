@@ -1,13 +1,12 @@
 # frozen_string_literal: true
 
 class Curriculum < ApplicationRecord
-  # constants
-  MAX_NUMBER_OF_SEMESTERS = 12
-  MAX_NUMBER_OF_YEARS = 6
-
   # search
   include PgSearch::Model
   include DynamicSearch
+  # constants
+  MAX_NUMBER_OF_SEMESTERS = 12
+  MAX_NUMBER_OF_YEARS = 6
 
   pg_search_scope(
     :search,
