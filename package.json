@@ -9,7 +9,7 @@
     "@rails/ujs": "^6.0.1",
     "@rails/webpacker": "5.0.1",
     "chalk": "^3.0.0",
-    "echarts": "^4.5.0",
+    "echarts": "^4.8.0",
     "flatpickr": "^4.6.3",
     "highcharts": "^8.1.2",
     "intl-tel-input": "^17.0.3",
