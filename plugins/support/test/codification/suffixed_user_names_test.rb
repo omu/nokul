@@ -41,7 +41,7 @@ module Nokul
           coder = Codification.suffixed_user_names %w[gabriel garcia marquez], random_suffix_separator: '-'
 
           name = coder.run
-          assert_match(/ggmarquez[-]\d+$/, name)
+          assert_match(/ggmarquez-\d+$/, name)
           assert name.start_with? 'ggmarquez-'
         end
 

@@ -31,7 +31,7 @@ module Activation
 
     def initialize(attributes = {})
       attributes.each do |name, value|
-        send("#{name}=", value)
+        public_send("#{name}=", value)
       end
       @mobile_phone = TelephoneNumber.parse(mobile_phone).e164_number
     end

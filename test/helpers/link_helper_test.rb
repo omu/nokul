@@ -64,8 +64,8 @@ class LinkHelperTest < ActionView::TestCase
   LINKS.each do |key, options|
     test "link_to_#{key} method" do
       link = format(LINK, options).squish.tr("'", '"')
-      assert_equal send("link_to_#{key}", options[:path]), link
-      assert_equal send("link_to_#{key}", options[:text], options[:path]), link
+      assert_equal public_send("link_to_#{key}", options[:path]), link
+      assert_equal public_send("link_to_#{key}", options[:text], options[:path]), link
     end
   end
 

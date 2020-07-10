@@ -29,7 +29,7 @@ class CourseEnrollmentTest < ActiveSupport::TestCase
     student
   ].each do |property|
     test "a course_enrollment reach #{property} parameter" do
-      assert course_enrollments(:elective).send(property)
+      assert course_enrollments(:elective).public_send(property)
     end
   end
 

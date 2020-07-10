@@ -24,8 +24,8 @@ module Nokul
 
       def self.method_missing(method, resource, *args)
         if (klass = RESOURCE[resource.to_s])
-          return klass.send(method, *args) if klass.respond_to? method
-          return klass.load_source.send(method, *args) if klass.method_defined? method
+          return klass.__send__(method, *args) if klass.respond_to? method
+          return klass.load_source.__send__(method, *args) if klass.method_defined? method
         end
 
         super

@@ -2,7 +2,7 @@
 
 module LDAP
   class Entity
-    # rubocop:disable Naming/MethodName
+    # rubocop:disable Metrics/ModuleLength, Naming/MethodName
     module Attributes
       # Schema: person
       def cn
@@ -172,13 +172,13 @@ module LDAP
         abbreviations = unit.path
                             .where.not(id: Unit.roots)
                             .map { |item| item.abbreviation.to_s.downcase(:turkic).asciified }
-                            .reverse
+                            .reverse!
 
         "#{prefix}@_.#{abbreviations.join('.')}.#{Tenant.configuration.ldap.organization}"
       end
     end
-    # rubocop:enable Naming/MethodName
 
+    include Attributes
     OBJECT_CLASSES = %w[
       person
       organizationalPerson
@@ -228,8 +228,6 @@ module LDAP
       userPassword:                :single
     }.freeze
 
-    include Attributes
-
     attr_reader :user
 
     def initialize(user)
@@ -264,4 +262,5 @@ module LDAP
       LdapEntity.create(user_id: user.id, values: values, dn: dn)
     end
   end
+  # rubocop:enable Metrics/ModuleLength, Naming/MethodName
 end

@@ -36,7 +36,7 @@ module Xokul
       def place_of_registry
         return unless (place = personal_informations&.dig(:place_of_registry))
 
-        %i[volume district city].collect { |key| place.dig key, :description }
+        %i[volume district city].map { |key| place.dig key, :description }
                                 .join '/'
       end
 

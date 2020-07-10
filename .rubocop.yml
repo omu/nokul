@@ -1,8 +1,17 @@
-inherit_from: https://raw.githubusercontent.com/omu/omu/master/etc/rubocop/rubocop.yml
-
 require:
   - rubocop-rails
+  - rubocop-performance
   - rubocop-minitest
+
+inherit_from:
+  - https://raw.githubusercontent.com/omu/omu/master/etc/rubocop/rubocop.yml
+  - .rubocop_todo.yml
+
+
+Lint/NonDeterministicRequireOrder:
+  Exclude:
+    - lib/nokul/tenant/tasks.rb
+    - lib/nokul/tenant/tests.rb
 
 Rails:
   Enabled: true
@@ -11,9 +20,7 @@ Rails/UnknownEnv:
     - development
     - production
     - test
-Layout/LineLength:
-  Exclude:
-    - app/validators/employee_validator.rb # Won't fix
+
 Metrics/BlockLength:
   Exclude:
     - config/initializers/devise.rb
@@ -22,13 +29,16 @@ Metrics/BlockLength:
 Metrics/ClassLength:
   Exclude:
     - test/**/*.rb
-    - app/models/unit.rb # TODO: Workaround until refactor
-    - app/models/user.rb # TODO: Workaround until refactor
-Metrics/ModuleLength:
+    - app/models/unit.rb
+    - app/models/user.rb
+
+Naming/FileName:
   Exclude:
-    - app/services/ldap/entity.rb
+    - plugins/support/lib/nokul-*.rb
+    - plugins/tenant/*/lib/nokul-*.rb
+
 AllCops:
-  TargetRubyVersion: 2.6
+  TargetRubyVersion: 2.7
   # Do not exclude files from ALL COPS unless it's really necessary!
   Exclude:
     - app/controllers/concerns/yoksis_resource.rb
@@ -43,3 +53,4 @@ AllCops:
     - node_modules/**/*
     - Vagrantfile
     - vendor/bundle/**/*
+    - plugins/**/dummy/bin/**

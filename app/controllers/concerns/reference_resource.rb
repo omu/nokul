@@ -6,7 +6,7 @@ module ReferenceResource
       include YoksisResource
 
       def redirect_with(message)
-        redirect_to(send("reference_#{controller_name}_path"), notice: t(".#{message}"))
+        redirect_to(public_send("reference_#{controller_name}_path"), notice: t(".#{message}"))
       end
 
       protected

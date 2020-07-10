@@ -27,8 +27,8 @@ module Nokul
         SUPPORTED_HTTP_OPTIONS = {
           open_timeout: 10,
           read_timeout: 10,
-          use_ssl: false,
-          verify_mode: OpenSSL::SSL::VERIFY_NONE
+          use_ssl:      false,
+          verify_mode:  OpenSSL::SSL::VERIFY_NONE
         }.freeze
 
         HEADERS = {
@@ -72,7 +72,7 @@ module Nokul
             raise UnsupportedHTTPOptionError, "unsupported HTTP options: #{unsupported_options}"
           end
 
-          http_options.each { |option, value| @http.send "#{option}=", value }
+          http_options.each { |option, value| @http.public_send "#{option}=", value }
         end
       end
 

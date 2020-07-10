@@ -11,8 +11,8 @@ module Nokul
     module Codification
       module SuffixedUserNames
         mattr_reader :default_options, default: {
-          alternative: :abbreviated,
-          interfix: '',
+          alternative:          :abbreviated,
+          interfix:             '',
           builtin_post_process: %i[safe? random_suffix]
         }
 

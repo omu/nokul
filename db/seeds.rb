@@ -50,9 +50,7 @@ if ENV['SYNC'].eql?('true')
   Rake::Task['fetch:references'].invoke
   Rake::Task['import:all'].invoke
 
-  if ENV['SAMPLE_DATA'].eql?('true')
-    Rake::Task['fetch:academic_staff'].invoke
-  end
+  Rake::Task['fetch:academic_staff'].invoke if ENV['SAMPLE_DATA'].eql?('true')
 else
   restore_seed_data('static_data')
 

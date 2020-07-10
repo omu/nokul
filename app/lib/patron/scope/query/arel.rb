@@ -69,7 +69,7 @@ module Patron
                          scope:         %i[string like]
 
         def self.merge(queries, with:)
-          queries.inject do |current_query, query|
+          queries.reduce do |current_query, query|
             current_query.public_send(with.to_s, query)
           end
         end

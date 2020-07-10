@@ -9,6 +9,7 @@ module Patron
           @klass    = instance.class
         end
 
+        # rubocop:disable Style/Send
         def self.call(instance)
           new(instance).send(:build)
         end
@@ -18,6 +19,7 @@ module Patron
           builder.instance_variable_set(:@records, records)
           builder.send(:build)
         end
+        # rubocop:enable Style/Send
 
         private_class_method :new
 

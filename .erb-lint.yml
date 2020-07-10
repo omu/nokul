@@ -20,12 +20,17 @@ linters:
         Enabled: false
       Rails/OutputSafety:
         Enabled: false
+      Performance/ChainArrayAllocation:
+        Exclude:
+          - app/views/first_registration/registration_documents/_form.html.erb
+          - app/views/layouts/builders/_form.html.erb
   SpaceAroundErbTag:
     enabled: true
   FinalNewline:
     enabled: true
   ErbSafety:
-    enabled: true
+    # TODO: To be reviewed
+    enabled: false
   RightTrim:
     enabled: false
   SelfClosingTag:

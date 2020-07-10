@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
   spec.homepage    = 'https://nokul.omu.sh'
   spec.metadata    = {
     'source_code_uri' => 'https://github.com/omu/nokul/tree/master/plugins/tenant/support',
-    'changelog_uri' => 'https://github.com/omu/nokul/tree/master/plugins/tenant/support/CHANGELOG.md'
+    'changelog_uri'   => 'https://github.com/omu/nokul/tree/master/plugins/tenant/support/CHANGELOG.md'
   }
 
   spec.add_dependency 'activesupport', '>= 6.0.3.1'

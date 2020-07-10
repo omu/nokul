@@ -35,7 +35,7 @@ class CourseAssessmentMethodTest < ActiveSupport::TestCase
     name
   ].each do |property|
     test "a course_assessment_method reach #{property} parameter" do
-      assert course_assessment_methods(:elective_midterm_project_assessment).send(property)
+      assert course_assessment_methods(:elective_midterm_project_assessment).public_send(property)
     end
   end
 

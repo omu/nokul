@@ -9,6 +9,7 @@ module Nokul
       extend ActiveSupport::Concern
 
       # Stolen and modified from Rails
+      # rubocop:disable Style/ImplicitRuntimeError
       def deep_config_for(name, env: Rails.env)
         unless (yaml = config_file_for(name)).exist?
           raise "Could not load configuration. No such file - #{yaml}"
@@ -21,6 +22,7 @@ module Nokul
           'Please note that YAML must be consistently indented using spaces. Tabs are not allowed. ' \
           "Error: #{e.message}"
       end
+      # rubocop:enable Style/ImplicitRuntimeError
 
       def config_file_for(name)
         name.is_a?(Pathname) ? name : Pathname.new("#{paths['config'].existent.first}/#{name}.yml")

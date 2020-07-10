@@ -47,7 +47,7 @@ module Patron
 
     def supported_privileges_check!(privileges)
       privileges.each do |privilege|
-        raise "Unsupported privilege: #{privilege}" unless SUPPORTED_PRIVILEGES.key?(privilege)
+        raise ArgumentError, "Unsupported privilege: #{privilege}" unless SUPPORTED_PRIVILEGES.key?(privilege)
       end
 
       privileges.inquiry

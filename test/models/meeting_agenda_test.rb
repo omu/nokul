@@ -24,7 +24,7 @@ class MeetingAgendaTest < ActiveSupport::TestCase
     status
   ].each do |property|
     test "a meeting agenda reach agenda's #{property} parameter" do
-      assert meeting_agendas(:one).send(property)
+      assert meeting_agendas(:one).public_send(property)
     end
   end
 end

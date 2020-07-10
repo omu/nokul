@@ -11,7 +11,7 @@ module Nokul
         def code_generator(starting:, ending:, only: nil, except: nil, memory:)
           [starting = starting.to_s, ending = ending.to_s].each do |code|
             code.length == const.gross_length ||
-              raise("Code length must be #{const.gross_length}: #{code}")
+              raise(ArgumentError, "Code length must be #{const.gross_length}: #{code}")
           end
 
           post_process = post_process_for(only, except)
