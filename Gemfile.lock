@@ -238,7 +238,7 @@ GEM
     multipart-post (2.1.1)
     net-ldap (0.16.2)
     nio4r (2.5.2)
-    nokogiri (1.10.9)
+    nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     omniauth (1.9.1)
       hashie (>= 3.4.6)
