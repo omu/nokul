@@ -86,7 +86,7 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-    aes_key_wrap (1.0.1)
+    aes_key_wrap (1.1.0)
     ancestry (3.0.7)
       activerecord (>= 3.2.0)
     ast (2.4.1)
