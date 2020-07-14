@@ -73,7 +73,7 @@ class Student < ApplicationRecord
   end
 
   def abroad?
-    Student.abroads.ids.include?(id)
+    StudentEntranceType.abroads.exists?(entrance_type_id)
   end
 
   def preparation?
