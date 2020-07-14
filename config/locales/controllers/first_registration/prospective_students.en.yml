@@ -26,7 +26,7 @@ en:
         last_name: Last Name
         meb_status: MEB Status
         meb_status_date: MEB Status Check Date
-        military_status: Unproblematic Military Status
+        military_status: Military Status
         military_status_date: Military Status Check Date
         mobile_phone: Mobile phone
         mothers_name: Mother's Name
