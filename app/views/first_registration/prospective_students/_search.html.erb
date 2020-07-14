@@ -128,7 +128,7 @@
 
             <div class="col-sm-3">
               <div class="form-group">
-                <%= label_tag :year, "t('.year')" %>
+                <%= label_tag :year, t('.year') %>
                 <%= select_tag(:year,
                                options_for_select(2010..2100, params[:year]),
                                include_blank: true,
