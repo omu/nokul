@@ -10,6 +10,14 @@ module Debt
           @student = student
         end
 
+        def chain
+          if exceeded? || other_studentship? || preparatory_repetition?
+            Operation::Disability.new(Operation::NoDiscount.new)
+          else
+            Operation::Scholarship.new(Operation::Disability.new(Operation::NoDiscount.new))
+          end
+        end
+
         private
 
         def exceeded?
