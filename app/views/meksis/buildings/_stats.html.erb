@@ -52,15 +52,15 @@
         <div class="row">
           <div class="col-sm-4">
             <p><center><%= t('.chart_of_classrooms') %></center></p>
-            <%= pie_chart @buildings.joins(:place_type).order('place_types.name').group('place_types.name').count.to_a %>
+            <%= pie_chart @buildings.joins(:place_type).reorder('place_types.name').group('place_types.name').count.to_a %>
           </div>
           <div class="col-sm-4">
             <p><center><%= t('.chart_of_place_numbers') %></center></p>
-            <%= pie_chart @classrooms.joins(:place_type).order('place_types.name').group('place_types.name').count.to_a %>
+            <%= pie_chart @classrooms.joins(:place_type).reorder('place_types.name').group('place_types.name').count.to_a %>
           </div>
           <div class="col-sm-4">
             <p><center><%= t('.chart_of_available_spaces') %> (m<sup>2</sup>)</center></p>
-            <%= pie_chart @classrooms.joins(:place_type).order('place_types.name').group('place_types.name').sum(:available_space) %>
+            <%= pie_chart @classrooms.joins(:place_type).reorder('place_types.name').group('place_types.name').sum(:available_space) %>
           </div>
         </div>
       </div>

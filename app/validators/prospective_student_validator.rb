@@ -5,7 +5,7 @@ class ProspectiveStudentValidator < ActiveModel::Validator
     return unless record.registered?
     return unless record.unit_id_changed? || record.academic_term_id_changed?
 
-    record.errors[:base] << message('unchangeable_variables')
+    record.errors.add(:base, message('unchangeable_variables'))
   end
 
   private

@@ -267,6 +267,7 @@ CREATE TABLE public.active_storage_blobs (
     byte_size bigint,
     checksum character varying,
     created_at timestamp without time zone,
+    service_name character varying NOT NULL,
     CONSTRAINT active_storage_blobs_byte_size_null CHECK ((byte_size IS NOT NULL)),
     CONSTRAINT active_storage_blobs_checksum_presence CHECK (((checksum IS NOT NULL) AND ((checksum)::text !~ '^\s*$'::text))),
     CONSTRAINT active_storage_blobs_created_at_null CHECK ((created_at IS NOT NULL)),
@@ -293,6 +294,36 @@ CREATE SEQUENCE public.active_storage_blobs_id_seq
 --
 
 ALTER SEQUENCE public.active_storage_blobs_id_seq OWNED BY public.active_storage_blobs.id;
+
+
+--
+-- Name: active_storage_variant_records; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.active_storage_variant_records (
+    id bigint NOT NULL,
+    blob_id bigint NOT NULL,
+    variation_digest character varying NOT NULL
+);
+
+
+--
+-- Name: active_storage_variant_records_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.active_storage_variant_records_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: active_storage_variant_records_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.active_storage_variant_records_id_seq OWNED BY public.active_storage_variant_records.id;
 
 
 --
@@ -4060,6 +4091,13 @@ ALTER TABLE ONLY public.active_storage_blobs ALTER COLUMN id SET DEFAULT nextval
 
 
 --
+-- Name: active_storage_variant_records id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.active_storage_variant_records ALTER COLUMN id SET DEFAULT nextval('public.active_storage_variant_records_id_seq'::regclass);
+
+
+--
 -- Name: addresses id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -4745,6 +4783,14 @@ ALTER TABLE ONLY public.active_storage_attachments
 
 ALTER TABLE ONLY public.active_storage_blobs
     ADD CONSTRAINT active_storage_blobs_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: active_storage_variant_records active_storage_variant_records_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.active_storage_variant_records
+    ADD CONSTRAINT active_storage_variant_records_pkey PRIMARY KEY (id);
 
 
 --
@@ -5882,6 +5928,13 @@ CREATE UNIQUE INDEX index_active_storage_attachments_uniqueness ON public.active
 --
 
 CREATE UNIQUE INDEX index_active_storage_blobs_on_key ON public.active_storage_blobs USING btree (key);
+
+
+--
+-- Name: index_active_storage_variant_records_uniqueness; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE UNIQUE INDEX index_active_storage_variant_records_uniqueness ON public.active_storage_variant_records USING btree (blob_id, variation_digest);
 
 
 --
@@ -7300,6 +7353,14 @@ ALTER TABLE ONLY public.prospective_students
 
 
 --
+-- Name: active_storage_variant_records fk_rails_993965df05; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.active_storage_variant_records
+    ADD CONSTRAINT fk_rails_993965df05 FOREIGN KEY (blob_id) REFERENCES public.active_storage_blobs(id);
+
+
+--
 -- Name: cities fk_rails_996e05be41; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7857,6 +7918,8 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20200320114534'),
 ('20200427103727'),
 ('20200430130429'),
-('20200703214608');
+('20200703214608'),
+('20200713182117'),
+('20200713182118');
 
 
