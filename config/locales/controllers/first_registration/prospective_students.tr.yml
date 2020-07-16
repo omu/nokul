@@ -26,7 +26,7 @@ tr:
         last_name: Soyad
         meb_status: Liseden Mezun
         meb_status_date: Lise Mezuniyet Kontrol Tarihi
-        military_status: Askerlik Durumu Sorunsuz
+        military_status: Askerlik Durumu
         military_status_date: Askerlik Durum Kontrol Tarihi
         mobile_phone: Cep Telefonu
         mothers_name: Anne Adı

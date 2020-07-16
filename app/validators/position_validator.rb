@@ -10,7 +10,7 @@ class PositionValidator < ActiveModel::Validator
   end
 
   def date_validation
-    @position.errors[:end_date] << message('invalid_end_date') if @position.end_date < @position.start_date
+    @position.errors.add(:end_date, message('invalid_end_date')) if @position.end_date < @position.start_date
   end
 
   def restrict_positions
@@ -28,6 +28,6 @@ class PositionValidator < ActiveModel::Validator
   end
 
   def add_to_base_error(key)
-    @position.errors[:base] << message(key)
+    @position.errors.add(:base, message(key))
   end
 end

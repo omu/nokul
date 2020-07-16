@@ -10,7 +10,7 @@ class CourseEvaluationTypeValidator < ActiveModel::Validator
   def check_percentage(percentages)
     return if percentages.sum.equal?(100)
 
-    @evaluation_type.errors[:base] << message('invalid_percentages')
+    @evaluation_type.errors.add(:base, message('invalid_percentages'))
   end
 
   def assessment_methods(assessment_methods)

@@ -8,7 +8,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 # core
 gem 'bootsnap', require: false
 gem 'puma'
-gem 'rails', '~> 6.0', '>= 6.0.3.2'
+gem 'rails', github: 'rails/rails'
 gem 'redis', '~> 4.2'
 gem 'sidekiq'
 
@@ -42,8 +42,9 @@ gem 'net-ldap'
 gem 'sassc', '~> 2.4.0'
 gem 'sassc-rails', '>= 2.1.2'
 
+gem 'coffee-rails'
 gem 'uglifier', '>= 1.3.0'
-gem 'webpacker', '>= 5.1.1'
+gem 'webpacker', github: 'rails/webpacker'
 
 # view helpers: tools for forms, views, etc.
 gem 'chartkick'
@@ -84,7 +85,7 @@ gem 'sidekiq-cron'
 
 group :development, :test do
   gem 'brakeman', require: false
-  gem 'bullet', '>= 6.1.0'
+  gem 'bullet', github: 'flyerhzm/bullet'
   gem 'bundler-audit'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'dotenv-rails', '>= 2.7.5'
@@ -114,7 +115,7 @@ group :development do
   gem 'ruby-progressbar'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'web-console', '>= 4.0.2'
+  gem 'web-console', github: 'rails/web-console'
 end
 
 # core plugins

@@ -13,7 +13,7 @@ module Nokul
     Nokul::Tenant.load
 
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 6.0
+    config.load_defaults 6.1
 
     # time-zone. ActiveSupport::TimeZone.all for all possible values
     config.time_zone = 'Istanbul'

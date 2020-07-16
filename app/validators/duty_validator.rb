@@ -10,7 +10,7 @@ class DutyValidator < ActiveModel::Validator
   end
 
   def date_validation
-    @duty.errors[:end_date] << message('invalid_end_date') if @duty.end_date < @duty.start_date
+    @duty.errors.add(:end_date, message('invalid_end_date')) if @duty.end_date < @duty.start_date
   end
 
   def restrict_duties
@@ -25,6 +25,6 @@ class DutyValidator < ActiveModel::Validator
   end
 
   def add_to_base_error(key)
-    @duty.errors[:base] << message(key)
+    @duty.errors.add(:base, message(key))
   end
 end
