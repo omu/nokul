@@ -20,5 +20,5 @@ Gem::Specification.new do |spec|
   }
 
   spec.add_dependency 'nokul-tenant'
-  spec.add_dependency 'rails', '~> 6.0.0'
+  spec.add_dependency 'rails'
 end
