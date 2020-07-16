@@ -15,7 +15,7 @@ module Accounts
     end
 
     test 'should upload avatar' do
-      image = fixture_file_upload 'files/valid_png_picture.png'
+      image = fixture_file_upload 'valid_png_picture.png'
 
       patch profile_path, params: {
         user: {
