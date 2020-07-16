@@ -8,4 +8,12 @@ class StudentEntranceTypeTest < ActiveSupport::TestCase
 
   # relations
   has_many :prospective_students, dependent: :nullify
+
+  # validations: presence
+  validates_presence_of :abroad
+
+  # scopes
+  test 'abroads scope returns entrance types with abroad' do
+    assert_includes(StudentEntranceType.abroads, student_entrance_types(:aos))
+  end
 end

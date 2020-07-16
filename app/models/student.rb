@@ -29,6 +29,7 @@ class Student < ApplicationRecord
   has_many :tuition_debts, dependent: :destroy
 
   # scopes
+  scope :abroads, -> { where(entrance_type: StudentEntranceType.abroads) }
   scope :exceeded, -> { where(exceeded_education_period: true) }
   scope :not_scholarships, -> { where(scholarship_type_id: nil) }
   scope :scholarships, -> { where.not(scholarship_type_id: nil) }
@@ -69,6 +70,10 @@ class Student < ApplicationRecord
   def current_registration
     @current_registration ||=
       semester_registrations.find_by(semester: semester) || semester_registrations.create
+  end
+
+  def abroad?
+    StudentEntranceType.abroads.exists?(entrance_type_id)
   end
 
   def preparation?

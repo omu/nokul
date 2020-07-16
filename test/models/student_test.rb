@@ -58,6 +58,10 @@ class StudentTest < ActiveSupport::TestCase
   end
 
   # scopes
+  test 'abroads scope returns students from abroad' do
+    assert_includes(Student.abroads, students(:serhat_omu))
+  end
+
   test 'exceeded scope returns students with exceeded education period' do
     assert_includes(Student.exceeded, students(:john))
   end
@@ -75,6 +79,12 @@ class StudentTest < ActiveSupport::TestCase
   end
 
   # custom methods
+
+  test 'abroad?' do
+    assert students(:serhat_omu).abroad?
+    assert_not students(:mike).abroad?
+  end
+
   test 'gpa method' do
     assert_equal students(:serhat).gpa, 1.8
     assert_equal students(:serhat_omu).gpa, 0

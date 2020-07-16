@@ -10,7 +10,7 @@ module Debt
         @student = student
         @user = student.user
         @unit_tuition = unit_tuition
-        @amount = unit_tuition.fee
+        @amount = student.abroad? ? unit_tuition.foreign_student_fee : unit_tuition.fee
         @academic_term = unit_tuition.academic_term
         @due_date = due_date
       end

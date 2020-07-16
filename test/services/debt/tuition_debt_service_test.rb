@@ -52,5 +52,15 @@ module Debt
       assert_equal tuition_debt.amount.to_f, 650
       assert_equal tuition_debt.description, 'no_discount'
     end
+
+    test 'student from abroad' do
+      Debt::Tuition::Dispatch.perform([units(:matematik_ogretmenligi_programi)].flatten,
+                                      academic_terms(:active_term),
+                                      Time.zone.now + 2.months)
+
+      tuition_debt = TuitionDebt.last
+      assert_equal tuition_debt.amount.to_f, 1500
+      assert_equal tuition_debt.description, 'no_discount'
+    end
   end
 end

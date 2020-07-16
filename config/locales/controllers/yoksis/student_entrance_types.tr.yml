@@ -4,6 +4,12 @@ tr:
       student_entrance_type: &student_entrance_type_attributes
         code: Kodu
         name: Öğrenci Giriş Türü
+        abroad: Yurt Dışı Öğrenci Giriş Türü
+    enums:
+      student_entrance_type:
+        abroads:
+          'false': Hayır
+          'true': Evet
   helpers:
     submit:
       student_entrance_type:

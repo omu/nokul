@@ -10,6 +10,10 @@ three:
   unit: buro_yonetimi_ve_yonetici_asistanligi_io
   tuition: three
 
+four:
+  unit: matematik_ogretmenligi_programi
+  tuition: three
+
 unit_tuition_to_delete:
   unit: fen_bilgisi_ogretmenligi_programi
   tuition: tuition_to_delete

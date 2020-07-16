@@ -4,6 +4,12 @@ en:
       student_entrance_type: &student_entrance_type_attributes
         code: Code
         name: Student Entrance Type
+        abroad: Student Entrance Type From Abroad
+    enums:
+      student_entrance_type:
+        abroads:
+          'false': 'No'
+          'true': 'Yes'
   helpers:
     submit:
       student_entrance_type:
