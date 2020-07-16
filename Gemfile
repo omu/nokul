@@ -44,7 +44,7 @@ gem 'sassc-rails', '>= 2.1.2'
 
 gem 'coffee-rails'
 gem 'uglifier', '>= 1.3.0'
-gem 'webpacker', '>= 5.1.1'
+gem 'webpacker', github: 'rails/webpacker'
 
 # view helpers: tools for forms, views, etc.
 gem 'chartkick'
@@ -115,7 +115,7 @@ group :development do
   gem 'ruby-progressbar'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'web-console', '>= 4.0.2'
+  gem 'web-console', github: 'rails/web-console'
 end
 
 # core plugins
