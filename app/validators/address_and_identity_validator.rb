@@ -24,6 +24,6 @@ class AddressAndIdentityValidator < ActiveModel::Validator
   end
 
   def add_to_base_error(key, limit)
-    @record.errors[:base] << message(key, limit)
+    @record.errors.add(:base, message(key, limit))
   end
 end
