@@ -5,7 +5,7 @@
     "@coreui/coreui-free-bootstrap-admin-template": "https://github.com/coreui/coreui-free-bootstrap-admin-template.git#master",
     "@rails/actioncable": "^6.0.3",
     "@rails/actiontext": "^6.0.2",
-    "@rails/activestorage": "^6.0.0-alpha",
+    "@rails/activestorage": "^6.0.3",
     "@rails/ujs": "^6.0.1",
     "@rails/webpacker": "5.0.1",
     "chalk": "^3.0.0",
