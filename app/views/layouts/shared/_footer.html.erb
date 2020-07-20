@@ -14,13 +14,13 @@
     <span>© <%= Time.zone.now.year %> BAUM</span>
   </div>
 
-  <% if Tenant.configuration.branding.badge.visible %>
+  <% if Nokul::Tenant.configuration.branding.badge.visible %>
     <div class="ml-auto d-none d-md-block">
       <%= link_to 'https://omu.sh' do %>
-        <%= image_tag Tenant.configuration.branding.badge.file,
+        <%= image_tag Nokul::Tenant.configuration.branding.badge.file,
                       height: '20',
                       width:  '110',
-                      alt:    Tenant.configuration.branding.badge.alt_text %>
+                      alt:    Nokul::Tenant.configuration.branding.badge.alt_text %>
       <% end %>
     </div>
   <% end %>

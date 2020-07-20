@@ -44,9 +44,9 @@ module Xokul
 
         def request(path)
           response = Connection.request(path)
-          response || raise(Support::RestClient::HTTPError)
+          response || raise(Nokul::Support::RestClient::HTTPError)
         rescue Net::HTTPExceptions => e
-          raise Support::RestClient::HTTPError, e
+          raise Nokul::Support::RestClient::HTTPError, e
         end
 
         private_class_method :request

@@ -7,7 +7,7 @@ author(s):
 =============================
 
 Nokul'da kiracılar arasında ortak olarak kullanılabilecek kodifikasyon lojiğini
-barındıran en üst katmandaki API.  Bu API alt seviyede `Support::Codification`
+barındıran en üst katmandaki API.  Bu API alt seviyede `Nokul::Support::Codification`
 kitaplığını kullanır.  API'de `Unit`, `User`, `Student` ve `Employee`
 modellerine ilişkin kodifikasyon lojiği bulunmaktadır.
 
@@ -92,7 +92,7 @@ Kodifikasyon lojiğini olduğu gibi kullanmak istiyorsanız
 oluşturmanız yeterli.
 
 ```ruby
-Codification = Tenant::Codification
+Codification = Nokul::Tenant::Codification
 ```
 
 Belirli bir metodu özelleştirmek istiyorsanız özelleştireceğiniz metodun
@@ -102,16 +102,16 @@ yapmanız gerekiyor.
 ```ruby
 module Codification
   # Ortak lojiği olduğu gibi al
-  include Tenant::Codification
+  include Nokul::Tenant::Codification
 
   # Sadece öğrenci numarası üretecini değiştireceğiz
   module Student
-    extend Tenant::Codification::Student
+    extend Nokul::Tenant::Codification::Student
 
     module_function
 
     def short_number_generator(**args)
-      Support::Codification.sequential_numeric_codes args[:starting], prefix: args[:year], net_length: 6, base: 10
+      Nokul::Support::Codification.sequential_numeric_codes args[:starting], prefix: args[:year], net_length: 6, base: 10
     end
   end
 end

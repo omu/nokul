@@ -38,7 +38,7 @@ def restore_seed_data(encrypted_data_name)
   abort("File not found in: #{path}") unless path.exist?
 
   PgExec.call(
-    Support::Sensitive.content_decrypt(ActiveSupport::Gzip.decompress(File.read(path)))
+    Nokul::Support::Sensitive.content_decrypt(ActiveSupport::Gzip.decompress(File.read(path)))
   )
 rescue PG::Error => e
   abort("SQL error during exec: #{e.message}")

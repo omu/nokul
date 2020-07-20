@@ -3,8 +3,8 @@
 require 'test_helper'
 
 class DocumentTypeTest < ActiveSupport::TestCase
-  extend Support::Minitest::AssociationHelper
-  extend Support::Minitest::ValidationHelper
+  extend Nokul::Support::Minitest::AssociationHelper
+  extend Nokul::Support::Minitest::ValidationHelper
 
   # relations
   has_many :registration_documents, dependent: :destroy

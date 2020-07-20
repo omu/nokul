@@ -11,7 +11,7 @@ namespace :tenant do
 
           puts unit
           puts
-          [*unit.issues].each do |issue|
+          Array(unit.issues).each do |issue|
             puts "\t\t#{issue}"
           end
           puts

@@ -3,8 +3,8 @@
 require 'test_helper'
 
 class RegistrationDocumentTest < ActiveSupport::TestCase
-  extend Support::Minitest::AssociationHelper
-  extend Support::Minitest::ValidationHelper
+  extend Nokul::Support::Minitest::AssociationHelper
+  extend Nokul::Support::Minitest::ValidationHelper
 
   setup do
     @document = registration_documents(:omu_health_report)

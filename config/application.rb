@@ -12,6 +12,13 @@ module Nokul
     # multi-tenancy
     Nokul::Tenant.load
 
+    config.before_initialize do
+      require 'nokul/sso'
+      require 'nokul/name'
+      require 'nokul/database_url'
+      require 'nokul/version'
+    end
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
@@ -41,7 +48,7 @@ module Nokul
 
     # default mailer settings
     config.action_mailer.default_url_options = {
-      host: Tenant.configuration.host
+      host: Nokul::Tenant.configuration.host
     }
   end
 end

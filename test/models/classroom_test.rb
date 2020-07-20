@@ -3,7 +3,7 @@
 require 'test_helper'
 
 class ClassroomTest < ActiveSupport::TestCase
-  extend Support::Minitest::AssociationHelper
+  extend Nokul::Support::Minitest::AssociationHelper
 
   # relations
   belongs_to :place_type

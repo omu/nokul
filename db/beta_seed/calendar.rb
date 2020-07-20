@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-event_types = YAML.load_file Tenant.root.join('db', 'static', 'event_types.yml')
+event_types = YAML.load_file Nokul::Tenant.root.join('db', 'static', 'event_types.yml')
 
 progress_bar = ProgressBar.spawn('EventType', event_types.count)
 event_types.each do |category, event_type|

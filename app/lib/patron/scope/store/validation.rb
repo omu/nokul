@@ -10,7 +10,7 @@ module Patron
           before_validation :set_accessors_validations, if: :scope_name?
 
           def set_accessors_validations
-            [*scope_klass&.filter_attributes].each do |filter|
+            Array(scope_klass&.filter_attributes).each do |filter|
               unless skip_empty_for?(filter)
                 prefix = public_send("#{filter}_value_type") || 'static'
 

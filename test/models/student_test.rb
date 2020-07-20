@@ -3,10 +3,10 @@
 require 'test_helper'
 
 class StudentTest < ActiveSupport::TestCase
-  extend Support::Minitest::AssociationHelper
-  extend Support::Minitest::CallbackHelper
-  extend Support::Minitest::EnumerationHelper
-  extend Support::Minitest::ValidationHelper
+  extend Nokul::Support::Minitest::AssociationHelper
+  extend Nokul::Support::Minitest::CallbackHelper
+  extend Nokul::Support::Minitest::EnumerationHelper
+  extend Nokul::Support::Minitest::ValidationHelper
   include ActiveJob::TestHelper
 
   # enums

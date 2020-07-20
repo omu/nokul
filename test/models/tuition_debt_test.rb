@@ -3,9 +3,9 @@
 require 'test_helper'
 
 class TuitionDebtTest < ActiveSupport::TestCase
-  extend Support::Minitest::AssociationHelper
-  extend Support::Minitest::EnumerationHelper
-  extend Support::Minitest::ValidationHelper
+  extend Nokul::Support::Minitest::AssociationHelper
+  extend Nokul::Support::Minitest::EnumerationHelper
+  extend Nokul::Support::Minitest::ValidationHelper
 
   # enums
   enum description: { disability: 1, no_discount: 2 }

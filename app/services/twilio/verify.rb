@@ -46,7 +46,7 @@ module Twilio
         response = Authy::API.request_qr_code(
           id:      user.authy_id,
           qr_size: 500,
-          label:   Tenant.configuration.name
+          label:   Nokul::Tenant.configuration.name
         )
 
         if response.ok?
@@ -57,24 +57,20 @@ module Twilio
       end
 
       def send_phone_verification_code(phone_number, locale = 'tr')
-        response = Authy::PhoneVerification.start(
+        Authy::PhoneVerification.start(
           via:          'sms',
           country_code: parse_phone_number(phone_number)[:country_code],
           phone_number: parse_phone_number(phone_number)[:normalized_number],
           locale:       locale
         )
-
-        response
       end
 
       def check_verification_code(phone_number, verification_code)
-        response = Authy::PhoneVerification.check(
+        Authy::PhoneVerification.check(
           verification_code: verification_code,
           country_code:      parse_phone_number(phone_number)[:country_code],
           phone_number:      parse_phone_number(phone_number)[:normalized_number]
         )
-
-        response
       end
 
       def parse_phone_number(phone_number)

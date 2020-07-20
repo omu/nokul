@@ -19,7 +19,7 @@ tutuyoruz.
 Kiracı dizinlerini Rails uygulama kökünü izleyen biçimde alt dizinler halinde düzenlemeyi tercih ediyoruz.   Örneğin
 `omu` kiracısına ait yapılandırma bilgileri `/tenant/omu/config` dizininde.
 
-Uygulama hangi kiracı için konuşlandırılmışsa o kiracıya "etkin kiracı" (`Tenant.active`) diyoruz.  Etkin kiracı
+Uygulama hangi kiracı için konuşlandırılmışsa o kiracıya "etkin kiracı" (`Nokul::Tenant.active`) diyoruz.  Etkin kiracı
 tanımlayıcısı uygulama konuşlandırılırken `RAILS_TENANT` ortam değişkeniyle uygulamaya iletiliyor.
 
 Kiracı özgünlükleri

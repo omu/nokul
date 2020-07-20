@@ -9,7 +9,7 @@ class S3
   TOPLEVEL = Rails.application.root
   BUCKET   = 'static'
 
-  def initialize(config = Tenant.credentials.config[:s3])
+  def initialize(config = Nokul::Tenant.credentials.config[:s3])
     @client = Aws::S3::Client.new(config)
   end
 

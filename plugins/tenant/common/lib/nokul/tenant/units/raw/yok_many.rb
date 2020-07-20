@@ -82,7 +82,7 @@ module Nokul
           end
 
           def uniquify(units)
-            [*units].reject { |unit| include? unit }
+            Array(units).reject { |unit| include? unit }
           end
 
           def populate(unit)

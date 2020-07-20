@@ -2,7 +2,7 @@
 
 require_relative 'patron/roleable'
 require_relative 'patron/scopable'
-require_relative 'patron/utils/i18n.rb'
+require_relative 'patron/utils/i18n'
 require_relative 'patron/scope'
 require_relative 'patron/permission_builder'
 require_relative 'patron/role_builder'

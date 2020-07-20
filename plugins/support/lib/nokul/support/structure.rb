@@ -40,7 +40,7 @@ module Nokul
         def to_h(omit_if_nil: self.class.members)
           result = {}
           self.class.members.map do |member|
-            next if (value = __send__(member)).nil? && [*(omit_if_nil || [])].any? { |key| key.to_sym == member }
+            next if (value = __send__(member)).nil? && Array((omit_if_nil || [])).any? { |key| key.to_sym == member }
 
             result[member] = value
           end
@@ -115,7 +115,8 @@ module Nokul
         def included(base)
           # Support mixins as in the following use cases
 
-          if base.is_a? Class
+          case base
+          when Class
             # module Base
             #   include Structure.of %i[foo bar]
             # end
@@ -125,7 +126,7 @@ module Nokul
             # end
             #
             base.class_attribute :members, default: [] unless base.respond_to? :members
-          elsif base.is_a? Module
+          when Module
             # module Base
             #   include Structure.of %i[foo bar]
             # end

@@ -4,8 +4,8 @@ require 'test_helper'
 
 module Patron
   class RoleTest < ActiveSupport::TestCase
-    extend Support::Minitest::AssociationHelper
-    extend Support::Minitest::ValidationHelper
+    extend Nokul::Support::Minitest::AssociationHelper
+    extend Nokul::Support::Minitest::ValidationHelper
 
     # relations
     has_many :role_assignments, dependent: :destroy

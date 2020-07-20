@@ -93,7 +93,7 @@ module Patron
         end
 
         def self.sanitize_sql_array(value)
-          [*value].map { |item| ActiveRecord::Base.sanitize_sql(item) }
+          Array(value).map { |item| ActiveRecord::Base.sanitize_sql(item) }
         end
 
         def self.predicates_for_array
@@ -110,7 +110,7 @@ module Patron
 
         def self.filter_predicates_by_scope(*scope)
           predicates.select do |_, options|
-            scope.any? { |item| [*options[:scope]].include?(item) }
+            scope.any? { |item| Array(options[:scope]).include?(item) }
           end
         end
       end

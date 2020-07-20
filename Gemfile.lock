@@ -7,6 +7,20 @@ GIT
       uniform_notifier (~> 1.11)
 
 GIT
+  remote: https://github.com/marcandre/erb-lint.git
+  revision: 3714f79a5e3c5330074d99786b770075b233ad1e
+  branch: rubocop_v1
+  specs:
+    erb_lint (0.0.34)
+      activesupport
+      better_html (~> 1.0.7)
+      html_tokenizer
+      parser (>= 2.7.1.4)
+      rainbow
+      rubocop (~> 0.79)
+      smart_properties
+
+GIT
   remote: https://github.com/rails/rails.git
   revision: dcf545d20ca6110a360780bda1ba058d7083167a
   specs:
@@ -220,13 +234,6 @@ GEM
     dotenv-rails (2.7.6)
       dotenv (= 2.7.6)
       railties (>= 3.2)
-    erb_lint (0.0.34)
-      activesupport
-      better_html (~> 1.0.7)
-      html_tokenizer
-      rainbow
-      rubocop (~> 0.79)
-      smart_properties
     erubi (1.9.0)
     et-orbi (1.2.4)
       tzinfo
@@ -378,13 +385,13 @@ GEM
       railties (>= 5.0)
     rexml (3.2.4)
     rollbar (2.26.0)
-    rubocop (0.86.0)
+    rubocop (0.88.0)
       parallel (~> 1.10)
-      parser (>= 2.7.0.1)
+      parser (>= 2.7.1.1)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.7)
       rexml
-      rubocop-ast (>= 0.0.3, < 1.0)
+      rubocop-ast (>= 0.1.0, < 1.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 2.0)
     rubocop-ast (0.2.0)
@@ -512,7 +519,7 @@ DEPENDENCIES
   coffee-rails
   devise (>= 4.7.1)
   dotenv-rails (>= 2.7.5)
-  erb_lint (>= 0.0.32)
+  erb_lint!
   fit-commit
   font-awesome-rails (>= 4.7.0.5)
   friendly_id (~> 5.3.0)

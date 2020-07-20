@@ -7,7 +7,7 @@ Rollbar.configure do |config|
   # Exit early in development and test environments
   next unless (config.enabled = !Rails.env.test? && !Rails.env.development?)
 
-  config.access_token = Tenant.credentials.dig(:rollbar, :access_token)
+  config.access_token = Nokul::Tenant.credentials.dig(:rollbar, :access_token)
 
   # By default, Rollbar will try to call the `current_user` controller method
   # to fetch the logged-in user object, and then call that object's `id`

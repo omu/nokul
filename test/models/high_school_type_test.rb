@@ -3,7 +3,7 @@
 require 'test_helper'
 
 class HighSchoolTypeTest < ActiveSupport::TestCase
-  extend Support::Minitest::AssociationHelper
+  extend Nokul::Support::Minitest::AssociationHelper
   include ReferenceTestModule
 
   # relations

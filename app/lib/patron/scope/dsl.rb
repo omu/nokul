@@ -6,7 +6,7 @@ module Patron
       def dynamic_value(method_name, scope:, &block)
         dynamic_values[method_name] = block
 
-        [*scope].each do |key|
+        Array(scope).each do |key|
           dynamic_values[:scopes][key] = [] unless dynamic_values.dig(:scopes, key)
           dynamic_values[:scopes][key] << method_name
         end

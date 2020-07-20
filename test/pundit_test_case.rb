@@ -70,7 +70,7 @@ class PunditTestCase < ActiveSupport::TestCase
 
   # test 'index?' do; end => ['index?']
   def resolve_permissions(options)
-    [*options.fetch(:permissions, name.delete_prefix('test_'))]
+    Array(options.fetch(:permissions, name.delete_prefix('test_')))
   end
 
   def policy_class

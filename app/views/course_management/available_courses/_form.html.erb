@@ -28,12 +28,12 @@
             </div>
             <div class='form-group col-sm-6'>
               <%= f.association :curriculum,
-                                collection: [*f.object.unit.try(:managed_curriculums)],
+                                collection: Array(f.object.unit.try(:managed_curriculums)),
                                 disabled:   !manageable %>
             </div>
             <div class='form-group col-sm-6'>
               <%= f.association :coordinator,
-                                collection:   [*f.object.unit.try(:subtree_employees)],
+                                collection:   Array(f.object.unit.try(:subtree_employees)),
                                 label_method: lambda { |c| full_name(c) } %>
             </div>
             <div class='form-group col-sm-6'>
@@ -42,7 +42,7 @@
                                                 .openable_courses_for_active_term(appends: f.object.curriculum_course) %>
               <% end %>
               <%= f.association :curriculum_course,
-                                collection: [*courses],
+                                collection: Array(courses),
                                 disabled:   !manageable %>
             </div>
           </div>

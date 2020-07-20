@@ -8,6 +8,6 @@ class Array
   def join_affixed(**options)
     must_be_any_of! [String]
 
-    "#{[*options[:prefix]].join}#{join options[:interfix]}#{[*options[:suffix]].join}"
+    "#{Array(options[:prefix]).join}#{join options[:interfix]}#{Array(options[:suffix]).join}"
   end
 end
