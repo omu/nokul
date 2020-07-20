@@ -14,8 +14,8 @@ gem 'sidekiq'
 
 # database
 gem 'pg'
-gem 'pg_search', '>= 2.3.2'
 gem 'pghero', '>= 2.4.2'
+gem 'pg_search', '>= 2.3.2'
 gem 'rein', '>= 5.1.0'
 
 # active-record
