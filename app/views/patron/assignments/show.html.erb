@@ -1,6 +1,6 @@
 <%= action_bar do %>
   <%= link_to_back :back %>
-  <%= link_to_edit [:edit, :patron_assignment, id: @user.id] %>
+  <%= link_to_edit [:edit, :patron_assignment, { id: @user.id }] %>
 <% end %>
 
 <div class="card">
