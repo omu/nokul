@@ -6,7 +6,7 @@
       <% end %>
       <div class='row'>
         <div class='col-sm-6'>
-          <%= f.association :lecturer, collection:    [*@available_course&.unit&.subtree_employees],
+          <%= f.association :lecturer, collection:    Array(@available_course&.unit&.subtree_employees),
                                        label_method:  lambda { |c| full_name(c) },
                                        include_blank: false,
                                        input_html:    { id: 'group_lecturer_id', class: 'group_lecturer' } %>
