@@ -28,12 +28,12 @@ jobs:
       # first job at this stage
       name: "Static analysis checks"
       before_script: skip
-      script: docker-compose run test bundle exec rake static_analysis:all
+      script: docker-compose run test bundle exec rails zeitwerk:check static_analysis:all
 
       # second job at this stage
     - name: "Security and Database Tests"
       before_script: skip
-      script: docker-compose run test bundle exec rake db:index
+      script: docker-compose run test bundle exec rails db:index
 
       # third job at this stage
     - name: "Integration Tests"
