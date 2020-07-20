@@ -89,7 +89,7 @@ group :development, :test do
   gem 'bundler-audit'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'dotenv-rails', '>= 2.7.5'
-  gem 'erb_lint', '>= 0.0.32', require: false
+  gem 'erb_lint', github: 'marcandre/erb-lint', branch: 'rubocop_v1'
   gem 'lol_dba', '>= 2.2.0'
   gem 'rubocop'
   gem 'rubocop-minitest'
