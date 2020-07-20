@@ -3,8 +3,8 @@
 require 'test_helper'
 
 class CourseTypeTest < ActiveSupport::TestCase
-  extend Support::Minitest::AssociationHelper
-  extend Support::Minitest::ValidationHelper
+  extend Nokul::Support::Minitest::AssociationHelper
+  extend Nokul::Support::Minitest::ValidationHelper
 
   # relations
   has_many :courses, dependent: :nullify

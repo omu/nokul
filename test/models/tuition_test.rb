@@ -3,8 +3,8 @@
 require 'test_helper'
 
 class TuitionTest < ActiveSupport::TestCase
-  extend Support::Minitest::AssociationHelper
-  extend Support::Minitest::ValidationHelper
+  extend Nokul::Support::Minitest::AssociationHelper
+  extend Nokul::Support::Minitest::ValidationHelper
 
   # relations
   belongs_to :academic_term

@@ -17,7 +17,7 @@ module Academics
   end
 
   def load_from_file
-    raw = Support::Sensitive.read(YAML_PATH)
+    raw = Nokul::Support::Sensitive.read(YAML_PATH)
     YAML.safe_load(raw)
   end
 

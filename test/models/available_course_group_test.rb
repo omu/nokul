@@ -3,9 +3,9 @@
 require 'test_helper'
 
 class AvailableCourseGroupTest < ActiveSupport::TestCase
-  extend Support::Minitest::AssociationHelper
-  extend Support::Minitest::CallbackHelper
-  extend Support::Minitest::ValidationHelper
+  extend Nokul::Support::Minitest::AssociationHelper
+  extend Nokul::Support::Minitest::CallbackHelper
+  extend Nokul::Support::Minitest::ValidationHelper
 
   # relations
   belongs_to :available_course, counter_cache: :groups_count

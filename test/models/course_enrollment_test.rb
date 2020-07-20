@@ -3,9 +3,9 @@
 require 'test_helper'
 
 class CourseEnrollmentTest < ActiveSupport::TestCase
-  extend Support::Minitest::AssociationHelper
-  extend Support::Minitest::EnumerationHelper
-  extend Support::Minitest::ValidationHelper
+  extend Nokul::Support::Minitest::AssociationHelper
+  extend Nokul::Support::Minitest::EnumerationHelper
+  extend Nokul::Support::Minitest::ValidationHelper
 
   # enums
   enum status: { draft: 0, saved: 1 }

@@ -3,10 +3,10 @@
 require 'test_helper'
 
 class SemesterRegistrationTest < ActiveSupport::TestCase
-  extend Support::Minitest::AssociationHelper
-  extend Support::Minitest::CallbackHelper
-  extend Support::Minitest::EnumerationHelper
-  extend Support::Minitest::ValidationHelper
+  extend Nokul::Support::Minitest::AssociationHelper
+  extend Nokul::Support::Minitest::CallbackHelper
+  extend Nokul::Support::Minitest::EnumerationHelper
+  extend Nokul::Support::Minitest::ValidationHelper
 
   # callbacks
   before_validation :assign_academic_term_and_semester

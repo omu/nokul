@@ -3,9 +3,9 @@
 require 'test_helper'
 
 class LdapSyncErrorTest < ActiveSupport::TestCase
-  extend Support::Minitest::AssociationHelper
-  extend Support::Minitest::CallbackHelper
-  extend Support::Minitest::ValidationHelper
+  extend Nokul::Support::Minitest::AssociationHelper
+  extend Nokul::Support::Minitest::CallbackHelper
+  extend Nokul::Support::Minitest::ValidationHelper
 
   belongs_to :ldap_entity
 

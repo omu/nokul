@@ -3,7 +3,7 @@
 require 'test_helper'
 
 class PlaceTypeTest < ActiveSupport::TestCase
-  extend Support::Minitest::AssociationHelper
+  extend Nokul::Support::Minitest::AssociationHelper
 
   # relations
   has_one :building, dependent: :destroy

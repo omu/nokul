@@ -7,8 +7,8 @@ module ReferenceTestModule
 
   # callbacks
   included do
-    extend Support::Minitest::CallbackHelper
-    extend Support::Minitest::ValidationHelper
+    extend Nokul::Support::Minitest::CallbackHelper
+    extend Nokul::Support::Minitest::ValidationHelper
 
     # validations: presence
     validates_presence_of :name

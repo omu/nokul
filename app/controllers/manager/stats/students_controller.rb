@@ -7,7 +7,7 @@ module Manager
       before_action do
         authorize(current_user, policy_class: Manager::Stats::StudentPolicy)
       end
-      rescue_from Support::RestClient::HTTPError, with: -> {
+      rescue_from Nokul::Support::RestClient::HTTPError, with: -> {
         render status: :internal_server_error
       }
 

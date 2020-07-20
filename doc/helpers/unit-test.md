@@ -13,7 +13,7 @@ Unit Test
 Associations
 ------------
 
-- Support::Minitest::AssociationHelper
+- Nokul::Support::Minitest::AssociationHelper
 
 ### `has_one`
 
@@ -47,7 +47,7 @@ Associations
 Callbacks
 ---------
 
-- Support::Minitest::CallbackHelper
+- Nokul::Support::Minitest::CallbackHelper
 
 ```ruby
   after_commit :method_name
@@ -74,7 +74,7 @@ Callbacks
 Validations
 -----------
 
-- Support::Minitest::ValidationHelper
+- Nokul::Support::Minitest::ValidationHelper
 
 ### Presence
 
@@ -124,7 +124,7 @@ validates_numerical_range :yoksis_code, less_than_or_equal_to: 2000
 
 ### Enums
 
-- Support::Minitest::EnumerationHelper
+- Nokul::Support::Minitest::EnumerationHelper
 
 ```ruby
 enum term: { fall: 0, spring: 1, summer: 2 }
@@ -134,10 +134,10 @@ enum term: { fall: 0, spring: 1, summer: 2 }
 
 ```ruby
 class AcademicTermTest < ActiveSupport::TestCase
-  extend Support::Minitest::AssociationHelper
-  extend Support::Minitest::CallbackHelper
-  extend Support::Minitest::EnumerationHelper
-  extend Support::Minitest::ValidationHelper
+  extend Nokul::Support::Minitest::AssociationHelper
+  extend Nokul::Support::Minitest::CallbackHelper
+  extend Nokul::Support::Minitest::EnumerationHelper
+  extend Nokul::Support::Minitest::ValidationHelper
 
   # relations
   has_many :calendars, dependent: :nullify

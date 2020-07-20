@@ -3,8 +3,8 @@
 require 'test_helper'
 
 class UnitTypeTest < ActiveSupport::TestCase
-  extend Support::Minitest::AssociationHelper
-  extend Support::Minitest::EnumerationHelper
+  extend Nokul::Support::Minitest::AssociationHelper
+  extend Nokul::Support::Minitest::EnumerationHelper
   include ReferenceTestModule
 
   # relations

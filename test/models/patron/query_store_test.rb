@@ -17,9 +17,9 @@ end
 
 module Patron
   class QueryStoreTest < ActiveSupport::TestCase
-    extend Support::Minitest::AssociationHelper
-    extend Support::Minitest::EnumerationHelper
-    extend Support::Minitest::ValidationHelper
+    extend Nokul::Support::Minitest::AssociationHelper
+    extend Nokul::Support::Minitest::EnumerationHelper
+    extend Nokul::Support::Minitest::ValidationHelper
 
     # enumerations
     enum type: { exclusive: 0, inclusive: 1 }
