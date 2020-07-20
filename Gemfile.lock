@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/rails/rails.git
-  revision: ce81714f1c99d4ff35a32c64b209277f710362a0
+  revision: dcf545d20ca6110a360780bda1ba058d7083167a
   specs:
     actioncable (6.1.0.alpha)
       actionpack (= 6.1.0.alpha)
@@ -152,7 +152,7 @@ GEM
       httpclient (>= 2.5.3.3)
     aws-eventstream (1.1.0)
     aws-partitions (1.343.0)
-    aws-sdk-core (3.103.0)
+    aws-sdk-core (3.104.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.239.0)
       aws-sigv4 (~> 1.1)
@@ -251,7 +251,7 @@ GEM
     hashie (4.1.0)
     html_tokenizer (0.0.7)
     httpclient (2.8.3)
-    i18n (1.8.3)
+    i18n (1.8.4)
       concurrent-ruby (~> 1.0)
     image_processing (1.11.0)
       mini_magick (>= 4.9.5, < 5)
@@ -346,7 +346,7 @@ GEM
       rack (>= 1.0, < 3)
     rack-mini-profiler (2.0.2)
       rack (>= 1.2.0)
-    rack-oauth2 (1.15.0)
+    rack-oauth2 (1.16.0)
       activesupport
       attr_required
       httpclient
@@ -387,11 +387,11 @@ GEM
       rubocop-ast (>= 0.0.3, < 1.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 2.0)
-    rubocop-ast (0.1.0)
+    rubocop-ast (0.2.0)
       parser (>= 2.7.0.1)
     rubocop-minitest (0.9.0)
       rubocop (>= 0.74)
-    rubocop-performance (1.7.0)
+    rubocop-performance (1.7.1)
       rubocop (>= 0.82.0)
     rubocop-rails (2.6.0)
       activesupport (>= 4.2.0)
@@ -448,7 +448,7 @@ GEM
       attr_required (>= 0.0.5)
       httpclient (>= 2.4)
     swearjar (1.4.0)
-    telephone_number (1.4.7)
+    telephone_number (1.4.8)
     thor (1.0.1)
     tilt (2.0.10)
     twilio-ruby (5.39.1)
@@ -490,7 +490,7 @@ GEM
       activesupport
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.3.1)
+    zeitwerk (2.4.0)
 
 PLATFORMS
   ruby
