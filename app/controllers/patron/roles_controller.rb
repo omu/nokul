@@ -58,7 +58,7 @@ module Patron
 
     def role_params
       params.require(:patron_role).permit(:name, :identifier, :locked, role_permissions_attributes: [
-                                            :id, :permission_id, :_destroy, { privileges: [] }
+                                            :id, :permission_id, :_destroy, privileges: []
                                           ])
     end
   end

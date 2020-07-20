@@ -147,7 +147,7 @@ class Unit < ApplicationRecord
   end
 
   def self.actively_coursable
-    active.coursable.joins(calendars: [{ calendar_events: :calendar_event_type }])
+    active.coursable.joins(calendars: [calendar_events: :calendar_event_type])
           .where(calendar_event_types: { identifier: 'add_drop_available_courses' })
           .where('? BETWEEN start_time AND end_time', Time.current)
   end

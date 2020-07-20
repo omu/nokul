@@ -32,7 +32,7 @@
             </tr>
           </thead>
           <tbody>
-            <% @enrollments.includes(:available_course_group, semester_registration: [{ student: :user }]).each do |enrollment| %>
+            <% @enrollments.includes(:available_course_group, semester_registration: [student: :user]).each do |enrollment| %>
               <tr>
                 <% student = enrollment.student %>
                 <td><%= student.student_number %></td>
