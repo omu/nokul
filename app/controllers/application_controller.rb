@@ -32,7 +32,7 @@ class ApplicationController < ActionController::Base
     if account
       session[:account] = account.identifier
       flash[:notice]    = t('switched_account')
-      path              = [*account&.root_path, only_path: true]
+      path              = [*account&.root_path, { only_path: true }]
     end
 
     redirect_to path

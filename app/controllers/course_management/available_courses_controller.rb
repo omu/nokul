@@ -16,7 +16,7 @@ module CourseManagement
     end
 
     def show
-      @groups = @available_course.groups.includes(lecturers: [lecturer: %i[title user]])
+      @groups = @available_course.groups.includes(lecturers: [{ lecturer: %i[title user] }])
       @evaluation_types =
         @available_course.evaluation_types.includes(:evaluation_type, course_assessment_methods: :assessment_method)
     end
@@ -69,7 +69,7 @@ module CourseManagement
         :curriculum_id, :curriculum_course_id, :unit_id, :coordinator_id,
         groups_attributes: [
           :id, :name, :quota, :_destroy,
-          lecturers_attributes: %i[id lecturer_id coordinator _destroy]
+          { lecturers_attributes: %i[id lecturer_id coordinator _destroy] }
         ]
       )
     end

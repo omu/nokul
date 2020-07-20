@@ -28,7 +28,7 @@ module Patron
 
     def update
       if @user.update(user_params)
-        redirect_to([:patron, :assignment, id: @user], notice: t('.success'))
+        redirect_to([:patron, :assignment, { id: @user }], notice: t('.success'))
       else
         render(:edit)
       end
@@ -42,7 +42,7 @@ module Patron
         @records    = @scope.preview_for_records(query_stores, user: @user)
         @collection = pagy_by_search(@records)
       else
-        redirect_to([:patron, :assignment, id: @user], alert: t('.error'))
+        redirect_to([:patron, :assignment, { id: @user }], alert: t('.error'))
       end
     end
 

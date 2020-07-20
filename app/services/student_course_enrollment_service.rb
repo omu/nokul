@@ -37,7 +37,8 @@ class StudentCourseEnrollmentService # rubocop:disable Metrics/ClassLength
     @course_enrollments ||=
       @student.current_registration
               .course_enrollments
-              .includes(:available_course_group, available_course: [curriculum_course: %i[course curriculum_semester]])
+              .includes(:available_course_group,
+                        available_course: [{ curriculum_course: %i[course curriculum_semester] }])
   end
 
   def enroll(course_enrollment_params)
