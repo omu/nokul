@@ -21,7 +21,7 @@ module Patron
       end
 
       def collection(collection, attribute:)
-        [*collection].map do |item|
+        Array(collection).map do |item|
           [public_send(attribute, item), item]
         end
       end

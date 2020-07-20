@@ -74,7 +74,7 @@ module LinkHelper
   #                 edit: { text: 'Edit Text', options: { class: 'btn btn-danger' } },
   #                 destroy: { options: { class: 'btn btn-danger' } })
   def link_to_actions(path, options = {})
-    actions = BASE_ACTIONS - [*options[:except]].map(&:to_sym)
+    actions = BASE_ACTIONS - Array(options[:except]).map(&:to_sym)
     safe_join(create_links_for(path, actions, options), ' ')
   end
 

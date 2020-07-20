@@ -13,7 +13,7 @@ module LDAP
     end
 
     def identity
-      @identity ||= [*identities.user_identity].first || identities.new
+      @identity ||= Array(identities.user_identity).first || identities.new
     end
 
     delegate :country_of_citizenship, to: :identity, allow_nil: true

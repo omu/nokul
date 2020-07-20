@@ -36,7 +36,7 @@ module Nokul
         private
 
         def emit
-          [*yield].join_affixed(**options)
+          Array(yield).join_affixed(**options)
         end
       end
     end

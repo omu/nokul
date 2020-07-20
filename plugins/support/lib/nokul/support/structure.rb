@@ -40,7 +40,7 @@ module Nokul
         def to_h(omit_if_nil: self.class.members)
           result = {}
           self.class.members.map do |member|
-            next if (value = __send__(member)).nil? && [*(omit_if_nil || [])].any? { |key| key.to_sym == member }
+            next if (value = __send__(member)).nil? && Array((omit_if_nil || [])).any? { |key| key.to_sym == member }
 
             result[member] = value
           end

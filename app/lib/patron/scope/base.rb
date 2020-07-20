@@ -12,7 +12,7 @@ module Patron
         end
 
         def preview_for_records(records, user: nil)
-          query = Query::Builder.build_for_preview(new(user), [*records])
+          query = Query::Builder.build_for_preview(new(user), Array(records))
 
           query.present? ? model.where(query) : model.none
         end
