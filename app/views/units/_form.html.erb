@@ -42,7 +42,7 @@
             <div class='form-group col-sm-6'>
               <%= f.association :district,
                                 collection:         Country.find_by(
-                                  alpha_2_code: Tenant.configuration.contact.country
+                                  alpha_2_code: Nokul::Tenant.configuration.contact.country
                                 ).cities.includes(:districts).order(:name),
                                 as:                 :grouped_select,
                                 group_method:       :districts,

@@ -120,7 +120,7 @@ class User < ApplicationRecord
 
   def permalink
     username, domain = email.split('@') if email
-    username if domain.eql?(Tenant.configuration.email.domain)
+    username if domain.eql?(Nokul::Tenant.configuration.email.domain)
   end
 
   # send devise e-mails through active job

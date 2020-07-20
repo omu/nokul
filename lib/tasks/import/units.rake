@@ -3,11 +3,11 @@
 namespace :import do
   desc 'Imports units from tenant unit data'
   task units: :environment do
-    units = Tenant.units
+    units = Nokul::Tenant.units
     progress_bar = ProgressBar.spawn('Units', units.count)
 
     units.each do |unit|
-      default_district = District.find_by(name: Tenant.configuration.contact.district)
+      default_district = District.find_by(name: Nokul::Tenant.configuration.contact.district)
       parent_unit = if unit.parent_detsis_id
                       Unit.find_by(detsis_id: unit.parent_detsis_id)
                     elsif unit.parent_yoksis_id

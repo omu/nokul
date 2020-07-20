@@ -36,6 +36,6 @@ module Rack
     end
 
     # allow requests from Tenant subnet
-    safelist_ip(Tenant.configuration.network.subnet)
+    safelist_ip(Nokul::Tenant.configuration.network.subnet)
   end
 end

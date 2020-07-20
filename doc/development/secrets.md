@@ -62,5 +62,5 @@ Tenant Sırları
 - Tenant sırlarını uygulama içerisinde kullan:
 
   ```ruby
-  Tenant.credentials.dig(:foo, :bar, :baz)
+  Nokul::Tenant.credentials.dig(:foo, :bar, :baz)
   ```

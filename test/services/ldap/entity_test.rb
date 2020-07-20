@@ -27,7 +27,7 @@ module Ldap
 
     test 'eduPersonPrincipalName attribute' do
       assert_equal @entity.eduPersonPrincipalName,
-                   "#{@user.username}@#{Tenant.configuration.ldap.organization}"
+                   "#{@user.username}@#{Nokul::Tenant.configuration.ldap.organization}"
     end
 
     test 'eduPersonPrincipalNamePrior attribute' do
@@ -46,7 +46,7 @@ module Ldap
         student@_.bilgisayar-pr.bilgisayar.muhendislik
         member@_.mf-mat-pr.matematik-fen.egitim
         student@_.mf-mat-pr.matematik-fen.egitim
-      ].map { |item| "#{item}.#{Tenant.configuration.ldap.organization}" }
+      ].map { |item| "#{item}.#{Nokul::Tenant.configuration.ldap.organization}" }
 
       assert_equal @entity.eduPersonScopedAffiliation, affiliations
     end
@@ -80,14 +80,14 @@ module Ldap
     end
 
     test 'schacHomeOrganization attribute' do
-      assert_equal @entity.schacHomeOrganization, Tenant.configuration.ldap.organization
+      assert_equal @entity.schacHomeOrganization, Nokul::Tenant.configuration.ldap.organization
     end
 
     test 'schacPersonalUniqueCode attribute' do
       assert_equal @entity.schacPersonalUniqueCode, [
-        "urn:schac:personalUniqueCode:tr:employeeID:#{Tenant.configuration.ldap.organization}:A2000",
-        "urn:schac:personalUniqueCode:tr:studentID:#{Tenant.configuration.ldap.organization}:12345",
-        "urn:schac:personalUniqueCode:tr:studentID:#{Tenant.configuration.ldap.organization}:98765"
+        "urn:schac:personalUniqueCode:tr:employeeID:#{Nokul::Tenant.configuration.ldap.organization}:A2000",
+        "urn:schac:personalUniqueCode:tr:studentID:#{Nokul::Tenant.configuration.ldap.organization}:12345",
+        "urn:schac:personalUniqueCode:tr:studentID:#{Nokul::Tenant.configuration.ldap.organization}:98765"
       ]
     end
 

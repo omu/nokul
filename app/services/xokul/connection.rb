@@ -2,8 +2,8 @@
 
 module Xokul
   module Connection
-    BASE_URL     = Tenant.configuration.api_host
-    BEARER_TOKEN = Tenant.credentials.dig(:xokul, :bearer_token)
+    BASE_URL     = Nokul::Tenant.configuration.api_host
+    BEARER_TOKEN = Nokul::Tenant.credentials.dig(:xokul, :bearer_token)
     OPTIONS      = {
       headers:     { 'Authorization' => "Bearer #{BEARER_TOKEN}" },
       use_ssl:     true,
@@ -13,13 +13,13 @@ module Xokul
     private_constant :BASE_URL, :BEARER_TOKEN, :OPTIONS
 
     def self.request(path, params: {}, **options)
-      resp = Support::RestClient.get(
+      resp = Nokul::Support::RestClient.get(
         URI.join(BASE_URL, path).to_s, payload: params.to_json, **OPTIONS.merge(options)
       )
 
       resp.error!
       resp.decode
-    rescue Support::RestClient::HTTPError
+    rescue Nokul::Support::RestClient::HTTPError
       nil
     end
   end

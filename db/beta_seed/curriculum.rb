@@ -14,7 +14,7 @@ CourseType.create(
 CourseGroupType.create(name: 'Seçmeli Ders')
 
 class DepartmentCourse
-  include Support::Structure.of %i[
+  include Nokul::Support::Structure.of %i[
     code
     course_name
     course_type_code
@@ -98,7 +98,7 @@ class DepartmentCourse
   end
 end
 
-class DepartmentCourses < Support::Collection
+class DepartmentCourses < Nokul::Support::Collection
   def unit
     @unit ||= first.unit
   end

@@ -33,7 +33,7 @@ module LDAP
     end
 
     def configuration
-      @configuration ||= Tenant.credentials.ldap
+      @configuration ||= Nokul::Tenant.credentials.ldap
     end
 
     class << self

@@ -11,7 +11,7 @@ class VcardBuilderService
       VERSION:3.0
       N:#{@identity.last_name};#{@identity.first_name};;;
       FN:#{@identity.first_name} #{@identity.last_name}
-      ORG:#{Tenant.configuration.tenant.name}
+      ORG:#{Nokul::Tenant.configuration.tenant.name}
       TITLE:#{@identity.user.title}
       EMAIL:#{@identity.user.email}
       END:VCARD

@@ -70,7 +70,7 @@ module LDAP
 
       # Schema: eduPerson
       def eduPersonPrincipalName
-        "#{user.username}@#{Tenant.configuration.ldap.organization}"
+        "#{user.username}@#{Nokul::Tenant.configuration.ldap.organization}"
       end
 
       # Schema: eduPerson
@@ -115,7 +115,7 @@ module LDAP
 
       # Schema: schacContactLocation
       def schacHomeOrganization
-        Tenant.configuration.ldap.organization
+        Nokul::Tenant.configuration.ldap.organization
       end
 
       # Format:  urn:schac:personalUniqueCode:CountryCode:iNSS
@@ -174,7 +174,7 @@ module LDAP
                             .map { |item| item.abbreviation.to_s.downcase(:turkic).asciified }
                             .reverse!
 
-        "#{prefix}@_.#{abbreviations.join('.')}.#{Tenant.configuration.ldap.organization}"
+        "#{prefix}@_.#{abbreviations.join('.')}.#{Nokul::Tenant.configuration.ldap.organization}"
       end
     end
 
@@ -245,7 +245,7 @@ module LDAP
     end
 
     def dn
-      "uid=#{uid}, ou=people, #{Tenant.credentials.ldap.fetch(:dc, '')}"
+      "uid=#{uid}, ou=people, #{Nokul::Tenant.credentials.ldap.fetch(:dc, '')}"
     end
 
     def to_hash

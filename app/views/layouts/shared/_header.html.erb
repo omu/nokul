@@ -22,7 +22,7 @@
           <%= fa_icon('shield', text: t('.account_settings'), class: 'mfe-2') %>
         <% end %>
         <% if Nokul::SSO.enabled? %>
-          <%= link_to "#{Tenant.credentials.lemonldap[:issuer]}/oauth2/logout", class: 'dropdown-item' do %>
+          <%= link_to "#{Nokul::Tenant.credentials.lemonldap[:issuer]}/oauth2/logout", class: 'dropdown-item' do %>
             <%= fa_icon('lock', text: t('.logout'), class: 'mfe-2') %>
           <% end %>
         <% else %>

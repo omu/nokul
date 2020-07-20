@@ -46,7 +46,7 @@ module Twilio
         response = Authy::API.request_qr_code(
           id:      user.authy_id,
           qr_size: 500,
-          label:   Tenant.configuration.name
+          label:   Nokul::Tenant.configuration.name
         )
 
         if response.ok?
