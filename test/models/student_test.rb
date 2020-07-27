@@ -86,8 +86,8 @@ class StudentTest < ActiveSupport::TestCase
   end
 
   test 'gpa method' do
-    assert_equal students(:serhat).gpa, 1.8
-    assert_equal students(:serhat_omu).gpa, 0
+    assert_in_delta(students(:serhat).gpa, 1.8)
+    assert_equal(0, students(:serhat_omu).gpa)
   end
 
   test 'preparatory_class_repetition? method' do

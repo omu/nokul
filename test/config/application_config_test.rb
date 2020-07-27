@@ -18,11 +18,11 @@ class ApplicationConfigTest < ActiveSupport::TestCase
   end
 
   test 'Time zone should match with Istanbul' do
-    assert_equal @config.time_zone, 'Istanbul'
+    assert_equal('Istanbul', @config.time_zone)
   end
 
   test 'Default locale should be Turkish' do
-    assert_equal @config.i18n.default_locale, :tr
+    assert_equal(:tr, @config.i18n.default_locale)
   end
 
   test 'Turkish and English must be in available locales' do
@@ -31,11 +31,11 @@ class ApplicationConfigTest < ActiveSupport::TestCase
   end
 
   test 'image_processor is set to :vips' do
-    assert_equal Rails.application.config.active_storage.variant_processor, :vips
+    assert_equal(:vips, Rails.application.config.active_storage.variant_processor)
   end
 
   test 'schema format is set to :sql' do
-    assert_equal Rails.application.config.active_record.schema_format, :sql
+    assert_equal(:sql, Rails.application.config.active_record.schema_format)
   end
 
   test 'rack::attack is up and running as middleware' do

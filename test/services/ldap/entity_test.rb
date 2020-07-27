@@ -18,11 +18,11 @@ module Ldap
     end
 
     test 'eduPersonAffiliation attribute' do
-      assert_equal @entity.eduPersonAffiliation, %w[member employee faculty student]
+      assert_equal(%w[member employee faculty student], @entity.eduPersonAffiliation)
     end
 
     test 'eduPersonPrimaryAffiliation attribute' do
-      assert_equal @entity.eduPersonPrimaryAffiliation, 'faculty'
+      assert_equal('faculty', @entity.eduPersonPrimaryAffiliation)
     end
 
     test 'eduPersonPrincipalName attribute' do
@@ -31,7 +31,7 @@ module Ldap
     end
 
     test 'eduPersonPrincipalNamePrior attribute' do
-      assert_equal @entity.eduPersonPrincipalNamePrior, []
+      assert_equal([], @entity.eduPersonPrincipalNamePrior)
     end
 
     test 'eduPersonScopedAffiliation attribute' do
@@ -64,7 +64,7 @@ module Ldap
     end
 
     test 'schacCountryOfCitizenship attribute' do
-      assert_equal @entity.schacCountryOfCitizenship, 'se'
+      assert_equal('se', @entity.schacCountryOfCitizenship)
     end
 
     test 'schacDateOfBirth attribute' do
@@ -76,7 +76,7 @@ module Ldap
     end
 
     test 'schacGender attribute' do
-      assert_equal @entity.schacGender, '1'
+      assert_equal('1', @entity.schacGender)
     end
 
     test 'schacHomeOrganization attribute' do
@@ -110,18 +110,18 @@ module Ldap
     end
 
     test 'objectclass attribute' do
-      assert_equal @entity.objectclass, %w[
-        person
-        organizationalPerson
-        inetOrgPerson
-        eduPerson
-        schacPersonalCharacteristics
-        schacContactLocation
-        schacLinkageIdentifiers
-        schacEntryMetadata
-        schacUserEntitlements
-        schacExperimentalOC
-      ]
+      assert_equal(%w[
+                     person
+                     organizationalPerson
+                     inetOrgPerson
+                     eduPerson
+                     schacPersonalCharacteristics
+                     schacContactLocation
+                     schacLinkageIdentifiers
+                     schacEntryMetadata
+                     schacUserEntitlements
+                     schacExperimentalOC
+                   ], @entity.objectclass)
     end
   end
 end

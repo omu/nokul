@@ -18,6 +18,6 @@ class LdapEntitySaveJobTest < ActiveJob::TestCase
   end
 
   test 'LDAP::EntitySaveJob runs in the high priority queue' do
-    assert_equal LDAP::EntitySaveJob.new.queue_name, 'high'
+    assert_equal('high', LDAP::EntitySaveJob.new.queue_name)
   end
 end

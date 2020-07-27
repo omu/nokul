@@ -18,11 +18,11 @@ class StudentCourseEnrollmentServiceTest < ActiveSupport::TestCase
   end
 
   test 'selected_ects method' do
-    assert_equal @service.selected_ects, 4
+    assert_equal(4, @service.selected_ects)
   end
 
   test 'remaining_ects method' do
-    assert_equal @service.remaining_ects, 32
+    assert_equal(32, @service.remaining_ects)
   end
 
   test 'course_enrollments method' do

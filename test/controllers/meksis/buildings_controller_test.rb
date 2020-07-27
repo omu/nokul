@@ -30,8 +30,8 @@ module Meksis
 
       @building.reload
 
-      assert_equal @building.latitude, 41.36442543
-      assert_equal @building.longitude, 36.18540287
+      assert_in_delta(@building.latitude, 41.36442543)
+      assert_in_delta(@building.longitude, 36.18540287)
       assert_redirected_to meksis_building_path(@building)
       assert_equal translate('meksis.buildings.update.success'), flash[:notice]
     end

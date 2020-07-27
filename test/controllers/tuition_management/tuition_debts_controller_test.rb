@@ -43,7 +43,7 @@ module TuitionManagement
 
       assert_equal tuition_debt.student, @student
       assert_equal tuition_debt.academic_term, @academic_term
-      assert_equal tuition_debt.amount, 24_600
+      assert_equal(24_600, tuition_debt.amount)
       assert_equal tuition_debt.due_date, '2019-03-15 23:00:00'.in_time_zone
 
       assert_redirected_to :tuition_debts
@@ -68,7 +68,7 @@ module TuitionManagement
 
       tuition_debt.reload
 
-      assert_equal tuition_debt.amount, 1500
+      assert_equal(1500, tuition_debt.amount)
       assert tuition_debt.paid
       assert_redirected_to tuition_debts_path
       assert_equal translate('.update.success'), flash[:notice]

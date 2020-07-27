@@ -11,13 +11,13 @@ module Ldap
     end
 
     test 'user can respond to ldap_roles method' do
-      assert_equal @user1.ldap_roles, %i[faculty student]
-      assert_equal @user2.ldap_roles, %i[affiliate]
+      assert_equal(%i[faculty student], @user1.ldap_roles)
+      assert_equal(%i[affiliate], @user2.ldap_roles)
     end
 
     test 'user can respond to ldap_gender method' do
-      assert_equal @user1.ldap_gender, '1'
-      assert_equal @user2.ldap_gender, '9'
+      assert_equal('1', @user1.ldap_gender)
+      assert_equal('9', @user2.ldap_gender)
     end
 
     test 'user can respond to username method' do
@@ -25,7 +25,7 @@ module Ldap
     end
 
     test 'user can respond to place_of_birth_for_ldap method' do
-      assert_equal @user1.place_of_birth_for_ldap, 'Stockholm, İsveç'
+      assert_equal('Stockholm, İsveç', @user1.place_of_birth_for_ldap)
     end
 
     test 'user can respond to identity method' do

@@ -33,7 +33,7 @@ class AccountTest < ApplicationSystemTestCase
     assert roi.has_link?(t('layouts.shared.menus.admin.users'))
   end
 
-  def roi
+  def test_roi
     @roi = page.find('.c-sidebar-nav')
   end
 end

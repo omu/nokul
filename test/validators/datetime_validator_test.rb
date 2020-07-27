@@ -130,6 +130,6 @@ class DatetimeValidatorTest < ActiveSupport::TestCase
 
     assert_not       @instance.valid?
     assert_not_empty @instance.errors[:started_at]
-    assert_equal     @instance.errors.messages[:started_at], ['test message for after', 'test message for before']
+    assert_equal(['test message for after', 'test message for before'], @instance.errors.messages[:started_at])
   end
 end

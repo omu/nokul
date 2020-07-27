@@ -34,6 +34,6 @@ class CurriculumSemesterTest < ActiveSupport::TestCase
 
   # custom methods
   test 'total_ects method' do
-    assert_equal curriculum_semesters(:one).total_ects, 6.0
+    assert_in_delta(curriculum_semesters(:one).total_ects, 6.0)
   end
 end

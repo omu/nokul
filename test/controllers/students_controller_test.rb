@@ -30,11 +30,11 @@ class StudentsControllerTest < ActionDispatch::IntegrationTest
 
     @student.reload
 
-    assert_equal @student.scholarship_type_name, 'Kara Kuvvetleri Komutanlığı'
-    assert_equal @student.entrance_type.name, 'ÖSYS'
+    assert_equal('Kara Kuvvetleri Komutanlığı', @student.scholarship_type_name)
+    assert_equal('ÖSYS', @student.entrance_type.name)
     assert_equal @student.registration_date, '2018-09-12 08:00:00'.in_time_zone
     assert_equal @student.registration_term, @academic_term
-    assert_equal @student.preparatory_class, 1
+    assert_equal(1, @student.preparatory_class)
     assert @student.other_studentship
     assert_redirected_to user_path(@student.user)
     assert_equal translate('students.update.success'), flash[:notice]
