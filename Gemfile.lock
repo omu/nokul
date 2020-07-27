@@ -180,7 +180,7 @@ GEM
       aws-sigv4 (~> 1.1)
     aws-sigv4 (1.2.1)
       aws-eventstream (~> 1, >= 1.0.2)
-    bcrypt (3.1.13)
+    bcrypt (3.1.15)
     better_html (1.0.15)
       actionview (>= 4.0)
       activesupport (>= 4.0)
@@ -507,7 +507,7 @@ DEPENDENCIES
   ancestry (>= 3.0.7)
   authy
   aws-sdk-s3
-  bcrypt (~> 3.1.7)
+  bcrypt (~> 3.1.15)
   bootsnap
   brakeman
   bullet!
