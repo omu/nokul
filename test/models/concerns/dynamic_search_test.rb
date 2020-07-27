@@ -17,7 +17,7 @@ class DynamicSearchTest < ActiveSupport::TestCase
 
   test 'should defined search keys for model' do
     DynamicSearchModel.init
-    assert_equal DynamicSearchModel.dynamic_search_keys, %i[foo bar]
+    assert_equal(%i[foo bar], DynamicSearchModel.dynamic_search_keys)
   end
 
   test 'search keys not defined throws an error message when raised' do
@@ -50,9 +50,9 @@ class DynamicSearchTest < ActiveSupport::TestCase
     query2 = DynamicSearchModel.send(:build_query_for_dynamic_where, param2)
     query3 = DynamicSearchModel.send(:build_query_for_dynamic_where, param3)
     # rubocop:enable Style/Send
-    assert_equal query1, foo: 'Test Foo'
-    assert_equal query2, {}
-    assert_equal query3, {}
+    assert_equal({ foo: 'Test Foo' }, query1)
+    assert_equal({}, query2)
+    assert_equal({}, query3)
   end
 
   test 'should dynamic search with empty parameter for course model' do

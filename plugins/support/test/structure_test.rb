@@ -35,19 +35,23 @@ module Nokul
         unit = Basic.new(name: 'Mühendislik Fakültesi', abbreviation: 'ABC',
                          yoksis_id: '122183', unit_type_id: 'Fakülte')
 
-        assert_equal unit.to_h, name:         'Mühendislik Fakültesi',
-                                abbreviation: 'ABC',
-                                yoksis_id:    '122183',
-                                unit_type_id: 'Fakülte'
+        assert_equal({
+                       name:         'Mühendislik Fakültesi',
+                       abbreviation: 'ABC',
+                       yoksis_id:    '122183',
+                       unit_type_id: 'Fakülte'
+                     }, unit.to_h)
       end
 
       test 'can convert to a hash without nil values by default' do
         unit = Basic.new(name: 'Mühendislik Fakültesi', abbreviation: nil,
                          yoksis_id: '122183', unit_type_id: 'Fakülte')
 
-        assert_equal unit.to_h(omit_if_nil: %i[abbreviation]), name:         'Mühendislik Fakültesi',
-                                                               yoksis_id:    '122183',
-                                                               unit_type_id: 'Fakülte'
+        assert_equal({
+                       name:         'Mühendislik Fakültesi',
+                       yoksis_id:    '122183',
+                       unit_type_id: 'Fakülte'
+                     }, unit.to_h(omit_if_nil: %i[abbreviation]))
       end
 
       # rubocop:disable Performance/RedundantMerge
@@ -57,10 +61,12 @@ module Nokul
 
         unit.merge!(name: 'Ziraat Fakültesi', yoksis_id: '123456')
 
-        assert_equal unit.to_h, name:         'Ziraat Fakültesi',
-                                abbreviation: 'ABC',
-                                yoksis_id:    '123456',
-                                unit_type_id: 'Fakülte'
+        assert_equal({
+                       name:         'Ziraat Fakültesi',
+                       abbreviation: 'ABC',
+                       yoksis_id:    '123456',
+                       unit_type_id: 'Fakülte'
+                     }, unit.to_h)
       end
 
       test 'can merge with a structure object' do
@@ -71,10 +77,12 @@ module Nokul
 
         unit.merge!(other)
 
-        assert_equal unit.to_h, name:         'Ziraat Fakültesi',
-                                abbreviation: 'ABC',
-                                yoksis_id:    '123456',
-                                unit_type_id: 'Fakülte'
+        assert_equal({
+                       name:         'Ziraat Fakültesi',
+                       abbreviation: 'ABC',
+                       yoksis_id:    '123456',
+                       unit_type_id: 'Fakülte'
+                     }, unit.to_h)
       end
 
       KeepProperties = Class.new do
@@ -93,11 +101,13 @@ module Nokul
 
         unit.merge_keep!(name: 'Ziraat Fakültesi').to_h
 
-        assert_equal unit.to_h, name:         'Mühendislik Fakültesi',
-                                name_:        'Mühendislik Fakültesi',
-                                abbreviation: 'ABC',
-                                yoksis_id:    '122183',
-                                unit_type_id: 'Fakülte'
+        assert_equal({
+                       name:         'Mühendislik Fakültesi',
+                       name_:        'Mühendislik Fakültesi',
+                       abbreviation: 'ABC',
+                       yoksis_id:    '122183',
+                       unit_type_id: 'Fakülte'
+                     }, unit.to_h)
       end
 
       test 'should not keep if keeping member is nil' do
@@ -106,10 +116,12 @@ module Nokul
 
         unit.merge_keep!(name: 'Ziraat Fakültesi').to_h
 
-        assert_equal unit.to_h, name:         'Ziraat Fakültesi',
-                                abbreviation: 'ABC',
-                                yoksis_id:    '122183',
-                                unit_type_id: 'Fakülte'
+        assert_equal({
+                       name:         'Ziraat Fakültesi',
+                       abbreviation: 'ABC',
+                       yoksis_id:    '122183',
+                       unit_type_id: 'Fakülte'
+                     }, unit.to_h)
       end
       # rubocop:enable Performance/RedundantMerge
 

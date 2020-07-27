@@ -43,7 +43,7 @@ class CourseTest < ActiveSupport::TestCase
   test 'callbacks must set value the credit for a course' do
     course = courses(:test).dup
     course.update(code: 'DD101', theoric: 10, practice: 3)
-    assert_equal course.credit, 11.5
+    assert_in_delta(course.credit, 11.5)
   end
 
   # actions
@@ -52,6 +52,6 @@ class CourseTest < ActiveSupport::TestCase
     course.theoric = 8
     course.practice = 3
     course.laboratory = 4
-    assert_equal course.calculate_credit, 11.5
+    assert_in_delta(course.calculate_credit, 11.5)
   end
 end

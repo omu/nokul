@@ -54,7 +54,7 @@ class UnitTest < ActiveSupport::TestCase
   test 'callbacks must titlecase the name for a unit' do
     unit = units(:omu).dup
     unit.update!(yoksis_id: 123_459, name: 'wonderunit department')
-    assert_equal unit.name, 'Wonderunit Department'
+    assert_equal('Wonderunit Department', unit.name)
   end
 
   # search
@@ -174,7 +174,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'semester_type method' do
-    assert_equal units(:bilgisayar_muhendisligi_programi).semester_type, 'periodic'
-    assert_equal units(:dis_hekimligi_programı).semester_type, 'yearly'
+    assert_equal('periodic', units(:bilgisayar_muhendisligi_programi).semester_type)
+    assert_equal('yearly', units(:dis_hekimligi_programı).semester_type)
   end
 end

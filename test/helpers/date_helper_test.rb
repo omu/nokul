@@ -12,10 +12,10 @@ class DateHelperTest < ActionView::TestCase
   end
 
   test 'as_date helper formats dates in "d.m.y" format' do
-    assert_equal as_date('Wed, 26 Sep 2018'.to_date), '26.09.2018'
+    assert_equal('26.09.2018', as_date('Wed, 26 Sep 2018'.to_date))
   end
 
   test 'as_date_and_time helper formats times in "d.y.m h:m" format' do
-    assert_equal as_date_and_time('Wed, 26 Sep 2018 13:31:46 +0300'.to_time), '26.09.2018 - 13:31'
+    assert_equal('26.09.2018 - 13:31', as_date_and_time('Wed, 26 Sep 2018 13:31:46 +0300'.to_time))
   end
 end

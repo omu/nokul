@@ -59,7 +59,7 @@ class ArelTest < ActiveSupport::TestCase
   end
 
   test 'sanitize method' do
-    assert_equal @arel.sanitize(:contain, '100%'), '100\\%'
+    assert_equal('100\\%', @arel.sanitize(:contain, '100%'))
   end
 
   test 'format method' do

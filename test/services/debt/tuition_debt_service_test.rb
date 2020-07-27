@@ -20,9 +20,9 @@ module Debt
 
       assert_equal tuition_debt.student, students(:john)
       assert_equal tuition_debt.academic_term, academic_term
-      assert_equal tuition_debt.amount.to_f, 305
-      assert_equal tuition_debt.description, 'no_discount'
-      assert_equal tuition_debt.type, 'bulk'
+      assert_equal(305, tuition_debt.amount.to_f)
+      assert_equal('no_discount', tuition_debt.description)
+      assert_equal('bulk', tuition_debt.type)
       assert_not tuition_debt.paid
     end
 
@@ -35,9 +35,9 @@ module Debt
 
       assert_equal tuition_debt.student, @student
       assert_equal tuition_debt.academic_term, @academic_term
-      assert_equal tuition_debt.amount.to_f, 325
-      assert_equal tuition_debt.description, 'disability'
-      assert_equal tuition_debt.type, 'bulk'
+      assert_equal(325, tuition_debt.amount.to_f)
+      assert_equal('disability', tuition_debt.description)
+      assert_equal('bulk', tuition_debt.type)
       assert_not tuition_debt.paid
     end
 
@@ -49,8 +49,8 @@ module Debt
                                       Time.zone.now + 2.months)
 
       tuition_debt = TuitionDebt.last
-      assert_equal tuition_debt.amount.to_f, 650
-      assert_equal tuition_debt.description, 'no_discount'
+      assert_equal(650, tuition_debt.amount.to_f)
+      assert_equal('no_discount', tuition_debt.description)
     end
 
     test 'student from abroad' do
@@ -59,8 +59,8 @@ module Debt
                                       Time.zone.now + 2.months)
 
       tuition_debt = TuitionDebt.last
-      assert_equal tuition_debt.amount.to_f, 1500
-      assert_equal tuition_debt.description, 'no_discount'
+      assert_equal(1500, tuition_debt.amount.to_f)
+      assert_equal('no_discount', tuition_debt.description)
     end
   end
 end

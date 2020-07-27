@@ -27,6 +27,6 @@ class KpsAddressJobTest < ActiveJob::TestCase
   end
 
   test 'KPS:Address jobs runs in the high priority queue' do
-    assert_equal Kps::AddressSaveJob.new.queue_name, 'high'
+    assert_equal('high', Kps::AddressSaveJob.new.queue_name)
   end
 end

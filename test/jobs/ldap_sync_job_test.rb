@@ -18,6 +18,6 @@ class LdapSyncJobTest < ActiveJob::TestCase
   end
 
   test 'LDAP::SyncJob runs in the high priority queue' do
-    assert_equal LDAP::SyncJob.new.queue_name, 'high'
+    assert_equal('high', LDAP::SyncJob.new.queue_name)
   end
 end

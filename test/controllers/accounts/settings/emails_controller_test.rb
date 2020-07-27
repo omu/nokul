@@ -27,7 +27,7 @@ module Accounts
 
         @user.reload
 
-        assert_equal @user.email, 'sample@gmail.com'
+        assert_equal('sample@gmail.com', @user.email)
         assert_equal translate('.update.success'), flash[:notice]
         assert_redirected_to :settings
       end

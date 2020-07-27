@@ -110,7 +110,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'user can respond to title method' do
-    assert_equal users(:serhat).title, 'Araştırma Görevlisi'
+    assert_equal('Araştırma Görevlisi', users(:serhat).title)
   end
 
   %i[employee? student? academic?].each do |method|

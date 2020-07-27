@@ -5,12 +5,12 @@ require 'test_helper'
 class StringTest < ActiveSupport::TestCase
   test 'capitalize_turkish method can capitalize words in Turkish' do
     word = 'ışık ılık süt iç'
-    assert_equal word.capitalize_turkish, 'Işık Ilık Süt İç'
+    assert_equal 'Işık Ilık Süt İç', word.capitalize_turkish
   end
 
   test 'abbreviation method can generate abbreviations for words in Turkish' do
     word = 'istanbul ışık üniversitesi'
-    assert_equal word.abbreviation, 'İIÜ'
+    assert_equal 'İIÜ', word.abbreviation
   end
 
   test 'affixed works' do
