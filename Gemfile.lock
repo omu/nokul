@@ -22,7 +22,7 @@ GIT
 
 GIT
   remote: https://github.com/rails/rails.git
-  revision: dcf545d20ca6110a360780bda1ba058d7083167a
+  revision: e2cc2d1dfca51d15567671f2634fc28025480c1b
   specs:
     actioncable (6.1.0.alpha)
       actionpack (= 6.1.0.alpha)
@@ -258,7 +258,7 @@ GEM
     hashie (4.1.0)
     html_tokenizer (0.0.7)
     httpclient (2.8.3)
-    i18n (1.8.4)
+    i18n (1.8.5)
       concurrent-ruby (~> 1.0)
     image_processing (1.11.0)
       mini_magick (>= 4.9.5, < 5)
