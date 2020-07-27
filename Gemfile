@@ -59,7 +59,7 @@ gem 'wicked_pdf', '>= 2.0.2'
 gem 'jbuilder', '~> 2.10', '>= 2.10.0'
 
 # security
-gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.15'
 gem 'pwned'
 gem 'rack-attack'
 
