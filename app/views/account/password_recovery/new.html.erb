@@ -1,0 +1,49 @@
+<div class='col-md-8'>
+  <div class='card mx-4'>
+    <div class='card-body p-4'>
+      <h1 class='text-center'><%= t('.password_recovery') %></h1>
+      <%= simple_form_for(:password_recovery, url: password_recovery_path, authenticity_token: true) do |f| %>
+      <ul id='error_messages' class='list-group list-group-accent'></ul>
+        <% if @password_recovery.errors.full_messages.present? %>
+          <% @password_recovery.errors.full_messages.each do |error| %>
+            <li class='list-group-item list-group-item-accent-danger list-group-item-danger'> <%= error %> </li>
+          <% end %>
+        <% end %>
+        <fieldset class='border p-3'>
+          <legend class='w-auto'><%= t('.user_info') %></legend>
+          <div class='form-group row'>
+            <%= f.label :id_number, t('.id_number'), class: 'col-sm-3 col-form-label text-right' %>
+            <div class='col-sm-9'>
+              <%= f.input :id_number, required: true, label: false, autofocus: true, wrapper: false %>
+            </div>
+          </div>
+
+          <div class='form-group row'>
+            <%= f.label :mobile_phone, t('.mobile_phone'), class: 'col-sm-3 col-form-label text-right' %>
+            <div class='col-sm-9'>
+              <%= f.input :mobile_phone, type: 'tel', label: false, wrapper: false %>
+              <span id='error-msg' class='invalid-feedback d-block'></span>
+            </div>
+          </div>
+
+          <div class='form-group row'>
+            <div class='col-lg-6' style="float:none;margin:auto;">
+              <%= recaptcha_tags %>
+            </div>
+          </div>
+        </fieldset>
+        <br>
+        <%= f.button :submit, t('.verify'), class: 'btn btn-block btn-success' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%= javascript_include_tag 'shared/intl_tel_input_validation' %>
+<script type='text/javascript'>
+  $(document).ready(function() {
+    TelInputValidation('#password_recovery_mobile_phone', '#error-msg', <%= raw t('intl_tel_input.errors').values %>)
+  })
+</script>
+<style>
+  .iti.iti--allow-dropdown { width: 100%; }
+</style>

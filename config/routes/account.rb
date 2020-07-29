@@ -45,6 +45,11 @@ scope module: :account do
   get 'profile',                        to: 'profile#index'
   patch 'profile',                      to: 'profile#update'
 
+  get 'password_recovery',                      to: 'password_recovery#new'
+  post 'password_recovery',                     to: 'password_recovery#create'
+  get 'password_recovery/new_password',         to: 'password_recovery#edit'
+  post 'password_recovery/new_password',        to: 'password_recovery#update'
+
   namespace :profile do
     get :edit
     get :articles
