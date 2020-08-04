@@ -4,8 +4,8 @@ class PasswordRecoveryService
   include ActiveModel::Validations
 
   attr_accessor :id_number,
-                :new_password,
-                :new_password_confirmation,
+                :password,
+                :password_confirmation,
                 :token,
                 :mobile_phone,
                 :country,
@@ -38,15 +38,15 @@ class PasswordRecoveryService
   def update_password
     return false unless (user = find_signed_id)
 
-    user.password = new_password
-    user.password_confirmation = new_password_confirmation
+    user.password = password
+    user.password_confirmation = password_confirmation
     user.valid?
 
     return false unless errors.merge!(user.errors).empty?
 
     return false unless check_verification_code
 
-    user.update(password: new_password, password_confirmation: new_password_confirmation)
+    user.update(password: password, password_confirmation: password_confirmation)
   end
 
   def send_verification_code

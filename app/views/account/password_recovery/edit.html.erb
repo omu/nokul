@@ -2,7 +2,7 @@
   <div class='card mx-4'>
     <div class='card-body p-4'>
       <h1 class='text-center'><%= t('.reset_password') %></h1>
-      <%= simple_form_for(:password_recovery, url: password_recovery_new_password_path, authenticity_token: true) do |f| %>
+      <%= simple_form_for(:password_recovery, url: password_recovery_update_path, authenticity_token: true) do |f| %>
         <ul id='error_messages' class='list-group list-group-accent'></ul>
         <% if @password_recovery.errors.full_messages.present? %>
           <% @password_recovery.errors.full_messages.each do |error| %>
@@ -10,17 +10,17 @@
           <% end %>
         <% end %>
         <fieldset class='border p-3'>
-          <legend class='w-auto'><%= t('.new_password') %></legend>
+          <legend class='w-auto'><%= t('.password') %></legend>
           <div class='form-group row'>
-            <%= f.label :password, t('.new_password'), class: 'col-sm-3 col-form-label text-right' %>
+            <%= f.label :password, t('.password'), class: 'col-sm-3 col-form-label text-right' %>
             <div class='col-sm-9'>
-              <%= f.input :new_password, required: true, label: false, autofocus: true, wrapper: false %>
+              <%= f.input :password, required: true, label: false, autofocus: true, wrapper: false %>
             </div>
           </div>
           <div class='form-group row'>
-            <%= f.label :password, t('.new_password_confirmation'), class: 'col-sm-3 col-form-label text-right' %>
+            <%= f.label :password, t('.password_confirmation'), class: 'col-sm-3 col-form-label text-right' %>
             <div class='col-sm-9'>
-              <%= f.input :new_password_confirmation, required: true, label: false, autofocus: true, wrapper: false %>
+              <%= f.input :password_confirmation, required: true, label: false, autofocus: true, wrapper: false %>
             </div>
           </div>
           <div class='form-group row'>
