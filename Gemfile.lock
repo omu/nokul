@@ -266,6 +266,7 @@ GEM
     jbuilder (2.10.0)
       activesupport (>= 5.0.0)
     jmespath (1.4.0)
+    json (2.3.1)
     json-jwt (1.13.0)
       activesupport (>= 4.2)
       aes_key_wrap
@@ -373,6 +374,8 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    recaptcha (5.5.0)
+      json
     redis (4.2.1)
     regexp_parser (1.7.1)
     rein (5.1.0)
@@ -548,6 +551,7 @@ DEPENDENCIES
   rack-attack
   rack-mini-profiler
   rails!
+  recaptcha
   redis (~> 4.2)
   rein (>= 5.1.0)
   rollbar

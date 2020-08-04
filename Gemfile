@@ -62,6 +62,7 @@ gem 'jbuilder', '~> 2.10', '>= 2.10.0'
 gem 'bcrypt', '~> 3.1.15'
 gem 'pwned'
 gem 'rack-attack'
+gem 'recaptcha'
 
 # validators
 gem 'telephone_number'

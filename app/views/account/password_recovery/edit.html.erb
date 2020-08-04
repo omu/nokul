@@ -1,0 +1,39 @@
+<div class='col-md-8'>
+  <div class='card mx-4'>
+    <div class='card-body p-4'>
+      <h1 class='text-center'><%= t('.reset_password') %></h1>
+      <%= simple_form_for(:password_recovery, url: password_recovery_update_path, authenticity_token: true) do |f| %>
+        <ul id='error_messages' class='list-group list-group-accent'></ul>
+        <% if @password_recovery.errors.full_messages.present? %>
+          <% @password_recovery.errors.full_messages.each do |error| %>
+            <li class='list-group-item list-group-item-accent-danger list-group-item-danger'> <%= error %> </li>
+          <% end %>
+        <% end %>
+        <fieldset class='border p-3'>
+          <legend class='w-auto'><%= t('.password') %></legend>
+          <div class='form-group row'>
+            <%= f.label :password, t('.password'), class: 'col-sm-3 col-form-label text-right' %>
+            <div class='col-sm-9'>
+              <%= f.input :password, required: true, label: false, autofocus: true, wrapper: false %>
+            </div>
+          </div>
+          <div class='form-group row'>
+            <%= f.label :password, t('.password_confirmation'), class: 'col-sm-3 col-form-label text-right' %>
+            <div class='col-sm-9'>
+              <%= f.input :password_confirmation, required: true, label: false, autofocus: true, wrapper: false %>
+            </div>
+          </div>
+          <div class='form-group row'>
+            <%= f.label :verification_code, t('.verification_code'), class: 'col-sm-3 col-form-label text-right' %>
+            <div class='col-sm-9'>
+              <%= f.input :verification_code, required: true, label: false, autofocus: true, wrapper: false %>
+            </div>
+          </div>
+              <%= f.input :token, as: :hidden, required: true, input_html: { value: @password_recovery.token || params[:token] } %>
+        </fieldset>
+        <br>
+        <%= f.button :submit, t('.verify'), class: 'btn btn-block btn-success' %>
+      <% end %>
+    </div>
+  </div>
+</div>
