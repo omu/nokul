@@ -11,7 +11,7 @@ module Account
     end
 
     def create
-      @password_recovery = PasswordRecoveryService.new(params[:password_recovery])
+      @password_recovery = PasswordRecoveryService.new(password_recovery_create_params)
       if verify_recaptcha && @password_recovery.valid? && @password_recovery.send_verification_code
         redirect_to(password_recovery_update_path(token: @password_recovery.signed_id),
                     notice: I18n.t('.account.password_recovery.verification_code_sent'))
@@ -26,7 +26,7 @@ module Account
     end
 
     def update
-      @password_recovery = PasswordRecoveryService.new(params[:password_recovery])
+      @password_recovery = PasswordRecoveryService.new(password_recovery_update_params)
       if @password_recovery.update_password
         redirect_to login_path, notice: I18n.t('.account.password_recovery.success')
       else
@@ -35,6 +35,15 @@ module Account
     end
 
     private
+
+    def password_recovery_create_params
+      params.required(:password_recovery).permit(:id_number, :mobile_phone, :token)
+    end
+
+    def password_recovery_update_params
+      params.required(:password_recovery).permit(:country, :password, :password_confirmation, :token,
+                                                 :verification_code)
+    end
 
     def redirect_to_root
       redirect_to(:root)
