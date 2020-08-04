@@ -61,7 +61,8 @@ class PasswordRecoveryService
 
     return true if response.ok?
 
-    errors.add(:base, I18n.t("twilio.errors.#{response.error_code}")) && nil
+    errors.add(:base, I18n.t("twilio.errors.#{response.error_code}"))
+    false
   end
 
   private
