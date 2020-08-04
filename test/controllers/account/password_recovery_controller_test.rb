@@ -18,8 +18,8 @@ module Account
       end
     end
 
-    test 'should not get password_recovery_path without signed_id' do
-      get password_recovery_new_password_path
+    test 'should not get password_recovery_update_path without signed_id' do
+      get password_recovery_update_path
       assert_response :redirect
       assert_redirected_to password_recovery_path(locale: 'tr')
     end
