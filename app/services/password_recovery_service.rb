@@ -52,7 +52,8 @@ class PasswordRecoveryService
   def send_verification_code
     return true if Twilio::Verify.send_phone_verification_code(user.mobile_phone).ok?
 
-    errors.add(:base, I18n.t('.account.password_recovery.not_send_verify_code')) && nil
+    errors.add(:base, I18n.t('.account.password_recovery.not_send_verify_code'))
+    false
   end
 
   def check_verification_code
