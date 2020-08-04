@@ -13,8 +13,7 @@ module Account
     def create
       @password_recovery = PasswordRecoveryService.new(params[:password_recovery])
       if verify_recaptcha && @password_recovery.valid? && @password_recovery.send_verification_code
-        signed_id = @password_recovery.signed_id
-        redirect_to(password_recovery_new_password_path(token: signed_id),
+        redirect_to(password_recovery_new_password_path(token: @password_recovery.signed_id),
                     notice: I18n.t('.account.password_recovery.verification_code_sent'))
       else
         render(:new)
