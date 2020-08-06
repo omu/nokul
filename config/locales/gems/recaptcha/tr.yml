@@ -1,0 +1,5 @@
+tr:
+  recaptcha:
+    errors:
+      verification_failed: reCAPTCHA doğrulaması başarısız oldu, lütfen tekrar deneyin
+      recaptcha_unreachable: Oops, reCAPTCHA yanıtınızı doğrulayamıyoruz. Lütfen tekrar deneyin

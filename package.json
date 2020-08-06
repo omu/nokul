@@ -4,7 +4,7 @@
   "dependencies": {
     "@coreui/coreui-free-bootstrap-admin-template": "https://github.com/coreui/coreui-free-bootstrap-admin-template.git#master",
     "@rails/actioncable": "^6.0.3",
-    "@rails/actiontext": "^6.0.2",
+    "@rails/actiontext": "^6.0.3",
     "@rails/activestorage": "^6.0.3",
     "@rails/ujs": "^6.0.3",
     "@rails/webpacker": "5.0.1",
@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.5.0",
+    "eslint": "^7.6.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-node": "^11.1.0",
