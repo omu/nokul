@@ -42,7 +42,7 @@ module Manager
 
       def genders_and_degrees
         data     = Xokul::UBS::Statistic::Student.by_genders_and_degree
-        @degrees = data.map { |item| item[:degree] }.uniq!
+        @degrees = data.pluck(:degree).uniq!
         @series  = data.group_by { |item| item[:gender] }.map do |gender, values|
           {
             name: gender,
@@ -55,7 +55,7 @@ module Manager
 
       def non_graduates
         data     = Xokul::UBS::Statistic::Student.non_graduates
-        @degrees = data.map { |item| item[:degree] }.uniq!
+        @degrees = data.pluck(:degree).uniq!
         @series  = data.group_by { |item| item[:status] }.map do |status, values|
           {
             name: status,

@@ -45,7 +45,7 @@ module Actions
       end
 
       def content_valid_for?(key, collection: ['null'])
-        return false unless params.key?(key) && params[key].present? && !collection.include?(params[key])
+        return false unless params.key?(key) && params[key].present? && collection.exclude?(params[key])
 
         true
       end
