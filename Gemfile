@@ -47,7 +47,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'webpacker', github: 'rails/webpacker'
 
 # view helpers: tools for forms, views, etc.
-gem 'chartkick'
+gem 'chartkick', '>= 3.4.0'
 gem 'cocoon'
 gem 'font-awesome-rails', '>= 4.7.0.5'
 gem 'groupdate', '>= 5.0.0'
