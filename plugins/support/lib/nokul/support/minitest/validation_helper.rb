@@ -51,7 +51,7 @@ module Nokul
           test "#{attribute} length must be #{option}" do
             object.public_send("#{attribute}=", (0..value).map { ('a'..'z').to_a[rand(26)] }.join)
             assert_not object.valid?
-            assert object.errors.details[attribute].map { |err| err[:error] }.include?(error_key)
+            assert object.errors.details[attribute].pluck(:error).include?(error_key)
           end
         end
 
@@ -59,7 +59,7 @@ module Nokul
           test "#{attribute} must be a number" do
             object.public_send("#{attribute}=", 'some string')
             assert_not object.valid?
-            assert object.errors.details[attribute].map { |err| err[:error] }.include?(:not_a_number)
+            assert object.errors.details[attribute].pluck(:error).include?(:not_a_number)
           end
         end
 
@@ -77,7 +77,7 @@ module Nokul
           test "#{attribute} must be #{key} #{value}" do
             object.public_send("#{attribute}=", value)
             assert_not object.valid?
-            assert object.errors.details[attribute].map { |err| err[:error] }.include?(key)
+            assert object.errors.details[attribute].pluck(:error).include?(key)
           end
         end
 
