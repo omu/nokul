@@ -1,10 +1,10 @@
-require:
-  - rubocop-rails
-  - rubocop-performance
-  - rubocop-minitest
-
 inherit_from:
   - https://raw.githubusercontent.com/omu/omu/master/etc/rubocop/rubocop.yml
+
+  - https://raw.githubusercontent.com/omu/omu/master/etc/rubocop/rubocop-minitest.yml
+  - https://raw.githubusercontent.com/omu/omu/master/etc/rubocop/rubocop-performance.yml
+  - https://raw.githubusercontent.com/omu/omu/master/etc/rubocop/rubocop-rails.yml
+
   - .rubocop_todo.yml
 
 
