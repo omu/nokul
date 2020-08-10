@@ -70,7 +70,7 @@ module Nokul
           memory.remember 'bar'
 
           custom_process = proc do |string|
-            Processor.skip string, string != 'baz'
+            Processor.skip string, expr: string != 'baz'
           end
 
           coder = Coder.new TestSimpleCode::SimpleCode.new(%w[foo bar baz]),
