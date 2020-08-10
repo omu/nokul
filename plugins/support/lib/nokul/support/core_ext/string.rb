@@ -55,7 +55,7 @@ class String
 
   def capitalize_turkish_with_parenthesized
     capitalize_turkish.gsub RE_PARANTHESIZED do |match|
-      '(' + match[1..-2].capitalize_turkish + ')'
+      "(#{match[1..-2].capitalize_turkish})"
     end
   end
 

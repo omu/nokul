@@ -25,7 +25,7 @@ module Nokul
       end
 
       class SimpleMemory < Memory
-        def initialize(initial = {})
+        def initialize(initial = {}) # rubocop:disable Lint/MissingSuper
           @store = initial.clone
         end
 

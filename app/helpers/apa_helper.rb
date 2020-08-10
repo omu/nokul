@@ -21,7 +21,6 @@ module ApaHelper
     TEXT
   end
 
-  # rubocop:disable Metrics/AbcSize
   def book_chapter_citation(book)
     <<~TEXT.strip.squish
       #{authors_in_apa_format(book.authors)}.
@@ -32,7 +31,6 @@ module ApaHelper
       #{[book.city, book.publisher].compact.join(': ')}.
     TEXT
   end
-  # rubocop:enable Metrics/AbcSize
 
   def authors_in_apa_format(authors)
     authors.split(',').map do |author|

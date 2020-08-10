@@ -19,7 +19,6 @@ module Account
       respond_to :js
     end
 
-    # rubocop:disable Metrics/AbcSize
     def check_phone_verification
       response = check_verification_code
 
@@ -29,7 +28,6 @@ module Account
 
       redirect_to error_path, alert: t('errors.system_error')
     end
-    # rubocop:enable Metrics/AbcSize
 
     private
 

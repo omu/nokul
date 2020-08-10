@@ -18,7 +18,7 @@ module Nokul
 
     def credentials
       Rails.application.encrypted(
-        Tenant.root.join('test', 'dummy', 'config', 'credentials', Rails.env + '.yml.enc'), env_key: 'TENANT_MASTER_KEY'
+        Tenant.root.join('test', 'dummy', 'config', 'credentials', "#{Rails.env}.yml.enc"), env_key: 'TENANT_MASTER_KEY'
       )
     end
 

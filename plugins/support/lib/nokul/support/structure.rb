@@ -5,7 +5,7 @@ module Nokul
     class Structure < ::Module
       attr_accessor :members
 
-      def initialize(members, error_on_undefined_members = false)
+      def initialize(members, error_on_undefined_members: false) # rubocop:disable Lint/MissingSuper
         self.members = (members = members.uniq)
 
         attr_accessor(*members)
@@ -13,7 +13,7 @@ module Nokul
         define_method(:initialize) do |**args|
           extend InstanceMethods
 
-          _initialize(error_on_undefined_members, **args)
+          _initialize(error_on_undefined_members: error_on_undefined_members, **args)
         end
       end
 
@@ -84,7 +84,7 @@ module Nokul
           end
         end
 
-        def _initialize(error_on_undefined_members = false, **args)
+        def _initialize(error_on_undefined_members: false, **args)
           args.each do |member, value|
             setter = "#{member}="
             next __send__(setter, value) if respond_to? setter
@@ -113,6 +113,8 @@ module Nokul
         end
 
         def included(base)
+          super
+
           # Support mixins as in the following use cases
 
           case base

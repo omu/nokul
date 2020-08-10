@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 module ReferenceResource
-  def self.included(base)
+  def self.included(base) # rubocop:disable Metrics/MethodLength
+    super
+
     base.class_eval do
       include YoksisResource
 

@@ -64,7 +64,7 @@ module Nokul
         end
 
         test 'proc post process option works' do
-          coder = Codification.sequential_numeric_codes '0001', post_process: proc { |string| string + '.a' }
+          coder = Codification.sequential_numeric_codes '0001', post_process: proc { |string| "#{string}.a" }
           assert_equal '0001.a', coder.run
           assert_equal '0002.a', coder.run
         end
