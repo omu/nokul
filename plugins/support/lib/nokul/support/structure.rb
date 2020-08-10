@@ -27,11 +27,11 @@ module Nokul
       end
 
       def self.of(members)
-        new(members, false)
+        new(members, error_on_undefined_members: false)
       end
 
       def self.of!(members)
-        new(members, true)
+        new(members, error_on_undefined_members: true)
       end
 
       private_class_method :new
