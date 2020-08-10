@@ -19,7 +19,7 @@
                field:      'academic_term_id',
                collection: AcademicTerm.select(
                  :id, :year, :term
-               ).map { |record| [record.year + ' ' + enum_t(record, :term), record.id] },
+               ).map { |record| ["#{record.year} #{enum_t(record, :term)}", record.id] },
                width:      12,
                required:   true
              },
