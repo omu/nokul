@@ -10,7 +10,7 @@ module Nokul
 
         inherited_by_conveying_attributes :processors
 
-        def self.skip(string, expr = false)
+        def self.skip(string, expr: false)
           expr ? string : raise(Skip, string)
         end
 
@@ -68,7 +68,7 @@ module Nokul
         end
 
         def processor_predicate
-          proc { |string, *args| Processor.skip string, yield(string, *args) }
+          proc { |string, *args| Processor.skip(string, expr: yield(string, *args)) }
         end
 
         def processor_regexp(pattern)

@@ -6,6 +6,8 @@ module ReferenceResourceTest
   extend ActiveSupport::Concern
 
   def self.included(base)
+    super
+
     base.class_eval do
       include YoksisResourceTest
 

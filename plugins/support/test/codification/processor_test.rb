@@ -41,7 +41,7 @@ module Nokul
         test 'custom builtins should work' do
           class Codification::Processor # rubocop:disable Style/ClassAndModuleChildren
             define :xxx do |string|
-              string + 'xxx'
+              "#{string}xxx"
             end
           end
 

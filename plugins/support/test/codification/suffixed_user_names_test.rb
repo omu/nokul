@@ -78,7 +78,7 @@ module Nokul
         end
 
         test 'proc post process option works' do
-          coder = Codification.suffixed_user_names %w[gabriel garcia marquez], post_process: proc { |name| name + '.a' }
+          coder = Codification.suffixed_user_names %w[gabriel garcia marquez], post_process: proc { |name| "#{name}.a" }
 
           2.times do
             name = coder.run

@@ -14,15 +14,15 @@ module Nokul
     end
 
     def development
-      url + '_development'
+      "#{url}_development"
     end
 
     def production
-      url + '_production'
+      "#{url}_production"
     end
 
     def test
-      url + '_test'
+      "#{url}_test"
     end
   end
 end

@@ -13,6 +13,8 @@ module Nokul
       class_attribute :collection, default: ActiveSupport::OrderedOptions.new
 
       def self.inherited(child)
+        super
+
         child.collection = collection.dup
 
         return unless (name = child.name) # might be an anonymous class

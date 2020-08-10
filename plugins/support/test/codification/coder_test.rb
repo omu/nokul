@@ -70,7 +70,7 @@ module Nokul
           memory.remember 'bar'
 
           custom_process = proc do |string|
-            Processor.skip string, string != 'baz'
+            Processor.skip string, expr: string != 'baz'
           end
 
           coder = Coder.new TestSimpleCode::SimpleCode.new(%w[foo bar baz]),
@@ -91,7 +91,7 @@ module Nokul
           memory.remember 'bar.xxx'
 
           custom_process = proc do |string|
-            string + '.xxx'
+            "#{string}.xxx"
           end
 
           coder = Coder.new TestSimpleCode::SimpleCode.new(%w[foo bar baz]),
@@ -132,7 +132,7 @@ module Nokul
         test 'post process array should work' do
           coder = Coder.new TestSimpleCode::SimpleCode.new(%w[foo bar baz]), post_process: [
             /^b/,
-            proc { |string| string + '.xxx' }
+            proc { |string| "#{string}.xxx" }
           ]
 
           produced = []

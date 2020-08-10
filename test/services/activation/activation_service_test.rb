@@ -67,7 +67,7 @@ module Activation
         fake.id_number = id_number
         assert_not fake.active
         assert_not_empty fake.errors[:base]
-        assert_equal I18n.t('.account.activations.' + error_key), fake.errors[:base].first
+        assert_equal I18n.t(".account.activations.#{error_key}"), fake.errors[:base].first
       end
     end
   end

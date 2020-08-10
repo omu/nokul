@@ -24,8 +24,8 @@ module Nokul
 
         def post_process_for(only, except)
           proc do |string|
-            Array(only).each   { |re| Processor.skip(string,  string.match?(Regexp.new(re))) } if only
-            Array(except).each { |re| Processor.skip(string, !string.match?(Regexp.new(re))) } if except
+            Array(only).each   { |re| Processor.skip(string, expr: string.match?(Regexp.new(re))) } if only
+            Array(except).each { |re| Processor.skip(string, expr: !string.match?(Regexp.new(re))) } if except
             string
           end
         end

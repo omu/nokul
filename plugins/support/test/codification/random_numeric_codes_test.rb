@@ -46,7 +46,7 @@ module Nokul
         end
 
         test 'proc post process option works' do
-          coder = Codification.random_numeric_codes '0'..'999', post_process: proc { |string| string + '.a' }
+          coder = Codification.random_numeric_codes '0'..'999', post_process: proc { |string| "#{string}.a" }
           assert_match(/\d{3}[.]a/, coder.run)
         end
 

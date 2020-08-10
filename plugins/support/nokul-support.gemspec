@@ -19,5 +19,7 @@ Gem::Specification.new do |spec|
     'changelog_uri'   => 'https://github.com/omu/nokul/tree/master/plugins/tenant/support/CHANGELOG.md'
   }
 
+  spec.required_ruby_version = File.read('.ruby-version')
+
   spec.add_dependency 'activesupport', '>= 6.0.3.1'
 end
