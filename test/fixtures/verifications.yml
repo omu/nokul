@@ -1,0 +1,9 @@
+one:
+  code: 12345
+  mobile_phone: '+905412345678'
+  verified: false
+
+two:
+  code: 12345
+  mobile_phone: '+905411111111'
+  verified: true
