@@ -21,6 +21,7 @@ class PasswordRecoveryService
       public_send("#{name}=", value)
     end
     @mobile_phone = TelephoneNumber.parse(mobile_phone).e164_number
+    @verification = VerificationService.new(mobile_phone: user.mobile_phone, code: verification_code) if user
   end
 
   def user
@@ -50,18 +51,18 @@ class PasswordRecoveryService
   end
 
   def send_verification_code
-    return true if Twilio::Verify.send_phone_verification_code(user.mobile_phone).ok?
+    return true if @verification.send_code
 
-    errors.add(:base, I18n.t('.account.password_recovery.not_send_verify_code'))
+    return false unless errors.merge!(@verification.errors).empty?
+
+    errors.add(:base, I18n.t('.verify.code_can_not_be_send'))
     false
   end
 
   def check_verification_code
-    response = Twilio::Verify.check_verification_code(user.mobile_phone, verification_code)
+    return true if @verification.verify
 
-    return true if response.ok?
-
-    errors.add(:base, I18n.t("twilio.errors.#{response.error_code}"))
+    errors.add(:base, I18n.t('.verify.failed'))
     false
   end
 
