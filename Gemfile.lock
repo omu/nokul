@@ -7,6 +7,12 @@ GIT
       uniform_notifier (~> 1.11)
 
 GIT
+  remote: https://github.com/omu/sms.git
+  revision: 5595de134749118f060bbf16acdbf6afeaf28eef
+  specs:
+    sms (0.3.0)
+
+GIT
   remote: https://github.com/rails/rails.git
   revision: 3c500511e9e822fb9491f215ac6815272ae1b3c1
   specs:
@@ -563,6 +569,7 @@ DEPENDENCIES
   simplecov
   simplecov-cobertura
   slack-notifier
+  sms!
   spring
   spring-watcher-listen (~> 2.0.0)
   telephone_number
