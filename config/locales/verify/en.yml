@@ -1,0 +1,8 @@
+en:
+  verify:
+    code: Verification code
+    sms_code_message: "Your Nokul Verification code is %{code}"
+    too_many_requests: You have fired too many requests. Please wait for a couple of minutes.
+    failed: Verify failed!
+    code_can_not_be_send: There was a problem sending the verification code.
+    code_sent: Verification code sent via SMS
