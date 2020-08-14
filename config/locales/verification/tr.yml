@@ -1,5 +1,5 @@
 tr:
-  verify:
+  verification:
     code: Doğrulama kodu
     sms_code_message: "Nokul doğrulama kodunuz: %{code}"
     too_many_requests: Çok fazla istekte bulundunuz. Lütfen birkaç dakika sonra tekrar deneyin.

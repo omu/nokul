@@ -1,5 +1,5 @@
 en:
-  verify:
+  verification:
     code: Verification code
     sms_code_message: "Your Nokul Verification code is %{code}"
     too_many_requests: You have fired too many requests. Please wait for a couple of minutes.

@@ -55,14 +55,14 @@ class PasswordRecoveryService
 
     return false unless errors.merge!(@verification.errors).empty?
 
-    errors.add(:base, I18n.t('.verify.code_can_not_be_send'))
+    errors.add(:base, I18n.t('.verification.code_can_not_be_send'))
     false
   end
 
   def check_verification_code
     return true if @verification.verify
 
-    errors.add(:base, I18n.t('.verify.failed'))
+    errors.add(:base, I18n.t('.verification.failed'))
     false
   end
 
