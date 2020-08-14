@@ -4044,41 +4044,6 @@ ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
 
 
 --
--- Name: verifications; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.verifications (
-    id bigint NOT NULL,
-    code integer,
-    verified boolean DEFAULT false,
-    mobile_phone character varying,
-    created_at timestamp(6) without time zone NOT NULL,
-    updated_at timestamp(6) without time zone NOT NULL,
-    CONSTRAINT verifications_code_null CHECK ((code IS NOT NULL)),
-    CONSTRAINT verifications_mobile_phone_null CHECK ((mobile_phone IS NOT NULL))
-);
-
-
---
--- Name: verifications_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE public.verifications_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: verifications_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE public.verifications_id_seq OWNED BY public.verifications.id;
-
-
---
 -- Name: academic_credentials id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -4748,13 +4713,6 @@ ALTER TABLE ONLY public.university_types ALTER COLUMN id SET DEFAULT nextval('pu
 --
 
 ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_id_seq'::regclass);
-
-
---
--- Name: verifications id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.verifications ALTER COLUMN id SET DEFAULT nextval('public.verifications_id_seq'::regclass);
 
 
 --
@@ -5926,14 +5884,6 @@ ALTER TABLE ONLY public.users
 
 
 --
--- Name: verifications verifications_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.verifications
-    ADD CONSTRAINT verifications_pkey PRIMARY KEY (id);
-
-
---
 -- Name: index_academic_credentials_on_country_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6890,13 +6840,6 @@ CREATE UNIQUE INDEX index_users_on_id_number ON public.users USING btree (id_num
 --
 
 CREATE UNIQUE INDEX index_users_on_reset_password_token ON public.users USING btree (reset_password_token);
-
-
---
--- Name: index_verifications_on_mobile_phone; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE UNIQUE INDEX index_verifications_on_mobile_phone ON public.verifications USING btree (mobile_phone);
 
 
 --
@@ -7980,7 +7923,6 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20200703214608'),
 ('20200708072837'),
 ('20200713182117'),
-('20200713182118'),
-('20200809154105');
+('20200713182118');
 
 
