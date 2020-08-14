@@ -8,60 +8,57 @@ class VerificationService
 
   def initialize(**args)
     @mobile_phone = TelephoneNumber.parse(args[:mobile_phone]).e164_number
-    @code = args[:code].to_i
-    @verification = Verification.find_or_initialize_by(mobile_phone: @mobile_phone)
-    prepare_verification
+    @code = args[:code]
+    @verification = set_verification
     @errors = ActiveModel::Errors.new(self)
   end
 
   def verify
-    @verification.update(verified: true) if @verification.code == @code
+    REDIS.hset(key, { verified: 'true' }) if @verification[:code] == @code
   end
 
   def send_code
-    return false unless @verification.valid?
-
     return false unless can_be_sent?
 
-    SMS.call(to: @mobile_phone, body: I18n.t('.verify.sms_code_message', code: @verification.code))
-    increase_sending_count
+    SMS.call(to: @mobile_phone, body: I18n.t('.verification.sms_code_message', code: @verification[:code]))
+    increase_sent_count
     true
   end
 
-  # sms gönderimine limit uygulamak için redis kullanıldı.
-  def can_be_sent? # rubocop:disable Metrics/MethodLength
-    if (redis_count = REDIS.get(count).to_i)
-      if redis_count > ALLOWED_SMS_COUNT
-        @errors.add(:base, I18n.t('.verify.too_many_requests'))
-        false
-      else
-        true
-      end
+  def can_be_sent?
+    if REDIS.hget(key, 'sent_count').to_i >= ALLOWED_SMS_COUNT
+      @errors.add(:base, I18n.t('.verification.too_many_requests'))
+      false
     else
-      REDIS.set(count, 0)
-      REDIS.expire(count, SENDING_TIMESPAN)
       true
     end
   end
 
-  def increase_sending_count
-    REDIS.incr count
-    REDIS.expire(count, SENDING_TIMESPAN)
+  def increase_sent_count
+    REDIS.hincrby(key, 'sent_count', 1)
+    REDIS.expire(key, SENDING_TIMESPAN)
   end
 
   private
 
-  def prepare_verification
-    if @verification.verified?
-      @verification.verified = false
-      @verification.code = rand(100_000..999_999)
-    else
-      @verification.code = rand(100_000..999_999) unless REDIS.get(count)
-    end
-    @verification.save
+  def key
+    "verification_#{@mobile_phone}"
   end
 
-  def count
-    "sms_count_#{@mobile_phone}"
+  def set_verification # rubocop:disable Metrics/MethodLength
+    verification = REDIS.hgetall(key).deep_symbolize_keys
+
+    if verification.empty?
+      verification = { code: rand(100_000..999_999), verified: false, sent_count: 0 }
+    elsif verification[:verified] == 'true' # son 5 dakika içinde doğrulama olmasına rağmen yeniden istek var
+      verification = { code: rand(100_000..999_999), verified: false }
+    elsif !@code # kod oluşturulmuş ancak doğrulama yapılmadan yeni bir istek varsa kodu yeniden üret
+      verification = { code: rand(100_000..999_999) }
+    else # bu aşamaya yalnızca kodu doğrulama amaçlı servisi çağırırken ulaşabilir
+      return verification
+    end
+
+    REDIS.hset(key, verification)
+    verification
   end
 end
