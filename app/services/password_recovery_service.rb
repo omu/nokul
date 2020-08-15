@@ -55,7 +55,7 @@ class PasswordRecoveryService
 
   def check_verification_code
     pass :base, I18n.t('.verification.failed') do
-      Actions::User::Verification::Send.call(@mobile_phone, verification_code)
+      Actions::User::Verification::Verify.call(@mobile_phone, verification_code)
     end
   end
 
