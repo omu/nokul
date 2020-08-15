@@ -4,8 +4,8 @@ module Actions
   module User
     module Verification
       class Send < Base
-        def run
-          phone.send
+        def call
+          result.accordingly { phone.send }
         rescue Phone::TooManySendRequestError
           result.error(:base, I18n.t('.verification.too_many_requests'))
         rescue SMS::Error => e
