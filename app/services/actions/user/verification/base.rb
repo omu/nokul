@@ -4,7 +4,7 @@ module Actions
   module User
     module Verification
       class Base
-        attr_reader :phone, :errors
+        attr_reader :phone, :result
 
         def initialize(number)
           @phone  = Phone.new number

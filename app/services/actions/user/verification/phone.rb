@@ -24,8 +24,8 @@ module Actions
           Code.put(key, verification, timeout: timeout)
         end
 
-        def verify(code)
-          raise MissingVerifyRecordError unless (current = Code.get)
+        def verify?(code)
+          raise MissingVerifyRecordError unless (current = Code.get(key))
 
           current.code == code
         end
@@ -35,7 +35,7 @@ module Actions
         attr_reader :key
 
         def fresh_verification
-          if (current = Code.get)
+          if (current = Code.get(key))
             # Pending verification attempt found, generate a new code by incrementing attempt count
             current.regenerate
           else

@@ -5,8 +5,8 @@ module Actions
     module Verification
       class Verify < Base
         def run(code)
-          phone.verify(code)
-        rescue MissingVerifyRecordError
+          result.error unless phone.verify?(code)
+        rescue Phone::MissingVerifyRecordError
           result.error(:base, I18n.t('.verification.without_any_record'))
         end
       end

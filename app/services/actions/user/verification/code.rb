@@ -6,8 +6,8 @@ module Actions
       # Tiny value object for verification codes to avoid "primitive obsession"
       Code = Struct.new :code, :attempt, keyword_init: true do
         # Creates a new code at class level
-        def self.generate(attempt = 0)
-          new code: rand(100_000..999_999), verified: false, attempt: attempt
+        def self.generate(attempt = nil)
+          new code: rand(100_000..999_999), attempt: attempt || 0
         end
 
         def self.get(key)
@@ -25,7 +25,7 @@ module Actions
 
         # Creates a new code from the current code by incrementing the current attempt count
         def regenerate
-          self.class.generate attempt: attempt + 1
+          self.class.generate(attempt: (attempt || 0) + 1)
         end
       end
     end
