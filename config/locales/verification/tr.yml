@@ -6,3 +6,4 @@ tr:
     failed: Doğrulama başarısız oldu!
     code_can_not_be_send: Telefon doğrulama kodu gönderilirken bir sorunla karşılaşıldı.
     code_sent: Doğrulama kodunuz SMS ile gönderildi.
+    without_any_record: Doğrulama kodu olmadan doğrulama yapma girişiminde bulunuldu!
