@@ -70,7 +70,7 @@ class PasswordRecoveryService
   end
 
   def pass(*args)
-    return true if (result = yield).errors.empty?
+    return true if (result = yield).ok?
 
     errors.merge!(result.errors)
     errors.add(*args)
