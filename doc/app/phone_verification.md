@@ -6,32 +6,20 @@ author(s):
 Telefon Doğrulama
 ====
 
-`VerificationService` isimli modül telefon doğrulama işlemlerinde kullanılmaktadır.
+Doğrulama kodu oluşturup göndermek ve denetlemek için aşağıdaki adımlara benzer adımlar gerçekleyin.
 
-Kullanım
---------
+- Kod gönder
 
-- Doğrulama kodu oluşturup göndermek ve denetlemek için aşağıdaki adımlara benzer adımlar gerçekleyin.
+  ```ruby
+  result = Actions::User::Verification::Send.(«telefon numarası»)
+  ```
 
-```ruby
-# Kod gönder
-verification = VerificationService.new(mobile_phone: "TELEFON_NUMARASI")
-verification.send_code # true ya da false döner. false dönmesi halinde verification.errors ile hata kontrol edilebilir.
+- Gönderilen kodu doğrula
 
-# Kodu doğrula
-verification = VerificationService.new(mobile_phone: "TELEFON_NUMARASI", code: 'DOĞRULAMA KODU')
-verification.verify # true ya da false döner
-```
+  ```ruby
+  result = Actions::User::Verification::Verify.(«telefon numarası», «doğrulama kodu»)
+  ```
 
-Hata denetimini yapabilmek için kullanacağınız yerde aşağıdaki gibi bir işlev oluşturup çağırabilirsiniz.
-
-```ruby
-def send_verification_code
-  return true if @verification.send_code
-
-  return false unless errors.merge!(@verification.errors).empty?
-
-  errors.add(:base, I18n.t('.verification.code_can_not_be_send'))
-  false
-end
-```
+Her iki işlemin de başarısı `result.ok?` (veya `result.notok?` ile
+sorgulanabilir.  Başarısız bir durumda varsa `result.errors` ile hatalar
+okunabilir.

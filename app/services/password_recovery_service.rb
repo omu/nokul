@@ -17,11 +17,8 @@ class PasswordRecoveryService
   validate :check_informations
 
   def initialize(attributes = {})
-    attributes.each do |name, value|
-      public_send("#{name}=", value)
-    end
+    attributes.each { |name, value| public_send("#{name}=", value) }
     @mobile_phone = TelephoneNumber.parse(mobile_phone).e164_number
-    @verification = VerificationService.new(mobile_phone: user.mobile_phone, code: verification_code) if user
   end
 
   def user
@@ -51,19 +48,15 @@ class PasswordRecoveryService
   end
 
   def send_verification_code
-    return true if @verification.send_code
-
-    return false unless errors.merge!(@verification.errors).empty?
-
-    errors.add(:base, I18n.t('.verification.code_can_not_be_send'))
-    false
+    pass :base, I18n.t('.verification.code_can_not_be_send') do
+      Actions::User::Verification::Send.call(@mobile_phone)
+    end
   end
 
   def check_verification_code
-    return true if @verification.verify
-
-    errors.add(:base, I18n.t('.verification.failed'))
-    false
+    pass :base, I18n.t('.verification.failed') do
+      Actions::User::Verification::Send.call(@mobile_phone, verification_code)
+    end
   end
 
   private
@@ -74,5 +67,13 @@ class PasswordRecoveryService
     return if user && (user.mobile_phone == mobile_phone)
 
     errors.add(:base, I18n.t('.account.password_recovery.no_matching_user'))
+  end
+
+  def pass(*args)
+    return true if (result = yield).errors.empty?
+
+    errors.merge!(result.errors)
+    errors.add(*args)
+    false
   end
 end
