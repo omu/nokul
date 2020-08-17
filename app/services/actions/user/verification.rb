@@ -48,29 +48,58 @@ module Actions
         attr_writer :result, :status
       end
 
-      # Tiny value object for verification codes to avoid "primitive obsession"
-      Code = Struct.new :code, :attempt, keyword_init: true do
-        # Creates a new code at class level
-        def self.generate(attempt = nil)
-          new code: rand(100_000..999_999), attempt: attempt || 0
+      # Value object for verification codes to avoid "primitive obsession"
+      class Code
+        attr_reader :value, :attempt
+
+        def initialize(value: nil, attempt: nil)
+          @value   = (value   || rand(100_000..999_999)).to_s
+          @attempt = (attempt || 0).to_i
         end
 
-        def self.get(key)
-          return if (hash = REDIS.hgetall(key).deep_symbolize_keys).empty?
-
-          new(**hash)
-        end
-
-        def self.put(key, verification, timeout:)
-          REDIS.multi do
-            REDIS.hset(key, verification.to_h)
-            REDIS.expire(key, timeout)
-          end
-        end
-
-        # Creates a new code from the current code by incrementing the current attempt count
         def regenerate
-          self.class.generate(attempt: (attempt || 0) + 1)
+          self.class.generate attempt: attempt + 1
+        end
+
+        def to_s
+          value.to_s
+        end
+
+        def match?(value)
+          self.value == value.to_s
+        end
+
+        alias code to_s
+
+        class << self
+          # Conveniency constructor for creating a fresh code
+          def generate(attempt: nil)
+            new attempt: attempt
+          end
+
+          def serialize(code)
+            { value: code.value, attempt: code.attempt }
+          end
+
+          def deserialize(data)
+            raise Error, "Expected a hash where found #{data.class}: #{data}" unless data.is_a? Hash
+
+            hash = data.deep_symbolize_keys
+            new value: hash[:value], attempt: hash[:attempt]
+          end
+
+          def get(key)
+            return if (hash = REDIS.hgetall(key)).empty?
+
+            deserialize(hash)
+          end
+
+          def put(key, code, timeout:)
+            REDIS.multi do
+              REDIS.hset(key, serialize(code))
+              REDIS.expire(key, timeout)
+            end
+          end
         end
       end
 
@@ -96,10 +125,10 @@ module Actions
           end
         end
 
-        def verify?(code)
+        def verify?(value)
           raise MissingVerifyRecordError unless (current = Code.get(key))
 
-          current.code == code
+          current.match?(value)
         end
 
         private
