@@ -76,6 +76,7 @@ gem 'slack-notifier'
 gem 'friendly_id', '~> 5.3.0'
 
 # sms
+gem 'sms', github: 'omu/sms'
 gem 'twilio-ruby'
 
 # log

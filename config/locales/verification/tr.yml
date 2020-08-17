@@ -1,0 +1,9 @@
+tr:
+  verification:
+    code: Doğrulama kodu
+    sms_code_message: "Nokul doğrulama kodunuz: %{code}"
+    too_many_requests: Çok fazla istekte bulundunuz. Lütfen birkaç dakika sonra tekrar deneyin.
+    failed: Doğrulama başarısız oldu!
+    code_can_not_be_send: Telefon doğrulama kodu gönderilirken bir sorunla karşılaşıldı.
+    code_sent: Doğrulama kodunuz SMS ile gönderildi.
+    without_any_record: Doğrulama kodu olmadan doğrulama yapma girişiminde bulunuldu!

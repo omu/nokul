@@ -17,10 +17,8 @@ class PasswordRecoveryService
   validate :check_informations
 
   def initialize(attributes = {})
-    attributes.each do |name, value|
-      public_send("#{name}=", value)
-    end
-    @mobile_phone = TelephoneNumber.parse(mobile_phone).e164_number
+    attributes.each { |name, value| public_send("#{name}=", value) }
+    @mobile_phone = TelephoneNumber.parse(mobile_phone).e164_number if mobile_phone
   end
 
   def user
@@ -50,19 +48,15 @@ class PasswordRecoveryService
   end
 
   def send_verification_code
-    return true if Twilio::Verify.send_phone_verification_code(user.mobile_phone).ok?
-
-    errors.add(:base, I18n.t('.account.password_recovery.not_send_verify_code'))
-    false
+    pass :base, I18n.t('.verification.code_can_not_be_send') do
+      Actions::User::Verification::Send.call(@mobile_phone)
+    end
   end
 
   def check_verification_code
-    response = Twilio::Verify.check_verification_code(user.mobile_phone, verification_code)
-
-    return true if response.ok?
-
-    errors.add(:base, I18n.t("twilio.errors.#{response.error_code}"))
-    false
+    pass :base, I18n.t('.verification.failed') do
+      Actions::User::Verification::Verify.call(user.mobile_phone, verification_code)
+    end
   end
 
   private
@@ -73,5 +67,13 @@ class PasswordRecoveryService
     return if user && (user.mobile_phone == mobile_phone)
 
     errors.add(:base, I18n.t('.account.password_recovery.no_matching_user'))
+  end
+
+  def pass(*args)
+    return true if (result = yield).ok?
+
+    errors.merge!(result.errors)
+    errors.add(*args)
+    false
   end
 end

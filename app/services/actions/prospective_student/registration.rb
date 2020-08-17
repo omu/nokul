@@ -89,7 +89,7 @@ module Actions
 
       def user
         @user ||= begin
-          User.find_by(id_number: id_number) || User.new(
+          ::User.find_by(id_number: id_number) || ::User.new(
             id_number:             id_number,
             email:                 email,
             password:              id_number,
