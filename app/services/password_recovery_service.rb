@@ -18,7 +18,7 @@ class PasswordRecoveryService
 
   def initialize(attributes = {})
     attributes.each { |name, value| public_send("#{name}=", value) }
-    @mobile_phone = TelephoneNumber.parse(mobile_phone).e164_number
+    @mobile_phone = TelephoneNumber.parse(user.mobile_phone).e164_number if user
   end
 
   def user
