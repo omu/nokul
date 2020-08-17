@@ -7,18 +7,14 @@ module Actions
     module Verification
       class SendTest < ActiveSupport::TestCase
         setup do
-          @_v = { code: '123456', mobile_phone: '+905412345678' }
-
-          # TODO
-        end
-
-        test 'verification code should be changed on every request' do
-          # TODO: assert_not_equal @verification.code, @v[:code]
+          @_v = { code: '123456', mobile_phone: '+905411111111' }
         end
 
         test 'should not send if sms limit exceeded' do
-          # TODO: REDIS.hset("verification_#{@v[:mobile_phone]}", { sent_count: 3 })
-          # TODO: assert_not @verification.can_be_sent?
+          REDIS.hset("verification.#{@_v[:mobile_phone]}", { value: @_v[:code], attempt: 2 })
+
+          result = Actions::User::Verification::Send.call(@_v[:mobile_phone])
+          assert_includes(result.errors[:base], t('verification.too_many_requests'))
         end
       end
     end
