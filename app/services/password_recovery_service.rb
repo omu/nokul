@@ -18,7 +18,7 @@ class PasswordRecoveryService
 
   def initialize(attributes = {})
     attributes.each { |name, value| public_send("#{name}=", value) }
-    @mobile_phone = TelephoneNumber.parse(user.mobile_phone).e164_number if user
+    @mobile_phone = TelephoneNumber.parse(mobile_phone).e164_number if mobile_phone
   end
 
   def user
@@ -55,7 +55,7 @@ class PasswordRecoveryService
 
   def check_verification_code
     pass :base, I18n.t('.verification.failed') do
-      Actions::User::Verification::Verify.call(@mobile_phone, verification_code)
+      Actions::User::Verification::Verify.call(user.mobile_phone, verification_code)
     end
   end
 
