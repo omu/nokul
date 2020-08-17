@@ -118,7 +118,7 @@ module Actions
         end
 
         def send(limit: SMS_LIMIT, timeout: SMS_TIMEOUT)
-          raise TooManyRequestError if (verification = fresh_verification).attempt >= limit
+          raise TooManySendRequestError if (verification = fresh_verification).attempt >= limit
 
           SMS.call(to: number, body: I18n.t('.verification.sms_code_message', code: verification.code)).tap do
             Code.put(key, verification, timeout: timeout)
