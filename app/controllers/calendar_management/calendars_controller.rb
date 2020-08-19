@@ -44,9 +44,9 @@ module CalendarManagement
     end
 
     def duplicate
-      duplicate_record = AcademicCalendars::DuplicateService.call(@calendar)
+      record = Actions::AcademicCalendar::Duplicate.call(@calendar)
 
-      redirect_to([:edit, duplicate_record], notice: t('.success'))
+      redirect_to([:edit, record], notice: t('.success'))
     rescue ActiveRecord::RecordInvalid
       redirect_to(:calendars, alert: t('.warning'))
     end
