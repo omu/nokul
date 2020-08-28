@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
     'changelog_uri'   => 'https://github.com/omu/nokul/tree/master/plugins/tenant/acme/CHANGELOG.md'
   }
 
-  spec.required_ruby_version = File.read('.ruby-version')
+  spec.required_ruby_version = "~> #{File.read('.ruby-version')}"
 
   spec.add_dependency 'nokul-tenant'
   spec.add_dependency 'rails'
