@@ -1,4 +1,4 @@
-FROM ondokuz/ruby:buster-20.1
+FROM ondokuz/ruby:buster-22.1
 
 ENV PATH=/app/bin:$PATH
 
