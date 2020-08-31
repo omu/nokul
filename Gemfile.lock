@@ -108,7 +108,7 @@ GIT
 
 GIT
   remote: https://github.com/rails/webpacker.git
-  revision: 4fbb7bcadcd190b2c21cfc3c6bd894328e648e65
+  revision: ac93e129ee10c89b0d56705203c026b1f58cd38d
   specs:
     webpacker (5.1.1)
       activesupport (>= 5.2)
@@ -288,7 +288,7 @@ GEM
       actionpack (>= 3.0, < 7.0)
       activerecord (>= 3.0, < 7.0)
       railties (>= 3.0, < 7.0)
-    loofah (2.6.0)
+    loofah (2.7.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
