@@ -271,7 +271,7 @@ GEM
       activesupport (>= 4.2)
       aes_key_wrap
       bindata
-    jwt (2.2.1)
+    jwt (2.2.2)
     launchy (2.5.0)
       addressable (~> 2.7)
     letter_opener (1.7.0)
