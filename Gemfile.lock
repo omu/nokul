@@ -14,7 +14,7 @@ GIT
 
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 3c500511e9e822fb9491f215ac6815272ae1b3c1
+  revision: 57da1d0188f46face820bcdd4d8a78dbb393bdcf
   specs:
     actioncable (6.1.0.alpha)
       actionpack (= 6.1.0.alpha)
@@ -86,7 +86,7 @@ GIT
       activerecord (= 6.1.0.alpha)
       activestorage (= 6.1.0.alpha)
       activesupport (= 6.1.0.alpha)
-      bundler (>= 1.3.0)
+      bundler (>= 1.15.0)
       railties (= 6.1.0.alpha)
       sprockets-rails (>= 2.0.0)
     railties (6.1.0.alpha)
@@ -288,7 +288,7 @@ GEM
       actionpack (>= 3.0, < 7.0)
       activerecord (>= 3.0, < 7.0)
       railties (>= 3.0, < 7.0)
-    loofah (2.6.0)
+    loofah (2.7.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
