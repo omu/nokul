@@ -7,6 +7,9 @@ inherit_from:
 
   - .rubocop_todo.yml
 
+Gemspec/RequiredRubyVersion:
+  Exclude:
+    - 'plugins/**/*.gemspec'
 
 Lint/NonDeterministicRequireOrder:
   Exclude:
