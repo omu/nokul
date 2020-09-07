@@ -46,10 +46,12 @@ class Curriculum < ApplicationRecord
   def build_semesters
     return if semesters_count >= number_of_semesters
 
+    terms = %i[spring fall]
+
     (1..number_of_semesters).each do |sequence|
       semesters.build(sequence: sequence,
                       year:     (sequence.to_f / number_of_semesters_for_one_year).round,
-                      term:     %i[spring fall][sequence % 2])
+                      term:     terms[sequence % 2])
     end
     semesters
   end
