@@ -9,7 +9,7 @@ module PgExec
   def call(sql)
     db = PG.connect(**args)
     # https://www.endpoint.com/blog/2015/01/28/postgres-sessionreplication-role
-    db.exec <<~SQL
+    db.exec <<~SQL.squish
       SET session_replication_role = replica;
       #{sql}
       SET session_replication_role = origin;
