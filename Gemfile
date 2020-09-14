@@ -56,7 +56,7 @@ gem 'simple_form', '>= 5.0.2'
 gem 'wicked_pdf', '>= 2.0.2'
 
 # api
-gem 'jbuilder', '~> 2.10', '>= 2.10.0'
+gem 'jbuilder', '~> 2.10'
 
 # security
 gem 'bcrypt', '~> 3.1.16'
