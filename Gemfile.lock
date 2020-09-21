@@ -471,7 +471,7 @@ GEM
       execjs (>= 0.3.0, < 3)
     unicode-display_width (1.7.0)
     uniform_notifier (1.13.0)
-    valid_email2 (3.3.0)
+    valid_email2 (3.4.0)
       activemodel (>= 3.2)
       mail (~> 2.5)
     validate_email (0.1.6)
