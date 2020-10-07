@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/flyerhzm/bullet.git
-  revision: 0844e7a9299c68058938697b7b6f68ceae56e381
+  revision: fd1f9941711ad471c2b39b6e8a90572a4c02176f
   specs:
     bullet (6.1.0)
       activesupport (>= 3.0.0)
@@ -108,7 +108,7 @@ GIT
 
 GIT
   remote: https://github.com/rails/webpacker.git
-  revision: d05068209544acb8cf32f10d6b722b72beed3314
+  revision: 1a0d635fa1dd5af93d40a6a685257376bf083f1a
   specs:
     webpacker (5.1.1)
       activesupport (>= 5.2)
@@ -158,13 +158,13 @@ GEM
       httpclient (>= 2.5.3.3)
     aws-eventstream (1.1.0)
     aws-partitions (1.380.0)
-    aws-sdk-core (3.108.0)
+    aws-sdk-core (3.109.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.239.0)
       aws-sigv4 (~> 1.1)
       jmespath (~> 1.0)
-    aws-sdk-kms (1.38.0)
-      aws-sdk-core (~> 3, >= 3.99.0)
+    aws-sdk-kms (1.39.0)
+      aws-sdk-core (~> 3, >= 3.109.0)
       aws-sigv4 (~> 1.1)
     aws-sdk-s3 (1.81.1)
       aws-sdk-core (~> 3, >= 3.104.3)
@@ -331,7 +331,7 @@ GEM
     parser (2.7.1.5)
       ast (~> 2.4.1)
     pg (1.2.3)
-    pg_search (2.3.2)
+    pg_search (2.3.3)
       activerecord (>= 5.2)
       activesupport (>= 5.2)
     pghero (2.7.2)
@@ -376,7 +376,7 @@ GEM
     recaptcha (5.5.0)
       json
     redis (4.2.2)
-    regexp_parser (1.8.0)
+    regexp_parser (1.8.1)
     rein (5.1.0)
       activerecord (>= 4.0.0)
       activesupport (>= 4.0.0)
@@ -396,14 +396,14 @@ GEM
       rubocop-ast (>= 0.1.0, < 1.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 2.0)
-    rubocop-ast (0.6.0)
+    rubocop-ast (0.7.1)
       parser (>= 2.7.1.5)
     rubocop-minitest (0.10.1)
       rubocop (>= 0.87)
     rubocop-performance (1.8.1)
       rubocop (>= 0.87.0)
       rubocop-ast (>= 0.4.0)
-    rubocop-rails (2.8.0)
+    rubocop-rails (2.8.1)
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 0.87.0)
@@ -436,9 +436,9 @@ GEM
     simplecov (0.19.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
-    simplecov-cobertura (1.4.0)
+    simplecov-cobertura (1.4.1)
       simplecov (~> 0.8)
-    simplecov-html (0.12.2)
+    simplecov-html (0.12.3)
     slack-notifier (2.3.2)
     smart_properties (1.15.0)
     spring (2.1.1)
