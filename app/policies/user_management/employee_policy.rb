@@ -4,7 +4,7 @@ module UserManagement
   class EmployeePolicy < ApplicationPolicy
     include CrudPolicyMethods
 
-    undef :index?, :show?
+    undef :show?
 
     private
 

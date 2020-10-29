@@ -10,6 +10,10 @@ scope module: :user_management do
       put 'disability', to: 'disability#update'
     end
 
+    collection do
+      get 'employees', to: 'employees#index'
+    end
+
     resources :employees, except: %i[index show]
     resources :duties,    except: %i[index show]
     resources :positions, except: %i[index show]

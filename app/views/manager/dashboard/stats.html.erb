@@ -30,6 +30,7 @@
               data-action="click->manager-dashboard#load"
               data-content-url="<%= manager_employees_path %>"
               class="btn btn-outline-info btn-pill btn-sm float-right mt-2"><%= fa_icon('info-circle', text: t('.more_information')) %></a>
+            <%= link_to 'Listele', employees_users_path, class: 'btn btn-outline-info btn-pill btn-sm float-right mt-2 mr-1' %>
           </div>
         </div>
       </div>
@@ -52,11 +53,9 @@
       </div>
     </div>
   </div>
-
   <div data-target="manager-dashboard.content">
     <%= content_loader_tag(manager_students_path) %>
   </div>
-
   <div data-target="manager-dashboard.loadingMessage"
        class="d-none">
     <%= render 'layouts/components/loading' %>

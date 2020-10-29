@@ -2,9 +2,15 @@
 
 module UserManagement
   class EmployeesController < ApplicationController
-    before_action :set_user
+    include SearchableModule
+
+    before_action :set_user, except: %i[index]
     before_action :set_employee, only: %i[edit update destroy]
     before_action :authorized?
+
+    def index
+      @employees = pagy_by_search(Employee.active).includes(:user)
+    end
 
     def new
       @employee = @user.employees.new

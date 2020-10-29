@@ -15,6 +15,7 @@ class Employee < ApplicationRecord
   has_many :available_course_lecturers, foreign_key: :lecturer_id, inverse_of: :lecturer, dependent: :destroy
   has_many :coordinatorships, class_name: 'AvailableCourse', foreign_key: :coordinator_id,
                               inverse_of: :coordinator, dependent: :destroy
+  has_many :user_identities, through: :user, source: :identities
 
   # validations
   validates :active, inclusion: { in: [true, false] }
@@ -32,6 +33,14 @@ class Employee < ApplicationRecord
   scope :passive, -> { where(active: false) }
   scope :academic, -> { joins(:title).where('titles.branch = ?', 'ÖE') }
   scope :administrative, -> { joins(:title).where.not(titles: { branch: 'ÖE' }) }
+
+  # search
+  include PgSearch::Model
+  pg_search_scope(
+    :search,
+    associated_against: { user: %i[id_number email], user_identities: %i[first_name last_name] },
+    using:              { tsearch: { prefix: true } }
+  )
 
   # custom methods
   def academic?

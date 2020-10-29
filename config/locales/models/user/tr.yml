@@ -109,7 +109,7 @@ tr:
         update_from_mernis: MERNİS'ten Güncelle
         student_identity: Öğrenci Kimliğiniz
         user_identity: Kullanıcı Kimliğiniz
-      index:
+      index: &user_index
         <<: *user_attributes
         addresses: Adres Bilgileri
         card_header: Kullanıcı Hesapları
@@ -137,3 +137,7 @@ tr:
         <<: *student_attributes
       update:
         success: Kullanıcı başarıyla güncellendi.
+    employees:
+      index:
+        <<: *user_index
+        card_header: Akademik Personel Listesi

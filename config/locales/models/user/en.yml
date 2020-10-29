@@ -96,7 +96,7 @@ en:
         <<: *duty_attributes
         <<: *position_attributes
         title: Title
-      index:
+      index: &user_index
         <<: *user_attributes
         addresses: Addresses
         card_header: User Accounts
@@ -124,3 +124,7 @@ en:
         <<: *student_attributes
       update:
         success: User successfully updated.
+    employees:
+      index:
+        <<: *user_index
+        card_header: Academic Staff List
