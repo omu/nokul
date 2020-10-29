@@ -8,14 +8,13 @@
   <button class="c-header-toggler c-class-toggler mfs-3 d-md-down-none" type="button" data-target="#sidebar" data-class="c-sidebar-lg-show" responsive="true">
     <span class="c-header-toggler-icon"></span>
   </button>
-
   <ul class='c-header-nav ml-auto'>
     <li class='c-header-nav-item dropdown d-md-down-none mx-2'>
       <a class='c-header-nav-link' data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false'>
         <%= fa_icon 'user 2x' %>
       </a>
       <div class='dropdown-menu dropdown-menu-right pt-0'>
-        <%= link_to :profile, class: 'dropdown-item' do %>
+        <%= link_to user_profile_path(current_user), class: 'dropdown-item' do %>
           <%= fa_icon('user', text: t('.profile_settings'), class: 'mfe-2') %>
         <% end %>
         <%= link_to :settings, class: 'dropdown-item' do %>
@@ -33,7 +32,7 @@
       </div>
     </li>
   </ul>
- <button class="c-header-toggler c-class-toggler mfe-md-3" type="button" data-target="#aside" data-class="c-sidebar-show">
+  <button class="c-header-toggler c-class-toggler mfe-md-3" type="button" data-target="#aside" data-class="c-sidebar-show">
     <span class="c-header-toggler-icon"></span>
   </button>
 </header>

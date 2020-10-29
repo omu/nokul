@@ -23,7 +23,6 @@
     <small class='text-muted'><%= t('.set_password') %></small>
   </div>
 </div>
-
 <h4><%= t('.personal_informations') %></h4>
 <hr>
 <div class='card border-light bg-transparent'>
@@ -42,12 +41,11 @@
 </div>
 <div class='card border-light bg-transparent'>
   <div class='card-body'>
-    <%= link_to t('action_group.update'), profile_edit_path, class: 'pull-right' %>
+    <%= link_to t('action_group.update'), profile_user_edit_path(current_user), class: 'pull-right' %>
     <h5><%= t('.general_settings') %></h5>
     <small class='text-muted'><%= t('.update_general_settings') %></small>
   </div>
 </div>
-
 <h4><%= t('.preferences') %></h4>
 <hr>
 <div class='card border-light bg-transparent'>

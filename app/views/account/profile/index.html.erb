@@ -1,28 +1,33 @@
 <div class="row">
   <div class="col-md-12">
+    <% unless @user == current_user %>
+      <div class="alert alert-light">
+        <%= link_to_back employees_users_path %>
+      </div>
+    <% end %>
     <div class="card">
       <div class="card-body header">
         <div class="row">
           <div class="col-md-2 text-center align-items-center justify-content-center">
-            <% if current_user.avatar.attached? && current_user.avatar.variable? %>
-              <%= image_tag current_user.avatar.variant(resize_to_limit: [150, 150]),
+            <% if @user.avatar.attached? && @user.avatar.variable? %>
+              <%= image_tag @user.avatar.variant(resize_to_limit: [150, 150]),
                             class: 'rounded-circle img-fluid shadow',
                             alt:   t('.avatar'),
                             style: 'width: 150px;height: 150px;' %>
             <% else %>
-              <%= image_tag current_user.identities.last.male? ? 'profile/male_avatar.svg' : 'profile/female_avatar.svg', alt: t('.avatar') %>
+              <%= image_tag @user.identities.last.male? ? 'profile/male_avatar.svg' : 'profile/female_avatar.svg', alt: t('.avatar') %>
             <% end %>
           </div>
           <div class="col-md-10" style="margin-top: auto; margin-bottom: auto;">
-            <h3><%= "#{full_name(current_user.identities.last)} " %></h3>
-            <h6><em><%= current_user.title.to_s %></em></h6>
+            <h3><%= "#{full_name(@user.identities.last)} " %></h3>
+            <h6><em><%= @user.title.to_s %></em></h6>
             <hr class='bg-white'>
             <div class="row">
               <div class="col-md-3">
-                <%= contact_links(current_user) %>
+                <%= contact_links(@user) %>
               </div>
               <div class="col-md-3">
-                <%= social_media_links(current_user) %>
+                <%= social_media_links(@user) %>
               </div>
             </div>
           </div>
@@ -46,7 +51,7 @@
       </div>
     </div>
   </div>
-  <div class="col-xl <%= current_user.duties.blank? ? 'd-none' : '' %>">
+  <div class="col-xl <%= @user.duties.blank? ? 'd-none' : '' %>">
     <div class="card">
       <div class="card-body">
         <%= render 'duties' %>
@@ -92,11 +97,11 @@
 </div>
 <script type="text/javascript">
   $(document).ready(function(){
-    $.get("<%= profile_articles_path %>")
-    $.get("<%= profile_papers_path %>")
-    $.get("<%= profile_books_path %>")
-    $.get("<%= profile_certifications_path %>")
-    $.get("<%= profile_projects_path %>")
+    $.get("<%= profile_user_articles_path(@user) %>")
+    $.get("<%= profile_user_papers_path(@user) %>")
+    $.get("<%= profile_user_books_path(@user) %>")
+    $.get("<%= profile_user_certifications_path(@user) %>")
+    $.get("<%= profile_user_projects_path(@user) %>")
   })
 </script>
 <style>

@@ -5,16 +5,18 @@ module Account
     include Pagy::Backend
     PAGY_ITEMS = 10
 
+    before_action :set_user
+
     # before_action :purge_avatar, only: :update
     def index
-      @education_informations = current_user.education_informations.active.order(start_year: :desc)
-      @academic_credentials   = current_user.academic_credentials.active.order(start_year: :desc)
+      @education_informations = @user.education_informations.active.order(start_year: :desc)
+      @academic_credentials   = @user.academic_credentials.active.order(start_year: :desc)
     end
 
     def edit; end
 
     def update
-      if current_user.update_without_password(profile_params)
+      if @user.update_without_password(profile_params)
         redirect_to :profile, notice: t('.success')
       else
         render(:edit)
@@ -23,7 +25,7 @@ module Account
 
     def articles
       @pagy, @articles = pagy(
-        current_user.articles.active.order(year: :desc),
+        @user.articles.active.order(year: :desc),
         link_extra: 'data-remote="true"',
         items:      PAGY_ITEMS
       )
@@ -31,7 +33,7 @@ module Account
 
     def books
       @pagy, @books = pagy(
-        current_user.books.active.order(year: :desc),
+        @user.books.active.order(year: :desc),
         link_extra: 'data-remote="true"',
         items:      PAGY_ITEMS
       )
@@ -39,7 +41,7 @@ module Account
 
     def certifications
       @pagy, @certifications = pagy(
-        current_user.certifications.active,
+        @user.certifications.active,
         link_extra: 'data-remote="true"',
         items:      PAGY_ITEMS
       )
@@ -47,7 +49,7 @@ module Account
 
     def papers
       @pagy, @papers = pagy(
-        current_user.papers.active,
+        @user.papers.active,
         link_extra: 'data-remote="true"',
         items:      PAGY_ITEMS
       )
@@ -55,7 +57,7 @@ module Account
 
     def projects
       @pagy, @projects = pagy(
-        current_user.projects.active.order(start_date: :desc),
+        @user.projects.active.order(start_date: :desc),
         link_extra: 'data-remote="true"',
         items:      PAGY_ITEMS
       )
@@ -66,6 +68,10 @@ module Account
     # def purge_avatar
     #   current_user.avatar.purge
     # end
+
+    def set_user
+      @user = User.friendly.find(params[:user_id])
+    end
 
     def profile_params
       params.require(:user).permit(

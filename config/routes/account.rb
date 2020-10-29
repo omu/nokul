@@ -42,15 +42,15 @@ scope module: :account do
   post 'activation',                    to: 'activations#create'
   post 'activation_phone_verification', to: 'activations#check_phone_verification'
   get 'yoksis_services/fetch',          to: 'yoksis_services#fetch'
-  get 'profile',                        to: 'profile#index'
-  patch 'profile',                      to: 'profile#update'
 
   get 'password_recovery',         to: 'password_recovery#new'
   post 'password_recovery',        to: 'password_recovery#create'
   get 'password_recovery/update',  to: 'password_recovery#edit'
   post 'password_recovery/update', to: 'password_recovery#update'
+end
 
-  namespace :profile do
+resources :users, only: [] do
+  scope module: :account, controller: :profile, as: 'profile' do
     get :edit
     get :articles
     get :books
@@ -58,10 +58,9 @@ scope module: :account do
     get :papers
     get :projects
   end
-end
-
-resources :users, only: [] do
   scope module: :account do
+    get 'profile',                        to: 'profile#index'
+    patch 'profile',                      to: 'profile#update'
     resources :identities, except: [:show] do
       get 'save_from_mernis', on: :collection
     end
