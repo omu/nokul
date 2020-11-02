@@ -44,16 +44,17 @@ namespace :fetch do
       page.each do |staff|
         password = SecureRandom.uuid
 
-        user = User.new(
-          id_number:             staff[:id_number],
-          email:                 "#{staff[:id_number]}@omu.edu.tr",
-          password:              password,
-          password_confirmation: password
-        )
-
+        user = User.find_by(id_number: staff[:id_number])
         progress_bar&.increment
-
-        next unless user.save
+        if user.blank?
+          user = User.new(
+            id_number:             staff[:id_number],
+            email:                 "#{staff[:id_number]}@omu.edu.tr",
+            password:              password,
+            password_confirmation: password
+          )
+          next unless user.save
+        end
 
         title = Title.find_by(name: staff[:title].capitalize_turkish)
         unit = Unit.find_by(yoksis_id: staff[:unit_id])
