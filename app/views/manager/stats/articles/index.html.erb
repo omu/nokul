@@ -54,7 +54,7 @@
         <%= t('.number_of_articles_by_years') %>
       </div>
       <div class="card-body">
-        <%= line_chart Article.active.group(:year).count %>
+        <%= line_chart Article.active.order(year: :asc).group(:year).count %>
       </div>
     </div>
   </div>
