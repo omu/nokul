@@ -27,6 +27,10 @@ module Manager
         user.role?(:admin) || manager?
       end
 
+      def units?
+        user.role?(:admin) || manager?
+      end
+
       private
 
       def manager?
