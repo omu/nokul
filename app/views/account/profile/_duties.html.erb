@@ -24,7 +24,7 @@
               <%= "#{duty.start_date.strftime('%m.%Y')} - #{duty.end_date.try(:strftime, '%m.%Y')}" %>
             </div>
             <h6 class="card-title text-success"><%= enum_t(duty, :article).to_s %></h6>
-            <p class="card-text"><%= duty.unit.names_depth_cache %></p>
+            <p class="card-text"><%= link_to duty.unit.names_depth_cache, unit_path(duty.unit) %></p>
           </div>
         </div>
       </div>

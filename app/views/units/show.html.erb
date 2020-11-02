@@ -1,5 +1,5 @@
 <div class='row'>
-  <div class='col-lg-12'>
+  <div class='col-lg-5'>
     <div class="card">
       <div class="card-header">
         <%= fa_icon 'university' %><strong><%= @unit.name %></strong>
@@ -7,7 +7,6 @@
           <%= link_to_actions(@unit, except: :show) %>
         </div>
       </div>
-
       <div class="card-body">
         <table class="table table-responsive-sm">
           <tbody>
@@ -21,7 +20,11 @@
             </tr>
             <tr>
               <td><%= t('.parent') %></td>
-              <td><%= @unit.parent.try(:name) %></td>
+              <td>
+                <% if @unit.parent.present? %>
+                  <%= link_to @unit.parent.name, @unit.parent %>
+                <% end %>
+              </td>
             </tr>
             <tr>
               <td><%= t('.yoksis_id') %></td>
@@ -80,4 +83,73 @@
       </div>
     </div>
   </div>
+  <div class='col-lg-7'>
+    <div class="card">
+      <div class="card-header">
+        <%= fa_icon 'users' %><strong><%= t('.academic_staff') %></strong>
+      </div>
+      <div class="card-body">
+        <table class='table table-responsive-sm'>
+          <thead>
+            <tr>
+              <th><%= t('.id_number') %></th>
+              <th><%= t('.email') %></th>
+              <th><%= t('.first_name') %></th>
+              <th><%= t('.last_name') %></th>
+              <th><%= t('.title') %></th>
+              <th><%= t('actions') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% duty_ids = @unit.duties.group(:employee_id).maximum(:id).values %>
+            <% employees = Employee.joins(:duties).where(duties: { id: duty_ids }).includes(:user) %>
+            <% employees.each do |employee| %>
+              <% user = employee.user %>
+              <tr>
+                <td><%= user.id_number %></td>
+                <td><%= user.email %></td>
+                <td><%= user.identities.user_identity.try(:first_name) %></td>
+                <td><%= user.identities.user_identity.try(:last_name) %></td>
+                <td><%= user.title.to_s %></td>
+                <td><%= link_to_show user_profile_path(user) %> </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 </div>
+<% %w[ancestors descendants siblings].each do |action| %>
+  <div class='row'>
+    <div class='col-lg-12'>
+      <div class="card">
+        <div class="card-header">
+          <%= fa_icon 'university' %><strong><%= t(".#{action}") %></strong>
+        </div>
+        <div class="card-body">
+          <table class='table table-responsive-sm table-sm'>
+            <thead>
+              <tr>
+                <th><%= t('.name') %></th>
+                <th><%= t('.unit_type') %></th>
+                <th><%= t('.unit_status') %></th>
+                <th><%= t('.unit_instruction_type') %></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @unit.send(action).active.includes(:unit_type, :unit_status, :unit_instruction_type).each do |unit| %>
+                <tr>
+                  <td><%= link_to(unit.names_depth_cache, unit_path(unit)) %></td>
+                  <td><%= unit.unit_type.try(:name) %></td>
+                  <td><%= unit.unit_status.try(:name) %></td>
+                  <td><%= unit.unit_instruction_type.try(:name) %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

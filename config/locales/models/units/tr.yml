@@ -19,12 +19,21 @@ tr:
         university_type: Üniversite Türü
         yoksis_id: YOKSIS ID
         effective_yoksis_id: Yöneten Birim
+        ancestors: Üst Birimler
+        descendants: Alt Birimler
+        siblings: Aynı Seviyedeki Birimler
   helpers:
     submit:
       unit:
         create: Birim Oluştur
         update: Birimi Güncelle
   units:
+    employee: &employee
+      id_number: Kimlik Numarası
+      email: E-posta Adresi
+      first_name: Adı
+      last_name: Soyadı
+      title: Unvan
     common:
       units: Birimler
     create:
@@ -48,6 +57,8 @@ tr:
       unit_status: Birim Durumu
     show:
       <<: *unit_attributes
+      <<: *employee
       parent: Üst Birim
+      academic_staff: Akademik Personel
     update:
       success: Birim başarıyla güncellendi.

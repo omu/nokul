@@ -19,12 +19,21 @@ en:
         university_type: University Type
         yoksis_id: YOKSIS ID
         effective_yoksis_id: Effective Unit
+        ancestors: Parent Units
+        descendants: Subunits
+        siblings: Units at the Same Level
   helpers:
     submit:
       unit:
         create: Create Unit
         update: Update Unit
   units:
+    employee: &employee
+      id_number: Kimlik Numarası
+      email: E-posta Adresi
+      first_name: Adı
+      last_name: Soyadı
+      title: Title
     common:
       units: Units
     create:
@@ -48,6 +57,8 @@ en:
       unit_status: Unit Status
     show:
       <<: *unit_attributes
+      <<: *employee
       parent: Parent Unit
+      academic_staff: Academic Staff
     update:
       success: Unit successfully updated.
