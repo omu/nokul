@@ -1,7 +1,7 @@
 <h3 class="font-weight-light text-center text-muted"><%= t('.duties') %></h3>
 <hr>
 <div class="container py-2 timeline">
-  <% current_user.duties.includes(:unit).order(start_date: :desc).each_with_index do |duty, index| %>
+  <% user.duties.includes(:unit).order(start_date: :desc).each_with_index do |duty, index| %>
     <div class="row">
       <div class="col-sm-none"></div>
       <div class="col-auto text-center flex-column d-none d-lg-flex">

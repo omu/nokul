@@ -54,7 +54,7 @@
   <div class="col-xl <%= @user.duties.blank? ? 'd-none' : '' %>">
     <div class="card">
       <div class="card-body">
-        <%= render 'duties' %>
+        <%= render 'duties', user: @user %>
       </div>
     </div>
   </div>
