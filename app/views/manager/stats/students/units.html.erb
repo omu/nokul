@@ -10,7 +10,6 @@ Highcharts.chart('chart-for-units', {
   title: {
     text: "<%= t('.title') %>"
   },
-
   accessibility: {
     announceNewData: {
       enabled: true
@@ -19,16 +18,14 @@ Highcharts.chart('chart-for-units', {
       valueSuffix: '%'
     }
   },
-
   plotOptions: {
     series: {
       dataLabels: {
         enabled: true,
-        format: '{point.name}'
+        format: '{point.name} %{point.percentage:.1f}'
       }
     }
   },
-
   tooltip: {
     headerFormat: '',
     pointFormat: `
@@ -38,12 +35,11 @@ Highcharts.chart('chart-for-units', {
       <p style="color: #626262; font-weight: bold;"><%= t('.total') %>: {point.y}</p><br/>
     `
   },
-
   series: [
     {
       name: "<%= t('.faculties') %>",
       colorByPoint: true,
-      data: <%= sanitize(@series) %>,
+      data: <%= sanitize(@series) %>
     }
   ],
   drilldown: {
