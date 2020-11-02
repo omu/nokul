@@ -14,7 +14,7 @@ GIT
 
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 57da1d0188f46face820bcdd4d8a78dbb393bdcf
+  revision: 2a8fe4f8216bd83f791ef09c9feaa2c33ae4c355
   specs:
     actioncable (6.1.0.alpha)
       actionpack (= 6.1.0.alpha)
@@ -68,6 +68,7 @@ GIT
       activerecord (= 6.1.0.alpha)
       activesupport (= 6.1.0.alpha)
       marcel (~> 0.3.1)
+      mimemagic (~> 0.3.2)
     activesupport (6.1.0.alpha)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
@@ -501,7 +502,7 @@ GEM
       activesupport
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.4.0)
+    zeitwerk (2.4.1)
 
 PLATFORMS
   ruby
