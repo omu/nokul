@@ -4,7 +4,7 @@ module Patron
   module Utils
     class RoleQuerier < SimpleDelegator
       def admin?
-        any_roles? :manager, :admin
+        any_roles? :admin
       end
 
       def institution_manager?
